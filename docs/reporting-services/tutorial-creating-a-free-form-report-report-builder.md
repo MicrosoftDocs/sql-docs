@@ -14,7 +14,7 @@ In this tutorial, you create a paginated report that acts as a newsletter. Each 
 
 :::image type="content" source="../reporting-services/media/report-builder-free-form-report-complete.png" alt-text="Screenshot of a Report Builder free form report.":::
 
-The report groups information by territory and displays the name of the sales manager for the territory as well as detailed and summary sales information. You start with a list data region as the foundation for the free form report, then add a decorative panel with an image, static text with data inserted, a table to show detailed information, and optionally, pie and column charts to display summary information.  
+The report groups information by territory and displays the name of the sales manager for the territory as well as detailed and summary sales information. You start with a list data region as the foundation for the free form report. Then you add a decorative panel with an image, static text with data inserted, a table to show detailed information, and optionally, pie and column charts to display summary information.  
   
 Estimated time to complete this tutorial: 20 minutes.  
   
@@ -48,7 +48,7 @@ For more information about requirements, see [Prerequisites for tutorials &#40;R
   
 4.  Verify that the connection type is Microsoft SQL Server, and then in the **Connection string** box type: **Data Source = \<servername>**  
   
-    **\<servername>**, for example Report001, specifies a computer on which an instance of the SQL Server Database Engine is installed. Because the data for this report is not extracted from a SQL Server database, you need not include the name of a database. The default database on the specified server is just used to parse the query.  
+    **\<servername>**, for example Report001, specifies a computer on which an instance of the SQL Server Database Engine is installed. Because the data for this report isn't extracted from a SQL Server database, you need not include the name of a database. The default database on the specified server is only used to parse the query.  
   
 5.  Select **Credentials**, and enter the credentials needed to connect to the instance of the SQL Server Database Engine.  
   
@@ -110,13 +110,13 @@ For more information about requirements, see [Prerequisites for tutorials &#40;R
 8.  Select **OK**.
   
 ## <a name="List"></a>2. Add and configure a list  
-In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] the list data region is ideal for creating free-form reports. It's based on the *tablix* data region, as are tables and matrixes. For more information, see [Create invoices and forms with lists in a paginated report (Report Builder)](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], the list data region is ideal for creating free-form reports. It's based on the *tablix* data region, as are tables and matrixes. For more information, see [Create invoices and forms with lists in a paginated report (Report Builder)](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
-You will use a list to display the sales information for sales territories in a report formatted like a newsletter. The information is grouped by territory. You will add a new row group that groups data by territory, and then delete the built-in Details row group.  
+In this tutorial, you use a list to display the sales information for sales territories in a report formatted like a newsletter. The information is grouped by territory. You also add a new row group that groups data by territory, and then delete the built-in Details row group.  
   
 ### Add a list  
   
-1.  On the **Insert** tab > **Data Regions** > **List**. 
+1.  On the **Insert** tab, go to **Data Regions** > **List**. 
 
 2. Select in the report body (between the title and footer areas) and drag to make the list box. Make the list box 7 inches tall and 6.25 inches wide. To get the exact size, in the **Properties** pane under **Position**, type values for the **Width** and **Height** properties.
   
@@ -162,7 +162,7 @@ You will use a list to display the sales information for sales territories in a 
 8.  Select **OK**.
   
 ## <a name="Graphics"></a>3. Add graphic elements  
-One advantage of list data regions is that you can add report items such as rectangles and text boxes anywhere, instead of being limited to a tabular layout. You will enhance the appearance of the report by adding a graphic (a rectangle filled with a color).  
+One advantage of list data regions is that you can add report items such as rectangles and text boxes anywhere, instead of being limited to a tabular layout. You can enhance the appearance of the report by adding a graphic (a rectangle filled with a color).  
   
 ### Add graphic elements to the report  
   
@@ -185,15 +185,15 @@ The left side of the report now has vertical graphic that consists of a light gr
 :::image type="content" source="../reporting-services/media/report-builder-free-form-gray-rectangle.png" alt-text="Screenshot for the Report Builder that shows a vertical graphic that consists of a light gray rectangle.":::
  
 ## <a name="Text"></a>4. Add free form text  
-You can add text boxes to display static text that is repeated on each report page, as well as data fields.  
+You can add text boxes to display static text that is repeated on each report page and data fields.  
   
 ### Add text to the report  
   
 1.  Select **Design** to return to design view.  
   
-2.  On the **Insert** tab > **Text Box**. Select the upper left corner of the list,  inside of the rectangle you added previously, and drag to make the text box about 3.45 inches wide and 5 inches tall.  
+2.  On the **Insert** tab, go to **Text Box**. Select the upper left corner of the list,  inside of the rectangle you added previously, and drag to make the text box about 3.45 inches wide and 5 inches tall.  
   
-3.  With the cursor in the text box and type: **Newsletter for** . Include a space after the word "for", to separate the text from the field you will add in the next step.   
+3.  With the cursor in the text box and type: **Newsletter for** . Include a space after the word "for", to separate the text from the field you add in the next step.   
 
     :::image type="content" source="../reporting-services/media/tutorial-newsletterfor.png" alt-text="Screenshot of Design View that shows the report with the heading.":::
   
@@ -209,7 +209,7 @@ You can add text boxes to display static text that is repeated on each report pa
     *  **20 pt**.
     *  **Tomato**.  
   
-9. Place the cursor below the text you typed in step 3 and type: **Hello** with a space after the word, to separate the text and the field that you will add in the next step.  
+9. Place the cursor below the text you typed in step 3 and type: **Hello** with a space after the word, to separate the text and the field that you add in the next step.  
  
 10. Drag the `[FullName]` field from ListDataSet in the Report Data pane to the text box and place it after "Hello ", then type a comma (,).  
    
@@ -238,7 +238,7 @@ You can add text boxes to display static text that is repeated on each report pa
       *  **10 pt**.
       *  **Black**.  
  
-20. Place the cursor inside the text box, below the meaningless text and type: **Congratulations on your total sales of**, with a space after the word to separate the text and the field you will add in the next step. 
+20. Place the cursor inside the text box, below the meaningless text and type: **Congratulations on your total sales of**, with a space after the word to separate the text and the field you add in the next step. 
   
 21. Drag the Sales field to the text box, place it after the text you typed in the previous step, then type an exclamation mark (!).  
 
@@ -277,23 +277,23 @@ The report displays static text and each report page includes data that pertains
 :::image type="content" source="../reporting-services/media/report-builder-newsletter-page-preview.png" alt-text="Screenshot that shows the preview of the newsletter page in the Report Builder free form report.":::
   
 ## <a name="Table"></a>5. Add a table to show sales details 
-Use the New Table and Matrix Wizard to add a table to the free form report. After you complete the wizard, you will manually add a row for totals.  
+Use the New Table and Matrix Wizard to add a table to the free form report. After you complete the wizard, you manually add a row for totals.  
   
 ### Add a table  
   
-1.  On the **Insert** tab > **Data Regions** area > **Table** > **Table Wizard**.  
+1.  On the **Insert** tab, go to **Data Regions** area > **Table** > **Table Wizard**.  
   
 2.  On the **Choose a dataset** page, select **ListDataset** > **Next**.  
   
 4.  On the **Arrange fields** page, drag the Product field from **Available fields** to **Values.**  
   
-5.  Repeat step 3 for SalesDate, Quantity, and Sales. Place SalesDate below Product, Quantity below SalesDate, and Sales below SalesDate.  
+5.  Repeat step 3 for SalesDate, Quantity, and Sales. Place SalesDate after Product, Quantity after SalesDate, and Sales after SalesDate.  
   
 6.  Select **Next**.  
   
 7.  On the **Choose the layout** page, view the layout of the table.  
   
-    The table is simple: five columns with no row or column groups. Because it has no groups, the layout options related to groups, are not available. You will manually update the table to include a total later in the tutorial.  
+    The table is simple: five columns with no row or column groups. Because it has no groups, the layout options related to groups, aren't available. You manually update the table to include a total later in the tutorial.  
   
 8.  Select **Next**.  
   
@@ -304,7 +304,7 @@ Use the New Table and Matrix Wizard to add a table to the free form report. Afte
     > [!NOTE]  
     > Make sure the table is inside the list box and inside the gray rectangle.  
   
-12. With the table selected, in the **Row Group** pane right-click **Details** > **Add Total** > **After**.  
+12. With the table selected, in the **Row Group** pane, right-click **Details** > **Add Total** > **After**.  
 
     :::image type="content" source="../reporting-services/media/report-builder-free-form-table-totals.png" alt-text="Screenshot that shows how to Add Totals to the Report Builder free form report.":::
   
@@ -325,7 +325,7 @@ The report displays a table with sales details and totals.
 ## <a name="Save"></a>6. Save the report  
 You can save reports to a report server, SharePoint library, or your computer.  
   
-In this tutorial, save the report to a report server. If you do not have access to a report server, save the report to your computer.  
+In this tutorial, save the report to a report server. If you don't have access to a report server, save the report to your computer.  
   
 ### Save the report on a report server  
   
@@ -341,7 +341,7 @@ In this tutorial, save the report to a report server. If you do not have access 
   
 5.  Select **Save**.  
   
-The report is saved to the report server. The name of the report server that you are connected to appears in the status bar at the bottom of the window.  
+The report is saved to the report server. The name of the report server that you're connected to appears in the status bar at the bottom of the window.  
   
 ### Save the report on your computer  
   
@@ -360,7 +360,7 @@ Add a line to separate the editorial and details areas of the report.
   
 1.  Select **Design** to return to design view.  
   
-2.  On the **Insert** tab > **Report Items** > **Line.**  
+2.  On the **Insert** tab, go to **Report Items** > **Line.**  
   
 3.  Draw a line below the text box you added in lesson 4.  
   
@@ -375,7 +375,7 @@ Rectangles help you control how the report renders. Place a pie and column chart
   
 1.  Select **Design** to return to design view.  
   
-2.  On the **Insert** tab > **Report Items** >  **Rectangle**. Drag the rectangle inside the list box to the right of the table to make a rectangle about 2.25 inches wide and 7.9 inches tall.  
+2.  On the **Insert** tab, go to **Report Items** >  **Rectangle**. Drag the rectangle inside the list box to the right of the table to make a rectangle about 2.25 inches wide and 7.9 inches tall.  
   
 3.  With the new rectangle selected, in the Properties pane, make **BorderColor LightGrey**, **BorderStyle Solid**, and **BorderWidth 2 pt**. 
 
@@ -383,7 +383,7 @@ Rectangles help you control how the report renders. Place a pie and column chart
   
 ## Add a pie chart  
   
-1.  On the **Insert** tab > **Data Visualizations** > **Chart** > **Chart Wizard**.  
+1.  On the **Insert** tab, go to **Data Visualizations** > **Chart** > **Chart Wizard**.  
   
 2.  On the **Choose a dataset** page, select **ListDataset** > **Next**.  
   
@@ -492,7 +492,7 @@ The report now displays summary sales data in pie and column charts.
 
   
 ## Next steps  
-This concludes the tutorial for how to create a free-form report.  
+You successfully completed the tutorial for how to create a free-form report.  
   
 For more information about lists, see: 
 * [Tables, matrices, and lists in paginated reports (Report Builder)](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md) 

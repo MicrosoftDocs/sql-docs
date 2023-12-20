@@ -14,11 +14,11 @@ ms.custom: updatefrequency5
 
 In this tutorial, you practice formatting text in various ways in a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report. You can experiment with different formats. 
 
-After you set up the blank report with the data source and dataset, you can pick the formats you want to explore. The following illustration shows a report similar to the one you will create.  
+After you set up the blank report with the data source and dataset, you can pick the formats you want to explore. The following illustration shows a report similar to the one you create in this tutorial.  
 
 :::image type="content" source="../reporting-services/media/report-build-format-report.png" alt-text="Screenshot of a formatted Report Builder report.":::
   
-In one step, you make a mistake on purpose so you can see why it is a mistake. Then you correct the mistake to achieve the desired effect.  
+In one step, you make a mistake on purpose so you can see why it's a mistake. Then you correct the mistake to achieve the desired effect.  
     
 Estimated time to complete this tutorial: 20 minutes.  
   
@@ -115,7 +115,7 @@ For information about requirements, see [Prerequisites for tutorials &#40;Report
 9.  Select **OK**.
   
 ## <a name="AddField"></a>Add a field to the report design surface  
-If you want a field from your dataset to appear in a report, your first impulse may be to drag it directly to the design surface. This exercise points out why that doesn't work and what to do instead.  
+If you want a field from your dataset to appear in a report, your first impulse might be to drag it directly to the design surface. This exercise points out why that doesn't work and what to do instead.  
   
 ### Add a field to the report (and get the wrong result)  
   
@@ -125,7 +125,7 @@ If you want a field from your dataset to appear in a report, your first impulse 
   
 2.  Select **Run**.  
   
-    You only see one record, **Fernando Ross**, which is alphabetically the first record in the query. The field does not repeat to show the other records in that field.  
+    You only see one record, **Fernando Ross**, which is alphabetically the first record in the query. The field doesn't repeat to show the other records in that field.  
   
 3.  Select **Design** to return to design view.  
   
@@ -137,15 +137,15 @@ If you want a field from your dataset to appear in a report, your first impulse 
     =First(Fields!FullName.Value, "TextDataSet")  
     ```  
   
-    The `First` function is designed to retrieve only the first value in a field, and that is what it has done.  
+    The `First` function is designed to retrieve only the first value in a field.  
   
-    Dragging the field directly to the design surface created a text box. Text boxes by themselves are not data regions, so they do not display data from a report dataset. Text boxes in data regions, such as tables, matrices, and lists, do display data.  
+    Dragging the field directly to the design surface created a text box. Text boxes by themselves aren't data regions, so they don't display data from a report dataset. Text boxes in data regions, such as tables, matrices, and lists, do display data.  
   
 6.  Select the text box (if you have the expression selected, press ESC to select the text box), and press the DELETE key.  
   
 ### Add a field to the report (and get the right result)  
   
-1.  On the **Insert** tab of the ribbon, in the **Data Regions** area, select **List**. Select the design surface, and then drag to create a box that about two inches wide and one inch tall.  
+1.  On the **Insert** tab of the ribbon, in the **Data Regions** area, select **List**. Select the design surface, and then drag to create a box that about 2 inches wide and 1 inch tall.  
   
 2.  Drag the **FullName** field from the Report Data pane to the list box.  
   
@@ -153,7 +153,7 @@ If you want a field from your dataset to appear in a report, your first impulse 
   
 3.  Select **Run**.  
   
-    Note that this time the box repeats to show all the records in the query.  
+    This time the box repeats to show all the records in the query.  
   
 4.  Select **Design** to return to design view.  
   
@@ -170,9 +170,9 @@ If you want a field from your dataset to appear in a report, your first impulse 
 7.  Select the list box and press the DELETE key.  
   
 ## <a name="AddTable"></a>Add a table to the report design surface  
-Create this table so you'll have a place to put hyperlinks and rotated text.   
+Create this table so you have a place to put hyperlinks and rotated text.   
   
-1.  On the **Insert** tab > **Table** > **Table Wizard**.  
+1.  On the **Insert** tab, go to **Table** > **Table Wizard**.  
   
 2.  On the **Choose a dataset** page of the New Table or Matrix wizard, select **Choose an existing dataset in this report or a shared dataset** > **TextDataset (in this Report)** > **Next**.  
   
@@ -215,7 +215,7 @@ In this section, you add a hyperlink to text in the table from the previous sect
   
 5.  In the **Select URL** box, select **[URL]**, then choose **OK**.  
   
-6.  Note that the text does not look any different. You need to make it look like link text.  
+6.  The text doesn't look any different. You need to make it look like link text.  
   
 7.  Select `[LinkText]`.  
   
@@ -227,7 +227,7 @@ In this section, you add a hyperlink to text in the table from the previous sect
 
     :::image type="content" source="../reporting-services/media/report-builder-format-hyperlink.png" alt-text="Screenshot that shows hyperlinked text in the Report Builder report.":::
   
-10. Select a link. If the computer is connected to the Internet, a browser will open to a Report Builder Help topic.  
+10. Select a link. If the computer is connected to the Internet, a browser opens to a Report Builder Help article.  
   
 ## <a name="RotateText"></a>Rotate text in the report  
 In this section, you rotate some of the text in the table from the previous sections.  
@@ -238,7 +238,7 @@ In this section, you rotate some of the text in the table from the previous sect
   
 3.  On the **Home** tab in the **Font** section, select the **Bold** button.  
   
-4.  If the Properties pane is not open, on the **View** tab, select the **Properties** check box.  
+4.  If the Properties pane isn't open, on the **View** tab, select the **Properties** check box.  
   
 5.  Locate the WritingMode property in the Properties pane, and change it from **Default** to **Rotate270**.  
  
@@ -261,9 +261,9 @@ Now the text in the `[Territory]` cell runs vertically from the bottom to the to
   
 2.  Select the top table cell that contains `[Sum(Sales)]`, hold down the SHIFT key, and choose the bottom table cell that contains `[Sum(Sales)]`.  
   
-3.  On the **Home** tab > **Number** group > **Currency** button.  
+3.  On the **Home** tab, go to **Number** group > **Currency** button.  
   
-4.  (Optional)     If your regional setting is English (United States), the default sample text is [**$12,345.00**]. If you do not see an example currency value in the **Numbers** group, select **Placeholder Styles** > **Sample Values**.  
+4.  (Optional)     If your regional setting is English (United States), the default sample text is [**$12,345.00**]. If you don't see an example currency value in the **Numbers** group, select **Placeholder Styles** > **Sample Values**.  
 
     :::image type="content" source="../reporting-services/media/report-builder-placeholder-value-button.png" alt-text="Screenshot of the Sample Values option in the Report Builder.":::
   
@@ -279,7 +279,7 @@ The report now displays formatted data and is easier to read.
   
 1.  Select **Design** to switch to design view.  
   
-2.  On the **Insert** tab, select **Text Box**, and then on the design surface, choose and drag to create a text box under the table, about four inches wide and three inches tall.  
+2.  On the **Insert** tab, select **Text Box**, and then on the design surface, choose and drag to create a text box under the table, about 4 inches wide and 3 inches tall.  
   
 3.  Copy this text and paste it into the text box:  
   
@@ -305,7 +305,7 @@ The report now displays formatted data and is easier to read.
   
 5.  Right-click all of the selected text and select **Text Properties**.  
   
-    This is a property of the text, not the text box, so in one text box you could have a mixture of plain text and text that uses HTML tags as styles.  
+    This property is of the text, not the text box, so in one text box you could have a mixture of plain text and text that uses HTML tags as styles.  
   
 6.  On the **General** tab, under **Markup type**, select **HTML - Interpret HTML tags as styles**.  
   
@@ -320,7 +320,7 @@ The text in the text box is displayed as a heading, paragraph, and bulleted list
 ## <a name="Save"></a>Save the report  
 You can save reports to a report server, SharePoint library, or your computer.  
   
-In this tutorial, save the report to a report server. If you do not have access to a report server, save the report to your computer.  
+In this tutorial, save the report to a report server. If you don't have access to a report server, save the report to your computer.  
   
 ### Save the report on a report server  
   
@@ -336,7 +336,7 @@ In this tutorial, save the report to a report server. If you do not have access 
 
 5.  Select **Save**.  
   
-The report is saved to the report server. The name of the report server that you are connected to appears in the status bar at the bottom of the window.  
+The report is saved to the report server. The name of the report server that you're connected to appears in the status bar at the bottom of the window.  
   
 ### Save the report on your computer  
   

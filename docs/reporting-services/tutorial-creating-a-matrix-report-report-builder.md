@@ -12,7 +12,7 @@ ms.custom: updatefrequency5
 # Tutorial: Create a matrix report (Report Builder)
 This tutorial teaches you to create a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report with a matrix of sample sales data in nested row and column groups. 
 
-You also create an adjacent column group, format columns, and rotate text. The following illustration shows a report similar to the one you will create.  
+You also create an adjacent column group, format columns, and rotate text. The following illustration shows a report similar to the one you create in this tutorial.  
 
 :::image type="content" source="../reporting-services/media/report-builder-matrix-tutorial.png" alt-text="Screenshot of a Report Builder matrix report.":::
 
@@ -43,7 +43,7 @@ In this section, you choose a shared data source, create an embedded dataset, an
   
 5.  Select **Next**.  
   
-6.  On the **Choose a connection to a data source** page, select an existing data source, or browse to the report server and select a data source. If no data source is available or you do not have access to a report server, you can use an embedded data source instead. For information about creating an embedded data source, see [Tutorial: Create a basic table report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  On the **Choose a connection to a data source** page, select an existing data source, or browse to the report server and select a data source. If no data source is available or you don't have access to a report server, you can use an embedded data source instead. For information about creating an embedded data source, see [Tutorial: Create a basic table report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Select **Next**.  
   
@@ -127,7 +127,7 @@ Use the wizard to provide a starting design on which to display data. The previe
   
 13. Select **Finish**.  
   
-    The matrix is added to the design surface. The Row Groups pane shows two row groups: Territory and SalesDate. The Column Groups pane shows two column groups: Subcategory and Product. Detail data is all the data that is retrieved by the dataset query.  
+    The matrix is added to the design surface. The Row Groups pane shows two row groups: Territory and SalesDate. The Column Groups pane shows two column groups: Subcategory and Product. Detail data is all the data the dataset query retrieves.  
 
     :::image type="content" source="../reporting-services/media/report-builder-row-and-column-groups.png" alt-text="Screenshot that shows the Report Builder Row Groups and Column Groups.":::
   
@@ -135,7 +135,7 @@ Use the wizard to provide a starting design on which to display data. The previe
   
     For each product that is sold on a specific date, the matrix shows the subcategory to which the product belongs and the territory of the sales.  
 
-14. Expand a subcategory. You can see the report quickly gets quite wide.
+14. Expand a subcategory. You can see the report quickly gets wide.
 
 :::image type="content" source="../reporting-services/media/report-builder-expand-matrix.png" alt-text="Screenshot that shows an expanded Report Builder matrix report.":::
   
@@ -150,15 +150,15 @@ By default, the summary data for the Sales field displays a general number and t
   
 3.  On the **Home** tab > **Number** > **Currency**. The cells change to show the formatted currency.  
   
-    If your regional setting is English (United States), the default sample text is [**$12,345.00**]. If you do not see an example currency value in the **Numbers** group, select **Placeholder Styles** > **Sample Values**.  
+    If your regional setting is English (United States), the default sample text is [**$12,345.00**]. If you don't see an example currency value in the **Numbers** group, select **Placeholder Styles** > **Sample Values**.  
 
     :::image type="content" source="../reporting-services/media/report-builder-placeholder-value.png" alt-text="Screenshot of the Report Builder Sample Values option.":::
   
 4.  Select the cell that contains `[SalesDate]`.  
   
-5.  In the **Number** group > **Date**.  
+5.  In the **Number** group, go to **Date**.  
   
-    The cell displays the example date **[1/31/2000]**. If you do not see an example date, select **Placeholder Styles** in the **Numbers** group, and then choose **Sample Values**.  
+    The cell displays the example date **[1/31/2000]**. If you don't see an example date, select **Placeholder Styles** in the **Numbers** group, and then choose **Sample Values**.  
   
 6.  Select **Run** to preview your report.  
   
@@ -167,7 +167,7 @@ The date values display only dates and the sales values display as currency.
 ## <a name="AdjacentGroup"></a>4. Add adjacent column group  
 You can nest row and column groups in parent-child relationships, or adjacent in sibling relationships.  
   
-In this section, you add a column group adjacent to the Subcategory column group, copy cells to populate the new column group, and then use an expression to create the value of the column group header.  
+In this section, you add a column group next to the Subcategory column group, copy cells to populate the new column group, and then use an expression to create the value of the column group header.  
   
 ### Add an adjacent column group  
   
@@ -211,7 +211,7 @@ The report includes columns named Monday and Tuesday. The dataset contains only 
 > If the data included other days, the report would include columns for them as well. Each column has the column header, **Sales**, and sales totals by territory.  
   
 ## <a name="Width"></a>5. Change column widths  
-A report that includes a matrix typically expands horizontally as well as vertically when it runs. Controlling horizontal expansion is particularly important if you plan to export the report to formats such as Microsoft Word or Adobe PDF that are used for printed reports. If the report expands horizontally across multiple pages, the printed report is difficult to understand. To minimize horizontal expansion, you can resize columns to be only the width necessary to display the data without wrapping. You can also rename columns so that their titles fit the width needed to display the data.  
+A report that includes a matrix typically expands horizontally and vertically when it runs. Controlling horizontal expansion is important if you plan to export the report to formats such as Microsoft Word or Adobe PDF that are used for printed reports. If the report expands horizontally across multiple pages, the printed report is difficult to understand. To minimize horizontal expansion, you can resize columns to be only the width necessary to display the data without wrapping. You can also rename columns so that their titles fit the width needed to display the data.  
   
 ### Rename and resize the columns  
   
@@ -223,13 +223,13 @@ A report that includes a matrix typically expands horizontally as well as vertic
   
 3.  Repeat step 2 for the two other columns named Quantity.
   
-4.  Select the matrix so that column and row handles appear above and next to the matrix.  
+4.  Select the matrix so that column and row handles appear above the matrix and next to it.  
   
     The gray bars along the top and side of the table are the column and row handles.  
 
     :::image type="content" source="../reporting-services/media/report-builder-column-handles.png" alt-text="Screenshot for the column and row handles in the Report Builder matrix report.":::
   
-5.  To resize the QTY column farthest to the left, point to the line between column handles so that the cursor changes into a double arrow. Drag the column towards the left until it is 1/2 an inch wide.  
+5.  To resize the QTY column farthest to the left of the matrix, point to the line between column handles so that the cursor changes into a double arrow. Drag the column towards the left until it's 1/2 an inch wide.  
   
     A column width of 1/2 an inch is adequate to display the quantity.  
   
@@ -240,13 +240,13 @@ A report that includes a matrix typically expands horizontally as well as vertic
 The columns that contain quantities are now narrower and are named QTY.  
   
 ## <a name="MergeCells"></a>6. Merge matrix cells  
-The corner area is in the upper left corner of the matrix. Depending on the number of row and column groups in the matrix, the number of cells in the corner area varies. The matrix, built in this tutorial, has four cells in its corner area. The cells are arranged in two rows and two columns, reflecting the depth of row and column group hierarchies. The four cells are not used in this report and you will merge them into one.  
+The corner area is in the upper left corner of the matrix. Depending on the number of row and column groups in the matrix, the number of cells in the corner area varies. The matrix, built in this tutorial, has four cells in its corner area. The cells are arranged in two rows and two columns, reflecting the depth of row and column group hierarchies. The four cells aren't used in this report and you merge them into one.  
   
 ### Merge matrix cells  
   
 1.  Select **Design** to return to design view.  
   
-2.  Select the matrix so that column and row handles appear above and next to the matrix.  
+2.  Select the matrix so that column and row handles appear above the matrix and next to it.  
   
 3.  Press the Ctrl key and select the four corner cells.  
   
@@ -263,7 +263,7 @@ The corner area is in the upper left corner of the matrix. Depending on the numb
 The cell in the upper corner of the matrix is no longer visible. 
   
 ## <a name="HeaderTitle"></a>7. Add a report header and report title  
-A report title appears at the top of the report. You can place the report title in a report header or if the report does not use one, in a text box at the top of the report body. In this tutorial, you will remove the text box at the top of the report and add a title to the header.  
+A report title appears at the top of the report. You can place the report title in a report header or if the report doesn't use one, in a text box at the top of the report body. In this tutorial, you remove the text box at the top of the report and add a title to the header.  
   
 ### Add a report header and report title  
   
@@ -271,7 +271,7 @@ A report title appears at the top of the report. You can place the report title 
   
 2.  Select the text box at the top of the report body that contains **Click to add title**, and then press the Delete key.  
   
-3.  On the **Insert** tab > **Header** > **Add Header**.  
+3.  On the **Insert** tab, go to **Header** > **Add Header**.  
   
     A header is added to the top of the report body.  
   
@@ -290,7 +290,7 @@ The report includes a report title in the report header.
 ## <a name="Save"></a>8. Save the report  
 You can save reports to a report server, SharePoint library, or your computer.  
   
-In this tutorial, save the report to a report server. If you do not have access to a report server, save the report to your computer.  
+In this tutorial, save the report to a report server. If you don't have access to a report server, save the report to your computer.  
   
 ### Save the report on a report server  
   
@@ -300,13 +300,13 @@ In this tutorial, save the report to a report server. If you do not have access 
   
 3.  Select or type the name of the report server where you have permission to save reports.  
   
-    The message "Connecting to report server" appears. When the connection is complete, you will see the contents of the report folder that the report server administrator specified as the default report location.  
+    The message "Connecting to report server" appears. When the connection is complete, you see the contents of the report folder that the report server administrator specified as the default report location.  
   
 4.  In **Name**, replace the default name with **SalesByTerritorySubcategory**.  
   
 5.  Select **Save**.  
   
-The report is saved to the report server. The name of the report server that you are connected to appears in the status bar at the bottom of the window.  
+The report is saved to the report server. The name of the report server that you're connected to appears in the status bar at the bottom of the window.  
   
 #### Save the report on your computer  
   
@@ -319,7 +319,7 @@ The report is saved to the report server. The name of the report server that you
 4.  Select **Save**.  
   
 ## <a name="RotateTextBox"></a>9. (Optional) Rotate text box 270 degrees  
-A report with matrices can expand horizontally and vertically when it runs. By rotating text boxes vertically, or 270 degrees, you can save horizontal space. The rendered report is then narrower and if exported to a format such as Microsoft Word, will be more likely to fit on a printed page.  
+A report with matrices can expand horizontally and vertically when it runs. By rotating text boxes vertically, or 270 degrees, you can save horizontal space. The rendered report is then narrower and if exported to a format such as Microsoft Word, is more likely to fit on a printed page.  
   
 A text box can also display text as horizontal, vertical (top to bottom). For more information, see [Text boxes in paginated reports (Report Builder)](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
   
@@ -336,7 +336,7 @@ A text box can also display text as horizontal, vertical (top to bottom). For mo
   
 3.  In the Properties pane, locate the WritingMode property and change it from **Default** to **Rotate270**.  
   
-    If the Properties pane is not open, select the **View** tab of the ribbon, and then select **Properties**.  
+    If the Properties pane isn't open, select the **View** tab of the ribbon, and then select **Properties**.  
   
 4.  Verify that the CanGrow property is set to **True**.  
   
@@ -348,7 +348,7 @@ A text box can also display text as horizontal, vertical (top to bottom). For mo
 The territory name is written vertically, bottom to top. The height of the Territory row group varies by the length of the territory name.  
   
 ## Next steps  
-This concludes the tutorial for how to create a matrix report. For more information about matrices, see: 
+You successfully completed the tutorial for how to create a matrix report. For more information about matrices, see: 
 -    [Tables, matrices, and lists in paginated reports (Report Builder)](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
 -    [Create a matrix in a paginated report (Report Builder)](../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)
 -    [Tablix data region areas in a paginated report (Report Builder)](../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md) 

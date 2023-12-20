@@ -63,7 +63,7 @@ In this section, you add a map to your report from the map gallery. The map has 
   
 11. On the **Choose color theme and data visualization** page, select the **Display labels** option.  
   
-12. If it is selected, clear the **Single color map** option.  
+12. If the option is selected, clear the **Single color map** option.  
   
 13. From the **Data field** drop-down list, select **#COUNTYNAME**. The Map Preview pane in the wizard displays the following items:  
   
@@ -98,9 +98,9 @@ In this section, you add a map to your report from the map gallery. The map has 
 
     :::image type="content" source="../reporting-services/media/report-builder-map-first-preview.png" alt-text="Screenshot that shows a preview of the newly created Report Builder map.":::
   
-The rendered report displays the map title, the map, and the distance scale. The counties are on a map polygon layer. Each county is a polygon that varies by color from a color palette, but the colors are not associated with any data. The distance scale displays distances in both kilometers and miles.  
+The rendered report displays the map title, the map, and the distance scale. The counties are on a map polygon layer. Each county is a polygon that varies by color from a color palette, but the colors aren't associated with any data. The distance scale displays distances in both kilometers and miles.  
   
-The map legend and color scale do not yet appear because there is no analytical data associated with each county. You will add analytical data later in this tutorial.  
+The map legend and color scale don't yet appear because there's no analytical data associated with each county. You add analytical data later in this tutorial.  
   
 ## <a name="PointLayer"></a>2. Add a map point layer to display store locations  
 In this section, you use the map layer wizard to add a point layer that displays the locations of stores.  
@@ -162,7 +162,7 @@ In this section, you use the map layer wizard to add a point layer that displays
   
 9. On the query designer toolbar, select **Run** (**!**).  
   
-    The result set contains seven columns representing a set of stores in New York State that sell consumer goods. Here's a list, with explanations for the ones that may not be obvious: 
+    The result set contains seven columns representing a set of stores in New York State that sell consumer goods. Here's a list, with explanations for the ones that might not be obvious: 
     *   **StoreKey**: A store identifier.  
     *   **StoreName**.
     *   **SellingArea**: The area available for product display, ranging from 455 square feet to 1125 square feet.
@@ -185,7 +185,7 @@ In this section, you use the map layer wizard to add a point layer that displays
   
 13. On the Choose map visualization page, select **Bubble Map** for a map type that displays markers that vary in size, according to the data. Select **Next**.  
   
-14. On the **Choose the analytical dataset** page, select DataSet1, and choose **Next**. This dataset contains both analytical data and spatial data that will be displayed on the new point layer.   
+14. On the **Choose the analytical dataset** page, select DataSet1, and choose **Next**. This dataset contains both analytical data and spatial data displayed on the new point layer.   
   
 16. On the **Choose color theme and data visualization** page, select **Use bubble sizes to visualize data**.  
   
@@ -215,7 +215,7 @@ In this section, you use the map layer wizard to add a point layer that displays
   
 24. Select **Run** to preview the report.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-map-city-names.png" alt-text="Screenshot that shows a preview of the Report Builder map with the city names displayed in bold 10 point font.":::
+    :::image type="content" source="../reporting-services/media/report-builder-map-city-names.png" alt-text="Screenshot that shows a preview of the Report Builder map with the city names displayed in bold 10-point font.":::
   
     The map displays the locations of stores in New York state. The marker size for each store is based on the display area. Five ranges of display area were automatically calculated for you.
 
@@ -276,7 +276,7 @@ Use the map layer wizard to add a map layer that displays a route between two st
 
     :::image type="content" source="../reporting-services/media/report-builder-map-zoom.png" alt-text="Screenshot that shows how to adjust the zoom of the Report Builder map.":::
 
-      This is the zoom percentage. At 125% you should see the whole state.
+      This number is the zoom percentage. At 125%, you should see the whole state.
   
 ## <a name="TileLayer"></a>4. Add a Bing Maps tile background  
 In this section, you add a map layer that displays a Bing Maps tile background.  
@@ -294,7 +294,7 @@ In this section, you add a map layer that displays a Bing Maps tile background.
   
 4.  Select the arrow next to TileLayer1 > **Tile Properties**.  
   
-5.  On the **General** tab, under **Type**, select **Aerial**. The aerial view does not contain text.  
+5.  On the **General** tab, under **Type**, select **Aerial**. The aerial view doesn't contain text.  
 
     :::image type="content" source="../reporting-services/media/report-builder-map-bing-aerial.png" alt-text="Screenshot that shows the Bing Maps aerial Tile Layer added to the Report Builder map.":::
   
@@ -316,12 +316,12 @@ In this section, to let the items on one layer show through another layer, you a
     :::image type="content" source="../reporting-services/media/report-builder-map-transparency.png" alt-text="Screenshot that shows how to set the transparency of a layer of the Report Builder map.":::
   
 ## <a name="Vary"></a>6. Vary county color based on sales  
-Each county on the polygon layer has a different color because the report processor automatically assigns a color value from the color palette based on the theme that you chose on the last page of the map wizard.  
+Each county on the polygon layer has a different color. The color report processor automatically assigns a color value to the counties from the color palette based on the theme that you chose on the last page of the map wizard.  
   
-In this section, you specify a color rule to associate specific colors with a range of store sales for each county. The colors red-yellow-green indicate relative high-middle-low sales. Format the color scale to show currency. Display the annual sales ranges in a new legend. For counties that do not contain stores, use no color to show that there is no associated data.  
+In this section, you specify a color rule to associate specific colors with a range of store sales for each county. The colors red-yellow-green indicate relative high-middle-low sales. Format the color scale to show currency. Display the annual sales ranges in a new legend. For counties that don't contain stores, use no color to show that there's no associated data.  
   
 ### <a name="Relationship"></a>6a. Build a relationship between spatial and analytical data  
-To vary the county shapes by color based on analytical data, you first need to associate the analytical data with the spatial data. In this tutorial, you will use the county name to match on. 
+To vary the county shapes by color based on analytical data, you first need to associate the analytical data with the spatial data. In this tutorial, you use the county name to match on. 
   
 1.  Switch to Design view.  
   
@@ -329,7 +329,7 @@ To vary the county shapes by color based on analytical data, you first need to a
   
 3.  Select the arrow next to PolygonLayer1, then select **Layer Data**. The **Map Polygon Layer Properties** dialog box opens.  
   
-4.  On the **Analytical data** tab, under **Analytical dataset**, select DataSet1. This dataset was created by the wizard when you created the spatial data query for the counties.  
+4.  On the **Analytical data** tab, under **Analytical dataset**, select DataSet1. The wizard created this dataset when you created the spatial data query for the counties.  
   
 6.  Under **Fields to match on**, select **Add**. A new row is added.  
   
@@ -356,13 +356,13 @@ To create a rule that varies the color of each county based store sales, you mus
   
 1.  Switch to Design view.  
   
-2.  Select the arrow next to PolygonLayer1, then select **Polygon Color Rule**. The **Map Color Rules Properties** dialog box opens. Notice that the color rule option **Visualize data by using color palette** is selected. This option was set by the wizard.  
+2.  Select the arrow next to PolygonLayer1, then select **Polygon Color Rule**. The **Map Color Rules Properties** dialog box opens. Notice that the color rule option **Visualize data by using color palette** is selected. The wizard sets this option.  
   
-3.  Select **Visualize data by using color ranges**. The palette option is replaced by start color, middle color, and end color options.  
+3.  Select **Visualize data by using color ranges**. Start color, middle color, and end color options replace the palette option.  
   
 4.  Define range values for sales per county. In **Data field**, from the drop-down list, select `[Sum(Sales)]`.  
   
-5.  To change the format to display currency in thousands, change the expression to the following: `=Sum(Fields!Sales.Value)/1000`  
+5.  To change the format to display currency in thousands, change the expression to the following example: `=Sum(Fields!Sales.Value)/1000`  
   
 6.  Change **Start color** to **Red**.  
   
@@ -382,7 +382,7 @@ To create a rule that varies the color of each county based store sales, you mus
   
 12. In **Color scale options**, verify that **Show in color scale** is selected.  
   
-13. In **Show in this legend**, from the drop-down list, select the blank line. For now, you will show the color ranges only in the color scale.  
+13. In **Show in this legend**, from the drop-down list, select the blank line. For now, you show the color ranges only in the color scale.  
   
 14. Select **OK**.
 
@@ -397,7 +397,7 @@ By default, data has a general format. In this section, you apply custom formats
   
 1. Switch to Design view.  
 
-2. Select the color scale. On the **Home** tab > **Number** section. Select **Currency**.  
+2. Select the color scale. On the **Home** tab, go to the **Number** section. Select **Currency**.  
   
 4.  Still in the **Number** section, select the **Decrease Decimal** button two times.  
   
@@ -443,7 +443,7 @@ You can set the default display options for all map elements on a layer. Color r
 Counties with no associated data display as gray-blue. Only counties with associated analytical data have the **Red** through **Green** colors from the color rules that you specified.  
   
 ## <a name="CustomPoint"></a>7. Add a custom point  
-To represent a new store that has not yet been built, in this section you specify a point with the **Star** marker type.  
+To represent a new store not built yet, in this section you specify a point with the **Star** marker type.  
   
 1.  Switch to Design view.  
   
@@ -461,7 +461,7 @@ To represent a new store that has not yet been built, in this section you specif
 
 6.  Right-click the point you added, and then select **Embedded Point Properties**.  
   
-7.  Select **Override point options for this layer**. Additional pages appear in the dialog box. Values that you set here take precedence over display options for the layer or for color rules.  
+7.  Select **Override point options for this layer**. More pages appear in the dialog box. Values that you set here take precedence over display options for the layer or for color rules.  
 
     :::image type="content" source="../reporting-services/media/report-builder-map-custom-point-general.png" alt-text="Screenshot that shows the Change embedded point options section of the Map Embedded Point Properties dialog box.":::
   
@@ -514,7 +514,7 @@ In Design view, the map on the display surface and the view is based on sample d
   
 2.  Type **Sales in New York Stores** and then select outside the text box.  
   
-This title will appear at the top of the report. Items at the top of the report body when there is no page header defined are the equivalent of a report header.  
+This title appears at the top of the report. Items at the top of the report body when there's no page header defined are the equivalent of a report header.  
   
 ## <a name="Save"></a>10. Save the report  
   
@@ -531,7 +531,7 @@ If you save it to a report server, you can view it there.
 :::image type="content" source="../reporting-services/media/report-builder-map-in-portal.png" alt-text="Screenshot that shows the completed Report Builder map displayed in the portal.":::
   
 ## Next steps  
-This concludes the walkthrough for how to add a map to your report.  
+You successfully completed the tutorial for how to add a map to your report.  
   
 For more information, see [Maps in a paginated report (Report Builder)](../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   

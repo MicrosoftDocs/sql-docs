@@ -12,11 +12,11 @@ ms.custom: updatefrequency5
 # Tutorial: Introduce expressions
 In this [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] tutorial, you use expressions with common functions and operators to create powerful and flexible [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated reports. 
 
-You will write expressions that concatenate name values, look up values in a separate dataset, display different colors based on field values, and so on.  
+In this tutorial, you write expressions that concatenate name values, look up values in a separate dataset, display different colors based on field values, and so on.  
   
-The report is a banded report with alternating rows in white and a color. The report includes a parameter for selecting the color of the non-white rows.  
+The report is a banded report with alternating rows in white and a color. The report includes a parameter for selecting the color of the nonwhite rows.  
   
-This illustration shows a report similar to the one you will create.  
+This illustration shows a report similar to the one you create in this tutorial.  
 
 :::image type="content" source="../reporting-services/media/report-builder-expression-tutorial-in-browser.png" alt-text="Screenshot of a Report Builder report that uses expressions.":::
 
@@ -26,7 +26,7 @@ Estimated time to complete this tutorial: 30 minutes.
 For information about requirements, see [Prerequisites for tutorials &#40;Report Builder&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="Setup"></a>1. Create a table report and dataset from the table or Matrix Wizard  
-In this section, you create a table report, a data source, and a dataset. When you lay out the table, you will include only a few fields. After you complete the wizard you will manually add columns. The wizard makes it easy to lay out the table.  
+In this section, you create a table report, a data source, and a dataset. When you lay out the table, you include only a few fields. After you complete the wizard, you manually add columns. The wizard makes it easy to lay out the table.  
   
 > [!NOTE]  
 > In this tutorial, the query contains the data values, so it does not need an external data source. This makes the query quite long. In a business environment, a query would not contain the data. This is for learning purposes only.  
@@ -173,7 +173,7 @@ In this section, you use the **Left** function and the **Concatenate** (**&**) o
   
 9. Type **&". "&**  
 
-    This adds a period and a space after the expression.
+    This expression adds a period and a space after the expression.
   
 10. In the **Values** list, double-click **LastName**.  
   
@@ -222,9 +222,9 @@ Here's the report so far, with formatted dates, currency, and column headers.
 
   
 ## <a name="Gender"></a>4. Use color to display gender  
-In this section, you add color to show the gender of a person. You will add a new column to display the color, and then determine the color that appears in the column based on the value of the Gender field.  
+In this section, you add color to show the gender of a person. You add a new column to display the color, and then determine the color that appears in the column based on the value of the Gender field.  
   
-To keep the color you've applied in that table cell when you make the report a banded report, you add a rectangle and then add the background color to the rectangle.  
+If you want to keep the color you apply in that table cell when you make the report a banded report, you add a rectangle. Then you add the background color to the rectangle.  
     
  
 ### Add an M/F column  
@@ -415,7 +415,7 @@ In this section, you add a column and then use the **Now** function or the `Exec
 11. Select **Run** to preview the report.  
   
 ## <a name="Indicator"></a>7. Use an indicator to show sales comparison  
-In this section, you add a new column and use an indicator to show whether a person's year-to-date (YTD) purchases are above or below the average YTD purchases. The **Round** function removes decimals from values.  
+In this section, you add a new column and use an indicator to show whether a person's year-to-date (YTD) purchases are greater or less than the average YTD purchases. The **Round** function removes decimals from values.  
   
 Configuring the indicator and its states takes many steps. If you want, you can skip ahead in the "To configure the indicator" procedure, and copy/paste the completed expressions from this tutorial into the **Expression** dialog box.  
   
@@ -566,7 +566,7 @@ Create a parameter so report readers can specify the color to apply to alternati
 
      If you don't see the Properties pane, on the **View** tab select the **Properties** box.  
   
-    If the properties are listed by category in the Properties pane, you will find **BackgroundColor** in the **Misc** category.  
+    If the properties are listed by category in the Properties pane, you find **BackgroundColor** in the **Misc** category.  
   
 5.  Select the down arrow and then select **Expression**.  
 
@@ -594,11 +594,11 @@ Create a parameter so report readers can specify the color to apply to alternati
   
 1.  On the **Home** tab, select **Run**.  
 
-    Now when you run the report, you don't see the report until you choose a color for the non-white bands.
+    Now when you run the report, you don't see the report until you choose a color for the nonwhite bands.
   
-3.  In the **Choose color** list, select a color for the non-white bands in the report.  
+3.  In the **Choose color** list, select a color for the nonwhite bands in the report.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-expression-tutorial-select-color.png" alt-text="Screenshot that shows how to choose a color for non-white bands.":::
+    :::image type="content" source="../reporting-services/media/report-builder-expression-tutorial-select-color.png" alt-text="Screenshot that shows how to choose a color for nonwhite bands.":::
   
 4.  Select **View Report**.  
   
@@ -623,26 +623,26 @@ Add a title to the report.
   
 4.  On the **Home** tab, select **Run**.  
   
-3.  Select a color for the non-white bands in the report, and select **View Report**.  
+3.  Select a color for the nonwhite bands in the report, and select **View Report**.  
   
 ## <a name="Save"></a>(Optional) Save the report  
 You can save reports to a report server, SharePoint library, or your computer. For more information, see [Save reports &#40;Report Builder&#41;](../reporting-services/report-builder/saving-reports-report-builder.md).  
   
-In this tutorial, you save the report to a report server. If you do not have access to a report server, save the report to your computer.  
+In this tutorial, you save the report to a report server. If you don't have access to a report server, save the report to your computer.  
   
 ### Save the report to a report server  
   
-1.  On the **File** menu > **Save As**.  
+1.  On the **File** menu, select **Save As**.  
   
-2.  Click **Recent Sites and Servers**.  
+2.  Select **Recent Sites and Servers**.  
   
 3.  Select or type the name of the report server where you have permission to save reports.  
   
-    The message "Connecting to report server" appears. When the connection is complete, you will see the contents of the report folder that the report server administrator specified as the default report location.  
+    The message "Connecting to report server" appears. When the connection is complete, you see the contents of the report folder that the report server administrator specified as the default report location.  
   
 4.  Give the report a name and select **Save**.  
   
-The report is saved to the report server. The name of report server that you are connected to appears in the status bar at the bottom of the window.
+The report is saved to the report server. The name of report server that you're connected to appears in the status bar at the bottom of the window.
 
 Now your report readers can view your report in the [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] web portal.
 

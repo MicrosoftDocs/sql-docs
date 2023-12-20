@@ -12,16 +12,16 @@ ms.custom: updatefrequency5
 # Tutorial: Create drillthrough and main reports (Report Builder)
 This tutorial teaches you how to create two kinds of [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated reports: a drillthrough report and a main report. The sample sales data used in these reports is retrieved from an Analysis Services cube. 
 
-The following illustration shows the reports you will create, and shows how the field value, Games and Toys, in the main report displays in the drillthrough report's title. The data in the drillthrough report pertains to the Games and Toys product category.  
+The following illustration shows the reports you create in this tutorial, and shows how the field value, Games and Toys, in the main report displays in the drillthrough report's title. The data in the drillthrough report pertains to the Games and Toys product category.  
 
 :::image type="content" source="../reporting-services/media/rs-drillthroughcubetutorial.gif" alt-text="Screenshot that shows how a drillthrough report relates to its origin report.":::
 
 Estimated time to complete this tutorial: 30 minutes.  
   
 ## Requirements  
-This tutorial requires access to the Contoso Sales cube for both the drillthrough and the main reports. This dataset comprises the ContosoDW data warehouse and the Contoso_Retail online analytical processing (OLAP) database. The reports you will create in this tutorial retrieve report data from the Contoso Sales cube. The Contoso_Retail OLAP database can be downloaded from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=18279). You need only download the file ContosoBIdemoABF.exe. It contains the OLAP database.  
+This tutorial requires access to the Contoso Sales cube for both the drillthrough and the main reports. This dataset comprises the ContosoDW data warehouse and the Contoso_Retail online analytical processing (OLAP) database. The reports you create in this tutorial retrieve report data from the Contoso Sales cube. The Contoso_Retail OLAP database can be downloaded from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=18279). You need only download the file ContosoBIdemoABF.exe. It contains the OLAP database.  
   
-The other file, ContosoBIdemoBAK.exe, is for the ContosoDW data warehouse, which is not used in this tutorial.  
+The other file, ContosoBIdemoBAK.exe, is for the ContosoDW data warehouse, which isn't used in this tutorial.  
   
 The Web site includes instructions extracting and restoring the ContosoRetail.abf backup file to the Contoso_Retail OLAP database.  
 
@@ -30,7 +30,7 @@ You must have access to an instance of [!INCLUDE[ssASnoversion](../includes/ssas
 For more about general requirements, see [Prerequisites for tutorials &#40;Report Builder&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="DMatrixAndDataset"></a>1. Create a drillthrough report from the table or Matrix Wizard  
-From the Getting Started dialog box, create a matrix report by using the **Table or Matrix Wizard**. There are two modes available in the wizard: report design and shared dataset design. In this tutorial, you will use the report design mode.  
+From the Getting Started dialog box, create a matrix report by using the **Table or Matrix Wizard**. There are two modes available in the wizard: report design and shared dataset design. In this tutorial, you use the report design mode.  
   
 #### Create a new report  
   
@@ -45,7 +45,7 @@ From the Getting Started dialog box, create a matrix report by using the **Table
 3.  In the right pane, verify that **Table or Matrix Wizard** is selected.  
   
 ## <a name="DConnection"></a>1a. Specify a data connection  
-A data connection contains the information necessary to connect to an external data source such as an Analysis Services cube or a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database. To specify a data connection, you can use a shared data source from the report server or create an embedded data source that is used only in this report. In this tutorial, you will use an embedded data source. To learn more about using a shared data source, see [Alternative ways to get a data connection &#40;Report Builder&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+A data connection contains the information necessary to connect to an external data source such as an Analysis Services cube or a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database. To specify a data connection, you can use a shared data source from the report server or create an embedded data source that is used only in this report. In this tutorial, you use an embedded data source. To learn more about using a shared data source, see [Alternative ways to get a data connection &#40;Report Builder&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### Create an embedded data source  
   
@@ -91,7 +91,7 @@ A data connection contains the information necessary to connect to an external d
 14. Select **Next**.  
   
 ## <a name="DMDXQuery"></a>1b. Create an MDX query  
-In a report, you can use a shared dataset that has a predefined query, or you can create an embedded dataset for use only in your report. In this tutorial, you will create an embedded dataset.  
+In a report, you can use a shared dataset that has a predefined query, or you can create an embedded dataset for use only in your report. In this tutorial, you create an embedded dataset.  
   
 #### Create query filters  
   
@@ -108,7 +108,7 @@ In a report, you can use a shared dataset that has a predefined query, or you ca
   
 3.  In the Measure Group pane, expand Channel, and then drag Channel Name to the **Hierarchy** column in the filter pane.  
   
-    The dimension name, Channel, is automatically added to the **Dimension** column. Do not change the **Dimension** or **Operator** columns.  
+    The dimension name, Channel, is automatically added to the **Dimension** column. Don't change the **Dimension** or **Operator** columns.  
   
 4.  To open the **Filter Expression** list, select the down arrow in the **Filter Expression** column.  
   
@@ -124,7 +124,7 @@ In a report, you can use a shared dataset that has a predefined query, or you ca
   
 8.  In the Measure Group pane, expand Date, and then drag Calendar Year to the **Hierarchy** column in the filter pane.  
   
-    The dimension name, Date, is automatically added to the **Dimension** column. Do not change the **Dimension** or **Operator** columns.  
+    The dimension name, Date, is automatically added to the **Dimension** column. Don't change the **Dimension** or **Operator** columns.  
   
 9. To open the **Filter Expression** list, select the down arrow in the **Filter Expression** column.  
   
@@ -175,11 +175,11 @@ When you select the fields on which to group the data, you design a matrix with 
   
 4.  Drag Sales_Amount to **Values**.  
   
-    Sales_Amount is automatically aggregated by the Sum function, the default aggregate for numeric fields. The value is `[Sum(Sales_Amount)]`.  
+    The Sum function automatically aggregates Sales_Amount, the default aggregate for numeric fields. The value is `[Sum(Sales_Amount)]`.  
   
-    To view the other aggregate functions available, open the drop-down list (do not change the aggregate function).  
+    To view the other aggregate functions available, open the drop-down list (don't change the aggregate function).  
   
-5.  Drag Sales_Return_Amount to **Values**, and then place it below `[Sum(Sales_Amount)]`.  
+5.  Drag Sales_Return_Amount to **Values**, and then place it after `[Sum(Sales_Amount)]`.  
   
     Steps 4 and 5 specify the data to display in the matrix.  
   
@@ -247,7 +247,7 @@ Instead of showing sales and sales returns as currency values, the report shows 
 13. To preview the report, select **Run**.  
   
 ## <a name="DReportTitle"></a>4. Add report title with product category name  
-A report title appears at the top of the report. You can place the report title in a report header or, if the report does not use one, in a text box at the top of the report body. In this tutorial, you will use the text box that is automatically placed at the top of the report body.  
+A report title appears at the top of the report. You can place the report title in a report header or, if the report doesn't use one, in a text box at the top of the report body. In this tutorial, you use the text box that is automatically placed at the top of the report body.  
   
 #### Add a report title  
   
@@ -274,7 +274,7 @@ A report title appears at the top of the report. You can place the report title 
 The report title includes the name of the first product category. Later, after you run this report as a drillthrough report, the product category name will dynamically change to reflect the name of the product category that was selected in the main report.  
   
 ## <a name="DParameter"></a>5. Set hidden parameter property  
-By default parameters are visible, which is not appropriate for this report. You will update the parameter properties for the drillthrough report.  
+By default parameters are visible, which isn't appropriate for this report. You update the parameter properties for the drillthrough report later.
   
 #### Hide a parameter  
   
@@ -292,12 +292,12 @@ By default parameters are visible, which is not appropriate for this report. You
     > [!NOTE]  
     > Because the parameter is hidden, this prompt is never used.  
   
-5.  Optionally, select **Available Values** and **Default Values** and review their options. Do not change any options on these tabs.  
+5.  Optionally, select **Available Values** and **Default Values** and review their options. Don't change any options on these tabs.  
   
 6.  Select **OK**.
   
 ## <a name="DSave"></a>6. Save the report to a SharePoint library  
-You can save the report to a SharePoint library, report server, or your computer. If you save the report to your computer, a number of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features such as subreports are not available. In this tutorial, you will save the report to a SharePoint library.  
+You can save the report to a SharePoint library, report server, or your computer. If you save the report to your computer, many [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features such as subreports aren't available. In this tutorial, you save the report to a SharePoint library.  
   
 #### Save the report  
   
@@ -320,7 +320,7 @@ You can save the report to a SharePoint library, report server, or your computer
   
     **Recent Sites and Servers** lists the libraries on the SharePoint site.  
   
-5.  Navigate to the library where you will save the report.  
+5.  Navigate to the library where you want to save the report.  
   
 6.  In the **Name** box, replace the default name with **ResellerVSOnlineDrillthrough**.  
   
@@ -343,7 +343,7 @@ From the **Getting Started** dialog box, create a matrix report by using the **T
 2.  In the **Getting Started** dialog box, verify that **New Report** is selected, and then select **Table or Matrix Wizard**.  
   
 ## <a name="MConnection"></a>1a. Add embedded data source  
-You will add an embedded data source to the main report.  
+In this section, you add an embedded data source to the main report.  
   
 #### Create an embedded data source  
   
@@ -382,7 +382,7 @@ You will add an embedded data source to the main report.
 14. Select **Next**.  
   
 ## <a name="MMDXQuery"></a>1b. Create embedded dataset  
-Next, create an embedded dataset. To do so, you will use the query designer to create filters, parameters, and calculated members as well as the dataset itself.  
+Next, create an embedded dataset. To do so, you use the query designer to create filters, parameters, and calculated members and the dataset itself.  
   
 #### Create query filters  
   
@@ -399,7 +399,7 @@ Next, create an embedded dataset. To do so, you will use the query designer to c
   
 3.  In the Measure Group pane, expand Channel, and then drag Channel Name to the **Hierarchy** column in the filter pane.  
   
-    The dimension name, Channel, is automatically added to the **Dimension** column. Do not change the **Dimension** or **Operator** columns.  
+    The dimension name, Channel, is automatically added to the **Dimension** column. Don't change the **Dimension** or **Operator** columns.  
   
 4.  To open the **Filter Expression** list, select the down arrow in the **Filter Expression** column.  
   
@@ -415,7 +415,7 @@ Next, create an embedded dataset. To do so, you will use the query designer to c
   
 8.  In the Measure Group pane, expand Date, and drag Calendar Year to the **Hierarchy** column in the filter pane.  
   
-    The dimension name, Date, is automatically added to the **Dimension** column. Do not change the **Dimension** or **Operator** columns.  
+    The dimension name, Date, is automatically added to the **Dimension** column. Don't change the **Dimension** or **Operator** columns.  
   
 9. To open the **Filter Expression** list, select the down arrow in the **Filter Expression** column.  
   
@@ -490,22 +490,22 @@ When you select the fields on which to group data, you design a matrix with rows
   
 3.  Drag `Net_QTY` to **Values**.  
   
-    `Net_QTY` is automatically aggregated by the Sum function, the default aggregate for numeric fields. The value is `[Sum(Net_QTY)]`.  
+    The Sum function automatically aggregates `Net_QTY`, the default aggregate for numeric fields. The value is `[Sum(Net_QTY)]`.  
   
-    To view the other aggregate functions available, open the drop-down list. Do not change the aggregate function.  
+    To view the other aggregate functions available, open the drop-down list. Don't change the aggregate function.  
   
-4.  Drag `Net_Sales_Return` to **Values** and then place it below `[Sum(Net_QTY)]`.  
+4.  Drag `Net_Sales_Return` to **Values** and then place it after `[Sum(Net_QTY)]`.  
   
     Steps 3 and 4 specify the data to display in the matrix.  
   
 ## <a name="MTotals"></a>1d. Add main report subtotals and totals  
-You can show subtotals and grand totals in reports. The data in the main report displays as an indicator; you will remove the grand total after you complete the wizard.  
+You can show subtotals and grand totals in reports. The data in the main report displays as an indicator. You next remove the grand total after you complete the wizard.  
   
 #### Add subtotals and grand totals  
   
 1.  On the **Choose the layout** page, under **Options**, verify that **Show subtotals and grand totals** is selected.  
   
-    The wizard Preview pane displays a matrix with four rows.  When you run the report, each row will display in the following way: The first row is the column group, the second row contains the column headings, the third row contains the product category data (`[Sum(Net_ QTY)]` and `[Sum(Net_Sales)]`, and the fourth row contains the totals.  
+    The wizard Preview pane displays a matrix with four rows.  When you run the report, each row displays in the following way: The first row is the column group, the second row contains the column headings, the third row contains the product category data (`[Sum(Net_ QTY)]` and `[Sum(Net_Sales)]`, and the fourth row contains the totals.  
   
 2.  Select **Next**.  
   
@@ -600,7 +600,7 @@ Use indicators to show the state of quantities and sales for Online and Reseller
 6.  To preview your report, select **Run**.  
   
 ## <a name="MParameter"></a>5. Set internal parameter property  
-By default, parameters are visible, which is not appropriate for this report. You will update the parameter properties to make the parameter internal.  
+By default, parameters are visible, which isn't appropriate for this report. You next update the parameter properties to make the parameter internal.  
   
 #### Make the parameter internal  
   
@@ -610,7 +610,7 @@ By default, parameters are visible, which is not appropriate for this report. Yo
   
 3.  On the **General** tab, select **Internal**.  
   
-4.  Optionally, select the **Available Values** and **Default Values** tabs and review their options. Do not change any options on these tabs.  
+4.  Optionally, select the **Available Values** and **Default Values** tabs and review their options. Don't change any options on these tabs.  
   
 5.  Select **OK**.
   
@@ -666,7 +666,7 @@ Run the main report, and then select values in the product category column to ru
   
     The report runs and displays product category sales information.  
   
-3.  Click the **Games and Toys** link in the column that contains product category names.  
+3.  Select the **Games and Toys** link in the column that contains product category names.  
   
     The drillthrough report runs, displaying only the values for the Games and Toys product category.  
   

@@ -30,7 +30,7 @@ In SSMS, to generate the report:
 - In the **Object Explorer**, right-click your database node.
 - Select **Reports** > **Standard Reports** > **Transaction Performance Analysis Overview**.
 
-For more information on assessing the benefits of in-memory OLTP, see [Determining if a table or stored procedure should be ported to in-memory OLTP](/sql/relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp?view=azuresqlmi-current&preserve-view=true).
+For more information on assessing the benefits of in-memory OLTP, see [Determining if a table or stored procedure should be ported to in-memory OLTP](/sql/relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp?view=azuresqldb-mi-current&preserve-view=true).
 
 ## Step 2: Create a comparable test database
 
@@ -81,7 +81,7 @@ To use this migration option:
    * Select **Script Table As** > **CREATE To** > **New Query Window**.
 1. In the script window, add `WITH (MEMORY_OPTIMIZED = ON)` to the `CREATE TABLE` statement.
 1. If there is a CLUSTERED index, change it to NONCLUSTERED.
-1. Rename the existing table by using [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql?view=azuresqlmi-current&preserve-view=true).
+1. Rename the existing table by using [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql?view=azuresqldb-mi-current&preserve-view=true).
 1. Create the new memory-optimized copy of the table by running your edited `CREATE TABLE` script.
 1. Copy the data to your memory-optimized table by using `INSERT...SELECT * INTO`:
     ```sql
@@ -97,8 +97,8 @@ The in-memory feature can also modify a stored procedure for improved performanc
 
 A natively compiled stored procedure must have the following options on its T-SQL `WITH` clause:
 
-- [NATIVE_COMPILATION](/sql/relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures?view=azuresqlmi-current&preserve-view=true#native-compilation-of-stored-procedures): meaning the Transact-SQL statements in the procedure are all compiled to native code for efficient execution.
-- [SCHEMABINDING](/sql/t-sql/statements/create-view-transact-sql?view=azuresqlmi-current&preserve-view=true#schemabinding): meaning tables that the stored procedure cannot have their column definitions changed in any way that would affect the stored procedure, unless you drop the stored procedure.
+- [NATIVE_COMPILATION](/sql/relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures?view=azuresqldb-mi-current&preserve-view=true#native-compilation-of-stored-procedures): meaning the Transact-SQL statements in the procedure are all compiled to native code for efficient execution.
+- [SCHEMABINDING](/sql/t-sql/statements/create-view-transact-sql?view=azuresqldb-mi-current&preserve-view=true#schemabinding): meaning tables that the stored procedure cannot have their column definitions changed in any way that would affect the stored procedure, unless you drop the stored procedure.
 
 A native module must use one big [ATOMIC block](/sql/relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures) for transaction management. There is no role for an explicit `BEGIN TRANSACTION` or `ROLLBACK TRANSACTION.` If your code detects a violation of a business rule, it can terminate the atomic block with a [THROW](/sql/t-sql/language-elements/throw-transact-sql) statement.
 
@@ -130,8 +130,8 @@ The migration steps are:
 
 1. Obtain the `CREATE PROCEDURE` script to the regular interpreted stored procedure.
 1. Rewrite its header to match the previous template.
-1. Determine whether the stored procedure T-SQL code uses any features that are not supported for natively compiled stored procedures. Implement workarounds if necessary. For more information, see [Migration issues for natively compiled stored procedures](/sql/relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables?view=azuresqlmi-current&preserve-view=true).
-1. Rename the old stored procedure by using [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql?view=azuresqlmi-current&preserve-view=true). Or simply DROP it.
+1. Determine whether the stored procedure T-SQL code uses any features that are not supported for natively compiled stored procedures. Implement workarounds if necessary. For more information, see [Migration issues for natively compiled stored procedures](/sql/relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables?view=azuresqldb-mi-current&preserve-view=true).
+1. Rename the old stored procedure by using [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql?view=azuresqldb-mi-current&preserve-view=true). Or simply DROP it.
 1. Run your edited `CREATE PROCEDURE` T-SQL script.
 
 ## Step 5: Run your workload in test
@@ -156,6 +156,6 @@ Consider monitoring the performance effects of your in-memory implementations in
 
 ## Related content
 
-- [In-memory OLTP (In-memory Optimization)](/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization?view=azuresqlmi-current&preserve-view=true)
-- [A Guide to Query Processing for Memory-Optimized Tables](/sql/relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables?view=azuresqlmi-current&preserve-view=true)
-- [Memory Optimization Advisor](/sql/relational-databases/in-memory-oltp/memory-optimization-advisor?view=azuresqlmi-current&preserve-view=true)
+- [In-memory OLTP (In-memory Optimization)](/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization?view=azuresqldb-mi-current&preserve-view=true)
+- [A Guide to Query Processing for Memory-Optimized Tables](/sql/relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables?view=azuresqldb-mi-current&preserve-view=true)
+- [Memory Optimization Advisor](/sql/relational-databases/in-memory-oltp/memory-optimization-advisor?view=azuresqldb-mi-current&preserve-view=true)

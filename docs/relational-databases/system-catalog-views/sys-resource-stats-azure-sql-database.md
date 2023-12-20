@@ -25,7 +25,7 @@ monikerRange: "=azuresqldb-current"
 Returns CPU usage and storage data for a database in Azure SQL Database. The data is collected and aggregated within five-minute intervals. For each user database, there is one row for every five-minute reporting window in which there is a change in resource consumption. The data returned includes CPU usage, storage size change, and database SKU modification. Idle databases with no changes may not have rows for every five-minute interval. Historical data is retained for approximately 14 days.  
 
 > [!NOTE]
-> This dynamic management view applies to Azure SQL Database only. For an equivalent view for Azure SQL Managed Instance, use [sys.server_resource_stats](sys-server-resource-stats-azure-sql-database.md?view=azuresqlmi-current&preserve-view=true).
+> This dynamic management view applies to Azure SQL Database only. For an equivalent view for Azure SQL Managed Instance, use [sys.server_resource_stats](sys-server-resource-stats-azure-sql-database.md?view=azuresqldb-mi-current&preserve-view=true).
 
 |Columns|Data Type|Description|  
 |----------------------------|---------------|-----------------|  

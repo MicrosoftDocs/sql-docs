@@ -23,7 +23,7 @@ With [in-memory OLTP](in-memory-oltp-overview.md), data in memory-optimized tabl
 
 The Business Critical service tier includes a certain amount of **Max In-Memory OLTP memory**, [determined by the number of vCores](resource-limits.md?view=azuresql-mi&preserve-view=true).
 
-Estimating memory requirements for a memory-optimized table works the same way for SQL Server as it does in Azure SQL Managed Instance. Take a few minutes to review [Estimate memory requirements](/sql/relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables?view=azuresqlmi-current&preserve-view=true).
+Estimating memory requirements for a memory-optimized table works the same way for SQL Server as it does in Azure SQL Managed Instance. Take a few minutes to review [Estimate memory requirements](/sql/relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables?view=azuresqldb-mi-current&preserve-view=true).
 
 Table and table variable rows, as well as indexes, count toward the max user data size. In addition, `ALTER TABLE` needs enough room to create a new version of the entire table and its indexes.
 
@@ -46,7 +46,7 @@ To resolve this error, either:
 ## Monitor with DMVs
 
 
-- By monitoring the memory consumption periodically, you can determine how memory consumption is growing and how much head room you have left in the resource limits. Identify how much memory is being consumed by the objects in your database or instance. For example, the DMVs [sys.dm_db_xtp_table_memory_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql?view=azuresqlmi-current&preserve-view=true) or [sys.dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql?view=azuresqlmi-current&preserve-view=true).
+- By monitoring the memory consumption periodically, you can determine how memory consumption is growing and how much head room you have left in the resource limits. Identify how much memory is being consumed by the objects in your database or instance. For example, the DMVs [sys.dm_db_xtp_table_memory_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql?view=azuresqldb-mi-current&preserve-view=true) or [sys.dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql?view=azuresqldb-mi-current&preserve-view=true).
 
     - You can find memory consumption for all user tables, indexes, and system objects by querying `sys.dm_db_xtp_table_memory_stats`:
 
@@ -74,13 +74,13 @@ To resolve this error, either:
         MEMORYCLERK_XTP      Default    64             0  
     ```
 
-- You can also get more information about out of memory errors in Azure SQL Managed Instance with the dynamic management view [sys.dm_os_out_of_memory_events](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-out-of-memory-events.md?view=azuresqlmi-current&preserve-view=true). For example:
+- You can also get more information about out of memory errors in Azure SQL Managed Instance with the dynamic management view [sys.dm_os_out_of_memory_events](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-out-of-memory-events.md?view=azuresqldb-mi-current&preserve-view=true). For example:
 
     ```sql
     SELECT * FROM sys.dm_os_out_of_memory_events ORDER BY event_time DESC;
     ```
 
-    For more information, see [Monitor and troubleshoot in-Memory OLTP memory usage](/sql/relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage?view=azuresqlmi-current&preserve-view=true).
+    For more information, see [Monitor and troubleshoot in-Memory OLTP memory usage](/sql/relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage?view=azuresqldb-mi-current&preserve-view=true).
 
 ## Related content
 

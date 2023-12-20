@@ -125,5 +125,5 @@ Because database backups protect data from accidental corruption or deletion, th
 
 For a tutorial on configuring and managing LTR backups, visit:
 
-- [Manage Azure SQL Database long-term backup retention](long-term-backup-retention-configure.md)
-- [Manage Azure SQL Managed Instance long-term backup retention](../managed-instance/long-term-backup-retention-configure.md)
+- [Manage Azure SQL Database long-term backup retention](long-term-backup-retention-configure.md?view=azuresql-db&preserve-view=true)
+- [Manage Azure SQL Managed Instance long-term backup retention](../managed-instance/long-term-backup-retention-configure.md?view=azuresql-mi&preserve-view=true)

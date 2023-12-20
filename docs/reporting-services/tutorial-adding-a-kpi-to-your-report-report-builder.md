@@ -14,7 +14,7 @@ In this [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] tutorial, you
 
 KPIs are measurable values with business significance. In this scenario, the sales summary by product subcategories is the KPI. The current state of the KPI is shown with colors, gauges, and indicators.
   
-The following illustration is similar to the report you will create.  
+The following illustration is similar to the report you create in this tutorial.  
 
 :::image type="content" source="../reporting-services/media/report-builder-kpi-report.png" alt-text="Screenshot of a Report Builder KPI report.":::
     
@@ -45,7 +45,7 @@ In this section, you choose a shared data source, create an embedded dataset, an
   
 5.  Select **Next**.  
   
-6.  On the **Choose a connection to a data source** page, select an existing data source or browse to the report server and select a data source. If there no data source is available or you do not have access to a report server, you can use an embedded data source instead. For more information, see [Tutorial: Creating a basic table report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  On the **Choose a connection to a data source** page, select an existing data source or browse to the report server and choose a data source. If there no data source is available or you don't have access to a report server, you can use an embedded data source instead. For more information, see [Tutorial: Creating a basic table report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Select **Next**.  
   
@@ -100,17 +100,17 @@ The Table or Matrix wizard provides a starting design in which to display data. 
   
 1.  On the Arrange fields page, drag Product to **Values**.  
   
-2.  Drag Quantity to **Values** and place below Product.  
+2.  Drag Quantity to **Values** and place after Product.  
   
     Quantity is summarized with the Sum function, the default function to summarize numeric fields.  
   
-3.  Drag Sales to **Values** and place below Quantity.  
+3.  Drag Sales to **Values** and place after Quantity.  
   
     Steps 1, 2, and 3 specify the data to display in the table.  
   
 4.  Drag SalesDate to **Row groups**.  
   
-5.  Drag Subcategory to **Row groups** and place below SalesDate.  
+5.  Drag Subcategory to **Row groups** and place after SalesDate.  
   
     Steps 4 and 5 organize the values for the fields first by date, and then by all sales for that date.  
   
@@ -124,13 +124,13 @@ The Table or Matrix wizard provides a starting design in which to display data. 
   
 9. Clear the option **Expand/collapse groups**.  
   
-    In this tutorial, the report you create does not use the drilldown feature that lets a user expand a parent group hierarchy to display child group rows and detail rows.  
+    In this tutorial, the report you create doesn't use the drilldown feature that lets a user expand a parent group hierarchy to display child group rows and detail rows.  
   
 10. Select **Next**.  
   
 11. Select **Finish**.  
   
-      The table is added to the design surface. The table has five columns and five rows. The Row Groups pane shows three row groups: SalesDate, Subcategory, and Details. Detail data is all the data that is retrieved by the dataset query. The Column Groups pane is empty.  
+      The table is added to the design surface. The table has five columns and five rows. The Row Groups pane shows three row groups: SalesDate, Subcategory, and Details. Detail data is all the data that the dataset query retrieves. The Column Groups pane is empty.  
 
       :::image type="content" source="../reporting-services/media/report-builder-kpi-row-groups.png" alt-text="Screenshot that shows three row groups in the Row Groups pane.":::
   
@@ -159,7 +159,7 @@ Let's make the columns wider and set the format for the dates and currency.
 
 6. Select the cell that contains [SalesDate].
 
-6. In the **Number** group > **Date**.
+6. In the **Number** group, select **Date**.
 
    The cell displays the example date [1/31/2000]. 
 
@@ -174,7 +174,7 @@ Background colors can be set to an expression that is evaluated when you run the
   
 1.  In the table, right-click the second `[Sum(Sales)]` cell (the subtotal row that displays the sales for a subcategory), then select **Text Box Properties**. 
 
-    Make sure you've selected the cell, not the text in the cell, to view **Text Box Properties**. 
+    Make sure you select the cell, not the text in the cell, to view **Text Box Properties**. 
 
     :::image type="content" source="../reporting-services/media/report-builder-text-box-properties.png" alt-text="Screenshot of the Report Builder Text Box Properties option.":::
   
@@ -182,7 +182,7 @@ Background colors can be set to an expression that is evaluated when you run the
   
     `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   
-     This changes the background color to "Lime" green for each cell with an aggregated sum for `[Sum(Sales)]` greater than or equal to 5000. Values of `[Sum(Sales)]` between 2500 and 5000 are "Yellow". Values less than 2500 are "Red".  
+     This expression changes the background color to "Lime" green for each cell with an aggregated sum for `[Sum(Sales)]` greater than or equal to 5000. Values of `[Sum(Sales)]` between 2500 and 5000 are "Yellow". Values less than 2500 are "Red".  
   
 1.  Select **OK**.
   
@@ -193,7 +193,7 @@ In the subtotal row that displays the sales for a subcategory, the background co
 :::image type="content" source="../reporting-services/media/report-builder-kpi-colors.png" alt-text="Screenshot of the Report Builder KPI report with colors in certain cells.":::
   
 ## <a name="Gauge"></a>4. Display a KPI by using a gauge  
-A gauge depicts a single value in a dataset. This tutorial uses a horizontal linear gauge because its shape and simplicity make it easy to read, even in when it is small and within a table cell. For more information, see [Gauges in a paginated report (Report Builder)](../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
+A gauge depicts a single value in a dataset. This tutorial uses a horizontal linear gauge because its shape and simplicity make it easy to read, even in when it's small and within a table cell. For more information, see [Gauges in a paginated report (Report Builder)](../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
 ### Display the present state of a KPI by using a gauge  
   
@@ -203,7 +203,7 @@ A gauge depicts a single value in a dataset. This tutorial uses a horizontal lin
 
     :::image type="content" source="../reporting-services/media/report-builder-kpi-insert-column.png" alt-text="Screenshot that shows how to insert a column to the Report Builder KPI report.":::
   
-3.  Type **Linear KPI** in the column heading.  
+3.  Enter **Linear KPI** in the column heading.  
   
 4.  On the **Insert** tab > **Data Visualizations** > **Gauge**, and then select the design surface outside the table.   
   
@@ -256,11 +256,11 @@ Indicators are small simple gauges that communicate data values at a glance. Bec
   
 2.  In the table, right-click the column handle for the Linear KPI column that you added in the last procedure > **Insert Column** > **Right**. A new column is added to the table.  
   
-3.  Type **Stoplight KPI** in the column heading.  
+3.  Enter **Stoplight KPI** in the column heading.  
   
 4.  Select the cell for the subcategory subtotal, next to the linear gauge you added in the last procedure.  
   
-5.  On the **Insert** tab > **Data Visualizations** > double-click **Indicator.**  
+5.  On the **Insert** tab, go to **Data Visualizations** > double-click **Indicator.**  
   
 6.  In the **Select Indicator Type** dialog box, under **Shapes**, select the first shape type, **3 Traffic Lights (Unrimmed)**.  
   
@@ -283,7 +283,7 @@ Indicators are small simple gauges that communicate data values at a glance. Bec
 :::image type="content" source="../reporting-services/media/report-builder-kpi-stoplight.png" alt-text="Screenshot that shows a Stoplight KPI column added to the Report Builder KPI report.":::
   
 ## <a name="Title"></a>6. Add a report title to your report 
-A report title appears at the top of the report. You can place the report title in a report header or if the report does not use one, in a text box at the top of the report body. In this section, you use the text box that is automatically placed at the top of the report body.  
+A report title appears at the top of the report. You can place the report title in a report header or if the report doesn't use one, in a text box at the top of the report body. In this section, you use the text box that is automatically placed at the top of the report body.  
   
 You can further enhance the text by applying different font styles, sizes, and colors to phrases and individual characters of the text. For more information, see [Format text in a text box in paginated reports (Report Builder)](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
@@ -291,14 +291,14 @@ You can further enhance the text by applying different font styles, sizes, and c
   
 1.  On the design surface, select **Click to add title**.  
   
-2.  Type **Product Sales KPIs**, and then select outside the text box.  
+2.  Enter **Product Sales KPIs**, and then select outside the text box.  
   
-3.  Optionally, right-click the text box that contains **Product Sales KPI**, select **Text Box Properties**, and then on the Font tab select different font styles, sizes and colors.  
+3.  Optionally, right-click the text box that contains **Product Sales KPI**, select **Text Box Properties**, and then on the Font tab choose different font styles, sizes and colors.  
   
 4.  Select **Run** to preview the report.  
   
 ## <a name="Save"></a>7. Save the report  
-Save the report to a report server or your computer. If you do not save the report to the report server, a number of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features such as subreports are not available.  
+Save the report to a report server or your computer. If you don't save the report to the report server, many [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features such as subreports aren't available.  
   
 ### Save the report on a report server  
   
@@ -306,7 +306,7 @@ Save the report to a report server or your computer. If you do not save the repo
   
 2.  Select **Recent Sites and Servers**.  
   
-3.  Select or type the name of the report server where you have permission to save reports.  
+3.  Select or enter the name of the report server where you have permission to save reports.  
   
     The message "Connecting to report server" appears. When the connection is complete, you see the contents of the report folder that the report server administrator specified as the default location for reports.  
   
@@ -314,7 +314,7 @@ Save the report to a report server or your computer. If you do not save the repo
   
 5.  Select **Save**.  
   
-The report is saved to the report server. The name of report server that you are connected to appears in the status bar at the bottom of the window.  
+The report is saved to the report server. The name of report server that you're connected to appears in the status bar at the bottom of the window.  
   
 ### Save the report on your computer  
   
@@ -330,7 +330,7 @@ The report is saved to the report server. The name of report server that you are
 2.  Select **Save**.  
   
 ## Next steps  
-You have successfully completed the Adding a KPI to Your Report tutorial. For more information, see:
+You successfully completed the Adding a KPI to Your Report tutorial. For more information, see:
 * [Gauges in a paginated report (Report Builder)](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
 * [Indicators in a paginated report (Report Builder)](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   

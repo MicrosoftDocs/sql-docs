@@ -14,7 +14,7 @@ ms.custom: updatefrequency5
 
 In this tutorial in [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], you create a basic table with a sparkline chart in a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report.   
   
-Sparklines and data bars are small, simple charts that convey a lot of information in a little space, often in tables and matrices in [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] reports. The following illustration shows a report similar to the one that you will create.  
+Sparklines and data bars are small, simple charts that convey large amounts information in a little space, often in tables and matrices in [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] reports. The following illustration shows a report similar to the one that you create in this tutorial.  
 
 :::image type="content" source="../reporting-services/media/report-builder-sparkline-final.png" alt-text="Screenshot that shows the Report Builder sparkline.":::
 
@@ -42,21 +42,21 @@ For more information about requirements, see [Prerequisites for tutorials &#40;R
   
 5.  Select **New**. The **Data Source Properties** dialog box opens.  
   
-6.  In **Name**, type **Product Sales**, a name for the data source.  
+6.  In **Name**, enter **Product Sales**, a name for the data source.  
   
 7.  In **Select a connection type**, verify that **Microsoft SQL Server** is selected.  
   
-8.  In **Connection string**, type the following text:  
+8.  In **Connection string**, enter the following text:  
   
     `Data Source\=<servername>`  
   
-    The expression `<servername>`, for example Report001, specifies a computer on which an instance of the SQL Server Database Engine is installed. Because the report data is not extracted from a SQL Server database, you need not include the name of a database. The default database on the specified server is used to parse the query.  
+    The expression `<servername>`, for example Report001, specifies a computer on which an instance of the SQL Server Database Engine is installed. Because the report data isn't extracted from a SQL Server database, you need not include the name of a database. The default database on the specified server is used to parse the query.  
   
 9. Select **Credentials**. Enter the credentials that you need to access the external data source.  
   
 10. Select **OK**.
   
-    You are back on the **Choose a connection to a data source** page.  
+    You're back on the **Choose a connection to a data source** page.  
   
 11. To verify that you can connect to the data source, select **Test Connection**.  
   
@@ -67,14 +67,14 @@ For more information about requirements, see [Prerequisites for tutorials &#40;R
 13. Select **Next**.  
   
 ## <a name="Query"></a>2. Create a query and table layout in the Table Wizard for your report
-In a report, you can use a shared dataset that has a predefined query, or you can create an embedded dataset for use only in your report. In this tutorial, you will create an embedded dataset.  
+In a report, you can use a shared dataset that has a predefined query, or you can create an embedded dataset for use only in your report. In this tutorial, you create an embedded dataset.  
   
 > [!NOTE]  
 > In this tutorial, the query contains the data values, so that it does not need an external data source. This makes the query quite long. In a business environment, a query would not contain the data. This is for learning purposes only.  
   
 ### Create a query and table layout in the Table Wizard
   
-1.  On the **Design a query** page, the relational query designer is open. For this tutorial, you will use the text-based query designer.  
+1.  On the **Design a query** page, the relational query designer is open. For this tutorial, you use the text-based query designer.  
   
 2.  Select **Edit As Text**. The text-based query designer displays a query pane and a results pane.  
   
@@ -133,13 +133,13 @@ In a report, you can use a shared dataset that has a predefined query, or you ca
   
 10. On the **Choose the layout** page, under **Options**, verify that **Show subtotals and grand totals** is selected.  
   
-    The wizard Preview pane displays a table with three rows. When you run the report, each row will display in the following way:  
+    The wizard Preview pane displays a table with three rows. When you run the report, each row displays in the following way:  
   
-    *  The first row will appear once for the table to show column headings.  
+    *  The first row appears once for the table to show column headings.  
   
-    *  The second row will repeat once for each product and display the product name, total per day, and line total.  
+    *  The second row repeats once for each product and displays the product name, total per day, and line total.  
   
-    *  The third row will appear once for the table to display the grand totals.  
+    *  The third row appears once for the table to display the grand totals.  
 
     :::image type="content" source="../reporting-services/media/report-builder-sparkline-choose-layout.png" alt-text="Screenshot that shows how to choose a layout.":::
   
@@ -149,7 +149,7 @@ In a report, you can use a shared dataset that has a predefined query, or you ca
   
 14. The table is added to the design surface. The table has three columns and three rows.  
   
-    Look in the Grouping pane. If you can't see the Grouping pane on the **View** menu, select **Grouping**. The Row Groups pane shows one row group: **Product**. The Column Groups pane shows one column group: **SalesDate**. Detail data is all the data that is retrieved by the dataset query.  
+    Look in the Grouping pane. If you can't see the Grouping pane on the **View** menu, select **Grouping**. The Row Groups pane shows one row group: **Product**. The Column Groups pane shows one column group: **SalesDate**. Detail data is all the data that the dataset query retrieves.  
 
     :::image type="content" source="../reporting-services/media/report-builder-sparkline-grouping-pane.png" alt-text="Screenshot that shows the Report Builder grouping pane.":::
   
@@ -160,7 +160,7 @@ By default, the summary data for the **Sales** field displays a general number. 
   
 1.  Select **Design** to switch to design view.  
   
-2.  Select the cell in the second row (under the column headings row) in the **SalesDate** column. Hold down the Ctrl key and select all cells that contain `[Sum(Sales)]`. 
+2.  Select the cell in the second row (under the column headings row) in the **SalesDate** column. Hold down the Ctrl key and choose all cells that contain `[Sum(Sales)]`. 
 
     :::image type="content" source="../reporting-services/media/report-builder-select-sum-sales.png" alt-text="Screenshot that shows how to select sum sales.":::
   
@@ -168,7 +168,7 @@ By default, the summary data for the **Sales** field displays a general number. 
 
     :::image type="content" source="../reporting-services/media/report-builder-placeholder-currency.png" alt-text="Screenshot that shows the sales replaced by placeholder currency values.":::
   
-    If your regional setting is English (United States), the default sample text is [**$12,345.00**]. If you do not see an example currency value in the **Numbers** group, select **Placeholder Styles** > **Sample Values**.  
+    If your regional setting is English (United States), the default sample text is [**$12,345.00**]. If you don't see an example currency value in the **Numbers** group, select **Placeholder Styles** > **Sample Values**.  
 
     :::image type="content" source="../reporting-services/media/report-builder-placeholder-value-button.png" alt-text="Screenshot that shows the Sample Values option selected.":::
    
@@ -177,7 +177,7 @@ By default, the **SalesDate** field displays both date and time information. You
   
 1.  Select the cell that contains `[SalesDate]`.  
   
-3.  On the **Home** tab > **Number** group > **Date**.  
+3.  On the **Home** tab, go to **Number** group > **Date**.  
   
     The cell displays the example date **[1/31/2000]**.
      
@@ -191,7 +191,7 @@ The **SalesDate** values display in the default date format, and the summary val
   
 2.  Select the Total column in your table.  
   
-3.  Right-click, point to **Insert Column**, and then select **Left**.  
+3.  Right-click. Point to **Insert Column**, and then select **Left**.  
 
     :::image type="content" source="../reporting-services/media/report-builder-add-column-left.png" alt-text="Screenshot that shows how to insert a left column.":::
   
@@ -199,7 +199,7 @@ The **SalesDate** values display in the default date format, and the summary val
 
     :::image type="content" source="../reporting-services/media/report-builder-insert-sparkline.png" alt-text="Screenshot that shows how to insert a sparkline.":::
   
-5.  In the **Select Sparkline Type** dialog box, make sure the first sparkline in the **Column** row is selected, then select **OK**.  
+5.  In the **Select Sparkline Type** dialog box, make sure the first sparkline in the **Column** row is selected, then choose **OK**.  
   
 6.  Select the sparkline to show the Chart Data pane.  
   
@@ -213,9 +213,9 @@ The **SalesDate** values display in the default date format, and the summary val
   
 9. Select **Run** to preview your report.  
   
-    Note that the bars in the sparkline charts don't line up with each other. There are only four bars in the second row of data, so the bars are wider than the bars in the first row, which has six. You can't compare values for each product per day. They need to line up.  
+    The bars in the sparkline charts don't line up with each other. There are only four bars in the second row of data, so the bars are wider than the bars in the first row, which has six. You can't compare values for each product per day. They need to line up.  
   
-    Also, for each row the tallest bar is the height of the row. This is misleading, too, because the largest values for each row are not equal: the largest value for Budget Movie-Maker is $10,400, but for Slim Digital it's $26,576 - more than twice as large. And yet the largest bars in those two rows are about the same height. All the sparklines need to use the same scale.  
+    Also, for each row, the tallest bar is the height of the row. This visual is misleading, too, because the largest values for each row aren't equal: the largest value for Budget Movie-Maker is $10,400, but for Slim Digital it's $26,576 - more than twice as large. And yet the largest bars in those two rows are about the same height. All the sparklines need to use the same scale.  
 
     :::image type="content" source="../reporting-services/media/report-builder-sparkline-misaligned.png" alt-text="Screenshot that shows a Report Builder sparkline that is misaligned.":::
   
@@ -236,7 +236,7 @@ Sparklines are hard to read when they don't all use the same measurements. Both 
   
 6.  Check the **Align axes in** check box. Tablix1 is the only option in the list. 
   
-    This sets the width of the bars in each sparkline relative to the others. If some sparklines have fewer bars than others, then those sparklines will have blank spaces for the missing data.  
+    This sets the width of the bars in each sparkline relative to the others. If some sparklines have fewer bars than others, then those sparklines have blank spaces for the missing data.  
   
 7.  Select **OK**.  
   
@@ -255,14 +255,14 @@ To reduce the amount of vertical space each row takes, expand the column width t
   
 1.  Select **Design** to return to design view.  
   
-2.  Select the table so gray bars appear above and next to the table. Those are the column and row handles
+2.  Select the table so gray bars appear above the table and next to it. Those bars are the column and row handles
   
 3.  Point to the line between column handles so that the cursor changes into a double arrow. Drag the **Product** column so that the product name displays on one line.  
   
 4.  Select **Run** to preview your report and see if you made it wide enough.  
   
 ## <a name="Title"></a>8. (Optional) Add a report title  
-A report title appears at the top of the report. You can place the report title in a report header or if the report does not use one, in a text box at the top of the report body. In this tutorial, you will use the text box that is automatically placed at the top of the report body.  
+A report title appears at the top of the report. You can place the report title in a report header or if the report doesn't use one, in a text box at the top of the report body. In this tutorial, you use the text box that is automatically placed at the top of the report body.  
   
 The text can be further enhanced by applying different font styles, sizes, and colors to phrases and individual characters of the text. For more information, see [Format text in a text box in paginated reports (Report Builder)](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
@@ -270,7 +270,7 @@ The text can be further enhanced by applying different font styles, sizes, and c
   
 1.  On the design surface, select **Click to add title**.  
   
-2.  Type **Sales by Date**, and then select outside the text box.  
+2.  Enter **Sales by Date**, and then select outside the text box.  
   
 3.  Select the text box that contains **Product Sales**.  
   
@@ -281,7 +281,7 @@ The text can be further enhanced by applying different font styles, sizes, and c
 8.  Select **OK**.
   
 ## <a name="Save"></a>9. Save the report  
-Save the report to a report server or your computer. If you do not save the report to the report server, a number of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features such as subreports are not available.  
+Save the report to a report server or your computer. If you don't save the report to the report server, many [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features such as subreports aren't available.  
   
 ### Save the report on a report server  
   
@@ -289,7 +289,7 @@ Save the report to a report server or your computer. If you do not save the repo
   
 2.  Select **Recent Sites and Servers**.  
   
-3.  Select or type the name of the report server where you have permission to save reports.  
+3.  Select or enter the name of the report server where you have permission to save reports.  
   
     The message "Connecting to report server" appears. When the connection is complete, you see the contents of the report folder that the report server administrator specified as the default location for reports.  
   
@@ -297,7 +297,7 @@ Save the report to a report server or your computer. If you do not save the repo
   
 5.  Select **Save**.  
   
-The report is saved to the report server. The name of report server that you are connected to appears in the status bar at the bottom of the window.  
+The report is saved to the report server. The name of report server that you're connected to appears in the status bar at the bottom of the window.  
   
 ### Save the report on your computer  
   
@@ -309,9 +309,9 @@ The report is saved to the report server. The name of report server that you are
   
 4.  Select **Save**.  
   
-## Next steps  
+## Next step
 
-This concludes the tutorial for creating a table report with sparkline charts. For more information about sparklines, see [Sparklines and Data Bars](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).
+You successfully completed the tutorial for creating a table report with sparkline charts. For more information about sparklines, see [Sparklines and Data Bars](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).
 
 ## Related content
   

@@ -18,7 +18,7 @@ Column charts are useful to:
 -   Compare the relative value of multiple series.  
 -   Display a moving average to show trends.  
   
-The following illustration shows the column chart you will create, with a moving average.  
+The following illustration shows the column chart you create in this tutorial, with a moving average.  
 
 :::image type="content" source="../reporting-services/media/report-builder-column-chart-tutorial.png" alt-text="Screenshot that shows a report builder column chart.":::
 
@@ -50,7 +50,7 @@ In this section, you go through the Chart Wizard to create an embedded dataset, 
   
 4.  On the **Choose a dataset page**, select **Create a dataset**, and then choose **Next**.  
   
-5.  On the **Choose a connection to a data source** page, select an existing data source or browse to the report server and select a data source, and then select **Next**. You may need to enter a user name and password.  
+5.  On the **Choose a connection to a data source** page, select an existing data source or browse to the report server and choose a data source, and then select **Next**. You might need to enter a user name and password.  
   
     > [!NOTE]  
     > The data source you choose is unimportant, as long as you have adequate permissions. You will not be getting data from the data source. For more information, see [Alternative ways to get a data connection &#40;Report Builder&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -78,7 +78,7 @@ In this section, you go through the Chart Wizard to create an embedded dataset, 
     UNION SELECT CAST('2015-12-31' AS date) AS SalesDate, CAST(81946. AS money) AS Sales  
     ```  
   
-8.  (Optional) Select the Run button (**!**) to see the data your chart will be based on.  
+8.  (Optional) Select the Run button (**!**) to see the data your chart is based on.  
   
 9. Select **Next**.  
   
@@ -97,17 +97,17 @@ You can choose from several predefined chart types, and then modify the chart af
  
 6.  Select **Finish**.  
   
-    The chart is added to the design surface. Note that the new column chart just shows representational data. The legend reads Sales Date A, Sales Date B, etc., just to give an idea of what your report will look like. 
+    The chart is added to the design surface. The new column chart just shows representational data. The legend reads Sales Date A, Sales Date B, etc., just to give an idea of what your report should like. 
     
     :::image type="content" source="../reporting-services/media/report-builder-column-chart-1-design-view.png" alt-text="Screenshot of a Report Builder column in the design view.":::
   
-7.  Select the chart to display the chart handles. Drag the bottom-right corner of the chart to increase the size of the chart. Note that the report design surface increases in size to accommodate the chart size.  
+7.  Select the chart to display the chart handles. Drag the bottom-right corner of the chart to increase the size of the chart. The report design surface increases in size to accommodate the chart size.  
   
 8.  Select **Run** to preview the report.  
 
     :::image type="content" source="../reporting-services/media/report-builder-column-chart-1-preview.png" alt-text="Screenshot that shows a preview of the Report Builder column chart.":::
 
-Note that the chart does not label every category on the horizontal axis. By default, only labels that fit next to the axis are included. 
+The chart doesn't label every category on the horizontal axis. By default, only labels that fit next to the axis are included. 
   
 ## <a name="Horizontal"></a>3. Format a date on the horizontal axis  
 By default, the horizontal axis displays values in a general format that is automatically scaled to fit the size of the chart.  
@@ -124,7 +124,7 @@ By default, the horizontal axis displays values in a general format that is auto
   
 7.  On the Home tab, select **Run** to preview the report.  
   
-The date displays in the date format that you selected. The chart still does not label every category on the horizontal axis. 
+The date displays in the date format that you selected. The chart still doesn't label every category on the horizontal axis. 
 
 :::image type="content" source="../reporting-services/media/report-builder-column-chart-2-preview.png" alt-text="Screenshot of the Report Builder column chart displaying the date format.":::
   
@@ -134,7 +134,7 @@ You can customize the label display by rotating the labels and specifying the in
   
 1.  Switch to report design view.  
   
-2.  Right-click the horizontal axis title, then select **Show Axis Title** to remove the title. Because the horizontal axis displays dates, the title is not needed.  
+2.  Right-click the horizontal axis title, then select **Show Axis Title** to remove the title. Because the horizontal axis displays dates, the title isn't needed.  
   
 3.  Right-click the horizontal axis > **Horizontal Axis Properties**.  
   
@@ -167,7 +167,7 @@ The legend is automatically created from category and series data. You can move 
   
 4.  Select **OK**.
   
-5.  (Optional) Because there is only one category in this tutorial, the chart doesn't need a legend. To remove it, right-click the legend > **Delete Legend**.  
+5.  (Optional) Because there's only one category in this tutorial, the chart doesn't need a legend. To remove it, right-click the legend > **Delete Legend**.  
   
 6.  Select **Run** to preview the report.  
   
@@ -175,7 +175,7 @@ The legend is automatically created from category and series data. You can move 
     
 1.  Switch to report design view.  
   
-2.  Select the words **Chart Title** at the top of the chart, then type **Store Sales Order Totals**.  
+2.  Select the words **Chart Title** at the top of the chart, then enter **Store Sales Order Totals**.  
   
 3.  Select **Run** to preview the report.  
   
@@ -192,7 +192,7 @@ By default, the vertical axis displays values in a general format that is automa
   
 5.  Right-click the vertical axis > **Vertical Axis Properties**.  
   
-6.  On the **Number** tab, note that **Currency** is already selected in the **Category** box, and **Decimal places** is already **0** (zero).  
+6.  On the **Number** tab, **Currency** is already selected in the **Category** box, and **Decimal places** is already **0** (zero).  
   
 7.  Check **Show Values in**. **Thousands** is already selected.  
   
@@ -202,7 +202,7 @@ By default, the vertical axis displays values in a general format that is automa
 
 10. Right-click the vertical axis title > **Axis Title Properties**.  
   
-10. Replace the text in the **Title text** field with **Sales Total (in Thousands)**. You can also specify a variety of options related to how the title is formatted.  
+10. Replace the text in the **Title text** field with **Sales Total (in Thousands)**. You can also specify various options related to how the title is formatted.  
   
 11. Select **OK**.
   
@@ -216,7 +216,7 @@ You notice that only some of the labels on the x axis are showing. In this secti
 
 1.  Switch to report design view.  
   
-2.  Select the chart, then select the horizontal axis labels.
+2.  Select the chart, then choose the horizontal axis labels.
 
 3. In the Properties pane, set LabelInterval to 1.
 
@@ -262,7 +262,7 @@ The chart displays a line that shows the moving average for total sales by date,
   
 2.  On the design surface, select **Click to add title**.  
   
-3.  Type **Sales Chart**. Press ENTER, and then type **January to December 2015**, so it looks like this:  
+3.  Enter **Sales Chart**. Press ENTER, and then enter **January to December 2015**, so it looks like this:  
   
     **Sales Chart**  
   
@@ -272,9 +272,9 @@ The chart displays a line that shows the moving average for total sales by date,
   
 5.  Select **January to December 2015**, and on the **Home** tab > **Font** section >  set font size to **10**.  
   
-6.  (Optional) You may need to make the **Title** text box taller to accommodate the two lines of text. Pull down on the double-headed arrows when you select in the middle of the bottom edge. And you may need to drag the top of the chart so the title doesn't overlap.  
+6.  (Optional) You might need to make the **Title** text box taller to accommodate the two lines of text. Pull down on the double-headed arrows when you select in the middle of the bottom edge. And you might need to drag the top of the chart so the title doesn't overlap.  
   
-    This title appears at the top of the report. When there is no page header defined, items at the top of the report body are the equivalent of a report header.  
+    This title appears at the top of the report. When there's no page header defined, items at the top of the report body are the equivalent of a report header.  
   
 7.  Select **Run** to preview the report.  
   
@@ -288,12 +288,12 @@ The chart displays a line that shows the moving average for total sales by date,
 
     You can save it either to your computer or to the report server.
   
-3.  In **Name**, type **Sales Order Column Chart**.  
+3.  In **Name**, enter **Sales Order Column Chart**.  
   
 4.  Select **Save**.  
   
 ## Next steps  
-You have successfully completed the Adding a Column Chart to Your Report tutorial. For more information about charts, see [Charts in a paginated report (Report Builder)](../reporting-services/report-design/charts-report-builder-and-ssrs.md) and [Sparklines and data bars in a paginated report (Report Builder)](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+You successfully completed the Adding a Column Chart to Your Report tutorial. For more information about charts, see [Charts in a paginated report (Report Builder)](../reporting-services/report-design/charts-report-builder-and-ssrs.md) and [Sparklines and data bars in a paginated report (Report Builder)](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## Related content
 

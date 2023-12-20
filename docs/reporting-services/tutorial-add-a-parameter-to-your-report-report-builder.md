@@ -48,7 +48,7 @@ Create a matrix report, a data source, and a dataset.
       
 8.  Select **Next**.  
 
-    You may need to enter your credentials.    
+    You might need to enter your credentials.    
      
 9. On the **Design a query** page, select **Edit as Text**.  
   
@@ -74,11 +74,11 @@ Create a matrix report, a data source, and a dataset.
   
     This query combines the results of several [!INCLUDE[tsql_md](../includes/tsql-md.md)] SELECT statements inside a common table expression to specify values that are based on simplified sales data for cameras from the Contoso sample database. The subcategories are digital cameras, digital single lens reflex (SLR) cameras, camcorders, and accessories.  
   
-11. On the query designer toolbar, Select **Run** (**!**) to see the data.   
+11. On the query designer toolbar, select **Run** (**!**) to see the data.   
   
-    The result set consists of 11 rows of data that show the quantity of items sold for each subcategory for four stores, in the following columns: StoreID, Subcategory, Quantity. The store name is not part of the result set. Later in this tutorial, you will look up the name of the store that corresponds to the store identifier from a separate dataset.  
+    The result set consists of 11 rows of data that show the quantity of items sold for each subcategory for four stores, in the following columns: StoreID, Subcategory, Quantity. The store name isn't part of the result set. Later in this tutorial, you look up the name of the store that corresponds to the store identifier from a separate dataset.  
   
-    This query does not contain query parameters. You will add query parameters later in this tutorial.   
+    This query doesn't contain query parameters. You add query parameters later in this tutorial.   
   
 12. Select **Next**.  
   
@@ -93,13 +93,13 @@ The wizard provides a starting design for displaying data. The preview pane in t
   
 3.  Drag Quantity to **Values**.  
   
-    You have organized the quantity sold values in rows grouped by subcategory, with one column for each store.  
+    You organized the quantity sold values in rows grouped by subcategory, with one column for each store.  
   
 4.  Select **Next**.  
   
 5.  On the **Choose the Layout** page, under **Options**, make sure **Show subtotals and grand totals** is selected.  
   
-    When you run the report, the last column will show the total quantity of each subcategory for all stores, and the last row will show the total quantity for all subcategories for each store.  
+    When you run the report, the last column shows the total quantity of each subcategory for all stores, and the last row shows the total quantity for all subcategories for each store.  
   
 6.  Select **Next**.  
   
@@ -119,7 +119,7 @@ The report runs on the report server and displays the title and the time the rep
 
 :::image type="content" source="../reporting-services/media/ssrb-paramtut-preview1.png" alt-text="Screenshot of the report preview run on the report server.":::
   
-So far the column headings display the store identifier but not the store name. Later, you will add an expression to look up the store name in a dataset that contains store identifier/store name pairs.  
+So far the column headings display the store identifier but not the store name. Later, you add an expression to look up the store name in a dataset that contains store identifier/store name pairs.  
   
 ## <a name="Query"></a>3. Add a query parameter to create a report parameter  
 When you add a query parameter to a query, Report Builder automatically creates a single-valued report parameter with default properties for name, prompt, and data type.  
@@ -140,7 +140,7 @@ When you add a query parameter to a query, Report Builder automatically creates 
   
 4.  On the query designer toolbar, select **Run** (**!**). The **Define Query Parameters** dialog box opens and prompts for a value for the query parameter *\@StoreID*.  
   
-5.  In **Parameter Value**, type **200**.  
+5.  In **Parameter Value**, enter **200**.  
   
 6.  Select **OK**.
   
@@ -150,7 +150,7 @@ When you add a query parameter to a query, Report Builder automatically creates 
   
 8.  In the Report Data pane, expand the **Parameters** folder.  
   
-Note there is now a report parameter named *\@StoreID*, and a Parameters pane where you can lay out the report parameters.   
+There's now a report parameter named *\@StoreID*, and a Parameters pane where you can lay out the report parameters.   
 
 :::image type="content" source="../reporting-services/media/ssrb-parampane.png" alt-text="Screenshot of the StodeID field in the Report Data pane." lightbox="../reporting-services/media/ssrb-parampane.png"::: 
   
@@ -165,7 +165,7 @@ By default, the parameter you created has the data type **Text**. Because the st
   
 1.  In the Report Data pane under the **Parameters** node, right-click *\@StoreID*, then select **Parameter Properties**.  
   
-2.  In **Prompt**, type **Store identifier?** This text appears on the report viewer toolbar when you run the report.  
+2.  In **Prompt**, enter **Store identifier?** This text appears on the report viewer toolbar when you run the report.  
   
 3.  In **Data type**, from the drop-down list, select **Integer**.  
   
@@ -175,12 +175,12 @@ By default, the parameter you created has the data type **Text**. Because the st
   
 6.  Select **Run** to preview the report. The report viewer displays the prompt **Store Identifier?** for *\@StoreID*.  
   
-7.  On the report viewer toolbar, next to Store ID, type **200**, and then select **View Report**.  
+7.  On the report viewer toolbar, next to Store ID, enter **200**, and then select **View Report**.  
   
 :::image type="content" source="../reporting-services/media/ssrb-paramtutstoreid.png" alt-text="Screenshot of the report preview for Store ID 200." lightbox="../reporting-services/media/ssrb-paramtutstoreid.png":::
   
 ## <a name="AddDataset"></a>4a. Add a dataset to provide available values and display names  
-To make sure your report readers type only valid values for a parameter, you can create a drop-down list of values to choose from. The values can come from a dataset or from a list that you specify. Available values must be supplied from a dataset with a query that does not contain a reference to the parameter.  
+To make sure your report readers type only valid values for a parameter, you can create a drop-down list of values to choose from. The values can come from a dataset or from a list that you specify. Available values must be supplied from a dataset with a query that doesn't contain a reference to the parameter.  
   
 ### Create a dataset for valid values for a parameter  
   
@@ -188,7 +188,7 @@ To make sure your report readers type only valid values for a parameter, you can
   
 2.  In the Report Data pane, right-click the **Datasets** folder, and then select **Add Dataset**.  
   
-3.  In **Name**, type **Stores**.  
+3.  In **Name**, enter **Stores**.  
   
 4.  Select **Use a dataset embedded in my report**.  
   
@@ -216,7 +216,7 @@ After you create a dataset to provide available values, you change the report pr
   
 1.  In the Report Data pane, right-click the parameter *\@StoreID*, then select **Parameter Properties**.  
   
-2.  Select **Available Values**, and then select **Get values from a query**.  
+2.  Select **Available Values**, and then choose **Get values from a query**.  
   
 3.  In **Dataset**, from the drop-down list, select **Stores**.  
   
@@ -228,7 +228,7 @@ After you create a dataset to provide available values, you change the report pr
   
 7.  In **Prompt**, change **Store Identifier?** to **Store name?**  
   
-    Report readers will now select from a list of store names instead of store identifiers. Note that the parameter data type remains **Integer** because the parameter is based on the store identifier, not the store name.  
+    Report readers now select from a list of store names instead of store identifiers. The parameter data type remains **Integer** because the parameter is based on the store identifier, not the store name.  
   
 8.  Select **OK**.
   
@@ -236,7 +236,7 @@ After you create a dataset to provide available values, you change the report pr
   
     In the report viewer toolbar, the parameter text box is now a drop-down list that displays **Select a Value**.  
   
-10. From the drop-down list, select Contoso Catalog Store, then select **View Report**.  
+10. From the drop-down list, select Contoso Catalog Store, then choose **View Report**.  
   
 The report displays the quantity sold for Accessories, Camcorders, and Digital SLR Cameras for the store identifier **200**.  
   
@@ -249,7 +249,7 @@ You can specify a default value for each parameter so the report runs automatica
   
 2.  In the Report Data pane, right-click *\@StoreID*, then select **Parameter Properties**.  
   
-3.  Select **Default Values**, then select **Get values from a query**.  
+3.  Select **Default Values**, then choose **Get values from a query**.  
   
 4.  In **Dataset**, from the drop-down list, select **Stores**.  
   
@@ -269,7 +269,7 @@ For *\@StoreID*, the report viewer displays the value "Contoso North America Onl
   
 3.  Select **Default Values** > **Specify values** > **Add**. A new value row is added.  
   
-4.  In **Value**, type **200**.  
+4.  In **Value**, enter **200**.  
   
 5.  Select **OK**.
   
@@ -292,7 +292,7 @@ A dataset might contain both the identifier and the corresponding name field. Wh
   
 5.  In Item, double-click **Lookup**. The expression pane displays `=Lookup(`. The Example pane displays an example of Lookup syntax.  
   
-6.  Type the following expression: 
+6.  Enter the following expression: 
 
     ```  
     =Lookup(Fields!StoreID.Value,Fields!StoreID.Value,Fields!StoreName.Value,"Stores")      
@@ -319,7 +319,7 @@ When your report readers have questions about a report, it helps to know which p
   
 3.  From the Report Data pane, drag the parameter *\@StoreID* to the text box. The text box displays `[@StoreID]`.  
   
-4.  To display the parameter label, select in the text box until the insert cursor appears after the existing expression, type a space, and then drag another copy of the parameter from the Report Data pane to the text box. The text box displays `[@StoreID] [@StoreID]`.  
+4.  To display the parameter label, select in the text box until the insert cursor appears after the existing expression. Enter a space, and then drag another copy of the parameter from the Report Data pane to the text box. The text box displays `[@StoreID] [@StoreID]`.  
   
 5.  Right-click the first `[@StoreID]` and select **Expression**. The **Expression** dialog box opens. Replace the text `Value` with `Label`.  
   
@@ -330,7 +330,7 @@ When your report readers have questions about a report, it helps to know which p
 7.  Preview the report.  
   
 ## <a name="Filter"></a>6. Use the report parameter in a filter  
-Filters help control which data to use in a report after it is retrieved from an external data source. To let report readers control the data they want to see, you can include the report parameter in a filter for the matrix.  
+Filters help control which data to use in a report after it comes from an external data source. To let report readers control the data they want to see, you can include the report parameter in a filter for the matrix.  
   
 ### Specify a parameter in a matrix filter  
   
@@ -344,7 +344,7 @@ Filters help control which data to use in a report after it is retrieved from an
   
 5.  In **Operator**, verify that the **equals sign** (=) is selected.  
   
-6.  In **Value**, type `[@StoreID]`. 
+6.  In **Value**, enter `[@StoreID]`. 
 
     `[@StoreID]` is the simple expression syntax that represents `=Parameters!StoreID.Value`.  
   
@@ -354,7 +354,7 @@ Filters help control which data to use in a report after it is retrieved from an
   
     The matrix displays data only for "Contoso Catalog Store".  
   
-9. On the report viewer toolbar, for **Store name?**, select **Contoso Asia Online Store**, and then select **View Report**.  
+9. On the report viewer toolbar, for **Store name?**, select **Contoso Asia Online Store**, and then choose **View Report**.  
   
 The matrix displays data that corresponds to the store that you selected.  
   
@@ -393,13 +393,13 @@ To change a parameter from single to multivalued, you must change the query and 
   
 12. In the text box that displays the parameter in the page footer, delete all text.  
   
-13. Right-click the text box, and then select **Expression**. Type the following expression: `=Join(Parameters!StoreID.Label, ", ")`  
+13. Right-click the text box, and then select **Expression**. Enter the following expression: `=Join(Parameters!StoreID.Label, ", ")`  
   
     This expression concatenates all store names that the user selected, separated by a comma and a space.  
   
 14. Select **OK**.
   
-15. Select in the text box in front of the expression that you just created, and then type the following: 
+15. Select in the text box in front of the expression that you created, and then enter the following text:
 
     **Parameter Values Selected:** 
   
@@ -413,7 +413,7 @@ To change a parameter from single to multivalued, you must change the query and 
   
     The report displays the quantity sold for all subcategories for all stores.  
   
-19. From the drop-down list, select **Select All** to clear the list, choose "Contoso Catalog Store" and "Contoso Asia Online Store", and then select **View Report**.  
+19. From the drop-down list, select **Select All** to clear the list, choose "Contoso Catalog Store" and "Contoso Asia Online Store", and then choose **View Report**.  
 
     :::image type="content" source="../reporting-services/media/report-builder-parameter-multiselect.png" alt-text="Screenshot that shows you can multi-select parameters to add to a report.":::
  
@@ -423,9 +423,9 @@ To change a parameter from single to multivalued, you must change the query and 
   
 1.  On the design surface, in the Report Data pane, right-click **Parameters**, and select **Add Parameter**.  
   
-2.  In **Name**, type ShowSelections.  
+2.  In **Name**, enter ShowSelections.  
   
-3.  In **Prompt**, type Show selections?  
+3.  In **Prompt**, enter Show selections?  
   
 4.  In **Data type**, select **Boolean**.  
   
@@ -433,7 +433,7 @@ To change a parameter from single to multivalued, you must change the query and 
   
 6.  Select **Specify value**, and then choose **Add**.  
   
-7.  In **Value**, type **False**.  
+7.  In **Value**, enter **False**.  
   
 8.  Select **OK**.
   
@@ -445,9 +445,9 @@ To change a parameter from single to multivalued, you must change the query and 
   
 3.  Select the option **Show or hide based on an expression**, and then select the expression button **Fx**.  
   
-4.  Type the following expression: `=Not Parameters!ShowSelections.Value`  
+4.  Enter the following expression: `=Not Parameters!ShowSelections.Value`  
   
-    The text box Visibility option is controlled by the property Hidden. Apply the **Not** operator so that when the parameter is selected, the Hidden property is false, and the text box will be displayed.  
+    The property Hidden controls the text box Visibility option. Apply the **Not** operator so that when the parameter is selected, the Hidden property is false, and the text box displays.  
   
 5.  Select **OK**.
   
@@ -455,7 +455,7 @@ To change a parameter from single to multivalued, you must change the query and 
   
 7.  Preview the report.  
   
-    The text box that displays the parameter choices in the footer does not appear.  
+    The text box that displays the parameter choices in the footer doesn't appear.  
   
 8.  In the report viewer toolbar, next to **Show selections**, select **True** > **View Report**.  
   
@@ -469,7 +469,7 @@ To change a parameter from single to multivalued, you must change the query and 
    
 1.  On the design surface, select **Click to add title**.  
   
-2.  Type Parameterized Product Sales, and then select outside the text box.  
+2.  Enter Parameterized Product Sales, and then select outside the text box.  
   
 ## <a name="Save"></a>10. Save the report  
   
@@ -479,7 +479,7 @@ To change a parameter from single to multivalued, you must change the query and 
   
 2.  Select **Recent Sites and Servers**.  
   
-3.  Select or type the name of the report server where you have permission to save reports.  
+3.  Select or enter the name of the report server where you have permission to save reports.  
   
     The message **Connecting to report server appears**. When the connection is complete, you see the contents of the report folder that the report server administrator specified as the default location for reports.  
   
@@ -487,10 +487,10 @@ To change a parameter from single to multivalued, you must change the query and 
   
 5.  Select **Save**.  
   
-The report is saved to the report server. The report server that you are connected to appears in the status bar at the bottom of the window.  
+The report is saved to the report server. The report server that you're connected to appears in the status bar at the bottom of the window.  
   
-## Next steps  
-This concludes the walkthrough for how to add a parameter to your report. For more information about parameters, see [Paginated report parameters (Report Builder)](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+## Next step
+You finished the tutorial for how to add a parameter to your report. For more information about parameters, see [Paginated report parameters (Report Builder)](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ## Related content
 

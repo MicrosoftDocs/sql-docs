@@ -12,13 +12,13 @@ ms.custom: updatefrequency5
 # Tutorial: Add a bar chart to your report (Report Builder)
 In this tutorial, you use a wizard in [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] to create a bar chart in a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report. Then you add a filter and enhance the chart. 
 
-A bar chart displays category data horizontally. This can help to:  
+A bar chart displays category data horizontally. This visualization can help to:  
   
 -   Improve readability of long category names.  
 -   Improve understandability of times plotted as values.   
 -   Compare the relative value of multiple series.  
   
-The following illustration shows the bar chart that you will create, with sales for 2014 and 2015 for the top five salespeople, from most to least 2015 sales.  
+The following illustration shows the bar chart that you create in this tutorial. It shows the sales for 2014 and 2015 for the top five salespeople, from most to least 2015 sales.  
 
 :::image type="content" source="../reporting-services/media/report-builder-bar-chart.png" alt-text="Screenshot of a report builder bar chart.":::
 
@@ -53,7 +53,7 @@ In which you create an embedded dataset, choose a shared data source, and create
   
 4.  On the **Choose a dataset** page, select **Create a dataset**, and then choose **Next**.  
   
-5.  On the **Choose a connection to a data source** page, select an existing data source or browse to the report server and select a data source, and then select **Next**. You may need to enter a user name and password.  
+5.  On the **Choose a connection to a data source** page, select an existing data source or browse to the report server and choose a data source, and then select **Next**. You might need to enter a user name and password.  
   
     > [!NOTE]  
     > The data source you choose is unimportant, as long as you have adequate permissions. You will not be getting data from the data source. For more information, see [Alternative ways to get a data connection &#40;Report Builder&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -79,7 +79,7 @@ In which you create an embedded dataset, choose a shared data source, and create
     UNION SELECT 'Brian' as FirstName, 'Burke' as LastName, CAST(187000. AS money) AS SalesYear2015, CAST(207000. AS money) AS SalesYear2014  
     ```  
   
-8.  (Optional) Select the Run button (**!**) to see the data your chart will be based on.  
+8.  (Optional) Select the Run button (**!**) to see the data your chart is based on.  
   
 9. Select **Next**.  
   
@@ -101,7 +101,7 @@ In which you create an embedded dataset, choose a shared data source, and create
   
 7.  Select **Finish**.  
   
-    The chart is added to the design surface. Note that the new bar chart just shows representational data. The legend reads Last Name A, Last Name B, etc., rather than the people's names, just to give an idea of what your report will look like. 
+    The chart is added to the design surface. The new bar chart just shows representational data. The legend reads Last Name A, Last Name B, etc., rather than the people's names, just to give an idea of what your report should look like. 
   
 9. Select the chart to display the chart handles. Drag the bottom-right corner of the chart to increase the size of the chart. Notice the design surface gets larger as you drag. 
   
@@ -146,13 +146,13 @@ You can change the category expression to include last name followed by first na
   
 8.  Select **Run** to preview the report.  
   
-If the first names do not appear when you run the report, you can refresh the data manually. While still in preview mode, on the **Run** tab in the **Navigation** group, select **Refresh**.  
+If the first names don't appear when you run the report, you can refresh the data manually. While still in preview mode, on the **Run** tab in the **Navigation** group, select **Refresh**.  
   
 > [!NOTE]  
 > If you cannot read the salesperson names on the vertical axis, you can make your chart taller or change the formatting options for the axis labels.  
   
 ## <a name="Sort"></a>4. Change the sort order on the vertical axis  
-When you sort the data on a chart, you are changing the order of values on the category axis.  
+When you sort the data on a chart, you're changing the order of values on the category axis.  
   
 1.  Switch to report design view.  
   
@@ -173,7 +173,7 @@ When you sort the data on a chart, you are changing the order of values on the c
 The names on the horizontal axis are sorted from largest to smallest 2015 sales, with **Zeng** at the top.  
   
 ## <a name="Legend"></a>5. Move the legend  
-To improve the readability of the chart values, you might want to move the chart legend. For example, in a bar chart where bars are shown horizontally, you can change the position of the legend so that it is above or below the chart area. This gives more horizontal space to the bars.  
+To improve the readability of the chart values, you might want to move the chart legend. For example, in a bar chart where bars are shown horizontally, you can change the position of the legend so that it is above the chart or below the chart area. This positioning gives more horizontal space to the bars.  
   
 #### Display the legend below the chart area of a bar chart  
   
@@ -195,7 +195,7 @@ To improve the readability of the chart values, you might want to move the chart
   
 1.  Switch to report design view.  
   
-2.  Select the words **Chart Title** at the top of the chart, then type: **Sales for 2014 and 2015**.  
+2.  Select the words **Chart Title** at the top of the chart, then enter: **Sales for 2014 and 2015**.  
   
 3.  In the Properties pane, with the title selected, set **Color** to **Black** and **FontSize** to **12pt**. 
   
@@ -208,7 +208,7 @@ By default, the horizontal axis displays values in a general format that is auto
   
 2.  Select the horizontal axis along the bottom of the chart to select it.  
   
-3.  On the **Home** tab > **Number** group > **Currency**. The horizontal axis labels change to currency.  
+3.  On the **Home** tab, go to **Number** group > **Currency**. The horizontal axis labels change to currency.  
   
 3.  (Optional) Remove the decimal digits. Near the **Currency** button, select the **Decrease Decimal** button twice.  
   
@@ -220,7 +220,7 @@ By default, the horizontal axis displays values in a general format that is auto
 
 8.  Right-click the horizontal axis, and select **Show Axis Title**.
   
-7.  In the **Axis Title** box, type **Sales in thousands** and press Enter.  
+7.  In the **Axis Title** box, enter **Sales in thousands** and press Enter.  
 
     > [!NOTE]  
     > While you're typing, the Axis Title box appears to be on the vertical axis. But when you press Enter, it goes to the horizontal axis.
@@ -242,19 +242,19 @@ You can add a filter to the chart to specify which data from the dataset to incl
   
 5.  Select **Add**. A new blank filter appears.  
   
-6.  In **Expression**, type **[Sum(SalesYear2015)]**. This creates the underlying expression `=Sum(Fields!SalesYear2015.Value)`, which you can see if you select the **fx** button.  
+6.  In **Expression**, enter **[Sum(SalesYear2015)]**. This expression creates the underlying expression `=Sum(Fields!SalesYear2015.Value)`, which you can see if you select the **fx** button.  
   
 7.  Verify that the data type is **Text**.  
   
 8.  In **Operator**, select **Top N** from the drop-down list.  
   
-9. In **Value**, type the following expression: **=5**  
+9. In **Value**, enter the following expression: **=5**  
   
 10. Select **OK**.
   
 11. Select **Run** to preview the report.  
   
-If the results are not filtered when you run the report, you can refresh the data manually. On the **Run** tab in the **Navigation** group, select **Refresh**.  
+If the results aren't filtered when you run the report, you can refresh the data manually. On the **Run** tab in the **Navigation** group, select **Refresh**.  
   
 The chart shows the top five salesperson names from the 2015 sales data.  
   
@@ -262,7 +262,7 @@ The chart shows the top five salesperson names from the 2015 sales data.
   
 1.  On the design surface, select **Click to add title**.  
   
-2.  Type **Sales Bar Chart**. Press ENTER, and then type **Top Five Sellers for 2015**, so it looks like this:  
+2.  Enter **Sales Bar Chart**. Press ENTER, and then enter **Top Five Sellers for 2015**, so it looks like this:  
   
     **Sales Bar Chart**  
   
@@ -272,9 +272,9 @@ The chart shows the top five salesperson names from the 2015 sales data.
   
 4.  Select **Top Five Sellers for 2015**, and in the **Font** section on the **Home** tab, set the font size to **10**.  
   
-5.  (Optional) You may need to make the Title text box taller, and bring down the top of the bar chart, to accommodate the two lines of text.  
+5.  (Optional) You might need to make the Title text box taller, and bring down the top of the bar chart, to accommodate the two lines of text.  
   
-    This title will appear at the top of the report. When there is no page header defined, items at the top of the report body are the equivalent of a report header.  
+    This title appears at the top of the report. When there's no page header defined, items at the top of the report body are the equivalent of a report header.  
   
 6.  Select **Run** to preview the report.  
   
@@ -284,14 +284,14 @@ The chart shows the top five salesperson names from the 2015 sales data.
   
 2.  Select **File** > **Save As**.  
   
-3.  In **Name**, type **Sales Bar Chart**.  
+3.  In **Name**, enter **Sales Bar Chart**.  
 
     You can save it either to your computer or to the report server.
   
 4.  Select **Save**.   
   
 ## Next steps  
-You have successfully completed the Adding a Bar Chart to Your Report tutorial. For more information about charts, see [Charts in a paginated report (Report Builder)](../reporting-services/report-design/charts-report-builder-and-ssrs.md) and [Bar charts in a paginated report (Report Builder)](../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md).  
+You successfully completed the Adding a Bar Chart to Your Report tutorial. For more information about charts, see [Charts in a paginated report (Report Builder)](../reporting-services/report-design/charts-report-builder-and-ssrs.md) and [Bar charts in a paginated report (Report Builder)](../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md).  
   
 ## Related content
 

@@ -24,7 +24,7 @@ You can create a unique constraint in [!INCLUDE [ssnoversion](../../includes/ssn
 > [!NOTE]
 > For information on unique constraints in Azure Synapse Analytics, see [Primary key, foreign key, and unique key in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-table-constraints).
   
-## <a id="Security"></a> <a name="Permissions"> Permissions
+## <a id="Security"></a> <a name="Permissions"></a> Permissions
 
 Requires ALTER permission on the table.  
 
@@ -42,7 +42,7 @@ Requires ALTER permission on the table.
   
 1. On the **File** menu, select **Save _table name_**.  
 
-## <a id="TsqlExample"></a> <a name="TsqlProcedure"> Use Transact-SQL
+## <a id="TsqlExample"></a> <a name="TsqlProcedure"></a> Use Transact-SQL
 
 ### <a id="to-create-a-unique-constraint-using-transact-sql"></a> Create a unique constraint using Transact-SQL
   
@@ -105,7 +105,7 @@ Requires ALTER permission on the table.
 
 1. On the **Standard** bar, select **New Query**.  
 
-1. Copy and paste the following example into the query window and select **Execute**. The example creates a filtered unique constraint using the `CREATE UNIQUE INDEX` syntax, only enforcing uniqueness on non-`NULL` values.
+1. Copy and paste the following example into the query window and select **Execute**. The example creates a [filtered](../indexes/create-filtered-indexes.md) unique constraint using the `CREATE UNIQUE INDEX` syntax, only enforcing uniqueness on non-`NULL` values.
 
     ```sql  
     USE AdventureWorks2022;  

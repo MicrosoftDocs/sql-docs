@@ -50,10 +50,10 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 |Setting|Comments|  
 |-------------|--------------|  
 |External Images Timeout|Default is 600 seconds.|  
-|Snapshot Compression|Default is SQL|  
+|Snapshot Compression|Default is SQL.|  
 |System Report Timeout|Default is 1800 seconds.<br /><br /> Specify whether report processing times out on the report server after a certain number of seconds. This value applies to report processing on a report server. It doesn't affect data processing on the database server that provides the data for your report. The report processing timer clock begins when the report is selected and ends when the report opens. The value that you specify must be sufficient to complete both data processing and report processing.|  
 |System Snapshot Limit|Default is -1, which is no limit.<br /><br /> Set a site-wide default value for the number of copies of report history to retain. The default value provides an initial setting that establishes the number of snapshots that can be stored for each report. You can specify different limits in property pages for specific reports.|  
-|Stored Parameters Lifetime|Default is 180|  
+|Stored Parameters Lifetime|Default is 180.|  
 |Stored Parameters Threshold|Default is 1500 days.|  
   
 ### Session settings
@@ -79,7 +79,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 |-------------|--------------|  
 |Enable Integrated Security|Default is TRUE.<br /><br /> Specifies whether a connection to a report data source can be made using the Windows security token of the user who requested the report.|  
 |Enable Load Report Definition|Default is TRUE.|  
-|Enable Remote Errors|Default is FALSE|  
+|Enable Remote Errors|Default is FALSE.|  
 |Enable Test Connection Detailed Errors|Default is TRUE.|  
   
 ### Client settings
@@ -87,7 +87,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 |Setting|Comments|  
 |-------------|--------------|  
 |Enable Report Builder Download|Default is TRUE.<br /><br /> Specifies whether clients are able to see the button for downloading the report builder application.|  
-|Report Builder Launch URL|Specify a custom URL when the report server doesn't use the default Report Builder URL. This setting is optional. If you don't specify a value, the default URL is used, which launches Report Builder. To launch Report Builder 3.0 as a Click-Once application, enter the following value: ```https://\<computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application```.|  
+|Report Builder Launch URL|Specify a custom URL when the report server doesn't use the default Report Builder URL. This setting is optional. If you don't specify a value, the default URL is used, which launches Report Builder. To launch Report Builder 3.0 as a Click-Once application, enter the following value: ```https://<computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application```.|  
 |Enable Client Printing|The Default is TRUE.<br /><br /> Specifies whether users can download the client side control, which provides printing options.|  
 |Edit Session Timeout|Default is 7200 seconds.|  
 |Edit Session Cache Limit|Default is 5.|  
@@ -99,15 +99,15 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 :::image type="content" source="../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif" alt-text="Screenshot that shows the Manage Jobs page.":::  
   
 ## Key management
- The following table summarizes the Kay Management pages  
+ The following table summarizes the Kay Management pages.  
   
 > [!IMPORTANT]  
 >  Periodically changing the Reporting Services encryption key is a security best practice. A recommended time to change the key is immediately following a major version upgrade of Reporting Services. Changing the key after an upgrade minimizes additional service interruption caused by changing the Reporting Services encryption key outside of the upgrade cycle.  
   
 |Page|Description|  
 |----------|-----------------|  
-|Backup Encryptions Key|1) Type a password in to the **Password:** and **Confirm Password:** boxes and select **Export**. You see a warning if the password you typed doesn't meet the complexity requirements of the domain policy.<br /><br /> 2) You're prompted for a file location of where to save the key file. You should consider storing the key file on a separate computer from the one that is running [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. The default file name is the same name as the service application.|  
-|Restore Encryption Key|1) Type or browse to the key file in the **File Location** box<br /><br /> 2) In the **Password** box, type the password that was used to back up the encryption file.<br /><br /> 3) select **OK**|  
+|Backup Encryptions Key|1) Enter a password in to the **Password:** and **Confirm Password:** boxes and select **Export**. You see a warning if the password you entered doesn't meet the complexity requirements of the domain policy.<br /><br /> 2) You're prompted for a file location of where to save the key file. You should consider storing the key file on a separate computer from the one that is running [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. The default file name is the same name as the service application.|  
+|Restore Encryption Key|1) Type or browse to the key file in the **File Location** box.<br /><br /> 2) In the **Password** box, enter the password that was used to back up the encryption file.<br /><br /> 3) Select **OK**.|  
 |Change Encryption Key|This operation creates a new key and re-encrypts your encrypted content. If you have a large amount of content, this operation make take several hours.<br /><br /> When the change encryption key operation is complete, you should make a backup of your new key.|  
 |Deleted Encrypted Content|Deleted content can't be recovered.<br /><br /> **\*\* Important \*\*** The action of deleting and recreating the symmetric key can't be reversed or undone. Deleting or recreating the key can have important ramifications on your current installation. If you delete the key, any existing data encrypted by the symmetric key is also deleted. Deleted data includes connection strings to external report data sources, stored connection strings, and some subscription information.|  
 
@@ -144,10 +144,10 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  Enter a Windows domain user account. Use this format: *\<domain>\\<user account\>*.  
   
  **Password**  
- Type the password.  
+ Enter the password.  
   
  **Confirm password**  
- Retype the password.  
+ Reenter the password.  
 
 ## E-mail settings
 

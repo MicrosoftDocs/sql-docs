@@ -158,7 +158,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
      :::image type="content" source="../../reporting-services/report-server-sharepoint/media/rs-general-app-settings.gif " alt-text="Screenshot of SQL Server Reporting Services.":::
   
-3.  Select **Activate feature in all exciting site collections**.  
+3.  Select **Activate feature in all existing site collections**.  
   
      :::image type="content" source="../../reporting-services/report-server-sharepoint/media/rs-general-app-settings-old-integrations.gif" alt-text="Screenshot of the Activate the Reporting Services feature selection.":::
 

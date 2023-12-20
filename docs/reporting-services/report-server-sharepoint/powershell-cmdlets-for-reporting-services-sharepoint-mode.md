@@ -31,7 +31,7 @@ When you install SQL Server 2016 Reporting Services SharePoint mode, PowerShell 
 
  To run the cmdlets, you need to open the SharePoint Management Shell. You can also use the graphical user interface editor that is included with Microsoft Windows, **Windows PowerShell Integrated Scripting Environment (ISE)**. For more information, see [Starting Windows PowerShell on Windows Server](/powershell/scripting/getting-started/starting-windows-powershell). In the following cmdlet summaries, the references to service application "databases." refer to all of the databases created and used by a Reporting Services service application. This includes the configuration, alerting, and temp databases.  
   
- If you see an error message similar to the following when you type the PowerShell examples:  
+ If you see an error message similar to the following when you enter the PowerShell examples:  
   
 -   Install-SPRSService: The term 'Install-SPRSService' isn't recognized as the  
     name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.  
@@ -50,7 +50,7 @@ When you install SQL Server 2016 Reporting Services SharePoint mode, PowerShell 
   
 ### Open the SharePoint Management Shell and run cmdlets
   
-1.  Select the **Start** button  
+1.  Select the **Start** button.  
   
 2.  Select the **Microsoft SharePoint Products** group.  
   
@@ -115,7 +115,7 @@ When you install SQL Server 2016 Reporting Services SharePoint mode, PowerShell 
 Get-command -noun *SPRS*  
 ```  
   
- Or with a little more detail, piped to a text file named commandlist.txt  
+ Or with a little more detail, piped to a text file named commandlist.txt.  
   
 ```  
 Get-command -noun *SPRS* | Select name, definition | Format-List | Out-File c:\commandlist.txt  
@@ -131,13 +131,13 @@ Install-SPRSService
 Install-SPRSServiceProxy  
 ```  
   
- Start the Reporting Services service  
+ Start the Reporting Services service.  
   
 ```  
 get-spserviceinstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
 ```  
   
- Type the following command from the SharePoint Management Shell to return a filtered list of rows from the log file. The command filters for lines that contain "ssrscustomactionerror". This example is looking at the log file created when the rssharepoint.msi was installed.  
+ Enter the following command from the SharePoint Management Shell to return a filtered list of rows from the log file. The command filters for lines that contain "ssrscustomactionerror". This example is looking at the log file created when the rssharepoint.msi was installed.  
   
 ```  
 Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-string "ssrscustomactionerror"  
@@ -196,7 +196,7 @@ $app=get-sprsserviceapplication | where {$_.name -like " ssrs_testapp *"}
   
  The following script returns the current configuration values for the report server e-mail delivery extension for the service application named "Reporting Services Application." The first step sets the value of the variable $app to the object of the service application that has a name of " My RS Service App "  
   
- The second statement will Get the 'Report Server Email' delivery extension for the service application object in variable $app, and select the configurationXML  
+ The second statement will Get the 'Report Server Email' delivery extension for the service application object in variable $app, and select the configurationXML.  
   
 ```  
 $app=get-sprsserviceapplication -Name "Reporting Services Application"  

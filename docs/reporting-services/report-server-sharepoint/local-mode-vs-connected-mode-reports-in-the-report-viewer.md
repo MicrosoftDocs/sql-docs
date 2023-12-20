@@ -33,7 +33,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 2010 reporting extension. For more information on Access Services, see [Use Access Services with SQL Reporting Services: Installing SQL Server 2008 R2 Reporting Services Add-In (SharePoint Server 2010)](/previous-versions/office/sharepoint-server-2010/ee662542(v=office.14)).  
   
--   The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint list data extension. For more information on the SharePoint List Data Extension, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
+-   The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint list data extension. For more information on the SharePoint List Data Extension, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
  Custom data processing extensions can also be developed to support local mode. For more information, see [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md).  
   
@@ -60,13 +60,13 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
 1.  Open the SharePoint 2010 Management Shell.  
   
-2.  Type the following command:  
+2.  Enter the following command:  
   
     ```  
     - Enable-SPSessionStateService  
     ```  
   
-3.  When prompted, type the name of your database.  
+3.  When prompted, enter the name of your database.  
   
 4.  Perform an IIS reset.  
   

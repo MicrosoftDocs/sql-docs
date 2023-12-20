@@ -84,14 +84,14 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
 ## Supported combinations of the SharePoint add-in and report server
 
- Not all features are supported in all combinations of report server, Reporting Services add-in for SharePoint, and SharePoint Products. For more information, see [Supported combinations of SharePoint and Reporting Services Server and add-in](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
+ Not all features are supported in all combinations of report server, Reporting Services add-in for SharePoint, and SharePoint Products. For more information, see [Supported combinations of SharePoint and Reporting Services Server and add-in](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
   
 > [!NOTE]  
 >  The correct version of the Reporting Services add-in must be used with the corresponding version of SharePoint Products.  
 
 ## Components that provide integration
 
- To combine the servers in a single deployment, you integrate an installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Reporting Services with an instance of SharePoint products  
+ To combine the servers in a single deployment, you integrate an installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Reporting Services with an instance of SharePoint products.  
   
  Integration is provided through [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the Reporting Services Add-in for SharePoint Products. The Reporting Services Add-in is a freely distributable component that you can download and then install on a server that is running the appropriate version of SharePoint.  
   

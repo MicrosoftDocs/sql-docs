@@ -92,7 +92,7 @@ For more information about TLS settings for Reporting Services, see [Configure T
 5. Save the rsreportserver.config file.  
   
 6. Start a command prompt using **Run as Administrator**.
-8. Show the existing urlacls by typing the following example:
+8. Show the existing urlacls by entering the following example:
   
     ```  
     Netsh http show urlacl  
@@ -110,7 +110,7 @@ For more information about TLS settings for Reporting Services, see [Configure T
   
      An urlacl is a DACL (Discretionary Access Control List) for a reserved URL.  
   
-9. Create a new entry for the Subject Alternative Name, with the same user and SDDL as the existing entry, by typing the following example:  
+9. Create a new entry for the Subject Alternative Name, with the same user and SDDL as the existing entry, by entering the following example:  
   
     ```  
     netsh http add urlacl  url=https://www.myreports.com:443/ReportServer    
@@ -118,9 +118,9 @@ For more information about TLS settings for Reporting Services, see [Configure T
   
     ```  
     > [!TIP]
-    > If you copy the code to Notepad to edit, rather than typing it manually, remove the CRLF before pasting the code into the command prompt.
+    > If you copy the code to Notepad to edit, rather than entering it manually, remove the CRLF before pasting the code into the command prompt.
 
-10. For the **Web Portal URL**, create a new entry for the Subject Alternative Name by typing the following:
+10. For the **Web Portal URL**, create a new entry for the Subject Alternative Name by entering the following:
 
     ```  
     netsh http add urlacl  url=https://www.myreports.com:443/Reports  
@@ -132,7 +132,7 @@ For more information about TLS settings for Reporting Services, see [Configure T
     >  * For Power BI Report Server, the `user` value is `NT SERVICE\PowerBIReportServer` and the `sddl` value is `S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663`
 
     > [!NOTE]  
-    > For Power BI Report Server, you need to create two additional entries for the Subject Alternative Name by typing the following:
+    > For Power BI Report Server, you need to create two additional entries for the Subject Alternative Name by entering the following:
     >  * `add urlacl url=https://www.myreports.com:443/PowerBI user="NT SERVICE\PowerBIReportServer" sddl=D:(A;;GX;;;S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663)`
     >  * `add urlacl url=https://www.myreports.com:443/wopi user="NT SERVICE\PowerBIReportServer" sddl=D:(A;;GX;;;S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663)`
 

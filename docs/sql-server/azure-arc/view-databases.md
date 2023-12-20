@@ -144,6 +144,10 @@ You can also [create charts and pin them to dashboards](/azure/governance/resour
 
 :::image type="content" source="media/view-databases/database-chart.png" alt-text="Diagram of a pie chart that displays the query results for the count of databases by compatibility level.":::
 
+## Known issues
+
+Databases deleted on-premises might not be immediately deleted on Azure. There's no impact on how database CRUD operations happen on-premises.
+
 ## Related content
 
 - [Protect [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] with Microsoft Defender for Cloud](configure-advanced-data-security.md)

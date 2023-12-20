@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "global considerations [Reporting Services]"
 ---
 # Set the language for report parameters in a URL
-  The *rs:ParameterLanguage* URL access parameter alleviates a problem in which culture-sensitive report parameters, such as dates, times, currency, and numbers, are interpreted using the browser language. With *rs:ParameterLanguage*, the URL is now interpreted independently of the browser. For example, if the report server is set to a regional setting of German, but a user is accessing a report via a URL using a browser that is set to English-United States, parameter values that are passed to a report server will be misinterpreted.  
+  The *rs:ParameterLanguage* URL access parameter alleviates a problem in which culture-sensitive report parameters, such as dates, times, currency, and numbers, are interpreted using the browser language. With *rs:ParameterLanguage*, the URL is now interpreted independently of the browser. For example, if you set a report a regional setting of German, but a user is accessing a report via a URL using a browser set to English-United States, the report server misinterprets parameter values passed to it.  
   
  Consider the following URL to a report:  
   
@@ -25,7 +25,7 @@ helpviewer_keywords:
 https://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008  
 ```  
   
- In the above case, the server, running under a culture of "de-de", generates a URL either through an e-mail subscription or a hyperlink. The hyperlink indicates that the report should be parameterized by a start date of October 4, 2008 and an end date of October 11, 2008 according to German date/time standards. However, a user that is accessing the URL through a browser set to "en-us" forces the server to interpret the values as April 10, 2008 and November 10, 2008 under United States English date/time standards. To fix the problem, *rs:ParameterLanguage* can be used to override the browser language for parameter interpretation:  
+ In the above case, the server, running under a culture of "de-de", generates a URL either through an e-mail subscription or a hyperlink. The hyperlink indicates that the report should be parameterized to a start date of October 4, 2008 and an end date of October 11, 2008 according to German date/time standards. However, a user that is accessing the URL through a browser set to "en-us" forces the server to interpret the values as April 10, 2008 and November 10, 2008 under United States English date/time standards. To fix the problem, *rs:ParameterLanguage* can be used to override the browser language for parameter interpretation:  
   
 ```  
 https://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  

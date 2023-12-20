@@ -14,12 +14,12 @@ ms.custom: updatefrequency5
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-This topic explains the SQL Server Reporting Services (SSRS) features supported by the different editions of SQL Server. SQL Server Evaluation edition is available for a 180-day trial period.  
+This article explains the SQL Server Reporting Services (SSRS) features supported by the different editions of SQL Server. SQL Server Evaluation edition is available for a 180-day trial period.  
 
 ## Related links
   
- - [Release notes for SQL Server Reporting Services (SSRS)](release-notes-reporting-services.md). 
- - [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
+ - [Release notes for SQL Server Reporting Services (SSRS)](release-notes-reporting-services.md)
+ - [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
  - [Features supported by the editions of SQL Server](~/sql-server/editions-and-components-of-sql-server-version-15.md)
 
 ##  <a name="SSRS"></a> SQL Server Reporting Services  

@@ -3,7 +3,7 @@ title: "Execute a Stored Procedure"
 description: Learn how to execute a stored procedure by using SQL Server Management Studio or Transact-SQL.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 07/13/2023
+ms.date: 12/20/2023
 ms.service: sql
 ms.subservice: stored-procedures
 ms.topic: conceptual
@@ -37,9 +37,11 @@ To display the exact system procedure names, query the [sys.system_objects](../.
   
 If a user-defined procedure has the same name as a system procedure, the user-defined procedure might not ever execute.  
   
-### <a id="Recommendations"></a> Recommendations
+## <a id="Recommendations"></a> Recommendations
   
-#### Execute system stored procedures
+Use the following recommendations to execute system stored procedures or user-defined stored procedures, or execute stored procedures automatically.
+
+### Execute system stored procedures
   
 System procedures begin with the prefix `sp_`. Because they logically appear in all user- and system- defined databases, they can be executed from any database without having to fully qualify the procedure name. However, we recommend schema-qualifying all system procedure names with the `sys` schema name to prevent name conflicts. The following example demonstrates the recommended method of calling a system procedure.  
   
@@ -47,23 +49,21 @@ System procedures begin with the prefix `sp_`. Because they logically appear in 
 EXEC sys.sp_who;  
 ```  
   
-#### Execute user-defined stored procedures
+### Execute user-defined stored procedures
   
-When executing a user-defined procedure, we recommend qualifying the procedure name with the schema name. This practice gives a small performance boost because the [!INCLUDE[ssDE](../../includes/ssde-md.md)] does not have to search multiple schemas. It also prevents executing the wrong procedure if a database has procedures with the same name in multiple schemas.  
+When executing a user-defined procedure, it's best to qualify the procedure name with the schema name. This practice gives a small performance boost because the [!INCLUDE[ssDE](../../includes/ssde-md.md)] doesn't have to search multiple schemas. This practice also prevents executing the wrong procedure if a database has procedures with the same name in multiple schemas.  
 
-The following example demonstrates the recommended method to execute a user-defined procedure. Notice that the procedure accepts one input parameter. For information about specifying input and output parameters, see [Specify Parameters](../../relational-databases/stored-procedures/specify-parameters.md).  
+The following example demonstrates the recommended method to execute a user-defined procedure. Notice that the procedure accepts one input parameter. For information about specifying input and output parameters, see [Specify parameters in a stored procedure](../../relational-databases/stored-procedures/specify-parameters.md).  
   
 ```sql  
-USE AdventureWorks2022;  
-GO  
-EXEC dbo.uspGetEmployeeManagers @BusinessEntityID = 50;
+EXECUTE dbo.uspGetCustomers @SalesPerson = 'adventure-works\linda3';
 GO
 ```  
 
 -Or-  
 
 ```sql  
-EXEC AdventureWorks2022.dbo.uspGetEmployeeManagers 50;  
+EXEC AdventureWorksLT.dbo.uspGetCustomers 'adventure-works\linda3';  
 GO  
 ```  
 
@@ -71,38 +71,38 @@ If a nonqualified user-defined procedure is specified, the [!INCLUDE[ssDE](../..
 
 1. The `sys` schema of the current database.  
 
-1. The caller's default schema if it is executed in a batch or in dynamic SQL. Or, if the nonqualified procedure name appears inside the body of another procedure definition, the schema that contains this other procedure is searched next.  
+1. The caller's default schema if it's executed in a batch or in dynamic SQL. Or, if the nonqualified procedure name appears inside the body of another procedure definition, the schema that contains this other procedure is searched next.  
 
 1. The `dbo` schema in the current database.  
   
-#### Execute stored procedures automatically
+### Execute stored procedures automatically
 
-Procedures marked for automatic execution are executed every time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts and the `master` database is recovered during that startup process. Setting up procedures to execute automatically can be useful for performing database maintenance operations or for having procedures run continuously as background processes. Another use for automatic execution is to have the procedure perform system or maintenance tasks in `tempdb`, such as creating a global temporary table. This makes sure that such a temporary table will always exist when `tempdb` is re-created during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup.  
+Procedures marked for automatic execution are executed every time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts and the `master` database is recovered during that startup process. Setting up procedures to execute automatically can be useful for performing database maintenance operations or for having procedures run continuously as background processes. Another use for automatic execution is to have the procedure perform system or maintenance tasks in `tempdb`, such as creating a global temporary table. This ensures that such a temporary table always exists when `tempdb` is recreated during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup.  
 
-A procedure that is automatically executed operates with the same permissions as members of the sysadmin fixed server role. Any error messages generated by the procedure are written to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log.  
+A procedure that's automatically executed operates with the same permissions as members of the sysadmin fixed server role. Any error messages generated by the procedure are written to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log.  
 
-There is no limit to the number of startup procedures you can have, but be aware that each consumes one worker thread while executing. If you must execute multiple procedures at startup but do not need to execute them in parallel, make one procedure the startup procedure and have that procedure call the other procedures. This uses only one worker thread.  
+There's no limit to the number of startup procedures you can have, but be aware that each startup procedure consumes one worker thread while executing. If you must execute multiple procedures at startup but don't need to execute them in parallel, make one procedure the startup procedure and have that procedure call the other procedures. This method uses only one worker thread.  
 
 > [!TIP]  
->  Do not return any result sets from a procedure that is executed automatically. Because the procedure is being executed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instead of an application or user, there is nowhere for the result sets to go.  
+>  Don't return any result sets from a procedure that's executed automatically. Because the procedure is being executed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instead of an application or user, there's nowhere for the result sets to go.  
   
-#### Set, clear, and control automatic execution
+### Set, clear, and control automatic execution
   
-Only the system administrator (`sa`) can mark a procedure to execute automatically. In addition, the procedure must be in the `master` database, owned by `sa`, and cannot have input or output parameters.  
+Only the system administrator (`sa`) can mark a procedure to execute automatically. In addition, the procedure must be in the `master` database, owned by `sa`, and can't have input or output parameters.  
 
 Use [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) to:  
 
-1. Designate an existing procedure as a startup procedure.  
+- Designate an existing procedure as a startup procedure.  
 
-1. Stop a procedure from executing at [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup.  
+- Stop a procedure from executing at [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup.  
   
 ### <a id="Security"></a> Security
 
- For more information, see [EXECUTE AS (Transact-SQL)](../../t-sql/statements/execute-as-transact-sql.md) and [EXECUTE AS Clause (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md).  
+For more information, see [EXECUTE AS (Transact-SQL)](../../t-sql/statements/execute-as-transact-sql.md) and [EXECUTE AS Clause (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
-#### <a id="Permissions"></a> Permissions
+### <a id="Permissions"></a> Permissions
 
- For more information, see the "Permissions" section in [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md).
+For more information, see the "Permissions" section in [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md).
   
 ## <a id="SSMSProcedure"></a> Use SQL Server Management Studio
 
@@ -110,7 +110,7 @@ Always use the latest version of [SQL Server Management Studio (SSMS)](../../ssm
 
 ### Execute a stored procedure
   
-1. In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], expand that instance, and then expand **Databases**.  
+1. In SSMS **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], expand that instance, and then expand **Databases**.  
   
 1. Expand the database that you want, expand **Programmability**, and then expand **Stored Procedures**.  
   
@@ -118,47 +118,38 @@ Always use the latest version of [SQL Server Management Studio (SSMS)](../../ssm
   
 1. In the **Execute Procedure** dialog box, specify a value for each parameter and whether it should pass a null value.  
   
-     **Parameter**  
-     Indicates the name of the parameter.  
+   - **Parameter** indicates the name of the parameter.  
+   - **Data Type** indicates the data type of the parameter.  
+   - **Output Parameter** indicates if this is an output parameter.  
+   - **Pass Null Value**: Specify whether to pass a NULL as the value of the parameter.  
+   - **Value**: Type the value to use for the parameter when calling the procedure.  
   
-     **Data Type**  
-     Indicates the data type of the parameter.  
-  
-     **Output Parameter**  
-     Indicates if this is an output parameter.  
-  
-     **Pass Null Value**  
-     Pass a NULL as the value of the parameter.  
-  
-     **Value**  
-     Type the value for the parameter when calling the procedure.  
-  
-1. To execute the stored procedure, select **OK**.  
+1. Select **OK** to execute the stored procedure.  
   
 ## <a id="TsqlProcedure"></a> Use Transact-SQL
   
+You can also use Transact-SQL in SSMS to execute a stored procedure, set or clear a procedure for executing automatically, or stop a procedure from executing automatically.  
+
 ### Execute a stored procedure
   
-1. Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1. In SSMS, connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 1. From the Standard toolbar, select **New Query**.  
   
-1. Copy and paste the following example into the query window and select **Execute**. This example shows how to execute a stored procedure that expects one parameter. The example executes the `uspGetEmployeeManagers` stored procedure with the value `6` specified as the `@EmployeeID` parameter.  
+1. Copy and paste the following example into the query window and select **Execute**. This example shows how to execute a stored procedure that expects one parameter. The example executes the `uspGetCustomers` stored procedure with the value `adventure-works\linda3` specified as the `@SalesPerson` parameter.  
   
 ```sql  
-USE AdventureWorks2022;  
-GO  
-EXEC dbo.uspGetEmployeeManagers 6;  
+EXEC dbo.uspGetCustomers 'adventure-works\linda3';  
 GO  
 ```  
 
-### Set or clear a procedure for executing automatically
+### Set a procedure to execute automatically
 
-Startup procedures must be in the `master` database and cannot contain INPUT or OUTPUT parameters. Execution of the stored procedures starts when all databases are recovered and the "Recovery is completed" message is logged at startup.  
+Startup procedures must be in the `master` database and can't contain INPUT or OUTPUT parameters. Execution of the stored procedures starts when all databases are recovered and the "Recovery is completed" message is logged at startup.  
 
 For more information, see [sp_procoption (Transact-SQL)](../system-stored-procedures/sp-procoption-transact-sql.md).
   
-1. Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1. In SSMS, connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 1. From the Standard toolbar, select **New Query**.  
   
@@ -173,7 +164,7 @@ GO
   
 ### Stop a procedure from executing automatically
   
-1. Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1. In SSMS, connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 1. From the Standard toolbar, select **New Query**.  
   
@@ -188,9 +179,9 @@ GO
   
 ## Next steps
 
-- [Specify Parameters](../../relational-databases/stored-procedures/specify-parameters.md)
+- [Specify parameters in a stored procedure](../../relational-databases/stored-procedures/specify-parameters.md)
 - [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)
 - [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)
 - [Stored Procedures (Database Engine)](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)
 - [sp_procoption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md)
-- [Configure the scan for startup procs Server Configuration Option](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)
+- [Configure the scan for startup procs (server configuration option)](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)

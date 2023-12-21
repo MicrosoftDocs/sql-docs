@@ -131,7 +131,7 @@ SELECT TOP 1000 * FROM dbo.MSChange_tracking_history
 WHERE table_name = '<user_table_name>' ORDER BY start_time DESC
 ```
 
-If the history table returned has multiple entries in the `comments` columns with the value `Cleanup error: Lock request time out period exceeded.` then it is a clear indicatation that multiple cleanup attempts have failed due to lock conflicts or lock timeouts in succession. Then consider the following remedies:
+If the history table has multiple entries in the `comments` columns with the value `Cleanup error: Lock request time out period exceeded`, it is a clear indication that multiple cleanup attempts failed due to lock conflicts or lock timeouts in succession. Consider the following remedies:
 
 - Disable and enable change tracking on the problematic table. This causes all tracking metadata maintained for the table to be purged. The table's data remains intact. This is the quickest remedy.
 

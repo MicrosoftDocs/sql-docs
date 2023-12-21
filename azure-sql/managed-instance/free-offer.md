@@ -116,7 +116,6 @@ The free SQL Managed Instance offer has the following limitations:
 - Charge for SQL Server license: None
 - The free offer is currently available in the following region (which are subject to change): Australia East, East US, East US 2, North Europe, Sweeden Central, Southeast Asia, South Central US, UK South, West Europe, West US 2, West US 3
 - No guaranteed SLA
-- Support isn't available for issues that arise with the free instance
 - It's not currently possible to upgrade your free instance to the paid version. Create a new instance and [restore your database](point-in-time-restore.md?#restore-an-existing-database) to it to continue your business without the limits imposed by the free offer. 
 
 

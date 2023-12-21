@@ -3,7 +3,7 @@ title: "Ubuntu: Install SQL Server on Linux"
 description: This quickstart shows how to install SQL Server 2017 or SQL Server 2019 on Ubuntu and then create and query a database with sqlcmd.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 10/24/2023
+ms.date: 12/20/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -252,6 +252,12 @@ To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Ubunt
 
    ```bash
    curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor -o /usr/share/keyrings/microsoft-prod.gpg
+   ```
+
+   If you receive a warning about the public key not being available, you can use the following command instead:
+
+   ```bash
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
    ```
 
 1. Manually download and register the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Ubuntu repository:

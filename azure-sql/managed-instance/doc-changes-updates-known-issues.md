@@ -5,7 +5,7 @@ description: Learn about the currently known issues with Azure SQL Managed Insta
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 08/09/2023
+ms.date: 12/20/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual

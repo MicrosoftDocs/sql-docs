@@ -152,7 +152,7 @@ For more information about the [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes
 
 You can customize the [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] with your organization's logo and colors by using a branding pack.  
 
-For more information about custom branding, see [Branding the web portal](./branding-the-web-portal.md)
+For more information about custom branding, see [Branding the web portal](./branding-the-web-portal.md).
 
 #### Key performance indicators (KPI) in the [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
@@ -160,7 +160,7 @@ You create KPIs directly in the [!INCLUDE[ssRSWebPortal-Non-Markdown](../include
 
 :::image type="content" source="../reporting-services/media/ssrs-webportal-kpi.png" alt-text="Screenshot that shows KPIS in the SQL Server Reporting Services portal.":::
 
-For more information, see [Working with KPIs in the web portal](./working-with-kpis-in-reporting-services.md)
+For more information, see [Working with KPIs in the web portal](./working-with-kpis-in-reporting-services.md).
 
 ### Mobile reports
 
@@ -240,7 +240,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 For more information, see [Export a report by using URL access](../reporting-services/export-a-report-using-url-access.md).
 
-**PDF Replaces ActiveX for Remote Printing:** The report viewer toolbar now prints Via PDF instead of ActiveX controls. The new report viewer is supported by most modern browsers, including Microsoft Edge. No more ActiveX controls to download! Depending on the browser you use and the PDF viewing applications and services you've installed, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] either a print dialog box opens to print your report, or you're prompted to download a .PDF file. As an administrator, you can still disable client-side printing from [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
+**PDF Replaces ActiveX for Remote Printing:** The report viewer toolbar now prints Via PDF instead of ActiveX controls. The new report viewer is supported by most modern browsers, including Microsoft Edge. No more ActiveX controls to download. Depending on the browser you use and the PDF viewing applications and services you've installed, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] either a print dialog box opens to print your report, or you're prompted to download a .PDF file. As an administrator, you can still disable client-side printing from [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
 
 For more information, see [Enable and disable client-side printing for Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
 

@@ -41,18 +41,18 @@ You can use the web portal to browse the report server folders or search for spe
 > [!NOTE]
 > For information on supported browsers and versions, see [Browser support for Reporting Services and Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md).
 
-The web portal is used only for a report server that runs in native mode. It is not supported for a report server that you configure for SharePoint integrated mode.
+The web portal is used only for a report server that runs in native mode. It isn't supported for a report server that you configure for SharePoint integrated mode.
 
 Some web portal features are only available in specified editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see [SQL Server Reporting Services features supported by editions](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
 
-On a new installation, only local administrators have sufficient permissions to work with content and settings. To grant permissions to other users, a local administrator must create role assignments that provide access to the report server. The application pages and tasks that a user can subsequently access will depend on the role assignments for that user. For more information, see [Grant user access to a report server](./security/grant-user-access-to-a-report-server.md)
+On a new installation, only local administrators have sufficient permissions to work with content and settings. To grant permissions to other users, a local administrator must create role assignments that provide access to the report server. The application pages and tasks that a user can then access depend on the role assignments for that user. For more information, see [Grant user access to a report server](./security/grant-user-access-to-a-report-server.md)
 
 > [!NOTE]
 > If you are browsing to the web portal on the local machine that the server is running on, you may see a message indicating that you are not allowed to view this folder. This is due to Universal Access Control (UAC) and that you are not running the browser as an admin. You will need to give your account content manager rights on the folder by either browsing to the server remotely, or use Edge locally to configure the permissions. You are not able to run Microsoft Edge as an admin via the "Run as administrator" context menu. However, you can run Edge as the local administrator account by holding SHIFT + right-clicking on the edge shortcut and selecting "Run as a different user" then providing the local machine administrator account information in the login dialog. If you want to use the web portal remotely, you will need to give your account content manager rights on the folder.  
 
 ## Start and use the web portal
 
-The web portal is a web application that you open by typing the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] URL in the address bar of the browser window. When you start the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], the pages, links, and options that you see will vary based on the permissions you have on the report server. To perform a task, you must be assigned to a role that includes the task.  A user who is assigned to a role that has full permissions has access to the complete set of application menus and pages available for managing a report server. A user assigned to a role that has permissions to view and run reports sees only the menus and pages that support those activities. Each user can have different role assignments for different report servers, or even for the various reports and folders that are stored on a single report server.
+The web portal is a web application that you open by typing the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] URL in the address bar of the browser window. When you start the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], the pages, links, and options that you see vary based on the permissions you have on the report server. To perform a task, you must be assigned to a role that includes the task.  A user who is assigned to a role that has full permissions has access to the complete set of application menus and pages available for managing a report server. A user assigned to a role that has permissions to view and run reports sees only the menus and pages that support those activities. Each user can have different role assignments for different report servers, or even for the various reports and folders that are stored on a single report server.
 
 For more information about roles, see [Grant permissions on a native mode report server](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).
 
@@ -62,11 +62,11 @@ To start the web portal from a browser, follow these steps:
 
 1. Open your web browser. For a list of supported web browsers, see [Browser support for Reporting Services and Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md).
 
-2. In the address bar of the web browser, type the web portal URL.
+2. In the address bar of the web browser, enter the web portal URL.
 
-    By default, the URL is *https://[ComputerName]/reports*.
+    By default, the URL is ``https://[ComputerName]/reports``.
 
-    The report server might be configured to use a specific port. For example, *https://[ComputerName]:80/reports* or *https://[ComputerName]:8080/reports*.
+    The report server might be configured to use a specific port. For example, ``https://[ComputerName]:80/reports`` or ``https://[ComputerName]:8080/reports``.
 
 ## Group by categories
 
@@ -83,7 +83,7 @@ The web portal will group items into different categories. The available categor
 - Mobile reports
 ::: moniker-end
 
-You can control what is displayed by selecting **View** in the upper right. If you select Show Hidden, those items will be displayed in a lighter color.
+You can control what is displayed by selecting **View** in the upper right. If you select Show Hidden, those items display in a lighter color.
 
 :::image type="content" source="../reporting-services/media/ssrswebportal-view.png" alt-text="Screenshot of the View dropdown with the Show hidden items option selected.":::
 
@@ -95,7 +95,7 @@ You can upload, organize, and manage permissions for Power BI Desktop reports an
 
 :::image type="content" source="../reporting-services/media/web-portal-ssrs-native-mode/ssrs-web-portal-view-power-bi-excel.png" alt-text="Screenshot that shows the Power BI Desktop Reports section and the Excel Workbooks section.":::
 
-The files are stored within Reporting Services, similar to other resource files. Selecting one of these items downloads them locally to your desktop. You can save changes you've made by reuploading them to the report server.
+The files are stored within Reporting Services, similar to other resource files. Selecting one of these items downloads them locally to your desktop. You can save changes you make by reuploading them to the report server.
 
 ## Search for items
 
@@ -113,4 +113,4 @@ Enter a search term, and see everything you can access. The results are categori
 - [Browser Support for Reporting Services and Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 - [SQL Server Reporting Services features supported by editions](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
 
-More questions? [Try the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+More questions? [Try the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).

@@ -20,24 +20,24 @@ By using KPIs in Power BI Report Server or SQL Server Reporting Services, you ca
   
 - What am I ahead or behind on?  
 - How far ahead or behind am I?  
-- What are the minimum amounts I have completed?  
+- What minimum amounts did I complete?  
 
 > [!NOTE]
 > KPIs are only accessible in Power BI Report Server and the Enterprise (Developer) editions of the Reporting Services portal.
 
 ## Create a dataset
 
-A KPI will only use the first row of data from a shared dataset. Make sure that the data you want to use is located on that first row. To create a shared dataset, you can use either Report Builder or SQL Server Data Tools.  
+A KPI only uses the first row of data from a shared dataset. Make sure that the data you want to use is located on that first row. To create a shared dataset, you can use either Report Builder or SQL Server Data Tools.  
   
 > **Note**: The Dataset does not need to be in the same folder as the KPI.  
   
 ## Placement of KPIs  
   
-KPIs can be created in any folder in your report server.  Before you create a KPI, you will want to think about where is the right location to place it in. You can place it in a folder that is visible to the users, at the same time being relevant to other reports, and KPIs, around it.  
+KPIs can be created in any folder in your report server. Before you create a KPI, you want to think about where is the right location to place it in. You can place it in a folder that is visible to the users, at the same time being relevant to other reports, and KPIs, around it.  
 
 ## Add a KPI
   
-After you have determined the location of your KPI, go to that folder and select **New** > **KPI** from the top menu.  
+After you determine the location of your KPI, go to that folder and select **New** > **KPI** from the top menu.  
 
 :::image type="content" source="../reporting-services/media/rscreatekpi1.png" alt-text="Screenshot that shows the New dropdown list with the KPI option called out.":::
 
@@ -47,7 +47,7 @@ The **New KPI** screen opens.
 
 :::image type="content" source="../reporting-services/media/rscreatekpi2.png" alt-text="Screenshot that shows the New KPI screen." lightbox="../reporting-services/media/rscreatekpi2.png":::
   
-You can either assign static values, or use data from a shared dataset. When you create a new KPI, it will be populated with a random set of manual data.  
+You can either assign static values, or use data from a shared dataset. When you create a new KPI, it's populated with a random set of manual data.  
   
 | Field | Description |
 |-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -104,17 +104,17 @@ It's only possible to add one mobile report or one custom URL.
  
 ## Set up a cache refresh plan for a KPI  
   
-You need to set up a cache refresh plan for the shared dataset that your KPI is based on. Otherwise, the KPI data won't refresh. The [Caching section](../reporting-services/work-with-shared-datasets-web-portal.md#cache) of the *Work with Shared Datasets* article explains how to set up cache refresh plans.  
+You need to set up a cache refresh plan for the shared dataset that your KPI is based on. Otherwise, the KPI data doesn't refresh. The [Caching section](../reporting-services/work-with-shared-datasets-web-portal.md#cache) of the *Work with Shared Datasets* article explains how to set up cache refresh plans.  
 
 ## Remove a KPI  
   
 To remove a KPI, you can do the following steps.
   
-1. Select the **ellipsis (...)** of the KPI you want to remove. Select **Manage**.  
+1. Select the **ellipsis (...)** of the KPI you want to remove. Choose **Manage**.  
 
     :::image type="content" source="../reporting-services/media/rsremovekpi1.png" alt-text="Screenshot of the ellipsis option for a KPI selected and the MANAGE option called out.":::
   
-2. Select **Delete**. Select **Delete** again on the confirmation dialog.  
+2. Select **Delete**. Choose **Delete** again on the confirmation dialog.  
 
     :::image type="content" source="../reporting-services/media/rsremovekpi2.png" alt-text="Screenshot of the Delete option on the confirmation dialog box.":::
   
@@ -124,4 +124,4 @@ To remove a KPI, you can do the following steps.
 - [The web portal of a report server (SSRS Native Mode)](../reporting-services/web-portal-ssrs-native-mode.md)  
 - [Work with shared datasets - web portal](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).

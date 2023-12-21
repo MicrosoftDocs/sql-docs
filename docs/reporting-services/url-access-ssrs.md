@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "hyperlinks [Reporting Services]"
 ---
 # URL access (SSRS)
-  URL access of the report server in SQL Server Reporting Services (SSRS) enables you to send commands to a report server through a URL request. For example, you can customize the rendering of a report on a native mode report server or in a SharePoint library. You may have viewed the report using a specific set of report parameter values, or you may have been viewing a particular page of interest in the report. You can encapsulate this information in the URL using predefined URL access parameters. You can further customize how the report server processes the report by embedding parameters for rendering formats or for the look and feel of the report viewer. You can then paste this URL directly into an email or Web page to let others access your report in the same manner in the browser.  
+  URL access of the report server in SQL Server Reporting Services (SSRS) enables you to send commands to a report server through a URL request. For example, you can customize the rendering of a report on a native mode report server or in a SharePoint library. You might view the report using a specific set of report parameter values, or you might view a particular page of interest in the report. You can encapsulate this information in the URL using predefined URL access parameters. You can further customize how the report server processes the report by embedding parameters for rendering formats or for the look and feel of the report viewer. You can then paste this URL directly into an email or Web page to let others access your report in the same manner in the browser.  
   
  Other actions you can perform through URL access are:  
   
@@ -34,7 +34,7 @@ helpviewer_keywords:
  For the complete list of commands and settings available through URL access, see [URL access parameter reference](../reporting-services/url-access-parameter-reference.md).  
   
 ## URL access concepts  
- URL requests to the report server contain parameters that are processed by the report server. The way in which the report server handles URL requests depends on the parameters, parameter prefixes, and types of items that are included in the URL. Report server URLs adhere to the URL formatting guidelines as proposed by the joint World Wide Web Consortium W3C/IETF draft standard. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] URL functionality is compatible with most Internet browsers or applications that support standard URL addressing.  
+ The report server processes parameteres contained in URL requests to te report server. The way in which the report server handles URL requests depends on the parameters, parameter prefixes, and types of items that are included in the URL. Report server URLs adhere to the URL formatting guidelines as proposed by the joint World Wide Web Consortium W3C/IETF draft standard. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] URL functionality is compatible with most Internet browsers or applications that support standard URL addressing.  
   
 ### URL access syntax  
  URL requests can contain multiple parameters that are listed in any order. Parameters are separated by an ampersand (&) and name/value pairs are separated by an equal sign (=).  
@@ -50,14 +50,14 @@ reportpath
   
 ### Syntax description  
  *rswebserviceurl*  
- The Web service URL of the report server. For native mode, it is the Web service URL of the report server instance configured in Reporting Services Configuration Manager (see [Configure report server URLs &#40;Report Server Configuration Manager&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). For example:  
+ The Web service URL of the report server. For native mode, it's the Web service URL of the report server instance configured in Reporting Services Configuration Manager (see [Configure report server URLs &#40;Report Server Configuration Manager&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). For example:  
   
 ```  
 https://myrshost/reportserver  
 https://machine.adventure-works.com/reportserver_MYNAMEDINSTANCE  
 ```  
   
- For SharePoint integrated mode, it is the URL of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proxy at a SharePoint site integrated with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. For example:  
+ For SharePoint integrated mode, it's the URL of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proxy at a SharePoint site integrated with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. For example:  
   
 ```  
 https://myspsite/subsite/_vti_bin/reportserver  
@@ -69,13 +69,13 @@ https://myspsite/subsite/_vti_bin/reportserver
  *pathinfo*  
  The relative path name of the item in the native mode report server database, or the fully qualified URL of the item in a SharePoint catalog.  
   
- The path of the catalog item. For native mode, it is the relative path of the item in the report server database, beginning with a slash (**/**). For example:  
+ The path of the catalog item. For native mode, it's the relative path of the item in the report server database, beginning with a slash (**/**). For example:  
   
 ```  
 /AdventureWorks2022/Employee_Sales_Summary_2022  
 ```  
   
- For SharePoint integrated mode, it is the fully qualified URL of the item in the SharePoint library, including the item extension. For example:  
+ For SharePoint integrated mode, it's the fully qualified URL of the item in the SharePoint library, including the item extension. For example:  
   
 ```  
 https://myspsite/subsite/AdventureWorks2022/Employee_Sales_Summary_2022.rdl  

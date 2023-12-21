@@ -30,7 +30,7 @@ helpviewer_keywords:
     > [!IMPORTANT]  
     >  *rc:Toolbar*=**false** doesn't work for URL access strings that use an IP address, instead of a domain name, to target a report hosted on a SharePoint site.
   
--   **Parameters**: Shows or hides the parameters area of the toolbar. If you set this parameter to **true**, the parameters area of the toolbar is displayed. If you set this parameter to **false**, the parameters area isn't displayed and can't be displayed by the user. If you set this parameter to a value of **Collapsed**, the parameters area won't be displayed but can be toggled by the user. The default value of this parameter is **true**.  
+-   **Parameters**: Shows or hides the parameters area of the toolbar. If you set this parameter to **true**, the parameters area of the toolbar is displayed. If you set this parameter to **false**, the parameters area isn't displayed and can't be displayed by the user. If you set this parameter to a value of **Collapsed**, the parameters area aren't displayed but can be toggled by the user. The default value of this parameter is **true**.  
   
      For example, in native mode:
   
@@ -44,7 +44,7 @@ helpviewer_keywords:
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Parameters=Collapsed  
     ```  
   
--   **Zoom**: Sets the report zoom value as an integer percentage or a string constant. Standard string values include **Page Width** and **Whole Page**. This parameter is ignored by versions of Internet Explorer earlier than Internet Explorer 5.0 and all non-[!INCLUDE[msCoName](../includes/msconame-md.md)] browsers. The default value of this parameter is **100**.
+-   **Zoom**: Sets the report zoom value as an integer percentage or a string constant. Standard string values include **Page Width** and **Whole Page**. Versions of Internet Explorer earlier than Internet Explorer 5.0 and all non-[!INCLUDE[msCoName](../includes/msconame-md.md)] browsers ignore this parameter. The default value of this parameter is **100**.
   
      For example, in native mode:
   
@@ -97,7 +97,7 @@ helpviewer_keywords:
     https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
     ```  
   
--   **EndFind**: Sets the number of the last page to use in the search. For example, a value of **5** indicates that the last page to be searched is page 5 of the report. The default value is the number of the current page. Use this parameter in conjunction with the *StartFind* parameter. See the previous example.
+-   **EndFind**: Sets the number of the last page to use in the search. For example, a value of **5** indicates that the last page to be searched is page 5 of the report. The default value is the number of the current page. Use this parameter with the *StartFind* parameter. See the previous example.
   
 -   **FallbackPage**: Sets the number of the page to display if a search or a document map selection fails. The default value is the number of the current page.
   

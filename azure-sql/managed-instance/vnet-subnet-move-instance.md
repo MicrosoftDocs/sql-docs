@@ -79,13 +79,13 @@ Consider the following limitations when choosing a destination subnet for an exi
 > <sup>1</sup> Apart from this approach there is no other way for you to dictate the DNS zone of SQL Managed Instance since it is randomly generated. There also, as of now, doesn't exist a way to update the DNS zone of an existing SQL Managed Instance.
 
 
-- If you want to migrate a SQL Managed Instance with an [auto-failover group](auto-failover-group-sql-mi.md), the following prerequisites apply: 
+- If you want to migrate a SQL Managed Instance with a [failover group](failover-group-sql-mi.md), the following prerequisites apply: 
     - The target subnet needs to have the same security rules needed for failover group replication as the source subnet: 
 Open both inbound and outbound ports 5022 and the range 11000~11999 in the Network Security Group (NSG) for connections from the other managed instance subnet (the one that holds the failover group replica) to allow replication traffic between the two instances. 
     - The target subnet can't have an overlapping address range with the subnet that holds the secondary instance replica of the failover group. 
 For example, if MI1 is in subnet S1, the secondary instance in the failover group is MI2 in subnet S2. We want to move MI1 to subnet S3. Subnet S3 can't have an overlapping address range with subnet S2. 
 
-To learn more about configuring the network for auto-failover groups, review [Enable geo-replication between managed instances](auto-failover-group-configure-sql-mi.md#enabling-connectivity-between-the-instances). 
+To learn more about configuring the network for failover groups, review [Enable geo-replication between managed instances](failover-group-configure-sql-mi.md#enabling-connectivity-between-the-instances). 
 
 ## Operation steps
 

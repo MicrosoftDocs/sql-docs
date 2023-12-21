@@ -81,7 +81,7 @@ The following requirements apply to all installations:
 
 | Component | Requirement |
 | --- | --- |
-| Operating system | Windows 10 TH1 1507 or greater<br /><br />Windows Server 2016 or greater. |
+| Operating system | Windows 10 1607 or greater<br /><br />Windows Server 2016 or greater. |
 | .NET Framework | Minimum operating systems include minimum .NET framework. |
 | Network Software | Supported operating systems for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] have built-in network software. Named and default instances of a stand-alone installation support the following network protocols: Shared memory, Named Pipes, and TCP/IP. |
 
@@ -122,25 +122,9 @@ The following table shows which editions of [!INCLUDE [sssql22-md](../../include
 
 Installing [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] on Server Core mode is supported by the following editions of Windows Server:
 
-:::row:::
-    :::column:::
-        Windows Server 2022 Core
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        Windows Server 2019 Core
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        Windows Server 2016 Core
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-    :::column-end:::
-:::row-end:::
+- Windows Server 2022 Core
+- Windows Server 2019 Core
+- Windows Server 2016 Core
 
 For more information on installing [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]  on Server Core, see [Install [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]  on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).
 
@@ -206,7 +190,7 @@ For security reasons, we recommend that you don't install [!INCLUDE [ssnoversion
 
 You can get relevant installation media from the following locations:
 
-- [SQL Server evaluation center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2022)
+- [SQL Server evaluation center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2022)
 - [Most recent cumulative updates](/troubleshoot/sql/releases/download-and-install-latest-updates?bc=%2fsql%2fbreadcrumb%2ftoc.json&toc=%2fsql%2ftoc.json)
 
 Alternatively, you can create an [Azure virtual machine already running SQL Server](/azure/azure-sql/virtual-machines/windows/sql-vm-create-portal-quickstart) though [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]  on a virtual machine can be slower than running natively because of the overhead of virtualization.

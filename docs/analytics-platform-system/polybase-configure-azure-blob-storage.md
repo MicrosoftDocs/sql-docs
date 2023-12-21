@@ -4,10 +4,10 @@ description: Explains how to use PolyBase on a Parallel Data Warehouse (APS) to 
 author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
-ms.date: 04/17/2018
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: data-warehouse
-ms.topic: conceptual
+ms.topic: how-to
 ---
 # Configure PolyBase to access external data in Azure Blob Storage
 
@@ -38,7 +38,7 @@ First, configure APS to use Azure Blob Storage.
    GO
    ```  
 
-2. Restart APS Region using Service Status page on [Appliance Configuration Manager](launch-the-configuration-manager.md).
+1. Restart APS Region using Service Status page on [Appliance Configuration Manager](launch-the-configuration-manager.md).
   
 ## Configure an external table
 
@@ -115,7 +115,7 @@ There are three functions that PolyBase is suited for:
 
 The following queries provide example with fictional car sensor data.
 
-### Ad hoc queries  
+### Ad hoc queries
 
 The following ad hoc query joins relational with data in Azure Blob Storage. It selects customers who drive faster than 35 mph, joining structured customer data stored in SQL Server with car sensor data stored in Azure Blob Storage.  
 
@@ -127,7 +127,7 @@ WHERE Insured_Customers.CustomerKey = CarSensor_Data.CustomerKey and CarSensor_D
 ORDER BY CarSensor_Data.Speed DESC  
 ```  
 
-### Importing data  
+### <a id="importing-data"></a> Import data
 
 The following query imports external data into APS. This example imports data for fast drivers into APS to do more in-depth analysis. To improve performance, it leverages Columnstore technology in APS.  
 
@@ -146,7 +146,7 @@ from Insured_Customers INNER JOIN
 ON Insured_Customers.CustomerKey = SensorD.CustomerKey  
 ```  
 
-### Exporting data  
+### <a id="exporting-data"></a> Export data
 
 The following query exports data from APS to Azure Blob Storage. It can be used to archive relational data to Azure Blob Storage while still be able to query it.
 
@@ -164,13 +164,13 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
 
-## View PolyBase objects in SSDT  
+## View PolyBase objects in SSDT
 
-In SQL Server Data Tools, external tables are displayed in a separate folder **External Tables**. External data sources and external file formats are in subfolders under **External Resources**.  
+In SQL Server Data Tools (SSDT), external tables are displayed in a separate folder **External Tables**. External data sources and external file formats are in subfolders under **External Resources**.  
   
-![PolyBase objects in SSDT](media/polybase/external-tables-datasource.png)  
+:::image type="content" source="media/polybase/external-tables-datasource.png" alt-text="A screenshot of PolyBase objects in the object explorer of SSDT.":::
 
-## Next steps
+## Next step
 
-For more information about PolyBase, see the [What is PolyBase?](../relational-databases/polybase/polybase-guide.md). 
-
+> [!div class="nextstepaction"]
+> [Introducing data virtualization with PolyBase](../relational-databases/polybase/polybase-guide.md)

@@ -12,7 +12,7 @@ metadata:
   author: MashaMSFT
   ms.author: mathoma
   ms.reviewer: urmilano, danil, nnikolic, wiassaf
-  ms.date: 04/24/2023
+  ms.date: 12/20/2023
 title: Azure SQL Managed Instance frequently asked questions (FAQ)
 summary: |
   [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -108,7 +108,7 @@ sections:
           
           ### How can I delete my managed instance?
           
-          You can delete managed instances via Azure portal, [PowerShell](/powershell/module/az.sql/remove-azsqlinstance), [Azure CLI](/cli/azure/sql/mi#az-sql-mi-delete) or [Resource Manager REST APIs](/rest/api/sql/managedinstances/delete).
+          You can delete managed instances via Azure portal, [PowerShell](/powershell/module/az.sql/remove-azsqlinstance), [Azure CLI](/cli/azure/sql/mi#az-sql-mi-delete) or [Resource Manager REST APIs](/rest/api/sql/managed-instances/delete).
           
           ### How much time does it take to create or update an instance, or to restore a database?
           
@@ -137,7 +137,43 @@ sections:
           
           *	If a database is restored and dropped before a full backup is created.
             When a database is restored, the first step of the restoration process is to take a new full backup of the database.  If you try to restore a database, and then drop it immediately before the full backup completes, you will not be able to drop the database and create another database with that same name until the full backup is taken, and the database drop operation completes. Depending on the size of the database, the full backup could take hours. 
-      
+
+      - question: |
+          Free SQL Managed Instance offer
+        answer: |
+          ### What if I don't see the banner and **Apply Offer** button?
+
+          It's possible your subscription is not eligible for the [free SQL Managed Instance](free-offer.md). Otherwise, there's a limit of one free instance per subscription. You need to remove an existing free instance to create another one. If you have recently deleted your free instance, it can take up to one hour for the free offer banner to reappear.
+          
+          ### Help! I'm no longer able to connect to my instance!
+
+          It's likely you ran out of credits for the month. Go to your SQL managed instance in the Azure portal and check the state to see if your instance is in a stopped state due to insufficient credits.
+
+          ### My vCore hours are being used faster than I expected, how can I see what is using the vCore hours?
+
+          This functionality is currently unavailable. 
+
+          ### Can I restore a database to the free instance?
+
+          Yes, you can restore an [automated backup](recovery-using-backups.md) from Azure storage, or you can [Restore a database backup by using SQL Server Management Studio (SSMS)](restore-sample-database-quickstart.md). 
+
+          ### Does the free Azure SQL Managed Instance offer provide a production-quality instance?
+
+          Despite the resource limitations, the free SQL Managed is designed to let you test your workloads without any impact. The performance you experience while using the free SQL Managed Instance is identical to the performance of a production version of the instance.
+
+          ### Can I upgrade to a larger or more powerful 
+
+          The free SQL Managed Instance offers 4 and 8 vCore options. If your business requires an instance with more resources, create a fully-fledged paid SQL Managed Instance.
+
+          ### Can I change the backup option to geo-redundant storage?
+          
+          Backup options can't be changed for the free SQL Managed Instance.  
+
+          ### Can I use my Student subscription with the free Azure SQL Managed Instance? 
+
+          Currently, the Student subscription is ineligible. For eligible subscriptions, review the [free SQL Managed Instance offer prerequisites](free-offer.md#prerequisites). 
+         
+
       - question: |
           Naming conventions
         answer: |
@@ -178,17 +214,6 @@ sections:
           ### How can I migrate from other platforms to SQL Managed Instance?
           
           For migration information about migrating from other platforms, see [Azure Database Migration Guide](/data-migration/).
-
-      - question: |
-          Switch hardware configuration
-        answer: |
-          ### Can I switch my managed instance hardware between Gen4 and standard-series (Gen5) online?
-          
-          Automated online switching from Gen4 to standard-series (Gen5) is possible if standard-series (Gen5) hardware is available in the region where your managed instance is provisioned. In this case, you can check [vCore model overview page](../database/service-tiers-vcore.md) explaining how to switch between hardware configurations.
-          
-          This is a long-running operation as a new managed instance will be provisioned in the background and databases automatically transferred between the old and new instance with a quick failover at the end of the process.
-          
-          Note: Gen4 hardware is being retired and is no longer available for new deployments. All new databases must be deployed on later hardware configurations. Switching from standard-series (Gen5) to Gen4 is also not available.
 
       - question: |
           Performance 
@@ -300,7 +325,7 @@ sections:
         answer: |
           ### Are my system databases replicated to the secondary instance in a failover group?
           
-          System databases are not replicated to the secondary instance in a failover group. Therefore, scenarios that depend on objects from the system databases will be impossible on the secondary instance unless the objects are manually created on the secondary. For workaround, see [Enable scenarios dependent on the object from the system databases](auto-failover-group-sql-mi.md#enable-scenarios-dependent-on-objects-from-the-system-databases).
+          System databases are not replicated to the secondary instance in a failover group. Therefore, scenarios that depend on objects from the system databases will be impossible on the secondary instance unless the objects are manually created on the secondary. For workaround, see [Enable scenarios dependent on the object from the system databases](failover-group-sql-mi.md#enable-scenarios-dependent-on-objects-from-the-system-databases).
            
       - question: |
           Networking requirements 

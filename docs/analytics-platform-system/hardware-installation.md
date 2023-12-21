@@ -55,6 +55,6 @@ Use the following checklist to install the additional components.
 |Connect all power cables|See the cabling diagram.|
 |Turn on the power supply to the racks and the PDUs|Connect the power supply to the racks and from the racks to the PDUs. **Do not power on any of the other appliance components at this time.**|
   
-<!-- MISSING LINKS ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-  
+## Related content
+
+- [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md)

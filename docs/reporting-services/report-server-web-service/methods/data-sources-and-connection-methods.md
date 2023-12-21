@@ -1,5 +1,5 @@
 ---
-title: "Data Sources and Connection Methods"
+title: "Data sources and connection methods"
 description: In Report Services, you can use these methods to set and manage data source connections and credentials.
 author: maggiesMSFT
 ms.author: maggies
@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "reports [Reporting Services], data"
   - "data sources [Reporting Services], methods"
 ---
-# Data Sources and Connection Methods
+# Data sources and connection methods
   You can use these methods to set and manage data source connections and credentials.  
   
 |Method|Action|  
@@ -31,7 +31,7 @@ helpviewer_keywords:
 |<xref:ReportService2010.ReportingService2010.TestConnectForDataSourceDefinition%2A>|Tests the connection for a data source. This method supports the direct testing of the data source.|  
 |<xref:ReportService2010.ReportingService2010.TestConnectForItemDataSource%2A>|Tests the connection for a data source. This method supports the testing of published data sources that are used by reports or models and shared data sources.|  
   
-## See Also  
+## Related content  
  [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Report Server Web Service Methods](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

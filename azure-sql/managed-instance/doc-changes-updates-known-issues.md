@@ -24,6 +24,7 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 | Issue | Date discovered | Status | Date resolved |
 | --- | --- | --- | --- |
 | [The event_file target of the system_health event session is not accessible](#the-event_file-target-of-the-system_health-event-session-is-not-accessible) | Dec 2023 | Has Workaround | |
+| [Procedure sp_send_dbmail may fail when @query parameter is used on Nov22FW enabled managed instances](#procedure-sp_send_dbmail-may-fail-when-query-parameter-is-used-on-nov22fw-enabled-managed-instances) | Dec 2023 | Has Workaround | |
 | [Increased number of system logins used for transactional replication](#increased-number-of-system-logins-used-for-transactional-replication) | Dec 2022 | No resolution | |
 | [msdb table for manual backups doesn't preserve the username](#msdb-table-for-manual-backups-doesnt-preserve-the-username) | Nov 2022 | No resolution | |
 | [Interim guidance on 2022 time zone updates for Chile](#interim-guidance-on-2022-time-zone-updates-for-chile) | Aug 2022 | Has Workaround | |
@@ -71,6 +72,39 @@ When you attempt to read the contents of the `event_file` target of the `system_
 
 This change in behavior is an unintended consequence of a recent required security fix. We are investigating the feasibility of an additional change that would allow customers to continue using the `system_health` session on Managed Instance securely. In the meantime, customers can work around this issue by creating their own equivalent of the `system_health` session with an `event_file` target in Azure blob storage. For more information, including a T-SQL script to create the `system_health` session that can be modified to create your own equivalent of `system_health`, see [Use the system_health session](/sql/relational-databases/extended-events/use-the-system-health-session).
 
+### <a id="procedure-sp_send_dbmail-may-fail-when-query-parameter-is-used-on-nov22fw-enabled-managed-instances"></a> Procedure sp_send_dbmail may fail when @query parameter is used on Nov22FW enabled managed instances
+
+Procedure `sp_send_dbmail` may fail when `@query` parameter is used, and this affects instances that have November 2022 feature wave enabled. Failures happen when the stored procedure is executed under sysadmin account.
+
+This problem is caused by a known bug related to how `sp_send_dbmail` is using impersonation.
+
+**Workaround**: Make sure you call `sp_send_dbmail` under appropriate custom account you've created, and not under sysadmin account.
+
+Here's an example of how you can create a dedicated account and modify existing objects that are sending email via `sp_send_dbmail`.
+
+```sql
+USE [msdb]
+GO
+
+-- Step 1: Create a user mapped to a login to specify as a runtime user.
+CREATE USER [user_name] FOR LOGIN [login_name]
+GO
+EXEC msdb.dbo.sp_update_jobstep @job_name=N'db_mail_sending_job', @step_id=db_mail_sending_job_id , @database_user_name=N'user_name'
+GO
+
+-- Step 2: Grant DB Mail permissions to the user who created it.
+ALTER ROLE [DatabaseMailUserRole] ADD MEMBER [user_name]
+GO
+
+-- Step 3: If the database of the job step is not msdb, the permission error cannot be avoided even if it is a member of the role, so set it to msdb.
+EXEC msdb.dbo.sp_update_jobstep @job_name=N'db_mail_sending_job', @step_id=db_mail_sending_job_id , @database_name=N'msdb'
+GO 
+
+-- Step 4: Set a principal in the email profile
+EXEC msdb.dbo.sysmail_add_principalprofile_sp @principal_name=N'user_name', @profile_name=N'profile_name', @is_default=0
+GO
+```
+
 ### Interim guidance on 2022 time zone updates for Chile
 
 On August 8, 2022, the Chilean government made an official announcement about a Daylight-Saving Time (DST) [time zone change](https://techcommunity.microsoft.com/t5/daylight-saving-time-time-zone/interim-guidance-on-2022-time-zone-updates-for-chile/ba-p/3598290). Starting at 12:00 a.m. Saturday, September 10, 2022, until 12:00 a.m. Saturday, April 1, 2023, the official time will advance 60 minutes. The change affects the following three time zones:  **Pacific SA Standard Time**, **Easter Island Standard Time** and **Magallanes Standard Time**. Azure SQL Managed Instances using affected time zones don't reflect the changes [until Microsoft releases an OS update](https://techcommunity.microsoft.com/t5/daylight-saving-time-time-zone/interim-guidance-on-2022-time-zone-updates-for-chile/ba-p/3598290) to support this, and Azure SQL Managed Instance service absorbs the update on the OS level.
@@ -79,9 +113,9 @@ On August 8, 2022, the Chilean government made an official announcement about a 
 
 ### Changing the connection type doesn't affect connections through the failover group endpoint
 
-If an instance participates in an [auto-failover group](auto-failover-group-sql-mi.md), changing the instance's [connection type](../managed-instance/connection-types-overview.md) doesn't take effect for the connections established through the failover group listener endpoint.
+If an instance participates in a [failover group](failover-group-sql-mi.md), changing the instance's [connection type](connection-types-overview.md) doesn't take effect for the connections established through the failover group listener endpoint.
 
-**Workaround**: Drop and recreate auto-failover group after changing the connection type.
+**Workaround**: Drop and recreate failover group after changing the connection type.
 
 ### <a id="procedure-sp_send_dbmail-may-transiently-fail-when-query-parameter-is-used"></a> Procedure sp_send_dbmail may transiently fail when @query parameter is used
 
@@ -272,7 +306,7 @@ Impersonation using `EXECUTE AS USER` or `EXECUTE AS LOGIN` of the following Mic
 
 ### Transactional replication must be reconfigured after geo-failover
 
-If transactional replication is enabled on a database in an auto-failover group, the SQL Managed Instance administrator must clean up all publications on the old primary and reconfigure them on the new primary after a failover to another region occurs. For more information, see [Replication](../managed-instance/transact-sql-tsql-differences-sql-server.md#replication).
+If transactional replication is enabled on a database in a failover group, the SQL Managed Instance administrator must clean up all publications on the old primary and reconfigure them on the new primary after a failover to another region occurs. For more information, see [Replication](../managed-instance/transact-sql-tsql-differences-sql-server.md#replication).
 
 ### `tempdb` structure and content is re-created
 

@@ -798,7 +798,7 @@ Most security standards address data availability in terms of operational contin
   - [Automated backups](automated-backups-overview.md)
   - [Recover a database using automated database backups - Point-in-time restore](recovery-using-backups.md#point-in-time-restore)
 
-- Additional business continuity features such as the zone redundant configuration and auto-failover groups across different Azure geos can be configured:  
+- Additional business continuity features such as the zone redundant configuration and failover groups across different Azure geos can be configured:  
   - [High-availability - Zone redundant configuration for Premium & Business Critical service tiers](high-availability-sla.md#zone-redundant-availability)
   - [High-availability - Zone redundant configuration for General Purpose service tier](high-availability-sla.md#zone-redundant-availability)
   - [Overview of business continuity](business-continuity-high-availability-disaster-recover-hadr-overview.md)

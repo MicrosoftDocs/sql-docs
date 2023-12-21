@@ -1,6 +1,6 @@
 ---
 title: Read queries on replicas
-titleSuffix: Azure SQL Database & SQL Managed Instance
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Azure SQL provides the ability to use the capacity of read-only replicas for read workloads, called Read Scale-Out.
 author: rajeshsetlem
 ms.author: rsetlem
@@ -22,7 +22,7 @@ As part of [High Availability architecture](high-availability-sla.md#locally-red
 
 The *read scale-out* feature is also available in the Hyperscale service tier when at least one [secondary replica](service-tier-hyperscale-replicas.md) is added. Hyperscale secondary [named replicas](service-tier-hyperscale-replicas.md#named-replica) provide independent scaling, access isolation, workload isolation, support for various read scale-out scenarios, and other benefits. Multiple secondary [HA replicas](service-tier-hyperscale-replicas.md#high-availability-replica) can be used for load-balancing read-only workloads that require more resources than available on one secondary HA replica.
 
-The High Availability architecture of Basic, Standard, and General Purpose service tiers doesn't include any replicas. The *read scale-out* feature isn't available in these service tiers. However, when using Azure SQL Database, [geo-replicas](active-geo-replication-overview.md) can provide similar functionality in these service tiers.  When using Azure SQL Managed Instance and failover groups, the [failover group read-only listener](../managed-instance/auto-failover-group-sql-mi.md) can provide similar functionality respectively.
+The High Availability architecture of Basic, Standard, and General Purpose service tiers doesn't include any replicas. The *read scale-out* feature isn't available in these service tiers. However, when using Azure SQL Database, [geo-replicas](active-geo-replication-overview.md) can provide similar functionality in these service tiers.  When using Azure SQL Managed Instance and failover groups, the [failover group read-only listener](../managed-instance/failover-group-sql-mi.md) can provide similar functionality respectively.
 
 The following diagram illustrates the feature for Premium and Business Critical databases and managed instances.
 
@@ -198,7 +198,7 @@ Body: {
 }
 ```
 
-For more information, see [Databases - Create or update](/rest/api/sql/2022-08-01-preview/databases/create-or-update).
+For more information, see [Databases - Create or update](/rest/api/sql/databases/create-or-update).
 
 ## Use the `tempdb` database on a read-only replica
 

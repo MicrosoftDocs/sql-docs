@@ -45,7 +45,7 @@ In this section, you create a table report, a data source, and a dataset. When y
   
 4.  On the **Choose a dataset** page, select **Create a dataset** > **Next**.  
   
-6.  On the **Choose a connection to a data source** page, select a data source that is type **SQL Server**. Select a data source from the list or browse to the report server to select one.  
+6.  On the **Choose a connection to a data source** page, select a data source that is type **SQL Server**. Choose a data source from the list or browse to the report server to select one.  
 
     > [!NOTE]  
     > The data source you choose isn't important, as long as you have adequate permissions. You will not be getting data from the data source. For more information, see [Alternative ways to get a data connection &#40;Report Builder&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -124,7 +124,7 @@ In this section, you create a table report, a data source, and a dataset. When y
   
 2.  Right-click **DataSource1** and select **Data Source Properties.**  
   
-3.  In the **Name** box, type **ExpressionsDataSource**  
+3.  In the **Name** box, enter **ExpressionsDataSource**  
   
 4.  Select **OK**.
   
@@ -136,7 +136,7 @@ In this section, you create a table report, a data source, and a dataset. When y
 
     :::image type="content" source="../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png" alt-text="Screenshot that shows how access the Dataset Properties in Report Builder.":::
   
-3.  In the **Name** box, type **Expressions**  
+3.  In the **Name** box, enter **Expressions**  
   
 4.  Select **OK**.
   
@@ -149,7 +149,7 @@ In this section, you use the **Left** function and the **Concatenate** (**&**) o
 
     :::image type="content" source="../reporting-services/media/report-builder-expression-tutorial-insert-column.png" alt-text="Screenshot that shows how to insert a left column into a report.":::
   
-2.  Select the header of the new column and type **Name**.  
+2.  Select the header of the new column and enter **Name**.  
   
 3.  Right-click the data cell for the **Name** column and select **Expression**.  
 
@@ -167,11 +167,11 @@ In this section, you use the **Left** function and the **Concatenate** (**&**) o
   
 7.  In the **Values** list, double-click **FirstName**.  
   
-8.  Type **, 1)**  
+8.  Enter **, 1)**  
   
     This expression extracts one character from the **FirstName** value, counting from the left.  
   
-9. Type **&". "&**  
+9. Enter **&". "&**  
 
     This expression adds a period and a space after the expression.
   
@@ -192,11 +192,11 @@ In this section, you format the **Last Purchase** column, which contains dates, 
   
 1.  Select **Design** to return to design view.  
   
-2.  Select the data cell in the **Last Purchase** column, and on the **Home** tab > **Number** section, select **Date**.  
+2.  Select the data cell in the **Last Purchase** column, and on the **Home** tab > **Number** section, choose **Date**.  
 
     :::image type="content" source="../reporting-services/media/report-builder-expression-tutorial-date-format.png" alt-text="Screenshot that shows how to set the Last Purchase column to Date.":::
   
-3.  Also in the **Number** section, select the arrow next to **Placeholder Styles** and select **Sample Values**. 
+3.  Also in the **Number** section, select the arrow next to **Placeholder Styles** and choose **Sample Values**. 
 
     :::image type="content" source="../reporting-services/media/report-builder-expression-tutorial-sample-values.png" alt-text="Screenshot that shows the Sample Values option in Report Builder.":::
 
@@ -204,7 +204,7 @@ In this section, you format the **Last Purchase** column, which contains dates, 
   
 ### Format the currency column
 
-- Select the data cell in the **YTDPurchase** column, and in the **Number** section, select **Currency Symbol**.
+- Select the data cell in the **YTDPurchase** column, and in the **Number** section, choose **Currency Symbol**.
  
 ### Format the column headers
 
@@ -233,7 +233,7 @@ If you want to keep the color you apply in that table cell when you make the rep
   
     A new column is added to the left of the **Name** column.  
   
-2.  Select the header of the new column and type **M/F**.  
+2.  Select the header of the new column and enter **M/F**.  
   
 ### Add a rectangle  
   
@@ -261,21 +261,21 @@ If you want to keep the color you apply in that table cell when you make the rep
   
 6.  In the **Values** list, double-click **Gender**.  
   
-7.  Type **="Male",** (including the comma).
+7.  Enter **="Male",** (including the comma).
 
 8. In the **Category** list, select **Constants**, and in the **Values** box, choose **Cornflower Blue**.
 
     :::image type="content" source="../reporting-services/media/report-builder-expression-tutorial-color-expression-cornflower-blue.png" alt-text="Screenshot that shows how to use a color to show a gender.":::
 
-9. Type a comma after it. 
+9. Enter a comma after it. 
   
 5.  In the **Category** list, select **Fields (Expressions)**, and in the **Values** list, double-click **Gender** again.  
   
-7.  Type **="Female",** (including the comma). 
+7.  Enter **="Female",** (including the comma). 
 
 8. In the **Category** list, select **Constants**, and in the **Values** box, choose **Tomato**.
 
-13. Type a closing parenthesis **)** after it. 
+13. Enter a closing parenthesis **)** after it. 
   
     The completed expression is: 
     `=Switch(Fields!Gender.Value ="Male", "CornflowerBlue",Fields!Gender.Value ="Female","Tomato")`  
@@ -317,7 +317,7 @@ In this section, you create the CountryRegion dataset and use the **Lookup** fun
   
 4.  In the **Data source** list, select ExpressionsDataSource.  
   
-5.  In the **Name** box, type **CountryRegion**  
+5.  In the **Name** box, enter **CountryRegion**  
   
 6.  Verify that the **Text** query type is selected and select **Query Designer**.  
   
@@ -364,7 +364,7 @@ In this section, you create the CountryRegion dataset and use the **Lookup** fun
   
 6.  In the **Category** list, select **Fields (Expressions)**, and in the **Values** list, double-click **CountryRegionID**.  
   
-8.  Place the cursor immediately after `CountryRegionID.Value`, and type **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")**  
+8.  Place the cursor immediately after `CountryRegionID.Value`, and enter **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")**  
   
     The completed expression: `=Lookup(Fields!CountryRegionID.Value,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")`  
   
@@ -385,7 +385,7 @@ In this section, you add a column and then use the **Now** function or the `Exec
   
     A new column is added to the right of the **Last Purchase** column.  
   
-3.  In the column header, type **Days Ago**  
+3.  In the column header, enter **Days Ago**  
   
 4.  Right-click the data cell for the **Days Ago** column and select **Expression**.  
   
@@ -393,18 +393,18 @@ In this section, you add a column and then use the **Now** function or the `Exec
   
 6.  In the **Item** list, double-click **DateDiff**.  
   
-7.  Immediately after `DateDiff(`, type **"d",** (including the quotation marks "" and comma). 
+7.  Immediately after `DateDiff(`, enter **"d",** (including the quotation marks "" and comma). 
   
 9. In the **Category** list, select **Fields (Expressions)**, and in the **Values** list, double-click **LastPurchase**.  
   
-11. Immediately after `Fields!LastPurchase.Value`, type **,** (a comma). 
+11. Immediately after `Fields!LastPurchase.Value`, enter **,** (a comma). 
   
 13. In the **Category** list, select **Date & Time** again, and in the **Item** list, double-click **Now**.  
   
     > [!WARNING]  
     > In production reports you should not use the **Now** function in expressions that are evaluated multiple times as the report renders (for example, in the detail rows of a report). The value of **Now** changes from row to row and the different values affect the evaluation results of expressions, which leads to results that are subtly inconsistent. Instead, use the `ExecutionTime` global variable that [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides.  
   
-15. Delete the left parenthesis after `Now(`, and then type a right parenthesis **)**  
+15. Delete the left parenthesis after `Now(`, and then enter a right parenthesis **)**  
   
     The completed expression is: `=DateDiff("d", Fields!LastPurchase.Value, Now)`  
 
@@ -425,7 +425,7 @@ Configuring the indicator and its states takes many steps. If you want, you can 
   
     A new column is added to the right of the **YTD Purchase** column.  
   
-2.  Select the column header and type **+ or - AVG Sales**  
+2.  Select the column header and enter **+ or - AVG Sales**  
   
 ### Add an indicator  
   
@@ -451,13 +451,13 @@ Configuring the indicator and its states takes many steps. If you want, you can 
   
 5.  In the **Category** list, select **Fields (Expressions)**, and in the **Values** list, double-click **YTDPurchase**.  
   
-7.  Immediately after `Fields!YTDPurchase.Value`, type  **-** (a minus sign). 
+7.  Immediately after `Fields!YTDPurchase.Value`, enter  **-** (a minus sign). 
   
 9. Expand **Common Functions** again, select **Aggregate**, and in the **Item** list, double-click **Avg**.  
   
 11. In the **Category** list, select **Fields (Expressions)**, and in the **Values** list, double-click **YTDPurchase**.  
   
-13. Immediately after `Fields!YTDPurchase.Value`, type **, "Expressions"))**  
+13. Immediately after `Fields!YTDPurchase.Value`, enter **, "Expressions"))**  
   
     The completed expression is: `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions"))`  
   
@@ -475,27 +475,27 @@ Configuring the indicator and its states takes many steps. If you want, you can 
   
 20. In the **Category** list, select **Fields (Expressions)**, and in the **Values** list, double-click **YTDPurchase**.  
   
-22. Immediately after `Fields!YTDPurchase.Value`, type  **-** (a minus sign). 
+22. Immediately after `Fields!YTDPurchase.Value`, enter  **-** (a minus sign). 
   
 24. Expand **Common Functions** again and select **Aggregate**, and in the **Item** list, double-click **Avg**.  
   
 26. In the **Category** list, select **Fields (Expressions)**, and in the **Values** list, double-click **YTDPurchase**.  
   
-28. Immediately after `Fields!YTDPurchase.Value`, type **, "Expressions")) < 0**  
+28. Immediately after `Fields!YTDPurchase.Value`, enter **, "Expressions")) < 0**  
   
     The completed expression: `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) < 0`  
   
 30. Select **OK**.
   
-31. In the text box for the **End** value, type **0**  
+31. In the text box for the **End** value, enter **0**  
   
-32. Select the row with the horizontal-pointing arrow and select **Delete**.  
+32. Select the row with the horizontal-pointing arrow and choose **Delete**.  
 
     :::image type="content" source="../reporting-services/media/report-builder-expression-tutorial-delete-indicator-state.png" alt-text="Screenshot that shows how to delete an indicator.":::
     
     Now there are only two arrows, either up or down.
   
-33. In the row with the up-pointing arrow, in the **Start** box, type **0**  
+33. In the row with the up-pointing arrow, in the **Start** box, enter **0**  
   
 34. Select the **fx** button to the right of the text box for the **End** value.  
   
@@ -522,35 +522,35 @@ Create a parameter so report readers can specify the color to apply to alternati
   
     The **Report Parameter Properties** dialog box opens.  
   
-3.  In **Prompt**, type **Choose color**  
+3.  In **Prompt**, enter **Choose color**  
   
-4.  In **Name**, type **RowColor**  
+4.  In **Name**, enter **RowColor**  
   
 5.  On the **Available Values** tab, select **Specify values**.  
   
 7.  Select **Add**.  
   
-8.  In the **Label** box, type **Yellow**  
+8.  In the **Label** box, enter **Yellow**  
   
-9. In the **Value** box, type **Yellow**  
+9. In the **Value** box, enter **Yellow**  
   
 10. Select **Add**.  
   
-11. In the **Label** box, type **Green**  
+11. In the **Label** box, enter **Green**  
   
-12. In the **Value** box, type **PaleGreen**  
+12. In the **Value** box, enter **PaleGreen**  
   
 13. Select **Add**.  
   
-14. In the **Label** box, type **Blue**  
+14. In the **Label** box, enter **Blue**  
   
-15. In the **Value** box, type **LightBlue**  
+15. In the **Value** box, enter **LightBlue**  
   
 16. Select **Add**.  
   
-17. In the **Label** box, type **Pink**  
+17. In the **Label** box, enter **Pink**  
   
-18. In the **Value** box, type **Pink**  
+18. In the **Value** box, enter **Pink**  
 
     :::image type="content" source="../reporting-services/media/report-builder-expression-tutorial-parameter-available.png" alt-text="Screenshot of the Report Parameter Properties dialog box that shows the Choose the available values for this parameter step.":::
   
@@ -568,7 +568,7 @@ Create a parameter so report readers can specify the color to apply to alternati
   
     If the properties are listed by category in the Properties pane, you find **BackgroundColor** in the **Misc** category.  
   
-5.  Select the down arrow and then select **Expression**.  
+5.  Select the down arrow and then choose **Expression**.  
 
     :::image type="content" source="../reporting-services/media/report-builder-expression-tutorial-banded-color-property.png" alt-text="Screenshot of the Properties box that shows how to associate an expression with a BackgroundColor.":::
   
@@ -578,11 +578,11 @@ Create a parameter so report readers can specify the color to apply to alternati
   
 8.  Under **Common Functions**, select **Miscellaneous**, and in the **Item** list, double-click **RowNumber**.  
 
-9. Immediately after **RowNumber(** type **Nothing) MOD 2,**
+9. Immediately after **RowNumber(** enter **Nothing) MOD 2,**
   
 8. Select **Parameters** and in the **Values** list, double-click **RowColor**.  
   
-22. Immediately after `Parameters!RowColor.Value`, type **, "White")**  
+22. Immediately after `Parameters!RowColor.Value`, enter **, "White")**  
   
     The completed expression is: `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, "White")`  
 
@@ -613,7 +613,7 @@ Add a title to the report.
   
 1.  On the design surface, select **Click to add title**.  
   
-2.  Type **Sales Comparison Summary**, then select the text.  
+2.  Enter **Sales Comparison Summary**, then select the text.  
   
 3.  On the **Home** tab, in the **Font** box, set:
 
@@ -623,7 +623,7 @@ Add a title to the report.
   
 4.  On the **Home** tab, select **Run**.  
   
-3.  Select a color for the nonwhite bands in the report, and select **View Report**.  
+3.  Select a color for the nonwhite bands in the report, and choose **View Report**.  
   
 ## <a name="Save"></a>(Optional) Save the report  
 You can save reports to a report server, SharePoint library, or your computer. For more information, see [Save reports &#40;Report Builder&#41;](../reporting-services/report-builder/saving-reports-report-builder.md).  
@@ -636,7 +636,7 @@ In this tutorial, you save the report to a report server. If you don't have acce
   
 2.  Select **Recent Sites and Servers**.  
   
-3.  Select or type the name of the report server where you have permission to save reports.  
+3.  Select or enter the name of the report server where you have permission to save reports.  
   
     The message "Connecting to report server" appears. When the connection is complete, you see the contents of the report folder that the report server administrator specified as the default report location.  
   

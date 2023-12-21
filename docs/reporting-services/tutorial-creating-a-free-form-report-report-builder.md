@@ -42,11 +42,11 @@ For more information about requirements, see [Prerequisites for tutorials &#40;R
   
 1.  In the Report Data pane, select **New** > **Data Source**.  
   
-2.  In the **Name** box, type: **ListDataSource**  
+2.  In the **Name** box, enter: **ListDataSource**  
   
 3.  Select **Use a connection embedded in my report**.  
   
-4.  Verify that the connection type is Microsoft SQL Server, and then in the **Connection string** box type: **Data Source = \<servername>**  
+4.  Verify that the connection type is Microsoft SQL Server, and then in the **Connection string** box enter: **Data Source = \<servername>**  
   
     **\<servername>**, for example Report001, specifies a computer on which an instance of the SQL Server Database Engine is installed. Because the data for this report isn't extracted from a SQL Server database, you need not include the name of a database. The default database on the specified server is only used to parse the query.  
   
@@ -58,11 +58,11 @@ For more information about requirements, see [Prerequisites for tutorials &#40;R
   
 1.  In the Report Data pane, select **New** > **Dataset**.  
   
-2.  In the **Name** box, type: **ListDataset**.  
+2.  In the **Name** box, enter: **ListDataset**.  
   
 3.  Select **Use a dataset embedded in my report**, and verify that the data source is **ListDataSource**.  
   
-4.  Verify that the **Text** query type is selected, and then select **Query Designer**.  
+4.  Verify that the **Text** query type is selected, and then choose **Query Designer**.  
   
 5.  Select **Edit as Text**.  
   
@@ -118,12 +118,12 @@ In this tutorial, you use a list to display the sales information for sales terr
   
 1.  On the **Insert** tab, go to **Data Regions** > **List**. 
 
-2. Select in the report body (between the title and footer areas) and drag to make the list box. Make the list box 7 inches tall and 6.25 inches wide. To get the exact size, in the **Properties** pane under **Position**, type values for the **Width** and **Height** properties.
+2. Select in the report body (between the title and footer areas) and drag to make the list box. Make the list box 7 inches tall and 6.25 inches wide. To get the exact size, in the **Properties** pane under **Position**, enter values for the **Width** and **Height** properties.
   
     > [!NOTE]  
     > This report uses the paper size Letter (8.5 X11) and 1 inch margins. A list box taller than 9 inches or wider than 6.5 inches might generate blank pages.  
   
-2.  Select inside the list box, right-click the bar at the top of the list, and select **Tablix Properties**.  
+2.  Select inside the list box, right-click the bar at the top of the list, and choose **Tablix Properties**.  
 
     :::image type="content" source="../reporting-services/media/report-builder-free-form-tablix-properties.png" alt-text="Screenshot that shows the Tablix Properties option for the Report Builder free form report.":::
   
@@ -168,7 +168,7 @@ One advantage of list data regions is that you can add report items such as rect
   
 1.  On the **Insert** tab, select **Rectangle**. 
 
-2. Select in the upper left corner of the list and drag to make the rectangle 7 inches tall and 3.5 inches wide. Again, to get the exact size, in the **Properties** pane under **Position**, type values for **Width** and **Height**.
+2. Select in the upper left corner of the list and drag to make the rectangle 7 inches tall and 3.5 inches wide. Again, to get the exact size, in the **Properties** pane under **Position**, enter values for **Width** and **Height**.
   
 2.  Right-click the rectangle > **Rectangle Properties**.  
   
@@ -193,7 +193,7 @@ You can add text boxes to display static text that is repeated on each report pa
   
 2.  On the **Insert** tab, go to **Text Box**. Select the upper left corner of the list,  inside of the rectangle you added previously, and drag to make the text box about 3.45 inches wide and 5 inches tall.  
   
-3.  With the cursor in the text box and type: **Newsletter for** . Include a space after the word "for", to separate the text from the field you add in the next step.   
+3.  With the cursor in the text box and enter: **Newsletter for** . Include a space after the word "for", to separate the text from the field you add in the next step.   
 
     :::image type="content" source="../reporting-services/media/tutorial-newsletterfor.png" alt-text="Screenshot of Design View that shows the report with the heading.":::
   
@@ -209,9 +209,9 @@ You can add text boxes to display static text that is repeated on each report pa
     *  **20 pt**.
     *  **Tomato**.  
   
-9. Place the cursor below the text you typed in step 3 and type: **Hello** with a space after the word, to separate the text and the field that you add in the next step.  
+9. Place the cursor below the text you entered in step 3 and enter: **Hello** with a space after the word, to separate the text and the field that you add in the next step.  
  
-10. Drag the `[FullName]` field from ListDataSet in the Report Data pane to the text box and place it after "Hello ", then type a comma (,).  
+10. Drag the `[FullName]` field from ListDataSet in the Report Data pane to the text box and place it after "Hello ", then enter a comma (,).  
    
 11. Select the text you added in the previous steps.
   
@@ -238,9 +238,9 @@ You can add text boxes to display static text that is repeated on each report pa
       *  **10 pt**.
       *  **Black**.  
  
-20. Place the cursor inside the text box, below the meaningless text and type: **Congratulations on your total sales of**, with a space after the word to separate the text and the field you add in the next step. 
+20. Place the cursor inside the text box, below the meaningless text and enter: **Congratulations on your total sales of**, with a space after the word to separate the text and the field you add in the next step. 
   
-21. Drag the Sales field to the text box, place it after the text you typed in the previous step, then type an exclamation mark (!).  
+21. Drag the Sales field to the text box, place it after the text you entered in the previous step, then enter an exclamation mark (!).  
 
 25. Select the text and the field you just added.  
   
@@ -266,7 +266,7 @@ You can add text boxes to display static text that is repeated on each report pa
   
 30. Right-click the text box with the "Click to add title" text, and then select **Delete**.  
   
-31. Select the list box. Select the two double-headed arrows and move it to the top of the page.  
+31. Select the list box. Choose the two double-headed arrows and move it to the top of the page.  
 
     :::image type="content" source="../reporting-services/media/report-builder-drag-list.png" alt-text="Screenshot that shows how to drag a list in the Report Builder free form report.":::
   
@@ -308,9 +308,9 @@ Use the New Table and Matrix Wizard to add a table to the free form report. Afte
 
     :::image type="content" source="../reporting-services/media/report-builder-free-form-table-totals.png" alt-text="Screenshot that shows how to Add Totals to the Report Builder free form report.":::
   
-13. Select the cell in the Product column and type **Total**.
+13. Select the cell in the Product column and enter **Total**.
 
-    :::image type="content" source="../reporting-services/media/report-builder-free-form-type-total.png" alt-text="Screenshot of a cell in the Product column with Total typed into it.":::
+    :::image type="content" source="../reporting-services/media/report-builder-free-form-type-total.png" alt-text="Screenshot of a cell in the Product column with Total entered into it.":::
 
 12. Select the [SalesDate] field. On the **Home** tab > **Number**, change **Default** to **Date**.
 
@@ -333,7 +333,7 @@ In this tutorial, save the report to a report server. If you don't have access t
   
 2.  Select **Recent Sites and Servers**.  
   
-3.  Select or type the name of the report server where you have permission to save reports.  
+3.  Select or enter the name of the report server where you have permission to save reports.  
   
     The message "Connecting to report server" appears. When the connection is complete, you see the contents of the report folder that the report server administrator specified as the default location for reports.  
   
@@ -399,7 +399,7 @@ Rectangles help you control how the report renders. Place a pie and column chart
   
 9. Drag the chart inside the rectangle.  
    
-10. Select the chart title and type: **Product Quantities Sold**.  
+10. Select the chart title and enter: **Product Quantities Sold**.  
   
 12. On the **Home** tab > **Font**, make the title:
     * **Font** **Segoe UI Semibold**.
@@ -438,7 +438,7 @@ Rectangles help you control how the report renders. Place a pie and column chart
   
 9. Drag the chart inside the rectangle, below the pie chart.  
    
-10. Select the chart title and type: **Product Sales**.  
+10. Select the chart title and enter: **Product Sales**.  
   
 12. On the **Home** tab > **Font**, make the title:
     * **Font** **Segoe UI Semibold**.
@@ -478,7 +478,7 @@ You can use rectangles as containers for other items on a report page. Read more
   
 ### Make the charts the same size  
   
-1.  Select the pie chart, press the Ctrl key, and then select the column chart.  
+1.  Select the pie chart, press the Ctrl key, and then choose the column chart.  
   
 2.  With both charts selected, right-click > **Layout** > **Make Same Width**.  
   

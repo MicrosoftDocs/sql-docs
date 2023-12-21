@@ -53,13 +53,13 @@ A data connection contains the information necessary to connect to an external d
   
 2.  Select **New**. The **Data Source Properties** dialog box opens.  
   
-3.  In **Name**, type **Online and Reseller Sales Detail** as the name for the data source.  
+3.  In **Name**, enter **Online and Reseller Sales Detail** as the name for the data source.  
   
 4.  In **Select a connection type**, select **Microsoft SQL Server Analysis Services**, and then choose **Build**.  
   
 5.  In **Data source**, verify that the data source is **Microsoft SQL Server Analysis Services (AdomdClient)**.  
   
-6.  In **Server name**, type the name of a server where an instance of Analysis Services is installed.  
+6.  In **Server name**, enter the name of a server where an instance of Analysis Services is installed.  
   
 7.  In **Select or enter a database name**, select the Contoso cube.  
   
@@ -255,7 +255,7 @@ A report title appears at the top of the report. You can place the report title 
   
 2.  On the design surface, select **Click to add title**.  
   
-3.  Type **Sales and Returns for Category:**.  
+3.  Enter **Sales and Returns for Category:**.  
   
 4.  Right-click, and then select **Create Placeholder**.  
   
@@ -287,7 +287,7 @@ By default parameters are visible, which isn't appropriate for this report. You 
   
 3.  On the **General** tab, select **Hidden**.  
   
-4.  In the **Prompt** box, type **Product Category**.  
+4.  In the **Prompt** box, enter **Product Category**.  
   
     > [!NOTE]  
     > Because the parameter is hidden, this prompt is never used.  
@@ -308,7 +308,7 @@ You can save the report to a SharePoint library, report server, or your computer
   
 2.  To show a list of recently used report servers and SharePoint sites, select **Recent Sites and Servers**.  
   
-3.  Select or type the name of the SharePoint site where you have permission to save reports.  
+3.  Select or enter the name of the SharePoint site where you have permission to save reports.  
   
     The URL of the SharePoint library has the following syntax:  
   
@@ -351,13 +351,13 @@ In this section, you add an embedded data source to the main report.
   
 2.  Select **New**.  
   
-3.  In **Name**, type **Online and Reseller Sales Main** as the name for the data source.  
+3.  In **Name**, enter **Online and Reseller Sales Main** as the name for the data source.  
   
 4.  In **Select a connection type**, select **Microsoft SQL Server Analysis Services**, and then select **Build**.  
   
 5.  In **Data source**, verify that the data source is **Microsoft SQL Server Analysis Services (AdomdClient)**.  
   
-6.  In **Server name**, type the name of a server where an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] is installed.  
+6.  In **Server name**, enter the name of a server where an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] is installed.  
   
 7.  In **Select or enter a database name**, select the Contoso cube.  
   
@@ -437,7 +437,7 @@ Next, create an embedded dataset. To do so, you use the query designer to create
   
 2.  In the Metadata pane, expand **Measures** and then expand Sales.  
   
-3.  Drag the Sales Quantity measure to the **Expression** box, type the subtraction character (-), and then drag the Sales Return Quantity measure to the **Expression** box; place it after the subtraction character.  
+3.  Drag the Sales Quantity measure to the **Expression** box, enter the subtraction character (-), and then drag the Sales Return Quantity measure to the **Expression** box; place it after the subtraction character.  
   
     The following code shows the expression:  
   
@@ -445,7 +445,7 @@ Next, create an embedded dataset. To do so, you use the query designer to create
     [Measures].[Sales Quantity] - [Measures].[Sales Return Quantity]  
     ```  
   
-4.  In the Name box, type **Net QTY**, and then select **OK**.  
+4.  In the Name box, enter **Net QTY**, and then select **OK**.  
   
     The Calculated Members pane lists the **Net QTY** calculated member.  
   
@@ -453,7 +453,7 @@ Next, create an embedded dataset. To do so, you use the query designer to create
   
 6.  In the Metadata pane, expand **Measures**, and then expand Sales.  
   
-7.  Drag the Sales Amount measure to the **Expression** box, type the subtraction character (-), and then drag the Sales Return Amount measure to the **Expression** box; place it after the subtraction character.  
+7.  Drag the Sales Amount measure to the **Expression** box, enter the subtraction character (-), and then drag the Sales Return Amount measure to the **Expression** box; place it after the subtraction character.  
   
     The following code shows the expression:  
   
@@ -461,7 +461,7 @@ Next, create an embedded dataset. To do so, you use the query designer to create
     [Measures].[Sales Amount] - [Measures].[Sales Return Amount]  
     ```  
   
-8.  In the **Name** box, type  **Net Sales**, and then select **OK**.The Calculated Members pane lists the **Net Sales** calculated member.  
+8.  In the **Name** box, enter  **Net Sales**, and then select **OK**.The Calculated Members pane lists the **Net Sales** calculated member.  
   
 ### <a name="MSkip"></a>Create the dataset  
   
@@ -543,7 +543,7 @@ To enable the drillthrough, specify an action on a text box in the main report.
   
 7.  In the **Name** list, select ProductProductCategoryName.  
   
-8.  In **Value**, type `[Product_Category_Name.UniqueName]`.  
+8.  In **Value**, enter `[Product_Category_Name.UniqueName]`.  
   
     Product_Category_Name is a field in the dataset.  
   
@@ -579,7 +579,7 @@ Use indicators to show the state of quantities and sales for Online and Reseller
   
 3.  On the ribbon, select the **Indicator** icon, and then choose inside the rectangle. The **Select Indicator Type** dialog box opens with the **Directional** indicator selected.  
   
-4.  Select the **3 Signs** type, and then choose **OK**.  
+4.  Select the **3 Signs** enter, and then choose **OK**.  
   
 5.  Right-click the indicator and in the Gauge Data pane, select the down arrow next to **(Unspecified)**. Select `Net_QTY`.  
   
@@ -621,9 +621,9 @@ Add a title to the main report.
   
 1.  On the design surface, select **Click to add title**.  
   
-2.  Type **2009 Product Category Sales: Online and Reseller Category:**.  
+2.  Enter **2009 Product Category Sales: Online and Reseller Category:**.  
   
-3.  Select the text you typed.  
+3.  Select the text you entered.  
   
 4.  On the **Home** tab of the ribbon, in the Font group, select the **Times New Roman** font, **16pt** size, and the **Bold** and **Italic** styles.  
   
@@ -640,7 +640,7 @@ Save the main report to a SharePoint library.
   
 3.  Optionally, to show a list of recently used report servers and SharePoint sites, select **Recent Sites and Servers**.  
   
-4.  Select or type the name of the SharePoint site where you have permission to save reports. The URL of the SharePoint library has the following syntax:  
+4.  Select or enter the name of the SharePoint site where you have permission to save reports. The URL of the SharePoint library has the following syntax:  
   
     ```  
     Http://<ServerName>/<Sites>/  

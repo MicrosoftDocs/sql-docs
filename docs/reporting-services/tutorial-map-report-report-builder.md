@@ -59,7 +59,7 @@ In this section, you add a map to your report from the map gallery. The map has 
  
     By default, map elements from a map gallery are automatically embedded in the report definition.  
   
-9. On the **Choose map visualization** page, verify **Basic Map** is selected, and select **Next**.  
+9. On the **Choose map visualization** page, verify **Basic Map** is selected, and choose **Next**.  
   
 11. On the **Choose color theme and data visualization** page, select the **Display labels** option.  
   
@@ -83,7 +83,7 @@ In this section, you add a map to your report from the map gallery. The map has 
   
     The map is added to the design surface.  
   
-13. Select the "Map Title" text and type **Sales by Store** > ENTER.  
+13. Select the "Map Title" text and enter **Sales by Store** > ENTER.  
 
 15. Double-click the map to display the **Map Layers Pane**. The **Map Layers Pane** shows one polygon layer, PolygonLayer1, of layer type **Embedded**. Each county is an embedded map element on this layer.  
   
@@ -116,11 +116,11 @@ In this section, you use the map layer wizard to add a point layer that displays
 
     :::image type="content" source="../reporting-services/media/report-builder-map-new-layer-wizard-icon.png" alt-text="Screenshot that shows the Map Layers pane with the New Layer Wizard icon called out.":::
   
-3.  On the **Choose a source of spatial data** page, select **SQL Server spatial query**, and select **Next**.  
+3.  On the **Choose a source of spatial data** page, select **SQL Server spatial query**, and choose **Next**.  
   
 4.  On the **Choose a dataset with SQL Server spatial data** page, select **Add a new dataset with SQL Server spatial data** > **Next**.  
   
-5.  On the **Choose a connection to a SQL Server spatial data source** page, select an existing data source or browse to the report server and select a data source.  
+5.  On the **Choose a connection to a SQL Server spatial data source** page, select an existing data source or browse to the report server and choose a data source.  
 
     > [!NOTE]  
     > The data source you choose is unimportant, as long as you have adequate permissions. You will not be getting data from the data source. For more information, see [Alternative ways to get a data connection &#40;Report Builder&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -183,7 +183,7 @@ In this section, you use the map layer wizard to add a point layer that displays
   
 12. Select **Next**.  
   
-13. On the Choose map visualization page, select **Bubble Map** for a map type that displays markers that vary in size, according to the data. Select **Next**.  
+13. On the Choose map visualization page, select **Bubble Map** for a map type that displays markers that vary in size, according to the data. Choose **Next**.  
   
 14. On the **Choose the analytical dataset** page, select DataSet1, and choose **Next**. This dataset contains both analytical data and spatial data displayed on the new point layer.   
   
@@ -191,7 +191,7 @@ In this section, you use the map layer wizard to add a point layer that displays
   
 17. In **Data field**, select `[Sum(SellingArea)]` to vary bubble size by the size of the area a store sets aside to display the products.  
   
-18. Select **Display labels**, and in **Data field**, select `[City]`.
+18. Select **Display labels**, and in **Data field**, choose `[City]`.
 
 18. Select **Finish**.  
   
@@ -199,7 +199,7 @@ In this section, you use the map layer wizard to add a point layer that displays
   
  19. Double-click the map to display the **Map Layer** pane. The **Map Layer** pane displays a new layer, PointLayer1, with spatial data source type **DataRegion**.  
   
-19. Add a legend title. In the legend, select the text **Title**, type **Display Area (sq. ft.)** and press ENTER.  
+19. Add a legend title. In the legend, select the text **Title**, enter **Display Area (sq. ft.)** and press ENTER.  
   
 21. In the **Map Layers Pane**, select the arrow next to PointLayer1, and then choose **Point Properties**.  
 
@@ -230,7 +230,7 @@ Use the map layer wizard to add a map layer that displays a route between two st
   
 2.  Double-click the map to display the **Map Layer** pane. On the toolbar, select the **New layer wizard** button :::image type="icon" source="../reporting-services/media/rs-iconmaplayerwizard.gif"::: .  
   
-3.  On the **Choose a source of spatial data** page, select **SQL Server spatial query** and select **Next**.  
+3.  On the **Choose a source of spatial data** page, select **SQL Server spatial query** and choose **Next**.  
   
 4.  On the **Choose a dataset with SQL Server spatial data** page, select **Add a new dataset with SQL Server spatial data** and choose **Next**.  
   
@@ -259,7 +259,7 @@ Use the map layer wizard to add a map layer that displays a route between two st
   
 11. Select **Next**.  
   
-12. On the **Choose map visualization** page, select **Basic Line Map**, and then select **Next**.  
+12. On the **Choose map visualization** page, select **Basic Line Map**, and then choose **Next**.  
   
 13. On the **Choose color theme and data visualization**, select the option **Single color map**. The path appears as a single color based on the selected theme.  
   
@@ -307,7 +307,7 @@ In this section, to let the items on one layer show through another layer, you a
   
 3.  Select the arrow next to PolygonLayer1 > **Layer Data**. The **Map Polygon Layer Properties** dialog box opens.  
   
-4.  On the **Visibility** tab, under **Transparency (percent)**, type **30**.  
+4.  On the **Visibility** tab, under **Transparency (percent)**, enter **30**.  
   
 6.  Select **OK**.
   
@@ -327,7 +327,7 @@ To vary the county shapes by color based on analytical data, you first need to a
   
 2.  Double-click the map to display the **Map Layers** pane.  
   
-3.  Select the arrow next to PolygonLayer1, then select **Layer Data**. The **Map Polygon Layer Properties** dialog box opens.  
+3.  Select the arrow next to PolygonLayer1, then choose **Layer Data**. The **Map Polygon Layer Properties** dialog box opens.  
   
 4.  On the **Analytical data** tab, under **Analytical dataset**, select DataSet1. The wizard created this dataset when you created the spatial data query for the counties.  
   
@@ -356,7 +356,7 @@ To create a rule that varies the color of each county based store sales, you mus
   
 1.  Switch to Design view.  
   
-2.  Select the arrow next to PolygonLayer1, then select **Polygon Color Rule**. The **Map Color Rules Properties** dialog box opens. Notice that the color rule option **Visualize data by using color palette** is selected. The wizard sets this option.  
+2.  Select the arrow next to PolygonLayer1, then choose **Polygon Color Rule**. The **Map Color Rules Properties** dialog box opens. Notice that the color rule option **Visualize data by using color palette** is selected. The wizard sets this option.  
   
 3.  Select **Visualize data by using color ranges**. Start color, middle color, and end color options replace the palette option.  
   
@@ -397,7 +397,7 @@ By default, data has a general format. In this section, you apply custom formats
   
 1. Switch to Design view.  
 
-2. Select the color scale. On the **Home** tab, go to the **Number** section. Select **Currency**.  
+2. Select the color scale. On the **Home** tab, go to the **Number** section. Choose **Currency**.  
   
 4.  Still in the **Number** section, select the **Decrease Decimal** button two times.  
   
@@ -407,7 +407,7 @@ By default, data has a general format. In this section, you apply custom formats
   
 1.  With the color scale still selected, in the Properties pane you see properties for **MapColorScale**. 
   
-2. Expand the Title section, and in the Caption property, type **Sales (Thousands)**.
+2. Expand the Title section, and in the Caption property, enter **Sales (Thousands)**.
 
 3. Change the TextColor property to **White**.  
 
@@ -455,7 +455,7 @@ To represent a new store not built yet, in this section you specify a point with
   
 4.  Move the pointer over the map viewport. The cursor changes to crosshairs.  
   
-5.  Select the location on the map where you want to add a point. In this tutorial, select a location in Oneida county. A point marked by a circle is added to the layer at the spot where you clicked. By default, the point is selected.  
+5.  Select the location on the map where you want to add a point. In this tutorial, choose a location in Oneida county. A point marked by a circle is added to the layer at the spot where you clicked. By default, the point is selected.  
 
     :::image type="content" source="../reporting-services/media/report-builder-map-custom-point.png" alt-text="Screenshot that shows how to add a custom point to the Report Builder map.":::  
 
@@ -469,7 +469,7 @@ To represent a new store not built yet, in this section you specify a point with
 
 10. Change **Marker size** to **18pt**.
   
-3.  On the **Labels** tab, in **Label text**, type **New Store**.  
+3.  On the **Labels** tab, in **Label text**, enter **New Store**.  
   
 5.  In **Placement**, select **Top**.  
 
@@ -490,7 +490,7 @@ In this section, you learn to change the map center, and another way to change t
  
 1.  Switch to Design view.  
 
-1.  Select the map, then right-click and select **Viewport Properties**.  
+1.  Select the map, then right-click and choose **Viewport Properties**.  
   
 2.  On the **Center and Zoom** tab, make sure **Set a view center and zoom level** is selected.  
 
@@ -512,7 +512,7 @@ In Design view, the map on the display surface and the view is based on sample d
   
 1.  On the design surface, select **Click to add title**.  
   
-2.  Type **Sales in New York Stores** and then select outside the text box.  
+2.  Enter **Sales in New York Stores** and then select outside the text box.  
   
 This title appears at the top of the report. Items at the top of the report body when there's no page header defined are the equivalent of a report header.  
   
@@ -520,7 +520,7 @@ This title appears at the top of the report. Items at the top of the report body
   
 1.  In Design view or Preview, on the **File** menu > **Save As**.
  
-3.  In **Name**, type **Store Sales in New York**.  
+3.  In **Name**, enter **Store Sales in New York**.  
 
 3. Save it to your local computer or to a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] server.
   
@@ -530,7 +530,7 @@ If you save it to a report server, you can view it there.
 
 :::image type="content" source="../reporting-services/media/report-builder-map-in-portal.png" alt-text="Screenshot that shows the completed Report Builder map displayed in the portal.":::
   
-## Next steps  
+## Next step
 You successfully completed the tutorial for how to add a map to your report.  
   
 For more information, see [Maps in a paginated report (Report Builder)](../reporting-services/report-design/maps-report-builder-and-ssrs.md).  

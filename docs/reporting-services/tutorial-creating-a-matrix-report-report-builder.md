@@ -43,7 +43,7 @@ In this section, you choose a shared data source, create an embedded dataset, an
   
 5.  Select **Next**.  
   
-6.  On the **Choose a connection to a data source** page, select an existing data source, or browse to the report server and select a data source. If no data source is available or you don't have access to a report server, you can use an embedded data source instead. For information about creating an embedded data source, see [Tutorial: Create a basic table report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  On the **Choose a connection to a data source** page, select an existing data source, or browse to the report server and choose a data source. If no data source is available or you don't have access to a report server, you can use an embedded data source instead. For information about creating an embedded data source, see [Tutorial: Create a basic table report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Select **Next**.  
   
@@ -93,13 +93,13 @@ Use the wizard to provide a starting design on which to display data. The previe
   
 1.  On the **Arrange fields** page, drag Territory from **Available fields** to **Row groups**.  
   
-2.  Drag SalesDate to **Row groups** and place it below Territory.  
+2.  Drag SalesDate to **Row groups** and place it after Territory.  
   
     The order in which fields are listed in **Row groups** defines the group hierarchy. Steps 1 and 2 organize the values of the fields first by territory, and then by sales date.  
   
 3.  Drag Subcategory to **Column groups**.  
   
-4.  Drag Product to **Column groups** and place it below Subcategory.  
+4.  Drag Product to **Column groups** and place it after Subcategory.  
   
     Again, the order in which fields are listed in **Column groups** defines the group hierarchy. Steps 3 and 4 organize the values for the fields first by subcategory, and then by product.  
   
@@ -177,7 +177,7 @@ In this section, you add a column group next to the Subcategory column group, co
   
     The **Tablix Group** dialog box opens.  
   
-3.  In the **Group By** list, select SalesDate, and then select **OK**.  
+3.  In the **Group By** list, select SalesDate, and then choose **OK**.  
   
     A new column group is added to the right of the Subcategory column group.  
   
@@ -197,7 +197,7 @@ In this section, you add a column group next to the Subcategory column group, co
   
 8.  Press the Ctrl key.  
   
-9. In the Subcategory group, select the Sales column header and the three cells below it, right-click, and then select **Copy**.  
+9. In the Subcategory group, select the Sales column header and the three cells below it, right-click, and then choose **Copy**.  
   
 10. Paste the four cells into the four empty cells in the new column group.  
   
@@ -217,7 +217,7 @@ A report that includes a matrix typically expands horizontally and vertically wh
   
 1.  Select **Design** to return to design view.  
   
-2.  Select the text in the furthest Quantity column to the left, and then type **QTY**.  
+2.  Select the text in the furthest Quantity column to the left, and then enter **QTY**.  
   
     The column title is now QTY.  
   
@@ -277,9 +277,9 @@ A report title appears at the top of the report. You can place the report title 
   
 4.  On the **Insert** tab, select **Text Box**, and then drag a text box inside the report header. Make the text box about 6 inches long and 3/4 inch tall and place it on the left side of the report header.  
   
-5.  In the text box, type **Sales by Territory, Subcategory, and Day**.  
+5.  In the text box, enter **Sales by Territory, Subcategory, and Day**.  
   
-6.  Select the text you typed, on the **Home** tab > **Font**:
+6.  Select the text you entered, on the **Home** tab > **Font**:
     * **Size 24 pt**
     * **Color Maroon**
  
@@ -298,7 +298,7 @@ In this tutorial, save the report to a report server. If you don't have access t
   
 2.  Select **Recent Sites and Servers**.  
   
-3.  Select or type the name of the report server where you have permission to save reports.  
+3.  Select or enter the name of the report server where you have permission to save reports.  
   
     The message "Connecting to report server" appears. When the connection is complete, you see the contents of the report folder that the report server administrator specified as the default report location.  
   
@@ -336,7 +336,7 @@ A text box can also display text as horizontal, vertical (top to bottom). For mo
   
 3.  In the Properties pane, locate the WritingMode property and change it from **Default** to **Rotate270**.  
   
-    If the Properties pane isn't open, select the **View** tab of the ribbon, and then select **Properties**.  
+    If the Properties pane isn't open, select the **View** tab of the ribbon, and then choose **Properties**.  
   
 4.  Verify that the CanGrow property is set to **True**.  
   

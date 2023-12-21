@@ -45,11 +45,11 @@ For information about requirements, see [Prerequisites for tutorials &#40;Report
 
     If you don't see the **Report Data** pane on the **View** tab, check **Report Data**.
   
-2.  In the **Name** box, type: **TextDataSource**  
+2.  In the **Name** box, enter: **TextDataSource**  
   
 3.  Select **Use a connection embedded in my report**.  
   
-4.  Verify that the connection type is Microsoft SQL Server, and then in the **Connection string** box type: `Data Source = <servername>`  
+4.  Verify that the connection type is Microsoft SQL Server, and then in the **Connection string** box enter: `Data Source = <servername>`  
   
     > [!NOTE]  
     > The expression `<servername>`, for example Report001, specifies a computer on which an instance of the SQL Server Database Engine is installed. This tutorial does not need specific data; it just needs a connection to a SQL Server database. If you already have a data source connection listed under **Data Source Connections**, you can select it and go to the next procedure, "To create a dataset." For more information, see [Alternative ways to get a data connection &#40;Report Builder&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -62,9 +62,9 @@ For information about requirements, see [Prerequisites for tutorials &#40;Report
   
 2.  Verify that the data source is **TextDataSource**.  
   
-3.  In the **Name** box, type: **TextDataset.**  
+3.  In the **Name** box, enter: **TextDataset.**  
   
-4.  Verify that the **Text** query type is selected, and then select **Query Designer**.  
+4.  Verify that the **Text** query type is selected, and then choose **Query Designer**.  
   
 5.  Select **Edit as Text**.  
   
@@ -145,7 +145,7 @@ If you want a field from your dataset to appear in a report, your first impulse 
   
 ### Add a field to the report (and get the right result)  
   
-1.  On the **Insert** tab of the ribbon, in the **Data Regions** area, select **List**. Select the design surface, and then drag to create a box that about 2 inches wide and 1 inch tall.  
+1.  On the **Insert** tab of the ribbon, in the **Data Regions** area, select **List**. Choose the design surface, and then drag to create a box that about 2 inches wide and 1 inch tall.  
   
 2.  Drag the **FullName** field from the Report Data pane to the list box.  
   
@@ -192,9 +192,9 @@ Create this table so you have a place to put hyperlinks and rotated text.
   
 8.  Select **Design** to return to design view.  
   
-9. Select the **Total** cell in the **LinkText** column, then hold down the SHIFT key and select the two cells to its right: and the empty cell in the **Product** column and the `[Sum(Sales)]` cell in the **Sales** column.  
+9. Select the **Total** cell in the **LinkText** column, then hold down the SHIFT key and choose the two cells to its right: and the empty cell in the **Product** column and the `[Sum(Sales)]` cell in the **Sales** column.  
   
-11. With those three cells selected, right-click one of those cells and select **Delete Rows**.  
+11. With those three cells selected, right-click one of those cells and choose **Delete Rows**.  
 
     :::image type="content" source="../reporting-services/media/report-builder-format-delete-rows.png" alt-text="Screenshot that shows how to delete rows from a Report Builder report.":::
   
@@ -303,7 +303,7 @@ The report now displays formatted data and is easier to read.
 
 5. Select all of the text in the text box.  
   
-5.  Right-click all of the selected text and select **Text Properties**.  
+5.  Right-click all of the selected text and choose **Text Properties**.  
   
     This property is of the text, not the text box, so in one text box you could have a mixture of plain text and text that uses HTML tags as styles.  
   
@@ -328,7 +328,7 @@ In this tutorial, save the report to a report server. If you don't have access t
   
 2.  Select **Recent Sites and Servers**.  
   
-3.  Select or type the name of the report server where you have permission to save reports.  
+3.  Select or enter the name of the report server where you have permission to save reports.  
   
     The message "Connecting to report server" appears. When the connection is complete, you see the contents of the report folder that the report server administrator specified as the default location for reports.  
   
@@ -348,7 +348,7 @@ The report is saved to the report server. The name of the report server that you
   
 4.  Select **Save**.  
 
-## Next steps
+## Next step
 
 There are many ways to format text in Report Builder. [Tutorial: Create a free form report (Report Builder)](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contains more examples.
 
@@ -358,4 +358,4 @@ There are many ways to format text in Report Builder. [Tutorial: Create a free f
 - [Format paginated report items (Report Builder)](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
 - [Microsoft Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).

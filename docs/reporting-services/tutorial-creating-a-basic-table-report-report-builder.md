@@ -41,15 +41,15 @@ In this tutorial, you use an embedded data source. To learn more about using a s
   
 ### Create an embedded data source  
   
-1.  On the **Choose a dataset** page, select **Create a dataset**, and then select **Next**. The **Choose a connection to a data source** page opens.  
+1.  On the **Choose a dataset** page, select **Create a dataset**, and then choose **Next**. The **Choose a connection to a data source** page opens.  
   
 2.  Select **New**. The **Data Source Properties** dialog box opens.  
   
-3.  In **Name**, type **Product_Sales** a name for the data source.  
+3.  In **Name**, enter **Product_Sales** a name for the data source.  
   
 4.  In **Select a connection type**, verify that **Microsoft SQL Server** is selected.  
   
-5.  In **Connection string**, type the following text, where \<servername> is the name of an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
+5.  In **Connection string**, enter the following text, where \<servername> is the name of an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
     ```  
     Data Source=<servername>  
@@ -132,7 +132,7 @@ When you select fields to group on, you design a table that has rows and columns
   
 1.  On the **Arrange fields** page, drag Product to **Values**.  
   
-2.  Drag Quantity to **Values** and place below Product.  
+2.  Drag Quantity to **Values** and place it after Product.  
   
     The Sum function automatically aggregates Quantity, the default aggregate for numeric fields. The value is [Sum(Quantity)].  
   
@@ -205,7 +205,7 @@ By default, the SalesDate field displays both date and time. You can format them
   
 2.  Select the cell that contains `[SalesDate]`.  
   
-3.  On the Ribbon, on the **Home** tab, in the **Number** group, select the arrow and select **Date**.  
+3.  On the Ribbon, on the **Home** tab, in the **Number** group, select the arrow and choose **Date**.  
   
     The cell displays the example date **[1/31/2000]**. If you don't see an example date, on the **Home** tab, in the **Number** group, select the arrow next to the **Placeholder Styles** icon > **Sample Values**.  
   
@@ -261,7 +261,7 @@ The text can be further enhanced by applying different font styles, sizes, and c
   
 1.  On the design surface, select **Click to add title**.  
   
-2.  Type **Product Sales**, and then select outside the text box.  
+2.  Enter **Product Sales**, and then select outside the text box.  
   
 3.  Right-click the text box that contains **Product Sales** and select **Text Box Properties**.  
   
@@ -284,7 +284,7 @@ Save the report to a report server or your computer. If you don't save the repor
   
 2.  Select **Recent Sites and Servers**.  
   
-3.  Select or type the name of the report server where you have permission to save reports.  
+3.  Select or enter the name of the report server where you have permission to save reports.  
   
     The message "Connecting to report server" appears. When the connection is complete, you see the contents of the report folder that the report server administrator specified as the default location for reports.  
   
@@ -315,7 +315,7 @@ In this tutorial, you export the report to Excel and set a property on the repor
   
 2.  Select anywhere on the design surface, outside the report.  
   
-3.  In the Properties pane, locate the InitialPageName property and type **Product Sales Excel**.  
+3.  In the Properties pane, locate the InitialPageName property and enter **Product Sales Excel**.  
   
     > [!NOTE]  
     > If the Properties pane is not visible, on the **View** tab, select **Properties**.  
@@ -329,7 +329,7 @@ In this tutorial, you export the report to Excel and set a property on the repor
   
 3.  In the **Save As** dialog box, browse to where you want to save the file.  
   
-4.  In the **File name** box, type **Product_Sales_Excel**.  
+4.  In the **File name** box, enter **Product_Sales_Excel**.  
   
 5.  Verify that the file type is **Excel (\*.xlsx)**.  
   
@@ -341,7 +341,7 @@ In this tutorial, you export the report to Excel and set a property on the repor
   
 2.  Verify that the name of the workbook tab is **Product Sales Excel**.  
   
-## Next steps  
+## Next step
 You successfully completed the tutorial for how to create a basic table report. For more information about tables, see [Tables, matrices, and lists in paginated reports (Report Builder)](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 ## Related content

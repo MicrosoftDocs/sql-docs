@@ -9,9 +9,7 @@ ms.date: 03/22/2022
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: conceptual
-ms.custom:
-  - sqldbrb=1
-  - ignite-fall-2021
+ms.custom: sqldbrb=1, ignite-fall-2021, ignite-2023
 ---
 # Azure SQL Managed Instance content reference
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -30,7 +28,7 @@ In this article you can find a content reference to various guides, scripts, and
 ## Network configuration
 
 - [Determine subnet size](vnet-subnet-determine-size.md):
-  Since the subnet cannot be resized after SQL Managed Instance is deployed, you need to calculate what IP range of addresses is required for the number and types of managed instances you plan to deploy to the subnet. 
+  Since the subnet can't be resized after SQL Managed Instance is deployed, you need to calculate what IP range of addresses is required for the number and types of managed instances you plan to deploy to the subnet. 
 - [Create a new VNet and subnet](virtual-network-subnet-create-arm-template.md):
   Configure the virtual network and subnet according to the [network requirements](connectivity-architecture-overview.md#network-requirements). 
 - [Configure an existing VNet and subnet](vnet-existing-add-subnet.md):
@@ -51,7 +49,7 @@ In this article you can find a content reference to various guides, scripts, and
 - [Configure authentication with Microsoft Entra ID (formerly Azure Active Directory)](../database/authentication-aad-configure.md)
 - [Configure conditional access](../database/conditional-access-configure.md)
 - [Microsoft Entra multifactor authentication](../database/authentication-mfa-ssms-overview.md)
-- [Configure auto-failover group](auto-failover-group-configure-sql-mi.md) to automatically failover all databases on an instance to a secondary instance in another region in the event of a disaster. 
+- [Configure failover group](failover-group-configure-sql-mi.md) to automatically fail over all databases on an instance to a secondary instance in another region in the event of a disaster. 
 - [Configure a temporal retention policy](../database/temporal-tables-retention-policy.md)
 - [Configure In-Memory OLTP](../in-memory-oltp-configure.md)
 - [Configure Azure Automation](../database/automation-manage.md)
@@ -68,10 +66,8 @@ In this article you can find a content reference to various guides, scripts, and
 ### Managed Instance link feature
 
 - [Prepare environment for link feature](managed-instance-link-preparation.md)
-- [Replicate database with link feature in SSMS](managed-instance-link-use-ssms-to-replicate-database.md)
-- [Replicate database with Azure SQL Managed Instance link feature with T-SQL and PowerShell scripts](managed-instance-link-use-scripts-to-replicate-database.md)
-- [Failover database with link feature in SSMS - Azure SQL Managed Instance](managed-instance-link-use-ssms-to-failover-database.md)
-- [Failover (migrate) database with Azure SQL Managed Instance link feature with T-SQL and PowerShell scripts](managed-instance-link-use-scripts-to-failover-database.md)
+- [Configure link between SQL Server and SQL Managed instance with SSMS](managed-instance-link-configure-how-to-ssms.md)
+- [Configure link between SQL Server and SQL Managed instance with scripts](managed-instance-link-configure-how-to-scripts.md)
 - [Best practices with link feature for Azure SQL Managed Instance](managed-instance-link-best-practices.md)
 
 
@@ -117,7 +113,7 @@ In this article you can find a content reference to various guides, scripts, and
 - [Design for elastic pools](../database/disaster-recovery-strategies-for-applications-with-elastic-pool.md)
 - [Design for app upgrades](../database/manage-application-rolling-upgrade.md)
 
-### Design Multi-tenant SaaS applications
+### Design multitenant SaaS applications
 
 - [SaaS design patterns](../database/saas-tenancy-app-design-patterns.md)
 - [SaaS video indexer](../database/saas-tenancy-video-index-wingtip-brk3120-20171011.md)

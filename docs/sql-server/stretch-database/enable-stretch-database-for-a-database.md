@@ -16,7 +16,7 @@ helpviewer_keywords:
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+> [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
 To configure an existing database for Stretch Database, select **Tasks > Stretch > Enable** for a database in SQL Server Management Studio to open the **Enable Database for Stretch** wizard. You can also use Transact-SQL to enable Stretch Database for a database.
 
@@ -110,9 +110,9 @@ Enabling Stretch Database on a database or a table requires db_owner permissions
 
      - The service account under which the instance of SQL Server is running is a domain account.
 
-     - The domain account belongs to a domain whose Active Directory is federated with Azure Active Directory.
+     - The domain account belongs to a domain whose Active Directory is [federated](/entra/identity/hybrid/connect/whatis-fed) with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)).
 
-     - The remote Azure server is configured to support Azure Active Directory authentication.
+     - The remote Azure server is configured to support Microsoft Entra authentication.
 
      - The service account under which the instance of SQL Server is running must be configured as a `dbmanager` or `sysadmin` account on the remote Azure server.
 

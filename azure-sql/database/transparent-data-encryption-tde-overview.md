@@ -1,12 +1,12 @@
 ---
 title: Transparent data encryption
-titleSuffix: Azure SQL Database & SQL Managed Instance & Azure Synapse Analytics
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
 description: An overview of transparent data encryption for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. The document covers its benefits and the options for configuration, which includes service-managed transparent data encryption and Bring Your Own Key.
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 10/10/2023
-ms.service: sql-database
+ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
 ms.custom: sqldbrb=3
@@ -136,17 +136,17 @@ Use the following set of commands for Azure SQL Database and Azure Synapse:
 
 | Command | Description |
 | --- | --- |
-|[Create Or Update Server](/rest/api/sql/servers/createorupdate)|Adds an identity from Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) to a server. (used to grant access to Key Vault)|
-|[Create Or Update Server Key](/rest/api/sql/serverkeys/createorupdate)|Adds a Key Vault key to a server.|
-|[Delete Server Key](/rest/api/sql/serverkeys/delete)|Removes a Key Vault key from a server. |
-|[Get Server Keys](/rest/api/sql/serverkeys/get)|Gets a specific Key Vault key from a server.|
-|[List Server Keys By Server](/rest/api/sql/serverkeys/listbyserver)|Gets the Key Vault keys for a server. |
-|[Create Or Update Encryption Protector](/rest/api/sql/encryptionprotectors/createorupdate)|Sets the TDE protector for a server.|
-|[Get Encryption Protector](/rest/api/sql/encryptionprotectors/get)|Gets the TDE protector for a server.|
-|[List Encryption Protectors By Server](/rest/api/sql/encryptionprotectors/listbyserver)|Gets the TDE protectors for a server. |
-|[Create Or Update Transparent Data Encryption Configuration](/rest/api/sql/transparentdataencryptions/createorupdate)|Enables or disables TDE for a database.|
-|[Get Transparent Data Encryption Configuration](/rest/api/sql/transparentdataencryptions/get)|Gets the TDE configuration for a database.|
-|[List Transparent Data Encryption Configuration Results](/rest/api/sql/transparentdataencryptionactivities/listbyconfiguration)|Gets the encryption result for a database.|
+|[Create Or Update Server](/rest/api/sql/servers/create-or-update)|Adds an identity from Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) to a server. (used to grant access to Key Vault)|
+|[Create Or Update Server Key](/rest/api/sql/server-keys/create-or-update)|Adds a Key Vault key to a server.|
+|[Delete Server Key](/rest/api/sql/server-keys/delete)|Removes a Key Vault key from a server. |
+|[Get Server Keys](/rest/api/sql/server-keys/get)|Gets a specific Key Vault key from a server.|
+|[List Server Keys By Server](/rest/api/sql/server-keys/list-by-server)|Gets the Key Vault keys for a server. |
+|[Create Or Update Encryption Protector](/rest/api/sql/encryption-protectors/create-or-update)|Sets the TDE protector for a server.|
+|[Get Encryption Protector](/rest/api/sql/encryption-protectors/get)|Gets the TDE protector for a server.|
+|[List Encryption Protectors By Server](/rest/api/sql/encryption-protectors/list-by-server)|Gets the TDE protectors for a server. |
+|[Create Or Update Transparent Data Encryption Configuration](/rest/api/sql/transparent-data-encryptions/create-or-update)|Enables or disables TDE for a database.|
+|[Get Transparent Data Encryption Configuration](/rest/api/sql/transparent-data-encryptions/get)|Gets the TDE configuration for a database.|
+|[List Transparent Data Encryption Configuration Results](/rest/api/sql/transparent-data-encryption-activities/list-by-configuration)|Gets the encryption result for a database.|
 
 ---
 

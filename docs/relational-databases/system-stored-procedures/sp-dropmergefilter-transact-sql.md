@@ -1,9 +1,10 @@
 ---
 title: sp_dropmergefilter (Transact-SQL)
-description: "sp_dropmergefilter (Transact-SQL)"
+description: "sp_dropmergefilter drops all the merge filter columns defined on the merge filter that is to be dropped."
 author: markingmyname
 ms.author: maghan
-ms.date: "03/06/2017"
+ms.reviewer: randolphwest
+ms.date: 11/23/2023
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -15,62 +16,72 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-
 # sp_dropmergefilter (Transact-SQL)
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Drops a merge filter. **sp_dropmergefilter** drops all the merge filter columns defined on the merge filter that is to be dropped. This stored procedure is executed at the Publisher on the publication database.  
-  
-:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## Syntax  
-  
-```  
-  
-sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     , [ @filtername= ] 'filtername'  
-    [ , [ @force_invalidate_snapshot= ] force_invalidate_snapshot ]  
-    [ , [ @force_reinit_subscription = ] force_reinit_subscription ]  
-```  
-  
-## Arguments  
-`[ @publication = ] 'publication'`
- Is the name of the publication. *publication* is **sysname**, with no default.  
-  
-`[ @article = ] 'article'`
- Is the name of the article. *article* is **sysname**, with no default.  
-  
-`[ @filtername = ] 'filtername'`
- Is the name of the filter to be dropped. *filtername* is **sysname**, with no default.  
-  
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`
- Enables or disables the ability to have a snapshot invalidated. *force_invalidate_snapshot* is a **bit**, with a default **0**.  
-  
- **0** specifies that changes to the merge article do not cause the snapshot to be invalid.  
-  
- **1** means that changes to the merge article may cause the snapshot to be invalid. If that is the case, a value of **1** gives permission for the new snapshot to occur.  
-  
-`[ @force_reinit_subscription = ] force_reinit_subscription`
- Enables or disables the ability to mark a subscription as not valid. *force_reinit_subscription* is a **bit**, with a default **0**.  
-  
- **0** specifies that changes to the merge article filter do not cause the subscriptions to be invalid.  
-  
- **1** means that changes to the merge article filter causes the subscriptions to be invalid.  
-  
-## Return Code Values  
- **0** (success) or **1** (failure)  
-  
-## Remarks  
- **sp_dropmergefilter** is used in merge replication.  
-  
-## Permissions  
- Only members of the **sysadmin** fixed server role or the **db_owner** fixed database role can execute **sp_dropmergefilter**.  
-  
-## See Also  
- [Change Publication and Article Properties](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
- [sp_changemergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
- [sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
- [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
-  
+Drops a merge filter. `sp_dropmergefilter` drops all the merge filter columns defined on the merge filter that is to be dropped. This stored procedure is executed at the Publisher on the publication database.
+
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+## Syntax
+
+```syntaxsql
+sp_dropmergefilter
+    [ @publication = ] N'publication'
+    , [ @article = ] N'article'
+    , [ @filtername = ] N'filtername'
+    [ , [ @force_invalidate_snapshot = ] force_invalidate_snapshot ]
+    [ , [ @force_reinit_subscription = ] force_reinit_subscription ]
+[ ; ]
+```
+
+## Arguments
+
+#### [ @publication = ] N'*publication*'
+
+The name of the publication. *@publication* is **sysname**, with no default.
+
+#### [ @article = ] N'*article*'
+
+The name of the article. *@article* is **sysname**, with no default.
+
+#### [ @filtername = ] N'*filtername*'
+
+The name of the filter to be dropped. *@filtername* is **sysname**, with no default.
+
+#### [ @force_invalidate_snapshot = ] *force_invalidate_snapshot*
+
+Enables or disables the ability to have a snapshot invalidated. *@force_invalidate_snapshot* is **bit**, with a default of `0`.
+
+- `0` specifies that changes to the merge article don't cause the snapshot to be invalid.
+
+- `1` means that changes to the merge article might cause the snapshot to be invalid. If that is the case, a value of `1` gives permission for the new snapshot to occur.
+
+#### [ @force_reinit_subscription = ] *force_reinit_subscription*
+
+Enables or disables the ability to mark a subscription as not valid. *@force_reinit_subscription* is **bit**, with a default of `0`.
+
+- `0` specifies that changes to the merge article filter don't cause the subscriptions to be invalid.
+
+- `1` means that changes to the merge article filter causes the subscriptions to be invalid.
+
+## Return code values
+
+`0` (success) or `1` (failure).
+
+## Remarks
+
+`sp_dropmergefilter` is used in merge replication.
+
+## Permissions
+
+Only members of the **sysadmin** fixed server role or the **db_owner** fixed database role can execute `sp_dropmergefilter`.
+
+## Related content
+
+- [Change Publication and Article Properties](../replication/publish/change-publication-and-article-properties.md)
+- [sp_addmergefilter (Transact-SQL)](sp-addmergefilter-transact-sql.md)
+- [sp_changemergefilter (Transact-SQL)](sp-changemergefilter-transact-sql.md)
+- [sp_helpmergefilter (Transact-SQL)](sp-helpmergefilter-transact-sql.md)
+- [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

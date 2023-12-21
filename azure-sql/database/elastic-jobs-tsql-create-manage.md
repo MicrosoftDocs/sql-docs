@@ -4,7 +4,7 @@ description: Learn how to create an elastic job agent and run scripts across man
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: srinia
-ms.date: 11/06/2023
+ms.date: 12/04/2023
 ms.service: sql-database
 ms.subservice: elastic-jobs
 ms.topic: how-to
@@ -43,7 +43,7 @@ Creating the elastic job agent is not supported in T-SQL, so you must first [cre
 
 ## Create the job authentication
 
-The elastic job agent must be able to authenticate to each target server or database. As covered in [Create job agent authentication](elastic-jobs-tutorial.md#create-job-agent-authentication), the recommended approach is to use [Microsoft Entra authentication (formerly Azure Active Directory)](#use-microsoft-entra-authentication-with-a-umi-for-job-execution) with a user-assigned managed identity (UMI). Previously, [database-scoped credentials](#create-a-credential-for-job-execution) were the only option.
+The elastic job agent must be able to authenticate to each target server or database. As covered in [Create job agent authentication](elastic-jobs-tutorial.md#create-job-agent-authentication), the recommended approach is to use [Microsoft Entra authentication (formerly Azure Active Directory)](#use-microsoft-entra-authentication-with-a-umi-for-job-execution) with a user-assigned managed identity (UMI). Previously, [database-scoped credentials](#use-a-database-scoped-credential-for-job-execution) were the only option.
 
 ### Use Microsoft Entra authentication with a UMI for job execution
 
@@ -81,7 +81,7 @@ GRANT ALTER ON SCHEMA::dbo TO jobuser;
 GRANT CREATE TABLE TO jobuser;
 ```
 
-### Create a credential for job execution
+### Use a database-scoped credential for job execution
 
 A database-scoped credential is used to connect to your target databases for script execution. The credential needs appropriate permissions, on the databases specified by the target group, to successfully execute the script. When using a [logical SQL server](logical-servers.md) and/or pool target group member, it's recommended to create a credential for use to refresh the credential prior to expansion of the server and/or pool at time of job execution. The database-scoped credential is created on the job agent database.
 
@@ -235,6 +235,8 @@ SELECT * FROM jobs.target_group_members WHERE target_group_name = N'PoolGroup';
 
 With T-SQL, create jobs using system stored procedures in the jobs database: [jobs.sp_add_job](/sql/relational-databases/system-stored-procedures/sp-add-job-elastic-jobs-transact-sql?view=azuresql-db&preserve-view=true) and [jobs.sp_add_jobstep](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-elastic-jobs-transact-sql?view=azuresql-db&preserve-view=true). The T-SQL commands are syntax are similar to the steps needed to create SQL Agent jobs and job steps in SQL Server.
 
+You should not update internal catalog views in the *job database*. Manually changing these catalog views can corrupt the *job database* and cause failure. These views are for read-only querying only. You can use the stored procedures in the `jobs` schema on your *job database*.
+
 - When using Microsoft Entra authentication for a Microsoft Entra ID or user-assigned managed identity to authenticate to target server(s)/database(s), the *@credential_name* argument shouldn't be provided for `sp_add_jobstep` or `sp_update_jobstep`. Similarly, omit the optional *@output_credential_name* and *@refresh_credential_name* arguments.
 - When using database-scoped credentials to authenticate to target server(s)/database(s), the *@credential_name* parameter is required for `sp_add_jobstep` and `sp_update_jobstep`.
     - For example, `@credential_name = 'job_credential'`.
@@ -313,7 +315,7 @@ EXEC jobs.sp_add_jobstep
 @output_type = 'SqlDatabase',
 @output_server_name = 'server1.database.windows.net',
 @output_database_name = '<resultsdb>',
-@output_table_name = '<resultstable>';
+@output_table_name = '<output_table_name>';
 
 --Create a job to monitor pool performance
 
@@ -359,7 +361,7 @@ SELECT elastic_pool_name , end_time, elastic_pool_dtu_limit, avg_cpu_percent, av
 @output_type = 'SqlDatabase',
 @output_server_name = 'server1.database.windows.net',
 @output_database_name = 'resultsdb',
-@output_table_name = 'resultstable';
+@output_table_name = '<output_table_name>';
 ```
 
 ## Run the job

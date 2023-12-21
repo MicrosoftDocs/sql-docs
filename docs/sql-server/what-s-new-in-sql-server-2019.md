@@ -178,7 +178,7 @@ One common task that everyone who deploys [!INCLUDE [ssNoVersion](../includes/ss
 | :--- | :--- |
 | Online clustered columnstore index build and rebuild | See [Perform Index Operations Online](../relational-databases/indexes/perform-index-operations-online.md). |
 | Resumable online rowstore index build | See [Perform Index Operations Online](../relational-databases/indexes/perform-index-operations-online.md). |
-| Suspend and resume initial scan for Transparent Data Encryption (TDE) | See [Transparent Data Encryption (TDE) scan - suspend and resume](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume). |
+| Suspend and resume initial scan for transparent data encryption (TDE) | See [Transparent Data Encryption (TDE) scan - suspend and resume](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume). |
 
 ## Platform choice
 
@@ -253,7 +253,7 @@ This release introduces new features to improve file operations.
 
 ## SQL Server Reporting Services
 
-This release of SQL Server Reporting Services features support for Azure SQL Managed Instances, Power BI Premium datasets, enhanced accessibility, Azure Active Directory Application Proxy, and Transparent Database Encryption. It also brings an update to Microsoft Report Builder. See [What's new in SQL Server Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) for details.
+This release of SQL Server Reporting Services features support for Azure SQL Managed Instance, Power BI Premium datasets, enhanced accessibility, Microsoft Entra application proxy, and transparent data encryption (TDE). It also brings an update to Microsoft Report Builder. See [What's new in SQL Server Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) for details.
 
 ## Related content
 

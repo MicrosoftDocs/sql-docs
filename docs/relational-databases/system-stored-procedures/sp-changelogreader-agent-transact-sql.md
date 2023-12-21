@@ -46,12 +46,15 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 >  When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
   
 `[ @publisher_security_mode = ] publisher_security_mode`
+
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
+
  Is the security mode used by the agent when connecting to the Publisher. *publisher_security_mode* is **smallint**, with a default of NULL. The following values define the security mode: 
-- **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. 
-- **1** specifies Windows Authentication.  
-- **2** specifies Azure Active Directory (Azure AD) Password Authentication starting with SQL Server 2022 CU 6. 
-- **3** specifies Azure AD Integrated Authentication starting with SQL Server 2022 CU 6. 
-- **4** specifies Azure AD Token Authentication starting with SQL Server 2022 CU 6. 
+- `0` specifies [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.
+- `1` specifies Windows authentication.
+- `2` specifies Microsoft Entra password authentication starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
+- `3` specifies Microsoft Entra integrated authentication starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
+- `4` specifies Microsoft Entra token authentication starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  

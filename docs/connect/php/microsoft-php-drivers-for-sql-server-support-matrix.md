@@ -120,8 +120,8 @@ The following Linux and macOS operating system versions (64-bit only) are suppor
 |Debian 8 (64-bit)                   |   |   |   |Yes|Yes|Yes|Yes|Yes|   |   |
 |Red Hat Enterprise Linux 8 (64-bit) |Yes|Yes|Yes|Yes|   |   |   |   |   |   |
 |Red Hat Enterprise Linux 7 (64-bit) |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |
-|Suse Enterprise Linux 15 (64-bit)   |Yes|Yes|Yes|Yes|Yes|   |   |   |   |   |
-|Suse Enterprise Linux 12 (64-bit)   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
+|SUSE Linux Enterprise Server 15 (64-bit)   |Yes|Yes|Yes|Yes|Yes|   |   |   |   |   |
+|SUSE Linux Enterprise Server 12 (64-bit)   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
 |Alpine Linux 3.15 (64-bit)          |Yes|Yes|   |   |   |   |   |   |   |   |
 |Alpine Linux 3.14 (64-bit)          |Yes|Yes|   |   |   |   |   |   |   |   |
 |Alpine Linux 3.13 (64-bit)          |   |Yes|   |   |   |   |   |   |   |   |

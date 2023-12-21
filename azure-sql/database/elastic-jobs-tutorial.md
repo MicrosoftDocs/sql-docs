@@ -4,7 +4,7 @@ description: "Learn how to create, configure, and manage elastic jobs to run Tra
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: srinia
-ms.date: 11/02/2023
+ms.date: 12/04/2023
 ms.service: sql-database
 ms.subservice: elastic-jobs
 ms.topic: how-to
@@ -21,7 +21,7 @@ This article provides the steps required to create, configure, and manage elasti
 
 ## Create and configure the elastic job agent
 
-1. Create or identify an empty S1 or higher Azure SQL Database. This database should be in the same server as the job agent. This database is used as the *job database* during elastic job agent creation. You can [create a single database](single-database-create-quickstart.md?view=azuresql-db&preserve-view=true) via the Azure portal, Azure CLI, Azure CLI (sql up), or PowerShell.
+1. Create or identify an empty S1 or higher Azure SQL Database, using the DTU purchase model. This database should be in the same server as the job agent. This database is used as the *job database* during elastic job agent creation. You can [create a single database](single-database-create-quickstart.md?view=azuresql-db&preserve-view=true) via the Azure portal, Azure CLI, Azure CLI (sql up), or PowerShell.
 1. Create an **elastic job agent** in the Azure portal or with [PowerShell](elastic-jobs-powershell-create.md#create-the-elastic-job-agent).
 
     The instructions to create an elastic job agent in the Azure portal are as follows:
@@ -62,17 +62,31 @@ Use [Microsoft Entra (formerly Azure Active Directory)](authentication-aad-overv
     - [A new UMI can be created](/azure/active-directory/managed-identities-azure-resources/how-manage-user-assigned-managed-identities) through the Azure portal, Azure CLI, PowerShell, Resource Manager, or REST API.
 1. Assign the UMI to the created elastic job agent.
     - It's recommended to assign a UMI when creating the elastic job agent, see the steps in [Create and configure the elastic job agent](#create-and-configure-the-elastic-job-agent). When creating a job agent in the Azure portal, in the **Identity** tab, assign to the elastic job agent.
-    - Currently in the Elastic Jobs preview, you cannot use PowerShell cmdlets to create or modify elastic job agents to use Microsoft Entra authentication with a UMI.
     - To update an existing elastic job agent to use a UMI, on the Azure portal page for the **elastic job agent**, navigate to **Identity** under the **Security** menu in the resource menu. Select and assign the UMI to the elastic job agent.
-    - The [REST API can also be used to create or update the elastic job agent](/rest/api/sql/2021-02-01-preview/job-agents/create-or-update?tabs=HTTP). <!-- TODO update /2021-02-01/ when available -->
+    - When creating or updating an elastic job agent with the `New-AzSqlElasticJobAgent` or `Set-AzSqlElasticJobAgent` PowerShell cmdlets, use the parameters: `-IdentityType UserAssigned -IdentityID <identity resource path>`. For example:
+        ```powershell
+        $parameters = @{
+            Name = '<job agent name>'
+            ResourceGroupName = '<Resource_Group_Name>'
+            IdentityType = 'UserAssigned'
+            IdentityID = '/subscriptions/fa58cf66-caaf-4ba9-875d-f1234/resourceGroups/<resource group name>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<UMI name here>'
+        }
+        Set-AzSqlElasticJobAgent @parameters
+        ```
+    - The [REST API can also be used to create or update the elastic job agent](/rest/api/sql/job-agents/create-or-update). 
 1. Create a target group and add targets for the jobs. [Define the target group and targets (the databases you want to run the job against) using PowerShell](elastic-jobs-powershell-create.md#define-target-servers-and-databases) or [define the target group and targets using T-SQL](elastic-jobs-tsql-create-manage.md#define-target-servers-and-databases).
-1. In each of the target server(s)/database(s), [create a contained user mapped to the UMI](#use-microsoft-entra-authentication-with-a-user-assigned-managed-identity-umi).
+1. In each of the target server(s)/database(s), create a contained user mapped to the UMI or database-scoped credential, using T-SQL or PowerShell:
+    1. [Create the job authentication with T-SQL](elastic-jobs-tsql-create-manage.md#create-the-job-authentication).
+    1. [Create the job authentication with PowerShell](elastic-jobs-powershell-create.md#create-the-job-authentication).
 1. In the output database, create and assign permissions to the UMI job user. Connect to the output database and run the following example script for a user named `jobuserUMI`:
    ```sql
    CREATE USER [jobuserUMI] FROM EXTERNAL PROVIDER; 
    GO 
-   GRANT CREATE TABLE TO [jobuserUMI];
-   GRANT SELECT,INSERT,UPDATE,DELETE ON [dbo].[job_results_table] TO jobuserUMI;
+   ```
+1. If output parameters are specified in the `sp_add_jobstep` call in [the @output_table_name argument](/sql/relational-databases/system-stored-procedures/sp-add-job-elastic-jobs-transact-sql#section-20), the Job Agent UMI or database-scoped credential must be granted permissions to CREATE TABLE and INSERT data into that output table.
+   ```sql
+   GRANT CREATE TABLE TO [job_user];
+   GRANT SELECT,INSERT,UPDATE,DELETE ON [dbo].[output_table_name] TO job_user;
    ```
 1. In each of the target server(s)/database(s), grant the database user needed permissions to execute job scripts. These permissions vary based on the requirements of the T-SQL query.
 
@@ -85,7 +99,7 @@ You can use a database-scoped credential in the job database and in each target 
 
 1. Create a database-scoped credential in the *job database*.
     1. Use [PowerShell to create a database-scoped credential](elastic-jobs-powershell-create.md#create-the-job-credentials)
-    1. Use [T-SQL to create a database-scoped credential](elastic-jobs-tsql-create-manage.md#create-a-credential-for-job-execution).
+    1. Use [T-SQL to create a database-scoped credential](elastic-jobs-tsql-create-manage.md#use-a-database-scoped-credential-for-job-execution).
 1. [Define the target group (the databases you want to run the job against) using PowerShell](elastic-jobs-powershell-create.md#define-target-servers-and-databases) or [define targets using T-SQL](elastic-jobs-tsql-create-manage.md#define-target-servers-and-databases).
 1. Create a job agent login/user in each target database where the job will run. The login/user on each target server/database must have the same name as the identity of the database-scoped credential for the job user, and the same password as the database-scoped credential for the job user.
     1. Use [PowerShell to add the credential and user to each target database](elastic-jobs-powershell-create.md#create-the-job-credentials).
@@ -96,12 +110,15 @@ You can use a database-scoped credential in the job database and in each target 
        CREATE LOGIN [job_user] WITH PASSWORD '<same_password_as_database-scoped_credential>'
        GO 
        ``` 
-    1. Connect to the output database and run the following example script for a user named `job_user`: 
+    1. Connect to the output database and run the following example script for a user named `job_user`:
        ```sql
        CREATE USER [job_user] FROM LOGIN [job_user]; 
        GO 
+       ```
+    1. If output parameters are specified in the `sp_add_jobstep` call in the *@output_table_name* argument, the Job Agent UMI or database-scoped credential must be granted permissions to CREATE TABLE and INSERT data into that output table.
+       ```sql
        GRANT CREATE TABLE TO [job_user];
-       GRANT SELECT,INSERT,UPDATE,DELETE ON [dbo].[job_results_table] TO job_user;
+       GRANT SELECT,INSERT,UPDATE,DELETE ON [dbo].[output_table_name] TO job_user;
        ```
 1. In each of the target server(s)/database(s), grant the database user needed permissions to execute job scripts. These permissions vary based on the requirements of the T-SQL query.
 
@@ -166,7 +183,7 @@ To proceed with the Azure portal:
 
 By default, job agents are created at JA100, allowing up to 100 elastic job executions concurrently. Initiating a service level change is an asynchronous operation and the new service level will be made available after a short provisioning delay.
 
-If you need more than 100 concurrent executions of elastic job agents, higher service levels are available, see [Concurrent capacity tiers](elastic-jobs-overview.md#concurrent-capacity-tiers). You can currently change the service level of a job agent via the Azure portal or REST API.
+If you need more than 100 concurrent executions of elastic job agents, higher service levels are available, see [Concurrent capacity tiers](elastic-jobs-overview.md#concurrent-capacity-tiers). You can currently change the service level of a job agent via the Azure portal, PowerShell, or REST API.
 
 Exceeding the service level with concurrent jobs will create queuing delays before jobs start in excess of the [service level's concurrent jobs limit](elastic-jobs-overview.md#concurrent-capacity-tiers).
 
@@ -178,10 +195,21 @@ Exceeding the service level with concurrent jobs will create queuing delays befo
 1. Review the cost card.
 1. Select **Update**.
 
+### Scale the elastic job agent by using PowerShell
+
+The optional `-ServiceObjective` parameter for `Set-AzSqlElasticJobAgent` can be used to specify a new service objective. For example:
+```powershell
+$parameters = @{
+    Name = '<job agent name>'
+    ResourceGroupName = '<Resource_Group_Name>'
+    ServiceObjective = 'JA200'
+}
+Set-AzSqlElasticJobAgent @parameters
+```
 
 ### Scale the elastic job agent by using REST API
 
-You can use the [Job agent REST API](/rest/api/sql/2021-02-01-preview/job-agents#operations) <!-- update 2021-02-01-preview --> to scale a job agent. For example:
+You can use the [Job agent REST API](/rest/api/sql/job-agents) to scale a job agent. For example:
 
 ```json
 { 

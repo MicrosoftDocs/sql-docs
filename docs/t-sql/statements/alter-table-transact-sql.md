@@ -4,7 +4,7 @@ description: ALTER TABLE modifies a table definition by altering, adding, or dro
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 10/04/2023
+ms.date: 12/13/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -425,8 +425,7 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
 
 ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }
 {
-    ALTER COLUMN column_name
-    | ADD { <column_constraint> FOR column_name} [ ,...n ]
+    ADD { <column_constraint> FOR column_name} [ ,...n ]
     | DROP { [CONSTRAINT] constraint_name } [ ,...n ]
     
 }
@@ -1024,7 +1023,7 @@ Specifies the Windows-compatible FileTable directory name. This name should be u
 Enables or disables Stretch Database for a table. For more information, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+> [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
 **Enabling Stretch Database for a table**
 
@@ -1139,6 +1138,10 @@ You can change the length, precision, or scale of a column by specifying a new s
 ## Locks and ALTER TABLE
 
 Changes you specify in ALTER TABLE implement immediately. If the changes require modifications of the rows in the table, ALTER TABLE updates the rows. ALTER TABLE acquires a schema modify (SCH-M) lock on the table to make sure that no other connections reference even the metadata for the table during the change, except online index operations that require a short SCH-M lock at the end. In an `ALTER TABLE...SWITCH` operation, the lock is acquired on both the source and target tables. The modifications made to the table are logged and fully recoverable. Changes that affect all the rows in large tables, such as dropping a column or, on some editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], adding a NOT NULL column with a default value, can take a long time to complete and generate many log records. Run these ALTER TABLE statements with the same care as any INSERT, UPDATE, or DELETE statement that affects many rows.
+
+**Applies to** [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)].
+
+ALTER TABLE cannot be part of an explict transaction.
 
 ### XEvents for partition switch
 

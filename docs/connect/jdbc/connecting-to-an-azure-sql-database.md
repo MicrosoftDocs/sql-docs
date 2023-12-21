@@ -18,7 +18,8 @@ This article discusses issues when you use the [!INCLUDE[jdbcNoVersion](../../in
   
 - [How to: Connect to Azure SQL Using JDBC](/azure/sql-database/sql-database-connect-query-java)  
 
-- [Connect using Azure Active Directory Authentication](connecting-using-azure-active-directory-authentication.md)  
+- [Connect using authentication with Microsoft Entra ID (formerly Azure Active Directory)](connecting-using-azure-active-directory-authentication.md)  
+
   
 ## Details
 

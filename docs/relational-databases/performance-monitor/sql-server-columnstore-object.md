@@ -3,18 +3,20 @@ title: "SQL Server, Columnstore object"
 description: "Learn about the SQLServer:Columnstore object, which provides counters to monitor columnstore index execution in SQL Server."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/12/2021"
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance
-ms.topic: conceptual
+ms.topic: reference
+helpviewer_keywords:
+  - "SQLServer:Columnstore"
+  - "Columnstore object [SQL Server]"
 ---
 # SQL Server, Columnstore object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-
-  The **SQLServer:Columnstore** object provides counters to monitor columnstore index execution in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+The **SQLServer:Columnstore** object provides counters to monitor columnstore index execution in [!INCLUDE [msCoName](../../includes/msconame-md.md)] [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- The following table describes the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Columnstore** counters.  
+The following table describes the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] **Columnstore** counters.  
   
 |**Columnstore** counters|Description|  
 |--------------------------|-----------------|  
@@ -40,7 +42,6 @@ SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%Columnstore%';
 ```  
   
-## See also  
- [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
-  
-  
+## Related content
+
+- [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)

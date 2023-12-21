@@ -4,10 +4,10 @@ description: The Analytics Platform System (APS) appliance is built and configur
 author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
-ms.date: 04/17/2018
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: data-warehouse
-ms.topic: conceptual
+ms.topic: how-to
 ---
 
 # Appliance Network configuration for Analytics Platform System
@@ -18,40 +18,41 @@ The Analytics Platform System (APS) appliance is built and configured with a fix
   
 The **Network Configuration** page enables you to view the externally facing network settings for the nodes on your Analytics Platform System appliance. This page is read-only.  
   
-![DWConfig Appliance Network](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
+:::image type="content" source="./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png" alt-text="A screenshot from the Microsoft Analytics Platform System Configuration Manager, showing the Appliance Network page.":::
   
-## To update the network configuration on your appliance  
+## <a id="to-update-the-network-configuration-on-your-appliance"></a> Update the network configuration on your appliance
 Change the IP addresses of the fabric domain and workload domain by editing the **AplianceInfo.xml** file and then running setup. This is an offline operation. The PDW regions will be automatically stopped during the IP address change.  
   
 > [!NOTE]  
-> Domain names are provided during setup and are specified as up to 6 alphanumeric characters, starting with a letter. A frequent naming system creates a fabric domain starting with F, a PDW workload domain starting with P. This format is presumed throughout the help file topics but is not required. <!-- MISSING LINKS For more information about the domain structure, see [PDW Domain Security &#40;SQL Server PDW&#41;](../sqlpdw/pdw-domain-security-sql-server-pdw.md) and [Understanding the Security Model of the HDInsight Region &#40;Analytics Platform System&#41;](../hdinsight/understanding-the-security-model-of-the-hdinsight-region.md)  -->  
+> Domain names are provided during setup and are specified as up to 6 alphanumeric characters, starting with a letter. A frequent naming system creates a fabric domain starting with F, a PDW workload domain starting with P. This format is presumed throughout the help file topics but is not required. <!-- MISSING LINKS For more information about the domain structure, see [PDW Domain Security (SQL Server PDW)](../sqlpdw/pdw-domain-security-sql-server-pdw.md) and [Understanding the Security Model of the HDInsight Region (Analytics Platform System)](../hdinsight/understanding-the-security-model-of-the-hdinsight-region.md)  -->  
   
-#### To change the IP addresses of the Analytics Platform System  
+#### <a id="to-change-the-ip-addresses-of-the-analytics-platform-system"></a> Change the IP addresses of the Analytics Platform System
   
-1.  Using the **Remote Desktop** application, connect to **HST01** using the workload domain administrator account.  
+1. Using the **Remote Desktop** application, connect to **HST01** using the workload domain administrator account.  
   
-2.  On the HST01 node, open the appliance info file at **c:\pdwinst\media\AplianceInfo.xml**.  
+1. On the HST01 node, open the appliance info file at `c:\pdwinst\media\AplianceInfo.xml`.  
   
     > [!NOTE]  
-    > If the file is not present, a new file may need to be created.  
+    > If the file is not present, a new file might need to be created.  
   
-3.  Update the Ethernet IP values as needed, and save the file.  
+1. Update the Ethernet IP values as needed, and save the file.  
   
-4.  In a command prompt window, execute the following setup command to update the IP addresses for the PDW region, using the P/F/H domain names and the administrator passwords.  
+1. In a command prompt window, execute the following setup command to update the IP addresses for the PDW region, using the P/F/H domain names and the administrator passwords.  
   
-    ```  
+    ```console
     c:\pdwinst\media\setup.exe /action="ConfigureEthernet" /DomainAdminPassword="<password>" /ApplianceInfoFile="C:\PDWINST\media\ApplianceInfo.xml"  
     ```  
   
-## Manufacturer References  
+## Manufacturer references
+
 For additional information about Dell appliances, see:  
-  
+
 -   PowerConnect Switch Instructions [Dell PowerConnect 6200 Series System CLI Reference Guide](https://downloads.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_powerconnect/powerconnect-6224f_Reference%20Guide_en-us.pdf)  
   
--   iDRAC/BMC [Integrated Dell Remote Access Controller 7 (iDRAC7) Version 1.30.30 User's Guide](https://downloads.dell.com/Manuals/all-products/esuprt_electronics/esuprt_software/esuprt_remote_ent_sys_mgmt/integrated-dell-remote-access-cntrllr-7-v1.30.30_User%27s%20Guide_en-us.pdf?c=us&l=en&cs=555&s=biz)  
+-   iDRAC/BMC [Integrated Dell Remote Access Controller 7 (iDRAC7) Version 1.30.30 User's Guide](https://downloads.dell.com/Manuals/all-products/esuprt_electronics/esuprt_software/esuprt_remote_ent_sys_mgmt/integrated-dell-remote-access-cntrllr-7-v1.30.30_User%27s%20Guide_en-us.pdf?c=us&l=en&cs=555&s=biz)
   
--   PDU's **Dell Metered Rack PDU**`ftp://ftp.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_rack_infrastructure/dell-metered-pdu-led_User's%20Guide_en-us.pdf`  
-  
-## See Also  
-[Launch the Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
-  
+<!-- PDU's **Dell Metered Rack PDU**`ftp://ftp.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_rack_infrastructure/dell-metered-pdu-led_User's%20Guide_en-us.pdf`   -->
+
+## Related content
+
+- [Launch the Configuration Manager in Analytics Platform System](launch-the-configuration-manager.md)

@@ -3,7 +3,7 @@ title: "Configure Custom or Forms Authentication on the Report Server"
 description: "Configure Custom or Forms Authentication on the Report Server"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 04/18/2017
+ms.date: 11/11/2023
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
@@ -27,9 +27,9 @@ Additionally, if you want to use Forms authentication or a custom authentication
 
 ### To configure a report server to use Custom authentication
 
-1.  Open RSReportServer.config in a text editor.
+1.  Open the rsreportserver.config in a text editor.
 
-2.  Find \<**Authentication**>.
+2.  Find the \<**Authentication**> section.
 
 3.  Copy the following XML structure:
 
@@ -42,15 +42,15 @@ Additionally, if you want to use Forms authentication or a custom authentication
     </Authentication>
     ```
 
-4.  Paste it over the existing entries for \<**Authentication**>.
+4.  Paste it over the existing entries for the \<**Authentication**> section.
 
      Note that you cannot use **Custom** with other authentication types.
 
 5.  Save the file.
 
-6.  Open the Web.config file for the report server. By default, it is located at \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\ReportServer.
+6.  Open the Web.config file for the report server. By default, it is located in the same folder as the rsreportserver.config file (see [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md#bkmk_file_location)).
 
-7.  Find **authentication mode** and set it **Forms**.
+7.  Find **authentication mode** and set it to **Forms**.
 
     ```
     <authentication mode = "Forms" />

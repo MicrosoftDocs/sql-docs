@@ -6,7 +6,7 @@ ms.author: mikeray
 ms.date: "06/30/2020"
 ms.service: sql
 ms.subservice: machine-learning-services
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
   - "external scripts enabled"
   - "external_scripts_enabled_TSQL"

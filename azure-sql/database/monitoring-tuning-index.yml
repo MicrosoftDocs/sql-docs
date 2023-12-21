@@ -14,7 +14,7 @@ metadata:
   author: WilliamDAssafMSFT 
   ms.author: wiassaf 
   ms.reviewer: mathoma
-  ms.date: 10/18/2021 
+  ms.date: 11/08/2023 
   monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -39,6 +39,18 @@ landingContent:
             url: /training/paths/monitor-optimize-operational-resources-sql-server/
           - text: Protect, monitor, and tune 
             url: /training/modules/protect-monitor-tuning-migrated-database/
+
+  # Card (optional)
+  - title: Azure Monitor and Azure SQL Database
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Monitor Azure SQL Database with metrics and alerts
+            url: monitoring-metrics-alerts.md?view=azuresql-db&preserve-view=true
+      - linkListType: concept
+        links:
+          - text: Monitor Azure SQL Database with Azure Monitor
+            url: monitoring-sql-database-azure-monitor.md?view=azuresql-db&preserve-view=true
 
   # Card (optional)
   - title: Azure SQL Database intelligent performance recommendations
@@ -79,6 +91,8 @@ landingContent:
             url: intelligent-insights-overview.md
       - linkListType: concept
         links:
+          - text: Metrics and alerts
+            url: monitoring-metrics-alerts.md
           - text: Metrics and diagnostics logging
             url: metrics-diagnostic-telemetry-logging-streaming-export-configure.md
           - text: Understand the performance diagnostics log

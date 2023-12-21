@@ -11,7 +11,7 @@ metadata:
   author: dimitri-furman
   ms.author: dfurman
   ms.reviewer: wiassaf, mathoma
-  ms.date: 07/31/2023
+  ms.date: 12/04/2023
 title: Azure SQL Database Hyperscale FAQ
 summary: |
   [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -105,7 +105,7 @@ sections:
       - question: |
           Can I bring my on-premises or IaaS SQL Server license to Hyperscale?
         answer: |
-          Yes, [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) is available for Hyperscale in the provisioned compute tier only. Every SQL Server Standard core can map to 1 Hyperscale vCores. Every SQL Server Enterprise core can map to 4 Hyperscale vCores. You don't need a SQL license for secondary replicas. The Azure Hybrid Benefit price is automatically applied to Read Scale-out (secondary) replicas. See [serverless compute](serverless-tier-overview.md) for an alternative billing option based on usage. 
+          Yes, [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) is available for Hyperscale in the provisioned compute tier only. Every SQL Server Standard core can map to 1 Hyperscale vCores. Every SQL Server Enterprise core can map to 4 Hyperscale vCores. You don't need a SQL license for secondary replicas. The Azure Hybrid Benefit price is automatically applied to Read Scale-out (secondary) replicas. See [serverless compute](serverless-tier-overview.md) for an alternative billing option based on usage. Note: Simplified pricing for SQL Database Hyperscale coming soon. Review the [Hyperscale pricing blog](https://aka.ms/hsignite2023) for details.
           
       - question: |
           What kind of workloads is Hyperscale designed for?
@@ -139,7 +139,7 @@ sections:
       - question: |
           How many Read Scale-out replicas are supported?
         answer: |
-          You can scale the number of HA secondary replicas between 0 and 4 using [Azure portal](https://portal.azure.com) or [REST API](/rest/api/sql/2022-08-01-preview/databases/create-or-update). Additionally, you can create up to 30 [named replicas](service-tier-hyperscale-replicas.md#named-replica) for many read scale-out scenarios.
+          You can scale the number of HA secondary replicas between 0 and 4 using [Azure portal](https://portal.azure.com) or [REST API](/rest/api/sql/databases/create-or-update). Additionally, you can create up to 30 [named replicas](service-tier-hyperscale-replicas.md#named-replica) for many read scale-out scenarios.
           
       - question: |
           For high availability, do I need to provision additional compute replicas?
@@ -159,7 +159,7 @@ sections:
       - question: |
           What is the size of the transaction log with Hyperscale?
         answer: |
-          In Hyperscale, the transaction log is practically infinite, with the restriction that a single transaction cannot generate more than 1 TB of log. Additionally, if using [Change Data Capture](/sql/relational-databases/track-changes/about-change-data-capture-sql-server), at most 1 TB of log can be generated since the start of the oldest active transaction. It is recommended to avoid unnecessarily large transactions to stay below this limit. Other than the restrictions stated, you do not need to worry about running out of log space on a system that has high log throughput. However, log generation rate might be throttled for continuous aggressively writing workloads. The peak sustained log generation rate is 100 MB/s.
+          In Hyperscale, the transaction log is practically infinite, with a restriction that the active portion of the log cannot exceed 1 TB. The active portion of the log may grow because of long-running transactions, or because of [Change Data Capture](/sql/relational-databases/track-changes/about-change-data-capture-sql-server) processing not keeping up with the rate of data change. Avoid unnecessarily long and large transactions to stay below this limit. Other than this restriction, you do not need to worry about running out of log space on a system that has high log throughput. However, log generation rate might be throttled for continuous aggressively writing workloads. The peak sustained log generation rate is 100 MB/s.
 
       - question: |
           Does my `tempdb` scale as my database grows?
@@ -429,7 +429,7 @@ sections:
       - question: |
           How many HA secondary replicas can I provision?
         answer: |
-          Between 0 and 4. If you want to adjust the number of replicas, you can do so using [Azure portal](https://portal.azure.com) or [REST API](/rest/api/sql/2022-08-01-preview/databases/create-or-update).
+          Between 0 and 4. If you want to adjust the number of replicas, you can do so using [Azure portal](https://portal.azure.com) or [REST API](/rest/api/sql/databases/create-or-update).
           
       - question: |
           How do I connect to an HA secondary replica?
@@ -499,7 +499,7 @@ sections:
       - question: |
           How can I improve availability of named replicas?
         answer: |
-          By default, named replicas do not have any HA replicas of their own. A failover of a named replica requires creating a new replica first, which typically takes about 1-2 minutes. However, named replicas can also benefit from higher availability and shorter failovers provided by HA replicas. To add HA replicas for a named replica, you can use the parameter `ha-replicas` with [AZ CLI](/cli/azure/sql/db/replica#az_sql_db_replica_create), or the parameter `HighAvailabilityReplicaCount` with [PowerShell](/powershell/module/az.sql/set-azsqldatabase), or the `highAvailabilityReplicaCount` property with [REST API](/rest/api/sql/2021-02-01-preview/databases/create-or-update). The number of HA replicas can be set during the creation of a named replica and can be changed – only via AZ CLI, PowerShell or REST API – anytime after the named replica has been created. Pricing of HA replicas for named replicas is the same of HA replicas for regular Hyperscale databases.
+          By default, named replicas do not have any HA replicas of their own. A failover of a named replica requires creating a new replica first, which typically takes about 1-2 minutes. However, named replicas can also benefit from higher availability and shorter failovers provided by HA replicas. To add HA replicas for a named replica, you can use the parameter `ha-replicas` with [AZ CLI](/cli/azure/sql/db/replica#az_sql_db_replica_create), or the parameter `HighAvailabilityReplicaCount` with [PowerShell](/powershell/module/az.sql/set-azsqldatabase), or the `highAvailabilityReplicaCount` property with [REST API](/rest/api/sql/databases/create-or-update). The number of HA replicas can be set during the creation of a named replica and can be changed – only via AZ CLI, PowerShell or REST API – anytime after the named replica has been created. Pricing of HA replicas for named replicas is the same of HA replicas for regular Hyperscale databases.
     
 
 additionalContent: |

@@ -66,7 +66,11 @@ You can connect to Power BI datasets using either Microsoft Report Builder or SQ
 
 When authoring reports, you can use tooltips to specify text for each element on the report. Screen reader technology identifies these tooltips properly.
 
+<a name='azure-active-directory-application-proxy-support'></a>
+
 ### Microsoft Entra application proxy support
+
+[!INCLUDE [entra-id](../includes/entra-id.md)]
 
 With Microsoft Entra application proxy, you no longer need to manage your own web application proxy in order to allow secure access via the web or mobile apps.
 
@@ -74,9 +78,9 @@ With Microsoft Entra application proxy, you no longer need to manage your own we
 
 Sets header values for all URLs matching the specified regex pattern. Users can update the custom header value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML. See [Custom headers](tools/server-properties-advanced-page-reporting-services.md#customheaders) in the **Server Properties Advanced Page** article for details.
 
-### Transparent Database Encryption
+### Transparent data encryption
 
-SQL Server 2019 now supports Transparent Database Encryption for the SSRS catalog database for Enterprise and Standard editions. 
+[!INCLUDE [sssql19-md](../includes/sssql19-md.md)] now supports transparent data encryption (TDE) for the SSRS catalog database, for Enterprise and Standard editions.
 
 ### Microsoft Report Builder update
 

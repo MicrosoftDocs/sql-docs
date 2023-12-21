@@ -25,6 +25,7 @@ Generally, if the auto cleanup isn't functioning as expected, you can see one or
 
 - High storage consumption by one or more change tracking side tables or the `syscommittab` system table.
 - Side tables (internal tables whose name begins with prefix `change_tracking`, for example, `change_tracking_12345`) or `syscommittab` or both, show significant number of rows that are outside of the configured retention period.
+- `dbo.MSChange_tracking_history` table has entries with specific cleanup errors.
 - `CHANGETABLE` performance has degraded over time.
 - Auto cleanup or manual cleanup reports high CPU usage.
 
@@ -34,7 +35,7 @@ To identify the root cause of a problem with auto cleanup on change tracking, us
 
 ### Auto cleanup status
 
-Check if auto cleanup has been running. To check this, query the cleanup history table in the same database. If the cleanup has been running, the table has entries with the start and end times of the cleanup. If the cleanup hasn't been running, the table is empty.
+Check if auto cleanup has been running. To check this, query the cleanup history table in the same database. If the cleanup has been running, the table has entries with the start and end times of the cleanup. If the cleanup hasn't been running, the table is empty. If the history table has entries with the tag cleanup errors in the column `comments`, then the cleanup is failing due to table level cleanup errors.
 
 ```sql
 SELECT TOP 1000 * FROM dbo.MSChange_tracking_history ORDER BY start_time DESC;
@@ -130,7 +131,7 @@ SELECT TOP 1000 * FROM dbo.MSChange_tracking_history
 WHERE table_name = '<user_table_name>' ORDER BY start_time DESC
 ```
 
-If the comments column returned by the query indicates that multiple cleanup attempts have failed due to lock conflicts or lock timeouts in succession, then consider the following remedies:
+If the history table returned has multiple entries in the `comments` columns with the value `Cleanup error: Lock request time out period exceeded.` then it is a clear indicatation that multiple cleanup attempts have failed due to lock conflicts or lock timeouts in succession. Then consider the following remedies:
 
 - Disable and enable change tracking on the problematic table. This causes all tracking metadata maintained for the table to be purged. The table's data remains intact. This is the quickest remedy.
 

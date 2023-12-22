@@ -32,7 +32,7 @@ You'll only experience a short period of downtime, generally a few minutes, duri
 
 ### Prerequisites
 
-To move a database that is a part of a [geo-replication](active-geo-replication-overview.md) relationship, either as the primary or as a secondary, to Hyperscale, you need to first terminate data replication between the primary and secondary replica. Databases in a [failover group](auto-failover-group-sql-db.md) must be removed from the group first.
+To move a database that is a part of a [geo-replication](active-geo-replication-overview.md) relationship, either as the primary or as a secondary, to Hyperscale, you need to first terminate data replication between the primary and secondary replica. Databases in a [failover group](failover-group-sql-db.md) must be removed from the group first.
 
 Once a database has been moved to Hyperscale, you can create a new Hyperscale geo-replica for that database.
 
@@ -129,7 +129,7 @@ Reverse migration is available under the following conditions:
 - Direct reverse migration from, or to, an elastic pool isn't supported. You can reverse migrate only a Hyperscale single database to a General Purpose single database.
     - If the Hyperscale database is part of a [Hyperscale elastic pool (preview)](./hyperscale-elastic-pool-overview.md), you have to first remove it from the Hyperscale elastic pool prior to reverse migration.
     - After reverse migration is complete, you can then optionally add the General Purpose single database to a General Purpose elastic pool if needed.
-- For databases that don't qualify for reverse migration, the only way to migrate from Hyperscale to a non-Hyperscale service tier is to export/import using a bacpac file or other data movement technologies (Bulk Copy, Azure Data Factory, Azure Databricks, SSIS, etc.) Bacpac export/import from Azure portal, from PowerShell using New-AzSqlDatabaseExport or New-AzSqlDatabaseImport, from Azure CLI using az sql db export and az sql db import, and from REST API isn't supported. Bacpac import/export for smaller Hyperscale databases (up to 200 GB) is supported using SSMS and SqlPackage version 18.4 and later. For larger databases, bacpac export/import may take a long time, and may fail for various reasons.
+- For databases that don't qualify for reverse migration, the only way to migrate from Hyperscale to a non-Hyperscale service tier is to export/import using a bacpac file or other data movement technologies (Bulk Copy, Azure Data Factory, Azure Databricks, SSIS, etc.) Bacpac export/import from Azure portal, from PowerShell using New-AzSqlDatabaseExport or New-AzSqlDatabaseImport, from Azure CLI using az sql db export and az sql db import, and from REST API isn't supported. Bacpac import/export for smaller Hyperscale databases (up to 150 GB) is supported using SSMS and SqlPackage version 18.4 and later. For larger databases, bacpac export/import may take a long time, and may fail for various reasons.
 
 ### Duration and downtime
 

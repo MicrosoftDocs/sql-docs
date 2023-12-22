@@ -87,7 +87,7 @@ If an [alert rule](/azure/azure-monitor/alerts/alerts-create-new-alert-rule?tabs
 
 To learn more about Azure Monitor alerts, see [Azure Monitor alerts overview](/azure/azure-monitor/alerts/alerts-overview). To get familiar with metric alerts, review [Metric alerts](/azure/azure-monitor/alerts/alerts-types#metric-alerts), [Manage alert rules](/azure/azure-monitor/alerts/alerts-manage-alert-rules), and [Action groups](/azure/azure-monitor/alerts/action-groups).
 
-### Recommended alert rules
+## Recommended alert rules
 
 The metrics and optimal thresholds to use in alert rules vary across the wide spectrum of customer workloads in Azure SQL Database.
 

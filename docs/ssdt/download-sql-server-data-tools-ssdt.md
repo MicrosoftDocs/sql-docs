@@ -56,7 +56,7 @@ For Analysis Services, Integration Services, or Reporting Services projects, you
 
 | Project Templates | SQL Platforms Supported |
 | --- | --- |
-| Relational databases | [!INCLUDE [sssql16-md](../includes/sssql16-md.md)] - [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]<br /><br />Azure SQL Database, Azure SQL Managed Instance<br /><br />Azure Synapse Analytics (dedicated pools only) |
+| Relational databases | [!INCLUDE [sssql16-md](../includes/sssql16-md.md)] - [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]<br /><br />Azure SQL Database, Azure SQL Managed Instance<br /><br />Azure Synapse Analytics Dedicated Pools <br /> Azure Synapse Analytics Serverless Pools (requires VS2022 17.7 see [the release notes](/visualstudio/releases/2022/release-notes-v17.7#support-for-serverless-sql-pool-in-ssdt)) |
 | Analysis Services models<br /><br />Reporting Services reports | SQL Server 2016 - SQL Server 2022 |
 | Integration Services packages | SQL Server 2019 - SQL Server 2022 |
 

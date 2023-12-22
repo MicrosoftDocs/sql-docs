@@ -1,10 +1,10 @@
 ---
-title: Connect to Server (Connection Properties Page) Database Engine
-description: Connect to Server (Connection Properties Page) Database Engine.
+title: Connect to Server (Connection Properties page) - Database Engine
+description: Learn how to use the Connect to Server (Connection Properties page) Database Engine.
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan, randolphwest
-ms.date: 11/16/2023
+ms.date: 11/22/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: ui-reference
@@ -17,17 +17,17 @@ f1_keywords:
 
 [!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Use this tab to view or specify options when connecting to an instance of [!INCLUDE [msCoName](../../includes/msconame-md.md)] [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] or registering [!INCLUDE [ssDE](../../includes/ssde-md.md)] in **Registered Servers**. **Connect** and **Options** only appear in this dialog box when connecting to an instance of the [!INCLUDE [ssDE](../../includes/ssde-md.md)]. **Test** and **Save** only appear in this dialog box when registering [!INCLUDE [ssDE](../../includes/ssde-md.md)]. Access this tab by selecting **Options >>** on the login tab.
+Use this tab to view or specify options when you connect to an instance of [!INCLUDE [msCoName](../../includes/msconame-md.md)] [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] or when you register a [!INCLUDE [ssDE](../../includes/ssde-md.md)] in **Registered Servers**. **Connect** and **Options>>** only appear in this dialog box when you connect to an instance of the [!INCLUDE [ssDE](../../includes/ssde-md.md)]. **Test** and **Save** only appear in this dialog box when you register [!INCLUDE [ssDE](../../includes/ssde-md.md)]. Access this tab by selecting **Options>>** on the **Login** tab.
 
 [!INCLUDE [entra-id-hard-coded](../../includes/entra-id-hard-coded.md)]
 
-#### Connect to database
+## Connect to database
 
 Select a database to connect to from the list. If you select **\<default>**, you connect to the default database for the server. If you select **\<Browse server>**, you can browse the server for the database to which to connect.
 
-When connecting to an instance of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine through [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you must use [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication and specify a database in the **Connect to Server** dialog box, on the **Connection Properties** tab. Ensure that you select the **Encrypt connection** checkbox.
+When you connect to an instance of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine through [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you must use [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication and specify a database in the **Connect to Server** dialog box on the **Connection Properties** tab. Ensure that you select the **Encrypt connection** checkbox.
 
-By default, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] connects to `master`. When connecting to [!INCLUDE [ssSDS](../../includes/sssds-md.md)], if you specify a user database, you only see that database and its objects in Object Explorer. If you connect to `master`, you can see all databases. For more information, see the [Microsoft Azure SQL Database Overview](/azure/sql-database/sql-database-technical-overview).
+By default, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] connects to `master`. When you connect to [!INCLUDE [ssSDS](../../includes/sssds-md.md)], if you specify a user database, you only see that database and its objects in Object Explorer. If you connect to `master`, you can see all databases. For more information, see [What is Azure SQL Database?](/azure/sql-database/sql-database-technical-overview).
 
 #### Network protocol
 
@@ -47,21 +47,21 @@ Enter the amount of time in seconds to wait before execution of a query is compl
 
 #### Encrypt connection
 
-Forces encryption of the connection. When enabled, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] uses  TLS encryption for all the data sent between the client and server. For more information, see [SQL Server and client encryption summary](../../database-engine/configure-windows/sql-server-and-client-encryption-summary.md).
+Forces encryption of the connection. When enabled, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] uses TLS encryption for all the data sent between the client and server. For more information, see [SQL Server and client encryption summary](../../database-engine/configure-windows/sql-server-and-client-encryption-summary.md).
 
 #### Trust server certificate
 
-When enabled, with **Encrypt connection** also enabled or if the server is configured to force encryption, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] doesn't validate the server certificate on the client machine when enabling encryption on the network communication between client and server.
+When enabled, with **Encrypt connection** also enabled or if the server is configured to force encryption, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] doesn't validate the server certificate on the client machine when you enable encryption on the network communication between client and server.
 
 #### Use custom color
 
-Select to specify the background color for the status bar in a [!INCLUDE [ssDE](../../includes/ssde-md.md)] Query Editor window. To specify the color, select **Select**. In the **Color** dialog box, select a predefined color from the **Basic Colors** grid or select **Define Custom Colors** to define and use a custom color.
+Select to specify the background color for the status bar in a [!INCLUDE [ssDE](../../includes/ssde-md.md)] Query Editor window. To specify the color, choose **Select**. In the **Color** dialog box, select a predefined color from the **Basic Colors** grid or select **Define Custom Colors** to define and use a custom color.
 
-- When you specify a color for a server entry in the **Object Explorer** pane, that color is used when you open a Query Editor window. To open a Query Editor window, either right-click the server entry and select **New Query**; or, when the **Object Explorer** pane is active and focused on this server, select **New Query** on the toolbar.
+- When you specify a color for a server entry in the **Object Explorer** pane, that color is used when you open a Query Editor window. To open a Query Editor window, right-click the server entry and select **New Query**. Alternatively, when the **Object Explorer** pane is active and focused on this server, you can select **New Query** on the toolbar.
 
-- When you specify a color for a server entry in the **Registered Servers** pane, that color is used when you open a Query Editor window. To open a Query Editor window, either right-click the server entry and select **New Query**; or, when the **Registered Server** pane is active and focused on this server, select **New Query** on the toolbar.
+- When you specify a color for a server entry in the **Registered Servers** pane, that color is used when you open a Query Editor window. To open a Query Editor window, right-click the server entry and select **New Query**. Alternatively, when the **Registered Server** pane is active and focused on this server, you can select **New Query** on the toolbar.
 
-- On the **File** menu, when you select **New** and then **Database Engine Query**, the color you that you specify in the **Connect to Server** dialog box applies to that Query Editor window.
+- On the **File** menu, when you select **New** > **Database Engine Query**, the color that you specify in the **Connect to Server** dialog box applies to that Query Editor window.
 
 #### Reset All
 
@@ -77,7 +77,7 @@ Select to hide the **Connection Properties** and **Additional Connection Paramet
 
 #### Test
 
-When registering [!INCLUDE [ssDE](../../includes/ssde-md.md)] in **Registered Servers**, select to test the connection.
+When you register [!INCLUDE [ssDE](../../includes/ssde-md.md)] in **Registered Servers**, select to test the connection.
 
 #### Save
 

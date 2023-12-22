@@ -1,10 +1,10 @@
 ---
-title: What is the Hyperscale service tier?
+title: What is the Hyperscale service tier? 
 description: This article describes the Hyperscale service tier in the vCore-based purchasing model in Azure SQL Database and explains how it's different from the General Purpose and Business Critical service tiers.
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, oslake, randolphwest
-ms.date: 10/24/2023
+ms.date: 12/15/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -57,6 +57,9 @@ The Hyperscale service tier is intended for all customers who require higher per
 
 ## Hyperscale pricing model
 
+> [!NOTE]
+> Simplified pricing for Azure SQL Database Hyperscale has arrived! Review the [new pricing tier for Azure SQL Database Hyperscale announcement](https://aka.ms/hsignite2023), and for pricing change details, see [Azure SQL Database Hyperscale – lower, simplified pricing!](https://techcommunity.microsoft.com/t5/azure-sql-blog/azure-sql-database-hyperscale-lower-simplified-pricing/ba-p/3982209).
+
 Hyperscale service tier is only available in [vCore model](service-tiers-vcore.md). To align with the new architecture, the pricing model is slightly different from General Purpose or Business Critical service tiers:
 
 - **Provisioned compute**:
@@ -108,11 +111,11 @@ The vCore-based service tiers are differentiated based on database availability,
 
 | Hardware configuration | CPU | Memory |
 | :--- | :--- | :--- |
-| Standard-series (Gen5) | **Provisioned compute**<br />- Intel&reg; E5-2673 v4 (Broadwell) 2.3 GHz, Intel&reg; SP-8160 (Skylake)<sup>1</sup>, Intel&reg; 8272CL (Cascade Lake) 2.5 GHz<sup>1</sup>, Intel&reg; Xeon Platinum 8307C (Ice Lake)<sup>1</sup>, AMD EPYC 7763v (Milan) processors<br />- Provision up to 80 vCores (hyper-threaded)<br /><br />**Serverless compute**<br />- Intel&reg; E5-2673 v4 (Broadwell) 2.3 GHz, Intel&reg; SP-8160 (Skylake)<sup>1</sup>, Intel&reg; 8272CL (Cascade Lake) 2.5 GHz<sup>1</sup>, Intel Xeon&reg; Platinum 8307C (Ice Lake)<sup>1</sup>, AMD EPYC 7763v (Milan) processors<br />- Autoscale up to 80 vCores (hyper-threaded)<br />- The memory-to-vCore ratio dynamically adapts to memory and CPU usage based on workload demand and can be as high as 24 GB per vCore. For example, at a given point in time, a workload may use and be billed for 240 GB memory and only 10 vCores. | **Provisioned compute**<br />- 5.1 GB per vCore<br />- Provision up to 625 GB<br /><br />**Serverless compute**<br />- Autoscale up to 24 GB per vCore<br />- Autoscale up to 240 GB max |
-| Premium-series | - Intel&reg; Xeon Platinum 8307C (Ice Lake), AMD EPYC 7763v (Milan) processors<br />- Provision up to 128 vCores (hyper-threaded) | - 5.1 GB per vCore |
-| Premium-series memory optimized | - Intel&reg; Xeon Platinum 8307C (Ice Lake), AMD EPYC 7763v (Milan) processors<br />- Provision up to 80 vCores (hyper-threaded) | - 10.2 GB per vCore |
+| Standard-series (Gen5) | **Provisioned compute**<br />- Intel&reg; E5-2673 v4 (Broadwell) 2.3 GHz, Intel&reg; SP-8160 (Skylake)<sup>1</sup>, Intel&reg; 8272CL (Cascade Lake) 2.5 GHz<sup>1</sup>, Intel&reg; Xeon Platinum 8370C (Ice Lake)<sup>1</sup>, AMD EPYC 7763v (Milan) processors<br />- Provision up to 80 vCores (hyper-threaded)<br /><br />**Serverless compute**<br />- Intel&reg; E5-2673 v4 (Broadwell) 2.3 GHz, Intel&reg; SP-8160 (Skylake)<sup>1</sup>, Intel&reg; 8272CL (Cascade Lake) 2.5 GHz<sup>1</sup>, Intel Xeon&reg; Platinum 8370C (Ice Lake)<sup>1</sup>, AMD EPYC 7763v (Milan) processors<br />- Autoscale up to 80 vCores (hyper-threaded)<br />- The memory-to-vCore ratio dynamically adapts to memory and CPU usage based on workload demand and can be as high as 24 GB per vCore. For example, at a given point in time, a workload may use and be billed for 240 GB memory and only 10 vCores. | **Provisioned compute**<br />- 5.1 GB per vCore<br />- Provision up to 625 GB<br /><br />**Serverless compute**<br />- Autoscale up to 24 GB per vCore<br />- Autoscale up to 240 GB max |
+| Premium-series | - Intel&reg; Xeon Platinum 8370C (Ice Lake), AMD EPYC 7763v (Milan) processors<br />- Provision up to 128 vCores (hyper-threaded) | - 5.1 GB per vCore |
+| Premium-series memory optimized | - Intel&reg; Xeon Platinum 8370C (Ice Lake), AMD EPYC 7763v (Milan) processors<br />- Provision up to 80 vCores (hyper-threaded) | - 10.2 GB per vCore |
 
-<sup>1</sup> In the [sys.dm_user_db_resource_governance](/sql/relational-databases/system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database) dynamic management view, hardware generation for databases using Intel&reg; SP-8160 (Skylake) processors appears as Gen6, hardware generation for databases using Intel&reg; 8272CL (Cascade Lake) appears as Gen7, and hardware generation for databases using Intel Xeon&reg; Platinum 8307C (Ice Lake) or AMD&reg; EPYC&reg; 7763v (Milan) appear as Gen8. For a given compute size and hardware configuration, resource limits are the same regardless of CPU type. For more information, see resource limits for [single databases](resource-limits-vcore-single-databases.md) and [elastic pools](resource-limits-vcore-elastic-pools.md).
+<sup>1</sup> In the [sys.dm_user_db_resource_governance](/sql/relational-databases/system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database) dynamic management view, hardware generation for databases using Intel&reg; SP-8160 (Skylake) processors appears as Gen6, hardware generation for databases using Intel&reg; 8272CL (Cascade Lake) appears as Gen7, and hardware generation for databases using Intel Xeon&reg; Platinum 8370C (Ice Lake) or AMD&reg; EPYC&reg; 7763v (Milan) appear as Gen8. For a given compute size and hardware configuration, resource limits are the same regardless of CPU type. For more information, see resource limits for [single databases](resource-limits-vcore-single-databases.md) and [elastic pools](resource-limits-vcore-elastic-pools.md).
 
 Serverless is only supported on Standard-series (Gen5) hardware.
 

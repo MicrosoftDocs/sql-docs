@@ -43,7 +43,7 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
  
 ## Remarks
 
-It's not possible to rename an Azure SQL database configured in an [active geo-replication](/azure/azure-sql/database/active-geo-replication-overview) relationship.
+It isn't possible to rename an Azure SQL database configured in an [active geo-replication](/azure/azure-sql/database/active-geo-replication-overview) relationship.
 
   
 ## Permissions  

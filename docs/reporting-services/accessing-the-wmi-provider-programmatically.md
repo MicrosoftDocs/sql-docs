@@ -1,6 +1,6 @@
 ---
-title: "Accessing the WMI Provider Programmatically"
-description: Learn what an WMI provider is, how to find a report server instance, and how to access the WMI Provider programmatically.
+title: "Accessing the WMI Provider programmatically"
+description: Learn what a WMI provider is, how to find a report server instance, and how to access the WMI Provider programmatically.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 11/02/2016
@@ -9,13 +9,13 @@ ms.subservice: reporting-services
 ms.topic: reference
 ms.custom: updatefrequency5
 ---
-# Accessing the WMI Provider Programmatically
+# Access the WMI Provider programmatically
 
-## WMI Provider Overview  
- The namespace used to obtain information about [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in the code samples shown in this topic is the **System.Management** namespace, found in the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. The **System.Management** namespace provides a set of managed code classes through which [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] applications can access and manipulate management information. For more information on using the Reporting Services WMI classes using the **System.Management** namespace, see "Accessing Management Information with System.Managment" in the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK.  
+## WMI Provider overview  
+ The namespace used to obtain information about [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in the code samples shown in this article is the **System.Management** namespace, found in the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. The **System.Management** namespace provides a set of managed code classes through which [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] applications can access and manipulate management information. For more information on using the Reporting Services WMI classes with the **System.Management** namespace, see "Access Management Information with System.Management" in the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK.  
   
-## Finding a Report Server Instance  
- The preferred way of finding information on your report server installations is to enumerate through the WMI instance collection. The example below shows how to find properties on every report server instance by creating a collection, and looping through the collection to display the properties.  
+## Find a report server instance  
+ The preferred way of finding information on your report server installations is to enumerate through the WMI instance collection. The following example shows how to find properties on every report server instance by creating a collection, and looping through the collection to display the properties.  
   
 ```vb  
 Imports System  
@@ -117,8 +117,9 @@ class Class1
 }  
 ```  
   
-## See Also  
- [Access the Reporting Services WMI Provider](../reporting-services/tools/access-the-reporting-services-wmi-provider.md)   
- [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
+## Related content
+
+- [Access the Reporting Services WMI provider](../reporting-services/tools/access-the-reporting-services-wmi-provider.md)   
+- [RsReportServer.config configuration file](../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   
   

@@ -53,7 +53,7 @@ The following table lists the functionality of the link feature and the minimum 
 
 | Initial primary version  | Operating system (OS)  | One-way replication |  Disaster recovery options |  Servicing update requirement |
 | --- | --- | --- | --- | --- |
-| Azure SQL Managed Instance | Windows Server and Linux | Preview |  [Bi-directional preview](#disaster-recovery) |  SQL Server 2022 CU10 <sup>1</sup> | 
+| Azure SQL Managed Instance | Windows Server and Linux | Preview |  [Bi-directional preview](#disaster-recovery) |  [SQL Server 2022 CU10 (KB5031778)](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate10) <sup>1</sup> | 
 | SQL Server 2022 (16.x) | Windows Server and Linux |  Generally available |  [Bi-directional](#disaster-recovery): <br /> Offline (Generally available) <br /> Online (preview) |  SQL Server 2022 RTM | 
 | SQL Server 2019 (15.x) | Windows Server only | Generally available | From SQL Server to SQL MI only | [SQL Server 2019 CU20 (KB5024276)](https://support.microsoft.com/topic/kb5024276-cumulative-update-20-for-sql-server-2019-4b282be9-b559-46ac-9b6a-badbd44785d2) |
 | SQL Server 2017 (14.x) | N/A | N/A | N/A| N/A | 
@@ -193,7 +193,7 @@ Configuration limitations include:
 
 Feature limitations include:
 
-- [Auto-failover groups](auto-failover-group-sql-mi.md) aren't supported with instances that use the link feature. You can't establish a link on a managed instance that's part of an auto-failover group, and conversely, you can't configure an auto-failover group on an instance that has a link established.
+- [Failover groups](failover-group-sql-mi.md) aren't supported with instances that use the link feature. You can't establish a link on a managed instance that's part of a failover group, and conversely, you can't configure a failover group on an instance that has a link established.
 - If you're using Change Data Capture (CDC), log shipping, or a service broker with databases that are replicated on the SQL Server instance, when the database is migrated to a SQL Managed Instance deployment, during a failover to Azure, clients need to connect by using the instance name of the current global primary replica. These settings should be manually reconfigured. 
 - If you're using transactional replication with a database on a SQL Server instance in a migration scenario, during failover to Azure, transactional replication on the SQL Managed Instance deployment will fail and should be manually reconfigured. 
 - If you're using distributed transactions with a database that's replicated from the SQL Server instance and, in a migration scenario, on the cutover to the cloud, Distributed Transaction Coordinator capabilities won't be transferred. It's not possible for the migrated database to get involved in distributed transactions with the SQL Server instance, because the SQL Managed Instance deployment doesn't support distributed transactions with SQL Server at this time. For reference, SQL Managed Instance today supports distributed transactions only between other managed instances. For more information, see [Distributed transactions across cloud databases](../database/elastic-transactions-overview.md#transactions-for-sql-managed-instance).

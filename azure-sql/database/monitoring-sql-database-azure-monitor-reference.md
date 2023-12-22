@@ -4,15 +4,16 @@ description: Important reference material needed when you monitor Azure SQL Data
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, dfurman
-ms.date: 07/29/2022
+ms.date: 11/29/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom: subject-monitoring
-monikerRange: "= azuresql || = azuresql-db"
+ms.custom:
+  - subject-monitoring
+monikerRange: "=azuresql||=azuresql-db"
 ---
 
-# Monitoring Azure SQL Database data reference
+# Monitor Azure SQL Database data reference
 [!INCLUDE [sqldb](../includes/appliesto-sqldb.md)]
 
 This article contains reference for monitoring Azure SQL Database with Azure Monitor. See [Monitoring Azure SQL Database](../database/monitoring-sql-database-azure-monitor.md) for details on collecting and analyzing monitoring data for Azure SQL Database with Azure Monitor SQL Insights (preview).
@@ -49,11 +50,12 @@ Tables for all resources types are referenced here, for example, [Azure Monitor 
 
 ## Activity log
 
-The Activity log contains records of management operations performed on your Azure SQL Database resources. All maintenance operations related to Azure SQL Database that have been implemented here may appear in the Activity log.
+The Activity log contains records of management operations performed on your Azure SQL Database resources. All maintenance operations related to Azure SQL Database that have been implemented can appear in the Activity log.
 
 For more information on the schema of Activity Log entries, see [Activity Log schema](/azure/azure-monitor/essentials/activity-log-schema). 
 
-## Next steps
+## Related content
 
-- See [Monitoring Azure SQL Database with Azure Monitor](../database/monitoring-sql-database-azure-monitor.md) for a description of monitoring Azure SQL Database.
-- See [Monitoring Azure resources with Azure Monitor](/azure/azure-monitor/essentials/monitor-azure-resource) for details on monitoring Azure resources.
+- Review [the Azure Monitor metrics and alerts](monitoring-metrics-alerts.md) including [Recommended alert rules](monitoring-metrics-alerts.md#recommended-alert-rules).
+- Review [Monitoring Azure SQL Database with Azure Monitor](../database/monitoring-sql-database-azure-monitor.md) for a description of monitoring Azure SQL Database.
+- Review [Monitoring Azure resources with Azure Monitor](/azure/azure-monitor/essentials/monitor-azure-resource) for details on monitoring Azure resources.

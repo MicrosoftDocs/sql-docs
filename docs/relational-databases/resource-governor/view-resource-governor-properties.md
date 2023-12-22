@@ -41,7 +41,7 @@ helpviewer_keywords:
  You can determine whether there is a configuration pending by querying the [sys.dm_resource_governor_configuration](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) dynamic management view to get the current status of is_configuration_pending.  
   
 ##  <a name="Permissions"></a> Permissions  
- Viewing resource governor properties requires VIEW SERVER STATER permission. The resource governor configuration tasks require CONTROL SERVER permission.  
+ Viewing resource governor properties requires VIEW SERVER STATE permission. The resource governor configuration tasks require CONTROL SERVER permission.  
   
 ##  <a name="ViewRGProp"></a> Resource Governor properties page  
  **To view resource governor properties by using the Resource Governor Properties page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  

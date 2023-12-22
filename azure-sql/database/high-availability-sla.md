@@ -5,7 +5,7 @@ description: Learn about the Azure SQL Database service high availability capabi
 author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 06/14/2023
+ms.date: 12/13/2023
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
@@ -133,17 +133,22 @@ Consider the following when configuring your General Purpose databases with zone
   - (Asia Pacific) China North 3
   - (Asia Pacific) UAE North
   - (Europe) France Central
+  - (Europe) Germany West Central
+  - (Europe) Italy North
   - (Europe) North Europe
   - (Europe) Norway East
+  - (Europe) Poland Central
   - (Europe) West Europe
   - (Europe) UK South
   - (Europe) Switzerland North
   - (Europe) Sweden Central
-  - (Middle East) Qatar Central
+  - (Middle East) Israel Central
+  - (Middle East) Qatar Central  - 
   - (North America) East US
   - (North America) East US 2
   - (North America) South Central US
-  - (North America) West US 2  
+  - (North America) West US 2
+  - (North America) West US 3
   - (South America) Brazil South
 - For zone redundant availability, choosing a [maintenance window](maintenance-window.md) other than the default is currently available in [select regions](maintenance-window.md#azure-sql-database-region-support-for-maintenance-windows).  
 - Zone-redundant configuration is only available in SQL Database when standard-series (Gen5) hardware is selected. 
@@ -159,7 +164,6 @@ The zone-redundant version of the high availability architecture is illustrated 
 
 Consider the following when configuring your Premium or Business Critical databases with zone-redundancy: 
 
-- When using the Business Critical tier, zone-redundant configuration is only available when the Gen5 hardware is selected. 
 - For up to date information about the regions that support zone-redundant databases, see [Services support by region](/azure/availability-zones/az-region).
 - For zone redundant availability, choosing a [maintenance window](./maintenance-window.md) other than the default is currently available in [select regions](maintenance-window.md#azure-sql-database-region-support-for-maintenance-windows).
 
@@ -173,7 +177,6 @@ Consider the following limitations:
 
 - Zone redundant configuration can only be specified during database creation. This setting can't be modified once the resource is provisioned. Use [Database copy](database-copy.md), [point-in-time restore](recovery-using-backups.md#point-in-time-restore), or create a [geo-replica](active-geo-replication-overview.md) to update the zone redundant configuration for an existing Hyperscale database. When using one of these update options, if the target database is in a different region than the source or if the database backup storage redundancy from the target differs from the source database, the [copy operation](database-copy.md#database-copy-for-azure-sql-hyperscale) will be a size of data operation.
 - For zone redundant availability, choosing a [maintenance window](maintenance-window.md) other than the default is currently available in [select regions](maintenance-window.md#azure-sql-database-region-support-for-maintenance-windows).
-- Only standard-series (Gen5) hardware is supported.
 - Named replicas aren't currently supported.
 - There's currently no option to specify zone redundancy when migrating a database to Hyperscale using the Azure portal. However, zone redundancy can be specified using Azure PowerShell, Azure CLI, or the REST API when migrating an existing database from another Azure SQL Database service tier to Hyperscale. Here's an example with Azure CLI: `az sql db update --resource-group "myResourceGroup" --server "myServer" --name "myDB" --edition Hyperscale --zone-redundant true`
 - At least 1 high availability compute replica and the use of zone-redundant or geo-zone-redundant backup storage is required for enabling the zone redundant configuration for Hyperscale.
@@ -181,13 +184,13 @@ Consider the following limitations:
 
 ### `master` database zone redundant availability
 
-In Azure SQL Database, a [server](./logical-servers.md) is a logical construct that acts as a central administrative point for a collection of databases. At the server level, you can administer logins, authentication method, firewall rules, auditing rules, threat detection policies, and auto-failover groups. Data related to some of these features, such as logins and firewall rules, is stored in the `master` database. Similarly, data for some DMVs, for example [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database), is also stored in the `master` database.
+In Azure SQL Database, a [server](./logical-servers.md) is a logical construct that acts as a central administrative point for a collection of databases. At the server level, you can administer logins, authentication method, firewall rules, auditing rules, threat detection policies, and failover groups. Data related to some of these features, such as logins and firewall rules, is stored in the `master` database. Similarly, data for some DMVs, for example [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database), is also stored in the `master` database.
 
 When a database with a zone-redundant configuration is created on a logical server, the `master` database associated with the server is automatically made zone-redundant as well. This ensures that in a zonal outage, applications using the database remain unaffected because features dependent on the `master` database, such as logins and firewall rules, are still available. Making the `master` database zone-redundant is an asynchronous process and will take some time to finish in the background.
 
 When none of the databases on a server are zone-redundant, or when you create an empty server, then the `master` database associated with the server is **not zone-redundant**.
 
-You can use Azure PowerShell or the Azure CLI or the [REST API](/rest/api/sql/2021-11-01-preview/databases/get) to check the `ZoneRedundant` property for the `master` database:
+You can use Azure PowerShell or the Azure CLI or the [REST API](/rest/api/sql/databases/get) to check the `ZoneRedundant` property for the `master` database:
 
 # [Azure PowerShell](#tab/azure-powershell)
 

@@ -24,7 +24,7 @@ This article introduces the [!INCLUDE [ssHADR](../../../includes/sshadr-md.md)] 
 
 The [!INCLUDE [ssHADR](../../../includes/sshadr-md.md)] feature is a high-availability and disaster-recovery solution that provides an enterprise-level alternative to database mirroring. Introduced in [!INCLUDE [ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE [ssHADR](../../../includes/sshadr-md.md)] maximizes the availability of a set of user databases for an enterprise. An *availability group* supports a failover environment for a discrete set of user databases, known as *availability databases*, that fail over together. An availability group supports a set of read-write primary databases and one to eight sets of corresponding secondary databases. Optionally, secondary databases can be made available for read-only access and/or some backup operations.
 
-With [Azure Arc-enabled SQL Server](../../../sql-server/azure-arc/overview.md), you can [view availability groups](../../../sql-server/azure-arc/manage-availability-group.md) in Azure portal.
+With [[!INCLUDE [ssazurearc](../../../includes/ssazurearc.md)]](../../../sql-server/azure-arc/overview.md), you can [view availability groups](../../../sql-server/azure-arc/manage-availability-group.md) in Azure portal.
 
 ## Overview
 

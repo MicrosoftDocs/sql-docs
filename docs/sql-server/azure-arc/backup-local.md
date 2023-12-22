@@ -1,15 +1,15 @@
 ---
-title: Manage automated backups for Azure Arc-enabled SQL Server from Azure portal
+title: Manage automated backups from Azure portal
 description: Describes how to configure automated backups
 author: dnethi
 ms.author: dinethi
 ms.reviewer: mikeray, randolphwest
 ms.date: 11/14/2023
 ms.topic: conceptual
-ms.custom: ignite-2023
+ms.custom: ignite-2023, devx-track-azurecli
 ---
 
-# Manage automated backups - Azure Arc-enabled SQL Server
+# Manage automated backups - SQL Server enabled by Azure Arc
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 

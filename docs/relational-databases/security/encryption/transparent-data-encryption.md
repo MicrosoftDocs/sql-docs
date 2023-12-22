@@ -77,7 +77,7 @@ The Windows Data Protection API (DPAPI) is at the root of the encryption tree, s
 
 The following illustration shows the architecture of TDE encryption. Only the database-level items (the database encryption key and `ALTER DATABASE` portions) are user-configurable when you use TDE on [!INCLUDE [ssSDS](../../../includes/sssds-md.md)].
 
-:::image type="content" source="media/transparent-data-encryption/tde-architecture.png" alt-text="The Transparent Database Encryption architecture.":::
+:::image type="content" source="media/transparent-data-encryption/tde-architecture.png" alt-text="Diagram showing the transparent data encryption architecture.":::
 
 ## Enable TDE
 

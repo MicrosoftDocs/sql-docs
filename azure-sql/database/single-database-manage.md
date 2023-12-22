@@ -142,22 +142,22 @@ To create and manage the servers, databases, and firewalls, use these REST API r
 
 | Command | Description |
 | --- | --- |
-| [Servers - Create or update](/rest/api/sql/servers/createorupdate) | Creates or updates a new server. |
+| [Servers - Create or update](/rest/api/sql/servers/create-or-update) | Creates or updates a new server. |
 | [Servers - Delete](/rest/api/sql/servers/delete) | Deletes a SQL server. |
 | [Servers - Get](/rest/api/sql/servers/get) | Gets a server. |
 | [Servers - List](/rest/api/sql/servers/list) | Returns a list of servers in a subscription. |
-| [Servers - List by resource group](/rest/api/sql/servers/listbyresourcegroup) | Returns a list of servers in a resource group. |
+| [Servers - List by resource group](/rest/api/sql/servers/list-by-resource-group) | Returns a list of servers in a resource group. |
 | [Servers - Update](/rest/api/sql/servers/update) | Updates an existing server. |
-| [Databases - Create or update](/rest/api/sql/2022-08-01-preview/databases/create-or-update) | Creates a new database or updates an existing database. |
+| [Databases - Create or update](/rest/api/sql/databases/create-or-update) | Creates a new database or updates an existing database. |
 | [Databases - Delete](/rest/api/sql/databases/delete) | Deletes a database. |
 | [Databases - Get](/rest/api/sql/databases/get) | Gets a database. |
-| [Databases - List by elastic pool](/rest/api/sql/2022-08-01-preview/databases/list-by-elastic-pool) | Returns a list of databases in an elastic pool. |
-| [Databases - List by server](/rest/api/sql/2022-08-01-preview/databases/list-by-server) | Returns a list of databases in a server. |
+| [Databases - List by elastic pool](/rest/api/sql/databases/list-by-elastic-pool) | Returns a list of databases in an elastic pool. |
+| [Databases - List by server](/rest/api/sql/databases/list-by-server) | Returns a list of databases in a server. |
 | [Databases - Update](/rest/api/sql/databases/update) | Updates an existing database. |
-| [Firewall rules - Create or update](/rest/api/sql/firewallrules/createorupdate) | Creates or updates a firewall rule. |
-| [Firewall rules - Delete](/rest/api/sql/firewallrules/delete) | Deletes a firewall rule. |
-| [Firewall rules - Get](/rest/api/sql/firewallrules/get) | Gets a firewall rule. |
-| [Firewall rules - List by server](/rest/api/sql/firewallrules/listbyserver) | Returns a list of firewall rules. |
+| [Firewall rules - Create or update](/rest/api/sql/firewall-rules/create-or-update) | Creates or updates a firewall rule. |
+| [Firewall rules - Delete](/rest/api/sql/firewall-rules/delete) | Deletes a firewall rule. |
+| [Firewall rules - Get](/rest/api/sql/firewall-rules/get) | Gets a firewall rule. |
+| [Firewall rules - List by server](/rest/api/sql/firewall-rules/list-by-server) | Returns a list of firewall rules. |
 
 ## Related content
 

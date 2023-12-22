@@ -20,8 +20,9 @@ helpviewer_keywords:
 >  To determine which rendering extensions are available, you can view the list of installed extensions in the RSReportServer.config file.  
   
  The following table describes the rendering extensions that are included with [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
- 
-|--------------------|-----------------|   
+
+|Extension Name|Description|
+|--------------------|-----------------|
 |**WORDOPENXML**|Render a report in [!INCLUDE[ofprword](../../../includes/ofprword-md.md)] as a DOCX file. The format is shown as **Word** in the Export drop-down of the report toolbar.|  
 |**WORD**|Render a report in [!INCLUDE[ofprword](../../../includes/ofprword-md.md)] as a DOC file. The format isn't shown in the Export drop-down of the report toolbar as it is included for backward compatibility.|  
 |**EXCELOPENXML**|Renders a report in [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] as an XLSX file. The format is shown as **Excel** in the Export drop-down of the report toolbar.|

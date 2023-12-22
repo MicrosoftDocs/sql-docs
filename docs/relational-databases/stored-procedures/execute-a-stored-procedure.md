@@ -56,14 +56,14 @@ When executing a user-defined procedure, it's best to qualify the procedure name
 The following example demonstrates the recommended method to execute a user-defined procedure. Notice that the procedure accepts one input parameter. For information about specifying input and output parameters, see [Specify parameters in a stored procedure](../../relational-databases/stored-procedures/specify-parameters.md).  
   
 ```sql  
-EXECUTE dbo.uspGetCustomers @SalesPerson = 'adventure-works\linda3';
+EXECUTE dbo.uspLogError @ErrorLogID = 1;
 GO
 ```  
 
 -Or-  
 
 ```sql  
-EXEC AdventureWorksLT.dbo.uspGetCustomers 'adventure-works\linda3';  
+EXEC AdventureWorksLT.dbo.uspLogError 1;  
 GO  
 ```  
 
@@ -100,8 +100,6 @@ For more information, see the "Permissions" section in [EXECUTE (Transact-SQL)](
 
 You can use [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) to execute a stored procedure. Always use the latest version of SSMS.
 
-### Execute a stored procedure
-  
 1. In SSMS **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], expand that instance, and then expand **Databases**.  
   
 1. Expand the database that you want, expand **Programmability**, and then expand **Stored Procedures**.  
@@ -120,35 +118,49 @@ You can use [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server
   
 ## <a id="TsqlProcedure"></a> Transact-SQL
   
-You can use Transact-SQL to execute a stored procedure, set a procedure to execute automatically, or stop a procedure from executing automatically.  
-
-### Execute a stored procedure
+You can also use Transact-SQL to execute a stored procedure.  
   
 1. In SSMS, connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 1. From the Standard toolbar, select **New Query**.  
   
-1. Enter the following commands into the query window:
+1. Enter the following statements into the query window:
   
    ```sql  
-   EXEC <stored procedure name> <parameter values>;  
+   EXEC <stored procedure name> <parameter 1 value>, <parameter n value>;  
    GO  
 ```  
   
 1. In the Standard toolbar, select **Execute**.
 
-The following example shows how to execute a stored procedure that expects one parameter. The example executes the `uspGetCustomers` stored procedure with the value `adventure-works\linda3` specified as the `@SalesPerson` parameter.  
+The following example shows how to execute a stored procedure that expects one parameter. The example executes the `uspLogError` stored procedure with the value `1` specified as the `@ErrorLogID` parameter.  
   
 ```sql  
-EXEC dbo.uspGetCustomers 'adventure-works\linda3';  
+EXEC dbo.uspLogError 1;  
 GO  
 ```  
 
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+## Automatic execution
+
+For [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] databases, you can use Transact-SQL [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) to:
+
+- Designate an existing stored procedure as a startup procedure.
+
+- Stop a stored procedure from executing at [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup.
+  
+For more information, see [sp_procoption (Transact-SQL)](../system-stored-procedures/sp-procoption-transact-sql.md).  
+  
+> [!NOTE]
+> For Azure SQL Database automation options, see the following resources:
+> 
+> - [Elastic jobs in Azure SQL Database (preview)](../../azure-sql/database/elastic-jobs-overview.md)
+> - [Manage databases in Azure SQL Database by using Azure Automation](../../azure-sql/database/automation-manage.md)
+
 ### Set a procedure to execute automatically
 
-You can use Transact-SQL [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) to designate an existing stored procedure as a startup procedure. Startup procedures must be in the `master` database and can't contain INPUT or OUTPUT parameters.  
-
-Execution of the stored procedures starts when all databases are recovered and the "Recovery is completed" message is logged at startup. For more information, see [sp_procoption (Transact-SQL)](../system-stored-procedures/sp-procoption-transact-sql.md).  
+Startup procedures must be in the `master` database and can't contain INPUT or OUTPUT parameters. Execution of the stored procedures starts when all databases are recovered and the "Recovery is completed" message is logged at startup.  
   
 1. In SSMS, connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

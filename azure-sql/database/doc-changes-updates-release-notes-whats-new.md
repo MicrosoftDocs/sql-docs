@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, randolphwest
-ms.date: 12/19/2023
+ms.date: 12/22/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -83,7 +83,8 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 
 | Changes | Details |
 | --- | --- |
-| Lower, simplified Hyperscale pricing | Simplified [pricing for Azure SQL Database Hyperscale](service-tier-hyperscale.md?view=azuresql-db&preserve-view=true#hyperscale-pricing-model) has arrived! Review the [new pricing tier for Azure SQL Database Hyperscale announcement](https://aka.ms/hsignite2023), and for pricing change details, see [Azure SQL Database Hyperscale – lower, simplified pricing!](https://techcommunity.microsoft.com/t5/azure-sql-blog/azure-sql-database-hyperscale-lower-simplified-pricing/ba-p/3982209).|
+| **New tutorial: Develop a Kubernetes Application for Azure SQL Database**| A new tutorial is available to demonstrate [how to develop a modern application using Python, Docker Containers, Kubernetes, and Azure SQL Database](develop-kubernetes-application.md). |
+| **Lower, simplified Hyperscale pricing** | Simplified [pricing for Azure SQL Database Hyperscale](service-tier-hyperscale.md?view=azuresql-db&preserve-view=true#hyperscale-pricing-model) has arrived! Review the [new pricing tier for Azure SQL Database Hyperscale announcement](https://aka.ms/hsignite2023), and for pricing change details, see [Azure SQL Database Hyperscale – lower, simplified pricing!](https://techcommunity.microsoft.com/t5/azure-sql-blog/azure-sql-database-hyperscale-lower-simplified-pricing/ba-p/3982209).|
 
 ### November 2023
 

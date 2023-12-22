@@ -890,6 +890,8 @@
         href: database/develop-cplusplus-simple.md
       - name: Excel
         href: database/connect-excel.md
+      - name: Develop a Kubernetes app with Azure SQL Database
+        href: database/develop-kubernetes-application.md
       - name: Ports - ADO.NET
         href: database/adonet-v12-develop-direct-route-ports.md
       - name: Multi-tenant SaaS

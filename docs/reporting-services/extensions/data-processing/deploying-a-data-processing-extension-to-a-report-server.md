@@ -46,7 +46,7 @@ helpviewer_keywords:
   
      The value for **Name** is the unique name of the data processing extension. The value for **Type** is a comma-separated list that includes an entry for the fully qualified namespace of your class that implements the <xref:Microsoft.ReportingServices.Interfaces.IExtension> and <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> interfaces, followed by the name of your assembly (not including the .dll file extension). By default, data processing extensions are visible. To hide an extension from user interfaces, such as Report Manager, add a **Visible** attribute to the **Extension** element, and set it to **false**.  
   
-5.  Add a code group for your custom assembly that grants **FullTrust** permission for your extension. You do this by adding the code group to the rssrvpolicy.config file located by default in %ProgramFiles%\Microsoft SQL Server\\<MSRS10_50.\<*Instance Name*>\Reporting Services\ReportServer. Your code group might look like the following:  
+5.  Add a code group for your custom assembly that grants **FullTrust** permission for your extension. You do this step by adding the code group to the rssrvpolicy.config file located by default in %ProgramFiles%\Microsoft SQL Server\\<MSRS10_50.\<*Instance Name*>\Reporting Services\ReportServer. Your code group might look like the following example:  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  

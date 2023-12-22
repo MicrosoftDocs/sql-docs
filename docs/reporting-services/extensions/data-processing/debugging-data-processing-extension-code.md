@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "data processing extensions [Reporting Services], debugging"
 ---
 # Debug data processing extension code
-  The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] provides several debugging tools that can help you analyze your data processing extension code and locate errors in it. The tool that works best will depend on what you are trying to accomplish. This example uses [!INCLUDE[vsprvs2008](../../../includes/vsprvs2008-md.md)].  
+  The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] provides several debugging tools that can help you analyze your data processing extension code and locate errors in it. The tool that works best depends on what you are trying to accomplish. This example uses [!INCLUDE[vsprvs2008](../../../includes/vsprvs2008-md.md)].  
   
 #### Debug your data processing extension code  
   
@@ -32,7 +32,7 @@ helpviewer_keywords:
   
 6.  From the list of processes, select the devenv.exe process that corresponds to your Report Project and choose **Attach**.  
   
-7.  Define your report data source using the **Report Data** tab of the Report Project. You will most likely use the generic Query Designer to execute a query against your custom data source. This should invoke the debugger and execute code corresponding to your break points.  
+7.  Define your report data source using the **Report Data** tab of the Report Project. You most likely use the generic Query Designer to execute a query against your custom data source. This action should invoke the debugger and execute code corresponding to your break points.  
   
 8.  Step through your code using the F11 key. For more information about using [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] for debugging, see your [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] documentation.  
   

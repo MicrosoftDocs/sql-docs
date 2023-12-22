@@ -1,6 +1,6 @@
 ---
 title: "Use an external dataset with Reporting Services"
-description: Create custom data processing extensions in Reporting Services so that you can integrate custom DataSet objects that are created by external applications.
+description: Create custom data processing extensions in Reporting Services so that you can integrate custom DataSet objects that external applications create.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/06/2017
@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "external DataSet objects [Reporting Services]"
 ---
 # Use an external dataset with Reporting Services
-  The **DataSet** object is central to supporting disconnected, distributed data scenarios with [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. The **DataSet** object is a memory-resident representation of data that provides a consistent relational programming model regardless of the data source. It can be used with multiple different data sources, with XML data, or to manage data local to the application. The **DataSet** object represents a complete set of data, including related tables, constraints, and relationships among the tables. Because of the **DataSet** object's versatility in storing and exposing data, your data may often be processed and transformed into a **DataSet** object before any reporting on that data occurs.  
+  The **DataSet** object is central to supporting disconnected, distributed data scenarios with [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. The **DataSet** object is a memory-resident representation of data that provides a consistent relational programming model regardless of the data source. It can be used with multiple different data sources, with XML data, or to manage data local to the application. The **DataSet** object represents a complete set of data, including related tables, constraints, and relationships among the tables. Because of the **DataSet** object's versatility in storing and exposing data, your data might often be processed and transformed into a **DataSet** object before any reporting on that data occurs.  
   
- With [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extensions, you can integrate any custom **DataSet** objects that are created by external applications. To accomplish this, you create a custom data processing extension in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] that acts like a bridge between your **DataSet** object and the report server. Most of the code for processing this **DataSet** object is contained in the **DataReader** class that you create.  
+ With [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extensions, you can integrate any custom **DataSet** objects that are created by external applications. To accomplish this integration, you create a custom data processing extension in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] that acts like a bridge between your **DataSet** object and the report server. Most of the code for processing this **DataSet** object is contained in the **DataReader** class that you create.  
   
  The first step in exposing your **DataSet** object to the report server is to implement a provider specific method in your **DataReader** class that can populate a **DataSet** object. The following example shows how to load static data into a **DataSet** object by using a provider-specific method in your **DataReader** class.  
   

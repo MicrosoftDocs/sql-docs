@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "assemblies [Reporting Services], data processing extension deployments"
 ---
 # Deploy a data processing extension to Report Designer
-  Report Designer uses data processing extensions for retrieving and processing data while you are designing reports. You should deploy your data processing extension assembly to Report Designer as a private assembly. You also need to make an entry in the Report Designer configuration file, RSReportDesigner.config.  
+  Report Designer uses data processing extensions for retrieving and processing data while you design reports. You should deploy your data processing extension assembly to Report Designer as a private assembly. You also need to make an entry in the Report Designer configuration file, RSReportDesigner.config.  
   
 #### Deploy a data processing extension assembly  
   
@@ -33,7 +33,7 @@ helpviewer_keywords:
     </Extensions>  
     ```  
   
-4.  Add an entry for your data processing extension which includes an **Extension** element with values for the **Name**, **Type**, and **Visible** attributes. Your entry might look like the following:  
+4.  Add an entry for your data processing extension that includes an **Extension** element with values for the **Name**, **Type**, and **Visible** attributes. Your entry might look like the following example:  
   
     ```  
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, AssemblyName" />  
@@ -41,7 +41,7 @@ helpviewer_keywords:
   
      The value for **Name** is the unique name of the data processing extension. The value for **Type** is a comma-separated list that includes an entry for the fully qualified namespace of your class that implements the <xref:Microsoft.ReportingServices.Interfaces.IExtension> and <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> interfaces, followed by the name of your assembly (not including the .dll file extension). By default, data processing extensions are visible. To hide an extension from user interfaces, such as Report Designer, add a **Visible** attribute to the **Extension** element, and set it to **false**.  
   
-5.  Finally, add a code group for your custom assembly that grants **FullTrust** permission for your extension. You do this by adding the code group to the rspreviewpolicy.config file located by default in C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies. Your code group might look like the following:  
+5.  Finally, add a code group for your custom assembly that grants **FullTrust** permission for your extension. You do this step by adding the code group to the rspreviewpolicy.config file located by default in C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies. Your code group might look like the following example:  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -59,7 +59,7 @@ helpviewer_keywords:
  URL membership is only one of many membership conditions you might choose for your data processing extension. For more information about code access security in [!INCLUDE[ssRSversion2005](../../../includes/ssrsversion2005-md.md)], see [Secure development &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
   
 ## Generic query designer  
- Report Designer provides a generic query designer that you can use with custom data processing extensions. This designer consists of two panes: a query pane and a results pane. You can use the generic designer to write queries that are not supported by the graphical interface. Unlike the graphical query designer, the generic query designer does not check query syntax or restructure the query.  
+ Report Designer provides a generic query designer that you can use with custom data processing extensions. This designer consists of two panes: a query pane and a results pane. You can use the generic designer to write queries that the graphical interface doesn't support. Unlike the graphical query designer, the generic query designer doesn't check query syntax or restructure the query.  
   
 #### Enable the generic query designer for a custom extension  
   
@@ -70,7 +70,7 @@ helpviewer_keywords:
     ```  
   
 ## Verify the deployment  
- Before you can verify deployment, you must close all instances of [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] on your local computer. After you have ended all current sessions, you can verify whether your data processing extension was deployed successfully to Report Designer by creating a new report project in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. Your extension should be included in the list of available data source types when you create a new data set for your report.  
+ Before you can verify deployment, you must close all instances of [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] on your local computer. After you end all current sessions, you can verify whether your data processing extension was deployed successfully to Report Designer by creating a new report project in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. Your extension should be included in the list of available data source types when you create a new data set for your report.  
   
 ## Related content
 

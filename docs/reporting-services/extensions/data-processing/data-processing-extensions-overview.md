@@ -21,16 +21,16 @@ helpviewer_keywords:
 |Data processing extension for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Uses the .NET Framework Data Provider for SQL Server to connect to and retrieve data from the [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)].|  
 |Data processing extension for OLE DB|Uses the .NET Framework Data Provider for OLE DB. With this extension, the report server can query any data source that has an OLE DB provider.|  
 |Data processing extension for Oracle|Uses the .NET Framework Data Provider for Oracle. With this extension, the report server can access Oracle data sources through Oracle client connectivity software.|  
-|Data processing extension for ODBC|Uses the .NET Framework Data Provider for ODBC. With this extension, the report server can access data in any database for which there is an ODBC driver.|  
+|Data processing extension for ODBC|Uses the .NET Framework Data Provider for ODBC. With this extension, the report server can access data in any database for which there's an ODBC driver.|  
   
  You can use the [!INCLUDE[ssRS](../../../includes/ssrs.md)] data processing API to add custom data processing to your report server.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] has built-in support for data providers in the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. If you have already implemented a full data provider, you do not need to implement a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension. However, you should consider extending your data provider to include functionality specific to [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2005, which includes secure connection credentials and server-side aggregates.  
   
- Each of the data processing extensions included with [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] uses a common set of interfaces. This ensures that each extension implements comparable functionality.  
+ Each of the data processing extensions included with [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] use a common set of interfaces. These common interfaces ensure that each extension implements comparable functionality.  
   
- You can develop data processing extensions for your own data sources, or you can use the interfaces to add an additional layer of data processing to common database infrastructures. You can deploy your custom data processing extensions to enable seamless integration of data into the existing report servers in your organization. You can also use them as part of a custom reporting suite that you provide to your consumers.  
+ You can develop data processing extensions for your own data sources, or you can use the interfaces to add another layer of data processing to common database infrastructures. You can deploy your custom data processing extensions to enable seamless integration of data into the existing report servers in your organization. You can also use them as part of a custom reporting suite that you provide to your consumers.  
 
 :::image type="content" source="../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif" alt-text="Screenshot of the Reporting Services data processing extension architecture.":::  
 Reporting Services data processing extension architecture  
@@ -52,7 +52,7 @@ Reporting Services data processing extension architecture
   
 1.  The report server creates a connection object and passes in the connection string and credentials associated with the report.  
   
-2.  The command text of the report is used to create a command object. In the process, the data processing extension may include code that parses the command text and creates any parameters for the command.  
+2.  The command text of the report is used to create a command object. In the process, the data processing extension might include code that parses the command text and creates any parameters for the command.  
   
 3.  Once the command object and any parameters are processed, a data reader is generated that returns a result set and enables the report server to associate the report data with the report layout.  
   
@@ -61,7 +61,7 @@ Reporting Services data processing extension architecture
   
 -   A deployment computer with Report Designer or a report server installed.  
   
--   A development computer with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs2005](../../../includes/vsprvs2005-md.md)] or above, or the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK) installed.  
+-   A development computer with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs2005](../../../includes/vsprvs2005-md.md)] or greater, or the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK) installed.  
   
 -   An in-depth understanding of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] features and capabilities.  
   

@@ -22,7 +22,7 @@ helpviewer_keywords:
  Introduces how to write a custom data processing extension for [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  [Prepare to implement a data processing extension](../../../reporting-services/extensions/data-processing/preparing-to-implement-a-data-processing-extension.md)  
- Describes the interfaces available when implementing an [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension, as well as when you are required to implement a particular interface.  
+ Describes the interfaces available when implementing an [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension, and when you're required to implement a particular interface.  
   
  [Create a data processing extension library](../../../reporting-services/extensions/data-processing/creating-a-data-processing-extension-library.md)  
  Describes assigning a namespace for your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension and compiling your data processing extension into a library DLL.  

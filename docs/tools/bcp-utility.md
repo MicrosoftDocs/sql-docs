@@ -45,7 +45,7 @@ The **bcp** utility can be used to import large numbers of new rows into [!INCLU
 > [!NOTE]  
 > If you use **bcp** to back up your data, create a format file to record the data format. **bcp** data files **don't include** any schema or format information, so if a table or view is dropped and you don't have a format file, you might be unable to import the data.
 
-[!INCLUDE [entra-id](../../includes/entra-id.md)]
+[!INCLUDE [entra-id](../includes/entra-id.md)]
 
 ## Download the latest version of the bcp utility
 

@@ -19,6 +19,7 @@ This article lists SQL Server Migration Assistant (SSMA) for SAP ASE (formerly S
 
 ## SSMA v9.5
 The v9.5 release of SSMA for SAP ASE contains the following changes:
+
 * Support for exclude schema in SSMA console mode
 
 ## SSMA v9.4

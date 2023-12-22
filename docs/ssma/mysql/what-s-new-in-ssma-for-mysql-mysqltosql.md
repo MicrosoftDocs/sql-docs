@@ -23,7 +23,7 @@ This article lists SQL Server Migration Assistant (SSMA) for MySQL changes in ea
 The v9.5 release of SSMA for MySQL contains the following changes:
 
 - Support for exclude schema option in console mode
-  
+
 ## SSMA v9.4
 
 The v9.4 release of SSMA for MySQL contains the following changes:

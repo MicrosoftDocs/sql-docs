@@ -32,7 +32,7 @@ helpviewer_keywords:
   
 6.  From the list of processes, select the aspnet_wp.exe process (or w3wp.exe if your application is deployed on IIS 6.0), and select **Attach**.  
   
-7.  Define a new subscription using your delivery extension. You most likely use Report Manager or the SOAP API. This action should invoke the debugger and execute code corresponding to your break points.  
+7.  Define a new subscription using your delivery extension. For this step, you likely use Report Manager or the SOAP API. This action should invoke the debugger and execute code corresponding to your break points.  
   
 8.  Step through your code using the **F11** key. For more information about using [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] for debugging, see your [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] documentation.  
   

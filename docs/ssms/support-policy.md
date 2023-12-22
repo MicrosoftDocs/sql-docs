@@ -27,7 +27,7 @@ For the best experience, we recommend that you install the most recent version v
 
 Beginning with version 18.0, all security updates, critical updates, hotfixes, and any new features, are released only in the latest point release of a major version. Once a new version of SSMS is released to the public, whether it's a point release within a major version or a major version itself, we recommend that you update to the latest release.
 
-For example, SSMS 19.1 was released in May 2023, and SSMS 19.2 was released in November 2023. If a customer is using SSMS 19.1 and encounters an issue, the customer must upgrade to SSMS 19.2 and determine if the issue still exists. If the issue still exists in SSMS 19.2, it should be reported to the SSMS team. A fix may be then provided in a later release of SSMS.
+For example, SSMS 19.1 was released in May 2023, and SSMS 19.2 was released in November 2023. If a customer is using SSMS 19.1 and encounters an issue, the customer must upgrade to SSMS 19.2 and determine if the issue still exists. If the issue still exists in SSMS 19.2, it should be [reported to the SSMS team](https://aka.ms/ssms-feedback). A fix may be then provided in a later release of SSMS.
 
 The SSMS team doesn't actively back-port fixes to an earlier release.
 

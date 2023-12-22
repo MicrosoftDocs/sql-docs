@@ -20,7 +20,7 @@ helpviewer_keywords:
   
  If a delivery extension is replaced or upgraded, all subscriptions that reference the delivery extension remain valid.  
   
- After you have written and compiled your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] delivery extension into a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] library, you must copy the extension to the appropriate directory and add an entry to the appropriate [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] configuration file so the report server can locate it.  
+ After you write and compile your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] delivery extension into a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] library, you must copy the extension to the appropriate directory and add an entry to the appropriate [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] configuration file so the report server can locate it.  
   
 ## Configuration file Extension element  
  Delivery extensions that you deploy to the report server need to be entered as **Extension** elements in the configuration file. The configuration file for the report server is RSReportServer.config.  
@@ -31,7 +31,7 @@ helpviewer_keywords:
 |---------------|-----------------|  
 |**Name**|A unique name for the extension (for example, "Report Server E-Mail" for the e-mail delivery extension or "Report Server FileShare" for the file share delivery extension). The maximum length for the **Name** attribute is 255 characters. The name must be unique among all entries within the **Extension** element of a configuration file. If a duplicate name is present, the report server returns an error.|  
 |**Type**|A comma-separated list that includes the fully qualified namespace along with the name of the assembly.|  
-|**Visible**|A value of **false** indicates that the delivery extension should not be visible in user interfaces. If the attribute is not included, the default value is **true**.|  
+|**Visible**|A value of **false** indicates that the delivery extension shouldn't be visible in user interfaces. If the attribute isn't included, the default value is **true**.|  
   
  For more information about the RSReportServer.config file, see [Reporting Services configuration files](../../../reporting-services/report-server/reporting-services-configuration-files.md).  
   
@@ -65,7 +65,7 @@ helpviewer_keywords:
   
      The value for **Name** is the unique name of the delivery extension. The value for **Type** is a comma-separated list that includes an entry for the fully qualified namespace of your class that implements the <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> interface, followed by the name of your assembly (not including the .dll file extension). By default, delivery extensions are visible. To hide an extension from user interfaces, such as the web portal, add a **Visible** attribute to the **Extension** element, and set it to **false**.  
   
-5.  Finally, add a code group for your custom assembly that grants **FullTrust** permission for your delivery extension. You do this by adding the code group to the rssrvpolicy.config file located by default in %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer. Your code group might look like the following:  
+5.  Finally, add a code group for your custom assembly that grants **FullTrust** permission for your delivery extension. You do this step by adding the code group to the rssrvpolicy.config file located by default in %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer. Your code group might look like the following example:  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  

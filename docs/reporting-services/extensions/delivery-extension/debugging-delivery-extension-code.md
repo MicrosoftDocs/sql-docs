@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "troubleshooting [Reporting Services], delivery extensions"
 ---
 # Debug delivery extension code
-  The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] provides several debugging tools that can help you analyze your delivery extension code and locate errors in it. The tool that works best will depend on what you are trying to accomplish. This example uses [!INCLUDE[vsprvs2008](../../../includes/vsprvs2008-md.md)].  
+  The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] provides several debugging tools that can help you analyze your delivery extension code and locate errors in it. The tool that works best depends on what you are trying to accomplish. This example uses [!INCLUDE[vsprvs2008](../../../includes/vsprvs2008-md.md)].  
   
 #### Debug your delivery extension code  
   
@@ -22,7 +22,7 @@ helpviewer_keywords:
   
 2.  Build the project and deploy your delivery extension assembly and the accompanying .pdb file to the report server and Report Manager. For more information about deployment, see [Deploy a delivery extension](../../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md).  
   
-3.  If you have written a subscription user interface to extend Report Manager, open Internet Explorer and navigate to Report Manager while leaving your delivery extension code open in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. If you do not have a subscription user interface deployed for Report Manager, simply open the client application from which you call your delivery extension using the SOAP API.  
+3.  If you wrote a subscription user interface to extend Report Manager, open Internet Explorer and navigate to Report Manager while leaving your delivery extension code open in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. If you don't have a subscription user interface deployed for Report Manager, open the client application from which you call your delivery extension using the SOAP API.  
   
 4.  Navigate to [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] and your delivery extension project, and set some break points in your code.  
   
@@ -32,7 +32,7 @@ helpviewer_keywords:
   
 6.  From the list of processes, select the aspnet_wp.exe process (or w3wp.exe if your application is deployed on IIS 6.0), and select **Attach**.  
   
-7.  Define a new subscription using your delivery extension. You will most likely use Report Manager or the SOAP API. This should invoke the debugger and execute code corresponding to your break points.  
+7.  Define a new subscription using your delivery extension. You most likely use Report Manager or the SOAP API. This action should invoke the debugger and execute code corresponding to your break points.  
   
 8.  Step through your code using the **F11** key. For more information about using [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] for debugging, see your [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] documentation.  
   

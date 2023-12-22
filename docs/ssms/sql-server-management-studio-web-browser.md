@@ -22,11 +22,11 @@ SQL Server Management Studio (SSMS) can invoke a web browser through menu items,
 
 ## Web browser configuration
 
-Change the setting, **Use system default web browser**, to control what browser is invoked from SSMS.  Within **Tools > Options**, select **Azure Services**, and within **Miscellaneous**, find and alter the setting.
+Change the setting, **Use system default web browser**, to control what browser is invoked from SSMS. Within **Tools > Options**, select **Azure Services**, and within **Miscellaneous**, alter the setting.
 
-The default value for **Use system default web browser** is *False* starting with SSMS 19.1.  When set to *False*, SSMS will use the default browser configured for the user's workstation.  This value is not changed when upgrading from an earlier version of SSMS to version 19.1 or higher.  
+The default value for **Use system default web browser** is *False* starting with SSMS 19.1. When set to *False*, SSMS uses the default browser configured for the user's workstation. This value isn't changed when upgrading from an earlier version of SSMS to version 19.1 or higher.  
 
-For SSMS 19.0.2 and below, the default value is *True*.  When set to *True*, SSMS will invoke Microsoft Internet Explorer for Microsoft Entra authentication.  Internet Explorer was retired in June 2022.  If you encounter an error message titled `Unsupported browser`, change **Use system default web browser** to *False* and configure the default browser for the workstation.
+For SSMS 19.0.2 and below, the default value is *True*. When set to *True*, SSMS invokes Microsoft Internet Explorer for Microsoft Entra authentication. Internet Explorer was retired in June 2022. If you encounter an error message titled `Unsupported browser`, change **Use system default web browser** to *False* and configure the default browser for the workstation.
 
 ## See Also
 

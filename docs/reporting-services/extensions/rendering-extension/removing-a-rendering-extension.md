@@ -1,6 +1,6 @@
 ---
 title: "Remove a rendering extension"
-description: Find out how to remove a rendering extension from Reporting Services so that it is no longer available to the report server and Report Designer.
+description: Find out how to remove a rendering extension from Reporting Services so that it's no longer available to the report server and Report Designer.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/18/2017
@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "rendering extensions [Reporting Services], removing"
 ---
 # Remove a rendering extension
-  To remove a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] rendering extension, simply remove the **Extension** element for your rendering extension from the rsreportserver.config file, located in **%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<Instance Name>\Reporting Services\ReportServer** folder. If you made entries for a Report Designer as well as a report server, remove the **Extension** element from the [RSReportDesigner configuration file](../../../reporting-services/report-server/rsreportdesigner-configuration-file.md) as well. After the configuration information is removed, the rendering extension is no longer available to the component.  
+  To remove a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] rendering extension, remove the **Extension** element for your rendering extension from the rsreportserver.config file, located in **%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<Instance Name>\Reporting Services\ReportServer** folder. If you made entries for a Report Designer and a report server, remove the **Extension** element from the [RSReportDesigner configuration file](../../../reporting-services/report-server/rsreportdesigner-configuration-file.md) as well. After the configuration information is removed, the rendering extension is no longer available to the component.  
   
 ## Related content
 

@@ -15,10 +15,10 @@ helpviewer_keywords:
   - "rendering extensions [Reporting Services], deploying"
 ---
 # Deploy a rendering extension
-  After you have written and compiled your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report rendering extension into a [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] library, you need to make it discoverable by the report server and by Report Designer. To do so, copy the extension to the appropriate directory and add entries to the appropriate [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] configuration files.  
+  After you write and compile your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report rendering extension into a [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] library, you need to make it discoverable by the report server and by Report Designer. To do so, copy the extension to the appropriate directory and add entries to the appropriate [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] configuration files.  
   
 ## Configuration file rendering Extension element  
- Once a rendering extension has been compiled into a .DLL, you add an entry into the rsreportserver.config file. By default, the location is %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer. The parent element is \<Render>. Under the Render element is an Extension element for each rendering extension. The **Extension** element contains two attributes, Name and Type.  
+ Once a rendering extension compiles into a .DLL, you add an entry into the rsreportserver.config file. By default, the location is %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer. The parent element is \<Render>. Under the Render element, is an Extension element for each rendering extension. The **Extension** element contains two attributes, Name and Type.  
   
  The following table describes the attributes for the **Extension** element for rendering extensions:  
   
@@ -26,8 +26,8 @@ helpviewer_keywords:
 |---------------|-----------------|  
 |**Name**|A unique name for the extension. The maximum length for the **Name** attribute is 255 characters. The name must be unique among all entries within the **Extensions** element of a configuration file. If a duplicate name is present, the report server returns an error.|  
 |**Type**|A comma-separated list that includes the fully qualified namespace along with the name of the assembly.|  
-|**Visible**|A value of **false** indicates that the rendering extension should not be visible in user interfaces. If the attribute is not included, the default value is **true**.|  
-|**LogAllExecutionRequests**|A value of **false** indicates that an entry is logged for only the first report execution in a session. If the attribute is not included, the default value is **true**.<br /><br /> For example, this setting determines whether to log an entry for only the first page rendered in a report (when **false**) or an entry for each page rendered in the report (when **true**).|  
+|**Visible**|A value of **false** indicates that the rendering extension shouldn't be visible in user interfaces. If the attribute isn't included, the default value is **true**.|  
+|**LogAllExecutionRequests**|A value of **false** indicates that an entry is logged for only the first report execution in a session. If the attribute isn't included, the default value is **true**.<br /><br /> For example, this setting determines whether to log an entry for only the first page rendered in a report (when **false**) or an entry for each page rendered in the report (when **true**).|  
   
  For more information, see [RsReportServer.config configuration file](../../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   

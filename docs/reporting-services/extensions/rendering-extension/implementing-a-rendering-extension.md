@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "rendering extensions [Reporting Services], implementing"
 ---
 # Implement a rendering extension
-  A rendering extension is a component or module of a report server that transforms report data and layout information into a device-specific format. SQL Server Reporting Services includes six rendering extensions: HTML, Excel, Word, CSV or Text, XML, Image, and PDF. You can create additional rendering extensions to generate reports in other formats.  
+  A rendering extension is a component or module of a report server that transforms report data and layout information into a device-specific format. SQL Server Reporting Services includes six rendering extensions: HTML, Excel, Word, CSV or Text, XML, Image, and PDF. You can create other rendering extensions to generate reports in other formats.  
   
 > [!NOTE]  
 >  To determine which rendering extensions are available, you can view the list of installed extensions in the RSReportServer.config file.  

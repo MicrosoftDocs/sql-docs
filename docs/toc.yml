@@ -15561,6 +15561,10 @@ items:
         href: relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md
       - name: sp_db_selective_xml_index
         href: relational-databases/system-stored-procedures/sp-db-selective-xml-index-transact-sql.md
+    - name: Extended Events
+      items:
+      - name: sp_trace_generateevent
+        href: relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md
   - name: System tables
     href: relational-databases/system-tables/system-tables-transact-sql.md
     items:

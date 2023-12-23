@@ -179,9 +179,9 @@ GO
 
 EXEC sp_addextendedproperty @name = N'Caption',
     @value = 'Postal code is a required column.',
-    @level0type = N'Schema', @level0name = 'Person',
-    @level1type = N'Table', @level1name = 'Address',
-    @level2type = N'Column', @level2name = 'PostalCode';
+    @level0type = 'Schema', @level0name = N'Person',
+    @level1type = 'Table', @level1name = N'Address',
+    @level2type = 'Column', @level2name = N'PostalCode';
 GO
 ```
 
@@ -195,9 +195,9 @@ GO
 
 EXEC sp_addextendedproperty @name = N'Input Mask ',
     @value = '99999 or 99999-9999 or #### ###',
-    @level0type = N'Schema', @level0name = 'Person',
-    @level1type = N'Table', @level1name = 'Address',
-    @level2type = N'Column', @level2name = 'PostalCode';
+    @level0type = 'Schema', @level0name = N'Person',
+    @level1type = 'Table', @level1name = N'Address',
+    @level2type = 'Column', @level2name = N'PostalCode';
 GO
 ```
 
@@ -211,7 +211,7 @@ GO
 
 EXEC sys.sp_addextendedproperty @name = N'MS_DescriptionExample',
     @value = N'Primary filegroup for the AdventureWorks2022 sample database.',
-    @level0type = N'FILEGROUP', @level0name = 'PRIMARY';
+    @level0type = 'FILEGROUP', @level0name = N'PRIMARY';
 GO
 ```
 
@@ -225,7 +225,7 @@ GO
 
 EXEC sys.sp_addextendedproperty @name = N'MS_DescriptionExample',
     @value = N'Contains objects related to employees and departments.',
-    @level0type = N'SCHEMA', @level0name = 'HumanResources';
+    @level0type = 'SCHEMA', @level0name = N'HumanResources';
 ```
 
 ### F. Add an extended property to a table
@@ -238,8 +238,8 @@ GO
 
 EXEC sys.sp_addextendedproperty @name = N'MS_DescriptionExample',
     @value = N'Street address information for customers, employees, and vendors.',
-    @level0type = N'SCHEMA', @level0name = 'Person',
-    @level1type = N'TABLE', @level1name = 'Address';
+    @level0type = 'SCHEMA', @level0name = N'Person',
+    @level1type = 'TABLE', @level1name = N'Address';
 GO
 ```
 
@@ -257,7 +257,7 @@ GO
 
 EXEC sys.sp_addextendedproperty @name = N'MS_Description',
     @value = N'Application Role for the Purchasing Department.',
-    @level0type = N'USER', @level0name = 'Buyers';
+    @level0type = 'USER', @level0name = N'Buyers';
 ```
 
 ### H. Add an extended property to a type
@@ -270,8 +270,8 @@ GO
 
 EXEC sys.sp_addextendedproperty @name = N'MS_Description',
     @value = N'Data type (alias) to use for any column that represents an order number. For example a sales order number or purchase order number.',
-    @level0type = N'SCHEMA', @level0name = N'dbo',
-    @level1type = N'TYPE', @level1name = N'OrderNumber';
+    @level0type = 'SCHEMA', @level0name = N'dbo',
+    @level1type = 'TYPE', @level1name = N'OrderNumber';
 ```
 
 ### I. Add an extended property to a user
@@ -287,7 +287,7 @@ GO
 
 EXEC sys.sp_addextendedproperty @name = N'MS_Description',
     @value = N'User for an application.',
-    @level0type = N'USER', @level0name = N'CustomApp';
+    @level0type = 'USER', @level0name = N'CustomApp';
 ```
 
 ## See also

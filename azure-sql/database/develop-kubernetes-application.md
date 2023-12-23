@@ -12,7 +12,7 @@ ms.topic: tutorial
 ms.custom:
   - "references-regions"
 ---
-# Develop a Kubernetes Application for Azure SQL Database
+# Develop a Kubernetes application for Azure SQL Database
 
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
@@ -76,9 +76,8 @@ For the PoC, the team requires the following prerequisites:
     - You can [install the Python version of the Flask library](https://flask.palletsprojects.com/en/2.3.x/installation/).
 1. Next, the team installed the Azure CLI tool, easily identified with `az` syntax. This cross-platform tool allows a command-line and scripted approach to the PoC, so that they can repeat the steps as they make changes and improvements. 
     - You can [download and install Azure CLI tool](/cli/azure/install-azure-cli).
+1. With Azure CLI set up, the team signs in to their Azure subscription, and sets the subscription name they used for the PoC. They then ensured the Azure SQL Database server and database is accessible to the subscription:
 
-   With Azure CLI set up, the team signs in to their Azure subscription, and sets the subscription name they used for the PoC. They then ensured the Azure SQL Database server and database is accessible to the subscription:
-   
    ```azurecli
    az login
    az account set --name "ReplaceWith_AzureSubscriptionName"

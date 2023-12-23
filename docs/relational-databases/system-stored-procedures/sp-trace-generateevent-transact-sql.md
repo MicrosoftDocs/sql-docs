@@ -23,7 +23,7 @@ dev_langs:
 Creates a user-defined event. The event can be collected using either [SQL Trace](../sql-trace/sql-trace.md) or [Extended Events](../extended-events/extended-events.md).
 
 > [!NOTE]
-> This stored procedure is **not** deprecated. All other trace-related stored procedures are deprecated.
+> This stored procedure is **not** deprecated. All other SQL Trace related stored procedures are deprecated.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -64,13 +64,13 @@ The following table describes the return code values that users may get, followi
 
 ## Remarks
 
-To capture events fired by this stored procedure using [Extended Events](../extended-events/extended-events.md), add the `user_info` event to an event session. For more information, see [CREATE EVENT SESSION](../../t-sql/statements/create-event-session-transact-sql.md). The `user_info` event is fired for any user-defined event ID value passed to the `@eventid` parameter.
-
-`sp_trace_generateevent` performs many of the actions previously executed by the `xp_trace_*` extended stored procedures. Use `sp_trace_generateevent` instead of `xp_trace_generate_event`.
+To capture the events fired by this stored procedure using [Extended Events](../extended-events/extended-events.md), add the `user_info` event to an event session. For more information, see [CREATE EVENT SESSION](../../t-sql/statements/create-event-session-transact-sql.md). The `user_info` event is fired for any user-defined event ID value passed to the `@eventid` parameter.
 
 Only ID numbers of user-defined events may be used with `sp_trace_generateevent`. An error is raised if other event ID numbers are used.
 
 The parameters of this stored procedure are strictly typed. If the data type of the value passed to a parameter does not match the parameter data type specified in its description, the stored procedure returns an error.
+
+`sp_trace_generateevent` performs many of the actions previously executed by the `xp_trace_*` extended stored procedures. Use `sp_trace_generateevent` instead of `xp_trace_generate_event`.
 
 ## Permissions
 
@@ -80,21 +80,23 @@ In [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and in Azure SQL M
 
 The following example fires a user-defined event when a row is inserted into a table. The event contains the data inserted into the table.
 
+To collect the event fired by this example, [create an extended event session](../extended-events/quick-start-extended-events-in-sql-server.md) and include the `user_info` event, or [create a SQL trace](../sql-trace/create-a-trace-transact-sql.md) and include the `UserConfigurable:0` event.
+
 ```sql
 -- Create a table
-DROP TABLE IF EXISTS dbo.example;
+DROP TABLE IF EXISTS dbo.user_defined_event_example;
 
-CREATE TABLE dbo.example
+CREATE TABLE dbo.user_defined_event_example
 (
 Id int IDENTITY(1,1) PRIMARY KEY,
 Data nvarchar(60) NOT NULL
 );
 
-DROP TRIGGER IF EXISTS trFireEvent;
+DROP TRIGGER IF EXISTS fire_user_defined_event;
 GO
 
 -- Create an insert trigger on the table
-CREATE TRIGGER trFireEvent ON dbo.example
+CREATE TRIGGER fire_user_defined_event ON dbo.user_defined_event_example
 FOR INSERT
 AS
 DECLARE @EventData varbinary(8000);
@@ -109,15 +111,12 @@ SELECT @EventData = CAST((
 -- Fire the event with the payload carrying inserted rows as JSON
 EXEC dbo.sp_trace_generateevent
     @eventid = 82,
-    @userinfo = N'Inserted rows into dbo.example',
+    @userinfo = N'Inserted rows into dbo.user_defined_event_example',
     @userdata = @EventData;
 GO
 
--- Create an extended event session with the user_info event,
--- or a SQL trace with the UserConfigurable:0 event.
-
 -- Insert a row into the table. The trigger fires the event.
-INSERT INTO dbo.example (Data)
+INSERT INTO dbo.user_defined_event_example (Data)
 VALUES (N'Example data');
 
 -- Copy the binary payload from the event and cast it to a string with the JSON value

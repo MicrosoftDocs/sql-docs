@@ -179,9 +179,9 @@ GO
 
 EXEC sp_addextendedproperty @name = N'Caption',
     @value = 'Postal code is a required column.',
-    @level0type = N'Schema', @level0name = 'Person',
-    @level1type = N'Table', @level1name = 'Address',
-    @level2type = N'Column', @level2name = 'PostalCode';
+    @level0type = N'SCHEMA', @level0name = 'Person',
+    @level1type = N'TABLE', @level1name = 'Address',
+    @level2type = N'COLUMN', @level2name = 'PostalCode';
 GO
 ```
 
@@ -195,9 +195,9 @@ GO
 
 EXEC sp_addextendedproperty @name = N'Input Mask ',
     @value = '99999 or 99999-9999 or #### ###',
-    @level0type = N'Schema', @level0name = 'Person',
-    @level1type = N'Table', @level1name = 'Address',
-    @level2type = N'Column', @level2name = 'PostalCode';
+    @level0type = N'SCHEMA', @level0name = 'Person',
+    @level1type = N'TABLE', @level1name = 'Address',
+    @level2type = N'COLUMN', @level2name = 'PostalCode';
 GO
 ```
 

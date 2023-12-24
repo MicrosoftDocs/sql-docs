@@ -105,7 +105,7 @@ For security information, see [EXECUTE AS (Transact-SQL)](../../t-sql/statements
   
 ### <a id="Permissions"></a> Permissions
 
-For permissions information, see [Permissions](execute-transact-sql.md#permissions) in [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md).
+For permissions information, see [Permissions](../../t-sql/language-elements/execute-transact-sql.md#permissions) in [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md).
   
 ## Stored procedure execution
 

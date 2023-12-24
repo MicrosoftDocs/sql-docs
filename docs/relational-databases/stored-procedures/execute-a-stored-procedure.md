@@ -23,7 +23,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 This article describes how to execute a stored procedure in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- There are different ways to execute a stored procedure. The first and most common approach is for an application or user to call the procedure. Another approach is to set the stored procedure to run automatically when an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts. When a procedure is called by an application or user, the [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE or EXEC keyword is explicitly stated in the call. The procedure can be called and executed without the EXEC keyword if the procedure is the first statement in the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch.
+There are different ways to execute a stored procedure. The first and most common approach is for an application or user to call the procedure. Another approach is to set the stored procedure to run automatically when an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts.  
+  
+When a procedure is called by an application or user, the [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE or EXEC keyword is explicitly stated in the call. The procedure can be called and executed without the EXEC keyword if the procedure is the first statement in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch.
   
 ## <a id="Restrictions"></a> Limitations and restrictions
   
@@ -51,7 +53,7 @@ EXEC sys.sp_who;
   
 ### User-defined stored procedures
   
-When executing a user-defined procedure, it's best to qualify the procedure name with the schema name. This practice gives a small performance boost because the [!INCLUDE[ssDE](../../includes/ssde-md.md)] doesn't have to search multiple schemas. This practice also prevents executing the wrong procedure if a database has procedures with the same name in multiple schemas.  
+When executing a user-defined procedure, it's best to qualify the procedure name with the schema name. This practice gives a small performance boost because the [!INCLUDE[ssDE](../../includes/ssde-md.md)] doesn't have to search multiple schemas. Using the schema name also prevents executing the wrong procedure if a database has procedures with the same name in multiple schemas.  
 
 The following examples demonstrate the recommended method to execute a user-defined procedure. This procedure accepts one input parameter. For information about specifying input and output parameters, see [Specify parameters in a stored procedure](../../relational-databases/stored-procedures/specify-parameters.md).  
   
@@ -97,7 +99,7 @@ There's no limit to the number of startup procedures you can have, but each star
 > Don't return any result sets from a procedure that's executed automatically. Because the procedure is being executed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instead of an application or user, there's nowhere for result sets to go.  
   
 > [!NOTE]
-> Azure SQL Database is designed to isolate features from dependencies on the master database. As such, [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that configure server-level options aren't available in Azure SQL. You can often find appropriate alternatives from other Azure services such as [Elastic jobs (preview)](/azure/azure-sql/database/elastic-jobs-overview) or [Azure Automation](/azure/azure-sql/database/automation-manage).
+> Azure SQL Database is designed to isolate features from dependencies on the `master` database. As such, [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that configure server-level options aren't available in Azure SQL. You can often find appropriate alternatives from other Azure services such as [Elastic jobs (preview)](/azure/azure-sql/database/elastic-jobs-overview) or [Azure Automation](/azure/azure-sql/database/automation-manage).
 
 ### <a id="Security"></a> Security
 

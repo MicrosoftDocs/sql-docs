@@ -1,6 +1,6 @@
 ---
 title: Create an event session with an event_file target
-description: Provides example steps to create a database-scoped event session in Azure SQL, using Azure Storage for the event_file target.
+description: Provides example steps to create an event session in Azure SQL, using Azure Storage for the event_file target.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma, randolphwest

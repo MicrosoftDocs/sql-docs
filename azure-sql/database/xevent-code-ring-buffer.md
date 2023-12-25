@@ -1,17 +1,17 @@
 ---
-title: Create a session with a ring_buffer target in memory
+title: Create an event session with a ring_buffer target in memory
 description: Provides example steps to create a database-scoped event session in Azure SQL, using the in-memory event_file target.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 10/22/2023
+ms.date: 12/26/2023
 ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: sample
 ms.custom: sqldbrb=1
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
-# Create a session with a ring_buffer target in memory
+# Create an event session with a ring_buffer target in memory
 
 [!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
@@ -25,9 +25,9 @@ The high-level steps in this walkthrough are:
 
 With the `ring_buffer` target, the steps are simpler than with the `event_file` target because you don't need to store event data in Azure Storage.
 
-## Create and start an Event session with a ring_buffer target
+## Create and start an event session with a ring_buffer target
 
-To create a new event session in SQL Server Management Studio (SSMS), expand the **Extended Events** node, which is found under the database folder in Azure SQL Database, and under the **Management** folder in Azure SQL Managed Instance. Right-click on the **Sessions** folder, and select **New Session...**. On the **General** page, enter a name for the session, which is `example-session` in this example. On the **Events** page, select one or more events to add to the session. In this example, we selected the `sql_batch_starting` event.
+To create a new event session in SQL Server Management Studio (SSMS), expand the **Extended Events** node. This node is under the database folder in Azure SQL Database, and under the **Management** folder in Azure SQL Managed Instance. Right-click on the **Sessions** folder, and select **New Session...**. On the **General** page, enter a name for the session, which is `example-session` in this example. On the **Events** page, select one or more events to add to the session. In this example, we selected the `sql_batch_starting` event.
 
 :::image type="content" source="media/xevents/create-event-session-events.png" alt-text="Screenshot of the New Session SSMS dialog showing the event selection page with the sql_batch_starting event selected.":::
 

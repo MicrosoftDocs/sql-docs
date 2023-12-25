@@ -1,17 +1,17 @@
 ---
-title: Create a session with an event_file target in Azure Storage
+title: Create an event session with an event_file target
 description: Provides example steps to create a database-scoped event session in Azure SQL, using Azure Storage for the event_file target.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 12/25/2023
+ms.date: 12/26/2023
 ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: sample
 ms.custom: sqldbrb=1
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
-# Create a session with an event_file target in Azure Storage
+# Create an event session with an event_file target in Azure Storage
 
 [!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
@@ -22,7 +22,7 @@ The high-level steps in this walkthrough are:
 1. Create an Azure Storage account, or find an existing suitable account to use
 1. Create a container in this storage account
 1. Create a SAS token with the required access for this container
-1. Create a credential to store the SAS token in the database where you create the event session
+1. Create a credential to store the SAS token in the database or managed instance where you create the event session
 1. Create, start, and use an event session
 
 ## Create a storage account and container
@@ -32,10 +32,10 @@ For a detailed description of how to create a storage account in Azure Storage, 
 We recommended you use an account that:
 
 - Is a `Standard general-purpose v2` account.
-- Has its redundancy type matching the redundancy of the Azure SQL database or elastic pool where event sessions are created.
+- Has its redundancy type matching the redundancy of the Azure SQL database, elastic pool, or managed instance where event sessions are created.
   - For [locally redundant](high-availability-sla.md#locally-redundant-availability) Azure SQL resources, use LRS, GRS, or RA-GRS. For [zone-redundant](high-availability-sla.md#zone-redundant-availability) Azure SQL resources, use ZRS, GZRS, or RA-GZRS. For more information, see [Azure Storage redundancy](/azure/storage/common/storage-redundancy).
 - Uses the `Hot` [blob access tier](/azure/storage/blobs/access-tiers-overview).
-- Is in the same Azure region as the Azure SQL database or elastic pool.
+- Is in the same Azure region as the Azure SQL database, elastic pool, or managed instance.
 
 Next, [create a container](/azure/storage/blobs/blob-containers-portal#create-a-container) in this storage account using Azure portal. You can also create a container [using PowerShell](/azure/storage/blobs/blob-containers-powershell#create-a-container), or [using Azure CLI](/azure/storage/blobs/blob-containers-cli#create-a-container).
 
@@ -99,11 +99,16 @@ WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
      SECRET = 'sp=rwl&st=2023-10-17T23:28:32Z&se=2023-10-18T07:28:32Z&spr=https&sv=2022-11-02&sr=c&sig=REDACTED';
 ```
 
+Before executing this batch, make the following changes:
+
+- In all three occurrences of `https://exampleaccount4xe.blob.core.windows.net/xe-example-container`, replace `exampleaccount4xe` with the name of your storage account, and replace `xe-example-container` with the name of your container.
+- Replace the entire string between the single quotes in the `SECRET` clause with the SAS token you copied in the previous step.
+
 # [SQL Managed Instance](#tab/sqlmi)
 
 Store the SAS token in a server-scoped [credential](/sql/relational-databases/security/authentication-access/credentials-database-engine). Using a client tool such as SSMS or ADS, open a new query window, connect it to the `master` database on the managed instance where you create the event session, and paste the following T-SQL batch.
 
-> [!NOTE]  
+> [!NOTE]
 > Executing the following T-SQL batch requires the `CONTROL` database permission in the `master` database, which is held by the members of the `db_owner` database role in `master`, and by the members of the `sysadmin` server role on the managed instance.
 
 ```sql
@@ -136,18 +141,19 @@ WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
      SECRET = 'sp=rwl&st=2023-10-17T23:28:32Z&se=2023-10-18T07:28:32Z&spr=https&sv=2022-11-02&sr=c&sig=REDACTED';
 ```
 
----
-
 Before executing this batch, make the following changes:
 
+- In the `CREATE MASTER KEY` statement, replace `password-placeholder` with an actual password that will protect the master key. For more information, see [CREATE MASTER KEY](/sql/t-sql/statements/create-master-key-transact-sql).
 - In all three occurrences of `https://exampleaccount4xe.blob.core.windows.net/xe-example-container`, replace `exampleaccount4xe` with the name of your storage account, and replace `xe-example-container` with the name of your container.
 - Replace the entire string between the single quotes in the `SECRET` clause with the SAS token you copied in the previous step.
+
+---
 
 ## Create, start, and stop an Event session
 
 Once the credential with the SAS token is created, you can create the event session. Creating an event session doesn't require the `CONTROL` permission. If the credential with the correct SAS token already exists, you can create event sessions even if you have a more restricted set of permissions. See [permissions](xevent-db-diff-from-svr.md#permissions) for the specific permissions needed.
 
-To create a new event session in SSMS, expand the **Extended Events** node, which is found under the database folder in Azure SQL Database, and under the **Management** folder in Azure SQL Managed Instance. Right-click on the **Sessions** folder, and select **New Session...**. On the **General** page, enter a name for the session, which is `example-session` in this example. On the **Events** page, select one or more events to add to the session. In this example, we selected the `sql_batch_starting` event.
+To create a new event session in SSMS, expand the **Extended Events** node. This node is under the database folder in Azure SQL Database, and under the **Management** folder in Azure SQL Managed Instance. Right-click on the **Sessions** folder, and select **New Session...**. On the **General** page, enter a name for the session, which is `example-session` in this example. On the **Events** page, select one or more events to add to the session. In this example, we selected the `sql_batch_starting` event.
 
 :::image type="content" source="media/xevents/create-event-session-events.png" alt-text="Screenshot of the New Session SSMS dialog showing the event selection page with the sql_batch_starting event selected.":::
 
@@ -213,3 +219,4 @@ For a more detailed walkthrough, see [Create an event session in SSMS](/sql/rela
 - [event_file target](/sql/relational-databases/extended-events/targets-for-extended-events-in-sql-server#event_file-target)
 - [CREATE EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/create-event-session-transact-sql)
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](/sql/t-sql/statements/create-database-scoped-credential-transact-sql)
+- [CREATE CREDENTIAL (Transact-SQL)](/sql/t-sql/statements/create-credential-transact-sql)

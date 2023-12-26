@@ -15,7 +15,7 @@ ms.topic: how-to
 
 [!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article describes how to copy or move a database online across instances in Azure SQL Managed Instance.
+This article describes how to copy or move a database online across instances in Azure SQL Managed Instance. Both database copy and move operations are supported accross different Azure subscriptions within the same Azure tenant.
 
 ## Overview
 
@@ -71,7 +71,7 @@ The **database copy** operation is very similar to database move. The only impor
 Before you can copy or move a database, you must meet the following requirements:
 
 - You must have *read* permissions for the resource group that contains the source managed instance, and you must have *write* permissions at the database level for both the source and destination instances.
-- If the source and destination instances are in different virtual networks, there must be network connectivity between the virtual networks of the two instances, such as with Azure virtual network peering.
+- If the source and destination instances are in different virtual networks, there must be network connectivity between the virtual networks of the two instances, such as with Azure virtual network peering. Also, inbound and outbound trafic on port 5022 and port range 11000-11999 needs to be allowed for the TCP protocol. This applies to both subnets, hosting the source and the destination instance.
 
 ## Copy or move database
 
@@ -219,7 +219,7 @@ FROM
 Consider the following limitations of the copy and move feature:
 
 - The source and destination instances can't be the same.
-- Both the source instance and destination instance need to be in the same Azure subscription and same region.
+- Both the source instance and destination instance need to be in the same Azure region.
 - You can copy and move *user* databases only. Copying and moving *system* databases isn't supported.
 - A database can participate in only a single move or copy operation at a time.
 - The source instance can run up to eight copy or move operations at a time. You can start more than eight operations, but some are queued and processed later, as managed by the service.

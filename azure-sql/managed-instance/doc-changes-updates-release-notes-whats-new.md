@@ -49,6 +49,7 @@ The following table lists the new generally available (GA) features of Azure SQL
 
 | Feature | GA Month | Details |
 | ---| --- |--- |
+| [Cross-subscription database copy and move](database-copy-move-how-to.md)| December 2023 | Refresh of database copy and move functionality with added support for cross-subscription operations. |
 |[Azure SQL triggers for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql) | November 2023 | Azure Functions supports function triggers for Azure SQL Managed Instance. | 
 |[Database copy and move](database-copy-move-how-to.md) | November 2023 | Perform an online database copy or move operation across managed instances. | 
 |[Distributed Transaction Coordinator (DTC)](distributed-transaction-coordinator-dtc.md) | November 2023 | Use DTC to run distributed transactions in mixed environments such as across managed instances, SQL Servers, other relational database management systems (RDBMSs), custom applications and other transaction participants hosted in any environment that can establish network connectivity to Azure.  | 

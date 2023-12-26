@@ -31,11 +31,9 @@ The feature set, functionality, and usage scenarios for Extended Events in Azure
   - An event must occur in the context of a user database to be included in a session.
 - In Azure SQL Managed Instance, you can create both server-scoped and database-scoped event sessions. We recommend using server-scoped event sessions for most scenarios.
 
-Most of the Extended Event documentation applies to Azure SQL Database and Azure SQL Managed Instance as much as it does to SQL Server. The **Applies to** section of each article tells you whether an article applies to the database engine type you use.
-
 ## Get started
 
-There are two examples to help you get started with Extended Events in Azure SQL Database and Azure SQL Managed Instance quickly.
+There are two examples to help you get started with Extended Events in Azure SQL Database and Azure SQL Managed Instance quickly:
 
 - [Create a session with an event_file target in Azure Storage](xevent-code-event-file.md). This example shows you how to capture event data in a file (blob) in Azure Storage using the `event_file` target. Use this if you need to persist captured event data, or if you want to use event viewer in SQL Server Management Studio (SSMS) to analyze captured data.
 - [Create a session with a ring_buffer target in memory](xevent-code-ring-buffer.md). This example shows you how to capture the latest events from an event session in memory using the `ring_buffer` target. Use this as a quick way to look at recent events during ad hoc investigations or troubleshooting, without having to store captured event data.
@@ -69,12 +67,11 @@ Azure SQL Database and Azure SQL Managed Instance support the following targets:
 
 ## Transact-SQL differences
 
-- When you execute the [CREATE EVENT SESSION](/sql/t-sql/statements/create-event-session-transact-sql) command in SQL Server and in Azure SQL Managed Instance, you use the `ON SERVER` clause. In Azure SQL Database, you use the `ON DATABASE` clause instead, because in Azure SQL Database event sessions are database-scoped.
-- The `ON DATABASE` clause must also be used in the [ALTER EVENT SESSION](/sql/t-sql/statements/alter-event-session-transact-sql) and [DROP EVENT SESSION](/sql/t-sql/statements/drop-event-session-transact-sql) statements in Azure SQL Database.
+When you execute the [CREATE EVENT SESSION](/sql/t-sql/statements/create-event-session-transact-sql), [ALTER EVENT SESSION](/sql/t-sql/statements/alter-event-session-transact-sql), and [DROP EVENT SESSION](/sql/t-sql/statements/drop-event-session-transact-sql) statements in SQL Server and in Azure SQL Managed Instance, you use the `ON SERVER` clause. In Azure SQL Database, you use the `ON DATABASE` clause instead, because in Azure SQL Database event sessions are database-scoped.
 
 ## Extended Events catalog views
 
-Extended Events provides several [catalog views](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql). Catalog views tell you about *metadata or definitions* of user-created event sessions in the current database. These views don't return information about instances of active event sessions.
+Extended Events provides several [catalog views](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql). Catalog views tell you about event session *metadata* or *definition*. These views don't return information about instances of active event sessions.
 
 # [SQL Database](#tab/sqldb)
 
@@ -110,7 +107,7 @@ Extended Events provides several [dynamic management views (DMVs)](/sql/relation
 | [sys.dm_xe_database_session_events](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-database-session-events-azure-sql-database) | Returns information about session events. |
 | [sys.dm_xe_database_session_object_columns](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-database-session-object-columns-azure-sql-database) | Shows the configuration values for objects that are bound to a session. |
 | [sys.dm_xe_database_session_targets](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-database-session-targets-azure-sql-database) | Returns information about session targets. |
-| [sys.dm_xe_database_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-database-sessions-azure-sql-database) | Returns a row for each event session that is scoped to the current database. |
+| [sys.dm_xe_database_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-database-sessions-azure-sql-database) | Returns a row for each event session running in the current database. |
 
 # [SQL Managed Instance](#tab/sqlmi)
 
@@ -119,8 +116,8 @@ Extended Events provides several [dynamic management views (DMVs)](/sql/relation
 | [sys.dm_xe_session_event_actions](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-event-actions-transact-sql) | Returns information about event session actions. |
 | [sys.dm_xe_session_events](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-events-transact-sql) | Returns information about session events. |
 | [sys.dm_xe_session_object_columns](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-object-columns-transact-sql) | Shows the configuration values for objects that are bound to a session. |
-| [sys.dm_xe_session_targets](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-azure-transact-sql) | Returns information about session targets. |
-| [sys.dm_xe_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-sessions-azure-sql-transact-sql) | Returns a row for each event session that is scoped to the current database. |
+| [sys.dm_xe_session_targets](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql) | Returns information about session targets. |
+| [sys.dm_xe_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-sessions-transact-sql) | Returns a row for each event session running on the server. |
 
 ---
 
@@ -137,14 +134,14 @@ There are additional Extended Events DMVs that are common to Azure SQL Database,
 
 ## Available events, actions, and targets
 
-Just like in SQL Server, you can obtain available events, actions, and targets using this example query:
+Just like in SQL Server, you can obtain available events, actions, and targets using this query:
 
 ```sql
 SELECT o.object_type,
        p.name AS package_name,
        o.name AS db_object_name,
        o.description AS db_obj_description
-FROM sys.dm_xe_objects  AS o
+FROM sys.dm_xe_objects AS o
 INNER JOIN sys.dm_xe_packages AS p
 ON p.guid = o.package_guid
 WHERE o.object_type IN ('action','event','target')
@@ -191,7 +188,7 @@ ALTER ANY EVENT SESSION OPTION
 
 For information on what each of these permissions controls, see [CREATE EVENT SESSION](/sql/t-sql/statements/create-event-session-transact-sql), [ALTER EVENT SESSION](/sql/t-sql/statements/alter-event-session-transact-sql), and [DROP EVENT SESSION](/sql/t-sql/statements/drop-event-session-transact-sql).
 
-All of these permissions are included in the `CONTROL` permission on the database or managed instance. In Azure SQL Database, the database owner (`dbo`), members of the `db_owner` database role, and the administrator of the logical server hold the database `CONTROL` permission. In Azure SQL Managed Instance, members of the `sysadmin` server role hold the `CONTROL` permission on the instance.
+All of these permissions are included in the `CONTROL` permission on the database or managed instance. In Azure SQL Database, the database owner (`dbo`), members of the `db_owner` database role, and the administrators of the logical server hold the database `CONTROL` permission. In Azure SQL Managed Instance, members of the `sysadmin` server role hold the `CONTROL` permission on the instance.
 
 ## Storage container authorization and control
 
@@ -201,9 +198,9 @@ In Azure SQL Database, you must use a database-scoped credential. In Azure SQL M
 
 The SAS token you create for your Azure Storage container must satisfy the following requirements:
 
-- Have the `rwl` (`Read`, `Write`, `List`) permissions
-- Have the start time and expiry time that encompass the lifetime of the event session
-- Have no IP address restrictions
+- Have the `rwl` (`Read`, `Write`, `List`) permissions.
+- Have the start time and expiry time that encompass the lifetime of the event session.
+- Have no IP address restrictions.
 
 ## Resource governance
 

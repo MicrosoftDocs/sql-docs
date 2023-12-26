@@ -20,7 +20,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-Creates a user-defined event. The event can be collected using either [SQL Trace](../sql-trace/sql-trace.md) or [Extended Events](../extended-events/extended-events.md).
+Creates a user-defined event. The event can be collected using [SQL Trace](../sql-trace/sql-trace.md) or [Extended Events](../extended-events/extended-events.md).
 
 > [!NOTE]
 > This stored procedure is **not** deprecated. All other SQL Trace related stored procedures are deprecated.
@@ -66,7 +66,7 @@ The following table describes the return code values that users may get, followi
 
 To capture the events fired by this stored procedure using [Extended Events](../extended-events/extended-events.md), add the `user_info` event to an event session. For more information, see [CREATE EVENT SESSION](../../t-sql/statements/create-event-session-transact-sql.md). The `user_info` event is fired for any user-defined event ID value passed to the `@eventid` parameter.
 
-Only ID numbers of user-defined events may be used with `sp_trace_generateevent`. An error is raised if other event ID numbers are used.
+Only ID numbers of user-defined events may be used with `sp_trace_generateevent`. An error is raised if any other event ID number is used.
 
 The parameters of this stored procedure are strictly typed. If the data type of the value passed to a parameter does not match the parameter data type specified in its description, the stored procedure returns an error.
 

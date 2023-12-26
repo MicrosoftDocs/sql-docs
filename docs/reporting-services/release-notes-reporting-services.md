@@ -96,6 +96,10 @@ Release Candidate 0 (RC0)
 
 ## SQL Server 2019 Reporting Services
 
+## 15.0.8760.20928, 2023/12/26
+*(Product Version: 15.0.1102.1140)*
+- Fixed permission issue that affected some users in the new Portal experience.
+
 ## 15.0.8738.29460, 2023/12/04
 *(Product Version: 15.0.1102.1129)*
 - New default Portal experience (this can be reverted via setting UsePortalV2 to false in the config table of catalog database) 

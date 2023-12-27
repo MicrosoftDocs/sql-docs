@@ -20,7 +20,7 @@ ms.custom: updatefrequency5
   
  Backup and restore operations are often used to move all or part of a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation:  
   
--   If you are moving just the report server databases, you can use backup and restore or attach and detach to relocate the databases on a different [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. For more information, see [Move the report server databases to another computer &#40;SSRS Native mode&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+-   If you're moving just the report server databases, you can use backup and restore or attach and detach to relocate the databases on a different [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. For more information, see [Move the report server databases to another computer &#40;SSRS Native mode&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
 -   Moving a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation to a new computer is called a migration. When you migrate an installation, you run Setup to install a new report server instance and then copy instance data to the new computer. For more information about migrating a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation, see the following articles:  
   
@@ -40,7 +40,7 @@ ms.custom: updatefrequency5
   
 -   Use the simple recovery model to back up the **reportservertempdb** database.  
   
--   You can use different backup schedules for each database. The only reason to back up the **reportservertempdb** is to avoid having to recreate it if there is a hardware failure. In the event of hardware failure, it is not necessary to recover the data in **reportservertempdb**, but you do need the table structure. If you lose **reportservertempdb**, the only way to get it back is to recreate the report server database. If you recreate the **reportservertempdb**, it is important that it has the same name as the primary report server database.  
+-   You can use different backup schedules for each database. The only reason to back up the **reportservertempdb** is to avoid having to recreate it if there's a hardware failure. If you experience hardware failure, it isn't necessary to recover the data in **reportservertempdb**, but you do need the table structure. If you lose **reportservertempdb**, the only way to get it back is to recreate the report server database. If you recreate the **reportservertempdb**, it's important that it has the same name as the primary report server database.  
   
  For more information about backup and recovery of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational databases, see [Back up and restore of SQL Server databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
 
@@ -78,7 +78,7 @@ For SharePoint mode report servers, see the "Key Management" section of [Manage 
   
  Remember to back up any script files (.rss) that you created for administration or deployment tasks.  
   
- Verify that you have a backup copy of any custom extensions and custom assemblies you are using.  
+ Verify that you have a backup copy of any custom extensions and custom assemblies you're using.  
 
 ## Related content
 

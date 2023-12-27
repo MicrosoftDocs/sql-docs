@@ -106,15 +106,15 @@ The issue intermittenly occurs, because only the server that creates the SQL Age
   
     3.  Select **Choose an existing report server database**.  
   
-    4.  Type the server name of the SQL Server Database Engine instance that hosts the report server database you want to use. This name must be the same server that you connected to in the previous set of the instructions.  
+    4.  Enter the server name of the SQL Server Database Engine instance that hosts the report server database you want to use. This name must be the same server that you connected to in the previous set of the instructions.  
   
-    5.  Select **Test Connection**, and then select **Next**.  
+    5.  Select **Test Connection**, and then choose **Next**.  
   
-    6.  In **Report Server Database**, select the database you created for the first report server, and then select **Next**. The default name is ReportServer. Don't select ReportServerTempDB. It's used only for storing temporary data when processing reports. If the database list is empty, repeat the previous four steps to establish a connection to the server.  
+    6.  In **Report Server Database**, select the database you created for the first report server, and then choose **Next**. The default name is ReportServer. Don't select ReportServerTempDB. It's used only for storing temporary data when processing reports. If the database list is empty, repeat the previous four steps to establish a connection to the server.  
   
     7.  In the Credentials page, select the type of account and credentials that the report server you want uses to connect to the report server database. You can use the same credentials as the first report server instance or different credentials. Select **Next**.  
   
-    8.  Select **Summary** and then select **Finish**.  
+    8.  Select **Summary** and then choose **Finish**.  
   
 4.  Configure the Report Server **Web service URL**. Don't test the URL yet. It can't resolve until the report server joins to the scale-out deployment.  
   
@@ -130,7 +130,7 @@ The issue intermittenly occurs, because only the server that creates the SQL Age
 
  
   
-3.  On the Scale-out Deployment page, select the report server instance that is waiting to join the deployment, and select **Add Server**.  
+3.  On the Scale-out Deployment page, select the report server instance that is waiting to join the deployment, and choose **Add Server**.  
   
     > [!NOTE]  
     >  **Issue:** When you attempt to join a Reporting Services report server instance to the scale-out deployment, you may experience error messages similar to 'Access Denied'.  
@@ -151,4 +151,4 @@ The issue intermittenly occurs, because only the server that creates the SQL Age
 - [Add and remove encryption keys for scale-out deployment](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
 - [Manage a Reporting Services Native mode report server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
 
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).

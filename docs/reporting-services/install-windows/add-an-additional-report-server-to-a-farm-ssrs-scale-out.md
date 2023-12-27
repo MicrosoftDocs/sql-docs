@@ -78,4 +78,4 @@ The Reporting Services Web Service is not enabled. Configure at least one instan
 - [Add SharePoint server to a farm in SharePoint Server 2016](/SharePoint/install/add-a-server-to-a-sharepoint-server-2016-farm)  
 - [Add SharePoint server to a farm in SharePoint Server 2013](/SharePoint/install/add-web-or-application-server-to-the-farm)
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).

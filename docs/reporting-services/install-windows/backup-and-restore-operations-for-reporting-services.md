@@ -89,4 +89,4 @@ For SharePoint mode report servers, see the "Key Management" section of [Manage 
 - [Administer a report server database](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
 - [Configure and manage encryption keys](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).

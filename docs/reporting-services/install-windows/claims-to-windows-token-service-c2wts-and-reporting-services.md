@@ -112,4 +112,4 @@ If your environment uses Kerberos constrained delegation, then the SharePoint Se
 
 4. Start (stop and start if already started) the Claims to Windows Token Service through SharePoint Central Administration on the **Manage Services on Server** page. The service should be started on the server that performs the action. For example, if you have a server that is a WFE and another server that is an Application Server that has the SQL Server Reporting Services shared service running, you only need to start C2WTS on the Application Server. C2WTS is only required on a WFE server if you're running the Report Viewer web part.
 
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).

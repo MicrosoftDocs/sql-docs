@@ -68,7 +68,7 @@ helpviewer_keywords:
   
 5.  Specify the port. Port 80 is the default because it can be shared with other applications. If you want to use a custom port number, remember that you have to always specify it in the URL used to access the report server. You can use the following techniques to find an available port:  
   
-    -   From a command prompt, type the following command to return a list of TCP ports that are being used:  
+    -   From a command prompt, enter the following command to return a list of TCP ports that are being used:  
   
          `netstat -anp tcp`  
   
@@ -127,7 +127,7 @@ helpviewer_keywords:
   **Host Header**  
  If you already have a host header defined on a domain name server that resolves to your computer, you can specify that host header in a URL that you configure for report server access.  
   
- A host header is a unique name that allows multiple Web sites to share a single IP address and port. Host header names are easier to remember and type than IP address and port numbers. An example of a host header name might be www.adventure-works.com.  
+ A host header is a unique name that allows multiple Web sites to share a single IP address and port. Host header names are easier to remember and enter than IP address and port numbers. An example of a host header name might be www.adventure-works.com.  
   
  **SSL Port**  
  Specifies the port for TLS/SSL connections. The default port for TLS is 443.  

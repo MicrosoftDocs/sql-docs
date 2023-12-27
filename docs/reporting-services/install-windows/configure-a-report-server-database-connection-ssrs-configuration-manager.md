@@ -135,4 +135,4 @@ You can configure multiple report servers to use the same report server database
 - [Manage a Reporting Services Native mode report server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 - [Configure the report server service account](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).

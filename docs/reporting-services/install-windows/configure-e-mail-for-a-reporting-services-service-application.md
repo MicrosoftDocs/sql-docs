@@ -30,9 +30,9 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
 5.  Select **Use SMTP server**.  
   
-6.  In the **Outbound SMTP server** box, type the name of an SMTP server.  
+6.  In the **Outbound SMTP server** box, enter the name of an SMTP server.  
   
-7.  In the **From address** box, type an e-mail address.  
+7.  In the **From address** box, enter an e-mail address.  
   
      This address is the sender of all alert e-mail messages.  
   
@@ -80,4 +80,4 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
     ```  
   
   
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).

@@ -84,7 +84,7 @@ To save the connection details permanently, you can create an .odc file and make
 
     ![Save Data Connection](./media/connect-excel/save-data-connection.png)
 
-4. Select how you want to import your data. We chose to do a PivotTable. You can also modify the properties of the connection by select **Properties**. Select **OK** when ready. If you did not choose to save the password with the file, then you will be prompted to enter your credentials.
+4. Select how you want to import your data. We chose to do a PivotTable. You can also modify the properties of the connection by selecting **Properties**. Select **OK** when ready. If you did not choose to save the password with the file, then you will be prompted to enter your credentials.
 
     ![Import Data](./media/connect-excel/import-data2.png)
 

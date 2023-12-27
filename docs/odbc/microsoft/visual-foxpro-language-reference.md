@@ -1,55 +1,38 @@
 ---
-title: "Visual FoxPro Language Reference"
-description: "Visual FoxPro Language Reference"
+title: "Visual FoxPro language reference"
+description: "Visual FoxPro language reference"
 author: David-Engel
 ms.author: v-davidengel
-ms.date: "01/19/2017"
+ms.reviewer: randolphwest
+ms.date: 12/15/2023
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "commands for FoxPro ODBC driver [ODBC]"
   - "Visual FoxPro ODBC driver [ODBC], commands"
 ---
-# Visual FoxPro Language Reference
-This section contains the following topics.  
-  
--   [ALTER TABLE - SQL Command](../../odbc/microsoft/alter-table-sql-command.md)  
-  
--   [CREATE TABLE - SQL Command](../../odbc/microsoft/create-table-sql-command.md)  
-  
--   [DELETE - SQL Command](../../odbc/microsoft/delete-sql-command.md)  
-  
--   [DELETE TAG Command](../../odbc/microsoft/delete-tag-command.md)  
-  
--   [DROP TABLE Command](../../odbc/microsoft/drop-table-command.md)  
-  
--   [INDEX Command](../../odbc/microsoft/index-command.md)  
-  
--   [INSERT - SQL Command](../../odbc/microsoft/insert-sql-command.md)  
-  
--   [SELECT - SQL Command](../../odbc/microsoft/select-sql-command.md)  
-  
--   [SET ANSI Command](../../odbc/microsoft/set-ansi-command.md)  
-  
--   [SET BLOCKSIZE Command](../../odbc/microsoft/set-blocksize-command.md)  
-  
--   [SET COLLATE Command](../../odbc/microsoft/set-collate-command.md)  
-  
--   [SET DELETED Command](../../odbc/microsoft/set-deleted-command.md)  
-  
--   [SET EXACT Command](../../odbc/microsoft/set-exact-command.md)  
-  
--   [SET EXCLUSIVE Command](../../odbc/microsoft/set-exclusive-command.md)  
-  
--   [SET NULL Command](../../odbc/microsoft/set-null-command.md)  
-  
--   [SET PATH Command](../../odbc/microsoft/set-path-command.md)  
-  
--   [SET REPROCESS Command](../../odbc/microsoft/set-reprocess-command.md)  
-  
--   [SET UNIQUE Command](../../odbc/microsoft/set-unique-command.md)  
-  
--   [UPDATE - SQL Command](../../odbc/microsoft/update-sql-command.md)  
-  
--   [Visual FoxPro Field Data Types](../../odbc/microsoft/visual-foxpro-field-data-types.md)
+# Visual FoxPro language reference
+
+This section contains the following articles.
+
+- [ALTER TABLE - SQL Command](alter-table-sql-command.md)
+- [CREATE TABLE - SQL Command](create-table-sql-command.md)
+- [DELETE - SQL Command](delete-sql-command.md)
+- [DELETE TAG Command](delete-tag-command.md)
+- [DROP TABLE Command](drop-table-command.md)
+- [INDEX Command](index-command.md)
+- [INSERT - SQL Command](insert-sql-command.md)
+- [SELECT - SQL Command](select-sql-command.md)
+- [SET ANSI Command](set-ansi-command.md)
+- [SET BLOCKSIZE Command](set-blocksize-command.md)
+- [SET COLLATE Command](set-collate-command.md)
+- [SET DELETED Command](set-deleted-command.md)
+- [SET EXACT Command](set-exact-command.md)
+- [SET EXCLUSIVE Command](set-exclusive-command.md)
+- [SET NULL Command](set-null-command.md)
+- [SET PATH Command](set-path-command.md)
+- [SET REPROCESS Command](set-reprocess-command.md)
+- [SET UNIQUE Command](set-unique-command.md)
+- [UPDATE - SQL Command](update-sql-command.md)
+- [Visual FoxPro Field Data Types](visual-foxpro-field-data-types.md)

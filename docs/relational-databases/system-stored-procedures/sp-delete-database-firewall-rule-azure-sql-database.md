@@ -35,7 +35,9 @@ sp_delete_database_firewall_rule [@name =] [N]'name'
  The name of the database-level firewall setting that will be removed. *name* is **nvarchar(128)** with no default value. The Unicode identifier `N` is optional for [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
   
 ## Permissions  
- Only the server-level principal login created by the provisioning process or an Azure Active Directory principal assigned as admin can delete database-level firewall rules.  
+ Only the server-level principal login created by the provisioning process or a Microsoft Entra admin can delete database-level firewall rules.
+ 
+ [!INCLUDE [entra-id](../../includes/entra-id.md)]
   
 ## Example  
  The following example removes the database-level firewall setting named `Example DB Setting 1`.

@@ -99,7 +99,7 @@ az sql server firewall-rule create \
     | jq
 ```
 
-### Configure a Azure SQL database
+### Configure an Azure SQL database
 
 The Azure SQL Database server that you created earlier is empty. It doesn't have any database that you can use with the Java application. Create a new database called `demo` by running the following command:
 

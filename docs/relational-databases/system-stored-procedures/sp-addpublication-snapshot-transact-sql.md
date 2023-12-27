@@ -114,12 +114,16 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  Is the name of an existing Snapshot Agent job name if an existing job is being used. *snapshot_agent_name* is **nvarchar(100)** with a default value of NULL. This parameter is for internal use and should not be specified when creating a new publication. If *snapshot_agent_name* is specified, then *job_login* and *job_password* must be NULL.  
   
 `[ @publisher_security_mode = ] publisher_security_mode`
+
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
+
  Is the security mode used by the agent when connecting to the Publisher. *publisher_security_mode* is **smallint**, with a default of 1. A value of **0** must be specified for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]. The following values define the security mode: 
-- **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. 
-- **1** specifies Windows Authentication.  
-- **2** specifies Azure Active Directory (Azure AD) Password Authentication starting with SQL Server 2022 CU 6. 
-- **3** specifies Azure AD Integrated Authentication starting with SQL Server 2022 CU 6. 
-- **4** specifies Azure AD Token Authentication starting with SQL Server 2022 CU 6. 
+- `0` specifies [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] authentication.
+- `1` specifies Windows authentication.
+- `2` specifies Microsoft Entra password authentication starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
+- `3` specifies Microsoft Entra integrated authentication starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
+- `4` specifies Microsoft Entra token authentication starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
+  
   
 `[ @publisher_login = ] 'publisher_login'`
  Is the login used when connecting to the Publisher. *publisher_login* is **sysname**, with a default of NULL. *publisher_login* must be specified when *publisher_security_mode* is **0**. If *publisher_login* is NULL and *publisher_security_mode* is **1**, then the account specified in *job_login* will be used when connecting to the Publisher.  

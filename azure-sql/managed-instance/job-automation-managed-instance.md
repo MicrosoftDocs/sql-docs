@@ -5,7 +5,7 @@ description: "Automation options to run Transact-SQL (T-SQL) scripts in Azure SQ
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 04/19/2022
-ms.service: sql-db-mi
+ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: conceptual
 ms.custom: sqldbrb=1

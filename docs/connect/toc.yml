@@ -4823,80 +4823,37 @@
             - name: Table Names
               href: ../odbc/microsoft/table-names.md
           - name: Limitations
-            href: ../odbc/microsoft/limitations.md
             items:
-            - name: Aggregate Function Limitations
-              href: ../odbc/microsoft/aggregate-function-limitations.md
-            - name: Column Name Limitations
+            - name: Overview
+              href: ../odbc/microsoft/limitations.md
+            - name: Column name limitations
               href: ../odbc/microsoft/column-name-limitations.md
-            - name: Data Type Limitations
+            - name: Data type limitations
               href: ../odbc/microsoft/data-type-limitations.md
-            - name: Date Arithmetic Limitations
-              href: ../odbc/microsoft/date-arithmetic-limitations.md
-            - name: Identifiers Limitations
+            - name: Identifiers limitations
               href: ../odbc/microsoft/identifiers-limitations.md
-            - name: Index Name Limitations
-              href: ../odbc/microsoft/index-name-limitations.md
-            - name: Parameterized Query Limitations
-              href: ../odbc/microsoft/parameterized-query-limitations.md
-            - name: Reserved Word Limitations
+            - name: Reserved word limitations
               href: ../odbc/microsoft/reserved-word-limitations.md
-            - name: Scalar Function Limitations
-              href: ../odbc/microsoft/scalar-function-limitations.md
-            - name: Set Functions Limitations
-              href: ../odbc/microsoft/set-functions-limitations.md
-            - name: Sorting Limitations
-              href: ../odbc/microsoft/sorting-limitations.md
-            - name: String Limitations
+            - name: String limitations
               href: ../odbc/microsoft/string-limitations.md
-            - name: Table Name Limitations
+            - name: Table name limitations
               href: ../odbc/microsoft/table-name-limitations.md
-            - name: Table References Limitations
-              href: ../odbc/microsoft/table-references-limitations.md
-            - name: Views Limitations
-              href: ../odbc/microsoft/views-limitations.md
-            - name: ALTER TABLE Statement Limitations
+            - name: ALTER TABLE statement limitations
               href: ../odbc/microsoft/alter-table-statement-limitations.md
-            - name: AND Predicate Limitations
-              href: ../odbc/microsoft/and-predicate-limitations.md
-            - name: CALL Statement Limitations
-              href: ../odbc/microsoft/call-statement-limitations.md
-            - name: CONVERT Function Limitations
-              href: ../odbc/microsoft/convert-function-limitations.md
-            - name: CREATE INDEX Statement Limitations
+            - name: CREATE INDEX statement limitations
               href: ../odbc/microsoft/create-index-statement-limitations.md
-            - name: CREATE TABLE Statement Limitations
+            - name: CREATE TABLE statement limitations
               href: ../odbc/microsoft/create-table-statement-limitations.md
-            - name: DELETE Statement Limitations
+            - name: DELETE statement limitations
               href: ../odbc/microsoft/delete-statement-limitations.md
-            - name: DISTINCT Keyword Limitations
-              href: ../odbc/microsoft/distinct-keyword-limitations.md
-            - name: DROP INDEX Statement Limitations
-              href: ../odbc/microsoft/drop-index-statement-limitations.md
-            - name: DROP TABLE Statement Limitations
-              href: ../odbc/microsoft/drop-table-statement-limitations.md
-            - name: FROM Clause Limitations
-              href: ../odbc/microsoft/from-clause-limitations.md
-            - name: HAVING Clause Limitations
-              href: ../odbc/microsoft/having-clause-limitations.md
-            - name: INSERT Statement Limitations
+            - name: INSERT statement limitations
               href: ../odbc/microsoft/insert-statement-limitations.md
-            - name: LIKE Predicate Limitations
+            - name: LIKE predicate limitations
               href: ../odbc/microsoft/like-predicate-limitations.md
-            - name: NOT NULL Limitations
-              href: ../odbc/microsoft/not-null-limitations.md
-            - name: ORDER BY Clause Limitations
-              href: ../odbc/microsoft/order-by-clause-limitations.md
-            - name: SELECT DISTINCT Limitations
-              href: ../odbc/microsoft/select-distinct-limitations.md
-            - name: SELECT Statement Limitations
+            - name: SELECT statement limitations
               href: ../odbc/microsoft/select-statement-limitations.md
-            - name: UPDATE Statement Limitations
+            - name: UPDATE statement limitations
               href: ../odbc/microsoft/update-statement-limitations.md
-            - name: WHERE Clause Limitations
-              href: ../odbc/microsoft/where-clause-limitations.md
-            - name: WHERE CURRENT OF Clause Limitations
-              href: ../odbc/microsoft/where-current-of-clause-limitations.md
           - name: ODBC Errors
             href: ../odbc/microsoft/odbc-errors.md
             items:
@@ -4976,7 +4933,7 @@
               href: ../odbc/microsoft/using-operating-system-authentication.md
             - name: Using SQLConfigDatasource with the ODBC Driver for Oracle
               href: ../odbc/microsoft/using-sqlconfigdatasource-with-the-odbc-driver-for-oracle.md
-            - name: Limitations of Using Keyset-Driven Cursors
+            - name: Limitations of using keyset-driven cursors
               href: ../odbc/microsoft/limitations-of-using-keyset-driven-cursors.md
             - name: Stored Procedures (ODBC Driver for Oracle)
               href: ../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md

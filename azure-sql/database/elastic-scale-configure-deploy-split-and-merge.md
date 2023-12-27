@@ -4,7 +4,7 @@ description: Use the split-merge too to move data between sharded databases.
 author: scoriani
 ms.author: scoriani
 ms.reviewer: wiassaf, mathoma
-ms.date: 12/04/2018
+ms.date: 12/12/2023
 ms.service: sql-database
 ms.subservice: scale-out
 ms.topic: how-to
@@ -13,7 +13,10 @@ ms.custom: sqldbrb=1
 # Deploy a split-merge service to move data between sharded databases
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-The split-merge tool lets you move data between sharded databases. See [Moving data between scaled-out cloud databases](elastic-scale-overview-split-and-merge.md)
+The split-merge tool lets you move data between sharded databases. See [Moving data between scaled-out cloud databases](elastic-scale-overview-split-and-merge.md). 
+
+> [!NOTE]
+> The split-merge tool is intended to work with Cloud Services (Classic) and not App Services.
 
 ## Download the Split-Merge packages
 
@@ -148,7 +151,7 @@ If your web role fails to come online, it is likely a problem with the security 
 If your worker role fails to come online, but your web role succeeds, it is most likely a problem connecting to the status database that you created earlier.
 
 - Make sure that the connection string in your cscfg is accurate.
-- Check that the server and database exist, and that the user id and password are correct.
+- Check that the server and database exist, and that the user ID and password are correct.
 - For Azure SQL Database, the connection string should be of the form:
 
    `Server=<serverName>.database.windows.net; Database=<databaseName>;User ID=<user>; Password=<password>; Encrypt=True; Connection Timeout=30`
@@ -221,7 +224,7 @@ The script files included are:
 
 ## Use PowerShell to verify your deployment
 
-1. Open a new PowerShell window and navigate to the directory where you downloaded the Split-Merge package, and then navigate into the "powershell" directory.
+1. Open a new PowerShell window and navigate to the directory where you downloaded the Split-Merge package, and then navigate to the "PowerShell" directory.
 
 2. Create a server (or choose an existing server) where the shard map manager and shards will be created.
 
@@ -234,7 +237,7 @@ The script files included are:
 
 3. Execute the *SetupSampleSplitMergeEnvironment.ps1* script to create the sample environment.
 
-   Running this script will wipe out any existing shard map management data structures on the shard map manager database and the shards. It may be useful to rerun the script if you wish to re-initialize the shard map or shards.
+   Running this script will wipe out any existing shard map management data structures on the shard map manager database and the shards. It may be useful to rerun the script if you wish to reinitialize the shard map or shards.
 
    Sample command line:
 
@@ -303,7 +306,7 @@ The script files included are:
     >
     ```
 
-6. Experiment with other data types! All of these scripts take an optional -ShardKeyType parameter that allows you to specify the key type. The default is Int32, but you can also specify Int64, Guid, or Binary.
+6. Experiment with other data types. All of these scripts take an optional -ShardKeyType parameter that allows you to specify the key type. The default is Int32, but you can also specify Int64, Guid, or Binary.
 
 ## Create requests
 
@@ -321,7 +324,7 @@ In order to perform a split-merge operation, you must declare the sharded tables
 
 An example of this can be seen in the SetupSampleSplitMergeEnvironment.ps1 script.
 
-The Split-Merge service does not create the target database (or schema for any tables in the database) for you. They must be pre-created before sending a request to the service.
+The Split-Merge service does not create the target database (or schema for any tables in the database) for you. They must be precreated before sending a request to the service.
 
 ## Troubleshooting
 

@@ -12,6 +12,8 @@ ms.custom: subject-armqs sqldbrb=1, mode-arm, devx-track-arm-template
 
 # Quickstart: Create a single database in Azure SQL Database using an ARM template
 
+[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+
 Creating a [single database](single-database-overview.md) is the quickest and simplest option for creating a database in Azure SQL Database. This quickstart shows you how to create a single database using an Azure Resource Manager template (ARM template).
 
 [!INCLUDE [About Azure Resource Manager](../includes/resource-manager-quickstart-introduction.md)]

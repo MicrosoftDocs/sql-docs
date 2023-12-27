@@ -14,7 +14,7 @@ ms.topic: how-to
 
 # Create server configured with user-assigned managed identity and cross-tenant CMK for TDE
 
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+[!INCLUDE[appliesto-sqldb-sqlmi-asa-dedicated-only](../includes/appliesto-sqldb-asa-formerly-sqldw.md)]
 
 In this guide, we'll go through the steps to create an Azure SQL [logical server](logical-servers.md) with transparent data encryption (TDE) and customer-managed keys (CMK), utilizing a [user-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) to access an [Azure Key Vault](/azure/key-vault/general/quick-create-portal) in a different Microsoft Entra tenant than the logical server's tenant. For more information, see [Cross-tenant customer-managed keys with transparent data encryption](transparent-data-encryption-byok-cross-tenant.md).
 

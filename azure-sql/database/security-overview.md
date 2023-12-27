@@ -1,7 +1,7 @@
 ---
 title: Security Overview
-titleSuffix: Azure SQL Database & Azure SQL Managed Instance
-description: Learn about security in Azure SQL Database and Azure SQL Managed Instance, including how it differs from SQL Server.
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
+description: Learn about security in Azure SQL Database and Azure SQL Managed Instance and Azure Synapse Analytics, including how it differs from SQL Server.
 author: jaszymas
 ms.author: jaszymas
 ms.reviewer: wiassaf, vanto, emlisa, mathoma

@@ -31,11 +31,11 @@ Generally, if the auto cleanup isn't functioning as expected, you can see one or
 
 ## Debugging and mitigation
 
-To identify the root cause of a problem with auto cleanup on change tracking, use the following steps to debug and mitigate the issue.
+To identify the root cause of a problem with change tracking auto cleanup, use the following steps to debug and mitigate the issue.
 
 ### Auto cleanup status
 
-Check if auto cleanup has been running. To check this, query the cleanup history table in the same database. If the cleanup has been running, the table has entries with the start and end times of the cleanup. If the cleanup hasn't been running, the table is empty. If the history table has entries with the tag cleanup errors in the column `comments`, then the cleanup is failing due to table level cleanup errors.
+Check if auto cleanup has been running. To check this, query the cleanup history table in the same database. If the cleanup has been running, the table has entries with the start and end times of the cleanup. If the cleanup hasn't been running, the table is empty or has stale entries. If the history table has entries with the tag `cleanup errors` in the column `comments`, then the cleanup is failing due to table level cleanup errors.
 
 ```sql
 SELECT TOP 1000 * FROM dbo.MSChange_tracking_history ORDER BY start_time DESC;
@@ -57,13 +57,13 @@ To enable or disable change tracking see [Enable and Disable Change Tracking (SQ
 
 #### 2. Cleanup is turned on but not running
 
-If auto cleanup is on, the auto cleanup thread was likely stopped due to unexpected errors. Currently, restarting the auto cleanup thread isn't feasible. You must initiate a failover to a secondary server (or restart the server in the absence of a secondary), and confirm that the auto cleanup setting is enabled for the database.
+If auto cleanup is on, the auto cleanup thread likely stopped due to unexpected errors. Currently, restarting the auto cleanup thread isn't feasible. You must initiate a failover to a secondary server (or restart the server in the absence of a secondary), and confirm that the auto cleanup setting is enabled for the database.
 
 ### Auto cleanup runs but isn't making progress
 
 If one or more side tables show significant storage consumption, or contain a large number of records beyond configured retention, follow the steps in this section, which describe remedies for a single side table. The same steps can be repeated for more tables if necessary.
 
-#### 1. Cleanup lags behind
+#### 1. Assess auto cleanup backlog
 
 First, gather information on the latency of the side table delete statements and the rate of deletion per second over the last few hours. Next, estimate the time required to clean up the side table by considering both the stale row count and the delete latency.
 
@@ -87,8 +87,7 @@ Use the following Transact-SQL (T-SQL) code snippet by substituting parameter te
   The internal_table_name & cleanup_version for the user table in the output returned in the previous section. Using this information, execute the following T-SQL code through a dedicated admin connection (DAC):
 
  ```sql
-  SELECT '<internal_table_name>',
-      COUNT(*)
+  SELECT '<internal_table_name>', COUNT(*)
   FROM sys.< internal_table_name >
   WHERE sys_change_xdes_id IN (
           SELECT xdes_id
@@ -120,7 +119,7 @@ Use the following Transact-SQL (T-SQL) code snippet by substituting parameter te
 
   If the time to complete table cleanup is acceptable, monitor the progress and let the auto cleanup continue its work. If not, proceed with the next steps to drill down further.
 
-#### 2. Cleanup isn't progressing
+#### 2. Check table lock conflicts
 
 Determine if cleanup isn't progressing because of table lock escalation conflicts, which starve cleanup consistently from acquiring lock(s) on the side table to delete rows.
 
@@ -143,7 +142,7 @@ If the history table has multiple entries in the `comments` columns with the val
     EXEC [sys].[sp_flush_CT_internal_table_on_demand] @TableToClean = '<table_name>'
     ```
 
-#### 3. Cleanup is still lagging behind
+#### 3. Check other causes
 
 Another possible cause of cleanup lagging is the slowness of the delete statements. To determine if so, check the value of `hardened_cleanup_version`. This value can be retrieved through a dedicated admin connection (DAC) to the database under consideration.
 

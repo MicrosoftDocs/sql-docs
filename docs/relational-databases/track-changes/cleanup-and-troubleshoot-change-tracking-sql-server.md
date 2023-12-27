@@ -4,7 +4,7 @@ description: Learn how to troubleshoot common issues with auto cleanup on change
 author: croblesm
 ms.author: roblescarlos
 ms.reviewer: randolphwest
-ms.date: 11/29/2023
+ms.date: 12/27/2023
 ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
@@ -72,7 +72,8 @@ Use the following Transact-SQL (T-SQL) code snippet by substituting parameter te
 - Query the rate of cleanup per second:
 
   ```sql
-  SELECT table_name,
+  SELECT
+      table_name,
       rows_cleaned_up / ISNULL(NULLIF(DATEDIFF(second, start_time, end_time), 0), 1),
       cleanup_version
   FROM dbo.MSChange_tracking_history
@@ -87,13 +88,15 @@ Use the following Transact-SQL (T-SQL) code snippet by substituting parameter te
   The internal_table_name & cleanup_version for the user table in the output returned in the previous section. Using this information, execute the following T-SQL code through a dedicated admin connection (DAC):
 
  ```sql
-  SELECT '<internal_table_name>', COUNT(*)
-  FROM sys.< internal_table_name >
+  SELECT
+      '<internal_table_name>',
+      COUNT(*)
+  FROM sys.<internal_table_name>
   WHERE sys_change_xdes_id IN (
-          SELECT xdes_id
-          FROM sys.syscommittab ssct
-          WHERE ssct.commit_ts <= <cleanup version>;
-  )
+      SELECT xdes_id
+      FROM sys.syscommittab ssct
+      WHERE ssct.commit_ts <= <cleanup version>
+  );
   ```
 
   This query can take some time to complete. In cases where the query times out, calculate stale rows by finding the difference between total rows and active rows that is, rows to be cleaned up.
@@ -126,8 +129,10 @@ Determine if cleanup isn't progressing because of table lock escalation conflict
 To confirm this, run the following T-SQL code. This query fetches records for the problematic table to determine if there are multiple entries indicating lock conflicts. A few sporadic conflicts spread over a period shouldn't qualify for the proceeding mitigation steps. The conflicts should be recurrent.
 
 ```sql
-SELECT TOP 1000 * FROM dbo.MSChange_tracking_history
-WHERE table_name = '<user_table_name>' ORDER BY start_time DESC
+SELECT TOP 1000 *
+FROM dbo.MSChange_tracking_history
+WHERE table_name = '<user_table_name>'
+ORDER BY start_time DESC;
 ```
 
 If the history table has multiple entries in the `comments` columns with the value `Cleanup error: Lock request time out period exceeded`, it is a clear indication that multiple cleanup attempts failed due to lock conflicts or lock timeouts in succession. Consider the following remedies:
@@ -137,9 +142,9 @@ If the history table has multiple entries in the `comments` columns with the val
 - If the previous option isn't possible, then proceed to execute manual cleanup on the table by enabling **trace flag 8284** as follows:
 
     ```sql
-    DBCC TRACEON (8284, -1)
+    DBCC TRACEON (8284, -1);
     GO
-    EXEC [sys].[sp_flush_CT_internal_table_on_demand] @TableToClean = '<table_name>'
+    EXEC [sys].[sp_flush_CT_internal_table_on_demand] @TableToClean = '<table_name>';
     ```
 
 #### 3. Check other causes

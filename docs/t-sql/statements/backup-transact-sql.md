@@ -424,10 +424,10 @@ Explicitly disables backup compression.
 BACKUP DATABASE <database_name> TO DISK WITH COMPRESSION (ALGORITHM = QAT_DEFLATE) 
 ```
 
-#### DESCRIPTION = { '_text_' | @_text_variable_ }
+#### DESCRIPTION = { '_text_' | @_text\_variable_ }
 Specifies the free-form text describing the backup set. The string can have a maximum of 255 characters.
 
-#### NAME = { *backup_set_name* | @_backup_set_var_ }
+#### NAME = { *backup_set_name* | @_backup\_set\_var_ }
 Specifies the name of the backup set. Names can have a maximum of 128 characters. If NAME is not specified, it is blank.
 
 #### { EXPIREDATE ='_date_' | RETAINDAYS = _days_ }
@@ -517,13 +517,13 @@ Specifies that a new media set be created. FORMAT causes the backup operation to
 
 Specifying FORMAT implies `SKIP`; `SKIP` does not need to be explicitly stated.
 
-#### MEDIADESCRIPTION = { *text* | @_text_variable_ }
+#### MEDIADESCRIPTION = { *text* | @_text\_variable_ }
 Specifies the free-form text description, maximum of 255 characters, of the media set.
 
-#### MEDIANAME = { *media_name* | @_media_name_variable_ }
+#### MEDIANAME = { *media_name* | @_media\_name\_variable_ }
 Specifies the media name for the entire backup media set. The media name must be no longer than 128 characters. If `MEDIANAME` is specified, it must match the previously specified media name already existing on the backup volumes. If it is not specified, or if the SKIP option is specified, there is no verification check of the media name.
 
-#### BLOCKSIZE = { *blocksize* | @_blocksize_variable_ }
+#### BLOCKSIZE = { *blocksize* | @_blocksize\_variable_ }
 Specifies the physical block size, in bytes. The supported sizes are 512, 1024, 2048, 4096, 8192, 16384, 32768, and 65536 (64 KB) bytes. The default is 65536 for tape devices and 512 otherwise. Typically, this option is unnecessary because BACKUP automatically selects a block size that is appropriate to the device. Explicitly stating a block size overrides the automatic selection of block size.
 
 If you are taking a backup that you plan to copy onto and restore from a CD-ROM, specify BLOCKSIZE=2048.
@@ -533,7 +533,7 @@ If you are taking a backup that you plan to copy onto and restore from a CD-ROM,
 
 ### Data transfer options
 
-#### BUFFERCOUNT = { *buffercount* | @_buffercount_variable_ }
+#### BUFFERCOUNT = { *buffercount* | @_buffercount\_variable_ }
 Specifies the total number of I/O buffers to be used for the backup operation. You can specify any positive integer; however, large numbers of buffers might cause "out of memory" errors because of inadequate virtual address space in the Sqlservr.exe process.
 
 The total space used by the buffers is determined by: `BUFFERCOUNT * MAXTRANSFERSIZE`.
@@ -541,7 +541,7 @@ The total space used by the buffers is determined by: `BUFFERCOUNT * MAXTRANSFER
 > [!NOTE]
 > For important information about using the `BUFFERCOUNT` option, see the [Incorrect BufferCount data transfer option can lead to OOM condition](/archive/blogs/sqlserverfaq/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition) blog.
 
-#### MAXTRANSFERSIZE = { *maxtransfersize* | _@ maxtransfersize_variable_ }
+#### MAXTRANSFERSIZE = { *maxtransfersize* | _@ maxtransfersize\_variable_ }
 Specifies the largest unit of transfer in bytes to be used between [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and the backup media. The possible values are multiples of 65536 bytes (64 KB) ranging up to 4194304 bytes (4 MB).
 
 When creating backups by using the SQL Writer Service, if the database has configured [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md), or includes [memory optimized filegroups](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md), then the `MAXTRANSFERSIZE` at the time of a restore should be greater than or equal to the `MAXTRANSFERSIZE` that was used when the backup was created.
@@ -804,7 +804,7 @@ Cross-platform backup operations, even between different processor types, can be
 
 Starting with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], setting `MAXTRANSFERSIZE` **larger than 65536 (64 KB)** enables an optimized compression algorithm for [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) encrypted databases that first decrypts a page, compresses it, and then encrypts it again. If `MAXTRANSFERSIZE` is not specified, or if `MAXTRANSFERSIZE = 65536` (64 KB) is used, backup compression with TDE encrypted databases directly compresses the encrypted pages, and may not yield good compression ratios. For more information, see [Backup Compression for TDE-enabled Databases](/archive/blogs/sqlcat/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases).
 
-Starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)] CU5, setting `MAXTRANSFERSIZE` is no longer required to enable this optimized compression algorithm with TDE. If the backup command is specified `WITH COMPRESSION` or the *backup compression default* server configuration is set to 1, `MAXTRANSFERSIZE` will automatically be increased to 128 K to enable the optimized algorithm. If `MAXTRANSFERSIZE` is specified on the backup command with a value > 64 K, the provided value will be honored. In other words, SQL Server will never automatically decrease the value, it will only increase it. If you need to back up a TDE encrypted database with `MAXTRANSFERSIZE = 65536`, you must specify `WITH NO_COMPRESSION` or ensure that the *backup compression default* server configuration is set to 0.
+Starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)] CU5, setting `MAXTRANSFERSIZE` is no longer required to enable this optimized compression algorithm with TDE. If the backup command is specified `WITH COMPRESSION` or the *backup compression default* server configuration is set to 1, `MAXTRANSFERSIZE` will automatically be increased to 128 K to enable the optimized algorithm. If `MAXTRANSFERSIZE` is specified on the backup command with a value > 64 K, the provided value is honored. In other words, SQL Server never automatically decreases the value, only increases it. If you need to back up a TDE encrypted database with `MAXTRANSFERSIZE = 65536`, you must specify `WITH NO_COMPRESSION` or ensure that the *backup compression default* server configuration is set to 0.
 
 > [!NOTE]
 > There are some cases where the default `MAXTRANSFERSIZE` is greater than 64K:
@@ -827,7 +827,7 @@ Operations that cannot run during a database or transaction log backup include:
 
 - Shrink database or shrink file operations. This includes autoshrink operations.
 
-If a backup operation overlaps with a file management or shrink operation, a conflict arises. Regardless of which of the conflicting operation began first, the second operation waits for the lock set by the first operation to time out (the time-out period is controlled by a session timeout setting). If the lock is released during the time-out period, the second operation continues. If the lock times out, the second operation fails.
+If a backup operation overlaps with a file management or `DBCC SHRINK` operation, a conflict arises. Regardless of which of the conflicting operation began first, the second operation waits for the lock set by the first operation to time out (the time-out period is controlled by a session timeout setting). If the lock is released during the time-out period, the second operation continues. If the lock times out, the second operation fails.
 
 ## Metadata
 
@@ -1004,7 +1004,7 @@ WITH
 
 ### <a id="url"></a> I. Back up to Microsoft Azure Blob Storage
 
-This example performs a full database backup of `Sales` to Azure Blob Storage. The storage Account name is `mystorageaccount`. The container is called `myfirstcontainer`. A stored access policy has been created with read, write, delete, and list rights. The [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] credential, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, was created using a Shared Access Signature that is associated with the Stored Access Policy. For information on [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] backup to Azure Blob Storage, see [SQL Server Backup and Restore with Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) and [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
+This example performs a full database backup of `Sales` to Azure Blob Storage. The storage Account name is `mystorageaccount`. The container is called `myfirstcontainer`. A stored access policy has already been created with read, write, delete, and list rights. The [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] credential, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, was created using a Shared Access Signature that is associated with the Stored Access Policy. For information on [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] backup to Azure Blob Storage, see [SQL Server Backup and Restore with Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) and [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
 ```sql
 BACKUP DATABASE Sales
@@ -1012,7 +1012,7 @@ TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales.
 WITH STATS = 5;
 ```
 
-You can also backup your database into multiple stripes, and it would look like this:
+You can also back up your database into multiple stripes, and it would look like this:
 
 ```sql
 BACKUP DATABASE Sales
@@ -1137,7 +1137,7 @@ Specifies a complete database backup. During a database backup, Azure SQL Manage
 
 When you restore a backup created by BACKUP DATABASE (a *data backup*), the entire backup is restored. To restore from SQL Managed Instance automatic backups, see [Restore a database to an Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore?view=azuresql-mi&preserve-view=true).
 
-#### { *database_name* | @_database_name_var_ }
+#### { *database_name* | @_database\_name\_var_ }
 Is the database from which the complete database is backed up. If supplied as a variable (**@**_database\_name\_var_), this name can be specified either as a string constant (**@**_database\_name\_var_**=**_database name_) or as a variable of character string data type, except for the **ntext** or **text** data types.
 
 For more information, see [Full File Backups](../../relational-databases/backup-restore/full-file-backups-sql-server.md?view=azuresqldb-mi-current&preserve-view=true) and [Back Up Files and Filegroups](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md?view=azuresqldb-mi-current&preserve-view=true).
@@ -1185,24 +1185,24 @@ Explicitly enables backup compression.
 NO_COMPRESSION    
 Explicitly disables backup compression.
 
-#### DESCRIPTION = { '_text_' | @_text_variable_ }
+#### DESCRIPTION = { '_text_' | @_text\_variable_ }
 Specifies the free-form text describing the backup set. The string can have a maximum of 255 characters.
 
-#### NAME = { *backup_set_name* | @_backup_set_var_ }
+#### NAME = { *backup_set_name* | @_backup|_set\_var_ }
 Specifies the name of the backup set. Names can have a maximum of 128 characters. If NAME is not specified, it is blank.
 
-#### MEDIADESCRIPTION = { *text* | @_text_variable_ }
+#### MEDIADESCRIPTION = { *text* | @_text\_variable_ }
 Specifies the free-form text description, maximum of 255 characters, of the media set.
 
-#### MEDIANAME = { *media_name* | @_media_name_variable_ }
+#### MEDIANAME = { *media_name* | @_media\_name\_variable_ }
 Specifies the media name for the entire backup media set. The media name must be no longer than 128 characters, If `MEDIANAME` is specified, it must match the previously specified media name already existing on the backup volumes. If it is not specified, or if the SKIP option is specified, there is no verification check of the media name.
 
-#### BLOCKSIZE = { *blocksize* | @_blocksize_variable_ }
+#### BLOCKSIZE = { *blocksize* | @_blocksize\_variable_ }
 Specifies the physical block size, in bytes. The supported sizes are 512, 1024, 2048, 4096, 8192, 16384, 32768, and 65536 (64 KB) bytes. The default is 65536 for tape devices and 512 otherwise. Typically, this option is unnecessary because BACKUP automatically selects a block size that is appropriate to the device. Explicitly stating a block size overrides the automatic selection of block size.
 
 ### Data transfer options
 
-#### BUFFERCOUNT = { *buffercount* | @_buffercount_variable_ }
+#### BUFFERCOUNT = { *buffercount* | @_buffercount\_variable_ }
 Specifies the total number of I/O buffers to be used for the backup operation. You can specify any positive integer; however, large numbers of buffers might cause "out of memory" errors because of inadequate virtual address space in the Sqlservr.exe process.
 
 The total space used by the buffers is determined by: `BUFFERCOUNT * MAXTRANSFERSIZE`.
@@ -1210,7 +1210,7 @@ The total space used by the buffers is determined by: `BUFFERCOUNT * MAXTRANSFER
 > [!NOTE]
 > For important information about using the `BUFFERCOUNT` option, see the blog post [Incorrect BufferCount data transfer option can lead to OOM condition](/archive/blogs/sqlserverfaq/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition).
 
-#### MAXTRANSFERSIZE = { *maxtransfersize* | _@ maxtransfersize_variable_ }
+#### MAXTRANSFERSIZE = { *maxtransfersize* | _@ maxtransfersize\_variable_ }
 Specifies the largest unit of transfer in bytes to be used between [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and the backup media. The possible values are multiples of 65536 bytes (64 KB) ranging up to 4194304 bytes (4 MB).
 
 For [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) enabled databases with a single data file, the default `MAXTRANSFERSIZE` is 65536 (64 KB). For non-TDE encrypted databases the default `MAXTRANSFERSIZE` is 1048576 (1 MB) when using backup to DISK, and 65536 (64 KB) when using VDI or TAPE.
@@ -1283,7 +1283,7 @@ TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_
 WITH STATS = 5, COPY_ONLY;
 ```
 
-You can also backup your database into multiple stripes, and it would look like this:
+You can also back up your database into multiple stripes, and it would look like this:
 
 ```sql
 BACKUP DATABASE Sales
@@ -1430,7 +1430,7 @@ The backup files are stored in a format suitable only for restoring the backup t
 
 The backup with the BACKUP DATABASE statement cannot be used to transfer data or user information to SMP [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] databases. For that functionality, you can use the remote table copy feature. For more information, see "Remote Table Copy" in the [!INCLUDE [pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
-[!INCLUDE [ssPDW](../../includes/sspdw-md.md)] uses [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] backup technology to backup and restore databases. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] backup options are preconfigured to use backup compression. You cannot set backup options such as compression, checksum, block size, and buffer count.
+[!INCLUDE [ssPDW](../../includes/sspdw-md.md)] uses [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] backup technology to back up and restore databases. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] backup options are preconfigured to use backup compression. You cannot set backup options such as compression, checksum, block size, and buffer count.
 
 Only one database backup or restore can run on the appliance at any given time. [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] will queue backup or restore commands until the current backup or restore command has completed.
 
@@ -1440,7 +1440,7 @@ The target appliance for restoring the backup must have at least as many Compute
 
 [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] does track the success or failure of database backups.
 
-A differential backup is only allowed if the last full backup completed successfully. For example, suppose that on Monday you create a full backup of the Sales database and the backup finishes successfully. Then on Tuesday you create a full backup of the Sales database and it fails. After this failure, you cannot then create a differential backup based on Monday's full backup. You must first create a successful full backup before creating a differential backup.
+A differential backup is only allowed if the last full backup completed successfully. For example, suppose that on Monday you create a full backup of the `Sales` database and the backup finishes successfully. Then on Tuesday you create a full backup of the `Sales` database and it fails. After this failure, you cannot then create a differential backup based on Monday's full backup. You must first create a successful full backup before creating a differential backup.
 
 ## Metadata
 
@@ -1506,7 +1506,7 @@ BACKUP DATABASE Invoices TO DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices201
 
 ### D. Create a differential backup of a user database
 
-The following example creates a differential backup, which includes all changes made since the last full backup of the `Invoices` database. [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] will create the `\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff` directory to which it will store the files. The description 'Invoices 2013 differential backup' will be stored with the header information for the backup.
+The following example creates a differential backup, which includes all changes made since the last full backup of the `Invoices` database. [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] will create the `\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff` directory to store the files. The description 'Invoices 2013 differential backup' will be stored with the header information for the backup.
 
 The differential backup will only run successfully if the last full backup of Invoices completed successfully.
 
@@ -1526,7 +1526,7 @@ BACKUP DATABASE master TO DISK = '\\xxx.xxx.xxx.xxx\backups\2013\daily\20130722\
 
 ### F. Create a backup of appliance login information
 
-The `master` database stores the appliance login information. To backup the appliance login information you need to backup the `master` database.
+The `master` database stores the appliance login information. To back up the appliance login information you need to back up the `master` database.
 
 The following example creates a full backup of the `master` database.
 

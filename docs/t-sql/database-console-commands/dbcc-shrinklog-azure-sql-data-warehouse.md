@@ -70,7 +70,7 @@ DBCC SHRINKLOG;
 GO
 ```
 
-## See also
+## Related content
 
 - [DBCC (Transact-SQL)](dbcc-transact-sql.md)
 - [Parallel Data Warehouse components - Analytics Platform System](../../analytics-platform-system/parallel-data-warehouse-overview.md)

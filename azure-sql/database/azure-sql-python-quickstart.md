@@ -4,7 +4,7 @@ description: Learn how to connect to a database in Azure SQL Database and query 
 author: bobtabor-msft
 ms.author: rotabor
 ms.custom: passwordless-python
-ms.date: 05/11/2023
+ms.date: 12/28/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: quickstart
@@ -23,7 +23,7 @@ This quickstart describes how to connect an application to a database in Azure S
 * An Azure SQL database configured with Microsoft Entra authentication. You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
 * The latest version of the [Azure CLI](/cli/azure/get-started-with-azure-cli).
 * Visual Studio Code with the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python).
-* Python 3.7 or later.
+* Python 3.8 or later.
 
 ## Configure the database
 
@@ -315,7 +315,7 @@ Append */docs* to the URL to see the Swagger UI and test the API methods.
 
 Congratulations! Your application is now connected to Azure SQL Database in both local and hosted environments.
 
-## Next steps
+## Related content
 
 - [Migrate a Python application to use passwordless connections with Azure SQL Database](./azure-sql-passwordless-migration-python.md) - Shows user-assigned managed identity.
 - [Passwordless connections for Azure services](/azure/developer/intro/passwordless-overview)

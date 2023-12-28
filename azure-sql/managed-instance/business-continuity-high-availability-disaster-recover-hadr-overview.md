@@ -5,7 +5,7 @@ description: Learn how Azure SQL Managed Instance supports cloud business contin
 author: Stralle
 ms.author: strrodic
 ms.reviewer: mathoma
-ms.date: 12/15/2023
+ms.date: 12/28/2023
 ms.service: sql-managed-instance
 ms.subservice: high-availability
 ms.topic: conceptual
@@ -71,7 +71,7 @@ The following table compares RPO and RTO of each business continuity option:
 
 | **Business continuity option** | **RTO (downtime)** | **RPO (data loss)** |
 | --- | --- | --- |
-| High Availability </br>(Enabling zone redundancy) | 1 hours | 1 hour|
+| High Availability </br>(Enabling zone redundancy) | Typically less than 30 seconds | 0 |
 | Disaster Recovery </br>(Enabling failover groups) | 1 hour| 5 seconds </br> (Depends on data changes before the disruptive event that haven't been replicated) |
 | Disaster Recovery </br>(Using geo-restore) | 12 hours | 1 hour|
 

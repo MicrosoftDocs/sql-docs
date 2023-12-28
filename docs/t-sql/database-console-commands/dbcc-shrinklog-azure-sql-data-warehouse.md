@@ -1,5 +1,5 @@
 ---
-title: DBCC SHRINKLOG (Parallel Data Warehouse)
+title: DBCC SHRINKLOG - Analytics Platform System (PDW)
 description: DBCC SHRINKLOG reduces the size of the transaction log across the appliance for the current Analytics Platform System (PDW) database.
 author: rwestMSFT
 ms.author: randolphwest

@@ -4,7 +4,7 @@ description: This article provides an overview of resource management in Azure S
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 09/21/2023
+ms.date: 12/28/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: reference
@@ -127,7 +127,10 @@ The number of concurrent connections to external endpoints done via [sp_invoke_e
 
 Unlike other resources (CPU, workers, storage), reaching the memory limit doesn't negatively impact query performance, and doesn't cause errors and failures. As described in detail in [Memory Management Architecture Guide](/sql/relational-databases/memory-management-architecture-guide), the database engine often uses all available memory, by design. Memory is used primarily for caching data, to avoid slower storage access. Thus, higher memory utilization usually improves query performance due to faster reads from memory, rather than slower reads from storage.
 
-After database engine startup, as the workload starts reading data from storage, the database engine aggressively caches data in memory. After this initial ramp-up period, it's common and expected to see the `avg_memory_usage_percent` and `avg_instance_memory_percent` columns in [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database) to be close or equal to 100%, particularly for databases that aren't idle, and don't fully fit in memory.
+After database engine startup, as the workload starts reading data from storage, the database engine aggressively caches data in memory. After this initial ramp-up period, it's common and expected to see the `avg_memory_usage_percent` and `avg_instance_memory_percent` columns in [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database), and the `sql_instance_memory_percent` Azure Monitor metric to be close to 100%, particularly for databases that aren't idle, and don't fully fit in memory.
+
+> [!NOTE]
+> The `sql_instance_memory_percent` metric reflects total memory consumption by the database engine. This metric might not reach 100% even when high intensity workloads are running. This is because a small portion of available memory is reserved for critical memory allocations other than the data cache, such as thread stacks and executable modules.
 
 Besides the data cache, memory is used in other components of the database engine. When there's demand for memory and all available memory has been used by the data cache, the database engine reduces data cache size to make memory available to other components, and dynamically grows data cache when other components release memory.
 

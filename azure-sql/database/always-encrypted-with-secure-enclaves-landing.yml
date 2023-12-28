@@ -15,7 +15,7 @@ metadata:
   ms.author: vanto
   ms.reviewer: mathoma
   ms.date: 04/05/2023
-  monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+  monikerRange: "=azuresql||=azuresql-db"
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 

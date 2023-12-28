@@ -336,7 +336,7 @@ See "\<backup_device>," earlier in this section.
 *n*    
 Is a placeholder that indicates that up to 64 backup devices might be specified in a comma-separated list. The number of devices in the MIRROR TO clause must equal the number of devices in the TO clause.
 
-For more information, see "Media Families in Mirrored Media Sets" in the [Remarks](#general-remarks) section, later in this article.
+For more information, see "Media Families in Mirrored Media Sets" in the [Remarks](#remarks) section, later in this article.
 
 [ *next-mirror-to* ]    
 Is a placeholder that indicates that a single BACKUP statement can contain up to three MIRROR TO clauses, in addition to the single TO clause.
@@ -410,7 +410,7 @@ Specifies whether [backup compression](../../relational-databases/backup-restore
 
 At installation, the default behavior is no backup compression. But this default can be changed by setting the [backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) server configuration option. For information about viewing the current value of this option, see [View or Change Server Properties](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).
 
-For information about using backup compression with [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) enabled databases, see the [Remarks](#general-remarks) section.
+For information about using backup compression with [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) enabled databases, see the [Remarks](#remarks) section.
 
 COMPRESSION    
 Explicitly enables backup compression.
@@ -473,7 +473,7 @@ These options operate on the media set as a whole.
 Controls whether the backup operation appends to or overwrites the existing backup sets on the backup media. The default is to append to the most recent backup set on the media (NOINIT).
 
 > [!NOTE]
-> For information about the interactions between { **NOINIT** | INIT } and { **NOSKIP** | SKIP }, see [Remarks](#general-remarks) later in this topic.
+> For information about the interactions between { **NOINIT** | INIT } and { **NOSKIP** | SKIP }, see [Remarks](#remarks) later in this topic.
 
 NOINIT    
 Indicates that the backup set is appended to the specified media set, preserving existing backup sets. If a media password is defined for the media set, the password must be supplied. NOINIT is the default.
@@ -546,7 +546,7 @@ Specifies the largest unit of transfer in bytes to be used between [!INCLUDE [ss
 
 When creating backups by using the SQL Writer Service, if the database has configured [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md), or includes [memory optimized filegroups](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md), then the `MAXTRANSFERSIZE` at the time of a restore should be greater than or equal to the `MAXTRANSFERSIZE` that was used when the backup was created.
 
-For [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) enabled databases with a single data file, the default `MAXTRANSFERSIZE` is 65536 (64 KB). For non-TDE encrypted databases, the default `MAXTRANSFERSIZE` is 1048576 (1 MB) when using backup to DISK, and 65536 (64 KB) when using VDI or TAPE. For more information about using backup compression with TDE encrypted databases, see the [Remarks](#general-remarks) section.
+For [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) enabled databases with a single data file, the default `MAXTRANSFERSIZE` is 65536 (64 KB). For non-TDE encrypted databases, the default `MAXTRANSFERSIZE` is 1048576 (1 MB) when using backup to DISK, and 65536 (64 KB) when using VDI or TAPE. For more information about using backup compression with TDE encrypted databases, see the [Remarks](#remarks) section.
 
 ### Error management options
 
@@ -1404,8 +1404,6 @@ BACKUP DATABASE errors under the following conditions:
 - The target network share does not have enough space for the backup. The BACKUP DATABASE command does not confirm that sufficient disk space exists prior to initiating the backup, making it possible to generate an out-of-disk-space error while running BACKUP DATABASE. When insufficient disk space occurs, [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] rolls back the BACKUP DATABASE command. To decrease the size of your database, run [DBCC SHRINKLOG (Analytics Platform System (PDW))](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)
 - Attempt to start a backup within a transaction.
 
-::: moniker-end
-::: moniker range=">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017"
 ## Remarks
 
 Before you perform a database backup, use [DBCC SHRINKLOG (Analytics Platform System (PDW))](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) to decrease the size of your database.
@@ -1418,8 +1416,6 @@ If you cancel a BACKUP command, [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] w
 
 Full backups and differential backups are stored in separate directories. Naming conventions are not enforced for specifying that a full backup and differential backup belong together. You can track this through your own naming conventions. Alternatively, you can track this by using the WITH DESCRIPTION option to add a description, and then by using the RESTORE HEADERONLY statement to retrieve the description.
 
-::: moniker-end
-::: moniker range=">=aps-pdw-2016"
 ## Limitations
 
 You cannot perform a differential backup of the `master` database. Only full backups of the `master` database are supported.

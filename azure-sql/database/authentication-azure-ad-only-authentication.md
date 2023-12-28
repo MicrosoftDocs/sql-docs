@@ -1,6 +1,6 @@
 ---
 title: Microsoft Entra-only authentication
-titleSuffix: Azure SQL Database & Azure SQL Managed Instance
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
 description: This article provides information on the Microsoft Entra-only authentication feature with Azure SQL.
 author: nofield
 ms.author: nofield

@@ -9,6 +9,7 @@ ms.date: 10/23/2023
 ms.service: sql-db-mi
 ms.subservice: deployment-configuration
 ms.topic: how-to
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # Request quota increases for Azure SQL Database and SQL Managed Instance

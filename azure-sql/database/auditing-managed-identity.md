@@ -1,5 +1,6 @@
 ---
 title: Auditing using managed identity
+titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: How to use managed identity with storage accounts for auditing
 author: sravanisaluru
 ms.author: srsaluru

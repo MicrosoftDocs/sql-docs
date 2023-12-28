@@ -3,7 +3,7 @@ title: DBCC SHRINKLOG - Analytics Platform System (PDW)
 description: DBCC SHRINKLOG reduces the size of the transaction log across the appliance for the current Analytics Platform System (PDW) database.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 12/05/2022
+ms.date: 12/28/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: "language-reference"
@@ -12,7 +12,7 @@ dev_langs:
 monikerRange: ">= aps-pdw-2016"
 ---
 
-# DBCC SHRINKLOG (Parallel Data Warehouse)
+# DBCC SHRINKLOG - Analytics Platform System (PDW)
 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 

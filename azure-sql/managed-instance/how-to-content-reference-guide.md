@@ -5,21 +5,24 @@ description: A reference guide of content that teaches you how to configure and 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: mathoma, danil
-ms.date: 03/22/2022
+ms.date: 12/29/2023
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: conceptual
-ms.custom: sqldbrb=1, ignite-fall-2021, ignite-2023
+ms.custom: sqldbrb=1, ignite-2023
+monikerRange: "=azuresql||=azuresql-mi"
 ---
 # Azure SQL Managed Instance content reference
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-In this article you can find a content reference to various guides, scripts, and explanations that help you manage and configure Azure SQL Managed Instance.
+In this article, you can find a content reference to various guides, scripts, and explanations that help you manage and configure Azure SQL Managed Instance.
 
 ## Load data
 
-- [SQL Server to Azure SQL Managed Instance Guide](../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md): Learn about the recommended migration process and tools for migration to Azure SQL Managed Instance.
-- [Migrate TDE cert to Azure SQL Managed Instance](tde-certificate-migrate.md): If your SQL Server database is protected with transparent data encryption (TDE), you would need to migrate the certificate that SQL Managed Instance can use to decrypt the backup that you want to restore in Azure.
+- [SQL Server to Azure SQL Managed Instance Guide](../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md): 
+  Learn about the recommended migration process and tools for migration to Azure SQL Managed Instance.
+- [Migrate TDE cert to Azure SQL Managed Instance](tde-certificate-migrate.md): 
+  If your database is protected with transparent data encryption (TDE), you need to migrate the certificate to decrypt the backup that you want to restore in SQL Managed Instance.
 - [Import a DB from a BACPAC](../database/database-import.md)
 - [Export a DB to BACPAC](../database/database-export.md)
 - [Load data with BCP](../load-from-csv-with-bcp.md)
@@ -28,7 +31,7 @@ In this article you can find a content reference to various guides, scripts, and
 ## Network configuration
 
 - [Determine subnet size](vnet-subnet-determine-size.md):
-  Since the subnet can't be resized after SQL Managed Instance is deployed, you need to calculate what IP range of addresses is required for the number and types of managed instances you plan to deploy to the subnet. 
+  Since the subnet can't be resized after SQL Managed Instance is deployed, you need to calculate what IP range of addresses is required.
 - [Create a new VNet and subnet](virtual-network-subnet-create-arm-template.md):
   Configure the virtual network and subnet according to the [network requirements](connectivity-architecture-overview.md#network-requirements). 
 - [Configure an existing VNet and subnet](vnet-existing-add-subnet.md):
@@ -46,10 +49,10 @@ In this article you can find a content reference to various guides, scripts, and
 
 ## Feature configuration
 
-- [Configure authentication with Microsoft Entra ID (formerly Azure Active Directory)](../database/authentication-aad-configure.md)
+- [Configure authentication with Microsoft Entra ID](../database/authentication-aad-configure.md)
 - [Configure conditional access](../database/conditional-access-configure.md)
 - [Microsoft Entra multifactor authentication](../database/authentication-mfa-ssms-overview.md)
-- [Configure failover group](failover-group-configure-sql-mi.md) to automatically fail over all databases on an instance to a secondary instance in another region in the event of a disaster. 
+- [Configure failover group](failover-group-configure-sql-mi.md) to automatically fail over all databases on an instance to a secondary instance in another region. 
 - [Configure a temporal retention policy](../database/temporal-tables-retention-policy.md)
 - [Configure In-Memory OLTP](in-memory-oltp-configure.md)
 - [Configure Azure Automation](../database/automation-manage.md)
@@ -119,6 +122,6 @@ In this article you can find a content reference to various guides, scripts, and
 - [SaaS video indexer](../database/saas-tenancy-video-index-wingtip-brk3120-20171011.md)
 - [SaaS app security](../database/saas-tenancy-elastic-tools-multi-tenant-row-level-security.md)
 
-## Next steps
+## Related content
 
 Get started by [deploying SQL Managed Instance](instance-create-quickstart.md).

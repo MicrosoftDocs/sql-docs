@@ -1,6 +1,6 @@
 ---
 title: "sp_update_job (Transact-SQL)"
-description: "sp_update_job (Transact-SQL) update the attributes of an existing job created in the SQL Agent service."
+description: "sp_update_job (Transact-SQL) update the attributes of an existing job created in the SQL Server Agent service."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest, wiassaf

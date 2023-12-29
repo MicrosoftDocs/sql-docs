@@ -72,7 +72,7 @@ WHERE s.type_desc IN ('ROWS', 'LOG');
 > - Changing the edition of a Hyperscale elastic pool to a non-Hyperscale edition isn't supported. See [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md#limitations) for more details.
 
 > [!TIP]
-> To monitor in-progress operations, see: [Manage operations using the SQL REST API](/rest/api/sql/operations/list), [Manage operations using CLI](/cli/azure/sql/db/op), [Monitor operations using T-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) and these two PowerShell commands: [Get-AzSqlElasticPoolActivity](/powershell/module/az.sql/get-azsqlelasticpoolactivity) and [Stop-AzSqlElasticPoolActivity](/powershell/module/az.sql/stop-azsqlelasticpoolactivity).
+> To monitor in-progress operations, see: [Manage operations using the SQL REST API](/rest/api/sql/operations/list), [Manage operations using CLI](/cli/azure/sql/elastic-pool/op), [Monitor operations using T-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) and these two PowerShell commands: [Get-AzSqlElasticPoolActivity](/powershell/module/az.sql/get-azsqlelasticpoolactivity) and [Stop-AzSqlElasticPoolActivity](/powershell/module/az.sql/stop-azsqlelasticpoolactivity).
 
 ### Additional considerations when changing service tier or rescaling compute size
 

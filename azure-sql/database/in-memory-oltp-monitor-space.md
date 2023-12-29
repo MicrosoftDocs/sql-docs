@@ -34,7 +34,7 @@ Estimating memory requirements for a memory-optimized table works the same way f
 
 Table and table variable rows, as well as indexes, count toward the max user data size. In addition, `ALTER TABLE` needs enough room to create a new version of the entire table and its indexes.
 
-Once this limit is exceeded, insert and update operations might start failing. At that point you need to either delete data to reclaim memory, or upgrade the service tier or compute size of your database. For more information, see [Correct out-of-In-memory OLTP storage situations - Errors 41823 and 41840](#correct-out-of-in-memory-oltp-storage-situations---errors-41823-and-41840).
+Once this limit is exceeded, insert and update operations might start failing. At that point you need to either delete data to reclaim memory, or upgrade the service tier or compute size of your database. For more information, see [Correct out-of-In-memory OLTP storage situations - Errors 41823 and 41840](#correct-out-of-memory-oltp-storage-situations---errors-41823-and-41840).
 
 ## Monitoring and alerting
 

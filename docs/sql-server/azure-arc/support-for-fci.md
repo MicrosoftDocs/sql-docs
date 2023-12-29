@@ -1,6 +1,6 @@
 ---
-title: View Always On failover cluster instances
-description: In this article, you learn how you can view and manage Azure Arc-enabled SQL Servers that are configured as a failover cluster.
+title: View Always On failover cluster instances (preview)
+description: In this article, you learn how you can view and manage SQL Server instances enabled by Azure Arc that are configured as a failover cluster.
 author: dnethi
 ms.author: dinethi
 ms.reviewer: mikeray, randolphwest

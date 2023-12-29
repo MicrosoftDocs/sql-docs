@@ -85,3 +85,4 @@ To resolve this error, either:
 ## Related content
 
 - [Monitor Microsoft Azure SQL Managed Instance performance using dynamic management views](monitoring-with-dmvs.md?view=azuresql-mi&preserve-view=true)
+- [In-memory sample in Azure SQL Managed Instance](in-memory-oltp-sample.md?view=azuresql-mi&preserve-view=true)

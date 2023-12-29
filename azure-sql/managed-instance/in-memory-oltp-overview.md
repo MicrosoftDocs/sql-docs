@@ -42,6 +42,9 @@ Azure SQL Managed Instance supports the following in-memory technologies:
 
 Columnstore indexes and in-memory OLTP were introduced to SQL Server in 2012 and 2014, respectively. Azure SQL Database, Azure SQL Managed Instance, and SQL Server share the same implementation of in-memory technologies.
 
+> [!NOTE]
+> For a detailed step-by-step tutorial to demonstrate the performance advantages of in-memory OLTP technology, using the `AdventureWorksLT` sample database and ostress.exe, see [In-memory sample in Azure SQL Managed Instance](in-memory-oltp-sample.md?view=azuresql-mi&preserve-view=true).
+
 ## Benefits of in-memory technology
 
 Because of the more efficient query and transaction processing, in-memory technologies also help you to reduce cost. Once in the Business Critical service tier of Azure SQL Managed Instance, you typically don't need to upgrade the SQL managed instance to achieve performance gains. In some cases, you might even be able reduce the pricing tier, while still seeing performance improvements with in-memory technologies.
@@ -139,6 +142,7 @@ When you use nonclustered columnstore indexes, the base table is still stored in
 
 ## Related content
 
+- [In-memory sample in Azure SQL Managed Instance](in-memory-oltp-sample.md?view=azuresql-mi&preserve-view=true)
 - [Quickstart 1: In-memory OLTP Technologies for faster T-SQL Performance](/sql/relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp?view=azuresqldb-mi-current&preserve-view=true)
 - [Use in-memory OLTP in an existing Azure SQL application](in-memory-oltp-configure.md?view=azuresql-mi&preserve-view=true)
 - [In-memory OLTP overview and usage scenarios](/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization?view=azuresqldb-mi-current&preserve-view=true)

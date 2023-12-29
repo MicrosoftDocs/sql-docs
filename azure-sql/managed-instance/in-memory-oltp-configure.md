@@ -156,6 +156,7 @@ Consider monitoring the performance effects of your in-memory implementations in
 
 ## Related content
 
+- [In-memory sample in Azure SQL Managed Instance](in-memory-oltp-sample.md?view=azuresql-mi&preserve-view=true)
 - [In-memory OLTP (In-memory Optimization)](/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization?view=azuresqldb-mi-current&preserve-view=true)
 - [A Guide to Query Processing for Memory-Optimized Tables](/sql/relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables?view=azuresqldb-mi-current&preserve-view=true)
 - [Memory Optimization Advisor](/sql/relational-databases/in-memory-oltp/memory-optimization-advisor?view=azuresqldb-mi-current&preserve-view=true)

@@ -1,72 +1,76 @@
 ---
 title: In-memory sample
-description: Try in-memory technologies in Azure SQL Database with OLTP and columnstore sample.
+description: Try in-memory technologies in Azure SQL Managed Instance with OLTP and columnstore sample.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, srinia, strrodic
+ms.reviewer: mathoma, srinia, strrodic 
 ms.date: 12/29/2023
-ms.service: sql-database
+ms.service: sql-managed-instance
 ms.subservice: performance
 ms.topic: tutorial
-ms.custom:
-  - sqldbrb=1
-monikerRange: "=azuresql||=azuresql-db"
+monikerRange: "=azuresql||=azuresql-mi"
 ---
-# In-memory sample in Azure SQL Database
-[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
+# In-memory sample in Azure SQL Managed Instnace
+[!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](in-memory-oltp-sample.md?view=azuresql-db&preserve-view=true)
-> * [Azure SQL Managed Instance](../managed-instance/in-memory-oltp-sample.md?view=azuresql-mi&preserve-view=true)
+> * [Azure SQL Database](../database/in-memory-oltp-sample.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](in-memory-oltp-sample.md?view=azuresql-mi&preserve-view=true)
 
-In-memory technologies in Azure SQL Database enable you to improve performance of your application, and potentially reduce cost of your database. By using in-memory technologies in Azure SQL Database, you can achieve performance improvements with various workloads.
+In-memory technologies in Azure SQL Managed Instance enable you to improve performance of your application, and potentially reduce cost of your database. By using in-memory technologies in Azure SQL Managed Instance, you can achieve performance improvements with various workloads.
 
-In this article you'll see two samples that illustrate the use of in-memory OLTP, as well as columnstore indexes in Azure SQL Database.
+In this article you'll see two samples that illustrate the use of in-memory OLTP, as well as columnstore indexes in Azure SQL Managed Instance.
 
 For more information, see:
 
-- [In-memory OLTP Overview and Usage Scenarios](/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios?view=azuresql-db&preserve-view=true) (includes references to customer case studies and information to get started)
-- [Documentation for in-memory OLTP](/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization?view=azuresqldb-current&preserve-view=true)
-- [Columnstore Indexes Guide](/sql/relational-databases/indexes/columnstore-indexes-overview?view=azuresqldb-current&preserve-view=true)
-- Hybrid transactional/analytical processing (HTAP), also known as [real-time operational analytics](/sql/relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics?view=azuresqldb-current&preserve-view=true)
+- [In-memory OLTP Overview and Usage Scenarios](/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios?view=azuresql-mi&preserve-view=true) (includes references to customer case studies and information to get started)
+- [Documentation for in-memory OLTP](/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization?view=azuresqlmi-current&preserve-view=true)
+- [Columnstore Indexes Guide](/sql/relational-databases/indexes/columnstore-indexes-overview?view=azuresqlmi-current&preserve-view=true)
+- Hybrid transactional/analytical processing (HTAP), also known as [real-time operational analytics](/sql/relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics?view=azuresqlmi-current&preserve-view=true)
 
 For a more simplistic, but more visually appealing performance demo for in-memory OLTP, see:
 
 - Release: [in-memory-oltp-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 - Source code: [in-memory-oltp-demo-source-code](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/in-memory-database)
 
-<a id="install_oltp_manuallink"></a>
+## 1. Restore the in-memory OLTP sample database
 
-## 1. Install the in-memory OLTP sample
+You can restore the `AdventureWorksLT` sample database with a few T-SQL steps in [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms). For more information on restoring a database to your SQL managed instance, see [Quickstart: Restore a database to Azure SQL Managed Instance with SSMS](restore-sample-database-quickstart.md).
 
-You can create the `AdventureWorksLT` sample database with a few steps in the [Azure portal](https://portal.azure.com/). Then, the steps in this section explain how you can enrich your `AdventureWorksLT` database with in-memory OLTP objects and demonstrate performance benefits.
+Then, the steps in this section explain how you can enrich your `AdventureWorksLT` database with in-memory OLTP objects and demonstrate performance benefits.
 
-### Installation steps
+1. Open SSMS and connect to your SQL managed instance.
 
-1. In the [Azure portal](https://portal.azure.com/), create a Premium (DTU) or Business Critical (vCore) database on a server. Set the **Source** to the `AdventureWorksLT` sample database. For detailed instructions, see [Create your first database in Azure SQL Database](single-database-create-quickstart.md?view=azuresql-db&preserve-view=true).
+   > [!NOTE]
+   > Connections to your Azure SQL Managed Instance from your on-premises workstation or an Azure VM can be made securely, without opening public access. Consider [Quickstart: Configure a point-to-site connection to Azure SQL Managed Instance from on-premises](point-to-site-p2s-configure.md) or [Quickstart: Configure an Azure VM to connect to Azure SQL Managed Instance](connect-vm-instance-configure.md).
 
-1. Connect to the database with [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms).
+1. In **Object Explorer**, right-click your managed instance and select **New Query** to open a new query window.
 
-1. Copy the [in-memory OLTP Transact-SQL script](https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/sql_in-memory_oltp_sample.sql) to your clipboard. The T-SQL script creates the necessary in-memory objects in the `AdventureWorksLT` sample database that you created in step 1.
+1. Run the following T-SQL statement, which uses publicly available preconfigured storage container and a shared access signature key to [create a credential](/sql/t-sql/statements/create-credential-transact-sql) in your SQL managed instance. With publicly-available storage, no SAS signature is required.
 
-1. Paste the T-SQL script into SSMS, and then execute the script. The `MEMORY_OPTIMIZED = ON` clause in the `CREATE TABLE` statements are crucial. For example:
+   ```sql
+   CREATE CREDENTIAL [https://mitutorials.blob.core.windows.net/examples/]
+   WITH IDENTITY = 'SHARED ACCESS SIGNATURE';
+   ```
 
-```sql
-CREATE TABLE [SalesLT].[SalesOrderHeader_inmem](
-    [SalesOrderID] int IDENTITY NOT NULL PRIMARY KEY NONCLUSTERED ...,
-    ...
-) WITH (MEMORY_OPTIMIZED = ON);
-```
+1. Run the following statement to restore the example `AdventureWorksLT` database.
 
-### Error 40536
+   ```sql
+   RESTORE DATABASE [AdventureWorksLT] 
+   FROM URL = 'https://mitutorials.blob.core.windows.net/examples/AdventureWorksLT2022.bak';
+   ```
 
-If you get error 40536 when you run the T-SQL script, run the following T-SQL script to verify whether the database supports in-memory objects:
+1. Run the following statement to track the status of your restore process.
 
-```sql
-SELECT DatabasePropertyEx(DB_Name(), 'IsXTPSupported');
-```
+   ```sql
+   SELECT session_id as SPID, command, a.text AS Query, start_time, percent_complete
+      , dateadd(second,estimated_completion_time/1000, getdate()) as estimated_completion_time
+   FROM sys.dm_exec_requests r
+   CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) a
+   WHERE r.command in ('BACKUP DATABASE','RESTORE DATABASE');
+   ```
 
-A result of `0` means that in-memory isn't supported, and `1` means that it is supported. In-memory technologies are available in Azure SQL Database Premium (DTU) and Business Critical (vCore) tiers.
+1. When the restore process finishes, view the `AdventureWorksLT` database in **Object Explorer**. You can verify that the `AdventureWorksLT` database is restored by using the [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database?view=azuresqlmi-current&preserve-view=true) view.
 
 ### About the created memory-optimized items
 
@@ -105,9 +109,10 @@ The only difference between the following two *stored procedures* is that the fi
 
 In this section, you see how to use the handy ostress.exe utility to execute the two stored procedures at stressful levels. You can compare how long it takes for the two stress runs to finish.
 
+
 ### Install RML utilities and ostress
 
-Ideally, you would plan to run ostress.exe on an Azure virtual machine (VM). You would create an [Azure VM](/azure/virtual-machines/) in the same Azure region of your `AdventureWorksLT` database. But you can run ostress.exe on your local workstation instead, as long as you can connect to your Azure SQL database.
+Ideally, you would plan to run ostress.exe on an Azure virtual machine (VM). You would create an [Azure VM](/azure/virtual-machines/) in the same Azure region as your SQL managed instance. But you can run ostress.exe on your local workstation instead, as long as you can connect to your Azure SQL managed instance.
 
 On the VM, or on whatever host you choose, install the Replay Markup Language (RML) utilities. The utilities include ostress.exe.
 
@@ -229,9 +234,13 @@ For real-time analytics on an OLTP workload, it's often best to use a noncluster
 
 ### Prepare the columnstore analytics test
 
-1. Use the Azure portal to create a fresh `AdventureWorksLT` database from the sample.
-   - Use that exact name.
-   - Choose any Premium service tier.
+1. Restore a fresh `AdventureWorksLT` database to your SQL managed instance, overwriting the existing database you installed earlier, using `WITH REPLACE`.
+
+   ```sql
+   RESTORE DATABASE [AdventureWorksLT] 
+   FROM URL = 'https://mitutorials.blob.core.windows.net/examples/AdventureWorksLT2022.bak'
+   WITH REPLACE;
+   ```
 
 1. Copy the [sql_in-memory_analytics_sample](https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/sql_in-memory_analytics_sample.sql) to your clipboard.
    - The T-SQL script creates the necessary in-memory objects in the `AdventureWorksLT` sample database that you created in step 1.
@@ -321,15 +330,14 @@ SET STATISTICS TIME OFF
 GO
 ```
 
-In a database with the P2 pricing tier, you can expect about nine times the performance gain for this query by using the clustered columnstore index compared with the traditional index. With P15, you can expect about 57 times the performance gain by using the columnstore index.
+Depending on your SQL managed instance configuration, you can expect significant performance gains for this query by using the clustered columnstore index compared with the traditional index.
 
 ## Related content
 
-- [Quickstart 1: In-memory OLTP Technologies for faster T-SQL Performance](/sql/relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp?view=azuresqldb-current&preserve-view=true)
-- [Use in-memory OLTP to improve your application performance](in-memory-oltp-configure.md?view=azuresql-db&preserve-view=true)
-- [Monitor in-memory OLTP storage](in-memory-oltp-monitor-space.md?view=azuresql-db&preserve-view=true)
-- [Blog: In-memory OLTP in Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
-- [In-memory OLTP](/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization?view=azuresqldb-current&preserve-view=true)
-- [Columnstore indexes](/sql/relational-databases/indexes/columnstore-indexes-overview?view=azuresqldb-current&preserve-view=true)
-- [Real-time operational analytics with columnstore indexes](/sql/relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics?view=azuresqldb-current&preserve-view=true)
+- [Quickstart 1: In-memory OLTP Technologies for faster T-SQL Performance](/sql/relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp?view=azuresqlmi-current&preserve-view=true)
+- [Use in-memory OLTP to improve your application performance](in-memory-oltp-configure.md?view=azuresql-mi&preserve-view=true)
+- [Monitor in-memory OLTP storage](in-memory-oltp-monitor-space.md?view=azuresql-mi&preserve-view=true)
+- [In-memory OLTP](/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization?view=azuresqlmi-current&preserve-view=true)
+- [Columnstore indexes](/sql/relational-databases/indexes/columnstore-indexes-overview?view=azuresqlmi-current&preserve-view=true)
+- [Real-time operational analytics with columnstore indexes](/sql/relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics?view=azuresqlmi-current&preserve-view=true)
 - [Technical article: In-memory OLTP – Common Workload Patterns and Migration Considerations in SQL Server 2014](/previous-versions/dn673538(v=msdn.10))

@@ -48,10 +48,10 @@ The portal displays the databases on the SQL Server instance.
 
 - All the Windows and SQL Server instances that are part of the failover clustering should be in same resource group.
 - Always On availability groups on a failover cluster instance aren't supported for [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] at this time.
-- Currently, best practices assessment is not supported with Always On failover cluster instance.
-- Automated backups and point-in-time restore is not supported for failover cluster instances at this time.
-- SQL FCIs with multiple network names are not supported at this time.
-- SQL FCIs which use a different network name than the one configured during installation are not supported at this time.
+- Currently, best practices assessment isn't supported with Always On failover cluster instance.
+- Automated backups and point-in-time restore isn't supported for failover cluster instances at this time.
+- SQL failover cluster instances with multiple network names are not supported at this time.
+- SQL failover cluster instances which use a different network name than the one configured during installation are not supported at this time.
 
 ## Related tasks
 

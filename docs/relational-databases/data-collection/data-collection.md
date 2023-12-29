@@ -55,14 +55,14 @@ For more information, see [Integration Services (SSIS) Packages](../../integrati
 
 | Term | Description |
 | --- | --- |
-| **target** | An instance of the [!INCLUDE [ssDE](../../includes/ssde-md.md)] in an edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] that supports Data Collection. For more information about supported editions, see the "Manageability" section of [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).<br /><br />A *target root* defines a subtree in the target hierarchy. A *target set* is the group of targets that results from applying a filter to a subtree defined by a target root. A target root can be a database, an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], or a computer instance. |
-| **target type** | The type of target, which has certain characteristics and behavior. For example, a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance target has different characteristics than a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] database target. |
-| **data provider** | A known data source, specific to a target type, which provides data to a collector type. |
-| **collector type** | A logical wrapper around the [!INCLUDE [ssIS](../../includes/ssis-md.md)] packages that provide the actual mechanism for collecting data and uploading it to the management data warehouse. |
-| **collection item** | An instance of a collector type. A collection item is created with a specific set of input properties and a collection frequency. |
-| **collection set** | A group of collection items. A collection set is a unit of data collection that a user can interact with through the user interface. |
-| **collection mode** | The manner in which the data is collected and stored. Collection mode can be cached or non-cached. Cached mode supports continuous collection, whereas non-cached mode is intended for on-demand collection or a collection snapshot. |
-| **management data warehouse** | A relational database used to store collected data. |
+| **Target** | An instance of the [!INCLUDE [ssDE](../../includes/ssde-md.md)] in an edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] that supports Data Collection. For more information about supported editions, see the "Manageability" section of [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).<br /><br />A *target root* defines a subtree in the target hierarchy. A *target set* is the group of targets that results from applying a filter to a subtree defined by a target root. A target root can be a database, an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], or a computer instance. |
+| **Target type** | The type of target, which has certain characteristics and behavior. For example, a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance target has different characteristics than a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] database target. |
+| **Data provider** | A known data source, specific to a target type, which provides data to a collector type. |
+| **Collector type** | A logical wrapper around the [!INCLUDE [ssIS](../../includes/ssis-md.md)] packages that provide the actual mechanism for collecting data and uploading it to the management data warehouse. |
+| **Collection item** | An instance of a collector type. A collection item is created with a specific set of input properties and a collection frequency. |
+| **Collection set** | A group of collection items. A collection set is a unit of data collection that a user can interact with through the user interface. |
+| **Collection mode** | The manner in which the data is collected and stored. Collection mode can be cached or non-cached. Cached mode supports continuous collection, whereas non-cached mode is intended for on-demand collection or a collection snapshot. |
+| **Management data warehouse** | A relational database used to store collected data. |
 
 The following illustration shows the dependencies and relationships between data collector components.
 

@@ -34,7 +34,7 @@ Displays the name of the server that will host the management data warehouse
 
 Displays the name of the relational database that is used for the management data warehouse.
 
-#### Test Connection
+#### Test connection
 
 Test the connection to the specified **Server** using information provided when data collection is configured.
 

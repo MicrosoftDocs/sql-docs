@@ -4,7 +4,7 @@ description: Learn how to troubleshoot common issues with auto cleanup on change
 author: croblesm
 ms.author: roblescarlos
 ms.reviewer: randolphwest
-ms.date: 11/29/2023
+ms.date: 12/27/2023
 ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
@@ -25,16 +25,17 @@ Generally, if the auto cleanup isn't functioning as expected, you can see one or
 
 - High storage consumption by one or more change tracking side tables or the `syscommittab` system table.
 - Side tables (internal tables whose name begins with prefix `change_tracking`, for example, `change_tracking_12345`) or `syscommittab` or both, show significant number of rows that are outside of the configured retention period.
+- `dbo.MSChange_tracking_history` table has entries with specific cleanup errors.
 - `CHANGETABLE` performance has degraded over time.
 - Auto cleanup or manual cleanup reports high CPU usage.
 
 ## Debugging and mitigation
 
-To identify the root cause of a problem with auto cleanup on change tracking, use the following steps to debug and mitigate the issue.
+To identify the root cause of a problem with change tracking auto cleanup, use the following steps to debug and mitigate the issue.
 
 ### Auto cleanup status
 
-Check if auto cleanup has been running. To check this, query the cleanup history table in the same database. If the cleanup has been running, the table has entries with the start and end times of the cleanup. If the cleanup hasn't been running, the table is empty.
+Check if auto cleanup has been running. To check this, query the cleanup history table in the same database. If the cleanup has been running, the table has entries with the start and end times of the cleanup. If the cleanup hasn't been running, the table is empty or has stale entries. If the history table has entries with the tag `cleanup errors` in the column `comments`, then the cleanup is failing due to table level cleanup errors.
 
 ```sql
 SELECT TOP 1000 * FROM dbo.MSChange_tracking_history ORDER BY start_time DESC;
@@ -56,13 +57,13 @@ To enable or disable change tracking see [Enable and Disable Change Tracking (SQ
 
 #### 2. Cleanup is turned on but not running
 
-If auto cleanup is on, the auto cleanup thread was likely stopped due to unexpected errors. Currently, restarting the auto cleanup thread isn't feasible. You must initiate a failover to a secondary server (or restart the server in the absence of a secondary), and confirm that the auto cleanup setting is enabled for the database.
+If auto cleanup is on, the auto cleanup thread likely stopped due to unexpected errors. Currently, restarting the auto cleanup thread isn't feasible. You must initiate a failover to a secondary server (or restart the server in the absence of a secondary), and confirm that the auto cleanup setting is enabled for the database.
 
 ### Auto cleanup runs but isn't making progress
 
 If one or more side tables show significant storage consumption, or contain a large number of records beyond configured retention, follow the steps in this section, which describe remedies for a single side table. The same steps can be repeated for more tables if necessary.
 
-#### 1. Cleanup lags behind
+#### 1. Assess auto cleanup backlog
 
 First, gather information on the latency of the side table delete statements and the rate of deletion per second over the last few hours. Next, estimate the time required to clean up the side table by considering both the stale row count and the delete latency.
 
@@ -71,7 +72,8 @@ Use the following Transact-SQL (T-SQL) code snippet by substituting parameter te
 - Query the rate of cleanup per second:
 
   ```sql
-  SELECT table_name,
+  SELECT
+      table_name,
       rows_cleaned_up / ISNULL(NULLIF(DATEDIFF(second, start_time, end_time), 0), 1),
       cleanup_version
   FROM dbo.MSChange_tracking_history
@@ -86,14 +88,15 @@ Use the following Transact-SQL (T-SQL) code snippet by substituting parameter te
   The internal_table_name & cleanup_version for the user table in the output returned in the previous section. Using this information, execute the following T-SQL code through a dedicated admin connection (DAC):
 
  ```sql
-  SELECT '<internal_table_name>',
+  SELECT
+      '<internal_table_name>',
       COUNT(*)
-  FROM sys.< internal_table_name >
+  FROM sys.<internal_table_name>
   WHERE sys_change_xdes_id IN (
-          SELECT xdes_id
-          FROM sys.syscommittab ssct
-          WHERE ssct.commit_ts <= <cleanup version>;
-  )
+      SELECT xdes_id
+      FROM sys.syscommittab ssct
+      WHERE ssct.commit_ts <= <cleanup version>
+  );
   ```
 
   This query can take some time to complete. In cases where the query times out, calculate stale rows by finding the difference between total rows and active rows that is, rows to be cleaned up.
@@ -119,30 +122,32 @@ Use the following Transact-SQL (T-SQL) code snippet by substituting parameter te
 
   If the time to complete table cleanup is acceptable, monitor the progress and let the auto cleanup continue its work. If not, proceed with the next steps to drill down further.
 
-#### 2. Cleanup isn't progressing
+#### 2. Check table lock conflicts
 
 Determine if cleanup isn't progressing because of table lock escalation conflicts, which starve cleanup consistently from acquiring lock(s) on the side table to delete rows.
 
 To confirm this, run the following T-SQL code. This query fetches records for the problematic table to determine if there are multiple entries indicating lock conflicts. A few sporadic conflicts spread over a period shouldn't qualify for the proceeding mitigation steps. The conflicts should be recurrent.
 
 ```sql
-SELECT TOP 1000 * FROM dbo.MSChange_tracking_history
-WHERE table_name = '<user_table_name>' ORDER BY start_time DESC
+SELECT TOP 1000 *
+FROM dbo.MSChange_tracking_history
+WHERE table_name = '<user_table_name>'
+ORDER BY start_time DESC;
 ```
 
-If the comments column returned by the query indicates that multiple cleanup attempts have failed due to lock conflicts or lock timeouts in succession, then consider the following remedies:
+If the history table has multiple entries in the `comments` columns with the value `Cleanup error: Lock request time out period exceeded`, it is a clear indication that multiple cleanup attempts failed due to lock conflicts or lock timeouts in succession. Consider the following remedies:
 
 - Disable and enable change tracking on the problematic table. This causes all tracking metadata maintained for the table to be purged. The table's data remains intact. This is the quickest remedy.
 
 - If the previous option isn't possible, then proceed to execute manual cleanup on the table by enabling **trace flag 8284** as follows:
 
     ```sql
-    DBCC TRACEON (8284, -1)
+    DBCC TRACEON (8284, -1);
     GO
-    EXEC [sys].[sp_flush_CT_internal_table_on_demand] @TableToClean = '<table_name>'
+    EXEC [sys].[sp_flush_CT_internal_table_on_demand] @TableToClean = '<table_name>';
     ```
 
-#### 3. Cleanup is still lagging behind
+#### 3. Check other causes
 
 Another possible cause of cleanup lagging is the slowness of the delete statements. To determine if so, check the value of `hardened_cleanup_version`. This value can be retrieved through a dedicated admin connection (DAC) to the database under consideration.
 

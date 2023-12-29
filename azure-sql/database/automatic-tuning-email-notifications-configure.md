@@ -10,6 +10,7 @@ ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: how-to
 ms.custom: sqldbrb=1
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Email notifications for automatic tuning
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

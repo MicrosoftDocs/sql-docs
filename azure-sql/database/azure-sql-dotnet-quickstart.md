@@ -12,6 +12,7 @@ monikerRange: "= azuresql || = azuresql-db"
 ---
 
 # Connect to and query Azure SQL Database using .NET and the Microsoft.Data.SqlClient library
+[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using .NET and the [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient) library. This quickstart follows the recommended passwordless approach to connect to the database. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
 

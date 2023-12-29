@@ -1,5 +1,6 @@
 ---
 title: Microsoft Entra service principal with Azure SQL
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Utilize AD Applications (service principals) support Microsoft Entra user creation in Azure SQL Database and Azure SQL Managed Instance
 author: nofield
 ms.author: nofield

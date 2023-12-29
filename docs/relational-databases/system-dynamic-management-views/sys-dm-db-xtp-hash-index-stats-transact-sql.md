@@ -1,6 +1,6 @@
 ---
 title: "sys.dm_db_xtp_hash_index_stats (Transact-SQL)"
-description: For In-Memory OLTP tables, sys.dm_db_xtp_hash_index_stats helps you understand bucket counts hash indexes in memory-optimized tables.
+description: For in-memory OLTP tables, sys.dm_db_xtp_hash_index_stats helps you understand bucket counts hash indexes in memory-optimized tables.
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "02/27/2023"
@@ -27,9 +27,9 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
   
 -   If the number of empty buckets is low or the average and maximum chain lengths are similar, it is likely that the total bucket count is too low. This causes many different index keys to hash to the same bucket.  
   
--   If the number of empty buckets is high or the maximum chain length is high relative to the average chain length, it is likely that there are many rows with duplicate index key values or there is a skew in the key values. All rows with the same index key value hash to the same bucket, hence there is a long chain length in that bucket.  
+-   If the number of empty buckets is high, or the maximum chain length is high relative to the average chain length, there are two likely explanations. There are many rows with duplicate index key values, or there is a skew in the key values. In either case, all rows with the same index key value hash to the same bucket, leading to a long chain length in that bucket.  
   
-Long chain lengths can significantly impact the performance of all DML operations on individual rows, including SELECT and INSERT. Short chain lengths along with a high empty bucket count are in indication of a bucket_count that is too high. This decreases the performance of index scans.  
+Long chain lengths can significantly affect the performance of all DML operations on individual rows, including `SELECT` and `INSERT`. Short chain lengths along with a high empty bucket count are in indication of a bucket_count that is too high. This decreases the performance of index scans.  
   
 > [!WARNING]
 > This DMV scans the entire table. So, if there are large tables in your database, `sys.dm_db_xtp_hash_index_stats` may take a long time run.  
@@ -86,7 +86,7 @@ For details on how to interpret the results of this query, see [Troubleshooting 
 
 ### B. Hash index statistics for internal tables
 
-Certain features use internal tables that leverage hash indexes, for example columnstore indexes on memory-optimized tables. The following query returns stats for hash indexes on internal tables that are linked to user tables.
+Certain features use internal tables that use hash indexes, for example columnstore indexes on memory-optimized tables. The following query returns stats for hash indexes on internal tables that are linked to user tables.
 
 ```sql
   SELECT  
@@ -107,9 +107,9 @@ Certain features use internal tables that leverage hash indexes, for example col
   ORDER BY [user_table], [internal_table_type], [index]; 
 ```
 
-Note that the BUCKET_COUNT of index on internal tables cannot be changed, thus the output of this query should be considered informative only. No action is required.  
+The bucket counts of index on internal tables cannot be changed, thus the output of this query should be considered informative only. No action is required.  
 
-This query is not expected to return any rows unless you are using a feature that leverages hash indexes on internal tables. The following memory-optimized table contains a columnstore index. After creating this table, you will see hash indexes on internal tables.
+This query is not expected to return any rows unless you are using a feature that uses hash indexes on internal tables. The following memory-optimized table contains a columnstore index. After creating this table, you will see hash indexes on internal tables.
 
 ```sql
   CREATE TABLE dbo.table_columnstore

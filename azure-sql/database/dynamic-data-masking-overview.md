@@ -1,5 +1,6 @@
 ---
 title: Dynamic data masking
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
 description: Dynamic data masking limits sensitive data exposure by masking it to nonprivileged users for Azure SQL Database, Azure SQL Managed Instance and Azure Synapse Analytics
 author: madhumitatripathy
 ms.author: matripathy

@@ -19,7 +19,7 @@ keywords:
   - azure portal
   - portal
   - query editor
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db"
 ---
 # Azure portal Query editor for Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

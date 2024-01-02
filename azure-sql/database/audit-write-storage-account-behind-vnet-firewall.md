@@ -1,5 +1,6 @@
 ---
 title: Audit to storage account behind VNet and firewall
+titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: Configure auditing to write database events on a storage account behind virtual network and firewall
 author: sravanisaluru
 ms.author: srsaluru

@@ -12,10 +12,10 @@ ms.custom:
   - devx-track-azurecli
   - mode-api
 ms.devlang: java
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db"
 ---
 
-# Use Java and JDBC with  Azure SQL Database
+# Use Java and JDBC with Azure SQL Database
 
 This topic demonstrates creating a sample application that uses Java and [JDBC](https://en.wikipedia.org/wiki/Java_Database_Connectivity) to store and retrieve information in [Azure SQL Database](/azure/sql-database/).
 
@@ -206,14 +206,14 @@ public class DemoApplication {
             statement.execute(scanner.nextLine());
         }
 
-		/*
-		Todo todo = new Todo(1L, "configuration", "congratulations, you have set up JDBC correctly!", true);
+        /*
+        Todo todo = new Todo(1L, "configuration", "congratulations, you have set up JDBC correctly!", true);
         insertData(todo, connection);
         todo = readData(connection);
         todo.setDetails("congratulations, you have updated data!");
         updateData(todo, connection);
         deleteData(todo, connection);
-		*/
+        */
 
         log.info("Closing database connection");
         connection.close();

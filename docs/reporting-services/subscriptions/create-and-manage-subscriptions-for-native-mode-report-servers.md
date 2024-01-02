@@ -65,7 +65,7 @@ helpviewer_keywords:
    - **Add a file extension when the file is created**: This option adds a three-character file extension to the file name. The report output format you select determines the file extension.  
    - **Path**: Enter a Universal Naming Convention (UNC) path to an existing folder where you want to deliver the reports, for example, `\\<servername>\<myreports>`. Include double backslash characters at the beginning of the path. Don't specify a trailing backslash.  
   
-     :::image type="content" source="../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-file-share-delivery-option.png" alt-text="Screenshot that shows a file share subscription.":::
+     :::image type="content" source="../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-file-share-delivery-option.png" alt-text="Screenshot of a file share subscription.":::
   
    - **Render Format**: Select a report output format for file delivery. Choose a format that corresponds to the desktop application that is used to open the report. Avoid formats that don't render a report in a single stream. Also, avoid formats that introduce interactivity that can't be supported in a static file (for example, HTML 4.0).  
   
@@ -108,7 +108,7 @@ The report is delivered as a static file. If the report includes interactive fea
   
    - **Subject**: Defaults to "@ReportName was executed at @ExecutionTime." You can edit the subject but note that the @ReportName and @ExecutionTime are the only global variables supported in the **Subject** field.  
   
-     :::image type="content" source="../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-e-mail-delivery-option.png" alt-text="Screenshot that shows an email subscription.":::
+     :::image type="content" source="../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-e-mail-delivery-option.png" alt-text="Screenshot of an email subscription.":::
 
    - **Include Report**: Select this option to embed or attach a copy of the report. The rendering format you select determines the format of the report. Don't choose this option if you think the report size exceeds the limit defined for your e-mail system.  
   

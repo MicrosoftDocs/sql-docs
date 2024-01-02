@@ -26,10 +26,9 @@ The search field dynamically filters the list of subscriptions as youYou can't s
 2. Select settings :::image type="icon" source="../../reporting-services/subscriptions/media/ssrs-portal-settings-gear.png"::: in the toolbar.
 3. Select **My Subscriptions**.
 
-For more information, see [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md).
+For more information, see [Web portal (SSRS native mode)](../../reporting-services/web-portal-ssrs-native-mode.md).
 
 ## Use Windows PowerShell to list My Subscriptions  
- :::image type="icon" source="/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg":::  
   
  The following PowerShell script returns the list of subscriptions and subscription properties for the current user. For more information, see [ReportingService2010.ListMySubscriptions method](/dotnet/api/reportservice2010.reportingservice2010.listmysubscriptions).  
   

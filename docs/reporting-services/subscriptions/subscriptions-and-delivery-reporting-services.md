@@ -25,7 +25,7 @@ helpviewer_keywords:
   
  You can create multiple subscriptions for a single report to vary the subscription options. For example, you can specify different parameter values to produce three versions of a report. These reports are ones such as a Western region sales report, Eastern region sales, and all sales.  
   
-:::image type="content" source="../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png" alt-text="Diagram that shows the example SSRS subscription flow.":::
+:::image type="content" source="../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png" alt-text="Diagram of an example SSRS subscription flow.":::
    
  Subscriptions aren't available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
   

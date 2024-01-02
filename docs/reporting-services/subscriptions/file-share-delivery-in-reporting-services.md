@@ -70,7 +70,7 @@ helpviewer_keywords:
   
  The following image is an example of the settings for a subscription configured for file share delivery.  
   
- :::image type="content" source="../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png" alt-text="Screenshot that shows the settings for a file share subscription.":::
+ :::image type="content" source="../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png" alt-text="Screenshot of the settings for a file share subscription.":::
   
 ## Related content 
  [Create and manage subscriptions for native mode report servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   

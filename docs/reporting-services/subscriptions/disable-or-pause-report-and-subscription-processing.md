@@ -39,7 +39,7 @@ There are several approaches you can use to disable or pause [!INCLUDE[ssRSnover
 >[!TIP]  
 >New in SQL 2016 Reporting Services, *enable and disable subscriptions*. New user interface options allow you to quickly enable and disable subscriptions. The disabled subscriptions maintain their other configuration properties such as schedule and can be easily re-enabled. You can also programmatically enable and disable subscriptions, or audit which subscriptions are disabled.  
   
-  :::image type="content" source="../../reporting-services/subscriptions/media/disable-or-pause-report-and-subscription-processing/subscription-enable-and-disable-buttons.png" alt-text="Screenshot that shows the Enable and Disable buttons of the Subscriptions page.":::  
+  :::image type="content" source="../../reporting-services/subscriptions/media/disable-or-pause-report-and-subscription-processing/subscription-enable-and-disable-buttons.png" alt-text="Screenshot of the Enable and Disable buttons of the Subscriptions page.":::  
   
 In the web portal, browse to the subscription from either the **My Subscriptions** page or the **Subscriptions** page of an individual subscription. Select one or more subscriptions and then choose either the disable button or enable button on the ribbon. The status column changes to either "Disabled" or "Enabled" respectively.  
   

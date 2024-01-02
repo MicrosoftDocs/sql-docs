@@ -68,7 +68,7 @@ helpviewer_keywords:
 >  In previous releases of the documentation, an example of creating a dynamic query as an expression was included. This type of query creates a vulnerability to SQL injection attacks and therefore is not recommended.  
   
 ## Securing confidential reports  
- Reports that contain confidential information should be secured at the data-access level, by requiring users to provide credentials to access sensitive data. For more information, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). You can also secure a folder to make it inaccessible to unauthorized users. For more information, see [Secure Folders](../../reporting-services/security/secure-folders.md).  
+ Reports that contain confidential information should be secured at the data-access level, by requiring users to provide credentials to access sensitive data. For more information, see [Specify credential and connection information for report data sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). You can also secure a folder to make it inaccessible to unauthorized users. For more information, see [Secure folders](../../reporting-services/security/secure-folders.md).  
   
 ## Related content
  [Create and manage role assignments](../../reporting-services/security/create-and-manage-role-assignments.md)   

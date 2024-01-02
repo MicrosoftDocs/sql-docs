@@ -26,7 +26,7 @@ helpviewer_keywords:
   
  A **My Reports** role assignment consists of the following elements:  
   
--   The user's My Reports folder, which is located in Users Folders\\*\<username>*\My Reports folder.  
+-   The user's My Reports folder, which is located in the ```Users Folders\<username>\My Reports``` folder.  
   
 -   The user account, which is determined when the My Reports folder is activated. A folder is activated when a user selects a My Reports folder in Report Manager or when publishing a report to a My Reports folder from Report Designer. This folder is also activated when a user requests properties on the My Reports link.  
   

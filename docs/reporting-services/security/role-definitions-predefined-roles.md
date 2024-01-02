@@ -194,7 +194,7 @@ helpviewer_keywords:
 |Task|Description|  
 |----------|-----------------|  
 |Execute report definitions|Start execution for report definition without publishing it to a report server.|  
-|Manage jobs|View and cancel jobs that are running. For more information, see [Manage a Running Process](../../reporting-services/subscriptions/manage-a-running-process.md).|  
+|Manage jobs|View and cancel jobs that are running. For more information, see [Manage a running process](../../reporting-services/subscriptions/manage-a-running-process.md).|  
 |Manage report server properties|View and modify properties that apply to the report server and to items that the report server manages.<br /><br /> This task supports renaming the web portal, enabling My Reports, and setting report history defaults.|  
 |Manage report server security|View and modify system-wide role assignments|  
 |Manage roles|Create, view, and modify, and delete role definitions.<br /><br /> Members of the **System Administrator** role can use the Site Settings page to manage roles.|  
@@ -220,6 +220,7 @@ The following table lists tasks that are included in the **System User** role de
 ## Related content
 [Create, delete, or modify a role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)  
 [Grant user access to a report server](../../reporting-services/security/grant-user-access-to-a-report-server.md)  
-[Modify or Delete a Role Assignment &#40;SSRS web portal&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
+[Modify or delete a role assignment &#40;SSRS web portal&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
 [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
 [Tasks and permissions](../../reporting-services/security/tasks-and-permissions.md)
+f

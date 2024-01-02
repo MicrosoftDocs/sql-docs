@@ -88,6 +88,8 @@ $dbs = Get-AzSqlElasticPoolDatabase -ResourceGroupName "myResourceGroup" -Server
 $dbs | Where-Object { $_.DatabaseName -like "gpepdb*" } | % { Set-AzSqlDatabase -ResourceGroupName "myResourceGroup" -ServerName "mylogicalserver" -DatabaseName ($_.DatabaseName) -ElasticPoolName "hsep1" -AsJob }
 ```
 
+In addition to the [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) Dynamic Management View, you can use the PowerShell cmdlet [Get-AzSqlDatabaseActivity](/powershell/module/az.sql/get-azsqldatabaseactivity) to monitor the status of these background migration operations.
+
 A similar approach for migrations can be considered for other clients like Azure CLI, or programmatically using the Azure SDK. For these migrations, the Hyperscale elastic pool needs to exist on the same logical server as the source database.
 
 When migrating databases to Hyperscale elastic pools, be aware of the maximum number of databases per Hyperscale elastic pool, as documented in the [Resource limits](#resource-limits) section.

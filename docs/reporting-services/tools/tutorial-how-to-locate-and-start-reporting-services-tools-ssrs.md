@@ -58,7 +58,7 @@ Use the Native mode configuration manager to complete the following tasks:
 
 5. To verify that you launched the tool, compare your results to the following image:
 
-    :::image type="content" source="../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png" alt-text="Screenshot that shows the Report Services Subscription Settings tool." lightbox="../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png":::
+    :::image type="content" source="../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png" alt-text="Screenshot that shows the Report Services Subscription Settings tool.":::
 
 
  **Next Steps:** [Configure and administer a report server &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) and [Report Server Configuration Manager &#40;native mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).

@@ -14,6 +14,7 @@ This article helps you in troubleshooting problems with  [!INCLUDE[ssRSnoversion
  
 ## Monitor report servers  
 You can use system and database tools to monitor report server activity. You can also view report server trace log files, or query the report server execution log for detailed information about specific reports. If you use Performance Monitor, you can add performance counters for the Report Server Web service and Windows service to identity bottlenecks in on-demand or scheduled processing.  
+
 For more information, see [Monitor report server performance](../report-server/monitoring-report-server-performance.md).  
   
   

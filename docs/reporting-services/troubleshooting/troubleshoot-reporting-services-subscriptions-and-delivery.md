@@ -16,7 +16,7 @@ Use this article to troubleshoot problems that you encounter when working with [
 ## Log information
  
 The Subscription page in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] includes a status of a subscription but if there's a problem with the subscription, the detailed information is in the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] logs. 
-:::image type="content" source="../../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png" alt-text="Screenshot that shows the status." lightbox="../../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png":::
+:::image type="content" source="../../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png" alt-text="Screenshot that shows the status.":::
 
 
 **Trace logs:**

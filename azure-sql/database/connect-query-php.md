@@ -15,7 +15,7 @@ ms.custom:
 ms.devlang: php
 monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 ---
-# Quickstart: Use PHP to query a database in Azure SQL Database
+# Quickstart: Use PHP to query a database in Azure SQL Database or Azure SQL Managed Instance
 
 [!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 

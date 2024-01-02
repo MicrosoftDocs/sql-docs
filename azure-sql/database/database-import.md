@@ -1,5 +1,6 @@
 ---
 title: Import a .bacpac file to create a database in Azure SQL Database
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Create a new database in Azure SQL Database or Azure SQL Managed Instance from a .bacpac file.
 author: WilliamDAssafMSFT
 ms.author: wiassaf

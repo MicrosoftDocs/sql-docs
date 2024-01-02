@@ -24,6 +24,12 @@ Use the following steps to install the **mssql-tools18** on Ubuntu.
 
 1. Register the Microsoft Ubuntu repository.
 
+   - For Ubuntu 22.04, use the following command:
+
+     ```bash
+     curl https://packages.microsoft.com/config/ubuntu/22.04/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
+     ```
+
    - For Ubuntu 20.04, use the following command:
 
      ```bash

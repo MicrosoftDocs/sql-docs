@@ -1,5 +1,6 @@
 ---
 title: SQL Database audit log format
+titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: Understand how Azure SQL Database audit logs are structured.
 author: sravanisaluru
 ms.author: srsaluru

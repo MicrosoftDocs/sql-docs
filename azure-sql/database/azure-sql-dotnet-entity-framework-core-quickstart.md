@@ -12,6 +12,7 @@ monikerRange: "= azuresql || = azuresql-db"
 ---
 
 # Connect to and query Azure SQL Database using .NET and Entity Framework Core
+[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using .NET and Entity Framework Core. This quickstart follows the recommended passwordless approach to connect to the database. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
 

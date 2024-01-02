@@ -114,7 +114,7 @@ The free SQL Managed Instance offer has the following limitations:
 - Scaling: Scale up or down within the compute limits
 - Backups: 0-7 days for short term retention, long-term retention (LTR) is unavailable
 - Charge for SQL Server license: None
-- The free offer is currently available in the following region (which are subject to change): Australia East, East US, East US 2, North Europe, Sweeden Central, Southeast Asia, South Central US, UK South, West Europe, West US 2, West US 3
+- The free offer is currently available in the following region (which are subject to change): Australia East, East US, East US 2, North Europe, Sweden Central, Southeast Asia, South Central US, UK South, West Europe, West US 2, West US 3
 - No guaranteed SLA
 - It's not currently possible to upgrade your free instance to the paid version. Create a new instance and [restore your database](point-in-time-restore.md?#restore-an-existing-database) to it to continue your business without the limits imposed by the free offer. 
 
@@ -125,9 +125,9 @@ When you're finished using these resources, or if you want to start over again w
 
 To delete `myFreeMIResourceGroup` and all its resources using the Azure portal:
 
-1. In the Azure portal, search for and select **Resource groups**, and then select your resource group, such as `myFreeDBResourceGroup`, from the list.
-1. On the **Resource group** page, select **Delete resource group**.
-1. Under **Type the resource group name**, enter `myFreeMIResourceGroup`, and then select **Delete**.
+1. In the Azure portal, search for and select **Resource groups**, and then select your resource group, such as `myFreeMIResourceGroup`, from the list.
+2. On the **Resource group** page, select **Delete resource group**.
+3. Under **Type the resource group name**, enter `myFreeMIResourceGroup`, and then select **Delete**.
 
 
 ## Related content

@@ -133,7 +133,7 @@ GO
   
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
-In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a member of the sysadmin server role can use [sp_procoption](../system-stored-procedures/sp-procoption-transact-sql.md) to set or clear a procedure for automatic execution at startup. Only the system administrator (`sa`) can mark a procedure to execute automatically.
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a member of the `sysadmin` server role can use [sp_procoption](../system-stored-procedures/sp-procoption-transact-sql.md) to set or clear a procedure for automatic execution at startup. 
 
 Startup procedures must be in the `master` database, must be owned by `sa`, and can't have input or output parameters. For more information, see [sp_procoption (Transact-SQL)](../system-stored-procedures/sp-procoption-transact-sql.md).  
   
@@ -153,6 +153,8 @@ There's no limit to the number of startup procedures you can have, but each star
   
 ### Set a procedure to execute automatically at startup
   
+Only the system administrator (`sa`) can mark a procedure to execute automatically.  
+  
 1. In SSMS, connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 1. From the Standard toolbar, select **New Query**.  
@@ -170,7 +172,7 @@ There's no limit to the number of startup procedures you can have, but each star
 
 ### Stop a procedure from executing automatically at startup
 
-You can use [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) to stop a procedure from automatically executing at [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup.  
+A sysadmin can use [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) to stop a procedure from automatically executing at [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup.  
   
 1. In SSMS, connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

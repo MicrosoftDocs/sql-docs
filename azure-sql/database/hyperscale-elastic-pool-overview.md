@@ -70,7 +70,7 @@ You can use the following client tools to manage your Hyperscale databases in an
 
 ## Migrating non-Hyperscale databases to Hyperscale elastic pools
 
-When migrating a database to Hyperscale, you can specify that the database will be directly placed in a Hyperscale elastic pool. Here's an example of how to use T-SQL commands to initiate migrations for multiple General Purpose databases to a Hyperscale elastic pool:
+When migrating a database to Hyperscale, you can specify that the database will be added to a Hyperscale elastic pool. Here's an example of how to use T-SQL commands to migrate multiple General Purpose databases and add them to a Hyperscale elastic pool named `hsep1`:
 
 ```sql
 ALTER DATABASE gpepdb1 MODIFY (SERVICE_OBJECTIVE = ELASTIC_POOL(NAME = [hsep1]))
@@ -79,16 +79,16 @@ ALTER DATABASE gpepdb3 MODIFY (SERVICE_OBJECTIVE = ELASTIC_POOL(NAME = [hsep1]))
 ALTER DATABASE gpepdb4 MODIFY (SERVICE_OBJECTIVE = ELASTIC_POOL(NAME = [hsep1]))
 ```
 
-Each of the above commands starts a background migration process for the respective database, and returns quickly. The migration for each database runs in parallel, so in the above example, we would have four such migrations from General Purpose to Hyperscale running at the same time. You can query the [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) Dynamic Management View to monitor the status of these background migration operations.
+In this example, you're implicitly requesting a migration from General Purpose to Hyperscale, by specifying that the target `SERVICE_OBJECTIVE` is a Hyperscale elastic pool. Each of the above commands starts migrating the respective General Purpose database to Hyperscale. These `ALTER DATABASE` commands return quickly and don't wait for the migration to complete. The migration operations for each database run in parallel. In the example shown, you would have four such migrations from General Purpose to Hyperscale running at the same time. You can query the [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) Dynamic Management View to monitor the status of these background migration operations.
 
-Here's another example that uses the [Get-AzSqlElasticPoolDatabase](/powershell/module/az.sql/get-azsqlelasticpooldatabase) cmdlet to list all the databases in the General Purpose elastic pool named `gpep1`. It then filters the list to only operate on DBs with names starting with `gpepdb`, and for each such database, it calls the [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) cmdlet to start a migration of that database to a Hyperscale elastic pool named `hsep1`. The `-AsJob` parameter allows each of the `Set-AzSqlDatabase` requests to run in parallel. If you prefer to run the migrations one-by-one, you can remove the `-AsJob` parameter.
+Here's another example that uses the [Get-AzSqlElasticPoolDatabase](/powershell/module/az.sql/get-azsqlelasticpooldatabase) cmdlet to list all the databases in the General Purpose elastic pool named `gpep1`. It then filters the list to only operate on DBs with names starting with `gpepdb`, and for each such database, it calls the [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) cmdlet to start a migration of that database. In this case, you're implicitly requesting a migration to the Hyperscale service tier by specifying the target Hyperscale elastic pool named `hsep1`. The `-AsJob` parameter allows each of the `Set-AzSqlDatabase` requests to run in parallel. If you prefer to run the migrations one-by-one, you can remove the `-AsJob` parameter.
 
 ```powershell
 $dbs = Get-AzSqlElasticPoolDatabase -ResourceGroupName "myResourceGroup" -ServerName "mylogicalserver" -ElasticPoolName "gpep1"
 $dbs | Where-Object { $_.DatabaseName -like "gpepdb*" } | % { Set-AzSqlDatabase -ResourceGroupName "myResourceGroup" -ServerName "mylogicalserver" -DatabaseName ($_.DatabaseName) -ElasticPoolName "hsep1" -AsJob }
 ```
 
-A similar approach for migrations can be considered for other clients like Azure CLI, or programmatically using the Azure SDK.
+A similar approach for migrations can be considered for other clients like Azure CLI, or programmatically using the Azure SDK. For these migrations, the Hyperscale elastic pool needs to exist on the same logical server as the source database.
 
 When migrating databases to Hyperscale elastic pools, be aware of the maximum number of databases per Hyperscale elastic pool, as documented in the [Resource limits](#resource-limits) section.
 

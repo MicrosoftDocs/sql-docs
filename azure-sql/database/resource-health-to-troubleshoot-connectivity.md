@@ -29,19 +29,23 @@ ms.custom: sqldbrb=2
 
 ### Available
 
-A status of **Available** means that **Resource health** has not detected login failures due to system errors on your SQL database.
+A status of **Available** means that **Resource health** has not detected login failures due to system errors on your SQL database, or that there were some login failures but they did not meet the alerting threshold. See the following sections for more details on the alerting threshold.
 
 :::image type="content" source="./media/resource-health-to-troubleshoot-connectivity/sql-resource-health-available.jpg" alt-text="A screenshot of the Azure portal showing the status message for the state of Available.":::
 
 ### Degraded
 
-A status of **Degraded** means that **Resource health** has detected a majority of successful logins, but some failures as well. These are most likely transient login errors. To reduce the impact of connection issues caused by transient login errors, implement [retry logic](troubleshoot-common-connectivity-issues.md#retry-logic-for-transient-errors) in your code.
+A status of **Degraded** means that, in two of the last three minutes, **Resource health** has detected:
+- a majority of successful logins, but there has been more than one login failure (due to system errors) as well, or 
+- more than one login failure (due to system errors) but there were fewer than six total login attempts.
+
+These are most likely transient login errors. To reduce the impact of connection issues caused by transient login errors, implement [retry logic](troubleshoot-common-connectivity-issues.md#retry-logic-for-transient-errors) in your code.
 
 :::image type="content" source="./media/resource-health-to-troubleshoot-connectivity/sql-resource-health-degraded.jpg" alt-text="A screenshot of the Azure portal showing the status message for the state of Degraded.":::
 
 ### Unavailable
 
-A status of **Unavailable** means that **Resource health** has detected consistent login failures to your SQL database. If your resource remains in this state for an extended period of time, contact support.
+A status of **Unavailable** means that **Resource health** has detected that there were more than five login attempts and more than a quarter of them were failing for system reasons. If your resource remains in this state for an extended period of time, please contact support.
 
 :::image type="content" source="./media/resource-health-to-troubleshoot-connectivity/sql-resource-health-unavailable.jpg" alt-text="A screenshot of the Azure portal showing the status message for the state of Unavailable.":::
 
@@ -50,6 +54,10 @@ A status of **Unavailable** means that **Resource health** has detected consiste
 The health status of **Unknown** indicates that **Resource health** hasn't received information about this resource for more than 10 minutes. Although this status isn't a definitive indication of the state of the resource, it is an important data point in the troubleshooting process. If the resource is running as expected, the status of the resource will change to Available after a few minutes. If you're experiencing problems with the resource, the Unknown health status might suggest that an event in the platform is affecting the resource.
 
 :::image type="content" source="./media/resource-health-to-troubleshoot-connectivity/sql-resource-health-unknown.jpg" alt-text="A screenshot of the Azure portal showing the status message for the state of Unknown.":::
+
+## Alert Time
+
+The time shown by the **Resource health** alert will not line up with the times of the login failures that caused the alert. This is because it takes several minutes for the telemetry to be collected and analyzed, to determine that there is a **Resource health** issue. So, the time indicated in the **Resource health** alert will be several minutes after the login failures.
 
 ## Historical information
 

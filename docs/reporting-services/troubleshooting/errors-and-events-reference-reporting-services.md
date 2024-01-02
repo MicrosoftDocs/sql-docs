@@ -12,11 +12,11 @@ ms.custom: updatefrequency5
 
 # Errors and events reference (Reporting Services)
 
-This article provides information about errors and events for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] log files also contain error information. For more information about the types of log files that are available and how to view the logs, see [Reporting Services Log Files and Sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
+This article provides information about errors and events for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] log files also contain error information. For more information about the types of log files that are available and how to view the logs, see [Reporting Services log files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
 
 ## Cause and resolution for reporting services error messages  
 
-Cause and resolution information is available for the errors most frequently searched for on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] web sites. For more information, see [Cause and Resolution of Reporting Services Errors](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md).  
+Cause and resolution information is available for the errors most frequently searched for on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] web sites. For more information, see [Cause and resolution of Reporting Services errors](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md).  
   
 ## Report server events
 
@@ -27,8 +27,8 @@ The following report server events are recorded in the [!INCLUDE[msCoName](../..
 |106|Error|Scheduling|Report Server|SQL Server Agent must be running when you define a scheduled operation (for example, report subscription and delivery).|  
 |[107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)|Error|Startup/Shutdown|Report Server<br /><br /> Scheduling and Delivery Processor|*\<Source>* can't connect to the report server database. For more information, see [Report Server Windows Service &#40;MSSQLServer&#41; 107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md).|  
 |108|Error|Extension|Report Server<br /><br /> web portal|*\<Source>* can't load a delivery, data processing, or rendering extension.<br /><br /> Most likely, this error is the result of an incomplete deployment or removal of an extension. For more information, see [Deploy a data processing extension](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md) and [Deploy a delivery extension](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md).|  
-|109|Information|Management|Report Server<br /><br /> web portal|A configuration file was modified. For more information, see [Reporting Services Configuration Files](../../reporting-services/report-server/reporting-services-configuration-files.md).|  
-|110|Warning|Management|Report Server<br /><br /> web portal|A setting in one of the configuration files was modified such that it's no longer valid. A default value is used instead. For more information, see [Reporting Services Configuration Files](../../reporting-services/report-server/reporting-services-configuration-files.md).|  
+|109|Information|Management|Report Server<br /><br /> web portal|A configuration file was modified. For more information, see [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md).|  
+|110|Warning|Management|Report Server<br /><br /> web portal|A setting in one of the configuration files was modified such that it's no longer valid. A default value is used instead. For more information, see [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md).|  
 |111|Error|Logging|Report Server<br /><br /> web portal|*\<Source>* can't create the trace log. For more information, see [Report server service trace log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
 |112|Warning|Security|Report Server|The report server detected a possible denial of service attack. For more information, see [Reporting Services security and protection](../../reporting-services/security/reporting-services-security-and-protection.md).|  
 |113|Error|Logging|Report Server|The report server can't create a performance counter.|  

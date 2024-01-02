@@ -253,7 +253,7 @@ This release introduces new features to improve file operations.
 
 ## SQL Server Reporting Services
 
-This release of SQL Server Reporting Services features support for Azure SQL Managed Instances, Power BI Premium datasets, enhanced accessibility, Azure Active Directory Application Proxy, and transparent data encryption (TDE). It also brings an update to Microsoft Report Builder. See [What's new in SQL Server Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) for details.
+This release of SQL Server Reporting Services features support for Azure SQL Managed Instance, Power BI Premium datasets, enhanced accessibility, Microsoft Entra application proxy, and transparent data encryption (TDE). It also brings an update to Microsoft Report Builder. See [What's new in SQL Server Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) for details.
 
 ## Related content
 

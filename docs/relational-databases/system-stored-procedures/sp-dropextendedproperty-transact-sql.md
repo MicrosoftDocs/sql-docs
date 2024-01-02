@@ -4,7 +4,7 @@ description: sp_dropextendedproperty drops an existing extended property.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/28/2023
+ms.date: 12/27/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -105,21 +105,21 @@ GO
 
 EXEC sp_addextendedproperty @name = 'caption',
     @value = 'Employee ID',
-    @level0type = 'schema',
-    @level0name = dbo,
-    @level1type = 'table',
-    @level1name = 'T1',
-    @level2type = 'column',
-    @level2name = id;
+    @level0type = 'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = 'TABLE',
+    @level1name = N'T1',
+    @level2type = 'COLUMN',
+    @level2name = N'id';
 GO
 
 EXEC sp_dropextendedproperty @name = 'caption',
-    @level0type = 'schema',
-    @level0name = dbo,
-    @level1type = 'table',
-    @level1name = 'T1',
-    @level2type = 'column',
-    @level2name = id;
+    @level0type = 'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = 'TABLE',
+    @level1name = N'T1',
+    @level2type = 'COLUMN',
+    @level2name = N'id';
 GO
 
 DROP TABLE T1;

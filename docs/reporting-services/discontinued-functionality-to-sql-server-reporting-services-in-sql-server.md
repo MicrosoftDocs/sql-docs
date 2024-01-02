@@ -12,7 +12,7 @@ ms.custom: updatefrequency5
 
 # Discontinued functionality in SQL Server Reporting Services (SSRS)
 
-This article describes SQL Server Reporting Services features that are no longer available in different versions of SQL Server. It doesn't include announcements about discontinued support for specific versions of the operating system or Microsoft Internet Information Services (IIS). For more information about system prerequisites, see [Planning a SQL Server Installation](../sql-server/install/planning-a-sql-server-installation.md).
+This article describes SQL Server Reporting Services features that are no longer available in different versions of SQL Server. It doesn't include announcements about discontinued support for specific versions of the operating system or Microsoft Internet Information Services (IIS). For more information about system prerequisites, see [Planning a SQL Server installation](../sql-server/install/planning-a-sql-server-installation.md).
 
 A *discontinued feature* is one that is no longer supported. It might also be physically removed from the product. The following features are discontinued.
 
@@ -72,10 +72,10 @@ These features that are no longer available in SQL Server 2016 Reporting Service
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-## Next steps
+## Related content
 
-* [What's New in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
-* [Behavior Changes to SQL Server Reporting Services in SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
+* [What's new in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
+* [Behavior changes to SQL Server Reporting Services in SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
 * [Deprecated features in SQL Server Reporting Services in SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

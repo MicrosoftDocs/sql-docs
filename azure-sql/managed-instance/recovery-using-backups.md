@@ -194,7 +194,7 @@ For a PowerShell script that shows how to perform geo-restore for a database in 
 
 Geo-restore is the most basic disaster-recovery solution available in SQL Managed Instance. It relies on automatically created geo-replicated backups with a recovery point objective (RPO) of up to 1 hour and an estimated recovery time objective (RTO) of up to 12 hours. It doesn't guarantee that the target region will have the capacity to restore your databases after a regional outage, because a sharp increase of demand is likely. If your application uses relatively small databases and isn't critical to the business, geo-restore is an appropriate disaster-recovery solution. 
 
-For business-critical applications that require large databases and must ensure business continuity, use [auto-failover groups](auto-failover-group-sql-mi.md). That feature offers a much lower RPO and RTO, and the capacity is always guaranteed. 
+For business-critical applications that require large databases and must ensure business continuity, use [failover groups](failover-group-sql-mi.md). That feature offers a much lower RPO and RTO, and the capacity is always guaranteed. 
 
 For more information about business continuity choices, see [Overview of business continuity](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md).
 
@@ -212,4 +212,4 @@ Consider the following limitations when working with backups and Azure SQL Manag
 
 - [SQL Managed Instance automated backups](automated-backups-overview.md)
 - [Long-term retention](../database/long-term-retention-overview.md)
-- To learn about faster recovery options, see [Auto-failover groups](auto-failover-group-sql-mi.md).
+- To learn about faster recovery options, see [Failover groups](failover-group-sql-mi.md).

@@ -14,13 +14,13 @@ tag: azure-synpase
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
-# Conditional Access with Azure SQL Database and Azure Synapse Analytics
+# Conditional access
 
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
 
 [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), and [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) support Microsoft Conditional Access.
 
-The following steps show how to configure Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse to enforce a Conditional Access policy.  
+The following steps show how to configure Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse Analytics to enforce a Conditional Access policy.  
 
 ## Prerequisites
 

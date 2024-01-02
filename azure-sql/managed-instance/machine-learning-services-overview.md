@@ -47,7 +47,7 @@ For details on how this command affects SQL Managed Instance resources, see [Res
 
 ### Enable Machine Learning Services in a failover group
 
-In a [failover group](failover-group-add-instance-tutorial.md), system databases are not replicated to the secondary instance (see [Limitations of failover groups](auto-failover-group-sql-mi.md#limitations) for more information).
+In a [failover group](failover-group-configure-sql-mi.md), system databases are not replicated to the secondary instance (see [Limitations of failover groups](failover-group-configure-sql-mi.md#limitations) for more information).
 
 If the SQL Managed Instance you're using is part of a failover group, do the following:
 

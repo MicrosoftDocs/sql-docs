@@ -87,13 +87,15 @@ For a non-SQL Server Subscriber, specify a value of **(default destination)** fo
 
 #### [ @subscriber_security_mode = ] *subscriber_security_mode*
 
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
+
 The security mode to use when connecting to a Subscriber when synchronizing. *@subscriber_security_mode* is **smallint**, with a default of `1`. The following values define the security mode:
 
-- `0` specifies [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.
-- `1` specifies Windows Authentication.
-- `2` specifies Microsoft Entra password authentication starting with SQL Server 2022 CU 6.
-- `3` specifies Microsoft Entra integrated authentication starting with SQL Server 2022 CU 6.
-- `4` specifies Microsoft Entra token authentication starting with SQL Server 2022 CU 6.
+- `0` specifies [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] authentication.
+- `1` specifies Windows authentication.
+- `2` specifies Microsoft Entra password authentication starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
+- `3` specifies Microsoft Entra integrated authentication starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
+- `4` specifies Microsoft Entra token authentication starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
 
 > [!IMPORTANT]  
 > For queued updating subscriptions, use [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication for connections to Subscribers, and specify a different account for the connection to each Subscriber. For all other subscriptions, use Windows Authentication.

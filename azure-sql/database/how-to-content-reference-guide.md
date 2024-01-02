@@ -31,7 +31,7 @@ In this article you can find a content reference of various guides, scripts, and
 - [Microsoft Entra multifactor authentication](authentication-mfa-ssms-overview.md)
 - [Configure backup retention](long-term-backup-retention-configure.md) for a database to keep your backups on Azure Blob Storage. 
 - [Configure geo-replication](active-geo-replication-overview.md) to keep a replica of your database in another region.
-- [Configure auto-failover group](auto-failover-group-configure-sql-db.md) to automatically fail over a group of single or pooled databases to a secondary server in another region in the event of a disaster. 
+- [Configure failover group](failover-group-configure-sql-db.md) to fail over a group of single or pooled databases to a secondary server in another region in the event of a disaster. 
 - [Configure temporal retention policy](temporal-tables-retention-policy.md)
 - [Configure TDE with BYOK](transparent-data-encryption-byok-configure.md)
 - [Rotate TDE BYOK keys](transparent-data-encryption-byok-key-rotation.md)
@@ -118,7 +118,7 @@ In this article you can find a content reference of various guides, scripts, and
 - [Design for elastic pools](disaster-recovery-strategies-for-applications-with-elastic-pool.md)
 - [Design for app upgrades](manage-application-rolling-upgrade.md)
 
-### Design Multi-tenant software as a service (SaaS) applications
+### Design Multitenant software as a service (SaaS) applications
 
 - [SaaS design patterns](saas-tenancy-app-design-patterns.md)
 - [SaaS video indexer](saas-tenancy-video-index-wingtip-brk3120-20171011.md)

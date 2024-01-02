@@ -84,7 +84,7 @@ You can restore a backup file or import data to a managed instance from an insta
 
 When you perform a point-in-time restore, the time to restore to is interpreted as UTC time. This way any ambiguities due to daylight saving time and its potential changes are avoided.
 
-### Auto-failover groups
+### Failover groups
 
 Using the same time zone across a primary and secondary instance in a failover group isn't enforced, but we strongly recommend it.
 

@@ -5,7 +5,7 @@ author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 09/27/2023
-ms.service: sql-db-mi
+ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
 ms.custom: sqldbrb=1

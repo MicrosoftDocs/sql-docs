@@ -15,7 +15,7 @@ ms.topic: how-to
 
 [!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article describes how to copy or move a database online across instances in Azure SQL Managed Instance.
+This article describes how to copy or move a database online across instances in Azure SQL Managed Instance. Both database copy and move operations are supported across different Azure subscriptions within the same Azure tenant.
 
 ## Overview
 
@@ -54,24 +54,24 @@ Here's the workflow for copying or moving a database:
 
    Until the operation has been manually completed, all changes that happen to the source database are applied to the destination database. You can cancel the operation at any time. You have 24 hours to explicitly complete the operation. If you don't complete the operation within 24 hours, it's automatically canceled and the destination database is dropped.
 
-1. After you've manually completed the operation, your destination database comes online and is ready for read/write workloads.
+1. After you manually complete the operation, your destination database comes online and is ready for read/write workloads.
 
-1. If you've chosen to *move* the database, the source database gets dropped. If you've chosen to *copy* the database, the source database remains online, but data synchronization stops.
+1. If you choose to *move* the database, the source database gets dropped. If you choose to *copy* the database, the source database remains online, but data synchronization stops.
 
 An example workflow for a move operation is illustrated in the following diagram:
 
 :::image type="content" source="media/database-copy-move-how-to/database-move-diagram.png" alt-text="Diagram that illustrates the workflow of a move operation.":::
 
-The design of the **database move** operation guarantees there is no data loss. When a user completes the move operation, the source database stops accepting any workloads and the transaction is replicated to the destination database. Only then, the destination database becomes online, and the source database dropped. This design ensures all data from the source database is **moved** to the destination database.
+The design of the **database move** operation guarantees there's no data loss. When a user completes the move operation, the source database stops accepting any workloads and the transaction is replicated to the destination database. Only then, the destination database becomes online, and the source database dropped. This design ensures all data from the source database is **moved** to the destination database.
 
-The **database copy** operation is very similar to database move. The only important difference is how the operation ends. Completing the database copy operation stops replication of the transaction log to the destination database. Although the user explicitly issues the command to complete the copy operation, the user doesn't control exact moment when log replication stops. Finally, both source and destination database are online, independent and ready for read-write workload.
+The **database copy** operation is similar to database move. The only important difference is how the operation ends. Completing the database copy operation stops replication of the transaction log to the destination database. Although the user explicitly issues the command to complete the copy operation, the user doesn't control exact moment when log replication stops. Finally, both source and destination database are online, independent, and ready for read-write workload.
 
 ## Prerequisites
 
 Before you can copy or move a database, you must meet the following requirements:
 
 - You must have *read* permissions for the resource group that contains the source managed instance, and you must have *write* permissions at the database level for both the source and destination instances.
-- If the source and destination instances are in different virtual networks, there must be network connectivity between the virtual networks of the two instances, such as with Azure virtual network peering.
+- If the source and destination instances are in different virtual networks, there must be network connectivity between the virtual networks of the two instances, such as with Azure virtual network peering. Also, inbound and outbound traffic on port 5022 and port range 11000-11999 needs to be allowed for the TCP protocol. This applies to both subnets, hosting the source and the destination instance. Here is documentation on [how to establish network connectivity between instances in different Azure VNets](/azure/azure-sql/managed-instance/failover-group-configure-sql-mi?view=azuresql&tabs=azure-portal%2Cazure-powershell-manage#enabling-connectivity-between-the-instances).
 
 ## Copy or move database
 
@@ -104,7 +104,7 @@ You can copy or move a database to another managed instance by using the Azure p
 
    Changes made to the source database are replicated to the destination database during this time, until you select **Complete**. If you don't complete the operation within 24 hours, it's automatically canceled, and the destination database is dropped. Selecting **Complete** finalizes the operation and takes you back to the **Databases** page, where you can verify that the operation is complete.
 
-   If you've moved the database, the database name is unavailable because it's now offline.
+   If you moved the database, the database name is unavailable because it's now offline.
 
 ### [PowerShell](#tab/azure-powershell)
 
@@ -219,14 +219,14 @@ FROM
 Consider the following limitations of the copy and move feature:
 
 - The source and destination instances can't be the same.
-- Both the source instance and destination instance need to be in the same Azure subscription and same region.
+- Both the source instance and destination instance need to be in the same Azure region.
 - You can copy and move *user* databases only. Copying and moving *system* databases isn't supported.
 - A database can participate in only a single move or copy operation at a time.
 - The source instance can run up to eight copy or move operations at a time. You can start more than eight operations, but some are queued and processed later, as managed by the service.
 - You can't rename a database during a copy or move operation.
 - Database tags aren't copied with copy or move operation.
 - Database copy and move operations don't copy or move PITR backups.
-- You can't copy or move a database that's part of an [auto-failover group](auto-failover-group-sql-mi.md), or that's using the [Managed Instance link](managed-instance-link-feature-overview.md).
+- You can't copy or move a database that's part of a [failover group](failover-group-sql-mi.md), or that's using the [Managed Instance link](managed-instance-link-feature-overview.md).
 - The source or destination managed instance shouldn't be configured with a failover group (geo-disaster recovery) setup.
 - You'll need to reconfigure transactional replication, change data capture (CDC), or distributed transactions after you move a database that relies on these features.
 
@@ -235,6 +235,7 @@ Consider the following limitations of the copy and move feature:
 More documentation related to database copy and move.
 - Azure PowerShell documentation for [database copy](/powershell/module/az.sql/copy-azsqlinstancedatabase) and [database move](/powershell/module/az.sql/move-azsqlinstancedatabase).
 - Azure CLI documentation for [database copy](/cli/azure/sql/midb/copy) and [database move](/cli/azure/sql/midb/move).
+- [Enabling connectivity between SQL Managed Instances](/azure/azure-sql/managed-instance/failover-group-configure-sql-mi?view=azuresql&tabs=azure-portal%2Cazure-powershell-manage#enabling-connectivity-between-the-instances).
 
 For other data movement options, review:
 - [Managed Instance link](managed-instance-link-feature-overview.md)

@@ -1,6 +1,6 @@
 ---
 title: Azure Private Link
-titleSuffix: Azure SQL Database and Azure Synapse Analytics
+titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: Overview of private endpoint feature.
 author: rohitnayakmsft
 ms.author: rohitna

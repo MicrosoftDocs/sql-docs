@@ -1,5 +1,6 @@
 ---
-title: Troubleshoot common connection issues to Azure SQL Database
+title: Troubleshoot common connection issues
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Provides steps to troubleshoot Azure SQL Database connection issues and resolve other Azure SQL Database or Azure SQL Managed Instance specific issues
 author: suresh-kandoth
 ms.author: sureshka
@@ -9,8 +10,8 @@ ms.service: sql-db-mi
 ms.subservice: connect
 ms.topic: troubleshooting
 ms.custom:
-  - OKR 11/2019
   - sqldbrb=1
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # Troubleshooting connectivity issues and other errors with Azure SQL Database and Azure SQL Managed Instance
@@ -18,9 +19,9 @@ ms.custom:
 
 You receive error messages when the connection to Azure SQL Database or Azure SQL Managed Instance fails. These connection problems can be caused by reconfiguration, firewall settings, a connection timeout, incorrect login information, or failure to apply best practices and design guidelines during the [application design](develop-overview.md) process. Additionally, if the maximum limit on some Azure SQL Database or SQL Managed Instance resources is reached, you can no longer connect.
 
- > [!NOTE]
-   > You can use [Azure SQL Connectivity Checker](https://github.com/Azure/SQL-Connectivity-Checker) to detect and fix a wide variety of connectivity errors to Azure SQL Database, Azure SQL Managed Instance and in Azure Synapse Analytics environments.
-   
+> [!NOTE]
+> You can use [Azure SQL Connectivity Checker](https://github.com/Azure/SQL-Connectivity-Checker) to detect and fix a wide variety of connectivity errors to Azure SQL Database, Azure SQL Managed Instance and in Azure Synapse Analytics environments.
+
 ## Transient fault error messages (40197, 40613 and others)
 
 The Azure infrastructure has the ability to dynamically reconfigure servers when heavy workloads arise in the SQL Database service.  This dynamic behavior might cause your client program to lose its connection to the database or instance. This kind of error condition is called a *transient fault*. Database reconfiguration events occur because of a planned event (for example, a software upgrade) or an unplanned event (for example, a process crash, or load balancing). Most reconfiguration events are generally short-lived and should be completed in less than 60 seconds at most. However, these events can occasionally take longer to finish, such as when a large transaction causes a long-running recovery. The following table lists various transient errors that applications can receive when connecting to Azure SQL Database.

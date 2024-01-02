@@ -1,8 +1,7 @@
 ---
 description: "Learn to configure Transactional or Snapshot replication with Microsoft Entra authentication."
-title: "Configure replication with Microsoft Entra authentication for SQL Server enabled by Azure Arc"
-tittleSuffix: SQL Server enabled by Azure Arc
-ms.custom: ""
+title: "Configure replication with Microsoft Entra authentication (preview) for SQL Server enabled by Azure Arc"
+titleSuffix: SQL Server enabled by Azure Arc
 ms.date: 07/15/2023
 ms.service: sql
 ms.reviewer: ""
@@ -11,15 +10,20 @@ ms.topic: how-to
 author: "MashaMSFT"
 ms.author: "mathoma"
 ---
-# Configure replication with Microsoft Entra authentication - SQL Server enabled by Azure Arc
+# Configure replication with Microsoft Entra authentication (preview) - SQL Server enabled by Azure Arc
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver2022.md)]
 
 This article provides steps to configure Transactional and Snapshot replication by using authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) for [Azure-Arc enabled SQL Server](../../sql-server/azure-arc/overview.md). 
 
+> [!NOTE]
+> Using Microsoft Entra authentication with SQL Server replication is currently in preview. 
+
 ## Overview
 
-Support for Microsoft Entra authentication with SQL Server replication was added in SQL Server 2022 CU 6. When configuring replication with Microsoft Entra authentication for Arc-enabled SQL Server, the only step that's different is the first step, when you create a Microsoft Entra login, and grant sysadmin permissions. Then use that Microsoft Entra login in the replication stored procedures to configure replication. 
+Support for Microsoft Entra authentication with SQL Server replication was added in SQL Server 2022 CU 6. When you configure replication with this authentication, the only step that's different is the first step. Specifically, create a Microsoft Entra login, and grant sysadmin permissions.
+
+After that step, use that Microsoft Entra login in the replication stored procedures to configure replication.
 
 > [!NOTE]
 > Starting with SQL Server 2022 CU 6, disable Microsoft Entra authentication for replication by using session trace flag 11561.
@@ -48,7 +52,7 @@ Configuring your replication with Microsoft Entra authentication currently has t
 
 ## Create SQL login from Microsoft Entra ID
 
-When configuring replication with Microsoft Entra authentication, you first need to [create the Microsoft Entra login](../../t-sql/statements/create-login-transact-sql.md), and grant it the `sysadmin` role. 
+[Create the Microsoft Entra login](../../t-sql/statements/create-login-transact-sql.md), and grant it the `sysadmin` role. 
 
 To create the Microsoft Entra login and assign it as a `sysadmin`, use the following Transact-SQL (T-SQL) command: 
 

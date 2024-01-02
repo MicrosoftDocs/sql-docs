@@ -19,7 +19,7 @@ keywords:
   - azure portal
   - portal
   - query editor
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db"
 ---
 # Quickstart: Use the Azure portal query editor to query Azure SQL Database
 

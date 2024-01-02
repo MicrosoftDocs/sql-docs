@@ -3,7 +3,7 @@ title: "What are Extended Security Updates?"
 description: Learn about Extended Security Updates enabled by Azure Arc, for your end-of-support and end-of-life SQL Server products such as SQL Server 2012.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 10/22/2023
+ms.date: 12/20/2023
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
@@ -175,7 +175,45 @@ az connectedmachine extension update --machine-name "<machine_name>" -g "<resour
 > [!IMPORTANT]  
 > If you disconnect your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance from Azure Arc, the ESU charges stop, and you won't have access to the new ESUs. If you haven't manually canceled your ESU subscription using Azure portal or API, the access to ESUs are immediately restored once you reconnect your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance to Azure Arc, and the ESU charges resume. These charges include the time of disconnection. For more information about what happens when you disconnect your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances, see [Extended Security Updates: Frequently asked questions](extended-security-updates-frequently-asked-questions.md).
 
-### View ESU subscriptions
+## Subscribe to Extended Security Updates at scale using Azure Policy
+
+You can activate the ESU subscription on multiple Arc-enabled machines using an Azure policy definition called [Subscribe eligible Arc-enabled SQL Servers instances to Extended Security Updates](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetail.ReactView/id/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Ff692cc79-76fb-4c61-8861-467e454ac6f8). When you create an assignment of this policy definition to a scope of your choice, it enables ESU on all Arc-enabled machines that have the Azure extension for SQL Server installed. If any of these machines have a qualified [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance, the ESU subscription is activated immediately.
+
+Use the following steps to activate this policy:
+
+1. Navigate to **Azure Policy** in the Azure portal and choose **Definitions**.
+1. Search for *[Subscribe eligible Arc-enabled SQL Servers instances to Extended Security Updates](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetail.ReactView/id/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Ff692cc79-76fb-4c61-8861-467e454ac6f8)* and right-click on the policy.
+1. Select **Assign policy**.
+1. Select a subscription and optionally a resource group as a scope.
+1. Make sure the policy enforcement is set to **Enabled**.
+1. On the **Parameters** tab, set the value of *Enable Extended Security Updates* to **True**.
+1. On the **Remediation** tab:
+   1. Select **Create remediation task** for this policy to be applied to existing resources. If not selected, the policy is applied to the newly created resources only.
+   1. Select **Create a Managed Identity** and choose **System assigned managed identity** (recommended) or **User assigned managed identity**, which has *Azure Extension for SQL Server Deployment* and *Reader* permissions.
+   1. Select the identity's location.
+1. Select **Review + Create**.
+1. Select **Create**.
+
+## Understand ESU subscription billing
+
+The ESU license extends support for critical updates for three more years. When using volume licensing SKUs, you must purchase an ESU subscription for year 1, and then add year 2 and year 3. When you use ESU subscriptions to obtain ESU coverage, you have the additional benefit of canceling the subscription and all future charges without penalty at any time.
+
+### Billing for SQL Server 2012 ESUs
+
+Because the ESU subscription option became available in year 2 of the [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] extended support period, most customers already purchased the year 1 ESU SKU, which ended on July 11, 2023. You can sign up for the ESU subscription at any time within year 2, and your bill reflects the cost of continuous ESU coverage. After you sign up for the ESU subscription, your next monthly bill includes a one-time billback charge for each [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] instance with an active ESU subscription, from July 12, 2023, to the date of activation. From this point, each server is billed on an hourly basis. Both billback and regular hourly charges use the hourly rate *(core count) x (100% of year 2 ESU license price) / 730*. So, the size of the billback charge depends on how much time has passed since July 12, 2023, until the activation time. For more information about ESU pricing, see [Plan your Windows Server 2012/2012 R2 and SQL Server 2012 end-of-support](https://www.microsoft.com/windows-server/extended-security-updates).
+
+### Billing for SQL Server 2014 ESUs
+
+Unlike with [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)], the ESU subscription for [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] is available from year 1 of the extended support period, which starts on July 10, 2024. You can sign up for it at any time before or after that date. If you sign up before that date, you only see the hourly ESU charges starting at midnight on July 10, 2024. If you sign up after July 10, 2024, your next month's bill includes a billback charge from July 10, 2024, to the date of activation.
+
+### Billing during the connectivity loss and other disruptions
+
+If your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance loses connectivity, the billing stops, and the subscription is suspended. To make sure that intermittent disconnection doesn't negatively affect your ESU coverage, we automatically reactivate it if the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance reconnects within 30 days, without penalty. In that case, you see an additional billback charge for the days since the last day your server was connected. If you manually terminate the ESU subscription and then reactivate it within 30 days, there's also no penalty. Your bill includes an additional charge for the time since you canceled the subscription. If the server reconnects after 30 days of disconnection, the subscription is terminated. To resume the ESU coverage, you need to activate a new ESU subscription and pay all the associated billback charges.
+
+> [!IMPORTANT]
+> The billback charges are recorded within the first hour of the ESU subscription, and look like single hourly charges for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances that have the ESU subscriptions enabled. Because the amount reflects the accumulated costs since July 11, 2023 for [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)], or July 10, 2024 for [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)], it is much higher than the regular hourly ESU charges. This is expected, and it should be a one-time charge. During the following months you should only see the regular hourly charges. Additional billback charges could be added in cases of the connectivity disruptions, but they are typically much smaller amounts.
+
+## View ESU subscriptions
 
 You can use [Azure Resource Graph](/azure/governance/resource-graph/overview) to query the ESU subscriptions. The following example shows how you can view all eligible [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] instances and their ESU subscription status.
 
@@ -311,7 +349,7 @@ You can either register a [single SQL Server instance](#single-sql-server-instan
 
 1. To register a disconnected machine, select **Add** from the menu at the top of the screen.
 
-   :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-empty-list.png" alt-text="Screenshot of an empty list of SQL Servers list on the Azure Arc portal." lightbox="media/sql-server-extended-security-updates/extended-security-updates-empty-list.png":::
+   :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-empty-list.png" alt-text="Screenshot of an empty list of SQL Servers on the Azure Arc portal." lightbox="media/sql-server-extended-security-updates/extended-security-updates-empty-list.png":::
 
 1. Select **Register Servers** to add a disconnected [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance.
 
@@ -436,7 +474,7 @@ Follow these steps to link an ESU invoice to your Azure Arc [!INCLUDE [ssnoversi
    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-invoice-linked.png" alt-text="Screenshot of SQL Server instances with a valid ESU expiration value." lightbox="media/sql-server-extended-security-updates/extended-security-updates-invoice-linked.png":::
 
 > [!IMPORTANT]  
-> If you purchased an ESU VL product for disconnected SQL Servers, you should only select the instances with the **Status** = `Registered`. If you purchased an ESU VL product for Arc-enabled SQL Servers, you should only select the instances with the **Status** = `Connected`.
+> If you purchased an ESU VL product for disconnected [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] servers, you should only select the instances with the **Status** of `Registered`. If you purchased an ESU VL product for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances enabled by Azure Arc, you should only select the instances with the **Status** of `Connected`.
 
 ## Download ESUs
 
@@ -469,8 +507,9 @@ For the full list of frequently asked questions, review the [Extended Security U
 ## Related content
 
 - [SQL Server 2012 lifecycle page](/lifecycle/products/microsoft-sql-server-2012)
+- [SQL Server 2014 lifecycle page](/lifecycle/products/sql-server-2014)
 - [SQL Server end of support page](sql-server-end-of-support-overview.md?WT.mc_id=akamseos)
-- [Extended Security Updates frequently asked questions (FAQ)](https://aka.ms/sqleosfaq)
+- [Extended Security Updates frequently asked questions (FAQ)](https://www.microsoft.com/windows-server/extended-security-updates)
 - [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com/security-guidance/summary)
 - [Manage Windows updates by using Azure Automation](/azure/automation/update-management/overview)
 - [SQL Server VM automated patching](/azure/azure-sql/virtual-machines/windows/automated-patching)
@@ -478,4 +517,3 @@ For the full list of frequently asked questions, review the [Extended Security U
 - [Azure migrate: lift-and-shift options to move your current SQL Server into an Azure VM](https://azure.microsoft.com/services/azure-migrate/)
 - [Cloud adoption framework for SQL migration](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)
 - [ESU-related scripts on GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-server-extended-security-updates/scripts)
-

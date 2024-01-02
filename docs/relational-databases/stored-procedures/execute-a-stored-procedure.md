@@ -133,9 +133,7 @@ GO
   
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
-In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a member of the `sysadmin` server role can use [sp_procoption](../system-stored-procedures/sp-procoption-transact-sql.md) to set or clear a procedure for automatic execution at startup. 
-
-Startup procedures must be in the `master` database, must be owned by `sa`, and can't have input or output parameters. For more information, see [sp_procoption (Transact-SQL)](../system-stored-procedures/sp-procoption-transact-sql.md).  
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a member of the `sysadmin` server role can use [sp_procoption](../system-stored-procedures/sp-procoption-transact-sql.md) to set or clear a procedure for automatic execution at startup. Startup procedures must be in the `master` database, must be owned by `sa`, and can't have input or output parameters. For more information, see [sp_procoption (Transact-SQL)](../system-stored-procedures/sp-procoption-transact-sql.md).  
   
 Procedures marked for automatic execution at startup execute every time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts and the `master` database is recovered during that startup process. Setting up procedures to execute automatically can be useful for performing database maintenance operations or for having procedures run continuously as background processes.  
 

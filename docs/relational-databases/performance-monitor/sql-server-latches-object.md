@@ -3,10 +3,10 @@ title: "SQL Server, Latches object"
 description: "Learn about the SQLServer:Latches object, which provides counters to monitor internal SQL Server resource locks called latches."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/13/2021"
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "Latches object"
   - "SQLServer:Latches"
@@ -14,9 +14,9 @@ helpviewer_keywords:
 # SQL Server, Latches object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  The **SQLServer:Latches** object in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides counters to monitor internal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resource locks called latches. Monitoring the latches to determine user activity and resource usage can help you to identify performance bottlenecks.  
+  The **SQLServer:Latches** object in Microsoft [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] provides counters to monitor internal [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] resource locks called latches. Monitoring the latches to determine user activity and resource usage can help you to identify performance bottlenecks.  
   
- This table describes the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Latches** counters.  
+ This table describes the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] **Latches** counters.  
   
 |SQL Server Latches counters|Description|  
 |---------------------------------|-----------------|  
@@ -37,7 +37,6 @@ SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%Latches%';
 ```  
   
-## See also  
- [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
-  
-  
+## Related content
+
+- [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)

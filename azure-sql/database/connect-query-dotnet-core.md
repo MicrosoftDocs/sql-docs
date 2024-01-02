@@ -6,7 +6,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: wiassaf, mathoma
 ms.date: 09/26/2023
-ms.service: sql-database
+ms.service: sql-db-mi
 ms.subservice: connect
 ms.topic: quickstart
 ms.custom:
@@ -131,9 +131,9 @@ namespace sqltest
    Query data example:
    =========================================
 
-   master	SQL_Latin1_General_CP1_CI_AS
-   tempdb	SQL_Latin1_General_CP1_CI_AS
-   WideWorldImporters	Latin1_General_100_CI_AS
+   master    SQL_Latin1_General_CP1_CI_AS
+   tempdb    SQL_Latin1_General_CP1_CI_AS
+   WideWorldImporters    Latin1_General_100_CI_AS
 
    Done. Press enter.
    ```

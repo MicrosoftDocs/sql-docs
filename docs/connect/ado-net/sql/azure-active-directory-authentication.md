@@ -161,7 +161,7 @@ Authentication with Managed Identities for Azure resources is the recommended au
 
 There are two types of managed identities:
 
-_System-assigned managed identity_ is created as part of an Azure resource (such as your SQL managed instance or the [logical server](/azure/azure-sql/database/logical-servers)), and shares the lifecycle of that resource. System-assigned identities can only be associated with a single Azure resource.
+- _System-assigned managed identity_ is created as part of an Azure resource (such as your SQL managed instance or the [logical server](/azure/azure-sql/database/logical-servers)), and shares the lifecycle of that resource. System-assigned identities can only be associated with a single Azure resource.
 - _User-assigned managed identity_ is created as a standalone Azure resource. It can be assigned to one or more instances of an Azure service.
 
 For more information about managed identities, see [About managed identities for Azure resources](/azure/active-directory/managed-identities-azure-resources/overview).

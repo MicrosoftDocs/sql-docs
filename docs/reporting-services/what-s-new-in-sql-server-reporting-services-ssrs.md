@@ -66,9 +66,13 @@ You can connect to Power BI datasets using either Microsoft Report Builder or SQ
 
 When authoring reports, you can use tooltips to specify text for each element on the report. Screen reader technology identifies these tooltips properly.
 
-### Azure Active Directory Application Proxy support
+<a name='azure-active-directory-application-proxy-support'></a>
 
-With Azure Active Directory Application Proxy, you no longer need to manage your own web application proxy in order to allow secure access via the web or mobile apps.
+### Microsoft Entra application proxy support
+
+[!INCLUDE [entra-id](../includes/entra-id.md)]
+
+With Microsoft Entra application proxy, you no longer need to manage your own web application proxy in order to allow secure access via the web or mobile apps.
 
 ### Custom headers
 

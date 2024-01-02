@@ -4,7 +4,7 @@ description: Explains how to manage SQL Server licensing options. Also demonstra
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 09/12/2023
+ms.date: 12/07/2023
 ms.topic: conceptual
 ---
 
@@ -49,7 +49,6 @@ Run:
 az provider register --namespace 'Microsoft.AzureArcData'
 ```
 
-
 ---
 
 ## License types
@@ -76,9 +75,7 @@ The following license types are supported:
 * **PAYG**: Pay for your SQL Server software usage through Microsoft Azure. See [SQL Server prices and licensing](https://www.microsoft.com/sql-server/sql-server-2022-pricing).
 
   > [!IMPORTANT]
-  > For correct billing, servers that use **PAYG** license type should stay continuously connected to Azure. 
-  >
-  > Intermittent connectivity disruptions are tolerated with built-in resilience.
+  > [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] Pay-As-You-Go (PAYG) provides a flexible subscription-based access to SQL Server. The servers with SQL Server instances using PAYG must be continuously connected to Azure. Intermittent connectivity disruptions for up to 30 days are tolerated with built-in resilience. After 30 days of dysconnectivity the PAYG subscription will expire. Please be advised that once your subscription expires, you are not authorized to use the software.
 
 * **Paid** and **LicenseOnly**: Use an existing license agreement. Usage implies that you already have the necessary licenses. In these cases, your software usage will be reported to you using a free meter. You can analyze your usage in the [Cost Management + Billing portal](/azure/cost-management-billing/) to make sure you have enough licenses for all your installed SQL Server instances.
 
@@ -219,7 +216,6 @@ az connectedmachine extension update --machine-name "simple-vm" -g "<resource-gr
 > * The update command overwrites all settings. If your extension settings have a list of excluded SQL Server instances, make sure to specify the full exclusion list with the update command.
 > * If you already have an older version of the Azure extension installed, make sure to upgrade it first, and then use one the modify methods to set the correct license type. For details, see [How to upgrade a machine extension](/azure/azure-arc/servers/manage-automatic-vm-extension-upgrade) for details. 
 
-
 ---
 
 ## Query SQL Server configuration
@@ -253,7 +249,6 @@ resources
 #### List configuration details for each SQL Server instance
 
 This query identifies many details about each instance, including the license type, ESU setting and enabled features.
-
 
 ```kusto
 resources
@@ -314,5 +309,3 @@ For more examples of Azure Resource Graph Queries, see [Starter Resource Graph q
 - [Learn about Extended Security Updates for SQL Server](../end-of-support/sql-server-extended-security-updates.md).  
 - [Frequently asked questions](faq.yml#billing)
 - [Configure automated patching for Arc-enabled SQL Servers](patch.md)
-
-

@@ -1,5 +1,6 @@
 ---
 title: Monitor your SQL deployments with SQL Insights (preview)
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Overview of SQL Insights (preview) in Azure Monitor
 author: WilliamDAssafMSFT
 ms.author: wiassaf

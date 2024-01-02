@@ -3,10 +3,10 @@ title: "SQL Server, Availability Replica object"
 description: "Learn about SQLServer:Availability Replica performance object, which contains performance counters about availability replicas in Always On availability groups."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/12/2021"
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "performance counters [SQL Server], AlwaysOn Availability Groups"
@@ -16,13 +16,13 @@ helpviewer_keywords:
 # SQL Server, Availability Replica object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  The **SQLServer:Availability Replica** performance object contains performance counters that report information about the availability replicas in Always On availability groups in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. All availability replica performance counters apply to both the primary replica and the secondary replicas, with send/receive counters reflecting the local replica. For the most part, the primary replica sends most of the data, and the secondary replicas receive the data. However, secondary replicas send ACKs and some other background traffic to the primary replicas. Note that on a given availability replica, some counters will show a zero value, depending on the current role, primary or secondary, of the local replica.  
+  The **SQLServer:Availability Replica** performance object contains performance counters that report information about the availability replicas in Always On availability groups in [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)]. All availability replica performance counters apply to both the primary replica and the secondary replicas, with send/receive counters reflecting the local replica. For the most part, the primary replica sends most of the data, and the secondary replicas receive the data. However, secondary replicas send ACKs and some other background traffic to the primary replicas. On a given availability replica, some counters will show a zero value, depending on the current role, primary or secondary, of the local replica.  
   
 |Counter Name|Description|  
 |------------------|-----------------|  
-|**Bytes Received from Replica/sec**|**In SQL Server 2012 and 2014:** Actual number of bytes (compressed) received from the availability replica per second (sync or async). Pings and status updates will generate network traffic even on databases with no user updates. <BR/> <BR/> **In [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and above:** Actual number of bytes received (compressed for async, uncompressed for sync) from the availability replica per second.|  
-|**Bytes Sent to Replica/sec**|**In SQL Server 2012 and 2014:** Actual number of bytes  (compressed) sent per second over the network to the remote availability replica (sync or async). Compression is enabled for both sync and async replica by default. <BR/> <BR/> **In [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and above:** Number of bytes sent to the remote availability replica per second. Before compression for async replica. (Actual number of bytes for sync replica which has no compression)|  
-|**Bytes Sent to Transport/sec**|**In SQL Server 2012 & 2014:** Actual number of bytes sent per second (compressed) over the network to the remote availability replica (sync or async). Compression is enabled for both sync and async replica by default. <BR/> <BR/> **In [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and above:** Number of bytes sent to the remote availability replica per second Before compression for async replica. (Actual number of bytes for sync replica which has no compression)|  
+|**Bytes Received from Replica/sec**|**In SQL Server 2012 and 2014:** Actual number of bytes (compressed) received from the availability replica per second (sync or async). Pings and status updates will generate network traffic even on databases with no user updates. <BR/> <BR/> **In [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and above:** Actual number of bytes received (compressed for async, uncompressed for sync) from the availability replica per second.|  
+|**Bytes Sent to Replica/sec**|**In SQL Server 2012 and 2014:** Actual number of bytes  (compressed) sent per second over the network to the remote availability replica (sync or async). Compression is enabled for both sync and async replica by default. <BR/> <BR/> **In [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and above:** Number of bytes sent to the remote availability replica per second. Before compression for async replica. (Actual number of bytes for sync replica which has no compression)|  
+|**Bytes Sent to Transport/sec**|**In SQL Server 2012 & 2014:** Actual number of bytes sent per second (compressed) over the network to the remote availability replica (sync or async). Compression is enabled for both sync and async replica by default. <BR/> <BR/> **In [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and above:** Number of bytes sent to the remote availability replica per second Before compression for async replica. (Actual number of bytes for sync replica which has no compression)|  
 |**Flow Control Time (ms/sec)**|Time in milliseconds that log stream messages waited for send flow control, in the last second.|  
 |**Flow Control/sec**|Number of times flow-control initiated in the last second. **Flow Control Time (ms/sec)** divided by **Flow Control/sec** is the average time per wait.|  
 |**Receives from Replica/sec**|Number of Always On messages received from the replica per second.|  
@@ -40,10 +40,8 @@ SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%Availability Replica%';
 ```  
 
-## See also 
- 
- - [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
- - [SQL Server, Database Replica](../../relational-databases/performance-monitor/sql-server-database-replica.md)   
- - [Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
-  
-  
+## Related content
+
+- [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)
+- [SQL Server, Database Replica object](sql-server-database-replica.md)
+- [What is an Always On availability group?](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)

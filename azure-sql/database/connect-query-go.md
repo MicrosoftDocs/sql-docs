@@ -1,12 +1,12 @@
 ---
 title: Use Go to query
-titleSuffix: Azure SQL Database & SQL Managed Instance
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: "Quickstart: Use Go to create a program that connects to a database in Azure SQL Database or Azure SQL Managed Instance, and runs queries."
 author: dlevy-msft
 ms.author: dlevy
 ms.reviewer: wiassaf, mathoma, randolphwest
 ms.date: 12/01/2023
-ms.service: sql-database
+ms.service: sql-db-mi
 ms.subservice: connect
 ms.topic: quickstart
 ms.custom:

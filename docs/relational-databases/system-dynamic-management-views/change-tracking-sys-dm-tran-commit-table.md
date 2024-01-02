@@ -36,6 +36,9 @@ Displays one row for each transaction that is committed for a table that is trac
 | `commit_time` | **datetime** | The time when the transaction was committed. |
 | `pdw_node_id` | **int** | **Applies to**: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]<br /><br />The identifier for the node that this distribution is on. |
 
+> [!NOTE]
+> The table `sys.dm_tran_commit_table` will not reflect live changes for read-only users, as `VIEW SERVER STATE` permission is required. The changes remain stored in the rowstore until a `CHECKPOINT` occurs, following which read-only users will see them reflected. This behaviour isn't observed for SA users.
+
 ## Related content
 
 - [System dynamic management views](system-dynamic-management-views.md)

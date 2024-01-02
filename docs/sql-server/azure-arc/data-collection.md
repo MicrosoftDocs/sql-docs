@@ -4,33 +4,34 @@ description: Explains data that Microsoft collects for reporting for SQL Server 
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 10/03/2023
+ms.date: 12/15/2023
 ms.topic: conceptual
 ms.custom: references_regions
 ---
+
 # Data collection and reporting for SQL Server enabled by Azure Arc
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-This article describes the data that Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] transmits to Microsoft. Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] collects usage data as described in this article and at [Monitor Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]](sql-monitoring.md).
+This article describes the data that [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] transmits to Microsoft. [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] collects usage data as described in this article and at [Monitor Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]](sql-monitoring.md).
 
-Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] does not collect any personally identifiable information (PII) or end-user identifiable information, or store any customer data.
+[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] does not collect any personally identifiable information (PII) or end-user identifiable information or store any customer data.
 
 ## Related products
 
-Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] uses the following products:
+[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] uses the following products:
 
 - Azure Arc-enabled servers
 
-## SQL Server enabled by Azure Arc
+## [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]
 
-The following data is collected for Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances:
+The following data is collected for [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instances:
 
 | Description | Property name | Property type |
 | :-- | :-- | :-- |
 | SQL Server edition | `Edition` | `string` |
 | Resource ID of the hosting Azure Arc for Servers resource | `ContainerResourceId` | `string` |
-| Time when the resource was created | `CreateTime` | string |
+| Time when the resource was created | `CreateTime` | `string` |
 | The number of logical processors used by the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance | `VCore` | `string` |
 | Cloud connectivity status | `Status` | `string` |
 | SQL Server update level | `PatchLevel` | `string` |

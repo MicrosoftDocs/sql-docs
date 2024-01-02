@@ -1,5 +1,6 @@
 ---
 title: DNS alias
+titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: Your applications can connect to an alias for the name of the server for Azure SQL Database. Meanwhile, you can change the SQL Database the alias points to anytime, to facilitate testing and so on.
 author: rajeshsetlem
 ms.author: rsetlem
@@ -109,7 +110,7 @@ Presently, a DNS alias has the following limitations:
 
 - [Overview of business continuity with Azure SQL Database](business-continuity-high-availability-disaster-recover-hadr-overview.md), including disaster recovery.
 - [Azure REST API reference](/rest/api/azure/)
-- [Server Dns Aliases API](/rest/api/sql/2020-11-01-preview/serverdnsaliases)
+- [Server Dns Aliases API](/rest/api/sql/server-dns-aliases)
 
 ## Next steps
 

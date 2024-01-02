@@ -5,24 +5,25 @@ description: Learn how to deploy a SQL Server Big Data Clusters with Azure Kuber
 author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
-ms.date: 08/20/2020
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: big-data-cluster
-ms.topic: conceptual
-ms.custom: intro-deployment
+ms.topic: how-to
+ms.custom:
+  - intro-deployment
 ---
 
 # Deploy BDC in Azure Kubernetes Service (AKS) private cluster
 
-[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+[!INCLUDE [big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 This article explains how to deploy SQL Server Big Data Clusters on Azure Kubernetes Service (AKS) private cluster. This configuration supports restricted use of public IP addresses in enterprise networking environment.
 
 A private deployment provides the following benefits:
 
-* Restricted use of public IP addresses
-* Network traffic between application servers and cluster node pools remains only on the private network
-* Custom configuration for mandatory egress traffics to fit specific requirements
+- Restricted use of public IP addresses
+- Network traffic between application servers and cluster node pools remains only on the private network
+- Custom configuration for mandatory egress traffics to fit specific requirements
 
 This article demonstrates how to use an AKS private cluster to restrict the use of Public IP address while respective security strings have applied.
 
@@ -154,10 +155,8 @@ See how to [manage big data cluster in AKS private cluster](private-manage.md) a
 
 See automation scripts for this scenario at [SQL Server Samples repository on GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/private-aks).
 
-## Next steps
+## Related content
 
-[Manage a private cluster](private-manage.md)
-
-[Restrict egress traffic of Private big data cluster](private-restrict-egress-traffic.md)
-
-[Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md)
+- [Manage SQL Server Big Data Clusters in AKS private cluster](private-manage.md)
+- [Restrict egress traffic from big data clusters in Azure Kubernetes Service (AKS) private cluster](private-restrict-egress-traffic.md)
+- [Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md)

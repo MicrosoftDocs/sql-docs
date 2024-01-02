@@ -89,9 +89,8 @@ SQL Server supports the following types of locks. Not all lock types are availab
   
 -   RangeX_X (Exclusive Key-Range and Exclusive Resource lock). This is a conversion lock used when updating a key in a range.  
   
-## See Also  
-<!-- MISSING LINKS 
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
--->
-[sys.dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)  
+## Related content
+
+- [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md)  
+- [sys.dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)  
   

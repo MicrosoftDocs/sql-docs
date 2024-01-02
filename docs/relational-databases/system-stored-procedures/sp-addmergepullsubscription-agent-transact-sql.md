@@ -106,8 +106,8 @@ The name of the publication. *@publication* is **sysname**, with no default.
 
 The security mode to use when connecting to a Publisher when synchronizing. *@publisher_security_mode* is **int**, with a default of `1`. The following values define the security mode:
 
-- `0` specifies [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.
-- `1` specifies Windows Authentication.
+- `0` specifies [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] authentication.
+- `1` specifies Windows authentication.
 - `2` specifies Microsoft Entra password authentication, starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
 - `3` specifies Microsoft Entra integrated authentication, starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
 
@@ -166,8 +166,8 @@ The name of the Distributor. *@distributor* is **sysname**, with a default of *@
 
 The security mode to use when connecting to a Distributor when synchronizing. *@distributor_security_mode* is **int**, with a default of `1`. The following values define the security mode:
 
-- `0` specifies [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.
-- `1` specifies Windows Authentication.
+- `0` specifies [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] authentication.
+- `1` specifies Windows authentication.
 - `2` specifies Microsoft Entra password authentication, starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
 - `3` specifies Microsoft Entra integrated authentication, starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
 - `4` specifies Microsoft Entra token authentication, starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.

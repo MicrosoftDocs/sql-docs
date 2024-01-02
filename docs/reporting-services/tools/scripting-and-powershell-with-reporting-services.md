@@ -23,7 +23,7 @@ helpviewer_keywords:
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supports [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET script as the script language that the RS.exe utility can support, a script host that runs on the report server.  
   
 ## Reporting Services SharePoint mode PowerShell cmdlets and samples   
-:::image type="icon" source="/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg"::: 
+<!-->:::image type="icon" source="/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg":::<-->
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode includes [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] cmdlets for report server administration.  
   
@@ -38,7 +38,7 @@ helpviewer_keywords:
     -   List Data Extensions  
   
 ## Reporting Services object model and PowerShell samples  
- :::image type="icon" source="/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg":::  
+<!-->:::image type="icon" source="/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg":::<-->
     
 -   [Use PowerShell to change and list Reporting Services subscription owners and run a subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   

@@ -93,7 +93,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 ##### To create a working sample of this schema  
   
-1.  Copy the schema code above and paste it into a text file. Save the file as targetNameSpace.xml.  
+1.  Copy the schema code above and paste it into a text file. Save the file as targetNamespace.xml.  
   
 2.  Copy the following template and paste it into a text file. Save the file as targetNameSpaceT.xml in the same directory where you saved targetNamespace.xml.  
   

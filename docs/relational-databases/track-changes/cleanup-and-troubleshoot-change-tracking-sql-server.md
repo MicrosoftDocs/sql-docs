@@ -4,7 +4,7 @@ description: Learn how to troubleshoot common issues with auto cleanup on change
 author: croblesm
 ms.author: roblescarlos
 ms.reviewer: randolphwest
-ms.date: 12/27/2023
+ms.date: 01/03/2024
 ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
@@ -65,9 +65,35 @@ If one or more side tables show significant storage consumption, or contain a la
 
 #### 1. Assess auto cleanup backlog
 
-First, gather information on the latency of the side table delete statements and the rate of deletion per second over the last few hours. Next, estimate the time required to clean up the side table by considering both the stale row count and the delete latency.
+Identify side tables that have a large backlog of expired records, which need mitigation to be performed on them. Run the following queries to identify the side tables with large expired records counts. Remember to replace the values in the example scripts as shown.
 
-Use the following Transact-SQL (T-SQL) code snippet by substituting parameter templates with appropriate values.
+1. Get the invalid cleanup version:
+
+    ```sql
+    SELECT * FROM sys.change_tracking_tables;
+    ```
+
+    The `cleanup_version` value from the returned rows represents the invalid cleanup version.
+
+1. Run the following dynamic Transact-SQL (T-SQL) query, which generates the query to get the expired row count of side tables. Replace the value of `<invalid_version>` in the query with the value obtained in the previous step.
+
+   ```sql
+   SELECT 'SELECT ''' + QUOTENAME(name) + ''', count(*) FROM [sys].' + QUOTENAME(name)
+       + ' WHERE sys_change_xdes_id IN (SELECT xdes_id FROM sys.syscommittab ssct WHERE ssct.commit_ts <= <invalid_version>) UNION'
+   FROM sys.internal_tables
+   WHERE internal_type = 209;
+   ```
+
+1. Copy the result set from the previous query, and remove the `UNION` keyword from last row. If you run the generated T-SQL query through a dedicated admin connection (DAC), the query gives the expired row counts of all side tables. Depending on the size of the `sys.syscommittab` table and the number of side tables, this query might take a long time to complete.
+
+   > [!IMPORTANT]  
+   > This step is necessary in order to move ahead with the mitigation steps. If the previous query fails to execute, identify the expired row counts for the individual side tables using the queries given next.
+
+Perform the following mitigation steps for the side tables, having the decreasing order of expired row counts, until the expired row counts come down to a manageable state for the auto cleanup to catch up.
+
+Once you identify the side tables with large expired record counts, gather information on the latency of the side table delete statements and the rate of deletion per second over the last few hours. Next, estimate the time required to clean up the side table by considering both the stale row count and the delete latency.
+
+Use the following T-SQL code snippet by substituting parameter templates with appropriate values.
 
 - Query the rate of cleanup per second:
 
@@ -80,22 +106,21 @@ Use the following Transact-SQL (T-SQL) code snippet by substituting parameter te
   WHERE table_name = '<table_name>'
   ORDER BY end_time DESC;
   ```
-  
+
   You can also use minute or hour granularity for the `DATEDIFF` function.
 
 - Find stale row count in the side table. This query helps you find the number of rows pending to be cleaned up.
 
-  The internal_table_name & cleanup_version for the user table in the output returned in the previous section. Using this information, execute the following T-SQL code through a dedicated admin connection (DAC):
+  The `<internal_table_name>` and `<cleanup_version>` for the user table are in the output returned in the previous section. Using this information, execute the following T-SQL code through a dedicated admin connection (DAC):
 
- ```sql
-  SELECT
-      '<internal_table_name>',
+  ```sql
+  SELECT '<internal_table_name>',
       COUNT(*)
   FROM sys.<internal_table_name>
   WHERE sys_change_xdes_id IN (
-      SELECT xdes_id
-      FROM sys.syscommittab ssct
-      WHERE ssct.commit_ts <= <cleanup version>
+          SELECT xdes_id
+          FROM sys.syscommittab ssct
+          WHERE ssct.commit_ts <= <cleanup_version>
   );
   ```
 
@@ -116,7 +141,7 @@ Use the following Transact-SQL (T-SQL) code snippet by substituting parameter te
   IN (SELECT xdes_id FROM sys.syscommittab ssct WHERE ssct.commit_ts > <cleanup_version>);
   ```
 
-  The estimated time to clean up the table can be calculated using the rate of cleanup and stale row count. Consider the following formula:
+  You can calculate the estimated time to clean up the table using the rate of cleanup and stale row count. Consider the following formula:
 
   > **Time to clean up in minutes = (stale row count) / (rate of cleanup in minutes)**
 
@@ -124,9 +149,9 @@ Use the following Transact-SQL (T-SQL) code snippet by substituting parameter te
 
 #### 2. Check table lock conflicts
 
-Determine if cleanup isn't progressing because of table lock escalation conflicts, which starve cleanup consistently from acquiring lock(s) on the side table to delete rows.
+Determine if cleanup isn't progressing because of table lock escalation conflicts, which starve cleanup consistently from acquiring locks on the side table to delete rows.
 
-To confirm this, run the following T-SQL code. This query fetches records for the problematic table to determine if there are multiple entries indicating lock conflicts. A few sporadic conflicts spread over a period shouldn't qualify for the proceeding mitigation steps. The conflicts should be recurrent.
+To confirm a lock conflict, run the following T-SQL code. This query fetches records for the problematic table to determine if there are multiple entries indicating lock conflicts. A few sporadic conflicts spread over a period shouldn't qualify for the proceeding mitigation steps. The conflicts should be recurrent.
 
 ```sql
 SELECT TOP 1000 *
@@ -135,7 +160,7 @@ WHERE table_name = '<user_table_name>'
 ORDER BY start_time DESC;
 ```
 
-If the history table has multiple entries in the `comments` columns with the value `Cleanup error: Lock request time out period exceeded`, it is a clear indication that multiple cleanup attempts failed due to lock conflicts or lock timeouts in succession. Consider the following remedies:
+If the history table has multiple entries in the `comments` columns with the value `Cleanup error: Lock request time out period exceeded`, it's a clear indication that multiple cleanup attempts failed due to lock conflicts or lock timeouts in succession. Consider the following remedies:
 
 - Disable and enable change tracking on the problematic table. This causes all tracking metadata maintained for the table to be purged. The table's data remains intact. This is the quickest remedy.
 

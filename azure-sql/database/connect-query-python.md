@@ -18,7 +18,7 @@ ms.custom:
 ms.devlang: python
 monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 ---
-# Quickstart: Use Python to query a database
+# Quickstart: Use Python to query a database in Azure SQL Database or Azure SQL Managed Instance
 
 [!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi-asa.md)]
 

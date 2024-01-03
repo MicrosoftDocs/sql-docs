@@ -3,12 +3,13 @@ title: "SQL Server Backup to URL for Microsoft Azure Blob Storage"
 description: Learn about the concepts, requirements, and components necessary for SQL Server to use the Microsoft Azure Blob Storage as a backup destination.
 author: dplessMSFT
 ms.author: dpless
-ms.reviewer: mathoma, wiassaf
+ms.reviewer: mathoma, wiassaf, hudequei 
 ms.date: 03/01/2023
 ms.service: sql
 ms.subservice: backup-restore
 ms.custom: devx-track-azurepowershell
 ms.topic: conceptual
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server backup to URL for Microsoft Azure Blob Storage
 
@@ -439,7 +440,7 @@ The following example restores the [!INCLUDE [sssampledbobject-md](../../include
    GO  
    ```  
 
-## Next steps
+## Related content
 
 - [SQL Server Backup to URL for Azure Blob Storage best practices and troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)
 - [Back Up and Restore of System Databases (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)

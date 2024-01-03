@@ -4,10 +4,11 @@ description: Lists Azure Policy built-in policy definitions for Azure SQL Databa
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 04/24/2023
-ms.service: sql-database
+ms.service: sql-db-mi
 ms.subservice: service-overview
 ms.topic: reference
 ms.custom: subject-policy-reference
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Azure Policy built-in definitions for Azure SQL Database & SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]

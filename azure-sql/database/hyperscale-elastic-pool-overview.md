@@ -126,7 +126,7 @@ For greater detail, see the resource limits of Hyperscale elastic pools for [sta
 
 Consider the following limitations:
 
-- Changing an existing non-Hyperscale elastic pool to the Hyperscale edition isn't supported. The [migration section](#migrating-non-hyperscale-databases-to-hyperscale-elastic-pools) provides some alternatives you can use.
+- Changing an existing non-Hyperscale elastic pool to the Hyperscale edition isn't supported. The [migration section](#migrate-non-hyperscale-databases-to-hyperscale-elastic-pools) provides some alternatives you can use.
 - Changing the edition of a Hyperscale elastic pool to a non-Hyperscale edition isn't supported.
 - In order to [reverse migrate](./manage-hyperscale-database.md#reverse-migrate-from-hyperscale) an eligible database, which is in a Hyperscale elastic pool, it must first be removed from the Hyperscale elastic pool. The standalone Hyperscale database can then be reverse migrated to a General Purpose standalone database.
 - Maintenance of databases in a pool is performed, and maintenance windows are configured, at the pool level. It isn't currently possible to configure a maintenance window for Hyperscale elastic pools.

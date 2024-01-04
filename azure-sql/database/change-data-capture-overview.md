@@ -387,6 +387,32 @@ These are the different troubleshooting categories included in this section:
 
 * **Recommendation**: Before making any changes to column size, you must assess whether the alteration is compatible with the existing data in CDC change tables.  To address this problem, you need to disable and re-enable CDC for your database. For more information about enabling CDC for a database or a table, see [**Enable CDC for Azure SQL Database**](#enable-cdc-for-azure-sql-database) and [**Enable CDC for a table**](#enable-cdc-for-a-table) sections in this article.  
 
+#### Error 22830 - Built-in function 'SUSER_SNAME' in impersonation context is not supported in this version of SQL Server
+
+* **Cause**: This error occurs during enabling CDC if a user trigger exists on the database, which has a call to `SUSER_SNAME()` on `create_table`. You can list triggers with the following Transact-SQL script. This command will give the details of the object trigger and the corresponding `object_id`:
+
+  ```sql
+  SELECT name,
+      object_id
+  FROM sys.triggers
+  WHERE parent_class_desc = 'DATABASE'
+      AND is_disabled = 0;
+  ```
+
+  Once you get the trigger definitions, you can look for calls being made to `SYSTEM_USER` with the following script:
+
+  ```sql
+  SELECT OBJECT_DEFINITION(object_id) AS trigger_definition;
+  ```
+
+* **Recommendation**: To resolve this issue, follow these steps for each user trigger obtained from the previous script.
+
+  * Disable the trigger
+  * Enable CDC
+  * Re-enable the trigger
+
+For more information, see [DISABLE TRIGGER (Transact-SQL)](../../docs/t-sql/statements/disable-trigger-transact-sql.md).
+
 #### Error 913 - CDC capture job fails when processing changes for a table with system CLR datatype
 
 * **Cause**: This error occurs when enabling CDC on a table with system CLR datatype, making DML changes, and then making DDL changes on the same table while the CDC capture job is processing changes related to other tables.

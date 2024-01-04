@@ -4,7 +4,7 @@ description: Release notes for Microsoft SqlPackage.
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: "llali"
-ms.date: 5/10/2023
+ms.date: 1/10/2024
 ms.service: sql
 ms.topic: conceptual
 ms.custom: tools|sos
@@ -15,13 +15,12 @@ ms.custom: tools|sos
 
 This article lists the features and fixes delivered by the released versions of SqlPackage.
 
+## 162.1.168 SqlPackage
 
-## 162.1.167 SqlPackage
-
-**Release date:** October 19, 2023
+**Release date:** January 10, 2024
 
 ```bash
-dotnet tool install -g microsoft.sqlpackage --version 162.1.167
+dotnet tool install -g microsoft.sqlpackage --version 162.1.168
 ```
 
 |Platform|Download|
@@ -31,6 +30,27 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.167
 |macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2249674)|
 |Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2249739)|
 
+### Fixes
+| Feature | Details |
+| :------ | :------ |
+| Platform | References [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.1.3) v5.1.3.|
+
+### Known Issues
+| Feature | Details | Workaround |
+| :------ | :------ |:------ |
+| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
+| ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
+
+## 162.1.167 SqlPackage
+
+**Release date:** October 19, 2023
+
+|Platform|Download|
+|:---|:---|
+|Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2249738)|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2249478)|
+|macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2249674)|
+|Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2249739)|
 
 
 ### Features

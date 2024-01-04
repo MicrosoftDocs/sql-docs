@@ -182,7 +182,7 @@ The CDC capture job in Azure SQL Database operates seamlessly, running every 20 
 
 ### Manual CDC Control
 
-While CDC runs automatically, users maintain the flexibility to perform manual CDC operations on demand. The [sp_cdc_scan](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-cleanup-change-table-transact-sql) and [sp_cdc_cleanup_change_tables](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-cleanup-change-table-transact-sql) procedures allow you to trigger capture and cleanup tasks as needed.
+While CDC runs automatically, users maintain the flexibility to perform manual CDC operations on demand. The [sp_cdc_scan](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql) and [sp_cdc_cleanup_change_tables](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-cleanup-change-table-transact-sql) procedures allow you to trigger capture and cleanup tasks as needed.
 
 ### Monitor CDC
 

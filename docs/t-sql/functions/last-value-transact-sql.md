@@ -47,7 +47,7 @@ Is the value to be returned. *scalar_expression* can be a column, subquery, or o
 
 IGNORE NULLS - Ignore null values in the dataset when computing the last value over a partition.
 
-RESPECT NULLS - Respect null values in the dataset when computing last value over a partition.
+RESPECT NULLS - Respect null values in the dataset when computing last value over a partition. `RESPECT NULLS` is the default behavior if a NULLS option is not specified.
 
 For more information on this argument in [!INCLUDE[ssazurede-md](../../includes/ssazurede-md.md)], see [Imputing missing values](/azure/azure-sql-edge/imputing-missing-values/).
 

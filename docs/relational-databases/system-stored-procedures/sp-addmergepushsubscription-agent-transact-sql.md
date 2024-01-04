@@ -78,8 +78,8 @@ The name of the subscription database. *@subscriber_db* is **sysname**, with a d
 
 The security mode to use when connecting to a Subscriber when synchronizing. *@subscriber_security_mode* is **smallint**, with a default of `1`. The following values define the security mode:
 
-- `0` specifies [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.
-- `1` specifies Windows Authentication.
+- `0` specifies [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] authentication.
+- `1` specifies Windows authentication.
 - `2` specifies Microsoft Entra password authentication, starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
 - `3` specifies Microsoft Entra integrated authentication, starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
 - `4` specifies Microsoft Entra token authentication, starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
@@ -102,8 +102,8 @@ The Subscriber password for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-m
 
 The security mode to use when connecting to a Publisher when synchronizing. *@publisher_security_mode* is **smallint**, with a default of `1`. The following values define the security mode:
 
-- `0` specifies [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.
-- `1` specifies Windows Authentication.
+- `0` specifies [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] authentication.
+- `1` specifies Windows authentication.
 - `2` specifies Microsoft Entra password authentication, starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
 - `3` specifies Microsoft Entra integrated authentication, starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
 - `4` specifies Microsoft Entra token authentication, starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.

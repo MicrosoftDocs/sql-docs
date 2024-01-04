@@ -75,7 +75,7 @@ The following license types are supported:
 * **PAYG**: Pay for your SQL Server software usage through Microsoft Azure. See [SQL Server prices and licensing](https://www.microsoft.com/sql-server/sql-server-2022-pricing).
 
   > [!IMPORTANT]
-  > Azure Arc-enabled SQL Server Pay-As-You-Go (PAYG) provides a flexible subscription-based access to SQL Server. The servers with SQL Server instances using PAYG must be continuously connected to Azure. Intermittent connectivity disruptions for up to 30 days are tolerated with built-in resilience. After 30 days of dysconnectivity the PAYG subscription will expire. Please be advised that once your subscription expires, you are not authorized to use the software.
+  > [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] Pay-As-You-Go (PAYG) provides a flexible subscription-based access to SQL Server. The servers with SQL Server instances using PAYG must be continuously connected to Azure. Intermittent connectivity disruptions for up to 30 days are tolerated with built-in resilience. After 30 days of dysconnectivity the PAYG subscription will expire. Please be advised that once your subscription expires, you are not authorized to use the software.
 
 * **Paid** and **LicenseOnly**: Use an existing license agreement. Usage implies that you already have the necessary licenses. In these cases, your software usage will be reported to you using a free meter. You can analyze your usage in the [Cost Management + Billing portal](/azure/cost-management-billing/) to make sure you have enough licenses for all your installed SQL Server instances.
 

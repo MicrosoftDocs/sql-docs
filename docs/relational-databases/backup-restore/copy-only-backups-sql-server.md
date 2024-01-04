@@ -4,7 +4,7 @@ description: A copy-only backup is a SQL Server backup that is independent of th
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 09/22/2023
+ms.date: 12/28/2023
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
@@ -72,7 +72,34 @@ WITH COPY_ONLY;
 > [!NOTE]  
 > `COPY_ONLY` has no effect when specified with the `DIFFERENTIAL` option.
 
-### <a id="PowerShellProcedure"></a> C. Use PowerShell
+### <a id="TsqlProcedureManagedInstance"></a> C. Use Transact-SQL and Azure SQL Managed Instance
+
+Azure SQL Managed Instance supports taking COPY_ONLY full backups. The example performs a COPY_ONLY backup of `MyDatabase` to the Microsoft Azure Blob Storage. The storage Account name is `mystorageaccount`. The container is called `myfirstcontainer`. A storage access policy has been created with read, write, delete, and list rights. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, was created using a Shared Access Signature that is associated with the Storage Access Policy secret. For information on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup to the Microsoft Azure Blob Storage, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) and [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
+
+```sql
+-- Prerequisite to have write permissions
+CREATE CREDENTIAL [https://mystorageaccount.blob.core.windows.net/myfirstcontainer]
+WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
+SECRET = 'sp=...' -- Enter your secret SAS token here.
+
+BACKUP DATABASE MyDatabase
+TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/MyDatabaseBackup.bak'
+WITH STATS = 5, COPY_ONLY;
+```
+
+To take a copy-only backup divided into multiple stripes, use this example:
+
+```sql
+BACKUP DATABASE MyDatabase
+TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/MyDatabase-01.bak',
+URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/MyDatabase-02.bak',
+URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/MyDatabase-03.bak',
+URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/MyDatabase-04.bak'
+WITH COPY_ONLY;
+
+```
+
+### <a id="PowerShellProcedure"></a> D. Use PowerShell
 
 This example creates a copy-only backup for the `Sales` database utilizing the `-CopyOnly` parameter.
 

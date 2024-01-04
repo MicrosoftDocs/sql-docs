@@ -4,7 +4,7 @@ description: "Learn about change data capture (CDC) in Azure SQL Database, which
 author: croblesm
 ms.author: roblescarlos
 ms.reviewer: "mathoma"
-ms.date: "10/19/2023"
+ms.date: "01/04/2024"
 ms.service: sql-database
 ms.subservice: replication
 ms.topic: conceptual
@@ -182,7 +182,7 @@ The CDC capture job in Azure SQL Database operates seamlessly, running every 20 
 
 ### Manual CDC Control
 
-While CDC runs automatically, users maintain the flexibility to perform manual CDC operations on demand. The [sp_cdc_scan](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-cleanup-change-table-transact-sql) and [sp_cdc_cleanup_change_tables](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-cleanup-change-table-transact-sql) procedures allow you to trigger capture and cleanup tasks as needed.
+While CDC runs automatically, users maintain the flexibility to perform manual CDC operations on demand. The [sp_cdc_scan](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql) and [sp_cdc_cleanup_change_tables](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-cleanup-change-table-transact-sql) procedures allow you to trigger capture and cleanup tasks as needed.
 
 ### Monitor CDC
 

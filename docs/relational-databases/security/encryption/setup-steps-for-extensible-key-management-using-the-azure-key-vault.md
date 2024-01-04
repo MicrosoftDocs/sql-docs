@@ -119,7 +119,7 @@ You can use the Azure portal to create the key vault and then add a Microsoft En
     :::image type="content" source="media/ekm/ekm-part2-add-access-policy.png" alt-text="Screenshot of the Add Access Policy link on the Access policies pane.":::
 
     > [!NOTE]  
-    > SQL Server Connector for Azure Key Vault doesn't support Azure Key Vault access using RBAC yet.
+    > SQL Server Connector for Azure Key Vault doesn't support Azure Key Vault access using RBAC.
 
 1. On the **Add access policy** pane, do the following:
 

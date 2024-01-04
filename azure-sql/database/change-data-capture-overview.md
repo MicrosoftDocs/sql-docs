@@ -277,7 +277,7 @@ In the event of local or GeoDR failover scenarios, if your database has CDC enab
 
 [!INCLUDE [entra-id](../includes/entra-id.md)]
 
-If you create a database in Azure SQL Database as a Microsoft Entra user and enable CDC on it, a SQL user (for example, even one in the `sysadmin` role) isn't be able to disable/make changes to CDC artifacts. However, another Microsoft Entra user is able to enable/disable CDC on the same database.
+If you create a database in Azure SQL Database as a Microsoft Entra user and enable CDC on it, a SQL user (for example, even one in the `sysadmin` role) isn't able to disable/make changes to CDC artifacts. However, another Microsoft Entra user is able to enable/disable CDC on the same database.
 
 Similarly, if you create a database as a SQL user, enabling/disabling change data capture as a Microsoft Entra user doesn't work.
 

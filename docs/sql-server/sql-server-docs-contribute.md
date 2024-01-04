@@ -31,8 +31,8 @@ You can make simple edits to SQL Server content in your browser and then submit 
 
 The following steps summarize the process:
 
-1. On the page you have feedback about, select the **Edit** link at the top right.
-1. On the next page, select the **Pencil** icon at the top right.
+1. On the page you have feedback about, select the **Pencil** icon at the top right.
+1. On the next page, select the **Pencil** icon at the top right. If this icon does not appear, you may need to sign in to your GitHub account first.
 1. On the next page, in the **Edit file** text window, make your edits directly to the text you want to change.
     If you need help with formatting the new or changed text, see the [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 1. After you've made your edits, under **Commit changes**:

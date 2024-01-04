@@ -387,6 +387,19 @@ These are the different troubleshooting categories included in this section:
 
 * **Recommendation**: Before making any changes to column size, you must assess whether the alteration is compatible with the existing data in CDC change tables.  To address this problem, you need to disable and re-enable CDC for your database. For more information about enabling CDC for a database or a table, see [**Enable CDC for Azure SQL Database**](#enable-cdc-for-azure-sql-database) and [**Enable CDC for a table**](#enable-cdc-for-a-table) sections in this article.  
 
+#### Error Msg 22830, Level 16, State 1, Line 283 - 'Built-in function 'SUSER_SNAME' in impersonation context is not supported in this version of SQL Server.'. Use the action and error to determine the cause of the failure and resubmit the request
+
+* **Cause**:This error occurs during enabling CDC if a User trigger exists on the database which has a call to SUSER_SNAME() on create_table. **Select name, object_id from sys.triggers where parent_class_desc = ‘DATABASE’ and is_disabled=0**
+The steps below must be repeated for each user trigger obtained from the SQL above. Once we get the trigger definitions, look for calls being made to SYSTEM_USER
+**Select Object_definition(Obj_id) as trigger_definition** The commands above will give the details of the object trigger and the corresponding obj_id.
+
+* **Recommendation**: To resolve this issue, execute this:
+•	Disable the following trigger  : User_trigger_name(found above) 
+•	Enable CDC
+•	Re-enable the trigger.
+For More Information, see [DISABLE TRIGGER (Transact-SQL) - SQL Server | Microsoft Learn](https://learn.microsoft.com/en-us/sql/t-sql/statements/disable-trigger-transact-sql?view=sql-server-ver16)
+
+
 #### Error 913 - CDC capture job fails when processing changes for a table with system CLR datatype
 
 * **Cause**: This error occurs when enabling CDC on a table with system CLR datatype, making DML changes, and then making DDL changes on the same table while the CDC capture job is processing changes related to other tables.

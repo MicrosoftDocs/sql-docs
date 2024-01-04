@@ -323,7 +323,7 @@ Then you can run the following command to import the key from the PFX file, whic
 
 ### Create a new key
 
-Alternatively, you can create a new encryption key directly in your Azure key vault and make it either software-protected or HSM-protected.  In this example, let's create a software-protected key by using the `Add-AzureKeyVaultKey` cmdlet:
+Alternatively, you can create a new encryption key directly in your Azure key vault and make it either software-protected or HSM-protected. In this example, let's create a software-protected key by using the `Add-AzureKeyVaultKey` cmdlet:
 
 ```powershell
 Add-AzureKeyVaultKey -VaultName 'ContosoEKMKeyVault' `
@@ -446,7 +446,7 @@ For a note about the minimum permission levels needed for each action in this se
 
    - Other [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] logins that might enable TDE or other [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption features.
 
-   There is one-to-one mapping between credentials and logins. That is, each login must have a unique credential.
+   There's one-to-one mapping between credentials and logins. That is, each login must have a unique credential.
 
    Modify this [!INCLUDE[tsql](../../../includes/tsql-md.md)] script in the following ways:
 
@@ -458,7 +458,7 @@ For a note about the minimum permission levels needed for each action in this se
      > [!IMPORTANT]  
      > Be sure to remove the hyphens from the App (Client) ID.
 
-   - Complete the second part of the `SECRET` argument with **Client Secret** from [Step 1: Set up a Microsoft Entra service principal](#step-1-set-up-an-azure-ad-service-principal).  In this example, the Client Secret is `08:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m`. The final string for the `SECRET` argument will be a long sequence of letters and numbers, without hyphens.
+   - Complete the second part of the `SECRET` argument with **Client Secret** from [Step 1: Set up a Microsoft Entra service principal](#step-1-set-up-an-azure-ad-service-principal). In this example, the Client Secret is `08:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m`. The final string for the `SECRET` argument will be a long sequence of letters and numbers, without hyphens.
 
      ```sql
      USE master;
@@ -559,7 +559,7 @@ For a note about the minimum permission levels needed for each action in this se
 
 ### Registry details
 
-1. Execute the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] query in the `master` database to show the asymetric key used.
+1. Execute the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] query in the `master` database to show the asymmetric key used.
 
    ```sql
    SELECT name, algorithm_desc, thumbprint FROM sys.asymmetric_keys;
@@ -615,11 +615,11 @@ For a note about the minimum permission levels needed for each action in this se
 
 For sample scripts, see the blog at [SQL Server Transparent Data Encryption and Extensible Key Management with Azure Key Vault](https://techcommunity.microsoft.com/t5/sql-server/intro-sql-server-transparent-data-encryption-and-extensible-key/ba-p/1427549).
 
-1. The `SQL Server Cryptographic Provider` registry key is not cleaned up automatically after a key or all EKM keys are deleted. It must be cleaned up manually. Cleaning the registry key should be done with extreme caution, since cleaning the registry prematurely can break the EKM functionality. To clean up the registry key, delete the `SQL Server Cryptographic Provider` registry key on `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft`.
+1. The `SQL Server Cryptographic Provider` registry key isn't cleaned up automatically after a key or all EKM keys are deleted. It must be cleaned up manually. Cleaning the registry key should be done with extreme caution, since cleaning the registry prematurely can break the EKM functionality. To clean up the registry key, delete the `SQL Server Cryptographic Provider` registry key on `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft`.
 
 ### Troubleshooting
 
-If the registry key `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Cryptographic Provider` is not created or the required permissions are not granted, the following DDL statement will fail:
+If the registry key `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Cryptographic Provider` isn't created or the required permissions aren't granted, the following DDL statement will fail:
 
 ```sql
 CREATE ASYMMETRIC KEY EKMSampleASYKey

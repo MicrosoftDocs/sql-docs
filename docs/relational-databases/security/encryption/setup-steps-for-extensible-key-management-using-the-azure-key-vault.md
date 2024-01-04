@@ -384,12 +384,12 @@ To view error code explanations, configuration settings, or maintenance tasks fo
 1. Create a `SQL Server Cryptographic Provider` registry key on `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft`. The full path is `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Cryptographic Provider`.
 1. Right-click the `SQL Server Cryptographic Provider` registry key, and then select **Permissions**.
 
-1. Give **Full Control** permissions on the `SQL Server Cryptographic Provider` registry key to the user account running the [!INCLUDE [ssdenoversion-md](../../../includes/ssdenoversion-md.md)] service.
+1. Give **Full Control** permissions on the `SQL Server Cryptographic Provider` registry key to the user account running the SQL Server service.
 
    :::image type="content" source="media/ekm/ekm-part4-registry-permissions.png" alt-text="Screenshot of the EKM registry key in Registry Editor.":::
 
 1. Select **Apply** and then **OK**.
-1. Close Registry Editor and restart the [!INCLUDE [ssdenoversion-md](../../../includes/ssdenoversion-md.md)] service.
+1. Close Registry Editor and restart the SQL Server service.
 
    > [!NOTE]  
    > If you use TDE with EKM or Azure Key Vault on a failover cluster instance, you must complete an additional step to add `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Cryptographic Provider` to the Cluster Registry Checkpoint routine, so the registry can sync across the nodes. Syncing facilitates database recovery after failover and key rotation.

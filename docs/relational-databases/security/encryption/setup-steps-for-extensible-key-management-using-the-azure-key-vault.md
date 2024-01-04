@@ -4,7 +4,7 @@ description: Install and configure the SQL Server Connector for Azure Key Vault.
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto, randolphwest
-ms.date: 03/20/2023
+ms.date: 01/05/2024
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -34,6 +34,8 @@ Before you begin using Azure Key Vault with your SQL Server instance, be sure th
 - Create a Microsoft Entra tenant.
 
 - Familiarize yourself with the principles of Extensible Key Management (EKM) storage with Azure Key Vault by reviewing [EKM with Azure Key Vault (SQL Server)](extensible-key-management-using-azure-key-vault-sql-server.md).
+
+- Be able to modify the registry on the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] computer.
 
 - Install the version of Visual Studio C++ Redistributable that's based on the version of SQL Server that you're running:
 
@@ -372,7 +374,31 @@ To view error code explanations, configuration settings, or maintenance tasks fo
 - [A. Maintenance Instructions for the SQL Server Connector](sql-server-connector-maintenance-troubleshooting.md#AppendixA)
 - [C. Error Code Explanations for the SQL Server Connector](sql-server-connector-maintenance-troubleshooting.md#AppendixC)
 
-## Step 4: Configure SQL Server
+## Step 4: Add registry key to support EKM provider
+
+> [!WARNING]
+> Modifying the registry should be performed by users that know exactly what they are doing. Serious problems might occur if you modify the registry incorrectly. For added protection, back up the registry before you modify it. You can restore the registry if a problem occurs.
+
+1. Make sure that SQL Server is installed and running.
+1. Run **regedit** to open the Registry Editor.
+1. Create a `SQL Server Cryptographic Provider` registry key on `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft`. The full path is `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Cryptographic Provider`.
+1. Right-click the `SQL Server Cryptographic Provider` registry key, and then select **Permissions**.
+
+1. Give **Full Control** permissions on the `SQL Server Cryptographic Provider` registry key to the user account running the [!INCLUDE [ssdenoversion-md](../../../includes/ssdenoversion-md.md)] service.
+
+   :::image type="content" source="media/ekm/ekm-part4-registry-permissions.png" alt-text="Screenshot of the EKM registry key in Registry Editor.":::
+
+1. Select **Apply** and then **OK**.
+1. Close Registry Editor and restart the [!INCLUDE [ssdenoversion-md](../../../includes/ssdenoversion-md.md)] service.
+
+   > [!NOTE]  
+   > If you use TDE with EKM or Azure Key Vault on a failover cluster instance, you must complete an additional step to add `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Cryptographic Provider` to the Cluster Registry Checkpoint routine, so the registry can sync across the nodes. Syncing facilitates database recovery after failover and key rotation.
+   >  
+   > To add the registry key to the Cluster Registry Checkpoint routine, in PowerShell, run the following command:
+   >  
+   > `Add-ClusterCheckpoint -RegistryCheckpoint "SOFTWARE\Microsoft\SQL Server Cryptographic Provider" -Resourcename "SQL Server"`
+
+## Step 5: Configure SQL Server
 
 For a note about the minimum permission levels needed for each action in this section, see [B. Frequently Asked Questions](sql-server-connector-maintenance-troubleshooting.md#AppendixB).
 
@@ -480,18 +506,6 @@ For a note about the minimum permission levels needed for each action in this se
 
    In the preceding example script, `1a4d3b9b393c4678831ccc60def75379` represents the specific version of the key that will be used. If you use this script, it doesn't matter if you update the key with a new version. The key version (for example) `1a4d3b9b393c4678831ccc60def75379` will always be used for database operations.
 
-   For this scenario, you must complete two Registry prerequisites:
-
-   1. Create a `SQL Server Cryptographic Provider` registry key on `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft`.
-   1. Delegate `Full Control` permissions on the `SQL Server Cryptographic Provider` registry key to the user account running the [!INCLUDE [ssdenoversion-md](../../../includes/ssdenoversion-md.md)] service.
-
-      > [!NOTE]  
-      > If you use TDE with EKM or Azure Key Vault on a failover cluster instance, you must complete an additional step to add `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Cryptographic Provider` to the Cluster Registry Checkpoint routine, so the registry can sync across the nodes. Syncing facilitates database recovery after failover and key rotation.
-      >  
-      > To add the registry key to the Cluster Registry Checkpoint routine, in PowerShell, run the following command:
-      >  
-      > `Add-ClusterCheckpoint -RegistryCheckpoint "SOFTWARE\Microsoft\SQL Server Cryptographic Provider" -Resourcename "SQL Server"`
-
 1. Create a new login by using the asymmetric key in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that you created in the preceding step.
 
     ```sql
@@ -500,7 +514,7 @@ For a note about the minimum permission levels needed for each action in this se
    FROM ASYMMETRIC KEY EKMSampleASYKey;
    ```
 
-1. Create a new login from the asymmetric key in SQL Server. Drop the credential mapping from [Step 4: Configure SQL Server](#step-4-configure-sql-server) so that the credentials can be mapped to the new login.
+1. Create a new login from the asymmetric key in SQL Server. Drop the credential mapping from [Step 5: Configure SQL Server](#step-5-configure-sql-server) so that the credentials can be mapped to the new login.
 
    ```sql
    --Now drop the credential mapping from the original association
@@ -543,6 +557,38 @@ For a note about the minimum permission levels needed for each action in this se
    SET ENCRYPTION ON;
    ```
 
+### Registry details
+
+1. Execute the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] query in the `master` database to show the asymetric key used.
+
+   ```sql
+   SELECT name, algorithm_desc, thumbprint FROM sys.asymmetric_keys;
+   ```
+
+   The statement returns:
+
+   ```output
+   name            algorithm_desc    thumbprint
+   EKMSampleASYKey RSA_2048          <key thumbprint>
+   ```
+
+1. In the user database (`TestTDE`), execute the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] query to show the encryption key used.
+
+   ```sql
+   SELECT encryptor_type, encryption_state_desc, encryptor_thumbprint 
+   FROM sys.dm_database_encryption_keys
+   WHERE database_id = DB_ID('TestTDE');
+   ```
+
+   The statement returns:
+
+   ```output
+   encryptor_type encryption_state_desc encryptor_thumbprint
+   ASYMMETRIC KEY ENCRYPTED             <key thumbprint>
+   ```
+
+### Clean up
+
 1. Clean up the test objects. Delete all the objects that were created in this test script.
 
    ```sql
@@ -568,6 +614,24 @@ For a note about the minimum permission levels needed for each action in this se
    ```
 
 For sample scripts, see the blog at [SQL Server Transparent Data Encryption and Extensible Key Management with Azure Key Vault](https://techcommunity.microsoft.com/t5/sql-server/intro-sql-server-transparent-data-encryption-and-extensible-key/ba-p/1427549).
+
+1. The `SQL Server Cryptographic Provider` registry key is not cleaned up automatically after a key or all EKM keys are deleted. It must be cleaned up manually. Cleaning the registry key should be done with extreme caution, since cleaning the registry prematurely can break the EKM functionality. To clean up the registry key, delete the `SQL Server Cryptographic Provider` registry key on `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft`.
+
+### Troubleshooting
+
+If the registry key `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Cryptographic Provider` is not created or the required permissions are not granted, the following DDL statement will fail:
+
+```sql
+CREATE ASYMMETRIC KEY EKMSampleASYKey
+FROM PROVIDER [AzureKeyVault_EKM]
+WITH PROVIDER_KEY_NAME = 'ContosoRSAKey0',
+CREATION_DISPOSITION = OPEN_EXISTING;
+```
+
+```output
+Msg 33049, Level 16, State 2, Line 65
+Key with name 'ContosoRSAKey0' does not exist in the provider or access is denied. Provider error code: 2058.  (Provider Error - No explanation is available, consult EKM Provider for details)
+```
 
 ## Client secrets that are about to expire
 

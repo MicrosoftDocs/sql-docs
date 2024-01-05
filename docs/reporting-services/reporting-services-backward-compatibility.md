@@ -24,7 +24,7 @@ It also describes fundamental changes to the product that are known to break a c
   
 |Article|Description|  
 |-----------|-----------------|  
-|[Discontinued functionality to SQL Server Reporting Services](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)|Describes features that existed in earlier versions of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] but removed in later versions.|  
+|[Discontinued functionality to SQL Server Reporting Services](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)|Describes features that existed in earlier versions of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] but are removed in later versions.|  
 |[Deprecated features in SQL Server Reporting Services](deprecated-features-in-sql-server-reporting-services-ssrs.md)|Describes features that exist in the different versions of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] for backward compatibility but will be removed in future versions.|  
 |[Breaking changes in SQL Server Reporting Services in SQL Server 2016](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)|Describes issues that you might encounter when you upgrade [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
 |[Behavior changes to SQL Server Reporting Services  in SQL Server 2016](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)|Describes features that changed in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  

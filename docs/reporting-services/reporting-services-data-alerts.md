@@ -297,7 +297,7 @@ The following list summarizes the key areas of [!INCLUDE[ssRSnoversion](../inclu
   
  Depending on which data alert user interface you use, the support for right-to-left varies. Data Alert Designer supports right-to-left script in text boxes, but the layout of the designer isn't right to left. Its layout is left to right like other tools. In an alert definition created with right-to-left text orientation and then edited in a left-to-right environment, the right-to-left text orientation is preserved when you save the alert definition. Data Alert Manager behaves the same as a SharePoint page. Its layout is right-to left, just like other SharePoint pages. Data alert messages that are based on right-to-left data alert definitions, display message text right to left and the message layout is left to right.  
   
-##  <a name="HowTo"></a> Related tasks  
+##  <a name="HowTo"></a> Next steps  
   
 -   [Save a report to a SharePoint library &#40;Report Builder&#41;](../reporting-services/report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)  
   

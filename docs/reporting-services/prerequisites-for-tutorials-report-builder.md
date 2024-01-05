@@ -36,7 +36,7 @@ You must have the following prerequisites to complete Report Builder tutorials:
   
 The report server administrator must grant you the necessary permissions on the report server, configure [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] folder locations, and configure Report Builder default options. For more information, see [Install Report Builder](install-windows/install-report-builder.md).  
 
-## Next steps
+## Next step
 
 - [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)  
 

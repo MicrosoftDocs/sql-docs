@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "rendering extensions [Reporting Services], about extensions"
 ---
 
-# Rendering Extensions Overview
+# Rendering extensions overview
   A rendering extension is a component or module of a report server that transforms report data and layout information into a device-specific format. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] includes several rendering extensions: HTML, Excel, Word, PowerPoint, CSV or Text, XML, Image, Data Feed and PDF. You can create other rendering extensions to generate reports in other formats.
   
 > [!NOTE]  

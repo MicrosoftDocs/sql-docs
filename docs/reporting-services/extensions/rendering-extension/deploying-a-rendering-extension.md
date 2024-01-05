@@ -18,7 +18,7 @@ helpviewer_keywords:
   After you write and compile your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report rendering extension into a [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] library, you need to make it discoverable by the report server and by Report Designer. To do so, copy the extension to the appropriate directory and add entries to the appropriate [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] configuration files.  
   
 ## Configuration file rendering Extension element  
- Once a rendering extension compiles into a .DLL, you add an entry into the rsreportserver.config file. By default, the location is %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer. The parent element is \<Render>. Under the Render element, is an Extension element for each rendering extension. The **Extension** element contains two attributes, Name and Type.  
+ Once a rendering extension compiles into a .DLL, you add an entry into the rsreportserver.config file. By default, the location is ``%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer``. The parent element is ``\<Render>``. Under the Render element, is an Extension element for each rendering extension. The **Extension** element contains two attributes, Name and Type.  
   
  The following table describes the attributes for the **Extension** element for rendering extensions:  
   
@@ -36,7 +36,7 @@ helpviewer_keywords:
   
 ### Deploy the assembly  
   
-1.  Copy your assembly from your staging location to the bin directory of the report server on which you want to use the rendering extension. The default location of the report server Bin directory is %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer\Bin.  
+1.  Copy your assembly from your staging location to the bin directory of the report server on which you want to use the rendering extension. The default location of the report server Bin directory is ``%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer\Bin``.  
   
 2.  After the assembly file is copied, open the rsreportserver.config file. The rsreportserver.config file is also located in the report server bin directory. You need to make an entry in the configuration file for your extension assembly file. You can open the file with [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] or a simple text editor.  
   

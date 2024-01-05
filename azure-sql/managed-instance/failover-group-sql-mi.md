@@ -231,9 +231,15 @@ Failover group reports its status describing the current state of the data repli
 
 When failover groups are configured with a Microsoft-managed failover policy, then forced failover to the geo-secondary server is initiated during a disaster scenario as per the defined grace period. Failback to the old primary must be initiated manually. 
 
-## Permissions and limitations
+## Failover groups with Transactional replication
 
-Review the configure failover group guide for a list of [permissions](failover-group-configure-sql-mi.md#permissions) and [limitations](failover-group-configure-sql-mi.md#limitations).
+Using transactional replication with instances that are in a failover group is supported. However, if you configure replication before adding your SQL managed instance into a failover group, replication pauses when you start to create your failover group, and replication monitor shows a status of `Replicated transactions are waiting for the next log backup or for mirroring partner to catch up`. Replication resumes once the failover group is created successfully.
+
+If a **publisher** or **distributor** SQL managed instance is in a failover group, the SQL managed instance administrator must clean up all publications on the old primary and reconfigure them on the new primary after a failover occurs. Review the [transactional replication guide](replication-transactional-overview.md#with-failover-groups) for the step of activities that are needed in this scenario.
+
+## Permissions, limitations and prerequisites
+
+Review the configure failover group guide for a list of [permissions](failover-group-configure-sql-mi.md#permissions), [limitations](failover-group-configure-sql-mi.md#limitations) and [prerequisites](failover-group-configure-sql-mi.md#prerequisites) before proceeding to configure the failover group.
 
 
 ## <a id="programmatically-managing-failover-groups"></a> Programmatically manage failover groups

@@ -5,7 +5,7 @@ description: Provides example steps to create an event session in Azure SQL, usi
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 12/26/2023
+ms.date: 01/05/2024
 ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: sample
@@ -160,9 +160,12 @@ To create a new event session in SSMS, expand the **Extended Events** node. This
 
 On the **Data Storage** page, select `event_file` as the target type, and paste the URL of the storage container in the **Storage URL** box. Type a forward slash (`/`) at the end of this URL, followed by the file (blob) name. In our example, the blob name is `example-session.xel`, and the entire URL is `https://exampleaccount4xe.blob.core.windows.net/xe-example-container/example-session.xel`.
 
+> [!NOTE]
+> For SQL Managed Instance, instead of pasting the storage container URL on the **Data storage** page, use the **Script** button to create a T-SQL script of the session. Specify the container URL as the value for the `filename` argument, similar to the SQL Managed Instance example below, and execute the script to create the session.
+
 :::image type="content" source="media/xevents/create-event-session-data-storage-event-file.png" alt-text="Screenshot of the New Session SSMS dialog showing the data storage selection page with an event_file target selected and an entered storage URL.":::
 
-Now that the session is configured, you can optionally select the **Script** button to create a T-SQL script of the session, to save it for later. Here's the script for our example session:
+Now that the session is configured, you can select the **Script** button to create a T-SQL script of the session, to save it for later. Here's the script for our example session:
 
 # [SQL Database](#tab/sqldb)
 

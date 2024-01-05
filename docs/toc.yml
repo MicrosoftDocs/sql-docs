@@ -1698,8 +1698,9 @@ items:
     - name: Create, Modify, & Drop Spatial Indexes
       href: relational-databases/spatial/create-modify-and-drop-spatial-indexes.md
   - name: Stored procedures
-    href: relational-databases/stored-procedures/stored-procedures-database-engine.md
     items:
+    - name: Overview
+      href: relational-databases/stored-procedures/stored-procedures-database-engine.md
     - name: Create
       href: relational-databases/stored-procedures/create-a-stored-procedure.md
     - name: Modify
@@ -1716,7 +1717,7 @@ items:
       href: relational-databases/stored-procedures/parameters.md
     - name: Properties
       href: relational-databases/stored-procedures/stored-procedure-properties-general-page.md
-    - name: Return Data
+    - name: Return data
       href: relational-databases/stored-procedures/return-data-from-a-stored-procedure.md
     - name: Recompile
       href: relational-databases/stored-procedures/recompile-a-stored-procedure.md
@@ -1724,16 +1725,16 @@ items:
       href: relational-databases/stored-procedures/rename-a-stored-procedure.md
     - name: View definition
       href: relational-databases/stored-procedures/view-the-definition-of-a-stored-procedure.md
-    - name: View dependence
+    - name: View dependencies
       href: relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md
-    - name: OLE Automation Objects in T-SQL
+    - name: OLE automation objects in T-SQL
       href: relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md
       items:
-      - name: OLE Automation Return Codes & Error Information
+      - name: OLE automation return codes & error information
         href: relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md
-      - name: OLE Automation Result Sets
+      - name: OLE automation result sets
         href: relational-databases/stored-procedures/ole-automation-result-sets.md
-      - name: OLE Automation Sample Script
+      - name: OLE automation sample script
         href: relational-databases/stored-procedures/ole-automation-sample-script.md
   - name: Tables
     href: relational-databases/tables/tables.md

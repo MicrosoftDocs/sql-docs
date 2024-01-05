@@ -28,7 +28,7 @@ For information about requirements, see [Prerequisites for tutorials &#40;Report
 Create a matrix report, a data source, and a dataset.  
   
 > [!NOTE]  
-> In this tutorial, the query contains the data values, so that it does not need an external data source. This makes the query quite long. In a business environment, a query would not contain the data. This is for learning purposes only.  
+> In this tutorial, the query contains the data values, so that it doesn't need an external data source. This makes the query quite long. In a business environment, a query wouldn't contain the data. This is for learning purposes only.  
   
 ### Create a new matrix report  
   
@@ -152,7 +152,7 @@ When you add a query parameter to a query, Report Builder automatically creates 
   
 There's now a report parameter named *\@StoreID*, and a Parameters pane where you can lay out the report parameters.   
 
-:::image type="content" source="../reporting-services/media/ssrb-parampane.png" alt-text="Screenshot of the StodeID field in the Report Data pane." lightbox="../reporting-services/media/ssrb-parampane.png"::: 
+:::image type="content" source="../reporting-services/media/ssrb-parampane.png" alt-text="Screenshot of the StodeID field in the Report Data pane."::: 
   
 Don't see a Parameters pane? On the **View** menu, select **Parameters**.  
   
@@ -177,7 +177,7 @@ By default, the parameter you created has the data type **Text**. Because the st
   
 7.  On the report viewer toolbar, next to Store ID, enter **200**, and then select **View Report**.  
   
-:::image type="content" source="../reporting-services/media/ssrb-paramtutstoreid.png" alt-text="Screenshot of the report preview for Store ID 200." lightbox="../reporting-services/media/ssrb-paramtutstoreid.png":::
+:::image type="content" source="../reporting-services/media/ssrb-paramtutstoreid.png" alt-text="Screenshot of the report preview for Store ID 200.":::
   
 ## <a name="AddDataset"></a>4a. Add a dataset to provide available values and display names  
 To make sure your report readers type only valid values for a parameter, you can create a drop-down list of values to choose from. The values can come from a dataset or from a list that you specify. Available values must be supplied from a dataset with a query that doesn't contain a reference to the parameter.  

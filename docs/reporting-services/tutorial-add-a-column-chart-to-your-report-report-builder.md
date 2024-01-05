@@ -34,7 +34,7 @@ For information about requirements, see [Prerequisites for tutorials &#40;Report
 In this section, you go through the Chart Wizard to create an embedded dataset, choose a shared data source, and create a column chart.  
   
 > [!NOTE]  
-> The query in this tutorial contains the data values, so it does not need an external data source. This makes the query quite long. In a business environment, a query would not contain the data. This is for learning purposes only.  
+> The query in this tutorial contains the data values, so it doesn't need an external data source. This makes the query quite long. In a business environment, a query would not contain the data. This is for learning purposes only.  
   
 ### Create a chart report  
   
@@ -53,7 +53,7 @@ In this section, you go through the Chart Wizard to create an embedded dataset, 
 5.  On the **Choose a connection to a data source** page, select an existing data source. Or browse to the report server, and choose a data source. Then select **Next**. You might need to enter a user name and password.  
   
     > [!NOTE]  
-    > The data source you choose is unimportant, as long as you have adequate permissions. You will not be getting data from the data source. For more information, see [Alternative ways to get a data connection &#40;Report Builder&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > The data source you choose is unimportant, as long as you have adequate permissions. You don't get data from the data source. For more information, see [Alternative ways to get a data connection &#40;Report Builder&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 6.  On the **Design a query** page, select **Edit as Text**.  
   
@@ -97,7 +97,7 @@ You can choose from several predefined chart types, and then modify the chart af
  
 6.  Select **Finish**.  
   
-    The chart is added to the design surface. The new column chart just shows representational data. The legend reads Sales Date A, Sales Date B, etc., just to give an idea of what your report should like. 
+    The chart is added to the design surface. The new column chart just shows representational data. The legend reads Sales Date A through F, just to give an idea of what your report should like. 
     
     :::image type="content" source="../reporting-services/media/report-builder-column-chart-1-design-view.png" alt-text="Screenshot of a Report Builder column in the design view.":::
   
@@ -278,9 +278,7 @@ The chart displays a line that shows the moving average for total sales by date,
   
 7.  Select **Run** to preview the report.  
   
-## <a name="Save"></a>11. Save the report  
-  
-### Save the report  
+## <a name="Save"></a>11. Save the report
   
 1.  Switch to report design view.  
   

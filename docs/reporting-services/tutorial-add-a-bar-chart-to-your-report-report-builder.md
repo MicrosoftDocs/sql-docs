@@ -223,7 +223,7 @@ By default, the horizontal axis displays values in a general format that is auto
 7.  In the **Axis Title** box, enter **Sales in thousands** and press Enter.  
 
     > [!NOTE]  
-    > While you're typing, the Axis Title box appears to be on the vertical axis. But when you press Enter, it goes to the horizontal axis.
+    > While you're entering, the Axis Title box appears to be on the vertical axis. But when you press Enter, it goes to the horizontal axis.
   
 9. Select **Run** to preview the report.  
   
@@ -268,7 +268,7 @@ The chart shows the top five salesperson names from the 2015 sales data.
   
     **Top Five Sellers for 2015**  
   
-3.  Select **Sales Bar Chart**, and select the **Bold** button.  
+3.  Select **Sales Bar Chart**, and choose the **Bold** button.  
   
 4.  Select **Top Five Sellers for 2015**, and in the **Font** section on the **Home** tab, set the font size to **10**.  
   

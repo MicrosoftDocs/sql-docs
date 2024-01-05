@@ -110,7 +110,7 @@ For more information about requirements, see [Prerequisites for tutorials &#40;R
 8.  Select **OK**.
   
 ## <a name="List"></a>2. Add and configure a list  
-In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], the list data region is ideal for creating free-form reports. It's based on the *tablix* data region, as are tables and matrixes. For more information, see [Create invoices and forms with lists in a paginated report (Report Builder)](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], the list data region is ideal for creating free form reports. It's based on the *tablix* data region, as are tables and matrixes. For more information, see [Create invoices and forms with lists in a paginated report (Report Builder)](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
 In this tutorial, you use a list to display the sales information for sales territories in a report formatted like a newsletter. The information is grouped by territory. You also add a new row group that groups data by territory, and then delete the built-in Details row group.  
   
@@ -191,9 +191,9 @@ You can add text boxes to display static text that is repeated on each report pa
   
 1.  Select **Design** to return to design view.  
   
-2.  On the **Insert** tab, go to **Text Box**. Select the upper left corner of the list,  inside of the rectangle you added previously, and drag to make the text box about 3.45 inches wide and 5 inches tall.  
+2.  On the **Insert** tab, go to **Text Box**. Select the upper left corner of the list, inside of the rectangle you added previously, and drag to make the text box about 3.45 inches wide and 5 inches tall.  
   
-3.  With the cursor in the text box and enter: **Newsletter for** . Include a space after the word "for", to separate the text from the field you add in the next step.   
+3.  With the cursor in the text box and enter: **Newsletter for**. Include a space after the word "for", to separate the text from the field you add in the next step.   
 
     :::image type="content" source="../reporting-services/media/tutorial-newsletterfor.png" alt-text="Screenshot of Design View that shows the report with the heading.":::
   
@@ -295,7 +295,7 @@ Use the New Table and Matrix Wizard to add a table to the free form report. Afte
   
     The table is simple: five columns with no row or column groups. Because it has no groups, the layout options related to groups, aren't available. You manually update the table to include a total later in the tutorial.  
   
-8.  Select **Next**.  
+8. Select **Next**.  
   
 9. Select **Finish**.  
   
@@ -492,7 +492,7 @@ The report now displays summary sales data in pie and column charts.
 
   
 ## Next steps  
-You successfully completed the tutorial for how to create a free-form report.  
+You successfully completed the tutorial for how to create a free form report.  
   
 For more information about lists, see: 
 * [Tables, matrices, and lists in paginated reports (Report Builder)](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md) 

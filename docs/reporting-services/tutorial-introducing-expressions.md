@@ -364,7 +364,7 @@ In this section, you create the CountryRegion dataset and use the **Lookup** fun
   
 6.  In the **Category** list, select **Fields (Expressions)**, and in the **Values** list, double-click **CountryRegionID**.  
   
-8.  Place the cursor immediately after `CountryRegionID.Value`, and enter **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")**  
+8.  Place the cursor immediately after `CountryRegionID.Value`, and enter **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")**.
   
     The completed expression: `=Lookup(Fields!CountryRegionID.Value,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")`  
   
@@ -385,7 +385,7 @@ In this section, you add a column and then use the **Now** function or the `Exec
   
     A new column is added to the right of the **Last Purchase** column.  
   
-3.  In the column header, enter **Days Ago**  
+3.  In the column header, enter **Days Ago**.
   
 4.  Right-click the data cell for the **Days Ago** column and select **Expression**.  
   
@@ -397,14 +397,14 @@ In this section, you add a column and then use the **Now** function or the `Exec
   
 9. In the **Category** list, select **Fields (Expressions)**, and in the **Values** list, double-click **LastPurchase**.  
   
-11. Immediately after `Fields!LastPurchase.Value`, enter **,** (a comma). 
+11. Immediately after `Fields!LastPurchase.Value`, enter **,** (a comma).
   
 13. In the **Category** list, select **Date & Time** again, and in the **Item** list, double-click **Now**.  
   
     > [!WARNING]  
     > In production reports you should not use the **Now** function in expressions that are evaluated multiple times as the report renders (for example, in the detail rows of a report). The value of **Now** changes from row to row and the different values affect the evaluation results of expressions, which leads to results that are subtly inconsistent. Instead, use the `ExecutionTime` global variable that [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides.  
   
-15. Delete the left parenthesis after `Now(`, and then enter a right parenthesis **)**  
+15. Delete the left parenthesis after `Now(`, and then enter a right parenthesis **)**.
   
     The completed expression is: `=DateDiff("d", Fields!LastPurchase.Value, Now)`  
 
@@ -425,7 +425,7 @@ Configuring the indicator and its states takes many steps. If you want, you can 
   
     A new column is added to the right of the **YTD Purchase** column.  
   
-2.  Select the column header and enter **+ or - AVG Sales**  
+2.  Select the column header and enter **+ or - AVG Sales**. 
   
 ### Add an indicator  
   
@@ -457,7 +457,7 @@ Configuring the indicator and its states takes many steps. If you want, you can 
   
 11. In the **Category** list, select **Fields (Expressions)**, and in the **Values** list, double-click **YTDPurchase**.  
   
-13. Immediately after `Fields!YTDPurchase.Value`, enter **, "Expressions"))**  
+13. Immediately after `Fields!YTDPurchase.Value`, enter **, "Expressions"))**.
   
     The completed expression is: `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions"))`  
   
@@ -487,7 +487,7 @@ Configuring the indicator and its states takes many steps. If you want, you can 
   
 30. Select **OK**.
   
-31. In the text box for the **End** value, enter **0**  
+31. In the text box for the **End** value, enter **0**.
   
 32. Select the row with the horizontal-pointing arrow and choose **Delete**.  
 
@@ -495,7 +495,7 @@ Configuring the indicator and its states takes many steps. If you want, you can 
     
     Now there are only two arrows, either up or down.
   
-33. In the row with the up-pointing arrow, in the **Start** box, enter **0**  
+33. In the row with the up-pointing arrow, in the **Start** box, enter **0**.
   
 34. Select the **fx** button to the right of the text box for the **End** value.  
   
@@ -522,35 +522,35 @@ Create a parameter so report readers can specify the color to apply to alternati
   
     The **Report Parameter Properties** dialog box opens.  
   
-3.  In **Prompt**, enter **Choose color**  
+3.  In **Prompt**, enter **Choose color**.
   
-4.  In **Name**, enter **RowColor**  
+4.  In **Name**, enter **RowColor**. 
   
 5.  On the **Available Values** tab, select **Specify values**.  
   
 7.  Select **Add**.  
   
-8.  In the **Label** box, enter **Yellow**  
+8.  In the **Label** box, enter **Yellow**.
   
-9. In the **Value** box, enter **Yellow**  
+9. In the **Value** box, enter **Yellow**.
   
 10. Select **Add**.  
   
-11. In the **Label** box, enter **Green**  
+11. In the **Label** box, enter **Green**.
   
-12. In the **Value** box, enter **PaleGreen**  
+12. In the **Value** box, enter **PaleGreen**.
   
 13. Select **Add**.  
   
-14. In the **Label** box, enter **Blue**  
+14. In the **Label** box, enter **Blue**.
   
-15. In the **Value** box, enter **LightBlue**  
+15. In the **Value** box, enter **LightBlue**.  
   
 16. Select **Add**.  
   
-17. In the **Label** box, enter **Pink**  
+17. In the **Label** box, enter **Pink**.
   
-18. In the **Value** box, enter **Pink**  
+18. In the **Value** box, enter **Pink**. 
 
     :::image type="content" source="../reporting-services/media/report-builder-expression-tutorial-parameter-available.png" alt-text="Screenshot of the Report Parameter Properties dialog box that shows the Choose the available values for this parameter step.":::
   
@@ -578,11 +578,11 @@ Create a parameter so report readers can specify the color to apply to alternati
   
 8.  Under **Common Functions**, select **Miscellaneous**, and in the **Item** list, double-click **RowNumber**.  
 
-9. Immediately after **RowNumber(** enter **Nothing) MOD 2,**
+9. Immediately after **RowNumber(** enter **Nothing) MOD 2,**.
   
 8. Select **Parameters** and in the **Values** list, double-click **RowColor**.  
   
-22. Immediately after `Parameters!RowColor.Value`, enter **, "White")**  
+22. Immediately after `Parameters!RowColor.Value`, enter **, "White")**.  
   
     The completed expression is: `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, "White")`  
 

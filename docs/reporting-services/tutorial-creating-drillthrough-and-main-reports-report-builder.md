@@ -32,7 +32,7 @@ For more about general requirements, see [Prerequisites for tutorials &#40;Repor
 ## <a name="DMatrixAndDataset"></a>1. Create a drillthrough report from the table or Matrix Wizard  
 From the Getting Started dialog box, create a matrix report by using the **Table or Matrix Wizard**. There are two modes available in the wizard: report design and shared dataset design. In this tutorial, you use the report design mode.  
   
-#### Create a new report  
+### Create a new report  
   
 1.  [Start Report Builder](../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
   
@@ -47,7 +47,7 @@ From the Getting Started dialog box, create a matrix report by using the **Table
 ## <a name="DConnection"></a>1a. Specify a data connection  
 A data connection contains the information necessary to connect to an external data source such as an Analysis Services cube or a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database. To specify a data connection, you can use a shared data source from the report server or create an embedded data source that is used only in this report. In this tutorial, you use an embedded data source. To learn more about using a shared data source, see [Alternative ways to get a data connection &#40;Report Builder&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-#### Create an embedded data source  
+### Create an embedded data source  
   
 1.  On the **Choose a dataset** page, select **Create a dataset**, and then choose **Next**. The **Choose a connection to a data source** page opens.  
   
@@ -93,7 +93,7 @@ A data connection contains the information necessary to connect to an external d
 ## <a name="DMDXQuery"></a>1b. Create an MDX query  
 In a report, you can use a shared dataset that has a predefined query, or you can create an embedded dataset for use only in your report. In this tutorial, you create an embedded dataset.  
   
-#### Create query filters  
+### Create query filters  
   
 1.  On the **Design a query** page, in the Metadata pane, select the button **(...)**.  
   
@@ -132,7 +132,7 @@ In a report, you can use a shared dataset that has a predefined query, or you ca
   
     The query now includes a filter to include only the calendar year 2009.  
   
-#### Create the parameter  
+### Create the parameter  
   
 1.  Expand the Product dimension, and then drag the Product Category Name member to the **Hierarchy** column below **Calendar Year**.  
   
@@ -162,7 +162,7 @@ In a report, you can use a shared dataset that has a predefined query, or you ca
 ## <a name="DLayout"></a>1c. Organize drillthrough report data into groups  
 When you select the fields on which to group the data, you design a matrix with rows and columns that displays detail and aggregated data.  
   
-#### Organize data into groups  
+### Organize data into groups  
   
 1.  To switch to design view, select **Design**.  
   
@@ -188,7 +188,7 @@ When you select the fields on which to group the data, you design a matrix with 
 ## <a name="DTotals"></a>1d. Add drillthrough report subtotals and totals  
 After you create groups, you can add and format rows where the aggregate values for the fields will display. You can also choose whether to show all the data or to let a user expand and collapse grouped data interactively.  
   
-#### Add subtotals and totals  
+### Add subtotals and totals  
   
 1.  On the **Choose the layout** page, under **Options**, verify that **Show subtotals and grand totals** is selected.  
   
@@ -205,7 +205,7 @@ After you create groups, you can add and format rows where the aggregate values 
 ## <a name="DFormat"></a>2. Format data as currency  
 Apply currency formatting to the sales amount fields in the drillthrough report.  
   
-#### Format data as currency  
+### Format data as currency  
   
 1.  To switch to design view, select **Design**.  
   
@@ -216,7 +216,7 @@ Apply currency formatting to the sales amount fields in the drillthrough report.
 ## <a name="DSparkline"></a>3. Add columns to show sales values in sparklines  
 Instead of showing sales and sales returns as currency values, the report shows the values in a sparkline.  
   
-#### Add sparklines to columns  
+### Add sparklines to columns  
   
 1.  To switch to design view, select **Design**.  
   
@@ -246,10 +246,10 @@ Instead of showing sales and sales returns as currency values, the report shows 
   
 13. To preview the report, select **Run**.  
   
-## <a name="DReportTitle"></a>4. Add report title with product category name  
+## <a name="DReportTitle"></a>4. Add a report title with product category name  
 A report title appears at the top of the report. You can place the report title in a report header or, if the report doesn't use one, in a text box at the top of the report body. In this tutorial, you use the text box that is automatically placed at the top of the report body.  
   
-#### Add a report title  
+### Add a report title  
   
 1.  To switch to design view, select **Design**.  
   
@@ -273,10 +273,10 @@ A report title appears at the top of the report. You can place the report title 
   
 The report title includes the name of the first product category. Later, after you run this report as a drillthrough report, the product category name will dynamically change to reflect the name of the product category that was selected in the main report.  
   
-## <a name="DParameter"></a>5. Set hidden parameter property  
+## <a name="DParameter"></a>5. Set a hidden parameter property  
 By default parameters are visible, which isn't appropriate for this report. You update the parameter properties for the drillthrough report later.
   
-#### Hide a parameter  
+### Hide a parameter  
   
 1.  In the Report Data pane, expand **Parameters**.  
   
@@ -299,7 +299,7 @@ By default parameters are visible, which isn't appropriate for this report. You 
 ## <a name="DSave"></a>6. Save the report to a SharePoint library  
 You can save the report to a SharePoint library, report server, or your computer. If you save the report to your computer, many [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features such as subreports aren't available. In this tutorial, you save the report to a SharePoint library.  
   
-#### Save the report  
+### Save the report  
   
 1.  From the Report Builder button, select **Save**. The **Save As Report** dialog box opens.  
   
@@ -332,7 +332,7 @@ You can save the report to a SharePoint library, report server, or your computer
 ## <a name="MMatrixAndDataset"></a>1. Create the main report from the table or Matrix Wizard  
 From the **Getting Started** dialog box, create a matrix report by using the **Table or Matrix Wizard**.  
   
-#### Create the main report  
+### Create the main report  
   
 1.  [Start Report Builder](../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
   
@@ -342,10 +342,10 @@ From the **Getting Started** dialog box, create a matrix report by using the **T
  
 2.  In the **Getting Started** dialog box, verify that **New Report** is selected, and then select **Table or Matrix Wizard**.  
   
-## <a name="MConnection"></a>1a. Add embedded data source  
+## <a name="MConnection"></a>1a. Add an embedded data source  
 In this section, you add an embedded data source to the main report.  
   
-#### Create an embedded data source  
+### Create an embedded data source  
   
 1.  On the **Choose a dataset** page, select **Create a dataset**, and then select **Next**.  
   
@@ -381,10 +381,10 @@ In this section, you add an embedded data source to the main report.
   
 14. Select **Next**.  
   
-## <a name="MMDXQuery"></a>1b. Create embedded dataset  
+## <a name="MMDXQuery"></a>1b. Create an embedded dataset  
 Next, create an embedded dataset. To do so, you use the query designer to create filters, parameters, and calculated members and the dataset itself.  
   
-#### Create query filters  
+### Create query filters  
   
 1.  On the **Design a query** page, in the Metadata pane, in the cube section, select the ellipsis **(...)**.  
   
@@ -423,7 +423,7 @@ Next, create an embedded dataset. To do so, you use the query designer to create
   
     The query now includes a filter to include only the calendar year 2009.  
   
-#### Create the parameter  
+### Create the parameter  
   
 1.  Expand the Product dimension, and then drag the Product Category Name member to the **Hierarchy** column below **Sales Territory Group**.  
   
@@ -431,7 +431,7 @@ Next, create an embedded dataset. To do so, you use the query designer to create
   
 3.  Select the **Parameter** checkbox. The query now includes the parameter ProductProductCategoryName.  
   
-#### Create calculated members  
+### Create calculated members  
   
 1.  Place the cursor inside the Calculated Members pane, right-click, and then select **New Calculated Member**.  
   
@@ -482,7 +482,7 @@ Next, create an embedded dataset. To do so, you use the query designer to create
 ## <a name="MLayout"></a>1c. Organize main report data into groups  
 When you select the fields on which to group data, you design a matrix with rows and columns that displays detail and aggregated data.  
   
-#### Organize data into groups  
+### Organize data into groups  
   
 1.  On the **Arrange fields** page, drag Product_Category_Name to **Row groups**.  
   
@@ -501,7 +501,7 @@ When you select the fields on which to group data, you design a matrix with rows
 ## <a name="MTotals"></a>1d. Add main report subtotals and totals  
 You can show subtotals and grand totals in reports. The data in the main report displays as an indicator. You next remove the grand total after you complete the wizard.  
   
-#### Add subtotals and grand totals  
+### Add subtotals and grand totals  
   
 1.  On the **Choose the layout** page, under **Options**, verify that **Show subtotals and grand totals** is selected.  
   
@@ -516,7 +516,7 @@ You can show subtotals and grand totals in reports. The data in the main report 
 ## <a name="MGrandTotal"></a>2. Remove the grand total row from your report
 The data values are shown as indictor states, including the column group totals. Remove the row that displays the grand total.  
   
-#### Remove the grand total row  
+### Remove the grand total row  
   
 1.  To switch to design view, select **Design**.  
   
@@ -527,7 +527,7 @@ The data values are shown as indictor states, including the column group totals.
 ## <a name="MDrillthrough"></a>3. Configure text box action for drillthrough  
 To enable the drillthrough, specify an action on a text box in the main report.  
   
-#### Enable an action  
+### Enable an action  
   
 1.  To switch to design view, select **Design**.  
   
@@ -552,7 +552,7 @@ To enable the drillthrough, specify an action on a text box in the main report.
   
 9. Select **OK**.
   
-#### Format the drillthrough field  
+### Format the drillthrough field  
   
 1.  Right-click the cell that contains the `Product_Category_Name`, and then select **Text Box Properties**.  
   
@@ -571,7 +571,7 @@ The product category names are in the common link format (blue and underlined).
 ## <a name="MIndicators"></a>4. Replace numeric values with indicators  
 Use indicators to show the state of quantities and sales for Online and Reseller channels.  
   
-#### Add an indicator for Net QTY values  
+### Add an indicator for Net QTY values  
   
 1.  To switch to design view, select **Design**.  
   
@@ -585,7 +585,7 @@ Use indicators to show the state of quantities and sales for Online and Reseller
   
 6.  Repeat steps 2 through 5 for the `[Sum(Net QTY)]` cell in the `[Product_Category_Name]` row group within **Total**.  
   
-#### Add an indicator for Net Sales values  
+### Add an indicator for Net Sales values  
   
 1.  On the ribbon, select the **Rectangle** icon, and then select inside the `[Sum(Net_Sales)]` cell in the `[Product_Category_Name]` row group in the `Channel_Name` column group.  
   
@@ -602,7 +602,7 @@ Use indicators to show the state of quantities and sales for Online and Reseller
 ## <a name="MParameter"></a>5. Set internal parameter property  
 By default, parameters are visible, which isn't appropriate for this report. You next update the parameter properties to make the parameter internal.  
   
-#### Make the parameter internal  
+### Make the parameter internal  
   
 1.  In the Report Data pane, expand **Parameters**.  
   
@@ -617,7 +617,7 @@ By default, parameters are visible, which isn't appropriate for this report. You
 ## <a name="MTitle"></a>6. Add a report title  
 Add a title to the main report.  
   
-#### Add a report title  
+### Add a report title  
   
 1.  On the design surface, select **Click to add title**.  
   
@@ -632,7 +632,7 @@ Add a title to the main report.
 ## <a name="MSave"></a>7. Save the main report to a SharePoint library  
 Save the main report to a SharePoint library.  
   
-#### Save the report  
+### Save the report  
   
 1.  To switch to design view, select **Design**.  
   
@@ -658,7 +658,7 @@ Save the main report to a SharePoint library.
 ## <a name="MRunReports"></a>8. Run the main and drillthrough reports  
 Run the main report, and then select values in the product category column to run the drillthrough report.  
   
-#### Run the reports  
+### Run the reports  
   
 1.  Open the SharePoint library where the reports are saved.  
   

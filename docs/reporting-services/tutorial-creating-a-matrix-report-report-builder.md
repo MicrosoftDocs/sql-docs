@@ -229,9 +229,9 @@ A report that includes a matrix typically expands horizontally and vertically wh
 
     :::image type="content" source="../reporting-services/media/report-builder-column-handles.png" alt-text="Screenshot for the column and row handles in the Report Builder matrix report.":::
   
-5.  To resize the QTY column farthest to the left of the matrix, point to the line between column handles so that the cursor changes into a double arrow. Drag the column towards the left until it's 1/2 an inch wide.  
+5.  To resize the QTY column farthest to the left of the matrix, point to the line between column handles so that the cursor changes into a double arrow. Drag the column towards the left until it's 0.5 inches wide.  
   
-    A column width of 1/2 an inch is adequate to display the quantity.  
+    A column width of 0.5 inches is adequate to display the quantity.  
   
 6.  Repeat step 5 for the other columns named QTY.  
   
@@ -342,8 +342,8 @@ A text box can also display text as horizontal, vertical (top to bottom). For mo
   
 5.  On the **Home** tab > **Paragraph** section, select **Middle** and **Center** to locate the text in the center of the cell both vertically and horizontally.  
  
-6. Resize the Territory column to be 1/2 an inch wide and delete the column title.  
-6.  Select **Run** to preview your report.  
+6. Resize the Territory column to be 0.5 inches wide and delete the column title.  
+6. Select **Run** to preview your report.  
   
 The territory name is written vertically, bottom to top. The height of the Territory row group varies by the length of the territory name.  
   

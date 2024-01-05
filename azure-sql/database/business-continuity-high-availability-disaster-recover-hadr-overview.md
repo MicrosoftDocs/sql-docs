@@ -5,7 +5,7 @@ description: Learn how Azure SQL Database supports cloud business continuity and
 author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma
-ms.date: 12/15/2023
+ms.date: 1/5/2024
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
@@ -36,6 +36,8 @@ In most cases, SQL Database handles disruptive events that might happen in a clo
 - Malicious attacker successfully deletes data or drops a database. 
 - Catastrophic natural disaster event takes down a datacenter or availability zone or region. 
 - Rare datacenter, availability zone or region-wide outage caused by a configuration change, software bug or hardware component failure.
+
+> [!VIDEO https://learn-video.azurefd.net/vod/player?show=data-exposed&ep=azure-sql-db-high-availability-disaster-recovery-overview-data-exposed]
 
 ### Availability
 

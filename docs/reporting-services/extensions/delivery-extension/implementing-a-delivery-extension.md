@@ -24,13 +24,13 @@ helpviewer_keywords:
  Introduces how to write a custom delivery extension for [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  [Prepare to implement a delivery extension](../../../reporting-services/extensions/delivery-extension/preparing-to-implement-a-delivery-extension.md)  
- Describes the interfaces and classes available when implementing an [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] delivery extension, and issues to consider before implementation.  
+ Describes the interfaces and classes available when implementing an [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] delivery extension and issues to consider before implementation.  
   
  [Create a delivery extension library](../../../reporting-services/extensions/delivery-extension/creating-a-delivery-extension-library.md)  
  Describes assigning a namespace for your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] delivery extension and compiling your delivery extension into a library DLL.  
   
  [Implement the IDeliveryExtension interface for a delivery extension](../../../reporting-services/extensions/delivery-extension/implementing-the-ideliveryextension-interface-for-a-delivery-extension.md)  
- Describes the attributes of a delivery extension, and how to implement your own delivery extension class.  
+ Describes the attributes of a delivery extension and how to implement your own delivery extension class.  
   
  [Use a Notification class for a delivery extension](../../../reporting-services/extensions/delivery-extension/using-a-notification-class-for-a-delivery-extension.md)  
  Describes the attributes of a **Notification** class and how to use it in your delivery extension implementation.  

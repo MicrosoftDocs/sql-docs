@@ -16,7 +16,7 @@ ms.topic: conceptual
   
 - [Version](#version): Returns the build number of the SqlPackage application.  Added in version 18.6.
 
-- [Extract](sqlpackage-extract.md): Creates a data-tier application (.dacpac) file containing the schema or schema and user data from a connected SQL database.  
+- [Extract](sqlpackage-extract.md): Creates a data-tier application (.dacpac) file containing the schema from a connected SQL database.  
   
 - [Publish](sqlpackage-publish.md): Incrementally updates a database schema to match the schema of a source .dacpac file. If the database does not exist on the server, the publish operation creates it. Otherwise, an existing database is updated.  
   

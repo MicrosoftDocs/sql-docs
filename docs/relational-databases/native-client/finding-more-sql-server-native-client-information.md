@@ -10,8 +10,9 @@ ms.topic: "reference"
 helpviewer_keywords:
   - "SQLNCLI, additional resources"
   - "SQL Server Native Client, additional resources"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||<sql-server-2022||>=sql-server-linux-2017||<sql-server-linux-2022||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15 || =azuresqldb-mi-current"
 ---
+
 # Finding More SQL Server Native Client Information
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

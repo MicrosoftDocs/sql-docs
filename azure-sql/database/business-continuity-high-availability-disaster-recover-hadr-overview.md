@@ -5,7 +5,7 @@ description: Learn how Azure SQL Database supports cloud business continuity and
 author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma
-ms.date: 1/5/2024
+ms.date: 01/05/2024
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
@@ -25,6 +25,10 @@ monikerRange: "= azuresql || = azuresql-db "
 > * [Azure SQL Managed Instance](../managed-instance/business-continuity-high-availability-disaster-recover-hadr-overview.md?view=azuresql-mi&preserve-view=true)
 
 This article provides an overview of the business continuity and disaster recovery capabilities of Azure SQL Database, describing the options and recommendations to recover from disruptive events that could lead to data loss or cause your database and application to become unavailable. Learn what to do when a user or application error affects data integrity, an Azure availability zone or region has an outage, or your application requires maintenance.
+
+<br/>
+
+> [!VIDEO https://learn-video.azurefd.net/vod/player?show=data-exposed&ep=azure-sql-db-high-availability-disaster-recovery-overview-data-exposed]
 
 ## Overview
 

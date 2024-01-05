@@ -230,6 +230,7 @@
         "odbc/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = fabric",
         "powershell/**/*.md": ">= aps-pdw-2016 || = azure-sqldw-latest || = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = fabric",
         "relational-databases/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017",
+        "relational-databases/native-client/*.md": ">= sql-server-2016 || < sql-server-2022 || < sql-server-linux-2022 || >= sql-server-linux-2017",
         "relational-databases/system-dynamic-management-views/*.md": "= azuresqldb-current",
         "relational-databases/resource-governor/**/*.md": "=azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017",
         "relational-databases/security/**/*.md": "azuresqldb-current || azuresqldb-mi-current || azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = fabric",

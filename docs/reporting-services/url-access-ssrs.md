@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "hyperlinks [Reporting Services]"
 ---
 # URL access (SSRS)
-  URL access of the report server in SQL Server Reporting Services (SSRS) enables you to send commands to a report server through a URL request. For example, you can customize the rendering of a report on a native mode report server or in a SharePoint library. You might view the report using a specific set of report parameter values, or you might view a particular page of interest in the report. You can encapsulate this information in the URL using predefined URL access parameters. You can further customize how the report server processes the report by embedding parameters for rendering formats or for the look and feel of the report viewer. You can then paste this URL directly into an email or Web page to let others access your report in the same manner in the browser.  
+  URL access of the report server in SQL Server Reporting Services (SSRS) enables you to send commands to a report server through a URL request. For example, you can customize the rendering of a report on a native mode report server or in a SharePoint library. You might view the report by using a specific set of report parameter values, or you might view a particular page of interest in the report. You can encapsulate this information in the URL using predefined URL access parameters. You can further customize how the report server processes the report by embedding parameters for rendering formats or for the look and feel of the report viewer. You can then paste this URL directly into an email or Web page to let others access your report in the same manner in the browser.  
   
  Other actions you can perform through URL access are:  
   

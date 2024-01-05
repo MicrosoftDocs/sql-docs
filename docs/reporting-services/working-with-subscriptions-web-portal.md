@@ -37,8 +37,7 @@ You can also run a subscription whenever you want by selecting **Run now** on th
 ## Create or edit a subscription  
 Use the New Subscription or Edit Subscription page to create a new subscription or modify an existing subscription to a report. The options on this page vary depending on your role assignment. Users with advanced permissions can work with more options.  
   
-Subscriptions are supported for reports that can run unattended. At a minimum, the report must use stored or no credentials. If the report uses parameters, a default value must be specified. Subscriptions might become inactive if you change report execution settings or remove the default values used by parameter properties. For more information, see [Create and manage subscriptions for Native Mode report servers](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
-.  
+Subscriptions are supported for reports that can run unattended. At a minimum, the report must use stored or no credentials. If the report uses parameters, a default value must be specified. Subscriptions might become inactive if you change report execution settings or remove the default values used by parameter properties. For more information, see [Create and manage subscriptions for Native Mode report servers](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md).
   
 ## Type of subscription  
 You can select between a **Standard subscription** and a **Data-driven subscription**.  
@@ -49,7 +48,7 @@ A data-driven subscription is one that queries a subscriber database for subscri
   
 To create a data-driven subscription, you must know how to write a query or command that gets the data for the subscription. You must also have a data store that contains the subscriber data (for example, subscriber names and email addresses) to use for the subscription.  
   
-This option is available to users with advanced permissions. If you're using default security, data-driven subscriptions can't be used for reports located in a My Reports folder.  
+This option is available to users with advanced permissions. If you use default security, data-driven subscriptions can't be used for reports located in a My Reports folder.  
   
 ## Destination  
 Select the delivery extension to use to distribute the report.   

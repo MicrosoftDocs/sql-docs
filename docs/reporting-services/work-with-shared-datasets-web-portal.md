@@ -64,11 +64,11 @@ You have options when it comes to caching data for a dataset. You start off with
   
 2.  **Cache copies of this report and use them when available** places a temporary copy of the data in a cache for use with items that use this dataset. Caching usually improves performance because the data is returned from the cache instead of running the dataset query again.  
 
-:::image type="content" source="../reporting-services/media/ssrsdataset-caching1.png" alt-text="Screenshot that shows the Caching screen of the Edit Company Sales dialog box with the Always run this report with the most recent data option selected.":::
+:::image type="content" source="../reporting-services/media/ssrsdataset-caching1.png" alt-text="Screenshot that shows the Caching screen of the Edit Company Sales dialog box and the Always run this report with the most recent data option.":::
   
 Selecting **Cache Copies of this report and use them when available** presents you with some more options.  
 
-:::image type="content" source="../reporting-services/media/ssrsdataset-caching2.png" alt-text="Screenshot that shows the Caching screen of the Edit Company Sales dialog box with the Cache copies of this report and use them when available option selected.":::
+:::image type="content" source="../reporting-services/media/ssrsdataset-caching2.png" alt-text="Screenshot that shows the Caching screen with the Cache copies of this report and use them when available option selected.":::
   
 ### Cache expiration  
   
@@ -85,7 +85,7 @@ You can use Cache refresh plans to create schedules for preloading the cache wit
   
 Default role assignments that enable you to add, delete, and change shared datasets for cache refresh plans are Content Manager, My Reports, and Publisher.  
   
-After you apply the cache option mentioned before, you can define a cache refresh plan. Select the **Manage Refresh Plans** link that appears after you apply the cache settings. The cache refresh plan page opens.
+After you apply the previously mentioned cache option, you can define a cache refresh plan. Select the **Manage Refresh Plans** link that appears after you apply the cache settings. The cache refresh plan page opens.
   
 To create a new cache refresh plan, select **New Cache Refresh Plan**. You can then enter a name for the plan and specify a schedule. If the dataset has parameters defined, you see them listed and can provide values, unless they're marked as read-only.  
   

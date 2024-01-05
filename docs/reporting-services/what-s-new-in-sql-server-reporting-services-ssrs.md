@@ -205,7 +205,7 @@ For more information, see:
 
 ### Report improvements
 
-**HTML 5 Rendering Engine:** A new  HTML5 rendering engine that targets modern web "full" standards mode and modern browsers.  The new rendering engine no longer relies on quirks mode used by a few older browsers.
+**HTML 5 Rendering Engine:** A new HTML5 rendering engine that targets modern web "full" standards mode and modern browsers. The new rendering engine no longer relies on quirks mode used by a few older browsers.
 
 For more information on browser support, see [Browser Support for Reporting Services and Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
 
@@ -215,14 +215,14 @@ For more information on browser support, see [Browser Support for Reporting Serv
 
 **Report embedding:** You can now embed mobile and paginated reports in other web pages, and applications by using an IFrame, along with URL parameters.  
 
-**Pin Report Items to a Power BI Dashboard:** While viewing a report in the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], you can select report items and pin them to a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard.   The items you can pin are charts, gauge panels, maps, and images. You can:
+**Pin Report Items to a Power BI Dashboard:** While viewing a report in the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], you can select report items and pin them to a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard. The items you can pin are charts, gauge panels, maps, and images. You can:
 
 1. Select the group that contains the dashboard you want to pin to.
 2. Select the dashboard you want to pin the item to.
 3. Select how frequently you want the tile updated in the dashboard.
 
 > [!NOTE]
-> The refresh is managed by  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions and after the item is pinned, you can edit the subscription and configure a different  refresh schedule.
+> The refresh is managed by [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions and after the item is pinned, you can edit the subscription and configure a different refresh schedule.
 
 :::image type="content" source="../reporting-services/media/ssrs-pin-to-powerbi.png" alt-text="Screenshot that shows the Pin to Power BI Dashboard dialog box.":::
 
@@ -232,7 +232,7 @@ For more information, see [Power BI report server integration &#40;Configuration
 
 :::image type="content" source="../reporting-services/media/ssrs-export-powerpoint.png" alt-text="Screenshot that shows the Export dropdown list with the PowerPoint option called out.":::
 
-You can also select the PPTX format for subscription output and use Report Server URL access to render and export a report. For example, the following  URL command in your browser exports a report from a named instance of the report server.  
+You can also select the PPTX format for subscription output and use Report Server URL access to render and export a report. For example, the following URL command in your browser exports a report from a named instance of the report server.  
 
 ```https
 https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportfolder%2freport+name+with+spaces&rs:Format=pptx  
@@ -240,7 +240,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 For more information, see [Export a report by using URL access](../reporting-services/export-a-report-using-url-access.md).
 
-**PDF Replaces ActiveX for Remote Printing:** The report viewer toolbar now prints Via PDF instead of ActiveX controls. The new report viewer is supported by most modern browsers, including Microsoft Edge. No more ActiveX controls to download. Depending on the browser you use and the PDF viewing applications and services you've installed, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] either a print dialog box opens to print your report, or you're prompted to download a .PDF file. As an administrator, you can still disable client-side printing from [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
+**PDF Replaces ActiveX for Remote Printing:** The report viewer toolbar now prints Via PDF instead of ActiveX controls. The new report viewer is supported by most modern browsers, including Microsoft Edge. There are no more ActiveX controls to download. Depending on the browser you use and the PDF viewing applications and services you've installed, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] either a print dialog box opens to print your report, or you're prompted to download a .PDF file. As an administrator, you can still disable client-side printing from [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
 
 For more information, see [Enable and disable client-side printing for Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
 

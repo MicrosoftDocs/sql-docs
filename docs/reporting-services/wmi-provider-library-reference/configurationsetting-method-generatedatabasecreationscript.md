@@ -1,5 +1,5 @@
 ---
-title: "ConfigurationSetting Method - GenerateDatabaseCreationScript"
+title: "ConfigurationSetting method - GenerateDatabaseCreationScript"
 description: "ConfigurationSetting Method - GenerateDatabaseCreationScript"
 author: maggiesMSFT
 ms.author: maggies
@@ -14,7 +14,7 @@ apilocation: "reportingservices.mof"
 apiname: "GenerateDatabaseCreationScript (WMI MSReportServer_ConfigurationSetting Class)"
 apitype: MOFDef
 ---
-# ConfigurationSetting Method - GenerateDatabaseCreationScript
+# ConfigurationSetting method - GenerateDatabaseCreationScript
   Generates a SQL Script that can be used to create a report server database.  
   
 ## Syntax  
@@ -49,8 +49,8 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  *HRESULT*  
  [out] Value indicating whether the call succeeded or failed.  
   
-## Return Value  
- Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A non-zero value indicates that an error has occurred.  
+## Return value  
+ Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A nonzero value indicates that an error has occurred.  
   
 ## Remarks  
  This method generates an SQL script that creates report server databases for the version of the report server currently connected to.  
@@ -66,7 +66,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+## Related content 
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

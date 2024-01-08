@@ -4,17 +4,18 @@ description: This article contains the release notes and supported features for 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 12/14/2023
+ms.date: 01/03/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: linux-related-content
+ms.custom:
+  - linux-related-content
 ---
 # Release notes for SQL Server 2019 on Linux
 
 [!INCLUDE [sqlserver2019-linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
-The following release notes apply to [!INCLUDE [ssSQL19](../includes/sssql19-md.md)] running on Linux. This article is broken into sections for each release. For detailed supportability and known issues, see [Known issues](#known-issues). Each release links to a support article describing the changes, in addition to the Linux package downloads.
+The following release notes apply to [!INCLUDE [ssSQL19](../includes/sssql19-md.md)] running on Linux. This article is broken into sections for each release. For detailed supportability and known issues, see [SQL Server on Linux: Known issues](sql-server-linux-known-issues.md). Each release links to a support article describing the changes, in addition to the Linux package downloads.
 
 These release notes are specifically for [!INCLUDE [ssSQL19](../includes/sssql19-md.md)] releases. For release notes on other editions, see the following articles:
 
@@ -27,7 +28,7 @@ These release notes are specifically for [!INCLUDE [ssSQL19](../includes/sssql19
 
 ## Tools
 
-Most existing client tools that target [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] can seamlessly target [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] running on Linux. Some tools might have a specific version requirement to work well with Linux. For a full list of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] tools, see [SQL Tools and Utilities for SQL Server](../tools/overview-sql-tools.md).
+Most existing client tools that target [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] can seamlessly target [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] running on Linux. Some tools might have a specific version requirement to work well with Linux. For a full list of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] tools, see [SQL tools overview](../tools/overview-sql-tools.md).
 
 ## Latest versions for all packages
 
@@ -37,7 +38,7 @@ This section lists the latest versions of each package per distribution, for [!I
 | --- | --- | --- | --- | --- |
 | [!INCLUDE [ssSQL19](../includes/sssql19-md.md)] | CU 24 | 2023-12-14 | 15.0.4345.5 | [Support article](/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate24) |
 
-- The **mssql-server-is** package isn't supported on SUSE in this release. For more information, see [SQL Server Integration Services (SSIS)](#ssis).
+- The **mssql-server-is** package isn't supported on SUSE in this release. For more information, see [SQL Server on Linux: Known issues](sql-server-linux-known-issues.md#sql-server-integration-services-ssis).
 
 | Distribution | Package name | Package version | Download |
 | --- | --- | --- | --- |
@@ -74,9 +75,9 @@ If you update existing [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] p
 - [Install SQL Server package](sql-server-linux-setup.md#upgrade)
 - [Install SQL Server Full-Text Search on Linux](sql-server-linux-setup-full-text-search.md)
 - [Install SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)
-- [Install SQL Server 2019 Machine Learning Services R and Python support on Linux](sql-server-linux-setup-machine-learning.md)
-- [Install PolyBase package](../relational-databases/polybase/polybase-linux-setup.md)
-- [Enable SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+- [Install SQL Server 2019 Machine Learning Services (Python and R) on Linux](sql-server-linux-setup-machine-learning.md)
+- [Install PolyBase on Linux](../relational-databases/polybase/polybase-linux-setup.md)
+- [Install SQL Server Agent on Linux](sql-server-linux-setup-sql-agent.md)
 
 ## Release history
 
@@ -117,7 +118,7 @@ The following table lists the release history for [!INCLUDE [ssSQL19](../include
 
 ## Known issues
 
-[!INCLUDE [linux-known-issues-2019](includes/linux-known-issues-2019.md)]
+For more information, see [SQL Server on Linux: Known issues](sql-server-linux-known-issues.md).
 
 ## Related content
 

@@ -34,7 +34,7 @@ The Azure SQL Database [Query editor](query-editor.md) (preview) is a tool to ru
 - A user account with permissions to connect to the database and query editor. You can either:
 
   - Have or set up a user that can connect to the database with SQL authentication.
-  - Have or set up a user that can authenticate to the database with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)).
+  - Have or set up a user that can authenticate to the database with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)).
 
 ## Connect to the query editor
 

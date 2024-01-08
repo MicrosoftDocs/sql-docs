@@ -14,7 +14,7 @@ ms.author: "mathoma"
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver2022.md)]
 
-This article provides steps to configure Transactional and Snapshot replication by using authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) for [Azure-Arc enabled SQL Server](../../sql-server/azure-arc/overview.md). 
+This article provides steps to configure Transactional and Snapshot replication by using authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) for [Azure-Arc enabled SQL Server](../../sql-server/azure-arc/overview.md). 
 
 > [!NOTE]
 > Using Microsoft Entra authentication with SQL Server replication is currently in preview. 

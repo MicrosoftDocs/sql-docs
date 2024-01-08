@@ -88,7 +88,7 @@ ms.custom:
 | Parameter | Description |
 | --- | --- |
 | [Agent](#agent) | Enable [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Agent |
-| [Authenticate with Microsoft Entra ID](#azure-ad) | Settings for authenticating with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). |
+| [Authenticate with Microsoft Entra ID](#azure-ad) | Settings for authenticating with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). |
 | [Authenticate with Windows](#windows-active-directory) | Settings for Windows Server Active Directory authentication. |
 | [Collation](#collation) | Set a new collation for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux. |
 | [Customer feedback](#customerfeedback) | Choose whether or not [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] sends feedback to Microsoft. |

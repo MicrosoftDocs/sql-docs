@@ -22,7 +22,7 @@ dev_langs:
 
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-Lists all database and server principals created from Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) which are given connect permissions through external policies.
+Lists all database and server principals created from Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) which are given connect permissions through external policies.
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

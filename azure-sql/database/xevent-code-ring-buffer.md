@@ -1,11 +1,12 @@
 ---
 title: Create an event session with a ring_buffer target in memory
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Provides example steps to create an  event session in Azure SQL, using the in-memory event_file target.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma, randolphwest
 ms.date: 12/26/2023
-ms.service: sql-database
+ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: sample
 ms.custom: sqldbrb=1

@@ -1,11 +1,12 @@
 ---
 title: Extended Events in Azure SQL
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Describes extended events (XEvents) in Azure SQL Database and Azure SQL Managed Instance
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma, randolphwest
 ms.date: 12/26/2023
-ms.service: sql-database
+ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: reference
 ms.custom: sqldbrb=1

@@ -801,7 +801,7 @@ $headers = @{ }
 $headers.Add('Authorization', 'Bearer ' + $authToken)  
 
 # Build Azure REST API URI 
-$uri = "https://management.azure.com/subscriptions/"+$SubscriptionID+"/resourceGroups/"+$ResourceGroup+"/providers/Microsoft.Sql/managedInstances/"+$ManagedInstanceName+"/distributedAvailabilityGroups/"+DAGName+"?api-version=2023-05-01-preview" 
+$uri = "https://management.azure.com/subscriptions/"+$SubscriptionID+"/resourceGroups/"+$ResourceGroup+"/providers/Microsoft.Sql/managedInstances/"+$ManagedInstanceName+"/distributedAvailabilityGroups/"+$DAGName+"?api-version=2023-05-01-preview" 
 
 # Build Azure REST API request body 
 $body = "{ 

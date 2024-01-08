@@ -737,7 +737,7 @@ The PowerShell script below sets up a Microsoft Entra admin, creates an Azure Ke
 The following modules are required for this tutorial. Install the latest versions of the modules or higher than the noted version below:
 
 - Az.Accounts 3.37.0
-- Az.ConnectedMachine 0.3.0
+- Az.ConnectedMachine 0.5.0
 - Az.KeyVault 4.5.0
 - Az.Resources 6.0.0
 
@@ -1049,9 +1049,9 @@ $instanceSettings = @{
 
 $arcInstance = Get-AzConnectedMachineExtension -SubscriptionId $subscriptionId -MachineName $machineName -ResourceGroupName $resourceGroupName -Name "WindowsAgent.SqlServer"
 
-if ($arcInstance.Setting.AzureAD)
+if ($arcInstance.Setting.AdditionalProperties.AzureAD)
 {
-    $aadSettings = $arcInstance.Setting.AzureAD
+    $aadSettings = $arcInstance.Setting.AdditionalProperties.AzureAD
     $instanceFound = $false
     $instanceNameLower = $instanceName.ToLower()
     $instanceIndex = 0
@@ -1075,12 +1075,12 @@ if ($arcInstance.Setting.AzureAD)
         $aadSettings += $instanceSettings
     }
 
-    $arcInstance.Setting.AzureAD = $aadSettings
+    $arcInstance.Setting.AdditionalProperties.AzureAD = $aadSettings
 }
 else
 {
     $aadSettings = , $instanceSettings
-    $extension.properties.Settings | Add-Member -Name 'AzureAD' -Value $aadSettings -MemberType NoteProperty
+    $arcInstance.Setting.AdditionalProperties | Add-Member -Name 'AzureAD' -Value $aadSettings -MemberType NoteProperty
 }
 
 
@@ -1176,9 +1176,9 @@ $instanceSettings = @{
 
 $arcInstance = Get-AzConnectedMachineExtension -SubscriptionId $subscriptionId -MachineName $machineName -ResourceGroupName $resourceGroupName -Name "WindowsAgent.SqlServer"
 
-if ($arcInstance.Setting.AzureAD)
+if ($arcInstance.Setting.AdditionalProperties.AzureAD)
 {
-    $aadSettings = $arcInstance.Setting.AzureAD
+    $aadSettings = $arcInstance.Setting.AdditionalProperties.AzureAD
     $instanceFound = $false
     $instanceNameLower = $instanceName.ToLower()
     $instanceIndex = 0
@@ -1202,12 +1202,12 @@ if ($arcInstance.Setting.AzureAD)
         $aadSettings += $instanceSettings
     }
 
-    $arcInstance.Setting.AzureAD = $aadSettings
+    $arcInstance.Setting.AdditionalProperties.AzureAD = $aadSettings
 }
 else
 {
     $aadSettings = , $instanceSettings
-    $extension.properties.Settings | Add-Member -Name 'AzureAD' -Value $aadSettings -MemberType NoteProperty
+    $arcInstance.Setting.AdditionalProperties | Add-Member -Name 'AzureAD' -Value $aadSettings -MemberType NoteProperty
 }
 
 

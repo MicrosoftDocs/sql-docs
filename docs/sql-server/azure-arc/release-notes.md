@@ -261,4 +261,4 @@ The *LicenseType* property of `SQL Server - Azure Arc` has been extended to prov
 
 ### Azure extension for SQL Server
 
-SQL Server Onboarding Role is no longer needed for onboarding SQL servers onto Azure Arc.
+SQL Server Onboarding Role is no longer needed for onboarding SQL Server instances onto Azure Arc.

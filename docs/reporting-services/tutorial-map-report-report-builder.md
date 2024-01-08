@@ -207,7 +207,7 @@ In this section, you use the map layer wizard to add a point layer that displays
   
 22. On the **Font** tab, make the style **Bold** and the size **10pt**.
 
-    :::image type="content" source="../reporting-services/media/report-builder-map-point-properties-font.png" alt-text="Screenshot Showing the Change font, size, and color options section of the Map Point Properties dialog box.":::
+    :::image type="content" source="../reporting-services/media/report-builder-map-point-properties-font.png" alt-text="Screenshot that shows the Change font, size, and color options section of the Map Point Properties dialog box.":::
   
 23. On the **General** tab, select **Bottom** for **Placement**.
 

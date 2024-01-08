@@ -332,7 +332,7 @@ A text box can also display text as horizontal, vertical (top to bottom). For mo
     > [!NOTE]  
     > Select the cell, not the text. The WritingMode property is only available for the cell.
 
-    :::image type="content" source="../reporting-services/media/report-builder-select-territory-cell.png" alt-text="Screenshot showing the Territory cell in the Report Builder matrix report.":::
+    :::image type="content" source="../reporting-services/media/report-builder-select-territory-cell.png" alt-text="Screenshot that shows the Territory cell in the Report Builder matrix report.":::
   
 3.  In the Properties pane, locate the WritingMode property and change it from **Default** to **Rotate270**.  
   

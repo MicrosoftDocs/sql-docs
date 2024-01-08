@@ -554,7 +554,7 @@ The first phase capture is controlled by the `coredump.coredumptype` setting, wh
 
 ## <a id="edition"></a> Edition
 
-The edition of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] can be changed using the `set-edition` option. To change the edition of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] service first needs to be stopped. For more information on available [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux editions, see [SQL Server editions](sql-server-linux-editions-and-components-2019.md#-editions).
+The edition of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] can be changed using the `set-edition` option. To change the edition of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] service first needs to be stopped. For more information on available [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux editions, see [SQL Server editions](sql-server-linux-editions-and-components-2019.md#sql-server-editions).
 
 ## <a id="hadr"></a> High availability
 

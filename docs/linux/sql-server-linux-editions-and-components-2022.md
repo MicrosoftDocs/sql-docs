@@ -1,10 +1,10 @@
 ---
 title: "Editions and supported features of SQL Server 2022 - Linux"
-description: "Editions and supported features of SQL Server 2022 on Linux"
+description: This article describes editions, features, and components supported by the various editions of SQL Server 2022 on Linux.
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 01/05/2024
+ms.date: 01/08/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -32,23 +32,29 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This article provides details of features supported by the various editions of [!INCLUDE [sssql22](../includes/sssql22-md.md)] on Linux. For more information on what's new in [!INCLUDE [sssql22](../includes/sssql22-md.md)] on Windows, see [What's new in [!INCLUDE [sql-server-2022](../includes/sssql22-md.md)]](../sql-server/what-s-new-in-sql-server-2022.md).
+This article provides details of features supported by the various editions of [!INCLUDE [sssql22](../includes/sssql22-md.md)] on Linux.
 
-Installation requirements vary based on your application needs. The different editions of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)].
+For editions and supported features of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Windows, see [Editions and supported features of SQL Server 2022](../sql-server/editions-and-components-of-sql-server-2022.md). For more information on what's new in [!INCLUDE [sssql22](../includes/sssql22-md.md)] on Windows, see [What's new in [!INCLUDE [sql-server-2022](../includes/sssql22-md.md)]](../sql-server/what-s-new-in-sql-server-2022.md).
+
+Installation requirements vary based on your application needs. The different editions of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)].
 
 For the latest release notes and what's new information, see [Release notes for SQL Server 2022 on Linux](sql-server-linux-release-notes-2022.md).
 
-For a list of SQL Server features not available on Linux, see [Unsupported features and services](#unsupported-features-and-services).
+For a list of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] features not available on Linux, see [Unsupported features and services](#unsupported-features-and-services).
+
+## Try SQL Server
+
+- [Download SQL Server 2022](https://www.microsoft.com/sql-server/sql-server-2022)
 
 ## SQL Server editions
 
 [!INCLUDE [sql-server-editions](../includes/paragraph-content/sql-server-editions.md)]
 
-## Use [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] with client/server applications
+## Use SQL Server with client/server applications
 
-You can install just the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] client components on a computer that is running client/server applications that connect directly to an instance of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)]. A client components installation is also a good option if you administer an instance of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] on a database server, or if you plan to develop [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] applications.
+You can install just the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] client components on a computer that is running client/server applications that connect directly to an instance of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. A client components installation is also a good option if you administer an instance of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on a database server, or if you plan to develop [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] applications.
 
-## [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] components
+## SQL Server components
 
 [!INCLUDE [sssql22](../includes/sssql22-md.md)] on Linux supports the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)]. The following table describes the features in the [!INCLUDE [ssDE](../includes/ssde-md.md)].
 
@@ -125,7 +131,7 @@ The Developer edition continues to support only one client for [SQL Server Distr
 | Interleaved Execution for Multi-Statement Table Valued Functions | Yes | Yes | Yes | Yes |
 | Bulk insert improvements | Yes | Yes | Yes | Yes |
 
-<sup>1</sup> In-Memory OLTP data size and columnstore segment cache are limited to the amount of memory specified by edition in the [Scale Limits](#scale-limits) section. The max degree of parallelism is limited. The degree of process parallelism (DOP) for an index build is limited to 2 DOP for the Standard edition and 1 DOP for the Web and Express editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
+<sup>1</sup> In-Memory OLTP data size and columnstore segment cache are limited to the amount of memory specified by edition in the [Scale limits](#scale-limits) section. The max degree of parallelism is limited. The degree of process parallelism (DOP) for an index build is limited to 2 DOP for the Standard edition and 1 DOP for the Web and Express editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
 
 ## RDBMS security
 
@@ -171,7 +177,7 @@ The Developer edition continues to support only one client for [SQL Server Distr
 | Temporal | Yes | Yes | Yes | Yes |
 | Native XML support | Yes | Yes | Yes | Yes |
 | XML indexing | Yes | Yes | Yes | Yes |
-| MERGE & UPSERT capabilities | Yes | Yes | Yes | Yes |
+| MERGE and UPSERT capabilities | Yes | Yes | Yes | Yes |
 | Date and time data types | Yes | Yes | Yes | Yes |
 | Internationalization support | Yes | Yes | Yes | Yes |
 | Full-text and semantic search | Yes | Yes | Yes | Yes |
@@ -188,7 +194,7 @@ For info about the Integration Services (SSIS) features supported by the edition
 
 ## Spatial and location services
 
-| Feature Name | Enterprise | Standard | Web | Express |
+| Feature name | Enterprise | Standard | Web | Express |
 | --- | :---: | :---: | :---: | :---: |
 | Spatial indexes | Yes | Yes | Yes | Yes |
 | Planar and geodetic data types | Yes | Yes | Yes | Yes |
@@ -204,7 +210,7 @@ The following features and services aren't available for [!INCLUDE [sssql22](../
 | **Database engine** | Merge replication | |
 | | Stretch DB | This feature is [deprecated](../sql-server/stretch-database/stretch-database.md) in [!INCLUDE [sssql22](../includes/sssql22-md.md)], and isn't supported. |
 | | Distributed query with third-party connections | |
-| | Linked servers to data sources other than [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] | [Install PolyBase on Linux](../relational-databases/polybase/polybase-linux-setup.md) to query other data sources from [!INCLUDE [ssNoVersion_md](../includes/ssnoversion-md.md)] using Transact-SQL syntax. For scenarios where PolyBase isn't helpful, submit feedback to the [Microsoft Azure forum](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0). |
+| | Linked servers to data sources other than [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] | [Install PolyBase on Linux](../relational-databases/polybase/polybase-linux-setup.md) to query other data sources from [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] using Transact-SQL syntax. For scenarios where PolyBase isn't helpful, submit feedback to the [Microsoft Azure forum](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0). |
 | | System extended stored procedures (`xp_cmdshell`, etc.) | This feature is [deprecated](../relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md). If you have specific requirements, submit feedback to the [Microsoft Azure forum](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0). |
 | | FileTable, FILESTREAM | If you have specific requirements, submit feedback to the [Microsoft Azure forum](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0). |
 | | CLR assemblies with the `EXTERNAL_ACCESS` or `UNSAFE` permission set | |
@@ -220,10 +226,10 @@ The following features and services aren't available for [!INCLUDE [sssql22](../
 | | Always Encrypted with secure enclaves | |
 | | TLS 1.3 | |
 | **Services** | SQL Server Browser | |
-| | SQL Server R services | SQL Server R is supported within [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)], but [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] R services as a separate package isn't supported.<br /><br />You can install Machine Learning Services on Linux for [SQL Server 2019](sql-server-linux-setup-machine-learning.md) and [SQL Server 2022](sql-server-linux-setup-machine-learning-sql-2022.md). |
+| | SQL Server R services | SQL Server R is supported within [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], but [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] R services as a separate package isn't supported.<br /><br />You can install Machine Learning Services on Linux for [SQL Server 2019](sql-server-linux-setup-machine-learning.md) and [SQL Server 2022](sql-server-linux-setup-machine-learning-sql-2022.md). |
 | | StreamInsight | |
 | | Analysis Services | |
-| | Reporting Services | [Configure Power BI Report Server catalog databases for SQL Server on Linux](sql-server-linux-configure-power-bi-report-server-catalog.md). Run [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services (SSRS) on Windows, and host the catalog databases for SSRS on [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] on Linux deployments. |
+| | Reporting Services | [Configure Power BI Report Server catalog databases for SQL Server on Linux](sql-server-linux-configure-power-bi-report-server-catalog.md). Run [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Reporting Services (SSRS) on Windows, and host the catalog databases for SSRS on [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux deployments. |
 | | Data Quality Services | |
 | | Master Data Services | |
 
@@ -236,4 +242,4 @@ The following features and services aren't available for [!INCLUDE [sssql22](../
 
 - [What's new in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]](../sql-server/what-s-new-in-sql-server-2022.md)
 - [SQL Server installation guide](../database-engine/install-windows/install-sql-server.md)
-- [Product Specifications for SQL Server](../sql-server/index.yml)
+- [SQL Server technical documentation](../sql-server/index.yml)

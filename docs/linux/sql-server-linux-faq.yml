@@ -30,7 +30,7 @@ sections:
 
              1. **Is SQL Server on Linux the same as on Windows?**
 
-                The core Database Engine for SQL Server is the same on Linux as it is on Windows. However, some features are currently not supported on Linux. For a list of features that aren't supported on Linux, see the [Unsupported features & services](sql-server-linux-editions-and-components-2019.md#Unsupported). Also review the [SQL Server on Linux: Known issues](sql-server-linux-known-issues.md). Unless specified in these lists, other SQL Server features and services are supported on Linux.
+                The core Database Engine for SQL Server is the same on Linux as it is on Windows. However, some features are currently not supported on Linux. For a list of features that aren't supported on Linux, see the [Unsupported features & services](sql-server-linux-editions-and-components-2022.md#unsupported-features-and-services). Also review the [SQL Server on Linux: Known issues](sql-server-linux-known-issues.md). Unless specified in these lists, other SQL Server features and services are supported on Linux.
 
              1. **What is the support policy for SQL Server?**
 
@@ -89,7 +89,7 @@ sections:
 
              1. **Can I download the installation packages to install SQL Server offline?**
 
-                Yes. For more information, see the package download links in the [Release notes](sql-server-linux-release-notes-2019.md). Also, review the [instructions for offline installations](sql-server-linux-setup.md#offline).
+                Yes. For more information, see the package download links in the [Release notes](sql-server-linux-release-notes-2022.md). Also, review the [instructions for offline installations](sql-server-linux-setup.md#offline).
 
              1. **Can I perform an unattended installation of SQL Server on Linux?**
 

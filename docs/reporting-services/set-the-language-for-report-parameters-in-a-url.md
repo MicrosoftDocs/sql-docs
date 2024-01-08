@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "global considerations [Reporting Services]"
 ---
 # Set the language for report parameters in a URL
-  The *rs:ParameterLanguage* URL access parameter alleviates a problem in which culture-sensitive report parameters, such as dates, times, currency, and numbers, are interpreted using the browser language. With *rs:ParameterLanguage*, the URL is now interpreted independently of the browser. For example, if you set a report a regional setting of German, but a user is accessing a report via a URL using a browser set to English-United States, the report server misinterprets parameter values passed to it.  
+  The *rs:ParameterLanguage* URL access parameter alleviates a problem in which culture-sensitive report parameters, such as dates, times, currency, and numbers, are interpreted using the browser language. With *rs:ParameterLanguage*, the URL is now interpreted independently of the browser. For example, if you set a report to a regional setting of German, but a user is accessing a report via a URL using a browser set to English-United States, the report server misinterprets parameter values passed to it.  
   
  Consider the following URL to a report:  
   

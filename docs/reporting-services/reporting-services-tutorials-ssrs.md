@@ -32,7 +32,7 @@ Follow the steps in this tutorial to learn how to create a drillthrough report w
 
 ## [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)
 
-These tutorials introduce you various visualizations you can create in Report Builder, such as maps and sparklines. They also show you how to use parameters and expressions.
+These tutorials introduce you to various visualizations that you can create in Report Builder, such as maps and sparklines. They also show you how to use parameters and expressions.
 
 ## Related content
 

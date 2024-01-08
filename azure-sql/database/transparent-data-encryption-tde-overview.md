@@ -136,7 +136,7 @@ Use the following set of commands for Azure SQL Database and Azure Synapse:
 
 | Command | Description |
 | --- | --- |
-|[Create Or Update Server](/rest/api/sql/servers/create-or-update)|Adds an identity from Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) to a server. (used to grant access to Key Vault)|
+|[Create Or Update Server](/rest/api/sql/servers/create-or-update)|Adds an identity from Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) to a server. (used to grant access to Key Vault)|
 |[Create Or Update Server Key](/rest/api/sql/server-keys/create-or-update)|Adds a Key Vault key to a server.|
 |[Delete Server Key](/rest/api/sql/server-keys/delete)|Removes a Key Vault key from a server. |
 |[Get Server Keys](/rest/api/sql/server-keys/get)|Gets a specific Key Vault key from a server.|

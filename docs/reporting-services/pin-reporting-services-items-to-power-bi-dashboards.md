@@ -19,7 +19,7 @@ helpviewer_keywords:
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-You can pin an on-premises [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] paginated report item to a dashboard in the [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] service, as a new tile.   To pin, your administrator needs to first integrate your report server with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) and [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].
+You can pin an on-premises [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] paginated report item to a dashboard in the [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] service, as a new tile.   To pin, your administrator needs to first integrate your report server with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) and [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].
  
 [!INCLUDE [ssrs-no-pin-2-power-bi](../includes/ssrs-no-pin-2-power-bi.md)]
  

@@ -147,7 +147,7 @@ Beyond the high-availability architecture that's included in Azure SQL Database,
 
 ### Logins and groups
 
-Windows logins are not supported in Azure SQL Database, create a login from Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) instead. Manually recreate any SQL logins. 
+Windows logins are not supported in Azure SQL Database, create a login from Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) instead. Manually recreate any SQL logins. 
 
 ### SQL Agent jobs
 SQL Agent jobs are not directly supported in Azure SQL Database and need to be deployed to [elastic database jobs (preview)](../../database/job-automation-overview.md).

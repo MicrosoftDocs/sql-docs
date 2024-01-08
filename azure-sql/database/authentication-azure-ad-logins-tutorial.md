@@ -1,6 +1,6 @@
 ---
 title: Create and utilize Microsoft Entra server logins
-titleSuffix: Azure SQL Database & Azure SQL Managed Instance
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
 description: This article guides you through creating and utilizing Microsoft Entra logins in the virtual master database of Azure SQL
 author: nofield
 ms.author: nofield
@@ -17,7 +17,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 [!INCLUDE[appliesto-sqldb-sqlmi-asa-dedicated-only](../includes/appliesto-sqldb-sqlmi-asa-dedicated-only.md)]
 
 
-This article guides you through creating and utilizing [logins](authentication-azure-ad-logins.md) backed by Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) within the virtual `master` database of Azure SQL.
+This article guides you through creating and utilizing [logins](authentication-azure-ad-logins.md) backed by Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) within the virtual `master` database of Azure SQL.
 
 In this tutorial, you learn how to:
 

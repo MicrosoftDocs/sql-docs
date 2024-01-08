@@ -17,7 +17,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) supports two types of managed identities: system-assigned managed identity (SMI) and user-assigned managed identity (UMI). For more information, see [Managed identity types](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types).
+Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) supports two types of managed identities: system-assigned managed identity (SMI) and user-assigned managed identity (UMI). For more information, see [Managed identity types](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types).
 
 An SMI is automatically assigned to Azure SQL Managed Instance when it's created. When you're using Microsoft Entra authentication with Azure SQL Database, you must assign an SMI when Azure service principals are used to create Microsoft Entra users in SQL Database.
 

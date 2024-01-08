@@ -1,6 +1,6 @@
 ---
 title: Assign Directory Readers role to a Microsoft Entra group and manage role assignments
-titleSuffix: Azure SQL Database & Azure SQL Managed Instance
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
 description: This article guides you through enabling the Directory Readers role using Microsoft Entra groups to manage Microsoft Entra role assignments with Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics
 author: nofield
 ms.author: nofield
@@ -17,7 +17,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
 
-This article guides you through creating a group in Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)), and assigning that group the [**Directory Readers**](/azure/active-directory/roles/permissions-reference#directory-readers) role. The Directory Readers permissions allow the group owners to add additional members to the group, such as a [managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) of [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), and [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is). This bypasses the need for a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) or [Privileged Role Administrator](/azure/active-directory/roles/permissions-reference#privileged-role-administrator) to assign the Directory Readers role directly for each [logical server](logical-servers.md) identity in the tenant.
+This article guides you through creating a group in Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)), and assigning that group the [**Directory Readers**](/azure/active-directory/roles/permissions-reference#directory-readers) role. The Directory Readers permissions allow the group owners to add additional members to the group, such as a [managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) of [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), and [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is). This bypasses the need for a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) or [Privileged Role Administrator](/azure/active-directory/roles/permissions-reference#privileged-role-administrator) to assign the Directory Readers role directly for each [logical server](logical-servers.md) identity in the tenant.
 
 [!INCLUDE [entra-id](../includes/entra-id.md)]
 

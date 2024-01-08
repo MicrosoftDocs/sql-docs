@@ -890,6 +890,8 @@
         href: database/develop-cplusplus-simple.md
       - name: Excel
         href: database/connect-excel.md
+      - name: Develop a Kubernetes app with Azure SQL Database
+        href: database/develop-kubernetes-application.md
       - name: Ports - ADO.NET
         href: database/adonet-v12-develop-direct-route-ports.md
       - name: Multi-tenant SaaS
@@ -1063,6 +1065,8 @@
       href: managed-instance/sql-managed-instance-paas-overview.md
     - name: What's new?
       href: managed-instance/doc-changes-updates-release-notes-whats-new.md
+    - name: Try for free
+      href: managed-instance/free-offer.md
     - name: Frequently asked questions
       displayName: faq
       href: managed-instance/frequently-asked-questions-faq.yml

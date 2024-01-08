@@ -1,5 +1,5 @@
 ---
-title: Azure SQL Database free offer
+title: Try for free (preview)
 description: Guidance on how to deploy the Azure SQL Database free offer for new accounts.
 author: NilsPohlmann
 ms.author: nilsp
@@ -12,6 +12,10 @@ ms.custom:
 monikerRange: "=azuresql || =azuresql-db"
 ---
 # Try Azure SQL Database for free (preview)
+
+> [!div class="op_single_selector"]
+> * [Azure SQL Database](free-offer.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](../managed-instance/free-offer.md?view=azuresql-mi&preserve-view=true)
 
 Try Azure SQL Database free of charge and get 100,000 vCore seconds of compute every month. This free offer provides a General Purpose database for the lifetime of your subscription.
 

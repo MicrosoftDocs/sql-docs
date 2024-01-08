@@ -42,6 +42,10 @@ sys.sp_flush_CT_internal_table_on_demand
 
 The change tracking-enabled table to be manually cleaned up. The backlogs are left for the automatic cleanup by change tracking. Can be null to clean up all side tables.
 
+#### [ @DeletedRowCount = ] '*DeletedRowCount*' OUTPUT
+
+*@DeletedRowCount* is an OUTPUT parameter of type **bigint**. This parameter returns the total number of rows that got cleaned up during the process.
+
 ## Return code values
 
 `0` (success) or `1` (failure).

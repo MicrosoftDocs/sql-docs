@@ -3,7 +3,7 @@ title: optimize for ad hoc workloads (server configuration option)
 description: "Learn about the 'optimize for ad hoc workloads' option. Use it to improve SQL Server plan cache efficiency when workloads contain many single-use ad hoc batches."
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 12/18/2023
+ms.date: 12/28/2023
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -17,7 +17,7 @@ helpviewer_keywords:
 
 The **optimize for ad hoc workloads** option is used to improve the efficiency of the plan cache for workloads that contain many single use ad hoc batches. When this option is set to `1`, the Database Engine stores a small compiled plan stub in the plan cache when a batch is compiled for the first time, instead of the full compiled plan. This option might help to relieve memory pressure by not allowing the plan cache to become filled with compiled plans that aren't reused. However, enabling this option might affect your ability to troubleshoot single-use plans.
 
-The compiled plan stub allows the [!INCLUDE [ssDE](../../includes/ssde-md.md)] to recognize that this ad hoc batch was compiled before, only stores a compiled plan stub. When this batch is invoked (compiled or executed) again, the [!INCLUDE [ssDE](../../includes/ssde-md.md)] compiles the batch, removes the compiled plan stub from the plan cache, and adds the full compiled plan to the plan cache.
+The compiled plan stub allows the [!INCLUDE [ssDE](../../includes/ssde-md.md)] to recognize that this ad hoc batch was compiled previously, and only stores a compiled plan stub. When this batch is invoked (compiled or executed) again, the [!INCLUDE [ssDE](../../includes/ssde-md.md)] compiles the batch, removes the compiled plan stub from the plan cache, and adds the full compiled plan to the plan cache.
 
 You can find compiled plan stubs by querying the `sys.dm_exec_cached_plans` catalog view and looking for "Compiled Plan" in the `cacheobjtype` column. The stub has a unique `plan_handle`. The compiled plan stub doesn't have an execution plan associated with it, and querying for the plan handle doesn't return a graphical or XML showplan.
 
@@ -57,11 +57,11 @@ To find the number of single-use cached plans, run the following query:
 ```sql
 SELECT objtype,
     cacheobjtype,
-    AVG(usecounts) AS Avg_UseCount,
     SUM(refcounts) AS AllRefObjects,
     SUM(CAST(size_in_bytes AS BIGINT)) / 1024 / 1024 AS SizeInMB
 FROM sys.dm_exec_cached_plans
-WHERE objtype = 'Adhoc' AND usecounts = 1
+WHERE objtype = 'Adhoc'
+    AND usecounts = 1
 GROUP BY objtype, cacheobjtype;
 ```
 

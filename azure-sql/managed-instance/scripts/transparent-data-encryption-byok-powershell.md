@@ -9,7 +9,7 @@ ms.date: 05/18/2022
 ms.service: sql-managed-instance
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: kr2b-contr-experiment, devx-track-azurepowershell
+ms.custom: kr2b-contr-experiment
 ms.devlang: powershell
 ---
 

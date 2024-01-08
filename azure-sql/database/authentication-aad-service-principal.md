@@ -1,5 +1,6 @@
 ---
 title: Microsoft Entra service principal with Azure SQL
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Utilize AD Applications (service principals) support Microsoft Entra user creation in Azure SQL Database and Azure SQL Managed Instance
 author: nofield
 ms.author: nofield
@@ -15,7 +16,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) supports user creation in Azure SQL Database (SQL DB) on behalf of Microsoft Entra applications (service principals). This is supported for [Azure SQL Database](sql-database-paas-overview.md) and [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md).
+Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) supports user creation in Azure SQL Database (SQL DB) on behalf of Microsoft Entra applications (service principals). This is supported for [Azure SQL Database](sql-database-paas-overview.md) and [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md).
 
 <a name='service-principal-azure-ad-applications-support'></a>
 

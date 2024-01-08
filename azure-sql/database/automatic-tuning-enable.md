@@ -10,6 +10,7 @@ ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: how-to
 ms.custom: sqldbrb=1
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Enable automatic tuning in the Azure portal to monitor queries and improve workload performance
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

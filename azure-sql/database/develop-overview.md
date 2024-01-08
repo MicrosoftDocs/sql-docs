@@ -1,7 +1,7 @@
 ---
 title: Application Development Overview
-description: Learn about available connectivity libraries and best practices for applications connecting to Azure SQL Database and Azure SQL Managed Instance.
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
+description: Learn about available connectivity libraries and best practices for applications connecting to Azure SQL Database and Azure SQL Managed Instance.
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: wiassaf, mathoma
@@ -25,7 +25,7 @@ You can leverage open-source tools like [cheetah](https://github.com/wunderlist/
 
 ## Authentication
 
-Access to Azure SQL Database is protected with logins and firewalls. Azure SQL Database and SQL Managed Instance support users and logins for both SQL authentication and [authentication](authentication-aad-overview.md) with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). Microsoft Entra logins are generally available in SQL Managed Instance and are in Public Preview for Azure SQL Database.
+Access to Azure SQL Database is protected with logins and firewalls. Azure SQL Database and SQL Managed Instance support users and logins for both SQL authentication and [authentication](authentication-aad-overview.md) with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). Microsoft Entra logins are generally available in SQL Managed Instance and are in Public Preview for Azure SQL Database.
 
 Learn more about [managing database access and login](logins-create-manage.md).
 

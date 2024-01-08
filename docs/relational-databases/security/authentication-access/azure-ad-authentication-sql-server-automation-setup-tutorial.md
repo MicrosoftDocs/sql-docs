@@ -19,7 +19,7 @@ monikerRange: ">=sql-server-ver16||>= sql-server-linux-ver16"
 > [!NOTE]
 > This feature is available in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or later versions, and is only supported for SQL Server on-premises, for Windows and Linux hosts and [SQL Server 2022 on Windows Azure VMs](/azure/azure-sql/virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm).
 
-In this article, we'll go over how to set up the Microsoft Entra admin to allow authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) for SQL Server using the Azure portal, and APIs such as:
+In this article, we'll go over how to set up the Microsoft Entra admin to allow authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) for SQL Server using the Azure portal, and APIs such as:
 
 - PowerShell
 - The Azure CLI

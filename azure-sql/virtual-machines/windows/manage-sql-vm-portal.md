@@ -122,7 +122,7 @@ To learn more, see [SQL best practices assessment for SQL Server on Azure VMs](s
 
 ## Security Configuration 
 
-Use the **Security Configuration** page of the SQL virtual machines resource to configure SQL Server security settings such as Azure Key Vault integration, [least privilege mode](sql-server-iaas-agent-extension-automate-management.md) or if you're on SQL Server 2022, [authentication](configure-azure-ad-authentication-for-sql-vm.md) with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). 
+Use the **Security Configuration** page of the SQL virtual machines resource to configure SQL Server security settings such as Azure Key Vault integration, [least privilege mode](sql-server-iaas-agent-extension-automate-management.md) or if you're on SQL Server 2022, [authentication](configure-azure-ad-authentication-for-sql-vm.md) with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). 
 
 :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-security-configuration.png" alt-text="Screenshot of the Azure portal, the SQL Server security page, where you can enable authentication.":::
 

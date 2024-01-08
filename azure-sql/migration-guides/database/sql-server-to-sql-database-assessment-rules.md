@@ -443,7 +443,7 @@ More information: [Resolving Transact-SQL differences during migration to SQL Da
 Azure SQL Database supports two types of authentication:
 
 - SQL Authentication: uses a username and password
-- Microsoft Entra authentication: uses identities managed by Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) and is supported for managed and integrated domains.
+- Microsoft Entra authentication: uses identities managed by Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) and is supported for managed and integrated domains.
 
 Database users mapped with Windows authentication (integrated security) aren't supported in Azure SQL Database.
 

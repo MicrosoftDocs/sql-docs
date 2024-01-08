@@ -22,7 +22,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
 
-This article shows you how to create and populate a Microsoft Entra tenant, and use Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) with [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), and [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is). For an overview, see [Microsoft Entra authentication](authentication-aad-overview.md).
+This article shows you how to create and populate a Microsoft Entra tenant, and use Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) with [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), and [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is). For an overview, see [Microsoft Entra authentication](authentication-aad-overview.md).
 
 [!INCLUDE [entra-id](../includes/entra-id.md)]
 

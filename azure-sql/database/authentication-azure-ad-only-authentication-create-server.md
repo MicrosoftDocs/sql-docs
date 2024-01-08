@@ -18,7 +18,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 
-This how-to guide outlines the steps to create a [logical server](logical-servers.md) for Azure SQL Database or an [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md) with [Microsoft Entra-only authentication](authentication-azure-ad-only-authentication.md) enabled during provisioning. The Microsoft Entra-only authentication feature prevents users from connecting to the server or managed instance using SQL authentication, and only allows connections authenticated with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)).
+This how-to guide outlines the steps to create a [logical server](logical-servers.md) for Azure SQL Database or an [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md) with [Microsoft Entra-only authentication](authentication-azure-ad-only-authentication.md) enabled during provisioning. The Microsoft Entra-only authentication feature prevents users from connecting to the server or managed instance using SQL authentication, and only allows connections authenticated with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)).
 
 [!INCLUDE [entra-id](../includes/entra-id.md)]
 

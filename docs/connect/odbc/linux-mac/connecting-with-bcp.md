@@ -69,7 +69,7 @@ Specifies the full path of a format file.
 Specifies the number of the first row to export from a table or import from a data file.
 
 **-G**  
-This switch is used by the client when connecting to Azure SQL Database, Azure SQL Managed Instance or Azure Synapse Analytics to specify that the user be authenticated with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). It can be combined with just the -P option to use access token authentication (v17.8+). The -G switch requires at least bcp version 17.6. To determine your version, execute bcp -v.
+This switch is used by the client when connecting to Azure SQL Database, Azure SQL Managed Instance or Azure Synapse Analytics to specify that the user be authenticated with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). It can be combined with just the -P option to use access token authentication (v17.8+). The -G switch requires at least bcp version 17.6. To determine your version, execute bcp -v.
 
 
 > [!IMPORTANT]

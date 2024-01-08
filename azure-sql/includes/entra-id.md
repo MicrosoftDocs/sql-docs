@@ -6,5 +6,5 @@ ms.service: sql
 ms.topic: include
 ---
 
-> [!NOTE]
-> Microsoft Entra ID is the [new name for Azure Active Directory (Azure AD)](/azure/active-directory/fundamentals/new-name). We are updating documentation at this time.
+> [!NOTE]  
+> Microsoft Entra ID is the [new name for Azure Active Directory (Azure AD)](/entra/fundamentals/new-name). We are updating documentation at this time.

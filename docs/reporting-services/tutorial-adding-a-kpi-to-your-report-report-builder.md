@@ -19,7 +19,7 @@ The following illustration is similar to the report you create in this tutorial.
 :::image type="content" source="../reporting-services/media/report-builder-kpi-report.png" alt-text="Screenshot of a Report Builder KPI report.":::
     
 > [!NOTE]  
-> In this tutorial, the steps for the wizard are consolidated into two procedures: one to create the dataset and one to create a table. For step-by-step instructions about how to browse to a report server, choose a data source, create a dataset, and run the wizard, see the first tutorial in this series: [Tutorial: Creating a basic table report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In this tutorial, the steps for the wizard are consolidated into two procedures: one to create the dataset and one to create a table. For step-by-step instructions about how to browse to a report server, choose a data source, create a dataset, and run the wizard, see the first tutorial in this series: [Tutorial: Create a basic table report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Estimated time to complete this tutorial: 15 minutes.  
   

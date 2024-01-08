@@ -91,7 +91,7 @@ To learn more, see [Azure SQL Database Disaster Recovery 101](https://azure.micr
 
 SQL Database takes security and privacy very seriously. Security within SQL Database is available at the database level and at the platform level and is best understood when categorized into several layers. At each layer you get to control and provide optimal security for your application. The layers are:
 
-- Identity & [authentication](logins-create-manage.md) (SQL authentication and authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)).
+- Identity & [authentication](logins-create-manage.md) (SQL authentication and authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)).
 - Monitoring activity ([Auditing](./auditing-overview.md) and [threat detection](threat-detection-configure.md)).
 - Protecting actual data ([Transparent Data Encryption [TDE]](/sql/relational-databases/security/encryption/transparent-data-encryption-azure-sql) and [Always Encrypted [AE]](/sql/relational-databases/security/encryption/always-encrypted-database-engine)).
 - Controlling Access to sensitive and privileged data ([Row Level security](/sql/relational-databases/security/row-level-security) and [Dynamic Data Masking](/sql/relational-databases/security/dynamic-data-masking)).

@@ -22,7 +22,7 @@ dev_langs:
 
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-Lists all database and server principals created from Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)), joined with roles, joined with their data actions.
+Lists all database and server principals created from Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)), joined with roles, joined with their data actions.
 
 > [!NOTE]  
 >  This view returns one record per assignment. If the same action has been assigned at multiple scopes (like via different role-assignments or different scopes), there will be multiple rows with the same action name in the result set.

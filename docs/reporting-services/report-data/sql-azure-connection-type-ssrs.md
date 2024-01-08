@@ -153,7 +153,7 @@ For more information about platform and version support, see [Data Sources Suppo
 
 ## Azure SQL Database and Microsoft Entra ID
 
-You can use Azure SQL Database with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)).
+You can use Azure SQL Database with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)).
 
 This scenario is supported when you set up the following items properly:
 

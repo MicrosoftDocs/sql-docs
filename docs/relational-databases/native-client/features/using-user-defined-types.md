@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "SQL Server Native Client, user-defined types"
   - "data access [SQL Server Native Client], user-defined types"
   - "ISSCommandWithParameters interface"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Using User-Defined Types in SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
 

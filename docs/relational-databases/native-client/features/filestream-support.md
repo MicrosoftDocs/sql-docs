@@ -11,6 +11,7 @@ helpviewer_keywords:
   - "FILESTREAM [SQL Server], SQL Server Native Client"
   - "SQL Server Native Client [FILESTREAM support]"
 ---
+
 # FILESTREAM Support
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 

@@ -11,6 +11,7 @@ helpviewer_keywords:
   - "FILESTREAM [SQL Server], ODBC"
   - "ODBC, FILESTREAM support"
 ---
+
 # FILESTREAM Support (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 

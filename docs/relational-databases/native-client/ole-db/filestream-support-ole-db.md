@@ -11,6 +11,7 @@ helpviewer_keywords:
   - "OLE DB [FILESTREAM support]"
   - "FILESTREAM [SQL Server], OLE DB"
 ---
+
 # FILESTREAM Support (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 

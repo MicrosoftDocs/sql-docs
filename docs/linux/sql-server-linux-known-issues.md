@@ -68,9 +68,9 @@ The following table lists the most common issues with [!INCLUDE [ssnoversion-md]
 
 Features that involve outbound TCP connections from the `sqlservr` process, such as linked servers, PolyBase, or availability groups, might not work if both the following conditions are met:
 
-1. The target server is specified as a hostname and not an IP address.
+- The target server is specified as a hostname and not an IP address.
 
-1. The source instance has IPv6 disabled in the kernel. To verify if your system has IPv6 enabled in the kernel, all the following tests must pass:
+- The source instance has IPv6 disabled in the kernel. To verify if your system has IPv6 enabled in the kernel, all the following tests must pass:
 
    - `cat /proc/cmdline` prints the boot cmdline of the current kernel. The output must not contain `ipv6.disable=1`.
    - The `/proc/sys/net/ipv6/` directory must exist.

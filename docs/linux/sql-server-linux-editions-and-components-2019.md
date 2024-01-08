@@ -4,7 +4,7 @@ description: "Editions and supported features of SQL Server 2019 on Linux"
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: vanto
-ms.date: 11/16/2023
+ms.date: 01/08/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -205,35 +205,31 @@ For info about the Integration Services (SSIS) features supported by the edition
 
 The following features and services aren't available for SQL Server 2019 on Linux. The support of these features will be increasingly enabled over time.
 
-| Area | Unsupported feature or service |
-| --- | --- |
-| **Database engine** | Merge replication |
-| | Stretch DB |
-| | Distributed query with 3rd-party connections |
-| | Linked Servers to data sources other than [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] |
-| | System extended stored procedures (XP_CMDSHELL, etc.) |
-| | FileTable, FILESTREAM |
-| | CLR assemblies with the EXTERNAL_ACCESS or UNSAFE permission set |
-| | Buffer Pool Extension |
-| | Backup to URL - page blob <sup>2</sup> |
-| **SQL Server Agent** | Subsystems: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
-| | Alerts |
-| | Managed Backup |
-| **High Availability** | Database mirroring |
-| **Security** | Extensible Key Management (EKM) |
-| | Active Directory Authentication for Linked Servers |
-| | Active Directory Authentication for Availability Group (AG) Endpoints |
-| **Services** | SQL Server Browser |
-| | SQL Server R services <sup>1</sup> |
-| | StreamInsight |
-| | Analysis Services |
-| | Reporting Services |
-| | Data Quality Services |
-| | Master Data Services |
-
-<sup>1</sup> SQL Server R is supported within SQL Server, but SQL Server R services as a separate package isn't supported.
-
-<sup>2</sup> Backup to URL is supported for block blobs, using the [Shared Access Signature](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS).
+| Area | Unsupported feature or service | Comments |
+| --- | --- | --- |
+| **Database engine** | Merge replication | |
+| | Stretch DB | This feature is [deprecated](../sql-server/stretch-database/stretch-database.md) in [!INCLUDE [sssql22](../includes/sssql22-md.md)], and isn't supported. |
+| | Distributed query with third-party connections | |
+| | Linked servers to data sources other than [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] | [Install PolyBase on Linux](../relational-databases/polybase/polybase-linux-setup.md) to query other data sources from [!INCLUDE [ssNoVersion_md](../includes/ssnoversion-md.md)] using Transact-SQL syntax. For scenarios where PolyBase isn't helpful, submit feedback to the [Microsoft Azure forum](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0). |
+| | System extended stored procedures (`xp_cmdshell`, etc.) | This feature is [deprecated](../relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md). If you have specific requirements, submit feedback to the [Microsoft Azure forum](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0). |
+| | FileTable, FILESTREAM | If you have specific requirements, submit feedback to the [Microsoft Azure forum](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0). |
+| | CLR assemblies with the `EXTERNAL_ACCESS` or `UNSAFE` permission set | |
+| | Buffer Pool Extension | |
+| | Backup to URL - page blob | Backup to URL is supported for block blobs, using the [Shared Access Signature](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS). |
+| **SQL Server Agent** | Subsystems: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS | |
+| | Alerts | |
+| | Managed Backup | |
+| **High Availability** | Database mirroring | This feature is [deprecated](../database-engine/database-mirroring/database-mirroring-sql-server.md). Use Always On availability groups instead. |
+| **Security** | Extensible Key Management (EKM) | |
+| | Windows integrated authentication for linked servers | |
+| | Windows integrated authentication for availability group (AG) endpoints | Create and use certificate based endpoint authentication for availability groups. For more information, see [Configure SQL Server Always On Availability Group for high availability on Linux](sql-server-linux-availability-group-configure-ha.md). |
+| **Services** | SQL Server Browser | |
+| | SQL Server R services | SQL Server R is supported within [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)], but [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] R services as a separate package isn't supported.<br /><br />You can install Machine Learning Services on Linux for [SQL Server 2019](sql-server-linux-setup-machine-learning.md) and [SQL Server 2022](sql-server-linux-setup-machine-learning-sql-2022.md). |
+| | StreamInsight | |
+| | Analysis Services | |
+| | Reporting Services | [Configure Power BI Report Server catalog databases for SQL Server on Linux](sql-server-linux-configure-power-bi-report-server-catalog.md). Run [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services (SSRS) on Windows, and host the catalog databases for SSRS on [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] on Linux deployments. |
+| | Data Quality Services | |
+| | Master Data Services | |
 
 [!INCLUDE [editions-supported-features-windows](../includes/editions-supported-features-windows.md)]
 

@@ -5,7 +5,7 @@ description: An overview of transparent data encryption for Azure SQL Database, 
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 01/05/2024
+ms.date: 01/12/2024
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual

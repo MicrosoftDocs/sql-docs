@@ -19,7 +19,7 @@ helpviewer_keywords:
 
 [!INCLUDE [sql-windows-only](../../../includes/applies-to-version/sql-windows-only.md)]
 
-In this article, you install and configure the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for Azure Key Vault. Extensible Key Management is [not supported](../../../linux/sql-server-linux-editions-and-components-2019.md#Unsupported) for SQL Server on Linux.
+In this article, you install and configure the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for Azure Key Vault. Extensible Key Management is [not supported](../../../linux/sql-server-linux-editions-and-components-2019.md#unsupported-features-and-services) for SQL Server on Linux.
 
 [!INCLUDE [entra-id](../../../includes/entra-id.md)]
 

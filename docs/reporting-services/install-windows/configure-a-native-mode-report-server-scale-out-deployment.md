@@ -3,7 +3,7 @@ title: "Configure a Native Mode Report Server Scale-Out Deployment"
 description: "Configure a Native Mode Report Server Scale-Out Deployment"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/26/2021
+ms.date: 01/09/2024
 ms.service: reporting-services
 ms.topic: conceptual
 ms.custom: updatefrequency5
@@ -66,6 +66,9 @@ For SQL Server 2016 Reporting Services and earlier, SharePoint mode report serve
   
 2.  If necessary, enable the report server for remote connections. Some versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do not enable remote TCP/IP and Named Pipes connections by default. To confirm whether remote connections are allowed, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager and view the network configuration settings of the target instance. If the remote instance is also a named instance, verify that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service is enabled and running on the target server. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser provides the port number that is used to connect to the named instance. 
 
+> [!NOTE]
+> Configurable named instances are not available in SQL Server Reporting Services 2017 and later or Power BI Report Server. SQL Server Reporting Services 2017 and later will always use the instance name **SSRS**. Power BI Report Server will always be the instance name **PBIRS**.
+
 ## Service accounts
 
 The service accounts used for the Reporting Services instance are important when dealing with a scale-out deployment. You should do one of the following when deploying your Reporting Services instances.
@@ -120,7 +123,7 @@ The issue will be intermittent is that only the server who created the SQL Agent
   
 5.  Configure the **Web Portal URL**. Do not test the URL yet or try to verify the deployment. The report server will be unavailable until the report server is joined to the scale-out deployment.  
   
-## To join the second report server instance to the scale-out deployment  
+## To join the second report server  to the scale-out deployment  
   
 1.  Open the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool, and reconnect to the first report server instance. The first report server is already initialized for reversible encryption operations, so it can be used to join additional report server instances to the scale-out deployment.  
   

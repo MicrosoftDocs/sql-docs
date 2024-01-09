@@ -10,7 +10,6 @@ ms.topic: "reference"
 helpviewer_keywords:
   - "50000 [SQL Server Native Client setup error]"
 ---
-
 # SQL Server Native Client Error MSSQLSERVER_50000
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

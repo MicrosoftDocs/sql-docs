@@ -8,7 +8,6 @@ ms.service: sql
 ms.subservice: native-client
 ms.topic: "reference"
 ---
-
 # ODBC Driver Behavior Change When Handling Character Conversions
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

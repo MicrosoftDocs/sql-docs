@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "data access [SQL Server Native Client], user-defined types"
   - "ISSCommandWithParameters interface"
 ---
-
 # Using User-Defined Types in SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
 

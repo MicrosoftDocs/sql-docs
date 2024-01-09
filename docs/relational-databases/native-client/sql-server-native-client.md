@@ -9,7 +9,6 @@ ms.service: sql
 ms.subservice: native-client
 ms.topic: conceptual
 ---
-
 # SQL Server Native Client
 
 [!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -8,7 +8,6 @@ ms.service: sql
 ms.subservice: native-client
 ms.topic: "reference"
 ---
-
 # SQL Server Native Client Date and Time Improvements
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

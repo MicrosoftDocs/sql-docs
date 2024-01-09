@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "ODBC applications, header files"
   - "SQLNCLI, library files"
 ---
-
 # Using the SQL Server Native Client Header and Library Files
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

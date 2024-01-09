@@ -8,7 +8,6 @@ ms.service: sql
 ms.subservice: native-client
 ms.topic: "reference"
 ---
-
 # SQL Server Native Client Support for LocalDB
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

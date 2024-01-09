@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, schema rowsets"
   - "rowsets [OLE DB], schema"
 ---
-
 # Schema Rowset Support in SQL Server Native Client (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

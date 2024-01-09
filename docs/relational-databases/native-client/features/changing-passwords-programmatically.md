@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "SQL Server Native Client, password expiration"
   - "modifying passwords"
 ---
-
 # Changing SQL Server Native Client Passwords Programmatically
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

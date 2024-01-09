@@ -8,7 +8,6 @@ ms.service: sql
 ms.subservice: native-client
 ms.topic: "reference"
 ---
-
 # Metadata Discovery in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

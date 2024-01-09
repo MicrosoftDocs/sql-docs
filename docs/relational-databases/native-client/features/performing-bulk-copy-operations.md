@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "SQL Server Native Client, bulk copy operations"
   - "SQLNCLI, bulk copy operations"
 ---
-
 # Performing Bulk Copy Operations in SQL Server Native Client 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

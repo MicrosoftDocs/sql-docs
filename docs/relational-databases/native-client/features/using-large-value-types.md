@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, large value data types"
   - "SQL Server Native Client OLE DB provider, large value data types"
 ---
-
 # Using Large Value Types in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

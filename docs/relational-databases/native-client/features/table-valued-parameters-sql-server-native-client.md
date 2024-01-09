@@ -11,7 +11,6 @@ helpviewer_keywords:
   - "SQL Server Native Client, table-valued parameters"
   - "table-valued parameters (SQL Server Native Client)"
 ---
-
 # Table-Valued Parameters (SQL Server Native Client)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

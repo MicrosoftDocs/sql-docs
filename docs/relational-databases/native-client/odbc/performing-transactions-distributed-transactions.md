@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "transactions [ODBC]"
   - "ODBC, transactions"
 ---
-
 # Create a distributed transaction
 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

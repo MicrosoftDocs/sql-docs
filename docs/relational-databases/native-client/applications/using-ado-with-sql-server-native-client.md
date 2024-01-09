@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "ADO [SQL Server Native Client]"
   - "SQLNCLI, ADO"
 ---
-
 # Using ADO with SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

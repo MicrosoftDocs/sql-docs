@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "stored procedures [OLE DB], calling"
   - "SQL Server Native Client OLE DB provider, stored procedures"
 ---
-
 # Stored Procedures - Calling in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

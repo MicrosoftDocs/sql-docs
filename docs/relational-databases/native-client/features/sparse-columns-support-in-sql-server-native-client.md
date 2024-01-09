@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "sparse columns, SQL Server Native Client"
   - "sparse columns, OLE DB"
 ---
-
 # Sparse Columns Support in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

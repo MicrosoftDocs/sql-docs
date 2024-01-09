@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider"
   - "SQL Server Native Client, OLE DB"
 ---
-
 # SQL Server Native Client (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

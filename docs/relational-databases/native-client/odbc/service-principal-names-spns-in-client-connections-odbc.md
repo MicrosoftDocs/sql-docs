@@ -8,7 +8,6 @@ ms.service: sql
 ms.subservice: native-client
 ms.topic: "reference"
 ---
-
 # Service Principal Names (SPNs) in Client Connections (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

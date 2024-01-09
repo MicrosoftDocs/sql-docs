@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "transactions [ODBC]"
   - "ODBC, transactions"
 ---
-
 # Performing Transactions in ODBC
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

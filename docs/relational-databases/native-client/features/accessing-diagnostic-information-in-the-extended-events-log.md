@@ -7,7 +7,6 @@ ms.date: 03/14/2017
 ms.service: sql
 ms.subservice: native-client
 ms.topic: "reference"
-
 ---
 # Accessing SQL Server Native Client Diagnostic Information in the Extended Events Log
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

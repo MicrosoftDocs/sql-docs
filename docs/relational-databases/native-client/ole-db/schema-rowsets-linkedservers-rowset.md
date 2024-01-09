@@ -11,7 +11,6 @@ helpviewer_keywords:
   - "LINKEDSERVERS rowset"
   - "enumerating data sources [OLE DB]"
 ---
-
 # Schema Rowsets - LINKEDSERVERS Rowset in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

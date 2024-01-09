@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "catalog functions [ODBC]"
   - "functions [ODBC]"
 ---
-
 # Using Catalog Functions
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

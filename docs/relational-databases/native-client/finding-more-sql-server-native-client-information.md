@@ -11,7 +11,6 @@ helpviewer_keywords:
   - "SQLNCLI, additional resources"
   - "SQL Server Native Client, additional resources"
 ---
-
 # Finding More SQL Server Native Client Information
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

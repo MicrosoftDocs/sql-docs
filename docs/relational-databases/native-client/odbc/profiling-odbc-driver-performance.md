@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "SQLPERF data structure"
   - "statistical information [ODBC]"
 ---
-
 # Profiling ODBC Driver Performance
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

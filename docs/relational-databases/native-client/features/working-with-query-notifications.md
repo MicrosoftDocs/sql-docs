@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, query notifications"
   - "consumer notification for rowset changes [SQL Server Native Client]"
 ---
-
 # Working with Query Notifications
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
 

@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "concurrency [SQL Server Native Client]"
   - "SQLSetConnectAttr function"
 ---
-
 # Working with Snapshot Isolation in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

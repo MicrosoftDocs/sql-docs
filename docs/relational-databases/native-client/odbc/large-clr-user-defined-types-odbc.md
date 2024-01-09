@@ -11,7 +11,6 @@ helpviewer_keywords:
   - "ODBC, large user-defined types"
   - "large user-defined types [ODBC]"
 ---
-
 # Large CLR User-Defined Types (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

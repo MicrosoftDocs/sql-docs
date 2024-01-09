@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, database mirroring"
   - "SQL Server Native Client OLE DB provider, database mirroring"
 ---
-
 # Using Database Mirroring in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

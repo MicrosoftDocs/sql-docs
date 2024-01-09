@@ -10,7 +10,6 @@ ms.topic: "reference"
 helpviewer_keywords:
   - "large CLR user-defined types"
 ---
-
 # Large CLR User-Defined Types in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "SQL Server Native Client, system requirements"
   - "SQLNCLI, system requirements"
 ---
-
 # System Requirements for SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "data access [SQL Server Native Client], vs. MDAC"
   - "SQL Server Native Client, updating applications"
 ---
-
 # Updating an Application to SQL Server Native Client from MDAC
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

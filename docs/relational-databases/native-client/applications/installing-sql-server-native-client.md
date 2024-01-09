@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "data access [SQL Server Native Client], installing SQL Server Native Client"
   - "removing SQL Server Native Client"
 ---
-
 # Installing SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

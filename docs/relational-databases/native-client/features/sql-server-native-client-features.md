@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "SQLNCLI, about SQL Server Native Client"
   - "data access [SQL Server Native Client], features"
 ---
-
 # SQL Server Native Client Features
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

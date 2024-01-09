@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "SQL Server Native Client, ODBC"
   - "ODBC, about SQL Server Native Client ODBC driver"
 ---
-
 # SQL Server Native Client (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

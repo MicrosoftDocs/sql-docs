@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "SQLNCLI"
   - "native data access [SQL Server Native Client]"
 ---
-
 # SQL Server Native Client Programming
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

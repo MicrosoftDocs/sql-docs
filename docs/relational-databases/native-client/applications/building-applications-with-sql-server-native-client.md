@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "applications [SQL Server Native Client]"
   - "SQL Server Native Client, building applications"
 ---
-
 # Building Applications with SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

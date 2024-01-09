@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "OLE DB, stored procedures"
   - "SQL Server Native Client OLE DB provider, stored procedures"
 ---
-
 # Stored Procedures - Running in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

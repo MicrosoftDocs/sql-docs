@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "components [SQL Server Native Client]"
   - "SQLNCLI, about SQL Server Native Client"
 ---
-
 # Components of SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

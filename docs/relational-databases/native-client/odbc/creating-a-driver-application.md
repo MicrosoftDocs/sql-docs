@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "ODBC, driver extensions"
   - "function calls [ODBC]"
 ---
-
 # Creating a Driver Application
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

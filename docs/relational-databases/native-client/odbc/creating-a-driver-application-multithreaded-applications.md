@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, multithreaded applications"
   - "multithreaded applications [SQL Server Native Client]"
 ---
-
 # Creating a Driver Application - Multithreaded Applications
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

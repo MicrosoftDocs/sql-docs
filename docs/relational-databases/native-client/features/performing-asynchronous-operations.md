@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "SQLNCLI, asynchronous operations"
   - "SQL Server Native Client, asynchronous operations"
 ---
-
 # Performing Asynchronous Operations in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

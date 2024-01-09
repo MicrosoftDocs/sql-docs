@@ -123,7 +123,7 @@ The issue will be intermittent is that only the server who created the SQL Agent
   
 5.  Configure the **Web Portal URL**. Do not test the URL yet or try to verify the deployment. The report server will be unavailable until the report server is joined to the scale-out deployment.  
   
-## To join the second report server  to the scale-out deployment  
+## To join the second report server instance to the scale-out deployment  
   
 1.  Open the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool, and reconnect to the first report server instance. The first report server is already initialized for reversible encryption operations, so it can be used to join additional report server instances to the scale-out deployment.  
   

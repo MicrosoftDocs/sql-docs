@@ -1,6 +1,6 @@
 ---
-title: "RemoveSSLCertificateBindings Method (WMI MSReportServer_ConfigurationSetting)"
-description: "RemoveSSLCertificateBindings Method (WMI MSReportServer_ConfigurationSetting)"
+title: "RemoveSSLCertificateBindings method (WMI MSReportServer_ConfigurationSetting)"
+description: "RemoveSSLCertificateBindings method (WMI MSReportServer_ConfigurationSetting)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -11,7 +11,7 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "RemoveSSLCertificateBindings method"
 ---
-# ConfigurationSetting Method - RemoveSSLCertificateBinding
+# ConfigurationSetting method - RemoveSSLCertificateBinding
   Removes a TLS/SSL Certificate binding.  
   
 ## Syntax  
@@ -51,16 +51,16 @@ public void RemoveSSLCertificateBindings(string Application,
  *HRESULT*  
  [out] Value indicating whether the call succeeded or failed.  
   
-## Return Value  
- Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful; an error code indicates the call was not successful.  
+## Return value  
+ Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. An error code indicates the call wasn't successful.  
   
 ## Remarks  
- This method removes the specific binding from the rsreportserver.config file and optionally HTTP.SYS.  
+ This method removes the specific binding from the `rsreportserver.config` file and optionally `HTTP.SYS`.  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

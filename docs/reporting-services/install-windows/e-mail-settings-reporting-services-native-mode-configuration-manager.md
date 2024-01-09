@@ -1,6 +1,6 @@
 ---
 title: "E-Mail Settings in SSRS Native mode (Configuration Manager)"
-description: "SQL ServerReporting Services includes an e-mail delivery extension so that you can distribute reports through e-mail."
+description: "SQL Server Reporting Services includes an e-mail delivery extension so that you can distribute reports through e-mail."
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 12/04/2019

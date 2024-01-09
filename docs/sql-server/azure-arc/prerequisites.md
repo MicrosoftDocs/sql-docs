@@ -31,7 +31,7 @@ Before you can Arc-enable an instance of [!INCLUDE [ssnoversion-md](../../includ
 
 ### Permissions
 
-To [Connect SQL Servers on Azure Arc-enabled servers at scale using Azure policy](connect-at-scale-policy.md):
+To [Connect SQL Server instances on Azure Arc-enabled servers at scale using Azure policy](connect-at-scale-policy.md):
 
 - The service principal requires read permission on the subscription.
 

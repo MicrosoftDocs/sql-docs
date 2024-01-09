@@ -4,7 +4,7 @@ description: Release notes for Microsoft SqlPackage.
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: "llali"
-ms.date: 1/10/2024
+ms.date: 1/9/2024
 ms.service: sql
 ms.topic: conceptual
 ms.custom: tools|sos
@@ -15,20 +15,20 @@ ms.custom: tools|sos
 
 This article lists the features and fixes delivered by the released versions of SqlPackage.
 
-## 162.1.168 SqlPackage
+## 162.1.172 SqlPackage
 
-**Release date:** January 10, 2024
+**Release date:** January 9, 2024
 
 ```bash
-dotnet tool install -g microsoft.sqlpackage --version 162.1.168
+dotnet tool install -g microsoft.sqlpackage --version 162.1.172
 ```
 
 |Platform|Download|
 |:---|:---|
-|Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2249738)|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2249478)|
-|macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2249674)|
-|Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2249739)|
+|Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2257374)|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2257373)|
+|macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2257375)|
+|Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2257477)|
 
 ### Fixes
 | Feature | Details |

@@ -4,7 +4,7 @@ description: "Download and Install SqlPackage for Windows, macOS, or Linux"
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
-ms.date: 1/10/2024
+ms.date: 1/9/2024
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
@@ -17,9 +17,9 @@ ms.custom:
 
 SqlPackage runs on Windows, macOS, and Linux, and is available to install through `dotnet tool` or as a standalone zip download.
 
-- **Version number:** 162.1.168
-- **Build number:** 162.1.168
-- **Release date:** January 10, 2024
+- **Version number:** 162.1.172
+- **Build number:** 162.1.172.1
+- **Release date:** January 9, 2024
 
 For details about the latest release, see the [release notes](release-notes-sqlpackage.md).
 
@@ -58,10 +58,10 @@ To uninstall SqlPackage, run the following command:
 
 |Platform|Download|
 |:---|:---|
-|Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2249738)|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2249478)|
-|macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2249674)|
-|Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2249739)|
+|Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2257374)|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2257373)|
+|macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2257375)|
+|Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2257477)|
 
 
 ### Linux
@@ -162,7 +162,7 @@ Evergreen links are available for downloading the latest Sqlpackage versions:
 
 ## DacFx
 
-SqlPackage is a command-line interface for the DacFx framework, exposing some of the public DacFx APIs. DacServices ([Microsoft.SqlServer.Dac](/dotnet/api/microsoft.sqlserver.dac.dacservices)) is a related mechanism for integrating database deployment into your application pipeline.  The DacServices API is available in a package through NuGet, [Microsoft.SqlServer.DacFx](https://www.NuGet.org/packages/Microsoft.SqlServer.DacFx).  The current DacFx version is 162.1.168.1.
+SqlPackage is a command-line interface for the DacFx framework, exposing some of the public DacFx APIs. DacServices ([Microsoft.SqlServer.Dac](/dotnet/api/microsoft.sqlserver.dac.dacservices)) is a related mechanism for integrating database deployment into your application pipeline.  The DacServices API is available in a package through NuGet, [Microsoft.SqlServer.DacFx](https://www.NuGet.org/packages/Microsoft.SqlServer.DacFx).  The current DacFx version is 162.1.172.1.
 
 Adding the NuGet package to a .NET project is accomplished via the .NET CLI with this command:
 
@@ -209,16 +209,16 @@ SqlPackage runs on Windows, macOS, and Linux and is built using .NET 6.  The [.N
 This release of SqlPackage can be installed in the following languages:
 
 SqlPackage .NET 6 Windows:  
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2249738&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2249738&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2249738&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2249738&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2249738&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2249738&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2249738&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2249738&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2249738&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2249738&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2249738&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2257374&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2257374&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2257374&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2257374&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2257374&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2257374&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2257374&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2257374&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2257374&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2257374&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2257374&clcid=0x40a)
 
 SqlPackage .NET Framework Windows:  
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2249478&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2249478&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2249478&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2249478&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2249478&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2249478&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2249478&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2249478&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2249478&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2249478&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2249478&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2257373&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2257373&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2257373&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2257373&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2257373&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2257373&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2257373&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2257373&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2257373&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2257373&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2257373&clcid=0x40a)
 
 SqlPackage .NET 6 macOS:  
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2249674&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2249674&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2249674&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2249674&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2249674&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2249674&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2249674&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2249674&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2249674&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2249674&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2249674&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2257375&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2257375&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2257375&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2257375&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2257375&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2257375&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2257375&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2257375&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2257375&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2257375&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2257375&clcid=0x40a)
 
 SqlPackage .NET 6 Linux:  
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2249739&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2249739&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2249739&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2249739&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2249739&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2249739&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2249739&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2249739&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2249739&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2249739&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2249739&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2257477&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2257477&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2257477&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2257477&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2257477&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2257477&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2257477&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2257477&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2257477&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2257477&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2257477&clcid=0x40a)
 
 
 ## Next Steps

@@ -458,7 +458,7 @@ For a note about the minimum permission levels needed for each action in this se
      > [!IMPORTANT]  
      > Be sure to remove the hyphens from the App (Client) ID.
 
-   - Complete the second part of the `SECRET` argument with **Client Secret** from [Step 1: Set up a Microsoft Entra service principal](#step-1-set-up-an-azure-ad-service-principal). In this example, the Client Secret is `08:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m`. The final string for the `SECRET` argument will be a long sequence of letters and numbers, without hyphens.
+   - Complete the second part of the `SECRET` argument with **Client Secret** from [Step 1: Set up a Microsoft Entra service principal](#step-1-set-up-an-azure-ad-service-principal). In this example, the Client Secret is `08:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m`. The final string for the `SECRET` argument will be a long sequence of letters and numbers, without hyphens (except for the Client Secret section, in case the Client Secret contains any hyphens).
 
      ```sql
      USE master;

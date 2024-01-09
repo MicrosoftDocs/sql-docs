@@ -5,7 +5,7 @@ description: An overview of transparent data encryption for Azure SQL Database, 
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 10/10/2023
+ms.date: 01/09/2024
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
@@ -19,8 +19,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 > [!NOTE]
 > This article applies to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics (dedicated SQL pools (formerly SQL DW)). For documentation on Transparent Data Encryption for dedicated SQL pools inside Synapse workspaces, see [Azure Synapse Analytics encryption](/azure/synapse-analytics/security/workspaces-encryption).
-
-> [!NOTE]
+>
 > Some items considered customer content, such as table names, object names, and index names, may be transmitted in log files for support and troubleshooting by Microsoft.
 
 TDE performs real-time I/O encryption and decryption of the data at the page level. Each page is decrypted when it's read into memory and then encrypted before being written to disk. TDE encrypts the storage of an entire database by using a symmetric key called the Database Encryption Key (DEK). On database startup, the encrypted DEK is decrypted and then used for decryption and re-encryption of the database files in the SQL Server database engine process. DEK is protected by the TDE protector. TDE protector is either a service-managed certificate (service-managed transparent data encryption) or an asymmetric key stored in [Azure Key Vault](/azure/key-vault/general/security-features) (customer-managed transparent data encryption).
@@ -28,10 +27,10 @@ TDE performs real-time I/O encryption and decryption of the data at the page lev
 For Azure SQL Database and Azure Synapse, the TDE protector is set at the [server](logical-servers.md) level and is inherited by all databases associated with that server. For Azure SQL Managed Instance, the TDE protector is set at the instance level and inherited by all encrypted databases on that instance. The term *server* refers both to server and instance throughout this document, unless stated differently.
 
 > [!IMPORTANT]
-> All newly created databases in SQL Database are encrypted by default by using service-managed transparent data encryption. Existing SQL databases created before May 2017 and SQL databases created through restore, geo-replication, and database copy are not encrypted by default. Existing SQL Managed Instance databases created before February 2019 are not encrypted by default. SQL Managed Instance databases created through restore inherit encryption status from the source. To restore an existing TDE-encrypted database, the required TDE certificate must first be [imported](../managed-instance/tde-certificate-migrate.md) into the SQL Managed Instance.
+> All newly created SQL databases are encrypted by default by using service-managed transparent data encryption. When the database source is encrypted, the target databases created through **restore**, **geo-replication**, and **database copy** are encrypted by default. However, when the database source is not encrypted, the target databases created through **restore**, **geo-replication**, and **database copy** are not encrypted by default. Existing SQL databases created before May 2017 and existing SQL Managed Instance database created before February 2019 are not encrypted by default. SQL Managed Instance databases created through restore inherit encryption status from the source. To restore an existing TDE-encrypted database, the required TDE certificate must first be [imported](../managed-instance/tde-certificate-migrate.md) into the SQL Managed Instance. To find out the encryption status for a database, execute a select query from the [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) DMV and check the status of the `encryption_state_desc` column.
 
 > [!NOTE]
-> TDE cannot be used to encrypt system databases, such as the `master` database, in Azure SQL Database and Azure SQL Managed Instance. The `master` database contains objects that are needed to perform TDE operations on user databases. It is recommended not to store any sensitive data in system databases.  The exception is `tempdb`, which is always encrypted with TDE to protect the data stored there.
+> TDE cannot be used to encrypt system databases, such as the `master` database, in SQL Database and SQL Managed Instance. The `master` database contains objects that are needed to perform TDE operations on user databases. It is recommended not to store any sensitive data in system databases.  The exception is `tempdb`, which is always encrypted with TDE to protect the data stored there.
 
 ## Service-managed transparent data encryption
 

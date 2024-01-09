@@ -1,6 +1,6 @@
 ---
 title: "BackupEncryptionKey method (WMI MSReportServer_ConfigurationSetting)"
-description: "BackupEncryptionKey Method (WMI MSReportServer_ConfigurationSetting)"
+description: "BackupEncryptionKey method (WMI MSReportServer_ConfigurationSetting)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017

@@ -1,6 +1,6 @@
 ---
 title: "GenerateDatabaseRightsScript method (WMI MSReportServer_ConfigurationSetting)"
-description: "GenerateDatabaseRightsScript Method (WMI MSReportServer_ConfigurationSetting)"
+description: "GenerateDatabaseRightsScript method (WMI MSReportServer_ConfigurationSetting)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/14/2017
@@ -45,10 +45,10 @@ out Int32 HRESULT);
  A Boolean value indicating whether the specified user name is a Windows user or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user.  
   
  *Script*  
- `[out]` A string containing the generated [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] script.  
+ [out] A string containing the generated [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] script.  
   
  *HRESULT*  
- `[out]` Value indicating whether the call succeeded or failed.  
+ [out] Value indicating whether the call succeeded or failed.  
   
 ## Return value  
  Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A nonzero value indicates that an error occurred.  

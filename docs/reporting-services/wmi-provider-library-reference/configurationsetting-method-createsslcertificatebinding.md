@@ -1,6 +1,6 @@
 ---
 title: "CreateSSLCertificateBinding method (WMI MSReportServer_ConfigurationSetting)"
-description: "CreateSSLCertificateBinding Method (WMI MSReportServer_ConfigurationSetting)"
+description: "CreateSSLCertificateBinding method (WMI MSReportServer_ConfigurationSetting)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017

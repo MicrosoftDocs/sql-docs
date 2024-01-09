@@ -1,6 +1,6 @@
 ---
 title: "ConfigurationSetting method - GenerateDatabaseCreationScript"
-description: "ConfigurationSetting Method - GenerateDatabaseCreationScript"
+description: "ConfigurationSetting method - GenerateDatabaseCreationScript"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/14/2017

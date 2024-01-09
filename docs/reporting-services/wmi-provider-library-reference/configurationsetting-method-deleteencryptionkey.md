@@ -1,6 +1,6 @@
 ---
 title: "DeleteEncryptionKey method (WMI MSReportServer_ConfigurationSetting)"
-description: "DeleteEncryptionKey Method (WMI MSReportServer_ConfigurationSetting)"
+description: "DeleteEncryptionKey method (WMI MSReportServer_ConfigurationSetting)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017

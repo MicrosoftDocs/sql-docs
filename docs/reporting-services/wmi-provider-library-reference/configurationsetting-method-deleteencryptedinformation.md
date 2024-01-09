@@ -1,6 +1,6 @@
 ---
 title: "DeleteEncryptedInformation method (WMI MSReportServer_ConfigurationSetting)"
-description: "DeleteEncryptedInformation Method (WMI MSReportServer_ConfigurationSetting)"
+description: "DeleteEncryptedInformation method (WMI MSReportServer_ConfigurationSetting)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017

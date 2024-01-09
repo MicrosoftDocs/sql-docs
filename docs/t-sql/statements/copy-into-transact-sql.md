@@ -184,7 +184,7 @@ Multiple file locations can only be specified from the same storage account and 
 - Authenticating with [Managed Identity](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNet Service Endpoints)
 
   - *IDENTITY: A constant with a value of 'Managed Identity'*
-  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Azure AD registered SQL Database server
+  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Azure AD registered SQL Database server. When using a dedicated SQL pool (formerly SQL DW) that is not associated with a Synapse Workspace this RBAC role is not required, but the managed identity requires Access Control List (ACL) permissions on the target objects to enable read access to the source files
 
 - Authenticating with an Azure AD user
 

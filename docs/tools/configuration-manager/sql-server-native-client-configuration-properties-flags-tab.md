@@ -24,9 +24,9 @@ monikerRange: ">=sql-server-2016"
  Request a connection using TLS.  
   
  **Trust Server Certificate**  
- When set to **No**, the client process attempts to validate the server certificate. The client and server must have each have a certificate issued from a public certification authority. If the certificate is not present on the client computer, or if the validation of the certificate fails, the connection is terminated.  
+ When set to **No**, the client process attempts to validate the server certificate. The client and server must each have a certificate issued from a public certification authority. If the certificate is not present on the client computer, or if the validation of the certificate fails, the connection is terminated.  
   
- When set to **Yes**, the client does not validate the server certificate, thereby enabling the use of a self-signed certificate.  
+ When set to **Yes**, the client does not validate the server certificate, enabling the use of a self-signed certificate.  
   
  **Trust Server Certificate** is only available if **Force protocol encryption** is set to **Yes**.  
   

@@ -4,11 +4,11 @@ description: "PolyBase features available for SQL Server products and services, 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 01/03/2024
+ms.date: 01/09/2024
 ms.service: sql
 ms.subservice: polybase
 ms.topic: conceptual
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PolyBase features and limitations
 
@@ -60,6 +60,8 @@ PolyBase has the following limitations:
 - UTF-8 collations aren't supported for Hadoop external data sources.
 
 - Hadoop is no longer supported in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions.
+
+- PolyBase scale-out groups are not supported with Always On availability groups.
 
 <!--SQL Server 2016-->
 ::: moniker range="= sql-server-2016 "

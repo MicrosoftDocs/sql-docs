@@ -600,7 +600,7 @@ Microsoft JDBC Driver 8.4 for SQL Server is now compatible with Java Development
 
 | DNS Caching | Details |
 | :------------------- | :------ |
-| Microsoft JDBC Driver 8.4 for SQL Server now supports DNS caching against Azure SQL Servers. | &nbsp; |
+| Microsoft JDBC Driver 8.4 for SQL Server now supports DNS caching against SQL Server on Azure VMs. | &nbsp; |
 
 ### Added backwards compatibility for streaming LOB objects
 

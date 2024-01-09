@@ -13,7 +13,7 @@ ms.custom: sqldbrb=1
 # Tutorial: Secure with Microsoft Entra logins - Azure SQL Managed Instance 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-In this article, learn to use server principals (logins) backed by Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) to secure an [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md).
+In this article, learn to use server principals (logins) backed by Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) to secure an [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md).
 
 
 In this tutorial, you learn how to:

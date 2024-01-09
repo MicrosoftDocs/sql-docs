@@ -557,6 +557,9 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   The Always On Availability Groups feature is a high-availability and disaster-recovery solution that provides an enterprise-level alternative to database mirroring. An availability group supports a failover environment for a discrete set of user databases, known as availability databases, that fail over together. For more information,  see [Always On Availability Groups](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
  In order to provide the high-availability for the SSIS catalog (SSISDB) and its contents (projects, packages, execution logs, etc.), you can add the SSISDB database (just the same as any other user database) to an Always On Availability Group. When a failover occurs, one of the secondary nodes automatically becomes the new primary node.  
+
+ > [!NOTE]
+ > Contained availability groups, which were introduced in SQL Server 2022, are not supported yet. 
  
  > [!IMPORTANT]
  > When a failover occurs, packages that were running do not restart or resume. 

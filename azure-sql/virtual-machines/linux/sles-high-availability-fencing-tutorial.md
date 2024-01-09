@@ -592,7 +592,7 @@ Description    : A set of scripts to interface with several services
 
 ### <a id="register-new-application-in-azure-active-directory"></a> Register new application in Microsoft Entra ID
 
-To register a new application in Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)), follow these steps:
+To register a new application in Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)), follow these steps:
 
 1. Go to <https://portal.azure.com>.
 1. Open the [Microsoft Entra ID Properties pane](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties) and write down the `Tenant ID`.

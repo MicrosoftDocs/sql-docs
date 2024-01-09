@@ -93,6 +93,7 @@ Consider the following limitations:
   - Have an ongoing [management operation](management-operations-overview.md) (such as an ongoing restore, vCore scaling, and so on)
   - Are part of a [failover group](failover-group-sql-mi.md)
   - Use the [Managed Instance link](managed-instance-link-feature-overview.md)
+  - Have zone redundancy enabled
 - While a managed instance is in a stopped state, it's not possible to change its configuration properties. To change any properties, you must start the instance.
 - While the instance is in a stopped state, it's not possible to take backups. For example, let's say that you have [long-term backups](long-term-backup-retention-configure.md) configured, with yearly backups in place. If you stop the instance during the defined yearly backup period, the backup is skipped. We recommend that you keep the instance up and running during the yearly backup period.
 - It's not possible to cancel the stop or start operation after it's been initiated.

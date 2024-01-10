@@ -1,6 +1,6 @@
 ---
 title: "Tutorial: Configure Transactional Replication"
-description: This tutorial teaches you how to configure Transactional Replication between two fully connected SQL Servers.
+description: This tutorial teaches you how to configure Transactional Replication between two fully connected SQL Server instances.
 author: "MashaMSFT"
 ms.author: "mathoma"
 ms.date: "03/14/2017"

@@ -28,7 +28,6 @@ This article provides an overview of the business continuity and disaster recove
 
 <br/>
 
-> [!VIDEO https://learn-video.azurefd.net/vod/player?show=data-exposed&ep=azure-sql-db-high-availability-disaster-recovery-overview-data-exposed]
 
 ## Overview
 

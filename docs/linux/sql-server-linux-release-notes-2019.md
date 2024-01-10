@@ -4,17 +4,18 @@ description: This article contains the release notes and supported features for 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 12/14/2023
+ms.date: 01/09/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: linux-related-content
+ms.custom:
+  - linux-related-content
 ---
 # Release notes for SQL Server 2019 on Linux
 
 [!INCLUDE [sqlserver2019-linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
-The following release notes apply to [!INCLUDE [ssSQL19](../includes/sssql19-md.md)] running on Linux. This article is broken into sections for each release. For detailed supportability and known issues, see [Known issues](#known-issues). Each release links to a support article describing the changes, in addition to the Linux package downloads.
+The following release notes apply to [!INCLUDE [ssSQL19](../includes/sssql19-md.md)] running on Linux. This article is broken into sections for each release. For detailed supportability and known issues, see [SQL Server on Linux: Known issues](sql-server-linux-known-issues.md). Each release links to a support article describing the changes, in addition to the Linux package downloads.
 
 These release notes are specifically for [!INCLUDE [ssSQL19](../includes/sssql19-md.md)] releases. For release notes on other editions, see the following articles:
 
@@ -27,7 +28,7 @@ These release notes are specifically for [!INCLUDE [ssSQL19](../includes/sssql19
 
 ## Tools
 
-Most existing client tools that target [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] can seamlessly target [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] running on Linux. Some tools might have a specific version requirement to work well with Linux. For a full list of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] tools, see [SQL Tools and Utilities for SQL Server](../tools/overview-sql-tools.md).
+Most existing client tools that target [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] can seamlessly target [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] running on Linux. Some tools might have a specific version requirement to work well with Linux. For a full list of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] tools, see [SQL tools overview](../tools/overview-sql-tools.md).
 
 ## Latest versions for all packages
 
@@ -37,7 +38,7 @@ This section lists the latest versions of each package per distribution, for [!I
 | --- | --- | --- | --- | --- |
 | [!INCLUDE [ssSQL19](../includes/sssql19-md.md)] | CU 24 | 2023-12-14 | 15.0.4345.5 | [Support article](/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate24) |
 
-- The **mssql-server-is** package isn't supported on SUSE in this release. For more information, see [SQL Server Integration Services (SSIS)](#ssis).
+- The **mssql-server-is** package isn't supported on SUSE in this release. For more information, see [SQL Server on Linux: Known issues](sql-server-linux-known-issues.md#sql-server-integration-services-ssis).
 
 | Distribution | Package name | Package version | Download |
 | --- | --- | --- | --- |
@@ -67,7 +68,7 @@ This section lists the latest versions of each package per distribution, for [!I
 
 ## <a id="cuinstall"></a> How to install updates
 
-When you configure the CU repository (`mssql-server-2019`), you get the latest CU of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] packages when you perform new installations. If you require Docker container images, see official images for [Microsoft SQL Server on Linux for Docker Engine](https://hub.docker.com/r/microsoft/mssql-server/). For more information about repository configuration, see [Configure repositories for installing and upgrading SQL Server on Linux](sql-server-linux-change-repo.md).
+When you configure the CU repository (`mssql-server-2019`), you get the latest CU of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] packages when you perform new installations. If you require Docker container images, see official images for [Microsoft SQL Server on Linux for Docker Engine](https://hub.docker.com/_/microsoft-mssql-server). For more information about repository configuration, see [Configure repositories for installing and upgrading SQL Server on Linux](sql-server-linux-change-repo.md).
 
 If you update existing [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] packages, run the appropriate update command for each package to get the latest CU. For specific update instructions for each package, see the following installation guides:
 
@@ -117,7 +118,7 @@ The following table lists the release history for [!INCLUDE [ssSQL19](../include
 
 ## Known issues
 
-[!INCLUDE [linux-known-issues-2019](includes/linux-known-issues-2019.md)]
+For more information, see [SQL Server on Linux: Known issues](sql-server-linux-known-issues.md).
 
 ## Related content
 

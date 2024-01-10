@@ -37,7 +37,7 @@ Similar to the query experience in SQL Server Management Studio, use the Query e
 
 ## Connect via the query editor
 
-There are two authentication options for query editor: SQL authentication or authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)).
+There are two authentication options for query editor: SQL authentication or authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)).
 
 ### Authentication to Azure SQL Database
 

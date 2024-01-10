@@ -225,7 +225,7 @@ Remove-AzSqlDatabaseSecondary @parameters
 
 ## Cross-subscription geo-replication
 
-Use Transact-SQL (T-SQL) create a geo-secondary in a subscription different from the subscription of the primary (whether under the same tenant of Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) or not), follow the steps in this section.
+Use Transact-SQL (T-SQL) create a geo-secondary in a subscription different from the subscription of the primary (whether under the same tenant of Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) or not), follow the steps in this section.
 
 1. Add the IP address of the client machine executing the T-SQL commands in this example, to the server firewalls of **both** the primary and secondary servers. You can confirm that IP address by executing the following query while connected to the primary server from the same client machine.
   

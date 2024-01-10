@@ -9,7 +9,6 @@ ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords:
   - "data sources [ODBC]"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configuring the SQL Server ODBC Driver - Delete a Data Source
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

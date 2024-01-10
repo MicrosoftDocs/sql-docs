@@ -29,7 +29,7 @@ This article discusses Microsoft Entra ID for the following list of *SQL* produc
 - [Azure SQL Database](/azure/azure-sql/database/sql-database-paas-overview)
 - [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview)
 - [SQL Server on Azure VMs](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview)
-- [SQL Server enabled by Azure Arc](/sql/sql-server/azure-arc/overview)
+- [SQL Server enabled by Azure Arc](../sql-server/azure-arc/overview.md)
 - [Azure Synapse Analytics](/azure/synapse-analytics/overview-what-is)
 
 ## Microsoft Entra password authentication

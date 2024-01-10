@@ -41,7 +41,7 @@ You can create your credential by using a managed identity or a shared access si
 
 ### [Managed identity](#tab/managed-identity)
 
-A *managed identity* is a feature of Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) that provides instances of Azure services, such as Azure SQL Managed Instance, with an automatically managed identity in Microsoft Entra ID, the system-assigned managed identity. 
+A *managed identity* is a feature of Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) that provides instances of Azure services, such as Azure SQL Managed Instance, with an automatically managed identity in Microsoft Entra ID, the system-assigned managed identity. 
 
 You can use this identity to authorize requests for data access to other Azure resources, including storage accounts. Services such as Azure SQL Managed Instance have a system assigned managed identity, and can also have one or more [user-assigned managed identities](authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md). You can use either system-assigned managed identities or user-assigned managed identities to authorize the requests.
 

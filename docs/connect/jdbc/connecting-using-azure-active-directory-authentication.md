@@ -357,7 +357,7 @@ To build and run the example:
 1. Locate the following lines of code. Replace user name with the name of the Microsoft Entra user that you want to connect as.
 
     ```java
-    ds.setUser("bob@cqclinic.onmicrosoft.com"); // replace with your user name
+    ds.setUser("bob@example.com"); // replace with your user name
     ds.setPassword("password");     // replace with your password
     ```
 
@@ -377,7 +377,7 @@ public class MSEntraUserPassword {
         SQLServerDataSource ds = new SQLServerDataSource();
         ds.setServerName("msentra-managed-demo.database.windows.net"); // Replace with your server name
         ds.setDatabaseName("demo"); // Replace with your database
-        ds.setUser("bob@cqclinic.onmicrosoft.com"); // Replace with your user name
+        ds.setUser("bob@example.com"); // Replace with your user name
         ds.setPassword("password"); // Replace with your password
         ds.setAuthentication("ActiveDirectoryPassword");
 
@@ -416,7 +416,7 @@ To build and run the example:
 1. Locate the following lines of code. Replace user name with the name of the Microsoft Entra user that you want to connect as.
 
     ```java
-    ds.setUser("bob@cqclinic.onmicrosoft.com"); // replace with your user name
+    ds.setUser("bob@example.com"); // replace with your user name
     ```
 
 The example to use `ActiveDirectoryInteractive` authentication mode:
@@ -437,7 +437,7 @@ public class MSEntraInteractive {
         ds.setAuthentication("ActiveDirectoryInteractive");
 
         // Optional login hint
-        ds.setUser("bob@cqclinic.onmicrosoft.com"); // Replace with your user name
+        ds.setUser("bob@example.com"); // Replace with your user name
 
         try (Connection connection = ds.getConnection();
                 Statement stmt = connection.createStatement();

@@ -17,7 +17,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 [!INCLUDE[appliesto-sqldb-sqlmi-asa-dedicated-only](../includes/appliesto-sqldb-sqlmi-asa-dedicated-only.md)]
 
 
-This article guides you through creating and utilizing [logins](authentication-azure-ad-logins.md) backed by Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) within the virtual `master` database of Azure SQL.
+This article guides you through creating and utilizing [logins](authentication-azure-ad-logins.md) backed by Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) within the virtual `master` database of Azure SQL.
 
 In this tutorial, you learn how to:
 

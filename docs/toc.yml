@@ -10105,6 +10105,8 @@ items:
         href: linux/sql-server-linux-editions-and-components-2017.md
     - name: FAQ
       href: linux/sql-server-linux-faq.yml
+    - name: Known issues
+      href: linux/sql-server-linux-known-issues.md
   - name: Quickstarts
     items:
     - name: Install and connect (Red Hat)

@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "OLE DB"
   - "SQL Server Native Client OLE DB provider"
   - "SQL Server Native Client, OLE DB"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Native Client (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

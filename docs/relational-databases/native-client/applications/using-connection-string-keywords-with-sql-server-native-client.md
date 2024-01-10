@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "SQLNCLI, connection string keywords"
   - "connection strings [SQL Server Native Client]"
   - "SQL Server Native Client, connection string keywords"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Connection String Keywords with SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

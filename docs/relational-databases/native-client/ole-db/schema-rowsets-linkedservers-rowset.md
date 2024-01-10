@@ -10,7 +10,6 @@ ms.topic: "reference"
 helpviewer_keywords:
   - "LINKEDSERVERS rowset"
   - "enumerating data sources [OLE DB]"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Schema Rowsets - LINKEDSERVERS Rowset in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

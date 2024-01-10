@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "RemoveSSLCertificateBindings method"
 ---
 # ConfigurationSetting method - RemoveSSLCertificateBinding
-  Removes a TLS/SSL Certificate binding.  
+  Removes a TLS/SSL certificate binding.  
   
 ## Syntax  
   

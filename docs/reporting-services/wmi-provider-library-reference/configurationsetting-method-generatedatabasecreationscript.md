@@ -15,7 +15,7 @@ apiname: "GenerateDatabaseCreationScript (WMI MSReportServer_ConfigurationSettin
 apitype: MOFDef
 ---
 # ConfigurationSetting method - GenerateDatabaseCreationScript
-  Generates a SQL Script that can be used to create a report server database.  
+  Generates a SQL script that can be used to create a report server database.  
   
 ## Syntax  
   

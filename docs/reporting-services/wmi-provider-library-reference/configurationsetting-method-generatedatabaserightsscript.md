@@ -15,7 +15,7 @@ apiname: "GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting 
 apitype: MOFDef
 ---
 # ConfigurationSetting method - GenerateDatabaseRightsScript
-  Generates a SQL Script that you can use to grant a user access to the report server database. Additionally, it grants access to other databases required for a report server to run. The caller should connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database server and execute the script.  
+  Generates a SQL script that you can use to grant a user access to the report server database. Additionally, it grants access to other databases required for a report server to run. The caller should connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database server and execute the script.  
   
 ## Syntax  
   

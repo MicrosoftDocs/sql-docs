@@ -57,9 +57,7 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
   
 ## Return value  
  Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A nonzero value indicates that an error occurred.  
-  
-## Remarks  
-  
+    
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   

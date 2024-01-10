@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "CreateSSLCertificateBinding"
 ---
 # ConfigurationSetting method - CreateSSLCertificateBinding
-  Creates a TLS/SSL Certificate binding.  
+  Creates a TLS/SSL certificate binding.  
   
 ## Syntax  
   

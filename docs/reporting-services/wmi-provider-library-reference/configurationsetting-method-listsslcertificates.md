@@ -46,9 +46,7 @@ public void ListSSLCertificates(out string[] CertificateHash,
   
 ## Return value  
  Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. An error code indicates the call wasn't successful.  
-  
-## Remarks  
-  
+    
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   

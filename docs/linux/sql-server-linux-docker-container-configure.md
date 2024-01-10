@@ -38,7 +38,7 @@ Your SQL Server configuration changes and database files are persisted in the co
 
 ### Mount a host directory as data volume
 
-The first option is to mount a directory on your host as a data volume in your container. To do that, use the `docker run` command with the `-v <host directory>:/var/opt/mssql` flag. This allows the data to be restored between container executions.
+The first option is to mount a directory on your host as a data volume in your container. To do that, use the `docker run` command with the `-v <host directory>:/var/opt/mssql` flag, where `<host directory>` is any given path. For instance: `C:\SQL` on Windows, or `~/sqlvolumes` on Linux. This allows the data to be restored between container executions.
 
 > [!NOTE]  
 > Containers for [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] and later versions automatically start up as non-root, while [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] containers start as root by default. For more information on running SQL Server containers as non-root, see [Configure security](sql-server-linux-docker-container-security.md).

@@ -4,7 +4,7 @@ description: Learn details about the changes in SQL Server Reporting Services (S
 author: casualoak
 ms.author: petebro
 ms.reviewer: maggies
-ms.date: 12/04/2023
+ms.date: 01/10/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual

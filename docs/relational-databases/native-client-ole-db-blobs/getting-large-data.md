@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "DBPROP_ACCESSORDER property"
   - "SQL Server Native Client OLE DB provider, BLOBs"
   - "large data, OLE objects"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Getting Large Data from a SQL Server Native Client OLE DB Provider
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

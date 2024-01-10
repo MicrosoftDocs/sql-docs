@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "SQL Server Native Client, library files"
   - "ODBC applications, header files"
   - "SQLNCLI, library files"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using the SQL Server Native Client Header and Library Files
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

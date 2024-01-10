@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "SQLNCLI, encryption"
   - "encryption [SQL Server Native Client]"
   - "SQL Server Native Client, encryption"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Encryption Without Validation in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -3,7 +3,7 @@ title: "Configure a Native Mode Report Server Scale-Out Deployment"
 description: "Configure a Native Mode Report Server Scale-Out Deployment"
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/26/2021
+ms.date: 01/09/2024
 ms.service: reporting-services
 ms.topic: conceptual
 ms.custom: updatefrequency5
@@ -65,6 +65,9 @@ For SQL Server 2016 Reporting Services and earlier, SharePoint mode report serve
 1.  Install a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance on a computer that will host the report server databases. At a minimum, install [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 2.  If necessary, enable the report server for remote connections. Some versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do not enable remote TCP/IP and Named Pipes connections by default. To confirm whether remote connections are allowed, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager and view the network configuration settings of the target instance. If the remote instance is also a named instance, verify that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service is enabled and running on the target server. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser provides the port number that is used to connect to the named instance. 
+
+> [!NOTE]
+> Configurable named instances are not available in SQL Server Reporting Services 2017 and later or Power BI Report Server. SQL Server Reporting Services 2017 and later will always use the instance name **SSRS**. Power BI Report Server will always be the instance name **PBIRS**.
 
 ## Service accounts
 

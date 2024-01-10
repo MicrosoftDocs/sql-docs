@@ -24,7 +24,7 @@ Assessment run time depends on your environment (number of databases, objects, a
 This article provides instructions for using best practices assessment on an instance of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)].
 
 >[!IMPORTANT]
->Best practices assessment is available only for SQL Servers purchased through either [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) or [pay-as-you-go (PAYG)](https://www.microsoft.com/sql-server/sql-server-2022-pricing) licensing options.
+>Best practices assessment is available only for SQL Server instances purchased through either [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) or [pay-as-you-go (PAYG)](https://www.microsoft.com/sql-server/sql-server-2022-pricing) licensing options.
 >
 >For instructions to configure the appropriate license type, review [Manage SQL Server license and billing options](manage-configuration.md).
 
@@ -88,11 +88,11 @@ This article provides instructions for using best practices assessment on an ins
 
 ## Enable best practices assessment at scale using Azure policy
 
-You can automatically enable best practices assessment on multiple Arc-enabled SQL Server instances at scale using an Azure policy definition called *Configure Arc-enabled Servers with SQL Server extension installed to enable or disable SQL best practices assessment.*  This policy definition is not assigned to a scope by default. If you assign this policy definition to a scope of your choice, it enables the SQL best practices assessment on all the Arc-enabled SQL Servers within the defined scope, and auto schedule to every Sunday 12:00 AM local time by default.
+You can automatically enable best practices assessment on multiple Arc-enabled SQL Server instances at scale using an Azure policy definition called *Configure Arc-enabled Servers with SQL Server extension installed to enable or disable SQL best practices assessment.*  This policy definition is not assigned to a scope by default. If you assign this policy definition to a scope of your choice, it enables the SQL best practices assessment on all SQL Server instances enabled for Azure Arc within the defined scope, and auto schedule to every Sunday 12:00 AM local time by default.
 
 
 >[!IMPORTANT]
->The policy enables best practices assessment only for SQL Servers purchased through either [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) or [pay-as-you-go (PAYG)](https://www.microsoft.com/sql-server/sql-server-2022-pricing) licensing options.
+>The policy enables best practices assessment only for SQL Server instances purchased through either [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) or [pay-as-you-go (PAYG)](https://www.microsoft.com/sql-server/sql-server-2022-pricing) licensing options.
 >
 >For instructions to configure the appropriate license type, review [Manage SQL Server license and billing options](manage-configuration.md).
 

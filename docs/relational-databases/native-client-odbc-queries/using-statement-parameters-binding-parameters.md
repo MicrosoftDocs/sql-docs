@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "SQLBindParameter function"
   - "ODBC applications, parameters"
   - "bound parameter markers [SQL Server Native Client]"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Statement Parameters - Binding Parameters
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

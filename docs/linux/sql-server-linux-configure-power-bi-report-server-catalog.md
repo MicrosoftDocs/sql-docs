@@ -116,7 +116,7 @@ This XML file can be edited in any text editor. Remember to make a copy of the f
 This step is required, because [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux only supports SQL and Kerberos authentication.
 
 > [!NOTE]  
-> We only need to include the `RSWindowsKerberos` attribute, but using `RSWindowsNegotiate` is helpful if standardizing PBIRS configuration files across a fleet of servers that support a mixture of Windows and Linux SQL Servers is desired.
+> We only need to include the `RSWindowsKerberos` attribute, but using `RSWindowsNegotiate` is helpful if standardizing PBIRS configuration files across a fleet of servers that support a mixture of Windows and Linux SQL Server instances is desired.
 
 ## PBIRS UI configuration
 

@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 07/06/2023
+ms.date: 01/11/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -250,6 +250,7 @@ ms.topic: include
 | 29001 | 16 | No | To connect to this server you must use SQL Server Management Studio or SQL Server Management Objects (SMO). |
 | 29003 | 16 | No | Invalid parameter combinations. |
 | 29004 | 16 | No | Unknown property specified: %s. |
+| 29105 | 16 | Yes | Failure in channel enable |
 | 29201 | 17 | Yes | Configuration manager enlistment can not initialize communication service to receive enlistment requests |
 | 29202 | 16 | Yes | Configuration manager enlistment is ignoring message from brick \<%d\>. Enlistment protocol version mismatch. Agent version \<%X\>, manager version \<%X\>. |
 | 29203 | 16 | Yes | Configuration manager enlistment denied join of brick \<%d\>. |

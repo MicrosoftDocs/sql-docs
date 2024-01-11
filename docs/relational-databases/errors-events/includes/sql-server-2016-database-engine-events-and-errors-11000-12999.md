@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 07/06/2023
+ms.date: 01/11/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -194,6 +194,7 @@ ms.topic: include
 | 11428 | 16 | No | Column '%.\*ls' cannot be altered online to an XML type that has a schema collection. The operation must be performed offline. |
 | 11429 | 16 | No | The online ALTER COLUMN statement failed for table '%.\*ls' because the table has change tracking enabled or is marked for merge replication. Disable change tracking and merge replication before using online ALTER COLUMN or perform the operation offline. |
 | 11430 | 16 | No | Cannot enable change data capture on column '%.\*ls'. Change data capture is not supported for encrypted columns. |
+| 11556 | 16 | No | The stored procedure 'sp_get_database_scoped_credential' is not available in this edition of SQL Server. |
 | 11601 | 15 | No | %ls statements with a '%.\*ls' option are not allowed. |
 | 11602 | 10 | No | %ls statements are not verified. |
 | 11603 | 15 | No | %ls statements are not allowed at the top level. |

@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 07/06/2023
+ms.date: 01/11/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -80,6 +80,7 @@ ms.topic: include
 | 15097 | 16 | No | The size associated with an extended property cannot be more than 7,500 bytes. |
 | 15098 | 16 | No | The name change cannot be performed because the SID of the new name does not match the old SID of the principal. |
 | 15099 | 16 | No | The MUST_CHANGE option cannot be used when CHECK_EXPIRATION is OFF. |
+| 15100 | 16 | No | Usage: sp_bindefault defaultname, objectname \[, 'futureonly'\] |
 | 15101 | 16 | No | Cannot bind a default to a computed column, a sparse column, or to a column of the following data types: timestamp, varchar(max), nvarchar(max), varbinary(max), xml, or CLR type. |
 | 15102 | 16 | No | Cannot bind a default to an identity column. |
 | 15103 | 16 | No | Cannot bind a default to a column created with or altered to have a default value. |
@@ -168,6 +169,7 @@ ms.topic: include
 | 15197 | 16 | No | There is no text for object '%s'. |
 | 15198 | 16 | No | The name supplied (%s) is not a user, role, or aliased login. |
 | 15199 | 16 | No | The current security context cannot be reverted. Please switch to the original database where '%ls' was called and try it again. |
+| 15200 | 16 | No | There are no remote servers defined. |
 | 15201 | 16 | No | There are no remote logins for the remote server '%s'. |
 | 15202 | 16 | No | There are no remote logins defined. |
 | 15203 | 16 | No | There are no remote logins for '%s'. |
@@ -498,3 +500,4 @@ ms.topic: include
 | 15597 | 10 | No | Warning: use of an IDENTITY column on a table with row-level security can allow information disclosure. |
 | 15598 | 10 | No | Warning: use of an indexed view on a table with row-level security can allow information disclosure. |
 | [15599](../mssqlserver-15599-database-engine-error.md) | 10 | No | Auditing and permissions can't be set on local temporary objects. |
+| 15667 | 16 | No | Reset session context is not allowed when a another batch is active in session. |

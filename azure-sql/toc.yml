@@ -1017,7 +1017,7 @@
           items:
           - name: Configure and fail over a single database
             href: database/scripts/setup-geodr-and-failover-database-powershell.md
-          - name: Configure and fail over a poooled database
+          - name: Configure and fail over a pooled database
             href: database/scripts/setup-geodr-and-failover-elastic-pool-powershell.md
         - name: Configure a failover group
           items: 

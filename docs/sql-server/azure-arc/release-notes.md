@@ -159,7 +159,7 @@ For information, review [Proxy bypass for private endpoints](/azure/azure-arc/se
 ### Additional improvements
 
 - Arc virtual machines on-boarded from AWS use AWS resource name rather than host computer name. Fix allows customers to provide a name when onboarding using script.
-- Fixed a bug where the exclude instance setting in portal throws an incorrect error about excluding SQL instance named separated by space.
+- Fixed a bug where the setting to exclude instances in portal throws an incorrect error about excluding SQL instance name separated by space.
 - Fixed a bug where the Purview governance status does not report correctly upon on-demand refresh intermittently.
 
 ## April 10, 2023

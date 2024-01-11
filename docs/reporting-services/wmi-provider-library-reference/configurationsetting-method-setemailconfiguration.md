@@ -15,7 +15,7 @@ apiname: "SetEmailConfiguration (WMI MSReportServer_ConfigurationSetting Class)"
 apitype: MOFDef
 ---
 # ConfigurationSetting method - SetEmailConfiguration
-  Configures the e-mail delivery extension used by the report server to send e-mail.  
+  Configures the email delivery extension used by the report server to send email.  
   
 ## Syntax  
   
@@ -39,7 +39,7 @@ public void SetEmailConfiguration (Boolean SendUsingSMTPServer,
  A string containing the name or IP address of an SMTP server.  
   
  *SenderEmailAddress*  
- The e-mail address used in the **From:** field for e-mails sent from the report server.  
+ The email address used in the **From:** field for emails sent from the report server.  
   
  *HRESULT*  
  [out] Value indicating whether the call succeeded or failed.  

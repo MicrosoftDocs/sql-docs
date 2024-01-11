@@ -1,9 +1,9 @@
 ---
 title: "sys.dm_exec_requests (Transact-SQL)"
 description: sys.dm_exec_requests returns information about each request that is executing in the Database Engine.
-author: akatesmith
-ms.author: katsmith
-ms.reviewer: mikeray, randolphwest, wiassaf
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: mikeray, randolphwest, derekw
 ms.date: 10/04/2023
 ms.service: sql
 ms.subservice: system-objects

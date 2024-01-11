@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "ODBC functions"
   - "ODBC applications, asynchronous operations"
   - "SQL Server Native Client ODBC driver, asynchronous mode"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating a Driver Application - Asynchronous Mode and SQLCancel
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

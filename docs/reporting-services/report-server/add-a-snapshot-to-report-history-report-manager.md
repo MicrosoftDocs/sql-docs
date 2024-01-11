@@ -1,5 +1,5 @@
 ---
-title: "Add a Snapshot to Report History - Reporting Services"
+title: "Add a snapshot to report history - Reporting Services"
 description: Learn details about how to manually add a snapshot to report history in SQL Server Reporting Services (SSRS).
 author: maggiesMSFT
 ms.author: maggies
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
 
-# Add a Snapshot to Report History
+# Add a snapshot to report history
 
-Report history is a collection of report snapshots that you create over time. A report snapshot is a report that contains layout information and query results that were retrieved at a specific point in time. Unlike on-demand reports, which get up-to-date query results when you select the report, report snapshots are processed on a schedule and then saved to a report server. When you select a report snapshot for viewing, the report server retrieves the stored report from the report server database and shows the data and layout that were current for the report at the time the snapshot was created.  
+Report history is a collection of report snapshots that you create over time. A report snapshot is a report that contains layout information and query results retrieved at a specific point in time. Unlike on-demand reports, which get up-to-date query results when you select the report, report snapshots are processed on a schedule and then saved to a report server. When you select a report snapshot for viewing, the report server retrieves the stored report from the report server database and shows the data and layout that were current for the report at the time the snapshot was created.  
   
-Report snapshots are not saved in a particular rendering format. Instead, report snapshots are rendered in a final viewing format (such as HTML) only when a user or an application requests it. Deferred rendering makes a snapshot portable. The report can be rendered in the correct format for the requesting device or Web browser.  
+Report snapshots aren't saved in a particular rendering format. Instead, report snapshots are rendered in a final viewing format (such as HTML) only when a user or an application requests it. Deferred rendering makes a snapshot portable. The report can be rendered in the correct format for the requesting device or Web browser.  
   
-## To manually add snapshots to report history
+## Manually add snapshots to report history
   
 ::: moniker range="=sql-server-2016"
 

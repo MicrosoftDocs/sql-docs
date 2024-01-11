@@ -25,7 +25,7 @@ landingContent:
         links:
           - text: SQL Server best practices assessment 
             url: assess.md 
-          - text: Secure SQL Servers
+          - text: Secure SQL Server instances
             url: configure-advanced-data-security.md
           - text: Auto backups 
             url: point-in-time-restore.md

@@ -3,7 +3,7 @@ title: "Support policies for OLE DB Driver for SQL Server"
 description: "Learn about the support policies for OLE DB Driver for SQL Server and what operating systems and SQL database versions are supported with each driver version."
 author: David-Engel
 ms.author: v-davidengel
-ms.date: "02/14/2023"
+ms.date: "01/10/2024"
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: "reference"
@@ -25,7 +25,7 @@ OLE DB Driver for SQL Server is tested with and supports connections to the foll
 |19.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |19.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |19.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|18.6|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|
+|18.6|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |18.5|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|
 |18.4|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|
 |18.3|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|

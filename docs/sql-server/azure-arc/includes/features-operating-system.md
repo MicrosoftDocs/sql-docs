@@ -10,7 +10,7 @@ The following table identifies features available by operating system:
 
 | Feature | Windows | Linux |
 | --- | --- | --- |
-| [Discover and register SQL Servers in Azure](../prerequisites.md) | Yes | Yes |
+| [Discover and register SQL Server instances in Azure](../prerequisites.md) | Yes | Yes |
 | [Use Azure Policy to onboard SQL Server instances at scale](../connect-at-scale-policy.md) | Yes | Yes |
 | [Azure pay-as-you-go billing](../manage-configuration.md) | Yes | Yes |
 | [Install Azure extension for SQL Server during setup](../../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md#install-sql-server-2022) <sup>1</sup> | Yes | No |

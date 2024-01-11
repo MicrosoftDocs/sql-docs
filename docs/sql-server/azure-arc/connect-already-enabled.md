@@ -13,10 +13,9 @@ ms.topic: conceptual
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 > [!IMPORTANT]  
-> Azure Arc automatically installs the Azure extension for SQL Server when a server connected to Azure Arc has SQL Server installed. All the SQL Server instance resources are automatically created in Azure, providing a centralized management platform for all your SQL Servers.
-To automatically connect your SQL Server instances, see [Automatically Connect your SQL Server to Azure Arc](automatically-connect.md).
-Use the method below, if your server is already connected to Azure, but Azure extension for SQL Server is not deployed automatically using above methods.
->
+> Azure Arc automatically installs the Azure extension for SQL Server when a server connected to Azure Arc has SQL Server installed. All the SQL Server instance resources are automatically created in Azure, providing a centralized management platform for all your SQL Server instances.
+> To automatically connect your SQL Server instances, see [Automatically Connect your SQL Server to Azure Arc](automatically-connect.md).
+> Use the method below, if your server is already connected to Azure, but Azure extension for SQL Server is not deployed automatically using above methods.
 
 Before you proceed, complete the [Prerequisites](prerequisites.md).
 
@@ -35,7 +34,7 @@ To install the Azure extension for SQL Server, use the following steps:
 1. Search for the connected server with the SQL Server instance that you want to connect to Azure.
 1. Under **Extensions**, select **+ Add**.
 1. Select `Azure extension for SQL Server` and select **Next**.
-1. Specify the SQL Server edition and license type you are using on this machine. Some Arc-enabled SQL Server features are only available for SQL Servers with Software Assurance (Paid) or with Azure pay-as-you-go. For more information, review [Manage SQL Server license type](manage-configuration.md).
+1. Specify the SQL Server edition and license type you are using on this machine. Some Arc-enabled SQL Server features are only available for SQL Server instances with Software Assurance (Paid) or with Azure pay-as-you-go. For more information, review [Manage SQL Server license type](manage-configuration.md).
 1. Specify the SQL Server instance(s) you want to exclude from registering (if you have multiple instances to skip, separate them by spaces) and select **Review + Create**.
    :::image type="content" source="media/join/license-type-in-extension.png" alt-text="Screenshot for license type and exclude instances.":::
 1. Select **Create**.

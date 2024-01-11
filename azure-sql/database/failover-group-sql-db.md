@@ -20,12 +20,15 @@ ms.custom: azure-sql-split
 
 The failover groups feature allows you to manage the replication and failover of some or all databases on a [logical server](logical-servers.md) to a logical server in another region. This article provides an overview of the failover group feature with best practices and recommendations for using it with Azure SQL Database.  
 
-To get started using the feature, review [Configure failover group](failover-group-configure-sql-db.md). 
-
+To get started using the feature, review [Configure failover group](failover-group-configure-sql-db.md).
 
 > [!NOTE]
 > - This article covers failover groups for Azure SQL Database. For Azure SQL Managed Instance, see [Failover groups in Azure SQL Managed Instance](../managed-instance/failover-group-sql-mi.md). 
-> 
+>
+
+To learn more about Azure SQL Database disaster recovery, watch this video:
+
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=f02c00dc-de7d-4d27-a087-41c562c214d7]
 
 ## Overview
 

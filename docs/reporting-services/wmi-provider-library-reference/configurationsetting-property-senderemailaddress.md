@@ -15,7 +15,7 @@ apiname: "SenderEmailAddress"
 apitype: MOFDef
 ---
 # ConfigurationSetting property - SenderEmailAddress
-  Gets the address used to send e-mail from the report server. Read-only.  
+  Gets the address used to send email from the report server. Read-only.  
   
 ## Syntax  
   
@@ -28,7 +28,7 @@ public string SenderEmailAddress;
 ```  
   
 ## Property values  
- A read-only **String** object that represents the e-mail address used by the report server.  
+ A read-only **String** object that represents the email address used by the report server.  
   
 ## Example code  
  [MSReportServer_ConfigurationSetting class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  

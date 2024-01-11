@@ -38,8 +38,8 @@ apitype: MOFDef
 |[MachineAccountIdentity Property &#40;WMI&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-machineaccountidentity.md)|Gets the machine account identity of the computer that the report server is installed on.|  
 |[PathName](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-pathname.md)|Specifies the installation path to a report server instance.|  
 |[SecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-secureconnectionlevel.md)|Returns the secure connection level specified in the RSReportServer.config file.|  
-|[SenderEmailAddress](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-senderemailaddress.md)|Gets the address used to send e-mail from the report server. Read-only.|  
-|[SendUsingSMTPServer](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-sendusingsmtpserver.md)|Specifies whether the SendUsing property in the e-mail configuration is set to TRUE.|  
+|[SenderEmailAddress](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-senderemailaddress.md)|Gets the address used to send email from the report server. Read-only.|  
+|[SendUsingSMTPServer](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-sendusingsmtpserver.md)|Specifies whether the SendUsing property in the email configuration is set to TRUE.|  
 |[SMTPServer](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-smtpserver.md)|Gets the SMTP server property from the RSReportServer.config file. Read-only.|  
 |[UnattendedExecutionAccount](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-unattendedexecutionaccount.md)|Specifies the sign in user account that the report server impersonates when running reports unattended. Read-only.|  
 |[Version](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-version.md)|Returns the version of the report server.|  
@@ -77,7 +77,7 @@ apitype: MOFDef
 |[SetDatabaseConnection](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setdatabaseconnection.md)|Sets the report server database connection to a particular report server database.|  
 |[SetDatabaseLogonTimeout](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setdatabaselogontimeout.md)|Specifies the default time-out value for report server database sign in attempts.|  
 |[SetDatabaseQueryTimeout](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setdatabasequerytimeout.md)|Specifies the default time-out value for report server database connections.|  
-|[SetEmailConfiguration](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setemailconfiguration.md)|Configures the e-mail delivery extension used by the report server to send e-mail.|  
+|[SetEmailConfiguration](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setemailconfiguration.md)|Configures the email delivery extension used by the report server to send email.|  
 |[SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md)|Sets the secure connection level of the report server.|  
 |[SetServiceState](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setservicestate.md)|Turns the Report Server Windows and Web services on and off.|  
 |[SetUnattendedExecutionAccount](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setunattendedexecutionaccount.md)|Specifies the account used to run reports unattended.|  

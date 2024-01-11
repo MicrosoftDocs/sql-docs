@@ -15,7 +15,7 @@ apiname: "SendUsingSMTPServer"
 apitype: MOFDef
 ---
 # ConfigurationSetting property - SendUsingSMTPServer
-  Specifies whether the *SendUsing* element in the e-mail configuration for the report server is set to **true**.  
+  Specifies whether the *SendUsing* element in the email configuration for the report server is set to **true**.  
   
 ## Syntax  
   

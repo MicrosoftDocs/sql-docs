@@ -840,6 +840,7 @@ This example uses a wildcard to load all Parquet files under a folder.
 COPY INTO test_parquet
 FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder1/*.parquet'
 WITH (
+    FILE_TYPE = 'PARQUET',
     CREDENTIAL=(IDENTITY= 'Shared Access Signature', SECRET='<Your_SAS_Token>')
 )
 ```

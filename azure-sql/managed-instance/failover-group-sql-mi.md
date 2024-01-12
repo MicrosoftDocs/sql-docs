@@ -112,7 +112,7 @@ Connectivity between the virtual network subnets hosting primary and secondary i
 - [VPN gateways](/azure/vpn-gateway/vpn-gateway-about-vpngateways)
 - [Azure ExpressRoute](/azure/expressroute/expressroute-howto-circuit-portal-resource-manager)
 
-[Global virtual network peering (VNet peering)](/azure/virtual-network/virtual-network-peering-overview) is the recommended way to establishconnectivity between two instances in a failover group. It provides a low-latency, high-bandwidth private connection between the peered virtual networks using the Microsoft backbone infrastructure. No public Internet, gateways, or additional encryption is required in the communication between the peered virtual networks.
+[Global virtual network peering (VNet peering)](/azure/virtual-network/virtual-network-peering-overview) is the recommended way to establish connectivity between two instances in a failover group. It provides a low-latency, high-bandwidth private connection between the peered virtual networks using the Microsoft backbone infrastructure. No public Internet, gateways, or additional encryption is required in the communication between the peered virtual networks.
 
 ## Initial seeding
 

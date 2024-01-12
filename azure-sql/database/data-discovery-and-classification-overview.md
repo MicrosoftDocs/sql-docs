@@ -1,6 +1,6 @@
 ---
 title: Data Discovery & Classification
-titleSuffix: Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
 description: Data Discovery & Classification for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics
 author: Madhumitatripathy
 ms.author: matripathy
@@ -11,6 +11,7 @@ ms.subservice: security
 ms.topic: conceptual
 ms.custom: sqldbrb=1
 tags: azure-synapse
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Data Discovery & Classification
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]

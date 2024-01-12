@@ -27,7 +27,7 @@ The following links provide sample code of various Azure SQL Database options to
 | --- | --- |
 | **[Azure OpenAI](#azure-openai)** | Generate embeddings for RAG and integrate with any model supported by Azure OpenAI. |
 | **[Vectors](#vectors)** | Learn how to store and query vectors in Azure SQL Database. |
-| **[Azure Cognitive Search](#azure-cognitive-search)** | Use Azure SQL Database together with Azure Cognitive Search to train LLM on your data. |
+| **[Azure AI Search](#azure-ai-search)** | Use Azure SQL Database together with Azure AI Search to train LLM on your data. |
 | **[Intelligent applications](#intelligent-applications)** | Learn how to create an end-to-end solution using a common pattern that can be replicated in any scenario. |
 
 ## Key concepts
@@ -39,8 +39,8 @@ This section includes key concepts that are critical for implementing RAG with A
 RAG is a technique that enhances the LLM's ability to produce relevant and informative responses by retrieving additional data from external sources. For example, RAG can query articles or documents that contain domain-specific knowledge related to the user's question or prompt. The LLM can then use this retrieved data as a reference when generating its response. For example, a simple RAG pattern using Azure SQL Database could be:
 
 1. Insert data into an Azure SQL Database table.
-1. Link Azure SQL Database to Azure Cognitive Search.
-1. Create an Azure OpenAI GPT4 model and connect it to Azure Cognitive Search.
+1. Link Azure SQL Database to Azure AI Search.
+1. Create an Azure OpenAI GPT4 model and connect it to Azure AI Search.
 1. Chat and ask questions about your data using the trained Azure OpenAI model from your application and from Azure SQL Database.
 
 The RAG pattern, with prompt engineering, serves the purpose of enhancing response quality by offering more contextual information to the model. RAG enables the model to apply a broader knowledgebase by incorporating relevant external sources into the generation process, resulting in more comprehensive and informed responses. For more information on *grounding* LLMs, see [Grounding LLMs - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/grounding-llms/ba-p/3843857).
@@ -138,12 +138,15 @@ GO
 
 For an example that uses a common subset of Wikipedia articles with embeddings already generated using OpenAI, see [Vector similarity search with Azure SQL Database and OpenAI](https://devblogs.microsoft.com/azure-sql/vector-similarity-search-with-azure-sql-database-and-openai/).
 
-## Azure Cognitive Search
+Another option for leveraging Vector Search in Azure SQL database is integration with Azure AI using the integrated vectorization capabilities: [Vector Search with Azure SQL Database and Azure AI Search](https://devblogs.microsoft.com/azure-sql/vector-search-with-azure-sql-database/)
 
-Implement RAG-patterns with Azure SQL Database and Azure Cognitive Search. You can run supported chat models on data stored in Azure SQL Database, without having to train or fine-tune models, thanks to the integration of Azure Cognitive Search with Azure OpenAI and Azure SQL Database. Running models on your data enables you to chat on top of, and analyze, your data with greater accuracy and speed.
+## Azure AI Search
+
+Implement RAG-patterns with Azure SQL Database and Azure AI Search. You can run supported chat models on data stored in Azure SQL Database, without having to train or fine-tune models, thanks to the integration of Azure AI Search with Azure OpenAI and Azure SQL Database. Running models on your data enables you to chat on top of, and analyze, your data with greater accuracy and speed.
 
 - [Azure OpenAI on your data](/azure/ai-services/openai/concepts/use-your-data)
-- [Retrieval Augmented Generation (RAG) in Azure Cognitive Search](/azure/search/retrieval-augmented-generation-overview)
+- [Retrieval Augmented Generation (RAG) in Azure AI Search](/azure/search/retrieval-augmented-generation-overview)
+-  [Vector Search with Azure SQL Database and Azure AI Search](https://devblogs.microsoft.com/azure-sql/vector-search-with-azure-sql-database/)
 
 ## Intelligent applications
 

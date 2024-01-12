@@ -3,7 +3,7 @@ title: "Uninstall an existing instance of SQL Server (Setup)"
 description: This article describes how to uninstall a stand-alone instance of SQL Server, which also prepares the system so that you can reinstall SQL Server.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 12/20/2022
+ms.date: 01/09/2024
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
@@ -109,7 +109,7 @@ To uninstall SQL Server from Windows Server 2008, Windows Server 2012 and Window
 
 If the removal process fails, review the [SQL Server Setup log files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md) to determine the root cause.
 
-## Next steps
+## Related content
 
 - [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 - [Uninstall a Cumulative Update from SQL Server](uninstall-a-cumulative-update-from-sql-server.md)

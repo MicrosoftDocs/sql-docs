@@ -1,5 +1,6 @@
 ---
 title: Automatic tuning email notifications how-to guide
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Enable e-mail notifications for Azure SQL Database automatic query tuning.
 author: NikaKinska
 ms.author: nnikolic
@@ -9,6 +10,7 @@ ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: how-to
 ms.custom: sqldbrb=1
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Email notifications for automatic tuning
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

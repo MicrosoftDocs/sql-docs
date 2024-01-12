@@ -1,5 +1,6 @@
 ---
 title: Microsoft Entra server principals
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
 description: Using Microsoft Entra server principals (logins) in Azure SQL
 author: nofield
 ms.author: nofield
@@ -16,7 +17,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 [!INCLUDE[appliesto-sqldb-sqlmi-asa-dedicated-only](../includes/appliesto-sqldb-sqlmi-asa-dedicated-only.md)]
 
 
-You can now create and utilize server principals from Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)), which are logins in the virtual `master` database of a SQL Database. There are several benefits of using Microsoft Entra server principals for SQL Database:
+You can now create and utilize server principals from Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)), which are logins in the virtual `master` database of a SQL Database. There are several benefits of using Microsoft Entra server principals for SQL Database:
 
 - Support [Azure SQL Database server roles for permission management](security-server-roles.md).
 - Support multiple Microsoft Entra users with [special roles for SQL Database](/sql/relational-databases/security/authentication-access/database-level-roles#special-roles-for--and-azure-synapse), such as the `loginmanager` and `dbmanager` roles.

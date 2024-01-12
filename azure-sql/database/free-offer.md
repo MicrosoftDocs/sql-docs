@@ -1,10 +1,10 @@
 ---
-title: Azure SQL Database free offer
+title: Try for free (preview)
 description: Guidance on how to deploy the Azure SQL Database free offer for new accounts.
 author: NilsPohlmann
 ms.author: nilsp
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 10/10/2023
+ms.date: 12/12/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: how-to
@@ -12,6 +12,10 @@ ms.custom:
 monikerRange: "=azuresql || =azuresql-db"
 ---
 # Try Azure SQL Database for free (preview)
+
+> [!div class="op_single_selector"]
+> * [Azure SQL Database](free-offer.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](../managed-instance/free-offer.md?view=azuresql-mi&preserve-view=true)
 
 Try Azure SQL Database free of charge and get 100,000 vCore seconds of compute every month. This free offer provides a General Purpose database for the lifetime of your subscription.
 
@@ -21,7 +25,7 @@ To learn more about the offer, see this short video:
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=dd55c855-df9f-4627-96c1-de0da0425cea]
 
-This offer is available for one database per Azure subscription and is designed for new Azure customers looking to get started with Azure SQL Database, and existing customers that may need a development database for a proof of concept.
+This offer is available for one database per Azure subscription and is designed for new Azure customers looking to get started with Azure SQL Database, and existing customers that may need a development database for a proof of concept. To get started, look for the **Apply offer** banner on the [provisioning page for Azure SQL Database](https://portal.azure.com/#create/Microsoft.SQLDatabase).
 
 :::image type="content" source="media/free-offer/azure-sql-database-free-banner.png" alt-text="Screenshot from the Azure portal of the Free Offer banner.":::
 
@@ -70,7 +74,7 @@ To create your database, follow these steps:
 1. For **Resource group**, select **Create new**, enter `myFreeDBResourceGroup`, and select **OK**.
 1. For **Database name**, enter `myFreeDB`.
 1. For **Server**, select **Create new**, and fill out the **New server** form with the following values:
-   - **Server name**: Enter `myFreeDBserver`, and add some characters for uniqueness.
+   - **Server name**: Enter `myfreesqldbserver`, and add some characters for uniqueness. The name of the Azure SQL logical server must be lowercase.
    - **Authentication method**: Select **Use both SQL and Microsoft Entra authentication**.
    - **Server admin login**: Enter a username for the SQL authentication server admin.
    - - **Password**: Enter a password for the SQL authenticated server admin that meets complexity requirements, and enter it again in the **Confirm password** field.
@@ -105,8 +109,6 @@ You won't be charged for the Azure SQL Database unless you exceed the free datab
     :::image type="content" source="media/free-offer/free-monthly-vcore-amount-remaining.png" alt-text="Screenshot from the Azure portal of free monthly vCore seconds amount remaining.":::
 
 1. Select the **seconds remaining** amount. The **Metrics** chart launches where you can look at **Free amount remaining** or **Free amount consumed** metrics.
-
-    :::image type="content" source="media/free-offer/graph-metric-free-amount-remaining.png" alt-text="Screenshot from the Azure portal showing a graph of the free amount remaining metric.":::
 
 ### Tips on managing vCore seconds
 

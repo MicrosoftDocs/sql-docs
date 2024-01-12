@@ -11,6 +11,7 @@ ms.custom:
 ms.topic: conceptual
 ---
 # Getting started using Always Encrypted with secure enclaves
+[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 These tutorials teach you how to get started with [Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves). They'll show you:
 

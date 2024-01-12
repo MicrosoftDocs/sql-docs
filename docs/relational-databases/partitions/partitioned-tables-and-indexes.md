@@ -88,7 +88,7 @@ The primary reason for placing your partitions on multiple filegroups is to make
 Managing files and filegroups for partitioned tables may add significant complexity to administrative tasks over time. If your backup and restore procedures don't benefit from the use of multiple filegroups, a single filegroup for all partitions is recommended. The same [Rules for designing files and filegroups](../databases/database-files-and-filegroups.md#rules-for-designing-files-and-filegroups) apply to partitioned objects as apply to non-partitioned objects.
 
 > [!NOTE]
-> Partitioning is fully supported in Azure SQL Database. Because only the `PRIMARY` filegroup is supported in Azure SQL Database, all partitions must be placed on the `PRIMARY` filegroup.
+> Partitioning isn't fully supported in Azure SQL Database. Because only the `PRIMARY` filegroup is supported in Azure SQL Database, all partitions must be placed on the `PRIMARY` filegroup.
 
 Find example code to create filegroups for SQL Server and Azure SQL Managed Instance in [ALTER DATABASE (Transact-SQL) File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 

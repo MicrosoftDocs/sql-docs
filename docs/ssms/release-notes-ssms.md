@@ -4,7 +4,7 @@ description: Release notes for SQL Server Management Studio (SSMS).
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 11/29/2023
+ms.date: 01/10/2024
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -19,9 +19,69 @@ This article details updates, improvements, and bug fixes for the current and pr
 
 ## Current SSMS release
 
-:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server Management Studio (SSMS) 19.2](https://aka.ms/ssmsfullsetup)**
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server Management Studio (SSMS) 19.3](https://aka.ms/ssmsfullsetup)**
 
-SSMS 19.2 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
+SSMS 19.3 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
+
+### 19.3
+
+- Release number: 19.3
+- Build number: 19.3.4.0
+- Release date: January 10, 2024
+
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x40a) |
+
+#### What's new in 19.3
+
+| New Item | Details |
+| ---------- | ------- |
+| Azure Data Studio installation integration | The installation of SSMS installs Azure Data Studio 1.47.1. |
+
+#### Bug fixes in 19.3
+
+| New Item | Details |
+| -------- | ------- |
+| Accessibility | Addressed issue with screen reader announcing incomplete or incorrect information in the database properties dialog. |
+| Always Encrypted | Fixed inability to change the **Enable Secure Enclaves** option when creating a new Azure SQL Database using a non-English installation of SSMS. |
+| Availability Groups | Changed text color for primary server name in the Availability Group Dashboard, which caused the entry to appear empty. |
+| Extended Events | Changed text color for data column after selecting **View Target Data** for the ring_buffer target. |
+| Installer | Fixed issue where users may be prompted to update SQL Server Management Studio even if the current release is installed, see [Bug in 19.2.56.2 update version detection](https://feedback.azure.com/d365community/idea/bb5e60b9-5d85-ee11-a81c-002248544521). |
+| Object Explorer | Resolved crash occurring when trying to close Object Explorer while the tree is still expanding. |
+| Reports | Updated Server Dashboard report to correctly show the number of schedulers when more than 255 are available, see [SSMS 19.2 - Reports - Server dashboard - Processors used by instance - wrong number](https://feedback.azure.com/d365community/idea/cdf3d393-a689-ee11-a81c-6045bdb7ea56).  |
+| Security | Update to [Microsoft.Data.SqlClient 3.1.5](https://github.com/dotnet/SqlClient/blob/main/release-notes/3.1/3.1.5.md) to address [CVE-2024-0056](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-0056). |
+
+#### Known issues (19.3)
+
+| New Item | Details | Workaround |
+| -------- | ------- | ---------- |
+| Analysis Services | When you connect to Analysis Services with Microsoft Entra MFA, if you add a new role or open properties for a role, the message “the identity of the user being added to the role is not fetched properly” appears. | This error is benign and can be ignored.  It will be addressed within the Azure infrastructure soon, and no updates to SSMS are required. |
+| Analysis Services | After adding a new role, or when opening properties for an existing role, you can't use **Search by name or email address** to add a user. | A user can be added with the **Manual Entry** option. |
+| Database Designer | Selecting the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
+| Database Mirroring | When launching the Database Mirroring Monitor from the mirrored node, the primary node is not listed. | Use SSMS 18.12.1 if you need to monitor mirroring from the mirrored node. |
+| General SSMS | Import settings from SSMS 17 option not available. | Settings can be imported from SSMS 18. |
+| Link feature for Azure SQL Managed Instance | After you remove an existing mirroring endpoint certificate on SQL Server, link creation through the wizard might fail due to unestablished trust between SQL Server and Azure SQL Managed Instance, even though all checks are successful. | Use PowerShell command ``Get-AzSqlInstanceServerTrustCertificate`` to check whether SQL Server mirroring endpoint certificate named "<SQL_Server_Instance_Name>" exists in the Azure SQL Managed Instance. If so, use PowerShell command ``Remove-AzSqlInstanceServerTrustCertificate`` to remove it before a new link creation attempt. |
+| Linked servers | Creating a linked server to Azure SQL Database with SQL Server selected as Server type connects to the master database. | To create a linked server to Azure SQL Database, select **Other data source** for the **Server type**, and select **Microsoft OLE DB Provider for SQL Server** or **Microsoft OLE DB Driver for SQL Server** as the **Provider**. Enter logical server name in the Data source field, and enter database name in the Catalog field. |
+| PolyBase | PolyBase node isn't visible in Object Explorer when connecting to SQL 2022. | Use SSMS 18.12.1. |
+| Profiler | The Profiler menu isn't localized. | No current alternative. |
+| Replication | If Azure SQL Managed Instance is the publisher and SSMS is running on a machine, which isn't in the same vNet as the publisher, you will not be able to insert a tracer token via Replication Monitor. | To insert tracer tokens, use Replication Monitor in SSMS on a machine that is in the same vNet as the Azure SQL Managed Instance publisher. |
+| Stretch DB | Removed Stretch DB Wizard. | Use T-SQL to configure Stretch DB or use SSMS 18.9.1 or earlier to use the Stretch DB Wizard. |
+
+You can reference [SQL user feedback](https://aka.ms/ssms-feedback) for other known issues (filter on **Tooling** under **Groups**) and to provide feedback to the product team.
+
+## Previous SSMS releases
+
+Download previous SSMS versions by selecting the download link in the related section.
+
+| SSMS version | Build number | Release date |
+| ------------ | ------------ | ------------ |
+| [19.2](#192) | 19.2.56.2 | November 13, 2023 |
+| [19.1](#191) | 19.1.56.0 | May 24, 2023 |
+| [19.0.2](#1902) | 19.0.20209.0 | March 13, 2023 |
+| [19.0.1](#1901) | 19.0.20200.0 | February 2, 2023 |
+| [19.0](#190) | 19.0.20196.0 | January 26, 2023 |
+| [18.12.1](#18121) | 15.0.18420.0 | June 21, 2022 |
+| [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
+| [16.5.3](#1653) | 13.0.16106.4 | January 30, 2017 |
 
 ### 19.2
 
@@ -106,7 +166,7 @@ SSMS 19.2 is the latest general availability (GA) release of SSMS. If you need a
 | -------- | ------- | ---------- |
 | Analysis Services | When you connect to Analysis Services with Microsoft Entra MFA, if you add a new role or open properties for a role, the message “the identity of the user being added to the role is not fetched properly” appears. | This error is benign and can be ignored.  It will be addressed within the Azure infrastructure soon, and no updates to SSMS are required. |
 | Analysis Services | After adding a new role, or when opening properties for an existing role, you can't use **Search by name or email address** to add a user. | A user can be added with the **Manual Entry** option. |
-| Availability Groups | The primary server name looks empty in the Availability Group Dashboard because the text is white. | Select another entry in the dashboard and the primary server name will appear, or use an earlier version of SSMS 19. |
+| Availability Groups | The primary server name looks empty in the Availability Group Dashboard because the text is white. | Select another entry in the dashboard and the primary server name appears, or use an earlier version of SSMS 19. |
 | Database Designer | Selecting the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
 | General SSMS | Import settings from SSMS 17 option not available. | Settings can be imported from SSMS 18. |
 | Installer | Users may be prompted to update to the new release of SQL Server Management Studio, even if version 19.2 is installed, with the automatic check for updates enabled. | Use Add/Remove Programs to remove the extra installation. |
@@ -114,24 +174,8 @@ SSMS 19.2 is the latest general availability (GA) release of SSMS. If you need a
 | Linked servers | Creating a linked server to Azure SQL Database with SQL Server selected as Server type connects to the master database. | To create a linked server to Azure SQL Database, select **Other data source** for the **Server type**, and select **Microsoft OLE DB Provider for SQL Server** or **Microsoft OLE DB Driver for SQL Server** as the **Provider**. Enter logical server name in the Data source field, and enter database name in the Catalog field. |
 | PolyBase | PolyBase node isn't visible in Object Explorer when connecting to SQL 2022. | Use SSMS 18.12.1. |
 | Profiler | The Profiler menu isn't localized. | No current alternative. |
-| Replication | If Azure SQL Managed Instance is the publisher and SSMS is running on a machine which isn't in the same vNet as the publisher, you won't be able to insert a tracer token via Replication Monitor. | To insert tracer tokens, use Replication Monitor in SSMS on a machine that is in the same vNet as the Azure SQL Managed Instance publisher. |
+| Replication | If Azure SQL Managed Instance is the publisher and SSMS is running on a machine, which isn't in the same vNet as the publisher, you aren't able to insert a tracer token via Replication Monitor. | To insert tracer tokens, use Replication Monitor in SSMS on a machine that is in the same vNet as the Azure SQL Managed Instance publisher. |
 | Stretch DB | Removed Stretch DB Wizard. | Use T-SQL to configure Stretch DB or use SSMS 18.9.1 or earlier to use the Stretch DB Wizard. |
-
-You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
-
-## Previous SSMS releases
-
-Download previous SSMS versions by selecting the download link in the related section.
-
-| SSMS version | Build number | Release date |
-| ------------ | ------------ | ------------ |
-| [19.1](#191) | 19.1.56.0 | May 24, 2023 |
-| [19.0.2](#1902) | 19.0.20209.0 | March 13, 2023 |
-| [19.0.1](#1901) | 19.0.20200.0 | February 2, 2023 |
-| [19.0](#190) | 19.0.20196.0 | January 26, 2023 |
-| [18.12.1](#18121) | 15.0.18420.0 | June 21, 2022 |
-| [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
-| [16.5.3](#1653) | 13.0.16106.4 | January 30, 2017 |
 
 ### 19.1
 

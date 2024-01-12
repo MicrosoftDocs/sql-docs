@@ -15,7 +15,7 @@ ms.topic: conceptual
 
 # How to set up Windows Authentication for Azure SQL Managed Instance using Microsoft Entra ID and Kerberos 
 
-This article gives an overview of how to set up infrastructure and managed instances to implement [Windows Authentication for principals on Azure SQL Managed Instance](winauth-azuread-overview.md) with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)).
+This article gives an overview of how to set up infrastructure and managed instances to implement [Windows Authentication for principals on Azure SQL Managed Instance](winauth-azuread-overview.md) with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)).
 
 There are two phases to set up Windows Authentication for Azure SQL Managed Instance using Microsoft Entra ID and Kerberos.
 

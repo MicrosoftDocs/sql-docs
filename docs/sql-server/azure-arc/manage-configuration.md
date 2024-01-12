@@ -4,7 +4,7 @@ description: Explains how to manage SQL Server licensing options. Also demonstra
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 12/07/2023
+ms.date: 01/05/2024
 ms.topic: conceptual
 ---
 
@@ -75,7 +75,7 @@ The following license types are supported:
 * **PAYG**: Pay for your SQL Server software usage through Microsoft Azure. See [SQL Server prices and licensing](https://www.microsoft.com/sql-server/sql-server-2022-pricing).
 
   > [!IMPORTANT]
-  > Azure Arc-enabled SQL Server Pay-As-You-Go (PAYG) provides a flexible subscription-based access to SQL Server. The servers with SQL Server instances using PAYG must be continuously connected to Azure. Intermittent connectivity disruptions for up to 30 days are tolerated with built-in resilience. After 30 days of dysconnectivity the PAYG subscription will expire. Please be advised that once your subscription expires, you are not authorized to use the software.
+  > [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] Pay-As-You-Go (PAYG) provides a flexible subscription-based access to SQL Server. The servers with SQL Server instances using PAYG must be continuously connected to Azure. Intermittent connectivity disruptions for up to 30 days are tolerated with built-in resilience. After 30 days of dysconnectivity the PAYG subscription will expire. Please be advised that once your subscription expires, you are not authorized to use the software.
 
 * **Paid** and **LicenseOnly**: Use an existing license agreement. Usage implies that you already have the necessary licenses. In these cases, your software usage will be reported to you using a free meter. You can analyze your usage in the [Cost Management + Billing portal](/azure/cost-management-billing/) to make sure you have enough licenses for all your installed SQL Server instances.
 
@@ -116,10 +116,10 @@ The next table shows the meter SKUs that are used for different license types an
 
 <sup>1</sup> When Enterprise edition is installed, it indicates that the Server/CAL licensing model is used. Because the conversion to the core-based licensing model does not require an upgrade to the  Enterprise Core, we treat this edition as Enterprise Core. The instances that have not converted to the core-based model and use a Server/CAL license must set the license type to LicenseOnly.
 
-In addition to billing differences, license type determines what features will be available to your Arc-enabled SQL Server. The following features are not included in the LicenseOnly license type:
+In addition to billing differences, license type determines what features will be available to your Arc-enabled SQL Server. The following features are not included when the LicenseOnly license type is selected:
 
-* Licensing benefit for fail-over servers. Azure extension for SQL Server supports free fail-over servers by automatically detecting if the instance is a replica in an availability group and reporting the usage with a separate meter. You can track the usage of the DR benefit in Cost Management + Billing. See [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details.
-* Detailed database inventory. You can manage your SQL database inventory in Azure portal. See [View databases](view-databases.md) for details.
+* Licensing benefit for failover servers. The Azure extension for SQL Server supports free failover servers, by automatically detecting if the instance is a replica in an availability group, and reporting the usage with a separate meter. To qualify for this benefit, the replica must be fully passive, and all its databases must be part of the same group. If one or more databases are not part of the group, the instance is treated as active and billed based on its edition. For more information, see the [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/sql-server).
+* Detailed database inventory. You can manage your SQL database inventory in the Azure portal. See [View databases](view-databases.md) for details.
 * Managing automatic updates of SQL Server from Azure.
 * Best practices assessment. You can generate best practices reports and recommendations by periodic scans of your SQL Server configurations. See [Configure your SQL Server instance for Best practices assessment](assess.md).
 
@@ -302,10 +302,10 @@ on $left.machineIdHasSQLServerDiscovered == $right.machineIdHasSQLServerExtensio
 
 For more examples of Azure Resource Graph Queries, see [Starter Resource Graph queries](/azure/governance/resource-graph/samples/starter).
 
-## Next steps
+## Related content
 
 - [Review SQL Server 2022 Pricing](https://www.microsoft.com/sql-server/sql-server-2022-pricing)
 - [Install SQL Server 2022 using the pay-as-you-go activation option](../../database-engine/install-windows/install-sql-server.md)
 - [Learn about Extended Security Updates for SQL Server](../end-of-support/sql-server-extended-security-updates.md).  
 - [Frequently asked questions](faq.yml#billing)
-- [Configure automated patching for Arc-enabled SQL Servers](patch.md)
+- [Configure automated patching for SQL Server enabled for Azure Arc](patch.md)

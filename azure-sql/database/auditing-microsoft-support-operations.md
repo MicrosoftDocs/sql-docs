@@ -1,5 +1,6 @@
 ---
 title: Auditing Microsoft support operations
+titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: How to use Auditing to audit Microsoft support operations.
 author: sravanisaluru
 ms.author: srsaluru

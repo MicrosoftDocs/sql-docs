@@ -147,7 +147,7 @@ Alternatively, you can consider migrating your on-premises Analysis Services tab
 
 The SQL Server high-availability features Always On failover cluster instances and Always On availability groups become obsolete on the target SQL managed instance. High-availability architecture is already built into both [General Purpose (standard availability model)](../../database/high-availability-sla.md#locally-redundant-availability) and [Business Critical (premium availability model)](../../database/high-availability-sla.md#locally-redundant-availability) service tiers for SQL Managed Instance. The premium availability model also provides read scale-out that allows connecting into one of the secondary nodes for read-only purposes.     
 
-Beyond the high-availability architecture that's included in SQL Managed Instance, the [auto-failover groups](../../managed-instance/auto-failover-group-sql-mi.md) feature allows you to manage the replication and failover of databases in a managed instance to another region. 
+Beyond the high-availability architecture that's included in SQL Managed Instance, the [failover groups](../../managed-instance/failover-group-sql-mi.md) feature allows you to manage the replication and failover of databases in a managed instance to another region. 
 
 ### SQL Agent jobs
 
@@ -163,7 +163,7 @@ Move SQL logins from the SQL Server source to Azure SQL Managed Instance by usin
 
 By default, Azure Database Migration Service supports migrating only SQL logins. However, you can enable the migration of Windows logins by:
 
-- Ensuring that the target SQL managed instance has read access to Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). A user who has the Global Administrator role can configure that access via the Azure portal.
+- Ensuring that the target SQL managed instance has read access to Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). A user who has the Global Administrator role can configure that access via the Azure portal.
 - Configuring Azure Database Migration Service to enable Windows user or group login migrations. You set this up via the Azure portal, on the **Configuration** page. After you enable this setting, restart the service for the changes to take effect.
 
 After you restart the service, Windows user or group logins appear in the list of logins available for migration. For any Windows user or group logins that you migrate, you're prompted to provide the associated domain name. Service user accounts (accounts with the domain name NT AUTHORITY) and virtual user accounts (accounts with the domain name NT SERVICE) aren't supported. To learn more, see [How to migrate Windows users and groups in a SQL Server instance to Azure SQL Managed Instance using T-SQL](../../managed-instance/migrate-sql-server-users-to-instance-transact-sql-tsql-tutorial.md).

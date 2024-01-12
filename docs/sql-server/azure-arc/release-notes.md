@@ -4,7 +4,7 @@ description: Latest release notes for SQL Server enabled by Azure Arc
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 12/01/2023
+ms.date: 12/12/2023
 ms.topic: conceptual
 ms.custom: ignite-2023
 ---
@@ -12,6 +12,19 @@ ms.custom: ignite-2023
 # Release notes - SQL Server enabled by Azure Arc
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
+## December 12, 2023
+
+**Extension version**: `1.1.2526.108`
+
+### Azure extension for SQL Server
+
+* Data processing service (DPS) connectivity available in Azure portal
+* Performance dashboard shows
+  * IOPS
+  * Queue latency storage IO
+
+  For information, review [Storage I/O](sql-monitoring.md#storage-io).
 
 ## December 1, 2023
 
@@ -248,4 +261,4 @@ The *LicenseType* property of `SQL Server - Azure Arc` has been extended to prov
 
 ### Azure extension for SQL Server
 
-SQL Server Onboarding Role is no longer needed for onboarding SQL servers onto Azure Arc.
+SQL Server Onboarding Role is no longer needed for onboarding SQL Server instances onto Azure Arc.

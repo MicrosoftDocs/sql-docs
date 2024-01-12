@@ -5,12 +5,13 @@ description: Learn about tuning database applications and databases for performa
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 12/12/2023
+ms.date: 01/12/2024
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
 ms.custom:
   - sqldbrb=2
+  - azure-sql-split
 monikerRange: "=azuresql||=azuresql-db"
 ---
 # Tune applications and databases for performance in Azure SQL Database
@@ -25,10 +26,10 @@ Once you have identified a performance issue that you're facing with Azure SQL D
 - Tune your application and apply some best practices that can improve performance.
 - Tune the database by changing indexes and queries to more efficiently work with data.
 
-This article assumes that you have already worked through the Azure SQL Database [database advisor recommendations](database-advisor-implement-performance-recommendations.md) and the Azure SQL Database [automatic tuning recommendations](automatic-tuning-overview.md), if applicable. It also assumes that you have reviewed the [overview of monitoring and tuning](monitor-tune-overview.md) and its related articles related to troubleshooting performance issues. Additionally, this article assumes that you do not have a performance issue related to CPU resource utilization that can be resolved by increasing the compute size or service tier to provide more resources to your database.
+This article assumes that you have already worked through the Azure SQL Database [database advisor recommendations](database-advisor-implement-performance-recommendations.md) and [automatic tuning recommendations](automatic-tuning-overview.md), if applicable. It also assumes that you have reviewed the [overview of monitoring and tuning](monitor-tune-overview.md), [Monitor performance by using the Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store?view=azuresqldb-current&preserve-view=true), and related articles related to troubleshooting performance issues. Additionally, this article assumes that you do not have a performance issue related to CPU resource utilization that can be resolved by increasing the compute size or service tier to provide more resources to your database.
 
 > [!NOTE]
-> For similar guidance, see [Tune applications and databases for performance in Azure SQL Managed Instance](../managed-instance/performance-guidance.md?view=azuresql-mi&preserve-view=true).
+> For similar guidance in Azure SQL Managed Instance, see [Tune applications and databases for performance in Azure SQL Managed Instance](../managed-instance/performance-guidance.md?view=azuresql-mi&preserve-view=true).
 
 ## Tune your application
 
@@ -36,7 +37,7 @@ In traditional on-premises SQL Server, the process of initial capacity planning 
 
 Some customers might choose not to tune an application, and instead choose to over-provision hardware resources. This approach might be a good idea if you don't want to change a key application during a busy period. But, tuning an application can minimize resource requirements and lower monthly bills.
 
-### Application characteristics
+### Best practices and antipatterns in application design for Azure SQL Database
 
 Although Azure SQL Database service tiers are designed to improve performance stability and predictability for an application, some best practices can help you tune your application to better take advantage of the resources at a compute size. Although many applications have significant performance gains simply by switching to a higher compute size or service tier, some applications need additional tuning to benefit from a higher level of service. For increased performance, consider additional application tuning for applications that have these characteristics:
 
@@ -62,7 +63,7 @@ Although Azure SQL Database service tiers are designed to improve performance st
 
 In this section, we look at some techniques that you can use to tune database to gain the best performance for your application and run it at the lowest possible compute size. Some of these techniques match traditional SQL Server tuning best practices, but others are specific to Azure SQL Database. In some cases, you can examine the consumed resources for a database to find areas to further tune and extend traditional SQL Server techniques to work in Azure SQL Database.
 
-### <a id="identifying-and-adding-missing-indexes"></a> Identify and adding missing indexes
+### <a id="identifying-and-adding-missing-indexes"></a> Identify and add missing indexes
 
 A common problem in OLTP database performance relates to the physical database design. Often, database schemas are designed and shipped without testing at scale (either in load or in data volume). Unfortunately, the performance of a query plan might be acceptable on a small scale but degrade substantially under production-level data volumes. The most common source of this issue is the lack of appropriate indexes to satisfy filters or other restrictions in a query. Often, missing indexes manifests as a table scan when an index seek could suffice.
 
@@ -243,7 +244,7 @@ You can examine `sys.resource_stats` to determine whether the resource for a tes
 
 If a workload has a set of repeating queries, often it makes sense to capture and validate the optimality of your plan choices because it drives the minimum resource size unit required to host the database. After you validate it, occasionally reexamine the plans to help you make sure that they haven't degraded. You can learn more about [query hints (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query).
 
-## Very large database architectures
+## Best practices for very large database architectures in Azure SQL Database
 
 Before the release of [Hyperscale](service-tier-hyperscale.md) service tier for single databases in Azure SQL Database, customers could run into [capacity limits for individual databases](service-tiers-sql-database-vcore.md?view=azuresql-db&preserve-view=true#resource-limits). While [Hyperscale elastic pools (preview)](./hyperscale-elastic-pool-overview.md) offer significantly higher storage limits, elastic pools and pooled databases in other service tiers might still be constrained by those storage capacity limits in the non-Hyperscale service tiers.
 

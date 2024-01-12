@@ -120,7 +120,7 @@ For a tutorial on how to grant these roles, see [Tutorial: Create and utilize Mi
   - `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER` 
   - `EXECUTE AS USER [bob@contoso.com]`
   - `ALTER AUTHORIZATION ON securable::name TO [bob@contoso.com]`
-- Impersonation of Microsoft Entra server principals (logins) isn't supported for Azure SQL Database and Azure Synapse Analytics. It [is supported](/azure/azure-sql/managed-instance/aad-security-configure-tutorial?view=azuresql#impersonate-azure-ad-server-level-principals-logins) for SQL Managed Instance:
+- Impersonation of Microsoft Entra server principals (logins) isn't supported for Azure SQL Database and Azure Synapse Analytics. It [is supported](/azure/azure-sql/managed-instance/aad-security-configure-tutorial?view=azuresql&preserve-view=true#impersonate-azure-ad-server-level-principals-logins) for SQL Managed Instance:
   - [EXECUTE AS Clause (Transact-SQL)](/sql/t-sql/statements/execute-as-clause-transact-sql)
   - [EXECUTE AS (Transact-SQL)](/sql/t-sql/statements/execute-as-transact-sql)
   - Impersonation of Microsoft Entra database principals (users) in a user database is supported on all Microsoft SQL products.
@@ -132,11 +132,11 @@ For a tutorial on how to grant these roles, see [Tutorial: Create and utilize Mi
 
 ### Microsoft Entra group server principal limitations
 
-With Microsoft Entra logins in public preview for Azure SQL Database and Synapse Analytics, the following are known limitations: 
+With Microsoft Entra logins in public preview for Azure SQL Database and Azure Synapse Analytics, the following are known limitations: 
 
 - [Azure SQL Database server roles](security-server-roles.md) aren't supported for Microsoft Entra groups.
-- If your SQL admin is a Microsoft Entra group, there are some limitations when users of that group connect. Each Microsoft Entra user individually is not part of the `sys.server_principals` table. This has various consequences, including calls to `SUSER_SID` returning `NULL`.
-- Microsoft Entra user logins that are part of Microsoft Entra group logins are also not implicitly created, meaning they will not have a default schema, and not be able to perform operations like `CREATE SCHEMA` until a login for the Microsoft Entra user is created, or a default schema is assigned to the group.
+- If your SQL admin is a Microsoft Entra group, there are some limitations when users of that group connect. Each Microsoft Entra user individually isn't part of the `sys.server_principals` table. This has various consequences, including calls to `SUSER_SID` returning `NULL`.
+- Microsoft Entra user logins that are part of Microsoft Entra group logins are also not implicitly created, meaning they won't have a default schema, and not be able to perform operations like `CREATE SCHEMA` until a login for the Microsoft Entra user is created, or a default schema is assigned to the group.
 - Changing a database's ownership to a Microsoft Entra group as database owner isn't supported.
   - `ALTER AUTHORIZATION ON database::<mydb> TO [my_aad_group]` fails with an error message:
     ```output

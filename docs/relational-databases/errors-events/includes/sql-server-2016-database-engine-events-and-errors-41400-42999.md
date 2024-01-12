@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 07/06/2023
+ms.date: 01/11/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -148,3 +148,4 @@ ms.topic: include
 | 41837 | 16 | No | Boot-page adjustment of XTP database '%.\*ls' requires restart of XTP engine. |
 | 41839 | 16 | No | Transaction exceeded the maximum number of commit dependencies and the last statement was aborted. Retry the statement. |
 | 41872 | 10 | No | Warning: Article with '%ls' data type column is not supported with memory optimized tables on subscribers running SQL Server 2014 or earlier. |
+| 42032 | 16 | No | XODBC Get Authentication Cache failed, state %d |

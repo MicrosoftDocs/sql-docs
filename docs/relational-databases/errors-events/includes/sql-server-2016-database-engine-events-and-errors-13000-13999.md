@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 07/06/2023
+ms.date: 01/11/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -83,6 +83,7 @@ ms.topic: include
 | 13097 | 0 | No | lock |
 | 13098 | 0 | No | thread |
 | 13099 | 0 | No | communication buffer |
+| 13199 | 10 | No | message timestamp |
 | 13201 | 10 | No | security header timestamp |
 | 13202 | 10 | No | TO BROKER INSTANCE |
 | 13203 | 10 | No | TO SERVICE |
@@ -180,6 +181,7 @@ ms.topic: include
 | 13296 | 10 | No | cryptographic provider key blob length |
 | 13297 | 16 | No | encryption algorithm tag |
 | 13298 | 16 | No | name |
+| 13299 | 16 | No | thumbprint |
 | 13301 | 16 | No | IV(Initialization Vector) length |
 | 13302 | 16 | No | bit length |
 | 13303 | 16 | No | constraint |

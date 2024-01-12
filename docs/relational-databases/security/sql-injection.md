@@ -28,7 +28,7 @@ ShipCity = Request.form ("ShipCity");
 var sql = "select * from OrdersTable where ShipCity = '" + ShipCity + "'";  
 ```  
   
- The user is prompted to enter the name of a city. If she enters `Redmond`, the query assembled by the script looks similar to the following:  
+ The user is prompted to enter the name of a city. If they enter `Redmond`, the query assembled by the script looks similar to the following:  
   
 ```sql
 SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond'  
@@ -146,16 +146,17 @@ s = s.Replace("_", "[_]");
  You should review all code that calls `EXECUTE`, `EXEC`, or `sp_executesql`. You can use queries similar to the following to help you identify procedures that contain these statements. This query checks for 1, 2, 3, or 4 spaces after the words `EXECUTE` or `EXEC`.  
   
 ```sql
-SELECT object_Name(id) FROM syscomments  
-WHERE UPPER(text) LIKE '%EXECUTE (%'  
-OR UPPER(text) LIKE '%EXECUTE  (%'  
-OR UPPER(text) LIKE '%EXECUTE   (%'  
-OR UPPER(text) LIKE '%EXECUTE    (%'  
-OR UPPER(text) LIKE '%EXEC (%'  
-OR UPPER(text) LIKE '%EXEC  (%'  
-OR UPPER(text) LIKE '%EXEC   (%'  
-OR UPPER(text) LIKE '%EXEC    (%'  
-OR UPPER(text) LIKE '%SP_EXECUTESQL%';  
+SELECT object_Name(id)
+FROM syscomments
+WHERE UPPER(TEXT) LIKE '%EXECUTE (%'
+    OR UPPER(TEXT) LIKE '%EXECUTE  (%'
+    OR UPPER(TEXT) LIKE '%EXECUTE   (%'
+    OR UPPER(TEXT) LIKE '%EXECUTE    (%'
+    OR UPPER(TEXT) LIKE '%EXEC (%'
+    OR UPPER(TEXT) LIKE '%EXEC  (%'
+    OR UPPER(TEXT) LIKE '%EXEC   (%'
+    OR UPPER(TEXT) LIKE '%EXEC    (%'
+    OR UPPER(TEXT) LIKE '%SP_EXECUTESQL%';
 ```  
   
 ### Wrapping Parameters with QUOTENAME() and REPLACE()  
@@ -170,27 +171,27 @@ OR UPPER(text) LIKE '%SP_EXECUTESQL%';
  When you use this technique, a SET statement can be revised as follows:  
   
 ```sql
--- Before:  
-SET @temp = N'SELECT * FROM authors WHERE au_lname ='''   
- + @au_lname + N'''';  
-  
--- After:  
-SET @temp = N'SELECT * FROM authors WHERE au_lname = '''   
- + REPLACE(@au_lname,'''','''''') + N'''';  
+-- Before:
+SET @temp = N'SELECT * FROM authors WHERE au_lname ='''
+    + @au_lname + N'''';
+
+-- After:
+SET @temp = N'SELECT * FROM authors WHERE au_lname = '''
+    + REPLACE(@au_lname, '''', '''''') + N'''';
 ```  
   
 ### Injection Enabled by Data Truncation  
  Any dynamic [!INCLUDE[tsql](../../includes/tsql-md.md)] that is assigned to a variable will be truncated if it is larger than the buffer allocated for that variable. An attacker who is able to force statement truncation by passing unexpectedly long strings to a stored procedure can manipulate the result. For example, the stored procedure that is created by the following script is vulnerable to injection enabled by truncation.  
   
 ```sql
-CREATE PROCEDURE sp_MySetPassword  
-@loginname sysname,  
-@old sysname,  
-@new sysname  
-AS  
+CREATE PROCEDURE sp_MySetPassword @loginname SYSNAME,
+    @old SYSNAME,
+    @new SYSNAME
+AS
 -- Declare variable.  
 -- Note that the buffer here is only 200 characters long.   
-DECLARE @command varchar(200)  
+DECLARE @command VARCHAR(200)
+
 -- Construct the dynamic Transact-SQL.  
 -- In the following statement, we need a total of 154 characters   
 -- to set the password of 'sa'.   
@@ -200,21 +201,22 @@ DECLARE @command varchar(200)
 -- But because @new is declared as a sysname, this variable can only hold  
 -- 128 characters.   
 -- We can overcome this by passing some single quotation marks in @new.  
-SET @command= 'update Users set password='   
-    + QUOTENAME(@new, '''') + ' where username='   
-    + QUOTENAME(@loginname, '''') + ' AND password = '   
-    + QUOTENAME(@old, '''')  
-  
+SET @command = 'update Users set password='
+    + QUOTENAME(@new, '''') + ' where username='
+    + QUOTENAME(@loginname, '''') + ' AND password = '
+    + QUOTENAME(@old, '''')
+
 -- Execute the command.  
-EXEC (@command)  
-GO  
+EXEC (@command)
+GO
 ```  
   
  By passing 154 characters into a 128 character buffer, an attacker can set a new password for sa without knowing the old password.  
   
 ```sql
-EXEC sp_MySetPassword 'sa', 'dummy',   
-'123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012'''''''''''''''''''''''''''''''''''''''''''''''''''   
+EXEC sp_MySetPassword 'sa',
+    'dummy',
+    '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012'''''''''''''''''''''''''''''''''''''''''''''''''''
 ```  
   
  For this reason, you should use a large buffer for a command variable or directly execute the dynamic [!INCLUDE[tsql](../../includes/tsql-md.md)] inside the `EXECUTE` statement.  
@@ -223,38 +225,36 @@ EXEC sp_MySetPassword 'sa', 'dummy',
  Strings that are returned by QUOTENAME() and REPLACE() will be silently truncated if they exceed the space that is allocated. The stored procedure that is created in the following example shows what can happen.  
   
 ```sql
-CREATE PROCEDURE sp_MySetPassword  
-    @loginname sysname,  
-    @old sysname,  
-    @new sysname  
-AS  
-  
+CREATE PROCEDURE sp_MySetPassword @loginname SYSNAME,
+    @old SYSNAME,
+    @new SYSNAME
+AS
 -- Declare variables.  
-    DECLARE @login sysname  
-    DECLARE @newpassword sysname  
-    DECLARE @oldpassword sysname  
-    DECLARE @command varchar(2000)  
-  
+DECLARE @login SYSNAME
+DECLARE @newpassword SYSNAME
+DECLARE @oldpassword SYSNAME
+DECLARE @command VARCHAR(2000)
+
 -- In the following statements, the data stored in temp variables  
 -- will be truncated because the buffer size of @login, @oldpassword,  
 -- and @newpassword is only 128 characters, but QUOTENAME() can return  
 -- up to 258 characters.  
-    SET @login = QUOTENAME(@loginname, '''')  
-    SET @oldpassword = QUOTENAME(@old, '''')  
-    SET @newpassword = QUOTENAME(@new, '''')  
-  
+SET @login = QUOTENAME(@loginname, '''')
+SET @oldpassword = QUOTENAME(@old, '''')
+SET @newpassword = QUOTENAME(@new, '''')
+
 -- Construct the dynamic Transact-SQL.  
 -- If @new contains 128 characters, then @newpassword will be '123... n  
 -- where n is the 127th character.   
 -- Because the string returned by QUOTENAME() will be truncated,   
 -- it can be made to look like the following statement:  
 -- UPDATE Users SET password ='1234. . .[127] WHERE username=' -- other stuff here  
-    SET @command = 'UPDATE Users set password = ' + @newpassword   
-     + ' where username =' + @login + ' AND password = ' + @oldpassword;  
-  
+SET @command = 'UPDATE Users set password = ' + @newpassword
+    + ' where username = ' + @login + ' AND password = ' + @oldpassword;
+
 -- Execute the command.  
-EXEC (@command);  
-GO  
+EXEC (@command);
+GO
 ```  
   
  Therefore, the following statement will set the passwords of all users to the value that was passed in the previous code  
@@ -266,38 +266,37 @@ EXEC sp_MyProc '--', 'dummy', '1234567890123456789012345678901234567890123456789
  You can force string truncation by exceeding the allocated buffer space when you use REPLACE(). The stored procedure that is created in the following example shows what can happen.  
   
 ```sql
-CREATE PROCEDURE sp_MySetPassword  
-    @loginname sysname,  
-    @old sysname,  
-    @new sysname  
-AS  
-  
+CREATE PROCEDURE sp_MySetPassword
+    @loginname SYSNAME,
+    @old SYSNAME,
+    @new SYSNAME
+AS
 -- Declare variables.  
-    DECLARE @login sysname  
-    DECLARE @newpassword sysname  
-    DECLARE @oldpassword sysname  
-    DECLARE @command varchar(2000)  
-  
+DECLARE @login SYSNAME
+DECLARE @newpassword SYSNAME
+DECLARE @oldpassword SYSNAME
+DECLARE @command VARCHAR(2000)
+
 -- In the following statements, data will be truncated because   
 -- the buffers allocated for @login, @oldpassword and @newpassword   
 -- can hold only 128 characters, but QUOTENAME() can return   
 -- up to 258 characters.   
-    SET @login = REPLACE(@loginname, '''', '''''')  
-    SET @oldpassword = REPLACE(@old, '''', '''''')  
-    SET @newpassword = REPLACE(@new, '''', '''''')  
-  
+SET @login = REPLACE(@loginname, '''', '''''')
+SET @oldpassword = REPLACE(@old, '''', '''''')
+SET @newpassword = REPLACE(@new, '''', '''''')
+
 -- Construct the dynamic Transact-SQL.  
 -- If @new contains 128 characters, @newpassword will be '123...n   
 -- where n is the 127th character.   
 -- Because the string returned by QUOTENAME() will be truncated, it  
 -- can be made to look like the following statement:  
 -- UPDATE Users SET password='1234...[127] WHERE username=' -- other stuff here   
-    SET @command= 'update Users set password = ''' + @newpassword + ''' where username='''   
-     + @login + ''' AND password = ''' + @oldpassword + '''';  
-  
+SET @command = 'update Users set password = ''' + @newpassword + ''' where username = '''
+    + @login + ''' AND password = ''' + @oldpassword + '''';
+
 -- Execute the command.  
-EXEC (@command);  
-GO  
+EXEC (@command);
+GO
 ```  
   
  As with QUOTENAME(), string truncation by REPLACE() can be avoided by declaring temporary variables that are large enough for all cases. When possible, you should call QUOTENAME() or REPLACE() directly inside the dynamic [!INCLUDE[tsql](../../includes/tsql-md.md)]. Otherwise, you can calculate the required buffer size as follows. For `@outbuffer = QUOTENAME(@input)`, the size of `@outbuffer` should be `2*(len(@input)+1)`. When you use `REPLACE()` and doubling quotation marks, as in the previous example, a buffer of `2*len(@input)` is enough.  
@@ -305,9 +304,9 @@ GO
  The following calculation covers all cases:  
   
 ```sql
-WHILE LEN(@find_string) > 0, required buffer size =  
-ROUND(LEN(@input)/LEN(@find_string),0) * LEN(@new_string)   
- + (LEN(@input) % LEN(@find_string))  
+WHILE LEN(@find_string) > 0, required buffer size =
+    ROUND(LEN(@input) / LEN(@find_string), 0)
+        * LEN(@new_string) + (LEN(@input) % LEN(@find_string))
 ```  
   
 ### Truncation When QUOTENAME(@variable, ']') Is Used  

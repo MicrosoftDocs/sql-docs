@@ -770,15 +770,17 @@ Constructs and operations not supported:
 Only literal predicates defined in a query can be pushed down to the external data source. This is unlike linked servers and accessing where predicates determined during query execution can be used, that is, when used in conjunction with a nested loop in a query plan. This will often lead to the whole external table being copied locally and then joined to.
 
 ```sql
-  \\ Assuming External.Orders is an external table and Customer is a local table.
-  \\ This query  will copy the whole of the external locally as the predicate needed
-  \\ to filter isn't known at compile time. Its only known during execution of the query
-  
-  SELECT Orders.OrderId, Orders.OrderTotal
-    FROM External.Orders
-   WHERE CustomerId in (SELECT TOP 1 CustomerId
-                          FROM Customer
-                          WHERE CustomerName = 'MyCompany')
+-- Assuming External.Orders is an external table and Customer is a local table.
+-- This query  will copy the whole of the external locally as the predicate needed
+-- to filter isn't known at compile time. Its only known during execution of the query
+
+SELECT Orders.OrderId, Orders.OrderTotal
+FROM External.Orders
+WHERE CustomerId IN (
+        SELECT TOP 1 CustomerId
+        FROM Customer
+        WHERE CustomerName = 'MyCompany'
+);
 ```
 
 Use of external tables prevents use of parallelism in the query plan.

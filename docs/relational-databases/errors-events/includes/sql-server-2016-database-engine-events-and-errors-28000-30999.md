@@ -251,6 +251,10 @@ ms.topic: include
 | 29001 | 16 | No | To connect to this server you must use SQL Server Management Studio or SQL Server Management Objects (SMO). |
 | 29003 | 16 | No | Invalid parameter combinations. |
 | 29004 | 16 | No | Unknown property specified: %s. |
+| 29101 | 16 | Yes | Fatal error in primary manager |
+| 29102 | 16 | Yes | Fatal error in backup manager |
+| 29103 | 16 | Yes | TCMA is shutting down since it encountered fatal error %d, state %d, severity %d |
+| 29104 | 16 | Yes | Failure in channel announce |
 | 29105 | 16 | Yes | Failure in channel enable |
 | 29201 | 17 | Yes | Configuration manager enlistment can not initialize communication service to receive enlistment requests |
 | 29202 | 16 | Yes | Configuration manager enlistment is ignoring message from brick \<%d\>. Enlistment protocol version mismatch. Agent version \<%X\>, manager version \<%X\>. |

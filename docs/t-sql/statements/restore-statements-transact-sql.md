@@ -765,10 +765,10 @@ RESTORE LOG Sales
 
 ```sql
 RESTORE DATABASE Sales
-  FROM DISK = 'D:\MSSQL\Backup\SalesSnapshotFull.bkm'
-  WITH METADATA_ONLY,
-  MOVE Sales_Data TO 'D:\MSSQL\Sales.mdf',
-  MOVE Sales_Log TO 'D:\MSSQL\Sales_log.ldf;
+FROM DISK = 'D:\MSSQL\Backup\SalesSnapshotFull.bkm'
+WITH METADATA_ONLY,
+    MOVE Sales_Data TO 'D:\MSSQL\Sales.mdf',
+    MOVE Sales_Log TO 'D:\MSSQL\Sales_log.ldf';
 ```
 
 [&#91;Top of examples&#93;](#examples)

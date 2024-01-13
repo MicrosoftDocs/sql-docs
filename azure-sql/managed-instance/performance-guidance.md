@@ -26,7 +26,7 @@ Once you have identified a performance issue that you're facing with Azure SQL M
 - Tune your application and apply some best practices that can improve performance.
 - Tune the database by changing indexes and queries to more efficiently work with data.
 
-This article assumes that you have reviewed the [overview of monitoring and tuning](../database/monitor-tune-overview.md) and [Monitor performance by using the Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store?view=azuresqldb-mi-current&preserve-view=true). Additionally, this article assumes that you do not have a performance issue related to CPU resource utilization that can be resolved by increasing the compute size or service tier to provide more resources to your database.
+This article assumes that you have reviewed the [overview of monitoring and tuning](../database/monitor-tune-overview.md) and [Monitor performance by using the Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store?view=azuresqldb-mi-current&preserve-view=true). Additionally, this article assumes that you do not have a performance issue related to CPU resource utilization that can be resolved by increasing the compute size or service tier to provide more resources to your SQL managed instance.
 
 > [!NOTE]
 > For similar guidance in Azure SQL Database, see [Tune applications and databases for performance in Azure SQL Database](../database/performance-guidance.md?view=azuresql-db&preserve-view=true).
@@ -89,7 +89,7 @@ SELECT m1.col1
     WHERE m1.col2 = 4;
 ```
 
-:::image type="content" source="./media/performance-guidance/query-plan-missing-indexes.png" alt-text="Screenshot of a query plan with at least one 'missing' index, featuring an Index Scan.":::
+:::image type="content" source="media/performance-guidance/query-plan-missing-indexes.png" alt-text="Screenshot of a query plan with at least one 'missing' index, featuring an Index Scan.":::
 
 DMVs that are built into SQL Server since 2005 look at query compilations in which an index would significantly reduce the estimated cost to run a query. During query execution, the database engine tracks how often each query plan is executed, and tracks the estimated gap between the executing query plan and the imagined one where that index existed. You can use these DMVs to quickly guess which changes to your physical database design might improve overall workload cost for a database and its real workload.
 
@@ -128,7 +128,7 @@ CREATE INDEX missing_index_5006_5005 ON [dbo].[missingindex] ([col2])
 
 After it's created, that same SELECT statement picks a different plan, which uses a seek instead of a scan, and then executes the plan more efficiently:
 
-:::image type="content" source="./media/performance-guidance/query-plan-corrected-indexes.png" alt-text="Screenshot of a graphical execution plan, showing a query plan with corrected indexes.":::
+:::image type="content" source="media/performance-guidance/query-plan-corrected-indexes.png" alt-text="Screenshot of a graphical execution plan, showing a query plan with corrected indexes.":::
 
 The key insight is that the IO capacity of a shared, commodity system is more limited than that of a dedicated server machine. There's a premium on minimizing unnecessary IO to take maximum advantage of the system in the resources of each compute size of the service tiers. Appropriate physical database design choices can significantly improve the latency for individual queries, improve the throughput of concurrent requests handled per scale unit, and minimize the costs required to satisfy the query. 
 
@@ -216,17 +216,17 @@ DECLARE @i int = 0;
 
 Each part of this example attempts to run a parameterized insert statement 1,000 times (to generate a sufficient load to use as a test data set). When it executes stored procedures, the query processor examines the parameter value that is passed to the procedure during its first compilation (parameter "sniffing"). The processor caches the resulting plan and uses it for later invocations, even if the parameter value is different. The optimal plan might not be used in all cases. Sometimes you need to guide the optimizer to pick a plan that is better for the average case rather than the specific case from when the query was first compiled. In this example, the initial plan generates a "scan" plan that reads all rows to find each value that matches the parameter:
 
-:::image type="content" source="./media/performance-guidance/query-tuning-execution-plan-scan.png" alt-text="Screenshot of a graphical execution plan, showing query tuning by using a scan plan.":::
+:::image type="content" source="media/performance-guidance/query-tuning-execution-plan-scan.png" alt-text="Screenshot of a graphical execution plan, showing query tuning by using a scan plan.":::
 
 Because we executed the procedure by using the value 1, the resulting plan was optimal for the value 1 but was suboptimal for all other values in the table. The result likely isn't what you would want if you were to pick each plan randomly, because the plan performs more slowly and uses more resources.
 
 If you run the test with `SET STATISTICS IO` set to `ON`, the logical scan work in this example is done behind the scenes. You can see that there are 1,148 reads done by the plan (which is inefficient, if the average case is to return just one row):
 
-:::image type="content" source="./media/performance-guidance/set-statistics-io-logical-reads.png" alt-text="Screenshot of a graphical execution plan, showing query tuning by using a logical scan.":::
+:::image type="content" source="media/performance-guidance/set-statistics-io-logical-reads.png" alt-text="Screenshot of a graphical execution plan, showing query tuning by using a logical scan.":::
 
 The second part of the example uses a query hint to tell the optimizer to use a specific value during the compilation process. In this case, it forces the query processor to ignore the value that is passed as the parameter, and instead to assume `UNKNOWN`. This refers to a value that has the average frequency in the table (ignoring skew). The resulting plan is a seek-based plan that is faster and uses fewer resources, on average, than the plan in part 1 of this example:
 
-:::image type="content" source="./media/performance-guidance/query-tuning-execution-plan-seek.png" alt-text="Screenshot of a graphical execution plan, showing query tuning outcomes after using a query hint.":::
+:::image type="content" source="media/performance-guidance/query-tuning-execution-plan-seek.png" alt-text="Screenshot of a graphical execution plan, showing query tuning outcomes after using a query hint.":::
 
 You can see the effect in the `sys.resource_stats` table (there's a delay from the time that you execute the test and when the data populates the table). For this example, part 1 executed during the 22:25:00 time window, and part 2 executed at 22:35:00. The earlier time window used more resources in that time window than the later one (because of plan efficiency improvements).
 
@@ -237,7 +237,7 @@ WHERE database_name = 'resource1'
 ORDER BY start_time DESC
 ```
 
-:::image type="content" source="./media/performance-guidance/sys-resource-stats-avg-cpu-percent-improvement.png" alt-text="Screenshot of the sys.resource_stats table showing the difference in avg_cpu_percent after improving indexes.":::
+:::image type="content" source="media/performance-guidance/sys-resource-stats-avg-cpu-percent-improvement.png" alt-text="Screenshot of the sys.resource_stats table showing the difference in avg_cpu_percent after improving indexes.":::
 
 > [!NOTE]
 > Although the volume in this example is intentionally small, the effect of suboptimal parameters can be substantial, especially on larger databases. The difference, in extreme cases, can be between seconds for fast cases and hours for slow cases.

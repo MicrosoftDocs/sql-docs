@@ -428,7 +428,7 @@ WHERE CustomerID = @CustomerIDParameter;
 
 [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] can't predict what key value will be supplied by the `@CustomerIDParameter` parameter every time the procedure is executed. Because the key value can't be predicted, the query processor also can't predict which member table will have to be accessed. To handle this case, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] builds an execution plan that has conditional logic, referred to as dynamic filters, to control which member table is accessed, based on the input parameter value. Assuming the `GetCustomer` stored procedure was executed on Server1, the execution plan logic can be represented as shown in the following:
 
-```sql
+```output
 IF @CustomerIDParameter BETWEEN 1 and 3299999
    Retrieve row from local table CustomerData.dbo.Customer_33
 ELSE IF @CustomerIDParameter BETWEEN 3300000 and 6599999
@@ -1441,7 +1441,7 @@ The following information is provided: `Actual Partition Count`, and `Partitions
 
 The Showplan methods `SHOWPLAN_ALL`, `SHOWPLAN_TEXT`, and `STATISTICS PROFILE` don't report the partition information described in this article, with the following exception. As part of the `SEEK` predicate, the partitions to be accessed are identified by a range predicate on the computed column representing the partition ID. The following example shows the `SEEK` predicate for a `Clustered Index Seek` operator. Partitions 2 and 3 are accessed, and the seek operator filters on the rows that meet the condition `date_id BETWEEN 20080802 AND 20080902`.
 
-```sql
+```output
 |--Clustered Index Seek(OBJECT:([db_sales_test].[dbo].[fact_sales].[ci]),
         SEEK:([PtnId1000] >= (2) AND [PtnId1000] \<= (3)
                 AND [db_sales_test].[dbo].[fact_sales].[date_id] >= (20080802)

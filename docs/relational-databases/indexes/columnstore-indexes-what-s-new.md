@@ -39,7 +39,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Columnstore index on a memory-optimized table|||yes|yes|yes|yes|yes|yes|
 |Nonclustered columnstore index definition supports using a filtered condition|||yes|yes|yes|yes|yes|yes|
 |Compression delay option for columnstore indexes in `CREATE TABLE` and `ALTER TABLE`|||yes|yes|yes|yes|yes|yes|
-|Support for nvarchar(max) type||||yes|yes|yes|yes|yes|
+|Support for nvarchar(max) type||||yes|yes|yes|yes|no|
 |Columnstore index can have a non-persisted computed column||||yes|yes|yes|||
 |Tuple mover background merge support|||||yes|yes|yes|yes|
 |Ordered clustered columnstore indexes||||||yes|yes|yes|

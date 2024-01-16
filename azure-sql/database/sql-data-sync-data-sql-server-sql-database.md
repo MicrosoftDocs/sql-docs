@@ -3,7 +3,7 @@ title: What is SQL Data Sync for Azure?
 description: This overview introduces SQL Data Sync for Azure, which allows you to sync data across multiple cloud and on-premises databases.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: wiassaf, mathoma, jeschult
+ms.reviewer: mathoma, hudequei
 ms.date: 11/28/2023
 ms.service: sql-database
 ms.subservice: sql-data-sync

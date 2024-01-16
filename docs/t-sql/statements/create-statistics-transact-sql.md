@@ -3,7 +3,7 @@ title: CREATE STATISTICS (Transact-SQL)
 description: CREATE STATISTICS (Transact-SQL)
 author: markingmyname
 ms.author: maghan
-ms.reviewer: katsmith, wiassaf
+ms.reviewer: derekw, wiassaf
 ms.date: 07/26/2023
 ms.service: sql
 ms.subservice: t-sql

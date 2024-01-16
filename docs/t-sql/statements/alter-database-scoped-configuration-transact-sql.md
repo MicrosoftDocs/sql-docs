@@ -4,7 +4,7 @@ titleSuffix: SQL Server (Transact-SQL)
 description: Enable several database configuration settings at the individual database level.
 author: markingmyname
 ms.author: maghan
-ms.reviewer: katsmith, jovanpop, wiassaf, mariyaali
+ms.reviewer: derekw, jovanpop, wiassaf, mariyaali
 ms.date: 03/14/2023
 ms.service: sql
 ms.subservice: t-sql

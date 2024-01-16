@@ -23,5 +23,6 @@ The following table identifies features available by SQL Server edition:
 | [Failover cluster instances (preview)](../support-for-fci.md)| Yes | Yes | Not applicable | Not applicable | Yes | Not applicable |
 | [Always On availability groups (preview)](../manage-availability-group.md)| Yes | Yes | Not applicable | Not applicable | Yes | Not applicable |
 | [Monitoring (preview)](../sql-monitoring.md)| Yes | Yes | No | No | No | No |
+| [Operate with least privileges (preview)](../configure-least-privilege.md)| Yes | Yes | Yes | Yes | Yes | Yes |
 
 <sup>1</sup> [Express LocalDB isn't supported.](/azure/purview/register-scan-on-premises-sql-server#supported-capabilities)

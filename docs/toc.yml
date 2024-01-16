@@ -10450,6 +10450,8 @@ items:
             href: sql-server/azure-arc/onboard-configuration-manager-custom-task.md
       - name: Manage
         items:
+        - name: Configure least privilege
+          href: sql-server/azure-arc/configure-least-privilege.md
         - name: Assess
           href: sql-server/azure-arc/assess.md
         - name: View databases

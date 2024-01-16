@@ -4,7 +4,7 @@ description: Estimate and monitor XTP in-memory storage usage and capacity in Az
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 12/12/2023
+ms.date: 01/16/2024
 ms.service: sql-managed-instance
 ms.subservice: performance
 ms.topic: how-to
@@ -41,7 +41,7 @@ To resolve this error, either:
 - Upgrade the vCore count add in-memory storage for the data you need to keep in memory-optimized tables.
 
 > [!NOTE]
-> In rare cases, error 41823 can be transient, meaning there is enough available in-memory OLTP storage, and retrying the operation succeeds. We therefore recommend to both monitor the overall available in-memory OLTP storage and to retry when first encountering error 41823. For more information about retry logic, see [Conflict Detection and Retry Logic with in-memory OLTP](/sql/relational-databases/In-memory-oltp/transactions-with-memory-optimized-tables#conflict-detection-and-retry-logic).
+> In rare cases, error 41823 can be transient, meaning there is enough available in-memory OLTP storage, and retrying the operation succeeds. We therefore recommend to both monitor the overall available in-memory OLTP storage and to retry when first encountering error 41823. For more information about retry logic, see [Conflict Detection and Retry Logic with in-memory OLTP](/sql/relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables#conflict-detection-and-retry-logic).
 
 ## Monitor with DMVs
 
@@ -74,7 +74,7 @@ To resolve this error, either:
         MEMORYCLERK_XTP      Default    64             0  
     ```
 
-- You can also get more information about out of memory errors in Azure SQL Managed Instance with the dynamic management view [sys.dm_os_out_of_memory_events](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-out-of-memory-events.md?view=azuresqldb-mi-current&preserve-view=true). For example:
+- You can also get more information about out of memory errors in Azure SQL Managed Instance with the dynamic management view [sys.dm_os_out_of_memory_events](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-out-of-memory-events?view=azuresqldb-mi-current&preserve-view=true). For example:
 
     ```sql
     SELECT * FROM sys.dm_os_out_of_memory_events ORDER BY event_time DESC;

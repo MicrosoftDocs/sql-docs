@@ -103,17 +103,18 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  When the conversion is to **time(n)**, the hour, minute, and seconds are copied. When the destination precision is less than the source precision, the fractional seconds is rounded up to fit the destination precision. The following example shows the results of converting a `time(4)` value to a `time(3)` value.  
   
 ```sql
-DECLARE @timeFrom time(4) = '12:34:54.1237';  
-DECLARE @timeTo time(3) = @timeFrom;  
-  
-SELECT @timeTo AS 'time(3)', @timeFrom AS 'time(4)';  
-  
---Results  
---time(3)      time(4)  
--------------- -------------  
---12:34:54.124 12:34:54.1237  
---  
---(1 row(s) affected)  
+DECLARE @timeFrom TIME(4) = '12:34:54.1237';
+DECLARE @timeTo TIME(3) = @timeFrom;
+
+SELECT @timeTo AS 'time(3)', @timeFrom AS 'time(4)';
+```
+
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
+
+```output
+time(3)      time(4)  
+------------ -------------  
+12:34:54.124 12:34:54.1237  
 ```  
   
  If the conversion is to **date**, the conversion fails, and error message 206 is raised: "Operand type clash: date is incompatible with time".  
@@ -121,77 +122,88 @@ SELECT @timeTo AS 'time(3)', @timeFrom AS 'time(4)';
  When the conversion is to **datetime**, hour, minute, and second values are copied; and the date component is set to '1900-01-01'. When the fractional seconds precision of the **time(n)** value is greater than three digits, the **datetime** result will be truncated. The following code shows the results of converting a `time(4)` value to a `datetime` value.  
   
 ```sql
-DECLARE @time time(4) = '12:15:04.1237';  
-DECLARE @datetime datetime= @time;  
-SELECT @time AS '@time', @datetime AS '@datetime';  
-  
---Result  
---@time         @datetime  
---------------- -----------------------  
---12:15:04.1237 1900-01-01 12:15:04.123  
---  
---(1 row(s) affected)  
-  
+DECLARE @time TIME(4) = '12:15:04.1237';
+DECLARE @datetime DATETIME = @time;
+
+SELECT @time AS '@time', @datetime AS '@datetime';
+```
+
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
+
+```output
+@time         @datetime  
+------------- -----------------------  
+12:15:04.1237 1900-01-01 12:15:04.123  
 ```  
   
- When the conversion is to **smalldatetime**, the date is set to '1900-01-01', and the hour and minute values are rounded up. The seconds and fractional seconds are set to 0. The following code shows the results of converting a `time(4)` value to a `smalldatetime` value.  
-  
+When the conversion is to **smalldatetime**, the date is set to '1900-01-01', and the hour and minute values are rounded up. The seconds and fractional seconds are set to 0. The following code shows the results of converting a `time(4)` value to a `smalldatetime` value.  
+
+Show rounding up of the minute value:
+
 ```sql
--- Shows rounding up of the minute value.  
-DECLARE @time time(4) = '12:15:59.9999';   
-DECLARE @smalldatetime smalldatetime= @time;    
-SELECT @time AS '@time', @smalldatetime AS '@smalldatetime';   
-  
---Result  
+DECLARE @time TIME(4) = '12:15:59.9999';
+DECLARE @smalldatetime SMALLDATETIME = @time;
+
+SELECT @time AS '@time', @smalldatetime AS '@smalldatetime';
+```
+
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
+
+```output
 @time            @smalldatetime  
 ---------------- -----------------------  
 12:15:59.9999    1900-01-01 12:16:00--  
---(1 row(s) affected)  
-  
--- Shows rounding up of the hour value.  
-DECLARE @time time(4) = '12:59:59.9999';   
-DECLARE @smalldatetime smalldatetime= @time;    
-  
-SELECT @time AS '@time', @smalldatetime AS '@smalldatetime';  
+```
+
+Show rounding up of the hour value:
+
+```sql
+DECLARE @time TIME(4) = '12:59:59.9999';
+DECLARE @smalldatetime SMALLDATETIME = @time;
+
+SELECT @time AS '@time', @smalldatetime AS '@smalldatetime';
+```
+
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
+
+```output
 @time            @smalldatetime  
 ---------------- -----------------------  
 12:59:59.9999    1900-01-01 13:00:00  
-  
-(1 row(s) affected)  
-  
 ```  
   
  If the conversion is to **datetimeoffset(n)**, the date is set to '1900-01-01', and the time is copied. The time zone offset is set to +00:00. When the fractional seconds precision of the **time(n)** value is greater than the precision of the **datetimeoffset(n)** value, the value is rounded up to fit. The following example shows the results of converting a `time(4)` value to a `datetimeoffset(3)` type.  
   
 ```sql
-DECLARE @time time(4) = '12:15:04.1237';  
-DECLARE @datetimeoffset datetimeoffset(3) = @time;  
-  
-SELECT @time AS '@time', @datetimeoffset AS '@datetimeoffset';  
-  
---Result  
---@time         @datetimeoffset  
---------------- ------------------------------  
---12:15:04.1237 1900-01-01 12:15:04.124 +00:00  
---  
---(1 row(s) affected)  
-  
+DECLARE @time TIME(4) = '12:15:04.1237';
+DECLARE @datetimeoffset DATETIMEOFFSET(3) = @time;
+
+SELECT @time AS '@time', @datetimeoffset AS '@datetimeoffset';
+```
+
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
+
+```output
+@time         @datetimeoffset  
+------------- ------------------------------  
+12:15:04.1237 1900-01-01 12:15:04.124 +00:00  
 ```  
   
  When converting to **datetime2(n)**, the date is set to '1900-01-01', the time component is copied, and the time zone offset is set to 00:00. When the fractional seconds precision of the **datetime2(n)** value is greater than the **time(n)** value, the value will be rounded up to fit.  The following example shows the results of converting a `time(4)` value to a `datetime2(2)` value.  
   
 ```sql
-DECLARE @time time(4) = '12:15:04.1237';  
-DECLARE @datetime2 datetime2(3) = @time;  
-  
-SELECT @datetime2 AS '@datetime2', @time AS '@time';  
-  
---Result  
---@datetime2              @time  
-------------------------- -------------  
---1900-01-01 12:15:04.124 12:15:04.1237  
---  
---(1 row(s) affected)  
+DECLARE @time TIME(4) = '12:15:04.1237';
+DECLARE @datetime2 DATETIME2(3) = @time;
+
+SELECT @datetime2 AS '@datetime2', @time AS '@time';
+```
+
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
+
+```output
+@datetime2              @time  
+----------------------- -------------  
+1900-01-01 12:15:04.124 12:15:04.1237  
 ```  
   
 ### Converting String Literals to time(n)  
@@ -216,16 +228,12 @@ SELECT @datetime2 AS '@datetime2', @time AS '@time';
  The following example compares the results of casting a string to each **date** and **time** data type.  
   
 ```sql
-SELECT   
-     CAST('2007-05-08 12:35:29. 1234567 +12:15' AS time(7)) AS 'time'   
-    ,CAST('2007-05-08 12:35:29. 1234567 +12:15' AS date) AS 'date'   
-    ,CAST('2007-05-08 12:35:29.123' AS smalldatetime) AS   
-        'smalldatetime'   
-    ,CAST('2007-05-08 12:35:29.123' AS datetime) AS 'datetime'   
-    ,CAST('2007-05-08 12:35:29. 1234567 +12:15' AS datetime2(7)) AS   
-        'datetime2'  
-    ,CAST('2007-05-08 12:35:29.1234567 +12:15' AS datetimeoffset(7)) AS   
-        'datetimeoffset';  
+SELECT CAST('2007-05-08 12:35:29. 1234567 +12:15' AS TIME(7)) AS 'time',
+    CAST('2007-05-08 12:35:29. 1234567 +12:15' AS DATE) AS 'date',
+    CAST('2007-05-08 12:35:29.123' AS SMALLDATETIME) AS 'smalldatetime',
+    CAST('2007-05-08 12:35:29.123' AS DATETIME) AS 'datetime',
+    CAST('2007-05-08 12:35:29. 1234567 +12:15' AS DATETIME2(7)) AS 'datetime2',
+    CAST('2007-05-08 12:35:29.1234567 +12:15' AS DATETIMEOFFSET(7)) AS 'datetimeoffset';
 ```  
   
 |Data type|Output|  

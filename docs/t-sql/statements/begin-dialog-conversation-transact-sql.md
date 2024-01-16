@@ -159,34 +159,34 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### D. Beginning a dialog, and relating it to an existing conversation group  
  The following example begins a dialog conversation and stores an identifier for the dialog in `@dialog_handle`. The `//Adventure-Works.com/ExpenseClient` service is the initiator for the dialog, and the `//Adventure-Works.com/Expenses` service is the target of the dialog. The dialog follows the contract `//Adventure-Works.com/Expenses/ExpenseSubmission`. The broker associates the dialog with the conversation group identified by `@conversation_group_id` instead of creating a new conversation group.  
   
-```sql  
-DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
-DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
-  
-SET @conversation_group_id = <retrieve conversation group ID from database>  
-  
-BEGIN DIALOG CONVERSATION @dialog_handle  
-   FROM SERVICE [//Adventure-Works.com/ExpenseClient]  
-   TO SERVICE '//Adventure-Works.com/Expenses'  
-   ON CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission]  
-   WITH RELATED_CONVERSATION_GROUP = @conversation_group_id ;  
+```sql
+DECLARE @dialog_handle UNIQUEIDENTIFIER;
+DECLARE @conversation_group_id UNIQUEIDENTIFIER;
+
+SET @conversation_group_id = <retrieve conversation group ID from database>;
+
+BEGIN DIALOG CONVERSATION @dialog_handle
+    FROM SERVICE [//Adventure-Works.com/ExpenseClient]
+    TO SERVICE '//Adventure-Works.com/Expenses'
+    ON CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission]
+    WITH RELATED_CONVERSATION_GROUP = @conversation_group_id;
 ```  
   
 ### E. Beginning a dialog with an explicit lifetime, and relating the dialog to an existing conversation  
  The following example begins a dialog conversation and stores an identifier for the dialog in `@dialog_handle`. The `//Adventure-Works.com/ExpenseClient` service is the initiator for the dialog, and the `//Adventure-Works.com/Expenses` service is the target of the dialog. The dialog follows the contract `//Adventure-Works.com/Expenses/ExpenseSubmission`. The new dialog belongs to the same conversation group that `@existing_conversation_handle` belongs to. If the dialog has not been closed by the END CONVERSATION command within `600` seconds, [!INCLUDE[ssSB](../../includes/sssb-md.md)] ends the dialog with an error.  
   
 ```sql  
-DECLARE @dialog_handle UNIQUEIDENTIFIER  
-DECLARE @existing_conversation_handle UNIQUEIDENTIFIER  
-  
-SET @existing_conversation_handle = <retrieve conversation handle from database>  
-  
-BEGIN DIALOG CONVERSATION @dialog_handle  
-   FROM SERVICE [//Adventure-Works.com/ExpenseClient]  
-   TO SERVICE '//Adventure-Works.com/Expenses'  
-   ON CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission]  
-   WITH RELATED_CONVERSATION = @existing_conversation_handle  
-   LIFETIME = 600 ;  
+DECLARE @dialog_handle UNIQUEIDENTIFIER;
+DECLARE @existing_conversation_handle UNIQUEIDENTIFIER;
+
+SET @existing_conversation_handle = <retrieve conversation handle from database>;
+
+BEGIN DIALOG CONVERSATION @dialog_handle
+   FROM SERVICE [//Adventure-Works.com/ExpenseClient]
+   TO SERVICE '//Adventure-Works.com/Expenses'
+   ON CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission]
+   WITH RELATED_CONVERSATION = @existing_conversation_handle
+   LIFETIME = 600;
 ```  
   
 ### F. Beginning a dialog with optional encryption  

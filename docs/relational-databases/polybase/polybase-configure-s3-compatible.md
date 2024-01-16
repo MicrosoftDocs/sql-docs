@@ -131,35 +131,31 @@ WITH IDENTITY = 'User Identity'
 
 3. Create an external data source to access the S3-compatible object storage. Use `CONNECTION_OPTIONS`, as JSON format, to inform the required information for both the ADFS and STS. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). As the following example:
 
-```sql
-CREATE EXTERNAL DATA SOURCE EdsName 
-WITH  
-{ 
-    LOCATION = 's3://<hostname>:<port>/<bucket_name>',
-   CREDENTIAL= <CredName>    
-   [, CONNECTION_OPTIONS= '{ 
-       [, "authorization": 
-      {
-           "adfs":
-          {
-              "endpoint": "http[s]://hostname:port/servicepath", 
-              "relying_party": "SQL Server Relying Party Identifier"
-          },
-          "sts":
-           {
-                "endpoint": "http[s]://hostname:port/stspath", 
-                "role_arn": "Role Arn"
-               [, "role_session_name": "AD user login"]  -- default value if not provided
-               [, "duration_seconds": 3600]              -- default value if not provided
-               [, "version": "2011-06-15"]               -- default value if not provided
-               [, "request_parameters": "In request query string format"]
-          }
-      }]
-      [, "s3": 
-      { 
-           "url_style": "Path" 
-       }] 
-   }'] 
+```syntaxsql
+CREATE EXTERNAL DATA SOURCE EdsName
+WITH
+{
+    LOCATION = 's3://<hostname>:<port>/<bucket_name>'
+    , CREDENTIAL = <CredName>
+    [ , CONNECTION_OPTIONS = ' {
+        [ , "authorization": {
+                "adfs": {
+                    "endpoint": "http[s]://hostname:port/servicepath",
+                    "relying_party": "SQL Server Relying Party Identifier"
+                },
+                "sts": {
+                    "endpoint": "http[s]://hostname:port/stspath",
+                    "role_arn": "Role Arn"
+                    [ , "role_session_name": "AD user login" ] -- default value if not provided
+                    [ , "duration_seconds": 3600 ]             -- default value if not provided
+                    [ , "version": "2011-06-15" ]              -- default value if not provided
+                    [ , "request_parameters": "In request query string format" ]
+                }
+            } ]
+        [ , "s3": {
+        	"url_style": "Path"
+        	} ]
+    }' ]
 }
 ```
 

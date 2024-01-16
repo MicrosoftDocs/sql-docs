@@ -29,7 +29,7 @@ helpviewer_keywords:
   
 - [Report parts in Report Designer &#40;SSRS&#41;](../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
  
-- [!INCLUDE [ssrs-report-parts-deprecated](../includes/ssrs-report-parts-deprecated.md)]  
+   [!INCLUDE [ssrs-report-parts-deprecated](../includes/ssrs-report-parts-deprecated.md)]  
  
 - [Schedules](../reporting-services/subscriptions/schedules.md)  
   

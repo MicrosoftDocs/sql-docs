@@ -505,11 +505,10 @@ ALTER LOGIN login_name
   | DROP CREDENTIAL credential_name
 ```
 
-> [!NOTE]
-> The Microsoft Entra admin for managed instance functionality after creation has changed. For more information, see [New Microsoft Entra admin functionality for MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 ```syntaxsql
--- Syntax for Azure SQL Managed Instance using Azure AD logins
+-- Syntax for Azure SQL Managed Instance using Microsoft Entra logins
+
 
 ALTER LOGIN login_name
   {

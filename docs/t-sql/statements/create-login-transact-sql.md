@@ -27,7 +27,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # CREATE LOGIN (Transact-SQL)
 
-Creates a login for SQL Server, Azure SQL Database, Azure Synapse Analytics, or Analytics Platform System databases. Choose one of the following tabs for the syntax, arguments, remarks, permissions, and examples for a particular version.
+Creates a login for SQL Server, Azure SQL Database, Azure SQL Managed Instance, Azure Synapse Analytics, or Analytics Platform System databases. Choose one of the following tabs for the syntax, arguments, remarks, permissions, and examples for a particular version.
 
 CREATE LOGIN participates in transactions. If CREATE LOGIN is executed within a transaction and the transaction is rolled back, then login creation is rolled back. If executed within a transaction, the created login cannot be used until the transaction is committed.
 
@@ -356,7 +356,8 @@ CREATE LOGIN login_name
 
 When used with the **FROM EXTERNAL PROVIDER** clause, the login specifies the Microsoft Entra principal, which is a Microsoft Entra user, group, or application. Otherwise, the login represents the name of the SQL login that was created.
 
-Microsoft Entra users and service principals (Microsoft Entra applications) that are members of more than 2048 Microsoft Entra security groups are not supported to login into the database in SQL Database, SQL Managed Instance, or Azure Synapse.
+Microsoft Entra users and service principals that are members of more than 2048 Microsoft Entra security groups are not supported to login into the database in SQL Database, SQL Managed Instance, or Azure Synapse.
+
 
 #### FROM EXTERNAL PROVIDER </br>
 Specifies that the login is for Microsoft Entra authentication.
@@ -434,7 +435,7 @@ GO
 
 ### C. Create a login using a Microsoft Entra account
 
-The following example creates a login in the SQL Database logical server,`bob@contoso.com` that exists in the Microsoft Entra domain called `contoso`.
+This example creates a login in the Azure SQL logical server using the credentials of a user `bob@contoso.com` that exists in the Microsoft Entra domain called `contoso`.
 
 ```sql
 Use master
@@ -495,7 +496,7 @@ CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 #### *login_name*
 When used with the **FROM EXTERNAL PROVIDER** clause, the login specifies the Microsoft Entra principal, which is a Microsoft Entra user, group, or application. Otherwise, the login represents the name of the SQL login that was created.
 
-Microsoft Entra users and service principals (Microsoft Entra applications) that are members of more than 2048 Microsoft Entra security groups are not supported to login into the database in SQL Database, SQL Managed Instance, or Azure Synapse.
+Microsoft Entra users and service principals that are members of more than 2048 Microsoft Entra security groups are not supported to log into databases in Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse.
 
 #### FROM EXTERNAL PROVIDER </br>
 Specifies that the login is for Microsoft Entra authentication.
@@ -510,15 +511,18 @@ Used to recreate a login. Applies to SQL Server authentication logins only. Spec
 
 ## Remarks
 
-- Passwords are case-sensitive.
-- New syntax is introduced for the creation of server-level principals mapped to Microsoft Entra accounts (**FROM EXTERNAL PROVIDER**)
-- When **FROM EXTERNAL PROVIDER** is specified:
+- The `FROM EXTERNAL PROVIDER` syntax creates server-level principals mapped to Microsoft Entra accounts
+- When `FROM EXTERNAL PROVIDER` is specified:
+
 
   - The login_name must represent an existing Microsoft Entra account (user, group, or application) that is accessible in Microsoft Entra ID by the current Azure SQL Managed Instance. For Microsoft Entra principals, the CREATE LOGIN syntax requires:
-    - UserPrincipalName of the Microsoft Entra object for Microsoft Entra Users.
-    - DisplayName of Microsoft Entra object for Microsoft Entra groups and Microsoft Entra Applications.
+    - UserPrincipalName of the Microsoft Entra object for Microsoft Entra users.
+
+    - DisplayName of the Microsoft Entra object for Microsoft Entra groups and applications.
+
   - The **PASSWORD** option cannot be used.
-- By default, when the **FROM EXTERNAL PROVIDER** clause is omitted, a regular SQL login is created.
+- By default, when the `FROM EXTERNAL PROVIDER` clause is omitted, a regular SQL login is created.
+
 - Microsoft Entra logins are visible in sys.server_principals, with type column value set to **E** and type_desc set to **EXTERNAL_LOGIN** for logins mapped to Microsoft Entra users, or type column value set to **X** and type_desc value set to **EXTERNAL_GROUP** for logins mapped to Microsoft Entra groups.
 - For a script to transfer logins, see [How to transfer the logins and the passwords between instances of SQL Server 2005 and SQL Server 2008](https://support.microsoft.com/kb/918992).
 - Creating a login automatically enables the new login and grants the login the server level **CONNECT SQL** permission.
@@ -533,35 +537,37 @@ Only the server-level principal login (created by the provisioning process) or m
 By default, the standard permission granted to a newly created Microsoft Entra login in master is:
 **CONNECT SQL** and **VIEW ANY DATABASE**.
 
-### SQL Managed Instance Logins
+### SQL Managed Instance logins
+
 
 - Must have **ALTER ANY LOGIN** permission on the server or membership in the one of the fixed server roles `securityadmin` or `sysadmin`. Only a Microsoft Entra account with **ALTER ANY LOGIN** permission on the server or membership in one of those roles can execute the create command.
-- If the login is a SQL Principal, only logins that are part of the `sysadmin` role can use the create command to create logins for a Microsoft Entra account.
-- Must be a member of Microsoft Entra ID within the same directory used for Azure SQL Managed Instance.
+- If the login is a SQL principal, only logins that are part of the `sysadmin` role can use the create command to create logins for a Microsoft Entra account.
+
+- Must be a member of the same Microsoft Entra tenant as the Azure SQL Managed Instance.
 
 ## After creating a login
 
-> [!NOTE]
-> The Microsoft Entra admin for Azure SQL Managed Instance functionality after creation has changed. For more information, see [New Microsoft Entra admin functionality for MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 After creating a login, the login can connect to a managed instance, but only has the permissions granted to the **public** role. Consider performing some of the following activities.
 
-- To create a Microsoft Entra user from a Microsoft Entra login, see [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
+- To create a user from a Microsoft Entra login, see [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
+
 - To grant permissions to a user in a database, use the **ALTER SERVER ROLE** ... **ADD MEMBER** statement to add the user to one of the built-in database roles or a custom role, or grant permissions to the user directly using the [GRANT](../../t-sql/statements/grant-transact-sql.md) statement. For more information, see [Non-administrator Roles](/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Additional server-level administrative roles](/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md), and [GRANT](grant-transact-sql.md) statement.
 - To grant server-wide permissions, create a database user in the master database and use the **ALTER SERVER ROLE** ... **ADD MEMBER** statement to add the user to one of the administrative server roles. For more information, see [Server-Level Roles](/azure/sql-database/sql-database-manage-logins#groups-and-roles) and [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md), and [Server roles](/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
   - Use the following command to add the `sysadmin` role to a Microsoft Entra login:
-  `ALTER SERVER ROLE sysadmin ADD MEMBER [AzureAD_Login_name]`
+  `ALTER SERVER ROLE sysadmin ADD MEMBER [MS_Entra_login]`
 - Use the **GRANT** statement, to grant server-level permissions to the new login or to a role containing the login. For more information, see [GRANT](../../t-sql/statements/grant-transact-sql.md).
 
 ## Limitations
 
 - Setting a Microsoft Entra login mapped to a Microsoft Entra group as the database owner is not supported.
-- Impersonation of Microsoft Entra server-level principals using other Microsoft Entra principals is supported, such as the [EXECUTE AS](execute-as-transact-sql.md) clause.
-- Only instance-level principals (logins) that are part of the `sysadmin` role can execute the following operations targeting Microsoft Entra principals:
+- Impersonation of Microsoft Entra logins using other Microsoft Entra principals is supported, such as the [EXECUTE AS](execute-as-transact-sql.md) clause.
+
+- Only server principals (logins) that are part of the `sysadmin` role can execute the following operations targeting Microsoft Entra principals:
   - EXECUTE AS USER
   - EXECUTE AS LOGIN
-- External (guest) users imported from another Microsoft Entra directory cannot be directly configured as a Microsoft Entra admin for SQL Managed Instance using the Azure portal. Instead, join external user to a Microsoft Entra security-enabled group and configure the group as the instance administrator. You can use PowerShell or Azure CLI to set individual guest users as the instance administrator.
-- Login is not replicated to the secondary instance in a failover group. Login is saved in the master database, which is a system database, and as such, is not geo-replicated. To solve this, the user must create login with the same SID on the secondary instance.
+- External (guest) users imported from another Microsoft Entra directory cannot be directly configured as a Microsoft Entra admin for SQL Managed Instance using the Azure portal. Instead, join external user to a [role-assignable group](/entra/identity/role-based-access-control/groups-create-eligible) and configure the group as the instance administrator. You can use PowerShell or Azure CLI to set individual guest users as the instance administrator.
+- Logins are not replicated to the secondary instance in a failover group. Login are saved in the master database, which is a system database, and as such is not geo-replicated. To solve this, logins must be created with the same SID on the secondary instance.
 
 ```SQL
 -- Code to create login on the secondary instance
@@ -605,12 +611,15 @@ My query returns 0x241C11948AEEB749B0D22646DB1A19F2 as the SID. Your query will 
 
 <a name='c-creating-a-login-for-a-local-azure-ad-account'></a>
 
-### C. Creating a login for a local Microsoft Entra account
+### C. Creating a login for a Microsoft Entra user
 
- The following example creates a login for the Microsoft Entra account joe@myaad.onmicrosoft.com that exists in the Microsoft Entra ID of *myaad*.
+
+ The following example creates a login for the Microsoft Entra account joe@contoso.onmicrosoft.com that exists in the Microsoft Entra tenant named *contoso*.
+
 
 ```sql
-CREATE LOGIN [joe@myaad.onmicrosoft.com] FROM EXTERNAL PROVIDER
+CREATE LOGIN [joe@contoso.onmicrosoft.com] FROM EXTERNAL PROVIDER
+
 GO
 ```
 
@@ -618,7 +627,8 @@ GO
 
 ### D. Creating a login for a federated Microsoft Entra account
 
- The following example creates a login for a federated Microsoft Entra account bob@contoso.com that exists in the Microsoft Entra ID called *contoso*. User bob can also be a guest user.
+ The following example creates a login for a federated Microsoft Entra account bob@contoso.com that exists in a Microsoft Entra tenant called *contoso*. User bob can also be a guest user.
+
 
 ```sql
 CREATE LOGIN [bob@contoso.com] FROM EXTERNAL PROVIDER
@@ -629,7 +639,8 @@ GO
 
 ### E. Creating a login for a Microsoft Entra group
 
- The following example creates a login for the Microsoft Entra group *mygroup* that exists in the Microsoft Entra ID of *myaad*
+ The following example creates a login for the Microsoft Entra group *mygroup* that exists in Microsoft Entra tenant of *myaad*
+
 
 ```sql
 CREATE LOGIN [mygroup] FROM EXTERNAL PROVIDER
@@ -640,7 +651,8 @@ GO
 
 ### F. Creating a login for a Microsoft Entra application
 
-The following example creates a login for the Microsoft Entra application *myapp* that exists in the Microsoft Entra ID of *myaad*
+The following example creates a login for the Microsoft Entra application *myapp* that exists in the Microsoft Entra tenant of *myaad*
+
 
 ```sql
 CREATE LOGIN [myapp] FROM EXTERNAL PROVIDER

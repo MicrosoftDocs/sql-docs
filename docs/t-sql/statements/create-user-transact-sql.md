@@ -138,8 +138,6 @@ CREATE USER user_name
     | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ] ] 
 ```
 
-> [!NOTE]
-> The Microsoft Entra admin for Azure SQL Managed Instance functionality after creation has changed. For more information, see [New Microsoft Entra admin functionality for MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 ```syntaxsql
 -- Syntax for Azure Synapse Analytics  
@@ -202,7 +200,7 @@ CREATE USER user_name
 
 - [Microsoft Entra server principals (logins)](/azure/azure-sql/database/authentication-azure-ad-logins) introduces creating users that are mapped to Microsoft Entra logins in the virtual master database. `CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com]`
 
-- Microsoft Entra users and service principals (Microsoft Entra applications) that are members of more than 2048 Microsoft Entra security groups aren't supported to login into the database in SQL Database, SQL Managed Instance, or Azure Synapse.
+- Microsoft Entra users and service principals (applications) that are members of more than 2048 Microsoft Entra security groups aren't supported to log into databases in Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse.
 - DisplayName of Microsoft Entra object for Microsoft Entra groups and Microsoft Entra Applications. If you had the *Nurses* security group, you would use:  
   
   - `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
@@ -249,11 +247,13 @@ CREATE USER user_name
 >  Improper use of this option can lead to data corruption. For more information, see [Migrate Sensitive Data Protected by Always Encrypted](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).  
 
 #### FROM EXTERNAL PROVIDER </br>
- **Applies to**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and Managed Instance.  
+ **Applies to**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and Azure SQL Managed Instance.  
+
 Specifies that the user is for Microsoft Entra authentication.
 
 ## Remarks  
- If FOR LOGIN is omitted, the new database user will be mapped to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login with the same name.  
+ If `FOR LOGIN` is omitted, the new database user will be mapped to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login with the same name.  
+
   
  The default schema will be the first schema that will be searched by the server when it resolves the names of objects for this database user. Unless otherwise specified, the default schema will be the owner of objects created by this database user.  
   
@@ -278,9 +278,11 @@ GO
   
  Information about database users is visible in the [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) catalog view.
 
-A new syntax extension, **FROM EXTERNAL PROVIDER** is available for creating server-level Microsoft Entra logins in Azure SQL Database and Azure SQL Managed Instance. Microsoft Entra logins allow database-level Microsoft Entra principals to be mapped to server-level Microsoft Entra logins. To create a Microsoft Entra user from a Microsoft Entra login use the following syntax:
+Use the syntax extension `FROM EXTERNAL PROVIDER` to create server-level Microsoft Entra logins in Azure SQL Database and Azure SQL Managed Instance. Microsoft Entra logins allow database-level Microsoft Entra principals to be mapped to server-level Microsoft Entra logins. To create a Microsoft Entra user from a Microsoft Entra login use the following syntax:
 
-`CREATE USER [AAD_principal] FROM LOGIN [Azure AD login]`
+
+`CREATE USER [Microsoft_Entra_principal] FROM LOGIN [Microsoft Entra login]`
+
 
 When creating the user in the Azure SQL database, the *login_name* must correspond to an existing Microsoft Entra login, or else using the **FROM EXTERNAL PROVIDER** clause will only create a Microsoft Entra user without a login in the master database. For example, this command will create a contained user:
 
@@ -481,7 +483,8 @@ WITH
 
  To create a Microsoft Entra user from a Microsoft Entra login, use the following syntax.
 
- Sign in to your Azure SQL logical server or SQL managed instance with a Microsoft Entra login granted with the `sysadmin` role in managed instance, or `loginmanager` role in SQL Database. The following creates a Microsoft Entra user `bob@contoso.com`, from the login `bob@contoso.com`. This login was created in the [CREATE LOGIN](./create-login-transact-sql.md#examples) example.
+ Sign in to your [logical server in Azure](/azure/azure-sql/database/logical-servers) or SQL Managed Instance using a Microsoft Entra login granted the `sysadmin` role in SQL Managed Instance, or `loginmanager` role in SQL Database. The following creates a Microsoft Entra user `bob@contoso.com`, from the login `bob@contoso.com`. This login was created in the [CREATE LOGIN](./create-login-transact-sql.md#examples) example.
+
 
 
 ```sql
@@ -495,22 +498,24 @@ GO
 Creating a Microsoft Entra user as a group from a Microsoft Entra login that is a group is supported.
 
 ```sql
-CREATE USER [AAD group] FROM LOGIN [AAD group];
+CREATE USER [MS Entra group] FROM LOGIN [MS Entra group];
+
 GO
 ```
 
 You can also create a Microsoft Entra user from a Microsoft Entra login that is a group.
 
 ```sql
-CREATE USER [bob@contoso.com] FROM LOGIN [AAD group];
+CREATE USER [bob@contoso.com] FROM LOGIN [MS Entra group];
+
 GO
 ```
 
 <a name='j-create-an-azure-ad-user-without-an-azure-ad-login-for-the-database'></a>
 
-### J. Create a Microsoft Entra user without a Microsoft Entra login for the database
+### J. Create a contained database user from a Microsoft Entra principal
 
-The following syntax is used to create a Microsoft Entra user `bob@contoso.com`, in the SQL Managed Instance database (contained user):
+The following syntax creates a Microsoft Entra user `bob@contoso.com`, in a database without an associated login in `master`:
 
 ```sql
 CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;

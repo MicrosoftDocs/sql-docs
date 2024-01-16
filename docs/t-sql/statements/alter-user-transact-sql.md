@@ -571,13 +571,12 @@ The name of a user mapped to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 
 These remarks apply to authenticating as Windows users that have been federated and synchronized with Microsoft Entra ID.
 
-> [!NOTE]
-> The Microsoft Entra admin for Azure SQL Managed Instance functionality after creation has changed. For more information, see [New Microsoft Entra admin functionality for MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 - Validation of Windows users or groups that are mapped to Microsoft Entra ID is done by default through Graph API in all versions of the ALTER USER syntax used for migration purpose.
 - On-premises users that were aliased (use a different name from the original Windows account) will keep the aliased name.
 - For Microsoft Entra authentication, the LOGIN parameter applies only to Azure SQL Managed Instance and can't be used with SQL Database.
-- To view logins for Microsoft Entra Principals, use the following command:
+- To view logins for Microsoft Entra principals, use the following command:
+
 `select * from sys.server_principals`.
 - Check the login's indicated type is `E` or `X`.
 - PASSWORD option can't be used for Microsoft Entra users.
@@ -662,7 +661,8 @@ GO
 The following example remaps the user, `westus/joe` to a Microsoft Entra user, `joe@westus.com`. This example is for logins that already exist in the managed instance. This needs to be performed after you have completed a database migration to Azure SQL Managed Instance, and want to use the Microsoft Entra login to authenticate.
 
 ```sql
-ALTER USER [westus/joe] WITH LOGIN = joe@westus.com
+ALTER USER [westus/joe] WITH LOGIN = [joe@westus.com]
+
 ```
 
 <a name='e-map-an-old-windows-user-in-the-database-without-a-login-in-azure-sql-managed-instance-to-an-azure-ad-user'></a>
@@ -682,7 +682,7 @@ ALTER USER [westus/joe] FROM EXTERNAL PROVIDER
 The following example remaps the user name, `westus\joe` to `joe_alias`. The corresponding Microsoft Entra login in this case is `joe@westus.com`.
 
 ```sql
-ALTER USER [westus/joe] WITH LOGIN = joe@westus.com, name= joe_alias
+ALTER USER [westus/joe] WITH LOGIN = [joe@westus.com], name= joe_alias
 ```
 
 <a name='g-map-a-windows-group-that-was-migrated-in-azure-sql-managed-instance-to-an-azure-ad-group'></a>

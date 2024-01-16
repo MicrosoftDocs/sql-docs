@@ -216,15 +216,15 @@ The new owner principal must be one of the following:
 - A federated user (not a group) present in Microsoft Entra ID.
 - A managed user (not a group) or an application present in Microsoft Entra ID.
 
-If the new owner is a Microsoft Entra user, it cannot exist as a user in the database where the new owner will become the new DBO. Such Microsoft Entra user must be first removed from the database before executing the ALTER AUTHORIZATION statement changing the database ownership to the new user. For more information about configuring a Microsoft Entra users with SQL Database, see [Connecting to SQL Database or [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] By Using Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-configure).
+If the new owner is a Microsoft Entra user, it cannot exist as a user in the database where the new owner will become the new database owner (dbo). The Microsoft Entra user must first be removed from the database before executing the ALTER AUTHORIZATION statement changing the database ownership to the new user. For more information about configuring Microsoft Entra users with SQL Database, see [Configure Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-configure).
 
 **Requirements for the person executing the ALTER AUTHORIZATION statement:**
 You must connect to the target database to change the owner of that database.
 
 The following types of accounts can change the owner of a database.
 
-- The service-level principal login. (The SQL Azure administrator provisioned when the SQL Database server was created.)
-- The Microsoft Entra administrator for the Azure SQL Server.
+- The service-level principal login, which is the SQL administrator provisioned when the [logical server in Azure](/azure/azure-sql/database/logical-servers) was created.
+- The Microsoft Entra administrator for the logical server..
 - The current owner of the database.
 
 The following table summarizes the requirements:
@@ -236,7 +236,7 @@ SQL Server Authentication login  |Microsoft Entra user|Fail
 Microsoft Entra user  |SQL Server Authentication login|Success
 Microsoft Entra user  |Microsoft Entra user|Success
 
-To verify a Microsoft Entra owner of the database execute the following Transact-SQL command in a user database (in this example `testdb`).
+To verify a Microsoft Entra owner of the database, execute the following Transact-SQL command in a user database (in this example `testdb`).
 
 ```sql
 SELECT CAST(owner_sid as uniqueidentifier) AS Owner_SID
@@ -244,7 +244,7 @@ FROM sys.databases
 WHERE name = 'testdb';
 ```
 
-The output will be an identifier (such as 6D8B81F6-7C79-444C-8858-4AF896C03C67) which corresponds to Microsoft Entra ObjectID assigned to `richel@cqclinic.onmicrosoft.com`
+The output will be a GUID (such as XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) which corresponds to the object ID of the Microsoft Entra user or service principal assigned as the database owner. You can verify this by [checking the user's object ID in Microsoft Entra ID](/partner-center/find-ids-and-domain-names#find-the-user-object-id).
 When a SQL Server authentication login user is the database owner, execute the following statement in the master database to verify the database owner:
 
 ```sql
@@ -257,7 +257,7 @@ ON d.owner_sid = sl.sid;
 
 ### Best practice
 
-Instead of using Microsoft Entra users as individual owners of the database, use a Microsoft Entra group as a member of the **db_owner** fixed database role. The following steps, show how to configure a disabled login as the database owner, and make a Microsoft Entra group (`mydbogroup`) a member of the **db_owner** role.
+Instead of using Microsoft Entra users as individual owners of the database, use a Microsoft Entra group as a member of the **db_owner** fixed database role. The following steps show how to configure a disabled login as the database owner, and make a Microsoft Entra group (`mydbogroup`) a member of the **db_owner** role.
 
 1. Login to SQL Server as Microsoft Entra admin, and change the owner of the database to a disabled SQL Server authentication login. For example, from the user database execute:
 
@@ -371,15 +371,14 @@ ALTER AUTHORIZATION ON DATABASE::Parts TO MichikoOsada;
 
 <a name='g-changing-the-owner-of-a-sql-database-to-an-azure-ad-user'></a>
 
-### G. Changing the owner of a SQL Database to a Microsoft Entra User
+### G. Changing the owner of a database to a Microsoft Entra user
 
-In the following example, a Microsoft Entra administrator for SQL Server in an organization with an active directory named `cqclinic.onmicrosoft.com`, can change the current ownership of a database `targetDB` and make a Microsoft Entra user  `richel@cqclinic.onmicorsoft.com` the new database owner using the following command:
+In the following example, a Microsoft Entra administrator for SQL Server in an organization with a custom Microsoft Entra domain named `cqclinic.onmicrosoft.com`, can change the current ownership of a database `targetDB` and make an existing Microsoft Entra user `richel@cqclinic.onmicorsoft.com` the new database owner using the following command:
 
 ```sql
 ALTER AUTHORIZATION ON database::targetDB TO [rachel@cqclinic.onmicrosoft.com];
 ```
 
-Microsoft Entra ID requires brackets `[]` around the user name.
 
 ## See Also
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)

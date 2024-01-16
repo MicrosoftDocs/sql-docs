@@ -218,7 +218,7 @@ Connections from the **sqlcmd** (Go) utility are limited to TCP connections. Nam
 
 #### Enhancements
 
-- `:Connect` now has an optional `-G` parameter to select one of the authentication methods for Azure SQL Database  - `SqlAuthentication`, `ActiveDirectoryDefault`, `ActiveDirectoryIntegrated`, `ActiveDirectoryServicePrincipal`, `ActiveDirectoryManagedIdentity`, `ActiveDirectoryPassword`. For more information, see [Microsoft Entra authentication](sqlcmd-authentication.md). If `-G` isn't provided, Integrated security or SQL Server Authentication is used, depending on the presence of a `-U` user name parameter.
+- `:Connect` now has an optional `-G` parameter to select one of the authentication methods for Azure SQL Database  - `SqlAuthentication`, `ActiveDirectoryDefault`, `ActiveDirectoryIntegrated`, `ActiveDirectoryServicePrincipal`, `ActiveDirectoryManagedIdentity`, `ActiveDirectoryPassword`. For more information, see [Microsoft Entra authentication](sqlcmd-authentication.md). If `-G` isn't provided, Integrated security or SQL Server authentication is used, depending on the presence of a `-U` user name parameter.
 
 - The new `--driver-logging-level` command line parameter allows you to see traces from the `go-mssqldb` driver. Use `64` to see all traces.
 

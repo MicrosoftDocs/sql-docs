@@ -48,8 +48,8 @@ The article demonstrates the following steps:
    | **Server type** | Database Engine | Select **Database Engine** (usually the default option). |
    | **Server name** | The fully qualified server name | Enter the name of your *Azure SQL Database* or *Azure SQL Managed Instance* name. |
    | **Authentication** | | |
-   | | Azure Active Directory <sup>1</sup> | |
-   | | - Universal with MFA | See [Using multi-factor Microsoft Entra authentication](/azure/azure-sql/database/authentication-mfa-ssms-overview). |
+   | | Microsoft Entra ID <sup>1</sup> | |
+   | | - Universal with MFA | See [Using Microsoft Entra multifactor authentication](/azure/azure-sql/database/authentication-mfa-ssms-overview). |
    | | - Password<br />- Integrated<br />- Service Principal | See [Microsoft Entra service principal with Azure SQL](/azure/azure-sql/database/authentication-aad-service-principal). |
    | | - Managed Identity | See [Managed identities in Microsoft Entra for Azure SQL](/azure/azure-sql/database/authentication-azure-ad-user-assigned-managed-identity).<br />Connecting to a SQL instance with SSMS using a managed identity requires an Azure VM. See [Use a Windows VM system-assigned managed identity to access Azure SQL](/azure/active-directory/managed-identities-azure-resources/tutorial-windows-vm-access-sql)  |
    | | - Default | The default option can be used when connecting using any Microsoft Entra authentication mode that's passwordless and noninteractive. |

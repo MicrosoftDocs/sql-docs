@@ -164,7 +164,7 @@ Multiple file locations can only be specified from the same storage account and 
 > [!NOTE]  
 >  
 > - When authenticating using Microsoft Entra ID or to a public storage account, CREDENTIAL does not need to be specified.  
-> - If your storage account is associated with a VNet, you must authenticate using MSI (Managed Identity).
+> - If your storage account is associated with a VNet, you must authenticate using a managed identity.
 
 - Authenticating with Shared Access Signatures (SAS)
 
@@ -175,7 +175,7 @@ Multiple file locations can only be specified from the same storage account and 
 - Authenticating with [*Service Principals*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
 
   - *IDENTITY: \<ClientID\>@<OAuth_2.0_Token_EndPoint>*
-  - *SECRET: Microsoft Entra Application Service Principal key*
+  - *SECRET: Microsoft Entra application service principal key*
   -  Minimum RBAC roles required: Storage blob data contributor, Storage blob data contributor, Storage blob data owner, or Storage blob data reader
 
 - Authenticating with Storage account key
@@ -186,7 +186,7 @@ Multiple file locations can only be specified from the same storage account and 
 - Authenticating with [Managed Identity](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNet Service Endpoints)
 
   - *IDENTITY: A constant with a value of 'Managed Identity'*
-  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Microsoft Entra registered SQL Database server
+  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Microsoft Entra registered [logical server used by Azure SQL Database](/azure/azure-sql/database/logical-servers)
 
 - Authenticating with a Microsoft Entra user
 
@@ -218,7 +218,7 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
 
 - Authenticating with [*Service Principals*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
   - *IDENTITY: \<ClientID\>@<OAuth_2.0_Token_EndPoint>*
-  - *SECRET: Microsoft Entra Application Service Principal key*
+  - *SECRET: Microsoft Entra application service principal key*
   - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner
 
 > [!NOTE]  

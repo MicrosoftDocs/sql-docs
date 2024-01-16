@@ -250,17 +250,17 @@ Specifies the number of the first row to export from a table or import from a da
 
 **Applies to:** Azure SQL Database and Azure Synapse Analytics only.
 
-This switch is used by the client when connecting to Azure SQL Database or Azure Synapse Analytics to specify that the user be authenticated using Microsoft Entra authentication. The -G switch requires [version 14.0.3008.27](https://go.microsoft.com/fwlink/?LinkID=825643) or later versions. To determine your version, execute `bcp -v`. For more information, see [Use Microsoft Entra authentication with SQL Database or Azure Synapse Analytics](/azure/sql-database/sql-database-aad-authentication).
+This switch is used by the client when connecting to Azure SQL Database or Azure Synapse Analytics to specify that the user be authenticated with Microsoft Entra ID. The -G switch requires [version 14.0.3008.27](https://go.microsoft.com/fwlink/?LinkID=825643) or later versions. To determine your version, execute `bcp -v`. For more information, see [Use Microsoft Entra authentication with SQL Database or Azure Synapse Analytics](/azure/sql-database/sql-database-aad-authentication).
 
 > [!IMPORTANT]  
-> Microsoft Entra Interactive Authentication is not currently supported on Linux or macOS. Microsoft Entra integrated authentication requires [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 and later versions, and a properly [configured Kerberos environment](../connect/odbc/linux-mac/using-integrated-authentication.md#configure-kerberos).
+> Microsoft Entra interactive authentication is not currently supported on Linux or macOS. Microsoft Entra integrated authentication requires [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 and later versions, and a properly [configured Kerberos environment](../connect/odbc/linux-mac/using-integrated-authentication.md#configure-kerberos).
 
 > [!TIP]  
 > To check if your version of **bcp** includes support for Microsoft Entra authentication, type `bcp --help` and verify that you see `-G` in the list of available arguments.
 
 - **Microsoft Entra username and password**
 
-  When you want to use a Microsoft Entra user name and password, you can provide the `-G` option and also use the user name and password by providing the `-U` and `-P` options.
+  When you want to use a Microsoft Entra username and password, you can provide the `-G` option and also use the username and password by providing the `-U` and `-P` options.
 
   The following example exports data using Microsoft Entra username and password credentials. The example exports table `bcptest` from database `testdb` from Azure server `aadserver.database.windows.net` and stores the data in file `c:\last\data1.dat`:
 
@@ -268,7 +268,7 @@ This switch is used by the client when connecting to Azure SQL Database or Azure
   bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
   ```
 
-  The following example imports data using Microsoft Entra username and password where user and password are a Microsoft Entra credential. The example imports data from file `c:\last\data1.dat` into table `bcptest` for database `testdb` on Azure server `aadserver.database.windows.net` using Microsoft Entra user/password:
+  The following example imports data using the credentials of a Microsoft Entra user. The example imports data from file `c:\last\data1.dat` into table `bcptest` for database `testdb` on Azure server `aadserver.database.windows.net` using a Microsoft Entra username and password:
 
   ```cmd
   bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
@@ -276,15 +276,15 @@ This switch is used by the client when connecting to Azure SQL Database or Azure
 
 - **Microsoft Entra integrated**
 
-  For Microsoft Entra integrated authentication, provide the `-G` option without a user name or password. This configuration assumes that the current Windows user account (the account the **bcp** command is running under) is federated with Microsoft Entra ID:
+  For Microsoft Entra integrated authentication, provide the `-G` option without a username or password. This configuration requires that the current Windows user account (the account the **bcp** command is running under) is federated with Microsoft Entra ID:
 
-  The following example exports data using Microsoft Entra integrated account. The example exports table `bcptest` from database `testdb` using Microsoft Entra integrated from Azure server `aadserver.database.windows.net` and stores the data in file `c:\last\data2.dat`:
+  The following example exports data using Microsoft Entra integrated authentication. The example exports table `bcptest` from database `testdb` on the logical server `aadserver.database.windows.net` and stores the data in file `c:\last\data2.dat`, using Windows credentials federated with Microsoft Entra ID:
 
   ```cmd
   bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
   ```
 
-  The following example imports data using Microsoft Entra integrated auth. The example imports data from file `c:\last\data2.txt` into table `bcptest` for database `testdb` on Azure server `aadserver.database.windows.net` using Microsoft Entra integrated auth:
+  The following example imports data using Microsoft Entra integrated authentication. The example imports data from file table `c:\last\data2.dat` into table `bcptest` in the database `testdb` on the logical server `aadserver.database.windows.net`, using Windows credentials federated with Microsoft Entra ID:
 
   ```cmd
   bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
@@ -292,27 +292,27 @@ This switch is used by the client when connecting to Azure SQL Database or Azure
 
 - **Microsoft Entra interactive**
 
-  The Microsoft Entra interactive authentication for Azure SQL Database and Azure Synapse Analytics, allows you to use an interactive method supporting multifactor authentication. For more information, see [Microsoft Entra interactive authentication](../ssdt/azure-active-directory.md#active-directory-interactive-authentication).
+  Microsoft Entra interactive authentication, available for all Azure SQL and SQL Server 2022+, allows you to use an interactive dialog to authenticate, which also supports multifactor authentication.
 
   Microsoft Entra interactive authentication requires **bcp** [version 15.0.1000.34](#download-the-latest-version-of-the-bcp-utility) or later as well as [ODBC version 17.2 or later](../connect/odbc/download-odbc-driver-for-sql-server.md).
 
   To enable interactive authentication, provide the `-G` option with user name (`-U`) only, and no password.
 
-  The following example exports data using Microsoft Entra interactive mode indicating username where user represents a Microsoft Entra account. This is the same example used in the previous section: *Microsoft Entra username and password*.
+  The following example exports data using Microsoft Entra interactive authentication, which includes specifying the username of a Microsoft Entra account.
 
-  Interactive mode requires a password to be manually entered, or for accounts with multi-factor authentication enabled, complete your configured MFA authentication method.
+  Interactive mode requires a password to be manually entered, or for accounts with multifactor authentication enabled, complete your configured MFA authentication method.
 
   ```cmd
   bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com
   ```
 
-  In case a Microsoft Entra user is a domain federated one using Windows account, the user name required in the command line, contains its domain account (for example, `joe@contoso.com`):
+  If using a Microsoft Entra user that's a Windows account from a federated domain, the username entered in the command line must contain its domain (for example, `joe@contoso.com`):
 
   ```cmd
   bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com
   ```
 
-  If guest users exist in a specific Microsoft Entra ID and are part of a group that exists in SQL Database that has database permissions to execute the **bcp** command, their guest user alias is used (for example, `keith0@adventure-works.com`).
+  If guest users exist in a specific Microsoft Entra tenant and are part of a group that exists in SQL Database that has database permissions to execute the **bcp** command, their guest user alias is used (for example, `keith0@adventure-works.com`).
 
 #### -h "hints [, ... *n*]"
 
@@ -463,14 +463,12 @@ If *field_term* begins with a hyphen (`-`) or a forward slash (`/`), don't inclu
 Specifies that the **bcp** utility connects to [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] with a trusted connection using integrated security. The security credentials of the network user, *login_id*, and *password* aren't required. If `-T` isn't specified, you need to specify `-U` and `-P` to successfully log in.
 
 > [!IMPORTANT]  
-> When the **bcp** utility is connecting to [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] with a trusted connection using integrated security, use the `-T` option (trusted connection) instead of the *user name* and *password* combination. When the **bcp** utility is connecting to SQL Database or Azure Synapse Analytics, using Windows authentication or Microsoft Entra authentication is not supported. Use the `-U` and `-P` options.
+> When the **bcp** utility is connecting to [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] with a trusted connection using integrated security, use the `-T` option (trusted connection) instead of the *username* and *password* combination. When the **bcp** utility is connecting to SQL Database or Azure Synapse Analytics, using Windows authentication or Microsoft Entra authentication is not supported. Use the `-U` and `-P` options.
 
 #### -U login_id
 
 Specifies the login ID used to connect to [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)].
 
-> [!IMPORTANT]  
-> When the **bcp** utility is connecting to [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] with a trusted connection using integrated security, use the `-T` option (trusted connection) instead of the *user name* and *password* combination. When the **bcp** utility is connecting to SQL Database or Azure Synapse Analytics, using Windows authentication or Microsoft Entra authentication is not supported. Use the `-U` and `-P` options.
 
 #### -v
 

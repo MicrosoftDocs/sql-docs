@@ -111,7 +111,10 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
 -   A Windows user does not have an individual database user account (a database principal in the database), but accesses a database as a member of a Windows group which has a database user account (a database principal for the Windows group).  
 
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
+
 -   A Microsoft Entra user does not have an individual database user account (a database principal in the database), but accesses a database as a member of a Microsoft Entra group which has a database user account (a database principal for the Microsoft Entra group).
+
   
  When a user without a database user account creates an object without specifying an existing schema, a database principal and default schema will be automatically created in the database for that user. The created database principal and schema will have the same name as the name that user used when connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication login name or the Windows user name).  
   

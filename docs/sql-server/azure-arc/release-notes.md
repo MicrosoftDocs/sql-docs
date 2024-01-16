@@ -4,7 +4,7 @@ description: Latest release notes for SQL Server enabled by Azure Arc
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 01/11/2024
+ms.date: 01/16/2024
 ms.topic: conceptual
 ms.custom: ignite-2023
 ---
@@ -13,7 +13,7 @@ ms.custom: ignite-2023
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-## January 11, 2024
+## January 16, 2024
 
 **Extension version**: `1.1.2566.109`
 

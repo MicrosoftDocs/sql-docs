@@ -1,8 +1,7 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
-ms.date: 08/01/2023
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 01/11/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -122,6 +121,7 @@ ms.topic: include
 | 41677 | 17 | No | Source database '%ls' does not match the logical database id provided. |
 | 41678 | 16 | No | Failed to transition to PRIMARY role for physical database '%ls' (ID %d) of Windows Fabric partition '%ls' (partition ID '%ls'). |
 | 41679 | 16 | No | Transition to PRIMARY role for physical database '%ls' (ID %d) of Windows Fabric partition '%ls' (partition ID '%ls') has been aborted. |
+| 41681 | 16 | No | SQL Server cannot generate grip tds redirection url of the replica with ID %ls (Windows Fabric partition ID %ls). |
 | 41700 | 16 | No | System views related to Windows Fabric partitions and replicas are not available at this time, because replica manager has not yet started. Wait for replica manager to start, then retry the system view query. |
 | 41701 | 20 | No | The Activation Context is unavailable at this time. The Windows Fabric Runtime is unavailable at this time, retry later. Wait for the activation context to become available, then retry. |
 | 41702 | 20 | No | The requested Configuration Package is unavailable at this time. The Configuration Package is not a part of the Activation Context. Verify that the requested Configuration Package name exists and is properly formatted. |

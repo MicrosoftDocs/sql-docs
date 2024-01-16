@@ -4,10 +4,10 @@ description: Learn how to enable secure enclaves in Azure SQL Database and elast
 author: Pietervanhove
 ms.author: pivanho
 ms.reviewer: vanto
-ms.date: 07/19/2023
+ms.date: 09/26/2023
 ms.service: sql-database
 ms.subservice: security
-ms.custom: devx-track-azurecli, devx-track-azurepowershell
+ms.custom: devx-track-azurecli, devx-track-azurepowershell, ignite-2023
 ms.topic: conceptual
 ---
 # Enable Always Encrypted with secure enclaves in Azure SQL Database
@@ -41,9 +41,55 @@ For detailed instructions on how to configure a new or existing database to use 
 
 By default, a new database is created without VBS enclaves. To enable a VBS enclave in your database or elastic pool, you need to set the **preferredEnclaveType** [database property](/azure/templates/microsoft.sql/2022-05-01-preview/servers/databases?pivots=deployment-language-bicep#databaseproperties) to **VBS**, which activates the VBS enclave for the database or the elastic pool. You can set **preferredEnclaveType** when you create a new database or elastic pool or by updating an existing database or elastic pool. Any database you add to an elastic pool will inherit the enclave property from it, like the database SLO. Hence, if you add a database without VBS enclaves enabled to an elastic pool with VBS enabled, this new database becomes part of elastic pool and VBS enclaves will be enabled on this database. Adding a database with VBS enclaves enabled to an elastic pool without VBS enclaves is not supported. 
 
-You can set the **preferredEnclaveType** using Azure PowerShell or the Azure CLI.
+You can set the **preferredEnclaveType** property using the Azure portal, SQL Server Management Studio, Azure PowerShell, or the Azure CLI.
 
-## Enabling VBS enclaves with Azure PowerShell
+## Enabling VBS enclaves using Azure portal
+
+### Create a new database or elastic pool with a VBS enclave
+
+1. Open the [Azure portal](https://portal.azure.com/) and locate the logical SQL Server for which you want to create a database or elastic pool with a VBS enclave.
+2. Select **Create database** or the **New elastic pool** button.
+3. In the **Security** tab, locate the **Always Encrypted** section.
+4. Set **Enable secure enclaves** to **ON**. This will create a database with a VBS enclave enabled.
+
+    :::image type="content" source="./media/always-encrypted-enclaves/portal-enable-secure-enclaves.png" alt-text="Screenshot of creating a new database or elastic pool with a VBS enclave.":::
+
+### Enable a VBS enclave for an existing database or elastic pool
+
+1. Open the [Azure portal](https://portal.azure.com/) and locate the database or elastic pool for which you want to enable secure enclaves.
+2. For an existing database:
+    1. In **Security** settings, select **Data Encryption**.
+    2. In the **Data Encryption** menu, select the **Always Encrypted** tab.
+    3. Set **Enable secure enclaves** to **ON**.
+
+        :::image type="content" source="./media/always-encrypted-enclaves/portal-enable-secure-enclaves-existing-database.png" alt-text="Screenshot of enabling a VBS enclave for an existing database.":::
+    4. Select **Save** to save your Always Encrypted configuration.
+
+3. For an existing elastic pool:
+    1. In **Settings**, select **Configuration**.
+    2. In the **Configuration** menu, select the **Always Encrypted** tab.
+    3. Set **Enable secure enclaves** to **ON**.
+
+        :::image type="content" source="./media/always-encrypted-enclaves/portal-enable-secure-enclaves-existing-elastic-pool.png" alt-text="Screenshot of enabling a VBS enclave for an elastic pool.":::
+    4. Select **Save** to save your Always Encrypted configuration.
+
+## Enabling VBS enclaves using SQL Server Management Studio
+Download the latest version of [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms).
+
+### Create a new database with a VBS enclave
+
+1. Open SSMS and connect to the logical server where you want to create your database.
+2. Right-click on the **Databases** folder and select **New Database...** 
+3. In the **Configure SLO** page, set the option **Enable Secure Enclaves** to **ON**. This will create a database with a VBS enclave enabled.
+
+### Enable a VBS enclave for an existing database
+1. Open SSMS and connect to the logical server where you want to modify your database.
+2. Right-click on the database and select **Properties**. 
+3. In the **Configure SLO** page, set the option **Enable Secure Enclaves** to **ON**.
+4. Select **OK** to save your database properties.
+
+## Enabling VBS enclaves using Azure PowerShell
+### Create a new database or elastic pool with a VBS enclave
 
 Create a new database with a VBS enclave with the [New-AzSqlDatabase](/powershell/module/az.sql/New-AzSqlDatabase) cmdlet. The following example creates a serverless database with a VBS enclave.
 
@@ -72,6 +118,7 @@ New-AzSqlElasticPool `
     -PreferredEnclaveType 'VBS'
 ```
 
+### Enable a VBS enclave for an existing database or elastic pool
 To enable a VBS enclave for an existing database, use the [Set-AzSqlDatabase](/powershell/module/az.sql/Set-AzSqlDatabase) cmdlet. Here's an example:
 
 ```azurepowershell-interactive
@@ -91,7 +138,8 @@ Set-AzSqlElasticPool `
     -PreferredEnclaveType 'VBS' 
 ```
 
-## Enabling VBS enclaves with Azure CLI
+## Enabling VBS enclaves using Azure CLI
+### Create a new database or elastic pool with a VBS enclave
 
 Create a new database with a VBS enclave with the [az sql db create](/cli/azure/sql/db) cmdlet. The following example creates a serverless database with a VBS enclave.
 
@@ -119,6 +167,7 @@ az sql elastic-pool create -g ResourceGroup01 `
     --preferred-enclave-type VBS
 ```
 
+### Enable a VBS enclave for an existing database or elastic pool
 To enable a VBS enclave for an existing database, use the [az sql db update](/cli/azure/sql/db) cmdlet. Here's an example:
 
 ```azurecli-interactive

@@ -4,7 +4,7 @@ description: "Changes the name of a user-created object in the current database.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest, maghan
-ms.date: 11/01/2023
+ms.date: 12/13/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ---
 # sp_rename (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asa-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asa-fabricse-fabricdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
 Changes the name of a user-created object in the current database. This object can be a table, index, column, alias data type, or [!INCLUDE [msCoName](../../includes/msconame-md.md)]
 
@@ -70,8 +70,12 @@ Quotation marks are only necessary if a qualified object is specified. If a full
 
 The new name for the specified object. *new_name* must be a one-part name and must follow the rules for identifiers. *newname* is **sysname**, with no default.
 
-> [!NOTE]  
-> Trigger names can't start with # or ##.
+Trigger names can't start with # or ##.
+
+**Applies to** [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)]:
+
+- Schema names can't contain `/` or `\` or end with a `.`.
+- Table names can't contain `/` or `\` or end with a `.`.
 
 #### [ @objtype = ] '*object_type*'
 
@@ -88,13 +92,12 @@ The type of object being renamed. *object_type* is **varchar(13)**, with a defau
 
 **Applies to**: Azure Synapse Analytics
 
-In `sp_rename` (preview) for [!INCLUDE [ssazuresynapse](../../includes/ssazuresynapse-md.md)], `COLUMN` is a mandatory value specifying that the object type to be renamed is a column, and must always be included in the `sp_rename` statement. A column can only be renamed if it's not a distribution column.
+- In `sp_rename` (preview) for [!INCLUDE [ssazuresynapse](../../includes/ssazuresynapse-md.md)], `COLUMN` is a mandatory value specifying that the object type to be renamed is a column, and must always be included in the `sp_rename` statement. A column can only be renamed if it isn't a distribution column. `sp_rename` can only be used to rename a `COLUMN` in a user object.
 
 **Applies to**: [!INCLUDE [fabric](../../includes/fabric.md)]
 
-In `sp_rename` for the Warehouse in [!INCLUDE [fabric](../../includes/fabric.md)], `OBJECT` is the only supported value for *@objtype*.
-
-In `sp_rename` for the SQL Endpoint in [!INCLUDE [fabric](../../includes/fabric.md)], `OBJECT` is the only supported value for *@objtype*. Tables cannot be renamed.
+- In `sp_rename` for the [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], `OBJECT` is the only supported value for *@objtype*.
+- In `sp_rename` for the [!INCLUDE [fabricse](../../includes/fabric-se.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], `OBJECT` is the only supported value for *@objtype*. Tables cannot be renamed.
 
 ## Return code values
 
@@ -122,7 +125,7 @@ In `sp_rename` for the SQL Endpoint in [!INCLUDE [fabric](../../includes/fabric.
 
 **Applies to** Azure Synapse Analytics:
 
-In [!INCLUDE [ssazuresynapse](../../includes/ssazuresynapse-md.md)], `sp_rename` is in **Preview** for dedicated SQL pools and can only be used to rename a `'COLUMN'` in a user object.
+- In [!INCLUDE [ssazuresynapse](../../includes/ssazuresynapse-md.md)], `sp_rename` is in **Preview** for dedicated SQL pools.
 
 ## Permissions
 
@@ -264,10 +267,10 @@ GO
 
 ### H. Rename an object
 
-The following example renames the table `dbo.table1` to `dbo.table2`, using the `'OBJECT'` type.
+The following example renames the table `dbo.table1` to `dbo.table2`, using the `OBJECT` type.
 
 ```sql
-exec sp_rename @objname = 'dbo.table1', @newname = 'table2', @objtype = 'OBJECT';
+EXEC sp_rename @objname = 'dbo.table1', @newname = 'table2', @objtype = 'OBJECT';
 ```
 
 ## Related content

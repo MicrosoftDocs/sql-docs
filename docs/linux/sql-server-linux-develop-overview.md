@@ -3,7 +3,7 @@ title: Develop applications for SQL Server on Linux
 description: You can create applications that connect to and use SQL Server on Linux from various programming languages and popular web frameworks.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 09/11/2023
+ms.date: 01/03/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -23,7 +23,7 @@ You can create applications that connect to and use [!INCLUDE [ssnoversion-md](.
 
 The best way to get started and build applications with [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is to try it out for yourself.
 
-- Browse to [Getting Started guides](../connect/sql-data-developer.md).
+- Browse to [SQL Data Developer](../connect/sql-data-developer.md).
 - Select your language and development platform.
 - Try the code samples.
 
@@ -32,11 +32,11 @@ The best way to get started and build applications with [!INCLUDE [ssnoversion-m
 
 ## Create new applications
 
-If you're creating a new application, refer to the [Connectivity libraries](sql-server-linux-develop-connectivity-libraries.md), for a summary of the connectors and popular frameworks available for various programming languages.
+If you're creating a new application, refer to the [Connectivity libraries and frameworks for Microsoft SQL Server](sql-server-linux-develop-connectivity-libraries.md), for a summary of the connectors and popular frameworks available for various programming languages.
 
 ## Use existing applications
 
-If you have an existing database application, you can change its connection string to target [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux. Make sure to read about the [Known Issues](sql-server-linux-release-notes-2017.md#known-issues) in [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux.
+If you have an existing database application, you can change its connection string to target [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux. For more information, see [SQL Server on Linux: Known issues](sql-server-linux-known-issues.md).
 
 ## Use existing SQL tools on Windows with SQL Server on Linux
 
@@ -44,9 +44,9 @@ Tools that currently run on Windows such as SSMS, SSDT, and PowerShell, also wor
 
 See the following articles for more information:
 
-- [SQL Server Management Studio (SSMS)](sql-server-linux-manage-ssms.md)
-- [SQL Server Data Tools (SSDT)](sql-server-linux-develop-use-ssdt.md)
-- [SQL PowerShell](sql-server-linux-manage-powershell.md)
+- [Use SQL Server Management Studio on Windows to manage SQL Server on Linux](sql-server-linux-manage-ssms.md)
+- [Use Visual Studio to create databases for SQL Server on Linux](sql-server-linux-develop-use-ssdt.md)
+- [Use PowerShell on Windows to manage SQL Server on Linux](sql-server-linux-manage-powershell.md)
 
 > [!NOTE]  
 > Make sure that you're using the latest versions of these tools for the best experience.
@@ -55,7 +55,7 @@ See the following articles for more information:
 
 You can use the [mssql extension](https://aka.ms/mssql-marketplace) for [Visual Studio Code](https://code.visualstudio.com) on Linux, macOS, and Windows. For a step-by-step walkthrough, see the following tutorial:
 
-- [Use Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)
+- [SQL Server extension for Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)
 
 You can also use command-line tools that are native for Linux. These tools include the following:
 
@@ -65,7 +65,6 @@ You can also use command-line tools that are native for Linux. These tools inclu
 
 ## Related content
 
-- [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
-- [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
-- [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Run on Docker](quickstart-install-connect-ubuntu.md)
+- [Quickstart: Install SQL Server and create a database on Red Hat](quickstart-install-connect-red-hat.md)
+- [Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+- [Quickstart: Install SQL Server and create a database on Ubuntu](quickstart-install-connect-ubuntu.md)

@@ -22,7 +22,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
 
-This article shows you how to create and populate a Microsoft Entra tenant, and use Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) with [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), and [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is). For an overview, see [Microsoft Entra authentication](authentication-aad-overview.md).
+This article shows you how to create and populate a Microsoft Entra tenant, and use Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) with [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), and [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is). For an overview, see [Microsoft Entra authentication](authentication-aad-overview.md).
 
 [!INCLUDE [entra-id](../includes/entra-id.md)]
 
@@ -534,10 +534,10 @@ To use integrated Windows authentication, your domain's Active Directory must be
 
 Your client application (or a service) connecting to the database must be running on a domain-joined machine under a user's domain credentials.
 
-To connect to a database using integrated authentication and a Microsoft Entra identity, the Authentication keyword in the database connection string must be set to `Active Directory Integrated`. The following C# code sample uses ADO .NET.
+To connect to a database using integrated authentication and a Microsoft Entra identity, the Authentication keyword in the database connection string must be set to `Active Directory Integrated`. Replace `<database_name>` with your database name. The following C# code sample uses ADO .NET.
 
 ```csharp
-string ConnectionString = @"Data Source=n9lxnyuzhv.database.windows.net; Authentication=Active Directory Integrated; Initial Catalog=testdb;";
+string ConnectionString = @"Data Source=<database_name>.database.windows.net; Authentication=Active Directory Integrated; Initial Catalog=testdb;";
 SqlConnection conn = new SqlConnection(ConnectionString);
 conn.Open();
 ```
@@ -548,11 +548,11 @@ The connection string keyword `Integrated Security=True` isn't supported for con
 
 ### Microsoft Entra password authentication
 
-To connect to a database using Microsoft Entra cloud-only identity user accounts, or those who use Microsoft Entra hybrid identities, the Authentication keyword must be set to `Active Directory Password`. The connection string must contain User ID/UID and Password/PWD keywords and values. The following C# code sample uses ADO .NET.
+To connect to a database using Microsoft Entra cloud-only identity user accounts, or those who use Microsoft Entra hybrid identities, the Authentication keyword must be set to `Active Directory Password`. The connection string must contain User ID/UID and Password/PWD keywords and values. Replace `<database_name>`, `<email_address>`, and `<password>` with the appropriate values. The following C# code sample uses ADO .NET.
 
 ```csharp
 string ConnectionString =
-@"Data Source=n9lxnyuzhv.database.windows.net; Authentication=Active Directory Password; Initial Catalog=testdb;  UID=bob@contoso.onmicrosoft.com; PWD=MyPassWord!";
+@"Data Source=<database_name>.database.windows.net; Authentication=Active Directory Password; Initial Catalog=testdb; UID=<email_address>; PWD=<password>";
 SqlConnection conn = new SqlConnection(ConnectionString);
 conn.Open();
 ```
@@ -570,10 +570,10 @@ This authentication method allows middle-tier services to obtain [JSON Web Token
 3. Create a certificate on the client computer runs the application.
 4. Add the certificate as a key for your application.
 
-Sample connection string:
+Sample connection string. Replace `<database_name>` with your database name:
 
 ```csharp
-string ConnectionString = @"Data Source=n9lxnyuzhv.database.windows.net; Initial Catalog=testdb;";
+string ConnectionString = @"Data Source=<database_name>.database.windows.net; Initial Catalog=testdb;";
 SqlConnection conn = new SqlConnection(ConnectionString);
 conn.AccessToken = "Your JWT token";
 conn.Open();

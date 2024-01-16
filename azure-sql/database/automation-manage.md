@@ -4,11 +4,13 @@ description: Learn about how the Azure Automation service can be used to manage 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest, mathoma
-ms.date: 08/24/2023
+ms.date: 01/16/2024
 ms.service: sql-database
 ms.subservice: deployment-configuration
 ms.topic: conceptual
-ms.custom: sqldbrb=1
+ms.custom:
+  - sqldbrb=1
+monikerRange: "=azuresql||=azuresql-db"
 ---
 
 # Manage databases in Azure SQL Database by using Azure Automation
@@ -40,13 +42,13 @@ The runbook and module galleries for [Azure Automation](/azure/automation/automa
 For a tutorial, see [Manage databases in Azure SQL Database using Azure Automation](/azure/automation/manage-sql-server-in-automation).
 
 >[!NOTE]
-> The Automation runbook may run from a range of IP addresses at any datacenter in an Azure region. To learn more, see [Automation region DNS records](/azure/automation/how-to/automation-region-dns-records).
+> The Automation runbook might run from a range of IP addresses at any datacenter in an Azure region. To learn more, see [Automation region DNS records](/azure/automation/how-to/automation-region-dns-records).
 
 ## Authentication via managed identities
 
 On 30 September 2023, Azure Automation Classic Run As accounts will be retired. Instead, use managed identities for authentication for existing and new runbooks. Managed identities provide the same functionality as Run As accounts, plus:
 
-- Secure authentication to any Azure service that supports authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)).
+- Secure authentication to any Azure service that supports authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)).
 - Minimized management overhead with easy access to resources.
 - Simplified runbooks with no requirement to use multi-line code.
 
@@ -58,7 +60,7 @@ For more information on this required action, visit [Migrate from an existing Ru
 
 Instead of SQL Agent, Azure SQL Database can use an [elastic job agent](elastic-jobs-overview.md) to execute T-SQL statements on a schedule. For more information on the differences between SQL Agent and elastic jobs, see [Automate management tasks in Azure SQL](job-automation-overview.md).
 
-## Next steps
+## Related content
 
 For a tutorial and samples, see [Manage databases in Azure SQL Database using Azure Automation](/azure/automation/manage-sql-server-in-automation).
 

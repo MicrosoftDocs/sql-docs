@@ -4,7 +4,7 @@ description: "Configures a Publisher to use a specified distribution database."
 author: mashamsft
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 08/24/2023
+ms.date: 11/02/2023
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -42,7 +42,6 @@ sp_adddistpublisher
 [ ; ]
 ```
 
-
 ## Arguments
 
 #### [ @publisher = ] N'*publisher*'
@@ -51,10 +50,7 @@ The Publisher name. *@publisher* is **sysname**, with no default.
 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15"
-
-> [!NOTE]  
-> Server name can be specified as `<Hostname>,<PortNumber>`. You may need to specify the port number for your connection when SQL Server is deployed on Linux or Windows with a custom port, and browser service is disabled. The use of custom port numbers for remote distributor applies to SQL Server 2019 and later.
-
+[!INCLUDE [custom-port](includes/custom-port.md)]
 ::: moniker-end
 
 #### [ @distribution_db = ] N'*distribution_db*'
@@ -89,7 +85,7 @@ For Azure SQL Database, use `\\<storage_account>.file.core.windows.net\<share>`.
 
 #### [ @trusted = ] N'*trusted*'
 
-*@trusted* is deprecated, and is provided for backward compatibility only. *@trusted* is **nvarchar(5)**, with a default of `'false'`. Setting this parameter to anything but `'false'` results in an error.
+*@trusted* is deprecated, and is provided for backward compatibility only. *@trusted* is **nvarchar(5)**, with a default of `false`. Setting this parameter to anything but `false` results in an error.
 
 #### [ @encrypted_password = ] *encrypted_password*
 
@@ -138,7 +134,7 @@ Required for Azure SQL Database. *@storage_connection_string* is **nvarchar(255)
 
 Only members of the **sysadmin** fixed server role can execute `sp_adddistpublisher`.
 
-## See also
+## Related content
 
 - [Configure Publishing and Distribution](../replication/configure-publishing-and-distribution.md)
 - [sp_changedistpublisher (Transact-SQL)](sp-changedistpublisher-transact-sql.md)

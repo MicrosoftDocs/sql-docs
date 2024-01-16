@@ -909,7 +909,7 @@ WITH
     DATA_COMPRESSION = NONE ON PARTITIONS (1),
     DATA_COMPRESSION = ROW ON PARTITIONS (2, 4, 6 TO 8),
     DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
-)
+);
 ```
 
 You can also specify the `XML_COMPRESSION` option more than once, for example:
@@ -1028,7 +1028,7 @@ Use this argument with the `PERIOD FOR SYSTEM_TIME` and `GENERATED ALWAYS AS ROW
 Creates the new table with Stretch Database enabled or disabled. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+> [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
 **Enabling Stretch Database for a table**
 

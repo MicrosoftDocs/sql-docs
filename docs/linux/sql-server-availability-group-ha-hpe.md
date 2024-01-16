@@ -311,7 +311,7 @@ For Deployments in Azure Cloud, HPE Serviceguard for Linux requires a load balan
    | **Type** | Internal |
    | **SKU** | Basic or Standard |
    | **Virtual network** | VNet used for the VM replicas |
-   | **Subnet** | Subnet in which SQL Servers are hosted |
+   | **Subnet** | Subnet in which SQL Server instances are hosted |
    | **IP Address Assignment** | Static |
    | **Private IP address** | Create a private IP within subnet |
    | **Subscription** | Choose the concerned subscription |

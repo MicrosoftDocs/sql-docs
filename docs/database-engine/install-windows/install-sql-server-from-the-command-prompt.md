@@ -3,7 +3,7 @@ title: "Install and configure SQL Server on Windows from the command prompt"
 description: This article describes command prompt parameters for SQL Server installation on Windows. You can specify features to install and configure.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 11/01/2023
+ms.date: 01/11/2024
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
@@ -211,7 +211,7 @@ Use the parameters in the following table to develop command-line scripts for in
 | [!INCLUDE [ssde-md](../../includes/ssde-md.md)] Setup Control | `/Q` or `/QUIET`<br /><br />**Optional** | Specifies that Setup runs in a quiet mode without any user interface. This is used for unattended installations. The `/Q` parameter overrides the input of the `/QS` parameter. |
 | [!INCLUDE [ssde-md](../../includes/ssde-md.md)] Setup Control | `/QS` or `/QUIETSIMPLE`<br /><br />**Optional** | Specifies that Setup runs and shows progress through the UI, but doesn't accept any input or show any error messages. |
 | [!INCLUDE [ssde-md](../../includes/ssde-md.md)] Setup Control | `/UIMODE`<br /><br />**Optional** | Specifies whether to present only the minimum number of dialog boxes during setup.<br /><br />`/UIMODE` can only be used with the `/ACTION=INSTALL` and `UPGRADE` parameters.<br /><br />Supported values:<br /><br />- `/UIMODE=Normal` is the default for non-Express editions and presents all setup dialog boxes for the selected features.<br /><br />- `/UIMODE=AutoAdvance` is the default for Express editions and skips nonessential dialog boxes.<br /><br />When combined with other parameters, `UIMODE` is overridden. For example, when `/UIMODE=AutoAdvance` and `/ADDCURRENTUSERASSQLADMIN=FALSE` are both provided, the provisioning dialog box isn't auto populated with the current user.<br /><br />The `UIMODE` setting can't be used with the `/Q` or `/QS` parameters. |
-| [!INCLUDE [ssde-md](../../includes/ssde-md.md)] Setup Control | `/SQMREPORTING`<br /><br />**Applies to:** [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] and earlier versions<br /><br />**Optional** | To manage how error feedback is sent to Microsoft, see [How to configure [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] to send feedback to Microsoft](/sql/sql-server/usage-and-diagnostic-data-configuration-for-sql-server).<br /><br />In older versions this specifies feature usage reporting for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br />Supported values:<br /><br />- `1` = enabled<br />- `0` = disabled |
+| [!INCLUDE [ssde-md](../../includes/ssde-md.md)] Setup Control | `/SQMREPORTING`<br /><br />**Applies to:** [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] and earlier versions<br /><br />**Optional** | To manage how error feedback is sent to Microsoft, see [How to configure [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] to send feedback to Microsoft](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md).<br /><br />In older versions this specifies feature usage reporting for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br />Supported values:<br /><br />- `1` = enabled<br />- `0` = disabled |
 | [!INCLUDE [ssde-md](../../includes/ssde-md.md)] Setup Control | `/HIDECONSOLE`<br /><br />**Optional** | Specifies that the console window is hidden or closed. |
 | [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent | `/AGTSVCACCOUNT`<br /><br />**Required** | Specifies the account for the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent service. |
 | [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent | `/AGTSVCPASSWORD`<br /><br />**[Required](#Accounts)** | Specifies the password for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account. This parameter can be omitted when using a managed service account, virtual account, or built-in account. |
@@ -326,7 +326,7 @@ setup.exe /qs /ACTION=Uninstall /FEATURES=AZUREEXTENSION  /IACCEPTSQLSERVERLIC
 
 For more information about connecting to Azure Arc, see:
 
-- [Azure Arc-enabled SQL Server](../../sql-server/azure-arc/overview.md)
+- [[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]](../../sql-server/azure-arc/overview.md)
 - [Connect your SQL Server to Azure Arc](../../sql-server/azure-arc/connect.md)
 
 ## <a id="SysPrep"></a> SysPrep parameters
@@ -794,7 +794,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName=MSSQLSERVER /INDICATE
 Run the following command at the command prompt to complete failover cluster installation for a named instance:
 
 ```console
-setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Name>" /INDICATEPROGRESS /ASSYSADMINACCOUNTS="<DomainName\UserName>" /ASDATADIR=<Drive>:\KATMAI\Data /ASLOGDIR=<drive>:\KATMAI\Log /ASBACKUPDIR=<Drive>:\KATMAI\Backup /ASCONFIGDIR=<Drive>:\KATMAI\Config /ASTEMPDIR=<Drive>:\KATMAI\Temp /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'>" /FAILOVERCLUSTERNETWORKNAME="CompNamedFOI" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;ClusterNetwork1;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="<Insert New Group Name>" /INSTALLSQLDATADIR="<Drive>:\<Path>\MSSQLSERVER_KATMAI" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSYSADMINACCOUNTS="<DomainName\Username>"
+setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Name>" /INDICATEPROGRESS /ASSYSADMINACCOUNTS="<DomainName\UserName>" /ASDATADIR=<Drive>:\INSTANCE\Data /ASLOGDIR=<drive>:\INSTANCE\Log /ASBACKUPDIR=<Drive>:\INSTANCE\Backup /ASCONFIGDIR=<Drive>:\INSTANCE\Config /ASTEMPDIR=<Drive>:\INSTANCE\Temp /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'>" /FAILOVERCLUSTERNETWORKNAME="CompNamedFOI" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;ClusterNetwork1;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="<Insert New Group Name>" /INSTALLSQLDATADIR="<Drive>:\<Path>\MSSQLSERVER_INSTANCE" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSYSADMINACCOUNTS="<DomainName\Username>"
 ```
 
 #### Upgrade failover cluster parameters

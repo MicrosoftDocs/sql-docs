@@ -4,7 +4,7 @@ description: "Adds an entry in the sys.servers and marks the server entry as a D
 author: mashamsft
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 08/22/2023
+ms.date: 11/02/2023
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -43,9 +43,7 @@ The distribution server name. *@distributor* is **sysname**, with no default. Th
 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15"
-
-> [!NOTE]  
-> Server name can be specified as `<Hostname>,<PortNumber>`. You may need to specify the port number for your connection when [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is deployed on Linux or Windows with a custom port, and the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] browser service is disabled. The use of custom port numbers for remote distributor applies to [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] only.
+[!INCLUDE [custom-port](includes/custom-port.md)]
 
 ::: moniker-end
 
@@ -55,7 +53,7 @@ The maximum number of minutes that an agent can go without logging a progress me
 
 #### [ @password = ] N'*password*'
 
-The password of the **distributor_admin** login. *@password* is **sysname**, with a default of `NULL`. If the password is NULL or an empty string, *@password* is reset to a random value. The password must be configured when the first remote distributor is added. **distributor_admin** login and *@password* are stored for linked server entry used for a *distributor* RPC connection, including local connections. If *distributor* is local, the password for **distributor_admin** is set to a new value. For Publishers with a remote Distributor, the same value for *@password* must be specified when executing `sp_adddistributor` at both the Publisher and Distributor. [sp_changedistributor_password](sp-changedistributor-password-transact-sql.md) can be used to change the Distributor password.
+The password of the **distributor_admin** login. *@password* is **sysname**, with a default of `NULL`. If the password is `NULL` or an empty string, *@password* is reset to a random value. The password must be configured when the first remote distributor is added. **distributor_admin** login and *@password* are stored for linked server entry used for a *distributor* RPC connection, including local connections. If *distributor* is local, the password for **distributor_admin** is set to a new value. For Publishers with a remote Distributor, the same value for *@password* must be specified when executing `sp_adddistributor` at both the Publisher and Distributor. [sp_changedistributor_password](sp-changedistributor-password-transact-sql.md) can be used to change the Distributor password.
 
 > [!IMPORTANT]  
 > When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.
@@ -80,7 +78,7 @@ The password of the **distributor_admin** login. *@password* is **sysname**, wit
 
 Only members of the **sysadmin** fixed server role can execute `sp_adddistributor`.
 
-## See also
+## Related content
 
 - [Configure Publishing and Distribution](../replication/configure-publishing-and-distribution.md)
 - [sp_changedistributor_property (Transact-SQL)](sp-changedistributor-property-transact-sql.md)

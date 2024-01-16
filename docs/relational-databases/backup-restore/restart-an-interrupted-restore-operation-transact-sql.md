@@ -42,13 +42,14 @@ This example restarts an interrupted restore operation, using the example `Adven
 ```sql
 -- Restore a full database backup of the AdventureWorks database.
 RESTORE DATABASE AdventureWorks2022
-   FROM DISK = 'C:\Temp\AdventureWorks2022.bak';
+FROM DISK = 'C:\Temp\AdventureWorks2022.bak';
 GO
+
 -- The restore operation halted prematurely.
 -- Repeat the original RESTORE statement specifying WITH RESTART.
 RESTORE DATABASE AdventureWorks2022
-   FROM DISK = 'C:\Temp\AdventureWorks2022.bak';
-   WITH RESTART;
+FROM DISK = 'C:\Temp\AdventureWorks2022.bak'
+WITH RESTART;
 GO
 ```
 

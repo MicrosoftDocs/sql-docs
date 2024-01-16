@@ -4,7 +4,7 @@ description: Learn details about the changes in SQL Server Reporting Services (S
 author: casualoak
 ms.author: petebro
 ms.reviewer: maggies
-ms.date: 07/25/2023
+ms.date: 01/10/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
@@ -95,6 +95,22 @@ Release Candidate 0 (RC0)
 ::: moniker-end
 
 ## SQL Server 2019 Reporting Services
+
+## 15.0.8760.20928, 2023/12/26
+*(Product Version: 15.0.1102.1140)*
+- Fixed permission issue that affected some users in the new Portal experience.
+
+## 15.0.8738.29460, 2023/12/04
+*(Product Version: 15.0.1102.1129)*
+- New default Portal experience (this can be reverted via setting UsePortalV2 to false in the config table of catalog database) 
+  - Enhanced accessibility
+  - Supports smaller viewport
+- New config setting for tiles sections order
+- New config setting for Tile or List View by default 
+- Enabled email comment field for individual subscriptions which was previously disabled
+- Enabled downloading excel files from Web Service Portal URL 
+- Fixed downloading content through API with Path specified  
+- Fixed issue with accessing some URLs using custom authentication
 
 ## 15.0.8599.29221, 2023/07/20
 *(Product Version: 15.0.1102.1084)*

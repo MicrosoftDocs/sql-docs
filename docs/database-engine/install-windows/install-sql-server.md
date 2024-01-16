@@ -4,7 +4,7 @@ description: An index of content that helps you install SQL Server and associate
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: randolphwest
-ms.date: 10/20/2022
+ms.date: 01/09/2024
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
@@ -53,7 +53,7 @@ The download location for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.m
 Other [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] components can be found here:
 
 - [All cumulative updates](https://sqlserverbuilds.blogspot.com/)
-- [SQL Server Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122).
+- [SQL Server Reporting Services](https://www.microsoft.com/download/details.aspx?id=104502).
 - [SQL Server Management Studio](https://aka.ms/ssmsfullsetup)
 - [Azure Data Studio](https://go.microsoft.com/fwlink/?linkid=2109256)
 
@@ -100,11 +100,11 @@ Other [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] components can b
 
 |Article|Description|
 |-----------|-----------------|
-|[Configure Windows Firewall (SQL Server)](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|Overview of firewall configuration and how to configure the Windows firewall to allow access to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].|
+|[Configure Windows Firewall (SQL Server)](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|Overview of firewall configuration and how to configure the Windows Firewall to allow access to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].|
 |[Configure the Windows Firewall (SSAS)](/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|Configure both port and firewall settings to allow access to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] or [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint.|
 |[Configure a Multi-Homed Computer](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|Configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Firewall with Advanced Security to provide for network connections to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in a multi-homed environment.|
 
-## See also
+## Related content
 
 - [Upgrade SQL Server](upgrade-sql-server.md)
 - [Uninstall SQL Server](../../sql-server/install/uninstall-sql-server.md)

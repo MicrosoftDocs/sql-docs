@@ -3,15 +3,15 @@ title: "Find the product key for SQL Server Reporting Services"
 description: "Learn how to find the  product key for SQL Server Reporting Services (SSRS) 2017 and 2019 so you can install your server in a production environment."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 12/04/2019
+ms.date: 12/19/2023
 ms.service: reporting-services
 ms.topic: conceptual
 ms.custom: updatefrequency5
-monikerRange: ">= sql-server-2017"
+monikerRange: "=sql-server-2017||=sql-server-ver15"
 ---
 # Find the product key for SQL Server Reporting Services
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2017](../../includes/ssrs-appliesto-2017.md)][!INCLUDE [ssrs-appliesto-2019](../../includes/ssrs-appliesto-2019.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 Learn how to find the  product key for SQL Server Reporting Services (SSRS) 2017 and 2019 so you can install your server in a production environment.
 

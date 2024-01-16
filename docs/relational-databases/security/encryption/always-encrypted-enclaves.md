@@ -4,9 +4,10 @@ description: Learn about the Always Encrypted with secure enclaves feature for S
 author: Pietervanhove
 ms.author: pivanho
 ms.reviewer: "vanto"
-ms.date: 02/15/2023
+ms.date: 11/14/2023
 ms.service: sql
 ms.subservice: security
+ms.custom: ignite-2023
 ms.topic: conceptual
 ---
 # Always Encrypted with secure enclaves
@@ -52,9 +53,6 @@ The type of the enclave available for your database depends on the SQL product h
   - Databases using the [DC-series](/azure/azure-sql/database/service-tiers-sql-database-vcore#dc-series) hardware configuration (available with the [vCore purchasing model](/azure/azure-sql/database/service-tiers-vcore)) use Intel SGX enclaves.
   - Databases using a configuration other than DC-series with the vCore purchasing model and databases using the [DTU purchasing model](/azure/azure-sql/database/service-tiers-dtu) can be configured to use VBS enclaves.
 
-  > [!IMPORTANT]
-  > VBS enclaves in [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] are currently in preview. The [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, in preview, or otherwise not yet released into general availability.
-
   > [!NOTE]
   > VBS enclaves are currently available in all [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] regions **except**: Jio India Central.
 
@@ -77,13 +75,13 @@ To enable Always Encrypted with secure enclaves for your application, you need t
 |:---|:---|:---|
 | [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later | VBS enclaves | HGS, No attestation |
 | [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] | SGX enclaves (DC-series databases) | Microsoft Azure Attestation |
-| [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] | VBS enclaves  | No attestation |
+| [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] | VBS enclaves | No attestation |
 
 A few important points to call out:
 
 - Attesting VBS enclaves in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later requires HGS. You can also use VBS enclaves without attestation (the latest client drivers are required).
 - With Intel SGX enclaves (in DC-series databases) in [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)], attestation is mandatory and it requires Microsoft Azure Attestation.
-- VBS enclaves in [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] (in preview) currently don't support attestation.
+- VBS enclaves in [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] don't support attestation.
 
 For more information, see:
 
@@ -156,7 +154,7 @@ For more information, see [Run Transact-SQL statements using secure enclaves](al
 
 You can create nonclustered indexes on enclave-enabled columns using randomized encryption to make confidential DML queries using the secure enclave run faster.
 
-To ensure an index on a column that is encrypted using randomized encryption doesn't leak sensitive data, the key values in the index data structure (B-tree) are encrypted and sorted based on their plaintext values. Sorting by the plaintext value is also useful for processing queries inside the enclave. When the query executor in the [!INCLUDE[ssde-md](../../../includes/ssde-md.md)] uses an index on an encrypted column for computations inside the enclave, it searches the index to look up specific values stored in the column. Each search may involve multiple comparisons. The query executor delegates each comparison to the enclave, which decrypts a value stored in the column and the encrypted index key value to be compared, it performs the comparison on plaintext and it returns the result of the comparison to the executor.
+To ensure an index on a column that is encrypted using randomized encryption doesn't leak sensitive data, the key values in the index data structure (B-tree) are encrypted and sorted based on their plaintext values. Sorting by the plaintext value is also useful for processing queries inside the enclave. When the query executor in the [!INCLUDE[ssde-md](../../../includes/ssde-md.md)] uses an index on an encrypted column for computations inside the enclave, it searches the index to look up specific values stored in the column. Each search might involve multiple comparisons. The query executor delegates each comparison to the enclave, which decrypts a value stored in the column and the encrypted index key value to be compared, it performs the comparison on plaintext and it returns the result of the comparison to the executor.
 
 Creating indexes on columns that use randomized encryption and aren't enclave-enabled remains unsupported.
 
@@ -166,12 +164,12 @@ For more information, see [Create and use indexes on columns using Always Encryp
 
 ### Database recovery
 
-If an instance of SQL Server fails, its databases may be left in a state where the data files may contain some modifications from incomplete transactions. When the instance is started, it runs a process called [database recovery](../../logs/the-transaction-log-sql-server.md#recovery-of-all-incomplete-transactions-when--is-started), which involves rolling back every incomplete transaction found in the transaction log to make sure the integrity of the database is preserved. If an incomplete transaction made any changes to an index, those changes also need to be undone. For example, some key values in the index may need to be removed or reinserted.
+If an instance of SQL Server fails, its databases might be left in a state where the data files might contain some modifications from incomplete transactions. When the instance is started, it runs a process called [database recovery](../../logs/the-transaction-log-sql-server.md#recovery-of-all-incomplete-transactions-when--is-started), which involves rolling back every incomplete transaction found in the transaction log to make sure the integrity of the database is preserved. If an incomplete transaction made any changes to an index, those changes also need to be undone. For example, some key values in the index might need to be removed or reinserted.
 
 > [!IMPORTANT]
 > Microsoft strongly recommends enabling [Accelerated database recovery (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) for your database, **before** creating the first index on an enclave-enabled column encrypted with randomized encryption. ADR is enabled by default in [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)], but not in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later.
 
-With the [traditional database recovery process](/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process) (that follows the [ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf) recovery model), to undo a change to an index, SQL Server needs to wait until an application provides the column encryption key for the column to the enclave, which can take a long time. Accelerated database recovery (ADR) dramatically reduces the number of undo operations that must be deferred because a column encryption key isn't available in the cache inside the enclave. Consequently, it substantially increases the database availability by minimizing a chance for a new transaction to get blocked. With ADR enabled, SQL Server still may need a column encryption key to complete cleaning up old data versions but it does that as a background task that doesn't impact the availability of the database or user transactions. You may see error messages in the error log, indicating failed cleanup operations due to a missing column encryption key.
+With the [traditional database recovery process](/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process) (that follows the [ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf) recovery model), to undo a change to an index, SQL Server needs to wait until an application provides the column encryption key for the column to the enclave, which can take a long time. Accelerated database recovery (ADR) dramatically reduces the number of undo operations that must be deferred because a column encryption key isn't available in the cache inside the enclave. Consequently, it substantially increases the database availability by minimizing a chance for a new transaction to get blocked. With ADR enabled, SQL Server still might need a column encryption key to complete cleaning up old data versions but it does that as a background task that doesn't impact the availability of the database or user transactions. You might see error messages in the error log, indicating failed cleanup operations due to a missing column encryption key.
 
 ## Security considerations
 
@@ -179,7 +177,7 @@ The following security considerations apply to Always Encrypted with secure encl
 
 - VBS enclaves help protect your data from attacks inside the VM. However, they don't provide any protection from attacks using privileged system accounts originating from the host. Intel SGX enclaves protect data from attacks originating from both the guest OS and host OS.
 - Using enclave attestation is recommended if it's available for your environment and if you're concerned about protecting your data from attacks by users with the OS-level admin access to the machine hosting your database. If you use attestation, you need to ensure the attestation service and its configuration are managed by a trusted administrator. Also, both supported attestation services offer different policies and attestation modes, some of which perform minimal verification of the enclave and its environment, and are designed for testing and development. Closely follow the guidelines specific to your attestation service to ensure you're using the recommended configurations and policies for your production deployments.
-- Encrypting a column using randomized encryption with an enclave-enabled column encryption key may result in leaking the order of data stored in the column, as such columns support range comparisons. For example, if an encrypted column, containing employee salaries, has an index, a malicious DBA could scan the index to find the maximum encrypted salary value and identify a person with the maximum salary (assuming the name of the person isn't encrypted).
+- Encrypting a column using randomized encryption with an enclave-enabled column encryption key might result in leaking the order of data stored in the column, as such columns support range comparisons. For example, if an encrypted column, containing employee salaries, has an index, a malicious DBA could scan the index to find the maximum encrypted salary value and identify a person with the maximum salary (assuming the name of the person isn't encrypted).
 - If you use Always Encrypted to protect sensitive data from unauthorized access by DBAs, don't share the column master keys or column encryption keys with the DBAs. A DBA can manage indexes on encrypted columns without having direct access to the keys by using the cache of column encryption keys inside the enclave.
 
 ## <a name="anchorname-1-considerations-availability-groups-db-migration"></a> Considerations for business continuity, disaster recovery, and data migration

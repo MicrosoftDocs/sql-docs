@@ -9,7 +9,7 @@ ms.date: 06/25/2019
 ms.service: sql-db-mi
 ms.subservice: data-movement
 ms.topic: how-to
-ms.custom: sqldbrb=2
+ms.custom: sqldbrb=2, ignite-2023
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
@@ -64,10 +64,10 @@ This article provides a general workflow for moving resources to a different reg
 
 ### Prepare resources
 
-1. Create a [failover group](failover-group-add-single-database-tutorial.md#2---create-the-failover-group) between the server of the source and the server of the target.  
+1. Create a [failover group](failover-group-configure-sql-db.md#create-failover-group) between the server of the source and the server of the target.  
 1. Add the databases you want to move to the failover group.
   
-    Replication of all added databases will be initiated automatically. For more information, see [Using failover groups with SQL Database](auto-failover-group-sql-db.md).
+    Replication of all added databases will be initiated automatically. For more information, see [Using failover groups with SQL Database](failover-group-sql-db.md).
 
 ### Monitor the preparation process
 
@@ -115,10 +115,10 @@ Once the move completes, remove the resources in the source region to avoid unne
 
 ### Prepare to move
 
-1. Create a separate [failover group](failover-group-add-elastic-pool-tutorial.md#3---create-the-failover-group) between each elastic pool on the source server and its counterpart elastic pool on the target server.
+1. Create a separate [failover group](failover-group-configure-sql-db.md#create-failover-group) between each elastic pool on the source server and its counterpart elastic pool on the target server.
 1. Add all the databases in the pool to the failover group.
 
-    Replication of the added databases will be initiated automatically. For more information, see [Using failover groups with SQL Database](auto-failover-group-sql-db.md).
+    Replication of the added databases will be initiated automatically. For more information, see [Using failover groups with SQL Database](failover-group-sql-db.md).
 
       > [!NOTE]
       > While it is possible to create a failover group that includes multiple elastic pools, we strongly recommend that you create a separate failover group for each pool. If you have a large number of databases across multiple elastic pools that you need to move, you can run the preparation steps in parallel and then initiate the move step in parallel. This process will scale better and will take less time compared to having multiple elastic pools in the same failover group.
@@ -169,7 +169,7 @@ Once the move completes, remove the resources in the source region to avoid unne
 
 Create a failover group between each source managed instance and the corresponding target instance of SQL Managed Instance.
 
-Replication of all databases on each instance will be initiated automatically. For more information, see [Auto-failover groups](../managed-instance/auto-failover-group-sql-mi.md).
+Replication of all databases on each instance will be initiated automatically. For more information, see [Failover groups](../managed-instance/failover-group-sql-mi.md).
 
 ### Monitor the preparation process
 
@@ -194,7 +194,7 @@ Once the move finishes, remove the resources in the source region to avoid unnec
 
 1. Delete the failover group using [Remove-AzSqlDatabaseInstanceFailoverGroup](/powershell/module/az.sql/remove-azsqldatabaseinstancefailovergroup). This will drop the failover group configuration and terminate geo-replication links between the two instances.
 1. Delete the source managed instance using [Remove-AzSqlInstance](/powershell/module/az.sql/remove-azsqlinstance).
-1. Remove any additional resources in the resource group, such as the virtual cluster, virtual network, and security group.
+1. Remove any additional resources in the resource group, such as the virtual network and security group.
 
 ## Next steps
 

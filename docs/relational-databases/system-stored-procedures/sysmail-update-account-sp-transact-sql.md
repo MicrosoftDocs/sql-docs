@@ -4,7 +4,7 @@ description: "Changes the information in an existing Database Mail account."
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 05/30/2023
+ms.date: 11/02/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -75,7 +75,7 @@ The new name of the SMTP mail server to use for this account. The computer that 
 
 #### [ @mailserver_type = ] '*server_type*'
 
-The new type of the mail server. *@mailserver_type* is **sysname**, with no default. Only a value of `'SMTP'` is supported.
+The new type of the mail server. *@mailserver_type* is **sysname**, with no default. Only a value of `SMTP` is supported.
 
 #### [ @port = ] *port_number*
 
@@ -95,7 +95,7 @@ The new password to use to log on to the mail server. *@password* is **sysname**
 
 #### [ @use_default_credentials = ] *use_default_credentials*
 
-Specifies whether to send the mail to the SMTP server using the credentials of the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] service. *@use_default_credentials* is **bit**, with no default. When this parameter is 1, Database Mail uses the credentials of the [!INCLUDE [ssDE](../../includes/ssde-md.md)]. When this parameter is 0, Database Mail uses the *@username* and *@password* for authentication on the SMTP server. If *@username* and *@password* are NULL, then it uses anonymous authentication. Consult with your SMTP administrator before specifying this parameter
+Specifies whether to send the mail to the SMTP server using the credentials of the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] service. *@use_default_credentials* is **bit**, with no default. When this parameter is 1, Database Mail uses the credentials of the [!INCLUDE [ssDE](../../includes/ssde-md.md)]. When this parameter is 0, Database Mail uses the *@username* and *@password* for authentication on the SMTP server. If *@username* and *@password* are `NULL`, then it uses anonymous authentication. Consult with your SMTP administrator before specifying this parameter
 
 #### [ @enable_ssl = ] *enable_ssl*
 
@@ -107,9 +107,9 @@ Specifies whether Database Mail encrypts communication using Transport Layer Sec
 
 ## Remarks
 
-When both the account name and the account ID are specified, the stored procedure changes the account name in addition to updating the information for the account. Changing the account name may be useful to correct errors in the account name.
+When both the account name and the account ID are specified, the stored procedure changes the account name in addition to updating the information for the account. Changing the account name is useful to correct errors in the account name.
 
-The stored procedure `sysmail_update_account_sp` is in the `msdb` database and is owned by the **dbo** schema. The procedure must be executed with a three-part name if the current database isn't `msdb`.
+The stored procedure `sysmail_update_account_sp` is in the `msdb` database and is owned by the `dbo` schema. The procedure must be executed with a three-part name if the current database isn't `msdb`.
 
 ## Permissions
 
@@ -160,7 +160,7 @@ EXEC msdb.dbo.sysmail_update_account_sp
     @enable_ssl = 0;
 ```
 
-## See also
+## Related content
 
 - [Database Mail](../database-mail/database-mail.md)
 - [Create a Database Mail Account](../database-mail/create-a-database-mail-account.md)

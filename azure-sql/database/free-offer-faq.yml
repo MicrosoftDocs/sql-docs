@@ -19,7 +19,7 @@ sections:
     questions: 
       - question: What if I don't see the new offer and Apply Offer button?
         answer: |
-         There's a limit of one free amount database per subscription. You need to remove an existing free amount database to create another one. If you have recently deleted your free offer database, it takes up to one hour for the free offer banner to reappear.
+         There's a limit of one free database per subscription. You need to remove an existing free database to create another one. If you have recently deleted your free offer database, it takes up to one hour for the free offer banner to reappear.
 
       - question: Help! I'm no longer able to log in to my database.
         answer: |

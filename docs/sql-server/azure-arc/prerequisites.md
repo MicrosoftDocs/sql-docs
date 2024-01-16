@@ -1,6 +1,6 @@
 ---
-title: Azure Arc-enabled SQL Server prerequisites
-description: Describes prerequisites required by of Azure Arc-enabled SQL Server.
+title: Prerequisites
+description: Describes prerequisites required for SQL Server enabled by Azure Arc.
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.custom: references_regions
 ---
 
-# Prerequisites
+# Prerequisites - SQL Server enabled by Azure Arc
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
@@ -31,7 +31,7 @@ Before you can Arc-enable an instance of [!INCLUDE [ssnoversion-md](../../includ
 
 ### Permissions
 
-To [Connect SQL Servers on Azure Arc-enabled servers at scale using Azure policy](connect-at-scale-policy.md):
+To [Connect SQL Server instances on Azure Arc-enabled servers at scale using Azure policy](connect-at-scale-policy.md):
 
 - The service principal requires read permission on the subscription.
 

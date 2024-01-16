@@ -350,6 +350,9 @@ For [!INCLUDE[ssSDS_md](../../includes/sssql22-md.md)], [!INCLUDE[ssSDS_md](../.
 
 ### Permissions  
  Requires ALTER ANY USER permission on the database.  
+
+### Permissions for SQL Server 2022 and later
+Requires CREATE USER permission on the database.
   
 ## Examples  
   

@@ -4,7 +4,7 @@ description: Activated by setup when upgrading a replication server.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 08/24/2023
+ms.date: 11/02/2023
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -48,7 +48,7 @@ The system administrator login to use when creating new system objects in the Di
 
 #### [ @password = ] N'*password*'
 
-The system administrator password to use when creating new system objects in the Distribution database. *@password* is **sysname**, with a default of `N''` (empty string). This parameter isn't required if *@security_mode* is set to `1`, which is Windows Authentication.
+The system administrator password to use when creating new system objects in the Distribution database. *@password* is **sysname**, with a default of an empty string. This parameter isn't required if *@security_mode* is set to `1`, which is Windows Authentication.
 
 > [!NOTE]  
 > This parameter is ignored when you're upgrading to [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] and later versions.
@@ -86,7 +86,7 @@ The login security mode to use when creating new system objects in the Distribut
 
 Only members of the **sysadmin** fixed server role can execute `sp_vupgrade_replication`.
 
-## See also
+## Related content
 
 - [Replication stored procedures (Transact-SQL)](replication-stored-procedures-transact-sql.md)
 - [Validate Replicated Data](../replication/validate-data-at-the-subscriber.md)

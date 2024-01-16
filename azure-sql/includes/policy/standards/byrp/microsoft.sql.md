@@ -395,8 +395,8 @@ For more information about this compliance standard, see
 To review how the available Azure Policy built-ins for all Azure services map to this compliance
 standard, see
 [Azure Policy Regulatory Compliance - ISO 27001:2013](/azure/governance/policy/samples/iso-27001).
-For more information about this compliance standard, see
-[ISO 27001:2013](https://www.iso.org/isoiec-27001-information-security.html).
+
+For more information about this compliance standard, see [ISO 27001:2013](https://www.iso.org/standard/27001).
 
 |Domain |Control ID |Control title |Policy<br /><sub>(Azure portal)</sub> |Policy version<br /><sub>(GitHub)</sub>  |
 |---|---|---|---|---|

@@ -14,6 +14,12 @@ ms.custom:
 # What's New in SSMA for Oracle (OracleToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for Oracle changes in each release.
+
+## SSMA v9.5
+
+The v9.5 release of SSMA for Oracle contains the following changes:
+* Support for exclude schema in SSMA console mode
+
 ## SSMA v9.4
 
 The v9.4 release of SSMA for Oracle contains the following changes:
@@ -412,7 +418,7 @@ The v7.2 release of SSMA for Oracle contains the following changes:
 
 The v7.1 release of SSMA for Oracle contains the following changes:
 
-* SQL Server 2017 on Windows and Linux CTP1 is now a supported target platform for migration. This feature is in technical preview and allows schema and data movement to target SQL servers.
+* SQL Server 2017 on Windows and Linux CTP1 is now a supported target platform for migration. This feature is in technical preview and allows schema and data movement to target SQL Server instances.
 * SSMA now supports automatic updates to download the latest version of SSMA as soon as it's available.
 * SSMA installable binaries are now delivered through Windows Installer package files (.msi).
 

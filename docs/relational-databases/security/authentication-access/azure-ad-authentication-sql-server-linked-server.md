@@ -15,12 +15,12 @@ monikerRange: ">=sql-server-ver15||>= sql-server-linux-ver16"
 
 [!INCLUDE [SQL Server 2022](../../../includes/applies-to-version/sqlserver2022.md)]
 
-[Linked servers](../../linked-servers/linked-servers-database-engine.md) can now be configured using [authentication](azure-ad-authentication-sql-server-overview.md) with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)), and it supports two mechanisms for providing credentials:
+[Linked servers](../../linked-servers/linked-servers-database-engine.md) can now be configured using [authentication](azure-ad-authentication-sql-server-overview.md) with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)), and it supports two mechanisms for providing credentials:
 
 - Password
 - Access token
 
-This article assumes there are two SQL Server instances (`S1` and `S2`). Both have been configured to support Microsoft Entra authentication, and they trust each other's SSL/TLS certificate. The examples in this artlce are executed on server `S1` to create a linked server to server `S2`.
+This article assumes there are two SQL Server instances (`S1` and `S2`). Both have been configured to support Microsoft Entra authentication, and they trust each other's SSL/TLS certificate. The examples in this article are executed on server `S1` to create a linked server to server `S2`.
 
 ## Prerequisites
 

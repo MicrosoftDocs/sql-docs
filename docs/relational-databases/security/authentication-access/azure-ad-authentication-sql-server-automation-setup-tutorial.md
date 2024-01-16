@@ -19,7 +19,7 @@ monikerRange: ">=sql-server-ver16||>= sql-server-linux-ver16"
 > [!NOTE]
 > This feature is available in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or later versions, and is only supported for SQL Server on-premises, for Windows and Linux hosts and [SQL Server 2022 on Windows Azure VMs](/azure/azure-sql/virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm).
 
-In this article, we'll go over how to set up the Microsoft Entra admin to allow authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) for SQL Server using the Azure portal, and APIs such as:
+In this article, we'll go over how to set up the Microsoft Entra admin to allow authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) for SQL Server using the Azure portal, and APIs such as:
 
 - PowerShell
 - The Azure CLI
@@ -67,10 +67,24 @@ Create an [Azure Key Vault](/azure/key-vault/general/quick-create-portal) if you
 1. For **Key permissions**, use **Sign**.
 1. For **Secret permissions**, select **Get** and **List**.
 1. For **Certificate permissions**, select **Get** and **List**.
-1. For **Select principal**, use the account for your Azure Arc instance, which is the hostname of the SQL Server host.
-1. Select **Add** and then select **Save**.
+1. Select **Next**.
+1. On the **Principal** page, search for the name of your Machine - Azure Arc instance, which is the hostname of the SQL Server host.
 
-   You must **Save** to ensure the permissions are applied. They aren't applied after selecting **Add**. To ensure permissions have been stored, refresh the browser window, and check the row for your Azure Arc instance is still present.
+   :::image type="content" source="./media/machine-azure-arc-resource.png" alt-text="Screenshot of Azure Arc server resource in portal.":::
+
+1. Skip the **Application (optional)** page by selecting **Next** twice, or selecting **Review + create**.
+
+   :::image type="content" source="media/automation-akv-review-create.png" alt-text="Screenshot of Azure portal to review and create access policy.":::
+
+   Verify that the "Object ID" of the **Principal** matches the **Principal ID** of the managed identity assigned to the instance.
+
+   :::image type="content" source="media/machine-azure-arc-json-view.png" alt-text="Screenshot of portal control of JSON view of machine definition.":::
+
+   To confirm, go to the resource page and select **JSON View** in the top right of the Essentials box on the Overview page. Under **identity** you'll find the **principalId**.
+
+1. Select **Create**.
+
+You must select **Create** to ensure that the permissions are applied. To ensure permissions have been stored, refresh the browser window, and check that the row for your Azure Arc instance is still present.
 
 <a name='set-access-policies-for-azure-ad-users'></a>
 
@@ -723,7 +737,7 @@ The PowerShell script below sets up a Microsoft Entra admin, creates an Azure Ke
 The following modules are required for this tutorial. Install the latest versions of the modules or higher than the noted version below:
 
 - Az.Accounts 3.37.0
-- Az.ConnectedMachine 0.3.0
+- Az.ConnectedMachine 0.5.0
 - Az.KeyVault 4.5.0
 - Az.Resources 6.0.0
 
@@ -1035,9 +1049,9 @@ $instanceSettings = @{
 
 $arcInstance = Get-AzConnectedMachineExtension -SubscriptionId $subscriptionId -MachineName $machineName -ResourceGroupName $resourceGroupName -Name "WindowsAgent.SqlServer"
 
-if ($arcInstance.Setting.AzureAD)
+if ($arcInstance.Setting.AdditionalProperties.AzureAD)
 {
-    $aadSettings = $arcInstance.Setting.AzureAD
+    $aadSettings = $arcInstance.Setting.AdditionalProperties.AzureAD
     $instanceFound = $false
     $instanceNameLower = $instanceName.ToLower()
     $instanceIndex = 0
@@ -1061,12 +1075,12 @@ if ($arcInstance.Setting.AzureAD)
         $aadSettings += $instanceSettings
     }
 
-    $arcInstance.Setting.AzureAD = $aadSettings
+    $arcInstance.Setting.AdditionalProperties.AzureAD = $aadSettings
 }
 else
 {
     $aadSettings = , $instanceSettings
-    $extension.properties.Settings | Add-Member -Name 'AzureAD' -Value $aadSettings -MemberType NoteProperty
+    $arcInstance.Setting.AdditionalProperties | Add-Member -Name 'AzureAD' -Value $aadSettings -MemberType NoteProperty
 }
 
 
@@ -1162,9 +1176,9 @@ $instanceSettings = @{
 
 $arcInstance = Get-AzConnectedMachineExtension -SubscriptionId $subscriptionId -MachineName $machineName -ResourceGroupName $resourceGroupName -Name "WindowsAgent.SqlServer"
 
-if ($arcInstance.Setting.AzureAD)
+if ($arcInstance.Setting.AdditionalProperties.AzureAD)
 {
-    $aadSettings = $arcInstance.Setting.AzureAD
+    $aadSettings = $arcInstance.Setting.AdditionalProperties.AzureAD
     $instanceFound = $false
     $instanceNameLower = $instanceName.ToLower()
     $instanceIndex = 0
@@ -1188,12 +1202,12 @@ if ($arcInstance.Setting.AzureAD)
         $aadSettings += $instanceSettings
     }
 
-    $arcInstance.Setting.AzureAD = $aadSettings
+    $arcInstance.Setting.AdditionalProperties.AzureAD = $aadSettings
 }
 else
 {
     $aadSettings = , $instanceSettings
-    $extension.properties.Settings | Add-Member -Name 'AzureAD' -Value $aadSettings -MemberType NoteProperty
+    $arcInstance.Setting.AdditionalProperties | Add-Member -Name 'AzureAD' -Value $aadSettings -MemberType NoteProperty
 }
 
 

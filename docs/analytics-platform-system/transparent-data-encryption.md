@@ -16,7 +16,7 @@ You can take several precautions to help secure the database such as designing a
 *Transparent data encryption* (TDE) performs real-time I/O encryption and decryption of the data and transaction log files and the special PDW log files. The encryption uses a database encryption key (DEK), which is stored in the database boot record for availability during recovery. The DEK is a symmetric key secured by using a certificate stored in the master database of the SQL Server PDW. TDE protects data "at rest", meaning the data and log files. It provides the ability to comply with many laws, regulations, and guidelines established in various industries. This feature enables software developers to encrypt data by using AES and 3DES encryption algorithms without changing existing applications.  
   
 > [!IMPORTANT]  
-> TDE does not provide encryption for data traveling between the client and the PDW. For more information about how to encrypt data between the client and SQL Server PDW, see [Provision a certificate](provision-certificate.md).  
+> TDE does not provide encryption for data traveling between the client and the PDW. For more information about how to encrypt data between the client and SQL Server PDW, see [Provision a certificate](pdw-certificate-provisioning.md).  
 >   
 > TDE does not encrypt data while it is moving or in use. Internal traffic between PDW components inside the SQL Server PDW is not encrypted. Data temporarily stored in memory buffers is not encrypted. To mitigate this risk, control physical access and connections to the SQL Server PDW.  
   

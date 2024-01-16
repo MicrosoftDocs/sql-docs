@@ -4,10 +4,11 @@ description: Learn about how the Azure Automation service can be used to manage 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest, mathoma
-ms.date: 08/24/2023
+ms.date: 01/16/2024
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: conceptual
+monikerRange: "=azuresql||=azuresql-mi"
 ---
 
 # Manage databases in Azure SQL Managed Instance by using Azure Automation
@@ -37,13 +38,13 @@ Azure Automation also has the ability to communicate with SQL managed instances 
 The runbook and module galleries for [Azure Automation](/azure/automation/automation-runbook-gallery) offer a variety of runbooks from Microsoft and the community that you can import into Azure Automation. To use one, download a runbook from the gallery, or you can directly import runbooks from the gallery, or from your Automation account in the Azure portal.
 
 >[!NOTE]
-> The Automation runbook may run from a range of IP addresses at any datacenter in an Azure region. To learn more, see [Automation region DNS records](/azure/automation/how-to/automation-region-dns-records).
+> The Automation runbook might run from a range of IP addresses at any datacenter in an Azure region. To learn more, see [Automation region DNS records](/azure/automation/how-to/automation-region-dns-records).
 
 ## Authentication via managed identities
 
 On 30 September 2023, Azure Automation Classic Run As accounts will be retired. Instead, use managed identities for authentication for existing and new runbooks. Managed identities provide the same functionality as Run As accounts, plus:
 
-- Secure authentication to any Azure service that supports authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)).
+- Secure authentication to any Azure service that supports authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)).
 - Minimized management overhead with easy access to resources.
 - Simplified runbooks with no requirement to use multi-line code.
 
@@ -55,8 +56,7 @@ For more information on this required action, visit [Migrate from an existing Ru
 
 Azure SQL Managed Instance has near complete compatibility with SQL Agent in the latest version of SQL Server. For more information, see [Automate management tasks using SQL Agent jobs in Azure SQL Managed Instance](job-automation-managed-instance.md).
 
-## Next steps
-
+## Related content
 Now that you've learned the basics of Azure Automation and how it can be used to manage SQL managed instances, follow these links to learn more about Azure Automation.
 
 - [Azure Automation Overview](/azure/automation/automation-intro)

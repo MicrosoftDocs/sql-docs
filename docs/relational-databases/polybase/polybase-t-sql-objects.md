@@ -102,15 +102,14 @@ CREATE EXTERNAL DATA SOURCE MyHadoopCluster WITH (
 
 Create an external file format, where `FORMAT_TYPE` is the format in Hadoop, such as `DELIMITEDTEXT`, `RCFILE`, `ORC`, or `PARQUET`. 
 
-```sql  
--- Create an external file format.  
--- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).  
-  
-CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
-        FORMAT_TYPE = DELIMITEDTEXT,   
-        FORMAT_OPTIONS (FIELD_TERMINATOR ='|',   
-                USE_TYPE_DEFAULT = TRUE)  
-  
+```sql
+-- Create an external file format.
+-- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
+
+CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (
+        FORMAT_TYPE = DELIMITEDTEXT,
+        FORMAT_OPTIONS (FIELD_TERMINATOR = '|',
+                USE_TYPE_DEFAULT = TRUE)
 ```  
 
 #### 4. Create external table
@@ -205,14 +204,13 @@ WITH
 #### 3. Create external file format
 
 ```sql  
--- Create an external file format.  
--- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).  
-  
-CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
-        FORMAT_TYPE = DELIMITEDTEXT,   
-        FORMAT_OPTIONS (FIELD_TERMINATOR ='|',   
-                USE_TYPE_DEFAULT = TRUE)  
-  
+-- Create an external file format.
+-- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
+
+CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (
+        FORMAT_TYPE = DELIMITEDTEXT,
+        FORMAT_OPTIONS (FIELD_TERMINATOR = '|',
+                USE_TYPE_DEFAULT = TRUE)
 ```  
 
 #### 4. Create external table

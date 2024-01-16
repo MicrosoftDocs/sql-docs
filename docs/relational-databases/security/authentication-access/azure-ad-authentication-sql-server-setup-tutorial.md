@@ -15,14 +15,13 @@ monikerRange: ">=sql-server-ver16||>= sql-server-linux-ver16"
 
 [!INCLUDE [SQL Server 2022](../../../includes/applies-to-version/sqlserver2022.md)]
 
-This article describes a step-by-step process on how to set up authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) for SQL Server, and how to use different Microsoft Entra authentication methods. 
+This article describes a step-by-step process to set up authentication with Microsoft Entra ID, and demonstrates how to use different Microsoft Entra authentication methods.
 
-While this feature is available in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and later versions, and is only for SQL Server on-premises, for Windows and Linux hosts and SQL Server on Azure VMs, this article is intended for SQL Server on-premises only. For SQL Server on Azure VMs, review [Microsoft Entra authentication for SQL Server 2022 on Azure VMs](/azure/azure-sql/virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm).
+[!INCLUDE [entra-id](../../../includes/entra-id.md)]
 
 In this tutorial, you learn how to:
 
 > [!div class="checklist"]
-
 > - Create and register a Microsoft Entra application
 > - Grant permissions to the Microsoft Entra application
 > - Create and assign a certificate
@@ -32,8 +31,11 @@ In this tutorial, you learn how to:
 
 ## Prerequisites
 
-- [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] is installed.
-- SQL Server is connected to Azure cloud. For more information, see [Connect your SQL Server to Azure Arc](../../../sql-server/azure-arc/connect.md).
+- A physical or virtual Windows Server on-premises with an instance of [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)].
+
+    For SQL Server on Azure VMs, review [Microsoft Entra authentication for SQL Server 2022 on Azure VMs](/azure/azure-sql/virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm).
+
+- The server and instance enabled by Azure Arc. For more information, see [Connect your SQL Server to Azure Arc](../../../sql-server/azure-arc/connect.md).
 - Access to Microsoft Entra ID is available for authentication purpose. For more information, see [Microsoft Entra authentication for SQL Server](azure-ad-authentication-sql-server-overview.md).
 - [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) version 18.0 or higher is installed on the client machine. Or download the latest [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
 
@@ -117,16 +119,29 @@ Select the newly created application, and on the left side menu, select **API Pe
 
    :::image type="content" source="media/upload-certificate-to-application.png" alt-text="Screenshot of certificate and secrets menu in the Azure portal." lightbox="media/upload-certificate-to-application.png":::
 
-1. In the Azure portal, navigate to the Azure Key Vault instance where the certificate is stored, and select **Access policies**
+1. In the Azure portal, navigate to the Azure Key Vault instance where the certificate is stored, and select **Access policies** from the navigation menu.
 
-   1. Select **Add Access Policy**.
-   1. For **Key permissions**, use **0 selected**.
+   1. Select **Create**.
    1. For **Secret permissions**, select **Get** and **List**.
    1. For **Certificate permissions**, select **Get** and **List**.
-   1. For **Select principal**, use the account for your Azure Arc instance, which is the hostname of the SQL Server host.
-   1. Select **Add** and then select **Save**.
+   1. Select **Next**.
+   1. On the **Principal** page, search for the name of your Machine - Azure Arc instance, which is the hostname of the SQL Server host.
 
-      You must **Save** to ensure the permissions are applied. They are not applied after selecting **Add**. To ensure permissions have been stored, refresh the browser window, and check the row for your Azure Arc instance is still present.
+       :::image type="content" source="media/machine-azure-arc-resource.png" alt-text="Screenshot of Azure Arc server resource in portal.":::
+
+   1. Skip the **Application (optional)** page by selecting **Next** twice, or selecting **Review + create**.
+
+      Verify that the "Object ID" of the **Principal** matches the **Principal ID** of the managed identity assigned to the instance.
+
+      :::image type="content" source="media/customer-managed-akv-review-create.png" alt-text="Screenshot of Azure portal to review and create access policy."
+
+      To confirm, go to the resource page and select **JSON View** in the top right of the Essentials box on the Overview page. Under **identity** you'll find the **principalId**
+
+      :::image type="content" source="media/machine-azure-arc-json-view.png" alt-text="Screenshot of portal control of JSON view of machine definition.":::
+
+   1. Select **Create**.
+
+   You must select **Create** to ensure that the permissions are applied. To ensure permissions have been stored, refresh the browser window, and check that the row for your Azure Arc instance is still present.
 
    :::image type="content" source="media/add-access-policy-on-key-vault.png" alt-text="Screenshot of adding access policy to the key vault in the Azure portal.":::
 

@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-ver15||>= sql-server-linux-ver16"
 
 [!INCLUDE [SQL Server 2022](../../../includes/applies-to-version/sqlserver2022.md)]
 
-[!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] introduces support for [authentication](/azure/active-directory/authentication/overview-authentication) with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)), on both Windows and Linux on-premises, and [SQL Server on Windows Azure VMs](/azure/azure-sql/virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm).
+[!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] introduces support for [authentication](/azure/active-directory/authentication/overview-authentication) with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)), on both Windows and Linux on-premises, and [SQL Server on Windows Azure VMs](/azure/azure-sql/virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm).
 
 ## Overview
 
@@ -105,7 +105,7 @@ Some non-GUI clients such as [Invoke-sqlcmd](/powershell/module/sqlserver/invoke
 - [Linked server for SQL Server with Microsoft Entra authentication](azure-ad-authentication-sql-server-linked-server.md)
 - [Tutorial: Using automation to set up the Microsoft Entra admin for SQL Server](azure-ad-authentication-sql-server-automation-setup-tutorial.md)
 - [Tutorial: Set up Microsoft Entra authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md)
-- [Rotate certificates - Azure Arc-enabled SQL Server](../../../sql-server/azure-arc/rotate-certificates.md)
+- [Rotate certificates](../../../sql-server/azure-arc/rotate-certificates.md)
 
 ## Next steps
 

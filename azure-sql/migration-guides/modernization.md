@@ -174,7 +174,7 @@ If you have Software Assurance, you can implement high availability (HA) and dis
 
 #### Do I have to pay for disaster recovery (DR) in SQL Managed Instance and SQL Database?
 
-SQL Managed Instance provides the possibility to [configure a license-free standby replica](../managed-instance/auto-failover-group-standby-replica-how-to-configure.md), which means that SQL Server licensing costs for the vCores that the secondary standby replica uses aren't charged.
+SQL Managed Instance provides the possibility to [configure a license-free standby replica](../managed-instance/failover-group-standby-replica-how-to-configure.md), which means that SQL Server licensing costs for the vCores that the secondary standby replica uses aren't charged.
 
 #### Can I centrally manage Azure Hybrid Benefit for SQL Server across the entire Azure subscription?
 
@@ -254,7 +254,7 @@ The security strategy follows the layered defense-in-depth approach: Network sec
 
 #### How can I adapt on-premises business continuity and disaster recovery (BCDR) concepts into Azure SQL Managed Instance concepts?
 
-Most Azure SQL BCDR concepts have an equivalent in on-premises SQL Server implementations. For example, the inherent [high availability](../database/high-availability-sla.md) of SQL Managed Instance [General Purpose tier](https://techcommunity.microsoft.com/t5/azure-sql-blog/high-availability-in-azure-sql-mi-general-purpose-service-tier/ba-p/3298977) can be seen as a cloud equivalent for SQL Server FCI (Failover Cluster Instance). Similarly, SQL Managed Instance [Business Critical tier](https://techcommunity.microsoft.com/t5/azure-sql-blog/high-availability-in-azure-sql-mi-business-critical-service-tier/ba-p/3521212) can be seen as a cloud equivalent for an Always On Availability Group with synchronous commit to a minimum number of replicas. As a Disaster Recovery concept, an [Auto-failover group](../managed-instance/auto-failover-group-sql-mi.md) on SQL Managed Instance is comparable to an availability group with asynchronous commit. SQL Database and SQL Managed Instance HA are backed by [Service-Level Agreements](https://azure.microsoft.com/support/legal/sla/azure-sql-sql-managed-instance/). For more information, see [Overview of business continuity with Azure SQL Database](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md).
+Most Azure SQL BCDR concepts have an equivalent in on-premises SQL Server implementations. For example, the inherent [high availability](../database/high-availability-sla.md) of SQL Managed Instance [General Purpose tier](https://techcommunity.microsoft.com/t5/azure-sql-blog/high-availability-in-azure-sql-mi-general-purpose-service-tier/ba-p/3298977) can be seen as a cloud equivalent for SQL Server FCI (Failover Cluster Instance). Similarly, SQL Managed Instance [Business Critical tier](https://techcommunity.microsoft.com/t5/azure-sql-blog/high-availability-in-azure-sql-mi-business-critical-service-tier/ba-p/3521212) can be seen as a cloud equivalent for an Always On Availability Group with synchronous commit to a minimum number of replicas. As a Disaster Recovery concept, a [failover group](../managed-instance/failover-group-sql-mi.md) on SQL Managed Instance is comparable to an availability group with asynchronous commit. SQL Database and SQL Managed Instance HA are backed by [Service-Level Agreements](https://azure.microsoft.com/support/legal/sla/azure-sql-sql-managed-instance/). For more information, see [Overview of business continuity with Azure SQL Database](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md).
 
 #### How are backups handled in Azure SQL PaaS services?
 
@@ -262,7 +262,7 @@ You can check documentation for automated backups in [SQL Managed Instance](../m
 
 #### How is high availability (HA) achieved in SQL Managed Instance and SQL Database?
 
-SQL Managed Instance and Database are built on top of inherent [high availability](../database/high-availability-sla.md) (HA) architecture. This includes support for auto-failover groups and various other features. You can choose between two HA architecture models: [Standard availability model in General Purpose service tier](https://techcommunity.microsoft.com/t5/azure-sql-blog/high-availability-in-azure-sql-mi-general-purpose-service-tier/ba-p/3298977), or [Premium availability model in Business Critical service tier](https://techcommunity.microsoft.com/t5/azure-sql-blog/high-availability-in-azure-sql-mi-business-critical-service-tier/ba-p/3521212).
+SQL Managed Instance and Database are built on top of inherent [high availability](../database/high-availability-sla.md) (HA) architecture. This includes support for failover groups and various other features. You can choose between two HA architecture models: [Standard availability model in General Purpose service tier](https://techcommunity.microsoft.com/t5/azure-sql-blog/high-availability-in-azure-sql-mi-general-purpose-service-tier/ba-p/3298977), or [Premium availability model in Business Critical service tier](https://techcommunity.microsoft.com/t5/azure-sql-blog/high-availability-in-azure-sql-mi-business-critical-service-tier/ba-p/3521212).
 
 #### How does disaster recovery work in SQL Managed Instance and SQL Database?
 

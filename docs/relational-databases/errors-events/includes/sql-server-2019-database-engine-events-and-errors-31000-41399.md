@@ -1,8 +1,7 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
-ms.date: 10/11/2023
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 01/11/2024
 ms.topic: include
 ---
 > [!NOTE]
@@ -930,7 +929,7 @@ ms.topic: include
 | 37108 | 16 | No | A job account could not be linked to database '%.\*ls' on server '%.\*ls' because it is a geo-secondary database. |
 | 37109 | 16 | No | Database '%ls' on server '%ls' is already linked to another job account. |
 | 37201 | 16 | No | An instance pool could not be found with name '%.\*ls'. |
-| 37202 | 16 | No | "An instance pool with name '%.\*ls' is busy with another ongoing operation. |
+| 37202 | 16 | No | An instance pool with name '%.\*ls' is busy with another ongoing operation. |
 | 37203 | 16 | No | An instance pool with name '%.\*ls' is not empty. |
 | 37204 | 16 | No | An instance pool with name '%.\*ls' does not have enough vCore capacity for given request. |
 | 37301 | 16 | Yes | Internal enclave error. The enclave symcrypt method %ls failed with status 0x%08x. For more information, contact Customer Support Services. |

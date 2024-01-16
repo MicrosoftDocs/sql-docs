@@ -79,7 +79,7 @@ helpviewer_keywords:
   
 -   Write script or code to set the report server system property **EnableClientPrinting** to **false.**  
   
- The following sample script illustrates one approach for disabling client-side printing. Compile and then run the following [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] code to set the **EnableClientPrinting** property to **False**. After you run the code, restart IIS.  
+ The following sample script illustrates one approach for disabling client-side printing. Compile and then run the following [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] code to set the **EnableClientPrinting** property to **False**. After you run the code, restart IIS.  
   
 ### Sample Script  
   

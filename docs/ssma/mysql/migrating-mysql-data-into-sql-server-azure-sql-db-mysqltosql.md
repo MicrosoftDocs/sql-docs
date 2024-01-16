@@ -112,7 +112,7 @@ When large data size needs to be migrated within a short duration, at scale offl
 
 1. For large offline migration, click on Migrate data at scale. 
 
-1. Provide Microsoft Entra/Azure AD account for authentication. Once you enter the user name, click on connect.
+1. Provide Microsoft Entra/Azure AD account for authentication. Once you enter the username, select **Connect**.
 
 1. Select the tenant and the subscription that already has the Azure SQL VM or Azure SQL database or managed instance configured and click next.
 

@@ -137,7 +137,7 @@ SqlPackage authenticates using methods available in [SqlClient](/dotnet/api/micr
 
 - SQL Server authentication
 - Active Directory (Windows) authentication
-- [Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview)
+- [Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview)
     - Username/password
     - Integrated authentication
     - Universal authentication

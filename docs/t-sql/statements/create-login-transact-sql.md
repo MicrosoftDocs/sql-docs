@@ -639,7 +639,7 @@ GO
 
 ### E. Creating a login for a Microsoft Entra group
 
- The following example creates a login for the Microsoft Entra group *mygroup* that exists in Microsoft Entra tenant of *myaad*
+ The following example creates a login for the Microsoft Entra group *mygroup* that exists in Microsoft Entra tenant of *contoso*
 
 
 ```sql
@@ -651,7 +651,7 @@ GO
 
 ### F. Creating a login for a Microsoft Entra application
 
-The following example creates a login for the Microsoft Entra application *myapp* that exists in the Microsoft Entra tenant of *myaad*
+The following example creates a login for the Microsoft Entra application *myapp* that exists in the Microsoft Entra tenant of *contoso*
 
 
 ```sql

@@ -2260,7 +2260,7 @@ Azure Data Lake Store connectivity can be based on your ADLS URI and your Micros
 -- If you do not have a Master Key on your DW you will need to create one.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 
--- These values come from your Azure Active Directory Application used to authenticate to ADLS
+-- These values come from your Microsoft Entra application used to authenticate to ADLS
 CREATE DATABASE SCOPED CREDENTIAL ADLS_credential
 WITH
     -- IDENTITY = '<clientID>@<OAuth2.0TokenEndPoint>' ,
@@ -2316,7 +2316,7 @@ WITH (
 
 ### D. Create external data source to Azure Data Lake Store Gen2 using abfs://
 
-There is no need to specify SECRET when connecting to Azure Data Lake Store Gen2 account with [Managed Identity](/azure/active-directory/managed-identities-azure-resources/overview) mechanism.
+There is no need to specify SECRET when connecting to Azure Data Lake Store Gen2 account with [Managed Identity](/entra/identity/managed-identities-azure-resources/overview) mechanism.
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one

@@ -443,7 +443,7 @@ GO
 
 **Applies to:** [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] serverless SQL pools and dedicated SQL pools.
 
-In this example, we can see example of a template code for writing CETAS with a user-defined view as source, using Managed Identity as an authentication, and `wasbs:`.
+In this example, we can see example of a template code for writing CETAS with a user-defined view as source, using managed identity as an authentication, and `wasbs:`.
 
 ```sql
 CREATE DATABASE [<mydatabase>];
@@ -454,7 +454,7 @@ GO
 
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<strong password>';
 
-CREATE DATABASE SCOPED CREDENTIAL [WorkspaceIdentity] WITH IDENTITY = 'Managed Identity';
+CREATE DATABASE SCOPED CREDENTIAL [WorkspaceIdentity] WITH IDENTITY = 'managed identity';
 GO
 
 CREATE EXTERNAL FILE FORMAT [ParquetFF] WITH (
@@ -482,7 +482,7 @@ GO
 
 **Applies to:** [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] serverless SQL pools and dedicated SQL pools.
 
-In this example, we can see example of a template code for writing CETAS with a user-defined view as source, using Managed Identity as an authentication, and `https:`.
+In this example, we can see example of a template code for writing CETAS with a user-defined view as source, using managed identity as an authentication, and `https:`.
 
 ```sql
 CREATE DATABASE [<mydatabase>];
@@ -493,7 +493,7 @@ GO
 
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<strong password>';
 
-CREATE DATABASE SCOPED CREDENTIAL [WorkspaceIdentity] WITH IDENTITY = 'Managed Identity';
+CREATE DATABASE SCOPED CREDENTIAL [WorkspaceIdentity] WITH IDENTITY = 'managed identity';
 GO
 
 CREATE EXTERNAL FILE FORMAT [ParquetFF] WITH (
@@ -605,9 +605,9 @@ Populates the new table with the results from a SELECT statement. *select_criter
 
 You need to have permissions to list folder content and write to the LOCATION path for CETAS to work.
 
-Supported authentication methods are the managed service identity or a Shared Access Signature (SAS) token.
+Supported authentication methods are managed identity or a Shared Access Signature (SAS) token.
 
-- If you are using Managed Identity for authentication, make sure that the service principal of your SQL managed instance has a role of **Storage Blob Data Contributor** on the destination container.
+- If you are using managed identity for authentication, make sure that the service principal of your SQL managed instance has a role of **Storage Blob Data Contributor** on the destination container.
 - If you are using an SAS token, **Read**, **Write**, and **List** permissions are required.
 - For Azure Blog Storage, the `Allowed Services`: `Blob` checkbox must be selected to generate the SAS token.
 - For Azure Data Lake Gen2, the `Allowed Services`: `Container` and `Object` checkboxes must be selected to generate the SAS token.
@@ -992,7 +992,7 @@ Takes a shared lock on the SCHEMARESOLUTION object.
 
 ### A. Use CETAS with a view to create an external table using the managed identity
 
-This example provides code for writing CETAS with a view as source, using system Managed Identity an authentication.
+This example provides code for writing CETAS with a view as source, using system managed identity an authentication.
 
 ```sql
 CREATE DATABASE [<mydatabase>];
@@ -1003,7 +1003,7 @@ GO
 
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<strong password>';
 
-CREATE DATABASE SCOPED CREDENTIAL [WorkspaceIdentity] WITH IDENTITY = 'Managed Identity';
+CREATE DATABASE SCOPED CREDENTIAL [WorkspaceIdentity] WITH IDENTITY = 'managed identity';
 GO
 
 CREATE EXTERNAL FILE FORMAT [ParquetFF] WITH (
@@ -1072,7 +1072,7 @@ GO
 
 The next two examples show how to offload some of the data from a local table into an external table stored as parquet file(s) on Azure Blob storage container. They're designed to work with [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. This example shows creating an external table as a single parquet file, where the next example shows how to create an external table and partition it into multiple folders with parquet files.
 
-The example below works using Managed Identity for authentication. As such, make sure that your Azure SQL Managed Instance service principal has **Storage Blob Data Contributor** role on your Azure Blob Storage Container. Alternatively, you can modify the example and use Shared Access Secret (SAS) tokens for authentication.
+The example below works using managed identity for authentication. As such, make sure that your Azure SQL Managed Instance service principal has **Storage Blob Data Contributor** role on your Azure Blob Storage Container. Alternatively, you can modify the example and use Shared Access Secret (SAS) tokens for authentication.
 
 The following sample, you create an external table into a single parquet file in Azure Blob Storage, selecting from `SalesOrderHeader` table for orders older than 1-Jan-2014:
 
@@ -1085,7 +1085,7 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Strong Password';
 GO
 
 CREATE DATABASE SCOPED CREDENTIAL [CETASCredential]
-    WITH IDENTITY = 'Managed Identity';
+    WITH IDENTITY = 'managed identity';
 GO
 
 CREATE EXTERNAL DATA SOURCE [CETASExternalDataSource]

@@ -12,6 +12,7 @@ ms.topic: conceptual
 ms.custom:
   - sqldbrb=1
   - ignite-2023
+monikerRange: "=azuresql||=azuresql-mi"
 ---
 # Azure SQL Managed Instance content reference
 [!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -39,12 +40,12 @@ In this article, you can find a content reference to various guides, scripts, an
   Secure your subnet against erroneous or malicious data exfiltration into unauthorized Azure Storage accounts.
 - [Resolving private DNS names in Azure SQL Managed Instance](resolve-private-domain-names.md):
   Configure custom DNS servers to establish access from SQL Managed Instance to an external resource, such as scenarios involving linked servers or database mail.
-- [Find the management endpoint IP address](management-endpoint-find-ip-address.md): 
-  Determine the public endpoint that SQL Managed Instance is using for management purposes. 
+- [Find the management endpoint IP address](management-endpoint-find-ip-address.md):
+  Determine the public endpoint that SQL Managed Instance is using for management purposes.
 - [Verify built-in firewall protection](management-endpoint-verify-built-in-firewall.md):
-  Verify that SQL Managed Instance allows traffic only on necessary ports, and other built-in firewall rules. 
-- [Connect applications](connect-application-instance.md): 
-  Learn about different patterns for connecting the applications to SQL Managed Instance.
+  Verify that SQL Managed Instance allows traffic only on necessary ports, and other built-in firewall rules.
+- [Connect applications](connect-application-instance.md):
+  Learn about different patterns for connecting the applications to Azure SQL Managed Instance.
 
 ## Feature configuration
 
@@ -54,7 +55,7 @@ In this article, you can find a content reference to various guides, scripts, an
 - [Configure failover group](failover-group-configure-sql-mi.md) to automatically fail over all databases on an instance to a secondary instance in another region in the event of a disaster. 
 - [Configure a temporal retention policy](../database/temporal-tables-retention-policy.md?view=azuresql-mi&preserve-view=true)
 - [Configure In-Memory OLTP](../in-memory-oltp-configure.md?view=azuresql-mi&preserve-view=true)
-- [Configure Azure Automation](../database/automation-manage.md?view=azuresql-mi&preserve-view=true)
+- [Configure Azure Automation](automation-manage.md?view=azuresql-mi&preserve-view=true)
 - [Transactional replication](replication-between-two-instances-configure-tutorial.md) enables you to replicate your data between managed instances, or from SQL Server on-premises to SQL Managed Instance, and vice versa.
 - [Configure threat detection](threat-detection-configure.md) – [threat detection](../database/threat-detection-overview.md?view=azuresql-mi&preserve-view=true) is a built-in Azure SQL Managed Instance feature that detects various potential attacks such as SQL injection or access from suspicious locations. 
 - [Creating alerts](alerts-create.md) enables you to set up alerts on monitored metrics such as CPU utilization, storage space consumption, IOPS, and others for SQL Managed Instance. 

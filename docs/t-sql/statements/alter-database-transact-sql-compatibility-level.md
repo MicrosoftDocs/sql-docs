@@ -4,7 +4,7 @@ description: Sets Transact-SQL and query processing behaviors to be compatible w
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 5/19/2023
+ms.date: 01/10/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -56,7 +56,7 @@ The version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with wh
 | Product | Database Engine version | Default compatibility level designation | Supported compatibility level values |
 | --- | --- | --- | --- |
 | [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] | 16 | 150 | 160, 150, 140, 130, 120, 110, 100 |
-| [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] | 16 | 160 | 160, 150, 140, 130, 120, 110, 100 |
+| [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] | 16 | 150 | 160, 150, 140, 130, 120, 110, 100 |
 | [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] | 16 | 160 | 160, 150, 140, 130, 120, 110, 100 |
 | [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] | 15 | 150 | 150, 140, 130, 120, 110, 100 |
 | [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] | 14 | 140 | 140, 130, 120, 110, 100 |

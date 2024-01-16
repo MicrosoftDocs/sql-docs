@@ -1,5 +1,5 @@
 ---
-title: Connect SQL Servers on Azure Arc-enabled servers at scale using Azure policy
+title: Connect SQL Server instances on Azure Arc-enabled servers at scale using Azure policy
 description: In this article, you learn different ways of connecting SQL Server instances to Azure Arc at scale.
 author: anosov1960
 ms.author: sashan
@@ -13,10 +13,10 @@ ms.topic: conceptual
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 > [!IMPORTANT]  
-> Azure Arc automatically installs the Azure extension for SQL Server when a server connected to Azure Arc has SQL Server installed. All the SQL Server instance resources are automatically created in Azure, providing a centralized management platform for all your SQL Servers.
-To automatically connect your SQL Server instances, see [Automatically Connect your SQL Server to Azure Arc](automatically-connect.md).
-Use the method below, if your server is already connected to Azure, but Azure extension for SQL Server is not deployed automatically using above methods.
->
+> Azure Arc automatically installs the Azure extension for SQL Server when a server connected to Azure Arc has SQL Server installed. All the SQL Server instance resources are automatically created in Azure, providing a centralized management platform for all your SQL Server instances.
+> To automatically connect your SQL Server instances, see [Automatically Connect your SQL Server to Azure Arc](automatically-connect.md).
+> Use the method below, if your server is already connected to Azure, but Azure extension for SQL Server is not deployed automatically using above methods.
+
 This article describes two methods of how to connect multiple instances of SQL Server to Azure Arc as a single task. Before you start complete the [Prerequisites](prerequisites.md).
 
 
@@ -53,10 +53,10 @@ Alternatively, you can quickly enable at-scale registration using the method bel
 1. Navigate to the **SQL Server - Azure Arc** view in the Azure portal.
 1. Select the **Automatic Arc-enabled SQL Server registration** button at the top of the list.
 1. Select a subscription and optionally a resource group.  
-1. Select License type.  Please note that some Arc-enabled SQL Server features are only available for SQL Servers with Software Assurance (Paid) or with Azure pay-as-you-go. For more information, review [Manage SQL Server license type](manage-configuration.md).
+1. Select License type.  Please note that some Arc-enabled SQL Server features are only available for SQL Server instances with Software Assurance (Paid) or with Azure pay-as-you-go. For more information, review [Manage SQL Server license type](manage-configuration.md).
 1. Select **Enable**.
 
-These steps create a new Azure Policy assignment of the *Configure Arc-enabled machines running SQL Server to have SQL Server extension installed* policy definition to the selected subscription and, optionally, a specific resource group scope. A new system assigned managed identity is created and granted the required permissions to onboard Arc-enabled SQL Servers. This new managed identity is used by the policy remediation to install the Azure extension for SQL Server.
+These steps create a new Azure Policy assignment of the *Configure Arc-enabled machines running SQL Server to have SQL Server extension installed* policy definition to the selected subscription and, optionally, a specific resource group scope. A new system assigned managed identity is created and granted the required permissions to onboard SQL Server instances enabled for Azure Arc. This new managed identity is used by the policy remediation to install the Azure extension for SQL Server.
 
 
 ## Validate successful onboarding

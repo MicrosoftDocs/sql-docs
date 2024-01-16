@@ -17,7 +17,7 @@ In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], the deployable un
   
 ### To create the Integration Services project  
   
-1.  Click **Start**, point to **All Programs**, point to **Microsoft SQL Server**, and then click **SQL ServerSQL Server Data Tools**.  
+1.  Click **Start**, point to **All Programs**, point to **Microsoft SQL Server**, and then click **SQL Server Data Tools**.  
   
 2.  On the **File** menu, point to **New**, and then click **Project** to create a new [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project.  
   

@@ -1,6 +1,6 @@
 ---
-title: "InstanceID Property (WMI MSReportServer_Instance)"
-description: "InstanceID Property (WMI MSReportServer_Instance)"
+title: "InstanceID property (WMI MSReportServer_Instance)"
+description: "InstanceID property (WMI MSReportServer_Instance)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -14,8 +14,8 @@ apilocation: "reportingservices.mof"
 apiname: "InstanceID Property (WMI MSReportServer_Instance)"
 apitype: MOFDef
 ---
-# MSReportServer_Instance Properties - InstanceID
-  This object supports the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] infrastructure and is not intended to be used directly from your code.  
+# MSReportServer_Instance properties - InstanceID
+  This object supports the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] infrastructure and isn't intended to be used directly from your code.  
   
 ## Syntax  
   
@@ -30,7 +30,7 @@ public string InstanceID;
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## See Also  
- [MSReportServer_Instance Members](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
+## Related content  
+ [MSReportServer_Instance members](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   

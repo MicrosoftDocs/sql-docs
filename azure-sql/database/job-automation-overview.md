@@ -1,15 +1,17 @@
 ---
 title: Automation in Azure SQL overview
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
 description: "Features for job automation to run Transact-SQL (T-SQL) scripts include elastic jobs on Azure SQL Database and SQL Agent jobs on Azure SQL Managed instance."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: srinia
 ms.date: 11/02/2023
-ms.service: sql-database
+ms.service: sql-db-mi
 ms.topic: conceptual
 ms.custom: sqldbrb=1
 dev_langs:
   - "TSQL"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Automate management tasks in Azure SQL
 

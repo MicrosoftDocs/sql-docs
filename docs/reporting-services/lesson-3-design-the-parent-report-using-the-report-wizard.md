@@ -1,5 +1,5 @@
 ---
-title: "Lesson 3: Design the Parent Report using the Report Wizard"
+title: "Lesson 3: Design the parent report using the Report Wizard"
 description: Learn how to design the parent report using the Report Wizard in Report Designer after you create a data connection and data table for your parent report.
 author: maggiesMSFT
 ms.author: maggies
@@ -9,22 +9,22 @@ ms.subservice: reporting-services
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
-# Lesson 3: Design the Parent Report using the Report Wizard
-After you create a data connection and a data table for the parent report, your next step is to design the parent report using the Report Wizard in Report Designer. For more information about Report Designer, see [Design Reports with Report Designer &#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
+# Lesson 3: Design the parent report using the Report Wizard
+After you create a data connection and a data table for the parent report, your next step is to design the parent report using the Report Wizard in Report Designer. For more information about Report Designer, see [Design reports with Report Designer &#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
-### To design the parent report using the Report Wizard  
+### Design the parent report using the Report Wizard  
   
 1.  Make sure that the top-level website is selected in **Solution Explorer**.  
   
 2.  Right-click on the website and select **Add New Item**.  
   
-3.  In the **Add New Item** dialog box, select **Report Wizard**, enter a name for the report file, and then select **Add**.  
+3.  In the **Add New Item** dialog box, select **Report Wizard**, enter a name for the report file, and then choose **Add**.  
   
-    This launches the Report Wizard.  
+    This action launches the Report Wizard.  
   
-4.  On the **Dataset Properties** page, in the **Data source** box, select the **DataSet1** you created in [Lesson 2: Define a Data Connection and Data Table for Parent Report](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
+4.  On the **Dataset Properties** page, in the **Data source** box, select the **DataSet1** you created in [Lesson 2: Define a data connection and data table for the parent report](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
   
-    The **Available datasets** box is automatically updated with the **DataTable** you created above.  
+    The **Available datasets** box is automatically updated with the **DataTable** you previously created.  
   
 5.  Select **Next**.  
   
@@ -32,16 +32,17 @@ After you create a data connection and a data table for the parent report, your 
   
     1.  Drag **ProductID**, **Name**, **ProductNumber**, **SafetyStockLevel**, and **ReorderLevel** from **Available fields** to the **Values** box.  
   
-    2.  Select the arrow next to **Sum(ProductID)**, **Sum(SafetyStockLevel)**, **Sum(ReorderLevel)** and clear the **Sum** selection.  
+    2.  Select the arrow next to **Sum(ProductID)**, **Sum(SafetyStockLevel)**, **Sum(ReorderLevel)**, and clear the **Sum** selection.  
   
-7.  Select **Next** twice, then select **Finish** to close the **Report Wizard**.  
+7.  Select **Next** twice, then choose **Finish** to close the **Report Wizard**.  
   
-    You've now created the .rdlc file. The file opens in Report Designer. The tablix you designed is now displayed in the design surface.  
+    You created the .rdlc file. The file opens in Report Designer. The tablix you designed is now displayed in the design surface.  
   
 8.  Save the .rdlc file.  
   
-## Next Task  
-You have successfully designed the parent report using the Report Wizard. Next, you will create a data connection and a data table for the child report. See [Lesson 4: Define a Data Connection and Data Table for Child Report](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+## Next step
+
+You successfully designed the parent report using the Report Wizard. Next, you create a data connection and a data table for the child report. See [Lesson 4: Define a data connection and data table for the child report](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
   
   

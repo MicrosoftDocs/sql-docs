@@ -31,7 +31,7 @@ You designate a replica for standby when you configure a new [active geo-replica
 
 While active geo-replication supports adding four secondary replicas, you can only designate one secondary database replica for standby. Failover groups support one secondary database replica per primary database, and it can be either readable, or standby. 
 
-During planned or unplanned failover, the standby replica becomes the new primary and starts to incur regular vCore licensing costs while the original primary becomes the new standby secondary, and stops incurring vCore licensings costs. 
+During planned or unplanned failover, the standby replica becomes the new primary and starts to incur regular vCore licensing costs while the original primary becomes the new standby secondary, and stops incurring vCore licensing costs. 
 
 ## Cost benefit
 
@@ -210,7 +210,7 @@ To remove a standby replica with the Azure CLI, use [az sql db replica delete-li
 
 -  What are the approximate savings with a standby replica? 
 
-   Without licensing costs, a standby replica is about 35-40% less expensive than a regular fully readable secondary replica, though savings vary by region. For a more accurate price, use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) and set the SQL license to _Azure Hybrid Benefit_.
+   Without licensing costs, a standby replica can save between 35 to 40 percent compared to a regular fully readable secondary replica, though savings vary by region. For accurate pricing, use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) and set the SQL Server license to _Azure Hybrid Benefit_.
 
 - How many vCores will be license-free for the standby replica? 
 

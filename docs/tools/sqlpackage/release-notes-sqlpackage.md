@@ -4,7 +4,7 @@ description: Release notes for Microsoft SqlPackage.
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: "llali"
-ms.date: 5/10/2023
+ms.date: 1/9/2024
 ms.service: sql
 ms.topic: conceptual
 ms.custom: tools|sos
@@ -15,14 +15,35 @@ ms.custom: tools|sos
 
 This article lists the features and fixes delivered by the released versions of SqlPackage.
 
+## 162.1.172 SqlPackage
+
+**Release date:** January 9, 2024
+
+```bash
+dotnet tool install -g microsoft.sqlpackage --version 162.1.172
+```
+
+|Platform|Download|
+|:---|:---|
+|Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2257374)|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2257373)|
+|macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2257375)|
+|Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2257477)|
+
+### Fixes
+| Feature | Details |
+| :------ | :------ |
+| Platform | References [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.1.3) v5.1.3.|
+
+### Known Issues
+| Feature | Details | Workaround |
+| :------ | :------ |:------ |
+| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
+| ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
 
 ## 162.1.167 SqlPackage
 
 **Release date:** October 19, 2023
-
-```bash
-dotnet tool install -g microsoft.sqlpackage --version 162.1.167
-```
 
 |Platform|Download|
 |:---|:---|
@@ -32,7 +53,6 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.167
 |Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2249739)|
 
 
-
 ### Features
 | Feature | Details |
 | :------ | :------ |
@@ -40,7 +60,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.167
 | Azure Synapse Analytics | Adds support for `PARSER_VERSION` in `FORMAT_OPTIONS` for  Azure Synapse Analytics serverless SQL pools. [Documentation](../../t-sql/statements/create-external-file-format-transact-sql.md#format_options) |
 | Azure Synapse Analytics | Adds support for multi-column distribution (MCD) in `CREATE VIEW` for Azure Synapse Analytics dedicated SQL pools. [GitHub issue](https://github.com/microsoft/DacFx/issues/224) |
 | Azure Synapse Analytics | Adds support for /p:TableData property on extract operations to Parquet files, enabling the ability to specify which tables to export data for.  [GitHub issue](https://github.com/microsoft/DacFx/issues/16) |
-| Fabric Data Warehouse | Adds support for extract and publish for Fabric Data Warehouse databases.  Publish capabilities do not support changes that require existing tables to be altered.  The target platform enum value is `SqlDwUnifiedDatabaseSchemaProvider` in SQL database projects. |
+| Fabric Data Warehouse | Adds support for extract and publish for Fabric Data Warehouse databases.  Publish capabilities don't support changes that require existing tables to be altered.  The target platform enum value is `SqlDwUnifiedDatabaseSchemaProvider` in SQL database projects. |
 | Parquet | Adds preview support for extract and publish with data stored in Parquet files in Azure Blob Storage with Azure SQL Managed Instance and SQL Server 2022. Azure SQL Database and SQL Server 2019 and earlier are not supported. Data must be in supported data types for [CETAS](/azure/synapse-analytics/sql/develop-tables-cetas#supported-data-types).  Extract and publish with Parquet files offers performance improvements over import/export to bacpac files in many scenarios.|
 | Publish | Adds `/p:AllowTableRecreation` property to publish operation.  The default (true) is consistent with previous behavior, where a table change may require that a table is recreated while the table data is preserved however the deployment may take a significant amount of time or change tracking data could be lost.  Setting the property `/p:AllowTableRecreation` to false results in the deployment not starting if recreation is needed for any table.  [GitHub issue](https://github.com/microsoft/DacFx/issues/28) |
 
@@ -49,16 +69,16 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.167
 | :------ | :------ |
 | Application | Fixes an issue where the SqlPackage CLI would throw an exception when the output was redirected. [GitHub issue](https://github.com/microsoft/DacFx/issues/261) |
 | Azure Synapse Analytics | Fixes an issue where a publish operation fails to parse a statement containing the `filepath()` or `filename()` [functions](/azure/synapse-analytics/sql/query-specific-files). |
-| Import | AUTO_DROP option is excluded from statistics when importing a bacpac to a version of SQL Server that does not support AUTO_DROP. |
+| Import | AUTO_DROP option is excluded from statistics when importing a bacpac to a version of SQL Server that doesn't support AUTO_DROP. |
 | Import | Fixes an issue where imports of databases containing ALTER or CREATE of availability groups would fail to import. |
 | Export | Fixes an issue where dropped ledger columns were inclued in a bacpac export, resulting in an error message during import. |
-| Export | Fixes an issue where /p:CompressionOption was not honored when exporting to a bacpac file. |
+| Export | Fixes an issue where /p:CompressionOption wasn't honored when exporting to a bacpac file. |
 | Extract | Fixes an issue where /p:ExtractTarget options for non-dacpac options still required the target file to have a .dacpac extension. [GitHub issue](https://github.com/microsoft/DacFx/issues/128) |
 | Ledger | Fixes an issue where import or publish of a database containing a dropped ledger table fails due to attempting to create permissions for the dropped table. |
 | Ledger | Fixes an issue where import of a database containing a dropped ledger table fails due to attempting to import data to the dropped table. |
 | Polybase | Fixes an issue where Azure SQL Managed Instance databases with RDBMS external tables could not be exported or extracted. [GitHub issue](https://github.com/microsoft/DacFx/issues/199) |
-| Publish | DropObjectsNotInSource does not drop objects that are permissions or role memberships. Use DropPermissionsNotInSource or DropRoleMembersNotInSource to enable dropping permissions or role memberships. [GitHub issue](https://github.com/microsoft/DacFx/issues/339) |
-| Publish | Fixes an issue where the publish operation fails when the user connecting does not have access to `master` in Azure SQL Database. |
+| Publish | DropObjectsNotInSource doesn't drop objects that are permissions or role memberships. Use DropPermissionsNotInSource or DropRoleMembersNotInSource to enable dropping permissions or role memberships. [GitHub issue](https://github.com/microsoft/DacFx/issues/339) |
+| Publish | Fixes an issue where the publish operation fails when the user connecting doesn't have access to `master` in Azure SQL Database. |
 | Publish | Fixes an issue where deployments that include interactions with column encryption would experience intermittent execution timeout errors. |
 | Publish | Fixes an issue where deploying a dacpac built with .NET/.NET Core would fail if RegisterDataTierApplication was set to true. [GitHub issue](https://github.com/microsoft/DacFx/issues/18) |
 | Publish | Fixes an issue where system versioned table is modified and a new schema is created results in the deployment failing. [GitHub issue](https://github.com/microsoft/DacFx/issues/309) |
@@ -94,25 +114,25 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.167
 ### Fixes
 | Feature | Details |
 | :------ | :------ |
-|Azure Synapse Analytics|Fixes an issue where the default command timeout was not set properly when connecting to Azure Synapse Analytics serverless SQL pools.|
+|Azure Synapse Analytics|Fixes an issue where the default command timeout wasn't set properly when connecting to Azure Synapse Analytics serverless SQL pools.|
 |Azure Synapse Analytics|Fixes an issue where Azure Synapse Analytics serverless SQL pools would incorrectly determine the default data and log paths.|
 |Azure Synapse Analytics|Fixes an issue where Azure Synapse Analytics serverless SQL pools would incorrectly determine the default login, user and schema.|
-|Azure SQL Database|Fixes an issue where temporal history retention was not correctly recognized as not configured (null).|
+|Azure SQL Database|Fixes an issue where temporal history retention wasn't correctly recognized as not configured (null).|
 |Deployment|Fixes an issue where the deployment plan fails to detect a dependency on a table/view in subqueries within FROM VALUES clause. [GitHub issue](https://github.com/microsoft/DacFx/issues/156)|
 |Deployment|Fixes an issue where deployment would fail when the target database contains a rule bound to a column.|
 |Deployment|Fixes an issue where deployment would fail when the target database contains a rule bound to a column with a user-defined type. [GitHub issue](https://github.com/microsoft/DacFx/issues/245)|
 |Deployment|Fixes an issue where the retention period on a temporal table would be reset to the default value when another change is made to the table. [GitHub issue](https://github.com/microsoft/DacFx/issues/258)|
-|Deployment|Fixes an issue where updates to a primary key is not included in the deployment when the table has compression options specified.|
+|Deployment|Fixes an issue where updates to a primary key isn't included in the deployment when the table has compression options specified.|
 |Deployment|Fixes an issue where a non-clustered index on a partitioned table is rebuilt even when no changes are made to the table. [GitHub issue](https://github.com/microsoft/DacFx/issues/202)|
-|Deployment|Fixes an issue where ignorecolumnorder property is not honored by a history table when no changes are made to a system-versioned table except the columns are reordered.|
+|Deployment|Fixes an issue where ignorecolumnorder property isn't honored by a history table when no changes are made to a system-versioned table except the columns are reordered.|
 |Deployment|Fixes an issue where external tables would be dropped and redeployed despite no changes when the table definition contained SQLCMD variables. [GitHub issue](https://github.com/microsoft/DacFx/issues/249)|
 |Export|Fixes an issue where the diagnostic information provided during an export operation incorrectly reports the size of a table in KB instead of Bytes. [GitHub issue](https://github.com/microsoft/DacFx/issues/209)|
-|Import|Fixes an issue where an Azure Active Directory user cannot be created during import to Azure SQL Database, causing the import to fail. [GitHub issue](https://github.com/microsoft/DacFx/issues/260)|
-|Ledger|Fixes an issue where SqlPackage was not correctly identifying the error when the Ledger history table or view have an invalid two-part name.|
+|Import|Fixes an issue where an Azure Active Directory user can't be created during import to Azure SQL Database, causing the import to fail. [GitHub issue](https://github.com/microsoft/DacFx/issues/260)|
+|Ledger|Fixes an issue where SqlPackage wasn't correctly identifying the error when the Ledger history table or view have an invalid two-part name.|
 |Permissions|Fixes an issue where permissions assigned to a user in the database model are not recognized, causing the project build or SqlPackage operation to fail.|
-|Query Store|Fixes an issue where the `flush_interval_seconds` [Query Store option](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) was not correctly validated with a minimum value of 60 seconds.|
-|SQL Server 2022|Fixes an issue where the function `DATETRUNC` was not recognized as a built-in function. [Developer Community report](https://developercommunity.visualstudio.com/t/Visual-Studio-build-solution-not-recogni/10333180)|
-|SQL Server 2022|Fixes an issue where the function `DATE_BUCKET` was not recognized as a built-in function.|
+|Query Store|Fixes an issue where the `flush_interval_seconds` [Query Store option](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) wasn't correctly validated with a minimum value of 60 seconds.|
+|SQL Server 2022|Fixes an issue where the function `DATETRUNC` wasn't recognized as a built-in function. [Developer Community report](https://developercommunity.visualstudio.com/t/Visual-Studio-build-solution-not-recogni/10333180)|
+|SQL Server 2022|Fixes an issue where the function `DATE_BUCKET` wasn't recognized as a built-in function.|
 
 
 ### Known Issues
@@ -149,7 +169,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.167
 | :------ | :------ |
 |Deployment|Fixes an issue where publish to SQL on Linux would fail due to the default data and log paths being empty. [GitHub issue](https://github.com/microsoft/DacFx/issues/136)|
 |Deployment|Fixes an issue where publishing an external table with file format changes would result in an error. [GitHub issue](https://github.com/microsoft/DacFx/issues/120)|
-|Deployment|Fixes an issue where publish with a column encrypted with randomized encryption would not fail immediately if the column encryption key (CEK) was inaccessible, delaying the deployment error until the column encryption step.|
+|Deployment|Fixes an issue where publish with a column encrypted with randomized encryption wouldn't fail immediately if the column encryption key (CEK) was inaccessible, delaying the deployment error until the column encryption step.|
 |Refactor|Fixes an issue where a renamed column on a system versioned table would result in the system versioning being turned off and not turned back on. [GitHub issue](https://github.com/microsoft/DacFx/issues/203)|
 |Platform|Fixes an issue where SqlPackage operations would fail on RHEL 9 due to an encryption error. Moves to use the 6.0.10 version of the .NET 6 runtime. [GitHub issue](https://github.com/microsoft/DacFx/issues/168)|
 |Schema compare|Fixes an issue where the `DoNotEvaluateSqlCmdVariables` property for *Publish* and *Script* would result in the SqlCmd variables also not being evaluated on both the source and target instead of only the source.|
@@ -186,7 +206,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.167
 |Always Encrypted|Adds support for VBS (Virtualization-based security) with [secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|
 |Connectivity|Adds support for TDS 8.0 and parameters for `/SourceHostNameInCertificate` and `/TargetHostNameInCertificate` to SqlPackage operations.|
 |Replication|Adds support for [sp_addpublication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md#automatically-handle-conflicts-with-last-write-wins) with peer-to-peer replication.|
-|ScriptDOM|Adds support for IS NOT DISTINCT FROM syntax with predicate subqueries.|
+|ScriptDOM|Adds support for isn't DISTINCT FROM syntax with predicate subqueries.|
 |Server-level roles|Adds support for additional [fixed server roles](../../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles-introduced-in-sql-server-2022): MS_DatabaseConnector, MS_LoginManager, MS_DatabaseManager, MS_ServerStateManager, MS_ServerStateReader, MS_ServerPerformanceStateReader, MS_ServerSecurityStateReader, MS_DefinitionReader, MS_PerformanceDefinitionReader, MS_SecurityDefinitionReader.|
 |SQL Server 2022|Adds support for [T-SQL function changes associated with SQL Server 2022](../../sql-server/what-s-new-in-sql-server-2022.md#language): GREATEST(), LEAST(), STRING_SPLIT(), DATETRUNC(), LTRIM(), RTRIM(), and TRIM().|
 |SQL Server 2022|Adds support for [JSON function changes associated with SQL Server 2022](../../sql-server/what-s-new-in-sql-server-2022.md#language): ISJSON(), JSON_PATH_EXISTS(), JSON_OBJECT(), and JSON_ARRAY().|
@@ -220,7 +240,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.167
 | Connection pooling | Enables connection pooling for all connections if the environment variable `CONNECTION_POOLING_ENABLED` is set to True.  This is recommended for operations with Azure Active Directory username/password connections to avoid MSAL throttling. |
 | Deployment options | Surfaces friendly names for deployment options in DacFx .NET APIs. |
 | Dynamic Data Masking | Adds support for [granular UNMASK permissions](../../relational-databases/security/dynamic-data-masking.md#granular) in Import/Export and Extract/Publish.|
-| Ledger | Adds SQL Ledger history table in schema model for validation and export/extract, does not import or publish the history table to a database. |
+| Ledger | Adds SQL Ledger history table in schema model for validation and export/extract, doesn't import or publish the history table to a database. |
 | Platform | SqlPackage is now built with .NET 6 |
 | SQL Server 2022 | Adds support for permissions ALTER LEDGER CONFIGURATION, VIEW PERFORMANCE DEFINITION, VIEW ANY PERFORMANCE DEFINITION. Learn more about the permission definitions available in the [permissions documentation](../../relational-databases/security/permissions-database-engine.md).|
 | XML compression | [XML compression](../../t-sql/statements/create-table-transact-sql.md#xml_compression) support in ScriptDOM, Import/Export, and Extract/Publish. More information on XML data and XML compression is available in the [XML data documentation](../../relational-databases/xml/xml-data-sql-server.md). |
@@ -231,7 +251,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.167
 | :------ | :------ |
 | Export | Fixes an issue where export would fail when a table had stats with computed columns |
 | Import | Fixes an issue where the import would get stuck at 95% |
-| ScriptDOM | Fixes an issue where STRING_SPLIT would not support a NULL ordinal value |
+| ScriptDOM | Fixes an issue where STRING_SPLIT wouldn't support a NULL ordinal value |
 
 
 ### Known Issues
@@ -239,7 +259,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.167
 | :------ | :------ |:------ |
 | Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
 | ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
-| XML compression | XML compression of an XML index is not yet supported in SqlPackage. | N/A |
+| XML compression | XML compression of an XML index isn't yet supported in SqlPackage. | N/A |
 
 ## 19.1 SqlPackage
 
@@ -258,7 +278,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.167
 | :------ | :------ |
 | Azure Synapse Analytics | Adds support for [Native external data source](/azure/synapse-analytics/sql/develop-tables-external-tables?tabs=native#syntax-for-create-external-data-source). |
 | Extract | Adds support for `ExtractTarget` property on extract operations.  Extract now supports extracting to .sql as a file per object organized in a single folder, object type, schema, or object type and schema. |
-| ScriptDOM | Adds support for `IS NOT DISTINCT FROM` syntax. |
+| ScriptDOM | Adds support for `isn't DISTINCT FROM` syntax. |
 
 
 
@@ -269,7 +289,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.167
 | Export | Fixes export of a SQL ledger history table with dependencies. |
 | Extract | Fixes extract operation failure where an offset clause using a function is used in a stored procedure. |
 | Extract | Fixes warnings on extract operation for ledger tables. |
-| General | Fixes issue where command timeout setting was not properly applied. |
+| General | Fixes issue where command timeout setting wasn't properly applied. |
 | Import | Fixes issue where full text index gets disabled on import. |
 | Publish | Fixes issue where publish operation would drop and create a clustered columnstore index when a column is added. |
 | Publish | Fixes issue where graph tables fail to deploy when a partition function includes leading zeros. |
@@ -762,5 +782,5 @@ This release includes cross-platform preview builds of SqlPackage that target .N
 
 | Fix | Details |
 | :-- | :------ |
-| Deployment | Do not block when encountering a database compatibility level that isn't understood. Instead, the latest Azure SQL Database or on-premises platform will be assumed. |
+| Deployment | don't block when encountering a database compatibility level that isn't understood. Instead, the latest Azure SQL Database or on-premises platform will be assumed. |
 | &nbsp; | &nbsp; |

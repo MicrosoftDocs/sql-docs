@@ -3,7 +3,7 @@ title: Use SSMS to Manage SQL Server on Linux
 description: This article introduces SQL Server Management Studio, an integrated environment to access, configure, manage, administer, and develop components of SQL Server.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 10/29/2023
+ms.date: 01/03/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -38,7 +38,7 @@ For more information, see [What is SQL Server Management Studio (SSMS)?](../ssms
 When working with [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], you should always use the most recent version of SSMS. The latest version of SSMS is continually updated and optimized and currently works with [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux. To download and install the latest version, see [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). To stay up-to-date, the latest version of SSMS prompts you when there's a new version available to download.
 
 > [!NOTE]  
-> Before using SSMS to manage Linux, review the [known issues](sql-server-linux-release-notes-2017.md#known-issues) for SSMS on Linux.
+> Before using SSMS to manage Linux, review [SQL Server on Linux: Known issues](sql-server-linux-known-issues.md#sql-server-management-studio-ssms).
 
 ## Connect to SQL Server on Linux
 
@@ -90,7 +90,7 @@ After you connect to your server, you can connect to a database and run Transact
 
 1. Select the **Execute** button to run the query and see the results.
 
-   :::image type="content" source="media/sql-server-linux-manage-ssms/execute-query.png" alt-text="Success. Connect to SQL Database server: SQL Server Management Studio.":::
+   :::image type="content" source="media/sql-server-linux-manage-ssms/execute-query.png" alt-text="Screenshot of Success. Connect to SQL Database server: SQL Server Management Studio.":::
 
 Although it's possible to do almost any management task with T-SQL queries, SSMS is a graphical tool that makes it easier to manage [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. The following sections provide some examples of using the graphical user interface.
 

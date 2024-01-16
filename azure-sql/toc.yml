@@ -890,6 +890,8 @@
         href: database/develop-cplusplus-simple.md
       - name: Excel
         href: database/connect-excel.md
+      - name: Develop a Kubernetes app with Azure SQL Database
+        href: database/develop-kubernetes-application.md
       - name: Ports - ADO.NET
         href: database/adonet-v12-develop-direct-route-ports.md
       - name: Multi-tenant SaaS
@@ -1015,7 +1017,7 @@
           items:
           - name: Configure and fail over a single database
             href: database/scripts/setup-geodr-and-failover-database-powershell.md
-          - name: Configure and fail over a poooled database
+          - name: Configure and fail over a pooled database
             href: database/scripts/setup-geodr-and-failover-elastic-pool-powershell.md
         - name: Configure a failover group
           items: 

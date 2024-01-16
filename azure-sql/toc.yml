@@ -783,6 +783,8 @@
 
     - name: Performance
       items:
+      - name: Tune applications and databases for performance
+        href: database/performance-guidance.md
       - name: Use Query Performance Insights
         href: database/query-performance-insight-use.md
       - name: Enable automatic tuning
@@ -1429,6 +1431,8 @@
 
     - name: Monitor & Tune
       items:
+        - name: Tune applications and databases for performance
+          href: managed-instance/performance-guidance.md
         - name: Identify query performance bottlenecks
           href: managed-instance/identify-query-performance-issues.md
         - name: Use DMVs to monitor performance

@@ -20,11 +20,11 @@ In this article, you can find a content reference to various guides, scripts, an
 
 ## Load data
 
-- [SQL Server to Azure SQL Managed Instance Guide](../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md): Learn about the recommended migration process and tools for migration to Azure SQL Managed Instance.
+- [SQL Server to Azure SQL Managed Instance Guide](../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md?view=azuresql-mi&preserve-view=true): Learn about the recommended migration process and tools for migration to Azure SQL Managed Instance.
 - [Migrate TDE cert to Azure SQL Managed Instance](tde-certificate-migrate.md): If your SQL Server database is protected with transparent data encryption (TDE), you need to migrate the certificate to decrypt the backup that you want to restore in Azure SQL Managed Instance.
-- [Import a DB from a BACPAC](../database/database-import.md)
-- [Export a DB to BACPAC](../database/database-export.md)
-- [Load data with BCP](../load-from-csv-with-bcp.md)
+- [Import a DB from a BACPAC](../database/database-import.md?view=azuresql-mi&preserve-view=true)
+- [Export a DB to BACPAC](../database/database-export.md?view=azuresql-mi&preserve-view=true)
+- [Load data with BCP](../load-from-csv-with-bcp.md?view=azuresql-mi&preserve-view=true)
 - [Load data with Azure Data Factory](/azure/data-factory/connector-azure-sql-database?toc=/azure/sql-database/toc.json)
 
 ## Network configuration
@@ -48,22 +48,22 @@ In this article, you can find a content reference to various guides, scripts, an
 
 ## Feature configuration
 
-- [Configure authentication with Microsoft Entra ID (formerly Azure Active Directory)](../database/authentication-aad-configure.md)
-- [Configure conditional access](../database/conditional-access-configure.md)
-- [Microsoft Entra multifactor authentication](../database/authentication-mfa-ssms-overview.md)
+- [Configure authentication with Microsoft Entra ID (formerly Azure Active Directory)](../database/authentication-aad-configure.md?view=azuresql-mi&preserve-view=true)
+- [Configure conditional access](../database/conditional-access-configure.md?view=azuresql-mi&preserve-view=true)
+- [Microsoft Entra multifactor authentication](../database/authentication-mfa-ssms-overview.md?view=azuresql-mi&preserve-view=true)
 - [Configure failover group](failover-group-configure-sql-mi.md) to automatically fail over all databases on an instance to a secondary instance in another region in the event of a disaster. 
-- [Configure a temporal retention policy](../database/temporal-tables-retention-policy.md)
-- [Configure In-Memory OLTP](../in-memory-oltp-configure.md)
-- [Configure Azure Automation](../database/automation-manage.md)
+- [Configure a temporal retention policy](../database/temporal-tables-retention-policy.md?view=azuresql-mi&preserve-view=true)
+- [Configure In-Memory OLTP](../in-memory-oltp-configure.md?view=azuresql-mi&preserve-view=true)
+- [Configure Azure Automation](../database/automation-manage.md?view=azuresql-mi&preserve-view=true)
 - [Transactional replication](replication-between-two-instances-configure-tutorial.md) enables you to replicate your data between managed instances, or from SQL Server on-premises to SQL Managed Instance, and vice versa.
-- [Configure threat detection](threat-detection-configure.md) – [threat detection](../database/threat-detection-overview.md) is a built-in Azure SQL Managed Instance feature that detects various potential attacks such as SQL injection or access from suspicious locations. 
-- [Creating alerts](alerts-create.md) enables you to set up alerts on monitored metrics such as CPU utilization, storage space consumption, IOPS and others for SQL Managed Instance. 
+- [Configure threat detection](threat-detection-configure.md) – [threat detection](../database/threat-detection-overview.md?view=azuresql-mi&preserve-view=true) is a built-in Azure SQL Managed Instance feature that detects various potential attacks such as SQL injection or access from suspicious locations. 
+- [Creating alerts](alerts-create.md) enables you to set up alerts on monitored metrics such as CPU utilization, storage space consumption, IOPS, and others for SQL Managed Instance. 
 
 ### Transparent Data Encryption
 
-- [Configure TDE with BYOK](../database/transparent-data-encryption-byok-configure.md)
-- [Rotate TDE BYOK keys](../database/transparent-data-encryption-byok-key-rotation.md)
-- [Remove a TDE protector](../database/transparent-data-encryption-byok-remove-tde-protector.md)
+- [Configure TDE with BYOK](../database/transparent-data-encryption-byok-configure.md?view=azuresql-mi&preserve-view=true)
+- [Rotate TDE BYOK keys](../database/transparent-data-encryption-byok-key-rotation.md?view=azuresql-mi&preserve-view=true)
+- [Remove a TDE protector](../database/transparent-data-encryption-byok-remove-tde-protector.md?view=azuresql-mi&preserve-view=true)
 
 ### Managed Instance link feature
 
@@ -77,10 +77,10 @@ In this article, you can find a content reference to various guides, scripts, an
 
 - [Manual tuning](performance-guidance.md)
 - [Use DMVs to monitor performance](monitoring-with-dmvs.md)
-- [Use Query Store to monitor performance](/sql/relational-databases/performance/best-practice-with-the-query-store#Insight)
-- [Troubleshoot performance with Intelligent Insights](../database/intelligent-insights-troubleshoot-performance.md)
-- [Use the Intelligent Insights diagnostics log](../database/intelligent-insights-use-diagnostics-log.md)
-- [Monitor In-Memory OLTP space](../in-memory-oltp-monitor-space.md)
+- [Use Query Store to monitor performance](/sql/relational-databases/performance/best-practice-with-the-query-store?view=azuresqldb-mi-current&preserve-view=true#Insight)
+- [Troubleshoot performance with Intelligent Insights](../database/intelligent-insights-troubleshoot-performance.md?view=azuresql-mi&preserve-view=true)
+- [Use the Intelligent Insights diagnostics log](../database/intelligent-insights-use-diagnostics-log.md?view=azuresql-mi&preserve-view=true)
+- [Monitor In-Memory OLTP space](../in-memory-oltp-monitor-space.md?view=azuresql-mi&preserve-view=true)
 
 ### Extended events
 

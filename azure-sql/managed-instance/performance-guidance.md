@@ -37,6 +37,8 @@ In traditional on-premises SQL Server, the process of initial capacity planning 
 
 Some customers might choose not to tune an application, and instead choose to over-provision hardware resources. This approach might be a good idea if you don't want to change a key application during a busy period. But, tuning an application can minimize resource requirements and lower monthly bills.
 
+<a id="application-characteristics"></a>
+
 ### Best practices and antipatterns in application design for Azure SQL Managed Instance
 
 Although Azure SQL Managed Instance service tiers are designed to improve performance stability and predictability for an application, some best practices can help you tune your application to better take advantage of the resources at a compute size. Although many applications have significant performance gains simply by switching to a higher compute size or service tier, some applications need additional tuning to benefit from a higher level of service. 
@@ -59,7 +61,7 @@ For increased performance, consider additional application tuning for applicatio
 
    Applications that have inherent data access concurrency issues, for example deadlocking, might not benefit from a higher compute size. Consider reducing round trips against the database by caching data on the client side with the Azure Caching service or another caching technology. See [Application tier caching](#application-tier-caching).
 
-    To prevent deadlocks in Azure SQL Managed Instance, see [Deadlock tools](/sql/relational-databases/sql-server-deadlocks-guide#deadlock_tools) of the [Deadlocks guide](/sql/relational-databases/sql-server-deadlocks-guide).
+    To prevent deadlocks in Azure SQL Managed Instance, see [Deadlock tools](/sql/relational-databases/sql-server-deadlocks-guide?view=azuresqldb-mi-current&preserve-view=true#deadlock_tools) of the [Deadlocks guide](/sql/relational-databases/sql-server-deadlocks-guide?view=azuresqldb-mi-current&preserve-view=true).
 
 ## Tune your database
 
@@ -132,13 +134,13 @@ After it's created, that same SELECT statement picks a different plan, which use
 
 The key insight is that the IO capacity of a shared, commodity system is more limited than that of a dedicated server machine. There's a premium on minimizing unnecessary IO to take maximum advantage of the system in the resources of each compute size of the service tiers. Appropriate physical database design choices can significantly improve the latency for individual queries, improve the throughput of concurrent requests handled per scale unit, and minimize the costs required to satisfy the query. 
 
-For more information about tuning indexes using missing index requests, see [Tune nonclustered indexes with missing index suggestions](/sql/relational-databases/indexes/tune-nonclustered-missing-index-suggestions).
+For more information about tuning indexes using missing index requests, see [Tune nonclustered indexes with missing index suggestions](/sql/relational-databases/indexes/tune-nonclustered-missing-index-suggestions?view=azuresqldb-mi-current&preserve-view=true).
 
 ### Query tuning and hinting
 
 The query optimizer in Azure SQL Managed Instance is similar to the traditional SQL Server query optimizer. Most of the best practices for tuning queries and understanding the reasoning model limitations for the query optimizer also apply to Azure SQL Managed Instance. If you tune queries in Azure SQL Managed Instance, you might get the additional benefit of reducing aggregate resource demands. Your application might be able to run at a lower cost than an untuned equivalent because it can run at a lower compute size.
 
-An example that is common in SQL Server and which also applies to Azure SQL Managed Instance is how the query optimizer "sniffs" parameters. During compilation, the query optimizer evaluates the current value of a parameter to determine whether it can generate a more optimal query plan. Although this strategy often can lead to a query plan that is significantly faster than a plan compiled without known parameter values, currently it works imperfectly both in Azure SQL Managed Instance.  (A new Intelligent Query Performance feature introduced with SQL Server 2022 named [Parameter Sensitivity Plan Optimization](/sql/relational-databases/performance/intelligent-query-processing-details) addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values. Currently, Parameter Sensitivity Plan Optimization is not available in Azure SQL Managed Instance.)
+An example that is common in SQL Server and which also applies to Azure SQL Managed Instance is how the query optimizer "sniffs" parameters. During compilation, the query optimizer evaluates the current value of a parameter to determine whether it can generate a more optimal query plan. Although this strategy often can lead to a query plan that is significantly faster than a plan compiled without known parameter values, currently it works imperfectly both in Azure SQL Managed Instance.  (A new Intelligent Query Performance feature introduced with SQL Server 2022 named [Parameter Sensitivity Plan Optimization](/sql/relational-databases/performance/intelligent-query-processing-details?view=azuresqldb-mi-current&preserve-view=true) addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values. Currently, Parameter Sensitivity Plan Optimization is not available in Azure SQL Managed Instance.)
 
 Sometimes the parameter isn't sniffed, and sometimes the parameter is sniffed but the generated plan is suboptimal for the full set of parameter values in a workload. Microsoft includes query hints (directives) so that you can specify intent more deliberately and override the default behavior of parameter sniffing. You might choose to use hints when the default behavior is imperfect for a specific customer workload.
 
@@ -218,7 +220,7 @@ Each part of this example attempts to run a parameterized insert statement 1,000
 
 :::image type="content" source="media/performance-guidance/query-tuning-execution-plan-scan.png" alt-text="Screenshot of a graphical execution plan, showing query tuning by using a scan plan.":::
 
-Because we executed the procedure by using the value 1, the resulting plan was optimal for the value 1 but was suboptimal for all other values in the table. The result likely isn't what you would want if you were to pick each plan randomly, because the plan performs more slowly and uses more resources.
+Because we executed the procedure by using the value `1`, the resulting plan was optimal for the value `1` but was suboptimal for all other values in the table. The result likely isn't what you would want if you were to pick each plan randomly, because the plan performs more slowly and uses more resources.
 
 If you run the test with `SET STATISTICS IO` set to `ON`, the logical scan work in this example is done behind the scenes. You can see that there are 1,148 reads done by the plan (which is inefficient, if the average case is to return just one row):
 
@@ -228,23 +230,17 @@ The second part of the example uses a query hint to tell the optimizer to use a 
 
 :::image type="content" source="media/performance-guidance/query-tuning-execution-plan-seek.png" alt-text="Screenshot of a graphical execution plan, showing query tuning outcomes after using a query hint.":::
 
-You can see the effect in the `sys.resource_stats` table (there's a delay from the time that you execute the test and when the data populates the table). For this example, part 1 executed during the 22:25:00 time window, and part 2 executed at 22:35:00. The earlier time window used more resources in that time window than the later one (because of plan efficiency improvements).
+You can see the effect in the [sys.server_resource_stats](/sql/relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database?view=azuresqldb-mi-current&preserve-view=truee) system catalog view. The data is collected, aggregated and updated within 5 to 10 minutes intervals. There is one row for every 15 seconds reporting. For example:
 
 ```sql
 SELECT TOP 1000 *
-FROM sys.resource_stats
-WHERE database_name = 'resource1'
+FROM sys.server_resource_stats 
 ORDER BY start_time DESC
 ```
 
-:::image type="content" source="media/performance-guidance/sys-resource-stats-avg-cpu-percent-improvement.png" alt-text="Screenshot of the sys.resource_stats table showing the difference in avg_cpu_percent after improving indexes.":::
+You can examine `sys.server_resource_stats` to determine whether the resource for a test uses more or fewer resources than another test. When you compare data, separate the timing of tests so that they are not in the same 5-minute window in the `sys.server_resource_stats` view. The goal of the exercise is to minimize the total amount of resources used, and not to minimize the peak resources. Generally, optimizing a piece of code for latency also reduces resource consumption. Make sure that the changes you make to an application are necessary, and that the changes don't negatively affect the customer experience for someone who might be using query hints in the application.
 
-> [!NOTE]
-> Although the volume in this example is intentionally small, the effect of suboptimal parameters can be substantial, especially on larger databases. The difference, in extreme cases, can be between seconds for fast cases and hours for slow cases.
-
-You can examine `sys.resource_stats` to determine whether the resource for a test uses more or fewer resources than another test. When you compare data, separate the timing of tests so that they are not in the same 5-minute window in the `sys.resource_stats` view. The goal of the exercise is to minimize the total amount of resources used, and not to minimize the peak resources. Generally, optimizing a piece of code for latency also reduces resource consumption. Make sure that the changes you make to an application are necessary, and that the changes don't negatively affect the customer experience for someone who might be using query hints in the application.
-
-If a workload has a set of repeating queries, often it makes sense to capture and validate the optimality of your plan choices because it drives the minimum resource size unit required to host the database. After you validate it, occasionally reexamine the plans to help you make sure that they haven't degraded. You can learn more about [query hints (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query).
+If a workload has a set of repeating queries, often it makes sense to capture and validate the optimality of your plan choices because it drives the minimum resource size unit required to host the database. After you validate it, occasionally reexamine the plans to help you make sure that they haven't degraded. You can learn more about [query hints (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query?view=azuresqldb-mi-current&preserve-view=true).
 
 ## Best practices for very large database architectures in Azure SQL Managed Instance
 
@@ -279,5 +275,5 @@ Some database applications have read-heavy workloads. Caching layers might reduc
 - [vCore purchasing model - Azure SQL Managed Instance](service-tiers-managed-instance-vcore.md)
 - [Configure tempdb settings for Azure SQL Managed Instance](tempdb-configure.md)
 - [Monitoring Microsoft Azure SQL Managed Instance performance using dynamic management views](monitoring-with-dmvs.md)
-- [Tune nonclustered indexes with missing index suggestions](/sql/relational-databases/indexes/tune-nonclustered-missing-index-suggestions)
+- [Tune nonclustered indexes with missing index suggestions](/sql/relational-databases/indexes/tune-nonclustered-missing-index-suggestions?view=azuresqldb-mi-current&preserve-view=true)
 - [Monitor Azure SQL Managed Instance with Azure Monitor](monitoring-sql-managed-instance-azure-monitor.md)

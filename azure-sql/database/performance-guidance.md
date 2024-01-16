@@ -5,7 +5,7 @@ description: Learn about tuning database applications and databases for performa
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 01/12/2024
+ms.date: 01/16/2024
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -33,9 +33,11 @@ This article assumes that you have already worked through the Azure SQL Database
 
 ## Tune your application
 
-In traditional on-premises SQL Server, the process of initial capacity planning often is separated from the process of running an application in production. Hardware and product licenses are purchased first, and performance tuning is done afterward. When you use Azure SQL, it's a good idea to interweave the process of running an application and tuning it. With the model of paying for capacity on demand, you can tune your application to use the minimum resources needed now, instead of over-provisioning on hardware based on guesses of future growth plans for an application, which often are incorrect. 
+In traditional on-premises SQL Server, the process of initial capacity planning often is separated from the process of running an application in production. Hardware and product licenses are purchased first, and performance tuning is done afterward. When you use Azure SQL, it's a good idea to interweave the process of running an application and tuning it. With the model of paying for capacity on demand, you can tune your application to use the minimum resources needed now, instead of over-provisioning on hardware based on guesses of future growth plans for an application, which often are incorrect.
 
 Some customers might choose not to tune an application, and instead choose to over-provision hardware resources. This approach might be a good idea if you don't want to change a key application during a busy period. But, tuning an application can minimize resource requirements and lower monthly bills.
+
+<a id="application-characteristics"></a>
 
 ### Best practices and antipatterns in application design for Azure SQL Database
 
@@ -180,7 +182,7 @@ CREATE TABLE t1 (col1 int primary key, col2 int, col3 binary(200));
 GO
 ```
 
-The setup code creates a table that has skewed (or irregularly distributed) data in the `t1` table. The optimal query plan differs based on which parameter is selected. Unfortunately, the plan caching behavior doesn't always recompile the query based on the most common parameter value. So, it's possible for a suboptimal plan to be cached and used for many values, even when a different plan might be a better plan choice on average. Then the query plan creates two stored procedures that are identical, except that one has a special query hint.
+The setup code creates skewed (or irregularly distributed) data in the `t1` table. The optimal query plan differs based on which parameter is selected. Unfortunately, the plan caching behavior doesn't always recompile the query based on the most common parameter value. So, it's possible for a suboptimal plan to be cached and used for many values, even when a different plan might be a better plan choice on average. Then the query plan creates two stored procedures that are identical, except that one has a special query hint.
 
 ```sql
 -- Prime Procedure Cache with scan plan
@@ -216,7 +218,7 @@ Each part of this example attempts to run a parameterized insert statement 1,000
 
 :::image type="content" source="media/performance-guidance/query-tuning-execution-plan-scan.png" alt-text="Screenshot of a graphical execution plan, showing query tuning by using a scan plan.":::
 
-Because we executed the procedure by using the value 1, the resulting plan was optimal for the value 1 but was suboptimal for all other values in the table. The result likely isn't what you would want if you were to pick each plan randomly, because the plan performs more slowly and uses more resources.
+Because we executed the procedure by using the value `1`, the resulting plan was optimal for the value `1` but was suboptimal for all other values in the table. The result likely isn't what you would want if you were to pick each plan randomly, because the plan performs more slowly and uses more resources.
 
 If you run the test with `SET STATISTICS IO` set to `ON`, the logical scan work in this example is done behind the scenes. You can see that there are 1,148 reads done by the plan (which is inefficient, if the average case is to return just one row):
 
@@ -226,7 +228,7 @@ The second part of the example uses a query hint to tell the optimizer to use a 
 
 :::image type="content" source="media/performance-guidance/query-tuning-execution-plan-seek.png" alt-text="Screenshot of a graphical execution plan, showing query tuning outcomes after using a query hint.":::
 
-You can see the effect in the `sys.resource_stats` table (there's a delay from the time that you execute the test and when the data populates the table). For this example, part 1 executed during the 22:25:00 time window, and part 2 executed at 22:35:00. The earlier time window used more resources in that time window than the later one (because of plan efficiency improvements).
+You can see the effect in the [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database?view=azuresqldb-current&preserve-view=true) system view, which is specific to Azure SQL Database. There's a delay from the time that you execute the test and when the data populates the table. For this example, part 1 executed during the 22:25:00 time window, and part 2 executed at 22:35:00. The earlier time window used more resources in that time window than the later one (because of plan efficiency improvements).
 
 ```sql
 SELECT TOP 1000 *

@@ -1,8 +1,7 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
-ms.date: 07/06/2023
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 01/11/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -148,3 +147,35 @@ ms.topic: include
 | 41837 | 16 | No | Boot-page adjustment of XTP database '%.\*ls' requires restart of XTP engine. |
 | 41839 | 16 | No | Transaction exceeded the maximum number of commit dependencies and the last statement was aborted. Retry the statement. |
 | 41872 | 10 | No | Warning: Article with '%ls' data type column is not supported with memory optimized tables on subscribers running SQL Server 2014 or earlier. |
+| 42001 | 16 | No | Failed to parse XML configuration. The operating system returned error %ls. |
+| 42002 | 16 | No | Failed to parse XML configuration. The parser returned error %.\*ls |
+| 42003 | 16 | No | Failed to parse XML configuration. A required attribute '%ls' is missing. |
+| 42004 | 16 | No | Failed to parse XML configuration. A required element '%ls' is missing. |
+| 42005 | 16 | No | Failed to parse XML configuration. Invalid value for attribute '%ls'. |
+| 42006 | 16 | No | The default tempdb directory ('%ls') in XDB is not a valid path. |
+| 42007 | 16 | No | The default tempdb directory ('%ls') in XDB is not a local path. |
+| 42008 | 16 | No | ODBC error: State: %ls: Error: %d Message:'%ls'. |
+| 42009 | 16 | No | Instance certificate '%ls' cannot be found. |
+| 42010 | 16 | No | Cannot initiate cross instance connection. |
+| 42011 | 16 | No | ODBC initialization error: : %d. |
+| 42012 | 16 | No | XodbcWrapper Enforced Retry For Testing. |
+| 42013 | 16 | No | HTTP initialization error: : %d. |
+| 42014 | 16 | No | Cannot retrieve server admin credential configuration. |
+| 42015 | 20 | No | Error occurred while attempting to authenticate user remotely. Error %d, State %d. |
+| 42016 | 16 | No | Error occurred in the DosGuard. |
+| 42017 | 16 | No | Error occurred in the Redirector's proxy while parsing a packet. Expected: %d, Actual: %d. |
+| 42018 | 16 | No | Remote transaction has been doomed and cannot commit. |
+| 42019 | 16 | No | %ls operation failed. %ls |
+| 42020 | 16 | No | Updating name to '%.\*ls' failed. |
+| 42021 | 16 | No | Initialization of http session handle for fetching federation metadata failed during AzureActiveDirectory initialization. |
+| 42022 | 16 | No | Initialization of http connect handle for fetching federation metadata failed during AzureActiveDirectory initialization. |
+| 42023 | 16 | No | Updating userdb properties on copy termination failed. |
+| 42024 | 16 | No | Switching to logical master database failed. |
+| 42025 | 16 | No | The extended recovery fork stack in the metadata of FCB is either corrupted or in an unexpected format. |
+| 42026 | 16 | No | Loading the Active Directory Library failed. |
+| 42027 | 16 | No | Initialization of the Active Directory Function pointers failed. |
+| 42028 | 16 | No | The database '%.\*ls' has been detached as it was marked as a shared disk instance and was not started. This is an informational message; no user action is required. |
+| 42029 | 16 | No | An internal error happened while generating a new DBTS for database "%.\*ls". Please retry the operation. |
+| 42030 | 16 | No | Updating logical master's sys.databases on seeding completion failed. |
+| 42031 | 16 | No | This functionality is not supported for A/B test isolated instances. |
+| 42032 | 16 | No | XODBC Get Authentication Cache failed, state %d |

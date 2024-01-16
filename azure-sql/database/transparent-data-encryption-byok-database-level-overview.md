@@ -5,7 +5,7 @@ description: Overview of customer managed keys (CMK) support for transparent dat
 author: strehan1993
 ms.author: strehan
 ms.reviewer: vanto
-ms.date: 09/29/2023
+ms.date: 01/12/2024
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
@@ -149,6 +149,9 @@ In case of an inaccessible TDE protector as described in [Transparent data encry
 - The logical server user-assigned managed identity (UMI) can be used at the database level. However, it's recommended to use a designated UMI for the database level CMK.
 - Server level cross tenant CMK settings don't affect individual databases configured with database level CMK, and they continue to use their own single tenant or cross tenant configuration.
 - Only a single user-assigned managed identity can be set at the database level.
+
+> [!NOTE]
+> The managed identities on the database must be reassigned if the database is renamed.
 
 ## Migration of existing databases to database level CMK
 

@@ -88,13 +88,13 @@ To complete the steps in this article, you need the following tools:
    To enable least privilege, set the `LeastPrivilege` feature flag to `true`. To complete this task, run the following command with updated values for the `<resource-group>` and `<machine-name>`.
 
    ```azurecli
-   az sql server-arc extension feature-flag set --name LeastPrivilege --enabled true --resource-group <resource-group> --machine-name <machine-name>
+   az sql server-arc extension feature-flag set --name LeastPrivilege --enable true --resource-group <resource-group> --machine-name <machine-name>
    ```
 
    For example, the following command enables least privilege for a server named `myserver` in a resource group named `myrg`:
 
    ```azurecli
-   az sql server-arc extension feature-flag set --name LeastPrivilege --enabled true --resource-group myrg --machine-name myserver 
+   az sql server-arc extension feature-flag set --name LeastPrivilege --enable true --resource-group myrg --machine-name myserver 
    ```
 
 ## Validate configuration
@@ -133,13 +133,13 @@ To verify that your SQL Server enabled by Azure Arc is configured to run with le
 To disable least privilege, set the `LeastPrivilege` feature flag to `false`. To complete this task, run the following command with updated values for the `<resource-group>` and `<machine-name>`:
 
 ```azurecli
-az sql server-arc extension feature-flag set --name LeastPrivilege --enabled false --resource-group <resource-group> --machine-name <machine-name>
+az sql server-arc extension feature-flag set --name LeastPrivilege --enable false --resource-group <resource-group> --machine-name <machine-name>
 ```
 
 For example, the following command disables least privilege for a server named `myserver` in a resource group named `myrg`:
 
 ```azurecli
-az sql server-arc extension feature-flag set --name LeastPrivilege --enabled false --resource-group myrg --machine-name myserver 
+az sql server-arc extension feature-flag set --name LeastPrivilege --enable false --resource-group myrg --machine-name myserver 
 ```
 
 ## Related content

@@ -101,7 +101,7 @@ To run a scale-out deployment on an NLB cluster, you must configure view state v
   
  Don't modify **ReportServerUrl**. If you modify this URL, you introduce an extra roundtrip through the virtual server each time an internal request is handled. For more information, see [URLs in Configuration Files  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). For more information about editing the configuration file, see [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
-1. Open RSReportServer.config in a text editor.  
+1. Open `RSReportServer.config` in a text editor.  
   
 1. Find the **\<Service>** section, and add the following information to the configuration file, replacing the **Hostname** value with the virtual server name for your NLB server:  
   

@@ -11,15 +11,15 @@ ms.date: 01/17/2024
 
 ---
 
-# Operate SQL Server enabled by Azure Arc with least privileges (preview) 
+# Operate SQL Server enabled by Azure Arc with least privilege (preview) 
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-The information security principle with least privilege asserts that accounts and applications only have access to the data and operations they require. With SQL Server enabled by Azure Arc, you can run the agent extension service with least privilege. This article explains how to run the agent extension service with least privilege.
+The information security principle of least privilege asserts that accounts and applications only have access to the data and operations they require. With SQL Server enabled by Azure Arc, you can run the agent extension service with least privilege. This article explains how to run the agent extension service with least privilege.
 
-To configure the service to run least privilege, follow the steps in this article. Currently the service does not automatically deploy to run with least privilege.
+To optionally configure the service to run with least privilege, follow the steps in this article. Currently, the service does not automatically run with least privilege.
 
-Support for this configuration is currently in available for preview.
+Support for this configuration is currently available for preview.
 
 [!INCLUDE [azure-arc-sql-preview](includes/azure-arc-sql-preview.md)]
 
@@ -29,12 +29,12 @@ The `NT Service\SQLServerExtension` account is a local Windows service account:
 
 - Created and managed by the Azure Extension for SQL Server when least privilege option is enabled.
 - Granted the minimum required permissions and privileges to run the Azure extension for SQL Server service on the Windows operating system. It only has access to folders and directories used for reading and storing configuration or writing logs.
-- Granted permission to connect and query in SQL Server with new login specifically for that service account and has the minimum permissions required. Minimum permissions depend on the enabled features.
+- Granted permission to connect and query in SQL Server with a new login specifically for that service account that has the minimum permissions required. Minimum permissions depend on the enabled features.
 - Updated when permissions are no longer necessary. For example, permissions are revoked when you disable a feature, disable least privileged configuration, or uninstall the Azure extension for SQL Server. Revocation ensures that no permissions remain after they're no longer required.
 
 ## Prerequisites
 
-This section identifies the system requirements and tools you need complete the example in this article.
+This section identifies the system requirements and tools you need to complete the example in this article.
 
 ### System requirements
 
@@ -53,7 +53,7 @@ To complete the steps in this article, you need the following tools:
 - [`arcdata` Azure CLI extension](/azure/azure-arc/data/install-arcdata-extension) version `1.5.8` or later
 - Azure extension for SQL server version `1.1.2504.99` or later
 
-## Enable least privileges
+## Enable least privilege
 
 1. Log in with Azure CLI.
 
@@ -83,15 +83,15 @@ To complete the steps in this article, you need the following tools:
    az extension update --name arcdata
    ```
 
-1. Enable least privileges with Azure CLI.
+1. Enable least privilege with Azure CLI.
 
-   To enable least privileges, set the `LeastPrivilege` feature flag to `true`. To complete this task, run the following command with updated values for the `<resource-group>` and `<machine-name>`.
+   To enable least privilege, set the `LeastPrivilege` feature flag to `true`. To complete this task, run the following command with updated values for the `<resource-group>` and `<machine-name>`.
 
    ```azurecli
    az sql server-arc extension feature-flag set --name LeastPrivilege --enabled true --resource-group <resource-group> --machine-name <machine-name>
    ```
 
-   For example, the following command enables least privileges for a server named `myserver` in a resource group named `myrg`:
+   For example, the following command enables least privilege for a server named `myserver` in a resource group named `myrg`:
 
    ```azurecli
    az sql server-arc extension feature-flag set --name LeastPrivilege --enabled true --resource-group myrg --machine-name myserver 
@@ -128,15 +128,15 @@ To verify that your SQL Server enabled by Azure Arc is configured to run with le
    SELECT * FROM fn_my_permissions (NULL, 'database");
    ```
 
-## Disable least privileges
+## Disable least privilege
 
-To disable least privileges, set the `LeastPrivilege` feature flag to `false`. To complete this task, run the following command with updated values for the `<resource-group>` and `<machine-name>`:
+To disable least privilege, set the `LeastPrivilege` feature flag to `false`. To complete this task, run the following command with updated values for the `<resource-group>` and `<machine-name>`:
 
 ```azurecli
 az sql server-arc extension feature-flag set --name LeastPrivilege --enabled false --resource-group <resource-group> --machine-name <machine-name>
 ```
 
-For example, the following command disables least privileges for a server named `myserver` in a resource group named `myrg`:
+For example, the following command disables least privilege for a server named `myserver` in a resource group named `myrg`:
 
 ```azurecli
 az sql server-arc extension feature-flag set --name LeastPrivilege --enabled false --resource-group myrg --machine-name myserver 

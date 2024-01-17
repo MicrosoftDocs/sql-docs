@@ -1,6 +1,6 @@
 ---
 title: SQL Server Options page - Azure Services
-description: Options (Azure Services)
+description: "Options (Azure Services)"
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
@@ -18,7 +18,7 @@ dev_langs:
 
 Use this page to specify options related to Azure cloud services. To access this dialog box, go to **Tools > Options > Azure Services** from the top menu bar.
 
-[!INCLUDE [entra-id](../../includes/entra-id.md)]
+[!INCLUDE [entra-id-hard-coded](../../includes/entra-id-hard-coded.md)]
 
 ## Miscellaneous
 

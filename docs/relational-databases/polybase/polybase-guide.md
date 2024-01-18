@@ -60,7 +60,8 @@ PolyBase provides these same functionalities for the following SQL products from
 
 For more new features of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], see [What's new in SQL Server 2022?](../../sql-server/what-s-new-in-sql-server-2022.md)
 
-For an example using PolyBase in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] to virtualize a CSV file in Azure Storage, see [Virtualize CSV file with PolyBase](virtualize-csv.md).
+> [!TIP]
+> For a tutorial of PolyBase features and capabilities in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], see [Get started with PolyBase in SQL Server 2022](polybase-get-started.md).
 
 ### PolyBase connectors
 
@@ -149,9 +150,9 @@ Azure Storage connectors must be changed based on the reference table below:
 
 ## Get started
 
-Before using PolyBase, you must [install PolyBase on Windows](polybase-installation.md) or [install PolyBase on Linux](polybase-linux-setup.md), and [enable PolyBase in sp_configure](polybase-installation.md#enable) if necessary. For more tutorials on creating external data sources and external tables to a variety of data sources, see [PolyBase Transact-SQL reference](polybase-t-sql-objects.md).
+Before using PolyBase, you must [install PolyBase on Windows](polybase-installation.md) or [install PolyBase on Linux](polybase-linux-setup.md), and [enable PolyBase in sp_configure](polybase-installation.md#enable) if necessary. 
 
-Review [PolyBase Transact-SQL reference](polybase-t-sql-objects.md) with examples of external data sources and external tables for a variety of data sources. 
+For a tutorial of PolyBase features and capabilities, see [Get started with PolyBase in SQL Server 2022](polybase-get-started.md).
 
 For more tutorials on various external data sources, review:
 
@@ -175,8 +176,10 @@ Data virtualization features are also available on other platforms:
 
 ## Related content
 
+- [Get started with PolyBase in SQL Server 2022](polybase-get-started.md)
 - [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)
 - [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)
 - [Performance considerations in PolyBase for SQL Server](polybase-performance.md)
 - [Frequently asked questions in PolyBase](polybase-faq.yml)
 - [Monitor and troubleshoot PolyBase](polybase-troubleshooting.md)
+- [PolyBase Transact-SQL reference](polybase-t-sql-objects.md)

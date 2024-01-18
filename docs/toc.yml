@@ -7102,8 +7102,12 @@ items:
         href: relational-databases/polybase/polybase-how-to-tell-pushdown-computation.md
       - name: Scale-out groups
         href: relational-databases/polybase/polybase-scale-out-groups.md
+      - name: PolyBase performance 
+        href: relational-databases/polybase/polybase-performance.md
     - name: How-to guides
       items:
+      - name: Get started with PolyBase on SQL Server 2022
+        href: relational-databases/polybase/polybase-get-started.md?view=sql-server-ver16&preserve-view=true
       - name: Install
         items:
         - name: Install on Windows

@@ -8,7 +8,7 @@ ms.service: sql
 ms.subservice: "machine-learning-services"
 ms.topic: "reference"
 keywords: ensemble
-ms.devlang: Python
+ms.devlang: python
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---
 # *microsoftml.rx_ensemble*: Combine models into a single one

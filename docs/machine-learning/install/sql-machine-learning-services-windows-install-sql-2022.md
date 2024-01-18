@@ -78,7 +78,7 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
 
 #### Install R runtime
 
-1. Download and install the most recent version of [R 4.2 for Windows](https://cran.r-project.org/bin/windows/base/).
+1. Download and install the most recent version of [R 4.2 for Windows](https://cran.r-project.org/bin/windows/base/old/4.2.3/).
 
 1. Install dependencies for `CompatibilityAPI` and `RevoScaleR`. From the R terminal of the version that you installed, run the following commands:
 
@@ -100,12 +100,12 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
 
 #### Configure R runtime with SQL Server
 
-1. Configure the installed R runtime with SQL Server. You can change the default version by using the `RegisterRext.exe` command-line utility. The utility is in an R application folder that depends on the installation. Usually, it's in `%ProgramFiles%\R\R-4.2.0\library\RevoScaleR\rxLibs\x64`.
+1. Configure the installed R runtime with SQL Server. You can change the default version by using the `RegisterRext.exe` command-line utility. The utility is in an R application folder that depends on the installation. Usually, it's in `%ProgramFiles%\R\R-4.2.3\library\RevoScaleR\rxLibs\x64`.
 
    You can use the following script to configure the installed R runtime from the installation folder location of `RegisterRext.exe`. The instance name is `MSSQLSERVER` for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
 
     ```cmd
-    .\RegisterRext.exe /configure /rhome:"%ProgramFiles%\R\R-4.2.0" /instance:"MSSQLSERVER"
+    .\RegisterRext.exe /configure /rhome:"%ProgramFiles%\R\R-4.2.3" /instance:"MSSQLSERVER"
     ```
 
 1. By using [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md), connect to the instance where you installed SQL Server Machine Learning Services. Select **New Query** to open a query window, and then run the following command to enable the external scripting feature:

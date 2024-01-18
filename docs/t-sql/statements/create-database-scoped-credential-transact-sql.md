@@ -3,7 +3,7 @@ title: "CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)"
 description: CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/15/2023
+ms.date: 01/18/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -77,7 +77,7 @@ Specifies the secret required for outgoing authentication. `SECRET` is required 
 
 A database scoped credential is a record that contains the authentication information that is required to connect to a resource outside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Most credentials include a Windows user and password.
 
-Before creating a database scoped credential, the database must have a master key to protect the credential. For more information, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md).
+To protect the sensitive information inside the database scoped credential, a database master key (DMK) is required. The DMK is a symmetric key that encrypts the secret in the database scoped credential. The database must have a master key before any database scoped credentials can be created. A DMK should be encrypted with a strong password. Under some conditions, Azure SQL Database will create a database master key with a strong randomly selected password as part of creating the database scoped credential. The password is unknown to Microsoft and not discoverable after creation. For this reason, Creating a database master key before creating a database scoped credential is recommended. For more information, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md).
 
 When IDENTITY is a Windows user, the secret can be the password. The secret is encrypted using the service master key. If the service master key is regenerated, the secret is re-encrypted using the new service master key.
 

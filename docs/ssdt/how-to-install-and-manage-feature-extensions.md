@@ -20,17 +20,17 @@ Where to install your extension depends on the extension type and where you inte
   
 |Extension Type|Install Location|  
 |------------------|--------------------|  
-|Custom Test Condition for SQL Server Unit Tests|\<Visual Studio Install Dir\>\Common7\IDE\Extensions\\Microsoft\SQLDB\TestConditions|  
-|Build Contributors<br /><br />Deployment Contributors<br /><br />Static Code Analysis Rules|\<Visual Studio Install Dir\>\Common7\IDE\Extensions\\Microsoft\SQLDB\DAC\120\Extensions|  
+|Custom Test Condition for SQL Server Unit Tests|\<Visual Studio Install Dir\>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions|  
+|Build Contributors<br /><br />Deployment Contributors<br /><br />Static Code Analysis Rules|\<Visual Studio Install Dir\>\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\120\Extensions|  
   
-The \<Visual Studio Install Dir\> varies depending on which version of Visual Studio you are using and where you chose to install it. For Visual Studio 2012, it is usually C:\Program Files (x86)\\MicrosoftVisual Studio 11.0. For Visual Studio 2013, it is usually C:\Program Files (x86)\\MicrosoftVisual Studio 12.0.  
+The \<Visual Studio Install Dir\> varies depending on which version of Visual Studio you are using and where you chose to install it. For Visual Studio 2012, it is usually C:\Program Files (x86)\MicrosoftVisual Studio 11.0. For Visual Studio 2013, it is usually C:\Program Files (x86)\MicrosoftVisual Studio 12.0.  
   
 Extensions can be run as part of our command-line services:  
   
 |Extension Type|Command-Line Service|Install Folder|  
 |------------------|------------------------|------------------|  
 |Custom Test Condition for SQL Server Unit Tests|MSBuild / MSTest can be used to run unit tests from the Developer Command Prompt for Visual Studio 2013 and similar command-line tools.|Same as when running inside Visual Studio.|  
-|Build Contributors<br /><br />Deployment Contributors|[SqlPackage.exe](../tools/sqlpackage/sqlpackage.md), or by using MSBuild Deploy or Publish targets when building a database project.|MSBuild: Same as when running inside Visual Studio.<br /><br />[SqlPackage.exe](../tools/sqlpackage/sqlpackage.md): If located inside Visual Studio directory, same as before.<br /><br />If SqlPackage.exe and other DacFx DLLs are located outside that directory, then extensions should either be placed in the same directory or in C:\Program Files (x86)\\MicrosoftSQL Server\120\DAC\bin\Extensions.|  
+|Build Contributors<br /><br />Deployment Contributors|[SqlPackage.exe](../tools/sqlpackage/sqlpackage.md), or by using MSBuild Deploy or Publish targets when building a database project.|MSBuild: Same as when running inside Visual Studio.<br /><br />[SqlPackage.exe](../tools/sqlpackage/sqlpackage.md): If located inside Visual Studio directory, same as before.<br /><br />If SqlPackage.exe and other DacFx DLLs are located outside that directory, then extensions should either be placed in the same directory or in `C:\Program Files (x86)\Microsoft SQL Server\120\DAC\bin\Extensions`.|  
 |Static Code Analysis Rules|MSBuild can be used to build the project and run static code analysis.<br /><br />In addition, you can run code analysis using a CodeAnalysisService API from your own applications. The extension lookup rules function the same in this case as when SqlPackage.exe is used.|Same as for Build and Deployment Contributors|  
   
 > [!NOTE]  

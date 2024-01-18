@@ -601,7 +601,7 @@ You can use catalog views, system functions, and system stored procedures to ret
 
 ## Permissions
 
-To alter a database, a login must be either the server admin login (created when the Azure SQL Database logical server was provisioned), the Azure AD admin of the server, a member of the dbmanager database role in `master`, a member of the db_owner database role in the current database, or `dbo` of the database.
+To alter a database, a login must be either the server admin login (created when the Azure SQL Database logical server was provisioned), the Microsoft Entra admin of the server, a member of the dbmanager database role in `master`, a member of the db_owner database role in the current database, or `dbo` of the database. Microsoft Entra ID is ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)).
 
 To scale databases via T-SQL, ALTER DATABASE permissions are needed.  To scale databases via the Azure portal, PowerShell, Azure CLI, or REST API, Azure RBAC permissions are needed, specifically the Contributor, SQL DB Contributor role, or SQL Server Contributor Azure RBAC roles. For more information, visit [Azure RBAC built-in roles](/azure/role-based-access-control/built-in-roles).
 

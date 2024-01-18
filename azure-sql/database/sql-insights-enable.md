@@ -1,5 +1,6 @@
 ---
 title: Enable SQL Insights (preview)
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Enable SQL Insights (preview) in Azure Monitor
 author: WilliamDAssafMSFT
 ms.author: wiassaf

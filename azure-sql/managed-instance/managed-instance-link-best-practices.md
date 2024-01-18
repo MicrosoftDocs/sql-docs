@@ -23,7 +23,7 @@ This article outlines best practices when using the link feature for Azure SQL M
 
 The link feature replicates data using the [distributed availability groups](/sql/database-engine/availability-groups/windows/distributed-availability-groups) technology based on Always On availability groups. Data replication with distributed availability groups is based on replicating transaction log records. No transaction log records can be truncated from the database on the primary SQL Server instance until they're replicated to the database on the secondary replica. If transaction log record replication is slow or blocked due to network connection issues, the log file keeps growing on the primary instance. Growth speed depends on the intensity of workload and the network speed. If there's a prolonged network connection outage and heavy workload on primary instance, the log file can take all available storage space.
 
-To minimize the risk of running out of space on your primary SQL Server instance due to log file growth, make sure to **take database log backups regularly** on your SQL Server when it's the primary. No extra action is necessary when SQL Managed Instance is the primary since [log backups are already taken automatically](automated-backups-overview.md). By taking log backups regularly on your SQL Server primary, you make your database more resilient to unplanned log growth events. Consider scheduling daily log backup tasks using SQL Server Agent job.
+To minimize the risk of running out of space on your primary SQL Server instance due to log file growth, make sure to **take database log backups regularly** on your SQL Server when it's the primary. No extra action is necessary when SQL Managed Instance is the primary since [log backups are already taken automatically](automated-backups-overview.md). By taking log backups regularly on your SQL Server primary, you make your database more resilient to unplanned log growth events. The first database log backup should be taken only after the initial seeding to SQL Managed Instance has completed (that is, the database replica on SQL Managed Instance is no longer in the 'Restoring' state). Consider scheduling daily log backup tasks using a SQL Server Agent job.
 
 You can use a Transact-SQL (T-SQL) script to back up the log file, such as the sample provided in this section. Replace the placeholders in the sample script with name of your database, name and path of the backup file, and the description.
 
@@ -31,21 +31,11 @@ To back up your transaction log, use the following sample Transact-SQL (T-SQL) s
 
 ```sql
 -- Execute on SQL Server
-USE [<DatabaseName>]
---Set current database inside job step or script
---Check that you are executing the script on the primary instance
-if (SELECT role
-    FROM sys.dm_hadr_availability_replica_states AS a
-    JOIN sys.availability_replicas AS b
-    ON b.replica_id = a.replica_id
-WHERE b.replica_server_name = @@SERVERNAME) = 1
-BEGIN
 -- Take log backup
 BACKUP LOG [<DatabaseName>]
-TO  DISK = N'<DiskPathandFileName>'
+TO DISK = N'<DiskPathandFileName>'
 WITH NOFORMAT, NOINIT,
 NAME = N'<Description>', SKIP, NOREWIND, NOUNLOAD, COMPRESSION, STATS = 1
-END
 ```
 
 Use the following Transact-SQL (T-SQL) command to check the log spaced used by your database on SQL Server: 

@@ -2,9 +2,9 @@
 title: Automatic, geo-redundant backups
 titleSuffix: Azure SQL Database
 description: Learn how Azure SQL Database automatically backs up all databases and provides a point-in-time restore capability.
-author: SudhirRaparla
-ms.author: nvraparl
-ms.reviewer: mathoma, wiassaf, danil
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: mathoma, danil, dinethi
 ms.date: 11/27/2023
 ms.service: sql-database
 ms.subservice: backup-restore
@@ -47,7 +47,7 @@ Azure SQL Database creates:
 
 The exact frequency of transaction log backups is based on the compute size and the amount of database activity. When you restore a database, the service determines which full, differential, and transaction log backups need to be restored.
 
-The Hyperscale architecture does not require full, differential, or log backups. To learn more, see [Hyperscale backups](hyperscale-automated-backups-overview.md). 
+The Hyperscale architecture doesn't require full, differential, or log backups. To learn more, see [Hyperscale backups](hyperscale-automated-backups-overview.md). 
 
 
 ## Backup storage redundancy
@@ -59,7 +59,7 @@ By default, new databases in Azure SQL Database store backups in geo-redundant [
 
 The Azure portal provides a **Workload environment** option that helps to preset some configuration settings. These settings can be overridden. This option applies to the **Create SQL Database** portal page only.
 
-- Choosing the **development** workload environment sets the **Backup storage redundancy** option to use locally redundant storage. Locally redundant storage incurs less cost and is appropriate for preproduction environments that do not require the redundance of zone- or geo-replicated storage. 
+- Choosing the **development** workload environment sets the **Backup storage redundancy** option to use locally redundant storage. Locally redundant storage incurs less cost and is appropriate for preproduction environments that don't require the redundance of zone- or geo-replicated storage. 
 - Choosing the **Production** workload environment sets the **Backup storage redundancy** to geo-redundant storage, the default. 
 - The **Workload environment** option also changes the initial setting for compute, though this can be overridden. Otherwise, the **Workload environment** option has no impact on licensing or other database configuration settings. 
 
@@ -116,6 +116,7 @@ This table summarizes the capabilities and features of [point-in-time restore (P
 | **Recovery time objective (RTO)** | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). |
 | **Retention** | 7 days by default, configurable between 1 and 35 days (except Basic databases, which are configurable between 1 and 7 days). | Enabled by default, same as source.\*\* | Not enabled by default. Retention is up to 10 years. |
 | **Azure Storage**  | Geo-redundant by default. You can optionally configure zone-redundant or locally redundant storage. | Available when PITR backup storage redundancy is set to geo-redundant. Not available when PITR backup storage is zone-redundant or locally redundant. | Geo-redundant by default. You can configure zone-redundant or locally redundant storage. |
+| **Configure backups as [immutable](/azure/storage/blobs/immutable-storage-overview)** | Not supported | Not supported | Not supported | 
 | **Restoring a new database in the same region** | Supported | Supported | Supported |
 | **Restoring a new database in another region** | Not supported | Supported in any Azure region | Supported in any Azure region |
 | **Restoring a new database in another subscription** |  Not supported  |  Not supported\*\*\* | Not supported\*\*\*  |
@@ -124,11 +125,12 @@ This table summarizes the capabilities and features of [point-in-time restore (P
 | **Restoring via Azure CLI** |Yes|Yes|Yes|
 
 
-\* For business-critical applications that require large databases and must ensure business continuity, use [auto-failover groups](auto-failover-group-sql-db.md). 
+\* For business-critical applications that require large databases and must ensure business continuity, use [failover groups](failover-group-sql-db.md). 
 
 \*\* All PITR backups are stored on geo-redundant storage by default, so geo-restore is enabled by default. 
 
 \*\*\* The workaround is to restore to a new server and use Resource Move to move the server to another subscription, or use a [cross-subscription database copy](database-copy.md#copy-to-a-different-subscription).
+
 
 ## Restore a database from backup
 
@@ -183,7 +185,7 @@ For instructions on how to monitor consumption in Hyperscale, see [Monitor Hyper
 
 ### Fine-tune backup storage consumption
 
-Backup storage consumption up to the maximum data size for a database is not charged. Excess backup storage consumption depends on the workload and maximum size of the individual databases. Consider some of the following tuning techniques to reduce your backup storage consumption:
+Backup storage consumption up to the maximum data size for a database isn't charged. Excess backup storage consumption depends on the workload and maximum size of the individual databases. Consider some of the following tuning techniques to reduce your backup storage consumption:
 
 - Reduce the [backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy) to the minimum for your needs.
 - Avoid doing large write operations, like index rebuilds, more often than you need to.
@@ -202,9 +204,9 @@ For all new, restored, and copied databases, Azure SQL Database retains sufficie
 
 Differential backups can be configured to occur either once in 12 hours or once in 24 hours. A 24-hour differential backup frequency might increase the time required to restore the database, compared to the 12-hour frequency. In the vCore model, the default frequency for differential backups is once in 12 hours. In the DTU model, the default frequency is once in 24 hours.  
 
-You can specify your backup storage redundancy option for STR when you create your database, and then change it at a later time. If you change your backup redundancy option after your database is created, new backups will use the new redundancy option. Backup copies made with the previous STR redundancy option are not moved or copied. They're left in the original storage account until the retention period expires, which can be 1 to 35 days.
+You can specify your backup storage redundancy option for STR when you create your database, and then change it at a later time. If you change your backup redundancy option after your database is created, new backups will use the new redundancy option. Backup copies made with the previous STR redundancy option aren't moved or copied. They're left in the original storage account until the retention period expires, which can be 1 to 35 days.
 
-You can [change the backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy) for each active database in the range of 1 to 35 days, except for Basic databases which are configurable from 1 to 7 days. As described in [Backup storage consumption](#backup-storage-consumption), backups stored to enable PITR might be older than the retention period. If you need to keep backups for longer than the maximum short-term retention period of 35 days, you can enable [long-term retention](long-term-retention-overview.md).
+You can [change the backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy) for each active database in the range of 1 to 35 days, except for Basic databases, which are configurable from 1 to 7 days. As described in [Backup storage consumption](#backup-storage-consumption), backups stored to enable PITR might be older than the retention period. If you need to keep backups for longer than the maximum short-term retention period of 35 days, you can enable [long-term retention](long-term-retention-overview.md).
 
 If you delete a database, the system keeps backups in the same way that it would for an online database with its specific retention period. You can't change the backup retention period for a deleted database.
 
@@ -223,7 +225,7 @@ Storage consumption depends on the selected frequency and retention periods of L
 
 When restoring a Hyperscale database from an LTR backup, the read scale property is disabled. To enable, read scale on the restored database, update the database after it has been created. You need to specify the target service level objective when restoring from an LTR backup. 
 
-Long-term retention can be enabled for Hyperscale databases created or migrated from other service tiers. If you attempt to enable LTR for a Hyperscale database where it is not yet supported, you receive the following error: "An error has occurred while enabling Long-term backup retention for this database. Please reach out to Microsoft support to enable long-term backup retention." In this case, reach out to Microsoft support and please create a support ticket to resolve this.
+Long-term retention can be enabled for Hyperscale databases created or migrated from other service tiers. If you attempt to enable LTR for a Hyperscale database where it isn't yet supported, you receive the following error: "An error has occurred while enabling Long-term backup retention for this database. Please reach out to Microsoft support to enable long-term backup retention." In this case, reach out to Microsoft support and please create a support ticket to resolve this.
 
 ## Backup storage costs
 
@@ -238,7 +240,7 @@ Backup storage redundancy affects backup costs in the following way:
 For pricing, see the [Azure SQL Database pricing](https://azure.microsoft.com/pricing/details/sql-database/single/) page. 
 
 > [!NOTE]
-> An Azure invoice shows only the excess backup storage consumption, not the entire backup storage consumption. For example, in a hypothetical scenario, if you have provisioned 4 TB of data storage, you'll get 4 TB of free backup storage space. If you use a total of 5.8 TB of backup storage space, the Azure invoice will show only 1.8 TB, because you're charged only for excess backup storage that you've used.
+> An Azure invoice shows only the excess backup storage consumption, not the entire backup storage consumption. For example, in a hypothetical scenario, if you have provisioned 4 TB of data storage, you'll get 4 TB of free backup storage space. If you use a total of 5.8 TB of backup storage space, the Azure invoice shows only 1.8 TB, because you're charged only for excess backup storage that you've used.
 
 ### DTU model
 
@@ -263,13 +265,13 @@ For elastic pools, a backup storage amount equal to 100 percent of the maximum d
 
 `Total billable backup storage size = (total size of all full backups + total size of all differential backups + total size of all log backups) - maximum pool data storage`
 
-Total billable backup storage, if any, is charged in gigabytes per month according to the rate of the backup storage redundancy that you've used. This backup storage consumption depends on the workload and size of individual databases, elastic pools, and managed instances. Heavily modified databases have larger differential and log backups, because the size of these backups is proportional to the amount of changed data. Therefore, such databases will have higher backup charges.
+Total billable backup storage, if any, is charged in gigabytes per month according to the rate of the backup storage redundancy that you've used. This backup storage consumption depends on the workload and size of individual databases, elastic pools, and managed instances. Heavily modified databases have larger differential and log backups, because the size of these backups is proportional to the amount of changed data. Therefore, such databases have higher backup charges.
 
-As a simplified example, assume that a database has accumulated 744 GB of backup storage and that this amount stays constant throughout an entire month because the database is completely idle. To convert this cumulative storage consumption to hourly usage, divide it by 744.0 (31 days per month times 24 hours per day). SQL Database will report to the Azure billing pipeline that the database consumed 1 GB of PITR backup each hour, at a constant rate. Azure billing will aggregate this consumption and show a usage of 744 GB for the entire month. The cost will be based on the rate for gigabytes per month in your region.
+As a simplified example, assume that a database has accumulated 744 GB of backup storage and that this amount stays constant throughout an entire month because the database is completely idle. To convert this cumulative storage consumption to hourly usage, divide it by 744.0 (31 days per month times 24 hours per day). SQL Database reports to the Azure billing pipeline that the database consumed 1 GB of PITR backup each hour, at a constant rate. Azure billing aggregates this consumption and show a usage of 744 GB for the entire month. The cost is based on the rate for gigabytes per month in your region.
 
 Here's another example. Suppose the same idle database has its retention increased from 7 days to 14 days in the middle of the month. This increase results in the total backup storage doubling to 1,488 GB. SQL Database would report 1 GB of usage for hours 1 through 372 (the first half of the month). It would report the usage as 2 GB for hours 373 through 744 (the second half of the month). This usage would be aggregated to a final bill of 1,116 GB per month.
 
-Actual backup billing scenarios are more complex. Because the rate of changes in the database depends on the workload and is variable over time, the size of each differential and log backup will also vary. The hourly consumption of backup storage will fluctuate accordingly.
+Actual backup billing scenarios are more complex. Because the rate of changes in the database depends on the workload and is variable over time, the size of each differential and log backup will also vary. The hourly consumption of backup storage fluctuates accordingly.
 
 Each differential backup also contains all changes made in the database since the last full backup. So, the total size of all differential backups gradually increases over the course of a week. Then it drops sharply after an older set of full, differential, and log backups ages out. 
 
@@ -290,9 +292,9 @@ To understand backup storage costs, go to **Cost Management + Billing** in the A
 1. Add a filter for **Service name**.
 1. In the dropdown list, select **sql database** for a single database or an elastic database pool.
 1. Add another filter for **Meter subcategory**.
-1. To monitor PITR backup costs, in the dropdown list, select **single/elastic pool pitr backup storage** for a single database or an elastic database pool. Meters will show up only if backup storage consumption exists.
+1. To monitor PITR backup costs, in the dropdown list, select **single/elastic pool pitr backup storage** for a single database or an elastic database pool. Meters show up only if backup storage consumption exists.
    
-   To monitor LTR backup costs, in the dropdown list, select **ltr backup storage** for a single database or an elastic database pool. Meters will show up only if backup storage consumption exists.
+   To monitor LTR backup costs, in the dropdown list, select **ltr backup storage** for a single database or an elastic database pool. Meters show up only if backup storage consumption exists.
 
 The **Storage** and **compute** subcategories might also interest you, but they're not associated with backup storage costs.
 

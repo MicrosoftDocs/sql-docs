@@ -1698,8 +1698,9 @@ items:
     - name: Create, Modify, & Drop Spatial Indexes
       href: relational-databases/spatial/create-modify-and-drop-spatial-indexes.md
   - name: Stored procedures
-    href: relational-databases/stored-procedures/stored-procedures-database-engine.md
     items:
+    - name: Overview
+      href: relational-databases/stored-procedures/stored-procedures-database-engine.md
     - name: Create
       href: relational-databases/stored-procedures/create-a-stored-procedure.md
     - name: Modify
@@ -1716,7 +1717,7 @@ items:
       href: relational-databases/stored-procedures/parameters.md
     - name: Properties
       href: relational-databases/stored-procedures/stored-procedure-properties-general-page.md
-    - name: Return Data
+    - name: Return data
       href: relational-databases/stored-procedures/return-data-from-a-stored-procedure.md
     - name: Recompile
       href: relational-databases/stored-procedures/recompile-a-stored-procedure.md
@@ -1724,16 +1725,16 @@ items:
       href: relational-databases/stored-procedures/rename-a-stored-procedure.md
     - name: View definition
       href: relational-databases/stored-procedures/view-the-definition-of-a-stored-procedure.md
-    - name: View dependence
+    - name: View dependencies
       href: relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md
-    - name: OLE Automation Objects in T-SQL
+    - name: OLE automation objects in T-SQL
       href: relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md
       items:
-      - name: OLE Automation Return Codes & Error Information
+      - name: OLE automation return codes & error information
         href: relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md
-      - name: OLE Automation Result Sets
+      - name: OLE automation result sets
         href: relational-databases/stored-procedures/ole-automation-result-sets.md
-      - name: OLE Automation Sample Script
+      - name: OLE automation sample script
         href: relational-databases/stored-procedures/ole-automation-sample-script.md
   - name: Tables
     href: relational-databases/tables/tables.md
@@ -2609,18 +2610,19 @@ items:
         href: relational-databases/json/use-openjson-with-the-default-schema-sql-server.md
       - name: Explicit Schema
         href: relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md
-    - name: Format Query Results
-      href: relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md
+    - name: Format query results
       items:
-      - name: Format nested output with PATH Mode
+      - name: Format results as JSON
+        href: relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md
+      - name: Format nested output with PATH mode
         href: relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md
-      - name: Format with AUTO Mode
+      - name: Format with AUTO mode
         href: relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md
-      - name: Add a Root Node with the ROOT Option
+      - name: Add a root node with the ROOT option
         href: relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md
-      - name: Include Null Values with the INCLUDE_NULL_VALUES Option
+      - name: Include null values with the INCLUDE_NULL_VALUES option
         href: relational-databases/json/include-null-values-in-json-include-null-values-option.md
-      - name: Remove Square Brackets WITHOUT_ARRAY_WRAPPER Option (SQL Server)
+      - name: Remove square brackets WITHOUT_ARRAY_WRAPPER option (SQL Server)
         href: relational-databases/json/remove-square-brackets-from-json-without-array-wrapper-option.md
     - name: FOR JSON
       items:
@@ -4994,7 +4996,7 @@ items:
       items:
       - name: Configure replication
         items:
-        - name: With Azure AD authentication
+        - name: With Microsoft Entra authentication
           href: relational-databases/replication/configure-replication-with-azure-ad-authentication.md
         - name: Distribution
           href: relational-databases/replication/configure-distribution.md
@@ -7086,14 +7088,16 @@ items:
     href: relational-databases/performance/subqueries.md
   - name: Data virtualization (PolyBase)
     items:
-    - name: Overview
-      items:
-      - name: What is PolyBase?
-        href: relational-databases/polybase/polybase-guide.md
+    - name: What is PolyBase?
+      href: relational-databases/polybase/polybase-guide.md
+    - name: Get started with PolyBase
+      href: relational-databases/polybase/polybase-get-started.md?view=sql-server-ver16&preserve-view=true
     - name: Concepts
       items:
       - name: Query scenarios
         href: relational-databases/polybase/polybase-queries.md
+      - name: PolyBase performance 
+        href: relational-databases/polybase/polybase-performance.md        
       - name: Pushdown computation
         href: relational-databases/polybase/polybase-pushdown-computation.md
       - name: How to tell if external pushdown occurred
@@ -7779,7 +7783,7 @@ items:
         href: relational-databases/security/authentication-access/create-an-application-role.md
       - name: Create a credential
         href: relational-databases/security/authentication-access/create-a-credential.md
-      - name: Linked servers with Azure AD authentication
+      - name: Linked servers with Microsoft Entra authentication
         href: relational-databases/security/authentication-access/azure-ad-authentication-sql-server-linked-server.md
     - name: Encryption
       items:
@@ -7993,7 +7997,7 @@ items:
         href: relational-databases/security/using-service-sids-to-grant-permissions-to-services-in-sql-server.md
       - name: Ownership and user-schema separation
         href: relational-databases/security/authentication-access/ownership-and-user-schema-separation.md
-      - name: Azure Active Directory authentication
+      - name: Microsoft Entra authentication
         href: relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md
     - name: Encryption
       items:
@@ -8083,11 +8087,11 @@ items:
         href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
       - name: Develop a .NET Framework application using Always Encrypted with secure enclaves
         href: relational-databases/security/tutorial-always-encrypted-enclaves-develop-net-framework-apps.md
-    - name: Azure Active Directory authentication
+    - name: Microsoft Entra authentication
       items: 
-      - name: Set up Azure AD authentication
+      - name: Set up Microsoft Entra authentication
         href: relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md
-      - name: Set Azure AD admin automation
+      - name: Set Microsoft Entra admin automation
         href: relational-databases/security/authentication-access/azure-ad-authentication-sql-server-automation-setup-tutorial.md
   - name: Reference
     items:
@@ -8405,7 +8409,7 @@ items:
     items:
     - name: sqlcmd overview
       href: tools/sqlcmd/sqlcmd-utility.md
-    - name: Authenticate sqlcmd with Azure AD
+    - name: Authenticate sqlcmd with Microsoft Entra ID
       href: tools/sqlcmd/sqlcmd-authentication.md
     - name: Start the utility
       href: tools/sqlcmd/sqlcmd-start-utility.md
@@ -8444,7 +8448,7 @@ items:
       href: ssdt/anonymous-usage-data.md
     - name: Connect to an existing database in SSDT
       href: ssdt/connect-to-an-existing-database-in-sql-server-data-tools.md   
-    - name: Azure Active Directory support
+    - name: Microsoft Entra ID support
       href: ssdt/azure-active-directory.md
     - name: Project-Oriented Offline Database Development
       href: ssdt/project-oriented-offline-database-development.md
@@ -10103,6 +10107,8 @@ items:
         href: linux/sql-server-linux-editions-and-components-2017.md
     - name: FAQ
       href: linux/sql-server-linux-faq.yml
+    - name: Known issues
+      href: linux/sql-server-linux-known-issues.md
   - name: Quickstarts
     items:
     - name: Install and connect (Red Hat)
@@ -15511,6 +15517,10 @@ items:
         href: relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md
       - name: sp_update_targetservergroup
         href: relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md
+    - name: Extended Events
+      items:
+      - name: sp_trace_generateevent
+        href: relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md
     - name: SQL Server Profiler
       href: relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md
       items:

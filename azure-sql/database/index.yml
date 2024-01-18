@@ -124,8 +124,8 @@ landingContent:
             url: high-availability-sla.md
           - text: Active-geo replication
             url: active-geo-replication-overview.md 
-          - text: Auto-failover groups
-            url: auto-failover-group-sql-db.md 
+          - text: Failover groups
+            url: failover-group-sql-db.md 
           - text: Automated backups
             url: automated-backups-overview.md
           - text: Recover with backup 

@@ -1,5 +1,5 @@
 ---
-title: "Creating a Custom Report Item Design-Time Component"
+title: "Creating a custom report item design-time component"
 description: Learn how to create a custom report item design-time component. This component provides an activated design surface that can accept drag-and-drop operations.
 author: maggiesMSFT
 ms.author: maggies
@@ -11,19 +11,19 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "custom report items, creating"
 ---
-# Creating a Custom Report Item Design-Time Component
+# Creating a custom report item design-time component
   A custom report item design-time component is a control that can be used in the Visual Studio Report Designer environment. The custom report item design-time component provides an activated design surface that can accept drag-and-drop operations, integration with the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] property browser, and the ability to provide custom property editors.  
   
  With a custom report item design-time component, the user can position a custom report item on a report in the design environment, set custom data properties on the custom report item, and then save the custom report item as part of the report project.  
   
- The properties that are set using the design-time component in the development environment are serialized and deserialized by the host design environment and then stored as elements in the Report Definition Language (RDL) file. When the report is executed by the report processor, the properties that are set using the design-time component are passed by the report processor to a custom report item run-time component, which renders the custom report item and passes it back to the report processor.  
+ The properties that are set by using the design-time component in the development environment are serialized and deserialized by the host design environment. The properties are then stored as elements in the Report Definition Language (RDL) file. When the report processor executes the report, the properties that are set by using the design-time component are passed by the report processor to a custom report item run-time component, which renders the custom report item and passes it back to the report processor.  
   
 > [!NOTE]
 >  The custom report item design-time component is implemented as a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] component. This document will describe implementation details specific to the custom report item design-time component.   
   
  For a sample of a fully implemented custom report item, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
-## Implementing a Design-Time Component  
+## Implement a design-time component  
  The main class of a custom report item design-time component is inherited from the **Microsoft.ReportDesigner.CustomReportItemDesigner** class. In addition to the standard attributes used for a [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] control, your component class should define a **CustomReportItem** attribute. This attribute must correspond to the name of the custom report item as it is defined in the reportserver.config file. For a list of [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] attributes, see Attributes in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK documentation.  
   
  The following code example shows attributes being applied to a custom report item design-time control:  
@@ -41,7 +41,7 @@ namespace PolygonsCRI
 ...  
 ```  
   
-### Initializing the Component  
+### Initialize the component  
  You pass user-specified properties for a custom report item using a <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> class. Your implementation of the **CustomReportItemDesigner** class should override the **InitializeNewComponent** method to create a new instance of your component's <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> class and set it to default values.  
   
  The following code example shows an example of a custom report item design-time component class overriding the **CustomReportItemDesigner.InitializeNewComponent** method to initialize the component's <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> class:  
@@ -77,7 +77,7 @@ public override void InitializeNewComponent()
         }  
 ```  
   
-### Modifying Component Properties  
+### Modify component properties  
  You can modify **CustomData** properties in the design environment in several ways. You can modify any properties that are exposed by the design-time component that are marked with the <xref:System.ComponentModel.BrowsableAttribute> attribute by using the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] property browser. In addition, you can modify properties by dragging items onto the custom report item's design surface, or by right-clicking the control in the design environment and selecting **Properties** on the shortcut menu to display a custom properties window.  
   
  The following code example shows a **Microsoft.ReportDesigner.CustomReportItemDesigner.CustomData** property that has the <xref:System.ComponentModel.BrowsableAttribute> attribute applied:  
@@ -143,10 +143,10 @@ private void EditableCombo_SelectedIndexChanged(object sender,
   
 ```  
   
-### Using Designer Verbs  
- A designer verb is a menu command linked to an event handler. You can add designer verbs that will appear in a component's shortcut menu when your custom report item run-time control is being used in the design environment. You can return the list of available designer verbs from your run-time component by using the **Verbs** property.  
+### Use designer verbs  
+ A designer verb is a menu command linked to an event handler. You can add designer verbs that appear in a component's shortcut menu when your custom report item run-time control is being used in the design environment. You can return the list of available designer verbs from your run-time component by using the **Verbs** property.  
   
- The following code example shows a designer verb and an event handler being added to the <xref:System.ComponentModel.Design.DesignerVerbCollection>, as well as the event handler code:  
+ The following code example shows a designer verb and an event handler being added to the <xref:System.ComponentModel.Design.DesignerVerbCollection>. The example also shows the event handler code:  
   
 ```csharp  
 public override DesignerVerbCollection Verbs  
@@ -175,10 +175,10 @@ private void OnProportionalScaling(object sender, EventArgs e)
 }  
 ```  
   
-### Using Adornments  
+### Use adornments  
  Custom report item classes can also implement a **Microsoft.ReportDesigner.Design.Adornment** class. An adornment allows the custom report item control to provide areas outside the main rectangle of the design surface. These areas can handle user interface events, such as mouse clicks and drag-and-drop operations. The **Adornment** class that is defined in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Microsoft.ReportDesigner** namespace is a pass-through implementation of the <xref:System.Windows.Forms.Design.Behavior.Adorner> class found in Windows Forms. For complete documentation on the **Adorner** class, see [Behavior Service Overview](/previous-versions/ms171826(v=vs.140)) in the MSDN library. For sample code that implements a **Microsoft.ReportDesigner.Design.Adornment** class, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
- For more information about programming and using Windows Forms in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], see these topics in the MSDN Library:  
+ For more information about programming and using Windows Forms in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], see these articles in the MSDN Library:  
   
 -   Design-Time Attributes for Components  
   
@@ -186,8 +186,8 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 -   Walkthrough: Creating a Windows Forms Control that Takes Advantage of Visual Studio Design-Time Features  
   
-## See Also  
- [Custom Report Item Architecture](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
- [Creating a Custom Report Item Run-Time Component](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
- [Custom Report Item Class Libraries](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
- [How to: Deploy a Custom Report Item](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+## Related content  
+ [Custom report item architecture](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
+ [Creating a custom report item run-time component](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
+ [Custom report item class libraries](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
+ [How to: Deploy a custom report item](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  

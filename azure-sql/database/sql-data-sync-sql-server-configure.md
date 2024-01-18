@@ -3,7 +3,7 @@ title: Set up SQL Data Sync
 description: This tutorial shows you how to set up SQL Data Sync for Azure
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, jeschult
+ms.reviewer: mathoma, hudequei
 ms.date: 08/21/2023
 ms.service: sql-database
 ms.subservice: sql-data-sync

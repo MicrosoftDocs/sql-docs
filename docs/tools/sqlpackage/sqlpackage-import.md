@@ -13,6 +13,7 @@ ms.topic: conceptual
 # SqlPackage Import parameters and properties
 The SqlPackage Import action imports the schema and table data from a BACPAC file (.bacpac) into a new or empty database in SQL Server or Azure SQL Database. At the time of the import operation to an existing database the target database cannot contain any user-defined schema objects. Alternatively, a new database can be created by the import action when the authenticated user has [create database permissions](../../t-sql/statements/create-database-transact-sql.md#permissions).
 
+[!INCLUDE [entra-id](../../includes/entra-id-hard-coded.md)]
 
 > [!NOTE]
 > SqlPackage import performs best for databases under 200GB. For larger databases, you may want to optimize the operation using properties available in this article and tips in [Troubleshooting with SqlPackage](./troubleshooting-issues-and-performance-with-sqlpackage.md).
@@ -36,15 +37,15 @@ SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" \
 SqlPackage /a:Import /tsn:"{yourserver}.database.windows.net,1433" /tdn:"AdventureWorksLT" /tu:"sqladmin" \
     /tp:"{your_password}" /sf:"C:\AdventureWorksLT.bacpac"
 
-# example import using Azure Active Directory Managed Identity
+# example import using Microsoft Entra managed identity
 SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" \
     /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Managed Identity;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 
-# example import connecting using Azure Active Directory username and password
+# example import connecting using Microsoft Entra username and password
 SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" \
     /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Password;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;User ID={yourusername};Password={yourpassword}"
 
-# example import connecting using Azure Active Directory universal authentication
+# example import connecting using Microsoft Entra universal authentication
 SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" /UniversalAuthentication:True \
     /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 ```
@@ -68,7 +69,7 @@ SqlPackage /at:$($AccessToken_Object.Token) /Action:Import /SourceFile:"C:\Adven
 |---|---|---|---|
 |**/AccessToken:**|**/at:**|{string}| Specifies the token-based authentication access token to use when connect to the target database. |
 |**/Action:**|**/a:**|Import|Specifies the action to be performed. |
-|**/AzureCloudConfig:**|**/acc:**|{string}|Specifies the custom endpoints for connecting to Azure Active Directory in the format: AzureActiveDirectoryAuthority={value};DatabaseServicePrincipalName={value}" .|
+|**/AzureCloudConfig:**|**/acc:**|{string}|Specifies the custom endpoints for connecting to Microsoft Entra ID in the format: AzureActiveDirectoryAuthority={value};DatabaseServicePrincipalName={value}" .|
 |**/Diagnostics:**|**/d:**|{True&#124;False}|Specifies whether diagnostic logging is output to the console. Defaults to False. |
 |**/DiagnosticsFile:**|**/df:**|{string}|Specifies a file to store diagnostic logs. |
 |**/MaxParallelism:**|**/mp:**|{int}| Specifies the degree of parallelism for concurrent operations running against a database. The default value is 8.|
@@ -82,12 +83,12 @@ SqlPackage /at:$($AccessToken_Object.Token) /Action:Import /SourceFile:"C:\Adven
 |**/TargetHostNameInCertificate:**|**/thnic:**|{string}|Specifies value that is used to validate the target SQL Server TLS/SSL certificate when the communication layer is encrypted by using TLS.|
 |**/TargetPassword:**|**/tp:**|{string}|For SQL Server Auth scenarios, defines the password to use to access the target database. |
 |**/TargetServerName:**|**/tsn:**|{string}|Defines the name of the server hosting the target database. |
-|**/TargetTimeout:**|**/tt:**|{int}|Specifies the timeout for establishing a connection to the target database in seconds. For Azure AD, it is recommended that this value be greater than or equal to 30 seconds.|
+|**/TargetTimeout:**|**/tt:**|{int}|Specifies the timeout for establishing a connection to the target database in seconds. For Microsoft Entra ID, it is recommended that this value be greater than or equal to 30 seconds.|
 |**/TargetTrustServerCertificate:**|**/ttsc:**|{True&#124;False}|Specifies whether to use TLS to encrypt the target database connection and bypass walking the certificate chain to validate trust. Default value is False. |
 |**/TargetUser:**|**/tu:**|{string}|For SQL Server Auth scenarios, defines the SQL Server user to use to access the target database. |
-|**/TenantId:**|**/tid:**|{string}|Represents the Azure AD tenant ID or domain name. This option is required to support guest or imported Azure AD users as well as Microsoft accounts such as outlook.com, hotmail.com, or live.com. If this parameter is omitted, the default tenant ID for Azure AD will be used, assuming that the authenticated user is a native user for this AD. However, in this case any guest or imported users and/or Microsoft accounts hosted in this Azure AD are not supported and the operation will fail. <br/> For more information about Active Directory Universal Authentication, see [Universal Authentication with SQL Database and Azure Synapse Analytics (SSMS support for MFA)](/azure/sql-database/sql-database-ssms-mfa-authentication).|
+|**/TenantId:**|**/tid:**|{string}|Represents the Microsoft Entra tenant ID or domain name. This option is required to support guest or imported Microsoft Entra users as well as Microsoft accounts such as outlook.com, hotmail.com, or live.com. If this parameter is omitted, the default tenant ID for Microsoft Entra ID will be used, assuming that the authenticated user is a native user for this AD. However, in this case any guest or imported users and/or Microsoft accounts hosted in this Microsoft Entra ID are not supported and the operation will fail. <br/> For more information, see [Universal authentication with SQL Database and Azure Synapse Analytics (SSMS support for MFA)](/azure/sql-database/sql-database-ssms-mfa-authentication).|
 |**/ThreadMaxStackSize:**|**/tmss:**|{int}|Specifies the maximum size in megabytes for the thread running the SqlPackage action. This option should only be used when encountering stack overflow exceptions that occur when parsing very large Transact-SQL statements.|
-|**/UniversalAuthentication:**|**/ua:**|{True&#124;False}|Specifies if Universal Authentication should be used. When set to True, the interactive authentication protocol is activated supporting MFA. This option can also be used for Azure AD authentication without MFA, using an interactive protocol requiring the user to enter their username and password or integrated authentication (Windows credentials). When /UniversalAuthentication is set to True, no Azure AD authentication can be specified in SourceConnectionString (/scs). When /UniversalAuthentication is set to False, Azure AD authentication must be specified in SourceConnectionString (/scs). <br/> For more information about Active Directory Universal Authentication, see [Universal Authentication with SQL Database and Azure Synapse Analytics (SSMS support for MFA)](/azure/sql-database/sql-database-ssms-mfa-authentication).|
+|**/UniversalAuthentication:**|**/ua:**|{True&#124;False}|Specifies if universal authentication should be used. When set to True, the interactive authentication protocol is activated supporting MFA. This option can also be used for Microsoft Entra authentication without MFA, using an interactive protocol requiring the user to enter their username and password or integrated authentication (Windows credentials). When /UniversalAuthentication is set to True, no Microsoft Entra authentication can be specified in SourceConnectionString (/scs). When /UniversalAuthentication is set to False, Microsoft Entra authentication must be specified in SourceConnectionString (/scs). <br/> For more information, see [Universal authentication with SQL Database and Azure Synapse Analytics (SSMS support for MFA)](/azure/sql-database/sql-database-ssms-mfa-authentication).|
 
 ## Properties specific to the Import action
 

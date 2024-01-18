@@ -3,7 +3,7 @@ title: "CREATE SCHEMA (Transact-SQL)"
 description: CREATE SCHEMA (Transact-SQL)
 author: markingmyname
 ms.author: maghan
-ms.date: "12/01/2016"
+ms.date: 12/13/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -104,6 +104,8 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
  **Implicit Schema and User Creation**  
+
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
   
  In some cases a user can use a database without having a database user account (a database principal in the database). This can happen in the following situations:  
   
@@ -111,14 +113,16 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
 -   A Windows user does not have an individual database user account (a database principal in the database), but accesses a database as a member of a Windows group which has a database user account (a database principal for the Windows group).  
 
--   An Azure AD user does not have an individual database user account (a database principal in the database), but accesses a database as a member of an Azure AD group which has a database user account (a database principal for the Azure AD group).
+-   A Microsoft Entra user does not have an individual database user account (a database principal in the database), but accesses a database as a member of a Microsoft Entra group which has a database user account (a database principal for the Microsoft Entra group).
   
  When a user without a database user account creates an object without specifying an existing schema, a database principal and default schema will be automatically created in the database for that user. The created database principal and schema will have the same name as the name that user used when connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication login name or the Windows user name).  
   
  This behavior is necessary to allow users that are based on Windows groups to create and own objects. However it can result in the unintentional creation of schemas and users. To avoid implicitly creating users and schemas, whenever possible explicitly create database principals and assign a default schema. Or explicitly state an existing schema when creating objects in a database, using two or three-part object names.  
 
 > [!NOTE]
->  The implicit creation of an Azure Active Directory user is not possible on [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Since creating an Azure AD user from external provider must check the user's status in Azure AD, creating the user will fail with error 2760: **The specified schema name "\<user_name@domain>" either does not exist or you do not have permission to use it.** And then error 2759: **CREATE SCHEMA failed due to previous errors.** Attempts to create or alter schemas will result in the error 15151: **Cannot find the user '', because it does not exist or you do not have permission.**, also followed by error 2759. To work around these errors, either create the Azure AD user from an external provider, or alter the Azure AD group to assign a default schema. Then rerun the statement creating the object.
+> The implicit creation of a Microsoft Entra user is not possible on [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Since creating a Microsoft Entra user from external provider must check the user's status in Microsoft Entra ID, creating the user will fail with error 2760: **The specified schema name "\<user_name@domain>" either does not exist or you do not have permission to use it.** And then error 2759: **CREATE SCHEMA failed due to previous errors.** Attempts to create or alter schemas will result in the error 15151: **Cannot find the user '', because it does not exist or you do not have permission.**, also followed by error 2759. To work around these errors, either create the Microsoft Entra user from an external provider, or alter the Microsoft Entra group to assign a default schema. Then rerun the statement creating the object.
+
+In [!INCLUDE [fabricse](../../includes/fabric-se.md)] and [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], schema names can't contain `/` or `\` or end with a `.`.
 
 ## Deprecation Notice  
  CREATE SCHEMA statements that do not specify a schema name are currently supported for backward compatibility. Such statements do not actually create a schema inside the database, but they do create tables and views, and grant permissions. Principals do not need CREATE SCHEMA permission to execute this earlier form of CREATE SCHEMA, because no schema is being created. This functionality will be removed from a future release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -184,5 +188,3 @@ GO
  [Create a Database Schema](../../relational-databases/security/authentication-access/create-a-database-schema.md)  
   
   
-
-

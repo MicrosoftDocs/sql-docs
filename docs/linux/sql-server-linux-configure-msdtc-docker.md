@@ -293,7 +293,7 @@ NAME                     READY   AGE
 statefulset.apps/mssql   2/2     5d1h
 ```
 
-You can use tools like SQL Server Management Studio (SSMS) to connect to either of the above two SQL Servers and run a sample DTC transaction. In this example, you will connect to `mssql-1` (20.72.137.129) and create the linked server to `mssql-0` (40.88.213.209) to run the distributed transaction, as shown below.
+You can use tools like SQL Server Management Studio (SSMS) to connect to either of the above two SQL Server instances and run a sample DTC transaction. In this example, you will connect to `mssql-1` (20.72.137.129) and create the linked server to `mssql-0` (40.88.213.209) to run the distributed transaction, as shown below.
 
 ```sql
 USE [master]

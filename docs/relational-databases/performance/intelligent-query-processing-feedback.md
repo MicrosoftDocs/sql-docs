@@ -3,7 +3,7 @@ title: Query processing feedback features
 description: Learn about query processing feedback features, part of the Intelligent Query Processing (IQP) feature set.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: katsmith
+ms.reviewer: derekw
 ms.date: 06/08/2023
 ms.service: sql
 ms.subservice: configuration

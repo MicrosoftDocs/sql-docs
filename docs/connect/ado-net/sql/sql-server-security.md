@@ -30,7 +30,7 @@ The topics in this section briefly describe the security features in SQL Server 
 Describes logins and authentication in SQL Server and provides links to additional resources. 
 
 [Microsoft Entra authentication](azure-active-directory-authentication.md)  
-Describes how to use supported authentication modes with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) to connect to Azure SQL data sources with SqlClient.
+Describes how to use supported authentication modes with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) to connect to Azure SQL data sources with SqlClient.
 
   
 [Application security scenarios in SQL Server](application-security-scenarios-sql-server.md)  

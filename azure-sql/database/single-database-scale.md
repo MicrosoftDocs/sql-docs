@@ -81,13 +81,13 @@ A service tier change or compute rescaling operation can be monitored and cancel
 
 ### [Azure portal](#tab/azure-portal)
 
-In the database overview blade, navigate to **Notifications** and select the tile indicating there's an ongoing operation:
+In the SQL database **Overview** page, look for the banner indicating a scaling operation is ongoing, and select the **See more** link for the deployment in progress.
 
-![Screenshot from the Azure portal of an ongoing operation.](./media/single-database-scale/ongoing-operations.png)
+:::image type="content" source="media/single-database-scale/scaling-operation-in-progress-see-more.png" alt-text="Screenshot from the Azure portal showing a scaling operation in progress.":::
 
-Next, select **Cancel this operation**.
+On the resulting **Ongoing operations** page, select **Cancel this operation**.
 
-![Screenshot from the Azure portal of the cancellation of an ongoing operation.](./media/single-database-scale/cancel-ongoing-operation.png)
+:::image type="content" source="media/single-database-scale/ongoing-operations-cancel-this-operation.png" alt-text="Screenshot from the Azure portal showing the Ongoing operations page and the cancel this operation button.":::
 
 ### [PowerShell](#tab/azure-powershell)
 
@@ -115,15 +115,21 @@ Stop-AzSqlDatabaseActivity -ResourceGroupName "ResourceGroup01" -ServerName "Ser
 
 ### [Azure CLI](#tab/azure-cli)
 
-From a Cloud shell terminal, use the following sample command to identify operations currently executing:
+From a Cloud shell terminal, use the following sample command to identify operations currently executing. From a Cloud shell terminal, set the `$resourceGroupName`, `$serverName`, and `$databaseName` variables, and then run the following command:
 
 ```azurecli
+$resourceGroupName = "<resource group name>"
+$serverName = "<server name>"
+$databaseName = "<sql database name>"
 az sql db op list --resource-group $resourceGroupName --server $serverName --database $databaseName --query "[?state=='InProgress'].name" --out tsv
 ```
 
-To stop an asynchronous operation like a database scale, from a Cloud shell terminal, set the `$resourceGroupName`, `$serverName`, and `$databaseName`, and then run the following command:
+To stop an asynchronous operation like a database scale, from a Cloud shell terminal, set the `$resourceGroupName`, `$serverName`, and `$databaseName` variables, and then run the following command:
 
 ```azurecli
+$resourceGroupName = "<resource group name>"
+$serverName = "<server name>"
+$databaseName = "<sql database name>"
 $operationName = (az sql db op list --resource-group $resourceGroupName --server $serverName --database $databaseName --query "[?state=='InProgress'].name" --out tsv)
 if (-not [string]::IsNullOrEmpty($operationName)) {
     (az sql db op cancel --resource-group $resourceGroupName --server $serverName --database $databaseName --name $operationName)
@@ -138,7 +144,7 @@ else {
 
 ## Permissions
 
-To scale databases via T-SQL, ALTER DATABASE permissions are needed. To scale a database a login must be either the server admin login (created when the Azure SQL Database logical server was provisioned), the Microsoft Entra admin of the server, a member of the dbmanager database role in `master`, a member of the db_owner database role in the current database, or `dbo` of the database. For more information, see [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true#permissions-1).
+To scale databases via Transact-SQL, `ALTER DATABASE` is used. To scale a database a login must be either the server admin login (created when the Azure SQL Database logical server was provisioned), the Microsoft Entra admin of the server, a member of the dbmanager database role in `master`, a member of the db_owner database role in the current database, or `dbo` of the database. For more information, see [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true#permissions-1).
 
 To scale databases via the Azure portal, PowerShell, Azure CLI, or REST API, Azure RBAC permissions are needed, specifically the Contributor, SQL DB Contributor role, or SQL Server Contributor Azure RBAC roles. For more information, visit [Azure RBAC built-in roles](/azure/role-based-access-control/built-in-roles).
 

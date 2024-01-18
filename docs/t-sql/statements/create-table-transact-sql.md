@@ -909,7 +909,7 @@ WITH
     DATA_COMPRESSION = NONE ON PARTITIONS (1),
     DATA_COMPRESSION = ROW ON PARTITIONS (2, 4, 6 TO 8),
     DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
-)
+);
 ```
 
 You can also specify the `XML_COMPRESSION` option more than once, for example:

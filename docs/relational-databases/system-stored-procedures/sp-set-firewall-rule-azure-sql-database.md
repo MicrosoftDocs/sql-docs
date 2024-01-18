@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest"
 
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
 
-Creates or updates the server-level firewall settings for your [!INCLUDE [ssSDS](../../includes/sssds-md.md)] server. This stored procedure is only available in the `master` database to the server-level principal login or assigned Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) principal.
+Creates or updates the server-level firewall settings for your [!INCLUDE [ssSDS](../../includes/sssds-md.md)] server. This stored procedure is only available in the `master` database to the server-level principal login or assigned Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) principal.
 
 ## Syntax
 

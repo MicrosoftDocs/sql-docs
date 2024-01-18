@@ -113,10 +113,10 @@ Use the following variables to define the SQL Server image to use for the virtua
    [!INCLUDE[appliesto-sqlvm](../../includes/virtual-machines-2008-end-of-support.md)]
 
 
-1. For this tutorial, use the following variables to specify SQL Server 2017 on Windows Server 2016.
+1. For this tutorial, use the following variables to specify SQL Server 2022 on Windows Server 2022.
 
    ```powershell
-   $OfferName = "SQL2017-WS2016"
+   $OfferName = "SQL2022-WS2022"
    $PublisherName = "MicrosoftSQLServer"
    $Version = "latest"
    ```
@@ -127,7 +127,7 @@ Use the following variables to define the SQL Server image to use for the virtua
    Get-AzVMImageSku -Location $Location -Publisher 'MicrosoftSQLServer' -Offer $OfferName | Select Skus
    ```
 
-1. For this tutorial, use the SQL Server 2017 Developer edition (**SQLDEV**). The Developer edition is freely licensed for testing and development, and you only pay for the cost of running the VM.
+1. For this tutorial, use the SQL Server 2022 Developer edition (**SQLDEV**). The Developer edition is freely licensed for testing and development, and you only pay for the cost of running the VM.
 
    ```powershell
    $Sku = "SQLDEV"

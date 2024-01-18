@@ -80,7 +80,7 @@ A user that is logged into a managed instance must be authorized to access and q
 
 ### [Managed identity](#tab/managed-identity)
 
-A **managed identity** is a feature of Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) that provides Azure services - like Azure SQL Managed Instance - with an identity managed in Microsoft Entra ID. This identity can be used to authorize requests for data access in nonpublic storage accounts. Services like Azure SQL Managed Instance have a system-assigned managed identity, and can also have one or more user-assigned managed identities. You can use either system-assigned managed identities or user-assigned managed identities for data virtualization with Azure SQL Managed Instance.
+A **managed identity** is a feature of Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) that provides Azure services - like Azure SQL Managed Instance - with an identity managed in Microsoft Entra ID. This identity can be used to authorize requests for data access in nonpublic storage accounts. Services like Azure SQL Managed Instance have a system-assigned managed identity, and can also have one or more user-assigned managed identities. You can use either system-assigned managed identities or user-assigned managed identities for data virtualization with Azure SQL Managed Instance.
 
 The Azure storage administrator must first grant permissions to the managed identity to access the data. Grant permissions to the system-assigned managed identity of the managed instance the same way permissions are granted to any other Microsoft Entra user. For example:
 

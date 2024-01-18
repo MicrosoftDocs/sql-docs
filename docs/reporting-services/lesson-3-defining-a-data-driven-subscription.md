@@ -1,5 +1,5 @@
 ---
-title: "Lesson 3: Defining a Data-Driven Subscription"
+title: "Lesson 3: Define a data-driven subscription"
 description: Use the Reporting Services web portal's data-driven subscription pages to connect to a subscription data source and build a query that retrieves subscription data.
 author: maggiesMSFT
 ms.author: maggies
@@ -9,31 +9,31 @@ ms.subservice: reporting-services
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
-# Lesson 3: Defining a Data-Driven Subscription
-In this [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] tutorial lesson, you use the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] web portal's data-driven subscription pages to connect to a subscription data source, build a query that retrieves subscription data, and map the result set to report and delivery options.  
+# Lesson 3: Define a data-driven subscription
+In this [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] tutorial lesson, you use the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] web portal's data-driven subscription pages to connect to a subscription data source. You then build a query that retrieves subscription data, and you map the result set to report and delivery options.  
   
 > [!NOTE]  
 > Before you start, verify that **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent** service is running. If it is not running, you cannot save the subscription.  One method for verification is to open the [SQL Server Configuration Manager](../relational-databases/sql-server-configuration-manager.md).
-This lesson assumes you completed Lesson 1 and Lesson 2 and that the report data source uses stored credentials.  For more information, see [Lesson 2: Modifying the Report Data Source Properties](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
+This lesson assumes you completed Lesson 1 and Lesson 2 and that the report data source uses stored credentials.  For more information, see [Lesson 2: Modifying the report data Source properties](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
   
-## <a name="bkmk_startwizard"></a>Start the Data-Driven Subscription Wizard  
+## <a name="bkmk_startwizard"></a>Start the data-driven Subscription Wizard  
   
-1.  In [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] web portal, click **Home**, and navigate to the folder containing the **Sales Orders** report.  
+1.  In [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] web portal, select **Home**, and navigate to the folder containing the **Sales Orders** report.  
   
-2.  In the context menu ![ssrs_tutorial_datadriven_reportmenu](../reporting-services/media/ssrs-tutorial-datadriven-reportmenu.png) of the report, click **Manage**, and then click **Subscriptions** in the left pane.  
+2.  In the context menu :::image type="icon" source="../reporting-services/media/ssrs-tutorial-datadriven-reportmenu.png"::: of the report, select **Manage**, and then choose **Subscriptions** in the left pane.  
   
-3. Click **+ New Subscription**. If you do not see this button, you do not have Content Manager permissions.
+3. Select **+ New Subscription**. If you don't see this button, you don't have Content Manager permissions.
   
 ## Define a description  
 1.  Type **Sales Order delivery** in description.
 
 ## Type
-1.  click **Data-driven subscription**..  
+1. Select **Data-driven subscription**. 
 
 ## Schedule
-1. In the schedule section click **Report-specific schedule**.
-2. Click **Edit schedule**.
-3. In **Schedule Details**, click **Once**.  
+1. In the schedule section, select **Report-specific schedule**.
+2. Select **Edit schedule**.
+3. In **Schedule Details**, select **Once**.  
 4. Specify a start time that is a few minutes ahead of the current time.  
 5. Specify the **Start and end dates**.
 6. Select **Apply**.
@@ -42,7 +42,7 @@ This lesson assumes you completed Lesson 1 and Lesson 2 and that the report data
 1.  In the Destination section, select **Windows File Share** for the method of delivery.  
 
 ## Dataset
-1. click **Edit Dataset**.
+1. Select **Edit Dataset**.
 2. Select **A custom data source**.
 3. Select **Microsoft SQL Server** as the data source **Connection** type.
 4. In Connection string, type the following connection string. *Subscribers* is the database you created in lesson 1. 
@@ -68,9 +68,9 @@ This lesson assumes you completed Lesson 1 and Lesson 2 and that the report data
   
 2.  Specify a time-out of 30 seconds.  
   
-3.  Click **Validate query**, and then click **Apply**.
+3.  Select **Validate query**, and then choose **Apply**.
 
-## Delivery Options
+## Delivery options
 Fill in the following values:
 
 Parameter  |Source of value  | Value/field  
@@ -85,25 +85,26 @@ Parameter  |Source of value  | Value/field
 **Use file share account** | Enter value | False
 
 ## Report parameters
- 1. In the **OrderNumber** field , select **Get value from dataset**. In Value, select **Order**. 
+ 1. In the **OrderNumber** field, select **Get value from dataset**. In Value, select **Order**. 
  2. Select **Create Subscription**.
    
 ## Next steps  
-When the subscription runs, four report files will be delivered to the file share you specified, one for each order in the *Subscribers* data source. Each delivery should be unique in terms of data (the data should be order-specific), rendering format, and file format. You can open each report from the shared folder to verify that each version is customized based on the subscription options you defined.  
+When the subscription runs, it delivers the four report files to the file share you specified, one for each order in the *Subscribers* data source. Each delivery should be unique in terms of data (the data should be order-specific), rendering format, and file format. You can open each report from the shared folder to verify that each version is customized based on the subscription options you defined.  
+
+:::image type="content" source="../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif" alt-text="Screenshot of the list of files created by the subscription.":::
   
-![List of files created by the subscription](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "List of files created by the subscription")  
-  
-The subscription page in the web portal will contain the **Last Run** date and **Status** of the subscription. 
+The subscription page in the web portal contains the **Last Run** date and **Status** of the subscription. 
 > [!NOTE]
 > Refresh the page after the subscription runs to see the updated information.  
-    
-![Subscription results in the web portal](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "Subscription results in the web portal")  
+
+:::image type="content" source="../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png" alt-text="Screenshot of the subscription information in the portal.":::
   
-This step concludes the tutorial "Define a Data-Driven Subscription".   
+This step concludes the tutorial "Define a Data-Driven Subscription."
   
-## See Also  
-[Subscriptions and Delivery &#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
-[Data-Driven Subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  
-[Create, Modify, and Delete Data-Driven Subscriptions](../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
-[Use an External Data Source for Subscriber Data &#40;Data-Driven Subscription&#41;](../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
+## Related content
+
+- [Subscriptions and delivery &#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+- [Data-driven subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  
+- [Create, modify, and delete data-driven subscriptions](../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
+- [Use an external data source for subscriber data &#40;data-driven subscription&#41;](../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   

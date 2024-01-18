@@ -115,7 +115,7 @@ Now, review the text in **Messages** to see why the output is different.
 
 **Results - Example 1**
 
-```sql
+```output
 STDOUT message(s) from external script:
 'data.frame':	3 obs. of  1 variable:
 $ mytextvariable: Factor w/ 3 levels " ","hello","world": 2 1 3
@@ -123,7 +123,7 @@ $ mytextvariable: Factor w/ 3 levels " ","hello","world": 2 1 3
 
 **Results - Example 2**
 
-```sql
+```output
 STDOUT message(s) from external script:
 'data.frame':	1 obs. of  3 variables:
 $ c..hello..: Factor w/ 1 level "hello": 1

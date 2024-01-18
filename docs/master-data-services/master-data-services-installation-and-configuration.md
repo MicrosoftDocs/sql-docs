@@ -130,7 +130,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssnovers
 
     >For [!INCLUDE[sqlv15](../includes/sssql19-md.md)], to connect to the managed instance, use one of the following authentication types:
     >
-    >- Authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)): **Current User – Active Directory Integrated**
+    >- Authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)): **Current User – Active Directory Integrated**
     >- SQL Server Authentication: **SQL Server Account**.
     >
     >In SQL Managed Instance, the user must be a member of the `sysadmin` fixed server role.

@@ -7090,20 +7090,20 @@ items:
     items:
     - name: What is PolyBase?
       href: relational-databases/polybase/polybase-guide.md
-    - name: Get started with PolyBase on SQL Server 2022
+    - name: Get started with PolyBase
       href: relational-databases/polybase/polybase-get-started.md?view=sql-server-ver16&preserve-view=true
     - name: Concepts
       items:
       - name: Query scenarios
         href: relational-databases/polybase/polybase-queries.md
+      - name: PolyBase performance 
+        href: relational-databases/polybase/polybase-performance.md        
       - name: Pushdown computation
         href: relational-databases/polybase/polybase-pushdown-computation.md
       - name: How to tell if external pushdown occurred
         href: relational-databases/polybase/polybase-how-to-tell-pushdown-computation.md
       - name: Scale-out groups
         href: relational-databases/polybase/polybase-scale-out-groups.md
-      - name: PolyBase performance 
-        href: relational-databases/polybase/polybase-performance.md
     - name: How-to guides
       items:
       - name: Install

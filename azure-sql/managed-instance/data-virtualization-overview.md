@@ -57,7 +57,7 @@ Use the following endpoints to query the Bing COVID-19 data sets:
 - Parquet: `abs://public@pandemicdatalake.blob.core.windows.net/curated/covid-19/bing_covid-19_data/latest/bing_covid-19_data.parquet`
 - CSV: `abs://public@pandemicdatalake.blob.core.windows.net/curated/covid-19/bing_covid-19_data/latest/bing_covid-19_data.csv`
 
-For a quick start, run this simple T-SQL query to get first insights into the data set. This query uses [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) to query a file stored in a publicly available storage account:
+For a quick start, run this simple T-SQL query to get first insights into the data set. This query uses [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql?view=azuresqldb-mi-current&preserve-view=true) to query a file stored in a publicly available storage account:
 
 ```sql
 --Quick query on a file stored in a publicly available storage account:

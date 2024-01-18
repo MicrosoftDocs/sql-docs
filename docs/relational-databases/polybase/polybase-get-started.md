@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 # Get started with PolyBase in SQL Server 2022
 
-[!INCLUDE [sqlserver2016-windows-2017-linux-and-later](../../includes/applies-to-version\sqlserver2016-windows-2017-linux-and-later.md)]
+[!INCLUDE [sqlserver2016-windows-2017-linux-and-later](../../includes/applies-to-version/sqlserver2016-windows-2017-linux-and-later.md)]
 
 This article guides you through a tutorial of working with multiple folders and files with PolyBase in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. This set of tutorial queries demonstrates various features of PolyBase.
 

@@ -1,6 +1,6 @@
 ---
-title: "Back up and restore operations for Reporting Services"
-description: "Back up and Restore Operations for Reporting Services"
+title: "Backup and restore operations for Reporting Services"
+description: "Backup and Restore Operations for Reporting Services"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 12/08/2021

@@ -84,14 +84,11 @@ SELECT * FROM sys.symmetric_keys;
 GO
 ```
 
-## See also
+## Related content
 
 - [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)
 - [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
 - [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)
-
-## Next steps
-
 - [BACKUP MASTER KEY](../../t-sql/statements/backup-master-key-transact-sql.md)
 - [BACKUP SERVICE MASTER KEY](../../relational-databases/security/encryption/back-up-the-service-master-key.md)
 - [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)

@@ -23,6 +23,7 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 
 | Issue | Date discovered | Status | Date resolved |
 | --- | --- | --- | --- |
+| [Temporary instance inaccessibility using the failover group listener during scaling operation](#temporary-instance-inaccessibility-using-the-failover-group-listener-during-scaling-operation) | Jan 2024 | No resolution | |
 | [The event_file target of the system_health event session is not accessible](#the-event_file-target-of-the-system_health-event-session-is-not-accessible) | Dec 2023 | Has Workaround | |
 | [Procedure sp_send_dbmail may fail when @query parameter is used on Nov22FW enabled managed instances](#procedure-sp_send_dbmail-may-fail-when-query-parameter-is-used-on-nov22fw-enabled-managed-instances) | Dec 2023 | Has Workaround | |
 | [Increased number of system logins used for transactional replication](#increased-number-of-system-logins-used-for-transactional-replication) | Dec 2022 | No resolution | |
@@ -315,6 +316,14 @@ The `tempdb` database is always split into 12 data files, and the file structure
 ### Error logs aren't persisted
 
 Error logs that are available in SQL Managed Instance aren't persisted, and their size isn't included in the maximum storage limit. Error logs might be automatically erased if failover occurs. There might be gaps in the error log history because SQL Managed Instance was moved several times on several virtual machines.
+
+### Temporary instance inaccessibility using the failover group listener during scaling operation
+
+Scaling managed instance sometimes requires moving the instance to a different virtual cluster, along with the associated service-maintained DNS records. If the managed instance participates in a failover group, the DNS records corresponding to failover group read-write listener (resolving to the current primary instance) and read-only listener (resolving to the secondary instance) are moved to the new virtual cluster.
+
+In the current scaling operation design, the listener DNS records are removed from the originating virtual cluster before the managed instance itself is fully migrated to the new virtual cluster, which in some situations can lead to prolonged time during which the instance's IP address can't be resolved using the listener. During this time, a SQL client attempting to access the instance being scaled using the listener endpoint can expect login failures with the following error message: "**Error 40532**: Cannot open server "xxx.xxx.xxx.xxx" requested by the login. The login failed. (Microsoft SQL Server, Error: 40532)".
+
+The issue will be addressed through scaling operation redesign.
 
 ## Resolved
 

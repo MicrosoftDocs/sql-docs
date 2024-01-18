@@ -1,11 +1,11 @@
 ---
 title: Create server with Microsoft Entra-only authentication enabled
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
-description: This article guides you through creating an Azure SQL logical server or managed instance with Microsoft Entra-only authentication enabled, which disables connectivity using SQL Authentication.
+description: This article guides you through creating an Azure SQL logical server or managed instance with Microsoft Entra-only authentication enabled, which disables connectivity using SQL authentication.
 author: nofield
 ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 10/24/2023
+ms.date: 01/18/2024
 ms.service: sql-db-mi
 ms.subservice: security
 ms.custom: devx-track-azurepowershell, devx-track-azurecli
@@ -16,7 +16,6 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 # Create server with Microsoft Entra-only authentication enabled in Azure SQL
 
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
-
 
 This how-to guide outlines the steps to create a [logical server](logical-servers.md) for Azure SQL Database or an [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md) with [Microsoft Entra-only authentication](authentication-azure-ad-only-authentication.md) enabled during provisioning. The Microsoft Entra-only authentication feature prevents users from connecting to the server or managed instance using SQL authentication, and only allows connections authenticated with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)).
 
@@ -93,7 +92,7 @@ In our examples, we're enabling Microsoft Entra-only authentication during serve
 
 The Azure CLI command `az sql server create` is used to provision a new logical server. The below command will provision a new server with Microsoft Entra-only authentication enabled.
 
-The server SQL Administrator login will be automatically created and the password will be set to a random password. Since SQL Authentication connectivity is disabled with this server creation, the SQL Administrator login won't be used.
+The server SQL administrator will be automatically created and the password will be set to a random password. Since SQL authentication connectivity is disabled with this server creation, the SQL administrator login won't be used.
 
 The server Microsoft Entra admin will be the account you set for `<MSEntraAccount>`, and can be used to manage the server.
 
@@ -126,7 +125,7 @@ az sql server show --name <ServerName> --resource-group <ResourceGroupName> --ex
 
 The PowerShell command `New-AzSqlServer` is used to provision a new logical server. The below command will provision a new server with Microsoft Entra-only authentication enabled. 
 
-The server SQL Administrator login will be automatically created and the password will be set to a random password. Since SQL Authentication connectivity is disabled with this server creation, the SQL Administrator login won't be used.
+The server SQL administrator will be automatically created and the password will be set to a random password. Since SQL authentication connectivity is disabled with this server creation, the SQL administrator login won't be used.
 
 The server Microsoft Entra admin will be the account you set for `<MSEntraAccount>`, and can be used to manage the server.
 
@@ -163,7 +162,7 @@ For more information, see [New-AzSqlServer](/powershell/module/az.sql/new-azsqls
 
 The [Servers - Create Or Update](/rest/api/sql/servers/create-or-update) REST API can be used to create a logical server with Microsoft Entra-only authentication enabled during provisioning. 
 
-The script below will provision a logical server, set the Microsoft Entra admin as `<MSEntraAccount>`, and enable Microsoft Entra-only authentication. The server SQL Administrator login will also be created automatically and the password will be set to a random password. Since SQL Authentication connectivity is disabled with this provisioning, the SQL Administrator login won't be used.
+The script below will provision a logical server, set the Microsoft Entra admin as `<MSEntraAccount>`, and enable Microsoft Entra-only authentication. The server SQL administrator will also be created automatically and the password will be set to a random password. Since SQL authentication connectivity is disabled with this provisioning, the SQL administrator login won't be used.
 
 The Microsoft Entra admin, `<MSEntraAccount>` can be used to manage the server when the provisioning is complete.
 
@@ -381,7 +380,7 @@ The PowerShell command `New-AzSqlInstance` is used to provision a new Azure SQL 
 > [!NOTE]
 > The script requires a virtual network and subnet be created as a prerequisite.
 
-The managed instance SQL Administrator login will be automatically created and the password will be set to a random password. Since SQL Authentication connectivity is disabled with this provision, the SQL Administrator login won't be used.
+The managed instance SQL administrator will be automatically created and the password will be set to a random password. Since SQL authentication connectivity is disabled with this provision, the SQL administrator login won't be used.
 
 The Microsoft Entra admin will be the account you set for `<MSEntraAccount>`, and can be used to manage the instance when the provisioning is complete.
 
@@ -420,7 +419,7 @@ The [SQL Managed Instances - Create Or Update](/rest/api/sql/managed-instances/c
 > [!NOTE]
 > The script requires a virtual network and subnet be created as a prerequisite.
 
-The script below will provision a managed instance, set the Microsoft Entra admin as `<MSEntraAccount>`, and enable Microsoft Entra-only authentication. The instance SQL Administrator login will also be created automatically and the password will be set to a random password. Since SQL Authentication connectivity is disabled with this provisioning, the SQL Administrator login won't be used.
+The script below will provision a managed instance, set the Microsoft Entra admin as `<MSEntraAccount>`, and enable Microsoft Entra-only authentication. The instance SQL administrator will also be created automatically and the password will be set to a random password. Since SQL authentication connectivity is disabled with this provisioning, the SQL administrator login won't be used.
 
 The Microsoft Entra admin, `<MSEntraAccount>` can be used to manage the instance when the provisioning is complete.
 

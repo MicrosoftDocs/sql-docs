@@ -25,7 +25,7 @@ Before using PolyBase in this tutorial, you must:
 
 1. [Install PolyBase on Windows](polybase-installation.md) or [install PolyBase on Linux](polybase-linux-setup.md).
 1. [Enable PolyBase in sp_configure](polybase-installation.md#enable) if necessary.
-1. Allow external network access to access publicly-available Azure Blob storage at `pandemicdatalake.blob.core.windows.net` and `azureopendatastorage.blob.core.windows.net`.
+1. Allow external network access to access publicly available Azure Blob storage at `pandemicdatalake.blob.core.windows.net` and `azureopendatastorage.blob.core.windows.net`.
 
 ## Sample data sets
 

@@ -7277,6 +7277,10 @@ items:
       href: relational-databases/synonyms/create-synonyms.md
 - name: Reporting & Analytics
   items:
+  - name: Microsoft Fabric mirrored SQL Server and Azure SQL Database
+    items:
+    - name: Mirrored SQL Server and Azure SQL Databases to Microsoft Fabric
+      href: sql-server/fabric-mirrored-database/fabric-mirrored-databases.md
   - name: Azure Synapse Link for SQL
     items: 
     - name: Azure Synapse Link for SQL Server >
@@ -13558,6 +13562,9 @@ items:
       items:
       - name: sys.dm_db_objects_disabled_on_compatibility_level_change
         href: relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md
+    - name: Microsoft Fabric mirrored databases
+      items:
+
     - name: Azure Synapse Link for SQL
       items:
       - name: sys.dm_change_feed_errors

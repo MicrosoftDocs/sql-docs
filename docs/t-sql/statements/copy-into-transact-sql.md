@@ -526,7 +526,11 @@ Follow these steps to work around this issue by re-registering the workspace's m
    Select-AzSubscription -SubscriptionId <subscriptionId>
    Set-AzSqlServer -ResourceGroupName your-database-server-resourceGroup -ServerName your-SQL-servername -AssignIdentity
    ```
-   
+## Resolving HdfsBridge::recordReaderFillBuffer Errors
+You may experience the error HdfsBridge::recordReaderFillBuffer if types are mismatched between Parquet and SQL or if you have unsupported Parquet data types.
+Check this link to verify the that column names, order, and datatypes are correctly mapped: [Type Mapping for Parquet](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/develop-openrowset#type-mapping-for-parquet) 
+a quick way to resolve these or further troubleshoot is to load with AUTO_CREATE_TABLE = ON or create a table with all data types set to NVARCHAR. 
+
 ## Next steps
 
 [Loading overview with [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](/azure/sql-data-warehouse/design-elt-data-loading)

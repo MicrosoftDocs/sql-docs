@@ -526,6 +526,7 @@ Follow these steps to work around this issue by re-registering the workspace's m
    Select-AzSubscription -SubscriptionId <subscriptionId>
    Set-AzSqlServer -ResourceGroupName your-database-server-resourceGroup -ServerName your-SQL-servername -AssignIdentity
    ```
+
 ## Resolve HdfsBridge::recordReaderFillBuffer errors
 
 You can experience the error `HdfsBridge::recordReaderFillBuffer` if types are mismatched between Parquet and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], or if you have unsupported Parquet data types.

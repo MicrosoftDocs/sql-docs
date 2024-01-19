@@ -309,7 +309,8 @@ The certificate used to protect the DEK should never be dropped from the `master
 
 A message like the following one (error 33091) is raised after executing `CREATE DATABASE ENCRYPTION KEY` if the certificate used in the command hasn't been backed up already.
 
-> Warning: The certificate used for encrypting the database encryption key has not been backed up. You should immediately back up the certificate and the private key associated with the certificate. If the certificate ever becomes unavailable or if you must restore or attach the database on another server, you must have backups of both the certificate and the private key or you will not be able to open the database.
+> [!Warning]
+> The certificate used for encrypting the database encryption key has not been backed up. You should immediately back up the certificate and the private key associated with the certificate. If the certificate ever becomes unavailable or if you must restore or attach the database on another server, you must have backups of both the certificate and the private key or you will not be able to open the database.
 
 The following query can be used to identify the certificates used in TDE that haven't been backed up from the time it was created.
 

@@ -6757,9 +6757,16 @@ items:
         href: relational-databases/performance/intelligent-query-processing.md
       - name: Intelligent Query Processing details
         href: relational-databases/performance/intelligent-query-processing-details.md
-      - name: Query Processing feedback features
-        href: relational-databases/performance/intelligent-query-processing-feedback.md
-      - name: Parameter Sensitive Plan Optimization
+      - name: Memory grant feedback
+        displayName: Memory grant feedback
+        href: relational-databases/performance/intelligent-query-processing-memory-grant-feedback.md
+      - name: Degree of parallelism (DOP) feedback
+        displayName: DOP feedback
+        href: relational-databases/performance/intelligent-query-processing-degree-parallelism-feedback.md
+      - name: Cardinality estimation (CE) feedback
+        displayName: CE feedback
+        href: relational-databases/performance/intelligent-query-processing-cardinality-estimation-feedback.md        
+      - name: Parameter Sensitive Plan optimization
         href: relational-databases/performance/parameter-sensitive-plan-optimization.md
       - name: Performance Center
         href: relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md

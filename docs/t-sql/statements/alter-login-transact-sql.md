@@ -28,6 +28,9 @@ Changes the properties of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
+
+
 [!INCLUDE [select-product](../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
@@ -502,11 +505,10 @@ ALTER LOGIN login_name
   | DROP CREDENTIAL credential_name
 ```
 
-> [!NOTE]
-> The Azure AD admin for managed instance functionality after creation has changed. For more information, see [New Azure AD admin functionality for MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 ```syntaxsql
--- Syntax for Azure SQL Managed Instance using Azure AD logins
+-- Syntax for Azure SQL Managed Instance using Microsoft Entra logins
+
 
 ALTER LOGIN login_name
   {
@@ -525,10 +527,12 @@ ALTER LOGIN login_name
 
 ## Arguments
 
-### Arguments applicable to SQL and Azure AD logins
+<a name='arguments-applicable-to-sql-and-azure-ad-logins'></a>
+
+### Arguments applicable to SQL and Microsoft Entra logins
 
 *login_name*
-Specifies the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login that is being changed. Azure AD logins must be specified as user@domain. For example, john.smith@contoso.com, or as the Azure AD group or application name. For Azure AD logins, the *login_name* must correspond to an existing Azure AD login created in the master database.
+Specifies the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login that is being changed. Microsoft Entra logins must be specified as user@domain. For example, john.smith@contoso.com, or as the Microsoft Entra group or application name. For Microsoft Entra logins, the *login_name* must correspond to an existing Microsoft Entra login created in the master database.
 
 ENABLE | DISABLE
 Enables or disables this login. Disabling a login does not affect the behavior of logins that are already connected. (Use the `KILL` statement to terminate an existing connection.) Disabled logins retain their permissions and can still be impersonated.
@@ -542,7 +546,7 @@ Specifies a default language to be assigned to the login. The default language f
 ### Arguments applicable only to SQL logins
 
 PASSWORD **='**_password_**'**
-Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins. Specifies the password for the login that is being changed. Passwords are case-sensitive. Passwords also do not apply when used with external logins, like Azure AD logins.
+Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins. Specifies the password for the login that is being changed. Passwords are case-sensitive. Passwords also do not apply when used with external logins, like Microsoft Entra logins.
 
 Continuously active connections to SQL Database require reauthorization (performed by the Database Engine) at least every 10 hours. The Database Engine attempts reauthorization using the originally submitted password and no user input is required. For performance reasons, when a password is reset in SQL Database, the connection will not be re-authenticated, even if the connection is reset due to connection pooling. This is different from the behavior of on-premises SQL Server. If the password has been changed since the connection was initially authorized, the connection must be terminated and a new connection made using the new password. A user with the KILL DATABASE CONNECTION permission can explicitly terminate a connection to SQL Database by using the KILL command. For more information, see [KILL](../../t-sql/language-elements/kill-transact-sql.md).
 
@@ -623,7 +627,7 @@ If the login that is being changed is a member of the **sysadmin** fixed server 
 
 A principal can change the password, default language, and default database for its own login.
 
-Only a SQL principal with `sysadmin` privileges can execute an ALTER LOGIN command against an Azure AD login.
+Only a SQL principal with `sysadmin` privileges can execute an ALTER LOGIN command against a Microsoft Entra login.
 
 ## Examples
 
@@ -703,9 +707,11 @@ PASSWORD = 0x01000CF35567C60BFB41EBDE4CF700A985A13D773D6B45B90900 HASHED ;
 GO
 ```
 
-### H. Disabling the login of an Azure AD user
+<a name='h-disabling-the-login-of-an-azure-ad-user'></a>
 
-The following example disables the login of an Azure AD user, joe@contoso.com.
+### H. Disabling the login of a Microsoft Entra user
+
+The following example disables the login of a Microsoft Entra user, joe@contoso.com.
 
 ```sql
 ALTER LOGIN [joe@contoso.com] DISABLE

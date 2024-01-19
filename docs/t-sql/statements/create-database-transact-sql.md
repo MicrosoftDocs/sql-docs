@@ -1189,10 +1189,10 @@ For more information, see [Create a copy of an Azure SQL database using Transact
 
 ## Permissions
 
-To create a database, the user login must be one of the following principals:
+To create a database, the login must be one of the following principals:
 
 - The server-level principal login
-- The Azure AD administrator for the local Azure SQL Server
+- The Microsoft Entra administrator for the [logical server in Azure](/azure/azure-sql/database/logical-servers)
 - A login that is a member of the `dbmanager` database role
 
 **Additional requirements for using `CREATE DATABASE ... AS COPY OF` syntax:** The login executing the statement on the local server must also be at least the `db_owner` on the source server. If the login is based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication, the login executing the statement on the local server must have a matching login on the source [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server, with an identical name and password.
@@ -1382,7 +1382,7 @@ The following are `CREATE DATABASE` limitations:
 To create a database, a login must be one of the following:
 
 - The server-level principal login
-- The Azure AD administrator for the local Azure SQL Server
+- The Microsoft Entra administrator for the for the [logical server in Azure](/azure/azure-sql/database/logical-servers)
 - A login that is a member of the `dbcreator` database role
 
 ## Examples

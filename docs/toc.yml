@@ -1247,23 +1247,23 @@ items:
     items:
       - name: Overview
         href: relational-databases/indexes/indexes.md
-      - name: Heaps (Tables without Clustered Indexes)
+      - name: Heaps (tables without a clustered index)
         href: relational-databases/indexes/heaps-tables-without-clustered-indexes.md
-      - name: Clustered & Nonclustered Indexes
+      - name: Clustered & nonclustered indexes
         items:
         - name: Described
           href: relational-databases/indexes/clustered-and-nonclustered-indexes-described.md
         - name: Create
           items:
-          - name: Clustered Indexes
+          - name: Clustered index
             href: relational-databases/indexes/create-clustered-indexes.md
-          - name: Nonclustered Indexes
+          - name: Nonclustered index
             href: relational-databases/indexes/create-nonclustered-indexes.md
-          - name: Unique Indexes
+          - name: Unique index
             href: relational-databases/indexes/create-unique-indexes.md
-          - name: Filtered Indexes
+          - name: Filtered index
             href: relational-databases/indexes/create-filtered-indexes.md
-          - name: With Included Columns
+          - name: With included columns
             href: relational-databases/indexes/create-indexes-with-included-columns.md
         - name: Delete
           href: relational-databases/indexes/delete-an-index.md

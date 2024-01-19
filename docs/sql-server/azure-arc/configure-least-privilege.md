@@ -50,7 +50,7 @@ The configuration with least privilege is not currently supported on Linux.
 To complete the steps in this article, you need the following tools:
 
 - [Azure CLI](/cli/azure/)
-- [`arcdata` Azure CLI extension](/azure/azure-arc/data/install-arcdata-extension) version `1.5.8` or later
+- [`arcdata` Azure CLI extension](/azure/azure-arc/data/install-arcdata-extension) version `1.5.9` or later
 - Azure extension for SQL server version `1.1.2504.99` or later
 
 ## Enable least privilege

@@ -319,7 +319,7 @@ Error logs that are available in SQL Managed Instance aren't persisted, and thei
 
 ### Temporary instance inaccessibility using the failover group listener during scaling operation
 
-Scaling managed instance sometimes requires moving the instance to a different virtual cluster, along with the associated service-maintained DNS records. If the managed instance participates in a failover group, the DNS records corresponding to failover group read-write listener (resolving to the current primary instance) and read-only listener (resolving to the secondary instance) are moved to the new virtual cluster.
+Scaling managed instance sometimes requires moving the instance to a different virtual cluster, along with the associated service-maintained DNS records. If the managed instance participates in a failover group, the DNS record corresponding to its associated failover group listener (read-write listener, if the instance is the current geo-primary, i.e. read-only listener, if the instance is the current geo-secondary) is moved to the new virtual cluster.
 
 In the current scaling operation design, the listener DNS records are removed from the originating virtual cluster before the managed instance itself is fully migrated to the new virtual cluster, which in some situations can lead to prolonged time during which the instance's IP address can't be resolved using the listener. During this time, a SQL client attempting to access the instance being scaled using the listener endpoint can expect login failures with the following error message: "**Error 40532**: Cannot open server "xxx.xxx.xxx.xxx" requested by the login. The login failed. (Microsoft SQL Server, Error: 40532)".
 

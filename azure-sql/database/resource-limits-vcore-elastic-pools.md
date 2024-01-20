@@ -878,7 +878,7 @@ The following table covers these SLOs: `HS_MOPRMS_64` and `HS_MOPRMS_80`:
 | In-memory OLTP storage (GB) | N/A | N/A |
 | Max data size per pool (TB) | 100 | 100 |
 | `tempdb` max data size (GB) | 2,048 | 2,560 | 
-| Max local SSD IOPS per pool <sup>2</sup> | 368,640 | 460,800 | 
+| Max local SSD IOPS per pool <sup>2</sup> | 368,640 | 409,600 |
 | Max log rate per pool (MBps) | 125 | 125 | 
 | Local read IO latency<sup>3</sup> | 1-2 ms | 1-2 ms | 
 | Remote read IO latency<sup>3</sup> | 1-5 ms | 1-5 ms | 

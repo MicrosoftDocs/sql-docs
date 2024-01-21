@@ -51,7 +51,7 @@ helpviewer_keywords:
   
  You can use an expression to set various Execute Process task properties.  
   
- When you use the **StandardInputVariable** property to configure the Execute Process task to provide input, call the **Console.ReadLine** method from the application to read the input. For more information, see [Console.ReadLine Method](/dotnet/api/system.console.readline)the topic, , in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Class Library.  
+ When you use the **StandardInputVariable** property to configure the Execute Process task to provide input, call the **Console.ReadLine** method from the application to read the input. For more information, see [Console.ReadLine Method](/dotnet/api/system.console.readline) topic in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Class Library.  
   
  When you use the **Arguments** property to configure the Execute Process task to provide input, do one of the following steps to obtain the arguments:  
   

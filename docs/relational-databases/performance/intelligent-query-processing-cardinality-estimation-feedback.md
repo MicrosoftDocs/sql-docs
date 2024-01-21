@@ -160,17 +160,31 @@ Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Cumulative Up
 
 This issue does not affect all workloads, and depends on the number of different plans that have been generated as well as the number of plans that were eligible for the CE Feedback feature to engage. During the period of time that CE Feedback is analyzing plan operators where significant model misestimations occurred, there is a scenario in which during this analysis phase, a plan that was being referenced can become dereferenced in memory without allowing the plan to subsequently be removed from memory by way of the normal Least Recently Used (LRU) algorithm. The LRU mechanism one way that SQL Server enforces plan eviction policies. SQL Server will also remove plans from memory if the system is under memory pressure. When SQL Server attempts to remove the plans that have been dereferenced improperly, it is unable to remove those plans from the plan cache, which causes the cache to continue to grow. The growing cache might start to cause additional compilations that will ultimately use more CPU and memory. For more information, see [Plan Cache Internals](/previous-versions/tn-archive/cc293624(v=technet.10)).
 
-**Symptom**: The number of plan cache entries for either SQL Plans or Object Plans may increase dramatically over a short period of time to numbers as high as 50,000. If you observe plan cache entries that start to approach this level along with unexpected increases in CPU utilization, your system may be encountering this issue. To monitor the number of plan cache entries that your system is using, the following examples can be used as a point in time view of the number of plan cache entries that exist.
-
-As an example, watching the number of plan cache entries periodically over time is one way to monitor for this phenomenon.
+**Symptom**: The number of plan cache **entries in use** and are marked as **dirty** from either SQL Plans or Object Plans increases over time to 50,000 or more. If you observe plan cache entries that start to approach this level along with unexpected increases in CPU utilization, your system may be encountering this issue. There was a related to a fix that was provided in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Cumulative Update 9. See [KB5030731](troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate9#2499342). The fix attempted to address an issue in which plan cache entries are evicted when the Cardinality Estimation (CE) feedback tries to get the associated profile, which causes a memory corruption. Additional fixes for this issue will be available in an upcomming Cumulative Update.
+To monitor the number of plan cache entries that your system is using, the following examples can be used as a point in time view of the number of plan cache entries that exist. As an example, watching the number of plan cache entries that are marked as dirty, periodically over time is one way to monitor for this phenomenon.
 
 ```sql
-SELECT [name], [type], pages_kb, entries_count
-FROM sys.dm_os_memory_cache_counters
-WHERE [name] IN ( 'SQL Plans' , 'Object Plans');
+SELECT
+  CASE
+    WHEN mce.[name] LIKE 'SQL Plan%' THEN 'SQL Plans'
+    WHEN mce.[name] LIKE 'Object Plan%' THEN 'Object Plans'
+    ELSE '[All other cache stores]'
+  END AS PlanType,
+  COUNT(*) AS [Number of plans marked to be removed]
+FROM sys.dm_os_memory_cache_entries AS mce
+LEFT OUTER JOIN sys.dm_exec_cached_plans AS ecp 
+  ON mce.memory_object_address = ecp.memory_object_address
+WHERE mce.is_dirty = 1
+AND ecp.bucketid is NULL
+GROUP BY
+  CASE
+    WHEN mce.[name] LIKE 'SQL Plan%' THEN 'SQL Plans'
+    WHEN mce.[name] LIKE 'Object Plan%' THEN 'Object Plans'
+    ELSE '[All other cache stores]'
+  END;
 ```
 
-Another set of queries that will also provide the same information as the previous example while also allowing you to observe additional performance metrics. Plan Cache hit ratios will decrease, as well as the number of compilations in relation to the number of batch requests/sec. The following queries can be used to monitor your system over time. Keeping an eye on the **Cache Hit Ratio** (unanticipated dips), the **Cache Object Counts** (increases in the count to levels approaching 50,000 without decreasing) and a lower than expected **Batch Requests/sec** ratio as compared to a rise in **Compilations/sec**.
+Another set of queries that will also provide the same information as the previous example while also allowing you to observe additional performance metrics. Plan Cache hit ratios will decrease, as well as the number of compilations in relation to the number of batch requests/sec. The following queries can be used to monitor your system over time. Keeping an eye on the **Cache Hit Ratio** (unanticipated dips), the **Cache Objects in use** (increases in the count to levels approaching 50,000 without decreasing) and a lower than expected **Batch Requests/sec** ratio as compared to a rise in **Compilations/sec**.
 
 ```sql
 --SQL Plan (Adhoc and Prepared plans)

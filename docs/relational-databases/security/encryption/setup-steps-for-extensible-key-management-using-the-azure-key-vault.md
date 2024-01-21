@@ -120,6 +120,9 @@ You can use the Azure portal to create the key vault and then add a Microsoft En
 
     :::image type="content" source="media/ekm/ekm-part2-add-access-policy.png" alt-text="Screenshot of the Add Access Policy link on the Access policies pane.":::
 
+    > [!NOTE]  
+    > SQL Server Connector for Azure Key Vault doesn't support Azure Key Vault access using RBAC.
+
 1. On the **Add access policy** pane, do the following:
 
    1. In the **Configure from template (optional)** drop-down list, select **Key Management**.
@@ -360,6 +363,7 @@ Download the SQL Server Connector from the [Microsoft Download Center](https://g
 > - There is a breaking change in version 1.0.5.0 in terms of the thumbprint algorithm. You may experience database restore failures after upgrading to 1.0.5.0. For more information, see [KB article 447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
 > - Starting with version 1.0.5.0 (TimeStamp: September 2020), the SQL Server Connector supports filtering messages and network request retry logic.
 > - **Starting with updated version 1.0.5.0 (TimeStamp: November 2020), the SQL Server Connector supports RSA 2048, RSA 3072, RSA-HSM 2048 and RSA-HSM 3072 keys.**
+> - SQL Server Connector supports Azure Key Vault access using Access Policies only and not RBAC.
 
 :::image type="content" source="media/ekm/ekm-connector-install.png" alt-text="Screenshot of the SQL Server Connector installation wizard.":::
 

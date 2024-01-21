@@ -201,6 +201,9 @@ You can scale up or scale down the primary and secondary instance to a different
 
 The sequence is recommended specifically to avoid the problem where the geo-secondary at a lower SKU gets overloaded and must be reseeded during an upgrade or downgrade process.
 
+> [!NOTE]
+> There's a [known issue](doc-changes-updates-known-issues.md#temporary-instance-inaccessibility-using-the-failover-group-listener-during-scaling-operation) which can impact accessibility of the instance being scaled using the associated failover group listener. 
+
 ## Prevent loss of critical data
 
 <!--

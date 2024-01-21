@@ -107,7 +107,7 @@ helpviewer_keywords:
   
 1.  Select the gear icon on the top row of the **Home** page, and then choose **Site Settings** from the menu. 
   
-    :::image type="content" source="../media/ssrsgearmenu.png" alt-text="Screenshot of the Gear icon.":::
+    :::image type="content" source="../media/ssrsgearmenu.png" alt-text="Screenshot of the Gear icon where the Site Settings option is highlighted.":::
 
     > [!TIP]  
     > If you don't see the **Site Settings** option, close and reopen your browser. Browse to web portal with administrative privileges.  

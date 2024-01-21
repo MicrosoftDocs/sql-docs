@@ -40,7 +40,7 @@ ms.custom: updatefrequency5
   
 If a user chooses report parameter values that differ from the default values specified for the cached result set, the dataset query runs actively. In such cases, the cached results aren't used for that query.
   
-## Caching shared datasets  
+## Cache shared datasets  
  To enable caching for a shared dataset, you must select the cache option on the shared dataset. After caching is enabled, the query results for a shared dataset are copied to the cache on first use. If the shared dataset has parameters, each combination of parameters creates a new entry in the cache.  
   
  While the query results for a specific parameter combination are in the cache, each report that is launched for processing and that includes a reference to the shared dataset with those parameter values use the cached data.  

@@ -72,7 +72,7 @@ If the jobs currently in process can't be completed within the allotted time, th
 > [!NOTE]  
 >  Although the Report Server Web service and Report Manager are [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications, neither application responds to scheduled application domain recycling that might be specified in machine.config for [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications hosted in IIS.  
   
-## See Also  
+## Related content
  [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Modify a Reporting Services configuration file &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Configure available memory for report server applications](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)  

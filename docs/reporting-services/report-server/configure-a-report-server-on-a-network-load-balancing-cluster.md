@@ -135,7 +135,7 @@ To run a scale-out deployment on an NLB cluster, you must configure view state v
   
  If you start the Reporting Services Configuration tool after making these changes, the tool might change the `<ReportServerUrl>` settings to the default value. Always keep a backup copy of the configuration files in case you need to replace them with the version that contains the settings you want to use.  
   
-## See Also
+## Related content
 
  [Configure a URL  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Configure a native mode report server scale-out deployment &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   

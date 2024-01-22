@@ -103,7 +103,7 @@ helpviewer_keywords:
   
 3.  Copy and paste the following example into the query window and click **Execute**. The example adds a filegroup with two files to a database. The example creates the filegroup `Test1FG1` in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database and adds two 5-MB files to the filegroup.  
   
- [!code-sql[DatabaseDDL#AlterDatabase2](../../relational-databases/databases/codesnippet/tsql/add-data-or-log-files-to_1.sql)]  
+ :::code language="sql" source="codesnippet/tsql/add-data-or-log-files-to_1.sql":::
   
  For more examples, see [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   

@@ -417,13 +417,13 @@ ALTER INDEX ALL ON HumanResources.Employee
 
 The following example rebuilds a single index on the `Employee` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
-[!code-sql[IndexDDL#AlterIndex1](../../relational-databases/indexes/codesnippet/tsql/reorganize-and-rebuild-i_1.sql)]
+:::code language="sql" source="codesnippet/tsql/reorganize-and-rebuild-i_1.sql":::
 
 #### Rebuild all indexes in a table
 
 The following example rebuilds all indexes associated with the table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database using the `ALL` keyword. Three options are specified.
 
-[!code-sql[IndexDDL#AlterIndex2](../../relational-databases/indexes/codesnippet/tsql/reorganize-and-rebuild-i_2.sql)]
+:::code language="sql" source="codesnippet/tsql/reorganize-and-rebuild-i_2.sql":::
 
 For more information, see [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md).
 

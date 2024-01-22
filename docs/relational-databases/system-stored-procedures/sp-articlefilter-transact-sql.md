@@ -83,7 +83,7 @@ sp_articlefilter [ @publication = ] 'publication'
  If *filter_name* and *filter_clause* are not provided, the previous filter is deleted and the filter ID is set to **0**.  
   
 ## Example  
- [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articlefilter-transac_1.sql)]  
+ :::code language="sql" source="../replication/codesnippet/tsql/sp-articlefilter-transac_1.sql":::
   
 ## Permissions  
  Only members of the **sysadmin** fixed server role or **db_owner** fixed database role can execute **sp_articlefilter**.  

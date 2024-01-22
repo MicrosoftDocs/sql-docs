@@ -125,7 +125,7 @@ Is the action to associate with the event session, where:
 Actions appear in the `sys.dm_xe_objects` view as object_type 'action'.
 
 #### WHERE \<predicate_expression>
-Specifies the predicate expression used to determine if an event should be processed. If \<predicate_expression> is true, the event is processed further by the actions and targets for the session. If \<predicate_expression> is false, the event is dropped by the session before being processed by the actions and targets for the session. Predicate expressions are limited to 3000 characters, which limits string arguments.
+Specifies the predicate expression used to determine if an event should be processed. If \<predicate_expression> is true, the event is processed further by the actions and targets for the session. If \<predicate_expression> is false, the event is dropped, avoiding additional action and target processing. Predicate expressions are limited to 3,000 characters, which limits string arguments.
 
 *event_field_name*
 Is the name of the event field that identifies the predicate source.
@@ -181,7 +181,7 @@ For more information about target types, see [Targets for Extended Events in SQL
 Specifies options to use with the event session.
 
 #### MAX_MEMORY =*size* [ KB | **MB** ]
-Specifies the maximum amount of memory to allocate to the session for event buffering. The default is 4 MB. *size* is a whole number and can be a kilobyte (KB) or a megabyte (MB) value. The maximum amount cannot exceed 2 GB (less than 2048 MB). However, using memory values in GB range is not recommended.
+Specifies the maximum amount of memory to allocate to the session for event buffering. The default is 4 MB. *size* is a whole number and can be a kilobyte (KB) or a megabyte (MB) value. The maximum amount cannot exceed 2 GB (less than 2,048 MB). However, using memory values in GB range is not recommended.
 
 #### EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** | ALLOW_MULTIPLE_EVENT_LOSS | NO_EVENT_LOSS }
 Specifies the event retention mode to use for handling event loss.
@@ -193,10 +193,10 @@ ALLOW_MULTIPLE_EVENT_LOSS
 Full event buffers containing multiple events can be lost from the session. The number of events lost is dependent upon the memory size allocated to the session, the partitioning of the memory, and the size of the events in the buffer. This option minimizes performance impact on the server when event buffers are quickly filled, but large numbers of events can be lost from the session.
 
 NO_EVENT_LOSS
-No event loss is allowed. This option ensures that all events raised will be retained. Using this option forces all tasks that fire events to wait until space is available in an event buffer. This may cause detectable performance issues while the event session is active. User connections may stall while waiting for events to be flushed from the buffer.
+No event loss is allowed. This option ensures that all events raised are retained. Using this option forces all tasks that fire events to wait until space is available in an event buffer. Using NO_EVENT_LOSS can cause detectable performance issues while the event session is active. User connections may stall while waiting for events to be flushed from the buffer.
 
 #### MAX_DISPATCH_LATENCY = { *seconds* SECONDS | **INFINITE** }
-Specifies the amount of time that events will be buffered in memory before being dispatched to event session targets. By default, this value is set to 30 seconds.
+Specifies the amount of time that events are buffered in memory before being dispatched to event session targets. By default, this value is set to 30 seconds.
 
 *seconds* SECONDS
 The time, in seconds, to wait before starting to flush buffers to targets. *seconds* is a whole number. The minimum latency value is 1 second. However, 0 can be used to specify INFINITE latency.
@@ -208,7 +208,7 @@ Flush buffers to targets only when the buffers are full, or when the event sessi
 > MAX_DISPATCH_LATENCY = 0 SECONDS is equivalent to MAX_DISPATCH_LATENCY = INFINITE.
 
 #### MAX_EVENT_SIZE =*size* [ KB | **MB** ]
-Specifies the maximum allowable size for events. MAX_EVENT_SIZE should only be set to allow single events larger than MAX_MEMORY; setting it to less than MAX_MEMORY will raise an error. *size* is a whole number and can be a kilobyte (KB) or a megabyte (MB) value. If *size* is specified in kilobytes, the minimum allowable size is 64 KB. When MAX_EVENT_SIZE is set, two buffers of *size* are created in addition to MAX_MEMORY. This means that the total memory used for event buffering is MAX_MEMORY + 2 * MAX_EVENT_SIZE.
+Specifies the maximum allowable size for events. MAX_EVENT_SIZE should only be set to allow single events larger than MAX_MEMORY; setting it to less than MAX_MEMORY raises an error. *size* is a whole number and can be a kilobyte (KB) or a megabyte (MB) value. If *size* is specified in kilobytes, the minimum allowable size is 64 KB. When MAX_EVENT_SIZE is set, two buffers of *size* are created in addition to MAX_MEMORY, and the total memory used for event buffering is MAX_MEMORY + 2 * MAX_EVENT_SIZE.
 
 #### MEMORY_PARTITION_MODE = { **NONE** | PER_NODE | PER_CPU }
 Specifies the location where event buffers are created.

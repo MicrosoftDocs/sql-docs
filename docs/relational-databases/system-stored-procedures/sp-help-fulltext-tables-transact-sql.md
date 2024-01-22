@@ -64,7 +64,7 @@ The one-part or two-part table name for which the full-text metadata is requeste
 | `TABLE_NAME` | **sysname** | Table name. |
 | `FULLTEXT_KEY_INDEX_NAME` | **sysname** | Index imposing the UNIQUE constraint on the column designated as the unique key column. |
 | `FULLTEXT_KEY_COLID` | **int** | Column ID of the unique index identified by `FULLTEXT_KEY_INDEX_NAME`. |
-| `FULLTEXT_INDEX_ACTIVE` | **int** | Specifies whether columns marked for full-text indexing in this table are eligible for queries:<br /><br />0 = Inactive<br />1 = Active |
+| `FULLTEXT_INDEX_ACTIVE` | **int** | Specifies whether columns marked for full-text indexing in this table are eligible for queries:<br /><br />`0` = Inactive<br />`1` = Active |
 | `FULLTEXT_CATALOG_NAME` | **sysname** | Full-text catalog in which the full-text index data resides. |
 
 ## Permissions

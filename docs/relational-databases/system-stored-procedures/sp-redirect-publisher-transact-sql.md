@@ -54,7 +54,7 @@ The AG listener name associated with the AG that will be the new publisher. *@re
 
 ## Result set
 
-None
+None.
 
 ## Remarks
 

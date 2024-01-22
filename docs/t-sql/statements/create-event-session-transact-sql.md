@@ -3,7 +3,7 @@ title: "CREATE EVENT SESSION (Transact-SQL)"
 description: CREATE EVENT SESSION creates an Extended Events session that identifies the source of the events, the event session targets, and the event session options.
 author: markingmyname
 ms.author: maghan
-ms.date: "03/25/2022"
+ms.date: "01/22/2024"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -158,10 +158,24 @@ Is the target to associate with the event session, where:
 - *target_name* is the target. Targets appear in `sys.dm_xe_objects` view as `object_type` 'target'.
 
 #### SET { *target_parameter_name*= \<value> [, ...*n*] }
-Sets a target parameter. Target parameters appear in the `sys.dm_xe_object_columns` view as `column_type` 'customizable' and `object_name` = *target_name*.
+Sets a target parameter.
+
+To see all target parameters and their descriptions, execute the following query, replacing the `target-name` placeholder with the target name, such as `event_file`, `ring_buffer`, `histogram`, etc.
+
+```sql
+SELECT name AS target_parameter_name,
+       column_value AS default_value,
+       description
+FROM sys.dm_xe_object_columns
+WHERE column_type = 'customizable'
+      AND
+      object_name = 'target-name';
+```
 
 > [!IMPORTANT]
-> If you are using the ring buffer target, we recommend that you set the max_memory target parameter to 2048 kilobytes (KB) to help avoid possible data truncation of the XML output. For more information about when to use the different target types, see [Targets for Extended Events in SQL Server](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md).
+> If you are using the ring buffer target, we recommend that you set the `MAX_MEMORY` *target* parameter (distinct from the `MAX_MEMORY` session parameter) to 1024 kilobytes (KB) or less to help avoid possible data truncation of the XML output.
+
+For more information about target types, see [Targets for Extended Events in SQL Server](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md).
 
 #### WITH ( \<event_session_options> [ ,...*n*] )
 Specifies options to use with the event session.

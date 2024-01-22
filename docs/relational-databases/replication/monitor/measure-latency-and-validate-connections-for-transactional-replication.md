@@ -124,7 +124,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This example posts a tracer token record and uses the returned ID of the posted tracer token to view latency information.  
   
- [!code-sql[HowTo#sp_tracertokens](../../../relational-databases/replication/codesnippet/tsql/measure-latency-and-vali_1.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/measure-latency-and-vali_1.sql":::
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
   

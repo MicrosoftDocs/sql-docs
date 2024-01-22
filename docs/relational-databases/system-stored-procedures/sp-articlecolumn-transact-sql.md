@@ -91,7 +91,7 @@ sp_articlecolumn [ @publication = ] 'publication'
  Only an unsubscribed article can be filtered using **sp_articlecolumn**.  
   
 ## Example  
- [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articlecolumn-transac_1.sql)]  
+ :::code language="sql" source="../replication/codesnippet/tsql/sp-articlecolumn-transac_1.sql":::
   
 ## Permissions  
  Only members of the **sysadmin** fixed server role or **db_owner** fixed database role can execute **sp_articlecolumn**.  

@@ -107,7 +107,7 @@ Only members of the **sysadmin** fixed server role or the **db_owner** fixed dat
 
 ## Examples
 
-[!code-sql [HowTo#sp_AddTranPub](../replication/codesnippet/tsql/sp-addlogreader-agent-tr_1.sql)]
+:::code language="sql" source="../replication/codesnippet/tsql/sp-addlogreader-agent-tr_1.sql":::
 
 ## See also
 

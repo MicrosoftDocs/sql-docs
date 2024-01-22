@@ -174,7 +174,7 @@ The time of day when the filtered data snapshot job stops being scheduled, forma
 
 ## Examples
 
-[!code-sql [HowTo#sp_MergeDynamicPubPlusPartition](../replication/codesnippet/tsql/sp-adddynamicsnapshot-jo_1.sql)]
+:::code language="sql" source="../replication/codesnippet/tsql/sp-adddynamicsnapshot-jo_1.sql":::
 
 ## Permissions
 

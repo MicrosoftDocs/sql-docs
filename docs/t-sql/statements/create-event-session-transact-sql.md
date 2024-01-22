@@ -125,7 +125,7 @@ Is the action to associate with the event session, where:
 Actions appear in the `sys.dm_xe_objects` view as object_type 'action'.
 
 #### WHERE \<predicate_expression>
-Specifies the predicate expression used to determine if an event should be processed. If \<predicate_expression> is true, the event is processed further by the actions and targets for the session. If \<predicate_expression> is false, the event is dropped, avoiding additional action and target processing. Predicate expressions are limited to 3,000 characters, which limits string arguments.
+Specifies the predicate expression used to determine if an event should be processed. If \<predicate_expression> is true, the event is processed further by the actions and targets for the session. If \<predicate_expression> is false, the event is dropped, avoiding additional action and target processing. Predicate expressions are limited to 3,000 characters.
 
 *event_field_name*
 Is the name of the event field that identifies the predicate source.
@@ -181,7 +181,7 @@ For more information about target types, see [Targets for Extended Events in SQL
 Specifies options to use with the event session.
 
 #### MAX_MEMORY =*size* [ KB | **MB** ]
-Specifies the maximum amount of memory to allocate to the session for event buffering. The default is 4 MB. *size* is a whole number and can be a kilobyte (KB) or a megabyte (MB) value. The maximum amount cannot exceed 2 GB (less than 2,048 MB). However, using memory values in GB range is not recommended.
+Specifies the maximum amount of memory to allocate to the session for event buffering. The default is 4 MB. *size* is a whole number and can be a kilobyte (KB) or a megabyte (MB) value. The maximum amount can't exceed 2 GB (less than 2,048 MB). However, using memory values in GB range isn't recommended.
 
 #### EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** | ALLOW_MULTIPLE_EVENT_LOSS | NO_EVENT_LOSS }
 Specifies the event retention mode to use for handling event loss.
@@ -235,7 +235,7 @@ ON
 The event session is started at startup.
 
 **OFF**
-The event session is not started at startup.
+The event session isn't started at startup.
 
 ## Remarks
 

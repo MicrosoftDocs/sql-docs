@@ -20,7 +20,7 @@ Use `sp_pdw_database_encryption_regenerate_system_keys` to rotate the certificat
 
 ## Syntax
 
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
+Syntax for Azure Synapse Analytics and Analytics Platform System (PDW).
 
 ```syntaxsql
 sp_pdw_database_encryption_regenerate_system_keys

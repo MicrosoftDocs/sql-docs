@@ -1247,23 +1247,23 @@ items:
     items:
       - name: Overview
         href: relational-databases/indexes/indexes.md
-      - name: Heaps (Tables without Clustered Indexes)
+      - name: Heaps (tables without a clustered index)
         href: relational-databases/indexes/heaps-tables-without-clustered-indexes.md
-      - name: Clustered & Nonclustered Indexes
+      - name: Clustered & nonclustered indexes
         items:
         - name: Described
           href: relational-databases/indexes/clustered-and-nonclustered-indexes-described.md
         - name: Create
           items:
-          - name: Clustered Indexes
+          - name: Clustered index
             href: relational-databases/indexes/create-clustered-indexes.md
-          - name: Nonclustered Indexes
+          - name: Nonclustered index
             href: relational-databases/indexes/create-nonclustered-indexes.md
-          - name: Unique Indexes
+          - name: Unique index
             href: relational-databases/indexes/create-unique-indexes.md
-          - name: Filtered Indexes
+          - name: Filtered index
             href: relational-databases/indexes/create-filtered-indexes.md
-          - name: With Included Columns
+          - name: With included columns
             href: relational-databases/indexes/create-indexes-with-included-columns.md
         - name: Delete
           href: relational-databases/indexes/delete-an-index.md
@@ -6757,9 +6757,16 @@ items:
         href: relational-databases/performance/intelligent-query-processing.md
       - name: Intelligent Query Processing details
         href: relational-databases/performance/intelligent-query-processing-details.md
-      - name: Query Processing feedback features
-        href: relational-databases/performance/intelligent-query-processing-feedback.md
-      - name: Parameter Sensitive Plan Optimization
+      - name: Memory grant feedback
+        displayName: Memory grant feedback
+        href: relational-databases/performance/intelligent-query-processing-memory-grant-feedback.md
+      - name: Degree of parallelism (DOP) feedback
+        displayName: DOP feedback
+        href: relational-databases/performance/intelligent-query-processing-degree-parallelism-feedback.md
+      - name: Cardinality estimation (CE) feedback
+        displayName: CE feedback
+        href: relational-databases/performance/intelligent-query-processing-cardinality-estimation-feedback.md        
+      - name: Parameter Sensitive Plan optimization
         href: relational-databases/performance/parameter-sensitive-plan-optimization.md
       - name: Performance Center
         href: relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
@@ -7088,14 +7095,16 @@ items:
     href: relational-databases/performance/subqueries.md
   - name: Data virtualization (PolyBase)
     items:
-    - name: Overview
-      items:
-      - name: What is PolyBase?
-        href: relational-databases/polybase/polybase-guide.md
+    - name: What is PolyBase?
+      href: relational-databases/polybase/polybase-guide.md
+    - name: Get started with PolyBase
+      href: relational-databases/polybase/polybase-get-started.md?view=sql-server-ver16&preserve-view=true
     - name: Concepts
       items:
       - name: Query scenarios
         href: relational-databases/polybase/polybase-queries.md
+      - name: PolyBase performance 
+        href: relational-databases/polybase/polybase-performance.md        
       - name: Pushdown computation
         href: relational-databases/polybase/polybase-pushdown-computation.md
       - name: How to tell if external pushdown occurred

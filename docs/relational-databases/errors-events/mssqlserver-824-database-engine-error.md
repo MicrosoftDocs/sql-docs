@@ -24,7 +24,7 @@ helpviewer_keywords:
 | Event Source | MSSQLSERVER |
 | Component | SQLEngine |
 | Symbolic Name | B_HARDSSERR |
-| Message Text | SQL Server detected a logical consistency-based I/O error: %ls. It occurred during a %S_MSG of page %S_PGID in database ID %d at offset %#016I64x in file '%ls'. Additional messages in the SQL Server error log or operating system error log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see [https://go.microsoft.com/fwlink/?linkid=2252374](https://go.microsoft.com/fwlink/?linkid=2252374). |
+| Message Text | SQL Server detected a logical consistency-based I/O error: %ls. It occurred during a %S_MSG of page %S_PGID in database ID %d at offset %#016I64x in file '%ls'. Additional messages in the SQL Server error log or operating system error log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see https://go.microsoft.com/fwlink/?linkid=2252374. |
 
 ## Symptom
 

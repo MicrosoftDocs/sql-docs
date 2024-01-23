@@ -5,7 +5,7 @@ description: A reference guide of content that teaches you how to configure and 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: mathoma, danil
-ms.date: 01/16/2024
+ms.date: 01/23/2024
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: conceptual
@@ -52,9 +52,9 @@ In this article, you can find a content reference to various guides, scripts, an
 - [Configure authentication with Microsoft Entra ID (formerly Azure Active Directory)](../database/authentication-aad-configure.md?view=azuresql-mi&preserve-view=true)
 - [Configure conditional access](../database/conditional-access-configure.md?view=azuresql-mi&preserve-view=true)
 - [Microsoft Entra multifactor authentication](../database/authentication-mfa-ssms-overview.md?view=azuresql-mi&preserve-view=true)
-- [Configure failover group](failover-group-configure-sql-mi.md) to automatically fail over all databases on an instance to a secondary instance in another region in the event of a disaster. 
+- [Configure failover group](failover-group-configure-sql-mi.md) to automatically fail over all databases on an instance to a secondary instance in another region. 
 - [Configure a temporal retention policy](../database/temporal-tables-retention-policy.md?view=azuresql-mi&preserve-view=true)
-- [Configure In-Memory OLTP](../in-memory-oltp-configure.md?view=azuresql-mi&preserve-view=true)
+- [Configure In-Memory OLTP](in-memory-oltp-configure.md?view=azuresql-mi&preserve-view=true)
 - [Configure Azure Automation](automation-manage.md?view=azuresql-mi&preserve-view=true)
 - [Transactional replication](replication-between-two-instances-configure-tutorial.md) enables you to replicate your data between managed instances, or from SQL Server on-premises to SQL Managed Instance, and vice versa.
 - [Configure threat detection](threat-detection-configure.md) – [threat detection](../database/threat-detection-overview.md?view=azuresql-mi&preserve-view=true) is a built-in Azure SQL Managed Instance feature that detects various potential attacks such as SQL injection or access from suspicious locations. 
@@ -81,7 +81,7 @@ In this article, you can find a content reference to various guides, scripts, an
 - [Use Query Store to monitor performance](/sql/relational-databases/performance/best-practice-with-the-query-store?view=azuresqldb-mi-current&preserve-view=true#Insight)
 - [Troubleshoot performance with Intelligent Insights](../database/intelligent-insights-troubleshoot-performance.md?view=azuresql-mi&preserve-view=true)
 - [Use the Intelligent Insights diagnostics log](../database/intelligent-insights-use-diagnostics-log.md?view=azuresql-mi&preserve-view=true)
-- [Monitor In-Memory OLTP space](../in-memory-oltp-monitor-space.md?view=azuresql-mi&preserve-view=true)
+- [Monitor In-Memory OLTP space](in-memory-oltp-monitor-space.md?view=azuresql-mi&preserve-view=true)
 
 ### Extended events
 

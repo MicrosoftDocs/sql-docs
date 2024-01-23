@@ -449,7 +449,7 @@ This table describes the allowable values of *@schema_option* based upon the rep
 
 ## Examples
 
-[!code-sql [HowTo#sp_AddTranArticle](../replication/codesnippet/tsql/sp-addarticle-transact-sql_1.sql)]
+:::code language="sql" source="../replication/codesnippet/tsql/sp-addarticle-transact-sql_1.sql":::
 
 ## Permissions
 

@@ -74,7 +74,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ## Example  
  This example creates a publication that uses an alternate snapshot folder and a compressed snapshot.  
   
- [!code-sql[HowTo#sp_mergealtsnapshot](../../../relational-databases/replication/codesnippet/tsql/configure-snapshot-prope_1.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/configure-snapshot-prope_1.sql":::
   
 ## See Also  
  [Modify snapshot options](../../../relational-databases/replication/snapshot-options.md)   

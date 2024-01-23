@@ -50,6 +50,22 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 ::: moniker range="=sql-server-ver16"
 ## SQL Server 2022 Reporting Services
 
+## 16.0.8784.14010, 2024/01/23
+*(Product Version: 16.0.1115.61)*
+
+-  Full-screen view for RDL reports.
+-  Responsive navigation adapted to a small view port.
+-  Added support for GB18030-2022 Chinese government standard.
+-  Added an ability to reorder tiles sections in Portal, using new config property "DefaultTilesSectionsOrder". 
+-  Enabled email comment field for individual subscriptions which was previously disabled.
+-  Enabled downloading excel files from Web Service Portal URL.
+-  Fixed appearance of links in Document Map of RDL report.  
+-  Fixed issue with accessing some URLs using custom authentication.  
+-  Fixed vertical textbox rendering in RDL.  
+-  Fixed an issue with NULL value in CC field of a data-driven email subscription.  
+-  Fixed exporting to Excel/Word when using Virtual Service Account & Execution Account.  
+-  Fixed displaying time in schedules in Portal (now all times are displayed in Client time zone).
+
 ## 16.0.8564.33454, 2023/06/13
 *(Product Version: 16.0.1114.11)*
 

@@ -17,7 +17,7 @@ monikerRange: "=azuresqldb-current"
 
 Adds a step to an existing job in the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). Use [jobs.sp_update_jobstep](sp-update-jobstep-elastic-jobs-transact-sql.md) to modify existing elastic job steps. 
 
-This stored procedure shares the name of `sp_add_jobstep` with a similar object in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for the SQL Agent service. For information about the SQL Agent version, see [sp_add_jobstep (Transact-SQL)](sp-add-jobstep-transact-sql.md).
+This stored procedure shares the name of `sp_add_jobstep` with a similar object in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent service. For information about the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent version, see [sp_add_jobstep (Transact-SQL)](sp-add-jobstep-transact-sql.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

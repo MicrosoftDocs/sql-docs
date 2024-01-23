@@ -52,7 +52,7 @@ The following table lists the features of Azure SQL Database that are currently 
 
 ## General availability (GA)
 
-The following table lists the new generally available (GA) features of Azure SQL Database, and those features that have transitioned from preview to GA within the last 12 months:
+The following table lists features of Azure SQL Database that have been made generally available (GA) within the last 12 months:
 
 | Feature | GA Month | Details |
 | --- | --- | --- |

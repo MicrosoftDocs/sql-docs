@@ -109,7 +109,7 @@ To set up a database-level firewall rule:
 
 ## Create a Microsoft Entra admin
 
-Make sure you're using the appropriate Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) managed domain. To select your domain, use the upper-right corner of the Azure portal. This process confirms the same subscription is used for both Microsoft Entra ID and the logical server hosting your database or data warehouse.
+Make sure you're using the appropriate Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) managed domain. To select your domain, use the upper-right corner of the Azure portal. This process confirms the same subscription is used for both Microsoft Entra ID and the logical server hosting your database or data warehouse.
 
    :::image type="content" source="./media/secure-database-tutorial/8choose-ad.png" alt-text="A screenshot of the Azure portal showing the Directory + subscription filter page, where you would choose the directory.":::
 

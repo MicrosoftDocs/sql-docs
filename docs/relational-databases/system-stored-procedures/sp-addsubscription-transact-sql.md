@@ -362,7 +362,7 @@ Only members of the **sysadmin** fixed server role or **db_owner** fixed databas
 
 ## Examples
 
-[!code-sql[HowTo#sp_addtranpushsubscription_agent](../replication/codesnippet/tsql/sp-addsubscription-trans_1.sql)]
+:::code language="sql" source="../replication/codesnippet/tsql/sp-addsubscription-trans_1.sql":::
 
 ## Related content
 

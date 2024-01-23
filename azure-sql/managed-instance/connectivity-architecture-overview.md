@@ -55,7 +55,7 @@ The following diagram shows entities that connect to SQL Managed Instance. It al
 
 SQL Managed Instance is a single-tenant, platform as a service offering that operates in two planes: a data plane and a control plane.
 
-The *data plane* is deployed inside the customer's subnet for compatibility, connectivity, and network isolation. Data plane depends on Azure services like Azure Storage, Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) for authentication, and telemetry collection services. You'll see traffic that originates in subnets that contain SQL Managed Instance going to those services.
+The *data plane* is deployed inside the customer's subnet for compatibility, connectivity, and network isolation. Data plane depends on Azure services like Azure Storage, Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) for authentication, and telemetry collection services. You'll see traffic that originates in subnets that contain SQL Managed Instance going to those services.
 
 The *control plane* carries the deployment, management, and core service maintenance functions via automated agents. These agents have exclusive access to the compute resources that operate the service. You can't use `ssh` or Remote Desktop Protocol to access those hosts. All control plane communications are encrypted and signed by using certificates. To check the trustworthiness of communicating parties, SQL Managed Instance constantly verifies these certificates by using certificate revocation lists.
 

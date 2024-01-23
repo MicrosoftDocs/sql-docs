@@ -210,7 +210,7 @@ SQL Database helps secure your data by providing encryption. For data in motion,
 
 ### Microsoft Entra integration and multifactor authentication
 
-SQL Database enables you to centrally manage identities of database user and other Microsoft services with [Microsoft Entra integration](authentication-aad-overview.md). This capability simplifies permission management and enhances security. Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) supports [multifactor authentication](authentication-mfa-ssms-overview.md) to increase data and application security, while supporting a single sign-in process.
+SQL Database enables you to centrally manage identities of database user and other Microsoft services with [Microsoft Entra integration](authentication-aad-overview.md). This capability simplifies permission management and enhances security. Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) supports [multifactor authentication](authentication-mfa-ssms-overview.md) to increase data and application security, while supporting a single sign-in process.
 
 ## Easy-to-use tools
 

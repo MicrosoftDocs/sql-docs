@@ -779,6 +779,8 @@
 
     - name: Performance
       items:
+      - name: Tune applications and databases for performance
+        href: database/performance-guidance.md
       - name: Use Query Performance Insights
         href: database/query-performance-insight-use.md
       - name: Enable automatic tuning
@@ -886,6 +888,8 @@
         href: database/develop-cplusplus-simple.md
       - name: Excel
         href: database/connect-excel.md
+      - name: Develop a Kubernetes app with Azure SQL Database
+        href: database/develop-kubernetes-application.md
       - name: Ports - ADO.NET
         href: database/adonet-v12-develop-direct-route-ports.md
       - name: Multi-tenant SaaS
@@ -1011,7 +1015,7 @@
           items:
           - name: Configure and fail over a single database
             href: database/scripts/setup-geodr-and-failover-database-powershell.md
-          - name: Configure and fail over a poooled database
+          - name: Configure and fail over a pooled database
             href: database/scripts/setup-geodr-and-failover-elastic-pool-powershell.md
         - name: Configure a failover group
           items: 
@@ -1433,6 +1437,8 @@
 
     - name: Monitor & Tune
       items:
+        - name: Tune applications and databases for performance
+          href: managed-instance/performance-guidance.md
         - name: Identify query performance bottlenecks
           href: managed-instance/identify-query-performance-issues.md
         - name: Use DMVs to monitor performance

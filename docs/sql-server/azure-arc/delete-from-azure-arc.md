@@ -36,7 +36,7 @@ To uninstall Azure extension for SQL Server:
 To remove the SQL Server - Azure Arc resource(s):
 
 1. Go to **Azure Arc** portal
-1. Under **SQL Servers instances** select the specific SQL Server instance(s) you wish to remove
+1. Under **SQL Servers instances** select the specific SQL Server instances you wish to remove
 1. Click on the **Delete** tab
 1. Confirm that you want to delete the resource(s) when prompted
 

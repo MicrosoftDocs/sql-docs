@@ -245,7 +245,7 @@ SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/a
 | Transparent data encryption (TDE) | Yes | Yes | Yes | No | No |
 | User-defined roles | Yes | Yes | Yes | Yes | Yes |
 
-<sup>1</sup> Requires [SQL Server enabled by Azure Arc](/sql/sql-server/azure-arc/overview)
+<sup>1</sup> Requires [SQL Server enabled by Azure Arc](azure-arc/overview.md)
 
 
 ## <a id="Replication"></a> Replication

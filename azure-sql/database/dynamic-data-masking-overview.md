@@ -29,7 +29,7 @@ You set up a dynamic data masking policy in the Azure portal by selecting the **
 
 ### Dynamic data masking policy
 
-- **SQL users excluded from masking:** A set of SQL users, which can include identities from Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)), that get unmasked data in the SQL query results. Users with administrative rights like server admin, Microsoft Entra admin and db_owner role can view the original data without any mask. (Note: It also applies to sysadmin role in SQL Server)
+- **SQL users excluded from masking:** A set of SQL users, which can include identities from Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)), that get unmasked data in the SQL query results. Users with administrative rights like server admin, Microsoft Entra admin and db_owner role can view the original data without any mask. (Note: It also applies to sysadmin role in SQL Server)
 - **Masking rules:** A set of rules that define the designated fields to be masked and the masking function that is used. The designated fields can be defined using a database schema name, table name, and column name.
 - **Masking functions:** A set of methods that control the exposure of data for different scenarios.
 

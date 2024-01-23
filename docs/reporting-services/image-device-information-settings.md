@@ -1,5 +1,5 @@
 ---
-title: "Image Device Information Settings"
+title: "Image device information settings"
 description: Learn about the various device information settings you can use to render in an image format in Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "images [Reporting Services], rendering"
   - "device information settings [Reporting Services], IMAGE rendering"
 ---
-# Image Device Information Settings
+# Image device information settings
   The following table lists the device information settings for rendering in IMAGE format.  
   
 |Setting|Value|  
@@ -33,10 +33,11 @@ helpviewer_keywords:
 |**PrintDpiY**|The vertical resolution of the output image. The default value is **300**. Applies to the Enhanced MetaFile (**EMF**) output format.|  
 |**StartPage**|The first page of the report to render. A value of **0** indicates that all pages are rendered. The default value is **1**.|  
   
-## See Also  
- <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [Passing Device Information Settings to Rendering Extensions](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Customize Rendering Extension Parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Technical Reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
+## Related content
+
+- <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
+- [Pass device information settings to rendering extensions](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+- [Customize rendering extension parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+- [Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

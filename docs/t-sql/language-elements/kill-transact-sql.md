@@ -152,8 +152,11 @@ The following example generates a status of the rollback process for the specifi
 KILL 54;  
 KILL 54 WITH STATUSONLY;  
 GO  
-  
---This is the progress report.  
+```
+
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
+
+```output
 spid 54: Transaction rollback in progress. Estimated rollback completion: 80% Estimated time left: 10 seconds.  
 ```  
   

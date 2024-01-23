@@ -1,6 +1,6 @@
 ---
-title: "Using an External Dataset with Reporting Services"
-description: Create custom data processing extensions in Reporting Services so that you can integrate custom DataSet objects that are created by external applications.
+title: "Use an external dataset with Reporting Services"
+description: Create custom data processing extensions in Reporting Services so that you can integrate custom DataSet objects that external applications create.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/06/2017
@@ -14,10 +14,10 @@ helpviewer_keywords:
   - "custom DataSet objects [Reporting Services]"
   - "external DataSet objects [Reporting Services]"
 ---
-# Using an External Dataset with Reporting Services
-  The **DataSet** object is central to supporting disconnected, distributed data scenarios with [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. The **DataSet** object is a memory-resident representation of data that provides a consistent relational programming model regardless of the data source. It can be used with multiple different data sources, with XML data, or to manage data local to the application. The **DataSet** object represents a complete set of data, including related tables, constraints, and relationships among the tables. Because of the **DataSet** object's versatility in storing and exposing data, your data may often be processed and transformed into a **DataSet** object before any reporting on that data occurs.  
+# Use an external dataset with Reporting Services
+  The **DataSet** object is central to supporting disconnected, distributed data scenarios with [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. The **DataSet** object is a memory-resident representation of data that provides a consistent relational programming model regardless of the data source. It can be used with multiple different data sources, with XML data, or to manage data local to the application. The **DataSet** object represents a complete set of data, including related tables, constraints, and relationships among the tables. Because of the **DataSet** object's versatility in storing and exposing data, your data might often be processed and transformed into a **DataSet** object before any reporting on that data occurs.  
   
- With [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extensions, you can integrate any custom **DataSet** objects that are created by external applications. To accomplish this, you create a custom data processing extension in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] that acts like a bridge between your **DataSet** object and the report server. Most of the code for processing this **DataSet** object is contained in the **DataReader** class that you create.  
+ With [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extensions, you can integrate any custom **DataSet** objects that are created by external applications. To accomplish this integration, you create a custom data processing extension in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] that acts like a bridge between your **DataSet** object and the report server. Most of the code for processing this **DataSet** object is contained in the **DataReader** class that you create.  
   
  The first step in exposing your **DataSet** object to the report server is to implement a provider specific method in your **DataReader** class that can populate a **DataSet** object. The following example shows how to load static data into a **DataSet** object by using a provider-specific method in your **DataReader** class.  
   
@@ -154,9 +154,10 @@ public int GetOrdinal(string name)
   
  Once you create or retrieve your dataset, you can use the **DataSet** object in your implementations of the **Read**, **GetValue**, **GetName**, **GetOrdinal**, **GetFieldType**, and **FieldCount** members of the **DataReader** class.  
   
-## See Also  
- [Reporting Services Extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Implementing a Data Processing Extension](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Reporting Services Extension Library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+## Related content
+
+- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
+- [Implement a data processing extension](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
+- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

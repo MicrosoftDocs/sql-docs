@@ -62,7 +62,7 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ## Examples
 
 ### A. Remove replication objects, AdventureWorks replica subscription database
- [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/sp-removedbreplication-t_1.sql)]  
+ :::code language="sql" source="../replication/codesnippet/tsql/sp-removedbreplication-t_1.sql":::
   
 ### B. Remove replication objects, AdventureWorks replica subscription database
   

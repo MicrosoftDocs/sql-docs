@@ -3,7 +3,7 @@ title: Statistics
 description: The Query Optimizer uses statistics to create query plans that improve query performance. Learn about concepts and guidelines for using query optimization.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: katsmith
+ms.reviewer: derekw
 ms.date: 10/12/2022
 ms.service: sql
 ms.subservice: performance
@@ -294,7 +294,7 @@ Using Bikes as an example, filtered statistics on all bike weights will provide 
 
 The following statement creates the `BikeWeights` filtered statistics on all of the subcategories for Bikes. The filtered predicate expression defines bikes by enumerating all of the bike subcategories with the comparison `Production.ProductSubcategoryID IN (1,2,3)`. The predicate cannot use the Bikes category name because it is stored in the Production.ProductCategory table, and all columns in the filter expression must be in the same table.
 
-[!code-sql[StatisticsDDL#FilteredStats2](../../relational-databases/statistics/codesnippet/tsql/statistics_1.sql)]
+:::code language="sql" source="codesnippet/tsql/statistics_1.sql":::
 
 The Query Optimizer can use the `BikeWeights` filtered statistics to improve the query plan for the following query that selects all of the bikes that weigh more than `25`.
 

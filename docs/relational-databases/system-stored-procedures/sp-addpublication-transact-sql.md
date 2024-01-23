@@ -374,7 +374,7 @@ sp_addpublication [ @publication = ] 'publication'
  With DDL replication enabled (*replicate_ddl* = **1**) for a publication, in order to make non-replicating DDL changes to the publication, [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) must first be executed to set *replicate_ddl* to **0**. After the non-replicating DDL statements have been issued, [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) can be run again to turn DDL replication back on.  
   
 ## Example  
- [!code-sql[HowTo#sp_AddTranPub](../../relational-databases/replication/codesnippet/tsql/sp-addpublication-transa_1.sql)]  
+ :::code language="sql" source="../replication/codesnippet/tsql/sp-addpublication-transa_1.sql":::
   
 ## Permissions  
  Only members of the **sysadmin** fixed server role or **db_owner** fixed database role can execute **sp_addpublication**. Windows authentication logins must have a user account in the database representing their Windows user account. A user account representing a Windows group is not sufficient.  

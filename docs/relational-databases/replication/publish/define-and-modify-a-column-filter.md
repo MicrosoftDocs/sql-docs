@@ -123,11 +123,11 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  In this transactional replication example, the `DaysToManufacture` column is removed from an article based on the `Product` table.  
   
- [!code-sql[HowTo#sp_AddTranArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-colu_1.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/define-and-modify-a-colu_1.sql":::
   
  In this merge replication example, the `CreditCardApprovalCode` column is removed from an article based on the `SalesOrderHeader` table.  
   
- [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-colu_2.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/define-and-modify-a-colu_2.sql":::
   
 ## See Also  
  [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   

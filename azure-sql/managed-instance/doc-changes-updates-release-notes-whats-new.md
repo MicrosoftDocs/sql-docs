@@ -33,6 +33,7 @@ The following table lists the features of Azure SQL Managed Instance that are cu
 
 | Feature | Details |
 | ---| --- |
+|[Azure SQL triggers for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql) | Azure Functions supports function triggers for Azure SQL Managed Instance. | 
 |[Endpoint policies](./service-endpoint-policies-configure.md) | Configure which Azure Storage accounts can be accessed from a SQL Managed Instance subnet. Grants an extra layer of protection against inadvertent or malicious data exfiltration.|		
 |[Free SQL Managed Instance](free-offer.md) | Try Azure SQL Managed Instance for free, for the first 12 months after you create your instance. |
 |[Instance pools](instance-pools-overview.md) | A convenient and cost-efficient way to migrate smaller SQL Server instances to the cloud. |		
@@ -45,12 +46,11 @@ The following table lists the features of Azure SQL Managed Instance that are cu
 
 ## General availability (GA)
 
-The following table lists the new generally available (GA) features of Azure SQL Managed Instance, and those that have transitioned from preview to GA within the last 12 months:
+The following table lists features of Azure SQL Managed Instance that have been made generally available (GA) within the last 12 months:
 
 | Feature | GA Month | Details |
 | ---| --- |--- |
-| [Cross-subscription database copy and move](database-copy-move-how-to.md)| December 2023 | Refresh of database copy and move functionality with added support for cross-subscription operations. |
-|[Azure SQL triggers for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql) | November 2023 | Azure Functions supports function triggers for Azure SQL Managed Instance. | 
+|[Cross-subscription database copy and move](database-copy-move-how-to.md)| December 2023 | Refresh of database copy and move functionality with added support for cross-subscription operations. |
 |[Database copy and move](database-copy-move-how-to.md) | November 2023 | Perform an online database copy or move operation across managed instances. | 
 |[Distributed Transaction Coordinator (DTC)](distributed-transaction-coordinator-dtc.md) | November 2023 | Use DTC to run distributed transactions in mixed environments such as across managed instances, SQL Servers, other relational database management systems (RDBMSs), custom applications and other transaction participants hosted in any environment that can establish network connectivity to Azure.  | 
 |[Instance stop and start](instance-stop-start-how-to.md) | November 2023 | Stop and start your managed instance to save on licensing and compute costs. | 

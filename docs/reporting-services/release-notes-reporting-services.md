@@ -58,7 +58,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -  Added support for GB18030-2022 Chinese government standard.
 -  Added an ability to reorder tiles sections in Portal, using new config property "DefaultTilesSectionsOrder". 
 -  Enabled email comment field for individual subscriptions which was previously disabled.
--  Enabled downloading excel files from Web Service Portal URL.
+-  Enabled downloading Excel files from Web Service Portal URL.
 -  Fixed appearance of links in Document Map of RDL report.  
 -  Fixed issue with accessing some URLs using custom authentication.  
 -  Fixed vertical textbox rendering in RDL.  

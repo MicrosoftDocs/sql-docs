@@ -16,6 +16,8 @@ ms.topic: conceptual
 
 This article explains how to connect your SQL Server instance to Azure Arc.
 
+[!INCLUDE [azure-vmware](includes/azure-vmware.md)]
+
 Before you proceed, complete the [Prerequisites](prerequisites.md).
 
 ## Steps

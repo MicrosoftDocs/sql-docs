@@ -1,5 +1,5 @@
 ---
-title: Features supported by different editions - SQL Server Reporting Services
+title: SQL Server Reporting Services features supported by editions
 description: Learn about SQL Server Reporting Services (SSRS) features supported by the different editions of SQL Server.
 author: maggiesMSFT
 ms.author: maggies
@@ -14,12 +14,12 @@ ms.custom: updatefrequency5
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-This topic explains the SQL Server Reporting Services (SSRS) features supported by the different editions of SQL Server. SQL Server Evaluation edition is available for a 180-day trial period.  
+This article explains the SQL Server Reporting Services (SSRS) features supported by the different editions of SQL Server. SQL Server Evaluation edition is available for a 180-day trial period.  
 
 ## Related links
   
- - [Release notes for SQL Server Reporting Services (SSRS)](release-notes-reporting-services.md). 
- - [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
+ - [Release notes for SQL Server Reporting Services (SSRS)](release-notes-reporting-services.md)
+ - [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
  - [Features supported by the editions of SQL Server](~/sql-server/editions-and-components-of-sql-server-version-15.md)
 
 ##  <a name="SSRS"></a> SQL Server Reporting Services  
@@ -60,7 +60,7 @@ For features supported by the Evaluation and Developer editions, see the SQL Ser
 
  <sup>1</sup> For more information on supported data sources in SQL Server Reporting Services (SSRS), see [Data sources supported by Reporting Services &#40;SSRS&#41;](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
- <sup>2</sup> Requires SQL Server 2016 Reporting Services in SharePoint mode. For more information, see [Install SQL Server Reporting Services in SharePoint mode](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md). Starting in SQL Server 2017 Reporting Services, integration with SharePoint is no longer available. Power View support is no longer available after SQL Server 2017.
+ <sup>2</sup> Requires SQL Server 2016 Reporting Services in SharePoint mode. For more information, see [Install SQL Server Reporting Services in SharePoint mode](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md). In SQL Server 2017 Reporting Services and following versions, integration with SharePoint is no longer available. Power View support is no longer available after SQL Server 2017.
 
 <sup>3</sup> Only in Power BI Report Server and SQL Server 2017 Reporting Services and later.
 
@@ -100,6 +100,6 @@ The following software client applications are available on the Microsoft Downlo
 ## Related content
 
 - [Editions and supported features of SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)
-- [Planning a SQL Server Installation](../sql-server/install/planning-a-sql-server-installation.md)
+- [Plan a SQL Server installation](../sql-server/install/planning-a-sql-server-installation.md)
 
 More questions? Ask the [SQL Server Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).

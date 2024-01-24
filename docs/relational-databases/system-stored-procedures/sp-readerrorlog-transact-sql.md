@@ -27,10 +27,10 @@ Allows you to read the contents of the SQL Server or SQL Server Agent error log 
   
 ```sql
 sp_readerrorlog  
-	@p1		int = 0,
-	@p2		int = NULL,
-	@p3		nvarchar(4000) = NULL,
-	@p4		nvarchar(4000) = NULL
+    @p1        int = 0,
+    @p2        int = NULL,
+    @p3        nvarchar(4000) = NULL,
+    @p4        nvarchar(4000) = NULL
 ```  
 
 ## Arguments
@@ -77,7 +77,7 @@ The following example cycles the [!INCLUDE[ssNoVersion](../../includes/ssnoversi
 EXEC sp_readerrorlog;  
 ```  
   
-### B. Show the previous SQL Agent error log
+### B. Show the previous SQL Server Agent error log
 
 ```sql
 exec sp_readerrorlog 1, 2;

@@ -28,7 +28,7 @@ For more information on the difference between **sqlcmd** versions, see [sqlcmd 
 
 To use Microsoft Entra authentication, you can use one of two command line switches.
 
-`-G` is (mostly) compatible with its usage in **sqlcmd** (ODBC). If a username and password are provided, it authenticates using Microsoft Entra password authentication. If a user name is provided, it uses Microsoft Entra interactive authentication, which may display a web browser. If no username or password is provided, it uses a `DefaultAzureCredential`, which attempts to authenticate through various mechanisms.
+`-G` is (mostly) compatible with its usage in **sqlcmd** (ODBC). If a username and password are provided, it authenticates using Microsoft Entra password authentication. If a username is provided, it uses Microsoft Entra interactive authentication, which may display a web browser. If no username or password is provided, it uses a `DefaultAzureCredential`, which attempts to authenticate through various mechanisms.
 
 `--authentication-method=` can be used to specify one of the following authentication types.
 

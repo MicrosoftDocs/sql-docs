@@ -59,10 +59,10 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 |**frequency_subday_interval**|**int**|Number of intervals of *frequency_subday_type* that occur between scheduled execution of the agent.|  
 |**frequency_relative_interval**|**int**|Is the week that the agent runs in a given month when *frequency_type* is **32** (monthly relative), and can be one of these values.<br /><br /> **1** = First<br /><br /> **2** = Second<br /><br /> **4** = Third<br /><br /> **8** = Fourth<br /><br /> **16** = Last|  
 |**frequency_recurrence_factor**|**int**|Number of weeks or months between the scheduled execution of the agent.|  
-|**active_start_date**|**int**|Date when the agent is first scheduled to run, formatted as YYYYMMDD.|  
-|**active_end_date**|**int**|Date when the agent is last scheduled to run, formatted as YYYYMMDD.|  
-|**active_start_time**|**int**|Time when the agent is first scheduled to run, formatted as HHMMSS.|  
-|**active_end_time**|**int**|Time when the agent is last scheduled to run, formatted as HHMMSS.|  
+|**active_start_date**|**int**|Date when the agent is first scheduled to run, formatted as `yyyyMMdd`.|  
+|**active_end_date**|**int**|Date when the agent is last scheduled to run, formatted as `yyyyMMdd`.|  
+|**active_start_time**|**int**|Time when the agent is first scheduled to run, formatted as `HHmmss`.|  
+|**active_end_time**|**int**|Time when the agent is last scheduled to run, formatted as `HHmmss`.|  
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  

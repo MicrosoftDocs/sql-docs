@@ -1,6 +1,6 @@
 ---
 title: "sp_update_jobstep (Transact-SQL)"
-description: "sp_update_jobstep changes the settings for a step in a job in the SQL Agent service."
+description: "sp_update_jobstep changes the settings for a step in a job in the SQL Server Agent service."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest,wiassaf
@@ -21,7 +21,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 
 [!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
-Changes the setting for a step in a job that is used to perform automated activities in the SQL Agent service.
+Changes the setting for a step in a job that is used to perform automated activities in the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent service.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

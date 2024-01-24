@@ -38,7 +38,7 @@ Each row represents a periodic snapshot of resource pool statistics in [!INCLUDE
 | `active_session_count` | **int** | Total active sessions in current snapshot. |
 | `active_worker_count` | **int** | Total workers in current snapshot. |
 | `delta_cpu_usage_ms` | **int** | CPU usage in milliseconds since last snapshot. Not nullable. |
-| `delta_cpu_usage_preemptive_ms` | **int** | Preemptive Win32 calls not govern by SQL CPU RG, since last snapshot. |
+| `delta_cpu_usage_preemptive_ms` | **int** | Preemptive Win32 calls not governed by SQL CPU RG, since last snapshot. |
 | `used_data_space_kb` | **bigint** | Total space used in user databases associated with user pool. |
 | `allocated_disk_space_kb` | **bigint** | Total data file size of user databases in the associated with user pool. |
 | `target_memory_kb` | **bigint** | The target amount of memory, in kilobytes, the resource pool is trying to attain. This is based on the current settings and server state. Not nullable. |

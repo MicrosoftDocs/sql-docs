@@ -112,13 +112,13 @@ The checklist in this section covers the [HADR best practices](hadr-cluster-best
 
 The following is a list of resources that will help you further troubleshoot SQL Server performance issues.
 
-- [Troubleshoot high-CPU-usage issues](/troubleshoot/sql/database-engine/performance/troubleshoot-high-cpu-usage-issues.md)
-- [Understand and resolve blocking problems](/troubleshoot/sql/database-engine/performance/understand-resolve-blocking.md)
-- [Troubleshoot slow-running queries](/troubleshoot/sql/database-engine/performance/troubleshoot-slow-running-queries.md)
-- [Troubleshoot slow performance caused by I/O issues](/troubleshoot/sql/database-engine/performance/troubleshoot-sql-io-performance.md)
-- [Troubleshoot query time-out errors](/troubleshoot/sql/database-engine/performance/troubleshoot-query-timeouts.md)
-- [Troubleshoot out of memory or low memory](/troubleshoot/sql/database-engine/performance/troubleshoot-memory-issues.md)
-- [Performance dashboard](/sql/relational-databases/performance/performance-dashboard.md) provides fast insight into SQL Server performance state.
+- [Troubleshoot high-CPU-usage issues](/troubleshoot/sql/database-engine/performance/troubleshoot-high-cpu-usage-issues)
+- [Understand and resolve blocking problems](/troubleshoot/sql/database-engine/performance/understand-resolve-blocking)
+- [Troubleshoot slow-running queries](/troubleshoot/sql/database-engine/performance/troubleshoot-slow-running-queries)
+- [Troubleshoot slow performance caused by I/O issues](/troubleshoot/sql/database-engine/performance/troubleshoot-sql-io-performance)
+- [Troubleshoot query time-out errors](/troubleshoot/sql/database-engine/performance/troubleshoot-query-timeouts)
+- [Troubleshoot out of memory or low memory](/troubleshoot/sql/database-engine/performance/troubleshoot-memory-issues)
+- [Performance dashboard](/sql/relational-databases/performance/performance-dashboard) provides fast insight into SQL Server performance state.
 
 ## Related content
 

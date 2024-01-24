@@ -435,7 +435,7 @@ Update (U) locks can also be taken by queries that do not perform an UPDATE, whe
 
 - In the default read committed isolation level, S locks are short duration, released as soon as they are used. The short duration locks are unlikely to lead to deadlocks.
 
-- If the UPDLOCK hint is used in a write, the transaction must have access to the latest version of the row, with a lock. If the latest version is no longer visible, it is expected to be possible to receive `Msg 3960, Level 16, State 2 Snapshot isolation transaction aborted due to update conflict` when SNAPSHOT isolation is in use. For an example, see [Work with snapshot isolation](#a-work-with-snapshot-isolation).
+- If the UPDLOCK hint is used in a write, the transaction must have access to the latest version of the row. If the latest version is no longer visible, it is expected to be possible to receive `Msg 3960, Level 16, State 2 Snapshot isolation transaction aborted due to update conflict` when SNAPSHOT isolation is in use. For an example, see [Work with snapshot isolation](#a-work-with-snapshot-isolation).
 
 ### <a id="exclusive"></a> Exclusive locks
 

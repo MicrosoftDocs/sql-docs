@@ -30,7 +30,7 @@ The `NT Service\SQLServerExtension` account is a local Windows service account:
 - Created and managed by the Azure Extension for SQL Server when least privilege option is enabled.
 - Granted the minimum required permissions and privileges to run the Azure extension for SQL Server service on the Windows operating system. It only has access to folders and directories used for reading and storing configuration or writing logs.
 - Granted permission to connect and query in SQL Server with a new login specifically for that service account that has the minimum permissions required. Minimum permissions depend on the enabled features.
-- Updated when permissions are no longer necessary. For example, permissions are revoked when you disable a feature, disable least privileged configuration, or uninstall the Azure extension for SQL Server. Revocation ensures that no permissions remain after they're no longer required.
+- Updated when permissions are no longer necessary. For example, permissions are revoked when you disable a feature, disable least privilege configuration, or uninstall the Azure extension for SQL Server. Revocation ensures that no permissions remain after they're no longer required.
 
 ## Prerequisites
 
@@ -103,7 +103,7 @@ To verify that your SQL Server enabled by Azure Arc is configured to run with le
 
 1. In the Windows services, locate **Microsoft SQL Server Extension Service** service. Verify that the service is running under the as the service account `NT Service\SqlServerExtension`.  
 
-1. Open task scheduler in the server and check that a scheduled task with name `SqlServerExtensionPermissionProvider` is created under `Microsoft\SqlServerExtension`. This task runs periodically to add or remove permissions as needed based on which features are enabled and disabled.
+1. Open task scheduler in the server and check that a scheduled task with name `SqlServerExtensionPermissionProvider` is created under `Microsoft\SqlServerExtension`. This task runs hourly to add or remove permissions as needed based on which features are enabled and disabled.
 
 1. Open SQL Server Management Studio and check the login named `NT Service\SqlServerExtension`. Verify that the account is assigned these permissions:
 

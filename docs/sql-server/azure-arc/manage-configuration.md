@@ -133,7 +133,7 @@ In addition to billing differences, license type determines what features will b
 Extended Security Updates (ESU) is available for qualified SQL Server instances that use License with Software assurance or Pay-as-you-go as the license type. If the  license type is license only, the option to activate the ESU subscription is disabled. See [Extended Security Updates for SQL Server](../end-of-support/sql-server-extended-security-updates.md).  
 
 > [!NOTE]
-> If ESU is enabled **License Type** cannot be changed to `LicenseOnly` until the ESU subscrition is cancelled.
+> If ESU is enabled **License Type** cannot be changed to `LicenseOnly` until the ESU subscription is cancelled.
 
 ## Exclude instances
 
@@ -154,7 +154,7 @@ There are two ways to configure the SQL Server host in Azure portal.
 
 * Open the Arc-enabled Server overview page and click **SQL Server Configuration** as shown.
 
-   :::image type="content" source="media/billing/overview-of-sql-server-azure-arc.png" alt-text="Screenshot of the SQL Server in Azure Arc in Azure portal."  lightbox="media/billing/overview-of-sql-server-azure-arc.png" :::
+   :::image type="content" source="media/billing/overview-of-sql-server-azure-arc.png" alt-text="Screenshot of the SQL Server enabled by Azure Arc in Azure portal."  lightbox="media/billing/overview-of-sql-server-azure-arc.png" :::
 
   Or
 

@@ -4,7 +4,7 @@ description: Feature overview. Explains how you can manage instances of SQL Serv
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 09/26/2023
+ms.date: 01/24/2024
 ms.topic: conceptual
 ---
 
@@ -13,6 +13,8 @@ ms.topic: conceptual
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] extends Azure services to SQL Server instances hosted outside of Azure: in your data center, in edge site locations like retail stores, or any public cloud or hosting provider.
+
+Managing SQL Server through Azure Arc can also be configured for SQL Server VMs in Azure VMware Solution. See [Deploy Arc-enabled Azure VMware Solution](/azure/azure-vmware/deploy-arc-for-azure-vmware-solution).
 
 ## Manage your SQL Server instances at scale from a single point of control
 
@@ -91,13 +93,22 @@ The following diagram illustrates the architecture of [!INCLUDE [ssazurearc](../
 
 [!INCLUDE [features-edition](includes/features-edition.md)]
 
-## Supported SQL Server versions and operating systems
+## Supported SQL Server versions and environments
 
 [!INCLUDE [supported-configurations](includes/supported-configurations.md)]
 
 ## Unsupported configurations
 
 [!INCLUDE [unsupported-configurations](includes/unsupported-configurations.md)]
+
+## Installation
+
+The [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Setup Installation Wizard doesn't support installation of the Azure extension for SQL Server. You can install this component from the command line, or by connecting the server to Azure Arc.
+
+- [Install Azure extension for SQL Server from the command line](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#install-and-connect-to-azure)
+- [Automatically connect your SQL Server to Azure Arc](automatically-connect.md)
+
+For VMware clusters, review [Support on VMware](#support-on-vmware).
 
 ## Supported Azure regions
 

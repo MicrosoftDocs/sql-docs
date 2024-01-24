@@ -4,8 +4,8 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Export a database to a BACPAC file using the Azure portal, PowerShell, Azure Data Studio, or SQL Server Management Studio.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, jeschult
-ms.date: 01/09/2024
+ms.reviewer: mathoma, hudequei
+ms.date: 01/23/2024
 ms.service: sql-db-mi
 ms.subservice: data-movement
 ms.topic: how-to
@@ -24,7 +24,7 @@ When you need to export a database for archiving or for moving to another platfo
 - For an export to be transactionally consistent, you must ensure either that no write activity is occurring during the export, or that you're exporting from a [transactionally consistent copy](database-copy.md) of your database.
 - If you're exporting to blob storage, the maximum size of a BACPAC file is 200 GB. To archive a larger BACPAC file, export to local storage with SqlPackage.
 
-- Storage file name or the input value for StorageURI should be fewer than 128 characters long and can't end with `.` and can't contain special characters like a space character or `<`, `>`, `*`, `%`, `&`, `:`, `\`, `/`, `?`.
+- The Azure Storage file name can't end with `.` and can't contain special characters like a space character or `<`, `>`, `*`, `%`, `&`, `:`, `\`, `/`, `?`. The file name should be fewer than 128 characters long.
 - If the export operation exceeds 20 hours, it might be canceled. To increase performance during export, you can:
 
   - Temporarily increase your compute size.

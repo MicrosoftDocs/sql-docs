@@ -76,15 +76,15 @@ helpviewer_keywords:
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This example changes a column with an Oracle data type of NUMBER so it is mapped to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type **numeric**(38,38), instead of the default data type **float**.  
   
- [!code-sql[HowTo#sp_changecolumndatatype](../../../relational-databases/replication/codesnippet/tsql/specify-data-type-mappin_1.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/specify-data-type-mappin_1.sql":::
   
  This example query returns the default and alternative mappings for the Oracle 9 data type **CHAR**.  
   
- [!code-sql[HowTo#sp_helpcolumndatatype_char](../../../relational-databases/replication/codesnippet/tsql/specify-data-type-mappin_2.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/specify-data-type-mappin_2.sql":::
   
  This example query returns the default mappings for the Oracle 9 data type **NUMBER** when it is specified without a scale or precision.  
   
- [!code-sql[HowTo#sp_helpcolumndatatype_number](../../../relational-databases/replication/codesnippet/tsql/specify-data-type-mappin_3.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/specify-data-type-mappin_3.sql":::
   
 ## See Also  
  [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   

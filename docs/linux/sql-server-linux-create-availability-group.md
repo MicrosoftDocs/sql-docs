@@ -459,27 +459,42 @@ This example shows the creation of a two-replica configuration using a cluster t
 
 1. Execute on the node that will be the primary replica containing the fully read/write copy of the databases. This example uses automatic seeding.
 
-   ```sql
-   CREATE AVAILABILITY GROUP [<AGName>]
-   WITH (CLUSTER_TYPE = NONE)
-   FOR DATABASE <DBName>
-   REPLICA ON N'LinAGN1'
-   WITH (
-      ENDPOINT_URL = N'TCP://LinAGN1.FullyQualified.Name: <PortOfEndpoint>',
-      FAILOVER_MODE = MANUAL,
-      AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
-      PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE, READ_ONLY_ROUTING_LIST = (('LinAGN1.FullyQualified.Name'.'LinAGN2.FullyQualified.Name'))),
-      SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL, READ_ONLY_ROUTING_URL = N'TCP://LinAGN1.FullyQualified.Name:<PortOfInstance>'));
-   N'LinAGN2' WITH (
-      ENDPOINT_URL = N'TCP://LinAGN2.FullyQualified.Name:<PortOfEndpoint>',
-      FAILOVER_MODE = MANUAL,
-      SEEDING_MODE = AUTOMATIC,
-      AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
-      PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE, READ_ONLY_ROUTING_LIST = (('LinAGN1.FullyQualified.Name', 'LinAGN2.FullyQualified.Name'))),
-      SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL, READ_ONLY_ROUTING_URL =N'TCP://LinAGN2.FullyQualified.Name:<PortOfInstance>'));
-   LISTENER '<ListenerName>' (WITH IP = ('<PrimaryReplicaIPAddress>', '<SubnetMask>'), Port = <PortOfListener>);
-   GO
-   ```
+```sql
+CREATE AVAILABILITY
+GROUP [<AGName>]
+WITH (CLUSTER_TYPE = NONE)
+FOR DATABASE <DBName> REPLICA ON
+    N'LinAGN1' WITH (
+        ENDPOINT_URL = N'TCP://LinAGN1.FullyQualified.Name: <PortOfEndpoint>',
+        FAILOVER_MODE = MANUAL,
+        AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
+        PRIMARY_ROLE(
+            ALLOW_CONNECTIONS = READ_WRITE,
+            READ_ONLY_ROUTING_LIST = (('LinAGN1.FullyQualified.Name'.'LinAGN2.FullyQualified.Name'))
+        ),
+        SECONDARY_ROLE(
+            ALLOW_CONNECTIONS = ALL,
+            READ_ONLY_ROUTING_URL = N'TCP://LinAGN1.FullyQualified.Name:<PortOfInstance>'
+        )
+    ),
+    N'LinAGN2' WITH (
+        ENDPOINT_URL = N'TCP://LinAGN2.FullyQualified.Name:<PortOfEndpoint>',
+        FAILOVER_MODE = MANUAL,
+        SEEDING_MODE = AUTOMATIC,
+        AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
+        PRIMARY_ROLE(ALLOW_CONNECTIONS = READ_WRITE, READ_ONLY_ROUTING_LIST = (
+                 ('LinAGN1.FullyQualified.Name',
+                    'LinAGN2.FullyQualified.Name')
+                 )),
+        SECONDARY_ROLE(ALLOW_CONNECTIONS = ALL, READ_ONLY_ROUTING_URL = N'TCP://LinAGN2.FullyQualified.Name:<PortOfInstance>')
+    ),
+    LISTENER '<ListenerName>' (WITH IP = (
+             '<PrimaryReplicaIPAddress>',
+             '<SubnetMask>'),
+            Port = <PortOfListener>
+    );
+GO
+```
 
    Where:
 

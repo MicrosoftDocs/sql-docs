@@ -11,7 +11,7 @@ keywords:
   - transform
   - catagory
   - hash
-ms.devlang: Python
+ms.devlang: python
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---
 # *microsoftml.categorical_hash*: Hashes and converts a text column into categories

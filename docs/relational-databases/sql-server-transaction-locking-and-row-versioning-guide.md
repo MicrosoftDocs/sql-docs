@@ -4,7 +4,7 @@ description: "Transaction locking and row versioning guide"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 10/04/2023
+ms.date: 01/24/2024
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -434,6 +434,8 @@ Update (U) locks can also be taken by queries that do not perform an UPDATE, whe
 - In a repeatable read or serializable transaction, the transaction reads data, acquiring a shared (S) lock on the resource, and then modifies the data, which requires lock conversion to an exclusive (X) lock. If two transactions acquire shared (S) locks on a resource and then attempt to update data concurrently, one transaction attempts the lock conversion to an exclusive (X) lock. The shared-to-exclusive lock conversion must wait because the exclusive lock for one transaction isn't compatible with the shared (S) lock of the other transaction; a lock wait occurs. The second transaction attempts to acquire an exclusive (X) lock for its update. Because both transactions are converting to exclusive (X) locks, and they are each waiting for the other transaction to release its shared (S) lock, a deadlock occurs.
 
 - In the default read committed isolation level, S locks are short duration, released as soon as they are used. The short duration locks are unlikely to lead to deadlocks.
+
+- If the UPDLOCK hint is used in a write, the transaction must have access to the latest version of the row, with a lock. If the latest version is no longer visible, it is expected to be possible to receive `Msg 3960, Level 16, State 2 Snapshot isolation transaction aborted due to update conflict` when SNAPSHOT isolation is in use. For an example, see [Work with snapshot isolation](#a-work-with-snapshot-isolation).
 
 ### <a id="exclusive"></a> Exclusive locks
 

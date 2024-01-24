@@ -48,7 +48,10 @@ Holds information about all requests currently or recently active in [!INCLUDE[s
  For information about the maximum rows retained by this view, see the Metadata section in the [Capacity limits](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) article.
 
 The negative integer value in the `result_cache_hit` column is a bitmap value of all applied reasons why a query's result set cannot be cached.  This column can be the [| (Bitwise OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) product of one or more of following values:  
-  
+
+> [!NOTE]
+> If you get a value which is not listed in the table below, it means that it represents a combination of 2 or more reasons. For example, it’s possible that -36 could be a [bitwise OR](https://learn.microsoft.com/en-us/sql/t-sql/language-elements/bitwise-or-transact-sql) of 2 reasons: -0x04 (-4) and -0x20 (-32).
+
 |Value            |Description  |  
 |-----------------|-----------------|  
 |**1**|Result set cache hit|  

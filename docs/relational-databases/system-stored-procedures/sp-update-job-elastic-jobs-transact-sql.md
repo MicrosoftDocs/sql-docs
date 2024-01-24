@@ -17,7 +17,7 @@ monikerRange: "=azuresqldb-current"
 
 Updates a job created in the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true).
 
-This stored procedure shares the name of `sp_update_job` with a similar object in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for the SQL Agent service. For information about the SQL Agent version, see [sp_update_job (Transact-SQL)](sp-update-job-transact-sql.md).
+This stored procedure shares the name of `sp_update_job` with a similar object in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent service. For information about the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent version, see [sp_update_job (Transact-SQL)](sp-update-job-transact-sql.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

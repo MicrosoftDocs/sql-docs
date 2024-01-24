@@ -68,12 +68,14 @@ Microsoft also supports deploying and managing [!INCLUDE [ssnoversion-md](../inc
 
 | | Requirement |
 | --- | --- |
-| **Memory** | 2 GB |
+| **Memory** | 2 GB <sup>1</sup> |
 | **File System** | **XFS** or **EXT4** (other file systems, such as **BTRFS**, aren't supported) |
 | **Disk space** | 6 GB |
 | **Processor speed** | 2 GHz |
 | **Processor cores** | 2 cores |
 | **Processor type** | x64-compatible only |
+
+<sup>1</sup> 2 GB is the minimum required memory to start [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, which accommodates system threads and internal processes. You must take this amount into consideration when setting **[max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md#max_server_memory)** and **[MemoryLimitMB](sql-server-linux-configure-mssql-conf.md#memorylimit)**.
 
 If you use **Network File System (NFS)** remote shares in production, note the following support requirements:
 
@@ -185,8 +187,8 @@ If your Linux machine doesn't have access to the online repositories used in the
    | SLES | `sudo zypper install mssql-server_versionnumber.x86_64.rpm` |
    | Ubuntu | `sudo dpkg -i mssql-server_versionnumber_amd64.deb` |
 
-    > [!NOTE]  
-    > You can also install the RPM packages (RHEL and SLES) with the `rpm -ivh` command, but the commands in the previous table automatically install dependencies if available from approved repositories.
+   > [!NOTE]  
+   > You can also install the RPM packages (RHEL and SLES) with the `rpm -ivh` command, but the commands in the previous table automatically install dependencies if available from approved repositories.
 
 1. **Resolve missing dependencies**: You might have missing dependencies at this point. If not, you can skip this step. On Ubuntu, if you have access to approved repositories containing those dependencies, the easiest solution is to use the `apt-get -f install` command. This command also completes the installation of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. To manually inspect dependencies, use the following commands:
 
@@ -218,7 +220,7 @@ After installation, you can also install or enable optional [!INCLUDE [ssnoversi
 - [Machine Learning Services (R, Python)](sql-server-linux-setup-machine-learning.md)
 - [SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 
-[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
+[!INCLUDE [Get Help Options](../includes/paragraph-content/get-help-options.md)]
 
 ## Related content
 

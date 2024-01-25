@@ -220,7 +220,7 @@ az sql vm delete
 
 To learn more, review the following articles:
 
-- [Overview of SQL Server on a Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)
-- [FAQ for SQL Server on a Windows VM](frequently-asked-questions-faq.yml)
-- [Pricing guidance for SQL Server on a Azure VMs](../windows/pricing-guidance.md)
+- [Overview of SQL Server on Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)
+- [FAQ for SQL Server on Windows VM](frequently-asked-questions-faq.yml)
+- [Pricing guidance for SQL Server on Azure VMs](../windows/pricing-guidance.md)
 - [What's new for SQL Server on Azure VMs](../windows/doc-changes-updates-release-notes-whats-new.md)

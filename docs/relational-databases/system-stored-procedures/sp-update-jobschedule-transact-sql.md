@@ -1,6 +1,6 @@
 ---
 title: "sp_update_jobschedule (Transact-SQL)"
-description: "sp_update_jobschedule changes the schedule settings for the specified job in the SQL Agent service."
+description: "sp_update_jobschedule changes the schedule settings for the specified job in the SQL Server Agent service."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest, wiassaf
@@ -20,7 +20,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 # sp_update_jobschedule (Transact-SQL)
 [!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
-Changes the schedule settings for the specified job in the SQL Agent service.
+Changes the schedule settings for the specified job in the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent service.
 
 `sp_update_jobschedule` is provided for backward compatibility only.
 

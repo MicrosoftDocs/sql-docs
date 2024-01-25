@@ -93,6 +93,9 @@ To create a single database in the Azure portal, this quickstart starts at the A
 
 The Azure CLI code blocks in this section create a resource group, server, single database, and server-level IP firewall rule for access to the server. Make sure to record the generated resource group and server names, so you can manage these resources later.
 
+> [!NOTE]
+> To simplify the database creation process, can also use the [az sql up](/cli/azure/sql#az-sql-up) command to create a database and all of its associated resources with a single command. This includes the resource group, server name, server location, database name, and login information. The database is created with a default pricing tier of General Purpose, Provisioned, standard-series (Gen5), 2 vCores.
+
 [!INCLUDE [quickstarts-free-trial-note](../includes/quickstarts-free-trial-note.md)]
 
 [!INCLUDE [azure-cli-prepare-your-environment.md](~/../azure-sql/reusable-content/azure-cli/azure-cli-prepare-your-environment-h3.md)]
@@ -141,61 +144,6 @@ az sql db create \
     --family Gen5 \
     --capacity 2
 ```
-
-# [Azure CLI (sql up)](#tab/azure-cli-sql-up)
-
-The Azure CLI code blocks in this section use the [az sql up](/cli/azure/sql#az-sql-up) command to simplify the database creation process. With it, you can create a database and all of its associated resources with a single command. This includes the resource group, server name, server location, database name, and login information. The database is created with a default pricing tier of General Purpose, Provisioned, standard-series (Gen5), 2 vCores.
-
-[!INCLUDE [quickstarts-free-trial-note](../includes/quickstarts-free-trial-note.md)]
-
-[!INCLUDE [azure-cli-prepare-your-environment-h3.md](~/../azure-sql/reusable-content/azure-cli/azure-cli-prepare-your-environment-h3.md)]
-
-[!INCLUDE [cli-launch-cloud-shell-sign-in.md](../includes/cli-launch-cloud-shell-sign-in.md)]
-
-### Set parameter values
-
-The following values are used in subsequent commands to create the database and required resources. Server names need to be globally unique across all of Azure so the $RANDOM function is used to create the server name.
-
-Change the location as appropriate for your environment. Replace `0.0.0.0` with the IP address range that matches your specific environment.
-
-:::code language="azurecli" source="~/../azure_cli_scripts/sql-database/create-and-configure-database/create-and-configure-database.sh" id="SetParameterValues":::
-
-> [!NOTE]  
-> [az sql up](/cli/azure/sql#az-sql-up) is currently in preview and doesn't currently support the serverless compute tier. Also, the use of non-alphabetic and non-numeric characters in the database name aren't currently supported.
-
-### Create a database and resources
-
-Use the [az sql up](/cli/azure/sql#az-sql-up) command to create and configure a [logical server](logical-servers.md) for Azure SQL Database for immediate use. Make sure to record the generated resource group and server names, so you can manage these resources later.
-
-> [!NOTE]  
-> When running the `az sql up` command for the first time, Azure CLI prompts you to install the `db-up` extension. This extension is currently in preview. Accept the installation to continue. For more information about extensions, see [Use extensions with Azure CLI](/cli/azure/azure-cli-extensions-overview).
-
-1. Run the `az sql up` command. If any required parameters aren't used, like `--server-name`, that resource is created with a random name and login information assigned to it.
-
-    ```azurecli
-    az sql up \
-        --resource-group $resourceGroup \
-        --location $location \
-        --server-name $server \
-        --database-name $database \\
-        --admin-user $login \
-        --admin-password $password
-    ```
-
-1. A server firewall rule is automatically created. If the server declines your IP address, create a new firewall rule using the `az sql server firewall-rule create` command and specifying appropriate start and end IP addresses.
-
-    ```azurecli
-    startIp=0.0.0.0
-    endIp=0.0.0.0
-    az sql server firewall-rule create \
-        --resource-group $resourceGroup \
-        --server $server \
-        -n AllowYourIp \
-        --start-ip-address $startIp \
-        --end-ip-address $endIp
-    ```
-
-1. All required resources are created, and the database is ready for queries.
 
 # [PowerShell](#tab/azure-powershell)
 
@@ -329,14 +277,6 @@ To delete **myResourceGroup** and all its resources using the Azure portal:
 # [Azure CLI](#tab/azure-cli)
 
 Use the following command to remove the resource group and all resources associated with it using the [az group delete](/cli/azure/vm/extension#az-vm-extension-set) command - unless you have an ongoing need for these resources. Some of these resources may take a while to create, as well as to delete.
-
-```azurecli
-az group delete --name $resourceGroup
-```
-
-# [Azure CLI (sql up)](#tab/azure-cli-sql-up)
-
-[!INCLUDE [cli-clean-up-resources.md](../includes/cli-clean-up-resources.md)]
 
 ```azurecli
 az group delete --name $resourceGroup

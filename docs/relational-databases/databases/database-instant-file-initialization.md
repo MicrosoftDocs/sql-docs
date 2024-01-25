@@ -18,7 +18,7 @@ helpviewer_keywords:
 ---
 # Database instant file initialization
 
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdb-asmi.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 In this article, you learn about instant file initialization (IFI) and how to enable it to speed up growth for your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] database files.
 

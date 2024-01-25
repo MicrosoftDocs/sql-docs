@@ -3,7 +3,7 @@ title: "Microsoft Drivers for PHP Support Matrix"
 description: "This page contains the support matrix and support lifecycle policy for the Microsoft PHP Drivers for SQL Server."
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 01/22/2024
+ms.date: 01/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -115,7 +115,6 @@ The following Linux and macOS operating system versions (64-bit only) are suppor
 |Ubuntu 20.04 (64-bit)                      |Yes|Yes|Yes|Yes|Yes|   |   |   |   |   |   |
 |Ubuntu 18.04 (64-bit)                      |   |Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
 |Ubuntu 16.04 (64-bit)                      |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |
-|Ubuntu 15.04 (64-bit)                      |   |   |   |   |   |   |   |   |   |Yes|   |
 |Debian 11 (64-bit)                         |Yes|Yes|Yes|   |   |   |   |   |   |   |   |
 |Debian 10 (64-bit)                         |Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |   |
 |Debian 9 (64-bit)                          |   |   |Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |

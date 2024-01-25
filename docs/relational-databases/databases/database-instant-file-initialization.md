@@ -4,7 +4,7 @@ description: Learn about instant file initialization and how to enable it on you
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 12/15/2023
+ms.date: 01/25/2024
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -18,7 +18,7 @@ helpviewer_keywords:
 ---
 # Database instant file initialization
 
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdb-asmi.md)]
 
 In this article, you learn about instant file initialization (IFI) and how to enable it to speed up growth for your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] database files.
 
@@ -31,23 +31,25 @@ By default, data and log files are initialized to overwrite any existing data le
 
 In [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], instant file initialization allows for faster execution of the previously mentioned file operations, since it reclaims used disk space without filling that space with zeros. Instead, disk content is overwritten as new data is written to the files.
 
+In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] instant file initialization is available for transaction log files only.
+
 ## Instant file initialization and the transaction log
 
-**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
+**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
 
-Historically, transaction log files couldn't be initialized instantaneously. However, starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] (all editions) and in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], instant file initialization can benefit from transaction log autogrowth events up to 64 MB. The default auto growth size increment for new databases is 64 MB. Transaction log file autogrowth events larger than 64 MB can't benefit from instant file initialization.
+Historically, transaction log files couldn't be initialized instantaneously. However, starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] (all editions) and in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], instant file initialization can benefit from transaction log autogrowth events up to 64 MB. The default auto growth size increment for new databases is 64 MB. Transaction log file autogrowth events larger than 64 MB can't benefit from instant file initialization.
 
 Instant file initialization is allowed for transaction log growth on databases that have transparent data encryption (TDE) enabled, due to the nature of how the transaction log file is expanded, and the fact that the transaction log is written into in a serial fashion.
 
-- Instant file initialization is in use for General Purpose and Business Critical tiers of [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] only to benefit the growth of transaction log files.
-- Instant file initialization isn't configurable in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
+- Instant file initialization is in use for General Purpose and Business Critical tiers of [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] only to benefit the growth of transaction log files.
+- Instant file initialization isn't configurable in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
 
 ## Enable instant file initialization
 
 Instant file initialization of data files is only available if the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] service startup account is granted `SE_MANAGE_VOLUME_NAME`. Members of the Windows Administrator group have this right and can grant it to other users by adding them to the **Perform Volume Maintenance Tasks** security policy. The `SE_MANAGE_VOLUME_NAME` right isn't required for instant file initialization of growth events up to 64 MB in the transaction log, which was introduced with the release of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
 > [!IMPORTANT]  
-> Some feature usage, such as [Transparent data encryption (TDE)](../security/encryption/transparent-data-encryption.md), can prevent instant file initialization. Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], and on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], IFI is allowed on the transaction log. See [Instant file initialization and the transaction log](#instant-file-initialization-and-the-transaction-log) for more information.
+> Some feature usage, such as [Transparent data encryption (TDE)](../security/encryption/transparent-data-encryption.md), can prevent instant file initialization. Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], and on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], IFI is allowed on the transaction log. See [Instant file initialization and the transaction log](#instant-file-initialization-and-the-transaction-log) for more information.
 
 > [!NOTE]  
 > Starting with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], this permission can be granted to the service account at install time, during setup.
@@ -129,5 +131,5 @@ A long autogrow of a database and/or transaction log file can cause query perfor
 
 ## Related content
 
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
+- [CREATE ](../../t-sql/statements/create-database-transact-sql.md)
 - [Manage the size of the transaction log file](../logs/manage-the-size-of-the-transaction-log-file.md)

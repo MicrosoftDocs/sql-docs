@@ -39,7 +39,7 @@ fn_my_permissions ( securable , 'securable_class' )
  Is the name of the securable. If the securable is the server or a database, this value should be set to NULL. *securable* is a scalar expression of type **sysname**. *securable* can be a multipart name.  
   
 #### '*securable_class*'  
- Is the name of the class of securable for which permissions are listed. *securable_class* is a **sysname**. *securable_class* must be one of the following: APPLICATION ROLE, ASSEMBLY, ASYMMETRIC KEY, CERTIFICATE, CONTRACT, DATABASE, ENDPOINT, FULLTEXT CATALOG, LOGIN, MESSAGE TYPE, OBJECT, REMOTE SERVICE BINDING, ROLE, ROUTE, SCHEMA, SERVER, SERVICE, SYMMETRIC KEY, TYPE, USER, XML SCHEMA COLLECTION.  
+ Is the name of the class of securable for which permissions are listed. *securable_class* is a **sysname**. *securable_class* must be one of the following: APPLICATION ROLE, ASSEMBLY, ASYMMETRIC KEY, CERTIFICATE, CONTRACT, DATABASE, ENDPOINT, FULLTEXT CATALOG, LOGIN, MESSAGE TYPE, OBJECT, REMOTE SERVICE BINDING, ROLE, ROUTE, SCHEMA, SERVER, SERVICE, SYMMETRIC KEY, TYPE, USER, XML SCHEMA COLLECTION. If this value is NULL, it defaults to SERVER.
   
 ## Columns Returned  
  The following table lists the columns that `fn_my_permissions` returns. Each row that is returned describes a permission held by the current security context on the securable. Returns `NULL` if the query fails.  

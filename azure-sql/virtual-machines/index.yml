@@ -39,9 +39,9 @@ landingContent:
         links:
           - text: What's new?
             url: windows/doc-changes-updates-release-notes-whats-new.md
-          - text: What is SQL Server on Windows VM?
+          - text: What is SQL Server on Windows VMs?
             url: windows/sql-server-on-azure-vm-iaas-what-is-overview.md
-          - text: What is SQL Server on Linux VM?
+          - text: What is SQL Server on Linux VMs?
             url: linux/sql-server-on-linux-vm-what-is-iaas-overview.md
           - text: Security considerations
             url: windows/security-considerations-best-practices.md

@@ -35,7 +35,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 ## Remarks  
 Database schemas act as namespaces or containers for objects, such as tables, views, procedures, and functions, that can be found in the **sys.objects** catalog view.  
 
-Each schema has a an owner. The owner is a security [principal](../../relational-databases/security/authentication-access/principals-database-engine.md).
+Each schema has an owner. The owner is a security [principal](../../relational-databases/security/authentication-access/principals-database-engine.md).
   
 ## Permissions  
  Requires membership in the **public** role.

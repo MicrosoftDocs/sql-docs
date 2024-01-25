@@ -123,8 +123,12 @@ The following Linux and macOS operating system versions (64-bit only) are suppor
 |Red Hat Enterprise Linux 7 (64-bit)        |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |
 |SUSE Linux Enterprise Server 15 (64-bit)   |Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |   |
 |SUSE Linux Enterprise Server 12 (64-bit)   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
-|Alpine Linux 3.15 (64-bit)                 |Yes|Yes|Yes|   |   |   |   |   |   |   |   |
-|Alpine Linux 3.14 (64-bit)                 |Yes|Yes|Yes|   |   |   |   |   |   |   |   |
+|Alpine Linux 3.19 (64-bit)                 |Yes|   |   |   |   |   |   |   |   |   |   |
+|Alpine Linux 3.18 (64-bit)                 |Yes|Yes|   |   |   |   |   |   |   |   |   |
+|Alpine Linux 3.17 (64-bit)                 |Yes|Yes|   |   |   |   |   |   |   |   |   |
+|Alpine Linux 3.16 (64-bit)                 |Yes|Yes|   |   |   |   |   |   |   |   |   |
+|Alpine Linux 3.15 (64-bit)                 |   |Yes|Yes|   |   |   |   |   |   |   |   |
+|Alpine Linux 3.14 (64-bit)                 |   |Yes|Yes|   |   |   |   |   |   |   |   |
 |Alpine Linux 3.13 (64-bit)                 |   |   |Yes|   |   |   |   |   |   |   |   |
 |Alpine Linux 3.12 (64-bit)                 |   |   |   |Yes|   |   |   |   |   |   |   |
 |Alpine Linux 3.11 (64-bit)                 |   |   |   |Yes|Yes<sup>1</sup>|   |   |   |

@@ -98,7 +98,7 @@ EXEC sp_add_data_file_recover_suspect_db db1,
     '1 MB';
 ```
 
-## See also
+## Related content
 
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 - [sp_add_log_file_recover_suspect_db (Transact-SQL)](sp-add-log-file-recover-suspect-db-transact-sql.md)

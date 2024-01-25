@@ -67,6 +67,6 @@ Name of the article for which the custom stored procedure or script is being rem
 
 Only members of the **sysadmin** fixed server role, the **db_owner** fixed database role, or the **db_ddladmin** fixed database role can execute `sp_unregister_custom_scripting`.
 
-## See also
+## Related content
 
 - [sp_register_custom_scripting (Transact-SQL)](sp-register-custom-scripting-transact-sql.md)

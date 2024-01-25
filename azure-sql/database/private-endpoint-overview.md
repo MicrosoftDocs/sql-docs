@@ -177,14 +177,20 @@ WHERE session_id = @@SPID;
 
 ## Use Redirect connection policy with private endpoints
 
-We recommend that customers use the private link with the redirect connection policy for reduced latency and improved throughput. For connections to use this mode, clients need to:
+We recommend that customers use the private link with the **Redirect connection policy** for reduced latency and improved throughput. For connections to use this mode, clients need to meet the following pre-requisites:
 
-- Allow outbound communication from the VNET hosting the private endpoint to port range 1433 to 65535.
-- Use the latest version of drivers that have redirect support built in. Redirect support is included in ODBC, OLEDB, NET SqlClient Data Provider, Core .NET SqlClient Data Provider, and JDBC (version 9.4 or above) drivers. Connections originating from all other drivers are proxied.
+- Allow **inbound** communication to the VNET hosting the private endpoint to port range 1433 to 65535
 
-To use a private endpoint with the redirect connection policy, change [connection policy to redirect](connectivity-architecture.md#connection-policy).
+- Allow **outbound** communication from the VNET hosting the client to port range 1433 to 65535
 
-If it isn't feasible to modify the firewall settings to allow outbound access on the 1433-65535 port range, an alternative solution is to change the connection policy to Proxy.
+- Use the **latest version of drivers that have redirect support built in.** Redirect support is included in ODBC, OLEDB, NET SqlClient Data Provider, Core .NET SqlClient Data Provider, and JDBC (version 9.4 or above) drivers. Connections originating from all other drivers are proxied.
+
+After meeting the pre-requisite, clients need to explcitly [choose **Redirect** connection policy](connectivity-architecture.md#connection-policy).
+
+If it isn't feasible to modify the firewall settings to allow outbound access on the 1433-65535 port range, an alternative solution is to change the connection policy to **Proxy**.
+
+Existing private endpoints using **Default** connection policy shall be proxied i.e. they will use the Proxy connection policy with port 1433. The reason for doing this is is to avoid any disruption to client's traffic from reaching Sql Database due to requisite port ranges for redirection not being open.
+
 
 ## On-premises connectivity over private peering
 

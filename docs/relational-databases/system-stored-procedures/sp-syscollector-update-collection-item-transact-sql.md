@@ -155,7 +155,7 @@ EXEC sp_syscollector_update_collection_item
 GO
 ```
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Data collection](../data-collection/data-collection.md)

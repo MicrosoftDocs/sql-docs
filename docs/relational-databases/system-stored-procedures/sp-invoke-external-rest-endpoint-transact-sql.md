@@ -587,7 +587,7 @@ select cast(@response as xml)
 go
 ```
 
-## See also
+## Related content
 
 - [Resource management in Azure SQL Database](/azure/azure-sql/database/resource-limits-logical-server)
 - [sys.dm_resource_governor_resource_pools_history_ex](../system-dynamic-management-views/sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database.md)

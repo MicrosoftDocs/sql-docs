@@ -84,7 +84,7 @@ EXEC dbo.sp_update_notification
 GO
 ```
 
-## See also
+## Related content
 
 - [sp_add_notification (Transact-SQL)](sp-add-notification-transact-sql.md)
 - [sp_delete_notification (Transact-SQL)](sp-delete-notification-transact-sql.md)

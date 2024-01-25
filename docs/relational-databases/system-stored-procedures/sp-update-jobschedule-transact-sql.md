@@ -18,6 +18,7 @@ dev_langs:
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_update_jobschedule (Transact-SQL)
+
 [!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Changes the schedule settings for the specified job in the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent service.
@@ -40,7 +41,7 @@ For details about the permissions of these roles, see [SQL Server Agent Fixed Da
 
 Only members of **sysadmin** can use this stored procedure to update job schedules that are owned by other users.
 
-## Next steps
+## Related content
 
 - [SQL Server Agent stored procedures (Transact-SQL)](sql-server-agent-stored-procedures-transact-sql.md)
 - [sp_update_schedule (Transact-SQL)](sp-update-schedule-transact-sql.md)

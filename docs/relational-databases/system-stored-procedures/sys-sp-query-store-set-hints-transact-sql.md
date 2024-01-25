@@ -94,12 +94,12 @@ These [query hints](../../t-sql/queries/hints-transact-sql-query.md) are support
 
 The following query hints are currently unsupported:
 
--  `OPTIMIZE FOR ( @var = val)`
--  `MAXRECURSION`
--  `USE PLAN` (instead, consider Query Store's original plan forcing capability, [sp_query_store_force_plan](sp-query-store-force-plan-transact-sql.md)).
--  `DISABLE_DEFERRED_COMPILATION_TV`
--  `DISABLE_TSQL_SCALAR_UDF_INLINING`
--  [Table hints (for example, FORCESEEK, READUNCOMMITTED, INDEX)](../../t-sql/queries/hints-transact-sql-table.md)
+- `OPTIMIZE FOR ( @var = val)`
+- `MAXRECURSION`
+- `USE PLAN` (instead, consider Query Store's original plan forcing capability, [sp_query_store_force_plan](sp-query-store-force-plan-transact-sql.md)).
+- `DISABLE_DEFERRED_COMPILATION_TV`
+- `DISABLE_TSQL_SCALAR_UDF_INLINING`
+- [Table hints (for example, FORCESEEK, READUNCOMMITTED, INDEX)](../../t-sql/queries/hints-transact-sql-table.md)
 
 ## Permissions
 

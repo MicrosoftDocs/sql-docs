@@ -35,11 +35,12 @@ This stored procedure shares the name of `sp_purge_jobhistory` with a similar ob
 
 The name of the job for which to delete the history records. *job_name* is nvarchar(128), with a default of `NULL`. Either *job_id* or *job_name* must be specified, but both cannot be specified.
 
-#### @job_id 
+#### @job_id
 
  The job identification number of the job for the records to be deleted. *job_id* is uniqueidentifier, with a default of `NULL`. Either *job_id* or *job_name* must be specified, but both cannot be specified.
 
-#### @oldest_date 
+#### @oldest_date
+
  The oldest record to retain in the history. *oldest_date* is DATETIME2, with a default of `NULL`. When *oldest_date* is specified, `sp_purge_jobhistory` only removes records that are older than the value specified.
 
  All times in elastic jobs are in the UTC time zone.

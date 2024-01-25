@@ -41,7 +41,7 @@ The URL of the snapshot to be deleted, provided as a Unicode string.
 
 Requires ALTER ANY DATABASE permission.
 
-## See also
+## Related content
 
 - [sys.fn_db_backup_file_snapshots (Transact-SQL)](../system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)
 - [sp_delete_backup (Transact-SQL)](snapshot-backup-sp-delete-backup.md)

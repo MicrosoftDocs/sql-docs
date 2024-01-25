@@ -167,7 +167,7 @@ Both the database specified by *@database_name* and the resource pool specified 
 
 Requires CONTROL SERVER permission.
 
-## See also
+## Related content
 
 - [Bind a Database with Memory-Optimized Tables to a Resource Pool](../in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)
 - [sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)](sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)

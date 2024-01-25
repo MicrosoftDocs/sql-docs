@@ -184,7 +184,7 @@ EXEC sys.sp_estimate_data_compression_savings
 GO
 ```
 
-## Next steps
+## Related content
 
 - [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
 - [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)

@@ -116,9 +116,9 @@ The `Sku` parameter accepts the following editions: Developer, Express, Standard
 
 For more information, see the following articles: 
 
-* [Overview of SQL Server on a Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)
-* [FAQ for SQL Server on a Windows VM](frequently-asked-questions-faq.yml)
-* [Pricing guidance for SQL Server on a Windows VM](pricing-guidance.md)
+* [Overview of SQL Server on Windows VMs](sql-server-on-azure-vm-iaas-what-is-overview.md)
+* [FAQ for SQL Server on Windows VMs](frequently-asked-questions-faq.yml)
+* [Pricing guidance for SQL Server on Windows VMs](pricing-guidance.md)
 * [What's new for SQL Server on Azure VMs](doc-changes-updates-release-notes-whats-new.md)
 
 

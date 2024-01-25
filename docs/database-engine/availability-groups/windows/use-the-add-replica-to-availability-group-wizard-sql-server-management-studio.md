@@ -15,7 +15,7 @@ helpviewer_keywords:
 ---
 # Add a replica to your Always On Availability group using the Availability Group Wizard in SQL Server Management
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Use the **Add Replica to Availability Group Wizard** to help you a add new secondary replica to an existing Always On availability group.  
+  Use the **Add Replica to Availability Group Wizard** to help you add a new secondary replica to an existing Always On availability group.  
   
 > [!NOTE]  
 >  For information about using [!INCLUDE[tsql](../../../includes/tsql-md.md)] or PowerShell to add a secondary replica to an availability group, see [Add a Secondary Replica to an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md).  

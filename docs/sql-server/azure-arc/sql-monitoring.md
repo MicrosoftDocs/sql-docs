@@ -32,6 +32,10 @@ In order for monitoring data to be collected on a [!INCLUDE [ssazurearc](../../i
 * FCI clusters aren't supported at this time.
 * After adding or removing a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance on your Windows machine, you must restart the [!INCLUDE [msconame-md](../../includes/msconame-md.md)] [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] (sqlServerExtension) extension service for the update to take effect. This restart is only required to add/remove the instance from monitoring collection.
 
+* SQL Server version must be 2016 or later
+
+* To view the performance dashboard in the Azure Portal, you must have Contributor access or higher to the SQL Server - Azure Arc resource. 
+
 ## Collected data
 
 The following lists reflect the monitoring data that is collected from DMV datasets on [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] when the monitoring feature is enabled. No personally identifiable information (PII), end-user identifiable information (EUII), or customer content is collected.

@@ -129,8 +129,8 @@ To contribute to the Azure SQL documentation, see the [Docs contributor guide](/
 
 **Windows VMs**:
 
-* [Overview of SQL Server on a Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)
-* [Provision SQL Server on a Windows VM](create-sql-vm-portal.md)
+* [Overview of SQL Server on Windows VMs](sql-server-on-azure-vm-iaas-what-is-overview.md)
+* [Provision SQL Server on Windows VMs](create-sql-vm-portal.md)
 * [Migrate a database to SQL Server on an Azure VM](migrate-to-vm-from-sql-server.md)
 * [High availability and disaster recovery for SQL Server on Azure Virtual Machines](business-continuity-high-availability-disaster-recovery-hadr-overview.md)
 * [Performance best practices for SQL Server on Azure Virtual Machines](./performance-guidelines-best-practices-checklist.md)

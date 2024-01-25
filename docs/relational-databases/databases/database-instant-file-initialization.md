@@ -131,5 +131,5 @@ A long autogrow of a database and/or transaction log file can cause query perfor
 
 ## Related content
 
-- [CREATE ](../../t-sql/statements/create-database-transact-sql.md)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [Manage the size of the transaction log file](../logs/manage-the-size-of-the-transaction-log-file.md)

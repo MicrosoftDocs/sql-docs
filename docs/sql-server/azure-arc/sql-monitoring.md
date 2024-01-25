@@ -32,7 +32,7 @@ In order for monitoring data to be collected on a [!INCLUDE [ssazurearc](../../i
 * FCI clusters aren't supported at this time.
 * After adding or removing a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance on your Windows machine, you must restart the [!INCLUDE [msconame-md](../../includes/msconame-md.md)] [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] (sqlServerExtension) extension service for the update to take effect. This restart is only required to add/remove the instance from monitoring collection.
 
-* SQL Server version must be 2016 or later
+* SQL Server version must be 2016 or later.
 
 * To view the performance dashboard in the Azure Portal, you must have Contributor access or higher to the SQL Server - Azure Arc resource. 
 

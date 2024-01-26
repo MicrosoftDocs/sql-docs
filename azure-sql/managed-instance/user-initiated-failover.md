@@ -33,13 +33,13 @@ You might consider executing a [manual failover](high-availability-sla.md#testin
 - In some cases of query performance degradations, manual failover can help mitigate the performance issue.
 
 > [!NOTE]
-> Ensuring that your applications are failover resilient prior to deploying to production will help mitigate the risk of application faults in production and will contribute to application availability for your customers. Learn more about testing your applications for cloud readiness with [Testing App Cloud Readiness for Failover Resiliency with SQL Managed Instance](https://youtu.be/FACWYLgYDL8) video recording.
+> Ensuring that your applications are failover resilient prior to deploying to production helps mitigate the risk of application faults in production and contributes to application availability for your customers. Learn more about testing your applications for cloud readiness with [Testing App Cloud Readiness for Failover Resiliency with SQL Managed Instance](https://youtu.be/FACWYLgYDL8) video recording.
 
 ## Initiate manual failover on SQL Managed Instance
 
 ### Azure RBAC permissions required
 
-User initiating a failover will need to have one of the following Azure roles:
+Users initiating a failover need to have one of the following Azure roles:
 
 - Subscription Owner role, or
 - [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) role, or
@@ -96,7 +96,7 @@ az sql mi failover -g myresourcegroup -n myinstancename --replica-type ReadableS
 
 ### Using REST API
 
-For advanced users who would perhaps need to automate failovers of their SQL Managed Instances for purposes of implementing continuous testing pipeline, or automated performance mitigators, this function can be accomplished through initiating failover through an API call. see [SQL Managed Instances - Failover REST API](/rest/api/sql/managed-instances/failover) for details.
+For advanced users who would perhaps need to automate failovers of their SQL Managed Instances for purposes of implementing continuous testing pipeline, or automated performance mitigators, this function can be accomplished through initiating failover through an API call. See [SQL Managed Instances - Failover REST API](/rest/api/sql/managed-instances/failover) for details.
 
 To initiate failover using REST API call, first generate the Auth Token using API client of your choice. The generated authentication token is used as Authorization property in the header of API request and it's mandatory.
 
@@ -113,10 +113,10 @@ The following properties need to be passed in the API call:
 | subscriptionId | Subscription ID to which managed instance is deployed |
 | resourceGroupName | Resource group that contains managed instance |
 | managedInstanceName | Name of managed instance |
-| replicaType | (Optional) (Primary or ReadableSecondary). These parameters represent the type of replica to be failed over: primary or readable secondary. If not specified, failover will be initiated on the primary replica by default. |
+| replicaType | (Optional) (Primary or ReadableSecondary). These parameters represent the type of replica to be failed over: primary or readable secondary. If not specified, failover is initiated on the primary replica by default. |
 | api-version | Static value and currently needs to be "2019-06-01-preview" |
 
-API response will be one of the following two:
+API responds with one of the following two:
 
 - 202 Accepted
 - One of the 400 request errors.
@@ -125,13 +125,13 @@ Operation status can be tracked through reviewing API responses in response head
 
 ## Monitor the failover
 
-To monitor the progress of user initiated failover for your BC instance, execute the following T-SQL query in your favorite client (such is SSMS) on SQL Managed Instance. It will read the system view sys.dm_hadr_fabric_replica_states and report replicas available on the instance. Refresh the same query after initiating the manual failover.
+To monitor the progress of user initiated failover for your BC instance, execute the following T-SQL query in your favorite client (such is SSMS) on SQL Managed Instance. It reads the system view sys.dm_hadr_fabric_replica_states and report replicas available on the instance. Refresh the same query after initiating the manual failover.
 
 ```T-SQL
 SELECT DISTINCT replication_endpoint_url, fabric_replica_role_desc FROM sys.dm_hadr_fabric_replica_states
 ```
 
-Before initiating the failover, your output will indicate the current primary replica on BC service tier containing one primary and three secondaries in the Always On Availability Group. Upon execution of a failover, running this query again would need to indicate a change of the primary node.
+Before initiating the failover, your output indicates the current primary replica on BC service tier containing one primary and three secondaries in the Always On Availability Group. Upon execution of a failover, running this query again would need to indicate a change of the primary node.
 
 You won't be able to see the same output with GP service tier as the one above shown for BC. This is because GP service tier is based on a single node only. 
 You can use alternative T-SQL query showing the time SQL process started on the node for GP service tier instance:
@@ -140,7 +140,7 @@ You can use alternative T-SQL query showing the time SQL process started on the 
 SELECT sqlserver_start_time, sqlserver_start_time_ms_ticks FROM sys.dm_os_sys_info
 ```
 
-The short loss of connectivity from your client during the failover, typically lasting under a minute, will be the indication of the failover execution regardless of the service tier.
+The short loss of connectivity from your client during the failover, typically lasting under a minute, is the indication of the failover execution regardless of the service tier.
 
 > [!NOTE]
 > Completion of the failover process (not the actual short unavailability) might take several minutes at a time in case of **high-intensity** workloads. This is because the instance engine is taking care of all current transactions on the primary and catch up on the secondary node, prior to being able to failover.

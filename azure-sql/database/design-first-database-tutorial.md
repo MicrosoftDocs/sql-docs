@@ -33,87 +33,15 @@ Azure SQL Database is a relational database-as-a-service (DBaaS) in the Microsof
 - Use [SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms) (latest version) or the [Azure portal Query Editor for Azure SQL Database](query-editor.md).
 - [BCP and SQLCMD](https://www.microsoft.com/download/details.aspx?id=36433) (latest version).
 - If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/free/) before you begin.
-- If you don't already have an Azure SQL Database created, we'll create one in this tutorial. Look for the option to use your offer to [try Azure SQL Database for free (preview)](free-offer.md).
+- If you don't already have an Azure SQL Database created, visit [Quickstart: Create a single database](single-database-create-quickstart.md). Look for the option to use your offer to [try Azure SQL Database for free (preview)](free-offer.md).
 
 ## Sign in to the Azure portal
 
 Sign in to the [Azure portal](https://portal.azure.com/).
 
-## Create a blank database in Azure SQL Database
-
-A database in Azure SQL Database is created with a defined set of compute and storage resources. The database is created within an [Azure resource group](/azure/active-directory-b2c/overview) and is managed using an [logical SQL server](logical-servers.md).
-
-Follow these steps to create a blank database.
-
-1. On the Azure portal menu or from the **Home** page, select **Create a resource**.
-1. On the **New** page, select **Databases** in the Azure Marketplace section. Under **SQL Database**, select **Create**.
-
-   :::image type="content" source="media\design-first-database-tutorial\create-empty-database.png" alt-text="Screenshot of the Azure portal, selecting a SQL Database from Azure Marketplace.":::
-
-1. If you're eligible for the [Azure SQL Database for free](free-offer.md) offer, you'll see a banner and a button to **Apply offer**. Some options in the following steps will be simplified for you.
-1. Fill out the **SQL Database** form with the following information, leaving other options as default.
-
-    | Setting       | Suggested value | Description |
-    | ------------ | ------------------ | ------------------------------------------------- |
-    | **Subscription** | *yourSubscription*  | For details about your subscriptions, see [Subscriptions](https://account.windowsazure.com/Subscriptions). |
-    | **Resource group** | *yourResourceGroup* | For valid resource group names, see [Naming rules and restrictions](/azure/architecture/best-practices/resource-naming). |
-    | **Database name** | *yourDatabase* | For valid database names, see [Database identifiers](/sql/relational-databases/databases/database-identifiers). |
-    | **Workload environment** | Development | Reduce cost by declaring using default settings for pre-production environments. |
-    | **Select source** | Blank database | Specifies that a blank database should be created. |
-
-1. Choose a server from the drop-down to use an existing server or select **Create new** to create and configure a new server. Either select an existing server or select **Create a new server** and fill out the **New server** form with the following information:
-
-    | Setting       | Suggested value | Description |
-    | ------------ | ------------------ | ------------------------------------------------- |
-    | **Server name** | Any globally unique name | For valid server names, see [Naming rules and restrictions](/azure/architecture/best-practices/resource-naming). |
-    | **Location** | Any valid location | For information about regions, see [Azure Regions](https://azure.microsoft.com/regions/). |
-    | **Server admin login** | Any valid name | For valid login names, see [Database identifiers](/sql/relational-databases/databases/database-identifiers). |
-    | **Password** | Any valid password | Your password must have at least eight characters and must use characters from three of the following categories: upper case characters, lower case characters, numbers, and non-alphanumeric characters. There are other limitations to the password string, see popup for more information. |
-
-    :::image type="content" source="media\design-first-database-tutorial\create-database-server.png" alt-text="Screenshot of the Azure portal, creating a logical server for Azure." lightbox="media\design-first-database-tutorial\create-database-server.png":::
-
-1. Select **Select**.
-1. Select **Pricing tier** to specify the service tier, the number of DTUs or vCores, and the amount of storage. You might explore the options for the number of DTUs/vCores and storage that is available to you for each service tier. For this tutorial, use either the [Azure SQL Database for free](free-offer.md) offer or choose a **Basic DTU** tier for lowest cost.
-
-    After selecting the service tier, the number of DTUs or vCores, and the amount of storage, select **Apply**.
-
-1. Enter a **Collation** for the blank database (for this tutorial, use the default value). For more information about collations, see [Collations](/sql/t-sql/statements/collations).
-
-1. Now that you've completed the **SQL Database** form, select **Create** to provision the database. This step might take a few minutes.
-
-1. On the toolbar, select **Notifications** to monitor the deployment process. 
-
-## Create a server-level IP firewall rule
-
-Azure SQL Database creates an IP firewall at the server-level. This firewall prevents external applications and tools from connecting to the server and any databases on the server unless a firewall rule allows their IP through the firewall. To enable external connectivity to your database, you must first add an IP firewall rule for your IP address (or IP address range). Follow these steps to create a [server-level IP firewall rule](firewall-configure.md).
-
-> [!IMPORTANT]
-> Azure SQL Database communicates over port 1433. If you are trying to connect to this service from within a corporate network, outbound traffic over port 1433 might not be allowed by your network's firewall. If so, you cannot connect to your database unless your administrator opens port 1433.
-
-1. After the deployment completes, select **SQL databases** from the Azure portal menu or search for and select *SQL databases* from any page.  
-
-1. Select *yourDatabase* on the **SQL databases** page. The overview page for your database opens, showing you the fully qualified **Server name** (such as `<your server name>.database.windows.net`) and provides options for further configuration.
-
-   :::image type="content" source="media\design-first-database-tutorial\server-name.png" alt-text="Screenshot of the Azure portal, database overview page with the server name highlighted." lightbox="media\design-first-database-tutorial\server-name.png":::
-
-1. Copy this fully qualified server name to your clipboard.
-
-1. Select **Networking** under **Settings**. Choose the **Public Access** tab, and then select **Selected networks** under **Public network access** to display the **Firewall rules** section.
-
-   :::image type="content" source="media\design-first-database-tutorial\server-firewall-rule.png" alt-text="Screenshot of the Azure portal, networking page, showing where to set the server-level IP firewall rule." lightbox="media\design-first-database-tutorial\server-firewall-rule.png":::
-
-1. Select **Add your client IPv4** on the toolbar to add your current IP address to a new IP firewall rule. An IP firewall rule can open port 1433 for a single IP address or a range of IP addresses.
-
-1. Select **Save**. A server-level IP firewall rule is created for your current IP address opening port 1433 on the server.
-
-1. Select **OK** and then close the **Firewall settings** page.
-
-Your IP address can now pass through the IP firewall. You can now connect to your database using any tool of your choice.
-
-> [!IMPORTANT]
-> By default, access through the SQL Database IP firewall is enabled for all Azure services. Select **OFF** on this page to disable for all Azure services.
-
 ## Connect to the database
+
+Azure SQL databases exist inside logical SQL servers. Can connect to the logical SQL server's `master` using a login, then connect to your database. Or, using a [contained user](/sql/relational-databases/security/contained-database-users-making-your-database-portable?view=azuresqldb-current&preserve-view=true#contained-database-user-model), you can connect directly to your Azure SQL database.
 
 ## [SQL Server Management Studio](#tab/ssms)
 
@@ -151,13 +79,11 @@ Use the [Azure portal Query Editor for Azure SQL Database](query-editor.md) to c
 
 1. Navigate to your SQL database in the Azure portal. For example, visit [your Azure SQL dashboard](https://portal.azure.com/#view/HubsExtension/BrowseResource/resourceType/Microsoft.Sql%2Fazuresql).
 
-   Azure SQL databases exist inside logical SQL servers. Can connect to the logical SQL server using a login, then connect to your database. Or, using a [contained user](/sql/relational-databases/security/contained-database-users-making-your-database-portable?view=azuresqldb-current#contained-database-user-model), you can connect directly to your Azure SQL Database.
-
 1. On your SQL database **Overview** page in the [Azure portal](https://portal.azure.com), select **Query editor (preview)** from the left menu.
 
    :::image type="content" source="media\design-first-database-tutorial\find-query-editor.png" alt-text="Screenshot that shows selecting query editor.":::
 
-1. On the sign-in screen under **Welcome to SQL Database Query Editor**, you can connect using SQL or Microsoft Entra authentication.
+1. On the sign-in screen under **Welcome to SQL Database Query Editor**, provide credentials to connect to the database. You can connect using SQL or Microsoft Entra authentication.
 
    - To connect with SQL authentication, under **SQL server authentication**, enter a **Login** and **Password** for a user that has access to the database, and then select **OK**. You can always use the login and password for the server admin.
 
@@ -289,7 +215,7 @@ This query joins all four tables and finds the courses in which 'Noe Coleman' ha
    ```
 
 > [!TIP]
-> To learn more about writing SQL queries, visit [Tutorial: Write Transact-SQL statements](../../docs/t-sql/tutorial-writing-transact-sql-statements.md).
+> To learn more about writing SQL queries, visit [Tutorial: Write Transact-SQL statements](/sql/t-sql/tutorial-writing-transact-sql-statements.md).
 
 ## Related content
 

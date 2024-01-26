@@ -23,9 +23,9 @@ This article explains how to manually fail over a primary node on SQL Managed In
 
 ## When to use manual failover
 
-[High availability](../database/high-availability-sla.md) is a fundamental part of SQL Managed Instance platform that works transparently for your database applications. Failovers from primary to secondary nodes in case of node degradation or fault detection, or during regular monthly software updates are an expected occurrence for all applications using SQL Managed Instance in Azure.
+[High availability](high-availability-sla.md) is a fundamental part of SQL Managed Instance platform that works transparently for your database applications. Failovers from primary to secondary nodes in case of node degradation or fault detection, or during regular monthly software updates are an expected occurrence for all applications using SQL Managed Instance in Azure.
 
-You might consider executing a [manual failover](../database/high-availability-sla.md#testing-application-fault-resiliency) on SQL Managed Instance for some of the following reasons:
+You might consider executing a [manual failover](high-availability-sla.md#testing-application-fault-resiliency) on SQL Managed Instance for some of the following reasons:
 - Test application for failover resiliency before deploying to production
 - Test end-to-end systems for fault resiliency on automatic failovers
 - Test how failover impacts existing database sessions
@@ -33,7 +33,7 @@ You might consider executing a [manual failover](../database/high-availability-s
 - In some cases of query performance degradations, manual failover can help mitigate the performance issue.
 
 > [!NOTE]
-> Ensuring that your applications are failover resilient prior to deploying to production will help mitigate the risk of application faults in production and will contribute to application availability for your customers. Learn more about testing your applications for cloud readiness with [Testing App Cloud Readiness for Failover Resiliency with SQL Managed Instance](https://youtu.be/FACWYLgYDL8) video recoding.
+> Ensuring that your applications are failover resilient prior to deploying to production will help mitigate the risk of application faults in production and will contribute to application availability for your customers. Learn more about testing your applications for cloud readiness with [Testing App Cloud Readiness for Failover Resiliency with SQL Managed Instance](https://youtu.be/FACWYLgYDL8) video recording.
 
 ## Initiate manual failover on SQL Managed Instance
 
@@ -154,6 +154,6 @@ The short loss of connectivity from your client during the failover, typically l
 > - Failover will not be allowed if there exists a database restore in progress.
 
 ## Next steps
-- Learn more about testing your applications for cloud readiness with [Testing App Cloud Readiness for Failover Resiliency with SQL Managed Instance](https://youtu.be/FACWYLgYDL8) video recoding.
-- Learn more about high availability of managed instance [High availability for Azure SQL Managed Instance](../database/high-availability-sla.md).
+- Learn more about testing your applications for cloud readiness with [Testing App Cloud Readiness for Failover Resiliency with SQL Managed Instance](https://youtu.be/FACWYLgYDL8) video recording.
+- Learn more about high availability of managed instance [High availability for Azure SQL Managed Instance](high-availability-sla.md).
 - For an overview, see [What is Azure SQL Managed Instance?](sql-managed-instance-paas-overview.md).

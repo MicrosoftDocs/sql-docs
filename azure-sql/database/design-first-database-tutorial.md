@@ -243,7 +243,7 @@ This query joins all four tables and finds the courses in which 'Noe Coleman' ha
    ```
 
 > [!TIP]
-> To learn more about writing SQL queries, visit [Tutorial: Write Transact-SQL statements](/sql/t-sql/tutorial-writing-transact-sql-statements.md).
+> To learn more about writing SQL queries, visit [Tutorial: Write Transact-SQL statements](/sql/t-sql/tutorial-writing-transact-sql-statements).
 
 ## Related content
 

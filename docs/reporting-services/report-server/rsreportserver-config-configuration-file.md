@@ -1,6 +1,6 @@
 ---
-title: "RsReportServer.config Configuration File"
-description: Learn about the configuration file that stores settings that are used by the Report Server Web service and background processing.
+title: "RsReportServer.config configuration file"
+description: Learn about the configuration file that stores settings that are used by the Report Server web service and background processing.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/01/2020
@@ -9,36 +9,36 @@ ms.subservice: report-server
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
-# RsReportServer.config Configuration File
-The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** file stores settings that are used by the Report Server Web service and background processing. All [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications run within a single process that reads configuration settings stored in the RSReportServer.config file. Both Native mode and SharePoint mode report servers use the RSReportServer.config, however the two modes don't use all of the same settings in the configuration file. The SharePoint mode version of the file is smaller as many of the settings for SharePoint mode are stored in SharePoint configuration databases rather than the file. This topic describes the default configuration file that is installed for Native mode and SharePoint mode and some of the important settings and behaviors that are controlled by the configuration file.  
+# RsReportServer.config configuration file
+The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `RsReportServer.config` file stores settings that are used by the Report Server web service and background processing. All [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications run within a single process that reads configuration settings stored in the `RSReportServer.config` file. Both native mode and SharePoint mode report servers use the `RSReportServer.config`, however the two modes don't use all of the same settings in the configuration file. The SharePoint mode version of the file is smaller as many of the settings for SharePoint mode are stored in SharePoint configuration databases rather than the file. This article describes the default configuration file that is installed for native mode and SharePoint mode and some of the important settings and behaviors that are controlled by the configuration file.  
 
 In SharePoint mode, the configuration file contains those settings that apply to all service application instances running on that computer. The SharePoint configuration database contains configuration settings that apply to specific service applications. The settings that are stored in the Configuration database and managed through the SharePoint management pages can be different for each [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.  
   
- The settings are presented in following content in the order in which they appear in the configuration file that is installed by default. For instructions on how to edit this file, see [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
+ The settings are presented in following content in the order in which they appear in the configuration file that is installed by default. For instructions on how to edit this file, see [Modify a Reporting Services configuration file &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
  
-##  <a name="bkmk_file_location"></a> File Location  
+##  <a name="bkmk_file_location"></a> File location  
 
-The RSReportServer.config is located in the following folders, depending on the report server mode:  
+The `RSReportServer.config` is located in the following folders, depending on the report server mode:  
 
 
   
 ### Native mode report server 
 
  
-**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)]
 
 ```  
 C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer  
 ```
 
-**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)]
 
 ```  
 C:\Program Files\Microsoft SQL Server Reporting Services\SSRS\ReportServer
 ```  
 
-**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 ```  
 C:\Program Files\Microsoft Power BI Report Server\PBIRS\ReportServer
@@ -53,23 +53,23 @@ C:\Program Files\Microsoft Power BI Report Server\PBIRS\ReportServer
 C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting  
 ```  
  
-For more information on editing the file, see [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
+For more information on editing the file, see [Modify a Reporting Services configuration file &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
-##  <a name="bkmk_generalconfiguration"></a> General Configuration Settings (rsreportserver.config)  
- The following table provides information about general configuration settings that appear in the first part of the file. Settings are presented in the order in which they appear in the configuration file. The last column of the table indicates if the setting applies to a Native mode report server **(N)** or a SharePoint mode report server **(S)** or both.  
+##  <a name="bkmk_generalconfiguration"></a> General configuration settings (rsreportserver.config)  
+ The following table provides information about general configuration settings that appear in the first part of the file. Settings are presented in the order in which they appear in the configuration file. The last column of the table indicates if the setting applies to a native mode report server **(N)** or a SharePoint mode report server **(S)** or both.  
   
 > [!NOTE]  
->  In this topic, "maximum integer" refers to INT_MAX value of 2147483647.  For more information, see [Integer Limits](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
+>  In this article, "maximum integer" refers to `INT_MAX` value of 2147483647.  For more information, see [Integer limits](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
   
 |Setting|Description|Mode|  
 |-------------|-----------------|----------|  
 |**Dsn**|Specifies the connection string to the database server that hosts the report server database. This value is encrypted and is added to the configuration file when you create the report server database. For SharePoint, the database connection information is taken from the SharePoint configuration database.|N,S|  
 |**ConnectionType**|Specifies the type of credentials that the report server uses to connect to the report server database. Valid values are **Default** and **Impersonate**. **Default** is specified if the report server is configured to use a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or the service account to connect to the report server database. **Impersonate** is specified if the report server uses a Windows account to connect to the report server database.|N|  
-|**LogonUser, LogonDomain, LogonCred**|Stores the domain, user name, and password of a domain account that is used by a report server to connect to a report server database. Values for **LogonUser**, **LogonDomain**, and **LogonCred** are created when the report server connection is configured to use a domain account. For more information about a report server database connection, see [Configure a Report Server Database Connection  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).|N|  
-|**InstanceID**|An identifier for the report server instance. Report server instance names are based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance names. This value specifies a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name. By default, this value is **MSRS12**_\<instancename>_. Don't modify this setting. The following is an example of the complete value: `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> The following is an example of SharePoint mode:<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
+|**LogonUser, LogonDomain, LogonCred**|Stores the domain, user name, and password of a domain account that is used by a report server to connect to a report server database. Values for **LogonUser**, **LogonDomain**, and **LogonCred** are created when the report server connection is configured to use a domain account. For more information about a report server database connection, see [Configure a report server database connection  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).|N|  
+|**InstanceID**|An identifier for the report server instance. Report server instance names are based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance names. This value specifies a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name. By default, this value is `MSRS12_\<instancename>_`. Don't modify this setting. The following is an example of the complete value: `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> The following is an example of SharePoint mode:<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
 |**InstallationID**|An identifier for the report server installation that Setup creates. This value is set to a GUID. Don't modify this setting.|N|  
-|**SecureConnectionLevel**|Specifies the degree to which Web service calls must use Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL). This setting is used for both the Report Server Web service and the web portal. This value is set when you configure a URL to use HTTP or HTTPS in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool. In SQL Server 2008 R2, SecureConnectionLevel is made an on/off switch. For earlier versions than SQL Server 2008 R2 the valid values range are from 0 through 3, where 0 is least secure. For more information, see [ConfigurationSetting Method - SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md), [Using Secure Web Service Methods](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md) and [Configure TLS Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|N,S|
-|**DisableSecureFormsAuthenticationCookie**|Default value is False.<br /><br /> Specifies whether to disable the forcing of the cookie used for form and custom authentication to be marked secure. Starting with SQL Server 2012, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] will automatically mark forms authentication cookies used with custom authentication extensions, as a secure cookie when sent to the client. When report server administrators and custom security extension authors change this property, they can revert to the previous behavior, which allowed the custom security extension author to determine whether to mark the cookie as a secure cookie. It's recommended that secure cookies are used for forms authentication to help prevent network sniffing and replay attacks.|N|  
+|**SecureConnectionLevel**|Specifies the degree to which web service calls must use Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL). This setting is used for both the Report Server web service and the web portal. This value is set when you configure a URL to use HTTP or HTTPS in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool. In SQL Server 2008 R2, **SecureConnectionLevel** is made an on/off switch. For earlier versions than SQL Server 2008 R2 the valid values range are from 0 through 3, where 0 is least secure. For more information, see [ConfigurationSetting method - SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md), [Use secure web service methods](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md) and [Configure TLS connections on a native mode report server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|N,S|
+|**DisableSecureFormsAuthenticationCookie**|Default value is **False**.<br /><br /> Specifies whether to disable the forcing of the cookie used for form and custom authentication to be marked secure. Starting with SQL Server 2012, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] automatically marks forms authentication cookies used with custom authentication extensions, as a secure cookie when sent to the client. When report server administrators and custom security extension authors change this property, they can revert to the previous behavior, which allowed the custom security extension author to determine whether to mark the cookie as a secure cookie. It's recommended that secure cookies are used for forms authentication to help prevent network sniffing and replay attacks.|N|  
 |**CleanupCycleMinutes**|Specifies the number of minutes after which old sessions and expired snapshots are removed from the report server databases. Valid values range from 1 to maximum integer. The default is 10. |N,S|  
 |**MaxActiveReqForOneUser**|Specifies the maximum number of reports that one user can process at the same time. Once the limit is reached, further report processing requests are denied. Valid values are 1 to a maximum integer. The default is 20.<br /><br /> Note that most requests process very quickly so it is unlikely that a single user will have more than 20 open connections at any given time. If users are opening more than 15 process-intensive reports at the same time, you might need to increase this value.<br /><br /> This setting is ignored for report servers that run in SharePoint integrated mode.|N,S|  
 |**MaxActiveReqForAnonymous**|Specifies the maximum number of anonymous requests that can be in process at the same time. Once the limit is reached, further processing requests are denied. Valid values are 1 to a maximum integer. The default is 200.

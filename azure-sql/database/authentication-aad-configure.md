@@ -517,17 +517,17 @@ Use this method to authenticate to the database in SQL Database or SQL Managed I
 
 The Default authentication option with Microsoft Entra ID enables authentication that's performed through password-less and non-interactive mechanisms including managed identities.
 
-## Use Microsoft Entra identity to connect using Azure portal Query Editor for Azure SQL Database
+## Use Microsoft Entra identity to connect using Azure portal Query editor for Azure SQL Database
 
-For more information on the Azure portal Query Editor for Azure SQL Database, see [Quickstart: Use the Azure portal query editor to query Azure SQL Database](connect-query-portal.md).
+For more information on the Azure portal Query editor for Azure SQL Database, see [Quickstart: Use the Azure portal query editor to query Azure SQL Database](connect-query-portal.md).
 
 1. Navigate to your SQL database in the Azure portal. For example, visit [your Azure SQL dashboard](https://portal.azure.com/#view/HubsExtension/BrowseResource/resourceType/Microsoft.Sql%2Fazuresql).
 
-1. On your SQL database **Overview** page in the [Azure portal](https://portal.azure.com), select **Query editor (preview)** from the left menu.
+1. On your SQL database **Overview** page in the [Azure portal](https://portal.azure.com), select **Query editor** from the left menu.
 
 1. On the sign-in screen under **Welcome to SQL Database Query Editor**, select **Continue as \<your user or group ID>**.
 
-   :::image type="content" source="media\authentication-aad-configure\query-editor-login-menu.png" alt-text="Screenshot showing sign-in to the Azure portal Query Editor with Microsoft Entra authentication." lightbox="media\authentication-aad-configure\query-editor-login-menu.png":::
+   :::image type="content" source="media\authentication-aad-configure\query-editor-login-menu.png" alt-text="Screenshot showing sign-in to the Azure portal Query editor with Microsoft Entra authentication." lightbox="media\authentication-aad-configure\query-editor-login-menu.png":::
 
 <a name='using-an-azure-ad-identity-to-connect-from-a-client-application'></a>
 

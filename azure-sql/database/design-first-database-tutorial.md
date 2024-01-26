@@ -73,9 +73,9 @@ Use [SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms) 
 
 1. In **Object Explorer**, right-click *yourDatabase* and select **New Query**. A blank query window opens that is connected to your database.
 
-## [Azure portal Query Editor](#tab/queryeditor)
+## [Azure portal Query editor](#tab/queryeditor)
 
-Use the [Azure portal Query Editor for Azure SQL Database](query-editor.md) to connect to your Azure SQL database.
+Use the [Azure portal Query editor for Azure SQL Database](query-editor.md) to connect to your Azure SQL database.
 
 1. Navigate to your SQL database in the Azure portal. For example, visit [your Azure SQL dashboard](https://portal.azure.com/#view/HubsExtension/BrowseResource/resourceType/Microsoft.Sql%2Fazuresql).
 

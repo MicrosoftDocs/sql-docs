@@ -26,7 +26,7 @@ Change Tracking is a lightweight solution that provides an efficient data change
 - [sys.sp_flush_commit_table_on_demand (Transact-SQL)](sys-sp-flush-commit-table-on-demand-transact-sql.md)
 - [sys.sp_flush_CT_internal_table_on_demand (Transact-SQL)](sys-sp-flush-ct-internal-table-on-demand-transact-sql.md)
 
-## See also
+## Related content
 
 - [About Change Tracking (Transact-SQL)](../track-changes/about-change-tracking-sql-server.md)
 - [Change Tracking Cleanup and Troubleshooting (Transact-SQL)](../track-changes/cleanup-and-troubleshoot-change-tracking-sql-server.md)

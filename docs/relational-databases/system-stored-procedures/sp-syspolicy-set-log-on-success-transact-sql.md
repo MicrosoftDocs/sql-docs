@@ -66,7 +66,7 @@ EXEC msdb.dbo.sp_syspolicy_set_log_on_success @value = 1;
 GO
 ```
 
-## Next steps
+## Related content
 
 - [Policy-Based Management stored procedures (Transact-SQL)](policy-based-management-stored-procedures-transact-sql.md)
 - [sp_syspolicy_configure (Transact-SQL)](sp-syspolicy-configure-transact-sql.md)

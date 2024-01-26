@@ -74,6 +74,6 @@ EXEC sp_fulltext_semantic_unregister_language_statistics_db;
 GO
 ```
 
-## See also
+## Related content
 
 - [Install and Configure Semantic Search](../search/install-and-configure-semantic-search.md)

@@ -111,7 +111,7 @@ EXECUTE core.sp_purge_data @instance_name = @@SERVERNAME, @collection_set_uid = 
 GO
 ```
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Data Collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)

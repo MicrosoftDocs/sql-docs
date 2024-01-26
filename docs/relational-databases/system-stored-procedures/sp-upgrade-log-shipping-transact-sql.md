@@ -49,7 +49,7 @@ This stored procedure is invoked automatically during [!INCLUDE [ssNoVersion](..
 
 Requires membership in the **sysadmin** fixed server role, or execute permission directly on this stored procedure.
 
-## See also
+## Related content
 
 - [About Log Shipping (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

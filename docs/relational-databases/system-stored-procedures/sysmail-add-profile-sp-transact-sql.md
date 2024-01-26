@@ -94,14 +94,11 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
 SELECT @profileId;
 ```
 
-## See also
+## Related content
 
 - [Database Mail](../database-mail/database-mail.md)
 - [Database Mail Configuration Objects](../database-mail/database-mail-configuration-objects.md)
 - [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)
-
-## Next steps
-
 - [Configure Database Mail](../database-mail/configure-database-mail.md)
 - [Create a Database Mail Account](../database-mail/create-a-database-mail-account.md)
 - [Configure SQL Server Agent Mail to Use Database Mail](../database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)

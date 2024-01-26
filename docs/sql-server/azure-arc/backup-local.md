@@ -189,9 +189,9 @@ When the built-in automated backups are enabled on an Arc-enabled [!INCLUDE [ssn
 
 ## Limitations
 
-- Automated backups are currently not supported for Always On failover cluster instances
+- Automated backups are currently not supported for Always On failover cluster instances (FCI).
+- Automated backups are not supported on any instance that hosts an availability group (AG) replica.
 - The user databases need to be in full recovery model for the backups to be performed. Databases that aren't in full recovery model are not automatically backed up.
-- Automated backups are only supported on the primary replica of an Always On availability group.
 - Automated backups are only available for licenses with Software Assurance, SQL subscription, or pay-as-you-go. For details, see [Feature availability depending on license type](overview.md#feature-availability-depending-on-license-type).
 
 ## Related tasks

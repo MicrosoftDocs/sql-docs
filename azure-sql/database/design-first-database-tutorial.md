@@ -8,22 +8,19 @@ ms.date: 01/26/2024
 ms.service: sql-database
 ms.subservice: development
 ms.topic: tutorial
-ms.custom:
-  - sqldbrb=1
 ---
-# Tutorial: Design a relational database in Azure SQL Database using SSMS
+# Tutorial: Design a relational database in Azure SQL Database
+
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 Azure SQL Database is a relational database-as-a-service (DBaaS) in the Microsoft Azure. In this tutorial, you learn how to:
 
 > [!div class="checklist"]
 >
-> - Create a database using the Azure portal*
-> - Set up a server-level IP firewall rule using the Azure portal
-> - Connect to the database with SSMS
-> - Create tables with SSMS
+> - Connect to the database
+> - Create tables with T-SQL commands
 > - Bulk load data with BCP
-> - Query data with SSMS
+> - Query data with T-SQL commands
 
 > [!NOTE]
 > For the purpose of this tutorial, we are using Azure SQL Database. You could also use a pooled database in an elastic pool or a SQL Managed Instance. For connectivity to a SQL Managed Instance, see these SQL Managed Instance quickstarts: [Quickstart: Configure Azure VM to connect to an Azure SQL Managed Instance](../managed-instance/connect-vm-instance-configure.md) and [Quickstart: Configure a point-to-site connection to an Azure SQL Managed Instance from on-premises](../managed-instance/point-to-site-p2s-configure.md).
@@ -31,6 +28,7 @@ Azure SQL Database is a relational database-as-a-service (DBaaS) in the Microsof
 ## Prerequisites
 
 - Use [SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms) (latest version) or the [Azure portal Query Editor for Azure SQL Database](query-editor.md).
+    - You can also follow this same tutorial using [Azure Data Studio (ADS)](design-first-database-azure-data-studio.md).
 - [BCP and SQLCMD](https://www.microsoft.com/download/details.aspx?id=36433) (latest version).
 - If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/free/) before you begin.
 - If you don't already have an Azure SQL Database created, visit [Quickstart: Create a single database](single-database-create-quickstart.md). Look for the option to use your offer to [try Azure SQL Database for free (preview)](free-offer.md).
@@ -38,6 +36,36 @@ Azure SQL Database is a relational database-as-a-service (DBaaS) in the Microsof
 ## Sign in to the Azure portal
 
 Sign in to the [Azure portal](https://portal.azure.com/).
+
+## Create a server-level IP firewall rule
+
+Azure SQL Database creates an IP firewall at the server-level. This firewall prevents external applications and tools from connecting to the server and any databases on the server unless a firewall rule allows their IP through the firewall. To enable external connectivity to your database, you must first add an IP firewall rule for your IP address (or IP address range). Follow these steps to create a [server-level IP firewall rule](firewall-configure.md).
+
+> [!IMPORTANT]
+> Azure SQL Database communicates over port 1433. If you are trying to connect to this service from within a corporate network, outbound traffic over port 1433 may not be allowed by your network's firewall. If so, you cannot connect to your database unless your administrator opens port 1433.
+
+1. After the deployment completes, select **SQL databases** from the Azure portal menu or search for and select *SQL databases* from any page.  
+
+1. Select *yourDatabase* on the **SQL databases** page. The overview page for your database opens, showing you the fully qualified **Server name** (such as `contosodatabaseserver01.database.windows.net`) and provides options for further configuration.
+
+   :::image type="content" source="./media/design-first-database-tutorial/server-name.png" alt-text="Screenshot of the Azure portal, database overview page with the server name highlighted.":::
+
+1. Copy this fully qualified server name for use to connect to your server and databases from SQL Server Management Studio.
+
+1. Select **Networking** under **Settings**. Choose the **Public Access** tab, and then select **Selected networks** under **Public network access** to display the **Firewall rules** section. 
+
+   :::image type="content" source="./media/design-first-database-tutorial/server-firewall-rule.png" alt-text="Screenshot of the Azure portal, networking page, showing where to set the server-level IP firewall rule.":::
+
+1. Select **Add your client IPv4** on the toolbar to add your current IP address to a new IP firewall rule. An IP firewall rule can open port 1433 for a single IP address or a range of IP addresses.
+
+1. Select **Save**. A server-level IP firewall rule is created for your current IP address opening port 1433 on the server.
+
+1. Select **OK** and then close the **Firewall settings** page.
+
+Your IP address can now pass through the IP firewall. You can now connect to your database using SQL Server Management Studio or another tool of your choice. Be sure to use the server admin account you created previously.
+
+> [!IMPORTANT]
+> By default, access through the SQL Database IP firewall is enabled for all Azure services. Select **OFF** on this page to disable for all Azure services.
 
 ## Connect to the database
 
@@ -48,14 +76,14 @@ Azure SQL databases exist inside logical SQL servers. Can connect to the logical
 Use [SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms) to connect to your Azure SQL database.
 
 1. Open SQL Server Management Studio.
-1. In the **Connect to Server** dialog box, enter the following information:
+1. In the **Connect to Server** dialog box, enter the following information. Leave other options as default.
 
    | Setting       | Suggested value | Description |
    | ------------ | ------------------ | ------------------------------------------------- |
    | **Server type** | Database engine | This value is required. |
    | **Server name** | The fully qualified Azure SQL Database logical server name | For example, `your_logical_azure_sql_server.database.windows.net`. |
    | **Authentication** | SQL Server Authentication | Use SQL Server Authentication to enter a user name and password. |
-   | | Microsoft Entra authentication | To connect using Microsoft Entra ID, if you're the Microsoft Entra server admin, use the **Microsoft Entra MFA** Authentication option. For more information, see [Configure and manage Microsoft Entra authentication with Azure SQL](authentication-aad-configure.md).|
+   | | Microsoft Entra authentication | To connect using Microsoft Entra ID, if you're the Microsoft Entra server admin, choose **Microsoft Entra MFA**. For more information, see [Configure and manage Microsoft Entra authentication with Azure SQL](authentication-aad-configure.md).|
    | **Login** | The server admin account | If using SQL Server Authentication, the account that you specified when you created the server. |
    | **Password** | The password for your server admin account | If using SQL Server Authentication, the password that you specified when you created the server. |
 
@@ -219,16 +247,11 @@ This query joins all four tables and finds the courses in which 'Noe Coleman' ha
 
 ## Related content
 
-In this tutorial, you learned many basic database tasks. You learned how to:
-
-> [!div class="checklist"]
->
-> - Create a database using the Azure portal*
-> - Set up a server-level IP firewall rule using the Azure portal
-> - Connect to the database with SSMS
-> - Create tables with SSMS
-> - Bulk load data with BCP
-> - Query data with SSMS
+- [Tutorial: Design a relational database in Azure SQL Database using Azure Data Studio (ADS)](design-first-database-azure-data-studio.md)
+- [Try Azure SQL Database for free (preview)](free-offer.md)
+- [What's new in Azure SQL Database?](doc-changes-updates-release-notes-whats-new.md)
+- [Configure and manage content reference - Azure SQL Database](how-to-content-reference-guide.md)
+- [Plan and manage costs for Azure SQL Database](cost-management.md)
 
 > [!TIP]
 > **Ready to start developing an .NET application?** This free Learn module shows you how to [Develop and configure an ASP.NET application that queries an Azure SQL Database](/training/modules/develop-app-that-queries-azure-sql/), including the creation of a simple database.

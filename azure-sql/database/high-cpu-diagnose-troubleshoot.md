@@ -112,7 +112,7 @@ The page will show the execution plan(s) and related metrics for the query over 
 
 Transact-SQL allows you to identify currently running queries with CPU time they have used so far. You can also use Transact-SQL to query recent CPU usage in your database, top queries by CPU, and queries that compiled the most often.
 
-You can query CPU metrics with [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), [Azure Data Studio](/azure-data-studio/download-azure-data-studio), or [the Azure portal's query editor (preview)](query-editor.md). When using SSMS or Azure Data Studio, open a new query window and connect it to your database (not the `master` database).
+You can query CPU metrics with [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), [Azure Data Studio](/azure-data-studio/download-azure-data-studio), or [the Azure portal query editor](query-editor.md). When using SSMS or Azure Data Studio, open a new query window and connect it to your database (not the `master` database).
 
 Find currently running queries with CPU usage and execution plans by executing the following query. CPU time is returned in milliseconds.
 

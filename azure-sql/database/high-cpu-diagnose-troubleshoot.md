@@ -32,7 +32,7 @@ If you're using a database under the [DTU-based purchasing model](service-tiers-
 
 ### Identify vCore count with Transact-SQL
 
-You can identify the current vCore count for any database with Transact-SQL. You can run Transact-SQL against Azure SQL Database with [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), [Azure Data Studio](/azure-data-studio/download-azure-data-studio), or [the Azure portal's query editor (preview)](query-editor.md).
+You can identify the current vCore count for any database with Transact-SQL. You can run Transact-SQL against Azure SQL Database with [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), [Azure Data Studio](/azure-data-studio/download-azure-data-studio), or [the Azure portal query editor](query-editor.md).
 
 Connect to your database and run the following query:
 

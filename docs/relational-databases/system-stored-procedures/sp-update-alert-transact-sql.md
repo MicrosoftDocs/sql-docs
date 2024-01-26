@@ -195,7 +195,7 @@ EXEC dbo.sp_update_alert
 GO
 ```
 
-## See also
+## Related content
 
 - [sp_add_alert (Transact-SQL)](sp-add-alert-transact-sql.md)
 - [sp_help_alert (Transact-SQL)](sp-help-alert-transact-sql.md)

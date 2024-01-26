@@ -50,7 +50,7 @@ The database to release unused memory for memory-optimized tables. *@dbname* is 
 
 - When the *@dname* parameter provided is a user database, the memory structures related memory-optimized tables are affected.
 
-Therefore, you may expect to see different results when executing `sys.sp_xtp_force_gc`: without a parameter, with `@dbname = N'tempdb'`, or with `@dbname = ` a user database name.
+Therefore, you may expect to see different results when executing `sys.sp_xtp_force_gc`: without a parameter, with `@dbname = N'tempdb'`, or with `@dbname =` a user database name.
 
 ## Return code values
 

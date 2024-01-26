@@ -52,7 +52,7 @@ Specifies if the target group member will be included or excluded. *membership_t
 
 #### @target_type
 
-The type of target database or collection of databases including all databases in an Azure SQL Database logical server, all databases in an elastic pool, or an individual database. *target_type* is nvarchar(128), with no default. 
+The type of target database or collection of databases including all databases in an Azure SQL Database logical server, all databases in an elastic pool, or an individual database. *target_type* is nvarchar(128), with no default.
 
 Valid values for *target_type* are `SqlServer`, `SqlElasticPool`, `SqlDatabase`.
 

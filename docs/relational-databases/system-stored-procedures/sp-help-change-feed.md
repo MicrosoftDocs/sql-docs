@@ -57,10 +57,7 @@ EXECUTE sys.sp_help_change_feed;
 
 Currently, only a member of the sysadmin server role or db_owner role, or a user with CONTROL database permissions can execute this procedure.
 
-## See also
+## Related content
 
 - [What is Azure Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
-
-## Next steps
-
 - [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md)

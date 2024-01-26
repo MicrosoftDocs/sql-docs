@@ -26,6 +26,10 @@ Most services and their properties can be configured by using SQL Server Configu
 | [SQL Server 2014](/previous-versions/sql/2014/) | `C:\Windows\SysWOW64\SQLServerManager12.msc` |
 | [SQL Server 2012](/previous-versions/sql/sql-server-2012/hh231622(v=sql.110)) | `C:\Windows\SysWOW64\SQLServerManager11.msc` |
 
+## SQL Server enabled by Azure Arc
+
+For permissions required by the Azure Extension for SQL Server, see [Configure Windows service accounts and permissions for Azure Extension for SQL Server](../../sql-server/azure-arc/configure-windows-accounts-agent.md).
+
 ## <a id="Service_Details"></a> Services installed by SQL Server
 
 Depending on the components that you decide to install, SQL Server Setup installs the following services:

@@ -72,7 +72,7 @@ GO
 EXEC sp_syscollector_start_collection_set @collection_set_id = 1;
 ```
 
-## See also
+## Related content
 
 - [Data Collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)
 - [Data collection](../data-collection/data-collection.md)

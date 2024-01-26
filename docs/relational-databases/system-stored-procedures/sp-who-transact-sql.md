@@ -121,7 +121,7 @@ EXEC sp_who '10' --specifies the process_id;
 GO
 ```
 
-## Next steps
+## Related content
 
 - [sp_lock (Transact-SQL)](sp-lock-transact-sql.md)
 - [sys.sysprocesses (Transact-SQL)](../system-compatibility-views/sys-sysprocesses-transact-sql.md)

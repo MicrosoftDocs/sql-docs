@@ -99,7 +99,7 @@ DECLARE @table_location NVARCHAR(400) = N'[database].[schema].[table]';
 EXEC sp_data_source_table_columns @data_source, @table_location
 ```
 
-## See also
+## Related content
 
 - [Get started with PolyBase](../polybase/polybase-guide.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

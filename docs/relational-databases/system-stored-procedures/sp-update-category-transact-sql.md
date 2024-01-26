@@ -81,7 +81,7 @@ EXEC dbo.sp_update_category
 GO
 ```
 
-## See also
+## Related content
 
 - [sp_add_category (Transact-SQL)](sp-add-category-transact-sql.md)
 - [sp_delete_category (Transact-SQL)](sp-delete-category-transact-sql.md)

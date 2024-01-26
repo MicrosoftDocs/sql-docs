@@ -34,7 +34,6 @@ sp_changedistpublisher
 [ ; ]
 ```
 
-
 ## Arguments
 
 #### [ @publisher = ] N'*publisher*'
@@ -82,7 +81,7 @@ If you're changing the `working_directory` property and the `storage_connection_
 
 Only members of the **sysadmin** fixed server role can execute `sp_changedistpublisher`.
 
-## See also
+## Related content
 
 - [View and Modify Distributor and Publisher Properties](../replication/view-and-modify-distributor-and-publisher-properties.md)
 - [sp_adddistpublisher (Transact-SQL)](sp-adddistpublisher-transact-sql.md)

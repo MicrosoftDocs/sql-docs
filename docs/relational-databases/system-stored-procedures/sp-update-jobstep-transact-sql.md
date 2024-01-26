@@ -219,7 +219,7 @@ EXEC dbo.sp_update_jobstep
 GO
 ```
 
-## Next steps
+## Related content
 
 - [View or Modify Jobs](../../ssms/agent/view-or-modify-jobs.md)
 - [sp_delete_jobstep (Transact-SQL)](sp-delete-jobstep-transact-sql.md)

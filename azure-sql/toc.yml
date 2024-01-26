@@ -1475,8 +1475,6 @@
         href: managed-instance/resolve-private-domain-names.md
       - name: Find management endpoint IP address
         href: managed-instance/management-endpoint-find-ip-address.md
-      - name: Verify built-in firewall protection
-        href: managed-instance/management-endpoint-verify-built-in-firewall.md
     
     - name: Migrate
       items: 

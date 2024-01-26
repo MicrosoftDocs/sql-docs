@@ -36,9 +36,13 @@ The Azure SQL Database [Query editor](query-editor.md) (preview) is a tool to ru
   - Have or set up a user that can connect to the database with SQL authentication.
   - Have or set up a user that can authenticate to the database with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)).
 
+- If you don't already have an Azure SQL Database created, visit [Quickstart: Create a single database](single-database-create-quickstart.md). Look for the option to use your offer to [try Azure SQL Database for free (preview)](free-offer.md).
+
 ## Connect to the query editor
 
 1. Navigate to your SQL database in the Azure portal. For example, visit [your Azure SQL dashboard](https://portal.azure.com/#view/HubsExtension/BrowseResource/resourceType/Microsoft.Sql%2Fazuresql).
+
+    Azure SQL databases exist inside logical SQL servers. Can connect to the logical SQL server's `master` using a login, then connect to your database. Or, using a [contained user](/sql/relational-databases/security/contained-database-users-making-your-database-portable?view=azuresqldb-current&preserve-view=true#contained-database-user-model), you can connect directly to your Azure SQL database.
 
 1. On your SQL database **Overview** page in the [Azure portal](https://portal.azure.com), select **Query editor (preview)** from the left menu.
 
@@ -52,7 +56,7 @@ The Azure SQL Database [Query editor](query-editor.md) (preview) is a tool to ru
 
    - To connect using Microsoft Entra ID, if you're the Microsoft Entra server admin, select **Continue as \<your user or group ID>**. If sign-in is unsuccessful, try refreshing the page.
 
-     :::image type="content" source="media/connect-query-portal/query-editor-entra-login.png" alt-text="Screenshot from the Azure portal showing sign-in with Microsoft Entra authentication.":::
+     :::image type="content" source="media/connect-query-portal/query-editor-entra-login.png" alt-text="Screenshot from the Azure portal showing sign-in with Microsoft Entra authentication." lightbox="media/connect-query-portal/query-editor-entra-login.png":::
 
 ### Connection with other tools
 

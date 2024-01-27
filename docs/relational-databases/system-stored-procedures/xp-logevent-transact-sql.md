@@ -84,7 +84,7 @@ USE master;
 EXEC xp_logevent 60000, @@MESSAGE, informational;
 ```
 
-## See also
+## Related content
 
 - [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md)
 - [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)

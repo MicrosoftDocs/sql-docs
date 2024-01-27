@@ -70,6 +70,6 @@ None.
 
 Requires membership in the **db_owner** fixed database role.
 
-## See also
+## Related content
 
 - [dbo.cdc_jobs (Transact-SQL)](../system-tables/dbo-cdc-jobs-transact-sql.md)

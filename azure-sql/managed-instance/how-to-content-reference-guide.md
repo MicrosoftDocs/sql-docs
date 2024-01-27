@@ -42,8 +42,6 @@ In this article, you can find a content reference to various guides, scripts, an
   Configure custom DNS servers to establish access from SQL Managed Instance to an external resource, such as scenarios involving linked servers or database mail.
 - [Find the management endpoint IP address](management-endpoint-find-ip-address.md):
   Determine the public endpoint that SQL Managed Instance is using for management purposes.
-- [Verify built-in firewall protection](management-endpoint-verify-built-in-firewall.md):
-  Verify that SQL Managed Instance allows traffic only on necessary ports, and other built-in firewall rules.
 - [Connect applications](connect-application-instance.md):
   Learn about different patterns for connecting the applications to Azure SQL Managed Instance.
 

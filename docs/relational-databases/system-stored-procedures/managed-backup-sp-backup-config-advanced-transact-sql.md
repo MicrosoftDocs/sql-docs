@@ -95,7 +95,7 @@ EXEC managed_backup.sp_backup_config_advanced @encryption_algorithm = 'AES_128',
 GO
 ```
 
-## See also
+## Related content
 
 - [managed_backup.sp_backup_config_basic (Transact-SQL)](managed-backup-sp-backup-config-basic-transact-sql.md)
 - [managed_backup.sp_backup_config_schedule (Transact-SQL)](managed-backup-sp-backup-config-schedule-transact-sql.md)

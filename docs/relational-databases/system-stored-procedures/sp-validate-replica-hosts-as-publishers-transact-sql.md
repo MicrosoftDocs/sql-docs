@@ -74,7 +74,7 @@ If the validation fails, appropriate errors are raised. `sp_validate_redirected_
 
 Caller must either be a member of the **sysadmin** fixed server role, the **db_owner** fixed database role for the distribution database, or a member of a publication access list for a defined publication associated with the publisher database.
 
-## See also
+## Related content
 
 - [Replication stored procedures (Transact-SQL)](replication-stored-procedures-transact-sql.md)
 - [sp_get_redirected_publisher (Transact-SQL)](sp-get-redirected-publisher-transact-sql.md)

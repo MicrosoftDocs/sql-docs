@@ -76,7 +76,7 @@ The following extended stored procedures also set the query mode for a Stretch-e
 
   When you run [sys.sp_rda_reauthorize_db (Transact-SQL)](sys-sp-rda-reauthorize-db-transact-sql.md) to reconnect to the remote Azure database, this operation automatically resets the query mode to `LOCAL_AND_REMOTE`, which is the default behavior for Stretch Database. That is, queries return results from both local and remote data.
 
-## See also
+## Related content
 
 - [sys.sp_rda_deauthorize_db (Transact-SQL)](sys-sp-rda-deauthorize-db-transact-sql.md)
 - [Stretch Database](../../sql-server/stretch-database/stretch-database.md)

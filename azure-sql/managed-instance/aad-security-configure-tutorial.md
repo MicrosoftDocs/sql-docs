@@ -49,9 +49,6 @@ Managed instances can be accessed through a private IP address. Much like an iso
 It is also possible to configure a service endpoint on a managed instance, which allows for public connections in the same fashion as for Azure SQL Database.
 For more information, see [Configure public endpoint in Azure SQL Managed Instance](public-endpoint-configure.md).
 
-> [!NOTE]
-> Even with service endpoints enabled, [Azure SQL Database firewall rules](../database/firewall-configure.md) do not apply. Azure SQL Managed Instance has its own [built-in firewall](management-endpoint-verify-built-in-firewall.md) to manage connectivity.
-
 <a name='create-an-azure-ad-server-principal-login-using-ssms'></a>
 
 ## Create a Microsoft Entra login using SSMS

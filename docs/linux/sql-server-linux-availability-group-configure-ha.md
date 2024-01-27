@@ -47,7 +47,7 @@ The steps to create an AG on Linux servers for high availability are different f
    >
    > A Pacemaker cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. Currently, fencing isn't available in some cloud environments. For more information, see [Support Policies for RHEL High Availability Clusters - Virtualization Platforms](https://access.redhat.com/articles/2912891).
    >  
-   > For SLES, see [SUSE Linux Enterprise High Availability Extension](https://documentation.suse.com/sle-ha/12-SP4/#redirectmsg).
+   > For SLES, see [SUSE Linux Enterprise High Availability Extension](https://documentation.suse.com/sle-ha/12-SP5/#redirectmsg).
 
 1. Add the AG as a resource in the cluster.
 

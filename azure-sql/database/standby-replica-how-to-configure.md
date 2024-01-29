@@ -23,6 +23,10 @@ This article describes how you can save on licensing costs by designating your s
 > [!NOTE]
 > Standby Azure SQL Database replicas are currently in preview. 
 
+To learn more, watch this video on the standby replica: 
+
+> [!VIDEO https://learn.microsoft.com/shows/data-exposed/azure-sql-db-license-free-standby-replica-data-exposed/player]
+
 ## Overview
 
 When a secondary database replica is used _only_ for disaster recovery, and doesn't have any workloads running on it, or applications connecting to it, you can save on licensing costs by designating the database as a *standby replica*. When a secondary database is designated for standby, Microsoft provides you with the number of vCores licensed to the primary database at no extra charge under the failover rights benefit in the [product licensing terms](https://www.microsoft.com/Licensing/product-licensing/sql-server). You're still billed for the compute and storage that the secondary database uses.

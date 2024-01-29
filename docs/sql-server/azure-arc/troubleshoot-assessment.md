@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-Before you start, ensure that you have met all the necessary [prerequisites](assess.md#prerequisites) for a successful assessment.
+Before you proceed, verify that you have met all the necessary [prerequisites](assess.md#prerequisites)W.
 
 ## Log file locations
 

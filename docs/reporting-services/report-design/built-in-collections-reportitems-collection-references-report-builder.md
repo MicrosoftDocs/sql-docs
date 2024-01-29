@@ -19,7 +19,7 @@ ms.custom: updatefrequency5
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## Using the ReportItems Value Property  
- Items within the **ReportItems** collection have only one property: Value. The value for a **ReportItems** item can be used to display or calculate data from another field in the report. To access the value of the current text box, you can use the [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] built-in global Me.Value or simply Value. In report functions such as First and aggregate functions, use the fully qualified syntax.  
+ Items within the **ReportItems** collection have only one property: Value. The value for a **ReportItems** item can be used to display or calculate data from another field in the report. To access the value of the current text box, you can use the [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] built-in global Me.Value or simply Value. In report functions such as First and aggregate functions, use the fully qualified syntax.  
   
  For example:  
   

@@ -41,7 +41,7 @@ Copy-only backups are recorded in the `is_copy_only` column of the [backupset](.
 
 ## Create a copy-only backup
 
-You can create a copy-only backup with [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE [name-sos-short](../../includes/name-sos-short.md)], [!INCLUDE [tsql](../../includes/tsql-md.md)], or PowerShell.
+You can create a copy-only backup with [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE [azure-data-studio](../../includes/azure-data-studio-short.md)], [!INCLUDE [tsql](../../includes/tsql-md.md)], or PowerShell.
 
 ### <a id="SSMSProcedure"></a> A. Use SQL Server Management Studio
 

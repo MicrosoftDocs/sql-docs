@@ -158,7 +158,7 @@ There are two ways to configure the SQL Server host in Azure portal.
 
   Or
 
-* Open the Arc-enabled SQL Server overview page, and select **Properties**. Under **Host configuration properties**, select the setting you need to modify:
+* Open the Arc-enabled SQL Server overview page, and select **Properties**. Under **SQL Server configuration**, select the setting you need to modify:
 
   * **License type**
   * **ESU Status**

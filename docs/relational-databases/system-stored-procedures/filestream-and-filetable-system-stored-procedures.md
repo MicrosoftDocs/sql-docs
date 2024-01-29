@@ -29,7 +29,7 @@ This section describes the system stored procedures to the FileTable and FILESTR
 
   Closes non-transactional file handles to FileTable data.
 
-## See also
+## Related content
 
 - [FILESTREAM (SQL Server)](../blob/filestream-sql-server.md)
 - [FileTables (SQL Server)](../blob/filetables-sql-server.md)

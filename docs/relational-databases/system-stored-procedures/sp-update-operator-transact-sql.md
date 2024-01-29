@@ -144,7 +144,7 @@ EXEC dbo.sp_update_operator
 GO
 ```
 
-## See also
+## Related content
 
 - [sp_add_operator (Transact-SQL)](sp-add-operator-transact-sql.md)
 - [sp_delete_operator (Transact-SQL)](sp-delete-operator-transact-sql.md)

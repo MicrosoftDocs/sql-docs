@@ -1475,8 +1475,6 @@
         href: managed-instance/resolve-private-domain-names.md
       - name: Find management endpoint IP address
         href: managed-instance/management-endpoint-find-ip-address.md
-      - name: Verify built-in firewall protection
-        href: managed-instance/management-endpoint-verify-built-in-firewall.md
     
     - name: Migrate
       items: 
@@ -1513,14 +1511,14 @@
         href: managed-instance/restore-database-to-sql-server.md
       - name: Monitor backup
         href: managed-instance/backup-activity-monitor.md
+      - name: Manually initiate a failover
+        href: managed-instance/user-initiated-failover.md
       - name: Failover groups
         items: 
         - name: Create failover group
           href: managed-instance/failover-group-configure-sql-mi.md
         - name: Configure standby replica
-          href: managed-instance/failover-group-standby-replica-how-to-configure.md
-        - name: Manually initiate a failover
-          href: managed-instance/user-initiated-failover.md          
+          href: managed-instance/failover-group-standby-replica-how-to-configure.md        
   - name: Samples
     items:
     - name: Azure CLI

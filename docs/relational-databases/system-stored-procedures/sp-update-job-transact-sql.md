@@ -172,7 +172,7 @@ EXEC dbo.sp_update_job
 GO
 ```
 
-## Next steps
+## Related content
 
 - [sp_add_job (Transact-SQL)](sp-add-job-transact-sql.md)
 - [sp_delete_job (Transact-SQL)](sp-delete-job-transact-sql.md)

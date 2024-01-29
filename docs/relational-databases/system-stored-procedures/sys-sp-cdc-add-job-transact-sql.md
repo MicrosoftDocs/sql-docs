@@ -137,7 +137,7 @@ EXEC sys.sp_cdc_add_job
     @retention = 5760;
 ```
 
-## See also
+## Related content
 
 - [dbo.cdc_jobs (Transact-SQL)](../system-tables/dbo-cdc-jobs-transact-sql.md)
 - [sys.sp_cdc_enable_table (Transact-SQL)](sys-sp-cdc-enable-table-transact-sql.md)

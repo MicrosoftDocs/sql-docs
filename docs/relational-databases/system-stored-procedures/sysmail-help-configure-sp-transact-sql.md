@@ -85,7 +85,7 @@ MaxFileSize                     1000000         Default maximum file size
 ProhibitedExtensions            exe,dll,vbs,js  Extensions not allowed in outgoing mails
 ```
 
-## See also
+## Related content
 
 - [Database Mail](../database-mail/database-mail.md)
 - [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)

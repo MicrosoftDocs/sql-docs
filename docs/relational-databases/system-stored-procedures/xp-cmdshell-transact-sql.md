@@ -183,7 +183,7 @@ SET @cmd = @var + ' > dir_out.txt';
 EXEC master..xp_cmdshell @cmd;
 ```
 
-## See also
+## Related content
 
 - [General extended stored procedures (Transact-SQL)](general-extended-stored-procedures-transact-sql.md)
 - [xp_cmdshell (server configuration option)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)

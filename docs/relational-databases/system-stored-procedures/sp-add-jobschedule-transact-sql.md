@@ -205,7 +205,7 @@ EXEC msdb.dbo.sp_add_jobschedule
     @active_start_time = 20000 -- 2:00 AM
 ```
 
-## See also
+## Related content
 
 - [Create and Attach Schedules to Jobs](../../ssms/agent/create-and-attach-schedules-to-jobs.md)
 - [Schedule a Job](../../ssms/agent/schedule-a-job.md)

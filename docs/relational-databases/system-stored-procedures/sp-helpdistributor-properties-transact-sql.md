@@ -49,6 +49,6 @@ sp_helpdistributor_properties
 
 Only members of the **sysadmin** fixed server role, members of the **db_owner** or **replmonitor** fixed database role on the distribution database, and users in the publication access list (PAL) for a publication that uses this Distributor can execute `sp_helpdistributor_properties`.
 
-## See also
+## Related content
 
 - [sp_changedistributor_property (Transact-SQL)](sp-changedistributor-property-transact-sql.md)

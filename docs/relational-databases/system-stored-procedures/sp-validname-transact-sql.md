@@ -52,7 +52,7 @@ Specifies whether to raise an error. *@raise_error* is **bit**, with a default o
 
 Requires membership in the **public** role.
 
-## See also
+## Related content
 
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
 - [Data Types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)

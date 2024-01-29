@@ -17,7 +17,9 @@ ms.date: 01/17/2024
 
 The information security principle of least privilege asserts that accounts and applications only have access to the data and operations they require. With SQL Server enabled by Azure Arc, you can run the agent extension service with least privilege. This article explains how to run the agent extension service with least privilege.
 
-To optionally configure the service to run with least privilege, follow the steps in this article. Currently, the service does not automatically run with least privilege.
+To optionally configure the service to run with least privilege, follow the steps in this article. Currently, the service does not automatically run with least privilege. 
+
+[Configure Windows service accounts and permissions for Azure Extension for SQL Server](configure-windows-accounts-agent.md) describes the least privilege permissions that the agent extenson services requires.
 
 Support for this configuration is currently available for preview.
 

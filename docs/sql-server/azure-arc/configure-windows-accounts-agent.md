@@ -14,22 +14,26 @@ ms.topic: reference
 
 This article lists the permissions Azure Extension for SQL Server requires for SQL Server enabled by Azure Arc.
 
+These permissions are set automatically, when you configure least privilege. To configure least privilege, follow the steps in [Operate SQL Server enabled by Azure Arc with least privilege (preview)](configure-least-privilege.md).
+
+It is not recommended to manually set the permissions described in this article.
+
 ## Directory permissions
 
 | Directory Path | Required Permissions | Details | Feature |
 | :----- | :----- | :----- | :----- |
-| `<SystemDrive>\Packages\Plugins\Microsoft.AzureData.WindowsAgent.SQLServer` | Full control | This directory stores all the extension related dlls and exe files. | Basic |
-| Config folder from handler environment | Full control | This folder contains extension settings file. | Basic |
-| Status folder from handler environment | Full control | This folder contains extension status file. | Basic |
-| Log folder from handler environment | Full control | This folder contains extension log files. | Basic |
-| Heartbeat folder from handler environment | Full control | This folder contains extension heartbeat file. | Basic |
-| `%ProgramFiles%\Sql Server Extension` | Full control | This folder contains extension service files. |  |
+| `<SystemDrive>\Packages\Plugins\Microsoft.AzureData.WindowsAgent.SQLServer` | Full control | Extension related dlls and exe files. | Basic |
+| `C:\Packages\Plugins\Microsoft.AzureData.WindowsAgent.SqlServer<extension_version>\RuntimeSettings` | Full control | Extension settings file. | Basic |
+| `C:\Packages\Plugins\Microsoft.AzureData.WindowsAgent.SqlServer<extension_version>\status` | Full control | Extension status file. | Basic |
+| `C:\ProgramData\GuestConfig\extension_logs\Microsoft.AzureData.WindowsAgent.SqlServer` | Full control | Extension log files. | Basic |
+| `C:\Packages\Plugins\Microsoft.AzureData.WindowsAgent.SqlServer<extension_version>\status\HeartBeat.Json` | Full control | Extension heartbeat file. | Basic |
+| `%ProgramFiles%\Sql Server Extension` | Full control | Extension service files. |  |
 | `<SystemDrive>\Windows\system32\extensionUpload` | Full control | Required to write usage file needed for billing. | Basic |
-| `<SystemDrive>\Windows\system32\ExtensionHandler.log` | Full control | This is a pre-log folder created by extension. | Basic |
-| `<ProgramData>\AzureConnectedMachineAgent\Config` | Read | This is Arc config file directory which Arc proxy details. | Basic |
-| `C:\Program Files\Microsoft SQL Server\MSSQL<base_version>.<instance_name>\MSSQL\log` | Read (will need to iterate over all the instances) | Required to extract SQL vCores info from SQL logs. | Basic  (Fetched from registry)| 
-| `C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft SQL Server Extension Agent` | Full control (It needs to be created in deployer as well) | Required to write assessment reports and status. | Basic |
-| `C:\Program Files\Microsoft SQL Server\MSSQL15.SQL2019NEW\MSSQL\Backup` | ReadAndExecute/Write /Delete | This is required for Backups | Backup  (Fetched from registry)|
+| `<SystemDrive>\Windows\system32\ExtensionHandler.log` | Full control | Pre-log folder created by extension. | Basic |
+| `<ProgramData>\AzureConnectedMachineAgent\Config` | Read | Arc config files directory. | Basic |
+| `C:\Program Files\Microsoft SQL Server\MSSQL<base_version>.<instance_name>\MSSQL\log` | Read | Required to extract SQL vCores info from SQL logs. | Basic |
+| `C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft SQL Server Extension Agent` | Full control | Required to write assessment reports and status. | Basic |
+| `C:\Program Files\Microsoft SQL Server\MSSQL15.SQL2019NEW\MSSQL\Backup` | ReadAndExecute/Write /Delete | Required for Backups | Backup |
 
 ## Registry permissions
 
@@ -37,9 +41,9 @@ Base Key – `HKEY_LOCAL_MACHINE`
 
 | Registry Key | Permission Required | Details | Feature |
 | :----- | :----- | :----- | :----- |
-| `SOFTWARE\Microsoft\Microsoft SQL Server` | Read | Read on SQL Server registry is needed to read SQL Server properties like installedInstances etc.  | Basic |
-| `SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRegistryName>\MSSQLSERVER` | Full control | Required for Microsoft Entra ID and Purview. </br></br> Full control is required for Microsoft Entra ID, because we are modifying ACLs for the Entra ID registry key on Entra ID enablement. | Microsoft Entra ID </br></br>Purview |
-| `SOFTWARE\Microsoft\SystemCertificates` | Full control | Full control is required for Microsoft Entra ID because we are granting permissions to SQL service account on Microsoft Entra ID certs. | Microsoft Entra ID |
+| `SOFTWARE\Microsoft\Microsoft SQL Server` | Read | Read SQL Server properties like `installedInstances`.  | Basic |
+| `SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRegistryName>\MSSQLSERVER` | Full control | Required for Microsoft Entra ID and Purview.  | Microsoft Entra ID </br></br>Purview |
+| `SOFTWARE\Microsoft\SystemCertificates` | Full control | Required for Microsoft Entra ID. | Microsoft Entra ID |
 | `SYSTEM\CurrentControlSet\Services` | Read | Required for fetching SQL Server account name. | Basic |
 | `SOFTWARE\Microsoft\AzureDefender\SQL` | Read | Required for fetching Azure Defender status and last update time. | Basic |
 |` SOFTWARE\Microsoft\SqlServerExtension` | Full control | This is registry key for our extension and extension related values are stored in subkeys. | Basic |

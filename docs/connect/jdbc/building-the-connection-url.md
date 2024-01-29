@@ -102,7 +102,7 @@ The `mssql-jdbc_auth-<version>-<arch>.dll` files are installed in the following 
 
 `<installation directory>\sqljdbc_<version>\<language>\auth\`
 
-For any operating system supported by the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], see [Using Kerberos integrated authentication to connect to SQL Server](using-kerberos-integrated-authentication-to-connect-to-sql-server.md) for a description of a feature added in [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] that allows an application to connect to a database using integrated authentication with Type 4 Kerberos.
+For any operating system supported by the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], see [Using Kerberos integrated authentication to connect to SQL Server](using-kerberos-integrated-authentication-to-connect-to-sql-server.md) for a description of a feature added in [!INCLUDE[jdbc-40](../../includes/jdbc-40-md.md)] that allows an application to connect to a database using integrated authentication with Type 4 Kerberos.
 
 > [!NOTE]
 > If you are running a 32-bit Java Virtual Machine (JVM), use the `mssql-jdbc_auth-<version>-<arch>.dll` file in the x86 folder, even if the operating system is the x64 version. If you are running a 64-bit JVM on a x64 processor, use the `mssql-jdbc_auth-<version>-<arch>.dll` file in the x64 folder.

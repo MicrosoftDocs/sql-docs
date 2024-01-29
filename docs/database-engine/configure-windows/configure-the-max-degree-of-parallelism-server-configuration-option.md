@@ -20,7 +20,7 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This article describes how to configure the `max degree of parallelism` (MAXDOP) server configuration option in SQL Server by using [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE [Azure Data Studio](../../includes/name-sos-short.md)], or [!INCLUDE [tsql](../../includes/tsql-md.md)]. When an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] runs on a computer that has more than one microprocessor or CPU, the [!INCLUDE [ssDE-md](../../includes/ssde-md.md)] detects whether parallelism can be used. The degree of parallelism sets the number of processors employed to run a single statement, for each parallel plan execution. You can use the `max degree of parallelism` option to limit the number of processors to use in parallel plan execution. For more detail on the limit set by `max degree of parallelism` (MAXDOP), see the [Considerations](#considerations) section in this page. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] considers parallel execution plans for queries, index data definition language (DDL) operations, parallel inserts, online alter column, parallel stats collection, and static and keyset-driven cursor population.
+This article describes how to configure the `max degree of parallelism` (MAXDOP) server configuration option in SQL Server by using [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE [Azure Data Studio](../../includes/azure-data-studio-short.md)], or [!INCLUDE [tsql](../../includes/tsql-md.md)]. When an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] runs on a computer that has more than one microprocessor or CPU, the [!INCLUDE [ssDE-md](../../includes/ssde-md.md)] detects whether parallelism can be used. The degree of parallelism sets the number of processors employed to run a single statement, for each parallel plan execution. You can use the `max degree of parallelism` option to limit the number of processors to use in parallel plan execution. For more detail on the limit set by `max degree of parallelism` (MAXDOP), see the [Considerations](#considerations) section in this page. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] considers parallel execution plans for queries, index data definition language (DDL) operations, parallel inserts, online alter column, parallel stats collection, and static and keyset-driven cursor population.
 
 > [!NOTE]
 > [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] introduced automatic recommendations for setting the MAXDOP server configuration option based on the number of processors available during the installation process. The setup user interface allows you to either accept the recommended settings or enter your own value. For more information, see [Database Engine Configuration - MaxDOP page](../../sql-server/install/instance-configuration.md#maxdop).
@@ -94,7 +94,7 @@ Execute permissions on `sp_configure` with no parameters or with only the first 
 
 ## <a id="SSMSProcedure"></a> Use SQL Server Management Studio or Azure Data Studio
   
-In [!INCLUDE [Azure Data Studio](../../includes/name-sos-short.md)], install the `Database Admin Tool Extensions for Windows` extension, or use the below T-SQL method.
+In [!INCLUDE [Azure Data Studio](../../includes/azure-data-studio-short.md)], install the `Database Admin Tool Extensions for Windows` extension, or use the below T-SQL method.
 
 #### <a id="to-configure-the-max-degree-of-parallelism-option"></a> Configure the max degree of parallelism option
 
@@ -110,7 +110,7 @@ These options change the MAXDOP for the instance.
   
 #### <a id="to-configure-the-max-degree-of-parallelism-option-with-t-sql"></a> Configure the max degree of parallelism option with T-SQL
   
-1. Connect to the [!INCLUDE [ssDE](../../includes/ssde-md.md)] with [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE [Azure Data Studio](../../includes/name-sos-short.md)].
+1. Connect to the [!INCLUDE [ssDE](../../includes/ssde-md.md)] with [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE [Azure Data Studio](../../includes/azure-data-studio-short.md)].
   
 1. From the Standard bar, select **New Query**.
   

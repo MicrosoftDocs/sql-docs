@@ -187,6 +187,7 @@ Azure SQL Database and Azure SQL Managed Instance support various data tools tha
 | **Tool** | **Azure SQL Database** | **Azure SQL Managed Instance** |
 | --- | --- | --- |
 | Azure portal | Yes | Yes |
+| [Azure portal Query editor](query-editor.md) | Yes | No|
 | Azure CLI | Yes | Yes|
 | [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio) | Yes | Yes |
 | Azure PowerShell | Yes | Yes |

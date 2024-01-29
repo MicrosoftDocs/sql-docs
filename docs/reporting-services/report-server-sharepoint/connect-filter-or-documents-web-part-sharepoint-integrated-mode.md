@@ -15,7 +15,7 @@ ms.custom: updatefrequency5
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-If you are using a SharePoint product, you can create a dashboard or web part Page that includes a Filter web part or Documents web part and a Report Viewer web part. Supported versions are [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] or [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]. Also supported are [!INCLUDE[winSPServ3](../../includes/winspserv3-md.md)] or [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007. By connecting a Filter web part, users who select filter values in a Filter web part can send the value to a parameterized report on the same page. By connecting a Documents web part, users who click on reports in the Documents library can view the report in an adjacent Report Viewer web part.
+If you are using a SharePoint product, you can create a dashboard or web part Page that includes a Filter web part or Documents web part and a Report Viewer web part. Supported versions are [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] or [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]. Also supported is [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007. By connecting a Filter web part, users who select filter values in a Filter web part can send the value to a parameterized report on the same page. By connecting a Documents web part, users who click on reports in the Documents library can view the report in an adjacent Report Viewer web part.
 
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.

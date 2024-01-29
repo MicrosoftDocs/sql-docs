@@ -73,9 +73,9 @@ public static void executeStoredProcedure(Connection con) throws SQLException {
 }
 ```
 
-For multiple parameters, they must either all be identified using ordinal position, or all be identified using the parameter name. For drivers version 12.6 and above however, a new connection property, `useFlexibleCallableStatements` was introduced. When set to `true` this property allows users to use a mix of ordinal positions and parameter names when identifying parameters.
+For drivers version 12.6 and above, a new connection property, `useFlexibleCallableStatements` was introduced. When set to `true` this property retains the driver's old behavior, allowing users to use a mix of ordinal positions and parameter names when identifying parameters. When set to `false`, the user must use one or the other, but can not use both.
 
-In addition, this property allows users to set statement parameters in an order independent to the order defined in the stored procedure definition. Both of these features can be seen in the following example:
+In addition, `useFlexibleCallableStatements` retains existing behavior regarding the flexible order statement parameters can be set in, when the property is set to `true`. When set to `false` however, the order must match the stored procedure definition. Both of these features for `useFlexibleCallableStatements=true` can be seen in the following example:
 
 ```java
 public static void executeStoredProcedure(Connection con) throws SQLException {  

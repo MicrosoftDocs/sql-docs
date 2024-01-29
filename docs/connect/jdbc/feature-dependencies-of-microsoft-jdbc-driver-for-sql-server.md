@@ -3,7 +3,7 @@ title: Feature dependencies
 description: Learn about the dependencies that the Microsoft JDBC Driver for SQL Server has and how to meet them.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 07/31/2023
+ms.date: 01/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -23,7 +23,7 @@ This article lists libraries that the Microsoft JDBC Driver for SQL Server depen
 - `org.osgi:org.osgi.core`: OSGi Core library for OSGi Framework support.
 - `org.osgi:org.osgi.service.jdbc`: OSGi Companion Code for JDBC.
 - `com.google.code.gson`: JSON parser for Always Encrypted with secure enclaves feature. (optional)
-- `org.bouncycastle.bcprov-jdk15on`: Bouncy Castle Provider for Always Encrypted with secure enclaves feature for JAVA 8 only. (optional)
+- `org.bouncycastle.bcprov-jdk18on`: Bouncy Castle Provider for Always Encrypted with secure enclaves feature for JAVA 8 only. (optional)
 
 ## Run time
 
@@ -126,6 +126,7 @@ If you're using Maven to build or test your project, Maven automatically downloa
 
 ### Work with the Azure Key Vault provider
 
+- JDBC driver version 12.6.0—Dependency versions: Azure-security-keyvault-keys (version 4.7.3), and Azure-identity (version 1.11.1), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
 - JDBC driver version 12.4.0—Dependency versions: Azure-security-keyvault-keys (version 4.6.1), and Azure-identity (version 1.9.0), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
 - JDBC driver version 12.2.0—Dependency versions: Azure-security-keyvault-keys (version 4.5.3), and Azure-identity (version 1.7.0), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
 - JDBC driver version 11.2.0—Dependency versions: Azure-security-keyvault-keys (version 4.4.1), and Azure-identity (version 1.5.0), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
@@ -150,6 +151,7 @@ If you're using Maven to build or test your project, Maven automatically downloa
 
 ### Work with Microsoft Entra authentication
 
+- JDBC driver version 12.6.0—Dependency versions: Azure-identity (version 1.11.1), `Msal4j` (version 1.14.1), and their dependencies.
 - JDBC driver version 12.4.0—Dependency versions: Azure-identity (version 1.9.0), `Msal4j` (version 1.13.8), and their dependencies.
 - JDBC driver version 12.2.0—Dependency versions: Azure-identity (version 1.7.0), `Msal4j` (version 1.13.3), and their dependencies.
 - JDBC driver version 11.2.0—Dependency versions: Azure-identity (version 1.5.0), and their dependencies.

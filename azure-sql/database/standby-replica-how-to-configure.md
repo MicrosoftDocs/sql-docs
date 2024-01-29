@@ -25,7 +25,7 @@ This article describes how you can save on licensing costs by designating your s
 
 To learn more, watch this video on the standby replica: 
 
-> [!VIDEO https://learn.microsoft.com/shows/data-exposed/azure-sql-db-license-free-standby-replica-data-exposed/player]
+> [!VIDEO https://learn.microsoft.com/shows/data-exposed/azure-sql-db-license-free-standby-replica-data-exposed]
 
 ## Overview
 

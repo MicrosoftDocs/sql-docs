@@ -1,8 +1,8 @@
 ---
 title: Manage automated backups from Azure portal
 description: Describes how to configure automated backups
-author: dnethi
-ms.author: dinethi
+author: AbdullahMSFT
+ms.author: amamun 
 ms.reviewer: mikeray, randolphwest
 ms.date: 11/14/2023
 ms.topic: conceptual

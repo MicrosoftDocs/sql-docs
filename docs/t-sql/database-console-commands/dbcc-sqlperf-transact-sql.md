@@ -26,7 +26,7 @@ dev_langs:
 
 Provides transaction log space usage statistics for all databases. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], it can also be used to reset wait and latch statistics.
 
-**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions, and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Preview in some regions](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag))
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions, and [!INCLUDE[sssds](../../includes/sssds-md.md)] ([Preview in some regions](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag))
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

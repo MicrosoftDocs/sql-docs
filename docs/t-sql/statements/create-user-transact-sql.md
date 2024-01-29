@@ -187,7 +187,7 @@ CREATE USER user_name
  Specifies the Windows principal for which the database user is being created. The *windows_principal* can be a Windows user, or a Windows group. The user will be created even if the *windows_principal* doesn't have a login. When connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if the *windows_principal* doesn't have a login, the Windows principal must authenticate at the [!INCLUDE[ssDE](../../includes/ssde-md.md)] through membership in a Windows group that has a login, or the connection string must specify the contained database as the initial catalog. When creating a user from a Windows principal, use the format **[**_\<domainName\>_**\\**_\<loginName\>_**]**. For examples, see [Syntax Summary](#SyntaxSummary). Users based on Active Directory users, are limited to names of fewer than 21 characters.
   
  #### '*Microsoft_Entra_principal*'  
- **Applies to**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], SQL Managed Instance, [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].  
+ **Applies to**: [!INCLUDE[sssds](../../includes/sssds-md.md)], SQL Managed Instance, [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].  
   
  Specifies the Microsoft Entra principal for which the database user is being created. The *Microsoft_Entra_principal* can be a Microsoft Entra user, a Microsoft Entra group, or a Microsoft Entra application. (Microsoft Entra users can't have Windows Authentication logins in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; only database users.) The connection string must specify the contained database as the initial catalog.
 
@@ -208,7 +208,7 @@ CREATE USER user_name
  For more information, see [Connecting to SQL Database By Using Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview).  
   
 #### WITH PASSWORD = '*password*'  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[sssds](../../includes/sssds-md.md)].  
   
  Can only be used in a contained database. Specifies the password for the user that is being created. Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.  
   
@@ -216,17 +216,17 @@ CREATE USER user_name
  Specifies that the user shouldn't be mapped to an existing login.  
   
 #### CERTIFICATE *cert_name*  
- **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sssds](../../includes/sssds-md.md)].  
   
  Specifies the certificate for which the database user is being created.  
   
 #### ASYMMETRIC KEY *asym_key_name*  
- **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sssds](../../includes/sssds-md.md)].  
   
  Specifies the asymmetric key for which the database user is being created.  
   
 #### DEFAULT_LANGUAGE = *{ NONE \| \<lcid> \| \<language name> \| \<language salias> }*  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later,   [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later,   [!INCLUDE[sssds](../../includes/sssds-md.md)].  
   
  Specifies the default language for the new user. If a default language is specified for the user and the default language of the database is later changed, the users default language remains as specified. If no default language is specified, the default language for the user will be the default language of the database. If the default language for the user isn't specified and the default language of the database is later changed, the default language of the user will change to the new default language for the database.  
   
@@ -247,7 +247,7 @@ CREATE USER user_name
 >  Improper use of this option can lead to data corruption. For more information, see [Migrate Sensitive Data Protected by Always Encrypted](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).  
 
 #### FROM EXTERNAL PROVIDER </br>
- **Applies to**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and Azure SQL Managed Instance.  
+ **Applies to**: [!INCLUDE[sssds](../../includes/sssds-md.md)] and Azure SQL Managed Instance.  
 
 Specifies that the user is for Microsoft Entra authentication.
 
@@ -429,7 +429,7 @@ GO
 ### E. Creating a contained database user with password  
  The following example creates a contained database user with password. This example can only be executed in a contained database.  
   
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. This example works in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] if DEFAULT_LANGUAGE is removed.  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. This example works in [!INCLUDE[sssds](../../includes/sssds-md.md)] if DEFAULT_LANGUAGE is removed.  
   
 ```sql  
 USE AdventureWorks2022;  

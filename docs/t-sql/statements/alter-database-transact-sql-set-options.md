@@ -2218,7 +2218,7 @@ Describes the operation mode of the Query Store. Valid values are READ_ONLY and 
 
 #### CLEANUP_POLICY
 
-Describes the data retention policy of the Query Store. STALE_QUERY_THRESHOLD_DAYS determines the number of days for which the information for a query is kept in the Query Store. STALE_QUERY_THRESHOLD_DAYS is type **bigint**. The default value is 30. For [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic edition, default is **7** days.
+Describes the data retention policy of the Query Store. STALE_QUERY_THRESHOLD_DAYS determines the number of days for which the information for a query is kept in the Query Store. STALE_QUERY_THRESHOLD_DAYS is type **bigint**. The default value is 30. For [!INCLUDE[sssds](../../includes/sssds-md.md)] Basic edition, default is **7** days.
 
 #### DATA_FLUSH_INTERVAL_SECONDS
 
@@ -3193,7 +3193,7 @@ Describes the operation mode of the Query Store. Valid values are READ_ONLY and 
 
 #### CLEANUP_POLICY
 
-Describes the data retention policy of the Query Store. STALE_QUERY_THRESHOLD_DAYS determines the number of days for which the information for a query is kept in the Query Store. STALE_QUERY_THRESHOLD_DAYS is type **bigint**. The default value is 30. For [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic edition, default is **7** days.
+Describes the data retention policy of the Query Store. STALE_QUERY_THRESHOLD_DAYS determines the number of days for which the information for a query is kept in the Query Store. STALE_QUERY_THRESHOLD_DAYS is type **bigint**. The default value is 30. For [!INCLUDE[sssds](../../includes/sssds-md.md)] Basic edition, default is **7** days.
 
 #### DATA_FLUSH_INTERVAL_SECONDS
 

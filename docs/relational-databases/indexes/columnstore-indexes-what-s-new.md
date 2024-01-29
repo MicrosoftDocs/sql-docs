@@ -21,7 +21,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
  This table summarizes key features for columnstore indexes and the products in which they are available.
 
-|Columnstore Index Feature|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]<sup>1</sup>|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]|[!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]<sup>1</sup>|[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]|
+|Columnstore Index Feature|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]<sup>1</sup>|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]|[!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]|[!INCLUDE[sssds](../../includes/sssds-md.md)]<sup>1</sup>|[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]|
 |*----|---|---|---|---|---|---|---|---|
 |Batch mode execution for multi-threaded queries<sup>2</sup>|yes|yes|yes|yes|yes|yes|yes|yes|
 |Batch mode execution for single-threaded queries|||yes|yes|yes|yes|yes|yes|

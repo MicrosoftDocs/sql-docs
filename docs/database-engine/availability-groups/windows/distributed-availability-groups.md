@@ -4,7 +4,7 @@ description: "A distributed availability group is a special type of availability
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 09/15/2022
+ms.date: 01/29/2024
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: conceptual
@@ -176,9 +176,7 @@ When you add the second availability group's primary replica to the distributed 
 
 ## Monitor health
 
-A distributed availability group is a SQL Server-only construct, and it isn't seen in the underlying WSFC. The following PowerShell code shows two different WSFCs (CLUSTER_A and CLUSTER_B), each with its own availability groups. Only AG1 in CLUSTER_A and AG2 in CLUSTER_B are discussed here.
-
-[Two WSFCs with multiple availability groups through PowerShell Get-ClusterGroup command](./media/distributed-availability-group/dag-07-two-wsfcs-multiple-ags-through-get-clustergroup-command.png)
+A distributed availability group is a SQL Server-only construct, and it isn't seen in the underlying WSFC. The following code sample shows two different WSFCs (CLUSTER_A and CLUSTER_B), each with its own availability groups. Only AG1 in CLUSTER_A and AG2 in CLUSTER_B are discussed here.
 
 ```output
 PS C:\> Get-ClusterGroup -Cluster CLUSTER_A
@@ -392,7 +390,7 @@ GO
 
 :::image type="content" source="./media/distributed-availability-group/dmv-seeding.png" alt-text="Screenshot showing the current state of seeding.":::
 
-## Next steps
+## Related content
 
 - [Use the availability group wizard (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
 - [Use the new availability group dialog box (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)

@@ -17,7 +17,7 @@ helpviewer_keywords:
 
 **Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later.
 <!---
-Currently in preview for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssSDSMIfull](../../includes/sssdsmifull-md.md)].
+Currently in preview for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)].
 -->
 
 Starting with [!INCLUDE [sql-server-2022](../../includes/sssql22-md.md)], the Cardinality Estimation (CE) feedback is part of the [intelligent query processing family of features](intelligent-query-processing.md) and addresses suboptimal query execution plans for repeating queries when these issues result from incorrect CE model assumptions. This scenario helps with reducing regression risks related to the default CE when upgrading from older versions of the Database Engine.

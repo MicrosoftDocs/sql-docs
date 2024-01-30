@@ -596,7 +596,7 @@ For more information about compression, see [Data Compression](../../relational-
 
 #### XML_COMPRESSION
 
-**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi_md.md)].
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)].
 
 Specifies the XML compression option for the specified index that contains one or more **xml** data type columns. The options are as follows:
 
@@ -848,7 +848,7 @@ To indicate that an index create is executed as resumable operation and to check
 
 ### <a name="wait-at-low-priority"></a> WAIT_AT_LOW_PRIORITY with online index operations
 
-**Applies to**: This syntax for `CREATE INDEX` currently applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] only. For `ALTER INDEX`, this syntax applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. For more information, see [ALTER INDEX](alter-index-transact-sql.md).
+**Applies to**: This syntax for `CREATE INDEX` currently applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)] only. For `ALTER INDEX`, this syntax applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. For more information, see [ALTER INDEX](alter-index-transact-sql.md).
 
  The `low_priority_lock_wait` syntax allows for specifying `WAIT_AT_LOW_PRIORITY` behavior. `WAIT_AT_LOW_PRIORITY` can be used with `ONLINE=ON` only.
 
@@ -910,7 +910,7 @@ To evaluate how changing the compression state will affect a table, an index, or
 
 ### XML compression
 
-**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi_md.md)].
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)].
 
 Many of the same considerations for data compression applies to XML compression. You should also be aware of the following considerations:
 
@@ -1217,7 +1217,7 @@ GO
 
 ### M. Create an index with XML compression
 
-**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi_md.md)].
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)].
 
 The following example creates an index on a nonpartitioned table by using XML compression. At least one column in the index must be the **xml** data type.
 

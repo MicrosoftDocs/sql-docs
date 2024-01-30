@@ -69,7 +69,7 @@ This ETW target processes the data it receives *synchronously*, whereas most tar
 
 ::: moniker range="= azuresqldb-current || = azuresqldb-mi-current "
 > [!NOTE]  
-> [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] don't support the `etw_classic_sync_target` target. As an alternative, use the `event_file` target with blobs stored in Azure Storage.
+> [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] don't support the `etw_classic_sync_target` target. As an alternative, use the `event_file` target with blobs stored in Azure Storage.
 ::: moniker-end
 
 ## event_counter target
@@ -116,7 +116,7 @@ The `event_file` target writes event session output from buffer to a disk file o
 ::: moniker range="= azuresqldb-current || = azuresqldb-mi-current "
 
 > [!NOTE]  
-> [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] only blobs in Azure Storage as the value of the `filename` parameter.
+> [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] only blobs in Azure Storage as the value of the `filename` parameter.
 >  
 > For an `event_file` code example for SQL Database or SQL Managed Instance, see [Event File target code for Extended Events in SQL Database](/azure/sql-database/sql-database-xevent-code-event-file).
 

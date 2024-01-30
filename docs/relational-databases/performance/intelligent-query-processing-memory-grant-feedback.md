@@ -15,7 +15,7 @@ helpviewer_keywords:
 ---
 # Memory grant feedback
 
-**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later, [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] 
+**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later, [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] 
 
 Sometimes a query executes with a memory grant that is too large or too small. If the memory grant is too large, we inhibit parallelism on the server. If it's too small, we might spill to disk, which is a costly operation. Memory grant feedback attempts to remember the memory needs of a prior execution (with percentile feedback, multiple past executions). Based on this historical query information, memory grant feedback adjusts the grant given to the query accordingly for subsequent executions.
 
@@ -172,7 +172,7 @@ This feature was introduced in [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)
  - Percentile memory grant feedback is enabled by default in [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)], but has no effect if Query Store is not enabled or when Query Store is not in a "read write" state.
  - Persistence for memory grant, CE, and DOP feedback is on by default in [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)], but has no effect when Query Store is not enabled or when Query Store is not in a "read write" state.
  - Percentile and persistence for memory grant feedback is available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and enabled by default on all databases, both existing and new. 
- - Percentile and persistence for memory grant feedback is not currently available in [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)].
+ - Percentile and persistence for memory grant feedback is not currently available in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)].
 
 It's recommended that you have a performance baseline for your workload before the feature is enabled for your database. The baseline numbers will help you determine if you're getting the intended benefit from the feature.
 

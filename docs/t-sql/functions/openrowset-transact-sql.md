@@ -3,8 +3,8 @@ title: "OPENROWSET (Transact-SQL)"
 description: "OPENROWSET includes all connection information that is required to access remote data from an OLE DB data source."
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: randolphwest
-ms.date: 12/18/2023
+ms.reviewer: randolphwest, hudequei, wiassaf, nzagorac
+ms.date: 01/30/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "ad hoc connection information"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-mi-current || >=sql-server-2016 || >=sql-server-linux-2017"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # OPENROWSET (Transact-SQL)
 
@@ -32,11 +32,12 @@ Includes all connection information that is required to access remote data from 
 
 `OPENROWSET` also supports bulk operations through a built-in `BULK` provider that enables data from a file to be read and returned as a rowset.
 
-> [!NOTE]  
-> This article doesn't apply to Azure Synapse Analytics.
->  
-> - For information on how to use `OPENROWSET` with serverless SQL pools in Azure Synapse, see [How to use OPENROWSET using serverless SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql/develop-openrowset).
-> - The `OPENROWSET` function isn't supported in dedicated SQL pools in Azure Synapse.
+Many examples in this article only apply to [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] only. Details and links to similar examples on other platforms:
+
+ - Azure SQL Database only supports reading from Azure Blob Storage.
+ - For examples on [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], see [Query data sources using OPENROWSET](/azure/azure-sql/managed-instance/data-virtualization-overview#query-data-sources-using-openrowset).
+ - For information and examples with serverless SQL pools in Azure Synapse, see [How to use OPENROWSET using serverless SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql/develop-openrowset).
+ - Dedicated SQL pools in Azure Synapse do not support the `OPENROWSET` function.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -364,7 +365,13 @@ To bulk export or import SQLXML data, use one of the following data types in you
 
 ## Examples
 
+This section provides general examples to demonstrate how to use OPENROWSET.
+
 ### A. Use OPENROWSET with SELECT and the SQL Server Native Client OLE DB Provider
+
+**Applies to:** [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] only.
+
+[!INCLUDE [snac-removed-oledb-only](../../includes/snac-removed-oledb-only.md)]
 
 The following example uses the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider to access the `HumanResources.Department` table in the [!INCLUDE [ssSampleDBobject](../../includes/sssampledbobject-md.md)] database on the remote server `Seattle1`. (Use SQLNCLI and [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] will redirect to the latest version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider.) A `SELECT` statement is used to define the row set returned. The provider string contains the `Server` and `Trusted_Connection` keywords. These keywords are recognized by the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider.
 
@@ -380,10 +387,12 @@ FROM OPENROWSET(
 
 ### B. Use the Microsoft OLE DB Provider for Jet
 
+**Applies to:** [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] only.
+
 The following example accesses the `Customers` table in the [!INCLUDE [msCoName](../../includes/msconame-md.md)] Access `Northwind` database through the [!INCLUDE [msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet.
 
 > [!NOTE]  
-> This example assumes that Access is installed. To run this example, you must install the Northwind database.
+> This example assumes that Microsoft Access is installed. To run this example, you must install the `Northwind` database.
 
 ```sql
 SELECT CustomerID, CompanyName
@@ -400,10 +409,12 @@ FROM OPENROWSET(
 
 ### C. Use OPENROWSET and another table in an INNER JOIN
 
+**Applies to:** [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] only.
+
 The following example selects all data from the `Customers` table from the local instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] `Northwind` database and from the `Orders` table from the Access `Northwind` database stored on the same computer.
 
 > [!NOTE]  
-> This example assumes that Access is installed. To run this example, you must install the Northwind database.
+> This example assumes that Access is installed. To run this example, you must install the `Northwind` database.
 
 ```sql
 USE Northwind;
@@ -422,6 +433,8 @@ INNER JOIN OPENROWSET(
 > [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] only supports reading from Azure Blob Storage.
 
 ### D. Use OPENROWSET to BULK INSERT file data into a varbinary(max) column
+
+**Applies to:** [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] only.
 
 The following example creates a small table for demonstration purposes, and inserts file data from a file named `Text1.txt` located in the `C:` root directory into a **varbinary(max)** column.
 
@@ -452,6 +465,8 @@ GO
 > Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### E. Use the OPENROWSET BULK provider with a format file to retrieve rows from a text file
+
+**Applies to:** [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] only.
 
 The following example uses a format file to retrieve rows from a tab-delimited text file, `values.txt` that contains the following data:
 
@@ -484,6 +499,8 @@ SELECT a.* FROM OPENROWSET(
 
 ### F. Specify a format file and code page
 
+**Applies to:** [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] only.
+
 The following example shows how to use both the format file and code page options at the same time.
 
 ```sql
@@ -497,7 +514,7 @@ SELECT a.* FROM OPENROWSET (
 
 ### G. Access data from a CSV file with a format file
 
-**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions.
+**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions only.
 
 ```sql
 SELECT * FROM OPENROWSET(
@@ -512,6 +529,8 @@ SELECT * FROM OPENROWSET(
 > [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] only supports reading from Azure Blob Storage.
 
 ### H. Access data from a CSV file without a format file
+
+**Applies to:** [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] only.
 
 ```sql
 SELECT * FROM OPENROWSET(
@@ -530,9 +549,10 @@ FROM OPENROWSET('MSDASQL',
 
 > [!IMPORTANT]  
 > - The ODBC driver should be 64-bit. Open the **Drivers** tab of the [Connect to an ODBC Data Source (SQL Server Import and Export Wizard)](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md) application in Windows to verify this. There's 32-bit `Microsoft Text Driver (*.txt, *.csv)` that will not work with a 64-bit version of `sqlservr.exe`.
-> - Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### I. Access data from a file stored on Azure Blob Storage
+
+**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions only.
 
 Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the following example uses an external data source that points to a container in an Azure storage account and a database scoped credential created for a shared access signature.
 
@@ -687,6 +707,7 @@ For more examples that show using `INSERT...SELECT * FROM OPENROWSET(BULK...)`, 
 - [Use a Format File to Skip a Table Column (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)
 - [Use a format file to skip a data field (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)
 - [Use a format file to map table columns to data-file fields (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
+- [Query data sources using OPENROWSET in Azure SQL Managed Instances](/azure/azure-sql/managed-instance/data-virtualization-overview#query-data-sources-using-openrowset)
 
 ## Related content
 

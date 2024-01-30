@@ -12,7 +12,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # PolyBase features and limitations
 
-[!INCLUDE [appliesto-ss2016-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [appliesto-ss2016-asdb-asdw-pdw-md](../../includes/appliesto-ss2016-asdb-asdw-pdw-md.md)]
 
 This article is a summary of PolyBase features available for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] products and services.
 

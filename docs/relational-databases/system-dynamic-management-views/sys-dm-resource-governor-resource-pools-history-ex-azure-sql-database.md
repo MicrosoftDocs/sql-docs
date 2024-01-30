@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current"
 
 [!INCLUDE [asdb-asdbmi](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Each row represents a periodic snapshot of resource pool statistics in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)]. A snapshot is taken when the database engine starts, and every few seconds thereafter. The interval between the current and the previous snapshot can vary, and is provided in the `duration_ms` column. The latest available snapshots are returned, up to 128 snapshots for each resource pool.
+Each row represents a periodic snapshot of resource pool statistics in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]. A snapshot is taken when the database engine starts, and every few seconds thereafter. The interval between the current and the previous snapshot can vary, and is provided in the `duration_ms` column. The latest available snapshots are returned, up to 128 snapshots for each resource pool.
 
 > [!IMPORTANT]  
 > Most of the data surfaced by this DMV is intended for internal consumption and is subject to change.

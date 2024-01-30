@@ -39,7 +39,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 
 The name for the new profile. *@profile_name* is **sysname**, with no default.
 
-To send e-mail using SQL Server Agent jobs in [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)], SQL Server Agent can use only one Database Mail profile, and it must be called `AzureManagedInstance_dbmail_profile`. For more information and a sample script, see [Azure SQL Managed Instance SQL Agent job notifications](/azure/azure-sql/managed-instance/job-automation-managed-instance#sql-agent-job-notifications).
+To send e-mail using SQL Server Agent jobs in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], SQL Server Agent can use only one Database Mail profile, and it must be called `AzureManagedInstance_dbmail_profile`. For more information and a sample script, see [Azure SQL Managed Instance SQL Agent job notifications](/azure/azure-sql/managed-instance/job-automation-managed-instance#sql-agent-job-notifications).
 
 #### [ @description = ] N'*description*'
 

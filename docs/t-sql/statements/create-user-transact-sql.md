@@ -351,7 +351,7 @@ When creating the user in the Azure SQL database, the *login_name* must correspo
   
  When using contained database users on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], configure access using a database-level firewall rule, instead of a server-level firewall rule. For more information, see [sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
  
-For [!INCLUDE[ssSDS_md](../../includes/sssql22-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssdsmifull-md.md)], and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] contained database users, SSMS supports multifactor authentication. For more information, see [Using Microsoft Entra multifactor authentication](/azure/azure-sql/database/authentication-mfa-ssms-overview).
+For [!INCLUDE[ssSDS_md](../../includes/sssql22-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], [!INCLUDE[ssSDS_md](../../includes/ssazuremi-md.md)], and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] contained database users, SSMS supports multifactor authentication. For more information, see [Using Microsoft Entra multifactor authentication](/azure/azure-sql/database/authentication-mfa-ssms-overview).
 
 ### Permissions  
  Requires ALTER ANY USER permission on the database.  

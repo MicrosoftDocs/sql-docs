@@ -15,7 +15,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-The intelligent query processing (IQP) feature family includes features with broad impact that improve the performance of existing workloads with minimal implementation effort to adopt. The following graphic details the family of IQP features and when they were first introduced for SQL Server. All IQP features are available in [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. Some features depend on the database's compatibility level.
+The intelligent query processing (IQP) feature family includes features with broad impact that improve the performance of existing workloads with minimal implementation effort to adopt. The following graphic details the family of IQP features and when they were first introduced for SQL Server. All IQP features are available in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. Some features depend on the database's compatibility level.
 
 :::image type="content" source="media/iqp-feature-family.svg" alt-text="Diagram of the Intelligent Query Processing family of features and when they were first introduced to SQL Server.":::
 
@@ -57,9 +57,9 @@ The following table details all intelligent query processing features, along wit
 
 \* [DOP Feedback](intelligent-query-processing-degree-parallelism-feedback.md) is currently available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] as a limited preview. For more information and how to apply for the preview, see [Announcing Degree of Parallelism Feedback Limited Preview](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-degree-of-parallelism-feedback-limited-preview/ba-p/3806924).
 
-## <a id="sqlmi"></a> IQP features for [!INCLUDE [ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+## <a id="sqlmi"></a> IQP features for [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)]
 
-| IQP Feature | Supported in [!INCLUDE [ssSDSMIfull](../../includes/sssdsmifull-md.md)] | Description |
+| IQP Feature | Supported in [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)] | Description |
 | ---------------- | ------- | ------- | ---------------- |
 | [Adaptive Joins (Batch Mode)](intelligent-query-processing-details.md#batch-mode-adaptive-joins) | Yes, starting with database compatibility level 140 | Adaptive joins dynamically select a join type during runtime based on actual input rows.|
 | [Approximate Count Distinct](intelligent-query-processing-details.md#approximate-query-processing) | Yes| Provide approximate COUNT DISTINCT for big data scenarios with the benefit of high performance and a low memory footprint. |

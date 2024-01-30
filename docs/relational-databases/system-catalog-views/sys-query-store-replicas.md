@@ -29,7 +29,7 @@ Contains information about Query Store replicas, when [Query Store for secondary
 |-----------------|---------------|-----------------|
 |**replica_group_id**|**bigint**|Identifies the replica set number for this replica.|
 |**role_id**|**tinyint**|1 = Primary<BR />2= Secondary<BR />3=Geo-Primary<BR />4=Geo-Secondary |
-|**replica_name**|**nvarchar(max)**|Instance name of the replica in the availability group. `NULL` for replicas in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. |
+|**replica_name**|**nvarchar(max)**|Instance name of the replica in the availability group. `NULL` for replicas in [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)] or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. |
 
 ## Remarks
 

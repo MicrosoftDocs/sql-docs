@@ -48,7 +48,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 |`possible_non_sos_leaked_memory_mb` |int, null |Leaked non-SOS memory in megabytes, if any. Based on heuristics and provided with a finite degree of confidence. |
 
 ## Permissions
-On [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)], requires `VIEW SERVER STATE` permission.
+On [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], requires `VIEW SERVER STATE` permission.
 
 On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Microsoft Entra admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.
 

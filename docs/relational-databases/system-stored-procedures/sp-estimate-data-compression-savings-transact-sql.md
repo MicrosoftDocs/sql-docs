@@ -80,7 +80,7 @@ For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later, NULL is als
 
 #### [ @xml_compression = ] *xml_compression*
 
-**Applies to**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi_md.md)].
+**Applies to**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)].
 
 Specifies whether to calculate savings for XML compression. *xml_compression* is **bit**, and can be NULL, 0, or 1. The default is NULL.
 

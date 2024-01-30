@@ -50,7 +50,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**exclusive_access_count**|**bigint**|**Applies to**: [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] and later.<br /><br /> Specifies how often this memory object was accessed exclusively. Applies only to thread-safe memory objects.  This is a best effort value without a correctness guarantee.|  
 |**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
- **partition_type**, **contention_factor**, **waiting_tasks_count**, and **exclusive_access_count** are not yet implemented in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **partition_type**, **contention_factor**, **waiting_tasks_count**, and **exclusive_access_count** are not yet implemented in [!INCLUDE[sssds](../../includes/sssds-md.md)].  
   
 ## Permissions
 

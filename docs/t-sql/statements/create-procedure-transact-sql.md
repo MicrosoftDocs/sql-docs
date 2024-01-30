@@ -264,7 +264,7 @@ One or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements comprising th
 
 #### EXTERNAL NAME *assembly_name*.*class_name*.*method_name*
 
-**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sssds](../../includes/sssds-md.md)].
 
 Specifies the method of a [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly for a CLR procedure to reference. *class_name* must be a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier and must exist as a class in the assembly. If the class has a namespace-qualified name that uses a period (`.`) to separate namespace parts, the class name must be delimited by using brackets (`[]`) or quotation marks (`""`). The specified method must be a static method of the class.
 
@@ -580,7 +580,7 @@ GO
 
 The following example creates the `GetPhotoFromDB` procedure that references the `GetPhotoFromDB` method of the `LargeObjectBinary` class in the `HandlingLOBUsingCLR` assembly. Before the procedure is created, the `HandlingLOBUsingCLR` assembly is registered in the local database.
 
-**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (if using an assembly created from *assembly_bits.*
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sssds](../../includes/sssds-md.md)] (if using an assembly created from *assembly_bits.*
 
 ```sql
 CREATE ASSEMBLY HandlingLOBUsingCLR

@@ -33,7 +33,7 @@ Creates an external table and then exports, in parallel, the results of a [!INCL
 - [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions support CREATE EXTERNAL TABLE AS SELECT (CETAS) to create an external table and then export, in parallel, the result of a [!INCLUDE [tsql](../../includes/tsql-md.md)] SELECT statement to Azure Data Lake Storage (ADLS) Gen2, Azure Storage Account V2, and S3-compatible object storage.
 
 > [!NOTE]
-> The capabilities and security of CETAS for [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] are different from [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. For more information, see the [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] version of [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true).
+> The capabilities and security of CETAS for [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] are different from [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. For more information, see the [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] version of [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true).
 
 > [!NOTE]
 > The capabilities and security of CETAS for serverless pools in [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)] are different from [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [CETAS with Synapse SQL](/azure/synapse-analytics/sql/develop-tables-cetas#cetas-in-serverless-sql-pool).
@@ -539,10 +539,10 @@ You can use CREATE EXTERNAL TABLE AS SELECT (CETAS) to complete the following ta
 
 - Create an external table on top of Parquet or CSV files in Azure Blob storage or Azure Data Lake Storage (ADLS) Gen2.
 - Export, in parallel, the results of a T-SQL SELECT statement into the created external table.
-- For more data virtualization capabilities of [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)], see [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview).
+- For more data virtualization capabilities of [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], see [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview).
 
 > [!NOTE]
-> This content applies to [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] only. For other platforms, choose the appropriate version of [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) from the dropdrown selector.
+> This content applies to [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] only. For other platforms, choose the appropriate version of [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) from the dropdrown selector.
 
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -666,8 +666,8 @@ CETAS stores result sets with following SQL data types:
 
 ## Limitations and restrictions
 
-- CREATE EXTERNAL TABLE AS SELECT (CETAS) for [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] is disabled by default. For more information, see the next section, [Disabled by default](#disabled-by-default).
-- For more information on limitations or known issues with data virtualization in [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)], see [Limitations and Known issues](/azure/azure-sql/managed-instance/data-virtualization-overview#limitations).
+- CREATE EXTERNAL TABLE AS SELECT (CETAS) for [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] is disabled by default. For more information, see the next section, [Disabled by default](#disabled-by-default).
+- For more information on limitations or known issues with data virtualization in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], see [Limitations and Known issues](/azure/azure-sql/managed-instance/data-virtualization-overview#limitations).
 
 Because external table data resides outside of the database, backup and restore operations only operate on data stored in the database. As a result, only the metadata is backed up and restored.
 
@@ -703,11 +703,11 @@ adls://<container>@<storage_account>.blob.core.windows.net/<path>/<file_name>.pa
 
 ## Disabled by default
 
-CREATE EXTERNAL TABLE AS SELECT (CETAS) allows you to export data from your SQL managed instance into an external storage account, so there is potential for data exfiltration risk with these capabilities. Therefore, CETAS is disabled by default for [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)].
+CREATE EXTERNAL TABLE AS SELECT (CETAS) allows you to export data from your SQL managed instance into an external storage account, so there is potential for data exfiltration risk with these capabilities. Therefore, CETAS is disabled by default for [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)].
 
 ### Enable CETAS
 
-CETAS for [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] can only be enabled via a method that requires elevated Azure permissions, and cannot be enabled via T-SQL. Because of the risk of unauthorized data exfiltration, CETAS cannot be enabled via the `sp_configure` T-SQL stored procedure, but instead requires that the user action outside of the SQL managed instance. 
+CETAS for [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] can only be enabled via a method that requires elevated Azure permissions, and cannot be enabled via T-SQL. Because of the risk of unauthorized data exfiltration, CETAS cannot be enabled via the `sp_configure` T-SQL stored procedure, but instead requires that the user action outside of the SQL managed instance. 
 
 #### Permissions to enable CETAS
 
@@ -900,7 +900,7 @@ Connect to your SQL managed instance. Run the following T-SQL and observe the `v
 
 ## Troubleshoot
 
-For more steps to troubleshoot data virtualization in [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)], see [Troubleshoot](/azure/azure-sql/managed-instance/data-virtualization-overview#troubleshoot). Error handling and common error messages for CETAS in [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] follows.
+For more steps to troubleshoot data virtualization in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], see [Troubleshoot](/azure/azure-sql/managed-instance/data-virtualization-overview#troubleshoot). Error handling and common error messages for CETAS in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] follows.
 
 ### Error handling
 

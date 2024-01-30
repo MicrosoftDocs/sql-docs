@@ -37,7 +37,7 @@ The types of copy-only backups are as follows:
 Copy-only backups are recorded in the `is_copy_only` column of the [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) table.
 
 > [!IMPORTANT]  
-> In [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)], copy-only backups can't be created for a database encrypted with [service-managed Transparent Data Encryption (TDE)](/azure/sql-database/transparent-data-encryption-azure-sql?tabs=azure-portal#service-managed-transparent-data-encryption). Service-managed TDE uses internal key for encryption of data, and that key can't be exported, so you couldn't restore the backup anywhere else. Consider using [customer-managed TDE](/azure/sql-database/transparent-data-encryption-byok-azure-sql) instead to be able to create copy-only backups of encrypted databases, but make sure to have encryption key available for later restore.
+> In [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], copy-only backups can't be created for a database encrypted with [service-managed Transparent Data Encryption (TDE)](/azure/sql-database/transparent-data-encryption-azure-sql?tabs=azure-portal#service-managed-transparent-data-encryption). Service-managed TDE uses internal key for encryption of data, and that key can't be exported, so you couldn't restore the backup anywhere else. Consider using [customer-managed TDE](/azure/sql-database/transparent-data-encryption-byok-azure-sql) instead to be able to create copy-only backups of encrypted databases, but make sure to have encryption key available for later restore.
 
 ## Create a copy-only backup
 

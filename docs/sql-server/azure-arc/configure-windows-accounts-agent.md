@@ -65,9 +65,10 @@ Base Key – `HKEY_LOCAL_MACHINE`
 | Database as a Resource | Default public role | Server level (This is granted by default to newly added logins) |
 | Best practices assessment | VIEW ANY DEFINITION | Server Level |
 |  | VIEW ANY DATABASE | Server Level |
-|  | SELECT | master db and msdb |
-|  | EXECUTE | On stored procedure (master.sys.xp_enumerrorlogs) and |
-|  |  | (master.sys.xp_readerrorlog) |
+|  | SELECT | master |
+|  | SELECT | msdb |
+|  | EXECUTE ON sys.xp_enumerrorlogs| master |
+|  | EXECUTE ON sys.xp_readerrorlog | master |
 | Backup | CREATE ANY DATABASE | Server level |
 |  | db_backupoperator role | All databases |
 |  | dbcreator | Server role |
@@ -82,31 +83,31 @@ Base Key – `HKEY_LOCAL_MACHINE`
 |  | EXECUTE | All databases |
 |  | CONNECT ANY DATABASE | Server Level |
 |  | VIEW ANY DATABASE | Server Level |
-| Monitoring | SELECT | msdb.dbo.sysjobactivity |
-|  | SELECT | msdb.dbo.sysjobs |
-|  | SELECT | msdb.dbo.syssessions |
-|  | SELECT | msdb.dbo.sysjobHistory |
-|  | SELECT | msdb.dbo.sysjobSteps |
-|  | SELECT | msdb.dbo.syscategories |
-|  | SELECT | msdb.dbo.sysoperators |
-|  | SELECT | msdb.dbo.suspectpages |
-|  | SELECT | msdb.dbo.backupset |
-|  | SELECT | msdb.dbo.backupmediaset |
-|  | SELECT | msdb.dbo.backupmediafamily |
-|  | SELECT | msdb.dbo.backupfile |
+| Monitoring | SELECT dbo.sysjobactivity | msdb |
+|  | SELECT dbo.sysjobs | msdb |
+|  | SELECT dbo.syssessions | msdb |
+|  | SELECT dbo.sysjobHistory | msdb |
+|  | SELECT dbo.sysjobSteps | msdb |
+|  | SELECT dbo.syscategories | msdb |
+|  | SELECT dbo.sysoperators | msdb |
+|  | SELECT dbo.suspectpages | msdb |
+|  | SELECT dbo.backupset | msdb |
+|  | SELECT dbo.backupmediaset | msdb |
+|  | SELECT dbo.backupmediafamily | msdb |
+|  | SELECT dbo.backupfile | msdb |
 |  | CONNECT ANY DATABASE | Server Level |
 |  | VIEW ANY DATABASE | Server Level |
 |  | VIEW ANY DEFINITION | Server Level |
 | Migration Assessment | EXECUTE | msdb.dbo.agent_datetime |
-|  | SELECT | msdb.dbo.syscategories |
-|  | SELECT | msdb.dbo.sysjobHistory |
-|  | SELECT | msdb.dbo.sysjobs |
-|  | SELECT | msdb.dbo.sysjobSteps |
-|  | SELECT | msdb-dbo.sysmail_account |
-|  | SELECT | msdb-dbo.sysmail_profile |
-|  | SELECT | msdb-dbo.sysmail_profileaccount |
-|  | SELECT | msdb.dbo.syssubsystems |
-|  | SELECT | sys.sql_expression_dependencies (All databases) |
+|  | SELECT dbo.syscategories | msdb |
+|  | SELECT dbo.sysjobHistory | msdb |
+|  | SELECT dbo.sysjobs | msdb |
+|  | SELECT dbo.sysjobSteps | msdb |
+|  | SELECT dbo.sysmail_account | msdb |
+|  | SELECT dbo.sysmail_profile | msdb |
+|  | SELECT dbo.sysmail_profileaccount | msdb |
+|  | SELECT dbo.syssubsystems | msdb |
+|  | SELECT sys.sql_expression_dependencies | All databases |
 
 ## Additional permissions
 

@@ -5,7 +5,7 @@ description: Overview of private endpoint feature.
 author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, vanto, mathoma, randolphwest
-ms.date: 10/11/2023
+ms.date: 01/30/2024
 ms.service: sql-database
 ms.subservice: security
 ms.topic: overview
@@ -179,9 +179,9 @@ WHERE session_id = @@SPID;
 
 We recommend that customers use the private link with the **Redirect connection policy** for reduced latency and improved throughput. For connections to use this mode, clients need to meet the following pre-requisites:
 
-- Allow **inbound** communication to the VNET hosting the private endpoint to port range 1433 to 65535
+- Allow **inbound** communication to the VNET hosting the private endpoint to port range 1433 to 65535.
 
-- Allow **outbound** communication from the VNET hosting the client to port range 1433 to 65535
+- Allow **outbound** communication from the VNET hosting the client to port range 1433 to 65535.
 
 - Use the **latest version of drivers that have redirect support built in.** Redirect support is included in ODBC, OLEDB, NET SqlClient Data Provider, Core .NET SqlClient Data Provider, and JDBC (version 9.4 or above) drivers. Connections originating from all other drivers are proxied.
 
@@ -236,9 +236,9 @@ Consider a scenario with a user running SQL Server Management Studio (SSMS) insi
 
 1. Disable all Azure service traffic to SQL Database via the public endpoint by setting Allow Azure Services to **OFF**. Ensure no IP addresses are allowed in the server and database level firewall rules. For more information, see [Azure SQL Database and Azure Synapse Analytics network access controls](network-access-controls-overview.md).
 1. Only allow traffic to the database in SQL Database using the Private IP address of the VM. For more information, see the articles on [Service Endpoint](vnet-service-endpoint-rule-overview.md) and [virtual network firewall rules](firewall-configure.md).
-1. On the Azure VM, narrow down the scope of outgoing connection by using [Network Security Groups (NSGs)](/azure/virtual-network/manage-network-security-group) and Service Tags as follows
-   - Specify an NSG rule to allow traffic for Service Tag = SQL.WestUs - only allowing connection to SQL Database in West US
-   - Specify an NSG rule (with a **higher priority**) to deny traffic for Service Tag = SQL - denying connections to SQL Database in all regions
+1. On the Azure VM, narrow down the scope of outgoing connection by using [Network Security Groups (NSGs)](/azure/virtual-network/manage-network-security-group) and Service Tags as follows.
+   - Specify an NSG rule to allow traffic for Service Tag = SQL.WestUs - only allowing connection to SQL Database in West US.
+   - Specify an NSG rule (with a **higher priority**) to deny traffic for Service Tag = SQL - denying connections to SQL Database in all regions.
 
 At the end of this setup, the Azure VM can connect only to a database in SQL Database in the West US region. However, the connectivity isn't restricted to a single database in SQL Database. The VM can still connect to any database in the West US region, including the databases that aren't part of the subscription. While we've reduced the scope of data exfiltration in the above scenario to a specific region, we haven't eliminated it altogether.
 

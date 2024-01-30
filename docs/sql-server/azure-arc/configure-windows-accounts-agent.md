@@ -23,17 +23,17 @@ It is not recommended to manually set the permissions described in this article.
 | Directory Path | Required Permissions | Details | Feature |
 | :----- | :----- | :----- | :----- |
 | `<SystemDrive>\Packages\Plugins\Microsoft.AzureData.WindowsAgent.SQLServer` | Full control | Extension related dlls and exe files. | Basic |
-| `C:\Packages\Plugins\Microsoft.AzureData.WindowsAgent.SqlServer<extension_version>\RuntimeSettings` | Full control | Extension settings file. | Basic |
-| `C:\Packages\Plugins\Microsoft.AzureData.WindowsAgent.SqlServer<extension_version>\status` | Full control | Extension status file. | Basic |
+| `C:\Packages\Plugins\Microsoft.AzureData.WindowsAgent.SqlServer\<extension_version>\RuntimeSettings` | Full control | Extension settings file. | Basic |
+| `C:\Packages\Plugins\Microsoft.AzureData.WindowsAgent.SqlServer\<extension_version>\status` | Full control | Extension status file. | Basic |
 | `C:\ProgramData\GuestConfig\extension_logs\Microsoft.AzureData.WindowsAgent.SqlServer` | Full control | Extension log files. | Basic |
-| `C:\Packages\Plugins\Microsoft.AzureData.WindowsAgent.SqlServer<extension_version>\status\HeartBeat.Json` | Full control | Extension heartbeat file. | Basic |
+| `C:\Packages\Plugins\Microsoft.AzureData.WindowsAgent.SqlServer\<extension_version>\status\HeartBeat.Json` | Full control | Extension heartbeat file. | Basic |
 | `%ProgramFiles%\Sql Server Extension` | Full control | Extension service files. |  |
 | `<SystemDrive>\Windows\system32\extensionUpload` | Full control | Required to write usage file needed for billing. | Basic |
 | `<SystemDrive>\Windows\system32\ExtensionHandler.log` | Full control | Pre-log folder created by extension. | Basic |
 | `<ProgramData>\AzureConnectedMachineAgent\Config` | Read | Arc config files directory. | Basic |
 | `C:\Program Files\Microsoft SQL Server\MSSQL<base_version>.<instance_name>\MSSQL\log` | Read | Required to extract SQL vCores info from SQL logs. | Basic |
 | `C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft SQL Server Extension Agent` | Full control | Required to write assessment reports and status. | Basic |
-| `C:\Program Files\Microsoft SQL Server\MSSQL15.SQL2019NEW\MSSQL\Backup` | ReadAndExecute/Write /Delete | Required for Backups | Backup |
+| `C:\Program Files\Microsoft SQL Server\MSSQL<base_version>.<instance_name>\MSSQL\Backup` | ReadAndExecute/Write /Delete | Required for Backups | Backup |
 
 ## Registry permissions
 
@@ -69,7 +69,7 @@ Base Key – `HKEY_LOCAL_MACHINE`
 |  | EXECUTE | On stored procedure (master.sys.xp_enumerrorlogs) and |
 |  |  | (master.sys.xp_readerrorlog) |
 | Backup | CREATE ANY DATABASE | Server level |
-|  | db_backupoperator role | On each database level |
+|  | db_backupoperator role | All databases |
 |  | dbcreator | Server role |
 | Azure Control Plane | CREATE TABLE | msdb |
 |  | ALTER ANY SCHEMA | msdb |
@@ -106,7 +106,7 @@ Base Key – `HKEY_LOCAL_MACHINE`
 |  | SELECT | msdb-dbo.sysmail_profile |
 |  | SELECT | msdb-dbo.sysmail_profileaccount |
 |  | SELECT | msdb.dbo.syssubsystems |
-|  | SELECT | all.sys_sql_expression_dependencies |
+|  | SELECT | sys.sql_expression_dependencies (All databases) |
 
 ## Additional permissions
 

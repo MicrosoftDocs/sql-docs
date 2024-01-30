@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-20
 After any word breakers or filters are installed or uninstalled on a system, the changes don't automatically take effect on server instances. This article describes how to view the currently registered word breaker or filters and how to register newly installed word breakers and filters on an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 
   > [!NOTE]  
-  > [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] supports viewing registered filters and word breakers, but changing them is not supported. Only preinstalled ones can be used. Third party filters and word breakers are not supported on managed instance.
+  > [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] supports viewing registered filters and word breakers, but changing them is not supported. Only preinstalled ones can be used. Third party filters and word breakers are not supported on managed instance.
 
 ### View a list of languages whose word breakers are currently registered
 

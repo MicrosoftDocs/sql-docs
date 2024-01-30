@@ -19,14 +19,14 @@ monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 
 [!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-In this quickstart, you'll use the Golang programming language to connect to an Azure SQL database, or a database in [!INCLUDE [ssazuremi_md](../../docs/includes/ssazuremi_md.md)], with the [go-mssqldb](https://github.com/microsoft/go-mssqldb) driver. The sample queries and modifies data with explicit Transact-SQL (T-SQL) statements. [Golang](https://go.dev/) is an open-source programming language that makes it easy to build simple, reliable, and efficient software.
+In this quickstart, you'll use the Golang programming language to connect to an Azure SQL database, or a database in [!INCLUDE [ssazuremi-md](../../docs/includes/ssazuremi-md.md)], with the [go-mssqldb](https://github.com/microsoft/go-mssqldb) driver. The sample queries and modifies data with explicit Transact-SQL (T-SQL) statements. [Golang](https://go.dev/) is an open-source programming language that makes it easy to build simple, reliable, and efficient software.
 
 ## Prerequisites
 
 To complete this quickstart, you need:
 
 - An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/).
-- An Azure SQL database or a database in [!INCLUDE [ssazuremi_md](../../docs/includes/ssazuremi_md.md)]. You can use one of these quickstarts to create a database:
+- An Azure SQL database or a database in [!INCLUDE [ssazuremi-md](../../docs/includes/ssazuremi-md.md)]. You can use one of these quickstarts to create a database:
 
   | SQL Database | SQL Managed Instance | SQL Server on Azure VM |
   | :--- | :--- | :--- |

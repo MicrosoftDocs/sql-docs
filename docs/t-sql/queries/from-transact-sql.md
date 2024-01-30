@@ -200,7 +200,7 @@ Specifies that the query optimizer uses an optimization or locking strategy with
 
 #### *rowset_function*
 
-**Applies to**: [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Applies to**: [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and [!INCLUDE[sssds](../../includes/sssds-md.md)].
 
 Specifies one of the rowset functions, such as OPENROWSET, which returns an object that can be used instead of a table reference. For more information about a list of rowset functions, see [Rowset Functions (Transact-SQL)](../functions/opendatasource-transact-sql.md).
 
@@ -208,7 +208,7 @@ Using the OPENROWSET and OPENQUERY functions to specify a remote object depends 
 
 #### *bulk_column_alias*
 
-**Applies to**: [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Applies to**: [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and [!INCLUDE[sssds](../../includes/sssds-md.md)].
 
 An optional alias to replace a column name in the result set. Column aliases are allowed only in SELECT statements that use the OPENROWSET function with the BULK option. When you use *bulk_column_alias*, specify an alias for every table column in the same order as the columns in the file.
 
@@ -221,7 +221,7 @@ Specifies a table-valued function.
 
 #### OPENXML \<openxml_clause>
 
-**Applies to**: [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Applies to**: [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and [!INCLUDE[sssds](../../includes/sssds-md.md)].
 
 Provides a rowset view over an XML document. For more information, see [OPENXML (Transact-SQL)](../functions/openxml-transact-sql.md).
 
@@ -237,13 +237,13 @@ An optional alias to replace a column name in the result set of the derived tabl
 
 #### *table_or_view_name* FOR SYSTEM_TIME \<system_time>
 
-**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions, and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions, and [!INCLUDE[sssds](../../includes/sssds-md.md)].
 
 Specifies that a specific version of data is returned from the specified temporal table and its linked system-versioned history table
 
 #### TABLESAMPLE clause
 
-**Applies to**: [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
+**Applies to**: [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], [!INCLUDE[sssds](../../includes/sssds-md.md)], and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 Specifies that a sample of data from the table is returned. The sample may be approximate. This clause can be used on any primary or joined table in a SELECT or UPDATE statement. TABLESAMPLE can't be specified with views.
 
@@ -402,25 +402,25 @@ Specifies that the input table is narrowed from multiple columns in *column_list
 
 #### AS OF \<date_time>
 
-**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions, and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions, and [!INCLUDE[sssds](../../includes/sssds-md.md)].
 
 Returns a table with single record for each row containing the values that were actual (current) at the specified point in time in the past. Internally, a union is performed between the temporal table and its history table and the results are filtered to return the values in the row that was valid at the point in time specified by the *\<date_time>* parameter. The value for a row is deemed valid if the *system_start_time_column_name* value is less than or equal to the *\<date_time>* parameter value and the *system_end_time_column_name* value is greater than the *\<date_time>* parameter value.
 
 #### FROM \<start_date_time> TO \<end_date_time>
 
-**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions, and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions, and [!INCLUDE[sssds](../../includes/sssds-md.md)].
 
 Returns a table with the values for all record versions that were active within the specified time range, regardless of whether they started being active before the *\<start_date_time>* parameter value for the FROM argument or ceased being active after the *\<end_date_time>* parameter value for the TO argument. Internally, a union is performed between the temporal table and its history table and the results are filtered to return the values for all row versions that were active at any time during the time range specified. Rows that became active exactly on the lower boundary defined by the FROM endpoint are included and rows that became active exactly on the upper boundary defined by the TO endpoint aren't included.
 
 #### BETWEEN \<start_date_time> AND \<end_date_time>
 
-**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions, and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions, and [!INCLUDE[sssds](../../includes/sssds-md.md)].
 
 Same as above in the  **FROM \<start_date_time> TO \<end_date_time>** description, except it includes rows that became active on the upper boundary defined by the \<end_date_time> endpoint.
 
 #### CONTAINED IN (\<start_date_time> , \<end_date_time>)
 
-**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions, and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions, and [!INCLUDE[sssds](../../includes/sssds-md.md)].
 
 Returns a table with the values for all record versions that were opened and closed within the specified time range defined by the two datetime values for the CONTAINED IN argument. Rows that became active exactly on the lower boundary or ceased being active exactly on the upper boundary are included.
 
@@ -695,7 +695,7 @@ GO
 
 ### M. Use FOR SYSTEM_TIME
 
-**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions, and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions, and [!INCLUDE[sssds](../../includes/sssds-md.md)].
 
 The following example uses the FOR SYSTEM_TIME AS OF *date_time_literal_or_variable* argument to return table rows that were actual (current) as of January 1, 2014.
 

@@ -32,7 +32,7 @@ Includes all connection information that is required to access remote data from 
 
 `OPENROWSET` also supports bulk operations through a built-in `BULK` provider that enables data from a file to be read and returned as a rowset.
 
-Many examples in this articles only apply to [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] only. Details and links to similar examples on other platforms:
+Many examples in this article only apply to [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] only. Details and links to similar examples on other platforms:
 
  - Azure SQL Database only supports reading from Azure Blob Storage.
  - For examples on [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], see [Query data sources using OPENROWSET](/azure/azure-sql/managed-instance/data-virtualization-overview#query-data-sources-using-openrowset).

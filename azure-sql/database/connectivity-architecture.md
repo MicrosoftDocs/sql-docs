@@ -5,7 +5,7 @@ description: This article explains the Azure SQL Database connectivity architect
 author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, mathoma, vanto
-ms.date: 09/26/2023
+ms.date: 01/30/2024
 ms.service: sql-database
 ms.subservice: connect
 ms.topic: conceptual
@@ -117,7 +117,6 @@ We strongly encourage customers to move away from relying on any individual Gate
 | Poland Central       | | 20.215.27.192/29, 20.215.155.248/29,20.215.19.192/29 |
 | Qatar Central        | | 20.21.43.248/29, 20.21.75.192/29, 20.21.67.192/29|
 | Spain Central        | | 68.221.99.184/29, 68.221.154.88/29, 68.221.147.192/29 |
-
 | South Africa North   | 102.133.152.0, 102.133.120.2, 102.133.152.32 | 102.133.120.32/29, 102.133.152.32/29, 102.133.248.32/29, 102.133.221.224/27|
 | South Africa West    | 102.133.24.0       | 102.133.25.32/29,102.37.80.96/27 |
 | South Central US     | 104.214.16.32, 20.45.121.1, 20.49.88.1 | 20.45.121.32/29, 20.49.88.32/29, 20.49.89.32/29, 40.124.64.136/29, 20.65.132.160/27 |
@@ -138,7 +137,7 @@ We strongly encourage customers to move away from relying on any individual Gate
 | West US 2            | 40.78.240.8, 40.78.248.10  | 13.66.136.192/29, 40.78.240.192/29, 40.78.248.192/29, 20.51.9.128/27 |
 | West US 3            | 20.150.168.0, 20.150.184.2   | 20.150.168.32/29, 20.150.176.32/29, 20.150.184.32/29, 20.150.241.128/27 |
 
-## Next steps
+## Related content
 
 - For information on how to change the Azure SQL Database connection policy for a server, see [conn-policy](/cli/azure/sql/server/conn-policy).
 - For information about Azure SQL Database connection behavior for clients that use ADO.NET 4.5 or a later version, see [Ports beyond 1433 for ADO.NET 4.5](adonet-v12-develop-direct-route-ports.md).

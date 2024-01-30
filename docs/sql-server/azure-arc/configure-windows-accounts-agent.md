@@ -37,7 +37,7 @@ It is not recommended to manually set the permissions described in this article.
 
 ## Registry permissions
 
-Base Key – `HKEY_LOCAL_MACHINE`
+Base Key – `HKEY_LOCAL_MACHINE`.
 
 | Registry Key | Permission Required | Details | Feature |
 | :----- | :----- | :----- | :----- |
@@ -98,7 +98,7 @@ Base Key – `HKEY_LOCAL_MACHINE`
 |  | CONNECT ANY DATABASE | Server Level |
 |  | VIEW ANY DATABASE | Server Level |
 |  | VIEW ANY DEFINITION | Server Level |
-| Migration Assessment | EXECUTE | msdb.dbo.agent_datetime |
+| Migration Assessment | EXECUTE dbo.agent_datetime | msdb |
 |  | SELECT dbo.syscategories | msdb |
 |  | SELECT dbo.sysjobHistory | msdb |
 |  | SELECT dbo.sysjobs | msdb |

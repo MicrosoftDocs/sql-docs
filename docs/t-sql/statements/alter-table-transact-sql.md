@@ -1161,7 +1161,7 @@ Columns of type **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**
 
 ## Parallel plan execution
 
-In [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] and higher, the number of processors employed to run a single ALTER TABLE ADD (index-based) CONSTRAINT or DROP (clustered index) CONSTRAINT statement is determined by the **max degree of parallelism** configuration option and the current workload. If the [!INCLUDE[ssDE](../../includes/ssde-md.md)] detects that the system is busy, the degree of parallelism of the operation is automatically reduced before statement execution starts. You can manually configure the number of processors that are used to run the statement by specifying the MAXDOP option. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+In [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] Enterprise edition and later versions, the number of processors employed to run a single ALTER TABLE ADD (index-based) CONSTRAINT or DROP (clustered index) CONSTRAINT statement is determined by the **max degree of parallelism** configuration option and the current workload. If the [!INCLUDE[ssDE](../../includes/ssde-md.md)] detects that the system is busy, the degree of parallelism of the operation is automatically reduced before statement execution starts. You can manually configure the number of processors that are used to run the statement by specifying the MAXDOP option. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 ## Partitioned tables
 
@@ -1903,7 +1903,7 @@ The following four examples will help you become familiar with the syntax for us
 
 #### A. Add system versioning to existing tables
 
-The following example shows how to add system versioning to an existing table and create a future history table. This example assumes that there's an existing table called `InsurancePolicy` with a primary key defined. This example populates the newly created period columns for system versioning using default values for the start and end times because these values can't be null. This example uses the HIDDEN clause to ensure no impact on existing applications interacting with the current table. It also uses HISTORY_RETENTION_PERIOD that's available on [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] only.
+The following example shows how to add system versioning to an existing table and create a future history table. This example assumes that there's an existing table called `InsurancePolicy` with a primary key defined. This example populates the newly created period columns for system versioning using default values for the start and end times because these values can't be null. This example uses the HIDDEN clause to ensure no impact on existing applications interacting with the current table. It also uses HISTORY_RETENTION_PERIOD that's available on [!INCLUDE[sssds](../../includes/sssds-md.md)] only.
 
 ```sql
 --Alter non-temporal table to define periods for system versioning

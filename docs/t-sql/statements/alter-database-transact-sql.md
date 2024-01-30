@@ -727,7 +727,7 @@ ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE'
 
 ## Overview: Azure SQL Managed Instance
 
-In [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)], use this statement to set database options.
+In [!INCLUDE[ssazuremi](../../includes/ssazuremi-md.md)], use this statement to set database options.
 
 Because of its length, the `ALTER DATABASE` syntax is separated into the multiple articles.
 

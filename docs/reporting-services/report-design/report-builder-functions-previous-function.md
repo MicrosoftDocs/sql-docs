@@ -30,7 +30,7 @@ Previous(expression, scope)
  (**Variant** or **Binary**) The expression to use to identify the data and for which to retrieve the previous value, for example, `Fields!Fieldname.Value` or `Sum(Fields!Fieldname.Value)`.  
   
  *scope*  
- (**String**) Optional. The name of a group or data region, or null (**Nothing** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), that specifies the scope from which to retrieve the previous value specified by *expression*.  
+ (**String**) Optional. The name of a group or data region, or null (**Nothing** in [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)]), that specifies the scope from which to retrieve the previous value specified by *expression*.  
   
 ## Return Type  
  Returns a **Variant** or **Binary**.  
@@ -43,7 +43,7 @@ Previous(expression, scope)
  In a details group, use **Previous** to specify the value of a field reference in the previous instance of the detail row.  
   
 > [!NOTE]  
->  The **Previous** function only supports field references in the details group. For example, in a text box in the details group, `=Previous(Fields!Quantity.Value)` returns the data for the field `Quantity` from the previous row. In the first row, this expression returns a null (**Nothing** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]).  
+>  The **Previous** function only supports field references in the details group. For example, in a text box in the details group, `=Previous(Fields!Quantity.Value)` returns the data for the field `Quantity` from the previous row. In the first row, this expression returns a null (**Nothing** in [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)]).  
   
  If *expression* contains an aggregate function that uses a default scope, **Previous** aggregates the data within the previous instance of the scope specified in the aggregate function call.  
   

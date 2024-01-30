@@ -4,7 +4,7 @@ description: Learn how to save on licensing costs by using a standby Azure SQL D
 author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: mathoma
-ms.date: 11/14/2023
+ms.date: 01/29/2024
 ms.service: sql-database
 ms.subservice: high-availability
 ms.custom: ignite-2023
@@ -21,7 +21,7 @@ ms.topic: how-to
 This article describes how you can save on licensing costs by designating your secondary disaster recovery (DR) database for standby when using Azure SQL Database.
 
 > [!NOTE]
-> Standby Azure SQL Database replicas are currently in preview. 
+> Standby Azure SQL Database replicas are currently in preview.
 
 ## Overview
 
@@ -31,7 +31,11 @@ You designate a replica for standby when you configure a new [active geo-replica
 
 While active geo-replication supports adding four secondary replicas, you can only designate one secondary database replica for standby. Failover groups support one secondary database replica per primary database, and it can be either readable, or standby. 
 
-During planned or unplanned failover, the standby replica becomes the new primary and starts to incur regular vCore licensing costs while the original primary becomes the new standby secondary, and stops incurring vCore licensing costs. 
+During planned or unplanned failover, the standby replica becomes the new primary and starts to incur regular vCore licensing costs while the original primary becomes the new standby secondary, and stops incurring vCore licensing costs.
+
+To learn more, watch this video from Data Exposed:
+
+> [!VIDEO https://learn-video.azurefd.net/vod/player?show=data-exposed&ep=azure-sql-db-license-free-standby-replica-data-exposed]
 
 ## Cost benefit
 

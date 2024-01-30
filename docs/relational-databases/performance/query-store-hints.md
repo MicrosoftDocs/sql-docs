@@ -19,7 +19,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||
 
 This article outlines how to apply query hints using the Query Store. Query Store hints provide an easy-to-use method for shaping query plans without changing application code.
 
-Query Store hints are available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)]. Query Store hints are also a feature introduced to SQL Server in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
+Query Store hints are available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]. Query Store hints are also a feature introduced to SQL Server in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
 - For more information on configuring and administering with the Query Store, see [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md).
 - For information on discovering actionable information and tune performance with the Query Store, see [Tuning performance by using the Query Store](tune-performance-with-the-query-store.md).
@@ -42,7 +42,7 @@ For information on which query hints can be applied, see [Supported query hints]
 
 ## When to use Query Store hints
 
-As the name suggests, this feature extends and depends on the [Query Store](monitoring-performance-by-using-the-query-store.md). Query Store enables the capturing of queries, execution plans, and associated runtime statistics.  Query Store greatly simplifies the overall performance tuning customer experience. [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] first introduced Query Store, and now it's enabled by default in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
+As the name suggests, this feature extends and depends on the [Query Store](monitoring-performance-by-using-the-query-store.md). Query Store enables the capturing of queries, execution plans, and associated runtime statistics.  Query Store greatly simplifies the overall performance tuning customer experience. [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] first introduced Query Store, and now it's enabled by default in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 :::image type="complex" source="media/query-store-hints.png" alt-text="The workflow for Query Store Hints.":::
       First the query is executed, then captured by Query Store. Then the DBA creates a Query Store hint on a query. Thereafter, the query is executed using the Query Store hint.

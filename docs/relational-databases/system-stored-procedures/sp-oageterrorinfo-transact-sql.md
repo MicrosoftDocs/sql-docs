@@ -75,12 +75,12 @@ sp_OAGetErrorInfo [ objecttoken ]
   
 |Error and HRESULT|Common cause|  
 |-----------------------|------------------|  
-|**Bad variable type (0x80020008)**|Data type of a [!INCLUDE[tsql](../../includes/tsql-md.md)] value passed as a method parameter did not match the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] data type of the method parameter, or a NULL value was passed as a method parameter.|  
+|**Bad variable type (0x80020008)**|Data type of a [!INCLUDE[tsql](../../includes/tsql-md.md)] value passed as a method parameter did not match the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] data type of the method parameter, or a NULL value was passed as a method parameter.|  
 |**Unknown name (0x8002006)**|Specified property or method name was not found for the specified object.|  
 |**Invalid class string (0x800401f3)**|Specified ProgID or CLSID is not registered as an OLE object on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Custom OLE automation servers must be registered before they can be instantiated using **sp_OACreate**. This can be done by using the Regsvr32.exe utility for in-process (.dll) servers, or the **/REGSERVER** command-line switch for local (.exe) servers.|  
 |**Server execution failed (0x80080005)**|Specified OLE object is registered as a local OLE server (.exe file) but the .exe file could not be found or started.|  
 |**The specified module could not be found (0x8007007e)**|Specified OLE object is registered as an in-process OLE server (.dll file), but the .dll file could not be found or loaded.|  
-|**Type mismatch (0x80020005)**|Data type of a [!INCLUDE[tsql](../../includes/tsql-md.md)] local variable that is used to store a returned property value or a method return value did not match the [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] data type of the property or method return value. Or, the return value of a property or a method was requested, but it does not return a value.|  
+|**Type mismatch (0x80020005)**|Data type of a [!INCLUDE[tsql](../../includes/tsql-md.md)] local variable that is used to store a returned property value or a method return value did not match the [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] data type of the property or method return value. Or, the return value of a property or a method was requested, but it does not return a value.|  
 |**Datatype or value of the 'context' parameter of sp_OACreate is invalid. (0x8004275B)**|The value of the context parameter should be one of: 1, 4, or 5.|  
   
  For more information about processing HRESULT Return Codes, see [OLE Automation Return Codes and Error Information](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  

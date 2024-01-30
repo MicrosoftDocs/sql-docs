@@ -158,7 +158,7 @@ $jbsch.Create();
   
  **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
- An operator is required for the alert notification. The <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> type requires square parentheses because **operator** is a [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] keyword.  
+ An operator is required for the alert notification. The <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> type requires square parentheses because **operator** is a [!INCLUDE[c-sharp](../../../includes/c-sharp-md.md)] keyword.  
   
 ```csharp  
 {  
@@ -191,7 +191,7 @@ $jbsch.Create();
   
  **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
- An operator is required for the alert notification. The <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> type requires square parentheses because **operator** is a [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] keyword.  
+ An operator is required for the alert notification. The <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> type requires square parentheses because **operator** is a [!INCLUDE[c-sharp](../../../includes/c-sharp-md.md)] keyword.  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  

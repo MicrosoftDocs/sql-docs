@@ -73,21 +73,6 @@ public static void executeStoredProcedure(Connection con) throws SQLException {
 }
 ```
 
-For drivers version 12.6 and above, a new connection property, `useFlexibleCallableStatements` was introduced. When set to `true` this property retains the driver's old behavior, allowing users to use a mix of ordinal positions and parameter names when identifying parameters. When set to `false`, the user must use one or the other, but can not use both.
-
-In addition, `useFlexibleCallableStatements` retains existing behavior regarding the flexible order statement parameters can be set in, when the property is set to `true`. When set to `false` however, the order must match the stored procedure definition. Both of these features for `useFlexibleCallableStatements=true` can be seen in the following example:
-
-```java
-public static void executeStoredProcedure(Connection con) throws SQLException {  
-    try(CallableStatement cstmt = con.prepareCall("{call dbo.GetImmediateManager(?, ?)}"); ) {
-        cstmt.registerOutParameter("managerID", java.sql.Types.INTEGER);
-        cstmt.setInt(1, 5);  
-        cstmt.execute();  
-        System.out.println("MANAGER ID: " + cstmt.getInt("managerID"));  
-    }  
-}
-```
-
 > [!NOTE]  
 > These examples use the execute method of the SQLServerCallableStatement class to run the stored procedure. This is used because the stored procedure did not also return a result set. If it did, the [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) method would be used.
 

@@ -71,7 +71,7 @@ After you identify the *query_id* that you want to delete, use the following exa
 EXEC sp_query_store_remove_query 3;
 ```
 
-## Next steps
+## Related content
 
 - [sp_query_store_force_plan (Transact-SQL)](sp-query-store-force-plan-transact-sql.md)
 - [sp_query_store_remove_plan (Transact-SQL)](sp-query-store-remove-plan-transact-sql.md)

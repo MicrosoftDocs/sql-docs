@@ -1,8 +1,8 @@
 ---
 title: Always On availability groups inventory and status
 description: Describes how to view Always On availability groups and their status in Azure portal
-author: dnethi
-ms.author: dinethi
+author: AbdullahMSFT
+ms.author: amamun 
 ms.reviewer: mikeray, randolphwest
 ms.date: 10/20/2023
 ms.topic: conceptual

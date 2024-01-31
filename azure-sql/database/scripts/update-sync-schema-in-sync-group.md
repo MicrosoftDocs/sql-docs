@@ -9,7 +9,7 @@ ms.service: sql-database
 ms.subservice: sql-data-sync
 ms.topic: sample
 ms.custom: sqldbrb=1, devx-track-azurepowershell
-ms.devlang: PowerShell
+ms.devlang: powershell
 ---
 # Use PowerShell to update the sync schema in an existing sync group
 [!INCLUDE[appliesto-sqldb](../../includes/appliesto-sqldb.md)]

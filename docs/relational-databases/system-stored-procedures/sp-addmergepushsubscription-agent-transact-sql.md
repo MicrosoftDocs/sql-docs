@@ -29,7 +29,6 @@ Adds a new agent job used to schedule synchronization of a push subscription to 
 
 [!INCLUDE [entra-id](../../includes/entra-id.md)]
 
-
 ## Syntax
 
 ```syntaxsql
@@ -155,7 +154,6 @@ A value indicating when the Merge Agent runs. *@frequency_type* is **int**, and 
 
 > [!NOTE]  
 > Specifying a value of `64` causes the Merge Agent to run in continuous mode. This corresponds to setting the `-Continuous` parameter for the agent. For more information, see [Replication Merge Agent](../replication/agents/replication-merge-agent.md).
-
 
 #### [ @frequency_interval = ] *frequency_interval*
 

@@ -66,7 +66,7 @@ EXEC sys.sp_cdc_help_jobs;
 GO
 ```
 
-## See also
+## Related content
 
 - [dbo.cdc_jobs (Transact-SQL)](../system-tables/dbo-cdc-jobs-transact-sql.md)
 - [sys.sp_cdc_add_job (Transact-SQL)](sys-sp-cdc-add-job-transact-sql.md)

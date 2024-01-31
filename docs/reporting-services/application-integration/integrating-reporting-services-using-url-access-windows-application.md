@@ -79,7 +79,7 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 ###### To add the WebBrowser control to your Windows Form  
   
-1.  Create a new Windows application in either [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Create a new Windows application in either [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[c-sharp](../../includes/c-sharp-md.md)] or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)].  
   
 2.  Locate the <xref:System.Windows.Forms.WebBrowser> control in the **Toolbox** Dialog Box.  
   

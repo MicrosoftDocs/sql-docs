@@ -134,11 +134,11 @@ Initial snapshots can be programmatically created either by creating and running
 ####  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This example shows how to create a transactional publication and add a Snapshot Agent job for the new publication (using **sqlcmd** scripting variables). The example also starts the job.  
   
- [!code-sql[HowTo#sp_trangenerate_snapshot](../../relational-databases/replication/codesnippet/tsql/create-and-apply-the-ini_1.sql)]  
+ :::code language="sql" source="codesnippet/tsql/create-and-apply-the-ini_1.sql":::
   
  This example creates a merge publication and adds a Snapshot Agent job (using **sqlcmd** variables) for the publication. This example also starts the job.  
   
- [!code-sql[HowTo#sp_mergegenerate_snapshot](../../relational-databases/replication/codesnippet/tsql/create-and-apply-the-ini_2.sql)]  
+ :::code language="sql" source="codesnippet/tsql/create-and-apply-the-ini_2.sql":::
   
  The following command-line arguments start the Snapshot Agent to generate the snapshot for a merge publication.  
   

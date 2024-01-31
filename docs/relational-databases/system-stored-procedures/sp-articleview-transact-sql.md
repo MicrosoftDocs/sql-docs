@@ -101,7 +101,7 @@ sp_articleview [ @publication = ] 'publication'
  If you create a custom filter stored procedure and a view that defines the published article manually, do not run **sp_articleview**. Instead, provide these as the *filter* and *sync_object* parameters to [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), along with the appropriate *type* value.  
   
 ## Example  
- [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articleview-transact-_1.sql)]  
+ :::code language="sql" source="../replication/codesnippet/tsql/sp-articleview-transact-_1.sql":::
   
 ## Permissions  
  Only members of the **sysadmin** fixed server role or **db_owner** fixed database role can execute **sp_articleview**.  

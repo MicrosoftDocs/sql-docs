@@ -69,7 +69,7 @@ EXEC dbo.sp_update_targetservergroup
 GO
 ```
 
-## See also
+## Related content
 
 - [sp_add_targetservergroup (Transact-SQL)](sp-add-targetservergroup-transact-sql.md)
 - [sp_delete_targetservergroup (Transact-SQL)](sp-delete-targetservergroup-transact-sql.md)

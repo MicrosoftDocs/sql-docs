@@ -4,7 +4,7 @@ description: Adds a Log Reader agent for a given database.
 author: mashamsft
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 08/30/2023
+ms.date: 01/23/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -23,7 +23,7 @@ dev_langs:
 Adds a Log Reader agent for a given database. This stored procedure is executed at the Publisher on the publication database.
 
 > [!IMPORTANT]  
-> When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *@job_login* and *@job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)](../../database-engine/configure-windows/configure-sql-server-encryption.md).
+> When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *@job_login* and *@job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Configure SQL Server Database Engine for encrypting connections](../../database-engine/configure-windows/configure-sql-server-encryption.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -107,11 +107,11 @@ Only members of the **sysadmin** fixed server role or the **db_owner** fixed dat
 
 ## Examples
 
-[!code-sql [HowTo#sp_AddTranPub](../replication/codesnippet/tsql/sp-addlogreader-agent-tr_1.sql)]
+:::code language="sql" source="../replication/codesnippet/tsql/sp-addlogreader-agent-tr_1.sql":::
 
-## See also
+## Related content
 
-- [Create a Publication](../replication/publish/create-a-publication.md)
+- [Create a publication](../replication/publish/create-a-publication.md)
 - [sp_addpublication (Transact-SQL)](sp-addpublication-transact-sql.md)
 - [sp_changelogreader_agent (Transact-SQL)](sp-changelogreader-agent-transact-sql.md)
 - [Replication stored procedures (Transact-SQL)](replication-stored-procedures-transact-sql.md)

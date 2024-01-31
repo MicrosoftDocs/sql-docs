@@ -72,7 +72,7 @@ Since their introduction in [!INCLUDE[sssql11-md](../sssql11-md.md)], secondary 
 
 Scaling readable copies of a database via AGs was first introduced with distributed AGs in [!INCLUDE[sssql16-md](../sssql16-md.md)]. This would allow companies to have read-only copies of the database not only locally, but regionally and globally with a minimal amount of configuration and reduce network traffic and latency by having queries executed locally. Each primary replica of an AG can seed two other AGs even if it isn't the fully read/write copy, so each distributed AG can support up to 27 copies of the data that are readable.
 
-:::image type="content" source="media/business-continuity/read-scale.png" alt-text="Diagram showing a distributed availability group related to read-scale.":::
+:::image type="content" source="media/business-continuity/read-scale.png" alt-text="Diagram showing a distributed availability group related to read-scale." lightbox="media/business-continuity/read-scale.png":::
 
 Starting with [!INCLUDE[sssql17-md](../sssql17-md.md)], It's possible to create a near-real time, read-only solution with AGs configured with a cluster type of None. If the goal is to use AGs for readable secondary replicas and not availability, doing this removes the complexity of using a WSFC or an external cluster solution on Linux, and gives the readable benefits of an AG in a simpler deployment method.
 

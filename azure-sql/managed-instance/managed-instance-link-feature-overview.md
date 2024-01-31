@@ -146,11 +146,11 @@ With SQL Server 2022, you can establish your link from SQL Managed Instance to S
 After your databases are replicated to your Azure SQL Managed Instance, they're automatically backed up to Azure storage. You can reduce your on-premises management and operation costs while enjoying the reliability of Azure backups for your replicated databases. You can then perform a [point-in-time restore](point-in-time-restore.md) of your replicated database to any SQL Managed Instance deployment in the same region, as with any other [automated backup](automated-backups-overview.md). 
 
 
-## License-free passive replica
+## License-free passive DR replica
 
-For disaster recovery only secondary SQL managed instances that don't have any workloads, you can save on vCore licensing costs by activating the [hybrid failover benefit](business-continuity-high-availability-disaster-recover-hadr-overview.md#license-free-dr-replicas) and designating your secondary SQL managed instance as a passive DR replica. 
+You can save on vCore licensing costs if you activate the [hybrid failover benefit](business-continuity-high-availability-disaster-recover-hadr-overview.md#license-free-dr-replicas) for secondary passive disaster recovery only SQL managed instances that don't have any workloads. 
 
-To get started, review [License-free passive replica](managed-instance-link-disaster-recovery.md#license-free-passive-replica). 
+To get started, review [License-free passive replica](managed-instance-link-disaster-recovery.md#license-free-passive-dr-replica). 
 
 ### Cost benefit
 
@@ -161,6 +161,8 @@ The benefit reflects differently for the pay-as-you-go billing model and the [Az
 For example, as a pay-as-you-go customer, if you have 16 vCores assigned to the secondary instance, a discount for 16 vCores appears on your invoice if you designate your secondary instance for hybrid failover.
 
 In another example, if you have 16 Azure Hybrid Benefit licenses and your secondary SQL managed instance uses 8 vCores, after you designate the secondary instance for hybrid failover, 8 vCores are returned to your license pool for you to use with other Azure SQL deployments.
+
+For precise terms and conditions of the Hybrid failover rights benefit, see the SQL Server licensing terms online in the [“SQL Server – Fail-over Rights”](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS) section.
 
 
 ## Limitations

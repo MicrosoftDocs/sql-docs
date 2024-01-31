@@ -22,18 +22,20 @@ It is not recommended to manually set the permissions described in this article.
 
 | Directory Path | Required Permissions | Details | Feature |
 | :----- | :----- | :----- | :----- |
-| `<SystemDrive>\Packages\Plugins\Microsoft.AzureData.WindowsAgent.SQLServer` | Full control | Extension related dlls and exe files. | Basic |
-| `C:\Packages\Plugins\Microsoft.AzureData.WindowsAgent.SqlServer\<extension_version>\RuntimeSettings` | Full control | Extension settings file. | Basic |
-| `C:\Packages\Plugins\Microsoft.AzureData.WindowsAgent.SqlServer\<extension_version>\status` | Full control | Extension status file. | Basic |
-| `C:\ProgramData\GuestConfig\extension_logs\Microsoft.AzureData.WindowsAgent.SqlServer` | Full control | Extension log files. | Basic |
-| `C:\Packages\Plugins\Microsoft.AzureData.WindowsAgent.SqlServer\<extension_version>\status\HeartBeat.Json` | Full control | Extension heartbeat file. | Basic |
-| `%ProgramFiles%\Sql Server Extension` | Full control | Extension service files. |  |
-| `<SystemDrive>\Windows\system32\extensionUpload` | Full control | Required to write usage file needed for billing. | Basic |
-| `<SystemDrive>\Windows\system32\ExtensionHandler.log` | Full control | Pre-log folder created by extension. | Basic |
-| `<ProgramData>\AzureConnectedMachineAgent\Config` | Read | Arc config files directory. | Basic |
-| `C:\Program Files\Microsoft SQL Server\MSSQL<base_version>.<instance_name>\MSSQL\log` | Read | Required to extract SQL vCores info from SQL logs. | Basic |
-| `C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft SQL Server Extension Agent` | Full control | Required to write assessment reports and status. | Basic |
-| `C:\Program Files\Microsoft SQL Server\MSSQL<base_version>.<instance_name>\MSSQL\Backup` | ReadAndExecute/Write /Delete | Required for Backups | Backup |
+| `<SystemDrive>\Packages\Plugins\Microsoft.AzureData.WindowsAgent.SQLServer` | Full control | Extension related dlls and exe files. | Default |
+| `C:\Packages\Plugins\Microsoft.AzureData.WindowsAgent.SqlServer\<extension_version>\RuntimeSettings` | Full control | Extension settings file. | Default |
+| `C:\Packages\Plugins\Microsoft.AzureData.WindowsAgent.SqlServer\<extension_version>\status` | Full control | Extension status file. | Default |
+| `C:\ProgramData\GuestConfig\extension_logs\Microsoft.AzureData.WindowsAgent.SqlServer` | Full control | Extension log files. | Default |
+| `C:\Packages\Plugins\Microsoft.AzureData.WindowsAgent.SqlServer\<extension_version>\status\HeartBeat.Json` | Full control | Extension heartbeat file. | Default |
+| `%ProgramFiles%\Sql Server Extension` | Full control | Extension service files. | Default |
+| `<SystemDrive>\Windows\system32\extensionUpload` | Full control | Required to write usage file needed for billing. | Default |
+| `<SystemDrive>\Windows\system32\ExtensionHandler.log` | Full control | Pre-log folder created by extension. | Default |
+| `<ProgramData>\AzureConnectedMachineAgent\Config` | Read | Arc config files directory. | Default |
+| `C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft SQL Server Extension Agent` | Full control | Required to write assessment reports and status. | Default |
+| SQL log directory: <br/> `C:\Program Files\Microsoft SQL Server\MSSQL<base_version>.<instance_name>\MSSQL\log` | Read | Required to extract SQL vCores info from SQL logs. | Default |
+| SQL backup directory: <br/> `C:\Program Files\Microsoft SQL Server\MSSQL<base_version>.<instance_name>\MSSQL\Backup` | ReadAndExecute/Write /Delete | Required for Backups | Backup |
+
+For more information, see [File Locations and Registry Mapping](../install/file-locations-for-default-and-named-instances-of-sql-server.md#file-locations-and-registry-mapping).
 
 ## Registry permissions
 
@@ -41,13 +43,13 @@ Base Key – `HKEY_LOCAL_MACHINE`.
 
 | Registry Key | Permission Required | Details | Feature |
 | :----- | :----- | :----- | :----- |
-| `SOFTWARE\Microsoft\Microsoft SQL Server` | Read | Read SQL Server properties like `installedInstances`.  | Basic |
-| `SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRegistryName>\MSSQLSERVER` | Full control | Required for Microsoft Entra ID and Purview.  | Microsoft Entra ID </br></br>Purview |
+| `SOFTWARE\Microsoft\Microsoft SQL Server` | Read | Read SQL Server properties like `installedInstances`. | Default |
+| `SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRegistryName>\MSSQLSERVER` | Full control | Microsoft Entra ID and Purview. | Microsoft Entra ID </br></br>Purview |
 | `SOFTWARE\Microsoft\SystemCertificates` | Full control | Required for Microsoft Entra ID. | Microsoft Entra ID |
-| `SYSTEM\CurrentControlSet\Services` | Read | Required for fetching SQL Server account name. | Basic |
-| `SOFTWARE\Microsoft\AzureDefender\SQL` | Read | Required for fetching Azure Defender status and last update time. | Basic |
-|` SOFTWARE\Microsoft\SqlServerExtension` | Full control | This is registry key for our extension and extension related values are stored in subkeys. | Basic |
-| `SOFTWARE\Policies\Microsoft\Windows` | Read and Write | Required for enabling automatic windows update via extension. | Patching |
+| `SYSTEM\CurrentControlSet\Services` | Read | SQL Server account name. | Default |
+| `SOFTWARE\Microsoft\AzureDefender\SQL` | Read | Azure Defender status and last update time. | Default |
+| `SOFTWARE\Microsoft\SqlServerExtension` | Full control | Extension related values. | Default |
+| `SOFTWARE\Policies\Microsoft\Windows` | Read and Write | Enabling automatic windows update via extension. | Patching |
 
 ## Group permissions
 
@@ -59,55 +61,55 @@ Base Key – `HKEY_LOCAL_MACHINE`.
 
 | Feature | Permission | Level |
 | :---- | :---- | :---- |
-| Basic | VIEW DATABASE STATE | Server Level |
-|  | VIEW SERVER STATE | Server Level |
-|  | CONNECT SQL | Server Level |
+| Default | VIEW DATABASE STATE | Server Level |
+| | VIEW SERVER STATE | Server Level |
+| | CONNECT SQL | Server Level |
 | Database as a Resource | Default public role | Server level (This is granted by default to newly added logins) |
 | Best practices assessment | VIEW ANY DEFINITION | Server Level |
-|  | VIEW ANY DATABASE | Server Level |
-|  | SELECT | master |
-|  | SELECT | msdb |
-|  | EXECUTE ON sys.xp_enumerrorlogs| master |
-|  | EXECUTE ON sys.xp_readerrorlog | master |
+| | VIEW ANY DATABASE | Server Level |
+| | SELECT | master |
+| | SELECT | msdb |
+| | EXECUTE ON sys.xp_enumerrorlogs| master |
+| | EXECUTE ON sys.xp_readerrorlog | master |
 | Backup | CREATE ANY DATABASE | Server level |
-|  | db_backupoperator role | All databases |
-|  | dbcreator | Server role |
+| | db_backupoperator role | All databases |
+| | dbcreator | Server role |
 | Azure Control Plane | CREATE TABLE | msdb |
-|  | ALTER ANY SCHEMA | msdb |
-|  | CREATE TYPE | msdb |
-|  | EXECUTE | msdb |
-|  | db_datawriter role | msdb |
-|  | db_datareader role | msdb |
+| | ALTER ANY SCHEMA | msdb |
+| | CREATE TYPE | msdb |
+| | EXECUTE | msdb |
+| | db_datawriter role | msdb |
+| | db_datareader role | msdb |
 | Availability Group Discovery | VIEW ANY DEFINITION | Server Level |
 | Purview | SELECT | All databases |
-|  | EXECUTE | All databases |
-|  | CONNECT ANY DATABASE | Server Level |
-|  | VIEW ANY DATABASE | Server Level |
+| | EXECUTE | All databases |
+| | CONNECT ANY DATABASE | Server Level |
+| | VIEW ANY DATABASE | Server Level |
 | Monitoring | SELECT dbo.sysjobactivity | msdb |
-|  | SELECT dbo.sysjobs | msdb |
-|  | SELECT dbo.syssessions | msdb |
-|  | SELECT dbo.sysjobHistory | msdb |
-|  | SELECT dbo.sysjobSteps | msdb |
-|  | SELECT dbo.syscategories | msdb |
-|  | SELECT dbo.sysoperators | msdb |
-|  | SELECT dbo.suspectpages | msdb |
-|  | SELECT dbo.backupset | msdb |
-|  | SELECT dbo.backupmediaset | msdb |
-|  | SELECT dbo.backupmediafamily | msdb |
-|  | SELECT dbo.backupfile | msdb |
-|  | CONNECT ANY DATABASE | Server Level |
-|  | VIEW ANY DATABASE | Server Level |
-|  | VIEW ANY DEFINITION | Server Level |
+| | SELECT dbo.sysjobs | msdb |
+| | SELECT dbo.syssessions | msdb |
+| | SELECT dbo.sysjobHistory | msdb |
+| | SELECT dbo.sysjobSteps | msdb |
+| | SELECT dbo.syscategories | msdb |
+| | SELECT dbo.sysoperators | msdb |
+| | SELECT dbo.suspectpages | msdb |
+| | SELECT dbo.backupset | msdb |
+| | SELECT dbo.backupmediaset | msdb |
+| | SELECT dbo.backupmediafamily | msdb |
+| | SELECT dbo.backupfile | msdb |
+| | CONNECT ANY DATABASE | Server Level |
+| | VIEW ANY DATABASE | Server Level |
+| | VIEW ANY DEFINITION | Server Level |
 | Migration Assessment | EXECUTE dbo.agent_datetime | msdb |
-|  | SELECT dbo.syscategories | msdb |
-|  | SELECT dbo.sysjobHistory | msdb |
-|  | SELECT dbo.sysjobs | msdb |
-|  | SELECT dbo.sysjobSteps | msdb |
-|  | SELECT dbo.sysmail_account | msdb |
-|  | SELECT dbo.sysmail_profile | msdb |
-|  | SELECT dbo.sysmail_profileaccount | msdb |
-|  | SELECT dbo.syssubsystems | msdb |
-|  | SELECT sys.sql_expression_dependencies | All databases |
+| | SELECT dbo.syscategories | msdb |
+| | SELECT dbo.sysjobHistory | msdb |
+| | SELECT dbo.sysjobs | msdb |
+| | SELECT dbo.sysjobSteps | msdb |
+| | SELECT dbo.sysmail_account | msdb |
+| | SELECT dbo.sysmail_profile | msdb |
+| | SELECT dbo.sysmail_profileaccount | msdb |
+| | SELECT dbo.syssubsystems | msdb |
+| | SELECT sys.sql_expression_dependencies | All databases |
 
 ## Additional permissions
 

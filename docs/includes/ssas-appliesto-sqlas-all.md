@@ -1,6 +1,6 @@
 ---
-author: minewiskan
-ms.author: owend
+author: kfollis
+ms.author: kfollis
 ms.date: 01/29/2024
 ms.service: analysis-services
 ms.topic: include

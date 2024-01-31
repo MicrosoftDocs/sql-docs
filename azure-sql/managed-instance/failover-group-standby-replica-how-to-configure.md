@@ -21,7 +21,7 @@ ms.topic: how-to
 This article describes how you can save on licensing costs by designating your secondary managed instance for standby when using Azure SQL Managed Instance.
 
 > [!NOTE]
-> The **Failover benefit** is only applicable when you configure a secondary instance as standby _within a failover group_. For hybrid environments between SQL Server and SQL Managed Instance, use the [Hybrid failover benefit](managed-instance-link-feature-overview.md#license-free-passive-replica) instead. 
+> The **Failover benefit** is only applicable when you configure a secondary instance as standby _within a failover group_. For hybrid environments between SQL Server and SQL Managed Instance, use the [Hybrid failover benefit](managed-instance-link-feature-overview.md#license-free-passive-dr-replica) instead. 
 
 ## Overview
 

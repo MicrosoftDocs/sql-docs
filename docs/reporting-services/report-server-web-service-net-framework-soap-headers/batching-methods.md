@@ -1,5 +1,5 @@
 ---
-title: "Batching Methods"
+title: "Batch methods"
 description: Learn how to use SOAP headers in Reporting Services to include multiple Web service methods in a single operation.
 author: maggiesMSFT
 ms.author: maggies
@@ -18,14 +18,14 @@ helpviewer_keywords:
   - "locking [Reporting Services]"
   - "multiple Web service methods"
 ---
-# Batching Methods
-  The use of SOAP headers in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enables you to include multiple Web service methods in a single operation. Methods run within the scope of a single database transaction, in the order in which they are called.  
+# Batch methods
+  The use of SOAP headers in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enables you to include multiple Web service methods in a single operation. Methods run within the scope of a single database transaction, in the order in which they're called.  
   
- Rollback is one advantage of using multiple-method batch operations. If an error occurs on any of the method calls while a batch is running, the report server stops running the batch and rolls back any previous operations. This is useful when a method call depends on the successful completion of other method calls in that batch.  
+ Rollback is one advantage of using multiple-method batch operations. If an error occurs on any method calls while a batch is running, the report server stops running the batch and rolls back any previous operations. This action is useful when a method call depends on the successful completion of other method calls in that batch.  
   
- The Web service does not provide locking semantics for multiple-method batch operations. Rows in the report server database are not locked for updating until the message is sent to the server and the Execute command is called.  
+ The Web service doesn't provide locking semantics for multiple-method batch operations. Rows in the report server database aren't locked for updating until the message is sent to the server and the `Execute` command is called.  
   
- There are also no concurrency controls to guarantee that the database has not changed since the data was last read. If two clients modify the same item, the last update succeeds if the parameters are still valid (for example, the item has not been renamed).  
+ No concurrency controls exist to guarantee that no one changed the database since the data was last read. If two clients modify the same item, the last update succeeds if the parameters are still valid (for example, the item's name is the same).  
   
  The following example calls the <xref:ReportService2005.ReportingService2005.CreateFolder%2A> method three times and runs these calls as a single batch. If any of the calls to <xref:ReportService2005.ReportingService2005.CreateFolder%2A> fail, the entire batch is canceled.  
   
@@ -91,10 +91,10 @@ class Sample
 }  
 ```  
   
-## See Also  
+## Related content
  <xref:ReportService2005.ReportingService2005.CancelBatch%2A>   
  <xref:ReportService2005.ReportingService2005.CreateBatch%2A>   
- [Technical Reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
- [Using Reporting Services SOAP Headers](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
+ [Technical reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [Use Reporting Services SOAP headers](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
   
   

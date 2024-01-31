@@ -17,8 +17,22 @@ ms.custom: ignite-2023
 
 **Extension version**: `1.1.2566.109`
 
-### Azure extension for SQL Server
+### Region availability
 
+The following regions are now available for SQL Server enabled by Azure Arc, and Data Services enabled by Azure Arc:
+
+- Sweden Central
+- Norway East
+- UK West
+
+For a complete list of regions, see [Supported Azure regions](overview.md#supported-azure-regions).
+
+### SQL Server enabled by Azure Arc
+
+- Windows Update detectoid changes to enable auto-deployment of ESUs
+- Support for TLS 1.3
+- Improved prompt for feedback in Azure portal
+- Monitoring | Show monitoring upload status on Arc SQL Server overview in portal
 - Use of Azure policy to deploy Azure Extension for SQL Server is deprecated. The recommended method is [Automatically connect your SQL Server to Azure Arc](automatically-connect.md). 
 
 ## January 16, 2024

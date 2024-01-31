@@ -3,7 +3,7 @@ title: "Upgrade SQL Server"
 description: This article provides links to resources that contain upgrade information for instances of different versions of SQL Server.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 06/30/2022
+ms.date: 01/09/2024
 ms.service: sql
 ms.subservice: install
 ms.topic: quickstart
@@ -31,7 +31,7 @@ If you're upgrading from an end-of-support version of SQL Server, such as [!INCL
 
 ## Upgrade documentation
 
-The following articles will help you upgrade components of SQL Server:  
+The following articles help you upgrade components of SQL Server:  
   
 - [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)  
 - [Prepare for upgrade by running Data Migration Assistant](../../database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md)  
@@ -48,7 +48,7 @@ The following articles will help you upgrade components of SQL Server:
 - [Upgrade to a different edition of SQL Server &#40;Setup&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md)  
 - [SQL Server end of support options](../../sql-server/end-of-support/sql-server-end-of-support-overview.md)
   
-## See also  
+## Related content  
 
 - [Upgrade Database Engine](../../database-engine/install-windows/upgrade-database-engine.md)
 - [Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)

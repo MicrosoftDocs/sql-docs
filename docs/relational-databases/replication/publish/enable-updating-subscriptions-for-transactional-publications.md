@@ -94,7 +94,7 @@ helpviewer_keywords:
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This example creates a publication that supported both immediate and queued updating pull subscriptions.  
   
- [!code-sql[HowTo#sp_createtranupdatingpub](../../../relational-databases/replication/codesnippet/tsql/enable-updating-subscrip_1.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/enable-updating-subscrip_1.sql":::
   
 ## See Also  
  [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)   

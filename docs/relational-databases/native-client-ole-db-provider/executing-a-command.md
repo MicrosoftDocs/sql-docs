@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "sessions [SQL Server Native Client]"
   - "OLE DB extensions for XML"
   - "SQL Server Native Client OLE DB provider, command execution"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing a SQL Server Native Client Command
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

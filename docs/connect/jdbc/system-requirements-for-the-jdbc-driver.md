@@ -47,7 +47,7 @@ ms.topic: conceptual
   
  As of Microsoft JDBC Driver 4.1 for SQL Server, Java Development Kit (JDK) 7.0 and Java Runtime Environment (JRE) 7.0 are supported.
   
- As of [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], the JDBC driver support for JDBC Spec API has been extended to include the JDBC 4.0 API. The JDBC 4.0 API was introduced as part of the Java Development Kit (JDK) 6.0 and Java Runtime Environment (JRE) 6.0. JDBC 4.0 is a superset of the JDBC 3.0 API.
+ As of [!INCLUDE[jdbc-40](../../includes/jdbc-40-md.md)], the JDBC driver support for JDBC Spec API has been extended to include the JDBC 4.0 API. The JDBC 4.0 API was introduced as part of the Java Development Kit (JDK) 6.0 and Java Runtime Environment (JRE) 6.0. JDBC 4.0 is a superset of the JDBC 3.0 API.
   
  When you deploy the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] on Windows and UNIX operating systems, you must use the installation packages, *sqljdbc_\<version>_enu.exe*, and *sqljdbc_\<version>_enu.tar.gz*, respectively. For more information about how to deploy the JDBC driver, see [Deploying the JDBC driver](deploying-the-jdbc-driver.md) article. 
 
@@ -369,8 +369,8 @@ The JDBC Driver 6.4 is available on the Maven Central Repository and can be adde
   
 |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
 |---------|-----------------------------|----------------------|-----------------|  
-|sqljdbc41.jar|4.1|7|Requires a Java Runtime Environment (JRE) 7.0. Using JRE 6.0 or lower throws an exception.<br /><br /> New Features in 6.0 & 4.2 packages include: JDBC 4.1 Compliance and Bulk Copy<br /><br /> In Addition, new Features in only the 6.0 package include: Always Encrypted, Table-Valued Parameters, Azure Active Directory Authentication, transparent connections to Always On Availability Groups, improvement in parameter metadata retrieval  for prepared queries and Internationalized Domain Name (IDN)|  
-|sqljdbc42.jar|4.2|8|Requires a Java Runtime Environment (JRE) 8.0. Using JRE 7.0 or lower throws an exception.<br /><br /> New Features in 6.0 & 4.2 packages include: JDBC 4.1 Compliance, JDBC 4.2 Compliance, and Bulk Copy<br /><br /> In Addition, new Features in only the 6.0 package include: Always Encrypted, Table-Valued Parameters, Azure Active Directory Authentication, transparent connections to Always On Availability Groups, improvement in parameter metadata retrieval  for prepared queries and Internationalized Domain Name (IDN)|  
+|sqljdbc41.jar|4.1|7|Requires a Java Runtime Environment (JRE) 7.0. Using JRE 6.0 or lower throws an exception.<br /><br /> New Features in 6.0 & 4.2 packages include: JDBC 4.1 Compliance and Bulk Copy<br /><br /> In Addition, new Features in only the 6.0 package include: Always Encrypted, Table-Valued Parameters, Microsoft Entra authentication, transparent connections to Always On Availability Groups, improvement in parameter metadata retrieval  for prepared queries and Internationalized Domain Name (IDN)|  
+|sqljdbc42.jar|4.2|8|Requires a Java Runtime Environment (JRE) 8.0. Using JRE 7.0 or lower throws an exception.<br /><br /> New Features in 6.0 & 4.2 packages include: JDBC 4.1 Compliance, JDBC 4.2 Compliance, and Bulk Copy<br /><br /> In Addition, new Features in only the 6.0 package include: Always Encrypted, Table-Valued Parameters, Microsoft Entra authentication, transparent connections to Always On Availability Groups, improvement in parameter metadata retrieval  for prepared queries and Internationalized Domain Name (IDN)|  
   
  **Microsoft JDBC Driver 4.1 for SQL Server:**  
   

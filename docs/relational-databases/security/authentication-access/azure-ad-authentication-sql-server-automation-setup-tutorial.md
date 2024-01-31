@@ -19,7 +19,7 @@ monikerRange: ">=sql-server-ver16||>= sql-server-linux-ver16"
 > [!NOTE]
 > This feature is available in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or later versions, and is only supported for SQL Server on-premises, for Windows and Linux hosts and [SQL Server 2022 on Windows Azure VMs](/azure/azure-sql/virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm).
 
-In this article, we'll go over how to set up the Microsoft Entra admin to allow authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) for SQL Server using the Azure portal, and APIs such as:
+In this article, we'll go over how to set up the Microsoft Entra admin to allow authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) for SQL Server using the Azure portal, and APIs such as:
 
 - PowerShell
 - The Azure CLI
@@ -737,7 +737,7 @@ The PowerShell script below sets up a Microsoft Entra admin, creates an Azure Ke
 The following modules are required for this tutorial. Install the latest versions of the modules or higher than the noted version below:
 
 - Az.Accounts 3.37.0
-- Az.ConnectedMachine 0.3.0
+- Az.ConnectedMachine 0.5.0
 - Az.KeyVault 4.5.0
 - Az.Resources 6.0.0
 
@@ -1049,9 +1049,9 @@ $instanceSettings = @{
 
 $arcInstance = Get-AzConnectedMachineExtension -SubscriptionId $subscriptionId -MachineName $machineName -ResourceGroupName $resourceGroupName -Name "WindowsAgent.SqlServer"
 
-if ($arcInstance.Setting.AzureAD)
+if ($arcInstance.Setting.AdditionalProperties.AzureAD)
 {
-    $aadSettings = $arcInstance.Setting.AzureAD
+    $aadSettings = $arcInstance.Setting.AdditionalProperties.AzureAD
     $instanceFound = $false
     $instanceNameLower = $instanceName.ToLower()
     $instanceIndex = 0
@@ -1075,12 +1075,12 @@ if ($arcInstance.Setting.AzureAD)
         $aadSettings += $instanceSettings
     }
 
-    $arcInstance.Setting.AzureAD = $aadSettings
+    $arcInstance.Setting.AdditionalProperties.AzureAD = $aadSettings
 }
 else
 {
     $aadSettings = , $instanceSettings
-    $extension.properties.Settings | Add-Member -Name 'AzureAD' -Value $aadSettings -MemberType NoteProperty
+    $arcInstance.Setting.AdditionalProperties | Add-Member -Name 'AzureAD' -Value $aadSettings -MemberType NoteProperty
 }
 
 
@@ -1176,9 +1176,9 @@ $instanceSettings = @{
 
 $arcInstance = Get-AzConnectedMachineExtension -SubscriptionId $subscriptionId -MachineName $machineName -ResourceGroupName $resourceGroupName -Name "WindowsAgent.SqlServer"
 
-if ($arcInstance.Setting.AzureAD)
+if ($arcInstance.Setting.AdditionalProperties.AzureAD)
 {
-    $aadSettings = $arcInstance.Setting.AzureAD
+    $aadSettings = $arcInstance.Setting.AdditionalProperties.AzureAD
     $instanceFound = $false
     $instanceNameLower = $instanceName.ToLower()
     $instanceIndex = 0
@@ -1202,12 +1202,12 @@ if ($arcInstance.Setting.AzureAD)
         $aadSettings += $instanceSettings
     }
 
-    $arcInstance.Setting.AzureAD = $aadSettings
+    $arcInstance.Setting.AdditionalProperties.AzureAD = $aadSettings
 }
 else
 {
     $aadSettings = , $instanceSettings
-    $extension.properties.Settings | Add-Member -Name 'AzureAD' -Value $aadSettings -MemberType NoteProperty
+    $arcInstance.Setting.AdditionalProperties | Add-Member -Name 'AzureAD' -Value $aadSettings -MemberType NoteProperty
 }
 
 

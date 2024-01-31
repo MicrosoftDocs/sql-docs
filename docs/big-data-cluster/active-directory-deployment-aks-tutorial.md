@@ -5,26 +5,27 @@ description: Learn how to deploy SQL Server Big Data Clusters in AD mode on Azur
 author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
-ms.date: 07/16/2021
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: big-data-cluster
-ms.topic: conceptual
-ms.custom: intro-deployment
+ms.topic: tutorial
+ms.custom:
+  - intro-deployment
 ---
 
 # Tutorial: Deploy SQL Server Big Data Clusters in AD mode on Azure Kubernetes Services (AKS)
 
 This article explains how to deploy a SQL Server big data cluster in the Active Directory authentication mode with a reference architecture. The reference architecture extends your on-premises Active Directory domain Service (AD DS) to Azure. You can deploy it from [Azure Architecture Center](https://github.com/mspnp/identity-reference-architectures/tree/master/adds-extend-domain) with [Azure building blocks](https://github.com/mspnp/template-building-blocks/wiki/Install-Azure-Building-Blocks).
 
-[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+[!INCLUDE [big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 ## Prerequisites
 
 Before deploying a SQL Server big data cluster, you need to:
 
-* Access an Azure VM for management. This VM requires access to the Azure Virtual Network (VNet) where you will deploy the big data cluster. It must either reside on the same VNet, or on [peered VNet](/azure/virtual-network/virtual-network-manage-peering).
-* [Install the big data tools](deploy-big-data-tools.md) on the management VM.
-* Prepare to deploy the cluster in the [Active Directory authentication mode](active-directory-prerequisites.md) in your on-premises AD controller.
+- Access an Azure VM for management. This VM requires access to the Azure Virtual Network (VNet) where you will deploy the big data cluster. It must either reside on the same VNet, or on [peered VNet](/azure/virtual-network/virtual-network-manage-peering).
+- [Install the big data tools](deploy-big-data-tools.md) on the management VM.
+- Prepare to deploy the cluster in the [Active Directory authentication mode](active-directory-prerequisites.md) in your on-premises AD controller.
 
 ## Create AKS subnet
 
@@ -50,7 +51,7 @@ Before deploying a SQL Server big data cluster, you need to:
 
 The following screenshot shows how we plan the subnets resides in the VNet in the architecture.
 
-:::image type="content" source="media/active-directory-deployment-aks/ad-in-aks-diagram.png" alt-text="AKS cluster with AD and SQL Server Big Data Cluster":::
+:::image type="content" source="media/active-directory-deployment-aks/ad-in-aks-diagram.png" alt-text="Diagram of the AKS cluster with AD and SQL Server Big Data Cluster.":::
 
 ## Create an AKS private cluster
 
@@ -130,8 +131,7 @@ The following command initiates a big data cluster deployment:
 azdata bdc create --config-profile bdc-ad-aks --accept-eula yes
 ```
 
-## Next steps
+## Related content
 
-[Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md)
-
-[Tutorial: Load sample data into a SQL Server big data cluster](tutorial-load-sample-data.md)
+- [Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md)
+- [Tutorial: Load sample data into a SQL Server big data cluster](tutorial-load-sample-data.md)

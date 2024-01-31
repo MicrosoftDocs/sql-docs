@@ -72,11 +72,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This example deletes a push subscription to a transactional publication.  
   
- [!code-sql[HowTo#sp_droptransubscription](../../relational-databases/replication/codesnippet/tsql/delete-a-push-subscription_1.sql)]  
+ :::code language="sql" source="codesnippet/tsql/delete-a-push-subscription_1.sql":::
   
  This example deletes a push subscription to a merge publication.  
   
- [!code-sql[HowTo#sp_dropmergesubscription](../../relational-databases/replication/codesnippet/tsql/delete-a-push-subscription_2.sql)]  
+ :::code language="sql" source="codesnippet/tsql/delete-a-push-subscription_2.sql":::
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
  The RMO classes that you use to delete a push subscription depend on the type of publication to which the push subscription is subscribed.  

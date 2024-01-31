@@ -1,15 +1,15 @@
 ---
-title: Manage automated backups for Azure Arc-enabled SQL Server from Azure portal
+title: Manage automated backups from Azure portal
 description: Describes how to configure automated backups
-author: dnethi
-ms.author: dinethi
+author: AbdullahMSFT
+ms.author: amamun 
 ms.reviewer: mikeray, randolphwest
 ms.date: 11/14/2023
 ms.topic: conceptual
 ms.custom: ignite-2023, devx-track-azurecli
 ---
 
-# Manage automated backups - Azure Arc-enabled SQL Server
+# Manage automated backups - SQL Server enabled by Azure Arc
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
@@ -189,9 +189,9 @@ When the built-in automated backups are enabled on an Arc-enabled [!INCLUDE [ssn
 
 ## Limitations
 
-- Automated backups are currently not supported for Always On failover cluster instances
+- Automated backups are currently not supported for Always On failover cluster instances (FCI).
+- Automated backups are not supported on any instance that hosts an availability group (AG) replica.
 - The user databases need to be in full recovery model for the backups to be performed. Databases that aren't in full recovery model are not automatically backed up.
-- Automated backups are only supported on the primary replica of an Always On availability group.
 - Automated backups are only available for licenses with Software Assurance, SQL subscription, or pay-as-you-go. For details, see [Feature availability depending on license type](overview.md#feature-availability-depending-on-license-type).
 
 ## Related tasks

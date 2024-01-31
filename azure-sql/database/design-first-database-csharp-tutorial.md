@@ -4,7 +4,7 @@ description: "Learn to design your first relational database in Azure SQL Databa
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 07/29/2019
+ms.date: 01/26/2024
 ms.service: sql-database
 ms.subservice: development
 ms.topic: tutorial
@@ -13,7 +13,7 @@ ms.custom:
   - devx-track-csharp
 ---
 # Tutorial: Design a relational database in Azure SQL Database C&#x23; and ADO.NET
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 Azure SQL Database is a relational database-as-a-service (DBaaS) in the Microsoft Cloud (Azure). In this tutorial, you learn how to use the Azure portal and ADO.NET with Visual Studio to:
 
@@ -26,75 +26,35 @@ Azure SQL Database is a relational database-as-a-service (DBaaS) in the Microsof
 > * Insert, update, and delete data with ADO.NET
 > * Query data ADO.NET
 
-*If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/free/) before you begin.
-
 > [!TIP]
 > This free Learn module shows you how to [Develop and configure an ASP.NET application that queries an Azure SQL Database](/training/modules/develop-app-that-queries-azure-sql/), including the creation of a simple database.
 
 ## Prerequisites
 
-An installation of [Visual Studio 2019](https://www.visualstudio.com/downloads/) or later.
+- An installation of [Visual Studio 2019](https://www.visualstudio.com/downloads/) or later.
+- If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/free/) before you begin.
+- If you don't already have an Azure SQL Database created, visit [Quickstart: Create a single database](single-database-create-quickstart.md). Look for the option to use your offer to [try Azure SQL Database for free (preview)](free-offer.md).
 
-## Create a blank database in Azure SQL Database
+## Sign in to the Azure portal
 
-A database in Azure SQL Database is created with a defined set of compute and storage resources. The database is created within an [Azure resource group](/azure/active-directory-b2c/overview) and is managed using an [logical SQL server](logical-servers.md).
-
-Follow these steps to create a blank database.
-
-1. Select **Create a resource** in the upper left-hand corner of the Azure portal.
-2. On the **New** page, select **Databases** in the Azure Marketplace section, and then select **SQL Database** in the **Featured** section.
-
-   :::image type="content" source="./media/design-first-database-csharp-tutorial/create-empty-database.png" alt-text="Screenshot of the Azure portal, selecting SQL Database from Azure Marketplace.":::
-
-3. Fill out the **SQL Database** form with the following information, as shown on the preceding image:
-
-    | Setting       | Suggested value | Description |
-    | ------------ | ------------------ | ------------------------------------------------- |
-    | **Database name** | *yourDatabase* | For valid database names, see [Database identifiers](/sql/relational-databases/databases/database-identifiers). |
-    | **Subscription** | *yourSubscription*  | For details about your subscriptions, see [Subscriptions](https://account.windowsazure.com/Subscriptions). |
-    | **Resource group** | *yourResourceGroup* | For valid resource group names, see [Naming rules and restrictions](/azure/architecture/best-practices/resource-naming). |
-    | **Select source** | Blank database | Specifies that a blank database should be created. |
-
-4. Select **Server** to use an existing server or create and configure a new server. Either select an existing server or select **Create a new server** and fill out the **New server** form with the following information:
-
-    | Setting       | Suggested value | Description |
-    | ------------ | ------------------ | ------------------------------------------------- |
-    | **Server name** | Any globally unique name | For valid server names, see [Naming rules and restrictions](/azure/architecture/best-practices/resource-naming). |
-    | **Server admin login** | Any valid name | For valid login names, see [Database identifiers](/sql/relational-databases/databases/database-identifiers). |
-    | **Password** | Any valid password | Your password must have at least eight characters and must use characters from three of the following categories: uppercase characters, lowercase characters, numbers, and non-alphanumeric characters. |
-    | **Location** | Any valid location | For information about regions, see [Azure Regions](https://azure.microsoft.com/regions/). |
-
-    :::image type="content" source="./media/design-first-database-tutorial/create-database-server.png" alt-text="Screenshot of the Azure portal, showing the logical server for Azure deployment page.":::
-
-5. Select **Select**.
-6. Select **Pricing tier** to specify the service tier, the number of DTUs or vCores, and the amount of storage. You may explore the options for the number of DTUs/vCores and storage that is available to you for each service tier.
-
-    After selecting the service tier, the number of DTUs or vCores, and the amount of storage, select **Apply**.
-
-7. Enter a **Collation** for the blank database (for this tutorial, use the default value). For more information about collations, see [Collations](/sql/t-sql/statements/collations)
-
-8. Now that you've completed the **SQL Database** form, select **Create** to provision the database. This step may take a few minutes.
-
-9. On the toolbar, select **Notifications** to monitor the deployment process.
-
-   :::image type="content" source="./media/design-first-database-csharp-tutorial/notification.png" alt-text="Screenshot shows Notifications in the Azure portal with Deployment in progress.":::
+Sign in to the [Azure portal](https://portal.azure.com/).
 
 ## Create a server-level IP firewall rule
 
 SQL Database creates an IP firewall at the server-level. This firewall prevents external applications and tools from connecting to the server and any databases on the server unless a firewall rule allows their IP through the firewall. To enable external connectivity to your database, you must first add an IP firewall rule for your IP address (or IP address range). Follow these steps to create a [server-level IP firewall rule](firewall-configure.md).
 
 > [!IMPORTANT]
-> SQL Database communicates over port 1433. If you are trying to connect to this service from within a corporate network, outbound traffic over port 1433 may not be allowed by your network's firewall. If so, you cannot connect to your database unless your administrator opens port 1433.
+> SQL Database communicates over port 1433. If you are trying to connect to this service from within a corporate network, outbound traffic over port 1433 might not be allowed by your network's firewall. If so, you cannot connect to your database unless your administrator opens port 1433.
 
 1. After the deployment is complete, select **SQL databases** from the left-hand menu and then select *yourDatabase* on the **SQL databases** page. The overview page for your database opens, showing you the fully qualified **Server name** (such as *yourserver.database.windows.net*) and provides options for further configuration.
 
 1. Copy this fully qualified server name for use to connect to your server and databases from SQL Server Management Studio.
 
-   :::image type="content" source="./media/design-first-database-tutorial/server-name.png" alt-text="Screenshot of the Azure portal, database overview page, with the server name highlighted.":::
+   :::image type="content" source="media\design-first-database-csharp-tutorial\server-name.png" alt-text="Screenshot of the Azure portal, database overview page, with the server name highlighted." lightbox="media\design-first-database-csharp-tutorial\server-name.png":::
 
 1. Select **Networking** under **Settings**. Choose the **Public Access** tab, and then select **Selected networks** under **Public network access** to display the **Firewall rules** section. 
 
-   :::image type="content" source="./media/design-first-database-tutorial/server-firewall-rule.png" alt-text="Screenshot of the Azure portal, networking page, showing where to set the server-level IP firewall rule.":::
+   :::image type="content" source="media\design-first-database-csharp-tutorial\server-firewall-rule.png" alt-text="Screenshot of the Azure portal, networking page, showing where to set the server-level IP firewall rule." lightbox="media\design-first-database-csharp-tutorial\server-firewall-rule.png":::
 
 1. Select **Add client IP** on the toolbar to add your current IP address to a new IP firewall rule. An IP firewall rule can open port 1433 for a single IP address or a range of IP addresses.
 
@@ -109,18 +69,17 @@ Your IP address can now pass through the IP firewall. You can now connect to you
 
 [!INCLUDE [sql-database-csharp-adonet-create-query-2](../includes/sql-database-csharp-adonet-create-query-2.md)]
 
-## Next steps
+> [!TIP]
+> To learn more about writing SQL queries, visit [Tutorial: Write Transact-SQL statements](/sql/t-sql/tutorial-writing-transact-sql-statements).
 
-In this tutorial, you learned basic database tasks such as create a database and tables, connect to the database, load data, and run queries. You learned how to:
+## Related content
 
-> [!div class="checklist"]
->
-> * Create a database using the Azure portal
-> * Set up a server-level IP firewall rule using the Azure portal
-> * Connect to the database with ADO.NET and Visual Studio
-> * Create tables with ADO.NET
-> * Insert, update, and delete data with ADO.NET
-> * Query data ADO.NET
+- [Try Azure SQL Database for free (preview)](free-offer.md)
+- [What's new in Azure SQL Database?](doc-changes-updates-release-notes-whats-new.md)
+- [Configure and manage content reference - Azure SQL Database](how-to-content-reference-guide.md)
+- [Plan and manage costs for Azure SQL Database](cost-management.md)
+
+## Next step
 
 Advance to the next tutorial to learn about data migration.
 

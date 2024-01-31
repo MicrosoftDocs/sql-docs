@@ -123,7 +123,7 @@ Use `sys.sp_cdc_cleanup_change_table` in the following circumstances:
 
 Requires membership in the **db_owner** fixed database role.
 
-## See also
+## Related content
 
 - [cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt; (Transact-SQL)](../system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)
 - [sys.fn_cdc_get_min_lsn (Transact-SQL)](../system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)

@@ -15,8 +15,9 @@ ms.custom: mode-ui
 
 This quickstart teaches you to create an [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md) in the Azure portal.
 
-> [!IMPORTANT]
-> For limitations, see [Supported regions](resource-limits.md#supported-regions) and [Supported subscription types](resource-limits.md#supported-subscription-types).
+For limitations, see [Supported regions](resource-limits.md#supported-regions) and [Supported subscription types](resource-limits.md#supported-subscription-types).
+
+[!INCLUDE [azure-sql-managed-instance-free-offer-note](../includes/azure-sql-managed-instance-free-offer-note.md)]
 
 ## Create an Azure SQL Managed Instance
 
@@ -99,7 +100,7 @@ If you don't have an Azure subscription, [create a free account](https://azure.m
    | **Collation** | Choose the collation that you want to use for your managed instance. If you migrate databases from SQL Server, check the source collation by using `SELECT SERVERPROPERTY(N'Collation')` and use that value.| For information about collations, see [Set or change the server collation](/sql/relational-databases/collations/set-or-change-the-server-collation).|   
    | **Time zone** | Select the time zone that managed instance will observe.|For more information, see [Time zones](timezones-overview.md).|
    | **Use as failover secondary** | Select **Yes**. | Enable this option to use the managed instance as a failover group secondary.|
-   | **Primary SQL Managed Instance** (if **Use as failover secondary** is set to **Yes**) | Choose an existing primary managed instance that will be joined in the same DNS zone with the managed instance you're creating. | This step will enable post-creation configuration of the failover group. For more information, see [Tutorial: Add a managed instance to a failover group](failover-group-add-instance-tutorial.md).|
+   | **Primary SQL Managed Instance** (if **Use as failover secondary** is set to **Yes**) | Choose an existing primary managed instance that will be joined in the same DNS zone with the managed instance you're creating. | This step will enable post-creation configuration of the failover group. For more information, see [Add a managed instance to a failover group](failover-group-configure-sql-mi.md).|
 
 - Select **Review + create** to review your choices before you create a managed instance. Or, configure Azure Tags by selecting **Next: Tags** (recommended).
 

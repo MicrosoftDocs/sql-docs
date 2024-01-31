@@ -99,7 +99,7 @@ You can modify the RDL Sandboxing feature to help manage the resources that are 
   
 -   Static members of a type.  
   
--   The [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ```New``` method.  
+-   The [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] ```New`` method.  
   
 -   The ```<Classes>``` element in the report definition.  
   
@@ -121,17 +121,17 @@ You can modify the RDL Sandboxing feature to help manage the resources that are 
   
 -   Add that new class to the allowlist.  
   
- To add [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework functions to the allowlist, add the corresponding types from the ```Microsoft.VisualBasic``` namespace to the allowlist.  
+ To add [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] .NET Framework functions to the allow list, add the corresponding types from the ```Microsoft.VisualBasic``` namespace to the allow list.  
   
- To add [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework type keywords to the allowlist, add the corresponding CLR type to the allowlist. For example, to use the [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework keyword **Integer**, add the following XML fragment to the ```<RDLSandboxing>``` element:  
+ To add [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] .NET Framework type keywords to the allow list, add the corresponding CLR type to the allow list. For example, to use the [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] .NET Framework keyword **Integer**, add the following XML fragment to the ```<RDLSandboxing>``` element:  
   
 ```  
 <Allow Namespace="System">Int32</Allow>  
 ```  
   
- To add a generic or a [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework nullable type to the allowlist, you must do the following actions:  
+ To add a generic or a [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] .NET Framework nullable type to the allow list, you must do the following:  
   
--   Create a proxy type for the generic or [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework nullable type.  
+-   Create a proxy type for the generic or [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] .NET Framework nullable type.  
   
 -   Add the proxy type to the allowlist.  
   
@@ -153,7 +153,7 @@ You can modify the RDL Sandboxing feature to help manage the resources that are 
   
 ### Working with operators and New
 
- By default, [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework language operators, except for ```New```, are always allowed. The ```New``` operator is controlled by the ```AllowNew``` attribute on the ```<Allow>``` element. Other language operators, such as the default collection accessor operator ```!``` and [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework cast macros such as **CInt**, are always allowed.  
+ By default, [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] .NET Framework language operators, except for ```New```, are always allowed. The ```New``` operator is controlled by the ```AllowNew``` attribute on the ```<Allow>``` element. Other language operators, such as the default collection accessor operator ```!``` and [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] .NET Framework cast macros such as **CInt**, are always allowed.  
   
  Adding operators to a blocklist, including custom operators, isn't supported. To exclude operators for a type, you must do the following actions:  
   

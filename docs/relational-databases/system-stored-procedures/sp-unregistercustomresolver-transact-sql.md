@@ -31,7 +31,6 @@ sp_unregistercustomresolver [ @article_resolver = ] N'article_resolver'
 [ ; ]
 ```
 
-
 ## Arguments
 
 #### [ @article_resolver = ] N'*article_resolver*'
@@ -52,7 +51,7 @@ Use [sp_enumcustomresolvers](sp-enumcustomresolvers-transact-sql.md) at any serv
 
 Only members of the **sysadmin** fixed server role or **db_owner** fixed database role can execute `sp_unregistercustomresolver`.
 
-## See also
+## Related content
 
 - [sp_lookupcustomresolver (Transact-SQL)](sp-lookupcustomresolver-transact-sql.md)
 - [sp_registercustomresolver (Transact-SQL)](sp-registercustomresolver-transact-sql.md)

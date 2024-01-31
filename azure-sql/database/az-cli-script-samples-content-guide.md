@@ -23,6 +23,7 @@ keywords:
   - "azure cli code samples"
   - "azure cli script examples"
 ms.devlang: azurecli
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # Azure CLI samples for Azure SQL Database and SQL Managed Instance

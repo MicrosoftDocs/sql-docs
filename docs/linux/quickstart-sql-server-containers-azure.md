@@ -3,7 +3,7 @@ title: "Quickstart: Deploy a SQL Server container cluster on Azure"
 description: This tutorial shows how to deploy a SQL Server high availability solution with Azure Kubernetes Service or Azure Red Hat OpenShift.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/31/2023
+ms.date: 01/10/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: quickstart
@@ -259,7 +259,7 @@ For a database in an OpenShift cluster, you must use persisted storage. You can 
 
 The container hosting the SQL Server instance is described as a Kubernetes *deployment object*. The deployment creates a *replica set*. The replica set creates the *pod*.
 
-You create a manifest to describe the container, based on the SQL Server [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) Docker image.
+You create a manifest to describe the container, based on the SQL Server [mssql-server-linux](https://mcr.microsoft.com/product/mssql/server/about) Docker image.
 
 - The manifest references the `mssql-server` persistent volume claim, and the `mssql` secret that you already applied to the Kubernetes cluster.
 - The manifest also describes a [service](https://kubernetes.io/docs/concepts/services-networking/service/). This service is a load balancer. The load balancer guarantees that the IP address persists after SQL Server instance is recovered.
@@ -376,7 +376,7 @@ You create a manifest to describe the container, based on the SQL Server [mssql-
    mssql-deployment-3813464711-h312s   1/1      Running   0          17m
    ```
 
-   The pod has a status of `Running`. This status indicates that the container is ready. After the deployment is created, it can take a few minutes before the pod is visible. The delay is because the cluster pulls the [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) image from Docker hub. After the image is pulled the first time, subsequent deployments might be faster if the deployment is to a node that already has the image cached on it.
+   The pod has a status of `Running`. This status indicates that the container is ready. After the deployment is created, it can take a few minutes before the pod is visible. The delay is because the cluster pulls the [mssql-server-linux](https://mcr.microsoft.com/product/mssql/server/about) image from the Microsoft Artifact Registry. After the image is pulled the first time, subsequent deployments might be faster if the deployment is to a node that already has the image cached on it.
 
 1. Verify the services are running. Run the following command:
 
@@ -414,7 +414,7 @@ You create a manifest to describe the container, based on the SQL Server [mssql-
 
 The container hosting the SQL Server instance is described as an OpenShift *deployment object*. The deployment creates a *replica set*. The replica set creates the *pod*.
 
-You create a manifest to describe the container, based on the SQL Server [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) Docker image.
+You create a manifest to describe the container, based on the SQL Server [mssql-server-linux](https://mcr.microsoft.com/product/mssql/server/about) Docker image.
 
 - The manifest references the `mssql-server` persistent volume claim, and the `mssql` secret that you already applied to the OpenShift cluster.
 - The manifest also describes a [service](https://docs.openshift.com/container-platform/4.12/networking/understanding-networking.html). This service is a load balancer. The load balancer guarantees that the IP address persists after SQL Server instance is recovered.
@@ -535,7 +535,7 @@ You create a manifest to describe the container, based on the SQL Server [mssql-
    mssql-deployment-3813464711-h312s   1/1      Running   0          17m
    ```
 
-   The pod has a status of `Running`. This status indicates that the container is ready. After the deployment is created, it can take a few minutes before the pod is visible. The delay is because the cluster pulls the [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) image from Docker hub. After the image is pulled the first time, subsequent deployments might be faster if the deployment is to a node that already has the image cached on it.
+   The pod has a status of `Running`. This status indicates that the container is ready. After the deployment is created, it can take a few minutes before the pod is visible. The delay is because the cluster pulls the [mssql-server-linux](https://mcr.microsoft.com/product/mssql/server/about) image from the Microsoft Artifact Registry. After the image is pulled the first time, subsequent deployments might be faster if the deployment is to a node that already has the image cached on it.
 
 1. Verify the services are running. Run the following command:
 

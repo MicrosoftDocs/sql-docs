@@ -1,6 +1,6 @@
 ---
-title: "Create Unique Indexes"
-description: Create Unique Indexes
+title: "Create a unique index"
+description: Create a unique index
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "02/17/2017"
@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "unique indexes, design guidelines"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Create Unique Indexes
+# Create a unique index
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   This topic describes how to create a unique index on a table in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. A unique index guarantees that the index key contains no duplicate values and therefore every row in the table is in some way unique. There are no significant differences between creating a UNIQUE constraint and creating a unique index that is independent of a constraint. Data validation occurs in the same manner, and the query optimizer does not differentiate between a unique index created by a constraint or manually created. However, creating a UNIQUE constraint on the column makes the objective of the index clear. For more information on UNIQUE constraints, see [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
@@ -81,7 +81,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 -   A unique index, UNIQUE constraint, or PRIMARY KEY constraint cannot be created if duplicate key values exist in the data.  
   
--   A unique nonclustered index can contain included nonkey columns. For more information, see [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
+-   A unique nonclustered index can contain included nonkey columns. For more information, see [Create an index with included columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
   
 ###  <a name="Security"></a> Security  
   

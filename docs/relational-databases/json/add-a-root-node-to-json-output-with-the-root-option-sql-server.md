@@ -12,7 +12,8 @@ helpviewer_keywords:
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Add a Root Node to JSON Output with the ROOT Option (SQL Server)
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-serverless-pool-only](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-serverless-pool-only.md)]
 
   To add a single, top-level element to the JSON output of the **FOR JSON** clause, specify the **ROOT** option.  
   
@@ -73,37 +74,37 @@ SELECT TOP 5
   
 ```json  
 {
-	"info": [{
-		"Id": 1,
-		"FirstName": "Ken",
-		"LastName": "Sánchez",
-		"Info": {
-			"MiddleName": "J"
-		}
-	}, {
-		"Id": 2,
-		"FirstName": "Terri",
-		"LastName": "Duffy",
-		"Info": {
-			"MiddleName": "Lee"
-		}
-	}, {
-		"Id": 3,
-		"FirstName": "Roberto",
-		"LastName": "Tamburello"
-	}, {
-		"Id": 4,
-		"FirstName": "Rob",
-		"LastName": "Walters"
-	}, {
-		"Id": 5,
-		"FirstName": "Gail",
-		"LastName": "Erickson",
-		"Info": {
-			"Title": "Ms.",
-			"MiddleName": "A"
-		}
-	}]
+    "info": [{
+        "Id": 1,
+        "FirstName": "Ken",
+        "LastName": "Sánchez",
+        "Info": {
+            "MiddleName": "J"
+        }
+    }, {
+        "Id": 2,
+        "FirstName": "Terri",
+        "LastName": "Duffy",
+        "Info": {
+            "MiddleName": "Lee"
+        }
+    }, {
+        "Id": 3,
+        "FirstName": "Roberto",
+        "LastName": "Tamburello"
+    }, {
+        "Id": 4,
+        "FirstName": "Rob",
+        "LastName": "Walters"
+    }, {
+        "Id": 5,
+        "FirstName": "Gail",
+        "LastName": "Erickson",
+        "Info": {
+            "Title": "Ms.",
+            "MiddleName": "A"
+        }
+    }]
 }
 ```  
   
@@ -111,35 +112,35 @@ SELECT TOP 5
   
 ```json  
 [{
-	"Id": 1,
-	"FirstName": "Ken",
-	"LastName": "Sánchez",
-	"Info": {
-		"MiddleName": "J"
-	}
+    "Id": 1,
+    "FirstName": "Ken",
+    "LastName": "Sánchez",
+    "Info": {
+        "MiddleName": "J"
+    }
 }, {
-	"Id": 2,
-	"FirstName": "Terri",
-	"LastName": "Duffy",
-	"Info": {
-		"MiddleName": "Lee"
-	}
+    "Id": 2,
+    "FirstName": "Terri",
+    "LastName": "Duffy",
+    "Info": {
+        "MiddleName": "Lee"
+    }
 }, {
-	"Id": 3,
-	"FirstName": "Roberto",
-	"LastName": "Tamburello"
+    "Id": 3,
+    "FirstName": "Roberto",
+    "LastName": "Tamburello"
 }, {
-	"Id": 4,
-	"FirstName": "Rob",
-	"LastName": "Walters"
+    "Id": 4,
+    "FirstName": "Rob",
+    "LastName": "Walters"
 }, {
-	"Id": 5,
-	"FirstName": "Gail",
-	"LastName": "Erickson",
-	"Info": {
-		"Title": "Ms.",
-		"MiddleName": "A"
-	}
+    "Id": 5,
+    "FirstName": "Gail",
+    "LastName": "Erickson",
+    "Info": {
+        "Title": "Ms.",
+        "MiddleName": "A"
+    }
 }]
 ```  
 

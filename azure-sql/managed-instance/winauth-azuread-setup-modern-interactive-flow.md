@@ -13,7 +13,7 @@ ms.topic: how-to
 
 # How to set up Windows Authentication for Microsoft Entra ID with the modern interactive flow 
 
-This article describes how to implement the modern interactive authentication flow to allow clients running Windows 10 20H1, Windows Server 2022, or a higher version of Windows to authenticate to Azure SQL Managed Instance using Windows Authentication. Clients must be joined to Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) or [Microsoft Entra hybrid joined](/azure/active-directory/devices/how-to-hybrid-join).
+This article describes how to implement the modern interactive authentication flow to allow clients running Windows 10 20H1, Windows Server 2022, or a higher version of Windows to authenticate to Azure SQL Managed Instance using Windows Authentication. Clients must be joined to Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) or [Microsoft Entra hybrid joined](/azure/active-directory/devices/how-to-hybrid-join).
 
 Enabling the modern interactive authentication flow is one step in [setting up Windows Authentication for Azure SQL Managed Instance using Microsoft Entra ID and Kerberos](winauth-azuread-setup.md). The [incoming trust-based flow](winauth-azuread-setup-incoming-trust-based-flow.md) is available for AD joined clients running Windows 10 / Windows Server 2012 and higher.
 

@@ -15,6 +15,13 @@ ms.custom:
 
 This article lists SQL Server Migration Assistant (SSMA) for SAP ASE (formerly SSMA for Sybase) changes in each release.
 
+[!INCLUDE [entra-id](../../includes/entra-id-hard-coded.md)]
+
+## SSMA v9.5
+The v9.5 release of SSMA for SAP ASE contains the following changes:
+
+* Support for exclude schema in SSMA console mode
+
 ## SSMA v9.4
 The v9.4 release of SSMA for SAP ASE contains the following changes:
 
@@ -114,7 +121,7 @@ The v8.16 release of SSMA for SAP ASE contains the following changes:
 In addition to several accessibility improvements, the v8.15 release of SSMA for SAP ASE contains the following changes:
 
 * Revamp assessment reports to work in modern browsers
-* Use authority provided by the database for Azure AD authentication
+* Use authority provided by the database for Microsoft Entra/Azure AD authentication
 * Improve naming for statements loaded from files
 
 ## SSMA v8.14
@@ -137,7 +144,7 @@ The v8.12 release of SSMA for SAP ASE contains minor performance improvements an
 The v8.11 release of SSMA for SAP ASE contains the following changes:
 
 * Fix conversion of temporary tables
-* Use MSAL.NET library for interactive Azure Active Directory authentication
+* Use MSAL.NET library for interactive Microsoft Entra/Azure AD authentication
 
 ## SSMA v8.10
 
@@ -178,7 +185,7 @@ To leverage this setting, in SSMA for SAP ASE, navigate to **Tools** > **Project
 
 ## SSMA v8.5
 
-The v8.5 release of SSMA for SAP ASE is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL Server, together with a targeted set of fixes designed to improve usability and performance.
+The v8.5 release of SSMA for SAP ASE is enhanced with support for Microsoft Entra/Azure AD authentication and basic support for JSON features in SQL Server, together with a targeted set of fixes designed to improve usability and performance.
 
 In addition, SSMA for SAP ASE now allows you to hide system tables and views (exclude them from conversion).
 
@@ -312,7 +319,7 @@ The v7.2 release of SSMA for Sybase contains the following changes:
 
 The v7.1 release of SSMA for Sybase contains the following changes:
 
-* SQL Server 2017 on Windows and Linux CTP1 is now a supported target platform for migration. This feature is in technical preview and supports schema and data movement to target SQL servers.
+* SQL Server 2017 on Windows and Linux CTP1 is now a supported target platform for migration. This feature is in technical preview and supports schema and data movement to target SQL Server instances.
 * Support for automatic updates to download the latest version of SSMA as soon as it's available.
 * SSMA installable binaries are now delivered through Windows Installer package files (.msi).
 

@@ -13,7 +13,7 @@ ms.custom: sqldbrb=1
 # Configure and manage Azure SQL Database security for geo-restore or failover
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This article describes the authentication requirements to configure and control [active geo-replication](active-geo-replication-overview.md) and [auto-failover groups](auto-failover-group-sql-db.md). It also provides the steps required to set up user access to the secondary database. Finally, it also describes how to enable access to the recovered database after using [geo-restore](recovery-using-backups.md#geo-restore). For more information on recovery options, see [Business Continuity Overview](business-continuity-high-availability-disaster-recover-hadr-overview.md).
+This article describes the authentication requirements to configure and control [active geo-replication](active-geo-replication-overview.md) and [failover groups](failover-group-sql-db.md). It also provides the steps required to set up user access to the secondary database. Finally, it also describes how to enable access to the recovered database after using [geo-restore](recovery-using-backups.md#geo-restore). For more information on recovery options, see [Business Continuity Overview](business-continuity-high-availability-disaster-recover-hadr-overview.md).
 
 ## Disaster recovery with contained users
 
@@ -26,7 +26,7 @@ The main trade-off is that managing the disaster recovery process at scale is mo
 If you are using logins and users (rather than contained users), you must take extra steps to ensure that the same logins exist in the `master` database. The following sections outline the steps involved and additional considerations.
 
   >[!NOTE]
-  > It's also possible to use logins created from Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) to manage your databases. For more information, see [Azure SQL logins and users](./logins-create-manage.md).
+  > It's also possible to use logins created from Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) to manage your databases. For more information, see [Azure SQL logins and users](./logins-create-manage.md).
 
 ### Set up user access to a secondary or recovered database
 
@@ -100,5 +100,5 @@ SID = 0x1234 /*replace 0x1234 with the desired login SID*/
 * For more information on managing database access and logins, see [SQL Database security: Manage database access and login security](logins-create-manage.md).
 * For more information on contained database users, see [Contained Database Users - Making Your Database Portable](/sql/relational-databases/security/contained-database-users-making-your-database-portable).
 * To learn about active geo-replication, see [Active geo-replication](active-geo-replication-overview.md).
-* To learn about auto-failover groups, see [Auto-failover groups](auto-failover-group-sql-db.md).
+* To learn about failover groups, see [Failover groups](failover-group-sql-db.md).
 * For information about using geo-restore, see [geo-restore](recovery-using-backups.md#geo-restore)

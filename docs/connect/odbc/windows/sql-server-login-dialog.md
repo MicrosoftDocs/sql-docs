@@ -29,10 +29,14 @@ Selects the authentication mode from one of the following:
 - **SQL Server** with login ID and password
 - **Windows Integrated** authentication using the currently logged-in user's account
 - **Active Directory Password** with login ID and password
-- **Active Directory Integrated** authentication using the currently logged-in user's account
-- **Active Directory Interactive** authentication with login ID
-- **Managed Service Identity** authentication with Managed Identity
-- **Active Directory Service Principal** authentication with Azure Active Directory service principal
+- **Active Directory Integrated** authentication using the currently logged-in Microsoft Entra user's account
+
+- **Active Directory Interactive** authentication with a Microsoft Entra login ID
+
+- **Managed Service Identity** authentication with Microsoft Entra managed identity
+
+- **Active Directory Service Principal** authentication with a Microsoft Entra service principal
+
 
 See [Data Source Wizard Screen 2](../../../connect/odbc/windows/dsn-wizard-2.md) for more information on the authentication modes.
 
@@ -42,11 +46,11 @@ If you use a trusted connection, you can specify a service principal name (SPN) 
 
 ### Login ID
 
-Specifies the SQL Server or Azure Active Directory login ID to use for the connection if **Authentication Mode** is set to **SQL Server**, **Active Directory Password**, **Active Directory Interactive**, **Managed Service Identity**, or **Active Directory Service Principal**. Otherwise, the **Login ID** box is disabled.
+Specifies the SQL Server or Microsoft Entra login ID to use for the connection if **Authentication Mode** is set to **SQL Server**, **Active Directory Password**, **Active Directory Interactive**, **Managed Service Identity**, or **Active Directory Service Principal**. Otherwise, the **Login ID** box is disabled.
 
 ### Password
 
-Specifies the password for the SQL Server or Azure Active Directory login ID used for the connection if **Authentication Mode** is set to **SQL Server** or **Active Directory Password**. Otherwise, the **Password** box is disabled.
+Specifies the password for the SQL Server or Microsoft Entra login ID used for the connection if **Authentication Mode** is set to **SQL Server** or **Active Directory Password**. Otherwise, the **Password** box is disabled.
 
 ### Options
 

@@ -58,13 +58,10 @@ The last changes published and synchronized to Azure Synapse cannot be guarantee
 
 A user with [CONTROL database permissions](../security/permissions-database-engine.md), **db_owner** database role membership, or **sysadmin** server role membership can execute this procedure.
 
-## See also
+## Related content
 
 - [What is Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
 - [sp_change_feed_disable_db (Transact-SQL)](sp-change-feed-disable-db.md)
 - [sp_change_feed_drop_table_group (Transact-SQL)](sp-change-feed-drop-table-group.md)
-
-## Next steps
-
 - [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md)
 - [Get started with Synapse Link for SQL Server 2022](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022)

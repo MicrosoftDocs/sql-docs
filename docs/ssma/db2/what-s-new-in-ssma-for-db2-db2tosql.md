@@ -16,9 +16,18 @@ ms.custom:
 
 This article lists SQL Server Migration Assistant (SSMA) for DB2 changes in each release.
 
+[!INCLUDE [entra-id](../../includes/entra-id-hard-coded.md)]
+
+## SSMA v9.5
+
+The v9.5 release of SSMA for DB2 contains the following changes:
+ - Support for large data migration using Azure Data factory
+ - Fixes to improve code conversion
+
+
 ## SSMA v9.4.1
 The v9.4.1 release of SSMA for DB2 
- - Bugfix for Table Loading in I-series DB2 Instances
+ - Bug fix for Table Loading in I-series DB2 Instances
 
 ## SSMA v9.4
 
@@ -138,7 +147,7 @@ In addition to several accessibility improvements, the v8.15 release of SSMA for
 - Improve type mappings for `TIME` data type
 - Improve conversion of `ROUND` and `TRUNC` functions with numeric arguments
 - Revamp assessment reports to work in modern browsers
-- Use authority provided by the database for Azure AD authentication
+- Use authority provided by the database for Microsoft Entra/Azure AD authentication
 - Improve naming for statements loaded from files
 
 ## SSMA v8.14
@@ -167,7 +176,7 @@ The v8.11 release of SSMA for DB2 contains the following changes:
 - Support for DB2 for i (v7.1 and above)
 - Translation of `SQLSTATE` and `SQLCODE`
 - Conversion error message for side-effecting operators within a function
-- Use MSAL.NET library for interactive Azure Active Directory authentication
+- Use MSAL.NET library for interactive Microsoft Entra/Azure AD authentication
 
 ## SSMA v8.10
 
@@ -229,7 +238,7 @@ In addition, SSMA for DB2 now provides:
 
 ## SSMA v8.5
 
-The v8.5 release of SSMA for DB2 is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL Server, together with a targeted set of fixes designed to improve usability and performance.
+The v8.5 release of SSMA for DB2 is enhanced with support for Microsoft Entra/Azure AD authentication and basic support for JSON features in SQL Server, together with a targeted set of fixes designed to improve usability and performance.
 
 In addition, SSMA for DB2 has been enhanced with:
 
@@ -373,7 +382,7 @@ The v7.2 release of SSMA for DB2 contains the following changes:
 
 The v7.1 release of SSMA for DB2 contains the following changes:
 
-- SQL Server 2017 on Windows and Linux CTP1 is now a supported target platform for migration. This feature is in technical preview and allows schema and data movement to target SQL servers.
+- SQL Server 2017 on Windows and Linux CTP1 is now a supported target platform for migration. This feature is in technical preview and allows schema and data movement to target SQL Server instances.
 - Support for automatic updates to download the latest version of SSMA as soon as it's available.
 - SSMA installable binaries are now delivered through Windows Installer package files (.msi).
 

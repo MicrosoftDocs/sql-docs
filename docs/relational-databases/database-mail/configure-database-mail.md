@@ -3,7 +3,7 @@ title: "Configure Database Mail"
 description: "Configure Database Mail using the Database Mail Configuration Wizard or T-SQL commands."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 11/07/2023
+ms.date: 12/15/2023
 ms.service: sql
 ms.topic: conceptual
 f1_keywords:
@@ -39,7 +39,7 @@ f1_keywords:
 # Configure Database Mail
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  This article describes how to enable and configure [Database Mail](database-mail.md) using the Database Mail Configuration Wizard, and create a Database Mail Configuration script using templates.  
+  This article describes how to enable and configure [Database Mail](database-mail.md) using the Database Mail Configuration Wizard, and create a Database Mail Configuration script using templates.
 
 ## <a id="BeforeYouBegin"></a> Before You Begin
 
@@ -47,11 +47,20 @@ f1_keywords:
 
 ### <a id="Restrictions"></a> Limitations and Restrictions
 
- Enabling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker in any database requires a database lock. If Service Broker was deactivated in `msdb`, to enable Database Mail, first stop [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent so Service Broker can obtain the necessary lock.  
+ Enabling [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker in any database requires a database lock. If Service Broker was deactivated in `msdb`, to enable Database Mail, first stop [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent so Service Broker can obtain the necessary lock.  
 
 ### <a id="Security"></a> Security
 
  To configure Database Mail, you must be a member of the **sysadmin** fixed server role. To send an email with Database Mail, you must be a member of the **DatabaseMailUserRole** database role in the `msdb` database.  
+
+## <a id="troubleshooting"></a> Troubleshoot
+
+For troubleshooting Database Mail, visit:
+
+- [Troubleshoot Database Mail issues](/troubleshoot/sql/tools/troubleshoot-database-mail-issues)
+- [General database mail troubleshooting steps](database-mail-general-troubleshooting.md)
+- [Database mail: Mail queued, not delivered](database-mail-mail-queued-not-delivered.md)
+- [Common errors with database mail](database-mail-common-errors.md)
 
 ## <a id="DBWizard"></a> Use the Database Mail Configuration Wizard
 
@@ -115,9 +124,9 @@ The following steps use SQL Server Management Studio (SSMS). Download the latest
 
  Use this page to create a new Database Mail account. A Database Mail account contains information for sending e-mail to an SMTP server.  
 
- A Database Mail account contains the information that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses to send e-mail messages to an SMTP server. Each account contains information for one e-mail server.  
+ A Database Mail account contains the information that [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] uses to send e-mail messages to an SMTP server. Each account contains information for one e-mail server.  
 
- A Database Mail account is only used for Database Mail. A Database Mail account doesn't correspond to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account or a Microsoft Windows account. Database Mail can be sent using the credentials of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], using other credentials that you supply, or anonymously. When using basic authentication, the user name and password in a Database Mail account are only used for authentication with the e-mail server. An account does not need to correspond to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user or a user on the computer running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ A Database Mail account is only used for Database Mail. A Database Mail account doesn't correspond to a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] account or a Microsoft Windows account. Database Mail can be sent using the credentials of the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)], using other credentials that you supply, or anonymously. When using basic authentication, the user name and password in a Database Mail account are only used for authentication with the e-mail server. An account does not need to correspond to a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] user or a user on the computer running [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].  
 
  **Account name**  
  Type the name of the new account.  
@@ -126,13 +135,13 @@ The following steps use SQL Server Management Studio (SSMS). Download the latest
  Type a description of the account. The description is optional.  
 
  **E-mail address**  
- Type the name of the e-mail address for the account. This is the e-mail address that e-mail is sent from. For example, an account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent can send e-mail from the address SqlAgent@Adventure-Works.com.  
+ Type the name of the e-mail address for the account. This is the e-mail address that e-mail is sent from. For example, an account for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent can send e-mail from the address SqlAgent@Adventure-Works.com.  
 
  **Display name**  
- Type the name to show on e-mail messages sent from this account. The display name is optional. This is the name displayed on messages sent from this account. For example, an account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent can display the name "SQL Server Agent Automated Mailer" on e-mail messages.  
+ Type the name to show on e-mail messages sent from this account. The display name is optional. This is the name displayed on messages sent from this account. For example, an account for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent can display the name "SQL Server Agent Automated Mailer" on e-mail messages.  
 
  **Reply e-mail**  
- Type the e-mail address that is used for replies to e-mail messages sent from this account. The reply e-mail is optional. For example, replies to an account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent can go to the database administrator, danw@Adventure-Works.com.  
+ Type the e-mail address that is used for replies to e-mail messages sent from this account. The reply e-mail is optional. For example, replies to an account for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent can go to the database administrator, danw@Adventure-Works.com.  
 
  **Server name**  
  Type the name or IP address of the SMTP server the account uses to send e-mail. Typically this is in a format similar to `smtp.<your_company>.com`. For help with this, consult your mail administrator.  
@@ -144,7 +153,7 @@ The following steps use SQL Server Management Studio (SSMS). Download the latest
  Encrypts communication using Secure Sockets Layer.  
 
  **Windows Authentication using Database Engine service credentials**  
- Connection is made to the SMTP server using the credentials configured for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service. Authentication to the mail server with the service credentials is performed via NTLM authentication, an option only available to Exchange on-premises. For more information, see [Authentication and EWS in Exchange](/exchange/client-developer/exchange-web-services/authentication-and-ews-in-exchange).
+ Connection is made to the SMTP server using the credentials configured for the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] service. Authentication to the mail server with the service credentials is performed via NTLM authentication, an option only available to Exchange on-premises. For more information, see [Authentication and EWS in Exchange](/exchange/client-developer/exchange-web-services/authentication-and-ews-in-exchange).
 
  **Basic Authentication**  
  Specify the user name and password required by the SMTP server.  
@@ -193,7 +202,7 @@ The following steps use SQL Server Management Studio (SSMS). Download the latest
  Encrypts communication using Secure Sockets Layer.  
 
  **Windows Authentication using Database Engine service credentials**  
- Connection is made to the SMTP server using the credentials configured for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service.  
+ Connection is made to the SMTP server using the credentials configured for the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] service.  
 
  **Basic Authentication**  
  Specify the user name and password required by the SMTP server.  
@@ -220,7 +229,7 @@ The following steps use SQL Server Management Studio (SSMS). Download the latest
  Type the name for the new profile. The profile is created with this name. Do not use the name of an existing profile.  
 
  > [!NOTE]  
- > To send e-mail using SQL Agent jobs in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], SQL Server Agent can use only one Database Mail profile, and it must be called `AzureManagedInstance_dbmail_profile`. For more information and a sample script, see [Azure SQL Managed Instance SQL Agent job notifications](/azure/azure-sql/managed-instance/job-automation-managed-instance#sql-agent-job-notifications).
+ > To send e-mail using SQL Agent jobs in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], SQL Server Agent can use only one Database Mail profile, and it must be called `AzureManagedInstance_dbmail_profile`. For more information and a sample script, see [Azure SQL Managed Instance SQL Agent job notifications](/azure/azure-sql/managed-instance/job-automation-managed-instance#sql-agent-job-notifications).
 
  **Description**  
  Type a description for the profile. The description is optional.  
@@ -326,7 +335,7 @@ The following steps use SQL Server Management Studio (SSMS). Download the latest
  Displays the name of the profile.  
 
 > [!NOTE]  
-> To send e-mail using SQL Agent jobs in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], SQL Server Agent can use only one Database Mail profile, and it must be called `AzureManagedInstance_dbmail_profile`. For more information and a sample script, see [Azure SQL Managed Instance SQL Agent job notifications](/azure/azure-sql/managed-instance/job-automation-managed-instance#sql-agent-job-notifications).
+> To send e-mail using SQL Agent jobs in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], SQL Server Agent can use only one Database Mail profile, and it must be called `AzureManagedInstance_dbmail_profile`. For more information and a sample script, see [Azure SQL Managed Instance SQL Agent job notifications](/azure/azure-sql/managed-instance/job-automation-managed-instance#sql-agent-job-notifications).
 
  **Default Profile**  
  Select this option to make the specified profile the default profile.  
@@ -396,6 +405,8 @@ The following steps use SQL Server Management Studio (SSMS). Download the latest
 
 ### <a id="TestEmail"></a> Send Test E-Mail Page
 
+ For a quick tutorial to sending a test email, see [Send a test email with database mail](database-mail-sending-test-email.md).
+
  Use the **Send Test E-Mail from**_<instance_name>_ page to send an e-mail message using the specified Database Mail profile. Only members of the **sysadmin** fixed server role can send test e-mail using this page.  
 
  **Database Mail Profile**  
@@ -413,10 +424,12 @@ The following steps use SQL Server Management Studio (SSMS). Download the latest
  The **Database Mail Test E-Mail** dialog box confirms that the test message that Database Mail attempted to send the message and provides the **mailitem_id** for the test e-mail message. Check with the recipient to determine if the e-mail arrived. Normally e-mail is received in a few minutes, but the e-mail can be delayed because of slow network performance, a backlog of messages at the mail server, or if the server is temporarily unavailable. Use the **mailitem_id** for troubleshooting.  
 
  **Sent e-mail**  
+
  The **mailitem_id** of the test e-mail message.  
 
- **Troubleshoot**  
- Opens this Docs article.
+ **Troubleshoot**
+
+ Selecting this button brings you to this document, [Configure Database Mail](configure-database-mail.md).
 
 ## <a id="Template"></a> Use SQL Server Management Studio templates to generate T-SQL
 
@@ -438,7 +451,7 @@ The following steps use SQL Server Management Studio (SSMS). Download the latest
 
 ## Related content
 
-- [Configure SQL Server Agent Mail to Use Database Mail](configure-sql-server-agent-mail-to-use-database-mail.md)
+- [Configure SQL Server Agent mail to use Database Mail](configure-sql-server-agent-mail-to-use-database-mail.md)
 - [Automate management tasks using SQL Agent jobs in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/job-automation-managed-instance)
 - [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)
 - [General database mail troubleshooting steps](database-mail-general-troubleshooting.md)

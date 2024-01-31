@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: Azure Arc-enabled SQL Server
-summary: Azure Arc-enabled SQL Server
+title: SQL Server enabled by Azure Arc
+summary: Index of articles about SQL Server enabled by Azure Arc.
 
 metadata:
-  title: Azure Arc-enabled SQL Server
+  title: SQL Server enabled by Azure Arc
   description: Learn how to connect and manage on-premises, edge, and multicloud instances of SQL Server in Azure.
   ms.service: sql
   ms.topic: landing-page
@@ -11,11 +11,11 @@ metadata:
 
 landingContent:
  # Card
-  - title: About Azure Arc-enabled SQL Server
+  - title: About SQL Server enabled by Azure Arc
     linkLists: 
       - linkListType: overview
         links:
-          - text: What is Azure Arc-enabled SQL Server?
+          - text: Overview
             url: overview.md
 
  # Card
@@ -25,7 +25,7 @@ landingContent:
         links:
           - text: SQL Server best practices assessment 
             url: assess.md 
-          - text: Secure SQL Servers
+          - text: Secure SQL Server instances
             url: configure-advanced-data-security.md
           - text: Auto backups 
             url: point-in-time-restore.md

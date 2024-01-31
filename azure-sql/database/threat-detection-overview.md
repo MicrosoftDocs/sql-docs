@@ -2,8 +2,8 @@
 title: Advanced Threat Protection
 titleSuffix: Azure SQL Database, SQL Managed Instance, & Azure Synapse Analytics
 description: Advanced Threat Protection detects anomalous database activities indicating potential security threats in Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
-author: CESANU
-ms.author: cesanu
+author: idokeshet
+ms.author: idokeshet
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 06/09/2021
 ms.service: sql-db-mi
@@ -17,7 +17,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 # SQL Advanced Threat Protection
 [!INCLUDE[appliesto-sqldb-sqlmi-asa-sqlvm-arc](../includes/appliesto-sqldb-sqlmi-asa-sqlvm-arc.md)]
 
-Advanced Threat Protection for [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is), [SQL Server on Azure Virtual Machines](../virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md) and [Azure Arc-enabled SQL Server](/sql/sql-server/azure-arc/overview) detects anomalous activities indicating unusual and potentially harmful attempts to access or exploit databases.
+Advanced Threat Protection for [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is), [SQL Server on Azure VMs](../virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md) and [SQL Server enabled by Azure Arc](/sql/sql-server/azure-arc/overview) detects anomalous activities indicating unusual and potentially harmful attempts to access or exploit databases.
 
 Advanced Threat Protection is part of the [Microsoft Defender for SQL](/azure/security-center/defender-for-sql-introduction) offering, which is a unified package for advanced SQL security capabilities. Advanced Threat Protection can be accessed and managed via the central Microsoft Defender for SQL portal.
 

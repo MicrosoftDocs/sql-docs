@@ -21,7 +21,7 @@ The [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] can connect to [!I
 |---------|---------------|  
 |[How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md)|Describes how to establish a connection by using Windows Authentication.|  
 |[How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)|Describes how to establish a connection by using SQL Server Authentication.|  
-|[How to: Connect Using Azure Active Directory Authentication](../../connect/php/azure-active-directory.md)|Describes how to set the authentication mode and connect using Azure Active Directory identities.|  
+|[How to: Connect Using Microsoft Entra authentication](../../connect/php/azure-active-directory.md)|Describes how to set the authentication mode and connect using identities in Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)).|  
 |[How to: Connect on a Specified Port](../../connect/php/how-to-connect-on-a-specified-port.md)|Describes how to connect to the server on a specific port.|  
 |[Connection Pooling](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md)|Provides information about connection pooling in the driver.|  
 |[How to: Disable Multiple Active Resultsets (MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)|Describes how to disable the MARS feature when making a connection.|  

@@ -5,15 +5,15 @@ description: Learn how to manage a SQL Server Big Data Clusters in Azure Kuberne
 author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
-ms.date: 10/05/2021
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: big-data-cluster
-ms.topic: conceptual
+ms.topic: how-to
 ---
 
 # Manage SQL Server Big Data Clusters in AKS private cluster
 
-[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+[!INCLUDE [big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 This article explains how to manage an Azure Kubernetes Service (AKS) private cluster with big data clusters deployed in Azure.
 
@@ -32,16 +32,18 @@ For security purpose, you can use AKS features for the API server authorized IP 
 
 Alternatives to using a jumpbox include:
 
-* Use a VM in a separate network and setup [Virtual network peering](/azure/virtual-network/virtual-network-peering-overview) to the VNet.
+- Use a VM in a separate network and setup [Virtual network peering](/azure/virtual-network/virtual-network-peering-overview) to the VNet.
 
-* [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) or [VPN Gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways) connection.
+- [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) or [VPN Gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways) connection.
 
    [Options for connecting to the private cluster](/azure/aks/private-clusters#options-for-connecting-to-the-private-cluster) discusses each of these methods above.
 
-* If your service runs behind an [Azure Standard Load balancer](/azure/aks/load-balancer-standard) it can be enabled for [Azure Private Link](/azure/private-link/private-link-service-overview#limitations). With Azure Private Link, you can enable private access from other Azure VNets.
+- If your service runs behind an [Azure Standard Load balancer](/azure/aks/load-balancer-standard) it can be enabled for [Azure Private Link](/azure/private-link/private-link-service-overview#limitations). With Azure Private Link, you can enable private access from other Azure VNets.
 
-* In hybrid scenario, you can also set up [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) or [VPN Gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways) connection.
+- In hybrid scenario, you can also set up [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) or [VPN Gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways) connection.
 
-## Next steps
+## Related content
 
-[Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md)
+- [Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md)
+- [Deploy BDC in Azure Kubernetes Service (AKS) private cluster](private-deploy.md)
+- [Restrict egress traffic from big data clusters in Azure Kubernetes Service (AKS) private cluster](private-restrict-egress-traffic.md)

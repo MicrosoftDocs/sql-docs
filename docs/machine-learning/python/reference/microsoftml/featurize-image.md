@@ -15,7 +15,7 @@ keywords:
   - cnn
   - resnet
   - alexnet
-ms.devlang: Python
+ms.devlang: python
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---
 # *microsoftml.featurize_image*: Converts an image into features

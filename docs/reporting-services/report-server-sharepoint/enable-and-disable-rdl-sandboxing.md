@@ -89,7 +89,7 @@ You can modify the RDL Sandboxing feature to help manage the resources that are 
 -   The RDL Sandboxing feature enables you to create a list of approved types and a list of denied members. The list of approved types is called an allowlist. The list of denied members is called a blocklist.  
   
 > [!NOTE]  
->  In the report definition, a computer cannot know the type of each instances of an expression reference. When you add a member to the block list, you are denying all members of that name across all types in the allow list.  
+>  In the report definition, a computer cannot know the type of each instances of an expression reference. When you add a member to the block list, you are denying all members of that name across all types in the allowlist.  
   
  RDL expression results are verified at run time. RDL expressions are verified in the report definition when the report is published. Monitor the report server trace log for violations. For more information, see [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
@@ -121,15 +121,15 @@ You can modify the RDL Sandboxing feature to help manage the resources that are 
   
 -   Add that new class to the allowlist.  
   
- To add [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] .NET Framework functions to the allow list, add the corresponding types from the ```Microsoft.VisualBasic``` namespace to the allow list.  
+ To add [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] .NET Framework functions to the allowlist, add the corresponding types from the ```Microsoft.VisualBasic``` namespace to the allowlist.  
   
- To add [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] .NET Framework type keywords to the allow list, add the corresponding CLR type to the allow list. For example, to use the [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] .NET Framework keyword **Integer**, add the following XML fragment to the ```<RDLSandboxing>``` element:  
+ To add [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] .NET Framework type keywords to the allowlist, add the corresponding CLR type to the allowlist. For example, to use the [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] .NET Framework keyword **Integer**, add the following XML fragment to the ```<RDLSandboxing>``` element:  
   
 ```  
 <Allow Namespace="System">Int32</Allow>  
 ```  
   
- To add a generic or a [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] .NET Framework nullable type to the allow list, you must do the following:  
+ To add a generic or a [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] .NET Framework nullable type to the allowlist, you must do the following actions:  
   
 -   Create a proxy type for the generic or [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] .NET Framework nullable type.  
   
@@ -153,7 +153,7 @@ You can modify the RDL Sandboxing feature to help manage the resources that are 
   
 ### Working with operators and New
 
- By default, [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] .NET Framework language operators, except for ```New```, are always allowed. The ```New``` operator is controlled by the ```AllowNew``` attribute on the ```<Allow>``` element. Other language operators, such as the default collection accessor operator ```!``` and [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] .NET Framework cast macros such as **CInt**, are always allowed.  
+ By default, [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] .NET Framework language operators, except for ```New```, are always allowed. The ```AllowNew``` attribute on the ```<Allow>``` element controls the ```New``` operator. Other language operators, such as the default collection accessor operator ```!``` and [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] .NET Framework cast macros such as **CInt**, are always allowed.  
   
  Adding operators to a blocklist, including custom operators, isn't supported. To exclude operators for a type, you must do the following actions:  
   

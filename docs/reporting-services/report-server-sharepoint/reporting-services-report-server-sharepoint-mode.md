@@ -127,8 +127,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 |Detailed steps for installing and configuring Reporting Services in SharePoint mode.|[Install Reporting Services SharePoint mode for SharePoint 2010](../install-windows/install-the-first-report-server-in-sharepoint-mode.md) and [Add another Report Server to a farm](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
 |Scale out your Reporting Services SharePoint deployment by adding more report servers.|[Add another Report Server to a Farm](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) and [Deployment topologies for SQL Server BI features in SharePoint](/previous-versions/sql/sql-server-2016/hh231674(v=sql.130)).|  
 |Add more SharePoint web front-ends that have the Reporting Services components installed for viewing and report items.|[Add another Reporting Services web front-end to a farm](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
-|Configure e-mail for your report server within SharePoint.|[Configure e-mail for a Reporting Services service application](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|
-|Recent information for this release, found on the TechNet Wiki.|[SQL Server 2012 Reporting Services tips, tricks, and troubleshooting](https://go.microsoft.com/fwlink/?LinkId=221297).|  
+|Configure e-mail for your report server within SharePoint.|[Configure e-mail for a Reporting Services service application](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)| 
 
 ## Related content
 

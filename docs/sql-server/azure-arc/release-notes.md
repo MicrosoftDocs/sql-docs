@@ -13,6 +13,14 @@ ms.custom: ignite-2023
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
+## February 12, 2023
+
+**Extension version**: `1.1.2566.109`
+
+### Azure extension for SQL Server
+
+- Use of Azure policay to deploy Azure Extension for SQL Server is deprecated. The recommended method is [Automatically connect your SQL Server to Azure Arc](automatically-connect.md). 
+
 ## January 16, 2024
 
 **Extension version**: `1.1.2566.109`

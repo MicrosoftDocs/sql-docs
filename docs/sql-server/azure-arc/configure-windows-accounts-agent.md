@@ -20,7 +20,7 @@ It is not recommended to manually set the permissions described in this article.
 
 ## Directory permissions
 
-| Directory Path | Required Permissions | Details | Feature |
+| Directory path | Required permissions | Details | Feature |
 | :----- | :----- | :----- | :----- |
 | `<SystemDrive>\Packages\Plugins\Microsoft.AzureData.WindowsAgent.SQLServer` | Full control | Extension related dlls and exe files. | Default |
 | `C:\Packages\Plugins\Microsoft.AzureData.WindowsAgent.SqlServer\<extension_version>\RuntimeSettings` | Full control | Extension settings file. | Default |
@@ -32,16 +32,16 @@ It is not recommended to manually set the permissions described in this article.
 | `<SystemDrive>\Windows\system32\ExtensionHandler.log` | Full control | Pre-log folder created by extension. | Default |
 | `<ProgramData>\AzureConnectedMachineAgent\Config` | Read | Arc config files directory. | Default |
 | `C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft SQL Server Extension Agent` | Full control | Required to write assessment reports and status. | Default |
-| SQL log directory as set in registry <sup>1</sup>: <br/> `C:\Program Files\Microsoft SQL Server\MSSQL<base_version>.<instance_name>\MSSQL\log` | Read | Required to extract SQL vCores info from SQL logs. | Default |
-| SQL backup directory as set in registry <sup>1</sup>: <br/> `C:\Program Files\Microsoft SQL Server\MSSQL<base_version>.<instance_name>\MSSQL\Backup` | ReadAndExecute/Write /Delete | Required for Backups | Backup |
+| SQL log directory (as set in registry<sup>1</sup>).: <br/> `C:\Program Files\Microsoft SQL Server\MSSQL<base_version>.<instance_name>\MSSQL\log` | Read | Required to extract SQL vCores info from SQL logs. | Default |
+| SQL backup directory (as set in registry<sup>1</sup>).: <br/> `C:\Program Files\Microsoft SQL Server\MSSQL<base_version>.<instance_name>\MSSQL\Backup` | ReadAndExecute/Write /Delete | Required for Backups | Backup |
 
 <sup>1</sup>For more information, see [File Locations and Registry Mapping](../install/file-locations-for-default-and-named-instances-of-sql-server.md#file-locations-and-registry-mapping).
 
 ## Registry permissions
 
-Base Key – `HKEY_LOCAL_MACHINE`.
+Base key – `HKEY_LOCAL_MACHINE`.
 
-| Registry Key | Permission Required | Details | Feature |
+| Registry key | Permission required | Details | Feature |
 | :----- | :----- | :----- | :----- |
 | `SOFTWARE\Microsoft\Microsoft SQL Server` | Read | Read SQL Server properties like `installedInstances`. | Default |
 | `SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRegistryName>\MSSQLSERVER` | Full control | Microsoft Entra ID and Purview. | Microsoft Entra ID </br></br>Purview |

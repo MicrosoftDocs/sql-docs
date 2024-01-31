@@ -67,20 +67,20 @@ Create a new instance pool with 8 vCores on standard-series (Gen5) hardware by r
 
 ```powershell
 # Identify the SubnetId
-$virtualNetwork = Get-AzVirtualNetwork -Name "<vnet name>" -ResourceGroupName "<resource group name>"
-$miSubnet = Get-AzVirtualNetworkSubnetConfig -Name "<subnet name>" -VirtualNetwork $virtualNetwork
+$virtualNetwork = Get-AzVirtualNetwork -Name <vnet name> -ResourceGroupName <resource group name>
+$miSubnet = Get-AzVirtualNetworkSubnetConfig -Name <subnet name> -VirtualNetwork $virtualNetwork
 $miSubnetConfigId = $miSubnet.Id
 
 # Create the instance
 $instancePool = New-AzSqlInstancePool `
-    -ResourceGroupName  "<resource group name>" `
-    -Name "<instance pool name>" `
+    -ResourceGroupName  <resource group name> `
+    -Name <instance pool name> `
     -SubnetId $miSubnetConfigId `
-    -LicenseType "LicenseIncluded" `
-    -VCore "8" `
-    -Edition "GeneralPurpose" `
-    -ComputeGeneration "Gen5" `
-    -Location "<region>"
+    -LicenseType LicenseIncluded `
+    -VCore 8 `
+    -Edition GeneralPurpose `
+    -ComputeGeneration Gen5 `
+    -Location <region>
 ```
 
 ### [Azure CLI](#tab/azure-cli)
@@ -183,7 +183,7 @@ To connect to an instance in a pool, first enable the public endpoint for the in
 
 ### [PowerShell](#tab/powershell)
 
-To enable the public endpoint for an instance, use [Set-AzSqlInstance](/powershell/module/az.sql/set-azsqlinstance): 
+To enable the public endpoint for an instance, set `-PublicDataEndpointEnabled` to _true_ when you update instance properties with [Set-AzSqlInstance](/powershell/module/az.sql/set-azsqlinstance): 
 
 ```powershell
 $instance01 | Set-AzSqlInstance -InstancePoolName $instancePoolName -PublicDataEndpointEnabled $true
@@ -265,7 +265,7 @@ The following sample script changes the license type, vCore size, and hardware t
 Change license type:
 
 ```powershell
-$instancePool | Set-AzSqlInstancePool -LicenseType 'BasePrice' -VCores 16 -ComputeGeneration 'Gen8'
+$instancePool | Set-AzSqlInstancePool -LicenseType BasePrice -VCores 16 -ComputeGeneration Gen8
 ```
 
 You can also determine the available maintenance window schedules: 
@@ -310,6 +310,30 @@ $instance1name | Set-AzSqlInstance -VCore 8 -StorageSizeInGB 512 -InstancePoolNa
 To modify resource parameters for an instance inside a pool, use [az sql mi update](/cli/azure/sql/mi#az-sql-mi-update). 
 
 ---
+
+## Delete an instance pool 
+
+You can delete an instance pool by using PowerShell or the Azure CLI, once all instances in the pool have either been deleted, or moved out of the pool. 
+
+
+### [PowerShell](#tab/powershell)
+
+To delete an instance pool, use [Remove-AzSqlInstancePool](/powershell/module/az.sql/remove-azsqlinstancepool/). 
+
+The following sample script deletes an empty instance pool: 
+
+```powershell
+Remove-AzSqlInstancePool -ResourceGroupName <resource group name -Name <instance pool name>
+```
+
+
+### [Azure CLI](#tab/azure-cli)
+
+To delete an instance pool, use [az sql instance-pool delete](/cli/azure/sql/instance-pool#az-sql-instance-pool-delete). 
+
+---
+
+
 
 ## Instance pool operations
 
@@ -371,6 +395,7 @@ During public preview, instances in a pool have the following limitations:
 - Pooled instances must belong to the same subnet and resource group. Moving an instance in and out of the pool is only possible within the subnet of the pool and same resource group. 
 - Only the General Purpose service tier is available on standard-series (Gen5) or premium-series hardware. The Business Critical service tier, and premium-series memory optimized hardware isn't available. 
 - The maximum possible number of instances in the pool is 40. 
+- An instance pool can only be deleted after all instances in the pool are either deleted or moved out of the pool. 
 - You can't use the Azure portal to: 
     - Configure the instance pool. Use PowerShell or the Azure CLI instead. 
     - Move instances in and out of the pool. Use PowerShell or the Azure CLI instead.

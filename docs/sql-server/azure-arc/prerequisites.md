@@ -33,8 +33,6 @@ Before you can Arc-enable an instance of [!INCLUDE [ssnoversion-md](../../includ
 
 ### Permissions
 
-For all the other onboarding methods:
-
 - The service principal requires read permission on the subscription.
 
 - User or service principal must have permissions in the Azure resource group to complete the task. Specifically:

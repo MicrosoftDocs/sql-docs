@@ -27,23 +27,23 @@ helpviewer_keywords:
   
 ## Explanation  
 
-The user attempted to login with credentials that can't be validated. Possible causes are:  
+The user attempted to log in with credentials that can't be validated. Possible causes are:  
   
   - The login may be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login but the server only accepts Windows Authentication.  
   
-  - You are trying to connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication but the login used doesn't exist on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  - You're trying to connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication but the login used doesn't exist on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   - The login may use Windows Authentication but the login is an unrecognized Windows principal. An unrecognized Windows principal means that the login can't be verified by Windows. This could be because the Windows login is from an untrusted domain.
   
-  - This might be a consistent authentication issue where the trust level between domains might cause failures in account authentication or the visibility of Service Provider Name (SPN)s.
+  - This issue might be related to consistent authentication where the trust level between domains might cause failures in account authentication or the visibility of Service Provider Name (SPN)s.
   
 Similar problems can cause the less-specific error 18456.  
   
 ## User Action
-If you are trying to connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, verify that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is configured in Mixed Authentication mode.  
+If you're trying to connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, verify that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is configured in Mixed Authentication mode.  
   
-If you are trying to connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, verify that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login exists.  
+If you're trying to connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, verify that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login exists.  
   
-If you are trying to connect using Windows Authentication, verify that you are properly logged into the correct domain.  
+If you're trying to connect using Windows Authentication, verify that you're properly logged into the correct domain.  
 
 You can run the `SETSPN` and `RUNAS` commands to test the trust relationship independent of your application.

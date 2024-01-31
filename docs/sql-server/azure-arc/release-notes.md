@@ -19,7 +19,7 @@ ms.custom: ignite-2023
 
 ### Azure extension for SQL Server
 
-- Use of Azure policay to deploy Azure Extension for SQL Server is deprecated. The recommended method is [Automatically connect your SQL Server to Azure Arc](automatically-connect.md). 
+- Use of Azure policy to deploy Azure Extension for SQL Server is deprecated. The recommended method is [Automatically connect your SQL Server to Azure Arc](automatically-connect.md). 
 
 ## January 16, 2024
 

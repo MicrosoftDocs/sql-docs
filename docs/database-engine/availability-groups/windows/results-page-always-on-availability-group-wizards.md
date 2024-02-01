@@ -6,7 +6,7 @@ ms.author: mathoma
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups
-ms.topic: conceptual
+ms.topic: ui-reference
 f1_keywords:
   - "sql13.swb.failoverwizard.results.f1"
   - "sql13.swb.newagwizard.results.f1"

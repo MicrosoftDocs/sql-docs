@@ -8,9 +8,7 @@ ms.date: 10/02/2023
 ms.service: sql-managed-instance
 ms.subservice: migration-guide
 ms.topic: how-to
-ms.custom:
-  - ignite-fall-2021
-  - sql-migration-content
+ms.custom: sql-migration-content
 ---
 # Assessment rules for SQL Server to Azure SQL Managed Instance migration
 

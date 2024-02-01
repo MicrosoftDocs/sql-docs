@@ -1,3 +1,7 @@
-- name: Docs
-  tocHref: /
-  topicHref: /
+- name: Azure
+  tocHref: /azure/
+  topicHref: /azure/index
+  items:
+  - name: Database migration
+    tocHref: /data-migration/
+    topicHref: /data-migration/index

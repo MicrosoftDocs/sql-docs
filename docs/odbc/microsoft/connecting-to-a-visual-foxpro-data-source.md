@@ -6,7 +6,7 @@ ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "connecting to data source [ODBC], Visual FoxPro"
   - "Visual FoxPro data source [ODBC], connecting"

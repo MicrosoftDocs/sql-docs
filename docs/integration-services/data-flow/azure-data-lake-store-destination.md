@@ -6,7 +6,7 @@ ms.author: chugu
 ms.date: 05/22/2019
 ms.service: sql
 ms.subservice: integration-services
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
   - "SQL13.DTS.DESIGNER.AFPADLSDEST.F1"
   - "sql14.dts.designer.afpadlsdest.f1"

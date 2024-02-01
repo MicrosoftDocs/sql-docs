@@ -7,7 +7,7 @@ ms.reviewer: randolphwest
 ms.date: 09/01/2023
 ms.service: sql
 ms.subservice: availability-groups
-ms.topic: conceptual
+ms.topic: ui-reference
 f1_keywords:
   - "sql13.swb.newagwizard.specifyagname.f1"
   - "sql13.swb.adddatabasewizard.specifyagname.f1"

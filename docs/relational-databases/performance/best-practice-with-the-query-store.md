@@ -230,7 +230,7 @@ Consider the following options:
 
 ### Find non-parameterized queries in Query Store
 
-You can find the number of plans stored in Query Store using the below query, using query store DMVs, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]:
+You can find the number of plans stored in Query Store using the below query, using query store DMVs, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]:
 
 ```sql
 SELECT count(Pl.plan_id) AS plan_count, Qry.query_hash, Txt.query_text_id, Txt.query_sql_text
@@ -243,7 +243,7 @@ GROUP BY Qry.query_hash, Txt.query_text_id, Txt.query_sql_text
 ORDER BY plan_count desc;
 ```
 
-The following sample creates an [Extended Events session](../extended-events/extended-events.md) to capture the event `query_store_db_diagnostics`, which can be useful in diagnosing query resource consumption. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this extended event session creates an event file in the SQL Server Log folder by default. For example, in a default [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] installation on Windows, the event file (.xel file) should be created in the folder `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log`. For [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], specify an Azure Blob Storage location instead. For more information, see [XEvent event_file for Azure SQL Managed Instance](/azure/azure-sql/database/xevent-code-event-file#phase-2-transact-sql-code-that-uses-azure-storage-container). The event 'qds.query_store_db_diagnostics' is not available for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].  
+The following sample creates an [Extended Events session](../extended-events/extended-events.md) to capture the event `query_store_db_diagnostics`, which can be useful in diagnosing query resource consumption. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this extended event session creates an event file in the SQL Server Log folder by default. For example, in a default [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] installation on Windows, the event file (.xel file) should be created in the folder `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log`. For [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], specify an Azure Blob Storage location instead. For more information, see [XEvent event_file for Azure SQL Managed Instance](/azure/azure-sql/database/xevent-code-event-file#phase-2-transact-sql-code-that-uses-azure-storage-container). The event 'qds.query_store_db_diagnostics' is not available for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].  
 
 
 ```sql

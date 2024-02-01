@@ -33,7 +33,7 @@ RunningValue(expression, function, scope)
  (**Enum**) The name of the aggregate function to apply to the expression, for example, **Sum**. This function cannot be **RunningValue**, **RowNumber**, or **Aggregate**.  
   
  *scope*  
- (**String**) A string constant that is the name of a dataset, data region, or group, or null (**Nothing** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), that specifies the context in which to evaluate the aggregation. **Nothing** specifies the outermost context, usually the report dataset.  
+ (**String**) A string constant that is the name of a dataset, data region, or group, or null (**Nothing** in [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)]), that specifies the context in which to evaluate the aggregation. **Nothing** specifies the outermost context, usually the report dataset.  
   
 ## Return Type  
  Determined by the aggregate function that is specified in the *function* parameter.  

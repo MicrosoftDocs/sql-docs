@@ -90,7 +90,7 @@ helpviewer_keywords:
   
          \- or -  
   
-    -   If you are programming in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], enter the following lines of code:  
+    -   If you are programming in [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)], enter the following lines of code:  
   
         ```vb  
         Dim dataReady As Integer  

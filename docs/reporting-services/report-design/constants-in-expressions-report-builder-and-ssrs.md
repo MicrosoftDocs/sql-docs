@@ -37,7 +37,7 @@ ms.custom: updatefrequency5
 |BorderStyle|Valid values for a line added to a report.|Default, None, Dotted, Dashed, Solid, Double, DashDot, DashDotdot|  
   
 ## Visual Basic Constants  
- You can use constants defined in the [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] run-time library in an expression. For example, you can use the constant **DateInterval.Day**. The following expression for the date January 10, 2008 returns the number 10:  
+ You can use constants defined in the [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] run-time library in an expression. For example, you can use the constant **DateInterval.Day**. The following expression for the date January 10, 2008 returns the number 10:  
   
  `=DatePart("d",Globals!ExecutionTime)`  
   

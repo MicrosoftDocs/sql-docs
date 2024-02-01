@@ -94,7 +94,7 @@ EXEC dbo.sp_add_category
 GO
 ```
 
-## See also
+## Related content
 
 - [sp_delete_category (Transact-SQL)](sp-delete-category-transact-sql.md)
 - [sp_help_category (Transact-SQL)](sp-help-category-transact-sql.md)

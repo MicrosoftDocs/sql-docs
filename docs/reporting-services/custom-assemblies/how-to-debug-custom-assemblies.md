@@ -42,7 +42,7 @@ helpviewer_keywords:
   
      The **Project Property Pages** dialog box opens.  
   
-9. Select the **Build** tab if you're in a C# project or the **Compile** tab if you're in a [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] project.  
+9. Select the **Build** tab if you're in a C# project or the **Compile** tab if you're in a [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] project.  
   
 10. On the **Build**/**Compile** page, enter the path to the Report Designer folder. The default path is C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE) in the **Output Path** text box. This builds and deploys an updated version of your custom assembly directly to Report Designer before your report is executed.  
   

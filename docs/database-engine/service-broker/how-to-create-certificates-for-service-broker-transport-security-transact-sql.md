@@ -7,7 +7,7 @@ ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ms.service: sql
 ms.subservice: configuration
-ms.topic: conceptual
+ms.topic: how-to
 ---
 
 # How to: Create Certificates for Service Broker Transport Security (Transact-SQL)

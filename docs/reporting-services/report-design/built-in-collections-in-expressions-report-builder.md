@@ -35,7 +35,7 @@ ms.custom: updatefrequency5
 |**ReportItems**|Not Displayed|`=ReportItems("Textbox1").Value`|Represents the collection of text boxes for a report item. This collection can be used to summarize items on the page for including in a page header or page footer. For more information, see [ReportItems Collection References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md).|  
   
 ##  <a name="Syntax"></a> Using Collection Syntax in an Expression  
- To refer to a collection from an expression, use standard [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] syntax for an item in a collection. The following table shows examples of collection syntax.  
+ To refer to a collection from an expression, use standard [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] syntax for an item in a collection. The following table shows examples of collection syntax.  
   
 |Syntax|Example|  
 |------------|-------------|  

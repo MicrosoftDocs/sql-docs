@@ -294,7 +294,7 @@ Optimized locking is available in the following service tiers:
 
 Optimized locking is not currently available in:
 
-- [!INCLUDE [Azure SQL Managed Instance](../../includes/ssazuremi_md.md)]
+- [!INCLUDE [Azure SQL Managed Instance](../../includes/ssazuremi-md.md)]
 - [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
 
 ### Is optimized locking on by default in both new and existing databases?

@@ -62,9 +62,8 @@ Make sure that you meet the following requirements for Azure:
 
 Running LRS through the provided clients requires one of the following Azure role-based access control (RBAC) roles:
 
-- Subscription Owner role
 - [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) role
-- Custom role with the following permission: `Microsoft.Sql/managedInstances/databases/*`
+- A role with the following permission: `Microsoft.Sql/managedInstances/databases/*`
 
 
 ## Best practices

@@ -70,7 +70,7 @@ GO
 EXECUTE dbo.sp_syscollector_enable_collector;
 ```
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [sp_syscollector_set_cache_directory (Transact-SQL)](sp-syscollector-set-cache-directory-transact-sql.md)

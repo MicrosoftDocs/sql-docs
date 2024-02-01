@@ -5,16 +5,17 @@ description: Provides steps to investigate and troubleshoot out of memory issues
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 01/14/2022
+ms.date: 01/25/2024
 ms.service: sql-database
 ms.subservice: development
 ms.topic: troubleshooting
 ---
 
-# Troubleshoot out of memory errors with Azure SQL Database  
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+# Troubleshoot out of memory errors with Azure SQL Database
 
-You may see error messages when the SQL database engine has failed to allocate sufficient memory to run the query. This can be caused by various reasons including the limits of selected service objective, aggregate workload memory demands, and memory demands by the query. For more information on the memory resource limit for Azure SQL Databases, see [Resource management in Azure SQL Database](resource-limits-logical-server.md#memory).
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
+
+You might see error messages when the SQL database engine has failed to allocate sufficient memory to run the query. This can be caused by various reasons including the limits of selected service objective, aggregate workload memory demands, and memory demands by the query. For more information on the memory resource limit for Azure SQL Databases, see [Resource management in Azure SQL Database](resource-limits-logical-server.md#memory).
 
 > [!NOTE]
 > **This article is focused on Azure SQL Database.** For more on troubleshooting out of memory issues in SQL Server, see [MSSQLSERVER_701](/sql/relational-databases/errors-events/mssqlserver-701-database-engine-error).
@@ -26,26 +27,23 @@ Try the following avenues of investigation in response to:
 
 ## View out of memory events
 
-If you encounter out of memory errors, review [sys.dm_os_out_of_memory_events](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-out-of-memory-events). Introduced in January 2022, this view includes predicted out of memory cause information that is determined by a heuristic algorithm and is provided with a finite degree of confidence.
+If you encounter out of memory errors, review [sys.dm_os_out_of_memory_events](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-out-of-memory-events). This view includes information on the predicted out of memory cause, determined by a heuristic algorithm and is provided with a finite degree of confidence.
 
 ```sql
 SELECT * FROM sys.dm_os_out_of_memory_events ORDER BY event_time DESC;  
 ```
 
-<!-- XE -->
-
 ## Investigate memory allocation
 
-If out of memory errors persist in Azure SQL Database, consider at least temporarily increasing the service level objective of the database in the Azure portal. If out of memory errors persist, use the following queries to look for unusually high query memory grants that may contribute to an insufficient memory condition. Run the following example queries in the database that experienced the error (not in the `master` database of the Azure SQL logical server).  
+If out of memory errors persist in Azure SQL Database, consider at least temporarily increasing the service level objective of the database in the Azure portal. If out of memory errors persist, use the following queries to look for unusually high query memory grants that might contribute to an insufficient memory condition. Run the following example queries in the database that experienced the error (not in the `master` database of the Azure SQL logical server).  
 
 ### Use DMV to view out of memory events
 
-Beginning in April 2022, a new dynamic management view (DMV) has been added to allow visibility to the events and causes of out of memory (OOM) events in Azure SQL Database, `sys.dm_os_out_of_memory_events`. For more information, see [sys.dm_os_out_of_memory_events](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-out-of-memory-events).
+The `sys.dm_os_out_of_memory_events` allows visibility to the events and causes of out of memory (OOM) events in Azure SQL Database. The `summarized_oom_snapshot` extended event is a part of the existing `system_health` event session to simplify detection. For more information, see [sys.dm_os_out_of_memory_events](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-out-of-memory-events) and [Blog: A new way to troubleshoot out-of-memory errors in the database engine](https://techcommunity.microsoft.com/t5/azure-sql-blog/a-new-way-to-troubleshoot-out-of-memory-errors-in-the-database/ba-p/3271926).
 
 ### Use DMVs to view memory clerks
 
-Start with a broad investigation, if the out of memory error occurred recently, by viewing the allocation of memory to memory clerks. Memory clerks are internal to the database engine for this Azure SQL Database. The top memory clerks in terms of pages allocated might be informative to what type of query or feature of SQL Server is consuming the most memory. 
-
+Start with a broad investigation, if the out of memory error occurred recently, by viewing the allocation of memory to memory clerks. Memory clerks are internal to the database engine for this Azure SQL Database. The top memory clerks in terms of pages allocated might be informative to what type of query or feature of SQL Server is consuming the most memory.
 
 ```sql
 SELECT [type], [name], pages_kb, virtual_memory_committed_kb
@@ -65,7 +63,7 @@ ORDER BY virtual_memory_committed_kb DESC;
 
  For more information about memory clerk types, see [sys.dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql). 
 
-### Use DMVs to investigate active queries 
+### Use DMVs to investigate active queries
 
 In most cases, the query that failed is not the cause of this error. 
 
@@ -77,11 +75,14 @@ SELECT
 --Session data 
   s.[session_id], s.open_transaction_count
 --Memory usage
-, r.granted_query_memory, mg.grant_time, mg.requested_memory_kb, mg.granted_memory_kb, mg.required_memory_kb, mg.used_memory_kb, mg.max_used_memory_kb     
+, r.granted_query_memory, mg.grant_time, mg.requested_memory_kb, mg.granted_memory_kb
+, mg.required_memory_kb, mg.used_memory_kb, mg.max_used_memory_kb     
 --Query 
-, query_text = t.text, input_buffer = ib.event_info, query_plan_xml = qp.query_plan, request_row_count = r.row_count, session_row_count = s.row_count
+, query_text = t.text, input_buffer = ib.event_info, query_plan_xml = qp.query_plan
+, request_row_count = r.row_count, session_row_count = s.row_count
 --Session history and status
-, s.last_request_start_time, s.last_request_end_time, s.reads, s.writes, s.logical_reads, session_status = s.[status], request_status = r.status
+, s.last_request_start_time, s.last_request_end_time, s.reads, s.writes, s.logical_reads
+, session_status = s.[status], request_status = r.status
 --Session connection information
 , s.host_name, s.program_name, s.login_name, s.client_interface_name, s.is_user_process
 FROM sys.dm_exec_sessions s 
@@ -96,7 +97,7 @@ WHERE mg.granted_memory_kb > 0
 ORDER BY mg.granted_memory_kb desc, mg.requested_memory_kb desc;
 ```
 
-You may decide to use the KILL statement to stop a currently executing query that is holding or waiting for a large memory grant. Use this statement carefully, especially when critical processes are running. For more information, see [KILL &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/kill-transact-sql). 
+You might decide to use the KILL statement to stop a currently executing query that is holding or waiting for a large memory grant. Use this statement carefully, especially when critical processes are running. For more information, see [KILL (Transact-SQL)](/sql/t-sql/language-elements/kill-transact-sql). 
 
 
 ### Use Query Store to investigate past query memory usage
@@ -145,42 +146,44 @@ ORDER BY max_query_max_used_memory DESC, avg_query_max_used_memory DESC;
 ```
 
 ### Extended events
-In addition to the previous information, it may be helpful to capture a trace of the activities on the server to thoroughly investigate an out of memory issue in Azure SQL Database.
+
+In addition to the previous information, it can be helpful to capture a trace of the activities on the server to thoroughly investigate an out of memory issue in Azure SQL Database.
 
 There are two ways to capture traces in SQL Server; Extended Events (XEvents) and Profiler Traces. However, [SQL Server Profiler](/sql/tools/sql-server-profiler/sql-server-profiler) is deprecated trace technology not supported for Azure SQL Database. [Extended Events](/sql/relational-databases/extended-events/extended-events) is the newer tracing technology that allows more versatility and less impact to the observed system, and its interface is integrated into SQL Server Management Studio (SSMS). For more information on querying extended events in Azure SQL Database, see [Extended events in Azure SQL Database](./xevent-db-diff-from-svr.md).
 
-Refer to the document that explains how to use the [Extended Events New Session Wizard](/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server) in SSMS. For Azure SQL databases however, SSMS provides an Extended Events subfolder under each database in **Object Explorer**. Use an Extended Events session to capture these useful events, and identify the queries generating them: 
+Refer to the document that explains how to use the [Extended Events New Session Wizard](/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server) in SSMS. For Azure SQL databases however, SSMS provides an Extended Events subfolder under each database in **Object Explorer**. Use an Extended Events session to capture these useful events, and identify the queries generating them:
 
 -   Category Errors:
-    - error_reported
-    - exchange_spill
-    - hash_spill_details
+    - `error_reported`
+    - `exchange_spill`
+    - `hash_spill_details`
     
 -   Category Execution:
-    - excessive_non_grant_memory_used
+    - `excessive_non_grant_memory_used`
 
 -   Category Memory:
-    - query_memory_grant_blocking
-    - query_memory_grant_usage
+    - `query_memory_grant_blocking`
+    - `query_memory_grant_usage`
 
-- summarized_oom_snapshot
+- `summarized_oom_snapshot`
 
-The capture of memory grant blocks, memory grant spills, or excessive memory grants could be potential clue to a query suddenly taking on more memory than it had in the past, and a potential explanation for an emergent out of memory error in an existing workload.
+    The capture of memory grant blocks, memory grant spills, or excessive memory grants could be potential clue to a query suddenly taking on more memory than it had in the past, and a potential explanation for an emergent out of memory error in an existing workload. The `summarized_oom_snapshot` extended event is a part of the existing `system_health` event session to simplify detection. For more information, see [Blog: A new way to troubleshoot out-of-memory errors in the database engine](https://techcommunity.microsoft.com/t5/azure-sql-blog/a-new-way-to-troubleshoot-out-of-memory-errors-in-the-database/ba-p/3271926).
 
-### In-memory OLTP out of memory 
+### In-memory OLTP out of memory
 
-You may encounter `Error code 41805: There is insufficient memory in the resource pool '%ls' to run this operation` if using In-Memory OLTP. Reduce the amount of data in memory-optimized tables and memory-optimized table-valued parameters, or scale up the database to a higher service objective to have more memory. For more information on out of memory issues with SQL Server In-Memory OLTP, see [Resolve Out Of Memory issues](/sql/relational-databases/in-memory-oltp/resolve-out-of-memory-issues).
+You might encounter `Error code 41805: There is insufficient memory in the resource pool '%ls' to run this operation` if using In-Memory OLTP. Reduce the amount of data in memory-optimized tables and memory-optimized table-valued parameters, or scale up the database to a higher service objective to have more memory. For more information on out of memory issues with SQL Server In-Memory OLTP, see [Resolve Out Of Memory issues](/sql/relational-databases/in-memory-oltp/resolve-out-of-memory-issues).
 
-### Get Azure SQL DB support 
+### <a id="#get-azure-sql-db-support"></a> Get Azure SQL Database support
 
 If out of memory errors persist in Azure SQL Database, file an Azure support request by selecting **Get Support** on the [Azure Support](https://azure.microsoft.com/support/options) site.
 
-## Next steps
+## Related content
 
 - [Intelligent query processing in SQL databases](/sql/relational-databases/performance/intelligent-query-processing)
-- [Query processing architecture guide](/sql/relational-databases/query-processing-architecture-guide)    
-- [Performance Center for SQL Server Database Engine and Azure SQL Database](/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database)  
+- [Query processing architecture guide](/sql/relational-databases/query-processing-architecture-guide)
+- [Performance Center for SQL Server Database Engine and Azure SQL Database](/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database)
 - [Troubleshooting connectivity issues and other errors with Azure SQL Database and Azure SQL Managed Instance](troubleshoot-common-errors-issues.md)
 - [Troubleshoot transient connection errors in SQL Database and SQL Managed Instance](troubleshoot-common-connectivity-issues.md)
-- [Demonstrating Intelligent Query Processing](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)   
-- [Resource management in Azure SQL Database](resource-limits-logical-server.md#memory).
+- [Demonstrating Intelligent Query Processing](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)
+- [Resource management in Azure SQL Database](resource-limits-logical-server.md#memory)
+- [Blog: A new way to troubleshoot out-of-memory errors in the database engine](https://techcommunity.microsoft.com/t5/azure-sql-blog/a-new-way-to-troubleshoot-out-of-memory-errors-in-the-database/ba-p/3271926)

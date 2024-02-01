@@ -6,7 +6,7 @@ ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ---
 # Driver-Aware Connection Pooling
 Driver aware connection pooling is a new feature of the Driver Manager in Windows 8. Driver aware connection pooling allows driver writers to customize the connection pooling behavior in their ODBC driver.  

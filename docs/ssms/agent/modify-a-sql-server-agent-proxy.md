@@ -6,7 +6,7 @@ ms.author: maghan
 ms.date: 06/03/2020
 ms.service: sql
 ms.subservice: ssms
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
   - "proxies [SQL Server Agent], modifying"
   - "modifying SQL Server Agent proxy"

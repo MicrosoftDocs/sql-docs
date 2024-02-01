@@ -6,7 +6,7 @@ ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ---
 # Developing an ODBC Driver
 This section contains topics that discuss how to develop an ODBC driver.  

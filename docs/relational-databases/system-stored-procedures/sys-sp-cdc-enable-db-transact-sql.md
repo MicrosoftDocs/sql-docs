@@ -68,6 +68,6 @@ EXECUTE sys.sp_cdc_enable_db;
 GO
 ```
 
-## See also
+## Related content
 
 - [sys.sp_cdc_disable_db (Transact-SQL)](sys-sp-cdc-disable-db-transact-sql.md)

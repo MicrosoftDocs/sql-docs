@@ -3,7 +3,7 @@ title: Installation guidance for SQL Server on Linux
 description: Install, update, and uninstall SQL Server on Linux. This article covers online, offline, and unattended scenarios.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 05/30/2023
+ms.date: 01/24/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -23,14 +23,14 @@ For other deployment scenarios, see:
 - [Linux containers](./sql-server-linux-docker-container-deployment.md)
 - [Kubernetes - Big Data Clusters](../big-data-cluster/deploy-get-started.md) ([!INCLUDE [sssql19-md](../includes/sssql19-md.md)] only)
 
-This guide covers several deployment scenarios. If you are only looking for step-by-step installation instructions, jump to one of the quickstarts:
+This guide covers several deployment scenarios. If you only need step-by-step installation instructions, jump to one of the quickstarts:
 
-> - [RHEL quickstart](quickstart-install-connect-red-hat.md)
-> - [SLES quickstart](quickstart-install-connect-suse.md)
-> - [Ubuntu quickstart](quickstart-install-connect-ubuntu.md)
-> - [Docker quickstart](quickstart-install-connect-docker.md)
+> - [Quickstart: Install SQL Server and create a database on Red Hat](quickstart-install-connect-red-hat.md)
+> - [Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+> - [Quickstart: Install SQL Server and create a database on Ubuntu](quickstart-install-connect-ubuntu.md)
+> - [Quickstart: Run SQL Server Linux container images with Docker](quickstart-install-connect-docker.md)
 
-For answers to frequently asked questions, see the [SQL Server on Linux FAQ](../linux/sql-server-linux-faq.yml).
+For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.yml).
 
 ## <a id="supportedplatforms"></a> Supported platforms
 
@@ -60,7 +60,7 @@ For answers to frequently asked questions, see the [SQL Server on Linux FAQ](../
 Microsoft also supports deploying and managing [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] containers by using OpenShift and Kubernetes.
 
 > [!NOTE]  
-> [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is tested and supported on Linux for the previously listed distributions. If you choose to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on an unsupported operating system, please review the **Support policy** section of the [Technical support policy for Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) to understand the support implications.
+> [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is tested and supported on Linux for the previously listed distributions. If you choose to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on an unsupported operating system, please review the **Support policy** section of the [Technical support policy for Microsoft SQL Server](/troubleshoot/sql/general/support-policy-sql-server) to understand the support implications.
 
 ## <a id="system"></a> System requirements
 
@@ -68,12 +68,14 @@ Microsoft also supports deploying and managing [!INCLUDE [ssnoversion-md](../inc
 
 | | Requirement |
 | --- | --- |
-| **Memory** | 2 GB |
+| **Memory** | 2 GB <sup>1</sup> |
 | **File System** | **XFS** or **EXT4** (other file systems, such as **BTRFS**, aren't supported) |
 | **Disk space** | 6 GB |
 | **Processor speed** | 2 GHz |
 | **Processor cores** | 2 cores |
 | **Processor type** | x64-compatible only |
+
+<sup>1</sup> 2 GB is the minimum required memory to start [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, which accommodates system threads and internal processes. You must take this amount into consideration when setting **[max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md#max_server_memory)** and **[MemoryLimitMB](sql-server-linux-configure-mssql-conf.md#memorylimit)**.
 
 If you use **Network File System (NFS)** remote shares in production, note the following support requirements:
 
@@ -82,7 +84,7 @@ If you use **Network File System (NFS)** remote shares in production, note the f
 
 ## <a id="repositories"></a> Configure source repositories
 
-When you install or upgrade [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], you get the latest version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] from your configured Microsoft repository. The quickstarts use the Cumulative Update **CU** repository for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. For more information on repositories and how to configure them, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
+When you install or upgrade [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], you get the latest version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] from your configured Microsoft repository. The quickstarts use the Cumulative Update **CU** repository for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. For more information on repositories and how to configure them, see [Configure repositories for installing and upgrading SQL Server on Linux](sql-server-linux-change-repo.md).
 
 ## <a id="platforms"></a> Install SQL Server
 
@@ -103,7 +105,7 @@ After installing, consider making additional configuration changes for optimal p
 
 To update the `mssql-server` package to the latest release, use one of the following commands based on your platform:
 
-| Platform | Package update command(s) |
+| Platform | Package update commands |
 | --- | --- |
 | RHEL | `sudo yum update mssql-server` |
 | SLES | `sudo zypper update mssql-server` |
@@ -121,7 +123,7 @@ To upgrade [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], first [ch
 
 To verify your current version and edition of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, use the following procedure:
 
-1. If not already installed, install the [SQL Server command-line tools](sql-server-linux-setup-tools.md).
+1. If not already installed, see [Install the SQL Server command-line tools sqlcmd and bcp on Linux](sql-server-linux-setup-tools.md).
 
 1. Use **sqlcmd** to run a Transact-SQL command that displays your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] version and edition.
 
@@ -133,7 +135,7 @@ To verify your current version and edition of [!INCLUDE [ssnoversion-md](../incl
 
 To remove the `mssql-server` package on Linux, use one of the following commands based on your platform:
 
-| Platform | Package removal command(s) |
+| Platform | Package removal commands |
 | --- | --- |
 | RHEL | `sudo yum remove mssql-server` |
 | SLES | `sudo zypper remove mssql-server` |
@@ -162,18 +164,18 @@ You can also create a script that performs other actions. For example, you could
 
 For a more detailed sample script, see the following examples:
 
-- [Red Hat unattended installation script](sample-unattended-install-redhat.md)
-- [SUSE unattended installation script](sample-unattended-install-suse.md)
-- [Ubuntu unattended installation script](sample-unattended-install-ubuntu.md)
+- [Sample: Unattended SQL Server installation script for Red Hat Enterprise Linux](sample-unattended-install-redhat.md)
+- [Sample: Unattended SQL Server installation script for SUSE Linux Enterprise Server](sample-unattended-install-suse.md)
+- [Sample: Unattended SQL Server installation script for Ubuntu](sample-unattended-install-ubuntu.md)
 
 ## <a id="offline"></a> Offline install
 
-If your Linux machine doesn't have access to the online repositories used in the [quick starts](#platforms), you can download the package files directly. These packages are located in the Microsoft repository, [https://packages.microsoft.com](https://packages.microsoft.com).
+If your Linux machine doesn't have access to the online repositories used in the [quick starts](#platforms), you can download the package files directly. These packages are located in the Microsoft repository, at [https://packages.microsoft.com](https://packages.microsoft.com).
 
 > [!TIP]  
 > If you successfully installed with the steps in the quick starts, you do not need to download or manually install the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] package(s). This section is only for the offline scenario.
 
-1. **Download the database engine package for your platform**. Find package download links in the package details section of the [Release Notes](../linux/sql-server-linux-release-notes-2017.md).
+1. **Download the database engine package for your platform**. Find package download links in the package details section of the [Release notes](sql-server-linux-release-notes-2022.md).
 
 1. **Move the downloaded package to your Linux machine**. If you used a different machine to download the packages, one way to move the packages to your Linux machine is with the **scp** command.
 
@@ -185,8 +187,8 @@ If your Linux machine doesn't have access to the online repositories used in the
    | SLES | `sudo zypper install mssql-server_versionnumber.x86_64.rpm` |
    | Ubuntu | `sudo dpkg -i mssql-server_versionnumber_amd64.deb` |
 
-    > [!NOTE]  
-    > You can also install the RPM packages (RHEL and SLES) with the `rpm -ivh` command, but the commands in the previous table automatically install dependencies if available from approved repositories.
+   > [!NOTE]  
+   > You can also install the RPM packages (RHEL and SLES) with the `rpm -ivh` command, but the commands in the previous table automatically install dependencies if available from approved repositories.
 
 1. **Resolve missing dependencies**: You might have missing dependencies at this point. If not, you can skip this step. On Ubuntu, if you have access to approved repositories containing those dependencies, the easiest solution is to use the `apt-get -f install` command. This command also completes the installation of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. To manually inspect dependencies, use the following commands:
 
@@ -212,13 +214,13 @@ If your Linux machine doesn't have access to the online repositories used in the
 
 After installation, you can also install or enable optional [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] features.
 
-- [SQL Server command-line tools](sql-server-linux-setup-tools.md)
-- [SQL Server Agent](sql-server-linux-setup-sql-agent.md)
-- [SQL Server Full Text Search](sql-server-linux-setup-full-text-search.md)
-- [Machine Learning Services (R, Python)](sql-server-linux-setup-machine-learning.md)
-- [SQL Server Integration Services](sql-server-linux-setup-ssis.md)
+- [Install the SQL Server command-line tools sqlcmd and bcp on Linux](sql-server-linux-setup-tools.md)
+- [Install SQL Server Agent on Linux](sql-server-linux-setup-sql-agent.md)
+- [Install SQL Server Full-Text Search on Linux](sql-server-linux-setup-full-text-search.md)
+- [Install SQL Server 2019 Machine Learning Services (Python and R) on Linux](sql-server-linux-setup-machine-learning.md)
+- [Install SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)
 
-[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
+[!INCLUDE [Get Help Options](../includes/paragraph-content/get-help-options.md)]
 
 ## Related content
 

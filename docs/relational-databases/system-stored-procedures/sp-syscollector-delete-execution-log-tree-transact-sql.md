@@ -52,6 +52,6 @@ The identifier for the collection set. *@from_collection_set* is **bit**, with a
 
 Requires membership in the **dc_operator** (with EXECUTE permission) fixed database role to execute this procedure.
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

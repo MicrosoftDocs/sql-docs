@@ -9,7 +9,7 @@ ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: conceptual
 ms.custom:
-  - seoapril2019 sqldbrb=1
+  - sqldbrb=1
   - devx-track-azurecli
 ---
 

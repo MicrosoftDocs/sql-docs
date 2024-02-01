@@ -208,8 +208,8 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
 
 *ERRORFILE_CREDENTIAL* only applies to CSV files. Supported data source and authentication methods are:
 
-- Azure Blob Storage  - SAS/SERVICE PRINCIPAL/KEY/AAD
-- Azure Data Lake Gen2 -   SAS/MSI/SERVICE PRINCIPAL/KEY/AAD
+- Azure Blob Storage  - SAS/SERVICE PRINCIPAL/AAD
+- Azure Data Lake Gen2 -   SAS/MSI/SERVICE PRINCIPAL/AAD
 
 - Authenticating with Shared Access Signatures (SAS)
   - *IDENTITY: A constant with a value of 'Shared Access Signature'*

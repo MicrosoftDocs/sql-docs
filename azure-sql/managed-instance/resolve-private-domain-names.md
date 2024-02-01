@@ -97,11 +97,11 @@ az sql virtual-cluster list --query "[? contains(subnetId,'$virtualNetwork')].id
 
 ## Verify the configuration
 
-After you update the DNS server settings on the virtual cluster, you can verify that it's now in effect for the managed instances in that cluster. One way to do so is to create and run a [SQL Server Agent](https://learn.microsoft.com/sql/ssms/agent/sql-server-agent) job that outputs a list of DNS servers currently configured on the network interface.
+After you update the DNS server settings on the virtual cluster, you can verify that it's now in effect for the managed instances in that cluster. One way to do so is to create and run a [SQL Server Agent](/sql/ssms/agent/sql-server-agent) job that outputs a list of DNS servers currently configured on the network interface.
 
 To view the list of DNS servers configured on the managed instance's network interface:
 
-1. Start [SQL Server Management Studio](https://learn.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+1. Start [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms).
 2. Connect to a managed instance in the cluster you updated the DNS settings for.
 3. In **Object Explorer**, expand **SQL Server Agent**.
 4. Right-click **Jobs** and select **New Job...**.

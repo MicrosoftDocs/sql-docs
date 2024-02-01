@@ -55,5 +55,5 @@ From here, you can decide whether to delete the unused reports right away or rep
 
 ## Related content
 
-[Publish .rdl files to Power BI from Reporting Services](/power-bi/guidance/publish-reporting-services-power-bi-service)
+[Publish .rdl files to Power BI from Reporting Services](/power-bi/guidance/publish-reporting-services-power-bi-service)   
 [Migrate SQL Server Reporting Services reports to Power BI](/power-bi/guidance/migrate-ssrs-reports-to-power-bi)

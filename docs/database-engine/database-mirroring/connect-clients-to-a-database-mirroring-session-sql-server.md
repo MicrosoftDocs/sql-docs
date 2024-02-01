@@ -6,7 +6,7 @@ ms.author: mikeray
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: database-mirroring
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
   - "partners [SQL Server], connecting clients to"
   - "database mirroring [SQL Server], connecting clients to"

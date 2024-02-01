@@ -6,7 +6,7 @@ ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
   - "sql13.swb.asquery.execgeneral.f1"
 helpviewer_keywords:

@@ -7,7 +7,7 @@ ms.reviewer: maghan
 ms.date: 12/27/2019
 ms.service: sql
 ms.subservice: integration-services
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
   - "sql13.ssis.designer.powerqueryconnmgr.f1"
   - "sql13.ssis.designer.powerquerysource.queries.f1"

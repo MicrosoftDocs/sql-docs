@@ -6,7 +6,7 @@ ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 f1_keywords:
   - "sql13.ag.jobsreferencingaschedule.f1"
   - "sql13.ag.job.jobsreferencingaschedule.f1"

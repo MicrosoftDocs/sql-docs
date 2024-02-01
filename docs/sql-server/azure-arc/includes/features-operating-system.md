@@ -27,4 +27,5 @@ The following table identifies features available by operating system:
 | [Always On availability groups (preview)](../manage-availability-group.md) | Yes | Not applicable |
 | [Monitoring (preview)](../sql-monitoring.md) | Yes | No |
 | [Operate with least privilege (preview)](../configure-least-privilege.md)| Yes | No |
+
 <sup>1</sup> [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] only.

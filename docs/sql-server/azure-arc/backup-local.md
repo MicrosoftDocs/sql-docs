@@ -1,4 +1,4 @@
----d)] enabled by Azure Arc
+---
 title: Manage automated backups from Azure portal
 description: Describes how to configure automated backups
 author: AbdullahMSFT
@@ -39,7 +39,7 @@ Two properties can be configured when you enable automated backups:
 
 Backups can also be configured to run on a **default** schedule which is as follows:
 
-- Full backups: every y days
+- Full backups: every 7 days
 - Differential backups: every 24 hours
 - Transaction log backups: every 15 minutes
 

@@ -6,7 +6,7 @@ ms.author: maghan
 ms.date: 12/05/2023
 ms.service: sql
 ms.subservice: ssms
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
   - "performance [SQL Server], automated administration"
   - "tuning automated administration [SQL Server]"

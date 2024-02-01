@@ -6,7 +6,7 @@ ms.author: "mikeray"
 ms.date: 01/09/2019
 ms.service: sql
 ms.subservice: availability-groups
-ms.topic: "article"
+ms.topic: how-to
 helpviewer_keywords:
   - "connection access to availability replicas"
   - "Availability Groups [SQL Server], availability replicas"

@@ -6,7 +6,7 @@ ms.author: chugu
 ms.date: "01/18/2024"
 ms.service: sql
 ms.subservice: integration-services
-ms.topic: conceptual
+ms.topic: how-to
 ---
 # Microsoft Connector for Oracle
 

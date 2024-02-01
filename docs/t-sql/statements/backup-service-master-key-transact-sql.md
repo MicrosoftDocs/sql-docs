@@ -23,7 +23,7 @@ dev_langs:
   - "TSQL"
 ---
 # BACKUP SERVICE MASTER KEY (Transact-SQL)
-[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Exports the service master key.  
   

@@ -6,7 +6,7 @@ ms.author: maghan
 ms.date: 05/11/2021
 ms.service: sql
 ms.subservice: tools-other
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "Database Engine Tuning Advisor [SQL Server], tutorials"
   - "tutorials [Database Engine Tuning Advisor]"

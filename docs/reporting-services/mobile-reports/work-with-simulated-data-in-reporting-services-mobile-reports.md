@@ -15,7 +15,7 @@ ms.custom: updatefrequency5
 
 When you place a gallery element on the design surface, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] immediately generates simulated data for that element. This data serves many useful purposes when creating mobile reports.   
   
-:::image type="content" source="../../reporting-services/mobile-reports/media/ss-mrp-simdatatreemapprops.png" alt-text="Screenshot of the simulated data." lightbox="../../reporting-services/mobile-reports/media/ss-mrp-simdatatreemapprops.png":::
+:::image type="content" source="../../reporting-services/mobile-reports/media/ss-mrp-simdatatreemapprops.png" alt-text="Screenshot of the simulated data.":::
 
   
 Simulated data helps when taking a design-based approach to mobile report creation. Initially populating elements with simulated data allows you to create mobile report prototypes quickly without having to address specific data requirements. These mobile reports can then be evaluated for the overall aesthetics and effectiveness.  

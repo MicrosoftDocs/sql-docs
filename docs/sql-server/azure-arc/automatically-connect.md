@@ -16,6 +16,8 @@ ms.topic: conceptual
 
 This article explains how to connect your SQL Server instance to Azure Arc.
 
+[!INCLUDE [azure-vmware](includes/azure-vmware.md)]
+
 Before you proceed, complete the [Prerequisites](prerequisites.md).
 
 ## Steps
@@ -65,3 +67,4 @@ To test Arc-enabled SQL Server on an Azure VM, follow the steps at [Evaluate Arc
 
 - [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
 - [Configure best practices assessment on a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instance](assess.md)
+- [Operate SQL Server enabled by Azure Arc with least privilege (preview)](configure-least-privilege.md)

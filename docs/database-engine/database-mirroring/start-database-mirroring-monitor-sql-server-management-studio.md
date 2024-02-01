@@ -6,7 +6,7 @@ ms.author: mikeray
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: database-mirroring
-ms.topic: conceptual
+ms.topic: ui-reference
 helpviewer_keywords:
   - "monitoring database mirroring [SQL Server]"
   - "Database Mirroring Monitor [SQL Server], starting"

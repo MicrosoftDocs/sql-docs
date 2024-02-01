@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "08/25/2016"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "manual subscription initialization [SQL Server replication]"

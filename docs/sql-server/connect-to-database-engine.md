@@ -15,7 +15,7 @@ This article provides a high level overview for connecting to the [!INCLUDE [ssd
 
 - [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]
 - [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)]
-- [!INCLUDE [ssazuremi_md](../includes/ssazuremi_md.md)]
+- [!INCLUDE [ssazuremi-md](../includes/ssazuremi-md.md)]
 - [!INCLUDE [ssazurepdw_md](../includes/ssazurepdw_md.md)]
 - [!INCLUDE [ssazuresynapse-md](../includes/ssazuresynapse-md.md)]
 - [!INCLUDE [ssazurede-md](../includes/ssazurede-md.md)]
@@ -63,7 +63,7 @@ If you connect to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] ove
 
 Connections to Azure SQL services, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, and [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] in containers, all use TCP/IP.
 
-For both [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi_md](../includes/ssazuremi_md.md)], see [Connect and query articles](/azure/azure-sql/database/connect-query-content-reference-guide).
+For both [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi-md](../includes/ssazuremi-md.md)], see [Connect and query articles](/azure/azure-sql/database/connect-query-content-reference-guide).
 
 ## Connect to Azure SQL
 
@@ -84,11 +84,11 @@ Examples for application connections are available:
 
 ### [Azure SQL Managed Instance](#tab/sqlmi)
 
-Connect to an [!INCLUDE [ssazuremi_md](../includes/ssazuremi_md.md)] in the same ways you connect to a SQL Server instance, see [Connect your application to Azure SQL Managed Instance](/azure/azure-sql/managed-instance/connect-application-instance?view=azuresql-mi&preserve-view=true).
+Connect to an [!INCLUDE [ssazuremi-md](../includes/ssazuremi-md.md)] in the same ways you connect to a SQL Server instance, see [Connect your application to Azure SQL Managed Instance](/azure/azure-sql/managed-instance/connect-application-instance?view=azuresql-mi&preserve-view=true).
 
 You can also [configure a point-to-site connection to Azure SQL Managed Instance from on-premises](/azure/azure-sql/managed-instance/point-to-site-p2s-configure?view=azuresql-mi&preserve-view=true) or [connect to Azure SQL Managed Instance from an Azure VM](/azure/azure-sql/managed-instance/connect-vm-instance-configure?view=azuresql-mi&preserve-view=true).
 
-[!INCLUDE [ssazuremi_md](../includes/ssazuremi_md.md)] can enforce a minimum [Transport Layer Security (TLS)](/troubleshoot/sql/database-engine/connect/tls-1-2-support-microsoft-sql-server) version for application connections. For more information, see [Configure minimal TLS version in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/minimal-tls-version-configure?view=azuresql-mi&preserve-view=true).
+[!INCLUDE [ssazuremi-md](../includes/ssazuremi-md.md)] can enforce a minimum [Transport Layer Security (TLS)](/troubleshoot/sql/database-engine/connect/tls-1-2-support-microsoft-sql-server) version for application connections. For more information, see [Configure minimal TLS version in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/minimal-tls-version-configure?view=azuresql-mi&preserve-view=true).
 
 ### [SQL Server on Azure VM](#tab/sqlvm)
 

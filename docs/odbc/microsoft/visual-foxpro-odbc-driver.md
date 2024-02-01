@@ -6,7 +6,7 @@ ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "FoxPro ODBC driver [ODBC]"
   - "Visual FoxPro ODBC driver [ODBC], about Visual FoxPro ODBC driver"

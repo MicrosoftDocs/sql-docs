@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "11/20/2018"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "parameterized filters [SQL Server replication], snapshots"
@@ -194,15 +194,15 @@ When parameterized row filters are used in merge publications, replication initi
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This example creates a merge publication with parameterized filters where Subscribers initiate the snapshot generation process. Values for **\@job_login** and **\@job_password** are passed in using scripting variables.  
   
- [!code-sql[HowTo#sp_MergeDynamicPub1](../../relational-databases/replication/codesnippet/tsql/create-a-snapshot-for-a-_1.sql)]  
+ :::code language="sql" source="codesnippet/tsql/create-a-snapshot-for-a-_1.sql":::
   
  This example creates a publication using a parameterized filter where each Subscriber has its partition defined by executing [sp_addmergepartition](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md) and the filtered snapshot job created by executing [sp_adddynamicsnapshot_job](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md) passing the partitioning information. Values for **\@job_login** and **\@job_password** are passed in using scripting variables.  
   
- [!code-sql[HowTo#sp_MergeDynamicPubPlusPartition](../../relational-databases/replication/codesnippet/tsql/create-a-snapshot-for-a-_2.sql)]  
+ :::code language="sql" source="codesnippet/tsql/create-a-snapshot-for-a-_2.sql":::
   
  This example creates a publication using a parameterized filter where each Subscriber must have its data partition and filtered snapshot job created by supplying the partitioning information. A Subscriber supplies partitioning information using command-line parameters when manually running the replication agents. This example assumes that a subscription to the publication has also been created.  
   
- [!code-sql[HowTo#sp_MergeDynamicPubPartitionManual](../../relational-databases/replication/codesnippet/tsql/create-a-snapshot-for-a-_3.sql)]  
+ :::code language="sql" source="codesnippet/tsql/create-a-snapshot-for-a-_3.sql":::
   
 ```  
   

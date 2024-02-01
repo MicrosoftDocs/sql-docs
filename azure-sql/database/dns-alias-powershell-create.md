@@ -14,7 +14,7 @@ ms.custom:
   - devx-track-azurecli
   - devx-track-azurepowershell
 keywords: dns sql database
-ms.devlang: PowerShell
+ms.devlang: powershell
 ---
 # PowerShell for DNS Alias to Azure SQL Database
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]

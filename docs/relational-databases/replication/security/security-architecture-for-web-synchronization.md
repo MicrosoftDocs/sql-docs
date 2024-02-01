@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "Web synchronization, security architecture"
@@ -110,7 +110,7 @@ helpviewer_keywords:
 |Windows Authentication|The Merge Agent accesses the snapshot share under the context of the Windows user that is specified for the connection to IIS (D). If the snapshot share and IIS are on different computers and Integrated Authentication is used for the connection (D), you must enable Kerberos delegation on the computer that is running IIS. For more information, see the Windows documentation.|  
   
 ## I. Application Pool Account for IIS  
- This account is used to start the W3wp.exe process on the computer that is running IIS for [!INCLUDE[winserver2003](../../../includes/winserver2003-md.md)] or the Dllhost.exe process on [!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)]. These processes host applications on the computer that is running IIS, such as the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener and Merge Replication Reconciler. This account should have read and execute permissions on the following replication DLLs on the computer that is running IIS:  
+ This account is used to start the W3wp.exe process on the computer that is running IIS for [!INCLUDE[winserver2003](../../../includes/winserver2003-md.md)] or the Dllhost.exe process on [!INCLUDE[win2000](../../../includes/win2000-md.md)]. These processes host applications on the computer that is running IIS, such as the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener and Merge Replication Reconciler. This account should have read and execute permissions on the following replication DLLs on the computer that is running IIS:  
   
 -   Replisapi  
   

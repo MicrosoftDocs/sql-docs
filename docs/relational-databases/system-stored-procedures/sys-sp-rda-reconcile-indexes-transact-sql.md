@@ -46,6 +46,6 @@ The qualified or non-qualified name of the Stretch-enabled table for which you w
 
 `0` (success) or `> 0` (failure).
 
-## See also
+## Related content
 
 - [Stretch Database](../../sql-server/stretch-database/stretch-database.md)

@@ -133,7 +133,7 @@ EXEC managed_backup.sp_backup_config_basic @enable_backup = 0;
 GO
 ```
 
-## See also
+## Related content
 
 - [managed_backup.sp_backup_config_advanced (Transact-SQL)](managed-backup-sp-backup-config-advanced-transact-sql.md)
 - [managed_backup.sp_backup_config_schedule (Transact-SQL)](managed-backup-sp-backup-config-schedule-transact-sql.md)

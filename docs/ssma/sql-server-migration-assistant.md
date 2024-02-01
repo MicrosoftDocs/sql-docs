@@ -36,7 +36,7 @@ The following target versions are supported for SSMA.
 - [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on Windows and Linux
 - [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Windows and Linux
 - [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)]
-- [!INCLUDE [ssazuremi_md](../includes/ssazuremi_md.md)]
+- [!INCLUDE [ssazuremi-md](../includes/ssazuremi-md.md)]
 - [!INCLUDE [ssazuresynapse-md](../includes/ssazuresynapse-md.md)] <sup>1</sup>
 
 <sup>1</sup> This target is supported only by SSMA for Oracle.

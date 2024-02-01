@@ -25,6 +25,9 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
+
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
+
 ## Syntax  
   
 ```syntaxsql
@@ -41,7 +44,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
  Is the name of the database user, database role, or application role to check. *database_principal* is **sysname**, with a default of NULL. If no value is specified, the result is based on the current execution context. If the parameter contains the word NULL will return NULL.  
  
  > [!NOTE]
- > Using an Azure AD principal for *database_principal* is not supported.
+ > Using a Microsoft Entra principal for *database_principal* is not supported.
   
 ## Return Types  
  **int**  
@@ -54,7 +57,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
   
 ## Remarks
 
-The **IS_ROLEMEMBER** function is not supported for an Azure AD administrator when the administrator is a member of an Azure AD group. The **IS_ROLEMEMBER** function is supported for Azure AD users that are members of an Azure AD group, unless that group is the Azure AD admin.
+The **IS_ROLEMEMBER** function is not supported for a Microsoft Entra administrator when the administrator is a member of a Microsoft Entra group. The **IS_ROLEMEMBER** function is supported for Microsoft Entra users that are members of a Microsoft Entra group, unless that group is the Microsoft Entra admin.
 
  Use IS_ROLEMEMBER to determine whether the current user can perform an action that requires the database role's permissions.  
   

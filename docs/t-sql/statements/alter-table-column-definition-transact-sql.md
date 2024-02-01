@@ -216,7 +216,7 @@ Must be **'AEAD_AES_256_CBC_HMAC_SHA_256'**.
   
    
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
- **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[sssds](../../includes/sssds-md.md)].  
   
  Specifies a dynamic data mask. *mask_function* is the name of the masking function with the appropriate parameters. The following functions are available:  
   

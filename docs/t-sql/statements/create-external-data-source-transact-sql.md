@@ -22,7 +22,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
-Creates an external data source for querying using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], or Azure SQL Edge.
+Creates an external data source for querying using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], or Azure SQL Edge.
 
 This article provides the syntax, arguments, remarks, permissions, and examples for whichever SQL product you choose.
 
@@ -2180,7 +2180,7 @@ Additional notes and guidance when setting the location:
 
 #### CREDENTIAL = *credential_name*
 
-Optional. Specifies a database-scoped credential for authenticating to the external data source. External data source without credential can access public storage account or use the caller's Azure AD identity to access files on Azure storage.
+Optional. Specifies a database scoped credential for authenticating to the external data source. External data source without credential can access public storage account or use the caller's Microsoft Entra identity to access files on Azure storage.
 
 Additional notes and guidance when creating a credential:
 
@@ -2189,8 +2189,10 @@ Additional notes and guidance when creating a credential:
 
 To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
-- In serverless SQL pool, database-scoped credentials can specify workspace Managed Identity, service principal name, or shared access signature (SAS) token. Access is also possible via user identity, also known as "Azure AD pass-through" is possible in the databased-scoped credential, as is anonymous access to publicly available storage. For more information, see [Supported storage authorization types](/azure/synapse-analytics/sql/develop-storage-files-storage-access-control?tabs=user-identity#supported-storage-authorization-types).
-- In dedicated SQL pool, database-scoped credentials can specify shared access signature (SAS) token, custom application identity, workspace Managed Identity, or storage access key. 
+- In serverless SQL pool, database-scoped credentials can specify workspace managed identity, service principal name, or shared access signature (SAS) token. Access via a user identity, also known as _Microsoft Entra passthrough_, is also possible in the databased-scoped credential, as is anonymous access to publicly available storage. For more information, see [Supported storage authorization types](/azure/synapse-analytics/sql/develop-storage-files-storage-access-control?tabs=user-identity#supported-storage-authorization-types).
+
+- In dedicated SQL pool, database scoped credentials can specify shared access signature (SAS) token, custom application identity, workspace managed identity, or storage access key. 
+
 
 #### TYPE = *HADOOP*
 
@@ -2251,13 +2253,14 @@ WITH (
 
 ### B. Create external data source to reference Azure Data Lake Store Gen 1 or 2 using a service principal
 
-Azure Data Lake Store connectivity can be based on your ADLS URI and your Azure Active directory Application's service principal. Documentation for creating this application can be found at [Data lake store authentication using Active Directory][azure_ad].
+Azure Data Lake Store connectivity can be based on your ADLS URI and your Microsoft Entra application's service principal. Documentation for creating this application can be found at [Data lake store authentication using Microsoft Entra ID][azure_ad].
+
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 
--- These values come from your Azure Active Directory Application used to authenticate to ADLS
+-- These values come from your Microsoft Entra application used to authenticate to ADLS
 CREATE DATABASE SCOPED CREDENTIAL ADLS_credential
 WITH
     -- IDENTITY = '<clientID>@<OAuth2.0TokenEndPoint>' ,
@@ -2313,7 +2316,7 @@ WITH (
 
 ### D. Create external data source to Azure Data Lake Store Gen2 using abfs://
 
-There is no need to specify SECRET when connecting to Azure Data Lake Store Gen2 account with [Managed Identity](/azure/active-directory/managed-identities-azure-resources/overview) mechanism.
+There is no need to specify SECRET when connecting to Azure Data Lake Store Gen2 account with [Managed Identity](/entra/identity/managed-identities-azure-resources/overview) mechanism.
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one
@@ -2663,9 +2666,9 @@ WITH (
 
 [!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE[asdbmi](../../includes/applies-to-version/_asmi.md)]
 
-Creates an external data source in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. For complete information, see [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview).
+Creates an external data source in [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)]. For complete information, see [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview).
 
-Data virtualization in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] provides access to external data in a variety of file formats via the [OPENROWSET T-SQL syntax](/azure/azure-sql/managed-instance/data-virtualization-overview#query-data-sources-using-openrowset) or the [CREATE EXTERNAL TABLE](create-external-table-transact-sql.md) T-SQL syntax.
+Data virtualization in [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)] provides access to external data in a variety of file formats via the [OPENROWSET T-SQL syntax](/azure/azure-sql/managed-instance/data-virtualization-overview#query-data-sources-using-openrowset) or the [CREATE EXTERNAL TABLE](create-external-table-transact-sql.md) T-SQL syntax.
 
 ## <a id="syntax"></a> Syntax
 
@@ -2705,7 +2708,7 @@ Specifies a database-scoped credential for authenticating to the external data s
 
 Additional notes and guidance when creating a credential:
 
-- To load data from Azure Storage into [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], use a Shared Access Signature (SAS token).
+- To load data from Azure Storage into [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], use a Shared Access Signature (SAS token).
 - `CREDENTIAL` is only required if the data has been secured. `CREDENTIAL` isn't required for data sets that allow anonymous access.
 - If a credential is required, the credential must be created using `Managed Identity` or `SHARED ACCESS SIGNATURE` as the IDENTITY. To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
@@ -2734,7 +2737,7 @@ To create a shared access signature (SAS) for the database scoped credential:
 
 ## Permissions
 
-Requires `CONTROL` permission on database in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
+Requires `CONTROL` permission on database in [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)].
 
 ## Locking
 

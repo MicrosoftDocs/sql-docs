@@ -238,7 +238,7 @@ END
 
 Specific tables can experience a high rate of changes, and you might find that the autocleanup job can't clean up the side tables and `syscommittab` within the 30-minute interval. If this occurs, you can run a manual cleanup job with increased frequency to facilitate the process.
 
-For [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)], [create a background job](../../ssms/agent/create-a-job.md) using `sp_flush_CT_internal_table_on_demand` with a shorter internal than the default 30 minutes. For [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [Azure Logic Apps](/azure/connectors/connectors-create-api-sqlazure) can be used to schedule these jobs.
+For [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], [create a background job](../../ssms/agent/create-a-job.md) using `sp_flush_CT_internal_table_on_demand` with a shorter internal than the default 30 minutes. For [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [Azure Logic Apps](/azure/connectors/connectors-create-api-sqlazure) can be used to schedule these jobs.
 
 The following T-SQL code can be used to create a job to help cleanup the side tables for change tracking:
 

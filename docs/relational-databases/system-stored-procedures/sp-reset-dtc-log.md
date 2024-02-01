@@ -47,7 +47,7 @@ Requires **sysadmin** or have CONTROL SERVER permissions.
 EXEC sp_reset_dtc_log;
 ```
 
-## See also
+## Related content
 
 - [sys.sp_manage_distributed_transaction (Transact-SQL)](sys-sp-manage-distributed-transaction.md)
 - [sys.dm_tran_distributed_transaction_stats (Transact-SQL)](../system-dynamic-management-views/sys-dm-tran-distributed-transaction-stats.md)

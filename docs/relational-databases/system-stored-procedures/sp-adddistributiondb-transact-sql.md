@@ -206,7 +206,7 @@ GO
 
 Only members of the **sysadmin** fixed server role can execute `sp_adddistributiondb`.
 
-## See also
+## Related content
 
 - [Configure Publishing and Distribution](../replication/configure-publishing-and-distribution.md)
 - [sp_changedistributiondb (Transact-SQL)](sp-changedistributiondb-transact-sql.md)

@@ -69,7 +69,7 @@ helpviewer_keywords:
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example removes the file `test1dat4`.  
   
- [!code-sql[DatabaseDDL#AlterDatabase4](../../relational-databases/databases/codesnippet/tsql/delete-data-or-log-files_1.sql)]  
+ :::code language="sql" source="codesnippet/tsql/delete-data-or-log-files_1.sql":::
   
  For more examples, see [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   

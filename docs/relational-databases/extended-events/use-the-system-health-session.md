@@ -73,7 +73,7 @@ After you restore the session, you must start it by using the `ALTER EVENT SESSI
 
 ## The system_health session in Azure SQL
 
-In [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)], the `system_health` session data can be viewed by right-clicking either `event_file` or `ring_buffer` target in Object Explorer, and selecting **View Target Data**.
+In [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], the `system_health` session data can be viewed by right-clicking either `event_file` or `ring_buffer` target in Object Explorer, and selecting **View Target Data**.
 
 There's no built-in `system_health` Extended Event session in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], but you can use the `sys.fn_xe_file_target_read_file()` function to read from Extended Event sessions you create yourself and store in Azure Storage. For a walkthrough, see [Event File target code for Extended Events in Azure SQL Database](/azure/azure-sql/database/xevent-code-event-file).
 

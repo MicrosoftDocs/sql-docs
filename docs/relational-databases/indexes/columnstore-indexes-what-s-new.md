@@ -197,6 +197,12 @@ These in-memory OLTP-based DMVs contain updates for columnstore:
 - For in-memory tables, a columnstore index must include all the columns; the columnstore index cannot have a filtered condition.
 - For in-memory tables, queries on columnstore indexes run only in InterOP mode, and not in the in-memory native mode. Parallel execution is supported.
 
+### Known issues
+
+**Applies to:** [!INCLUDE [sql-server](../../includes/ssnoversion-md.md)], [!INCLUDE[ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] dedicated SQL pool
+
+- Currently, LOB columns (varbinary(max), varchar(max), and nvarchar(max)) in compressed columnstore segments are not affected by DBCC SHRINKDATABASE and DBCC SHRINKFILE.
+
 ## SQL Server 2014 (12.x)
 
 [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] introduced the clustered column store index as the primary storage format. This allowed regular loads as well as update, delete, and insert operations.

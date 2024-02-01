@@ -17,7 +17,6 @@ Gauges are the most basic and widely used visuals in mobile reports. They displa
 
 :::image type="content" source="../../reporting-services/mobile-reports/media/pbi-ssmrp-gauges.png" alt-text="Screenshot that shows the SSRS Gauges panel.":::
 
-  
 *Gauge visualizations in the Layout tab*  
   
 All gauges in SQL Server Mobile Report Publisher have at least one property in common: a main value, set to a numeric field in one of the data tables in the mobile report.  

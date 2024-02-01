@@ -51,7 +51,7 @@ This stored procedure shares the name of `sp_update_jobstep` with a similar obje
 
 ## Arguments
 
-#### @job_name 
+#### @job_name
 
 The name of the job to which the step belongs. *job_name* is nvarchar(128).
 

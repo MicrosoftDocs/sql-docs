@@ -28,7 +28,7 @@ helpviewer_keywords:
 ## Language and namespace requirements  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] custom report items fully support the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. You can develop custom report items using your choice of .NET-compliant languages.  
   
- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] offers the developer many tools and features to simplify and accelerate the iterative cycles of coding, debugging, and testing and to make deployment easier. The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK includes [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] and C# compilers and related tools.  
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] offers the developer many tools and features to simplify and accelerate the iterative cycles of coding, debugging, and testing and to make deployment easier. The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK includes [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] and C# compilers and related tools.  
   
 -   Custom report items use the **Microsoft.ReportDesigner** and <xref:Microsoft.ReportingServices.Interfaces> namespaces. These are stored in the Microsoft.ReportingServices.Designer.DLL and Microsoft.ReportingServices.Interfaces.DLL assemblies, which are installed as part of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   

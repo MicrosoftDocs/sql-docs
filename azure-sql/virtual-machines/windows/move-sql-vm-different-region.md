@@ -144,7 +144,7 @@ To avoid billing charges, remove the SQL Server VM from the vault, and delete an
 
 For more information, see the following articles: 
 
-* [Overview of SQL Server on a Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)
-* [SQL Server on a Windows VM FAQ](frequently-asked-questions-faq.yml)
-* [SQL Server on a Windows VM pricing guidance](pricing-guidance.md)
+* [Overview of SQL Server on Windows VMs](sql-server-on-azure-vm-iaas-what-is-overview.md)
+* [FAQ for SQL Server on Windows VMs](frequently-asked-questions-faq.yml)
+* [Pricing guidance for SQL Server on Windows VMs](pricing-guidance.md)
 * [What's new for SQL Server on Azure VMs](doc-changes-updates-release-notes-whats-new.md)

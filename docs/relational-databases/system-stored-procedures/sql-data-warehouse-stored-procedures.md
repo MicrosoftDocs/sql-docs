@@ -18,6 +18,7 @@ monikerRange: "=azure-sqldw-latest || =fabric"
 [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [fabric](../../includes/fabric.md)] provide built-in procedures that you can use to perform operations related to database roles.
 
 <a id="AggregateFunctions"></a>
+
 - [sp_datatype_info_90 (Azure Synapse Analytics)](sp-datatype-info-90-sql-data-warehouse.md)
 
 [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] includes the following system procedures:
@@ -32,7 +33,7 @@ monikerRange: "=azure-sqldw-latest || =fabric"
 > [!NOTE]  
 > Some additional system stored procedures are used only within an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or through client APIs and aren't intended for general customer use. These procedures are listed at [System stored procedures (Transact-SQL)](./system-stored-procedures-transact-sql.md). These procedures are subject to change and compatibility isn't guaranteed. All procedures on the list aren't available in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
-## See also
+## Related content
 
 - [System functions by category for Transact-SQL](../system-functions/system-functions-category-transact-sql.md)
 - [Data types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)

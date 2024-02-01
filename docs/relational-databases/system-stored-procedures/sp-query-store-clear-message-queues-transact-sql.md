@@ -49,9 +49,7 @@ The following example clears all queued (non-persisted) Query Store messages pen
 EXEC sp_query_store_clear_message_queues;
 ```
 
-## Next steps
-
-Learn more about Query Store in the following articles:
+## Related content
 
 - [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
 - [Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md)

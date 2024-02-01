@@ -6,7 +6,7 @@ ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
   - "job category"
   - "organize jobs"

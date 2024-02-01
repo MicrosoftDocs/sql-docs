@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current"
 
 [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-Creates a target group for jobs in the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). 
+Creates a target group for jobs in the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true).
 
 Target groups provide an easy way to target a job at a collection of servers and/or databases.
 

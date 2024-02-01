@@ -9,8 +9,7 @@ ms.date: 12/22/2023
 ms.service: sql-database
 ms.subservice: development
 ms.topic: tutorial
-ms.custom:
-  - "references-regions"
+ms.custom: references-regions, devx-track-azurecli
 ---
 # Develop a Kubernetes application for Azure SQL Database
 

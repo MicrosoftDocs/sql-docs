@@ -51,7 +51,7 @@ Use `DROP LOGIN` instead.
 
 Requires ALTER ANY LOGIN permission on the server.
 
-## See also
+## Related content
 
 - [sp_denylogin (Transact-SQL)](sp-denylogin-transact-sql.md)
 - [sp_grantlogin (Transact-SQL)](sp-grantlogin-transact-sql.md)

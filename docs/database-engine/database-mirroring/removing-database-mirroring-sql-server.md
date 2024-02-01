@@ -6,7 +6,7 @@ ms.author: mikeray
 ms.date: "03/09/2017"
 ms.service: sql
 ms.subservice: database-mirroring
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
   - "database mirroring [SQL Server], removing"
   - "stopping database mirroring [SQL Server]"

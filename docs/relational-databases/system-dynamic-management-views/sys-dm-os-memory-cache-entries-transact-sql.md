@@ -49,7 +49,7 @@ Returns information about all entries in caches in [!INCLUDE [ssNoVersion](../..
 
 ## Permissions
 
-For [!INCLUDE [ssNoVersion_md](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)], you require `VIEW SERVER STATE` permission.
+For [!INCLUDE [ssNoVersion_md](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], you require `VIEW SERVER STATE` permission.
 
 [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, you require `VIEW SERVER PERFORMANCE STATE` permission on the server.
 

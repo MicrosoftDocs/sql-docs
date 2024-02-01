@@ -243,6 +243,10 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
 
 *MAXERRORS* specifies the maximum number of reject rows allowed in the load before the COPY operation fails. Each row that can't be imported by the COPY operation is ignored and counted as one error. If max_errors isn't specified, the default is 0.
 
+*MAXERRORS* cannot be used with AUTO_CREATE_TABLE. 
+
+When *FILE_TYPE* is 'PARQUET', exceptions that are caused by data type conversion errors (e.g., Parquet binary to SQL integer) still cause COPY INTO will to fail, ignoring *MAXERRORS*. 
+
 #### *COMPRESSION = { 'DefaultCodec ' | 'Snappy' | 'GZIP' | 'NONE'}*
 
 *COMPRESSION* is optional and specifies the data compression method for the external data.
@@ -696,6 +700,8 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
 #### *MAXERRORS = max_errors*
 
 *MAXERRORS* specifies the maximum number of reject rows allowed in the load before the COPY operation fails. Each row that the COPY operation can't import is ignored and counted as one error. If max_errors isn't specified, the default is 0.
+
+In Microsoft Fabric, *MAXERRORS* cannot be used when *FILE_TYPE* is 'PARQUET'. 
 
 #### *COMPRESSION = { 'Snappy' | 'GZIP' | 'NONE'}*
 

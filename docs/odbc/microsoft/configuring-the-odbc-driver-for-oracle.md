@@ -6,7 +6,7 @@ ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: conceptual
+ms.topic: ui-reference
 helpviewer_keywords:
   - "configuring ODBC driver for Oracle [ODBC]"
   - "ODBC driver for Oracle [ODBC], configuring"

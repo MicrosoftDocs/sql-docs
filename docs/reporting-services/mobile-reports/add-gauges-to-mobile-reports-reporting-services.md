@@ -15,7 +15,7 @@ ms.custom: updatefrequency5
 
 Gauges are the most basic and widely used visuals in mobile reports. They display a single value in a dataset. This value is just the value or the value compared to a goal.
 
-:::image type="content" source="../../reporting-services/mobile-reports/media/pbi-ssmrp-gauges.png" alt-text="Screenshot that shows the SSRS Gauges panel." lightbox="../../reporting-services/mobile-reports/media/pbi-ssmrp-gauges.png":::
+:::image type="content" source="../../reporting-services/mobile-reports/media/pbi-ssmrp-gauges.png" alt-text="Screenshot that shows the SSRS Gauges panel.":::
 
   
 *Gauge visualizations in the Layout tab*  
@@ -51,7 +51,7 @@ If the mobile report has any navigators, you can bind a gauge to one or more of 
 
 2. Under **Filtered by**, select the navigator you want to filter the gauge.
 
-   :::image type="content" source="../../reporting-services/mobile-reports/media/mobile-report-gauge-navigator.png" alt-text="Screenshot of the Main Value's Options expanded with the Filter by Product List option selected." lightbox="../../reporting-services/mobile-reports/media/mobile-report-gauge-navigator.png":::
+   :::image type="content" source="../../reporting-services/mobile-reports/media/mobile-report-gauge-navigator.png" alt-text="Screenshot of the Main Value's Options expanded with the Filter by Product List option selected.":::
  
 ## Set visual properties for a gauge
   

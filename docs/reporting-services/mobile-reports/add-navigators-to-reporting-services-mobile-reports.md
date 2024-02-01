@@ -27,11 +27,11 @@ Navigators are similar to slicers in Power BI and Excel PivotTables, but navigat
   
 As its name implies, you use the time navigator to filter a range of data bounded by a time range.   
   
-:::image type="content" source="../../reporting-services/mobile-reports/media/ssmrp-timenav.png" alt-text="Screenshot of the time navigator of the Time Range Presets." lightbox="../../reporting-services/mobile-reports/media/ssmrp-timenav.png":::
+:::image type="content" source="../../reporting-services/mobile-reports/media/ssmrp-timenav.png" alt-text="Screenshot of the time navigator of the Time Range Presets.":::
   
 When you view the report in Preview or in the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] web portal, you drag the arrows in the time navigator to filter the rest of the report.  
   
-:::image type="content" source="../../reporting-services/mobile-reports/media/ssmrp-timenavpreview.png" alt-text="Screenshot of the time navigator in Preview." lightbox="../../reporting-services/mobile-reports/media/ssmrp-timenavpreview.png":::
+:::image type="content" source="../../reporting-services/mobile-reports/media/ssmrp-timenavpreview.png" alt-text="Screenshot of the time navigator in Preview.":::
  
   
 By default, the time navigator filters all the visuals in the report that are connected to time-based data. If a table contains more than one time-based column, only the first is used for filtering. The series table drives the embedded visualization and determines the overall date range of the mobile report.  
@@ -67,7 +67,7 @@ For each visualization in the mobile report that you want the selection list to 
 
 When you view the mobile report in Preview or in the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] web portal and select a value in the selection list, it filters the other visualizations in the mobile report.
 
-:::image type="content" source="../../reportingservices/mobile-reports/media/mobile-report-selection-list-filtering.png" alt-text="Screenshot of the mobile report with Washington selected from the States / Regions list and cities in Washington represented in the returned results.":::
+:::image type="content" source="../../reporting-services/mobile-reports/media/mobile-report-selection-list-filtering.png" alt-text="Screenshot of the mobile report with Washington selected from the States / Regions list and cities in Washington represented in the returned results.":::
  
      
 ## Scorecard grid  
@@ -93,7 +93,7 @@ The scorecard grid filter functions much like the selection list filter, but it 
 
 1. Name the value indicator as desired, choose its source column from the table, and select how the table is formatted.  
 
-   :::image type="content" source="../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid-data-properties.png" alt-text="Screenshot showing the options that are available for a new score." lightbox="../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid-data-properties.png":::
+   :::image type="content" source="../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid-data-properties.png" alt-text="Screenshot showing the options that are available for a new score.":::
 
 
 1. After you set the data properties, under **Tables Filtered by Selection List**, select the tables to be filtered and the column to filter by. This column needs to match values in the selection list's key column. 

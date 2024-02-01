@@ -46,7 +46,7 @@ For more information, see [Adding navigators to filter a mobile report](../../re
   
 The time chart is the most basic chart in [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]. The time and date axis of the chart is automatically set to the first valid date/time field in the data table.  
 
-:::image type="content" source="../../reporting-services/mobile-reports/media/mobile-report-time-chart.png" alt-text="Screenshot of a mobile report time chart." lightbox="../../reporting-services/mobile-reports/media/mobile-report-time-chart.png":::
+:::image type="content" source="../../reporting-services/mobile-reports/media/mobile-report-time-chart.png" alt-text="Screenshot of a mobile report time chart.":::
 
 1. Drag a **Time chart** from the **Layout** tab to the design surface and resize it.
 
@@ -66,7 +66,7 @@ For more information, see [Grouping data by columns or rows](../../reporting-ser
   
 Unlike in a time chart, in a category chart you group on a field other than a date/time field on the x-axis. This grouping is called the *category coordinate*. This grouping has to be on a string, not a numeric, field.
 
-:::image type="content" source="../../reporting-services/mobile-reports/media/mobile-report-category-chart.png" alt-text="Screenshot of mobile report category chart." lightbox="../../reporting-services/mobile-reports/media/mobile-report-category-chart.png":::
+:::image type="content" source="../../reporting-services/mobile-reports/media/mobile-report-category-chart.png" alt-text="Screenshot of mobile report category chart.":::
   
 1. Drag a **Category chart** from the **Layout** tab to the design surface, resize it, and [get data for it](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md), if necessary.
 
@@ -76,7 +76,7 @@ Unlike in a time chart, in a category chart you group on a field other than a da
   
 ## Totals charts  
 
-:::image type="content" source="../../reporting-services/mobile-reports/media/mobile-report-totals-chart.png" alt-text="Screenshot of mobile report totals chart." lightbox="../../reporting-services/mobile-reports/media/mobile-report-totals-chart.png":::
+:::image type="content" source="../../reporting-services/mobile-reports/media/mobile-report-totals-chart.png" alt-text="Screenshot of mobile report totals chart.":::
 
 The totals chart accomplishes two separate things: 
 * It doesn't present multiple series. It represents only the sum, or total, of the defined main series. 
@@ -88,7 +88,7 @@ For more information, see [Grouping data by columns or rows](../../reporting-ser
   
 Time, category, and totals charts are also available as *comparison charts*. In a comparison chart, you can specify not only a main series, but also a second comparison series. The main and comparison series can be displayed in three different ways.
 
-:::image type="content" source="../../reporting-services/mobile-reports/media/mobile-report-comparison-time-chart.png" alt-text="Screenshot of a mobile report comparison time chart." lightbox="../../reporting-services/mobile-reports/media/mobile-report-comparison-time-chart.png":::
+:::image type="content" source="../../reporting-services/mobile-reports/media/mobile-report-comparison-time-chart.png" alt-text="Screenshot of a mobile report comparison time chart.":::
 
 
 1. Drag one of the **Comparison charts** from the **Layout** tab to the design surface, resize it, and [get data for it](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md), if necessary.
@@ -129,7 +129,7 @@ For more information, see [Grouping data by columns or rows](../../reporting-ser
   
 Treemaps display metrics by applying their values to the size and color of tiles in a rectangular grid. 
 
-:::image type="content" source="../../reporting-services/mobile-reports/media/mobile-report-group-treemap.png" alt-text="Screenshot of a mobile report group treemap." lightbox="../../reporting-services/mobile-reports/media/mobile-report-group-treemap.png":::
+:::image type="content" source="../../reporting-services/mobile-reports/media/mobile-report-group-treemap.png" alt-text="Screenshot of a mobile report group treemap.":::
 
 1. Drag a **Treemap** from the **Layout** tab to the design surface, resize it, and [get data for it](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md), if necessary.
 2.  Select the **Data** tab, and in the **Data properties** pane: 
@@ -177,7 +177,7 @@ Waterfall charts are a good choice:
     
 1. Select the **Layout** tab to see the waterfall chart in preview.
 
-   :::image type="content" source="../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart.png" alt-text="Screenshot of a mobile report waterfall chart." lightbox="../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart.png":::
+   :::image type="content" source="../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart.png" alt-text="Screenshot of a mobile report waterfall chart.":::
 
    
    Months with a loss, like February, June, and July, are in red. 

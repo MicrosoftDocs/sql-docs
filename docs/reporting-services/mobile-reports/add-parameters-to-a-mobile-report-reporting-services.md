@@ -48,12 +48,12 @@ After you add parameters to a mobile report, you create a URL to [open the repor
      
 1. Select **Preview** to see how the report looks. In this report, the selection list is using the Category parameter.
 
-   :::image type="content" source="../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-view-no-selection.png" alt-text="Screenshot of the preview of the report with the Selection list 1 called out." lightbox="../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-view-no-selection.png":::
+   :::image type="content" source="../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-view-no-selection.png" alt-text="Screenshot of the preview of the report with the Selection list 1 called out.":::
  
    
 1. When you select a value in the selection list, the report is filtered to that value, in this case, Accessories.
 
-   :::image type="content" source="../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-category-selected.png" alt-text="Screenshot of the preview of the report with the Selection list 1 called out and the Accessories option selected." lightbox="../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-category-selected.png":::
+   :::image type="content" source="../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-category-selected.png" alt-text="Screenshot of the preview of the report with the Selection list 1 called out and the Accessories option selected.":::
    
   
 ### Related content 

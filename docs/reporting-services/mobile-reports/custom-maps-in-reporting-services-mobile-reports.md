@@ -15,12 +15,12 @@ ms.custom: updatefrequency5
 
 Geographic maps in SQL Server Mobile Report Publisher are defined in a format known as *ESRI shapefiles*.  
   
-Initially designed by a private company, this format is now a widespread semi-open format used in a large portion of GIS applications. In accordance with this format, Mobile Report Publisher requires two files to be provided when defining a map:  
+Designed by a private company, this format is now a widespread semi-open format used in a large portion of GIS applications. In accordance with this format, Mobile Report Publisher requires two files to be provided when defining a map:  
   
 - A .SHP file for shape geometries  
 - A .DBF file for metadata  
   
-The base files names must match, for example, *canada.shp* and *canada.dbf*. The metadata must include the field *NAME* with the value of the corresponding shape's name, or key, to be used when populating the map with data.  
+The base files names must match, for example, `canada.shp` and `canada.dbf`. The metadata must include the field **NAME** with the value of the corresponding shape's name, or key, to be used when populating the map with data.  
 
 The two map files together, the SHP and the DBF, can be no bigger than 512 KB. If your map files are too large, use a tool like [https://mapshaper.org/](https://mapshaper.org/) to reduce their size.  
   

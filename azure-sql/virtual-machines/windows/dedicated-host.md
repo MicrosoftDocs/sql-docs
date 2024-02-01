@@ -35,7 +35,7 @@ Host-level options for using existing SQL Server licenses:
     - Available to customers with SA or subscription.
     - License all available physical cores and enjoy unlimited virtualization (up to the max vCPUs supported by the host).
         - For more information about applying the AHB to Azure Dedicated Host, see [Azure Hybrid Benefit FAQ](https://azure.microsoft.com/pricing/hybrid-benefit/faq/). 
-  - SQL Server licenses acquired before October 1
+  - SQL Server licenses acquired before October 1, 2019
       - SQL Server Enterprise edition has both host-level and by-VM license options. 
       - SQL Server Standard edition has only a by-VM license option available. 
           - For details, see [Microsoft Product Terms](https://www.microsoft.com/licensing/product-licensing/products). 

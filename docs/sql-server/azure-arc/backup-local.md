@@ -1,4 +1,4 @@
----
+---d)] enabled by Azure Arc
 title: Manage automated backups from Azure portal
 description: Describes how to configure automated backups
 author: AbdullahMSFT
@@ -13,7 +13,7 @@ ms.custom: ignite-2023
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-The Azure extension for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] can perform backups automatically for the system and user databases that are part of the Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance.
+The Azure extension for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] can perform backups automatically for the system and user databases that are part of the instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] enabled by Azure Arc.
 
 This article explains how you can:
 
@@ -35,11 +35,11 @@ Automated backups are only supported for license types of PAID or PAYG.
 Two properties can be configured when you enable automated backups:
 
 - **retention days** - number of days to retain the backup files. Use a number between 1 and 35.
-- **backup schedule** - the schedule at which the full, differential and transaction log backups should be performed. Full backups can be configured to run on a daily or weekly basis. Differential backups can be configured to run either every 12 hours or every 24 hours. Transaction log backups can be configured to run in increments of 5 minutes.
+- **backup schedule** - the schedule at which the full, differential, and transaction log backups should be performed. Full backups can be configured to run on a daily or weekly basis. Differential backups can be configured to run either every 12 hours or every 24 hours. Transaction log backups can be configured to run in increments of 5 minutes.
 
 Backups can also be configured to run on a **default** schedule which is as follows:
 
-- Full backups: every 7 days
+- Full backups: every y days
 - Differential backups: every 24 hours
 - Transaction log backups: every 15 minutes
 
@@ -50,7 +50,7 @@ The backup service within the Azure extension for Arc-enabled [!INCLUDE [ssnover
    > [!NOTE]  
    > This requirement applies to the preview release.
 
-1. Add `[NT AUTHORITY\SYSTEM]` account to Logins, and make it a member of the `[dbcreator]` server role at the server level. Run the following Transact-SQL to add this account:
+1. Add `[NT AUTHORITY\SYSTEM]` account to Logins, and make it a member of the **dbcreator** server role at the server level. Run the following Transact-SQL to add this account:
 
    ```sql
    USE master;
@@ -61,7 +61,7 @@ The backup service within the Azure extension for Arc-enabled [!INCLUDE [ssnover
    GO
    ```
 
-1. Add `[NT AUTHORITY\SYSTEM]` account to Users, and make it a member of the `[db_backupoperator]` role in `master`, `model`, `msdb`, and each user database.
+1. Add `[NT AUTHORITY\SYSTEM]` account to Users, and make it a member of the **db_backupoperator** role in `master`, `model`, `msdb`, and each user database.
 
    For example:
 
@@ -83,10 +83,10 @@ After you have assigned permissions, you can enable automated backups.
 To enable automated backups in Azure portal:
 
 1. Disable any existing backup routines.
-1. Browse to the Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for which you want to enable automated backups.
+1. Browse to the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] you want to enable automated backups.
 1. Select **Backups**.
 1. Select **Configure policies**.
-1. From the configure policies options:
+1. Under **Configure policies**:
    - Set a value for backup retention days - between 1 and 35.
    - Set a schedule for the full, differential, and transactional log backups.
 1. Select **Apply** to enable this configuration.
@@ -165,7 +165,7 @@ Output:
 
 ## Backup system databases
 
-When the built-in automated backups are enabled on an Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], the system databases are also backed up into the default backup location. Only full backups are performed for the system databases.
+When the built-in automated backups are enabled on an instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] enabled by Azure Arc, the system databases are also backed up into the default backup location. Only full backups are performed for the system databases.
 
 ## Considerations
 
@@ -182,7 +182,7 @@ When the built-in automated backups are enabled on an Azure Arc-enabled [!INCLUD
   1. Go to **Server properties** > **Database Settings** > **Database default locations**.
 
 - The backup policy is configured at the instance level and applies to all the databases on the instance.
-- The value for `--name` should be the name of the Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], which is usually in the [Servername_SQLservername] format.
+- The value for `--name` should be the name of the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] enabled by Azure Arc, which is usually in the `[Servername_SQLservername]` format.
 - The value for `--retention-days` can be from 0-35.
 - A value of `0` for `--retention-days` indicates to not perform automated backups for the instance.
 - The backup files are written to the default backup location as configured at the instance level.

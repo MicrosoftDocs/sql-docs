@@ -29,11 +29,9 @@ For a complete list of regions, see [Supported Azure regions](overview.md#suppor
 
 ### SQL Server enabled by Azure Arc
 
-- Windows Update detectoid changes to enable auto-deployment of ESUs
 - Support for TLS 1.3
 - Improved prompt for feedback in Azure portal
 - Monitoring | Show monitoring upload status on Arc SQL Server overview in portal
-- Use of Azure policy to deploy Azure Extension for SQL Server is deprecated. The recommended method is [Automatically connect your SQL Server to Azure Arc](automatically-connect.md). 
 
 ## January 16, 2024
 

@@ -59,7 +59,7 @@ When you review your backup history in the `msdb` database, consider the followi
 
 - Fields that aren't relevant to the cloud aren't populated. Examples include the machine name, the physical drive, and the physical name.
 - Backup information is inserted into the `msdb` database when the backup is finished. Ongoing backups aren't supported.
-- The `msdb` database maintains records of automatic backups for up to 60 days, while the history of user-initiated backups, such as COPY-ONLY, is preserved indefinitely.
+- The `msdb` database maintains records of automatic backups for up to 60 days, while the history of user-initiated backups, such as copy-only, is preserved indefinitely.
 
 ## Next steps
 

@@ -1,6 +1,6 @@
 ---
-title: "MachineAccountIdentity Property (WMI)"
-description: "ConfigurationSetting Property - MachineAccountIdentity"
+title: "MachineAccountIdentity property (WMI)"
+description: "ConfigurationSetting property - MachineAccountIdentity"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -11,7 +11,7 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "MachineAccountIdentity property"
 ---
-# ConfigurationSetting Property - MachineAccountIdentity
+# ConfigurationSetting property - MachineAccountIdentity
   Gets the machine account identity of the computer that the report server is installed on.  
   
 ## Syntax  
@@ -24,13 +24,13 @@ Public Dim MachineAccountIdentity As String
 public string MachineAccountIdentity;  
 ```  
   
-## Property Values  
+## Property values  
  A **String** value that contains the machine account identity of the computer that the report server is installed on.  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Properties](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-properties.md)  
+## Related content  
+ [MSReportServer_ConfigurationSetting properties](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-properties.md)  
   
   

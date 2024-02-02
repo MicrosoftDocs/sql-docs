@@ -46,7 +46,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
  Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A nonzero value indicates that an error occurred.  
   
 ## Remarks  
- When the *UseBuiltInAccount* parameter is set to **true** and the report server is running on Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] or Windows XP, the value of the *Name*, *Domain*, and *Password* parameters are ignored and the Local system account is used.  
+ When the *UseBuiltInAccount* parameter is set to **true** and the report server is running on Microsoft [!INCLUDE[win2000](../../includes/win2000-md.md)] or Windows XP, the value of the *Name*, *Domain*, and *Password* parameters are ignored and the Local system account is used.  
   
  When the *UseBuiltInAccount* parameter is set to **true** and the report server is running on Windows Server 2003, the *Domain* and *Password* properties are ignored, and the name field must contain either `Builtin\NetworkService` or `Builtin\System` or `Builtin\LocalService`.  
   

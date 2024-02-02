@@ -1,5 +1,5 @@
 ---
-title: "Pass a Report Parameter Within a URL"
+title: "Pass a report parameter within a URL"
 description: Learn how to pass report parameters directly to the report processing engine by including them in a report URL.
 author: maggiesMSFT
 ms.author: maggies
@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "URL access [Reporting Services], passing parameters"
   - "passing parameters [Reporting Services]"
 ---
-# Pass a Report Parameter Within a URL
-  You can pass report parameters to a report by including them in a report URL. These URL parameters are not prefixed because they are passed directly to the report processing engine.  
+# Pass a report parameter within a URL
+  You can pass report parameters to a report by including them in a report URL. These URL parameters aren't prefixed because they're passed directly to the report processing engine.  
 
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
@@ -23,7 +23,7 @@ helpviewer_keywords:
 >   
 >  If you don't include the proxy syntax, then you need to prefix the parameter with *rp:*.  
   
- All query parameters can have corresponding report parameters. You pass a query parameter to a report by passing the corresponding report parameter. For more information, see [Build a Query in the Relational Query Designer &#40;Report Builder and SSRS&#41;](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
+ All query parameters can have corresponding report parameters. You pass a query parameter to a report by passing the corresponding report parameter. For more information, see [Build a query in the Relational Query Designer &#40;Report Builder and SSRS&#41;](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
   
 > [!IMPORTANT]
 >  Report parameters are case-sensitive.  
@@ -75,14 +75,14 @@ SalesOrderNumber:isnull=true
 > [!NOTE]  
 >  If your report contains a report parameter that has a default value and the value of the **Prompt** property is **false** (that is, the Prompt User property is not selected in Report Manager), then you cannot pass a value for that report parameter within a URL. This provides administrators an option for preventing end users from adding or modifying the values of certain report parameters.  
   
-##  <a name="bkmk_examples"></a> Additional Examples  
+##  <a name="bkmk_examples"></a> More examples  
  The following URL example includes spaces and multiple parameters  
   
 -   Folder name of "SQL Server User Education Team" includes spaces and therefore the "+" replaces each space.  
   
 -   Report name of "team project report" includes spaces and therefore the "+" replaces each space.  
   
--   Passes two parameters of "teamgrouping2" with a value of "xgroup" and "teamgrouping1" with a value of "ygroup".  
+-   Passes two parameters of "teamgrouping2" with a value of ``xgroup`` and "teamgrouping1" with a value of ``ygroup``.  
   
 ```  
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup  
@@ -100,8 +100,9 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
 https://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
 ```  
   
-## See Also  
- [URL Access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md)  
+## Related content
+
+- [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
+- [URL access parameter reference](../reporting-services/url-access-parameter-reference.md)  
   
   

@@ -11,7 +11,7 @@ keywords:
   - neural network
   - math
   - clr
-ms.devlang: Python
+ms.devlang: python
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---
 # *microsoftml.clr_math*: Acceleration with .NET math

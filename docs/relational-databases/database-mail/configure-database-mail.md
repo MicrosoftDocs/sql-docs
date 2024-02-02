@@ -229,7 +229,7 @@ The following steps use SQL Server Management Studio (SSMS). Download the latest
  Type the name for the new profile. The profile is created with this name. Do not use the name of an existing profile.  
 
  > [!NOTE]  
- > To send e-mail using SQL Agent jobs in [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)], SQL Server Agent can use only one Database Mail profile, and it must be called `AzureManagedInstance_dbmail_profile`. For more information and a sample script, see [Azure SQL Managed Instance SQL Agent job notifications](/azure/azure-sql/managed-instance/job-automation-managed-instance#sql-agent-job-notifications).
+ > To send e-mail using SQL Agent jobs in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], SQL Server Agent can use only one Database Mail profile, and it must be called `AzureManagedInstance_dbmail_profile`. For more information and a sample script, see [Azure SQL Managed Instance SQL Agent job notifications](/azure/azure-sql/managed-instance/job-automation-managed-instance#sql-agent-job-notifications).
 
  **Description**  
  Type a description for the profile. The description is optional.  
@@ -335,7 +335,7 @@ The following steps use SQL Server Management Studio (SSMS). Download the latest
  Displays the name of the profile.  
 
 > [!NOTE]  
-> To send e-mail using SQL Agent jobs in [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)], SQL Server Agent can use only one Database Mail profile, and it must be called `AzureManagedInstance_dbmail_profile`. For more information and a sample script, see [Azure SQL Managed Instance SQL Agent job notifications](/azure/azure-sql/managed-instance/job-automation-managed-instance#sql-agent-job-notifications).
+> To send e-mail using SQL Agent jobs in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], SQL Server Agent can use only one Database Mail profile, and it must be called `AzureManagedInstance_dbmail_profile`. For more information and a sample script, see [Azure SQL Managed Instance SQL Agent job notifications](/azure/azure-sql/managed-instance/job-automation-managed-instance#sql-agent-job-notifications).
 
  **Default Profile**  
  Select this option to make the specified profile the default profile.  

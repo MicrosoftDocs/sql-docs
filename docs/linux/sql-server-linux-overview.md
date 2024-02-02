@@ -47,7 +47,7 @@ To get started, install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md
 
 The [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container images are published and available on the Microsoft Container Registry (MCR), and also cataloged at the following locations, based on the operating system image that was used when creating the container image:
 
-- For both RHEL and Ubuntu based [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container images, see [SQL Server on the Microsoft Artifact Registry](https://mcr.microsoft.com/product/mssql/server/about).
+- For both RHEL and Ubuntu based [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container images, see [SQL Server on the Microsoft Artifact Registry](https://mcr.microsoft.com/catalog?cat=Databases).
 - For RHEL-based [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container images, see [SQL Server Red Hat containers](https://catalog.redhat.com/software/containers/mssql/rhel/server/61f2f612f385723914ed60bc).
 
 > [!NOTE]  

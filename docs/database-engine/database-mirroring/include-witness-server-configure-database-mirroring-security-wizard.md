@@ -6,7 +6,7 @@ ms.author: mikeray
 ms.date: "03/07/2017"
 ms.service: sql
 ms.subservice: database-mirroring
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
   - "sql13.swb.configdbmsecurwiz.inclwitness.f1"
 ---

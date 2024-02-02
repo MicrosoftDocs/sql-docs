@@ -9,12 +9,7 @@ ms.date: 09/15/2023
 ms.service: sql-db-mi
 ms.subservice: connect
 ms.topic: quickstart
-ms.custom:
-  - seo-python-october2019
-  - sqldbrb=2
-  - devx-track-python
-  - mode-api
-  - py-fresh-zinc
+ms.custom: sqldbrb=2, devx-track-python, mode-api, py-fresh-zinc
 ms.devlang: python
 monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 ---

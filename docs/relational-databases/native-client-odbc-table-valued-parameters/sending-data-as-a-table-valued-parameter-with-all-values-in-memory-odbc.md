@@ -19,17 +19,28 @@ helpviewer_keywords:
  This procedure assumes that the following [!INCLUDE[tsql](../../includes/tsql-md.md)] has been executed on the server:  
   
 ```sql
-create type TVParam as table(ProdCode integer, Qty integer)  
-create procedure TVPOrderEntry(@CustCode varchar(5), @Items TVPParam,   
-            @OrdNo integer output, @OrdDate datetime output)  
-         as   
-         set @OrdDate = GETDATE();  
-         insert into TVPOrd (OrdDate, CustCode)   
-values (@OrdDate, @CustCode) output OrdNo);   
-         select @OrdNo = SCOPE_IDENTITY();   
-         insert into TVPItem (OrdNo, ProdCode, Qty)  
-select @OrdNo, @Items.ProdCode, @Items.Qty   
-from @Items  
+CREATE type TVParam AS TABLE (
+    ProdCode INT,
+    Qty INT
+)
+
+CREATE PROCEDURE TVPOrderEntry (
+    @CustCode VARCHAR(5),
+    @Items TVPParam,
+    @OrdNo INT OUTPUT,
+    @OrdDate DATETIME OUTPUT
+)
+AS
+SET @OrdDate = GETDATE();
+
+INSERT INTO TVPOrd (OrdDate, CustCode)
+VALUES (@OrdDate, @CustCode)
+OUTPUT OrdNo;
+
+SELECT @OrdNo = SCOPE_IDENTITY();
+
+INSERT INTO TVPItem (OrdNo, ProdCode, Qty)
+SELECT @OrdNo, @Items.ProdCode, @Items.Qty FROM @Items;
 ```  
   
 ## To Send the Data  

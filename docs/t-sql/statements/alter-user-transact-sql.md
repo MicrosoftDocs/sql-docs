@@ -29,6 +29,9 @@ Renames a database user or changes its default schema.
 
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
+
+
 [!INCLUDE [select-product](../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
@@ -88,7 +91,7 @@ NAME = newUserName
  Specifies the first schema that will be searched by the server when it resolves the names of objects for this user. Setting the default schema to NULL removes a default schema from a Windows group. The NULL option cannot be used with a Windows user.
 
  PASSWORD **=** '*password*'
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[sssds](../../includes/sssds-md.md)].
 
  Specifies the password for the user that is being changed. Passwords are case-sensitive.
 
@@ -96,7 +99,7 @@ NAME = newUserName
 > This option is available only for contained users. For more information, see [Contained Databases](../../relational-databases/databases/contained-databases.md) and [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).
 
  OLD_PASSWORD **=**_'oldpassword'_
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[sssds](../../includes/sssds-md.md)].
 
  The current user password that will be replaced by '*password*'. Passwords are case-sensitive. *OLD_PASSWORD* is required to change a password, unless you have **ALTER ANY USER** permission. Requiring *OLD_PASSWORD* prevents users with **IMPERSONATION** permission from changing the password.
 
@@ -303,7 +306,7 @@ ALTER USER userName
  Specifies the first schema that will be searched by the server when it resolves the names of objects for this user. Setting the default schema to NULL removes a default schema from a Windows group. The NULL option can't be used with a Windows user.
 
  PASSWORD **=** '*password*'
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[sssds](../../includes/sssds-md.md)].
 
  Specifies the password for the user that is being changed. Passwords are case-sensitive.
 
@@ -311,7 +314,7 @@ ALTER USER userName
 > This option is available only for contained users. For more information, see [Contained Databases](../../relational-databases/databases/contained-databases.md) and [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).
 
  OLD_PASSWORD **=**_'oldpassword'_
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[sssds](../../includes/sssds-md.md)].
 
  The current user password that will be replaced by '*password*'. Passwords are case-sensitive. *OLD_PASSWORD* is required to change a password, unless you have **ALTER ANY USER** permission. Requiring *OLD_PASSWORD* prevents users with **IMPERSONATION** permission from changing the password.
 
@@ -445,10 +448,10 @@ GO
 ## Syntax
 
 > [!IMPORTANT]
-> Only the following options are supported for Azure SQL Managed Instance when applying to users with Azure AD logins:
+> Only the following options are supported for Azure SQL Managed Instance when applying to users with Microsoft Entra logins:
 > `DEFAULT_SCHEMA = { schemaName | NULL }` and
 > `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }`
-> </br> </br> There is a new syntax extension that was added to help remap users in a database that was migrated to Azure SQL Managed Instance. The ALTER USER syntax helps map database users in a federated and synchronized domain with Azure AD, to Azure AD logins.
+> </br> </br> There is a new syntax extension that was added to help remap users in a database that was migrated to Azure SQL Managed Instance. The ALTER USER syntax helps map database users in a federated and synchronized domain with Microsoft Entra ID, to Microsoft Entra logins.
 
 ```syntaxsql
 -- Syntax for SQL Managed Instance
@@ -542,10 +545,10 @@ ALTER USER userName
 
  You can change the name of a user who is mapped to a Windows login or group only when the SID of the new user name matches the SID that is recorded in the database. This check helps prevent spoofing of Windows logins in the database.
 
- The WITH LOGIN clause enables the remapping of a user to a different login. Users without a login, users mapped to a certificate, or users mapped to an asymmetric key can't be remapped with this clause. Only SQL users and Windows users (or groups) can be remapped. The WITH LOGIN clause can't be used to change the type of user, such as changing a Windows account to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. The only exception is when changing a Windows user to an Azure AD user.
+ The WITH LOGIN clause enables the remapping of a user to a different login. Users without a login, users mapped to a certificate, or users mapped to an asymmetric key can't be remapped with this clause. Only SQL users and Windows users (or groups) can be remapped. The WITH LOGIN clause can't be used to change the type of user, such as changing a Windows account to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. The only exception is when changing a Windows user to a Microsoft Entra user.
 
 > [!NOTE]
-> The following rules do not apply to Windows users on Azure SQL Managed Instance as we do not support creating Windows logins on Azure SQL Managed Instance. The WITH LOGIN option can only be used if Azure AD logins are present.
+> The following rules do not apply to Windows users on Azure SQL Managed Instance as we do not support creating Windows logins on Azure SQL Managed Instance. The WITH LOGIN option can only be used if Microsoft Entra logins are present.
 
  The name of the user will be automatically renamed to the login name if the following conditions are true.
 
@@ -566,40 +569,39 @@ The name of a user mapped to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 
 ### Remarks for Windows users in SQL on-premises migrated to Azure SQL Managed Instance
 
-These remarks apply to authenticating as Windows users that have been federated and synchronized with Azure AD.
+These remarks apply to authenticating as Windows users that have been federated and synchronized with Microsoft Entra ID.
 
-> [!NOTE]
-> The Azure AD admin for Azure SQL Managed Instance functionality after creation has changed. For more information, see [New Azure AD admin functionality for MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
-- Validation of Windows users or groups that are mapped to Azure AD is done by default through Graph API in all versions of the ALTER USER syntax used for migration purpose.
+- Validation of Windows users or groups that are mapped to Microsoft Entra ID is done by default through Graph API in all versions of the ALTER USER syntax used for migration purpose.
 - On-premises users that were aliased (use a different name from the original Windows account) will keep the aliased name.
-- For Azure AD authentication, the LOGIN parameter applies only to Azure SQL Managed Instance and can't be used with SQL Database.
-- To view logins for Azure AD Principals, use the following command:
+- For Microsoft Entra authentication, the LOGIN parameter applies only to Azure SQL Managed Instance and can't be used with SQL Database.
+- To view logins for Microsoft Entra principals, use the following command:
+
 `select * from sys.server_principals`.
 - Check the login's indicated type is `E` or `X`.
-- PASSWORD option can't be used for Azure AD users.
-- In all migration cases, the roles and permissions of Windows users or groups will automatically be transferred to the new Azure AD users or groups.
-- A new syntax extension, **FROM EXTERNAL PROVIDER** is available for altering Windows users and groups from SQL on-premises to Azure AD users and groups. The Windows domain must be federated with Azure AD and all Windows domain members must exist in Azure AD when using this extension. The **FROM EXTERNAL PROVIDER** syntax applies to Azure SQL Managed Instance and should be used in case Windows users do not have logins on the original SQL instance and need to be mapped to standalone Azure AD database users.
+- PASSWORD option can't be used for Microsoft Entra users.
+- In all migration cases, the roles and permissions of Windows users or groups will automatically be transferred to the new Microsoft Entra users or groups.
+- A new syntax extension, **FROM EXTERNAL PROVIDER** is available for altering Windows users and groups from SQL on-premises to Microsoft Entra users and groups. The Windows domain must be federated with Microsoft Entra ID and all Windows domain members must exist in Microsoft Entra ID when using this extension. The **FROM EXTERNAL PROVIDER** syntax applies to Azure SQL Managed Instance and should be used in case Windows users do not have logins on the original SQL instance and need to be mapped to standalone Microsoft Entra database users.
 - In this case, the allowable userName can be:
 - A Widows user (_domain\user_).
 - A Windows group (_MyWidnowsGroup_).
 - A Windows alias (_MyWindowsAlias_).
-- The outcome of the ALTER command replaces the old userName with the corresponding name that is found in Azure AD based on the original SID of the old userName. The altered name is replaced and stored in the metadata of the database:
-- (_domain\user_) will be replaced with Azure AD user@domain.com.
-- (_domain\\MyWidnowsGroup_) will be replaced with Azure AD group.
-- (_MyWindowsAlias_) will remain unchanged but the SID of this user will be checked in Azure AD.
+- The outcome of the ALTER command replaces the old userName with the corresponding name that is found in Microsoft Entra ID based on the original SID of the old userName. The altered name is replaced and stored in the metadata of the database:
+- (_domain\user_) will be replaced with Microsoft Entra user@domain.com.
+- (_domain\\MyWidnowsGroup_) will be replaced with Microsoft Entra group.
+- (_MyWindowsAlias_) will remain unchanged but the SID of this user will be checked in Microsoft Entra ID.
 
 > [!NOTE]
-> If the SID of the original user converted to objectID cannot be found in Azure AD, the ALTER USER command will fail.
+> If the SID of the original user converted to objectID cannot be found in Microsoft Entra ID, the ALTER USER command will fail.
 
 - To view altered users, use the following command: 
 `select * from sys.database_principals`
 - Check the user's indicated type `E` or `X`.
-- When NAME is used to migrate Windows users to Azure AD users, the following restrictions apply:
+- When NAME is used to migrate Windows users to Microsoft Entra users, the following restrictions apply:
 - A valid LOGIN must be specified.
-- The NAME will be checked in Azure AD and can only be:
+- The NAME will be checked in Microsoft Entra ID and can only be:
 - The name of the LOGIN.
-- An alias - the name can't exist in Azure AD.
+- An alias - the name can't exist in Microsoft Entra ID.
 - In all other cases, the syntax will fail.
 
 ## Security
@@ -652,33 +654,42 @@ WITH NAME = Philipe
 GO
 ```
 
-### D. Map the user in the database to an Azure AD login after migration
+<a name='d-map-the-user-in-the-database-to-an-azure-ad-login-after-migration'></a>
 
-The following example remaps the user, `westus/joe` to an Azure AD user, `joe@westus.com`. This example is for logins that already exist in the managed instance. This needs to be performed after you have completed a database migration to Azure SQL Managed Instance, and want to use the Azure AD login to authenticate.
+### D. Map the user in the database to a Microsoft Entra login after migration
+
+The following example remaps the user, `westus/joe` to a Microsoft Entra user, `joe@westus.com`. This example is for logins that already exist in the managed instance. This needs to be performed after you have completed a database migration to Azure SQL Managed Instance, and want to use the Microsoft Entra login to authenticate.
 
 ```sql
-ALTER USER [westus/joe] WITH LOGIN = joe@westus.com
+ALTER USER [westus/joe] WITH LOGIN = [joe@westus.com]
+
 ```
 
-### E. Map an old Windows user in the database without a login in Azure SQL Managed Instance to an Azure AD user
+<a name='e-map-an-old-windows-user-in-the-database-without-a-login-in-azure-sql-managed-instance-to-an-azure-ad-user'></a>
 
-The following example remaps the user, `westus/joe` without a login, to an Azure AD user, `joe@westus.com`. The federated user must exist in Azure AD.
+### E. Map an old Windows user in the database without a login in Azure SQL Managed Instance to a Microsoft Entra user
+
+The following example remaps the user, `westus/joe` without a login, to a Microsoft Entra user, `joe@westus.com`. The federated user must exist in Microsoft Entra ID.
 
 ```sql
 ALTER USER [westus/joe] FROM EXTERNAL PROVIDER
 ```
 
-### F. Map the user alias to an existing Azure AD login
+<a name='f-map-the-user-alias-to-an-existing-azure-ad-login'></a>
 
-The following example remaps the user name, `westus\joe` to `joe_alias`. The corresponding Azure AD login in this case is `joe@westus.com`.
+### F. Map the user alias to an existing Microsoft Entra login
+
+The following example remaps the user name, `westus\joe` to `joe_alias`. The corresponding Microsoft Entra login in this case is `joe@westus.com`.
 
 ```sql
-ALTER USER [westus/joe] WITH LOGIN = joe@westus.com, name= joe_alias
+ALTER USER [westus/joe] WITH LOGIN = [joe@westus.com], name= joe_alias
 ```
 
-### G. Map a Windows group that was migrated in Azure SQL Managed Instance to an Azure AD group
+<a name='g-map-a-windows-group-that-was-migrated-in-azure-sql-managed-instance-to-an-azure-ad-group'></a>
 
-The following example remaps the old on-premises group, `westus\mygroup` to an Azure AD group `mygroup` in the managed instance. The group must exist in Azure AD.
+### G. Map a Windows group that was migrated in Azure SQL Managed Instance to a Microsoft Entra group
+
+The following example remaps the old on-premises group, `westus\mygroup` to a Microsoft Entra group `mygroup` in the managed instance. The group must exist in Microsoft Entra ID.
 
 ```sql
 ALTER USER [westus\mygroup] WITH LOGIN = mygroup

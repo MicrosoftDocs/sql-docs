@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "encryption [SQL Server], replicating data"
@@ -72,14 +72,14 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ### A. Create keys in the publication database
  This example creates a symmetric key, a certificate that is used to help secure the symmetric key, and a master key. These keys are created in the publication database. They are then used to create an encrypted column (EncryptedCreditCardApprovalCode) in the `SalesOrderHeader` table. This column is published in the AdvWorksSalesOrdersMerge publication instead of the unencrypted CreditCardApprovalCode column. When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
   
- [!code-sql[HowTo#sp_PublishEncryptedColumn](../../../relational-databases/replication/codesnippet/tsql/replicate-data-in-encryp_1.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/replicate-data-in-encryp_1.sql":::
   
- [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/replicate-data-in-encryp_2.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/replicate-data-in-encryp_2.sql":::
   
 ### B. Create keys in the subscription database
  This example recreates the same symmetric key in the subscription database using the same values for ALGORITHM, KEY_SOURCE, and IDENTITY_VALUE from the first example. This example assumes that you have already initialized a subscription to the AdvWorksSalesOrdersMerge publication to replicate the encrypted column. When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file during storage and transport to prevent unauthorized access.  
   
- [!code-sql[HowTo#sp_SubscriberEncryptedColumn](../../../relational-databases/replication/codesnippet/tsql/replicate-data-in-encryp_3.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/replicate-data-in-encryp_3.sql":::
   
 ## See Also  
  [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   

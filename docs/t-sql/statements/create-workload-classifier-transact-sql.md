@@ -62,10 +62,10 @@ Available workload groups can be found in [sys.workload_management_workload_grou
 
 #### MEMBERNAME = '*security_account*'
 
-The security account used to classify against. *security_account* is **sysname**, with no default. *security_account* can be a database user, database role, or Microsoft Entra ID user or group.
+The security account used to classify against. *security_account* is **sysname**, with no default. *security_account* can be a database user, database role, Microsoft Entra login, or Microsoft Entra group.
 
 > [!NOTE]  
-> Use the `user_name()` function, when connected to the system, to verify the `MEMBERNAME` that the classification process will use to classify the request. Verifying the `MEMBERNAME` with the `user_name()` function can be helpful troubleshooting Microsoft Entra or service principal classification issues. If `user_name()` returns `dbo`, you can use **dbo** as the `MEMBERNAME` to classify the requests. All members of the **dbo** role will be classified. Additional classification parameters such as `WLM_LABEL` or `WLM_CONTEXT` can also be used to specifically classify requests from multiple Microsoft Entra accounts mapping to the **dbo** role.
+> Use the `user_name()` function, when connected to the system, to verify the `MEMBERNAME` that the classification process will use to classify the request. Verifying the `MEMBERNAME` with the `user_name()` function can be helpful troubleshooting Microsoft Entra ID or service principal classification issues. If `user_name()` returns `dbo`, you can use **dbo** as the `MEMBERNAME` to classify the requests. All members of the **dbo** role will be classified. Additional classification parameters such as `WLM_LABEL` or `WLM_CONTEXT` can also be used to specifically classify requests from multiple Microsoft Entra accounts mapping to the **dbo** role.
 
 #### WLM_LABEL
 

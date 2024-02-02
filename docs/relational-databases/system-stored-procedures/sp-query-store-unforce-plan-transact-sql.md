@@ -82,7 +82,7 @@ After you identify the *query_id* and *plan_id* that you want to unforce, use th
 EXEC sp_query_store_unforce_plan 3, 3;
 ```
 
-## Next steps
+## Related content
 
 - [sys.query_store_replicas (Transact-SQL)](../system-catalog-views/sys-query-store-replicas.md)
 - [sys.query_store_plan_forcing_locations (Transact-SQL)](../system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md)

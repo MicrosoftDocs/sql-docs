@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Create a new database in Azure SQL Database or Azure SQL Managed Instance from a bacpac file.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: jeschult, mathoma
+ms.reviewer: hudequei, mathoma
 ms.date: 01/09/2024
 ms.service: sql-db-mi
 ms.subservice: backup-restore

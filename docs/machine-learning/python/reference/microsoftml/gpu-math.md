@@ -11,7 +11,7 @@ keywords:
   - neural network
   - math
   - gpu
-ms.devlang: Python
+ms.devlang: python
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---
 # *microsoftml.gpu_math*: Acceleration with NVidia CUDA

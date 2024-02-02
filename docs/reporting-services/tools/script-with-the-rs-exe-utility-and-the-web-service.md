@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "scripts [Reporting Services], Web service"
 ---
 # Script with the rs.exe Utility and the Web Service
-  Developers and report server administrators can perform operations on a report server through the use of the **rs** utility (RS.exe). Using this utility, you can programmatically administer a report server using scripts written with [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+  Developers and report server administrators can perform operations on a report server through the use of the **rs** utility (RS.exe). Using this utility, you can programmatically administer a report server using scripts written with [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)].  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] scripts can be used to run any of the Report Server Web service operations. Scripting can be used to copy security to multiple reports on a server, to add and delete items, to copy report server items from one server to another and more. For more information about the scripting environment, see [Run a Reporting Services Script File](../../reporting-services/tools/run-a-reporting-services-script-file.md). Script files take a certain format and are written in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET. For more information, see [Format a Reporting Services Script File](../../reporting-services/tools/format-a-reporting-services-script-file.md).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] scripts can be used to run any of the Report Server Web service operations. Scripting can be used to copy security to multiple reports on a server, to add and delete items, to copy report server items from one server to another and more. For more information about the scripting environment, see [Run a Reporting Services Script File](../../reporting-services/tools/run-a-reporting-services-script-file.md). Script files take a certain format and are written in [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] .NET. For more information, see [Format a Reporting Services Script File](../../reporting-services/tools/format-a-reporting-services-script-file.md).  
   
  For script samples, see the following:  
   

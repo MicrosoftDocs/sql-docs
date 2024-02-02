@@ -3,13 +3,17 @@ title: Using MSDeploy with dbSqlPackage Provider
 description: Learn about the obsolete MSDeploy provider DbSqlPackage. View parameters, examples, and alternative SQL Server and Azure SQL Database publishing tools.
 author: markingmyname
 ms.author: maghan
-ms.date: 04/26/2017
+ms.date: 01/11/2024
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
+ms.reviewer: drskwier
 ---
 
-# Using MSDeploy with dbSqlPackage Provider
+# Use MSDeploy with dbSqlPackage provider (deprecated)
+
+> [!IMPORTANT]  
+> The dbSqlPackage provider feature is deprecated, and is not compatible with current releases of DacFx. Consider using [SqlPackage](../tools/sqlpackage/sqlpackage.md) (DacFx command-line tool) for your SQL Server and Azure SQL deployment scenarios.
 
 **DbSqlPackage** is an **MSDeploy** provider that allows you interact with SQL Server / Azure SQL Database. **DbSqlPackage** supports the following actions:  
   
@@ -21,10 +25,7 @@ ms.topic: conceptual
   
 -   **Script**: Creates a Transact-SQL script equivalent to the script executed by the Publish Action.  
   
-For more information regarding DACFx, please see the DACFx managed API documentation at [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](/dotnet/api/microsoft.sqlserver.dac) or [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md) (DACFx command-line tool).  
-  
-> [!IMPORTANT]  
-> The dbSqlPackage provider feature will be removed from the next major release of Visual Studio. For information on how to do database publishing with Web Deploy, see [dbDacFx Provider for Incremental Database publishing](https://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing).  
+For more information regarding DACFx, please see the [DACFx managed API documentation](/dotnet/api/microsoft.sqlserver.dac) or [SqlPackage](../tools/sqlpackage/sqlpackage.md) (DacFx command-line tool).
   
 ## Command Line Syntax  
 **MSDeploy** with the **dbSqlPackage** provider uses a command line of the following form:  

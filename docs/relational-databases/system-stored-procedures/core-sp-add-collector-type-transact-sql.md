@@ -70,7 +70,7 @@ SELECT @collector_type_uid = (
 EXECUTE @RC = core.sp_add_collector_type @collector_type_uid;
 ```
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Data Collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)

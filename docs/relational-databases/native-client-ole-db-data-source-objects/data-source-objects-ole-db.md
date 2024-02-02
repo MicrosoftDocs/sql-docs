@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "OLE DB data source objects [SQL Server Native Client]"
   - "data source objects [OLE DB]"
   - "CLSID"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 #  SQL Server Native Client Data Source Objects (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

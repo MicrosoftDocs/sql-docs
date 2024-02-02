@@ -9,7 +9,6 @@ ms.date: 11/02/2021
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
-ms.custom: ignite-fall-2021
 ---
 # Set up trust between instances with server trust group (Azure SQL Managed Instance)
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]

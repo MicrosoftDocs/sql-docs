@@ -34,7 +34,7 @@ SSRS supports and enforces extended protection that has been enabled in the oper
 >  Some data access technologies may not support extended protection. A data access technology is used to connect to SQL Server data sources and to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] catalog database. Failure of a data access technology to support extended protection impacts [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in the following ways:  
 > 
 >  -   The SQL Server that runs the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] catalog database cannot have extended protection enabled or the report server will not successfully connect to the catalog database and return authentication errors.  
-> -   SQL Servers that are used as [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report data sources cannot have extended protection enabled or tries by the report server to connect to the report data source will fail and return authentication errors.  
+> -   SQL Server instances that are used as [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report data sources cannot have extended protection enabled or tries by the report server to connect to the report data source will fail and return authentication errors.  
 > 
 >  The documentation for a data access technology should have information about support for extended protection.  
   

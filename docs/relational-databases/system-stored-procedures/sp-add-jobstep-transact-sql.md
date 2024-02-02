@@ -223,7 +223,6 @@ A proxy might be identified by *@proxy_name* or *@proxy_id*.
 
 This stored procedure shares the name of `sp_add_jobstep` with a similar object for the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). For information about the elastic jobs version, see [jobs.sp_add_jobstep (Azure Elastic Jobs) (Transact-SQL)](sp-add-jobstep-elastic-jobs-transact-sql.md?view=azuresql-db&preserve-view=true).
 
-
 ## Permissions
 
 [!INCLUDE [msdb-execute-permissions](../../includes/msdb-execute-permissions.md)]

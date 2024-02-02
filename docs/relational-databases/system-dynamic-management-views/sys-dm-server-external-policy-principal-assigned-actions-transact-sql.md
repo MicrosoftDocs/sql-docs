@@ -22,7 +22,7 @@ dev_langs:
 
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-Lists Azure AD principals, joined with roles, joined with their data actions.
+Lists all database and server principals created from Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)), joined with roles, joined with their data actions.
 
 > [!NOTE]  
 >  This view returns one record per assignment. If the same action has been assigned at multiple scopes (like via different role-assignments or different scopes), there will be multiple rows with the same action name in the result set.
@@ -30,7 +30,7 @@ Lists Azure AD principals, joined with roles, joined with their data actions.
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**principal_sid**|**varbinary(85)**|SID (Security-IDentifier) of the principal.|  
-|**principal_aad_object_id**|**nvarchar(36)**|Azure AD Object ID of the principal. Is unique within an Azure tenant.|  
+|**principal_aad_object_id**|**nvarchar(36)**|Microsoft Entra Object ID of the principal. Is unique within an Azure tenant.|  
 |**action_type**|**nvarchar(256)**|The type of an operation: Connect, Select.|  
 |**action_namespace**|**nvarchar(20)**|The path or namespace on which the action type part applies to.|  
 |**role_name**|**nvarchar(128)**|ID for joining with other dynamic management views.|  

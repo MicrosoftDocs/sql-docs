@@ -50,7 +50,7 @@ sp_posttracertoken [ @publication = ] 'publication'
  **sp_posttracertoken** is used in transactional replication.  
   
 ## Example  
- [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-posttracertoken-trans_1.sql)]  
+ :::code language="sql" source="../replication/codesnippet/tsql/sp-posttracertoken-trans_1.sql":::
   
 ## Permissions  
  Only members of the **sysadmin** fixed server role or the **db_owner** fixed database role can execute **sp_posttracertoken**.  

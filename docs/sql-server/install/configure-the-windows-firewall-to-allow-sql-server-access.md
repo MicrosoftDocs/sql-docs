@@ -1,9 +1,9 @@
 ---
 title: "Configure the Windows Firewall to allow SQL Server access"
-description: Learn how to configure the Windows firewall to allow access to an instance of the SQL Server through the firewall.
+description: Learn how to configure the Windows Firewall to allow access to an instance of the SQL Server through the firewall.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 10/17/2022
+ms.date: 01/09/2024
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
@@ -60,7 +60,7 @@ Choosing a firewall strategy is more complex than just deciding if a given port 
 
 ## Default firewall settings
 
-The first step in planning your firewall configuration is to determine the current status of the firewall for your operating system. If the operating system was upgraded from a previous version, the earlier firewall settings may have been preserved. The Group Policy or Administrator can change the firewall settings in the domain.
+The first step in planning your firewall configuration is to determine the current status of the firewall for your operating system. If the operating system was upgraded from a previous version, the earlier firewall settings might have been preserved. The Group Policy or Administrator can change the firewall settings in the domain.
 
 > [!NOTE]  
 > Turning on the firewall will affect other programs that access this computer, such as file and print sharing, and remote desktop connections. Administrators should consider all applications that are running on the computer before adjusting the firewall settings.
@@ -137,7 +137,7 @@ For step-by-step instructions to configure the Windows Firewall for the [!INCLUD
 
 #### Dynamic ports
 
-By default, named instances (including [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) use dynamic ports.  means each time [!INCLUDE[ssDE](../../includes/ssde-md.md)] starts, it identifies an available port and uses that port number. If the named instance is the only instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] installed, it will probably use TCP port 1433. If other instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] are installed, it will probably use a different TCP port. Because the port selected might change every time that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is started, it's difficult to configure the firewall to enable access to the correct port number. If a firewall is used, we recommend reconfiguring the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to use the same port number every time. A fixed port or a static port is recommended. For more information, see [Configure a Server to Listen on a Specific TCP Port (SQL Server Configuration Manager)](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).
+By default, named instances (including [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) use dynamic ports. Each time [!INCLUDE[ssDE](../../includes/ssde-md.md)] starts, it identifies an available port and uses that port number. If the named instance is the only instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] installed, it will probably use TCP port 1433. If other instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] are installed, it will probably use a different TCP port. Because the port selected might change every time that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is started, it's difficult to configure the firewall to enable access to the correct port number. If a firewall is used, we recommend reconfiguring the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to use the same port number every time. A fixed port or a static port is recommended. For more information, see [Configure a Server to Listen on a Specific TCP Port (SQL Server Configuration Manager)](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).
 
 An alternative to configuring a named instance to listen on a fixed port is to create an exception in the firewall for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] program such as **sqlservr.exe** (for the [!INCLUDE[ssDE](../../includes/ssde-md.md)]). The port number won't appear in the **Local Port** column of the **Inbound Rules** page when you're using the Windows Firewall with Advanced Security MMC snap-in. It can be difficult to audit which ports are open. Another consideration is that a service pack or cumulative update can change the path to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executable file and invalidate the firewall rule.
 
@@ -191,7 +191,7 @@ The following table lists ports and services that [!INCLUDE[ssNoVersion](../../i
 |--------------|----------|--------------|
 |Windows Management Instrumentation<br /><br />For more information about **Windows Management Instrumentation (WMI)**, see [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)|WMI runs as part of a shared service host with ports assigned through DCOM. WMI might be using TCP port 135.<br /><br />See [Special Considerations for Port 135](#special-considerations-for-port-135)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager uses WMI to list and manage services. We recommend that you use the preconfigured rule group **Windows Management Instrumentation (WMI)**. For more information, see the [Interaction with Other Firewall Rules](#interaction-with-other-firewall-rules) section below.|
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC)|TCP port 135<br /><br />See [Special Considerations for Port 135](#special-considerations-for-port-135)|If your application uses distributed transactions, you might have to configure the firewall to allow [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) traffic to flow between separate MS DTC instances, and between the MS DTC and resource managers such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. We recommend that you use the preconfigured **Distributed Transaction Coordinator** rule group.<br /><br />When a single shared MS DTC is configured for the entire cluster in a separate resource group, you should add sqlservr.exe as an exception to the firewall.|
-|The browse button in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] uses UDP to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Service. For more information, see [SQL Server Browser Service &#40;Database Engine and SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).|UDP port 1434|UDP is a connectionless protocol.<br /><br />The firewall has a setting ([UnicastResponsesToMulticastBroadcastDisabled Property of the INetFwProfile Interface](/windows/win32/api/netfw/nf-netfw-inetfwprofile-get_unicastresponsestomulticastbroadcastdisabled)) which controls the behavior of the firewall and unicast responses to a broadcast (or multicast) UDP request.  It has two behaviors:<br /><br />If the setting is TRUE, no unicast responses to a broadcast are permitted at all. Enumerating services will fail.<br /><br />If the setting is FALSE (default), unicast responses are permitted for 3 seconds. The length of time isn't configurable. In a congested or high-latency network, or for heavily loaded servers, tries to enumerate instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might return a partial list, which might mislead users.|
+|The browse button in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] uses UDP to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Service. For more information, see [SQL Server Browser Service &#40;Database Engine and SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).|UDP port 1434|UDP is a connectionless protocol.<br /><br />The firewall has a setting ([UnicastResponsesToMulticastBroadcastDisabled Property of the INetFwProfile Interface](/windows/win32/api/netfw/nf-netfw-inetfwprofile-get_unicastresponsestomulticastbroadcastdisabled)) which controls the behavior of the firewall and unicast responses to a broadcast (or multicast) UDP request. It has two behaviors:<br /><br />If the setting is TRUE, no unicast responses to a broadcast are permitted at all. Enumerating services will fail.<br /><br />If the setting is FALSE (default), unicast responses are permitted for 3 seconds. The length of time isn't configurable. In a congested or high-latency network, or for heavily loaded servers, tries to enumerate instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might return a partial list, which might mislead users.|
 |<a id="ipsec"></a> IPsec traffic|UDP port 500 and UDP port 4500|If the domain policy requires network communications to be done through IPsec, you must also add UDP port 4500 and UDP port 500 to the exception list. IPsec is an option using the **New Inbound Rule Wizard** in the Windows Firewall snap-in. For more information, see [Using the Windows Firewall with Advanced Security Snap-in](#use-the-windows-firewall-with-advanced-security-snap-in) below.|
 |Using Windows Authentication with Trusted Domains|Firewalls must be configured to allow authentication requests.|For more information, see [How to configure a firewall for domains and trusts](https://support.microsoft.com/kb/179442/).|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Clustering|Clustering requires extra ports that aren't directly related to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|For more information, see [Enable a network for cluster use](/previous-versions/windows/it-pro/windows-server-2003/cc728293(v=ws.10)).|
@@ -204,7 +204,7 @@ When you use RPC with TCP/IP or with UDP/IP as the transport, inbound ports are 
 For more information about port 135, see the following references:
 
 - [Service overview and network port requirements for the Windows Server system](https://support.microsoft.com/kb/832017)
-- [Remote procedure call (RPC)](/previous-versions/ms950395(v=msdn.10))
+- [Remote procedure call (RPC)](/windows/win32/rpc/rpc-start-page)
 - [How to configure RPC dynamic port allocation to work with firewalls](https://support.microsoft.com/kb/154596/)
 
 ## Interaction with other firewall rules
@@ -246,7 +246,7 @@ The added firewall can restrict the opening of the port to incoming connections 
 
 1. Choose one of the following options:
 
-   - **Any computer (including computers on the Internet)**: Not recommended. Any computer that can address your computer to connect to the specified program or port. This setting might be necessary to allow information to be presented to anonymous users on the internet, but increases your exposure to malicious users. Enabling this setting an allow Network Address Translation (NAT) traversal, such as the Allow edge traversal option will increase exposure.
+   - **Any computer (including computers on the Internet)**: Not recommended. Any computer that can address your computer to connect to the specified program or port. This setting might be necessary to allow information to be presented to anonymous users on the internet, but increases your exposure to malicious users. Enabling this setting allows Network Address Translation (NAT) traversal, such as the Edge Traversal option increases exposure.
 
    - **My network (subnet) only**: A more secure setting than **Any computer**. Only computers on the local subnet of your network can connect to the program or port.
 
@@ -303,7 +303,7 @@ The following tools and techniques can be useful in troubleshooting firewall iss
 - Review the ports that are active on the computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running. The review process includes [verifying which TCP/IP ports are listening](#list-which-tcpip-ports-are-listening) and also verifying the status of the ports.
 
 - The **PortQry** utility can be used to report the status of TCP/IP ports as listening, not listening, or filtered.
-(The utility may not receive response from the port if it has a filtered status.)
+(The utility might not receive response from the port if it has a filtered status.)
 The **PortQry** utility is available for download from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=17148).
 
 ### List which TCP/IP ports are listening
@@ -316,7 +316,7 @@ To verify which ports are listening, display active TCP connections and IP stati
 
    The `-n` switch instructs **netstat** to numerically display the address and port number of active TCP connections. The `-a` switch instructs **netstat** to display the TCP and UDP ports on which the computer is listening.
 
-## See also
+## Related content
 
 - [Service overview and network port requirements for the Windows Server system](https://support.microsoft.com/kb/832017)
 - [How to: Configure Firewall Settings (Azure SQL Database)](/azure/azure-sql/database/firewall-configure)

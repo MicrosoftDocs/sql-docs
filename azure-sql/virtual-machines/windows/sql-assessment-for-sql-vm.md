@@ -7,7 +7,7 @@ ms.reviewer: mathoma
 ms.date: 07/14/2023
 ms.service: virtual-machines
 ms.topic: how-to
-ms.custom: ignite-fall-2021, devx-track-azurecli
+ms.custom: devx-track-azurecli
 ---
 
 

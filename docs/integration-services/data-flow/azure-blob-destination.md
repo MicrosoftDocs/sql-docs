@@ -6,7 +6,7 @@ ms.author: chugu
 ms.date: "07/25/2016"
 ms.service: sql
 ms.subservice: integration-services
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
   - "sql13.dts.designer.afpblobdest.f1"
   - "sql14.dts.designer.afpblobdest.f1"

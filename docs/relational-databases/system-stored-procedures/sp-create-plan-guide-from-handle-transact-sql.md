@@ -108,7 +108,7 @@ GO
 ### B. Creating multiple plan guides for a multistatement batch  
  The following example creates a plan guide for two statements within a multistatement batch. The plan guides are created within an explicit transaction so that the query plan for the batch is not removed from the plan cache after the first plan guide is created. The example begins by executing a multistatement batch. The plan for the batch is examined by using dynamic management views. Notice that a row for each statement in the batch is returned. A plan guide is then created for the first and third statements in the batch by specifying the `@statement_start_offset` parameter. The final statement in the example verifies that the plan guides exist.  
   
- [!code-sql[PlanGuides#Create_From_Handle2](../../relational-databases/system-stored-procedures/codesnippet/tsql/sp-create-plan-guide-fro_1.sql)]  
+ :::code language="sql" source="codesnippet/tsql/sp-create-plan-guide-fro_1.sql":::
   
 ## See Also  
  [Database Engine Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   

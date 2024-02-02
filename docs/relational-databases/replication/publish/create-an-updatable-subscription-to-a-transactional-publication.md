@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "11/20/2018"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "updatable transactional subscriptions"
@@ -242,61 +242,61 @@ DECLARE @publication AS sysname;
 DECLARE @publicationDB AS sysname;
 DECLARE @publisher AS sysname;
 DECLARE @login AS sysname;
-DECLARE @password AS nvarchar(512);
+DECLARE @password AS NVARCHAR(512);
 SET @publication = N'AdvWorksProductTran';
-SET @publicationDB = N'AdventureWorks2008R2';
+SET @publicationDB = N'AdventureWorks2022';
 SET @publisher = $(PubServer);
 SET @login = $(Login);
 SET @password = $(Password);
 
 -- At the subscription database, create a pull subscription to a transactional 
 -- publication using immediate updating with queued updating as a failover.
-EXEC sp_addpullsubscription 
-    @publisher = @publisher, 
-    @publication = @publication, 
-    @publisher_db = @publicationDB, 
-    @update_mode = N'failover', 
-	@subscription_type = N'pull';
+EXEC sp_addpullsubscription
+    @publisher = @publisher,
+    @publication = @publication,
+    @publisher_db = @publicationDB,
+    @update_mode = N'failover',
+    @subscription_type = N'pull';
 
 -- Add an agent job to synchronize the pull subscription, 
 -- which uses Windows Authentication when connecting to the Distributor.
-EXEC sp_addpullsubscription_agent 
-    @publisher = @publisher, 
-    @publisher_db = @publicationDB, 
+EXEC sp_addpullsubscription_agent
+    @publisher = @publisher,
+    @publisher_db = @publicationDB,
     @publication = @publication,
     @job_login = @login,
-    @job_password = @password; 
+    @job_password = @password;
 
 -- Add a Windows Authentication-based linked server that enables the 
 -- Subscriber-side triggers to make updates at the Publisher. 
-EXEC sp_link_publication 
-    @publisher = @publisher, 
+EXEC sp_link_publication
+    @publisher = @publisher,
     @publication = @publication,
-    @publisher_db = @publicationDB, 
+    @publisher_db = @publicationDB,
     @security_mode = 0,
     @login = @login,
     @password = @password;
 GO
 
-USE AdventureWorks2008R2;
+USE AdventureWorks2022;
 GO
 
 -- Execute this batch at the Publisher.
 DECLARE @publication AS sysname;
 DECLARE @subscriptionDB AS sysname;
 DECLARE @subscriber AS sysname;
-SET @publication = N'AdvWorksProductTran'; 
-SET @subscriptionDB = N'AdventureWorks2008R2Replica'; 
+SET @publication = N'AdvWorksProductTran';
+SET @subscriptionDB = N'AdventureWorks2022Replica';
 SET @subscriber = $(SubServer);
 
 -- At the Publisher, register the subscription, using the defaults.
-USE [AdventureWorks2008R2]
-EXEC sp_addsubscription 
-	@publication = @publication, 
-	@subscriber = @subscriber, 
-	@destination_db = @subscriptionDB, 
-	@subscription_type = N'pull', 
-	@update_mode = N'failover';
+USE AdventureWorks2022;
+EXEC sp_addsubscription
+    @publication = @publication,
+    @subscriber = @subscriber,
+    @destination_db = @subscriptionDB,
+    @subscription_type = N'pull',
+    @update_mode = N'failover';
 GO
 ``` 
 

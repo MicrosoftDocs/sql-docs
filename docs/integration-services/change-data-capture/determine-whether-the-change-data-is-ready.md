@@ -184,7 +184,7 @@ helpviewer_keywords:
   
          \- or -  
   
-    -   If you are programming in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], enter the following line of code:  
+    -   If you are programming in [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)], enter the following line of code:  
   
         ```  
         System.Threading.Thread.Sleep(Ctype(Dts.Variables("DelaySeconds").Value, Integer) * 1000)  

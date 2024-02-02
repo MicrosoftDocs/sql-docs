@@ -39,13 +39,15 @@ The **sqlcmd** utility lets you enter Transact-SQL statements, system procedures
 - In a Windows script file.
 - In an operating system (`cmd.exe`) job step of a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent job.
 
+[!INCLUDE [entra-id](../../includes/entra-id-hard-coded.md)]
+
 ## Find out which version you have installed
 
 There are two versions of **sqlcmd**:
 
-- The ODBC-based **sqlcmd**, available with [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] or the Microsoft Command Line Utilities, and part of the `mssql-tools` package on Linux.
-
 - The `go-mssqldb`-based **sqlcmd**, sometimes styled as **go-sqlcmd**. This version is a standalone tool you can download independently of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)].
+
+- The ODBC-based **sqlcmd**, available with [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] or the Microsoft Command Line Utilities, and part of the `mssql-tools` package on Linux.
 
 To determine the version you have installed, run the following statement at the command line:
 
@@ -99,7 +101,9 @@ Copyright (C) 2022 Microsoft Corporation. All rights reserved.
 
 You may have several versions of **sqlcmd** (ODBC) installed on your computer. Be sure you're using the correct version. You should have at least version 15.0.4298.1 installed.
 
-Always Encrypted (`-g`) and Azure AD authentication (`-G`) require at least version 13.1.
+Always Encrypted (`-g`) and Microsoft Entra authentication (`-G`) require at least version 13.1.
+
+[!INCLUDE [entra-id-hard-coded](../../includes/entra-id-hard-coded.md)]
 
 ---
 
@@ -214,7 +218,7 @@ Connections from the **sqlcmd** (Go) utility are limited to TCP connections. Nam
 
 #### Enhancements
 
-- `:Connect` now has an optional `-G` parameter to select one of the authentication methods for Azure SQL Database  - `SqlAuthentication`, `ActiveDirectoryDefault`, `ActiveDirectoryIntegrated`, `ActiveDirectoryServicePrincipal`, `ActiveDirectoryManagedIdentity`, `ActiveDirectoryPassword`. For more information, see [Azure Active Directory authentication](sqlcmd-authentication.md). If `-G` isn't provided, Integrated security or SQL Server Authentication is used, depending on the presence of a `-U` user name parameter.
+- `:Connect` now has an optional `-G` parameter to select one of the authentication methods for Azure SQL Database  - `SqlAuthentication`, `ActiveDirectoryDefault`, `ActiveDirectoryIntegrated`, `ActiveDirectoryServicePrincipal`, `ActiveDirectoryManagedIdentity`, `ActiveDirectoryPassword`. For more information, see [Microsoft Entra authentication](sqlcmd-authentication.md). If `-G` isn't provided, Integrated security or SQL Server authentication is used, depending on the presence of a `-U` user name parameter.
 
 - The new `--driver-logging-level` command line parameter allows you to see traces from the `go-mssqldb` driver. Use `64` to see all traces.
 
@@ -283,7 +287,7 @@ Currently, **sqlcmd** doesn't require a space between the command-line option an
 
 #### -A
 
-Signs in to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] with a dedicated administrator connection (DAC). This kind of connection is used to troubleshoot a server. This connection works only with server computers that support DAC. If DAC isn't available, **sqlcmd** generates an error message, and then exits. For more information about DAC, see [Diagnostic Connection for Database Administrators](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). The `-A` option isn't supported with the `-G` option. When connecting to Azure SQL Database using `-A`, you must be an administrator on the logical SQL server. DAC isn't available for an Azure AD administrator.
+Signs in to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] with a dedicated administrator connection (DAC). This kind of connection is used to troubleshoot a server. This connection works only with server computers that support DAC. If DAC isn't available, **sqlcmd** generates an error message, and then exits. For more information about DAC, see [Diagnostic Connection for Database Administrators](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). The `-A` option isn't supported with the `-G` option. When connecting to Azure SQL Database using `-A`, you must be an administrator on the logical SQL server. DAC isn't available for a Microsoft Entra administrator.
 
 #### -C
 
@@ -308,7 +312,7 @@ Interprets the server name provided to `-S` as a DSN instead of a hostname. For 
 
 #### -l *login_timeout*
 
-Specifies the number of seconds before a **sqlcmd** login to the ODBC driver times out when you try to connect to a server. This option sets the **sqlcmd** scripting variable `SQLCMDLOGINTIMEOUT`. The default time-out for login to **sqlcmd** is 8 seconds. When using the `-G` option to connect to Azure SQL Database or Azure Synapse Analytics and authenticate using Azure AD, a timeout value of at least 30 seconds is recommended. The login time-out must be a number between `0` and `65534`. If the value supplied isn't numeric, or doesn't fall into that range, **sqlcmd** generates an error message. A value of `0` specifies time-out to be infinite.
+Specifies the number of seconds before a **sqlcmd** login to the ODBC driver times out when you try to connect to a server. This option sets the **sqlcmd** scripting variable `SQLCMDLOGINTIMEOUT`. The default time-out for login to **sqlcmd** is 8 seconds. When using the `-G` option to connect to Azure SQL Database or Azure Synapse Analytics and authenticate using Microsoft Entra ID, a timeout value of at least 30 seconds is recommended. The login time-out must be a number between `0` and `65534`. If the value supplied isn't numeric, or doesn't fall into that range, **sqlcmd** generates an error message. A value of `0` specifies time-out to be infinite.
 
 #### -E
 
@@ -322,13 +326,13 @@ Sets the Column Encryption setting to `Enabled`. For more information, see [Alwa
 
 #### -G
 
-This option is used by the client when connecting to Azure SQL Database or Azure Synapse Analytics to specify that the user be authenticated using Azure AD authentication. This option sets the **sqlcmd** scripting variable `SQLCMDUSEAAD = true`. The `-G` option requires at least **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute `sqlcmd -?`. For more information, see [Connecting to SQL Database or Azure Synapse Analytics By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview). The `-A` option isn't supported with the `-G` option.
+This option is used by the client when connecting to Azure SQL Database or Azure Synapse Analytics to specify that the user be authenticated using Microsoft Entra authentication. This option sets the **sqlcmd** scripting variable `SQLCMDUSEAAD = true`. The `-G` option requires at least **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute `sqlcmd -?`. For more information, see [Connecting to SQL Database or Azure Synapse Analytics By Using Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview). The `-A` option isn't supported with the `-G` option.
 
 The `-G` option only applies to Azure SQL Database and Azure Synapse Analytics.
 
-Azure AD interactive authentication isn't currently supported on Linux or macOS. Azure AD integrated authentication requires [Microsoft ODBC Driver 17 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [Configured Kerberos environment](../../connect/odbc/linux-mac/using-integrated-authentication.md).
+Microsoft Entra interactive authentication isn't currently supported on Linux or macOS. Microsoft Entra integrated authentication requires [Microsoft ODBC Driver 17 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [Configured Kerberos environment](../../connect/odbc/linux-mac/using-integrated-authentication.md).
 
-For more information about Azure Active Directory authentication, see [Azure Active Directory authentication in sqlcmd](sqlcmd-authentication.md).
+For more information about Microsoft Entra authentication, see [Microsoft Entra authentication in sqlcmd](sqlcmd-authentication.md).
 
 #### -H *workstation_name*
 
@@ -1297,9 +1301,11 @@ To set the XML mode to off, use the following command: `:XML OFF`.
 
 For more info, see [XML Output Format](#OutputXML) in this article.
 
-### Use Azure AD authentication
+<a name='use-azure-ad-authentication'></a>
 
-Examples using Azure AD authentication:
+### Use Microsoft Entra authentication
+
+Examples using Microsoft Entra authentication:
 
 ::: zone pivot="cs1-bash"
 

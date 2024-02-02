@@ -27,7 +27,6 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB interfaces"
   - "XML [SQL Server], SQL Server Native Client"
   - "COLUMNS rowset"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using XML Data Types in SQL Server Native Clients
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

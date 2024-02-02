@@ -81,7 +81,6 @@ CDC doesn't support the values for computed columns even if the computed column 
 
 CDC is supported for SQL Server 2017 on Linux starting with CU18, and SQL Server 2019 on Linux.
 
-
 ## See Also  
 
 * [CDC with Azure SQL Database](/azure/azure-sql/database/change-data-capture-overview)

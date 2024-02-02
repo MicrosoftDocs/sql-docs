@@ -770,15 +770,17 @@ Constructs and operations not supported:
 Only literal predicates defined in a query can be pushed down to the external data source. This is unlike linked servers and accessing where predicates determined during query execution can be used, that is, when used in conjunction with a nested loop in a query plan. This will often lead to the whole external table being copied locally and then joined to.
 
 ```sql
-  \\ Assuming External.Orders is an external table and Customer is a local table.
-  \\ This query  will copy the whole of the external locally as the predicate needed
-  \\ to filter isn't known at compile time. Its only known during execution of the query
-  
-  SELECT Orders.OrderId, Orders.OrderTotal
-    FROM External.Orders
-   WHERE CustomerId in (SELECT TOP 1 CustomerId
-                          FROM Customer
-                          WHERE CustomerName = 'MyCompany')
+-- Assuming External.Orders is an external table and Customer is a local table.
+-- This query  will copy the whole of the external locally as the predicate needed
+-- to filter isn't known at compile time. Its only known during execution of the query
+
+SELECT Orders.OrderId, Orders.OrderTotal
+FROM External.Orders
+WHERE CustomerId IN (
+        SELECT TOP 1 CustomerId
+        FROM Customer
+        WHERE CustomerName = 'MyCompany'
+);
 ```
 
 Use of external tables prevents use of parallelism in the query plan.
@@ -1507,9 +1509,9 @@ Learn more about external tables in Analytics Platform System in the following a
 
 ## Overview: Azure SQL Managed Instance
 
-Creates an external data table in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. For complete information, see [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview).
+Creates an external data table in [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)]. For complete information, see [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview).
 
-Data virtualization in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] provides access to external data in a variety of file formats in Azure Data Lake Storage Gen2 or Azure Blob Storage, and to query them with T-SQL statements, even combine data with locally stored relational data using joins.
+Data virtualization in [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)] provides access to external data in a variety of file formats in Azure Data Lake Storage Gen2 or Azure Blob Storage, and to query them with T-SQL statements, even combine data with locally stored relational data using joins.
 
 See also [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md) and [DROP EXTERNAL TABLE](drop-external-table-transact-sql.md).
 
@@ -1551,9 +1553,9 @@ The column definitions, including the data types and number of columns, must mat
 
 Specifies the folder or the file path and file name for the actual data in Azure Data Lake or Azure Blob Storage. The location starts from the root folder. The root folder is the data location specified in the external data source. `CREATE EXTERNAL TABLE` doesn't create the path and folder.
 
-If you specify LOCATION to be a folder, the query from [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] that selects from the external table will retrieve files from the folder but not all of its subfolders. 
+If you specify LOCATION to be a folder, the query from [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)] that selects from the external table will retrieve files from the folder but not all of its subfolders. 
 
-[!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] cannot find files in subfolders or hidden folders. It also doesn't return files for which the file name begins with an underline (_) or a period (.).
+[!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)] cannot find files in subfolders or hidden folders. It also doesn't return files for which the file name begins with an underline (_) or a period (.).
 
 In the following image example, if `LOCATION='/webdata/'`, a query will return rows from `mydata.txt`. It won't return `mydata2.txt` because it is in a subfolder, it won't return `mydata3.txt` because it's in a hidden folder, and it won't return `_hidden.txt` because it's a hidden file.
 
@@ -1596,7 +1598,7 @@ You can create many external tables that reference the same or different externa
 
 ## Limitations and restrictions
 
-Since the data for an external table is not under the direct management control of [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], it can be changed or removed at any time by an external process. As a result, query results against an external table aren't guaranteed to be deterministic. The same query can return different results each time it runs against an external table. Similarly, a query might fail if the external data is moved or removed.
+Since the data for an external table is not under the direct management control of [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], it can be changed or removed at any time by an external process. As a result, query results against an external table aren't guaranteed to be deterministic. The same query can return different results each time it runs against an external table. Similarly, a query might fail if the external data is moved or removed.
 
 You can create multiple external tables that each reference different external data sources.
 
@@ -1617,7 +1619,7 @@ The row width limit of 1 MB is based on the maximum size of a single valid row b
 
 ### Data type limitations
 
-The following data types cannot be used in external tables in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]:
+The following data types cannot be used in external tables in [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)]:
 
 - `geography`
 - `geometry`

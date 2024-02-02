@@ -3,7 +3,7 @@ title: Manage SQL Server on Linux with PowerShell
 description: Learn details about SQL Server PowerShell and see a couple of examples on how to use Windows with SQL Server on Linux.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 12/16/2021
+ms.date: 01/03/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -18,11 +18,11 @@ This article introduces [SQL Server PowerShell](../powershell/sql-server-powersh
 
 ## Install the newest version of SQL PowerShell on Windows
 
-[SQL PowerShell](../powershell/download-sql-server-ps-module.md) on Windows is maintained in the PowerShell Gallery. When working with SQL Server, you should always use the most recent version of the SqlServer PowerShell module.
+The [SQL Server PowerShell module](../powershell/download-sql-server-ps-module.md) on Windows is maintained in the PowerShell Gallery. When working with SQL Server, you should always use the most recent version of the SqlServer PowerShell module.
 
 ## Before you begin
 
-Read the [Known Issues](sql-server-linux-release-notes-2017.md#known-issues) for SQL Server on Linux.
+Read the [Known issues](sql-server-linux-known-issues.md) for SQL Server on Linux.
 
 ## Launch PowerShell and import the *sqlserver* module
 
@@ -75,15 +75,15 @@ Get-SqlInstance -ServerInstance $serverInstance -Credential $credential
 PowerShell should display information similar to the following output:
 
 ```output
-Instance Name                   Version    ProductLevel UpdateLevel  HostPlatform HostDistribution                
--------------                   -------    ------------ -----------  ------------ ----------------                
-your_server_instance            14.0.3048  RTM          CU13         Linux        Ubuntu 
+Instance Name                   Version    ProductLevel UpdateLevel  HostPlatform HostDistribution
+-------------                   -------    ------------ -----------  ------------ ----------------
+your_server_instance            14.0.3048  RTM          CU13         Linux        Ubuntu
 ```
 
-> [!NOTE]
+> [!NOTE]  
 > If nothing is displayed for these values, the connection to the target SQL Server instance most likely failed. Make sure that you can use the same connection information to connect from SQL Server Management Studio. Then review the [connection troubleshooting recommendations](sql-server-linux-troubleshooting-guide.md#connection).
 
-## Using the SQL Server PowerShell Provider
+## Use the SQL Server PowerShell Provider
 
 Another option for connecting to your SQL Server instance is to use the [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md).  This provider allows you to navigate SQL Server instance similar to as if you were navigating the tree structure in Object Explorer, but at the cmdline. By default, this provider is presented as a PSDrive named `SQLSERVER:\`, which you can use to connect and navigate SQL Server instances that your domain account has access to. For more information on how to set up Active Directory authentication for SQL Server on Linux, see [Configuration steps](./sql-server-linux-active-directory-auth-overview.md#configuration-steps).
 

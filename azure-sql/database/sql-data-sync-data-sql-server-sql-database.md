@@ -3,7 +3,7 @@ title: What is SQL Data Sync for Azure?
 description: This overview introduces SQL Data Sync for Azure, which allows you to sync data across multiple cloud and on-premises databases.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: wiassaf, mathoma, jeschult
+ms.reviewer: mathoma, hudequei
 ms.date: 11/28/2023
 ms.service: sql-database
 ms.subservice: sql-data-sync
@@ -148,7 +148,7 @@ Provisioning and deprovisioning during sync group creation, update, and deletion
 - Be cautious when you use the following data types as a primary key, because the supported precision is only to the second: time, datetime, datetime2, datetimeoffset.
 - The names of objects (databases, tables, and columns) can't contain the printable characters period (`.`), left square bracket (`[`), or right square bracket (`]`).
 - A table name can't contain printable characters: `! " # $ % ' ( ) * + -` or space.
-- Microsoft Entra ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) authentication isn't supported.
+- Microsoft Entra ([formerly Azure Active Directory](/entra/fundamentals/new-name)) authentication isn't supported.
 - If there are tables with the same name but different schema (for example, `dbo.customers` and `sales.customers`) only one of the tables can be added into sync.
 - Columns with user-defined data types aren't supported.
 - Moving servers between different subscriptions isn't supported. 

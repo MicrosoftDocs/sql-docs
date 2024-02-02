@@ -1,5 +1,6 @@
 ---
 title: Customer-managed keys with transparent data encryption using user-assigned managed identity
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Bring Your Own Key (BYOK) support for transparent data encryption (TDE) using user-assigned managed identity (UMI)
 author: GithubMirek
 ms.author: mireks
@@ -14,7 +15,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 # Managed identities for transparent data encryption with customer-managed key
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-Microsoft Entra ID [formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name) provides an automatically managed identity to authenticate to any Azure service that supports Microsoft Entra authentication, such as [Azure Key Vault](/azure/key-vault/general/overview), without exposing credentials in the code. For more information, see [Managed identity types](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) in Azure.
+Microsoft Entra ID [formerly Azure Active Directory](/entra/fundamentals/new-name) provides an automatically managed identity to authenticate to any Azure service that supports Microsoft Entra authentication, such as [Azure Key Vault](/azure/key-vault/general/overview), without exposing credentials in the code. For more information, see [Managed identity types](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) in Azure.
 
 Managed Identities can be of two types:
 

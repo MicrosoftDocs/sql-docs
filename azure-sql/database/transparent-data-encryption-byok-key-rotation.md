@@ -5,18 +5,19 @@ description: Learn how to rotate the Transparent data encryption (TDE) protector
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 09/19/2023
-ms.service: sql-database
+ms.date: 01/16/2024
+ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: how-to
 ms.custom:
   - sqldbrb=1
   - devx-track-azurecli
   - devx-track-azurepowershell
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Rotate the Transparent data encryption (TDE) protector
 
-[!INCLUDE[appliesto-sqldb-sqlmi-asa-dedicated-only](../includes/appliesto-sqldb-sqlmi-asa-dedicated-only.md)]
+[!INCLUDE [appliesto-sqldb-sqlmi-asa-dedicated-only](../includes/appliesto-sqldb-sqlmi-asa-dedicated-only.md)]
 
 This article describes key rotation for a [server](logical-servers.md) using a TDE protector from Azure Key Vault. Rotating the logical TDE protector for a server means to switch to a new asymmetric key that protects the databases on the server. Key rotation is an online operation and should only take a few seconds to complete, because this only decrypts and re-encrypts the database's data encryption key, not the entire database.
 
@@ -51,10 +52,7 @@ Go to the [Azure portal](https://portal.azure.com)
 
 # [PowerShell](#tab/azure-powershell)
 
-For Az PowerShell module installation instructions, see [Install Azure PowerShell](/powershell/azure/install-az-ps). For specific cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/).
-
-> [!IMPORTANT]
-> The PowerShell Azure Resource Manager (RM) module is still supported, but all future development is for the Az.Sql module. The AzureRM module will continue to receive bug fixes until at least December 2020.  The arguments for the commands in the Az module and in the AzureRm modules are substantially identical. For more about their compatibility, see [Introducing the new Azure PowerShell Az module](/powershell/azure/new-azureps-module-az).
+For Az PowerShell module installation instructions, see [Install Azure PowerShell](/powershell/azure/install-az-ps). For specific cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/). Use [the new Azure PowerShell Az module](/powershell/azure/new-azureps-module-az).
 
 # [The Azure CLI](#tab/azure-cli)
 
@@ -76,11 +74,11 @@ Automatic rotation in a server, database, or managed instance can be used with a
 Using the [Azure portal](https://portal.azure.com):
 
 1. Browse to the **Transparent data encryption** section for an existing server or managed instance.
-2. Select the **Customer-managed key** option and select the key vault and key to be used as the TDE protector.
-3. Check the **Auto-rotate key** checkbox.
-4. Select **Save**.
+1. Select the **Customer-managed key** option and select the key vault and key to be used as the TDE protector.
+1. Check the **Auto-rotate key** checkbox.
+1. Select **Save**.
 
-:::image type="content" source="media/transparent-data-encryption-byok-key-rotation/auto-rotate-key.png" lightbox="media/transparent-data-encryption-byok-key-rotation/auto-rotate-key.png" alt-text="Screenshot of auto rotate key configuration for Transparent data encryption.":::
+:::image type="content" source="media/transparent-data-encryption-byok-key-rotation/auto-rotate-key.png" alt-text="Screenshot of auto rotate key configuration for Transparent data encryption." lightbox="media/transparent-data-encryption-byok-key-rotation/auto-rotate-key.png":::
 
 # [PowerShell](#tab/azure-powershell)
 
@@ -175,18 +173,18 @@ In an Azure SQL Database geo-replication configuration where the primary server 
 Using the [Azure portal](https://portal.azure.com):
 
 1. Browse to the **Transparent data encryption** section for the **primary** server.
-2. Select the **Customer-managed key** option and select the key vault and key to be used as the TDE protector.
-3. Check the **Auto-rotate key** checkbox.
-4. Select **Save**.
+1. Select the **Customer-managed key** option and select the key vault and key to be used as the TDE protector.
+1. Check the **Auto-rotate key** checkbox.
+1. Select **Save**.
 
-   :::image type="content" source="media/transparent-data-encryption-byok-key-rotation/auto-rotate-key-primary.png" lightbox="media/transparent-data-encryption-byok-key-rotation/auto-rotate-key-primary.png" alt-text="Screenshot of auto rotate key configuration for transparent data encryption in a geo-replication scenario on the primary server.":::
+   :::image type="content" source="media/transparent-data-encryption-byok-key-rotation/auto-rotate-key-primary.png" alt-text="Screenshot of auto rotate key configuration for transparent data encryption in a geo-replication scenario on the primary server." lightbox="media/transparent-data-encryption-byok-key-rotation/auto-rotate-key-primary.png":::
 
-5. Browse to the **Transparent data encryption** section for the **secondary** server.
-6. Select the **Customer-managed key** option and select the key vault and key to be used as the TDE protector. Use the same key as you used for the primary server.
-7. Uncheck **Make this key the default TDE protector**.
-8. Select **Save**.
+1. Browse to the **Transparent data encryption** section for the **secondary** server.
+1. Select the **Customer-managed key** option and select the key vault and key to be used as the TDE protector. Use the same key as you used for the primary server.
+1. Uncheck **Make this key the default TDE protector**.
+1. Select **Save**.
 
-   :::image type="content" source="media/transparent-data-encryption-byok-key-rotation/auto-rotate-key-secondary.png" lightbox="media/transparent-data-encryption-byok-key-rotation/auto-rotate-key-secondary.png" alt-text="Screenshot of auto rotate key configuration for transparent data encryption in a geo-replication scenario on the secondary server.":::
+   :::image type="content" source="media/transparent-data-encryption-byok-key-rotation/auto-rotate-key-secondary.png" alt-text="Screenshot of auto rotate key configuration for transparent data encryption in a geo-replication scenario on the secondary server." lightbox="media/transparent-data-encryption-byok-key-rotation/auto-rotate-key-secondary.png":::
 
 When the key is rotated on the primary server, it's automatically transferred to the secondary server.
 
@@ -233,7 +231,7 @@ The `<keyVaultKeyId>` can be [retrieved from Key Vault](/azure/key-vault/keys/qu
 
 ---
 
-### Using different keys for each server
+### <a id="using-different-keys-for-each-server"></a> Use different keys for each server
 
 It's possible to configure the primary and secondary servers with a different key vault key when configuring TDE with CMK in the Azure portal. It's not evident in the Azure portal that the key used to protect the primary server is also the same key that protects the primary database that has been replicated to the secondary server. However, you can use PowerShell, the Azure CLI, or REST APIs to obtain details about keys that are used on the server. This shows that auto rotated keys are transferred from the primary server to the secondary server.
 
@@ -283,10 +281,10 @@ With manual key rotation, when a new key version is generated in key vault (eith
 Using the Azure portal:
 
 1. Browse to the **Transparent data encryption** menu for an existing server or managed instance.
-2. Select the **Customer-managed key** option and select the key vault and key to be used as the new TDE protector.
-3. Select **Save**.
+1. Select the **Customer-managed key** option and select the key vault and key to be used as the new TDE protector.
+1. Select **Save**.
 
-:::image type="content" source="media/transparent-data-encryption-byok-key-rotation/manually-rotate-key.png" lightbox="media/transparent-data-encryption-byok-key-rotation/manually-rotate-key.png" alt-text="Screenshot of manually rotate key configuration for Transparent data encryption.":::
+:::image type="content" source="media/transparent-data-encryption-byok-key-rotation/manually-rotate-key.png" alt-text="Screenshot of manually rotate key configuration for Transparent data encryption." lightbox="media/transparent-data-encryption-byok-key-rotation/manually-rotate-key.png":::
 
 # [PowerShell](#tab/azure-powershell)
 
@@ -444,7 +442,7 @@ The following examples use [az sql mi tde-key set](/cli/azure/sql/mi/tde-key#az-
 
 ---
 
-## Next steps
+## Related content
 
 - If there's a security risk, learn how to remove a potentially compromised TDE protector: [Remove a potentially compromised key](transparent-data-encryption-byok-remove-tde-protector.md).
 

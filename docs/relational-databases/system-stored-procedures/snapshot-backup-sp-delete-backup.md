@@ -41,7 +41,7 @@ The name of the database containing the snapshot to be deleted. When a database 
 
 Requires ALTER ANY DATABASE permission or ALTER permission on the specified database.
 
-## See also
+## Related content
 
 - [sys.fn_db_backup_file_snapshots (Transact-SQL)](../system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)
 - [sp_delete_backup_file_snapshot (Transact-SQL)](snapshot-backup-sp-delete-backup-file-snapshot.md)

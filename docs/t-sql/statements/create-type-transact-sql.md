@@ -4,7 +4,7 @@ description: Creates an alias data type or a user-defined type in the current da
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/22/2023
+ms.date: 12/11/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -245,7 +245,7 @@ Specifies the error response to duplicate key values in a multiple-row insert op
 
 #### INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] ( *column_name* [ ASC | DESC ] [ , ...n ] )
 
-**Applies to**: [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssSDSMIfull](../../includes/sssdsmifull-md.md)].
+**Applies to**: [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)].
 
 Specifies to create an index on the table. This can be a clustered index, or a nonclustered index. The index contains the columns listed, and sorts the data in either ascending or descending order.
 
@@ -255,19 +255,19 @@ You must specify column and table indexes as part of the `CREATE TABLE` statemen
 
 #### MEMORY_OPTIMIZED
 
-**Applies to**: [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssSDSMIfull](../../includes/sssdsmifull-md.md)]. [!INCLUDE [ssSDSMIfull](../../includes/sssdsmifull-md.md)] doesn't support memory optimized tables in General Purpose tier.
+**Applies to**: [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)]. [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)] doesn't support memory optimized tables in General Purpose tier.
 
 Indicates whether the table type is memory optimized. This option is off by default; the table (type) isn't a memory optimized table (type). Memory optimized table types are memory-optimized user tables, the schema of which is persisted on disk similar to other user tables.
 
 #### BUCKET_COUNT
 
-**Applies to**: [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssSDSMIfull](../../includes/sssdsmifull-md.md)].
+**Applies to**: [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)].
 
 Indicates the number of buckets that should be created in the hash index. The maximum value for `BUCKET_COUNT` in hash indexes is 1,073,741,824. For more information about bucket counts, see [Indexes on Memory-Optimized Tables](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md). *bucket_count* is a required argument.
 
 #### HASH
 
-**Applies to**: [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssSDSMIfull](../../includes/sssdsmifull-md.md)].
+**Applies to**: [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)].
 
 Indicates that a `HASH` index is created. Hash indexes are supported only on memory optimized tables.
 
@@ -303,7 +303,32 @@ Requires `CREATE TYPE` permission in the current database and `ALTER` permission
 
 If any columns in the `CREATE TABLE` statement are defined to be of a user-defined type, `REFERENCES` permission on the user-defined type is required.
 
-A user creating a table with a column that uses a user-defined type needs the `REFERENCES` permission on the user-defined type. If this table must be created in `tempdb`, then either the `REFERENCES` permission needs to be granted explicitly each time *before* the table is created, or this data type and `REFERENCES` permissions need to be added to the `model` database. If this is done, then this data type and permissions will be available in `tempdb` permanently. Otherwise, the user-defined data type and permissions will disappear when [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is restarted. For more information, see [CREATE TABLE](create-table-transact-sql.md#permissions-1).
+A user creating a table with a column that uses a user-defined type needs the `REFERENCES` permission on the user-defined type. If this table must be created in `tempdb`, then either the `REFERENCES` permission needs to be granted explicitly each time *before* the table is created, or this data type and `REFERENCES` permission need to be added to the `model` database. For example:
+
+```sql
+CREATE TYPE dbo.udt_money FROM varchar(11) NOT NULL;
+GO
+GRANT REFERENCES ON TYPE::dbo.udt_money TO public
+```
+
+If this is done, then this data type and `REFERENCES` permission will be available in `tempdb` permanently. Otherwise, the user-defined data type and permissions will disappear when [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is restarted. For more information, see [CREATE TABLE](create-table-transact-sql.md#permissions-1).
+
+If you don't want every new database to inherit the definition and permissions for this user- defined data type from model, you can use a startup stored procedure to create and assign the appropriate permissions only in `tempdb` database. For example:
+
+```sql
+USE master
+GO
+CREATE PROCEDURE setup_udt_in_tempdb
+AS
+EXEC ( 'USE tempdb;
+CREATE TYPE dbo.udt_money FROM varchar(11) NOT NULL;
+GRANT REFERENCES ON TYPE::dbo.udt_money TO public;')
+GO
+EXEC sp_procoption 'setup_udt_in_tempdb' , 'startup' , 'on'
+GO
+```
+
+Alternatively, instead of using temporary tables, consider using table variables when you need to reference user-defined data types for temporary storage needs. For table variables to reference user-defined data types, you don't need to explicitly grant permissions for the user-defined data type.
 
 ## Examples
 

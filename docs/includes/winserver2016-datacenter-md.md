@@ -1,1 +1,8 @@
-Windows Server 2016 Datacenter
+---
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 01/29/2024
+ms.service: sql
+ms.topic: include
+---
+ Windows Server 2016 Datacenter 

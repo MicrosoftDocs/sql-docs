@@ -12,13 +12,14 @@ monikerRange: "= azuresql || = azuresql-db"
 ---
 
 # Connect to and query Azure SQL Database using Node.js and mssql npm package
+[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using Node.js and mssql. This quickstart follows the recommended passwordless approach to connect to the database. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
 
 ## Prerequisites
 
 * An [Azure subscription](https://azure.microsoft.com/free/nodejs/)
-* A database in Azure SQL Database configured for authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
+* A database in Azure SQL Database configured for authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
 * Bash-enabled shell
 * [Node.js LTS](https://nodejs.org/)
 * [Visual Studio Code](https://code.visualstudio.com/)

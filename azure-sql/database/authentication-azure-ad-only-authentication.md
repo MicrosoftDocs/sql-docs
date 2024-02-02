@@ -1,6 +1,6 @@
 ---
 title: Microsoft Entra-only authentication
-titleSuffix: Azure SQL Database & Azure SQL Managed Instance
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
 description: This article provides information on the Microsoft Entra-only authentication feature with Azure SQL.
 author: nofield
 ms.author: nofield
@@ -9,7 +9,7 @@ ms.date: 09/27/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: ignite-fall-2021, devx-track-azurecli, devx-track-azurepowershell
+ms.custom: devx-track-azurecli, devx-track-azurepowershell
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 

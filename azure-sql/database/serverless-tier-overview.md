@@ -4,7 +4,7 @@ description: This article describes the new serverless compute tier and compares
 author: oslake
 ms.author: moslake
 ms.reviewer: wiassaf, mathoma
-ms.date: 12/08/2023
+ms.date: 01/05/2024
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -131,7 +131,7 @@ An option is provided to disable auto-pausing if desired.
 
 The following features do not support auto-pausing, but do support auto-scaling. If any of the following features are used, then auto-pausing must be disabled and the database remains online regardless of the duration of database inactivity:
 
-- Geo-replication ([active geo-replication](active-geo-replication-overview.md) and [auto-failover groups](auto-failover-group-sql-db.md)).
+- Geo-replication ([active geo-replication](active-geo-replication-overview.md) and [failover groups](failover-group-sql-db.md)).
 - [Long-term backup retention](long-term-retention-overview.md) (LTR).
 - The sync database used in [SQL Data Sync](sql-data-sync-data-sql-server-sql-database.md).  Unlike sync databases, hub and member databases support auto-pausing.
 - [DNS alias](dns-alias-overview.md) created for the logical server containing a serverless database.
@@ -560,7 +560,7 @@ In this example, the compute billed for the database is summation of the compute
 |14:00-24:00 |    0.5    | 2     | Minimum vCores provisioned    | 1 vCore * 36000 seconds = 36000 vCore seconds | 
 |**Total vCore seconds billed over 24 hours** |||| 180,000 vCore seconds |
 
-Suppose the compute unit price for the primary replica is $0.000163/vCore/second. Then the compute billed for the primary replica over this 24-hour period is the product of the compute unit price and vCore seconds billed: $0.000163/vCore/second * 180000 vCore seconds ~ $29.34.
+Suppose the compute unit price for the primary replica is $0.000105/vCore/second. Then the compute billed for the primary replica over this 24-hour period is the product of the compute unit price and vCore seconds billed: $0.000105/vCore/second * 180000 vCore seconds ~ $18.90.
 
 **HA replica**
 
@@ -579,7 +579,7 @@ Similarly for the named replica, suppose the total vCore seconds billed over 24 
 
 **Total compute cost**
 
-Therefore, the total compute bill for all three replicas of the database is around $29.34 + ~ $14.36 + $15.75 = $59.45.
+Therefore, the total compute bill for all three replicas of the database is around $18.90 + $14.36 + $15.75 = $49.01.
 
 ---
 

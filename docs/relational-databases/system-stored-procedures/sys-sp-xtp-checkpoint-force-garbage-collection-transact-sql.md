@@ -72,12 +72,9 @@ To mark unneeded source files for garbage collection in the `tempdb` database, u
 EXEC sys.sp_xtp_checkpoint_force_garbage_collection N'tempdb';
 ```
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-
-## Next steps
-
 - [sys.sp_xtp_force_gc (Transact-SQL)](sys-sp-xtp-force-gc-transact-sql.md)
 - [In-Memory OLTP (In-Memory Optimization)](../in-memory-oltp/overview-and-usage-scenarios.md)
 - [sys.dm_xtp_system_memory_consumers](../system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql.md)

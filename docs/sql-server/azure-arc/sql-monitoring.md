@@ -9,9 +9,9 @@ ms.topic: conceptual
 ms.custom: ignite-2023
 ---
 
-# Monitor SQL Server enabled by Azure Arc (preview)
+# Monitor [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] (preview)
 
-Monitor the performance of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] within the Azure portal. Performance metrics are automatically collected from DMV datasets on eligible [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] and sent to the Azure telemetry pipeline for near real-time processing. Performance data can then be viewed on the Performance Dashboard section of a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]. Monitoring data collection is automatic, assuming all prerequisites are met.
+Monitor the performance of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] within the Azure portal. Performance metrics are automatically collected from DMV datasets on eligible instances of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] and sent to the Azure telemetry pipeline for near real-time processing. Performance data can then be viewed on the Performance Dashboard section of a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]. Monitoring data collection is automatic, assuming all prerequisites are met.
 
 [!INCLUDE [azure-arc-sql-preview](includes/azure-arc-sql-preview.md)]
 
@@ -23,15 +23,18 @@ In order for monitoring data to be collected on a [!INCLUDE [ssazurearc](../../i
 
 * The version of Azure Extension for SQL Server (WindowsAgent.SqlServer) is v1.1.2504.99 or later
 * [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is running on Windows operating system
-   - Versions of Windows Server 2008 and 2012 aren't presently supported
+   - [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] running on [!INCLUDE [winserver2012-md](../../includes/winserver2012-md.md)] and older versions aren't supported
 * [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is a Standard or Enterprise Edition
 * The server has connectivity to telemetry.{region}.arcdataservices.com (for more information, see [Network Requirements ](/azure/azure-arc/servers/network-requirements?tabs=azure-cloud))
 * The license type on the [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is set to "License with Software Assurance" or "Pay-as-you-go"
 
 ### Current Limitations
-* FCI clusters aren't supported at this time
-* After adding or removing a SQL Server instance on your Windows machine, you must restart the Microsoft Sql Server (sqlServerExtension) extension service for the update to take effect. This restart is only required to add/remove the instance from monitoring collection.
+* FCI clusters aren't supported at this time.
+* After adding or removing a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance on your Windows machine, you must restart the [!INCLUDE [msconame-md](../../includes/msconame-md.md)] [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] (sqlServerExtension) extension service for the update to take effect. This restart is only required to add/remove the instance from monitoring collection.
 
+* SQL Server version must be 2016 or later.
+
+* To view the performance dashboard in the Azure Portal, you must have Contributor access or higher to the SQL Server - Azure Arc resource. 
 
 ## Collected data
 

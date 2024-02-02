@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "11/20/2018"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "snapshots [SQL Server replication], FTP snapshots"
@@ -153,13 +153,13 @@ For more information about modifying the snapshot folder location properties, se
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  The following example creates a merge publication that allows Subscribers to access the snapshot data using FTP. The Subscriber should use a secure VPN connection when accessing the FTP share. **sqlcmd** scripting variables are used to supply login and password values. For more information, see [Use sqlcmd with Scripting Variables](../../../tools/sqlcmd/sqlcmd-use-scripting-variables.md).  
   
- [!code-sql[HowTo#sp_createmergepub_ftp](../../../relational-databases/replication/codesnippet/tsql/deliver-a-snapshot-throu_1.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/deliver-a-snapshot-throu_1.sql":::
   
  The following example creates a subscription to a merge publication, where the Subscriber obtains the snapshot using FTP. The Subscriber should use a secure VPN connection when accessing the FTP share. **sqlcmd** scripting variables are used to supply login and password values. For more information, see [Use sqlcmd with Scripting Variables](../../../tools/sqlcmd/sqlcmd-use-scripting-variables.md).  
   
- [!code-sql[HowTo#sp_createmergepullsub_ftp](../../../relational-databases/replication/codesnippet/tsql/deliver-a-snapshot-throu_2.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/deliver-a-snapshot-throu_2.sql":::
   
- [!code-sql[HowTo#sp_createmergepullsubagent_ftp](../../../relational-databases/replication/codesnippet/tsql/deliver-a-snapshot-throu_3.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/deliver-a-snapshot-throu_3.sql":::
   
 ## See Also  
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   

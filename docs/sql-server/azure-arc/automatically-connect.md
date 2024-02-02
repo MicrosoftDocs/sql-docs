@@ -16,6 +16,8 @@ ms.topic: conceptual
 
 This article explains how to connect your SQL Server instance to Azure Arc.
 
+[!INCLUDE [azure-vmware](includes/azure-vmware.md)]
+
 Before you proceed, complete the [Prerequisites](prerequisites.md).
 
 ## Steps
@@ -31,7 +33,7 @@ To connect your SQL Server to Azure, see [Azure Connected Machine agent deployme
 > [!NOTE]  
 > If your server is already connected to Azure, but Azure extension for SQL Server is not deployed automatically using above methods, proceed to [Alternate deployment options for SQL Server enabled by Azure Arc](deployment-options.md) to connect SQL Server to Azure.
 
-Azure Arc automatically installs the Azure extension for SQL Server when a server connected to Azure Arc has SQL Server installed. All the SQL Server instance resources are automatically created in Azure. These provide a centralized management platform for all your SQL Servers.
+Azure Arc automatically installs the Azure extension for SQL Server when a server connected to Azure Arc has SQL Server installed. All the SQL Server instance resources are automatically created in Azure. These provide a centralized management platform for all your SQL Server instances.
 
 To learn more, see [Auto deployment of Azure extension for SQL Server](manage-autodeploy.md).
 
@@ -65,3 +67,4 @@ To test Arc-enabled SQL Server on an Azure VM, follow the steps at [Evaluate Arc
 
 - [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
 - [Configure best practices assessment on a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instance](assess.md)
+- [Operate SQL Server enabled by Azure Arc with least privilege (preview)](configure-least-privilege.md)

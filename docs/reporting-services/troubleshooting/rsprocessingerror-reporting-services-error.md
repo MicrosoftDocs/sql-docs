@@ -80,10 +80,10 @@ helpviewer_keywords:
   
  Change either the main report or the subreports so that the same version of the report processor can process all the reports. For information about why a report fails to upgrade, see [Upgrade reports](../../reporting-services/install-windows/upgrade-reports.md).  
   
-### Verify function calls are Visual Basic and not SQL  
- You can use SQL functions in query text on a relational database. You can't use [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] functions in query text.  
+### Verify Function Calls are Visual Basic and Not SQL  
+ You can use SQL functions in query text on a relational database. You can't use [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] functions in query text.  
   
- In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], expressions can use [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] functions, `System.Math` or `System.String` functions, fully qualified [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] functions, or custom functions that you provide in custom code or a custom assembly. You can't use SQL functions in an expression.  
+ In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], expressions can use [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] functions, `System.Math` or `System.String` functions, fully qualified [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] functions, or custom functions that you provide in custom code or a custom assembly. You can't use SQL functions in an expression.  
   
  Verify that the function calls made in the query and in the expressions are valid.  
   

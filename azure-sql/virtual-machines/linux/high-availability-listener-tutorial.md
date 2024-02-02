@@ -387,7 +387,7 @@ order ag-before-listener Mandatory: ms-ag1:promot virtual ip-group:start
      ADD LISTENER 'ag1-listener' (
          WITH IP((
              '10.0.0.7',
-             '255.255.255.0'
+             '255.255.255.255'
          )),
          PORT = 1433
      );
@@ -596,10 +596,11 @@ This section covers logging into a SQL Server AG listener, and testing a failove
 
 ### Test a failover
 
-To test the failover, restart the primary node using the following command:
+To test the failover, move the primary replica to a different node with the following command:
 
 ```bash
-reboot
+sudo crm configure delete cli-prefer-ms-ag1
+sudo crm resource move ms-ag1 ubuntu2 
 ```
 
 Confirm the status by running:

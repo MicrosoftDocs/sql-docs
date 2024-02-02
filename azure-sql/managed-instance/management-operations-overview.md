@@ -9,7 +9,7 @@ ms.date: 08/20/2021
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: overview
-ms.custom: ignite-fall-2021, ignite-2023
+ms.custom: ignite-2023
 ---
 
 # Overview of Azure SQL Managed Instance management operations
@@ -38,7 +38,8 @@ Fast provisioning only applies:
 - to the first instance provisioned in the subnet. 
 - to instances with 4-8 vCores. 
 - to instances that use the default maintenance window. 
-- to instances that are deployed into subnets that have the November 2022 feature wave enabled, which includes both dev/test and production subscriptions. 
+- to instances that are deployed into subnets that have the November 2022 feature wave enabled, which includes both dev/test and production subscriptions.
+- to instances that are not zone redundant.
 
 ## Duration
 

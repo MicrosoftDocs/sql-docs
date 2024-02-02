@@ -359,7 +359,7 @@ For an example of using trace stored procedures, see [Create a Trace (Transact-S
 
 Requires ALTER TRACE permission.
 
-## See also
+## Related content
 
 - [sys.fn_trace_geteventinfo (Transact-SQL)](../system-functions/sys-fn-trace-geteventinfo-transact-sql.md)
 - [sys.fn_trace_getinfo (Transact-SQL)](../system-functions/sys-fn-trace-getinfo-transact-sql.md)

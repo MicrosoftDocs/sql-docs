@@ -15,7 +15,7 @@ ms.custom: updatefrequency5
 
 Now that you [created your Reporting Services mobile report](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md) in [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-long.md)], you can lay out a phone and tablet version of it.  
   
-:::image type="content" source="../../reporting-services/mobile-reports/media/ssmrp-salestrendrptlayout.png" alt-text="Screenshot of the main layout for the mobile report":::
+:::image type="content" source="../../reporting-services/mobile-reports/media/ssmrp-salestrendrptlayout.png" alt-text="Screenshot of the main layout for the mobile report.":::
   
 1. In the upper-right corner of [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)], select the layout icon, either **Phone** or **Tablet**.  
   

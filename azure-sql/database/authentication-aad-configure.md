@@ -197,7 +197,7 @@ else {
 
 ### PowerShell for SQL Managed Instance
 
-# [PowerShell SQL Managed Instance](#tab/azure-powershell)
+# [PowerShell](#tab/azure-powershell)
 
 To run PowerShell cmdlets, you need to have Azure PowerShell installed and running. See [How to install and configure Azure PowerShell](/powershell/azure/) for detailed information.
 
@@ -295,7 +295,7 @@ To remove the admin later, at the top of the **Microsoft Entra ID** page, select
 
 ### PowerShell for SQL Database and Azure Synapse
 
-# [PowerShell SQL Database Azure Synapse](#tab/azure-powershell)
+# [PowerShell](#tab/azure-powershell)
 
 To run PowerShell cmdlets, you need to have Azure PowerShell installed and running. See [How to install and configure Azure PowerShell](/powershell/azure/) for detailed information. To provision a Microsoft Entra admin, execute the following Azure PowerShell commands:
 

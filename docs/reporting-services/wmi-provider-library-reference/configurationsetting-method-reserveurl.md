@@ -34,7 +34,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  *URLString*  
  The URL for the reservation.  
   
- *lcid*  
+ *Lcid*  
  The locale to use for the error messages returned.  
   
  *Error*  

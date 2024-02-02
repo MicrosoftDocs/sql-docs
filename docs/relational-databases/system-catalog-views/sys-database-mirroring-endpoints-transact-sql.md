@@ -26,7 +26,7 @@ dev_langs:
   Contains one row for the database mirroring endpoint of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  The database mirroring endpoint supports both sessions between database mirroring partners and with witnesses and sessions between the primary replica of a Always On availability group and its secondary replicas.  
+>  The database mirroring endpoint supports both sessions between database mirroring partners and with witnesses and sessions between the primary replica of an Always On availability group and its secondary replicas.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

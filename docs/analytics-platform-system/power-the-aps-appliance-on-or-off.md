@@ -11,7 +11,7 @@ ms.topic: how-to
 ---
 
 # Power the appliance on or off for Analytics Platform System
-This article describes how to power on or power off your Analytics Platform Systemappliance that is running Parallel Data Warehouse. Use this topic when a Analytics Platform System appliance is moved, or to power on an appliance after a catastrophic power failure.  
+This article describes how to power on or power off your Analytics Platform Systemappliance that is running Parallel Data Warehouse. Use this topic when an Analytics Platform System appliance is moved, or to power on an appliance after a catastrophic power failure.  
   
 Powering the appliance on and off is not the same as starting and stopping the appliance services. For information on that subject, see [PDW Services Status (Analytics Platform System)](pdw-services-status.md). For information about powering on or off a SQL Server 2008 Parallel Data Warehouse, see the SQL Server 2008 Parallel Data Warehouse help file. For information about powering on or off a SQL Server 2012 AU1 or AU2 Parallel Data Warehouse, see the help file for those versions.  
   

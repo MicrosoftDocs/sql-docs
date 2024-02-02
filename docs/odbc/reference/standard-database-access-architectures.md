@@ -6,7 +6,7 @@ ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ---
 # Standard Database Access Architectures
 In looking at the database access components described in the preceding section, it turns out that two of them - programming interfaces and data stream protocols - are good candidates for standardization. The other two components - IPC mechanism and network protocols - not only reside at too low a level but they are both highly dependent on the network and operating system. There is also a third approach - gateways - that provides possibilities for standardization.  

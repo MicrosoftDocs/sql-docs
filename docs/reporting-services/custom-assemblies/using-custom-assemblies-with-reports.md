@@ -1,5 +1,5 @@
 ---
-title: "Using Custom Assemblies with Reports"
+title: "Using custom assemblies with reports"
 description: Develop a custom code assembly using the Microsoft .NET Framework so you can reference the assembly from within your report definition files.
 author: maggiesMSFT
 ms.author: maggies
@@ -13,10 +13,10 @@ helpviewer_keywords:
   - "assemblies [Reporting Services], custom"
   - "custom assemblies [Reporting Services], about custom assemblies"
 ---
-# Using Custom Assemblies with Reports
+# Using custom assemblies with reports
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you can write custom code for report item values, styles, and formatting. For example, you can use custom code to format currencies based on locale, flag certain values with special formatting, or apply other business rules that are in practice for your company. One way to include this code in your reports is to create a custom code assembly using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] that you can reference from within your report definition files. The server calls the functions in your custom assemblies when a report is run. Custom assemblies can be used to retrieve specialized functions that you plan to use in your reports.  
   
-## In This Section  
+## In this section  
  [Referencing Assemblies in an RDL File](../../reporting-services/custom-assemblies/referencing-assemblies-in-an-rdl-file.md)  
  Describes how to reference your custom assemblies in a report definition language file.  
   
@@ -38,7 +38,7 @@ helpviewer_keywords:
  [How to: Debug Custom Assemblies](../../reporting-services/custom-assemblies/how-to-debug-custom-assemblies.md)  
  Describes how to debug your custom assembly code.  
   
-## See Also  
+## Related content  
  [Report Definition Language &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

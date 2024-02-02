@@ -7,7 +7,7 @@ ms.date: "09/20/2017"
 ms.service: sql
 ms.subservice: "machine-learning-services"
 ms.topic: "reference"
-ms.devlang: Python
+ms.devlang: python
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---
 # Class Service

@@ -89,3 +89,4 @@ Saves the settings in **Registered Servers**.
 - [Quickstart: Connect and query a SQL Server instance on an Azure virtual machine using SQL Server Management Studio (SSMS)](../quickstarts/ssms-connect-query-sql-server-azure-vm.md)
 - [Quickstart: Connect and query an Azure SQL Database or an Azure SQL Managed Instance using SQL Server Management Studio (SSMS)](../quickstarts/ssms-connect-query-azure-sql.md)
 - [Quickstart: Connect and query a dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics with SQL Server Management Studio (SSMS)](../quickstarts/ssms-connect-query-azure-synapse-analytics.md)
+- [Quickstart: Use the Azure portal query editor to query Azure SQL Database](/azure/azure-sql/database/connect-query-portal)

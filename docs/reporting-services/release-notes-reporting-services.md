@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-2017"
 
 This article describes changes in [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS), for versions 2017 and later.
 
-For the release notes for Report Viewer controls, see [Release Notes for the Report Viewer controls for WebForms and WinForms of SSRS](application-integration/release-notes-ssrs-application-integration.md).
+For the release notes for Report Viewer controls, see [Release notes for the Report Viewer controls for WebForms and WinForms of SSRS](application-integration/release-notes-ssrs-application-integration.md).
 
 <!--
 We are "standardizing" all our 'Release Notes' style articles:
@@ -50,6 +50,22 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 ::: moniker range="=sql-server-ver16"
 ## SQL Server 2022 Reporting Services
 
+## 16.0.8784.14010, 2024/01/23
+*(Product Version: 16.0.1115.61)*
+
+-  Full-screen view for RDL reports.
+-  Responsive navigation adapted to a small view port.
+-  Added support for GB18030-2022 Chinese government standard.
+-  Added an ability to reorder tiles sections in Portal, using new config property "DefaultTilesSectionsOrder". 
+-  Enabled email comment field for individual subscriptions which was previously disabled.
+-  Enabled downloading Excel files from Web Service Portal URL.
+-  Fixed appearance of links in Document Map of RDL report.  
+-  Fixed issue with accessing some URLs using custom authentication.  
+-  Fixed vertical textbox rendering in RDL.  
+-  Fixed an issue with NULL value in CC field of a data-driven email subscription.  
+-  Fixed exporting to Excel/Word when using Virtual Service Account & Execution Account.  
+-  Fixed displaying time in schedules in Portal (now all times are displayed in Client time zone).
+
 ## 16.0.8564.33454, 2023/06/13
 *(Product Version: 16.0.1114.11)*
 
@@ -78,7 +94,7 @@ Initial release.
 - [Deprecated features](./deprecated-features-in-sql-server-reporting-services-ssrs.md): 
     - Report Parts support 
 - [Discontinued features](./discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md): 
-    - Pin to PowerBI functionality
+    - Pin to Power BI functionality
     - Mobile Reports functionality (.rsmobile) and Mobile Report Publisher
 
 ## 15.0.8264.8408, 2022/08/19
@@ -209,7 +225,7 @@ Initial release.
 ## 14.0.601.20, 2023/02/14
 *(Product Version: 14.0.601.20)*
 
-- New [Power BI Migration experience](/power-bi/guidance/migrate-ssrs-reports-to-power-bi#migration-tool-for-sql-server-2022) in the portal.
+- New [Power BI migration experience](/power-bi/guidance/migrate-ssrs-reports-to-power-bi#migration-tool-for-sql-server-2022) in the portal.
 
 | Fixed issue | Details |
 | :---------- | :------ |
@@ -223,7 +239,7 @@ Initial release.
 
 | Fixed issue | Details |
 | :---------- | :------ |
-| Fixed an issue rendering some reports in Edge browser.  | &nbsp; |
+| Fixed an issue rendering some reports in Microsoft Edge browser.  | &nbsp; |
 | Fixed an issue for some locales when working with data from an Essbase datasource.  | &nbsp; |
 
 ## 14.0.600.1763, 2021/06/28 
@@ -275,7 +291,7 @@ Initial release.
 | System Center Operations Manager(SCOM) 2019 no longer works with recent SSRS 2017 upgrades | &nbsp; |
 | An error occurred when invoking the authorization extension for shared Dataset | &nbsp; |
 | Logic changed on stored procedure GetAllProperties in SSRS 2017 and PBIRS, which causes the Web service endpoint ReportingService2010.GetProperties method unable to get any data for linked report | &nbsp; |
-| Simple Grid Row Header in Mobile Report disappears when an Item within the Grid is clicked | &nbsp; |
+| Simple Grid Row Header in Mobile Report disappears when an Item within the Grid is selected | &nbsp; |
 | Unable to use date field in Data Driven Subscription parameter | &nbsp; |
 | Nested tablix shows small font or partial font in SSRS 2016 and later | &nbsp; |
 | Subscriptions with DateTime Parameter error out after user with different Locale edits the Subscription | &nbsp; |
@@ -312,7 +328,7 @@ The following issue has been fixed:
 | Fixed issue | Details |
 | :---------- | :------ |
 | Textbox inside Rectangle causes the rectangle to not grow vertically when rc:Toolbar=False and it has long text. | &nbsp; |
-| Text size isn't scaling if pageHeight is less than 0.5 inch. | &nbsp; |
+| Text size isn't scaling if pageHeight is less than 0.5 inches. | &nbsp; |
 | Deadlock occurs in the SSRS catalog database when it's used with CRM. | &nbsp; |
 | Vertically aligned column headers displayed incorrectly when scrolling down in report. | &nbsp; |
 | Users added to System Center Operations Manager Reporting Role have access blocked to SSRS web portal. | &nbsp; |
@@ -354,9 +370,9 @@ Resolved the issues with SKU upgrade.
 
 Initial release.
 
-## Next steps
+## Related content
 
-[What's New in Reporting Services (SSRS)?](what-s-new-in-sql-server-reporting-services-ssrs.md)
+- [What's new in Reporting Services (SSRS)?](what-s-new-in-sql-server-reporting-services-ssrs.md)
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).
 

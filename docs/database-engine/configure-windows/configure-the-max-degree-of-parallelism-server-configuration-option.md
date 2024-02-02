@@ -3,8 +3,8 @@ title: "Configure the max degree of parallelism (server configuration option)"
 description: Learn about the max degree of parallelism (MAXDOP) option. See how to use it to limit the number of processors that SQL Server uses in parallel plan execution.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: katsmith
-ms.date: 04/28/2023
+ms.reviewer: derekw
+ms.date: 01/08/2024
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -20,7 +20,7 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This article describes how to configure the `max degree of parallelism` (MAXDOP) server configuration option in SQL Server by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[Azure Data Studio](../../includes/name-sos-short.md)], or [!INCLUDE[tsql](../../includes/tsql-md.md)]. When an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs on a computer that has more than one microprocessor or CPU, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] detects whether parallelism can be used. The degree of parallelism sets the number of processors employed to run a single statement, for each parallel plan execution. You can use the `max degree of parallelism` option to limit the number of processors to use in parallel plan execution. For more detail on the limit set by `max degree of parallelism` (MAXDOP), see the [Considerations](#considerations) section in this page. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considers parallel execution plans for queries, index data definition language (DDL) operations, parallel inserts, online alter column, parallel stats collection, and static and keyset-driven cursor population.
+This article describes how to configure the `max degree of parallelism` (MAXDOP) server configuration option in SQL Server by using [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE [Azure Data Studio](../../includes/azure-data-studio-short.md)], or [!INCLUDE [tsql](../../includes/tsql-md.md)]. When an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] runs on a computer that has more than one microprocessor or CPU, the [!INCLUDE [ssDE-md](../../includes/ssde-md.md)] detects whether parallelism can be used. The degree of parallelism sets the number of processors employed to run a single statement, for each parallel plan execution. You can use the `max degree of parallelism` option to limit the number of processors to use in parallel plan execution. For more detail on the limit set by `max degree of parallelism` (MAXDOP), see the [Considerations](#considerations) section in this page. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] considers parallel execution plans for queries, index data definition language (DDL) operations, parallel inserts, online alter column, parallel stats collection, and static and keyset-driven cursor population.
 
 > [!NOTE]
 > [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] introduced automatic recommendations for setting the MAXDOP server configuration option based on the number of processors available during the installation process. The setup user interface allows you to either accept the recommended settings or enter your own value. For more information, see [Database Engine Configuration - MaxDOP page](../../sql-server/install/instance-configuration.md#maxdop).
@@ -33,11 +33,11 @@ This article describes how to configure the `max degree of parallelism` (MAXDOP)
 
 ### <a id="considerations"></a> Considerations
 
-- This option is an advanced option and should be changed only by an experienced database administrator or certified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] professional.
+- This option is an advanced option and should be changed only by an experienced database administrator or certified [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] professional.
 
-- If the affinity mask option isn't set to the default, it may restrict the number of processors available to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on symmetric multiprocessing (SMP) systems.
+- If the affinity mask option isn't set to the default, it might restrict the number of processors available to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on symmetric multiprocessing (SMP) systems.
   
-- Setting max degree of parallelism (MAXDOP) to 0 allows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use all the available processors up to 64 processors. However, this isn't the recommended value for most cases. For more information on the recommended values for max degree of parallelism, see the [Recommendations](#recommendations) section in this page.
+- Setting max degree of parallelism (MAXDOP) to 0 allows [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to use all the available processors up to 64 processors. However, this isn't the recommended value for most cases. For more information on the recommended values for max degree of parallelism, see the [Recommendations](#recommendations) section in this page.
 
 - To suppress parallel plan generation, set `max degree of parallelism` to `1`. Set the value to a number from 1 to 32,767 to specify the maximum number of processor cores that can be used during a single query execution. If a value greater than the number of available processors is specified, the actual number of available processors is used. If the computer has only one processor, the `max degree of parallelism` value is ignored.
 
@@ -52,7 +52,7 @@ This article describes how to configure the `max degree of parallelism` (MAXDOP)
   
 - In addition to queries and index operations, this option also controls the parallelism of DBCC CHECKTABLE, DBCC CHECKDB, and DBCC CHECKFILEGROUP. You can disable parallel execution plans for these statements by using Trace Flag 2528. For more information, see [Trace Flags (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
-- [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduced Degree of Parallelism (DOP) Feedback, a new feature to improve query performance by identifying parallelism inefficiencies for repeating queries, based on elapsed time and waits. DOP feedback is part of the [intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) family of features, and addresses suboptimal usage of parallelism for repeating queries. For information about DOP feedback, visit [Degree of parallelism (DOP) feedback](../../relational-databases/performance/intelligent-query-processing-feedback.md#degree-of-parallelism-dop-feedback).
+- [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduced Degree of Parallelism (DOP) Feedback, a new feature to improve query performance by identifying parallelism inefficiencies for repeating queries, based on elapsed time and waits. DOP feedback is part of the [intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) family of features, and addresses suboptimal usage of parallelism for repeating queries. For information about DOP feedback, visit [Degree of parallelism (DOP) feedback](../../relational-databases/performance/intelligent-query-processing-degree-parallelism-feedback.md).
 
 <a name="recommendations"></a>
 
@@ -60,9 +60,9 @@ This article describes how to configure the `max degree of parallelism` (MAXDOP)
 
 ### Recommendations
 
-Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], during service startup if the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] detects more than eight physical cores per NUMA node or socket at startup, soft-NUMA nodes are created automatically by default. The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] places logical processors from the same physical core into different soft-NUMA nodes. The recommendations in the table below are aimed at keeping all the worker threads of a parallel query within the same soft-NUMA node. This will improve the performance of the queries and distribution of worker threads across the NUMA nodes for the workload. For more information, see [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md).
+Starting with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], during service startup if the [!INCLUDE [ssDE-md](../../includes/ssde-md.md)] detects more than eight physical cores per NUMA node or socket at startup, soft-NUMA nodes are created automatically by default. The [!INCLUDE [ssDE-md](../../includes/ssde-md.md)] places logical processors from the same physical core into different soft-NUMA nodes. The recommendations in the table below are aimed at keeping all the worker threads of a parallel query within the same soft-NUMA node. This will improve the performance of the queries and distribution of worker threads across the NUMA nodes for the workload. For more information, see [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md).
 
-Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], use the following guidelines when you configure the `max degree of parallelism` server configuration value:
+Starting with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], use the following guidelines when you configure the `max degree of parallelism` server configuration value:
 
 |Server configuration|Number of processors|Guidance|
 |----------------|-----------------|-----------------|
@@ -72,10 +72,10 @@ Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], use the foll
 |Server with multiple NUMA nodes|Greater than 16 logical processors per NUMA node|Keep MAXDOP at half the number of logical processors per NUMA node with a MAX value of 16|
   
 > [!NOTE]
-> NUMA node in the above table refers to soft-NUMA nodes automatically created by [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and higher versions, or hardware-based NUMA nodes if soft-NUMA has been disabled.
+> NUMA node in the above table refers to soft-NUMA nodes automatically created by [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and higher versions, or hardware-based NUMA nodes if soft-NUMA has been disabled.
 > Use these same guidelines when you set the max degree of parallelism option for Resource Governor workload groups. For more information, see [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md).
   
-From [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], use the following guidelines when you configure the `max degree of parallelism` server configuration value:
+From [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] through [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)], use the following guidelines when you configure the `max degree of parallelism` server configuration value:
 
 |Server configuration|Number of processors|Guidance|
 |----------------|-----------------|-----------------|
@@ -94,9 +94,9 @@ Execute permissions on `sp_configure` with no parameters or with only the first 
 
 ## <a id="SSMSProcedure"></a> Use SQL Server Management Studio or Azure Data Studio
   
-In [!INCLUDE[Azure Data Studio](../../includes/name-sos-short.md)], install the `Database Admin Tool Extensions for Windows` extension, or use the below T-SQL method.
+In [!INCLUDE [Azure Data Studio](../../includes/azure-data-studio-short.md)], install the `Database Admin Tool Extensions for Windows` extension, or use the below T-SQL method.
 
-#### To configure the max degree of parallelism option
+#### <a id="to-configure-the-max-degree-of-parallelism-option"></a> Configure the max degree of parallelism option
 
 These options change the MAXDOP for the instance.
 
@@ -108,9 +108,9 @@ These options change the MAXDOP for the instance.
   
 ## <a id="TsqlProcedure"></a> Use Transact-SQL
   
-#### To configure the max degree of parallelism option with T-SQL
+#### <a id="to-configure-the-max-degree-of-parallelism-option-with-t-sql"></a> Configure the max degree of parallelism option with T-SQL
   
-1. Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] with [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[Azure Data Studio](../../includes/name-sos-short.md)].
+1. Connect to the [!INCLUDE [ssDE](../../includes/ssde-md.md)] with [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE [Azure Data Studio](../../includes/azure-data-studio-short.md)].
   
 1. From the Standard bar, select **New Query**.
   
@@ -135,26 +135,22 @@ GO
 
 The setting takes effect immediately without restarting the server.
 
-## See also
+## Related content
 
-- [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md)
-- [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)
-- [Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
+- [Intelligent query processing in SQL databases](../../relational-databases/performance/intelligent-query-processing.md)
+- [Query processing architecture guide](../../relational-databases/query-processing-architecture-guide.md)
+- [DBCC TRACEON - Trace Flags (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 - [Query Store hints](../../relational-databases/performance/query-store-hints.md)
-- [Query Hints (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)
 - [Hints (Transact-SQL) - Query](../../t-sql/queries/hints-transact-sql-query.md)
 - [USE HINT query hint](../../t-sql/queries/hints-transact-sql-query.md#use_hint)
 - [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
-- [affinity mask Server Configuration Option](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)
-- [Server Configuration Options (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
+- [affinity mask Server Configuration Option](affinity-mask-server-configuration-option.md)
+- [Server configuration options (SQL Server)](server-configuration-options-sql-server.md)
 - [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#DOP)
-- [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md)
+- [Thread and task architecture guide](../../relational-databases/thread-and-task-architecture-guide.md)
 - [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [Set Index Options](../../relational-databases/indexes/set-index-options.md)
-
-## Next steps
-
-- [Degree of Parallelism Feedback](../../relational-databases/performance/intelligent-query-processing-feedback.md#degree-of-parallelism-dop-feedback)
+- [Degree of parallelism (DOP) feedback](../../relational-databases/performance/intelligent-query-processing-degree-parallelism-feedback.md)
 - [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)
 - [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)
 - [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md)

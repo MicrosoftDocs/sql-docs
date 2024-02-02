@@ -1,8 +1,7 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
-ms.date: 07/06/2023
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 01/11/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -242,7 +241,7 @@ ms.topic: include
 | 3270 | 16 | No | An internal consistency error has occurred. This error is similar to an assert. Contact technical support for assistance. |
 | [3271](../mssqlserver-3271-database-engine-error.md) | 16 | No | A nonrecoverable I/O error occurred on file "%ls:" %ls. |
 | 3272 | 16 | No | The '%ls' device has a hardware sector size of %d, but the block size parameter specifies an incompatible override value of %d. Reissue the statement using a compatible block size. |
-| 3273 : Deprecated in Katmai | 16 | No | The BUFFERCOUNT parameter must supply a value that allows at least one buffer per backup device. |
+| 3273 | 16 | No | The BUFFERCOUNT parameter must supply a value that allows at least one buffer per backup device. |
 | 3276 | 16 | No | WITH SNAPSHOT can be used only if the backup set was created WITH SNAPSHOT. |
 | 3277 | 16 | No | WITH SNAPSHOT must be used with only one virtual device. |
 | 3278 | 16 | No | Failed to encrypt string %ls |

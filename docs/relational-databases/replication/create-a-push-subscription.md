@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "08/25/2016"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "push subscriptions [SQL Server replication], creating"
@@ -145,11 +145,11 @@ You can create push subscriptions programmatically by using replication stored p
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  The following example creates a push subscription to a transactional publication. Login and password values are supplied at runtime through **sqlcmd** scripting variables.  
   
- [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/create-a-push-subscription_1.sql)]  
+ :::code language="sql" source="codesnippet/tsql/create-a-push-subscription_1.sql":::
   
  The following example creates a push subscription to a merge publication. Login and password values are supplied at runtime through **sqlcmd** scripting variables.  
   
- [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/create-a-push-subscription_2.sql)]  
+ :::code language="sql" source="codesnippet/tsql/create-a-push-subscription_2.sql":::
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects  
  You can create push subscriptions programmatically by using Replication Management Objects (RMO). The RMO classes that you use to create a push subscription depend on the type of publication to which the subscription is created.  

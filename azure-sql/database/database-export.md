@@ -4,8 +4,8 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Export a database to a BACPAC file using the Azure portal, PowerShell, Azure Data Studio, or SQL Server Management Studio.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, jeschult
-ms.date: 01/09/2024
+ms.reviewer: mathoma, hudequei
+ms.date: 01/26/2024
 ms.service: sql-db-mi
 ms.subservice: data-movement
 ms.topic: how-to
@@ -24,7 +24,7 @@ When you need to export a database for archiving or for moving to another platfo
 - For an export to be transactionally consistent, you must ensure either that no write activity is occurring during the export, or that you're exporting from a [transactionally consistent copy](database-copy.md) of your database.
 - If you're exporting to blob storage, the maximum size of a BACPAC file is 200 GB. To archive a larger BACPAC file, export to local storage with SqlPackage.
 
-- Storage file name or the input value for StorageURI should be fewer than 128 characters long and can't end with `.` and can't contain special characters like a space character or `<`, `>`, `*`, `%`, `&`, `:`, `\`, `/`, `?`.
+- The Azure Storage file name can't end with `.` and can't contain special characters like a space character or `<`, `>`, `*`, `%`, `&`, `:`, `\`, `/`, `?`. The file name should be fewer than 128 characters long.
 - If the export operation exceeds 20 hours, it might be canceled. To increase performance during export, you can:
 
   - Temporarily increase your compute size.
@@ -47,11 +47,11 @@ Exporting a BACPAC of a database from [Azure SQL Managed Instance](../managed-in
 
 1. To export a database using the [Azure portal](https://portal.azure.com), open the page for your database and select **Export** on the toolbar.
 
-   :::image type="content" source="media/database-export/database-export1.png" alt-text="Screenshot that highlights the Export button." lightbox="media/database-export/database-export1.png":::
+   :::image type="content" source="media\database-export\sql-database-export-menu-button.png" alt-text="Screenshot that highlights the Export button." lightbox="media/database-export/sql-database-export-menu-button.png":::
 
 1. Specify the BACPAC filename, select an existing Azure storage account and container for the export, and then provide the appropriate credentials for access to the source database. A SQL **Server admin login** is needed here even if you're the Azure admin, as being an Azure admin doesn't equate to having admin permissions in Azure SQL Database or Azure SQL Managed Instance.
 
-   :::image type="content" source="media/database-export/database-export2.png" alt-text="Screenshot shows the Export Database page with username and password specified.":::
+   :::image type="content" source="media\database-export\sql-database-export-database.png" alt-text="Screenshot shows the Export Database page with username and password specified.":::
 
 1. Select **OK**.
 
@@ -71,11 +71,11 @@ SqlPackage /a:Export /tf:testExport.BACPAC /scs:"Data Source=apptestserver.datab
 
 ## Azure Data Studio
 
-[Azure Data Studio](/azure-data-studio) is a free, open-source tool and is available for Windows, Mac, and Linux.  The "SQL Server dacpac" extension provides a wizard interface to SqlPackage operations including export and import.  See the extension's [documentation page](/azure-data-studio/extensions/sql-server-dacpac-extension) for more information on installing and using the extension.
+[Azure Data Studio](/azure-data-studio) is a free, open-source tool and is available for Windows, Mac, and Linux. The "SQL Server dacpac" extension provides a wizard interface to SqlPackage operations including export and import. For more information on installing and using the extension, see [SQL Server dacpac extension](/azure-data-studio/extensions/sql-server-dacpac-extension).
 
 ## SQL Server Management Studio (SSMS)
 
-The newest versions of SQL Server Management Studio provide a wizard to export a database in Azure SQL Database or a SQL Managed Instance database to a BACPAC file. See the [Export a Data-tier Application](/sql/relational-databases/data-tier-applications/export-a-data-tier-application).
+[SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) provides a wizard to export a database in Azure SQL Database or a SQL Managed Instance database to a BACPAC file. See the [Export a Data-tier Application](/sql/relational-databases/data-tier-applications/export-a-data-tier-application).
 
 ## PowerShell
 

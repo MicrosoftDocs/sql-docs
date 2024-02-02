@@ -70,7 +70,7 @@ The ID of the profile that the agent should use. *@profile_id* is **int**, with 
 
 Only members of the **sysadmin** fixed server role can execute `sp_update_agent_profile`.
 
-## See also
+## Related content
 
 - [Replication Agent Profiles](../replication/agents/replication-agent-profiles.md)
 - [sp_add_agent_profile (Transact-SQL)](sp-add-agent-profile-transact-sql.md)

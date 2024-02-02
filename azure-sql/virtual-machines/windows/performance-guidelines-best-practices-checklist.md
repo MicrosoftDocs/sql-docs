@@ -8,9 +8,6 @@ ms.date: 10/16/2023
 ms.service: virtual-machines-sql
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom:
-  - contperf-fy21q3
-  - ignite-2022
 tags: azure-service-management
 ---
 # Checklist: Best practices for SQL Server on Azure VMs
@@ -107,6 +104,18 @@ The following is a quick checklist of best practices for Azure-specific guidance
 The checklist in this section covers the [HADR best practices](hadr-cluster-best-practices.md) for SQL Server on Azure VMs.
 
 [!INCLUDE [HADR best practices](../../includes/virtual-machines-best-practices-hadr.md)]
+
+## Performance troubleshooting
+
+The following is a list of resources that will help you further troubleshoot SQL Server performance issues.
+
+- [Troubleshoot high-CPU-usage issues](/troubleshoot/sql/database-engine/performance/troubleshoot-high-cpu-usage-issues)
+- [Understand and resolve blocking problems](/troubleshoot/sql/database-engine/performance/understand-resolve-blocking)
+- [Troubleshoot slow-running queries](/troubleshoot/sql/database-engine/performance/troubleshoot-slow-running-queries)
+- [Troubleshoot slow performance caused by I/O issues](/troubleshoot/sql/database-engine/performance/troubleshoot-sql-io-performance)
+- [Troubleshoot query time-out errors](/troubleshoot/sql/database-engine/performance/troubleshoot-query-timeouts)
+- [Troubleshoot out of memory or low memory](/troubleshoot/sql/database-engine/performance/troubleshoot-memory-issues)
+- [Performance dashboard](/sql/relational-databases/performance/performance-dashboard) provides fast insight into SQL Server performance state.
 
 ## Related content
 

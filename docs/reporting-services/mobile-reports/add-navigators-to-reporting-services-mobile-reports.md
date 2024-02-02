@@ -55,7 +55,7 @@ The selection list filters data in a mobile report by matching the value you sel
   
    If you're using hierarchical tree data, select a parent key column.  
   
-1. After you set the data properties, under **Tables FIltered by Selection List**, select the tables to be filtered and the column to filter by. This column needs to match values in the selection list's key column. 
+1. After you set the data properties, under **Tables Filtered by Selection List**, select the tables to be filtered and the column to filter by. This column needs to match values in the selection list's key column. 
 
 For each visualization in the mobile report that you want the selection list to filter:
 

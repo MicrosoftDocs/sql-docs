@@ -287,7 +287,7 @@ To view your [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] re
   
 1.  Now you see the server in the left navigation bar.  
   
-    :::image type="content" source="../../reporting-services/mobile-reports/media/pbi-ipad-ssmrp-leftnavbiggr.png" alt-text="Screenshot of the Ssrs2016demo server in the navigation bar.":::
+    :::image type="content" source="../../reporting-services/mobile-reports/media/pbi-ipad-ssmrp-leftnavbiggr.png" alt-text="Screenshot of the Ssrs 2016 demo server in the navigation bar.":::
   
       
 > [!TIP]
@@ -298,12 +298,12 @@ To view your [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] re
   
 Tap the **KPIs** or **Mobile Reports** tab.   
   
-:::image type="content" source="../../reporting-services/mobile-reports/media/pbi-ipad-ssmrp-portal.png" alt-text="Screenshot of the Ssrs2016demo server mobile report.":::
+:::image type="content" source="../../reporting-services/mobile-reports/media/pbi-ipad-ssmrp-portal.png" alt-text="Screenshot of the Ssrs 2016 demo server mobile report.":::
   
   
 - Tap a KPI to see it in focus mode.  
   
-    :::image type="content" source="../../reporting-services/mobile-reports/media/pbi-ipad-ssmrp-tile.png" alt-text="Screenshot of the Ssrs2016demo server data in focus mode.":::
+    :::image type="content" source="../../reporting-services/mobile-reports/media/pbi-ipad-ssmrp-tile.png" alt-text="Screenshot of the Ssrs 2016 demo server data in focus mode.":::
   
   
 - Tap a mobile report to open and interact with it in the Power BI app.  

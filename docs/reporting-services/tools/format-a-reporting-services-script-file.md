@@ -44,7 +44,7 @@ End Sub
 > [!IMPORTANT]  
 > User credentials are managed by the script environment and passed through command prompt arguments using RS.exe. Although you can use the *rs* variable to set the authentication of the Web service, it is recommended that you use the script environment. You do not need to authenticate the Web service in the script file. For more information about authenticating the script environment, see [RS.exe Utility (SSRS)](../../reporting-services/tools/rs-exe-utility-ssrs.md).
 
-You do not declare namespaces within the script file. The scripting environment makes several useful [!INCLUDE [msCoName](../../includes/msconame-md.md)] [!INCLUDE [dnprdnshort](../../includes/dnprdnshort-md.md)] namespaces available to you: **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**, and **System.IO**.
+You don't declare namespaces within the script file. The scripting environment makes several useful [!INCLUDE [msCoName](../../includes/msconame-md.md)] [!INCLUDE [dnprdnshort](../../includes/dnprdnshort-md.md)] namespaces available to you: **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**, and **System.IO**.
 
 For script samples, see [SQL Server Reporting Services product samples](https://go.microsoft.com/fwlink/?LinkId=177889).
 

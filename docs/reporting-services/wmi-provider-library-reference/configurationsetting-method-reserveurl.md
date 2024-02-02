@@ -1,6 +1,6 @@
 ---
-title: "ReserveURL Method (WMI MSReportServer_ConfigurationSetting)"
-description: "ReserveURL Method (WMI MSReportServer_ConfigurationSetting)"
+title: "ReserveURL method (WMI MSReportServer_ConfigurationSetting)"
+description: "ReserveURL method (WMI MSReportServer_ConfigurationSetting)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -11,7 +11,7 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "ReservedURL method"
 ---
-# ConfigurationSetting Method - ReserveURL
+# ConfigurationSetting method - ReserveURL
   Adds a URL reservation for a given application.  
   
 ## Syntax  
@@ -34,7 +34,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  *URLString*  
  The URL for the reservation.  
   
- *lcid*  
+ *Lcid*  
  The locale to use for the error messages returned.  
   
  *Error*  
@@ -43,11 +43,11 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  *HRESULT*  
  [out] Value indicating whether the call succeeded or failed.  
   
-## Return Value  
- Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful; an error code indicates the call was not successful.  
+## Return value  
+ Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. An error code indicates the call wasn't successful.  
   
 ## Remarks  
- *UrlString* does not include the virtual directory name. The [SetVirtualDirectory](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md) method is provided for that purpose.  
+ *UrlString* doesn't include the virtual directory name. The [SetVirtualDirectory](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md) method is provided for that purpose.  
   
  URL reservations are created for the current Windows service account. Changing the Windows service account requires updating all the URL reservations manually.  
   
@@ -56,7 +56,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+## Related content  
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

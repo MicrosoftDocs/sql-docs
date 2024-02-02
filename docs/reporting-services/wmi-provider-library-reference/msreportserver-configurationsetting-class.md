@@ -31,11 +31,7 @@ public class MSReportServer_ConfigurationSetting
 ```  
   
 ## Thread safety  
-<<<<<<< HEAD
  Any public static members of this type are safe for multithreaded operations. Any instance members aren't guaranteed to be thread-safe.  
-=======
- Any public static (**Shared** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) members of this type are safe for multithreaded operations. Any instance members aren't guaranteed to be thread-safe.  
->>>>>>> 32bbb5dedf26ac3d452d75bf75f1f5712b1ff039
   
 ## Example  
  To run the following code, add your server name in place of each `<servername>`. Update the path to point to your installation location, if it isn't the default. The following code example iterates through each property in the *MSReportServer_ConfigurationSetting* class, printing the name of each property and its value to the console.  

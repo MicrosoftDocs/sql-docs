@@ -15,7 +15,7 @@ helpviewer_keywords:
 # Format a Reporting Services script file
   A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] script is a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET code file. The file is written against a proxy that is built on Web Service Description Language (WSDL), which defines the Reporting Services SOAP API. A script file is stored as a Unicode or UTF-8 text file with the extension .rss.  
   
- The script file acts as a [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] module and can contain user-defined procedures and module-level variables. For the script file to run successfully, it must contain a Main procedure. The Main procedure is the first procedure that is accessed when your script file runs. Main is where you can add your Web service operations and run your user defined subprocedures. The following code creates a Main procedure:  
+ The script file acts as a [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] module and can contain user-defined procedures and module-level variables. For the script file to run successfully, it must contain a Main procedure. The Main procedure is the first procedure that is accessed when your script file runs. Main is where you can add your Web service operations and run your user defined subprocedures. The following code creates a Main procedure:  
   
 ```  
 Public Sub Main()  
@@ -23,7 +23,7 @@ Public Sub Main()
 End Sub  
 ```  
   
- The script environment automatically connects to the report server, creates the web proxy class, and generates a reference variable (*rs*) to the Web service proxy object. Individual statements that you create need only refer to the *rs* module-level variable to perform any of the web service operations that are available in the Web service library. The following [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] code calls the Web service <xref:ReportService2010.ReportingService2010.ListChildren%2A> method from within a script file:  
+ The script environment automatically connects to the report server, creates the Web proxy class, and generates a reference variable (*rs*) to the Web service proxy object. Individual statements that you create need to refer to the *rs* module-level variable to perform any of the Web service operations that are available in the Web service library. The following [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] code calls the Web service <xref:ReportService2010.ReportingService2010.ListChildren%2A> method from within a script file:  
   
 ```  
 Public Sub Main()  

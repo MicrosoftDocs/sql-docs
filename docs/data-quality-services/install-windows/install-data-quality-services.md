@@ -9,6 +9,7 @@ ms.subservice: data-quality-services
 ms.topic: conceptual
 ms.custom: intro-installation
 ---
+
 # Install Data Quality Services
 
 [!INCLUDE [SQL Server - Windows only](../../includes/applies-to-version/sql-windows-only.md)]
@@ -103,17 +104,15 @@ ms.custom: intro-installation
   
 3.  Make your data available for DQS operations. Make sure that you can access your source data for the DQS operations, and can export the processed data to a table in a database.  
   
-     For more information see  
-                    [Access Data for the DQS Operations](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md).  
-  
-## See Also  
- [Video: Install and Configure DQS](/previous-versions/dn912438(v=msdn.10))   
- [Upgrade SQLCLR Assemblies After .NET Framework Update](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
- [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
- [Upgrade Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)   
- [Remove Data Quality Server Objects](../../sql-server/install/remove-data-quality-server-objects.md)   
- [Install SQL Server Business Intelligence Features](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
- [Uninstall SQL Server](../../sql-server/install/uninstall-sql-server.md)   
- [Data Quality Services](../../data-quality-services/data-quality-services.md)   
- [Troubleshoot Installation and Configuration Issues in DQS](https://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
-  
+     For more information see [Access Data for the DQS Operations](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md).  
+
+## Related Content
+
+- [Video: Install and Configure DQS](/previous-versions/dn912438(v=msdn.10))   
+- [Upgrade SQLCLR Assemblies After .NET Framework Update](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
+- [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)
+- [Upgrade Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)   
+- [Remove Data Quality Server Objects](../../sql-server/install/remove-data-quality-server-objects.md)   
+- [Install SQL Server Business Intelligence Features](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
+- [Uninstall SQL Server](../../sql-server/install/uninstall-sql-server.md)
+- [Data Quality Services](../../data-quality-services/data-quality-services.md)

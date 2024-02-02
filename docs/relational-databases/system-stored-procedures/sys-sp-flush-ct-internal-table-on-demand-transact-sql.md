@@ -92,7 +92,7 @@ This stored procedure is available in the following products:
 
 Only a member of the **sysadmin** server role or **db_owner** database role can execute this procedure.
 
-## See also
+## Related content
 
 - [About change tracking (Transact-SQL)](../track-changes/about-change-tracking-sql-server.md)
 - [Change tracking cleanup and troubleshooting (Transact-SQL)](../track-changes/cleanup-and-troubleshoot-change-tracking-sql-server.md)

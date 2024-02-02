@@ -3,7 +3,7 @@ title: "Execute a stored procedure"
 description: Learn how to execute a stored procedure by using SQL Server Management Studio or Transact-SQL.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 01/03/2024
+ms.date: 01/25/2024
 ms.service: sql
 ms.subservice: stored-procedures
 ms.topic: conceptual
@@ -55,17 +55,17 @@ EXEC sys.sp_who;
   
 When executing a user-defined procedure, it's best to qualify the procedure name with the schema name. This practice gives a small performance boost because the [!INCLUDE[ssDE](../../includes/ssde-md.md)] doesn't have to search multiple schemas. Using the schema name also prevents executing the wrong procedure if a database has procedures with the same name in multiple schemas.  
 
-The following examples demonstrate the recommended method to execute a user-defined procedure. This procedure accepts one input parameter. For information about specifying input and output parameters, see [Specify parameters in a stored procedure](../../relational-databases/stored-procedures/specify-parameters.md).  
+The following examples demonstrate the recommended method to execute a user-defined procedure. This procedure accepts two input parameters. For information about specifying input and output parameters, see [Specify parameters in a stored procedure](../../relational-databases/stored-procedures/specify-parameters.md).  
   
 ```sql  
-EXECUTE dbo.uspLogError @ErrorLogID = 1;
+EXECUTE SalesLT.uspGetCustomerCompany @LastName = N'Cannon', @FirstName = N'Chris';
 GO
 ```  
 
 Or:  
 
 ```sql  
-EXEC AdventureWorksLT.dbo.uspLogError 1;  
+EXEC SalesLT.uspGetCustomerCompany N'Cannon', N'Chris';
 GO  
 ```  
 
@@ -91,43 +91,70 @@ You can use the [SQL Server Management Studio (SSMS)](../../ssms/download-sql-se
 
 ### <a id="SSMSProcedure"></a> Use SQL Server Management Studio
 
-1. In SSMS **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], expand that instance, and then expand **Databases**.  
+1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssazure-sqldb](../../includes/ssazure-sqldb.md)], expand that instance, and then expand **Databases**.  
   
 1. Expand the database that you want, expand **Programmability**, and then expand **Stored Procedures**.  
   
-1. Right-click the user-defined stored procedure that you want and select **Execute Stored Procedure**.  
+1. Right-click the stored procedure that you want to run and select **Execute Stored Procedure**.  
   
-1. In the **Execute Procedure** dialog box, specify values for any parameters and whether they should pass null values.  
+1. In the **Execute Procedure** dialog box, **Parameter** indicates the name of each parameter, **Data Type** indicates its data type, and **Output Parameter** indicates whether it's an output parameter.
+
+   For each parameter:
+   
+   - Under **Value**, type the value to use for the parameter.  
+   - Under **Pass Null Value**, select whether to pass a NULL as the value of the parameter.  
   
-   - **Parameter** indicates the name of the parameter.  
-   - **Data Type** indicates the data type of the parameter.  
-   - **Output Parameter** indicates if the parameter is an output parameter.  
-   - **Pass Null Value**: Specify whether to pass a NULL as the value of the parameter.  
-   - **Value**: Type the value to use for the parameter when calling the procedure.  
-  
-1. Select **OK** to execute the stored procedure.  
+1. Select **OK** to execute the stored procedure. If the stored procedure doesn't have any parameters, just select **OK**.
+
+   The stored procedure runs, and results appear in the **Results** pane.
+   
+   For example, to run the `SalesLT.uspGetCustomerCompany` stored procedure from the [Create a stored procedure](create-a-stored-procedure.md) article, enter *Cannon* for the **@LastName** parameter and *Chris* for the **@FirstName** parameter, and select **OK**. The procedure returns `FirstName` **Chris**, `LastName` **Cannon**, and `CompanyName` **Outdoor Sporting Goods**.
   
 ### <a id="TsqlProcedure"></a> Use [!INCLUDE[tsql](../../includes/tsql-md.md)] in a query window
   
-1. In SSMS, connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1. In SSMS, connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssazure-sqldb](../../includes/ssazure-sqldb.md)].  
   
-1. From the Standard toolbar, select **New Query**.  
+1. From the toolbar, select **New Query**.  
   
-1. Enter the following statements into the query window:
-  
+1. Enter an EXECUTE statement with the following syntax into the query window, providing values for all expected parameters:
+   
    ```sql  
-   EXEC <stored procedure name> <parameter 1 value>, <parameter n value>;  
+   EXECUTE <ProcedureName> N'<Parameter 1 value>, N'<Parameter x value>;  
    GO  
    ```  
   
-1. In the toolbar, select **Execute**.
-
-The following example shows a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement for executing a stored procedure that expects one parameter. The example executes the `uspLogError` stored procedure with `1` specified as the `@ErrorLogID` parameter value.  
+   For example, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement executes the `uspGetCustomerCompany` stored procedure and with `Cannon` as the `@LastName` parameter value and `Chris` as the `@FirstName` parameter value:
   
-```sql  
-EXEC dbo.uspLogError 1;  
-GO  
-```  
+   ```sql  
+   EXEC SalesLT.uspGetCustomerCompany N'Cannon', N'Chris';
+   GO  
+   ```  
+
+1. From the toolbar, select **Execute**. The stored procedure runs.
+
+### Options for parameter values
+
+There are multiple ways to provide parameters and values in stored procedure EXECUTE statements. The following examples show several different options for the EXECUTE statement.
+
+- If you provide the parameter values in the same order as they're defined in the stored procedure, you don't need to state the parameter names. For example:
+
+  ```sql
+  EXEC SalesLT.uspGetCustomerCompany N'Cannon', N'Chris';
+  ```
+
+- If you provide parameter names in the `@parameter_name=value` pattern, you don't have to specify the parameter names and values in the same order as they're defined. For example, either of the following statements are valid:
+
+  ```sql  
+  EXEC SalesLT.uspGetCustomerCompany @FirstName = N'Chris', @LastName = N'Cannon';
+  ```
+
+  or:
+
+  ```sql  
+  EXEC SalesLT.uspGetCustomerCompany @LastName = N'Cannon', @FirstName = N'Chris';
+  ```
+
+- If you use the `@parameter_name=value` form for any parameter, you must use it for all subsequent parameters in that statement. For example, you can't use `EXEC SalesLT.uspGetCustomerCompany1 @FirstName = N'Chris', N'Cannon';`.
 
 ## Automatic execution at startup
   
@@ -190,8 +217,9 @@ A `sysadmin` can use [sp_procoption](../../relational-databases/system-stored-pr
 ## Related content
 
 - [Stored Procedures (Database Engine)](stored-procedures-database-engine.md)
+- [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)
+- [Create a stored procedure](create-a-stored-procedure.md)
 - [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)
 - [Specify parameters in a stored procedure](specify-parameters.md)
-- [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)
 - [sp_procoption (Transact-SQL)](../system-stored-procedures/sp-procoption-transact-sql.md)
 - [Configure the scan for startup procs (server configuration option)](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)

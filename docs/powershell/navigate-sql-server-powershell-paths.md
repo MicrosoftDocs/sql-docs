@@ -7,7 +7,7 @@ ms.reviewer: matteot, drskwier
 ms.date: 10/14/2020
 ms.service: sql
 ms.subservice: sql-server-powershell
-ms.topic: conceptual
+ms.topic: how-to
 ---
 
 # Navigate SQL Server PowerShell Paths

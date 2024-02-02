@@ -119,7 +119,7 @@ EXEC sp_trace_setfilter 1, 10, 0, 6, N'MS%';
 EXEC sp_trace_setfilter 1, 11, 0, 0, N'joe';
 ```
 
-## See also
+## Related content
 
 - [sys.fn_trace_getfilterinfo (Transact-SQL)](../system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)
 - [sys.fn_trace_getinfo (Transact-SQL)](../system-functions/sys-fn-trace-getinfo-transact-sql.md)

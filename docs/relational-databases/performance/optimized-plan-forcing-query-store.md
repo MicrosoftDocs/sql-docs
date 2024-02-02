@@ -75,18 +75,16 @@ The following code enables Query Store on a database, then enables optimized pla
 Before running the code, connect to the appropriate user database.
 
 ```sql
-ALTER DATABASE CURRENT
-SET QUERY_STORE = ON
-    (
-      OPERATION_MODE = READ_WRITE,
-      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
-      DATA_FLUSH_INTERVAL_SECONDS = 900,
-      QUERY_CAPTURE_MODE = AUTO,
-      MAX_STORAGE_SIZE_MB = 1024,
-      INTERVAL_LENGTH_MINUTES = 60
-    );
+ALTER DATABASE CURRENT SET QUERY_STORE = ON
+(
+    OPERATION_MODE = READ_WRITE,
+    CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90),
+    DATA_FLUSH_INTERVAL_SECONDS = 900,
+    QUERY_CAPTURE_MODE = AUTO,
+    MAX_STORAGE_SIZE_MB = 1024,
+    INTERVAL_LENGTH_MINUTES = 60
+);
 GO
-
 
 ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZED_PLAN_FORCING = ON;
 GO
@@ -97,11 +95,15 @@ GO
 The following example code selects all query_ids that have an optimization replay script in Query Store. Connect to the appropriate user database before running the example code.
 
 ```sql
-SELECT 
-    q.query_id, t.query_sql_text, p.plan_id, TRY_CAST(p.query_plan as XML) as query_plan, 
-    p.is_forced_plan, p.count_compiles
+SELECT q.query_id,
+    t.query_sql_text,
+    p.plan_id,
+    TRY_CAST(p.query_plan AS XML) AS query_plan,
+    p.is_forced_plan,
+    p.count_compiles
 FROM sys.query_store_plan AS p
-INNER JOIN sys.query_store_query AS q on p.query_id = q.query_id
+INNER JOIN sys.query_store_query AS q
+    ON p.query_id = q.query_id
 INNER JOIN sys.query_store_query_text AS t
     ON q.query_text_id = t.query_text_id
 WHERE p.has_compile_replay_script = 1;
@@ -124,11 +126,15 @@ Learn more in [sp_query_store_force_plan (Transact-SQL)](../system-stored-proced
 The following example queries all plans that have been forced in Query Store where `is_optimized_plan_forcing_disabled` has been set to `1`. Before running the code, connect to the appropriate user database.
 
 ```sql
-SELECT 
-    q.query_id, t.query_sql_text, p.plan_id, TRY_CAST(p.query_plan as XML) as query_plan, 
-    p.is_forced_plan, p.count_compiles
+SELECT q.query_id,
+    t.query_sql_text,
+    p.plan_id,
+    TRY_CAST(p.query_plan AS XML) AS query_plan,
+    p.is_forced_plan,
+    p.count_compiles
 FROM sys.query_store_plan AS p
-INNER JOIN sys.query_store_query AS q on p.query_id = q.query_id
+INNER JOIN sys.query_store_query AS q
+    ON p.query_id = q.query_id
 INNER JOIN sys.query_store_query_text AS t
     ON q.query_text_id = t.query_text_id
 WHERE p.is_optimized_plan_forcing_disabled = 1;
@@ -140,13 +146,17 @@ GO
 The following example disables optimized plan forcing for a query using the `DISABLE_OPTIMIZED_PLAN_FORCING` [query hint](../../t-sql/queries/hints-transact-sql-query.md). The example uses the [AdventureWorks sample database](../../samples/adventureworks-install-configure.md).
 
 ```sql
-SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  
-FROM Sales.SalesOrderDetail  
-WHERE UnitPrice < $5.00  
-GROUP BY ProductID, OrderQty  
-ORDER BY ProductID, OrderQty
-OPTION(USE HINT('DISABLE_OPTIMIZED_PLAN_FORCING');
-GO 
+SELECT ProductID,
+    OrderQty,
+    SUM(LineTotal) AS Total
+FROM Sales.SalesOrderDetail
+WHERE UnitPrice < $5.00
+GROUP BY ProductID,
+    OrderQty
+ORDER BY ProductID,
+    OrderQty
+OPTION (USE HINT('DISABLE_OPTIMIZED_PLAN_FORCING'));
+GO
 ```
 
 ## Next steps

@@ -44,7 +44,7 @@ helpviewer_keywords:
  The locale ID or language ID of the application's INTL DLL (for example, 0x41A).  
   
  **OperatingSystem**  
- The operating system [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] is installed on. Valid values include **0** for operating system independent, **1** for [!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)], and **16** for Windows XP.  
+ The operating system [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] is installed on. Valid values include **0** for operating system independent, **1** for [!INCLUDE[win2000](../../../includes/win2000-md.md)], and **16** for Windows XP.  
   
  **CountryLocaleId**  
  The locale ID or language ID of the operating system. For example, the value for the French version of Windows is 0x040c.  

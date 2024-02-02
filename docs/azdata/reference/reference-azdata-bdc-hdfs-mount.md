@@ -65,7 +65,7 @@ azdata bdc hdfs mount delete --mount-path -m
                              
 ```
 ### Examples
-Delete mount created at /mounts/adlsv2/data for a ADLS Gen 2 storage account.
+Delete mount created at /mounts/adlsv2/data for an ADLS Gen 2 storage account.
 ```bash
 azdata bdc hdfs mount delete --mount-path /mounts/adlsv2/data
 ```

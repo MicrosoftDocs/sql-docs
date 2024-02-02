@@ -82,7 +82,7 @@ sp_link_publication [ @publisher = ] 'publisher'
  The default mode used by an immediate updating Subscriber when it connects to the Publisher does not allow a connection using Windows Authentication. To connect with a mode of Windows Authentication, a linked server has to be set up to the Publisher, and the immediate updating Subscriber should use this connection when updating the Subscriber. This requires the **sp_link_publication** to be run with *security_mode* = **2**. When using Windows Authentication, security account delegation must be supported.  
   
 ## Example  
- [!code-sql[HowTo#sp_addtranpullsubscriptionagent_failover](../../relational-databases/replication/codesnippet/tsql/sp-link-publication-tran_1.sql)]  
+ :::code language="sql" source="../replication/codesnippet/tsql/sp-link-publication-tran_1.sql":::
   
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_link_publication**.  

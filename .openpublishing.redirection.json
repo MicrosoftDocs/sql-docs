@@ -59699,6 +59699,11 @@
       "source_path": "docs/ssms/f1-help/connect-to-server-database-engine.md",
       "redirect_url": "/sql/ssms/f1-help/connect-to-server-login-page-database-engine",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/performance/intelligent-query-processing-feedback.md",
+      "redirect_url": "/sql/relational-databases/performance/intelligent-query-processing-memory-grant-feedback",
+      "redirect_document_id": false
     }
  ]
 }

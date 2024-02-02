@@ -5,7 +5,7 @@ description: Describes extended events (XEvents) in Azure SQL Database and Azure
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 12/26/2023
+ms.date: 01/22/2024
 ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: reference
@@ -52,6 +52,7 @@ Adopt the following best practices to use Extended Events in Azure SQL Database 
   - Don't use any [blob access tier](/azure/storage/blobs/access-tiers-overview) other than `Hot`.
 - If you want to create a continuously running event session that starts automatically after each [!INCLUDE [ssde-md](../../docs/includes/ssde-md.md)] restart (for example, after a failover or a maintenance event), include the event session option of `STARTUP_STATE = ON` in your `CREATE EVENT SESSION`  or `ALTER EVENT SESSION` statements.
 - Conversely, use `STARTUP_STATE = OFF` for short-term event sessions such as those used in ad hoc troubleshooting.
+- In Azure SQL Database, do not read deadlock events from the built-in `dl` event session. If there is a large number of deadlock events collected, reading them with the [sys.fn_xe_file_target_read_file()](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql) function can cause an out-of-memory error in the `master` database. This might impact login processing and result in an application outage. For the recommended ways to monitor deadlocks, see [Collect deadlock graphs in Azure SQL Database with Extended Events](analyze-prevent-deadlocks.md#collect-deadlock-graphs-in-azure-sql-database-with-extended-events).
 
 ## Event session targets
 

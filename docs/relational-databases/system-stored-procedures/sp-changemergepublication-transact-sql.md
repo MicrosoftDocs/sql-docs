@@ -36,7 +36,6 @@ sp_changemergepublication
 [ ; ]
 ```
 
-
 ## Arguments
 
 #### [ @publication = ] N'*publication*'

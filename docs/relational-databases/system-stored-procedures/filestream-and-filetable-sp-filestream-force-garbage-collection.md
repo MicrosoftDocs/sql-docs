@@ -103,7 +103,7 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'fsdb',
     @filename = N'FSContainer';
 ```
 
-## See also
+## Related content
 
 - [FILESTREAM (SQL Server)](../blob/filestream-sql-server.md)
 - [FileTables (SQL Server)](../blob/filetables-sql-server.md)

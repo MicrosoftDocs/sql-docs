@@ -1,5 +1,5 @@
 ---
-title: "Deploying a Delivery Extension"
+title: "Deploy a delivery extension"
 description: Learn how to deploy a delivery extension to a report server. See which entries to add to which configuration files so the report server locates the extension.
 author: maggiesMSFT
 ms.author: maggies
@@ -15,14 +15,14 @@ helpviewer_keywords:
   - "Extension element"
   - "deploying [Reporting Services], extensions"
 ---
-# Deploying a Delivery Extension
+# Deploy a delivery extension
   Delivery extensions supply their configuration information in the form of an XML configuration file. The XML file conforms to the XML schema defined for delivery extensions. Delivery extensions provide infrastructure for setting and modifying the configuration file.  
   
  If a delivery extension is replaced or upgraded, all subscriptions that reference the delivery extension remain valid.  
   
- After you have written and compiled your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] delivery extension into a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] library, you must copy the extension to the appropriate directory and add an entry to the appropriate [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] configuration file so the report server can locate it.  
+ After you write and compile your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] delivery extension into a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] library, you must copy the extension to the appropriate directory and add an entry to the appropriate [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] configuration file so the report server can locate it.  
   
-## Configuration-File Extension Element  
+## Configuration file Extension element  
  Delivery extensions that you deploy to the report server need to be entered as **Extension** elements in the configuration file. The configuration file for the report server is RSReportServer.config.  
   
  The following table describes the attributes for the **Extension** element for delivery extensions.  
@@ -31,21 +31,21 @@ helpviewer_keywords:
 |---------------|-----------------|  
 |**Name**|A unique name for the extension (for example, "Report Server E-Mail" for the e-mail delivery extension or "Report Server FileShare" for the file share delivery extension). The maximum length for the **Name** attribute is 255 characters. The name must be unique among all entries within the **Extension** element of a configuration file. If a duplicate name is present, the report server returns an error.|  
 |**Type**|A comma-separated list that includes the fully qualified namespace along with the name of the assembly.|  
-|**Visible**|A value of **false** indicates that the delivery extension should not be visible in user interfaces. If the attribute is not included, the default value is **true**.|  
+|**Visible**|A value of **false** indicates that the delivery extension shouldn't be visible in user interfaces. If the attribute isn't included, the default value is **true**.|  
   
- For more information about the RSReportServer.config file, see [Reporting Services Configuration Files](../../../reporting-services/report-server/reporting-services-configuration-files.md).  
+ For more information about the RSReportServer.config file, see [Reporting Services configuration files](../../../reporting-services/report-server/reporting-services-configuration-files.md).  
   
-## Deploying the Extension to the Report Server  
+## Deploy the extension to the report server  
  The report server uses delivery extensions for processing and delivering notifications or reports. You should deploy your delivery extension assembly to the report server as a private assembly. You also need to make an entry in the report server configuration file, RSReportServer.config.  
   
-#### To deploy a deliver extension assembly to a report server  
+#### Deploy a delivery extension assembly to a report server  
   
-1.  Copy your assembly from your staging location to the bin directory of the report server on which you want to use the delivery extension. The default location of the report server bin directory is %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer\bin.  
+1.  Copy your assembly from your staging location to the bin directory of the report server on which you want to use the delivery extension. The default location of the report server bin directory is ``%ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer\bin``.  
   
     > [!IMPORTANT]  
     >  If you are attempting to overwrite an existing delivery extension assembly, you must first stop the Report Server service before copying the updated assembly. Restart your service after the assembly is through copying.  
   
-2.  After the assembly file is copied, open the RSReportServer.config file. The RSReportServer.config file is located in the %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer directory. You need to make an entry in the configuration file for your delivery extension assembly file. You can open the configuration file with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] or a simple text editor, such as Notepad.  
+2.  After the assembly file is copied, open the RSReportServer.config file. The RSReportServer.config file is located in the ``%ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer`` directory. You need to make an entry in the configuration file for your delivery extension assembly file. You can open the configuration file with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] or a simple text editor, such as Notepad.  
   
 3.  Locate the **Delivery** element in the RSReportServer.config file. An entry for your newly created delivery extension should be made in the following location:  
   
@@ -65,7 +65,7 @@ helpviewer_keywords:
   
      The value for **Name** is the unique name of the delivery extension. The value for **Type** is a comma-separated list that includes an entry for the fully qualified namespace of your class that implements the <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> interface, followed by the name of your assembly (not including the .dll file extension). By default, delivery extensions are visible. To hide an extension from user interfaces, such as the web portal, add a **Visible** attribute to the **Extension** element, and set it to **false**.  
   
-5.  Finally, add a code group for your custom assembly that grants **FullTrust** permission for your delivery extension. You do this by adding the code group to the rssrvpolicy.config file located by default in %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer. Your code group might look like the following:  
+5.  Finally, add a code group for your custom assembly that grants **FullTrust** permission for your delivery extension. You do this step by adding the code group to the rssrvpolicy.config file located by default in ``%ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer``. Your code group might look like the following example:  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -80,13 +80,14 @@ helpviewer_keywords:
     </CodeGroup>  
     ```  
   
-     URL membership is only one of many membership conditions you might choose for your delivery extension. For more information about code access security in [!INCLUDE[ssRS](../../../includes/ssrs.md)], see.[Secure Development &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
+     URL membership is only one of many membership conditions you might choose for your delivery extension. For more information about code access security in [!INCLUDE[ssRS](../../../includes/ssrs.md)], see [Secure development &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
    
-## Verifying the Deployment  
- You can verify whether your delivery extension was deployed successfully to the report server by using the Web service <xref:ReportService2010.ReportingService2010.ListExtensions%2A> method. You can also open the web portal and verify that your extension is included in the list of available delivery extensions for a subscription. For more information about the web portal and subscriptions, see [Subscriptions and Delivery &#40;Reporting Services&#41;](../../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
+## Verify the deployment  
+ You can verify whether your delivery extension was deployed successfully to the report server by using the Web service <xref:ReportService2010.ReportingService2010.ListExtensions%2A> method. You can also open the web portal and verify that your extension is included in the list of available delivery extensions for a subscription. For more information about the web portal and subscriptions, see [Subscriptions and delivery &#40;Reporting Services&#41;](../../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
-## See Also  
- [Implementing a Delivery Extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
- [Reporting Services Extension Library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+## Related content
+
+- [Implement a delivery extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
+- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

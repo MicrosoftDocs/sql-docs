@@ -8,7 +8,6 @@ ms.date: 09/11/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
-ms.custom: ignite-fall-2021
 tags: azure-resource-manager
 ---
 # Azure Update Manager for SQL Server on Azure VMs (preview)
@@ -164,7 +163,7 @@ To learn more, review the following articles:
 
 For more information, see the following articles:
 
-- [Overview of SQL Server on a Windows VM](windows/sql-server-on-azure-vm-iaas-what-is-overview.md)
-- [FAQ for SQL Server on a Windows VM](windows/frequently-asked-questions-faq.yml)
-- [Pricing guidance for SQL Server on a Windows VM](windows/pricing-guidance.md)
+- [Overview of SQL Server on Windows VMs](windows/sql-server-on-azure-vm-iaas-what-is-overview.md)
+- [FAQ for SQL Server on Windows VMs](windows/frequently-asked-questions-faq.yml)
+- [Pricing guidance for SQL Server on Windows VMs](windows/pricing-guidance.md)
 - [What's new for SQL Server on Azure VMs](windows/doc-changes-updates-release-notes-whats-new.md)

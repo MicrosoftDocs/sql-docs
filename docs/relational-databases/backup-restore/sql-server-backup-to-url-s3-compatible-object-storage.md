@@ -181,15 +181,13 @@ If no value is declared, `us-east-1` is assigned as default.
 Backup example:
 
 ```sql
-WITH
-    BACKUP_OPTIONS = '{"s3": {"region":"us-west-1"}}'
+WITH BACKUP_OPTIONS = '{"s3": {"region":"us-west-1"}}'
 ```
 
 Restore example:
 
 ```sql
-WITH
-    RESTORE_OPTIONS = '{"s3": {"region":"us-west-1"}}'
+WITH RESTORE_OPTIONS = '{"s3": {"region":"us-west-1"}}'
 ```
 
 ### Linux support

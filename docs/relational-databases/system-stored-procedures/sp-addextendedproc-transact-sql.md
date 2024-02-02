@@ -79,7 +79,7 @@ GO
 EXEC sp_addextendedproc xp_hello, 'c:\xp_hello.dll';
 ```
 
-## See also
+## Related content
 
 - [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)
 - [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)

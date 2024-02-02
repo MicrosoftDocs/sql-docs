@@ -118,6 +118,6 @@ EXEC sp_unprepare 1;
 GO
 ```
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

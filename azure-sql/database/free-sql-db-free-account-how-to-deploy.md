@@ -15,7 +15,7 @@ ms.custom: template-how-to
 
 Azure SQL Database is an intelligent, scalable, relational database service built for the cloud. SQL Database is a fully managed platform as a service (PaaS) database engine that handles most database management functions such as upgrading, patching, backups, and monitoring without user involvement.
 
-This offer is still active for existing resources for 12 months after provisioning, providing a S0 database with 10 database transaction units and 250-GB storage for a [Azure free account](https://azure.microsoft.com/free/).
+This offer is still active for existing resources for 12 months after provisioning, providing a S0 database with 10 database transaction units and 250-GB storage for an [Azure free account](https://azure.microsoft.com/free/).
 
 > [!IMPORTANT]  
 > This free offer has been replaced by the Azure SQL Database free offer, see [Try Azure SQL Database for free](free-offer.md). Starting in September 2023, you can try Azure SQL Database free of charge and get 100,000 vCore seconds of compute every month, for the life of your subscription. This free offer provides a General Purpose database for the lifetime of your subscription.

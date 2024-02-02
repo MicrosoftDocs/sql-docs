@@ -9,7 +9,7 @@ ms.service: sql-database
 ms.subservice: backup-restore
 ms.topic: sample
 ms.custom: devx-track-azurepowershell
-ms.devlang: PowerShell
+ms.devlang: powershell
 ---
 
 # Use PowerShell to restore a database to an earlier point in time

@@ -849,6 +849,6 @@ Azure Monitor provides a variety of diagnostic data collection groups, metrics, 
 
 - [Introduction to Azure SQL Database and Azure SQL Managed Instance](sql-database-paas-overview.md)
 - [Diagnose and troubleshoot high CPU on Azure SQL Database](high-cpu-diagnose-troubleshoot.md)
-- [Tune applications and databases for performance in Azure SQL Database and Azure SQL Managed Instance](performance-guidance.md)
+- [Tune applications and databases for performance in Azure SQL Database](performance-guidance.md)
 - [Understand and resolve Azure SQL Database blocking problems](understand-resolve-blocking.md)
 - [Analyze and prevent deadlocks in Azure SQL Database](analyze-prevent-deadlocks.md)

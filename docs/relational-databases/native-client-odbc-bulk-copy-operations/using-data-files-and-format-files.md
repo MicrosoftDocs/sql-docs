@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "bulk copy [SQL Server Native Client]"
   - "ODBC, bulk copy operations"
   - "bulk copy [ODBC], data files"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Data Files and Format Files
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

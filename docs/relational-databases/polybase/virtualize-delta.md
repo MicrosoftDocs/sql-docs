@@ -4,7 +4,7 @@ description: "Virtualize a delta table with PolyBase starting with SQL Server 20
 author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf, randolphwest
-ms.date: 12/11/2023
+ms.date: 01/11/2024
 ms.service: sql
 ms.subservice: polybase
 ms.topic: tutorial
@@ -133,6 +133,10 @@ WITH (
 );
 GO
 ```
+
+### Limitations
+
+If you create an external table pointing to partitioned delta table, the column used for partitioning returns `NULL` when querying the external table. However, if you use an `OPENROWSET` query, the column value returns correctly. To work around this limitation, create a view on the `OPENROWSET` query, and then query the view to get the partitioned column values to return correctly.
 
 ## Related content
 

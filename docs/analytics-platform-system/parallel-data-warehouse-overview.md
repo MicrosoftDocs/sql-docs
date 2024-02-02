@@ -195,7 +195,7 @@ For more information, see [Connect With PowerPivot for Excel &#40;SQL Server PDW
 ## Loading Tools 
   
 ### Integration Services  
-Install PDW-specific destination adapters that allow you to use SQL ServerIntegration Services to load data into SQL Server PDW.  
+Install Analytics Platform System (PDW)-specific destination adapters that allow you to use SQL Server Integration Services to load data into Analytics Platform System (PDW).  
 
 <!-- MISSING LINKS
 For more information, see [Install Integration Services Destination Adapters &#40;SQL Server PDW&#41;](../sqlpdw/install-integration-services-destination-adapters-sql-server-pdw.md). 

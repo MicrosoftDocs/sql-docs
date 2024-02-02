@@ -7,7 +7,7 @@ ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ms.service: sql
 ms.subservice: configuration
-ms.topic: conceptual
+ms.topic: how-to
 ---
 
 # Designing and Implementing (Service Broker)

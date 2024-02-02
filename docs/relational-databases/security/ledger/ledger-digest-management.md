@@ -69,6 +69,11 @@ If you use **Azure SQL Database** or **Azure SQL Managed Instance**, make sure t
 > [!NOTE]
 > Automatic generation and storage of database digests in SQL Server only supports Azure Storage accounts.
 
+#### Configure Azure SQL Managed Instance NSG rules to work with Azure Confidential Ledger
+
+If you use **Azure SQL Managed Instance**, make sure that you configure the VNET rules of your Azure SQL Managed Instance to communicate with Azure Confidential Ledger. To do this, follow the steps to [Configure Azure SQL Managed Instance NSG rules to work with Azure Confidential Ledger](ledger-nsg-policies-configure.md).
+
+
 ### Manual generation and storage of database digests
 
 You can also generate a database digest on demand so that you can manually store the digest in any service or device that you consider a trusted storage destination. For example, you might choose an on-premises write once, read many (WORM) device as a destination. You manually generate a database digest by running the [sys.sp_generate_database_ledger_digest](../../system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql.md) stored procedure in either [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).

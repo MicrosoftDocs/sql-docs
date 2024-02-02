@@ -69,6 +69,8 @@ landingContent:
             url: ledger-how-to-recover-after-tampering.md
           - text: Verify a ledger table to detect tampering
             url: ledger-verify-database.md
+          - text: Configure Azure SQL Managed Instance NSG rules to work with Azure Confidential Ledger
+            url: ledger-nsg-policies-configure.md
 
 
   # Card

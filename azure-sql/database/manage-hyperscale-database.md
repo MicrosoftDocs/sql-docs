@@ -32,7 +32,7 @@ You'll only experience a short period of downtime, generally a few minutes, duri
 
 ### Prerequisites
 
-To move a database that is a part of a [geo-replication](active-geo-replication-overview.md) relationship, either as the primary or as a secondary, to Hyperscale, you need to first terminate data replication between the primary and secondary replica. Databases in a [failover group](auto-failover-group-sql-db.md) must be removed from the group first.
+To move a database that is a part of a [geo-replication](active-geo-replication-overview.md) relationship, either as the primary or as a secondary, to Hyperscale, you need to first terminate data replication between the primary and secondary replica. Databases in a [failover group](failover-group-sql-db.md) must be removed from the group first.
 
 Once a database has been moved to Hyperscale, you can create a new Hyperscale geo-replica for that database.
 
@@ -99,7 +99,7 @@ You can [monitor operations for a Hyperscale database](#monitor-operations-for-a
 
 # [Transact-SQL](#tab/t-sql)
 
-To migrate an existing database in Azure SQL Database to the Hyperscale service tier with Transact-SQL, first connect to the `master` database on your [logical SQL server](logical-servers.md) using [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/azure-data-studio/download-azure-data-studio).
+To migrate an existing database in Azure SQL Database to the Hyperscale service tier with Transact-SQL, first connect to the `master` database on your [logical SQL server](logical-servers.md) using the [Azure portal Query editor for Azure SQL Database](query-editor.md), [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/azure-data-studio/download-azure-data-studio).
 
 You must specify both the edition and service objective in the [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?preserve-view=true&view=azuresqldb-current) statement.
 

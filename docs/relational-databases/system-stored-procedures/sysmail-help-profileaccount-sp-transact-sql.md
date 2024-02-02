@@ -135,7 +135,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 106         AdventureWorks Operator      210         Operator-MainServer  1
 ```
 
-## See also
+## Related content
 
 - [Database Mail](../database-mail/database-mail.md)
 - [Create a Database Mail Account](../database-mail/create-a-database-mail-account.md)

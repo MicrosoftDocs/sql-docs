@@ -74,7 +74,7 @@ The example joins the current machine as a compute node to a PolyBase group. The
 EXEC sp_polybase_join_group N'HST01', 16450, N'MSSQLSERVER';
 ```
 
-## See also
+## Related content
 
 - [Get started with PolyBase](../polybase/polybase-guide.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

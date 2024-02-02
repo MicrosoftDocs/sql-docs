@@ -1,10 +1,10 @@
 ---
 title: "FIRST_VALUE (Transact-SQL)"
-description: "FIRST_VALUE (Transact-SQL)"
+description: Returns the first value in an ordered set of values.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: kendalv, randolphwest
-ms.date: 07/26/2023
+ms.date: 01/04/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "analytic functions, FIRST_VALUE"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 # FIRST_VALUE (Transact-SQL)
 
@@ -29,12 +29,11 @@ Returns the first value in an ordered set of values.
 ## Syntax
 
 ```syntaxsql
-FIRST_VALUE ( [scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
+FIRST_VALUE ( [ scalar_expression ] ) [ IGNORE NULLS | RESPECT NULLS ]
     OVER ( [ partition_by_clause ] order_by_clause [ rows_range_clause ] )
-
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
@@ -44,13 +43,13 @@ The value to be returned. *scalar_expression* can be a column, subquery, or othe
 
 #### [ IGNORE NULLS | RESPECT NULLS ]
 
-**Applies to**: SQL Server (starting with [!INCLUDE[sssql22](../../includes/sssql22-md.md)]), Azure SQL Database, Azure SQL Managed Instance, [!INCLUDE[ssazurede-md](../../includes/ssazurede-md.md)]
+**Applies to**: SQL Server (starting with [!INCLUDE [sssql22](../../includes/sssql22-md.md)]), Azure SQL Database, Azure SQL Managed Instance, [!INCLUDE [ssazurede-md](../../includes/ssazurede-md.md)]
 
-IGNORE NULLS - Ignore null values in the dataset when computing the first value over a partition.
+`IGNORE NULLS` - Ignore null values in the dataset when computing the first value over a partition.
 
-RESPECT NULLS - Respect null values in the dataset when computing first value over a partition.
+`RESPECT NULLS` - Respect null values in the dataset when computing first value over a partition. `RESPECT NULLS` is the default behavior if a NULLS option isn't specified.
 
-For more information on this argument in [!INCLUDE[ssazurede-md](../../includes/ssazurede-md.md)], see [Imputing missing values](/azure/azure-sql-edge/imputing-missing-values/).
+For more information on this argument in [!INCLUDE [ssazurede-md](../../includes/ssazurede-md.md)], see [Imputing missing values](/azure/azure-sql-edge/imputing-missing-values/).
 
 #### OVER ( [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] )
 
@@ -60,7 +59,7 @@ The *order_by_clause* determines the logical order in which the operation is per
 
 The *rows_range_clause* further limits the rows within the partition by specifying start and end points.
 
-For more information, see [OVER Clause &#40;Transact-SQL&#41;](../queries/select-over-clause-transact-sql.md).
+For more information, see [OVER Clause (Transact-SQL)](../queries/select-over-clause-transact-sql.md).
 
 ## Return types
 
@@ -68,7 +67,7 @@ The same type as *scalar_expression*.
 
 ## Remarks
 
-`FIRST_VALUE` is nondeterministic. For more information, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
+`FIRST_VALUE` is nondeterministic. For more information, see [Deterministic and nondeterministic functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
 
 ## Examples
 
@@ -79,13 +78,17 @@ The following example uses `FIRST_VALUE` to return the name of the product that 
 ```sql
 USE AdventureWorks2022;
 GO
-SELECT Name, ListPrice,
-       FIRST_VALUE(Name) OVER (ORDER BY ListPrice ASC) AS LeastExpensive
+
+SELECT Name,
+    ListPrice,
+    FIRST_VALUE(Name) OVER (
+        ORDER BY ListPrice ASC
+    ) AS LeastExpensive
 FROM Production.Product
 WHERE ProductSubcategoryID = 37;
 ```
 
-  Here's the result set.
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
 
 ```output
 Name                    ListPrice             LeastExpensive
@@ -110,18 +113,20 @@ The following example uses `FIRST_VALUE` to return the employee with the fewest 
 ```sql
 USE AdventureWorks2022;
 GO
-SELECT JobTitle, LastName, VacationHours,
-       FIRST_VALUE(LastName) OVER (PARTITION BY JobTitle
-                                   ORDER BY VacationHours ASC
-                                   ROWS UNBOUNDED PRECEDING
-                                  ) AS FewestVacationHours
+
+SELECT JobTitle,
+    LastName,
+    VacationHours,
+    FIRST_VALUE(LastName) OVER (
+        PARTITION BY JobTitle ORDER BY VacationHours ASC ROWS UNBOUNDED PRECEDING
+    ) AS FewestVacationHours
 FROM HumanResources.Employee AS e
 INNER JOIN Person.Person AS p
     ON e.BusinessEntityID = p.BusinessEntityID
 ORDER BY JobTitle;
 ```
 
-Here's a partial result set.
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
 
 ```output
 JobTitle                            LastName                  VacationHours FewestVacationHours
@@ -136,7 +141,7 @@ Accounts Receivable Specialist      Spoon                     61            Poe
 Accounts Receivable Specialist      Walton                    62            Poe
 ```
 
-## Next steps
+## Related content
 
 - [LAST_VALUE (Transact-SQL)](last-value-transact-sql.md)
 - [SELECT - OVER Clause (Transact-SQL)](../queries/select-over-clause-transact-sql.md)

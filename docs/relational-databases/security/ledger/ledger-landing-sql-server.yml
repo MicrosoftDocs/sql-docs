@@ -9,9 +9,6 @@ metadata:
   ms.service: sql-database
   ms.subservice: security
   ms.tgt_pltfrm: na
-  ms.devlang:
-  ms.custom:
-  - event-tier1-build-2022
   ms.topic: landing-page
   author: VanMSFT
   ms.author: vanto

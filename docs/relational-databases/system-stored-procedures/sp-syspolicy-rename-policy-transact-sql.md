@@ -74,6 +74,6 @@ EXEC msdb.dbo.sp_syspolicy_rename_policy
 GO
 ```
 
-## Next steps
+## ## Related content
 
 - [Policy-Based Management stored procedures (Transact-SQL)](policy-based-management-stored-procedures-transact-sql.md)

@@ -1,6 +1,5 @@
 ---
 title: Create server configured with user-assigned managed identity and cross-tenant CMK for TDE
-titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: Learn how to configure user-assigned managed identity and transparent data encryption (TDE) with cross-tenant customer managed keys (CMK) while creating an Azure SQL Database logical server using the Azure portal, PowerShell, or Azure CLI.
 author: GithubMirek
 ms.author: mireks

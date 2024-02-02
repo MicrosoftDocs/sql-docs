@@ -124,7 +124,7 @@ If you want to use a different type of filter function to select rows to migrate
 
 1. Specify whether you want to use an existing server or create a new Azure server.
 
-   If the Active Directory on your SQL Server is federated with Azure Active Directory, you can optionally use a federated service account for SQL Server to communicate with the remote Azure server. For more info about the requirements for this option, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).
+   If the Active Directory on your SQL Server is [federated](/entra/identity/hybrid/connect/whatis-fed) with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)), you can optionally use a federated service account for SQL Server to communicate with the remote Azure server. For more info about the requirements for this option, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md#remote_data_archive---on--server--server_name--credential--db_scoped_credential_name--federated_service_account--on--off----off).
 
    - **Create new server**
 
@@ -142,7 +142,7 @@ If you want to use a different type of filter function to select rows to migrate
 
         - If you select **SQL Server Authentication**, provide the administrator login and password.
 
-        - Select **Active Directory Integrated Authentication** to use a federated service account for SQL Server to communicate with the remote Azure server. If the selected server isn't integrated with Azure Active Directory, this option doesn't appear.
+        - Select **Active Directory Integrated Authentication** to use a [federated](/entra/identity/hybrid/connect/whatis-fed) service account for SQL Server to communicate with the remote Azure server. If the selected server isn't federated with Microsoft Entra ID, this option doesn't appear.
 
         :::image type="content" source="media/get-started-by-running-the-enable-database-for-stretch-wizard/stretch-wizard-select-existing-server.png" alt-text="Screenshot showing how to select existing Azure server - Stretch Database wizard.":::
 

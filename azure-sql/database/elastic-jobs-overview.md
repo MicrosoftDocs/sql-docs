@@ -153,11 +153,11 @@ The elastic job agent can connect to the server(s)/database(s) specified by the 
 - Use [Microsoft Entra (formerly Azure Active Directory) authentication](#authentication-via-user-assigned-managed-identity-umi) with a [user-assigned managed identity (UMI)](#authentication-via-user-assigned-managed-identity-umi).
 - Use [Database-scoped credentials](#authentication-via-database-scoped-credentials). (Previously, this was the only method of authentication.)
 
-The [name of Azure Active Directory is changing to Microsoft Entra](/azure/active-directory/fundamentals/new-name), starting in 2023.
+The [name of Azure Active Directory changed to Microsoft Entra ID](/entra/fundamentals/new-name), starting in 2023.
 
 ### Authentication via user-assigned managed identity (UMI)
 
-[Microsoft Entra (formerly Azure Active Directory)](/azure/active-directory/fundamentals/new-name) authentication via user-assigned managed identity (UMI) is the recommended option for connecting elastic jobs to Azure SQL Database. With Microsoft Entra ID support, the job agent will be able to connect to target databases (databases, servers, elastic pools) and output database(s) using the UMI.
+[Microsoft Entra (formerly Azure Active Directory)](/entra/fundamentals/new-name) authentication via user-assigned managed identity (UMI) is the recommended option for connecting elastic jobs to Azure SQL Database. With Microsoft Entra ID support, the job agent will be able to connect to target databases (databases, servers, elastic pools) and output database(s) using the UMI.
 
 :::image type="content" source="media/elastic-jobs-overview/umi-jobuser.svg" alt-text="Diagram of how user-assigned managed identities (UMI) work with elastic jobs.":::
 

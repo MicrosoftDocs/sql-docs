@@ -46,7 +46,7 @@ ms.custom:
 ##  <a name="bkmk_SupportedVersions"></a> Supported versions  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], the 32-bit development environment for Report Server projects, is not designed to run on [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-based computers and is not installed on [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-based servers. However, support for [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] is available for x64-based computers.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], the 32-bit development environment for Report Server projects, is not designed to run on Itanium-based computers and is not installed on Itanium-based servers. However, support for [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] is available for x64-based computers.  
   
  The following table describes the supported versions for authoring and publishing reports in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   

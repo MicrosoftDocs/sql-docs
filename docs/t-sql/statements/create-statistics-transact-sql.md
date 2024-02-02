@@ -3,7 +3,7 @@ title: CREATE STATISTICS (Transact-SQL)
 description: CREATE STATISTICS (Transact-SQL)
 author: markingmyname
 ms.author: maghan
-ms.reviewer: katsmith, wiassaf
+ms.reviewer: derekw, wiassaf
 ms.date: 07/26/2023
 ms.service: sql
 ms.subservice: t-sql
@@ -246,7 +246,7 @@ Uses the actual number of processors or fewer based on the current system worklo
 
 #### AUTO_DROP = { ON | OFF }
 
-**Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], and starting with [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)]
+**Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], and starting with [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)]
 
 Prior to [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], if statistics are manually created by a user or third party tool on a user database, those statistics objects can block or interfere with schema changes the customer may desire.
 

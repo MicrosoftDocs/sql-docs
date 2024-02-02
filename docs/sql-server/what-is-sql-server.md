@@ -3,7 +3,7 @@ title: What is SQL Server?
 description: An overview of the relational database engine and components of SQL Server
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 09/05/2023
+ms.date: 12/07/2023
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: conceptual
@@ -17,14 +17,14 @@ ms.topic: conceptual
 
 ## Deployment options
 
-You can install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Windows or [Linux](../linux/sql-server-linux-overview.md), deploy it in [a Linux container](../linux/sql-server-linux-overview.md#container-images), or deploy it on an [Azure Virtual Machine](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview) or other virtual machine platform. You may previously have referred to this as the *boxed product*.
+You can install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Windows or [Linux](../linux/sql-server-linux-overview.md), deploy it in [a Linux container](../linux/sql-server-linux-overview.md#container-images), or deploy it on an [Azure Virtual Machine](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview) or other virtual machine platform. You previously might have referred to this as the *boxed product*.
 
 Supported versions of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] depend on your license agreement, but for the purposes of this documentation, we mean [!INCLUDE [sssql16-md](../includes/sssql16-md.md)] and later versions. Documentation for [!INCLUDE [sssql14-md](../includes/sssql14-md.md)] and previous versions is available at [Previous versions of SQL Server documentation](previous-versions-sql-server.md). To find out which versions of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] are currently supported, see [SQL Server end of support options](end-of-support/sql-server-end-of-support-overview.md).
 
 The underlying [!INCLUDE [ssdenoversion-md](../includes/ssdenoversion-md.md)] is also used by the following products and services:
 
 - [[!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)]](/azure/azure-sql/database/sql-database-paas-overview)
-- [[!INCLUDE [ssazuremi_md](../includes/ssazuremi_md.md)]](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview)
+- [[!INCLUDE [ssazuremi-md](../includes/ssazuremi-md.md)]](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview)
 - [Microsoft Analytics Platform System](../analytics-platform-system/home-analytics-platform-system-aps-pdw.md) (PDW)
 - [[!INCLUDE [ssazuresynapse-md](../includes/ssazuresynapse-md.md)]](/azure/synapse-analytics/overview-what-is)
 - [[!INCLUDE [ssazurede-md](../includes/ssazurede-md.md)]](/azure/azure-sql-edge/overview)
@@ -81,7 +81,7 @@ Azure virtual machines run in many different geographic regions around the world
 
 ### Azure Arc
 
-[Azure Arc](azure-arc/overview.md) simplifies governance and management by delivering a consistent multicloud and on-premises management platform. Azure Arc provides a centralized, unified way to manage your entire environment together, combining existing non-Azure and/or on-premises virtual machines, Kubernetes clusters, and databases into Azure Resource Manager.
+[SQL Server enabled by Azure Arc](azure-arc/overview.md) simplifies governance and management by delivering a consistent multicloud and on-premises management platform. Azure Arc provides a centralized, unified way to manage your entire environment together, combining existing non-Azure and/or on-premises virtual machines, Kubernetes clusters, and databases into Azure Resource Manager.
 
 You can use Azure services and management capabilities, introduce DevOps practices to support new cloud native patterns in your environment, and configure custom locations as an abstraction layer on top of Azure Arc-enabled Kubernetes clusters and cluster extensions, regardless of where your resources live.
 
@@ -129,7 +129,7 @@ You can use Azure services and management capabilities, introduce DevOps practic
 - [What is SQL Server Management Studio (SSMS)?](../ssms/sql-server-management-studio-ssms.md)
 - [What is Azure Data Studio?](../azure-data-studio/what-is-azure-data-studio.md)
 
-## Next steps
+## Related content
 
 - [SQL Server installation guide](../database-engine/install-windows/install-sql-server.md) (Windows)
 - [Installation guidance for SQL Server on Linux](../linux/sql-server-linux-setup.md)

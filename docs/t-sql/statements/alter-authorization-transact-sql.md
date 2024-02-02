@@ -33,6 +33,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
+
 ## Syntax
 
 ```syntaxsql
@@ -211,18 +213,18 @@ If you are not a member of the **sysadmin** fixed server role, you must have at 
 The new owner principal must be one of the following:
 
 - A SQL Server authentication login.
-- A federated user (not a group) present in Azure AD.
-- A managed user (not a group) or an application present in Azure AD.
+- A federated user (not a group) present in Microsoft Entra ID.
+- A managed user (not a group) or an application present in Microsoft Entra ID.
 
-If the new owner is an Azure Active Directory user, it cannot exist as a user in the database where the new owner will become the new DBO. Such Azure AD user must be first removed from the database before executing the ALTER AUTHORIZATION statement changing the database ownership to the new user. For more information about configuring an Azure Active Directory users with SQL Database, see [Connecting to SQL Database or [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-configure).
+If the new owner is a Microsoft Entra user, it cannot exist as a user in the database where the new owner will become the new database owner (dbo). The Microsoft Entra user must first be removed from the database before executing the ALTER AUTHORIZATION statement changing the database ownership to the new user. For more information about configuring Microsoft Entra users with SQL Database, see [Configure Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-configure).
 
 **Requirements for the person executing the ALTER AUTHORIZATION statement:**
 You must connect to the target database to change the owner of that database.
 
 The following types of accounts can change the owner of a database.
 
-- The service-level principal login. (The SQL Azure administrator provisioned when the SQL Database server was created.)
-- The Azure Active Directory administrator for the Azure SQL Server.
+- The service-level principal login, which is the SQL administrator provisioned when the [logical server in Azure](/azure/azure-sql/database/logical-servers) was created.
+- The Microsoft Entra administrator for the logical server..
 - The current owner of the database.
 
 The following table summarizes the requirements:
@@ -230,11 +232,11 @@ The following table summarizes the requirements:
 Executor  |Target  |Result
 ---------|---------|---------
 SQL Server Authentication login  |SQL Server Authentication login|Success
-SQL Server Authentication login  |Azure AD user|Fail
-Azure AD user  |SQL Server Authentication login|Success
-Azure AD user  |Azure AD user|Success
+SQL Server Authentication login  |Microsoft Entra user|Fail
+Microsoft Entra user  |SQL Server Authentication login|Success
+Microsoft Entra user  |Microsoft Entra user|Success
 
-To verify an Azure AD owner of the database execute the following Transact-SQL command in a user database (in this example `testdb`).
+To verify a Microsoft Entra owner of the database, execute the following Transact-SQL command in a user database (in this example `testdb`).
 
 ```sql
 SELECT CAST(owner_sid as uniqueidentifier) AS Owner_SID
@@ -242,7 +244,7 @@ FROM sys.databases
 WHERE name = 'testdb';
 ```
 
-The output will be an identifier (such as 6D8B81F6-7C79-444C-8858-4AF896C03C67) which corresponds to Azure AD ObjectID assigned to `richel@cqclinic.onmicrosoft.com`
+The output will be a GUID (such as XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) which corresponds to the object ID of the Microsoft Entra user or service principal assigned as the database owner. You can verify this by [checking the user's object ID in Microsoft Entra ID](/partner-center/find-ids-and-domain-names#find-the-user-object-id).
 When a SQL Server authentication login user is the database owner, execute the following statement in the master database to verify the database owner:
 
 ```sql
@@ -255,21 +257,21 @@ ON d.owner_sid = sl.sid;
 
 ### Best practice
 
-Instead of using Azure AD users as individual owners of the database, use an Azure AD group as a member of the **db_owner** fixed database role. The following steps, show how to configure a disabled login as the database owner, and make an Azure Active Directory group (`mydbogroup`) a member of the **db_owner** role.
+Instead of using Microsoft Entra users as individual owners of the database, use a Microsoft Entra group as a member of the **db_owner** fixed database role. The following steps show how to configure a disabled login as the database owner, and make a Microsoft Entra group (`mydbogroup`) a member of the **db_owner** role.
 
-1. Login to SQL Server as Azure AD admin, and change the owner of the database to a disabled SQL Server authentication login. For example, from the user database execute:
+1. Login to SQL Server as Microsoft Entra admin, and change the owner of the database to a disabled SQL Server authentication login. For example, from the user database execute:
 
    ```sql
    ALTER AUTHORIZATION ON database::testdb TO DisabledLogin;
    ```
 
-1. Create an Azure AD group that should own the database and add it as a user to the user database. For example:
+1. Create a Microsoft Entra group that should own the database and add it as a user to the user database. For example:
 
    ```sql
    CREATE USER [mydbogroup] FROM EXTERNAL PROVIDER;
    ```
 
-1. In the user database add the user representing the Azure AD group, to the **db_owner** fixed database role. For example:
+1. In the user database add the user representing the Microsoft Entra group, to the **db_owner** fixed database role. For example:
 
    ```sql
    ALTER ROLE db_owner ADD MEMBER mydbogroup;
@@ -277,8 +279,8 @@ Instead of using Azure AD users as individual owners of the database, use an Azu
 
 Now the `mydbogroup` members can centrally manage the database as members of the **db_owner** role.
 
-- When members of this group are removed from the Azure AD group, they automatically lose the dbo permissions for this database.
-- Similarly if new members are added to `mydbogroup` Azure AD group, they automatically gain the dbo access for this database.
+- When members of this group are removed from the Microsoft Entra group, they automatically lose the dbo permissions for this database.
+- Similarly if new members are added to `mydbogroup` Microsoft Entra group, they automatically gain the dbo access for this database.
 
 To check if a specific user has the effective dbo permission, have the user execute the following statement:
 
@@ -367,15 +369,16 @@ ALTER AUTHORIZATION ON OBJECT::dbo.Sprockets TO MichikoOsada;
 ALTER AUTHORIZATION ON DATABASE::Parts TO MichikoOsada;
 ```
 
-### G. Changing the owner of a SQL Database to an Azure AD User
+<a name='g-changing-the-owner-of-a-sql-database-to-an-azure-ad-user'></a>
 
-In the following example, an Azure Active Directory administrator for SQL Server in an organization with an active directory named `cqclinic.onmicrosoft.com`, can change the current ownership of a database `targetDB` and make an AAD user  `richel@cqclinic.onmicorsoft.com` the new database owner using the following command:
+### G. Changing the owner of a database to a Microsoft Entra user
+
+In the following example, a Microsoft Entra administrator for SQL Server in an organization with a custom Microsoft Entra domain named `cqclinic.onmicrosoft.com`, can change the current ownership of a database `targetDB` and make an existing Microsoft Entra user `richel@cqclinic.onmicorsoft.com` the new database owner using the following command:
 
 ```sql
 ALTER AUTHORIZATION ON database::targetDB TO [rachel@cqclinic.onmicrosoft.com];
 ```
 
-Azure AD requires brackets `[]` around the user name.
 
 ## See Also
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)

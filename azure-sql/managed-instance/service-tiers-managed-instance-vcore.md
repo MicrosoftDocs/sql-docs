@@ -4,7 +4,7 @@ description: The vCore purchasing model lets you independently scale compute and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake
-ms.date: 04/13/2023
+ms.date: 12/07/2023
 ms.service: sql-managed-instance
 ms.subservice: performance
 ms.topic: conceptual
@@ -74,7 +74,7 @@ Service tier options in the vCore purchasing model include General Purpose and B
 |**Best for**|Most business workloads. Offers budget-oriented, balanced, and scalable compute and storage options. |Offers business applications the highest resilience to failures by using several isolated replicas, and provides the highest I/O performance.|
 |**Read-only replicas**| 0 | 1 | 
 |**Replicas for availability**|One replica for high availability| Three high availability replicas, 1 is also a [read-scale replica](../database/read-scale-out.md) |
-|**Read-only replicas with [failover groups](auto-failover-group-sql-mi.md) enabled**| One additional read-only replica. Two total readable replicas, which includes the primary replica. | Two additional read-only replicas, three total read-only replicas. Four total readable replicas, which includes the primary replica. |
+|**Read-only replicas with [failover groups](failover-group-sql-mi.md) enabled**| One additional read-only replica. Two total readable replicas, which includes the primary replica. | Two additional read-only replicas, three total read-only replicas. Four total readable replicas, which includes the primary replica. |
 |**Pricing/billing**| [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/managed/) is charged. <br/>IOPS is not charged| [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/managed/) is charged. <br/>IOPS is not charged.
 |**Discount models**| [Reserved instances](../database/reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|[Reserved instances](../database/reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|
 
@@ -130,7 +130,7 @@ The key reasons why you should choose Business Critical service tier instead of 
 - **Higher resiliency and faster recovery from failures**. In case there is system failure, the databases on the primary instance are taken offline, and one of the secondary replicas will immediately become the new read-write primary instance, ready to process queries.  There is no need for the database engine to analyze and redo transactions from the log file or load data into memory buffers.
 - **Advanced data corruption protection**. Since the Business Critical tier uses databases replicas behind the scenes, the service leverages automatic page repair available with [mirroring and availability groups](/sql/sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring) to help mitigate data corruption. If a replica can't read a page due to a data integrity issue, a fresh copy of the page is retrieved from another replica, replacing the unreadable page without data loss or customer downtime. This functionality is available in  the General Purpose tier if the managed instance has geo-secondary replica.
 - **Higher availability** - The Business Critical tier in a multi-availability zone configuration provides resiliency to zonal failures and a higher availability SLA.
-- **Fast geo-recovery** - If an [auto-failover group](auto-failover-group-sql-mi.md) is configured, the Business Critical tier has a guaranteed Recovery Point Objective (RPO) of 5 seconds and Recovery Time Objective (RTO) of 30 seconds for 100% of deployed hours.
+- **Fast geo-recovery** - If a [failover group](failover-group-sql-mi.md) is configured, the Business Critical tier has a guaranteed Recovery Point Objective (RPO) of 5 seconds and Recovery Time Objective (RTO) of 30 seconds for 100% of deployed hours.
 
 
 ## Hardware configurations
@@ -200,9 +200,6 @@ Standard-series (Gen5) and premium-series hardware is available in all public re
   
 Memory optimized premium-series hardware is in preview, and has limited regional availability. For more information, see [Azure SQL Managed Instance resource limits](../managed-instance/resource-limits.md#hardware-configuration-characteristics).
 
-#### Previously available hardware
-
-Gen4 hardware has been retired and is not available for provisioning. Migrate your instance of SQL Managed Instance to a [supported hardware generation](resource-limits.md).
 
 ## Next steps
 

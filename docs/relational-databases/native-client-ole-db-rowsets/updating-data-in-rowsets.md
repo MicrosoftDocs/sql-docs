@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "OLE DB rowsets, updating data"
   - "SQL Server Native Client OLE DB provider, data updates"
   - "data updates [SQL Server], OLE DB"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Updating Data in Rowsets in SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -113,7 +113,10 @@ The name of the subscription database. *@subscriber_db* is **sysname**, with a d
 
 #### [ @subscriber_security_mode = ] *subscriber_security_mode*
 
-The security mode to use when connecting to a Subscriber when synchronizing. *@subscriber_security_mode* is **int**, with a default of `NULL`. `0` specifies [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. `1` specifies Windows Authentication.
+The security mode to use when connecting to a Subscriber when synchronizing. *@subscriber_security_mode* is **int**, with a default of `NULL`.
+
+- `0` specifies [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] authentication
+- `1` specifies Windows authentication
 
 > [!NOTE]  
 > [!INCLUDE [deprecated-parameter](../includes/deprecated-parameter.md)] The Distribution Agent always connects to the local Subscriber using Windows Authentication. If a value other than `NULL` or `1` is specified for this parameter, a warning message is returned.
@@ -142,10 +145,12 @@ The name of the distribution database. *@distribution_db* is **sysname**, with a
 
 #### [ @distributor_security_mode = ] *distributor_security_mode*
 
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
+
 The security mode to use when connecting to a Distributor when synchronizing. *@distributor_security_mode* is **int**, with a default of `1`. The following values define the security mode:
 
-- `0` specifies [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.
-- `1` specifies Windows Authentication.
+- `0` specifies [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] authentication.
+- `1` specifies Windows authentication.
 - `2` specifies Microsoft Entra password authentication starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
 - `3` specifies Microsoft Entra integrated authentication starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
 - `4` specifies Microsoft Entra token authentication starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.

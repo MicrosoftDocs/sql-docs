@@ -3,7 +3,7 @@ title: Connect to the SQL Server Database Engine
 description: Learn how to connect to the Database Engine used by SQL Server and Azure SQL services
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 09/05/2023
+ms.date: 12/07/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -15,7 +15,7 @@ This article provides a high level overview for connecting to the [!INCLUDE [ssd
 
 - [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]
 - [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)]
-- [!INCLUDE [ssazuremi_md](../includes/ssazuremi_md.md)]
+- [!INCLUDE [ssazuremi-md](../includes/ssazuremi-md.md)]
 - [!INCLUDE [ssazurepdw_md](../includes/ssazurepdw_md.md)]
 - [!INCLUDE [ssazuresynapse-md](../includes/ssazuresynapse-md.md)]
 - [!INCLUDE [ssazurede-md](../includes/ssazurede-md.md)]
@@ -29,7 +29,7 @@ The following table describes some of the more common client tools.
 | Client tool | Type | Operating system |
 | --- | --- | --- |
 | **[SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)** (SSMS) | GUI | Windows |
-| **[Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md)** (ADS) | GUI | Windows, macOS, Linux |
+| **[Azure Data Studio](/azure-data-studio/what-is-azure-data-studio)** (ADS) | GUI | Windows, macOS, Linux |
 | **[bcp](../tools/bcp-utility.md)** | CLI | Windows, macOS, Linux |
 | **[sqlcmd](../tools/sqlcmd/sqlcmd-utility.md)** | CLI | Windows, macOS, Linux |
 
@@ -44,7 +44,7 @@ When you connect to the [!INCLUDE [ssde-md](../includes/ssde-md.md)], you must p
 [<protocol>:]<instance>[,<port>]
 ```
 
-The protocol and port are optional because they have default values. Depending on the client tool and client library, they may be skipped.
+The protocol and port are optional because they have default values. Depending on the client tool and client library, they might be skipped.
 
 > [!NOTE]  
 > If you use a custom TCP port for connecting to the [!INCLUDE [ssde-md](../includes/ssde-md.md)], you must separate it with a comma (`,`), because the colon (`:`) is used to specify the protocol.
@@ -52,18 +52,18 @@ The protocol and port are optional because they have default values. Depending o
 | Setting | Values | Default | Details |
 | --- | --- | --- | --- |
 | **Protocol** | `tcp` (TCP/IP), `np` (named pipes), or `lpc` (shared memory). | `np` is the default when connecting to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)].<br /><br />`tcp` is the default when connecting to Azure SQL services. | **Protocol** is optional, and is frequently excluded when connecting to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on the same computer as the client tool.<br /><br />For more information, see [Network protocol considerations](#network-protocol-considerations) in the next section. |
-| **Instance** | The name of the server or instance. For example, `MyServer` or `MyServer\MyInstance`. | `localhost` | If the [!INCLUDE [ssde-md](../includes/ssde-md.md)] is located on the same computer as the client tool, you may be able to connect using `localhost`, `127.0.0.1`, or even `.` (a single period).<br/><br/>If you're connecting to a named instance, you must specify the server name and the instance name, separated by a slash. For example, `MyServer\MyInstance`. A named instance on the local machine may be specified by `.\MyInstance`. [!INCLUDE [ssexpress-md](../includes/ssexpress-md.md)] uses `MyServer\SQLEXPRESS`.
+| **Instance** | The name of the server or instance. For example, `MyServer` or `MyServer\MyInstance`. | `localhost` | If the [!INCLUDE [ssde-md](../includes/ssde-md.md)] is located on the same computer as the client tool, you may be able to connect using `localhost`, `127.0.0.1`, or even `.` (a single period).<br/><br/>If you're connecting to a named instance, you must specify the server name and the instance name, separated by a slash. For example, `MyServer\MyInstance`. A named instance on the local machine may be specified by `.\MyInstance`. [!INCLUDE [ssexpress-md](../includes/ssexpress-md.md)] uses `MyServer\SQLEXPRESS`. |
 | **Port** | Any TCP port. | `1433` | The default TCP port for connecting to the default instance of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is `1433`. However, your infrastructure team may configure custom ports.<br /><br />[!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Windows, including [!INCLUDE [ssexpress-md](../includes/ssexpress-md.md)] edition, can be configured as a named instance and may also have a custom port.<br /><br />For connecting to Azure SQL services, see the [Connect to Azure SQL](#connect-to-azure-sql) section.<br /><br />For more information about custom ports with [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see [SQL Server Configuration Manager](../relational-databases/sql-server-configuration-manager.md). |
 
 ## Network protocol considerations
 
-For [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Windows, when you connect to an instance on the same machine as the client tool, and depending on which edition is installed, the default protocol may be configured with multiple protocols, including named pipes (`np`), TCP/IP (`tcp`), and shared memory (`lpc`). Use the shared memory protocol for troubleshooting when you suspect the other protocols are configured incorrectly.
+For [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Windows, when you connect to an instance on the same machine as the client tool, and depending on which edition is installed, the default protocol can be configured with multiple protocols, including named pipes (`np`), TCP/IP (`tcp`), and shared memory (`lpc`). Use the shared memory protocol for troubleshooting when you suspect the other protocols are configured incorrectly.
 
 If you connect to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] over a TCP/IP network, make sure that TCP/IP is enabled on the server as well. TCP/IP may be disabled by default on installations of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. For more information, see [Default SQL Server Network Protocol Configuration](../database-engine/configure-windows/default-sql-server-network-protocol-configuration.md#default-configuration).
 
 Connections to Azure SQL services, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, and [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] in containers, all use TCP/IP.
 
-For both [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi_md](../includes/ssazuremi_md.md)], see [Connect and query articles](/azure/azure-sql/database/connect-query-content-reference-guide).
+For both [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi-md](../includes/ssazuremi-md.md)], see [Connect and query articles](/azure/azure-sql/database/connect-query-content-reference-guide).
 
 ## Connect to Azure SQL
 
@@ -84,11 +84,11 @@ Examples for application connections are available:
 
 ### [Azure SQL Managed Instance](#tab/sqlmi)
 
-Connect to an [!INCLUDE [ssazuremi_md](../includes/ssazuremi_md.md)] in the same ways you connect to a SQL Server instance, see [Connect your application to Azure SQL Managed Instance](/azure/azure-sql/managed-instance/connect-application-instance?view=azuresql-mi&preserve-view=true).
+Connect to an [!INCLUDE [ssazuremi-md](../includes/ssazuremi-md.md)] in the same ways you connect to a SQL Server instance, see [Connect your application to Azure SQL Managed Instance](/azure/azure-sql/managed-instance/connect-application-instance?view=azuresql-mi&preserve-view=true).
 
 You can also [configure a point-to-site connection to Azure SQL Managed Instance from on-premises](/azure/azure-sql/managed-instance/point-to-site-p2s-configure?view=azuresql-mi&preserve-view=true) or [connect to Azure SQL Managed Instance from an Azure VM](/azure/azure-sql/managed-instance/connect-vm-instance-configure?view=azuresql-mi&preserve-view=true).
 
-[!INCLUDE [ssazuremi_md](../includes/ssazuremi_md.md)] can enforce a minimum [Transport Layer Security (TLS)](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server) version for application connections. For more information, see [Configure minimal TLS version in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/minimal-tls-version-configure?view=azuresql-mi&preserve-view=true).
+[!INCLUDE [ssazuremi-md](../includes/ssazuremi-md.md)] can enforce a minimum [Transport Layer Security (TLS)](/troubleshoot/sql/database-engine/connect/tls-1-2-support-microsoft-sql-server) version for application connections. For more information, see [Configure minimal TLS version in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/minimal-tls-version-configure?view=azuresql-mi&preserve-view=true).
 
 ### [SQL Server on Azure VM](#tab/sqlvm)
 
@@ -142,7 +142,7 @@ To connect to a server on the local network with named pipes, use one of the fol
 - `np:MyServer`
 
 > [!NOTE]  
-> On a local area network, connecting with TCP/IP may be faster than with named pipes.
+> On a local area network, connecting with TCP/IP might be faster than with named pipes.
 
 #### Connect to a default SQL Server instance on the network, using TCP/IP
 
@@ -167,11 +167,11 @@ In this example, the named instance is called `MyInstance`. Make sure the [!INCL
 
 ## Get help
 
-- [Create a connection string using the shared memory protocol](../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)
-- [Create a connection string using TCP/IP](../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)
+- [Create a valid connection string using the shared memory protocol](../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)
+- [Create a valid connection string using TCP/IP](../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)
 - [Troubleshoot connectivity issues in SQL Server](/troubleshoot/sql/database-engine/connect/resolve-connectivity-errors-overview)
 
-## Next steps
+## Related content
 
 - [What is SQL Server Management Studio (SSMS)?](../ssms/sql-server-management-studio-ssms.md)
 - [What is Azure Data Studio?](../azure-data-studio/what-is-azure-data-studio.md)

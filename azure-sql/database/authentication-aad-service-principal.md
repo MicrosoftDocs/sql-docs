@@ -1,5 +1,6 @@
 ---
 title: Microsoft Entra service principal with Azure SQL
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Utilize AD Applications (service principals) support Microsoft Entra user creation in Azure SQL Database and Azure SQL Managed Instance
 author: nofield
 ms.author: nofield
@@ -15,7 +16,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) supports user creation in Azure SQL Database (SQL DB) on behalf of Microsoft Entra applications (service principals). This is supported for [Azure SQL Database](sql-database-paas-overview.md) and [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md).
+Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) supports user creation in Azure SQL Database (SQL DB) on behalf of Microsoft Entra applications (service principals). This is supported for [Azure SQL Database](sql-database-paas-overview.md) and [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md).
 
 <a name='service-principal-azure-ad-applications-support'></a>
 
@@ -70,7 +71,7 @@ To enable Microsoft Entra object creation in SQL Database on behalf of a Microso
     - To check if the server identity is assigned to the server, execute the Get-AzSqlServer command.
 
     > [!NOTE]
-    > Server identity can be assigned using REST API and CLI commands as well. For more information, see [az sql server create](/cli/azure/sql/server#az-sql-server-create), [az sql server update](/cli/azure/sql/server#az-sql-server-update), and [Servers - REST API](/rest/api/sql/2020-08-01-preview/servers).
+    > Server identity can be assigned using REST API and CLI commands as well. For more information, see [az sql server create](/cli/azure/sql/server#az-sql-server-create), [az sql server update](/cli/azure/sql/server#az-sql-server-update), and [Servers - REST API](/rest/api/sql/servers).
 
 
 2. Grant the Microsoft Entra ID [**Directory Readers**](/azure/active-directory/roles/permissions-reference#directory-readers) permission to the server identity created or assigned to the server.
@@ -93,7 +94,7 @@ To enable Microsoft Entra object creation in SQL Database on behalf of a Microso
     'Server identity is not configured. Please follow the steps in "Assign a Microsoft Entra identity to your server and add
     Directory Reader permission to your identity" (https://aka.ms/sqlaadsetup)'"`
       - For the above error, follow the steps to [Assign an identity to the Azure SQL logical server](authentication-aad-service-principal-tutorial.md#assign-an-identity-to-the-azure-sql-logical-server) and [Assign Directory Readers permission to the SQL logical server identity](authentication-aad-service-principal-tutorial.md#assign-directory-readers-permission-to-the-sql-logical-server-identity).
-    - Setting the service principal (Microsoft Entra application) as a Microsoft Entra admin for SQL Database is supported using the Azure portal, [PowerShell](authentication-aad-configure.md?tabs=azure-powershell#powershell-for-sql-database-and-azure-synapse), [REST API](/rest/api/sql/2020-08-01-preview/servers), and [CLI](authentication-aad-configure.md?tabs=azure-cli#powershell-for-sql-database-and-azure-synapse) commands.
+    - Setting the service principal (Microsoft Entra application) as a Microsoft Entra admin for SQL Database is supported using the Azure portal, [PowerShell](authentication-aad-configure.md?tabs=azure-powershell#powershell-for-sql-database-and-azure-synapse), [REST API](/rest/api/sql/servers), and [CLI](authentication-aad-configure.md?tabs=azure-cli#powershell-for-sql-database-and-azure-synapse) commands.
 - Using a Microsoft Entra application with service principal from another Microsoft Entra tenant will fail when accessing SQL Database or SQL Managed Instance created in a different tenant. A service principal assigned to this application must be from the same tenant as the SQL logical server or SQL Managed Instance.
 - [Az.Sql 2.9.0](https://www.powershellgallery.com/packages/Az.Sql/2.9.0) module or higher is needed when using PowerShell to set up an individual Microsoft Entra application as Microsoft Entra admin for Azure SQL. Ensure you are upgraded to the latest module.
 

@@ -126,7 +126,7 @@ For weekly or monthly schedules, the Agent ignores if *@active_start_date* is in
 
 #### [ @active_end_date = ] *active_end_date*
 
-The date on which execution of a job can stop. *@active_end_date* is **int**, with a default of **99991231**, which indicates December 31, 9999. Formatted as yyyyMMdd.
+The date on which execution of a job can stop. *@active_end_date* is **int**, with a default of `99991231`, which indicates December 31, 9999. Formatted as `yyyyMMdd`.
 
 #### [ @active_start_time = ] *active_start_time*
 
@@ -222,7 +222,7 @@ EXEC sp_attach_schedule
 GO
 ```
 
-## See also
+## Related content
 
 - [Create and Attach Schedules to Jobs](../../ssms/agent/create-and-attach-schedules-to-jobs.md)
 - [Schedule a Job](../../ssms/agent/schedule-a-job.md)

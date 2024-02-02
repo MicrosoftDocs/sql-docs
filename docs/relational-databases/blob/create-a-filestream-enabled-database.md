@@ -30,7 +30,7 @@ helpviewer_keywords:
 ## Example  
  The following code example creates a database that is named `Archive`. The database contains three filegroups: `PRIMARY`, `Arch1`, and `FileStreamGroup1`. `PRIMARY` and `Arch1` are regular filegroups that cannot contain FILESTREAM data. `FileStreamGroup1` is the `FILESTREAM` filegroup.  
   
- [!code-sql[FILESTREAM#FS_CreateDB](../../relational-databases/blob/codesnippet/tsql/create-a-filestream-enab_1.sql)]  
+ :::code language="sql" source="codesnippet/tsql/create-a-filestream-enab_1.sql":::
   
  For a `FILESTREAM` filegroup, `FILENAME` refers to a path. The path up to the last folder must exist, and the last folder must not exist. In this example, `c:\data` must exist. However, the `filestream1` subfolder cannot exist when you execute the `CREATE DATABASE` statement. For more information about the syntax, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md).  
   

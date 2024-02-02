@@ -66,10 +66,8 @@ Require the `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` and `VIEW ANY COLUMN MAS
 EXEC sp_enclave_send_keys;
 ```
 
-## See also
+## Related content
 
 - [Always Encrypted with secure enclaves](../security/encryption/always-encrypted-enclaves.md)
-
 - [Create and use indexes on columns using Always Encrypted with secure enclaves](../security/encryption/always-encrypted-enclaves-create-use-indexes.md)
-
 - [Tutorial: Create and use indexes on enclave-enabled columns using randomized encryption](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)

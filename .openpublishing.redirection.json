@@ -36,6 +36,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path_from_root": "/docs/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md",
+      "redirect_url": "/sql/relational-databases/sql-server-index-design-guide",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/2014-toc/sql-server-index-design-guide.md",
       "redirect_url": "/previous-versions/sql/2014/2014-toc/sql-server-index-design-guide",
       "redirect_document_id": false
@@ -59579,10 +59584,125 @@
       "source_path": "docs/ssdt/release-notes-ssdt.md",
       "redirect_url": "/sql/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi",
       "redirect_document_id": false
+    },    
+    {
+      "source_path": "docs/odbc/microsoft/aggregate-function-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/and-predicate-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/call-statement-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/convert-function-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/date-arithmetic-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/distinct-keyword-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/drop-index-statement-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/drop-table-statement-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/from-clause-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/having-clause-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/index-name-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/not-null-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/order-by-clause-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/parameterized-query-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/scalar-function-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/select-distinct-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/set-functions-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sorting-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/table-references-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/views-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/where-clause-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/where-current-of-clause-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/ssms/f1-help/connect-to-server-database-engine.md",
       "redirect_url": "/sql/ssms/f1-help/connect-to-server-login-page-database-engine",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/performance/intelligent-query-processing-feedback.md",
+      "redirect_url": "/sql/relational-databases/performance/intelligent-query-processing-memory-grant-feedback",
       "redirect_document_id": false
     }
  ]

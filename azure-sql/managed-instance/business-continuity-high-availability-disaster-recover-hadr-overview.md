@@ -1,11 +1,11 @@
 ---
 title: Cloud business continuity - disaster recovery
-titleSuffix: Azure SQL  Managed Instance
+titleSuffix: Azure SQL Managed Instance
 description: Learn how Azure SQL Managed Instance supports cloud business continuity and disaster recovery to help keep mission-critical cloud applications running.
 author: Stralle
 ms.author: strrodic
 ms.reviewer: mathoma
-ms.date: 05/01/2023
+ms.date: 12/28/2023
 ms.service: sql-managed-instance
 ms.subservice: high-availability
 ms.topic: conceptual
@@ -24,81 +24,77 @@ monikerRange: "= azuresql || = azuresql-mi"
 > * [Azure SQL Database](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md?view=azuresql-db&preserve-view=true)
 > * [Azure SQL Managed Instance](business-continuity-high-availability-disaster-recover-hadr-overview.md?view=azuresql-mi&preserve-view=true)
 
+This article provides an overview of the business continuity and disaster recovery capabilities of Azure SQL Managed Instance, describing the options and recommendations for recovering from disruptive events that could lead to data loss or cause your instance and application to become unavailable. Learn what to do when a user or application error affects data integrity, an Azure availability zone or region has an outage, or your application requires maintenance.
 
-**Business continuity** in Azure SQL Managed Instance refers to the mechanisms, policies, and procedures that enable your business to continue operating in the face of disruption, particularly to its computing infrastructure. In most cases, SQL Managed Instance handles the disruptive events that might happen in the cloud environment and keep your applications and business processes running. However, there are some disruptive events that can't be handled by SQL Managed Instance automatically, such as:
+## Overview
 
-- User accidentally deleted or updated a row in a table.
-- Malicious attacker succeeded to delete data or drop a database.
-- Earthquake caused a power outage and temporarily disabled datacenter or any other catastrophic natural disaster event.
+**Business continuity** in Azure SQL Managed Instance refers to the mechanisms, policies, and procedures that enable your business to continue operating in the face of disruption by providing availability, high availability, and disaster recovery. 
 
-This overview describes the capabilities that SQL Managed Instance provides for business continuity and disaster recovery. Learn about options, recommendations, and tutorials for recovering from disruptive events that could cause data loss or cause your database and application to become unavailable. Learn what to do when a user or application error affects data integrity, an Azure region has an outage, or your application requires maintenance.
+In most cases, SQL Managed Instance handles disruptive events that might happen in a cloud environment and keeps your applications and business processes running. However, there are some disruptive events where mitigation might take some time, such as:
+
+- User accidentally deletes or updates a row in a table.
+- Malicious attacker successfully deletes data or drops a database. 
+- Catastrophic natural disaster event takes down a datacenter or availability zone or region. 
+- Rare datacenter, availability zone or region-wide outage caused by a configuration change, software bug or hardware component failure.
+
+### Availability
+
+Azure SQL Managed Instance comes with a core resiliency and reliability promise that protects it against software or hardware failures. Database backups are automated to protect your data from corruption or accidental deletion. As a Platform-as-a-service (PaaS), the Azure SQL Managed Instance service provides availability as an off-the-shelf feature with an industry-leading availability SLA of 99.99%. 
+
+### High Availability
+
+To achieve high availability in the Azure cloud environment, enable [zone redundancy](high-availability-sla.md#zone-redundant-availability) so the instance uses [availability zones](/azure/reliability/availability-zones-overview) to ensure resilience to zonal failures. Many Azure regions provide availability zones, which are separated groups of data centers within a region that have independent power, cooling, and networking infrastructure. Availability zones are designed to provide regional services, capacity, and high availability in the remaining zones if one zone experiences an outage. By enabling zone redundancy, the instance is resilient to zonal hardware and software failures and the recovery is transparent to applications. When high availability is enabled, the Azure SQL Managed Instance service is able to provide a higher availability SLA of 99.995%. 
+
+### Disaster recovery
+
+To achieve higher availability and redundancy across regions, you can enable disaster recovery capabilities to quickly recover the instance from a catastrophic regional failure. Options for disaster recovery with Azure SQL Managed Instance are:
+
+- [Failover groups](failover-group-sql-mi.md#terminology-and-capabilities) enable continuous synchronization between a primary and secondary instance. Failover groups provide read-write and read-only listener endpoints that remain unchanged so updating application connection strings after failover isn't necessary. 
+- [Geo-restore](recovery-using-backups.md#geo-restore) allows you to recover from a regional outage by restoring from geo replicated backups when you can't access your database in the primary region by creating a new database on any existing instance in any Azure region.
 
 ## Features that provide business continuity
 
-From an instance perspective, there are four major potential disruption scenarios:
+For an instance, there are four major potential disruption scenarios. The following table lists SQL Managed Instance business continuity features you can use to mitigate a potential business disruption scenario:  
 
-- Local hardware or software failures affecting the instance node such as a disk-drive failure.
-- Data corruption or deletion typically caused by an application bug or human error. Such failures are application-specific and typically can't be detected by the database service.
-- Datacenter outage, possibly caused by a natural disaster. This scenario requires some level of geo-redundancy with application failover to an alternate datacenter.
-- Upgrade or maintenance errors, unanticipated issues that occur during planned infrastructure maintenance or upgrades might require rapid rollback to a prior database state.
+| Business disruption scenario | Business continuity feature |
+|:--|:--|
+| Local hardware or software failures affecting the database node. | To mitigate local hardware and software failures, SQL Managed Instance includes an [availability architecture](high-availability-sla.md), which guarantees automatic recovery from these failures with up to 99.99% availability SLA. |
+| Data corruption or deletion typically caused by an application bug or human error. Such failures are application-specific and typically can't be detected by the service. | To protect your business from data loss, SQL Managed Instance automatically creates full database backups weekly, differential database backups every 12 or 24 hours, and transaction log backups every 5 - 10 minutes. By default, backups are stored in [geo-redundant storage](automated-backups-overview.md#backup-storage-redundancy) for seven days, and support a configurable backup retention period for [point-in-time restore](recovery-using-backups.md#point-in-time-restore) of up to 35 days. You can [restore a deleted database](recovery-using-backups.md#deleted-database-restore) to the point at which it was deleted if the instance hasn't been deleted, or if you've configured [long-term retention](../database/long-term-retention-overview.md). |
+| Rare datacenter or availability zone outage, possibly caused by a natural disaster event, configuration change, software bug or hardware component failure. | To mitigate datacenter or availability zone level outage, enable [zone redundancy](high-availability-sla.md#zone-redundant-availability) for the SQL Managed Instance to use [Azure Availability Zones](/azure/reliability/availability-zones-overview) and provide redundancy across multiple physical zones within an Azure region. Enabling zone redundancy ensures the managed instance is resilient to zonal failures with up to 99.995% high availability SLA. |
+| Rare region outage impacting all availability zones and the datacenters comprising it, possibly caused by catastrophic natural disaster event. | To mitigate a region-wide outage, enable disaster recovery using one of the options: <br /> - Continuous data synchronization with [failover groups](failover-group-sql-mi.md) to replicas in a secondary region used for failover. <br /> - Setting backup storage redundancy to geo-redundant backup storage to use [geo-restore](recovery-using-backups.md#geo-restore).  | 
 
-To mitigate local hardware and software failures, SQL Managed Instance includes a [high availability architecture](high-availability-sla.md), which guarantees automatic recovery from these failures with up to 99.99% availability SLA.  
+## RTO and RPO
 
-To protect your business from data loss, SQL Managed Instance automatically creates full database backups weekly, differential database backups every 12 hours, and transaction log backups every 10 minutes. By default, the backups are stored in [redundant storage](automated-backups-overview.md#backup-storage-redundancy) for seven days for both service tiers, with a configurable backup retention period for point-in-time restore of 1 to 35 days.
+As you develop your business continuity plan, understand the maximum acceptable time before the application fully recovers after the disruptive event. The time required for an application to fully recover is known as the Recovery Time Objective (RTO). Also understand the maximum period of recent data updates (time interval) the application can tolerate losing when recovering from an unplanned disruptive event. The potential data loss is known as Recovery Point Objective (RPO).
 
-SQL Managed Instance also provides several business continuity features that you can use to mitigate various unplanned scenarios: 
+The following table compares RPO and RTO of each business continuity option:
 
-- [Built-in automated backups](automated-backups-overview.md) and [Point in Time Restore](recovery-using-backups.md#point-in-time-restore) enables you to restore complete database to some point in time within the configured retention period of 1 to 35 days.
-- You can [restore a deleted database](recovery-using-backups.md#deleted-database-restore) to the point at which it was deleted.
-- [Long-term backup retention](../database/long-term-retention-overview.md) enables you to keep backups up to 10 years.  
-- [Auto-failover group](auto-failover-group-sql-mi.md#terminology-and-capabilities) allows the application to automatically recover in the event of a regional outage.
-- [Managed Instance link](managed-instance-link-feature-overview.md) allows for one-way disaster recovery for SQL Server 2016 and 2019, and two-way disaster recovery for SQL Server 2022 (failback currently in preview). 
-- [Temporal tables](../temporal-tables.md) enable you to restore row versions from any point in time.
-
-## License-free DR replicas 
-
-You can save on licensing costs by configuring a secondary Azure SQL Managed Instance for only disaster recovery (DR). This benefit is available if you're using an auto-failover group between two SQL managed instances, or you've configured a hybrid link between SQL Server and Azure SQL Managed Instance. As long as the secondary instance doesn't have any read or write workloads on it  and is only a passive DR standby, you aren't charged for the vCore licensing costs used by the secondary instance. 
-
-When you designate a secondary instance for only disaster recovery, and no read or write workloads are running on the instance, Microsoft provides you with the number of vCores that are licensed to the primary instance at no extra charge under the failover rights benefit in the [product licensing terms](https://www.microsoft.com/Licensing/product-licensing/sql-server?rtc=1). You're still billed for the compute and storage that the secondary instance uses.
-
-The name for the benefit depends on your scenario: 
-
-- [Hybrid failover rights for a passive replica](managed-instance-link-feature-overview.md#license-free-passive-replica): When you configure a [link](managed-instance-link-feature-overview.md) between SQL Server and Azure SQL Managed Instance, you can use the **Hybrid failover rights** benefit to save on vCore licensing costs for the passive secondary replica. 
-- [Failover rights for a standby replica](auto-failover-group-standby-replica-how-to-configure.md): When you configure an auto-failover group between two managed instances, you can use the **Failover rights** benefit to save on vCore licensing costs for the standby secondary replica. 
-
-The following diagram demonstrates the benefit for each scenario: 
-
-:::image type="content" source="media/business-continuity-high-availability-disaster-recover-hadr-overview/failover-rights-diagram.png" alt-text="Diagram comparing the failover rights for Azure SQL Managed Instance. ":::
+| **Business continuity option** | **RTO (downtime)** | **RPO (data loss)** |
+| --- | --- | --- |
+| High Availability </br>(Enabling zone redundancy) | Typically less than 30 seconds | 0 |
+| Disaster Recovery </br>(Enabling failover groups) | 1 hour| 5 seconds </br> (Depends on data changes before the disruptive event that haven't been replicated) |
+| Disaster Recovery </br>(Using geo-restore) | 12 hours | 1 hour|
 
 
 ## Recover a database within the same Azure region
 
-You can use automatic database backups to restore a database to a point in time in the past. This way you can recover from data corruptions caused by human errors. The point-in-time restore allows you to create a new database to the same instance, or a different instance, that represents the state of data prior to the corrupting event. The restore operation is a size of data operation that also depends on the current workload of the target server. It might take longer to recover a very large or very active database. For more information about recovery time, see [database recovery time](recovery-using-backups.md#recovery-time).
+You can use automatic database backups to restore a database to a point in time in the past. This way you can recover from data corruptions caused by human errors. Point-in-time restore (PITR) allows you to create a new database to the same instance, or a different instance, that represents the state of data prior to the corrupting event. The restore operation is a size of data operation that also depends on the current workload of the target instance. It might take longer to recover a very large or very active database. For more information about recovery time, see [database recovery time](recovery-using-backups.md#recovery-time).
 
 If the maximum supported backup retention period for point-in-time restore (PITR) isn't sufficient for your application, you can extend it by configuring a long-term retention (LTR) policy for the database(s). For more information, see [Long-term backup retention](../database/long-term-retention-overview.md).
-
 
 ## Recover a database to an existing instance
 
 Although rare, an Azure datacenter can have an outage. When an outage occurs, it causes a business disruption that might only last a few minutes or might last for hours.
 
-- One option is to wait for your database to come back online when the datacenter outage is over. This works for applications that can afford to have the database offline. For example, a development project or free trial you don't need to work on constantly. When a datacenter has an outage, you don't know how long the outage might last, so this option only works if you don't need your database for a while.
+- One option is to wait for your instance to come back online when the datacenter outage is over. This works for applications that can afford to have their database offline. For example, a development project or free trial you don't need to work on constantly. When a datacenter has an outage, you don't know how long the outage might last, so this option only works if you don't need your database for some time. 
 - If you're using geo-redundant (GRS), or geo-zone-redundant (GZRS) storage, another option is to restore a database to any SQL managed instance in any Azure region using [geo-redundant database backups](recovery-using-backups.md#geo-restore) (geo-restore). Geo-restore uses a geo-redundant backup as its source and can be used to recover a database to the last available point in time, even if the database or datacenter is inaccessible due to an outage. The available backup can be found in the paired region. 
-- Finally, you can quickly recover from an outage if you've configured a geo-secondary using an [auto-failover group](auto-failover-group-sql-mi.md) for your instance, using either manual or automatic failover. While the failover itself takes only a few seconds, the service takes at least 1 hour to activate an automatic geo-failover, if configured. This is necessary to ensure that the failover is justified by the scale of the outage. Also, the failover might result in the loss of recently changed data due to the nature of asynchronous replication between the paired regions.
+- Finally, you can quickly recover from an outage if you've configured a geo-secondary using a [failover group](failover-group-sql-mi.md) for your instance, using either customer (recommended) or Microsoft-managed failover. While the failover itself takes only a few seconds, the service takes at least 1 hour to activate a Microsoft-managed geo-failover, if configured. This is necessary to ensure the failover is justified by the scale of the outage. Also, the failover might result in the loss of recently changed data due to the nature of asynchronous replication between the paired regions.
 
 As you develop your business continuity plan, you need to understand the maximum acceptable time before the application fully recovers after the disruptive event. The time required for application to fully recover is known as Recovery Time Objective (RTO). You also need to understand the maximum period of recent data updates (time interval) the application can tolerate losing when recovering from an unplanned disruptive event. The potential data loss is known as Recovery Point Objective (RPO).
 
 Different recovery methods offer different levels of RPO and RTO. You can choose a specific recovery method, or use a combination of methods to achieve full application recovery. 
 
-The following table compares RPO and RTO of each recovery option when restoring from a geo-replicated backup, or using an auto-failover group: 
-
-| **Recovery method** | **RTO** | **RPO** |
-| --- | --- | --- |
-| Geo-restore from geo-replicated backups | 12 h | 1 h |
-| Auto-failover groups | 1 h | 5 s |
-
-
-Use auto-failover groups if your application meets any of these criteria:
+Use failover groups if your application meets any of these criteria:
 
 - Is mission critical.
 - Has a service level agreement (SLA) that doesn't allow for 12 hours or more of downtime.
@@ -106,9 +102,9 @@ Use auto-failover groups if your application meets any of these criteria:
 - Has a high rate of data change and 1 hour of data loss isn't acceptable.
 - The additional cost of active geo-replication is lower than the potential financial liability and associated loss of business.
 
-You might choose to use a combination of database backups and auto-failover groups depending upon your application requirements. 
+You might choose to use a combination of database backups and failover groups depending upon your application requirements. 
 
-The following sections provide an overview of the steps to recover using either database backups or auto-failover groups. 
+The following sections provide an overview of the steps to recover using either database backups or failover groups. 
 
 ### Prepare for an outage
 
@@ -122,7 +118,7 @@ If you don't prepare properly, bringing your applications online after a failove
 
 ### Fail over to a geo-replicated secondary instance
 
-If you're using auto-failover groups as your recovery mechanism, you can configure an automatic failover policy. Once initiated, the failover causes the secondary instance to become the new primary and ready to record new transactions and respond to queries - with minimal data loss for the data not yet replicated. 
+If you're using failover groups as your recovery mechanism, you can configure an automatic failover policy. Once initiated, the failover causes the secondary instance to become the new primary, ready to record new transactions and respond to queries - with minimal data loss for the data not yet replicated. 
 
 > [!NOTE]
 > When the datacenter comes back online the old primary automatically reconnects to the new primary to become the secondary instance. If you need to relocate the primary back to the original region, you can initiate a planned failover manually (failback).
@@ -146,9 +142,23 @@ After recovery from either recovery mechanism, you must perform the following ad
 
 
 > [!NOTE]
-> If you are using an auto-failover group and connect to the instance using the read-write listener, the redirection after failover will happen automatically and transparently to the application.
+> If you are using a failover group and connect to the instance using the read-write listener, the redirection after failover will happen automatically and transparently to the application.
 
+## License-free DR replicas 
+
+You can save on licensing costs by configuring a secondary Azure SQL Managed Instance for only disaster recovery (DR). This benefit is available if you're using a failover group between two SQL managed instances, or you've configured a hybrid link between SQL Server and Azure SQL Managed Instance. As long as the secondary instance doesn't have any read or write workloads on it  and is only a passive DR standby, you aren't charged for the vCore licensing costs used by the secondary instance. 
+
+When you designate a secondary instance for only disaster recovery, and no read or write workloads are running on the instance, Microsoft provides you with the number of vCores that are licensed to the primary instance at no extra charge under the failover rights benefit. You're still billed for the compute and storage that the secondary instance uses. For precise terms and conditions of the Hybrid failover rights benefit, see the SQL Server licensing terms online in the [“SQL Server – Fail-over Rights”](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS) section.
+
+The name for the benefit depends on your scenario: 
+
+- [Hybrid failover rights for a passive replica](managed-instance-link-feature-overview.md#license-free-passive-dr-replica): When you configure a [link](managed-instance-link-feature-overview.md) between SQL Server and Azure SQL Managed Instance, you can use the **Hybrid failover rights** benefit to save on vCore licensing costs for the passive secondary replica. 
+- [Failover rights for a standby replica](failover-group-standby-replica-how-to-configure.md): When you configure a failover group between two managed instances, you can use the **Failover rights** benefit to save on vCore licensing costs for the standby secondary replica. 
+
+The following diagram demonstrates the benefit for each scenario: 
+
+:::image type="content" source="media/business-continuity-high-availability-disaster-recover-hadr-overview/failover-rights-diagram.png" alt-text="Diagram comparing the failover rights for Azure SQL Managed Instance. ":::
 
 ## Next steps
 
-To learn more about business continuity features, see [Automated backups](automated-backups-overview.md), and [auto-failover groups](auto-failover-group-sql-mi.md#terminology-and-capabilities). In the event of a disaster, see [recover a database](recovery-using-backups.md). 
+To learn more about business continuity features, see [Automated backups](automated-backups-overview.md), and [failover groups](failover-group-sql-mi.md#terminology-and-capabilities). In the event of a disaster, see [recover a database](recovery-using-backups.md). 

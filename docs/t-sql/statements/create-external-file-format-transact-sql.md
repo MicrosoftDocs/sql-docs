@@ -31,11 +31,11 @@ The following file formats are supported:
 
 - **Hive RCFile**
 
-  Doesn't apply to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], or [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] .
+  Doesn't apply to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], or [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] .
   
 - **Hive ORC**
 
-  Doesn't apply to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], or [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] .
+  Doesn't apply to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], or [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] .
 
 - **Parquet**
 

@@ -68,7 +68,7 @@ EXEC xp_sqlmaint '-D AdventureWorks2022 -PlanID 02A52657-D546-11D1-9D8A-00A0C905
 The command(s) executed successfully.
 ```
 
-## See also
+## Related content
 
 - [sqlmaint Utility](../../tools/sqlmaint-utility.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

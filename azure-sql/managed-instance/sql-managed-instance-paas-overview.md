@@ -16,6 +16,8 @@ ms.custom: sqldbrb=1, build-2023, build-2023-dataai, ignite-2023
 
 This article provides an overview of Azure SQL Managed Instance, a fully managed platform as a service (PaaS) database engine that handles most database management functions such as upgrading, patching, backups, and monitoring without user involvement.
 
+[!INCLUDE [azure-sql-managed-instance-free-offer-note](../includes/azure-sql-managed-instance-free-offer-note.md)]
+
 Azure SQL Managed Instance is a scalable cloud database service that's always running on the latest stable version of the [Microsoft SQL Server database engine](/sql/sql-server/sql-server-technical-documentation) and a  patched OS with [99.99% built-in high availability](https://azure.microsoft.com/support/legal/sla/azure-sql-database), offering close to 100% feature compatibility with SQL Server. PaaS capabilities built into Azure SQL Managed enable you to focus on domain-specific database administration and optimization activities that are critical for your business while Microsoft handles backups, as well as patching and updating of the SQL and operating system code, which removes the burden on managing the underlying infrastructure.
 
 If you're new to Azure SQL Managed Instance, check out the *Azure SQL Managed Instance* video from our in-depth [Azure SQL video series](/shows/Azure-SQL-for-Beginners/?WT.mc_id=azuresql4beg_azuresql-ch9-niner):
@@ -158,7 +160,6 @@ SQL Managed Instance enables system administrators to spend less time on adminis
 
 For more information, see [a list of supported and unsupported SQL Managed Instance features](../database/features-comparison.md), and [T-SQL differences between SQL Managed Instance and SQL Server](transact-sql-tsql-differences-sql-server.md).
 
-
 ## vCore-based purchasing model
 
 The [vCore-based purchasing model](../database/service-tiers-vcore.md) for SQL Managed Instance gives you flexibility, control, transparency, and a straightforward way to translate on-premises workload requirements to the cloud. This model allows you to change compute, memory, and storage based upon your workload needs. The vCore model is also eligible for up to 55 percent savings with the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) for SQL Server.
@@ -261,7 +262,7 @@ Migration of an encrypted database to SQL Managed Instance is supported via Azur
 
 ## Microsoft Entra integration
 
-SQL Managed Instance supports traditional SQL Server database engine logins and logins integrated with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). Microsoft Entra server principals (logins) are an Azure cloud version of on-premises database logins that use in your on-premises environment. Microsoft Entra server principals (logins) enable you to specify users and groups from your Microsoft Entra tenant as true instance-scoped principals, capable of performing any instance-level operation, including cross-database queries within the same managed instance.
+SQL Managed Instance supports traditional SQL Server database engine logins and logins integrated with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). Microsoft Entra server principals (logins) are an Azure cloud version of on-premises database logins that use in your on-premises environment. Microsoft Entra server principals (logins) enable you to specify users and groups from your Microsoft Entra tenant as true instance-scoped principals, capable of performing any instance-level operation, including cross-database queries within the same managed instance.
 
 SQL Managed Instance enables you to centrally manage identities of database users and other Microsoft services with [Microsoft Entra integration](../database/authentication-aad-overview.md). This capability simplifies permission management and enhances security. Microsoft Entra ID supports [multifactor authentication](../database/authentication-mfa-ssms-overview.md) to increase data and application security while supporting a single sign-on process.
 

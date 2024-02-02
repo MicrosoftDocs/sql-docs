@@ -13,14 +13,14 @@ ms.custom: updatefrequency5
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is implemented as a single service that contains a Report Server Web service, [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], and a background processing application that is used for scheduled report processing and subscription delivery. This topic explains how the service account is initially configured and how to modify the account or password using the Reporting Services Configuration tool.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is implemented as a single service that contains a Report Server Web service, [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)], and a background processing application that is used for scheduled report processing and subscription delivery. This topic explains how the service account is initially configured and how to modify the account or password using the Reporting Services Configuration tool.  
   
 ## Initial Configuration
 
  The Report Server service account is defined during Setup. You can run the service under a domain user account, or a built-in account such as **Virtual Service Account**. There's no default account; whatever account you specify in the **Service Accounts** page of the Installation Wizard becomes the initial account of the Report Server service.  
   
 > [!IMPORTANT]  
-> Although the Report Server Web service and [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] are separate [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications, they run under a single service architecture within the same Report Server process identity.
+> Although the Report Server Web service and [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] are separate [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications, they run under a single service architecture within the same Report Server process identity.
 
 > [!NOTE]  
 > Built-in Windows service accounts (Local Service or Network Service) are not supported as report server service accounts on a computer that is a domain controller.

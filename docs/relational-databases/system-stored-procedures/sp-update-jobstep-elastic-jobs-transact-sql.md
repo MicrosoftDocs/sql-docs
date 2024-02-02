@@ -17,7 +17,7 @@ monikerRange: "=azuresqldb-current"
 
 Modifies a job step in an existing job in the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). Use [jobs.sp_add_jobstep](sp-add-jobstep-elastic-jobs-transact-sql.md) to add job steps to a job.
 
-This stored procedure shares the name of `sp_update_jobstep` with a similar object in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for the SQL Agent service. For information about the SQL Agent version, see [sp_update_jobstep (Transact-SQL)](sp-update-jobstep-transact-sql.md).
+This stored procedure shares the name of `sp_update_jobstep` with a similar object in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent service. For information about the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent version, see [sp_update_jobstep (Transact-SQL)](sp-update-jobstep-transact-sql.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -51,7 +51,7 @@ This stored procedure shares the name of `sp_update_jobstep` with a similar obje
 
 ## Arguments
 
-#### @job_name 
+#### @job_name
 
 The name of the job to which the step belongs. *job_name* is nvarchar(128).
 

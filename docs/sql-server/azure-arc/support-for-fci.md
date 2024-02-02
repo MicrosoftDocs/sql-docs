@@ -1,8 +1,8 @@
 ---
-title: View Always On failover cluster instances
-description: In this article, you learn how you can view and manage Azure Arc-enabled SQL Servers that are configured as a failover cluster.
-author: dnethi
-ms.author: dinethi
+title: View Always On failover cluster instances (preview)
+description: In this article, you learn how you can view and manage SQL Server instances enabled by Azure Arc that are configured as a failover cluster.
+author: AbdullahMSFT
+ms.author: amamun 
 ms.reviewer: mikeray, randolphwest
 ms.date: 10/06/2023
 ms.topic: conceptual
@@ -48,8 +48,10 @@ The portal displays the databases on the SQL Server instance.
 
 - All the Windows and SQL Server instances that are part of the failover clustering should be in same resource group.
 - Always On availability groups on a failover cluster instance aren't supported for [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] at this time.
-- Currently, best practices assessment is not supported with Always On failover cluster instance.
-- Automated backups and point-in-time restore is not supported for failover cluster instances at this time.
+- Currently, best practices assessment isn't supported with Always On failover cluster instance.
+- Automated backups and point-in-time restore isn't supported for failover cluster instances at this time.
+- SQL failover cluster instances with multiple network names are not supported at this time.
+- SQL failover cluster instances which use a different network name than the one configured during installation are not supported at this time.
 
 ## Related tasks
 

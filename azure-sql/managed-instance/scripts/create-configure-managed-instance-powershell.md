@@ -10,7 +10,7 @@ ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: sample
 ms.custom: devx-track-azurepowershell
-ms.devlang: PowerShell
+ms.devlang: powershell
 ---
 # Use PowerShell to create a managed instance
 

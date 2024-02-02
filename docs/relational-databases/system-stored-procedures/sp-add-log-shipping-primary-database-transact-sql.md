@@ -175,7 +175,7 @@ EXEC master.dbo.sp_add_log_shipping_primary_database
 GO
 ```
 
-## See also
+## Related content
 
 - [About Log Shipping (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

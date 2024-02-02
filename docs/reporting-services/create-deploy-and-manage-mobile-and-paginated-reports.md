@@ -24,7 +24,7 @@ helpviewer_keywords:
 
 SQL Server Reporting Services (SSRS) provides a set of on-premises tools and services that create, deploy, and manage paginated reports. Download [**SQL Server 2022 Reporting Services**](https://www.microsoft.com/download/details.aspx?id=104502) from the Microsoft Download Center.
 
-![Screenshot showing SQL Server 2022 Reporting Services report.](../reporting-services/media/report-server-2022-coho-winery.png "Screenshot showing SQL Server 2022 Reporting Services report.")
+:::image type="content" source="../reporting-services/media/report-server-2022-coho-winery.png" alt-text="Screenshot of a SQL Server 2022 Reporting Services report.":::
 
 Looking for Power BI Report Server? See [What is Power BI Report Server?](/power-bi/report-server/get-started)
 
@@ -44,11 +44,11 @@ Read on for more about each.
 
 ### What's new in Reporting Services
 
-See [What's New in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) to keep up to date on new features in SQL Server Reporting Services.
+See [What's new in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) to keep up to date on new features in SQL Server Reporting Services.
 
 ## Paginated reports
 
-![Image of paginated reports on a desktop screen and a tablet device.](../reporting-services/media/ssrs-paginated-reports.png)
+:::image type="content" source="../reporting-services/media/ssrs-paginated-reports.png" alt-text="Diagram of paginated reports on a desktop screen and a tablet device.":::
 
 Reporting Services is associated with paginated reports, ideal for fixed-layout documents optimized for printing, such as PDF and Word files.
 
@@ -63,7 +63,7 @@ That core BI workload still exists today, so we've modernized it. Now you can cr
 
 ## Mobile reports
 
-![Image of mobile reports on a desktop screen and a tablet device.](../reporting-services/media/ssrs-mobile-reports.png)
+:::image type="content" source="../reporting-services/media/ssrs-mobile-reports.png" alt-text="Diagram of mobile reports on a desktop screen and a tablet device.":::
 
 Mobile computing has shifted the devices we need to work, meaning people today have a different reporting need. The fixed-layout report experience doesn't work well when you introduce tablets and phones. Something designed for a wide PC screen isn't the optimal experience on a small phone screen that's not just smaller but a portrait or landscape orientation.
 
@@ -76,7 +76,7 @@ As you create visualizations, Mobile Report Publisher automatically generates sa
 
 ## Web portal
 
-![Screenshot showing the web portal.](../reporting-services/media/report-server-2022-web-portal.png)
+:::image type="content" source="../reporting-services/media/report-server-2022-web-portal.png" alt-text="Screenshot of the Reporting Services web portal.":::
 
 For end users of Reporting Services, the front door is a modern web portal you can view in most browsers. You can access all your Reporting Services reports and KPIs in the new portal. KPIs can surface key business metrics at a glance in the browser, without having to open a report.
 
@@ -105,7 +105,7 @@ More about the [Web portal](../reporting-services/web-portal-ssrs-native-mode.md
 
 You publish reports to Reporting Services in SharePoint integrated mode. You can schedule report processing, access reports on demand, subscribe to published reports, and export reports to other applications such as Microsoft Excel. Create data alerts on reports published to a SharePoint site and receive email messages when report data changes.  
 
-More about [Reporting Services Report Server in SharePoint integrated mode](../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md).
+More about [Reporting Services report server in SharePoint integrated mode](../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md).
 
 ::: moniker-end
 
@@ -113,12 +113,12 @@ More about [Reporting Services Report Server in SharePoint integrated mode](../r
 
 Take advantage of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] programming features so you can extend and customize your reporting functionality. Use the SSRS APIs to integrate or extend data and report processing in custom applications.
 
-More [Reporting Services Developer Documentation](../reporting-services/reporting-services-developer-documentation.md).
+More [Reporting Services developer documentation](../reporting-services/reporting-services-developer-documentation.md).
 
-## Next steps
+## Related content
 
-* [Install Reporting Services](../reporting-services/install-windows/install-reporting-services.md)
-* [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
-* [Install Report Builder](../reporting-services/install-windows/install-report-builder.md)
+- [Install Reporting Services](../reporting-services/install-windows/install-reporting-services.md)
+- [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [Install Report Builder](../reporting-services/install-windows/install-report-builder.md)
 
-* More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+- More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

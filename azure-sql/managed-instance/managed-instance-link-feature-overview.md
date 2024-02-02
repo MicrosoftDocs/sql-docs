@@ -9,7 +9,7 @@ ms.date: 11/14/2023
 ms.service: sql-managed-instance
 ms.subservice: data-movement
 ms.topic: conceptual
-ms.custom: ignite-fall-2021, ignite-2023
+ms.custom: ignite-2023
 ---
 
 # Overview of the Managed Instance link
@@ -146,11 +146,11 @@ With SQL Server 2022, you can establish your link from SQL Managed Instance to S
 After your databases are replicated to your Azure SQL Managed Instance, they're automatically backed up to Azure storage. You can reduce your on-premises management and operation costs while enjoying the reliability of Azure backups for your replicated databases. You can then perform a [point-in-time restore](point-in-time-restore.md) of your replicated database to any SQL Managed Instance deployment in the same region, as with any other [automated backup](automated-backups-overview.md). 
 
 
-## License-free passive replica
+## License-free passive DR replica
 
-For disaster recovery only secondary SQL managed instances that don't have any workloads, you can save on vCore licensing costs by activating the [hybrid failover benefit](business-continuity-high-availability-disaster-recover-hadr-overview.md#license-free-dr-replicas) and designating your secondary SQL managed instance as a passive DR replica. 
+You can save on vCore licensing costs if you activate the [hybrid failover benefit](business-continuity-high-availability-disaster-recover-hadr-overview.md#license-free-dr-replicas) for secondary passive disaster recovery only SQL managed instances that don't have any workloads. 
 
-To get started, review [License-free passive replica](managed-instance-link-disaster-recovery.md#license-free-passive-replica). 
+To get started, review [License-free passive replica](managed-instance-link-disaster-recovery.md#license-free-passive-dr-replica). 
 
 ### Cost benefit
 
@@ -161,6 +161,8 @@ The benefit reflects differently for the pay-as-you-go billing model and the [Az
 For example, as a pay-as-you-go customer, if you have 16 vCores assigned to the secondary instance, a discount for 16 vCores appears on your invoice if you designate your secondary instance for hybrid failover.
 
 In another example, if you have 16 Azure Hybrid Benefit licenses and your secondary SQL managed instance uses 8 vCores, after you designate the secondary instance for hybrid failover, 8 vCores are returned to your license pool for you to use with other Azure SQL deployments.
+
+For precise terms and conditions of the Hybrid failover rights benefit, see the SQL Server licensing terms online in the [“SQL Server – Fail-over Rights”](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS) section.
 
 
 ## Limitations
@@ -193,7 +195,7 @@ Configuration limitations include:
 
 Feature limitations include:
 
-- [Auto-failover groups](auto-failover-group-sql-mi.md) aren't supported with instances that use the link feature. You can't establish a link on a managed instance that's part of an auto-failover group, and conversely, you can't configure an auto-failover group on an instance that has a link established.
+- [Failover groups](failover-group-sql-mi.md) aren't supported with instances that use the link feature. You can't establish a link on a managed instance that's part of a failover group, and conversely, you can't configure a failover group on an instance that has a link established.
 - If you're using Change Data Capture (CDC), log shipping, or a service broker with databases that are replicated on the SQL Server instance, when the database is migrated to a SQL Managed Instance deployment, during a failover to Azure, clients need to connect by using the instance name of the current global primary replica. These settings should be manually reconfigured. 
 - If you're using transactional replication with a database on a SQL Server instance in a migration scenario, during failover to Azure, transactional replication on the SQL Managed Instance deployment will fail and should be manually reconfigured. 
 - If you're using distributed transactions with a database that's replicated from the SQL Server instance and, in a migration scenario, on the cutover to the cloud, Distributed Transaction Coordinator capabilities won't be transferred. It's not possible for the migrated database to get involved in distributed transactions with the SQL Server instance, because the SQL Managed Instance deployment doesn't support distributed transactions with SQL Server at this time. For reference, SQL Managed Instance today supports distributed transactions only between other managed instances. For more information, see [Distributed transactions across cloud databases](../database/elastic-transactions-overview.md#transactions-for-sql-managed-instance).

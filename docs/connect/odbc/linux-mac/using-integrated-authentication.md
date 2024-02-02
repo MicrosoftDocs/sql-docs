@@ -15,7 +15,7 @@ helpviewer_keywords:
 
 The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS supports connections that use Kerberos integrated authentication. It supports the MIT Kerberos Key Distribution Center (KDC), and works with Generic Security Services Application Program Interface (GSSAPI) and Kerberos v5 libraries.
 
-As of version 17.6, the driver also supports integrated authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) using a [federated account](/azure/active-directory/hybrid/connect/whatis-fed), system library limitations notwithstanding. See [Using Microsoft Entra ID](../using-azure-active-directory.md) for more information.
+As of version 17.6, the driver also supports integrated authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) using a [federated account](/azure/active-directory/hybrid/connect/whatis-fed), system library limitations notwithstanding. See [Using Microsoft Entra ID](../using-azure-active-directory.md) for more information.
 
 
 ## Using Integrated Authentication to Connect to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] from an ODBC Application  

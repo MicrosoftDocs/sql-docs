@@ -143,7 +143,7 @@ EXEC sp_help_fulltext_system_components 'fullpath',
 GO
 ```
 
-## Next steps
+## Related content
 
 - [View or Change Registered Filters and Word Breakers](../search/view-or-change-registered-filters-and-word-breakers.md)
 - [Configure and Manage Word Breakers and Stemmers for Search](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)

@@ -13,13 +13,13 @@ ms.custom: updatefrequency5
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-This topic explains how to configure Reporting Services (SSRS) and Power BI Report Server to use a Subject Alternative Name (SAN), by modifying the rsreportserver.config file and using the Netsh.exe tool.
+This article explains how to configure Reporting Services (SSRS) and Power BI Report Server to use a Subject Alternative Name (SAN), by modifying the rsreportserver.config file and using the Netsh.exe tool.
 
-The instructions apply to the Web Service URL as well as the Web Portal URL in the Report Server Configuration Manager tool.
+The instructions apply to the Web Service URL and the Web Portal URL in the Report Server Configuration Manager tool.
 
-To use a SAN, the TLS/SSL certificate must be registered on the server, signed, and have the private key. You cannot use a self-signed certificate.
+To use a SAN, the TLS/SSL certificate must be registered on the server, signed, and have the private key. You can't use a self-signed certificate.
 
-URLs in Reporting Services and Power BI Report Server can be configured to use a TLS/SSL certificate. A certificate normally has just a subject name, which allows only one URL for a Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), session. The SAN is an additional field in the certificate that allows a TLS service to listen for many URLs, and to share the TLS port with other applications. For example, a SAN could look something like `www.myreports.com`.
+URLs in Reporting Services and Power BI Report Server can be configured to use a TLS/SSL certificate. A certificate normally has just a subject name, which allows only one URL for a Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), session. The SAN is another field in the certificate that allows a TLS service to listen for many URLs, and to share the TLS port with other applications. For example, a SAN could look something like ```www.myreports.com```.
 
 For more information about TLS settings for Reporting Services, see [Configure TLS Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
@@ -30,8 +30,8 @@ For more information about TLS settings for Reporting Services, see [Configure T
      For more information, see [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2. On the **Web Service URL** page, select a TLS/SSL port and TLS/SSL Certificate.  
-  
-     ![Report Server Configuration Manager](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Report Server Configuration Manager")  
+
+     :::image type="content" source="../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png" alt-text="Screenshot of the Report Server Configuration Manager.":::
   
      The configuration manager registers the TLS/SSL certificate for the port.  
   
@@ -92,13 +92,13 @@ For more information about TLS settings for Reporting Services, see [Configure T
 5. Save the rsreportserver.config file.  
   
 6. Start a command prompt using **Run as Administrator**.
-8. Show the existing urlacls by typing the following:
+8. Show the existing urlacls by entering the following example:
   
     ```  
     Netsh http show urlacl  
     ```  
   
-     An entry such as the following appears.  
+     An entry such as the following example appears.  
   
     ```  
     Reserved URL            : https://+:443/ReportServer/  
@@ -110,7 +110,7 @@ For more information about TLS settings for Reporting Services, see [Configure T
   
      An urlacl is a DACL (Discretionary Access Control List) for a reserved URL.  
   
-9. Create a new entry for the Subject Alternative Name, with the same user and SDDL as the existing entry, by typing the following:  
+9. Create a new entry for the Subject Alternative Name, with the same user and SDDL as the existing entry, by entering the following example:  
   
     ```  
     netsh http add urlacl  url=https://www.myreports.com:443/ReportServer    
@@ -118,9 +118,9 @@ For more information about TLS settings for Reporting Services, see [Configure T
   
     ```  
     > [!TIP]
-    > If you copy the code to Notepad to edit, rather than typing it manually, remove the CRLF before pasting the code into the command prompt.
+    > If you copy the code to Notepad to edit, rather than entering it manually, remove the CRLF before pasting the code into the command prompt.
 
-10. For the **Web Portal URL**, create a new entry for the Subject Alternative Name by typing the following:
+10. For the **Web Portal URL**, create a new entry for the Subject Alternative Name by entering the following:
 
     ```  
     netsh http add urlacl  url=https://www.myreports.com:443/Reports  
@@ -132,17 +132,17 @@ For more information about TLS settings for Reporting Services, see [Configure T
     >  * For Power BI Report Server, the `user` value is `NT SERVICE\PowerBIReportServer` and the `sddl` value is `S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663`
 
     > [!NOTE]  
-    > For Power BI Report Server, you need to create two additional entries for the Subject Alternative Name by typing the following:
+    > For Power BI Report Server, you need to create two additional entries for the Subject Alternative Name by entering the following:
     >  * `add urlacl url=https://www.myreports.com:443/PowerBI user="NT SERVICE\PowerBIReportServer" sddl=D:(A;;GX;;;S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663)`
     >  * `add urlacl url=https://www.myreports.com:443/wopi user="NT SERVICE\PowerBIReportServer" sddl=D:(A;;GX;;;S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663)`
 
-11. On the **Report Server Status** page of the Report Server Configuration Manager, Click **Stop** and then click **Start** to restart the report server.  
+11. On the **Report Server Status** page of the Report Server Configuration Manager, select **Stop** and then choose **Start** to restart the report server.  
   
-## See also
+## Related content
 
  [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Report Server Configuration Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Modify a Reporting Services configuration file](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [Configure Report Server URLs](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+ [Configure report server URLs](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

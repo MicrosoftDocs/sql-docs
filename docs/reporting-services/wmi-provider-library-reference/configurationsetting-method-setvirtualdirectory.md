@@ -34,7 +34,7 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
  *VirtualDirectory*  
  The name of the virtual directory.  
   
- *lcid*  
+ *Lcid*  
  The locale ID for the virtual directory.  
   
  *Error*  

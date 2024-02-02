@@ -187,7 +187,7 @@ sections:
           
           To use another DNS zone instead of the default, for example, *.contoso.com*: 
           - Use SQL Server Client Network Utility (CliConfg) to define an alias. You can use either just the managed instance hostname, or the managed instance hostname followed by a custom domain name. The CliConfg tool just adds alias in the registry under "HKLM\SOFTWARE\Microsoft\MSSQLServer\Client\ConnectTo" or "HKLM\SOFTWARE\WOW6432Node\Microsoft\MSSQLServer\Client\ConnectTo" depending if you use the 64-bit version (C:\Windows\System32\cliconfg.exe) or the 32-bit version (C:\Windows\SysWOW64\cliconfg.exe), so it can be done using group policy or a script as well. Use both to ensure 32-bit and 64-bit programs can resolve the alias.
-          - Use *CNAME* record in DNS with managed instance hostname pointing to managed instance FQDN. In this case, `TrustServerCertificate=TRUE` is needed when using authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)).
+          - Use *CNAME* record in DNS with managed instance hostname pointing to managed instance FQDN. In this case, `TrustServerCertificate=TRUE` is needed when using authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)).
           - Use *A* record in DNS with managed instance hostname pointing to the managed instance IP address. **Using IP address is not recommended**, as it can change without notice. In this case, `TrustServerCertificate=TRUE` is needed when using Microsoft Entra authentication.
           
           
@@ -231,7 +231,7 @@ sections:
           You can optimize the performance of your managed instance by:
           - [Automatic tuning](../database/automatic-tuning-overview.md) that provides peak performance and stable workloads through continuous performance tuning based on AI and machine learning.
           - [In-memory OLTP](../in-memory-oltp-overview.md) that improves throughput and latency on transactional processing workloads and delivers faster business insights. 
-          - Applying some of the [best practices for application and database tuning](../database/performance-guidance.md#tune-your-database)
+          - Applying some of the [best practices for application and database tuning](performance-guidance.md#tune-your-database)
           - [Switching the connection type from proxy to redirect mode](connection-types-overview.md#changing-connection-type) for lower latency and higher throughput, in case your workload consists of lots of small transactions.
           
           ### How can I further tune performance of my General Purpose managed instance?

@@ -7,7 +7,7 @@ ms.reviewer: randolphwest
 ms.date: 10/03/2023
 ms.service: sql
 ms.subservice: ssms
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
   - "SQL Server Agent, service accounts"
   - "startup accounts [SQL Server]"

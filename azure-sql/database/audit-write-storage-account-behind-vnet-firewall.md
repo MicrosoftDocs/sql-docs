@@ -83,7 +83,7 @@ The sample scripts in this section require you to update the script before you r
 
 To configure SQL Audit to write events to a storage account behind a VNet or Firewall:
 
-1. Register your server with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). Use either PowerShell or REST API.
+1. Register your server with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). Use either PowerShell or REST API.
 
    **PowerShell**
 

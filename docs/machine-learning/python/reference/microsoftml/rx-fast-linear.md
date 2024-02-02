@@ -14,7 +14,7 @@ keywords:
   - stochastic
   - classification
   - regression
-ms.devlang: Python
+ms.devlang: python
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---
 # *microsoftml.rx_fast_linear*: Linear Model with Stochastic Dual Coordinate Ascent

@@ -6,7 +6,7 @@ ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ---
 # ODBC in Windows
 The following items apply only to ODBC running in Microsoft® Windows NT®/Windows 2000 and Microsoft Windows® 95/98 operating systems.  

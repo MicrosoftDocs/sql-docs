@@ -17,7 +17,7 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This article describes how to back up a transaction log in [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE [name-sos-short](../../includes/name-sos-short.md)], [!INCLUDE [tsql](../../includes/tsql-md.md)], or PowerShell.
+This article describes how to back up a transaction log in [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE [azure-data-studio](../../includes/azure-data-studio-short.md)], [!INCLUDE [tsql](../../includes/tsql-md.md)], or PowerShell.
 
 ## Limitations
 
@@ -40,7 +40,7 @@ Ownership and permission problems on the backup device's physical file can inter
 ## Use SQL Server Management Studio
 
 > [!NOTE]  
-> The steps in this section also apply to [!INCLUDE [name-sos-short](../../includes/name-sos-short.md)].
+> The steps in this section also apply to [!INCLUDE [azure-data-studio](../../includes/azure-data-studio-short.md)].
 
 1. After connecting to the appropriate instance of the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)], in Object Explorer, select the server name to expand the server tree.
 

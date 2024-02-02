@@ -9,12 +9,7 @@ ms.date: 12/19/2022
 ms.service: sql-db-mi
 ms.subservice: connect
 ms.topic: quickstart
-ms.custom:
-  - seo-javascript-september2019
-  - seo-javascript-october2019
-  - sqldbrb=2
-  - devx-track-js
-  - mode-api
+ms.custom: sqldbrb=2, devx-track-js, mode-api
 ms.devlang: javascript
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
@@ -169,7 +164,7 @@ Open a command prompt and create a folder named *sqltest*. Open the folder you c
     ```
 
 > [!NOTE]
-> For more information about using managed identity for authentication, complete the tutorial to [access data via managed identity](/azure/app-service/tutorial-connect-msi-sql-database). Details about the Tedious configuration options for Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) are available in the [Tedious documentation](http://tediousjs.github.io/tedious/api-connection.html).
+> For more information about using managed identity for authentication, complete the tutorial to [access data via managed identity](/azure/app-service/tutorial-connect-msi-sql-database). Details about the Tedious configuration options for Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) are available in the [Tedious documentation](http://tediousjs.github.io/tedious/api-connection.html).
 
 
 ## Run the code

@@ -56,7 +56,7 @@ None.
 
 Users with the **public** role are allowed to execute this stored procedure.
 
-## Next steps
+## Related content
 
 - [Digest management](../security/ledger/ledger-digest-management.md)
 - [Ledger overview](../security/ledger/ledger-overview.md)

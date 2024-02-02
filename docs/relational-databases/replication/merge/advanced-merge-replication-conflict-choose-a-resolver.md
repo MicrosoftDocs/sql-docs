@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "default conflict resolver"

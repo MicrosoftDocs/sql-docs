@@ -16,7 +16,7 @@ ms.custom:
 # Connect to Azure SQL Database with Microsoft Entra multifactor authentication
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This article provides a C# program that connects to Azure SQL Database. The program uses interactive mode authentication, which supports [multifactor authentication](/azure/active-directory/authentication/concept-mfa-howitworks) using Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)).
+This article provides a C# program that connects to Azure SQL Database. The program uses interactive mode authentication, which supports [multifactor authentication](/azure/active-directory/authentication/concept-mfa-howitworks) using Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)).
 
 For more information about multifactor authentication support for SQL tools, see [Using Microsoft Entra multifactor authentication](./authentication-mfa-ssms-overview.md).
 

@@ -83,7 +83,7 @@ EXEC msdb.dbo.sysmail_update_profile_sp
     @description = 'Profile to send alert e-mail to operators.';
 ```
 
-## See also
+## Related content
 
 - [Database Mail](../database-mail/database-mail.md)
 - [Database Mail Configuration Objects](../database-mail/database-mail-configuration-objects.md)

@@ -35,6 +35,6 @@ dev_langs:
 - [xp_sqlmaint](xp-sqlmaint-transact-sql.md)
 - [xp_sscanf](xp-sscanf-transact-sql.md)
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

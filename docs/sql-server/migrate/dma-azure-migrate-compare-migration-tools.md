@@ -34,7 +34,7 @@ For more information, visit [Azure Database Migration Service documentation](/az
 
 Azure Migrate provides a centralized hub to discover and assess on-premises servers, infrastructure, applications, and data to Azure at scale. Azure Migrate offers a unified migration across your servers, databases, and applications.
 
-Use Azure Migrate to discover all your SQL Servers across your datacenter, assess application dependencies, understand the readiness of these SQL Servers migrating to Azure SQL, and get Microsoft recommendations, such as the optimal Azure SQL deployment option and the correct SKU that can fit the performance needs for your workloads. You can also get the monthly estimates running these databases on Azure SQL to cater to your licensing benefits.
+Use Azure Migrate to discover all your SQL Server instances across your datacenter, assess application dependencies, understand the readiness of these SQL Server instances migrating to Azure SQL, and get Microsoft recommendations, such as the optimal Azure SQL deployment option and the correct SKU that can fit the performance needs for your workloads. You can also get the monthly estimates running these databases on Azure SQL to cater to your licensing benefits.
 
 Use Azure Migrate in the following scenarios:
 

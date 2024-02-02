@@ -6,7 +6,7 @@ ms.author: maghan
 ms.date: "01/20/2017"
 ms.service: sql
 ms.subservice: ssms
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
   - "PowerShell [SQL Server], job steps"
   - "jobs [SQL Server Agent], PowerShell"

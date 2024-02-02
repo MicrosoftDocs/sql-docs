@@ -1,9 +1,8 @@
 ---
 title: Using Data Classification ODBC driver
 description: Learn how to use Data Classification with the ODBC driver and how to incorporate your data protection policies into your ODBC application.
-author: "v-makouz"
-ms.author: v-makouz
-ms.reviewer: v-davidengel
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/15/2023"
 ms.service: sql
 ms.subservice: connectivity

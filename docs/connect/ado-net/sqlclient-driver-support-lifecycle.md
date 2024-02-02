@@ -27,7 +27,7 @@ New stable (GA) releases are published every six months on a regular cadence beg
 
 | Version | Official Release Date | Latest Patch Version | Patch Release Date | Support Level | End of Support |
 |--|--|--|--|--|--|
-| 5.1 | January 19, 2023 | 5.1.4 | January 9, 2024 | LTS | January 20, 2026 |
+| 5.1 | January 19, 2023 | 5.1.5 | January 29, 2024 | LTS | January 20, 2026 |
 | 4.0 | November 18, 2021 | 4.0.5 | January 9, 2024 | LTS | November 19, 2024 |
 | 3.1 | March 30, 2022 | 3.1.5 | January 9, 2024 | LTS | March 30, 2025 |
 

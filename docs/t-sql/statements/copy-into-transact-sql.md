@@ -208,8 +208,8 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
 
 *ERRORFILE_CREDENTIAL* only applies to CSV files. Supported data source and authentication methods are:
 
-- Azure Blob Storage  - SAS/SERVICE PRINCIPAL/KEY/AAD
-- Azure Data Lake Gen2 -   SAS/MSI/SERVICE PRINCIPAL/KEY/AAD
+- Azure Blob Storage  - SAS/SERVICE PRINCIPAL/AAD
+- Azure Data Lake Gen2 -   SAS/MSI/SERVICE PRINCIPAL/AAD
 
 - Authenticating with Shared Access Signatures (SAS)
   - *IDENTITY: A constant with a value of 'Shared Access Signature'*
@@ -224,10 +224,6 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
 > [!NOTE]  
 > Use the OAuth 2.0 token endpoint **V1**
 
-- Authenticating with Storage account key
-  - *IDENTITY: A constant with a value of 'Storage Account Key'*
-  - *SECRET: Storage account key*
-
 - Authenticating with [Managed Identity](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNet Service Endpoints)
   - *IDENTITY: A constant with a value of 'Managed Identity'*
   - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Microsoft Entra registered SQL Database server
@@ -235,6 +231,8 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
 - Authenticating with a Microsoft Entra user
   - *CREDENTIAL isn't required*
   - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Microsoft Entra user
+
+Using a storage account key with ERRORFILE_CREDENTIAL is not supported. 
 
 > [!NOTE]  
 > If you are using the same storage account for your ERRORFILE and specifying the ERRORFILE path relative to the root of the container, you do not need to specify the ERROR_CREDENTIAL.

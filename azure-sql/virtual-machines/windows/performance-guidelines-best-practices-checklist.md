@@ -8,9 +8,6 @@ ms.date: 10/16/2023
 ms.service: virtual-machines-sql
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom:
-  - contperf-fy21q3
-  - ignite-2022
 tags: azure-service-management
 ---
 # Checklist: Best practices for SQL Server on Azure VMs

@@ -55,7 +55,7 @@ sp_changedistributiondb [ @database= ] 'database'
  **sp_changedistributiondb** is used in all types of replication.  
   
 ## Example  
- [!code-sql[HowTo#sp_changedistributiondb](../../relational-databases/replication/codesnippet/tsql/sp-changedistributiondb-_1.sql)]  
+ :::code language="sql" source="../replication/codesnippet/tsql/sp-changedistributiondb-_1.sql":::
   
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_changedistributiondb**.  

@@ -9,11 +9,10 @@ metadata:
   description: Choose the SQL Server migration path you're interested in. 
   ms.service: sql
   ms.topic: landing-page
-  author: cawrites
-  ms.author: chadam
-  ms.date: 12/09/2019  
-  ms.reviewer: rajpo
-
+  author: rwestMSFT
+  ms.author: randolphwest
+  ms.date: 01/15/2024
+  ms.reviewer: rajpo, randolphwest
 
 landingContent:
   - title: SQL Server to SQL Server
@@ -31,8 +30,7 @@ landingContent:
       - text: Database Experimentation Assistant
         url: https://www.microsoft.com/download/details.aspx?id=54090
 
-
-  - title: non-SQL to SQL & Azure
+  - title: Non-SQL to SQL & Azure
     linkLists:
     - linkListType: overview
       links:
@@ -72,7 +70,6 @@ landingContent:
       - text: Broader migration process
         url: /azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration
 
-
   - title: Resources
     linkLists:
     - linkListType: overview
@@ -110,5 +107,3 @@ landingContent:
       links: 
       - text: Extended security updates datasheet PDF
         url: http://download.microsoft.com/download/A/3/F/A3F0908A-0FD8-494C-82BC-E75F313F3FAD/Extended_Security_Updates_for_Windows_Server_2008_and_SQL_Server_2008_End_of_Service.pdf
-
-

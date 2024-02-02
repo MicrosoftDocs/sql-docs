@@ -13,7 +13,7 @@ ms.custom: updatefrequency5
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 
-  A paginated report can contain a page header and page footer that run along the top and bottom of each page, respectively. After you a add a header or footer, you can selectively hide it on the first and last pages of a report.  
+  A paginated report can contain a page header and page footer that run along the top and bottom of each page, respectively. After you add a header or footer, you can selectively hide it on the first and last pages of a report.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

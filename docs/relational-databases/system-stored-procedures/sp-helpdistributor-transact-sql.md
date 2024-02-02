@@ -151,7 +151,7 @@ The following result set columns are returned to all users.
 | `rpc server name` | *@rpcsrvname* |
 | `publisher type` | *@publisher_type* |
 
-## See also
+## Related content
 
 - [View and Modify Distributor and Publisher Properties](../replication/view-and-modify-distributor-and-publisher-properties.md)
 - [sp_adddistpublisher (Transact-SQL)](sp-adddistpublisher-transact-sql.md)

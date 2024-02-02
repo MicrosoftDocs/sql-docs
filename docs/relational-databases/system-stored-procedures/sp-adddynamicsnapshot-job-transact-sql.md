@@ -4,7 +4,7 @@ description: Creates an agent job that generates a filtered data snapshot for a 
 author: mashamsft
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 08/30/2023
+ms.date: 01/23/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -25,7 +25,7 @@ Creates an agent job that generates a filtered data snapshot for a publication w
 > [!NOTE]  
 > In order for a filtered data snapshot job to be created, a standard snapshot job for the publication must already exist.
 
-For more information, see [Snapshots for Merge Publications with Parameterized Filters](../replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).
+For more information, see [Create a Snapshot for a Merge Publication with Parameterized Filters](../replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -74,7 +74,7 @@ The name of the filtered data snapshot job created. *@dynamic_snapshot_jobname* 
 ```
 
 > [!NOTE]  
-> When generating the name of the dynamic snapshot job, you may truncate the name of the standard snapshot job.
+> When generating the name of the dynamic snapshot job, you might truncate the name of the standard snapshot job.
 
 #### [ @dynamic_snapshot_jobid = ] '*dynamic_snapshot_jobid*' OUTPUT
 
@@ -174,15 +174,15 @@ The time of day when the filtered data snapshot job stops being scheduled, forma
 
 ## Examples
 
-[!code-sql [HowTo#sp_MergeDynamicPubPlusPartition](../replication/codesnippet/tsql/sp-adddynamicsnapshot-jo_1.sql)]
+:::code language="sql" source="../replication/codesnippet/tsql/sp-adddynamicsnapshot-jo_1.sql":::
 
 ## Permissions
 
 Only members of the **sysadmin** fixed server role or the **db_owner** fixed database role can execute `sp_adddynamicsnapshot_job`.
 
-## See also
+## Related content
 
 - [Create a Snapshot for a Merge Publication with Parameterized Filters](../replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)
-- [Parameterized Row Filters](../replication/merge/parameterized-filters-parameterized-row-filters.md)
+- [Parameterized Filters - Parameterized Row Filters](../replication/merge/parameterized-filters-parameterized-row-filters.md)
 - [sp_dropdynamicsnapshot_job (Transact-SQL)](sp-dropdynamicsnapshot-job-transact-sql.md)
 - [sp_helpdynamicsnapshot_job (Transact-SQL)](sp-helpdynamicsnapshot-job-transact-sql.md)

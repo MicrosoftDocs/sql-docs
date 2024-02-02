@@ -12,10 +12,10 @@ helpviewer_keywords:
   - "authorization [Reporting Services]"
 ---
 # Authorization in Reporting Services
-  Authorization is the process of determining whether an identity should be granted the requested type of access to a given resource in the report server database. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] uses a role-based authorization architecture that grants a user access to a given resource based on the user's role assignment for the application. Security extensions for [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] contain an implementation of an authorization component that is used to grant access to users once they are authenticated on the report server. Authorization is invoked when a user attempts to perform an operation on the system or a report server item through the SOAP API and via URL access. This is made possible through the security extension interface **IAuthorizationExtension2**. As stated previously, all extensions inherit from **IExtension** the base interface for any extension that you deploy. **IExtension** and **IAuthorizationExtension2** are members of the **Microsoft.ReportingServices.Interfaces** namespace.  
+  Authorization is the process of determining whether an identity should be granted the requested type of access to a given resource in the report server database. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] uses a role-based authorization architecture that grants a user access to a given resource based on the user's role assignment for the application. Security extensions for [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] contain an implementation of an authorization component that is used to grant access to users once they're authenticated on the report server. Authorization is invoked when a user attempts to perform an operation on the system or a report server item through the SOAP API and via URL access. This scenario is made possible through the security extension interface **IAuthorizationExtension2**. As stated previously, all extensions inherit from **IExtension** the base interface for any extension that you deploy. **IExtension** and **IAuthorizationExtension2** are members of the **Microsoft.ReportingServices.Interfaces** namespace.  
   
-## Checking Access  
- In authorization, the key to any custom security implementation is the access check, which is implemented in the <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> method. <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> is called each time a user attempts an operation on the report server. The <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> method is overloaded for each operation type. For folder operations, an example of an access check might look like the following:  
+## Check access  
+ In authorization, the key to any custom security implementation is the access check, which is implemented in the <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> method. <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> is called each time a user attempts an operation on the report server. The <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> method is overloaded for each operation type. For folder operations, an example of an access check might look like the following example:  
   
 ```  
 // Overload for Folder operations  
@@ -48,7 +48,7 @@ public bool CheckAccess(
   
  The report server calls the <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> method by passing in the name of the logged-on user, a user token, the security descriptor for the item, and the requested operation. Here you would check the security descriptor for the user name and the appropriate permission to complete the request, then return **true** to signify that access is granted or **false** to signify access is denied.  
   
-## Security Descriptors  
+## Security descriptors  
  When setting authorization policies on items in the report server database, a client application (such as Report Manager) submits the user information to the security extension along with a security policy for the item. This security policy and user information are known collectively as a security descriptor. A security descriptor contains the following information for an item in the report server database:  
   
 -   The group or user that has some type of permission to perform operations on the item.  
@@ -59,10 +59,10 @@ public bool CheckAccess(
   
  Security descriptors are created using the Web service <xref:ReportService2010.ReportingService2010.SetPolicies%2A> and <xref:ReportService2010.ReportingService2010.SetSystemPolicies%2A> methods.  
   
-### Authorization Flow  
+### Authorization flow  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] authorization is controlled by the security extension currently configured to run on the server. Authorization is role-based and limited to the permissions and operations supplied by the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] security architecture. The following diagram depicts the process of authorizing users to operate on items in the report server database:  
-  
- ![Reporting Services security authorization flow](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthorizationflow.gif "Reporting Services security authorization flow")  
+
+:::image type="content" source="../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthorizationflow.gif" alt-text="Screenshot of the Reporting Services security authorization flow.":::
   
  As shown in this diagram, authorization follows this sequence:  
   

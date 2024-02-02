@@ -115,16 +115,16 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  Is the recurrence factor used by *frequency_type*. *frequency_recurrence_factor* is **int**, with a default of NULL.  
   
 `[ @active_start_date = ] active_start_date`
- Is the date when the Merge Agent is first scheduled, formatted as YYYYMMDD. *active_start_date* is **int**, with a default of NULL.  
+ Is the date when the Merge Agent is first scheduled, formatted as `yyyyMMdd`. *active_start_date* is **int**, with a default of NULL.  
   
 `[ @active_end_date = ] active_end_date`
- Is the date when the Merge Agent stops being scheduled, formatted as YYYYMMDD. *active_end_date* is **int**, with a default of NULL.  
+ Is the date when the Merge Agent stops being scheduled, formatted as `yyyyMMdd`. *active_end_date* is **int**, with a default of NULL.  
   
 `[ @active_start_time_of_day = ] active_start_time_of_day`
- Is the time of day when the Merge Agent is first scheduled, formatted as HHMMSS. *active_start_time_of_day* is **int**, with a default of NULL.  
+ Is the time of day when the Merge Agent is first scheduled, formatted as `HHmmss`. *active_start_time_of_day* is **int**, with a default of NULL.  
   
 `[ @active_end_time_of_day = ] active_end_time_of_day`
- Is the time of day when the Merge Agent stops being scheduled, formatted as HHMMSS. *active_end_time_of_day* is **int**, with a default of NULL.  
+ Is the time of day when the Merge Agent stops being scheduled, formatted as `HHmmss`. *active_end_time_of_day* is **int**, with a default of NULL.  
   
 `[ @job_login = ] 'job_login'`
  Is the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Account under which the Snapshot Agent runs when generating the snapshot for a subscription using a parameterized row filter. *job_login* is **nvarchar(257)**, with a default value of NULL.  

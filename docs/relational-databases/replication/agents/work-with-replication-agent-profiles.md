@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "replication [SQL Server], agents and profiles"
@@ -218,7 +218,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This example creates a custom profile for the Merge Agent named **custom_merge**, changes the value of the **-UploadReadChangesPerBatch** parameter, adds a new **-ExchangeType** parameter, and returns information on the profile that is created.  
   
- [!code-sql[HowTo#sp_addagentprofileparam](../../../relational-databases/replication/codesnippet/tsql/work-with-replication-ag_1.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/work-with-replication-ag_1.sql":::
   
 ##  <a name="RMOProcedure"></a> Using RMO  
   

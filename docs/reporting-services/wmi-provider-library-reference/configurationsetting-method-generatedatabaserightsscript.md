@@ -75,7 +75,7 @@ out Int32 HRESULT);
 |(S-1-5-19)|Local Service|Error|  
 |NT AUTHORITY\LocalService|Local Service|Error|  
   
- On [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)], if you're using a built-in account and the report server database is remote, an error is returned.  
+ On [!INCLUDE[win2000](../../includes/win2000-md.md)], if you're using a built-in account and the report server database is remote, an error is returned.  
   
  If the **LocalService** built-in account is specified and the report server database is remote, an error is returned.  
   

@@ -107,7 +107,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
  sp_helppublication will return information on all publications that are owned by the user executing this procedure.  
   
 ## Example  
- [!code-sql[HowTo#sp_helppublication](../../relational-databases/replication/codesnippet/tsql/sp-helppublication-trans_1.sql)]  
+ :::code language="sql" source="../replication/codesnippet/tsql/sp-helppublication-trans_1.sql":::
   
 ## Permissions  
  Only members of the sysadmin fixed server role at the Publisher or members of the db_owner fixed database role on the publication database or users in the publication access list (PAL) can execute sp_helppublication.  

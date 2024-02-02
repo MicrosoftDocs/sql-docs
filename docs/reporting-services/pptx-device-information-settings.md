@@ -1,5 +1,5 @@
 ---
-title: "PPTX Device Information Settings"
+title: "PPTX device information settings"
 description: Learn details about the device information settings for rendering Reporting Services reports in the PPTX format.
 author: maggiesMSFT
 ms.author: maggies
@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "pptx"
   - "export"
 ---
-# PPTX Device Information Settings
+# PPTX device information settings
   The following table lists the device information settings for rendering [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] reports in the PPTX format.  
   
 |Setting|Value|  
@@ -31,12 +31,13 @@ helpviewer_keywords:
 |**PageHeight**|The page height, in inches, to set for the report. You must include an integer or decimal value followed by "in" (for example, **11in**). This value overrides the report's original settings.|  
 |**PageWidth**|The page width, in inches, to set for the report. You must include an integer or decimal value followed by "in" (for example, **8.5in**). This value overrides the report's original settings.|  
 |**StartPage**|The first page of the report to render. A value of **0** indicates that all pages are rendered. The default value is **1**.|  
-|**UseReportPageSize**|If UseReportPageSize =**false** then the default slide size is PowerPoint's default of 13.333" x 7.5" (16:9 aspect ratio). If UseReportPageSize =true, then the default slide size is the define page size of the report.<br /><br /> The default value is **false**<br /><br /> Note, the PageWidth and PageHeight settings override the default width and height.|  
+|**UseReportPageSize**|If UseReportPageSize =**false** then the default slide size is PowerPoint's default of 13.333" x 7.5" (16:9 aspect ratio). If UseReportPageSize =true, then the default slide size is the defined page size of the report.<br /><br /> The default value is **false**<br /><br /> Note, the PageWidth and PageHeight settings override the default width and height.|  
   
-## See Also  
- <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [Passing Device Information Settings to Rendering Extensions](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Customize Rendering Extension Parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Technical Reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
+## Related content
+
+- <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
+- [Pass device information settings to rendering extensions](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+- [Customize rendering extension parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+- [Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

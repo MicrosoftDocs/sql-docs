@@ -79,6 +79,6 @@ status     0        INACTIVE           2005-10-07 21:04:47.003 2005-10-10 21:04:
 (2 row(s) affected)
 ```
 
-## See also
+## Related content
 
 - [Database Mail](../database-mail/database-mail.md)

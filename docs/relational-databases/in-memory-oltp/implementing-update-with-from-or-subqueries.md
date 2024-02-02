@@ -50,111 +50,108 @@ The sample T-SQL code in the following block demonstrates a workaround that prov
   
   
  ```sql
-    DROP TABLE IF EXISTS dbo.Table1;  
-    go  
-    DROP TYPE IF EXISTS dbo.Type1;  
-    go  
-    -----------------------------
-    -- Table and table type.
-    -----------------------------
-  
-    CREATE TABLE dbo.Table1  
-    (  
-        Id           INT        NOT NULL  PRIMARY KEY NONCLUSTERED,  
-        Column2      INT        NOT NULL,  
-        LastUpdated  DATETIME2  NOT NULL  DEFAULT (SYSDATETIME())  
-    )  
-        WITH (MEMORY_OPTIMIZED = ON);  
-    go  
-  
-  
-    CREATE TYPE dbo.Type1 AS TABLE  
-    (  
-        Id       INT NOT  NULL,  
-        
-        RowID    INT NOT  NULL  IDENTITY,  
-        INDEX ix_RowID HASH (RowID) WITH (BUCKET_COUNT=1024)
-    )   
-        WITH (MEMORY_OPTIMIZED = ON);  
-    go  
-    ----------------------------------------
-    -- Trigger that contains the workaround
-    -- for UPDATE with FROM.
-    ----------------------------------------
-  
-    CREATE TRIGGER dbo.tr_a_u_Table1  
-        ON dbo.Table1  
-        WITH NATIVE_COMPILATION, SCHEMABINDING  
-        AFTER UPDATE  
-    AS 
-    BEGIN ATOMIC WITH  
-        (  
-        TRANSACTION ISOLATION LEVEL = SNAPSHOT,  
-        LANGUAGE = N'us_english'  
-        )  
-        
-      DECLARE @tabvar1 dbo.Type1;  
-    
-      INSERT @tabvar1 (Id)   
-          SELECT Id FROM Inserted;  
-    
-      DECLARE  
-          @i INT = 1,  @Id INT,  
-          @max INT = SCOPE_IDENTITY();  
-    
-      ---- Loop as a workaround to simulate a cursor.
-      ---- Iterate over the rows in the memory-optimized table  
-      ----   variable and perform an update for each row.  
-    
-      WHILE @i <= @max  
-      BEGIN  
-          SELECT @Id = Id  
-              FROM @tabvar1  
-              WHERE RowID = @i;  
-    
-          UPDATE dbo.Table1  
-              SET LastUpdated = SysDateTime()  
-              WHERE Id = @Id;  
-    
-          SET @i += 1;  
-      END  
-    END  
-    go  
-    ---------------------------------
-    -- Test to verify functionality.
-    ---------------------------------
-  
-    SET NOCOUNT ON;  
-  
-    INSERT dbo.Table1 (Id, Column2)  
-        VALUES (1,9), (2,9), (3,600);  
-    
-    SELECT N'BEFORE-Update' AS [BEFORE-Update], *  
-        FROM dbo.Table1  
-        ORDER BY Id;  
-  
-    WAITFOR DELAY '00:00:01';  
+DROP TABLE IF EXISTS dbo.Table1;  
+GO
 
-    UPDATE dbo.Table1  
-        SET   Column2 += 1  
-        WHERE Column2 <= 99;  
-  
-    SELECT N'AFTER--Update' AS [AFTER--Update], *  
-        FROM dbo.Table1  
-        ORDER BY Id;  
-    go  
-    -----------------------------  
-  
-    /**** Actual output:  
-  
-    BEFORE-Update   Id   Column2   LastUpdated  
-    BEFORE-Update   1       9      2016-04-20 21:18:42.8394659  
-    BEFORE-Update   2       9      2016-04-20 21:18:42.8394659  
-    BEFORE-Update   3     600      2016-04-20 21:18:42.8394659  
-  
-    AFTER--Update   Id   Column2   LastUpdated  
-    AFTER--Update   1      10      2016-04-20 21:18:43.8529692  
-    AFTER--Update   2      10      2016-04-20 21:18:43.8529692  
-    AFTER--Update   3     600      2016-04-20 21:18:42.8394659  
-    ****/  
- ```
+DROP TYPE IF EXISTS dbo.Type1;  
+GO
+
+-----------------------------
+-- Table and table type.
+-----------------------------
+CREATE TABLE dbo.Table1 (
+    Id INT NOT NULL PRIMARY KEY NONCLUSTERED,
+    Column2 INT NOT NULL,
+    LastUpdated DATETIME2 NOT NULL DEFAULT(SYSDATETIME())
+)
+WITH (MEMORY_OPTIMIZED = ON);
+GO
+
+CREATE TYPE dbo.Type1 AS TABLE (
+    Id INT NOT NULL,
+    RowID INT NOT NULL IDENTITY,
+    INDEX ix_RowID HASH (RowID) WITH (BUCKET_COUNT = 1024)
+)
+WITH (MEMORY_OPTIMIZED = ON);
+GO
+
+----------------------------------------
+-- Trigger that contains the workaround
+-- for UPDATE with FROM.
+----------------------------------------
+CREATE TRIGGER dbo.tr_a_u_Table1 ON dbo.Table1
+    WITH NATIVE_COMPILATION, SCHEMABINDING
+    AFTER UPDATE
+AS
+BEGIN
+    ATOMIC
+    WITH (
+        TRANSACTION ISOLATION LEVEL = SNAPSHOT,
+        LANGUAGE = N'us_english'
+    )
+
+    DECLARE @tabvar1 dbo.Type1;
+
+    INSERT @tabvar1 (Id)
+    SELECT Id
+    FROM Inserted;
+
+    DECLARE @i INT = 1,
+        @Id INT,
+        @max INT = SCOPE_IDENTITY();
+
+    ---- Loop as a workaround to simulate a cursor.
+    ---- Iterate over the rows in the memory-optimized table  
+    ----   variable and perform an update for each row.  
+    WHILE @i <= @max
+    BEGIN
+        SELECT @Id = Id
+        FROM @tabvar1
+        WHERE RowID = @i;
+
+        UPDATE dbo.Table1
+        SET LastUpdated = SysDateTime()
+        WHERE Id = @Id;
+
+        SET @i += 1;
+    END
+END
+GO
+
+---------------------------------
+-- Test to verify functionality.
+---------------------------------
+SET NOCOUNT ON;
+
+INSERT dbo.Table1 (Id, Column2)
+VALUES (1, 9), (2, 9), (3, 600);
+
+SELECT N'BEFORE-Update' AS [BEFORE-Update], *
+FROM dbo.Table1
+ORDER BY Id;
+
+WAITFOR DELAY '00:00:01';
+
+UPDATE dbo.Table1
+SET Column2 += 1
+WHERE Column2 <= 99;
+
+SELECT N'AFTER--Update' AS [AFTER--Update], *
+FROM dbo.Table1
+ORDER BY Id;
+GO
+```
+
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
+
+```output
+BEFORE-Update   Id   Column2   LastUpdated  
+BEFORE-Update   1       9      2016-04-20 21:18:42.8394659  
+BEFORE-Update   2       9      2016-04-20 21:18:42.8394659  
+BEFORE-Update   3     600      2016-04-20 21:18:42.8394659  
+
+AFTER--Update   Id   Column2   LastUpdated  
+AFTER--Update   1      10      2016-04-20 21:18:43.8529692  
+AFTER--Update   2      10      2016-04-20 21:18:43.8529692  
+AFTER--Update   3     600      2016-04-20 21:18:42.8394659  
+```

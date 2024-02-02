@@ -9,12 +9,7 @@ ms.date: 12/19/2022
 ms.service: sql-db-mi
 ms.subservice: connect
 ms.topic: quickstart
-ms.custom:
-  - seo-javascript-september2019
-  - seo-javascript-october2019
-  - sqldbrb=2
-  - devx-track-js
-  - mode-api
+ms.custom: sqldbrb=2, devx-track-js, mode-api
 ms.devlang: javascript
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---

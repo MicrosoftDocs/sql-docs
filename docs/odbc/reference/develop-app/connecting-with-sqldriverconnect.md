@@ -6,7 +6,7 @@ ms.author: v-davidengel
 ms.date: "08/20/2020"
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "data sources [ODBC], connection functions"
   - "functions [ODBC], data source or driver connections"

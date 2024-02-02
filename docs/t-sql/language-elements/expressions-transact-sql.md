@@ -110,7 +110,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
  The collation of any expression that evaluates to a character string is set by following the rules of collation precedence. For more information, see [Collation Precedence &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
   
- In a programming language such as C or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], an expression always evaluates to a single result. Expressions in a [!INCLUDE[tsql](../../includes/tsql-md.md)] select list follow a variation on this rule: The expression is evaluated individually for each row in the result set. A single expression may have a different value in each row of the result set, but each row has only one value for the expression. For example, in the following `SELECT` statement both the reference to `ProductID` and the term `1+2` in the select list are expressions:  
+ In a programming language such as C or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)], an expression always evaluates to a single result. Expressions in a [!INCLUDE[tsql](../../includes/tsql-md.md)] select list follow a variation on this rule: The expression is evaluated individually for each row in the result set. A single expression may have a different value in each row of the result set, but each row has only one value for the expression. For example, in the following `SELECT` statement both the reference to `ProductID` and the term `1+2` in the select list are expressions:  
   
 ```sql  
 USE AdventureWorks2022;  

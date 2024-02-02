@@ -3,7 +3,7 @@ title: Support matrix
 description: This page contains the support matrix and support life-cycle policy for the Microsoft JDBC Driver for SQL Server.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 07/31/2023
+ms.date: 01/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -24,6 +24,7 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 
 |Driver Name|Driver Package Version|Applicable JAR(s)|End of Mainstream Support|
 |-|-|-|-|
+|Microsoft JDBC Driver 12.6 for SQL Server|12.6|mssql-jdbc-12.6.0.jre11.jar<br> mssql-jdbc-12.6.0.jre8.jar|January 31, 2029|
 |Microsoft JDBC Driver 12.4 for SQL Server|12.4|mssql-jdbc-12.4.0.jre11.jar<br> mssql-jdbc-12.4.0.jre8.jar|July 31, 2028|
 |Microsoft JDBC Driver 12.2 for SQL Server|12.2|mssql-jdbc-12.2.0.jre11.jar<br> mssql-jdbc-12.2.0.jre8.jar|January 31, 2028|
 |Microsoft JDBC Driver 11.2 for SQL Server|11.2|mssql-jdbc-11.2.0.jre18.jar<br> mssql-jdbc-11.2.0.jre17.jar<br> mssql-jdbc-11.2.0.jre11.jar<br> mssql-jdbc-11.2.0.jre8.jar|August 4, 2027|
@@ -33,12 +34,12 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 |Microsoft JDBC Driver 8.4 for SQL Server|8.4|mssql-jdbc-8.4.1.jre14.jar<br> mssql-jdbc-8.4.1.jre11.jar<br> mssql-jdbc-8.4.1.jre8.jar|July 31, 2025|
 |Microsoft JDBC Driver 8.2 for SQL Server|8.2|mssql-jdbc-8.2.2.jre13.jar<br> mssql-jdbc-8.2.2.jre11.jar<br> mssql-jdbc-8.2.2.jre8.jar|January 31, 2025|
 |Microsoft JDBC Driver 7.4 for SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|July 31, 2024|
-|Microsoft JDBC Driver 7.2 for SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|January 31, 2024|
 
  The following Microsoft JDBC Drivers are no longer supported.
 
 |Driver Name|Driver Package Version|End of Mainstream Support|
 |-|-|-|
+|Microsoft JDBC Driver 7.2 for SQL Server|7.2|January 31, 2024|
 |Microsoft JDBC Driver 7.0 for SQL Server|7.0|July 31, 2023|
 |Microsoft JDBC Driver 6.4 for SQL Server|6.4|February 27, 2023|
 |Microsoft JDBC Driver 6.2 for SQL Server|6.2|June 30, 2022|
@@ -57,6 +58,7 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 
 |Database version&nbsp;&#8594;<br />&#8595; Driver Version|Azure SQL Database|Azure Synapse Analytics|Azure SQL Managed Instance|SQL Server 2022|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2008 R2|SQL Server 2008|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
+|12.6|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
 |12.4|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
 |12.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
 |11.2|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|   |   |   |   |
@@ -93,6 +95,7 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 
 |JDBC Driver Version|JRE Versions|JDBC API Version|
 |-|-|-|
+|[12.6](release-notes-for-the-jdbc-driver.md#126)|1.8, 11, 17, 21|4.2, 4.3 (partially)|
 |[12.4](release-notes-for-the-jdbc-driver.md#124)|1.8, 11, 17, 20|4.2, 4.3 (partially)|
 |[12.2](release-notes-for-the-jdbc-driver.md#122)|1.8, 11, 17, 19|4.2, 4.3 (partially)|
 |[11.2](release-notes-for-the-jdbc-driver.md#112)|1.8, 11, 17, 18|4.2, 4.3 (partially)|

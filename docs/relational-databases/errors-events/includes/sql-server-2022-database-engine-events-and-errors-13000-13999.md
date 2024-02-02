@@ -1,8 +1,7 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
-ms.date: 07/06/2023
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 01/11/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -83,6 +82,106 @@ ms.topic: include
 | 13097 | 0 | No | lock |
 | 13098 | 0 | No | thread |
 | 13099 | 0 | No | communication buffer |
+| 13100 | 0 | No | Common Language Runtime critical section |
+| 13101 | 0 | No | partition scheme |
+| 13102 | 10 | No | DETACH |
+| 13103 | 0 | No | protocol version |
+| 13104 | 0 | No | RANGE |
+| 13105 | 0 | No | create |
+| 13106 | 0 | No | route |
+| 13107 | 0 | No | remote service binding |
+| 13108 | 0 | No | Initiator |
+| 13109 | 0 | No | Target |
+| 13110 | 0 | No | host synchronization object |
+| 13111 | 0 | No | generic waitable object |
+| 13112 | 0 | No | application role |
+| 13113 | 0 | No | schema |
+| 13114 | 0 | No | user |
+| 13115 | 0 | No | login |
+| 13116 | 0 | No | certificate |
+| 13117 | 0 | No | role |
+| 13118 | 0 | No | find |
+| 13119 | 0 | No | endpoint |
+| 13120 | 0 | No | sql:variable |
+| 13121 | 0 | No | sql:column |
+| 13122 | 0 | No | XML namespace |
+| 13123 | 0 | No | assembly |
+| 13124 | 0 | No | fulltext catalog |
+| 13125 | 16 | No | execute as |
+| 13126 | 16 | No | symmetric key |
+| 13127 | 16 | No | principal |
+| 13128 | 16 | No | security descriptor |
+| 13129 | 16 | No | hypothetical index |
+| 13130 | 16 | No | nonclustered index |
+| 13131 | 16 | No | credential |
+| 13132 | 0 | No | transfer |
+| 13133 | 0 | No | Cumulative wait time (ms) per second |
+| 13134 | 0 | No | Waits started per second |
+| 13135 | 0 | No | Waits in progress |
+| 13136 | 0 | No | Average wait time (ms) |
+| 13137 | 0 | No | Cumulative execution time (ms) per second |
+| 13138 | 0 | No | Execs started per second |
+| 13139 | 0 | No | Execs in progress |
+| 13140 | 0 | No | Average execution time (ms) |
+| 13141 | 16 | No | asymmetric key |
+| 13142 | 0 | No | an INSERT SELECT statement |
+| 13143 | 16 | No | partition function |
+| 13144 | 16 | No | partition scheme |
+| 13145 | 16 | No | encryption |
+| 13146 | 16 | No | signature |
+| 13147 | 16 | No | password |
+| 13148 | 16 | No | rename |
+| 13149 | 16 | No | end dialog |
+| 13150 | 16 | No | END CONVERSATION WITH ERROR |
+| 13151 | 16 | No | MOVE CONVERSATION |
+| 13152 | 16 | No | receive sequenced message |
+| 13153 | 16 | No | receive end conversation |
+| 13154 | 16 | No | receive end conversation with error |
+| 13155 | 16 | No | receive broker error |
+| 13156 | 16 | No | receive message acknowledgement |
+| 13157 | 16 | No | terminate conversation |
+| 13158 | 16 | No | broker error |
+| 13159 | 16 | No | countersignature |
+| 13160 | 16 | No | BEGIN CONVERSATION TIMER |
+| 13161 | 16 | No | fire conversation timer |
+| 13162 | 16 | No | END CONVERSATION WITH CLEANUP |
+| 13163 | 16 | No | BEGIN DIALOG CONVERSATION |
+| 13164 | 16 | No | SEND |
+| 13165 | 16 | No | conversation |
+| 13166 | 16 | No | conversation group |
+| 13167 | 16 | No | system |
+| 13168 | 16 | No | Service Broker |
+| 13169 | 16 | No | Database Mirroring |
+| 13170 | 0 | No | table or indexed view |
+| 13171 | 16 | No | conversation handle |
+| 13172 | 16 | No | GET CONVERSATION GROUP |
+| 13173 | 16 | No | master key |
+| 13174 | 16 | No | another assembly with same SQL name is already present in the current database |
+| 13175 | 16 | No | version, culture or public key mismatch |
+| 13176 | 0 | No | component |
+| 13177 | 16 | No | IL compilation |
+| 13178 | 16 | No | Inproc data access |
+| 13179 | 16 | No | DDL operations |
+| 13180 | 16 | No | execution cache cleanup |
+| 13181 | 16 | No | unspecified operation |
+| 13182 | 16 | No | dialog |
+| 13183 | 10 | No | The certificate's private key cannot be found |
+| 13184 | 10 | No | The certificate's private key size is incompatible with the crypto provider |
+| 13185 | 10 | No | The certificate's public key size is incompatible with the crypto provider |
+| 13186 | 10 | No | The certificate's private key size is incompatible with the encrypted key exchange key |
+| 13187 | 10 | No | The certificate's public key size is incompatible with the security header's signature |
+| 13188 | 10 | No | The certificate's private key is password protected |
+| 13189 | 10 | No | The key exchange key has an invalid size after being decrypted with the certificate private key |
+| 13190 | 10 | No | The database principal used to lookup the cert is invalid |
+| 13191 | 10 | No | The database principal has no mapping to a server principal |
+| 13192 | 10 | No | The certificate is disabled for BEGIN DIALOG |
+| 13193 | 16 | No | encryption algorithm |
+| 13194 | 16 | No | authentication protocol |
+| 13195 | 10 | No | Certificate not found |
+| 13196 | 10 | No | Certificate not yet valid |
+| 13197 | 10 | No | Certificate expired |
+| 13198 | 10 | No | Certificate is larger than maximum allowed size |
+| 13199 | 10 | No | message timestamp |
 | 13201 | 10 | No | security header timestamp |
 | 13202 | 10 | No | TO BROKER INSTANCE |
 | 13203 | 10 | No | TO SERVICE |
@@ -180,6 +279,7 @@ ms.topic: include
 | 13296 | 10 | No | cryptographic provider key blob length |
 | 13297 | 16 | No | encryption algorithm tag |
 | 13298 | 16 | No | name |
+| 13299 | 16 | No | thumbprint |
 | 13301 | 16 | No | IV(Initialization Vector) length |
 | 13302 | 16 | No | bit length |
 | 13303 | 16 | No | constraint |

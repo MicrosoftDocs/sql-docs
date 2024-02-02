@@ -3,7 +3,8 @@ title: "sys.query_store_plan_feedback (Transact-SQL)"
 description: "The sys.query_store_plan_feedback system view contains information about Query Store tuning via memory grant, CE, and DOP feedback."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 11/02/2022
+ms.reviewer: derekw
+ms.date: 01/08/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -23,7 +24,7 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-curr
 
 [!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
-Contains information about Query Store tuning via [memory grant, CE, and DOP feedback](../performance/intelligent-query-processing-feedback.md).
+Contains information about Query Store tuning via query feedback features, including [memory grant feedback](../performance/intelligent-query-processing-memory-grant-feedback.md), [cardinality estimation (CE) feedback](../performance/intelligent-query-processing-cardinality-estimation-feedback.md), and [degree of parallelism (DOP) feedback](../performance/intelligent-query-processing-degree-parallelism-feedback.md).
 
 | Column name | Data type | Description |
 | --- | --- | --- |
@@ -45,12 +46,14 @@ This catalog view will return the same row data on all replicas, if [Query Store
 
 Requires the `VIEW DATABASE STATE` permission.
 
-## Next steps
+## Related content
 
+- [Memory grant feedback](../performance/intelligent-query-processing-memory-grant-feedback.md)
+- [Cardinality estimation (CE) feedback](../performance/intelligent-query-processing-cardinality-estimation-feedback.md)
+- [Degree of parallelism (DOP) feedback](../performance/intelligent-query-processing-degree-parallelism-feedback.md)
 - [Intelligent query processing in SQL databases](../performance/intelligent-query-processing.md)
-- [Intelligent query processing Feedback features](../performance/intelligent-query-processing-feedback.md)
 - [sys.database_query_store_internal_state (Transact-SQL)](sys-database-query-store-internal-state-transact-sql.md)
-- [sys.query_store_plan (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)
-- [sys.query_store_query (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)
-- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
-- [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)
+- [sys.query_store_plan (Transact-SQL)](sys-query-store-plan-transact-sql.md)
+- [sys.query_store_query (Transact-SQL)](sys-query-store-query-transact-sql.md)
+- [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
+- [Best practices for monitoring workloads with Query Store](../performance/best-practice-with-the-query-store.md)

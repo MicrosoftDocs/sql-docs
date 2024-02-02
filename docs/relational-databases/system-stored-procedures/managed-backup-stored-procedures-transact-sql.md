@@ -27,6 +27,6 @@ The following stored procedures can be used to configure [!INCLUDE [ss_smartback
 - [managed_backup.sp_get_backup_diagnostics](managed-backup-sp-get-backup-diagnostics-transact-sql.md)
 - [managed_backup.sp_backup_on_demand](managed-backup-sp-backup-on-demand-transact-sql.md)
 
-## See also
+## Related content
 
 - [SQL Server Managed Backup to Microsoft Azure](../backup-restore/sql-server-managed-backup-to-microsoft-azure.md)

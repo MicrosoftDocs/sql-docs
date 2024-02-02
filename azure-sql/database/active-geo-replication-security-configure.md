@@ -26,7 +26,7 @@ The main trade-off is that managing the disaster recovery process at scale is mo
 If you are using logins and users (rather than contained users), you must take extra steps to ensure that the same logins exist in the `master` database. The following sections outline the steps involved and additional considerations.
 
   >[!NOTE]
-  > It's also possible to use logins created from Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) to manage your databases. For more information, see [Azure SQL logins and users](./logins-create-manage.md).
+  > It's also possible to use logins created from Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) to manage your databases. For more information, see [Azure SQL logins and users](./logins-create-manage.md).
 
 ### Set up user access to a secondary or recovered database
 
@@ -85,6 +85,8 @@ CREATE LOGIN [<login name>]
 WITH PASSWORD = '<login password>',
 SID = 0x1234 /*replace 0x1234 with the desired login SID*/
 ```
+
+On the target server, do not create a new login with the server admin SID from the source. Instead make the target's server admin login a database principal in the database, such as db_owner or user.
 
 > [!NOTE]
 > If you want to grant user access to the secondary, but not to the primary, you can do that by altering the user login on the primary server by using the following syntax.

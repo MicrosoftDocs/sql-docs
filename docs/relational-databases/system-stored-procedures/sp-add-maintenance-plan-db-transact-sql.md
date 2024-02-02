@@ -70,7 +70,7 @@ EXEC sp_add_maintenance_plan_db
     N'AdventureWorks2022';
 ```
 
-## See also
+## Related content
 
 - [Maintenance Plans](../maintenance-plans/maintenance-plans.md)
 - [Database Maintenance Plan stored procedures (Transact-SQL)](database-maintenance-plan-stored-procedures-transact-sql.md)

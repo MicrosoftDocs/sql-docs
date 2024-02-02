@@ -25,7 +25,7 @@ Return to [What's new in SQL Server on Azure VMs?](doc-changes-updates-release-n
 | --- | --- |--- |
 | **Azure Elastic SAN preview** | October | You can now place your SQL Server workloads on an Azure Elastic SAN for improved performance, throughput, and cost. The Azure Elastic SAN is currently in preview. Review [Azure Elastic SAN](performance-guidelines-best-practices-storage.md#azure-elastic-san) to learn more. |  
 | **SQL VM health notifications** | September | The **Overview** page of the [SQL virtual machines](manage-sql-vm-portal.md#overview-page) resource in the Azure portal now displays information about the health of the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md), as well as error conditions when the state is _unhealthy_ or _failed_. Review [Troubleshoot the extension](sql-agent-extension-troubleshoot-known-issues.md) to learn more. | 
-| **Microsoft Entra ID rebrand**| September | Azure Active Directory has been rebranded to [Microsoft Entra ID](/azure/active-directory/fundamentals/new-name). | 
+| **Microsoft Entra ID rebrand**| September | Azure Active Directory has been rebranded to [Microsoft Entra ID](/entra/fundamentals/new-name). | 
 | **Azure Update Manager preview** | August | It's now possible to automatically patch multiple SQL Server VMs at scale with the Azure Update Manager integrated in to the [SQL virtual machines](manage-sql-vm-portal.md) resource in the Azure portal, including Cumulative Updates, which isn't currently possible with the existing Automated Patching feature. Using Azure Update Manager for your SQL Server on Azure VMs is currently in preview. To learn more, review [Azure Update Manager for SQL Server on Azure VMs](../azure-update-manager-sql-vm.md). | 
 | **Configure AG from Azure portal GA** | August | The experience to deploy an Always On availability group to multiple subnets by using the Azure portal is now generally available. To learn more, review [Configure availability group through the Azure portal](availability-group-azure-portal-configure.md). |
 | **Azure SQL bindings for Azure Functions GA** | May | Azure Functions supports input bindings, and output bindings for the Azure SQL and SQL Server products. This feature is now generally available. Review [Azure SQL bindings for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql) to learn more.  | 
@@ -129,8 +129,8 @@ To contribute to the Azure SQL documentation, see the [Docs contributor guide](/
 
 **Windows VMs**:
 
-* [Overview of SQL Server on a Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)
-* [Provision SQL Server on a Windows VM](create-sql-vm-portal.md)
+* [Overview of SQL Server on Windows VMs](sql-server-on-azure-vm-iaas-what-is-overview.md)
+* [Provision SQL Server on Windows VMs](create-sql-vm-portal.md)
 * [Migrate a database to SQL Server on an Azure VM](migrate-to-vm-from-sql-server.md)
 * [High availability and disaster recovery for SQL Server on Azure Virtual Machines](business-continuity-high-availability-disaster-recovery-hadr-overview.md)
 * [Performance best practices for SQL Server on Azure Virtual Machines](./performance-guidelines-best-practices-checklist.md)

@@ -4,7 +4,7 @@ description: Describes prerequisites required for SQL Server enabled by Azure Ar
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 03/08/2023
+ms.date: 01/24/2024
 ms.topic: conceptual
 ms.custom: references_regions
 ---
@@ -14,6 +14,8 @@ ms.custom: references_regions
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 An Azure Arc-enabled instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is an instance on-premises or in a cloud provider that is connected to Azure Arc. This article explains those prerequisites.
+
+If your SQL Server VMs are on VMware clusters, review [Support on VMware](#support-on-vmware).
 
 ## Before you deploy
 
@@ -31,7 +33,7 @@ Before you can Arc-enable an instance of [!INCLUDE [ssnoversion-md](../../includ
 
 ### Permissions
 
-To [Connect SQL Servers on Azure Arc-enabled servers at scale using Azure policy](connect-at-scale-policy.md):
+To [Connect SQL Server instances on Azure Arc-enabled servers at scale using Azure policy](connect-at-scale-policy.md):
 
 - The service principal requires read permission on the subscription.
 
@@ -82,7 +84,7 @@ az account list-locations -o table
 > [!NOTE]
 > You can't use Azure Private Link connections to the Azure Arc data processing service. See [Unsupported configurations](#unsupported-configurations).
 
-## Supported SQL Server versions and operating systems
+## Supported SQL Server versions and environments
 
 [!INCLUDE [supported-configurations](includes/supported-configurations.md)]
 
@@ -119,8 +121,8 @@ az provider register --namespace 'Microsoft.HybridCompute'
 az provider register --namespace 'Microsoft.AzureArcData'
 ```
 
-
 ---
+
 ## Azure subscription and service limits
 
 Before configuring your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances and machines with Azure Arc, review the Azure Resource Manager [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#subscription-limits) and [resource group limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#resource-group-limits) to plan for the number of machines to be connected. 
@@ -129,8 +131,15 @@ Before configuring your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md
 
 [!INCLUDE [azure-arc-data-regions](includes/azure-arc-data-regions.md)]
 
-## Next steps
+## Install Azure extension for SQL Server
+
+The [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Setup Installation Wizard doesn't support installation of the Azure extension for SQL Server. There are two ways to install this component. Do one of the following:
 
 - [Automatically connect your SQL Server to Azure Arc](automatically-connect.md)
+- [Install Azure extension for SQL Server from the command line](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#install-and-connect-to-azure)
 
+For VMware clusters, review [Support on VMware](#support-on-vmware).
 
+## Related content
+
+- [SQL Server enabled by Azure Arc](overview.md)

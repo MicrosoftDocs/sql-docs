@@ -9,7 +9,6 @@ ms.date: 08/04/2023
 ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: how-to
-ms.custom: seoapril2019
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Configure streaming export of diagnostic telemetry - Azure SQL Database & Azure SQL Managed Instance

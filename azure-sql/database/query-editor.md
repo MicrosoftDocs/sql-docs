@@ -2,9 +2,9 @@
 title: Azure portal Query editor
 titleSuffix: Azure SQL Database
 description: Learn how to run T-SQL queries all from within the browser via the Azure portal Query editor for Azure SQL Database.
-author: grrlgeek
-ms.author: jeschult
-ms.reviewer: wiassaf, mbarickman
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: mbarickman
 ms.date: 10/22/2023
 ms.service: sql-database
 ms.subservice: development
@@ -37,7 +37,7 @@ Similar to the query experience in SQL Server Management Studio, use the Query e
 
 ## Connect via the query editor
 
-There are two authentication options for query editor: SQL authentication or authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)).
+There are two authentication options for query editor: SQL authentication or authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)).
 
 ### Authentication to Azure SQL Database
 

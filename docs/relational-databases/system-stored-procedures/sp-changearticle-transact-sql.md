@@ -230,7 +230,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 >  For queued updating publications, the *schema_option* value of **0x80** must be enabled. The supported *schema_option* values for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications are: **0x01**, **0x02**, **0x10**, **0x40**, **0x80**, **0x1000** and **0x4000**.  
   
 ## Example  
- [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  
+ :::code language="sql" source="../replication/codesnippet/tsql/sp-changearticle-transac_1.sql":::
   
 ## Permissions  
  Only members of the **sysadmin** fixed server role or **db_owner** fixed database role can execute **sp_changearticle**.  

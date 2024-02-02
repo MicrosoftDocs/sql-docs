@@ -1,6 +1,6 @@
 ---
-title: "Delete an Index"
-description: Delete an Index
+title: "Delete an index"
+description: Delete an index
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "02/17/2017"
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "index deletions [SQL Server]"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
-# Delete an Index
+# Delete an index
 [!INCLUDE[SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   This topic describes how to delete (drop) an index in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  

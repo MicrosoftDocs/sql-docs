@@ -19,7 +19,7 @@ The  **Power BI Integration** page  in [!INCLUDE[ssRSnoversion](../../includes/s
 
 In addition to an active internet connection so you can browse to the [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] service, the following are requirements to complete [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]integration.
 
-- **Microsoft Entra ID:** Your organization must use Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)), which provides directory and identity management for Azure services and web applications. For more information, see [What is Microsoft Entra ID?](/azure/active-directory/fundamentals/active-directory-whatis)
+- **Microsoft Entra ID:** Your organization must use Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)), which provides directory and identity management for Azure services and web applications. For more information, see [What is Microsoft Entra ID?](/azure/active-directory/fundamentals/active-directory-whatis)
 
 - **Microsoft Entra tenant:** The [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] dashboard you want to pin report items to must be part of a [Microsoft Entra tenant](/entra/identity/multi-tenant-organizations/overview).  A tenant is created automatically the first time your organization subscribes to Azure services such as [Microsoft 365](/microsoft-365/education/deploy/intro-azure-active-directory) and [Microsoft Intune](/mem/intune/fundamentals/deployment-plan-setup#3---configure-a-custom-domain-name-for-your-intune-tenant). [Viral tenants](/entra/identity/users/clean-up-unmanaged-accounts) are not supported.
 

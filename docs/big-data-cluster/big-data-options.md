@@ -165,7 +165,7 @@ Use Microsoft Azure Databricks as a replacement for [!INCLUDE[ssbigdataclusters-
 - An interactive workspace for exploration and visualization.
 - Fully managed SQL endpoints in the cloud.
 - SQL queries that run on fully managed SQL endpoints sized according to query latency and number of concurrent users.
-- Integration with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)).
+- Integration with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)).
 - Role-based access for fine-grained user permissions for notebooks, clusters, jobs, and data.
 - Enterprise-grade SLAs.
 - Dashboards for sharing insights, combining visualizations and text to share insights drawn from your queries.

@@ -58,7 +58,7 @@ Use trusted connection (integrated authentication.) For more information about m
 Specifies the input and output code pages. The codepage number is a numeric value that specifies an installed Linux code page. (available since 17.5.1.1)
 
 **-G**  
-This switch is used by the client when connecting to Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse Analytics to specify that the user be authenticated with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). It can be combined with just the -P option to use access token authentication (v17.8+). This option sets the sqlcmd scripting variable SQLCMDUSEAAD = true. The `-G` switch requires at least sqlcmd version 17.6. To determine your version, execute `sqlcmd -?`.
+This switch is used by the client when connecting to Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse Analytics to specify that the user be authenticated with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). It can be combined with just the -P option to use access token authentication (v17.8+). This option sets the sqlcmd scripting variable SQLCMDUSEAAD = true. The `-G` switch requires at least sqlcmd version 17.6. To determine your version, execute `sqlcmd -?`.
 
 
 > [!IMPORTANT]
@@ -229,7 +229,7 @@ You can use the following alternative method: Put the parameters inside one file
 Then create a file called `b.sql`, with the parameters for replacement:
 
 ```sql
-select $(ColumnName) from $(TableName)
+SELECT $(ColumnName) FROM $(TableName)
 ```
 
 At the command line, combine `a.sql` and `b.sql` into `c.sql` using the following commands:

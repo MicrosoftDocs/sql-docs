@@ -22,7 +22,7 @@ dev_langs:
 
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-Lists all database and server principals created from Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) assigned to a given role on a given resource scope. 
+Lists all database and server principals created from Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) assigned to a given role on a given resource scope. 
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

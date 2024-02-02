@@ -7,7 +7,7 @@ ms.reviewer: randolphwest
 ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "ODBC driver for Oracle [ODBC], cursors"
   - "keyset-driven cursors [ODBC]"

@@ -71,7 +71,7 @@ After you identify the *plan_id* that you want to clear the statistics, use the 
 EXEC sp_query_store_reset_exec_stats 3;
 ```
 
-## Next steps
+## Related content
 
 - [sp_query_store_force_plan (Transact-SQL)](sp-query-store-force-plan-transact-sql.md)
 - [sp_query_store_remove_query (Transact-SQL)](sp-query-store-remove-query-transact-sql.md)

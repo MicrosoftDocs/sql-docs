@@ -94,16 +94,16 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
  Is the recurrence factor used by *frequency_type*. *frequency_recurrence_factor* is **int**, with no default.  
   
 `[ @active_start_date = ] active_start_date`
- Is the date when the Snapshot Agent is first scheduled, formatted as YYYYMMDD. *active_start_date* is **int**, with no default.  
+ Is the date when the Snapshot Agent is first scheduled, formatted as `yyyyMMdd`. *active_start_date* is **int**, with no default.  
   
 `[ @active_end_date = ] active_end_date`
- Is the date when the Snapshot Agent stops being scheduled, formatted as YYYYMMDD. *active_end_date* is **int**, with no default.  
+ Is the date when the Snapshot Agent stops being scheduled, formatted as `yyyyMMdd`. *active_end_date* is **int**, with no default.  
   
 `[ @active_start_time_of_day = ] active_start_time_of_day`
- Is the time of day when the Snapshot Agent is first scheduled, formatted as HHMMSS. *active_start_time_of_day* is **int**, with no default.  
+ Is the time of day when the Snapshot Agent is first scheduled, formatted as `HHmmss`. *active_start_time_of_day* is **int**, with no default.  
   
 `[ @active_end_time_of_day = ] active_end_time_of_day`
- Is the time of day when the Snapshot Agent stops being scheduled, formatted as HHMMSS. *active_end_time_of_day* is **int**, with no default.  
+ Is the time of day when the Snapshot Agent stops being scheduled, formatted as `HHmmss`. *active_end_time_of_day* is **int**, with no default.  
   
 `[ @snapshot_job_name = ] 'snapshot_agent_name'`
  Is the name of an existing Snapshot Agent job name if an existing job is being used. *snapshot_agent_name* is **nvarchar(100)**, with no default.  

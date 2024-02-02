@@ -88,7 +88,6 @@ Acknowledges that the action taken by this stored procedure might require existi
 
 - `1` specifies that changes to the merge article reinitialize existing subscriptions, and gives permission for the subscription reinitialization to occur.
 
-
 ## Return code values
 
 `0` (success) or `1` (failure).

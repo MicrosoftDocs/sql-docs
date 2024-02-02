@@ -6,7 +6,7 @@ ms.author: mikeray
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: database-mirroring
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
   - "cryptography [SQL Server], database mirroring"
   - "encryption [SQL Server], database mirroring"

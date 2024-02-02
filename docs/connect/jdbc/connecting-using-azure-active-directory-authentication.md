@@ -3,7 +3,7 @@ title: Connect using Microsoft Entra authentication
 description: Learn how to develop Java applications that use the Microsoft Entra authentication feature with the Microsoft JDBC Driver for SQL Server.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 08/22/2023
+ms.date: 01/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -70,6 +70,8 @@ The following table lists required library dependencies for each authentication 
 | `ActiveDirectoryManagedIdentity`<br/>`ActiveDirectoryMSI` | 12.2 | `azure-identity` 1.7.0 |
 | `ActiveDirectoryPassword`<br/>`ActiveDirectoryIntegrated`<br/>`ActiveDirectoryInteractive`<br/>`ActiveDirectoryServicePrincipal` | 12.4 | `msal4j` 1.13.8 |
 | `ActiveDirectoryManagedIdentity`<br/>`ActiveDirectoryMSI` | 12.4 | `azure-identity` 1.9.0 |
+| `ActiveDirectoryPassword`<br/>`ActiveDirectoryIntegrated`<br/>`ActiveDirectoryInteractive`<br/>`ActiveDirectoryServicePrincipal` | 12.6 | `msal4j` 1.14.1 |
+| `ActiveDirectoryManagedIdentity`<br/>`ActiveDirectoryMSI` | 12.6 | `azure-identity` 1.11.1 |
 
 ## Connect using ActiveDirectoryManagedIdentity authentication mode
 
@@ -83,7 +85,7 @@ In addition to the library dependency requirements listed in [Client setup requi
     | Driver version | Required dependencies | Azure services supported |
     |----------------|------------------------|--------------|
     | 7.2 - 11.2 | None | [Azure App Service and Azure Functions](/azure/app-service/overview-managed-identity)<br/>[Azure Virtual Machines](/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-token) |
-    | 12.2<br/>12.4 | [azure-identity 1.7.0](https://azuresdkdocs.blob.core.windows.net/$web/java/azure-identity/1.7.0/index.html#managed-identity-support)<br/>[azure-identity 1.9.0](https://azuresdkdocs.blob.core.windows.net/$web/java/azure-identity/1.9.0/index.html#managed-identity-support) | [Azure App Service and Azure Functions](/azure/app-service/overview-managed-identity)<br/>[Azure Arc](/azure/azure-arc/servers/managed-identity-authentication)<br/>[Azure Cloud Shell](/azure/cloud-shell/msi-authorization)<br/>[Azure Kubernetes Service](/azure/aks/use-managed-identity)<br/>[Azure Service Fabric](/azure/service-fabric/concepts-managed-identity)<br/>[Azure Virtual Machines](/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-token)<br/>[Azure Virtual Machines Scale Sets](/azure/active-directory/managed-identities-azure-resources/qs-configure-powershell-windows-vmss) |
+    | 12.2<br/>12.4<br/>12.6 | [azure-identity 1.7.0](https://azuresdkdocs.blob.core.windows.net/$web/java/azure-identity/1.7.0/index.html#managed-identity-support)<br/>[azure-identity 1.9.0](https://azuresdkdocs.blob.core.windows.net/$web/java/azure-identity/1.9.0/index.html#managed-identity-support)<br/>[azure-identity 1.11.1](https://azuresdkdocs.blob.core.windows.net/$web/java/azure-identity/1.11.1/index.html#managed-identity-support) | [Azure App Service and Azure Functions](/azure/app-service/overview-managed-identity)<br/>[Azure Arc](/azure/azure-arc/servers/managed-identity-authentication)<br/>[Azure Cloud Shell](/azure/cloud-shell/msi-authorization)<br/>[Azure Kubernetes Service](/azure/aks/use-managed-identity)<br/>[Azure Service Fabric](/azure/service-fabric/concepts-managed-identity)<br/>[Azure Virtual Machines](/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-token)<br/>[Azure Virtual Machines Scale Sets](/azure/active-directory/managed-identities-azure-resources/qs-configure-powershell-windows-vmss) |
 
 The following example shows how to use `authentication=ActiveDirectoryManagedIdentity` mode. Run this example from inside an Azure Resource that is configured for Managed Identity.
 
@@ -174,6 +176,7 @@ The following table lists the `DefaultAzureCredential` credential chain for each
 |----------------|------------------------|--------------|
 | 12.2 | [azure-identity 1.7.0](https://azuresdkdocs.blob.core.windows.net/$web/java/azure-identity/1.7.0/index.html#defaultazurecredential) | Environment<br/>Managed Identity<br/>IntelliJ<br/>Azure CLI<br/>Azure PowerShell |
 | 12.4 | [azure-identity 1.9.0](https://azuresdkdocs.blob.core.windows.net/$web/java/azure-identity/1.9.0/index.html#defaultazurecredential) | Environment<br/>Workload Identity<br/>Managed Identity<br/>Azure Developer CLI<br/>IntelliJ<br/>Azure CLI<br/>Azure PowerShell |
+| 12.6 | [azure-identity 1.11.1](https://azuresdkdocs.blob.core.windows.net/$web/java/azure-identity/1.11.1/index.html#defaultazurecredential) | Environment<br/>Workload Identity<br/>Managed Identity<br/>Azure Developer CLI<br/>IntelliJ<br/>Azure CLI<br/>Azure PowerShell |
 
 There are many variables that can be set to configure the `Environment` credential. For details on configuring the `DefaulAzureCredential` chain, including the `Environment` credential, see the relevant version of the azure-identity docs linked in the previous table.
 
@@ -357,7 +360,7 @@ To build and run the example:
 1. Locate the following lines of code. Replace user name with the name of the Microsoft Entra user that you want to connect as.
 
     ```java
-    ds.setUser("bob@cqclinic.onmicrosoft.com"); // replace with your user name
+    ds.setUser("bob@example.com"); // replace with your user name
     ds.setPassword("password");     // replace with your password
     ```
 
@@ -377,7 +380,7 @@ public class MSEntraUserPassword {
         SQLServerDataSource ds = new SQLServerDataSource();
         ds.setServerName("msentra-managed-demo.database.windows.net"); // Replace with your server name
         ds.setDatabaseName("demo"); // Replace with your database
-        ds.setUser("bob@cqclinic.onmicrosoft.com"); // Replace with your user name
+        ds.setUser("bob@example.com"); // Replace with your user name
         ds.setPassword("password"); // Replace with your password
         ds.setAuthentication("ActiveDirectoryPassword");
 
@@ -416,7 +419,7 @@ To build and run the example:
 1. Locate the following lines of code. Replace user name with the name of the Microsoft Entra user that you want to connect as.
 
     ```java
-    ds.setUser("bob@cqclinic.onmicrosoft.com"); // replace with your user name
+    ds.setUser("bob@example.com"); // replace with your user name
     ```
 
 The example to use `ActiveDirectoryInteractive` authentication mode:
@@ -437,7 +440,7 @@ public class MSEntraInteractive {
         ds.setAuthentication("ActiveDirectoryInteractive");
 
         // Optional login hint
-        ds.setUser("bob@cqclinic.onmicrosoft.com"); // Replace with your user name
+        ds.setUser("bob@example.com"); // Replace with your user name
 
         try (Connection connection = ds.getConnection();
                 Statement stmt = connection.createStatement();

@@ -67,7 +67,7 @@ EXEC sys.sp_xtp_control_proc_exec_stats @old_collection_value = @c OUTPUT;
 SELECT @c AS 'collection status';
 ```
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [In-Memory OLTP (In-Memory Optimization)](../in-memory-oltp/overview-and-usage-scenarios.md)

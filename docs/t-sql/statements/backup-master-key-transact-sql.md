@@ -23,7 +23,7 @@ dev_langs:
   - "TSQL"
 ---
 # BACKUP MASTER KEY (Transact-SQL)
-[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Exports the database master key.  
 

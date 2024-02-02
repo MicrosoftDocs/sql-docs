@@ -18,7 +18,7 @@ helpviewer_keywords:
 
 - For information on how to enable and configure Database Mail, see [Configure Database Mail](../../relational-databases/database-mail/configure-database-mail.md). 
 - For an example using [!INCLUDE[tsql](../../includes/tsql-md.md)], see [Create a Database Mail Profile](../../relational-databases/database-mail/create-a-database-mail-profile.md).
-- To send e-mail using SQL Agent jobs in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], SQL Server Agent can use only one Database Mail profile, and it must be called `AzureManagedInstance_dbmail_profile`. For more information and a sample script, see [Azure SQL Managed Instance SQL Agent job notifications](/azure/azure-sql/managed-instance/job-automation-managed-instance#sql-agent-job-notifications).
+- To send e-mail using SQL Agent jobs in [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], SQL Server Agent can use only one Database Mail profile, and it must be called `AzureManagedInstance_dbmail_profile`. For more information and a sample script, see [Azure SQL Managed Instance SQL Agent job notifications](/azure/azure-sql/managed-instance/job-automation-managed-instance#sql-agent-job-notifications).
 
 ### <a id="Prerequisites"></a> Prerequisites
 
@@ -38,7 +38,7 @@ helpviewer_keywords:
 
 ## <a id="SSMSProcedure"></a> Use SQL Server Management Studio
 
-The following steps aren't necessary in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], which is already configured to look for a profile called `AzureManagedInstance_dbmail_profile`. For more information and a sample script, see [Azure SQL Managed Instance SQL Agent job notifications](/azure/azure-sql/managed-instance/job-automation-managed-instance#sql-agent-job-notifications).
+The following steps aren't necessary in [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], which is already configured to look for a profile called `AzureManagedInstance_dbmail_profile`. For more information and a sample script, see [Azure SQL Managed Instance SQL Agent job notifications](/azure/azure-sql/managed-instance/job-automation-managed-instance#sql-agent-job-notifications).
 
  **To configure SQL Server Agent to use Database Mail in SQL Server**  
 

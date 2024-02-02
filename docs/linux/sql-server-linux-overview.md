@@ -3,7 +3,7 @@ title: Overview of SQL Server on Linux
 description: This article describes how SQL Server runs on Linux and provides information on how to learn more.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 10/27/2023
+ms.date: 01/10/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -47,8 +47,8 @@ To get started, install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md
 
 The [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container images are published and available on the Microsoft Container Registry (MCR), and also cataloged at the following locations, based on the operating system image that was used when creating the container image:
 
-- For RHEL-based [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container images, see [SQL Server Red Hat Containers](https://catalog.redhat.com/software/containers/mssql/rhel/server/61f2f612f385723914ed60bc).
-- For Ubuntu-based [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] images, see [SQL Server on Docker Hub](https://hub.docker.com/_/microsoft-mssql-server).
+- For both RHEL and Ubuntu based [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container images, see [SQL Server on the Microsoft Artifact Registry](https://mcr.microsoft.com/catalog?cat=Databases).
+- For RHEL-based [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container images, see [SQL Server Red Hat containers](https://catalog.redhat.com/software/containers/mssql/rhel/server/61f2f612f385723914ed60bc).
 
 > [!NOTE]  
 > Containers will only be published to MCR for the *most recent* Linux distributions. If you create your own custom [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container image for an older supported distribution, it will still be supported. For more information, see [Upcoming updates to SQL Server container images on Microsoft Artifact Registry aka (MCR)](https://techcommunity.microsoft.com/t5/sql-server-blog/upcoming-updates-to-sql-server-container-images-on-microsoft/ba-p/3573013).

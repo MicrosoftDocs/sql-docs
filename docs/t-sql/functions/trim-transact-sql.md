@@ -41,7 +41,7 @@ Syntax for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and earlier ver
 TRIM ( [ characters FROM ] string )
 ```
 
-Syntax for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)], and [!INCLUDE [fabric](../../includes/fabric.md)]:
+Syntax for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], and [!INCLUDE [fabric](../../includes/fabric.md)]:
 
 ::: moniker range="=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || = azuresqldb-mi-current"
 > [!IMPORTANT]  
@@ -59,7 +59,7 @@ TRIM ( [ LEADING | TRAILING | BOTH ] [characters FROM ] string )
 ::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || = azuresqldb-mi-current || =fabric"
 #### [ LEADING | TRAILING | BOTH ]
 
-**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)], and [!INCLUDE [fabric](../../includes/fabric.md)]:
+**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], and [!INCLUDE [fabric](../../includes/fabric.md)]:
 
 The optional first argument specifies which side of the string to trim:
 

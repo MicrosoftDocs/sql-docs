@@ -17,7 +17,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 [!INCLUDE[appliesto-sqldb-sqlmi-asa-dedicated-only](../includes/appliesto-sqldb-sqlmi-asa-dedicated-only.md)]
 
 
-You can now create and utilize server principals from Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)), which are logins in the virtual `master` database of a SQL Database. There are several benefits of using Microsoft Entra server principals for SQL Database:
+You can now create and utilize server principals from Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)), which are logins in the virtual `master` database of a SQL Database. There are several benefits of using Microsoft Entra server principals for SQL Database:
 
 - Support [Azure SQL Database server roles for permission management](security-server-roles.md).
 - Support multiple Microsoft Entra users with [special roles for SQL Database](/sql/relational-databases/security/authentication-access/database-level-roles#special-roles-for--and-azure-synapse), such as the `loginmanager` and `dbmanager` roles.
@@ -121,10 +121,10 @@ For a tutorial on how to grant these roles, see [Tutorial: Create and utilize Mi
   - `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER` 
   - `EXECUTE AS USER [bob@contoso.com]`
   - `ALTER AUTHORIZATION ON securable::name TO [bob@contoso.com]`
-- Impersonation of Microsoft Entra server principals (logins) isn't supported: 
+- Impersonation of Microsoft Entra server principals (logins) isn't supported for Azure SQL Database and Azure Synapse Analytics. It [is supported](/azure/azure-sql/managed-instance/aad-security-configure-tutorial?view=azuresql&preserve-view=true#impersonate-azure-ad-server-level-principals-logins) for SQL Managed Instance:
   - [EXECUTE AS Clause (Transact-SQL)](/sql/t-sql/statements/execute-as-clause-transact-sql)
   - [EXECUTE AS (Transact-SQL)](/sql/t-sql/statements/execute-as-transact-sql)
-  - Impersonation of Microsoft Entra database principals (users) in a user database is supported.
+  - Impersonation of Microsoft Entra database principals (users) in a user database is supported on all Microsoft SQL products.
 - Microsoft Entra logins can't overlap with the Microsoft Entra administrator. The Microsoft Entra admin takes precedence over any login. If a Microsoft Entra account already has access to the server as a Microsoft Entra admin, individually or as part of a group, any login created for this account won't have any effect. However, the login creation isn't blocked through T-SQL. After the account authenticates to the server, the login will have the effective permissions of a Microsoft Entra admin, and not of a newly created login.
 - Changing permissions on specific Microsoft Entra login object isn't supported:
   - `GRANT <PERMISSION> ON LOGIN :: <Microsoft Entra account> TO <Any other login> `
@@ -133,15 +133,17 @@ For a tutorial on how to grant these roles, see [Tutorial: Create and utilize Mi
 
 ### Microsoft Entra group server principal limitations
 
-With Microsoft Entra logins in public preview for Azure SQL Database and Synapse Analytics, the following are known limitations: 
+With Microsoft Entra logins in public preview for Azure SQL Database and Azure Synapse Analytics, the following are known limitations: 
 
+- [Azure SQL Database server roles](security-server-roles.md) aren't supported for Microsoft Entra groups.
+- If your SQL admin is a Microsoft Entra group, there are some limitations when users of that group connect. Each Microsoft Entra user individually isn't part of the `sys.server_principals` table. This has various consequences, including calls to `SUSER_SID` returning `NULL`.
+- Microsoft Entra user logins that are part of Microsoft Entra group logins are also not implicitly created, meaning they won't have a default schema, and not be able to perform operations like `CREATE SCHEMA` until a login for the Microsoft Entra user is created, or a default schema is assigned to the group.
 - Changing a database's ownership to a Microsoft Entra group as database owner isn't supported.
   - `ALTER AUTHORIZATION ON database::<mydb> TO [my_aad_group]` fails with an error message:
     ```output
     Msg 33181, Level 16, State 1, Line 4
     The new owner cannot be Azure Active Directory group.
     ```
-- [Azure SQL Database server roles](security-server-roles.md) aren't supported for Microsoft Entra groups.
 
 ## Next steps
 

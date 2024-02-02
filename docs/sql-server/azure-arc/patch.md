@@ -9,7 +9,7 @@ ms.subservice:
 ms.topic: conceptual 
 ---
 
-# Configure automated patching for Arc-enabled SQL Servers
+# Configure automated patching for SQL Server instances enabled for Azure Arc
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 

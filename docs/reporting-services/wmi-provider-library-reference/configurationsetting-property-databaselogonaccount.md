@@ -1,6 +1,6 @@
 ---
-title: "DatabaseLogonAccount Property (WMI MSReportServer_ConfigurationSetting)"
-description: "DatabaseLogonAccount Property (WMI MSReportServer_ConfigurationSetting)"
+title: "DatabaseLogonAccount property (WMI MSReportServer_ConfigurationSetting)"
+description: "DatabaseLogonAccount property (WMI MSReportServer_ConfigurationSetting)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -14,8 +14,8 @@ apilocation: "reportingservices.mof"
 apiname: "DatabaseLogonAccount"
 apitype: MOFDef
 ---
-# ConfigurationSetting Property - DatabaseLogonAccount
-  Specifies the logon account that the report server uses when connecting to the report server database. Read only.  
+# ConfigurationSetting property - DatabaseLogonAccount
+  Specifies the sign in account that the report server uses when connecting to the report server database. Read only.  
   
 ## Syntax  
   
@@ -27,21 +27,21 @@ Public Dim DatabaseLogonAccount As String
 public string DatabaseLogonAccount;  
 ```  
   
-## Property Values  
- A **String** object that represents the logon account name.  
+## Property values  
+ A **String** object that represents the sign in account name.  
   
-## Example Code  
- [MSReportServer_ConfigurationSetting Class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
+## Example code  
+ [MSReportServer_ConfigurationSetting class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## Remarks  
- Valid values for this property will vary depending on the value of the [DatabaseLogonType](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontype.md) property.  
+ Valid values for this property vary depending on the value of the [DatabaseLogonType](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontype.md) property.  
   
  This property is ignored if the [DatabaseLogonType](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontype.md) property is set to **2 (Service)**.  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+## Related content 
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

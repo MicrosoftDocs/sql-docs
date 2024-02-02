@@ -247,6 +247,7 @@ You can also provision a Microsoft Entra admin for the SQL Managed Instance by c
 | [az sql mi ad-admin update](/cli/azure/sql/mi/ad-admin#az-sql-mi-ad-admin-update) | Updates the Microsoft Entra administrator for the SQL Managed Instance. |
 
 For more CLI commands, see [az sql mi](/cli/azure/sql/mi).
+
 ---
 
 <a name='provision-azure-ad-admin-sql-database'></a>
@@ -355,7 +356,8 @@ You can provision a Microsoft Entra admin by calling the following CLI commands:
 | [az sql server ad-admin list](/cli/azure/sql/server/ad-admin#az-sql-server-ad-admin-list) | Returns information about a Microsoft Entra administrator currently configured for the server hosting SQL Database or Azure Synapse. |
 | [az sql server ad-admin update](/cli/azure/sql/server/ad-admin#az-sql-server-ad-admin-update) | Updates the Microsoft Entra administrator for the server hosting SQL Database or Azure Synapse. |
 
-For more CLI commands, see [az sql server](/cli/azure/sql/server).
+For more CLI commands, see [az sql server](/cli/azure/sql/server)
+
 ---
 
 > [!NOTE]  

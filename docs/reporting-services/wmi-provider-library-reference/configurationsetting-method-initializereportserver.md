@@ -1,6 +1,6 @@
 ---
-title: "InitializeReportServer Method (WMI MSReportServer_ConfigurationSetting)"
-description: "InitializeReportServer Method (WMI MSReportServer_ConfigurationSetting)"
+title: "InitializeReportServer method (WMI MSReportServer_ConfigurationSetting)"
+description: "InitializeReportServer method (WMI MSReportServer_ConfigurationSetting)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -14,7 +14,7 @@ apilocation: "reportingservices.mof"
 apiname: "InitializeReportServer (WMI MSReportServer_ConfigurationSetting Class)"
 apitype: MOFDef
 ---
-# ConfigurationSetting Method - InitializeReportServer
+# ConfigurationSetting method - InitializeReportServer
   Initializes the specified report service instance.  
   
 ## Syntax  
@@ -39,8 +39,8 @@ public void InitializeReportServer(string InstallationID,
  *ExtendedErrors[]*  
  [out] A string array containing additional errors returned by the call.  
   
-## Return Value  
- Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A non-zero value indicates that an error has occurred.  
+## Return value  
+ Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A nonzero value indicates that an error occurred.  
   
 ## Remarks  
  When this method is called, the encryption key that accesses the report server database secure information is encrypted using the public key of the report server identified by *InstallationID*.  
@@ -49,12 +49,12 @@ public void InitializeReportServer(string InstallationID,
   
  The *InitializeReportServer* method must be called against a report server that already has access to the secure information so that it can decrypt the encryption key. The resulting encrypted encryption key is then stored in the report server database.  
   
- If the report server's [IsInitialized](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-isinitialized.md) property is set to **true** when the InitializeReportServer method is called, the method returns success without trying to encrypt the encryption key.  
+ If the report server's [IsInitialized](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-isinitialized.md) property is set to **true** when the *InitializeReportServer* method is called, the method returns success without trying to encrypt the encryption key.  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+## Related content 
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

@@ -73,7 +73,7 @@ This procedure must be run in a database that has change tracking enabled.
 
 Only a member of the **sysadmin** server role or **db_owner** database role can execute this procedure.
 
-## Next steps
+## Related content
 
 - [About change tracking (Transact-SQL)](../track-changes/about-change-tracking-sql-server.md)
 - [Change tracking cleanup and troubleshooting (Transact-SQL)](../track-changes/cleanup-and-troubleshoot-change-tracking-sql-server.md)

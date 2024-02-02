@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "transactional replication, peer-to-peer replication"
@@ -48,11 +48,11 @@ dev_langs:
 ## Example  
  The following example demonstrates how to add a new table article to an existing peer-to-peer replication topology that has two nodes.  
   
- [!code-sql[HowTo#sp_addp2particle_createtables](../../../relational-databases/replication/codesnippet/tsql/administer-a-peer-to-pee_1.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/administer-a-peer-to-pee_1.sql":::
   
- [!code-sql[HowTo#sp_addp2particle_cmdline](../../../relational-databases/replication/codesnippet/tsql/administer-a-peer-to-pee_2.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/administer-a-peer-to-pee_2.sql":::
   
- [!code-sql[HowTo#sp_addp2particle_createarticle](../../../relational-databases/replication/codesnippet/tsql/administer-a-peer-to-pee_3.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/administer-a-peer-to-pee_3.sql":::
   
 ## See Also  
  [Replication Administration FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.yml)   

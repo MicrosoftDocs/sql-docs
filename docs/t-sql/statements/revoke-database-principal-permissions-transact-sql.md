@@ -61,7 +61,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  Specifies the class and name of the role on which the permission is being revoked. The scope qualifier (**::**) is required.  
   
  APPLICATION ROLE ::*application_role*  
-**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sssds](../../includes/sssds-md.md)]
   
  Specifies the class and name of the application role on which the permission is being revoked. The scope qualifier (**::**) is required.  
   
@@ -87,7 +87,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  Specifies a database role.  
   
  *Application_role*  
-**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sssds](../../includes/sssds-md.md)]
   
  Specifies an application role.  
   
@@ -174,7 +174,7 @@ GO
 ### C. Revoking IMPERSONATE permission on a user from an application role  
  The following example revokes `IMPERSONATE` permission on the user `HamithaL` from [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] application role `AccountsPayable17`.  
   
-**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sssds](../../includes/sssds-md.md)]
   
 ```sql  
 USE AdventureWorks2022;  

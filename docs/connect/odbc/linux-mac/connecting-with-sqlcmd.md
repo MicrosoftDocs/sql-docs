@@ -229,7 +229,7 @@ You can use the following alternative method: Put the parameters inside one file
 Then create a file called `b.sql`, with the parameters for replacement:
 
 ```sql
-select $(ColumnName) from $(TableName)
+SELECT $(ColumnName) FROM $(TableName)
 ```
 
 At the command line, combine `a.sql` and `b.sql` into `c.sql` using the following commands:

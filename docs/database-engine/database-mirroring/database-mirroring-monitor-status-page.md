@@ -6,7 +6,7 @@ ms.author: mikeray
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: database-mirroring
-ms.topic: conceptual
+ms.topic: ui-reference
 f1_keywords:
   - "sql13.swb.dbmmonitor.status.f1"
 ---

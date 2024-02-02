@@ -4,16 +4,17 @@ description: "This guide teaches you how to migrate your MySQL databases to Micr
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 01/20/2023
+ms.date: 01/15/2024
 ms.service: sql
 ms.subservice: migration-guide
 ms.topic: how-to
-ms.custom: intro-migration
+ms.custom:
+  - intro-migration
 ---
 
 # Migration guide: MySQL to SQL Server
 
-[!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [sqlserver](../../../includes/applies-to-version/sqlserver.md)]
 
 In this guide, you learn how to migrate your MySQL databases to SQL Server.
 
@@ -29,7 +30,7 @@ Before you begin migrating your MySQL database to SQL Server:
 
 ## Pre-migration
 
-After you've met the prerequisites, you're ready to discover your source MySQL environment and assess the feasibility of your migration.
+After you meet the prerequisites, you're ready to discover your source MySQL environment and assess the feasibility of your migration.
 
 ### Assess
 
@@ -41,25 +42,25 @@ To create an assessment:
 1. On the **File** menu, select **New Project**.
 1. Enter the project name and a location to save your project and the migration target. Then select **SQL Server** in the **Migrate To** option.
 
-   :::image type="content" source="./media/mysql-to-sql-server/new-project.png" alt-text="Screenshot that shows New Project option.":::
+   :::image type="content" source="media/mysql-to-sql-server/new-project.png" alt-text="Screenshot that shows New Project option.":::
 
 1. In the **Connect to MySQL** dialog box, enter connection details, and then connect to your MySQL server.
 
-   :::image type="content" source="./media/mysql-to-sql-server/connect-to-mysql.png" alt-text="Screenshot that shows Connect to MySQL option.":::
+   :::image type="content" source="media/mysql-to-sql-server/connect-to-mysql.png" alt-text="Screenshot that shows Connect to MySQL option.":::
 
 1. Select the MySQL databases you want to migrate.
 
-   :::image type="content" source="./media/mysql-to-sql-server/select-database.png" alt-text="Screenshot that shows selecting the MySQL database you want to migrate.":::
+   :::image type="content" source="media/mysql-to-sql-server/select-database.png" alt-text="Screenshot that shows selecting the MySQL database you want to migrate.":::
 
 1. Right-click the MySQL database in **MySQL Metadata Explorer**, and select **Create Report**. Alternatively, you can select the **Create Report** tab in the upper-right corner.
 
-   :::image type="content" source="./media/mysql-to-sql-server/create-report.png" alt-text="Screenshot that shows Create Report feature.":::
+   :::image type="content" source="media/mysql-to-sql-server/create-report.png" alt-text="Screenshot that shows Create Report feature.":::
 
 1. Review the HTML report to understand conversion statistics and any errors or warnings. You can also open the report in Excel to get an inventory of MySQL objects and the effort required to perform schema conversions. The default location for the report is in the report folder within SSMAProjects, as shown here:
 
     `drive:\Users\<username>\Documents\SSMAProjects\MySQLMigration\report\report_2016_11_12T02_47_55\`.
 
-   :::image type="content" source="./media/mysql-to-sql-server/conversion-report.png" alt-text="Screenshot that shows a conversion report.":::
+   :::image type="content" source="media/mysql-to-sql-server/conversion-report.png" alt-text="Screenshot that shows a conversion report." lightbox="media/mysql-to-sql-server/conversion-report.png":::
 
 ### Validate the type mappings
 
@@ -68,11 +69,11 @@ Validate the default data type mappings and change them based on requirements, i
 1. On the **Tools** menu, select **Project Settings**.
 1. Select the **Type Mapping** tab.
 
-   :::image type="content" source="./media/mysql-to-sql-server/type-mappings.png" alt-text="Screenshot that shows Type Mapping feature.":::
+   :::image type="content" source="media/mysql-to-sql-server/type-mappings.png" alt-text="Screenshot that shows Type Mapping feature." lightbox="media/mysql-to-sql-server/type-mappings.png":::
 
 1. You can change the type mapping for each table by selecting the table in **MySQL Metadata Explorer**.
 
-To learn more about conversion settings in SSMA for MySQL, see [Project Settings](../../../ssma/mysql/project-settings-conversion-mysqltosql.md).
+To learn more about conversion settings in SSMA for MySQL, see [Project Settings (Conversion) (MySQLToSQL)](../../../ssma/mysql/project-settings-conversion-mysqltosql.md).
 
 ### Convert the schema
 
@@ -85,27 +86,27 @@ To convert the schema:
 1. (Optional) To convert dynamic or ad hoc queries, right-click the node and select **Add Statement**.
 1. Select the **Connect to SQL Server** tab.
    1. Enter connection details for your SQL Server instance.
-   1. Select your target database from the drop-down list, or enter a new name, in which case a database will be created on the target server.
+   1. Select your target database from the dropdown list, or enter a new name, in which case a database will be created on the target server.
    1. Enter authentication details, and then select **Connect**.
 
-   :::image type="content" source="./media/mysql-to-sql-server/connect-to-sql-server.png" alt-text="Screenshot that shows Connect to SQL Server.":::
+   :::image type="content" source="media/mysql-to-sql-server/connect-to-sql-server.png" alt-text="Screenshot that shows Connect to SQL Server.":::
 
 1. Right-click the MySQL database in **MySQL Metadata Explorer**, and then select **Convert Schema**. Alternatively, you can select the **Convert Schema** tab in upper-right corner.
 
-   :::image type="content" source="./media/mysql-to-sql-server/convert-schema.png" alt-text="Screenshot that shows Convert Schema option.":::
+   :::image type="content" source="media/mysql-to-sql-server/convert-schema.png" alt-text="Screenshot that shows Convert Schema option.":::
 
 1. After the conversion finishes, compare and review the converted objects to the original objects to identify potential problems and address them based on the recommendations.
 
-   :::image type="content" source="./media/mysql-to-sql-server/table-comparison.png" alt-text="Screenshot that shows comparing and reviewing objects.":::
+   :::image type="content" source="media/mysql-to-sql-server/table-comparison.png" alt-text="Screenshot that shows comparing and reviewing objects." lightbox="media/mysql-to-sql-server/table-comparison.png":::
 
 1. Compare the converted Transact-SQL text to the original code, and review the recommendations.
 
-   :::image type="content" source="./media/mysql-to-sql-server/procedure-comparison.png" alt-text="Screenshot that shows comparing and reviewing converted code.":::
+   :::image type="content" source="media/mysql-to-sql-server/procedure-comparison.png" alt-text="Screenshot that shows comparing and reviewing converted code." lightbox="media/mysql-to-sql-server/procedure-comparison.png":::
 
 1. In the output pane, select **Review results** and review the errors in the **Error List** pane.
 1. Save the project locally for an offline schema remediation exercise. On the **File** menu, select **Save Project**. This step gives you an opportunity to evaluate the source and target schemas offline and perform remediation before you publish the schema to SQL Server.
 
-To learn more, see [Screenshot that shows converting MySQL databases.](../../../ssma/mysql/converting-mysql-databases-mysqltosql.md).
+To learn more, see [Convert MySQL Databases (MySQLToSQL)](../../../ssma/mysql/converting-mysql-databases-mysqltosql.md).
 
 ## Migration
 
@@ -126,29 +127,29 @@ You have two options for migrating data:
   - To perform server-side data migration, select the **Server Side Data Migration Engine** option in the **Project Settings** dialog box.
 
 > [!IMPORTANT]  
-> If you plan to use the Server Side Data Migration Engine, before you migrate data, you must install the SSMA for MySQL Extension Pack and the MySQL providers on the computer that's running SSMA for MySQL. The SQL Server Agent service must also be running. For more information about how to install the extension pack, see [Installing SQL Server Migration Assistant Components on SQL Server (MySQL to SQL)](../../../ssma/mysql/installing-ssma-components-on-sql-server-mysqltosql.md).
+> If you plan to use the Server Side Data Migration Engine, before you migrate data, you must install the SSMA for MySQL Extension Pack and the MySQL providers on the computer that's running SSMA for MySQL. The SQL Server Agent service must also be running. For more information about how to install the extension pack, see [Installing SSMA components on SQL Server (MySQLToSQL)](../../../ssma/mysql/installing-ssma-components-on-sql-server-mysqltosql.md).
 
 To publish your schema and migrate the data:
 
 1. Publish the schema by right-clicking the database in **SQL Server Metadata Explorer** and selecting **Synchronize with Database**. This action publishes the MySQL database to the SQL Server instance.
 
-   :::image type="content" source="./media/mysql-to-sql-server/synchronize-database.png" alt-text="Screenshot that shows Synchronize with Database.":::
+   :::image type="content" source="media/mysql-to-sql-server/synchronize-database.png" alt-text="Screenshot that shows Synchronize with Database.":::
 
 1. Review the mapping between your source project and your target.
 
-   :::image type="content" source="./media/mysql-to-sql-server/synchronize-database-review.png" alt-text="Screenshot that shows reviewing the synchronization with the database.":::
+   :::image type="content" source="media/mysql-to-sql-server/synchronize-database-review.png" alt-text="Screenshot that shows reviewing the synchronization with the database.":::
 
 1. Migrate the data by right-clicking the database or object you want to migrate in **MySQL Metadata Explorer** and selecting **Migrate Data**. Alternatively, you can select the **Migrate Data** tab. To migrate data for an entire database, select the check box next to the database name. To migrate data from individual tables, expand the database, expand **Tables**, and then select the check boxes next to the tables. To omit data from individual tables, clear the check boxes.
 
-   :::image type="content" source="./media/mysql-to-sql-server/migrate-data.png" alt-text="Screenshot that shows Migrate Data option.":::
+   :::image type="content" source="media/mysql-to-sql-server/migrate-data.png" alt-text="Screenshot that shows Migrate Data option.":::
 
 1. After migration is completed, view the **Data Migration Report**.
 
-   :::image type="content" source="./media/mysql-to-sql-server/migration-report.png" alt-text="Screenshot that shows the Data Migration Report.":::
+   :::image type="content" source="media/mysql-to-sql-server/migration-report.png" alt-text="Screenshot that shows the Data Migration Report.":::
 
-1. Connect to your SQL Server instance by using [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md), and validate the migration by reviewing the data and schema.
+1. Connect to your SQL Server instance by using [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) (SSMS), and validate the migration by reviewing the data and schema.
 
-   :::image type="content" source="./media/mysql-to-sql-server/validate-in-ssms.png" alt-text="Screenshot that shows validation in SQL Server Management Studio.":::
+   :::image type="content" source="media/mysql-to-sql-server/validate-in-ssms.png" alt-text="Screenshot that shows validation in SQL Server Management Studio.":::
 
 ## Post-migration
 
@@ -172,7 +173,7 @@ The test approach for database migration consists of the following activities:
 The post-migration phase is crucial for reconciling any data accuracy issues, verifying completeness, and addressing performance issues with the workload.
 
 > [!NOTE]  
-> For more information about these issues and the steps to mitigate them, see the [Post-migration validation and optimization guide](../../../relational-databases/post-migration-validation-and-optimization-guide.md).
+> For more information about these issues and the steps to mitigate them, see the [Post-migration Validation and Optimization Guide](../../../relational-databases/post-migration-validation-and-optimization-guide.md).
 
 ## Migration assets
 
@@ -185,8 +186,8 @@ For more assistance with completing this migration scenario, see the following r
 
 The Data SQL Engineering team developed these resources. This team's core charter is to unblock and accelerate complex modernization for data platform migration projects to Microsoft's Azure data platform.
 
-## Next steps
+## Related content
 
-- [SQL Server Migration Assistant documentation for MySQL](../../../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)
+- [SQL Server Migration Assistant for MySQL (MySQLToSQL)](../../../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)
 - [Services and tools for data migration](/azure/dms/dms-tools-matrix)
 - [Azure Database Migration Guides](/data-migration/)

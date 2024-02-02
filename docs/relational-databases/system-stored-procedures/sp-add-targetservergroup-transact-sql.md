@@ -65,7 +65,7 @@ EXEC dbo.sp_add_targetservergroup 'Servers Processing Customer Orders';
 GO
 ```
 
-## See also
+## Related content
 
 - [sp_apply_job_to_targets (Transact-SQL)](sp-apply-job-to-targets-transact-sql.md)
 - [sp_delete_targetservergroup (Transact-SQL)](sp-delete-targetservergroup-transact-sql.md)

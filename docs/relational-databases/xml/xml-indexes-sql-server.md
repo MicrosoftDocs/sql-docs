@@ -42,7 +42,7 @@ XML indexes can be created on **xml** data type columns. They index all tags, va
 
 - Your XML values are relatively large and the retrieved parts are relatively small. Building the index avoids parsing the whole data at run time and benefits index lookups for efficient query processing.
 
-Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, and in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi](../../includes/ssazuremi_md.md)], you can use [XML compression](#xml-compression) to compress off-row XML data for both XML columns and indexes. XML compression reduces data storage capacity requirements.
+Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, and in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)], you can use [XML compression](#xml-compression) to compress off-row XML data for both XML columns and indexes. XML compression reduces data storage capacity requirements.
 
 XML indexes fall into the following categories:
 
@@ -216,7 +216,7 @@ Except for the differences described later in this article, creating an XML inde
 
 ## XML compression
 
-**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi_md.md)].
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)].
 
 Enabling XML compression changes the physical storage format of the data that is associated with the XML data type to a *compressed binary format*, but doesn't change XML data syntax or semantics. Application changes aren't required when one or more tables are enabled for XML compression.
 

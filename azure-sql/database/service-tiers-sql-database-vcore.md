@@ -4,7 +4,7 @@ description: The vCore purchasing model lets you independently scale compute and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake, mathoma, dfurman
-ms.date: 11/07/2023
+ms.date: 01/17/2024
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -105,7 +105,7 @@ Service tier options in the vCore purchasing model include General Purpose, Busi
 | **Compute size** | 2 to 128 vCores | 2 to 128 vCores  |2 to 128 vCores  |
 | **Storage type** | Premium remote storage (per instance) |Super-fast local SSD storage (per instance)  | Decoupled storage with local SSD cache (per compute replica) |
 | **Storage size**| 1 GB – 4 TB | 1 GB – 4 TB  | 10 GB – 100 TB |
-| **IOPS** | 16,000 maximum IOPS | 8,000 IOPS per vCore with 200,000 maximum IOPS   | 327,680 IOPS with max local SSD <br/>Hyperscale is a multi-tiered architecture with caching at multiple levels. Effective IOPS depend on the workload. |
+| **IOPS** | 320 IOPS per vCore with 16,000 maximum IOPS | 4,000 IOPS per vCore with 327,680 maximum IOPS | 327,680 IOPS with max local SSD <br/>Hyperscale is a multi-tiered architecture with caching at multiple levels. Effective IOPS depend on the workload. |
 | **Memory/vCore** | 5.1 GB | 5.1 GB | 5.1 GB or 10.2 GB | 
 | **Backups** | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) <br/> Long term retention available up to 10 years | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) <br/> Long term retention available up to 10 years  | A choice of locally redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (7 days by default) retention, with up to 10 years of long-term retention available |
 |**Availability**|One replica, no read-scale replicas, <br/>zone-redundant high availability (HA) |Three replicas, one [read-scale replica](read-scale-out.md),<br/>zone-redundant high availability (HA)|zone-redundant high availability (HA)|

@@ -7,7 +7,7 @@ ms.reviewer: matteot, drskwier
 ms.date: 11/19/2021
 ms.service: sql
 ms.subservice: sql-server-powershell
-ms.topic: conceptual
+ms.topic: how-to
 ---
 
 # Run Windows PowerShell Steps in SQL Server Agent

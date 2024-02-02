@@ -8,7 +8,7 @@ ms.date: 12/19/2023
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
 ms.topic: whats-new
-ms.custom: ignite-2022, ignite-2023
+ms.custom: ignite-2023
 tags: azure-service-management
 ---
 # What's new with SQL Server on Azure Virtual Machines?
@@ -27,11 +27,19 @@ For updates made in previous years, see the [What's new archive](doc-changes-upd
 [!INCLUDE [entra-id](../../includes/entra-id.md)]
 
 
-## November 2023
+## October 2023
 
 | Changes | Details |
 | --- | --- |
-|**Azure SQL triggers for Azure Functions GA** | Azure Functions supports function triggers for SQL Server on Azure VMs. This feature is now generally available. Review [SQL triggers for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql) to learn more. | 
+| **Azure Elastic SAN preview** | You can now place your SQL Server workloads on an Azure Elastic SAN for improved performance, throughput, and cost. The Azure Elastic SAN is currently in preview. Review [Azure Elastic SAN](performance-guidelines-best-practices-storage.md#azure-elastic-san) to learn more. |  
+
+## September 2023
+
+| Changes | Details |
+| --- | --- |
+| **SQL VM health notifications** |  The **Overview** page of the [SQL virtual machines](manage-sql-vm-portal.md#overview-page) resource in the Azure portal now displays information about the health of the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md), as well as error conditions when the state is _unhealthy_ or _failed_. Review [Troubleshoot the extension](sql-agent-extension-troubleshoot-known-issues.md) to learn more. | 
+| **Microsoft Entra ID rebrand**|  Azure Active Directory has been rebranded to [Microsoft Entra ID](/entra/fundamentals/new-name). | 
+
 
 
 ## Archive
@@ -46,8 +54,8 @@ To contribute to the Azure SQL documentation, see the [Docs contributor guide](/
 
 **Windows VMs**:
 
-* [Overview of SQL Server on a Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)
-* [Provision SQL Server on a Windows VM](create-sql-vm-portal.md)
+* [Overview of SQL Server on Windows VMs](sql-server-on-azure-vm-iaas-what-is-overview.md)
+* [Provision SQL Server on Windows VMs](create-sql-vm-portal.md)
 * [Migration guide: SQL Server to SQL Server on Azure Virtual Machines](../../migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide.md)
 * [High availability and disaster recovery for SQL Server on Azure Virtual Machines](business-continuity-high-availability-disaster-recovery-hadr-overview.md)
 * [Performance best practices for SQL Server on Azure Virtual Machines](./performance-guidelines-best-practices-checklist.md)

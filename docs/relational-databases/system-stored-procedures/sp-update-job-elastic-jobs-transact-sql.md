@@ -17,7 +17,7 @@ monikerRange: "=azuresqldb-current"
 
 Updates a job created in the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true).
 
-This stored procedure shares the name of `sp_update_job` with a similar object in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for the SQL Agent service. For information about the SQL Agent version, see [sp_update_job (Transact-SQL)](sp-update-job-transact-sql.md).
+This stored procedure shares the name of `sp_update_job` with a similar object in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent service. For information about the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent version, see [sp_update_job (Transact-SQL)](sp-update-job-transact-sql.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -40,7 +40,7 @@ This stored procedure shares the name of `sp_update_job` with a similar object i
 
 The name of the job to be updated. *job_name* is nvarchar(128).
 
-#### @new_name 
+#### @new_name
 
 The new name of the job. *new_name* is nvarchar(128).
 
@@ -52,7 +52,7 @@ The description of the job. *description* is nvarchar(512).
 
 Specifies whether the job's schedule is enabled (1) or not enabled (0). *@enabled* is bit.
 
-#### @schedule_interval_type 
+#### @schedule_interval_type
 
 Value indicates when the job is to be executed. *schedule_interval_type* is nvarchar(50) and can be one of the following values:
 
@@ -63,17 +63,17 @@ Value indicates when the job is to be executed. *schedule_interval_type* is nvar
 - 'Weeks',
 - 'Months'
 
-#### @schedule_interval_count 
+#### @schedule_interval_count
 
 Number of *schedule_interval_count* periods to occur between each execution of the job. *schedule_interval_count* is int, with a default of `1`. The value must be greater than or equal to `1`.
 
-#### @schedule_start_time 
+#### @schedule_start_time
 
 Date on which job execution can begin. *schedule_start_time* is DATETIME2, with the default of `0001-01-01 00:00:00.0000000`.
 
 All times in elastic jobs are in the UTC time zone.
 
-#### @schedule_end_time 
+#### @schedule_end_time
 
 Date on which job execution can stop. *schedule_end_time* is DATETIME2, with the default of `9999-12-31 11:59:59.0000000`.
 

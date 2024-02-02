@@ -3,7 +3,7 @@ title: "Linux and macOS Installation for the Drivers for PHP"
 description: "In these instructions, learn how to install the Microsoft Drivers for PHP for SQL Server on Linux or macOS."
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 03/06/2023
+ms.date: 01/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -14,7 +14,7 @@ ms.custom: intro-installation
 
 The following instructions assume a clean environment and show how to install PHP 8.1, the Microsoft ODBC driver, the Apache web server, and the Microsoft Drivers for PHP for SQL Server on Ubuntu, Red Hat, Debian, SUSE, Alpine, and macOS. These instructions advise installing the drivers using PECL, but you can also download the prebuilt binaries from the [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub project page and install them following the instructions in [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md). For an explanation of extension loading and why we do not add the extensions to php.ini, see the section on [loading the drivers](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
 
-The following instructions install PHP 8.1 by default using `pecl install`, if the PHP 8.1 packages are available. You may need to run `pecl channel-update pecl.php.net` first. Some supported Linux distros default to PHP 7.1 or earlier, which is not supported for the latest version of the PHP drivers for SQL Server. See the notes at the beginning of each section to install PHP 8.0 or 8.2 instead.
+The following instructions install PHP 8.1 by default using `pecl install`, if the PHP 8.1 packages are available. You may need to run `pecl channel-update pecl.php.net` first. Some supported Linux distros default to PHP 7.1 or earlier, which is not supported for the latest version of the PHP drivers for SQL Server. See the notes at the beginning of each section to install PHP 8.2 or 8.3 instead.
 
 Also included are instructions for installing the PHP FastCGI Process Manager, PHP-FPM, on Ubuntu. PHP-FPM is needed if you're using the nginx web server instead of Apache.
 
@@ -29,7 +29,7 @@ Please refer to [Support Matrix](microsoft-php-drivers-for-sql-server-support-ma
 
 
 > [!NOTE]
-> To install PHP 8.0 or 8.2, replace 8.1 with 8.0 or 8.2 in the following commands.
+> To install PHP 8.2 or 8.3, replace 8.1 with 8.2 or 8.3 in the following commands.
 
 ### Step 1. Install PHP (Ubuntu)
 
@@ -85,7 +85,7 @@ To test your installation, see [Testing your installation](#testing-your-install
 
 
 > [!NOTE]
-> To install PHP 8.0 or 8.2, replace 8.1 with 8.0 or 8.2 in the following commands.
+> To install PHP 8.2 or 8.3, replace 8.1 with 8.2 or 8.3 in the following commands.
 
 ### Step 1. Install PHP (Ubuntu with PHP-FPM)
 
@@ -174,7 +174,7 @@ To test your installation, see [Testing your installation](#testing-your-install
 
 To install PHP on Red Hat 7, run the following commands:
 > [!NOTE]
-> To install PHP 8.0 or 8.2, replace remi-php81 with remi-php80 or remi-php82 respectively in the following commands.
+> To install PHP 8.2 or 8.3, replace remi-php81 with remi-php82 or remi-php83 respectively in the following commands.
 
 ```bash
 sudo su
@@ -190,7 +190,7 @@ yum install php php-pdo php-pear php-devel
 
 To install PHP on Red Hat 8, run the following commands:
 > [!NOTE]
-> To install PHP 8.0 or 8.2, replace remi-8.1 with remi-8.0 or remi-8.2 respectively in the following commands.
+> To install PHP 8.2 or 8.3, replace remi-8.1 with remi-8.2 or remi-8.3 respectively in the following commands.
 
 ```bash
 sudo su
@@ -250,7 +250,7 @@ To test your installation, see [Testing your installation](#testing-your-install
 
 
 > [!NOTE]
-> To install PHP 8.0 or 8.2, replace 8.1 in the following commands with 8.0 or 8.2.
+> To install PHP 8.2 or 8.3, replace 8.1 in the following commands with 8.2 or 8.3.
 
 ### Step 1. Install PHP (Debian)
 
@@ -433,7 +433,7 @@ If you do not already have it, install brew as follows:
 ```
 
 > [!NOTE]
-> To install PHP 8.0 or 8.2, replace php@8.1 with php@8.0 or php@8.2 respectively in the following commands.
+> To install PHP 8.2 or 8.3, replace php@8.1 with php@8.2 or php@8.3 respectively in the following commands.
 
 ### Step 1. Install PHP (macOS)
 

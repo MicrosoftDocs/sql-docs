@@ -7,7 +7,7 @@ ms.reviewer: matteot, erinstellato
 ms.date: 07/27/2023
 ms.service: sql
 ms.subservice: sql-server-powershell
-ms.topic: conceptual 
+ms.topic: how-to 
 ---
 
 # Run Windows PowerShell from SQL Server Management Studio

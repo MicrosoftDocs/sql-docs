@@ -3,10 +3,12 @@ title: Tune nonclustered indexes with missing index suggestions
 description: How to use missing index suggestions to create and tune nonclustered indexes.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 08/08/2023
+ms.date: 01/16/2024
 ms.service: sql
 ms.topic: how-to
-ms.custom: template-how-to
+ms.custom:
+  - template-how-to
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Tune nonclustered indexes with missing index suggestions
@@ -24,7 +26,7 @@ Query optimization is a time sensitive process, so there are limitations to the 
 - The missing index feature suggests only nonclustered disk-based rowstore indexes. [Unique](../sql-server-index-design-guide.md#Unique) and [filtered indexes](../sql-server-index-design-guide.md#Filtered) aren't suggested.
 - [Key columns](../sql-server-index-design-guide.md#key-columns) are suggested, but the suggestion doesn't specify an order for those columns. For information on ordering columns, see the [Apply missing index suggestions](#apply-missing-index-suggestions) section of this article.
 - [Included columns](../sql-server-index-design-guide.md#Included_Columns) are suggested, but SQL Server performs no cost-benefit analysis regarding the size of the resulting index when a large number of included columns are suggested.
-- Missing index requests may offer similar variations of indexes on the same table and column(s) across queries. It's important to [review index suggestions and combine where possible](#review-indexes-and-combine-where-possible).
+- Missing index requests might offer similar variations of indexes on the same table and column(s) across queries. It's important to [review index suggestions and combine where possible](#review-indexes-and-combine-where-possible).
 - Suggestions aren't made for trivial query plans.
 - Cost information is less accurate for queries involving only inequality predicates.
 - Suggestions are gathered for a maximum of 600 missing index groups. After this threshold is reached, no more missing index group data is gathered.
@@ -55,11 +57,11 @@ For example, you can use the following query to generate missing index requests 
 SELECT City, StateProvinceID, PostalCode  
 FROM Person.Address as a
 JOIN Person.BusinessEntityAddress as ba on
-	a.AddressID = ba.AddressID
+    a.AddressID = ba.AddressID
 JOIN Person.Person as  p on
-	ba.BusinessEntityID = p.BusinessEntityID
+    ba.BusinessEntityID = p.BusinessEntityID
 WHERE p.FirstName like 'K%' and
-	StateProvinceID = 9;  
+    StateProvinceID = 9;  
 GO 
 ```
 
@@ -69,9 +71,9 @@ To generate and view the missing index requests:
 1. Paste the query into the session and [generate an estimated execution plan](../performance/display-the-estimated-execution-plan.md) in SSMS for the query by selecting the **Display Estimated Execution Plan** toolbar button.
     The execution plan will display in a pane in the current session. A green **Missing Index** statement will appear near the top of the graphic plan.
 
-    :::image type="content" source="media/missing-index-graphic-execution-plan-ssms.png" alt-text="A graphic execution plan in SQL Server Management Studio. A missing index request appears at the top of the missing index request in green font, directly below the Transact-SQL statement.":::
+    :::image type="content" source="media/missing-index-graphic-execution-plan-ssms.png" alt-text="A graphic execution plan in SQL Server Management Studio. A missing index request appears at the top of the missing index request in green font, directly below the Transact-SQL statement." lightbox="media/missing-index-graphic-execution-plan-ssms.png":::
     
-    A single execution plan may contain multiple missing index requests, but only one missing index request can be displayed in the graphic execution plan. One option to view a full list of missing indexes for an execution plan is to view the execution plan XML.
+    A single execution plan might contain multiple missing index requests, but only one missing index request can be displayed in the graphic execution plan. One option to view a full list of missing indexes for an execution plan is to view the execution plan XML.
 
 1. Right-click on the execution plan and select **Show Execution Plan XML...** from the menu.
     
@@ -80,19 +82,19 @@ To generate and view the missing index requests:
     The execution plan XML will open as a new tab inside SSMS.
 
     > [!NOTE]
-    > Only a single missing index suggestion will be shown in the **Missing Index Details...** menu option, even if multiple suggestions are present in the execution plan XML. The missing index suggestion displayed may not be the one with the highest estimated improvement for the query.
+    > Only a single missing index suggestion will be shown in the **Missing Index Details...** menu option, even if multiple suggestions are present in the execution plan XML. The missing index suggestion displayed might not be the one with the highest estimated improvement for the query.
     
 1. Display the **Find** dialog by using the **CTRL+f** shortcut.
 1. Search for `MissingIndex`.
 
-    :::image type="content" source="media/missing-index-node-in-execution-plan-xml.png" alt-text="Screenshot of the XML for an execution plan. The Find dialog has been opened, and the term MissingIndex has been searched for in the document."  lightbox="media/missing-index-node-in-execution-plan-xml.png":::
+    :::image type="content" source="media/missing-index-node-in-execution-plan-xml.png" alt-text="Screenshot of the XML for an execution plan. The Find dialog has been opened, and the term MissingIndex has been searched for in the document." lightbox="media/missing-index-node-in-execution-plan-xml.png":::
 
     In this example, there are two `MissingIndex` elements.
 
     - The first missing index suggests the query might use an index on the `Person.Address` table that supports an equality search on the `StateProvinceID` column, which includes two more columns, `City` and `PostalCode`'. At the time of optimization, the query optimizer believed that this index might reduce the [estimated cost](../query-processing-architecture-guide.md#optimizing-select-statements) of the query by 34.2737%. 
     - The second missing index suggests the query might use an index on the `Person.Person` table that supports an inequality search on the FirstName column.  At the time of optimization, the query optimizer believed that this index might reduce the [estimated cost](../query-processing-architecture-guide.md#optimizing-select-statements) of the query by 18.1102%.
 
-Each disk-based nonclustered index in your database takes up space, adds overhead for inserts, updates, and deletes, and may require maintenance. For these reasons, it's a best practice to review all the missing index requests for a table and the existing indexes on a table before adding an index based on a query execution plan.
+Each disk-based nonclustered index in your database takes up space, adds overhead for inserts, updates, and deletes, and might require maintenance. For these reasons, it's a best practice to review all the missing index requests for a table and the existing indexes on a table before adding an index based on a query execution plan.
 
 ### View missing index suggestions in DMVs
 
@@ -147,7 +149,7 @@ Review [Limitations of the missing index feature](#limitations-of-the-missing-in
 
 Missing index suggestions in DMVs are cleared by events such as instance restarts, failovers, and setting a database offline. Additionally, when the metadata for a table changes, all missing index information about that table is deleted from these dynamic management objects. Table metadata changes can occur when columns are added or dropped from a table, for example, or when an index is created on a column of a table. Performing an [ALTER INDEX REBUILD](../../t-sql/statements/alter-index-transact-sql.md) operation on an index on a table also clears missing index requests for that table.
 
-Similarly, execution plans stored in the plan cache are cleared by events such as instance restarts, failovers, and setting a database offline. Execution plans may be removed from cache due to memory pressure and recompilations.
+Similarly, execution plans stored in the plan cache are cleared by events such as instance restarts, failovers, and setting a database offline. Execution plans might be removed from cache due to memory pressure and recompilations.
 
 Missing index suggestions in execution plans can be persisted across these events by enabling [Query Store](../performance/monitoring-performance-by-using-the-query-store.md). 
 
@@ -155,7 +157,7 @@ The following query retrieves the top 20 query plans containing missing index re
 
 ```sql
 SELECT TOP 20
-	qsq.query_id,
+    qsq.query_id,
     SUM(qrs.count_executions) * AVG(qrs.avg_logical_io_reads) as est_logical_reads,
     SUM(qrs.count_executions) AS sum_executions,
     AVG(qrs.avg_logical_io_reads) AS avg_avg_logical_io_reads,
@@ -196,13 +198,13 @@ GO
 ```
 Review the `index_description` column. A table can have only one clustered index. If a clustered index has been implemented for the table, the `index_description` will contain the word 'clustered'. 
 
-:::image type="content" source="media/sp-helpindex.png" alt-text="A screenshot of the sp_helpindex being run against the `Person.Address` table in the AdventureWorks database. The table returns four indexes. The fourth index has an index_description that shows that it's a clustered, unique primary key.":::
+:::image type="content" source="media/sp-helpindex.png" alt-text="Screenshot of the sp_helpindex being run against the `Person.Address` table in the AdventureWorks database. The table returns four indexes. The fourth index has an index_description that shows that it's a clustered, unique primary key." lightbox="media/sp-helpindex.png":::
 
 If no clustered index is present, the table is a [heap](heaps-tables-without-clustered-indexes.md). In this case, review if the table was intentionally created as a heap to solve a specific performance problem. Most tables benefit from clustered indexes: often, tables are implemented as heaps by accident. Consider implementing a clustered index based on the [clustered index design guidelines](../sql-server-index-design-guide.md#Clustered).
 
 ### Review missing indexes and existing indexes for overlap
 
-Missing indexes may offer similar variations of nonclustered indexes on the same table and column(s) across queries. Missing indexes may also be similar to existing indexes on a table. For optimal performance, it is best to examine missing indexes and existing indexes for overlap and avoid creating duplicate indexes.
+Missing indexes might offer similar variations of nonclustered indexes on the same table and column(s) across queries. Missing indexes might also be similar to existing indexes on a table. For optimal performance, it is best to examine missing indexes and existing indexes for overlap and avoid creating duplicate indexes.
 
 #### Script out existing indexes on a table
 
@@ -217,15 +219,15 @@ One way to examine the definition of existing indexes on a table is to script ou
 1. Select all indexes listed on the Object Explorer Details pane with the shortcut **CTRL+a**.
 1. Right-click anywhere in the selected region and select the menu option **Script index as**, then **CREATE To** and **New Query Editor Window**.
 
-:::image type="content" source="media/object-explorer-details-script-all-indexes.png" alt-text="A screenshot of scripting out all indexes on a table using the Object Explorer Details pane in SSMS."  lightbox="media/object-explorer-details-script-all-indexes.png":::
+:::image type="content" source="media/object-explorer-details-script-all-indexes.png" alt-text="Screenshot of scripting out all indexes on a table using the Object Explorer Details pane in SSMS." lightbox="media/object-explorer-details-script-all-indexes.png":::
 
 #### Review indexes and combine where possible
 
 Review the missing index recommendations for a table as a group, along with the definitions of existing indexes on the table. Remember that when defining indexes, generally equality columns should be put before the inequality columns, and together they should form the key of the index. To determine an effective order for the equality columns, order them based on their selectivity: list the most selective columns first (leftmost in the column list). Unique columns are most selective, while columns with many repeating values are less selective.
 
-Included columns should be added to the CREATE INDEX statement using the INCLUDE clause. The order of included columns doesn't affect query performance. Therefore, when combining indexes, included columns may be combined without worrying about order. Learn more in [included columns guidelines](../sql-server-index-design-guide.md#index-with-included-columns-guidelines).
+Included columns should be added to the CREATE INDEX statement using the INCLUDE clause. The order of included columns doesn't affect query performance. Therefore, when combining indexes, included columns might be combined without worrying about order. Learn more in [included columns guidelines](../sql-server-index-design-guide.md#index-with-included-columns-guidelines).
 
-For example, you may have a table, `Person.Address`, with an existing index on the key column `StateProvinceID`. You may see missing index recommendations for the `Person.Address` table for the following columns:
+For example, you might have a table, `Person.Address`, with an existing index on the key column `StateProvinceID`. You might see missing index recommendations for the `Person.Address` table for the following columns:
 
    - EQUALITY filters for `StateProvinceID` and `City`
    - EQUALITY filters for `StateProvinceID` and `City`,  INCLUDE `PostalCode`
@@ -234,9 +236,9 @@ Modifying the existing index to match the second recommendation, an index with k
 
 Tradeoffs are common in index tuning. It is likely that for many datasets, the `City` column is more selective than the `StateProvinceID` column. However, if our existing index on `StateProvinceID` is heavily used, and other requests largely search on both `StateProvinceID` and `City`, it is lower overhead for the database in general to have a single index with both columns in the key, leading on `StateProvinceID`, although it is not the most selective column.
 
-Indexes may be modified in multiple ways:
+Indexes might be modified in multiple ways:
 
-- You can use the [CREATE INDEX Statement with the DROP_EXISTING clause](../../t-sql/statements/create-index-transact-sql.md#drop_existing-clause). You may wish to [rename the indexes](rename-indexes.md) following the modification so that the name still accurately describes the index definition, depending on your naming convention.
+- You can use the [CREATE INDEX Statement with the DROP_EXISTING clause](../../t-sql/statements/create-index-transact-sql.md#drop_existing-clause). You might wish to [rename the indexes](rename-indexes.md) following the modification so that the name still accurately describes the index definition, depending on your naming convention.
 - You can use the [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md) statement followed by a [CREATE INDEX Statement](../../odbc/microsoft/create-index-statement.md).
 
 The order of index keys matters when combining the index suggestions: `City` as a leading column is different from `StateProvinceID` as a leading column. Learn more in [nonclustered index design guidelines](../sql-server-index-design-guide.md#Nonclustered).
@@ -252,11 +254,10 @@ It's important to confirm if your index changes have been successful: is the que
 One way to validate your index changes is to use [Query Store](#persist-missing-indexes-with-query-store) to identify queries with missing index requests. Note the query_id for the queries. Use the Tracked Queries view in Query Store to check if execution plans have changed for a query and if the optimizer is using your new or modified index. Learn more about Tracked Queries in [start with query performance troubleshooting](../performance/best-practice-with-the-query-store.md#start-with-query-performance-troubleshooting).
 
 
-## Next steps
+## Related content
 
 Learn more about index and performance tuning in the following articles:
 
 - [SQL Server and Azure SQL index architecture and design guide](../sql-server-index-design-guide.md)
 - [sys.dm_db_missing_index_details (Transact-SQL)](../system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)
-- [Monitoring performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
-
+- [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)

@@ -6,7 +6,7 @@ ms.author: maghan
 ms.date: 06/03/2020
 ms.service: sql
 ms.subservice: ssms
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
   - "sql13.ag.tsxwiz.complete.f1"
   - "sql13.ag.tsxwiz.cover.f1"

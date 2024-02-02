@@ -6,7 +6,7 @@ ms.author: v-davidengel
 ms.date: 11/14/2018
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "ODBC [ODBC], database access"
   - "SQL [ODBC], database access"

@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "09/23/2018"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "replication [SQL Server], distribution"
@@ -80,7 +80,7 @@ Replication publishing and distribution can be configured programmatically using
 ###  <a name="TsqlExample"></a> Example (Transact-SQL) 
 The following example demonstrates how to configure publishing and distribution programmatically. In this example, the name of the server that is being configured as a publisher and a local distributor is supplied using scripting variables. Replication publishing and distribution can be configured programmatically using replication stored procedures.
 
-[!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/configure-publishing-and_1.sql)] 
+:::code language="sql" source="codesnippet/tsql/configure-publishing-and_1.sql":::
 
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO) 
 

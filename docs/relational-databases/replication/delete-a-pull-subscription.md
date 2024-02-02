@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "removing subscriptions"
@@ -72,15 +72,15 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  The following example deletes a pull subscription to a transactional publication. The first batch is executed at the Subscriber and the second is executed at the Publisher.  
   
- [!code-sql[HowTo#sp_droptranpullsubscription](../../relational-databases/replication/codesnippet/tsql/delete-a-pull-subscription_1.sql)]  
+ :::code language="sql" source="codesnippet/tsql/delete-a-pull-subscription_1.sql":::
   
- [!code-sql[HowTo#sp_droptransubscription](../../relational-databases/replication/codesnippet/tsql/delete-a-pull-subscription_2.sql)]  
+ :::code language="sql" source="codesnippet/tsql/delete-a-pull-subscription_2.sql":::
   
  The following example deletes a pull subscription to a merge publication. The first batch is executed at the Subscriber and the second is executed at the Publisher.  
   
- [!code-sql[HowTo#sp_dropmergepullsubscription](../../relational-databases/replication/codesnippet/tsql/delete-a-pull-subscription_3.sql)]  
+ :::code language="sql" source="codesnippet/tsql/delete-a-pull-subscription_3.sql":::
   
- [!code-sql[HowTo#sp_dropmergesubscription](../../relational-databases/replication/codesnippet/tsql/delete-a-pull-subscription_4.sql)]  
+ :::code language="sql" source="codesnippet/tsql/delete-a-pull-subscription_4.sql":::
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
  You can delete pull subscriptions programmatically by using Replication Management Objects (RMO). The RMO classes that you use to delete a pull subscription depend on the type of publication to which the pull subscription is subscribed.  

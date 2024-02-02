@@ -62,7 +62,7 @@ Status
 STARTED
 ```
 
-## See also
+## Related content
 
 - [Database Mail External Program](../database-mail/database-mail-external-program.md)
 - [sysmail_start_sp (Transact-SQL)](sysmail-start-sp-transact-sql.md)

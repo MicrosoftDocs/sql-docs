@@ -20,7 +20,7 @@ helpviewer_keywords:
   
  After you define configuration properties, you can select a configuration from the **Solution Configurations** drop-down list on the toolbar.  
 
-:::image type="content" source="../../reporting-services/reports/media/ssrs-project-properties.png" alt-text="Screenshot of the the Property Pages properties.":::
+:::image type="content" source="../../reporting-services/reports/media/ssrs-project-properties.png" alt-text="Screenshot of the Property Pages properties.":::
 
   
 ## Options  

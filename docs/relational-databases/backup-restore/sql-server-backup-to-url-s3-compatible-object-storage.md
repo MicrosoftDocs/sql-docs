@@ -359,13 +359,13 @@ WITH REPLACE
 
 The following example shows how to back up and restore the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database using `REGION_OPTIONS`:
 
-You can parameterize the region within each `BACKUP`/`RESTORE` command. Note the S3-specific region string in the `BACKUP_OPTIONS` and `RESTORE_OPTIONS`, for example, `'{"s3": {"region":"us-west-2"}}'`. A simple example:
+You can parameterize the region within each `BACKUP`/`RESTORE` command. Note the S3-specific region string in the `BACKUP_OPTIONS` and `RESTORE_OPTIONS`, for example, `'{"s3": {"region":"us-west-2"}}'`. The default region is `us-east-1`. A simple example:
 
 ```sql
 -- Backup Database
 BACKUP DATABASE AdventureWorks2022
 TO URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2022.bak'
-WITH BACKUP_OPTIONS = '{"s3": {"region":"us-east-1"}}'
+WITH BACKUP_OPTIONS = '{"s3": {"region":"us-west-2"}}'
 
 -- Restore Database
 RESTORE DATABASE AdventureWorks2022
@@ -375,7 +375,7 @@ WITH
   TO 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\AdventureWorks2022.mdf'
 , MOVE 'AdventureWorks2022_log' 
   TO 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\AdventureWorks2022.ldf'
-, RESTORE_OPTIONS = '{"s3": {"region":"us-east-1"}}'
+, RESTORE_OPTIONS = '{"s3": {"region":"us-west-2"}}'
 ```
 
 For example:

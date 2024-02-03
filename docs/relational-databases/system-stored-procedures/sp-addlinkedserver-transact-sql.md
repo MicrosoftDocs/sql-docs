@@ -390,11 +390,9 @@ FROM sys.server_principals
 WHERE name = '<managed_instance_name>';
 ```
 
-
 <a name='i-create-sql-managed-instance-linked-server-with-pass-through-azure-ad-authentication'></a>
 
 ### <a id="pass-through-authentication"></a> I. Create SQL Managed Instance linked server with pass-through Microsoft Entra authentication
-
 
 To create a linked server with pass-through authentication, execute following T-SQL, replacing `<managed_instance>` with your own SQL managed instance server:
 

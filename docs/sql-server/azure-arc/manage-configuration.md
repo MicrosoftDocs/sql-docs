@@ -118,17 +118,22 @@ The next table shows the meter SKUs that are used for different license types an
 
 In addition to billing differences, license type determines what features will be available to your Arc-enabled SQL Server. The following features are not included when the LicenseOnly license type is selected:
 
-* Licensing benefit for failover servers. The Azure extension for SQL Server supports free failover servers, by automatically detecting if the instance is a replica in an availability group, and reporting the usage with a separate meter. To qualify for this benefit, the replica must be fully passive, and all its databases must be part of the same group. If one or more databases are not part of the group, the instance is treated as active and billed based on its edition. For more information, see the [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/sql-server).
+* Licensing benefit for failover servers. The Azure extension for SQL Server supports free failover servers. Specifically, the extension:
+  * Automatically detects if the instance hosts a replica in an availability group
+  * Reporting the usage with a separate meter.
+
+   To qualify for this benefit, the replica must be fully passive. All of its databases must be part of the same group. If one or more databases are not part of the group, the instance is treated as active and billed based on its edition. For more information, see the [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/sql-server).
+
 * Detailed database inventory. You can manage your SQL database inventory in the Azure portal. See [View databases](view-databases.md) for details.
 * Managing automatic updates of SQL Server from Azure.
-* Best practices assessment. You can generate best practices reports and recommendations by periodic scans of your SQL Server configurations. See [Configure your SQL Server instance for Best practices assessment](assess.md).
+* Best practices assessment. Generate best practices reports and recommendations by periodic scans of your SQL Server configurations. See [Configure your SQL Server instance for Best practices assessment](assess.md).
 
 ## Subscribe to Extended Security Updates
 
 Extended Security Updates (ESU) is available for qualified SQL Server instances that use License with Software assurance or Pay-as-you-go as the license type. If the  license type is license only, the option to activate the ESU subscription is disabled. See [Extended Security Updates for SQL Server](../end-of-support/sql-server-extended-security-updates.md).  
 
 > [!NOTE]
-> If ESU is enabled **License Type** cannot be changed to `LicenseOnly` until the ESU subscrition is cancelled. 
+> If ESU is enabled **License Type** cannot be changed to `LicenseOnly` until the ESU subscription is cancelled.
 
 ## Exclude instances
 
@@ -149,7 +154,7 @@ There are two ways to configure the SQL Server host in Azure portal.
 
 * Open the Arc-enabled Server overview page and click **SQL Server Configuration** as shown.
 
-   :::image type="content" source="media/billing/overview-of-sql-server-azure-arc.png" alt-text="Screenshot of the Azure Arc-enabled Server in Azure portal."  lightbox="media/billing/overview-of-sql-server-azure-arc.png" :::
+   :::image type="content" source="media/billing/overview-of-sql-server-azure-arc.png" alt-text="Screenshot of the SQL Server enabled by Azure Arc in Azure portal."  lightbox="media/billing/overview-of-sql-server-azure-arc.png" :::
 
   Or
 
@@ -271,9 +276,9 @@ resources
 | project-away machineIdHasSQLServerDiscovered, machineIdHasSQLServerExtensionInstalled
 ```
 
-#### List Arc-enabled servers with SQL Server
+#### List Arc-enabled servers with instances of SQL Server
 
-This query identifies Azure Arc-enabled servers with SQL Server discovered on them.
+This query identifies Azure Arc-enabled servers with SQL Server instances discovered on them.
 
 ```kusto
 resources
@@ -282,7 +287,7 @@ resources
 //| summarize count()
 ```
 
-This query returns Azure Arc-enabled servers that have SQL Server, but the Arc SQL Server extension is not installed. This query only applies to Windows servers.
+This query returns Azure Arc-enabled servers that have SQL Server instances, but the Arc SQL Server extension is not installed. This query only applies to Windows servers.
 
 ```kusto
 resources

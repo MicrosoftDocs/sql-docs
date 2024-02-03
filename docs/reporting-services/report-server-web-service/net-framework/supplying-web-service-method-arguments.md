@@ -18,7 +18,7 @@ helpviewer_keywords:
   A Report Server Web service method sends a request to the service at a given URL using SOAP over HTTP. The service receives the request, processes it, and then returns a response. These requests and responses are in the form of XML documents.  
   
 ## Optional Parameters  
- In some cases, a Web service method can have optional input parameters. Even if an input parameter for a Web service method is optional, you must still include it and set the parameter value to **null** (**Nothing** in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]). Setting a parameter value to **null** sets the element value for that parameter in the SOAP request to **null**.  
+ In some cases, a Web service method can have optional input parameters. Even if an input parameter for a Web service method is optional, you must still include it and set the parameter value to **null** (**Nothing** in [!INCLUDE[visual-basic](../../../includes/visual-basic-md.md)]). Setting a parameter value to **null** sets the element value for that parameter in the SOAP request to **null**.  
   
  The following example uses the <xref:ReportService2010.ReportingService2010.CreateFolder%2A> method to create a new folder named Product Sales in the Sales folder. By supplying a **null** value for the folder properties, no user-specific properties are supplied for the folder:  
   

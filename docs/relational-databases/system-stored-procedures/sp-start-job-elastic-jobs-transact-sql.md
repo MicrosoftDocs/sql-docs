@@ -30,11 +30,11 @@ This stored procedure shares the name of `sp_start_job` with a similar object in
 
 ## Arguments
 
-#### @job_name 
+#### @job_name
 
 The name of the job to start. *job_name* is nvarchar(128), with no default.
 
-#### @job_execution_id 
+#### @job_execution_id
 
 Output parameter that will be assigned the job execution's ID. *job_version* is uniqueidentifier.
 

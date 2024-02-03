@@ -227,7 +227,7 @@ To achieve pushdown of the variable, you need to enable query optimizer hotfixes
 - Query level: 
         Use query hint OPTION (QUERYTRACEON 4199) or OPTION (USE HINT ('ENABLE_QUERY_OPTIMIZER_HOTFIXES'))
 
-This limitation applies to execution of [sp_executesql](../system-stored-procedures/sp-executesql-transact-sql.md).
+This limitation applies to execution of [sp_executesql](../system-stored-procedures/sp-executesql-transact-sql.md). The limitation also applies to utilization of some functions in the filter clause.
 
 Note: The ability to pushdown the variable was first introduced in SQL Server 2019 CU5.
 

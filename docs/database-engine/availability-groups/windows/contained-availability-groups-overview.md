@@ -151,6 +151,10 @@ Databases that use TDE rely on certificates in the `master` database to decrypt 
 
 To transfer the DMK from the `master` database of the instance, to the contained `master` database, see [Move a TDE protected database to another SQL Server](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md), primarily focusing on the portions where the DMK is transferred from the old server to the new one.
 
+### SSIS packages & maintenance plans
+
+Using SSIS packages, including maintenance plans, is not supported with contained availability groups.
+
 ## DDL changes
 
 The only DDL changes are in the `CREATE AVAILABILITY GROUP` workflow. There are two new `WITH` clauses:

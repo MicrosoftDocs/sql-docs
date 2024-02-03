@@ -23,7 +23,7 @@ You can make workloads automatically eligible for intelligent query processing b
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 160;
 ```
 
-All [IQP features](intelligent-query-processing.md) are available in [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], sometimes depending on each database's compatibility mode. For more information on changes introduced with new versions, see:
+All [IQP features](intelligent-query-processing.md) are available in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], sometimes depending on each database's compatibility mode. For more information on changes introduced with new versions, see:
 
 - [What's new in SQL Server 2017](../../sql-server/what-s-new-in-sql-server-2017.md)
 - [What's new in SQL Server 2019](../../sql-server/what-s-new-in-sql-server-2019.md)

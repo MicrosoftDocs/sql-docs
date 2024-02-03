@@ -81,7 +81,7 @@ Success in creating the maintenance plan returns the plan ID.
 The ID for the maintenance plan "MyPlan" is: FAD6F2AB-3571-11D3-9D4A-00C04FB925FC
 ```
 
-## See also
+## Related content
 
 - [Maintenance Plans](../maintenance-plans/maintenance-plans.md)
 - [Database Maintenance Plan stored procedures (Transact-SQL)](database-maintenance-plan-stored-procedures-transact-sql.md)

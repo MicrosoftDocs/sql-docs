@@ -93,7 +93,7 @@ EXEC msdb.dbo.sp_syspolicy_update_policy_category_subscription
 GO
 ```
 
-## Next steps
+## Related content
 
 - [Policy-Based Management stored procedures (Transact-SQL)](policy-based-management-stored-procedures-transact-sql.md)
 - [sp_syspolicy_add_policy_category_subscription (Transact-SQL)](sp-syspolicy-add-policy-category-subscription-transact-sql.md)

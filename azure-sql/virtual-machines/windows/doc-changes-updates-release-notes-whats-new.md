@@ -8,7 +8,7 @@ ms.date: 12/19/2023
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
 ms.topic: whats-new
-ms.custom: ignite-2022, ignite-2023
+ms.custom: ignite-2023
 tags: azure-service-management
 ---
 # What's new with SQL Server on Azure Virtual Machines?
@@ -54,8 +54,8 @@ To contribute to the Azure SQL documentation, see the [Docs contributor guide](/
 
 **Windows VMs**:
 
-* [Overview of SQL Server on a Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)
-* [Provision SQL Server on a Windows VM](create-sql-vm-portal.md)
+* [Overview of SQL Server on Windows VMs](sql-server-on-azure-vm-iaas-what-is-overview.md)
+* [Provision SQL Server on Windows VMs](create-sql-vm-portal.md)
 * [Migration guide: SQL Server to SQL Server on Azure Virtual Machines](../../migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide.md)
 * [High availability and disaster recovery for SQL Server on Azure Virtual Machines](business-continuity-high-availability-disaster-recovery-hadr-overview.md)
 * [Performance best practices for SQL Server on Azure Virtual Machines](./performance-guidelines-best-practices-checklist.md)

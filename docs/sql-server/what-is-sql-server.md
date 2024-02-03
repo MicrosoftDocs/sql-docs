@@ -24,7 +24,7 @@ Supported versions of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]
 The underlying [!INCLUDE [ssdenoversion-md](../includes/ssdenoversion-md.md)] is also used by the following products and services:
 
 - [[!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)]](/azure/azure-sql/database/sql-database-paas-overview)
-- [[!INCLUDE [ssazuremi_md](../includes/ssazuremi_md.md)]](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview)
+- [[!INCLUDE [ssazuremi-md](../includes/ssazuremi-md.md)]](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview)
 - [Microsoft Analytics Platform System](../analytics-platform-system/home-analytics-platform-system-aps-pdw.md) (PDW)
 - [[!INCLUDE [ssazuresynapse-md](../includes/ssazuresynapse-md.md)]](/azure/synapse-analytics/overview-what-is)
 - [[!INCLUDE [ssazurede-md](../includes/ssazurede-md.md)]](/azure/azure-sql-edge/overview)

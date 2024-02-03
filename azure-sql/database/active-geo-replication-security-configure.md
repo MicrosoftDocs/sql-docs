@@ -86,6 +86,8 @@ WITH PASSWORD = '<login password>',
 SID = 0x1234 /*replace 0x1234 with the desired login SID*/
 ```
 
+On the target server, do not create a new login with the server admin SID from the source. Instead make the target's server admin login a database principal in the database, such as db_owner or user.
+
 > [!NOTE]
 > If you want to grant user access to the secondary, but not to the primary, you can do that by altering the user login on the primary server by using the following syntax.
 >

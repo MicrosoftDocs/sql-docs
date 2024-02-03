@@ -149,7 +149,7 @@ In [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../.
 
 #### PERSIST_SAMPLE_PERCENT = { ON | OFF }
 
-**Applies to:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 1 CU4, [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Service Pack 1, or [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later versions, [!INCLUDE[ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]
+**Applies to:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 1 CU4, [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Service Pack 1, or [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later versions, [!INCLUDE[ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)]
 
 When **ON**, the statistics will retain the set sampling percentage for subsequent updates that don't explicitly specify a sampling percentage. When **OFF**, statistics sampling percentage will get reset to default sampling in subsequent updates that don't explicitly specify a sampling percentage. The default is **OFF**.
 

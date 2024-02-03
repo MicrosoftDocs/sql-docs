@@ -89,7 +89,7 @@ Filter the columns from the dataframe to remove ones we don't want to use in the
 columns = df.columns.tolist()
 columns = [c for c in columns if c not in ["Year", "Rentalcount"]]
 
-print("Training set:", test[columns])
+print("Training set:", df[columns])
 
 ```
 

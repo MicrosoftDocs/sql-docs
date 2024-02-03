@@ -63,7 +63,7 @@ The following example lists the groups in the `sales` domain.
 EXEC xp_enumgroups 'sales';
 ```
 
-## See also
+## Related content
 
 - [sp_grantlogin (Transact-SQL)](sp-grantlogin-transact-sql.md)
 - [sp_revokelogin (Transact-SQL)](sp-revokelogin-transact-sql.md)

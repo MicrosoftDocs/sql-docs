@@ -28,7 +28,8 @@ The following article provides reference for the **sql** commands in the **azdat
 [azdata bdc spark session state](#azdata-bdc-spark-session-state) | Get execution state for an active Spark session.
 [azdata bdc spark session delete](#azdata-bdc-spark-session-delete) | Delete a Spark session.
 ## azdata bdc spark session create
-This creates a new interactive Spark session. The caller must specify the type of Spark session. This session lives beyond the lifetime of a azdata  execution and must be deleted with 'spark session delete'
+This creates a new interactive Spark session. The caller must specify the type of Spark session. This session lives beyond the lifetime of an azdata execution and must be deleted with 'spark session delete'
+
 ```bash
 azdata bdc spark session create [--session-kind -k] 
                                 [--jar-files -j]  

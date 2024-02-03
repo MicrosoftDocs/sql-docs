@@ -10,7 +10,7 @@ ms.service: sql-db-mi
 ms.subservice: development
 ms.topic: sample
 ms.custom: sqldbrb=2, devx-track-azurepowershell
-ms.devlang: PowerShell
+ms.devlang: powershell
 ---
 
 # Azure PowerShell samples for Azure SQL Database and Azure SQL Managed Instance

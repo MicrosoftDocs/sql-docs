@@ -1,5 +1,5 @@
 ---
-title: "Add parameters to a mobile report | Reporting Services"
+title: "Add parameters to a mobile report"
 description: Reporting Services mobile report can have parameters, so report readers can filter your reports. Such a report can also be the target of a drillthrough.
 author: maggiesMSFT
 ms.author: maggies
@@ -9,7 +9,7 @@ ms.subservice: mobile-reports
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
-# Add parameters to a mobile report | Reporting Services
+# Add parameters to a mobile report
 
 [!INCLUDE [ssrs-mobile-report-deprecated](../../includes/ssrs-mobile-report-deprecated.md)]
 
@@ -21,37 +21,42 @@ After you add parameters to a mobile report, you create a URL to [open the repor
 
 1. In the top bar of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal, select **New** > **Mobile Report**.  
   
-   ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
+   :::image type="content" source="../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png" alt-text="Screenshot of the New menu and the Mobile Report option.":::
+  
      
-2. Select the **Data** tab in the upper-left corner of [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)].   
+1. Select the **Data** tab.   
   
-3. In the upper-right corner, select **Add Data**.  
+1. Select **Add Data**.  
   
-4. Select **Report Server**, then select a server.  
+1. Select **Report Server**, then select a server.  
   
-5. Navigate to the shared datasets on the server and select one that has parameters.  
+1. Navigate to the shared datasets on the server and select one that has parameters.  
   
    In the grid, you see the data in the dataset. The green circle with brackets **{ }** marks a dataset with a parameter.  
      
-   ![SSMRP_PforParam](../../reporting-services/mobile-reports/media/ssmrp-pforparam.png)  
+   :::image type="content" source="../../reporting-services/mobile-reports/media/ssmrp-pforparam.png" alt-text="Screenshot of the TimeChartLoD with the brackets highlighted.":::
   
-6. Select the cog on the tab, then select **Param {}**.  
+1. Select the cog on the tab, then select **Param {}**.  
   
-   ![SSMRP_ParamWheel](../../reporting-services/mobile-reports/media/ssmrp-paramwheel.png)  
+   :::image type="content" source="../../reporting-services/mobile-reports/media/ssmrp-paramwheel.png" alt-text="Screenshot of the cog with the Param {} option highlighted.":::
   
-7. Select the report element that will pass values to the parameter.  
   
-   ![SSMRP_SetParam](../../reporting-services/mobile-reports/media/ssmrp-setparam.png)  
+1. Select the report element that passes values to the parameter.  
+  
+   :::image type="content" source="../../reporting-services/mobile-reports/media/ssmrp-setparam.png" alt-text="Screenshot of the Set dataset parameters screen.":::
+  
      
-8. Select **Preview** to see how the report will look. In this report, the selection list is using the Category parameter.
+1. Select **Preview** to see how the report looks. In this report, the selection list is using the Category parameter.
 
-   ![Screenshot of the preview of the report with the Selection list 1 called out.](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-view-no-selection.png) 
+   :::image type="content" source="../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-view-no-selection.png" alt-text="Screenshot of the preview of the report with the Selection list 1 called out.":::
+ 
    
-9. When you select a value in the selection list, the report is filtered to that value, in this case, Accessories.
+1. When you select a value in the selection list, the report is filtered to that value, in this case, Accessories.
 
-   ![Screenshot of the preview of the report with the Selection list 1 called out and the Accessories option selected.](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-category-selected.png)   
+   :::image type="content" source="../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-category-selected.png" alt-text="Screenshot of the preview of the report with the Selection list 1 called out and the Accessories option selected.":::
+   
   
-### See also  
+### Related content 
 -  [Open a mobile report with specific query string parameters](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md)
 -  [Add drillthrough from a mobile report to other mobile reports or URLs](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md)
 -  [Create a shared or embedded dataset](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)

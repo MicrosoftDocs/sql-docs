@@ -669,7 +669,7 @@
       "source_path_from_root": "/azure-sql/database/service-tiers-vcore.md",
       "redirect_url": "/azure/azure-sql/database/service-tiers-sql-database-vcore",
       "redirect_document_id": false
-    },    
+    },
     {
       "source_path_from_root": "/azure-sql/managed-instance/management-endpoint-verify-built-in-firewall.md",
       "redirect_url": "/azure/azure-sql/managed-instance/connectivity-architecture-overview",
@@ -679,17 +679,17 @@
       "source_path_from_root": "/azure-sql/managed-instance/scripts/restore-geo-backup-cli.md",
       "redirect_url": "/azure/azure-sql/managed-instance/scripts/restore-geo-backup",
       "redirect_document_id": false
-    },  
+    },
     {
       "source_path_from_root": "/azure-sql/database/elastic-jobs-migrate.md",
       "redirect_url": "/azure/azure-sql/database/job-automation-overview",
       "redirect_document_id": false
-    }, 
+    },
     {
       "source_path_from_root": "/azure-sql/virtual-machines/windows/sql-agent-extension-manually-register-single-vm.md#repair-extension",
       "redirect_url": "/azure/azure-sql/virtual-machines/windows/sql-agent-extension-troubleshoot-known-issues#repair-extension",
       "redirect_document_id": false
-    },    
+    },
     {
       "source_path_from_root": "/azure-sql/database/sql-database-vulnerability-assessment-rules.md",
       "redirect_url": "/azure/defender-for-cloud/sql-azure-vulnerability-assessment-rules",

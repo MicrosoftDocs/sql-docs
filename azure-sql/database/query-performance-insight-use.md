@@ -226,7 +226,7 @@ The first case happens when Query Store is in the read-only state and parameters
 
    ![Query Store details](./media/query-performance-insight-use/qds-off.png)
 
-The second case happens when Query Store is not enabled, or parameters are not set optimally. You can change the retention and capture policy, and also enable Query Store, by running the following commands provided from [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) or the Azure portal.
+The second case happens when Query Store is not enabled, or parameters are not set optimally. You can change the retention and capture policy, and also enable Query Store, by running the following T-SQL commands provided [the Azure portal query editor](query-editor.md), [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), [Azure Data Studio](/azure-data-studio/download-azure-data-studio), [sqlcmd](/sql/tools/sqlcmd-utility), or the client tool of your choice.
 
 ### Recommended retention and capture policy
 

@@ -6,7 +6,7 @@ ms.author: v-davidengel
 ms.date: "09/23/2019"
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "subkeys [ODBC], for data sources"
   - "data sources [ODBC], subkeys"

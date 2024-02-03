@@ -63,6 +63,6 @@ EXEC sp_syscollector_set_warehouse_database_name N'RemoteMDW';
 GO
 ```
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

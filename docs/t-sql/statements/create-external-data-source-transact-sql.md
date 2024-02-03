@@ -1254,18 +1254,21 @@ Provides the connectivity protocol and path to the external data source.
 | MongoDB or Cosmos DB API for MongoDB     | `mongodb`       | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]  | Basic authentication only |
 | Generic ODBC                    | `odbc`          | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] - Windows only  | Basic authentication only |
 | Bulk Operations         | `https`         | `<storage_account>.blob.core.windows.net/<container>` | Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]                        | Shared access signature (SAS) |
-| S3-compatible object storage | `s3` | `s3://<server_name>:<port>/` | Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] | \* |
+| S3-compatible object storage | `s3` | - S3-compatible: `s3://<server_name>:<port>/`<br />- AWS S3: `s3://<bucket_name>.S3.amazonaws.com[:port]/<folder>` </br>or `s3://s3.amazonaws.com[:port]/<bucket_name>/<folder>` | Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] | Basic or pass-through (STS) \* |
 
-\* Must be a [database scoped credential](create-database-scoped-credential-transact-sql.md), where the IDENTITY is hard-coded to `IDENTITY = 'S3 Access Key'` and the SECRET argument is in the format `= '<AccessKeyID>:<SecretKeyID>'` or use STS authorization. For more information, see [Configure PolyBase to access external data in S3-compatible object storage](../../relational-databases/polybase/polybase-configure-s3-compatible.md).
+\* Must be a [database scoped credential](create-database-scoped-credential-transact-sql.md), where the IDENTITY is hard-coded to `IDENTITY = 'S3 Access Key'` and the SECRET argument is in the format `= '<AccessKeyID>:<SecretKeyID>'` or use pass-through (STS) authorization. For more information, see [Configure PolyBase to access external data in S3-compatible object storage](../../relational-databases/polybase/polybase-configure-s3-compatible.md).
 
 Location path:
 
-- `port` = The port that the external data source is listening on.
+- `port` = The port that the external data source is listening on. Optional in many cases, depending on network configuration.
 - `<container_name>` = the container of the storage account holding the data. Root containers are read-only, data can't be written back to the container.
 - `<storage_account>` = the storage account name of the Azure resource.
 - `<server_name>` = the host name.
 - `<instance_name>` = the name of the SQL Server named instance. Used if you have SQL Server Browser Service running on the target instance.
 - `<ip_address>:<port>` = For S3-compatible object storage only (starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]), the endpoint and port used to connect to the S3-compatible storage.
+- `<bucket_name>` = For S3-compatible object storage only (starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]), specific to the storage platform.
+- `<region>` = For S3-compatible object storage only (starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]), specific to the storage platform. 
+- `<folder>` = Part of the storage path within the storage URL.
 
 Additional notes and guidance when setting the location:
 

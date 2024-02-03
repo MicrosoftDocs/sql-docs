@@ -151,7 +151,7 @@ SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/a
 | Hot add memory and CPU | Yes | No | No | No | No |
 | Database recovery advisor | Yes | Yes | Yes | Yes | Yes |
 | Encrypted backup | Yes | Yes | No | No | No |
-| Backup and restore to S3-compliant object storage over REST API | Yes | Yes | Yes | No | No |
+| Backup and restore to S3-compatible object storage over REST API | Yes | Yes | Yes | No | No |
 | Snapshot backup | Yes | Yes | Yes | Yes | Yes |
 | Cluster-less availability group <sup>5,6</sup> | Yes | Yes | No | No | No |
 | Failover servers for disaster recovery | Yes | Yes | No | No | No |

@@ -87,8 +87,8 @@ In SQL Server 2008 Reporting Services, only the Report Server service account re
   
 There are two workarounds for this issue.   
 1.  In one workaround, you can temporarily turn off UAC and use SharePoint Central Administration to grant access.  
-> [!IMPORTANT]  
-> Use caution if you turn off UAC to work around this issue, and turn on UAC immediately after you grant database access in SharePoint Central Administration. If you don't want to turn off UAC, use the second workaround provided in this section. For information about UAC, see the Windows product documentation.  
+    > [!IMPORTANT]  
+    > Use caution if you turn off UAC to work around this issue, and turn on UAC immediately after you grant database access in SharePoint Central Administration. If you don't want to turn off UAC, use the second workaround provided in this section. For information about UAC, see the Windows product documentation.  
 2. In the second workaround, you can manually grant database access to the Reporting Services service account or accounts. You can use the following procedure to grant access by adding the Reporting Services service account or accounts to the correct Windows group and database roles. This procedure applies to the Report Server service account in SQL Server 2008 Reporting Services; if you're running SQL Server 2005 Reporting Services, perform the procedure for the Report Server Windows service account and the Report Server Web service account.   
   
 ### Manually grant database access  
@@ -97,8 +97,8 @@ There are two workarounds for this issue.
 2. Connect to the database instance that hosts the SharePoint configuration and content databases, and create an SQL database sign in for the Report Server service account.  
 3. Add the SQL database sign in to the following database roles:  
   
-* db_owner role in the WSS Content database  
-* WSS_Content_Application_Pools role in the SharePoint_Config database  
+   * db_owner role in the WSS Content database  
+   * WSS_Content_Application_Pools role in the SharePoint_Config database  
   
 ## Unable to connect to the /reports and /reportserver directories. This issue occurs when the report server databases are created on a virtual SQL Server that runs in a Microsoft Cluster Services (MSCS) cluster  
 When you create the report server databases, **ReportServer** and **ReportServerTempDB**, on a virtual SQL Server that runs in an MSCS cluster, the remote name in the format `<domain>\<computer_name>$` might not be registered to SQL Server as a sign in. If you  configured the Report Server service account as an account that requires this remote name for connections, users can't connect to the /reports and /reportserver directories in Reporting Services. For example, the built-in Windows account NetworkService requires this remote name. To avoid this issue, use an explicit domain account or a SQL Server sign in to connect to the report server databases.  

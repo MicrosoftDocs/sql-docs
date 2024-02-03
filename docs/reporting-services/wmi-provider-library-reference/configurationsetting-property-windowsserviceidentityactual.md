@@ -1,6 +1,6 @@
 ---
-title: "ConfigurationSetting Property - WindowsServiceIdentityActual"
-description: "ConfigurationSetting Property - WindowsServiceIdentityActual"
+title: "ConfigurationSetting property - WindowsServiceIdentityActual"
+description: "ConfigurationSetting property - WindowsServiceIdentityActual"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -14,7 +14,7 @@ apilocation: "reportingservices.mof"
 apiname: "WindowsServiceIdentityActual"
 apitype: MOFDef
 ---
-# ConfigurationSetting Property - WindowsServiceIdentityActual
+# ConfigurationSetting property - WindowsServiceIdentityActual
   The identity that the Report Server Windows service is running under. Read-only.  
   
 ## Syntax  
@@ -27,16 +27,16 @@ Public Dim WindowsServiceIdentityActual As String
 public string WindowsServiceIdentityActual;  
 ```  
   
-## Property Values  
+## Property values  
  A **String** object containing the identity that the Report Server Windows service is running under.  
   
-## Example Code  
- [MSReportServer_ConfigurationSetting Class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
+## Example code  
+ [MSReportServer_ConfigurationSetting class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+## Related content 
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

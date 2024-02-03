@@ -1,6 +1,6 @@
 ---
-title: "ConfigurationSetting Method - RemoveUnattendedExecutionAccount"
-description: "ConfigurationSetting Method - RemoveUnattendedExecutionAccount"
+title: "ConfigurationSetting method - RemoveUnattendedExecutionAccount"
+description: "ConfigurationSetting method - RemoveUnattendedExecutionAccount"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -14,7 +14,7 @@ apilocation: "reportingservices.mof"
 apiname: "RemoveUnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting Class)"
 apitype: MOFDef
 ---
-# ConfigurationSetting Method - RemoveUnattendedExecutionAccount
+# ConfigurationSetting method - RemoveUnattendedExecutionAccount
   Deletes the unattended execution account entry from the report server configuration file.  
   
 ## Syntax  
@@ -31,13 +31,13 @@ public void RemoveUnattendedExecutionAccount (out Int32 HRESULT);
  *HRESULT*  
  [out] Value indicating whether the call succeeded or failed.  
   
-## Return Value  
- Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A non-zero value indicates that an error has occurred.  
+## Return value  
+ Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A nonzero value indicates that an error occurred.  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+## Related content 
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

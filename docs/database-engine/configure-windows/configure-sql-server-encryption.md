@@ -4,7 +4,7 @@ description: This article describes how to configure a SQL Server instance to en
 author: sevend2
 ms.author: v-sidong
 ms.reviewer: sureshka, randolphwest
-ms.date: 03/13/2023
+ms.date: 02/02/2024
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -142,3 +142,21 @@ GO
 ```
 
 The `encrypt_option` column is a Boolean value indicating whether encryption is enabled for this connection. If the value is `TRUE`, the connection is securely encrypted. If the value is `FALSE`, the connection isn't encrypted.
+
+### SQL Server certificate behavior with permissions
+
+The SQL Server service detects and uses the certificate automatically for encryption if all of the following conditions are true:
+
+- The certificate has a subject that contains the FQDN of the machine
+- The certificate is installed in the Local Computer's certificate store
+- The SQL Server service account is granted access to the certificate's private key
+
+This use happens even if the certificate is not selected in SQL Server Configuration Manager. 
+
+To override this behavior, either:
+
+- Configure another certificate to be used in the SQL Server Configuration Manager
+
+  or
+
+- Remove the SQL Server service account permissions to the undesired certificate

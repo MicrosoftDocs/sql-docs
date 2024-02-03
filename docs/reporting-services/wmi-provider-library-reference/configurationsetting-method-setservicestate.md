@@ -1,6 +1,6 @@
 ---
-title: "SetServiceState Method (WMI MSReportServer_ConfigurationSetting)"
-description: "SetServiceState Method (WMI MSReportServer_ConfigurationSetting)"
+title: "SetServiceState method (WMI MSReportServer_ConfigurationSetting)"
+description: "SetServiceState method (WMI MSReportServer_ConfigurationSetting)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/17/2017
@@ -14,7 +14,7 @@ apilocation: "reportingservices.mof"
 apiname: "SetServiceState (WMI MSReportServer_ConfigurationSetting Class)"
 apitype: MOFDef
 ---
-# ConfigurationSetting Method - SetServiceState
+# ConfigurationSetting method - SetServiceState
   Turns the Report Server Windows and Web services on and off.  
   
 ## Syntax  
@@ -32,29 +32,27 @@ public void SetServiceState(Boolean EnableWindowsService,
   
 ## Parameters  
  *EnableWindowsService*  
- A **Boolean** value indicating the state of the Windows service. A value of **true** starts the Report Server Windows service; a value of **false** stops the Windows service.  
+ A **Boolean** value indicating the state of the Windows service. A value of **true** starts the Report Server Windows service. A value of **false** stops the Windows service.  
   
  *EnableWebService*  
- A **Boolean** value indicating the state of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web service. A value of **true** starts the Report Server Web service; a value of **false** stops the Web service  
+ A **Boolean** value indicating the state of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web service. A value of **true** starts the Report Server Web service. A value of **false** stops the Web service.  
   
  *EnableReportManager*  
  A **Boolean** value indicating the desired state of the Report manager.
  
  > [!NOTE] 
- > This setting has been deprecated as of SQL Server 2016 Reporting Services Cumulative Update 2. The web portal will always be enabled. The value will be ignored.
+ > This setting has been deprecated as of SQL Server 2016 Reporting Services Cumulative Update 2. The web portal is always enabled. The value is ignored.
   
  *HRESULT*  
  [out] Value indicating whether the call succeeded or failed.  
   
-## Return Value  
- Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A non-zero value indicates that an error has occurred.  
-  
-## Remarks  
-  
+## Return value  
+ Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A nonzero value indicates that an error occurred.  
+    
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+## Related content  
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

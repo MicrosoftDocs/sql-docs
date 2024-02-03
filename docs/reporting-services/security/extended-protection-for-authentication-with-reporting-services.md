@@ -120,7 +120,7 @@ SSRS supports and enforces extended protection that was enabled in the operating
 ```  
   
 ## Service binding and included SPNs  
- Service binding uses Service Principal Names or SPN to validate the intended destination of authentication tokens. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses the existing URL reservation information to build a list of SPNs that are considered valid. The URL reservation information for validation of both SPN and URL reservations enables system administrators t0 manage both from a single location.  
+ Service binding uses Service Principal Names or SPN to validate the intended destination of authentication tokens. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses the existing URL reservation information to build a list of SPNs that are considered valid. The URL reservation information for validation of both SPN and URL reservations enables system administrators to manage both from a single location.  
   
  The list of valid SPNs is updated when one of the following actions occurs: 
 

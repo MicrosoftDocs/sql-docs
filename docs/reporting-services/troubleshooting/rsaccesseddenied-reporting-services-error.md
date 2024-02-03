@@ -1,5 +1,5 @@
 ---
-title: "rsAccessedDenied - Reporting Services Error"
+title: "rsAccessedDenied - Reporting Services error"
 description: "In this error reference, learn about 'rsAccessedDenied': The permissions granted to user 'mydomain\\myAccount' are insufficient for performing this operation."
 author: maggiesMSFT
 ms.author: maggies
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "rsAccessDenied error"
 ---
 # rsAccessedDenied - Reporting Services error
-  The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] error **rsAccessedDenied** occurs when a user does not have permission to perform an action. For example, they don't have a role assignment that allows them to open a report, or they didn't open their browser with the required permissions.  
+  The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] error **rsAccessedDenied** occurs when a user doesn't have permission to perform an action. For example, they don't have a role assignment that allows them to open a report, or they didn't open their browser with the required permissions.  
   
 ||  
 |-|  
@@ -20,9 +20,9 @@ helpviewer_keywords:
   
 - If the error occurred while accessing the report server directly through a URL, the exception is mapped to an HTTP 401 error.  
   
-- If the error occurred while using the web portal, the exception is typically mapped to an HTTP 401 error, or other defined HTML error page.  
+- If the error occurs when you use the web portal, the exception is typically mapped to an HTTP 401 error, or other defined HTML error page.  
   
-- If the error occurred during a scheduled operation, subscription, or delivery, the error will appear in the report server log file only.  
+- If the error occurred during a scheduled operation, subscription, or delivery, the error appears in the report server log file only.  
   
 ## Details  
   
@@ -35,13 +35,12 @@ helpviewer_keywords:
 |**Message Text**|The permissions granted to user 'mydomain\myAccount' are insufficient for performing this operation. (rsAccessDenied) (ReportingServicesLibrary)|  
   
 ## User action  
- Permission to access report server content and operations are granted through role assignments. On a new installation, only local administrators have access to a report server. To grant access to other users, a local administrator must create a role assignment that specifies a domain user or group account, one or more roles that define the tasks the user can perform, and a scope (usually the Home folder or root node of the report server folder hierarchy). You can use the web portal to create role assignments. For more information, see [Role Assignments](../../reporting-services/security/role-assignments.md)
-.  
+ Permission to access report server content and operations are granted through role assignments. On a new installation, only local administrators have access to a report server. To grant access to other users, a local administrator must create a role assignment that specifies a domain user or group account. The administrator must also create one or more roles that define the tasks the user can perform and a scope. The scope is usually the Home folder or root node of the report server folder hierarchy. You can use the web portal to create role assignments. For more information, see [Role Assignments](../../reporting-services/security/role-assignments.md).  
   
- This error is also caused by local administration of the report server. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ Local administration of the report server causes this error. For more information, see [Configure a native mode report server for local administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
-## See also  
- [Role Assignments](../../reporting-services/security/role-assignments.md)  
- [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
- [Roles and Permissions &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)  
+## Related content 
+ [Role assignments](../../reporting-services/security/role-assignments.md)  
+ [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Roles and permissions &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)  
   

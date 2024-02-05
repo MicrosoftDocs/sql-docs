@@ -4,7 +4,7 @@ description: "Virtualize a delta table with PolyBase starting with SQL Server 20
 author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf, randolphwest
-ms.date: 01/11/2024
+ms.date: 02/05/2024
 ms.service: sql
 ms.subservice: polybase
 ms.topic: tutorial
@@ -137,6 +137,16 @@ GO
 ### Limitations
 
 If you create an external table pointing to partitioned delta table, the column used for partitioning returns `NULL` when querying the external table. However, if you use an `OPENROWSET` query, the column value returns correctly. To work around this limitation, create a view on the `OPENROWSET` query, and then query the view to get the partitioned column values to return correctly.
+
+You may encounter the following errors when querying an external Delta table:
+
+```
+Msg 2571, Level 14, State 3, Line 1
+User '<user>' does not have permission to run DBCC TRACEON.
+Msg 16513, Level 16, State 0, Line 1
+Error reading external metadata.
+```
+This can happen because there is a `QUERYTRACEON` query hint that can be added to Delta file metadata query and that requires `sysadmin` server role to execute. If this occurs, you can resolve the issue by globally enabling trace flag 14073 and this will prevent the query hint from being added.
 
 ## Related content
 

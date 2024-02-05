@@ -59,14 +59,6 @@ Subscriptions can fail under these conditions.
 * The delivery extension specified in the subscription was uninstalled or disabled.  
 * The credential settings changed from stored to integrated or prompted values.  
 * The parameter name or data type was changed in the report definition, and the report was republished. If a subscription includes a parameter that is no longer valid, the subscription becomes inactive.  
-  
-For more information, see the TechNet Wiki [Troubleshoot issues and errors with Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.ssrs-troubleshoot-issues-and-errors-with-reporting-services.aspx).  
-  
-  
-    
-  
-  
-  
 
 [!INCLUDE[feedback-qa-stackoverflow-md](../../includes/feedback-qa-stackoverflow-md.md)]
 

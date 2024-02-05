@@ -606,7 +606,7 @@ To work in the Master Data Manager web application, Silverlight 5.0 must be inst
 Connectivity from SQL Server 2012 Reporting Services to Microsoft SQL Server PDW Appliance Update 2 and higher requires an update to the PDW connectivity drivers. For more information, SQL Server PDW customers should contact Microsoft support.  
   
 ## <a name="SI"></a>9.0 StreamInsight  
-SQL Server 2012 includes StreamInsight 2.1. StreamInsight 2.1 requires a Microsoft SQL Server 2012 license and .NET Framework 4.0. It includes a number of performance improvements along with few bug fixes. For more information, see the [Microsoft StreamInsight 2.1 Release Notes](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx). In order to download StreamInsight 2.1 separately, please visit the [Microsoft StreamInsight 2.1 download page](https://www.microsoft.com/download/details.aspx?id=30149) on the Microsoft Download Center.  
+SQL Server 2012 includes StreamInsight 2.1. StreamInsight 2.1 requires a Microsoft SQL Server 2012 license and .NET Framework 4.0. It includes a number of performance improvements along with few bug fixes. In order to download StreamInsight 2.1 separately, please visit the [Microsoft StreamInsight 2.1 download page](https://www.microsoft.com/download/details.aspx?id=30149) on the Microsoft Download Center.  
   
 ## <a name="UA"></a>10.0 Upgrade Advisor  
   

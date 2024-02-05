@@ -15,7 +15,7 @@ helpviewer_keywords:
 ---
 # Configure Windows authentication on the report server
 
-By default, [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] accepts requests that specify Negotiate or NTLM authentication. If your deployment includes client applications and browsers that use these security providers, you can use the default values without other configurationf. Let's say you want to use a different security provider for Windows integrated security, or if you modify the default values and want to restore the original settings. You can use the information in this article to specify authentication settings on the report server.
+By default, [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] accepts requests that specify Negotiate or NTLM authentication. If your deployment includes client applications and browsers that use these security providers, you can use the default values without other configuration. Let's say you want to use a different security provider for Windows integrated security, or if you modify the default values and want to restore the original settings. You can use the information in this article to specify authentication settings on the report server.
 
 To use Windows integrated security, each user who requires access to a report server must have a valid Windows local or domain user account. Or, they must be a member of a Windows local or domain group account. You can include accounts from other domains as long as those domains are trusted. The accounts must have access to the report server computer, and must be then assigned to roles in order to gain access to specific report server operations.
 

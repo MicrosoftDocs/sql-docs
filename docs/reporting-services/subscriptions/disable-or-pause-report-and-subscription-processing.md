@@ -49,7 +49,7 @@ In the web portal, browse to the subscription from either the **My Subscriptions
   C:\Program Files\Microsoft SQL Server Reporting Services\SSRS\LogFiles\RSPortal_2019_06_20_00_49_22.log
  ```
   
- you see rows similar to the following examples:  
+ You see rows similar to the following examples:  
   
  ```
   RSPortal!subscription!RSPortal.exe!93!06/20/2019-01:16:47:: i INFO: Subscription 2b409d66-d4ea-408a-918c-0f9e41ce49ca disabled at 06/20/2019 01:16:47

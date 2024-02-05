@@ -37,10 +37,7 @@ ms.topic: conceptual
  [Immediately Apply Member Permissions &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  
   
  [How Permissions Are Determined &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
-  
- [Troubleshooting Master Data Manager Security](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-master-data-manager-security-master-data-services.aspx)  
-  
+ 
 ## See Also  
- [Master Data Manager Web Application](../master-data-services/master-data-manager-web-application.md)  
-  
-  
+
+[Master Data Manager Web Application](../master-data-services/master-data-manager-web-application.md)

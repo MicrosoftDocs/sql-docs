@@ -72,4 +72,3 @@ The following sample demonstrates how to use the ODBC APIs to connect to and acc
 ## Community
 
 - [SQL Server Drivers blog](https://techcommunity.microsoft.com/t5/SQL-Server/bg-p/SQLServer/label-name/SQLServerDrivers)  
-- [SQL Server Data Access Forum](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)

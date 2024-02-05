@@ -358,6 +358,23 @@ This can happen if you have copied and pasted text into configuration files from
 **Possible Solution:**  
 Open the files in a different text editor (other than notepad) and look for these characters and eliminate them. Restart the necessary services. 
 
+### Delta table query may fail with errors 2571 and 16513
+
+**Scenario:**  
+You may encounter the following error when querying an external Delta table:
+
+```
+Msg 2571, Level 14, State 3, Line 1
+User '<user>' does not have permission to run DBCC TRACEON.
+Msg 16513, Level 16, State 0, Line 1
+Error reading external metadata.
+```
+
+**Possible Reason:**  
+This can happen because there is a `QUERYTRACEON` query hint that can be added to Delta file metadata query and that requires `sysadmin` server role to execute. 
+
+**Possible Solution:**  
+If this occurs, you can resolve the issue by globally enabling trace flag 14073 and this will prevent the query hint from being added.
 
 ## See also
 

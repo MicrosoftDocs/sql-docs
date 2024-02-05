@@ -100,15 +100,15 @@ Whether you have created a new AD user or are using an existing AD user, there a
 
 1. Select **Add...** and add the **bdcDSA** user
 
-    :::image type="content" source="media/deploy-active-directory/image16.png" alt-text="Add BDC object properties.":::
+    :::image type="content" source="media/deploy-active-directory/image16.png" alt-text="Screenshot of adding a BDC object properties.":::
 
-    :::image type="content" source="media/deploy-active-directory/image17.png" alt-text="Select object.":::
+    :::image type="content" source="media/deploy-active-directory/image17.png" alt-text="Screenshot of selecting an object.":::
 
 1. Select the **bdcDSA** user and clear all permissions, then select **Advanced**
 
 1. Select **Add**
 
-    :::image type="content" source="media/deploy-active-directory/image18.png" alt-text="Select add.":::
+    :::image type="content" source="media/deploy-active-directory/image18.png" alt-text="Screenshot of selecting add.":::
 
     - Select **Select a Principal**, insert **bdcDSA**, and select **Ok**
 
@@ -116,7 +116,7 @@ Whether you have created a new AD user or are using an existing AD user, there a
 
     - Set **Applies To** to **This Object and all descendant objects**
 
-        :::image type="content" source="media/deploy-active-directory/image19.png" alt-text="Set allow for properties." lightbox="media/deploy-active-directory/image19.png":::
+        :::image type="content" source="media/deploy-active-directory/image19.png" alt-text="Screenshot of setting allow for properties." lightbox="media/deploy-active-directory/image19.png":::
 
     - Scroll down to the bottom, and select **Clear all**
 

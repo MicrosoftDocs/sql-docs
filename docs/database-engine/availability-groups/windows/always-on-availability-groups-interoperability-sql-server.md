@@ -19,7 +19,7 @@ helpviewer_keywords:
 
 This article documents interoperability of [!INCLUDE [ssHADR](../../../includes/sshadr-md.md)] with other [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] features.
 
-## <a id="Interop"></a> Features that Interoperate with Always On Availability Groups
+## <a id="Interop"></a> Features that Interoperate with Always On availability groups
 
 The following table lists [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] features that interoperate with [!INCLUDE [ssHADR](../../../includes/sshadr-md.md)]. A link in the **More Information** column indicates that interoperability considerations exist for a given feature.
 
@@ -40,7 +40,7 @@ The following table lists [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-
 | Service Broker | [Service Broker with Always On Availability Groups (SQL Server)](../../../database-engine/availability-groups/windows/service-broker-with-always-on-availability-groups-sql-server.md) |
 | SQL Server Agent | &nbsp; |
 
-## <a id="restrictions"></a> Features that Interoperate with Always On Availability Groups with Restrictions
+## <a id="restrictions"></a> Features that interoperate with Always On availability groups with restrictions
 
 The following features interoperate with [!INCLUDE [ssHADR](../../../includes/sshadr-md.md)] with specific restrictions. See the linked topics for details.
 
@@ -48,7 +48,7 @@ The following features interoperate with [!INCLUDE [ssHADR](../../../includes/ss
 - Distributed transactions require [!INCLUDE [sssql16-md](../../../includes/sssql16-md.md)] SP2 and Windows Server 2012 R2 or later, with some patching requirements. For more information, see [Cross-Database Transactions and Distributed Transactions for Always On Availability Groups and Database Mirroring (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 - [Query statistics system data collector](../../../relational-databases/data-collection/system-data-collection-set-reports.md#Query) cannot reliably run in an environment with non-readable secondaries. To use query statistics system data collector, set all secondary availability group replicas to allow [read-access](configure-read-only-access-on-an-availability-replica-sql-server.md).
 
-## <a id="NoInterop"></a> Features that Do Not Interoperate with Always On Availability Groups
+## <a id="NoInterop"></a> Features that don't interoperate with Always On availability groups
 
 [!INCLUDE [ssHADR](../../../includes/sshadr-md.md)] does not interoperate with the following features:
 

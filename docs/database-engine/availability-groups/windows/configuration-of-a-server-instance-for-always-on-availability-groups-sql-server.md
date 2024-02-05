@@ -22,7 +22,7 @@ This article contains information about the requirements for configuring an inst
 > [!IMPORTANT]  
 > For essential information about [!INCLUDE [ssHADR](../../../includes/sshadr-md.md)] prerequisites and restrictions for Windows Server Failover Clustering (WSFC) nodes and instances of [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)], see [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).
 
-## <a id="TermsAndDefinitions"></a> Terms and Definitions
+## <a id="TermsAndDefinitions"></a> Terms and definitions
 
 [Always On Availability Groups](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
 A high-availability and disaster-recovery solution that provides an enterprise-level replacement for database mirroring. An *availability group* supports a failover environment for a discrete set of user databases, known as *availability databases*, that fail over together.
@@ -33,7 +33,7 @@ An instantiation of an availability group hosted by a specific instance of [!INC
 [database mirroring endpoint](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
 An endpoint is an SQL Server object that enables SQL Server to communicate over the network. To participate in database mirroring and/or [!INCLUDE [ssHADR](../../../includes/sshadr-md.md)] a server instance requires a unique, dedicated endpoint. All mirroring and availability group connections on a server instance use the same database mirroring endpoint. This special-purpose endpoint is used exclusively to receive these connections from other server instances.
 
-## <a id="ConfigSI"></a> To Configure a Server Instance to Support Always On Availability Groups
+## <a id="ConfigSI"></a> To configure a server instance to support Always On availability groups
 
 To support [!INCLUDE [ssHADR](../../../includes/sshadr-md.md)], a server instance must reside on a node in the WSFC failover cluster that hosts the availability group, be [!INCLUDE [ssHADR](../../../includes/sshadr-md.md)] enabled and possessed a database mirroring endpoint.
 
@@ -41,7 +41,7 @@ To support [!INCLUDE [ssHADR](../../../includes/sshadr-md.md)], a server instanc
 
 1. Ensure that the server instance possesses a database mirroring endpoint.
 
-## <a id="RelatedTasks"></a> Related Tasks
+## <a id="RelatedTasks"></a> Related tasks
 
 **To enable Always On Availability Groups**
 

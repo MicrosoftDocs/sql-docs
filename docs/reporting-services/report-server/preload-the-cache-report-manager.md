@@ -133,7 +133,7 @@ helpviewer_keywords:
      Or, to create a custom schedule, select **On a schedule created for this subscription**, and then select **Next**. Configure the schedule, and then select **Finish**.  
   
     > [!NOTE]  
-    > In order for the subscribers to receive the newest report, configure the schhedule to be consistent with the report delivery schedule that you have defined for the subscribers. For more information, see the [web portal of a report server (SSRS Native Mode)](../web-portal-ssrs-native-mode.md).
+    > In order for the subscribers to receive the newest report, configure the schedule to be consistent with the report delivery schedule that you have defined for the subscribers. For more information, see the [web portal of a report server (SSRS Native Mode)](../web-portal-ssrs-native-mode.md).
   
 1. Configure the Execution options for the report as follows. On the **Report** page, select the **Properties** tab.  
   

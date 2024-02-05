@@ -320,7 +320,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |Column|Description|  
 |------------|------------------------------------------------------------|  
 |InstanceName|Name of the report server instance that handled the request.|  
-|ReportPath|The path structure to the report. A report saved in the root folder as **test**, has a ReportPath of `/test`.<br /><br /> A report named **test** that is saved in the folder S**amples**, would have a ReportPath of `/Samples/test/`.|  
+|ReportPath|The path structure to the report. A report saved in the root folder as **test**, has a ReportPath of `/test`.<br /><br /> A report named **test** that is saved in the folder **Samples**, would have a ReportPath of `/Samples/test/`.|  
 |UserName|User identifier.|  
 |ExecutionID||  
 |RequestType|Request type is either `user` or `system`.|  

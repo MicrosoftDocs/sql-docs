@@ -19,9 +19,7 @@ ms.custom: updatefrequency5
   
 - [`SetSPN`](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11))
   
-- [Service Principal Names (SPNs) SetSPN Syntax (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)
-  
- You must be a domain administrator to run the utility on the domain controller.  
+  You must be a domain administrator to run the utility on the domain controller.  
   
 ## Syntax  
 

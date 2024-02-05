@@ -38,7 +38,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Generates a schema-only clone of a database by using `DBCC CLONEDATABASE` in order to investigate performance issues related to the query optimizer.
+Generates a schema-only, read-only copy of a database by using `DBCC CLONEDATABASE` in order to investigate performance issues related to the query optimizer. 
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -102,6 +102,8 @@ Specifies if service broker related system catalogs should be included in the cl
 Creates and verifies a backup of the clone database. If used in combination with `VERIFY_CLONEDB`, the clone database is verified before the backup is taken.
 
 ## Remarks
+
+A clone of a database is only intended for investigating query optimizer performance problems. The clone is a read-only, schema-only copy of the original database and has limitations on which objects are copied over. See the [Supported Objects](#supported-objects) section for more details. Any other use of a clone database isn't supported. 
 
 The following validations are performed by `DBCC CLONEDATABASE`. The command fails if any of the validations fail.
 

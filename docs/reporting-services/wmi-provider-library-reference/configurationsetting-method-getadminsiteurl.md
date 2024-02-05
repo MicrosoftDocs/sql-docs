@@ -1,6 +1,6 @@
 ---
-title: "GetAdminSiteUrl Method (WMI)"
-description: "ConfigurationSetting Method - GetAdminSiteUrl"
+title: "GetAdminSiteUrl method (WMI)"
+description: "ConfigurationSetting method - GetAdminSiteUrl"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -11,7 +11,7 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "GetAdminSiteUrl method"
 ---
-# ConfigurationSetting Method - GetAdminSiteUrl
+# ConfigurationSetting method - GetAdminSiteUrl
   Gets the absolute URL for the Central Administration Web site for the Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)], [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], or [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] farm that the report server is integrated with.  
   
 ## Syntax  
@@ -32,13 +32,13 @@ public void GetAdminSiteUrl(out string AdminSiteUrl, out Int32 HRESULT);
  *HRESULT*  
  [out] Value indicating whether the call succeeded or failed.  
   
-## Return Value  
- Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A non-zero value indicates that an error has occurred.  
+## Return value  
+ Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A nonzero value indicates that an error occurred.  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Methods](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-methods.md)  
+## Related content  
+ [MSReportServer_ConfigurationSetting methods](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-methods.md)  
   
   

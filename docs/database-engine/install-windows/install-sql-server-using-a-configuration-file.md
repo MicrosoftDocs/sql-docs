@@ -26,6 +26,9 @@ Setup supports the use of the configuration file only through the [command promp
 
  The configuration file can be used to track the parameters and values for each installation. This makes the configuration file useful for verifying and auditing the installations.
 
+> [!TIP]
+> Since configuration options may change from version to version, it's best to generate a new `ConfigurationFile.ini` for each new version of SQL Server. 
+
 ## Configuration file structure
 
  The `ConfigurationFile.ini` file is a text file with parameters (name/value pair) and descriptive comments.

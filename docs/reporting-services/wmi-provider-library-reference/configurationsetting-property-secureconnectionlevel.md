@@ -1,6 +1,6 @@
 ---
-title: "SecureConnectionLevel Property (WMI MSReportServer_ConfigurationSetting)"
-description: "SecureConnectionLevel Property (WMI MSReportServer_ConfigurationSetting)"
+title: "SecureConnectionLevel property (WMI MSReportServer_ConfigurationSetting)"
+description: "SecureConnectionLevel property (WMI MSReportServer_ConfigurationSetting)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -14,8 +14,8 @@ apilocation: "reportingservices.mof"
 apiname: "SecureConnectionLevel"
 apitype: MOFDef
 ---
-# ConfigurationSetting Property - SecureConnectionLevel
-  Returns the secure connection level specified in the RSReportServer.config file. Read-only.  
+# ConfigurationSetting property - SecureConnectionLevel
+  Returns the secure connection level specified in the `RSReportServer.config` file. Read-only.  
   
 ## Syntax  
   
@@ -27,20 +27,20 @@ Public Dim SecureConnectionLevel As Integer
 public Integer SecureConnectionLevel;  
 ```  
   
-## Property Values  
+## Property values  
  An **Integer** value that represents the secure connection level. The return values indicate that the TLS is either configured or not. A value of greater than or equal to 1 indicates that TLS is turned on. A value of 0 indicates that TLS is turned off.  
   
-## Example Code  
- [MSReportServer_ConfigurationSetting Class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
+## Example code  
+ [MSReportServer_ConfigurationSetting class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## Remarks
 
-In SQL Server 2008 R2, SecureConnectionLevel is made an on/off switch. For more information, see [ConfigurationSetting Method - SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md).
+In SQL Server 2008 R2, *SecureConnectionLevel* is made an on/off switch. For more information, see [ConfigurationSetting method - SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md).
 
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+## Related content 
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

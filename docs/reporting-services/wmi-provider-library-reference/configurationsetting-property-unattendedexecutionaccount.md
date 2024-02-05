@@ -1,6 +1,6 @@
 ---
-title: "UnattendedExecutionAccount Property (WMI MSReportServer_ConfigurationSetting)"
-description: "UnattendedExecutionAccount Property (WMI MSReportServer_ConfigurationSetting)"
+title: "UnattendedExecutionAccount property (WMI MSReportServer_ConfigurationSetting)"
+description: "UnattendedExecutionAccount property (WMI MSReportServer_ConfigurationSetting)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -14,7 +14,7 @@ apilocation: "reportingservices.mof"
 apiname: "UnattendedExecutionAccount"
 apitype: MOFDef
 ---
-# ConfigurationSetting Property - UnattendedExecutionAccount
+# ConfigurationSetting property - UnattendedExecutionAccount
   Returns the user account that the report server impersonates when running reports unattended. Read-only.  
   
 ## Syntax  
@@ -27,16 +27,16 @@ Public Dim UnattendedExecutionAccount As String
 public string UnattendedExecutionAccount;  
 ```  
   
-## Property Values  
+## Property values  
  A **String** object that represents the account name.  
   
-## Example Code  
- [MSReportServer_ConfigurationSetting Class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
+## Example code  
+ [MSReportServer_ConfigurationSetting class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+## Related content 
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

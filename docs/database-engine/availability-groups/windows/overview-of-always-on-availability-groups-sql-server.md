@@ -282,8 +282,8 @@ For more information, see [Automatic Page Repair](../../../sql-server/failover-c
 - [Archive: CSS SQL Server Engineers Blogs](/archive/blogs/psssql/)
 
 **Whitepapers:**
+
 - [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))
-- [Microsoft White Papers for SQL Server 2012](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)
 
 ## Next steps
 

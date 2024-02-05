@@ -13,8 +13,6 @@ ms.custom: updatefrequency5
 
   If you cannot install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] because of errors that occur during setup, use the instructions in this article to address the conditions that are most likely to cause installation errors.  
   
- For information about other errors and issues related to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Troubleshoot SSRS issues and errors.](https://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)  
-  
  Review the [Online release notes](https://go.microsoft.com/fwlink/?linkid=236893) in case the issue you encounter is described in the release notes.  
   
 ##  <a name="bkmk_setuplogs"></a> Check setup logs  
@@ -162,8 +160,6 @@ ms.custom: updatefrequency5
   
 -   Review the SharePoint article on development environments. [Set up a general development environment for SharePoint](/sharepoint/dev/general-development/set-up-a-general-development-environment-for-sharepoint)  
   
--   Review the forum post: [Central Administration returns blank page after installation on Windows 7](https://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
-  
 -   The Service account you are using for SharePoint services such as the SharePoint 2013/2016 Central Administration Service, should have administrative privileges in the local operating system.  
   
  ![Arrow icon used with Back to Top link](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Troubleshoot Problems with SharePoint Mode installations](#bkmk_tshoot_sharepoint)  
@@ -265,8 +261,6 @@ ms.custom: updatefrequency5
   
 ##  <a name="bkmk_additional"></a> Additional resources  
  The following are additional resources you can review to assist you with troubleshooting issues:  
-  
--   TechNet Wiki: [Troubleshoot SQL Server Reporting Services (SSRS) in SharePoint 2010 Integrated Mode](https://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
   
 -   [Microsoft Q & A: SQL Server Reporting Services](/answers/topics/sql-server-reporting-services.html)  
   

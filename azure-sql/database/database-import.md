@@ -173,6 +173,7 @@ To cancel the import operation, you need to be a member of one of the following 
 - Storage behind a firewall is currently not supported.
 - During the import process, do not create a database with the same name. The import process creates a new database of the specified name.
 - Currently, the Import/Export service does not support Microsoft Entra ID authentication when MFA is required.
+- Import\Export services only supports SQL authentication and Microsoft Entra ID. Import\Export is not compatible with Microsoft Identity application registration.
 
 ## Additional tools
 

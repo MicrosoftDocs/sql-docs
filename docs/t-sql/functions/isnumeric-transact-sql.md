@@ -69,7 +69,7 @@ GO
 ```  
   
 ## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following example uses `ISNUMERIC` to return all the postal codes that are not numeric values.  
+ The following example uses `ISNUMERIC` to return whether the database name and ID are numeric values.  
   
 ```sql
 USE master;  

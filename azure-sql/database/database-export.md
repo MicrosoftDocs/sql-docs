@@ -5,7 +5,7 @@ description: Export a database to a BACPAC file using the Azure portal, PowerShe
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, hudequei
-ms.date: 01/26/2024
+ms.date: 02/06/2024
 ms.service: sql-db-mi
 ms.subservice: data-movement
 ms.topic: how-to
@@ -125,7 +125,7 @@ Stop-AzSqlDatabaseActivity -ResourceGroupName $ResourceGroupName -ServerName $Se
 - Immutable storage is currently not supported.
 - [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md) doesn't currently support exporting a database to a BACPAC file using the Azure portal or Azure PowerShell. To export a managed instance into a BACPAC file, use SQL Server Management Studio (SSMS) or [SQLPackage](/sql/tools/sqlpackage).
 - Currently, the Import/Export service does not support Microsoft Entra ID authentication when MFA is required.
-- Import\Export services only supports SQL authentication and Microsoft Entra ID. Import\Export is not compatible with Microsoft Identity application registration.
+- Import\Export services only support SQL authentication and Microsoft Entra ID. Import\Export is not compatible with Microsoft Identity application registration.
 
 ## Related content
 

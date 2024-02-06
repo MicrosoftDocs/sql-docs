@@ -22,7 +22,7 @@ CreateVersionedSOSHostObject(
     REFIID                 interfacIid, 
     const SOSHOST_CLIENTID clientId,    
     const PCWSTR           szClientName
-    )
+    );
 ```
 
 ## Parameters

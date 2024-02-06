@@ -134,7 +134,13 @@ The following table explains the commands, views, and functions that you can use
 | [sp_addsrvrolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md) | Command | Adds a login as a member of a server-level role. Deprecated. Use [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) instead. |
 | [sp_dropsrvrolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md) | Command | Removes a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login or a Windows user or group from a server-level role. Deprecated. Use [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) instead. |
 
-## See also
+## Roles specific to SQL Server enabled by Azure Arc
+
+[!INCLUDE [arc-enabled-roles](../../../includes/arc-enabled-roles.md)]
+
+For permissions, review [Permissions](../../../sql-server/azure-arc/permissions-granted-agent-extension.md#permissions).
+
+## Related content
 
 - [Database-Level Roles](../../../relational-databases/security/authentication-access/database-level-roles.md)
 - [Security Catalog Views (Transact-SQL)](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)

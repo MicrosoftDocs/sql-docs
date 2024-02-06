@@ -1,5 +1,5 @@
 ---
-title: "GetSvcInstanceIDFromName"
+title: "GetSvcInstanceIDFromName()"
 description: "GetSvcInstanceIDFromName()"
 author: MikeRayMSFT
 ms.author: mikeray

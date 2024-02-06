@@ -5,7 +5,7 @@ description: This article explains the Azure SQL Database connectivity architect
 author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, mathoma, vanto
-ms.date: 01/30/2024
+ms.date: 02/05/2024
 ms.service: sql-database
 ms.subservice: connect
 ms.topic: conceptual
@@ -19,6 +19,8 @@ ms.custom:
 
 This article explains architecture of various components that direct network traffic to a server in Azure SQL Database or dedicated SQL pools (formerly SQL DW) in Azure Synapse Analytics. It also explains different connection policies and how it impacts clients connecting from within Azure and clients connecting from outside of Azure.
 
+- For connection strings to Azure SQL Database, see [Connect and query to Azure SQL Database](connect-query-content-reference-guide.md).
+- For connection strings to Azure Synapse Analytics pools, see [Connect to Synapse SQL](/azure/synapse-analytics/sql/connect-overview).
 - For settings that control connectivity to the [logical server](logical-servers.md) for Azure SQL Database and dedicated SQL pools (formerly SQL DW) in Azure Synapse Analytics, see [connectivity settings](connectivity-settings.md).
 - This article does *not* apply to **Azure SQL Managed Instance**. Refer to [Connectivity architecture for Azure SQL Managed Instance](../managed-instance/connectivity-architecture-overview.md).
 

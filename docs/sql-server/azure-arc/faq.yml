@@ -25,9 +25,6 @@ sections:
           1. Set the value for excluded instances in the custom definition.
           1. Target the subscription and resource group.
 
-          > [!WARNING]  
-          > SQL Server instances using Pay-as-you-go (PAYG) can't be excluded.
-
       - question: Is the data from my instance of SQL Server sent to Azure?
         answer: |
            No. Microsoft only captures metadata and information about your SQL Server to help troubleshoot and inventory. The data sent doesn't include user data or about your utilization of SQL Server.

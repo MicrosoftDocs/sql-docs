@@ -75,7 +75,7 @@ The following license types are supported:
 * **PAYG**: Pay for your SQL Server software usage through Microsoft Azure. See [SQL Server prices and licensing](https://www.microsoft.com/sql-server/sql-server-2022-pricing).
 
   > [!IMPORTANT]
-  > [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] Pay-As-You-Go (PAYG) provides a flexible subscription-based access to SQL Server. The servers with SQL Server instances using PAYG must be continuously connected to Azure. Intermittent connectivity disruptions for up to 30 days are tolerated with built-in resilience. After 30 days of dysconnectivity the PAYG subscription will expire. Please be advised that once your subscription expires, you are not authorized to use the software.
+  > [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] Pay-As-You-Go (PAYG) provides a flexible subscription-based access to SQL Server. The servers with SQL Server instances using PAYG must be continuously connected to Azure. Intermittent connectivity disruptions for up to 30 days are tolerated with built-in resilience. After 30 days of dysconnectivity the PAYG subscription will expire. Please be advised that once your subscription expires, you aren't authorized to use the software.
 
 * **Paid** and **LicenseOnly**: Use an existing license agreement. Usage implies that you already have the necessary licenses. In these cases, your software usage will be reported to you using a free meter. You can analyze your usage in the [Cost Management + Billing portal](/azure/cost-management-billing/) to make sure you have enough licenses for all your installed SQL Server instances.
 
@@ -114,15 +114,15 @@ The next table shows the meter SKUs that are used for different license types an
 | Web | Web | LicenseOnly | n/a | Web edition |
 | Express | Express | LicenseOnly | n/a | Express edition |
 
-<sup>1</sup> When Enterprise edition is installed, it indicates that the Server/CAL licensing model is used. Because the conversion to the core-based licensing model does not require an upgrade to the  Enterprise Core, we treat this edition as Enterprise Core. The instances that have not converted to the core-based model and use a Server/CAL license must set the license type to LicenseOnly.
+<sup>1</sup> When Enterprise edition is installed, it indicates that the Server/CAL licensing model is used. Because the conversion to the core-based licensing model doesn't require an upgrade to the  Enterprise Core, we treat this edition as Enterprise Core. The instances that have not converted to the core-based model and use a Server/CAL license must set the license type to LicenseOnly.
 
-In addition to billing differences, license type determines what features will be available to your Arc-enabled SQL Server. The following features are not included when the LicenseOnly license type is selected:
+In addition to billing differences, license type determines what features will be available to your Arc-enabled SQL Server. The following features aren't included when the LicenseOnly license type is selected:
 
 * Licensing benefit for failover servers. The Azure extension for SQL Server supports free failover servers. Specifically, the extension:
   * Automatically detects if the instance hosts a replica in an availability group
   * Reporting the usage with a separate meter.
 
-   To qualify for this benefit, the replica must be fully passive. All of its databases must be part of the same group. If one or more databases are not part of the group, the instance is treated as active and billed based on its edition. For more information, see the [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/sql-server).
+   To qualify for this benefit, the replica must be fully passive. All of its databases must be part of the same group. If one or more databases aren't part of the group, the instance is treated as active and billed based on its edition. For more information, see the [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/sql-server).
 
 * Detailed database inventory. You can manage your SQL database inventory in the Azure portal. See [View databases](view-databases.md) for details.
 * Managing automatic updates of SQL Server from Azure.
@@ -139,11 +139,14 @@ Extended Security Updates (ESU) is available for qualified SQL Server instances 
 
 You can exclude certain instances from the at-scale onboarding operations driven by Azure policy or by automatic onboarding processes. To exclude specific instances from these operations, add the instance names to the **Skip Instances** list. For details about at-scale onboarding options, see [Alternate deployment options for SQL Server enabled by Azure Arc](deployment-options.md).
 
+> [!WARNING]  
+> SQL Server instances using Pay-as-you-go (PAYG) can't be excluded.
+
 ## Modify SQL Server configuration
 
 You can use Azure portal, PowerShell or CLI to change all or some configuration settings on a specific Arc-enabled server to the desired state.
 
-To modify the SQL Server Configuration for a larger scope, such as a resource group, subscription, or multiple subscriptions with a single command, use the [Modify SQL Server Configuration](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/modify-license-type) PowerShell script. It is published as an open source SQL Server sample and includes the step-by-step instructions.
+To modify the SQL Server Configuration for a larger scope, such as a resource group, subscription, or multiple subscriptions with a single command, use the [Modify SQL Server Configuration](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/modify-license-type) PowerShell script. It's published as an open source SQL Server sample and includes the step-by-step instructions.
 
 > [!TIP]  
 > Run the script from Azure Cloud shell as it has the required Azure PowerShell modules pre-installed and you will be automatically authenticated. For details, see [Running the script using Cloud Shell](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/modify-license-type#running-the-script-using-cloud-shell).
@@ -152,7 +155,7 @@ To modify the SQL Server Configuration for a larger scope, such as a resource gr
 
 There are two ways to configure the SQL Server host in Azure portal.
 
-* Open the Arc-enabled Server overview page and click **SQL Server Configuration** as shown.
+* Open the Arc-enabled Server overview page and select **SQL Server Configuration** as shown.
 
    :::image type="content" source="media/billing/overview-of-sql-server-azure-arc.png" alt-text="Screenshot of the SQL Server enabled by Azure Arc in Azure portal."  lightbox="media/billing/overview-of-sql-server-azure-arc.png" :::
 
@@ -187,7 +190,7 @@ After you verify the license type, ESU setting, and any instance to exclude, sel
 
 ### [PowerShell](#tab/powershell)
 
-The following command will set the license type to "PAYG", enable the ESU subscription and add two instances to the  exclusion list.
+The following command sets the license type to "PAYG", enable the ESU subscription and add two instances to the exclusion list.
 
 ```powershell
 //Updated settings object
@@ -287,7 +290,7 @@ resources
 //| summarize count()
 ```
 
-This query returns Azure Arc-enabled servers that have SQL Server instances, but the Arc SQL Server extension is not installed. This query only applies to Windows servers.
+This query returns Azure Arc-enabled servers that have SQL Server instances, but the Arc SQL Server extension isn't installed. This query only applies to Windows servers.
 
 ```kusto
 resources

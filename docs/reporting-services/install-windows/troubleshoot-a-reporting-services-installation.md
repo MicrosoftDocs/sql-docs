@@ -13,6 +13,8 @@ ms.custom: updatefrequency5
 
   If you cannot install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] because of errors that occur during setup, use the instructions in this article to address the conditions that are most likely to cause installation errors.  
   
+ For information about other errors and issues related to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Troubleshoot SSRS issues and errors](/archive/technet-wiki/1633.ssrs-troubleshoot-issues-and-errors-with-reporting-services).  
+  
  Review the [Online release notes](https://go.microsoft.com/fwlink/?linkid=236893) in case the issue you encounter is described in the release notes.  
   
 ##  <a name="bkmk_setuplogs"></a> Check setup logs  
@@ -261,6 +263,8 @@ ms.custom: updatefrequency5
   
 ##  <a name="bkmk_additional"></a> Additional resources  
  The following are additional resources you can review to assist you with troubleshooting issues:  
+  
+-   [Reporting Services SharePoint Integration Troubleshooting](/previous-versions/sql/sql-server-2008/ee384252(v=sql.100))  
   
 -   [Microsoft Q & A: SQL Server Reporting Services](/answers/topics/sql-server-reporting-services.html)  
   

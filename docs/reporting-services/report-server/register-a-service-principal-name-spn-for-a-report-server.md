@@ -18,6 +18,8 @@ ms.custom: updatefrequency5
  To create an SPN, you can use the **SetSPN** command line utility. For more information, see:  
   
 - [`SetSPN`](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11))
+
+- [Register a Service Principal Name (SPN) for a report server](register-a-service-principal-name-spn-for-a-report-server.md)
   
   You must be a domain administrator to run the utility on the domain controller.  
   

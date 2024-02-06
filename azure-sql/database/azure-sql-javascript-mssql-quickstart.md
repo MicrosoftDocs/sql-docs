@@ -22,7 +22,7 @@ Passwordless connections offer a secure and user-friendly method to access Azure
 
 * Prepare your environment for password-free authentication.
     * For a local environment: Your personal identity from the IDE is used.
-    * For a cloud environment: A managed identity is used.
+    * For a cloud environment: A [managed identity](/azure/azure-sql/database/authentication-azure-ad-user-assigned-managed-identity) is used.
 * Authenticate in the environment using the DefaultAzureCredential from the Azure Identity library to obtain a verified credential.
 * Use the verified credential to create SDK client objects for resource access.
 

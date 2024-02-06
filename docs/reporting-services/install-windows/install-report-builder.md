@@ -23,7 +23,7 @@ Your administrator can install Report Builder with [Microsoft Endpoint Configura
 And you can install it from several places:
 
 - The [Microsoft Download Center](#download).
-- The [web portal of a report server](#install-report-builder-from--the--web-portal).
+- The [web portal of a report server](#install-report-builder-from-the-web-portal).
 - A [share](#install-report-builder-from-a-share).
 - The [command line](#install-report-builder-from-the-command-line).
 

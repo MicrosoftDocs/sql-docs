@@ -114,7 +114,7 @@ The next table shows the meter SKUs that are used for different license types an
 | Web | Web | LicenseOnly | n/a | Web edition |
 | Express | Express | LicenseOnly | n/a | Express edition |
 
-<sup>1</sup> When Enterprise edition is installed, it indicates that the Server/CAL licensing model is used. Because the conversion to the core-based licensing model doesn't require an upgrade to the  Enterprise Core, we treat this edition as Enterprise Core. The instances that have not converted to the core-based model and use a Server/CAL license must set the license type to LicenseOnly.
+<sup>1</sup> When Enterprise edition is installed, it indicates that the Server/CAL licensing model is used. Because the conversion to the core-based licensing model doesn't require an upgrade to the  Enterprise Core, we treat this edition as Enterprise Core. The instances that haven't converted to the core-based model and use a Server/CAL license must set the license type to LicenseOnly.
 
 In addition to billing differences, license type determines what features will be available to your Arc-enabled SQL Server. The following features aren't included when the LicenseOnly license type is selected:
 

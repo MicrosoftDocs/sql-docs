@@ -9,6 +9,7 @@ ms.service: sql
 ms.subservice: ssms
 ms.topic: ui-reference
 f1_keywords:
+  - "sql13.swb.connection.login.sqlserver.f1"
   - "sql13.swb.connecttosqlserver.login.f1"
   - "sql13.swb.connectoserverunknownservertype.f1"
 ---

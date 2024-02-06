@@ -14,7 +14,19 @@ monikerRange: "= azuresql || = azuresql-db"
 # Connect to and query Azure SQL Database using Node.js and mssql npm package
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using Node.js and mssql. This quickstart follows the recommended passwordless approach to connect to the database. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
+This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using Node.js and mssql. This quickstart follows the recommended passwordless approach to connect to the database. 
+
+## Passwordless connections for developers
+
+Passwordless connections offer a secure and user-friendly method to access Azure resources. The following highlevel steps are used to connect to Azure SQL Database using passwordless connections in this article:
+
+* Prepare your environment for password-free authentication.
+    * For a local environment: Your personal identity from the IDE is used.
+    * For a cloud environment: A managed identity is used.
+* Authenticate in the environment using the DefaultAzureCredential from the Azure Identity library to obtain a verified credential.
+* Use the verified credential to create SDK client objects for resource access.
+
+You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
 
 ## Prerequisites
 
@@ -543,7 +555,7 @@ The **mssql** package implements the connection to Azure SQL Database by providi
 
 ## Test the app locally
 
-The app is ready to be tested locally. Make sure you're signed in to the Azure Cloud in Visual Studio Code with the same account you set as the admin for your database.
+The app is ready to be tested locally. Make sure you're signed in to the Azure Cloud in Visual Studio Code with the same account you set as the admin for your database. 
 
 1. Run the application with the following command. The app starts on port 3000. 
 

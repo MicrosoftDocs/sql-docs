@@ -555,7 +555,7 @@ The **mssql** package implements the connection to Azure SQL Database by providi
 
 ## Test the app locally
 
-The app is ready to be tested locally. Make sure you're signed in to the Azure Cloud in Visual Studio Code with the same account you set as the admin for your database. 
+The app is ready to be tested locally. Make sure you're signed in to the Azure Cloud in Visual Studio Code with the same account you set as the admin for your database.
 
 1. Run the application with the following command. The app starts on port 3000. 
 

@@ -1,10 +1,10 @@
 ---
 title: "Format a Reporting Services script file"
-description: Learn how to format a Reporting Services script file in Microsoft Visual Basic .NET that contains user-defined procedures and module-level variables.
+description: Format a Reporting Services script file in Microsoft Visual Basic .NET that contains user-defined procedures and module-level variables.
 author: maggiesMSFT
 ms.author: maggies
-ms.reviewer: maghan
-ms.date: 02/02/2024
+ms.reviewer: maghan, randolphwest
+ms.date: 02/05/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
@@ -14,22 +14,21 @@ helpviewer_keywords:
   - "scripts [Reporting Services], formats"
   - "formats [Reporting Services], script files"
 ---
-
 # Format a Reporting Services script file
 
-A [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] script is a [!INCLUDE [msCoName](../../includes/msconame-md.md)] Visual Basic .NET code file. The file is written against a proxy built on Web Service Description Language (WSDL), which defines the Reporting Services SOAP API. A script file is stored as a Unicode or UTF-8 text file with the extension .rss.
+A [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] script is a [!INCLUDE [visual-basic-md](../../includes/visual-basic-md.md)] code file, written against a proxy that is built on Web Service Description Language (WSDL), which defines the Reporting Services SOAP API. A script file is stored as a Unicode or UTF-8 text file with the extension .rss.
 
-The script file acts as a [!INCLUDE [vsprvs-md](../../includes/vsprvs-md.md)] module and can contain user-defined procedures and module-level variables. For the script file to run successfully, it must contain a Main procedure. The Main procedure is the first one accessed when your script file runs. Main is where you can add your Web service operations and run your user defined subprocedures. The following code creates a Main procedure:
+The script file acts as a [!INCLUDE [visual-basic](../../includes/visual-basic-md.md)] module and can contain user-defined procedures and module-level variables. For the script file to run successfully, it must contain a `Main` procedure. The `Main` procedure is the first procedure that is accessed when your script file runs. `Main` is where you can add your Web service operations and run your user defined subprocedures. The following code creates a `Main` procedure:
 
-```csharp
+```vbnet
 Public Sub Main()
-    'Your code goes here.'
+    ' Your code goes here.
 End Sub
 ```
 
-The script environment automatically connects to the report server, creates the Web proxy class, and generates a reference variable (*rs*) to the Web service proxy object. Individual statements you create need to refer to the *rs* module-level variable to perform any Web service operations available in the Web service library. The following [!INCLUDE [vsprvs-md](../../includes/vsprvs-md.md)] code calls the Web service <xref:ReportService2010.ReportingService2010.ListChildren%2A> method from within a script file:
+The script environment automatically connects to the report server, creates the Web proxy class, and generates a reference variable (`rs`) to the Web service proxy object. Individual statements you create only need to refer to the `rs` module-level variable, to perform any of the Web service operations available in the Web service library. The following [!INCLUDE [visual-basic](../../includes/visual-basic-md.md)] code calls the Web service <xref:ReportService2010.ReportingService2010.ListChildren%2A> method from within a script file:
 
-```csharp
+```vbnet
 Public Sub Main()
     Dim items() As CatalogItem
     items = rs.ListChildren("/", True)
@@ -41,15 +40,14 @@ Public Sub Main()
 End Sub
 ```
 
-> [!IMPORTANT]  
-> User credentials are managed by the script environment and passed through command prompt arguments using RS.exe. Although you can use the *rs* variable to set the authentication of the Web service, it is recommended that you use the script environment. You do not need to authenticate the Web service in the script file. For more information about authenticating the script environment, see [RS.exe Utility (SSRS)](../../reporting-services/tools/rs-exe-utility-ssrs.md).
+User credentials are managed by the script environment and passed through command prompt arguments using **RS.exe**. Although you can use the `rs` variable to set the authentication of the Web service, you should use the script environment instead. You don't need to authenticate the Web service in the script file. For more information about authenticating the script environment, see [RS.exe utility (SSRS)](rs-exe-utility-ssrs.md).
 
-You don't declare namespaces within the script file. The scripting environment makes several useful [!INCLUDE [msCoName](../../includes/msconame-md.md)] [!INCLUDE [dnprdnshort](../../includes/dnprdnshort-md.md)] namespaces available to you: **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**, and **System.IO**.
+You don't declare namespaces within the script file. The scripting environment makes several useful [!INCLUDE [msCoName](../../includes/msconame-md.md)] [!INCLUDE [dnprdnshort](../../includes/dnprdnshort-md.md)] namespaces available to you: `System.Web.Services`, `System.Web.Services.Protocols`, `System.Xml`, and `System.IO`.
 
-For script samples, see [SQL Server Reporting Services product samples](https://go.microsoft.com/fwlink/?LinkId=177889).
+For script samples, see [SQL Server Reporting Services Product Samples](/archive/technet-wiki/1093.reporting-services-samples-on-codeplex-sql-server-reporting-services-ssrs).
 
 ## Related content
 
-- [Report Server web service](../../reporting-services/report-server-web-service/report-server-web-service.md)
-- [Technical reference (SSRS)](../../reporting-services/technical-reference-ssrs.md)
-- [RS.exe utility (SSRS)](../../reporting-services/tools/rs-exe-utility-ssrs.md)
+- [Report Server Web service](../report-server-web-service/report-server-web-service.md)
+- [Technical reference (SSRS)](../technical-reference-ssrs.md)
+- [RS.exe utility (SSRS)](rs-exe-utility-ssrs.md)

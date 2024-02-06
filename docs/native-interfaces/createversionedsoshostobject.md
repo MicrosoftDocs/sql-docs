@@ -3,7 +3,7 @@ title: "CreateVersionedSOSHostObject()"
 description: "CreateVersionedSOSHostObject()"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: "06/18/2021"
+ms.date: "02/06/2024"
 ms.service: sql
 ms.topic: reference
 apilocation: "sqlos.dll"

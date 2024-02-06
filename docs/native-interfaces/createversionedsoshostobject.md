@@ -21,7 +21,8 @@ This article describes a native code API that is used by SQL Server and may also
 CreateVersionedSOSHostObject(
     REFIID                 interfacIid, 
     const SOSHOST_CLIENTID clientId,    
-    const PCWSTR           szClientName,
+    const PCWSTR           szClientName
+    )
 ```
 
 ## Parameters

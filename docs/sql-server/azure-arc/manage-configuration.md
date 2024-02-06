@@ -139,7 +139,7 @@ Extended Security Updates (ESU) is available for qualified SQL Server instances 
 
 You can exclude certain instances from the at-scale onboarding operations driven by Azure policy or by automatic onboarding processes. To exclude specific instances from these operations, add the instance names to the **Skip Instances** list. For details about at-scale onboarding options, see [Alternate deployment options for SQL Server enabled by Azure Arc](deployment-options.md).
 
-> [!WARNING]  
+> [!CAUTION]  
 > SQL Server instances using Pay-as-you-go (PAYG) can't be excluded.
 
 ## Modify SQL Server configuration

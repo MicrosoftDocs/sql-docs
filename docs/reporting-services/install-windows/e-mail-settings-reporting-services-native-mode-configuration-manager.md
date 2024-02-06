@@ -140,7 +140,7 @@ Other values that are used for remote SMTP service include the following (note t
 ### Configure a remote SMTP service for the report server
 
 > [!NOTE]
-> It is recommended that you configure the mail server through the Report Server Configuration Manager.
+> It's recommended that you configure the mail server through the Report Server Configuration Manager.
 
 1. Verify that the Report Server Windows service has **Send As** permissions on the SMTP server.
 
@@ -172,7 +172,7 @@ The following configuration settings determine the connection between the report
 - **SMTPServerPickupDirectory** is set to a folder on the local drive.
 
   > [!NOTE]
-  > Be sure that you do not set SMTPServer if you are using a local SMTP server.
+  > Be sure that you don't set SMTPServer if you're using a local SMTP server.
 
 - **From** sets the value that appears in the **From:** line of an e-mail message. This value is required.
 

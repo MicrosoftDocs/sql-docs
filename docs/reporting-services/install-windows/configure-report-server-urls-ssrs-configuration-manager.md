@@ -58,7 +58,7 @@ helpviewer_keywords:
 
  By default, the authentication type supported on the URL endpoints is Windows Authentication. This setting is the default security extension. If you're implementing a custom or Forms authentication provider, you must modify the authentication settings on the report server. Optionally, you can also change the Windows Authentication settings to match the authentication subsystem used in your network. For more information, see [Authentication with the report server](../../reporting-services/security/authentication-with-the-report-server.md).  
   
-## In this aection  
+## In this section  
 
  [Configure a URL &#40;Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
  This article provides instructions for setting and modifying a URL reservation in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool.  

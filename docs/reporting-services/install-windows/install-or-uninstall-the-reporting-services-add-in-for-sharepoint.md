@@ -52,7 +52,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 
  The SQL Server 2016 Reporting Services Add-in for SharePoint products can be installed using one of the following two methods:  
   
-- **The installation wizard:** ![note](/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") In SQL Server 2016, you can install the add-in with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation wizard. Choose **Reporting Services Add-in for SharePoint Products** on the **Feature Selection** page of the wizard.  
+- **The installation wizard:** In SQL Server 2016, you can install the add-in with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation wizard. Choose **Reporting Services Add-in for SharePoint Products** on the **Feature Selection** page of the wizard.  
   
 - **rsSharepoint.msi:** The add-in can be installed directly from the installation media or downloaded and installed. The rsSharepoint.msi supports both a graphical user interface and a command line installation. You must run the .msi with administrator privileges by first opening a command prompt with elevated permissions, and then running the rsSharepoint.msi from the command line. For more information on downloading the add-in, see [Where to find the Reporting Services add-in for SharePoint products](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   

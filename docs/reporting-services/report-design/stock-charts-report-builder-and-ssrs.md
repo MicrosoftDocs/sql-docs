@@ -18,7 +18,7 @@ ms.custom: updatefrequency5
   
  ![Stock chart](../../reporting-services/report-design/media/rs-stockchart.gif "Stock chart")  
   
- An example of a stock chart is available as a sample Report Builder report. For more information about downloading this sample report and others, see [Report Builder and Report Designer sample reports](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ An example of a stock chart is available as a sample Report Builder report. For more information about downloading this sample report and others, see [Report Builder and Report Designer sample reports](../../reporting-services/tools/reporting-services-tools.md).
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

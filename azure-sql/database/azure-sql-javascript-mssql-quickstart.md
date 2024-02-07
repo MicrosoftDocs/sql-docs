@@ -18,7 +18,7 @@ This quickstart describes how to connect an application to a database in Azure S
 
 ## Passwordless connections for developers
 
-Passwordless connections offer a secure and user-friendly method to access Azure resources. The following highlevel steps are used to connect to Azure SQL Database using passwordless connections in this article:
+Passwordless connections offer a more secure mechanism for accessing Azure resources. The following high-level steps are used to connect to Azure SQL Database using passwordless connections in this article:
 
 * Prepare your environment for password-free authentication.
     * For a local environment: Your personal identity from the IDE is used.

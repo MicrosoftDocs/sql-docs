@@ -83,7 +83,7 @@ The `URL` target isn't supported for [!INCLUDE [ssnoversion-md](../../includes/s
 
 #### FILEPATH = '*os_file_path*'
 
-The path of the audit log. The file name is generated based on the audit name and audit GUID.
+The path of the audit log. The file name is generated based on the audit name and audit GUID. If this path is invalid, the audit isn't created.
 
 `FILEPATH` target isn't supported for [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]. You need to use `PATH` instead.
 

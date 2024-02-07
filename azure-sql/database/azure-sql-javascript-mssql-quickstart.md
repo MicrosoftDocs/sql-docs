@@ -21,7 +21,7 @@ This quickstart describes how to connect an application to a database in Azure S
 Passwordless connections offer a more secure mechanism for accessing Azure resources. The following high-level steps are used to connect to Azure SQL Database using passwordless connections in this article:
 
 * Prepare your environment for password-free authentication.
-    * For a local environment: Your personal identity from the IDE is used.
+    * For a local environment: Your personal identity is used. This identity can be pulled from an IDE, CLI, or other local development tools.
     * For a cloud environment: A [managed identity](/azure/azure-sql/database/authentication-azure-ad-user-assigned-managed-identity) is used.
 * Authenticate in the environment using the `DefaultAzureCredential` from the Azure Identity library to obtain a verified credential.
 * Use the verified credential to create Azure SDK client objects for resource access.

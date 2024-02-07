@@ -3,7 +3,7 @@ title: "Find the product key for SQL Server Reporting Services"
 description: "Learn how to find the  product key for SQL Server Reporting Services (SSRS) 2017 and 2019 so you can install your server in a production environment."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 01/31/2024
+ms.date: 02/07/2024
 ms.service: reporting-services
 ms.topic: conceptual
 ms.custom: updatefrequency5
@@ -32,8 +32,6 @@ You should only have to do this step the first time you install Reporting Servic
 If your volume licensing has moved to the Microsoft 365 Admin Center, you can find your product key by choosing a SQL Server version and then looking under the View Downloads section:
 
 **Billing** > **Your Products** > **Volume Licensing** > **View Downloads and Keys** > **Find SQL Server** > **View Downloads** > **View additional instructions**.
-
-:::image type="content" source="media/find-product-key/m365-additional-instructions.png" alt-text="Screenshot of View additional instructions.":::
 
 ## Next steps
 

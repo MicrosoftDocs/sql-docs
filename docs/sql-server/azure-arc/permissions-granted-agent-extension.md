@@ -12,7 +12,7 @@ ms.topic: reference
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This article lists the server roles and mappings that the installation of Azure extension for SQL Server creates.
+This article lists the server and database roles and mappings that the installation of Azure extension for SQL Server creates.
 
 ## Roles
 

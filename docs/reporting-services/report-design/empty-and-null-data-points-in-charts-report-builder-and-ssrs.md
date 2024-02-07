@@ -24,7 +24,7 @@ ms.custom: updatefrequency5
   
 -   In shape chart types, null values are omitted.  
   
- An example of a chart with empty data points is available as a sample report. For more information about downloading this sample report and others, see [Report Builder and Report Designer sample reports](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ An example of a chart with empty data points is available as a sample report. For more information about downloading this sample report and others, see [Report Builder and Report Designer sample reports](../../reporting-services/tools/reporting-services-tools.md).
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

@@ -45,7 +45,12 @@ Backups can also be configured to run on a **default** schedule which is as foll
 
 ## Assign permissions
 
-The backup service within the Azure extension for Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] uses `[NT AUTHORITY\SYSTEM]` account to perform the backups. As such, you need to grant the following permissions to this account.
+The backup service within the Azure extension for Arc-enabled SQL Server uses [NT AUTHORITY\SYSTEM] account to perform the backups. If you are [operating SQL Server enabled by Arc with least privilege](configure-least-privilege.md), backup is performed by local Windows account [NT Service\SQLServerExtension].
+ 
+If you are using Azure extension for SQL Server [version 1.1.2504.99](release-notes.md#november-14-2023) or later, the necessary permissions are granted to [NT AUTHORITY\SYSTEM] automatically and you do not need to perform any additional steps to assign permissions.
+ 
+**For earlier extensions only**, follow the below steps to assign permission to [NT AUTHORITY\SYSTEM] account.
+
 
    > [!NOTE]  
    > This requirement applies to the preview release.

@@ -6,7 +6,7 @@ ms.author: v-davidengel
 ms.date: "01/20/2017"
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords:
   - "mixed cursors [ODBC]"
   - "cursors [ODBC], dynamic"

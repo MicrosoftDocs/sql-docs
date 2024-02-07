@@ -44,8 +44,12 @@ Backups can also be configured to run on a **default** schedule which is as foll
 - Transaction log backups: every 15 minutes
 
 ## Assign permissions
+The backup service within the Azure extension for Arc-enabled SQL Server uses [NT AUTHORITY\SYSTEM] account to perform the backups. If you are [operating SQL Server enabled by Arc with least privilege](https://learn.microsoft.com/sql/sql-server/azure-arc/configure-least-privilege?view=sql-server-ver16), backup is performed by local Windows account [NT Service\SQLServerExtension].
+ 
+If you are using Azure extension for SQL Server [version 1.1.2504.99](https://learn.microsoft.com/sql/sql-server/azure-arc/release-notes?view=sql-server-ver16#november-14-2023) or later, the necesssary permissions are granted to [NT AUTHORITY\SYSTEM] automatically and you do not need to perform any additional steps to assign permissions.
+ 
+**For earlier extensions only**, follow the below steps to assign permission to [NT AUTHORITY\SYSTEM] account.
 
-The backup service within the Azure extension for Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] uses `[NT AUTHORITY\SYSTEM]` account to perform the backups. As such, you need to grant the following permissions to this account.
 
    > [!NOTE]  
    > This requirement applies to the preview release.

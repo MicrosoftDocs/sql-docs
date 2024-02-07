@@ -16,6 +16,6 @@ When you install Azure extension for SQL Server, the installation:
 
 In addition, Azure extension for SQL Server revokes permissions for these roles when they are no longer needed for specific features.
 
-If you uninstall Azure extension for SQL Server, the server level roles are removed.
+If you uninstall Azure extension for SQL Server, the server and database level roles are removed.
 
 Uninstallation removes the server and database roles.

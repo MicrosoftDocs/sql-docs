@@ -1,5 +1,5 @@
 ---
-title: "Configure the Report Server Service Account (Configuration Manager)"
+title: "Configure the Report Server Service Account (Report Server Configuration Manager)"
 description: "Reporting Services is implemented as a single service that contains a Report Server Web service, web portal, and a background processing application that is used for scheduled report processing and subscription delivery."
 author: maggiesMSFT
 ms.author: maggies
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
 
-# Configure the Report Server Service Account (Configuration Manager)
+# Configure the Report Server Service Account (Report Server Configuration Manager)
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -25,7 +25,7 @@ ms.custom: updatefrequency5
 > [!NOTE]  
 > Built-in Windows service accounts (Local Service or Network Service) aren't supported as report server service accounts on a computer that is a domain controller.
   
-## Change the Service Account
+## Change the service account
 
  To view and reconfigure service account information, always use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Service identity information is stored internally in multiple locations. Using the tool ensures that all references are updated accordingly whenever you change the account or password. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager performs the following extra steps to ensure the report server remains available:  
   
@@ -42,7 +42,7 @@ ms.custom: updatefrequency5
     > [!NOTE]  
     > If the report server is part of the scale-out deployment, only the report server that you are updating is affected. The encryption keys for other report servers in the deployment are unaffected by the service account change.  
 
-## Configure the Report Server service account  
+## Configure the report server service account  
   
 1. Start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration manager and connect to the report server.  
   
@@ -114,5 +114,5 @@ The following guidelines and links in this section can help you decide on an app
   
 ## Related content
 
-- [Configure report server URLs  &#40;Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
-- [Report Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+- [Configure report server URLs  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+- [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

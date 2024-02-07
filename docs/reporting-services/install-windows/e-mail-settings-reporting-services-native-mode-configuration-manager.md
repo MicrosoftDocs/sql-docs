@@ -1,5 +1,5 @@
 ---
-title: "E-Mail Settings in SSRS native mode (Configuration Manager)"
+title: "E-Mail settings in SSRS native mode (Report Server Configuration Manager)"
 description: "SQL Server Reporting Services includes an e-mail delivery extension so that you can distribute reports through e-mail."
 author: maggiesMSFT
 ms.author: maggies
@@ -12,7 +12,7 @@ f1_keywords:
 helpviewer_keywords:
   - "SQL11.rsconfigtool.emailsettings.F1"
 ---
-# E-Mail Settings in Reporting Services native mode (Configuration Manager)
+# E-Mail settings in Reporting Services native mode (Report Server Configuration Manager)
 
 SQL Server Reporting Services includes an e-mail delivery extension so that you can distribute reports through e-mail. Depending on how you define the e-mail subscription, a delivery might consist of a notification, link, attachment, or embedded report. The e-mail delivery extension works with your existing mail server technology. The mail server must be an SMTP server or forwarder. The report server connects to an SMTP server through Collaboration Data Objects (CDO) libraries (cdosys.dll) that are provided by the operating system.
 
@@ -29,7 +29,7 @@ The configured authentication account must have permission on the SMTP server to
 > [!NOTE]
 > The default e-mail delivery extension doesn't provide support for digitally signing or encrypting outgoing mail messages.
 
-## Setting configuration options for e-mail delivery
+## Set configuration options for e-mail delivery
 
 Before you can use Report Server e-mail delivery, you must set configuration values that provide information about which SMTP server to use.
 
@@ -42,7 +42,7 @@ To configure a report server for e-mail delivery:
 > [!NOTE]
 > Report server e-mail settings are based on CDO. If you want more detail about specific settings, you can refer to the CDO production documentation.
 
-## <a name="rsconfigman"/>Configure report server e-mail by using the Report Server Configuration Manager
+## <a name="rsconfigman"></a> Configure report server e-mail by using the Report Server Configuration Manager
 
 1. Start the Report Server Configuration Manager and connect to the report server instance.
 

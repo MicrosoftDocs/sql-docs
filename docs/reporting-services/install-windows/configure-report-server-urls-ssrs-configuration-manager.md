@@ -1,6 +1,6 @@
 ---
-title: "Configure report server URLs (Configuration Manager)"
-description: "Configure Report Server URLs (Configuration Manager)"
+title: "Configure report server URLs (Report Server Configuration Manager)"
+description: "Configure Report Server URLs (Report Server Configuration Manager)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/18/2016
@@ -12,13 +12,13 @@ helpviewer_keywords:
   - "report servers [Reporting Services], virtual directories"
   - "virtual directories [Reporting Services]"
 ---
-# Configure report server URLs (Configuration Manager)
+# Configure report server URLs (Report Server Configuration Manager)
 
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], URLs are used to access the Report Server Web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Before you can use either application, you must configure at least one URL each for the Web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides default values for both application URLs that work well in most deployment scenarios, including side-by-side deployments with other Web services and applications.  
   
 - If you installed the default configuration, URLs were created automatically using the default values.  
   
-- If you're using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to create or modify the URLs, you can accept the default values for a URL or specify custom values. A test link of the URL appears on page when you define the URL so that you can immediately confirm that the settings you specified result in a valid connection. For step-by-step instructions on how to configure and test a URL, see [Configure a URL  &#40;Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
+- If you're using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to create or modify the URLs, you can accept the default values for a URL or specify custom values. A test link of the URL appears on page when you define the URL so that you can immediately confirm that the settings you specified result in a valid connection. For step-by-step instructions on how to configure and test a URL, see [Configure a URL  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
 ## Define a report server URL  
 
@@ -48,11 +48,11 @@ helpviewer_keywords:
 |Virtual directory|ReportServer|Notice that both of the example URLs include the virtual directory name. Unless you customize the URL definition, you must always specify the application's virtual directory name on the URL.|  
   
 > [!NOTE]  
-> An underlying URL reservation enables any valid host name to be used on a URL. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool creates a URL reservation in HTTP.SYS using syntax that allows variations of the host name to resolve to a particular report server instance. For more information about URL reservations, see [About URL reservations and registration  &#40;Configuration Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).  
+> An underlying URL reservation enables any valid host name to be used on a URL. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool creates a URL reservation in HTTP.SYS using syntax that allows variations of the host name to resolve to a particular report server instance. For more information about URL reservations, see [About URL reservations and registration  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).  
   
 ## Server-side permissions on a report server URL  
 
- Permissions on each URL endpoint are granted exclusively to the Report Server service account. Only this account has rights to accept requests that are directed to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URLs. Discretionary Access Control Lists (DACLs) are created and maintained for the account when you configure the service identity through Setup or the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool. If you change the service account, the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool updates all URL reservations that you created to pick up the new account information. For more information, see [URL reservation syntax &#40;Configuration Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md).  
+ Permissions on each URL endpoint are granted exclusively to the Report Server service account. Only this account has rights to accept requests that are directed to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URLs. Discretionary Access Control Lists (DACLs) are created and maintained for the account when you configure the service identity through Setup or the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool. If you change the service account, the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool updates all URL reservations that you created to pick up the new account information. For more information, see [URL reservation syntax &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md).  
   
 ## Authenticate client requests sent to a report server URL  
 
@@ -60,21 +60,21 @@ helpviewer_keywords:
   
 ## In this section  
 
- [Configure a URL &#40;Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [Configure a URL &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
  This article provides instructions for setting and modifying a URL reservation in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool.  
   
- [About URL reservations and registration &#40;Configuration Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)  
+ [About URL reservations and registration &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)  
  URLs are used to access applications and reports. This article explains the application URLs, the default URLs, and how URL reservations and registration work in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [URL reservation syntax &#40;Configuration Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
+ [URL reservation syntax &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
  The default URL reservations that [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses are valid for most scenarios. However, if you want to restrict access or extend the deployment to enable Internet or extranet access, you might have to customize the settings to fit your requirements. This article describes the syntax of a URL reservation and provides recommendations for creating custom reservations for your deployment.  
   
- [URLs in configuration files &#40;Configuration Manager&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)  
+ [URLs in configuration files &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)  
  The RSReportServer.config file contains multiple entries for URL reservations and the URLs used by the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] and report server e-mail delivery. This article summarizes the URL configuration settings so that you can understand how they compare.  
   
- [URL reservations for multi-instance report server deployments &#40;Configuration Manager&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md)  
+ [URL reservations for multi-instance report server deployments &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md)  
  When you install multiple instances of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on a single computer, you increase the probability of encountering URL duplication when a URL is registered. To avoid these errors, follow the recommendations in this article for creating instance-specific URL reservations.  
   
 ## Related content
 
-- [Configure a URL &#40;Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)
+- [Configure a URL &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)

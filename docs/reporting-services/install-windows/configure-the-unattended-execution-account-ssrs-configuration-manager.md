@@ -1,5 +1,5 @@
 ---
-title: "Configure the unattended execution account (Configuration Manager)"
+title: "Configure the unattended execution account (Report Server Configuration Manager)"
 description: "Reporting Services provides a special account that is used for unattended report processing and for sending connection requests across the network."
 author: maggiesMSFT
 ms.author: maggies
@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "accounts [Reporting Services]"
   - "reports [Reporting Services], processing"
 ---
-# Configure the unattended execution account (Configuration Manager)
+# Configure the unattended execution account (Report Server Configuration Manager)
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides a special account that is used for unattended report processing and for sending connection requests across the network. The account is used in the following ways:  
   
@@ -29,13 +29,13 @@ helpviewer_keywords:
 > [!IMPORTANT]  
 > Configuring the account is optional. However, if you don't configure it, you limit your options for connecting to some data sources, and you might not be able to retrieve image files from remote computers. If you do configure the account, you must keep it up to date. Specifically, if you allow a password to expire or the account information is changed in Active Directory, you'll encounter the following error the next time a report is processed: "Logon failed (rsLogonFailed) Logon failure: unknown user name or bad password." Proper maintenance of the unattended report processing account is essential, even if you never retrieve external images or send connection requests to external computers. If you configure the account but then find that you aren't using it, you can delete it to avoid routine account maintenance tasks.  
   
-## How to Configure the Account  
+## How to configure the account  
 
  You must use a domain user account. To serve its intended purpose, this account should be different than the one used to run the Report Server service. Be sure to use an account that has minimum permissions (read-only access with network connection permissions is sufficient) and limited access to just those computers that provide data sources and resources to the report server.  
   
  To specify the account, you can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool or the **rsconfig** utility. The easiest way to configure the unattended execution account is to run the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool and specify credentials in the Execution Account page.  
   
-1. Start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool and connect to the report server instance you want to configure. For instructions, see [Report Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1. Start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool and connect to the report server instance you want to configure. For instructions, see [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 1. On the Execution Account page, select **Specify an execution account**.  
   
@@ -106,4 +106,4 @@ helpviewer_keywords:
   
 ## Related content
 
-- [Report Server Configuration Manager (SSRS Native Mode)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+- [Report Server Configuration Manager (Native Mode)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)

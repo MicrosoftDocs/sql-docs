@@ -20,11 +20,11 @@ To find your product key, you start by downloading and running setup for SQL Ser
 1. [Download SQL Server](../../database-engine/install-windows/install-sql-server.md).
 1. Run SQL Server setup and copy the prepopulated key:
 
-    :::image type="content" source="media/find-reporting-services-product-key-ssrs/ssrs-ss2017-copy-product-key.png" alt-text="Screenshot that shows the SQL Server 2017 Setup window highlighting the field for the product key.":::
+    :::image type="content" source="media/find-reporting-services-product-key-ssrs/ssrs-ss2017-copy-product-key.png" alt-text="Screenshot of the SQL Server 2017 Setup window highlighting the field for the product key.":::
 
 1. [Download Reporting Services](install-reporting-services.md), run setup, and paste the key:
 
-    :::image type="content" source="media/find-reporting-services-product-key-ssrs/ssrs-ssrs2017-paste-product-key.png" alt-text="Screenshot that shows the SQL Server 2017 Setup window highlighting the area to enter the key.":::
+    :::image type="content" source="media/find-reporting-services-product-key-ssrs/ssrs-ssrs2017-paste-product-key.png" alt-text="Screenshot of the SQL Server 2017 Setup window highlighting the area to enter the key.":::
 
 You should only have to do this step the first time you install Reporting Services. Servicing updates shouldn't require you to enter the key.
 

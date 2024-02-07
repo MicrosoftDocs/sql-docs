@@ -33,6 +33,8 @@ If your volume licensing has moved to the Microsoft 365 Admin Center, you can fi
 
 **Billing** > **Your Products** > **Volume Licensing** > **View Downloads and Keys** > **Find SQL Server** > **View Downloads** > **View additional instructions**.
 
+:::image type="content" source="media/find-product-key/m365-additional-instructions.png" alt-text="Screenshot of View additional instructions.":::
+
 ## Next steps
 
 - [Install SQL Server Reporting Services](install-reporting-services.md)

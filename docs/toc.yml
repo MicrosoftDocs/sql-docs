@@ -12230,6 +12230,8 @@ items:
       href: relational-databases/event-classes/objecttype-trace-event-column.md
   - name: Native interfaces
     items: 
+    - name: CreateVersionedSOSHostObject
+      href: native-interfaces/createversionedsoshostobject.md
     - name: GetSvcInstanceIDFromName
       href: native-interfaces/getsvcinstanceidfromname.md
     - name: GetSQLInstanceRegStringByID

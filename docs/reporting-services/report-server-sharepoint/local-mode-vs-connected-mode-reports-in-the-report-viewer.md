@@ -72,6 +72,10 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
  For more information, see [Use Access Services with SQL Reporting Services: Installing SQL Server 2008 R2 Reporting Services Add-In (SharePoint Server 2010)](/previous-versions/office/sharepoint-server-2010/ee662542(v=office.14)) and [Enable-SPSessionStateService](https://technet.microsoft.com/library/ff607857\(v=office.15\).aspx).  
   
+## Connected mode
+
+ For the latest information on using ADS extension with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] connected mode, see [Access Services Report in SharePoint Site shows error in data extension 'ADS'](/archive/technet-wiki/25298.access-services-report-in-sharepoint-site-shows-error-for-data-extension-ads).  
+  
 ## Related content
 
  [Data sources supported by Reporting Services](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  

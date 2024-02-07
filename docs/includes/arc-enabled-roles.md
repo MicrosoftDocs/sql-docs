@@ -18,4 +18,4 @@ In addition, Azure extension for SQL Server revokes permissions for these roles 
 
 If you uninstall Azure extension for SQL Server, the server level roles are removed.
 
-Uninstallation does not remove the mapping of NT AUTHORITY\SYSTEM automatically.
+Uninstallation removes the server and database roles.

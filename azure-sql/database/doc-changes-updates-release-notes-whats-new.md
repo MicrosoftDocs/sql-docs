@@ -6,7 +6,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, randolphwest
 ms.service: azure-sql-database
-ms.date: 08/14/2024
+ms.date: 08/26/2024
 ms.subservice: service-overview
 ms.topic: whats-new
 ms.custom:
@@ -93,6 +93,7 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 | **Maintenance window support for named replicas GA**|[Maintenance window](maintenance-window.md) support for named replicas is now generally available. For more information, read [Maintenance window support for named replicas](https://aka.ms/MWsupportforNR).|
 | **Maintenance window support for Hyperscale GA** | [Maintenance window](maintenance-window.md) support for Hyperscale databases is now generally available. |
 | **Local development experience for Azure SQL Database using Dev Container Templates** | We've provided details and quickstarts to get started with the new [local dev experience for Azure SQL Database](local-dev-experience-dev-containers.md). Dev Container Templates replace the previous local emulator experience. To get started, see [Quickstart: Set up a development environment with Dev Container Templates for Azure SQL Database](local-dev-experience-dev-containers-quickstart.md). |
+| **Resource limits changes** | There are [new default vCore limits](resource-limits-logical-server.md#subscription-vcore-limits-per-region) per region per subscription. Additionally, requests for increasing default DTU limits are now done with [vCores](quota-increase-request.md#vcores-per-subscription).
 
 ### July 2024
 

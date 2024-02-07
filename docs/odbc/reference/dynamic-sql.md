@@ -6,7 +6,7 @@ ms.author: v-davidengel
 ms.date: 04/02/2020
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords:
   - "SQL [ODBC], embedded SQL"
   - "SQL statements [ODBC], dynamic SQL"

@@ -6,7 +6,7 @@ ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: reference
+ms.topic: conceptual
 ---
 # Introduction to SQL and ODBC
 ODBC was created to provide a uniform method of access to different, or heterogeneous, database management systems (DBMSs). This introduction discusses concepts related to the development of ODBC.  

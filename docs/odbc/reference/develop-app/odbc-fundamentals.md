@@ -6,7 +6,7 @@ ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: reference
+ms.topic: conceptual
 ---
 # ODBC Fundamentals
 This section contains the following topics.  

@@ -6,6 +6,7 @@ ms.author: mikeray
 ms.date: "02/06/2024"
 ms.service: sql
 ms.topic: reference
+topictype: apiref
 apilocation: "sqlos.dll"
 apiname: "CreateVersionedSOSHostObject"
 apitype: "DllExport"

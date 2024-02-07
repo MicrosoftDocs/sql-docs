@@ -9,7 +9,7 @@ ms.topic: include
 When you install Azure extension for SQL Server, the installation:
 
 1. Creates a server level role: SQLArcExtensionServerRole
-1. A database level role: SQLArcExtensionUserRole
+1. Creates a database level role: SQLArcExtensionUserRole
 1. Adds NT AUTHORITY\SYSTEM account to each role
 1. Maps NT AUTHORITY\SYSTEM at the database level for each database
 1. Grants minimum permissions for the enabled features

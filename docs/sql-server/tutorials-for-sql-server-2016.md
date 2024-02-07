@@ -13,7 +13,7 @@ ms.topic: conceptual
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] provides tutorials to help you learn new technologies and features. Tutorials for earlier versions can usually be used with more recent versions. When tutorials address a newer feature, they indicate the minimum version to complete the tutorial.  
 
 - If a tutorial uses one of the [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] databases, you should download and use the most recent version from CodePlex. For more information, see [AdventureWorks sample databases](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks).
-- Download a Power Pivot workbook and Power View reports to use with Power View tutorials, go to [SQL Server Samples](https://go.microsoft.com/fwlink/?LinkId=220734).
+- Download a Power Pivot workbook and Power View reports to use with Power View tutorials, go to [SQL Server Samples](../samples/sql-samples-where-are.md).
 
     > [!NOTE]
     > Power View support is no longer available after SQL Server 2017.

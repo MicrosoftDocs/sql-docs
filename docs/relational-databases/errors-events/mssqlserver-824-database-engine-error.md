@@ -7,7 +7,7 @@ ms.reviewer: jopilov, randolphwest
 ms.date: 01/22/2024
 ms.service: sql
 ms.subservice: supportability
-ms.topic: "reference"
+ms.topic: "conceptual"
 helpviewer_keywords:
   - "824 (Database Engine error)"
 ---

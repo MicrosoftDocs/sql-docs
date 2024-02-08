@@ -28,7 +28,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2016 || >=sql-server-linux
 
 Creates a server audit object using [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Audit. For more information, see [SQL Server Audit (Database Engine)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).
 
-:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="true":::
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -83,7 +83,7 @@ The `URL` target isn't supported for [!INCLUDE [ssnoversion-md](../../includes/s
 
 #### FILEPATH = '*os_file_path*'
 
-The path of the audit log. The file name is generated based on the audit name and audit GUID.
+The path of the audit log. The file name is generated based on the audit name and audit GUID. If this path is invalid, the audit isn't created.
 
 `FILEPATH` target isn't supported for [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]. You need to use `PATH` instead.
 

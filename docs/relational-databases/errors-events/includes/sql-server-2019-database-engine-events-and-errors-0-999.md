@@ -2,7 +2,7 @@
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 01/11/2024
-ms.topic: include
+ms.topic: conceptual
 ---
 | Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |

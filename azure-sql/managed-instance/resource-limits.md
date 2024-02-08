@@ -26,12 +26,12 @@ This article provides an overview of the technical characteristics and resource 
 
 ## Hardware configuration characteristics
 
-SQL Managed Instance has characteristics and resource limits that depend on the underlying infrastructure and architecture. SQL Managed Instance can be deployed on multiple hardware configurations.
+SQL Managed Instance has characteristics and resource limits that depend on the underlying infrastructure and architecture. SQL Managed Instance can be deployed on multiple hardware generations.
 
 > [!NOTE]
 > The Gen5 hardware has been renamed to the **standard-series (Gen5)**.
 
-Hardware configurations have different characteristics, as described in the following table:
+Hardware generations have different characteristics, as described in the following table:
 
 |    | **Standard-series (Gen5)** | **Premium-series** | **Memory optimized premium-series** | 
 |:-- |:-- |:-- |:-- |

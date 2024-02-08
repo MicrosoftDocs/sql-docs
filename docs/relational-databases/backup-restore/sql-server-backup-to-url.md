@@ -52,13 +52,13 @@ If the database is too large, either:
    or
 - Back up to multiple block blobs
 
-#### Support on Linux, containers, and Azure Arc-enabled SQL Managed Instance
+#### Support on Linux, containers, and SQL Managed Instance enabled by Azure Arc
 
 If the SQL Server instance is hosted on Linux, including:
 
 - Stand-alone operating system
 - Containers
-- Azure Arc-enabled SQL Managed Instance
+- SQL Managed Instance enabled by Azure Arc
 - Any other Linux-based environment
 
 The only supported backup to URL for Azure Blob Storage is to block blobs, using the Shared Access Signature.

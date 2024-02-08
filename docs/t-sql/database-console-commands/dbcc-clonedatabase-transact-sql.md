@@ -83,7 +83,7 @@ Specifies if Query Store data needs to be excluded from the clone. If this optio
 
 Verifies the consistency of the new database. Enabling `VERIFY_CLONEDB` also disables statistics and Query Store collection, thus it is equivalent to running `WITH VERIFY_CLONEDB, NO_STATISTICS, NO_QUERYSTORE`.
 
-The following command can be used to validate the cloned database:
+The following command can be used to determine if the cloned database has been verified:
 
 ```sql
 SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone');

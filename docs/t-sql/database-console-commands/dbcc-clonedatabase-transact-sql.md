@@ -81,9 +81,9 @@ Specifies if Query Store data needs to be excluded from the clone. If this optio
 
 **Applies to:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 3, [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU 8, and later versions.
 
-Verifies the consistency of the new database. This option is required if the cloned database is intended for production use. Enabling `VERIFY_CLONEDB` also disables statistics and Query Store collection, thus it is equivalent to running `WITH VERIFY_CLONEDB, NO_STATISTICS, NO_QUERYSTORE`.
+Verifies the consistency of the new database. Enabling `VERIFY_CLONEDB` also disables statistics and Query Store collection, thus it is equivalent to running `WITH VERIFY_CLONEDB, NO_STATISTICS, NO_QUERYSTORE`.
 
-The following command can be used to confirm that the cloned database is production-ready:
+The following command can be used to validate the cloned database:
 
 ```sql
 SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone');
@@ -121,7 +121,7 @@ If all the validations succeed, the cloning of the source database is performed 
 - Copies statistics for all indexes from the source to the destination database.
 
 > [!NOTE]  
-> The new database generated from `DBCC CLONEDATABASE` is primarily intended for troubleshooting and diagnostic purposes. In order for the cloned database to be supported for use as a production database, the `VERIFY_CLONEDB` option must be used.
+> The new database generated from `DBCC CLONEDATABASE` is primarily intended for troubleshooting and diagnostic purposes. 
 
 All files in the target database will inherit the size and growth settings from the `model` database. The file names for the destination database will follow the `<source_file_name_underscore_random number>` convention. If the generated file name already exists in the destination folder, `DBCC CLONEDATABASE` will fail.
 
@@ -279,7 +279,7 @@ DBCC CLONEDATABASE (AdventureWorks2022, AdventureWorks_Clone) WITH NO_STATISTICS
 GO
 ```
 
-### D. Create a clone of a database that is verified for production use
+### D. Create a clone of a database that is verified
 
 The following example creates a schema-only clone of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database without statistics and Query Store data that is verified for use as a production database ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 2 and later versions):
 
@@ -288,9 +288,9 @@ DBCC CLONEDATABASE (AdventureWorks2022, AdventureWorks_Clone) WITH VERIFY_CLONED
 GO
 ```
 
-### E. Create a clone of a database that is verified for production use that includes a backup of the cloned database
+### E. Create a clone of a database that is verified for use that includes a backup of the cloned database
 
-The following example creates a schema-only clone of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database without statistics and Query Store data that is verified for use as a production database. A verified backup of the cloned database will also be created ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 2 and later versions).
+The following example creates a schema-only clone of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database without statistics and Query Store data that is verified for use. A verified backup of the cloned database will also be created ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 2 and later versions).
 
 ```sql
 DBCC CLONEDATABASE (AdventureWorks2022, AdventureWorks_Clone) WITH VERIFY_CLONEDB, BACKUP_CLONEDB;

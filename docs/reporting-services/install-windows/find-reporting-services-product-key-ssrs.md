@@ -28,9 +28,6 @@ To find your product key, you start by downloading and running setup for SQL Ser
 
 You should only have to do this step the first time you install Reporting Services. Servicing updates shouldn't require you to enter the key.
 
-<<<<<<< mp262024-ssrs-bulk
-## Related content
-=======
 ## Volume licensing in the Microsoft 365 Admin Center
 If your volume licensing has moved to the Microsoft 365 Admin Center, you can find your product key by choosing a SQL Server version and then looking under the View Downloads section:
 
@@ -38,8 +35,7 @@ If your volume licensing has moved to the Microsoft 365 Admin Center, you can fi
 
 :::image type="content" source="media/find-reporting-services-product-key-ssrs/m365-additional-instructions.png" alt-text="Screenshot of View additional instructions.":::
 
-## Next steps
->>>>>>> main
+## Related content
 
 - [Install SQL Server Reporting Services](install-reporting-services.md)
 - More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).

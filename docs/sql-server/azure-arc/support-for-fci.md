@@ -10,6 +10,8 @@ ms.topic: conceptual
 
 # View Always On failover cluster instances in Azure Arc (preview)
 
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
 Always On failover clustering is a high availability technology that leverages Windows Server failover clustering to provide local redundancy at an instance level.
 
 [!INCLUDE [azure-arc-sql-preview](includes/azure-arc-sql-preview.md)]

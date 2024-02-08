@@ -10,6 +10,8 @@ ms.topic: troubleshooting
 
 # Troubleshoot connectivity to the data processing service and telemetry endpoints
 
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
 In addition to the usual endpoints, the Azure Arc Connected Machine agent connects to, the Azure Arc extension for SQL Server connects to two other endpoints:
 
 - Data processing service (DPS) endpoint

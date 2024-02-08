@@ -14,7 +14,7 @@ ms.date: 02/07/2024
 
 [!INCLUDE [Azure SQL Managed Instance](../../../includes/applies-to-version/asmi.md)]
 
-After you have [enabled Azure Confidential Ledger](ledger-how-to-enable-automatic-digest-storage.md) as your digest location on your [Azure SQL Managed Instance](../../../../azure-sql/managed-instance/sql-managed-instance-paas-overview.md), you'll need to manually configure the virtual network rules of your Azure SQL Managed Instance to communicate with Azure Confidential Ledger.
+After you have [enabled Azure Confidential Ledger](ledger-how-to-enable-automatic-digest-storage.md) as your digest location on your [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview), you'll need to manually configure the virtual network rules of your Azure SQL Managed Instance to communicate with Azure Confidential Ledger.
 
 In this article, you learn how to:
 

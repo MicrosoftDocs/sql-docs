@@ -11,6 +11,8 @@ ms.custom: ignite-2023
 
 # Always On availability groups inventory and status (preview)
 
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
 An Always On availability group is an enterprise level high availability and disaster recovery solution for SQL Server. This article describes how to view a list of availability groups and their real time health status for a given [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)], in Azure portal.
 
 ## View list of availability groups and Status

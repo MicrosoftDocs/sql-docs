@@ -90,7 +90,7 @@ You can use Azure services and management capabilities, introduce DevOps practic
 [Azure Kubernetes Service](/azure/aks/intro-kubernetes) (AKS) is a managed Kubernetes service for deploying and managing container clusters. With [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux containers, you can [deploy a SQL Server Linux container to AKS using Helm charts](../linux/sql-server-linux-containers-deploy-helm-charts-kubernetes.md).
 
 > [!NOTE]  
-> You can also set up [Azure Arc-enabled SQL Managed Instance](/azure/azure-arc/data/managed-instance-overview) on a Kubernetes infrastructure of your choice, which allows you to manage the service in Azure while your data stays in the location you prefer.
+> You can also set up [SQL Managed Instance enabled by Azure Arc](/azure/azure-arc/data/managed-instance-overview) on a Kubernetes infrastructure of your choice, which allows you to manage the service in Azure while your data stays in the location you prefer.
 
 ## Migrate and move data
 

@@ -1091,7 +1091,7 @@ WHERE r.command LIKE 'BACKUP%';
 
 Backs up a SQL database in Azure SQL Managed Instance. [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance?view=azuresql-mi&preserve-view=true) has automatic backups. You can create full database `COPY_ONLY` backups. Differential, log, and file snapshot backups are not supported.
 
-Also applies to [Azure Arc-enabled SQL Managed Instance](/azure/azure-arc/data/managed-instance-overview).
+Also applies to [SQL Managed Instance enabled by Azure Arc](/azure/azure-arc/data/managed-instance-overview).
 
 ## Syntax
 

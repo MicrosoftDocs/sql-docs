@@ -7942,6 +7942,8 @@ items:
       items:
       - name: Configure a ledger database
         href: relational-databases/security/ledger/ledger-how-to-configure-ledger-database.md?view=sql-server-ver16&preserve-view=true
+      - name: Configure SQL MI NSG rules to work with Azure Confidential Ledger
+        href: relational-databases/security/ledger/ledger-nsg-policies-configure.md
       - name: Create append-only ledger tables
         href: relational-databases/security/ledger/ledger-how-to-append-only-ledger-tables.md?view=sql-server-ver16&preserve-view=true
       - name: Create updatable ledger tables

@@ -17,7 +17,26 @@ ms.custom: ignite-2023
 
 **Extension version**: `1.1.2586.111`
 
-### Region availability
+### Azure SQL migration assessment
+
+SQL Server enabled by Azure Arc automatically generates Azure SQL migration assessments.  
+
+The migration assessment:
+
+- Evaluates the readiness of your SQL Server instances for migration to Azure SQL
+- Recommends the optimal size for the Azure SQL destination
+- Identifies any migration blockers or issues that you need to resolve before moving to Azure SQL
+- Provides step-by-step guidance on how to mitigate any issues
+
+Use the migration assessment to ensure a successful migration.
+
+### Additional feature updates for SQL Server enabled by Azure Arc
+
+- Support for TLS 1.3
+- Improved prompt for feedback in Azure portal
+- Monitoring | Show monitoring upload status on Arc SQL Server overview in portal
+
+#### Region availability
 
 The following regions are now available for SQL Server enabled by Azure Arc, and Data Services enabled by Azure Arc:
 
@@ -26,13 +45,6 @@ The following regions are now available for SQL Server enabled by Azure Arc, and
 - UK West
 
 For a complete list of regions, see [Supported Azure regions](overview.md#supported-azure-regions).
-
-### SQL Server enabled by Azure Arc
-
-- Migration | Continuously run and view a migration assessment for an Arc SQL Server in the Azure Portal (preview)
-- Support for TLS 1.3
-- Improved prompt for feedback in Azure portal
-- Monitoring | Show monitoring upload status on Arc SQL Server overview in portal
 
 ## January 16, 2024
 

@@ -8,7 +8,7 @@ ms.date: "05/24/2022"
 ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
-monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 
 # Verify a ledger table to detect tampering
@@ -141,7 +141,7 @@ In this article, you'll verify the integrity of the data in your ledger tables. 
 
 ---
 
-## Next steps
+## Related content
 
 - [Ledger overview](ledger-overview.md)
 - [sys.database_ledger_digest_locations](../../system-catalog-views/sys-database-ledger-digest-locations-transact-sql.md)

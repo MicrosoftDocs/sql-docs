@@ -9,7 +9,7 @@ ms.service: sql-database
 ms.subservice: security
 ms.custom: ignite-2023
 ms.topic: conceptual
-monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 
 # Ledger considerations and limitations

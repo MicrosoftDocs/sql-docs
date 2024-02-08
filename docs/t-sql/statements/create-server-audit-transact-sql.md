@@ -28,7 +28,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2016 || >=sql-server-linux
 
 Creates a server audit object using [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Audit. For more information, see [SQL Server Audit (Database Engine)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).
 
-:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="true":::
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

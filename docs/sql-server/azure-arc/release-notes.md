@@ -69,6 +69,8 @@ For information about server monitoring capabilities, review [Automatically conn
 
 For information about database status and inventory capabilities, review [View SQL Server databases - Azure Arc](view-databases.md).
 
+Creates a server role and a database role, maps logins, and grants permissions. For details, see [Roles created by Azure Extension for SQL Server installation](permissions-granted-agent-extension.md).
+
 #### Back up and restore
 
 - Configure backups at instance level using custom schedule for [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instances for both portal and CLI - public preview.

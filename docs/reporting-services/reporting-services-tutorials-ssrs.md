@@ -37,5 +37,5 @@ These tutorials introduce you to various visualizations that you can create in R
 ## Related content
 
 * [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases)
-* [Reporting Services samples on the TechNet wiki](https://go.microsoft.com/fwlink/?LinkId=198283)
+* [Reporting Services samples on the TechNet wiki](/power-bi/create-reports/power-bi-create-mobile-optimized-report-about)
 * [TechNet Wiki: SQL Server 2012 samples](https://go.microsoft.com/fwlink/?linkID=220734)

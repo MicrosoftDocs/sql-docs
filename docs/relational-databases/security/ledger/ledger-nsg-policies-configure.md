@@ -77,7 +77,7 @@ These two IP addresses should be added to the outbound NSG rules of your SQL Man
     |**Action**     |Allow         |Allow outbound traffic from managed instance to ledger |
     |**Priority**     |1500         |Make sure this rule is higher priority than the **deny_all_inbound** rule |
 
-    :::image type="content" source="./media/ledger/ledger-nsg-outbound-rules.png" alt-text="Image of NSG outbound rules to enable SQL to communicate with the ledger":::
+    :::image type="content" source="./media/ledger/ledger-nsg-outbound-rules.png" alt-text="Screenshot of NSG outbound rules to enable SQL to communicate with the ledger.":::
 
 ### Add IP addresses to the route table
 
@@ -94,7 +94,7 @@ The two Azure Confidential Ledger IP addresses should also be added to the Route
     |**Destination IP addresses/CIDR ranges**     | 1.123.123.123/32 | In this example, we use `1.123.123.123/32`. Create another route to add the identity service endpoint, which is `13.107.246.70/32` in this example |
     |**Next hop type**     |Internet         | |
 
-    :::image type="content" source="./media/ledger/ledger-routing-rule.png" alt-text="Screenshot of adding a route for the VNET to the ledger":::
+    :::image type="content" source="./media/ledger/ledger-routing-rule.png" alt-text="Screenshot of adding a route for the VNET to the ledger.":::
 
 ## Verify that the routing is properly configured
 

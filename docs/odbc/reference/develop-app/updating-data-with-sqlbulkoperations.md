@@ -6,7 +6,7 @@ ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords:
   - "SQLBulkOperations function [ODBC], updating data"
   - "data updates [ODBC], SQLBulkOperations"

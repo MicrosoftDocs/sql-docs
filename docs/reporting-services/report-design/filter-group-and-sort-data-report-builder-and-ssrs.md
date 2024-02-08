@@ -44,7 +44,7 @@ f1_keywords:
   
 -   [Reporting Services Tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
   
--   [Report Samples (Report Builder and SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
+-   [Report Samples (Report Builder and SSRS)](../../reporting-services/tools/reporting-services-tools.md)
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

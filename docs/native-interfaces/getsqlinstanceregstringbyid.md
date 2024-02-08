@@ -6,6 +6,7 @@ ms.author: mikeray
 ms.date: "06/18/2021"
 ms.service: sql
 ms.topic: reference
+topictype: apiref
 apilocation: "instapi.dll"
 apiname: "GetSQLInstanceRegStringByID"
 apitype: "DllExport"

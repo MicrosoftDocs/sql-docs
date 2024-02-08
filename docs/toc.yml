@@ -10459,12 +10459,6 @@ items:
             href: sql-server/azure-arc/onboard-configuration-manager-custom-task.md
       - name: Manage
         items:
-        - name: Agent permissions
-          items:
-          - name: Configure least privilege
-            href: sql-server/azure-arc/configure-least-privilege.md
-          - name: Required permissions
-            href: sql-server/azure-arc/configure-windows-accounts-agent.md
         - name: Assess
           href: sql-server/azure-arc/assess.md
         - name: View databases
@@ -10491,6 +10485,14 @@ items:
           href: sql-server/azure-arc/manage-availability-group.md
       - name: Secure
         items:
+        - name: Agent permissions
+          items:
+          - name: Agent roles
+            href: sql-server/azure-arc/permissions-granted-agent-extension.md
+          - name: Configure least privilege
+            href: sql-server/azure-arc/configure-least-privilege.md
+          - name: Required permissions
+            href: sql-server/azure-arc/configure-windows-accounts-agent.md
         - name: Configure advanced data Security
           href: sql-server/azure-arc/configure-advanced-data-security.md
         - name: Certificate rotation
@@ -12226,6 +12228,8 @@ items:
       href: relational-databases/event-classes/objecttype-trace-event-column.md
   - name: Native interfaces
     items: 
+    - name: CreateVersionedSOSHostObject
+      href: native-interfaces/createversionedsoshostobject.md
     - name: GetSvcInstanceIDFromName
       href: native-interfaces/getsvcinstanceidfromname.md
     - name: GetSQLInstanceRegStringByID

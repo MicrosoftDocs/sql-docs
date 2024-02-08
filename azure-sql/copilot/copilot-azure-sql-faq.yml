@@ -1,0 +1,29 @@
+### YamlMime:FAQ
+metadata:
+  title: "Frequently asked questions about Copilot in Microsoft Azure SQL"
+  description: "Frequently asked questions about Copilot in Azure SQL."
+  author: WilliamDAssaf
+  ms.author: wiassaf
+  ms.reviewer: josephsack
+  ms.service: sql-database
+  ms.subservice: ai-copilot
+  ms.topic: faq
+  ms.date: 03/15/2024
+
+title: "Frequently asked questions about Copilot in Microsoft Azure SQL (preview)"
+summary: |
+  Frequently asked questions about Copilot in Microsoft Azure SQL, currently in preview. 
+
+sections:
+  - name: General # Name of first section.
+    questions:
+      - question: How much does Copilot for Azure SQL cost?
+        answer: Copilot for Azure is offered at no additional cost during the preview.
+          
+      - question: How much does Copilot for Azure SQL cost?
+        answer: Copilot for Azure is offered at no additional cost during the preview.
+
+additionalContent: |
+    ## Related content
+
+    - [Copilot in Azure SQL (preview)](copilot-azure-sql-overview.md)

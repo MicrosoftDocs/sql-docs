@@ -103,7 +103,7 @@ Creates and verifies a backup of the clone database. If used in combination with
 
 ## Remarks
 
-A clone of a database is only intended for investigating query optimizer performance problems. The clone is a read-only, schema-only copy of the original database and has limitations on which objects are copied over. See the [Supported objects](#supported-objects) section for more details. Any other use of a clone database isn't supported. 
+A clone of a database generated with `DBCC CLONEDATABASE` is only intended for troubleshooting and diagnostic purposes. The clone is a read-only, schema-only copy of the original database and has limitations on which objects are copied over. See the [Supported objects](#supported-objects) section for more details. Any other use of a clone database isn't supported. 
 
 The following validations are performed by `DBCC CLONEDATABASE`. The command fails if any of the validations fail.
 
@@ -121,7 +121,6 @@ If all the validations succeed, the cloning of the source database is performed 
 - Copies statistics for all indexes from the source to the destination database.
 
 > [!NOTE]  
-> The new database generated from `DBCC CLONEDATABASE` is primarily intended for troubleshooting and diagnostic purposes. 
 
 All files in the target database will inherit the size and growth settings from the `model` database. The file names for the destination database will follow the `<source_file_name_underscore_random number>` convention. If the generated file name already exists in the destination folder, `DBCC CLONEDATABASE` will fail.
 
@@ -281,7 +280,7 @@ GO
 
 ### D. Create a clone of a database that is verified
 
-The following example creates a schema-only clone of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database without statistics and Query Store data that is verified for use as a production database ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 2 and later versions):
+The following example creates a schema-only clone of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database without statistics and Query Store data that is verified ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 2 and later versions):
 
 ```sql
 DBCC CLONEDATABASE (AdventureWorks2022, AdventureWorks_Clone) WITH VERIFY_CLONEDB;

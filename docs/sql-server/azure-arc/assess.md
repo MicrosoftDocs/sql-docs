@@ -10,6 +10,8 @@ ms.topic: conceptual
 
 # Configure SQL best practices assessment - SQL Server enabled by Azure Arc
 
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
 Best practices assessment provides a mechanism to evaluate the configuration of your SQL Server. After you enable best practices assessment, an assessment scans your SQL Server instance and databases to provide recommendations for things like:
 
 - SQL Server and database configurations

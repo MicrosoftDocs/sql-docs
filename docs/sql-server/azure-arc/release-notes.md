@@ -29,6 +29,7 @@ For a complete list of regions, see [Supported Azure regions](overview.md#suppor
 
 ### SQL Server enabled by Azure Arc
 
+- Migration | Continuously run and view a migration assessment for an Arc SQL Server in the Azure Portal (preview)
 - Support for TLS 1.3
 - Improved prompt for feedback in Azure portal
 - Monitoring | Show monitoring upload status on Arc SQL Server overview in portal

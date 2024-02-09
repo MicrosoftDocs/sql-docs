@@ -120,7 +120,6 @@ If all the validations succeed, the cloning of the source database is performed 
 - Copies all schema for all objects from the source to the destination database.
 - Copies statistics for all indexes from the source to the destination database.
 
-> [!NOTE]  
 
 All files in the target database will inherit the size and growth settings from the `model` database. The file names for the destination database will follow the `<source_file_name_underscore_random number>` convention. If the generated file name already exists in the destination folder, `DBCC CLONEDATABASE` will fail.
 

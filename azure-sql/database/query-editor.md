@@ -5,7 +5,7 @@ description: Learn how to run T-SQL queries all from within the browser via the 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mbarickman
-ms.date: 10/22/2023
+ms.date: 03/15/2024
 ms.service: sql-database
 ms.subservice: development
 ms.topic: conceptual
@@ -28,6 +28,7 @@ The Query editor (preview) is a tool to run T-SQL queries in the Azure portal in
 
 - For a quickstart on the Azure portal Query editor, see [Quickstart: Use the Azure portal query editor (preview)](connect-query-portal.md).
 - For more advanced object explorer capabilities and management functions, use [Azure Data Studio](/azure-data-studio/quickstart-sql-database) or [SQL Server Management Studio (SSMS)](connect-query-ssms.md).
+- For more information about Microsoft Copilot in Azure SQL (preview), see [Copilot in Azure SQL (preview)](../copilot/copilot-azure-sql-overview.md).
 
 ## Query your Azure SQL Database from the Azure portal
 
@@ -54,11 +55,12 @@ Users need at least the Azure role-based access control (RBAC) permission **Read
 
 ## Navigate query editor
 
-There are three main sections of the query editor:
+There are four main sections of the query editor:
 
 - Navigation bar
 - Object explorer
 - Query window
+- Copilot for Azure SQL
 
    :::image type="content" source="media/query-editor/query-editor.png" alt-text="Screenshot from the Azure portal showing red rectangles highlighting the Query editor in the main menu and the Navigation bar, Object Explorer, and Query window.":::
 
@@ -90,6 +92,24 @@ The **Save query** button allows you to save the query text to your computer as 
 The **Export data as** button allows you to export the query results to your computer as a *.json*, *.csv*, or *.xml* file.
 
 The query execution time, or errors, are shown in the bottom bar.
+
+### Copilot for Azure SQL
+
+The [Copilot in Azure SQL (preview)](copilot-azure-sql-overview.md) translates natural language queries into T-SQL.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Data editor
 

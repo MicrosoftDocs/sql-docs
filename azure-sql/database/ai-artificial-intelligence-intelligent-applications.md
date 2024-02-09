@@ -25,6 +25,7 @@ The following links provide sample code of various Azure SQL Database options to
 
 | AI Option | Description |
 | --- | --- |
+| **[Copilot for Azure SQL](../copilot/copilot-azure-sql-overview.md)** | Manage and develop with intuitive assistance and natural language to SQL processing. |
 | **[Azure OpenAI](#azure-openai)** | Generate embeddings for RAG and integrate with any model supported by Azure OpenAI. |
 | **[Vectors](#vectors)** | Learn how to store and query vectors in Azure SQL Database. |
 | **[Azure AI Search](#azure-ai-search)** | Use Azure SQL Database together with Azure AI Search to train LLM on your data. |
@@ -82,6 +83,19 @@ Vector search refers to the process of finding all vectors in a dataset that are
 Consider a scenario where you run a query over millions of document to find the most similar documents in your data. You can create embeddings for your data and query documents using Azure OpenAI. Then, you can perform a vector search to find the most similar documents from your dataset. However, performing a vector search across a few examples is trivial. Performing this same search across thousands, or millions, of data points becomes challenging. There are also trade-offs between exhaustive search and approximate nearest neighbor (ANN) search methods including latency, throughput, accuracy, and cost, all of which depends on the requirements of your application.
 
 Since Azure SQL Database embeddings can be efficiently stored and queried using to columnstore index support, allowing exact nearest neighbor search with great performance, you don't have to decide between accuracy and speed: you can have both. Storing vector embeddings alongside the data in an integrated solution minimizes the need to manage data synchronization and accelerates your time-to-market for AI application development.
+
+## Microsoft Copilot for Azure SQL
+
+
+
+
+
+
+
+
+
+
+
 
 ## Azure OpenAI
 
@@ -166,3 +180,5 @@ For an example that shows how LangChain can be used to create a Chatbot on your 
 
 - [Create and deploy an Azure OpenAI Service resource](/azure/ai-services/openai/how-to/create-resource?pivots=web-portal)
 - [Embeddings models](/azure/ai-services/openai/concepts/models#embeddings-models)
+- [Frequently asked questions about Copilot in Microsoft Azure SQL (preview)](../copilot/copilot-azure-sql-faq.yml)
+- [Responsible AI FAQ for Microsoft Copilot for Azure (preview)](/azure/copilot/responsible-ai-faq)

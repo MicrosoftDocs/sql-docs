@@ -281,8 +281,12 @@
       href: database/free-offer.md
     - name: Try Azure SQL Database free FAQ
       href: database/free-offer-faq.yml
+    - name: Copilot for Azure SQL
+      href: copilot/copilot-azure-sql-overview.md
+    - name: Copilot for Azure SQL FAQ
+      href: copilot/copilot-azure-sql-faq.yml
     - name: Intelligent applications and AI
-      href: database/ai-artificial-intelligence-intelligent-applications.md
+      href: database/ai-artificial-intelligence-intelligent-applications.md      
   - name: Quickstarts
     href: database/quickstart-content-reference-guide.md
     items:

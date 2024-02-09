@@ -40,7 +40,7 @@ It is not recommended to manually set the permissions described in this article.
 ## Account
 
 SQL Extension for Azure Arc creates the following user in each database: `NT Service\SqlServerExtension`.
-F
+
 ## Registry permissions
 
 Base key – `HKEY_LOCAL_MACHINE`.

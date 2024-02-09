@@ -2,7 +2,7 @@
 metadata:
   title: "Frequently asked questions about Copilot in Microsoft Azure SQL"
   description: "Frequently asked questions about Copilot in Azure SQL."
-  author: WilliamDAssaf
+  author: WilliamDAssafMSFT
   ms.author: wiassaf
   ms.reviewer: josephsack
   ms.service: sql-database
@@ -43,7 +43,7 @@ sections:
           Copilot takes several measures to protect data including:
 
           - The transmitted data is encrypted both in transit and at rest; Copilot-related data is encrypted in transit using TLS, and at rest using Microsoft Azure's data encryption (FIPS Publication 140-2 standards). 
-          - Access to log and feedback data is strictly controlled. The data is stored in a separate subscription. The data is only accessible by 1) Just-In-Time JIT approval from Azure operations personnel using [secure admin workstations](../security/fundamentals/infrastructure-components.md#secure-service-administration).
+          - Access to log and feedback data is strictly controlled. The data is stored in a separate subscription. The data is only accessible by 1) Just-In-Time JIT approval from Azure operations personnel using [secure admin workstations](/azure/security/fundamentals/infrastructure-components#secure-service-administration).
       - question: |
           Will my private prompts, queries, or data be shared with others?
         answer: |
@@ -93,7 +93,7 @@ sections:
       - question: |
           What should I do if I see unexpected or offensive outputs?
         answer: |
-          Copilot utilizes Azure OpenAI customized content filters to block offensive language in the prompts and to avoid synthesizing suggestions in sensitive contexts. It's a feature that helps users write SQL queries for SQL databases and uphold our principles on [responsible AI](../ai-services/openai/concepts/content-filter.md).
+          Copilot utilizes Azure OpenAI customized content filters to block offensive language in the prompts and to avoid synthesizing suggestions in sensitive contexts. It's a feature that helps users write SQL queries for SQL databases and uphold our principles on [responsible AI](/azure/ai-services/openai/concepts/content-filter).
 
 
 additionalContent: |

@@ -95,7 +95,7 @@ The query execution time, or errors, are shown in the bottom bar.
 
 ### Copilot for Azure SQL
 
-The [Copilot in Azure SQL (preview)](copilot-azure-sql-overview.md) translates natural language queries into T-SQL.
+The [Copilot in Azure SQL (preview)](../copilot/copilot-azure-sql-overview.md) translates natural language queries into T-SQL.
 
 
 

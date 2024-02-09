@@ -1,13 +1,14 @@
 ---
 title: "Copilot in Microsoft Azure SQL"
 description: "Learn more about the features and possibilities of Copilot in Azure SQL for administrators and developers."
-author: WilliamDAssaf
+author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: josephsack
 ms.date: 03/15/2024
 ms.service: sql-database
 ms.subservice: ai-copilot
 ms.topic: overview
+monikerRange: "= azuresql || = azuresql-db"
 ---
 
 # Copilot in Azure SQL (preview)

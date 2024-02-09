@@ -13,9 +13,9 @@ ms.custom: ignite-2023
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-## February 12, 2023
+## February 12, 2024
 
-**Extension version**: `1.1.2586.111`
+**Extension version**: `1.1.2594.118`
 
 ### Azure SQL migration assessment
 

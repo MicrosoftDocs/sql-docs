@@ -184,7 +184,7 @@ Only the following objects can be cloned in the destination database. Encrypted 
 - SPATIAL INDEX
 - STATISTICS
 - SYNONYM
-- TABLE
+- TABLE <sup>9</sup>
 - MEMORY OPTIMIZED TABLES <sup>2</sup>
 - FILESTREAM AND FILETABLE OBJECTS <sup>1, 2</sup>
 - TRIGGER
@@ -210,6 +210,8 @@ Only the following objects can be cloned in the destination database. Encrypted 
 <sup>7</sup> Starting in [!INCLUDE[ssSQL17-md](../../includes/sssql17-md.md)] Service Pack 2 CU 17.
 
 <sup>8</sup> Starting in [!INCLUDE[ssSQL19-md](../../includes/sssql19-md.md)] CU 1 and later versions.
+
+<sup>9</sup> Most system tables flagged as `is_ms_shipped` aren't cloned.
 
 ## Permissions
 

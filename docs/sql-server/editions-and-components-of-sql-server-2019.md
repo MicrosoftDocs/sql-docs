@@ -397,13 +397,6 @@ For information about the Business Intelligence Client features supported by the
 | [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration Assistant | Yes | Yes | Yes | Yes | Yes |
 | Database mail | Yes | Yes | Yes | No | No |
 
-## <a id="Other"></a> Other components
-
-| Feature | Enterprise | Standard | Web | Express<br />with<br />Advanced<br />Services | Express |
-| --- | :---: | :---: | :---: | :---: | :---: |
-| StreamInsight | StreamInsight Premium edition | StreamInsight Standard edition | StreamInsight Standard edition | No | No |
-| StreamInsight HA | StreamInsight Premium edition | No | No | No | No |
-
 ## Related content
 
 - [Maximum capacity specifications for SQL Server](maximum-capacity-specifications-for-sql-server.md)

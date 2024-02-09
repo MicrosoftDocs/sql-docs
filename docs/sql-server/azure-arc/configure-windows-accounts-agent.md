@@ -37,6 +37,10 @@ It is not recommended to manually set the permissions described in this article.
 
 <sup>1</sup>For more information, see [File Locations and Registry Mapping](../install/file-locations-for-default-and-named-instances-of-sql-server.md#file-locations-and-registry-mapping).
 
+## Account
+
+SQL Extension for Azure Arc creates the following user in each database: `NT Service\SqlServerExtension`.
+
 ## Registry permissions
 
 Base key – `HKEY_LOCAL_MACHINE`.

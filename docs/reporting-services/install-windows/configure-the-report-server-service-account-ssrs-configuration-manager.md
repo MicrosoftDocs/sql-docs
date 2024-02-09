@@ -46,21 +46,21 @@ ms.custom: updatefrequency5
   
 1. Start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration manager and connect to the report server.  
   
-2. On the Service Account page, select the option that describes the type of account you want to use.  
+1. On the Service Account page, select the option that describes the type of account you want to use.  
   
-3. If you selected a Windows user account, specify the new account and password. The account can't be more than 20 characters and can't contain special characters ```" / \ [ ] : ; | = , + * ? < > '``` per Windows user account naming rules.  
+1. If you selected a Windows user account, specify the new account and password. The account can't be more than 20 characters and can't contain special characters ```" / \ [ ] : ; | = , + * ? < > '``` per Windows user account naming rules.  
   
      If you deploy the report server in a network that supports Kerberos authentication, you must register the report server Service Principal Name (SPN) with the domain user account you specified. For more information, see [Register a Service Principal Name &#40;SPN&#41; for a report server](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
   
-4. Select **Apply**.  
+1. Select **Apply**.  
   
-5. When prompted to back up the symmetric key, enter a file name and location for the symmetric key backup. Enter a password to lock and unlock the file, and then select **OK**.  
+1. When prompted to back up the symmetric key, enter a file name and location for the symmetric key backup. Enter a password to lock and unlock the file, and then select **OK**.  
   
-6. If the report server uses the service account to connect to the report server database, the connection information is updated to use the new account or password. Updating the connection information requires that you connect to the database. If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Database Connection** dialog box appears, enter credentials that have permission to connect to the database, and then select **OK**.  
+1. If the report server uses the service account to connect to the report server database, the connection information is updated to use the new account or password. Updating the connection information requires that you connect to the database. If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Database Connection** dialog box appears, enter credentials that have permission to connect to the database, and then select **OK**.  
   
-7. When prompted to restore the symmetric key, enter the password you specified in step 5, and then select **OK**.  
+1. When prompted to restore the symmetric key, enter the password you specified in step 5, and then select **OK**.  
   
-8. Review the status messages in the Results pane to verify all tasks completed successfully.  
+1. Review the status messages in the Results pane to verify all tasks completed successfully.  
   
 ## Choose an account
 
@@ -68,8 +68,7 @@ ms.custom: updatefrequency5
   
 > [!NOTE]  
 > [Group Managed Service Accounts Overview](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview) aren't supported as a report server service account.
-  
-  
+
 |Account|Explanation|  
 |-------------|-----------------|  
 |Domain user accounts|If you have a Windows domain user account that has the minimum permissions required for report server operations, you should use it.<br /><br /> A domain user account is recommended because it isolates the Report Server service from other applications. If you run multiple applications under a shared account, such as Network Service, you increase the risk of a malicious user taking control of the report server because a security breach for any one application can easily extend to all applications that run under the same account.<br /><br /> If you use a domain user account, you have to change the password periodically if your organization enforces a password expiration policy. You might also need to register the service with the user account. For more information, see [Register a Service Principal Name &#40;SPN&#41; for a report server](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).<br /><br /> Avoid using a local Windows user account. Local accounts typically don't have sufficient permission to access resources on other computers. For more information about how using a local account limits report server functionality, see [Considerations for using local accounts](#localaccounts) in this article.| 

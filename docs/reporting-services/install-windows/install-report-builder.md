@@ -79,11 +79,11 @@ And you can install it from several places:
   
 1. Contact your administrator for the location of ReportBuilder.msi that you run to install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on your local computer.  
   
-2. Browse to locate ReportBuilder.msi, the Windows Installer Package (MSI) for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], and select it.  
+1. Browse to locate ReportBuilder.msi, the Windows Installer Package (MSI) for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], and select it.  
   
      This step launches the SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Wizard.  
   
-3. Complete rest of the steps in [To install Report Builder from the download site](#download).  
+1. Complete rest of the steps in [To install Report Builder from the download site](#download).  
   
 ## Install Report Builder from the command line
 

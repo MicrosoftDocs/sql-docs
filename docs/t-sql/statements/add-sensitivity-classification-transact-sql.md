@@ -93,6 +93,7 @@ Is an identifier based on a predefined set of values which define sensitivity ra
 - Only one classification can be added to a single object. Adding a classification to an object that is already classified will overwrite the existing classification.
 - Multiple objects can be classified using a single `ADD SENSITIVITY CLASSIFICATION` statement.
 - The system view [sys.sensitivity_classifications](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md) can be used to retrieve the sensitivity classification information for a database.
+- SQL Server does not maintain a list of the mapping between LABEL and LABEL_ID, if you want to ensure a one-to-one relationship between the LABEL and LABEL_ID, you need to specify both the LABEL and LABEL_ID correctly when you create a classification. 
 
 ## Permissions
 

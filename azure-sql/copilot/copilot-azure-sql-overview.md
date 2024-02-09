@@ -8,6 +8,7 @@ ms.date: 03/15/2024
 ms.service: sql-database
 ms.subservice: ai-copilot
 ms.topic: overview
+monikerRange: "= azuresql || = azuresql-db"
 ---
 
 # Copilot in Azure SQL (preview)

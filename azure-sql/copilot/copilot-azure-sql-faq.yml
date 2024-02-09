@@ -9,6 +9,7 @@ metadata:
   ms.subservice: ai-copilot
   ms.topic: faq
   ms.date: 03/15/2024
+  monikerRange: "= azuresql || = azuresql-db"
 
 title: "Frequently asked questions about Copilot in Microsoft Azure SQL (preview)"
 summary: |

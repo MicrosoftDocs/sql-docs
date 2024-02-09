@@ -1503,20 +1503,29 @@ The examples in this section demonstrate dropping columns and constraints.
 
 #### A. Drop a column or columns
 
-The first example modifies a table to remove a column. The second example removes multiple columns.
+The first example modifies a table to remove a column. The second and third examples remove multiple columns.
 
 ```sql
 CREATE TABLE dbo.doc_exb (
      column_a INT,
      column_b VARCHAR(20) NULL,
      column_c DATETIME,
-     column_d INT) ;
+     column_d INT,
+     column_e INT) ;
 GO
 -- Remove a single column.
 ALTER TABLE dbo.doc_exb DROP COLUMN column_b ;
 GO
 -- Remove multiple columns.
 ALTER TABLE dbo.doc_exb DROP COLUMN column_c, column_d;
+GO
+-- Remove multiple columns only if they exist. First column was
+-- already dropped in previous statement but does not cause an error here.
+-- Note that COLUMN IF EXISTS needs to be repeated for each listed column.
+ALTER TABLE dbo.doc_exb
+    DROP COLUMN IF EXISTS column_d,
+         COLUMN IF EXISTS column_e;
+GO
 ```
 
 #### B. Drop constraints and columns

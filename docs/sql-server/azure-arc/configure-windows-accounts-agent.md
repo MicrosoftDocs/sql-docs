@@ -35,7 +35,11 @@ It is not recommended to manually set the permissions described in this article.
 | SQL log directory (as set in registry<sup>1</sup>).: <br/> `C:\Program Files\Microsoft SQL Server\MSSQL<base_version>.<instance_name>\MSSQL\log` | Read | Required to extract SQL vCores info from SQL logs. | Default |
 | SQL backup directory (as set in registry<sup>1</sup>).: <br/> `C:\Program Files\Microsoft SQL Server\MSSQL<base_version>.<instance_name>\MSSQL\Backup` | ReadAndExecute/Write /Delete | Required for Backups | Backup |
 
-<sup>1</sup>For more information, see [File Locations and Registry Mapping](../install/file-locations-for-default-and-named-instances-of-sql-server.md#file-locations-and-registry-mapping).
+<sup>1</sup> For more information, see [File Locations and Registry Mapping](../install/file-locations-for-default-and-named-instances-of-sql-server.md#file-locations-and-registry-mapping).
+
+## Account
+
+SQL Extension for Azure Arc creates the following user in each database: `NT Service\SqlServerExtension`.
 
 ## Registry permissions
 

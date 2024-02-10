@@ -143,7 +143,8 @@ Consider the following when configuring your General Purpose databases with zone
   - (Europe) Switzerland North
   - (Europe) Sweden Central
   - (Middle East) Israel Central
-  - (Middle East) Qatar Central  - 
+  - (Middle East) Qatar Central
+  - (North America) Canada Central
   - (North America) East US
   - (North America) East US 2
   - (North America) South Central US

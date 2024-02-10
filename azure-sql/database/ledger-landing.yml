@@ -76,6 +76,8 @@ landingContent:
             url: /sql/relational-databases/security/ledger/ledger-how-to-recover-after-tampering
           - text: Verify a ledger table to detect tampering
             url: /sql/relational-databases/security/ledger/ledger-verify-database
+          - text: Configure Azure SQL Managed Instance NSG rules to work with Azure Confidential Ledger
+            url: /sql/relational-databases/security/ledger/ledger-nsg-policies-configure
 
 
 

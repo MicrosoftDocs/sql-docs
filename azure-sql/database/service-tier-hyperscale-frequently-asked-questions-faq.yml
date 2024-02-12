@@ -50,7 +50,7 @@ sections:
           - Fast database restores regardless of database size (restores are from storage snapshots).
           - Higher log throughput regardless of database size and the number of vCores.
           - Read Scale-out using one or more read-only replicas, used for read offloading or as hot standby databases.
-          - Rapid scaling up of compute, in constant time, to be more powerful to accommodate the heavy workload and then scale down, in constant time. This is similar to scaling up and down between a 4-core and a 32-core database, for example, but is much faster as this is not a size of data operation.
+          - Rapid scaling up of compute, in constant time, to be more powerful to accommodate the heavy workload and then scale down, in constant time. Scaling operations take single-digit minutes for provisioned compute, and less than a second for serverless compute, regardless of database size.
           
       - question: |
           What regions currently support Hyperscale?

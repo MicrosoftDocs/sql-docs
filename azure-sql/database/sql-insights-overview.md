@@ -77,6 +77,8 @@ To open SQL Insights (preview):
 
 For more instructions, see [Enable SQL Insights (preview)](sql-insights-enable.md) and [Troubleshoot SQL Insights (preview)](sql-insights-troubleshoot.md).
 
+**Note:** SQL insights are not supported for SQL Server On Prem Instances.
+
 ## Collected data
 
 SQL Insights performs all monitoring remotely. No agents are installed on the virtual machines running SQL Server.

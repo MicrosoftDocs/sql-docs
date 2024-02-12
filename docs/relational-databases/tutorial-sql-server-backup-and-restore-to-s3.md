@@ -37,46 +37,46 @@ In this step, create a test database using SQL Server Management Studio (SSMS).
 1. Open a **New Query** window.
 1. Run the following T-SQL code to create your test database. Refresh the **Databases** node in **Object Explorer** to see your new database. Newly created databases on SQL Managed Instance automatically have TDE enabled so you'll need to disable it to proceed.
 
-```sql
-USE [master];
-GO
-
--- Create database
-CREATE DATABASE [SQLTestDB];
-GO
-
--- Create table in database
-USE [SQLTestDB];
-GO
-CREATE TABLE SQLTest (
-    ID INT NOT NULL PRIMARY KEY,
-    c1 VARCHAR(100) NOT NULL,
-    dt1 DATETIME NOT NULL DEFAULT GETDATE()
-);
-GO
-
--- Populate table 
-USE [SQLTestDB];
-GO
-
-INSERT INTO SQLTest (ID, c1) VALUES (1, 'test1');
-INSERT INTO SQLTest (ID, c1) VALUES (2, 'test2');
-INSERT INTO SQLTest (ID, c1) VALUES (3, 'test3');
-INSERT INTO SQLTest (ID, c1) VALUES (4, 'test4');
-INSERT INTO SQLTest (ID, c1) VALUES (5, 'test5');
-GO
-
-SELECT * FROM SQLTest;
-GO
-
--- Disable TDE for newly-created databases on SQL Managed Instance 
-USE [SQLTestDB];
-GO
-ALTER DATABASE [SQLTestDB] SET ENCRYPTION OFF;
-GO
-DROP DATABASE ENCRYPTION KEY;
-GO
-```
+   ```sql
+   USE [master];
+   GO
+   
+   -- Create database
+   CREATE DATABASE [SQLTestDB];
+   GO
+   
+   -- Create table in database
+   USE [SQLTestDB];
+   GO
+   CREATE TABLE SQLTest (
+       ID INT NOT NULL PRIMARY KEY,
+       c1 VARCHAR(100) NOT NULL,
+       dt1 DATETIME NOT NULL DEFAULT GETDATE()
+   );
+   GO
+   
+   -- Populate table 
+   USE [SQLTestDB];
+   GO
+   
+   INSERT INTO SQLTest (ID, c1) VALUES (1, 'test1');
+   INSERT INTO SQLTest (ID, c1) VALUES (2, 'test2');
+   INSERT INTO SQLTest (ID, c1) VALUES (3, 'test3');
+   INSERT INTO SQLTest (ID, c1) VALUES (4, 'test4');
+   INSERT INTO SQLTest (ID, c1) VALUES (5, 'test5');
+   GO
+   
+   SELECT * FROM SQLTest;
+   GO
+   
+   -- Disable TDE for newly-created databases on SQL Managed Instance 
+   USE [SQLTestDB];
+   GO
+   ALTER DATABASE [SQLTestDB] SET ENCRYPTION OFF;
+   GO
+   DROP DATABASE ENCRYPTION KEY;
+   GO
+   ```
 
 ## Create credential
 
@@ -84,16 +84,21 @@ To create the SQL Server credential for authentication, follow these steps:
 
 1. Launch [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) and connect to your SQL Server instance.
 1. Open a **New Query** window.
-1. Run the following T-SQL command.
+1. Create a server level credential. The name of the credential depends on the S3-compatible storage platform. Unlike PolyBase database-scoped credentials, backup/restore credentials are stored at the instance level. When used with S3-compatible storage, the credential must be named according to the URL path.
 
-```sql
-CREATE CREDENTIAL   [s3://<endpoint>:<port>/<bucket>]
-WITH
-        IDENTITY    = 'S3 Access Key',
-        SECRET      = '<AccessKeyID>:<SecretKeyID>';
-GO
-```
+    ```sql
+    CREATE CREDENTIAL [s3://<endpoint>:<port>/<bucket>]
+    WITH
+            IDENTITY    = 'S3 Access Key',
+            SECRET      = '<AccessKeyID>:<SecretKeyID>';
+    GO
+    ```
+
+> [!NOTE]
+> For more examples of server credentials S3-compatible storage, see [CREATE CREDENTIAL (Transact-SQL)](../t-sql/statements/create-credential-transact-sql.md#f-create-a-credential-for-backuprestore-to-s3-compatible-storage).
+
 ## Back up database
+
 In this step, back up the database `SQLTestDB` to your S3-compatible object storage using T-SQL. 
 
 Back up your database using T-SQL by running the following command:
@@ -110,6 +115,7 @@ WITH    FORMAT /* overwrite any existing backup sets */
 ```
 
 ## Delete database
+
 In this step, delete the database before performing the restore. This step is only necessary for the purpose of this tutorial, and is unlikely to be used in normal database management procedures. You can skip this step, but then you'll either need to change the name of the database during the restore on Azure SQL Managed Instance, or run the restore command `WITH REPLACE` to restore the database successfully on-premises.
 
 # [SSMS](#tab/SSMS)
@@ -126,13 +132,15 @@ USE [master];
 GO
 DROP DATABASE [SQLTestDB];
 GO
+```
 
--- If connections currently exist on-premises, you'll need to set the database into single user mode first
+If connections are currently open, you'll need to set the database into single user mode first. This will immediately end all other sessions and allow the database to be dropped.
+
+```sql
+-- If connections are currently open, you'll need to set the database into single user mode first
 USE [master];
 GO
 ALTER DATABASE [SQLTestDB] SET  SINGLE_USER WITH ROLLBACK IMMEDIATE;
-GO
-USE [master];
 GO
 DROP DATABASE [SQLTestDB];
 GO
@@ -141,6 +149,7 @@ GO
 ---
 
 ## Restore database 
+
 In this step, restore the database using either the GUI in SQL Server Management Studio, or with Transact-SQL.
 
 # [SSMS](#tab/SSMS)
@@ -170,14 +179,15 @@ To restore your on-premises database from Azure Blob storage, modify the followi
 USE [master];
 GO
 RESTORE DATABASE SQLTestDB
-FROM    URL = 's3://<endpoint>:<port>/<bucket>/ SQLTestDB.bak'
+FROM    URL = 's3://<endpoint>:<port>/<bucket>/SQLTestDB.bak'
 WITH    REPLACE /* overwrite existing database */
 ,       STATS  = 10;
 ```
 
 ---
 
-## See also 
+## Related content
+
 Following is some recommended reading to understand the concepts and best practices when using S3-compatible object storage for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backups.  
   
 - [SQL Server backup to URL for S3-compatible object storage](backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md)

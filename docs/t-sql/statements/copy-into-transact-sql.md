@@ -712,6 +712,8 @@ The COPY command autodetects the compression type based on the file extension wh
 
 - .gz  - **GZIP**
 
+Loading compressed files is currently only supported with *PARSER_VERSION* 1.0. 
+
 #### *FIELDQUOTE = 'field_quote'*
 
 *FIELDQUOTE* only applies to CSV. Specifies a single character that is used as the quote character (string delimiter) in the CSV file. If not specified, the quote character (") is used as the quote character as defined in the RFC 4180 standard. Hexadecimal notation is also supported for FIELDQUOTE. Extended ASCII and multi-byte characters aren't supported with UTF-8 for FIELDQUOTE.
@@ -737,11 +739,11 @@ Extended ASCII and multi-byte characters aren't supported with UTF-8 for ROWTERM
 
 #### *ENCODING = 'UTF8' | 'UTF16'*
 
-ENCODING only applies to CSV. Default is UTF8. Specifies the data encoding standard for the files loaded by the COPY command.
+*ENCODING* only applies to CSV. Default is UTF8. Specifies the data encoding standard for the files loaded by the COPY command.
 
 #### PARSER_VERSION = { '1.0' | '2.0' }
 
-PARSER_VERSION only applies to CSV. Default is 2.0. Specifies the file parser used for ingestion when the source file type is CSV. The 2.0 parser offers improved performance for ingestion of CSV files. 
+*PARSER_VERSION* only applies to CSV. Default is 2.0. Specifies the file parser used for ingestion when the source file type is CSV. The 2.0 parser offers improved performance for ingestion of CSV files. 
 
 Parser version 2.0 has the following limitations: 
 

@@ -58,7 +58,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info');
   
 -   The property path is a set of path steps. Path steps can contain the following elements and operators.  
   
-    -   Key names. For example, `$.name` and `$."first name"`. If the key name starts with a dollar sign or contains special characters such as spaces, surround it with quotes.   
+    -   Key names. For example, `$.name` and `$."first name"`. If the key name starts with a dollar sign or contains special characters such as spaces or dot operators(`.`), surround it with quotes.   
   
     -   Array elements. For example, `$.product[3]`. Arrays are zero-based.  
   

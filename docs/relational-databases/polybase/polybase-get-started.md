@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 This article guides you through a tutorial of working with multiple folders and files with PolyBase in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. This set of tutorial queries demonstrates various features of PolyBase.
 
-[Data virtualization with PolyBase in SQL Server](polybase-guide.md) allows you to take advantage of metadata file functions to query multiple folders, files or perform folder elimination. The combination of schema discovery with folder and file elimination is a powerful capability that allows SQL to fetch just the required data from any Azure Storage Account or S3-compliant object storage solution.
+[Data virtualization with PolyBase in SQL Server](polybase-guide.md) allows you to take advantage of metadata file functions to query multiple folders, files or perform folder elimination. The combination of schema discovery with folder and file elimination is a powerful capability that allows SQL to fetch just the required data from any Azure Storage Account or S3-compatible object storage solution.
 
 ## Prerequisites
 

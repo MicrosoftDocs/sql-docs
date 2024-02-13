@@ -26,7 +26,6 @@ dev_langs:
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|ID of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account. This value corresponds to the **proxy_id** column in the **sysproxies** table.|  
 |**sid**|**varbinary(85)**|Microsoft Windows *security_identifier* for the SQL Server login.|  
-|**principal_id**|**int**|ID of the user or group that has permission to use the proxy account for a specified subsystem step.|  
 |**flags**|**int**|Type of login:<br /><br /> **0** = Windows user or group, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.<br /><br /> **1** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fixed system role<br /><br /> **2** = **msdb** database role|  
   
 ## Remarks  

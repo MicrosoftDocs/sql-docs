@@ -11,7 +11,7 @@ ms.topic: quickstart
 monikerRange: "= azuresql || = azuresql-db"
 content_well_notification: 
   - AI-contribution
-  ai-usage: ai-assisted
+ai-usage: ai-assisted
 ---
 
 # Connect to and query Azure SQL Database using Python and the pyodbc driver

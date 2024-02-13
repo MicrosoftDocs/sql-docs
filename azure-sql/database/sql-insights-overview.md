@@ -44,17 +44,16 @@ For alert rules in Azure Monitor, you're charged based on the pricing published 
 
 ## Supported versions
 
-SQL Insights (preview) supports the following versions of SQL Server:
-- SQL Server 2012 and newer
 
-SQL Insights (preview) supports SQL Server running in the following environments:
+SQL Insights (preview) supports SQL Server in the following environments:
 - Azure SQL Database
 - Azure SQL Managed Instance
-- SQL Server on Azure Virtual Machines (SQL Server running on virtual machines registered with the [SQL virtual machine](../virtual-machines/windows/sql-agent-extension-manually-register-single-vm.md) provider)
-- Azure VMs (SQL Server running on virtual machines not registered with the [SQL virtual machine](../virtual-machines/windows/sql-agent-extension-manually-register-single-vm.md) provider)
+- SQL Server 2012 and later running on:
+    - SQL Server on Azure Virtual Machines (SQL Server running on virtual machines registered with the [SQL IaaS Agent extension](../virtual-machines/windows/sql-agent-extension-manually-register-single-vm.md) provider)
+    - Azure VMs (SQL Server running on virtual machines not registered with the [SQL IaaS Agent extension](../virtual-machines/windows/sql-agent-extension-manually-register-single-vm.md) provider)
 
 SQL Insights (preview) has no support or has limited support for the following:
-- **Non-Azure instances**: SQL Server running on virtual machines outside Azure is not supported.
+- **Non-Azure instances**: SQL Server running on environments outside of Azure is not supported, including on-premises and virtual machines. 
 - **Azure SQL Database elastic pools**: Metrics can't be gathered for elastic pools or for databases within elastic pools.
 - **Azure SQL Database low service tiers**: Metrics can't be gathered for databases on Basic, S0, S1, and S2 [service tiers](./resource-limits-dtu-single-databases.md).
 - **Azure SQL Database serverless tier**: Metrics can be gathered for databases through the serverless compute tier. However, the process of gathering metrics will reset the auto-pause delay timer, preventing the database from entering an auto-paused state.

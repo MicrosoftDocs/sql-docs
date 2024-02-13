@@ -17,18 +17,20 @@ ms.custom: ignite-2023
 
 **Extension version**: `1.1.2594.118`
 
-### Azure SQL migration assessment
+### Azure SQL migration readiness assessment (preview)
 
 SQL Server enabled by Azure Arc automatically generates Azure SQL migration assessments.  
 
-The migration assessment:
+A migration assessment:
 
 - Evaluates the readiness of your SQL Server instances for migration to Azure SQL
 - Recommends the optimal size for the Azure SQL destination
 - Identifies any migration blockers or issues that you need to resolve before moving to Azure SQL
 - Provides step-by-step guidance on how to mitigate any issues
 
-Use the migration assessment to ensure a successful migration.
+Use migration assessments to ensure a successful migration.
+
+For details, review [View SQL Server migration assessment - SQL Server enabled by Azure Arc](migration-assessment.md).
 
 ### Additional feature updates for SQL Server enabled by Azure Arc
 

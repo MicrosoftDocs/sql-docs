@@ -13,6 +13,7 @@ The following table identifies features available by SQL Server edition:
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | [Azure pay-as-you-go billing](../manage-configuration.md) | Yes | Yes | Not applicable | Not applicable | Not applicable | Not applicable |
 | [Best practices assessment](../assess.md) | Yes | Yes | Yes | Yes | Yes | Yes |
+| [Migration assessment (preview)](../migration-assessment.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Detailed database inventory](../view-databases.md#inventory-databases) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Microsoft Entra ID authentication](../../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-sql-usage) | Yes | Yes | Yes | Yes <sup>1</sup>| Yes | Yes |

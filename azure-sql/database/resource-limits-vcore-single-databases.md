@@ -176,9 +176,6 @@ The following table covers these SLOs: `GP_S_Gen5_20`, `GP_S_Gen5_24`, `GP_S_Gen
 
 The [serverless compute tier](serverless-tier-overview.md) is currently available on standard-series (Gen5) hardware only.
 
-> [!NOTE]
-> Serverless compute for the Hyperscale service tier is currently in preview.
-
 ### Hyperscale - serverless compute - standard-series (Gen5) (part 1 of 2)
 
 Compute sizes (service level objectives, or SLOs) for Hyperscale serverless standard-series databases follow the naming convention `HS_S_Gen5_` followed by the number of max vCores. 
@@ -202,7 +199,7 @@ The following table covers these SLOs: `HS_S_Gen5_2`, `HS_S_Gen5_4`, `HS_S_Gen5_
 | Max concurrent logins | 150 | 300 | 450 | 600 | 750 | 900 | 1050 |
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
 | Secondary replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
-| Multi-AZ | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) |
+| Multi-AZ | [Yes](high-availability-sla.md#hyperscale-service-tier) | [Yes](high-availability-sla.md#hyperscale-service-tier) | [Yes](high-availability-sla.md#hyperscale-service-tier) | [Yes](high-availability-sla.md#hyperscale-service-tier) | [Yes](high-availability-sla.md#hyperscale-service-tier) | [Yes](high-availability-sla.md#hyperscale-service-tier) | [Yes](high-availability-sla.md#hyperscale-service-tier) |
 | Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | Backup storage retention | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days |
 
@@ -235,7 +232,7 @@ The following table covers these SLOs: `HS_S_Gen5_16`, `HS_S_Gen5_18`, `HS_S_Gen
 | Max concurrent logins | 1200 | 1350 | 1500 | 1800 | 2400 | 3000 | 6000 |
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
 | Secondary replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
-| Multi-AZ | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) |
+| Multi-AZ | [Yes](high-availability-sla.md#hyperscale-service-tier) | [Yes](high-availability-sla.md#hyperscale-service-tier) | [Yes](high-availability-sla.md#hyperscale-service-tier) | [Yes](high-availability-sla.md#hyperscale-service-tier) | [Yes](high-availability-sla.md#hyperscale-service-tier) | [Yes](high-availability-sla.md#hyperscale-service-tier) | [Yes](high-availability-sla.md#hyperscale-service-tier) |
 | Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | Backup storage retention | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days |
 

@@ -10505,6 +10505,10 @@ items:
           href: sql-server/azure-arc/rotate-certificates.md
         - name: Extended Security Updates
           href: sql-server/azure-arc/extended-security-updates.md
+      - name: Migrate
+        items:
+        - name: Discover and assess
+          href: sql-server/azure-arc/migration-assessment.md
       - name: FAQ
         href: sql-server/azure-arc/faq.yml
       - name: Data collection and reporting

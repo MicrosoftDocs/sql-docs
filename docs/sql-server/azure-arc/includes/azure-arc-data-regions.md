@@ -20,6 +20,7 @@ Arc-enabled SQL Server is available in the following regions:
 - Canada Central
 - Canada East
 - UK South
+- UK West
 - France Central
 - West Europe
 - North Europe
@@ -32,6 +33,8 @@ Arc-enabled SQL Server is available in the following regions:
 - Korea Central
 - Southeast Asia
 - Australia East
+- Sweden Central
+- Norway East
 
 > [!IMPORTANT]
 > For successful onboarding and functioning, assign the same region to both Arc-enabled Server and Arc-enabled SQL Server.

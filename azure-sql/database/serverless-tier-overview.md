@@ -4,7 +4,7 @@ description: This article describes the new serverless compute tier and compares
 author: oslake
 ms.author: moslake
 ms.reviewer: wiassaf, mathoma
-ms.date: 01/05/2024
+ms.date: 02/12/2024
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -17,22 +17,21 @@ ms.custom:
 # Serverless compute tier for Azure SQL Database
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-Serverless is a [compute tier](service-tiers-sql-database-vcore.md#compute) for single databases in Azure SQL Database that automatically scales compute based on workload demand and bills for the amount of compute used per second. The serverless compute tier also automatically pauses databases during inactive periods when only storage is billed and automatically resumes databases when activity returns. The serverless compute tier is available in the [General Purpose](service-tier-general-purpose.md) service tier and currently in preview in the [Hyperscale](service-tier-hyperscale.md) service tier.
+Serverless is a [compute tier](service-tiers-sql-database-vcore.md#compute) for single databases in Azure SQL Database that automatically scales compute based on workload demand and bills for the amount of compute used per second. The serverless compute tier also automatically pauses databases during inactive periods when only storage is billed and automatically resumes databases when activity returns. The serverless compute tier is available in the [General Purpose](service-tier-general-purpose.md) service tier and the [Hyperscale](service-tier-hyperscale.md) service tier.
 
 > [!NOTE]
-> - Serverless in the Hyperscale service tier is currently in preview.
-> - Auto-pausing and auto-resuming is currently only supported in the General Purpose service tier. 
+> Auto-pausing and auto-resuming is currently only supported in the General Purpose service tier.
 
 ## Overview
 
-The serverless compute tier for single databases in Azure SQL Database is parameterized by a compute autoscaling range and an auto-pause delay. The configuration of these parameters shapes the database performance experience and compute cost.
+A compute autoscaling range and an auto-pause delay are important parameters for the serverless compute tier. The configuration of these parameters shapes the database performance experience and compute cost.
 
-:::image type="content" source="./media/serverless-tier-overview/serverless-billing.png" alt-text="A diagram indicating when serverless billing would stop incurring compute charges due to inactivity.":::
+:::image type="content" source="media/serverless-tier-overview/serverless-billing.png" alt-text="Diagram indicating when serverless billing would stop incurring compute charges due to inactivity.":::
 
 ### Performance configuration
 
 - The **minimum vCores** and **maximum vCores** are configurable parameters that define the range of compute capacity available for the database. Memory and IO limits are proportional to the vCore range specified.  
-- The **auto-pause delay** is a configurable parameter that defines the period of time the database must be inactive before it is automatically paused. The database is automatically resumed when the next login or other activity occurs. Alternatively, automatic pausing can be disabled.
+- The **auto-pause delay** is a configurable parameter that defines the period of time the database must be inactive before it is automatically paused. The database is automatically resumed when the next sign-in or other activity occurs. Alternatively, automatic pausing can be disabled.
 
 ### Cost
 
@@ -52,7 +51,7 @@ Serverless is price-performance optimized for single databases with intermittent
 
 - Single databases with intermittent, unpredictable usage patterns interspersed with periods of inactivity, and lower average compute utilization over time.
 - Single databases in the provisioned compute tier that are frequently rescaled and customers who prefer to delegate compute rescaling to the service.
-- New single databases without usage history where compute sizing is difficult or not possible to estimate prior to deployment in SQL Database.
+- New single databases without usage history where compute sizing is difficult or not possible to estimate before deployment in an Azure SQL Database.
 
 ### Scenarios well suited for provisioned compute
 
@@ -74,20 +73,19 @@ The following table summarizes distinctions between the serverless compute tier 
 
 ## Purchasing model and service tier
 
-
-The following table describes serverless support based on purchasing model, service tiers and hardware:: 
+The following table describes serverless support based on purchasing model, service tiers, and hardware:
 
 | **Category** | **Supported** | **Not supported**|
 |:---|:---|:---|
 | **Purchasing model** | [vCore](service-tiers-vcore.md) | [DTU](service-tiers-dtu.md) |
-| **Service tier** | [General Purpose](service-tier-general-purpose.md) <br/> [Hyperscale](service-tier-hyperscale.md) (in Preview) | Business Critical| 
+| **Service tier** | [General Purpose](service-tier-general-purpose.md) <br/> [Hyperscale](service-tier-hyperscale.md) | Business Critical| 
 | **Hardware** | Standard-series (Gen5) | All other hardware |  
 
 ## Autoscaling
 
 ### Scaling responsiveness
 
-In general, serverless databases are run on a machine with sufficient capacity to satisfy resource demand without interruption for any amount of compute requested within limits set by the maximum vCores value. Occasionally, load balancing automatically occurs if the machine is unable to satisfy resource demand within a few minutes. For example, if the resource demand is 4 vCores, but only 2 vCores are available, then it can take up to a few minutes to load balance before 4 vCores are provided. The database remains online during load balancing except for a brief period at the end of the operation when connections are dropped.
+Serverless databases are run on a machine with sufficient capacity to satisfy resource demand without interruption for any amount of compute requested within limits set by the maximum vCores value. Occasionally, load balancing automatically occurs if the machine is unable to satisfy resource demand within a few minutes. For example, if the resource demand is 4 vCores, but only 2 vCores are available, then it can take up to a few minutes to load balance before 4 vCores are provided. The database remains online during load balancing except for a brief period at the end of the operation when connections are dropped.
 
 ### Memory management
 
@@ -98,14 +96,14 @@ In both the General Purpose and Hyperscale service tiers, memory for serverless 
 
 Unlike provisioned compute databases, memory from the SQL cache is reclaimed from a serverless database when CPU or active cache utilization is low.
 
-- Active cache utilization is considered low when the total size of the most recently used cache entries falls below a threshold for a period of time.
+- Active cache utilization is considered low when the total size of the most recently used cache entries falls below a threshold, for a period of time.
 - When cache reclamation is triggered, the target cache size is reduced incrementally to a fraction of its previous size and reclaiming only continues if usage remains low.
 - When cache reclamation occurs, the policy for selecting cache entries to evict is the same selection policy as for provisioned compute databases when memory pressure is high.
-- The cache size is never reduced below the minimum memory limit as defined by minimum vCores, that can be configured.
+- The cache size is never reduced below the minimum memory limit as defined by minimum vCores.
 
 In both serverless and provisioned compute databases, cache entries can be evicted if all available memory is used.
 
-When CPU utilization is low, active cache utilization can remain high depending on the usage pattern and prevent memory reclamation.  Also, there can be other delays after user activity stops before memory reclamation occurs due to periodic background processes responding to prior user activity.  For example, delete operations and Query Store cleanup tasks generate ghost records that are marked for deletion, but are not physically deleted until the ghost cleanup process runs. Ghost cleanup might involve reading additional data pages into cache.
+When CPU utilization is low, active cache utilization can remain high depending on the usage pattern and prevent memory reclamation.  Also, there can be other delays after user activity stops before memory reclamation occurs due to periodic background processes responding to prior user activity.  For example, delete operations and Query Store cleanup tasks generate ghost records that are marked for deletion, but are not physically deleted until the ghost cleanup process runs. Ghost cleanup might involve reading data pages into cache.
 
 #### Cache hydration
 
@@ -114,13 +112,13 @@ The SQL memory cache grows as data is fetched from disk in the same way and with
 
 ### <a id="disk-cache-mgmt"></a> Disk cache management
 
-In the Hyperscale service tier for both serverless and provisioned compute tiers, each compute replica uses a Resilient Buffer Pool Extension (RBPEX) cache, which stores data pages on local SSD to improve IO performance.  However, in the serverless compute tier for Hyperscale, the RBPEX cache for each compute replica automatically grows and shrinks in response to increasing and decreasing workload demand.  The maximum size the RBPEX cache can grow to is three times the maximum memory configured for the database.  For details on maximum memory and RBPEX auto-scaling limits in serverless, see [serverless Hyperscale resource limits](resource-limits-vcore-single-databases.md#hyperscale---serverless-compute---standard-series-gen5).
+In the Hyperscale service tier for both serverless and provisioned compute tiers, each compute replica uses a Resilient Buffer Pool Extension (RBPEX) cache, which stores data pages on local SSD to improve IO performance. However, in the serverless compute tier for Hyperscale, the RBPEX cache for each compute replica automatically grows and shrinks in response to increasing and decreasing workload demand. The maximum size the RBPEX cache can grow to is three times the maximum memory configured for the database. For details on maximum memory and RBPEX auto-scaling limits in serverless, see [serverless Hyperscale resource limits](resource-limits-vcore-single-databases.md#hyperscale---serverless-compute---standard-series-gen5).
 
-## Auto-pausing and auto-resuming
+## <a id="auto-pausing-and-auto-resuming"></a> Auto-pause and auto-resume
 
-Currently, serverless auto-pausing and auto-resuming are only supported in the General Purpose tier. 
+Currently, serverless auto-pausing and auto-resuming are only supported in the General Purpose tier.
 
-### Auto-pausing
+### <a id="auto-pausing"></a> Auto-pause
 
 Auto-pausing is triggered if all of the following conditions are true during the auto-pause delay:
 
@@ -133,15 +131,15 @@ The following features do not support auto-pausing, but do support auto-scaling.
 
 - Geo-replication ([active geo-replication](active-geo-replication-overview.md) and [failover groups](failover-group-sql-db.md)).
 - [Long-term backup retention](long-term-retention-overview.md) (LTR).
-- The sync database used in [SQL Data Sync](sql-data-sync-data-sql-server-sql-database.md).  Unlike sync databases, hub and member databases support auto-pausing.
+- The sync database used in [SQL Data Sync](sql-data-sync-data-sql-server-sql-database.md). Unlike sync databases, hub and member databases support auto-pausing.
 - [DNS alias](dns-alias-overview.md) created for the logical server containing a serverless database.
-- [Elastic Jobs (preview)](elastic-jobs-overview.md), Auto-pause enabled serverless database is not supported as a *Job Database*. Serverless databases targeted by elastic jobs do support auto-pausing, and will be resumed by job connections.
+- [Elastic Jobs (preview)](elastic-jobs-overview.md), Auto-pause enabled serverless database is not supported as a *Job Database*. Serverless databases targeted by elastic jobs do support auto-pausing. Job connections will resume a database.
 
-Auto-pausing is temporarily prevented during the deployment of some service updates, which require the database be online.  In such cases, auto-pausing becomes allowed again once the service update completes.
+Auto-pausing is temporarily prevented during the deployment of some service updates, which require the database be online. In such cases, auto-pausing becomes allowed again once the service update completes.
 
 #### Auto-pause troubleshooting
 
-If auto-pausing is enabled, but a database does not auto-pause after the delay period and the features which block auto-pausing are not used, then the application or user sessions might be preventing auto-pausing. 
+If auto-pausing is enabled and features that block auto-pausing are not used, but a database does not auto-pause after the delay period, then the application or user sessions might be preventing auto-pausing.
 
 To see if there are any application or user sessions currently connected to the database, connect to the database using any client tool, and execute the following query:
 
@@ -161,11 +159,11 @@ ON s.group_id = wg.group_id
 WHERE s.session_id <> @@SPID
       AND
       (
-      (
-      wg.name like 'UserPrimaryGroup.DB%'
-      AND
-      TRY_CAST(RIGHT(wg.name, LEN(wg.name) - LEN('UserPrimaryGroup.DB') - 2) AS int) = DB_ID()
-      )
+          (
+          wg.name like 'UserPrimaryGroup.DB%'
+          AND
+          TRY_CAST(RIGHT(wg.name, LEN(wg.name) - LEN('UserPrimaryGroup.DB') - 2) AS int) = DB_ID()
+          )
       OR
       wg.name = 'DACGroup'
       );
@@ -174,19 +172,19 @@ WHERE s.session_id <> @@SPID
 > [!TIP]
 > After running the query, make sure to disconnect from the database. Otherwise, the open session used by the query will prevent auto-pausing.
 
-If the result set is nonempty, it indicates that there are sessions currently preventing auto-pausing. 
+- If the result set is nonempty, it indicates that there are sessions currently preventing auto-pausing.
+- If the result set is empty, it is still possible that sessions were open, possibly for a short time, at some point earlier during the auto-pause delay period. To check for activity during the delay period, you can use [Azure SQL Auditing](auditing-overview.md) and examine audit data for the relevant period.
 
-If the result set is empty, it is still possible that sessions were open, possibly for a short time, at some point earlier during the auto-pause delay period. To see if such activity has occurred during the delay period, you can use [Azure SQL Auditing](auditing-overview.md) and examine audit data for the relevant period.
+> [!IMPORTANT]
+> The presence of open sessions, with or without concurrent CPU utilization in the user resource pool, is the most common reason for a serverless database to not auto-pause as expected.
 
-The presence of open sessions, with or without concurrent CPU utilization in the user resource pool, is the most common reason for a serverless database to not auto-pause as expected.
-
-### Auto-resuming
+### <a id="auto-resuming"></a> Auto-resume
 
 Auto-resuming is triggered if any of the following conditions are true at any time:
 
 |Feature|Auto-resume trigger|
 |---|---|
-|Authentication and authorization|Login|
+|Authentication and authorization|Sign-in|
 |Threat detection|Enabling/disabling threat detection settings at the database or server level.<br>Modifying threat detection settings at the database or server level.|
 |Data discovery and classification|Adding, modifying, deleting, or viewing sensitivity labels|
 |Auditing|Viewing auditing records.<br>Updating or viewing auditing policy.|
@@ -199,14 +197,19 @@ Auto-resuming is triggered if any of the following conditions are true at any ti
 |Database copying|Create database as copy.<br>Export to a BACPAC file.|
 |SQL data sync|Synchronization between hub and member databases that run on a configurable schedule or are performed manually|
 |Modifying certain database metadata|Adding new database tags.<br>Changing maximum vCores, minimum vCores, or auto-pause delay.|
-|SQL Server Management Studio (SSMS)|When you use SSMS versions earlier than 18.1, and opening a new query window for any database in the server, resumes any auto-paused database in the same server. This behavior does not occur if using SSMS version 18.1 or later.|
+|SQL Server Management Studio (SSMS)|When you use SSMS versions earlier than 18.1, and opening a new query window for any database in the server, any auto-paused database in the same server is resumed. This behavior does not occur if using SSMS version 18.1 or later.|
 
 - Monitoring, management, or other solutions performing any of these operations listed triggers auto-resuming.
 - Auto-resuming is also triggered during the deployment of some service updates that require the database be online.
 
 ### Connectivity
 
-If a serverless database is paused, the first login resumes the database and returns an error stating that the database is unavailable with error code 40613. Once the database is resumed, the login must be retried to establish connectivity. Database clients with connection retry logic should not need to be modified.  For connection retry logic options that are built in to the SqlClient driver, see [configurable retry logic in SqlClient](/sql/connect/ado-net/configurable-retry-logic).
+If a serverless database is paused, the first sign-in activity resumes the database and returns an error stating that the database is unavailable with error code 40613. Once the database is resumed, sign-in can be retried to establish connectivity. Database clients with a [recommended connection retry logic](/azure/architecture/patterns/retry) should not need to be modified. For recommended patterns for connection retry logic, review:
+
+- [Retry logic in SqlClient](/sql/connect/ado-net/configurable-retry-logic)
+- [Retry logic in SQL Database using Entity Framework Core](/azure/architecture/best-practices/retry-service-specific#sql-database-using-entity-framework-core)
+- [Retry logic in SQL Database using Entity Framework 6](/azure/architecture/best-practices/retry-service-specific#sql-database-using-entity-framework-6)
+- [Retry logic in SQL Database using ADO.NET](/azure/architecture/best-practices/retry-service-specific#sql-database-using-adonet)
 
 ### Latency
 
@@ -216,7 +219,7 @@ The latency to auto-resume and auto-pause a serverless database is generally ord
 
 #### Key deletion or revocation
 
-If using [customer managed transparent data encryption](transparent-data-encryption-byok-overview.md) (BYOK) and the serverless database is auto-paused when key deletion or revocation occurs, then the database remains in the auto-paused state.  In this case, after the database is next resumed, the database becomes inaccessible within approximately 10 minutes. Once the database becomes inaccessible, the recovery process is the same as for provisioned compute databases. If the serverless database is online when key deletion or revocation occurs, then the database also becomes inaccessible within approximately 10 minutes in the same way as with provisioned compute databases.
+If using [customer managed transparent data encryption](transparent-data-encryption-byok-overview.md) (BYOK) and the serverless database is auto-paused when key deletion or revocation occurs, then the database remains in the auto-paused state. In this case, after the database is next resumed, the database becomes inaccessible within approximately 10 minutes. Once the database becomes inaccessible, the recovery process is the same as for provisioned compute databases. If the serverless database is online when key deletion or revocation occurs, then the database also becomes inaccessible within approximately 10 minutes in the same way as with provisioned compute databases.
 
 #### Key rotation
 
@@ -233,7 +236,7 @@ Creating a new database or moving an existing database into a serverless compute
    |Parameter|Value choices|Default value|
    |---|---|---|---|
    |Minimum vCores|Depends on maximum vCores configured - see [resource limits](resource-limits-vcore-single-databases.md#general-purpose---serverless-compute---gen5).|0.5 vCores|
-   |Autopause delay|Minimum: 60 minutes (1 hour)<br>Maximum: 10,080 minutes (7 days)<br>Increments: 10 minutes<br>Disable autopause: -1|60 minutes|
+   |Auto-pause delay|Minimum: 60 minutes (1 hour)<br>Maximum: 10,080 minutes (7 days)<br>Increments: 10 minutes<br>Disable auto-pause: -1|60 minutes|
 
 The following examples create a new database in the serverless compute tier.
 
@@ -348,8 +351,7 @@ When moving your database between compute tiers, provide the **Compute model** p
 
 The examples in this section show you how to move your provisioned database to serverless. Modify the service objective as needed, as these examples set the maximum vCores to 4. 
 
-
-#### Use PowerShell 
+#### Use PowerShell
 
 # [General Purpose](#tab/general-purpose)
 
@@ -425,18 +427,17 @@ MODIFY ( SERVICE_OBJECTIVE = 'HS_S_Gen5_2') ;
 
 ### Use PowerShell
 
-Use [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) to modify the maximum or minimum vCores, and autopause delay. Use the `MaxVcore`, `MinVcore`, and `AutoPauseDelayInMinutes` arguments.  Serverless auto-pausing is not currently supported in the Hyperscale tier, so the auto-pause delay argument is only applicable to the General Purpose tier. 
+Use [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) to modify the maximum or minimum vCores, and auto-pause delay. Use the `MaxVcore`, `MinVcore`, and `AutoPauseDelayInMinutes` arguments. Serverless auto-pausing is not currently supported in the Hyperscale tier, so the auto-pause delay argument is only applicable to the General Purpose tier.
 
 ### Use Azure CLI
 
-Use [az sql db update](/cli/azure/sql/db#az-sql-db-update) to modify the maximum or minimum vCores, and autopause delay. Use the `capacity`, `min-capacity`, and `auto-pause-delay` arguments. Serverless auto-pausing is not currently supported in the Hyperscale tier, so the auto-pause delay argument is only applicable to the General Purpose tier. 
+Use [az sql db update](/cli/azure/sql/db#az-sql-db-update) to modify the maximum or minimum vCores, and auto-pause delay. Use the `capacity`, `min-capacity`, and `auto-pause-delay` arguments. Serverless auto-pausing is not currently supported in the Hyperscale tier, so the auto-pause delay argument is only applicable to the General Purpose tier. 
 
-
-## Monitoring
+## <a id="monitoring"></a> Monitor
 
 ### Resources used and billed
 
-The resources of a serverless database are encapsulated by app package, SQL instance, and user resource pool entities.
+The resources of a serverless database include the app package, SQL instance, and user resource pool entities.
 
 #### App package
 
@@ -444,17 +445,17 @@ The app package is the outer most resource management boundary for a database, r
 
 #### User resource pool
 
-The user resource pool is an inner resource management boundary for a database, regardless of whether the database is in a serverless or provisioned compute tier. The user resource pool scopes CPU and IO for user workload generated by DDL queries such as CREATE and ALTER, DML queries such as INSERT, UPDATE, DELETE, and MERGE, and SELECT queries. These queries generally represent the most substantial proportion of utilization within the app package.
+The user resource pool is an inner resource management boundary for a database, regardless of whether the database is in a serverless or provisioned compute tier. The user resource pool scopes CPU and IO for user workload generated by DDL (CREATE and ALTER) and DML (INSERT, UPDATE, DELETE, and MERGE, and SELECT) queries. These queries generally represent the most substantial proportion of utilization within the app package.
 
 ### Metrics
 
-Metrics for monitoring the resource usage of the app package and user resource pool of a serverless database and any geo-replicas are listed in the following table:
+The following table includes metrics for monitoring the resource usage of the app package and user resource pool of a serverless database, including any geo-replicas:
 
 |Entity|Metric|Description|Units|
 |---|---|---|---|
 |App package|app_cpu_percent|Percentage of vCores used by the app relative to maximum vCores allowed for the app. For serverless Hyperscale, this metric is exposed for all primary replicas, named replicas, and geo-replicas. |Percentage|
-|App package|app_cpu_billed|The amount of compute billed for the app during the reporting period. The amount paid during this period is the product of this metric and the vCore unit price. <br><br>Values of this metric are determined by aggregating over time the maximum of CPU used and memory used each second. If the amount used is less than the minimum amount provisioned as set by the minimum vCores and minimum memory, then the minimum amount provisioned is billed. In order to compare CPU with memory for billing purposes, memory is normalized into units of vCores by rescaling the amount of memory in GB by 3 GB per vCore. For serverless Hyperscale, this metric is exposed for the primary replica and any named replicas. |vCore seconds|
-|App package| app_cpu_billed_HA_replicas| Only applicable to serverless Hyperscale.  Sum of the compute billed across all apps for HA replicas during the reporting period.  This sum is scoped either to the HA replicas belonging to the primary replica or the HA replicas belonging to a given named replica.  Before you calculate this sum across HA replicas, the amount of compute billed for an individual HA replica is determined in the same way as for the primary replica or a named replica.  For serverless Hyperscale, this metric is exposed for all primary replicas, named replicas, and geo-replicas.  The amount paid during the reporting period is the product of this metric and the vCore unit price.  |vCore seconds| 
+|App package|app_cpu_billed|The amount of compute billed for the app during the reporting period. The amount paid during this period is the product of this metric and the vCore unit price. <br><br>Values of this metric are determined by aggregating the maximum of CPU used and memory used each second. If the amount used is less than the minimum amount provisioned as set by the minimum vCores and minimum memory, then the minimum amount provisioned is billed. In order to compare CPU with memory for billing purposes, memory is normalized into units of vCores by rescaling the amount of memory in GB by 3 GB per vCore. For serverless Hyperscale, this metric is exposed for the primary replica and any named replicas. |vCore seconds|
+|App package| app_cpu_billed_HA_replicas| Only applicable to serverless Hyperscale.  Sum of the compute billed across all apps for HA replicas during the reporting period. This sum is scoped either to the HA replicas belonging to the primary replica or the HA replicas belonging to a given named replica. Before you calculate this sum across HA replicas, the amount of compute billed for an individual HA replica is determined in the same way as for the primary replica or a named replica. For serverless Hyperscale, this metric is exposed for all primary replicas, named replicas, and geo-replicas.  The amount paid during the reporting period is the product of this metric and the vCore unit price.  |vCore seconds| 
 |App package|app_memory_percent|Percentage of memory used by the app relative to maximum memory allowed for the app. For serverless Hyperscale, this metric is exposed for all primary replicas, named replicas, and geo-replicas. |Percentage|
 |User resource pool|cpu_percent|Percentage of vCores used by user workload relative to maximum vCores allowed for user workload. |Percentage|
 |User resource pool|data_IO_percent|Percentage of data IOPS used by user workload relative to maximum data IOPS allowed for user workload.|Percentage|
@@ -542,8 +543,6 @@ More precisely, the compute bill in this example is calculated as follows:
 |Total vCore seconds billed over 24 hours||||50,400 vCore seconds|
 
 Suppose the compute unit price is $0.000145/vCore/second.  Then the compute billed for this 24-hour period is the product of the compute unit price and vCore seconds billed: $0.000145/vCore/second * 50400 vCore seconds ~ $7.31.
-
-
 
 # [Hyperscale](#tab/hyperscale)
 
@@ -654,6 +653,5 @@ Currently, 80 maximum vCores with availability zone support in serverless for th
 
 ## Related content
 
-- To get started, see [Quickstart: Create a single database in Azure SQL Database using the Azure portal](single-database-create-quickstart.md).
-- For serverless service tier choices, see [General Purpose](service-tier-general-purpose.md) and [Hyperscale (preview)](service-tier-hyperscale.md).
-
+- To get started, see [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md).
+- For serverless service tier choices, see [General Purpose](service-tier-general-purpose.md) and [Hyperscale](service-tier-hyperscale.md).

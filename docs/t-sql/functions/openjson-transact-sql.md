@@ -132,7 +132,7 @@ The comparison used to match path steps with the properties of the JSON expressi
 
 #### Array element identity
 
-the `OPENROWSET` function in the serverless SQL pool in Azure Synapse Analytics can automatically  generate the identity of each row that is returned as a result. The identity column is specified using the expression `$.sql:identity()` in the JSON path after the column definition. The column with this value in the JSON path expression will generate a unique 0-based number for each element in the JSON array that the function parses. The identity value represents the position/index of the array element.
+the `OPENJSON` function in the serverless SQL pool in Azure Synapse Analytics can automatically  generate the identity of each row that is returned as a result. The identity column is specified using the expression `$.sql:identity()` in the JSON path after the column definition. The column with this value in the JSON path expression will generate a unique 0-based number for each element in the JSON array that the function parses. The identity value represents the position/index of the array element.
 
 ```sql
 DECLARE @array VARCHAR(MAX);

@@ -704,16 +704,14 @@
 
     - name: Monitor & Tune
       items:
+        - name: Monitor SQL Database
+          href: database/monitoring-sql-database-azure-monitor.md 
         - name: Identify query performance bottlenecks
           href: database/identify-query-performance-issues.md
         - name: Use DMVs to monitor performance
           href: database/monitoring-with-dmvs.md
-        - name: Azure Monitor for SQL Database
-          href: database/monitoring-sql-database-azure-monitor.md 
         - name: Azure Monitor metrics and alerts for SQL Database
           href: database/monitoring-metrics-alerts.md          
-        - name: Azure Monitor for SQL Database reference 
-          href: database/monitoring-sql-database-azure-monitor-reference.md
     - name: Hyperscale databases
       items: 
       - name: Manage Hyperscale databases
@@ -1431,16 +1429,14 @@
 
     - name: Monitor & Tune
       items:
+        - name: Monitor SQL Managed Instance
+          href: managed-instance/monitoring-sql-managed-instance-azure-monitor.md 
         - name: Tune applications and databases for performance
           href: managed-instance/performance-guidance.md
         - name: Identify query performance bottlenecks
           href: managed-instance/identify-query-performance-issues.md
         - name: Use DMVs to monitor performance
           href: managed-instance/monitoring-with-dmvs.md
-        - name: Azure Monitor for Azure SQL Managed Instance
-          href: managed-instance/monitoring-sql-managed-instance-azure-monitor.md 
-        - name: Azure Monitor for Azure SQL Managed Instance reference 
-          href: managed-instance/monitoring-sql-managed-instance-azure-monitor-reference.md
           
     - name: Configure settings
       items: 
@@ -1926,6 +1922,10 @@
     href: ./database/policy-reference.md
   - name: DTU benchmark
     href: database/dtu-benchmark.md
+  - name: SQL Database monitoring data reference 
+    href: database/monitoring-sql-database-azure-monitor-reference.md
+  - name: SQL Managed Instance monitoring data reference 
+    href: managed-instance/monitoring-sql-managed-instance-azure-monitor-reference.md
 
 - name: Resources
   items:

@@ -1327,7 +1327,7 @@ CREATE DATABASE MyLedgerDB ( EDITION = 'GeneralPurpose' ) WITH LEDGER = ON;
 
 ## Overview
 
-In [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], this statement is used to create a database. When creating a database on a managed instance, you specify the database name and collation.
+In [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], this statement is used to create a database. When creating a database on a managed instance, you specify the database name and collation.
 
 ## Syntax
 

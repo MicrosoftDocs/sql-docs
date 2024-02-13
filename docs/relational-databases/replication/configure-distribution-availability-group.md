@@ -6,7 +6,7 @@ ms.author: mikeray
 ms.date: "01/16/2019"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "replication [SQL Server], distribution"

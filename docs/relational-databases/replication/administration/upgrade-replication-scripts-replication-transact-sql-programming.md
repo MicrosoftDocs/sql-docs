@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "scripts [SQL Server replication], upgrading"
@@ -109,7 +109,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 
  The following is an example of a [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] script that creates a transactional publication for the Product table. This publication supports immediate updating with queued updating as failover. Default parameters have been removed for readability.  
   
- [!code-sql[HowTo#sp_createtranpub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_1.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/upgrade-replication-scri_1.sql":::
   
 ### B. SQL Server 2005 and later script to create a transactional publication
  The following is an example of upgrading the previous script, which creates a transactional publication, to run successfully for [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions. This publication supports immediate updating with queued updating as failover. Defaults for new parameters have been explicitly declared.  
@@ -117,12 +117,12 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 > [!NOTE]  
 >  Windows credentials are supplied at runtime using **sqlcmd** scripting variables.  
   
- [!code-sql[HowTo#sp_createtranpub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_2.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/upgrade-replication-scri_2.sql":::
   
 ### C. SQL Server 2000 script to create a merge publication
  The following is an example of a [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] script that creates a merge publication for the Customers table. Default parameters have been removed for readability.  
   
- [!code-sql[HowTo#sp_createmergepub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_3.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/upgrade-replication-scri_3.sql":::
   
 ### D. SQL Server 2005 and later script to create a merge publication
  The following is an example of the previous script, which creates a merge publication, upgraded to run successfully for [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions. Defaults for new parameters have been explicitly declared.  
@@ -130,12 +130,12 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 > [!NOTE]  
 >  Windows credentials are supplied at runtime using **sqlcmd** scripting variables.  
   
- [!code-sql[HowTo#sp_createmergepub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_4.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/upgrade-replication-scri_4.sql":::
   
 ### E. SQL Server 2000 script to create a push subscription to a transactional publication
  The following is an example of a [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] script that creates a push subscription to a transactional publication. Default parameters have been removed for readability.  
   
- [!code-sql[HowTo#sp_createtranpushsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_5.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/upgrade-replication-scri_5.sql":::
   
 ### F. SQL Server 2005 and later script to create a push subscription to a transactional publication
  The following is an example of the previous script, which creates a push subscription to a transactional publication, upgraded to run successfully for [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions. Defaults for new parameters have been explicitly declared.  
@@ -143,12 +143,12 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 > [!NOTE]  
 >  Windows credentials are supplied at runtime using **sqlcmd** scripting variables.  
   
- [!code-sql[HowTo#sp_createtranpushsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_6.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/upgrade-replication-scri_6.sql":::
   
 ### G. SQL Server 2000 script to create a push subscription to a merge publication
  The following is an example of a [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] script that creates a push subscription to a merge publication. Default parameters have been removed for readability.  
   
- [!code-sql[HowTo#sp_createmergepushsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_7.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/upgrade-replication-scri_7.sql":::
   
 ### H. SQL Server 2005 and later script to create a push subscription to a merge publication
  The following is an example of the previous script, which creates a push subscription to a merge publication, upgraded to run successfully for [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions. Defaults for new parameters have been explicitly declared.  
@@ -156,12 +156,12 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 > [!NOTE]  
 >  Windows credentials are supplied at runtime using **sqlcmd** scripting variables.  
   
- [!code-sql[HowTo#sp_createmergepushsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_8.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/upgrade-replication-scri_8.sql":::
   
 ### I. SQL Server 2000 script to create a pull subscription to a transactional publication
  The following is an example of a [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] script that creates a pull subscription to a transactional publication. Default parameters have been removed for readability.  
   
- [!code-sql[HowTo#sp_createmergepushsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_7.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/upgrade-replication-scri_7.sql":::
   
 ### J. SQL Server 2005 and later script to create a pull subscription to a transactional publication
  The following is an example of the previous script, which creates a pull subscription to a transactional publication, upgraded to run successfully for [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions. Defaults for new parameters have been explicitly declared.  
@@ -169,12 +169,12 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 > [!NOTE]  
 >  Windows credentials are supplied at runtime using **sqlcmd** scripting variables.  
   
- [!code-sql[HowTo#sp_createtranpullsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_9.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/upgrade-replication-scri_9.sql":::
   
 ### K. SQL Server 2000 script to create a pull subscription to a merge publication
  The following is an example of a [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] script that creates a pull subscription to a merge publication. Default parameters have been removed for readability.  
   
- [!code-sql[HowTo#sp_createmergepullsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_10.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/upgrade-replication-scri_10.sql":::
   
 ### L. SQL Server 2005 and later script to create a pull subscription to a merge publication
  The following is an example of the previous script, which creates a pull subscription to a merge publication, upgraded to run successfully for [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions. Defaults for new parameters have been explicitly declared.  
@@ -182,7 +182,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 > [!NOTE]  
 >  Windows credentials are supplied at runtime using **sqlcmd** scripting variables.  
   
- [!code-sql[HowTo#sp_createmergepullsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_11.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/upgrade-replication-scri_11.sql":::
   
 ## See Also  
  [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)   

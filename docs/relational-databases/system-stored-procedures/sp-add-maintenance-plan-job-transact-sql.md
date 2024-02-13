@@ -70,7 +70,7 @@ EXEC sp_add_maintenance_plan_job
     @job_id = N'B8FCECB1-E22C-11D2-AA64-00C04F688EAE';
 ```
 
-## See also
+## Related content
 
 - [Maintenance Plans](../maintenance-plans/maintenance-plans.md)
 - [Database Maintenance Plan stored procedures (Transact-SQL)](database-maintenance-plan-stored-procedures-transact-sql.md)

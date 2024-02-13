@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "merge replication logical records [SQL Server replication]"
@@ -128,7 +128,7 @@ helpviewer_keywords:
   
 1.  At the Publisher on the publication database, execute the following query to return information about all logical record relationships defined for the specified publication:  
   
-     [!code-sql[HowTo#sp_ReturnMergeLogicalRecords](../../../relational-databases/replication/codesnippet/tsql/define-a-logical-record-_1.sql)]  
+     :::code language="sql" source="../codesnippet/tsql/define-a-logical-record-_1.sql":::
   
      Note the name of the logical record relationship being removed in the **filtername** column in the result set.  
   
@@ -140,7 +140,7 @@ helpviewer_keywords:
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This example enables precomputed partitions on an existing publication, and creates a logical record comprising the two new articles for the `SalesOrderHeader` and `SalesOrderDetail` tables.  
   
- [!code-sql[HowTo#sp_AddMergeLogicalRecord](../../../relational-databases/replication/codesnippet/tsql/define-a-logical-record-_2.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/define-a-logical-record-_2.sql":::
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
   

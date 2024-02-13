@@ -112,7 +112,7 @@ EXEC sp_syscollector_create_collector_type
 GO
 ```
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Data collection](../data-collection/data-collection.md)

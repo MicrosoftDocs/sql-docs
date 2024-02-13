@@ -6,7 +6,7 @@ ms.author: "mikeray"
 ms.date: 01/09/2019
 ms.service: sql
 ms.subservice: availability-groups
-ms.topic: "article"
+ms.topic: how-to
 helpviewer_keywords:
   - "connection access to availability replicas"
   - "Availability Groups [SQL Server], availability replicas"
@@ -76,7 +76,7 @@ The preceding table shows that when the primary replica has `READ_WRITE_ROUTING_
 In this example, an availability group has three replicas:
 * A primary replica on COMPUTER01
 * A synchronous secondary replica on COMPUTER02
-* A asynchronous secondary replica on COMPUTER03
+* An asynchronous secondary replica on COMPUTER03
 
 The following picture represents the availability group.
 

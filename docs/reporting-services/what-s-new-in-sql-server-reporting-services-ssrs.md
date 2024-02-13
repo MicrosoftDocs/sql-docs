@@ -128,9 +128,9 @@ SharePoint integrated mode is deprecated after SQL Server 2016. To add Reporting
 
 ## SSRS 2016
 
-### Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
+### Reporting Services [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]  
 
-A new [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] is available. The updated web portal includes:
+A new [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] is available. The updated web portal includes:
 
 - KPIs
 - Mobile Reports
@@ -144,19 +144,19 @@ To create Mobile Reports, you need the [!INCLUDE[SS_MobileReptPub_Short](../incl
 
 [!INCLUDE [ssrs-mobile-report-deprecated](../includes/ssrs-mobile-report-deprecated.md)]
 
-For more information about the [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)], see [Web portal (SSRS Native Mode)](../reporting-services/web-portal-ssrs-native-mode.md).  
+For more information about the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], see [Web portal (SSRS Native Mode)](../reporting-services/web-portal-ssrs-native-mode.md).  
 
 :::image type="content" source="../reporting-services/media/ssrsportal.png" alt-text="Screenshot that shows the SQL Server Reporting Services portal.":::
 
-#### Custom branding for the [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
+#### Custom branding for the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 
 
-You can customize the [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] with your organization's logo and colors by using a branding pack.  
+You can customize the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] with your organization's logo and colors by using a branding pack.  
 
 For more information about custom branding, see [Branding the web portal](./branding-the-web-portal.md).
 
-#### Key performance indicators (KPI) in the [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
+#### Key performance indicators (KPI) in the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 
 
-You create KPIs directly in the [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] that are contextual to the current folder. When creating KPIs, you can choose dataset fields, and summarize their values. You can also select related content to drill-through to expose more details.
+You create KPIs directly in the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] that are contextual to the current folder. When creating KPIs, you can choose dataset fields, and summarize their values. You can also select related content to drill-through to expose more details.
 
 :::image type="content" source="../reporting-services/media/ssrs-webportal-kpi.png" alt-text="Screenshot that shows KPIS in the SQL Server Reporting Services portal.":::
 
@@ -173,7 +173,7 @@ Reporting Services mobile reports are dedicated reports optimized for a wide var
 
 #### Mobile Report Publisher  
 
-The [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] allows you to create and publish SQL Server mobile reports to your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)].  
+The [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] allows you to create and publish SQL Server mobile reports to your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
 
 :::image type="content" source="../reporting-services/media/ss-mrp-layouttabsm.png" alt-text="Screenshot of the SQL Server Mobile Report Publisher interface.":::
 

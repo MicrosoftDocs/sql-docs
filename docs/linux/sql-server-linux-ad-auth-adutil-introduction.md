@@ -27,7 +27,7 @@ The **adutil** tool is designed as a series of commands and subcommands, with ex
 
 ## Configure adutil for LDAP over Secure Sockets Layer (SSL)
 
-You should use Lightweight Directory Access Protocol over SSL (LDAPS) instead of Lightweight Directory Access Protocol (LDAP). If you want to learn more about LDAP, see [Lightweight Directory Access Protocol (LDAP)](sql-server-linux-ad-auth-understanding.md#ldap). For more information on how to configure LDAPS and how it differs from LDAP, see [Enabling LDAPS for Client Authentication](https://social.technet.microsoft.com/wiki/contents/articles/2980.ldap-over-ssl-ldaps-certificate.aspx#Enabling_LDAPS_for_Client_Authentication).
+You should use Lightweight Directory Access Protocol over SSL (LDAPS) instead of Lightweight Directory Access Protocol (LDAP). If you want to learn more about LDAP, see [Lightweight Directory Access Protocol (LDAP)](sql-server-linux-ad-auth-understanding.md#ldap).
 
 You can set the `useLdaps` option to `true` in the `adutil.json` configuration file, which is located at: `/var/opt/mssql/.adutil/adutil.json` when run under the `mssql` user. This JSON code sample shows how to configure the setting:
 

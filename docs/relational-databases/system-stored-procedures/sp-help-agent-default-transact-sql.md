@@ -62,6 +62,6 @@ The type of agent. *@agent_type* is **int**, with no default, and can be one of 
 
 Only members of the **sysadmin** fixed server role or the **replmonitor** fixed database role can execute `sp_help_agent_default`.
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

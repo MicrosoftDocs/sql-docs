@@ -3,7 +3,7 @@ title: "CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)"
 description: CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/15/2023
+ms.date: 01/18/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -75,9 +75,9 @@ Specifies the secret required for outgoing authentication. `SECRET` is required 
 
 ## Remarks
 
-A database scoped credential is a record that contains the authentication information that is required to connect to a resource outside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Most credentials include a Windows user and password.
+A database scoped credential is a record that contains the authentication information that is required to connect to a resource outside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Most credentials include a Windows user and password. 
 
-Before creating a database scoped credential, the database must have a master key to protect the credential. For more information, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md).
+To protect the sensitive information inside the database scoped credential, a database master key (DMK) is required. The DMK is a symmetric key that encrypts the secret in the database scoped credential. The database must have a master key before any database scoped credentials can be created. A DMK should be encrypted with a strong password. Azure SQL Database will create a database master key with a strong, randomly selected password as part of creating the database scoped credential, or as part of creating a server audit. Users can't create the master key on a logical `master` database. The master key password is unknown to Microsoft and not discoverable after creation. For this reason, creating a database master key before creating a database scoped credential is recommended. For more information, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md).
 
 When IDENTITY is a Windows user, the secret can be the password. The secret is encrypted using the service master key. If the service master key is regenerated, the secret is re-encrypted using the new service master key.
 
@@ -98,6 +98,10 @@ Here are some applications of database scoped credentials:
 - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] uses database scoped credentials for elastic pools. For more information, see [Tame explosive growth with elastic databases](/azure/azure-sql/database/elastic-pool-overview)
 
 - [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) use database scoped credentials to access data from Azure Blob Storage. For more information, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
+
+- Use database scoped credentials with [PolyBase](../../relational-databases/polybase/polybase-guide.md) and [Azure SQL Managed Instance data virtualization](/azure/azure-sql/managed-instance/data-virtualization-overview?view=azuresqlmi-current&preserve-view=true) features.
+
+- For BACKUP TO URL and RESTORE FROM URL, use a server-level credential via [CREATE CREDENTIAL (Transact-SQL)](create-credential-transact-sql.md) instead.
 
 ## Permissions
 
@@ -159,7 +163,7 @@ WITH
 ;
 ```
 
-## More information
+## Related content
 
 - [Credentials &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)
 - [ALTER DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)

@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "sp_changearticle"
@@ -123,19 +123,19 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This transactional replication example returns the properties of the published article.  
   
- [!code-sql[HowTo#sp_helptranarticle](../../../relational-databases/replication/codesnippet/tsql/view-and-modify-article-_1.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/view-and-modify-article-_1.sql":::
   
  This transactional replication example changes the schema options for the published article.  
   
- [!code-sql[HowTo#sp_changetranarticle](../../../relational-databases/replication/codesnippet/tsql/view-and-modify-article-_2.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/view-and-modify-article-_2.sql":::
   
  This merge replication example returns the properties of the published article.  
   
- [!code-sql[HowTo#sp_helpmergearticle](../../../relational-databases/replication/codesnippet/tsql/view-and-modify-article-_3.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/view-and-modify-article-_3.sql":::
   
  This merge replication example changes the conflict detection settings for a published article.  
   
- [!code-sql[HowTo#sp_changemergearticle](../../../relational-databases/replication/codesnippet/tsql/view-and-modify-article-_4.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/view-and-modify-article-_4.sql":::
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
  You can modify articles and access their properties programmatically by using Replication Management Objects (RMO). The RMO classes you use to view or modify article properties depend on the type of publication to which the article belongs.  

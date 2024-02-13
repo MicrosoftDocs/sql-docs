@@ -6,7 +6,7 @@ ms.author: mikeray
 ms.date: "02/01/2016"
 ms.service: sql
 ms.subservice: database-mirroring
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
   - "upgrading SQL Server, rolling upgrade of mirrored databases"
   - "database mirroring [SQL Server], upgrading system"

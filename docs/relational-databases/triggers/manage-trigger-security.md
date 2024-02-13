@@ -51,7 +51,7 @@ What this trigger means is that as soon as a user that has permission to execute
     ```  
 
    > [!NOTE]
-   > Only **sys.triggers** is available for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] unless you are using [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
+   > Only **sys.triggers** is available for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] unless you are using [!INCLUDE[ssazuremi](../../includes/ssazuremi-md.md)].
 
 ::: moniker-end
 

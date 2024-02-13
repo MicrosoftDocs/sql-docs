@@ -23,7 +23,7 @@ You can install and run SQL Server Reporting Services (SSRS) and Internet Inform
   
 |IIS version|Issues|Description|  
 |-----------------|------------|-----------------|  
-|8.0, 8.5|Requests intended for one application are accepted by a different application.<br /><br /> HTTP.SYS enforces precedence rules for URL reservations. Requests that are sent to applications that have the same virtual directory name and that jointly monitor port 80 might not reach the intended target if the URL reservation is weak relative to the URL reservation of another application.|Under certain conditions, a registered endpoint that supersedes another URL endpoint in the URL reservation scheme might receive HTTP requests intended for the other application.<br /><br /> Using unique virtual directory names for the Report Server Web service and the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] helps you avoid this conflict.<br /><br /> Detailed information about this scenario is provided in this topic.|  
+|8.0, 8.5|Requests intended for one application are accepted by a different application.<br /><br /> HTTP.SYS enforces precedence rules for URL reservations. Requests that are sent to applications that have the same virtual directory name and that jointly monitor port 80 might not reach the intended target if the URL reservation is weak relative to the URL reservation of another application.|Under certain conditions, a registered endpoint that supersedes another URL endpoint in the URL reservation scheme might receive HTTP requests intended for the other application.<br /><br /> Using unique virtual directory names for the Report Server Web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] helps you avoid this conflict.<br /><br /> Detailed information about this scenario is provided in this topic.|  
   
 ## Precedence Rules for URL Reservations  
  Before you can address interoperability issues between IIS and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you must understand URL reservation precedence rules. Precedence rules can be generalized into the following statement: a URL reservation that has more explicitly defined values is first in line to receive requests that match the URL.  
@@ -52,7 +52,7 @@ You can install and run SQL Server Reporting Services (SSRS) and Internet Inform
 |Application|URL reservation|Description|Request receipt|  
 |-----------------|---------------------|-----------------|---------------------|  
 |Report Server|`https://+:80/ReportServer`|Strong wildcard on port 80, with report server virtual directory.|Receives all requests on port 80 that specify the report server virtual directory. The Report Server Web service receives all requests to https://\<computername>/reportserver.|  
-|Web portal|`https://+:80/Reports`|Strong wildcard on port 80, with Reports virtual directory.|Receives all requests on port 80 that specify the reports virtual directory. The [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] receives all requests to https://\<computername>/reports.|  
+|Web portal|`https://+:80/Reports`|Strong wildcard on port 80, with Reports virtual directory.|Receives all requests on port 80 that specify the reports virtual directory. The [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] receives all requests to https://\<computername>/reports.|  
 |IIS|`https://*:80/`|Weak wildcard on port 80.|Receives any remaining requests on port 80 that are not received by another application.|  
 
 ## Side-by-Side Deployments of SQL Server Reporting Services on IIS 8.0, 8.5
@@ -61,11 +61,11 @@ You can install and run SQL Server Reporting Services (SSRS) and Internet Inform
   
 -   A Web site in IIS that is assigned to port 80 and a virtual directory named "Reports".  
   
--   A report server instance installed in the default configuration, where the URL reservation also specifies port 80 and the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] application also uses "Reports" for the virtual directory name.  
+-   A report server instance installed in the default configuration, where the URL reservation also specifies port 80 and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] application also uses "Reports" for the virtual directory name.  
   
- Given this configuration, a request that is sent to https://\<computername>:80/reports will be received by the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. The application that is accessed through the Reports virtual directory in IIS will no longer receive requests after the report server instance is installed.  
+ Given this configuration, a request that is sent to https://\<computername>:80/reports will be received by the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. The application that is accessed through the Reports virtual directory in IIS will no longer receive requests after the report server instance is installed.  
   
- If you are running side-by-side deployments of older and newer versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you are likely to encounter the routing problem just described. This is because all versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] use "ReportServer" and "Reports" as virtual directory names for the report server and the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] applications, increasing the likelihood that you will have a "reports" and "reportserver" virtual directories in IIS.  
+ If you are running side-by-side deployments of older and newer versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you are likely to encounter the routing problem just described. This is because all versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] use "ReportServer" and "Reports" as virtual directory names for the report server and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] applications, increasing the likelihood that you will have a "reports" and "reportserver" virtual directories in IIS.  
   
  To ensure that all applications receive requests, follow these guidelines:  
   

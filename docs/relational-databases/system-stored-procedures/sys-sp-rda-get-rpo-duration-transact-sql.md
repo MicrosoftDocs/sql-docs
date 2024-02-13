@@ -50,7 +50,7 @@ Requires **db_owner** permissions.
 
 Change the value by running [sys.sp_rda_set_rpo_duration (Transact-SQL)](sys-sp-rda-set-rpo-duration-transact-sql.md).
 
-## See also
+## Related content
 
 - [sys.sp_rda_set_rpo_duration (Transact-SQL)](sys-sp-rda-set-rpo-duration-transact-sql.md)
 - [Restore Stretch-enabled databases (Stretch Database)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)

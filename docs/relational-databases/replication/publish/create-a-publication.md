@@ -7,7 +7,7 @@ ms.reviewer: randolphwest
 ms.date: 01/30/2023
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "publications [SQL Server replication], creating"
@@ -132,11 +132,11 @@ Publications can be created programmatically using replication stored procedures
 
 This example creates a transactional publication. Scripting variables are used to pass Windows credentials that are needed to create jobs for the Snapshot Agent and Log Reader Agent.
 
-[!code-sql[HowTo#sp_AddTranPub](../../../relational-databases/replication/codesnippet/tsql/create-a-publication_1.sql)]
+:::code language="sql" source="../codesnippet/tsql/create-a-publication_1.sql":::
 
 This example creates a merge publication. Scripting variables are used to pass Windows credentials that are needed to create the job for the Snapshot Agent.
 
-[!code-sql[HowTo#sp_AddMergePub](../../../relational-databases/replication/codesnippet/tsql/create-a-publication_2.sql)]
+:::code language="sql" source="../codesnippet/tsql/create-a-publication_2.sql":::
 
 ## <a id="RMOProcedure"></a> Use Replication Management Objects (RMO)
 

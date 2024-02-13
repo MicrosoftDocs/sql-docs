@@ -8,7 +8,6 @@ ms.date: 10/16/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
-ms.custom: ignite-fall-2021
 tags: azure-resource-manager
 ---
 # Manage SQL Server VMs by using the Azure portal
@@ -147,8 +146,8 @@ From the **SQL IaaS Agent Extension Settings** page, you can [repair the extensi
 
 ## Related content
 
-- [Overview of SQL Server on a Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)
-- [FAQ for SQL Server on a Windows VM](frequently-asked-questions-faq.yml)
-- [Pricing guidance for SQL Server on a Windows VM](pricing-guidance.md)
+- [Overview of SQL Server on Windows VMs](sql-server-on-azure-vm-iaas-what-is-overview.md)
+- [FAQ for SQL Server on Windows VMs](frequently-asked-questions-faq.yml)
+- [Pricing guidance for SQL Server on Windows VMs](pricing-guidance.md)
 - [What's new for SQL Server on Azure VMs](doc-changes-updates-release-notes-whats-new.md)
 - [Checklist: Best practices for SQL Server on Azure VMs](performance-guidelines-best-practices-checklist.md)

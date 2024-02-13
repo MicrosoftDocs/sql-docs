@@ -15,9 +15,9 @@ monikerRange: "=azuresqldb-current"
 
 [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-Adds a step to an existing job in the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). Use [jobs.sp_update_jobstep](sp-update-jobstep-elastic-jobs-transact-sql.md) to modify existing elastic job steps. 
+Adds a step to an existing job in the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). Use [jobs.sp_update_jobstep](sp-update-jobstep-elastic-jobs-transact-sql.md) to modify existing elastic job steps.
 
-This stored procedure shares the name of `sp_add_jobstep` with a similar object in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for the SQL Agent service. For information about the SQL Agent version, see [sp_add_jobstep (Transact-SQL)](sp-add-jobstep-transact-sql.md).
+This stored procedure shares the name of `sp_add_jobstep` with a similar object in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent service. For information about the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent version, see [sp_add_jobstep (Transact-SQL)](sp-add-jobstep-transact-sql.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -115,7 +115,7 @@ If not `NULL`, the type of destination that the *command*'s first result set is 
 
 If specified, the value must be `SqlDatabase`.
 
-#### @output_credential_name 
+#### @output_credential_name
 
 If not null, the name of the database-scoped credential that is used to connect to the output destination database. Must be specified if *output_type* equals `SqlDatabase`. *output_credential_name* is nvarchar(128), with a default value of `NULL`.
 

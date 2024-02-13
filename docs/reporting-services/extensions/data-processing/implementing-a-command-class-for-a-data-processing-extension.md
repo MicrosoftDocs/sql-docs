@@ -1,5 +1,5 @@
 ---
-title: "Implementing a Command Class for a Data Processing Extension"
+title: "Implement a Command class for a data processing extension"
 description: Learn how to implement a Command class for a data processing extension so that the extension can formulate requests and pass them on to the data source.
 author: maggiesMSFT
 ms.author: maggies
@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Command class"
   - "commands [Reporting Services]"
 ---
-# Implementing a Command Class for a Data Processing Extension
+# Implement a Command class for a data processing extension
   The **Command** object formulates a request and passes it on to the data source. The command text can take many different syntactical forms, including text and XML. If results are returned, the **Command** object returns results as a **DataReader** object.  
   
  To create a **Command** class, implement <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand>. Implement the <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand.ExecuteReader%2A> method to return a result set as a **DataReader** object. The <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand.ExecuteReader%2A> method of your **Command** class should include an implementation that takes a <xref:Microsoft.ReportingServices.DataProcessing.CommandBehavior> enumeration as an argument. If you deploy your data processing extension to Report Designer, provide an implementation that handles a <xref:Microsoft.ReportingServices.DataProcessing.CommandBehavior.SchemaOnly> case in the <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand.ExecuteReader%2A> method. A schema-only implementation is used to supply Report Designer with a fields list. The **DataReader** object returned by the <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand.ExecuteReader%2A> method needs to contain type and name information for the fields, or columns, in your result set.  
@@ -25,9 +25,10 @@ helpviewer_keywords:
   
  For a sample **Command** class implementation, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
-## See Also  
- [Reporting Services Extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Implementing a Data Processing Extension](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Reporting Services Extension Library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+## Related content
+
+- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
+- [Implement a data processing extension](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
+- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

@@ -58,10 +58,10 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**frequency_recurrence_factor**|**int**|Recurrence factor used by *frequency_type*.|  
 |**frequency_subday**|**int**|How often to reschedule during the defined period:<br /><br /> **1** = Once<br /><br /> **2** = Second<br /><br /> **4** = Minute<br /><br /> **8** = Hour|  
 |**frequency_subday_interval**|**int**|Interval for *frequency_subday*.|  
-|**active_start_time_of_day**|**int**|Time of day when the Distribution Agent is first scheduled, formatted as HHMMSS.|  
-|**active_end_time_of_day**|**int**|Time of day when the Distribution Agent stops being scheduled, formatted as HHMMSS.|  
-|**active_start_date**|**int**|Date when the Distribution Agent is first scheduled, formatted as YYYYMMDD.|  
-|**active_end_date**|**int**|Date when the Distribution Agent stops being scheduled, formatted as YYYYMMDD.|  
+|**active_start_time_of_day**|**int**|Time of day when the Distribution Agent is first scheduled, formatted as `HHmmss`.|  
+|**active_end_time_of_day**|**int**|Time of day when the Distribution Agent stops being scheduled, formatted as `HHmmss`.|  
+|**active_start_date**|**int**|Date when the Distribution Agent is first scheduled, formatted as `yyyyMMdd`.|  
+|**active_end_date**|**int**|Date when the Distribution Agent stops being scheduled, formatted as `yyyyMMdd`.|  
 |**retryattempt**|**int**|Not supported.|  
 |**retrydelay**|**int**|Not supported.|  
 |**description**|**nvarchar(255)**|Text description of the Subscriber.|  
@@ -72,10 +72,10 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**frequency_recurrence_factor2**|**int**|Recurrence factor used by *frequency_type**.*|  
 |**frequency_subday2**|**int**|How often to reschedule during the defined period:<br /><br /> **1** = Once<br /><br /> **2** = Second<br /><br /> **4** = Minute<br /><br /> **8** = Hour|  
 |**frequency_subday_interval2**|**int**|Interval for *frequency_subday*.|  
-|**active_start_time_of_day2**|**int**|Time of day when the Merge Agent is first scheduled, formatted as HHMMSS.|  
-|**active_end_time_of_day2**|**int**|Time of day when the Merge Agent stops being scheduled, formatted as HHMMSS.|  
-|**active_start_date2**|**int**|Date when the Merge Agent is first scheduled, formatted as YYYYMMDD.|  
-|**active_end_date2**|**int**|Date when the Merge Agent stops being scheduled, formatted as YYYYMMDD.|  
+|**active_start_time_of_day2**|**int**|Time of day when the Merge Agent is first scheduled, formatted as `HHmmss`.|  
+|**active_end_time_of_day2**|**int**|Time of day when the Merge Agent stops being scheduled, formatted as `HHmmss`.|  
+|**active_start_date2**|**int**|Date when the Merge Agent is first scheduled, formatted as `yyyyMMdd`.|  
+|**active_end_date2**|**int**|Date when the Merge Agent stops being scheduled, formatted as `yyyyMMdd`.|  
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  

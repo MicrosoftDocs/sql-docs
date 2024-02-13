@@ -31,7 +31,7 @@ ms.custom: updatefrequency5
  When you use the **Expression** dialog box to define a simple field reference, you can select the Fields collection in the Category pane and see the list of available fields in the **Field** pane. Each field has several properties, including Value and IsMissing. The remaining properties are predefined extended field properties that may be available to the dataset depending on the data source type.  
   
 ### Detecting Nulls for a Dataset Field  
- To detect a field value that is null (**Nothing** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), you can use the function **IsNothing**. When placed in a text box in a table details row, the following expression tests the field `MiddleName` and substitutes the text "No Middle Name" when the value is null, and the field value itself when the value is not null:  
+ To detect a field value that is null (**Nothing** in [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)]), you can use the function **IsNothing**. When placed in a text box in a table details row, the following expression tests the field `MiddleName` and substitutes the text "No Middle Name" when the value is null, and the field value itself when the value is not null:  
   
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
@@ -41,7 +41,7 @@ ms.custom: updatefrequency5
 > [!NOTE]  
 >  IsMissing detects changes in the dataset schema between design time and run time for any type of data source. IsMissing cannot be used to detect empty members in a multidimensional cube and is not related to the MDX query language concepts of **EMPTY** and **NON EMPTY**.  
   
- You can test the IsMissing property in custom code to determine if a field is present in the result set. You cannot test for its presence using an expression with a [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] function call such as **IIF** or **SWITCH**, because [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] evaluates all parameters in the call to the function, which results in an error when the reference to the missing is evaluated.  
+ You can test the IsMissing property in custom code to determine if a field is present in the result set. You cannot test for its presence using an expression with a [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] function call such as **IIF** or **SWITCH**, because [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] evaluates all parameters in the call to the function, which results in an error when the reference to the missing is evaluated.  
   
 #### Example for Controlling the Visibility of a Dynamic Column for a Missing Field  
  To set an expression that controls the visibility of a column that displays a field in a dataset, you must first define a custom code function that returns a Boolean value based on whether the field is missing. For example, the following custom code function returns true if the field is missing and false if the field exists.  
@@ -84,7 +84,7 @@ End Function
 ### Using Extended Field Properties  
  Extended field properties are additional properties defined on a field by the data processing extension, which is determined by the data source type for the dataset. Extended field properties are predefined or specific to a data source type. For more information, see [Extended Field Properties for an Analysis Services Database &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
- If you specify a property that is not supported for that field, the expression evaluates to **null** (**Nothing** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]). If a data provider does not support extended field properties, or if the field is not found when the query is executed, the value for the property is **null** (**Nothing** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) for properties of type **String** and **Object**, and zero (0) for properties of type **Integer**. A data processing extension may take advantage of predefined properties by optimizing queries that include this syntax.  
+ If you specify a property that is not supported for that field, the expression evaluates to **null** (**Nothing** in [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)]). If a data provider does not support extended field properties, or if the field is not found when the query is executed, the value for the property is **null** (**Nothing** in [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)]) for properties of type **String** and **Object**, and zero (0) for properties of type **Integer**. A data processing extension may take advantage of predefined properties by optimizing queries that include this syntax.  
   
 ## See Also  
  [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   

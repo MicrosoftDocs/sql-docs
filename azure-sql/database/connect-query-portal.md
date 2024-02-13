@@ -5,7 +5,7 @@ description: Learn how to connect to an Azure SQL database and use the Azure por
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, mbarickman
-ms.date: 11/16/2023
+ms.date: 01/26/2024
 ms.service: sql-database
 ms.subservice: development
 ms.topic: quickstart
@@ -36,7 +36,13 @@ The Azure SQL Database [Query editor](query-editor.md) (preview) is a tool to ru
   - Have or set up a user that can connect to the database with SQL authentication.
   - Have or set up a user that can authenticate to the database with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)).
 
+- If you don't already have an Azure SQL Database created, visit [Quickstart: Create a single database](single-database-create-quickstart.md). Look for the option to use your offer to [try Azure SQL Database for free (preview)](free-offer.md).
+
 ## Connect to the query editor
+
+1. Navigate to your SQL database in the Azure portal. For example, visit [your Azure SQL dashboard](https://portal.azure.com/#view/HubsExtension/BrowseResource/resourceType/Microsoft.Sql%2Fazuresql).
+
+    Azure SQL databases exist inside logical SQL servers. Can connect to the logical SQL server's `master` using a login, then connect to your database. Or, using a [contained user](/sql/relational-databases/security/contained-database-users-making-your-database-portable?view=azuresqldb-current&preserve-view=true#contained-database-user-model), you can connect directly to your Azure SQL database.
 
 1. On your SQL database **Overview** page in the [Azure portal](https://portal.azure.com), select **Query editor (preview)** from the left menu.
 
@@ -46,9 +52,20 @@ The Azure SQL Database [Query editor](query-editor.md) (preview) is a tool to ru
 
    - To connect with SQL authentication, under **SQL server authentication**, enter a **Login** and **Password** for a user that has access to the database, and then select **OK**. You can always use the login and password for the server admin.
 
-     :::image type="content" source="./media/connect-query-portal/login-menu.png" alt-text="Screenshot showing sign-in with SQL authentication.":::
+     :::image type="content" source="./media/connect-query-portal/login-menu.png" alt-text="Screenshot from the Azure portal showing sign-in with SQL authentication.":::
 
    - To connect using Microsoft Entra ID, if you're the Microsoft Entra server admin, select **Continue as \<your user or group ID>**. If sign-in is unsuccessful, try refreshing the page.
+
+     :::image type="content" source="media/connect-query-portal/query-editor-entra-login.png" alt-text="Screenshot from the Azure portal showing sign-in with Microsoft Entra authentication." lightbox="media/connect-query-portal/query-editor-entra-login.png":::
+
+### Connection with other tools
+
+You can also connect to your Azure SQL database using other tools, including:
+
+- [Quickstart: Use Azure Data Studio to connect and query Azure SQL Database](/azure-data-studio/quickstart-sql-database)
+- [Quickstart: Use SSMS to connect to and query Azure SQL Database or Azure SQL Managed Instance](connect-query-ssms.md)
+- [Quickstart: Use Visual Studio Code to connect and query](connect-query-vscode.md)
+- [Configure and manage Microsoft Entra authentication with Azure SQL](authentication-aad-configure.md)
 
 ### Firewall rule
 
@@ -65,14 +82,6 @@ If you receive this error, use the following steps to resolve:
 1. Under **Firewall rules**, select **Add your client IPv4 address**.
     1. If necessary, identify your IPv4 address and provide it in the **Start** and **End** fields.
 1. Select **Save**.
-
-### Connection with other tools
-
-You can also connect to your Azure SQL database using other tools, including:
-
-- [Quickstart: Use Azure Data Studio to connect and query Azure SQL Database](/azure-data-studio/quickstart-sql-database)
-- [Quickstart: Use SSMS to connect to and query Azure SQL Database or Azure SQL Managed Instance](connect-query-ssms.md)
-- [Quickstart: Use Visual Studio Code to connect and query](connect-query-vscode.md)
 
 ## Query the database
 

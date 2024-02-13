@@ -48,7 +48,7 @@ sp_stop_job
 
  The name of the master server. If specified, all multiserver jobs are stopped. *master_server* is **nvarchar(128)**, with a default of `NULL`. Specify this parameter only when calling `sp_stop_job` at a target server.  
 
- The [Multi Server Administration (MSX/TSX) feature is not supported on [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)]](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+ The [Multi Server Administration (MSX/TSX) feature is not supported on [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 > [!NOTE]  
 > Only one of the first three parameters can be specified.  

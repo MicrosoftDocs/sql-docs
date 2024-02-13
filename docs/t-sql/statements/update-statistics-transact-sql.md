@@ -3,7 +3,8 @@ title: "UPDATE STATISTICS (Transact-SQL)"
 description: UPDATE STATISTICS updates query optimization statistics on a table or indexed view. Updating statistics ensures that queries compile with up-to-date statistics.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 09/13/2023
+ms.reviewer: derekw
+ms.date: 02/13/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -129,7 +130,8 @@ Specifies the approximate percentage or number of rows in the table or indexed v
   
 SAMPLE is useful for special cases in which the query plan, based on default sampling, isn't optimal. In most situations, it isn't necessary to specify SAMPLE because the query optimizer uses sampling and determines the statistically significant sample size by default, as required to create high-quality query plans.
 
-Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], sampling of data to build statistics is done in parallel, when using compatibility level 130, to improve the performance of statistics collection. The query optimizer will use parallel sample statistics, whenever a table size exceeds a certain threshold.
+> [!NOTE]
+> In [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] when using database compatibility level 130, sampling of data to build statistics is done in parallel to improve the performance of statistics collection. The query optimizer will use parallel sample statistics whenever a table size exceeds a certain threshold. Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], regardless of database compatibility level, the behavior was changed back to using a serial scan in order to avoid potential performance issues with excessive LATCH waits. The rest of the query plan while updating statistics will maintain parallel execution if qualified.
 
 SAMPLE can't be used with the FULLSCAN option. When neither SAMPLE nor FULLSCAN is specified, the query optimizer uses sampled data and computes the sample size by default.  
   
@@ -149,7 +151,7 @@ In [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../.
 
 #### PERSIST_SAMPLE_PERCENT = { ON | OFF }
 
-**Applies to:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 1 CU4, [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Service Pack 1, or [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later versions, [!INCLUDE[ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]
+**Applies to:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 1 CU4, [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Service Pack 1, or [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later versions, [!INCLUDE[ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)]
 
 When **ON**, the statistics will retain the set sampling percentage for subsequent updates that don't explicitly specify a sampling percentage. When **OFF**, statistics sampling percentage will get reset to default sampling in subsequent updates that don't explicitly specify a sampling percentage. The default is **OFF**.
 
@@ -373,16 +375,13 @@ To use auto drop statistics, just add the following to the "WITH" clause of stat
 UPDATE STATISTICS Customer (CustomerStats1) WITH AUTO_DROP = ON
 ```
   
-## See also
+## Related content
 
 - [Statistics](../../relational-databases/statistics/statistics.md)
 - [Statistics in Microsoft Fabric](/fabric/data-warehouse/statistics)
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
 - [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)    
 - [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)
-
-## Next steps
-
 - [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)   
 - [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
 - [DROP STATISTICS (Transact-SQL)](../../t-sql/statements/drop-statistics-transact-sql.md)   

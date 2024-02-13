@@ -41331,6 +41331,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/sql-server/azure-arc/connect-at-scale-policy.md",
+      "redirect_url": "/sql/sql-server/azure-arc/automatically-connect",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/sql-server/azure-arc/connect-at-scale-autodeploy.md",
       "redirect_url": "/sql/sql-server/azure-arc/manage-autodeploy",
       "redirect_document_id": false
@@ -59698,6 +59703,11 @@
     {
       "source_path": "docs/ssms/f1-help/connect-to-server-database-engine.md",
       "redirect_url": "/sql/ssms/f1-help/connect-to-server-login-page-database-engine",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/performance/intelligent-query-processing-feedback.md",
+      "redirect_url": "/sql/relational-databases/performance/intelligent-query-processing-memory-grant-feedback",
       "redirect_document_id": false
     }
  ]

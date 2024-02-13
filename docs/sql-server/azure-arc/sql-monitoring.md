@@ -11,6 +11,8 @@ ms.custom: ignite-2023
 
 # Monitor [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] (preview)
 
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
 Monitor the performance of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] within the Azure portal. Performance metrics are automatically collected from DMV datasets on eligible instances of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] and sent to the Azure telemetry pipeline for near real-time processing. Performance data can then be viewed on the Performance Dashboard section of a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]. Monitoring data collection is automatic, assuming all prerequisites are met.
 
 [!INCLUDE [azure-arc-sql-preview](includes/azure-arc-sql-preview.md)]
@@ -31,6 +33,10 @@ In order for monitoring data to be collected on a [!INCLUDE [ssazurearc](../../i
 ### Current Limitations
 * FCI clusters aren't supported at this time.
 * After adding or removing a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance on your Windows machine, you must restart the [!INCLUDE [msconame-md](../../includes/msconame-md.md)] [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] (sqlServerExtension) extension service for the update to take effect. This restart is only required to add/remove the instance from monitoring collection.
+
+* SQL Server version must be 2016 or later.
+
+* To view the performance dashboard in the Azure Portal, you must have Contributor access or higher to the SQL Server - Azure Arc resource. 
 
 ## Collected data
 

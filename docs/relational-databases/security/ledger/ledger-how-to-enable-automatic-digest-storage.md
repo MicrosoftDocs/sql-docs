@@ -4,13 +4,13 @@ description: This article discusses how to enable automatic digest storage in Az
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mathoma
-ms.date: 11/14/2023
+ms.date: 02/07/2024
 ms.service: sql-database
 ms.subservice: security
 ms.custom: devx-track-azurecli, ignite-2023
 ms.topic: how-to
 zone_pivot_groups: as1-azuresql-sql
-monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 
 # Enable automatic digest storage
@@ -174,7 +174,7 @@ For more information, see [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](.
 
 ::: zone-end
 
-## Next steps
+## Related content
 
 - [Ledger overview](ledger-overview.md)
 - [Digest management](ledger-digest-management.md)

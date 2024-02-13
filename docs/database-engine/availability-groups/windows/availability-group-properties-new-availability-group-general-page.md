@@ -7,7 +7,7 @@ ms.author: mathoma
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups
-ms.topic: end-user-help
+ms.topic: ui-reference
 f1_keywords:
   - "sql13.swb.availabilitygroupproperties.general.f1"
 ---

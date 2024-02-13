@@ -32,7 +32,7 @@ dev_langs:
 - [sp_help_maintenance_plan](sp-help-maintenance-plan-transact-sql.md)
 - [sp_delete_maintenance_plan](sp-delete-maintenance-plan-transact-sql.md)
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Maintenance Plans](../maintenance-plans/maintenance-plans.md)

@@ -1247,23 +1247,23 @@ items:
     items:
       - name: Overview
         href: relational-databases/indexes/indexes.md
-      - name: Heaps (Tables without Clustered Indexes)
+      - name: Heaps (tables without a clustered index)
         href: relational-databases/indexes/heaps-tables-without-clustered-indexes.md
-      - name: Clustered & Nonclustered Indexes
+      - name: Clustered & nonclustered indexes
         items:
         - name: Described
           href: relational-databases/indexes/clustered-and-nonclustered-indexes-described.md
         - name: Create
           items:
-          - name: Clustered Indexes
+          - name: Clustered index
             href: relational-databases/indexes/create-clustered-indexes.md
-          - name: Nonclustered Indexes
+          - name: Nonclustered index
             href: relational-databases/indexes/create-nonclustered-indexes.md
-          - name: Unique Indexes
+          - name: Unique index
             href: relational-databases/indexes/create-unique-indexes.md
-          - name: Filtered Indexes
+          - name: Filtered index
             href: relational-databases/indexes/create-filtered-indexes.md
-          - name: With Included Columns
+          - name: With included columns
             href: relational-databases/indexes/create-indexes-with-included-columns.md
         - name: Delete
           href: relational-databases/indexes/delete-an-index.md
@@ -6757,9 +6757,16 @@ items:
         href: relational-databases/performance/intelligent-query-processing.md
       - name: Intelligent Query Processing details
         href: relational-databases/performance/intelligent-query-processing-details.md
-      - name: Query Processing feedback features
-        href: relational-databases/performance/intelligent-query-processing-feedback.md
-      - name: Parameter Sensitive Plan Optimization
+      - name: Memory grant feedback
+        displayName: Memory grant feedback
+        href: relational-databases/performance/intelligent-query-processing-memory-grant-feedback.md
+      - name: Degree of parallelism (DOP) feedback
+        displayName: DOP feedback
+        href: relational-databases/performance/intelligent-query-processing-degree-parallelism-feedback.md
+      - name: Cardinality estimation (CE) feedback
+        displayName: CE feedback
+        href: relational-databases/performance/intelligent-query-processing-cardinality-estimation-feedback.md        
+      - name: Parameter Sensitive Plan optimization
         href: relational-databases/performance/parameter-sensitive-plan-optimization.md
       - name: Performance Center
         href: relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
@@ -7939,6 +7946,8 @@ items:
       items:
       - name: Configure a ledger database
         href: relational-databases/security/ledger/ledger-how-to-configure-ledger-database.md?view=sql-server-ver16&preserve-view=true
+      - name: Configure SQL MI NSG rules to work with Azure Confidential Ledger
+        href: relational-databases/security/ledger/ledger-nsg-policies-configure.md
       - name: Create append-only ledger tables
         href: relational-databases/security/ledger/ledger-how-to-append-only-ledger-tables.md?view=sql-server-ver16&preserve-view=true
       - name: Create updatable ledger tables
@@ -10482,12 +10491,24 @@ items:
           href: sql-server/azure-arc/manage-availability-group.md
       - name: Secure
         items:
+        - name: Agent permissions
+          items:
+          - name: Agent roles
+            href: sql-server/azure-arc/permissions-granted-agent-extension.md
+          - name: Configure least privilege
+            href: sql-server/azure-arc/configure-least-privilege.md
+          - name: Required permissions
+            href: sql-server/azure-arc/configure-windows-accounts-agent.md
         - name: Configure advanced data Security
           href: sql-server/azure-arc/configure-advanced-data-security.md
         - name: Certificate rotation
           href: sql-server/azure-arc/rotate-certificates.md
         - name: Extended Security Updates
           href: sql-server/azure-arc/extended-security-updates.md
+      - name: Migrate
+        items:
+        - name: Discover and assess
+          href: sql-server/azure-arc/migration-assessment.md
       - name: FAQ
         href: sql-server/azure-arc/faq.yml
       - name: Data collection and reporting
@@ -12217,6 +12238,8 @@ items:
       href: relational-databases/event-classes/objecttype-trace-event-column.md
   - name: Native interfaces
     items: 
+    - name: CreateVersionedSOSHostObject
+      href: native-interfaces/createversionedsoshostobject.md
     - name: GetSvcInstanceIDFromName
       href: native-interfaces/getsvcinstanceidfromname.md
     - name: GetSQLInstanceRegStringByID

@@ -129,7 +129,8 @@ Specifies the approximate percentage or number of rows in the table or indexed v
   
 SAMPLE is useful for special cases in which the query plan, based on default sampling, isn't optimal. In most situations, it isn't necessary to specify SAMPLE because the query optimizer uses sampling and determines the statistically significant sample size by default, as required to create high-quality query plans.
 
-Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], sampling of data to build statistics is done in parallel, when using compatibility level 130, to improve the performance of statistics collection. The query optimizer will use parallel sample statistics, whenever a table size exceeds a certain threshold.
+> [!NOTE]
+> In [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], sampling of data to build statistics is done in parallel, when using compatibility level 130 or 140 to improve the performance of statistics collection. The query optimizer will use parallel sample statistics, whenever a table size exceeds a certain threshold. Starting with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] regardless of the compatibility level, the behavior was changed back to using a serial scan in order to avoid potential performance issues with excessive LATCH waits. The rest of the query plan while updating statistics will maintain parallel execution if qualified.
 
 SAMPLE can't be used with the FULLSCAN option. When neither SAMPLE nor FULLSCAN is specified, the query optimizer uses sampled data and computes the sample size by default.  
   

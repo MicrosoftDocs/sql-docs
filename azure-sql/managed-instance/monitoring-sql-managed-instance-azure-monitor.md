@@ -4,8 +4,8 @@ description: Start here to learn how to monitor Azure SQL Managed Instance.
 ms.date: 02/12/2024
 ms.custom: horz-monitor
 ms.topic: conceptual
-author: mathoma
-ms.author: MashaMSFT
+author: MashaMSFT
+ms.author: mathoma
 ms.service: sql-managed-instance
 ---
 
@@ -63,7 +63,7 @@ Intelligent Insights for Azure SQL Database and Azure SQL Managed Instance is di
 For more information, see [Intelligent Insights using AI to monitor and troubleshoot database performance (preview)](../database/intelligent-insights-overview.md) and [Use the Intelligent Insights performance diagnostics log](../database/intelligent-insights-use-diagnostics-log.md).
 
 > [!NOTE]
-> Azure SQL Analytics is an integration with Azure Monitor that is no longer in active development. For more information, see [Monitor Azure SQL using Azure SQL Analytics (preview)](/previous-versions/azure/azure-monitor/insights/azure-sql).
+> Azure SQL Analytics is an integration with Azure Monitor that's no longer in active development. For more information, see [Monitor Azure SQL using Azure SQL Analytics (preview)](/previous-versions/azure/azure-monitor/insights/azure-sql).
 
 <!-- ## Resource types. Required section. -->
 [!INCLUDE [horz-monitor-resource-types](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-resource-types.md)]
@@ -204,6 +204,5 @@ The following table lists common and recommended alert rules for Azure SQL Manag
 ## Related content
 <!-- You can change the wording and add more links if useful. -->
 
-- Learn how to [Monitor Azure SQL Managed Instance with Azure Monitor](monitoring-sql-managed-instance-azure-monitor.md).
 - See [SQL Managed Instance monitoring data reference](monitoring-sql-managed-instance-azure-monitor-reference.md) for a reference of the metrics, logs, and other important values created for SQL Managed Instance.
 - See [Monitoring Azure resources with Azure Monitor](/azure/azure-monitor/essentials/monitor-azure-resource) for general details on monitoring Azure resources.

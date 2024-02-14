@@ -1,7 +1,7 @@
 ---
 title: Microsoft Entra logins and users with nonunique display names
-titleSuffix: Azure SQL Database
-description: Creating and using Microsoft Entra logins with nonunique display names in Azure SQL Database.
+titleSuffix: Azure SQL Database and Azure SQL Managed Instance
+description: Creating and using Microsoft Entra logins with nonunique display names in Azure SQL Database and Azure SQL Managed Instance.
 author: nofield
 ms.author: nofield
 ms.reviewer: vanto
@@ -14,7 +14,7 @@ monikerRange: "= azuresql || = azuresql-db"
 
 # Microsoft Entra logins and users with nonunique display names
 
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+[!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 Using the display name of a service principal that isn't unique in Microsoft Entra ID leads to errors when creating the login or user in Azure SQL. For example, if the application `myapp` isn't unique, you might run into the following error when executing the following T-SQL statement:
 
@@ -34,7 +34,7 @@ This error occurs because Microsoft Entra ID allows duplicate display names for 
 > [!NOTE]
 > Most nonunique display names in Microsoft Entra ID are related to service principals, though occasionally group names can also be nonunique. Microsoft Entra user principal names are unique, as two users can't have the same user principal. However, an app registration (service principal) can be created with a display name that is the same as a user principal name.
 >
-> If the service principal display name is not a duplicate, the default `CREATE LOGIN` or `CREATE USER` statement should be used. The `WITH OBJECT_ID` extension is in **public preview**, and is a troubleshooting repair item implemented for use with nonunique service principals. Using it with a unique service principal is not necessary. Using the `WITH OBJECT_ID` extension for a service principal without adding a suffix will run successfully, but it will not be obvious which service principal the login or user was created for. It's recommended to create an alias using a suffix to uniquely identify the service principal. The `WITH OBJECT_ID` extension is not supported for Azure SQL Managed Instance or SQL Server, nor is it supported for SQL Server Management Objects (SMO) Framework.
+> If the service principal display name is not a duplicate, the default `CREATE LOGIN` or `CREATE USER` statement should be used. The `WITH OBJECT_ID` extension is in **public preview**, and is a troubleshooting repair item implemented for use with nonunique service principals. Using it with a unique service principal is not necessary. Using the `WITH OBJECT_ID` extension for a service principal without adding a suffix will run successfully, but it will not be obvious which service principal the login or user was created for. It's recommended to create an alias using a suffix to uniquely identify the service principal. The `WITH OBJECT_ID` extension is not supported for SQL Server.
 
 ## T-SQL create login/user extension for nonunique display names
 

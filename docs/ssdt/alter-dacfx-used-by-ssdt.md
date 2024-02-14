@@ -4,7 +4,7 @@ description: "Learn how to manually change the DacFx version used by SQL Server 
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.date: 01/07/2022
+ms.date: 02/14/2024
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
@@ -22,14 +22,14 @@ Follow the process below to alter the version of DacFx used by SQL Server Data T
 
 SQL Server Data Tools stores the DacFx files under `Common7\IDE\Extensions\Microsoft\SQLDB\DAC` within the Visual Studio program files. For Visual Studio 2022 Community, the full path is commonly `C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SQLDB\DAC`.
 
-Substitution should be done within the same major version of DacFx. For example, if the current DacFx version is 15.0.5149.3, only other 15.x versions should be used.  Select `Microsoft.SqlServer.Dac.dll` file from the SSDT DacFx folder and use the context menu to open the file properties to view the current version.
+Substitution should be done within the same major version of DacFx. For example, if Visual Studio 17.9 (2022) utilizes DacFx versions 162.2.33.1, only other 162.x versions should be used.  To view the current version, select `Microsoft.SqlServer.Dac.dll` file in File Explorer from the SSDT DacFx folder and use the context menu to open the file properties.
 
 DacFx is published to [NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.DACFx). Identify the desired version within the Microsoft.SqlServer.DacFx NuGet feed and follow these steps to use it with SSDT:
 
 1. Download the NuGet package for the DacFx version from the web interface.
 2. Change the *nupkg* file to a *zip* file and extract the archive.
 3. Close Visual Studio.
-4. Copy the following files from `lib/net46` into the SSDT DacFx folder:
+4. Copy the following files from `lib/net462` into the SSDT DacFx folder:
 
    - Microsoft.Data.Tools.Schema.Sql.dll
    - Microsoft.Data.Tools.Utilities.dll

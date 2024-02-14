@@ -296,7 +296,7 @@ CREATE LOGIN Andreas
   WITH PASSWORD = 0x02000A1A89CD6C6E4C8B30A282354C8EA0860719D5D3AD05E0CAE1952A1C6107A4ED26BEBA2A13B12FAB5093B3CC2A1055910CC0F4B9686A358604E99BB9933C75B4EA48FDEA HASHED;
 ```
 
-## See also
+## Related content
 
 - [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
 - [Principals](../../relational-databases/security/authentication-access/principals-database-engine.md)
@@ -357,14 +357,13 @@ When used with the **FROM EXTERNAL PROVIDER** clause, the login specifies the Mi
 
 Microsoft Entra users and service principals that are members of more than 2048 Microsoft Entra security groups are not supported to login into the database in SQL Database, SQL Managed Instance, or Azure Synapse.
 
-
 #### FROM EXTERNAL PROVIDER </br>
 Specifies that the login is for Microsoft Entra authentication.
 
 #### WITH OBJECT_ID = *'objectid'*   
-Specifies the Azure AD Object ID. If the `OBJECT_ID` is specified, the login_name is not required to match the Azure AD display name. The login_name must be a unique name in the `sys.server_principals` view and adhere to all other `sysname` limitations.
+Specifies the Microsoft Entra Object ID. If the `OBJECT_ID` is specified, the login_name is not required to match the Microsoft Entra display name. The login_name must be a unique name in the `sys.server_principals` view and adhere to all other `sysname` limitations.
 
-For more information on using the `WITH OBJECT_ID` option, see [Azure AD logins and users with nonunique display names](/azure/azure-sql/database/authentication-azure-ad-logins#azure-ad-logins-and-users-with-nonunique-display-names).
+For more information on using the `WITH OBJECT_ID` option, see [Microsoft Entra logins and users with non-unique display names](/azure/azure-sql/database/authentication-microsoft-entra-create-users-with-non-unique-names).
 
 > [!NOTE]
 > If the service principal display name is not a duplicate, the default `CREATE LOGIN` or `CREATE USER` statement should be used. The `WITH OBJECT_ID` extension is in **public preview**, and is a troubleshooting repair item implemented for use with non-unique service principals. Using it with a unique service principal is not necessary. Using the `WITH OBJECT_ID` extension for a service principal without adding a suffix will run successfully, but it will not be obvious which service principal the login or user was created for. It's recommended to create an alias using a suffix to uniquely identify the service principal. The `WITH OBJECT_ID` extension is not supported for Azure SQL Managed Instance or SQL Server, nor is it supported for SQL Server Management Objects (SMO) Framework.
@@ -452,7 +451,7 @@ GO
 
 ### D. Create a login with an alias using Object ID
 
-You can create an alias for your *login_name* by specifying the Object ID of the Azure AD service principal or group.
+You can create an alias for your *login_name* by specifying the Object ID of the Microsoft Entra service principal or group.
 
 ```sql
 CREATE LOGIN [myapp4466e] FROM EXTERNAL PROVIDER 
@@ -461,7 +460,7 @@ CREATE LOGIN [myapp4466e] FROM EXTERNAL PROVIDER
 
 For more information on obtaining the Object ID of a service principal, see [Service principal object](/azure/active-directory/develop/app-objects-and-service-principals#service-principal-object.)
 
-## See also
+## Related content
 
 - [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
 - [Principals](../../relational-databases/security/authentication-access/principals-database-engine.md)
@@ -686,7 +685,7 @@ FROM sys.server_principals;
 GO
 ```
 
-## See also
+## Related content
 
 - [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
 - [Principals](../../relational-databases/security/authentication-access/principals-database-engine.md)
@@ -829,7 +828,7 @@ SELECT * FROM sys.sql_logins WHERE name = 'TestLogin';
 GO
 ```
 
-## See also
+## Related content
 
 - [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
 - [Principals](../../relational-databases/security/authentication-access/principals-database-engine.md)
@@ -964,7 +963,7 @@ CREATE LOGIN [Contoso\Mary] FROM WINDOWS;
 GO
 ```
 
-## See also
+## Related content
 
 - [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
 - [Principals](../../relational-databases/security/authentication-access/principals-database-engine.md)

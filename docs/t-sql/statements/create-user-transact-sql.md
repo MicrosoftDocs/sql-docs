@@ -125,7 +125,7 @@ CREATE USER user_name
 CREATE USER user_name  
 [;]
 
--- Syntax for users based on Azure AD logins for Azure SQL Managed Instance
+-- Syntax for users based on Microsoft Entra logins for Azure SQL Managed Instance
 CREATE USER user_name   
     [   { FOR | FROM } LOGIN login_name  ]  
     | FROM EXTERNAL PROVIDER
@@ -252,10 +252,10 @@ CREATE USER user_name
 Specifies that the user is for Microsoft Entra authentication.
 
 #### WITH OBJECT_ID = *'objectid'*
- **Applies to**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].   
-Specifies the Azure AD Object ID. If the `OBJECT_ID` is specified, the user_name is not required to match the Azure AD display name. The user_name must be a unique name in the `sys.database_principals` view and adhere to all other `sysname` limitations.
+ **Applies to**: [!INCLUDE[sssds](../../includes/sssds-md.md)]
+Specifies the Microsoft Entra Object ID. If the `OBJECT_ID` is specified, the user_name is not required to match the Microsoft Entra display name. The user_name must be a unique name in the `sys.database_principals` view and adhere to all other `sysname` limitations.
 
-For more information on using the `WITH OBJECT_ID` option, see [Azure AD logins and users with nonunique display names](/azure/azure-sql/database/authentication-azure-ad-logins#azure-ad-logins-and-users-with-non-unique-display-names).
+For more information on using the `WITH OBJECT_ID` option, see [Microsoft Entra logins and users with non-unique display names](/azure/azure-sql/database/authentication-microsoft-entra-create-users-with-non-unique-names).
 
 > [!NOTE]
 > If the service principal display name is not a duplicate, the default `CREATE LOGIN` or `CREATE USER` statement should be used. The `WITH OBJECT_ID` extension is in **public preview**, and is a troubleshooting repair item implemented for use with non-unique service principals. Using it with a unique service principal is not necessary. Using the `WITH OBJECT_ID` extension for a service principal without adding a suffix will run successfully, but it will not be obvious which service principal the login or user was created for. It's recommended to create an alias using a suffix to uniquely identify the service principal. The `WITH OBJECT_ID` extension is not supported for Azure SQL Managed Instance or SQL Server, nor is it supported for SQL Server Management Objects (SMO) Framework.
@@ -535,7 +535,7 @@ GO
 Once the user is created, consider adding the user to a database role using the [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) statement.  
 You might also want to [GRANT Object Permissions](../../t-sql/statements/grant-object-permissions-transact-sql.md) to the role so they can access tables. For general information about the SQL Server security model, see [Permissions](../../relational-databases/security/permissions-database-engine.md).   
   
-## See also  
+## Related content  
  [Create a Database User](../../relational-databases/security/authentication-access/create-a-database-user.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [ALTER USER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-user-transact-sql.md)   

@@ -12,6 +12,7 @@ ms.topic: conceptual
 ms.custom:
   - fasttrack-edit
   - sqldbrb=1
+  - references_regions
 ---
 # Azure SQL Database and Azure Synapse Analytics connectivity architecture
 

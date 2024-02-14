@@ -58,7 +58,7 @@ This article provides instructions for using best practices assessment on an ins
     - `*.ingest.monitor.azure.com`
 
 - Your SQL Server instance must have the [TCP/IP protocol enabled](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
-- Note: Pre-existing AMA agents with proxy settings are used by BPA. However, if Azure Monitor Agent is freshly installed as a result of enabling SQL BPA, proxy settings are not set for AMA. To use proxy server with AMA, re-deploy AMA with the necessary proxy settings. Review [AMA Network Settings and Proxy Configuration][(note that proxy settings are not set for AMA.](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/azure-monitor-agent-data-collection-endpoint?tabs=ArmPolicy#proxy-configuration) for more information on AMA network and proxy settings.
+- Note: If AMA agent already exists at the time of enabling BPA, the existing AMA agent and related AMA proxy settings are reused by BPA.  However, if Azure Monitor Agent is freshly installed as a result of enabling SQL BPA, proxy settings are not set for AMA. To configure AMA to use a proxy server, re-deploy AMA with the necessary proxy settings. Review [AMA Network Settings and Proxy Configuration][(note that proxy settings are not set for AMA.](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/azure-monitor-agent-data-collection-endpoint?tabs=ArmPolicy#proxy-configuration) for more information on AMA network and proxy settings.
 
 - The [SQL Server browser service](../../tools/configuration-manager/sql-server-browser-service.md) must be running if you're operating a named instance of SQL Server.
 

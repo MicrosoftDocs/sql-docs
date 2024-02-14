@@ -2,8 +2,8 @@
 title: Conditional Access
 titleSuffix: Azure SQL Database & SQL Managed Instance & Azure Synapse Analytics
 description: Learn how to configure Conditional Access for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
-author: GithubMirek
-ms.author: mireks
+author: nofield
+ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 04/28/2020
 ms.service: sql-db-mi
@@ -14,13 +14,13 @@ tag: azure-synpase
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
-# Conditional Access with Azure SQL Database and Azure Synapse Analytics
+# Conditional access
 
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
 
 [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), and [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) support Microsoft Conditional Access.
 
-The following steps show how to configure Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse to enforce a Conditional Access policy.  
+The following steps show how to configure Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse Analytics to enforce a Conditional Access policy.  
 
 ## Prerequisites
 
@@ -53,8 +53,6 @@ The following steps show how to configure Azure SQL Database, Azure SQL Managed 
 
 The selected application (Azure SQL Database) using Microsoft Entra ID P1 or P2, now enforces the selected Conditional Access policy, **Required multifactor authentication.**
 
-For questions about Azure SQL Database and Azure Synapse regarding multifactor authentication, contact <MFAforSQLDB@microsoft.com>.  
-
-## Next steps  
+## Related content
 
 For a tutorial, see [Secure your database in SQL Database](secure-database-tutorial.md).

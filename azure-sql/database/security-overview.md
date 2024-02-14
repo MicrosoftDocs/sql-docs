@@ -1,7 +1,7 @@
 ---
 title: Security Overview
-titleSuffix: Azure SQL Database & Azure SQL Managed Instance
-description: Learn about security in Azure SQL Database and Azure SQL Managed Instance, including how it differs from SQL Server.
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
+description: Learn about security in Azure SQL Database and Azure SQL Managed Instance and Azure Synapse Analytics, including how it differs from SQL Server.
 author: jaszymas
 ms.author: jaszymas
 ms.reviewer: wiassaf, vanto, emlisa, mathoma
@@ -45,7 +45,7 @@ IP firewall rules grant access to databases based on the originating IP address 
 
 ### Authentication
 
-Authentication is the process of proving the user is who they claim to be. SQL Database and SQL Managed Instance support SQL authentication and authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). SQL Managed instance additionally supports [Windows authentication](/azure/azure-sql/managed-instance/winauth-azuread-setup) for Microsoft Entra principals.
+Authentication is the process of proving the user is who they claim to be. SQL Database and SQL Managed Instance support SQL authentication and authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). SQL Managed instance additionally supports [Windows authentication](/azure/azure-sql/managed-instance/winauth-azuread-setup) for Microsoft Entra principals.
 
 - **SQL authentication**:
 

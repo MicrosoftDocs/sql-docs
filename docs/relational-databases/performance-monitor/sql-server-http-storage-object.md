@@ -3,10 +3,10 @@ title: "SQL Server, HTTP Storage object"
 description: "Learn about the SQLServer:HTTP Storage performance object, which consists of performance counters that monitor an Azure Storage account."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/13/2021"
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance
-ms.topic: conceptual
+ms.topic: reference
 ---
 # SQL Server, HTTP Storage object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.topic: conceptual
 |**Avg. microsec/Write Comp BASE**|For internal use only.|
 |**HTTP Storage IO failed/sec**|Number of failed write requests sent to the HTTP storage per second.| 
 |**HTTP Storage IO retry/sec**|Number of retry requests sent to the HTTP storage per second.|  
-|**Outstanding HTTP Storage IO**|The total number of outstanding I/Os towards a HTTP storage.|  
+|**Outstanding HTTP Storage IO**|The total number of outstanding I/Os toward a HTTP storage.|  
 |**Read Bytes/sec**|Amount of data being transferred from the HTTP storage per second during read operations.|  
 |**Reads/sec**|Number of reads per second on the HTTP storage.|  
 |**Total Bytes/sec**|Amount of data being transferred from the HTTP storage per second during read or write operations.|  
@@ -50,7 +50,6 @@ SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%HTTP Storage%';
 ```  
   
-## See also  
- [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
-  
-  
+## Related content
+
+- [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)

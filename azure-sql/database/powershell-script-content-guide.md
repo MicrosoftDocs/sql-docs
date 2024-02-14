@@ -1,5 +1,6 @@
 ---
 title: Azure PowerShell script examples
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Use Azure PowerShell script examples to help you create and manage Azure SQL Database and Azure SQL Managed Instance resources.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
@@ -9,7 +10,7 @@ ms.service: sql-db-mi
 ms.subservice: development
 ms.topic: sample
 ms.custom: sqldbrb=2, devx-track-azurepowershell
-ms.devlang: PowerShell
+ms.devlang: powershell
 ---
 
 # Azure PowerShell samples for Azure SQL Database and Azure SQL Managed Instance

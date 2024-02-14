@@ -3,7 +3,7 @@ title: "CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)"
 description: CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/15/2023
+ms.date: 01/18/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -61,8 +61,9 @@ Specifies the name of the account to be used when connecting outside the server.
 > The only PolyBase external data source that supports Kerberos authentication is Hadoop. All other external data sources (SQL Server, Oracle, Teradata, MongoDB, generic ODBC) only support Basic Authentication.
 
 - To load data into Azure Synapse Analytics, any valid value can be used for IDENTITY.
-- In an Azure Synapse Analytics serverless SQL pool, database-scoped credentials can specify workspace Managed Identity, service principal name, or shared access signature (SAS) token. Access is also possible via user identity, also known as "Azure AD pass-through" is possible in the databased-scoped credential, as is anonymous access to publicly available storage. For more information, see [Supported storage authorization types](/azure/synapse-analytics/sql/develop-storage-files-storage-access-control?tabs=user-identity#supported-storage-authorization-types). 
-- In an Azure Synapse Analytics dedicated SQL pool, database-scoped credentials can specify shared access signature (SAS) token, custom application identity, workspace Managed Identity, or storage access key.
+- In an Azure Synapse Analytics serverless SQL pool, database scoped credentials can specify a workspace managed identity, service principal name, or shared access signature (SAS) token. Access via a user identity, enabled by [Microsoft Entra pass-through authentication](/entra/identity/hybrid/connect/how-to-connect-pta), is also possible with a database scoped credential, as is anonymous access to publicly available storage. For more information, see [Supported storage authorization types](/azure/synapse-analytics/sql/develop-storage-files-storage-access-control?tabs=user-identity#supported-storage-authorization-types).
+- In an Azure Synapse Analytics dedicated SQL pool, database scoped credentials can specify shared access signature (SAS) token, custom application identity, workspace managed identity, or storage access key.
+
 
 
 #### SECRET **='**_secret_**'**
@@ -74,9 +75,9 @@ Specifies the secret required for outgoing authentication. `SECRET` is required 
 
 ## Remarks
 
-A database scoped credential is a record that contains the authentication information that is required to connect to a resource outside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Most credentials include a Windows user and password.
+A database scoped credential is a record that contains the authentication information that is required to connect to a resource outside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Most credentials include a Windows user and password. 
 
-Before creating a database scoped credential, the database must have a master key to protect the credential. For more information, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md).
+To protect the sensitive information inside the database scoped credential, a database master key (DMK) is required. The DMK is a symmetric key that encrypts the secret in the database scoped credential. The database must have a master key before any database scoped credentials can be created. A DMK should be encrypted with a strong password. Azure SQL Database will create a database master key with a strong, randomly selected password as part of creating the database scoped credential, or as part of creating a server audit. Users can't create the master key on a logical `master` database. The master key password is unknown to Microsoft and not discoverable after creation. For this reason, creating a database master key before creating a database scoped credential is recommended. For more information, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md).
 
 When IDENTITY is a Windows user, the secret can be the password. The secret is encrypted using the service master key. If the service master key is regenerated, the secret is re-encrypted using the new service master key.
 
@@ -97,6 +98,10 @@ Here are some applications of database scoped credentials:
 - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] uses database scoped credentials for elastic pools. For more information, see [Tame explosive growth with elastic databases](/azure/azure-sql/database/elastic-pool-overview)
 
 - [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) use database scoped credentials to access data from Azure Blob Storage. For more information, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
+
+- Use database scoped credentials with [PolyBase](../../relational-databases/polybase/polybase-guide.md) and [Azure SQL Managed Instance data virtualization](/azure/azure-sql/managed-instance/data-virtualization-overview?view=azuresqlmi-current&preserve-view=true) features.
+
+- For BACKUP TO URL and RESTORE FROM URL, use a server-level credential via [CREATE CREDENTIAL (Transact-SQL)](create-credential-transact-sql.md) instead.
 
 ## Permissions
 
@@ -142,8 +147,9 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 
 The following example creates a database scoped credential that can be used to create an [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md), which can be used by PolyBase in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
-Azure Data Lake Store uses an Azure Active Directory Application for Service to Service Authentication.
-Please [create an Azure AD application](/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)  and document your client_id, OAuth_2.0_Token_EndPoint, and Key before you try to create a database scoped credential.
+Azure Data Lake Store uses a Microsoft Entra application for service to service authentication.
+
+Please [create a Microsoft Entra application](/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)  and document your client_id, OAuth_2.0_Token_EndPoint, and Key before you try to create a database scoped credential.
 
 ```sql
 -- Create a db master key if one does not already exist, using your own password.
@@ -157,7 +163,7 @@ WITH
 ;
 ```
 
-## More information
+## Related content
 
 - [Credentials &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)
 - [ALTER DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)

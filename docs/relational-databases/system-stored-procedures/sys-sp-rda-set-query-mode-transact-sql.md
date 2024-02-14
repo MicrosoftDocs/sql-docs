@@ -23,7 +23,7 @@ dev_langs:
 Specifies whether queries against the current Stretch-enabled database and its tables return both local and remote data (the default), or local data only.
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+> [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -76,7 +76,7 @@ The following extended stored procedures also set the query mode for a Stretch-e
 
   When you run [sys.sp_rda_reauthorize_db (Transact-SQL)](sys-sp-rda-reauthorize-db-transact-sql.md) to reconnect to the remote Azure database, this operation automatically resets the query mode to `LOCAL_AND_REMOTE`, which is the default behavior for Stretch Database. That is, queries return results from both local and remote data.
 
-## See also
+## Related content
 
 - [sys.sp_rda_deauthorize_db (Transact-SQL)](sys-sp-rda-deauthorize-db-transact-sql.md)
 - [Stretch Database](../../sql-server/stretch-database/stretch-database.md)

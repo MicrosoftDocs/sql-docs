@@ -1,3 +1,11 @@
+---
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 01/29/2024
+ms.service: sql
+ms.topic: include
+---
+
 ## Prerequisites
 
 Before you create the availability group, you need to:
@@ -60,9 +68,9 @@ CREATE CERTIFICATE dbm_certificate WITH SUBJECT = 'dbm';
 BACKUP CERTIFICATE dbm_certificate
    TO FILE = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\dbm_certificate.cer'
    WITH PRIVATE KEY (
-           FILE = 'c:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\dbm_certificate.pvk',
-           ENCRYPTION BY PASSWORD = '**<Private_Key_Password>**'
-       );
+       FILE = 'c:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\dbm_certificate.pvk',
+       ENCRYPTION BY PASSWORD = '**<Private_Key_Password>**'
+   );
 ```
 
 At this point, your primary SQL Server replica has a certificate at `c:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\dbm_certificate.cer` and a private key at `c:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\dbm_certificate.pvk`. Copy these two files to the same location on all servers that will host availability replicas.
@@ -79,9 +87,9 @@ CREATE CERTIFICATE dbm_certificate
     AUTHORIZATION dbm_user
     FROM FILE = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\dbm_certificate.cer'
     WITH PRIVATE KEY (
-    FILE = 'c:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\dbm_certificate.pvk',
-    DECRYPTION BY PASSWORD = '**<Private_Key_Password>**'
-            );
+        FILE = 'c:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\dbm_certificate.pvk',
+        DECRYPTION BY PASSWORD = '**<Private_Key_Password>**'
+    );
 ```
 
 ## Create database-mirroring endpoints on all replicas
@@ -96,10 +104,10 @@ Update the following Transact-SQL script for your environment on all SQL Server 
 CREATE ENDPOINT [Hadr_endpoint]
     AS TCP (LISTENER_PORT = **<5022>**)
     FOR DATABASE_MIRRORING (
-	    ROLE = ALL,
-	    AUTHENTICATION = CERTIFICATE dbm_certificate,
-		ENCRYPTION = REQUIRED ALGORITHM AES
-		);
+        ROLE = ALL,
+        AUTHENTICATION = CERTIFICATE dbm_certificate,
+        ENCRYPTION = REQUIRED ALGORITHM AES
+    );
 ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
 GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [<service account or user>];
 ```

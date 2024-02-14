@@ -71,6 +71,14 @@ landingContent:
         - text: Educational SQL resources
           url: /sql/sql-server/educational-sql-resources
 
+  # Card
+  - title: Artificial Intelligence
+    linkLists:
+      - linkListType: concept
+        links:
+        - text: Intelligent Applications
+          url: ai-artificial-intelligence-intelligent-applications.md
+
   # Card 
   - title: Advanced security
     linkLists:
@@ -116,15 +124,14 @@ landingContent:
             url: high-availability-sla.md
           - text: Active-geo replication
             url: active-geo-replication-overview.md 
-          - text: Auto-failover groups
-            url: auto-failover-group-sql-db.md 
+          - text: Failover groups
+            url: failover-group-sql-db.md 
           - text: Automated backups
             url: automated-backups-overview.md
           - text: Recover with backup 
             url: recovery-using-backups.md 
           - text: Long-term backup retention  
             url: long-term-retention-overview.md
-
 
   # Card 
   - title: Reference 
@@ -197,7 +204,6 @@ landingContent:
             url: design-first-database-tutorial.md
           - text: Design first database (C#)
             url: design-first-database-csharp-tutorial.md
-
 
   # Card 
   - title: Planned maintenance

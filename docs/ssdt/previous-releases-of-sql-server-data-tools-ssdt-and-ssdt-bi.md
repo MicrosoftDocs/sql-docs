@@ -32,6 +32,8 @@ Download previous SSDT versions by selecting the download link in the related se
 | [15.9](#ssdt-for-visual-studio-vs-2017) | 2017 |
 | [17.4](#ssdt-for-visual-studio-vs-2015) | 2015 |
 
+[!INCLUDE [entra-id](../includes/entra-id.md)]
+
 ## SSDT for Visual Studio (VS) 2017
 
 ### Changes in SSDT for Visual Studio 2017
@@ -216,7 +218,7 @@ _SSDT for Visual Studio 2017._
 | New Item | Details |
 |-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Integration Services (SSIS) | Azure-enabled SQL Server Integration Services (SSIS) projects now support national cloud (Azure US Government and Microsoft Azure operated by 21Vianet). |
-| Integration Services (SSIS) | Fixed an issue that can't sign in with Azure Active Directory when editing Analysis Services Processing Task. |
+| Integration Services (SSIS) | Fixed an issue that can't sign in with Microsoft Entra ID when editing Analysis Services Processing Task. |
 | Integration Services (SSIS) | Fixed some issues related to accessibility and high DPI. |
 
 ##### Known issues
@@ -352,7 +354,7 @@ _SSDT for Visual Studio 2017._
 | Integration Services (SSIS) | Fixed an issue that maintenance plan tasks' UI can't list ADO.NET connection managers created outside of the task UI. |
 | Integration Services (SSIS) | Fixed an issue that Azure interactive sign in page doesn't show up when deploying an SSAS project, which belongs to a solution also having SSIS projects loaded. |
 | Integration Services (SSIS) | Fixed an issue that clicking on MSOLAP driver properties button makes DTS wizard crash when SQL Server isn't installed. |
-| Integration Services (SSIS) | Fixed an issue that MSOLEDBSQL driver doesn't support Azure AD auth in DTS Wizard. |
+| Integration Services (SSIS) | Fixed an issue that MSOLEDBSQL driver doesn't support Microsoft Entra auth in DTS Wizard. |
 | Integration Services (SSIS) | Fixed an issue that XML Source and ADO.NET Destination can't be correctly persisted when targeting to SQL Server 2012. |
 | Integration Services (SSIS) | Fixed an issue that the "Download WSDL" button in Web Service Task editor may not be properly displayed. |
 | Integration Services (SSIS) | Fixed an issue that table may not be able to be selected in Connection Manager page of LookUp Transformation editor. |
@@ -477,7 +479,7 @@ _SSDT for Visual Studio 2017._
 | Integration Services (SSIS) | Fix an issue that, in some cases, the package can't be executed. |
 | Integration Services (SSIS) | This problem occurred when both of the following conditions are true:< br />< br /> &bull;   Protection level is EncryptSensitiveWithPassword.< br /> &bull;   Target server version is earlier than SQL Server 2017.          |
 | Integration Services (SSIS) | Fix an issue that annotations with default font aren't displayed in SSDT. |
-| Integration Services (SSIS) | ISDeploymentWizard supports SQL authentication, Azure Active Directory integrated authentication, and Azure Active Directory password authentication in command-line mode. |
+| Integration Services (SSIS) | ISDeploymentWizard supports SQL authentication, Microsoft Entra integrated authentication, and Microsoft Entra password authentication in command-line mode. |
 
 ##### Known issues
 
@@ -554,7 +556,7 @@ _SSDT for Visual Studio 2017._
 
 **SSIS:**
 
-- Add support for new Azure Government Azure AD authority (login.microsoftonline.us) for use with AS Tasks.
+- Add support for new Azure Government Microsoft Entra authority (login.microsoftonline.us) for use with AS Tasks.
 - Fix an issue that AS processing task UI will show "Method not found" when target server version is SQLServer2016.
 - Fix an issue that some pipeline components can't be executed when target server version is SQLServer2012.
 
@@ -920,7 +922,7 @@ _SSDT for Visual Studio 2015._
 
 **AS projects:**
 - Object Level Security can now be configured in the *Roles* dialog for advanced security in 1400 compatibility level tabular models.
-- New Azure AD role member selection for users without email addresses in AS Azure models in SSDT AS projects for VS2017.
+- New Microsoft Entra role member selection for users without email addresses in AS Azure models in SSDT AS projects for VS2017.
 - New AS Azure "Always Prompt" project property in SSDT AS tabular projects to customize behavior of ADAL credential caching.
 
 ##### Bug Fixes
@@ -968,7 +970,7 @@ _SSDT for Visual Studio 2015._
 - Users can set encoding hints on columns in the UI on 1400 models
 - Non-model-related IntelliSense is now available in offline mode
 - Tabular Model Explorer now contains a node to represent named M expressions available across the model (1400 compatibility level tabular models)
-- Azure Active Directory People Picker, similar to Microsoft Azure portal's IAM, now available when setting up Role Members in Tabular Models
+- Microsoft Entra People Picker, similar to Microsoft Azure portal's IAM, now available when setting up Role Members in Tabular Models
 
 **Database projects:**
 - Updated to DacFx 17.1
@@ -1003,7 +1005,7 @@ _Supports up to SQL Server 2017._
 - Amending a clustered index on a view will no longer block deployment
 - Schema comparison strings relating to column encryption uses the proper name rather than the instance name.   
 - Added a new command-line option to SqlPackage: ModelFilePath.  This provides an option for advanced users to specify an external model.xml file for import, publishing, and scripting operations   
-- The DacFx API was extended to support  Azure AD Universal Authentication and Multi-factor authentication (MFA)
+- The DacFx API was extended to support Microsoft Entra universal authentication and multifactor authentication (MFA)
 
 **IS projects:**
 - The SSIS OData Source and OData Connection Manager now support connecting to the OData feeds of Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online.

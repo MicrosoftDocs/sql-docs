@@ -12,7 +12,7 @@ ms.custom:
   - "load & move data"
   - "sqldbrb=1"
   - "devx-track-azurepowershell"
-ms.devlang: PowerShell
+ms.devlang: powershell
 ---
 # Use PowerShell to import a BACPAC file into a database in SQL Database
 [!INCLUDE[appliesto-sqldb](../../includes/appliesto-sqldb.md)]

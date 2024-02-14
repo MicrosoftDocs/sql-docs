@@ -1,9 +1,9 @@
 ---
 title: "Azure SQL Database: Manage long-term backup retention"
 description: Learn how to store and restore automated backups for Azure SQL Database in Azure storage (for up to 10 years) using the Azure portal, Azure CLI, and PowerShell.
-author: grrlgeek
-ms.author: jeschult
-ms.reviewer: wiassaf, mathoma
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: dinethi, mathoma
 ms.date: 10/12/2023
 ms.service: sql-database
 ms.subservice: backup-restore
@@ -47,6 +47,7 @@ Prepare your environment for PowerShell.
 For `Get-AzSqlDatabaseLongTermRetentionBackup` and `Restore-AzSqlDatabase`, you need to be a member of one of the following roles:
 
 - Subscription Owner role or
+- Subscription Contributor role or
 - SQL Server Contributor role or
 - Custom role with the following permissions:
 
@@ -57,6 +58,7 @@ For `Get-AzSqlDatabaseLongTermRetentionBackup` and `Restore-AzSqlDatabase`, you 
 For `Remove-AzSqlDatabaseLongTermRetentionBackup`, you need to be a member of one of the following roles:
 
 - Subscription Owner role or
+- Subscription Contributor role or
 - Custom role with the following permission:
 
    `Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups/delete`
@@ -68,6 +70,7 @@ For `Remove-AzSqlDatabaseLongTermRetentionBackup`, you need to be a member of on
 To view and restore LTR backups, you need:
 
 - Subscription Owner role or
+- Subscription Contributor role or
 - SQL Server Contributor role or
 - Custom role with the following permissions:
 
@@ -78,6 +81,7 @@ To view and restore LTR backups, you need:
 To delete LTR backups, you need to be a member of one of the following roles:
 
 - Subscription Owner role or
+- Subscription Contributor role or
 - Custom role with the following permission:
 
    `Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups/delete`

@@ -8,7 +8,7 @@ ms.date: 06/22/2020
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: quickstart
-ms.custom: subject-armqs, mode-arm, devx-track-arm-template
+ms.custom: subject-armqs, mode-arm, devx-track-arm-template, ignite-2023
 ---
 
 # Quickstart: Create an Azure SQL Managed Instance using an ARM template
@@ -86,7 +86,7 @@ Visit the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseRes
 
 ## Clean up resources
 
-Keep the managed instance if you want to go to the [Next steps](#next-steps), but delete the managed instance and related resources after completing any additional tutorials. After deleting a managed instance, see [Delete a subnet after deleting a managed instance](virtual-cluster-delete.md).
+Keep the managed instance if you want to go to the [Next steps](#next-steps), but delete the managed instance and related resources after completing any additional tutorials. After deleting a managed instance, see [Delete a subnet after deleting a managed instance](virtual-cluster-architecture.md#delete-a-subnet-after-deleting-an-azure-sql-managed-instance).
 
 
 To delete the resource group:

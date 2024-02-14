@@ -1,23 +1,23 @@
 ### YamlMime:FAQ
 metadata:
-  title: Azure Arc-enabled SQL Server FAQ | Microsoft Docs
-  description: Provides questions and answers frequently asked about Azure Arc-enabled SQL Server.
+  title: SQL Server enabled by Azure Arc | Microsoft Docs
+  description: Provides questions and answers frequently asked about SQL Server enabled by Azure Arc.
   ms.service: sql
   ms.topic: faq
   services: azure-arc
   ms.date: 12/09/2022
   ms.author: mikeray
   author: MikeRayMSFT
-title: Azure Arc-enabled SQL Server FAQ
+title: SQL Server enabled by Azure Arc FAQ
 summary: |
 
 sections:
 
   - name: General FAQ
     questions:
-      - question: Can I exclude any SQL Server instances when I onboard with Azure Policy with Azure Arc-enabled SQL Server? 
+      - question: Can I exclude any SQL Server instances when I onboard with Azure Policy with SQL Server enabled by Azure Arc? 
         answer: |
-          Yes, you can use the `excludedInstances` setting in the Azure Policy to indicate the SQL Server instances that you do not want to include in the onboarding process.
+          Yes, you can use the `excludedInstances` setting in the Azure Policy to indicate the SQL Server instances that you don't want to include in the onboarding process.
           
           For example, if you have any standby instances, you might not want to view them in the portal. When you use Azure Policy to onboard, you can exclude such instances based using pattern matching of the instance names. 
 
@@ -27,31 +27,31 @@ sections:
 
       - question: Is the data from my instance of SQL Server sent to Azure?
         answer: |
-           No. Microsoft only captures metadata and information about your SQL Server to help troubleshoot and inventory. The data sent does not include user data or about your utilization of SQL Server.
+           No. Microsoft only captures metadata and information about your SQL Server to help troubleshoot and inventory. The data sent doesn't include user data or about your utilization of SQL Server.
 
-      - question: Does Azure Arc-enabled SQL Server support Private Link?
+      - question: Does SQL Server enabled by Azure Arc support Private Link?
         answer: |
-           Yes. Azure Arc-enabled SQL Server supports Private Link for most endpoints, but some endpoints do not require Private Link and some endpoints are not supported. For specific information, see [Connected Machine agent network requirements](/azure/azure-arc/servers/network-requirements?tabs=azure-cloud#urls).
+           Yes. SQL Server enabled by Azure Arc supports Private Link for most endpoints, but some endpoints don't require Private Link and some endpoints aren't supported. For specific information, see [Connected Machine agent network requirements](/azure/azure-arc/servers/network-requirements?tabs=azure-cloud#urls).
            
   - name: Billing
     questions:
       - question: Does pay-as-you-go billing stop charging when connectivity between the SQL Server resource and Azure is temporarily interrupted?
-        answer: No, Intermittent internet connectivity does not stop the pay-as-you-go billing. The usage will be reported and accounted for by the billing logic when the connectivity is restored.
+        answer: No, Intermittent internet connectivity doesn't stop the pay-as-you-go billing. The usage is reported and accounted for by the billing logic when the connectivity is restored.
 
       - question: Do I get charged if my virtual machine is stopped?
-        answer: No. When the VM is stopped, the usage data is not collected. Therefore, you will not be charged for the time the VM was stopped.  
+        answer: No. When the VM is stopped, the usage data isn't collected. Therefore, you'll not be charged for the time the VM was stopped.  
 
       - question: Do I get charged if my SQL Server instance is stopped?
-        answer: No. The usage data collection requires an active SQL Server instance. Therefore, you will not be charged for the time the SQL Server instance was stopped.  
+        answer: No. The usage data collection requires an active SQL Server instance. Therefore, you'll not be charged for the time the SQL Server instance was stopped.  
 
       - question: Do I get charged if my SQL Server instance was running for less than an hour?
-        answer: The billing granularity is one hour. If your instance was active for less than an hour, you will be billed for the full hour. 
+        answer: The billing granularity is one hour. If your instance was active for less than an hour, you are billed for the full hour. 
 
       - question: Is there a minimum number of cores with pay-as-you-go billing?
-        answer: Pay-as-you-go billing does not change the licensing terms of SQL Server. Therefore, it is subject to the four-core limit as defined in the [SQL Server licensing terms](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS). 
+        answer: Pay-as-you-go billing doesn't change the licensing terms of SQL Server. Therefore, it's subject to the four-core limit as defined in the [SQL Server licensing terms](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS). 
 
       - question: If the affinity mask is specified for my SQL Server to use a subset of virtual cores, will it reduce the pay-as-you-go-charges?
-        answer: No. When you run your SQL Server instance on a virtual or physical machine, you are required to license the full set of cores that the machine can access. Therefore, your pay-as-you-go charges will be based on the full core count even if you use the affinity mask to limit your SQL Server's usage of these cores.   See  [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details.
+        answer: No. When you run your SQL Server instance on a virtual or physical machine, you're required to license the full set of cores that the machine can access. Therefore, your pay-as-you-go charges are based on the full core count even if you use the affinity mask to limit your SQL Server's usage of these cores.   See  [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details.
 
       - question: Can I switch from pay-as-you-go to license and vice versa?
         answer: Yes, you can change your selection. To change, run SQL Server Setup again, and choose the **Maintenance** tab, then select **Edition Upgrade**. The mode is now changed to Enterprise license. To revert back to pay-as-you-go, you can use the same steps and change the setting.

@@ -4,7 +4,7 @@ description: "Transaction locking and row versioning guide"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 10/04/2023
+ms.date: 01/24/2024
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -435,6 +435,8 @@ Update (U) locks can also be taken by queries that do not perform an UPDATE, whe
 
 - In the default read committed isolation level, S locks are short duration, released as soon as they are used. The short duration locks are unlikely to lead to deadlocks.
 
+- If the UPDLOCK hint is used in a write, the transaction must have access to the latest version of the row. If the latest version is no longer visible, it is expected to be possible to receive `Msg 3960, Level 16, State 2 Snapshot isolation transaction aborted due to update conflict` when SNAPSHOT isolation is in use. For an example, see [Work with snapshot isolation](#a-work-with-snapshot-isolation).
+
 ### <a id="exclusive"></a> Exclusive locks
 
 Exclusive (X) locks prevent access to a resource by concurrent transactions. With an exclusive (X) lock, no other transactions can modify data; read operations can take place only with the use of the NOLOCK hint or read uncommitted isolation level.
@@ -443,14 +445,14 @@ Data modification statements, such as INSERT, UPDATE, and DELETE combine both mo
 
 ### <a id="intent"></a> Intent locks
 
-The [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] uses intent locks to protect placing a shared (S) lock or exclusive (x) lock on a resource lower in the lock hierarchy. Intent locks are named "intent locks" because they're acquired before a lock at the lower level and, therefore, signal intent to place locks at a lower level.
+The [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] uses intent locks to protect placing a shared (S) lock or exclusive (X) lock on a resource lower in the lock hierarchy. Intent locks are named "intent locks" because they're acquired before a lock at the lower level and, therefore, signal intent to place locks at a lower level.
 
 Intent locks serve two purposes:
 
 - To prevent other transactions from modifying the higher-level resource in a way that would invalidate the lock at the lower level.
 - To improve the efficiency of the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] in detecting lock conflicts at the higher level of granularity.
 
-For example, a shared intent lock is requested at the table level before shared (S) locks are requested on pages or rows within that table. Setting an intent lock at the table level prevents another transaction from subsequently acquiring an exclusive (x) lock on the table containing that page. Intent locks improve performance because the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] examines intent locks only at the table level to determine if a transaction can safely acquire a lock on that table. This removes the requirement to examine every row or page lock on the table to determine if a transaction can lock the entire table.
+For example, a shared intent lock is requested at the table level before shared (S) locks are requested on pages or rows within that table. Setting an intent lock at the table level prevents another transaction from subsequently acquiring an exclusive (X) lock on the table containing that page. Intent locks improve performance because the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] examines intent locks only at the table level to determine if a transaction can safely acquire a lock on that table. This removes the requirement to examine every row or page lock on the table to determine if a transaction can lock the entire table.
 
 <a name="lock_intent_table"></a> Intent locks include intent shared (IS), intent exclusive (IX), and shared with intent exclusive (SIX).
 

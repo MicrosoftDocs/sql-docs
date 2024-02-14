@@ -1,8 +1,8 @@
 ---
 title: "Upgrade Analysis Services"
 description: "Upgrade Analysis Services"
-author: "Minewiskan"
-ms.author: "owend"
+author: kfollis
+ms.author: "kfollis"
 ms.date: "12/09/2020"
 ms.service: sql
 ms.topic: conceptual

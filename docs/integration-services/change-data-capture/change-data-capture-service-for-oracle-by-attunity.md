@@ -3,7 +3,7 @@ title: "Change Data Capture Service for Oracle by Attunity"
 description: "Change Data Capture Service for Oracle by Attunity"
 author: chugugrace
 ms.author: chugu
-ms.date: "03/14/2017"
+ms.date: "02/06/2024"
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual
@@ -19,16 +19,15 @@ ms.topic: conceptual
 
 Download Microsoft Change Data Capture Designer and Service for Oracle by Attunity for corresponding SQL Server version from below links:
 
-- [Microsoft SQL Server 2012 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=51606)
 - [Microsoft SQL Server 2016 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=55802)
 - [Microsoft SQL Server 2017 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=56610)
 - [Microsoft SQL Server 2019 Integration Services Feature Pack](https://www.microsoft.com/download/details.aspx?id=100303)
   
- The CDC Service for Oracle can be installed on any supported Windows computer with access to the source Oracle database(s) being captured and the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance where the target CDC database resides. The CDC Service does not need a local installation of the Oracle database or the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, only their supported clients. For information about where to install the required database components, see **Database Prerequisites** in this topic.  
+ The CDC Service for Oracle can be installed on any supported Windows computer with access to the source Oracle database(s) being captured and the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance where the target CDC database resides. The CDC Service doesn't need a local installation of the Oracle database or the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, only their supported clients. For information about where to install the required database components, see **Database Prerequisites** in this topic.  
   
  The installation of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC Service for Oracle places the service configuration UI and the service program in the selected location. The CDC Service for Oracle is configured separately using the Oracle CDC Service Configuration Console. For more information on configuring the Oracle CDC Service, see [Change Data Capture Service for Oracle by Attunity F1 Help](../../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-f1-help.md).  
   
- The CDC Service for Oracle can be installed on any supported Windows computer where the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Native Client is installed; it does not need to be installed on the same computer where the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed.  
+ The CDC Service for Oracle can be installed on any supported Windows computer where the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Native Client is installed; it doesn't need to be installed on the same computer where the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed.  
   
 ## Supported Windows Environments  
  The Change Data Capture Service for Oracle by Attunity can run in the following Windows environments:
@@ -47,20 +46,20 @@ Download Microsoft Change Data Capture Designer and Service for Oracle by Attuni
   
 -   Oracle Database 10g Release 2
 -   Oracle Database 11g Release 1 and Release 2
--   Oracle Database 12c in classic installation (Multitenant installation is not supported)  
--   Oracle Database 18c in classic installation (Multitenant installation is not supported), for SQL Server 2019 only
--   Oracle Database 19c in classic installation. (Multitenant installation is not supported), for SQL Server 2019 only
+-   Oracle Database 12c in classic installation (Multitenant installation isn't supported)  
+-   Oracle Database 18c in classic installation (Multitenant installation isn't supported), for SQL Server 2019 only
+-   Oracle Database 19c in classic installation. (Multitenant installation isn't supported), for SQL Server 2019 only
   
 ### Target SQL Server Database  
  For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ## Running the Installation Program  
- To install the CDC Service for Oracle, open the installation wizard for the Windows platform you are using (32/64-bit) and follow the directions on the screen.  
+ To install the CDC Service for Oracle, open the installation wizard for the Windows platform you're using (32/64-bit) and follow the directions on the screen.  
   
 ## Uninstalling Change Data Capture Service for Oracle by Attunity  
  You uninstall the CDC Service for Oracle using Control Panel, Programs and Features.  
   
- Uninstalling the CDC Service does not delete the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases created. For complete removal of the tool, you must remove the MSXDBCDC database and the specific CDC databases that were created in the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance you worked with.  
+ Uninstalling the CDC Service doesn't delete the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases created. For complete removal of the tool, you must remove the MSXDBCDC database and the specific CDC databases that were created in the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance you worked with.  
   
  If you uninstall the CDC Service software from one machine and install it on another computer, you only need to provide the following definitions:  
   

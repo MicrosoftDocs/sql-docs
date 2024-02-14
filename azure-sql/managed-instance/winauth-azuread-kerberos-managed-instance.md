@@ -8,13 +8,13 @@ ms.reviewer: mathoma, bonova, urmilano, wiassaf
 ms.date: 09/27/2023
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.topic: how-to
 ---
 
 # Configure Azure SQL Managed Instance for Windows Authentication for Microsoft Entra ID
 
-This article describes how to configure a managed instance to support [Windows Authentication for principals](winauth-azuread-overview.md) in Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). The steps to set up Azure SQL Managed Instance are the same for both the [incoming trust-based authentication flow](winauth-azuread-setup-incoming-trust-based-flow.md) and the [modern interactive authentication flow](winauth-azuread-setup-modern-interactive-flow.md). 
+This article describes how to configure a managed instance to support [Windows Authentication for principals](winauth-azuread-overview.md) in Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). The steps to set up Azure SQL Managed Instance are the same for both the [incoming trust-based authentication flow](winauth-azuread-setup-incoming-trust-based-flow.md) and the [modern interactive authentication flow](winauth-azuread-setup-modern-interactive-flow.md). 
 
 [!INCLUDE [entra-id](../includes/entra-id.md)]
 
@@ -25,7 +25,7 @@ The following prerequisites are required to configure a managed instance for Win
 |Prerequisite  | Description  |
 |---------|---------|
 |Az.Sql PowerShell module | This PowerShell module provides management cmdlets for Azure SQL resources.<BR/><BR/> Install this module by running the following PowerShell command: `Install-Module -Name Az.Sql`   |
-|Azure Active Directory PowerShell Module  | This module provides management cmdlets for Microsoft Entra administrative tasks such as user and service principal management.<BR/><BR/> Install this module by running the following PowerShell command: `Install-Module –Name AzureAD`  |
+|Microsoft Graph PowerShell Module  | This module provides management cmdlets for Microsoft Entra administrative tasks such as user and service principal management.<BR/><BR/> Install this module by running the following PowerShell command: `Install-Module –Name Microsoft.Graph`  |
 | A managed instance | You may [create a new managed instance](instance-create-quickstart.md) or use an existing managed instance. You must [enable Microsoft Entra authentication](../database/authentication-aad-configure.md) on the managed instance. |
 
 <a name='configure-azure-ad-authentication-for-azure-sql-managed-instance'></a>

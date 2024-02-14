@@ -3,7 +3,7 @@ title: "USER_NAME (Transact-SQL)"
 description: "USER_NAME returns a database user name from a specified identification number, or the current user name."
 author: VanMSFT
 ms.author: vanto
-ms.date: 10/04/2023
+ms.date: 10/30/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -30,11 +30,11 @@ Returns a database user name from a specified identification number, or the curr
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
   
 ## Syntax
-  
+
 ```syntaxsql
-USER_NAME ( [ ID ] )  
+USER_NAME ( [ ID ] )
 ```  
-  
+
 [!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
@@ -103,7 +103,7 @@ dbo
 
 The following example shows how `USER_NAME` behaves during impersonation.
 
- `EXECUTE AS` is not supported on [!INCLUDE [fabric](../../includes/fabric.md)].
+`EXECUTE AS` is not currently supported on [!INCLUDE [fabric](../../includes/fabric.md)].
 
  > [!CAUTION]
  > When testing with `EXECUTE AS`, always script a `REVERT` to follow.
@@ -135,7 +135,6 @@ dbo
 ```  
   
 ## Examples: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]
-
   
 ### E. Use USER_NAME without an ID
 
@@ -150,15 +149,16 @@ SELECT USER_NAME();
 ```output
 User7                              
 ```  
+  
+### F. Use USER_NAME in the WHERE clause
 
-### F. Using USER_NAME in the WHERE clause  
  The following example finds the row in `sysusers` in which the name is equal to the result of applying the system function `USER_NAME` to user identification number `1`.  
   
 ```sql  
 SELECT name FROM sysusers WHERE name = USER_NAME(1);  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+ [!INCLUDE [ssResult](../../includes/ssresult-md.md)]  
   
 ```output
 name                             

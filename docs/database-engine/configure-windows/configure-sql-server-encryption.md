@@ -4,7 +4,7 @@ description: This article describes how to configure a SQL Server instance to en
 author: sevend2
 ms.author: v-sidong
 ms.reviewer: sureshka, randolphwest
-ms.date: 03/13/2023
+ms.date: 02/02/2024
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -24,7 +24,7 @@ To configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] to us
 
 Depending on the version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Configuration Manager you have access to on the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] computer, use one of the following procedures to install and configure the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance.
 
-### Computers that have SQL Server 2019 Configuration Manager
+### Computers with SQL Server Configuration Manager for SQL Server 2019 and later versions
 
 Starting with [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], certificate management is integrated into [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Configuration Manager, and can be used with earlier versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. To add a certificate on a single [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance, in a failover cluster configuration, or in an availability group configuration, see [Certificate Management (SQL Server Configuration Manager)](manage-certificates.md). The Configuration Manager greatly simplifies certificate management by taking care of installing the certificate and configuring [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for using the installed certificate with just a few steps.
 
@@ -32,7 +32,7 @@ Certificates are stored locally for the users on the computer. To install a cert
 
 You can temporarily install an Express edition of [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] or a later version to use [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Configuration Manager, which supports integrated certificate management.
 
-### Computers that don't have SQL Server 2019 Configuration Manager
+### Computers with SQL Server Configuration Manager for SQL Server 2017 and earlier
 
 If you are using [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] or an earlier version, and [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Configuration Manager for [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] isn't available, follow these steps to install and configure the certificate on the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] computer:
 
@@ -142,3 +142,21 @@ GO
 ```
 
 The `encrypt_option` column is a Boolean value indicating whether encryption is enabled for this connection. If the value is `TRUE`, the connection is securely encrypted. If the value is `FALSE`, the connection isn't encrypted.
+
+### SQL Server certificate behavior with permissions
+
+The SQL Server service detects and uses the certificate automatically for encryption if all of the following conditions are true:
+
+- The certificate has a subject that contains the FQDN of the machine
+- The certificate is installed in the Local Computer's certificate store
+- The SQL Server service account is granted access to the certificate's private key
+
+This use happens even if the certificate is not selected in SQL Server Configuration Manager. 
+
+To override this behavior, either:
+
+- Configure another certificate to be used in the SQL Server Configuration Manager
+
+  or
+
+- Remove the SQL Server service account permissions to the undesired certificate

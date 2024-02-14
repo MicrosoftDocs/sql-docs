@@ -165,7 +165,7 @@ For more information about change tracking and [!INCLUDE[sql_sync_long](../../in
 
 - [Microsoft Sync Framework Developer Center](/previous-versions/sql/synchronization/mt490616(v=msdn.10))
 
-  Provides complete documentation for [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] and [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)].
+  Provides complete documentation for Sync Framework and Sync Services.
 
 ## Next steps
 

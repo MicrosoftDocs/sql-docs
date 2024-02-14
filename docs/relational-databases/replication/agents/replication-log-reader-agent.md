@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "10/29/2018"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: reference
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "Log Reader Agent, executables"
@@ -143,6 +143,9 @@ logread [-?]
  
  **-MultiSubnetFailover** [**0**\|**1**]
  Specifies whether the MultiSubnetFailover property is enabled or not. If your application is connecting to an Always On availability group (AG) on different subnets, setting MultiSubnetFailover to 1 (true) provides faster detection of and connection to the (currently) active server.   
+
+ When you configure a transactional publication on an AG, the Log Reader Agent creates a dynamic linked server for the listener to verify the metadata. Starting with SQL Server 2022 CU10, there's a change in the configuration of the dynamic linked server. For more information, see [KB5031778](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate10#2698036).
+ 
    **Applies to**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)]).  
   
  **-Output** _output_path_and_file_name_  

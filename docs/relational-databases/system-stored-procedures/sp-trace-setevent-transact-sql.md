@@ -334,7 +334,7 @@ The following table describes the code values that users may get following compl
 | `0` | No error. |
 | `1` | Unknown error. |
 | `2` | The trace is currently running. Changing the trace at this time results in an error. |
-| `3` | The specified event isn't valid. The event may not exist or it's not an appropriate one for the store procedure. |
+| `3` | The specified event isn't valid. The event may not exist or it isn't an appropriate one for the store procedure. |
 | `4` | The specified column isn't valid. |
 | `9` | The specified trace handle isn't valid. |
 | `11` | The specified column is used internally and can't be removed. |
@@ -359,7 +359,7 @@ For an example of using trace stored procedures, see [Create a Trace (Transact-S
 
 Requires ALTER TRACE permission.
 
-## See also
+## Related content
 
 - [sys.fn_trace_geteventinfo (Transact-SQL)](../system-functions/sys-fn-trace-geteventinfo-transact-sql.md)
 - [sys.fn_trace_getinfo (Transact-SQL)](../system-functions/sys-fn-trace-getinfo-transact-sql.md)

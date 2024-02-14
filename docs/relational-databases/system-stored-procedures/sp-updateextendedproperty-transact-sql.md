@@ -4,7 +4,7 @@ description: Updates the value of an existing extended property.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 08/28/2023
+ms.date: 12/27/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -131,9 +131,9 @@ Given a valid *@name* and *@value*, if all object types and names are `NULL`, th
 
 ## Permissions
 
-Members of the **db_owner** and **db_ddladmin** fixed database roles may update the extended properties of any object with the following exception: **db_ddladmin** may not add properties to the database itself, or to users or roles.
+Members of the **db_owner** and **db_ddladmin** fixed database roles can update the extended properties of any object with the following exception: **db_ddladmin** can't add properties to the database itself, or to users or roles.
 
-Users may update extended properties to objects they own, or on which they have ALTER or CONTROL permissions.
+Users can update extended properties to objects they own, or on which they have ALTER or CONTROL permissions.
 
 ## Examples
 
@@ -150,23 +150,23 @@ GO
 
 EXEC sp_addextendedproperty @name = N'Caption',
     @value = N'Employee ID',
-    @level0type = N'Schema',
-    @level0name = dbo,
-    @level1type = N'Table',
-    @level1name = T1,
-    @level2type = N'Column',
-    @level2name = id;
+    @level0type = 'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = 'TABLE',
+    @level1name = N'T1',
+    @level2type = 'COLUMN',
+    @level2name = N'id';
 GO
 
 --Update the extended property.
 EXEC sp_updateextendedproperty @name = N'Caption',
     @value = 'Employee ID must be unique.',
-    @level0type = N'Schema',
-    @level0name = dbo,
-    @level1type = N'Table',
-    @level1name = T1,
-    @level2type = N'Column',
-    @level2name = id;
+    @level0type = 'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = 'TABLE',
+    @level1name = N'T1',
+    @level2type = 'COLUMN',
+    @level2name = N'id';
 GO
 ```
 
@@ -190,7 +190,7 @@ EXEC sp_updateextendedproperty @name = N'NewCaption',
 GO
 ```
 
-## See also
+## Related content
 
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
 - [sys.fn_listextendedproperty (Transact-SQL)](../system-functions/sys-fn-listextendedproperty-transact-sql.md)

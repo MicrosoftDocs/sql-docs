@@ -3,8 +3,8 @@ title: What is SQL Data Sync for Azure?
 description: This overview introduces SQL Data Sync for Azure, which allows you to sync data across multiple cloud and on-premises databases.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: wiassaf, mathoma, jeschult
-ms.date: 09/26/2023
+ms.reviewer: mathoma, hudequei
+ms.date: 11/28/2023
 ms.service: sql-database
 ms.subservice: sql-data-sync
 ms.topic: conceptual
@@ -148,7 +148,7 @@ Provisioning and deprovisioning during sync group creation, update, and deletion
 - Be cautious when you use the following data types as a primary key, because the supported precision is only to the second: time, datetime, datetime2, datetimeoffset.
 - The names of objects (databases, tables, and columns) can't contain the printable characters period (`.`), left square bracket (`[`), or right square bracket (`]`).
 - A table name can't contain printable characters: `! " # $ % ' ( ) * + -` or space.
-- Microsoft Entra ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) authentication isn't supported.
+- Microsoft Entra ([formerly Azure Active Directory](/entra/fundamentals/new-name)) authentication isn't supported.
 - If there are tables with the same name but different schema (for example, `dbo.customers` and `sales.customers`) only one of the tables can be added into sync.
 - Columns with user-defined data types aren't supported.
 - Moving servers between different subscriptions isn't supported. 
@@ -159,6 +159,7 @@ Provisioning and deprovisioning during sync group creation, update, and deletion
 - Schema changes aren't automatically replicated. A custom solution can be created to [automate the replication of schema changes](./sql-data-sync-update-sync-schema.md).
 - Data Sync supports only the following two index properties: Unique, Clustered/Non-Clustered. Other properties of an index, like IGNORE_DUP_KEY or the WHERE filter predicate, aren't supported and the destination index is provisioned without these properties even if the source Index has these properties set.
 - An Azure Elastic jobs database can't be used as the SQL Data Sync Metadata database, and vice versa.
+- SQL Data Sync isn't supported for [ledger databases](/sql/relational-databases/security/ledger/ledger-database-ledger).
 
 #### Unsupported data types
 

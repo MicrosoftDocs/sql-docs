@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "SQLNCLI, query notifications"
   - "SQL Server Native Client OLE DB provider, query notifications"
   - "consumer notification for rowset changes [SQL Server Native Client]"
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Working with Query Notifications
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

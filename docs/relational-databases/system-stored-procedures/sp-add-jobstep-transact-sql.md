@@ -1,10 +1,10 @@
 ---
 title: sp_add_jobstep (Transact-SQL)
-description: "Adds a step (operation) to a SQL Server Agent job."
+description: "sp_add_jobstep adds a step (operation) to a SQL Server Agent job."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 08/28/2023
+ms.date: 11/02/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -15,10 +15,11 @@ helpviewer_keywords:
   - "sp_add_jobstep"
 dev_langs:
   - "TSQL"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_add_jobstep (Transact-SQL)
 
-[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Adds a step (operation) to a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent job.
 
@@ -85,18 +86,18 @@ The subsystem used by the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.
 
 | Value | Description |
 | --- | --- |
-| `'ActiveScripting'` | Active Script<br /><br />**Important:** [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] |
-| `'CmdExec'` | Operating-system command or executable program |
-| `'Distribution'` | Replication Distribution Agent job |
-| `'Snapshot'` | Replication Snapshot Agent job |
-| `'LogReader'` | Replication Log Reader Agent job |
-| `'Merge'` | Replication Merge Agent job |
-| `'QueueReader'` | Replication Queue Reader Agent job |
-| `'ANALYSISQUERY'` | Analysis Services query (MDX, DMX) |
-| `'ANALYSISCOMMAND'` | Analysis Services command (XMLA) |
-| `'SSIS'` | [!INCLUDE [ssISnoversion](../../includes/ssisnoversion-md.md)] package execution |
-| `'PowerShell'` | PowerShell Script |
-| `'TSQL'` (default) | [!INCLUDE [tsql](../../includes/tsql-md.md)] statement |
+| `ActiveScripting` | Active Script<br /><br />**Important:** [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] |
+| `CmdExec` | Operating-system command or executable program |
+| `Distribution` | Replication Distribution Agent job |
+| `Snapshot` | Replication Snapshot Agent job |
+| `LogReader` | Replication Log Reader Agent job |
+| `Merge` | Replication Merge Agent job |
+| `QueueReader` | Replication Queue Reader Agent job |
+| `ANALYSISQUERY` | Analysis Services query (MDX, DMX) |
+| `ANALYSISCOMMAND` | Analysis Services command (XMLA) |
+| `SSIS` | [!INCLUDE [ssISnoversion](../../includes/ssisnoversion-md.md)] package execution |
+| `PowerShell` | PowerShell Script |
+| `TSQL` (default) | [!INCLUDE [tsql](../../includes/tsql-md.md)] statement |
 
 #### [ @command = ] N'*command*'
 
@@ -158,7 +159,7 @@ The name of the database in which to execute a [!INCLUDE [tsql](../../includes/t
 
 #### [ @database_user_name = ] N'*database_user_name*'
 
-The name of the user account to use when executing a [!INCLUDE [tsql](../../includes/tsql-md.md)] step. *@database_user_name* is **sysname**, with a default of `NULL`. When *@database_user_name* is NULL, the step runs in the job owner's user context on *@database_name*. [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent includes this parameter only if the job owner is a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] sysadmin. If so, the given Transact-SQL step is executed in the context of the given [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] user name. If the job owner isn't a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] sysadmin, then the Transact-SQL step is always executed in the context of the login that owns this job, and the *@database_user_name* parameter is ignored.
+The name of the user account to use when executing a [!INCLUDE [tsql](../../includes/tsql-md.md)] step. *@database_user_name* is **sysname**, with a default of `NULL`. When *@database_user_name* is `NULL`, the step runs in the job owner's user context on *@database_name*. [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent includes this parameter only if the job owner is a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] sysadmin. If so, the given Transact-SQL step is executed in the context of the given [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] user name. If the job owner isn't a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] sysadmin, then the Transact-SQL step is always executed in the context of the login that owns this job, and the *@database_user_name* parameter is ignored.
 
 #### [ @retry_attempts = ] *retry_attempts*
 
@@ -196,7 +197,7 @@ The ID number of the proxy that the job step runs as. *@proxy_id* is **int**, wi
 
 #### [ @proxy_name = ] N'*proxy_name*'
 
-The name of the proxy that the job step runs as. *@proxy_name* is **sysname**, with a default of `NULL`.If no *@proxy_id* is specified, no *@proxy_name* is specified, and no *@database_user_name* is specified, the job step runs as the service account for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent.
+The name of the proxy that the job step runs as. *@proxy_name* is **sysname**, with a default of `NULL`. If no *@proxy_id* is specified, no *@proxy_name* is specified, and no *@database_user_name* is specified, the job step runs as the service account for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent.
 
 #### [ @step_uid = ] '*step_uid*' OUTPUT
 
@@ -218,7 +219,9 @@ SQL Server Management Studio provides an easy, graphical way to manage jobs, and
 
 By default, a job step runs as the service account for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent unless another proxy is specified. A requirement of this account is to be a member of the **sysadmin** fixed security role.
 
-A proxy may be identified by *@proxy_name* or *@proxy_id*.
+A proxy might be identified by *@proxy_name* or *@proxy_id*.
+
+This stored procedure shares the name of `sp_add_jobstep` with a similar object for the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). For information about the elastic jobs version, see [jobs.sp_add_jobstep (Azure Elastic Jobs) (Transact-SQL)](sp-add-jobstep-elastic-jobs-transact-sql.md?view=azuresql-db&preserve-view=true).
 
 ## Permissions
 
@@ -254,7 +257,7 @@ EXEC sp_add_jobstep
 GO
 ```
 
-## Next steps
+## Related content
 
 - [View or Modify Jobs](../../ssms/agent/view-or-modify-jobs.md)
 - [sp_add_job (Transact-SQL)](sp-add-job-transact-sql.md)

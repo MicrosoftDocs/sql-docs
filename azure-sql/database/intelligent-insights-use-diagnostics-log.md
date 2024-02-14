@@ -1,5 +1,6 @@
 ---
 title: Intelligent Insights performance diagnostics log
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Intelligent Insights provides a diagnostics log of Azure SQL Database and Azure SQL Managed Instance performance issues
 author: dimitri-furman
 ms.author: dfurman

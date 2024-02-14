@@ -1,6 +1,6 @@
 ---
-title: Configure best practices assessment on an Azure Arc-enabled SQL Server instance
-description: Configure best practices assessment on an Azure Arc-enabled SQL Server instance
+title: Configure best practices assessment
+description: Explains how to configure best practices assessment on SQL Server instance for SQL Server enabled by Azure Arc.
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mikeray, randolphwest
@@ -8,7 +8,9 @@ ms.date: 06/14/2023
 ms.topic: conceptual
 ---
 
-# Configure SQL best practices assessment
+# Configure SQL best practices assessment - SQL Server enabled by Azure Arc
+
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 Best practices assessment provides a mechanism to evaluate the configuration of your SQL Server. After you enable best practices assessment, an assessment scans your SQL Server instance and databases to provide recommendations for things like:
 
@@ -21,10 +23,10 @@ Best practices assessment provides a mechanism to evaluate the configuration of 
 
 Assessment run time depends on your environment (number of databases, objects, and so on), with a duration from a few minutes, up to an hour. Similarly, the size of the assessment result also depends on your environment. Assessment runs against your instance and all databases on that instance. In our testing, we observed that an assessment run can have up to 5-10% CPU impact on the machine. In these tests, the assessment was done while a TPC-C like application was running against the SQL Server.
 
-This article provides instructions for using best practices assessment on an instance of Azure Arc-enabled SQL Server.
+This article provides instructions for using best practices assessment on an instance of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)].
 
 >[!IMPORTANT]
->Best practices assessment is available only for SQL Servers purchased through either [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) or [pay-as-you-go (PAYG)](https://www.microsoft.com/sql-server/sql-server-2022-pricing) licensing options.
+>Best practices assessment is available only for SQL Server instances purchased through either [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) or [pay-as-you-go (PAYG)](https://www.microsoft.com/sql-server/sql-server-2022-pricing) licensing options.
 >
 >For instructions to configure the appropriate license type, review [Manage SQL Server license and billing options](manage-configuration.md).
 
@@ -88,11 +90,11 @@ This article provides instructions for using best practices assessment on an ins
 
 ## Enable best practices assessment at scale using Azure policy
 
-You can automatically enable best practices assessment on multiple Arc-enabled SQL Server instances at scale using an Azure policy definition called *Configure Arc-enabled Servers with SQL Server extension installed to enable or disable SQL best practices assessment.*  This policy definition is not assigned to a scope by default. If you assign this policy definition to a scope of your choice, it enables the SQL best practices assessment on all the Arc-enabled SQL Servers within the defined scope, and auto schedule to every Sunday 12:00 AM local time by default.
+You can automatically enable best practices assessment on multiple Arc-enabled SQL Server instances at scale using an Azure policy definition called *Configure Arc-enabled Servers with SQL Server extension installed to enable or disable SQL best practices assessment.*  This policy definition is not assigned to a scope by default. If you assign this policy definition to a scope of your choice, it enables the SQL best practices assessment on all SQL Server instances enabled for Azure Arc within the defined scope, and auto schedule to every Sunday 12:00 AM local time by default.
 
 
 >[!IMPORTANT]
->The policy enables best practices assessment only for SQL Servers purchased through either [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) or [pay-as-you-go (PAYG)](https://www.microsoft.com/sql-server/sql-server-2022-pricing) licensing options.
+>The policy enables best practices assessment only for SQL Server instances purchased through either [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) or [pay-as-you-go (PAYG)](https://www.microsoft.com/sql-server/sql-server-2022-pricing) licensing options.
 >
 >For instructions to configure the appropriate license type, review [Manage SQL Server license and billing options](manage-configuration.md).
 

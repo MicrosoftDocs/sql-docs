@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "viewing replication properties"
@@ -101,20 +101,20 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  The following example [!INCLUDE[tsql](../../includes/tsql-md.md)] script returns information about the Distributor and distribution database.  
   
- [!code-sql[HowTo#sp_helpdistributor](../../relational-databases/replication/codesnippet/tsql/view-and-modify-distribu_1.sql)]  
+ :::code language="sql" source="codesnippet/tsql/view-and-modify-distribu_1.sql":::
   
- [!code-sql[HowTo#sp_helpdistributiondb](../../relational-databases/replication/codesnippet/tsql/view-and-modify-distribu_2.sql)]  
+ :::code language="sql" source="codesnippet/tsql/view-and-modify-distribu_2.sql":::
   
  This example changes retention periods for the Distributor, the password used when connecting to the Distributor, and the interval at which the Distributor checks the status of various replication agents (also known as the heartbeat interval).  
   
 > [!IMPORTANT]  
 >  When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, secure the file to prevent unauthorized access.  
   
- [!code-sql[HowTo#sp_changedistributor_property](../../relational-databases/replication/codesnippet/tsql/view-and-modify-distribu_3.sql)]  
+ :::code language="sql" source="codesnippet/tsql/view-and-modify-distribu_3.sql":::
   
- [!code-sql[HowTo#sp_changedistributiondb](../../relational-databases/replication/codesnippet/tsql/view-and-modify-distribu_4.sql)]  
+ :::code language="sql" source="codesnippet/tsql/view-and-modify-distribu_4.sql":::
   
- [!code-sql[HowTo#sp_changedistributor_password](../../relational-databases/replication/codesnippet/tsql/view-and-modify-distribu_5.sql)]  
+ :::code language="sql" source="codesnippet/tsql/view-and-modify-distribu_5.sql":::
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
   

@@ -4,13 +4,11 @@ description: This page describes some common vCore resource limits for elastic p
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 08/11/2023
+ms.date: 10/23/2023
 ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: reference
-ms.custom:
-  - sqldbrb=1
-  - references_regions
+ms.custom: sqldbrb=1, references_regions, ignite-2023
 ---
 # Resource limits for elastic pools using the vCore purchasing model
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -73,7 +71,7 @@ The following table covers these SLOs: `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `G
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A |
 | Max data size (GB) | 512 | 756 | 1536 | 2048 | 2048 |
 | Max log size (GB) <sup>2</sup> | 154 | 227 | 461 | 461 | 461 |
-| TempDB max data size (GB) | 64 | 128 | 192 | 256 | 320 |
+| `tempdb` max data size (GB) | 64 | 128 | 192 | 256 | 320 |
 | Storage type | Premium (Remote) Storage | Premium (Remote) Storage | Premium (Remote) Storage | Premium (Remote) Storage | Premium (Remote) Storage |
 | Read IO latency (approximate) | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms |
 | Write IO latency (approximate) | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms |
@@ -114,7 +112,7 @@ The following table covers these SLOs: `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`,
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A |
 | Max data size (GB) | 2048 | 2048 | 2048 | 3072 | 3072 |
 | Max log size (GB) <sup>2</sup> | 614 | 614 | 614 | 922 | 922 |
-| TempDB max data size (GB) | 384 | 448 | 512 | 576 | 640 |
+| `tempdb` max data size (GB) | 384 | 448 | 512 | 576 | 640 |
 | Storage type | Premium (Remote) Storage | Premium (Remote) Storage | Premium (Remote) Storage | Premium (Remote) Storage | Premium (Remote) Storage |
 | Read IO latency (approximate) | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms |
 | Write IO latency (approximate) | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms |
@@ -155,7 +153,7 @@ The following table covers these SLOs: `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`,
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A |
 | Max data size (GB) | 3072 | 4096 | 4096 | 4096 | 4096 |
 | Max log size (GB) <sup>2</sup> | 922 | 1229 | 1229 | 1229 | 1229 |
-| TempDB max data size (GB) | 768 | 1024 | 1280 | 2560 | 2560 |
+| `tempdb` max data size (GB) | 768 | 1024 | 1280 | 2560 | 2560 |
 | Storage type | Premium (Remote) Storage | Premium (Remote) Storage | Premium (Remote) Storage | Premium (Remote) Storage | Premium (Remote) Storage |
 | Read IO latency (approximate) | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms |
 | Write IO latency (approximate) | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms |
@@ -198,7 +196,7 @@ The following table covers these SLOs: `GP_Fsv2_8`, `GP_Fsv2_10`, `GP_Fsv2_12`, 
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A |
 | Max data size (GB) | 1024 | 1024 | 1024 | 1024 | 1536 |
 | Max log size (GB) <sup>2</sup> | 336 | 336 | 336 | 336 | 512 |
-| TempDB max data size (GB) | 37 | 46 | 56 | 65 | 74 |
+| `tempdb` max data size (GB) | 37 | 46 | 56 | 65 | 74 |
 | Storage type | Remote SSD | Remote SSD | Remote SSD | Remote SSD | Remote SSD |
 | Read IO latency (approximate) | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms |
 | Write IO latency (approximate) | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms |
@@ -239,7 +237,7 @@ The following table covers these SLOs: `GP_Fsv2_18`, `GP_Fsv2_20`, `GP_Fsv2_24`,
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A |
 | Max data size (GB) | 1536 | 1536 | 1536 | 3072 | 3072 | 4096 |
 | Max log size (GB) <sup>2</sup> | 512 | 512 | 512 | 1024 | 1024 | 1024 |
-| TempDB max data size (GB) | 83 | 93 | 111 | 148 | 167 | 333 |
+| `tempdb` max data size (GB) | 83 | 93 | 111 | 148 | 167 | 333 |
 | Storage type | Remote SSD | Remote SSD | Remote SSD | Remote SSD | Remote SSD | Remote SSD |
 | Read IO latency (approximate) | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms |
 | Write IO latency (approximate) | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms |
@@ -266,6 +264,7 @@ The following table covers these SLOs: `GP_Fsv2_18`, `GP_Fsv2_20`, `GP_Fsv2_24`,
 <sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ## General Purpose - provisioned compute - DC-series
+
 ### General Purpose - DC-series (part 1 of 2)
 
 Compute sizes (service level objectives, or SLOs) for General Purpose DC-series elastic pools follow the naming convention `GP_DC_` followed by the number of vCores. 
@@ -281,7 +280,7 @@ The following table covers these SLOs: `GP_DC_2`, `GP_DC_4`, `GP_DC_6`, `GP_DC_8
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A |
 | Max data size (GB) | 756 | 1536 | 2048 | 2048 | 3072 | 3072 |
 | Max log size (GB) <sup>2</sup> | 227 | 461 | 614 | 614 | 614 | 922 |
-| TempDB max data size (GB) | 64 | 128 | 192 | 256 | 320 | 384 |
+| `tempdb` max data size (GB) | 64 | 128 | 192 | 256 | 320 | 384 |
 | Storage type | Premium (Remote) Storage | Premium (Remote) Storage | Premium (Remote) Storage | Premium (Remote) Storage | Premium (Remote) Storage | Premium (Remote) Storage |
 | Read IO latency (approximate) | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms |
 | Write IO latency (approximate) | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms |
@@ -324,7 +323,7 @@ The following table covers these SLOs: `GP_DC_14`, `GP_DC_16`, `GP_DC_18`, `GP_D
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A |
 | Max data size (GB) | 3072 | 3072 | 3072 | 3072 | 3072 | 4096 |
 | Max log size (GB) <sup>2</sup> | 922 | 922 | 922 | 922 | 1024 | 1024 |
-| TempDB max data size (GB) | 384 | 512 | 576 | 640 | 768 | 1024 |
+| `tempdb` max data size (GB) | 384 | 512 | 576 | 640 | 768 | 1024 |
 | Storage type | Premium (Remote) Storage | Premium (Remote) Storage | Premium (Remote) Storage | Premium (Remote) Storage | Premium (Remote) Storage | Premium (Remote) Storage |
 | Read IO latency (approximate) | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms |
 | Write IO latency (approximate) | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms |
@@ -369,7 +368,7 @@ The following table covers these SLOs: `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `B
 | In-memory OLTP storage (GB) | 3.14 | 4.71 | 6.28 | 8.65 | 11.02 |
 | Max data size (GB) | 1024 | 1536 | 2048 | 2048 | 3072 |
 | Max log size (GB) <sup>2</sup> | 307 | 307 | 461 | 461 | 922 |
-| TempDB max data size (GB) | 128 | 192 | 256 | 320 | 384 |
+| `tempdb` max data size (GB) | 128 | 192 | 256 | 320 | 384 |
 | [Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB) | 4829 | 4829 | 4829 | 4829 | 4829 |
 | Storage type | Local SSD | Local SSD | Local SSD | Local SSD | Local SSD |
 | Read IO latency (approximate) | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
@@ -411,7 +410,7 @@ The following table covers these SLOs: `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`,
 | In-memory OLTP storage (GB) | 13.39 | 15.77 | 18.14 | 20.51 | 25.25 |
 | Max data size (GB) | 3072 | 3072 | 3072 | 3072 | 4096 |
 | Max log size (GB) <sup>2</sup> | 922 | 922 | 922 | 922 | 1229 |
-| TempDB max data size (GB) | 448 | 512 | 576 | 640 | 768 |
+| `tempdb` max data size (GB) | 448 | 512 | 576 | 640 | 768 |
 | [Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB) | 4829 | 4829 | 4829 | 4829 | 4829 |
 | Storage type | Local SSD | Local SSD | Local SSD | Local SSD | Local SSD |
 | Read IO latency (approximate) | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
@@ -451,7 +450,7 @@ The following table covers these SLOs: `BC_Gen5_32`, `BC_Gen5_40`, `BC_Gen5_80`,
 | In-memory OLTP storage (GB) | 37.94 | 52.23 | 131.68 | 227.02 |
 | Max data size (GB) | 4096 | 4096 | 4096 | 4096 |
 | Max log size (GB) <sup>2</sup> | 1229 | 1229 | 1229 | 1229 |
-| TempDB max data size (GB) | 1024 | 1280 | 2560 | 2560 |
+| `tempdb` max data size (GB) | 1024 | 1280 | 2560 | 2560 |
 | [Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB) | 4829 | 4829 | 4829 | 4829 |
 | Storage type | Local SSD | Local SSD | Local SSD | Local SSD |
 | Read IO latency (approximate) | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
@@ -495,7 +494,7 @@ The following table covers these SLOs: `BC_DC_2`, `BC_DC_4`, `BC_DC_6`, `BC_DC_8
 | In-memory OLTP storage (GB) | 1.7 | 3.7 | 5.9 | 8.2 | 10.65 | 11.02 |
 | Max data size (GB) | 768 | 768 | 768 | 768 | 2048 | 3072 |
 | Max log size (GB) <sup>2</sup> | 230 | 230 | 230 | 230 | 461 | 922 |
-| TempDB max data size (GB) | 64 | 128 | 192 | 256 | 320 | 384 | 
+| `tempdb` max data size (GB) | 64 | 128 | 192 | 256 | 320 | 384 | 
 | [Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB) | 1406 | 1406 | 1406 | 1406 | 4829 | 4829 |
 | Storage type | Local SSD | Local SSD | Local SSD | Local SSD | Local SSD | Local SSD |
 | Read IO latency (approximate) | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
@@ -539,7 +538,7 @@ The following table covers these SLOs: `BC_DC_14`, `BC_DC_16`, `BC_DC_18`, `BC_D
 | In-memory OLTP storage (GB) | 13.39 | 15.77 | 18.14 | 20.51 | 25.25 | 37.93 |
 | Max data size (GB) | 3072 | 3072 | 3072 | 3072 | 4096 | 4096 |
 | Max log size (GB) <sup>2</sup> | 922 | 922 | 922 | 922 | 1024 | 1024 |
-| TempDB max data size (GB) | 448 | 512 | 576 | 640 | 768 | 1024 | 
+| `tempdb` max data size (GB) | 448 | 512 | 576 | 640 | 768 | 1024 | 
 | [Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB) | 4829 | 4829 | 4829 | 4829 | 4829 | 4829 |
 | Storage type | Local SSD | Local SSD | Local SSD | Local SSD | Local SSD | Local SSD |
 | Read IO latency (approximate) | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
@@ -587,7 +586,7 @@ The following table covers these SLOs: `HS_Gen5_4`, `HS_Gen5_6`, `HS_Gen5_8`, `H
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A |
 | Max data size per pool (TB) | 100 | 100 | 100 | 100 | 100 | 100 |
-| `Tempdb` max data size (GB) | 128 | 192 | 256 | 320 | 384 | 448 |
+| `tempdb` max data size (GB) | 128 | 192 | 256 | 320 | 384 | 448 |
 | Max local SSD IOPS per pool <sup>2</sup> | 18,000 | 27,000 | 36,000 | 45,000 | 54,000 | 63,000 |
 | Max log rate per pool (MBps ) | 125 | 125 | 125 | 125 | 125 | 125 |
 | Local read IO latency<sup>3</sup> | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
@@ -627,8 +626,8 @@ The following table covers these SLOs: `HS_Gen5_16`, `HS_Gen5_18`, `HS_Gen5_20`,
 | Memory (GB) | 83 | 93.4 | 103.8 | 124.6 | 166.1 | 207.6 | 415.2 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
-| Max data size per pool(TB) | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
-| Tempdb max data size (GB) | 512 | 576 | 640 | 768 | 1024 | 1280 | 2560 |
+| Max data size per pool (TB) | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
+| `tempdb` max data size (GB) | 512 | 576 | 640 | 768 | 1024 | 1280 | 2560 |
 | Max local SSD IOPS per pool <sup>2</sup> | 72,000 | 81,000 | 90,000 | 108,000 | 144,000 | 180,000 | 256,000 |
 | Max log rate per pool (MBps) | 125 | 125 | 125 | 125 | 125 | 125 | 125 |
 | Local read IO latency<sup>3</sup> | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
@@ -642,6 +641,256 @@ The following table covers these SLOs: `HS_Gen5_16`, `HS_Gen5_18`, `HS_Gen5_20`,
 | Secondary replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
 | Multi-AZ | Not supported | Not supported | Not supported | Not supported | Not supported | Not supported | Not supported |
 | Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+
+<sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
+
+<sup>2</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. Review [Hyperscale service tier](hyperscale-elastic-pool-overview.md#architecture) and [Hyperscale service tier](service-tier-hyperscale.md#distributed-functions-architecture) for more information.
+
+<sup>3</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+
+<sup>4</sup> Latency is 1-2 ms for data on local compute replica SSD, which caches most used data pages. Higher latency for data retrieved from page servers.
+
+<sup>5</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>6</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
+
+## Hyperscale - premium-series
+
+### Hyperscale - premium-series (part 1 of 3)
+
+Compute sizes (service level objectives, or SLOs) for Hyperscale premium-series elastic pools follow the naming convention `HS_PRMS_` followed by the number of max vCores.
+
+The following table covers these SLOs: `HS_PRMS_4`, `HS_PRMS_6`, `HS_PRMS_8`, `HS_PRMS_10`, `HS_PRMS_12`, and `HS_PRMS_14`:
+ 
+| vCores | 4 | 6 | 8 | 10 | 12 | 14 |
+|-:|-:|-:|-:|-:|-:|-:|
+| Hardware | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series |
+| Memory (GB) | 20.8 | 31.1 | 41.5 | 51.9 | 62.3 | 72.7 |
+| Max number DBs per pool <sup>1</sup> | 25 | 25 | 25 | 25 | 25 | 25 |
+| Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
+| In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A |
+| Max data size per pool (TB) | 100 | 100 | 100 | 100 | 100 | 100 |
+| `tempdb` max data size (GB) | 128 | 192 | 256 | 320 | 384 | 448 |
+| Max local SSD IOPS per pool <sup>2</sup> | 18,000 | 27,000 | 36,000 | 45,000 | 54,000 | 63,000 |
+| Max log rate per pool (MBps ) | 125 | 125 | 125 | 125 | 125 | 125 |
+| Local read IO latency<sup>3</sup> | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
+| Remote read IO latency<sup>3</sup> | 1-5 ms | 1-5 ms | 1-5 ms | 1-5 ms | 1-5 ms | 1-5 ms |
+| Write IO latency<sup>3</sup> | 3-5 ms | 3-5 ms | 3-5 ms | 3-5 ms | 3-5 ms | 3-5 ms |
+| Storage type | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> |
+| Max concurrent workers per pool <sup>5</sup> | 420 | 630 | 840 | 1050 | 1260 | 1470 |
+| Max concurrent external connections per pool <sup>6</sup> | 42 | 63 | 84 | 105 | 126 | 147 |
+| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
+| Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2, 4 | 0, 0.25, 0.5, 1, 2, 4, 6 | 0, 0.25, 0.5, 1, 2, 4, 6, 8 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14 |
+| Secondary pool replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
+| Multi-AZ | Not supported | Not supported | Not supported | Not supported | Not supported | Not supported |
+| Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes |
+
+<sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
+
+<sup>2</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. Review [Hyperscale service tier](hyperscale-elastic-pool-overview.md#architecture) and [Hyperscale service tier](service-tier-hyperscale.md#distributed-functions-architecture) for more information.
+
+<sup>3</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+
+<sup>4</sup> Latency is 1-2 ms for data on local compute replica SSD, which caches most used data pages. Higher latency for data retrieved from page servers.
+
+<sup>5</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>6</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
+
+### Hyperscale - premium-series (part 2 of 3)
+
+Compute sizes (service level objectives, or SLOs) for Hyperscale premium-series elastic pools follow the naming convention `HS_PRMS_` followed by the number of max vCores.
+
+The following table covers these SLOs: `HS_PRMS_16`, `HS_PRMS_18`, `HS_PRMS_20`, `HS_PRMS_24`, `HS_PRMS_32`, and `HS_PRMS_40`:
+ 
+| vCores | 16 | 18 | 20 | 24 | 32 | 40 | 
+|:-|-:|-:|-:|-:|-:|-:|
+| Hardware | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series | 
+| Max number DBs per pool <sup>1</sup> | 25 | 25 | 25 | 25 | 25 | 25 | 
+| Memory (GB) | 83 | 93.4 | 103.8 | 124.6 | 166.1 | 207.6 | 
+| Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
+| In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A | 
+| Max data size per pool (TB) | 100 | 100 | 100 | 100 | 100 | 100 | 
+| `tempdb` max data size (GB) | 512 | 576 | 640 | 768 | 1024 | 1280 | 
+| Max local SSD IOPS per pool <sup>2</sup> | 72,000 | 81,000 | 90,000 | 108,000 | 144,000 | 180,000 | 
+| Max log rate per pool (MBps) | 131.25 | 131.25 | 131.25 | 131.25 | 131.25 | 131.25 | 
+| Local read IO latency<sup>3</sup> | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 
+| Remote read IO latency<sup>3</sup> | 1-5 ms | 1-5 ms | 1-5 ms | 1-5 ms | 1-5 ms | 1-5 ms | 
+| Write IO latency<sup>3</sup> | 3-5 ms | 3-5 ms | 3-5 ms | 3-5 ms | 3-5 ms | 3-5 ms | 
+| Storage type | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> |
+| Max concurrent workers per pool <sup>5</sup> | 1680 | 1890 | 2100 | 2520 | 3360 | 4200 | 
+| Max concurrent external connections per pool <sup>6</sup> | 150 | 150 | 150 | 150 | 150 | 150 | 
+| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 
+| Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32, 40 |
+| Secondary replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 
+| Multi-AZ | Not supported | Not supported | Not supported | Not supported | Not supported | Not supported | 
+| Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes | 
+
+<sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
+
+<sup>2</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. Review [Hyperscale service tier](hyperscale-elastic-pool-overview.md#architecture) and [Hyperscale service tier](service-tier-hyperscale.md#distributed-functions-architecture) for more information.
+
+<sup>3</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+
+<sup>4</sup> Latency is 1-2 ms for data on local compute replica SSD, which caches most used data pages. Higher latency for data retrieved from page servers.
+
+<sup>5</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>6</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
+
+### Hyperscale - premium-series (part 3 of 3)
+
+Compute sizes (service level objectives, or SLOs) for Hyperscale premium-series elastic pools follow the naming convention `HS_PRMS_` followed by the number of max vCores.
+
+The following table covers these SLOs: `HS_PRMS_64`, `HS_PRMS_80`, `HS_PRMS_128`:
+ 
+| vCores | 64 | 80 | 128 |
+|:-|-:|-:|-:|-:|-:|-:|-:|
+| Hardware | Premium-series | Premium-series | Premium-series | 
+| Max number DBs per pool <sup>1</sup> | 25 | 25 | 25 | 
+| Memory (GB) | 332.2 | 415.2 | 625 |
+| Columnstore support | Yes | Yes | Yes | 
+| In-memory OLTP storage (GB) | N/A | N/A |
+| Max data size per pool (TB) | 100 | 100 | 100 | 
+| `tempdb` max data size (GB) | 2,048 | 2,560 | 4,096 |
+| Max local SSD IOPS per pool <sup>2</sup> | 288,000 | 360,000 | 409,600 |
+| Max log rate per pool (MBps) | 125 | 125 | 125 | 
+| Local read IO latency<sup>3</sup> | 1-2 ms | 1-2 ms | 1-2 ms | 
+| Remote read IO latency<sup>3</sup> | 1-5 ms | 1-5 ms | 1-5 ms |
+| Write IO latency<sup>3</sup> | 3-5 ms | 3-5 ms | 3-5 ms | 
+| Storage type | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | 
+| Max concurrent workers per pool <sup>5</sup> | 6,720 | 8,400 | 13,440 |
+| Max concurrent external connections per pool <sup>6</sup> | 150 | 150 | 150 |
+| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 
+| Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32, 40, 64 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32, 40, 80 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32, 40, 64, 80, 128 |
+| Secondary replicas | 0-4 | 0-4 | 0-4 | 
+| Multi-AZ | Not supported | Not supported | Not supported |  
+| Read Scale-out | Yes | Yes | Yes |  
+
+<sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
+
+<sup>2</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. Review [Hyperscale service tier](hyperscale-elastic-pool-overview.md#architecture) and [Hyperscale service tier](service-tier-hyperscale.md#distributed-functions-architecture) for more information.
+
+<sup>3</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+
+<sup>4</sup> Latency is 1-2 ms for data on local compute replica SSD, which caches most used data pages. Higher latency for data retrieved from page servers.
+
+<sup>5</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>6</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
+
+## Hyperscale - premium-series memory optimized
+
+### Hyperscale - premium-series memory optimized (part 1 of 3)
+
+Compute sizes (service level objectives, or SLOs) for Hyperscale premium-series memory optimized elastic pools follow the naming convention `HS_MOPRMS_` followed by the number of max vCores.
+
+The following table covers these SLOs: `HS_MOPRMS_4`, `HS_MOPRMS_6`, `HS_MOPRMS_8`, `HS_MOPRMS_10`, `HS_MOPRMS_12`, and `HS_MOPRMS_14`:
+ 
+| vCores | 4 | 6 | 8 | 10 | 12 | 14 |
+|-:|-:|-:|-:|-:|-:|-:|
+| Hardware | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series |
+| Memory (GB) | 20.8 | 31.1 | 41.5 | 51.9 | 62.3 | 72.7 |
+| Max number DBs per pool <sup>1</sup> | 25 | 25 | 25 | 25 | 25 | 25 |
+| Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
+| In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A |
+| Max data size per pool (TB) | 100 | 100 | 100 | 100 | 100 | 100 |
+| `tempdb` max data size (GB) | 128 | 192 | 256 | 320 | 384 | 448 |
+| Max local SSD IOPS per pool <sup>2</sup> | 23,040 | 34,560 | 46,080 | 57,600 | 69,120 | 80,640 |
+| Max log rate per pool (MBps ) | 125 | 125 | 125 | 125 | 125 | 125 |
+| Local read IO latency<sup>3</sup> | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
+| Remote read IO latency<sup>3</sup> | 1-5 ms | 1-5 ms | 1-5 ms | 1-5 ms | 1-5 ms | 1-5 ms |
+| Write IO latency<sup>3</sup> | 3-5 ms | 3-5 ms | 3-5 ms | 3-5 ms | 3-5 ms | 3-5 ms |
+| Storage type | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> |
+| Max concurrent workers per pool <sup>5</sup> | 420 | 630 | 840 | 1050 | 1260 | 1470 |
+| Max concurrent external connections per pool <sup>6</sup> | 42 | 63 | 84 | 105 | 126 | 147 |
+| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
+| Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2, 4 | 0, 0.25, 0.5, 1, 2, 4, 6 | 0, 0.25, 0.5, 1, 2, 4, 6, 8 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14 |
+| Secondary pool replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
+| Multi-AZ | Not supported | Not supported | Not supported | Not supported | Not supported | Not supported |
+| Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes |
+
+<sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
+
+<sup>2</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. Review [Hyperscale service tier](hyperscale-elastic-pool-overview.md#architecture) and [Hyperscale service tier](service-tier-hyperscale.md#distributed-functions-architecture) for more information.
+
+<sup>3</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+
+<sup>4</sup> Latency is 1-2 ms for data on local compute replica SSD, which caches most used data pages. Higher latency for data retrieved from page servers.
+
+<sup>5</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>6</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
+
+### Hyperscale - premium-series memory-optimized (part 2 of 3)
+
+Compute sizes (service level objectives, or SLOs) for Hyperscale premium-series memory optimized elastic pools follow the naming convention `HS_MOPRMS_` followed by the number of max vCores.
+
+The following table covers these SLOs: `HS_MOPRMS_16`, `HS_MOPRMS_18`, `HS_MOPRMS_20`, `HS_MOPRMS_24`, `HS_MOPRMS_32`, and `HS_MOPRMS_40`:
+
+| vCores | 16 | 18 | 20 | 24 | 32 | 40 | 
+|:-|-:|-:|-:|-:|-:|-:|
+| Hardware | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series | 
+| Max number DBs per pool <sup>1</sup> | 25 | 25 | 25 | 25 | 25 | 25 | 
+| Memory (GB) | 83 | 93.4 | 103.8 |249.1 | 166.1 | 207.6 | 
+| Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
+| In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A | 
+| Max data size per pool (TB) | 100 | 100 | 100 | 100 | 100 | 100 | 
+| `tempdb` max data size (GB) | 512 | 576 | 640 | 768 | 1024 | 1280 | 
+| Max local SSD IOPS per pool <sup>2</sup> | 92,160 | 103,680 | 115,200 | 138,240 | 184,320 | 230,400 | 
+| Max log rate per pool (MBps) | 125 | 125 | 125 | 125 | 125 | 125 | 
+| Local read IO latency<sup>3</sup> | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 
+| Remote read IO latency<sup>3</sup> | 1-5 ms | 1-5 ms | 1-5 ms | 1-5 ms | 1-5 ms | 1-5 ms | 
+| Write IO latency<sup>3</sup> | 3-5 ms | 3-5 ms | 3-5 ms | 3-5 ms | 3-5 ms | 3-5 ms | 
+| Storage type | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> |
+| Max concurrent workers per pool <sup>5</sup> | 1680 | 1890 | 2100 | 2520 | 3360 | 4200 | 
+| Max concurrent external connections per pool <sup>6</sup> | 150 | 150 | 150 | 150 | 150 | 150 | 
+| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 
+| Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32, 40 |
+| Secondary replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
+| Multi-AZ | Not supported | Not supported | Not supported | Not supported | Not supported | Not supported |
+| Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes |
+
+<sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
+
+<sup>2</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. Review [Hyperscale service tier](hyperscale-elastic-pool-overview.md#architecture) and [Hyperscale service tier](service-tier-hyperscale.md#distributed-functions-architecture) for more information.
+
+<sup>3</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+
+<sup>4</sup> Latency is 1-2 ms for data on local compute replica SSD, which caches most used data pages. Higher latency for data retrieved from page servers.
+
+<sup>5</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>6</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
+
+### Hyperscale - premium-series memory-optimized (part 3 of 3)
+
+Compute sizes (service level objectives, or SLOs) for Hyperscale premium-series memory optimized elastic pools follow the naming convention `HS_MOPRMS_` followed by the number of max vCores.
+
+The following table covers these SLOs: `HS_MOPRMS_64` and `HS_MOPRMS_80`:
+
+| vCores | 64 | 80 | 
+|:-|-:|-:|
+| Hardware | Premium-series | Premium-series | 
+| Max number DBs per pool <sup>1</sup> | 25 | 25 | 
+| Memory (GB) | 664.4 | 830.5 | 
+| Columnstore support | Yes | Yes | 
+| In-memory OLTP storage (GB) | N/A | N/A |
+| Max data size per pool (TB) | 100 | 100 |
+| `tempdb` max data size (GB) | 2,048 | 2,560 | 
+| Max local SSD IOPS per pool <sup>2</sup> | 368,640 | 409,600 |
+| Max log rate per pool (MBps) | 125 | 125 | 
+| Local read IO latency<sup>3</sup> | 1-2 ms | 1-2 ms | 
+| Remote read IO latency<sup>3</sup> | 1-5 ms | 1-5 ms | 
+| Write IO latency<sup>3</sup> | 3-5 ms | 3-5 ms | 
+| Storage type | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | 
+| Max concurrent workers per pool <sup>5</sup> | 6,720 | 8,400 | 
+| Max concurrent external connections per pool <sup>6</sup> | 150 | 150 | 
+| Max concurrent sessions | 30,000 | 30,000 | 
+| Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32, 40, 64 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32, 40, 80 | 
+| Secondary replicas | 0-4 | 0-4 | 
+| Multi-AZ | Not supported | Not supported | 
+| Read Scale-out | Yes | Yes | 
 
 <sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
 
@@ -700,7 +949,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 /managed-instance/resource-limits.md
 --->
 
-## Next steps
+## Related content
 
 - For vCore resource limits for a single database, see [resource limits for single databases using the vCore purchasing model](resource-limits-vcore-single-databases.md)
 - For DTU resource limits for a single database, see [resource limits for single databases using the DTU purchasing model](resource-limits-dtu-single-databases.md)

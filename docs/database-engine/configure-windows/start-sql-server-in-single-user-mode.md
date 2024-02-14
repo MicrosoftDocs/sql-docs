@@ -3,7 +3,7 @@ title: "Start SQL Server in Single-User Mode"
 description: "Learn about single-user mode in SQL Server. See when it is useful and how to use the startup option -m to start an instance of SQL Server in this mode."
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/20/2022
+ms.date: 07/21/2022
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -15,7 +15,7 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Under certain circumstances, you may have to start an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode by using the **startup option** `-m`. For example, you may want to change server configuration options or recover a damaged `master` database or other system database. Both actions require starting an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode.
+Under certain circumstances, you might have to start an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode by using the **startup option** `-m`. For example, you might want to change server configuration options or recover a damaged `master` database or other system database. Both actions require starting an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode.
 
 For restoring a `master` database on Linux in single-user mode, see [Restore the master database on Linux in single-user mode](../../linux/sql-server-linux-restore-master-database-in-single-user-mode.md).
 
@@ -50,7 +50,7 @@ net start "SQL Server (MSSQLSERVER)" /m"Microsoft SQL Server Management Studio -
 
 ## Note for clustered installations
 
-For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation in a clustered environment, when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started in single user mode, the cluster resource dll uses up the available connection thereby blocking any other connections to the server. When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is in this state, if you try to bring [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent resource online, it may fail over the SQL resource to a different node if the resource is configured to affect the group.
+For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation in a clustered environment, when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started in single user mode, the cluster resource dll uses up the available connection thereby blocking any other connections to the server. When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is in this state, if you try to bring [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent resource online, it might fail over the SQL resource to a different node if the resource is configured to affect the group.
 
 To get around the problem use the following procedure:
 

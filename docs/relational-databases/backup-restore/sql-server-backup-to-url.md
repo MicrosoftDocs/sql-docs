@@ -3,12 +3,13 @@ title: "SQL Server Backup to URL for Microsoft Azure Blob Storage"
 description: Learn about the concepts, requirements, and components necessary for SQL Server to use the Microsoft Azure Blob Storage as a backup destination.
 author: dplessMSFT
 ms.author: dpless
-ms.reviewer: mathoma, wiassaf
+ms.reviewer: mathoma, wiassaf, hudequei 
 ms.date: 03/01/2023
 ms.service: sql
 ms.subservice: backup-restore
 ms.custom: devx-track-azurepowershell
 ms.topic: conceptual
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server backup to URL for Microsoft Azure Blob Storage
 
@@ -51,13 +52,13 @@ If the database is too large, either:
    or
 - Back up to multiple block blobs
 
-#### Support on Linux, containers, and Azure Arc-enabled SQL Managed Instance
+#### Support on Linux, containers, and SQL Managed Instance enabled by Azure Arc
 
 If the SQL Server instance is hosted on Linux, including:
 
 - Stand-alone operating system
 - Containers
-- Azure Arc-enabled SQL Managed Instance
+- SQL Managed Instance enabled by Azure Arc
 - Any other Linux-based environment
 
 The only supported backup to URL for Azure Blob Storage is to block blobs, using the Shared Access Signature.
@@ -111,7 +112,7 @@ The following are security considerations and requirements when backing up to or
 
 - You can issue backup or restore statements by using Transact-SQL, SMO, PowerShell cmdlets, SQL Server Management Studio Backup or Restore wizard.
   
-- Backup to Azure Storage account only supports authentication with Shared Access Signature (SAS) tokens or storage account keys. All other authentication methods, including authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)), are not supported.
+- Backup to Azure Storage account only supports authentication with Shared Access Signature (SAS) tokens or storage account keys. All other authentication methods, including authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)), are not supported.
 
 - Creating a logical device name is not supported. So adding URL as a backup device using sp_dumpdevice or through SQL Server Management Studio is not supported.  
 
@@ -439,7 +440,7 @@ The following example restores the [!INCLUDE [sssampledbobject-md](../../include
    GO  
    ```  
 
-## Next steps
+## Related content
 
 - [SQL Server Backup to URL for Azure Blob Storage best practices and troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)
 - [Back Up and Restore of System Databases (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)

@@ -1,10 +1,10 @@
 ---
 title: Limitations and known issues for SSIS on Linux
-description: This article describes limitations and known issues for SQL Server Integration Services (SSIS) on Linux computers
+description: This article describes limitations and known issues for SQL Server Integration Services (SSIS) on Linux computers.
 author: lrtoyou1223
 ms.author: lle
-ms.reviewer: maghan
-ms.date: 06/06/2018
+ms.reviewer: maghan, randolphwest
+ms.date: 01/03/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -19,24 +19,26 @@ This article describes limitations and known issues for SQL Server Integration S
 
 ## General limitations and known issues
 
-The following features are not supported in this release of SSIS on Linux:
-  - SSIS Catalog database
-  - Scheduled package execution by SQL Agent
-  - Windows Authentication
-  - Third-party components
-  - Change Data Capture (CDC)
-  - SSIS Scale Out
-  - Azure Feature Pack for SSIS
-  - Hadoop and HDFS support
-  - Microsoft Connector for SAP BW
+The following features aren't supported in this release of SSIS on Linux:
 
-For other limitations and known issues with SSIS on Linux, see the [Release Notes](sql-server-linux-release-notes-2017.md#ssis).
+- SSIS Catalog database
+- Scheduled package execution by SQL Agent
+- Windows Authentication
+- Third-party components
+- Change Data Capture (CDC)
+- SSIS Scale Out
+- Azure Feature Pack for SSIS
+- Hadoop and HDFS support
+- Microsoft Connector for SAP BW
 
-## <a name="components"></a> Supported and unsupported components
+For other limitations and known issues with SSIS on Linux, see [SQL Server on Linux: Known issues](sql-server-linux-known-issues.md#sql-server-integration-services-ssis).
 
-The following built-in Integration Services components are supported on Linux. Some of them have limitations on the Linux platform. Built-in components that are not listed here are not supported on Linux.
+## <a id="components"></a> Supported and unsupported components
+
+The following built-in Integration Services components are supported on Linux. Some of them have limitations on the Linux platform. Built-in components that aren't listed here aren't supported on Linux.
 
 ## Supported control flow tasks
+
 - Bulk Insert Task
 - Data Flow Task
 - Data Profiling Task
@@ -50,22 +52,24 @@ The following built-in Integration Services components are supported on Linux. S
 ## Control flow tasks supported with limitations
 
 | Task | Limitations |
-|------------|---|
+| --- | --- |
 | Execute Process task | Only supports in-process mode. |
-| File System task | The *Move directory* and *Set file attributes* actions are not supported. |
+| File System task | The *Move directory* and *Set file attributes* actions aren't supported. |
 | Script task | Only supports standard .NET Framework APIs. |
 | Send Mail task | Only supports anonymous user mode. |
-| Transfer Database task | UNC paths are not supported. |
+| Transfer Database task | UNC paths aren't supported. |
 
 ## Supported and unsupported maintenance plan tasks
 
-In a SQL Server maintenance plan, you can typically use a variety of SSIS tasks.
+In a SQL Server maintenance plan, you can typically use various SSIS tasks.
 
-The following maintenance plan tasks are not supported on Linux:
+The following maintenance plan tasks aren't supported on Linux:
+
 - Notify Operator
 - Execute SQL Server Agent Job
 
 The following maintenance plan tasks are supported on Linux:
+
 - Check Database Integrity
 - Shrink Database
 - Reorganize Index
@@ -76,25 +80,28 @@ The following maintenance plan tasks are supported on Linux:
 - T-SQL Statement
 
 ## Supported control flow containers
+
 - Sequence Container
 - For Loop Container
 - Foreach Loop Container
 
 ## Supported data flow sources and destinations
+
 - Raw File source and destination
 - XML Source
 
 ## Data flow sources and destinations supported with limitations
 
 | Component | Limitations |
-|------------|---|
+| --- | --- |
 | ADO.NET source and destination | Only support the SQLClient data provider. |
-| Flat File source and destination | 1. Only support Windows-style file paths, to which the default path mapping rule is applied. For example `D:\home\ssis\travel.csv` becomes `/home/ssis/travel.csv`. 2. Azure File share that mounted on Red Hat 7 is not supported. |
+| Flat File source and destination | 1. Only support Windows-style file paths, to which the default path mapping rule is applied. For example, `D:\home\ssis\travel.csv` becomes `/home/ssis/travel.csv`.<br /><br />2. Azure File share that mounted on Red Hat 7 isn't supported. |
 | OData source | Only supports Basic authentication. |
 | ODBC source and destination | Supports 64-bit Unicode ODBC drivers on Linux. Depends on the UnixODBC driver manager on Linux. |
-| OLE DB source and destination | Only support SQL Server Native Client 11.0 and Microsoft OLE DB Provider for SQL Server. |
+| OLE DB source and destination | Only support SQL Server Native Client 11.0 and Microsoft OLE DB Provider for SQL Server. |
 
 ## Supported data flow transformations
+
 - Aggregate
 - Audit
 - Balanced Data Distributor
@@ -122,18 +129,20 @@ The following maintenance plan tasks are supported on Linux:
 ## Data flow transformations supported with limitations
 
 | Component | Limitations |
-|------------|---|
+| --- | --- |
 | OLE DB Command transformation | Same limitations as the OLE DB source and destination. |
 | Script component | Only supports standard .NET Framework APIs. |
 
 ## Supported and unsupported log providers
+
 All the built-in SSIS log providers are supported on Linux except the Windows Event Log provider.
 
-The SQL Server log provider supports only SQL Authentication; it does not support Windows Authentication.
+The SQL Server log provider supports only SQL Authentication; it doesn't support Windows Authentication.
 
 The SSIS log providers for Text files, for XML files, and for SQL Server Profiler write their output to a file that you specify. The following considerations apply to the file path:
--   If you don't provide a path, the log provider writes to the current directory of the host. If the current user doesn't have permission to write to the current directory of the host, the log provider raises an error.
--   You can't use an environment variable in a file path. If you specify an environment variable, the literal text that you specify appears in the file path. For example, if you specify `%TMP%/log.txt`, the log  provider appends the literal text `/%TMP%/log.txt` to the current host directory.
+
+- If you don't provide a path, the log provider writes to the current directory of the host. If the current user doesn't have permission to write to the current directory of the host, the log provider raises an error.
+- You can't use an environment variable in a file path. If you specify an environment variable, the literal text that you specify appears in the file path. For example, if you specify `%TMP%/log.txt`, the log  provider appends the literal text `/%TMP%/log.txt` to the current host directory.
 
 ## Related content
 

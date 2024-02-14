@@ -4,7 +4,7 @@ description: ALTER TABLE modifies a table definition by altering, adding, or dro
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 10/04/2023
+ms.date: 12/13/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -425,8 +425,7 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
 
 ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }
 {
-    ALTER COLUMN column_name
-    | ADD { <column_constraint> FOR column_name} [ ,...n ]
+    ADD { <column_constraint> FOR column_name} [ ,...n ]
     | DROP { [CONSTRAINT] constraint_name } [ ,...n ]
     
 }
@@ -976,7 +975,7 @@ To rebuild multiple partitions at the same time, see [index_option](../../t-sql/
 
 #### XML_COMPRESSION
 
-**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi_md.md)].
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)].
 
 Specifies the XML compression option for any **xml** data type columns in the table. The options are as follows:
 
@@ -1024,7 +1023,7 @@ Specifies the Windows-compatible FileTable directory name. This name should be u
 Enables or disables Stretch Database for a table. For more information, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+> [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
 **Enabling Stretch Database for a table**
 
@@ -1140,6 +1139,10 @@ You can change the length, precision, or scale of a column by specifying a new s
 
 Changes you specify in ALTER TABLE implement immediately. If the changes require modifications of the rows in the table, ALTER TABLE updates the rows. ALTER TABLE acquires a schema modify (SCH-M) lock on the table to make sure that no other connections reference even the metadata for the table during the change, except online index operations that require a short SCH-M lock at the end. In an `ALTER TABLE...SWITCH` operation, the lock is acquired on both the source and target tables. The modifications made to the table are logged and fully recoverable. Changes that affect all the rows in large tables, such as dropping a column or, on some editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], adding a NOT NULL column with a default value, can take a long time to complete and generate many log records. Run these ALTER TABLE statements with the same care as any INSERT, UPDATE, or DELETE statement that affects many rows.
 
+**Applies to** [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)].
+
+ALTER TABLE cannot be part of an explict transaction.
+
 ### XEvents for partition switch
 
  The following XEvents are related to `ALTER TABLE ... SWITCH PARTITION` and [online index rebuilds](alter-index-transact-sql.md#online---on--off--as-applies-to-rebuild_index_option).
@@ -1158,7 +1161,7 @@ Columns of type **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**
 
 ## Parallel plan execution
 
-In [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] and higher, the number of processors employed to run a single ALTER TABLE ADD (index-based) CONSTRAINT or DROP (clustered index) CONSTRAINT statement is determined by the **max degree of parallelism** configuration option and the current workload. If the [!INCLUDE[ssDE](../../includes/ssde-md.md)] detects that the system is busy, the degree of parallelism of the operation is automatically reduced before statement execution starts. You can manually configure the number of processors that are used to run the statement by specifying the MAXDOP option. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+In [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] Enterprise edition and later versions, the number of processors employed to run a single ALTER TABLE ADD (index-based) CONSTRAINT or DROP (clustered index) CONSTRAINT statement is determined by the **max degree of parallelism** configuration option and the current workload. If the [!INCLUDE[ssDE](../../includes/ssde-md.md)] detects that the system is busy, the degree of parallelism of the operation is automatically reduced before statement execution starts. You can manually configure the number of processors that are used to run the statement by specifying the MAXDOP option. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 ## Partitioned tables
 
@@ -1900,7 +1903,7 @@ The following four examples will help you become familiar with the syntax for us
 
 #### A. Add system versioning to existing tables
 
-The following example shows how to add system versioning to an existing table and create a future history table. This example assumes that there's an existing table called `InsurancePolicy` with a primary key defined. This example populates the newly created period columns for system versioning using default values for the start and end times because these values can't be null. This example uses the HIDDEN clause to ensure no impact on existing applications interacting with the current table. It also uses HISTORY_RETENTION_PERIOD that's available on [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] only.
+The following example shows how to add system versioning to an existing table and create a future history table. This example assumes that there's an existing table called `InsurancePolicy` with a primary key defined. This example populates the newly created period columns for system versioning using default values for the start and end times because these values can't be null. This example uses the HIDDEN clause to ensure no impact on existing applications interacting with the current table. It also uses HISTORY_RETENTION_PERIOD that's available on [!INCLUDE[sssds](../../includes/sssds-md.md)] only.
 
 ```sql
 --Alter non-temporal table to define periods for system versioning

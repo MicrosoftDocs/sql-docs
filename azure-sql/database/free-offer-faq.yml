@@ -19,7 +19,7 @@ sections:
     questions: 
       - question: What if I don't see the new offer and Apply Offer button?
         answer: |
-         There's a limit of one free amount database per subscription. You need to remove an existing free amount database to create another one. If you have recently deleted your free offer database, it takes up to one hour for the free offer banner to reappear.
+         There's a limit of one free database per subscription. You need to remove an existing free database to create another one. If you have recently deleted your free offer database, it takes up to one hour for the free offer banner to reappear.
 
       - question: Help! I'm no longer able to log in to my database.
         answer: |
@@ -29,10 +29,6 @@ sections:
         answer: |
          - Review the Azure SQL Database serverless [auto-pause troubleshooting article](/azure/azure-sql/database/serverless-tier-overview?tabs=general-purpose#auto-pause-troubleshooting) for tips on saving vCore seconds.
          - Disconnect querying tools such as [Azure Data Studio](/azure-data-studio/download-azure-data-studio) and [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms), including the object explorer, when you're done using them. Leaving connections open may continue to consume credits.
-
-      - question: Can the serverless auto-pause setting be adjusted to less than 1 hour for the Azure SQL Database free offer?
-        answer: |
-         Not at this time.
 
       - question: Can I restore a database to the free offer database?
         answer: |

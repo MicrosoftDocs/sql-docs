@@ -1,26 +1,133 @@
 ---
-title: Azure Arc-enabled SQL Server - Release notes
-description: Latest release notes
+title: Release notes
+description: Latest release notes for SQL Server enabled by Azure Arc
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 10/13/2023
+ms.date: 02/12/2024
 ms.topic: conceptual
+ms.custom: ignite-2023
 ---
 
-# Release notes - Azure Arc-enabled SQL Server
+# Release notes - SQL Server enabled by Azure Arc
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
+## February 12, 2024
+
+**Extension version**: `1.1.2594.118`
+
+### Azure SQL migration readiness assessment (preview)
+
+SQL Server enabled by Azure Arc automatically generates Azure SQL migration assessments.  
+
+A migration assessment:
+
+- Evaluates the readiness of your SQL Server instances for migration to Azure SQL
+- Recommends the optimal size for the Azure SQL destination
+- Identifies any migration blockers or issues that you need to resolve before moving to Azure SQL
+- Provides step-by-step guidance on how to mitigate any issues
+
+Use migration assessments to ensure a successful migration.
+
+For details, review [View SQL Server migration assessment - SQL Server enabled by Azure Arc](migration-assessment.md).
+
+### Additional feature updates for SQL Server enabled by Azure Arc
+
+- Support for TLS 1.3
+- Improved prompt for feedback in Azure portal
+- Monitoring | Show monitoring upload status on Arc SQL Server overview in portal
+
+#### Region availability
+
+The following regions are now available for SQL Server enabled by Azure Arc, and Data Services enabled by Azure Arc:
+
+- Sweden Central
+- Norway East
+- UK West
+
+For a complete list of regions, see [Supported Azure regions](overview.md#supported-azure-regions).
+
+## January 16, 2024
+
+**Extension version**: `1.1.2566.109`
+
+## December 12, 2023
+
+**Extension version**: `1.1.2526.108`
+
+### Azure extension for SQL Server
+
+* Data processing service (DPS) connectivity available in Azure portal
+* Performance dashboard shows
+  * IOPS
+  * Queue latency storage IO
+
+  For information, review [Storage I/O](sql-monitoring.md#storage-io).
+
+## December 1, 2023
+
+**Extension version**: `1.1.2512.104`
+
+## November 14, 2023
+
+**Extension version**: `1.1.2504.99`
+
+### Azure extension for SQL Server
+
+#### Setup
+
+- Track the provision state and (extension service) status of Azure extension for SQL Server - general availability.
+  - Beginning with this release, you can track the provisioning status of Azure Arc extension for SQL Server and Azure Arc guest agent in the properties tab for Arc enabled SQL Server.
+
+For information about server monitoring capabilities, review [Automatically connect your SQL Server to Azure Arc](automatically-connect.md).
+
+For information about database status and inventory capabilities, review [View SQL Server databases - Azure Arc](view-databases.md).
+
+Creates a server role and a database role, maps logins, and grants permissions. For details, see [Roles created by Azure Extension for SQL Server installation](permissions-granted-agent-extension.md).
+
+#### Back up and restore
+
+- Configure backups at instance level using custom schedule for [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instances for both portal and CLI - public preview.
+  - Configure Automated Backups with a custom schedule and custom retention period, on an Arc enabled SQL Server.
+  
+  For more information, review [Manage automated backups - [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]](backup-local.md).
+
+- Point-in-time-restore using Azure CLI and Azure portal - public preview.
+  - Restore a database to a point-in-time restore of their databases, if automatic backups are enabled. Restore can be done either from Azure portal or via az CLI.
+
+  For more information, review [Restore to a point-in-time](point-in-time-restore.md).
+
+#### Monitoring
+
+- Performance dashboards of an individual [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instance in the Azure portal - public preview.
+
+For more information, review [Monitor [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]](sql-monitoring.md).
+
+#### High availability
+
+- Manage Always On availability group - manual failover - public preview.
+  - Perform a planned, manual failover on an availability group replica, using Azure portal.
+- Availability group status - Track the availability upload status | public preview.
+  - Beginning with this release, track the status and see the last time that the availability group inventory data is updated.  The portal shows two new properties, **Upload status** and **Last collected time** in the **Availability Groups** tab of the Arc-enabled SQL Server.
+
+For more information, review [Always On availability groups inventory and status](manage-availability-group.md).
+
+##### Networking
+
+- Support for separate proxy bypass value for Arc SQL Server only - general availability.
+
+For information, review [Proxy bypass for private endpoints](/azure/azure-arc/servers/manage-agent#proxy-bypass-for-private-endpoints).
+
 ## October 13, 2023
 
-**Extension versions**: `1.1.2474.69` - Enables failover cluster instance discovery.
+**Extension version**: `1.1.2474.69` - Enables failover cluster instance discovery.
 
 ### Azure extension for SQL Server
 
 - Enable extended support updates (ESU) for failover clusters (general availability).
 
-- Azure Arc-enabled SQL Server failover cluster (preview).
+- [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] failover cluster (preview).
 
   - Features include:
     - Render failover cluster instances in Azure portal.
@@ -84,12 +191,12 @@ ms.topic: conceptual
 ### Azure extension for SQL Server
 
 - Support for automated backups for all supported versions of SQL Server. For information, review [Configure automatic backups](point-in-time-restore.md).
-- Provide a name for the server that host an Azure Arc-enabled SQL Server instance when you enable SQL Server for Azure Arc. Use parameter `--machineName <"ArcServerName">`. For information, see [Connect your SQL Server to Azure Arc with installer (.msi)](connect-with-installer.md), or [Connect SQL Server machines at scale with a Configuration Manager custom task sequence](onboard-configuration-manager-custom-task.md).
+- Provide a name for the server that hosts a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instance when you enable SQL Server for Azure Arc. Use parameter `--machineName <"ArcServerName">`. For information, see [Connect your SQL Server to Azure Arc with installer (.msi)](connect-with-installer.md), or [Connect SQL Server machines at scale with a Configuration Manager custom task sequence](onboard-configuration-manager-custom-task.md).
 
 ### Additional improvements
 
 - Arc virtual machines on-boarded from AWS use AWS resource name rather than host computer name. Fix allows customers to provide a name when onboarding using script.
-- Fixed a bug where the exclude instance setting in portal throws an incorrect error about excluding SQL instance named separated by space.
+- Fixed a bug where the setting to exclude instances in portal throws an incorrect error about excluding SQL instance name separated by space.
 - Fixed a bug where the Purview governance status does not report correctly upon on-demand refresh intermittently.
 
 ## April 10, 2023
@@ -135,7 +242,7 @@ ms.topic: conceptual
   The SQL best practices assessment feature of the Azure portal:
 
   - Identifies possible performance issues
-  - Evaluates that your Azure Arc-enabled SQL Server is configured to follow best practices
+  - Evaluates that your [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is configured to follow best practices
   - Provides comprehensive mitigation guidance
   - To experience best practices assessment, upgrade to the latest extension version.
 - Azure Arc-enabled Database resource populates the earliest restore time and last backup time for database resources as a resource
@@ -195,4 +302,4 @@ The *LicenseType* property of `SQL Server - Azure Arc` has been extended to prov
 
 ### Azure extension for SQL Server
 
-SQL Server Onboarding Role is no longer needed for onboarding SQL servers onto Azure Arc.
+SQL Server Onboarding Role is no longer needed for onboarding SQL Server instances onto Azure Arc.

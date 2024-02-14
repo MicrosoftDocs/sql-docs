@@ -4,7 +4,7 @@ description: "CREATE EXTERNAL FILE FORMAT (Transact-SQL) Creates an external fil
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 03/28/2023
+ms.date: 11/06/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -31,11 +31,11 @@ The following file formats are supported:
 
 - **Hive RCFile**
 
-  Doesn't apply to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], or [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] .
+  Doesn't apply to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], or [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] .
   
 - **Hive ORC**
 
-  Doesn't apply to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], or [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] .
+  Doesn't apply to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], or [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] .
 
 - **Parquet**
 
@@ -68,7 +68,7 @@ WITH (
 {
     FIELD_TERMINATOR = field_terminator
     | STRING_DELIMITER = string_delimiter
-    | FIRST_ROW = integer -- ONLY AVAILABLE FOR AZURE SYNAPSE ANALYTICS
+    | FIRST_ROW = integer -- Applies to: Azure Synapse Analytics and SQL Server 2022 and later versions
     | DATE_FORMAT = datetime_format
     | USE_TYPE_DEFAULT = { TRUE | FALSE }
     | ENCODING = {'UTF8' | 'UTF16'}
@@ -277,7 +277,9 @@ Examples:
 
 #### FIRST_ROW = *first_row_int*
 
-Specifies the row number that is read first in all files during a PolyBase load. This parameter can take values 1 - 15. If the value is set to two, the first row in every file (header row) is skipped when the data is loaded. Rows are skipped based on the existence of row terminators (/r/n, /r, /n). When this option is used for export, rows are added to the data to make sure the file can be read with no data loss. If the value is set to >2, the first row exported is the Column names of the external table.
+**Applies to**: Azure Synapse Analytics, SQL Server 2022 and later versions
+
+Specifies the row number that is read first in all files during a PolyBase load. This parameter can take values 1 - 15. If the value is set to two, the first row in every file (header row) is skipped when the data is loaded. Rows are skipped based on the existence of row terminators (/r/n, /r, /n). When this option is used for export, rows are added to the data to make sure the file can be read with no data loss. If the value is set to >2, the first row exported is the Column names of the external table. 
 
 #### DATE_FORMAT = *datetime_format*
 
@@ -518,7 +520,7 @@ WITH (
 );
 ```
 
-## Next steps
+## Related content
 
 - [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)
 - [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)

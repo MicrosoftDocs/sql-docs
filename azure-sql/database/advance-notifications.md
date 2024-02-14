@@ -1,5 +1,6 @@
 ---
 title: Advance notifications (Preview) for planned maintenance events
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Get notification before planned maintenance for Azure SQL Database.
 author: scott-kim-sql
 ms.author: scottkim

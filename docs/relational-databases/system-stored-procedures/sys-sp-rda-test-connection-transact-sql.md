@@ -41,7 +41,7 @@ EXECUTE sys.sp_rda_test_connection
 The name of the Stretch-enabled SQL Server database. This parameter is optional.
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+> [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
 #### @server_address = N'*azure_server_fully_qualified_address*'
 

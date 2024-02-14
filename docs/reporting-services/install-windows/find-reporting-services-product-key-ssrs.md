@@ -3,17 +3,17 @@ title: "Find the product key for SQL Server Reporting Services"
 description: "Learn how to find the  product key for SQL Server Reporting Services (SSRS) 2017 and 2019 so you can install your server in a production environment."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 12/04/2019
+ms.date: 02/07/2024
 ms.service: reporting-services
 ms.topic: conceptual
 ms.custom: updatefrequency5
-monikerRange: ">= sql-server-2017"
+monikerRange: "=sql-server-2017||=sql-server-ver15"
 ---
 # Find the product key for SQL Server Reporting Services
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2017](../../includes/ssrs-appliesto-2017.md)][!INCLUDE [ssrs-appliesto-2019](../../includes/ssrs-appliesto-2019.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-Learn how to find the  product key for SQL Server Reporting Services (SSRS) 2017 and 2019 so you can install your server in a production environment.
+Learn how to find the  product key for SQL Server Reporting Services (SSRS) 2017 and later so you can install your server in a production environment.
 
 To find your product key, you start by downloading and running setup for SQL Server.
 
@@ -27,6 +27,13 @@ To find your product key, you start by downloading and running setup for SQL Ser
      ![Paste the product key](media/find-reporting-services-product-key-ssrs/ssrs-ssrs2017-paste-product-key.png)
 
 You should only have to do this step the first time you install Reporting Services. Servicing updates shouldn't require you to enter the key.
+
+## Volume licensing in the Microsoft 365 Admin Center
+If your volume licensing has moved to the Microsoft 365 Admin Center, you can find your product key by choosing a SQL Server version and then looking under the View Downloads section:
+
+**Billing** > **Your Products** > **Volume Licensing** > **View Downloads and Keys** > **Find SQL Server** > **View Downloads** > **View additional instructions**.
+
+:::image type="content" source="media/find-reporting-services-product-key-ssrs/m365-additional-instructions.png" alt-text="Screenshot of View additional instructions.":::
 
 ## Next steps
 

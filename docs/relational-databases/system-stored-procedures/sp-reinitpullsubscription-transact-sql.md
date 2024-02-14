@@ -56,7 +56,7 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
  You can reinitialize a pull subscription by either executing **sp_reinitpullsubscription** at the Subscriber or **sp_reinitsubscription** at the Publisher.  
   
 ## Example  
- [!code-sql[HowTo#sp_reinitpullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitpullsubscriptio_1.sql)]  
+ :::code language="sql" source="../replication/codesnippet/tsql/sp-reinitpullsubscriptio_1.sql":::
   
 ## Permissions  
  Only members of the **sysadmin** fixed server role or the **db_owner** fixed database role can execute **sp_reinitpullsubscription**.  

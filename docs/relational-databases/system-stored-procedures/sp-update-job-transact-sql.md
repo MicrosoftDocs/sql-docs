@@ -1,9 +1,9 @@
 ---
 title: "sp_update_job (Transact-SQL)"
-description: Changes the attributes of a job.
+description: "sp_update_job (Transact-SQL) update the attributes of an existing job created in the SQL Server Agent service."
 author: markingmyname
 ms.author: maghan
-ms.reviewer: randolphwest
+ms.reviewer: randolphwest, wiassaf
 ms.date: 08/28/2023
 ms.service: sql
 ms.subservice: system-objects
@@ -15,12 +15,13 @@ helpviewer_keywords:
   - "sp_update_job"
 dev_langs:
   - "TSQL"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_update_job (Transact-SQL)
 
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
-Changes the attributes of a job.
+Updates the attributes of an existing job created in the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent service.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -139,6 +140,8 @@ Specifies when to delete the job. *@delete_level* is **int**, with a default of 
 
 `sp_update_job` changes only those settings for which parameter values are supplied. If a parameter is omitted, the current setting is retained.
 
+This stored procedure shares the name of `sp_update_job` with a similar object for the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). For information about the elastic jobs version, see [jobs.sp_update_job (Azure Elastic Jobs) (Transact-SQL)](sp-update-job-elastic-jobs-transact-sql.md?view=azuresqldb-current&preserve-view=true).
+
 ## Permissions
 
 [!INCLUDE [msdb-execute-permissions](../../includes/msdb-execute-permissions.md)]
@@ -169,9 +172,8 @@ EXEC dbo.sp_update_job
 GO
 ```
 
-## See also
+## Related content
 
 - [sp_add_job (Transact-SQL)](sp-add-job-transact-sql.md)
 - [sp_delete_job (Transact-SQL)](sp-delete-job-transact-sql.md)
 - [sp_help_job (Transact-SQL)](sp-help-job-transact-sql.md)
-- [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

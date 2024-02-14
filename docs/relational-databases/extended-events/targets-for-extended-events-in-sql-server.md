@@ -4,7 +4,7 @@ description: This article explains package0 targets for Extended Events. Learn a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 10/22/2023
+ms.date: 01/22/2024
 ms.service: sql
 ms.subservice: xevents
 ms.topic: conceptual
@@ -69,7 +69,7 @@ This ETW target processes the data it receives *synchronously*, whereas most tar
 
 ::: moniker range="= azuresqldb-current || = azuresqldb-mi-current "
 > [!NOTE]  
-> [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] don't support the `etw_classic_sync_target` target. As an alternative, use the `event_file` target with blobs stored in Azure Storage.
+> [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] don't support the `etw_classic_sync_target` target. As an alternative, use the `event_file` target with blobs stored in Azure Storage.
 ::: moniker-end
 
 ## event_counter target
@@ -116,7 +116,7 @@ The `event_file` target writes event session output from buffer to a disk file o
 ::: moniker range="= azuresqldb-current || = azuresqldb-mi-current "
 
 > [!NOTE]  
-> [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] only blobs in Azure Storage as the value of the `filename` parameter.
+> [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] only blobs in Azure Storage as the value of the `filename` parameter.
 >  
 > For an `event_file` code example for SQL Database or SQL Managed Instance, see [Event File target code for Extended Events in SQL Database](/azure/sql-database/sql-database-xevent-code-event-file).
 
@@ -530,8 +530,8 @@ The `ring_buffer` target is handy for a quick and simple event collection in mem
 In this section, we also show how you can use XQuery to convert the XML representation of the ring buffer contents into a more readable relational rowset.
 
 > [!TIP]  
-> When adding a `ring_buffer` target, set its `MAX_MEMORY` to 1 MB or less. Using larger values might increase memory consumption unnecessarily.
->  
+> When adding a `ring_buffer` target, set its `MAX_MEMORY` parameter to 1024 KB or less. Using larger values might increase memory consumption unnecessarily.
+>
 > By default, `MAX_MEMORY` for a `ring_buffer` target isn't limited in SQL Server, and is limited to 32 MB in Azure SQL Database and Azure SQL Managed Instance.
 
 You consume data from a `ring_buffer` target by converting it to XML, as shown in the following example. During this conversion, any data that doesn't fit into a 4-MB XML document is omitted. Therefore, even if you capture more events in the ring buffer by using larger `MAX_MEMORY` values (or by leaving this parameter at its default value), you might not be able to consume all of them because of the 4-MB limit on the XML document size, considering the overhead of XML markup and Unicode strings.
@@ -544,7 +544,7 @@ You know that the contents of the ring buffer are omitted during conversion to X
 
 #### CREATE EVENT SESSION with a ring_buffer target
 
-Here's an example of creating an event session with a `ring_buffer` target:
+Here's an example of creating an event session with a `ring_buffer` target. In this example, the `MAX_MEMORY` parameter appears twice: once to set the `ring_buffer` target memory to 1024 KB, and once to set the event session buffer memory to 2 MB.
 
 ```sql
 CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
@@ -562,12 +562,13 @@ CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
     )
     ADD TARGET package0.ring_buffer
     (
-        SET max_events_limit=(98)
+        SET MAX_EVENTS_LIMIT = 98,
+            MAX_MEMORY = 1024
     )
     WITH
     (
-        MAX_MEMORY=1 MB,
-        MAX_DISPATCH_LATENCY=3 SECONDS
+        MAX_MEMORY = 2 MB,
+        MAX_DISPATCH_LATENCY = 3 SECONDS
     );
 ```
 

@@ -133,6 +133,6 @@ This example returns the following results.
 | --- | --- | --- |
 | `4` | `4` | `4` |
 
-## See also
+## Related content
 
 - [Full-Text Search and Semantic Search stored procedures (Transact-SQL)](full-text-search-and-semantic-search-stored-procedures-transact-sql.md)

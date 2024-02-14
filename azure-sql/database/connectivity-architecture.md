@@ -5,7 +5,7 @@ description: This article explains the Azure SQL Database connectivity architect
 author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, mathoma, vanto
-ms.date: 02/05/2024
+ms.date: 02/14/2024
 ms.service: sql-database
 ms.subservice: connect
 ms.topic: conceptual
@@ -15,7 +15,7 @@ ms.custom:
 ---
 # Azure SQL Database and Azure Synapse Analytics connectivity architecture
 
-[!INCLUDE[appliesto-sqldb-asa-formerly-sqldw](../includes/appliesto-sqldb-asa-formerly-sqldw.md)]
+[!INCLUDE [appliesto-sqldb-asa-formerly-sqldw](../includes/appliesto-sqldb-asa-formerly-sqldw.md)]
 
 This article explains architecture of various components that direct network traffic to a server in Azure SQL Database or dedicated SQL pools (formerly SQL DW) in Azure Synapse Analytics. It also explains different connection policies and how it impacts clients connecting from within Azure and clients connecting from outside of Azure.
 
@@ -28,7 +28,7 @@ This article explains architecture of various components that direct network tra
 
 The following diagram provides a high-level overview of the connectivity architecture.
 
-:::image type="content" source="./media/connectivity-architecture/connectivity-overview.svg" alt-text="Diagram that shows a high-level overview of the connectivity architecture.":::
+:::image type="content" source="media/connectivity-architecture/connectivity-overview.svg" alt-text="Diagram that shows a high-level overview of the connectivity architecture.":::
 
 The following steps describe how a connection is established to Azure SQL Database:
 
@@ -51,20 +51,19 @@ Servers in SQL Database and dedicated SQL pools (formerly SQL DW) in Azure Synap
   - When using the Proxy connection policy, refer to the [Gateway IP addresses](#gateway-ip-addresses) list later in this article for your region's IP addresses to allow.
 - **Default:** This is the connection policy in effect on all servers after creation unless you explicitly alter the connection policy to either `Proxy` or `Redirect`. The default policy is `Redirect` for all client connections originating inside of Azure (for example, from an Azure Virtual Machine) and `Proxy` for all client connections originating outside (for example, connections from your local workstation).
 
-We highly recommend the `Redirect` connection policy over the `Proxy` connection policy for the lowest latency and highest throughput. However, you need to meet the extra requirements for allowing network traffic as outlined above. If the client is an Azure Virtual Machine, you can accomplish this using Network Security Groups (NSG) with [service tags](/azure/virtual-network/network-security-groups-overview#service-tags). If the client is connecting from a workstation on-premises, you may need to work with your network admin to allow network traffic through your corporate firewall.
-
+We highly recommend the `Redirect` connection policy over the `Proxy` connection policy for the lowest latency and highest throughput. However, you need to meet the extra requirements for allowing network traffic as outlined above. If the client is an Azure Virtual Machine, you can accomplish this using Network Security Groups (NSG) with [service tags](/azure/virtual-network/network-security-groups-overview#service-tags). If the client is connecting from a workstation on-premises, you might need to work with your network admin to allow network traffic through your corporate firewall.
 
 ## Connectivity from within Azure
 
 If you're connecting from within Azure your connections have a connection policy of `Redirect` by default. A policy of `Redirect` means that after the TCP session is established to Azure SQL Database, the client session is then redirected to the right database cluster with a change to the destination virtual IP from that of the Azure SQL Database gateway to that of the cluster. Thereafter, all subsequent packets flow directly to the cluster, bypassing the Azure SQL Database gateway. The following diagram illustrates this traffic flow.
 
-:::image type="content" source="./media/connectivity-architecture/connectivity-azure.svg" alt-text="Diagram of the architecture overview of Azure SQL connectivity via redirection within Azure.":::
+:::image type="content" source="media/connectivity-architecture/connectivity-azure.svg" alt-text="Diagram of the architecture overview of Azure SQL connectivity via redirection within Azure.":::
 
 ## Connectivity from outside of Azure
 
 If you're connecting from outside Azure, your connections have a connection policy of `Proxy` by default. A policy of `Proxy` means that the TCP session is established via the Azure SQL Database gateway and all subsequent packets flow via the gateway. The following diagram illustrates this traffic flow.
 
-:::image type="content" source="./media/connectivity-architecture/connectivity-outside-azure.svg" alt-text="Diagram that shows how the TCP session is established via the Azure SQL Database gateway and all subsequent packets flow via the gateway.":::
+:::image type="content" source="media/connectivity-architecture/connectivity-outside-azure.svg" alt-text="Diagram that shows how the TCP session is established via the Azure SQL Database gateway and all subsequent packets flow via the gateway.":::
 
 > [!IMPORTANT]  
 > Open TCP ports 1434 and 14000-14999 to enable [Connecting with DAC](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#connecting-with-dac).
@@ -75,11 +74,12 @@ The table below lists the individual Gateway IP addresses and Gateway IP address
 
 Periodically, we'll retire individual **Gateway IP addresses** and migrate the traffic to **Gateway IP address subnets** as per the process outlined at [Azure SQL Database traffic migration to newer Gateways](gateway-migration.md).
 
-We strongly encourage customers to move away from relying on any individual Gateway IP address (since these will be retired in the future) and instead allow network traffic to reach **all the Gateway IP address subnets** in a region.
+We strongly encourage customers to move away from relying on **any individual Gateway IP address** (since these will be retired in the future). Instead allow network traffic to reach **both** the individual Gateway IP addresses and Gateway IP address subnets in a region.
 
 > [!IMPORTANT]  
-> - Logins for SQL Database or dedicated SQL pools (formerly SQL DW) in Azure Synapse can land on **any of the Gateway IP address subnets in a region**. For consistent connectivity to SQL Database or dedicated SQL pools (formerly SQL DW) in Azure Synapse, allow network traffic to and from **all the Gateway IP address subnets** in a region.
-> - Use the Gateway IP address subnets in this section if you're using a Proxy connection policy to connect to Azure SQL Database. If you're using the Redirect connection policy, refer to the [Azure IP Ranges and Service Tags - Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519) for a list of your region's IP addresses to allow. 
+> - Logins for SQL Database or dedicated SQL pools (formerly SQL DW) in Azure Synapse can land on **any of the individual Gateway IP addresses or Gateway IP address subnets in a region**. For consistent connectivity to SQL Database or dedicated SQL pools (formerly SQL DW) in Azure Synapse, allow network traffic to and from **all the individual Gateway IP addresses and Gateway IP address subnets** in a region.
+>
+> - Use the individual Gateway IP addresses and Gateway IP address subnets in this section if you're using a Proxy connection policy to connect to Azure SQL Database. If you're using the Redirect connection policy, refer to the [Azure IP Ranges and Service Tags - Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519) for a list of your region's IP addresses to allow.
 
 | Region name          | Gateway IP addresses | Gateway IP address subnets |
 | --- | --- | --- |

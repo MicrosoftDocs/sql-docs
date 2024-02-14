@@ -60,11 +60,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   User based on a Windows group that has no login, but can connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] through membership in a different Windows group. `CREATE USER [Contoso\Fritz];`  
   
-**Users that cannot authenticate** - These users cannot login to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Users that cannot authenticate** - These users can't log into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
--   User without a login. Cannot login but can be granted permissions. `CREATE USER CustomApp WITHOUT LOGIN;`    
--   User based on a certificate. Cannot login but can be granted permissions and can sign modules. `CREATE USER TestProcess FOR CERTIFICATE CarnationProduction50;`  
--   User based on an asymmetric key. Cannot login but can be granted permissions and can sign modules. `CREATE User TestProcess FROM ASYMMETRIC KEY PacificSales09;`   
+-   User without a login. Cannot log in but can be granted permissions. `CREATE USER CustomApp WITHOUT LOGIN;`    
+-   User based on a certificate. Can't login but can be granted permissions and can sign modules. `CREATE USER TestProcess FOR CERTIFICATE CarnationProduction50;`  
+-   User based on an asymmetric key. Can't log in but can be granted permissions and can sign modules. `CREATE User TestProcess FROM ASYMMETRIC KEY PacificSales09;`   
  
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -255,10 +255,10 @@ Specifies that the user is for Microsoft Entra authentication.
  **Applies to**: [!INCLUDE[sssds](../../includes/sssds-md.md)]
 Specifies the Microsoft Entra Object ID. If the `OBJECT_ID` is specified, the user_name is not required to match the Microsoft Entra display name. The user_name must be a unique name in the `sys.database_principals` view and adhere to all other `sysname` limitations.
 
-For more information on using the `WITH OBJECT_ID` option, see [Microsoft Entra logins and users with non-unique display names](/azure/azure-sql/database/authentication-microsoft-entra-create-users-with-non-unique-names).
+For more information on using the `WITH OBJECT_ID` option, see [Microsoft Entra logins and users with nonunique display names](/azure/azure-sql/database/authentication-microsoft-entra-create-users-with-nonunique-names).
 
 > [!NOTE]
-> If the service principal display name is not a duplicate, the default `CREATE LOGIN` or `CREATE USER` statement should be used. The `WITH OBJECT_ID` extension is in **public preview**, and is a troubleshooting repair item implemented for use with non-unique service principals. Using it with a unique service principal is not necessary. Using the `WITH OBJECT_ID` extension for a service principal without adding a suffix will run successfully, but it will not be obvious which service principal the login or user was created for. It's recommended to create an alias using a suffix to uniquely identify the service principal. The `WITH OBJECT_ID` extension is not supported for Azure SQL Managed Instance or SQL Server, nor is it supported for SQL Server Management Objects (SMO) Framework.
+> If the service principal display name is not a duplicate, the default `CREATE LOGIN` or `CREATE USER` statement should be used. The `WITH OBJECT_ID` extension is in **public preview**, and is a troubleshooting repair item implemented for use with nonunique service principals. Using it with a unique service principal is not necessary. Using the `WITH OBJECT_ID` extension for a service principal without adding a suffix will run successfully, but it will not be obvious which service principal the login or user was created for. It's recommended to create an alias using a suffix to uniquely identify the service principal. The `WITH OBJECT_ID` extension is not supported for Azure SQL Managed Instance or SQL Server, nor is it supported for SQL Server Management Objects (SMO) Framework.
 
 ## Remarks  
  If `FOR LOGIN` is omitted, the new database user will be mapped to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login with the same name.  
@@ -533,7 +533,7 @@ GO
 
 ## Next steps  
 Once the user is created, consider adding the user to a database role using the [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) statement.  
-You might also want to [GRANT Object Permissions](../../t-sql/statements/grant-object-permissions-transact-sql.md) to the role so they can access tables. For general information about the SQL Server security model, see [Permissions](../../relational-databases/security/permissions-database-engine.md).   
+You might also want to [GRANT Object Permissions](../../t-sql/statements/grant-object-permissions-transact-sql.md) to the role so they can access tables. For general information about the SQL Server security model, see [Permissions](../../relational-databases/security/permissions-database-engine.md).
   
 ## Related content  
  [Create a Database User](../../relational-databases/security/authentication-access/create-a-database-user.md)   

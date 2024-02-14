@@ -1,7 +1,7 @@
 ---
-title: Microsoft Entra logins and users with non-unique display names
+title: Microsoft Entra logins and users with nonunique display names
 titleSuffix: Azure SQL Database
-description: Creating and using Microsoft Entra logins with non-unique display names in Azure SQL Database.
+description: Creating and using Microsoft Entra logins with nonunique display names in Azure SQL Database.
 author: nofield
 ms.author: nofield
 ms.reviewer: vanto
@@ -12,11 +12,11 @@ ms.topic: conceptual
 monikerRange: "= azuresql || = azuresql-db"
 ---
 
-# Microsoft Entra logins and users with non-unique display names
+# Microsoft Entra logins and users with nonunique display names
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-Using the display name of a service principal that isn't unique in Microsoft Entra ID leads to errors when creating the login or user in Azure SQL. For example, if the application `myapp` isn't unique, you may run into the following error when executing the following T-SQL statement:
+Using the display name of a service principal that isn't unique in Microsoft Entra ID leads to errors when creating the login or user in Azure SQL. For example, if the application `myapp` isn't unique, you might run into the following error when executing the following T-SQL statement:
 
 ```sql
 CREATE LOGIN [myapp] FROM EXTERNAL PROVIDER 
@@ -29,14 +29,14 @@ Principal 'myapp' has a duplicate display name. Make the display name unique in 
 
 ## Introduction of the `WITH OBJECT_ID` extension
 
-This error occurs because Microsoft Entra ID allows duplicate display names for [Microsoft Entra application (service principal)](authentication-aad-service-principal.md), while Azure SQL requires unique names to create Microsoft Entra logins and users. To mitigate this problem, the DDL statements to create logins and users (`WITH OBJECT_ID`) have been extended to include the **Object ID** of the Azure resource.
+This error occurs because Microsoft Entra ID allows duplicate display names for [Microsoft Entra application (service principal)](authentication-aad-service-principal.md), while Azure SQL requires unique names to create Microsoft Entra logins and users. To mitigate this problem, the Data Definition Language (DDL) statements to create logins and users (`WITH OBJECT_ID`) have been extended to include the **Object ID** of the Azure resource.
 
 > [!NOTE]
-> Most non-unique display names in Microsoft Entra ID are related to service principals, though occasionally group names can also be non-unique. Microsoft Entra user principal names are unique, as two users can't have the same user principal. However, an app registration (service principal) can be created with a display name that is the same as a user principal name.
+> Most nonunique display names in Microsoft Entra ID are related to service principals, though occasionally group names can also be nonunique. Microsoft Entra user principal names are unique, as two users can't have the same user principal. However, an app registration (service principal) can be created with a display name that is the same as a user principal name.
 >
-> If the service principal display name is not a duplicate, the default `CREATE LOGIN` or `CREATE USER` statement should be used. The `WITH OBJECT_ID` extension is in **public preview**, and is a troubleshooting repair item implemented for use with non-unique service principals. Using it with a unique service principal is not necessary. Using the `WITH OBJECT_ID` extension for a service principal without adding a suffix will run successfully, but it will not be obvious which service principal the login or user was created for. It's recommended to create an alias using a suffix to uniquely identify the service principal. The `WITH OBJECT_ID` extension is not supported for Azure SQL Managed Instance or SQL Server, nor is it supported for SQL Server Management Objects (SMO) Framework.
+> If the service principal display name is not a duplicate, the default `CREATE LOGIN` or `CREATE USER` statement should be used. The `WITH OBJECT_ID` extension is in **public preview**, and is a troubleshooting repair item implemented for use with nonunique service principals. Using it with a unique service principal is not necessary. Using the `WITH OBJECT_ID` extension for a service principal without adding a suffix will run successfully, but it will not be obvious which service principal the login or user was created for. It's recommended to create an alias using a suffix to uniquely identify the service principal. The `WITH OBJECT_ID` extension is not supported for Azure SQL Managed Instance or SQL Server, nor is it supported for SQL Server Management Objects (SMO) Framework.
 
-## T-SQL create login/user extension for non-unique display names
+## T-SQL create login/user extension for nonunique display names
 
 ```sql
 CREATE LOGIN [login_name] FROM EXTERNAL PROVIDER 
@@ -67,7 +67,7 @@ This naming convention is recommended to explicitly associate the database user 
 
 ## Identify the user created for the application
 
-For non-unique service principals, it's important to verify the Microsoft Entra alias is tied to the correct application. To check that the user was created for the correct service principal (application):
+For nonunique service principals, it's important to verify the Microsoft Entra alias is tied to the correct application. To check that the user was created for the correct service principal (application):
 
 1. Get the **Application ID** of the application, or **Object ID** of the Microsoft Entra group from the user created in SQL Database. See the following queries:
 
@@ -79,7 +79,7 @@ For non-unique service principals, it's important to verify the Microsoft Entra 
 
      **Example output:**
 
-     :::image type="content" source="media/authentication-microsoft-entra-create-users-with-non-unique-names/application-id-output.png" alt-text="Screenshot of SSMS output for the Application ID.":::
+     :::image type="content" source="media/authentication-microsoft-entra-create-users-with-nonunique-names/application-id-output.png" alt-text="Screenshot of SSMS output for the Application ID.":::
 
      The Application ID is converted from the security identification number (SID) for the specified login or user name, which we can confirm by executing the below query and comparing the last several digits and create dates:
 
@@ -89,7 +89,7 @@ For non-unique service principals, it's important to verify the Microsoft Entra 
 
      **Example output:**
 
-     :::image type="content" source="media/authentication-microsoft-entra-create-users-with-non-unique-names/security-id-output.png" alt-text="Screenshot of SSMS output for the SID of the application.":::
+     :::image type="content" source="media/authentication-microsoft-entra-create-users-with-nonunique-names/security-id-output.png" alt-text="Screenshot of SSMS output for the SID of the application.":::
 
    - To get the **Object ID** of the Microsoft Entra group from the user created, execute the following query:
 
@@ -99,7 +99,7 @@ For non-unique service principals, it's important to verify the Microsoft Entra 
 
      **Example output:**
 
-     :::image type="content" source="media/authentication-microsoft-entra-create-users-with-non-unique-names/object-id-output.png" alt-text="Screenshot of SSMS output for the Object ID of the Microsoft Entra group.":::
+     :::image type="content" source="media/authentication-microsoft-entra-create-users-with-nonunique-names/object-id-output.png" alt-text="Screenshot of SSMS output for the Object ID of the Microsoft Entra group.":::
 
      To check the SID of the Microsoft Entra group from the user created, execute the following query:
 
@@ -109,7 +109,7 @@ For non-unique service principals, it's important to verify the Microsoft Entra 
 
      **Example output:**
 
-     :::image type="content" source="media/authentication-microsoft-entra-create-users-with-non-unique-names/security-id-group-output.png" alt-text="Screenshot of SSMS output for the SID of the group.":::
+     :::image type="content" source="media/authentication-microsoft-entra-create-users-with-nonunique-names/security-id-group-output.png" alt-text="Screenshot of SSMS output for the SID of the group.":::
 
    - To get the Object ID and Application ID of the application using PowerShell execute the following command: 
 

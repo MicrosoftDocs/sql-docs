@@ -3,7 +3,7 @@ title: Microsoft Entra logins and users with nonunique display names
 titleSuffix: Azure SQL Database and Azure SQL Managed Instance
 description: Creating and using Microsoft Entra logins with nonunique display names in Azure SQL Database and Azure SQL Managed Instance.
 author: tameikal-msft
-ms.author: talawren@microsoft.com
+ms.author: talawren
 ms.reviewer: vanto, nofield
 ms.date: 02/15/2024
 ms.service: sql-db-mi

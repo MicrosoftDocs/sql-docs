@@ -174,6 +174,10 @@ It's possible to configure zone-redundancy for databases in the Hyperscale servi
 
 Enabling this configuration ensures zone-level resiliency through replication across Availability Zones for all Hyperscale layers. By selecting zone-redundancy, you can make your Hyperscale databases resilient to a much larger set of failures, including catastrophic datacenter outages, without any changes to the application logic. All Azure regions that have [Availability Zones](/azure/availability-zones/az-overview#azure-regions-with-availability-zones) support zone redundant Hyperscale database.
 
+The following diagram demonstrates the underlying architecture for zone redundant Hyperscale databases: 
+
+:::image type="content" source="media/high-availability-sla/hyperscale-zone-redundant-architecture.png" alt-text="Diagram showing the underlying architecture of zone redundant Hyperscale databases. ":::
+
 Consider the following limitations:
 
 - Zone redundant configuration can only be specified during database creation. This setting can't be modified once the resource is provisioned. Use [Database copy](database-copy.md), [point-in-time restore](recovery-using-backups.md#point-in-time-restore), or create a [geo-replica](active-geo-replication-overview.md) to update the zone redundant configuration for an existing Hyperscale database. When using one of these update options, if the target database is in a different region than the source or if the database backup storage redundancy from the target differs from the source database, the [copy operation](database-copy.md#database-copy-for-azure-sql-hyperscale) will be a size of data operation.

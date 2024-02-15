@@ -1,7 +1,7 @@
 ---
 title: Monitor your SQL deployments with SQL Insights (preview)
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
-description: Overview of SQL Insights (preview) in Azure Monitor
+description: Overview of SQL Insights (preview) in Azure Monitor.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 09/06/2022
@@ -36,7 +36,7 @@ For virtual machines, you're charged based on the pricing published on the [virt
 
 For the Log Analytics workspaces, you're charged based on the pricing published on the [Azure Monitor pricing page](https://azure.microsoft.com/pricing/details/monitor/). The Log Analytics workspaces that SQL Insights uses will incur costs for data ingestion, data retention, and (optionally) data export.
 
-Exact charges will vary based on the amount of data ingested, retained, and exported. The amount of this data will vary based on your database activity and the collection settings defined in your [monitoring profiles](sql-insights-enable.md#create-sql-monitoring-profile).
+Exact charges vary based on the amount of data ingested, retained, and exported. The amount of this data varies based on your database activity and the collection settings defined in your [monitoring profiles](sql-insights-enable.md#create-sql-monitoring-profile).
 
 ### Alert rules
 
@@ -44,26 +44,25 @@ For alert rules in Azure Monitor, you're charged based on the pricing published 
 
 ## Supported versions
 
-SQL Insights (preview) supports the following versions of SQL Server:
-- SQL Server 2012 and newer
 
-SQL Insights (preview) supports SQL Server running in the following environments:
+SQL Insights (preview) supports the following environments:
 - Azure SQL Database
 - Azure SQL Managed Instance
-- SQL Server on Azure Virtual Machines (SQL Server running on virtual machines registered with the [SQL virtual machine](../virtual-machines/windows/sql-agent-extension-manually-register-single-vm.md) provider)
-- Azure VMs (SQL Server running on virtual machines not registered with the [SQL virtual machine](../virtual-machines/windows/sql-agent-extension-manually-register-single-vm.md) provider)
+- SQL Server 2012 and later versions running on:
+    - SQL Server on Azure Virtual Machines (SQL Server installed on virtual machines registered with the [SQL IaaS Agent extension](../virtual-machines/windows/sql-agent-extension-manually-register-single-vm.md))
+    - Azure VMs (SQL Server installed on virtual machines not registered with the [SQL IaaS Agent extension](../virtual-machines/windows/sql-agent-extension-manually-register-single-vm.md))
 
 SQL Insights (preview) has no support or has limited support for the following:
-- **Non-Azure instances**: SQL Server running on virtual machines outside Azure is not supported.
+- **Non-Azure instances**: SQL Server running on environments outside of Azure isn't supported, including on-premises and virtual machines.
 - **Azure SQL Database elastic pools**: Metrics can't be gathered for elastic pools or for databases within elastic pools.
 - **Azure SQL Database low service tiers**: Metrics can't be gathered for databases on Basic, S0, S1, and S2 [service tiers](./resource-limits-dtu-single-databases.md).
-- **Azure SQL Database serverless tier**: Metrics can be gathered for databases through the serverless compute tier. However, the process of gathering metrics will reset the auto-pause delay timer, preventing the database from entering an auto-paused state.
+- **Azure SQL Database serverless tier**: Metrics can be gathered for databases through the serverless compute tier. However, the process of gathering metrics resets the autopause delay timer, preventing the database from entering an autopaused state.
 - **Secondary replicas**: Metrics can be gathered for only a single secondary replica per database. If a database has more than one secondary replica, only one can be monitored.
-- **Authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name))**: The only supported method of [authentication](./logins-create-manage.md#authentication-and-authorization) for monitoring is SQL authentication. For SQL Server on Azure Virtual Machines, authentication through Active Directory on a custom domain controller is not supported.
+- **Authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name))**: The only supported method of [authentication](./logins-create-manage.md#authentication-and-authorization) for monitoring is SQL authentication. For SQL Server on Azure Virtual Machines, authentication through Active Directory on a custom domain controller isn't supported.
 
 ## Regional availability
 
-SQL Insights (preview) is available in all Azure regions where Azure Monitor is [available](https://azure.microsoft.com/global-infrastructure/services/?products=monitor), with the exception of Azure Government and national clouds.
+SQL Insights (preview) is available in all Azure regions where Azure Monitor is [available](https://azure.microsoft.com/global-infrastructure/services/?products=monitor), except for Azure Government and national clouds.
 
 ## Open SQL Insights
 
@@ -76,6 +75,9 @@ To open SQL Insights (preview):
 :::image type="content" source="media/sql-insights/portal.png" alt-text="Screenshot that shows SQL Insights in the Azure portal.":::
 
 For more instructions, see [Enable SQL Insights (preview)](sql-insights-enable.md) and [Troubleshoot SQL Insights (preview)](sql-insights-troubleshoot.md).
+
+> [!NOTE]
+> On-premises SQL Server instances are not currently supported by SQL Insights (preview) - the label in the Azure portal can be ignored. 
 
 ## Collected data
 

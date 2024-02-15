@@ -9,14 +9,14 @@ ms.date: 02/15/2024
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
-monikerRange: "= azuresql || = azuresql-db"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # Microsoft Entra logins and users with nonunique display names
 
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-Using the display name of a service principal that isn't unique in Microsoft Entra ID leads to errors when creating the login or user in Azure SQL. For example, if the application `myapp` isn't unique, you might run into the following error when executing the following T-SQL statement:
+Using a service principal with a display name that is not unique in Microsoft Entra ID leads to errors when creating the login or user in Azure SQL. For example, if the application `myapp` isn't unique, you might run into the following error when executing the following T-SQL statement:
 
 ```sql
 CREATE LOGIN [myapp] FROM EXTERNAL PROVIDER 
@@ -27,7 +27,7 @@ Msg 33131, Level 16, State 1, Line 4
 Principal 'myapp' has a duplicate display name. Make the display name unique in Azure Active Directory and execute this statement again. 
 ```
 
-## Introduction of the `WITH OBJECT_ID` extension
+## The `WITH OBJECT_ID` extension
 
 This error occurs because Microsoft Entra ID allows duplicate display names for [Microsoft Entra application (service principal)](authentication-aad-service-principal.md), while Azure SQL requires unique names to create Microsoft Entra logins and users. To mitigate this problem, the Data Definition Language (DDL) statements to create logins and users (`WITH OBJECT_ID`) have been extended to include the **Object ID** of the Azure resource.
 

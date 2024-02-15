@@ -835,6 +835,9 @@ The SELECT statement is the fundamental difference between CTAS and CREATE TABLE
  Populates the new table with the results from a SELECT statement. *select_criteria* is the body of the SELECT statement that determines which data to copy to the new table. For information about SELECT statements, see [SELECT (Transact-SQL)](../queries/select-transact-sql.md?version=fabric&preserve-view=true).  
  
 <a name="permissions-bk-fabric"></a>  
+
+> [!NOTE]  
+> In Microsoft Fabric, the use of variables in CTAS is not allowed.
   
 ## Permissions
 

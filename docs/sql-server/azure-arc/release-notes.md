@@ -13,7 +13,7 @@ ms.custom: ignite-2023
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-## February 12, 2024
+## February 13, 2024
 
 **Extension version**: `1.1.2594.118`
 
@@ -34,7 +34,7 @@ For details, review [View SQL Server migration assessment - SQL Server enabled b
 
 ### Create Azure SQL Managed Instance
 
-From the portal for SQL Server enabled by Azure Arc, you can create a SQL Managed Instance.
+You can create an Azure SQL Managed Instance from the portal. Available from Azure Arc | SQL Server instances in the portal.
 
 ### Additional feature updates for SQL Server enabled by Azure Arc
 

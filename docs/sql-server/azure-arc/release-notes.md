@@ -41,6 +41,7 @@ You can create an Azure SQL Managed Instance from the portal. Available from Azu
 - Support for TLS 1.3
 - Improved prompt for feedback in Azure portal
 - Monitoring | Show monitoring upload status on Arc SQL Server overview in portal
+- For SQL Server 2012, updates through Microsoft Update are automatically applied if Extended Security Updates (ESU) is enabled.
 
 #### Region availability
 

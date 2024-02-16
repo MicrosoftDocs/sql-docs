@@ -4,7 +4,7 @@ description: Latest release notes for SQL Server enabled by Azure Arc
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 02/12/2024
+ms.date: 02/15/2024
 ms.topic: conceptual
 ms.custom: ignite-2023
 ---
@@ -31,6 +31,10 @@ A migration assessment:
 Use migration assessments to ensure a successful migration.
 
 For details, review [View SQL Server migration assessment - SQL Server enabled by Azure Arc](migration-assessment.md).
+
+### Create Azure SQL Managed Instance
+
+From the portal for SQL Server enabled by Azure Arc, you can create a SQL Managed Instance.
 
 ### Additional feature updates for SQL Server enabled by Azure Arc
 

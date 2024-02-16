@@ -20,7 +20,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 ---
 # sys.dm_os_out_of_memory_events
 
-[!INCLUDE [Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns a log of out of memory (OOM) events.
 

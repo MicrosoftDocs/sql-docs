@@ -92,33 +92,33 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 ## Arguments
 
 #### *login_name*
-Specifies the name of the login that is created. There are four types of logins: SQL Server logins, Windows logins, certificate-mapped logins, and asymmetric key-mapped logins. When you are creating logins that are mapped from a Windows domain account, you must use the pre-Windows 2000 user logon name in the format [\<domainName>\\<login_name>]. You cannot use a UPN in the format login_name@DomainName. For an example, see example D later in this article. Authentication logins are type **sysname** and must conform to the rules for [Identifiers](../../relational-databases/databases/database-identifiers.md) and cannot contain a '**\\**'. Windows logins can contain a '**\\**'. Logins based on Active Directory users, are limited to names of fewer than 21 characters.
+Specifies the name of the login that is created. There are four types of logins: SQL Server logins, Windows logins, certificate-mapped logins, and asymmetric key-mapped logins. When you're creating logins that are mapped from a Windows domain account, you must use the pre-Windows 2000 user logon name in the format [\<domainName>\\<login_name>]. You cannot use a UPN in the format login_name@DomainName. For an example, see example D later in this article. Authentication logins are type **sysname** and must conform to the rules for [Identifiers](../../relational-databases/databases/database-identifiers.md) and cannot contain a '**\\**'. Windows logins can contain a '**\\**'. Logins based on Active Directory users, are limited to names of fewer than 21 characters.
 
 #### PASSWORD **=**'*password*'
 Applies to SQL Server logins only. Specifies the password for the login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with SQL Server 2012 (11.x), stored password information is calculated using SHA-512 of the salted password.
 
-Passwords are case-sensitive. Passwords should always be at least eight characters long, and cannot exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most non-alphanumeric characters. Passwords cannot contain single quotes, or the *login_name*.
+Passwords are case-sensitive. Passwords should always be at least eight characters long, and can't exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most nonalphanumeric characters. Passwords can't contain single quotes, or the *login_name*.
 
 #### PASSWORD **=** *hashed\_password*
 Applies to the HASHED keyword only. Specifies the hashed value of the password for the login that is being created.
 
 #### HASHED
-Applies to SQL Server logins only. Specifies that the password entered after the PASSWORD argument is already hashed. If this option is not selected, the string entered as password is hashed before it is stored in the database. This option should only be used for migrating databases from one server to another. Do not use the HASHED option to create new logins. The HASHED option cannot be used with hashes created by SQL 7 or earlier.
+Applies to SQL Server logins only. Specifies that the password entered after the PASSWORD argument is already hashed. If this option isn't selected, the string entered as password is hashed before it's stored in the database. This option should only be used for migrating databases from one server to another. Don't use the HASHED option to create new logins. The HASHED option can't be used with hashes created by SQL 7 or earlier.
 
 #### MUST_CHANGE
 Applies to SQL Server logins only. If this option is included, SQL Server prompts the user for a new password the first time the new login is used.
 
 #### CREDENTIAL **=**_credential\_name_
-The name of a credential to be mapped to the new SQL Server login. The credential must already exist in the server. Currently this option only links the credential to a login. A credential cannot be mapped to the System Administrator (sa) login.
+The name of a credential to be mapped to the new SQL Server login. The credential must already exist in the server. Currently this option only links the credential to a login. A credential can't be mapped to the System Administrator (sa) login.
 
 #### SID = *sid*
 Used to recreate a login. Applies to SQL Server authentication logins only, not Windows authentication logins. Specifies the SID of the new SQL Server authentication login. If this option is not used, SQL Server automatically assigns a SID. The SID structure depends on the SQL Server version. SQL Server login SID: a 16 byte (**binary(16)**) literal value based on a GUID. For example, `SID = 0x14585E90117152449347750164BA00A7`.
 
 #### DEFAULT_DATABASE **=**_database_
-Specifies the default database to be assigned to the login. If this option is not included, the default database is set to master.
+Specifies the default database to be assigned to the login. If this option isn't included, the default database is set to master.
 
 #### DEFAULT_LANGUAGE **=**_language_
-Specifies the default language to be assigned to the login. If this option is not included, the default language is set to the current default language of the server. If the default language of the server is later changed, the default language of the login remains unchanged.
+Specifies the default language to be assigned to the login. If this option isn't included, the default language is set to the current default language of the server. If the default language of the server is later changed, the default language of the login remains unchanged.
 
 #### CHECK_EXPIRATION **=** { ON | **OFF** }
 Applies to SQL Server logins only. Specifies whether password expiration policy should be enforced on this login. The default value is OFF.
@@ -131,7 +131,7 @@ If the Windows policy requires strong passwords, passwords must contain at least
 - An uppercase character (A-Z).
 - A lowercase character (a-z).
 - A digit (0-9).
-- One of the non-alphanumeric characters, such as a space, _, @, *, ^, %, !, $, #, or &.
+- One of the nonalphanumeric characters, such as a space, _, @, *, ^, %, !, $, #, or &.
 
 #### WINDOWS
 Specifies that the login be mapped to a Windows login.
@@ -145,15 +145,15 @@ Specifies the name of an asymmetric key to be associated with this login. This k
 ## Remarks
 
 - Passwords are case-sensitive.
-- Prehashing of passwords is supported only when you are creating SQL Server logins.
+- Prehashing of passwords is supported only when you're creating SQL Server logins.
 - If MUST_CHANGE is specified, CHECK_EXPIRATION and CHECK_POLICY must be set to ON. Otherwise, the statement will fail.
-- A combination of CHECK_POLICY = OFF and CHECK_EXPIRATION = ON is not supported.
+- A combination of CHECK_POLICY = OFF and CHECK_EXPIRATION = ON isn't supported.
 - When CHECK_POLICY is set to OFF, *lockout_time* is reset and CHECK_EXPIRATION is set to OFF.
 
 > [!IMPORTANT]
 > CHECK_EXPIRATION and CHECK_POLICY are only enforced on Windows Server 2003 and later. For more information, see [Password Policy](../../relational-databases/security/password-policy.md).
 
-- Logins created from certificates or asymmetric keys are used only for code signing. They cannot be used to connect to SQL Server. You can create a login from a certificate or asymmetric key only when the certificate or asymmetric key already exists in master.
+- Logins created from certificates or asymmetric keys are used only for code signing. They can't be used to connect to SQL Server. You can create a login from a certificate or asymmetric key only when the certificate or asymmetric key already exists in master.
 - For a script to transfer logins, see [How to transfer the logins and the passwords between instances of SQL Server 2005 and SQL Server 2008](https://support.microsoft.com/kb/918992).
 - Creating a login automatically enables the new login and grants the login the server level **CONNECT SQL** permission.
 - The server's [authentication mode](../../relational-databases/security/choose-an-authentication-mode.md) must match the login type to permit access.
@@ -296,8 +296,7 @@ CREATE LOGIN Andreas
   WITH PASSWORD = 0x02000A1A89CD6C6E4C8B30A282354C8EA0860719D5D3AD05E0CAE1952A1C6107A4ED26BEBA2A13B12FAB5093B3CC2A1055910CC0F4B9686A358604E99BB9933C75B4EA48FDEA HASHED;
 ```
 
-
-## See Also
+## Related content
 
 - [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
 - [Principals](../../relational-databases/security/authentication-access/principals-database-engine.md)
@@ -338,7 +337,7 @@ CREATE LOGIN Andreas
 -- Syntax for Azure SQL Database
 CREATE LOGIN login_name
   { 
-    FROM EXTERNAL PROVIDER
+    FROM EXTERNAL PROVIDER [WITH OBJECT_ID = 'objectid'] 
     | WITH <option_list> [,..] 
   }
 
@@ -356,19 +355,24 @@ CREATE LOGIN login_name
 
 When used with the **FROM EXTERNAL PROVIDER** clause, the login specifies the Microsoft Entra principal, which is a Microsoft Entra user, group, or application. Otherwise, the login represents the name of the SQL login that was created.
 
-Microsoft Entra users and service principals that are members of more than 2048 Microsoft Entra security groups are not supported to login into the database in SQL Database, SQL Managed Instance, or Azure Synapse.
-
+Microsoft Entra users and service principals that are members of more than 2048 Microsoft Entra security groups aren't supported to login into the database in SQL Database, SQL Managed Instance, or Azure Synapse.
 
 #### FROM EXTERNAL PROVIDER </br>
 Specifies that the login is for Microsoft Entra authentication.
 
+#### WITH OBJECT_ID = *'objectid'*   
+Specifies the Microsoft Entra Object ID. If the `OBJECT_ID` is specified, the login_name isn't required to match the Microsoft Entra display name. The login_name must be a unique name in the `sys.server_principals` view and adhere to all other `sysname` limitations.
+
+> [!NOTE]
+> If the service principal display name is not a duplicate, the default `CREATE LOGIN` or `CREATE USER` statement should be used. The `WITH OBJECT_ID` extension is in **public preview**, and is a troubleshooting repair item implemented for use with nonunique service principals. Using it with a unique service principal is not necessary. Using the `WITH OBJECT_ID` extension for a service principal without adding a suffix will run successfully, but it will not be obvious which service principal the login or user was created for. It's recommended to create an alias using a suffix to uniquely identify the service principal. The `WITH OBJECT_ID` extension is not supported for SQL Server.
+
 #### PASSWORD **='**password**'*
 Specifies the password for the SQL login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.
 
-Passwords are case-sensitive. Passwords should always be at least eight characters long, and cannot exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most non-alphanumeric characters. Passwords cannot contain single quotes, or the *login_name*.
+Passwords are case-sensitive. Passwords should always be at least eight characters long, and can't exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most nonalphanumeric characters. Passwords can't contain single quotes, or the *login_name*.
 
 #### SID = *sid*
-Used to recreate a login. Applies to SQL Server authentication logins only, not Windows authentication logins. Specifies the SID of the new SQL Server authentication login. If this option is not used, SQL Server automatically assigns a SID. The SID structure depends on the SQL Server version. For SQL Database, this is a 32 byte (**binary(32)**) literal consisting of `0x01060000000000640000000000000000` plus 16 bytes representing a GUID. For example, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
+Used to recreate a login. Applies to SQL Server authentication logins only, not Windows authentication logins. Specifies the SID of the new SQL Server authentication login. If this option isn't used, SQL Server automatically assigns a SID. The SID structure depends on the SQL Server version. For SQL Database, this is a 32 byte (**binary(32)**) literal consisting of `0x01060000000000640000000000000000` plus 16 bytes representing a GUID. For example, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
 ## Remarks
 
@@ -443,7 +447,18 @@ CREATE LOGIN [bob@contoso.com] FROM EXTERNAL PROVIDER
 GO
 ```
 
-## See Also
+### D. Create a login with an alias using Object ID
+
+You can create an alias for your *login_name* by specifying the Object ID of the Microsoft Entra service principal or group.
+
+```sql
+CREATE LOGIN [myapp4466e] FROM EXTERNAL PROVIDER 
+  WITH OBJECT_ID='4466e2f8-0fea-4c61-a470-xxxxxxxxxxxx' 
+```
+
+For more information on obtaining the Object ID of a service principal, see [Service principal object](/azure/active-directory/develop/app-objects-and-service-principals#service-principal-object.).
+
+## Related content
 
 - [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
 - [Principals](../../relational-databases/security/authentication-access/principals-database-engine.md)
@@ -482,7 +497,7 @@ GO
 
 ```syntaxsql
 -- Syntax for Azure SQL Managed Instance
-CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
+CREATE LOGIN login_name [FROM EXTERNAL PROVIDER [WITH OBJECT_ID = 'objectid'] ] { WITH <option_list> [,..]}
 
 <option_list> ::=
     PASSWORD = {'password'}
@@ -496,18 +511,24 @@ CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 #### *login_name*
 When used with the **FROM EXTERNAL PROVIDER** clause, the login specifies the Microsoft Entra principal, which is a Microsoft Entra user, group, or application. Otherwise, the login represents the name of the SQL login that was created.
 
-Microsoft Entra users and service principals that are members of more than 2048 Microsoft Entra security groups are not supported to log into databases in Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse.
+Microsoft Entra users and service principals that are members of more than 2048 Microsoft Entra security groups aren't supported to log into databases in Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse.
 
 #### FROM EXTERNAL PROVIDER </br>
 Specifies that the login is for Microsoft Entra authentication.
 
+#### WITH OBJECT_ID = *'objectid'*   
+Specifies the Microsoft Entra Object ID. If the `OBJECT_ID` is specified, the login_name can be a user defined alias formed from the original principal display name with a suffix appended. The login_name must be a unique name in the `sys.server_principals` view and adhere to all other `sysname` limitations.
+
+> [!NOTE]
+> If the service principal display name is not a duplicate, the default `CREATE LOGIN` or `CREATE USER` statement should be used. The `WITH OBJECT_ID` extension is in **public preview**, and is a troubleshooting repair item implemented for use with nonunique service principals. Using it with a unique service principal is not necessary. Using the `WITH OBJECT_ID` extension for a service principal without adding a suffix will run successfully, but it will not be obvious which service principal the login or user was created for. It's recommended to create an alias using a suffix to uniquely identify the service principal. The `WITH OBJECT_ID` extension is not supported for SQL Server.
+
 #### PASSWORD **=** '*password*'
 Specifies the password for the SQL login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.
 
-Passwords are case-sensitive. Passwords should always be at least ten characters long, and cannot exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most non-alphanumeric characters. Passwords cannot contain single quotes, or the *login_name*.
+Passwords are case-sensitive. Passwords should always be at least 10 characters long, and can't exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most nonalphanumeric characters. Passwords can't contain single quotes, or the *login_name*.
 
 #### SID **=** *sid*
-Used to recreate a login. Applies to SQL Server authentication logins only. Specifies the SID of the new SQL Server authentication login. If this option is not used, SQL Server automatically assigns a SID. The SID structure depends on the SQL Server version. For SQL Database, this is a 32 byte (**binary(32)**) literal consisting of `0x01060000000000640000000000000000` plus 16 bytes representing a GUID. For example, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
+Used to recreate a login. Applies to SQL Server authentication logins only. Specifies the SID of the new SQL Server authentication login. If this option isn't used, SQL Server automatically assigns a SID. The SID structure depends on the SQL Server version. For SQL Database, this is a 32 byte (**binary(32)**) literal consisting of `0x01060000000000640000000000000000` plus 16 bytes representing a GUID. For example, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
 ## Remarks
 
@@ -520,7 +541,7 @@ Used to recreate a login. Applies to SQL Server authentication logins only. Spec
 
     - DisplayName of the Microsoft Entra object for Microsoft Entra groups and applications.
 
-  - The **PASSWORD** option cannot be used.
+  - The **PASSWORD** option can't be used.
 - By default, when the `FROM EXTERNAL PROVIDER` clause is omitted, a regular SQL login is created.
 
 - Microsoft Entra logins are visible in sys.server_principals, with type column value set to **E** and type_desc set to **EXTERNAL_LOGIN** for logins mapped to Microsoft Entra users, or type column value set to **X** and type_desc value set to **EXTERNAL_GROUP** for logins mapped to Microsoft Entra groups.
@@ -566,8 +587,8 @@ After creating a login, the login can connect to a managed instance, but only ha
 - Only server principals (logins) that are part of the `sysadmin` role can execute the following operations targeting Microsoft Entra principals:
   - EXECUTE AS USER
   - EXECUTE AS LOGIN
-- External (guest) users imported from another Microsoft Entra directory cannot be directly configured as a Microsoft Entra admin for SQL Managed Instance using the Azure portal. Instead, join external user to a [role-assignable group](/entra/identity/role-based-access-control/groups-create-eligible) and configure the group as the instance administrator. You can use PowerShell or Azure CLI to set individual guest users as the instance administrator.
-- Logins are not replicated to the secondary instance in a failover group. Login are saved in the master database, which is a system database, and as such is not geo-replicated. To solve this, logins must be created with the same SID on the secondary instance.
+- External (guest) users imported from another Microsoft Entra directory can't be directly configured as a Microsoft Entra admin for SQL Managed Instance using the Azure portal. Instead, join external user to a [role-assignable group](/entra/identity/role-based-access-control/groups-create-eligible) and configure the group as the instance administrator. You can use PowerShell or Azure CLI to set individual guest users as the instance administrator.
+- Logins aren't replicated to the secondary instance in a failover group. Login are saved in the master database, which is a system database, and as such isn't geo-replicated. To solve this, logins must be created with the same SID on the secondary instance.
 
 ```SQL
 -- Code to create login on the secondary instance
@@ -639,8 +660,7 @@ GO
 
 ### E. Creating a login for a Microsoft Entra group
 
- The following example creates a login for the Microsoft Entra group *mygroup* that exists in Microsoft Entra tenant of *contoso*
-
+ The following example creates a login for the Microsoft Entra group *mygroup* that exists in Microsoft Entra tenant of *contoso*.
 
 ```sql
 CREATE LOGIN [mygroup] FROM EXTERNAL PROVIDER
@@ -651,8 +671,7 @@ GO
 
 ### F. Creating a login for a Microsoft Entra application
 
-The following example creates a login for the Microsoft Entra application *myapp* that exists in the Microsoft Entra tenant of *contoso*
-
+The following example creates a login for the Microsoft Entra application *myapp* that exists in the Microsoft Entra tenant of *contoso*.
 
 ```sql
 CREATE LOGIN [myapp] FROM EXTERNAL PROVIDER
@@ -668,7 +687,7 @@ FROM sys.server_principals;
 GO
 ```
 
-## See Also
+## Related content
 
 - [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
 - [Principals](../../relational-databases/security/authentication-access/principals-database-engine.md)
@@ -724,7 +743,7 @@ CREATE LOGIN login_name
 > [Microsoft Entra server principals (logins)](/azure/azure-sql/database/authentication-azure-ad-logins) are currently in public preview.
 When used with the **FROM EXTERNAL PROVIDER** clause, the login specifies the Microsoft Entra principal, which is a Microsoft Entra user, group, or application. Otherwise, the login represents the name of the SQL login that was created.
 
-Microsoft users and service principals (Microsoft Entra applications) that are members of more than 2048 Microsoft Entra security groups are not supported to login into the database in SQL Database, SQL Managed Instance, or Azure Synapse.
+Microsoft users and service principals (Microsoft Entra applications) that are members of more than 2048 Microsoft Entra security groups aren't supported to sign into the database in SQL Database, SQL Managed Instance, or Azure Synapse.
 
 #### FROM EXTERNAL PROVIDER </br>
 Specifies that the login is for Microsoft Entra authentication.
@@ -735,10 +754,10 @@ Specifies the name of the login that is created. SQL Analytics in Azure Synapse 
 #### PASSWORD **='**password**'*
 Specifies the password for the SQL login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.
 
-Passwords are case-sensitive. Passwords should always be at least eight characters long, and cannot exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most non-alphanumeric characters. Passwords cannot contain single quotes, or the *login_name*.
+Passwords are case-sensitive. Passwords should always be at least eight characters long, and can't exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most nonalphanumeric characters. Passwords can't contain single quotes, or the *login_name*.
 
 #### SID = *sid*
-Used to recreate a login. Applies to SQL Server authentication logins only, not Windows authentication logins. Specifies the SID of the new SQL Server authentication login. If this option is not used, SQL Server automatically assigns a SID. The SID structure depends on the SQL Server version. For SQL Analytics, this is a 32 byte (**binary(32)**) literal consisting of `0x01060000000000640000000000000000` plus 16 bytes representing a GUID. For example, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
+Used to recreate a login. Applies to SQL Server authentication logins only, not Windows authentication logins. Specifies the SID of the new SQL Server authentication login. If this option isn't used, SQL Server automatically assigns a SID. The SID structure depends on the SQL Server version. For SQL Analytics, this is a 32 byte (**binary(32)**) literal consisting of `0x01060000000000640000000000000000` plus 16 bytes representing a GUID. For example, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
 ## Remarks
 
@@ -811,7 +830,7 @@ SELECT * FROM sys.sql_logins WHERE name = 'TestLogin';
 GO
 ```
 
-## See Also
+## Related content
 
 - [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
 - [Principals](../../relational-databases/security/authentication-access/principals-database-engine.md)
@@ -864,12 +883,12 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 ## Arguments
 
 #### *login_name*
-Specifies the name of the login that is created. There are four types of logins: SQL Server logins, Windows logins, certificate-mapped logins, and asymmetric key-mapped logins. When you are creating logins that are mapped from a Windows domain account, you must use the pre-Windows 2000 user logon name in the format [\<domainName>\\<login_name>]. You cannot use a UPN in the format login_name@DomainName. For an example, see example D later in this article. Authentication logins are type **sysname** and must conform to the rules for [Identifiers](../../relational-databases/databases/database-identifiers.md) and cannot contain a '**\\**'. Windows logins can contain a '**\\**'. Logins based on Active Directory users, are limited to names of fewer than 21 characters.
+Specifies the name of the login that is created. There are four types of logins: SQL Server logins, Windows logins, certificate-mapped logins, and asymmetric key-mapped logins. When you're creating logins that are mapped from a Windows domain account, you must use the pre-Windows 2000 user logon name in the format [\<domainName>\\<login_name>]. You can't use a UPN in the format login_name@DomainName. For an example, see example D later in this article. Authentication logins are type **sysname** and must conform to the rules for [Identifiers](../../relational-databases/databases/database-identifiers.md) and can't contain a '**\\**'. Windows logins can contain a '**\\**'. Logins based on Active Directory users, are limited to names of fewer than 21 characters.
 
 #### PASSWORD **='**_password_'
 Applies to SQL Server logins only. Specifies the password for the login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with SQL Server 2012 (11.x), stored password information is calculated using SHA-512 of the salted password.
 
-Passwords are case-sensitive. Passwords should always be at least eight characters long, and cannot exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most non-alphanumeric characters. Passwords cannot contain single quotes, or the *login_name*.
+Passwords are case-sensitive. Passwords should always be at least eight characters long, and can't exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most nonalphanumeric characters. Passwords can't contain single quotes, or the *login_name*.
 
 #### MUST_CHANGE
 Applies to SQL Server logins only. If this option is included, SQL Server prompts the user for a new password the first time the new login is used.
@@ -885,7 +904,7 @@ If the Windows policy requires strong passwords, passwords must contain at least
 - An uppercase character (A-Z).
 - A lowercase character (a-z).
 - A digit (0-9).
-- One of the non-alphanumeric characters, such as a space, _, @, *, ^, %, !, $, #, or &.
+- One of the nonalphanumeric characters, such as a space, _, @, *, ^, %, !, $, #, or &.
 
 #### WINDOWS
 Specifies that the login be mapped to a Windows login.
@@ -894,7 +913,7 @@ Specifies that the login be mapped to a Windows login.
 
 - Passwords are case-sensitive.
 - If MUST_CHANGE is specified, CHECK_EXPIRATION and CHECK_POLICY must be set to ON. Otherwise, the statement will fail.
-- A combination of CHECK_POLICY = OFF and CHECK_EXPIRATION = ON is not supported.
+- A combination of CHECK_POLICY = OFF and CHECK_EXPIRATION = ON isn't supported.
 - When CHECK_POLICY is set to OFF, *lockout_time* is reset and CHECK_EXPIRATION is set to OFF.
 
 > [!IMPORTANT]
@@ -946,7 +965,7 @@ CREATE LOGIN [Contoso\Mary] FROM WINDOWS;
 GO
 ```
 
-## See Also
+## Related content
 
 - [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
 - [Principals](../../relational-databases/security/authentication-access/principals-database-engine.md)

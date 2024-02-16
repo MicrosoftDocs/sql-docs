@@ -206,7 +206,7 @@ Get help with SqlPackage, submit feature requests, and report issues in the [Dac
 
 ### Supported SQL offerings
 
-SqlPackage and DacFx support all [supported SQL versions](/lifecycle/products/?products=sql-server) at time of the SqlPackage/DacFx release. For example, a SqlPackage release on January 1 2022 supports all supported versions of SQL in January 14 2022. For more on SQL support policies, see [the SQL support policy](/troubleshoot/sql/general/support-policy-sql-server#support-policy).
+SqlPackage and DacFx support all [supported SQL versions](/lifecycle/products/?products=sql-server) at time of the SqlPackage/DacFx release. For example, a SqlPackage release on January 14 2022 supports all supported versions of SQL in January 14 2022. For more on SQL support policies, see [the SQL support policy](/troubleshoot/sql/general/support-policy-sql-server#support-policy).
 
 ## Next steps
 

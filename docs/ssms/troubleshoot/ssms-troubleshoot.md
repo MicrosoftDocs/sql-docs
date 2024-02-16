@@ -18,7 +18,7 @@ ms.topic: conceptual
 
 Get a full memory dump of SQL Server Management Studio (SSMS) when it stops responding or crashes.
 
-To capture diagnostic information to troubleshoot a crash or an unresponsive SSMS, follow the steps below.
+To capture diagnostic information to troubleshoot a crash or an unresponsive SSMS, use the following steps:
 
 1. Download [ProcDump](/sysinternals/downloads/procdump).
 
@@ -32,19 +32,19 @@ To capture diagnostic information to troubleshoot a crash or an unresponsive SSM
 
     If it prompts you to accept a license agreement, select *Agree*.
 
-4. Start SSMS, if it hasn't started already.
+4. Start SSMS, if it isn't running already.
 
 5. Reproduce the issue.
 
-6. The text should appear in the cmd prompt about writing the dump file, wait for that to finish.
+6. Wait as the text appears in the cmd prompt about writing the dump file, don't proceed until it has finished.
 
 7. Create a new folder and copy the *.dmp file that is written out to that folder.
 
 8. Copy the following files into the same folder.
 
-    "C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscordacwks.dll"
-    "C:\Windows\Microsoft.NET\Framework\v4.0.30319\SOS.dll"
-    "C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll"
+    * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscordacwks.dll"
+    * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\SOS.dll"
+    * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll"
 
 9. Zip up the folder
 
@@ -54,7 +54,7 @@ Get a full memory dump of SSMS when it throws an OutOfMemoryException.
 
 You can get a full memory dump with any managed exception.
 
-To capture diagnostic information to troubleshoot an OutOfMemoryException from SSMS, follow the steps below.
+To capture diagnostic information to troubleshoot an OutOfMemoryException from SSMS, use the following steps:
 
 1. Download [ProcDump](/sysinternals/downloads/procdump).
 
@@ -72,14 +72,14 @@ To capture diagnostic information to troubleshoot an OutOfMemoryException from S
 
 5. Reproduce the issue.
 
-6. The text should appear in the cmd prompt about writing the dump file, wait for that to finish.
+6. Wait as the text appears in the cmd prompt about writing the dump file, don't proceed until it has finished.
 
 7. Create a new folder and copy the *.dmp file that is written out to that folder.
 
 8. Copy the following files into the same folder.
 
-    "C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscordacwks.dll"
-    "C:\Windows\Microsoft.NET\Framework\v4.0.30319\SOS.dll"
-    "C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll"
+    * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscordacwks.dll"
+    * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\SOS.dll"
+    * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll"
 
 9. Zip up the folder.

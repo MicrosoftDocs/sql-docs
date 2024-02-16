@@ -4,7 +4,7 @@ description: Feature overview. Explains how you can manage instances of SQL Serv
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 01/24/2024
+ms.date: 02/16/2024
 ms.topic: conceptual
 ---
 
@@ -29,7 +29,11 @@ Azure Arc enables you to manage all of your SQL Server instances from a single p
   - Databases that haven't been backed up recently.
   - Databases that aren't encrypted.
 
-![A screenshot of the Arc-enabled SQL Server dashboard from Azure portal.](media/overview/arc-sql-server-dashboard.png)
+## Example custom dashboard
+
+Review an example of a custom dashboard in [GitHub microsoft/sql-server-samples](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/azure-arc/dashboard/README.md).
+
+:::image type="content" source="media/overview/arc-sql-server-dashboard.png" alt-text="A screenshot of a custom dashboard in the Azure portal." lightbox="media/overview/arc-sql-server-dashboard.png":::
 
 ## Best practices assessment
 

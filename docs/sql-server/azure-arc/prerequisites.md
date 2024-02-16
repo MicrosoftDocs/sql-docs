@@ -35,7 +35,7 @@ Before you can Arc-enable an instance of [!INCLUDE [ssnoversion-md](../../includ
 
 - The user account or service principal requires read permission on the subscription.
 > [!NOTE]
-> Before Arc enabling SQL Servers, installation script verifies that the region in which Arc enabled SQL Server is being created is a supported region and required resource provider, `Microsoft.AzureArcData`, is registered in the subscription, which requires the user account or service principle being used to authenticate to Azure have read permission on the subscription.
+> Before enabling SQL Servers with Arc, the installation script checks that the region where the Arc-enabled SQL Server is being created is supported. It also verifies that the required resource provider, `Microsoft.AzureArcData`, is registered in the subscription. These check requires the user account or service principal used for Azure authentication to have read permission on the subscription.
 
 - User or service principal must have permissions in the Azure resource group to complete the task. Specifically:
 

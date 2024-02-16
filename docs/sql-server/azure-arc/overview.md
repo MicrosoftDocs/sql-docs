@@ -31,7 +31,7 @@ Azure Arc enables you to manage all of your SQL Server instances from a single p
 
 ## Example custom dashboard
 
-Se an example of a custom dashboard in [GitHub microsoft/sql-server-samples](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/azure-arc/dashboard/README.md).
+Review an example of a custom dashboard in [GitHub microsoft/sql-server-samples](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/azure-arc/dashboard/README.md).
 
 :::image type="content" source="media/overview/arc-sql-server-dashboard.png" alt-text="A screenshot of a custom dashboard in the Azure portal." lightbox="media/overview/arc-sql-server-dashboard.png":::
 

@@ -200,7 +200,9 @@ To disable telemetry collection and reporting, update the environment variable `
 
 ## Support
 
- The DacFx library and the SqlPackage CLI tool have adopted the [Microsoft Modern Lifecycle Policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy). All security updates, fixes, and new features will be released only in the latest point version of the major version. Maintaining your DacFx or SqlPackage installations to the current version helps ensure that you will receive all applicable bug fixes in a timely manner.
+The DacFx library and the SqlPackage CLI tool have adopted the [Microsoft Modern Lifecycle Policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy). All security updates, fixes, and new features will be released only in the latest point version of the major version. Maintaining your DacFx or SqlPackage installations to the current version helps ensure that you will receive all applicable bug fixes in a timely manner.
+
+Get help with SqlPackage, submit feature requests, and report issues in the [DacFx GitHub repository](https://github.com/microsoft/DacFx).
 
 ### Supported SQL offerings
 
@@ -212,3 +214,5 @@ SqlPackage and DacFx supports all [supported SQL versions](/lifecycle/products/?
 - Learn more about [SqlPackage Publish](sqlpackage-publish.md)
 - Learn more about [SqlPackage Export](sqlpackage-export.md)
 - Learn more about [SqlPackage Import](sqlpackage-import.md)
+- Learn more about [troubleshooting issues with SqlPackage](troubleshooting-issues-and-performance-with-sqlpackage.md)
+- Share feedback on SqlPackage in the [DacFx GitHub repository](https://github.com/microsoft/DacFx)

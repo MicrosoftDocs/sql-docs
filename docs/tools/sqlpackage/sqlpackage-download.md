@@ -28,7 +28,7 @@ For details about the latest release, see the [release notes](release-notes-sqlp
 
 ## Installation, cross-platform
 
-Installing SqlPackage as a [dotnet tool](/dotnet/core/tools/global-tools) requires the [.NET Core SDK](https://dotnet.microsoft.com/download/dotnet/6.0) v6.0 or later to be installed on your machine.  Installing SqlPackage as a global tool will make it available on your path as `sqlpackage` and is the recommended way to install SqlPackage for Windows, macOS, and Linux.
+Installing SqlPackage as a [dotnet tool](/dotnet/core/tools/global-tools) requires the [.NET SDK](https://dotnet.microsoft.com/download/dotnet/8.0) to be installed on your machine.  Installing SqlPackage as a global tool will make it available on your path as `sqlpackage` and is the recommended method to install SqlPackage for Windows, macOS, and Linux.  SqlPackage is available as a dotnet tool for .NET 6 and .NET 8.
 
 To install SqlPackage as a global .NET tool, run the following command:
 
@@ -52,9 +52,20 @@ To uninstall SqlPackage, run the following command:
    dotnet tool uninstall -g microsoft.sqlpackage
    ```
 
+### Preview releases
+
+Preview releases of SqlPackage are available with the dotnet tool feed. To install a preview release, use the `--version` option with the `dotnet tool install` command. For example, to install version 162.2.82-preview of SqlPackage, run the following command:
+
+   ```bash
+   dotnet tool install -g microsoft.sqlpackage --version 162.2.82-preview
+   ```
+
+The dotnet tool `update` command will not update to a preview release. To update to a preview release, use the `--version` option with the `dotnet tool install` command.  A list of releases is available on the [dotnet tool feed](https://www.nuget.org/packages/microsoft.sqlpackage/).
 
 
-## Installation, zip download
+## Installation, zip download (alternative)
+
+SqlPackage is also prepared as a self-contained download for Windows, macOS, and Linux. No .NET install is required, however, the dependencies included in this .zip download are updated more frequently in the dotnet tool option for SqlPackage. The following links are for the latest version of SqlPackage:
 
 |Platform|Download|
 |:---|:---|
@@ -224,5 +235,8 @@ SqlPackage .NET 6 Linux:
 ## Next Steps
 
 - Learn more about [SqlPackage](sqlpackage.md)
+- Learn more about [SqlPackage in CI/CD pipelines](sqlpackage-pipelines.md)
+- Learn more about [troubleshooting issues with SqlPackage](troubleshooting-issues-and-performance-with-sqlpackage.md)
+- Share feedback on SqlPackage in the [DacFx GitHub repository](https://github.com/microsoft/DacFx)
 
 [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839)

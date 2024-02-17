@@ -33,18 +33,9 @@ Before you can Arc-enable an instance of [!INCLUDE [ssnoversion-md](../../includ
 
 ### Permissions
 
-To [Connect SQL Server instances on Azure Arc-enabled servers at scale using Azure policy](connect-at-scale-policy.md):
-
-- The service principal requires read permission on the subscription.
-
-- The installation account requires:
-
-  - [`User Access Administrator`](/azure/role-based-access-control/built-in-roles#user-access-administrator) role assignment is required in the subscription if you are creating a *new* system assigned managed identity.
-  - [`Resource Policy Contributor`](/azure/role-based-access-control/built-in-roles#resource-policy-contributor) role assignment for the scope that you're targeting. The scope may be either subscription or resource group.
-
-For all the other onboarding methods:
-
-- The service principal requires read permission on the subscription.
+- The user account or service principal requires read permission on the subscription.
+> [!NOTE]
+> Before enabling SQL Servers with Arc, the installation script checks that the region where the Arc-enabled SQL Server is being created is supported. It also verifies that the required resource provider, `Microsoft.AzureArcData`, is registered in the subscription. These check requires the user account or service principal used for Azure authentication to have read permission on the subscription.
 
 - User or service principal must have permissions in the Azure resource group to complete the task. Specifically:
 

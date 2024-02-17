@@ -10,7 +10,7 @@ ms.subservice: security
 ms.custom: devx-track-azurecli, ignite-2023
 ms.topic: how-to
 zone_pivot_groups: as1-azuresql-sql
-monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 
 # Configure a ledger database
@@ -102,10 +102,6 @@ az sql db create \
     --ledger-on
 ```
 
-
-
-
-
 ---
 
 ::: zone-end
@@ -169,10 +165,6 @@ az sql midb create \
     --ledger-on
 ```
 
-
-
-
-
 ---
 
 ::: zone-end
@@ -199,7 +191,7 @@ For more information, see [CREATE DATABASE (Transact-SQL)](../../../t-sql/statem
 
 ::: zone-end
 
-## Next steps
+## Related content
 
 - [Ledger overview](ledger-overview.md)
 - [Append-only ledger tables](ledger-append-only-ledger-tables.md)

@@ -96,6 +96,8 @@
           href: database/authentication-azure-ad-only-authentication-policy.md
         - name: Managed identity
           href: database/authentication-azure-ad-user-assigned-managed-identity.md
+        - name: Microsoft Entra nonunique display names
+          href: database/authentication-microsoft-entra-create-users-with-nonunique-names.md
       - name: Transparent data encryption (TDE)
         items:
         - name: Overview

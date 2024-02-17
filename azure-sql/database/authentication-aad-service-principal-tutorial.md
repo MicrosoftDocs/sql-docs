@@ -176,7 +176,7 @@ To register your application:
 1. You'll also need to create a client secret for signing in. Follow the guide here to [upload a certificate or create a secret for signing in](/azure/active-directory/develop/howto-create-service-principal-portal#authentication-two-options).
 
 1. Record the following from your application registration. It should be available from your **Overview** pane:
-    - **Application ID**
+    - **Application (client) ID**
     - **Tenant ID** - This should be the same as before
 
 In this tutorial, we'll be using *AppSP* as our main service principal, and *myapp* as the second service principal user that will be created in Azure SQL by *AppSP*. You'll need to create two applications, *AppSP* and *myapp*.
@@ -226,7 +226,7 @@ Once a service principal is created in Microsoft Entra ID, create the user in SQ
 1. Use the following script to create a Microsoft Entra service principal user *myapp* using the service principal *AppSP*.
 
     - Replace `<TenantId>` with your `TenantId` gathered earlier.
-    - Replace `<ClientId>` with your `ClientId` gathered earlier.
+    - Replace `<ClientId>` with your `Application ID` gathered earlier.
     - Replace `<ClientSecret>` with your client secret created earlier.
     - Replace `<server name>` with your SQL logical server name. If your server name is `myserver.database.windows.net`, replace `<server name>` with `myserver`.
     - Replace `<database name>` with your SQL Database name.

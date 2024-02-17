@@ -40,6 +40,7 @@ You can also load the contents of the file into a local variable or into a table
 
 ```sql
 -- Load file contents into a variable
+DECLARE @json NVARCHAR(MAX);
 SELECT @json = BulkColumn
  FROM OPENROWSET(BULK 'C:\JSON\Books\book.json', SINGLE_CLOB) as j
 

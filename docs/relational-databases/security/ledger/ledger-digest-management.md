@@ -4,12 +4,12 @@ description: This article provides information on digest management for a ledger
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mathoma
-ms.date: 11/14/2023
+ms.date: 02/07/2024
 ms.service: sql-database
 ms.subservice: security
 ms.custom: ignite-2023
 ms.topic: conceptual
-monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 
 # Digest management
@@ -31,7 +31,7 @@ The verification process and the integrity of the database depend on the integri
 > [!NOTE]
 > Automatic generation and storage of database digests in SQL Server only supports Azure Storage accounts.
 
-Ledger integrates with the [immutable storage feature of Azure Blob Storage](/azure/storage/blobs/immutable-storage-overview) and [Azure Confidential Ledger](/azure/confidential-ledger/index). This integration provides secure storage services in Azure to help protect the database digests from potential tampering. This integration provides a simple and cost-effective way for users to automate digest management without having to worry about their availability and geographic replication.  Azure Confidential Ledger has a stronger integrity guarantee for customers who might be concerned about privileged administrators access to the digest. [This table](/azure/architecture/guide/technology-choices/multiparty-computing-service#confidential-ledger-and-azure-blob-storage) compares the immutable storage feature of Azure Blob Storage with Azure Confidential Ledger.  
+Ledger integrates with the [immutable storage feature of Azure Blob Storage](/azure/storage/blobs/immutable-storage-overview) and [Azure Confidential Ledger](/azure/confidential-ledger/index). This integration provides secure storage services in Azure to help protect the database digests from potential tampering. This integration provides a simple and cost-effective way for users to automate digest management without having to worry about their availability and geographic replication. Azure Confidential Ledger has a stronger integrity guarantee for customers who might be concerned about privileged administrators access to the digest. [This table](/azure/architecture/guide/technology-choices/multiparty-computing-service#confidential-ledger-and-azure-blob-storage) compares the immutable storage feature of Azure Blob Storage with Azure Confidential Ledger.  
 
 You can configure automatic generation and storage of database digests through the Azure portal, PowerShell, or the Azure CLI. For more information, see [Enable automatic digest storage](ledger-how-to-enable-automatic-digest-storage.md). When you configure automatic generation and storage, database digests are generated on a predefined interval of 30 seconds and uploaded to the selected storage service. If no transactions occur on the system in the 30-second interval, a database digest won't be generated and uploaded. This mechanism ensures that database digests are generated only when data has been updated in your database. When the endpoint is an Azure Blob Storage, the [logical server for Azure SQL Database](/azure/azure-sql/database/logical-servers) or Azure SQL Managed Instance creates a new container, named **sqldbledgerdigests** and uses a naming pattern like: `ServerName/DatabaseName/CreationTime`. The creation time is needed because a database with the same name can be dropped and recreated or restored, allowing for different _incarnations_ of the database under the same name. For more information, see [Digest Management Considerations](ledger-digest-management.md).
 
@@ -44,7 +44,7 @@ If you use an Azure Storage account for the storage of the database digests, con
 
 #### Azure Storage account permission
 
-If you use **Azure SQL Database** or **Azure SQL Managed Instance**, make sure that your logical server or managed instance (System Identity) has sufficient RBAC permissions to write digests by adding it to the [Storage Blob Data Contributor](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) role. In case you use Active geo-replication or auto-failover groups make sure that the secondary replica(s) have the same RBAC permission on the Azure Storage account.
+If you use **Azure SQL Database** or **Azure SQL Managed Instance**, make sure that your logical server or managed instance (System Identity) has sufficient role-based access control (RBAC) permissions to write digests by adding it to the [Storage Blob Data Contributor](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) role. In case you use Active geo-replication or auto-failover groups make sure that the secondary replicas have the same RBAC permission on the Azure Storage account.
 
 If you use **SQL Server**, you have to create a shared access signature (SAS) on the digest container to allow SQL Server to connect and authenticate against the Azure Storage account.
 
@@ -68,6 +68,10 @@ If you use **Azure SQL Database** or **Azure SQL Managed Instance**, make sure t
 
 > [!NOTE]
 > Automatic generation and storage of database digests in SQL Server only supports Azure Storage accounts.
+
+#### Configure Azure SQL Managed Instance NSG rules to work with Azure Confidential Ledger
+
+If you use **Azure SQL Managed Instance**, make sure that you configure the virtual network rules of your Azure SQL Managed Instance to communicate with Azure Confidential Ledger. For more information, see [Configure Azure SQL Managed Instance NSG rules to work with Azure Confidential Ledger](ledger-nsg-policies-configure.md).
 
 ### Manual generation and storage of database digests
 
@@ -97,7 +101,7 @@ Generating database digests requires the `GENERATE LEDGER DIGEST` permission. Fo
 
 ### Database restore
 
-Restoring the database back to an earlier point in time, also known as [Point in Time Restore](/azure/azure-sql/database/recovery-using-backups#point-in-time-restore), is an operation frequently used when a mistake occurs and users need to quickly revert the state of the database back to an earlier point in time. When uploading the generated digests to Azure Storage or Azure Confidential Ledger, the *create time* of the database is captured that these digests map to. Every time the database is restored, it's tagged with a new *create time* and this technique allows us to store the digests across different "incarnations" of the database. For SQL Server, the *create time* is the current UTC time when the digest upload is enabled for the first time. Ledger preserves the information regarding when a restore operation occurred, allowing the verification process to use all the relevant digests across the various incarnations of the database. Additionally, users can inspect all digests for different create times to identify when the database was restored and how far back it was restored to. Since this data is written in immutable storage, this information will be protected as well.
+Restoring the database back to an earlier point in time, also known as [Point in Time Restore](/azure/azure-sql/database/recovery-using-backups#point-in-time-restore), is an operation frequently used when a mistake occurs and users need to quickly revert the state of the database back to an earlier point in time. When uploading the generated digests to Azure Storage or Azure Confidential Ledger, the *create time* of the database is captured that these digests map to. Every time the database is restored, it's tagged with a new *create time* and this technique allows us to store the digests across different "incarnations" of the database. For SQL Server, the *create time* is the current UTC time when the digest upload is enabled for the first time. Ledger preserves the information regarding when a restore operation occurred, allowing the verification process to use all the relevant digests across the various incarnations of the database. Additionally, users can inspect all digests for different create times to identify when the database was restored and how far back it was restored to. Since this data is written in immutable storage, this information is protected as well.
 
 > [!NOTE]
 > If you perform a native restore of a database backup in Azure SQL Managed Instance, you need to change the digest path manually using the Azure Portal, PowerShell or the Azure CLI.
@@ -107,11 +111,11 @@ Restoring the database back to an earlier point in time, also known as [Point in
 Active geo-replication or auto-failover groups can be configured for Azure SQL Database or Azure SQL Managed Instance. Replication across geographic regions is asynchronous for performance reasons and, thus, allows the secondary database to be slightly behind compared to the primary. In the event of a geographic failover, any latest data that hasn't yet been replicated is lost. Ledger will only issue database digests for data that has been replicated to geographic secondaries to guarantee that digests will never reference data that might be lost in case of a geographic failover. This only applies for automatic generation and storage of database digests. In a failover group, both primary and secondary database will have the same digest path. Even when you perform a failover, the digest path doesn't change for both primary and secondary database.
 
 If failover group is deleted or you drop the link, both databases will behave as primary databases.
-At that point the digest path of the previous secondary database will change and we will add a folder RemovedSecondaryReplica to the path.
+At that point the digest path of the previous secondary database will change and we'll add a folder RemovedSecondaryReplica to the path.
 
 When your database is part of an Always On availability group or a Managed Instance link in SQL Server, the same principle as active geo-replication is used. The upload of the digests is only done if all transactions have been replicated to the secondary replicas.
 
-## Next steps
+## Related content
 
 - [Ledger overview](ledger-overview.md)
 - [Enable automatic digest storage](ledger-how-to-enable-automatic-digest-storage.md)

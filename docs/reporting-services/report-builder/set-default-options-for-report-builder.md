@@ -38,7 +38,7 @@ Specify the number of recent sites and connections to show in the **Open Report*
 Specify the number of recent shared datasets and data source connections to show in the **Dataset Properties** dialog and the **Choose a connection to a data source** page of the **Data Regions** Wizard.
 
 **Show this number of recent documents**  
-Specify the number of recent documents to show when you select the **Report Builde**r button.
+Specify the number of recent documents to show when you select the **Report Builder** button.
 
 **Clear all recent item lists**  
 Clear the current lists of recent sites and servers, shared datasets, shared data source connections, and documents.

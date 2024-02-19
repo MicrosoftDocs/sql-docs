@@ -16,11 +16,11 @@ helpviewer_keywords:
   - "dm_os_out_of_memory_events"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||=sql-server-ver16"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 ---
 # sys.dm_os_out_of_memory_events
 
-[!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
+[!INCLUDE [Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Returns a log of out of memory (OOM) events.
 
@@ -59,6 +59,8 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 ## Remarks
 
 Each row in this view represents an out of memory (OOM) event that has occurred in the database engine. Not all OOM events might be captured. Older OOM events can disappear from the result set as more recent OOM events occur. Result set is not persisted across restarts of the database engine.
+
+Currently, this DMV is visible but not supported in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
 ### summarized_oom_snapshot extended event
 

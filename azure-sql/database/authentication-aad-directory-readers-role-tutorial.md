@@ -74,7 +74,7 @@ For subsequent steps, the Global Administrator or Privileged Role Administrator 
 
     - Go to the **Microsoft Entra ID** resource. Under the **Manage** setting, select **Enterprise applications**. The **Object ID** is the identity of the instance.
     
-    :::image type="content" source="media/authentication-aad-directory-readers-role/azure-ad-managed-instance-service-principal.png" alt-text="Screenshot of the Enterprise applications page for a Microsoft Entra I D resource with the Object I D of the SQL Managed instance highlighted.":::
+    :::image type="content" source="media/authentication-aad-directory-readers-role/azure-ad-managed-instance-service-principal.png" alt-text="Screenshot of the Enterprise applications page for a Microsoft Entra ID resource with the Object ID of the SQL Managed instance highlighted.":::
 
 1. Go to the **Microsoft Entra ID** resource. Under **Managed**, go to **Groups**. Select the group that you created. Under the **Managed** setting of your group, select **Members**. Select **Add members** and add your SQL Managed Instance service principal as a member of the group by searching for the name found above.
 

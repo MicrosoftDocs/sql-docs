@@ -48,7 +48,7 @@ BEGIN { TRAN | TRANSACTION }
 ```  
  
 ```syntaxsql
---Applies to Synpase Data Warehouse in Microsoft Fabric, Azure Synapse Analytics and Parallel Data Warehouse
+--Applies to Synapse Data Warehouse in Microsoft Fabric, Azure Synapse Analytics and Parallel Data Warehouse
  
 BEGIN { TRAN | TRANSACTION }   
 [ ; ]  

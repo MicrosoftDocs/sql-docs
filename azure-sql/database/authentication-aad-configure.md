@@ -14,7 +14,7 @@ ms.custom:
   - has-adal-ref
   - sqldbrb=2
   - devx-track-azurepowershell
-  - has-azure-ad-ps-ref
+  - has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
@@ -146,52 +146,50 @@ After provisioning a Microsoft Entra admin for your SQL Managed Instance, you ca
 To use PowerShell to grant your SQL Managed Instance read permissions to Microsoft Entra ID, run this script:
 
 ```powershell
-# Gives Microsoft Entra read permission to a service principal representing the SQL Managed Instance.
-# Can be executed only by a "Global Administrator" or "Privileged Role Administrator" type of user.
+# This script grants "Directory Readers" permission to a service principal representing the SQL Managed Instance.
+# It can be executed only by a user who is a member of the **Global Administrator** or **Privileged Roles Administrator** role.
 
-$aadTenant = "<YourTenantId>" # Enter your tenant ID
-$managedInstanceName = "MyManagedInstance"
+Import-Module Microsoft.Graph.Authentication
+$managedInstanceName = "<ManagedInstanceName>" # Enter the name of your managed instance
+$tenantId = "<TenantId>"                       # Enter your tenant ID
 
-# Get Azure AD role "Directory Users" and create if it doesn't exist
+Connect-MgGraph -TenantId $tenantId -Scopes "RoleManagement.ReadWrite.Directory"
+ 
+# Get Microsoft Entra "Directory Readers" role and create if it doesn't exist
 $roleName = "Directory Readers"
-$role = Get-AzureADDirectoryRole | Where-Object {$_.displayName -eq $roleName}
+$role = Get-MgDirectoryRole -Filter "DisplayName eq '$roleName'"
 if ($role -eq $null) {
     # Instantiate an instance of the role template
-    $roleTemplate = Get-AzureADDirectoryRoleTemplate | Where-Object {$_.displayName -eq $roleName}
-    Enable-AzureADDirectoryRole -RoleTemplateId $roleTemplate.ObjectId
-    $role = Get-AzureADDirectoryRole | Where-Object {$_.displayName -eq $roleName}
+    $roleTemplate = Get-MgDirectoryRoleTemplate -Filter "DisplayName eq '$roleName'"
+    New-MgDirectoryRoleTemplate -RoleTemplateId $roleTemplate.Id
+    $role = Get-MgDirectoryRole -Filter "DisplayName eq '$roleName'"
 }
 
 # Get service principal for your SQL Managed Instance
-$roleMember = Get-AzureADServicePrincipal -SearchString $managedInstanceName
+$roleMember = Get-MgServicePrincipal -Filter "DisplayName eq '$managedInstanceName'"
 $roleMember.Count
 if ($roleMember -eq $null) {
-    Write-Output "Error: No Service Principals with name '$    ($managedInstanceName)', make sure that managedInstanceName parameter was entered correctly."
+    Write-Output "Error: No service principal with name '$($managedInstanceName)' found, make sure that managedInstanceName parameter was entered correctly."
     exit
 }
 if (-not ($roleMember.Count -eq 1)) {
-    Write-Output "Error: More than one service principal with name pattern '$    ($managedInstanceName)'"
-    Write-Output "Dumping selected service principals...."
-    $roleMember
+    Write-Output "Error: Multiple service principals with name '$($managedInstanceName)'"
+    Write-Output $roleMember | Format-List DisplayName, Id, AppId
     exit
 }
 
-# Check if service principal is already member of readers role
-$allDirReaders = Get-AzureADDirectoryRoleMember -ObjectId $role.ObjectId
-$selDirReader = $allDirReaders | where{$_.ObjectId -match     $roleMember.ObjectId}
-
-if ($selDirReader -eq $null) {
-    # Add principal to readers role
-    Write-Output "Adding service principal '$($managedInstanceName)' to     'Directory Readers' role'..."
-    Add-AzureADDirectoryRoleMember -ObjectId $role.ObjectId -RefObjectId     $roleMember.ObjectId
-    Write-Output "'$($managedInstanceName)' service principal added to     'Directory Readers' role'..."
-
-    #Write-Output "Dumping service principal '$($managedInstanceName)':"
-    #$allDirReaders = Get-AzureADDirectoryRoleMember -ObjectId $role.ObjectId
-    #$allDirReaders | where{$_.ObjectId -match $roleMember.ObjectId}
-}
-else {
-    Write-Output "Service principal '$($managedInstanceName)' is already     member of 'Directory Readers' role'."
+# Check if service principal is already member of Directory Readers role
+$isDirReader = Get-MgDirectoryRoleMember -DirectoryRoleId $role.Id -Filter "Id eq '$($roleMember.Id)'"
+if ($isDirReader -eq $null) {
+    # Add principal to Directory Readers role
+    Write-Output "Adding service principal '$($managedInstanceName)' to 'Directory Readers' role..."
+    $body = @{
+        "@odata.id"= "https://graph.microsoft.com/v1.0/directoryObjects/{$($roleMember.Id)}"
+    }
+    New-MgDirectoryRoleMemberByRef -DirectoryRoleId $role.Id -BodyParameter $body
+    Write-Output "'$($managedInstanceName)' service principal added to 'Directory Readers' role."
+} else {
+    Write-Output "Service principal '$($managedInstanceName)' is already member of 'Directory Readers' role."
 }
 ```
 

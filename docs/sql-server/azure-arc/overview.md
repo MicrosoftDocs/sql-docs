@@ -39,14 +39,11 @@ Review an example of a custom dashboard in [GitHub microsoft/sql-server-samples]
 
 You can optimize the configuration of your SQL Server instances for best performance and security by running a best practices assessment. The assessment report shows you specific ways to improve your configuration. The assessment compares your configuration to best practices established by Microsoft Support through many years of real-world experience. Each suggestion includes the details on how to change the configuration.
 
-## Microsoft Entra ID authentication
-
-Establish a secure connection to Azure to authenticate with Microsoft Entra ID. Requires:
-
-- [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] or later.
-- [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]
+## Microsoft Entra authentication
 
 [!INCLUDE [entra-id](../../includes/entra-id.md)]
+
+Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], Azure Arc enabled SQL Server instances can utilize Microsoft Entra ID for authentication, bringing a modern centralized identity and access management solution to SQL Server. Microsoft Entra authentication provides greatly enhanced security over traditional username and password-based authentication, which is **not recommended**. For more information about the risks and challenges passwords pose, refer to ["What’s the solution to the growing problem of passwords?](https://news.microsoft.com/features/whats-solution-growing-problem-passwords-says-microsoft/) Microsoft Entra authentication removes the need for self-managed secrets entirely when communicating with Azure resources, through managed identity authentication. For user-based authentication, Microsoft Entra ID supports enhanced security measures including MFA, SSO, and modern identity practices.
 
 ## Microsoft Defender for Cloud
 

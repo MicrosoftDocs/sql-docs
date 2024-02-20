@@ -4502,9 +4502,10 @@ items:
       href: database-engine/configure-windows/sql-server-monitor-overview.md
     - name: Buffer Pool Extension
       href: database-engine/configure-windows/buffer-pool-extension.md
-    - name: Server Configuration Options
-      href: database-engine/configure-windows/server-configuration-options-sql-server.md
+    - name: Server configuration options
       items:
+      - name: Overview
+        href: database-engine/configure-windows/server-configuration-options-sql-server.md
       - name: access check cache
         href: database-engine/configure-windows/access-check-cache-server-configuration-options.md
       - name: ad hoc distributed queries

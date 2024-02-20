@@ -8,7 +8,7 @@ ms.reviewer: vanto, wiassaf
 ms.date: 10/24/2023
 ms.service: sql-db-mi
 ms.subservice: security
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.topic: conceptual
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
@@ -67,58 +67,65 @@ The following sample PowerShell script grants the necessary permissions for a ma
 
 To run the script, you must sign in as a user with a Global Administrator or Privileged Role Administrator role.
 
-The script grants the `User.Read.All`, `GroupMember.Read.All`, and `Application.Read.ALL` permissions to a UMI or an SMI to access [Microsoft Graph](/graph/auth/auth-concepts#microsoft-graph-permissions).
+The script grants the `User.Read.All`, `GroupMember.Read.All`, and `Application.Read.ALL` permissions to a managed identity to access [Microsoft Graph](/graph/auth/auth-concepts#microsoft-graph-permissions).
 
 ```powershell
-# Script to assign permissions to the UMI "umiservertest"
-
-import-module AzureAD
-$tenantId = '<tenantId>' # Your Azure AD tenant ID
-
-Connect-AzureAD -TenantID $tenantId
-# Log in as a user with a "Global Administrator" or "Privileged Role Administrator" role
 # Script to assign permissions to an existing UMI 
-# The following Microsoft Graph permissions are required: 
+# The following required Microsoft Graph permissions will be assigned: 
 #   User.Read.All
 #   GroupMember.Read.All
-#   Application.Read.ALL
+#   Application.Read.All
+
+Import-Module Microsoft.Graph.Authentication
+Import-Module Microsoft.Graph.Applications
+
+$tenantId = "<tenantId>"        # Your tenant ID
+$MSIName = "<managedIdentity>"; # Name of your managed identity
+
+# Log in as a user with the "Global Administrator" or "Privileged Role Administrator" role
+Connect-MgGraph -TenantId $tenantId -Scopes "AppRoleAssignment.ReadWrite.All,Application.Read.All"
 
 # Search for Microsoft Graph
-$AAD_SP = Get-AzureADServicePrincipal -SearchString "Microsoft Graph";
-$AAD_SP
-# Use Microsoft Graph; in this example, this is the first element $AAD_SP[0]
+$MSGraphSP = Get-MgServicePrincipal -Filter "DisplayName eq 'Microsoft Graph'";
+$MSGraphSP
 
-#Output
+# Sample Output
 
-#ObjectId                             AppId                                DisplayName
-#--------                             -----                                -----------
-#47d73278-e43c-4cc2-a606-c500b66883ef 00000003-0000-0000-c000-000000000000 Microsoft Graph
-#44e2d3f6-97c3-4bc7-9ccd-e26746638b6d 0bf30f3b-4a52-48df-9a82-234910c4a086 Microsoft Graph #Change 
+# DisplayName     Id                                   AppId                                SignInAudience      ServicePrincipalType
+# -----------     --                                   -----                                --------------      --------------------
+# Microsoft Graph 47d73278-e43c-4cc2-a606-c500b66883ef 00000003-0000-0000-c000-000000000000 AzureADMultipleOrgs Application
 
-$MSIName = "<managedIdentity>";  # Name of your user-assigned or system-assigned managed identity
-$MSI = Get-AzureADServicePrincipal -SearchString $MSIName 
+$MSI = Get-MgServicePrincipal -Filter "DisplayName eq '$MSIName'" 
 if($MSI.Count -gt 1)
 { 
-Write-Output "More than 1 principal found, please find your principal and copy the right object ID. Now use the syntax $MSI = Get-AzureADServicePrincipal -ObjectId <your_object_id>"
-
-# Choose the right UMI or SMI
-
+Write-Output "More than 1 principal found with that name, please find your principal and copy its object ID. Replace the above line with the syntax $MSI = Get-MgServicePrincipal -ServicePrincipalId <your_object_id>"
 Exit
-} 
+}
 
-# If you have more UMIs with similar names, you have to use the proper $MSI[ ]array number
+# Get required permissions
+$Permissions = @(
+  "User.Read.All"
+  "GroupMember.Read.All"
+  "Application.Read.All"
+)
 
-# Assign the app roles
+# Find app permissions within Microsoft Graph application
+$MSGraphAppRoles = $MSGraphSP.AppRoles | Where-Object {($_.Value -in $Permissions)}
 
-$AAD_AppRole = $AAD_SP.AppRoles | Where-Object {$_.Value -eq "User.Read.All"}
-New-AzureADServiceAppRoleAssignment -ObjectId $MSI.ObjectId  -PrincipalId $MSI.ObjectId  -ResourceId $AAD_SP.ObjectId[0]  -Id $AAD_AppRole.Id 
-$AAD_AppRole = $AAD_SP.AppRoles | Where-Object {$_.Value -eq "GroupMember.Read.All"}
-New-AzureADServiceAppRoleAssignment -ObjectId $MSI.ObjectId  -PrincipalId $MSI.ObjectId  -ResourceId $AAD_SP.ObjectId[0]  -Id $AAD_AppRole.Id
-$AAD_AppRole = $AAD_SP.AppRoles | Where-Object {$_.Value -eq "Application.Read.All"}
-New-AzureADServiceAppRoleAssignment -ObjectId $MSI.ObjectId  -PrincipalId $MSI.ObjectId  -ResourceId $AAD_SP.ObjectId[0]  -Id $AAD_AppRole.Id
+# Assign the managed identity app roles for each permission
+foreach($AppRole in $MSGraphAppRoles)
+{
+    $AppRoleAssignment = @{
+	    principalId = $MSI.Id
+	    resourceId = $MSGraphSP.Id
+	    appRoleId = $AppRole.Id
+    }
+
+    New-MgServicePrincipalAppRoleAssignment `
+    -ServicePrincipalId $AppRoleAssignment.PrincipalId `
+    -BodyParameter $AppRoleAssignment -Verbose
+}
 ```
-
-In the final steps of the script, if you have more UMIs with similar names, you have to use the proper `$MSI[ ]array` number. An example is `$AAD_SP.ObjectId[0]`.
 
 ### Check permissions for user-assigned managed identity
 

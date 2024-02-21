@@ -112,7 +112,7 @@ Use continuous mode migration when you don't have the entire backup chain in adv
 
 If you're migrating large databases of several terabytes in size, consider the following:
 - A single LRS job can run for a maximum of 30 days. When this period expires, the job is automatically canceled.
-- For long-running jobs, system updates will interrupt and prolong migration jobs. We highly recommend that you use a [maintenance window]( ../database/maintenance-window.md) to schedule planned system updates. Plan your migration around the scheduled maintenance window.
+- For long-running jobs, system updates will interrupt and prolong migration jobs. We highly recommend that you use a [maintenance window]( maintenance-window.md) to schedule planned system updates. Plan your migration around the scheduled maintenance window.
 - Migration jobs that are interrupted by system updates are automatically suspended and resumed for General Purpose managed instances, and they're restarted for Business Critical managed instances. These updates will affect the timeframe of your migration.
 - To increase the upload speed of your SQL Server backup files to the Blob Storage account, if your infrastructure has sufficient network bandwidth, consider using parallelization with multiple threads.
 
@@ -147,7 +147,7 @@ Consider the following limitations of LRS:
 
 - Only database `.bak`, `.log`, and `.diff` files are supported by LRS. Dacpac and bacpac files are not supported. 
 - During the migration process, databases that are being migrated can't be used for read-only access on SQL Managed Instance.
-- You have to configure a [maintenance window](../database/maintenance-window.md) to allow scheduling of system updates at a specific day and time. Plan to run and finish migrations outside the scheduled maintenance window.
+- You have to configure a [maintenance window](maintenance-window.md) to allow scheduling of system updates at a specific day and time. Plan to run and finish migrations outside the scheduled maintenance window.
 - Database backups that are taken without `CHECKSUM` take longer to restore than do database backups with `CHECKSUM` enabled. 
 - The shared access signature (SAS) token that LRS uses must be generated for the entire Azure Blob Storage container, and it must have Read and List permissions only. For example, if you grant Read, List, and Write permissions, LRS won't be able to start because of the extra Write permission.
 - Using SAS tokens created with permissions that are set through defining a [stored access policy](/rest/api/storageservices/define-stored-access-policy) isn't supported. Follow the instructions in this article to manually specify Read and List permissions for the SAS token.

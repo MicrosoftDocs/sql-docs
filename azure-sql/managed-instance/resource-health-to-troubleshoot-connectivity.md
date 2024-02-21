@@ -55,7 +55,7 @@ When your SQL managed instance experiences downtime, analysis is performed to de
 
 ### Select a maintenance window
 
-You can configure your [maintenance window](../database/maintenance-window.md?view=azuresql-mi&preserve-view=true) to make impactful maintenance events predictable and less disruptive for your workload. The maintenance window feature helps you plan around predictable upgrades or scheduled maintenance. [Advance notifications](../database/advance-notifications.md?view=azuresql-mi&preserve-view=true) are available for all SQL managed instances. Advance notifications enable customers to configure notifications to be sent up to 24 hours in advance of any planned event.
+You can configure your [maintenance window](maintenance-window.md?view=azuresql-mi&preserve-view=true) to make impactful maintenance events predictable and less disruptive for your workload. The maintenance window feature helps you plan around predictable upgrades or scheduled maintenance. [Advance notifications](advance-notifications.md?view=azuresql-mi&preserve-view=true) are available for all SQL managed instances. Advance notifications enable customers to configure notifications to be sent up to 24 hours in advance of any planned event.
 
 ### Planned maintenance
 
@@ -72,4 +72,4 @@ Reconfigurations are considered transient conditions and are expected from time 
 - Learn more about [configuring Resource Health alerts](/azure/service-health/resource-health-alert-arm-template-guide).
 - Get an overview of [Resource Health](/azure/service-health/resource-health-overview).
 - Review [Resource Health FAQ](/azure/service-health/resource-health-faq).
-- Configure a [maintenance window](../database/maintenance-window.md?view=azuresql-mi&preserve-view=true) and [advance notifications](../database/advance-notifications.md?view=azuresql-mi&preserve-view=true).
+- Configure a [maintenance window](maintenance-window.md?view=azuresql-mi&preserve-view=true) and [advance notifications](advance-notifications.md?view=azuresql-mi&preserve-view=true).

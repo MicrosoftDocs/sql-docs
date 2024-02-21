@@ -87,11 +87,10 @@ The zone-redundant version of the high availability architecture is illustrated 
 
 :::image type="content" source="../database/media/high-availability-sla/zone-redundant-business-critical-service-tier.png" alt-text="Diagram of the zone-redundant high availability architecture.":::
 
-
-Consider the following when using zone-redundancy: 
+Consider the following when using zone-redundancy:
 
 - For up to date information about the regions that support zone-redundant configurations, see [Services support by region](/azure/availability-zones/az-region).
-- For zone redundant availability, choosing a [maintenance window](../database/maintenance-window.md) other than the default is currently available in [select regions](../database/maintenance-window.md?preserve-view=true&view=azuresql#azure-sql-managed-instance-region-support-for-maintenance-windows).
+- For zone redundant availability, choosing a [maintenance window](../managed-instance/maintenance-window.md) other than the default is currently available in [select regions](maintenance-window.md?preserve-view=true&view=azuresql#azure-sql-managed-instance-region-support-for-maintenance-windows).
 
 ### Supported regions for Business Critical instances
 

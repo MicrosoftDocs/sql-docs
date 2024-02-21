@@ -432,6 +432,9 @@ providers/Microsoft.Sql/managedInstances/{managedInstanceName}/startStopSchedule
 ---
 
 
+> [!NOTE]  
+> The Activity Log currently only observes operations initiated via Azure Resource Manager (ARM). Since scheduled start and stop operations are triggered from the backend as part of the schedule, these operations do not show up on the Activity Log in Azure portal.
+
 
 ## Next steps
 

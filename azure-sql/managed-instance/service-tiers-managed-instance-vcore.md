@@ -3,7 +3,7 @@ title: vCore purchasing model
 description: The vCore purchasing model lets you independently scale compute and storage resources, match on-premises performance, and optimize price for Azure SQL Managed Instance.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: sashan, moslake
+ms.reviewer: sashan, moslake, vladiv
 ms.date: 12/07/2023
 ms.service: sql-managed-instance
 ms.subservice: performance
@@ -132,6 +132,13 @@ The key reasons why you should choose Business Critical service tier instead of 
 - **Higher availability** - The Business Critical tier in a multi-availability zone configuration provides resiliency to zonal failures and a higher availability SLA.
 - **Fast geo-recovery** - If a [failover group](failover-group-sql-mi.md) is configured, the Business Critical tier has a guaranteed Recovery Point Objective (RPO) of 5 seconds and Recovery Time Objective (RTO) of 30 seconds for 100% of deployed hours.
 
+When specifying service tier in templates or scripts, tier is provided by using its name. The following table applies:
+
+|Hardware|Name|
+|:-- |:-- |
+|General Purpose|GeneralPurpose|
+|Business Critical|BusinessCritical|
+
 
 ## Hardware configurations
 
@@ -191,6 +198,20 @@ When specifying hardware parameter in templates or scripts, hardware is provided
 |Standard-series (Gen5)|Gen5|
 |Premium-series|G8IM|
 |Memory optimized premium-series|G8IH|
+
+### SKU names
+
+> [!NOTE]
+> When specyfing hardware and service tier in templates or scripts, you can specify them independently, or you can provide a SKU name. When specifying the SKU name, the following table applies:
+
+|SKU|Service Tier|Hardware|
+|:-- |:-- |:-- |
+|GP_Gen5|General Purpose|Standard-series|
+|GP_G8IM|General Purpose|Premium-series|
+|GP_G8IH|General Purpose|Premium-series memory-optimized|
+|BC_Gen5|Business Critical|Standard-series|
+|BC_G8IM|Business Critical|Premium-series|
+|BC_G8IH|Business Critical|Premium-series memory-optimized|
 
 ### Hardware availability
 

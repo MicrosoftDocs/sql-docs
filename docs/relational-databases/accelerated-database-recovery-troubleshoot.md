@@ -3,7 +3,7 @@ title: "Troubleshoot accelerated database recovery"
 description: "Troubleshoot accelerated database recovery"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: kfarlee
+ms.reviewer: wiassaf
 ms.date: 07/14/2022
 ms.service: sql
 ms.subservice: backup-restore

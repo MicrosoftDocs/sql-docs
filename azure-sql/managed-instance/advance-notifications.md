@@ -1,33 +1,30 @@
 ---
 title: Advance notifications (Preview) for planned maintenance events
-titleSuffix: Azure SQL Database
-description: Get notification before planned maintenance for Azure SQL Database.
+titleSuffix: Azure SQL Managed Instance
+description: Get notification before planned maintenance for Azure SQL Managed Instance.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: scottkim, urosmil
-ms.date: 01/12/2024
-ms.service: sql-database
+ms.reviewer: scottkim, mathoma, urosmil
+ms.date: 02/20/2024
+ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: how-to
 ms.custom: azure-sql-split
-monikerRange: "=azuresql||=azuresql-db"
+monikerRange: "=azuresql||=azuresql-mi"
 ---
-# Advance notifications for planned maintenance events in Azure SQL Database (Preview)
-[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
+# Advance notifications for planned maintenance events in Azure SQL Managed Instance (Preview)
+[!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](advance-notifications.md?view=azuresql-db&preserve-view=true)
-> * [Azure SQL Managed Instance](../managed-instance/advance-notifications.md?view=azuresql-mi&preserve-view=true)
+> * [Azure SQL Database](../database/advance-notifications.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](advance-notifications.md?view=azuresql-mi&preserve-view=true)
 
-Advance notifications (Preview) are available for databases configured to use a nondefault [maintenance window](maintenance-window.md). Advance notifications enable customers to configure notifications to be sent up to 24 hours in advance of any planned event.
+Advance notifications enable customers to configure notifications to be sent up to 24 hours in advance of any planned event.
 
 Notifications can be configured so you can get texts, emails, Azure push notifications, and voicemails when planned maintenance is due to begin in the next 24 hours. Follow-up notifications are sent when maintenance begins and when maintenance ends.
 
-> [!IMPORTANT]
-> For Azure SQL Database, advance notifications cannot be configured for the **System default** maintenance window option. Choose a maintenance window other than the **System default** to configure and enable Advance notifications.
-
 > [!NOTE]
-> While [maintenance windows](maintenance-window.md) are generally available, advance notifications for maintenance windows are in preview for Azure SQL Database and Azure SQL Managed Instance.
+> While [maintenance windows](maintenance-window.md) are generally available, advance notifications for maintenance windows are in preview for Azure SQL Managed Instance.
 
 ## Configure an advance notification
 
@@ -44,7 +41,7 @@ Complete the following steps to enable a notification in the Azure portal **Serv
 
     :::image type="content" source="media/advance-notifications/select-subscription.png" alt-text="Screenshot of the Azure portal page where you select the subscription where you configure the health alert." lightbox="media/advance-notifications/select-subscription.png":::
 
-1. In the **Condition** section, configure service(s) to be alerted for, region(s) and criteria. For more generic alert, select all values. To narrow down, select Azure SQL Database as a service, region(s) where you have those services deployed, and **Planned maintenance** for the event type.
+1. In the **Condition** section, configure service(s) to be alerted for, region(s) and criteria. For more generic alert, select all values. To narrow down, select Azure SQL Managed Instance as a service, region(s) where you have those services deployed, and **Planned maintenance** for the event type.
 
     :::image type="content" source="media/advance-notifications/define-condition-services.png" alt-text="Screenshot of the Azure portal page where you define conditions for the health alert and define services to be notified for." lightbox="media/advance-notifications/define-condition-services.png":::
 
@@ -76,13 +73,13 @@ The following table shows the general information notifications you might receiv
 |**InProgress** | Maintenance for database(s) in region *region_name* is starting. | 
 |**Complete** | Maintenance of database(s) in region *region_name* is complete. |
 
-<sup>1</sup> Start and end time depend on the selected [maintenance window](maintenance-window.md). 
+<sup>1</sup> Start and end time depend on the selected [maintenance window](maintenance-window.md).
 
-The following table shows additional notifications that might be sent while maintenance is ongoing: 
+The following table shows additional notifications that might be sent while maintenance is ongoing:
 
 |Status|Description|
 |:---|:---|
-|**Rescheduled** | - Maintenance is in progress but didn't complete inside maintenance window. <br/>- There was a problem during maintenance and it could not start.<br/> - Planned maintenance has started but couldn't progress to the end and will continue in next maintenance window. | 
+|**Rescheduled** | - Maintenance is in progress but didn't complete inside maintenance window. <br/>- There was a problem during maintenance and it could not start.<br/> - Planned maintenance has started but couldn't progress to the end and will continue in next maintenance window. |
 |**Canceled**| Maintenance for database(s) in region *region_name* is canceled and will be rescheduled for later. |
 
 ## Permissions

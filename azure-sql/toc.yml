@@ -36,14 +36,8 @@
       href: database/elastic-transactions-overview.md
     - name: Scheduled maintenance
       items:
-      - name: Maintenance window
-        href: database/maintenance-window.md
-      - name: Configure maintenance window
-        href: database/maintenance-window-configure.md
-      - name: Maintenance window FAQ
-        href: database/maintenance-window-faq.yml
-      - name: Advance notifications
-        href: database/advance-notifications.md
+      - name: Maintenance window in Azure SQL
+        href: maintenance-window-azure-sql.md
     - name: Security
       items:
       - name: Overview
@@ -584,6 +578,17 @@
           href: database/resource-limits-vcore-elastic-pools.md
         - name: DTU resource limits
           href: database/resource-limits-dtu-elastic-pools.md
+
+    - name: Scheduled maintenance
+      items:
+      - name: Maintenance window
+        href: database/maintenance-window.md
+      - name: Configure maintenance window
+        href: database/maintenance-window-configure.md
+      - name: Maintenance window FAQ
+        href: database/maintenance-window-faq.yml
+      - name: Advance notifications
+        href: database/advance-notifications.md
 
   - name: Migration guides
     items: 
@@ -1403,6 +1408,16 @@
         - name: Troubleshoot
           displayName: Troubleshoot Windows authentication for Microsoft Entra with Kerberos
           href: managed-instance\winauth-azuread-troubleshoot.md
+    - name: Scheduled maintenance
+      items:
+      - name: Maintenance window
+        href: managed-instance/maintenance-window.md
+      - name: Configure maintenance window
+        href: managed-instance/maintenance-window-configure.md
+      - name: Maintenance window FAQ
+        href: managed-instance/maintenance-window-faq.yml
+      - name: Advance notifications
+        href: managed-instance/advance-notifications.md
   - name: How to
     items:
     - name: How-to documentation

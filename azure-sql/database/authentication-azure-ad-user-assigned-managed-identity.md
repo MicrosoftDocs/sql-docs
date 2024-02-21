@@ -17,7 +17,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) supports two types of managed identities: system-assigned managed identity (SMI) and user-assigned managed identity (UMI). For more information, see [Managed identity types](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types).
+Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) supports two types of managed identities: system-assigned managed identity (SMI) and user-assigned managed identity (UMI). For more information, see [Managed identity types](/entra/identity/managed-identities-azure-resources/overview#managed-identity-types).
 
 An SMI is automatically assigned to Azure SQL Managed Instance when it's created. When you're using Microsoft Entra authentication with Azure SQL Database, you must assign an SMI when Azure service principals are used to create Microsoft Entra users in SQL Database.
 
@@ -46,7 +46,7 @@ There are several benefits of using a UMI as a server identity:
 
 ## <a id="creating-a-user-assigned-managed-identity"></a> Create a user-assigned managed identity
 
-For information on how to create a UMI, see [Manage user-assigned managed identities](/azure/active-directory/managed-identities-azure-resources/how-manage-user-assigned-managed-identities).
+For information on how to create a UMI, see [Manage user-assigned managed identities](/entra/identity/managed-identities-azure-resources/how-manage-user-assigned-managed-identities).
 
 ## Permissions
 
@@ -55,7 +55,7 @@ After the UMI is created, some permissions are needed to allow the UMI to read f
 These permissions should be granted before you provision a logical server or managed instance. After you grant the permissions to the UMI, they're enabled for all servers or instances that are created with the UMI assigned as a server identity.
 
 > [!IMPORTANT]
-> Only a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) or [Privileged Role Administrator](/azure/active-directory/roles/permissions-reference#privileged-role-administrator) can grant these permissions.
+> Only a [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) or [Privileged Role Administrator](/entra/identity/role-based-access-control/permissions-reference#privileged-role-administrator) can grant these permissions.
 
 - [User.Read.All](/graph/permissions-reference#user-permissions): Allows access to Microsoft Entra user information.
 - [GroupMember.Read.All](/graph/permissions-reference#group-permissions): Allows access to Microsoft Entra group information.
@@ -214,14 +214,14 @@ The Azure CLI 2.26.0 (or later) is required to run these commands with a UMI.
   - For example, to retrieve the UMI(s) of a logical server, look for the `principalId` of each:
 
     ```powershell
-    $MI = get-azsqlserver -resourcegroupname "resourcegroupnamehere" -name "sql-logical-server-name-here"
+    $MI = Get-AzSqlServer -ResourceGroupName "resourcegroupnamehere" -Name "sql-logical-server-name-here"
     $MI.Identity.UserAssignedIdentities | ConvertTo-Json 
     ```
 
   - To retrieve the SMI of an Azure SQL Database logical server:
 
     ```powershell
-    $MI = get-azsqlserver -resourcegroupname "resourcegroupnamehere" -name "sql-logical-server-name-here"
+    $MI = Get-AzSqlServer -ResourceGroupName "resourcegroupnamehere" -Name "sql-logical-server-name-here"
     $MI.Identity.principalId
     ```
 
@@ -234,14 +234,14 @@ The Azure CLI 2.26.0 (or later) is required to run these commands with a UMI.
   - For example, to retrieve the UMI(s) of a managed instance, look for the `principalId` of each:
 
     ```powershell
-    $MI = get-azsqlinstance -resourcegroupname "resourcegroupnamehere" -name "sql-mi-name-here"
+    $MI = Get-AzSqlInstance -ResourceGroupName "resourcegroupnamehere" -Name "sql-mi-name-here"
     $MI.Identity.UserAssignedIdentities | ConvertTo-Json 
     ```
 
   - To retrieve the SMI of a managed instance:
 
     ```powershell
-    $MI = get-azsqlinstance -resourcegroupname "resourcegroupnamehere" -name "sql-mi-name-here"
+    $MI = Get-AzSqlInstance -ResourceGroupName "resourcegroupnamehere" -Name "sql-mi-name-here"
     $MI.Identity.principalId
     ```
 

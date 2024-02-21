@@ -361,7 +361,7 @@ Microsoft Entra users and service principals that are members of more than 2048 
 Specifies that the login is for Microsoft Entra authentication.
 
 #### WITH OBJECT_ID = *'objectid'*   
-Specifies the Microsoft Entra Object ID. If the `OBJECT_ID` is specified, the login_name isn't required to match the Microsoft Entra display name. The login_name must be a unique name in the `sys.server_principals` view and adhere to all other `sysname` limitations.
+Specifies the Microsoft Entra Object ID. If the `OBJECT_ID` is specified, the login_name isn't required to match the Microsoft Entra display name. The login_name must be a unique name in the `sys.server_principals` view and adhere to all other `sysname` limitations. For more information on using the `WITH OBJECT_ID` option, see [Microsoft Entra logins and users with nonunique display names](/azure/azure-sql/database/authentication-microsoft-entra-create-users-with-nonunique-names).
 
 > [!NOTE]
 > If the service principal display name is not a duplicate, the default `CREATE LOGIN` or `CREATE USER` statement should be used. The `WITH OBJECT_ID` extension is in **public preview**, and is a troubleshooting repair item implemented for use with nonunique service principals. Using it with a unique service principal is not necessary. Using the `WITH OBJECT_ID` extension for a service principal without adding a suffix will run successfully, but it will not be obvious which service principal the login or user was created for. It's recommended to create an alias using a suffix to uniquely identify the service principal. The `WITH OBJECT_ID` extension is not supported for SQL Server.
@@ -517,7 +517,7 @@ Microsoft Entra users and service principals that are members of more than 2048 
 Specifies that the login is for Microsoft Entra authentication.
 
 #### WITH OBJECT_ID = *'objectid'*   
-Specifies the Microsoft Entra Object ID. If the `OBJECT_ID` is specified, the login_name can be a user defined alias formed from the original principal display name with a suffix appended. The login_name must be a unique name in the `sys.server_principals` view and adhere to all other `sysname` limitations.
+Specifies the Microsoft Entra Object ID. If the `OBJECT_ID` is specified, the login_name can be a user defined alias formed from the original principal display name with a suffix appended. The login_name must be a unique name in the `sys.server_principals` view and adhere to all other `sysname` limitations. For more information on using the `WITH OBJECT_ID` option, see [Microsoft Entra logins and users with nonunique display names](/azure/azure-sql/database/authentication-microsoft-entra-create-users-with-nonunique-names).
 
 > [!NOTE]
 > If the service principal display name is not a duplicate, the default `CREATE LOGIN` or `CREATE USER` statement should be used. The `WITH OBJECT_ID` extension is in **public preview**, and is a troubleshooting repair item implemented for use with nonunique service principals. Using it with a unique service principal is not necessary. Using the `WITH OBJECT_ID` extension for a service principal without adding a suffix will run successfully, but it will not be obvious which service principal the login or user was created for. It's recommended to create an alias using a suffix to uniquely identify the service principal. The `WITH OBJECT_ID` extension is not supported for SQL Server.

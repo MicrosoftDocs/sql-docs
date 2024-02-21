@@ -47,11 +47,12 @@ Hardware configurations have different characteristics, as described in the foll
 > [!NOTE]
 > If your workload requires storage sizes greater than the available resource limits for Azure SQL Managed Instance, consider the Azure SQL Database [Hyperscale service tier](../database/service-tier-hyperscale.md).
 
-### Regional support for memory optimized premium-series hardware
+### Regional supports for memory optimized premium-series hardware and for 16 TB storage
 
-Support for the memory optimized premium-series hardware is currently available only in these specific regions:
+Support for 16 TB storage has the same availability as support for the memory optimized premium-series hardware.
+Supports for the memory-optimized premium-series hardware and 16 TB storage are currently available only in these specific regions:
   
-| Geography | Regions supporting memory optimized premium-series HW |
+| Geography | Regions supporting memory optimized premium-series HW and 16 TB Storage |
 |:-- |:-- |
 | Europe | France Central, Germany West Central, Italy North, North Europe, Poland Central, Sweden Central, Switzerland North, UK South, West Europe |
 | Middle East, Africa | Qatar Central | 

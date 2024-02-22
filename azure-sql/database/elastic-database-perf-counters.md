@@ -31,9 +31,6 @@ To create the counters, call the CreatePerformanceCategoryAndCounters method of 
 
 `ShardMapManagerFactory.CreatePerformanceCategoryAndCounters()`
 
-You can also use [this](https://gallery.technet.microsoft.com/scriptcenter/Elastic-DB-Tools-for-Azure-17e3d283) PowerShell script to execute the method.
-The method creates the following performance counters:  
-
 * **Cached mappings**: Number of mappings cached for the shard map.
 * **DDR operations/sec**: Rate of data dependent routing operations for the shard map. This counter is  updated when a call to [OpenConnectionForKey()](/dotnet/api/microsoft.azure.sqldatabase.elasticscale.shardmanagement.shardmap.openconnectionforkey) results in a successful connection to the destination shard.
 * **Mapping lookup cache hits/sec**: Rate of successful cache lookup operations for mappings in the shard map.

@@ -127,8 +127,6 @@ Retracting the solution doesn't remove the Report Viewer web part from the list 
 4. Select **Delete Item**.
     :::image type="content" source="media/report-viewer-native-mode-edit-delete.png" alt-text="Screenshot of the Web Part Gallery, highlighting Delete Item.":::
 
-Deletion of the web part can be attempted by using PowerShell, but there isn't a direct command for it. For a script example, see [How to delete web parts from the web part Gallery](https://gallery.technet.microsoft.com/office/How-to-delete-Web-Parts-1132701f).
-
 ## Supported languages
 
 The following languages are supported with the web part:

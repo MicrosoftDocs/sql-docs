@@ -6,5 +6,5 @@ ms.service: analysis-services
 ms.topic: include
 ---
 
-[!INCLUDE [applies-md](applies-md.md)] :::image type="icon" source="media/yes-icon.svg" border="false"::: SQL Server 2017 Analysis Services :::image type="content" source="media/no-icon.svg" alt-text="Not supported."::: Azure Analysis Services :::image type="content" source="media/no-icon.svg" alt-text="Not supported."::: Power BI Premium
+[!INCLUDE [applies-md](applies-md.md)] ✅ SQL Server 2017 Analysis Services ❌ Azure Analysis Services ❌ Power BI Premium
 

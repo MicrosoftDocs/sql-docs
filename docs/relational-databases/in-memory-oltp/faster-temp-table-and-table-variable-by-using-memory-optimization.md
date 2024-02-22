@@ -1,8 +1,9 @@
 ---
 title: "Memory optimization for faster temp table and table variables"
 description: Learn about converting temporary tables, table variables, or table-valued parameters to memory-optimized tables and table variables to improve performance.
-author: kevin-farlee
-ms.author: kfarlee
+author: MashaMSFT
+ms.author: mathoma
+ms.reviewer: wiassaf, ryanston
 ms.date: "06/01/2018"
 ms.service: sql
 ms.subservice: in-memory-oltp

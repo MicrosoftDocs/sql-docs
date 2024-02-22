@@ -47,12 +47,12 @@ Hardware configurations have different characteristics, as described in the foll
 > [!NOTE]
 > If your workload requires storage sizes greater than the available resource limits for Azure SQL Managed Instance, consider the Azure SQL Database [Hyperscale service tier](../database/service-tier-hyperscale.md).
 
-### Regional supports for memory optimized premium-series hardware and for 16 TB storage
+### Regional supports for memory optimized premium-series hardware and for premium-series hardware with 16 TB storage
 
-Support for 16 TB storage has the same availability as support for the memory optimized premium-series hardware.
-Supports for the memory-optimized premium-series hardware and 16 TB storage are currently available only in these specific regions:
+Support for the premium-series hardware with 16 TB storage has the same availability as support for the memory optimized premium-series hardware.
+Supports for the memory-optimized premium-series hardware and the premium-series hardware with 16 TB storage are currently available only in these specific regions:
   
-| Geography | Regions supporting memory optimized premium-series HW and 16 TB Storage |
+| Geography | Regions supporting memory optimized premium-series HW and premium-series hardware with 16 TB Storage |
 |:-- |:-- |
 | Europe | France Central, Germany West Central, Italy North, North Europe, Poland Central, Sweden Central, Switzerland North, UK South, West Europe |
 | Middle East, Africa | Qatar Central | 
@@ -113,8 +113,8 @@ SQL Managed Instance has two service tiers: [General Purpose](../database/servic
 
 <sup>1</sup> Deploying a 2-vCore instance is only possible inside an [instance pool](instance-pools-overview.md).   
 <sup>2</sup> The memory-to-vCore ratio is only available up to 80 vCores for premium-series hardware, and 64 vCores for memory optimized premium-series. Maximum memory is capped at 560 GB for premium-series vCores above 80, and 870.4 GB for memory optimized premium-series vCores above 64.   
-<sup>3</sup> Only in [the major regions](#regional-supports-for-memory-optimized-premium-series-hardware-and-for-16-tb-storage) can provide 16 TB of storage for the premium-series hardware for these CPU vCore numbers, the smaller regions will be limiting with available storage with 5.5 TB.   
-<sup>4</sup> Only in [the major regions](#regional-supports-for-memory-optimized-premium-series-hardware-and-for-16-tb-storage) can provide 8 TB of storage for the premium-series memory optimized hardware for these CPU vCore numbers, the smaller regions will be limiting with available storage with 5.5 TB.  
+<sup>3</sup> Only in [the major regions](#regional-supports-for-memory-optimized-premium-series-hardware-and-for-premium-series-hardware-with-16-tb-storage) can provide 16 TB of storage for the premium-series hardware for these CPU vCore numbers, the smaller regions will be limiting with available storage with 5.5 TB.   
+<sup>4</sup> Only in [the major regions](#regional-supports-for-memory-optimized-premium-series-hardware-and-for-premium-series-hardware-with-16-tb-storage) can provide 8 TB of storage for the premium-series memory optimized hardware for these CPU vCore numbers, the smaller regions will be limiting with available storage with 5.5 TB.  
 
 
 

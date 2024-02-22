@@ -4,11 +4,14 @@ description: Learn how Hyperscale databases are architected to scale out storage
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 12/04/2023
+ms.date: 02/22/2024
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
-ms.custom: build-2023, build-2023-dataai, ignite-2023
+ms.custom:
+  - build-2023
+  - build-2023-dataai
+  - ignite-2023
 ---
 
 # Hyperscale distributed functions architecture

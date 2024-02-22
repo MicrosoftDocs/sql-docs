@@ -4,7 +4,7 @@ description: "Learn about the optimized locking enhancement to the Database Engi
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest, peskount
-ms.date: 10/09/2023
+ms.date: 02/22/2024
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -312,28 +312,6 @@ If ADR is disabled, optimized locking is automatically disabled as well.
 ### What if I want to force queries to block despite optimized locking?
 
 For customers using RCSI, to force blocking between two queries when optimized locking is enabled, use the READCOMMITTEDLOCK query hint.
-
-### Can I disable optimized locking?
-
-Currently, customers can create a support request to disable optimized locking.
-
-Use the following steps to create a new support request from the Azure portal for Azure SQL Database.
-
-1. First, verify that [optimized locking is enabled for your database](#is-optimized-locking-enabled).
-1. On the [Azure portal](https://portal.azure.com) menu, select **Help + support**.
-
-   :::image type="content" source="media/optimized-locking/help-plus-support.png" alt-text="A screenshot of the Azure portal identifying the help and support link.":::
-
-1. In **Help + support**, select **Create a support request**.
-
-    :::image type="content" source="media/optimized-locking/new-support-request.png" alt-text="A screenshot of the Azure portal showing how to create a new support request.":::
-
-1. For **Issue type**, select **Technical**.
-1. For **Subscription**, **Service**, and **Resource**, select the desired **SQL Database**.
-1. In **Summary**, type "Disable optimized locking".
-1. For **Problem Type**, choose **Performance and Query Execution**.
-1. For **Problem Subtype**, choose **Blocking and deadlocks**.
-1. In **Additional details**, provide as much information as possible for why you would like to disable optimized locking. We are interested to review the reasons and use cases for disabling optimized locking with you.
 
 ## Related content
 

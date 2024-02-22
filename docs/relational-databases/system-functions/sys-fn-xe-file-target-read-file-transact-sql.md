@@ -105,7 +105,7 @@ SELECT * FROM sys.fn_xe_file_target_read_file('*.xel', null, null, null)
 
 ```sql
 SELECT * FROM sys.fn_xe_file_target_read_file('system_health*.xel', null, null, null)
-WHERE cast(timestamp_utc as datetime2(7)) > dateadd(day, -1, GETUTCDATE())
+WHERE timestamp_utc > dateadd(day, -1, GETUTCDATE())
 ```
 
 

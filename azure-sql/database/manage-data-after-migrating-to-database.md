@@ -231,6 +231,8 @@ ExpressRoute also allows you to burst up to 2x the bandwidth limit you purchase 
 
 It is important to note that although SQL Database may be certified as a compliant service, it aids in the compliance of your organization's service but does not automatically guarantee it.
 
+Although SQL Database may be certified as a compliant service, it aids in the compliance of your organization's service but does not automatically guarantee it.
+
 ## Intelligent database monitoring and maintenance after migration
 
 Once you've migrated your database to SQL Database, you are going to want to monitor your database (for example, check how the resource utilization is like or DBCC checks) and perform regular maintenance (for example, rebuild or reorganize indexes, statistics etc.). Fortunately, SQL Database is Intelligent in the sense that it uses the historical trends and recorded metrics and statistics to proactively help you monitor and maintain your database, so that your application runs optimally always. In some cases, Azure SQL Database can automatically perform maintenance tasks depending on your configuration setup. There are three facets to monitoring your database in SQL Database:

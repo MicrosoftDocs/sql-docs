@@ -10,7 +10,9 @@ ms.subservice: scale-out
 ms.topic: conceptual
 ms.custom: sqldbrb=1
 ---
+
 # Scale out databases with the shard map manager
+
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 To easily scale out databases on Azure SQL Database, use a shard map manager. The shard map manager is a special database that maintains global mapping information about all shards (databases) in a shard set. The metadata allows an application to connect to the correct database based upon the value of the **sharding key**. In addition, every shard in the set contains maps that track the local shard data (known as **shardlets**).
@@ -145,6 +147,8 @@ else
 // The connectionString contains server name, database name, and admin credentials for privileges on both the GSM and the shards themselves.
 }
 ```
+
+For the .NET version, you can use PowerShell to create a new Shard Map Manager.
 
 ## Get a RangeShardMap or ListShardMap
 

@@ -9,7 +9,7 @@ ms.service: sql
 ms.topic: reference
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||=fabric"
+monikerRange: "=azure-sqldw-latest||=fabric"
 ---
 # CREATE TABLE AS SELECT
 

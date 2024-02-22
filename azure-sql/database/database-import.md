@@ -5,7 +5,7 @@ description: Create a new database in Azure SQL Database or Azure SQL Managed In
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei, mathoma
-ms.date: 02/06/2024
+ms.date: 02/22/2024
 ms.service: sql-db-mi
 ms.subservice: backup-restore
 ms.topic: quickstart
@@ -33,7 +33,7 @@ Watch this video to see how to import from a bacpac file in the Azure portal or 
 The [Azure portal](https://portal.azure.com) *only* supports creating a single database in Azure SQL Database and *only* from a bacpac file stored in Azure Blob storage.
 
 > [!WARNING]
-> Bacpac files over 4GB generated from SqlPackage may fail to import from the Azure Portal or Azure PowerShell with an error message which states `File contains corrupted data.`. This is a result of a known issue and the workaround is to use the `SqlPackage` command-line utility to import the bacpac file. For more information, see [SqlPackage](/sql/tools/sqlpackage/sqlpackage) and the [issue log](https://github.com/microsoft/DacFx/issues/363).
+> Bacpac files over 4GB generated from SqlPackage may fail to import from the Azure portal or Azure PowerShell with an error message which states `File contains corrupted data.`. This is a result of a known issue and the workaround is to use the `SqlPackage` command-line utility to import the bacpac file. For more information, see [SqlPackage](/sql/tools/sqlpackage/sqlpackage) and the [issue log](https://github.com/microsoft/DacFx/issues/363).
 
 To migrate a database into an [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md) from a bacpac file, use SQL Server Management Studio or SQLPackage, using the Azure portal or Azure PowerShell is not currently supported.
 

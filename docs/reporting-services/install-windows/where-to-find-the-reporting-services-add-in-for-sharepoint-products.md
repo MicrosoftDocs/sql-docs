@@ -5,6 +5,7 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 08/24/2022
 ms.service: reporting-services
+ms.subservice: report-server-sharepoint
 ms.topic: conceptual
 ms.custom: updatefrequency5
 helpviewer_keywords:

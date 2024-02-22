@@ -39,6 +39,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.172
 | Feature | Details | Workaround |
 | :------ | :------ |:------ |
 | Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
+| Import | A bacpac file created with SqlPackage export, except when installed by the MSI installer, may fail to import with the Azure Portal and Azure PowerShell when larger than 4GB. | Import the bacpac with SqlPackage or use the SqlPackage installed by the MSI installer to create the bacpac file. |
 | ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
 
 ## 162.1.167 SqlPackage
@@ -88,6 +89,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.172
 | Feature | Details | Workaround |
 | :------ | :------ |:------ |
 | Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
+| Import | A bacpac file created with SqlPackage export, except when installed by the MSI installer, may fail to import with the Azure Portal and Azure PowerShell when larger than 4GB. | Import the bacpac with SqlPackage or use the SqlPackage installed by the MSI installer to create the bacpac file. |
 | ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
 
 ## 162.0.52 SqlPackage
@@ -139,6 +141,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.172
 | Feature | Details | Workaround |
 | :------ | :------ |:------ |
 | Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
+| Import | A bacpac file created with SqlPackage export, except when installed by the MSI installer, may fail to import with the Azure Portal and Azure PowerShell when larger than 4GB. | Import the bacpac with SqlPackage or use the SqlPackage installed by the MSI installer to create the bacpac file. |
 | ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
 
 ## 161.8089.0 SqlPackage

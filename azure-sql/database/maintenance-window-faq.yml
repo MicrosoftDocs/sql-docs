@@ -10,7 +10,7 @@ metadata:
   ms.author: wiassaf
   ms.reviewer: scottkim
   ms.custom: azure-sql-split
-  ms.date: 01/11/2024
+  ms.date: 02/22/2024
   monikerRange: "=azuresql||=azuresql-db"
 
 title: Maintenance window FAQ in Azure SQL Database
@@ -109,9 +109,9 @@ sections:
         answer: |
           The maintenance event can contain updates for hardware, firmware, operating system, satellite software components, or the SQL database engine. They're typically combined into a single batch to minimize the incidence of maintenance events. 
 
-      - question: How frequent the updates are?
+      - question: How frequent are the updates?
         answer: |
-          Planned maintenance updates occur once every 35 days on average, which means customer can expect approximately one planned maintenance event per month per Azure SQL Database. 
+          Azure SQL Database service regularly performs maintenance updates for security, compliance, stability, and performance. You might see two or more updates per month. Maintenance can be more frequent in the default maintenance window. To minimize update frequency, choose a nondefault maintenance window.
       
       - question: What can I expect during a maintenance event?
         answer: |

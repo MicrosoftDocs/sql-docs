@@ -44,7 +44,7 @@ To enable Microsoft Entra authentication on your SQL Server, you need the follow
 
 ## Grant permissions
 
-The managed identity you choose to facilitate authentication between SQL Server and Microsoft Entra ID has to have the following three Microsoft Graph application permissions (app roles): `User.ReadALL`, `GroupMember.Read.All`, and `Application.Read.All`. 
+The managed identity you choose to facilitate authentication between SQL Server and Microsoft Entra ID has to have the following three Microsoft Graph application permissions (app roles): `User.Read.ALL`, `GroupMember.Read.All`, and `Application.Read.All`. 
 
 Alternatively, adding the managed identity to the **Microsoft Entra Directory Readers role** grants sufficient permissions. Another way to assign the **Directory Readers** role to a managed identity is to assign the **Directory Readers role** to a group in Microsoft Entra ID. The group owners can then add the Virtual Machine managed identity as a member of this group. This minimizes involving Microsoft Entra Global administrators and delegates the responsibility to the group owners. 
 

@@ -4,7 +4,7 @@ description: Learn about the new features for and improvements to SQL Server on 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 12/19/2023
+ms.date: 02/25/2024
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -26,6 +26,12 @@ For updates made in previous years, see the [What's new archive](doc-changes-upd
 
 [!INCLUDE [entra-id](../../includes/entra-id.md)]
 
+## February 2024
+
+| Changes | Details |
+| --- | --- |
+|**Configure log shipping** | Learn to configure log shipping between two SQL Server on Azure VMs. Review [Configure log shipping](log-shipping-configure.md) to learn more. 
+
 
 ## October 2023
 
@@ -39,7 +45,6 @@ For updates made in previous years, see the [What's new archive](doc-changes-upd
 | --- | --- |
 | **SQL VM health notifications** |  The **Overview** page of the [SQL virtual machines](manage-sql-vm-portal.md#overview-page) resource in the Azure portal now displays information about the health of the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md), as well as error conditions when the state is _unhealthy_ or _failed_. Review [Troubleshoot the extension](sql-agent-extension-troubleshoot-known-issues.md) to learn more. | 
 | **Microsoft Entra ID rebrand**|  Azure Active Directory has been rebranded to [Microsoft Entra ID](/entra/fundamentals/new-name). | 
-
 
 
 ## Archive

@@ -3,7 +3,7 @@ title: Restore a SQL Server database in a Linux container
 description: This tutorial shows how to restore a SQL Server database backup in a new Linux container.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 12/7/2023
+ms.date: 02/22/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -50,9 +50,11 @@ This tutorial demonstrates how to move and restore a [!INCLUDE [ssnoversion-md](
 
 ## Deployment options
 
-This section provides deployment options for production, and development/test environments.
+This section provides deployment options for your environment.
 
-## [Production](#tab/prod)
+**sqlcmd** doesn't currently support the `MSSQL_PID` parameter when creating containers. If you use the **sqlcmd** instructions in this tutorial, you create a container with the Developer edition of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. Use the command line interface (CLI) instructions to create a container using the license of your choice. For more information, see [Deploy and connect to SQL Server Linux containers](sql-server-linux-docker-container-deployment.md).
+
+## [CLI](#tab/cli)
 
 ### Pull and run the container image
 
@@ -477,7 +479,7 @@ In addition to taking database backups for protecting your data, you can also us
 
 ::: moniker-end
 
-## [Development/test](#tab/dev)
+## [sqlcmd](#tab/sqlcmd)
 
 ### Create a container and restore a database
 

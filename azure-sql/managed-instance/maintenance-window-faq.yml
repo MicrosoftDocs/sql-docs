@@ -97,7 +97,7 @@ sections:
         answer: |
           The maintenance event can contain updates for hardware, firmware, operating system, satellite software components, or the SQL database engine. They're typically combined into a single batch to minimize the incidence of maintenance events. For SQL Managed Instance, updates are combined in two batches, one focused on physical infrastructure, and another one focused on SQL engine and logical infrastructure. For Azure SQL Managed Instance, the IP address of the SQL managed instance changes.
 
-      - question: How frequent the updates are?
+      - question: How frequent are the updates?
         answer: |
           For Azure SQL Managed Instance, customers can expect approximately two planned maintenance updates per month, but these updates can result with more than one maintenance event.
       

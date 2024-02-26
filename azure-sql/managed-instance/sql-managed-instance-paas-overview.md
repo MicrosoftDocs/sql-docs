@@ -162,7 +162,7 @@ For more information, see [a list of supported and unsupported SQL Managed Insta
 
 ## vCore-based purchasing model
 
-The [vCore-based purchasing model](../database/service-tiers-vcore.md) for SQL Managed Instance gives you flexibility, control, transparency, and a straightforward way to translate on-premises workload requirements to the cloud. This model allows you to change compute, memory, and storage based upon your workload needs. The vCore model is also eligible for up to 55 percent savings with the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) for SQL Server.
+The [vCore-based purchasing model](service-tiers-managed-instance-vcore.md) for SQL Managed Instance gives you flexibility, control, transparency, and a straightforward way to translate on-premises workload requirements to the cloud. This model allows you to change compute, memory, and storage based upon your workload needs. The vCore model is also eligible for up to 55 percent savings with the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) for SQL Server.
 
 In the vCore model, you can choose hardware configurations as follows:
 

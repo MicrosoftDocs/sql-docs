@@ -20,7 +20,7 @@ In a **LIKE** predicate, the percent sign (%) matches zero or more of any charac
   
  For more information about the LIKE escape sequence, see [LIKE Escape Sequence](../../../odbc/reference/appendixes/like-escape-sequence.md) in Appendix C: SQL Grammar.  
   
- For example, the following SQL statements create the same result set of customer names that start with the characters "%AAA". The first statement uses the escape-sequence syntax. The second statement uses the native syntax for Microsoft® Access and is not interoperable. Notice that the second percent character in each **LIKE** predicate is a wildcard character that matches zero or more of any character.  
+ For example, the following SQL statements create the same result set of customer names that start with the characters "%AAA". The first statement uses the escape-sequence syntax. The second statement uses the native syntax for Microsoft Access and is not interoperable. Notice that the second percent character in each **LIKE** predicate is a wildcard character that matches zero or more of any character.  
   
 ```  
 SELECT Name FROM Customers WHERE Name LIKE '\%AAA%' {escape '\'}  

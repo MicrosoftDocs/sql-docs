@@ -21,7 +21,7 @@ helpviewer_keywords:
 
 ## About
 
-Microsoft® ODBC Test is an ODBC-enabled application that you can use to test ODBC drivers and the ODBC Driver Manager. ODBC Test is included as part of the [Microsoft Data Access Components (MDAC) 2.8 Software Development Kit](https://www.microsoft.com/download/details.aspx?id=21995).
+Microsoft ODBC Test is an ODBC-enabled application that you can use to test ODBC drivers and the ODBC Driver Manager. ODBC Test is included as part of the [Microsoft Data Access Components (MDAC) 2.8 Software Development Kit](https://www.microsoft.com/download/details.aspx?id=21995).
 
 ODBC 3.51 includes both ANSI and Unicode-enabled versions of ODBC Test. The corresponding files are as follows:
 

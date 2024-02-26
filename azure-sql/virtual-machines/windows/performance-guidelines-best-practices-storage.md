@@ -59,7 +59,7 @@ For production SQL Server environments, don't use the operating system disk for 
 
 Many Azure VMs contain another disk type called the temporary disk (labeled as the `D:\` drive). Depending on the VM series and size the capacity of this disk will vary. The temporary disk is ephemeral, which means the disk storage is recreated (as in, it's deallocated and allocated again), when the VM is restarted, or moved to a different host (for [service healing](/troubleshoot/azure/virtual-machines/understand-vm-reboot), for example).
 
-The temporary storage drive isn't persisted to remote storage and therefore shouldn't store user database files, transaction log files, or anything that must be preserved.
+The temporary storage drive isn't persisted to remote storage and therefore shouldn't store user database files, transaction log files, or anything that must be preserved. For example, you can use it for buffer pool extensions, the page file, and `tempdb`.
 
 Place `tempdb` on the local temporary SSD `D:\` drive for SQL Server workloads unless consumption of local cache is a concern. If you're using a VM that [doesn't have a temporary disk](/azure/virtual-machines/azure-vms-no-temp-disk) then it's recommended to place `tempdb` on its own isolated disk or storage pool with caching set to read-only. To learn more, see [tempdb data caching policies](performance-guidelines-best-practices-storage.md#data-file-caching-policies).
 

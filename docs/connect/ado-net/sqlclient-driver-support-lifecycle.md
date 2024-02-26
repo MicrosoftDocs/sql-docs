@@ -73,7 +73,7 @@ Current releases are supported for three months after a subsequent Current or LT
 
 |Database version&nbsp;&#8594;<br />&#8595; Driver Version|Azure SQL Database|Azure Synapse Analytics|Azure SQL Managed Instance|SQL Server 2022|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|
 |---|---|---|---|---|---|---|---|---|---|
-|5.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|5.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes||
 |5.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |5.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |4.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|

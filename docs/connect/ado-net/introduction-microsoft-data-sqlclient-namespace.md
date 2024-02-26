@@ -26,9 +26,9 @@ The Microsoft.Data.SqlClient API details can be found in the [.NET API Browser](
 
 - Added support of `SqlDiagnosticListener` on **.NET Standard**. [#1931](https://github.com/dotnet/SqlClient/pull/1931)
 - Added new property `RowsCopied64` to `SqlBulkCopy`. [#2004](https://github.com/dotnet/SqlClient/pull/2004) [Read more](#added-new-property-rowscopied64-to-sqlbulkcopy)
-- Added a new `AccessTokenCallBack` API to `SqlConnection`. [#1260](https://github.com/dotnet/SqlClient/pull/1260)
+- Added a new `AccessTokenCallBack` API to `SqlConnection`. [#1260](https://github.com/dotnet/SqlClient/pull/1260) [Read more](#added-new-property-accesstokencallback-to-sqlconnection)
 - Added support for the `SuperSocketNetLib` registry option for Encrypt on .NET on Windows. [#2047](https://github.com/dotnet/SqlClient/pull/2047)
-- Added `SqlBatch` support on .NET 6+ [#1825](https://github.com/dotnet/SqlClient/pull/1825), [#2223](https://github.com/dotnet/SqlClient/pull/2223)
+- Added `SqlBatch` support on .NET 6+ [#1825](https://github.com/dotnet/SqlClient/pull/1825), [#2223](https://github.com/dotnet/SqlClient/pull/2223) [Read more](#sqlbatch-api)
 - Added Workload Identity authentication support [#2159](https://github.com/dotnet/SqlClient/pull/2159), [#2264](https://github.com/dotnet/SqlClient/pull/2264)
 - Added Localization support on .NET [#2210](https://github.com/dotnet/SqlClient/pull/2110)
 - Added support for Georgian collation [#2194](https://github.com/dotnet/SqlClient/pull/2194)
@@ -66,6 +66,84 @@ Example usage:
             }
         }
     }
+```
+
+### Added new property `AccessTokenCallBack` to SqlConnection
+
+SqlConnection supports `TokenCredential` authentication by introducing a new `AccessTokenCallBack` porperty as a `Func<SqlAuthenticationParameters, CancellationToken,Task<SqlAuthenticationToken>>` delegate to return a federated authentication access token.
+
+Example usage:
+
+```C#
+    using Microsoft.Data.SqlClient;
+    using Azure.Identity;
+
+    const string defaultScopeSuffix = "/.default";
+    string connectionString = GetConnectionString();
+    using SqlConnection connection = new SqlConnection(connectionString);
+    
+    connection.AccessTokenCallback = async (authParams, cancellationToken) =>
+    {
+        var cred = new DefaultAzureCredential();
+        string scope = authParams.Resource.EndsWith(defaultScopeSuffix) ? authParams.Resource : authParams.Resource + defaultScopeSuffix;
+        AccessToken token = await cred.GetTokenAsync(new TokenRequestContext(new[] { scope }), cancellationToken);
+        return new SqlAuthenticationToken(token.Token, token.ExpiresOn);
+    }
+    
+    connection.Open();
+    Console.WriteLine("ServerVersion: {0}", connection.ServerVersion);
+    Console.WriteLine("State: {0}", connection.State);
+```
+
+### SQLBatch API
+
+Example usage:
+
+```csharp
+using Microsoft.Data.SqlClient;
+
+class Program
+{
+    static void Main()
+    {
+        string str = "Data Source=(local);Initial Catalog=Northwind;"
+        + "Integrated Security=SSPI;Encrypt=False";
+        RunBatch(str);
+    }
+
+    static void RunBatch(string connString)
+    {
+        using var connection = new SqlConnection(connString);
+        connection.Open();
+
+        var batch = new SqlBatch(connection);
+
+        const int count = 10;
+        const string parameterName = "parameter";
+        for (int i = 0; i < count; i++)
+        {
+            var batchCommand = new SqlBatchCommand($"SELECT @{parameterName} as value");
+            batchCommand.Parameters.Add(new SqlParameter(parameterName, i));
+            batch.BatchCommands.Add(batchCommand);
+        }
+
+        // Optionally Prepare
+        batch.Prepare();
+
+        var results = new List<int>(count);
+        using (SqlDataReader reader = batch.ExecuteReader())
+        {
+            do
+            {
+                while (reader.Read())
+                {
+                    results.Add(reader.GetFieldValue<int>(0));
+                }
+            } while (reader.NextResult());
+        }
+        Console.WriteLine(string.Join(", ", results));
+    }
+}
 ```
 
 ## 5.2 Target Platform Support

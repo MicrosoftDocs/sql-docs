@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "RDS tutorial [ADO]"
 ---
 # RDS Tutorial
-This tutorial illustrates using the RDS programming model to query and update a data source. First, it describes the steps necessary to accomplish this task. Then the tutorial is repeated in Microsoft® Visual Basic Scripting Edition (featuring ADO for Windows Foundation Classes (ADO/WFC)).  
+This tutorial illustrates using the RDS programming model to query and update a data source. First, it describes the steps necessary to accomplish this task. Then the tutorial is repeated in Microsoft Visual Basic Scripting Edition (featuring ADO for Windows Foundation Classes (ADO/WFC)).  
   
  This tutorial is coded in different languages for two reasons:  
   

@@ -11,7 +11,7 @@ dev_langs:
   - "C++"
 ---
 # ADO Event Instantiation: Visual C++
-This is a schematic description of how to instantiate ADO events in Microsoft® Visual C++®. See [ADO Events Model Example (VC++)](../../reference/ado-api/ado-events-model-example-vc.md) for a complete description.  
+This is a schematic description of how to instantiate ADO events in [!INCLUDE [vcprvc-md](../../../includes/vcprvc-md.md)]. See [ADO Events Model Example (VC++)](../../reference/ado-api/ado-events-model-example-vc.md) for a complete description.  
   
  Create classes derived from the **ConnectionEventsVt** and **RecordsetEventsVt** interfaces found in the file adoint.h.  
   

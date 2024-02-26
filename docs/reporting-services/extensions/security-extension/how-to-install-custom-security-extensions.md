@@ -39,7 +39,7 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
         userIdentity = requestContext.User;
     }
 
-    // initialize a pointer to the current user id to zero
+    // initialize a pointer to the current user ID to zero
     userId = IntPtr.Zero;
 }
 ```

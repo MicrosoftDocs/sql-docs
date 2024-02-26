@@ -123,7 +123,7 @@ To configure log shipping, follow these steps:
 1. Check the box next to **Enable this as a primary database in a log shipping configuration**.  
 1. Under **Transaction log backups**, select **Backup Settings**.    
 1. In the **Network path to the backup folder** box, type the network path to the share and directory you created for the transaction log backup folder. 
-   For example, `\\\yourstorageaccount.file.core.windows.net\log-shipping\log-backups`.
+   For example, `\\yourstorageaccount.file.core.windows.net\log-shipping\log-backups`.
 1. Configure the **Delete files older than** and **Alert if no backup occurs within** parameters to suit your business needs. 
     1. Note the backup schedule listed in the **Schedule** box under **Backup job**. If you want to customize the schedule for your installation, then select **Schedule** and adjust the SQL Server Agent schedule as needed.  
     1. SQL Server supports [backup compression](/sql/relational-databases/backup-restore/backup-compression-sql-server). When creating a log shipping configuration, you can control the backup compression behavior of log backups by choosing one of the following options: **Use the default server setting**, **Compress backup**, or **Do not compress backup**. For more information, see [Log Shipping Transaction Log Backup Settings](/sql/relational-databases/databases/log-shipping-transaction-log-backup-settings).  
@@ -137,7 +137,7 @@ To configure log shipping, follow these steps:
     > If you choose to have SSMS initialize the secondary database from a database backup, the data and log files of the secondary database are placed in the same location as the data and log files of the **master** database. This location is likely to be different than the location of the data and log files of the primary database.  
   
 1. On the **Copy Files** tab, in the **Destination folder for copied files** box, type the path of the folder where you want to copy the transaction logs backups, such as the restore-backups directory you created for your file share: 
-    `\\\yourstorageaccount.file.core.windows.net\log-shipping\restore-backups`. 
+    `\\yourstorageaccount.file.core.windows.net\log-shipping\restore-backups`. 
     1. Note the copy schedule listed in the **Schedule** box under **Copy job**. If you want to customize the schedule for your installation, select **Schedule** and then adjust the SQL Server Agent schedule as needed. This schedule should approximate the backup schedule.  
   
 1. On the **Restore** tab, under **Database state when restoring backups**, choose the **No recovery mode** or **Standby mode** option.  

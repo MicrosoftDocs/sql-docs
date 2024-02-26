@@ -161,7 +161,7 @@ To change your caching policy in the Azure portal, follow these steps:
 1. Sign into the [Azure portal](https://portal.azure.com).
 1. Navigate to your virtual machine, select **Disks** under **Settings**.
 
-   :::image type="content" source="./media/storage-configuration/disk-in-portal.png" alt-text="Screenshot showing the VM disk configuration blade in the Azure portal.":::
+   :::image type="content" source="./media/storage-configuration/disk-in-portal.png" alt-text="Screenshot showing the VM disk configuration pane in the Azure portal.":::
 
 1. Choose the appropriate caching policy for your disk from the dropdown list.
 
@@ -184,7 +184,7 @@ To enable Write Acceleration using the Azure portal, follow these steps:
 1. Sign into the [Azure portal](https://portal.azure.com).
 1. Navigate to your virtual machine, select **Disks** under **Settings**.
 
-   :::image type="content" source="./media/storage-configuration/disk-in-portal.png" alt-text="Screenshot showing the VM disk configuration blade in the Azure portal.":::
+   :::image type="content" source="./media/storage-configuration/disk-in-portal.png" alt-text="Screenshot showing the VM disk configuration pane in the Azure portal.":::
 
 1. Choose the cache option with **Write Accelerator** for your disk from the dropdown list.
 
@@ -250,11 +250,11 @@ In Windows Server 2008 to 2012 R2, the default value for `-StorageSubsystemFrien
 
 ## Known issues
 
-### Configure Disk option or Storage Configuration blade on SQL virtual machine resource is grayed out
+### Configure Disk option or Storage Configuration pane on SQL virtual machine resource is grayed out
 
-The **Storage Configuration** blade can be grayed out in the Azure portal if your SQL IaaS Agent extension is in a failed state. [Repair the SQL IaaS Agent extension](sql-agent-extension-troubleshoot-known-issues.md#repair-extension). 
+The **Storage Configuration** pane can be grayed out in the Azure portal if your SQL IaaS Agent extension is in a failed state. [Repair the SQL IaaS Agent extension](sql-agent-extension-troubleshoot-known-issues.md#repair-extension). 
 
-**Configure** on the Storage Configuration blade can be grayed out if you've customized your storage pool, or if you are using a non-Marketplace image. 
+**Configure** on the Storage Configuration pane can be grayed out if you've customized your storage pool, or if you are using a non-Marketplace image. 
 
 ### I have a disk with 1TB of unallocated space that I cannot remove from storage pool
 

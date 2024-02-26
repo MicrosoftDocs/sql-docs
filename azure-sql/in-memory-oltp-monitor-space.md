@@ -36,9 +36,9 @@ Once this limit is exceeded, insert and update operations may start failing with
 
 You can monitor In-memory storage use as a percentage of the storage cap for your compute size in the [Azure portal](https://portal.azure.com/):
 
-1. On the Database blade, locate the Resource utilization box and click on Edit.
+1. On the Database pane, locate the Resource utilization box and click on Edit.
 2. Select the metric `In-Memory OLTP Storage percentage`.
-3. To add an alert, click on the Resource Utilization box to open the Metric blade, then click on Add alert.
+3. To add an alert, click on the Resource Utilization box to open the Metric pane, then click on Add alert.
 
 Or use the following query to show the In-memory storage utilization:
 

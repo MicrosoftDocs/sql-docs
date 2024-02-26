@@ -61,7 +61,7 @@ Many Azure VMs contain another disk type called the temporary disk (labeled as t
 
 The temporary storage drive isn't persisted to remote storage and therefore shouldn't store user database files, transaction log files, or anything that must be preserved.
 
-Place `tempdb` on the local temporary SSD `D:\` drive for SQL Server workloads unless consumption of local cache is a concern. If you're using a VM that [doesn't have a temporary disk](/azure/virtual-machines/azure-vms-no-temp-disk) then it's recommended to place `tempdb` on its own isolated disk or storage pool with caching set to read-only. To learn more, see [tempdb data caching policies](performance-guidelines-best-practices-storage.md#data-file-caching-policies).
+Place `tempdb` on the local temporary SSD `D:\` drive for SQL Server workloads unless consumption of local cache is a concern. If you're using a VM that [doesn't have a temporary disk](/azure/virtual-machines/azure-vms-no-temp-disk) then it's recommended to place `tempdb` on its own isolated disk or storage pool with caching set to read-only. To learn more, see [tempdb data caching policies](performance-guidelines-best-practices-storage.md#data-file-caching-policies). Only store TempDB and/or Buffer Pool Extensions/Page File on the D drive.
 
 ### Data disks
 

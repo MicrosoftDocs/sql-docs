@@ -24,7 +24,7 @@ The Microsoft Open Database Connectivity (ODBC) interface is a C programming lan
   
  [Microsoft-Supplied ODBC Drivers](../odbc/microsoft/microsoft-supplied-odbc-drivers.md)  
   
- Documentation for the ODBC Desktop Database Drivers, the ODBC Driver for Oracle, and the Visual FoxPro® ODBC Driver.  
+ Documentation for the ODBC Desktop Database Drivers, the ODBC Driver for Oracle, and the Visual FoxPro ODBC Driver.  
   
  [ODBC Test](../odbc/odbc-test.md)  
   

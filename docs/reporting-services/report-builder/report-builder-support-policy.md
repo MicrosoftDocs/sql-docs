@@ -21,7 +21,7 @@ The support policy for Microsoft Report Builder is as follows.
 
 Beginning with version 15.0, all security updates, critical updates, hotfixes, and any new features are released only in the latest point version of the major version. Once a new version of Microsoft Report Builder is released for public, whether it's a point version within a major version or a major version itself, all prior versions are out of support. The [Modern Lifecycle Policy](/lifecycle/policies/modern) describes this process.
 
-For the best experience, we recommend that customers install the most recent version of [Microsoft® Report Builder](https://www.microsoft.com/en-us/download/details.aspx?id=53613) from Official Microsoft Download Center.
+For the best experience, we recommend that customers install the most recent version of [Microsoft Report Builder](https://www.microsoft.com/en-us/download/details.aspx?id=53613) from Official Microsoft Download Center.
 
 ### Full support servicing phase
 

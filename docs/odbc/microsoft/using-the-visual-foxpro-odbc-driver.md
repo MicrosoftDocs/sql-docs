@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "FoxPro ODBC driver [ODBC], using Visual FoxPro ODBC driver"
 ---
 # Using the Visual FoxPro ODBC Driver
-In this section, the following topics discuss how to use the Microsoft® Visual FoxPro® ODBC Driver:  
+In this section, the following topics discuss how to use the Microsoft Visual FoxPro ODBC Driver:  
   
 -   [Adding a Visual FoxPro Data Source](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md)  
   

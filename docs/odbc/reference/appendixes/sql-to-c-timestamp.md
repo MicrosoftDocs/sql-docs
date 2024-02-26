@@ -41,4 +41,4 @@ The following table shows the ODBC C data types to which timestamp SQL data can 
   
  [f]   This is the size of the corresponding C data type.  
 
-When timestamp SQL data is converted to character C data, the resulting string is in the "*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...*]" format, where up to nine digits can be used for fractional seconds. This format is not affected by the Windows® country/region setting. (Except for the decimal point and fractional seconds, the entire format must be used, regardless of the precision of the timestamp SQL data type.)
+When timestamp SQL data is converted to character C data, the resulting string is in the "*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...*]" format, where up to nine digits can be used for fractional seconds. This format is not affected by the Windows country/region setting. (Except for the decimal point and fractional seconds, the entire format must be used, regardless of the precision of the timestamp SQL data type.)

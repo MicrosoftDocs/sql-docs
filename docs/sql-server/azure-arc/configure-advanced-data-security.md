@@ -37,7 +37,7 @@ The next step is needed only if you haven't yet configured MMA on the remote mac
 
 1. Go to **Azure Arc > Servers** and open  the Azure Arc-enabled server resource for the machine where the SQL Server instance is installed. 
 
-1. Open the **Extensions** blade and click **+ Add**. 
+1. Open the **Extensions** pane and click **+ Add**. 
 
 1. Select **Log Analytics Agent - Azure Arc** and click **Next**. 
 

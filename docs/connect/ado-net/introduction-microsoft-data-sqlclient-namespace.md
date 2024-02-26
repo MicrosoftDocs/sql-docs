@@ -70,7 +70,7 @@ Example usage:
 
 ### Added new property `AccessTokenCallBack` to SqlConnection
 
-SqlConnection supports `TokenCredential` authentication by introducing a new `AccessTokenCallBack` porperty as a `Func<SqlAuthenticationParameters, CancellationToken,Task<SqlAuthenticationToken>>` delegate to return a federated authentication access token.
+SqlConnection supports `TokenCredential` authentication by introducing a new `AccessTokenCallBack` property as a `Func<SqlAuthenticationParameters, CancellationToken,Task<SqlAuthenticationToken>>` delegate to return a federated authentication access token.
 
 Example usage:
 
@@ -95,7 +95,7 @@ Example usage:
     Console.WriteLine("State: {0}", connection.State);
 ```
 
-### SQLBatch API
+### SqlBatch API
 
 Example usage:
 

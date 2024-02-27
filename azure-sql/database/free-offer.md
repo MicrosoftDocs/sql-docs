@@ -19,13 +19,13 @@ monikerRange: "=azuresql || =azuresql-db"
 
 Try Azure SQL Database free of charge and get 100,000 vCore seconds of compute every month. This free offer provides a General Purpose database for the lifetime of your subscription.
 
-The free SQL Database offer is designed for new Azure customers looking to get started with Azure SQL Database, and existing customers that may need a development database for a proof of concept.
+The free SQL Database offer is designed for new Azure customers looking to get started with Azure SQL Database, and existing customers that might need a development database for a proof of concept.
 
 To learn more about the offer, see this short video:
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=dd55c855-df9f-4627-96c1-de0da0425cea]
 
-This offer is available for one database per Azure subscription and is designed for new Azure customers looking to get started with Azure SQL Database, and existing customers that may need a development database for a proof of concept. To get started, look for the **Apply offer** banner on the [provisioning page for Azure SQL Database](https://portal.azure.com/#create/Microsoft.SQLDatabase).
+This offer is available for one database per Azure subscription. To get started, look for the **Apply offer** banner on the [provisioning page for Azure SQL Database](https://portal.azure.com/#create/Microsoft.SQLDatabase).
 
 :::image type="content" source="media/free-offer/azure-sql-database-free-banner.png" alt-text="Screenshot from the Azure portal of the Free Offer banner.":::
 
@@ -112,7 +112,7 @@ You won't be charged for the Azure SQL Database unless you exceed the free datab
 
 ### Tips on managing vCore seconds
 
-1. Disconnect querying tools such as [Azure Data Studio](/azure-data-studio/download-azure-data-studio) and [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms), including the object explorer, when you're done using them. Leaving connections open may continue to consume credits.
+1. Disconnect querying tools such as [Azure Data Studio](/azure-data-studio/download-azure-data-studio) and [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms), including the object explorer, when you're done using them. Leaving connections open can continue to consume credits by preventing auto-pause.
 1. On the **Metrics** tab, [create an alert rule](/azure/azure-monitor/alerts/tutorial-metric-alert) at no cost. Use the **Free amount remaining** metric to send an alert when the amount is less than 10,000 vCore seconds (10% of the monthly limit), so you know when you're running out for the month.
 
 ## Offer limitations
@@ -121,7 +121,7 @@ Compared to a normal General Purpose database, this free offer has the following
 
 - When the **Auto-pause the database until next month** option is enabled:
   - Maximum of 4 vCores and the maximum database size of 32 GB.
-  - Long-term backup retention isn't available, and point-in-time restore (PITR) retention is limited to 7 days.
+  - Long-term backup retention isn't available, and point-in-time restore (PITR) retention is limited to seven days.
   - Backup storage is local redundant storage only.
   - Backup storage is free.
 - When the **Continue using database for additional charges** option is enabled:
@@ -129,7 +129,7 @@ Compared to a normal General Purpose database, this free offer has the following
   - You can't revert to the **Auto-pause the database until next month** option.
 - The ability to restore or convert an existing database to the free offer database, or data sync with other databases, isn't available.
 - Elastic Jobs and DNS Alias aren't available for this free offer.
-- The free offer Azure SQL Database can't be a part of an elastic pool or autofailover group.
+- The free offer Azure SQL Database can't be a part of an [elastic pool](elastic-pool-overview.md) or [failover group](failover-group-sql-db.md).
 - Currently, you can only use the Azure portal to create the free offer database.
 - Currently, the Microsoft Azure for Students Starter offer is incompatible with this Azure SQL Database free offer. Instead, consider the [Azure for College Students offer](https://azure.microsoft.com/pricing/offers/ms-azr-0170p/) or the [Azure Free offer](https://azure.microsoft.com/pricing/offers/ms-azr-0044p/). If desired, the **Continue using database for additional charges** option can deduct from the starting credits.
 - For more information, review the [Azure SQL Database free offer FAQ](free-offer-faq.yml).

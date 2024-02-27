@@ -25,10 +25,10 @@ dotnet tool install -g microsoft.sqlpackage --version 162.2.111
 
 |Platform|Download|
 |:---|:---|
-|Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2261576)|
+|Windows .NET 8 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2261576)|
 |Windows|[.msi file](https://go.microsoft.com/fwlink/?linkid=2262108)|
-|macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2261849)|
-|Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2261577)|
+|macOS .NET 8 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2261849)|
+|Linux .NET 8 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2261577)|
 
 ### Features
 | Feature | Details |

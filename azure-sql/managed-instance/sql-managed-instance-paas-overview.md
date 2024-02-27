@@ -167,45 +167,19 @@ The [vCore-based purchasing model](service-tiers-managed-instance-vcore.md) for 
 In the vCore model, you can choose hardware configurations as follows:
 
 - **Standard Series (Gen5)** logical CPUs are based on Intel&reg; E5-2673 v4 (Broadwell) 2.3 GHz, Intel&reg; SP-8160 (Skylake), and  Intel&reg; 8272CL (Cascade Lake) 2.5-GHz processors, with **5.1 GB of RAM per CPU vCore**, fast NVMe SSD, hyper-threaded logical core, and compute sizes between 4 and 80 cores.
-- **Premium Series** logical CPUs are based on Intel&reg; 8370C (Ice Lake) 2.8-GHz processors, with **7 GB of RAM per CPU vCore** (up to 80 vCores), fast NVMe SSD, hyper-threaded logical core, and compute sizes between 4 and 80 cores.
+- **Premium Series** logical CPUs are based on Intel&reg; 8370C (Ice Lake) 2.8-GHz processors, with **7 GB of RAM per CPU vCore** (up to 128 vCores), fast NVMe SSD, hyper-threaded logical core, and compute sizes between 4 and 128 cores.
 - **Premium Series Memory-Optimized** logical CPUs are based on Intel&reg; 8370C (Ice Lake) 2.8-GHz processors, with **13.6 GB of RAM per CPU vCore** (up to 64 vCores), fast NVMe SSD, hyper-threaded logical core, and compute sizes between 4 and 64 cores.
 
 Find more information about the difference between hardware configurations in [SQL Managed Instance resource limits](resource-limits.md#hardware-configuration-characteristics).
 
 ## Service tiers
 
+The [service tier](service-tiers-managed-instance-vcore.md#compute-tiers) generally defines the storage architecture, space and I/O limits, and business continuity options related to availability and disaster recovery. 
+
 SQL Managed Instance is available in two service tiers:
 
-- **General Purpose**: Designed for applications with typical performance and I/O latency requirements.
+- **General Purpose**: Designed for applications with typical performance and I/O latency requirements. You can use the upgraded [Next-gen General Purpose service tier (preview)](service-tiers-next-gen-general-purpose-use.md) for improved performance metrics, and greater resource flexibility. 
 - **Business Critical**: Designed for applications with low I/O latency requirements and minimal impact of underlying maintenance operations on the workload.
-
-Both service tiers guarantee 99.99% availability and enable you to independently select storage size and compute capacity. For more information on the high availability architecture of Azure SQL Managed Instance, see [High availability and Azure SQL Managed Instance](high-availability-sla.md).
-
-### General Purpose service tier
-
-The following list describes key characteristics of the General Purpose service tier:
-
-- Designed for the majority of business applications with typical performance requirements
-- High-performance Azure Blob storage (16 TB)
-- Built-in [high availability](high-availability-sla.md#locally-redundant-availability) based on reliable Azure Blob storage and [Azure Service Fabric](/azure/service-fabric/service-fabric-overview)
-
-For more information, see [Storage layer in the General Purpose tier](https://medium.com/azure-sqldb-managed-instance/file-layout-in-general-purpose-azure-sql-managed-instance-cf21fff9c76c) and [Storage performance best practices and considerations for SQL Managed Instance (General Purpose)](/archive/blogs/sqlcat/storage-performance-best-practices-and-considerations-for-azure-sql-db-managed-instance-general-purpose).
-
-Find more information about the difference between service tiers in [SQL Managed Instance resource limits](resource-limits.md#service-tier-characteristics).
-
-### Business Critical service tier
-
-The Business Critical service tier is built for applications with high I/O requirements. It offers the highest resilience to failures using several isolated replicas.
-
-The following list outlines the key characteristics of the Business Critical service tier:
-
-- Designed for business applications with highest performance and HA requirements
-- Comes with super-fast local SSD storage (up to 4 TB on standard series (Gen5), up to 5.5 TB on premium series and up to 16 TB on memory optimized premium-series)
-- Built-in [high availability](high-availability-sla.md#locally-redundant-availability) based on [Always On availability groups](/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server) and [Azure Service Fabric](/azure/service-fabric/service-fabric-overview)
-- Additional built-in [read-only database replicas](../database/read-scale-out.md) that can be used for reporting and other read-only workloads
-- [In-Memory OLTP](in-memory-oltp-overview.md) that can be used for workload with high-performance requirements
-
-Find more information about the differences between service tiers in [SQL Managed Instance resource limits](resource-limits.md#service-tier-characteristics).
 
 ## Management operations
 

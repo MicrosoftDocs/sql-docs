@@ -175,7 +175,7 @@ This topic defines terms relevant to ADO.
 
 ## I-L
  ISAPI (Internet Server Application Programming Interface)
- A set of functions for Internet servers, such as a Windows NT&reg; Server/Windows 2000 Server running Microsoft&reg; Internet Information Services (IIS).
+ A set of functions for Internet servers, such as a Windows NT Server/Windows 2000 Server running Microsoft Internet Information Services (IIS).
 
  Key
  A column or columns in a table that uniquely identify a row; often used to index a table.

@@ -46,7 +46,7 @@ Category  |Operation  |Cancelable  |Estimated cancel duration  |
 To cancel management operations using the Azure portal, follow these steps:
 
 1. Go  to the [Azure portal](https://portal.azure.com)
-1. Go to the **Overview** blade of your SQL Managed Instance. 
+1. Go to the **Overview** pane of your SQL Managed Instance. 
 1. Select the **Notification** box next to the ongoing operation to open the **Ongoing Operation** page. 
 
    :::image type="content" source="media/management-operations-cancel/open-ongoing-operation.png" alt-text="Select the ongoing operation box to open the ongoing operation page.":::

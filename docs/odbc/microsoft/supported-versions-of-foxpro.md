@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "FoxPro ODBC driver [ODBC], installing"
 ---
 # Supported Versions of FoxPro
-You can use the Microsoft® Visual FoxPro® ODBC Driver to access data stored in FoxPro tables. The following versions of FoxPro data are supported:  
+You can use the Microsoft Visual FoxPro ODBC Driver to access data stored in FoxPro tables. The following versions of FoxPro data are supported:  
   
 -   2.0  
   

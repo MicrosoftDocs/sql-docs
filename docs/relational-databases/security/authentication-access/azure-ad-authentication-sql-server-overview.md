@@ -77,7 +77,7 @@ A service principal is an identity that can be created for use with automated to
 Managed identities are special forms of service principals. There are two types of managed identities: system-assigned and user-assigned. System-assigned managed identities are enabled directly on an Azure resource, whereas user-assigned managed identities are a standalone resource that can be assigned to one or more Azure resources.
 
 > [!NOTE]
-> In order to use a managed identity to connect to a SQL resource through GUI clients such as SSMS and ADS, the machine running the client application must have a Microsoft Entra client running with the identity's certificate stored in it. This is most commonly achieved through an Azure VM, as the identity can be easily assigned to the machine through the VM's portal blade.
+> In order to use a managed identity to connect to a SQL resource through GUI clients such as SSMS and ADS, the machine running the client application must have a Microsoft Entra client running with the identity's certificate stored in it. This is most commonly achieved through an Azure VM, as the identity can be easily assigned to the machine through the VM's portal pane.
 
 For tools that use Azure identity libraries such as SQL Server Management Studio (SSMS), when connecting with a managed identity you need to use the GUID for the login such as `abcd1234-abcd-1234-abcd-abcd1234abcd1234`. For more information, see ([ManagedIdentityCredential](/dotnet/api/azure.identity.managedidentitycredential.-ctor). If you incorrectly pass the username, an error occurs such as:
 

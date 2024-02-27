@@ -22,7 +22,7 @@ This article shows you how to implement [dynamic data masking](dynamic-data-mask
 
 1. Launch the Azure portal at [https://portal.azure.com](https://portal.azure.com).
 2. Go to your database resource in the Azure portal. 
-3. Select the **Dynamic Data Masking** blade under the **Security** section. 
+3. Select the **Dynamic Data Masking** pane under the **Security** section. 
 
    ![Screenshot that shows the Security section with Dynamic Data Masking highlighted.](./media/dynamic-data-masking-configure-portal/dynamic-data-masking-in-portal.png)
 

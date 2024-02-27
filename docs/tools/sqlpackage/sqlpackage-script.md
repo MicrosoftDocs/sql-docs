@@ -158,6 +158,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|IsAlwaysEncryptedParameterizationEnabled=(BOOLEAN 'False')|Enables variable parameterization on Always Encrypted columns in pre/post deployment scripts.|
 |**/p:**|LongRunningCommandTimeout=(INT32 '0')| Specifies the long running command timeout in seconds when executing queries against SQL Server. Use 0 to wait indefinitely.|
 |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|Specifies that publish should always drop and re-create an assembly if there is a difference instead of issuing an ALTER ASSEMBLY statement.|
+|**/p:**|PerformIndexOperationsOnline=(BOOLEAN 'False')|Specifies whether to perform index operations online during deployment.|
 |**/p:**|PopulateFilesOnFileGroups=(BOOLEAN 'True')|Specifies whether a new file is also created when a new FileGroup is created in the target database.|
 |**/p:**|PreserveIdentityLastValues=(BOOLEAN 'False')|Specifies whether last values for identity columns should be preserved during deployment.|
 |**/p:**|RegisterDataTierApplication=(BOOLEAN)|Specifies whether the schema is registered with the database server.|

@@ -166,7 +166,7 @@ The email shows the alert name, details of the threshold and why the alert was t
 ## View, suspend, activate, modify and delete existing alert rules
 
 > [!NOTE]
-> Existing alerts need to be managed from the Alerts menu from Azure portal dashboard. Existing alerts cannot be modified from Managed Instance resource blade.
+> Existing alerts need to be managed from the Alerts menu from Azure portal dashboard. Existing alerts cannot be modified from Managed Instance resource pane.
 
 To view, suspend, activate, modify and delete existing alerts:
 

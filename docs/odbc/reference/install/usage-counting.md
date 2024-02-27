@@ -27,7 +27,7 @@ helpviewer_keywords:
  File usage counts help determine when a file must actually be copied or deleted as opposed to incrementing or decrementing the usage count. This is important because ODBC components, and therefore the files in ODBC components, are shared and can be installed or removed by a variety of applications. The application can delete driver and translator files if the component usage count and the file usage count reach zero. Driver Manager files should not, however, be deleted when both the component usage count and the file usage count have reached zero, because these files can be used by other applications that have not incremented the file usage count.  
   
 > [!NOTE]  
->  File usage counts are optional in Microsoft® WindowsNT®/Windows2000.  
+>  File usage counts are optional in Microsoft Windows NT/Windows 2000.  
   
  File usage counts are maintained by the setup program after it calls **SQLInstallDriverManager**, **SQLInstallDriverEx**, **SQLInstallTranslatorEx**, **SQLRemoveDriverManager**, **SQLRemoveDriver**, or **SQLRemoveTranslator**.  
   

@@ -624,7 +624,7 @@ To build and run the example:
     8. Upon selecting **Register** the app is immediately created and you are taken to its resource page.
     9. In the **Essentials** box, find the **Application (client) ID** and copy it. You need this value later to configure your application.
     10. Select **Certificates & secrets** from the navigation pane. On the **Client secrets (0)** tab, select **New client secret**. Enter a description for the secret and select an expiration (the default is fine). Select **Add** at the bottom. **Important** before leaving this page, copy the generated **Value** for your client secret- this cannot be viewed after leaving the page. This value is the client secret.
-    11. Return to the [App registrations](https://ms.portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps) blade for Microsoft Entra ID and find the **Endpoints** tab. Copy the URL under `OAuth 2.0 token endpoint`, this is your STS URL.
+    11. Return to the [App registrations](https://ms.portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps) pane for Microsoft Entra ID and find the **Endpoints** tab. Copy the URL under `OAuth 2.0 token endpoint`, this is your STS URL.
 
     ![Azure Portal App Registration End Point - STS URL](media/jdbc_aad_token.png)
 

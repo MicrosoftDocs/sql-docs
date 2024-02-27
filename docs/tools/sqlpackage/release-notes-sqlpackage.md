@@ -33,13 +33,12 @@ dotnet tool install -g microsoft.sqlpackage --version 162.2.111
 ### Features
 | Feature | Details |
 | :------ | :------ |
-|Platform|References [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.1.4) 5.1.4|
-|Platform|SqlPackage self-contained (.zip) downloads are now built with .NET 8|
-|Platform|SqlPackage `dotnet tool` is now available for both .NET 6 and .NET 8|
+|Platform|References [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.1.4) v5.1.4.|
+|Platform|SqlPackage self-contained (.zip) downloads are now built with .NET 8.|
+|Platform|SqlPackage `dotnet tool` is now available for both .NET 6 and .NET 8. [GitHub issue](https://github.com/microsoft/DacFx/issues/372)|
 |Platform|SqlPackage preview releases are now available in the `dotnet tool` feed|
 |Azure Synapse Analytics|Added validation to the `DW_COMPATIBILITY_LEVEL` project property to ensure that the value is within the valid options of 0, 10, 20, 30, 40, 50, 9000 during project build.|
-|Deployment|Adds support for synonym to user-defined data types. [GitHub issue](https://github.com/microsoft/DacFx/issues/327)|
-|Deployment|Adds support for `ONLINE` index [operations](../../relational-databases/indexes/guidelines-for-online-index-operations.md). Online index operations can be applied as a SqlPackage command line [publish property](), `/p:PerformIndexOperationsOnline`, and as a component in the SQL project model|
+|Deployment|Adds support for `ONLINE` index [operations](../../relational-databases/indexes/guidelines-for-online-index-operations.md). Online index operations can be applied as a SqlPackage command line [publish property](./sqlpackage-publish.md#properties-specific-to-the-publish-action), `/p:PerformIndexOperationsOnline`, and as a component in the SQL project model. [GitHub issue](https://github.com/microsoft/DacFx/issues/27)|
 |Parquet|Improvements to extract and publish operations with data in Parquet files, including performance improvements with parallel import of data and log file size reduction.|
 
 
@@ -51,11 +50,12 @@ dotnet tool install -g microsoft.sqlpackage --version 162.2.111
 |Deployment|Fixed an issue where references to system tables in a values clause would fail to build with an error message that the Value cannot be null. [Developer Community](https://developercommunity.visualstudio.com/t/The-SqlBuildTask-task-failed-unexpecte/10525319)|
 |Deployment|Fixed an issue where the absolute paths of referenced dacpacs were stored in the dacpac after project build instead of the relative paths. [GitHub issue](https://github.com/microsoft/DacFx/issues/329)|
 |Deployment|Fixed an issue where the creation of a disabled clustered index would cause the deployment to fail if another disabled index was to be created. [GitHub issue](https://github.com/microsoft/DacFx/issues/386)|
+|Deployment|Fixed an issue where a synonym to user-defined data types resulted in an unresolved reference. [GitHub issue](https://github.com/microsoft/DacFx/issues/327)|
 |Extract|Fixed an issue where the DacVersion property was not being set if a version was specified for the package that did not follow `major.minor.build` format. [GitHub issue](https://github.com/microsoft/DacFx/issues/110)|
 |Import|Fixed an issue where certain collations, including `Chinese_PRC_CI_AS`, would fail to import with an error message that the collation was not supported. [GitHub issue](https://github.com/microsoft/DacFx/issues/292)|
 |Schema compare|Fixed an issue where databases with `UTF8` collation would not give the correct result.|
 |Schema compare|Fixed an issue where schema compare would not include external data source, external file format, and external table objects when evaluating Synapse serverless SQL pools.|
-|Security|Fixed SqlPackage on .NET support universal authentication (`/ua`), which supports Microsoft Entra ID authentication with multi-factor authentication (MFA).|
+|Security|Fixed SqlPackage on .NET support for universal authentication (`/ua`), which supports Microsoft Entra ID authentication with multi-factor authentication (MFA).|
 |System dacpacs|Fixed an issue where the pdw* views were not included in the [Synapse Data Warehouse](https://www.nuget.org/packages/Microsoft.SqlServer.Dacpacs.Synapse.Master) master.dacpac. [GitHub issue](https://github.com/microsoft/DacFx/issues/268), [Developer Community](https://developercommunity.visualstudio.com/t/masterdacpac-for-Azure-SQL-DW-Synapse-/10459631)|
 
 ### Known Issues

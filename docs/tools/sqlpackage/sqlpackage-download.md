@@ -54,13 +54,19 @@ To uninstall SqlPackage, run the following command:
 
 ### Preview releases
 
-Preview releases of SqlPackage are available with the dotnet tool feed. To install a preview release, use the `--version` option with the `dotnet tool install` command. For example, to install version 162.2.82-preview of SqlPackage, run the following command:
+Preview releases of SqlPackage are available with the dotnet tool feed. To access preview releases, use the `--prerelease` option with the `dotnet tool` command. For example, to install the latest preview release, run the following command:
 
    ```bash
-   dotnet tool install -g microsoft.sqlpackage --version 162.2.82-preview
+   dotnet tool install -g --prerelease microsoft.sqlpackage
    ```
 
-The dotnet tool `update` command won't update to a preview release. To update to a preview release, use the `--version` option with the `dotnet tool install` command. A list of releases is available on the [dotnet tool feed](https://www.nuget.org/packages/microsoft.sqlpackage/).
+To update SqlPackage to the latest preview version, run the following command:
+
+   ```bash
+   dotnet tool update -g --prerelease microsoft.sqlpackage
+   ```
+
+A list of preview releases is available on the [dotnet tool feed for SqlPackage](https://www.nuget.org/packages/microsoft.sqlpackage/).
 
 
 ## Installation, file download (alternative)

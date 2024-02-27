@@ -36,7 +36,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.2.111
 |Platform|References [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.1.4) v5.1.4.|
 |Platform|SqlPackage self-contained (.zip) downloads are now built with .NET 8.|
 |Platform|SqlPackage `dotnet tool` is now available for both .NET 6 and .NET 8. [GitHub issue](https://github.com/microsoft/DacFx/issues/372)|
-|Platform|SqlPackage preview releases are now available in the `dotnet tool` feed|
+|Platform|SqlPackage [preview releases](./sqlpackage-download.md#preview-releases) are now available in the `dotnet tool` feed.|
 |Azure Synapse Analytics|Added validation to the `DW_COMPATIBILITY_LEVEL` project property to ensure that the value is within the valid options of 0, 10, 20, 30, 40, 50, 9000 during project build.|
 |Deployment|Adds support for `ONLINE` index [operations](../../relational-databases/indexes/guidelines-for-online-index-operations.md). Online index operations can be applied as a SqlPackage command line [publish property](./sqlpackage-publish.md#properties-specific-to-the-publish-action), `/p:PerformIndexOperationsOnline`, and as a component in the SQL project model. [GitHub issue](https://github.com/microsoft/DacFx/issues/27)|
 |Parquet|Improvements to extract and publish operations with data in Parquet files, including performance improvements with parallel import of data and log file size reduction.|

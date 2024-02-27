@@ -4,7 +4,7 @@ description: Release notes for Microsoft SqlPackage.
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: "llali"
-ms.date: 02/22/2024
+ms.date: 02/27/2024
 ms.service: sql
 ms.topic: conceptual
 ms.custom: tools|sos
@@ -14,6 +14,58 @@ ms.custom: tools|sos
 **[Download the latest version](sqlpackage-download.md)**
 
 This article lists the features and fixes delivered by the released versions of SqlPackage.
+
+## 162.2.111 SqlPackage
+
+**Release date:** February 27, 2024
+
+```bash
+dotnet tool install -g microsoft.sqlpackage --version 162.2.111
+```
+
+|Platform|Download|
+|:---|:---|
+|Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2261576)|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2262108)|
+|macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2261849)|
+|Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2261577)|
+
+### Features
+| Feature | Details |
+| :------ | :------ |
+|Platform|References [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.1.4) 5.1.4|
+|Platform|SqlPackage self-contained (.zip) downloads are now built with .NET 8|
+|Platform|SqlPackage `dotnet tool` is now available for both .NET 6 and .NET 8|
+|Platform|SqlPackage preview releases are now available in the `dotnet tool` feed|
+|Azure Synapse Analytics|Added validation to the `DW_COMPATIBILITY_LEVEL` project property to ensure that the value is within the valid options of 0, 10, 20, 30, 40, 50, 9000 during project build.|
+|Deployment|Adds support for in-place online encryption (secure enclaves) when `EnclaveAttestationProtocol` and `EnclaveAttestationUrl` are specified with a database that has enclave-enabled columns.  More about Always Encrypted with secure enclaves [here](../../relational-databases/security/encryption/always-encrypted-enclaves).|
+|Deployment|Adds support for synonym to user-defined data types. [GitHub issue](https://github.com/microsoft/DacFx/issues/327)|
+|Deployment|Adds support for `ONLINE` index [operations](../../relational-databases/indexes/guidelines-for-online-index-operations). Online index operations can be applied as a SqlPackage command line [publish property](), `/p:PerformIndexOperationsOnline`, and as a component in the SQL project model|
+|Parquet|Improvements to extract and publish operations with data in Parquet files, including performance improvements with parallel import of data and log file size reduction.|
+
+
+### Fixes
+| Feature | Details |
+| :------ | :------ |
+|Deployment|Fixed an issue where packages with functions used in the apply clause of a view would fail to deploy with an error message that the function was not found because the view was incorrectly deployed before the function. [GitHub issue](https://github.com/microsoft/DacFx/issues/106)|
+|Deployment|Fixed an issue where function keywords such as `NATIVE_COMPILATION` and `SCHEMABINDING` were not correctly recognized and included in the deployment script. [GitHub issue](https://github.com/microsoft/DacFx/issues/308), [Developer Community](https://developercommunity.visualstudio.com/t/Database-project-schema-compare-generate/10224098)|
+|Deployment|Fixed an issue where references to system tables in a values clause would fail to build with an error message that the Value cannot be null. [Developer Community](https://developercommunity.visualstudio.com/t/The-SqlBuildTask-task-failed-unexpecte/10525319)|
+|Deployment|Fixed an issue where the absolute paths of referenced dacpacs were stored in the dacpac after project build instead of the relative paths. [GitHub issue](https://github.com/microsoft/DacFx/issues/329)|
+|Deployment|Fixed an issue where the creation of a disabled clustered index would cause the deployment to fail if additional disabled indexes were to be created. [GitHub issue](https://github.com/microsoft/DacFx/issues/386)|
+|Extract|Fixed an issue where the DacVersion property was not being set if a version was specified for the package that did not follow `major.minor.build` format. [GitHub issue](https://github.com/microsoft/DacFx/issues/110)|
+|Import|Fixed an issue where certain collations, including `Chinese_PRC_CI_AS`, would fail to import with an error message that the collation was not supported. [GitHub issue](https://github.com/microsoft/DacFx/issues/292)|
+|Schema compare|Fixed an issue where databases with `UTF8` collation would not give the correct result.|
+|Schema compare|Fixed an issue where schema compare would not include external data source, external file format and external table objects when evaluating Synapse serverless SQL pools.|
+|Security|Fixed SqlPackage on .NET support universal authentication (`/ua`), which supports Microsoft Entra ID authentication with multi-factor authentication (MFA).|
+|System dacpacs|Fixed an issue where the pdw* views were not included in the [Synapse Data Warehouse](https://www.nuget.org/packages/Microsoft.SqlServer.Dacpacs.Synapse.Master) master.dacpac. [GitHub issue](https://github.com/microsoft/DacFx/issues/268), [Developer Community](https://developercommunity.visualstudio.com/t/masterdacpac-for-Azure-SQL-DW-Synapse-/10459631)|
+
+### Known Issues
+| Feature | Details | Workaround |
+| :------ | :------ |:------ |
+| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
+| Import | A bacpac file created with SqlPackage export, except when installed by the MSI installer, may fail to import with the Azure portal and Azure PowerShell when larger than 4GB. | Import the bacpac with SqlPackage or use the SqlPackage installed by the MSI installer to create the bacpac file. |
+| ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
+
 
 ## 162.1.172 SqlPackage
 

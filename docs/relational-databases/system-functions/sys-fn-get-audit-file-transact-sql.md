@@ -90,7 +90,7 @@ The following table describes the audit file content that can be returned by thi
 | `audit_schema_version` | **int** | Always `1`. |
 | `class_type` | **varchar(2)** | The type of auditable entity that the audit occurs on. Not nullable. |
 | `client_ip` | **nvarchar(128)** | Source IP of the client application.<br /><br />**Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions, and Azure SQL Database |
-| `connection_id` | GUID | ID of the connection in the server.<br /><br />**Applies to**: Azure SQL Database and SQL Managed Instance |
+| `connection_id` | **uniqueidentifier** | ID of the connection in the server.<br /><br />**Applies to**: Azure SQL Database and SQL Managed Instance |
 | `data_sensitivity_information` | **nvarchar(4000)** | Information types and sensitivity labels returned by the audited query, based on the classified columns in the database. Learn more about [Azure SQL Database data discover and classification](/azure/sql-database/sql-database-data-discovery-and-classification).<br /><br />**Applies to**: Azure SQL Database only |
 | `database_name` | **sysname** | The database context in which the action occurred. Nullable. Returns `NULL` for audits occurring at the server level. |
 | `database_principal_id` | **int** | ID of the database user context that the action is performed in. Not nullable. Returns `0` if this doesn't apply. For example, a server operation. |

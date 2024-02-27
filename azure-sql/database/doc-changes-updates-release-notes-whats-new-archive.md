@@ -9,9 +9,6 @@ ms.date: 12/15/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: whats-new
-ms.custom:
-  - sqldbrb=2
-  - references_regions
 ---
 # What's new in Azure SQL Database? (Archive)
 

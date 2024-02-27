@@ -38,7 +38,6 @@ dotnet tool install -g microsoft.sqlpackage --version 162.2.111
 |Platform|SqlPackage `dotnet tool` is now available for both .NET 6 and .NET 8|
 |Platform|SqlPackage preview releases are now available in the `dotnet tool` feed|
 |Azure Synapse Analytics|Added validation to the `DW_COMPATIBILITY_LEVEL` project property to ensure that the value is within the valid options of 0, 10, 20, 30, 40, 50, 9000 during project build.|
-|Deployment|Adds support for in-place online encryption (secure enclaves) when `EnclaveAttestationProtocol` and `EnclaveAttestationUrl` are specified with a database that has enclave-enabled columns. More about Always Encrypted with secure enclaves [here](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|
 |Deployment|Adds support for synonym to user-defined data types. [GitHub issue](https://github.com/microsoft/DacFx/issues/327)|
 |Deployment|Adds support for `ONLINE` index [operations](../../relational-databases/indexes/guidelines-for-online-index-operations.md). Online index operations can be applied as a SqlPackage command line [publish property](), `/p:PerformIndexOperationsOnline`, and as a component in the SQL project model|
 |Parquet|Improvements to extract and publish operations with data in Parquet files, including performance improvements with parallel import of data and log file size reduction.|

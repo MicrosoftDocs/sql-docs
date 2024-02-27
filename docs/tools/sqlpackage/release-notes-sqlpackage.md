@@ -26,7 +26,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.2.111
 |Platform|Download|
 |:---|:---|
 |Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2261576)|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2262108)|
+|Windows|[.msi file](https://go.microsoft.com/fwlink/?linkid=2262108)|
 |macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2261849)|
 |Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2261577)|
 
@@ -38,24 +38,24 @@ dotnet tool install -g microsoft.sqlpackage --version 162.2.111
 |Platform|SqlPackage `dotnet tool` is now available for both .NET 6 and .NET 8|
 |Platform|SqlPackage preview releases are now available in the `dotnet tool` feed|
 |Azure Synapse Analytics|Added validation to the `DW_COMPATIBILITY_LEVEL` project property to ensure that the value is within the valid options of 0, 10, 20, 30, 40, 50, 9000 during project build.|
-|Deployment|Adds support for in-place online encryption (secure enclaves) when `EnclaveAttestationProtocol` and `EnclaveAttestationUrl` are specified with a database that has enclave-enabled columns.  More about Always Encrypted with secure enclaves [here](../../relational-databases/security/encryption/always-encrypted-enclaves).|
+|Deployment|Adds support for in-place online encryption (secure enclaves) when `EnclaveAttestationProtocol` and `EnclaveAttestationUrl` are specified with a database that has enclave-enabled columns. More about Always Encrypted with secure enclaves [here](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|
 |Deployment|Adds support for synonym to user-defined data types. [GitHub issue](https://github.com/microsoft/DacFx/issues/327)|
-|Deployment|Adds support for `ONLINE` index [operations](../../relational-databases/indexes/guidelines-for-online-index-operations). Online index operations can be applied as a SqlPackage command line [publish property](), `/p:PerformIndexOperationsOnline`, and as a component in the SQL project model|
+|Deployment|Adds support for `ONLINE` index [operations](../../relational-databases/indexes/guidelines-for-online-index-operations.md). Online index operations can be applied as a SqlPackage command line [publish property](), `/p:PerformIndexOperationsOnline`, and as a component in the SQL project model|
 |Parquet|Improvements to extract and publish operations with data in Parquet files, including performance improvements with parallel import of data and log file size reduction.|
 
 
 ### Fixes
 | Feature | Details |
 | :------ | :------ |
-|Deployment|Fixed an issue where packages with functions used in the apply clause of a view would fail to deploy with an error message that the function was not found because the view was incorrectly deployed before the function. [GitHub issue](https://github.com/microsoft/DacFx/issues/106)|
+|Deployment|Fixed an issue where packages with functions used in the apply clause of a view would fail to deploy. The previous error message was that the function was not found because the view was incorrectly deployed before the function. [GitHub issue](https://github.com/microsoft/DacFx/issues/106)|
 |Deployment|Fixed an issue where function keywords such as `NATIVE_COMPILATION` and `SCHEMABINDING` were not correctly recognized and included in the deployment script. [GitHub issue](https://github.com/microsoft/DacFx/issues/308), [Developer Community](https://developercommunity.visualstudio.com/t/Database-project-schema-compare-generate/10224098)|
 |Deployment|Fixed an issue where references to system tables in a values clause would fail to build with an error message that the Value cannot be null. [Developer Community](https://developercommunity.visualstudio.com/t/The-SqlBuildTask-task-failed-unexpecte/10525319)|
 |Deployment|Fixed an issue where the absolute paths of referenced dacpacs were stored in the dacpac after project build instead of the relative paths. [GitHub issue](https://github.com/microsoft/DacFx/issues/329)|
-|Deployment|Fixed an issue where the creation of a disabled clustered index would cause the deployment to fail if additional disabled indexes were to be created. [GitHub issue](https://github.com/microsoft/DacFx/issues/386)|
+|Deployment|Fixed an issue where the creation of a disabled clustered index would cause the deployment to fail if another disabled index was to be created. [GitHub issue](https://github.com/microsoft/DacFx/issues/386)|
 |Extract|Fixed an issue where the DacVersion property was not being set if a version was specified for the package that did not follow `major.minor.build` format. [GitHub issue](https://github.com/microsoft/DacFx/issues/110)|
 |Import|Fixed an issue where certain collations, including `Chinese_PRC_CI_AS`, would fail to import with an error message that the collation was not supported. [GitHub issue](https://github.com/microsoft/DacFx/issues/292)|
 |Schema compare|Fixed an issue where databases with `UTF8` collation would not give the correct result.|
-|Schema compare|Fixed an issue where schema compare would not include external data source, external file format and external table objects when evaluating Synapse serverless SQL pools.|
+|Schema compare|Fixed an issue where schema compare would not include external data source, external file format, and external table objects when evaluating Synapse serverless SQL pools.|
 |Security|Fixed SqlPackage on .NET support universal authentication (`/ua`), which supports Microsoft Entra ID authentication with multi-factor authentication (MFA).|
 |System dacpacs|Fixed an issue where the pdw* views were not included in the [Synapse Data Warehouse](https://www.nuget.org/packages/Microsoft.SqlServer.Dacpacs.Synapse.Master) master.dacpac. [GitHub issue](https://github.com/microsoft/DacFx/issues/268), [Developer Community](https://developercommunity.visualstudio.com/t/masterdacpac-for-Azure-SQL-DW-Synapse-/10459631)|
 
@@ -63,7 +63,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.2.111
 | Feature | Details | Workaround |
 | :------ | :------ |:------ |
 | Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
-| Import | A bacpac file created with SqlPackage export, except when installed by the MSI installer, may fail to import with the Azure portal and Azure PowerShell when larger than 4GB. | Import the bacpac with SqlPackage or use the SqlPackage installed by the MSI installer to create the bacpac file. |
+| Import | A bacpac file created with SqlPackage export, except when installed by the .msi file, may fail to import with the Azure portal and Azure PowerShell when larger than 4 GB. | Import the bacpac with SqlPackage or create the bacpac file with SqlPackage installed by the .msi file.|
 | ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
 
 
@@ -78,7 +78,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.172
 |Platform|Download|
 |:---|:---|
 |Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2257374)|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2257373)|
+|Windows|[.msi file](https://go.microsoft.com/fwlink/?linkid=2257373)|
 |macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2257375)|
 |Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2257477)|
 
@@ -91,7 +91,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.172
 | Feature | Details | Workaround |
 | :------ | :------ |:------ |
 | Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
-| Import | A bacpac file created with SqlPackage export, except when installed by the MSI installer, may fail to import with the Azure portal and Azure PowerShell when larger than 4GB. | Import the bacpac with SqlPackage or use the SqlPackage installed by the MSI installer to create the bacpac file. |
+| Import | A bacpac file created with SqlPackage export, except when installed by the .msi file, may fail to import with the Azure portal and Azure PowerShell when larger than 4 GB. | Import the bacpac with SqlPackage or create the bacpac file with SqlPackage installed by the .msi file.|
 | ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
 
 ## 162.1.167 SqlPackage
@@ -101,7 +101,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.172
 |Platform|Download|
 |:---|:---|
 |Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2249738)|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2249478)|
+|Windows|[.msi file](https://go.microsoft.com/fwlink/?linkid=2249478)|
 |macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2249674)|
 |Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2249739)|
 
@@ -112,10 +112,10 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.172
 | Platform | References [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.1.1) v5.1.1.|
 | Azure Synapse Analytics | Adds support for `PARSER_VERSION` in `FORMAT_OPTIONS` for  Azure Synapse Analytics serverless SQL pools. [Documentation](../../t-sql/statements/create-external-file-format-transact-sql.md#format_options) |
 | Azure Synapse Analytics | Adds support for multi-column distribution (MCD) in `CREATE VIEW` for Azure Synapse Analytics dedicated SQL pools. [GitHub issue](https://github.com/microsoft/DacFx/issues/224) |
-| Azure Synapse Analytics | Adds support for /p:TableData property on extract operations to Parquet files, enabling the ability to specify which tables to export data for.  [GitHub issue](https://github.com/microsoft/DacFx/issues/16) |
-| Fabric Data Warehouse | Adds support for extract and publish for Fabric Data Warehouse databases.  Publish capabilities don't support changes that require existing tables to be altered.  The target platform enum value is `SqlDwUnifiedDatabaseSchemaProvider` in SQL database projects. |
-| Parquet | Adds preview support for extract and publish with data stored in Parquet files in Azure Blob Storage with Azure SQL Managed Instance and SQL Server 2022. Azure SQL Database and SQL Server 2019 and earlier are not supported. Data must be in supported data types for [CETAS](/azure/synapse-analytics/sql/develop-tables-cetas#supported-data-types).  Extract and publish with Parquet files offers performance improvements over import/export to bacpac files in many scenarios.|
-| Publish | Adds `/p:AllowTableRecreation` property to publish operation.  The default (true) is consistent with previous behavior, where a table change may require that a table is recreated while the table data is preserved however the deployment may take a significant amount of time or change tracking data could be lost.  Setting the property `/p:AllowTableRecreation` to false results in the deployment not starting if recreation is needed for any table.  [GitHub issue](https://github.com/microsoft/DacFx/issues/28) |
+| Azure Synapse Analytics | Adds support for /p:TableData property on extract operations to Parquet files, enabling the ability to specify which tables to export data for. [GitHub issue](https://github.com/microsoft/DacFx/issues/16) |
+| Fabric Data Warehouse | Adds support for extract and publish for Fabric Data Warehouse databases. Publish capabilities don't support changes that require existing tables to be altered. The target platform enum value is `SqlDwUnifiedDatabaseSchemaProvider` in SQL database projects. |
+| Parquet | Adds preview support for extract and publish with data stored in Parquet files in Azure Blob Storage with Azure SQL Managed Instance and SQL Server 2022. Azure SQL Database and SQL Server 2019 and earlier are not supported. Data must be in supported data types for [CETAS](/azure/synapse-analytics/sql/develop-tables-cetas#supported-data-types). Extract and publish with Parquet files offers performance improvements over import/export to bacpac files in many scenarios.|
+| Publish | Adds `/p:AllowTableRecreation` property to publish operation. The default (true) is consistent with previous behavior, where a table change may require that a table is recreated while the table data is preserved however the deployment may take a significant amount of time or change tracking data could be lost. Setting the property `/p:AllowTableRecreation` to false results in the deployment not starting if recreation is needed for any table. [GitHub issue](https://github.com/microsoft/DacFx/issues/28) |
 
 ### Fixes
 | Feature | Details |
@@ -141,7 +141,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.172
 | Feature | Details | Workaround |
 | :------ | :------ |:------ |
 | Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
-| Import | A bacpac file created with SqlPackage export, except when installed by the MSI installer, may fail to import with the Azure portal and Azure PowerShell when larger than 4GB. | Import the bacpac with SqlPackage or use the SqlPackage installed by the MSI installer to create the bacpac file. |
+| Import | A bacpac file created with SqlPackage export, except when installed by the .msi file, may fail to import with the Azure portal and Azure PowerShell when larger than 4 GB. | Import the bacpac with SqlPackage or create the bacpac file with SqlPackage installed by the .msi file.|
 | ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
 
 ## 162.0.52 SqlPackage
@@ -151,7 +151,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.172
 |Platform|Download|Version|
 |:---|:---|:---|
 |Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2236505)|162.0.52|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2236347)|162.0.52|
+|Windows|[.msi file](https://go.microsoft.com/fwlink/?linkid=2236347)|162.0.52|
 |macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2236426)|162.0.52|
 |Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2236425)|162.0.52|
 
@@ -193,7 +193,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.172
 | Feature | Details | Workaround |
 | :------ | :------ |:------ |
 | Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
-| Import | A bacpac file created with SqlPackage export, except when installed by the MSI installer, may fail to import with the Azure portal and Azure PowerShell when larger than 4GB. | Import the bacpac with SqlPackage or use the SqlPackage installed by the MSI installer to create the bacpac file. |
+| Import | A bacpac file created with SqlPackage export, except when installed by the .msi file, may fail to import with the Azure portal and Azure PowerShell when larger than 4 GB. | Import the bacpac with SqlPackage or create the bacpac file with SqlPackage installed by the .msi file.|
 | ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
 
 ## 161.8089.0 SqlPackage
@@ -203,12 +203,12 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.172
 |Platform|Download|Version|Build
 |:---|:---|:---|:---|
 |Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2224909)|161.8089.0|16.1.8089.0|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2224908)|161.8089.0|16.1.8089.0|
+|Windows|[.msi file](https://go.microsoft.com/fwlink/?linkid=2224908)|161.8089.0|16.1.8089.0|
 |macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2225106)|161.8089.0|16.1.8089.0|
 |Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2225105)|161.8089.0|16.1.8089.0|
 
 > [!IMPORTANT]
-> Version 161 of SqlPackage encrypts database connections by default. Previously successful connections with self-signed certificates or without encryption may not connect with v161 without updating the SqlPackage parameters.  For more information, see [https://aka.ms/dacfx-connection](https://aka.ms/dacfx-connection).
+> Version 161 of SqlPackage encrypts database connections by default. Previously successful connections with self-signed certificates or without encryption may not connect with v161 without updating the SqlPackage parameters. For more information, see [https://aka.ms/dacfx-connection](https://aka.ms/dacfx-connection).
 
 
 ### Features
@@ -245,17 +245,17 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.172
 |Platform|Download|Version|Build
 |:---|:---|:---|:---|
 |Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2215400)|161.6374.0|16.1.6374.0|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2215326)|161.6374.0|16.1.6374.0|
+|Windows|[.msi file](https://go.microsoft.com/fwlink/?linkid=2215326)|161.6374.0|16.1.6374.0|
 |macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2215401)|161.6374.0|16.1.6374.0|
 |Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2215501)|161.6374.0|16.1.6374.0|
 
 > [!IMPORTANT]
-> Version 161 of SqlPackage encrypts database connections by default. Previously successful connections with self-signed certificates or without encryption may not connect with v161 without updating the SqlPackage parameters.  For more information, see [https://aka.ms/dacfx-connection](https://aka.ms/dacfx-connection).
+> Version 161 of SqlPackage encrypts database connections by default. Previously successful connections with self-signed certificates or without encryption may not connect with v161 without updating the SqlPackage parameters. For more information, see [https://aka.ms/dacfx-connection](https://aka.ms/dacfx-connection).
 
 ### Features
 | Feature | Details |
 | :------ | :------ |
-|Platform|Changes connections to use encryption and not trust the server certificate by default. This is a breaking change for connections using self-signed certificates or without encryption by default.  For more information, see [this dedicated article](https://aka.ms/dacfx-connection).|
+|Platform|Changes connections to use encryption and not trust the server certificate by default. This is a breaking change for connections using self-signed certificates or without encryption by default. For more information, see [this dedicated article](https://aka.ms/dacfx-connection).|
 |Platform|References [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.0.1) v5.0.1|
 |Platform|SqlPackage is now available for [installation](sqlpackage-download.md) as a `dotnet tool` for Windows, macOS, and Linux platforms.|
 |Always Encrypted|Adds support for VBS (Virtualization-based security) with [secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|
@@ -283,7 +283,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.172
 
 |Platform|Download|Version|Build
 |:---|:---|:---|:---|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2209512)|19.2|16.0.6296.0|
+|Windows|[.msi file](https://go.microsoft.com/fwlink/?linkid=2209512)|19.2|16.0.6296.0|
 |macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2209610)| 19.2|16.0.6296.0|
 |Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2209513)| 19.2|16.0.6296.0|
 |Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2209609)| 19.2|16.0.6296.0|
@@ -292,7 +292,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.172
 ### Features
 | Feature | Details |
 | :------ | :------ |
-| Connection pooling | Enables connection pooling for all connections if the environment variable `CONNECTION_POOLING_ENABLED` is set to True.  This is recommended for operations with Azure Active Directory username/password connections to avoid MSAL throttling. |
+| Connection pooling | Enables connection pooling for all connections if the environment variable `CONNECTION_POOLING_ENABLED` is set to True. This is recommended for operations with Azure Active Directory username/password connections to avoid Microsoft Authentication Library (MSAL) throttling. |
 | Deployment options | Surfaces friendly names for deployment options in DacFx .NET APIs. |
 | Dynamic Data Masking | Adds support for [granular UNMASK permissions](../../relational-databases/security/dynamic-data-masking.md#granular) in Import/Export and Extract/Publish.|
 | Ledger | Adds SQL Ledger history table in schema model for validation and export/extract, doesn't import or publish the history table to a database. |
@@ -322,7 +322,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.172
 
 |Platform|Download|Version|Build
 |:---|:---|:---|:---|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2196438)|19.1|16.0.6161.0|
+|Windows|[.msi file](https://go.microsoft.com/fwlink/?linkid=2196438)|19.1|16.0.6161.0|
 |macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2196439)| 19.1|16.0.6161.0|
 |Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2196335)| 19.1|16.0.6161.0|
 |Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2196334)| 19.1|16.0.6161.0|
@@ -332,7 +332,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.172
 | Feature | Details |
 | :------ | :------ |
 | Azure Synapse Analytics | Adds support for [Native external data source](/azure/synapse-analytics/sql/develop-tables-external-tables?tabs=native#syntax-for-create-external-data-source). |
-| Extract | Adds support for `ExtractTarget` property on extract operations.  Extract now supports extracting to .sql as a file per object organized in a single folder, object type, schema, or object type and schema. |
+| Extract | Adds support for `ExtractTarget` property on extract operations. Extract now supports extracting to .sql as a file per object organized in a single folder, object type, schema, or object type and schema. |
 | ScriptDOM | Adds support for `isn't DISTINCT FROM` syntax. |
 
 
@@ -355,7 +355,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.172
 | Feature | Details | Workaround |
 | :------ | :------ |:------ |
 | Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
-| Deployment | Increased deployment time when deploying using Azure Active Directory user/password authentication due to MSAL throttling. [More Information on GitHub](https://github.com/microsoft/DacFx/issues/92) | Use an alternative authentication method, such as [Azure Active Directory Service Principal](/azure/azure-sql/database/authentication-aad-service-principal)|
+| Deployment | Increased deployment time when deploying using Azure Active Directory user/password authentication due to Microsoft Authentication Library (MSAL) throttling. [More Information on GitHub](https://github.com/microsoft/DacFx/issues/92) | Use an alternative authentication method, such as [Azure Active Directory Service Principal](/azure/azure-sql/database/authentication-aad-service-principal)|
 |Deployment|SqlPackage on .NET Core for Windows, macOS, and Linux fails during a publish operation with an error message "Unrecognized configuration section system.diagnostics" when in-place encryption is used for Always Encrypted with secure enclaves.|Remove the file `sqlpackage.dll.config` from the SqlPackage folder.|
 | ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
 
@@ -366,7 +366,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.172
 
 |Platform|Download|Version|Build
 |:---|:---|:---|:---|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2185764)|19.0|16.0.5400.1|
+|Windows|[.msi file](https://go.microsoft.com/fwlink/?linkid=2185764)|19.0|16.0.5400.1|
 |macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2185765)| 19.0|16.0.5400.1|
 |Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2185670)| 19.0|16.0.5400.1|
 |Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2185669)| 19.0|16.0.5400.1|
@@ -390,7 +390,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.172
 | :------ | :------ |
 | Deployment |Fixes issue with interpretation of table distribution on column within a stored procedure. |
 | Deployment |Fixes issue with "Drop objects not in source" option during publish operation. |
-| Deployment |Fixes for Deploying a dacpac with temporal table having sensitivity classification.  |
+| Deployment |Fixes for Deploying a dacpac with temporal table having sensitivity classification. |
 | Deployment |Fixes a bug when variables are verified even when DoNotEvaluateSqlCmdVariables is set to true|
 | Extract |Fix for Refactor log of referenced dacpac according to includeCompositeObjects selection. |
 | Import |Fixes issue with importing database scope configurations that are not supported in target server|
@@ -402,7 +402,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.172
 | Feature | Details | Workaround |
 | :------ | :------ |:------ |
 | Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
-| Deployment | Increased deployment time when deploying using Azure Active Directory user/password authentication due to MSAL throttling. [More Information on GitHub](https://github.com/microsoft/DacFx/issues/92) | Use an alternative authentication method, such as [Azure Active Directory Service Principal](/azure/azure-sql/database/authentication-aad-service-principal)|
+| Deployment | Increased deployment time when deploying using Azure Active Directory user/password authentication due to Microsoft Authentication Library (MSAL) throttling. [More Information on GitHub](https://github.com/microsoft/DacFx/issues/92) | Use an alternative authentication method, such as [Azure Active Directory Service Principal](/azure/azure-sql/database/authentication-aad-service-principal)|
 | ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
 
 
@@ -412,7 +412,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.172
 
 |Platform|Download|Version|Build
 |:---|:---|:---|:---|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2164920)|18.8|15.0.5282.3|
+|Windows|[.msi file](https://go.microsoft.com/fwlink/?linkid=2164920)|18.8|15.0.5282.3|
 |macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2165009)| 18.8|15.0.5282.3|
 |Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2165008)| 18.8|15.0.5282.3|
 |Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2165007)| 18.8|15.0.5282.3|
@@ -505,7 +505,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.172
 | Deployment | Default MAXDOP changed from 0 to 8 for [Azure SQL](https://techcommunity.microsoft.com/t5/azure-sql/changing-default-maxdop-in-azure-sql-database/ba-p/1538528), updating schema model default in DacFx | 
 | Schema Compare | Stored procedures using OUT and OUTPUT keywords to be ignored as a difference |
 | Deployment | Additional validation for Big Data tokens |
-| Build/Deployment | Full schema model cleanup of temp external tables for final dacpac consistency.  |
+| Build/Deployment | Full schema model cleanup of temp external tables for final dacpac consistency. |
 | Build/Deployment | Adding error handling and fixing non-Edge 150 RE. |
 | Import/Deployment | Sequence value restored during deployment |
 | Deployment | Fixed an issue where changing the compression option on clustered index caused the table to be recreated instead of alter index. |
@@ -653,7 +653,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.172
 
 | Feature | Details |
 | :------ | :------ |
-| Import |  For .bacpac files with compressed files over 4GB in size, you might need to use the .NET Core version of SqlPackage to perform the import.  This behavior is due to how .NET Core generates zip headers, which although valid, are not readable by the .NET Full Framework version of SqlPackage. | 
+| Import |  For .bacpac files with compressed files over 4 GB in size, you might need to use the .NET Core version of SqlPackage to perform the import. This behavior is due to how .NET Core generates zip headers, which although valid, are not readable by the .NET Full Framework version of SqlPackage. | 
 | Deployment | The parameter /p:Storage=File isn't supported. Only Memory is supported on .NET Core. | 
 | Always Encrypted | SqlPackage .NET Core doesn't support Always Encrypted columns. | 
 | Security | SqlPackage .NET Core doesn't support the /ua parameter for multi-factor authentication. | 
@@ -685,7 +685,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.172
 | Always Encrypted | Fix for handling Always Encrypted varchar columns. | 
 | Build/Deployment | Fix to resolve the nodes() method for xml column sets.| 
 | ScriptDom | Fix additional cases where the 'URL' string was interpreted as a top level token. | 
-| Graph | Fix generated SQL for pseudo column references in constraints.  | 
+| Graph | Fix generated SQL for pseudo column references in constraints. | 
 | Export | Generate random passwords that meet complexity requirements. | 
 | Deployment | Fix to honor command timeouts when retrieving constraints. | 
 | .NET Core (preview) | Fix diagnostic logging to a file. | 
@@ -750,7 +750,7 @@ This release includes cross-platform preview builds of SqlPackage that target .N
 | :---------- | :------ |
 | Deployment | For .NET Core, build and deployment contributors aren't supported. | 
 | Deployment | For .NET Core, older dacpac and bacpac files that use json data serialization aren't supported. | 
-| Deployment | For .NET Core referenced dacpacs (for example master.dacpac) may not resolve due to issues with case-sensitive file systems. A workaround is to capitalize the name of the reference file (for example MASTER.BACPAC). |
+| Deployment | For .NET Core, referenced dacpacs (for example master.dacpac) may not resolve due to issues with case-sensitive file systems. A workaround is to capitalize the name of the reference file (for example MASTER.BACPAC). |
 
 ## 18.0 SqlPackage
 
@@ -837,5 +837,5 @@ This release includes cross-platform preview builds of SqlPackage that target .N
 
 | Fix | Details |
 | :-- | :------ |
-| Deployment | don't block when encountering a database compatibility level that isn't understood. Instead, the latest Azure SQL Database or on-premises platform will be assumed. |
+| Deployment | don't block when encountering a database compatibility level that isn't understood. Instead, the latest Azure SQL Database or on-premises platform is assumed. |
 | &nbsp; | &nbsp; |

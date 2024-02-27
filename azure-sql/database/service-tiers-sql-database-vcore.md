@@ -292,9 +292,9 @@ Hyperscale service tier premium-series and premium-series memory optimized hardw
 
 - Australia East
 - Brazil South
-- Canada Central \*\*
+- Canada Central
 - Central India
-- Central US
+- Central US \*\*
 - East Asia
 - East US \*\*
 - East US 2

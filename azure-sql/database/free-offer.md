@@ -1,10 +1,10 @@
 ---
 title: Try for free (preview)
 description: Guidance on how to deploy the Azure SQL Database free offer for new accounts.
-author: NilsPohlmann
-ms.author: nilsp
-ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 12/12/2023
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: amapatil,
+ms.date: 02/27/2024
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: how-to
@@ -143,6 +143,7 @@ To delete `myFreeDBResourceGroup` and all its resources using the Azure portal:
 1. In the Azure portal, search for and select **Resource groups**, and then select `myFreeDBResourceGroup` from the list.
 1. On the **Resource group** page, select **Delete resource group**.
 1. Under **Type the resource group name**, enter `myFreeDBResourceGroup`, and then select **Delete**.
+1. After you delete your free offer database, it takes up to one hour for the free offer banner to reappear.
 
 ## Related content
 

@@ -216,6 +216,7 @@ SqlPackage /at:$($AccessToken_Object.Token) /Action:Publish /SourceFile:"C:\Adve
 |**/p:**|IsAlwaysEncryptedParameterizationEnabled=(BOOLEAN 'False')|Enables variable parameterization on Always Encrypted columns in pre/post deployment scripts.|
 |**/p:**|LongRunningCommandTimeout=(INT32 '0')|Specifies the long running command timeout in seconds when executing queries against SQL Server. Use 0 to wait indefinitely.|
 |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN 'False')|Specifies that publish should always drop and re-create an assembly if there is a difference instead of issuing an ALTER ASSEMBLY statement.|
+|**/p:**|PerformIndexOperationsOnline=(BOOLEAN 'False')|Specifies whether to perform index operations online during deployment.|
 |**/p:**|PopulateFilesOnFileGroups=(BOOLEAN 'True')|Specifies whether a new file is also created when a new FileGroup is created in the target database.|
 |**/p:**|PreserveIdentityLastValues=(BOOLEAN 'False')|Specifies whether last values for identity columns should be preserved during deployment.|
 |**/p:**|RebuildIndexesOfflineForDataPhase=(BOOLEAN 'False')|Rebuild indexes offline after importing data.|

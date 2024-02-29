@@ -1,6 +1,6 @@
 ---
 title: "SQL Server security best practices"
-description: This topic provides general guidance for securing SQL Server running in an Azure virtual machine.
+description: This article provides general guidance for securing SQL Server running in an Azure virtual machine.
 author: dplessMSFT
 ms.author: dpless
 ms.reviewer: "rohitna"
@@ -18,7 +18,9 @@ helpviewer_keywords:
   - "strong passwords [SQL Server]"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # SQL Server security best practices
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article provides information about best practices and guidelines that help establish security for SQL Server. For a comprehensive review of SQL Server security features, see [Securing SQL Server](securing-sql-server.md). 
@@ -34,17 +36,17 @@ Azure complies with several industry regulations and standards that can enable y
 
 ## Column-level protection
 
-Organizations often need to protect data at the column level as data regarding customers, employees, trade secrets, product data, healthcare, financial, and other sensitive data is often stored in SQL Server databases. Sensitive columns often include identification/social security numbers, mobile phone numbers, first name, family name, financial account identification, and any other data that could be deemed personally identifiable information (PII). 
+Organizations often need to protect data at the column level as data regarding customers, employees, trade secrets, product data, healthcare, financial, and other sensitive data is often stored in SQL Server databases. Sensitive columns often include identification/social security numbers, mobile phone numbers, first name, family name, financial account identification, and any other data that could be deemed personal data. 
 
 The methods and features mentioned in this section raise the level of protection at the column level with minimal overhead, and without requiring extensive changes to application code. 
 
 Use [Always Encrypted](encryption/always-encrypted-database-engine.md) to encrypt data at rest and over the wire. Encrypted data is only decrypted by client libraries at the application client level. Use [randomized encryption over deterministic](encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption) where possible. [Always Encrypted (with enclaves)](encryption/always-encrypted-enclaves.md) can improve performance for comparison operations such as [BETWEEN, IN, LIKE, DISTINCT, Joins, and more](encryption/always-encrypted-enclaves.md#confidential-queries) for randomized encryption scenarios.
  
-Use [Dynamic Data Masking (DDM)](dynamic-data-masking.md#creating-a-dynamic-data-mask) to obfuscate data at the column level when Always Encrypted is not an available option. Dynamic Data Masking (DDM) is [not compatible with Always Encrypted](dynamic-data-masking.md#limitations-and-restrictions). Leverage Always Encrypted over dynamic data masking whenever possible.
+Use [Dynamic Data Masking (DDM)](dynamic-data-masking.md#creating-a-dynamic-data-mask) to obfuscate data at the column level when Always Encrypted isn't an available option. Dynamic Data Masking (DDM) is [not compatible with Always Encrypted](dynamic-data-masking.md#limitations-and-restrictions). Leverage Always Encrypted over dynamic data masking whenever possible.
 
-You can also [GRANT permissions](../../t-sql/statements/grant-object-permissions-transact-sql.md) at the column level to a table, view, or table-valued function. Consider the following: 
+You can also [GRANT permissions](../../t-sql/statements/grant-object-permissions-transact-sql.md) at the column level to a table, view, or table-valued function. Consider the following:
     - Only SELECT, REFERENCES, and UPDATE permissions can be granted on a column.  
-    - A table-level DENY does not take precedence over a column-level GRANT.  
+    - A table-level DENY doesn't take precedence over a column-level GRANT.  
 
 ## Row-level protection
 
@@ -58,7 +60,7 @@ The business logic is encapsulated within table-valued functions controlled by a
 
 ## File encryption
 
-[Transparent Data Encryption (TDE)](encryption/transparent-data-encryption.md#enable-tde) protects the data at the file level by providing encryption-at-rest to the database files. Transparent Data Encryption (TDE) ensures that database files, backup files, and tempdb files can't be attached and read without proper certificates decrypting database files. Without Transparent Data Encryption (TDE), it is possible for an attacker to take the physical media (drives or backup tapes) and restore or attach the database to read the contents. Transparent Data Encryption (TDE) is supported to work with all other security capabilities in SQL Server. Transparent Data Encryption (TDE) provides real-time I/O encryption and decryption of the data and log files. TDE encryption leverages a database encryption key (DEK) is stored in the user database. The database encryption key can also be protected using a certificate, which is protected by the database master key of the master database. 
+[Transparent Data Encryption (TDE)](encryption/transparent-data-encryption.md#enable-tde) protects the data at the file level by providing encryption-at-rest to the database files. Transparent Data Encryption (TDE) ensures that database files, backup files, and tempdb files can't be attached and read without proper certificates decrypting database files. Without Transparent Data Encryption (TDE), it's possible for an attacker to take the physical media (drives or backup tapes) and restore or attach the database to read the contents. Transparent Data Encryption (TDE) is supported to work with all other security capabilities in SQL Server. Transparent Data Encryption (TDE) provides real-time I/O encryption and decryption of the data and log files. TDE encryption leverages a database encryption key (DEK) is stored in the user database. The database encryption key can also be protected using a certificate, which is protected by the database master key of the master database. 
 
 Use TDE to protect data at rest, backups, and tempdb. 
 
@@ -67,7 +69,7 @@ Use TDE to protect data at rest, backups, and tempdb.
 
 To [audit SQL Server](auditing/sql-server-audit-database-engine.md), create an audit policy at either the server or database level. Server policies apply to all existing and newly created databases on the server. For simplicity, enable server-level auditing and allow the database-level auditing to inherit the server-level property for all databases.
 
-Audit [tables and columns](auditing/sql-server-audit-database-engine.md) with sensitive data that have security measures applied to them. If a table or column is important enough to need protection by a security capability, then it should be considered important enough to audit. It is especially important to audit and regularly review tables that contain sensitive information but where it is not possible to apply desired security measures due to some kind of application or architectural limitation. 
+Audit [tables and columns](auditing/sql-server-audit-database-engine.md) with sensitive data that have security measures applied to them. If a table or column is important enough to need protection by a security capability, then it should be considered important enough to audit. It's especially important to audit and regularly review tables that contain sensitive information but where it isn't possible to apply desired security measures due to some kind of application or architectural limitation. 
 
 
 ## Identities and authentication
@@ -88,10 +90,10 @@ The following recommendations and best practices help secure your identities and
     - It's standard to place Active Directory users in AD groups, AD groups should exist in SQL Server roles, and SQL Server roles should be granted the minimum permissions required by the application.
 - In Azure, leverage least-privilege security by using role-based access (RBAC) controls
 - Choose Active Directory over SQL Server authentication whenever possible, and especially choose Active Directory over storing the security at the application or database level.
-    - If a user leaves the company it is easy to disable the account. 
-    - It is also easy to remove users from groups when users change roles or leave the organization. Group security is considered a best practice. 
-- Leverage [Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks) for accounts that have machine-level access, including accounts that use RDP to log into the machine. This helps guard against credential theft or leaks,  as single-factor password-based authentication is a weaker form of authentication with credentials at risk of being compromised or mistakenly given away. 
-- Require [strong and complex passwords](strong-passwords.md) that cannot be easily guessed, and are not used for any other accounts or purposes. Regularly update passwords and enforce Active Directory policies. 
+    - If a user leaves the company, it's easy to disable the account. 
+    - It's also easy to remove users from groups when users change roles or leave the organization. Group security is considered a best practice. 
+- Leverage [multifactor authentication](/azure/active-directory/authentication/concept-mfa-howitworks) for accounts that have machine-level access, including accounts that use RDP to log into the machine. This helps guard against credential theft or leaks,  as single-factor password-based authentication is a weaker form of authentication with credentials at risk of being compromised or mistakenly given away. 
+- Require [strong and complex passwords](strong-passwords.md) that can't be easily guessed, and aren't used for any other accounts or purposes. Regularly update passwords and enforce Active Directory policies. 
 
 - [Group-Managed Service Accounts (gMSA)](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview) provide automatic password management, simplified service principal name (SPN) management and delegate the management to other administrators. 
     - With gMSA, the Windows operating system manages passwords for the account instead of relying on the administrator to manage the password.
@@ -99,11 +101,11 @@ The following recommendations and best practices help secure your identities and
     - gMSA reduces the administrative surface-level and improves the separation of duties.
 - Minimize the rights granted to the AD account of the DBA; Consider a separation of duties that limit access to the virtual machine, the ability to log into the operating system, the ability to modify error and auditing logs, and the ability to install applications and/or features.
 
-- Consider removing DBA accounts from the sysadmin role and granting [CONTROL SERVER](permissions-database-engine.md#chart-of-sql-server-permissions) to DBA accounts rather than making them a member of the sysadmin role. The system admin role does not respect DENY while [CONTROL SERVER](permissions-database-engine.md#chart-of-sql-server-permissions) does.
+- Consider removing DBA accounts from the sysadmin role and granting [CONTROL SERVER](permissions-database-engine.md#chart-of-sql-server-permissions) to DBA accounts rather than making them a member of the sysadmin role. The system admin role doesn't respect DENY while [CONTROL SERVER](permissions-database-engine.md#chart-of-sql-server-permissions) does.
 
 ## Data lineage and data integrity
 
-Keeping historical records of data changes over time can be beneficial to address accidental changes to the data. It can also be useful for application-change auditing and can provide the ability to recover data elements when a bad actor has introduced data changes that were not authorized. 
+Keeping historical records of data changes over time can be beneficial to address accidental changes to the data. It can also be useful for application-change auditing and can provide the ability to recover data elements when a bad actor has introduced data changes that weren't authorized. 
 
 - Leverage [temporal tables](../../relational-databases/tables/temporal-tables.md) to preserve record versions over time, and to see data as it has been over the record's life span to provide a historical view of your application's data.
 - Temporal Tables can be used to supply a version of the current table at any point in time.
@@ -112,19 +114,18 @@ Keeping historical records of data changes over time can be beneficial to addres
 
 The configuration and assessment tools below provide an ability to address surface-area security, identify data security opportunities, and provide a best practice assessment of the security of your SQL Server environment at the instance level.
 
-- [Surface Area Configuration](surface-area-configuration.md) - It is recommended to enable only the features that are required by your environment in order to minimize the number of features that can be attacked by a malicious user. 
+- [Surface Area Configuration](surface-area-configuration.md) - It's recommended to enable only the features that are required by your environment in order to minimize the number of features that can be attacked by a malicious user. 
 - [Vulnerability assessment for SQL Server (SSMS)](sql-vulnerability-assessment.md) - SQL vulnerability assessment is a tool in [SSMS v17.4+](../../ssms/download-sql-server-management-studio-ssms.md) that helps discover, track, and remediate potential database vulnerabilities. The vulnerability assessment is a valuable tool to improve your database security and is executed at the database level, per database.
-- [SQL Data Discovery and Classification (SSMS)](sql-data-discovery-and-classification.md) - It is common for DBAs to manage servers and databases and not be aware of sensitivity of the data that is contained in the database. Data Discovery & Classification adds the capability to discover, classify, label and report on the sensitivity level of your data.  Data Discovery & Classification is supported starting with [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md).
- 
+- [SQL Data Discovery and Classification (SSMS)](sql-data-discovery-and-classification.md) - It's common for DBAs to manage servers and databases and not be aware of sensitivity of the data that is contained in the database. Data Discovery & Classification adds the capability to discover, classify, label, and report on the sensitivity level of your data.  Data Discovery & Classification is supported starting with [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md).
 
 ## Common SQL threats 
 
 It helps to know what are some common threats that risk SQL Server: 
 
 - [SQL injection](sql-injection.md) - SQL injection is a type of attack where malicious code is inserted into strings that are passed to an instance of SQL Server for execution. 
-    - The injection process works by terminating a text string and appending a new command. Because the inserted command may have additional strings appended to it before it is executed, the attacker terminates the injected string with a comment mark "--".
-    - SQL Server will execute any syntactically valid query that is received.
-- Be aware of [Side-channel attacks](/azure/virtual-machines/mitigate-se), [malware & other threats](/windows/security/threat-protection/intelligence/understanding-malware). 
+    - The injection process works by terminating a text string and appending a new command. Because the inserted command may have additional strings appended to it before it's executed, the attacker terminates the injected string with a comment mark "--".
+    - SQL Server executes any syntactically valid query that is received.
+- Be aware of [Side-channel attacks](/azure/virtual-machines/mitigate-se), [malware & other threats](https://www.microsoft.com/security/business/security-101/what-is-malware).
 
 ### SQL injection risks
 
@@ -139,7 +140,7 @@ To minimize the risk of a SQL injection, consider the following:
         - **--**	Single-line comment delimiter. 
         - **/ * ... * /**    Comment delimiters. 
         - **xp_**    Catalog-extended stored procedures, such as xp_cmdshell.
-            - It is not recommended to leverage xp_cmdshell on any SQL Server environment. Use SQLCLR instead or look for other alternatives due to the risks xp_cmdshell may introduce.
+            - It isn't recommended to leverage xp_cmdshell on any SQL Server environment. Use SQLCLR instead or look for other alternatives due to the risks xp_cmdshell may introduce.
    - Always [validate user inputs](sql-injection.md#validate-all-input) and scrub error outputs from being spilled and exposed to the attacker.
 
 
@@ -163,9 +164,9 @@ Consider the following common infrastructure threats:
 
 Since you don't want attackers to easily guess account names, or passwords, the following steps help reduce the risk of passwords being discovered: 
 
-- Create a unique local administrator account that is not named **Administrator**.
+- Create a unique local administrator account that isn't named **Administrator**.
 - Use complex strong passwords for all your accounts. For more information about how to create a strong password, see [Create a strong password](https://support.microsoft.com/account-billing/how-to-create-a-strong-password-for-your-microsoft-account-f67e4ddd-0dbe-cd75-cebe-0cfda3cf7386) article.
-- By default, Azure selects Windows Authentication during SQL Server virtual machine setup. Therefore, the **SA** login is disabled and a password is assigned by setup. We recommend that the **SA** login should not be used or enabled. If you must have a SQL login, use one of the following strategies:
+- By default, Azure selects Windows Authentication during SQL Server virtual machine setup. Therefore, the **SA** login is disabled and a password is assigned by setup. We recommend that the **SA** login shouldn't be used or enabled. If you must have a SQL login, use one of the following strategies:
      - Create a SQL account with a unique name that has **sysadmin** membership. You can do this from the portal by enabling **SQL Authentication** during provisioning.
 
     > [!TIP] 
@@ -184,7 +185,7 @@ Consider the following to minimize ransomware risks:
     - Limit access to the virtual machines
     - Require  [Just-in-time (JIT) access](/azure/defender-for-cloud/just-in-time-access-usage) and [Azure Bastion](/azure//bastion/bastion-overview)
     - Improve Surface Area Security by avoiding installing tools including sysinternals and SSMS on the local machine
-    - Avoid installing Windows Features, roles and enabling services that are not required
+    - Avoid installing Windows Features, roles and enabling services that aren't required
     - Additionally, there should be a regular full backup scheduled that is separately secured from a common administrator account so it can't delete copies of the databases. 
 
 ## Next steps

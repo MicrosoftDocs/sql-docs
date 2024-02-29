@@ -80,7 +80,7 @@ To connect to the SQL Server Database Engine from the Internet, consider creatin
 
    <sup>1</sup> [!INCLUDE [ssms-encryption](../includes/ssms-encryption.md)]
 
-   :::image type="content" source="media/ssms-connect-query-sql-server-azure-vm/connect-to-azure-sql-vm-object-explorer-ssms20.png" alt-text="Screenshot of connection dialog for SQL virtual machines":::
+   :::image type="content" source="media/ssms-connect-query-sql-server-azure-vm/connect-to-azure-sql-vm-object-explorer-ssms20.png" alt-text="Screenshot of connection dialog for SQL virtual machines.":::
 
 1. After you complete all the fields, select **Connect**.
 

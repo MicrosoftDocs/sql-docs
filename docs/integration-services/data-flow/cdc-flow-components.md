@@ -12,7 +12,9 @@ ms.topic: conceptual
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
-
+> [!IMPORTANT]
+> CDC Flow Components, including CDC Control Task, CDC Source and CDC Splitter, are deprecated. Details refer to [the announcement](https://www.microsoft.com/sql-server/blog/2024/02/28/sql-server-integration-services-ssis-change-data-capture-attunity-feature-deprecations/).
+  
   The Change Data Capture Components by Attunity for Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] help SSIS developers work with CDC and reduce the complexity of CDC packages.  
   
  The SSIS CDC components are designed to work with the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] CDC feature where the source tables are either the same [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] database or an Oracle database (when using the Oracle CDC Service for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]). Partitioned tables are supported.  
@@ -31,9 +33,6 @@ ms.topic: conceptual
   
  [CDC Splitter](../../integration-services/data-flow/cdc-splitter.md)  
 
-> [!IMPORTANT]
-> CDC Flow Components, including CDC Control Task, CDC Source and CDC Splitter, are deprecated. Details refer to [the announcement](https://www.microsoft.com/sql-server/blog/2024/02/28/sql-server-integration-services-ssis-change-data-capture-attunity-feature-deprecations/).
-  
 ## Installation  
  This section describes the installation procedures for the CDC Components for Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   

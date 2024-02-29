@@ -1,10 +1,10 @@
 ---
 title: "Storage: Performance best practices & guidelines"
-description: Provides storage best practices and guidelines to optimize the performance of your SQL Server on Azure Virtual Machine (VM).
+description: Provides storage best practices and guidelines to optimize the performance of your SQL Server on Azure Virtual Machines (VM).
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma, randolphwest
-ms.date: 10/06/2023
+ms.date: 03/01/2024
 ms.service: virtual-machines-sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -78,9 +78,13 @@ Format your data disk to use 64-KB allocation unit size for all data files place
 
 ## Premium SSD v2
 
-You should use Premium SSD v2 disks when running SQL Server workloads in [supported regions](/azure/virtual-machines/disks-types#regional-availability), if the [current limitations](/azure/virtual-machines/disks-types#premium-ssd-v2-limitations) are suitable for your environment. Depending on your configuration, Premium SSD v2 can be cheaper than Premium SSDs, while also providing performance improvements. With Premium SSD v2, you can individually adjust your throughput or IOPS independently from the size of your disk. Being able to individually adjust performance options allows for this larger cost savings and allows you to script changes to meet performance requirements during anticipated or known periods of need. We recommend using Premium SSD v2 when using the [Ebdsv5 VM series](/azure/virtual-machines/ebdsv5-ebsv5-series) as it is a more cost-effective solution for these high I/O throughput machines. Premium SSD v2 doesn't currently support host caching, so choosing a VM size with high uncached throughput such as the Ebdsv5 series VMs is recommended.
+You should use [Premium SSD v2](/azure/virtual-machines/disks-types#premium-ssd-v2) disks when running SQL Server workloads in [supported regions](/azure/virtual-machines/disks-types#regional-availability), if the [current limitations](/azure/virtual-machines/disks-types#premium-ssd-v2-limitations) are suitable for your environment. Depending on your configuration, Premium SSD v2 can be cheaper than Premium SSDs, while also providing performance improvements. With Premium SSD v2, you can individually adjust your throughput or IOPS independently from the size of your disk. Being able to individually adjust performance options allows for this larger cost savings and allows you to script changes to meet performance requirements during anticipated or known periods of need. 
 
-Premium SSD v2 disks aren't currently supported by SQL Server gallery images, but they can be used with SQL Server on Azure VMs when configured manually.
+We recommend using Premium SSD v2 when using the [Ebdsv5 or Ebsv5 virtual machine series](/azure/virtual-machines/ebdsv5-ebsv5-series) as it is a more cost-effective solution for these high I/O throughput machines. 
+
+You can [deploy your SQL Server VMs with Premium SSD v2](storage-configuration-premium-ssd-v2.md) by using the Azure portal (currently in preview).
+
+If you're deploying your SQL Server VM by using the Azure portal and want to use Premium SSD v2, you're currently limited to the [Ebdsv5 or Ebsv5 series virtual machines](/azure/virtual-machines/ebdsv5-ebsv5-series). However, if you manually create your VM with Premium SSD v2 storage and then manually install SQL Server on the VM, you can use any VM series that supports Premium SSD v2. Be sure to [register](sql-agent-extension-manually-register-single-vm.md) your SQL Server VM with the SQL IaaS Agent extension so you can take advantage of all the [benefits](sql-server-iaas-agent-extension-automate-management.md#feature-benefits) provided by the extension. 
 
 ## Azure Elastic SAN
 

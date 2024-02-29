@@ -1,6 +1,6 @@
 ---
-title: Download SQL Server Management Studio (SSMS)
-description: Download the latest version of SQL Server Management Studio (SSMS) for managing and configuring instances of SQL Server and Azure SQL.
+title: Download SQL Server Management Studio (SSMS) 20 Preview
+description: Download the latest version of SQL Server Management Studio (SSMS) 20 Preview for managing and configuring instances of SQL Server and Azure SQL.
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan, randolphwest
@@ -23,7 +23,7 @@ keywords:
   - "ssms express"
 ---
 
-# Download SQL Server Management Studio (SSMS)
+# Download SQL Server Management Studio (SSMS) 20 Preview
 
 [!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw](../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
@@ -31,23 +31,25 @@ SQL Server Management Studio (SSMS) is an integrated environment for managing an
 
 Use SSMS to query, design, and manage your databases and data warehouses, wherever they are - on your local computer or in the cloud.
 
-For customers needing a cross-platform companion to SSMS for managing SQL and other Azure databases, use [Azure Data Studio](/azure-data-studio/download-azure-data-studio).
+If you need a cross-platform companion to SSMS for managing SQL and other Azure databases, use [Azure Data Studio](/azure-data-studio/download-azure-data-studio).
 
-## Download SSMS
+For details and more information about what's new in this release, *including important security changes*, see [Release notes for SQL Server Management Studio (SSMS) 20 Preview](release-notes-ssms-20.md).
 
-:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server Management Studio (SSMS) 19.3](https://aka.ms/ssmsfullsetup)**
+## Download [!INCLUDE [ssms20-md](../includes/ssms20-md.md)]
 
-SSMS 19.3 is the latest general availability (GA) version. If you have a *preview* version of SSMS 19 installed, uninstall it before installing SSMS 19.3. If you have SSMS 19.x installed, installing SSMS 19.3 upgrades it to 19.3.
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server Management Studio (SSMS) 20 Preview 1](https://go.microsoft.com/fwlink/?linkid=2262204)**
 
-- Release number: 19.3
-- Build number: 19.3.4.0
-- Release date: January 10, 2024
+[!INCLUDE [ssms20-md](../includes/ssms20-md.md)] is the latest preview.
+
+- Release number: 20.0 Preview 1
+- Build number: 20.0.65.0
+- Release date: February 29, 2024
 
 By using SQL Server Management Studio, you agree to its [license terms](/Legal/sql/sql-server-management-studio-license-terms) and [privacy statement](https://privacy.microsoft.com/privacystatement). If you have comments or suggestions or want to report issues, the best way to contact the SSMS team is at [SQL user feedback](https://aka.ms/ssms-feedback).
 
-The SSMS 19.x installation doesn't upgrade or replace SSMS 18.x and earlier versions. SSMS 19.x installs alongside previous versions, so both versions are available. However, if you have an earlier *preview* version of SSMS 19 installed, you must uninstall it before installing the latest release of SSMS 19. You can see if you have a preview version by going to the **Help > About** window.
+The [!INCLUDE [ssms20-md](../includes/ssms20-md.md)] installation doesn't upgrade or replace SSMS 19.x and earlier versions. [!INCLUDE [ssms20-md](../includes/ssms20-md.md)] installs alongside previous versions, so both versions are available. However, if you have an earlier *preview* version of SSMS 20 installed, you must uninstall it before installing the latest release of [!INCLUDE [ssms20-md](../includes/ssms20-md.md)]. You can see if you have a preview version by going to the **Help > About** window.
 
-If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio v19.3**.
+If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio v20.0 Preview 1**.
 
 [!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
 
@@ -55,32 +57,28 @@ If a computer contains side-by-side installations of SSMS, verify you start the 
 
 This release of SSMS can be installed in the following languages:
 
-SQL Server Management Studio 19.3:
+SQL Server Management Studio 20 Preview 1:
 
-- [Chinese (Simplified)](https://aka.ms/ssmsfullsetup?clcid=0x804)
-- [Chinese (Traditional)](https://aka.ms/ssmsfullsetup?clcid=0x404)
-- [English (United States)](https://aka.ms/ssmsfullsetup?clcid=0x409)
-- [French](https://aka.ms/ssmsfullsetup?clcid=0x40c)
-- [German](https://aka.ms/ssmsfullsetup?clcid=0x407)
-- [Italian](https://aka.ms/ssmsfullsetup?clcid=0x410)
-- [Japanese](https://aka.ms/ssmsfullsetup?clcid=0x411)
-- [Korean](https://aka.ms/ssmsfullsetup?clcid=0x412)
-- [Portuguese (Brazil)](https://aka.ms/ssmsfullsetup?clcid=0x416)
-- [Russian](https://aka.ms/ssmsfullsetup?clcid=0x419)
-- [Spanish](https://aka.ms/ssmsfullsetup?clcid=0x40a)
+- [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2262204&clcid=0x804)
+- [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2262204&clcid=0x404)
+- [English (United States)](https://go.microsoft.com/fwlink/?linkid=2262204&clcid=0x409)
+- [French](https://go.microsoft.com/fwlink/?linkid=2262204&clcid=0x40c)
+- [German](https://go.microsoft.com/fwlink/?linkid=2262204&clcid=0x407)
+- [Italian](https://go.microsoft.com/fwlink/?linkid=2262204&clcid=0x410)
+- [Japanese](https://go.microsoft.com/fwlink/?linkid=2262204&clcid=0x411)
+- [Korean](https://go.microsoft.com/fwlink/?linkid=2262204&clcid=0x412)
+- [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2262204&clcid=0x416)
+- [Russian](https://go.microsoft.com/fwlink/?linkid=2262204&clcid=0x419)
+- [Spanish](https://go.microsoft.com/fwlink/?linkid=2262204&clcid=0x40a)
 
 If you access this page from a non-English language version and want to see the most up-to-date content, select **Read in English** at the top of this page. To download different languages, select [available languages](#available-languages).
 
 > [!NOTE]  
 > The SQL Server PowerShell module is a separate install through the PowerShell Gallery. For more information, see [Install the SQL Server PowerShell module](../powershell/download-sql-server-ps-module.md).
 
-## What's new
-
-For details and more information about what's new in this release, see [Release notes for SQL Server Management Studio (SSMS)](release-notes-ssms.md).
-
 ## Previous versions
 
-This article is for the latest version of SSMS only. To download previous versions of SSMS, visit [Previous SSMS releases](../ssms/release-notes-ssms.md#previous-ssms-releases).
+This article is for [!INCLUDE [ssms20-md](../includes/ssms20-md.md)] only. To download previous versions of SSMS, visit [Previous SSMS releases](../ssms/release-notes-ssms.md#previous-ssms-releases).
 
 [!INCLUDE [ssms-connect-azure-ad](../includes/ssms-connect-azure-ad.md)]
 
@@ -146,7 +144,7 @@ These components aren't uninstalled because they can be shared with other produc
 
 - This version of SSMS works with [!INCLUDE [sssql14-md](../includes/sssql14-md.md)] and later versions. It provides the most significant support for working with the latest cloud features in Azure SQL Database, Azure Synapse Analytics, and Microsoft Fabric.
 
-- Additionally, SSMS 19.x can be installed alongside with SSMS 18.x, SSMS 17.x, and SSMS 16.x.
+- Additionally, [!INCLUDE [ssms20-md](../includes/ssms20-md.md)] can be installed alongside with SSMS 19.x, SSMS 18.x, SSMS 17.x, and SSMS 16.x.
 
 - For SQL Server Integration Services (SSIS), SSMS 17.x and later versions don't support connecting to the legacy SQL Server Integration Services service. To connect to an earlier version of the legacy Integration Services, use the version of SSMS aligned with the version of SQL Server. For example, use SSMS 16.x to connect to the legacy [!INCLUDE [sssql16-md](../includes/sssql16-md.md)] Integration Services service. SSMS 17.x and SSMS 16.x can be installed on the same computer. Since the release of [!INCLUDE [sssql11-md](../includes/sssql11-md.md)], the SSIS Catalog database, SSISDB, is the recommended way to store, manage, run, and monitor Integration Services packages. See [SSIS Catalog](../integration-services/catalog/ssis-catalog.md) for details.
 
@@ -173,10 +171,10 @@ Supported hardware:
 
 - 1.8 GHz or faster x86 (Intel, AMD) processor. Dual-core or better recommended
 - 2 GB of RAM; 4 GB of RAM recommended (2.5 GB minimum if running on a virtual machine)
-- Hard disk space: Minimum of 2 GB up to 10 GB of available space
+- Hard disk space: Minimum of 3 GB up to 10 GB of available space
 
 > [!NOTE]  
-> SSMS is available only as a 32-bit application for Windows. If you need a tool that runs on operating systems other than Windows, we recommend Azure Data Studio. Visit [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio), for more details.
+> SSMS is available only as a 32-bit application for Windows. If you need a tool that runs on operating systems other than Windows, we recommend Azure Data Studio. Visit [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio) for more details.
 
 [!INCLUDE [get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 

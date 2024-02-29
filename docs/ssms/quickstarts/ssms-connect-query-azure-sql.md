@@ -37,7 +37,7 @@ The article demonstrates the following steps:
 
 ## Connect to an Azure SQL Database or Azure SQL Managed Instance
 
-[!INCLUDE[ssms-connect-azure-ad](../../includes/ssms-connect-azure-ad.md)]
+[!INCLUDE [ssms-connect-azure-ad](../../includes/ssms-connect-azure-ad.md)]
 
 1. Start SQL Server Management Studio (SSMS). The first time you run SSMS, the **Connect to Server** window opens. If it doesn't open, you can open it manually by selecting **Object Explorer** > **Connect** > **Database Engine**.
 
@@ -58,18 +58,21 @@ The article demonstrates the following steps:
    | | SQL Server Authentication | Use **SQL Server Authentication** for Azure SQL to connect. |
    | **Login** | Server account user ID | The user ID from the server account used to create the server. |
    | **Password** | Server account password | The password from the server account used to create the server. |
+   | **Encryption** <sup>2</sup> | Encryption method | Select the encryption level for the connection. The default value is *Mandatory*. |
+   | **Trust server certificate** | Trust Server Certificate | Check this option to bypass server certificate validation. The default value is *False* (unchecked), which promotes better security using trusted certificates. |
+   | **Host Name in Certificate** | Host name of the server | The value provided in this option is used to specify a different, but expected, CN or SAN in the server certificate. |
 
    <sup>1</sup> The Windows Authentication method isn't supported for Azure SQL. For more information, see [Azure SQL authentication](/azure/sql-database/sql-database-security-overview#access-management).
 
-   You can also modify additional connection options by selecting **Options**. Examples of connection options are the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values for all the options.
-
-   :::image type="content" source="media/ssms-connect-query-azure-sql/connect-to-azure-sql-object-explorer.png" alt-text="Screenshot of Server name field for Azure SQL.":::
-
-1. After you've completed all the fields, select **Connect**.
+   <sup>2</sup> [!INCLUDE [ssms-encryption](../includes/ssms-encryption.md)]
 
    You can also modify additional connection options by selecting **Options**. Examples of connection options are the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values for all the options.
 
-   If you haven't set up your firewall settings, a prompt appears to configure the firewall. Once you sign in, fill in your Azure account login information and continue to set the firewall rule. Then select **OK**. This prompt is a one time action. Once you configure the firewall, the firewall prompt shouldn't appear.
+   :::image type="content" source="media/ssms-connect-query-azure-sql/connect-to-azure-sql-object-explorer-ssms20.png" alt-text="Screenshot of connection dialog for Azure SQL.":::
+
+1. After you complete all the fields, select **Connect**.
+
+   If your firewall isn't set up, a prompt appears to configure the firewall. Once you sign in, fill in your Azure account sign in information and continue to set the firewall rule. Then select **OK**. This prompt is a one time action. Once you configure the firewall, the firewall prompt shouldn't appear.
 
    :::image type="content" source="media/ssms-connect-query-azure-sql/azure-sql-firewall-sign-in-3.png" alt-text="Screenshot of Azure SQL New Firewall Rule." lightbox="media/ssms-connect-query-azure-sql/azure-sql-firewall-sign-in-3.png":::
 
@@ -197,7 +200,7 @@ The results of a query are visible beneath the query text window. To query the `
 You can find information about the connection properties under the results of your query. After you run the previously mentioned query in the preceding step, review the connection properties at the bottom of the query window.
 
 - You can determine which server and database you're connected to, and your username.
-- You can also view the query duration and the number of rows that are returned by the previously executed query.
+- You can also view the query duration and the number of rows returned by the previously executed query.
 
   :::image type="content" source="media/ssms-connect-query-azure-sql/connection-properties.png" alt-text="Screenshot of the connection properties." lightbox="media/ssms-connect-query-azure-sql/connection-properties.png":::
 

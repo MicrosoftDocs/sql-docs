@@ -26,6 +26,12 @@ Use this page to specify options related to commands available from Object Explo
 | --- | --- | --- |
 | Full path the Azure Data Studio instance to invoke | | When specified, SSMS uses it to launch a new instance of Azure Data Studio (for example, C:\Program Files\Azure Data Studio\bin\azuredatastudio.com). Leave blank to let SSMS use its heuristic. |
 
+## Connection security
+
+| Option | Information | Description |
+| --- | --- | --- |
+| Trust server certificate for imported connections | **Always**<br />**Prompt**<br />**Never** | When set to **Always**, existing connections in the Most Recently Used (MRU) list that were imported after upgrading from SSMS 19.x or earlier will have **Trust Server Certificate** enabled. The default value is **Prompt**. |
+
 ## Drag/drop
 
 | Option | Information | Description |

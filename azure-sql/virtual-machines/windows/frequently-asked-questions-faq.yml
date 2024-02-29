@@ -290,6 +290,14 @@ sections:
           Can I use Azure premium file share to host my database files on a standalone instance of SQL Server?  
         answer:    Yes. Azure premium file shares are supported for both failover cluster instances and standalone instances of SQL Server using the [SMB protocol](/sql/database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option).
 
+      - question: |
+          Can I use Premium SSD v2 with my SQL Server on Azure VMs?
+        answer:    Yes, for specific virtual machines in supported regions. Review [Premium SSDv2 with SQL Server on Azure VMs](storage-configuration-premium-ssd-v2.md) to learn more. If you would like to use Premium SSD v2 with a virtual machine type or region that is not in the list, you may be able to do so by deploying the VM first, then adding the Premium SSD v2 drives after the VM is created.
+
+      - question: |
+          Why do I see **Not extendable** when I try to make changes to my storage in the SQL virtual machines resource? 
+        answer:   Storage is only extendable for SQL Server VMs that were deployed from a SQL Server image in Azure Marketplace, and not currently supported for [Premium SSD v2](storage-configuration-premium-ssd-v2.md#adjust-performance-values) disks. 
+
   - name: SQL Server IaaS Agent extension
     questions:
       - question: |

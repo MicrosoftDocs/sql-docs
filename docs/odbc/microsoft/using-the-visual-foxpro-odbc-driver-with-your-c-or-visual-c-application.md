@@ -26,7 +26,7 @@ Your C or C++ application communicates with Visual FoxPro data by sending a [SQL
  For more information about SQL native to Visual FoxPro, see the Visual FoxPro documentation.  
   
 ## Example: Using the Visual FoxPro ODBC Driver with Your C or C++ Application  
- The following example uses the ODBC C API to retrieve data stored in the last_name field in the employee table in the Microsoft® Visual FoxPro sample database named TasTrade. This database is provided with Visual FoxPro and is installed by default in the following location:  
+ The following example uses the ODBC C API to retrieve data stored in the last_name field in the employee table in the Microsoft Visual FoxPro sample database named TasTrade. This database is provided with Visual FoxPro and is installed by default in the following location:  
   
  `c:\vfp\samples\mainsamp\data\tastrade.dbc`  
   

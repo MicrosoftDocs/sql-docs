@@ -718,7 +718,7 @@ The **SA** account is a system administrator on the [!INCLUDE [ssnoversion-md](.
 ## Disable the `sa` account as a best practice
 
 > [!IMPORTANT]
-> You'll need these credentials for later steps. Be sure to write down the user id and password that you enter here.
+> You'll need these credentials for later steps. Be sure to write down the user ID and password that you enter here.
 
 [!INCLUDE [connect-with-sa](includes/connect-with-sa.md)]
 

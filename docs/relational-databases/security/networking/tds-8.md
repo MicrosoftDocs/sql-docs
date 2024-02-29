@@ -64,7 +64,7 @@ The following features or tools still use previous version of drivers that don't
 - Always On availability groups
 - Always On failover cluster instance (FCI)
 - SQL Server Replication
-- SQL Server Management Studio (SSMS)
+- Log Shipping
 - **sqlcmd** utility
 - **bcp** utility
 - SQL Server CEIP service

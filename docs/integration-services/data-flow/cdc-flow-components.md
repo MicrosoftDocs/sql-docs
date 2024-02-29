@@ -30,6 +30,9 @@ ms.topic: conceptual
  [CDC Source](../../integration-services/data-flow/cdc-source.md)  
   
  [CDC Splitter](../../integration-services/data-flow/cdc-splitter.md)  
+
+> [!IMPORTANT]
+> CDC Flow Components, including CDC Control Task, CDC Source and CDC Splitter, are deprecated. Details refer to [the announcement](https://www.microsoft.com/sql-server/blog/2024/02/28/sql-server-integration-services-ssis-change-data-capture-attunity-feature-deprecations/).
   
 ## Installation  
  This section describes the installation procedures for the CDC Components for Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  

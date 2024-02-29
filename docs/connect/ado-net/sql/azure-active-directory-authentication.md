@@ -4,7 +4,7 @@ description: Describes how to use supported Microsoft Entra authentication modes
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
-ms.date: 01/30/2024
+ms.date: 02/28/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -51,6 +51,7 @@ When the application is connecting to Azure SQL data sources by using Microsoft 
 | Active Directory Device Code Flow | Authenticate with a Microsoft Entra identity by using Device Code Flow mode | 2.1.0+ |
 | Active Directory Managed Identity, <br>Active Directory MSI | Authenticate using a Microsoft Entra system-assigned or user-assigned managed identity | 2.1.0+ |
 | Active Directory Default | Authenticate with a Microsoft Entra identity by using password-less and non-interactive mechanisms including managed identities, Visual Studio Code, Visual Studio, Azure CLI, etc. | 3.0.0+ |
+| Active Directory Workload Identity| Authenticate with a Microsoft Entra identity by using a federated User Assigned Managed Identity to connect to SQL Database from Azure client environments that have enabled support for Workload Identity. | 5.2.0+ |
 
 <sup>1</sup> Before **Microsoft.Data.SqlClient** 2.0.0, `Active Directory Integrated`, and `Active Directory Interactive` authentication modes are supported only on .NET Framework.
 
@@ -265,6 +266,22 @@ The following example shows how to use **Active Directory Default** authenticati
 ```cs
 // Use your own server, database
 string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Default; Encrypt=True; Database=testdb;";
+
+using (SqlConnection conn = new SqlConnection(ConnectionString)) {
+    conn.Open();
+}
+```
+
+## Using workload identity authentication
+
+Available starting in version 5.2, like with managed identities, [workload identity](/azure/aks/workload-identity-overview) authentication mode uses the value of the User Id parameter in the connection string for its Client Id if specified. But unlike managed identity, WorkloadIdentityCredentialOptions defaults its value from environment variables: AZURE_TENANT_ID, AZURE_CLIENT_ID, and AZURE_FEDERATED_TOKEN_FILE. However, only the Client Id may be overridden by the connection string.
+
+The following example demonstrates `Active Directory Workload Identity` authentication with a user-assigned managed identity with **Microsoft.Data.SqlClient v5.2 onwards**.
+
+```cs
+// Use your own values for Server, Database, and User Id.
+// With Microsoft.Data.SqlClient v5.2+
+string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Workload Identity; Encrypt=True; User Id=ClientIdOfManagedIdentity; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString)) {
     conn.Open();

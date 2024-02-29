@@ -13,7 +13,7 @@ f1_keywords:
 # Change Data Capture Designer for Oracle by Attunity
 
 > [!IMPORTANT]
-> Microsoft Change Data Capture for Oracle by Attunity is deprecated now. Details refer to [the announcement](https://www.microsoft.com/sql-server/blog/2024/02/28/sql-server-integration-services-ssis-change-data-capture-attunity-feature-deprecations/).
+> Change Data Capture for Oracle by Attunity is deprecated now. Details refer to [the announcement](https://www.microsoft.com/sql-server/blog/2024/02/28/sql-server-integration-services-ssis-change-data-capture-attunity-feature-deprecations/).
 
   The CDC Designer Console is used to develop and maintain Oracle CDC Instances. The CDC Designer Console is a Microsoft Management Console snap-in that contains the following elements:  
   

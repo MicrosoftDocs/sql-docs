@@ -17,7 +17,7 @@ The Change Data Capture for Oracle by Attunity download includes the following t
 -   [Change Data Capture Service for Oracle by Attunity](../../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity.md)   
 
 > [!IMPORTANT]
-> Microsoft Change Data Capture for Oracle by Attunity is deprecated now. Details refer to [the announcement](https://www.microsoft.com/sql-server/blog/2024/02/28/sql-server-integration-services-ssis-change-data-capture-attunity-feature-deprecations/).
+> Change Data Capture for Oracle by Attunity is deprecated now. Details refer to [the announcement](https://www.microsoft.com/sql-server/blog/2024/02/28/sql-server-integration-services-ssis-change-data-capture-attunity-feature-deprecations/).
 
 ## Get the Change Data Capture for Oracle by Attunity download
 

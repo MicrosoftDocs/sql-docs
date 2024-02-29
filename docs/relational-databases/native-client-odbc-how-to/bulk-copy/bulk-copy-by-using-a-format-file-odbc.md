@@ -22,7 +22,7 @@ helpviewer_keywords:
   
 2.  Set SQL_COPT_SS_BCP and SQL_BCP_ON to enable bulk copy operations.  
   
-3.  Connect to Microsoft® SQL Server™.  
+3.  Connect to [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].  
   
 4.  Call [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) to set the following information:  
   

@@ -14,6 +14,8 @@ f1_keywords:
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
+> [!IMPORTANT]
+> CDC Flow Components, including CDC Control Task, CDC Source and CDC Splitter, are deprecated. Details refer to [the announcement](https://www.microsoft.com/sql-server/blog/2024/02/28/sql-server-integration-services-ssis-change-data-capture-attunity-feature-deprecations/).
 
   The CDC splitter splits a single flow of change rows from a CDC source data flow into different data flows for Insert, Update and Delete operations. The data flow is split based on the required column `__$operation` and its standard values in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] change tables.  
   

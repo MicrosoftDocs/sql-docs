@@ -117,7 +117,7 @@ You just need to create the internal load balancer. In step 4, the **101-sql-vm-
 1. In the Azure portal, open the resource group that contains the SQL Server virtual machines. 
 2. In the resource group, select **Add**.
 3. Search for **load balancer**. In the search results, select **Load Balancer**, which is published by **Microsoft**.
-4. On the **Load Balancer** blade, select **Create**.
+4. On the **Load Balancer** pane, select **Create**.
 5. In the **Create load balancer** dialog box, configure the load balancer as follows:
 
    | Setting | Value |

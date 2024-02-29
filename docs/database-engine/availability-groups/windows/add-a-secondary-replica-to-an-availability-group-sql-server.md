@@ -82,12 +82,12 @@ helpviewer_keywords:
     $availabilityMode = "AsynchronousCommit"  
     $secondaryReadMode = "AllowAllConnections"  
   
-    New-SqlAvailabilityReplica -Name SecondaryServer\Instance `   
-    -EndpointUrl $endpointURL `   
-    -FailoverMode $failoverMode `   
-    -AvailabilityMode $availabilityMode `   
-    -ConnectionModeInSecondaryRole $secondaryReadMode `   
-    -Path $agPath  
+    New-SqlAvailabilityReplica -Name SecondaryServer\Instance `
+    -EndpointUrl $endpointURL `
+    -FailoverMode $failoverMode `
+    -AvailabilityMode $availabilityMode `
+    -ConnectionModeInSecondaryRole $secondaryReadMode `
+    -Path $agPath
     ```  
   
     > [!NOTE]  

@@ -55,13 +55,13 @@ Once you have followed the below steps, your database will be migrated into Azur
 
 5. Create a new linked service for the source SQLite database in your Data Factory.
 
-    :::image type="content" source="./media/migrate-sqlite-db-to-azure-sql-serverless-offline-tutorial/linked-services-create.png" alt-text="Screenshot showing empty linked services blade in Azure Data Factory.":::
+    :::image type="content" source="./media/migrate-sqlite-db-to-azure-sql-serverless-offline-tutorial/linked-services-create.png" alt-text="Screenshot showing empty linked services pane in Azure Data Factory.":::
 
 6. In **Connections**, under **Linked Service**, select **New**.
 
 7. Search for and select the "ODBC" connector.
 
-   :::image type="content" source="./media/migrate-sqlite-db-to-azure-sql-serverless-offline-tutorial/linked-services-odbc.png" alt-text="Screenshot showing ODBC connector logo in the linked services blade in Azure Data Factory.":::
+   :::image type="content" source="./media/migrate-sqlite-db-to-azure-sql-serverless-offline-tutorial/linked-services-odbc.png" alt-text="Screenshot showing ODBC connector logo in the linked services pane in Azure Data Factory.":::
 
 8. Give the linked service a meaningful name, for example, `sqlite_odbc`. Select your integration runtime from the "Connect via integration runtime" dropdown. Enter the below into the connection string, replacing the Initial Catalog variable with the filepath for the .db file, and the DSN with the name of the system DSN connection:
 

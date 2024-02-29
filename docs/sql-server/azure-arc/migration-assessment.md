@@ -86,7 +86,7 @@ Review the readiness for target deployment types and the Azure SQL size recommen
 
    :::image type="content" source="media/migration-assessment/not-ready.png" alt-text="Screenshot showing how to get to the mitigation guidance when SQL Server isn't ready to migrate.":::
 
-- **Unknown**: Azure Migrate can't assess readiness. This result can happen because the discovery is in progress or there are issues during discovery that need to be fixed. Check the notifications blade. If the issue persists, contact [Microsoft support](https://support.microsoft.com).
+- **Unknown**: Azure Migrate can't assess readiness. This result can happen because the discovery is in progress or there are issues during discovery that need to be fixed. Check the notifications pane. If the issue persists, contact [Microsoft support](https://support.microsoft.com).
 
 ## Review confidence rating
 

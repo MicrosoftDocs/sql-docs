@@ -1663,8 +1663,10 @@
           href: virtual-machines/windows/change-sql-server-edition.md
         - name: Change version
           href: virtual-machines/windows/change-sql-server-version.md
-        - name: Storage
+        - name: Storage configuration
           href: virtual-machines/windows/storage-configuration.md
+        - name: Premium SSD v2 (preview)
+          href: virtual-machines/windows/storage-configuration-premium-ssd-v2.md
         - name: Microsoft Entra authentication
           href: virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm.md
         - name: Azure Update Manager
@@ -1675,7 +1677,7 @@
           href: virtual-machines/windows/sql-assessment-for-sql-vm.md
         - name: Azure Key Vault Integration
           href: virtual-machines/windows/azure-key-vault-integration-configure.md
-        - name: Migrate storage to UltraSSD
+        - name: Migrate storage to Ultradisk
           href: virtual-machines/windows/storage-migrate-to-ultradisk.md
         - name: SQL IaaS Agent extension
           displayName: resource provider, registration, sql vm rp

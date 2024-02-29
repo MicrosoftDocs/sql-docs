@@ -42,5 +42,5 @@ Select one of the target database version from below list
   
 > [!IMPORTANT]  
 > A new project of 'SQL Azure' type requires, SQL Server Native Client (SNAC) version 10.5 or above to link Access tables to Azure SQL Database.   
-> You can obtain the latest version of SNAC from [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272).  
+> You can obtain the latest version of SNAC from [Microsoft SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272).  
   

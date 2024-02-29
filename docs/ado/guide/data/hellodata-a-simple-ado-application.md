@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "ADO, samples"
 ---
 # HelloData: A Simple ADO Application
-This simple application steps through each of the four major ADO operations: getting, examining, editing, and updating data. These operations are performed against the Northwind sample database included with Microsoft® SQL Server. To focus on the fundamentals of ADO and to prevent code clutter, error handling in the example is minimal.  
+This simple application steps through each of the four major ADO operations: getting, examining, editing, and updating data. These operations are performed against the Northwind sample database included with [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. To focus on the fundamentals of ADO and to prevent code clutter, error handling in the example is minimal.  
   
 ### To run HelloData  
   
@@ -27,7 +27,7 @@ This simple application steps through each of the four major ADO operations: get
 5.  Finally, copy the code listed in [HelloData Code](./hellodata-code.md), and paste it into the code editor window of the form. Press **F5** to run the code.  
   
 > [!NOTE]
->  In the following example, and throughout the guide, the user id "MyId" with a password of "123aBc" is used to authenticate against the server. You should substitute these values with valid logon credentials for your server. Also, substitute the "MySQLServer" value with the name of your server.  
+>  In the following example, and throughout the guide, the user ID "MyId" with a password of "123aBc" is used to authenticate against the server. You should substitute these values with valid logon credentials for your server. Also, substitute the "MySQLServer" value with the name of your server.  
   
  For a detailed description of the code, see [Comments on HelloData](./comments-on-hellodata.md).  
   

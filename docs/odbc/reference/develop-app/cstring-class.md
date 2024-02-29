@@ -11,4 +11,4 @@ helpviewer_keywords:
   - "CString class [ODBC]"
 ---
 # CString Class
-Because objects of the **CString** class in Microsoft® Visual C++® are signed and string arguments in ODBC functions are unsigned, applications that pass **CString** objects to ODBC functions without casting them will receive compiler warnings.
+Because objects of the **CString** class in [!INCLUDE [vcprvc-md](../../../includes/vcprvc-md.md)] are signed and string arguments in ODBC functions are unsigned, applications that pass **CString** objects to ODBC functions without casting them will receive compiler warnings.

@@ -1,10 +1,10 @@
 ---
 title: "Storage: Performance best practices & guidelines"
-description: Provides storage best practices and guidelines to optimize the performance of your SQL Server on Azure Virtual Machine (VM).
+description: Provides storage best practices and guidelines to optimize the performance of your SQL Server on Azure Virtual Machines (VM).
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma, randolphwest
-ms.date: 10/06/2023
+ms.date: 03/01/2024
 ms.service: virtual-machines-sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -59,7 +59,7 @@ For production SQL Server environments, don't use the operating system disk for 
 
 Many Azure VMs contain another disk type called the temporary disk (labeled as the `D:\` drive). Depending on the VM series and size the capacity of this disk will vary. The temporary disk is ephemeral, which means the disk storage is recreated (as in, it's deallocated and allocated again), when the VM is restarted, or moved to a different host (for [service healing](/troubleshoot/azure/virtual-machines/understand-vm-reboot), for example).
 
-The temporary storage drive isn't persisted to remote storage and therefore shouldn't store user database files, transaction log files, or anything that must be preserved.
+The temporary storage drive isn't persisted to remote storage and therefore shouldn't store user database files, transaction log files, or anything that must be preserved. For example, you can use it for buffer pool extensions, the page file, and `tempdb`.
 
 Place `tempdb` on the local temporary SSD `D:\` drive for SQL Server workloads unless consumption of local cache is a concern. If you're using a VM that [doesn't have a temporary disk](/azure/virtual-machines/azure-vms-no-temp-disk) then it's recommended to place `tempdb` on its own isolated disk or storage pool with caching set to read-only. To learn more, see [tempdb data caching policies](performance-guidelines-best-practices-storage.md#data-file-caching-policies).
 
@@ -78,9 +78,13 @@ Format your data disk to use 64-KB allocation unit size for all data files place
 
 ## Premium SSD v2
 
-You should use Premium SSD v2 disks when running SQL Server workloads in [supported regions](/azure/virtual-machines/disks-types#regional-availability), if the [current limitations](/azure/virtual-machines/disks-types#premium-ssd-v2-limitations) are suitable for your environment. Depending on your configuration, Premium SSD v2 can be cheaper than Premium SSDs, while also providing performance improvements. With Premium SSD v2, you can individually adjust your throughput or IOPS independently from the size of your disk. Being able to individually adjust performance options allows for this larger cost savings and allows you to script changes to meet performance requirements during anticipated or known periods of need. We recommend using Premium SSD v2 when using the [Ebdsv5 VM series](/azure/virtual-machines/ebdsv5-ebsv5-series) as it is a more cost-effective solution for these high I/O throughput machines. Premium SSD v2 doesn't currently support host caching, so choosing a VM size with high uncached throughput such as the Ebdsv5 series VMs is recommended.
+You should use [Premium SSD v2](/azure/virtual-machines/disks-types#premium-ssd-v2) disks when running SQL Server workloads in [supported regions](/azure/virtual-machines/disks-types#regional-availability), if the [current limitations](/azure/virtual-machines/disks-types#premium-ssd-v2-limitations) are suitable for your environment. Depending on your configuration, Premium SSD v2 can be cheaper than Premium SSDs, while also providing performance improvements. With Premium SSD v2, you can individually adjust your throughput or IOPS independently from the size of your disk. Being able to individually adjust performance options allows for this larger cost savings and allows you to script changes to meet performance requirements during anticipated or known periods of need. 
 
-Premium SSD v2 disks aren't currently supported by SQL Server gallery images, but they can be used with SQL Server on Azure VMs when configured manually.
+We recommend using Premium SSD v2 when using the [Ebdsv5 or Ebsv5 virtual machine series](/azure/virtual-machines/ebdsv5-ebsv5-series) as it is a more cost-effective solution for these high I/O throughput machines. 
+
+You can [deploy your SQL Server VMs with Premium SSD v2](storage-configuration-premium-ssd-v2.md) by using the Azure portal (currently in preview).
+
+If you're deploying your SQL Server VM by using the Azure portal and want to use Premium SSD v2, you're currently limited to the [Ebdsv5 or Ebsv5 series virtual machines](/azure/virtual-machines/ebdsv5-ebsv5-series). However, if you manually create your VM with Premium SSD v2 storage and then manually install SQL Server on the VM, you can use any VM series that supports Premium SSD v2. Be sure to [register](sql-agent-extension-manually-register-single-vm.md) your SQL Server VM with the SQL IaaS Agent extension so you can take advantage of all the [benefits](sql-server-iaas-agent-extension-automate-management.md#feature-benefits) provided by the extension. 
 
 ## Azure Elastic SAN
 

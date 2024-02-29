@@ -3,7 +3,7 @@ title: Introduction to Microsoft.Data.SqlClient namespace
 description: Learn about the Microsoft.Data.SqlClient namespace and how it's the preferred way to connect to SQL for .NET applications.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 04/19/2023
+ms.date: 02/28/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -19,6 +19,140 @@ There are a few differences in less-used APIs compared to System.Data.SqlClient 
 ## API reference
 
 The Microsoft.Data.SqlClient API details can be found in the [.NET API Browser](/dotnet/api/microsoft.data.sqlclient).
+
+## Release notes for Microsoft.Data.SqlClient 5.2
+
+### New features in 5.2
+
+- Added support of `SqlDiagnosticListener` on **.NET Standard**. [#1931](https://github.com/dotnet/SqlClient/pull/1931)
+- Added new property `RowsCopied64` to `SqlBulkCopy`. [#2004](https://github.com/dotnet/SqlClient/pull/2004) [Read more](#added-new-property-rowscopied64-to-sqlbulkcopy)
+- Added a new `AccessTokenCallBack` API to `SqlConnection`. [#1260](https://github.com/dotnet/SqlClient/pull/1260) [Read more](#added-new-property-accesstokencallback-to-sqlconnection)
+- Added support for the `SuperSocketNetLib` registry option for Encrypt on .NET on Windows. [#2047](https://github.com/dotnet/SqlClient/pull/2047)
+- Added `SqlBatch` support on .NET 6+ [#1825](https://github.com/dotnet/SqlClient/pull/1825), [#2223](https://github.com/dotnet/SqlClient/pull/2223) [Read more](#sqlbatch-api)
+- Added Workload Identity authentication support [#2159](https://github.com/dotnet/SqlClient/pull/2159), [#2264](https://github.com/dotnet/SqlClient/pull/2264)
+- Added Localization support on .NET [#2210](https://github.com/dotnet/SqlClient/pull/2110)
+- Added support for Georgian collation [#2194](https://github.com/dotnet/SqlClient/pull/2194)
+- Added support for Big Endian systems [#2170](https://github.com/dotnet/SqlClient/pull/2170)
+- Added .NET 8 support [#2230](https://github.com/dotnet/SqlClient/pull/2230)
+- Added explicit version for major .NET version dependencies on System.Runtime.Caching 8.0.0, System.Configuration.ConfigurationManager 8.0.0, and System.Diagnostics.DiagnosticSource 8.0.0 [#2303](https://github.com/dotnet/SqlClient/pull/2303)
+- Added the ability to generate debugging symbols in a separate package file [#2137](https://github.com/dotnet/SqlClient/pull/2137)
+
+### Added new property `RowsCopied64` to SqlBulkCopy
+
+SqlBulkCopy has a new property `RowsCopied64` which supports `long` value types.
+
+**Note that the existing `SqlBulkCopy.RowsCopied` behavior is unchanged. When the value exceeds `int.MaxValue`, `RowsCopied` can return a negative number.**
+
+Example usage:
+
+```C#
+    using (SqlConnection srcConn = new SqlConnection(srcConstr))
+    using (SqlCommand srcCmd = new SqlCommand("select top 5 * from employees", srcConn))
+    {
+        srcConn.Open();
+        using (DbDataReader reader = srcCmd.ExecuteReader())
+        {
+            using (SqlBulkCopy bulkcopy = new SqlBulkCopy(dstConn))
+            {
+                bulkcopy.DestinationTableName = dstTable;
+                SqlBulkCopyColumnMappingCollection ColumnMappings = bulkcopy.ColumnMappings;
+
+                ColumnMappings.Add("EmployeeID", "col1");
+                ColumnMappings.Add("LastName", "col2");
+                ColumnMappings.Add("FirstName", "col3");
+
+                bulkcopy.WriteToServer(reader);
+                long rowsCopied = bulkcopy.RowsCopied64;
+            }
+        }
+    }
+```
+
+### Added new property `AccessTokenCallBack` to SqlConnection
+
+SqlConnection supports `TokenCredential` authentication by introducing a new `AccessTokenCallBack` property as a `Func<SqlAuthenticationParameters, CancellationToken,Task<SqlAuthenticationToken>>` delegate to return a federated authentication access token.
+
+Example usage:
+
+```C#
+    using Microsoft.Data.SqlClient;
+    using Azure.Identity;
+
+    const string defaultScopeSuffix = "/.default";
+    string connectionString = GetConnectionString();
+    using SqlConnection connection = new SqlConnection(connectionString);
+    
+    connection.AccessTokenCallback = async (authParams, cancellationToken) =>
+    {
+        var cred = new DefaultAzureCredential();
+        string scope = authParams.Resource.EndsWith(defaultScopeSuffix) ? authParams.Resource : authParams.Resource + defaultScopeSuffix;
+        AccessToken token = await cred.GetTokenAsync(new TokenRequestContext(new[] { scope }), cancellationToken);
+        return new SqlAuthenticationToken(token.Token, token.ExpiresOn);
+    }
+    
+    connection.Open();
+    Console.WriteLine("ServerVersion: {0}", connection.ServerVersion);
+    Console.WriteLine("State: {0}", connection.State);
+```
+
+### SqlBatch API
+
+Example usage:
+
+```csharp
+using Microsoft.Data.SqlClient;
+
+class Program
+{
+    static void Main()
+    {
+        string str = "Data Source=(local);Initial Catalog=Northwind;"
+        + "Integrated Security=SSPI;Encrypt=False";
+        RunBatch(str);
+    }
+
+    static void RunBatch(string connString)
+    {
+        using var connection = new SqlConnection(connString);
+        connection.Open();
+
+        var batch = new SqlBatch(connection);
+
+        const int count = 10;
+        const string parameterName = "parameter";
+        for (int i = 0; i < count; i++)
+        {
+            var batchCommand = new SqlBatchCommand($"SELECT @{parameterName} as value");
+            batchCommand.Parameters.Add(new SqlParameter(parameterName, i));
+            batch.BatchCommands.Add(batchCommand);
+        }
+
+        // Optionally Prepare
+        batch.Prepare();
+
+        var results = new List<int>(count);
+        using (SqlDataReader reader = batch.ExecuteReader())
+        {
+            do
+            {
+                while (reader.Read())
+                {
+                    results.Add(reader.GetFieldValue<int>(0));
+                }
+            } while (reader.NextResult());
+        }
+        Console.WriteLine(string.Join(", ", results));
+    }
+}
+```
+
+## 5.2 Target Platform Support
+
+- .NET Framework 4.6.2+ (Windows x86, Windows x64)
+- .NET 6.0+ (Windows x86, Windows x64, Windows ARM64, Windows ARM, Linux, macOS)
+- .NET Standard 2.0+ (Windows x86, Windows x64, Windows ARM64, Windows ARM, Linux, macOS)
+
+Full release notes, including dependencies, are available in the GitHub Repository: [5.2 Release Notes](https://github.com/dotnet/SqlClient/tree/main/release-notes/5.2).
 
 ### Breaking changes in 5.1
 

@@ -5,7 +5,7 @@ description: Export a database to a BACPAC file using the Azure portal, PowerShe
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, hudequei
-ms.date: 01/23/2024
+ms.date: 02/06/2024
 ms.service: sql-db-mi
 ms.subservice: data-movement
 ms.topic: how-to
@@ -47,11 +47,11 @@ Exporting a BACPAC of a database from [Azure SQL Managed Instance](../managed-in
 
 1. To export a database using the [Azure portal](https://portal.azure.com), open the page for your database and select **Export** on the toolbar.
 
-   :::image type="content" source="media/database-export/database-export1.png" alt-text="Screenshot that highlights the Export button." lightbox="media/database-export/database-export1.png":::
+   :::image type="content" source="media\database-export\sql-database-export-menu-button.png" alt-text="Screenshot that highlights the Export button." lightbox="media/database-export/sql-database-export-menu-button.png":::
 
 1. Specify the BACPAC filename, select an existing Azure storage account and container for the export, and then provide the appropriate credentials for access to the source database. A SQL **Server admin login** is needed here even if you're the Azure admin, as being an Azure admin doesn't equate to having admin permissions in Azure SQL Database or Azure SQL Managed Instance.
 
-   :::image type="content" source="media/database-export/database-export2.png" alt-text="Screenshot shows the Export Database page with username and password specified.":::
+   :::image type="content" source="media\database-export\sql-database-export-database.png" alt-text="Screenshot shows the Export Database page with username and password specified.":::
 
 1. Select **OK**.
 
@@ -71,11 +71,11 @@ SqlPackage /a:Export /tf:testExport.BACPAC /scs:"Data Source=apptestserver.datab
 
 ## Azure Data Studio
 
-[Azure Data Studio](/azure-data-studio) is a free, open-source tool and is available for Windows, Mac, and Linux.  The "SQL Server dacpac" extension provides a wizard interface to SqlPackage operations including export and import.  See the extension's [documentation page](/azure-data-studio/extensions/sql-server-dacpac-extension) for more information on installing and using the extension.
+[Azure Data Studio](/azure-data-studio) is a free, open-source tool and is available for Windows, Mac, and Linux. The "SQL Server dacpac" extension provides a wizard interface to SqlPackage operations including export and import. For more information on installing and using the extension, see [SQL Server dacpac extension](/azure-data-studio/extensions/sql-server-dacpac-extension).
 
 ## SQL Server Management Studio (SSMS)
 
-The newest versions of SQL Server Management Studio provide a wizard to export a database in Azure SQL Database or a SQL Managed Instance database to a BACPAC file. See the [Export a Data-tier Application](/sql/relational-databases/data-tier-applications/export-a-data-tier-application).
+[SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) provides a wizard to export a database in Azure SQL Database or a SQL Managed Instance database to a BACPAC file. See the [Export a Data-tier Application](/sql/relational-databases/data-tier-applications/export-a-data-tier-application).
 
 ## PowerShell
 
@@ -125,6 +125,7 @@ Stop-AzSqlDatabaseActivity -ResourceGroupName $ResourceGroupName -ServerName $Se
 - Immutable storage is currently not supported.
 - [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md) doesn't currently support exporting a database to a BACPAC file using the Azure portal or Azure PowerShell. To export a managed instance into a BACPAC file, use SQL Server Management Studio (SSMS) or [SQLPackage](/sql/tools/sqlpackage).
 - Currently, the Import/Export service does not support Microsoft Entra ID authentication when MFA is required.
+- Import\Export services only support SQL authentication and Microsoft Entra ID. Import\Export is not compatible with Microsoft Identity application registration.
 
 ## Related content
 

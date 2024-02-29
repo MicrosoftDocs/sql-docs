@@ -1,5 +1,5 @@
 ---
-title: "Preview View"
+title: "Preview view"
 description: Learn about the Preview view of the Reporting Services Report Designer where you view a display of your rendered report.
 author: maggiesMSFT
 ms.author: maggies
@@ -13,14 +13,16 @@ f1_keywords:
 helpviewer_keywords:
   - "Preview view [Reporting Services]"
 ---
-# Preview View
-In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Report Designer, use **Preview** view to display the rendered report. When a report is previewed, Report Designer runs the report locally and displays it in the Preview view. In preview mode, the report is processed in full. If the report has a complex query or has a large amount of data, preview might take several minutes to complete the first time you view it. For subsequent changes that affect only the format of the report, preview uses cached data.
+# Preview view
+In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Report Designer, use **Preview** view to display the rendered report. When a report is previewed, Report Designer runs the report locally and displays it in the Preview view. In preview mode, the report is processed in full. A report might have a complex query or a large amount of data. If that happens, preview might take several minutes to complete the first time you view it. For subsequent changes that affect only the format of the report, preview uses cached data.
 
-  ![ssrs_ssdt_preview](../../reporting-services/media/ssrs-ssdt-preview.png)  
+:::image type="content" source="../../reporting-services/media/ssrs-ssdt-preview.png" alt-text="Screenshot that shows the Preview view.":::
+  
 ## Options  
  Use the toolbar to manage preview functions.  
 
-![ssrs_ssdt_viewer_toolbar](../../reporting-services/tools/media/ssrs-ssdt-viewer-toolbar.png)
+:::image type="content" source="../../reporting-services/tools/media/ssrs-ssdt-viewer-toolbar.png" alt-text="Screenshot that shows the Preview viewer toolbar.":::
+
 
  **(1) First Page**  
  Choose this option to go to the first page of the report.  
@@ -53,7 +55,7 @@ In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Report Desig
  Choose this option to print the report.  
   
  **(11) Print Layout**  
- Choose this option to toggle between the preview report and the view of the report as it will appear on the printed page.  
+ Choose this option to toggle between the preview report and the view of the report as it appears on the printed page.  
   
  **(12) Page Setup**  
  Choose this option to conveniently change page and print properties. Use Print Layout to view changes before printing.  
@@ -65,7 +67,7 @@ In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Report Desig
  Select a zoom factor to zoom in or out on the report.  
   
  **(15) Find Text in report**  
- Type text to search for a match within the report. You cannot use search operators. Click **Find** to search for the first instance.  
+ Enter text to search for a match within the report. You can't use search operators. Select **Find** to search for the first instance.  
 
  **(16) Show or Hide Parameter Area**  
  Choose this option to show or hide the parameters boxes for reports with parameters.
@@ -76,8 +78,8 @@ In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Report Desig
  **(18) Find Next**  
  Choose this option to search for the next instance of the search text.  
   
-## See Also  
-+ [Previewing Reports](../../reporting-services/reports/previewing-reports.md)
-+ [Report Designer F1 Help](../../reporting-services/tools/report-designer-f1-help.md)  
+## Related content  
++ [Preview reports](../../reporting-services/reports/previewing-reports.md)
++ [Report designer F1 help](../../reporting-services/tools/report-designer-f1-help.md)  
   
   

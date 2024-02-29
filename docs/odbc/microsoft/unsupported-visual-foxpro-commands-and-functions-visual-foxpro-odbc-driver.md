@@ -6,7 +6,7 @@ ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "FoxPro ODBC driver [ODBC], commands and functions"
   - "functions [ODBC], Visual FoxPro"
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "FoxPro ODBC driver"
 ---
 # Unsupported Visual FoxPro Commands and Functions (Visual FoxPro ODBC Driver)
-The following table lists FoxPro commands and functions that are not supported by the Visual FoxPro ODBC Driver but are supported by Microsoft® Visual FoxPro®.  
+The following table lists FoxPro commands and functions that are not supported by the Visual FoxPro ODBC Driver but are supported by Microsoft Visual FoxPro.  
   
  If your application interacts with data whose rules, triggers, default values, or stored procedures call these Visual FoxPro commands or functions, the driver can generate an error.  
   

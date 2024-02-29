@@ -1,21 +1,22 @@
 ---
-title: Connect and query a dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics with SQL Server Management Studio (SSMS)
-description: Connect to a dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics using SSMS. Create and query a dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics by running basic T-SQL queries in SSMS.
+title: Connect and query a dedicated SQL pool in Azure Synapse Analytics
+description: Connect to and query a dedicated SQL pool in Azure Synapse Analytics using SQL Server Management Studio (SSMS).
 author: markingmyname
 ms.author: maghan
-ms.reviewer: mikeray
-ms.date: 12/15/2020
+ms.reviewer: mikeray, randolphwest
+ms.date: 02/29/2024
 ms.service: sql
 ms.subservice: ssms
 ms.topic: quickstart
-ms.custom: intro-quickstart
+ms.custom:
+  - intro-quickstart
+# CustomerIntent: As a user, I want to connect to and query a dedicated SQL pool in Azure Synapse Analytics using SSMS.
 ---
-
 # Quickstart: Connect and query a dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics with SQL Server Management Studio (SSMS)
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-Get started using SQL Server Management Studio (SSMS) to connect to your dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics and run some Transact-SQL (T-SQL) commands.
+In this quickstart, you can get started using SQL Server Management Studio (SSMS) to connect to your dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics and run some Transact-SQL (T-SQL) commands.
 
 > [!div class="checklist"]
 > - Connect to a dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics
@@ -26,10 +27,10 @@ Get started using SQL Server Management Studio (SSMS) to connect to your dedicat
 
 ## Prerequisites
 
-To complete this article, you need SQL Server Management Studio and access to a data source.
+To complete this article, you need SQL Server Management Studio (SSMS) and access to a data source.
 
-- Install [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
-- [Azure Synapse Analytics](https://azure.microsoft.com/services/synapse-analytics/?&ef_id=CjwKCAiA17P9BRB2EiwAMvwNyDW39uBCUDMPmL693_KrmcNAV2uiMHZDeNJ-615AoxdIPBNqXwBDMhoCkL8QAvD_BwE:G:s&OCID=AID2100131_SEM_CjwKCAiA17P9BRB2EiwAMvwNyDW39uBCUDMPmL693_KrmcNAV2uiMHZDeNJ-615AoxdIPBNqXwBDMhoCkL8QAvD_BwE:G:s&gclid=CjwKCAiA17P9BRB2EiwAMvwNyDW39uBCUDMPmL693_KrmcNAV2uiMHZDeNJ-615AoxdIPBNqXwBDMhoCkL8QAvD_BwE)
+- Install [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md)
+- [Azure Synapse Analytics](https://azure.microsoft.com/services/synapse-analytics/)
 
 ## Connect to a dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics
 
@@ -37,31 +38,31 @@ To complete this article, you need SQL Server Management Studio and access to a 
 
 1. Start SQL Server Management Studio. The first time you run SSMS, the **Connect to Server** window opens. If it doesn't open, you can open it manually by selecting **Object Explorer** > **Connect** > **Database Engine**.
 
-    :::image type="content" source="media/ssms-connect-query-azure-synapse-analytics/connect-object-explorer.png" alt-text="Connect link in Object Explorer":::
+   :::image type="content" source="media/ssms-connect-query-azure-synapse-analytics/connect-object-explorer.png" alt-text="Screenshot of the connect link in Object Explorer.":::
 
-2. In the **Connect to Server** window, follow the list below:
+1. In the **Connect to Server** window, follow the list below:
 
-    |   Setting   |   Suggested Value(s)   |   Description   |
-    |-------------|------------------------|-----------------|
-    | **Server type** | Database engine | For **Server type**, select **Database Engine** (usually the default option). |
-    | **Server name** | The fully qualified server name | For **Server name**, enter the name of your dedicated SQL pool (formerly SQL DW) server name. |
-    | **Authentication** | SQL Server Authentication | Use **SQL Server Authentication** for to connect to dedicated SQL pool (formerly SQL DW). </br> </br> The **Windows Authentication** method isn't supported for Azure SQL. For more information, see [Azure SQL authentication](/azure/sql-database/sql-database-security-overview#access-management). |
-    | **Login** | Server account user ID | The user ID from the server account used to create the server. |
-    | **Password** | Server account password | The password from the server account used to create the server. |
+   | Setting | Suggested values | Description |
+   | --- | --- | --- |
+   | **Server type** | Database engine | For **Server type**, select **Database Engine** (usually the default option). |
+   | **Server name** | The fully qualified server name | For **Server name**, enter the name of your dedicated SQL pool (formerly SQL DW) server name. |
+   | **Authentication** | SQL Server Authentication | Use **SQL Server Authentication** for to connect to dedicated SQL pool (formerly SQL DW). </br> </br> The **Windows Authentication** method isn't supported for Azure SQL. For more information, see [Azure SQL authentication](/azure/sql-database/sql-database-security-overview#access-management). |
+   | **Login** | Server account user ID | The user ID from the server account used to create the server. |
+   | **Password** | Server account password | The password from the server account used to create the server. |
 
-    :::image type="content" source="media/ssms-connect-query-azure-synapse-analytics/connect-to-azure-synapse-analytics-object-explorer.png" alt-text="Server name field for Azure Synapse Analytics":::
+   :::image type="content" source="media/ssms-connect-query-azure-synapse-analytics/connect-to-azure-synapse-analytics-object-explorer.png" alt-text="Screenshot of the Server name field for Azure Synapse Analytics.":::
 
-3. After you've completed all the fields, select **Connect**.
+1. After you've completed all the fields, select **Connect**.
 
-    You can also modify other connection options by selecting **Options**. Examples of connection options are the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values for all the options.
+   You can also modify other connection options by selecting **Options**. Examples of connection options are the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values for all the options.
 
-    If you haven't set up your firewall settings, a prompt appears to configure the firewall. Once you sign in, fill in your Azure account login information and continue to set the firewall rule. Then select **OK**. This prompt is a one time action. Once you configure the firewall, the firewall prompt shouldn't appear.
+   If you haven't set up your firewall settings, a prompt appears to configure the firewall. Once you sign in, fill in your Azure account login information and continue to set the firewall rule. Then select **OK**. This prompt is a one time action. Once you configure the firewall, the firewall prompt shouldn't appear.
 
-    :::image type="content" source="media/ssms-connect-query-azure-sql/azure-sql-firewall-sign-in-3.png" alt-text="Azure SQL New Firewall Rule":::
+   :::image type="content" source="media/ssms-connect-query-azure-sql/azure-sql-firewall-sign-in-3.png" alt-text="Screenshot of Azure SQL New Firewall Rule." lightbox="media/ssms-connect-query-azure-sql/azure-sql-firewall-sign-in-3.png":::
 
-4. To verify that your dedicated SQL pool (formerly SQL DW) connection succeeded, expand and explore the objects within **Object Explorer** where the server name, the SQL Server version, and the username are displayed. These objects are different depending on the server type.
+1. To verify that your dedicated SQL pool (formerly SQL DW) connection succeeded, expand and explore the objects within **Object Explorer** where the server name, the SQL Server version, and the username are displayed. These objects are different depending on the server type.
 
-    :::image type="content" source="media/ssms-connect-query-azure-synapse-analytics/connect-azure-synapse-analytics.png" alt-text="Connecting to an Azure Synapse Analytics database":::
+   :::image type="content" source="media/ssms-connect-query-azure-synapse-analytics/connect-azure-synapse-analytics.png" alt-text="Screenshot of Connecting to an Azure Synapse Analytics database.":::
 
 ## Troubleshoot connectivity issues
 
@@ -73,30 +74,30 @@ In this section, you create a table in your dedicated SQL pool (formerly SQL DW)
 
 1. In Object Explorer, right-click on your dedicated SQL pool (formerly SQL DW), select **New query**. 
 
-2. Paste the following T-SQL code snippet into the query window:
+1. Paste the following T-SQL code snippet into the query window:
 
-    ```sql
-    -- Create a new table called 'Customers' in schema 'dbo'
-    -- Drop the table if it already exists
-    IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL
-    DROP TABLE dbo.Customers
-    GO
-    -- Create the table in the specified schema
-    CREATE TABLE dbo.Customers
-    (
-       CustomerId        INT    NOT NULL,
-       Name      [NVARCHAR](50)  NOT NULL,
-       Location  [NVARCHAR](50)  NOT NULL,
-       Email     [NVARCHAR](50)  NOT NULL
-    );
-    GO
-    ```
+   ```sql
+   -- Create a new table called 'Customers' in schema 'dbo'
+   -- Drop the table if it already exists
+   IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL
+       DROP TABLE dbo.Customers
+   GO
 
-3. Execute the query by selecting **Execute** or selecting F5 on your keyboard.
+   -- Create the table in the specified schema
+   CREATE TABLE dbo.Customers (
+       CustomerId INT NOT NULL,
+       Name NVARCHAR(50) NOT NULL,
+       Location NVARCHAR(50) NOT NULL,
+       Email NVARCHAR(50) NOT NULL
+   );
+   GO
+   ```
+
+1. Execute the query by selecting **Execute** or selecting F5 on your keyboard.
 
 After the query is complete, the new Customers table is displayed in the list of tables in Object Explorer. If the table isn't displayed, right-click the dedicated SQL pool (formerly SQL DW) **Tables** node in Object Explorer, and then select **Refresh**.
 
-   :::image type="content" source="media/ssms-connect-query-azure-synapse-analytics/new-table.png" alt-text="New table":::
+:::image type="content" source="media/ssms-connect-query-azure-synapse-analytics/new-table.png" alt-text="Screenshot of New table.":::
 
 ## Insert rows into the new table
 
@@ -112,27 +113,26 @@ Now let's insert some rows into the Customers table that you created. Paste the 
 
 ## Query the table and view the results
 
-The results of a query are visible below the query text window. To query the Customers table and view the rows that were inserted, follow the steps below:
+The results of a query are visible beneath the query text window. To query the `Customers` table and view the rows that were inserted, follow these steps:
 
-1. Paste the following T-SQL code snippet into the query window, and then select **Execute**:
+Paste the following T-SQL code snippet into the query window, and then select **Execute**:
 
-   ```sql
-   -- Select rows from table 'Customers'
-   SELECT * FROM dbo.Customers;
-   ```
+```sql
+-- Select rows from table 'Customers'
+SELECT * FROM dbo.Customers;
+```
 
-    The results of the query are displayed under the area where the text was entered.
+The results of the query are displayed under the area where the text was entered.
 
-   :::image type="content" source="media/ssms-connect-query-azure-synapse-analytics/query-results.png" alt-text="The Results list":::
+:::image type="content" source="media/ssms-connect-query-azure-synapse-analytics/query-results.png" alt-text="Screenshot of the results list.":::
 
-    You can also modify the way results are presented by selecting one of the following options:
+You can also modify the way results are presented by selecting one of the following options:
 
-   ![Three options for displaying query results](media/ssms-connect-query-azure-synapse-analytics/results.png)
+:::image type="content" source="media/ssms-connect-query-azure-synapse-analytics/results.png" alt-text="Screenshot of three options for displaying query results.":::
 
-   - The first button displays the results in **Text View**, as shown in the image in the next section.
-   - The middle button displays the results in **Grid View**, which is the default option.
-       - This is set as default
-   - The third button lets you save the results to a file whose extension is .rpt by default.
+- The first button displays the results in **Text View**, as shown in the image in the next section.
+- The middle button displays the results in **Grid View**, which is the default option.
+- The third button lets you save the results to a file whose extension is `.rpt` by default.
 
 ## Verify your connection properties by using the query window table
 
@@ -141,18 +141,16 @@ You can find information about the connection properties under the results of yo
 - You can determine which server and database you're connected to, and the username that you use.
 - You can also view the query duration and the number of rows that are returned by the previously executed query.
 
-   :::image type="content" source="media/ssms-connect-query-azure-synapse-analytics/connection-properties.png" alt-text="Connection properties":::
+  :::image type="content" source="media/ssms-connect-query-azure-synapse-analytics/connection-properties.png" alt-text="Screenshot of the connection properties." lightbox="media/ssms-connect-query-azure-synapse-analytics/connection-properties.png":::
 
 ## Additional tools
 
-You can also use [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) to connect and query [SQL Server](../../azure-data-studio/quickstart-sql-server.md), an [Azure SQL Database](../../azure-data-studio/quickstart-sql-database.md), and [Azure Synapse Analytics](../../azure-data-studio/quickstart-sql-dw.md).
+You can also use [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) to connect and query [SQL Server](/azure-data-studio/quickstart-sql-server), an [Azure SQL Database](/azure-data-studio/quickstart-sql-database), and [Azure Synapse Analytics](/azure-data-studio/quickstart-sql-dw).
 
-## Next steps
-
-The best way to get acquainted with SSMS is through hands-on practice. These articles help you with various features available within SSMS.
+## Related content
 
 - [SQL Server Management Studio (SSMS) Query Editor](../f1-help/database-engine-query-editor-sql-server-management-studio.md)
-- [Scripting](../tutorials/scripting-ssms.md)
-- [Using Templates in SSMS](../template/templates-ssms.md)
-- [SSMS Configuration](../tutorials/ssms-configuration.md)
-- [Additional Tips and Tricks for using SSMS](../tutorials/ssms-tricks.md)
+- [Script objects in SQL Server Management Studio](../tutorials/scripting-ssms.md)
+- [Use templates in SQL Server Management Studio](../template/templates-ssms.md)
+- [SQL Server Management Studio components and configuration](../tutorials/ssms-configuration.md)
+- [Tips and tricks for using SQL Server Management Studio (SSMS)](../tutorials/ssms-tricks.md)

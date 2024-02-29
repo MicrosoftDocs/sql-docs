@@ -3,7 +3,7 @@ title: "Manage accelerated database recovery"
 description: "Best practices for managing and configuring accelerated database recovery (ADR)."
 author: mashamsft
 ms.author: mathoma
-ms.reviewer: kfarlee, wiassaf
+ms.reviewer: wiassaf, derekw
 ms.date: 07/12/2022
 ms.service: sql
 ms.subservice: backup-restore
@@ -20,7 +20,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 This article contains information on best practices for managing and configuring accelerated database recovery (ADR) in [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] and later. For more information on ADR on Azure SQL, see [Accelerated Database Recovery in Azure SQL](/azure/azure-sql/accelerated-database-recovery).
 
 > [!NOTE]
-> In [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuremi_md](../includes/ssazuremi_md.md)], accelerated database recovery (ADR) is enabled on all databases and cannot be disabled. If you observe issues either with storage usage, high abort transaction and other factors, review [Troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshoot.md) or contact [Azure Support](https://azure.microsoft.com/support/options/). 
+> In [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuremi-md](../includes/ssazuremi-md.md)], accelerated database recovery (ADR) is enabled on all databases and cannot be disabled. If you observe issues either with storage usage, high abort transaction and other factors, review [Troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshoot.md) or contact [Azure Support](https://azure.microsoft.com/support/options/). 
 
 ## Who should consider accelerated database recovery
 
@@ -48,13 +48,13 @@ ADR is not recommended for database environments with a high count of update/del
 
    - To activate the PVS cleanup process manually between workloads or during maintenance windows, use `sys.sp_persistent_version_cleanup`. For more information, see [sys.sp_persistent_version_cleanup](system-stored-procedures/sys-sp-persistent-version-cleanup-transact-sql.md). 
    
-   - Workloads featuring long-running queries in SNAPSHOT or READ COMMITTED SNAPSHOT isolation modes may delay ADR PVS cleanup in other databases, causing the PVS file to grow. For more information, see the section on long active snapshot scan(s) in [Troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshoot.md#pvs-active-snapshot-scans). This applies to instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and [!INCLUDE[ssazuremi_md](../includes/ssazuremi_md.md)], or in an [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] elastic pool.
+   - Workloads featuring long-running queries in SNAPSHOT or READ COMMITTED SNAPSHOT isolation modes may delay ADR PVS cleanup in other databases, causing the PVS file to grow. For more information, see the section on long active snapshot scan(s) in [Troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshoot.md#pvs-active-snapshot-scans). This applies to instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and [!INCLUDE[ssazuremi-md](../includes/ssazuremi-md.md)], or in an [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] elastic pool.
 
 ## Best practices for accelerated database recovery
 
 This section contains guidance and recommendations for ADR. 
 
-- For SQL Server, isolate the PVS version store to a [filegroup on higher tier storage](#managing-the-persistent-version-store-filegroup), such as high-end SSD or advanced SSD or Persistent Memory (PMEM), sometimes referred to as Storage Class Memory (SCM). For more information, see [Change the location of the PVS to a different filegroup](#change-the-location-of-the-pvs-to-a-different-filegroup). This option is not available for [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuremi_md](../includes/ssazuremi_md.md)].
+- For SQL Server, isolate the PVS version store to a [filegroup on higher tier storage](#managing-the-persistent-version-store-filegroup), such as high-end SSD or advanced SSD or Persistent Memory (PMEM), sometimes referred to as Storage Class Memory (SCM). For more information, see [Change the location of the PVS to a different filegroup](#change-the-location-of-the-pvs-to-a-different-filegroup). This option is not available for [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuremi-md](../includes/ssazuremi-md.md)].
 
 - Ensure there is sufficient space on the database to account for PVS usage. If the database does not have enough room for the PVS to grow, ADR will fail to generate versions. ADR saves space in the version store compared to `tempdb` version store. 
 
@@ -73,7 +73,7 @@ This section contains guidance and recommendations for ADR.
 ## Enabling and controlling ADR
 
 > [!NOTE]
-> In [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuremi_md](../includes/ssazuremi_md.md)], accelerated database recovery (ADR) is enabled on all databases and cannot be disabled or moved to a different filegroup.
+> In [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuremi-md](../includes/ssazuremi-md.md)], accelerated database recovery (ADR) is enabled on all databases and cannot be disabled or moved to a different filegroup.
 
 ADR is off by default in [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], and can be controlled using DDL syntax:
 

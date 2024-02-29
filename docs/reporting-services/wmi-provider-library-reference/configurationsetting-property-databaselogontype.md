@@ -1,6 +1,6 @@
 ---
-title: "DatabaseLogonType Property (WMI MSReportServer_ConfigurationSetting)"
-description: "DatabaseLogonType Property (WMI MSReportServer_ConfigurationSetting)"
+title: "DatabaseLogonType property (WMI MSReportServer_ConfigurationSetting)"
+description: "DatabaseLogonType property (WMI MSReportServer_ConfigurationSetting)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/14/2017
@@ -14,8 +14,11 @@ apilocation: "reportingservices.mof"
 apiname: "DatabaseLogonType"
 apitype: MOFDef
 ---
-# ConfigurationSetting Property - DatabaseLogonType
-  Specifies whether the report server uses a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows service account, a Windows user account, or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to access the report server database. Read-only.  
+# ConfigurationSetting property - DatabaseLogonType
+  Read-only. Specifies whether the report server uses:
+  - A [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows service account
+  - A Windows user account
+  - A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sign in to access the report server database.  
   
 ## Syntax  
   
@@ -27,31 +30,31 @@ Public Dim DatabaseLogonType As Integer
 public int DatabaseLogonType;  
 ```  
   
-## Property Values  
- An **integer** object that represents the login type.  
+## Property values  
+ An **integer** object that represents the sign in type.  
   
-## Example Code  
- [MSReportServer_ConfigurationSetting Class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
+## Example code  
+ [MSReportServer_ConfigurationSetting class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## Remarks  
  Values are:  
   
--   0 for Windows login  
+-   0 for Windows sign in  
   
--   1 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login  
+-   1 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sign in  
   
--   2 to log in as a service  
+-   2 to sign in as a service  
   
  If you specify 0 (Windows), you must set the value in the [DatabaseLogonAccount](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogonaccount.md) property to a corresponding a valid Windows user account.  
   
- If you specify 1 (SQL Server), make sure the value of the [DatabaseLogonAccount](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogonaccount.md) corresponds to a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
+ If you specify **1** (SQL Server), make sure the value of the [DatabaseLogonAccount](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogonaccount.md) corresponds to a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sign in.  
   
- If you specify 2 (Windows service), the report server uses an [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] account and the Windows service account to access the report server database. The DatabaseLogonAccount property is ignored.  
+ If you specify **2** (Windows service), the report server uses an [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] account and the Windows service account to access the report server database. The *DatabaseLogonAccount* property is ignored.  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+## Related content  
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

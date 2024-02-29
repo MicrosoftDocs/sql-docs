@@ -6,7 +6,7 @@ ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "ODBC drivers [ODBC], 16-bit applications"
   - "ODBC drivers [ODBC], 32-bit applications"
@@ -17,7 +17,7 @@ helpviewer_keywords:
 > [!IMPORTANT]  
 >  16-bit application support will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Develop 32-bit or 64-bit applications instead.  
   
- With the ODBC data access component, you can use 16-bit and 32-bit applications with 32-bit drivers. The Microsoft® Windows® 95/98 and Microsoft Windows NT®/Windows 2000 operating systems support the following combinations of applications and drivers:  
+ With the ODBC data access component, you can use 16-bit and 32-bit applications with 32-bit drivers. The Microsoft Windows 95/98 and Microsoft Windows NT/Windows 2000 operating systems support the following combinations of applications and drivers:  
   
 -   16-bit applications with 32-bit drivers  
   

@@ -4,7 +4,7 @@ description: Latest release notes for SQL Server enabled by Azure Arc
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 01/16/2024
+ms.date: 02/15/2024
 ms.topic: conceptual
 ms.custom: ignite-2023
 ---
@@ -12,6 +12,46 @@ ms.custom: ignite-2023
 # Release notes - SQL Server enabled by Azure Arc
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
+## February 13, 2024
+
+**Extension version**: `1.1.2594.118`
+
+### Azure SQL migration readiness assessment (preview)
+
+SQL Server enabled by Azure Arc automatically generates Azure SQL migration assessments.  
+
+A migration assessment:
+
+- Evaluates the readiness of your SQL Server instances for migration to Azure SQL
+- Recommends the optimal size for the Azure SQL destination
+- Identifies any migration blockers or issues that you need to resolve before moving to Azure SQL
+- Provides step-by-step guidance on how to mitigate any issues
+
+Use migration assessments to ensure a successful migration.
+
+For details, review [View SQL Server migration assessment - SQL Server enabled by Azure Arc](migration-assessment.md).
+
+### Create Azure SQL Managed Instance
+
+You can create an Azure SQL Managed Instance from the portal. Available from Azure Arc | SQL Server instances in the portal.
+
+### Additional feature updates for SQL Server enabled by Azure Arc
+
+- Support for TLS 1.3
+- Improved prompt for feedback in Azure portal
+- Monitoring | Show monitoring upload status on Arc SQL Server overview in portal
+- For SQL Server 2012, updates through Microsoft Update are automatically applied if Extended Security Updates (ESU) is enabled
+
+#### Region availability
+
+The following regions are now available for SQL Server enabled by Azure Arc, and Data Services enabled by Azure Arc:
+
+- Sweden Central
+- Norway East
+- UK West
+
+For a complete list of regions, see [Supported Azure regions](overview.md#supported-azure-regions).
 
 ## January 16, 2024
 
@@ -48,6 +88,8 @@ ms.custom: ignite-2023
 For information about server monitoring capabilities, review [Automatically connect your SQL Server to Azure Arc](automatically-connect.md).
 
 For information about database status and inventory capabilities, review [View SQL Server databases - Azure Arc](view-databases.md).
+
+Creates a server role and a database role, maps logins, and grants permissions. For details, see [Roles created by Azure Extension for SQL Server installation](permissions-granted-agent-extension.md).
 
 #### Back up and restore
 

@@ -122,7 +122,7 @@ f1_keywords:
  In Report Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], add both the .shp file and the .dbf file to the report project, and then specify the name of the .shp file as the spatial data source.  
   
 ###  <a name="GetShapefiles"></a> Where can I get ESRI shapefiles?  
- ESRI shapefiles are available on the Web. For more information, see [Finding ESRI Shapefiles for a Map](https://go.microsoft.com/fwlink/?linkid=178814).  
+ ESRI shapefiles are available on the Web. For more information, see [Find ESRI Shapefiles for a SQL Server 2008 R2 Reporting Services Map (SSRS)](/archive/technet-wiki/767.find-esri-shapefiles-for-a-sql-server-2008-r2-reporting-services-map-ssrs).
   
 ###  <a name="SqlServerSpatial"></a> What is a SQL Server spatial query?  
  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spatial query is a dataset query that specifies data that is either a SQLGeometry or a SQLGeography data type from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational database.  

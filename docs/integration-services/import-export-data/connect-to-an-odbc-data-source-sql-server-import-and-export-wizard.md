@@ -139,7 +139,7 @@ To build and test the connection string for your ODBC driver on your own compute
     TrustServerCertificate=No  
     DATABASE=WideWorldImporters    
     WSID=<local computer name>  
-    APP=MicrosoftÂ® WindowsÂ® Operating System  
+    APP=Microsoft&reg; Windows&reg; Operating System  
     Trusted_Connection=Yes  
     SERVER=localhost   
     ```

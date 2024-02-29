@@ -1,5 +1,5 @@
 ---
-title: "Schedule Properties (Reports Page)"
+title: "Schedule properties (Reports page)"
 description: Learn about the Reporting Services schedule properties page in SQL Server Management Studio that lists all reports for a specific shared schedule.
 author: maggiesMSFT
 ms.author: maggies
@@ -11,17 +11,17 @@ ms.custom: updatefrequency5
 f1_keywords:
   - "sql13.swb.reportserver.scheduleproperties.reports.f1"
 ---
-# Schedule Properties (Reports Page)
+# Schedule properties (Reports page)
   Use the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] schedule properties page in [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] to view a list of all reports that use the specific shared schedule. Schedules can be used to refresh report snapshots, generate report history, trigger a subscription, or expire a cached copy of the report. To find out how the schedule is used, view the property and subscription information of the report.  
   
- Although this page shows each report that uses the shared schedule, it does not indicate how many times the shared schedule is used within that single report. For example, suppose 20 different subscribers to the Company Sales report all use the same shared schedule to trigger subscription processing. In this case, the Company Sales report will only appear once in this list, even though the report has 20 references to the shared schedule.  
+ Although this page shows each report that uses the shared schedule, it doesn't indicate how many times the shared schedule is used within that single report. For example, suppose 20 different subscribers to the Company Sales report use the same shared schedule to trigger subscription processing. In this case, the Company Sales report appears once in this list, even though the report has 20 references to the shared schedule.  
   
  To open the schedule properties page:
  1. Start [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
  2. Connect to a report server.
  3. Open the **Shared Schedules** folder.
  4. Right-click a shared schedule, select **Properties**.
- 5. click **Reports**.  
+ 5. Select **Reports**.  
   
   You can also manage shared schedules from the **Site Settings** of the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web Portal.
   
@@ -35,10 +35,10 @@ f1_keywords:
  **Report**  
  Specifies the name of the report that uses the schedule.  
   
-## See Also  
- [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
+## Related content  
+ [Create, modify, and delete schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
  [Schedules](../../reporting-services/subscriptions/schedules.md)   
- [Report Server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Connect to a Report Server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Configure General Properties for a Report (Report Manager)](../reports/configure-execution-properties-for-a-report-report-manager.md)  
+ [Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Configure general properties for a report (Report Manager)](../reports/configure-execution-properties-for-a-report-report-manager.md)  
   

@@ -4,24 +4,26 @@ description: Create a Hyperscale database in Azure SQL Database using the Azure 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 6/13/2023
+ms.date: 02/22/2024
 ms.service: sql-database
 ms.subservice: deployment-configuration
-ms.custom: devx-track-azurecli, ignite-2023
 ms.topic: quickstart
+ms.custom:
+  - devx-track-azurecli
+  - ignite-2023
 ---
 # Quickstart: Create a Hyperscale database in Azure SQL Database
 
 In this quickstart, you create a [logical server in Azure](logical-servers.md) and a [Hyperscale](service-tier-hyperscale.md) database in Azure SQL Database using the Azure portal, a PowerShell script, or an Azure CLI script, with the option to create one or more [High Availability (HA) replicas](service-tier-hyperscale-replicas.md#high-availability-replica). If you would like to use an existing logical server in Azure, you can also create a Hyperscale database using Transact-SQL.
 
 > [!TIP]
-> Simplified pricing for SQL Database Hyperscale coming soon. Review the [Hyperscale pricing blog](https://aka.ms/hsignite2023) for details.
+> Simplified pricing for SQL Database Hyperscale arrived in December 2023. Review the [Hyperscale pricing blog](https://aka.ms/hsignite2023) for details.
 
 ## Prerequisites
 
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
 - The latest version of either [Azure PowerShell](/powershell/azure/install-az-ps) or [Azure CLI](/cli/azure/install-azure-cli-windows), if you would like to follow the quickstart programmatically. Alternately, you can complete the quickstart in the Azure portal.
-- An existing [logical server](logical-servers.md) in Azure is required if you would like to create a Hyperscale database with Transact-SQL. For this approach, you will need to install [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), [Azure Data Studio](/azure-data-studio/download-azure-data-studio), or the client of your choice to run Transact-SQL commands ([sqlcmd](/sql/tools/sqlcmd-utility), etc.).
+- An existing [logical server](logical-servers.md) in Azure is required if you would like to create a Hyperscale database with Transact-SQL. For this approach, you will need to run Transact-SQL via [the Azure portal query editor](query-editor.md), [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), [Azure Data Studio](/azure-data-studio/download-azure-data-studio), [sqlcmd](/sql/tools/sqlcmd-utility), or the client of your choice.
 
 ## Create a Hyperscale database
 
@@ -54,11 +56,6 @@ To create a single database in the Azure portal, this quickstart starts at the A
 
 1. Under **Compute Hardware**, select **Change configuration**. Review the available hardware configurations and select the most appropriate configuration for your database. For this example, we will select the **Standard-series (Gen5)** configuration.
 1. Select **OK** to confirm the hardware generation.
-1. Under **Save money**, review if you qualify to use Azure Hybrid Benefit for this database. If so, select **Yes** and then confirm you have the required license.
-
-   > [!TIP]
-   > Simplified pricing for SQL Database Hyperscale coming soon. Review the [Hyperscale pricing blog](https://aka.ms/hsignite2023) for details.
- 
 1. Optionally, adjust the **vCores** slider if you would like to increase the number of vCores for your database. For this example, we will select 2 vCores.
 1. Adjust the **High-Availability Secondary Replicas** slider to create one [High Availability (HA) replica](service-tier-hyperscale-replicas.md#high-availability-replica).
 1. Select **Apply**.
@@ -72,14 +69,14 @@ To create a single database in the Azure portal, this quickstart starts at the A
 1. For **Firewall rules**, set **Add current client IP address** to **Yes**. Leave **Allow Azure services and resources to access this server** set to **No**.
 1. Select **Next: Security** at the bottom of the page.
 
-    :::image type="content" source="media/hyperscale-database-create-quickstart/azure-sql-database-configure-network.png" alt-text="Screenshot of the networking configuration page for a new database in Azure SQL Database that enables you to configure endpoints and optionally add a firewall rule for your client IP address." lightbox="media/hyperscale-database-create-quickstart/azure-sql-database-configure-network.png":::
+    :::image type="content" source="media/hyperscale-database-create-quickstart/azure-sql-database-configure-network.png" alt-text="Screenshot of the networking configuration page for a new database that enables you to configure endpoints and optionally add a firewall rule for your client IP address.":::
 
 1. Optionally, enable [Microsoft Defender for SQL](../database/azure-defender-for-sql.md).
 1. Select **Next: Additional settings** at the bottom of the page.
 1. On the **Additional settings** tab, in the **Data source** section, for **Use existing data**, select **Sample**. This creates an AdventureWorksLT sample database so there's some tables and data to query and experiment with, as opposed to an empty blank database.
 1. Select **Review + create** at the bottom of the page:
-    
-    :::image type="content" source="media/hyperscale-database-create-quickstart/azure-sql-create-database-sample-data.png" alt-text="Screenshot of the 'Additional Settings' screen to create a database in Azure SQL Database allows you to select sample data." lightbox="media/hyperscale-database-create-quickstart/azure-sql-create-database-sample-data.png":::
+
+    :::image type="content" source="media/hyperscale-database-create-quickstart/azure-sql-create-database-sample-data.png" alt-text="Screenshot of the 'Additional Settings' screen to create a database in Azure SQL Database allows you to select sample data.":::
 
 1. On the **Review + create** page, after reviewing, select **Create**.
 
@@ -394,7 +391,7 @@ GO
 
 ---
 
-## Next steps
+## Related content
 
 [Connect and query](connect-query-content-reference-guide.md) your database using different tools and languages:
 - [Connect and query using SQL Server Management Studio](connect-query-ssms.md)

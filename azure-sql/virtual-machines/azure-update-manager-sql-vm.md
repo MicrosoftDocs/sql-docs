@@ -8,7 +8,6 @@ ms.date: 09/11/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
-ms.custom: ignite-fall-2021
 tags: azure-resource-manager
 ---
 # Azure Update Manager for SQL Server on Azure VMs (preview)

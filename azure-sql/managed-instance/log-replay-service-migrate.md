@@ -74,13 +74,13 @@ When you're using LRS, consider the following best practices:
 - Split full and differential backups into multiple files, instead of using a single file.
 - Enable backup compression to help the network transfer speeds.
 - Use Cloud Shell to run PowerShell or CLI scripts, because it will always be updated to use the latest released cmdlets.
-- Configure a [maintenance window](../database/maintenance-window.md) to allow scheduling of system updates at a specific day and time. This configuration helps achieve a more predictable time for database migrations, because system upgrades can interrupt in-progress migrations.
+- Configure a [maintenance window](maintenance-window.md) to allow scheduling of system updates at a specific day and time. This configuration helps achieve a more predictable time for database migrations, because system upgrades can interrupt in-progress migrations.
 - Plan to complete a single LRS migration job within a maximum of 30 days. On expiration of this time frame, the LRS job is automatically canceled.
 - For a faster database restore, enable `CHECKSUM` when you're taking your backups. SQL Managed Instance performs an integrity check on backups without `CHECKSUM`, which increases restore time. 
 
 System updates for SQL Managed Instance take precedence over database migrations in progress. During a system update on an instance, all pending LRS migrations are suspended and resumed only after the update is applied. This system behavior might prolong migration time, especially for large databases. 
 
-To achieve a predictable time for database migrations, consider configuring a [maintenance window](../database/maintenance-window.md) to schedule system updates for a specific day and time, and run and complete migration jobs outside the designated maintenance window timeframe.
+To achieve a predictable time for database migrations, consider configuring a [maintenance window](maintenance-window.md) to schedule system updates for a specific day and time, and run and complete migration jobs outside the designated maintenance window timeframe.
 
 
 > [!IMPORTANT]

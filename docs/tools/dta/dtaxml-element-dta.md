@@ -6,7 +6,7 @@ ms.author: maghan
 ms.date: 03/14/2017
 ms.service: sql
 ms.subservice: tools-other
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "DTAXML element"
 dev_langs:

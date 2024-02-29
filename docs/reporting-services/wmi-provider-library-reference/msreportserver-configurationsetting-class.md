@@ -1,6 +1,6 @@
 ---
-title: "MSReportServer_ConfigurationSetting Class"
-description: "MSReportServer_ConfigurationSetting Class"
+title: "MSReportServer_ConfigurationSetting class"
+description: "MSReportServer_ConfigurationSetting class"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -15,10 +15,10 @@ apilocation: "reportingservices.mof"
 apiname: "MSReportServer_ConfigurationSetting Class"
 apitype: MOFDef
 ---
-# MSReportServer_ConfigurationSetting Class
+# MSReportServer_ConfigurationSetting class
   Represents the installation and runtime parameters of a report server instance. These parameters are stored in the configuration file for the report server.  
   
- For a list of all members of this type, see [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md).  
+ For a list of all members of this type, see [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md).  
   
 ## Syntax  
   
@@ -30,11 +30,11 @@ Public Class MSReportServer_ConfigurationSetting
 public class MSReportServer_ConfigurationSetting  
 ```  
   
-## Thread Safety  
- Any public static (**Shared** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) members of this type are safe for multithreaded operations. Any instance members are not guaranteed to be thread-safe.  
+## Thread safety  
+ Any public static members of this type are safe for multithreaded operations. Any instance members aren't guaranteed to be thread-safe.  
   
 ## Example  
- To run the following code, add your server name in place of each \<*servername*>. Update the path to point to your installation location, if it is not the default. The following code example iterates through each property in the *MSReportServer_ConfigurationSetting* class, printing the name of each property and its value to the console.  
+ To run the following code, add your server name in place of each `<servername>`. Update the path to point to your installation location, if it isn't the default. The following code example iterates through each property in the *MSReportServer_ConfigurationSetting* class, printing the name of each property and its value to the console.  
   
 ```vb  
 Imports System  
@@ -163,7 +163,7 @@ class Class1
   
  **Platform:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+## Related content  
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

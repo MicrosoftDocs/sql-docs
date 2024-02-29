@@ -33,4 +33,4 @@ The identifier for the date ODBC SQL data type is:
   
  [c]   This is the size of the corresponding C data type.  
   
- When date SQL data is converted to character C data, the resulting string is in the "*yyyy*-*mm*-*dd*" format. This format is not affected by the Windows® country/region setting.
+ When date SQL data is converted to character C data, the resulting string is in the "*yyyy*-*mm*-*dd*" format. This format is not affected by the Windows country/region setting.

@@ -61,7 +61,7 @@ The number of worker threads spawned for each task depends on:
 
 - Whether the request was eligible for parallelism as determined by the Query Optimizer.
 
-- What the actual available [degree of parallelism (DOP)](../relational-databases/query-processing-architecture-guide.md#degree-of-parallelism-dop) in the system is, based on current load. This may differ from estimated DOP, which is based on the server configuration for max degree of parallelism (MAXDOP). For example, the server configuration for MAXDOP may be 8 but the available DOP at runtime can be only 2, which affects query performance.
+- What the actual available [degree of parallelism (DOP)](../relational-databases/query-processing-architecture-guide.md#degree-of-parallelism-dop) in the system is, based on current load. This may differ from estimated DOP, which is based on the server configuration for max degree of parallelism (MAXDOP). For example, the server configuration for MAXDOP may be 8 but the available DOP at runtime can be only 2, which affects query performance. Memory pressure and lack of workers are two conditions which reduce available DOP at runtime.
 
 > [!NOTE]  
 > The **max degree of parallelism (MAXDOP)** limit is set per task, not per request. This means that during a parallel query execution, a single request can spawn multiple tasks up to the MAXDOP limit, and each task will use one worker. For more information about MAXDOP, see [Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).

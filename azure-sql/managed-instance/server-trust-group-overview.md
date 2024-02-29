@@ -9,7 +9,6 @@ ms.date: 11/02/2021
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
-ms.custom: ignite-fall-2021
 ---
 # Set up trust between instances with server trust group (Azure SQL Managed Instance)
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -36,7 +35,7 @@ To create a server trust group by using the Azure portal, follow these steps:
 
    :::image type="content" source="./media/server-trust-group-overview/new-sql-trust-group-button.png" alt-text="Screenshot shows SQL trust groups page with New Group selected.":::
 
-5. On the **SQL trust group** create blade set the **Group name**. It needs to be unique in the group's subscription, resource group and region. **Trust scope** defines the type of cross-instance scenario that is enabled with the server trust group. Trust scope is fixed - all available functionalities are preselected and this cannot be changed. Select **Subscription** and **Resource group** to choose the managed instances that will be members of the group.
+5. On the **SQL trust group** create pane set the **Group name**. It needs to be unique in the group's subscription, resource group and region. **Trust scope** defines the type of cross-instance scenario that is enabled with the server trust group. Trust scope is fixed - all available functionalities are preselected and this cannot be changed. Select **Subscription** and **Resource group** to choose the managed instances that will be members of the group.
 
    :::image type="content" source="./media/server-trust-group-overview/new-sql-trust-group.png" alt-text="Screenshot shows the Create SQL trust group create page with values.":::
 

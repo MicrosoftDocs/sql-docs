@@ -57,7 +57,7 @@ The name of the ODBC driver, **Microsoft ODBC for Oracle**.
 The name of the Oracle server. 
 
 **Uid** and **Pwd**   
-The user id and password to connect.
+The user ID and password to connect.
 
 ### Connection string format
 Here's the format of a typical connection string.

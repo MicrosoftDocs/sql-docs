@@ -5,6 +5,7 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/31/2016
 ms.service: reporting-services
+ms.subservice: report-server
 ms.topic: conceptual
 ms.custom: updatefrequency5
 helpviewer_keywords:
@@ -20,10 +21,11 @@ helpviewer_keywords:
   
  Encryption keys are based partly on the profile information of the Report Server service. If you change the user identity used to run the Report Server service, you must update the keys accordingly. If you are using the Reporting Services Configuration tool to change the identity, this step is handled for you automatically.  
   
- If initialization fails for some reason, the report server returns an **RSReportServerNotActivated** error in response to user and service requests. In this case, you may need to troubleshoot the system or server configuration. For more information, see [SSRS: Troubleshoot Issues and Errors with Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) in Technet Wiki.  
+ If initialization fails for some reason, the report server returns an **RSReportServerNotActivated** error in response to user and service requests. In this case, you may need to troubleshoot the system or server configuration. For more information, see [Troubleshoot Reporting Services report issues](../troubleshooting/troubleshoot-reporting-services-report-issues.md).
   
 ## Overview of the Initialization Process  
- The initialization process creates and stores a symmetric key used for encryption. The symmetric key is created by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Cryptographic Services and subsequently used by the Report Server service to encrypt and decrypt data. The symmetric key is itself encrypted with an asymmetric key.  
+
+The initialization process creates and stores a symmetric key used for encryption. The symmetric key is created by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Cryptographic Services and subsequently used by the Report Server service to encrypt and decrypt data. The symmetric key is itself encrypted with an asymmetric key.  
   
  The following steps describe the initialization process:  
   

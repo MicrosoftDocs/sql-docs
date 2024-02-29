@@ -7942,6 +7942,8 @@ items:
       items:
       - name: Configure a ledger database
         href: relational-databases/security/ledger/ledger-how-to-configure-ledger-database.md?view=sql-server-ver16&preserve-view=true
+      - name: Configure SQL MI NSG rules to work with Azure Confidential Ledger
+        href: relational-databases/security/ledger/ledger-nsg-policies-configure.md
       - name: Create append-only ledger tables
         href: relational-databases/security/ledger/ledger-how-to-append-only-ledger-tables.md?view=sql-server-ver16&preserve-view=true
       - name: Create updatable ledger tables
@@ -10485,12 +10487,24 @@ items:
           href: sql-server/azure-arc/manage-availability-group.md
       - name: Secure
         items:
+        - name: Agent permissions
+          items:
+          - name: Agent roles
+            href: sql-server/azure-arc/permissions-granted-agent-extension.md
+          - name: Configure least privilege
+            href: sql-server/azure-arc/configure-least-privilege.md
+          - name: Required permissions
+            href: sql-server/azure-arc/configure-windows-accounts-agent.md
         - name: Configure advanced data Security
           href: sql-server/azure-arc/configure-advanced-data-security.md
         - name: Certificate rotation
           href: sql-server/azure-arc/rotate-certificates.md
         - name: Extended Security Updates
           href: sql-server/azure-arc/extended-security-updates.md
+      - name: Migrate
+        items:
+        - name: Discover and assess
+          href: sql-server/azure-arc/migration-assessment.md
       - name: FAQ
         href: sql-server/azure-arc/faq.yml
       - name: Data collection and reporting
@@ -11485,6 +11499,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-10001-database-engine-error.md
         - name: 10003
           href: relational-databases/errors-events/mssqlserver-10003-database-engine-error.md
+        - name: 10054
+          href: relational-databases/errors-events/mssqlserver-10054-database-engine-error.md
         - name: 10061
           href: relational-databases/errors-events/mssqlserver-10061-database-engine-error.md
         - name: 10502
@@ -12220,6 +12236,8 @@ items:
       href: relational-databases/event-classes/objecttype-trace-event-column.md
   - name: Native interfaces
     items: 
+    - name: CreateVersionedSOSHostObject
+      href: native-interfaces/createversionedsoshostobject.md
     - name: GetSvcInstanceIDFromName
       href: native-interfaces/getsvcinstanceidfromname.md
     - name: GetSQLInstanceRegStringByID

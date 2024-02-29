@@ -4,7 +4,7 @@ description: Manage and scale multiple Hyperscale databases in Azure SQL Databas
 author: arvindshmicrosoft
 ms.author: arvindsh
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 01/03/2024
+ms.date: 02/27/2024
 ms.service: sql-database
 ms.subservice: elastic-pools
 ms.custom: ignite-2023
@@ -20,7 +20,7 @@ An Azure SQL Database [elastic pool](elastic-pool-overview.md) enables software-
 
 For examples to create, scale, or move databases into a Hyperscale elastic pool by using the Azure CLI or PowerShell, review [Working with Hyperscale elastic pools using command-line tools](hyperscale-elastic-pool-command-line.md)
 
-> [!NOTE]  
+> [!NOTE]
 > [Elastic pools for Hyperscale](hyperscale-elastic-pool-overview.md) are currently in preview.
 
 ## Overview
@@ -130,15 +130,27 @@ Consider the following limitations:
 - Changing the edition of a Hyperscale elastic pool to a non-Hyperscale edition isn't supported.
 - In order to [reverse migrate](./manage-hyperscale-database.md#reverse-migrate-from-hyperscale) an eligible database, which is in a Hyperscale elastic pool, it must first be removed from the Hyperscale elastic pool. The standalone Hyperscale database can then be reverse migrated to a General Purpose standalone database.
 - Maintenance of databases in a pool is performed, and maintenance windows are configured, at the pool level. It isn't currently possible to configure a maintenance window for Hyperscale elastic pools.
-- Zone redundancy isn't currently available for Hyperscale elastic pools. Attempting to add a zone-redundant Hyperscale database to a Hyperscale elastic pool results in an error.
+- For the Hyperscale service tier, zone redundancy support can only be specified during database or elastic pool creation and can't be modified once the resource is provisioned. For more information, see [Migrate Azure SQL Database to availability zone support](/azure/reliability/migrate-sql-database#downtime-requirements).
 - Adding a [named replica](./service-tier-hyperscale-replicas.md#named-replica) into a Hyperscale elastic pool isn't supported. Attempting to add a named replica of a Hyperscale database to a Hyperscale elastic pool results in an `UnsupportedReplicationOperation` error. Instead, create the named replica as a single Hyperscale database.
+
+### Zone redundant elastic pools considerations
+
+For zone redundant elastic pools, consider the following:
+
+> [!NOTE]
+> Hyperscale elastic pools with zone redundancy are available, currently in preview. For more information, see [Blog post: Hyperscale elastic pools with zone redundancy](https://aka.ms/hsep-zr).
+
+- Only databases with zone-redundant storage redundancy (ZRS or GZRS) can be added to Hyperscale elastic pools with zone redundancy.
+- A standalone Hyperscale database must be created with zone redundancy and zone-redundant backup storage (ZRS or GZRS) in order to add it to a zone-redundant Hyperscale elastic pool.  For Hyperscale databases without zone redundancy, perform a data transfer to a new Hyperscale database with the zone redundancy option enabled. A clone must be created using database copy, point-in-time restore, or geo-replica. For more information, see [Redeployment (Hyperscale)](/azure/reliability/migrate-sql-database#redeployment-hyperscale).
+- To move a Hyperscale database from one elastic pool to another, the zone redundancy and zone-redundant backup storage settings must match.
+- To migrate a database from another non-Hyperscale service tier into a Hyperscale elastic pool with zone redundancy: 
+  - Via the Azure portal, first enable both zone redundancy and zone redundant backup storage (ZRS). Then, you can add the database to the zone redundant Hyperscale elastic pool. 
+  - Via PowerShell, first enable zone redundancy. Then, with [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase), ensure that the `-BackupStorageRedundancy` parameter is used to specify zone redundant backup storage (ZRS or GZRS).
 
 ## Known issues
 
 | Issue | Recommendation |
 | *-- | *-- |
-| If you try to create a Hyperscale database with [Geo-zone-redundant storage (GZRS)](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) inside a Hyperscale elastic pool, the request fails with the error `(UnsupportedBackupStorageRedundancyForEdition) The requested backup storage redundancy of GeoZone is not supported for edition.` This issue only occurs if the storage redundancy is set to GZRS. | To work around this issue, create the database copy as a standalone Hyperscale database with the storage redundancy set to GeoZone (GZRS). Later, add ("move") the copied database to the elastic pool. |
-| If you try to create a new Hyperscale elastic pool from PowerShell with the `-ZoneRedundant` parameter specified, you get a vague `One or more errors occurred`. If you run the PowerShell command with the respective `-Verbose` and `-Debug` parameters specified, you get the actual error: `Provisioning of zone redundant database/pool is not supported for your current request`. | At this time, creating Hyperscale elastic pools with zone redundancy specified is unsupported. |
 | In rare cases, you might get the error `45122 - This Hyperscale database cannot be added into an elastic pool at this time. In case of any questions, please contact Microsoft support`, when trying to move / restore / copy a Hyperscale database into an elastic pool. | This limitation is due to implementation-specific details. If this error is blocking you, raise a support incident and request help. |
 
 ## Related content

@@ -1,10 +1,10 @@
 ---
 title: In-Memory OLTP overview and usage scenarios
 description: Learn about In-Memory OLTP, a technology in SQL Server, Azure SQL Database, and Azure SQL Managed Instance for optimized transaction processing. Review examples and additional resources.
-author: "kevin-farlee"
-ms.author: "kfarlee"
-ms.reviewer: wiassaf, randolphwest
-ms.date: 12/29/2023
+author: MashaMSFT
+ms.author: mathoma
+ms.reviewer: wiassaf, randolphwest, ryanston 
+ms.date: 10/05/2023
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: conceptual

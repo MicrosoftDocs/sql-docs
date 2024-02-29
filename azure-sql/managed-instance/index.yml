@@ -176,13 +176,13 @@ landingContent:
           - text: Plan for Azure maintenance events
             url: ../database/planned-maintenance.md
           - text: Maintenance window
-            url: ../database/maintenance-window.md
+            url: maintenance-window.md
           - text: Resource health
             url: ../managed-instance/resource-health-to-troubleshoot-connectivity.md?view=azuresql-mi&preserve-view=true
 
       - linkListType: how-to-guide
         links:
           - text: Maintenance window
-            url: ../database/maintenance-window-configure.md
+            url: maintenance-window-configure.md
           - text: Maintenance Window Notifications
-            url: ../database/advance-notifications.md
+            url: advance-notifications.md

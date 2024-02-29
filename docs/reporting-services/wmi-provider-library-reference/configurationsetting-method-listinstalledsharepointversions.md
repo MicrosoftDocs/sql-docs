@@ -1,6 +1,6 @@
 ---
-title: "ListInstalledSharePointVersions Method (WMI)"
-description: "ConfigurationSetting Method - ListInstalledSharePointVersions"
+title: "ListInstalledSharePointVersions method (WMI)"
+description: "ConfigurationSetting method - ListInstalledSharePointVersions"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -11,8 +11,8 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "ListInstalledSharePointVersions method"
 ---
-# ConfigurationSetting Method - ListInstalledSharePointVersions
-  Returns a set of tokens that represent the versions of Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)], [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], or [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] that are installed on the same computer as the report server.  
+# ConfigurationSetting method - ListInstalledSharePointVersions
+  Returns a set of tokens that represent the versions of Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)], [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], or [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]. The tokens indicate installations on the same computer as the report server.  
   
 ## Syntax  
   
@@ -36,13 +36,13 @@ public void ListReportServersInDatabase (out string[] VersionTokens,
  *HRESULT*  
  [out] Value indicating whether the call succeeded or failed.  
   
-## Return Value  
- Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A non-zero value indicates that an error has occurred.  
+## Return value  
+ Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A nonzero value indicates that an error occurred.  
   
 ## Remarks  
  Each token that is returned represents a version of [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] or [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] that is compatible with the currently installed report server. If a particular version of SharePoint is compatible with previous SharePoint versions, tokens for each compatible SharePoint version are returned.  
   
- The following is a table of the SharePoint tokens that are returned.  
+ The following table shows the SharePoint tokens that are returned.  
   
 |**Version Tokens**|**Description**|  
 |------------------------|---------------------|  
@@ -53,7 +53,7 @@ public void ListReportServersInDatabase (out string[] VersionTokens,
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+## Related content  
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

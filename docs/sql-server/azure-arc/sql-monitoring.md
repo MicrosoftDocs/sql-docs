@@ -11,6 +11,8 @@ ms.custom: ignite-2023
 
 # Monitor [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] (preview)
 
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
 Monitor the performance of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] within the Azure portal. Performance metrics are automatically collected from DMV datasets on eligible instances of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] and sent to the Azure telemetry pipeline for near real-time processing. Performance data can then be viewed on the Performance Dashboard section of a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]. Monitoring data collection is automatic, assuming all prerequisites are met.
 
 [!INCLUDE [azure-arc-sql-preview](includes/azure-arc-sql-preview.md)]

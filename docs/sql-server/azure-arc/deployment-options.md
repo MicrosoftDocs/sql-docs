@@ -32,7 +32,7 @@ The following table highlights each method so that you can determine which works
 | Interactively | [Connect your SQL Server to Azure Arc with installer (.msi)](connect-with-installer.md) |
 | Interactively | Manually connect the SQL Server on a single physical or virtual machine that is already connected to Azure Arc. [Connect your SQL Server to Azure Arc on a server already connected to Azure Arc](connect-already-enabled.md)|
 |At scale| [Automatically enable SQL Server for Azure Arc](manage-autodeploy.md)|
-| At scale | [Connect SQL Server at scale using Azure policy](connect-at-scale-policy.md)|
+| At scale | Connect SQL Server at scale using Azure policy (deprecated - use [Automatically connect your SQL Server to Azure Arc](automatically-connect.md))|
 | At scale | [Connect SQL Server at scale using script](connect-at-scale-script.md)|
 | At scale | [Connect SQL Server machines at scale with a Configuration Manager custom task sequence](onboard-configuration-manager-custom-task.MD)|
 

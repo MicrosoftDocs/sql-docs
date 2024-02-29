@@ -58,7 +58,7 @@ First, create the load balancer.
 
 1. Search for **load balancer**. Choose **Load Balancer** (published by **Microsoft**) in the search results.
 
-1. On the **Load Balancer** blade, select **Create**.
+1. On the **Load Balancer** pane, select **Create**.
 
 1. Configure the following parameters for the load balancer.
 
@@ -71,7 +71,7 @@ First, create the load balancer.
    | **SKU** |Standard |
    | **Type** |Internal |
 
-   The Azure portal blade should look like this:
+   The Azure portal pane should look like this:
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/84-create-load-balancer.png" alt-text="Screenshot of the Azure portal, Create Load Balancer page." lightbox="./media/availability-group-manually-configure-tutorial-single-subnet/84-create-load-balancer.png":::
 
@@ -178,7 +178,7 @@ The load-balancing rules configure how the load balancer routes traffic to the S
    >
 
    > [!NOTE]
-   > You might have to scroll down the blade to view all the settings.
+   > You might have to scroll down the pane to view all the settings.
    > 
 
 1. Select **Save** to set the listener load balancing rules.

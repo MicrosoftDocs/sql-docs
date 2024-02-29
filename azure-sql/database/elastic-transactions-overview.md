@@ -9,9 +9,7 @@ ms.date: 11/16/2022
 ms.service: sql-db-mi
 ms.subservice: scale-out
 ms.topic: conceptual
-ms.custom:
-  - sqldbrb=1
-  - ignite-fall-2021
+ms.custom: sqldbrb=1
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Distributed transactions across cloud databases

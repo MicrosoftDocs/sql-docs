@@ -6,7 +6,7 @@ ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
   - "Visual FoxPro data source [ODBC], adding"
   - "adding data sources [ODBC], Visual FoxPro ODBC driver"
@@ -14,9 +14,9 @@ helpviewer_keywords:
 # Adding a Visual FoxPro Data Source
 To access Visual FoxPro data from your application, you must have a data source. You can create a data source as follows:  
   
--   In an application, such as Microsoft® Word, Microsoft Excel, or Microsoft Access, that uses ODBC drivers.  
+-   In an application, such as Microsoft Word, Microsoft Excel, or Microsoft Access, that uses ODBC drivers.  
   
--   Outside your application, using the Microsoft Windows® 95, Microsoft Windows 98, or Microsoft Windows NT®/Windows 2000 Control Panel.  
+-   Outside your application, using the Microsoft Windows 95, Microsoft Windows 98, or Microsoft Windows NT/Windows 2000 Control Panel.  
   
  After a data source exists on your system, you can reuse the same data source every time that you want to access Visual FoxPro data. If you have several different databases or tables you want to access, you can create a separate data source for each database or directory.  
   

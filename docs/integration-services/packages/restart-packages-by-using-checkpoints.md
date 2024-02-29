@@ -107,6 +107,6 @@ helpviewer_keywords:
     
 ## External Resources  
   
--   Technical article, [Automatic Restart of SSIS packages after Failover or Failure](https://go.microsoft.com/fwlink/?LinkId=200407), on social.technet.microsoft.com  
+-   Technical article, [Automatic Restart of SSIS packages after Failover or Failure](../../integration-services/packages/restart-packages-by-using-checkpoints.md)
   
 -   Support article, [SSIS Checkpoints are not honored for For Loop or Foreach Loop container items](/troubleshoot/sql/integration-services/ssis-checkpoints-not-honored-for-loop), on support.microsoft.com.

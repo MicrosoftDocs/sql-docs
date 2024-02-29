@@ -8,7 +8,7 @@ ms.date: 05/24/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
-monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 
 # Create and use updatable ledger tables
@@ -142,7 +142,7 @@ We'll create an account balance table with the following schema.
 ## Permissions
 Creating updatable ledger tables requires the `ENABLE LEDGER` permission. For more information on permissions related to ledger tables, see [Permissions](../permissions-database-engine.md). 
 
-## Next steps
+## Related content
 
 - [Database ledger](ledger-database-ledger.md)
 - [Updatable ledger tables](ledger-updatable-ledger-tables.md)

@@ -53,7 +53,7 @@ For a database hosted in the Azure SQL Database cloud service, your chosen servi
 
 #### Memory-optimized table variables
 
-A table variable that is declared to be memory-optimized is sometimes a preferable to a traditional #TempTable that resides in the **tempdb** database. Such table variables can provide significant performance gains without using significant amounts of active memory.
+A table variable which is declared to be memory-optimized is sometimes preferable to a traditional #TempTable that resides in the `tempdb` database. Table variables can provide performance gains without using significant amounts of active memory.
 
 ### A.3 Table must be offline to convert to memory-optimized
 

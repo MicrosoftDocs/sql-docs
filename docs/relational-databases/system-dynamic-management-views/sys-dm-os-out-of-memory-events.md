@@ -3,7 +3,7 @@ title: "sys.dm_os_out_of_memory_events"
 description: sys.dm_os_out_of_memory_events returns a log of out of memory (OOM) events, including a predicted out of memory cause.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 01/26/2024
+ms.date: 02/29/2024
 ms.service: sql-database
 ms.topic: "reference"
 f1_keywords:
@@ -48,17 +48,19 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 |`possible_non_sos_leaked_memory_mb` |int, null |Leaked non-SOS memory in megabytes, if any. Based on heuristics and provided with a finite degree of confidence. |
 
 ## Permissions
-On [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)], requires `VIEW SERVER STATE` permission.
+On [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], requires `VIEW SERVER STATE` permission.
 
 On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Microsoft Entra admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.
-
+<!-- 
 ### Permissions for SQL Server 2022 and later
 
 Requires VIEW SERVER PERFORMANCE STATE permission on the server.
-
+-->
 ## Remarks
 
 Each row in this view represents an out of memory (OOM) event that has occurred in the database engine. Not all OOM events might be captured. Older OOM events can disappear from the result set as more recent OOM events occur. Result set is not persisted across restarts of the database engine.
+
+Currently, this DMV is visible but not supported in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
 ### summarized_oom_snapshot extended event
 
@@ -70,7 +72,7 @@ The following example returns event data ordered by the most recent time for the
   
 ```sql  
 SELECT * FROM sys.dm_os_out_of_memory_events ORDER BY event_time DESC;  
-```  
+```
 
 ## Related content
 

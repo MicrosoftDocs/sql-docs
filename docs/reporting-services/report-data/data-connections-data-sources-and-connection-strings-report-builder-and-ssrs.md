@@ -61,7 +61,7 @@ ms.custom: updatefrequency5
 ="Data Source=" & Parameters!ServerName.Value & "; Initial Catalog=AdventureWorks"  
 ```  
   
- Data source expressions are processed at run time or when a report is previewed. The expression must be written in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Use the following guidelines when defining a data source expression:  
+ Data source expressions are processed at run time or when a report is previewed. The expression must be written in [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)]. Use the following guidelines when defining a data source expression:  
   
 -   Design the report using a static connection string. A static connection string refers to a connection string that is not set through an expression (for example, when you follow the steps for creating a report-specific or shared data source, you are defining a static connection string). Using a static connection string allows you to connect to the data source in Report Designer so that you can get the query results you need to create the report.  
   

@@ -1,6 +1,6 @@
 ---
-title: "Create, Delete, or Modify a Role (Management Studio)"
-description: "Create, Delete, or Modify a Role (Management Studio)"
+title: "Create, delete, or modify a role (Management Studio)"
+description: "Create, delete, or modify a role (Management Studio)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/07/2019
@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "roles [Reporting Services], deleting"
   - "roles [Reporting Services], modifying"
 ---
-# Role Definitions - Create, Delete, or Modify
+# Create, delete, or modify a role (Management Studio)
 
 Reporting Services provides predefined roles that define levels of access to the report server. Each user or group who requires access to the report server, is assigned a role that defines the allowed tasks. Roles are defined for the report server as a whole. You must be consistent in how a role is defined and used throughout all areas of the report server.
 
@@ -28,7 +28,7 @@ To create, modify, or delete roles, you can use [!INCLUDE[SQL Server Management 
 > [!NOTE]  
 >If the report server is configured for SharePoint integrated mode, and you connected to the SharePoint site that the report server is integrated with, you can view and modify the permission levels that control access to report server content and operations.
 
-## To create a role definition
+## Create a role definition
 
 1. In Object Explorer, expand a report server node.
 
@@ -38,15 +38,15 @@ To create, modify, or delete roles, you can use [!INCLUDE[SQL Server Management 
 
     Or, if you're creating a system-level role definition, right-click **System Roles** > **New System Role**.
 
-4. Type a unique name for the role. A name must contain at least one character. It can also include spaces and certain symbols, but not the following characters `[; : \ / @ & = + , $ / * < > | "]`.
+4. Enter a unique name for the role. A name must contain at least one character. It can also include spaces and certain symbols, but not the following characters `[; : \ / @ & = + , $ / * < > | "]`.
 
-5. Optionally type a description. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], this description is visible only on this page. Users who view this item through the web portal can see this description in that tool.
+5. Optionally enter a description. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], this description is visible only on this page. Users who view this item through the web portal can see this description in that tool.
 
 6. Select the tasks that members of this role can do.
 
-7. Select **Ok**.
+7. Select **OK**.
 
-### To delete or modify a role definition  
+### Delete or modify a role definition  
 
 1. In Object Explorer, expand a report server node.
 
@@ -66,8 +66,8 @@ To create, modify, or delete roles, you can use [!INCLUDE[SQL Server Management 
 
 - To modify a system role definition, right-click the item and select **Properties**. The General page of the **System Role Properties** dialog box is displayed. Select the tasks that members of this role can do, and select **OK** to apply the changes.
 
-## See also
+## Related content
 
- [Connect to a Report Server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
- [Create and Manage Role Assignments](../../reporting-services/security/create-and-manage-role-assignments.md)  
+ [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
+ [Create and manage role assignments](../../reporting-services/security/create-and-manage-role-assignments.md)  
  [Reporting Services in SQL Server Management Studio &#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)

@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "identities [SQL Server replication]"

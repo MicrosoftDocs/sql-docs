@@ -13,6 +13,7 @@ The following table identifies features enabled depending on license type:
 |[Connect to Azure](../connect.md) |Yes |Yes |Yes |
 |[SQL Server inventory](../overview.md#manage-your-sql-server-instances-at-scale-from-a-single-point-of-control)|Yes |Yes |Yes |
 |[Best practices assessment](../assess.md) |No |Yes |Yes |
+|[Migration assessment (preview)](../migration-assessment.md) |No |Yes |Yes |
 |[Detailed database inventory](../view-databases.md#inventory-databases) |No |Yes |Yes |
 |[Microsoft Entra ID authentication](../../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) |Yes |Yes |Yes |
 |[Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-sql-usage)|Yes |Yes |Yes |
@@ -23,5 +24,6 @@ The following table identifies features enabled depending on license type:
 |[Failover cluster instances (preview)](../support-for-fci.md) |Yes | Yes | Yes|
 |[Always On availability groups (preview)](../manage-availability-group.md) |Yes | Yes | Yes|
 |[Monitoring (preview)](../sql-monitoring.md) |No |Yes |Yes|
+|[Operate with least privilege (preview)](../configure-least-privilege.md)|Yes | Yes | Yes|
 
 <sup>1</sup> License only includes SQL Server instances that are Developer, Express, Web, or Evaluation Edition and instances using a Server/CAL license.

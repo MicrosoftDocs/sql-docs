@@ -56,7 +56,7 @@ Query Performance Insight is easy to use:
 > For Azure SQL Database to render the information in Query Performance Insight, Query Store needs to capture a couple hours of data. If the database has no activity or if Query Store was not active during a certain period, the charts will be empty when Query Performance Insight displays that time range. You can enable Query Store at any time if it's not running. For more information, see [Best practices with Query Store](/sql/relational-databases/performance/best-practice-with-the-query-store).
 >
 
-For database performance recommendations, select [Recommendations](database-advisor-implement-performance-recommendations.md) on the Query Performance Insight navigation blade.
+For database performance recommendations, select [Recommendations](database-advisor-implement-performance-recommendations.md) on the Query Performance Insight navigation pane.
 
 ![The Recommendations tab](./media/query-performance-insight-use/ia.png)
 
@@ -142,7 +142,7 @@ To view query details:
    > [!IMPORTANT]
    > Query Performance Insight does not capture any DDL queries. In some cases, it might not capture all ad hoc queries.
    > 
-   > In case your database is scope locked with a read-only lock, query details blade will not be able to load.
+   > In case your database is scope locked with a read-only lock, query details pane will not be able to load.
    >
 
 ## Review top queries per duration
@@ -209,7 +209,7 @@ If you want to understand more or apply the advisor's recommendation, select the
 
    ![Query annotation details](./media/query-performance-insight-use/annotation-details.png)
 
-In some cases, due to the zoom level, it's possible that annotations close to each other are collapsed into a single annotation. Query Performance Insight represents this as a group annotation icon. Selecting the group annotation icon opens a new blade that lists the annotations.
+In some cases, due to the zoom level, it's possible that annotations close to each other are collapsed into a single annotation. Query Performance Insight represents this as a group annotation icon. Selecting the group annotation icon opens a new pane that lists the annotations.
 
 Correlating queries and performance-tuning actions might help you to better understand your workload.
 
@@ -226,7 +226,7 @@ The first case happens when Query Store is in the read-only state and parameters
 
    ![Query Store details](./media/query-performance-insight-use/qds-off.png)
 
-The second case happens when Query Store is not enabled, or parameters are not set optimally. You can change the retention and capture policy, and also enable Query Store, by running the following commands provided from [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) or the Azure portal.
+The second case happens when Query Store is not enabled, or parameters are not set optimally. You can change the retention and capture policy, and also enable Query Store, by running the following T-SQL commands provided [the Azure portal query editor](query-editor.md), [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), [Azure Data Studio](/azure-data-studio/download-azure-data-studio), [sqlcmd](/sql/tools/sqlcmd-utility), or the client tool of your choice.
 
 ### Recommended retention and capture policy
 

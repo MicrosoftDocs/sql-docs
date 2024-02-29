@@ -1,8 +1,8 @@
 ---
 title: "What is a contained availability group?"
 description: An overview of the contained availability group feature of Always On availability groups within SQL Server.
-author: kfarlee
-ms.author: kfarlee
+author: MashaMSFT
+ms.author: mathoma
 ms.reviewer: mathoma, randolphwest
 ms.date: 01/19/2024
 ms.service: sql
@@ -150,6 +150,10 @@ To use transparent data encryption (TDE) with databases in a contained AG, manua
 Databases that use TDE rely on certificates in the `master` database to decrypt the Database Encryption Key (DEK). Without that certificate, [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] can't decrypt databases encrypted with TDE or bring them online. In a contained AG, [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] checks both `master` databases for the DMK, the `master` database for the instance, and the contained `master` database within the contained AG to decrypt the database. If it can't find the certificate in either location, then [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] is unable to bring the database online.
 
 To transfer the DMK from the `master` database of the instance, to the contained `master` database, see [Move a TDE protected database to another SQL Server](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md), primarily focusing on the portions where the DMK is transferred from the old server to the new one.
+
+### SSIS packages & maintenance plans
+
+Using SSIS packages, including maintenance plans, is not supported with contained availability groups.
 
 ## DDL changes
 

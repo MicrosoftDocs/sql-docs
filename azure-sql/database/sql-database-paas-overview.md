@@ -4,7 +4,7 @@ description: "Get an introduction to SQL Database: technical details and capabil
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 02/14/2023
+ms.date: 02/12/2024
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: overview
@@ -57,7 +57,7 @@ The [DTU-based purchasing model](service-tiers-dtu.md) offers two service tiers:
 The [vCore-based purchasing model](service-tiers-vcore.md) provides two different compute tiers for Azure SQL Database - the provisioned compute tier, and the serverless compute tier. The [DTU-based purchasing model](service-tiers-dtu.md) provides just the provisioned compute tier. 
 
 - **Provisioned compute tier**: provides a specific amount of compute resource that is continuously provisioned independent of workload activity, and bills for the amount of compute provisioned at a fixed price per hour. 
-- **[Serverless compute tier](serverless-tier-overview.md)**: automatically scales compute resources based on workload activity and bills for the amount of compute used, per second. The serverless compute tier is generally available in the General Purpose service tier, and is currently in preview in the Hyperscale service tier. 
+- **[Serverless compute tier](serverless-tier-overview.md)**: automatically scales compute resources based on workload activity and bills for the amount of compute used, per second. The serverless compute tier is generally available in the General Purpose service tier and in the Hyperscale service tier. 
 
 
 ## Deployment models
@@ -181,7 +181,7 @@ You can use [adaptive query processing](/sql/relational-databases/performance/in
 SQL Database provides a range of [built-in security and compliance features](/azure/active-directory/identity-protection/concept-identity-protection-security-overview) to help your application meet various security and compliance requirements.
 
 > [!IMPORTANT]
-> Microsoft has certified Azure SQL Database (all deployment options) against a number of compliance standards. For more information, see the [Microsoft Azure Trust Center](https://gallery.technet.microsoft.com/Overview-of-Azure-c1be3942), where you can find the most current list of SQL Database compliance certifications.
+> Microsoft has certified Azure SQL Database (all deployment options) against a number of compliance standards. For more information, see the [Microsoft Azure Trust Center](https://microsoft.com/trust-center/product-overview), where you can find the most current list of SQL Database compliance certifications.
 
 ### <a name="advance-threat-protection"></a> Advanced threat protection
 

@@ -34,34 +34,41 @@ To complete this article, you need SQL Server Management Studio (SSMS) and acces
 
 ## Connect to a dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics
 
-[!INCLUDE[ssms-connect-azure-ad](../../includes/ssms-connect-azure-ad.md)]
+[!INCLUDE [ssms-connect-azure-ad](../../includes/ssms-connect-azure-ad.md)]
 
 1. Start SQL Server Management Studio. The first time you run SSMS, the **Connect to Server** window opens. If it doesn't open, you can open it manually by selecting **Object Explorer** > **Connect** > **Database Engine**.
 
    :::image type="content" source="media/ssms-connect-query-azure-synapse-analytics/connect-object-explorer.png" alt-text="Screenshot of the connect link in Object Explorer.":::
 
-1. In the **Connect to Server** window, follow the list below:
+1. In the **Connect to Server** window, use the following list for guidance:
 
    | Setting | Suggested values | Description |
    | --- | --- | --- |
    | **Server type** | Database engine | For **Server type**, select **Database Engine** (usually the default option). |
    | **Server name** | The fully qualified server name | For **Server name**, enter the name of your dedicated SQL pool (formerly SQL DW) server name. |
-   | **Authentication** | SQL Server Authentication | Use **SQL Server Authentication** for to connect to dedicated SQL pool (formerly SQL DW). </br> </br> The **Windows Authentication** method isn't supported for Azure SQL. For more information, see [Azure SQL authentication](/azure/sql-database/sql-database-security-overview#access-management). |
+   | **Authentication** | SQL Server Authentication | Use **SQL Server Authentication** to connect to a dedicated SQL pool (formerly SQL DW).<br /><br />The **Windows Authentication** method isn't supported for Azure SQL. For more information, see [Azure SQL authentication](/azure/sql-database/sql-database-security-overview#access-management). |
    | **Login** | Server account user ID | The user ID from the server account used to create the server. |
    | **Password** | Server account password | The password from the server account used to create the server. |
+   | **Encryption** <sup>1</sup> | Encryption method | Select the encryption level for the connection. The default value is *Mandatory*. |
+   | **Trust server certificate** | Trust Server Certificate | Check this option to bypass server certificate validation. The default value is *False* (unchecked), which promotes better security using trusted certificates. |
+   | **Host Name in Certificate** | Host name of the server | The value provided in this option is used to specify a different, but expected, CN or SAN in the server certificate. |
 
-   :::image type="content" source="media/ssms-connect-query-azure-synapse-analytics/connect-to-azure-synapse-analytics-object-explorer.png" alt-text="Screenshot of the Server name field for Azure Synapse Analytics.":::
+   <sup>1</sup> [!INCLUDE [ssms-encryption](../includes/ssms-encryption.md)]
 
-1. After you've completed all the fields, select **Connect**.
+   :::image type="content" source="media/ssms-connect-query-azure-synapse-analytics/connect-to-azure-synapse-analytics-object-explorer-ssms20.png" alt-text="Screenshot of connection dialog for Azure Synapse Analytics.":::
+
+1. After you complete all the fields, select **Connect**.
 
    You can also modify other connection options by selecting **Options**. Examples of connection options are the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values for all the options.
 
-   If you haven't set up your firewall settings, a prompt appears to configure the firewall. Once you sign in, fill in your Azure account login information and continue to set the firewall rule. Then select **OK**. This prompt is a one time action. Once you configure the firewall, the firewall prompt shouldn't appear.
+   If your firewall isn't set up, a prompt appears to configure the firewall. Once you sign in, fill in your Azure account sign in information and continue to set the firewall rule. Then select **OK**. This prompt is a one time action. Once you configure the firewall, the firewall prompt shouldn't appear.
 
+   :::image type="content" source="media/ssms-connect-query-azure-sql/azure-sql-firewall-sign-in-3.png" alt-text="Screenshot of Azure SQL New Firewall Rule." lightbox="media/ssms-connect-query-azure-sql/azure-sql-firewall-sign-in-3.png":::
    :::image type="content" source="media/ssms-connect-query-azure-sql/azure-sql-firewall-sign-in-3.png" alt-text="Screenshot of Azure SQL New Firewall Rule." lightbox="media/ssms-connect-query-azure-sql/azure-sql-firewall-sign-in-3.png":::
 
 1. To verify that your dedicated SQL pool (formerly SQL DW) connection succeeded, expand and explore the objects within **Object Explorer** where the server name, the SQL Server version, and the username are displayed. These objects are different depending on the server type.
 
+   :::image type="content" source="media/ssms-connect-query-azure-synapse-analytics/connect-azure-synapse-analytics.png" alt-text="Screenshot of Connecting to an Azure Synapse Analytics database.":::
    :::image type="content" source="media/ssms-connect-query-azure-synapse-analytics/connect-azure-synapse-analytics.png" alt-text="Screenshot of Connecting to an Azure Synapse Analytics database.":::
 
 ## Troubleshoot connectivity issues
@@ -72,7 +79,7 @@ You can experience connection problems with dedicated SQL pool (formerly SQL DW)
 
 In this section, you create a table in your dedicated SQL pool (formerly SQL DW).
 
-1. In Object Explorer, right-click on your dedicated SQL pool (formerly SQL DW), select **New query**. 
+1. In Object Explorer, right-click on your dedicated SQL pool (formerly SQL DW), select **New query**.
 
 1. Paste the following T-SQL code snippet into the query window:
 
@@ -103,26 +110,24 @@ After the query is complete, the new Customers table is displayed in the list of
 
 Now let's insert some rows into the Customers table that you created. Paste the following T-SQL code snippet into the query window, and then select **Execute**:
 
-   ```sql
-   -- Insert rows into table 'Customers'
-   INSERT INTO dbo.Customers VALUES ( 1, N'Orlando', N'Australia', N'');
-   INSERT INTO dbo.Customers VALUES ( 2, N'Keith', N'India', N'keith0@adventure-works.com');
-   INSERT INTO dbo.Customers VALUES (3, N'Donna', N'Germany', N'donna0@adventure-works.com');   
-   INSERT INTO dbo.Customers VALUES (4, N'Janet', N'United States', N'janet1@adventure-works.com');
-   ```
+```sql
+-- Insert rows into table 'Customers'
+INSERT INTO dbo.Customers VALUES ( 1, N'Orlando', N'Australia', N'');
+INSERT INTO dbo.Customers VALUES ( 2, N'Keith', N'India', N'keith0@adventure-works.com');
+INSERT INTO dbo.Customers VALUES (3, N'Donna', N'Germany', N'donna0@adventure-works.com');
+INSERT INTO dbo.Customers VALUES (4, N'Janet', N'United States', N'janet1@adventure-works.com');
+```
 
 ## Query the table and view the results
 
-The results of a query are visible beneath the query text window. To query the `Customers` table and view the rows that were inserted, follow these steps:
-
-Paste the following T-SQL code snippet into the query window, and then select **Execute**:
+The results of a query are visible beneath the query text window. To query the `Customers` table and view the rows that were inserted, paste the following T-SQL code snippet into the query window, and then select **Execute**:
 
 ```sql
 -- Select rows from table 'Customers'
 SELECT * FROM dbo.Customers;
 ```
 
-The results of the query are displayed under the area where the text was entered.
+The query results are displayed under the area where the text was entered.
 
 :::image type="content" source="media/ssms-connect-query-azure-synapse-analytics/query-results.png" alt-text="Screenshot of the results list.":::
 
@@ -138,8 +143,8 @@ You can also modify the way results are presented by selecting one of the follow
 
 You can find information about the connection properties under the results of your query. After you run the previously mentioned query in the preceding step, review the connection properties at the bottom of the query window.
 
-- You can determine which server and database you're connected to, and the username that you use.
-- You can also view the query duration and the number of rows that are returned by the previously executed query.
+- You can determine which server and database you're connected to, and your username.
+- You can also view the query duration and the number of rows returned by the previously executed query.
 
   :::image type="content" source="media/ssms-connect-query-azure-synapse-analytics/connection-properties.png" alt-text="Screenshot of the connection properties." lightbox="media/ssms-connect-query-azure-synapse-analytics/connection-properties.png":::
 

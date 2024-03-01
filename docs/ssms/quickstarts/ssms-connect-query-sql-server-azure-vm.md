@@ -40,9 +40,9 @@ The following steps show how to create an optional DNS label for your Azure VM a
 
 ### Configure a DNS Label for the public IP address
 
-To connect to the SQL Server Database Engine from the Internet, consider creating a DNS Label for your public IP address. You can join by IP address, but the DNS Label creates an A Record that is easier to identify and abstracts the underlying public IP address.
+To connect to the SQL Server Database Engine from the Internet, consider creating a DNS Label for your public IP address. You can join by IP address, but the DNS Label creates an A record that is easier to identify and abstracts the underlying public IP address.
 
-> [!NOTE]
+> [!NOTE]  
 > DNS Labels aren't required if you plan to only connect to the SQL Server instance within the same Virtual Network or only locally.
 
 1. Create a DNS Label by selecting **Virtual machines** in the portal. Select your SQL Server VM to bring up its properties.
@@ -70,14 +70,19 @@ To connect to the SQL Server Database Engine from the Internet, consider creatin
    | Setting | Suggested values | Description |
    | --- | --- | --- |
    | **Server type** | Database engine | For **Server type**, select **Database Engine** (usually the default option). |
-   | **Server name** | The fully qualified server name | For **Server name**, enter the name of your SQL Server VM. You can also use the SQL Server VM IP address to connect. | 
-   | **Authentication** | Azure Active Directory - Managed Identity | Use **managed identity authentication** to connect to SQL Server VM. Using managed identity authentication eliminates the need for developer-managed credentials. Use SQL Server Authentication only when necessary.</br> </br> **Windows Authentication** isn't supported for SQL Server VM. For more information, see [Azure SQL authentication](/azure/sql-database/sql-database-security-overview#access-management).|
-   | **Login** | Server account user ID | The user ID from the server account used to create the server. A login is required when using **SQL Server Authentication**. |
+   | **Server name** | The fully qualified server name | For **Server name**, enter the name of your SQL Server VM. You can also use the SQL Server VM IP address to connect. |
+   | **Authentication** | Microsoft Entra - Managed Identity | Use **managed identity authentication** to connect to SQL Server VM. Using managed identity authentication eliminates the need for developer-managed credentials. Use SQL Server Authentication only when necessary.<br /><br />**Windows Authentication** isn't supported for SQL Server VM. For more information, see [Azure SQL authentication](/azure/sql-database/sql-database-security-overview#access-management). |
+   | **Login** | Server account user ID | The user ID from the server account used to create the server. A sign in is required when using **SQL Server Authentication**. |
    | **Password** | Server account password | The password from the server account used to create the server. A password is required when using **SQL Server Authentication**. |
+   | **Encryption** <sup>1</sup> | Encryption method | Select the encryption level for the connection. The default value is *Mandatory*. |
+   | **Trust server certificate** | Trust Server Certificate | Check this option to bypass server certificate validation. The default value is *False* (unchecked), which promotes better security using trusted certificates. |
+   | **Host Name in Certificate** | Host name of the server | The value provided in this option is used to specify a different, but expected, CN or SAN in the server certificate. |
 
-   :::image type="content" source="media/ssms-connect-query-sql-server-azure-vm/connect-to-azure-sql-vm-object-explorer.png" alt-text="Screenshot of the server name field for SQL Virtual Machines.":::
+   <sup>1</sup> [!INCLUDE [ssms-encryption](../includes/ssms-encryption.md)]
 
-1. After you've completed all the fields, select **Connect**.
+   :::image type="content" source="media/ssms-connect-query-sql-server-azure-vm/connect-to-azure-sql-vm-object-explorer-ssms20.png" alt-text="Screenshot of connection dialog for SQL virtual machines.":::
+
+1. After you complete all the fields, select **Connect**.
 
    You can also modify additional connection options by selecting **Options**. Examples of connection options are the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values for all the options.
 
@@ -92,23 +97,23 @@ Although the portal provides options to configure connectivity automatically, kn
 The following table lists the requirements to connect to SQL Server on Azure VM.
 
 | Requirement | Description |
-|---|---|
-| [Enable SQL Server authentication mode](../../database-engine/configure-windows/change-server-authentication-mode.md#use-ssms) | SQL Server authentication is needed to connect to the VM remotely unless you have configured Active Directory on a virtual network. |
-| [Create a SQL login](../../relational-databases/security/authentication-access/create-a-login.md) | If you're using SQL authentication, you need a SQL login with a user name and password that also has permissions to your target database. |
+| --- | --- |
+| [Enable SQL Server authentication mode](../../database-engine/configure-windows/change-server-authentication-mode.md#use-ssms) | SQL Server authentication is needed to connect to the VM remotely unless you configured Active Directory on a virtual network. |
+| [Create a Login](../../relational-databases/security/authentication-access/create-a-login.md) | If you're using SQL authentication, you need a SQL login with a user name and password that also has permissions to your target database. |
 | Enable TCP/IP protocol | SQL Server must allow connections over TCP. |
-| [Enable firewall rule for the SQL Server port](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) | The firewall on the VM must allow inbound traffic on the SQL Server port (default 1433). |
+| [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) | The firewall on the VM must allow inbound traffic on the SQL Server port (default 1433). |
 | [Create a network security group rule for TCP 1433](/azure/virtual-network/manage-network-security-group#create-a-security-rule) | Allow the VM to receive traffic on the SQL Server port (default 1433) if you want to connect over the internet. This isn't required for local and virtual-network-only connections. This step is only required in the Azure portal. |
 
-> [!TIP]
+> [!TIP]  
 > The steps in the preceding table are done for you when you configure connectivity in the portal. Use these steps only to confirm your configuration or to set up connectivity manually for SQL Server.
 
 ## Create a database
 
-Create a database named TutorialDB by following the below steps:
+Create a database named `TutorialDB` by following the below steps:
 
 1. Right-click your server instance in Object Explorer, and then select **New Query**:
 
-   :::image type="content" source="media/ssms-connect-query-sql-server-azure-vm/new-query.png" alt-text="The New Query link":::
+   :::image type="content" source="media/ssms-connect-query-sql-server-azure-vm/new-query.png" alt-text="Screenshot of the new query link.":::
 
 1. Paste the following T-SQL code snippet into the query window:
 
@@ -135,7 +140,7 @@ Create a database named TutorialDB by following the below steps:
 
 In this section, you create a table in the newly created `TutorialDB` database. Because the query editor is still in the context of the `master` database, switch the connection context to the `TutorialDB` database by doing the following steps:
 
-1. In the database drop-down list, select the database that you want, as shown here:
+1. In the database dropdown list, select the database that you want, as shown here:
 
    :::image type="content" source="media/ssms-connect-query-sql-server-azure-vm/change-db.png" alt-text="Screenshot of change database.":::
 
@@ -214,7 +219,7 @@ The results of a query are visible beneath the query text window. To query the `
 
 You can find information about the connection properties under the results of your query. After you run the previously mentioned query in the preceding step, review the connection properties at the bottom of the query window.
 
-- You can determine which server and database you're connected to and your username.
+- You can determine which server and database you're connected to, and your username.
 - You can also view the query duration and the number of rows the previously executed query returns.
 
   :::image type="content" source="media/ssms-connect-query-sql-server-azure-vm/connection-properties.png" alt-text="Screenshot of connection properties." lightbox="media/ssms-connect-query-sql-server-azure-vm/connection-properties.png":::

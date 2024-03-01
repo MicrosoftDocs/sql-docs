@@ -277,10 +277,12 @@
       href: database/free-offer.md
     - name: Try Azure SQL Database free FAQ
       href: database/free-offer-faq.yml
-    - name: Copilot for Azure SQL
+    - name: Copilot in SQL Database
       href: copilot/copilot-azure-sql-overview.md
-    - name: Copilot for Azure SQL FAQ
+    - name: Copilot in SQL Database FAQ
       href: copilot/copilot-azure-sql-faq.yml
+    - name: Natural lanugage to SQL
+      href: copilot/query-editor-natural-language-to-sql-copilot.md
     - name: Intelligent applications and AI
       href: database/ai-artificial-intelligence-intelligent-applications.md      
   - name: Quickstarts

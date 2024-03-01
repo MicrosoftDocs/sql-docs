@@ -18,6 +18,10 @@ See [Monitor Azure SQL Database](monitoring-sql-database-azure-monitor.md) for d
 
 [!INCLUDE [horz-monitor-ref-metrics-intro](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-metrics-intro.md)]
 
+For a list of commonly-used metrics for Azure SQL Database, see ### Use metrics to monitor databases and elastic pools
+
+The following table describes commonly used metrics in Azure SQL Database.
+
 ### Supported metrics for Microsoft.Sql/servers/databases
 The following table lists the metrics available for the Microsoft.Sql/servers/databases resource type.
 [!INCLUDE [horz-monitor-ref-metrics-tableheader](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-metrics-tableheader.md)]
@@ -57,3 +61,4 @@ The following table lists the metrics available for the Microsoft.Sql/servers/jo
 
 - See [Monitor SQL Database](monitoring-sql-database-azure-monitor.md) for a description of monitoring Azure SQL Database.
 - See [Monitor Azure resources with Azure Monitor](/azure/azure-monitor/essentials/monitor-azure-resource) for details on monitoring Azure resources.
+- Review [the Azure Monitor metrics and alerts](monitoring-metrics-alerts.md) including [Recommended alert rules](monitoring-metrics-alerts.md#recommended-alert-rules).

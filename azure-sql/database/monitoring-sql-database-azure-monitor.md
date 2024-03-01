@@ -18,6 +18,9 @@ The SQL Server database engine has its own monitoring and diagnostic capabilitie
 
 For a detailed discussion of all monitoring and performance aspects of Azure SQL Database and Azure SQL Managed Instance, see [Monitor and performance tuning in Azure SQL Database and Azure SQL Managed Instance](monitor-tune-overview.md).
 
+> [!IMPORTANT]
+> For a set of recommended alert rules, see [Monitor Azure SQL Database with Azure Monitor metrics and alerts](monitoring-metrics-alerts.md).
+
 [!INCLUDE [horz-monitor-insights](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-insights.md)]
 
 ### Azure Monitor SQL Insights (preview)
@@ -37,11 +40,9 @@ Intelligent Insights for Azure SQL Database and Azure SQL Managed Instance is di
 
 For more information, see [Intelligent Insights using AI to monitor and troubleshoot database performance (preview)](intelligent-insights-overview.md) and [Use the Intelligent Insights performance diagnostics log](intelligent-insights-use-diagnostics-log.md).
 
-### Other Azure SQL Database insights
+### Query Performance Insight
 
 - Query Performance Insight uses the SQL Server Query Store to provide intelligent query analysis and insight on query plan choice and performance for single and pooled databases. For more information, see [Query Performance Insight for Azure SQL Database](query-performance-insight-use.md).
-
-- Azure SQL Analytics is an integration with Azure Monitor that is no longer in active development. For more information, see [Monitor Azure SQL Database using Azure SQL Analytics (preview)](/previous-versions/azure/azure-monitor/insights/azure-sql).
 
 [!INCLUDE [horz-monitor-resource-types](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-resource-types.md)]
 For more information about the resource types for SQL Database, see [SQL Database monitoring data reference](monitoring-sql-database-azure-monitor-reference.md).
@@ -49,7 +50,17 @@ For more information about the resource types for SQL Database, see [SQL Databas
 [!INCLUDE [horz-monitor-data-storage](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-data-storage.md)]
 
 [!INCLUDE [horz-monitor-platform-metrics](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-platform-metrics.md)]
-For a list of available metrics for SQL Database, see [SQL Database monitoring data reference](monitoring-sql-database-azure-monitor-reference.md#metrics).
+## Azure SQL Database metrics
+
+You can use metrics to monitor database and elastic pool resource consumption and health. For example, you can:
+
+- Right-size the database or elastic pool to your application workload
+- Detect a gradual increase in resource consumption, and proactively scale up the database or elastic pool
+- Detect and troubleshoot a performance problem
+
+For a list and descriptions of commonly used metrics in Azure SQL Database, see [Azure SQL Database metrics](monitoring-metrics-alerts.md#use-metrics-to-monitor-databases-and-elastic-pools).
+
+For tables of all available metrics for SQL Database, see [SQL Database monitoring data reference](monitoring-sql-database-azure-monitor-reference.md#metrics).
 
 [!INCLUDE [horz-monitor-resource-logs](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-resource-logs.md)]
 

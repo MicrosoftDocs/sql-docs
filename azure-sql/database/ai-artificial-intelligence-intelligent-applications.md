@@ -3,8 +3,8 @@ title: Intelligent applications
 description: "Use AI options such as OpenAI and vectors to build intelligent applications with Azure SQL Database."
 author: damauri
 ms.author: damauri
-ms.reviewer: damauri, randolphwest
-ms.date: 10/30/2023
+ms.reviewer: damauri, randolphwest, josephsack
+ms.date: 3/13/2024
 ms.service: sql-database
 ms.topic: conceptual
 ---
@@ -25,11 +25,11 @@ The following links provide sample code of various Azure SQL Database options to
 
 | AI Option | Description |
 | --- | --- |
-| **[Copilot for Azure SQL](../copilot/copilot-azure-sql-overview.md)** | Manage and develop with intuitive assistance and natural language to SQL processing. |
 | **[Azure OpenAI](#azure-openai)** | Generate embeddings for RAG and integrate with any model supported by Azure OpenAI. |
 | **[Vectors](#vectors)** | Learn how to store and query vectors in Azure SQL Database. |
 | **[Azure AI Search](#azure-ai-search)** | Use Azure SQL Database together with Azure AI Search to train LLM on your data. |
 | **[Intelligent applications](#intelligent-applications)** | Learn how to create an end-to-end solution using a common pattern that can be replicated in any scenario. |
+| **[Copilot for Azure SQL Database (preview)](../copilot/copilot-azure-sql-overview.md)** | Manage and develop with intuitive assistance and natural language to SQL processing. |
 
 ## Key concepts
 
@@ -50,7 +50,7 @@ The RAG pattern, with prompt engineering, serves the purpose of enhancing respon
 
 A prompt refers to specific text or information that serves as an instruction to an LLM, or as contextual data that the LLM can build upon. A prompt can take various forms, such as a question, a statement, or even a code snippet.
 
-The following is a list of prompts that can be used to generate a response from an LLM:
+Sample prompts that can be used to generate a response from an LLM:
 
 - **Instructions**: provide directives to the LLM
 - **Primary content**: gives information to the LLM for processing
@@ -83,19 +83,6 @@ Vector search refers to the process of finding all vectors in a dataset that are
 Consider a scenario where you run a query over millions of document to find the most similar documents in your data. You can create embeddings for your data and query documents using Azure OpenAI. Then, you can perform a vector search to find the most similar documents from your dataset. However, performing a vector search across a few examples is trivial. Performing this same search across thousands, or millions, of data points becomes challenging. There are also trade-offs between exhaustive search and approximate nearest neighbor (ANN) search methods including latency, throughput, accuracy, and cost, all of which depends on the requirements of your application.
 
 Since Azure SQL Database embeddings can be efficiently stored and queried using to columnstore index support, allowing exact nearest neighbor search with great performance, you don't have to decide between accuracy and speed: you can have both. Storing vector embeddings alongside the data in an integrated solution minimizes the need to manage data synchronization and accelerates your time-to-market for AI application development.
-
-## Microsoft Copilot for Azure SQL
-
-
-
-
-
-
-
-
-
-
-
 
 ## Azure OpenAI
 
@@ -133,7 +120,7 @@ Although Azure SQL Database doesn't have a native **vector** type, a vector is n
 
 Azure SQL Database also supports columnstore indexes and [batch mode execution](/sql/relational-databases/query-processing-architecture-guide#batch-mode-execution). A vector-based approach is used for batch mode processing, which means that each column in a batch has its own memory location where it's stored as a vector. This allows for faster and more efficient processing of data in batches.
 
-The following is example of how a vector can be stored in SQL Database:
+The following example shows how a vector can be stored in SQL Database:
 
 ```sql
 CREATE TABLE [dbo].[wikipedia_articles_embeddings_titles_vector]
@@ -176,9 +163,30 @@ LangChain is a well-known framework for developing applications powered by langu
 
 For an example that shows how LangChain can be used to create a Chatbot on your own data, see [Building your own DB Copilot for Azure SQL with Azure OpenAI GPT-4](https://devblogs.microsoft.com/azure-sql/building-your-own-db-copilot-for-azure-sql-with-azure-openai-gpt-4/).
 
+## Copilot for Azure SQL Database (preview)
+
+[Copilot in Azure SQL Database (preview)](../copilot/copilot-azure-sql-overview.md) is a set of AI-assisted experiences designed to streamline the design, operation, optimization, and health of Azure SQL Database-driven applications. Copilot can improve productivity by offering natural language to SQL conversion and self-help for database administration.
+
+Copilot provides relevant answers to user questions, simplifying database management by leveraging database context, documentation, dynamic management views, Query Store, and other knowledge sources. For example:
+
+- Database administrators can independently manage databases and resolve issues, or learn more about the performance and capabilities of your database.
+- Developers can ask questions about their data as they would in text or conversation to generate a T-SQL query. Developers can also learn to write queries faster through detailed explanations of the generated query.
+
+> [!NOTE]
+> Copilot in Azure SQL Database is currently in a limited public preview for a limited number of early adopters. To sign up for this program, visit [Request Access to Copilot in Azure SQL Database: Limited Access Public Preview](https://aka.ms/sqlcopilot-signup).
+
+The limited public preview of Copilot for Azure SQL Database includes two Azure portal experiences:
+
+| Portal location | Experiences |
+| :-- |:-- |
+| **Azure Portal Query Editor** | [Natural language to SQL](../copilot/copilot-azure-sql-overview.md?view=azuresql-db&preserve-view=true#natural-language-to-sql-query): This experience within the [Azure portal query editor for Azure SQL Database](../database/query-editor.md) translates natural language queries into SQL, making database interactions more intuitive. For a tutorial and examples of natural language to SQL capabilities, see [Natural language to SQL in the Azure portal Query editor (preview)](../copilot/query-editor-natural-language-to-sql-copilot.md). |
+| **Microsoft Copilot for Azure** | [Azure Copilot integration](../copilot/copilot-azure-sql-overview.md?view=azuresql-db&preserve-view=true#azure-copilot-integration): This experience adds Azure SQL skills into [Microsoft Copilot for Azure](/azure/copilot/overview), providing customers with self-guided assistance, empowering them to manage their databases and solve issues independently.|
+
+For more information, see [Frequently asked questions about Copilot in Microsoft Azure SQL (preview)](../copilot/copilot-azure-sql-faq.yml).
+
 ## Related content
 
 - [Create and deploy an Azure OpenAI Service resource](/azure/ai-services/openai/how-to/create-resource?pivots=web-portal)
 - [Embeddings models](/azure/ai-services/openai/concepts/models#embeddings-models)
-- [Frequently asked questions about Copilot in Microsoft Azure SQL (preview)](../copilot/copilot-azure-sql-faq.yml)
+- [Frequently asked questions about Copilot in Azure SQL Database (preview)](../copilot/copilot-azure-sql-faq.yml)
 - [Responsible AI FAQ for Microsoft Copilot for Azure (preview)](/azure/copilot/responsible-ai-faq)

@@ -41,9 +41,9 @@ This experience within the [Azure portal query editor for Azure SQL Database](..
 
 This integration means that Copilot can answer questions with prompts like: 
 
- - **"Which agents have listed more than two properties for sale?"**
- - **"Tell me the rank of each agent by property sales and show name, total sales, and rank"**
- - Even advanced scenarios such as **"Show me a pivot summary table that displays the number of properties sold in each year from 2020 to 2023"**
+ - `"Which agents have listed more than two properties for sale?"`
+ - `"Tell me the rank of each agent by property sales and show name, total sales, and rank"`
+ - Even advanced scenarios such as `"Show me a pivot summary table that displays the number of properties sold in each year from 2020 to 2023"`
 
 For a tutorial and examples of natural language to SQL capabilities of the Copilot in Azure SQL Database, see [Natural language to SQL in the Azure portal Query editor (preview)](../copilot/query-editor-natural-language-to-sql-copilot.md).
 
@@ -51,9 +51,9 @@ For a tutorial and examples of natural language to SQL capabilities of the Copil
 
 You can ask and receive helpful, context-rich suggestions from [Microsoft Copilot for Azure](/azure/copilot/overview) within the Azure portal. Get answers with prompts like: 
 
-- **"What are the active connections running right now?"**
-- **"What are the top high CPU queries run in the last week"**
-- **"My database is slow."**
+- `What are the active connections running right now?`
+- `What are the top high CPU queries run in the last week`
+- `My database is slow.`
 
 > [!WARNING]
 > Copilot in Azure SQL Database is a preview set of experiences that are powered by large language models (LLMs). Output produced by Copilot might contain inaccuracies, biases, or other unintended content. This occurs because the model powering Copilot in Azure SQL Database was trained on information from the internet and other sources. As with any generative AI model, humans should review the output produced by Copilot before use.
@@ -64,35 +64,35 @@ Here are a few examples of sample prompts you can provide today for different ca
 
 | Topic | Example prompts |
 | --- | --- |
-| Active user connections | **What are the active connections of the databases?** |
-| Automatic tuning options | **What is my automatic tuning configuration?** |
-| Blocking sessions | **I want to find blocking sessions.** |
-| Database basic information | **What is the logical server name for this database?** |
-| Database compatibility level | **How to view and change database compatibility level?** |
-| Database permissions | **What is the list of database permissions that are granted?** |
-| Database size | **What's the database size?** |
-| Database tables | **Provide a list of tables in my database.** |
-| Deadlocks | **Have any deadlocks happened recently?** |
-| Fragmented index | **Which of my indexes are fragmented?** |
-| Investigate query performance issues | **My database is slow? Why is my query slow?** |
-| Missing index | **Any missing index suggestions for improving query performance?** |
-| Query store | **Which queries have forced plans?</br> Which queries have high execution time variation? </br>Show me the longest running queries over the last 24 hours.**  |
-| Resource usage | **I want to find my database resource usage.** |
-| Troubleshoot connection issues | **My SQL database connection dropped. What happened?** |
-| Troubleshoot high CPU | **Why is my CPU usage high?** |
-| Troubleshoot Query Store | **Why is Query Store in read only mode?** |
-| Troubleshoot query timeouts | **I just had a query timeout.**|
-| Wait types | **What are the wait type stats for my database?** |
+| Active user connections | `What are the active connections of the databases?` |
+| Automatic tuning options | `What is my automatic tuning configuration?` |
+| Blocking sessions | `I want to find blocking sessions.` |
+| Database basic information | `What is the logical server name for this database?` |
+| Database compatibility level | `How to view and change database compatibility level?` |
+| Database permissions | `What is the list of database permissions that are granted?` |
+| Database size | `What's the database size?` |
+| Database tables | `Provide a list of tables in my database.` |
+| Deadlocks | `Have any deadlocks happened recently?` |
+| Fragmented index | `Which of my indexes are fragmented?` |
+| Investigate query performance issues | `My database is slow? Why is my query slow?` |
+| Missing index | `Any missing index suggestions for improving query performance?` |
+| Query store | `Which queries have forced plans?</br> Which queries have high execution time variation? </br>Show me the longest running queries over the last 24 hours.`  |
+| Resource usage | `I want to find my database resource usage.` |
+| Troubleshoot connection issues | `My SQL database connection dropped. What happened?` |
+| Troubleshoot high CPU | `Why is my CPU usage high?` |
+| Troubleshoot Query Store | `Why is Query Store in read only mode?` |
+| Troubleshoot query timeouts | `I just had a query timeout.`|
+| Wait types | `What are the wait type stats for my database?` |
 
 ## Examples
 
-1. When you're working with a slow Azure SQL Database, you could provide the prompt **"My database is slow"**.
+1. When you're working with a slow Azure SQL Database, you could provide the prompt `"My database is slow"`.
 
    Microsoft Copilot for Azure (preview) starts looking at your database based on your context in the Azure portal. After the check, Copilot will detail specific areas that might be contributing to the issue. In this example, there was a specific query driving high CPU utilization:
 
    :::image type="content" source="media/copilot-azure-sql-overview/slow-database.png" alt-text="Screenshot showing the query prompt and generated sample query about high CPU utilization." lightbox="media/copilot-azure-sql-overview/slow-database.png":::
 
-1. You can continue the conversation and investigation with a prompt of **"How can I tune that high CPU query?"**
+1. You can continue the conversation and investigation with a prompt of `"How can I tune that high CPU query?"`
 
    Copilot understands that this prompt refers to the query identified earlier, and provides a new index suggestion:
 

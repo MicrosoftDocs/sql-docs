@@ -14,7 +14,7 @@ monikerRange: "=azuresql||=azuresql-db"
 # Natural language to SQL in the Azure portal Query editor (preview)
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-Part of the [Copilot in Azure SQL Database (preview)](copilot-azure-sql-overview.md), the [Natural language to SQL](copilot-azure-sql-overview.md?view=azuresql-db&preserve-view=true#natural-language-to-sql-query) experience within the [Azure portal query editor](../database/query-editor.md) translates natural language queries into SQL, making database interactions more intuitive. 
+Part of the [Copilot in Azure SQL Database (preview)](copilot-azure-sql-overview.md), the [Natural language to SQL](copilot-azure-sql-overview.md?view=azuresql-db&preserve-view=true#natural-language-to-sql-query) experience within the [Azure portal query editor](../database/query-editor.md) translates natural language queries into SQL, making database interactions more intuitive.
 
 In this article, learn how to write natural language prompts to generate T-SQL queries using Copilot for Azure SQL Database in the Azure portal Query editor.
 
@@ -30,9 +30,9 @@ Copilot in Azure SQL Database utilizes table and view names, column names, prima
 
 This integration means that Copilot can answer questions with prompts like:
 
- - **"Which agents have listed more than two properties for sale?"**
- - **"Tell me the rank of each agent by property sales and show name, total sales, and rank"**
- - Even advanced scenarios such as **"Show me a pivot summary table that displays the number of properties sold in each year from 2020 to 2023"**
+- `Which agents have listed more than two properties for sale?`
+- `Tell me the rank of each agent by property sales and show name, total sales, and rank`
+- Even advanced scenarios such as `Show me a pivot summary table that displays the number of properties sold in each year from 2020 to 2023`
 
 ## Prerequisites
 
@@ -82,13 +82,15 @@ Here are some tips for writing effective prompts.
 
 - Avoid ambiguous or overly complex language in your prompts. Simplify the question while maintaining its clarity. This editing ensures Copilot in Azure SQL Database can effectively translate it into a meaningful Transact-SQL query that retrieves the desired data from the associated tables and views.
 
+- Currently, natural language to SQL supports English language to T-SQL.
+
 - The following example prompts are clear, specific, and tailored to the properties of your schema and database, making it easier for Copilot to generate accurate Transact-SQL queries:
-  - **Show me all properties that sold last year**
-  - **Count all the products, group by each category**
-  - **Show all agents who sell properties in California**
-  - **Show agents who have listed more than two properties for sale**
-  - **Show the rank of each agent by property sales and show name, total sales, and rank**
-  - **Show me a pivot summary table that displays the number of properties sold in each year from 2020 to 2023**
+  - `Show me all properties that sold last year`
+  - `Count all the products, group by each category`
+  - `Show all agents who sell properties in California`
+  - `Show agents who have listed more than two properties for sale`
+  - `Show the rank of each agent by property sales and show name, total sales, and rank`
+  - `Show me a pivot summary table that displays the number of properties sold in each year from 2020 to 2023`
 
 ## Related content
 

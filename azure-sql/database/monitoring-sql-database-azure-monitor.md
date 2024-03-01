@@ -1,7 +1,7 @@
 ---
 title: Monitor Azure SQL Database
 description: Start here to learn how to monitor Azure SQL Database.
-ms.date: 02/28/2024
+ms.date: 03/01/2024
 ms.custom: horz-monitor
 ms.topic: conceptual
 author: WilliamDAssafMSFT
@@ -42,7 +42,7 @@ For more information, see [Intelligent Insights using AI to monitor and troubles
 
 ### Query Performance Insight
 
-- Query Performance Insight uses the SQL Server Query Store to provide intelligent query analysis and insight on query plan choice and performance for single and pooled databases. For more information, see [Query Performance Insight for Azure SQL Database](query-performance-insight-use.md).
+Query Performance Insight uses the SQL Server Query Store to provide intelligent query analysis and insight on query plan choice and performance for single and pooled databases. For more information, see [Query Performance Insight for Azure SQL Database](query-performance-insight-use.md).
 
 [!INCLUDE [horz-monitor-resource-types](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-resource-types.md)]
 For more information about the resource types for SQL Database, see [SQL Database monitoring data reference](monitoring-sql-database-azure-monitor-reference.md).

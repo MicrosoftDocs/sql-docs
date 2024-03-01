@@ -31,7 +31,7 @@ Copilot in Azure SQL Database provides:
 
 - [Natural language to SQL](#natural-language-to-sql-query): This experience within the [Azure portal query editor for Azure SQL Database](../database/query-editor.md) translates natural language queries into SQL, making database interactions more intuitive.
 
-- [Azure Copilot integration](#azure-copilot-integration): This experience adds Azure SQL Database skills into [Microsoft Copilot for Azure](/azure/copilot/overview), customers with self-guided assistance, empowering them to manage their databases and solve issues independently.
+- [Azure Copilot integration](#microsoft-copilot-for-azure-enhanced-scenarios): This experience adds Azure SQL Database skills into [Microsoft Copilot for Azure](/azure/copilot/overview), customers with self-guided assistance, empowering them to manage their databases and solve issues independently.
 
 Copilot in Azure SQL Database integrates data and formulate applicable responses using public documentation, dynamic management views, catalog views, and Azure supportability diagnostics.
 
@@ -90,13 +90,13 @@ Here are a few examples of sample prompts you can provide today for different ca
 
    Microsoft Copilot for Azure (preview) starts looking at your database based on your context in the Azure portal. After the check, Copilot will detail specific areas that might be contributing to the issue. In this example, there was a specific query driving high CPU utilization:
 
-   :::image type="content" source="media/copilot-azure-sql-overview/slow-database.png" alt-text="Screenshot showing the Launch inline copilot button." lightbox="media/copilot-azure-sql-overview/slow-database.png":::
+   :::image type="content" source="media/copilot-azure-sql-overview/slow-database.png" alt-text="Screenshot showing the query prompt and generated sample query about high CPU utilization." lightbox="media/copilot-azure-sql-overview/slow-database.png":::
 
 1. You can continue the conversation and investigation with a prompt of **"How can I tune that high CPU query?"**
 
    Copilot understands that this prompt refers to the query identified earlier, and provides a new index suggestion:
 
-   :::image type="content" source="media/copilot-azure-sql-overview/high-cpu-query.png" alt-text="Screenshot showing the Launch inline copilot button." lightbox="media/copilot-azure-sql-overview/high-cpu-query.png":::
+   :::image type="content" source="media/copilot-azure-sql-overview/high-cpu-query.png" alt-text="Screenshot showing a second query prompt in the conversation and generated sample query about high CPU utilization." lightbox="media/copilot-azure-sql-overview/high-cpu-query.png":::
 
 ## Related content
 

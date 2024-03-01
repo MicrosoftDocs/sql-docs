@@ -5,7 +5,7 @@ description: Learn about point-in-time restore, which enables you to roll back a
 author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: wiassaf, mathoma, danil
-ms.date: 08/21/2023
+ms.date: 03/01/2024
 ms.service: sql-database
 ms.subservice: backup-restore
 ms.topic: how-to
@@ -83,7 +83,7 @@ When the restore is complete, it creates a new database on the same server as th
 You generally restore a database to an earlier point for recovery purposes. You can treat the restored database as a replacement for the original database or use it as a data source to update the original database.
 
 > [!IMPORTANT]
-> - You can perform a point-in-time restore of a database to the same server. Cross-server, cross-subscription and cross-geo point-in-time restore is not currently supported. To restore a database to a different region using geo-replicated backups see [Geo-restore](#geo-restore).
+> - You can perform a point-in-time restore of a database to the same server. Cross-server, Cross-subscription, and Cross-geo point-in-time restore is supported. [Learn more](/azure/backup/backup-support-matrix#cross-region-restore). To restore a database to a different region using geo-replicated backups see [Geo-restore](#geo-restore).
 > - You can't perform a point-in-time restore on a geo-secondary database. You can do so only on a primary database.
 > - The `BackupFrequency` parameter isn't supported for Hyperscale databases. 
 > - Database restore operations are resource-intensive and may require a service tier of S3 or greater for the restoring (target) database. Once restore completes, the database or elastic pool may be scaled down, if required.

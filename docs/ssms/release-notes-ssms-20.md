@@ -19,7 +19,7 @@ This article details updates, improvements, and bug fixes for the current and pr
 
 ## Current SSMS release
 
-:::image type="icon" source="media/download-icon.png" border="false"::: **[Download SQL Server Management Studio (SSMS) 20 Preview 1](https://go.microsoft.com/fwlink/?linkid=2262204)**
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server Management Studio (SSMS) 20 Preview 1](https://go.microsoft.com/fwlink/?linkid=2262204)**
 
 [!INCLUDE [ssms20-md](../includes/ssms20-md.md)] is the latest preview release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
 

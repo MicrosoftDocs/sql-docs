@@ -41,9 +41,9 @@ This experience within the [Azure portal query editor for Azure SQL Database](..
 
 This integration means that Copilot can answer questions with prompts like: 
 
- - `"Which agents have listed more than two properties for sale?"`
- - `"Tell me the rank of each agent by property sales and show name, total sales, and rank"`
- - Even advanced scenarios such as `"Show me a pivot summary table that displays the number of properties sold in each year from 2020 to 2023"`
+ - `Which agents have listed more than two properties for sale?`
+ - `Tell me the rank of each agent by property sales and show name, total sales, and rank`
+ - Even advanced scenarios such as `Show me a pivot summary table that displays the number of properties sold in each year from 2020 to 2023`
 
 For a tutorial and examples of natural language to SQL capabilities of the Copilot in Azure SQL Database, see [Natural language to SQL in the Azure portal Query editor (preview)](../copilot/query-editor-natural-language-to-sql-copilot.md).
 
@@ -76,7 +76,7 @@ Here are a few examples of sample prompts you can provide today for different ca
 | Fragmented index | `Which of my indexes are fragmented?` |
 | Investigate query performance issues | `My database is slow? Why is my query slow?` |
 | Missing index | `Any missing index suggestions for improving query performance?` |
-| Query store | `Which queries have forced plans?</br> Which queries have high execution time variation? </br>Show me the longest running queries over the last 24 hours.`  |
+| Query store | `Which queries have forced plans?`<br \> `Which queries have high execution time variation?` <br \>`Show me the longest running queries over the last 24 hours.`  |
 | Resource usage | `I want to find my database resource usage.` |
 | Troubleshoot connection issues | `My SQL database connection dropped. What happened?` |
 | Troubleshoot high CPU | `Why is my CPU usage high?` |

@@ -78,7 +78,7 @@ Here are some tips for writing effective prompts.
 
 - Use keywords and context that are relevant to the table and view names, column names, primary keys, and foreign keys of your database. This context helps Copilot generate accurate queries. Specify what columns you wish to see, aggregations, and any filtering criteria as explicitly as possible. Copilot in Azure SQL Database should be able to correct typos or understand context given your schema context.
 
-- To avoid ambiguity or incorrect table selections, consider filtering down the specific tables of interest in the table selection dropdown.
+- To avoid ambiguity or incorrect table selections, consider filtering down the specific tables of interest in the table selection dropdown list.
 
 - Avoid ambiguous or overly complex language in your prompts. Simplify the question while maintaining its clarity. This editing ensures Copilot in Azure SQL Database can effectively translate it into a meaningful Transact-SQL query that retrieves the desired data from the associated tables and views.
 

@@ -105,7 +105,8 @@ sections:
       - question: |
           Can I bring my on-premises or IaaS SQL Server license to Hyperscale?
         answer: |
-          Yes, [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) is available for Hyperscale in the provisioned compute tier only. Every SQL Server Standard core can map to one Hyperscale vCores. Every SQL Server Enterprise core can map to four Hyperscale vCores. You don't need a SQL license for secondary replicas. The Azure Hybrid Benefit price is automatically applied to Read Scale-out (secondary) replicas. See [serverless compute](serverless-tier-overview.md) for an alternative billing option based on usage. Note: Simplified pricing for SQL Database Hyperscale coming soon. Review the [Hyperscale pricing blog](https://aka.ms/hsignite2023) for details.
+          With the new, simplified pricing in effect since Dec 15, 2023, the price of compute for newly created Hyperscale databases, all serverless Hyperscale databases and all Hyperscale elastic pools has been reduced. With the new, simplified pricing, there is no need to apply Azure Hybrid Benefit (AHB) to obtain equivalent savings. Azure Hybrid Benefit (AHB) can only be applied to older (created prior to Dec 15, 2023) Hyperscale single databases with provisioned compute. For those older databases, AHB is only applicable until December 2026, after which those databases will also be billed as per the new, simplified pricing.
+          For more information see [Hyperscale pricing blog](https://aka.ms/hsignite2023) and [Azure SQL Database Hyperscale – lower, simplified pricing!](https://aka.ms/hsprice2023).
           
       - question: |
           What kind of workloads is Hyperscale designed for?

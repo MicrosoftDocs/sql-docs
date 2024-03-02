@@ -76,7 +76,7 @@ Here are a few examples of sample prompts you can provide today for different ca
 | Fragmented index | `Which of my indexes are fragmented?` |
 | Investigate query performance issues | `My database is slow? Why is my query slow?` |
 | Missing index | `Any missing index suggestions for improving query performance?` |
-| Query store | `Which queries have forced plans?`<br \> `Which queries have high execution time variation?` <br \>`Show me the longest running queries over the last 24 hours.`  |
+| Query store | `Which queries have forced plans?`<br /> `Which queries have high execution time variation?` <br />`Show me the longest running queries over the last 24 hours.`  |
 | Resource usage | `I want to find my database resource usage.` |
 | Troubleshoot connection issues | `My SQL database connection dropped. What happened?` |
 | Troubleshoot high CPU | `Why is my CPU usage high?` |

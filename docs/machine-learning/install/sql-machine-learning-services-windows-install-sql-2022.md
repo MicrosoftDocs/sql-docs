@@ -136,7 +136,7 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
 
 #### Install Python runtime
 
-1. Download the most recent version of [Python 3.10 for Windows](https://www.python.org/downloads/). Install it by using the following options:
+1. Download the most recent version of [Python 3.10 for Windows](https://www.python.org/downloads/release/python-3100/). Install it by using the following options:
     
     1. Open the Python Setup application and select **Customize installation**. 
     1. Verify that the **Install launcher for all users (recommended)** checkbox is selected.
@@ -159,6 +159,12 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
     icacls "C:\Program Files\Python310\Lib\site-packages" /grant "NT Service\MSSQLLAUNCHPAD":(OI)(CI)RX /T
     icacls "C:\Program Files\Python310\Lib\site-packages" /grant *S-1-15-2-1:(OI)(CI)RX /T
     ```
+Note: if you have installed SQL Server as a named service, you will need to check the name of hte launchpad service account. You can do that by running services.msc and checking the account that the SQL Server Launchpad Service is running as. For example, if you have a default installation of SQL Server Express edition, you would need to use these commands instead:
+
+    ```cmd
+    icacls "C:\Program Files\Python310\Lib\site-packages" /grant "NT Service\MSSQLLAUNCHPAD$SQLEXPRESS":(OI)(CI)RX /T
+    icacls "C:\Program Files\Python310\Lib\site-packages" /grant *S-1-15-2-1:(OI)(CI)RX /T
+    ```
 
 #### Configure Python runtime with SQL Server
 
@@ -169,6 +175,12 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
     ```cmd
     cd "C:\Program Files\Python310\Lib\site-packages\revoscalepy\rxLibs"
     .\RegisterRext.exe /configure /pythonhome:"C:\Program Files\Python310" /instance:"MSSQLSERVER"
+    ```
+Note: if you have installed SQL Server as a named instance, you will need to replace MSSQLSERVER with the name of your named instance. For example, with a default installation of SQL Server Express edition, you would need to execute the following commands instead:
+
+    ```cmd
+    cd "C:\Program Files\Python310\Lib\site-packages\revoscalepy\rxLibs"
+    .\RegisterRext.exe /configure /pythonhome:"C:\Program Files\Python310" /instance:"SQLEXPRESS"
     ```
 
 1. Use [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to connect to the instance where you installed SQL Server Machine Learning Services. Select **New Query** to open a query window, and then run the following command to enable the external scripting feature:

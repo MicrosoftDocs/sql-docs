@@ -27,7 +27,7 @@ Copilot provides relevant answers to user questions, simplifying database manage
 
 ## Copilot in Azure SQL Database experiences
 
-Copilot in Azure SQL Database provides:
+The limited public preview of Copilot for Azure SQL Database includes two Azure portal experiences:
 
 - [Natural language to SQL](#natural-language-to-sql-query): This experience within the [Azure portal query editor for Azure SQL Database](../database/query-editor.md) translates natural language queries into SQL, making database interactions more intuitive.
 
@@ -39,13 +39,13 @@ Copilot in Azure SQL Database integrates data and formulate applicable responses
 
 This experience within the [Azure portal query editor for Azure SQL Database](../database/query-editor.md) utilizes table and view names, column names, primary key, and foreign key metadata to generate T-SQL code. You can then review and execute the code suggestion.
 
-This integration means that Copilot can answer questions with prompts like: 
+This integration means that Copilot can answer questions with prompts like:
 
  - `Which agents have listed more than two properties for sale?`
  - `Tell me the rank of each agent by property sales and show name, total sales, and rank`
  - Even advanced scenarios such as `Show me a pivot summary table that displays the number of properties sold in each year from 2020 to 2023`
 
-For a tutorial and examples of natural language to SQL capabilities of the Copilot in Azure SQL Database, see [Natural language to SQL in the Azure portal Query editor (preview)](../copilot/query-editor-natural-language-to-sql-copilot.md).
+For a tutorial and examples of natural language to SQL capabilities of the Copilot in Azure SQL Database, see [Natural language to SQL in the Azure portal query editor (preview)](../copilot/query-editor-natural-language-to-sql-copilot.md).
 
 ### Microsoft Copilot for Azure enhanced scenarios
 

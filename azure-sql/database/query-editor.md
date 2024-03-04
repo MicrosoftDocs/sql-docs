@@ -1,7 +1,7 @@
 ---
-title: Azure portal Query editor
+title: Azure portal query editor
 titleSuffix: Azure SQL Database
-description: Learn how to run T-SQL queries all from within the browser via the Azure portal Query editor for Azure SQL Database.
+description: Learn how to run T-SQL queries all from within the browser via the Azure portal query editor for Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mbarickman
@@ -21,20 +21,20 @@ keywords:
   - query editor
 monikerRange: "=azuresql||=azuresql-db"
 ---
-# Azure portal Query editor for Azure SQL Database
+# Azure portal query editor for Azure SQL Database
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-The Query editor (preview) is a tool to run T-SQL queries in the Azure portal in the browser against Azure SQL Database. This article details authentication, capabilities, and other details on the Azure portal Query editor for Azure SQL Database.
+The query editor (preview) is a tool to run T-SQL queries in the Azure portal in the browser against Azure SQL Database. This article details authentication, capabilities, and other details on the Azure portal query editor for Azure SQL Database.
 
-- For a quickstart on the Azure portal Query editor, see [Quickstart: Use the Azure portal query editor (preview)](connect-query-portal.md).
+- For a quickstart on the Azure portal query editor, see [Quickstart: Use the Azure portal query editor (preview)](connect-query-portal.md).
 - For more advanced object explorer capabilities and management functions, use [Azure Data Studio](/azure-data-studio/quickstart-sql-database) or [SQL Server Management Studio (SSMS)](connect-query-ssms.md).
-- For more information about Microsoft Copilot in Azure SQL Database (preview), see [Copilot in Azure SQL Database (preview)](../copilot/copilot-azure-sql-overview.md). For a tutorial and examples, visit [Natural language to SQL in the Azure portal Query editor (preview)](../copilot/query-editor-natural-language-to-sql-copilot.md).
+- For more information about Microsoft Copilot in Azure SQL Database (preview), see [Copilot in Azure SQL Database (preview)](../copilot/copilot-azure-sql-overview.md). For a tutorial and examples, visit [Natural language to SQL in the Azure portal query editor (preview)](../copilot/query-editor-natural-language-to-sql-copilot.md).
 
 ## Query your Azure SQL Database from the Azure portal
 
-The Query editor is designed for lightweight querying and object exploration in your Azure SQL database, all from within the browser in the Azure portal. You can run T-SQL queries against your database, as well as edit data in the build-in tabular [data editor](#data-editor).
+The query editor is designed for lightweight querying and object exploration in your Azure SQL database, all from within the browser in the Azure portal. You can run T-SQL queries against your database, as well as edit data in the build-in tabular [data editor](#data-editor).
 
-Similar to the query experience in SQL Server Management Studio, use the Query editor for both simple queries or larger T-SQL queries. You can execute Data Manipulation Language (DML) and Data Definition Language (DDL) queries.
+Similar to the query experience in SQL Server Management Studio, use the query editor for both simple queries or larger T-SQL queries. You can execute Data Manipulation Language (DML) and Data Definition Language (DDL) queries.
 
 ## Connect via the query editor
 
@@ -99,7 +99,7 @@ The query execution time, or errors, are shown in the status bar.
 
 The [Natural language to SQL](../copilot/copilot-azure-sql-overview.md?view=azuresql-db&preserve-view=true#natural-language-to-sql-query) experience within the Azure portal query editor for Azure SQL Database translates natural language queries into SQL, making database interactions more intuitive.
 
-For a tutorial and examples of natural language to SQL capabilities of the Copilot in Azure SQL Database, see [Natural language to SQL in the Azure portal Query editor (preview)](../copilot/query-editor-natural-language-to-sql-copilot.md). For more information, see [Frequently asked questions about Copilot in Microsoft Azure SQL (preview)](../copilot/copilot-azure-sql-faq.yml).
+For a tutorial and examples of natural language to SQL capabilities of the Copilot in Azure SQL Database, see [Natural language to SQL in the Azure portal query editor (preview)](../copilot/query-editor-natural-language-to-sql-copilot.md). For more information, see [Frequently asked questions about Copilot in Microsoft Azure SQL (preview)](../copilot/copilot-azure-sql-faq.yml).
 
 ## Data editor
 
@@ -137,7 +137,7 @@ The following considerations and limitations apply when connecting to and queryi
 
 ### Other ways to query your Azure SQL Database
 
-In addition to the Azure portal Query editor for Azure SQL Database, consider the following quickstarts for other tools:
+In addition to the Azure portal query editor for Azure SQL Database, consider the following quickstarts for other tools:
 
 - [Quickstart: Use Azure Data Studio to connect and query Azure SQL Database](/azure-data-studio/quickstart-sql-database)
 - [Quickstart: Use SSMS to connect to and query Azure SQL Database or Azure SQL Managed Instance](connect-query-ssms.md)

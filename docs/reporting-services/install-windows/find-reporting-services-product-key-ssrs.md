@@ -5,6 +5,7 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 02/07/2024
 ms.service: reporting-services
+ms.subservice: report-server
 ms.topic: conceptual
 ms.custom: updatefrequency5
 monikerRange: "=sql-server-2017||=sql-server-ver15"
@@ -18,13 +19,13 @@ Learn how to find the  product key for SQL Server Reporting Services (SSRS) 2017
 To find your product key, you start by downloading and running setup for SQL Server.
 
 1. [Download SQL Server](../../database-engine/install-windows/install-sql-server.md).
-1. Run SQL Server setup and copy the pre-populated key:
+1. Run SQL Server setup and copy the prepopulated key:
 
-    ![Copy the SQL Server product key](media/find-reporting-services-product-key-ssrs/ssrs-ss2017-copy-product-key.png)
+    :::image type="content" source="media/find-reporting-services-product-key-ssrs/ssrs-ss2017-copy-product-key.png" alt-text="Screenshot of the SQL Server 2017 Setup window highlighting the field for the product key.":::
 
 1. [Download Reporting Services](install-reporting-services.md), run setup, and paste the key:
 
-     ![Paste the product key](media/find-reporting-services-product-key-ssrs/ssrs-ssrs2017-paste-product-key.png)
+    :::image type="content" source="media/find-reporting-services-product-key-ssrs/ssrs-ssrs2017-paste-product-key.png" alt-text="Screenshot of the SQL Server 2017 Setup window highlighting the area to enter the key.":::
 
 You should only have to do this step the first time you install Reporting Services. Servicing updates shouldn't require you to enter the key.
 
@@ -35,7 +36,7 @@ If your volume licensing has moved to the Microsoft 365 Admin Center, you can fi
 
 :::image type="content" source="media/find-reporting-services-product-key-ssrs/m365-additional-instructions.png" alt-text="Screenshot of View additional instructions.":::
 
-## Next steps
+## Related content
 
 - [Install SQL Server Reporting Services](install-reporting-services.md)
-- More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+- More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).

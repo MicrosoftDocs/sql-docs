@@ -58,7 +58,7 @@ You can use the Azure portal to configure Automated Patching during provisioning
 
 Use the Azure portal to configure Automated Patching when you create a new SQL Server virtual machine in the Resource Manager deployment model.
 
-On the **SQL Server settings** tab, select **Change configuration** under **Automated patching**. The following Azure portal screenshot shows the **SQL Automated Patching** blade.
+On the **SQL Server settings** tab, select **Change configuration** under **Automated patching**. The following Azure portal screenshot shows the **SQL Automated Patching** pane.
 
 :::image type="content" source="./media/automated-patching/azure-sql-arm-patching.png" alt-text="Screenshot of SQL Automated Patching in the Azure portal.":::
 

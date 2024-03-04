@@ -1,8 +1,8 @@
 ---
 title: "What is a contained availability group?"
 description: An overview of the contained availability group feature of Always On availability groups within SQL Server.
-author: kfarlee
-ms.author: kfarlee
+author: MashaMSFT
+ms.author: mathoma
 ms.reviewer: mathoma, randolphwest
 ms.date: 01/19/2024
 ms.service: sql

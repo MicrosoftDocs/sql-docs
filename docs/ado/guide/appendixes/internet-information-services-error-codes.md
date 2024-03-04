@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "IIS errors [ADO]"
 ---
 # Internet Information Services Error Codes for Remote Data Service
-The following table lists Microsoft® Internet Information Services (IIS) error codes related to Remote Data Service usage. The positive decimal translation of the low two bytes, the negative decimal translation of the full error code, and the hexadecimal values are shown.
+The following table lists Microsoft Internet Information Services (IIS) error codes related to Remote Data Service usage. The positive decimal translation of the low two bytes, the negative decimal translation of the full error code, and the hexadecimal values are shown.
 
 |Internet Information Services errors|Number|Description|
 |------------------------------------------|------------|-----------------|

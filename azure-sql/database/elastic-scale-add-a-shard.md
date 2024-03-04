@@ -38,8 +38,6 @@ sm.CreateRangeMapping(new RangeMappingCreationInfo<long>
                             (new Range<long>(300, 400), shard2, MappingStatus.Online));
 ```
 
-For the .NET version, you can also use PowerShell as an alternative to create a new Shard Map Manager. An example is available [here](https://gallery.technet.microsoft.com/scriptcenter/Azure-SQL-DB-Elastic-731883db).
-
 ## To add a shard for an empty part of an existing range
 
 In some circumstances, you may have already mapped a range to a shard and partially filled it with data, but you now want upcoming data to be directed to a different shard. For example, you can shard by day range and have already allocated 50 days to a shard, but on day 24, you want future data to land in a different shard. The elastic database [split-merge tool](elastic-scale-overview-split-and-merge.md) can perform this operation, but if data movement isn't necessary (for example, data for the range of days [25, 50), that is, day 25 inclusive to 50 exclusive, doesn't yet exist) you can perform this entirely using the Shard Map Management APIs directly.

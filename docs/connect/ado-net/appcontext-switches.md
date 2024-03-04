@@ -21,7 +21,7 @@ The AppContext class allows SqlClient to provide new functionality while continu
 
 [!INCLUDE [appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
-Starting with Microsoft.Data.SqlClient 4.0, TLS 1.3 isn't supported by the driver and has been removed from the supported protocols list by default. Users can switch back to forcing use of the operating system's client protocols, by setting the AppContext switch **"Switch.Microsoft.Data.SqlClient.UseSystemDefaultSecureProtocols"** to true:
+Starting with Microsoft.Data.SqlClient 4.0, TLS 1.3 isn't supported by the driver and was removed from the supported protocols list by default. Users can switch back to forcing use of the operating system's client protocols, by setting the AppContext switch **"Switch.Microsoft.Data.SqlClient.UseSystemDefaultSecureProtocols"** to true:
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseSystemDefaultSecureProtocols", true);
@@ -33,7 +33,7 @@ Starting with version 5.0, TLS 1.3 is supported in TDS 8 connections without hav
 
 [!INCLUDE [appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
-Starting with Microsoft.Data.SqlClient 2.0, decimal data will be rounded by default, as is done by SQL Server. To enable the previous behavior of truncation, you can set the AppContext switch **"Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal"** to `true` at application startup:
+Starting with Microsoft.Data.SqlClient 2.0, decimal data is rounded by default, as is done by SQL Server. To enable the previous behavior of truncation, you can set the AppContext switch **"Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal"** to `true` at application startup:
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal", true);
@@ -51,7 +51,7 @@ On Windows, SqlClient uses a native implementation of the SNI network interface 
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows", true);
 ```
 
-This switch will toggle the driver's behavior to use a managed networking implementation in .NET Core 2.1+ and .NET Standard 2.0+ projects on Windows, eliminating all dependencies on native libraries for the Microsoft.Data.SqlClient library. It's intended for testing and debugging purposes only.
+This switch toggles the driver's behavior to use a managed networking implementation in .NET Core 2.1+ and .NET Standard 2.0+ projects on Windows, eliminating all dependencies on native libraries for the Microsoft.Data.SqlClient library. It is for testing and debugging purposes only.
 
 > [!NOTE]
 > There are some known differences when compared to the native implementation. For example, the managed implementation does not support non-domain Windows Authentication.
@@ -83,7 +83,7 @@ For more information about setting these properties, see the documentation for [
 
 ## Enable a minimum timeout during login
 
-[!INCLUDE [appliesto-netfx-xxxx-xxxx-md](../../includes/appliesto-netfx-xxxx-xxxx-md.md)]
+[!INCLUDE [appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
 To prevent a login attempt from waiting indefinitely, you can set the AppContext switch **Switch.Microsoft.Data.SqlClient.UseOneSecFloorInTimeoutCalculationDuringLogin** to `true` at application startup:
 

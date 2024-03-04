@@ -11,7 +11,7 @@ metadata:
   author: dimitri-furman
   ms.author: dfurman
   ms.reviewer: wiassaf, mathoma
-  ms.date: 02/12/2024
+  ms.date: 02/19/2024
 title: Azure SQL Database Hyperscale FAQ
 summary: |
   [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -95,7 +95,7 @@ sections:
       - question: |
           Does Hyperscale require my application programming model to change?
         answer: |
-          No, your application programming model stays the same as for any other MSSQL database. You use your connection string as usual and the other regular ways to interact with your Hyperscale database. Once using Hyperscale, your application can take advantage of features such as [secondary replicas](service-tier-hyperscale-replicas.md).
+          No, your application programming model stays the same as for any other MSSQL database. You use your connection string as usual and the other regular ways to interact with your Hyperscale database. Once your application is using the Hyperscale database, your application can take advantage of features such as [secondary replicas](service-tier-hyperscale-replicas.md).
 
       - question: |
           What transaction isolation level is the default in a Hyperscale database?
@@ -105,7 +105,8 @@ sections:
       - question: |
           Can I bring my on-premises or IaaS SQL Server license to Hyperscale?
         answer: |
-          Yes, [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) is available for Hyperscale in the provisioned compute tier only. Every SQL Server Standard core can map to one Hyperscale vCores. Every SQL Server Enterprise core can map to four Hyperscale vCores. You don't need a SQL license for secondary replicas. The Azure Hybrid Benefit price is automatically applied to Read Scale-out (secondary) replicas. See [serverless compute](serverless-tier-overview.md) for an alternative billing option based on usage. Note: Simplified pricing for SQL Database Hyperscale coming soon. Review the [Hyperscale pricing blog](https://aka.ms/hsignite2023) for details.
+          With the new, simplified pricing in effect since Dec 15, 2023, the price of compute for newly created Hyperscale databases, all serverless Hyperscale databases and all Hyperscale elastic pools has been reduced. With the new, simplified pricing, there is no need to apply Azure Hybrid Benefit (AHB) to obtain equivalent savings. Azure Hybrid Benefit (AHB) can only be applied to older (created prior to Dec 15, 2023) Hyperscale single databases with provisioned compute. For those older databases, AHB is only applicable until December 2026, after which those databases will also be billed as per the new, simplified pricing.
+          For more information see [Hyperscale pricing blog](https://aka.ms/hsignite2023) and [Azure SQL Database Hyperscale – lower, simplified pricing!](https://aka.ms/hsprice2023).
           
       - question: |
           What kind of workloads is Hyperscale designed for?
@@ -117,7 +118,7 @@ sections:
         answer: |
           If you are currently running interactive analytics queries using SQL Server as a data warehouse, Hyperscale is a great option because you can host small and mid-size data warehouses (such as a few TB up to 100 TB) at a lower cost, and you can migrate your SQL Server data warehouse workloads to Hyperscale with minimal T-SQL code changes.
           
-          If you are running data analytics on a large scale with complex queries and sustained ingestion rates higher than 100 MB/s or using Parallel Data Warehouse (PDW), Teradata, or other Massively Parallel Processing (MPP) data warehouses, Azure Synapse Analytics could be the best choice.
+          If you are running data analytics on a large scale with complex queries and sustained ingestion rates higher than 100 MB/s or using Parallel Data Warehouse (PDW), Teradata, or other Massively Parallel Processing (MPP) data warehouses, Azure Synapse Analytics or Microsoft Fabric could be the best choice.
 
   - name: Hyperscale compute questions
     questions:
@@ -221,7 +222,7 @@ sections:
 
           Get sample code to migrate existing Azure SQL Databases to Hyperscale in the Azure portal, Azure CLI, PowerShell, and Transact-SQL in [Migrate an existing database to Hyperscale](manage-hyperscale-database.md#migrate-an-existing-database-to-hyperscale).
 
-          Reverse migration to the General Purpose service tier allows customers who have recently migrated an existing database in Azure SQL Database to the Hyperscale service tier to move back, should Hyperscale not meet their needs. While reverse migration is initiated by a service tier change, it's essentially a size-of-data operation between different architectures. Similarly to migration to Hyperscale, reverse migration will be faster if done during a period of low write activity. Learn the [limitations for reverse migration](manage-hyperscale-database.md#limitations-for-reverse-migration).
+          Reverse migration to the General Purpose service tier allows customers who have recently migrated an existing database in Azure SQL Database to the Hyperscale service tier to move back, should Hyperscale not meet their needs. While reverse migration is initiated by a service tier change, it's essentially a size-of-data operation between different architectures. Similarly to migration to Hyperscale, reverse migration is faster if done during a period of low write activity. Learn the [limitations for reverse migration](manage-hyperscale-database.md#limitations-for-reverse-migration).
 
       - question: |
           Can I move my Hyperscale databases to other service tiers?
@@ -286,7 +287,12 @@ sections:
       - question: |
           Does Hyperscale support Availability Zones?
         answer: |
-          Yes, Hyperscale supports [zone redundant configuration](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability). At least one HA secondary replica and the use of zone-redundant or geo-zone-redundant storage is required for enabling the zone redundant configuration for Hyperscale.
+          Yes, Hyperscale supports [zone redundant configuration](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability). At least one HA secondary replica and the use of zone-redundant or geo-zone-redundant storage is required for enabling the zone redundant configuration for Hyperscale. 
+
+      - question: |
+          Does Hyperscale support elastic pools?
+        answer: |
+          Yes. [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md) are currently in preview. Zone redundant Hyperscale elastic pools are also currently in preview. 
 
       - question: |
           How often are database backups taken?
@@ -397,7 +403,7 @@ sections:
       - question: |
           Is my database offline while the scaling up/down operation is in progress?
         answer: |
-          No. A database remains offline during operations to a scale up or down.
+          No. A database remains online during scale up or scale down operations.
 
       - question: |
           Should I expect a connection drop when the scaling operations are in progress?

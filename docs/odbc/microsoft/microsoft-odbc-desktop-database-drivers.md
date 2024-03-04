@@ -30,7 +30,7 @@ ODBC is an API that uses Structured Query Language (SQL) as the database access 
   
 -   Text  
   
- See [Visual FoxPro ODBC Driver](../../odbc/microsoft/visual-foxpro-odbc-driver.md) for detailed documentation about the Microsoft Visual FoxPro® ODBC Driver.  
+ See [Visual FoxPro ODBC Driver](../../odbc/microsoft/visual-foxpro-odbc-driver.md) for detailed documentation about the Microsoft Visual FoxPro ODBC Driver.  
   
 > [!NOTE]  
 >  Access to other data sources, such as Lotus 1-2-3, Microsoft Exchange, and HTML, is enabled by installable ISAM (IISAM) drivers. For more information about these drivers, see "Accessing External Data" in the *Microsoft Jet Database Engine Programmer's Reference*. ODBC Desktop Database Drivers 4.0 do not support Btrieve and EMS data formats.  

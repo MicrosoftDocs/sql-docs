@@ -1,7 +1,7 @@
 ---
 title: Monitor Azure SQL Managed Instance
 description: Start here to learn how to monitor Azure SQL Managed Instance.
-ms.date: 02/28/2024
+ms.date: 03/04/2024
 ms.custom: horz-monitor
 ms.topic: conceptual
 author: MashaMSFT
@@ -13,7 +13,10 @@ ms.service: sql-managed-instance
 
 [!INCLUDE [horz-monitor-intro](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-intro.md)]
 
-The SQL Server database engine has its own monitoring and diagnostic capabilities that Azure SQL Managed Instance uses, such as query store and dynamic management views (DMVs). For more information, see [Monitor performance by using the Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store) and [Monitor Azure SQL Managed Instance performance using dynamic management views](monitoring-with-dmvs.md).
+In addition to the features in this article, the SQL Server database engine has its own monitoring and diagnostic capabilities that Azure SQL Managed Instance uses, such as query store and dynamic management views (DMVs). For more information, see the following articles:
+
+- [Monitor performance by using the Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store)
+- [Monitor Azure SQL Managed Instance performance using dynamic management views](monitoring-with-dmvs.md)
 
 For a detailed discussion of all monitoring and performance aspects of Azure SQL Managed Instance, see [Monitor and performance tuning in Azure SQL Database and Azure SQL Managed Instance](../database/monitor-tune-overview.md).
 [!INCLUDE [horz-monitor-insights](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-insights.md)]
@@ -34,9 +37,6 @@ For more information on how to use SQL Insights, see the following articles:
 Intelligent Insights for Azure SQL Database and Azure SQL Managed Instance is different from Azure Monitor SQL Insights. Intelligent Insights uses artificial intelligence to continuously monitor database usage and detect disruptive events that cause poor performance. Intelligent Insights generates a resource log called SQLInsights that provides an intelligent assessment, root cause analysis, and performance improvement recommendations.
 
 For more information, see [Intelligent Insights using AI to monitor and troubleshoot database performance (preview)](../database/intelligent-insights-overview.md) and [Use the Intelligent Insights performance diagnostics log](../database/intelligent-insights-use-diagnostics-log.md).
-
-> [!NOTE]
-> Azure SQL Analytics is an integration with Azure Monitor that's no longer in active development. For more information, see [Monitor Azure SQL using Azure SQL Analytics (preview)](/previous-versions/azure/azure-monitor/insights/azure-sql).
 
 [!INCLUDE [horz-monitor-resource-types](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-resource-types.md)]
 For more information about the resource types for SQL Managed Instance, see [SQL Managed Instance monitoring data reference](monitoring-sql-managed-instance-azure-monitor-reference.md).
@@ -64,9 +64,9 @@ For the available resource log categories, their associated Log Analytics tables
 
 [!INCLUDE [horz-monitor-kusto-queries](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-kusto-queries.md)]
 
-Use the following sample queries to help you monitor your Azure SQL Managed Instance:
+Use the following sample queries to help you monitor your Azure SQL Managed Instance.
 
-Example A: Display all managed instances with `avg_cpu` utilization over 95%. 
+**Example A:** Display all managed instances with `avg_cpu` utilization over 95%. 
 
 ```Kusto
 let cpu_percentage_threshold = 95;
@@ -77,7 +77,7 @@ AzureDiagnostics
 | where avg_cpu > cpu_percentage_threshold
 ```
 
-Example B: Display all managed instances with storage utilization over 90%, dividing `storage_space_used_mb_s` by `reserved_storage_mb_s`.
+**Example B:** Display all managed instances with storage utilization over 90%, dividing `storage_space_used_mb_s` by `reserved_storage_mb_s`.
 
 ```Kusto
 let storage_percentage_threshold = 90;

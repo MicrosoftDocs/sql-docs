@@ -9,7 +9,7 @@ ms.service: sql
 ms.topic: reference
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||=fabric"
+monikerRange: "=azure-sqldw-latest||=fabric"
 ---
 # CREATE TABLE AS SELECT
 
@@ -835,6 +835,9 @@ The SELECT statement is the fundamental difference between CTAS and CREATE TABLE
  Populates the new table with the results from a SELECT statement. *select_criteria* is the body of the SELECT statement that determines which data to copy to the new table. For information about SELECT statements, see [SELECT (Transact-SQL)](../queries/select-transact-sql.md?version=fabric&preserve-view=true).  
  
 <a name="permissions-bk-fabric"></a>  
+
+> [!NOTE]  
+> In Microsoft Fabric, the use of variables in CTAS is not allowed.
   
 ## Permissions
 
@@ -972,102 +975,6 @@ WHERE NOT EXISTS
 )
 ;
 ```
-
-<a name="ctas-data-type-and-nullability-bk"></a>
-
-### E. Explicitly state data type and nullability of output
-
-When migrating SQL Server code to [!INCLUDE [fabricdw](../../includes/fabric-dw.md)], you might find you run across this type of coding pattern:
-
-```sql
-DECLARE @d DECIMAL(7,2) = 85.455
-,       @f FLOAT(24)    = 85.455
-
-CREATE TABLE result (result DECIMAL(7,2) NOT NULL)
-
-INSERT INTO result
-SELECT @d*@f
-;
-```
-
-Instinctively you might think you should migrate this code to a CTAS and you would be correct. However, there's a hidden issue here.
-
-The following code does NOT yield the same result:
-
-```sql
-DECLARE @d DECIMAL(7,2) = 85.455
-,       @f FLOAT(24)    = 85.455
-;
-
-CREATE TABLE ctas_r
-AS
-SELECT @d*@f as result
-;
-```
-
-Notice that the column "result" carries forward the data type and nullability values of the expression. This can lead to subtle variances in values if you aren't careful.
-
-Try the following as an example:
-
-```sql
-SELECT result,result*@d
-from result
-;
-
-SELECT result,result*@d
-from ctas_r
-;
-```
-
-The value stored for result is different. As the persisted value in the result column is used in other expressions the error becomes even more significant.
-
-:::image type="content" source="../statements/media\create-table-as-select-azure-sql-data-warehouse\create-table-as-select-results.png" alt-text="A screenshot from SQL Server Management Studio (SSMS) of the CREATE TABLE AS SELECT results.":::
-
-This is important for data migrations. Even though the second query is arguably more accurate there's a problem. The data would be different compared to the source system and that leads to questions of integrity in the migration. This is one of those rare cases where the "wrong" answer is actually the right one!
-
-The reason we see this disparity between the two results is down to implicit type casting. In the first example, the table defines the column definition. When the row is inserted an implicit type conversion occurs. In the second example, there's no implicit type conversion as the expression defines data type of the column. Notice also that the column in the second example has been defined as a NULLable column whereas in the first example it hasn't. When the table was created in the first example column nullability was explicitly defined. In the second example, it was left to the expression and by default this would result in a `NULL` definition.  
-
-To resolve these issues, you must explicitly set the type conversion and nullability in the `SELECT` portion of the `CTAS` statement. You can't set these properties in the create table part.
-
-This example demonstrates how to fix the code:
-
-```sql
-DECLARE @d DECIMAL(7,2) = 85.455
-,       @f FLOAT(24)    = 85.455
-
-CREATE TABLE ctas_r
-AS
-SELECT ISNULL(CAST(@d*@f AS DECIMAL(7,2)),0) as result
-```
-
-Note the following in the example:
-
-- CAST or CONVERT could have been used.
-- ISNULL is used to force NULLability not COALESCE.
-- ISNULL is the outermost function.
-- The second part of the ISNULL is a constant, `0`.
-
-> [!NOTE]
-> For the nullability to be correctly set it is vital to use `ISNULL` and not `COALESCE`. `COALESCE` is not a deterministic function and so the result of the expression will always be NULLable. `ISNULL` is different. It is deterministic. Therefore when the second part of the `ISNULL` function is a constant or a literal then the resulting value will be NOT NULL.
-
-This tip isn't just useful for ensuring the integrity of your calculations. It's also important for table partition switching. Imagine you have this table defined as your fact:
-
-```sql
-CREATE TABLE [dbo].[Sales]
-(
-    [date]      INT     NOT NULL
-,   [product]   INT     NOT NULL
-,   [store]     INT     NOT NULL
-,   [quantity]  INT     NOT NULL
-,   [price]     DECIMAL(7,2)   NOT NULL
-,   [amount]    DECIMAL(7,2)   NOT NULL
-)
-;
-```
-
-However, the value field is a calculated expression it isn't part of the source data.
-
-You can see therefore that type consistency and maintaining nullability properties on a CTAS is a good engineering best practice. It helps to maintain integrity in your calculations.
 
 ## Next steps
 

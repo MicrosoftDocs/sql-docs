@@ -3,7 +3,7 @@ title: "Accelerated database recovery"
 description: "Accelerated database recovery"
 author: mashamsft
 ms.author: mathoma
-ms.reviewer: kfarlee, wiassaf
+ms.reviewer: wiassaf, derekw
 ms.date: 02/28/2023
 ms.service: sql
 ms.subservice: backup-restore

@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "ODBC driver manager [ODBC]"
 ---
 # The Driver Manager
-The *Driver Manager* is a library that manages communication between applications and drivers. For example, on Microsoft® Windows® platforms, the Driver Manager is a dynamic-link library (DLL) that is written by Microsoft and can be redistributed by users of the redistributable MDAC 2.8 SP1 SDK.  
+The *Driver Manager* is a library that manages communication between applications and drivers. For example, on Microsoft Windows platforms, the Driver Manager is a dynamic-link library (DLL) that is written by Microsoft and can be redistributed by users of the redistributable MDAC 2.8 SP1 SDK.  
   
  The Driver Manager exists mainly as a convenience to application writers and solves a number of problems common to all applications. These include determining which driver to load based on a data source name, loading and unloading drivers, and calling functions in drivers.  
   

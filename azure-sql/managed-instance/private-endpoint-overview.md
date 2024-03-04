@@ -119,7 +119,7 @@ After you complete these steps, SQL clients connecting to `<instance-name>.<dns-
     2. Under **Security**, choose **Private endpoint connections**.
     3. Locate the private endpoint connection in the table and choose the **Private endpoint name** for your chosen connection.
     
-       ![Screenshot of the Azure portal, private endpoint connections blade the private endpoint name highlighted.](media/private-endpoint/pec-click.png)
+       ![Screenshot of the Azure portal, private endpoint connections pane the private endpoint name highlighted.](media/private-endpoint/pec-click.png)
     
     4. On the ***Overview** page, select the network interface.
     
@@ -151,7 +151,7 @@ After you complete these steps, SQL clients inside the endpoint virtual network 
     2. Under **Security**, choose **Private endpoint connections**.
     3. Locate the private endpoint connection in the table and choose the **Private endpoint name** for your chosen connection.
     
-    ![Screenshot of the Azure portal, connections blade with one private endpoint named highlighted.](media/private-endpoint/pec-click.png)
+    ![Screenshot of the Azure portal, connections pane with one private endpoint named highlighted.](media/private-endpoint/pec-click.png)
     
     4. On the ***Overview** page, select the network interface.
     

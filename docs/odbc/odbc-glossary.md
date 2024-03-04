@@ -152,7 +152,7 @@ helpviewer_keywords:
  A data structure that holds information about either column data or dynamic parameters. The physical representation of the descriptor is not defined; applications gain direct access to a descriptor only by manipulating its fields by calling ODBC functions with the descriptor handle.  
   
  **desktop database**  
- A DBMS designed to run on a personal computer. Generally, these DBMSs do not provide a stand-alone database engine and must be accessed through a file-based driver. The engines in these drivers generally have reduced support for SQL and transactions. For example, dBASE, Paradox, Btrieve, or Microsoft® FoxPro®.  
+ A DBMS designed to run on a personal computer. Generally, these DBMSs do not provide a stand-alone database engine and must be accessed through a file-based driver. The engines in these drivers generally have reduced support for SQL and transactions. For example, dBASE, Paradox, Btrieve, or Microsoft FoxPro.  
   
  **diagnostic**  
  A record containing diagnostic information about the last function called that used a particular handle. Diagnostic records are associated with environment, connection, statement, and descriptor handles.  
@@ -409,7 +409,7 @@ helpviewer_keywords:
  Whether two transactions executing simultaneously produce a result that is the same as the serial (or sequential) execution of those transactions. Serializable transactions are required to maintain database integrity.  
   
  **server database**  
- A DBMS designed to be run in a client/server environment. These DBMSs provide a stand-alone database engine that provides rich support for SQL and transactions. They are accessed through DBMS-based drivers. For example, Oracle, Informix, DB/2, or Microsoft® SQL Server.  
+ A DBMS designed to be run in a client/server environment. These DBMSs provide a stand-alone database engine that provides rich support for SQL and transactions. They are accessed through DBMS-based drivers. For example, Oracle, Informix, DB/2, or [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)].  
   
  **set function**  
  *See* aggregate function.  

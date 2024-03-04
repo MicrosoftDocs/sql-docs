@@ -50,7 +50,7 @@ Get the connection information you need to connect to the database in Azure SQL 
 
 ## Get ADO.NET connection information (optional - SQL Database only)
 
-1. Navigate to the database blade in the Azure portal and, under **Settings**, select **Connection strings**.
+1. Navigate to the database pane in the Azure portal and, under **Settings**, select **Connection strings**.
 
 1. Review the complete **ADO.NET** connection string.
 

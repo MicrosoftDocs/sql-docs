@@ -13,6 +13,14 @@ ms.custom: ignite-2023
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
+## March, 10 2024
+
+**Extension version**: `1.1.2594.118`
+
+## Backup management
+
+- Schedule backup at instance level or database level. For details, review [Assign permissions](backup-local.md#backup-schedule-level).
+
 ## February 13, 2024
 
 **Extension version**: `1.1.2594.118`

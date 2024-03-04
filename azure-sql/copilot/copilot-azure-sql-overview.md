@@ -58,7 +58,7 @@ You can ask and receive helpful, context-rich suggestions from [Microsoft Copilo
 > [!WARNING]
 > Copilot in Azure SQL Database is a preview set of experiences that are powered by large language models (LLMs). Output produced by Copilot might contain inaccuracies, biases, or other unintended content. This occurs because the model powering Copilot in Azure SQL Database was trained on information from the internet and other sources. As with any generative AI model, humans should review the output produced by Copilot before use.
 
-## Sample Prompts
+## Sample prompts
 
 Here are a few examples of sample prompts you can provide today for different capability areas:
 
@@ -86,13 +86,13 @@ Here are a few examples of sample prompts you can provide today for different ca
 
 ## Examples
 
-1. When you're working with a slow Azure SQL Database, you could provide the prompt `"My database is slow"`.
+- When you're working with a slow Azure SQL Database, you could provide the prompt `My database is slow`.
 
    Microsoft Copilot for Azure (preview) starts looking at your database based on your context in the Azure portal. After the check, Copilot will detail specific areas that might be contributing to the issue. In this example, there was a specific query driving high CPU utilization:
 
    :::image type="content" source="media/copilot-azure-sql-overview/slow-database.png" alt-text="Screenshot showing the query prompt and generated sample query about high CPU utilization." lightbox="media/copilot-azure-sql-overview/slow-database.png":::
 
-1. You can continue the conversation and investigation with a prompt of `"How can I tune that high CPU query?"`
+- You can continue the conversation and investigation with a prompt of `How can I tune that high CPU query?`.
 
    Copilot understands that this prompt refers to the query identified earlier, and provides a new index suggestion:
 

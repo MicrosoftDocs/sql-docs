@@ -45,7 +45,7 @@ DBCC CLEANTABLE
 [ WITH NO_INFOMSGS ]
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
@@ -59,7 +59,9 @@ The table or indexed view to be cleaned.
 
 #### *batch_size*
 
-The number of rows processed per transaction. If not specified, the default value is `1000`. To avoid a long recovery period, `0` is not allowed.
+The number of rows processed per transaction. If not specified, the default value is `1000`.
+
+A value of `0` is unsupported and not recommended, to avoid a long recovery period.
 
 #### WITH NO_INFOMSGS
 
@@ -97,7 +99,7 @@ Caller must own the table or indexed view, or be a member of the **sysadmin** fi
 
 ### A. Use DBCC CLEANTABLE to reclaim space
 
-The following example executes `DBCC CLEANTABLE` for the `Production.Document` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.
+The following example executes `DBCC CLEANTABLE` for the `Production.Document` table in the [!INCLUDE [ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.
 
 ```sql
 DBCC CLEANTABLE (AdventureWorks2022, 'Production.Document', 1000)

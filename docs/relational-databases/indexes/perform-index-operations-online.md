@@ -22,6 +22,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 >  Online index operations are not available in every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition. For more information, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
 >
 > Online index operations are available in Azure SQL Database and Azure SQL Managed Instance.
+
+> [!NOTE]  
+>  Index rebuilds commands may take out Exclusive (X) locks on clustered indexes after a Large Object Column is dropped from a table, even when performed online.
   
  **In This Topic**  
   

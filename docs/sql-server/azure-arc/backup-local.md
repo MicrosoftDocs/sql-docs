@@ -59,9 +59,9 @@ If both database and instance level backup schedule is set, database level sched
 
 ## Assign permissions
 
-The backup service within the Azure extension for Arc-enabled SQL Server uses [NT AUTHORITY\SYSTEM] account to perform the backups. If you are [operating SQL Server enabled by Arc with least privilege](configure-least-privilege.md), backup is performed by local Windows account [NT Service\SQLServerExtension].
+The backup service within the Azure extension for Arc-enabled SQL Server uses [NT AUTHORITY\SYSTEM] account to perform the backups. If you are [operating SQL Server enabled by Arc with least privilege](configure-least-privilege.md), A local Windows account - [NT Service\SQLServerExtension] - performs the backup.
 
-If you use Azure extension for SQL Server [version 1.1.2504.99](release-notes.md#november-14-2023) or later, the necessary permissions are granted to [NT AUTHORITY\SYSTEM] automatically and you do not need to perform any additional steps to assign permissions.
+If you use Azure extension for SQL Server [version 1.1.2504.99](release-notes.md#november-14-2023) or later, the necessary permissions are granted to [NT AUTHORITY\SYSTEM] automatically. You do not need to assign permissions manually.
 
 **For earlier extensions only**, follow the below steps to assign permission to [NT AUTHORITY\SYSTEM] account.
 
@@ -96,7 +96,7 @@ If you use Azure extension for SQL Server [version 1.1.2504.99](release-notes.md
 
 Automated backups are disabled by default.
 
-After you have assigned permissions, you can schedule automated backups. After the automated backups are configured, the Arc SQL extension initiates a backup to the default backup location.
+After you assigned permissions, you can schedule automated backups. After the automated backups are configured, the Arc SQL extension initiates a backup to the default backup location.
 
 The backups are native SQL Server backups, so all backup history is available in the backup related tables in the msdb database.
 
@@ -115,7 +115,7 @@ To enable automated backups in Azure portal:
    - Set a schedule for the full, differential, and transactional log backups.
 1. Select **Apply** to enable this configuration.
 
-Set retention period and backup frequency to meet business requirements. The retention policy should be greater than the full backup frequency. As a measure of safety, the automated backup process always keeps backups sets of at least one full backup frequency plus the retention days.
+Set retention period and frequency to meet business requirements. The retention policy should be greater than the full backup frequency. As a measure of safety, the automated backup process always keeps backups sets of at least one full backup frequency plus the retention days.
 
 > [!NOTE]
 > If the backup retention day is set to 0, automated backup is disabled and no backups are taken
@@ -209,11 +209,11 @@ To enable automated backups on a database level using az CLI:
 
 ---
 
-## Disable Automated backup  
+## Disable automated backup  
 
-If the backup retention day is set to 0, automated backup is disabled and no backups are taken, even though backup policy is retained. Setting the backup retention to a non-zero value will enable the policy again.  
+If the backup retention day is set to 0, automated backup is disabled and no backups are taken, even though backup policy is retained. Setting the backup retention to a non-zero value enables the policy again.  
 
-This applies equally to database and instance level backup. If database level backup schedule is disabled, no backups are taken for the database even if instance level backup is scheduled.  
+This setting applies to both database and instance level backup. If database level backup schedule is disabled, no backups are taken for the database even if instance level backup is scheduled.  
 
 ## Delete automated backup  
 
@@ -278,7 +278,7 @@ When the built-in automated backups are enabled on an instance of [!INCLUDE [ssn
 ## Considerations
 
 - The backup files are stored in the default backup location.
-- To find the default backup location for a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance (on [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later) run:
+- To find the default backup location for a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance (on [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later), run:
 
    ```sql
    SELECT SERVERPROPERTY('InstanceDefaultBackupPath');
@@ -290,13 +290,13 @@ When the built-in automated backups are enabled on an instance of [!INCLUDE [ssn
   1. Go to **Server properties** > **Database Settings** > **Database default locations**.
 
 - The backup policy configured at the instance level applies to all the databases on the instance.
-- If both database and instance level backup schedules are set, database level takes precedence over the instance level backup schedule. Deleting the database level backup schedule will revert back to instance level backup schedule, if there is any.
+- If both database and instance level backup schedules are set, database level takes precedence over the instance level backup schedule. Deleting the database level backup schedule reverts back to instance level backup schedule, if there is any.
 - The value for `--name` should be the name of the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] enabled by Azure Arc, which is usually in the `[Servername_SQLservername]` format.
 - The value for `--retention-days` can be from 0-35.
 - A value of `0` for `--retention-days` indicates to not perform automated backups for the instance.
 - The backup files are written to the default backup location as configured at the instance level.
 - If there are multiple [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances on the same host where the Azure extension for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is installed, you need to configure automated backups separately for each instance.
-- If you change the `--retention-days` after the `--backups-policy` is already configured, any change will take effect going forward and isn't retroactively applied.
+- If you change the `--retention-days` after the `--backups-policy` is already configured, any change takes effect going forward and isn't retroactively applied.
 
 ## Limitations
 

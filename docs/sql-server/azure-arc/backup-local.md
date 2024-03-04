@@ -59,9 +59,9 @@ If both database and instance level backup schedule is set, database level sched
 
 ## Assign permissions
 
-The backup service within the Azure extension for Arc-enabled SQL Server uses [NT AUTHORITY\SYSTEM] account to perform the backups. If you are [operating SQL Server enabled by Arc with least privilege](configure-least-privilege.md), A local Windows account - [NT Service\SQLServerExtension] - performs the backup.
+The backup service within the Azure extension for Arc-enabled SQL Server uses [NT AUTHORITY\SYSTEM] account to perform the backups. If you're [operating SQL Server enabled by Arc with least privilege](configure-least-privilege.md), A local Windows account - [NT Service\SQLServerExtension] - performs the backup.
 
-If you use Azure extension for SQL Server [version 1.1.2504.99](release-notes.md#november-14-2023) or later, the necessary permissions are granted to [NT AUTHORITY\SYSTEM] automatically. You do not need to assign permissions manually.
+If you use Azure extension for SQL Server [version 1.1.2504.99](release-notes.md#november-14-2023) or later, the necessary permissions are granted to [NT AUTHORITY\SYSTEM] automatically. You don't need to assign permissions manually.
 
 **For earlier extensions only**, follow the below steps to assign permission to [NT AUTHORITY\SYSTEM] account.
 
@@ -163,12 +163,12 @@ To enable automated backups using `az` CLI:
 
 ### [Azure portal](#tab/azure)
 
-To configure individual custom database level backup in the Azure Portal:   
+To configure individual custom database level backup in the portal:
 
 1. Select the instance
 1. Select the database
 1. Under **Data management** on the left
-1. Select **Backup (preview) - Configure database backup policies (Preview)** 
+1. Select **Backup (preview) - Configure database backup policies (Preview)**
 
 ### [Azure CLI](#tab/az)
 
@@ -290,7 +290,7 @@ When the built-in automated backups are enabled on an instance of [!INCLUDE [ssn
   1. Go to **Server properties** > **Database Settings** > **Database default locations**.
 
 - The backup policy configured at the instance level applies to all the databases on the instance.
-- If both database and instance level backup schedules are set, database level takes precedence over the instance level backup schedule. Deleting the database level backup schedule reverts back to instance level backup schedule, if there is any.
+- If both database and instance level backup schedules are set, database level takes precedence over the instance level backup schedule. Deleting the database level backup schedule reverts back to instance level backup schedule, if there's any.
 - The value for `--name` should be the name of the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] enabled by Azure Arc, which is usually in the `[Servername_SQLservername]` format.
 - The value for `--retention-days` can be from 0-35.
 - A value of `0` for `--retention-days` indicates to not perform automated backups for the instance.
@@ -301,8 +301,8 @@ When the built-in automated backups are enabled on an instance of [!INCLUDE [ssn
 ## Limitations
 
 - Automated backups are currently not supported for Always On failover cluster instances (FCI).
-- Automated backups are not supported on any instance that hosts an availability group (AG) replica.
-- The user databases need to be in full recovery model for the backups to be performed. Databases that aren't in full recovery model are not automatically backed up.
+- Automated backups aren't supported on any instance that hosts an availability group (AG) replica.
+- The user databases need to be in full recovery model for the backups to be performed. Databases that aren't in full recovery model aren't automatically backed up.
 - Automated backups are only available for licenses with Software Assurance, SQL subscription, or pay-as-you-go. For details, see [Feature availability depending on license type](overview.md#feature-availability-depending-on-license-type).
 
 ## Related tasks

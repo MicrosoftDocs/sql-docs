@@ -26,6 +26,6 @@ This article describes which versions of SQL Server support [!INCLUDE[ssMDSshort
 
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
-|Data Quality Services|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Data Quality Services|Yes||||||Yes|  
 
 

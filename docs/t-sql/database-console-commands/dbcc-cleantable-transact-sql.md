@@ -60,6 +60,7 @@ The table or indexed view to be cleaned.
 #### *batch_size*
 
 The number of rows processed per transaction. If not specified, the default value is `1000`. To avoid a long recovery period, `0` is not allowed.
+The behaviour of '0' is undefined but the statement will complete without error if attempted.
 
 #### WITH NO_INFOMSGS
 

@@ -18,7 +18,7 @@ summary: |
   Copilot in Azure SQL Database is a set of AI-assisted experiences designed to streamline the design, operation, optimization, and health of Azure SQL Database-driven applications. It improves productivity by offering natural language to SQL conversion and self-help for database administration.
 
   > [!NOTE]
-  > Copilot in Azure SQL Database is currently in a limited public preview for a limited number of early adopters. To sign up for this program, visit [Request Access to Copilot in Azure SQL Database: Limited Access Public Preview](https://aka.ms/sqlcopilot-signup). For more information, see [Blog: Copilot in Azure SQL Database](https://aka.ms/sqlcopilot-blog).
+  > Copilot in Azure SQL Database is currently in a limited public preview for a limited number of early adopters. To sign up for this program, visit [Request Access to Copilot in Azure SQL Database: Limited Access Public Preview](https://aka.ms/sqlcopilot-signup).
 
 sections:
   - name: General # Name of first section.

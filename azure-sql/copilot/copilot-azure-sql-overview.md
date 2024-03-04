@@ -18,7 +18,7 @@ monikerRange: "=azuresql||=azuresql-db"
 Copilot in Azure SQL Database is an AI assistant designed to streamline the design, operation, optimization, and health of Azure SQL Database-driven applications. It improves productivity in the Azure portal by offering natural language to SQL conversion and self-help for database administration.
 
 > [!NOTE]
-> Copilot in Azure SQL Database is currently in a limited public preview for a limited number of early adopters. To sign up for this program, visit [Request Access to Copilot in Azure SQL Database: Limited Access Public Preview](https://aka.ms/sqlcopilot-signup). For more information, see [Blog: Copilot in Azure SQL Database](https://aka.ms/sqlcopilot-blog).
+> Copilot in Azure SQL Database is currently in a limited public preview for a limited number of early adopters. To sign up for this program, visit [Request Access to Copilot in Azure SQL Database: Limited Access Public Preview](https://aka.ms/sqlcopilot-signup).
 
 Copilot provides relevant answers to user questions, simplifying database management by leveraging database context, documentation, dynamic management views, Query Store, and other knowledge sources. For example:
 
@@ -39,7 +39,7 @@ Copilot in Azure SQL Database integrates data and formulate applicable responses
 
 This experience within the [Azure portal query editor for Azure SQL Database](../database/query-editor.md) utilizes table and view names, column names, primary key, and foreign key metadata to generate T-SQL code. You can then review and execute the code suggestion.
 
-This integration means that Copilot can answer questions with prompts like: 
+This integration means that Copilot can answer questions with prompts like:
 
  - `Which agents have listed more than two properties for sale?`
  - `Tell me the rank of each agent by property sales and show name, total sales, and rank`

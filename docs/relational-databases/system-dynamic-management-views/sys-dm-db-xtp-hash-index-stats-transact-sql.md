@@ -80,9 +80,9 @@ The following query can be used to troubleshoot the hash index bucket count of a
     INNER JOIN sys.tables t on h.object_id=t.object_id
   WHERE ia.type=1
   ORDER BY [table], [index];  
-``` 
+```
 
-For details on how to interpret the results of this query, see [Troubleshooting Hash Indexes for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
+For details on how to interpret the results of this query, see [Troubleshooting Hash Indexes for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md).
 
 ### B. Hash index statistics for internal tables
 

@@ -10,7 +10,7 @@ ms.subservice: performance
 ms.topic: tutorial
 monikerRange: "=azuresql||=azuresql-mi"
 ---
-# In-memory sample in Azure SQL Managed Instnace
+# In-memory sample in Azure SQL Managed Instance
 [!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]

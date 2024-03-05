@@ -232,7 +232,7 @@ SQL Database supports building applications with Python, Java, Node.js, PHP, Rub
 
 ### Can I control when patching downtime occurs?
 
-The [maintenance window feature](maintenance-window.md) allows you to configure predictable maintenance window schedules for eligible databases in Azure SQL Database. [Maintenance window advance notifications](../database/advance-notifications.md) are available for databases configured to use a non-default [maintenance window](maintenance-window.md).
+The [maintenance window feature](maintenance-window.md) allows you to configure predictable maintenance window schedules for eligible databases in Azure SQL Database. [Maintenance window advance notifications](../database/advance-notifications.md) are available for databases configured to use a nondefault [maintenance window](maintenance-window.md).
 
 ### How do I plan for maintenance events?
 

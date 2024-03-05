@@ -5,17 +5,18 @@ description: Learn about the currently known issues with Azure SQL Managed Insta
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 12/20/2023
+ms.date: 03/05/2024
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
-ms.custom: references_regions
+ms.custom:
+  - references_regions
 ---
 # Known issues with Azure SQL Managed Instance
 
-[!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
+[!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article lists the currently known issues with [Azure SQL Managed Instance](https://azure.microsoft.com/updates/?product=sql-database&query=sql%20managed%20instance), and their resolution date or possible workaround. To learn more about Azure SQL Managed Instance, see the [overview](sql-managed-instance-paas-overview.md), and [what's new](doc-changes-updates-release-notes-whats-new.md).
+This article lists the currently known issues with [Azure SQL Managed Instance](https://azure.microsoft.com/updates/?product=sql-database&query=sql%20managed%20instance), and their resolution date or possible workaround. To learn more about Azure SQL Managed Instance, see [What is Azure SQL Managed Instance?](sql-managed-instance-paas-overview.md), and [What's new in Azure SQL Managed Instance?](doc-changes-updates-release-notes-whats-new.md)
 
 [!INCLUDE [entra-id](../includes/entra-id.md)]
 
@@ -25,7 +26,7 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 | --- | --- | --- | --- |
 | [Temporary instance inaccessibility using the failover group listener during scaling operation](#temporary-instance-inaccessibility-using-the-failover-group-listener-during-scaling-operation) | Jan 2024 | No resolution | |
 | [The event_file target of the system_health event session is not accessible](#the-event_file-target-of-the-system_health-event-session-is-not-accessible) | Dec 2023 | Has Workaround | |
-| [Procedure sp_send_dbmail may fail when @query parameter is used on Nov22FW enabled managed instances](#procedure-sp_send_dbmail-may-fail-when-query-parameter-is-used-on-nov22fw-enabled-managed-instances) | Dec 2023 | Has Workaround | |
+| [Procedure sp_send_dbmail might fail when @query parameter is used on Nov22FW enabled managed instances](#procedure-sp_send_dbmail-may-fail-when-query-parameter-is-used-on-nov22fw-enabled-managed-instances) | Dec 2023 | Has Workaround | |
 | [Increased number of system logins used for transactional replication](#increased-number-of-system-logins-used-for-transactional-replication) | Dec 2022 | No resolution | |
 | [msdb table for manual backups doesn't preserve the username](#msdb-table-for-manual-backups-doesnt-preserve-the-username) | Nov 2022 | No resolution | |
 | [Interim guidance on 2022 time zone updates for Chile](#interim-guidance-on-2022-time-zone-updates-for-chile) | Aug 2022 | Has Workaround | |
@@ -33,12 +34,11 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 | [When using SQL Server authentication, usernames with '@' aren't supported](#when-using-sql-server-authentication-usernames-with--arent-supported) | Oct 2021 | Resolved | Feb 2022 |
 | [Misleading error message on Azure portal suggesting recreation of the Service Principal](#misleading-error-message-on-azure-portal-suggesting-recreation-of-the-service-principal) | Sep 2021 | | Oct 2021 |
 | [Changing the connection type doesn't affect connections through the failover group endpoint](#changing-the-connection-type-doesnt-affect-connections-through-the-failover-group-endpoint) | Jan 2021 | Has Workaround | |
-| [Procedure sp_send_dbmail may transiently fail when @query parameter is used](#procedure-sp_send_dbmail-may-transiently-fail-when-query-parameter-is-used) | Jan 2021 | Resolved | March 2022 |
+| [Procedure sp_send_dbmail might transiently fail when @query parameter is used](#procedure-sp_send_dbmail-may-transiently-fail-when-query-parameter-is-used) | Jan 2021 | Resolved | March 2022 |
 | [Distributed transactions can be executed after removing managed instance from Server Trust Group](#distributed-transactions-can-be-executed-after-removing-managed-instance-from-server-trust-group) | Oct 2020 | Has Workaround | |
 | [Distributed transactions can't be executed after managed instance scaling operation](#distributed-transactions-cant-be-executed-after-managed-instance-scaling-operation) | Oct 2020 | Resolved | May 2021 |
 | [Can't create SQL Managed Instance with the same name as logical server previously deleted](#cant-create-sql-managed-instance-with-the-same-name-as-logical-server-previously-deleted) | Aug 2020 | Has Workaround | |
-| [Service Principal can't access Microsoft Entra ID [formerly Azure Active Directory]
- and AKV](#service-principal-cant-access-azure-ad-and-akv) | Aug 2020 | Has Workaround | |
+| [Service Principal can't access Microsoft Entra ID and AKV](#service-principal-cant-access-azure-ad-and-akv) | Aug 2020 | Has Workaround | |
 | [Restoring manual backup without CHECKSUM might fail](#restoring-manual-backup-without-checksum-might-fail) | May 2020 | Resolved | June 2020 |
 | [Agent becomes unresponsive upon modifying, disabling, or enabling existing jobs](#agent-becomes-unresponsive-upon-modifying-disabling-or-enabling-existing-jobs) | May 2020 | Resolved | June 2020 |
 | [Permissions on resource group not applied to SQL Managed Instance](#permissions-on-resource-group-not-applied-to-sql-managed-instance) | Feb 2020 | Resolved | Nov 2020 |
@@ -60,7 +60,7 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 | [Error logs aren't persisted](#error-logs-arent-persisted) | | No Workaround | |
 | [Transaction scope on two databases within the same instance isn't supported](#transaction-scope-on-two-databases-within-the-same-instance-isnt-supported) | | Has Workaround | Mar 2020 |
 | [CLR modules and linked servers sometimes can't reference a local IP address](#clr-modules-and-linked-servers-sometimes-cant-reference-a-local-ip-address) | | Has Workaround | |
-| Database consistency not verified using DBCC CHECKDB after restore database from Azure Blob Storage. | | Resolved | Nov 2019 |
+| Database consistency not verified using `DBCC CHECKDB` after restore database from Azure Blob Storage. | | Resolved | Nov 2019 |
 | Point-in-time database restore from Business Critical tier to General Purpose tier will not succeed if source database contains in-memory OLTP objects. | | Resolved | Oct 2019 |
 | Database mail feature with external (non-Azure) mail servers using secure connection | | Resolved | Oct 2019 |
 | Contained databases not supported in SQL Managed Instance | | Resolved | Aug 2019 |
@@ -71,11 +71,11 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 
 When you attempt to read the contents of the `event_file` target of the `system_health` event session, you get error 40538, "A valid URL beginning with 'https://' is required as value for any filepath specified." This occurs in SQL Server Management Studio, or when reading the session data using the [sys.fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql) function.
 
-This change in behavior is an unintended consequence of a recent required security fix. We are investigating the feasibility of an additional change that would allow customers to continue using the `system_health` session on Managed Instance securely. In the meantime, customers can work around this issue by creating their own equivalent of the `system_health` session with an `event_file` target in Azure blob storage. For more information, including a T-SQL script to create the `system_health` session that can be modified to create your own equivalent of `system_health`, see [Use the system_health session](/sql/relational-databases/extended-events/use-the-system-health-session).
+This change in behavior is an unintended consequence of a recent required security fix. We are investigating the feasibility of an additional change that would allow customers to continue using the `system_health` session on Azure SQL Managed Instance securely. In the meantime, customers can work around this issue by creating their own equivalent of the `system_health` session with an `event_file` target in Azure blob storage. For more information, including a T-SQL script to create the `system_health` session that can be modified to create your own equivalent of `system_health`, see [Use the system_health session](/sql/relational-databases/extended-events/use-the-system-health-session).
 
-### <a id="procedure-sp_send_dbmail-may-fail-when-query-parameter-is-used-on-nov22fw-enabled-managed-instances"></a> Procedure sp_send_dbmail may fail when @query parameter is used on Nov22FW enabled managed instances
+### <a id="procedure-sp_send_dbmail-may-fail-when-query-parameter-is-used-on-nov22fw-enabled-managed-instances"></a> Procedure sp_send_dbmail might fail when @query parameter is used on Nov22FW enabled managed instances
 
-Procedure `sp_send_dbmail` may fail when `@query` parameter is used, and this affects instances that have November 2022 feature wave enabled. Failures happen when the stored procedure is executed under sysadmin account.
+Procedure `sp_send_dbmail` might fail when `@query` parameter is used, and this affects instances that have November 2022 feature wave enabled. Failures happen when the stored procedure is executed under sysadmin account.
 
 This problem is caused by a known bug related to how `sp_send_dbmail` is using impersonation.
 
@@ -118,13 +118,13 @@ If an instance participates in a [failover group](failover-group-sql-mi.md), cha
 
 **Workaround**: Drop and recreate failover group after changing the connection type.
 
-### <a id="procedure-sp_send_dbmail-may-transiently-fail-when-query-parameter-is-used"></a> Procedure sp_send_dbmail may transiently fail when @query parameter is used
+### <a id="procedure-sp_send_dbmail-may-transiently-fail-when-query-parameter-is-used"></a> Procedure sp_send_dbmail might transiently fail when @query parameter is used
 
-Procedure `sp_send_dbmail` may transiently fail when `@query` parameter is used. When this issue occurs, every second execution of procedure `sp_send_dbmail` fails with error `Msg 22050, Level 16, State 1` and message `Failed to initialize sqlcmd library with error number -2147467259`. To be able to see this error properly, the procedure should be called with default value 0 for the parameter `@exclude_query_output`, otherwise the error isn't be propagated.
+Procedure `sp_send_dbmail` might transiently fail when `@query` parameter is used. When this issue occurs, every second execution of procedure `sp_send_dbmail` fails with error `Msg 22050, Level 16, State 1` and message `Failed to initialize sqlcmd library with error number -2147467259`. To be able to see this error properly, the procedure should be called with default value 0 for the parameter `@exclude_query_output`, otherwise the error isn't be propagated.
 
 This problem is caused by a known bug related to how `sp_send_dbmail` is using impersonation and connection pooling.
 
-To work around this issue wrap code for sending email into a retry logic that relies on output parameter `@mailitem_id`. If the execution fails, then parameter value is NULL, indicating `sp_send_dbmail` should be called one more time to successfully send an email. Here is an example this retry logic.
+To work around this issue wrap code for sending email into a retry logic that relies on output parameter `@mailitem_id`. If the execution fails, then parameter value is NULL, indicating `sp_send_dbmail` should be called one more time to successfully send an email. Here is an example this retry logic:
 
 ```sql
 CREATE PROCEDURE send_dbmail_with_retry AS
@@ -190,7 +190,7 @@ GRANT EXECUTE ON master.dbo.xp_sqlagent_notify TO [login_name];
 
 ### In-memory OLTP memory limits aren't applied
 
-The Business Critical service tier doesn't correctly apply [max memory limits for memory-optimized objects](../managed-instance/resource-limits.md#in-memory-oltp-available-space) in some cases. SQL Managed Instance may enable workload to use more memory for in-memory OLTP operations, which may affect availability and stability of the instance. In-memory OLTP queries that are reaching the limits might not fail immediately. The queries that use more in-memory OLTP memory fail sooner if they reach the [limits](../managed-instance/resource-limits.md#in-memory-oltp-available-space).
+The Business Critical service tier doesn't correctly apply [max memory limits for memory-optimized objects](../managed-instance/resource-limits.md#in-memory-oltp-available-space) in some cases. SQL Managed Instance might enable workload to use more memory for in-memory OLTP operations, which can affect availability and stability of the instance. In-memory OLTP queries that are reaching the limits might not fail immediately. The queries that use more in-memory OLTP memory fail sooner if they reach the [limits](../managed-instance/resource-limits.md#in-memory-oltp-available-space).
 
 **Workaround**: [Monitor in-memory OLTP storage usage](in-memory-oltp-monitor-space.md) using [SQL Server Management Studio](/sql/relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage#bkmk_Monitoring) to ensure that the workload isn't using more than the available memory. Increase the memory limits that depend on the number of vCores, or optimize your workload to use less memory.
 
@@ -237,7 +237,7 @@ You can [identify the number of remaining files](https://medium.com/azure-sqldb-
 
 ### GUID values shown instead of database names
 
-Several system views, performance counters, error messages, XEvents, and error log entries display GUID database identifiers instead of the actual database names. Don't rely on these GUID identifiers because they may be replaced with actual database names in the future.
+Several system views, performance counters, error messages, XEvents, and error log entries display GUID database identifiers instead of the actual database names. Don't rely on these GUID identifiers because they might be replaced with actual database names in the future.
 
 **Workaround**: Use `sys.databases` view to resolve the actual database name from the physical database name, specified in the form of GUID database identifiers:
 
@@ -284,9 +284,9 @@ using (var scope = new TransactionScope())
 
 ### Increased number of system logins used for transactional replication
 
-Azure SQL Managed Instance service is creating system login for purposes of transactional replication. This login can be found in SSMS (in Object explorer in Security, Logins section) or in system view `sys.syslogins`. Login name format looks like `'DBxCy\WF-abcde01234QWERT'`, and the login has public server role. Under certain conditions, this login is recreated, and due to a fault in the system previous login isn't deleted. This may lead to increased number of logins. These logins don't represent a security threat. They can be safely ignored. These logins shouldn't be deleted because at least one of them is being used for transactional replication.
+Azure SQL Managed Instance service is creating system login for purposes of transactional replication. This login can be found in SSMS (in **Object explorer**, under **Security**, **Logins**) or in system view `sys.syslogins`. Login name format looks like `'DBxCy\WF-abcde01234QWERT'`, and the login has public server role. Under certain conditions, this login is recreated, and due to a fault in the system previous login isn't deleted. This can lead to increased number of logins. These logins don't represent a security threat. They can be safely ignored. These logins shouldn't be deleted because at least one of them is being used for transactional replication.
 
-### `msdb` table for manual backups doesn't preserve the username
+### <a id="msdb-table-for-manual-backups-doesnt-preserve-the-username"></a> Table for manual backups in msdb doesn't preserve the username
 
 We recently introduced support for auto backups in `msdb`, but the table doesn't currently contain username information.
 
@@ -319,7 +319,7 @@ Error logs that are available in SQL Managed Instance aren't persisted, and thei
 
 ### Temporary instance inaccessibility using the failover group listener during scaling operation
 
-Scaling managed instance sometimes requires moving the instance to a different virtual cluster, along with the associated service-maintained DNS records. If the managed instance participates in a failover group, the DNS record corresponding to its associated failover group listener (read-write listener, if the instance is the current geo-primary, i.e. read-only listener, if the instance is the current geo-secondary) is moved to the new virtual cluster.
+Scaling managed instance sometimes requires moving the instance to a different virtual cluster, along with the associated service-maintained DNS records. If the managed instance participates in a failover group, the DNS record corresponding to its associated failover group listener (read-write listener, if the instance is the current geo-primary read-only listener, if the instance is the current geo-secondary) is moved to the new virtual cluster.
 
 In the current scaling operation design, the listener DNS records are removed from the originating virtual cluster before the managed instance itself is fully migrated to the new virtual cluster, which in some situations can lead to prolonged time during which the instance's IP address can't be resolved using the listener. During this time, a SQL client attempting to access the instance being scaled using the listener endpoint can expect login failures with the following error message: "**Error 40532**: Cannot open server "xxx.xxx.xxx.xxx" requested by the login. The login failed. (Microsoft SQL Server, Error: 40532)".
 
@@ -327,9 +327,9 @@ The issue will be addressed through scaling operation redesign.
 
 ## Resolved
 
-### Querying external table fails with not supported error message
+### <a id="querying-external-table-fails-with-not-supported-error-message"></a> Query on external table fails with not supported error message
 
-Querying external table may fail with generic error message "Queries over external tables are not supported with the current service tier or performance level of this database. Consider upgrading the service tier or performance level of the database". The only type of external table supported in Azure SQL Managed Instance are PolyBase external tables (in preview). To allow queries on PolyBase external tables, you need to enable PolyBase on managed instance by running `sp_configure` command.
+Querying external table might fail with generic error message "Queries over external tables are not supported with the current service tier or performance level of this database. Consider upgrading the service tier or performance level of the database". The only type of external table supported in Azure SQL Managed Instance are PolyBase external tables (in preview). To allow queries on PolyBase external tables, you need to enable PolyBase on managed instance by running `sp_configure` command.
 
 External tables related to [Elastic Query](../database/elastic-query-overview.md) feature of Azure SQL Database [aren't supported](../database/features-comparison.md#features-of-sql-database-and-sql-managed-instance) in SQL Managed Instance, but creating and querying them wasn't explicitly blocked. With support for PolyBase external tables, new checks have been introduced, blocking querying of *any* type of external table in managed instance unless PolyBase is enabled.
 
@@ -367,7 +367,7 @@ When the SQL Managed Instance Contributor Azure role is applied to a resource gr
 
 ### SQL Agent jobs can be interrupted by Agent process restart
 
-**(Resolved in March 2020)** SQL Agent creates a new session each time a job is started, gradually increasing memory consumption. To avoid hitting the internal memory limit, which would block execution of scheduled jobs, Agent process is restarted once its memory consumption reaches threshold. It may result in interrupting execution of jobs running at the moment of restart.
+**(Resolved in March 2020)** SQL Agent creates a new session each time a job is started, gradually increasing memory consumption. To avoid hitting the internal memory limit, which would block execution of scheduled jobs, Agent process is restarted once its memory consumption reaches threshold. It might result in interrupting execution of jobs running at the moment of restart.
 
 ### <a id="query-parameter-not-supported-in-sp_send_db_mail"></a> @query parameter not supported in sp_send_db_mail
 
@@ -375,7 +375,7 @@ The `@query` parameter in the [sp_send_db_mail](/sql/relational-databases/system
 
 ### Misleading error message on Azure portal suggesting recreation of the Service Principal
 
-The **Active Directory admin** page of Azure portal for Azure SQL Managed Instance may show the following error message, even though Service Principal already exists:
+The **Active Directory admin** page of Azure portal for Azure SQL Managed Instance might show the following error message, even though Service Principal already exists:
 
 "Managed Instance needs a Service Principal to access Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). Click here to create a Service Principal"
 
@@ -387,10 +387,10 @@ If you already followed the instructions from the error message and selected the
 
 ## Contribute to content
 
-To contribute to the Azure SQL documentation, see the [Docs contributor guide](/contribute/).
+To contribute to the Azure SQL documentation, see the [Docs contributor guide](/sql/sql-server/sql-server-docs-contribute).
 
-## Next steps
+## Related content
 
-For a list of SQL Managed Instance updates and improvements, see [SQL Managed Instance service updates](https://azure.microsoft.com/updates/?product=sql-database&query=sql%20managed%20instance).
+- For a list of SQL Managed Instance updates and improvements, see [SQL Managed Instance service updates](https://azure.microsoft.com/updates/?product=sql-database&query=sql%20managed%20instance).
 
-For updates and improvements to all Azure services, see [Service updates](https://azure.microsoft.com/updates).
+- For updates and improvements to all Azure services, see [Service updates](https://azure.microsoft.com/updates).

@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Learn how to run T-SQL queries all from within the browser via the Azure portal Query editor for Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mbarickman
+ms.reviewer: ivujic
 ms.date: 10/22/2023
 ms.service: sql-database
 ms.subservice: development

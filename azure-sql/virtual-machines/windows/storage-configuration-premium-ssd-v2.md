@@ -8,7 +8,7 @@ ms.date: 03/01/2024
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
-ms.custom:
+ms.custom: devx-track-azurepowershell
 tags: 
 ---
 # Deploy SQL Server on Azure VMs with Premium SSD v2 storage in Azure portal (preview)

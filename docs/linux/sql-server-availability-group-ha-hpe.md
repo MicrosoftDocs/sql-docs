@@ -73,6 +73,10 @@ In this step, install HPE Serviceguard for Linux on all three VMs. The following
 | 1 or more | HPE Serviceguard cluster node | Secondary replica |
 | 1 | HPE Serviceguard quorum server | Configuration only replica |
 
+> [!NOTE]  
+>  
+> You can refer to [this](https://support.hpe.com/hpesc/public/videoDisplay?videoId=vtc00040206en_us) video by HPE Serviceguard team showing how to easily to install and configure serviceguard cluster and integrate a cluster with the workload
+
 To install Serviceguard, use the `cminstaller` method. Specific instructions are available in the following links:
 
 - [Install Serviceguard for Linux on two nodes](https://support.hpe.com/hpesc/public/docDisplay?docId=a00112895en_us&page=GUID-1E75E8C6-C674-48D1-B30D-DED738431FDD.html). Refer to the section **Install_serviceguard_using_cminstaller**.

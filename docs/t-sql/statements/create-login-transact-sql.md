@@ -95,7 +95,8 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 #### *login_name*
 Specifies the name of the login that is created. There are five types of logins: SQL Server logins, Windows logins, Microsoft Entra logins, certificate-mapped logins, and asymmetric key-mapped logins. 
 
-When you're creating logins that are mapped from a Windows domain account, you must use the pre-Windows 2000 user logon name in the format [\<domainName>\\<login_name>]. You cannot use a UPN in the format login_name@DomainName. For an example, see example D later in this article. Authentication logins are type **sysname** and must conform to the rules for [Identifiers](../../relational-databases/databases/database-identifiers.md) and cannot contain a '**\\**'. Windows logins can contain a '**\\**'. Logins based on Active Directory users, are limited to names of fewer than 21 characters.
+When you're creating logins that are mapped from a Windows domain account, you must use the logon name in the format [\<domainName>\\<login_name>]. You cannot use a UPN in the format login_name@DomainName. For an example, see [example E](create-login-transact-sql.md?#e-creating-a-login-from-a-windows-domain-account) later in this article. Authentication logins are type **sysname** and must conform to the rules for [Identifiers](../../relational-databases/databases/database-identifiers.md) and cannot contain a backslash (\). Windows logins can contain a '**\\**'. Logins based on Active Directory users are limited to names of fewer than 21 characters.
+
 
 When using the **FROM EXTERNAL PROVIDER** clause, the login name must match the display name of an existing Microsoft Entra principal in the same tenant that the SQL instance is Arc-enabled to. Microsoft Entra users, groups, and applications can be used to create logins.
 

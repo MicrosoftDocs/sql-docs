@@ -107,19 +107,18 @@ There are two authentication methods offered in SQL Database:
 
 Windows authentication is not supported. Microsoft Entra ID is a centralized identity and access management service. With this you can very conveniently provide single sign-on (SSO) access to the personnel in your organization. What this means is that the credentials are shared across Azure services for simpler authentication.
 
-Microsoft Entra ID supports [multifactor authentication](authentication-mfa-ssms-overview.md), and can easily be [integrated with Windows Server Active Directory](/azure/active-directory/hybrid/how-to-connect-install-express). This also allows SQL Database and Azure Synapse Analytics to offer multifactor authentication and guest user accounts within a Microsoft Entra domain. If you already have an Active Directory on-premises, you can federate the directory with Microsoft Entra ID to extend your directory to Azure.
+Microsoft Entra ID supports [multifactor authentication](authentication-mfa-ssms-overview.md), and can easily be [integrated with Windows Server Active Directory](/entra/identity/hybrid/connect/how-to-connect-install-express). This also allows SQL Database and Azure Synapse Analytics to offer multifactor authentication and guest user accounts within a Microsoft Entra domain. If you already use Active Directory on-premises, you can federate it with Microsoft Entra ID to extend your directory to Azure.
 
 SQL authentication supports only username and password to authenticate users to any database on a given server. 
 
 |**If you...**|**SQL Database / Azure Synapse Analytics**|
 |---|---|
-|Prefer not to use Microsoft Entra ID in Azure|Use [SQL authentication](security-overview.md)|
-|Used AD on SQL Server on-premises|[Federate AD with Microsoft Entra ID](/azure/active-directory/hybrid/whatis-hybrid-identity), and use Microsoft Entra authentication. With this, you can use single sign-on.|
+|Used AD on SQL Server on-premises|[Federate AD with Microsoft Entra ID](/entra/identity/hybrid/whatis-hybrid-identity), and use Microsoft Entra authentication. With this, you can use single sign-on.|
 |Need to enforce multifactor authentication|Require multifactor authentication as a policy through [Microsoft Conditional Access](conditional-access-configure.md), and use [Microsoft Entra multifactor authentication](authentication-mfa-ssms-overview.md).|
-|Have guest accounts from Microsoft accounts (live.com, outlook.com) or other domains (gmail.com)|Use [Microsoft Entra universal authentication](authentication-mfa-ssms-overview.md) in SQL Database or dedicated SQL pool, which leverages [Microsoft Entra B2B Collaboration](/azure/active-directory/external-identities/what-is-b2b).|
 |Are logged in to Windows using your Microsoft Entra credentials from a federated domain|Use [Microsoft Entra integrated authentication](authentication-aad-configure.md).|
 |Are logged in to Windows using credentials from a domain not federated with Azure|Use [Microsoft Entra integrated authentication](authentication-aad-configure.md).|
 |Have middle-tier services which need to connect to SQL Database or Azure Synapse Analytics|Use [Microsoft Entra integrated authentication](authentication-aad-configure.md).|
+|Have a technical requirement to use SQL authentication|Use [SQL authentication](security-overview.md)|
 
 
 ### How do I limit or control connectivity access to my database

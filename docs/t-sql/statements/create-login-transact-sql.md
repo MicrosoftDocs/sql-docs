@@ -81,6 +81,7 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 
 <sources> ::=
     WINDOWS [ WITH <windows_options>[ ,... ] ]
+    | EXTERNAL PROVIDER
     | CERTIFICATE certname
     | ASYMMETRIC KEY asym_key_name
   
@@ -92,7 +93,12 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 ## Arguments
 
 #### *login_name*
-Specifies the name of the login that is created. There are four types of logins: SQL Server logins, Windows logins, certificate-mapped logins, and asymmetric key-mapped logins. When you're creating logins that are mapped from a Windows domain account, you must use the pre-Windows 2000 user logon name in the format [\<domainName>\\<login_name>]. You cannot use a UPN in the format login_name@DomainName. For an example, see example D later in this article. Authentication logins are type **sysname** and must conform to the rules for [Identifiers](../../relational-databases/databases/database-identifiers.md) and cannot contain a '**\\**'. Windows logins can contain a '**\\**'. Logins based on Active Directory users, are limited to names of fewer than 21 characters.
+Specifies the name of the login that is created. There are five types of logins: SQL Server logins, Windows logins, Microsoft Entra logins, certificate-mapped logins, and asymmetric key-mapped logins. 
+
+When you're creating logins that are mapped from a Windows domain account, you must use the logon name in the format [\<domainName>\\<login_name>]. You cannot use a UPN in the format login_name@DomainName. For an example, see [example E](create-login-transact-sql.md?#e-creating-a-login-from-a-windows-domain-account) later in this article. Authentication logins are type **sysname** and must conform to the rules for [Identifiers](../../relational-databases/databases/database-identifiers.md) and cannot contain a backslash (\). Windows logins can contain a '**\\**'. Logins based on Active Directory users are limited to names of fewer than 21 characters.
+
+
+When using the **FROM EXTERNAL PROVIDER** clause, the login name must match the display name of an existing Microsoft Entra principal in the same tenant that the SQL instance is Arc-enabled to. Microsoft Entra users, groups, and applications can be used to create logins.
 
 #### PASSWORD **=**'*password*'
 Applies to SQL Server logins only. Specifies the password for the login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with SQL Server 2012 (11.x), stored password information is calculated using SHA-512 of the salted password.
@@ -135,6 +141,10 @@ If the Windows policy requires strong passwords, passwords must contain at least
 
 #### WINDOWS
 Specifies that the login be mapped to a Windows login.
+
+#### FROM EXTERNAL PROVIDER </br>
+Specifies that the login is mapped to a Microsoft Entra principal. This option is available for Arc-enabled SQL Server 2022 and later. For more information, see [Microsoft Entra authentication for SQL Server](/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview?view=sql-server-ver16&preserve-view=true)
+
 
 #### CERTIFICATE *certname*
 Specifies the name of a certificate to be associated with this login. This certificate must already occur in the master database.
@@ -294,6 +304,42 @@ FROM sys.sql_logins
 -- create the new SQL Login on the new database server using the hash of the source server
 CREATE LOGIN Andreas
   WITH PASSWORD = 0x02000A1A89CD6C6E4C8B30A282354C8EA0860719D5D3AD05E0CAE1952A1C6107A4ED26BEBA2A13B12FAB5093B3CC2A1055910CC0F4B9686A358604E99BB9933C75B4EA48FDEA HASHED;
+```
+
+### I. Creating a login for a Microsoft Entra user
+
+ The following example creates a login for the Microsoft Entra account joe@contoso.onmicrosoft.com that exists in the Microsoft Entra tenant named *contoso*.
+
+```sql
+CREATE LOGIN [joe@contoso.onmicrosoft.com] FROM EXTERNAL PROVIDER
+
+GO
+```
+
+### J. Creating a login for a federated Microsoft Entra account
+
+ The following example creates a login for a federated Microsoft Entra account bob@contoso.com that exists in a tenant called *contoso*. User bob can also be a guest user.
+
+```sql
+CREATE LOGIN [bob@contoso.com] FROM EXTERNAL PROVIDER
+GO
+```
+
+### K. Creating a login for a Microsoft Entra group
+
+ The following example creates a login for the Microsoft Entra group *mygroup* that exists in the tenant *contoso*.
+
+```sql
+CREATE LOGIN [mygroup] FROM EXTERNAL PROVIDER
+GO
+```
+
+### L. Creating a login for a Microsoft Entra application
+
+The following example creates a login for the Microsoft Entra application *myapp* that exists in the tenant *contoso*.
+
+```sql
+CREATE LOGIN [myapp] FROM EXTERNAL PROVIDER
 ```
 
 ## Related content
@@ -635,7 +681,7 @@ My query returns 0x241C11948AEEB749B0D22646DB1A19F2 as the SID. Your query will 
 ### C. Creating a login for a Microsoft Entra user
 
 
- The following example creates a login for the Microsoft Entra account joe@contoso.onmicrosoft.com that exists in the Microsoft Entra tenant named *contoso*.
+ The following example creates a login for the Microsoft Entra account joe@contoso.onmicrosoft.com that exists in the tenant named *contoso*.
 
 
 ```sql
@@ -648,7 +694,7 @@ GO
 
 ### D. Creating a login for a federated Microsoft Entra account
 
- The following example creates a login for a federated Microsoft Entra account bob@contoso.com that exists in a Microsoft Entra tenant called *contoso*. User bob can also be a guest user.
+ The following example creates a login for a federated Microsoft Entra account bob@contoso.com that exists in a tenant called *contoso*. User bob can also be a guest user.
 
 
 ```sql
@@ -660,7 +706,7 @@ GO
 
 ### E. Creating a login for a Microsoft Entra group
 
- The following example creates a login for the Microsoft Entra group *mygroup* that exists in Microsoft Entra tenant of *contoso*.
+ The following example creates a login for the Microsoft Entra group *mygroup* that exists in the tenant *contoso*.
 
 ```sql
 CREATE LOGIN [mygroup] FROM EXTERNAL PROVIDER
@@ -671,7 +717,7 @@ GO
 
 ### F. Creating a login for a Microsoft Entra application
 
-The following example creates a login for the Microsoft Entra application *myapp* that exists in the Microsoft Entra tenant of *contoso*.
+The following example creates a login for the Microsoft Entra application *myapp* that exists in the tenant *contoso*.
 
 ```sql
 CREATE LOGIN [myapp] FROM EXTERNAL PROVIDER

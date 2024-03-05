@@ -142,7 +142,8 @@ If the Windows policy requires strong passwords, passwords must contain at least
 Specifies that the login be mapped to a Windows login.
 
 #### FROM EXTERNAL PROVIDER </br>
-Specifies that the login is mapped to a Microsoft Entra principal. This option is available for Arc-enabled SQL Server 2022+. For more information, see [Microsoft Entra authentication for SQL Server](/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview?view=sql-server-ver16)
+Specifies that the login is mapped to a Microsoft Entra principal. This option is available for Arc-enabled SQL Server 2022 and later. For more information, see [Microsoft Entra authentication for SQL Server](/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview?view=sql-server-ver16&preserve-view=true)
+
 
 #### CERTIFICATE *certname*
 Specifies the name of a certificate to be associated with this login. This certificate must already occur in the master database.

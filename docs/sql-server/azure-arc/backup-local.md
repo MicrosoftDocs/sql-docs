@@ -6,7 +6,7 @@ ms.author: amamun
 ms.reviewer: mikeray, randolphwest
 ms.date: 11/14/2023
 ms.topic: conceptual
-ms.custom: ignite-2023
+ms.custom: ignite-2023, devx-track-azurecli
 ---
 
 # Manage automated backups - SQL Server enabled by Azure Arc

@@ -9,7 +9,6 @@ ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
 ms.custom:
-  - devx-track-arm-template
 tags: azure-resource-manager
 ---
 # Configure storage for SQL Server on Azure VMs

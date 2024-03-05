@@ -162,7 +162,7 @@ For more information, see [a list of supported and unsupported SQL Managed Insta
 
 ## vCore-based purchasing model
 
-The [vCore-based purchasing model](../database/service-tiers-vcore.md) for SQL Managed Instance gives you flexibility, control, transparency, and a straightforward way to translate on-premises workload requirements to the cloud. This model allows you to change compute, memory, and storage based upon your workload needs. The vCore model is also eligible for up to 55 percent savings with the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) for SQL Server.
+The [vCore-based purchasing model](service-tiers-managed-instance-vcore.md) for SQL Managed Instance gives you flexibility, control, transparency, and a straightforward way to translate on-premises workload requirements to the cloud. This model allows you to change compute, memory, and storage based upon your workload needs. The vCore model is also eligible for up to 55 percent savings with the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) for SQL Server.
 
 In the vCore model, you can choose hardware configurations as follows:
 
@@ -203,7 +203,7 @@ The following list outlines the key characteristics of the Business Critical ser
 - Comes with super-fast local SSD storage (up to 4 TB on standard series (Gen5), up to 5.5 TB on premium series and up to 16 TB on memory optimized premium-series)
 - Built-in [high availability](high-availability-sla.md#locally-redundant-availability) based on [Always On availability groups](/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server) and [Azure Service Fabric](/azure/service-fabric/service-fabric-overview)
 - Additional built-in [read-only database replicas](../database/read-scale-out.md) that can be used for reporting and other read-only workloads
-- [In-Memory OLTP](../in-memory-oltp-overview.md) that can be used for workload with high-performance requirements  
+- [In-Memory OLTP](in-memory-oltp-overview.md) that can be used for workload with high-performance requirements
 
 Find more information about the differences between service tiers in [SQL Managed Instance resource limits](resource-limits.md#service-tier-characteristics).
 

@@ -125,7 +125,6 @@ For more information about Elastic Database Tools, see the following articles:
 * Code samples:
   * Elastic Database Tools ([.NET](https://github.com/Azure/elastic-db-tools), [Java](https://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-elasticdb-tools%22))
   * [Elastic Database Tools for Azure SQL - Entity Framework Integration](https://code.msdn.microsoft.com/Elastic-Scale-with-Azure-bae904ba?SRC=VSIDE)
-  * [Shard Elasticity on Script Center](https://gallery.technet.microsoft.com/scriptcenter/Elastic-Scale-Shard-c9530cbe)
 * Blog: [Elastic Scale announcement](https://azure.microsoft.com/blog/20../../introducing-elastic-scale-preview-for-azure-sql-database/)
 * Discussion forum: [Microsoft Q&A question page for Azure SQL Database](/answers/topics/azure-sql-database.html)
 * To measure performance: [Performance counters for shard map manager](elastic-database-client-library.md)

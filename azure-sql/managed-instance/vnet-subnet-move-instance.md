@@ -107,22 +107,22 @@ A detailed explanation of the operation steps can be found in the [overview of A
 
 A cross-subnet instance move is part of the instance update operation. Existing instance update API, Azure PowerShell, and Azure CLI commands have been enhanced with a subnet ID property. 
 
-In the Azure portal, use the subnet field on the **Networking** blade to move the instance to the destination subnet. When using Azure PowerShell or the Azure CLI, provide a different subnet ID in the update command to move the instance from an existing subnet to the destination subnet. 
+In the Azure portal, use the subnet field on the **Networking** pane to move the instance to the destination subnet. When using Azure PowerShell or the Azure CLI, provide a different subnet ID in the update command to move the instance from an existing subnet to the destination subnet. 
 
 For a full reference of instance management commands, see [Management API reference for Azure SQL Managed Instance](api-references-create-manage-instance.md). 
 
 # [Portal](#tab/azure-portal)
 
-The option to choose the instance subnet is located on the **Networking** blade of the Azure portal. The instance move operation starts when you select a subnet and save your changes. 
+The option to choose the instance subnet is located on the **Networking** pane of the Azure portal. The instance move operation starts when you select a subnet and save your changes. 
 
 The first step of the move operation is to prepare the destination subnet for deployment, which can take several minutes. Once the subnet is ready, the instance move management operation starts and becomes visible in the Azure portal. 
 
 
 > [!div class="mx-imgBorder"]
-> ![How to select subnet on SQL Managed Instance networking blade](./media/vnet-subnet-move-instance/how-to-select-subnet.png)
+> ![How to select subnet on SQL Managed Instance networking pane](./media/vnet-subnet-move-instance/how-to-select-subnet.png)
 
 
-Monitor instance move operations from the **Overview** blade of the Azure portal. Select the notification to open an additional blade containing information about the current step, the total steps, and a button to cancel the operation. 
+Monitor instance move operations from the **Overview** pane of the Azure portal. Select the notification to open an additional pane containing information about the current step, the total steps, and a button to cancel the operation. 
 
 :::image type="content" source="./media/vnet-subnet-move-instance/monitor-subnet-move-operation.png" alt-text="Screenshot shows the Overview page where you can monitor the move operation and cancel it." lightbox="./media/vnet-subnet-move-instance/monitor-subnet-move-operation.png":::
 

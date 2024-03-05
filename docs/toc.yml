@@ -4502,9 +4502,10 @@ items:
       href: database-engine/configure-windows/sql-server-monitor-overview.md
     - name: Buffer Pool Extension
       href: database-engine/configure-windows/buffer-pool-extension.md
-    - name: Server Configuration Options
-      href: database-engine/configure-windows/server-configuration-options-sql-server.md
+    - name: Server configuration options
       items:
+      - name: Overview
+        href: database-engine/configure-windows/server-configuration-options-sql-server.md
       - name: access check cache
         href: database-engine/configure-windows/access-check-cache-server-configuration-options.md
       - name: ad hoc distributed queries
@@ -8643,12 +8644,18 @@ items:
       href: ssms/download-sql-server-management-studio-ssms.md
     - name: Release notes
       href: ssms/release-notes-ssms.md    
+    - name: Download SSMS 20 Preview
+      href: ssms/download-sql-server-management-studio-ssms-20.md
+    - name: Release notes SSMS 20 Preview
+      href: ssms/release-notes-ssms-20.md    
     - name: Overview
       items:
       - name: SQL Server Management Studio (SSMS)
         href: ssms/sql-server-management-studio-ssms.md
     - name: Quickstarts
       items:
+      - name: Connect with SQL Server Management Studio
+        href: ssms/quickstarts/ssms-connect.md
       - name: Connect and query SQL Server
         href: ssms/quickstarts/ssms-connect-query-sql-server.md
       - name: Connect & query SQL Server on Azure VM
@@ -11499,6 +11506,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-10001-database-engine-error.md
         - name: 10003
           href: relational-databases/errors-events/mssqlserver-10003-database-engine-error.md
+        - name: 10054
+          href: relational-databases/errors-events/mssqlserver-10054-database-engine-error.md
         - name: 10061
           href: relational-databases/errors-events/mssqlserver-10061-database-engine-error.md
         - name: 10502

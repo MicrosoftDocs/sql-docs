@@ -24,8 +24,6 @@
       href: database/features-comparison.md
     - name: Multi-model features
       href: multi-model-features.md
-    - name: In-memory OLTP
-      href: in-memory-oltp-overview.md
     - name: Temporal tables
       href: temporal-tables.md
     - name: Scale up / down
@@ -36,14 +34,8 @@
       href: database/elastic-transactions-overview.md
     - name: Scheduled maintenance
       items:
-      - name: Maintenance window
-        href: database/maintenance-window.md
-      - name: Configure maintenance window
-        href: database/maintenance-window-configure.md
-      - name: Maintenance window FAQ
-        href: database/maintenance-window-faq.yml
-      - name: Advance notifications
-        href: database/advance-notifications.md
+      - name: Maintenance window in Azure SQL
+        href: maintenance-window-azure-sql.md
     - name: Security
       items:
       - name: Overview
@@ -142,8 +134,6 @@
           href: database/sql-insights-troubleshoot.md
       - name: Automatic tuning
         href: database/automatic-tuning-overview.md
-      - name: In-memory OLTP
-        href: in-memory-oltp-overview.md
       - name: Extended events
         items:
         - name: Extended events
@@ -221,15 +211,6 @@
         href: database/performance-guidance.md
       - name: Log diagnostic telemetry
         href: database/metrics-diagnostic-telemetry-logging-streaming-export-configure.md
-      - name: In-memory OLTP
-        items:
-        - name: Configure In-Memory OLTP
-          href: in-memory-oltp-configure.md
-        - name: Try in-memory features
-          href: in-memory-sample.md
-        - name: Monitor In-memory OLTP space
-          href: in-memory-oltp-monitor-space.md
-
     - name: Load and move data
       items:
       - name: Import a database from a BACPAC file
@@ -383,7 +364,16 @@
       href: database/logical-servers.md
     - name: Serverless
       href: database/serverless-tier-overview.md
-
+    - name: In-memory OLTP in Azure SQL Database
+      items:
+      - name: In-memory OLTP overview
+        href: database/in-memory-oltp-overview.md
+      - name: Configure In-memory OLTP
+        href: database/in-memory-oltp-configure.md
+      - name: Try in-memory features
+        href: database/in-memory-oltp-sample.md
+      - name: Monitor In-memory OLTP space
+        href: database/in-memory-oltp-monitor-space.md
     - name: Hyperscale
       items: 
       - name: Overview
@@ -585,6 +575,17 @@
         - name: DTU resource limits
           href: database/resource-limits-dtu-elastic-pools.md
 
+    - name: Scheduled maintenance
+      items:
+      - name: Maintenance window
+        href: database/maintenance-window.md
+      - name: Configure maintenance window
+        href: database/maintenance-window-configure.md
+      - name: Maintenance window FAQ
+        href: database/maintenance-window-faq.yml
+      - name: Advance notifications
+        href: database/advance-notifications.md
+
   - name: Migration guides
     items: 
 
@@ -706,16 +707,14 @@
 
     - name: Monitor & Tune
       items:
+        - name: Monitor SQL Database
+          href: database/monitoring-sql-database-azure-monitor.md 
         - name: Identify query performance bottlenecks
           href: database/identify-query-performance-issues.md
         - name: Use DMVs to monitor performance
           href: database/monitoring-with-dmvs.md
-        - name: Azure Monitor for SQL Database
-          href: database/monitoring-sql-database-azure-monitor.md 
         - name: Azure Monitor metrics and alerts for SQL Database
           href: database/monitoring-metrics-alerts.md          
-        - name: Azure Monitor for SQL Database reference 
-          href: database/monitoring-sql-database-azure-monitor-reference.md
     - name: Hyperscale databases
       items: 
       - name: Manage Hyperscale databases
@@ -1167,6 +1166,16 @@
       href: managed-instance/instance-pools-overview.md
     - name: Data virtualization 
       href: managed-instance/data-virtualization-overview.md
+    - name: In-memory OLTP in Azure SQL Managed Instance
+      items:
+      - name: In-memory OLTP Overview
+        href: managed-instance/in-memory-oltp-overview.md
+      - name: Configure In-memory OLTP
+        href: managed-instance/in-memory-oltp-configure.md
+      - name: Monitor In-memory OLTP space
+        href: managed-instance/in-memory-oltp-monitor-space.md
+      - name: Try in-memory features
+        href: managed-instance/in-memory-oltp-sample.md
     - name: Business continuity
       items: 
       - name: Overview
@@ -1403,6 +1412,16 @@
         - name: Troubleshoot
           displayName: Troubleshoot Windows authentication for Microsoft Entra with Kerberos
           href: managed-instance\winauth-azuread-troubleshoot.md
+    - name: Scheduled maintenance
+      items:
+      - name: Maintenance window
+        href: managed-instance/maintenance-window.md
+      - name: Configure maintenance window
+        href: managed-instance/maintenance-window-configure.md
+      - name: Maintenance window FAQ
+        href: managed-instance/maintenance-window-faq.yml
+      - name: Advance notifications
+        href: managed-instance/advance-notifications.md
   - name: How to
     items:
     - name: How-to documentation
@@ -1443,7 +1462,6 @@
           href: managed-instance/monitoring-sql-managed-instance-azure-monitor.md 
         - name: Azure Monitor for Azure SQL Managed Instance reference 
           href: managed-instance/monitoring-sql-managed-instance-azure-monitor-reference.md
-          
     - name: Configure settings
       items: 
       - name: tempdb
@@ -1644,8 +1662,10 @@
           href: virtual-machines/windows/change-sql-server-edition.md
         - name: Change version
           href: virtual-machines/windows/change-sql-server-version.md
-        - name: Storage
+        - name: Storage configuration
           href: virtual-machines/windows/storage-configuration.md
+        - name: Premium SSD v2 (preview)
+          href: virtual-machines/windows/storage-configuration-premium-ssd-v2.md
         - name: Microsoft Entra authentication
           href: virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm.md
         - name: Azure Update Manager
@@ -1656,7 +1676,7 @@
           href: virtual-machines/windows/sql-assessment-for-sql-vm.md
         - name: Azure Key Vault Integration
           href: virtual-machines/windows/azure-key-vault-integration-configure.md
-        - name: Migrate storage to UltraSSD
+        - name: Migrate storage to Ultradisk
           href: virtual-machines/windows/storage-migrate-to-ultradisk.md
         - name: SQL IaaS Agent extension
           displayName: resource provider, registration, sql vm rp
@@ -1677,6 +1697,8 @@
         items:
         - name: Configure cluster quorum 
           href: virtual-machines/windows/hadr-cluster-quorum-configure-how-to.md
+        - name: Configure log shipping
+          href: virtual-machines/windows/log-shipping-configure.md
         - name: Backup and restore
           items:
           - name: Automated backup (SQL 2016+)
@@ -1762,7 +1784,6 @@
               href: virtual-machines/windows/failover-cluster-instance-distributed-network-name-dnn-configure.md
             - name: DNN interoperability
               href: virtual-machines/windows/failover-cluster-instance-dnn-interoperability.md
-
 
     - name: Reference
       items:
@@ -1928,6 +1949,8 @@
     href: ./database/policy-reference.md
   - name: DTU benchmark
     href: database/dtu-benchmark.md
+  - name: SQL Database monitoring data reference 
+    href: database/monitoring-sql-database-azure-monitor-reference.md
 
 - name: Resources
   items:

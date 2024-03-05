@@ -230,8 +230,8 @@ sections:
           
           You can optimize the performance of your managed instance by:
           - [Automatic tuning](../database/automatic-tuning-overview.md) that provides peak performance and stable workloads through continuous performance tuning based on AI and machine learning.
-          - [In-memory OLTP](../in-memory-oltp-overview.md) that improves throughput and latency on transactional processing workloads and delivers faster business insights. 
-          - Applying some of the [best practices for application and database tuning](performance-guidance.md#tune-your-database)
+          - [In-memory OLTP](in-memory-oltp-overview.md) that improves throughput and latency on transactional processing workloads and delivers faster business insights. 
+          - Applying some of the [best practices for application and database tuning](performance-guidance.md#tune-your-database).
           - [Switching the connection type from proxy to redirect mode](connection-types-overview.md#changing-connection-type) for lower latency and higher throughput, in case your workload consists of lots of small transactions.
           
           ### How can I further tune performance of my General Purpose managed instance?
@@ -421,7 +421,7 @@ sections:
           
           Support for [global virtual network peering (VNet peering) for newly created virtual clusters](https://azure.microsoft.com/updates/global-virtual-network-peering-support-for-azure-sql-managed-instance-now-available/) was added to Azure SQL Managed Instance on September 22, 2020. As such, virtual network peering is supported for managed instances created in empty subnets after Sept 22, 2020. For instances deployed before this date, peering support is limited to networks within the same region due to the [constraints of global virtual network peering](/azure/virtual-network/virtual-network-manage-peering#requirements-and-constraints).  For more information, review the relevant section of the [Azure Virtual Networks frequently asked questions](/azure/virtual-network/virtual-networks-faq#what-are-the-constraints-related-to-global-vnet-peering-and-load-balancers).
           
-          To use global VNet peering with instances created before Sept 2020, considering configuring a [maintenance window](../database/maintenance-window.md) or [moving the instance to a new subnet](./vnet-subnet-move-instance.md) as either option will move the instance to a new virtual cluster that supports global virtual network peering.    
+          To use global VNet peering with instances created before Sept 2020, considering configuring a [maintenance window](maintenance-window.md) or [moving the instance to a new subnet](./vnet-subnet-move-instance.md) as either option will move the instance to a new virtual cluster that supports global virtual network peering.    
           
           See [how to check if global virtual network peering is supported on the virtual cluster](https://techcommunity.microsoft.com/t5/azure-sql-blog/how-to-check-if-global-virtual-network-peering-is-supported-on/ba-p/3636546) if needed.
           

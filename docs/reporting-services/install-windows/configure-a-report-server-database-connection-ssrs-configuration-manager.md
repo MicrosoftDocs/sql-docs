@@ -5,6 +5,7 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 01/04/2020
 ms.service: reporting-services
+ms.subservice: report-server
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---

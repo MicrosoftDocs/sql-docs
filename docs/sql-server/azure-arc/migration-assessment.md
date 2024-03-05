@@ -56,6 +56,8 @@ To assess SQL Server, the SQL Server instance needs to:
 
 - The server has connectivity to telemetry.{region}.arcdataservices.com (for more information, see [Network Requirements ](/azure/azure-arc/servers/network-requirements?tabs=azure-cloud))
 
+- To view the assessment reports in the Azure Portal, you must have Contributor access or higher to the SQL Server - Azure Arc resource.
+
 ## Permissions
 
 The Azure SQL extension for SQL Server performs the assessment data collection by default under the service account, NT AUTHORITY\SYSTEM. However, you can [configure the agent extension service to run with an account that has the least privileges](configure-least-privilege.md).
@@ -84,7 +86,7 @@ Review the readiness for target deployment types and the Azure SQL size recommen
 
    :::image type="content" source="media/migration-assessment/not-ready.png" alt-text="Screenshot showing how to get to the mitigation guidance when SQL Server isn't ready to migrate.":::
 
-- **Unknown**: Azure Migrate can't assess readiness. This result can happen because the discovery is in progress or there are issues during discovery that need to be fixed. Check the notifications blade. If the issue persists, contact [Microsoft support](https://support.microsoft.com).
+- **Unknown**: Azure Migrate can't assess readiness. This result can happen because the discovery is in progress or there are issues during discovery that need to be fixed. Check the notifications pane. If the issue persists, contact [Microsoft support](https://support.microsoft.com).
 
 ## Review confidence rating
 

@@ -41,7 +41,7 @@ helpviewer_keywords:
   
  Because all of these conversions are done by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver executing on the client, the server ACP must be one of the code pages installed on the client computer.  
   
- Making the character conversions through Unicode ensures the proper conversion of all characters that exist in both code pages. If a character exists in one code page but not another, however, then the character cannot be represented in the target code page. For example, code page 1252 has the registered trademark symbol (®), while code page 437 does not.  
+ Making the character conversions through Unicode ensures the proper conversion of all characters that exist in both code pages. If a character exists in one code page but not another, however, then the character cannot be represented in the target code page. For example, code page 1252 has the registered trademark symbol (&reg;), while code page 437 does not.  
   
  The AutoTranslate setting has no effect on these conversions:  
   

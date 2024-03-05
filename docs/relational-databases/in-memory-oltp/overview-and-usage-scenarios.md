@@ -1,9 +1,9 @@
 ---
 title: In-Memory OLTP overview and usage scenarios
 description: Learn about In-Memory OLTP, a technology in SQL Server, Azure SQL Database, and Azure SQL Managed Instance for optimized transaction processing. Review examples and additional resources.
-author: "kevin-farlee"
-ms.author: "kfarlee"
-ms.reviewer: wiassaf, randolphwest
+author: MashaMSFT
+ms.author: mathoma
+ms.reviewer: wiassaf, randolphwest, ryanston 
 ms.date: 10/05/2023
 ms.service: sql
 ms.subservice: in-memory-oltp
@@ -18,24 +18,26 @@ monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-20
 
 [!INCLUDE [inmemory](../../includes/inmemory-md.md)] is the premier technology available in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssSDS](../../includes/sssds-md.md)] for optimizing performance of transaction processing, data ingestion, data load, and transient data scenarios. This article includes an overview of the technology and outlines usage scenarios for [!INCLUDE [inmemory](../../includes/inmemory-md.md)]. Use this information to determine whether [!INCLUDE [inmemory](../../includes/inmemory-md.md)] is right for your application. The article concludes with an example that shows [!INCLUDE [inmemory](../../includes/inmemory-md.md)] objects, reference to a perf demo, and references to resources you can use for next steps.
 
-This article covers the [!INCLUDE [inmemory](../../includes/inmemory-md.md)] technology in both [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssSDS](../../includes/sssds-md.md)]. For more information specific to in-memory data in Azure SQL, see [Optimize performance by using in-memory technologies in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/in-memory-oltp-overview) and [Blog: [!INCLUDE [inmemory](../../includes/inmemory-md.md)] in Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/).
+- This article covers the [!INCLUDE [inmemory](../../includes/inmemory-md.md)] technology in both [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssSDS](../../includes/sssds-md.md)].
+- For more information specific to in-memory data in Azure SQL Database, see [Optimize performance by using in-memory technologies in Azure SQL Database](/azure/azure-sql/database/in-memory-oltp-overview?view=azuresql-db&preserve-view=true) and [Blog: [!INCLUDE [inmemory](../../includes/inmemory-md.md)] in Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/).
+- For more information specific to in-memory data in Azure SQL Managed Instance, see [Optimize performance by using in-memory technologies in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/in-memory-oltp-overview?view=azuresql-mi&preserve-view=true).
 
 ## [!INCLUDE [inmemory](../../includes/inmemory-md.md)] overview
 
 [!INCLUDE [inmemory](../../includes/inmemory-md.md)] can provide great performance gains, for the right workloads. While customers have seen up to 30X performance gain in some cases, how much gain you see depends on the workload.
 
-Now, where does this performance gain come from? In essence, [!INCLUDE [inmemory](../../includes/inmemory-md.md)] improves performance of transaction processing by making data access and transaction execution more efficient, and by removing lock and latch contention between concurrently executing transactions. [!INCLUDE [inmemory](../../includes/inmemory-md.md)] isn't fast because it's in-memory; it's fast because it's optimized around the data being in-memory. Data storage, access, and processing algorithms were redesigned from the ground up to take advantage of the latest enhancements in in-memory and high concurrency computing.
+Now, where does this performance gain come from? In essence, [!INCLUDE [inmemory](../../includes/inmemory-md.md)] improves performance of transaction processing by making data access and transaction execution more efficient, and by removing lock and latch contention between concurrently executing transactions. [!INCLUDE [inmemory](../../includes/inmemory-md.md)] isn't fast because it's in-memory; it's fast because of optimization around in-memory data. Data storage, access, and processing algorithms were redesigned from the ground up to take advantage of the latest enhancements in in-memory and high concurrency computing.
 
-Now, just because data lives in-memory doesn't mean you lose it when there's a failure. By default, all transactions are fully durable, meaning that you have the same durability guarantees you get for any other table in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]: as part of transaction commit, all changes are written to the transaction log on disk. If there's a failure at any time after the transaction commits, your data is there when the database comes back online. In addition, [!INCLUDE [inmemory](../../includes/inmemory-md.md)] works with all high availability and disaster recovery capabilities of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], like [availability groups](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md), [failover cluster instances](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md), backup/restore, and so on.
+Now, just because data lives in-memory doesn't mean you lose it when there's a failure. By default, all transactions are fully durable, meaning that you have the same durability guarantees you get for any other table in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]: as part of transaction commit, all changes are written to the transaction log, on disk. If there's a failure at any time after the transaction commits, your data is there when the database comes back online. In addition, [!INCLUDE [inmemory](../../includes/inmemory-md.md)] works with all high availability and disaster recovery capabilities of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], like [availability groups](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md), [failover cluster instances](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md), backup/restore, and so on.
 
 To use [!INCLUDE [inmemory](../../includes/inmemory-md.md)] in your database, you use one or more of the following types of objects:
 
 - *Memory-optimized tables* are used for storing user data. You declare a table to be memory-optimized at create time.
 - *Non-durable tables* are used for transient data, either for caching or for intermediate result set (replacing traditional temp tables). A non-durable table is a memory-optimized table that is declared with DURABILITY=SCHEMA_ONLY, meaning that changes to these tables don't incur any IO. This avoids consuming log IO resources for cases where durability isn't a concern.
-- *Memory-optimized table types* are used for table-valued parameters (TVPs), as well as intermediate result sets in stored procedures. These can be used instead of traditional table types. Table variables and TVPs that are declared using a memory-optimized table type inherit the benefits of non-durable memory-optimized tables: efficient data access, and no IO.
+- *Memory-optimized table types* are used for table-valued parameters (TVPs) and intermediate result sets in stored procedures. Memory-optimized table types can be used instead of traditional table types. Table variables and TVPs that are declared using a memory-optimized table type inherit the benefits of non-durable memory-optimized tables: efficient data access, and no IO.
 - *Natively compiled T-SQL modules* are used to further reduce the time taken for an individual transaction by reducing CPU cycles required to process the operations. You declare a Transact-SQL module to be natively compiled at create time. At this time, the following T-SQL modules can be natively compiled: stored procedures, triggers, and scalar user-defined functions.
 
-[!INCLUDE [inmemory](../../includes/inmemory-md.md)] is built into [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssSDS](../../includes/sssds-md.md)]. Because these objects behave in a similar way to their traditional counterparts, you can often gain performance benefits while making only minimal changes to the database and the application. Plus, you can have both memory-optimized and traditional disk-based tables in the same database, and run queries across the two. You will find a Transact-SQL script with an example for each of these types of objects toward the bottom of this article.
+[!INCLUDE [inmemory](../../includes/inmemory-md.md)] is built into [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssSDS](../../includes/sssds-md.md)]. Because these objects behave in a similar way to their traditional counterparts, you can often gain performance benefits while making only minimal changes to the database and the application. Plus, you can have both memory-optimized and traditional disk-based tables in the same database, and run queries across the two. See the [sample Transact-SQL script](#sample-script) for each of these types of objects later in this article.
 
 ## Usage scenarios for [!INCLUDE [inmemory](../../includes/inmemory-md.md)]
 
@@ -50,7 +52,7 @@ Here's a list of scenarios and application patterns where we have seen customers
 
 This is the core scenario for which we built [!INCLUDE [inmemory](../../includes/inmemory-md.md)]: support large volumes of transactions, with consistent low latency for individual transactions.
 
-Common workload scenarios are: trading of financial instruments, sports betting, mobile gaming, and ad delivery. Another common pattern we've seen is a "catalog" that is frequently read and/or updated. One example is where you have large files, each distributed over multiple cluster nodes, and you catalog the location of each shard of each file in a memory-optimized table.
+Common workload scenarios are: trading of financial instruments, sports betting, mobile gaming, and ad delivery. Another common pattern is a "catalog" that is frequently read and/or updated. One example is where you have large files, each distributed over multiple cluster nodes, and you catalog the location of each shard of each file in a memory-optimized table.
 
 #### Implementation considerations
 
@@ -106,7 +108,7 @@ Memory-optimized table variables and non-durable tables typically reduce CPU and
 
 #### Implementation considerations
 
-To get started see: [Improving temp table and table variable performance using memory optimization.](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization)
+To get started: [Improving temp table and table variable performance using memory optimization.](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization)
 
 #### Customer case study
 

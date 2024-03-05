@@ -17,13 +17,13 @@ Use the [Azure portal](https://portal.azure.com/) to obtain the connection strin
 
 1. Select **All services** > **SQL databases**.
 
-2. Enter the name of your database into the filter text box near the upper left of the **SQL databases** blade.
+2. Enter the name of your database into the filter text box near the upper left of the **SQL databases** pane.
 
 3. Select the row for your database.
 
-4. After the blade appears for your database, for visual convenience select the **Minimize** buttons to collapse the blades you used for browsing and database filtering.
+4. After the pane appears for your database, for visual convenience select the **Minimize** buttons to collapse the blades you used for browsing and database filtering.
 
-5. On the blade for your database, select **Show database connection strings**.
+5. On the pane for your database, select **Show database connection strings**.
 
 6. Copy the appropriate connection string. i.e. If you intend to use the ADO.NET connection library, copy the appropriate string from the **ADO.NET** tab.
 

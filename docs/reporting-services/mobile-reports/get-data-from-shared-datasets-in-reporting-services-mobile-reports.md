@@ -59,6 +59,3 @@ If you're already connected to a report server, when you select **Add Data** on 
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  [Web portal (SSRS native mode)](../../reporting-services/web-portal-ssrs-native-mode.md)  
   
-  
-  
-

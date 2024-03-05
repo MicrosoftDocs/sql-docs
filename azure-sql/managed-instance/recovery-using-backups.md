@@ -58,7 +58,7 @@ For a large or very active database, the restore might take several hours. A pro
 > [!TIP]
 > For Azure SQL Managed Instance, system updates take precedence over database restores in progress. If there's a system update for SQL Managed Instance, all pending restores are suspended and then resumed after the update has been applied. This system behavior might prolong the time of restores and might be especially impactful to long-running restores. 
 >
-> To achieve a predictable time of database restores, consider configuring [maintenance windows](../database/maintenance-window.md) that allow scheduling of system updates at a specific day and time. Also consider running database restores outside the scheduled maintenance window.
+> To achieve a predictable time of database restores, consider configuring [maintenance windows](maintenance-window.md) that allow scheduling of system updates at a specific day and time. Also consider running database restores outside the scheduled maintenance window.
 
 ## Permissions
 

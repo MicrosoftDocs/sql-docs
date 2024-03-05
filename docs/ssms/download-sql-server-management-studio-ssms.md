@@ -1,10 +1,10 @@
 ---
 title: Download SQL Server Management Studio (SSMS)
-description: Download the latest version of SQL Server Management Studio (SSMS).
+description: Download the latest version of SQL Server Management Studio (SSMS) for managing and configuring instances of SQL Server and Azure SQL.
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan, randolphwest
-ms.date: 01/10/2024
+ms.date: 02/29/2024
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -35,7 +35,7 @@ For customers needing a cross-platform companion to SSMS for managing SQL and ot
 
 ## Download SSMS
 
-:::image type="icon" source="../includes/media/download.svg" border="false":::**[Free Download for SQL Server Management Studio (SSMS) 19.3](https://aka.ms/ssmsfullsetup)**
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server Management Studio (SSMS) 19.3](https://aka.ms/ssmsfullsetup)**
 
 SSMS 19.3 is the latest general availability (GA) version. If you have a *preview* version of SSMS 19 installed, uninstall it before installing SSMS 19.3. If you have SSMS 19.x installed, installing SSMS 19.3 upgrades it to 19.3.
 
@@ -45,7 +45,7 @@ SSMS 19.3 is the latest general availability (GA) version. If you have a *previe
 
 By using SQL Server Management Studio, you agree to its [license terms](/Legal/sql/sql-server-management-studio-license-terms) and [privacy statement](https://privacy.microsoft.com/privacystatement). If you have comments or suggestions or want to report issues, the best way to contact the SSMS team is at [SQL user feedback](https://aka.ms/ssms-feedback).
 
-The SSMS 19.x installation doesn't upgrade or replace SSMS versions 18.x or earlier. SSMS 19.x installs alongside previous versions, so both versions are available. However, if you have an earlier *preview* version of SSMS 19 installed, uninstall it before installing SSMS 19.3. You can see if you have a preview version by going to the **Help > About** window.
+The SSMS 19.x installation doesn't upgrade or replace SSMS 18.x and earlier versions. SSMS 19.x installs alongside previous versions, so both versions are available. However, if you have an earlier *preview* version of SSMS 19 installed, you must uninstall it before installing the latest release of SSMS 19. You can see if you have a preview version by going to the **Help > About** window.
 
 If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio v19.3**.
 
@@ -55,11 +55,21 @@ If a computer contains side-by-side installations of SSMS, verify you start the 
 
 This release of SSMS can be installed in the following languages:
 
-SQL Server Management Studio 19.3:  
-[Chinese (Simplified)](https://aka.ms/ssmsfullsetup?clcid=0x804) | [Chinese (Traditional)](https://aka.ms/ssmsfullsetup?clcid=0x404) | [English (United States)](https://aka.ms/ssmsfullsetup?clcid=0x409) | [French](https://aka.ms/ssmsfullsetup?clcid=0x40c) | [German](https://aka.ms/ssmsfullsetup?clcid=0x407) | [Italian](https://aka.ms/ssmsfullsetup?clcid=0x410) | [Japanese](https://aka.ms/ssmsfullsetup?clcid=0x411) | [Korean](https://aka.ms/ssmsfullsetup?clcid=0x412) | [Portuguese (Brazil)](https://aka.ms/ssmsfullsetup?clcid=0x416) | [Russian](https://aka.ms/ssmsfullsetup?clcid=0x419) | [Spanish](https://aka.ms/ssmsfullsetup?clcid=0x40a)
+SQL Server Management Studio 19.3:
 
-> [!TIP]  
-> If you access this page from a non-English language version and want to see the most up-to-date content, please select **Read in English** at the top of this page. You can download different languages from the US-English version site by selecting [available languages](#available-languages).
+- [Chinese (Simplified)](https://aka.ms/ssmsfullsetup?clcid=0x804)
+- [Chinese (Traditional)](https://aka.ms/ssmsfullsetup?clcid=0x404)
+- [English (United States)](https://aka.ms/ssmsfullsetup?clcid=0x409)
+- [French](https://aka.ms/ssmsfullsetup?clcid=0x40c)
+- [German](https://aka.ms/ssmsfullsetup?clcid=0x407)
+- [Italian](https://aka.ms/ssmsfullsetup?clcid=0x410)
+- [Japanese](https://aka.ms/ssmsfullsetup?clcid=0x411)
+- [Korean](https://aka.ms/ssmsfullsetup?clcid=0x412)
+- [Portuguese (Brazil)](https://aka.ms/ssmsfullsetup?clcid=0x416)
+- [Russian](https://aka.ms/ssmsfullsetup?clcid=0x419)
+- [Spanish](https://aka.ms/ssmsfullsetup?clcid=0x40a)
+
+If you access this page from a non-English language version and want to see the most up-to-date content, select **Read in English** at the top of this page. To download different languages, select [available languages](#available-languages).
 
 > [!NOTE]  
 > The SQL Server PowerShell module is a separate install through the PowerShell Gallery. For more information, see [Install the SQL Server PowerShell module](../powershell/download-sql-server-ps-module.md).
@@ -85,26 +95,26 @@ Follow these steps to install SSMS in the background with no GUI prompts.
 1. Type the following command.
 
    ```powershell
-    $media_path = "<path where SSMS-Setup-ENU.exe file is located>"
-    $install_path = "<root location where all SSMS files will be installed>"
-    $params = " /Install /Quiet SSMSInstallRoot=$install_path"
+   $media_path = "<path where SSMS-Setup-ENU.exe file is located>"
+   $install_path = "<root location where all SSMS files will be installed>"
+   $params = " /Install /Quiet SSMSInstallRoot=$install_path"
 
-    Start-Process -FilePath $media_path -ArgumentList $params -Wait
-    ```
+   Start-Process -FilePath $media_path -ArgumentList $params -Wait
+   ```
 
-    Example:
+   For example:
 
-    ```powershell
-    $media_path = "C:\Installers\SSMS-Setup-ENU.exe"
-    $install_path = "$env:SystemDrive\SSMSto"
-    $params = "/Install /Quiet SSMSInstallRoot=`"$install_path`""
+   ```powershell
+   $media_path = "C:\Installers\SSMS-Setup-ENU.exe"
+   $install_path = "$env:SystemDrive\SSMSto"
+   $params = "/Install /Quiet SSMSInstallRoot=`"$install_path`""
 
-    Start-Process -FilePath $media_path -ArgumentList $params -Wait
-    ```
+   Start-Process -FilePath $media_path -ArgumentList $params -Wait
+   ```
 
-    You can also pass */Passive* instead of */Quiet* to see the setup UI.
+   You can also pass `/Passive` instead of `/Quiet` to see the setup UI.
 
-1. If all goes well, you can see SSMS installed at *%systemdrive%\SSMSto\Common7\IDE\Ssms.exe* based on the example. If something went wrong, you could inspect the error code returned and review the log file in %TEMP%\SSMSSetup.
+1. If all goes well, you can see SSMS installed at *%systemdrive%\SSMSto\Common7\IDE\Ssms.exe* based on the example. If something went wrong, you could inspect the error code returned and review the log file in `%TEMP%\SSMSSetup`.
 
 ## Installation with Azure Data Studio
 
@@ -113,7 +123,7 @@ Follow these steps to install SSMS in the background with no GUI prompts.
   - The Azure Data Studio version can be found in the [release notes](release-notes-ssms.md).
 - The Azure Data Studio system installer requires the same security rights as the SSMS installer.
 - The Azure Data Studio installation is completed with the default Azure Data Studio installation options. These are to create a Start Menu folder and add Azure Data Studio to PATH. A desktop shortcut isn't created, and Azure Data Studio isn't registered as a default editor for any file type.
-- Localization of Azure Data Studio is accomplished through Language Pack extensions. To localize Azure Data Studio, download the corresponding language pack from the [extension marketplace](/azure-data-studio/extensions/add-extensions).
+- Localization of Azure Data Studio is accomplished through Language Pack extensions. Install the corresponding language pack from the [extension marketplace](/azure-data-studio/extensions/add-extensions) to localize Azure Data Studio.
 - At this time, the installation of Azure Data Studio can be skipped by launching the SSMS installer with the command line flag `DoNotInstallAzureDataStudio=1`.
 
 ## Uninstall
@@ -134,10 +144,11 @@ These components aren't uninstalled because they can be shared with other produc
 
 ## Supported SQL offerings
 
-- This version of SSMS works with SQL Server 2014 and higher.
-  - It provides the most significant level of support for working with the latest cloud features in Azure SQL Database, Azure Synapse Analytics, and Microsoft Fabric.
-- Additionally, SSMS 19.x can be installed alongside with SSMS 18.x, SSMS 17.x, SSMS 16.x.
-- SQL Server Integration Services (SSIS) - SSMS version 17.x and later versions don't support connecting to the legacy SQL Server Integration Services service. To connect to an earlier version of the legacy Integration Services, use the version of SSMS aligned with the version of SQL Server. For example, use SSMS 16.x to connect to the legacy SQL Server 2016 Integration Services service. SSMS 17.x and SSMS 16.x can be installed on the same computer. Since the release of SQL Server 2012, the SSIS Catalog database, SSISDB, is the recommended way to store, manage, run, and monitor Integration Services packages. See [SSIS Catalog](../integration-services/catalog/ssis-catalog.md) for details.
+- This version of SSMS works with [!INCLUDE [sssql14-md](../includes/sssql14-md.md)] and later versions. It provides the most significant support for working with the latest cloud features in Azure SQL Database, Azure Synapse Analytics, and Microsoft Fabric.
+
+- Additionally, SSMS 19.x can be installed alongside with SSMS 18.x, SSMS 17.x, and SSMS 16.x.
+
+- For SQL Server Integration Services (SSIS), SSMS 17.x and later versions don't support connecting to the legacy SQL Server Integration Services service. To connect to an earlier version of the legacy Integration Services, use the version of SSMS aligned with the version of SQL Server. For example, use SSMS 16.x to connect to the legacy [!INCLUDE [sssql16-md](../includes/sssql16-md.md)] Integration Services service. SSMS 17.x and SSMS 16.x can be installed on the same computer. Since the release of [!INCLUDE [sssql11-md](../includes/sssql11-md.md)], the SSIS Catalog database, SSISDB, is the recommended way to store, manage, run, and monitor Integration Services packages. See [SSIS Catalog](../integration-services/catalog/ssis-catalog.md) for details.
 
 ## SSMS system requirements
 
@@ -175,7 +186,7 @@ Supported hardware:
 - [What is SQL Server Management Studio (SSMS)?](sql-server-management-studio-ssms.md)
 - [What is Azure Data Studio?](/azure-data-studio/what-is-azure-data-studio)
 - [Download SQL Server Data Tools (SSDT) for Visual Studio](../ssdt/download-sql-server-data-tools-ssdt.md)
-- [Latest updates](/troubleshoot/sql/releases/download-and-install-latest-updates?bc=%2fsql%2fbreadcrumb%2ftoc.json&toc=%2fsql%2ftoc.json)
+- [Latest updates and version history for SQL Server](/troubleshoot/sql/releases/download-and-install-latest-updates?bc=%2fsql%2fbreadcrumb%2ftoc.json&toc=%2fsql%2ftoc.json)
 - [Azure Data Architecture Guide](/azure/architecture/data-guide/)
 - [SQL Server Blog](https://cloudblogs.microsoft.com/sqlserver/)
 

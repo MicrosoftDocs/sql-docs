@@ -298,4 +298,3 @@ The key differences in the `CREATE AUDIT` syntax for auditing to Azure Blob stor
 ## Next steps
 
 - For a full list of audit log consumption methods, refer to [Get started with Azure SQL Database auditing](../database/auditing-overview.md).
-- For more information about Azure programs that support standards compliance, see the [Azure Trust Center](https://gallery.technet.microsoft.com/Overview-of-Azure-c1be3942), where you can find the most current list of compliance certifications.

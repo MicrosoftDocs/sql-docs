@@ -9,9 +9,6 @@ ms.date: 12/15/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: whats-new
-ms.custom:
-  - sqldbrb=2
-  - references_regions
 ---
 # What's new in Azure SQL Database? (Archive)
 
@@ -75,7 +72,7 @@ Return to [What's new in Azure SQL Database?](doc-changes-updates-release-notes-
 | **Database copy of Hyperscale geo secondary replicas GA** | It's now possible to use a Hyperscale geo-secondary replica as source for a database copy. This feature is generally available. For more information, see [Hyperscale service tier](service-tier-hyperscale.md). |
 | **Cross-subscription failover group with Azure PowerShell** | It's now possible to deploy your failover group for a single database across subscriptions by using Azure PowerShell. For more information, see [Configure failover group](failover-group-configure-sql-db.md?view=azuresql&tabs=azure-powershell&pivots=azure-sql-single-db&preserve-view=true#create-failover-group). |
 | **Hyperscale databases LTR preview** | It's now possible to store your Hyperscale database backups for up to 10 years using the long-term retention (LTR) capability. This feature is now in preview. For more information, see [long-term retention](long-term-retention-overview.md). |
-| **Hyperscale RA-GZRS preview** | It's now possible to choose read access geo-zone-redundancy (RA-GZRS) as a backup storage redundancy for Hyperscale databases. This feature is currently in preview. For more information, see [Hyperscale backup storage redundancy](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy). |
+| **Hyperscale RA-GZRS GA** | It's now possible to [choose read access geo-zone-redundancy (RA-GZRS) as a backup storage redundancy for Hyperscale databases](https://techcommunity.microsoft.com/t5/azure-sql-blog/read-access-geo-zone-redundant-storage-ra-gzrs-now-available-for/ba-p/3638971). For more information, see [Hyperscale backup storage redundancy](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy). |
 | **Hyperscale reverse migrate GA** | This feature allows customers who have recently migrated an existing database in Azure SQL Database to the Hyperscale service tier to move back in an emergency, should Hyperscale not meet their needs. While reverse migration is initiated by a service tier change, it's essentially a size-of-data move between different architectures. This feature is now generally available. For more information, see [Reverse migration to the General Purpose service tier](manage-hyperscale-database.md#reverse-migrate-from-hyperscale). |
 | **UMI support for auditing preview** | It's now possible to configure the storage account used for SQL auditing logs by using User Managed Identity (UMI). This feature is currently in preview. For more information, see [auditing](auditing-overview.md). |
 | **Zone redundant configuration for Hyperscale databases GA** | The zone redundant configuration feature utilizes [Azure Availability Zones](/azure/availability-zones/az-overview#availability-zones) to replicate databases across multiple physical locations within an Azure region. By selecting [zone redundancy](high-availability-sla.md#zone-redundant-availability), you can make your Hyperscale databases resilient to a much larger set of failures, including catastrophic datacenter outages, without any changes to the application logic. This configuration option is now generally available. For more information, see [Zone redundant configuration for Hyperscale databases](high-availability-sla.md#zone-redundant-availability). |

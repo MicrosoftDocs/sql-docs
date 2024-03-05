@@ -31,21 +31,21 @@ Outbound firewall rules limit network traffic from the Azure SQL [logical server
 
 ## Set outbound firewall rules in the Azure portal
 
-1. Browse to the **Outbound networking** section in the **Firewalls and virtual networks** blade for your Azure SQL Database and select **Configure outbound networking restrictions**.
+1. Browse to the **Outbound networking** section in the **Firewalls and virtual networks** pane for your Azure SQL Database and select **Configure outbound networking restrictions**.
 
    ![Screenshot of Outbound Networking section][1]  
 
-   This will open up the following blade on the right-hand side:
+   This will open up the following pane on the right-hand side:
 
-   ![Screenshot of Outbound Networking blade with nothing selected][2]  
+   ![Screenshot of Outbound Networking pane with nothing selected][2]  
 
 1. Select the check box titled **Restrict outbound networking** and then add the FQDN for the Storage accounts (or SQL Databases) using the **Add domain** button.
 
-   ![Screenshot of Outbound Networking blade showing how to add FQDN][3]  
+   ![Screenshot of Outbound Networking pane showing how to add FQDN][3]  
 
 1. After you're done, you should see a screen similar to the one below. Select **OK** to apply these settings.
 
-   ![Screenshot of of Outbound Networking blade after FQDNs are added][4]  
+   ![Screenshot of of Outbound Networking pane after FQDNs are added][4]  
 
 ## Set outbound firewall rules using PowerShell
 

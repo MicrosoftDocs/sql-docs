@@ -59,7 +59,7 @@ BOOL SQLWritePrivateProfileString(
 |ODBC_ERROR_OUT_OF_MEM|Out of memory|The installer could not perform the function because of a lack of memory.|  
   
 ## Comments  
- **SQLWritePrivateProfileString** is provided as a simple way to port drivers and driver setup DLLs from Microsoft® Windows® to Microsoft Windows NT®/Windows 2000. Calls to **WritePrivateProfileString** that write a profile string to the Odbc.ini file should be replaced with calls to **SQLWritePrivateProfileString**. **SQLWritePrivateProfileString** calls functions in the Win32® API to add the specified value name and data to the Odbc.ini subkey of the system information.  
+ **SQLWritePrivateProfileString** is provided as a simple way to port drivers and driver setup DLLs from Microsoft Windows to Microsoft Windows NT/Windows 2000. Calls to **WritePrivateProfileString** that write a profile string to the Odbc.ini file should be replaced with calls to **SQLWritePrivateProfileString**. **SQLWritePrivateProfileString** calls functions in the Win32 API to add the specified value name and data to the Odbc.ini subkey of the system information.  
   
  A configuration mode indicates where the Odbc.ini entry listing DSN values is in the system information. If the DSN is a User DSN (the state variable is USERDSN_ONLY), the function writes to the Odbc.ini entry in HKEY_CURRENT_USER. If the DSN is a System DSN (SYSTEMDSN_ONLY), the function writes to the Odbc.ini entry in HKEY_LOCAL_MACHINE. If the state variable is BOTHDSN, HKEY_CURRENT_USER is tried, and if it fails, HKEY_LOCAL_MACHINE is used.  
   

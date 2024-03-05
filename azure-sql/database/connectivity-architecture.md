@@ -18,11 +18,11 @@ ms.custom:
 
 [!INCLUDE [appliesto-sqldb-asa-formerly-sqldw](../includes/appliesto-sqldb-asa-formerly-sqldw.md)]
 
-This article explains architecture of various components that direct network traffic to a server in Azure SQL Database or dedicated SQL pools (formerly SQL DW) in Azure Synapse Analytics. It also explains different connection policies and how it impacts clients connecting from within Azure and clients connecting from outside of Azure.
+This article explains architecture of various components that direct network traffic to a server in Azure SQL Database or dedicated SQL pools in Azure Synapse Analytics. It also explains different connection policies and how it impacts clients connecting from within Azure and clients connecting from outside of Azure.
 
 - For connection strings to Azure SQL Database, see [Connect and query to Azure SQL Database](connect-query-content-reference-guide.md).
 - For connection strings to Azure Synapse Analytics pools, see [Connect to Synapse SQL](/azure/synapse-analytics/sql/connect-overview).
-- For settings that control connectivity to the [logical server](logical-servers.md) for Azure SQL Database and dedicated SQL pools (formerly SQL DW) in Azure Synapse Analytics, see [connectivity settings](connectivity-settings.md).
+- For settings that control connectivity to the [logical server](logical-servers.md) for Azure SQL Database and dedicated SQL pools in Azure Synapse Analytics, see [connectivity settings](connectivity-settings.md).
 - This article does *not* apply to **Azure SQL Managed Instance**. Refer to [Connectivity architecture for Azure SQL Managed Instance](../managed-instance/connectivity-architecture-overview.md).
 
 ## Connectivity architecture
@@ -34,7 +34,7 @@ The following diagram provides a high-level overview of the connectivity archite
 The following steps describe how a connection is established to Azure SQL Database:
 
 - Clients connect to the gateway that has a public IP address and listens on port 1433.
-- The gateway, depending on the effective connection policy, redirects or proxies the traffic to the right database cluster.
+- Depending on the effective connection policy, the gateway redirects or proxies the traffic to the correct database cluster.
 - Inside the database cluster, traffic is forwarded to the appropriate database.
 
 ## Connection policy
@@ -52,7 +52,12 @@ Servers in SQL Database and dedicated SQL pools (formerly SQL DW) in Azure Synap
   - When using the Proxy connection policy, refer to the [Gateway IP addresses](#gateway-ip-addresses) list later in this article for your region's IP addresses to allow.
 - **Default:** This is the connection policy in effect on all servers after creation unless you explicitly alter the connection policy to either `Proxy` or `Redirect`. The default policy is `Redirect` for all client connections originating inside of Azure (for example, from an Azure Virtual Machine) and `Proxy` for all client connections originating outside (for example, connections from your local workstation).
 
-We highly recommend the `Redirect` connection policy over the `Proxy` connection policy for the lowest latency and highest throughput. However, you need to meet the extra requirements for allowing network traffic as outlined above. If the client is an Azure Virtual Machine, you can accomplish this using Network Security Groups (NSG) with [service tags](/azure/virtual-network/network-security-groups-overview#service-tags). If the client is connecting from a workstation on-premises, you might need to work with your network admin to allow network traffic through your corporate firewall.
+We highly recommend the `Redirect` connection policy over the `Proxy` connection policy for the lowest latency and highest throughput. However, you need to meet the extra requirements for allowing network traffic for outbound communication:
+
+- If the client is an Azure Virtual Machine, you can accomplish this using Network Security Groups (NSG) with [service tags](/azure/virtual-network/network-security-groups-overview#service-tags). 
+- If the client is connecting from a workstation on-premises, you might need to work with your network admin to allow network traffic through your corporate firewall.
+
+To change the connection policy, see [Change the connection policy](connectivity-settings.md#change-the-connection-policy).
 
 ## Connectivity from within Azure
 
@@ -73,7 +78,7 @@ If you're connecting from outside Azure, your connections have a connection poli
 
 The table below lists the individual Gateway IP addresses and Gateway IP address subnets per region.
 
-Periodically, we'll retire individual **Gateway IP addresses** and migrate the traffic to **Gateway IP address subnets** as per the process outlined at [Azure SQL Database traffic migration to newer Gateways](gateway-migration.md).
+Periodically, Microsoft retires individual **Gateway IP addresses** and migrates the traffic to **Gateway IP address subnets**, as per the process outlined at [Azure SQL Database traffic migration to newer Gateways](gateway-migration.md).
 
 We strongly encourage customers to move away from relying on **any individual Gateway IP address** (since these will be retired in the future). Instead allow network traffic to reach **both** the individual Gateway IP addresses and Gateway IP address subnets in a region.
 
@@ -88,7 +93,7 @@ We strongly encourage customers to move away from relying on **any individual Ga
 | Australia Central 2  | 20.36.113.0, 20.36.112.6 | 20.36.113.32/29,20.53.56.32/27 |
 | Australia East       | 13.75.149.87, 40.79.161.1, 13.70.112.9 | 13.70.112.32/29, 40.79.160.32/29, 40.79.168.32/29,20.53.46.128/27 |
 | Australia Southeast  | 13.73.109.251, 13.77.48.10, 13.77.49.32 | 13.77.49.32/29,104.46.179.160/27 |
-| Brazil South         | 191.233.200.14, 191.234.144.16, 191.234.152.3 | 191.233.200.32/29, 191.234.144.32/29, 191.234.144.32/29, 191.234.152.32/27, 191.234.153.32/27, 191.234.157.136/29 |
+| Brazil South         | 191.233.200.14, 191.234.144.16, 191.234.152.3 | 191.233.200.32/29, 191.234.144.32/29, 191.234.152.32/27, 191.234.153.32/27, 191.234.157.136/29 |
 | Canada Central       | 52.246.152.0, 20.38.144.1 | 13.71.168.32/29, 20.38.144.32/29, 52.246.152.32/29,20.48.196.32/27 |
 | Canada East          | 40.69.105.9, 40.69.105.10 | 40.69.105.32/29,52.139.106.192/27|
 | Central US           | 104.208.21.1, 13.89.169.20 | 104.208.21.192/29, 13.89.168.192/29, 52.182.136.192/29,20.40.228.128/27 |

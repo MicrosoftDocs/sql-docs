@@ -432,6 +432,9 @@ providers/Microsoft.Sql/managedInstances/{managedInstanceName}/startStopSchedule
 ---
 
 
+> [!NOTE]  
+> Currently, the Activity Log only captures operations initiated via Azure Resource Manager (ARM). The scheduled start and stop operations are not tracked on the Actitity Log. Hence, at this time, it is not possible to view the history of the scheduled start and stop operations via the Activity Log in Azure portal or via any monitoring that is based on such logs.
+
 
 ## Next steps
 

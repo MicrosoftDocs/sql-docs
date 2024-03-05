@@ -37,7 +37,7 @@ In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssa
 
 **Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)].
 
-Historically, transaction log files couldn't be initialized instantaneously. However, starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] (all editions) and in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], instant file initialization can benefit from transaction log autogrowth events up to 64 MB. The default auto growth size increment for new databases is 64 MB. Transaction log file autogrowth events larger than 64 MB can't benefit from instant file initialization.
+Historically, transaction log files couldn't be initialized instantaneously. However, starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] (all editions) and in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], transaction log autogrowth events up to 64 MB can benefit from instant file initialization. The default auto growth size increment for new databases is 64 MB. Transaction log file autogrowth events larger than 64 MB can't benefit from instant file initialization.
 
 Instant file initialization is allowed for transaction log growth on databases that have transparent data encryption (TDE) enabled, due to the nature of how the transaction log file is expanded, and the fact that the transaction log is written into in a serial fashion.
 

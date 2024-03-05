@@ -21,7 +21,7 @@ apitype: "DLLExport"
 |Keyword|List returned?|Optional?|Description|  
 |-------------|--------------------|---------------|-----------------|  
 |DSN|N/A|No|Name of the data source returned by **SQLDataSources**. The DSN keyword cannot be used if the DRIVER keyword is used.|  
-|DRIVER|N/A|No|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver name is {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. The DRIVER keyword cannot be used if the DSN keyword is used.|  
+|DRIVER|N/A|No|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver name is {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. The DRIVER keyword cannot be used if the DSN keyword is used.|  
   
 ## Level 2  
   

@@ -24,16 +24,20 @@ monikerRange: "= azuresql || = azuresql-db"
 # Azure portal Query editor for Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-The Query editor (preview) is a tool to run T-SQL queries in the Azure portal in the browser against Azure SQL Database. This article details authentication, capabilities, and other details on the Azure portal Query editor for Azure SQL Database.
+The Query editor (preview) is a tool to run T-SQL queries in the Azure portal in the browser against Azure SQL Database.
 
 - For a quickstart on the Azure portal Query editor, see [Quickstart: Use the Azure portal query editor (preview)](connect-query-portal.md).
 - For more advanced object explorer capabilities and management functions, use [Azure Data Studio](/azure-data-studio/quickstart-sql-database) or [SQL Server Management Studio (SSMS)](connect-query-ssms.md).
+- If you don't already have an Azure SQL Database created, visit [Quickstart: Create a single database](single-database-create-quickstart.md). Look for the option to use your offer to [try Azure SQL Database for free (preview)](free-offer.md).
 
 ## Query your Azure SQL Database from the Azure portal
 
 The Query editor is designed for lightweight querying and object exploration in your Azure SQL database, all from within the browser in the Azure portal. You can run T-SQL queries against your database, as well as edit data in the build-in tabular [data editor](#data-editor).
 
 Similar to the query experience in SQL Server Management Studio, use the Query editor for both simple queries or larger T-SQL queries. You can execute Data Manipulation Language (DML) and Data Definition Language (DDL) queries.
+
+> [!TIP]
+> New to Azure SQL Database? Get up to speed with in-depth free training content: [Azure SQL Fundamentals](/training/paths/azure-sql-fundamentals/).
 
 ## Connect via the query editor
 
@@ -195,8 +199,14 @@ sudo iptables -A OUTPUT -p tcp --dport 1443 -j ACCEPT
 
 When using Azure VMs, you have an [Azure network security group](/azure/virtual-network/network-security-group-how-it-works) blocking connectivity. A network security group can filter inbound and outbound network traffic to and from Azure resources in an Azure virtual network. You need to add an [outbound security rule](/azure/virtual-network/network-security-groups-overview#security-rules) to the network security group. For an example, see [Create security rules](/azure/virtual-network/tutorial-filter-network-traffic#create-security-rules).
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Quickstart: Use the Azure portal query editor to query Azure SQL Database](connect-query-portal.md)
+
 ## Related content
 
 - [What is Azure SQL?](../azure-sql-iaas-vs-paas-what-is-overview.md)
 - [Azure SQL glossary of terms](../glossary-terms.md)
 - [T-SQL differences between SQL Server and Azure SQL Database](transact-sql-tsql-differences-sql-server.md)
+

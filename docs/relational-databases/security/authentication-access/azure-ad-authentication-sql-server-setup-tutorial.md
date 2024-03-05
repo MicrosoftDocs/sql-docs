@@ -295,7 +295,7 @@ A new database user is given the **Connect** permission by default. All other SQ
 
 ### Microsoft Entra guest accounts
 
-The `CREATE LOGIN` and `CREATE USER` syntax also supports guest users. For example, if `testuser@outlook.com` is invited to the `contoso.com` tenant, it can be added as a login to SQL Server with the following syntax. In the examples, `outlook.com` is provided even though SQL Server uses the account registered in the `contoso.com` tenant.
+The `CREATE LOGIN` and `CREATE USER` syntax also supports guest users. For example, if `testuser@outlook.com` is invited to the `contoso.com` tenant, it can be added as a login to SQL Server with the same syntax as creating any other Microsoft Entra user or login. When creating guest users and logins, use the guest account's originating email, not its user principal name in the tenant. In the examples, `outlook.com` is provided even though the account is registered in the `contoso.com` tenant.
 
 #### Create a guest user from an existing login
 

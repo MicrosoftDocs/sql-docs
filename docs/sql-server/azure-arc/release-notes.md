@@ -19,7 +19,7 @@ ms.custom: ignite-2023
 
 ## Backup management
 
-- Schedule backup at instance level or database level. For details, review [Assign permissions](backup-local.md#backup-schedule-level).
+- Schedule backup at instance level or database level. For details, review [Backup schedule level](backup-local.md#backup-schedule-level).
 
 ## February 13, 2024
 

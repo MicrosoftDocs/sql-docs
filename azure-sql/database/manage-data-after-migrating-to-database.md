@@ -137,7 +137,7 @@ You can create firewall rules at the server level or at the database level. Serv
 
 #### Service endpoints
 
-By default, your database is configured to "Allow Azure services to access server" – which means any Virtual Machine in Azure may attempt to connect to your database. These attempts still do have to get authenticated. However, if you wouldn't like your database to be accessible by any Azure IPs, you can disable "Allow Azure services to access server". Additionally, you can configure [VNet Service Endpoints](vnet-service-endpoint-rule-overview.md).
+By default, your database is configured to "Allow Azure services and resources to access this server" – which means any Virtual Machine in Azure may attempt to connect to your database. These attempts still have to be authenticated. If you don't want your database to be accessible by any Azure IPs, you can disable "Allow Azure services and resources to access this server". Additionally, you can configure [VNet Service Endpoints](vnet-service-endpoint-rule-overview.md).
 
 Service endpoints (SE) allow you to expose your critical Azure resources only to your own private virtual network in Azure. By doing so, you essentially eliminate public access to your resources. The traffic between your virtual network to Azure stays on the Azure backbone network. Without SE you get forced-tunneling packet routing. Your virtual network forces the internet traffic to your organization and the Azure Service traffic to go over the same route. With Service Endpoints, you can optimize this since the packets flow straight from your virtual network to the service on Azure backbone network.
 
@@ -228,7 +228,7 @@ ExpressRoute also allows you to burst up to 2x the bandwidth limit you purchase 
 
 ### Is SQL Database compliant with any regulatory requirements, and how does that help with my own organization's compliance
 
-SQL Database is compliant with a range of regulatory compliancies. To view the latest set of compliancies that have been met by SQL Database, visit the [Microsoft Trust Center](https://gallery.technet.microsoft.com/Overview-of-Azure-c1be3942) and drill down on the compliancies that are important to your organization to see if SQL Database is included under the compliant Azure services. it's important to note that although SQL Database may be certified as a compliant service, it aids in the compliance of your organization's service but doesn't automatically guarantee it.
+SQL Database is compliant with a range of regulatory compliancies. To view the latest set of compliancies that have been met by SQL Database, visit the [Microsoft Trust Center](https://www.microsoft.com/trust-center/product-overview) and drill down on the compliancies that are important to your organization to see if SQL Database is included under the compliant Azure services. it's important to note that although SQL Database may be certified as a compliant service, it aids in the compliance of your organization's service but doesn't automatically guarantee it.
 
 ## Intelligent database monitoring and maintenance after migration
 

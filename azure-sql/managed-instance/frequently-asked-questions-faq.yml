@@ -230,8 +230,8 @@ sections:
           
           You can optimize the performance of your managed instance by:
           - [Automatic tuning](../database/automatic-tuning-overview.md) that provides peak performance and stable workloads through continuous performance tuning based on AI and machine learning.
-          - [In-memory OLTP](../in-memory-oltp-overview.md) that improves throughput and latency on transactional processing workloads and delivers faster business insights. 
-          - Applying some of the [best practices for application and database tuning](performance-guidance.md#tune-your-database)
+          - [In-memory OLTP](in-memory-oltp-overview.md) that improves throughput and latency on transactional processing workloads and delivers faster business insights. 
+          - Applying some of the [best practices for application and database tuning](performance-guidance.md#tune-your-database).
           - [Switching the connection type from proxy to redirect mode](connection-types-overview.md#changing-connection-type) for lower latency and higher throughput, in case your workload consists of lots of small transactions.
           
           ### How can I further tune performance of my General Purpose managed instance?

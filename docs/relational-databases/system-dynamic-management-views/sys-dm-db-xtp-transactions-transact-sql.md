@@ -75,12 +75,10 @@ For [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and previous versions,
 
 For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, requires VIEW DATABASE PERFORMANCE STATE permission on the database.
 
-## See also
+## Related content
 
 - [Introduction to Memory-Optimized Tables](../in-memory-oltp/introduction-to-memory-optimized-tables.md)
 - [Memory-Optimized Table Dynamic Management Views](memory-optimized-table-dynamic-management-views-transact-sql.md)
-
-## Next steps
-
 - [[!INCLUDE [inmemory](../../includes/inmemory-md.md)] Overview and Usage Scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
-- [Optimize performance by using in-memory technologies in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/in-memory-oltp-overview)
+- [Optimize performance by using in-memory technologies in Azure SQL Database](/azure/azure-sql/database/in-memory-oltp-overview?view=azuresql-db&preserve-view=true)
+- [Optimize performance by using in-memory technologies in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/in-memory-oltp-overview?view=azuresql-mi&preserve-view=true)

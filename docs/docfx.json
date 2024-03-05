@@ -76,7 +76,6 @@
 
       },
       "feedback_product_url": {
-        "azure-data-studio/**/*.md": "https://github.com/microsoft/azuredatastudio/issues/"
       },
 
       "manager": {

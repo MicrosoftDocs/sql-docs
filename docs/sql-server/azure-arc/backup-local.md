@@ -117,9 +117,6 @@ To enable automated backups in Azure portal:
 
 Set retention period and frequency to meet business requirements. The retention policy should be greater than the full backup frequency. As a measure of safety, the automated backup process always keeps backups sets of at least one full backup frequency plus the retention days.
 
-> [!NOTE]
-> If the backup retention day is set to 0, automated backup is disabled and no backups are taken
-
 ### [Azure CLI](#tab/az)
 
 To enable automated backups using `az` CLI:
@@ -156,6 +153,9 @@ To enable automated backups using `az` CLI:
     ```azurecli
     az sql server-arc backups-policy set --name MyArcServer_SQLServerPROD --resource 
     ```
+
+> [!NOTE]
+> If the backup retention day is set to 0, automated backup is disabled and no backups are taken.
 
 ---
 

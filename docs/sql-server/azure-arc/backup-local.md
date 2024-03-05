@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.custom: ignite-2023
 ---
 
-# Manage automated backups - SQL Server enabled by Azure Arc
+# Manage automated backups - SQL Server enabled by Azure Arc (preview)
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-The Azure extension for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] can perform backups automatically for the system and user databases that are part of the instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] enabled by Azure Arc.
+The Azure extension for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] can perform backups automatically for the system and user databases of the instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] enabled by Azure Arc.
 
 This article explains how you can:
 
@@ -22,21 +22,21 @@ This article explains how you can:
 
 [!INCLUDE [azure-arc-sql-preview](includes/azure-arc-sql-preview.md)]
 
-Backup files are stored in the default backup location.
+Backup files are stored in the default backup location of the SQL instance.
 
 You can enable automated backups through Azure portal or via `az` CLI.
 
-To enable automated backups, set the retention days.
+To enable automated backups, set the retention days to a non-zero vlaue.
 
 ### Supported license types
 
-Automated backups are only supported for license types of PAID or PAYG.
+Automated backups are only available for licenses with Software Assurance, SQL subscription, or pay-as-you-go. For details, see [Feature availability depending on license type](overview.md#feature-availability-depending-on-license-type).
 
 ## Backup frequency and retention days
 
 You can configure two properties for automated backups:
 
-- **retention days** - number of days to retain the backup files. Use a number between 1 and 35.
+- **retention days** - number of days to retain the backup files. Use a number between 1 and 35. If the backup retention day is set to 0, automated backup is disabled and no backups are taken, even though backup policy is retained.
 - **backup schedule** - the schedule at which the full, differential, and transaction log backups should be performed. Depends on backup type:
   - Full backups: Daily or weekly
   - Differential backups: Every 12 hours or every 24 hours
@@ -53,7 +53,7 @@ You can also run backups on a **default** schedule:
 You can schedule backups at
 
 - Instance level
-- Database level
+- Database level (available from extension version 1.1.2594.118 or later) 
 
 If both database and instance level backup schedule is set, database level schedule takes precedence over the instance level backup schedule. If you delete the database level backup schedule, the instance level backup schedule applies.
 
@@ -293,16 +293,16 @@ When the built-in automated backups are enabled on an instance of [!INCLUDE [ssn
 - If both database and instance level backup schedules are set, database level takes precedence over the instance level backup schedule. Deleting the database level backup schedule reverts back to instance level backup schedule, if there's any.
 - The value for `--name` should be the name of the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] enabled by Azure Arc, which is usually in the `[Servername_SQLservername]` format.
 - The value for `--retention-days` can be from 0-35.
-- A value of `0` for `--retention-days` indicates to not perform automated backups for the instance.
-- The backup files are written to the default backup location as configured at the instance level.
+- A value of `0` for `--retention-days` indicates to not perform automated backups for the instance or the database.
+- The backup files are written to the default backup location as configured at the SQL Server instance level.
 - If there are multiple [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances on the same host where the Azure extension for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is installed, you need to configure automated backups separately for each instance.
 - If you change the `--retention-days` after the `--backups-policy` is already configured, any change takes effect going forward and isn't retroactively applied.
 
 ## Limitations
 
+- The user databases need to be in full recovery model for the backups to be performed. Databases that aren't in full recovery model aren't automatically backed up.
 - Automated backups are currently not supported for Always On failover cluster instances (FCI).
 - Automated backups aren't supported on any instance that hosts an availability group (AG) replica.
-- The user databases need to be in full recovery model for the backups to be performed. Databases that aren't in full recovery model aren't automatically backed up.
 - Automated backups are only available for licenses with Software Assurance, SQL subscription, or pay-as-you-go. For details, see [Feature availability depending on license type](overview.md#feature-availability-depending-on-license-type).
 
 ## Related tasks

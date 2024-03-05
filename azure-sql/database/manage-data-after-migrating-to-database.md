@@ -220,7 +220,7 @@ The network traffic between your organization and SQL Database would generally g
 - [Any-to-any](/azure/expressroute/expressroute-connectivity-models#IPVPN)
 - [Point-to-Point](/azure/expressroute/expressroute-connectivity-models#Ethernet)
 
-ExpressRoute also allows you to burst up to 2x the bandwidth limit you purchase for no additional charge. it's also possible to configure cross region connectivity using ExpressRoute. To see a list of ExpressRoute connectivity providers, see: [ExpressRoute Partners and Peering Locations](/azure/expressroute/expressroute-locations). The following articles describe Express Route in more detail:
+ExpressRoute also allows you to burst up to 2x the bandwidth limit you purchase for no additional charge. It's also possible to configure cross region connectivity using ExpressRoute. To see a list of ExpressRoute connectivity providers, see: [ExpressRoute Partners and Peering Locations](/azure/expressroute/expressroute-locations). The following articles describe Express Route in more detail:
 
 - [Introduction on Express Route](/azure/expressroute/expressroute-introduction)
 - [Prerequisites](/azure/expressroute/expressroute-prerequisites)

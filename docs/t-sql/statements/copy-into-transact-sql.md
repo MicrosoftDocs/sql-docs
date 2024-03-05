@@ -42,6 +42,10 @@ Use COPY for the following capabilities:
 - Specify wildcards and multiple files in the storage location path
 - Automatic schema discovery simplifies the process of defining and mapping source data into target tables
 - The automatic table creation process automatically creates the tables and works alongside with automatic schema discovery
+- Enabling you to directly load complex data types from Parquet files such as Maps and Lists into string columns without using other tools to pre-process the data
+
+> [!NOTE]  
+> To load complex data types from Parquet files automatic table creation must be turned on by using AUTO_CREATE_TABLE.
 
 Visit the following documentation for comprehensive examples and quickstarts using the COPY statement:
 

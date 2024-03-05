@@ -387,7 +387,7 @@ For the *accept* header, the following are the accepted values.
 For more information on text header types, please refer to the [text type registry at IANA](https://www.iana.org/assignments/media-types/media-types.xhtml#text).
 
 > [!NOTE]  
-> If you are testing invocation of the REST endpoint with other tools, like [cURL](https://curl.se/) or any modern REST client like [Postman](https://www.postman.com/) or [Insomnia](https://insomnia.rest/), make sure to include the same headers that are automatically injected by `sp_invoke_external_rest_endpoint` to have the same behavior and results.
+> If you are testing invocation of the REST endpoint with other tools, like [cURL](https://curl.se/) or any modern REST client like [Insomnia](https://insomnia.rest/), make sure to include the same headers that are automatically injected by `sp_invoke_external_rest_endpoint` to have the same behavior and results.
 
 ## Best practices
 

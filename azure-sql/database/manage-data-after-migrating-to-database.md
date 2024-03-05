@@ -22,7 +22,7 @@ Moving from the traditional self-managed, self-controlled environment to a PaaS 
 - Are In the process of migrating their application(s) – On-going migration scenario.
 - Have recently completed the migration to Azure SQL Database – New DBA in the cloud.
 
-This article discusses some of the core characteristics of Azure SQL Database as a platform that you can readily leverage when working with single databases and pooled databases in elastic pools. They are the following:
+This article discusses some of the core characteristics of Azure SQL Database as a platform that you can readily leverage when working with single databases and pooled databases in elastic pools. they're the following:
 
 - Monitor databases using the Azure portal
 - Business continuity and disaster recovery (BCDR)
@@ -49,7 +49,7 @@ You can also configure alerts on the performance metrics. Select the **Add alert
 
 For example, if you expect the workload on your database to grow, you can choose to configure an email alert whenever your database reaches 80% on any of the performance metrics. You can use this as an early warning to figure out when you might have to switch to the next highest compute size.
 
-The performance metrics can also help you determine if you are able to downgrade to a lower compute size. Assume you are using a Standard S2 database and all performance metrics show that the database on average does not use more than 10% at any given time. It is likely that the database will work well in Standard S1. However, be aware of workloads that spike or fluctuate before making the decision to move to a lower compute size.
+The performance metrics can also help you determine if you're able to downgrade to a lower compute size. Assume you're using a Standard S2 database and all performance metrics show that the database on average doesn't use more than 10% at any given time. it's likely that the database will work well in Standard S1. However, be aware of workloads that spike or fluctuate before making the decision to move to a lower compute size.
 
 ## Business continuity and disaster recovery (BCDR)
 
@@ -78,7 +78,7 @@ In addition to active geo-replication, failover groups provide a convenient way 
 
 To achieve resiliency for datacenter or availability zone failures, ensure zone redundancy is enabled for the database or elastic pool.  
 
-Actively monitor your application for a disaster and initiate a failover to the secondary. You can create up to 4 such active geo-replicas in different Azure regions. It gets even better. You can also access these secondary active geo-replicas for read-only access. This comes in very handy to reduce latency for a geo-distributed application scenario.
+Actively monitor your application for a disaster and initiate a failover to the secondary. You can create up to four such active geo-replicas in different Azure regions. It gets even better. You can also access these secondary active geo-replicas for read-only access. This comes in very handy to reduce latency for a geo-distributed application scenario.
 
 
 ### What does disaster recovery look like with SQL Database
@@ -105,7 +105,7 @@ There are two authentication methods offered in SQL Database:
 - [Microsoft Entra authentication](authentication-aad-overview.md)
 - [SQL authentication](/sql/relational-databases/security/choose-an-authentication-mode#connecting-through-sql-server-authentication)
 
-Windows authentication is not supported. Microsoft Entra ID is a centralized identity and access management service. With this you can very conveniently provide single sign-on (SSO) access to the personnel in your organization. What this means is that the credentials are shared across Azure services for simpler authentication.
+Windows authentication isn't supported. Microsoft Entra ID is a centralized identity and access management service. With this you can very conveniently provide single sign-on (SSO) access to the personnel in your organization. What this means is that the credentials are shared across Azure services for simpler authentication.
 
 Microsoft Entra ID supports [multifactor authentication](authentication-mfa-ssms-overview.md), and can easily be [integrated with Windows Server Active Directory](/entra/identity/hybrid/connect/how-to-connect-install-express). This also allows SQL Database and Azure Synapse Analytics to offer multifactor authentication and guest user accounts within a Microsoft Entra domain. If you already use Active Directory on-premises, you can federate it with Microsoft Entra ID to extend your directory to Azure.
 
@@ -113,7 +113,7 @@ SQL authentication supports only username and password to authenticate users to 
 
 |**If you...**|**SQL Database / Azure Synapse Analytics**|
 |---|---|
-|Used AD on SQL Server on-premises|[Federate AD with Microsoft Entra ID](/entra/identity/hybrid/whatis-hybrid-identity), and use Microsoft Entra authentication. With this, you can use single sign-on.|
+|Used AD on SQL Server on-premises|[Federate AD with Microsoft Entra ID](/entra/identity/hybrid/whatis-hybrid-identity), and use Microsoft Entra authentication. Federation allows you to use single sign-on.|
 |Need to enforce multifactor authentication|Require multifactor authentication as a policy through [Microsoft Conditional Access](conditional-access-configure.md), and use [Microsoft Entra multifactor authentication](authentication-mfa-ssms-overview.md).|
 |Are logged in to Windows using your Microsoft Entra credentials from a federated domain|Use [Microsoft Entra integrated authentication](authentication-aad-configure.md).|
 |Are logged in to Windows using credentials from a domain not federated with Azure|Use [Microsoft Entra integrated authentication](authentication-aad-configure.md).|
@@ -137,7 +137,7 @@ You can create firewall rules at the server level or at the database level. Serv
 
 #### Service endpoints
 
-By default, your database is configured to "Allow Azure services to access server" – which means any Virtual Machine in Azure may attempt to connect to your database. These attempts still do have to get authenticated. However, if you would not like your database to be accessible by any Azure IPs, you can disable "Allow Azure services to access server". Additionally, you can configure [VNet Service Endpoints](vnet-service-endpoint-rule-overview.md).
+By default, your database is configured to "Allow Azure services to access server" – which means any Virtual Machine in Azure may attempt to connect to your database. These attempts still do have to get authenticated. However, if you wouldn't like your database to be accessible by any Azure IPs, you can disable "Allow Azure services to access server". Additionally, you can configure [VNet Service Endpoints](vnet-service-endpoint-rule-overview.md).
 
 Service endpoints (SE) allow you to expose your critical Azure resources only to your own private virtual network in Azure. By doing so, you essentially eliminate public access to your resources. The traffic between your virtual network to Azure stays on the Azure backbone network. Without SE you get forced-tunneling packet routing. Your virtual network forces the internet traffic to your organization and the Azure Service traffic to go over the same route. With Service Endpoints, you can optimize this since the packets flow straight from your virtual network to the service on Azure backbone network.
 
@@ -169,7 +169,7 @@ Encryption provides a strong mechanism to protect and secure your sensitive data
 - Your data that is in-flight
 
 In SQL Database, by default, your data at rest in the data and log files on the storage subsystem is completely and always encrypted via [Transparent Data Encryption [TDE]](/sql/relational-databases/security/encryption/transparent-data-encryption-azure-sql). Your backups are also encrypted. With TDE there are no changes required on your application side that is accessing this data. The encryption and decryption happen transparently; hence the name.
-For protecting your sensitive data in-flight and at rest, SQL Database provides a feature called [Always Encrypted (AE)](/sql/relational-databases/security/encryption/always-encrypted-database-engine). AE is a form of client-side encryption which encrypts sensitive columns in your database (so they are in ciphertext to database administrators and unauthorized users). The server receives the encrypted data to begin with. The key for Always Encrypted is also stored on the client side, so only authorized clients can decrypt the sensitive columns. The server and data administrators cannot see the sensitive data since the encryption keys are stored on the client. AE encrypts sensitive columns in the table end to end, from unauthorized clients to the physical disk. AE supports equality comparisons today, so DBAs can continue to query encrypted columns as part of their SQL commands. Always Encrypted can be used with a variety of key store options, such as [Azure Key Vault](always-encrypted-azure-key-vault-configure.md), Windows certificate store, and local hardware security modules.
+For protecting your sensitive data in-flight and at rest, SQL Database provides a feature called [Always Encrypted (AE)](/sql/relational-databases/security/encryption/always-encrypted-database-engine). AE is a form of client-side encryption which encrypts sensitive columns in your database (so they're in ciphertext to database administrators and unauthorized users). The server receives the encrypted data to begin with. The key for Always Encrypted is also stored on the client side, so only authorized clients can decrypt the sensitive columns. The server and data administrators can't see the sensitive data since the encryption keys are stored on the client. AE encrypts sensitive columns in the table end to end, from unauthorized clients to the physical disk. AE supports equality comparisons today, so DBAs can continue to query encrypted columns as part of their SQL commands. Always Encrypted can be used with a variety of key store options, such as [Azure Key Vault](always-encrypted-azure-key-vault-configure.md), Windows certificate store, and local hardware security modules.
 
 |**Characteristics**|**Always Encrypted**|**Transparent Data Encryption**|
 |---|---|---|
@@ -185,7 +185,7 @@ Every application has a certain bit of sensitive data in the database that needs
 
 [Dynamic Data Masking](dynamic-data-masking-overview.md) is a data masking feature that enables you to limit sensitive data exposure by masking it to non-privileged users on the application layer. You define a masking rule that can create a masking pattern (for example, to only show last four digits of a national ID SSN: XXX-XX-0000 and mark most of it as Xs) and identify which users are to be excluded from the masking rule. The masking happens on-the-fly and there are various masking functions available for various data categories. Dynamic data masking allows you to automatically detect sensitive data in your database and apply masking to it.
 
-[Row Level security](/sql/relational-databases/security/row-level-security) enables you to control access at the row level. Meaning, certain rows in a database table based on the user executing the query (group membership or execution context) are hidden. The access restriction is done on the database tier instead of in an application tier, to simplify your app logic. You start by creating a filter predicate, filtering out rows that are not be exposed and the security policy next defining who has access to these rows. Finally, the end user runs their query and, depending on the user's privilege, they either view those restricted rows or are unable to see them at all.
+[Row Level security](/sql/relational-databases/security/row-level-security) enables you to control access at the row level. Meaning, certain rows in a database table based on the user executing the query (group membership or execution context) are hidden. The access restriction is done on the database tier instead of in an application tier, to simplify your app logic. You start by creating a filter predicate, filtering out rows that aren't exposed and the security policy next defining who has access to these rows. Finally, the end user runs their query and, depending on the user's privilege, they either view those restricted rows or are unable to see them at all.
 
 ### How do I manage encryption keys in the cloud
 
@@ -193,20 +193,20 @@ There are key management options for both Always Encrypted (client-side encrypti
 
 #### Transparent Data Encryption (TDE)
 
-There is a two-key hierarchy in TDE – the data in each user database is encrypted by a symmetric AES-256 database-unique database encryption key (DEK), which in turn is encrypted by a server-unique asymmetric RSA 2048 master key. The master key can be managed either:
+There's a two-key hierarchy in TDE – the data in each user database is encrypted by a symmetric AES-256 database-unique database encryption key (DEK), which in turn is encrypted by a server-unique asymmetric RSA 2048 master key. The master key can be managed either:
 
 - Automatically by the platform - SQL Database.
 - Or by you using [Azure Key Vault](always-encrypted-azure-key-vault-configure.md) as the key store.
 
-By default, the master key for Transparent Data Encryption is managed by the SQL Database service for convenience. If your organization would like control over the master key, there is an option to use Azure Key Vault](always-encrypted-azure-key-vault-configure.md) as the key store. By using Azure Key Vault, your organization assumes control over key provisioning, rotation, and permission controls. [Rotation or switching the type of a TDE master key](/sql/relational-databases/security/encryption/transparent-data-encryption-byok-azure-sql-key-rotation) is fast, as it only re-encrypts the DEK. For organizations with separation of roles between security and data management, a security admin could provision the key material for the TDE master key in Azure Key Vault and provide an Azure Key Vault key identifier to the database administrator to use for encryption at rest on a server. The Key Vault is designed such that Microsoft does not see or extract any encryption keys. You also get a centralized management of keys for your organization.
+By default, the master key for Transparent Data Encryption is managed by the SQL Database service for convenience. If your organization would like control over the master key, there's an option to use [Azure Key Vault](always-encrypted-azure-key-vault-configure.md) as the key store. By using Azure Key Vault, your organization assumes control over key provisioning, rotation, and permission controls. [Rotation or switching the type of a TDE master key](/sql/relational-databases/security/encryption/transparent-data-encryption-byok-azure-sql-key-rotation) is fast, as it only re-encrypts the DEK. For organizations with separation of roles between security and data management, a security admin could provision the key material for the TDE master key in Azure Key Vault and provide an Azure Key Vault key identifier to the database administrator to use for encryption at rest on a server. The Key Vault is designed such that Microsoft doesn't see or extract any encryption keys. You also get a centralized management of keys for your organization.
 
 #### Always Encrypted
 
-There is also a [two-key hierarchy](/sql/relational-databases/security/encryption/overview-of-key-management-for-always-encrypted) in Always Encrypted - a column of sensitive data is encrypted by an AES 256-column encryption key (CEK), which in turn is encrypted by a column master key (CMK). The client drivers provided for Always Encrypted have no limitations on the length of CMKs. The encrypted value of the CEK is stored on the database, and the CMK is stored in a trusted key store, such as Windows Certificate Store, Azure Key Vault, or a hardware security module.
+There's also a [two-key hierarchy](/sql/relational-databases/security/encryption/overview-of-key-management-for-always-encrypted) in Always Encrypted - a column of sensitive data is encrypted by an AES 256-column encryption key (CEK), which in turn is encrypted by a column master key (CMK). The client drivers provided for Always Encrypted have no limitations on the length of CMKs. The encrypted value of the CEK is stored on the database, and the CMK is stored in a trusted key store, such as Windows Certificate Store, Azure Key Vault, or a hardware security module.
 
 - Both the [CEK and CMK](/sql/relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell) can be rotated.
-- CEK rotation is a size of data operation and can be time-intensive depending on the size of the tables containing the encrypted columns. Hence it is prudent to plan CEK rotations accordingly.
-- CMK rotation, however, does not interfere with database performance, and can be done with separated roles.
+- CEK rotation is a size of data operation and can be time-intensive depending on the size of the tables containing the encrypted columns. Hence, it's prudent to plan CEK rotations accordingly.
+- CMK rotation, however, doesn't interfere with database performance, and can be done with separated roles.
 
 The following diagram shows the key store options for the column master keys in Always Encrypted
 
@@ -214,13 +214,13 @@ The following diagram shows the key store options for the column master keys in 
 
 ### How can I optimize and secure the traffic between my organization and SQL Database
 
-The network traffic between your organization and SQL Database would generally get routed over the public network. However, if you choose to optimize this path and make it more secure, you can look into Azure ExpressRoute. ExpressRoute essentially lets you extend your corporate network into the Azure platform over a private connection. By doing so, you do not go over the public Internet. You also get higher security, reliability, and routing optimization that translates to lower network latencies and much faster speeds than you would normally experience going over the public internet. If you are planning on transferring a significant chunk of data between your organization and Azure, using ExpressRoute can yield cost benefits. You can choose from three different connectivity models for the connection from your organization to Azure:
+The network traffic between your organization and SQL Database would generally get routed over the public network. However, if you choose to optimize this path and make it more secure, you can look into Azure ExpressRoute. ExpressRoute essentially lets you extend your corporate network into the Azure platform over a private connection. By doing so, you don't go over the public Internet. You also get higher security, reliability, and routing optimization that translates to lower network latencies and much faster speeds than you would normally experience going over the public internet. If you're planning on transferring a significant chunk of data between your organization and Azure, using ExpressRoute can yield cost benefits. You can choose from three different connectivity models for the connection from your organization to Azure:
 
 - [Cloud Exchange Co-location](/azure/expressroute/expressroute-connectivity-models#CloudExchange)
 - [Any-to-any](/azure/expressroute/expressroute-connectivity-models#IPVPN)
 - [Point-to-Point](/azure/expressroute/expressroute-connectivity-models#Ethernet)
 
-ExpressRoute also allows you to burst up to 2x the bandwidth limit you purchase for no additional charge. It is also possible to configure cross region connectivity using ExpressRoute. To see a list of ExpressRoute connectivity providers, see: [ExpressRoute Partners and Peering Locations](/azure/expressroute/expressroute-locations). The following articles describe Express Route in more detail:
+ExpressRoute also allows you to burst up to 2x the bandwidth limit you purchase for no additional charge. it's also possible to configure cross region connectivity using ExpressRoute. To see a list of ExpressRoute connectivity providers, see: [ExpressRoute Partners and Peering Locations](/azure/expressroute/expressroute-locations). The following articles describe Express Route in more detail:
 
 - [Introduction on Express Route](/azure/expressroute/expressroute-introduction)
 - [Prerequisites](/azure/expressroute/expressroute-prerequisites)
@@ -228,11 +228,11 @@ ExpressRoute also allows you to burst up to 2x the bandwidth limit you purchase 
 
 ### Is SQL Database compliant with any regulatory requirements, and how does that help with my own organization's compliance
 
-SQL Database is compliant with a range of regulatory compliancies. To view the latest set of compliancies that have been met by SQL Database, visit the [Microsoft Trust Center](https://gallery.technet.microsoft.com/Overview-of-Azure-c1be3942) and drill down on the compliancies that are important to your organization to see if SQL Database is included under the compliant Azure services. It is important to note that although SQL Database may be certified as a compliant service, it aids in the compliance of your organization's service but does not automatically guarantee it.
+SQL Database is compliant with a range of regulatory compliancies. To view the latest set of compliancies that have been met by SQL Database, visit the [Microsoft Trust Center](https://gallery.technet.microsoft.com/Overview-of-Azure-c1be3942) and drill down on the compliancies that are important to your organization to see if SQL Database is included under the compliant Azure services. it's important to note that although SQL Database may be certified as a compliant service, it aids in the compliance of your organization's service but doesn't automatically guarantee it.
 
 ## Intelligent database monitoring and maintenance after migration
 
-Once you've migrated your database to SQL Database, you are going to want to monitor your database (for example, check how the resource utilization is like or DBCC checks) and perform regular maintenance (for example, rebuild or reorganize indexes, statistics etc.). Fortunately, SQL Database is Intelligent in the sense that it uses the historical trends and recorded metrics and statistics to proactively help you monitor and maintain your database, so that your application runs optimally always. In some cases, Azure SQL Database can automatically perform maintenance tasks depending on your configuration setup. There are three facets to monitoring your database in SQL Database:
+Once you've migrated your database to SQL Database, you're going to want to monitor your database (for example, check how the resource utilization is like or DBCC checks) and perform regular maintenance (for example, rebuild or reorganize indexes, statistics etc.). Fortunately, SQL Database is Intelligent in the sense that it uses the historical trends and recorded metrics and statistics to proactively help you monitor and maintain your database, so that your application runs optimally always. In some cases, Azure SQL Database can automatically perform maintenance tasks depending on your configuration setup. There are three facets to monitoring your database in SQL Database:
 
 - Performance monitoring and optimization.
 - Security optimization.
@@ -240,7 +240,7 @@ Once you've migrated your database to SQL Database, you are going to want to mon
 
 ### Performance monitoring and optimization
 
-With Query Performance Insights, you can get tailored recommendations for your database workload so that your applications can keep running at an optimal level - always. You can also set it up so that these recommendations get applied automatically and you do not have to bother performing maintenance tasks. With SQL Database Advisor, you can automatically implement index recommendations based on your workload - this is called Auto-Tuning. The recommendations evolve as your application workload changes to provide you with the most relevant suggestions. You also get the option to manually review these recommendations and apply them at your discretion.  
+With Query Performance Insights, you can get tailored recommendations for your database workload so that your applications can keep running at an optimal level - always. You can also set it up so that these recommendations get applied automatically and you don't have to bother performing maintenance tasks. With SQL Database Advisor, you can automatically implement index recommendations based on your workload - this is called Auto-Tuning. The recommendations evolve as your application workload changes to provide you with the most relevant suggestions. You also get the option to manually review these recommendations and apply them at your discretion.  
 
 ### Security optimization
 
@@ -292,7 +292,7 @@ A major portion of the troubleshooting techniques you would use for diagnosing q
 
 Your approach towards troubleshooting performance issues can significantly benefit by using intelligent features such as [Query Performance Insight(QPI)](query-performance-insight-use.md) and [Database Advisor](database-advisor-implement-performance-recommendations.md) in conjunction and so the difference in methodology differs in that respect – you no longer need to do the manual work of grinding out the essential details that might help you troubleshoot the issue at hand. The platform does the hard work for you. One example of that is QPI. With QPI, you can drill all the way down to the query level and look at the historical trends and figure out when exactly the query regressed. The Database Advisor gives you recommendations on things that might help you improve your overall performance in general like - missing indexes, dropping indexes, parameterizing your queries etc.
 
-With performance troubleshooting, it is important to identify whether it is just the application or the database backing it, that's impacting your application performance. Often the performance problem lies in the application layer. It could be the architecture or the data access pattern. For example, consider you have a chatty application that is sensitive to network latency. In this case, your application suffers because there would be many short requests going back and forth ("chatty") between the application and the server and on a congested network, these roundtrips add up fast. To improve the performance in this case, you can use [Batch Queries](performance-guidance.md#batch-queries). Using batches helps you tremendously because now your requests get processed in a batch; thus, helping you cut down on the roundtrip latency and improve your application performance.
+With performance troubleshooting, it's important to identify whether it's just the application or the database backing it, that's impacting your application performance. Often the performance problem lies in the application layer. It could be the architecture or the data access pattern. For example, consider you have a chatty application that is sensitive to network latency. In this case, your application suffers because there would be many short requests going back and forth ("chatty") between the application and the server and on a congested network, these roundtrips add up fast. To improve the performance in this case, you can use [Batch Queries](performance-guidance.md#batch-queries). Using batches helps you tremendously because now your requests get processed in a batch; thus, helping you cut down on the roundtrip latency and improve your application performance.
 
 Additionally, if you notice a degradation in the overall performance of your database, you can monitor the [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database) and [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database) dynamic management views in order to understand CPU, IO, and memory consumption. Your performance maybe impacted because your database is starved of resources. It could be that you may need to change the compute size and/or service tier based on the growing and shrinking workload demands.
 
@@ -300,7 +300,7 @@ For a comprehensive set of recommendations for tuning performance issues, see: [
 
 ### How do I ensure I am using the appropriate service tier and compute size
 
-SQL Database offers various service tiers Basic, Standard, and Premium. Each service tier you get a guaranteed predictable performance tied to that service tier. Depending on your workload, you may have bursts of activity where your resource utilization might hit the ceiling of the current compute size that you are in. In such cases, it is useful to first start by evaluating whether any tuning can help (for example, adding or altering an index etc.). If you still encounter limit issues, consider moving to a higher service tier or compute size.
+SQL Database offers various service tiers Basic, Standard, and Premium. Each service tier you get a guaranteed predictable performance tied to that service tier. Depending on your workload, you may have bursts of activity where your resource utilization might hit the ceiling of the current compute size that you're in. In such cases, it's useful to first start by evaluating whether any tuning can help (for example, adding or altering an index etc.). If you still encounter limit issues, consider moving to a higher service tier or compute size.
 
 |**Service tier**|**Common Use Case Scenarios**|
 |---|---|

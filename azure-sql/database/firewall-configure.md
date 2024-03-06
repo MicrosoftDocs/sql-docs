@@ -5,7 +5,7 @@ description: Configure server-level IP firewall rules for a database in Azure SQ
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, mathoma
-ms.date: 07/06/2023
+ms.date: 03/06/2024
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
@@ -33,12 +33,12 @@ Connection attempts from the internet and Azure must pass through the firewall b
 
 ### Server-level IP firewall rules
 
-These rules enable clients to access your entire server, that is, all the databases managed by the server. The rules are stored in the *master* database. The maximum number of server-level IP firewall rules is limited to 128 for a server. If you have the **Allow Azure Services and resources to access this server** setting enabled, this counts as a single firewall rule for the server.
+These rules enable clients to access your entire server, that is, all the databases managed by the server. The rules are stored in the *master* database. The maximum number of server-level IP firewall rules is limited to 256 for a server. If you have the **Allow Azure Services and resources to access this server** setting enabled, this counts as a single firewall rule for the server.
   
 You can configure server-level IP firewall rules by using the Azure portal, PowerShell, or Transact-SQL statements.
 
 > [!NOTE]
-> The maximum number of server-level IP firewall rules is limited to 128 when configuring using the Azure portal.
+> The maximum number of server-level IP firewall rules is limited to 256 when configuring using the Azure portal.
 
 - To use the portal or PowerShell, you must be the subscription owner or a subscription contributor.
 - To use Transact-SQL, you must connect to the *master* database as the server-level principal login or as the Microsoft Entra administrator. (A server-level IP firewall rule must first be created by a user who has Azure-level permissions.)

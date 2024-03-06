@@ -26,7 +26,7 @@ Backup files are stored in the default backup location of the SQL instance.
 
 You can enable automated backups through Azure portal or via `az` CLI.
 
-To enable automated backups, set the retention days to a non-zero value.
+To enable automated backups, set the retention days to a nonzero value.
 
 ### Supported license types
 
@@ -219,7 +219,7 @@ To enable automated backups on a database level using az CLI:
 
 ## Disable automated backup  
 
-If the backup retention day is set to 0, automated backup is disabled and no backups are taken, even though backup policy is retained. Setting the backup retention to a non-zero value enables the policy again.  
+If the backup retention day is set to 0, automated backup is disabled and no backups are taken, even though backup policy is retained. Setting the backup retention to a nonzero value enables the policy again.  
 
 This setting applies to both database and instance level backup. If database level backup schedule is disabled, no backups are taken for the database even if instance level backup is scheduled.  
 

@@ -73,6 +73,7 @@ After a distribution database in the AG is configured based on the steps describ
 - If any replication agents run under a proxy account, the proxy account needs to exist in every node in the distribution database AG and have the same privilege on each node.
 - Make changes to distributor or distribution database properties in all replicas participating in distribution database AG.
 - Make replication jobs changes through msdb stored procedures or SQL Server Management Studio in all replicas participating in distribution database AG.
+- If using a custom profile for any agent, it must be manually created on all secondary replicas by using the procedure sp_add_agent_profile. The profile must have the same id on all replicas.
 - Configuring distributor on the publisher needs to be done with scripts. The replication wizard cannot be used. Replication wizards and property sheets for other purposes are supported.
 - Configuring the AG for distribution databases can only be done through scripts.
 - Setting up distribution databases in an AG needs to be a new replication configuration. Switching an existing distribution database to an AG is not supported. Also once a distribution database is taken out an AG, it can no longer function as a valid distribution database and should be dropped.

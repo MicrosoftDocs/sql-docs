@@ -30,7 +30,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 
   Indicates whether the current user is a member of the specified [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows group, Microsoft Entra group, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database role.
 
-  The IS_MEMBER function is generally supported for Microsoft Entra groups. The one case where IS_MEMBER doesn't work is if the group is the Microsoft Entra administrator for the SQL instance.
+  The IS_MEMBER function is supported for Microsoft Entra groups. The one case where IS_MEMBER doesn't work is if the group is the Microsoft Entra administrator for the SQL instance.
 
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

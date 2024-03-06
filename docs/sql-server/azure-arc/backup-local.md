@@ -26,7 +26,7 @@ Backup files are stored in the default backup location of the SQL instance.
 
 You can enable automated backups through Azure portal or via `az` CLI.
 
-To enable automated backups, set the retention days to a non-zero vlaue.
+To enable automated backups, set the retention days to a non-zero value.
 
 ### Supported license types
 

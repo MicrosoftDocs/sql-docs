@@ -15,6 +15,8 @@ ms.topic: conceptual
 
 This article provides an overview of using artificial intelligence (AI) options, such as OpenAI and vectors, to build intelligent applications with Azure SQL Database.
 
+For samples and examples, please visit the SQL AI Samples repository [here](https://aka.ms/sqlaisamples).
+
 ## Overview
 
 Large language models (LLMs) enable developers to create AI-powered applications with a familiar user experience.
@@ -166,3 +168,4 @@ For an example that shows how LangChain can be used to create a Chatbot on your 
 
 - [Create and deploy an Azure OpenAI Service resource](/azure/ai-services/openai/how-to/create-resource?pivots=web-portal)
 - [Embeddings models](/azure/ai-services/openai/concepts/models#embeddings-models)
+- [SQL AI Samples and Examples](https://aka.ms/sqlaisamples)

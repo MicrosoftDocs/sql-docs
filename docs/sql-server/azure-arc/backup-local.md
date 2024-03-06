@@ -44,9 +44,10 @@ You can configure two properties for automated backups:
 
 You can also run backups on a **default** schedule:
 
+- Retention period: 7 days
 - Full backups: every 7 days
 - Differential backups: every 24 hours
-- Transaction log backups: every 15 minutes
+- Transaction log backups: every 5 minutes
 
 ## Backup schedule level
 
@@ -139,19 +140,19 @@ To enable automated backups using `az` CLI:
     Example:
 
     ```azurecli
-    az sql server-arc backups-policy set --name MyArcServer_SQLServerPROD --resource-group my-rg --default-policy
+    az sql server-arc backups-policy set --name MyArcServer_SQLServerPROD --resource-group MyResourceGroup --default-policy
     ```
 
     **Custom schedule**
 
     ```azurecli
-    az sql server-arc backups-policy set --name <arc-server-name> --resource-group <resourcegroup> --retention-days <retentiondays> --full-backup-days <num of days> --diff-backup-hours <12 or 24 hours> --tlog-backup-mins <num in minutes>
+    az sql server-arc backups-policy set --name <arc-server-name> --resource-group <resourcegroup> --retention-days <number of days> --full-backup-days <num of days> --diff-backup-hours <12 or 24 hours> --tlog-backup-mins <number of minutes>
     ```
 
     Example:
 
     ```azurecli
-    az sql server-arc backups-policy set --name MyArcServer_SQLServerPROD --resource 
+    az sql server-arc backups-policy set --name MyArcServer_SQLServerPROD --resource-group MyResourceGroup --retention-days 24 --full-backup-days 7 --diff-backup-hours 24 --tlog-backup-mins 30
     ```
 
 > [!NOTE]
@@ -169,6 +170,13 @@ To configure individual custom database level backup in the portal:
 1. Select the database
 1. Under **Data management** on the left
 1. Select **Backup (preview) - Configure database backup policies (Preview)**
+1. Select **Configure policies**.
+1. Under **Configure policies**:
+   - Set a value for backup retention days - between 1 and 35.
+   - Set a schedule for the full, differential, and transactional log backups.
+1. Select **Apply** to enable this configuration.
+
+Set retention period and frequency to meet business requirements. The retention policy should be greater than the full backup frequency. As a measure of safety, the automated backup process always keeps backups sets of at least one full backup frequency plus the retention days.
 
 ### [Azure CLI](#tab/az)
 
@@ -192,19 +200,19 @@ To enable automated backups on a database level using az CLI:
     Example:
 
      ```azurecli
-     az sql db-arc backups-policy set --name MyDatabaseName--server MyArcServer_SQLServerPROD --resource-group MyResourceGroupName --default-policy 
+     az sql db-arc backups-policy set --name MyDatabaseName--server MyArcServer_SQLServerPROD --resource-group MyResourceGroup --default-policy 
      ```
 
      **Custom schedule**
 
      ```azurecli
-     az sql db-arc backups-policy set --name <sql-database-name> --server <arc-server-name> --resource-group <resourcegroup> --retention-days <retentiondays> --full-backup-days <num of days> --diff-backup-hours <12 or 24 hours> --tlog-backup-mins <num in minutes> 
+     az sql db-arc backups-policy set --name <sql-database-name> --server <arc-server-name> --resource-group <resourcegroup> --retention-days <number of days> --full-backup-days <num of days> --diff-backup-hours <12 or 24 hours> --tlog-backup-mins <number of minutes> 
      ```
 
      Example:
 
      ```azurecli
-     az sql db-arc backups-policy set --name MyDatabaseName --server MyArcServer_SQLServerPROD --resource-group MyResourceGroupName --retention-days 30 --full-backup-days 7 --diff-backup-hours 12 --tlog-backup-mins 10
+     az sql db-arc backups-policy set --name MyDatabaseName --server MyArcServer_SQLServerPROD --resource-group MyResourceGroup --retention-days 30 --full-backup-days 7 --diff-backup-hours 12 --tlog-backup-mins 10
      ```
 
 ---
@@ -224,25 +232,25 @@ To delete instance level backup schedule, you can do it through CLI. Once delete
 ### Delete Instance Level Policy
 
 ```azurecli
-azsql server-arc backups-policy delete --name <arc-server-name> --resource-group <resourcegroup> 
+az sql server-arc backups-policy delete --name <arc-server-name> --resource-group <resourcegroup> 
 ```
 
 Example:
 
 ```azurecli
-az sql server-arc backups-policy delete --name MyArcServer_SQLServerPROD --resource-group MyResourceGroupName  
+az sql server-arc backups-policy delete --name MyArcServer_SQLServerPROD --resource-group MyResourceGroup  
 ```
 
 ### Delete Database Level Policy
 
 ```azurecli
-azsql db-arc backups-policy delete --name <sql-database-name> --server <arc-server-name> --resource-group <resourcegroup> 
+az sql db-arc backups-policy delete --name <sql-database-name> --server <arc-server-name> --resource-group <resourcegroup> 
 ```
 
 Example:
 
 ```azurecli
-az sql db-arc backups-policy delete --name MyDatabaseName --server MyArcServer_SQLServerPROD --resource-group MyResourceGroupName 
+az sql db-arc backups-policy delete --name MyDatabaseName --server MyArcServer_SQLServerPROD --resource-group MyResourceGroup 
 ```
 
 ## View current backup policy
@@ -256,7 +264,7 @@ az sql server-arc backups-policy show --name <arc-server-name> --resource-group 
 Example:
 
 ```azurecli
-az sql server-arc backups-policy show --name MyArcServer_SQLServerPROD --resource-group my-rg
+az sql server-arc backups-policy show --name MyArcServer_SQLServerPROD --resource-group MyResourceGroup
 ```
 
 Output:

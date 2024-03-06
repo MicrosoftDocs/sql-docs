@@ -95,7 +95,7 @@ This error indicates that the server identity hasn't been created or hasn't been
 
 ## Limitations
 
-- Service principals can't authenticate across tenants boundaries. Trying to access SQL Database or SQL Managed Instance using a Microsoft Entra application created in a different tenant fails.
+- Service principals can't authenticate across tenants' boundaries. Trying to access SQL Database or SQL Managed Instance using a Microsoft Entra application created in a different tenant fails.
 
 - [Az.Sql 2.9.0](https://www.powershellgallery.com/packages/Az.Sql/2.9.0) module or higher is required to set a Microsoft Entra application as the Microsoft Entra admin for Azure SQL. Ensure you're upgraded to the latest module.
 

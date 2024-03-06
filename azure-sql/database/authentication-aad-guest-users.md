@@ -90,6 +90,9 @@ Follow these steps to create a database user using a Microsoft Entra guest user.
 
 Set the Microsoft Entra admin using either the Azure portal, Azure PowerShell, or the Azure CLI. In this section, replace `<guest_user>` with a valid email address, for example `guest_user@example.com`.
 
+> [!NOTE]  
+> If you want guest users to be able to create other Microsoft Entra logins or users, they must have permissions to read other identities in the Microsoft Entra directory. This permission is configured at the directory-level. For more information, see [guest access permissions in Microsoft Entra ID](/entra/identity/users/users-restrict-guest-permissions).
+
 ### Azure portal
 
 To set up a Microsoft Entra admin for a logical server or a managed instance using the Azure portal, follow these steps:

@@ -23,7 +23,7 @@ Consider using the multi-model capabilities of Azure SQL in the following cases:
 - You have some information or structures that are a better fit for NoSQL models, and you don't want to use a separate NoSQL database.
 - A majority of your data is suitable for a relational model, and you need to model some parts of your data in a NoSQL style.
 - You want to use the Transact-SQL language to query and analyze both relational and NoSQL data, and then integrate that data with tools and applications that can use the SQL language.
-- You want to apply database features such as [in-memory technologies](in-memory-oltp-overview.md) to improve the performance of your analytics or the processing of your NoSQL data structures. You can use [transactional replication](managed-instance/replication-transactional-overview.md) or [readable replicas](database/read-scale-out.md) to create copies of your data and offload some analytic workloads from the primary database.
+- You want to apply database features such as [in-memory technologies](database/in-memory-oltp-overview.md) to improve the performance of your analytics or the processing of your NoSQL data structures. You can use [transactional replication](managed-instance/replication-transactional-overview.md) or [readable replicas](database/read-scale-out.md) to create copies of your data and offload some analytic workloads from the primary database.
 
 The following sections describe the most important multi-model capabilities of Azure SQL.
 

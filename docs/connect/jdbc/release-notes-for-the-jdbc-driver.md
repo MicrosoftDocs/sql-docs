@@ -3,7 +3,7 @@ title: Release notes
 description: This article lists the releases of the Microsoft JDBC Driver for SQL Server. For each release version, the changes are named and described.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 01/31/2024
+ms.date: 03/06/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -14,15 +14,15 @@ This article lists the releases of the _Microsoft JDBC Driver for SQL Server_. F
 
 ## <a id="126"></a> 12.6
 
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.6.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2259203)**  
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.6.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2259112)**
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.6.1 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2262747)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.6.1 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2262683)**
 
-Release number: 12.6.0  
-Released: January 31, 2024
+Release number: 12.6.1  
+Released: February 20, 2024
 
 If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
-For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x40a)  
-For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2259112&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2259112&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2259112&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2259112&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2259112&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2259112&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2259112&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2259112&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2259112&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2259112&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2259112&clcid=0x40a)
+For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x40a)  
+For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x40a)
 
 ### 12.6 Compliance
 
@@ -34,11 +34,24 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 ### 12.6 Releases
 
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.6.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2259203)**  
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.6.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2259112)**
+Release number: 12.6.1  
+Released: February 20, 2024
+
+Fixed issues in 12.6.1:
+- Fixed 'EXEC' escape syntax for CallableStatements
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.6.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2262747)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.6.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2262683)**
+
+If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
+For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x40a)  
+For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x40a)
 
 Release number: 12.6.0  
 Released: January 31, 2024
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.6.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2259203)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.6.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2259112)**
 
 If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
 For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2259203&clcid=0x40a)  

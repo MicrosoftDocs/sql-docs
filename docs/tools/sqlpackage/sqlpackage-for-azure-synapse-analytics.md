@@ -35,7 +35,7 @@ Without this property, the path defaults to `servername/databasename/timestamp/`
 The following example extracts a database named `databasename` from a server named `yourserver.sql.azuresynapse.net` to a local file named `databaseschema.dacpac` in the current directory. The data is written to a container named `containername` in a storage account named `storageaccount` using a storage account key named `storageaccountkey`. The data is written to the default path of `servername/databasename/timestamp/` in the container.
 
 ```bash
-SqlPackage /Action:Extract /SourceServerName:yourserver.sql.azuresynapse.net /SourceDatabaseName:databasename /TargetFile:databaseschema.dacpac /p:AzureStorageBlobEndpoint=https://storageaccount.blob.core.windows.net /p:AzureStorageContainer=containername /p:AzureStorageKey=storageaccountkey
+SqlPackage /Action:Extract /SourceServerName:yourserver.sql.azuresynapse.net /SourceDatabaseName:databasename /SourceUser:sqladmin /SourcePassword:{your_password} /TargetFile:databaseschema.dacpac /p:AzureStorageBlobEndpoint=https://storageaccount.blob.core.windows.net /p:AzureStorageContainer=containername /p:AzureStorageKey=storageaccountkey
 ```
 
 See [SqlPackage extract](sqlpackage-extract.md#examples) for more examples of authentication types available.
@@ -55,7 +55,7 @@ Access for publish can be authorized via a storage account key or a shared acces
 The following example publishes a database named `databasename` to a server named `yourserver.sql.azuresynapse.net` from a local file named `databaseschema.dacpac` in the current directory. The data is read from a container named `containername` in a storage account named `storageaccount` using a storage account key named `storageaccountkey`. The data is read from individual folders per table under the path `yourserver.sql.azuresynapse.net/databasename/6-12-2022_8-09-56_AM/` in the container.
 
 ```bash
-SqlPackage /Action:Publish /SourceFile:databaseschema.dacpac /TargetServerName:yourserver.sql.azuresynapse.net /TargetDatabaseName:databasename /p:AzureStorageBlobEndpoint=https://storageaccount.blob.core.windows.net /p:AzureStorageContainer=containername  /p:AzureStorageKey=storageaccountkey /p:AzureStorageRootPath="yourserver.sql.azuresynapse.net/databasename/6-12-2022_8-09-56_AM/"
+SqlPackage /Action:Publish /SourceFile:databaseschema.dacpac /TargetServerName:yourserver.sql.azuresynapse.net /TargetDatabaseName:databasename /TargetUser:sqladmin /TargetPassword:{your_password} /p:AzureStorageBlobEndpoint=https://storageaccount.blob.core.windows.net /p:AzureStorageContainer=containername  /p:AzureStorageKey=storageaccountkey /p:AzureStorageRootPath="yourserver.sql.azuresynapse.net/databasename/6-12-2022_8-09-56_AM/"
 ```
 
 See [SqlPackage publish](sqlpackage-publish.md#examples) for more examples of authentication types available.

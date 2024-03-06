@@ -53,7 +53,8 @@ Syntax for SQL Server and Azure SQL Database:
 CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ WITH ( <with_option> [ , ...n ] ) ]
-    [ ON <on_option> ] | [ ORDER <on_option> ]
+    [ ORDER (column [ , ...n ] ) ]
+    [ ON <on_option> ]
 
 [ ; ]
 

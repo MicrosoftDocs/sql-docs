@@ -37,8 +37,15 @@ Since Windows Events are light-weight synchronization objects, there's relativel
 - High CPU usage on the system (close to 100%)
 - Out-of-memory conditions - low virtual memory and/or one of the processes is being paged out
 - SQL Server process not responding while generating a large memory dump 
-- WSFC going offline (e.g due to quorum loss)
-
+- WSFC going offline (e.g due to quorum loss). Please have a look at below links for troubleshooting quorum loss issues.
+    - [Configure and manage quorum](https://learn.microsoft.com/en-us/windows-server/failover-clustering/manage-cluster-quorum)
+    - [WSFC Disaster Recovery through Forced Quorum (SQL Server)](https://learn.microsoft.com/en-us/sql/sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server?view=sql-server-ver16)
+- VM [throttling](https://learn.microsoft.com/en-us/azure/virtual-machines/premium-storage-performance#throttling) impacting performance and causing lease expiration.
+- Stack Dump generation due to some of the following reasons. Please have a look at [Impact of dump generation](https://learn.microsoft.com/en-us/troubleshoot/sql/tools/use-sqldumper-generate-dump-file#impact-of-dump-generation) for more information.
+    - Non-yielding Scheduler.
+    - Latch timeout.
+    - Deadlocked Schedulers.
+    - Unresolved Deadlock. 
  
 ## User action  
 
@@ -66,29 +73,82 @@ If there are occurrences of low virtual or physical memory on the system, the SQ
 
 1. You can alternatively use Performance Monitor and monitor these counters over time:
 
-   - **Process\Working Set** - to check individual processes memory usage
-   - **Memory\Available MBytes** - to check overall memory usage on the system
-
-   You can use the following PowerShell script to identify overall memory usage across all process and the available memory on the system. If you would like to get individual processes memory usage, change it `"\Process(_Total)\Working Set"` to `"\Process(*)\Working Set"`.
+   You can use the following PowerShell script to identify overall memory usage across all process and the available memory on the system.
 
    ```powershell
-   $serverName = $env:COMPUTERNAME
-   $Counters = @(
-     ("\\$serverName" + "\Process(_Total)\Working Set") , ("\\$serverName" + "\Memory\Available Bytes")
-    )
-
-   Get-Counter -Counter $Counters -MaxSamples 30 | ForEach {
-    $_.CounterSamples | ForEach {
-        [pscustomobject]@{
-            TimeStamp = $_.TimeStamp
-            Path = $_.Path
-            Value_MB = ([Math]::Round($_.CookedValue, 3))/1024/1024
-        }
-        Start-Sleep -s 5
-      }
-    }
+   function Create-PerfCounterLog_Memory 
+   {
+     param 
+       (
+           [string]$InstanceName,
+           [string]$Location
+       )
+       
+       if ($InstanceNamec -eq '') # this means default sql instance
+       {
+           $logmanCommand = "logman create counter MS_perf_log_Memory -f bin -c '\Memory\*' '\PhysicalDisk(*)\*' '\LogicalDisk(*)\*' '\Server\*' '\System\*' "
+       }
+       else
+       {
+           $logmanCommand = "logman create counter MS_perf_log_Memory -f bin -c " + """'\Memory\*' '\PhysicalDisk(*)\*' '\LogicalDisk(*)\*' '\Server\*' '\System\*' '\MSSQL$"
+           $logmanCommand = $logmanCommand + $InstanceName + ':Databases(*)\*''' + ' ' + '''\MSSQL$'
+           $logmanCommand = $logmanCommand + $InstanceName + ':Buffer Manager\*''' + ' '  + '''\MSSQL$'
+           $logmanCommand = $logmanCommand + $InstanceName + ':Memory Manager\*''' + ' '  + '''\MSSQL$'
+           $logmanCommand = $logmanCommand + $InstanceName + ':SQL Statistics\*''' + ' '  + '''\MSSQL$'
+           $logmanCommand = $logmanCommand + $InstanceName + ':Transactions\*''' + ' '  + '''\MSSQL$'
+           $logmanCommand = $logmanCommand + $InstanceName + ':Database Mirroring(*)\*''' + ' '  + '''\MSSQL$'
+           $logmanCommand = $logmanCommand + $InstanceName + '::Latches\*''' + ' '  + '''\MSSQL$'
+           $logmanCommand = $logmanCommand + $InstanceName + ':General Statistics\*''' + ' '  + '''\MSSQL$'
+           $logmanCommand = $logmanCommand + $InstanceName + ':Availability Replica(*)\*''' + ' '  + '''\MSSQL$'
+           $logmanCommand = $logmanCommand + $InstanceName + ':Database Replica(*)\*''' + ' '  + '''\MSSQL$'
+           $logmanCommand = $logmanCommand + $InstanceName + ':Plan Cache(*)\*''' + '"'
+       }
+       
+       $Location = $Location + '\MS_perf_log_Memory.blg'  
+       
+       $logmanCommand += " -si 00:00:01 -max 500 -o $Location"
+       
+       Start-Process -FilePath "cmd.exe" -ArgumentList "/c $logmanCommand" -Verb RunAs -Wait
+    
+   }
+   
+   # Function to start the collector
+   function Start-PerfCounterLog_Memory 
+   {
+       Start-Process -FilePath "cmd.exe" -ArgumentList "/c logman start MS_perf_log_Memory" -Verb RunAs -Wait
+   }
+   
+   # Function to stop the collector
+   function Stop-PerfCounterLog_Memory 
+   {
+       Start-Process -FilePath "cmd.exe" -ArgumentList "/c logman stop MS_perf_log_Memory" -Verb RunAs -Wait
+   }
+   
+   # Replace with your instance name if need to collect perfmon data for named instance
+   $InstanceName = '' 
+   
+   # Replace with your desired location
+   $Location = "D:\PerfMonLogs"
+   
+   # Create folder if not exists - update the file path as per your environment
+   $folderPath = "D:\PerfMonLogs"
+   if (-not (Test-Path $folderPath)) 
+   {
+       New-Item -Path $folderPath -ItemType Directory
+   }
+   
+   # Create performance counter log
+   Create-PerfCounterLog_Memory -InstanceName $InstanceName -Location $Location 
+   
+   # Start the collector
+   Start-PerfCounterLog_Memory 
+   
+   # If the event has occurred again and captured, then stop the collector
+   # Uncomment below line when you want to stop the collector
+   # Stop-PerfCounterLog_Memory 
+   
    ```
-
+In above script location is set to D:\PerfMonLogs\, so file will be generated at D:\PerfMonLogs\ with .blg extension. You can analyze the file and find the root cause of the issue.
 
 1. If you identify specific applications that are consuming large amounts of memory, consider stopping or moving those applications on another system or control their memory usage. 
 1. If SQL Server is consuming large amounts of memory, you may consider using `sp_configure 'max server memory'` to lower its memory usage.

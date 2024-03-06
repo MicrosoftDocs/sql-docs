@@ -3,7 +3,7 @@ title: "IS_ROLEMEMBER (Transact-SQL)"
 description: "IS_ROLEMEMBER (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.date: 06/06/2022
+ms.date: 03/06/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference

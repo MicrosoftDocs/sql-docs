@@ -3,7 +3,7 @@ title: IS_SRVROLEMEMBER (Transact-SQL)
 description: "IS_SRVROLEMEMBER (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.date: "03/14/2017"
+ms.date: "03/06/2024"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference

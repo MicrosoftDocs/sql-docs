@@ -61,17 +61,17 @@ IS_MEMBER ( { 'group' | 'role' } )
   
 |Return value|Description|  
 |------------------|-----------------|  
-|0|Current user is not a member of *group* or *role*.|  
+|0|Current user isn't a member of *group* or *role*.|  
 |1|Current user is a member of *group* or *role*.|  
-|NULL|Either *group* or *role* is not valid. When queried by a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or a login using an application role, returns NULL for a Windows group.|  
+|NULL|Either *group* or *role* isn't valid. When queried by a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or a login using an application role, returns NULL for a Windows group.|  
   
- IS_MEMBER determines Windows group membership by examining an access token that is created by Windows. The access token does not reflect changes in group membership that are made after a user connects to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Windows group membership cannot be queried by a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] application role.  
+ IS_MEMBER determines Windows group membership by examining an access token that is created by Windows. The access token doesn't reflect changes in group membership that are made after a user connects to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Windows group membership can't be queried by a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] application role.  
   
  To add and remove members from a database role, use [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md). To add and remove members from a server role, use [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
- This function evaluates role membership, not the underlying permission. For example, the **db_owner** fixed database role has the **CONTROL DATABASE** permission. If the user has the **CONTROL DATABASE** permission but is not a member of the role, this function will correctly report that the user is not a member of the **db_owner** role, even though the user has the same permissions.  
+ This function evaluates role membership, not the underlying permission. For example, the **db_owner** fixed database role has the **CONTROL DATABASE** permission. If the user has the **CONTROL DATABASE** permission but isn't a member of the role, this function correctly reports that the user isn't a member of the **db_owner** role, even though the user has the same permissions.  
   
- Members of the **sysadmin** fixed server role enter every database as the **dbo** user. Checking permission for member of the **sysadmin** fixed server role, checks permissions for **dbo**, not the original login. Since **dbo** can't be added to a database role and doesn't exist in Windows groups, **dbo** will always return 0 (or NULL if the role doesn't exist).  
+ Members of the **sysadmin** fixed server role enter every database as the **dbo** user. Checking permission for member of the **sysadmin** fixed server role, checks permissions for **dbo**, not the original login. Since **dbo** can't be added to a database role and doesn't exist in Windows groups, **dbo** always returns 0 (or NULL if the role doesn't exist).  
   
 ## Related Functions  
  To determine whether another [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is a member of a database role, use [IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md). To determine whether a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is a member of a server role, use [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md).  

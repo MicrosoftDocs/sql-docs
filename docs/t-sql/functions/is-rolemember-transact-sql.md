@@ -48,33 +48,33 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
   
 |Return value|Description|  
 |------------------|-----------------|  
-|0|*database_principal* is not a member of *role*.|  
+|0|*database_principal* isn't a member of *role*.|  
 |1|*database_principal* is a member of *role*.|  
-|NULL|*database_principal* or *role* is not valid, or you do not have permission to view the role membership.|  
+|NULL|*database_principal* or *role* isn't valid, or you don't have permission to view the role membership.|  
   
 ## Remarks
 
-The **IS_ROLEMEMBER** function is not supported for a Microsoft Entra administrator when the administrator is a member of a Microsoft Entra group. The **IS_ROLEMEMBER** function is supported for Microsoft Entra users that are members of a Microsoft Entra group, unless that group is the Microsoft Entra admin.
+The **IS_ROLEMEMBER** function isn't supported for a Microsoft Entra administrator when the administrator is a member of a Microsoft Entra group. The **IS_ROLEMEMBER** function is supported for Microsoft Entra users that are members of a Microsoft Entra group, unless that group is the Microsoft Entra admin.
 
  Use IS_ROLEMEMBER to determine whether the current user can perform an action that requires the database role's permissions.  
   
  If *database_principal* is based on a Windows login, such as Contoso\Mary5, IS_ROLEMEMBER returns NULL, unless the *database_principal* has been granted or denied direct access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- If the optional *database_principal* parameter is not provided and if the *database_principal* is based on a Windows domain login, it may be a member of a database role through membership in a Windows group. To resolve such indirect memberships, IS_ROLEMEMBER requests Windows group membership information from the domain controller. If the domain controller is inaccessible or does not respond, IS_ROLEMEMBER returns role membership information by accounting for the user and its local groups only. If the user specified is not the current user, the value returned by IS_ROLEMEMBER might differ from the authenticator's (such as Active Directory) last data update to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ If the optional *database_principal* parameter isn't provided and if the *database_principal* is based on a Windows domain login, it may be a member of a database role through membership in a Windows group. To resolve such indirect memberships, IS_ROLEMEMBER requests Windows group membership information from the domain controller. If the domain controller is inaccessible or doesn't respond, IS_ROLEMEMBER returns role membership information by accounting for the user and its local groups only. If the user specified isn't the current user, the value returned by IS_ROLEMEMBER might differ from the authenticator's (such as Active Directory) last data update to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- If the optional *database_principal* parameter is provided, the user must exist in sys.database_principals, or IS_ROLEMEMBER will return NULL.
+ If the optional *database_principal* parameter is provided, the user must exist in sys.database_principals, or IS_ROLEMEMBER returns NULL.
   
  When the *database_principal* parameter is a based on a domain login or based on a Windows group and the domain controller is inaccessible, calls to IS_ROLEMEMBER will fail and might return incorrect or incomplete data.  
   
- If the domain controller is not available, the call to IS_ROLEMEMBER will return accurate information when the Windows principal can be authenticated locally, such as a local Windows account or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
+ If the domain controller isn't available, the call to IS_ROLEMEMBER returns accurate information when the Windows principal can be authenticated locally, such as a local Windows account or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
   
  **IS_ROLEMEMBER** always returns 0 when a Windows group is used as the database principal argument, and this Windows group is a member of another Windows group which is, in turn, a member of the specified database role.  
   
  The User Account Control (UAC) found in [!INCLUDE[winvista](../../includes/winvista-md.md)] and Windows Server 2008 might also return different results. This would depend on whether the user accessed the server as a Windows group member or as a specific [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user.  
   
- This function evaluates role membership, not the underlying permission. For example, the **db_owner** fixed database role has the **CONTROL DATABASE** permission. If the user has the **CONTROL DATABASE** permission but is not a member of the role, this function will correctly report that the user is not a member of the **db_owner** role, even though the user has the same permissions.  
+ This function evaluates role membership, not the underlying permission. For example, the **db_owner** fixed database role has the **CONTROL DATABASE** permission. If the user has the **CONTROL DATABASE** permission but isn't a member of the role, this function will correctly report that the user isn't a member of the **db_owner** role, even though the user has the same permissions.  
  
- Members of the **sysadmin** fixed server role enter every database as the **dbo** user. Checking permission for member of the **sysadmin** fixed server role, checks permissions for **dbo**, not the original login. Since **dbo** can't be added to a database role and doesn't exist in Windows groups, **dbo** will always return 0 (or NULL if the role doesn't exist).  
+ Members of the **sysadmin** fixed server role enter every database as the **dbo** user. Checking permission for member of the **sysadmin** fixed server role, checks permissions for **dbo**, not the original login. Since **dbo** can't be added to a database role and doesn't exist in Windows groups, **dbo** always returns 0 (or NULL if the role doesn't exist).  
   
 ## Related Functions  
  To determine whether the current user is a member of the specified Windows group, Microsoft Entra group, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database role, use [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md). To determine whether a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is a member of a server role, use [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md).

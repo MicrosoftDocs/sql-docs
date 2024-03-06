@@ -36,7 +36,7 @@ In this article you can find a content reference of various guides, scripts, and
 - [Configure TDE with BYOK](transparent-data-encryption-byok-configure.md)
 - [Rotate TDE BYOK keys](transparent-data-encryption-byok-key-rotation.md)
 - [Remove TDE protector](transparent-data-encryption-byok-remove-tde-protector.md)
-- [Configure In-Memory OLTP](../in-memory-oltp-configure.md)
+- [Configure In-Memory OLTP](in-memory-oltp-configure.md)
 - [Configure Azure Automation](automation-manage.md)
 - [Configure transactional replication](replication-to-sql-database.md) to replicate your date between databases.
 - [Configure threat detection](threat-detection-configure.md) to let Azure SQL Database identify suspicious activities such as SQL Injection or access from suspicious locations.
@@ -56,7 +56,7 @@ In this article you can find a content reference of various guides, scripts, and
 - [Troubleshoot performance with Intelligent Insights](intelligent-insights-troubleshoot-performance.md)
 - [Manage file space](file-space-manage.md) to monitor storage usage in your database.
 - [Use Intelligent Insights diagnostics log](intelligent-insights-use-diagnostics-log.md)
-- [Monitor In-memory OLTP space](../in-memory-oltp-monitor-space.md)
+- [Monitor In-memory OLTP space](in-memory-oltp-monitor-space.md)
 
 ### Extended events
 
@@ -118,12 +118,12 @@ In this article you can find a content reference of various guides, scripts, and
 - [Design for elastic pools](disaster-recovery-strategies-for-applications-with-elastic-pool.md)
 - [Design for app upgrades](manage-application-rolling-upgrade.md)
 
-### Design Multitenant software as a service (SaaS) applications
+### Design multitenant software as a service (SaaS) applications
 
 - [SaaS design patterns](saas-tenancy-app-design-patterns.md)
 - [SaaS video indexer](saas-tenancy-video-index-wingtip-brk3120-20171011.md)
 - [SaaS app security](saas-tenancy-elastic-tools-multi-tenant-row-level-security.md)
 
-## Next steps
+## Related content
 
 - Learn more about [How-to guides for Azure SQL Managed Instance](../managed-instance/how-to-content-reference-guide.md)

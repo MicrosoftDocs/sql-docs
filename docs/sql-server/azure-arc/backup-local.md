@@ -4,7 +4,7 @@ description: Describes how to configure automated backups
 author: AbdullahMSFT
 ms.author: amamun 
 ms.reviewer: mikeray, randolphwest
-ms.date: 3/10/2024
+ms.date: 3/12/2024
 ms.topic: conceptual
 ms.custom: ignite-2023, devx-track-azurecli
 ---
@@ -54,7 +54,7 @@ You can also run backups on a **default** schedule:
 You can schedule backups at
 
 - Instance level
-- Database level (available from extension version 1.1.2594.118 or later) 
+- Database level (available from [extension version 1.1.2594.118](release-notes.md#march-12-2024) or later)
 
 If both database and instance level backup schedule is set, database level schedule takes precedence over the instance level backup schedule. If you delete the database level backup schedule, the instance level backup schedule applies.
 

@@ -22,9 +22,9 @@ Azure SQL resources support programmatic access for applications using service p
 
 ## Service principal (Microsoft Entra applications) support
 
-This article applies to applications registered in Microsoft Entra ID. Using application credentials to access Azure SQL supports the security principle of Separation of Duties, enabling organizations to configure precise access for each application connecting to their databases. [Managed identities](/entra/identity/managed-identities-azure-resources/overview), a special form of service principal, are particularly recommended as they're passwordless and eliminate the need for developer-managed credentials.
+This article applies to applications registered in Microsoft Entra ID. Using application credentials to access Azure SQL supports the security principle of Separation of Duties, enabling organizations to configure precise access for each application connecting to their databases. [Managed identities](/entra/identity/managed-identities-azure-resources/overview), a special form of service principals, are particularly recommended as they're passwordless and eliminate the need for developer-managed credentials.
 
-Microsoft Entra ID further enables advanced authentication scenarios like [OAuth 2.0 On-Behalf-Of Flow](/entra/identity-platform/v2-oauth2-on-behalf-of-flow). OBO allows applications to request signed-in user credentials, for scenarios when applications themselves shouldn't be given database access without delegated permissions. 
+Microsoft Entra ID further enables advanced authentication scenarios like [OAuth 2.0 On-Behalf-Of Flow (OBO)](/entra/identity-platform/v2-oauth2-on-behalf-of-flow). OBO allows applications to request signed-in user credentials, for scenarios when applications themselves shouldn't be given database access without delegated permissions. 
 
 For more information on Microsoft Entra applications, see [Application and service principal objects in Microsoft Entra ID](/entra/identity-platform/app-objects-and-service-principals) and [Create an Azure service principal with Azure PowerShell](/powershell/azure/create-azure-service-principal-azureps).
 
@@ -32,7 +32,7 @@ For more information on Microsoft Entra applications, see [Application and servi
 
 ## Microsoft Entra user creation using service principals
 
-Supporting this functionality is useful in Microsoft Entra application automation processes where Microsoft Entra principals are created and maintained in SQL Database without human interaction. Service principals can be a Microsoft Entra admin for the SQL logical server, as part of a group or as a standalone identity. The application can automate Microsoft Entra object creation in SQL Database, allowing full automation of database user creation.
+Supporting this functionality is useful in Microsoft Entra application automation processes where Microsoft Entra principals are created and maintained in SQL Database or SQL Managed Instance without human interaction. Service principals can be a Microsoft Entra admin for the SQL logical server or managed instance, as part of a group or as a standalone identity. The application can automate Microsoft Entra object creation in SQL Database or SQL Managed Instance, allowing full automation of database user creation.
 
 <a name='enable-service-principals-to-create-azure-ad-users'></a>
 
@@ -46,7 +46,7 @@ The following steps explain how to assign a managed identity to the server and a
 
 1. Assign the server identity. The server identity can be a system-assigned or user-assigned managed identity. For more information, see [User-assigned managed identity in Microsoft Entra ID for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md).
 
-    - The following PowerShell command creates a new Azure SQL logical server, provisioned with a system-assigned managed identity:
+    - The following PowerShell command creates a new logical server provisioned with a system-assigned managed identity:
     
     ```powershell
     New-AzSqlServer -ResourceGroupName <resource group> -Location <Location name> -ServerName <Server name> -ServerVersion "12.0" -SqlAdministratorCredentials (Get-Credential) -AssignIdentity
@@ -71,7 +71,7 @@ The following steps explain how to assign a managed identity to the server and a
 
     - Add server identity to a role-assignable group
     
-        In production environments it's recommended that a tenant administrator creates a role-assignable group and assigns the **Directory Readers** role to it. Then group owners can add server identities to the group, inheriting those permissions. This removes the requirement for a **Global Administrator** or **Privileged Roles Administrator** to grant permissions to each individual server identity, allowing administrators to delegate permission assignment to owners of the group for this scenario. For more information, see [Directory Readers role in Microsoft Entra ID for Azure SQL](authentication-aad-directory-readers-role.md).
+        In production environments, it's recommended that a tenant administrator creates a [role-assignable group](/entra/identity/role-based-access-control/groups-concept) and assigns the **Directory Readers** role to it. Group owners can then add server identities to the group, inheriting those permissions. This removes the requirement for a **Global Administrator** or **Privileged Roles Administrator** to grant permissions to each individual server identity, allowing administrators to delegate permission assignment to owners of the group for this scenario. For more information, see [Directory Readers role in Microsoft Entra ID for Azure SQL](authentication-aad-directory-readers-role.md).
 
     - Assign Microsoft Graph permissions to server identity
 

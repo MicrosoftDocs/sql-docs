@@ -41,11 +41,8 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
  Is the name of the database role that is being checked. *role* is **sysname**.  
   
  **'** *database_principal* **'**  
- Is the name of the database user, database role, or application role to check. *database_principal* is **sysname**, with a default of NULL. If no value is specified, the result is based on the current execution context. If the parameter contains the word NULL will return NULL.  
- 
- > [!NOTE]
- > Using a Microsoft Entra principal for *database_principal* is not supported.
-  
+ Is the name of the database user, database role, or application role to check. *database_principal* is **sysname**, with a default of NULL. If no value is specified, the result is based on the current execution context. If the parameter contains the word NULL, it will return NULL.
+
 ## Return Types  
  **int**  
   
@@ -65,7 +62,7 @@ The **IS_ROLEMEMBER** function is not supported for a Microsoft Entra administra
   
  If the optional *database_principal* parameter is not provided and if the *database_principal* is based on a Windows domain login, it may be a member of a database role through membership in a Windows group. To resolve such indirect memberships, IS_ROLEMEMBER requests Windows group membership information from the domain controller. If the domain controller is inaccessible or does not respond, IS_ROLEMEMBER returns role membership information by accounting for the user and its local groups only. If the user specified is not the current user, the value returned by IS_ROLEMEMBER might differ from the authenticator's (such as Active Directory) last data update to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- If the optional *database_principal* parameter is provided, the database principal that is being queried must be present in sys.database_principals, or IS_ROLEMEMBER will return NULL. This indicates that the *database_principal* is not valid in this database.  
+ If the optional *database_principal* parameter is provided, the user must exist in sys.database_principals, or IS_ROLEMEMBER will return NULL.
   
  When the *database_principal* parameter is a based on a domain login or based on a Windows group and the domain controller is inaccessible, calls to IS_ROLEMEMBER will fail and might return incorrect or incomplete data.  
   
@@ -80,7 +77,7 @@ The **IS_ROLEMEMBER** function is not supported for a Microsoft Entra administra
  Members of the **sysadmin** fixed server role enter every database as the **dbo** user. Checking permission for member of the **sysadmin** fixed server role, checks permissions for **dbo**, not the original login. Since **dbo** can't be added to a database role and doesn't exist in Windows groups, **dbo** will always return 0 (or NULL if the role doesn't exist).  
   
 ## Related Functions  
- To determine whether the current user is a member of the specified Windows group or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database role, use [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md). To determine whether a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is a member of a server role, use [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
+ To determine whether the current user is a member of the specified Windows group, Microsoft Entra group, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database role, use [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md). To determine whether a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is a member of a server role, use [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md).
   
 ## Permissions  
  Requires VIEW DEFINITION permission on the database role.  

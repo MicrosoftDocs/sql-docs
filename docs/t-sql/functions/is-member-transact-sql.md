@@ -28,8 +28,10 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 # IS_MEMBER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Indicates whether the current user is a member of the specified [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows group or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database role. The IS_MEMBER function is not supported for Microsoft Entra groups.  
-  
+  Indicates whether the current user is a member of the specified [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows group, Microsoft Entra group, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database role.
+
+  The IS_MEMBER function is generally supported for Microsoft Entra groups. The one case where IS_MEMBER doesn't work is if the group is the Microsoft Entra administrator for the SQL instance.
+
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 [!INCLUDE [entra-id](../../includes/entra-id.md)]
@@ -46,7 +48,7 @@ IS_MEMBER ( { 'group' | 'role' } )
  **'** *group* **'**  
 **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
   
- Is the name of the Windows group that is being checked; must be in the format *Domain*\\*Group*. *group* is **sysname**.  
+ Is the name of the Windows or Microsoft Entra group that is being checked. A Windows group must be in the format *Domain*\\*Group*. *group* is **sysname**.
   
  **'** *role* **'**  
  Is the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] role that is being checked. *role* is **sysname** and can include the database fixed roles or user-defined roles, but not server roles.  

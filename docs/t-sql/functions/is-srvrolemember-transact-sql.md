@@ -51,8 +51,11 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 - processadmin
   
  **'** *login* **'**  
- Is the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to check. *login* is **sysname**, with a default of NULL. If no value is specified, the result is based on the current Execution context. If the parameter contains the word NULL will return NULL.  
-  
+ Is the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to check. *login* is **sysname**, with a default of NULL. If no value is specified, the result is based on the current Execution context. If the parameter contains the word NULL, it will return NULL.
+
+> [!NOTE]
+> While Microsoft Entra logins are in public preview for Azure SQL Database and Azure Synapse, using a Microsoft Entra principal for *login* is not supported.
+
 ## Return Types  
  **int**  
   
@@ -82,7 +85,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
  This function evaluates role membership, not the underlying permission. For example, the **sysadmin** fixed server role has the **CONTROL SERVER** permission. If the user has the **CONTROL SERVER** permission but is not a member of the role, this function will correctly report that the user is not a member of the **sysadmin** role, even though the user has the same permissions.  
   
 ## Related Functions  
- To determine whether the current user is a member of the specified Windows group or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database role, use [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md). To determine whether a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is a member of a database role, use [IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md).  
+ To determine whether the current user is a member of the specified Windows group, Microsoft Entra group, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database role, use [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md). To determine whether a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is a member of a database role, use [IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md).
   
 ## Permissions  
  Requires VIEW DEFINITION permission on the server role.  

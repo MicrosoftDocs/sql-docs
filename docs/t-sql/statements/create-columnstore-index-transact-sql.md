@@ -52,8 +52,8 @@ Syntax for SQL Server and Azure SQL Database:
 -- Create a clustered columnstore index on disk-based table.
 CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }
-    [ WITH ( <with_option> [ , ...n ] ) ]
     [ ORDER (column [ , ...n ] ) ]
+    [ WITH ( <with_option> [ , ...n ] ) ]
     [ ON <on_option> ]
 
 [ ; ]
@@ -130,7 +130,7 @@ Specifies the one-, two-, or three-part name of the table to be stored as a clus
 
 Use the `column_store_order_ordinal` column in [sys.index_columns](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md) to determine the order of the column(s) for a clustered columnstore index. This aids with [segment elimination](../../relational-databases/indexes/columnstore-indexes-query-performance.md#segment-elimination), especially with string data. For more information, see [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci) and [Columnstore indexes design guidance](../../relational-databases/indexes/columnstore-indexes-design-guidance.md).
 
-To convert to an ordered clustered column store index, the existing index must be a clustered columnstore index. Use the `DROP_EXISTING` option.
+To convert to an ordered clustered columnstore index, the existing index must be a clustered columnstore index. Use the `DROP_EXISTING` option.
 
 LOB data types (the (max) length data types) can't be the key of an ordered clustered columnstore index.
 

@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: Learn how to configure user-assigned managed identity and customer-managed transparent data encryption (TDE) while creating an Azure SQL Database logical server using the Azure portal, PowerShell, or Azure CLI.
 author: GithubMirek
 ms.author: mireks
-ms.reviewer: vanto
+ms.reviewer: vanto, mathoma
 ms.date: 10/10/2023
 ms.service: sql-database
 ms.subservice: security

@@ -4,6 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Create alerts with SQL Insights (preview) in Azure Monitor
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: mathoma
 ms.date: 07/29/2022
 ms.service: sql-db-mi
 ms.topic: conceptual

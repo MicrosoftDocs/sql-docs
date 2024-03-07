@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: Overview of cross-tenant customer-managed keys (CMK) support using transparent data encryption (TDE)
 author: GithubMirek
 ms.author: mireks
-ms.reviewer: vanto
+ms.reviewer: vanto, mathoma
 ms.date: 05/01/2023
 ms.service: sql-database
 ms.subservice: security

@@ -3,7 +3,7 @@ title: Intelligent applications
 description: "Use AI options such as OpenAI and vectors to build intelligent applications with Azure SQL Database."
 author: damauri
 ms.author: damauri
-ms.reviewer: damauri, randolphwest
+ms.reviewer: damauri, randolphwest, mathoma
 ms.date: 10/30/2023
 ms.service: sql-database
 ms.topic: conceptual

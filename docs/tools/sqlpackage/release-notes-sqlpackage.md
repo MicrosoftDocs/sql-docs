@@ -578,7 +578,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.172
 | :------ | :------ |
 | Deployment | Data Sensitivity classification now supported for SQL Server 2008 and up, Azure SQL Database, and Azure Synapse Analytics |
 | Deployment | Add Azure Synapse Analytics support for table constraints |
-| Deployment | Add Azure Synapse Analytics support for ordered clustered column store index |
+| Deployment | Add Azure Synapse Analytics support for ordered clustered columnstore index |
 | Deployment | Add support for External Data Source (Oracle, Teradata, MongoDB/CosmosDB, ODBC, Big Data Cluster) and External Table for SQL Server 2019 Big Data Cluster |
 | Deployment | Add SQL Database Edge Instance as supported edition |
 | Deployment | Support Azure SQL Managed Instance server names of the form '\<server>.\<dnszone>.database.windows.net' |

@@ -197,7 +197,7 @@ collection.show()
 
 ## Write data using bulk insert
 
-The traditional jdbc connector writes data into your database using row-by-row insertion. You can use the Spark connector to write data to Azure SQL and SQL Server using bulk insert. It significantly improves the write performance when loading large data sets or loading data into tables where a column store index is used.
+The traditional jdbc connector writes data into your database using row-by-row insertion. You can use the Spark connector to write data to Azure SQL and SQL Server using bulk insert. It significantly improves the write performance when loading large data sets or loading data into tables where a columnstore index is used.
 
 ```scala
 import com.microsoft.azure.sqldb.spark.bulkcopy.BulkCopyMetadata

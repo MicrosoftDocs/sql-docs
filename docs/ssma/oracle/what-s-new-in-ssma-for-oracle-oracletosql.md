@@ -461,7 +461,7 @@ The March 2016 preview release of SSMA for Oracle added support for:
 
 * Migration to SQL Server 2016.
 * Migrating Oracle Row Level Security (with some limitations).
-* Migrating Oracle in memory tables to SQL Server Column Store.
+* Migrating Oracle in memory tables to SQL Server columnstore.
 
 ## January 2016
 

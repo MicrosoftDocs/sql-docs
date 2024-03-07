@@ -159,7 +159,7 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
     icacls "C:\Program Files\Python310\Lib\site-packages" /grant "NT Service\MSSQLLAUNCHPAD":(OI)(CI)RX /T
     icacls "C:\Program Files\Python310\Lib\site-packages" /grant *S-1-15-2-1:(OI)(CI)RX /T
     ```
-Note: if you have installed SQL Server as a named service, you will need to check the name of hte launchpad service account. You can do that by running services.msc and checking the account that the SQL Server Launchpad Service is running as. For example, if you have a default installation of SQL Server Express edition, you would need to use these commands instead:
+Note: if you have installed SQL Server as a named service, you will need to check the name of the Launchpad service account. You can do that by running `services.msc` and checking the account that the SQL Server Launchpad service is running as. For example, if you have a default installation of SQL Server Express edition, you need to use these commands instead:
 
     ```cmd
     icacls "C:\Program Files\Python310\Lib\site-packages" /grant "NT Service\MSSQLLAUNCHPAD$SQLEXPRESS":(OI)(CI)RX /T

@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Ana
 description: Using Microsoft Entra server principals (logins) in Azure SQL
 author: nofield
 ms.author: nofield
-ms.reviewer: vanto
+ms.reviewer: vanto, mathoma
 ms.date: 02/15/2024
 ms.service: sql-db-mi
 ms.subservice: security

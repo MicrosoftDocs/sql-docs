@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Ana
 description: Learn about functionality for managing your database vulnerabilities and detecting anomalous activities that could indicate a threat to your database in Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse.
 author: cesanu
 ms.author: cesanu
-ms.reviewer: maghan
+ms.reviewer: maghan, mathoma
 ms.date: 07/04/2023
 ms.service: sql-db-mi
 ms.subservice: security

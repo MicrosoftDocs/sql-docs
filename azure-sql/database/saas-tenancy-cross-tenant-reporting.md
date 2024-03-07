@@ -3,6 +3,7 @@ title: Reporting queries across multiple databases
 description: Cross-tenant reporting using distributed queries.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: mathoma
 ms.date: 01/25/2019
 ms.service: sql-database
 ms.subservice: scenario

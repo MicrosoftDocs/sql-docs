@@ -3,7 +3,7 @@ title: Create server configured with user-assigned managed identity and cross-te
 description: Learn how to configure user-assigned managed identity and transparent data encryption (TDE) with cross-tenant customer managed keys (CMK) while creating an Azure SQL Database logical server using the Azure portal, PowerShell, or Azure CLI.
 author: GithubMirek
 ms.author: mireks
-ms.reviewer: vanto
+ms.reviewer: vanto, mathoma
 ms.date: 10/10/2023
 ms.service: sql-database
 ms.subservice: security

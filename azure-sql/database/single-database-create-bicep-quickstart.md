@@ -3,6 +3,7 @@ title: "Bicep: Create a single database in Azure SQL Database"
 description: Create a single database in Azure SQL Database using Bicep.
 author: dimitri-furman
 ms.author: dfurman
+ms.reviewer: mathoma
 ms.date: 05/16/2022
 ms.service: sql-database
 ms.subservice: deployment-configuration

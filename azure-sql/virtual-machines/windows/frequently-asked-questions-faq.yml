@@ -15,7 +15,7 @@ metadata:
   ms.workload: iaas-sql-server
   ms.date: 07/31/2023
   ms.author: pamela
-  ms.reviewer: randolphwest
+  ms.reviewer: randolphwest, mathoma
 title: Frequently asked questions for SQL Server on Azure VMs
 summary: |
   [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]

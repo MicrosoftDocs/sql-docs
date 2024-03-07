@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database and Azure SQL Managed Instance
 description: Learn how to mitigate naming conflicts for Microsoft Entra logins and users with nonunique display names in Azure SQL Database and Azure SQL Managed Instance by using the T-SQL Object_ID syntax, currently in preview. 
 author: tameikal-msft
 ms.author: talawren
-ms.reviewer: vanto, nofield
+ms.reviewer: vanto, nofield, mathoma
 ms.date: 02/21/2024
 ms.service: sql-db-mi
 ms.subservice: security

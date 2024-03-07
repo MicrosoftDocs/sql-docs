@@ -78,7 +78,7 @@ The following table lists the supported and unsupported deployment models:
 | Single database | Serverless | All  |No  | N/A |
 | Elastic pool | All | All| No  | N/A  |
 
-* For Hyperscale service tier, review the [new pricing tier for Azure SQL Database Hyperscale announcement](https://aka.ms/hsignite2023), and for pricing change details, see [Azure SQL Database Hyperscale – lower, simplified pricing!](https://techcommunity.microsoft.com/t5/azure-sql-blog/azure-sql-database-hyperscale-lower-simplified-pricing/ba-p/3982209).
+*For Hyperscale service tier, review the [new pricing tier for Azure SQL Database Hyperscale announcement](https://aka.ms/hsignite2023), and for pricing change details, see [Azure SQL Database Hyperscale – lower, simplified pricing!](https://techcommunity.microsoft.com/t5/azure-sql-blog/azure-sql-database-hyperscale-lower-simplified-pricing/ba-p/3982209).
 
 Using a standby database has the following limitations: 
 

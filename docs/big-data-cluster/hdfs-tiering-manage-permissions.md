@@ -6,6 +6,7 @@ ms.author: wiassaf
 ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: big-data-cluster
+ms.custom: linux-related-content
 ms.topic: how-to
 ---
 

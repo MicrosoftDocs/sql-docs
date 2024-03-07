@@ -7,6 +7,7 @@ ms.reviewer: maghan
 ms.date: 1/25/2023
 ms.service: sql
 ms.subservice: tools-other
+ms.custom: linux-related-content
 ms.topic: conceptual
 ---
 

@@ -8,9 +8,7 @@ ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: quickstart
-ms.custom:
-  - intro-deployment
-  - devx-track-azurecli
+ms.custom: intro-deployment, devx-track-azurecli, linux-related-content
 ---
 
 # Use a python script to deploy a SQL Server Big Data Cluster on Azure Red Hat OpenShift (ARO)

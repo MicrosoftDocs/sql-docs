@@ -7,6 +7,7 @@ ms.reviewer: randolphwest, maghan
 ms.date: 12/12/2023
 ms.service: sql
 ms.subservice: tools-other
+ms.custom: linux-related-content
 ms.topic: conceptual
 helpviewer_keywords:
   - "statements [SQL Server], command prompt"

@@ -4,7 +4,7 @@ description: "Transaction locking and row versioning guide"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 01/24/2024
+ms.date: 03/06/2024
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -1814,6 +1814,9 @@ A long running transaction can cause serious problems for a database, as follows
 - If a server instance is shut down after an active transaction has performed many uncommitted modifications, the recovery phase of the subsequent restart can take much longer than the time specified by the **recovery interval** server configuration option or by the `ALTER DATABASE ... SET TARGET_RECOVERY_TIME` option. These options control the frequency of active and indirect checkpoints, respectively. For more information about the types of checkpoints, see [Database checkpoints (SQL Server)](logs/database-checkpoints-sql-server.md).
 
 - More importantly, although a waiting transaction might generate very little log, it holds up log truncation indefinitely, causing the transaction log to grow and possibly fill up. If the transaction log fills up, the database cannot perform anymore updates. For more information, see [SQL Server transaction log architecture and management guide](sql-server-transaction-log-architecture-and-management-guide.md), [Troubleshoot a full transaction log (SQL Server Error 9002)](logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md), and [The transaction log](logs/the-transaction-log-sql-server.md).
+
+> [!IMPORTANT]  
+> In Azure SQL Database, idle transactions (transactions that haven't written to the transaction log for six hours) are automatically terminated, to free up resources.
 
 #### <a id="discovering-long-running-transactions"></a> Discover long-running transactions
 

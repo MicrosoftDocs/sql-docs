@@ -47,8 +47,8 @@ Contains information about each execution plan associated with a query.
 | `initial_compile_start_time` | **datetimeoffset** | Plan compilation statistics. |
 | `last_compile_start_time` | **datetimeoffset** | Plan compilation statistics. |
 | `last_execution_time` | **datetimeoffset** | Last execution time refers to the last end time of the query/plan. |
-| `avg_compile_duration` | **float** | Plan compilation statistics, in microseconds. Divide by 100,0000 to get seconds. |
-| `last_compile_duration` | **bigint** | Plan compilation statistics, in microseconds. Divide by 100,0000 to get seconds. |
+| `avg_compile_duration` | **float** | Plan compilation statistics, in microseconds. Divide by 1,000,000 to get seconds. |
+| `last_compile_duration` | **bigint** | Plan compilation statistics, in microseconds. Divide by 1,000,000 to get seconds. |
 | `plan_forcing_type` | **int** | **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions<br /><br />Plan forcing type.<br /><br />0: `NONE`<br />1: `MANUAL`<br />2: `AUTO` |
 | `plan_forcing_type_desc` | **nvarchar(60)** | **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions<br /><br />Text description of `plan_forcing_type`.<br /><br />`NONE`: No plan forcing<br />`MANUAL`: Plan forced by user<br />`AUTO`: Plan forced by automatic tuning. |
 | `has_compile_replay_script` | **bit** | **Applies to:** [!INCLUDE [sql-server-2022](../../includes/sssql22-md.md)] and later versions<br /><br />Indicates whether the plan has an optimization replay script associated with it:<br />0 = No optimization replay script (none or even invalid).<br />1 = optimization replay script recorded.<br /><br />Not applicable to [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)]. |

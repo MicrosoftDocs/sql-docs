@@ -74,9 +74,11 @@ The following table lists the supported and unsupported deployment models:
 |--|--|--|--|--|
 | Single database | Provisioned | General Purpose | Yes  | Standard-series (Gen5), FSv2-Series, DC-Series  |
 | Single database | Provisioned | Business Critical  | Yes  | Standard-series (Gen5), DC-Series |
-| Single database | Provisioned | Hyperscale | No | N/A
+| Single database | Provisioned | Hyperscale | N/A* | N/A
 | Single database | Serverless | All  |No  | N/A |
 | Elastic pool | All | All| No  | N/A  |
+
+* For Hyperscale service tier, review the [new pricing tier for Azure SQL Database Hyperscale announcement](https://aka.ms/hsignite2023), and for pricing change details, see [Azure SQL Database Hyperscale – lower, simplified pricing!](https://techcommunity.microsoft.com/t5/azure-sql-blog/azure-sql-database-hyperscale-lower-simplified-pricing/ba-p/3982209).
 
 Using a standby database has the following limitations: 
 

@@ -29,6 +29,10 @@ Use the [create or update](/rest/api/sql/sync-groups/create-or-update) template 
  
 When creating a sync group, do not pass in the sync schema (table\column) and do not pass in masterSyncMemberName, because at this time sync group does not have table\column information yet.
 
+Sync group names cannot contain special characters, it can contain letters, numbers, underscore(_), dash(-).
+
+The minimum interval time for group synchronization is 5 seconds. If the interval time is smaller, 5 seconds will be used.
+
 Sample request for creating a sync group: 
 
 ```http

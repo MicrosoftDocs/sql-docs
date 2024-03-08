@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Ana
 description: This article guides you through creating and utilizing Microsoft Entra logins in the virtual master database of Azure SQL
 author: nofield
 ms.author: nofield
-ms.reviewer: vanto
+ms.reviewer: vanto, mathoma
 ms.date: 09/27/2023
 ms.service: sql-db-mi
 ms.subservice: security

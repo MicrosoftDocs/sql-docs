@@ -4,6 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn about rollout progress for new and existing instances of the November 2022 feature wave.
 author: MashaMSFT
 ms.author: mathoma
+ms.reviewer: mathoma
 ms.date: 07/12/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview

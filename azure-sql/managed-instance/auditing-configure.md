@@ -3,7 +3,7 @@ title: SQL Managed Instance auditing
 description: Learn how to get started with Azure SQL Managed Instance auditing using T-SQL
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto, randolphwest, mathoma
 ms.date: 12/23/2022
 ms.service: sql-managed-instance
 ms.subservice: security

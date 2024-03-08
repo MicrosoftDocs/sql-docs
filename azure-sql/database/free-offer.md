@@ -3,7 +3,7 @@ title: Try for free (preview)
 description: Guidance on how to deploy the Azure SQL Database free offer for new accounts.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: amapatil,
+ms.reviewer: amapatil, mathoma
 ms.date: 02/27/2024
 ms.service: sql-database
 ms.subservice: service-overview

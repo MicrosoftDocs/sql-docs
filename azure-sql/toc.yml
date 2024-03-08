@@ -24,8 +24,6 @@
       href: database/features-comparison.md
     - name: Multi-model features
       href: multi-model-features.md
-    - name: In-memory OLTP
-      href: in-memory-oltp-overview.md
     - name: Temporal tables
       href: temporal-tables.md
     - name: Scale up / down
@@ -136,8 +134,6 @@
           href: database/sql-insights-troubleshoot.md
       - name: Automatic tuning
         href: database/automatic-tuning-overview.md
-      - name: In-memory OLTP
-        href: in-memory-oltp-overview.md
       - name: Extended events
         items:
         - name: Extended events
@@ -215,15 +211,6 @@
         href: database/performance-guidance.md
       - name: Log diagnostic telemetry
         href: database/metrics-diagnostic-telemetry-logging-streaming-export-configure.md
-      - name: In-memory OLTP
-        items:
-        - name: Configure In-Memory OLTP
-          href: in-memory-oltp-configure.md
-        - name: Try in-memory features
-          href: in-memory-sample.md
-        - name: Monitor In-memory OLTP space
-          href: in-memory-oltp-monitor-space.md
-
     - name: Load and move data
       items:
       - name: Import a database from a BACPAC file
@@ -383,7 +370,16 @@
       href: database/logical-servers.md
     - name: Serverless
       href: database/serverless-tier-overview.md
-
+    - name: In-memory OLTP in Azure SQL Database
+      items:
+      - name: In-memory OLTP overview
+        href: database/in-memory-oltp-overview.md
+      - name: Configure In-memory OLTP
+        href: database/in-memory-oltp-configure.md
+      - name: Try in-memory features
+        href: database/in-memory-oltp-sample.md
+      - name: Monitor In-memory OLTP space
+        href: database/in-memory-oltp-monitor-space.md
     - name: Hyperscale
       items: 
       - name: Overview
@@ -1176,6 +1172,16 @@
       href: managed-instance/instance-pools-overview.md
     - name: Data virtualization 
       href: managed-instance/data-virtualization-overview.md
+    - name: In-memory OLTP in Azure SQL Managed Instance
+      items:
+      - name: In-memory OLTP Overview
+        href: managed-instance/in-memory-oltp-overview.md
+      - name: Configure In-memory OLTP
+        href: managed-instance/in-memory-oltp-configure.md
+      - name: Monitor In-memory OLTP space
+        href: managed-instance/in-memory-oltp-monitor-space.md
+      - name: Try in-memory features
+        href: managed-instance/in-memory-oltp-sample.md
     - name: Business continuity
       items: 
       - name: Overview

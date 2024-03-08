@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Get notification before planned maintenance for Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: scottkim, urosmil
+ms.reviewer: scottkim, urosmil, mathoma
 ms.date: 01/12/2024
 ms.service: sql-database
 ms.subservice: service-overview

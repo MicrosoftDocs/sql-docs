@@ -3,7 +3,7 @@ title: IS_SRVROLEMEMBER (Transact-SQL)
 description: "IS_SRVROLEMEMBER (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.date: "03/14/2017"
+ms.date: "03/06/2024"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -51,38 +51,41 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 - processadmin
   
  **'** *login* **'**  
- Is the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to check. *login* is **sysname**, with a default of NULL. If no value is specified, the result is based on the current Execution context. If the parameter contains the word NULL will return NULL.  
-  
+ Is the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to check. *login* is **sysname**, with a default of NULL. If no value is specified, the result is based on the current Execution context. If the parameter contains the word NULL, it returns NULL.
+
+> [!NOTE]
+> While Microsoft Entra logins are in public preview for Azure SQL Database and Azure Synapse, using a Microsoft Entra principal for *login* is not supported.
+
 ## Return Types  
  **int**  
   
 |Return value|Description|  
 |------------------|-----------------|  
-|0|*login* is not a member of *role*.<br /><br /> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], this statement always returns 0.|  
+|0|*login* isn't a member of *role*.<br /><br /> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], this statement always returns 0.|  
 |1|*login* is a member of *role*.|  
-|NULL|*role* or *login* is not valid, or you do not have permission to view the role membership.|  
+|NULL|*role* or *login* isn't valid, or you don't have permission to view the role membership.|  
   
 ## Remarks  
- UseIS_SRVROLEMEMBER to determine whether the current user can perform an action requiring the server role's permissions.  
+ Use IS_SRVROLEMEMBER to determine whether the current user can perform an action requiring the server role's permissions.  
   
  If a Windows login, such as Contoso\Mary5, is specified for *login*, **IS_SRVROLEMEMBER** returns **NULL**, unless the login has been granted or denied direct access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- If the optional *login* parameter is not provided and if *login* is a Windows domain login, it may be a member of a fixed server role through membership in a Windows group. To resolve such indirect memberships, IS_SRVROLEMEMBER requests Windows group membership information from the domain controller. If the domain controller is inaccessible or does not respond, **IS_SRVROLEMEMBER** returns role membership information by accounting for the user and its local groups only. If the user specified is not the current user, the value returned by IS_SRVROLEMEMBER might differ from the authenticator's (such as Active Directory) last data update to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ If the optional *login* parameter isn't provided and if *login* is a Windows domain login, it may be a member of a fixed server role through membership in a Windows group. To resolve such indirect memberships, IS_SRVROLEMEMBER requests Windows group membership information from the domain controller. If the domain controller is inaccessible or doesn't respond, **IS_SRVROLEMEMBER** returns role membership information by accounting for the user and its local groups only. If the user specified isn't the current user, the value returned by IS_SRVROLEMEMBER might differ from the authenticator's (such as Active Directory) last data update to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- If the optional login parameter is provided, the Windows login that is being queried must be present in sys.server_principals, or IS_SRVROLEMEMBER will return NULL. This indicates that the login is not valid.  
+ If the optional login parameter is provided, the Windows login that is being queried must be present in sys.server_principals, or IS_SRVROLEMEMBER returns NULL. This indicates that the login isn't valid.  
   
  When the login parameter is a domain login or based on a Windows group and the domain controller is inaccessible, calls to IS_SRVROLEMEMBER will fail and might return incorrect or incomplete data.  
   
- If the domain controller is not available, the call to IS_SRVROLEMEMBER will return accurate information when the Windows principal can be authenticated locally, such as a local Windows account or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
+ If the domain controller isn't available, the call to IS_SRVROLEMEMBER returns accurate information when the Windows principal can be authenticated locally, such as a local Windows account or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
   
  **IS_SRVROLEMEMBER** always returns 0 when a Windows group is used as the login argument, and this Windows group is a member of another Windows group which is, in turn, a member of the specified server role.  
   
  The User Account Control (UAC) setting might also cause the return different results. This would depend on whether the user accessed the server as a Windows group member or as a specific [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user.  
   
- This function evaluates role membership, not the underlying permission. For example, the **sysadmin** fixed server role has the **CONTROL SERVER** permission. If the user has the **CONTROL SERVER** permission but is not a member of the role, this function will correctly report that the user is not a member of the **sysadmin** role, even though the user has the same permissions.  
+ This function evaluates role membership, not the underlying permission. For example, the **sysadmin** fixed server role has the **CONTROL SERVER** permission. If the user has the **CONTROL SERVER** permission but isn't a member of the role, this function will correctly report that the user isn't a member of the **sysadmin** role, even though the user has the same permissions.  
   
 ## Related Functions  
- To determine whether the current user is a member of the specified Windows group or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database role, use [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md). To determine whether a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is a member of a database role, use [IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md).  
+ To determine whether the current user is a member of the specified Windows group, Microsoft Entra group, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database role, use [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md). To determine whether a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is a member of a database role, use [IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md).
   
 ## Permissions  
  Requires VIEW DEFINITION permission on the server role.  

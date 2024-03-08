@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Ana
 description: "Features for job automation to run Transact-SQL (T-SQL) scripts include elastic jobs on Azure SQL Database and SQL Agent jobs on Azure SQL Managed instance."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: srinia
+ms.reviewer: srinia, mathoma
 ms.date: 11/02/2023
 ms.service: sql-db-mi
 ms.topic: conceptual

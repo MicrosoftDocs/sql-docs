@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Learn how to set the time when planned maintenance should be performed on your databases when you use Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: scottkim
+ms.reviewer: scottkim, mathoma
 ms.date: 01/11/2024
 ms.service: sql-database
 ms.subservice: deployment-configuration

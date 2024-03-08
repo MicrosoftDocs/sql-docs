@@ -4,6 +4,7 @@ titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: Use Azure SQL Database auditing to track database events into an audit log.
 author: sravanisaluru
 ms.author: srsaluru
+ms.reviewer: mathoma
 ms.date: 04/26/2023
 ms.service: sql-database
 ms.subservice: security

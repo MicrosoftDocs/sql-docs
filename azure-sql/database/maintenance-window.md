@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Understand how the Azure SQL Database maintenance window can be configured.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: urosmil, scottkim
+ms.reviewer: urosmil, scottkim, mathoma
 ms.date: 01/16/2024
 ms.service: sql-database
 ms.subservice: service-overview

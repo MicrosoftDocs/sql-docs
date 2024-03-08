@@ -3,7 +3,7 @@ title: "Tutorial: Design your first relational database using Azure Data Studio"
 description: Learn to design your first relational database in Azure SQL Database using Azure Data Studio.
 author: tdoshin
 ms.author: timioshin
-ms.reviewer: maghan, drskwier
+ms.reviewer: maghan, drskwier, mathoma
 ms.date: 01/26/2024
 ms.service: sql-database
 ms.subservice: development

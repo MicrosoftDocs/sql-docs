@@ -7,6 +7,7 @@ ms.subservice: deployment-configuration
 ms.custom: devx-track-terraform
 author: TomArcherMsft
 ms.author: tarcher
+ms.reviewer: mathoma
 ms.date: 5/03/2023
 content_well_notification: 
   - AI-contribution

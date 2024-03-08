@@ -4,6 +4,7 @@ titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: Use Auditing to analyze logs in Log Analytics, Event Hubs, or through an Azure storage account.
 author: sravanisaluru
 ms.author: srsaluru
+ms.reviewer: mathoma
 ms.date: 04/26/2023
 ms.service: sql-database
 ms.subservice: security

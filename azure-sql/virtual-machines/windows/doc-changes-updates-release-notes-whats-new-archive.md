@@ -3,7 +3,7 @@ title: What's new? (Archive)
 description: Learn about the features and documentation improvements for SQL Server on Azure VMs made in previous years. (Archive)
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: wiassaf
+ms.reviewer: wiassaf, mathoma
 ms.date: 03/01/2024
 ms.service: virtual-machines-sql
 ms.subservice: service-overview

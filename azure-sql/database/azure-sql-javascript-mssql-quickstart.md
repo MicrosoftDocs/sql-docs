@@ -3,6 +3,7 @@ title: Connect to and query Azure SQL Database using Node.js and mssql npm packa
 description: Learn how to connect to a database in Azure SQL Database and query data using Node.js and mssql npm package.
 author: diberry
 ms.author: diberry
+ms.reviewer: mathoma
 ms.custom: passwordless-js
 ms.date: 05/08/2023
 ms.service: sql-database

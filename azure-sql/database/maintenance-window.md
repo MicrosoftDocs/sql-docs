@@ -5,7 +5,7 @@ description: Understand how the Azure SQL Database maintenance window can be con
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: urosmil, scottkim, mathoma
-ms.date: 01/16/2024
+ms.date: 03/08/2024
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -43,9 +43,11 @@ The maintenance window is free of charge and can be configured on creation or fo
 
 ### Gain more predictability with maintenance window
 
-By default, Azure SQL maintenance policy blocks most impactful updates during the period **8AM to 5PM local time every day** to avoid any disruptions during typical peak business hours. Local time is determined by the location of [Azure region](https://azure.microsoft.com/global-infrastructure/geographies/) that hosts the resource and might observe daylight saving time in accordance with local time zone definition. 
+By default, Azure SQL maintenance policy blocks most impactful updates during the period **8AM to 5PM local time every day** to avoid any disruptions during typical peak business hours. Local time is determined by the location of [Azure region](https://azure.microsoft.com/global-infrastructure/geographies/) that hosts the resource and might observe daylight saving time in accordance with local time zone definition.
 
-You can further adjust the maintenance updates to a time suitable to your Azure SQL resources by choosing from two additional maintenance window slots:
+During maintenance, databases remain available, but some updates may require a failover. The system default maintenance window (5pm to 8am) limits most activities to this time, but urgent updates may occur outside of it. To ensure all updates occur only during the maintenance window, select a non-default option.
+
+You can adjust the window for maintenance updates to a time suitable to your Azure SQL resources by choosing from two non-default maintenance window slots:
  
 - **Weekday** window: 10:00 PM to 6:00 AM local time, Monday - Thursday
 - **Weekend** window: 10:00 PM to 6:00 AM local time, Friday - Sunday
@@ -79,13 +81,13 @@ Offers restricted to dev/test usage only are not eligible (like pay-as-you-go De
 
 ### Supported service level objectives
 
-Choosing a maintenance window other than the default is available on all SLOs **except for**:
+Choosing a maintenance window other than the default is available on all SLOs **except for** the following.
 
-- Azure SQL Database DTU Basic, S0 and S1 tiers
-- DC hardware
-- Fsv2 hardware
-- Hyperscale service tier with zone redundancy
-- Hyperscale elastic pools
+- SLOs not supported:
+    - Azure SQL Database DTU Basic, S0 and S1 tiers
+    - DC hardware
+    - Fsv2 hardware
+    - Hyperscale elastic pools
 
 <!-- Check Known limitations in azure-sql/database/service-tier-hyperscale.md as well -->
 

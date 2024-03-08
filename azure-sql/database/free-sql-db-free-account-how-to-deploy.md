@@ -3,7 +3,7 @@ title: Free SQL Database with Azure free account (old offer)
 description: Guidance on how to deploy an Azure SQL Database for free using an Azure free account.
 author: rajeshsetlem
 ms.author: rsetlem
-ms.reviewer: wiassaf, randolphwest
+ms.reviewer: wiassaf, randolphwest, mathoma
 ms.date: 09/25/2023
 ms.service: sql-database
 ms.subservice: service-overview

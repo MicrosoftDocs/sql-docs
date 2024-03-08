@@ -3,7 +3,7 @@ title: "Plan for secure enclaves in Azure SQL Database"
 description: Plan the deployment of Always Encrypted with secure enclaves in Azure SQL Database.
 author: Pietervanhove
 ms.author: pivanho
-ms.reviewer: vanto
+ms.reviewer: vanto, mathoma
 ms.date: 09/26/2023
 ms.service: sql-database
 ms.subservice: security
@@ -35,9 +35,6 @@ Also, check the current regional availability of DC-series and make sure it's av
 SGX enclaves are recommended for workloads that require the strongest data confidentiality protection and can adhere to the current limitations of DC-series.
 
 ## VBS enclaves
-
-> [!IMPORTANT]
-> VBS enclaves in Azure SQL Database are currently in preview. The [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, in preview, or otherwise not yet released into general availability.
 
 [VBS enclaves](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) (also known as Virtual Secure Mode, or VSM enclaves) is a software-based technology that relies on Windows hypervisor and doesn't require any special hardware. Therefore, VBS enclaves are available in all Azure SQL Database offerings, including Azure SQL Elastic Pools, providing you with the flexibility to use Always Encrypted with secure enclaves with a compute size, service tier, purchasing model, hardware configuration and region that best meets your workload requirements.
 

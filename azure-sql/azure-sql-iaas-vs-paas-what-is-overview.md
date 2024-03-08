@@ -3,7 +3,7 @@ title: "What is Azure SQL?"
 description: "Learn about the different options within the Azure SQL family of services: Azure SQL Database, Azure SQL Managed Instance, and SQL Server on Azure VM."
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: wiassaf
+ms.reviewer: wiassaf, mathoma
 ms.date: 08/21/2023
 ms.service: sql-database
 ms.subservice: service-overview

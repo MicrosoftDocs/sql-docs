@@ -3,7 +3,7 @@ title: Failover cluster instances
 description: "Learn about failover cluster instances (FCIs) with SQL Server on Azure Virtual Machines."
 author: tarynpratt
 ms.author: tarynpratt
-ms.reviewer: randolphwest
+ms.reviewer: randolphwest, mathoma
 ms.date: 10/02/2023
 ms.service: virtual-machines-sql
 ms.subservice: hadr

@@ -4,6 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Overview of SQL Insights (preview) in Azure Monitor.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: mathoma
 ms.date: 09/06/2022
 ms.service: sql-db-mi
 ms.topic: conceptual

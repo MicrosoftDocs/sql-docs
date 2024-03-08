@@ -4,7 +4,7 @@ description: CREATE TABLE (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 06/06/2023
+ms.date: 03/06/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -78,7 +78,7 @@ Disk-based CREATE TABLE syntax:
 CREATE TABLE
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ AS FileTable ]
-    ( {   <column_definition>
+    ( { <column_definition>
         | <computed_column_definition>
         | <column_set_definition>
         | [ <table_constraint> ] [ ,... n ]
@@ -203,9 +203,9 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 <table_index> ::=
 {
     {
-      INDEX index_name  [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ]
+      INDEX index_name [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ]
          ( column_name [ ASC | DESC ] [ ,... n ] )
-    | INDEX index_name CLUSTERED COLUMNSTORE
+    | INDEX index_name CLUSTERED COLUMNSTORE [ ORDER (column_name [ , ...n ] ) ]
     | INDEX index_name [ NONCLUSTERED ] COLUMNSTORE ( column_name [ ,... n ] )
     }
     [ INCLUDE ( column_name [ ,... n ] ) ]
@@ -217,7 +217,6 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
          }
     ]
     [ FILESTREAM_ON { filestream_filegroup_name | partition_scheme_name | "NULL" } ]
-
 }
 
 <table_option> ::=
@@ -564,6 +563,8 @@ Specifies to create an index on the table. This can be a clustered index, or a n
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 Specifies to store the entire table in columnar format with a clustered columnstore index. This always includes all columns in the table. The data isn't sorted in alphabetical or numeric order since the rows are organized to gain columnstore compression benefits.
+
+In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE [ssPDW](../../includes/sspdw-md.md)], and [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, you can determine the order of the columns for a clustered columnstore index. For more information, see [Use an ordered clustered columnstore index for large data warehouse tables](../../relational-databases/indexes/columnstore-indexes-design-guidance.md#use-an-ordered-clustered-columnstore-index-for-large-data-warehouse-tables).
 
 #### INDEX *index_name* [ NONCLUSTERED ] COLUMNSTORE ( *column_name* [ ,... *n* ] )
 
@@ -2103,21 +2104,21 @@ CREATE TABLE [HR].[Employees]
 GO
 ```
 
-## Next steps
+## Related content
 
-- [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
-- [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)
-- [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
-- [CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)
-- [Data Types](../../t-sql/data-types/data-types-transact-sql.md)
-- [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)
+- [ALTER TABLE](alter-table-transact-sql.md)
+- [COLUMNPROPERTY](../functions/columnproperty-transact-sql.md)
+- [CREATE INDEX](create-index-transact-sql.md)
+- [CREATE VIEW](create-view-transact-sql.md)
+- [Data types](../data-types/data-types-transact-sql.md)
+- [DROP INDEX](drop-index-transact-sql.md)
 - [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)
 - [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)
-- [DROP TABLE](../../t-sql/statements/drop-table-transact-sql.md)
-- [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)
-- [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)
-- [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)
-- [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)
+- [DROP TABLE](drop-table-transact-sql.md)
+- [CREATE PARTITION FUNCTION](create-partition-function-transact-sql.md)
+- [CREATE PARTITION SCHEME](create-partition-scheme-transact-sql.md)
+- [CREATE TYPE](create-type-transact-sql.md)
+- [EVENTDATA](../functions/eventdata-transact-sql.md)
 - [sp_help](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)
 - [sp_helpconstraint](../../relational-databases/system-stored-procedures/sp-helpconstraint-transact-sql.md)
 - [sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)

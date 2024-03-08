@@ -3,7 +3,7 @@ title: "sys.dm_os_out_of_memory_events"
 description: sys.dm_os_out_of_memory_events returns a log of out of memory (OOM) events, including a predicted out of memory cause.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 02/19/2024
+ms.date: 02/29/2024
 ms.service: sql-database
 ms.topic: "reference"
 f1_keywords:
@@ -30,7 +30,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 |-------------|---------------|-----------------|  
 |`event_time` | datetime2, not null  | OOM event time |
 |`oom_cause`  | tinyint, not null | A numeric value indicating OOM root cause. OOM cause is determined by a heuristic algorithm and is provided with a finite degree of confidence. |
-|`oom_cause_desc` | nvarchar(60), not null | Description of `oom_cause`, one of:<BR>0. UNKNOWN - OOM cause could not be determined<BR>1. HEKATON_POOL_MEMORY_LOW - Insufficient memory in the resource pool used for In-Memory OLTP. For more information, see [Monitor In-Memory OLTP](/azure/azure-sql/in-memory-oltp-monitor-space).<BR>2. MEMORY_LOW - Insufficient memory available to the database engine process<BR>3. OS_MEMORY_PRESSURE - OOM due to external memory pressure from the operating system<BR>4. OS_MEMORY_PRESSURE_SQL - OOM due to external memory pressure from other database engine instance(s)<BR>5. NON_SOS_MEMORY_LEAK - OOM due to a leak in non-SOS memory, for example, loaded modules<BR>6. SERVERLESS_MEMORY_RECLAMATION - OOM related to memory reclamation in a serverless database<BR>7. MEMORY_LEAK - OOM due to a leak in SOS memory<BR>8. SLOW_BUFFER_POOL_SHRINK - OOM due to the buffer pool not releasing memory fast enough under memory pressure<BR>9. INTERNAL_POOL - Insufficient memory in the internal resource pool<BR>10. SYSTEM_POOL - Insufficient memory in a system resource pool<BR>11. QUERY_MEMORY_GRANTS - OOM due to large memory grants held by queries<BR>12. REPLICAS_AND_AVAILABILITY - OOM due to workloads in SloSecSharedPool resource pool |
+|`oom_cause_desc` | nvarchar(60), not null | Description of `oom_cause`, one of:<BR>0. UNKNOWN -  OOM cause could not be determined<BR>1. HEKATON_POOL_MEMORY_LOW - Insufficient memory in the resource pool used for In-Memory OLTP. For more information, see [Monitor In-Memory OLTP](/azure/azure-sql/database/in-memory-oltp-monitor-space?view=azuresql-db&preserve-view=true).<BR>2. MEMORY_LOW - Insufficient memory available to the database engine process<BR>3. OS_MEMORY_PRESSURE - OOM due to external memory pressure from the operating system<BR>4. OS_MEMORY_PRESSURE_SQL - OOM due to external memory pressure from other database engine instance(s)<BR>5. NON_SOS_MEMORY_LEAK - OOM due to a leak in non-SOS memory, for example, loaded modules<BR>6. SERVERLESS_MEMORY_RECLAMATION - OOM related to memory reclamation in a serverless database<BR>7. MEMORY_LEAK - OOM due to a leak in SOS memory<BR>8. SLOW_BUFFER_POOL_SHRINK - OOM due to the buffer pool not releasing memory fast enough under memory pressure<BR>9. INTERNAL_POOL - Insufficient memory in the internal resource pool<BR>10. SYSTEM_POOL - Insufficient memory in a system resource pool<BR>11. QUERY_MEMORY_GRANTS - OOM due to large memory grants held by queries<BR>12. REPLICAS_AND_AVAILABILITY - OOM due to workloads in SloSecSharedPool resource pool |
 |`available_physical_memory_mb`|int, not null|Available physical memory, in megabytes|
 |`initial_job_object_memory_limit_mb` |int, null |Job object memory limit on database engine startup, in megabytes. For more information on Job Objects, see [Resource governance](/azure/azure-sql/database/resource-limits-logical-server#resource-governance). |
 |`current_job_object_memory_limit_mb` |int, null |Job object current memory limit, in megabytes |
@@ -76,9 +76,11 @@ SELECT * FROM sys.dm_os_out_of_memory_events ORDER BY event_time DESC;
 
 ## Related content
 
-- [sys.resource_stats](../system-catalog-views/sys-resource-stats-azure-sql-database.md)
-- [sys.server_resource_stats](../system-catalog-views/sys-server-resource-stats-azure-sql-database.md)
-- [sys.dm_db_resource_stats](sys-dm-db-resource-stats-azure-sql-database.md)
-- [Monitor In-Memory OLTP storage in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/in-memory-oltp-monitor-space)
-- [Troubleshoot out of memory errors with Azure SQL Database](/azure/azure-sql/database/troubleshoot-memory-errors-issues)
-- [Blog: A new way to troubleshoot out-of-memory errors in the database engine](https://techcommunity.microsoft.com/t5/azure-sql-blog/a-new-way-to-troubleshoot-out-of-memory-errors-in-the-database/ba-p/3271926)
+ - [sys.resource_stats](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)
+ - [sys.server_resource_stats](../../relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database.md)
+ - [sys.dm_db_resource_stats (Azure SQL Database)](sys-dm-db-resource-stats-azure-sql-database.md?view=azuresqldb-current&preserve-view=true)
+ - [Optimize performance by using in-memory technologies in Azure SQL Database](/azure/azure-sql/database/in-memory-oltp-overview?view=azuresql-db&preserve-view=true)
+ - [Optimize performance by using in-memory technologies in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/in-memory-oltp-overview?view=azuresql-mi&preserve-view=true)
+ - [Monitor In-Memory OLTP storage in Azure SQL Database](/azure/azure-sql/database/in-memory-oltp-monitor-space?view=azuresql-db&preserve-view=true)
+ - [Monitor In-Memory OLTP storage in Azure SQL Managed Mnstance](/azure/azure-sql/managed-instance/in-memory-oltp-monitor-space?view=azuresql-mi&preserve-view=true)
+ - [Troubleshoot out of memory errors with Azure SQL Database](/azure/azure-sql/database/troubleshoot-memory-errors-issues)

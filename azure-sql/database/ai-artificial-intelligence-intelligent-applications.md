@@ -3,7 +3,7 @@ title: Intelligent applications
 description: "Use AI options such as OpenAI and vectors to build intelligent applications with Azure SQL Database."
 author: damauri
 ms.author: damauri
-ms.reviewer: damauri, randolphwest, josephsack
+ms.reviewer: damauri, randolphwest, josephsack, mathoma
 ms.date: 3/13/2024
 ms.service: sql-database
 ms.topic: conceptual
@@ -14,6 +14,8 @@ ms.topic: conceptual
 [!INCLUDE [asdb](../includes/appliesto-sqldb.md)]
 
 This article provides an overview of using artificial intelligence (AI) options, such as OpenAI and vectors, to build intelligent applications with Azure SQL Database.
+
+For samples and examples, please visit the [SQL AI Samples repository](https://aka.ms/sqlaisamples).
 
 ## Overview
 
@@ -190,3 +192,4 @@ For more information, see [Frequently asked questions about Copilot in Microsoft
 - [Embeddings models](/azure/ai-services/openai/concepts/models#embeddings-models)
 - [Frequently asked questions about Copilot in Azure SQL Database (preview)](../copilot/copilot-azure-sql-faq.yml)
 - [Responsible AI FAQ for Microsoft Copilot for Azure (preview)](/azure/copilot/responsible-ai-faq)
+- [SQL AI Samples and Examples](https://aka.ms/sqlaisamples)

@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Learn how to develop a modern application using Python, Docker Containers, Kubernetes, and Azure SQL Database.
 author: BuckWoody
 ms.author: bwoody
-ms.reviewer: wiassaf, damauri
+ms.reviewer: wiassaf, damauri, mathoma
 ms.date: 12/22/2023
 ms.service: sql-database
 ms.subservice: development

@@ -4,6 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: "Automation options to run Transact-SQL (T-SQL) scripts in Azure SQL Managed Instance"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: mathoma
 ms.date: 04/19/2022
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration

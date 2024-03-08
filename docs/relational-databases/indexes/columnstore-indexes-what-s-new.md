@@ -205,11 +205,11 @@ These in-memory OLTP-based DMVs contain updates for columnstore:
 
 ## SQL Server 2014 (12.x)
 
-[!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] introduced the clustered column store index as the primary storage format. This allowed regular loads as well as update, delete, and insert operations.
+[!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] introduced the clustered columnstore index as the primary storage format. This allowed regular loads as well as update, delete, and insert operations.
 
-- The table can use a clustered column store index as the primary table storage. No other indexes are allowed on the table, but the clustered column store index is updateable so you can perform regular loads and make changes to individual rows.
-- The nonclustered column store index continues to have the same functionality as in [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] except for additional operators that can now be executed in batch mode. It is still not updateable except by rebuilding, and by using partition switching. The nonclustered columnstore index is supported on disk-based tables only, and not on in-memory tables.
-- The clustered and nonclustered column store index has an archival compression option that further compresses the data. The archival option is useful for reducing the data size both in memory and on disk, but does slow query performance. It works well for data that is accessed infrequently.
+- The table can use a clustered columnstore index as the primary table storage. No other indexes are allowed on the table, but the clustered columnstore index is updateable so you can perform regular loads and make changes to individual rows.
+- The nonclustered columnstore index continues to have the same functionality as in [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] except for additional operators that can now be executed in batch mode. It is still not updateable except by rebuilding, and by using partition switching. The nonclustered columnstore index is supported on disk-based tables only, and not on in-memory tables.
+- The clustered and nonclustered columnstore index has an archival compression option that further compresses the data. The archival option is useful for reducing the data size both in memory and on disk, but does slow query performance. It works well for data that is accessed infrequently.
 - The clustered columnstore index and the nonclustered columnstore index function in a very similar way; they use the same columnar storage format, same query processing engine, and the same set of dynamic management views. The difference is primary versus secondary index types, and the nonclustered columnstore index is read-only.
 - These operators run in batch mode for multi-threaded queries: scan, filter, project, join, group by, and union all.
 
@@ -219,7 +219,7 @@ These in-memory OLTP-based DMVs contain updates for columnstore:
 
 - A rowstore table can have one nonclustered columnstore index.
 - The columnstore index is read-only. After you create the columnstore index, you cannot update the table by `INSERT`, `DELETE`, and `UPDATE` operations; to perform these operations you must drop the index, update the table and rebuild the columnstore index. You can load additional data into the table by using partition switching. The advantage of partition switching is you can load data without dropping and rebuilding the columnstore index.
-- The column store index always requires extra storage, typically an additional 10% over rowstore, because it stores a copy of the data.
+- The columnstore index always requires extra storage, typically an additional 10% over rowstore, because it stores a copy of the data.
 - Batch processing provides 2x or better query performance, but it is only available for parallel query execution.
 
 ## Related content

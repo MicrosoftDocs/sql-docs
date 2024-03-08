@@ -81,13 +81,13 @@ Offers restricted to dev/test usage only are not eligible (like pay-as-you-go De
 
 ### Supported service level objectives
 
-Choosing a maintenance window other than the default is available on all SLOs **except for**:
+Choosing a maintenance window other than the default is available on all SLOs **except for** the following.
 
-- Azure SQL Database DTU Basic, S0 and S1 tiers
-- DC hardware
-- Fsv2 hardware
-- Hyperscale service tier with zone redundancy
-- Hyperscale elastic pools
+- SLOs not supported:
+    - Azure SQL Database DTU Basic, S0 and S1 tiers
+    - DC hardware
+    - Fsv2 hardware
+    - Hyperscale elastic pools
 
 <!-- Check Known limitations in azure-sql/database/service-tier-hyperscale.md as well -->
 

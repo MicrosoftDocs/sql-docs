@@ -3,6 +3,7 @@ title: Use Java and JDBC with Azure SQL Database
 description: Learn how to use Java and JDBC with an Azure SQL Database.
 author: jdubois
 ms.author: judubois
+ms.reviewer: mathoma
 ms.date: 12/07/2023
 ms.service: sql-database
 ms.subservice: development

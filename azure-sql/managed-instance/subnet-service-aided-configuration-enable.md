@@ -4,6 +4,7 @@ description: Enabling service-aided subnet configuration for Azure SQL Managed I
 author: zoran-rilak-msft
 ms.author: zoranrilak
 ms.date: 03/25/2022
+ms.reviewer: mathoma
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: how-to

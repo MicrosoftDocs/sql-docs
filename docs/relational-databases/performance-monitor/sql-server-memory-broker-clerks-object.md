@@ -25,7 +25,7 @@ This following table describes the SQL Server **Memory Broker Clerks** performan
 |**Simulation benefit**|The value of memory to the clerk, in ms per page per ms, multiplied by 10 billion and truncated to an integer.|
 |**Simulation size**|The current size of the clerk simulation, in pages.|
 
-There is an instance of the counter for the buffer pool, and the column store object pool.
+There is an instance of the counter for the buffer pool, and the columnstore object pool.
 
 ## Example
 

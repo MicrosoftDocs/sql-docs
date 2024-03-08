@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn about the currently known issues with Azure SQL Managed Instance, and their possible workarounds or resolutions.
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: randolphwest
+ms.reviewer: randolphwest, mathoma
 ms.date: 03/05/2024
 ms.service: sql-managed-instance
 ms.subservice: service-overview

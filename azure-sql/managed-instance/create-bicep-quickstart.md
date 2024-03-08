@@ -3,6 +3,7 @@ title: "Bicep: Create an Azure SQL Managed Instance using Bicep"
 description: Learn how to create an Azure SQL Managed Instance using Bicep.
 author: niko-neugebauer
 ms.author: nneugebauer
+ms.reviewer: mathoma
 ms.date: 05/16/2022
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration

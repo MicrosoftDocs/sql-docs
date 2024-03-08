@@ -78,7 +78,7 @@ Disk-based CREATE TABLE syntax:
 CREATE TABLE
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ AS FileTable ]
-    ( {   <column_definition>
+    ( { <column_definition>
         | <computed_column_definition>
         | <column_set_definition>
         | [ <table_constraint> ] [ ,... n ]
@@ -203,9 +203,9 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 <table_index> ::=
 {
     {
-      INDEX index_name  [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ]
+      INDEX index_name [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ]
          ( column_name [ ASC | DESC ] [ ,... n ] )
-    | INDEX index_name CLUSTERED COLUMNSTORE
+    | INDEX index_name CLUSTERED COLUMNSTORE [ ORDER (column_name [ , ...n ] ) ]
     | INDEX index_name [ NONCLUSTERED ] COLUMNSTORE ( column_name [ ,... n ] )
     }
     [ INCLUDE ( column_name [ ,... n ] ) ]
@@ -217,7 +217,6 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
          }
     ]
     [ FILESTREAM_ON { filestream_filegroup_name | partition_scheme_name | "NULL" } ]
-
 }
 
 <table_option> ::=

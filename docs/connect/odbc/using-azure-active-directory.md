@@ -3,7 +3,7 @@ title: Using Microsoft Entra ID with the ODBC Driver
 description: The Microsoft ODBC Driver for SQL Server allows ODBC applications to connect to Azure SQL Database or Azure SQL Managed Instance by authenticating with Microsoft Entra ID.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 11/13/2023
+ms.date: 03/08/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -145,7 +145,7 @@ These options correspond to the same six available in the DSN setup UI above.
 
 - When using Microsoft Entra options with the Windows ODBC driver _prior to_ version 17.4.2, ensure that the Active Directory Authentication Library for SQL Server has been installed. When using the Linux and macOS drivers, ensure that `libcurl` has been installed. For driver version 17.2 and later, this is not an explicit dependency since it is not required for the other authentication methods or ODBC operations.
 
-- When Microsoft Entra configuration includes conditional access policies, and the client is Windows 10 or Server 2016 or later, authentication via Integrated or username/password may fail. Conditional access policies require the use of Web Account Manager (WAM), which is supported in driver version 17.6 or later for Windows. To use WAM, create a new string or DWORD value named `ADALuseWAM` in `HKLM\Software\ODBC\ODBCINST.INI\ODBC Driver 17 for SQL Server`, `HKCU\Software\ODBC\ODBC.INI\<your-user-DSN-name>`, or `HKLM\Software\ODBC\ODBC.INI\<your-system-DSN-name>` for global, user DSN, or system DSN-scoped configuration respectively, and set it to a value of 1. Note that authentication with WAM does not support running the application as a different user with `runas`. Scenarios which require Conditional Access policies are not supported for Linux or macOS.
+- When Microsoft Entra configuration includes conditional access policies, and the client is Windows 10 or Server 2016 or later, authentication via Integrated or username/password may fail. Conditional access policies require the use of Web Account Manager (WAM), which is supported in driver version 17.6 or later for Windows. To use WAM, create a new string value named `ADALuseWAM` in `HKLM\Software\ODBC\ODBCINST.INI\ODBC Driver 17 for SQL Server`, `HKCU\Software\ODBC\ODBC.INI\<your-user-DSN-name>`, or `HKLM\Software\ODBC\ODBC.INI\<your-system-DSN-name>` for global, user DSN, or system DSN-scoped configuration respectively, and set it to a value of 1. Note that authentication with WAM does not support running the application as a different user with `runas`. Scenarios which require Conditional Access policies are not supported for Linux or macOS.
 
 - To connect using a SQL Server account username and password, you may now use the new `SqlPassword` option, which is recommended especially for Azure SQL since this option enables more secure connection defaults.
 

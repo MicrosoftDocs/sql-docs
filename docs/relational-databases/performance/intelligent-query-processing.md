@@ -112,10 +112,9 @@ Several of the suite of [intelligent query processing features](intelligent-quer
 | [Cardinality estimation (CE) feedback](intelligent-query-processing-cardinality-estimation-feedback.md) | Yes |
 | [Degrees of Parallelism (DOP) feedback](intelligent-query-processing-degree-parallelism-feedback.md) | Yes | 
 | [Interleaved Execution](intelligent-query-processing-details.md#interleaved-execution-for-mstvfs) | No |
-| [Memory grant feedback (Batch Mode)](intelligent-query-processing-memory-grant-feedback.md#batch-mode-memory-grant-feedback) | Partially |
-| [Memory grant feedback (Row Mode)](intelligent-query-processing-memory-grant-feedback.md#row-mode-memory-grant-feedback) | Partially |
-| [Memory grant feedback (Percentile)](intelligent-query-processing-memory-grant-feedback.md#percentile-and-persistence-mode-memory-grant-feedback) | Yes |
-| [Memory Grant, CE, and DOP feedback persistence](intelligent-query-processing-memory-grant-feedback.md#percentile-and-persistence-mode-memory-grant-feedback) | No |
+| [Memory grant feedback (Batch Mode)](intelligent-query-processing-memory-grant-feedback.md#batch-mode-memory-grant-feedback) | No |
+| [Memory grant feedback (Row Mode)](intelligent-query-processing-memory-grant-feedback.md#row-mode-memory-grant-feedback) |No |
+| [Memory grant feedback (Percentile and Persistence mode)](intelligent-query-processing-memory-grant-feedback.md#percentile-and-persistence-mode-memory-grant-feedback) | Yes |
 | [Optimized plan forcing](optimized-plan-forcing-query-store.md) | Yes |
 | [Scalar UDF Inlining](intelligent-query-processing-details.md#scalar-udf-inlining) | No | 
 | [Parameter Sensitivity Plan Optimization](./parameter-sensitive-plan-optimization.md) | No, but recommended |

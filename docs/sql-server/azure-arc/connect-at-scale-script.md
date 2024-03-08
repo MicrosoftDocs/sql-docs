@@ -4,7 +4,7 @@ description: In this article, you learn different ways of connecting SQL Server 
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 07/18/2023
+ms.date: 03/08/2024
 ms.topic: conceptual
 ---
 
@@ -12,10 +12,7 @@ ms.topic: conceptual
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-> [!IMPORTANT]  
-> Azure Arc automatically installs the Azure extension for SQL Server when a server connected to Azure Arc has SQL Server installed. All the SQL Server instance resources are automatically created in Azure, providing a centralized management platform for all your SQL Server instances.
-> To automatically connect your SQL Server instances, see [Automatically Connect your SQL Server to Azure Arc](automatically-connect.md).
-> Use the method below, if your server is already connected to Azure, but Azure extension for SQL Server is not deployed automatically using above methods.
+[!INCLUDE [automatic](includes/if-manual.md)]
 
 This article describes how to connect SQL Server instances installed on multiple Windows or Linux machines to Azure Arc as a single task using a script. After the machines are connected to Azure, Azure Arc automatically installs the Azure extension for SQL Server. For information, see [Automatically connect your SQL Server to Azure Arc](automatically-connect.md).
 

@@ -13968,22 +13968,41 @@ items:
       items:
       - name: sp_wait_for_database_copy_sync
         href: relational-databases/system-stored-procedures/sp-wait-for-database-copy-sync-transact-sql.md
-    - name: Spatial indexes
+    - name: Azure Synapse Analytics
+      href: relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md
       items:
-      - name: Overview
-        href: relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md
-      - name: sp_help_spatial_geometry_index
-        href: relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md
-      - name: sp_help_spatial_geometry_index_xml
-        href: relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md
-      - name: sp_help_spatial_geography_index
-        href: relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md
-      - name: sp_help_spatial_geography_index_xml
-        href: relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md
-      - name: sp_help_spatial_geometry_histogram
-        href: relational-databases/system-stored-procedures/sp-help-spatial-geometry-histogram-transact-sql.md
-      - name: sp_help_spatial_geography_histogram
-        href: relational-databases/system-stored-procedures/sp-help-spatial-geography-histogram-transact-sql.md
+      - name: sp_pdw_add_network_credentials
+        href: relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md
+      - name: sp_pdw_database_encryption
+        href: relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md
+      - name: sp_pdw_database_encryption_regenerate_system_keys
+        href: relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md
+      - name: sp_pdw_log_user_data_masking
+        href: relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md
+      - name: sp_pdw_remove_network_credentials
+        href: relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md
+      - name: sp_special_columns_100
+        href: relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md
+    - name: Change feed
+      items:
+      - name: sp_change_feed_disable_db
+        href: relational-databases/system-stored-procedures/sp-change-feed-disable-db.md
+      - name: sp_change_feed_disable_table
+        href: relational-databases/system-stored-procedures/sp-change-feed-disable-table.md        
+      - name: sp_change_feed_drop_table_group
+        href: relational-databases/system-stored-procedures/sp-change-feed-drop-table-group.md
+      - name: sp_help_change_feed
+        href: relational-databases/system-stored-procedures/sp-help-change-feed.md
+      - name: sp_help_change_feed_table
+        href: relational-databases/system-stored-procedures/sp-help-change-feed-table.md
+      - name: sp_change_feed_configure_parameters
+        href: relational-databases/system-stored-procedures/sp-change-feed-configure-parameters.md
+      - name: sp_change_feed_create_table_group
+        href: relational-databases/system-stored-procedures/sp-change-feed-create-table-group.md
+      - name: sp_change_feed_enable_db
+        href: relational-databases/system-stored-procedures/sp-change-feed-enable-db.md
+      - name: sp_change_feed_enable_table
+        href: relational-databases/system-stored-procedures/sp-change-feed-enable-table.md
     - name: Catalog
       items:
       - name: Overview
@@ -14500,6 +14519,10 @@ items:
         href: relational-databases/system-stored-procedures/sp-delete-target-group-member-elastic-jobs-transact-sql.md
       - name: sp_purge_jobhistory
         href: relational-databases/system-stored-procedures/sp-purge-jobhistory-elastic-jobs-transact-sql.md
+    - name: Extended Events
+      items:
+      - name: sp_trace_generateevent
+        href: relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md
     - name: FILESTREAM and FileTable
       items:
       - name: Overview
@@ -15346,7 +15369,7 @@ items:
       - name: sp_setapprole
         href: relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md
       - name: sp_srvrolepermission
-
+        href: relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md
       - name: sp_unsetapprole
         href: relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md
       - name: sp_validatelogins
@@ -15363,41 +15386,22 @@ items:
         href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md
       - name: sp_delete_backup
         href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md
-    - name: Azure Synapse Analytics
-      href: relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md
+    - name: Spatial indexes
       items:
-      - name: sp_pdw_add_network_credentials
-        href: relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md
-      - name: sp_pdw_database_encryption
-        href: relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md
-      - name: sp_pdw_database_encryption_regenerate_system_keys
-        href: relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md
-      - name: sp_pdw_log_user_data_masking
-        href: relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md
-      - name: sp_pdw_remove_network_credentials
-        href: relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md
-      - name: sp_special_columns_100
-        href: relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md
-    - name: Change feed
-      items:
-      - name: sp_change_feed_disable_db
-        href: relational-databases/system-stored-procedures/sp-change-feed-disable-db.md
-      - name: sp_change_feed_disable_table
-        href: relational-databases/system-stored-procedures/sp-change-feed-disable-table.md        
-      - name: sp_change_feed_drop_table_group
-        href: relational-databases/system-stored-procedures/sp-change-feed-drop-table-group.md
-      - name: sp_help_change_feed
-        href: relational-databases/system-stored-procedures/sp-help-change-feed.md
-      - name: sp_help_change_feed_table
-        href: relational-databases/system-stored-procedures/sp-help-change-feed-table.md
-      - name: sp_change_feed_configure_parameters
-        href: relational-databases/system-stored-procedures/sp-change-feed-configure-parameters.md
-      - name: sp_change_feed_create_table_group
-        href: relational-databases/system-stored-procedures/sp-change-feed-create-table-group.md
-      - name: sp_change_feed_enable_db
-        href: relational-databases/system-stored-procedures/sp-change-feed-enable-db.md
-      - name: sp_change_feed_enable_table
-        href: relational-databases/system-stored-procedures/sp-change-feed-enable-table.md
+      - name: Overview
+        href: relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md
+      - name: sp_help_spatial_geometry_index
+        href: relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md
+      - name: sp_help_spatial_geometry_index_xml
+        href: relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md
+      - name: sp_help_spatial_geography_index
+        href: relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md
+      - name: sp_help_spatial_geography_index_xml
+        href: relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md
+      - name: sp_help_spatial_geometry_histogram
+        href: relational-databases/system-stored-procedures/sp-help-spatial-geometry-histogram-transact-sql.md
+      - name: sp_help_spatial_geography_histogram
+        href: relational-databases/system-stored-procedures/sp-help-spatial-geography-histogram-transact-sql.md
     - name: SQL Server Agent
       href: relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md
       items:
@@ -15557,10 +15561,6 @@ items:
         href: relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md
       - name: sp_update_targetservergroup
         href: relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md
-    - name: Extended Events
-      items:
-      - name: sp_trace_generateevent
-        href: relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md
     - name: SQL Server Profiler
       href: relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md
       items:
@@ -15768,274 +15768,6 @@ items:
         href: relational-databases/system-tables/dbo-systargetservers-transact-sql.md
       - name: dbo.systaskids
         href: relational-databases/system-tables/dbo-systaskids-transact-sql.md
-      - name: sp_unsetapprole
-        href: relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md
-      - name: sp_validatelogins
-        href: relational-databases/system-stored-procedures/sp-validatelogins-transact-sql.md
-      - name: sp_verify_database_ledger
-        href: relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-transact-sql.md
-      - name: sp_verify_database_ledger_from_digest_storage
-        href: relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql.md
-      - name: sp_xp_cmdshell_proxy_account
-        href: relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md
-    - name: Snapshot backup
-      items:
-      - name: sp_delete_backup_file_snapshot
-        href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md
-      - name: sp_delete_backup
-        href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md
-    - name: Azure Synapse Analytics
-      items:
-      - name: Overview
-        href: relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md
-      - name: sp_datatype_info_90
-        href: relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md
-      - name: sp_pdw_add_network_credentials
-        href: relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md
-      - name: sp_pdw_database_encryption
-        href: relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md
-      - name: sp_pdw_database_encryption_regenerate_system_keys
-        href: relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md
-      - name: sp_pdw_log_user_data_masking
-        href: relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md
-      - name: sp_pdw_remove_network_credentials
-        href: relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md
-      - name: sp_special_columns_100
-        href: relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md
-    - name: Change feed
-      items:
-      - name: sp_change_feed_disable_db
-        href: relational-databases/system-stored-procedures/sp-change-feed-disable-db.md
-      - name: sp_change_feed_disable_table
-        href: relational-databases/system-stored-procedures/sp-change-feed-disable-table.md
-      - name: sp_change_feed_drop_table_group
-        href: relational-databases/system-stored-procedures/sp-change-feed-drop-table-group.md
-      - name: sp_help_change_feed
-        href: relational-databases/system-stored-procedures/sp-help-change-feed.md
-      - name: sp_help_change_feed_table
-        href: relational-databases/system-stored-procedures/sp-help-change-feed-table.md
-      - name: sp-help-change-feed-settings
-        href: relational-databases/system-stored-procedures/sp-help-change-feed-settings.md
-      - name: sp_change_feed_configure_parameters
-        href: relational-databases/system-stored-procedures/sp-change-feed-configure-parameters.md
-      - name: sp_change_feed_create_table_group
-        href: relational-databases/system-stored-procedures/sp-change-feed-create-table-group.md
-      - name: sp_change_feed_enable_db
-        href: relational-databases/system-stored-procedures/sp-change-feed-enable-db.md
-      - name: sp_change_feed_enable_table
-        href: relational-databases/system-stored-procedures/sp-change-feed-enable-table.md
-    - name: SQL Server Agent
-      items:
-      - name: Overview
-        href: relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md
-      - name: sp_add_alert
-        href: relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md
-      - name: sp_add_category
-        href: relational-databases/system-stored-procedures/sp-add-category-transact-sql.md
-      - name: sp_add_job
-        href: relational-databases/system-stored-procedures/sp-add-job-transact-sql.md
-      - name: sp_add_jobschedule
-        href: relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md
-      - name: sp_add_jobserver
-        href: relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md
-      - name: sp_add_jobstep
-        href: relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md
-      - name: sp_add_notification
-        href: relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md
-      - name: sp_add_operator
-        href: relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md
-      - name: sp_add_proxy
-        href: relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md
-      - name: sp_add_schedule
-        href: relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md
-      - name: sp_add_targetservergroup
-        href: relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md
-      - name: sp_add_targetsvrgrp_member
-        href: relational-databases/system-stored-procedures/sp-add-targetsvrgrp-member-transact-sql.md
-      - name: sp_apply_job_to_targets
-        href: relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md
-      - name: sp_attach_schedule
-        href: relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md
-      - name: sp_cycle_agent_errorlog
-        href: relational-databases/system-stored-procedures/sp-cycle-agent-errorlog-transact-sql.md
-      - name: sp_cycle_errorlog
-        href: relational-databases/system-stored-procedures/sp-cycle-errorlog-transact-sql.md
-      - name: sp_delete_alert
-        href: relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md
-      - name: sp_delete_category
-        href: relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md
-      - name: sp_delete_job
-        href: relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md
-      - name: sp_delete_jobschedule
-        href: relational-databases/system-stored-procedures/sp-delete-jobschedule-transact-sql.md
-      - name: sp_delete_jobserver
-        href: relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md
-      - name: sp_delete_jobstep
-        href: relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md
-      - name: sp_delete_jobsteplog
-        href: relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md
-      - name: sp_delete_notification
-        href: relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md
-      - name: sp_delete_operator
-        href: relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md
-      - name: sp_delete_proxy
-        href: relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md
-      - name: sp_delete_schedule
-        href: relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md
-      - name: sp_delete_targetserver
-        href: relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md
-      - name: sp_delete_targetservergroup
-        href: relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md
-      - name: sp_delete_targetsvrgrp_member
-        href: relational-databases/system-stored-procedures/sp-delete-targetsvrgrp-member-transact-sql.md
-      - name: sp_detach_schedule
-        href: relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md
-      - name: sp_enum_login_for_proxy
-        href: relational-databases/system-stored-procedures/sp-enum-login-for-proxy-transact-sql.md
-      - name: sp_enum_proxy_for_subsystem
-        href: relational-databases/system-stored-procedures/sp-enum-proxy-for-subsystem-transact-sql.md
-      - name: sp_grant_proxy_to_subsystem
-        href: relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md
-      - name: sp_grant_login_to_proxy
-        href: relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md
-      - name: sp_help_alert
-        href: relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md
-      - name: sp_help_category
-        href: relational-databases/system-stored-procedures/sp-help-category-transact-sql.md
-      - name: sp_help_downloadlist
-        href: relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md
-      - name: sp_help_job
-        href: relational-databases/system-stored-procedures/sp-help-job-transact-sql.md
-      - name: sp_help_jobactivity
-        href: relational-databases/system-stored-procedures/sp-help-jobactivity-transact-sql.md
-      - name: sp_help_jobcount
-        href: relational-databases/system-stored-procedures/sp-help-jobcount-transact-sql.md
-      - name: sp_help_jobhistory
-        href: relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md
-      - name: sp_help_jobs_in_schedule
-        href: relational-databases/system-stored-procedures/sp-help-jobs-in-schedule-transact-sql.md
-      - name: sp_help_jobschedule
-        href: relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql.md
-      - name: sp_help_jobserver
-        href: relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md
-      - name: sp_help_jobstep
-        href: relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md
-      - name: sp_help_jobsteplog
-        href: relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md
-      - name: sp_help_notification
-        href: relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md
-      - name: sp_help_operator
-        href: relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md
-      - name: sp_help_proxy
-        href: relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md
-      - name: sp_help_schedule
-        href: relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md
-      - name: sp_help_targetserver
-        href: relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md
-      - name: sp_help_targetservergroup
-        href: relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md
-      - name: sp_manage_jobs_by_login
-        href: relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql.md
-      - name: sp_msx_defect
-        href: relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md
-      - name: sp_msx_enlist
-        href: relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md
-      - name: sp_msx_get_account
-        href: relational-databases/system-stored-procedures/sp-msx-get-account-transact-sql.md
-      - name: sp_msx_set_account
-        href: relational-databases/system-stored-procedures/sp-msx-set-account-transact-sql.md
-      - name: sp_notify_operator
-        href: relational-databases/system-stored-procedures/sp-notify-operator-transact-sql.md
-      - name: sp_post_msx_operation
-        href: relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md
-      - name: sp_purge_jobhistory
-        href: relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md
-      - name: sp_readerrorlog
-        href: relational-databases/system-stored-procedures/sp-readerrorlog-transact-sql.md
-      - name: sp_remove_job_from_targets
-        href: relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md
-      - name: sp_resync_targetserver
-        href: relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql.md
-      - name: sp_revoke_login_from_proxy
-        href: relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md
-      - name: sp_revoke_proxy_from_subsystem
-        href: relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md
-      - name: sp_start_job
-        href: relational-databases/system-stored-procedures/sp-start-job-transact-sql.md
-      - name: sp_stop_job
-        href: relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md
-      - name: sp_update_alert
-        href: relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md
-      - name: sp_update_category
-        href: relational-databases/system-stored-procedures/sp-update-category-transact-sql.md
-      - name: sp_update_job
-        href: relational-databases/system-stored-procedures/sp-update-job-transact-sql.md
-      - name: sp_update_jobschedule
-        href: relational-databases/system-stored-procedures/sp-update-jobschedule-transact-sql.md
-      - name: sp_update_jobstep
-        href: relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md
-      - name: sp_update_notification
-        href: relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md
-      - name: sp_update_operator
-        href: relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md
-      - name: sp_update_proxy
-        href: relational-databases/system-stored-procedures/sp-update-proxy-transact-sql.md
-      - name: sp_update_schedule
-        href: relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md
-      - name: sp_update_targetservergroup
-        href: relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md
-    - name: SQL Server Profiler
-      items:
-      - name: Overview
-        href: relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md
-      - name: sp_trace_create
-        href: relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md
-      - name: sp_trace_generateevent
-        href: relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md
-      - name: sp_trace_setevent
-        href: relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md
-      - name: sp_trace_setfilter
-        href: relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md
-      - name: sp_trace_setstatus
-        href: relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md
-    - name: Stretch Database extended
-      items:
-      - name: Overview
-        href: relational-databases/system-stored-procedures/stretch-database-extended-stored-procedures-transact-sql.md
-      - name: sys.sp_rda_deauthorize_db
-        href: relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md
-      - name: sys.sp_rda_get_rpo_duration
-        href: relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md
-      - name: sys.sp_rda_reauthorize_db
-        href: relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md
-      - name: sys.sp_rda_reconcile_batch
-        href: relational-databases/system-stored-procedures/sys-sp-rda-reconcile-batch-transact-sql.md
-      - name: sys.sp_rda_reconcile_columns
-        href: relational-databases/system-stored-procedures/sys-sp-rda-reconcile-columns-transact-sql.md
-      - name: sys.sp_rda_reconcile_indexes
-        href: relational-databases/system-stored-procedures/sys-sp-rda-reconcile-indexes-transact-sql.md
-      - name: sys.sp_rda_set_query_mode
-        href: relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md
-      - name: sys.sp_rda_set_rpo_duration
-        href: relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md
-      - name: sys.sp_rda_test_connection
-        href: relational-databases/system-stored-procedures/sys-sp-rda-test-connection-transact-sql.md
-    - name: Temporal tables
-      items:
-      - name: sys.sp_cleanup_temporal_history
-        href: relational-databases/system-stored-procedures/temporal-table-sys-sp-cleanup-temporal-history.md
-      - name: sp_xtp_flush_temporal_history
-        href: relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md
-    - name: XML
-      items:
-      - name: Overview
-        href: relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md
-      - name: sp_xml_preparedocument
-        href: relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md
-      - name: sp_xml_removedocument
-        href: relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md
-      - name: sp_db_selective_xml_index
-        href: relational-databases/system-stored-procedures/sp-db-selective-xml-index-transact-sql.md
     - name: Replication Tables
       href: relational-databases/system-tables/replication-tables-transact-sql.md
       items:

@@ -7285,10 +7285,14 @@ items:
       href: relational-databases/synonyms/create-synonyms.md
 - name: Reporting & Analytics
   items:
-  - name: Microsoft Fabric mirrored SQL Server and Azure SQL Database
+  - name: Fabric Mirrored Databases
     items:
-    - name: Mirrored SQL Server and Azure SQL Databases to Microsoft Fabric
+    - name: Mirrored Databases to Microsoft Fabric
       href: sql-server/fabric-mirrored-database/fabric-mirrored-databases.md
+    - name: Microsoft Fabric mirrored databases
+      href: /fabric/database/mirrored-database/overview
+    - name: Microsoft Fabric mirrored databases from Azure SQL Database
+      href: /fabric/database/mirrored-database/azure-sql-database
   - name: Azure Synapse Link for SQL
     items: 
     - name: Azure Synapse Link for SQL Server >
@@ -13594,10 +13598,7 @@ items:
       items:
       - name: sys.dm_db_objects_disabled_on_compatibility_level_change
         href: relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md
-    - name: Microsoft Fabric mirrored databases
-      items:
-
-    - name: Azure Synapse Link for SQL
+    - name: Change feed
       items:
       - name: sys.dm_change_feed_errors
         href: relational-databases/system-dynamic-management-views/sys-dm-change-feed-errors.md
@@ -15377,7 +15378,7 @@ items:
         href: relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md
       - name: sp_special_columns_100
         href: relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md
-    - name: Azure Synapse Link for SQL
+    - name: Change feed
       items:
       - name: sp_change_feed_disable_db
         href: relational-databases/system-stored-procedures/sp-change-feed-disable-db.md
@@ -15801,7 +15802,7 @@ items:
         href: relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md
       - name: sp_special_columns_100
         href: relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md
-    - name: Azure Synapse Link for SQL
+    - name: Change feed
       items:
       - name: sp_change_feed_disable_db
         href: relational-databases/system-stored-procedures/sp-change-feed-disable-db.md
@@ -15813,6 +15814,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-help-change-feed.md
       - name: sp_help_change_feed_table
         href: relational-databases/system-stored-procedures/sp-help-change-feed-table.md
+      - name: sp-help-change-feed-settings
+        href: relational-databases/system-stored-procedures/sp-help-change-feed-settings.md
       - name: sp_change_feed_configure_parameters
         href: relational-databases/system-stored-procedures/sp-change-feed-configure-parameters.md
       - name: sp_change_feed_create_table_group

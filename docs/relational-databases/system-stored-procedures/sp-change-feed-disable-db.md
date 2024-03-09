@@ -1,6 +1,6 @@
 ---
-title: "sp_change_feed_disable_db (Transact-SQL)"
-description: "The sp_change_feed_disable_db system stored procedure disables the Azure Synapse Link for SQL change feed at the database level."
+title: "sys.sp_change_feed_disable_db (Transact-SQL)"
+description: "The sys.sp_change_feed_disable_db system stored procedure disables the Azure Synapse Link for SQL change feed at the database level."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
@@ -8,17 +8,19 @@ ms.date: 02/03/2023
 ms.service: synapse-analytics
 ms.topic: "reference"
 f1_keywords:
+  - "sys.sp_change_feed_disable_db_TSQL"
+  - "sys.sp_change_feed_disable_db"
   - "sp_change_feed_disable_db_TSQL"
   - "sp_change_feed_disable_db"
 helpviewer_keywords:
   - "sp_change_feed_disable_db"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
+monikerRange: ">=sql-server-ver16||=azuresqldb-current||=azure-sqldw-latest"
 ---
-# sp_change_feed_disable_db (Transact-SQL)
+# sys.sp_change_feed_disable_db (Transact-SQL)
 
-[!INCLUDE [sqlserver2022-asdb](../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [sqlserver2022-asdb-asa](../../includes/applies-to-version/sqlserver2022-asdb-asa.md)]
 
 Disable the change feed at the database level, and subsequently the metadata for all the associated tables for [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview). For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
 

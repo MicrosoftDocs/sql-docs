@@ -1,24 +1,26 @@
 ---
-title: "sp_change_feed_drop_table_group (Transact-SQL)"
-description: "The sp_change_feed_drop_table_group system stored procedure drops a table group and internal metadata objects for Azure Synapse Link for SQL."
+title: "sys.sp_change_feed_drop_table_group (Transact-SQL)"
+description: "The sys.sp_change_feed_drop_table_group system stored procedure drops a table group and internal metadata objects for Azure Synapse Link for SQL."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: imotiwala
 ms.date: 06/13/2023
 ms.service: synapse-analytics
 ms.topic: "reference"
 f1_keywords:
+  - "sys.sp_change_feed_drop_table_group_TSQL"
+  - "sys.sp_change_feed_drop_table_group"
   - "sp_change_feed_drop_table_group_TSQL"
   - "sp_change_feed_drop_table_group"
 helpviewer_keywords:
   - "sp_change_feed_drop_table_group"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
+monikerRange: ">=sql-server-ver16||=azuresqldb-current||=azure-sqldw-latest"
 ---
-# sp_change_feed_drop_table_group (Transact-SQL)
+# sys.sp_change_feed_drop_table_group (Transact-SQL)
 
-[!INCLUDE [sqlserver2022-asdb](../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [sqlserver2022-asdb-asa](../../includes/applies-to-version/sqlserver2022-asdb-asa.md)]
 
 Drops a table group and internal metadata objects for [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview). For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
 

@@ -107,6 +107,11 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
     ```cmd
     .\RegisterRext.exe /configure /rhome:"%ProgramFiles%\R\R-4.2.3" /instance:"MSSQLSERVER"
     ```
+Note: if you are using a named instance of SQL Server that you would normally refer to as ".\SQLEXPRESS", or "MACHINENAME\SQLEXPRESS", in the comamnd above, include only the instance name. For example:
+
+```cmd
+    .\RegisterRext.exe /configure /rhome:"%ProgramFiles%\R\R-4.2.3" /instance:"SQLEXPRESS"
+```
 
 1. By using [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md), connect to the instance where you installed SQL Server Machine Learning Services. Select **New Query** to open a query window, and then run the following command to enable the external scripting feature:
 

@@ -13996,6 +13996,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-create-openrowset-statistics.md
       - name: sp_databases
         href: relational-databases/system-stored-procedures/sp-databases-transact-sql.md
+      - name: sp_datatype_info_90
+        href: relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md
       - name: sp_drop_openrowset_statistics 
         href: relational-databases/system-stored-procedures/sp-drop-openrowset-statistics.md
       - name: sp_fkeys
@@ -15364,8 +15366,6 @@ items:
     - name: Azure Synapse Analytics
       href: relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md
       items:
-      - name: sp_datatype_info_90
-        href: relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md
       - name: sp_pdw_add_network_credentials
         href: relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md
       - name: sp_pdw_database_encryption

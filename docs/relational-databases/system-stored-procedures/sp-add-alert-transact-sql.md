@@ -98,7 +98,7 @@ The database in which the error must occur for the alert to fire. If *@database_
 
 #### [ @event_description_keyword = ] N'*event_description_keyword_pattern*'
 
-The sequence of characters that the description of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] error must be like. [!INCLUDE [tsql](../../includes/tsql-md.md)] LIKE expression pattern-matching characters can be used. *@event_description_keyword* is **nvarchar(100)**, with a default of `NULL`. This parameter is useful for filtering object names (for example, `%customer_table%`).
+The sequence of characters that the description of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] error must be like. [!INCLUDE [tsql](../../includes/tsql-md.md)] LIKE expression pattern-matching characters can not be used. *@event_description_keyword* is **nvarchar(100)**, with a default of `NULL`. This parameter is useful for filtering object names (for example, `customer_table`).
 
 #### [ @job_id = ] *job_id*
 

@@ -3,43 +3,36 @@ title: Previous versions of SQL Server documentation
 description: How to get online and offline documentation for previous versions of SQL Server, including 2005, 2008, 2012, and 2014.
 author: markingmyname
 ms.author: maghan
-ms.date: 08/21/2023
+ms.reviewer: randolphwest
+ms.date: 03/11/2024
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017"
 ---
 
 # Previous versions of SQL Server documentation
 
-The documentation for several older versions of Microsoft SQL Server has been archived. This article describes how to access documentation for previous versions in both online and offline formats.
+The documentation for several older versions of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is archived. This article describes how to access documentation for previous versions in both online and offline formats.
 
 ## Online documentation
 
-To access the online documentation for SQL Server 2005 - 2014, see the following landing page:
-
-- [SQL Server previous versions documentation](/previous-versions/sql/).
+To access the online documentation for SQL Server 2005 - 2014, see [SQL Server previous versions documentation](/previous-versions/sql/).
 
 ## Offline documentation
 
-To access offline content for SQL Server versions 2012 and later, see the following article:
+To access offline content for [!INCLUDE [sssql11-md](../includes/sssql11-md.md)] and later versions, see [Install SQL Server documentation to view offline in SSMS](sql-server-offline-documentation.md).
 
-- [Install SQL Server documentation to view offline in SSMS](sql-server-offline-documentation.md).
-
-> [!IMPORTANT]
-> SQL 2014 Transact-SQL content is only available [offline](../sql-server/sql-server-offline-documentation.md#sql-server-2014-offline-content).
+> [!IMPORTANT]  
+> [!INCLUDE [sssql14-md](../includes/sssql14-md.md)] Transact-SQL content is only available [offline](sql-server-offline-documentation.md?tabs=sqlserver2014).
 
 ## Lifecycle policy
 
-Review the Microsoft Product Lifecycle for information about how a specific product, service, or technology is supported:
+Review the [Microsoft Lifecycle Policy](/lifecycle/products) for information about how a specific product, service, or technology is supported.
 
-- [Microsoft Lifecycle Policy](https://support.microsoft.com/lifecycle/selectindex)
+For specific guidance on your options for SQL Server end of support, see [SQL Server end of support options](end-of-support/sql-server-end-of-support-overview.md).
 
-For specific guidance on your options for SQL Server end of support, see the following article:
+## Related content
 
-- [SQL Server end of support options](../sql-server/end-of-support/sql-server-end-of-support-overview.md)
-
-## Next steps
-
-- [SQL Server 2016-2019 online documentation](../sql-server/index.yml)
-- [SQL Server docs navigation guide](../sql-server/sql-docs-navigation-guide.md)
+- [Online documentation for SQL Server 2016 and later versions](index.yml)
+- [SQL Server docs navigation guide](sql-docs-navigation-guide.md)

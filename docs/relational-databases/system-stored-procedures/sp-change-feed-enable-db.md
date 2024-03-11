@@ -4,7 +4,7 @@ description: "The sys.sp_change_feed_enable_db system stored procedure enables t
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: imotiwala
-ms.date: 03/08/2024
+ms.date: 03/11/2024
 ms.service: fabric
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -34,20 +34,27 @@ Enables current database for [Azure Synapse Link for SQL](/azure/synapse-analyti
 
 ```syntaxsql
 EXECUTE sys.sp_change_feed_enable_db
-    [ [ @maxtrans = ] max_trans ]
-    [ , [ @pollinterval = ] polling_interval ]
+    [ [ @maxtrans ] ]
+    [ , [ @pollinterval ]  ]
+    [ , [ @destination_type] ]
 GO
 ```
 
 ## Arguments
 
-#### [ [ @maxtrans = ] *max_trans* ]
+#### @maxtrans 
 
 Data type is **int**. Indicates the maximum number of transactions to process in each scan cycle. Default value if not specified is `500`. If specified, the value must be a positive integer.
 
-#### [ @pollinterval = ] *polling_interval*
+#### @pollinterval 
 
-Data type is **int**. Describes the frequency that the log is scanned for any new changes in seconds. Default interval if not specified is 5 seconds. The value must be `5` or larger.
+Data type is **int**. Describes the frequency, or polling interval, that the log is scanned for any new changes in seconds. Default interval if not specified is 5 seconds. The value must be `5` or larger.
+
+#### @destination_type
+
+**Applies to:** Fabric only.
+
+Data type is **int**. Default is `0`, for Azure Synapse Link. `2` = Fabric mirroring.
 
 ## Permissions
 

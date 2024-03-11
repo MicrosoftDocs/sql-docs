@@ -6,7 +6,7 @@ ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 08/10/2023
 ms.service: sql-managed-instance
-ms.subservice: performance
+ms.subservice: monitoring
 ms.topic: conceptual
 ms.custom: subject-monitoring
 monikerRange: "= azuresql || = azuresql-mi"
@@ -62,7 +62,7 @@ Logs are grouped into **Category groups**. Category groups are a collection of d
 
 ## Analyzing metrics
 
-You can analyze metrics for Azure SQL Managed Instance alongside metrics from other Azure services using the metrics explorer by opening **Metrics** from the **Monitor** menu in the Azure portal. See [Getting started with Azure Metrics Explorer](/azure/azure-monitor/essentials/metrics-getting-started) for details on using this tool. 
+You can analyze metrics for Azure SQL Managed Instance alongside metrics from other Azure services using the metrics explorer by opening **Metrics** under **Monitor** in the Azure portal resource menu. See [Getting started with Azure Metrics Explorer](/azure/azure-monitor/essentials/metrics-getting-started) for details on using this tool. 
 
 For a list of the platform metrics collected for Azure SQL Managed Instance, see [Monitoring Azure SQL Managed Instance data reference metrics](monitoring-sql-managed-instance-azure-monitor-reference.md#metrics)  
 
@@ -83,7 +83,7 @@ For a list of the tables used by Azure Monitor Logs and queryable by Log Analyti
 ### Sample Kusto queries
 
 > [!IMPORTANT]
-> When you select **Logs** from the Monitoring menu of an Azure SQL Managed Instance, Log Analytics is opened with the query scope set to the current Azure SQL Managed Instance. If you want to run a query that includes data from databases or data from other Azure services, select **Select scope** from the query menu. See [Log query scope and time range in Azure Monitor Log Analytics](/azure/azure-monitor/logs/scope) for details.
+> When you select **Logs** from the **Monitoring** menu of an Azure SQL Managed Instance, Log Analytics is opened with the query scope set to the current Azure SQL Managed Instance. If you want to run a query that includes data from databases or data from other Azure services, select **Select scope** from the query menu. See [Log query scope and time range in Azure Monitor Log Analytics](/azure/azure-monitor/logs/scope) for details.
 
 > [!NOTE]
 > After creating a diagnostic setting for a resource, it might take up to 15 minutes between when an event is emitted and when it [appears in a Log Analytics workspace](/azure/azure-monitor/logs/data-ingestion-time).

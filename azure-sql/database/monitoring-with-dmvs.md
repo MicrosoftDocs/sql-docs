@@ -7,7 +7,7 @@ ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
 ms.date: 06/04/2023
 ms.service: sql-database
-ms.subservice: performance
+ms.subservice: monitoring
 ms.topic: how-to
 ms.custom:
   - azure-sql-split
@@ -434,7 +434,7 @@ ORDER BY SUM(wait_time) DESC;
 
 If you encounter out of memory errors in Azure SQL Database, review [sys.dm_os_out_of_memory_events](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-out-of-memory-events?view=azuresqldb-current&preserve-view=true). For more information, see [Troubleshoot out of memory errors with Azure SQL Database](troubleshoot-memory-errors-issues.md).
 
-First, modify the below script to update relevant values of `start_time` and `end_time`. Then, run the following query to identify high memory-consuming statements:
+First, modify the following script to update relevant values of `start_time` and `end_time`. Then, run the following query to identify high memory-consuming statements:
 
 ```sql
 SELECT IDENTITY(INT, 1, 1) rowId,
@@ -845,10 +845,11 @@ You can create an Extended Events trace a database in Azure SQL Database to capt
 Azure Monitor provides a variety of diagnostic data collection groups, metrics, and endpoints for monitoring Azure SQL Database. For more information, see [Monitor Azure SQL Database with Azure Monitor](monitoring-sql-database-azure-monitor.md).
 -->
 
-## Next steps
+## Related content
 
 - [Introduction to Azure SQL Database and Azure SQL Managed Instance](sql-database-paas-overview.md)
 - [Diagnose and troubleshoot high CPU on Azure SQL Database](high-cpu-diagnose-troubleshoot.md)
 - [Tune applications and databases for performance in Azure SQL Database](performance-guidance.md)
 - [Understand and resolve Azure SQL Database blocking problems](understand-resolve-blocking.md)
 - [Analyze and prevent deadlocks in Azure SQL Database](analyze-prevent-deadlocks.md)
+- [Monitor Azure SQL workloads with database watcher (preview)](../database-watcher-overview.md)

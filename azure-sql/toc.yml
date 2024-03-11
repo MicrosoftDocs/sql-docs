@@ -1468,8 +1468,6 @@
         href: managed-instance/tempdb-configure.md
       - name: Customize time zone
         href: managed-instance/timezones-overview.md
-      - name: Configure connection types
-        href: managed-instance/connection-types-overview.md
       - name: Create alerts on SQL MI
         href: managed-instance/alerts-create.md
       - name: Configure threat detection
@@ -1483,6 +1481,8 @@
         href: managed-instance/virtual-network-subnet-create-arm-template.md
       - name: Configure existing VNet and subnet for SQL MI
         href: managed-instance/vnet-existing-add-subnet.md
+      - name: Configure connection types
+        href: managed-instance/connection-types-overview.md
       - name: Configure service endpoint policies for SQL MI
         href: managed-instance/service-endpoint-policies-configure.md
       - name: Configure public endpoint

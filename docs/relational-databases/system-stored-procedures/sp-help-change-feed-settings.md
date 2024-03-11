@@ -4,7 +4,7 @@ description: "The sys.sp_help_change_feed_settings system stored procedure retur
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: imotiwala
-ms.date: 03/08/2024
+ms.date: 03/11/2024
 ms.service: fabric
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -60,6 +60,7 @@ If Fabric Mirroring, the source SQL database transaction log is monitored. If th
 - [sys.dm_change_feed_errors (Transact-SQL)](../system-dynamic-management-views/sys-dm-change-feed-errors.md)
 - [sys.sp_help_change_feed (Transact-SQL)](sp-help-change-feed.md)
 - [sys.sp_help_change_feed_table (Transact-SQL)](sp-help-change-feed-table.md)
+- [sys.sp_help_change_feed_table_groups (Transact-SQL)](sp-help-change-feed-table-groups.md)
 - [sys.dm_change_feed_log_scan_sessions (Transact-SQL)](../system-dynamic-management-views/sys-dm-change-feed-log-scan-sessions.md)
 - [Microsoft Fabric mirrored databases (Preview)](/fabric/database/mirrored-database/overview)
 - [Microsoft Fabric mirrored databases monitoring](/fabric/database/mirrored-database/monitor)

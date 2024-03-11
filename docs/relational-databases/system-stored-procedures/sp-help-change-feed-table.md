@@ -4,7 +4,7 @@ description: "The sys.sp_help_change_feed_table system stored procedure provides
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: imotiwala
-ms.date: 03/08/2024
+ms.date: 03/11/2024
 ms.service: fabric
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -76,6 +76,7 @@ A user with [CONTROL database permissions](../security/permissions-database-engi
 
 ## Related content
 
+- [sys.sp_help_change_feed_table_groups (Transact-SQL)](sp-help-change-feed-table-groups.md)
 - [sys.sp_help_change_feed (Transact-SQL)](sp-help-change-feed.md)
 - [sys.dm_change_feed_log_scan_sessions (Transact-SQL)](../system-dynamic-management-views/sys-dm-change-feed-log-scan-sessions.md)
 - [sys.dm_change_feed_errors (Transact-SQL)](../system-dynamic-management-views/sys-dm-change-feed-errors.md)

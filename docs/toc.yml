@@ -13995,6 +13995,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-help-change-feed.md
       - name: sp_help_change_feed_table
         href: relational-databases/system-stored-procedures/sp-help-change-feed-table.md
+      - name: sp_help_change_feed_table_groups
+        href: relational-databases/system-stored-procedures/sp-help-change-feed-table-groups.md
       - name: sp_change_feed_configure_parameters
         href: relational-databases/system-stored-procedures/sp-change-feed-configure-parameters.md
       - name: sp_change_feed_create_table_group

@@ -1,6 +1,6 @@
 ---
 title: "changefeed.change_feed_table_groups (Transact-SQL)"
-description: "changefeed.change_feed_table_groups stores metadata with their associated indexes for Azure Synapse Link for SQL."
+description: "changefeed.change_feed_table_groups stores metadata that is used to configure change feed table groups for Azure Synapse Link for SQL."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: imotiwala
@@ -20,7 +20,7 @@ monikerRange: ">=sql-server-ver16||=azuresqldb-current||=azure-sqldw-latest"
 # changefeed.change_feed_table_groups (Transact-SQL)
 [!INCLUDE [sqlserver2022-asdb-asa](../../includes/applies-to-version/sqlserver2022-asdb-asa.md)]
 
-Stores metadata with their associated indexes for Azure Synapse Link for SQL.
+Contains metadata that is used to configure change feed table groups for Azure Synapse Link for SQL.
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -31,6 +31,10 @@ Stores metadata with their associated indexes for Azure Synapse Link for SQL.
 | `workspace_id` |**nvarchar(247)**| The related Azure Synapse Analytics workspace Azure resource ID.|  
 | `synapse_workgroup_name` |**nvarchar(50)**| The related Synapse workspace name.|  
 | `enabled` |**bit**|Tracks if the table group is enabled for change feed. `1` - Yes, `0` - No. |
+
+## Remarks
+
+The `changefeed.change_feed_table_groups` system table isn't used in [Fabric mirrored databases](/fabric/database/mirrored-database/overview), instead use the [sys.sp_help_change_feed_table_groups](../system-stored-procedures/sp-help-change-feed-table-groups.md) system stored procedure.
 
 ## Related content
 

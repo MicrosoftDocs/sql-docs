@@ -1,10 +1,10 @@
 ---
 title: "changefeed.change_feed_tables (Transact-SQL)"
-description: "changefeed.change_feed_tables stores metadata with their associated indexes for Azure Synapse Link for SQL."
+description: "changefeed.change_feed_tables stores metadata that is used to configure change feed tables for Azure Synapse Link for SQL."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: imotiwala
-ms.date: 03/08/2024
+ms.date: 03/11/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -20,7 +20,7 @@ monikerRange: ">=sql-server-ver16||=azuresqldb-current||=azure-sqldw-latest"
 # changefeed.change_feed_tables (Transact-SQL)
 [!INCLUDE [sqlserver2022-asdb-asa](../../includes/applies-to-version/sqlserver2022-asdb-asa.md)]
 
-Stores metadata with their associated indexes for Azure Synapse Link for SQL.
+Contains metadata that is used to configure change feed tables for Azure Synapse Link for SQL.
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -36,6 +36,10 @@ Stores metadata with their associated indexes for Azure Synapse Link for SQL.
 | `snapshot_retry_count` | **int** | Number of times snapshot has attempted to retry.|
 | `snapshot_start_time` | **datetime** | Start time of snapshot phase.|
 | `snapshot_end_time` | **datetime** | End time of snapshot phase.|  
+
+## Remarks
+
+The `changefeed.change_feed_tables` system table isn't used in [Fabric mirrored databases](/fabric/database/mirrored-database/overview), instead use the [sys.sp_help_change_feed_table](../system-stored-procedures/sp-help-change-feed-table.md) system stored procedure.
 
 ## Related content
 

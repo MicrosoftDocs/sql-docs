@@ -18,7 +18,7 @@ This article describes how to change the license model for SQL Server on Azure V
 
 ## Overview
 
-There are three license models for an Azure VM that's hosting SQL Server: Pay-as-you-go (PAYG), Azure Hybrid Benefit (AHB), and High Availability/Disaster Recovery(HA/DR). You can modify the license model of your SQL Server VM by using the Azure portal, the Azure CLI, or PowerShell.
+There are three license models for an Azure VM that's hosting SQL Server: pay-as-you-go, Azure Hybrid Benefit (AHB), and High Availability/Disaster Recovery (HA/DR). You can modify the license model of your SQL Server VM by using the Azure portal, the Azure CLI, or PowerShell.
 
 - The **pay-as-you-go** model means that the per-second cost of running the Azure VM includes the cost of the SQL Server license.
 - [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) allows you to use your own SQL Server license with a VM that's running SQL Server.

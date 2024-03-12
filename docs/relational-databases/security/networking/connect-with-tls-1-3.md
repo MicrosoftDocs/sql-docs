@@ -64,6 +64,9 @@ Windows has a set of registry keys under `HKEY_LOCAL_MACHINE\SYSTEM\CurrentContr
 
 The following PowerShell script [updates the registry to](/powershell/scripting/samples/working-with-registry-entries) enable or disable TLS 1.0 and TLS 1.1 when used by servers:
 
+> [!WARNING]
+> Before you proceed, [back up the registry](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692). This will allow you to restore the registry in the future, if necessary.
+
 ```powershell
 # Learn more at https://learn.microsoft.com/windows-server/security/tls/tls-registry-settings?tabs=diffie-hellman
 Set-StrictMode -Version Latest

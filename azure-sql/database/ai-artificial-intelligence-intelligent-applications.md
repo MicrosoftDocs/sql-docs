@@ -148,7 +148,7 @@ Implement RAG-patterns with Azure SQL Database and Azure AI Search. You can run 
 
 - [Azure OpenAI on your data](/azure/ai-services/openai/concepts/use-your-data)
 - [Retrieval Augmented Generation (RAG) in Azure AI Search](/azure/search/retrieval-augmented-generation-overview)
--  [Vector Search with Azure SQL Database and Azure AI Search](https://devblogs.microsoft.com/azure-sql/vector-search-with-azure-sql-database/)
+- [Vector Search with Azure SQL Database and Azure AI Search](https://devblogs.microsoft.com/azure-sql/vector-search-with-azure-sql-database/)
 
 ## Intelligent applications
 
@@ -156,13 +156,23 @@ Azure SQL Database can be used to build intelligent applications that include AI
 
 :::image type="content" source="media/ai-artificial-intelligence-intelligent-applications/session-recommender-architecture.png" alt-text="Diagram of different AI features to build intelligent applications with Azure SQL Database.":::
 
-For an end-to-end sample to build a recommender using session abstract as a sample dataset, see [How I built a session recommender in 1 hour using Open AI](https://devblogs.microsoft.com/azure-sql/how-i-built-a-session-recommender-in-1-hour-using-open-ai/).
+For an end-to-end sample to build a AI-enabled application using sessions abstract as a sample dataset, see:
+
+- [How I built a session recommender in 1 hour using Open AI](https://devblogs.microsoft.com/azure-sql/how-i-built-a-session-recommender-in-1-hour-using-open-ai/).
+- [Using Retrieval Augmented Generation to build a conference session assistant](https://github.com/Azure-Samples/azure-sql-db-session-recommender-v2)
 
 ### LangChain integration
 
 LangChain is a well-known framework for developing applications powered by language models.
 
 For an example that shows how LangChain can be used to create a Chatbot on your own data, see [Building your own DB Copilot for Azure SQL with Azure OpenAI GPT-4](https://devblogs.microsoft.com/azure-sql/building-your-own-db-copilot-for-azure-sql-with-azure-openai-gpt-4/).
+
+### Semantic Kernel integration
+
+[Semantic Kernel is an open-source SDK](https://learn.microsoft.com/en-us/semantic-kernel/overview/) that lets you easily build agents that can call your existing code. As a highly extensible SDK, you can use Semantic Kernel with models from OpenAI, Azure OpenAI, Hugging Face, and more! By combining your existing C#, Python, and Java code with these models, you can build agents that answer questions and automate processes.
+
+- [Semantic Kernel & Kernel Memory - SQL Connector](https://github.com/kbeaugrand/SemanticKernel.Connectors.Memory.SqlServer) - Provides a connection to a SQL database for the Semantic Kernel for the memories.
+- [OpenAI Embeddings Sample](https://github.com/marcominerva/OpenAIEmbeddingSample): An example that shows how to use Semantic Kernel and Kernel Memory to work with embeddings in a .NET application using SQL Server as Vector Database.
 
 ## Related content
 

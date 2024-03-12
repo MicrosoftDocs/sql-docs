@@ -143,7 +143,7 @@ Use [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Configurati
 
 ## Verify security
 
-This section demonstrates how to use Wireshark, OpenSSL, and nMap to verify encryption.
+This section demonstrates how to use Wireshark, OpenSSL, and Nmap to verify encryption.
 
 ### Wireshark
 
@@ -154,11 +154,17 @@ You can use network sniffers to determine the TLS protocol version and agreed-up
 ### OpenSSL
 
 You can also use openssl to discover the agreed-upon TLS information. 
+
 Use the following command:
 
-```output
+```console
 openssl s_client 127.0.0.1:1433
-yields:
+
+```
+
+The results will return:
+
+```output
 Post-Handshake New Session Ticket arrived:
 SSL-Session:
    Protocol   : TLSv1.3
@@ -169,7 +175,10 @@ SSL-Session:
    PSK identity: None
 ```
 
-Please note that the current version of `nmap`, version 7.94, appears to not detect TLS 1.3 when using:
+### Nmap
+
+Please note that the current version of Nmap, version 7.94, appears to not detect TLS 1.3 when using:
+
 `nmap -sV --script ssl-enum-ciphers -p 1433 127.0.0.1`.
 
 ## Related content

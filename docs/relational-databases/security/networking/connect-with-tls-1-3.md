@@ -118,13 +118,13 @@ Trying Tls13
 Tls13 using TLS_AES_256_GCM_SHA384
 ```
 
-Notice that SSL2, SSL3, TLS 1.0 and TLS 1.1 all fail to connect, but both TLS 1.2 and TLS 1.3 succeed.
+Notice that SSL 2.0, SSL 3.0, TLS 1.0 and TLS 1.1 all fail to connect, but both TLS 1.2 and TLS 1.3 succeed.
 
-After this configuration is complete, Windows and this instance of [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] only allow TLS 1.2 and TLS 1.3 connections. Later, when more clients support TLS 1.3, you can also disable TLS 1.2.
+After the registry update, Windows and this instance of [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] only allow TLS 1.2 and TLS 1.3 connections. Later, when more clients support TLS 1.3, you can also disable TLS 1.2.
 
 ### Set SQL Server instance to force strict encryption
 
-The final step is to set the instance to use `Force Strict Encryption`. With this set, the SQL instance uses a supported version of tabular data stream (TDS 8.0 or later).
+The final step is to set the instance to use `Force Strict Encryption`. With `Force Strict Encryption`, the SQL instance uses a supported version of tabular data stream (TDS 8.0 or later).
 
 Use [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Configuration Manager to set this setting.
 

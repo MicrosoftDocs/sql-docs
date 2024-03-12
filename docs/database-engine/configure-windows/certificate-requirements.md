@@ -9,6 +9,7 @@ ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
 ---
+
 # Certificate requirements for SQL Server
 
 This article describes certificate requirements for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and how to check if a certificate meets these requirements.
@@ -64,3 +65,8 @@ You can use one of the following methods to check the validity of the certificat
 ### Expired certificates
 
 [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] only checks the validity of the certificates at the time of configuration. For example, you won't be able to use Configuration Manager on [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions, to provision an expired certificate. [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] will continue to run without problems if the certificate expires after it has already been provisioned. But some client applications like Power BI check the validity of the certificate on each connection and will error out if the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance is configured to use an expired certificate for encryption. We recommend that you don't use an expired certificate for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] encryption.
+
+## Related content
+
+- [TLS 1.3 support](../../relational-databases/security/networking/tls-1-3.md)
+- [Configure TLS 1.3](../../relational-databases/security/networking/connect-with-tls-1-3.md)

@@ -5,19 +5,25 @@ description: Overview of SQL Insights (preview) in Azure Monitor.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 09/06/2022
+ms.date: 03/21/2024
 ms.service: sql-db-mi
+ms.subservice: monitoring
 ms.topic: conceptual
-ms.custom: subject-monitoring
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi || = azuresql-vm"
+ms.custom:
+  - subject-monitoring
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi||=azuresql-vm"
 ---
 
 # Monitor your SQL deployments with SQL Insights (preview)
 
 [!INCLUDE [sqldb-sqlmi-sqlvm](../includes/appliesto-sqldb-sqlmi-sqlvm.md)]
 
+> [!TIP]
+> [Database watcher (preview)](../database-watcher-overview.md) is the recommended monitoring solution for scenarios that require low data collection latency, estate-level monitoring, comprehensive monitoring data including query-level details, and support for advanced analytics on collected monitoring data.
+>
+> At this time, database watcher supports Azure SQL Database and Azure SQL Managed Instance.
 
-SQL Insights (preview) is a comprehensive solution for monitoring any product in the [Azure SQL family](../index.yml). SQL Insights uses [dynamic management views](./monitoring-with-dmvs.md) to expose the data that you need to monitor health, diagnose problems, and tune performance.
+SQL Insights (preview) is a monitoring solution for products in the [Azure SQL family](../index.yml). SQL Insights uses [dynamic management views](./monitoring-with-dmvs.md) to expose the data that you need to monitor health, diagnose problems, and tune performance.
 
 SQL Insights performs all monitoring remotely. Monitoring agents on dedicated virtual machines connect to your SQL resources and remotely gather data. The gathered data is stored in [Azure Monitor Logs](/azure/azure-monitor/logs/data-platform-logs) to enable easy aggregation, filtering, and trend analysis. You can view the collected data from the SQL Insights [workbook template](/azure/azure-monitor/visualize/workbooks-overview), or you can delve directly into the data by using [log queries](/azure/azure-monitor/logs/get-started-queries).
 
@@ -27,15 +33,15 @@ The following diagram details the steps taken by information from the database e
 
 ## Pricing
 
-There is no direct cost for SQL Insights (preview). All costs are incurred by the virtual machines that gather the data, the Log Analytics workspaces that store the data, and any alert rules configured on the data.
+There's no direct cost for SQL Insights (preview). All costs are incurred by the virtual machines that gather the data, the Log Analytics workspaces that store the data, and any alert rules configured on the data.
 
 ### Virtual machines
 
-For virtual machines, you're charged based on the pricing published on the [virtual machines pricing page](https://azure.microsoft.com/pricing/details/virtual-machines/linux/). The number of virtual machines that you need will vary based on the number of connection strings you want to monitor. We recommend allocating one virtual machine of size Standard_B2s for every 100 connection strings. For more information, see [Azure virtual machine requirements](sql-insights-enable.md#azure-virtual-machine-requirements).
+For virtual machines, you're charged based on the pricing published on the [virtual machines pricing page](https://azure.microsoft.com/pricing/details/virtual-machines/linux/). The number of virtual machines that you need varies based on the number of connection strings you want to monitor. We recommend allocating one virtual machine of size Standard_B2s for every 100 connection strings. For more information, see [Azure virtual machine requirements](sql-insights-enable.md#azure-virtual-machine-requirements).
 
 ### Log Analytics workspaces
 
-For the Log Analytics workspaces, you're charged based on the pricing published on the [Azure Monitor pricing page](https://azure.microsoft.com/pricing/details/monitor/). The Log Analytics workspaces that SQL Insights uses will incur costs for data ingestion, data retention, and (optionally) data export.
+For the Log Analytics workspaces, you're charged based on the pricing published on the [Azure Monitor pricing page](https://azure.microsoft.com/pricing/details/monitor/). The Log Analytics workspaces that SQL Insights uses incur costs for data ingestion, data retention, and (optionally) data export.
 
 Exact charges vary based on the amount of data ingested, retained, and exported. The amount of this data varies based on your database activity and the collection settings defined in your [monitoring profiles](sql-insights-enable.md#create-sql-monitoring-profile).
 
@@ -73,7 +79,7 @@ To open SQL Insights (preview):
 1. In the **Insights** section, select **SQL (preview)**. 
 1. Select a tile to load the experience for the SQL resource that you're monitoring.
 
-:::image type="content" source="media/sql-insights/portal.png" alt-text="Screenshot that shows SQL Insights in the Azure portal.":::
+:::image type="content" source="media/sql-insights/portal.png" alt-text="Screenshot that shows SQL Insights in the Azure portal." lightbox="media/sql-insights/portal.png":::
 
 For more instructions, see [Enable SQL Insights (preview)](sql-insights-enable.md) and [Troubleshoot SQL Insights (preview)](sql-insights-troubleshoot.md).
 
@@ -143,7 +149,7 @@ The tables have the following columns:
 | Availability replica states | `SQLServerAvailabilityReplicaStates` | `sqlserver_hadr_replica_states` | `sys.dm_hadr_availability_replica_states`<br>`sys.availability_replicas`<br>`sys.availability_groups`<br>`sys.dm_hadr_availability_group_states` | No | 60 seconds |
 | Availability database replicas | `SQLServerDatabaseReplicaStates` | `sqlserver_hadr_dbreplica_states` | `sys.dm_hadr_database_replica_states`<br>`sys.availability_replicas` | No | 60 seconds |
 
-## Next steps
+## Related content
 
-- For frequently asked questions about SQL Insights (preview), see [Frequently asked questions](/azure/azure-monitor/faq).
-- [Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance](./monitor-tune-overview.md)
+- [Frequently asked questions](/azure/azure-monitor/faq)
+- [Monitor and performance tuning in Azure SQL Database and Azure SQL Managed Instance](monitor-tune-overview.md)

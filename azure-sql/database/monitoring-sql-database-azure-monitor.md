@@ -7,10 +7,9 @@ ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.service: sql-database
+ms.subservice: monitoring
 ms.reviewer: mathoma
 ---
-
-
 # Monitor Azure SQL Database
 
 [!INCLUDE [horz-monitor-intro](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-intro.md)]
@@ -152,5 +151,6 @@ For more recommended alert rules and typical alert rule configurations for SQL D
 
 - See [SQL Database monitoring data reference](monitoring-sql-database-azure-monitor-reference.md) for a reference of the metrics, logs, and other important values created for SQL Database.
 - See [Monitoring Azure resources with Azure Monitor](/azure/azure-monitor/essentials/monitor-azure-resource) for general details on monitoring Azure resources.
+- [Monitor Azure SQL workloads with database watcher (preview)](../database-watcher-overview.md) 
 - Review [Azure Monitor metrics and alerts](monitoring-metrics-alerts.md) including [recommended alert rules](monitoring-metrics-alerts.md#recommended-alert-rules) for SQL Database.
 - Learn how to [Monitor Azure SQL Managed Instance with Azure Monitor](../managed-instance/monitoring-sql-managed-instance-azure-monitor.md).

@@ -7,6 +7,7 @@ ms.topic: reference
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.service: sql-database
+ms.subservice: monitoring
 ms.reviewer: mathoma
 ---
 
@@ -61,4 +62,5 @@ The following table lists the metrics available for the Microsoft.Sql/servers/jo
 
 - See [Monitor SQL Database](monitoring-sql-database-azure-monitor.md) for a description of monitoring Azure SQL Database.
 - See [Monitor Azure resources with Azure Monitor](/azure/azure-monitor/essentials/monitor-azure-resource) for details on monitoring Azure resources.
+- [Monitor Azure SQL workloads with database watcher (preview)](../database-watcher-overview.md)
 - Review [the Azure Monitor metrics and alerts](monitoring-metrics-alerts.md) including [Recommended alert rules](monitoring-metrics-alerts.md#recommended-alert-rules).

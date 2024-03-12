@@ -120,6 +120,20 @@
         href: database/monitor-tune-overview.md
       - name: Intelligent Insights
         href: database/intelligent-insights-overview.md
+      - name: Database watcher (preview)
+        items:
+        - name: Overview
+          href: ./database-watcher-overview.md
+        - name: Quickstart
+          href: ./database-watcher-quickstart.md
+        - name: Create and configure
+          href: ./database-watcher-manage.md
+        - name: Data collection and datasets
+          href: ./database-watcher-data.md
+        - name: Analyze monitoring data
+          href: ./database-watcher-analyze.md
+        - name: FAQ
+          href: ./database-watcher-faq.yml
       - name: SQL Analytics
         href: /azure/azure-monitor/insights/azure-sql?toc=/azure/azure-sql/toc.json
       - name: SQL Insights (preview)

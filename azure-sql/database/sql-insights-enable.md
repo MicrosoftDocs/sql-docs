@@ -7,6 +7,7 @@ ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 10/11/2023
 ms.service: sql-db-mi
+ms.subservice: monitoring
 ms.topic: conceptual
 ms.custom: subject-monitoring
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"

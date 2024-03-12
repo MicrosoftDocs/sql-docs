@@ -162,7 +162,7 @@ openssl s_client 127.0.0.1:1433
 
 ```
 
-The results will return:
+The command returns results like:
 
 ```output
 Post-Handshake New Session Ticket arrived:

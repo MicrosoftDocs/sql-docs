@@ -36,7 +36,6 @@ The following table lists the features of SQL Server on Azure VMs that are curre
 
 | Feature | Details |
 | --- | --- |
-| [Azure SQL triggers for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql-trigger) | Azure Functions supports function triggers for Azure SQL Database. |
 | [Azure Update Manager](../azure-update-manager-sql-vm.md) | Automatically patch multiple SQL Server VMs at scale with the Azure Update Manager integrated in to the [SQL virtual machines](manage-sql-vm-portal.md) resource in the Azure portal, including Cumulative Updates. |
 | [Premium SSD v2 in the Azure portal](storage-configuration-premium-ssd-v2.md) | Provision your SQL Server on Azure VM with Premium SSD v2 disks in the Azure portal for improved throughput and performance. |  
 
@@ -46,6 +45,7 @@ The following table lists features of SQL Server on Azure VMs that have been mad
 
 | Changes | Month | Details |
 | --- | --- |--- |
+| [Azure SQL triggers for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql-trigger) | March 2024 | Azure Functions supports function triggers for SQL Server on Azure VMs. |
 | [Azure Elastic SAN](performance-guidelines-best-practices-storage.md#azure-elastic-san) | February 2024 | Place your SQL Server workloads on an Azure Elastic SAN for improved performance, throughput, and cost. | 
 | [SQL VM health notifications](manage-sql-vm-portal.md#overview-page) | September 2023 | The **Overview** page of the SQL virtual machines resource in the Azure portal now displays information about the health of the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md), as well as error conditions when the state is _unhealthy_ or _failed_. Review [Troubleshoot the extension](sql-agent-extension-troubleshoot-known-issues.md) to learn more. | 
 | [Configure AG from Azure portal](availability-group-azure-portal-configure.md) | August 2023 | Deploy an Always On availability group to multiple subnets by using the Azure portal. |
@@ -61,6 +61,7 @@ Learn about significant changes to the SQL Server on Azure VMs documentation. Fo
 
 | Changes | Details |
 | --- | --- |
+|**Azure SQL triggers for Azure Functions GA** | Azure Functions supports function triggers for SQL Server on Azure VMs. This feature is now generally available. Review [SQL triggers for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql) to learn more. |
 | **Deploy SQL VM with Premium SSD v2 in Azure portal preview** | For improved throughput and performance, provision your SQL Server on Azure VMs with Premium SSD v2 disks by using the Azure portal.  Deploying your SQL Server VMs with Premium SSD v2 in the Azure portal is currently in preview. To learn more, review [Deploy SQL Server on Azure VMs with Premium SSD v2](storage-configuration-premium-ssd-v2.md). | 
 
 

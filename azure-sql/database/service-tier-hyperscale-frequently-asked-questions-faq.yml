@@ -49,7 +49,7 @@ sections:
           - Fast database backups regardless of database size (backups are based on storage snapshots).
           - Fast database restores regardless of database size (restores are from storage snapshots).
           - Higher log throughput regardless of database size and the number of vCores.
-          - Read Scale-out using one or more read-only replicas, used for read offloading or as hot standby databases.
+          - Read Scale-out using one or more read-only replicas, used for offloading read-only workloads or as hot standby databases.
           - Rapid scaling up of compute, in constant time, to be more powerful to accommodate the heavy workload and then scale down, in constant time. Scaling operations take single-digit minutes for provisioned compute, and less than a second for serverless compute, regardless of database size.
           
       - question: |
@@ -74,7 +74,7 @@ sections:
           
           - **Scaling Up/Down**
           
-            With Hyperscale, you can scale up the primary compute size in terms of resources like CPU and memory, and then scale down, in constant time. Because the storage is remote, scaling up and scaling down is not a size of data operation.
+            With Hyperscale, you can scale up the primary compute size in terms of resources like CPU and memory, and then scale down, in constant time. Because the storage is remote, scaling up and scaling down isn't a size of data operation.
 
             Support for [serverless compute](serverless-tier-overview.md) provides automatic scale-up and scale-down, and compute is billed based on usage.
 
@@ -105,8 +105,8 @@ sections:
       - question: |
           Can I bring my on-premises or IaaS SQL Server license to Hyperscale?
         answer: |
-          With the new, simplified pricing in effect since Dec 15, 2023, the price of compute for newly created Hyperscale databases, all serverless Hyperscale databases and all Hyperscale elastic pools has been reduced. With the new, simplified pricing, there is no need to apply Azure Hybrid Benefit (AHB) to obtain equivalent savings. Azure Hybrid Benefit (AHB) can only be applied to older (created prior to Dec 15, 2023) Hyperscale single databases with provisioned compute. For those older databases, AHB is only applicable until December 2026, after which those databases will also be billed as per the new, simplified pricing.
-          For more information see [Hyperscale pricing blog](https://aka.ms/hsignite2023) and [Azure SQL Database Hyperscale – lower, simplified pricing!](https://aka.ms/hsprice2023).
+          With the new, simplified pricing in effect since December 15, 2023, the price of compute for newly created Hyperscale databases, all serverless Hyperscale databases and all Hyperscale elastic pools has been reduced. With the new, simplified pricing, there is no need to apply Azure Hybrid Benefit (AHB) to obtain equivalent savings. Azure Hybrid Benefit (AHB) can only be applied to older (created prior to December 15, 2023) Hyperscale single databases with provisioned compute. For those older databases, AHB is only applicable until December 2026, after which those databases will also be billed as per the new, simplified pricing.
+          For more information, see [Hyperscale pricing blog](https://aka.ms/hsignite2023) and [Azure SQL Database Hyperscale – lower, simplified pricing!](https://aka.ms/hsprice2023).
           
       - question: |
           What kind of workloads is Hyperscale designed for?
@@ -116,9 +116,9 @@ sections:
       - question: |
           How can I choose between Azure Synapse Analytics and Azure SQL Database Hyperscale?
         answer: |
-          If you are currently running interactive analytics queries using SQL Server as a data warehouse, Hyperscale is a great option because you can host small and mid-size data warehouses (such as a few TB up to 100 TB) at a lower cost, and you can migrate your SQL Server data warehouse workloads to Hyperscale with minimal T-SQL code changes.
+          If you're currently running interactive analytics queries using SQL Server as a data warehouse, Hyperscale is a great option because you can host small and mid-size data warehouses (such as a few TB up to 100 TB) at a lower cost, and you can migrate your SQL Server data warehouse workloads to Hyperscale with minimal T-SQL code changes.
           
-          If you are running data analytics on a large scale with complex queries and sustained ingestion rates higher than 100 MB/s or using Parallel Data Warehouse (PDW), Teradata, or other Massively Parallel Processing (MPP) data warehouses, Azure Synapse Analytics or Microsoft Fabric could be the best choice.
+          If you're running data analytics on a large scale with complex queries and sustained ingestion rates higher than 100 MB/s or using Parallel Data Warehouse (PDW), Teradata, or other Massively Parallel Processing (MPP) data warehouses, Azure Synapse Analytics or Microsoft Fabric could be the best choice.
 
   - name: Hyperscale compute questions
     questions:
@@ -160,7 +160,7 @@ sections:
       - question: |
           What is the size of the transaction log with Hyperscale?
         answer: |
-          In Hyperscale, the transaction log is practically infinite, with a restriction that the active portion of the log cannot exceed 1 TB. The active portion of the log can grow because of long-running transactions, or because of [Change Data Capture](/sql/relational-databases/track-changes/about-change-data-capture-sql-server) processing not keeping up with the rate of data change. Avoid unnecessarily long and large transactions to stay below this limit. Other than this restriction, you do not need to worry about running out of log space on a system that has high log throughput. However, log generation rate might be throttled for continuous aggressively writing workloads. The peak sustained log generation rate is 100 MB/s.
+          In Hyperscale, the transaction log is practically infinite, with a restriction that the active portion of the log cannot exceed 1 TB. The active portion of the log can grow because of long-running transactions, or because of [Change Data Capture](/sql/relational-databases/track-changes/about-change-data-capture-sql-server) processing not keeping up with the rate of data change. Avoid unnecessarily long and large transactions to stay below this limit. Other than this restriction, you don't need to worry about running out of log space on a system that has high log throughput. However, log generation rate might be throttled for continuous aggressively writing workloads. The peak sustained log generation rate is 100 MB/s.
 
       - question: |
           Does my `tempdb` scale as my database grows?
@@ -229,7 +229,7 @@ sections:
         answer: |
           If you have previously migrated an existing Azure SQL Database to the Hyperscale service tier, you can reverse migrate it to the General Purpose service tier within 45 days of the original migration to Hyperscale. If you wish to migrate the database to another service tier, such as Business Critical, first reverse migrate to the General Purpose service tier, then modify the service tier. Reverse migration is a size of data operation.
 
-          Databases created in the Hyperscale service tier cannot be moved to other service tiers.
+          Databases created in the Hyperscale service tier can't be moved to other service tiers.
           
           Learn [how to reverse migrate from Hyperscale](manage-hyperscale-database.md#reverse-migrate-from-hyperscale), including the [limitations for reverse migration](manage-hyperscale-database.md#limitations-for-reverse-migration) and impacted [backup policies](manage-hyperscale-database.md#backup-policies).
 
@@ -377,7 +377,7 @@ sections:
           Because the storage is shared and there is no direct physical replication happening between primary and secondary compute replicas, the throughput on the primary replica will not be directly affected by adding secondary replicas. However, continuous and aggressive write workloads might be throttled on the primary to allow log apply on secondary replicas and page servers to catch up. This avoids poor read performance on secondary replicas and long recovery after failover to an HA secondary replica.
 
       - question: |
-          Is Hyperscale well suited for resource-intensive, long-running queries and transactions?
+          Is Hyperscale well suited for resource-intensive, long-running queries, and transactions?
         answer: |
           Yes. However, just like in other Azure SQL DB databases, connections might be terminated by very infrequent transient errors, which can abort long-running queries and roll back transactions. One cause of transient errors is when the system quickly shifts the database to a different compute node to ensure continued compute and storage resource availability, or to perform planned maintenance. Most of these reconfiguration events finish in less than 10 seconds. Applications that connect to your database should be built to expect and tolerate these infrequent transient errors by implementing retry logic. Additionally, consider configuring a [maintenance window](maintenance-window.md) that matches your workload schedule to avoid transient errors due to planned maintenance.
 
@@ -453,7 +453,7 @@ sections:
           No. You can only connect to HA secondary replicas by specifying `ApplicationIntent=ReadOnly`. However, you can use dedicated endpoints for [named replicas](service-tier-hyperscale-replicas.md#named-replica). 
 
       - question: |
-          Does the system do intelligent load balancing of the read workload on HA secondary replicas?
+          Does the system do intelligent load balancing of the read-only workload on HA secondary replicas?
         answer: |
           No. A new connection with read-only intent is redirected to an arbitrary HA secondary replica.
 
@@ -473,9 +473,9 @@ sections:
           No. Hyperscale databases have shared storage, meaning that all compute replicas see the same tables, indexes, and other database objects. If you want additional indexes optimized for reads on secondary, you must add them on the primary. You can still create temporary tables (table names prefixed with # or ##) on each secondary replica to store temporary data. Temporary tables are read-write.
 
       - question: |
-          How much delay is there going to be between the primary and secondary compute replicas?
+          How much delay is there between the primary and secondary compute replicas?
         answer: |
-          Data latency from the time a transaction is committed on the primary to the time it is readable on a secondary depends on the current log generation rate, transaction size, load on the replica, and other factors. Typical data latency for small transactions is in tens of milliseconds, however there is no upper bound on data latency. Data on a given secondary replica is always transactionally consistent, thus larger transactions take longer to propagate. However, at a given point in time data latency and database state might be different for different secondary replicas. Workloads that need to read committed data immediately should run on the primary replica.
+          Data latency from the time a transaction is committed on the primary to the time it is readable on a secondary depends on the current log generation rate, transaction size, load on the replica, and other factors. Typical data latency for small transactions is in tens of milliseconds, however there's no upper bound on data latency. Data on a given secondary replica is always transactionally consistent, thus larger transactions take longer to propagate. However, at a given point in time data latency and database state might be different for different secondary replicas. Workloads that need to read committed data immediately should run on the primary replica.
 
       - question: |
           Can a named replica be used as a failover target?
@@ -485,7 +485,7 @@ sections:
       - question: |
           How can I distribute a read-only workload across my named replicas?
         answer: |
-          Since every named replica can have a different service level objective and thus be used for different use cases, there is no built-in way to direct read-only traffic sent to the primary to a set of named replicas. For example, you can have eight named replicas, and you might want to direct OLTP workload only to named replicas 1 to 4, while Power BI analytical workloads use named replicas 5 and 6, and the data science workload uses replicas 7 and 8. Depending on which tool or programming language you use, strategies to distribute such workload could vary. For an example of creating a workload routing solution to allow a REST backend to scale out, review the [OLTP scale-out sample](https://github.com/Azure-Samples/azure-sql-db-named-replica-oltp-scaleout).
+          Since every named replica can have a different service level objective and thus be used for different use cases, there's no built-in way to direct read-only traffic sent to the primary to a set of named replicas. For example, you can have eight named replicas, and you might want to direct OLTP workload only to named replicas 1 to 4, while Power BI analytical workloads use named replicas 5 and 6, and the data science workload uses replicas 7 and 8. Depending on which tool or programming language you use, strategies to distribute such workload could vary. For an example of creating a workload routing solution to allow a REST backend to scale out, review the [OLTP scale-out sample](https://github.com/Azure-Samples/azure-sql-db-named-replica-oltp-scaleout).
 
       - question: |
           Can a named replica be in a region different from the region of the primary replica?
@@ -495,7 +495,7 @@ sections:
       - question: |
           Can a named replica impact availability or performance of the primary replica?
         answer: |
-          A named replica cannot impact the availability of the primary replica. Named replicas, under normal circumstances, are unlikely to impact the primary's performance, but it can happen if there are intensive workloads running. Just like an HA replica, a named replica is kept in sync with the primary via the transaction log service. If a named replica, for any reason, is not able to consume the transaction log fast enough, it will start asking the primary replica to slow down (throttle) its log generation, so that it can catch up. While this behavior will not impact the primary's availability, it can impact performance of write workloads on the primary. To avoid this situation, make sure that your named replicas have enough resource headroom – mainly CPU – to process transaction log without delay. For example, if the primary is processing numerous data changes, it is recommended to have named replicas with at least the same Service Level Objective as the primary, to avoid saturating CPU on the replicas and thus forcing the primary to slow down.
+          A named replica cannot impact the availability of the primary replica. Named replicas, under normal circumstances, are unlikely to impact the primary's performance, but it can happen if there are intensive workloads running. Just like an HA replica, a named replica is kept in sync with the primary via the transaction log service. If a named replica, for any reason, is not able to consume the transaction log fast enough, it will start asking the primary replica to slow down (throttle) its log generation, so that it can catch up. While this behavior won't impact the primary's availability, it can impact performance of write workloads on the primary. To avoid this situation, make sure that your named replicas have enough resource headroom – mainly CPU – to process transaction log without delay. For example, if the primary is processing numerous data changes, it is recommended to have named replicas with at least the same Service Level Objective as the primary to avoid saturating CPU on the replicas, and thus forcing the primary to slow down.
 
       - question: |
           What happens to named replicas if the primary replica is unavailable, for example, because of planned maintenance?
@@ -505,7 +505,7 @@ sections:
       - question: |
           How can I improve availability of named replicas?
         answer: |
-          By default, named replicas do not have any HA replicas of their own. A failover of a named replica requires creating a new replica first, which typically takes about 1-2 minutes. However, named replicas can also benefit from higher availability and shorter failovers provided by HA replicas. To add HA replicas for a named replica, you can use the parameter `ha-replicas` with [AZ CLI](/cli/azure/sql/db/replica#az_sql_db_replica_create), or the parameter `HighAvailabilityReplicaCount` with [PowerShell](/powershell/module/az.sql/set-azsqldatabase), or the `highAvailabilityReplicaCount` property with [REST API](/rest/api/sql/databases/create-or-update). The number of HA replicas can be set during the creation of a named replica and can be changed – only via AZ CLI, PowerShell, or REST API – anytime after the named replica has been created. Pricing of HA replicas for named replicas is the same of HA replicas for regular Hyperscale databases.
+          By default, named replicas don't have any HA replicas of their own. A failover of a named replica requires creating a new replica first, which typically takes about 1-2 minutes. However, named replicas can also benefit from higher availability and shorter failovers provided by HA replicas. To add HA replicas for a named replica, you can use the parameter `ha-replicas` with [AZ CLI](/cli/azure/sql/db/replica#az_sql_db_replica_create), or the parameter `HighAvailabilityReplicaCount` with [PowerShell](/powershell/module/az.sql/set-azsqldatabase), or the `highAvailabilityReplicaCount` property with [REST API](/rest/api/sql/databases/create-or-update). The number of HA replicas can be set during the creation of a named replica and can be changed – only via AZ CLI, PowerShell, or REST API – anytime after the named replica has been created. Pricing of HA replicas for named replicas is the same of HA replicas for regular Hyperscale databases.
     
 
 additionalContent: |

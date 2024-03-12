@@ -177,7 +177,7 @@ SSL-Session:
 
 ### Nmap
 
-Please note that the current version of Nmap, version 7.94, appears to not detect TLS 1.3 when using:
+The current version of Nmap, version 7.94, appears to not detect TLS 1.3 when using:
 
 `nmap -sV --script ssl-enum-ciphers -p 1433 127.0.0.1`.
 

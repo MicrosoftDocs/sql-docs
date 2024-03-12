@@ -4,7 +4,7 @@ description: "The sys.sp_help_change_feed_table_groups_groups system stored proc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: imotiwala
-ms.date: 03/11/2024
+ms.date: 03/12/2024
 ms.service: fabric
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -23,7 +23,12 @@ monikerRange: ">=sql-server-ver16||=azuresqldb-current||=fabric"
 
 [!INCLUDE [sqlserver2022-asdb-fabric](../../includes/applies-to-version/sqlserver2022-asdb-fabric.md)]
 
-Returns metadata that is used to configure change feed table groups for Fabric Mirrored Databases.
+Returns metadata that is used to configure change feed table groups.
+
+This system stored procedure view is used for:
+
+- The Azure Synapse Link feature for SQL Server instances and Azure SQL Database. For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
+- The Fabric Mirrored Database feature for Azure SQL Database. For more information, see [Microsoft Fabric mirrored databases (Preview)](/fabric/database/mirrored-database/overview).
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -31,10 +36,10 @@ Returns metadata that is used to configure change feed table groups for Fabric M
 | `table_group_name` |**nvarchar(140)**| The name of the table group.|
 | `destination_location` |**nvarchar(512)**| URL string of the landing zone folder. |
 | `destination_credential` |**sysname**| The credential name to access the landing zone.|
-| `workspace_id` |**nvarchar(247)**| The related workspace Azure resource ID.|  
-| `synapse_workgroup_name` |**nvarchar(50)**| The related workspace name.|  
-| `enabled` |**bit**|Tracks if the table group is enabled for change feed. `1` - Yes, `0` - No. |
-| `destination_type` | **int**| Appears only when Fabric Database Mirroring is configured. `0` = Azure Synapse Link. `2` = Fabric mirroring. |
+| `workspace_id` |**nvarchar(247)**| The related workspace Azure resource ID.|
+| `synapse_workgroup_name` |**nvarchar(50)**| The related workspace name. |  
+| `enabled` |**bit**| Tracks if the table group is enabled for change feed. `1` - Yes, `0` - No. |
+| `destination_type` | **int**| `0` = Azure Synapse Link. `2` = Fabric mirroring. |
 
 ## Permissions
 

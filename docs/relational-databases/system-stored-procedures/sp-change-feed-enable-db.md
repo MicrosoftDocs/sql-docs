@@ -4,7 +4,7 @@ description: "The sys.sp_change_feed_enable_db system stored procedure enables t
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: imotiwala
-ms.date: 03/11/2024
+ms.date: 03/12/2024
 ms.service: fabric
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -52,9 +52,9 @@ Data type is **int**. Describes the frequency, or polling interval, that the log
 
 #### @destination_type
 
-**Applies to:** Fabric only.
+**Applies to:** Fabric database mirroring only. For use with Synapse Link, do not specify.
 
-Data type is **int**. Default is `0`, for Azure Synapse Link. `2` = Fabric mirroring.
+Data type is **int**. Default is `0`, for Azure Synapse Link. `2` = Fabric database mirroring.
 
 ## Permissions
 

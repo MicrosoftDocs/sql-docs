@@ -4,7 +4,7 @@ description: "The sys.sp_help_change_feed system stored procedure monitors the c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, randolphwest
-ms.date: 03/11/2024
+ms.date: 03/12/2024
 ms.service: fabric
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -60,7 +60,7 @@ EXECUTE sys.sp_help_change_feed;
 | `snapshot_start_time` | **datetime** | Start time of snapshot phase |
 | `snapshot_end_time` | **datetime** | End time of snapshot phase |
 | `snapshot_row_count` | **int** | The number of rows of data being exported during the snapshot operation of the change feed table |
-| `destination_type` | **int**| Appears only when Fabric Database Mirroring is configured. `0` = Azure Synapse Link. `2` = Fabric mirroring. |
+| `destination_type` | **int**| `0` = Azure Synapse Link. `2` = Fabric mirroring. |
 
 ## Permissions
 

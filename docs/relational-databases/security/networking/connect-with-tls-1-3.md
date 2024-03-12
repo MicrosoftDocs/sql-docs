@@ -62,7 +62,7 @@ Tls13 using TLS_AES_256_GCM_SHA384
 
 Windows has a set of registry keys under `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL` that control TLS protocol versions as well as cipher suites. For this scenario, only the protocol versions that affect servers matter, because the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance acts as a server.
 
-The following PowerShell script will enable or disable TLS 1.0 and TLS 1.1 when used by servers:
+The following PowerShell script [updates the registry to](/powershell/scripting/samples/working-with-registry-entries) enable or disable TLS 1.0 and TLS 1.1 when used by servers:
 
 ```powershell
 # Learn more at https://learn.microsoft.com/windows-server/security/tls/tls-registry-settings?tabs=diffie-hellman

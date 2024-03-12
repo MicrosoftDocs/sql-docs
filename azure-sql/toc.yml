@@ -350,7 +350,9 @@
         href: database/migrate-sqlite-db-to-azure-sql-serverless-offline-tutorial.md
     - name: Scale out
       items: 
-      - name: Configure security for named replicas
+      - name: Configure Hyperscale named replicas
+        href: database/hyperscale-named-replica-configure.md
+      - name: Configure security for Hyperscale named replicas
         displayName: Configure named replicas for Hyperscale
         href: database/hyperscale-named-replica-security-configure.md
 

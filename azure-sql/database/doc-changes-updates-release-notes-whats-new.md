@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, randolphwest
-ms.date: 02/27/2024
+ms.date: 03/12/2024
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -45,7 +45,8 @@ The following table lists the features of Azure SQL Database that are currently 
 | [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md) | Manage and scale multiple Hyperscale databases in Azure SQL Database by using Hyperscale elastic pools. |
 | [Hyperscale elastic pools Premium-series hardware](hyperscale-elastic-pool-overview.md) | Premium-series and premium-series memory optimized hardware is in preview for Hyperscale elastic pools. |
 | [Hyperscale elastic pools with zone redundancy](hyperscale-elastic-pool-overview.md) | You can now create zone redundant elastic pools in the Hyperscale service tier. You can migrate existing zone-redundant Hyperscale databases into elastic pools. For more information, read [Blog post: Zone redundant Hyperscale elastic pools](https://aka.ms/hsep-zr). |
-| [License-free standby replica](standby-replica-how-to-configure.md) | Save on licensing costs by configuring your secondary database replica for disaster recovery standby. |
+| [Hyperscale named replica zone redundant support](service-tier-hyperscale-replicas.md) | [Zone redundancy support for Hyperscale named replicas](https://aka.ms/ZRSupportForNRPreview) is in preview. |
+| [License-free standby replica](standby-replica-how-to-configure.md) | Save on licensing costs by configuring your secondary database replica for disaster recovery standby. | 
 | [Maintenance window advance notifications](advance-notifications.md) | Advance notifications are available for databases configured to use a nondefault [maintenance window](maintenance-window.md). Advance notifications for maintenance windows are in public preview for Azure SQL Database. |
 | [Microsoft Entra nonunique name support](authentication-microsoft-entra-create-users-with-nonunique-names.md) | The [CREATE USER](/sql/t-sql/statements/create-user-transact-sql) Transact-SQL (T-SQL) syntax has been extended to include `WITH OBJECT_ID` to support creating Microsoft Entra logins and users in Azure SQL Database that have nonunique names. |
 | [Query editor in the Azure portal](query-editor.md) | The query editor in the portal allows you to run queries against your Azure SQL Database directly from the [Azure portal](https://portal.azure.com). |
@@ -66,6 +67,12 @@ The following table lists features of Azure SQL Database that have been made gen
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Database documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
+
+### March 2024
+
+| Changes | Details |
+| --- | --- |
+| **Hyperscale named replica zone redundant support** | [Zone redundancy support for Hyperscale named replicas](service-tier-hyperscale-replicas.md) is now available in preview. For more information, see [Blog: Zone redundancy for Hyperscale named replicas](https://aka.ms/ZRSupportForNRPreview).|
 
 ### February 2024
 

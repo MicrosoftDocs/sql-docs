@@ -11,7 +11,7 @@ metadata:
   author: dimitri-furman
   ms.author: dfurman
   ms.reviewer: wiassaf, mathoma
-  ms.date: 02/19/2024
+  ms.date: 03/12/2024
 title: Azure SQL Database Hyperscale FAQ
 summary: |
   [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -287,7 +287,7 @@ sections:
       - question: |
           Does Hyperscale support Availability Zones?
         answer: |
-          Yes, Hyperscale supports [zone redundant configuration](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability). At least one HA secondary replica and the use of zone-redundant or geo-zone-redundant storage is required for enabling the zone redundant configuration for Hyperscale. 
+          Yes, Hyperscale supports [zone redundant configuration](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability). At least one HA secondary replica and the use of zone-redundant or geo-zone-redundant storage is required for enabling the zone redundant configuration for Hyperscale. Support for zone redundant Hyperscale named replicas is currently in preview.
 
       - question: |
           Does Hyperscale support elastic pools?

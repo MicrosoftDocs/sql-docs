@@ -154,7 +154,7 @@ You can use network sniffers to determine the TLS protocol version and agreed-up
 ### OpenSSL
 
 You can also use openssl to discover the agreed-upon TLS information. 
-Using the following line:
+Use the following command:
 
 ```output
 openssl s_client 127.0.0.1:1433

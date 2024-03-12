@@ -4,7 +4,7 @@ description: Latest release notes for SQL Server enabled by Azure Arc
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 02/15/2024
+ms.date: 03/12/2024
 ms.topic: conceptual
 ms.custom: ignite-2023
 ---
@@ -12,6 +12,14 @@ ms.custom: ignite-2023
 # Release notes - SQL Server enabled by Azure Arc
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
+## March, 12 2024
+
+**Extension version**: `1.1.2620.127`
+
+## Backup management
+
+- Schedule backup at instance level or database level. For details, review [Backup schedule level](backup-local.md#backup-schedule-level).
 
 ## February 13, 2024
 

@@ -27,7 +27,7 @@ TLS 1.3 support in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] requ
 
 - Windows Server 2022
 - [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] with Cumulative Update 1 or later
-- The [!INCLUDE [ssasnoversion-md](../../../includes/ssasnoversion-md.md)] instance uses TCP/IP as a network protocol
+- The [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance uses TCP/IP as a network protocol
 - A valid X.509 server certificate installed along with its private key
 
 > [!IMPORTANT]

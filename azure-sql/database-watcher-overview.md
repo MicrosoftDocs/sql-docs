@@ -83,7 +83,7 @@ There is a limit on the number of SQL targets per watcher, and the number of wat
 
 | Parameter | Limit |
 |:--|:--|
-| SQL targets per watcher<sup>1</sup> | 20 |
+| SQL targets per watcher<sup>1</sup> | 50 |
 | Watchers per subscription | 20 |
 
 <sup>1</sup>A high availability replica of a database, elastic pool, or SQL managed instance is monitored independently of its parent replica, and is considered a separate target.
@@ -195,8 +195,8 @@ During preview, database watcher has the following known issues.
 | Issue | Mitigation or workaround |
 |:--|:--|
 | If data collection cannot start or continue because of an error (for example, insufficient access to a target), the error is not exposed in the Activity log. | To troubleshoot, see [No new data appears in the data store or on dashboards](#no-new-data-appears-in-the-data-store-or-on-dashboards). |
-| Disabling the system-assigned managed identity of a watcher causes data collection to stop. | To resume data collection, re-enable the system-assigned managed identity on the **Identity** page, and grant this new identity access to the data store, targets, and vaults as described in [Create and configure a database watcher](database-watcher-manage.md). |
-| If a [serverless](./database/serverless-tier-overview.md) database has auto-pause enabled, and is added as a database watcher target, it might not auto-pause as expected. | If retaining the auto-pause functionality is required, do not use database watcher to monitor serverless databases at this time. |
+| Disabling the system-assigned managed identity of a watcher is not supported. | To delete the system-assigned identity of a watcher from the directory, delete the watcher. |
+| If a [serverless](./database/serverless-tier-overview.md) database has auto-pause enabled, and is added as a database watcher target, it might not auto-pause as expected. For a [free offer](./database/free-offer.md) database, this might exhaust the free monthly credit sooner than expected. | If retaining the auto-pause functionality is required, do not use database watcher to monitor serverless databases at this time. |
 | For Azure SQL Managed Instance, data is not collected from the readable high availability replica or from a geo-replica if you are using SQL authentication. | There are two workarounds: </br>1. Use the Microsoft Entra ID authentication (preferred). </br>2. Disable the password policy check. Execute `ALTER LOGIN [database-watcher-login-placeholder] WITH CHECK_POLICY = OFF;`, replacing `database-watcher-login-placeholder` with the name of the SQL authentication login of the watcher. Execute this command on the primary replica, and on the geo-replica, if any. |
 | If the watcher name is not unique within the Microsoft Entra ID tenant, granting access to targets using Microsoft Entra authentication fails. | Recreate the watcher with a name that is unique within your tenant. |
 | You cannot export an ARM template from an existing watcher resource. | Start creating a new watcher and enter all required details. On the **Review + create** page, use the **View automation template** link to obtain an ARM template and a parameter file. You can then use the template and the customized parameter file in a [custom deployment](/azure/azure-resource-manager/templates/deploy-portal#deploy-resources-from-custom-template) to create a new watcher. |

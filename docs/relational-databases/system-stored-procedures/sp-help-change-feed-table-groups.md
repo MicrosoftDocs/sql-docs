@@ -23,7 +23,7 @@ monikerRange: ">=sql-server-ver16||=azuresqldb-current||=fabric"
 
 [!INCLUDE [sqlserver2022-asdb-fabric](../../includes/applies-to-version/sqlserver2022-asdb-fabric.md)]
 
-Returns metadata that is used to configure change feed table groups Azure Synapse Link for SQL.
+Returns metadata that is used to configure change feed table groups for Fabric Mirrored Databases.
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -34,6 +34,7 @@ Returns metadata that is used to configure change feed table groups Azure Synaps
 | `workspace_id` |**nvarchar(247)**| The related workspace Azure resource ID.|  
 | `synapse_workgroup_name` |**nvarchar(50)**| The related workspace name.|  
 | `enabled` |**bit**|Tracks if the table group is enabled for change feed. `1` - Yes, `0` - No. |
+| `destination_type` | **int**| Appears only when Fabric Database Mirroring is configured. `0` = Azure Synapse Link. `2` = Fabric mirroring. |
 
 ## Permissions
 

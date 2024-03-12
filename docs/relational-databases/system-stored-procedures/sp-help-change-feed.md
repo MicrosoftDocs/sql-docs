@@ -60,7 +60,7 @@ EXECUTE sys.sp_help_change_feed;
 | `snapshot_start_time` | **datetime** | Start time of snapshot phase |
 | `snapshot_end_time` | **datetime** | End time of snapshot phase |
 | `snapshot_row_count` | **int** | The number of rows of data being exported during the snapshot operation of the change feed table |
-| `destination_type` | **int**| Appears in Fabric only. `0` = Azure Synapse Link. `2` = Fabric mirroring. |
+| `destination_type` | **int**| Appears only when Fabric Database Mirroring is configured. `0` = Azure Synapse Link. `2` = Fabric mirroring. |
 
 ## Permissions
 

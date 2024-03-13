@@ -3,8 +3,8 @@ title: Intelligent applications
 description: "Use AI options such as OpenAI and vectors to build intelligent applications with Azure SQL Database."
 author: damauri
 ms.author: damauri
-ms.reviewer: damauri, randolphwest, josephsack, mathoma
-ms.date: 3/13/2024
+ms.reviewer: damauri, randolphwest, mathoma
+ms.date: 10/30/2023
 ms.service: sql-database
 ms.topic: conceptual
 ---
@@ -15,7 +15,7 @@ ms.topic: conceptual
 
 This article provides an overview of using artificial intelligence (AI) options, such as OpenAI and vectors, to build intelligent applications with Azure SQL Database.
 
-For samples and examples, please visit the [SQL AI Samples repository](https://aka.ms/sqlaisamples).
+For samples and examples, please visit the SQL AI Samples repository [here](https://aka.ms/sqlaisamples).
 
 ## Overview
 
@@ -31,7 +31,6 @@ The following links provide sample code of various Azure SQL Database options to
 | **[Vectors](#vectors)** | Learn how to store and query vectors in Azure SQL Database. |
 | **[Azure AI Search](#azure-ai-search)** | Use Azure SQL Database together with Azure AI Search to train LLM on your data. |
 | **[Intelligent applications](#intelligent-applications)** | Learn how to create an end-to-end solution using a common pattern that can be replicated in any scenario. |
-| **[Copilot for Azure SQL Database (preview)](../copilot/copilot-azure-sql-overview.md)** | Manage and develop with intuitive assistance and natural language to SQL processing. |
 
 ## Key concepts
 
@@ -52,7 +51,7 @@ The RAG pattern, with prompt engineering, serves the purpose of enhancing respon
 
 A prompt refers to specific text or information that serves as an instruction to an LLM, or as contextual data that the LLM can build upon. A prompt can take various forms, such as a question, a statement, or even a code snippet.
 
-Sample prompts that can be used to generate a response from an LLM:
+The following is a list of prompts that can be used to generate a response from an LLM:
 
 - **Instructions**: provide directives to the LLM
 - **Primary content**: gives information to the LLM for processing
@@ -122,7 +121,7 @@ Although Azure SQL Database doesn't have a native **vector** type, a vector is n
 
 Azure SQL Database also supports columnstore indexes and [batch mode execution](/sql/relational-databases/query-processing-architecture-guide#batch-mode-execution). A vector-based approach is used for batch mode processing, which means that each column in a batch has its own memory location where it's stored as a vector. This allows for faster and more efficient processing of data in batches.
 
-The following example shows how a vector can be stored in SQL Database:
+The following is example of how a vector can be stored in SQL Database:
 
 ```sql
 CREATE TABLE [dbo].[wikipedia_articles_embeddings_titles_vector]
@@ -153,11 +152,14 @@ Implement RAG-patterns with Azure SQL Database and Azure AI Search. You can run 
 
 ## Intelligent applications
 
-Azure SQL Database can be used to build intelligent applications that include AI features, such as recommenders, and Retrieval Augmented Generation (RAG) as the following diagram demonstrates:
+Azure SQL Database can be used to build intelligent applications that include AI features, such as recommenders, and Retrieval Augmented Generation (RAG) as the following diagram demonstrates: 
 
 :::image type="content" source="media/ai-artificial-intelligence-intelligent-applications/session-recommender-architecture.png" alt-text="Diagram of different AI features to build intelligent applications with Azure SQL Database.":::
 
-For an end-to-end sample to build a recommender using session abstract as a sample dataset, see [How I built a session recommender in 1 hour using Open AI](https://devblogs.microsoft.com/azure-sql/how-i-built-a-session-recommender-in-1-hour-using-open-ai/).
+For an end-to-end sample to build a AI-enabled application using sessions abstract as a sample dataset, see:
+
+- [How I built a session recommender in 1 hour using Open AI](https://devblogs.microsoft.com/azure-sql/how-i-built-a-session-recommender-in-1-hour-using-open-ai/).
+- [Using Retrieval Augmented Generation to build a conference session assistant](https://github.com/Azure-Samples/azure-sql-db-session-recommender-v2)
 
 ### LangChain integration
 
@@ -165,31 +167,15 @@ LangChain is a well-known framework for developing applications powered by langu
 
 For an example that shows how LangChain can be used to create a Chatbot on your own data, see [Building your own DB Copilot for Azure SQL with Azure OpenAI GPT-4](https://devblogs.microsoft.com/azure-sql/building-your-own-db-copilot-for-azure-sql-with-azure-openai-gpt-4/).
 
-## Copilot for Azure SQL Database (preview)
+### Semantic Kernel integration
 
-[Copilot in Azure SQL Database (preview)](../copilot/copilot-azure-sql-overview.md) is a set of AI-assisted experiences designed to streamline the design, operation, optimization, and health of Azure SQL Database-driven applications. Copilot can improve productivity by offering natural language to SQL conversion and self-help for database administration.
+[Semantic Kernel is an open-source SDK](https://learn.microsoft.com/en-us/semantic-kernel/overview/) that lets you easily build agents that can call your existing code. As a highly extensible SDK, you can use Semantic Kernel with models from OpenAI, Azure OpenAI, Hugging Face, and more! By combining your existing C#, Python, and Java code with these models, you can build agents that answer questions and automate processes.
 
-Copilot provides relevant answers to user questions, simplifying database management by leveraging database context, documentation, dynamic management views, Query Store, and other knowledge sources. For example:
-
-- Database administrators can independently manage databases and resolve issues, or learn more about the performance and capabilities of your database.
-- Developers can ask questions about their data as they would in text or conversation to generate a T-SQL query. Developers can also learn to write queries faster through detailed explanations of the generated query.
-
-> [!NOTE]
-> Copilot in Azure SQL Database is currently in a limited public preview for a limited number of early adopters. To sign up for this program, visit [Request Access to Copilot in Azure SQL Database: Limited Access Public Preview](https://aka.ms/sqlcopilot-signup).
-
-The limited public preview of Copilot for Azure SQL Database includes two Azure portal experiences:
-
-| Portal location | Experiences |
-| :-- |:-- |
-| **Azure portal Query Editor** | [Natural language to SQL](../copilot/copilot-azure-sql-overview.md?view=azuresql-db&preserve-view=true#natural-language-to-sql-query): This experience within the [Azure portal query editor for Azure SQL Database](../database/query-editor.md) translates natural language queries into SQL, making database interactions more intuitive. For a tutorial and examples of natural language to SQL capabilities, see [Natural language to SQL in the Azure portal Query editor (preview)](../copilot/query-editor-natural-language-to-sql-copilot.md). |
-| **Microsoft Copilot for Azure** | [Azure Copilot integration](../copilot/copilot-azure-sql-overview.md?view=azuresql-db&preserve-view=true#microsoft-copilot-for-azure-enhanced-scenarios): This experience adds Azure SQL skills into [Microsoft Copilot for Azure](/azure/copilot/overview), providing customers with self-guided assistance, empowering them to manage their databases and solve issues independently.|
-
-For more information, see [Frequently asked questions about Copilot in Microsoft Azure SQL (preview)](../copilot/copilot-azure-sql-faq.yml).
+- [Semantic Kernel & Kernel Memory - SQL Connector](https://github.com/kbeaugrand/SemanticKernel.Connectors.Memory.SqlServer) - Provides a connection to a SQL database for the Semantic Kernel for the memories.
+- [OpenAI Embeddings Sample](https://github.com/marcominerva/OpenAIEmbeddingSample): An example that shows how to use Semantic Kernel and Kernel Memory to work with embeddings in a .NET application using SQL Server as Vector Database.
 
 ## Related content
 
 - [Create and deploy an Azure OpenAI Service resource](/azure/ai-services/openai/how-to/create-resource?pivots=web-portal)
 - [Embeddings models](/azure/ai-services/openai/concepts/models#embeddings-models)
-- [Frequently asked questions about Copilot in Azure SQL Database (preview)](../copilot/copilot-azure-sql-faq.yml)
-- [Responsible AI FAQ for Microsoft Copilot for Azure (preview)](/azure/copilot/responsible-ai-faq)
 - [SQL AI Samples and Examples](https://aka.ms/sqlaisamples)

@@ -70,7 +70,4 @@ Requires VIEW DATABASE STATE or VIEW DATABASE PERFORMANCE STATE permission to qu
 
 - [What is Azure Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
 - [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md)
-- [changefeed.change_feed_tables (Transact-SQL)](../system-tables/changefeed-change-feed-tables-transact-sql.md)
-- [changefeed.change_feed_table_groups (Transact-SQL)](../system-tables/changefeed-change-feed-table-groups-transact-sql.md)
-- [changefeed.change_feed_settings (Transact-SQL)](../system-tables/changefeed-change-feed-settings.md)
 - [Troubleshoot: Azure Synapse Link for SQL initial snapshot issues](/azure/synapse-analytics/synapse-link/troubleshoot/troubleshoot-sql-snapshot-issues)

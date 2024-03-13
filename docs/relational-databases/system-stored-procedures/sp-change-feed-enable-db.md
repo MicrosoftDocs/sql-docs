@@ -26,7 +26,7 @@ monikerRange: ">=sql-server-ver16||=azuresqldb-current||=fabric||=azure-sqldw-la
 Enables current database for [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview) or [Microsoft Fabric mirrored databases (Preview)](/fabric/database/mirrored-database/overview).
 
 > [!NOTE]  
-> This stored procedure is used internally and is not recommended for direct administrative use. Use Synapse Studio or the Fabric portal instead. Using this procedure could introduce inconsistency.
+> This system stored procedure is used internally and is not recommended for direct administrative use. Use Synapse Studio or the Fabric portal instead. Using this procedure could introduce inconsistency.
 
 ## Syntax
 
@@ -44,7 +44,7 @@ GO
 
 #### @maxtrans 
 
-Data type is **int**. Indicates the maximum number of transactions to process in each scan cycle. Default value if not specified is `500`. If specified, the value must be a positive integer.
+Data type is **int**. Indicates the maximum number of transactions to process in each scan cycle. Default value if not specified is `10000`. If specified, the value must be a positive integer.
 
 #### @pollinterval 
 
@@ -52,7 +52,7 @@ Data type is **int**. Describes the frequency, or polling interval, that the log
 
 #### @destination_type
 
-**Applies to:** Fabric database mirroring only. For use with Synapse Link, do not specify.
+**Applies to:** Fabric database mirroring only. For Synapse Link, do not specify.
 
 Data type is **int**. Default is `0`, for Azure Synapse Link. `2` = Fabric database mirroring.
 
@@ -83,6 +83,7 @@ FROM sys.databases;
 - [sys.sp_change_feed_create_table_group (Transact-SQL)](sp-change-feed-create-table-group.md)
 - [sys.sp_help_change_feed (Transact-SQL)](sp-help-change-feed.md)
 - [sys.sp_help_change_feed_table (Transact-SQL)](sp-help-change-feed-table.md)
+- [sys.sp_change_feed_configure_parameters (Transact-SQL)](sp-change-feed-configure-parameters.md)
 - [sys.dm_change_feed_log_scan_sessions (Transact-SQL)](../system-dynamic-management-views/sys-dm-change-feed-log-scan-sessions.md)
 - [sys.dm_change_feed_errors (Transact-SQL)](../system-dynamic-management-views/sys-dm-change-feed-errors.md)
 
@@ -94,11 +95,6 @@ FROM sys.databases;
 
 **For Azure Synapse Link**:
 
-- [sp_change_feed_disable_db (Transact-SQL)](sp-change-feed-disable-db.md)
-- [sp_change_feed_drop_table_group (Transact-SQL)](sp-change-feed-drop-table-group.md)
 - [What is Azure Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
 - [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md)
-- [changefeed.change_feed_tables (Transact-SQL)](../system-tables/changefeed-change-feed-tables-transact-sql.md)
-- [changefeed.change_feed_table_groups (Transact-SQL)](../system-tables/changefeed-change-feed-table-groups-transact-sql.md)
-- [changefeed.change_feed_settings (Transact-SQL)](../system-tables/changefeed-change-feed-settings.md)
 - [Troubleshoot: Azure Synapse Link for SQL initial snapshot issues](/azure/synapse-analytics/synapse-link/troubleshoot/troubleshoot-sql-snapshot-issues)

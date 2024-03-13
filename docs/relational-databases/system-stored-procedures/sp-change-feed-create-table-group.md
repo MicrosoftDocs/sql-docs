@@ -25,13 +25,13 @@ monikerRange: ">=sql-server-ver16||=azuresqldb-current||=fabric||=azure-sqldw-la
 
 Creates a source to maintain metadata specific to each table group. A table group represents the container for all the individual tables that will be replicated.
 
-This system stored procedure view is used for:
+> [!NOTE]  
+> This system stored procedure is used internally and is not recommended for direct administrative use. Use Synapse Studio or the Fabric portal instead. Using this procedure could introduce inconsistency.
+
+This system stored procedure is used for:
 
 - The Azure Synapse Link feature for SQL Server instances and Azure SQL Database. For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
 - The Fabric Mirrored Database feature for Azure SQL Database. For more information, see [Microsoft Fabric mirrored databases (Preview)](/fabric/database/mirrored-database/overview).
-
-> [!NOTE]  
-> This stored procedure is used internally and is not recommended for direct administrative use. Use Synapse Studio or the Fabric portal instead. Using this procedure could introduce inconsistency.
 
 ## Syntax
 
@@ -79,6 +79,7 @@ A user with [CONTROL database permissions](../security/permissions-database-engi
 - [sys.sp_change_feed_enable_db (Transact-SQL)](sp-change-feed-enable-db.md)
 - [sys.sp_help_change_feed (Transact-SQL)](sp-help-change-feed.md)
 - [sys.sp_help_change_feed_table (Transact-SQL)](sp-help-change-feed-table.md)
+- [sys.sp_change_feed_configure_parameters (Transact-SQL)](sp-change-feed-configure-parameters.md)
 - [sys.dm_change_feed_log_scan_sessions (Transact-SQL)](../system-dynamic-management-views/sys-dm-change-feed-log-scan-sessions.md)
 - [sys.dm_change_feed_errors (Transact-SQL)](../system-dynamic-management-views/sys-dm-change-feed-errors.md)
 
@@ -90,11 +91,6 @@ A user with [CONTROL database permissions](../security/permissions-database-engi
 
 **For Azure Synapse Link**:
 
-- [sp_change_feed_disable_db (Transact-SQL)](sp-change-feed-disable-db.md)
-- [sp_change_feed_drop_table_group (Transact-SQL)](sp-change-feed-drop-table-group.md)
 - [What is Azure Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
 - [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md)
-- [changefeed.change_feed_tables (Transact-SQL)](../system-tables/changefeed-change-feed-tables-transact-sql.md)
-- [changefeed.change_feed_table_groups (Transact-SQL)](../system-tables/changefeed-change-feed-table-groups-transact-sql.md)
-- [changefeed.change_feed_settings (Transact-SQL)](../system-tables/changefeed-change-feed-settings.md)
 - [Troubleshoot: Azure Synapse Link for SQL initial snapshot issues](/azure/synapse-analytics/synapse-link/troubleshoot/troubleshoot-sql-snapshot-issues)

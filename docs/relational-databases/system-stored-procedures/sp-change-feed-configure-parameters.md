@@ -4,7 +4,7 @@ description: "The sys.sp_change_feed_configure_parameters system stored procedur
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: imotiwala
-ms.date: 03/08/2024
+ms.date: 03/12/2024
 ms.service: fabric
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -23,7 +23,7 @@ monikerRange: ">=sql-server-ver16||=azuresqldb-current||=fabric||=azure-sqldw-la
 
 [!INCLUDE [sqlserver2022-asdb-asa-fabric](../../includes/applies-to-version/sqlserver2022-asdb-asa-fabric.md)]
 
-Used to reduce latency by decreasing change batch size with `@maxtrans`, or to reduce the cost by increasing the batch size, as the batch size increases less IO operation will be performed between Azure SQL DB and the Landing Zone (LZ).
+Used to reduce latency by decreasing change batch size with `@maxtrans`, or to reduce the cost by increasing the batch size. As the batch size increases, less IO operation will be performed.
 
 This system stored procedure is used to fine tune the operational performance for:
 
@@ -45,13 +45,13 @@ sys.sp_change_feed_configure_parameters
 
 #### [ @maxtrans = ] *max_trans*
 
-Data type is **int**. Indicates the maximum number of transactions to process in each scan cycle. Default value if not specified is `500`. If specified, the value must be a positive integer.
+Data type is **int**. Indicates the maximum number of transactions to process in each scan cycle. Default value if not specified is `10000`. If specified, the value must be a positive integer.
 
 #### [ @pollinterval = ] *polling_interval*
 
 Data type is **int**. Describes the frequency that the log is scanned for any new changes, in seconds. Default interval if not specified is 5 seconds. The value must be `5` or larger.
 
-## Result set
+## Returns
 
 `0` (success) or `1` (failure).
 
@@ -63,6 +63,8 @@ A user with [CONTROL database permissions](../security/permissions-database-engi
 
 - [sys.sp_help_change_feed (Transact-SQL)](sp-help-change-feed.md)
 - [sys.sp_help_change_feed_table (Transact-SQL)](sp-help-change-feed-table.md)
+- [sys.sp_help_change_feed_table_groups (Transact-SQL)](sp-help-change-feed-table-groups.md)
+- [sys.sp_help_change_feed_settings (Transact-SQL)](sp-help-change-feed-settings.md)
 - [sys.dm_change_feed_log_scan_sessions (Transact-SQL)](../system-dynamic-management-views/sys-dm-change-feed-log-scan-sessions.md)
 - [sys.dm_change_feed_errors (Transact-SQL)](../system-dynamic-management-views/sys-dm-change-feed-errors.md)
 
@@ -76,7 +78,4 @@ A user with [CONTROL database permissions](../security/permissions-database-engi
 
 - [What is Azure Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
 - [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md)
-- [changefeed.change_feed_tables (Transact-SQL)](../system-tables/changefeed-change-feed-tables-transact-sql.md)
-- [changefeed.change_feed_table_groups (Transact-SQL)](../system-tables/changefeed-change-feed-table-groups-transact-sql.md)
-- [changefeed.change_feed_settings (Transact-SQL)](../system-tables/changefeed-change-feed-settings.md)
 - [Troubleshoot: Azure Synapse Link for SQL initial snapshot issues](/azure/synapse-analytics/synapse-link/troubleshoot/troubleshoot-sql-snapshot-issues)

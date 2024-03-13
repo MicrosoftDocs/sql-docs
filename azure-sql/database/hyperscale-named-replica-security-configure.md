@@ -9,7 +9,7 @@ ms.service: sql-database
 ms.subservice: scale-out
 ms.topic: how-to
 ---
-# Configure isolated access to a Hyperscale named replica
+# Configure isolated access for Hyperscale named replicas
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 This article describes the procedure to grant access to an Azure SQL Database Hyperscale [named replica](service-tier-hyperscale-replicas.md) without granting access to the primary replica or other named replicas. This scenario allows resource and security isolation of a named replica - as the named replica will be running using its own compute node - and it is useful whenever isolated read-only access to an Azure SQL Hyperscale database is needed. Isolated, in this context, means that CPU and memory are not shared between the primary and the named replica, queries running on the named replica do not use compute resources of the primary or of any other replicas, and principals accessing the named replica cannot access other replicas, including the primary.

@@ -31,7 +31,7 @@ The following links provide sample code of various Azure SQL Database options to
 | **[Vectors](#vectors)** | Learn how to store and query vectors in Azure SQL Database. |
 | **[Azure AI Search](#azure-ai-search)** | Use Azure SQL Database together with Azure AI Search to train LLM on your data. |
 | **[Intelligent applications](#intelligent-applications)** | Learn how to create an end-to-end solution using a common pattern that can be replicated in any scenario. |
-| **[Copilot for Azure SQL Database](#copilot-for-azure-sql-database)** | Learn about the set of AI-assisted experiences designed to streamline the design, operation, optimization, and health of Azure SQL Database-driven applicationsrio. |
+| **[Copilot for Azure SQL Database](#copilot-for-azure-sql-database)** | Learn about the set of AI-assisted experiences designed to streamline the design, operation, optimization, and health of Azure SQL Database-driven applications. |
 
 ## Key concepts
 

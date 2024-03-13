@@ -6,7 +6,6 @@ ms.author: wiassaf
 ms.reviewer: imotiwala
 ms.date: 03/08/2024
 ms.service: synapse-analytics
-ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "changefeed.change_feed_settings"

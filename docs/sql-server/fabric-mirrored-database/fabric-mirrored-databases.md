@@ -4,9 +4,8 @@ description: Learn about the mirrored databases in Microsoft Fabric, from SQL Se
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: imotiwala, roblescarlos, maprycem
-ms.date: 03/08/2024
+ms.date: 03/12/2024
 ms.service: fabric
-ms.subservice: data-movement
 ms.topic: conceptual
 monikerRange: "=azuresqldb-current||=fabric"
 ---
@@ -14,6 +13,12 @@ monikerRange: "=azuresqldb-current||=fabric"
 [!INCLUDE [asdb-fabric](../../includes/applies-to-version/asdb-fabric.md)]
 
 You can [mirror databases in Azure SQL Database to Microsoft Fabric](/fabric/database/mirrored-database/overview). You can continuously replicate your existing data estate directly into Fabric's OneLake, including data from Azure SQL Database.
+
+For more information, see:
+
+- [Microsoft Fabric mirrored databases (Preview)](/fabric/database/mirrored-database/overview)
+- [Microsoft Fabric mirrored databases monitoring](/fabric/database/mirrored-database/monitor)
+- [Explore data in your Mirrored database using Microsoft Fabric](/fabric/database/mirrored-database/explore)
 
 This feature is not currently available for Azure SQL Managed Instance or SQL Server instances.
 
@@ -30,13 +35,7 @@ With Mirroring in Fabric, you don't need to piece together different services fr
 The Fabric Mirrored Database feature uses similar change feed technology as the Azure Synapse Link, and shares some system objects.
 
 > [!NOTE]
-> Enabling Database Mirroring via the Fabric portal will create a `changefeed` database user, a `changefeed` schema, and several tables within the `changefeed` schema in your source database. Please do not alter any of these objects - they are system-managed.
-
-For more information, see:
-
-- [Microsoft Fabric mirrored databases (Preview)](/fabric/database/mirrored-database/overview)
-- [Microsoft Fabric mirrored databases monitoring](/fabric/database/mirrored-database/monitor)
-- [Explore data in your Mirrored database using Microsoft Fabric](/fabric/database/mirrored-database/explore)
+> Enabling Database Mirroring via the Fabric portal will create a `changefeed` database user, a `changefeed` schema, and several tables within the `changefeed` schema in your source database. Do not alter any of these objects, they are system-managed.
 
 ## Related content
 

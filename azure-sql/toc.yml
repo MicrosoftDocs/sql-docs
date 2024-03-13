@@ -358,10 +358,8 @@
       items: 
       - name: Configure Hyperscale named replicas
         href: database/hyperscale-named-replica-configure.md
-      - name: Configure security for Hyperscale named replicas
-        displayName: Configure named replicas for Hyperscale
+      - name: Configure isolated access for Hyperscale named replicas
         href: database/hyperscale-named-replica-security-configure.md
-
   - name: Concepts
     items:
     - name: Single databases

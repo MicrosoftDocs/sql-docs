@@ -1,12 +1,14 @@
 ---
 title: Monitor Azure SQL Managed Instance
 description: Start here to learn how to monitor Azure SQL Managed Instance.
-ms.date: 03/04/2024
+ms.date: 03/13/2024
 ms.custom: horz-monitor
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
+ms.reviewer: wiassaf
 ms.service: sql-managed-instance
+ms.subservice: monitoring
 ---
 
 # Monitor Azure SQL Managed Instance

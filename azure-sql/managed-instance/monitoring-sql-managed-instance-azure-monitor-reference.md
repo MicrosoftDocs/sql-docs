@@ -1,12 +1,14 @@
 ---
 title: Monitoring data reference for Azure SQL Managed Instance
 description: This article contains important reference material you need when you monitor Azure SQL Managed Instance.
-ms.date: 03/04/2024
+ms.date: 03/13/2024
 ms.custom: horz-monitor
 ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
+ms.reviewer: wiassaf
 ms.service: sql-managed-instance
+ms.subservice: monitoring
 ---
 
 # Azure SQL Managed Instance monitoring data reference

@@ -52,7 +52,7 @@ Int. `0` = Azure Synapse Link. `2` = Fabric mirroring. Default is `2`.
 
 ## Permissions
 
-A user with [CONTROL database permissions](../security/permissions-database-engine.md), **db_owner** database role membership, or **sysadmin** server role membership can execute this procedure.
+Only **public** role membership is required to query this function.
 
 ## Related content
 

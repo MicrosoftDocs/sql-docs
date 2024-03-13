@@ -33,7 +33,7 @@ dev_langs:
 |exception|**nvarchar(max)**|Description of the exception if one occurred.|  
   
 ## Remarks  
- When you are troubleshooting Policy-Based Management, query the syspolicy_policy_execution_history_details view to determine which target and condition expression combinations failed, when they failed, and review related errors.  
+ When you're troubleshooting Policy-Based Management, query the syspolicy_policy_execution_history_details view to determine which target and condition expression combinations failed, when they failed, and review related errors.  
   
  The following query combines the `syspolicy_policy_execution_history_details` view with the `syspolicy_policy_execution_history_details` and `syspolicy_policies` views to display the name of the policy, the name of the condition, and details about failures.  
   

@@ -73,8 +73,8 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 
 | Changes | Details |
 | --- | --- |
-| **Fabric Mirrored Databases (Preview)** | You can now [mirror databases in Azure SQL Database to Microsoft Fabric](/fabric/database/mirrored-database/overview). You can continuously replicate your existing data estate directly into Fabric's OneLake, including data from Azure SQL Database. |
 | **Copilot in Azure SQL Database** | Copilot in Azure SQL Database, now in limited public preview, includes two Azure portal experiences: [Natural language to SQL](../copilot/query-editor-natural-language-to-sql-copilot.md) within the [Azure portal query editor](query-editor.md), and [Azure Copilot integration](../copilot/copilot-azure-sql-overview.md#microsoft-copilot-for-azure-enhanced-scenarios). For more information, see [Blog: Copilot in Azure SQL Database](https://aka.ms/sqlcopilot-blog).|
+| **Fabric Mirrored Databases (Preview)** | You can now [mirror databases in Azure SQL Database to Microsoft Fabric](/fabric/database/mirrored-database/overview). You can continuously replicate your existing data estate directly into Fabric's OneLake, including data from Azure SQL Database. |
 | **Hyperscale named replica zone redundant support** | [Zone redundancy support for Hyperscale named replicas](service-tier-hyperscale-replicas.md) is now available in preview. For more information, see [Blog: Zone redundancy for Hyperscale named replicas](https://aka.ms/ZRSupportForNRPreview).|
 |**Azure SQL triggers for Azure Functions GA** | Azure Functions supports function triggers for Azure SQL Database. This feature is now generally available. Review [Azure SQL triggers for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql) to learn more. |
 

@@ -6011,8 +6011,6 @@ items:
       items:
       - name: Pricing >>
         href: https://azure.microsoft.com/pricing/details/sql-server-stretch-database/
-      - name: Blog >>
-        href: https://blogs.technet.microsoft.com/dataplatforminsider/tag/stretch-database/
       - name: Service updates >>
         href: https://azure.microsoft.com/updates/?product=sql-server-stretch-database
       - name: Videos >>

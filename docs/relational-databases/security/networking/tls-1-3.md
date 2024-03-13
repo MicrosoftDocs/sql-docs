@@ -39,3 +39,4 @@ Here's a list of algorithms and ciphers removed in TLS 1.3:
 ## Related content
 
 - [Connect to SQL Server with strict encryption](connect-with-strict-encryption.md)
+- [Configure TLS 1.3](connect-with-tls-1-3.md)

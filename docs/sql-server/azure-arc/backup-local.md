@@ -285,7 +285,7 @@ When the built-in automated backups are enabled on an instance of [!INCLUDE [ssn
 
 ## Considerations
 
-- The backup files are stored in the default backup location.
+- The backup files are stored at the default backup location as configured at the SQL Server instance level.
 - To find the default backup location for a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance (on [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later), run:
 
    ```sql
@@ -302,7 +302,6 @@ When the built-in automated backups are enabled on an instance of [!INCLUDE [ssn
 - The value for `--name` should be the name of the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] enabled by Azure Arc, which is usually in the `[Servername_SQLservername]` format.
 - The value for `--retention-days` can be from 0-35.
 - A value of `0` for `--retention-days` indicates to not perform automated backups for the instance or the database.
-- The backup files are written to the default backup location as configured at the SQL Server instance level.
 - If there are multiple [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances on the same host where the Azure extension for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is installed, you need to configure automated backups separately for each instance.
 - If you change the `--retention-days` after the `--backups-policy` is already configured, any change takes effect going forward and isn't retroactively applied.
 

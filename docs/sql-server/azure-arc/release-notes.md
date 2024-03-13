@@ -132,6 +132,12 @@ For more information, review [Always On availability groups inventory and status
 
 For information, review [Proxy bypass for private endpoints](/azure/azure-arc/servers/manage-agent#proxy-bypass-for-private-endpoints).
 
+##### Least privilege
+
+Support for least privilege available for Arc SQL Server only - preview.
+
+With SQL Server enabled by Azure Arc, you can run the agent extension service with least privilege. To configure the service to run with least privilege, follow the steps in this article [Configure least privilege](configure-least-privilege.md).
+
 ## October 13, 2023
 
 **Extension version**: `1.1.2474.69` - Enables failover cluster instance discovery.

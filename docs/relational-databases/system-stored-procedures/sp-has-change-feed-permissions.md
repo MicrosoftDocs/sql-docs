@@ -53,7 +53,7 @@ Int. `0` = Azure Synapse Link. `2` = Fabric mirroring. Default is `2`.
 
 ## Permissions
 
-A user with [CONTROL database permissions](../security/permissions-database-engine.md), **db_owner** database role membership, or **sysadmin** server role membership can execute this procedure.
+Only **public** role membership is required to execute this procedure.
 
 ## Related content
 
@@ -71,8 +71,6 @@ A user with [CONTROL database permissions](../security/permissions-database-engi
 
 **For Azure Synapse Link**:
 
-
 - [What is Azure Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
 - [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md)
-
 - [Troubleshoot: Azure Synapse Link for SQL initial snapshot issues](/azure/synapse-analytics/synapse-link/troubleshoot/troubleshoot-sql-snapshot-issues)

@@ -31,7 +31,7 @@ The following links provide sample code of various Azure SQL Database options to
 | **[Vectors](#vectors)** | Learn how to store and query vectors in Azure SQL Database. |
 | **[Azure AI Search](#azure-ai-search)** | Use Azure SQL Database together with Azure AI Search to train LLM on your data. |
 | **[Intelligent applications](#intelligent-applications)** | Learn how to create an end-to-end solution using a common pattern that can be replicated in any scenario. |
-| **[Copilot for Azure SQL Database](#copilot-for-azure-sql-database)** | Learn about the set of AI-assisted experiences designed to streamline the design, operation, optimization, and health of Azure SQL Database-driven applications. |
+| **[Copilot for Azure SQL Database](#copilot-for-azure-sql-database-preview)** | Learn about the set of AI-assisted experiences designed to streamline the design, operation, optimization, and health of Azure SQL Database-driven applications. |
 
 ## Key concepts
 
@@ -170,7 +170,7 @@ For an example that shows how LangChain can be used to create a Chatbot on your 
 
 ### Semantic Kernel integration
 
-[Semantic Kernel is an open-source SDK](https://learn.microsoft.com/en-us/semantic-kernel/overview/) that lets you easily build agents that can call your existing code. As a highly extensible SDK, you can use Semantic Kernel with models from OpenAI, Azure OpenAI, Hugging Face, and more! By combining your existing C#, Python, and Java code with these models, you can build agents that answer questions and automate processes.
+[Semantic Kernel is an open-source SDK](https://learn.microsoft.com/semantic-kernel/overview/) that lets you easily build agents that can call your existing code. As a highly extensible SDK, you can use Semantic Kernel with models from OpenAI, Azure OpenAI, Hugging Face, and more! By combining your existing C#, Python, and Java code with these models, you can build agents that answer questions and automate processes.
 
 - [Semantic Kernel & Kernel Memory - SQL Connector](https://github.com/kbeaugrand/SemanticKernel.Connectors.Memory.SqlServer) - Provides a connection to a SQL database for the Semantic Kernel for the memories.
 - [OpenAI Embeddings Sample](https://github.com/marcominerva/OpenAIEmbeddingSample): An example that shows how to use Semantic Kernel and Kernel Memory to work with embeddings in a .NET application using SQL Server as Vector Database.

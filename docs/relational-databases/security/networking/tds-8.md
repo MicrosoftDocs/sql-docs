@@ -10,6 +10,7 @@ ms.subservice: security
 ms.topic: conceptual
 monikerRange: ">=sql-server-ver16 || >=sql-server-linux-ver16 || =azuresqldb-current || =azuresqldb-mi-current"
 ---
+
 # TDS 8.0
 
 [!INCLUDE [SQL Server 2022, Azure SQL Database, Azure SQL Managed Instance](../../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]

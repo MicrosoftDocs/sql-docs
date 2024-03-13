@@ -285,7 +285,7 @@ When the built-in automated backups are enabled on an instance of [!INCLUDE [ssn
 
 ## Considerations
 
-- The backup files are stored in the default backup location.
+- The backup files are stored at the default backup location as configured at the SQL Server instance level.
 - To find the default backup location for a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance (on [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later), run:
 
    ```sql

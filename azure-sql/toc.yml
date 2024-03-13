@@ -264,8 +264,14 @@
       href: database/free-offer.md
     - name: Try Azure SQL Database free FAQ
       href: database/free-offer-faq.yml
+    - name: Copilot in SQL Database
+      href: copilot/copilot-azure-sql-overview.md
+    - name: Copilot in SQL Database FAQ
+      href: copilot/copilot-azure-sql-faq.yml
+    - name: Natural language to SQL
+      href: copilot/query-editor-natural-language-to-sql-copilot.md
     - name: Intelligent applications and AI
-      href: database/ai-artificial-intelligence-intelligent-applications.md
+      href: database/ai-artificial-intelligence-intelligent-applications.md      
   - name: Quickstarts
     href: database/quickstart-content-reference-guide.md
     items:
@@ -350,7 +356,9 @@
         href: database/migrate-sqlite-db-to-azure-sql-serverless-offline-tutorial.md
     - name: Scale out
       items: 
-      - name: Configure security for named replicas
+      - name: Configure Hyperscale named replicas
+        href: database/hyperscale-named-replica-configure.md
+      - name: Configure security for Hyperscale named replicas
         displayName: Configure named replicas for Hyperscale
         href: database/hyperscale-named-replica-security-configure.md
 

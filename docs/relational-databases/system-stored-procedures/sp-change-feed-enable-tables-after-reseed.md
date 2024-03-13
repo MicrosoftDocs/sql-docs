@@ -6,7 +6,6 @@ ms.author: wiassaf
 ms.reviewer: imotiwala
 ms.date: 03/12/2024
 ms.service: fabric
-ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.sp_change_feed_enable_tables_after_reseed_TSQL"

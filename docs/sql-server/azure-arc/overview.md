@@ -76,7 +76,7 @@ Some of the services provided by [!INCLUDE [ssazurearc](../../includes/ssazurear
 
 The following diagram illustrates the architecture of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)].
 
-![Diagram of the architecture for [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)].](media/overview/architecture.png)
+:::image type="content" source="media/overview/architecture.png" alt-text="Diagram of the architecture for [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]" lightbox="media/overview/architecture.png":::
 
 ## Feature availability depending on license type
 

@@ -3,6 +3,7 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.date: 08/15/2023
 ms.service: sql
+ms.custom: linux-related-content
 ms.topic: include
 ---
 **sqlcmd** (Go) can be installed cross-platform, on Microsoft Windows, macOS, and Linux.

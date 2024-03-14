@@ -9,8 +9,7 @@ ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: how-to
-ms.custom:
-  - intro-deployment
+ms.custom: intro-deployment, linux-related-content
 ---
 
 # Deploy with a bash script to a single node kubeadm cluster

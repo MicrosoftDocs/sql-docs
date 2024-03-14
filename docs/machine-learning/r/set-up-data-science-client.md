@@ -6,6 +6,7 @@ ms.author: wiassaf
 ms.date: 05/09/2022
 ms.service: sql
 ms.subservice: machine-learning-services
+ms.custom: linux-related-content
 ms.topic: how-to
 monikerRange: "=sql-server-2016||=sql-server-2017||=sql-server-ver15||=sql-server-linux-ver15"
 ---

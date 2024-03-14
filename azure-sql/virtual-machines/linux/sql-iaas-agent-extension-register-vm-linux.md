@@ -8,7 +8,7 @@ ms.date: 10/26/2021
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
-ms.custom: devx-track-azurecli, devx-track-azurepowershell
+ms.custom: devx-track-azurecli, devx-track-azurepowershell, linux-related-content
 tags: azure-resource-manager
 ---
 # Register Linux SQL Server VM with SQL IaaS Agent extension 

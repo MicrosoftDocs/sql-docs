@@ -7,7 +7,7 @@ ms.date: 11/09/2022
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-ms.custom: intro-installation
+ms.custom: intro-installation, linux-related-content
 zone_pivot_groups: sqlml-platforms
 monikerRange: "=sql-server-ver15||=sql-server-linux-ver15"
 ---

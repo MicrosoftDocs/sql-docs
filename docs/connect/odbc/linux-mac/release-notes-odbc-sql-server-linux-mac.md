@@ -7,6 +7,7 @@ ms.reviewer: v-davidengel
 ms.date: 10/10/2023
 ms.service: sql
 ms.subservice: connectivity
+ms.custom: linux-related-content
 ms.topic: conceptual
 ---
 # Release Notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS

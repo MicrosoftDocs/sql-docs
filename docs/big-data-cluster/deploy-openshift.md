@@ -9,7 +9,7 @@ ms.date: 07/29/2021
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.custom: intro-deployment
+ms.custom: intro-deployment, linux-related-content
 ---
 
 # Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on OpenShift on-premises and Azure Red Hat OpenShift

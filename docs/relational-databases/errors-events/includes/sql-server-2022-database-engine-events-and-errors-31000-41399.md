@@ -1,7 +1,7 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 01/11/2024
+ms.date: 03/14/2024
 ms.topic: include
 ---
 > [!NOTE]
@@ -739,10 +739,10 @@ ms.topic: include
 | 35291 | 10 | No | Failed to acquire exclusive access to the extended recovery fork stack (error %d). If the problem persists, you might need to restart the instance of SQL Server. |
 | 35292 | 16 | No | An internal error occurred when performing an operation on extended recovery forks. This is an informational message only. No user action is required. |
 | 35293 | 16 | No | Error in retrieving extended recovery forks from the primary replica. The extended-recovery-fork stack changed while being retrieved by the secondary replica. Retry the operation. |
-| 35294 | 16 | No | Log backup for database "%.\*ls" on a secondary replica failed because a synchronization point could not be established on the primary database. Either locks could not be acquired on the primary database or the database is not operating as part of the availability replica. Check the database status in the SQL Server error log of the server instance that is hosting the current primary replica. If the primary database is participating in the availability group, retry the operation. |
+| 35294 | 16 | No | %ls backup for database "%.\*ls" on a secondary replica failed because a synchronization point could not be established on the primary database. Either locks could not be acquired on the primary database or the database is not operating as part of the availability replica. Check the database status in the SQL Server error log of the server instance that is hosting the current primary replica. If the primary database is participating in the availability group, retry the operation. |
 | 35295 | 16 | No | Log backup for database "%.\*ls" on a secondary replica failed because the last backup LSN (0x%ls) from the primary database is greater than the current local redo LSN (0x%ls). No log records need to be backed up at this time. Retry the log-backup operation later. |
 | 35296 | 16 | No | Log backup for database "%.\*ls" on secondary replica failed because the new backup information could not be committed on primary database. Check the database status in the SQL Server error log of the server instance that is hosting the current primary replica. If the primary database is participating in the availability group, retry the operation. |
-| 35297 | 10 | No | Log backup for database "%.\*ls" on secondary replica created backup files successfully but could not ensure that a backup point has been committed on the primary. This is an informational message only. Preserve this log backup along with the other log backups of this database. |
+| 35297 | 10 | No | %ls backup for database "%.\*ls" on secondary replica created backup files successfully but could not ensure that a backup point has been committed on the primary. This is an informational message only. Preserve this log backup along with the other log backups of this database. |
 | 35298 | 10 | No | The backup on the secondary database "%.\*ls" was terminated, but a terminate backup message could not be sent to the primary replica. This is an informational message only. The primary replica should detect this error and clean up its backup history accordingly. |
 | 35299 | 10 | Yes | Nonqualified transactions are being rolled back in database %.\*ls for an Always On Availability Groups state change. Estimated rollback completion: %d%%. This is an informational message only. No user action is required. |
 | 35301 | 15 | No | The statement failed because a columnstore index cannot be unique. Create the columnstore index without the UNIQUE keyword or create a unique index without the COLUMNSTORE keyword. |

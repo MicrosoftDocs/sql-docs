@@ -278,8 +278,14 @@
       href: database/free-offer.md
     - name: Try Azure SQL Database free FAQ
       href: database/free-offer-faq.yml
+    - name: Copilot in SQL Database
+      href: copilot/copilot-azure-sql-overview.md
+    - name: Copilot in SQL Database FAQ
+      href: copilot/copilot-azure-sql-faq.yml
+    - name: Natural language to SQL
+      href: copilot/query-editor-natural-language-to-sql-copilot.md
     - name: Intelligent applications and AI
-      href: database/ai-artificial-intelligence-intelligent-applications.md
+      href: database/ai-artificial-intelligence-intelligent-applications.md      
   - name: Quickstarts
     href: database/quickstart-content-reference-guide.md
     items:
@@ -364,10 +370,10 @@
         href: database/migrate-sqlite-db-to-azure-sql-serverless-offline-tutorial.md
     - name: Scale out
       items: 
-      - name: Configure security for named replicas
-        displayName: Configure named replicas for Hyperscale
+      - name: Configure Hyperscale named replicas
+        href: database/hyperscale-named-replica-configure.md
+      - name: Configure isolated access for Hyperscale named replicas
         href: database/hyperscale-named-replica-security-configure.md
-
   - name: Concepts
     items:
     - name: Single databases
@@ -721,7 +727,7 @@
 
     - name: Monitor & Tune
       items:
-        - name: Monitor SQL Database
+        - name: Monitor
           href: database/monitoring-sql-database-azure-monitor.md 
         - name: Identify query performance bottlenecks
           href: database/identify-query-performance-issues.md
@@ -1466,16 +1472,14 @@
 
     - name: Monitor & Tune
       items:
+        - name: Monitor
+          href: managed-instance/monitoring-sql-managed-instance-azure-monitor.md 
         - name: Tune applications and databases for performance
           href: managed-instance/performance-guidance.md
         - name: Identify query performance bottlenecks
           href: managed-instance/identify-query-performance-issues.md
         - name: Use DMVs to monitor performance
           href: managed-instance/monitoring-with-dmvs.md
-        - name: Azure Monitor for Azure SQL Managed Instance
-          href: managed-instance/monitoring-sql-managed-instance-azure-monitor.md 
-        - name: Azure Monitor for Azure SQL Managed Instance reference 
-          href: managed-instance/monitoring-sql-managed-instance-azure-monitor-reference.md
     - name: Configure settings
       items: 
       - name: tempdb
@@ -1965,7 +1969,8 @@
     href: database/dtu-benchmark.md
   - name: SQL Database monitoring data reference 
     href: database/monitoring-sql-database-azure-monitor-reference.md
-
+  - name: SQL Managed Instance monitoring data reference 
+    href: managed-instance/monitoring-sql-managed-instance-azure-monitor-reference.md
 - name: Resources
   items:
   - name: Build your skills with Microsoft Learn training

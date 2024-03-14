@@ -3,8 +3,8 @@ title: "sys.sp_change_feed_disable_db (Transact-SQL)"
 description: "The sys.sp_change_feed_disable_db system stored procedure disables the SQL change feed at the database level."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
-ms.date: 03/12/2024
+ms.reviewer: imotiwala
+ms.date: 03/13/2024
 ms.service: fabric
 ms.topic: "reference"
 f1_keywords:
@@ -22,10 +22,7 @@ monikerRange: ">=sql-server-ver16||=azuresqldb-current||=azure-sqldw-latest||=fa
 
 [!INCLUDE [sqlserver2022-asdb-asa-fabric](../../includes/applies-to-version/sqlserver2022-asdb-asa-fabric.md)]
 
-Disable the change feed at the database level, and subsequently the metadata for all the associated tables for [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview). For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
-
-> [!NOTE]  
-> This system stored procedure is used internally and is not recommended for direct administrative use. Use Synapse Studio or the Fabric portal instead. Using this procedure could introduce inconsistency.
+Disable the change feed at the database level, and then the metadata for all the associated tables for [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview). For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
 
 ## Syntax
 
@@ -42,7 +39,9 @@ A user with [CONTROL database permissions](../security/permissions-database-engi
 
 ## Remarks
 
-When the change feed is disabled with active table groups, all connections and schedulers will be stopped immediately/forcefully without waiting for the current operations are completed. No new change feed table groups can be created for the database, and all the existing metadata describing the table groups will be deleted without waiting for the current operations to complete. Re-enabling change feed will result in clean initializations of all table groups and reseeding of all the data.
+When the change feed is disabled with active table groups, all connections and schedulers are stopped immediately/forcefully without waiting for the current operations are completed. No new change feed table groups can be created for the database, and all the existing metadata describing the table groups will be deleted without waiting for the current operations to complete. Re-enabling change feed results in clean initializations of all table groups and reseeding of all the data.
+
+You should only execute this stored procedure when unsupported actions or unexpected errors have occurred, that require the Mirroring feature to be disabled manually, and cannot be removed via the Synapse workspace or Fabric portal.
 
 ## Related content
 

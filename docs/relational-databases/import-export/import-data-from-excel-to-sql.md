@@ -3,13 +3,12 @@ title: Import data from Excel to SQL Server or Azure SQL Database
 description: This article describes methods to import data from Excel to SQL Server or Azure SQL Database. Some use a single step, others require an intermediate text file.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 03/04/2024
+ms.date: 03/30/2023
 ms.service: sql
 ms.subservice: data-movement
 ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-
 # Import data from Excel to SQL Server or Azure SQL Database
 
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -20,7 +19,7 @@ This article summarizes the frequently used methods and provides links for more 
 
 ## List of methods
 
-There are several ways to import data from Excel. You might need to install [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) to use some of these tools.
+There are several ways to import data from Excel. You may need to install [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) to use some of these tools.
 
 You can use the following tools to import data from Excel:
 
@@ -41,18 +40,18 @@ If you want to import multiple worksheets from an Excel workbook, you typically 
 
 Import data directly from Excel files by using the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Import and Export Wizard. You also can save the settings as a SQL Server Integration Services (SSIS) package that you can customize and reuse later.
 
-1. In [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to an instance of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE [ssDE](../../includes/ssde-md.md)].
+1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
 1. Expand **Databases**.
 1. Right-click a database.
 1. Select **Tasks**.
 1. Choose to **Import Data** or **Export Data**:
 
-   :::image type="content" source="../../integration-services/import-export-data/media/start-wizard-ssms.jpg" alt-text="Start wizard SSMS.":::
+   :::image type="content" source="../../integration-services/import-export-data/media/start-wizard-ssms.jpg" alt-text="Start wizard SSMS":::
 
 This launches the wizard:
 
-:::image type="content" source="media/excel-connection.png" alt-text="Connect to an Excel data source.":::
+:::image type="content" source="media/excel-connection.png" alt-text="Connect to an Excel data source":::
 
 To learn more, review:
 
@@ -70,7 +69,7 @@ To learn more, review:
 
 To start learning how to build SSIS packages, see the tutorial [How to Create an ETL Package](../../integration-services/ssis-how-to-create-an-etl-package.md).
 
-:::image type="content" source="media/excel-to-sql-data-flow.png" alt-text="Components in the data flow.":::
+:::image type="content" source="media/excel-to-sql-data-flow.png" alt-text="Components in the data flow":::
 
 ## <a id="openrowset"></a> OPENROWSET and linked servers
 
@@ -78,7 +77,7 @@ To start learning how to build SSIS packages, see the tutorial [How to Create an
 > In Azure SQL Database, you cannot import directly from Excel. You must first [export the data to a text (CSV) file](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
 
 > [!NOTE]  
-> The ACE provider (formerly the Jet provider) that connects to Excel data sources is intended for interactive client-side use. If you use the ACE provider on [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], especially in automated processes or processes running in parallel, you might see unexpected results.
+> The ACE provider (formerly the Jet provider) that connects to Excel data sources is intended for interactive client-side use. If you use the ACE provider on [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], especially in automated processes or processes running in parallel, you may see unexpected results.
 
 ### Distributed queries
 
@@ -187,7 +186,7 @@ In Excel, select **File | Save As** and then select **Text (Tab-delimited) (\*.t
 If you want to export multiple worksheets from the workbook, select each sheet, and then repeat this procedure. The **Save as** command exports only the active sheet.
 
 > [!TIP]  
-> For best results with data importing tools, save sheets that contain only the column headers and the rows of data. If the saved data contains page titles, blank lines, notes, and so forth, you might see unexpected results later when you import the data.
+> For best results with data importing tools, save sheets that contain only the column headers and the rows of data. If the saved data contains page titles, blank lines, notes, and so forth, you may see unexpected results later when you import the data.
 
 ## <a id="import-wiz"></a> The Import Flat File Wizard
 
@@ -279,7 +278,7 @@ Msg 7403, Level 16, State 1, Line 3
 The OLE DB provider "Microsoft.ACE.OLEDB.12.0" has not been registered.
 ```
 
-### Can't create an instance of OLE DB provider "Microsoft.ACE.OLEDB.12.0" for linked server "(null)"
+### Cannot create an instance of OLE DB provider "Microsoft.ACE.OLEDB.12.0" for linked server "(null)"
 
 This indicates that the Microsoft OLEDB hasn't been configured properly. Run the following Transact-SQL code to resolve this:
 
@@ -295,7 +294,7 @@ Msg 7302, Level 16, State 1, Line 3
 Cannot create an instance of OLE DB provider "Microsoft.ACE.OLEDB.12.0" for linked server "(null)".
 ```
 
-### The 32-bit OLE DB provider "Microsoft.ACE.OLEDB.12.0" can't be loaded in-process on a 64-bit SQL Server
+### The 32-bit OLE DB provider "Microsoft.ACE.OLEDB.12.0" cannot be loaded in-process on a 64-bit SQL Server
 
 This occurs when a 32-bit version of the OLD DB provider is installed with a 64-bit [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. To resolve this issue, uninstall the 32-bit version and install the 64-bit version of the OLE DB provider instead.
 
@@ -308,7 +307,7 @@ The 32-bit OLE DB provider "Microsoft.ACE.OLEDB.12.0" cannot be loaded in-proces
 
 ### The OLE DB provider "Microsoft.ACE.OLEDB.12.0" for linked server "(null)" reported an error.
 
-### Can't initialize the data source object of OLE DB provider "Microsoft.ACE.OLEDB.12.0" for linked server "(null)"
+### Cannot initialize the data source object of OLE DB provider "Microsoft.ACE.OLEDB.12.0" for linked server "(null)"
 
 Both of these errors typically indicate a permissions issue between the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] process and the file. Ensure that the account that is running the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] service has full access permission to the file. We recommend against trying to import files from the desktop.
 
@@ -324,7 +323,7 @@ Msg 7303, Level 16, State 1, Line 3
 Cannot initialize the data source object of OLE DB provider "Microsoft.ACE.OLEDB.12.0" for linked server "(null)".
 ```
 
-## Related content
+## Next steps
 
 - [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 - [Import data from Excel or export data to Excel with SQL Server Integration Services (SSIS)](../../integration-services/load-data-to-from-excel-with-ssis.md)

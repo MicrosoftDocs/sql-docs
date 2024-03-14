@@ -9,8 +9,6 @@ ms.author: mathoma
 ms.reviewer: wiassaf
 ms.service: sql-managed-instance
 ms.subservice: monitoring
-ms.topic: conceptual
-ms.custom: subject-monitoring
 monikerRange: "= azuresql || = azuresql-mi"
 ---
 

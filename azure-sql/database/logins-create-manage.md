@@ -44,7 +44,7 @@ When a user attempts to connect to a database, they provide a user account and a
   With this authentication method, the user submits a user account name and associated password to establish a connection. This password is stored in the `master` database for user accounts linked to a login or stored in the database containing the user accounts *not* linked to a login.
   
   > [!NOTE]
-  > Azure SQL Database only enforces [password complexity](/sql/relational-databases/security/password-policy#password-complexity) for [password policy](/sql/relational-databases/security/password-policy). For password policy in Azure SQL Managed Instance, see [Azure SQL Managed Instance frequently asked questions (FAQ)](../managed-instance/frequently-asked-questions-faq.yml#password-policy-).
+  > Azure SQL Database only enforces [password complexity](/sql/relational-databases/security/password-policy#password-complexity) for [password policy](/sql/relational-databases/security/password-policy). For password policy in Azure SQL Managed Instance, see [Azure SQL Managed Instance frequently asked questions (FAQ)](../managed-instance/frequently-asked-questions-faq.yml#password-policy).
   
 - [Microsoft Entra authentication](authentication-aad-overview.md)
 

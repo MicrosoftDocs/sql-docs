@@ -51,11 +51,11 @@ This quickstart requires the [prerequisites for creating and configuring a datab
 
 Once the deployment completes, select **Go to resource** to open the new database watcher in Azure portal.
 
-1. Select **SQL Targets**, **Add**. Use the dropdowns to select the Azure SQL resource that you want to monitor, and select **Add**. You can select an Azure SQL database, an elastic pool, or a SQL managed instance as a monitoring target. In this example, an Azure SQL database is selected.
+1. Select **SQL Targets**, **Add**. Use the dropdowns to select the Azure SQL resource that you want to monitor, and select **Add**. You can select an Azure SQL database, an elastic pool, or a SQL managed instance. In this example, an Azure SQL database is selected.
 
-    :::image type="content" source="media/database-watcher-quickstart/database-watcher-add-target.png" alt-text="Screenshot of the add target page of a database watcher, showing an Azure SQL database ready to be added as a monitoring target." lightbox="media/database-watcher-quickstart/database-watcher-add-target.png":::
+    :::image type="content" source="media/database-watcher-quickstart/database-watcher-add-target.png" alt-text="Screenshot of the add target page of a database watcher, showing an Azure SQL database ready to be added as a target." lightbox="media/database-watcher-quickstart/database-watcher-add-target.png":::
 
-1. In the **Grant access** section, select a Microsoft Entra authentication link matching your target type. Copy the T-SQL script that grants the watcher limited, specific access to collect monitoring data from the selected target.
+1. In the **Grant access** card, select a Microsoft Entra authentication link matching your target type. Copy the T-SQL script that grants the watcher limited, specific access to collect monitoring data from the selected target.
 
     :::image type="content" source="media/database-watcher-quickstart/database-watcher-grant-access.png" alt-text="Screenshot of the targets page of a database watcher, showing the T-SQL script that grants access to a database watcher, and a button that copies it to the clipboard." lightbox="media/database-watcher-quickstart/database-watcher-grant-access.png":::
 
@@ -89,11 +89,11 @@ Once the deployment completes, select **Go to resource** to open the new databas
 
 1. Select **Dashboards**. Refresh the dashboard if the resources do not appear yet.
 
-1. Once the target appears on the corresponding tile, select the tile, and select the link to the database, elastic pool, or SQL managed instance to open its monitoring dashboard. You can also select the tile link and open the estate dashboard that shows all resources monitored by this database watcher.
+1. Once the SQL target appears on the corresponding tile, select the tile, and select the link to the database, elastic pool, or SQL managed instance to open its monitoring dashboard. You can also select the link on the tile to open the estate dashboard that shows all monitored Azure SQL resources.
 
     :::image type="content" source="media/database-watcher-quickstart/database-watcher-dashboard.png" alt-text="Screenshot of the dashboards page of a database watcher, showing a monitored target and a link to open the monitoring dashboard for this target." lightbox="media/database-watcher-quickstart/database-watcher-dashboard.png":::
 
-For a more detailed description of database watcher setup and configuration, see [Create and configure a database watcher](database-watcher-manage.md). You'll learn how to use a database on an existing Azure Data Explorer cluster or on a free Azure Data Explorer cluster, how to use SQL authentication, how to manage watcher access to targets and the data store, and how to scale and manage your Azure Data Explorer cluster over time.
+For a more detailed description of database watcher setup and configuration, see [Create and configure a database watcher](database-watcher-manage.md). You'll learn how to use a database on an existing Azure Data Explorer cluster, on a free Azure Data Explorer cluster, or in Real-Time Analytics in Microsoft Fabric, how to use SQL authentication, how to manage watcher access to SQL targets and the data store, and how to scale and manage your Azure Data Explorer cluster over time.
 
 ## Related content
 

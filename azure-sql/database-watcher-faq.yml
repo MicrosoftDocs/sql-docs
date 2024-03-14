@@ -26,7 +26,7 @@ sections:
       - question: |
           What is database watcher?
         answer: |
-          Database watcher (preview) is a managed database monitoring solution for database services in the Azure SQL family. It collects in-depth monitoring data from Azure SQL resources and ingests it with low latency into an [Azure Data Explorer](/azure/data-explorer/data-explorer-overview) database, or into a [Real-Time Analytics](/fabric/real-time-analytics/overview) database in Microsoft Fabric. Estate and resource-level [dashboards](database-watcher-overview.md#dashboards) provide detailed data visualizations in Azure portal. Customers retain full control over collected data and can query, analyze, export, visualize, and integrate it with downstream systems.
+          Database watcher (preview) is a managed monitoring solution for database services in the Azure SQL family. It collects in-depth monitoring data from Azure SQL resources and ingests it into an [Azure Data Explorer](/azure/data-explorer/data-explorer-overview) database, or into a [Real-Time Analytics](/fabric/real-time-analytics/overview) database in Microsoft Fabric. Estate and resource-level [dashboards](database-watcher-overview.md#dashboards) provide detailed data visualizations in the Azure portal. Customers retain full control over collected data and can query, analyze, export, visualize, and integrate it with downstream systems.
 
       - question: |
           What Azure SQL resources can it monitor?
@@ -46,7 +46,7 @@ sections:
       - question: |
           What kind of data visualization solutions can I use with database watcher?
         answer: |
-          Database watcher provides detailed visualizations using [Azure Workbooks](/azure/azure-monitor/visualize/workbooks-overview) dashboards in the Azure portal. In addition, you can create dashboards in Azure Data Explorer or Real-Time Analytics, create visualizations in Power BI, Grafana, or use any other data visualization solution that [supports](/azure/data-explorer/viz-overview) connectivity to Azure Data Explorer or Real-Time Analytics.
+          Database watcher provides detailed visualizations using [Azure Workbooks](/azure/azure-monitor/visualize/workbooks-overview) in the Azure portal. In addition, you can create dashboards in Azure Data Explorer or Real-Time Analytics, create visualizations in Power BI, Grafana, or use any other data visualization solution that [supports](/azure/data-explorer/viz-overview) connectivity to Azure Data Explorer or Real-Time Analytics.
 
       - question: |
           Does database watcher support alerts?
@@ -71,7 +71,7 @@ sections:
     questions:
       - question: |
           Can I create and configure a watcher with PowerShell or Azure CLI?
-        answer: Not at this time. You can create and configure watchers using ARM or Bicep templates. For planned improvements to database watcher, see the roadmap section in the database watcher [preview announcement](https://aka.ms/dbwatcher-preview-announcement).
+        answer: Not at this time. You can create and configure watchers in the Azure portal or using ARM and Bicep templates. For planned improvements to database watcher, see the roadmap section in the database watcher [preview announcement](https://aka.ms/dbwatcher-preview-announcement).
 
       - question: |
           Does a watcher have an identity I can use to grant it access to my Azure resources?
@@ -88,7 +88,7 @@ sections:
   - name: Data store
     questions:
       - question: |
-          Which data services are supported as the data store for collected SQL monitoring data?
+          Which data services are supported as the data store for the SQL monitoring data?
         answer: You can use a database on an [Azure Data Explorer cluster](/azure/data-explorer/data-explorer-overview), on a [free Azure Data Explorer cluster](/azure/data-explorer/start-for-free), or in [Real-Time Analytics](/fabric/real-time-analytics/overview) in Microsoft Fabric. To compare between these options, see [What is the difference between Real-Time Analytics and Azure Data Explorer?](/fabric/real-time-analytics/realtime-analytics-compare).
 
       - question: |
@@ -96,7 +96,7 @@ sections:
         answer: Yes, if [streaming ingestion](database-watcher-manage.md#streaming-ingestion) is enabled on this cluster. Create a new database and grant the managed identity of a watcher [access](database-watcher-manage.md#grant-access-to-data-store) to this database. For smaller cluster SKUs, and depending on the query and ingestion workloads already running, you might need to [scale](database-watcher-manage.md#scale-azure-data-explorer-cluster) the cluster to support the additional load.
 
       - question: |
-          How can I query and analyze collected SQL monitoring data?
+          How can I query and analyze SQL monitoring data?
         answer: You can use Kusto Query Language (KQL) to query this data. See [Use KQL to analyze monitoring data](database-watcher-analyze.md#use-kql-to-analyze-monitoring-data). KQL [provides](/azure/data-explorer/kusto/query/) many advantages for analyzing telemetry data. However, you do not need to learn KQL to use database watcher. You can connect to the data store using SQL Server Management Studio, Azure Data Studio, or any other SQL client tool, and [use T-SQL](database-watcher-analyze.md#use-t-sql-to-analyze-monitoring-data) to query your SQL monitoring data.
 
       - question: |
@@ -127,7 +127,7 @@ sections:
 
       - question: |
           How does it connect to monitoring targets?
-        answer: Database watcher can use [Azure Private Link](/azure/private-link/private-link-overview) to connect to monitoring targets. You create managed private endpoints for your Azure SQL resources when configuring a watcher. The resource owner must approve this private endpoint for database watcher to start data collection. Public connectivity is supported as well. For more information, see [Network connectivity](database-watcher-overview.md#network-connectivity).
+        answer: Database watcher can use [Azure Private Link](/azure/private-link/private-link-overview) to connect to monitoring targets. When configuring a watcher, create managed private endpoints for your Azure SQL resources. The resource owner must approve each private endpoint for database watcher to use it. Public connectivity is supported as well. For more information, see [Network connectivity](database-watcher-overview.md#network-connectivity).
 
       - question: |
           How does it authenticate to monitoring targets?

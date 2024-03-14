@@ -27,7 +27,9 @@ To analyze collected monitoring data, the recommended method is to use the [Kust
 
 KQL is conceptually similar to SQL. It operates on schema entities such as tables and columns, and supports relational operations such as project, restrict, join, and summarize, corresponding to the `SELECT`, `JOIN`, `WHERE`, and `GROUP BY` clauses in SQL.
 
-To write and execute KQL queries, you can use either [Kusto Explorer](/azure/data-explorer/kusto/tools/kusto-explorer) or the [Azure Data Explorer](/azure/data-explorer/data-explorer-overview) [web UI](/azure/data-explorer/web-ui-query-overview). Kusto Explorer is a full-featured Windows desktop software, while the Azure Data Explorer web UI lets you execute KQL queries and visualize results in the browser on any platform. You can also use these tools to query a database in Real-Time Analytics in Microsoft Fabric. To connect, add a new connection using the **Query URI** of your Real-Time Analytics database.
+To write and execute KQL queries, you can use either [Kusto Explorer](/azure/data-explorer/kusto/tools/kusto-explorer) or the [Azure Data Explorer](/azure/data-explorer/data-explorer-overview) [web UI](/azure/data-explorer/web-ui-query-overview). Kusto Explorer is a full-featured Windows desktop software, while the Azure Data Explorer web UI lets you execute KQL queries and visualize results in the browser on any platform.
+
+You can also use these tools to query a database in Real-Time Analytics in Microsoft Fabric. To connect, add a new connection using the **Query URI** of your Real-Time Analytics database. Additionally, if you use Real-Time Analytics, you can analyze monitoring data using [KQL querysets](/fabric/real-time-analytics/create-query-set). A KQL queryset can be saved as a shareable Fabric artifact and used to create Power BI reports.
 
 If you are new to KQL, the following resources can help you get started:
 

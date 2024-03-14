@@ -23,7 +23,7 @@ Database watcher collects monitoring data from SQL system views and ingests it i
 
 Database watcher collects monitoring data at periodic intervals using T-SQL queries. Data collected in each execution of a query is called a **sample**. Sample collection frequency varies by dataset. For example, frequently changing data such as SQL performance counters might be collected every 10 seconds, while mostly static data such as database configuration might be collected every five minutes. For more information, see [Datasets](#datasets).
 
-Database watcher takes advantage of [streaming ingestion](/azure/data-explorer/ingest-data-streaming) in [Azure Data Explorer](/azure/data-explorer/data-explorer-overview) and [Real-Time Analytics in Microsoft Fabric](/fabric/real-time-analytics/overview) to provide near real time monitoring. Typically, collected SQL monitoring data becomes available for reporting and analysis in less than 10 seconds. You can monitor data ingestion latency on database watcher [dashboards](database-watcher-overview.md#dashboards), using the **Ingestion statistics** link.
+Database watcher takes advantage of [streaming ingestion](/azure/data-explorer/ingest-data-streaming) in [Azure Data Explorer](/azure/data-explorer/data-explorer-overview) and [Real-Time Analytics in Microsoft Fabric](/fabric/real-time-analytics/overview) to provide near real time monitoring. Typically, collected SQL monitoring data becomes available for reporting and analysis in less than 10 seconds. You can monitor data ingestion latency on the database watcher [dashboards](database-watcher-overview.md#dashboards), using the **Ingestion statistics** link.
 
 ### Interaction between database watcher and application workloads
 
@@ -33,7 +33,7 @@ To further reduce the risk of impact to application workloads, all database watc
 
 In Azure SQL Managed Instance, you can enable [Resource Governor](/sql/relational-databases/resource-governor/resource-governor) to manage resource consumption by the monitoring queries in a similar fashion, if necessary.
 
-The following example configures Resource Governor on a SQL managed instance. It limits CPU consumption by the monitoring queries to 30% when there is no CPU contention. When there is CPU contention, this configuration reserves 5% of CPU for the monitoring queries and limits their CPU usage to 10%. It also limits the memory grant size for each monitoring query to 10% of the available memory.
+The following example configures Resource Governor on a SQL managed instance. It limits CPU consumption by database watcher queries to 30% when there is no CPU contention. When there is CPU contention, this configuration reserves 5% of CPU for the monitoring queries and limits their CPU usage to 10%. It also limits the memory grant size for each monitoring query to 10% of the available memory.
 
 ```sql
 USE master;
@@ -47,7 +47,7 @@ BEGIN
 
 DECLARE @WorkloadGroupName sysname = 'default';
 
-IF APP_NAME() = N'SQLExternalMonitoring'
+IF APP_NAME() IN (N'SQLExternalMonitoring',N'x_ms_reserved_sql_external_monitoring')
     SET @WorkloadGroupName = N'database_watcher_workload_group'
 
 RETURN @WorkloadGroupName;
@@ -62,7 +62,7 @@ IF EXISTS (
           FROM sys.resource_governor_configuration
           WHERE classifier_function_id <> 0 OR is_enabled <> 0
           )
-    THROW 50001, 'Resource Governor is already configured.', 1;
+    THROW 50001, 'Resource Governor is already configured. No changes were made.', 1;
 
 CREATE RESOURCE POOL database_watcher_resource_pool
 WITH (MIN_CPU_PERCENT = 5, MAX_CPU_PERCENT = 10, CAP_CPU_PERCENT = 30);
@@ -82,7 +82,7 @@ END CATCH;
 ```
 
 > [!NOTE]
-> To make the Resource Governor configuration effective on a high availability secondary replica of a SQL managed instance, connect to the replica and execute `ALTER RESOURCE GOVERNOR RECONFIGURE;`.
+> To make Resource Governor configuration immediately effective on a high availability secondary replica of a SQL managed instance, connect to the replica and execute `ALTER RESOURCE GOVERNOR RECONFIGURE;`.
 
 To avoid concurrency conflicts such as blocking and deadlocks between data collection and database workloads running on your Azure SQL resources, monitoring queries use short [lock timeouts](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#customizing-the-lock-time-out) and low [deadlock priority](/sql/t-sql/statements/set-deadlock-priority-transact-sql). If there is a concurrency conflict, priority is given to the application workload queries. Depending on the application workload patterns, this might cause occasional gaps in collected data for some datasets.
 
@@ -93,22 +93,22 @@ To monitor an elastic pool, you must designate one database in the pool as the *
 > [!TIP]
 > You can add an empty database to each elastic pool you want to monitor, and designate it as the anchor database. This way, you can move other databases in and out of the pool, or between pools, without interrupting elastic pool monitoring.
 
-Data collected from the anchor database contains pool-level metrics, and certain database-level performance metrics for every database in the pool. This includes resource utilization and workload throughput metrics for each database. For some scenarios, monitoring an elastic pool as a whole makes it unnecessary to monitor each individual database in the pool.
+Data collected from the anchor database contains pool-level metrics, and certain database-level performance metrics for every database in the pool. For example, this includes resource utilization and request rate metrics for each database. For some scenarios, monitoring an elastic pool as a whole makes it unnecessary to monitor each individual database in the pool.
 
-Certain monitoring data such as pool-level CPU, memory, wait statistics, and storage utilization is only collected at the elastic pool level because it doesn't apply to individual databases in a pool. Conversely, certain other data such as query runtime statistics, database properties, table and index metadata is available only at the database level.
+Certain monitoring data such as pool-level CPU, memory, and storage utilization, and wait statistics is only collected at the elastic pool level because it cannot be attributed to an individual database in a pool. Conversely, certain other data such as query runtime statistics, database properties, table and index metadata is available only at the database level.
 
 If you add individual databases from an elastic pool as database watcher targets, you should add the elastic pool as a target as well. This way, you get a more complete view of the database and pool performance.
 
 #### Monitor dense elastic pools
 
-A [dense elastic pool](./database/elastic-pool-resource-management.md) contains a large number of databases, but has a relatively small compute size. This approach lets customers achieve substantial cost savings by keeping the compute resource allocation to a minimum on the assumption that only a small number of databases in the pool are active at the same time.
+A [dense elastic pool](./database/elastic-pool-resource-management.md) contains a large number of databases, but has a relatively small compute size. This configuration lets customers achieve substantial cost savings by keeping the compute resource allocation to a minimum on the assumption that only a small number of databases in the pool are active at the same time.
 
 Compute resources available to database watcher queries in a dense elastic pool are further limited to avoid affecting application queries. Because of this, database watcher might not be able to collect monitoring data from every database in a dense elastic pool.
 
 > [!TIP]
 > To monitor a dense elastic pool, enable monitoring at the pool level by adding the elastic pool as a target.
 >
-> It is not recommended to monitor more than a few individual databases in a dense elastic pool. You might see gaps in the collected data or larger than expected intervals between data samples.
+> It is not recommended to monitor more than a few individual databases in a dense elastic pool. You might see gaps in the collected data or larger than expected intervals between data samples due to insufficient compute resources available to database watcher queries.
 
 ## Datasets
 
@@ -145,7 +145,7 @@ This section describes the datasets available for each target type, including co
 | Wait statistics | `sqldb_database_wait_stats` | `00:00:10` | Each row represents a wait type and includes cumulative wait statistics of the database engine instance. For databases in an elastic pool, only database-scoped wait statistics are collected. |
 
 > [!NOTE]
-> For databases in an elastic pool, the **SQL Database** datasets related to the database engine of the pool are not collected. This includes the **Memory utilization**, **Out-of-memory events**, **Performance counters (common)**, and **Performance counters (detailed)** datasets. The **Wait statistics** dataset is collected but contains only database-scoped waits. This avoids collection of the same data from every database in the pool.
+> For databases in an elastic pool, the **SQL Database** datasets containing pool-level data are not collected. This includes the **Memory utilization**, **Out-of-memory events**, **Performance counters (common)**, and **Performance counters (detailed)** datasets. The **Wait statistics** dataset is collected but contains only database-scoped waits. This avoids collection of the same data from every database in the pool.
 >
 > Pool-level data is collected in the **SQL elastic pool** datasets. For a given elastic pool, the **Performance counters (common)** and **Performance counters (detailed)** datasets contain pool-level metrics and certain database-level metrics such as **CPU**, **Data IO**, **Log write**, **Requests**, **Transactions**, etc.
 
@@ -241,7 +241,7 @@ For each target type, datasets have common columns, as described in the followin
 
 A dataset has both `sample_time_utc` and `collection_time_utc` columns if it contains samples observed before the row was collected by database watcher. Otherwise, the observation time and collection time are the same, and the dataset contains only the `sample_time_utc` column.
 
-For example, the `sqldb_database_resource_utilization` dataset is derived from the [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database) dynamic management view (DMV). The DMV contains the `end_time` column. This is the observation time for each row that reports aggregate resource statistics for a 15-second interval. This time is reported in the `sample_time_utc` column. When database watcher queries this DMV, the result set might contain multiple rows, each with a different `end_time`. All of these rows have the same `collection_time_utc` value.
+For example, the `sqldb_database_resource_utilization` dataset is derived from the [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database) dynamic management view (DMV). The DMV contains the `end_time` column, which is the observation time for each row reporting aggregate resource statistics for a 15-second interval. This time is reported in the `sample_time_utc` column. When database watcher queries this DMV, the result set might contain multiple rows, each with a different `end_time`. All of these rows have the same `collection_time_utc` value.
 
 ## Related content
 

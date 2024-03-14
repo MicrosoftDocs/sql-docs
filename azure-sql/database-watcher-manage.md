@@ -367,11 +367,10 @@ To configure database watcher to connect to a target using SQL authentication, f
     To create secrets, you need to be a member of the **Key Vault Secrets Officer** RBAC role.
 
 1. From the **Access control (IAM)** page of each secret, add a role assignment for the managed identity of the watcher in the **Key Vault Secrets User** RBAC role. To follow the principle of least privilege, add this role assignment for each secret, rather than for the entire vault.
-1. When you add a target to a watcher, check the **Use SQL authentication** box, and select the vault where the login name and password secrets are stored. Enter the secret names for login name and password.
+
+1. [Add the SQL target](#add-sql-targets-to-a-watcher) to a watcher. When adding a target, check the **Use SQL authentication** box, and select the vault where the login name and password secrets are stored. Enter the secret names for login name and password.
 
     When adding a SQL target, *do not* enter the actual login name and password. Using the earlier example, you would enter the `database-watcher-login-name` and `database-watcher-password` secret names.
-
-1. [Add the SQL target](#add-sql-targets-to-a-watcher).
 
 If you want to use different logins on different SQL targets, you can use the same vault to store all secrets.
 
@@ -382,9 +381,9 @@ If you want to use different logins on different SQL targets, you can use the sa
 
 To create and manage database schema over time, and to ingest monitoring data, database watcher requires membership in the **Admins** RBAC role in the data store database. Database watcher does not require any cluster-level access to the Azure Data Explorer cluster, or any access to other databases that might exist on the same cluster.
 
-If you create a new Azure Data Explorer cluster, or select a database on an existing cluster while creating a watcher, this access is granted automatically if the user creating the watcher is a member of the **Owner** RBAC role for the cluster.
+If you create a new Azure Data Explorer cluster and database, or select a database on an existing cluster while creating a watcher, this access is granted automatically if the user creating the watcher is a member of the **Owner** RBAC role for the cluster.
 
-If you change the data store for an existing watcher, or if you use a database in Real-Time Analytics on a free Azure Data Explorer cluster, you need to grant access as described in this section.
+If you change the data store for an existing watcher, or if you use a database in Real-Time Analytics or on a free Azure Data Explorer cluster, you need to grant access as described in this section.
 
 ### Grant access to an Azure Data Explorer database using the Azure portal
 
@@ -393,7 +392,7 @@ You can use the Azure portal to grant access to a database on the Azure Data Exp
 1. For a *database* on an Azure Data Explorer cluster, in the resource menu under **Security + networking**, select **Permissions**. Do not use the **Permissions** page of the cluster.
 1. Select **Add**, and select **Admin**.
 1. On the **New Principals** page, select **Enterprise applications**, and type the name of the watcher in the **Search** box.
-1. Select the enterprise application for the watcher.
+1. Select the enterprise application with the same name as the watcher.
 
 ### Grant access to an Azure Data Explorer database using KQL
 
@@ -456,7 +455,7 @@ For more information, see [Kusto role-based access control](/azure/data-explorer
 To grant access to the data store to users and groups from another tenant, you need to enable cross-tenant authentication on your Azure Data Explorer cluster. For more information, see [Allow cross-tenant queries and commands](/azure/data-explorer/kusto/access-control/cross-tenant-query-and-commands).
 
 > [!TIP]
-> Cross-tenant authentication is enabled in Real-Time Analytics and on free Azure Data Explorer clusters. That lets users and groups in your Microsoft Entra ID tenant access these databases.
+> Cross-tenant authentication is enabled in Real-Time Analytics and on free Azure Data Explorer clusters. That lets you grant access to users and groups in your Microsoft Entra ID tenant to view data in these databases.
 
 ## Manage data store
 
@@ -466,7 +465,7 @@ This section describes how you can manage the monitoring data store, including s
 
 You can scale your Azure Data Explorer cluster as needed. For example, you can scale down your cluster to the **Extra small, Dev/test** SKU if a service level agreement (SLA) is not required, and if query and data ingestion performance remain acceptable.
 
-For many database watcher deployments, the default **Extra small, Compute optimized** 2-instance cluster SKU will be sufficient indefinitely. In some cases, depending on your configuration and workload over time, you might need to scale your cluster to ensure adequate query performance and maintain low data ingestion latency.
+For many database watcher deployments, the default **Extra small, Compute optimized** 2-instance cluster SKU will be sufficient indefinitely. In some cases, depending on your configuration and workload changes over time, you might need to scale your cluster to ensure adequate query performance and maintain low data ingestion latency.
 
 Azure Data Explorer supports [vertical](/azure/data-explorer/manage-cluster-vertical-scaling) and [horizontal](/azure/data-explorer/manage-cluster-horizontal-scaling) cluster scaling. With vertical scaling, you change the cluster SKU, which changes the number of vCPUs, memory, and cache per instance (node). With horizontal scaling, the SKU remains the same, but the number of instances in the cluster is increased or decreased.
 
@@ -532,7 +531,7 @@ Considerations for a **common data store**:
 
 Considerations for **separate data stores**:
 
-- Subsets of your Azure SQL estate are monitored independently. Estate dashboards in the Azure portal show data from a single data store. Users with access to multiple data stores can use [cross-cluster or cross-database](/azure/data-explorer/kusto/query/cross-cluster-or-database-queries) KQL queries to access monitoring data in multiple data stores in the same query.
+- Subsets of your Azure SQL estate are monitored independently. Estate dashboards in the Azure portal show data from a single data store. Users with access to multiple data stores can use [cross-cluster or cross-database](/azure/data-explorer/kusto/query/cross-cluster-or-database-queries) KQL queries to access monitoring data in multiple data stores using a single query.
 - Because data access in Azure Data Explorer and in Real-Time Analytics is managed per database, you can manage access to the monitoring data for the subsets of your estate in a granular way.
 - You can place multiple databases on the same Azure Data Explorer cluster to share cluster resources and save costs, while still keeping data isolated in each database.
 - If you require a complete separation of environments, including network access to Azure Data Explorer clusters, you can place different databases on different clusters.

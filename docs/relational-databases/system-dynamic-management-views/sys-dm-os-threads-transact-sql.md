@@ -16,6 +16,7 @@ helpviewer_keywords:
   - "sys.dm_os_threads dynamic management view"
 dev_langs:
   - "TSQL"
+ms.custom: linux-related-content
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_threads (Transact-SQL)

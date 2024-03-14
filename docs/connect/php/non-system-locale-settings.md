@@ -6,6 +6,7 @@ ms.author: v-davidengel
 ms.date: "08/10/2020"
 ms.service: sql
 ms.subservice: connectivity
+ms.custom: linux-related-content
 ms.topic: conceptual
 helpviewer_keywords:
   - "locale, linux, macOS, system"

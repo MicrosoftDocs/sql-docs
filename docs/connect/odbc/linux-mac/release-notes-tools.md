@@ -7,6 +7,7 @@ ms.reviewer: v-davidengel
 ms.date: 08/11/2023
 ms.service: sql
 ms.subservice: connectivity
+ms.custom: linux-related-content
 ms.topic: conceptual
 ---
 # Release notes for the Microsoft SQL Server tools on Linux and macOS

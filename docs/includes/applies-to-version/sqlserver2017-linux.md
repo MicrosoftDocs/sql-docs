@@ -3,6 +3,7 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.date: 09/01/2022
 ms.service: sql
+ms.custom: linux-related-content
 ms.topic: include
 ---
 

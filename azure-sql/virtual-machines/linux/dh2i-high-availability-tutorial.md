@@ -8,7 +8,7 @@ ms.date: 05/18/2022
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: tutorial
-ms.custom: kr2b-contr-experiment
+ms.custom: kr2b-contr-experiment, linux-related-content
 ---
 
 # Tutorial: Set up a three node Always On availability group with DH2i DxEnterprise

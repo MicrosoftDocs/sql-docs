@@ -7,6 +7,7 @@ ms.reviewer: mikeray, randolphwest
 ms.date: 11/23/2022
 ms.service: sql
 ms.subservice: availability-groups
+ms.custom: linux-related-content
 ms.topic: conceptual
 ---
 # Business continuity and database recovery - SQL Server

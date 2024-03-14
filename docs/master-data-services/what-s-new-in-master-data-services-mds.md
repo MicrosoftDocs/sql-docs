@@ -86,7 +86,7 @@ monikerRange: ">=sql-server-ver16"
   
 ##  Improved Transaction Log Maintenance  
   
- You can now clean transaction logs at pre-determined intervals or on a schedule, using the System settings and at the model level. For a MDS system with lot of data changes and ETL processes these tables can grow exponentially and lead to performance degradation and storage space issues.  
+ You can now clean transaction logs at pre-determined intervals or on a schedule, using the System settings and at the model level. For an MDS system with lot of data changes and ETL processes these tables can grow exponentially and lead to performance degradation and storage space issues.  
   
  The following types of data can be removed from the logs.  
   
@@ -189,19 +189,19 @@ monikerRange: ">=sql-server-ver16"
   
  **Member Revision History**  
   
- A member revision history is recorded when a member is changed. You can rollback a revision history, as well as view and annotate revisions. Using the **Log Retention Days** property, you can specify how long historical data is retained. For more information, see [Member Revision History &#40;Master Data Services&#41;](../master-data-services/member-revision-history-master-data-services.md).  
+ A member revision history is recorded when a member is changed. You can roll back a revision history, as well as view and annotate revisions. Using the **Log Retention Days** property, you can specify how long historical data is retained. For more information, see [Member Revision History &#40;Master Data Services&#41;](../master-data-services/member-revision-history-master-data-services.md).  
   
  **Merge Conflicts**  
   
  If you try to publish data that has been changed by another user, the publish will fail with a conflict error. To resolve this error, you can perform merge conflicts and republish the changes. For more information, see [Merge Conflicts (Master Data Services)](../master-data-services/merge-conflicts-master-data-services.md) and [Merge Conflicts (MDS Add-in for Excel)](../master-data-services/microsoft-excel-add-in/merge-conflicts-mds-add-in-for-excel.md).  
   
- **Change Sets**  
+ **ChangeSets**  
   
- You can use change sets to save pending changes to an entity, and you can view and modify pending changes. If the entity requires approval for changes, you must save the pending changes into a change set and submit for approval by the administrator. For more information, see [Changesets &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md).  
+ You can use changesets to save pending changes to an entity, and you can view and modify pending changes. If the entity requires approval for changes, you must save the pending changes into a changeset and submit for approval by the administrator. For more information, see [Changesets &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md).  
   
- **Change Set Email and Management**  
+ **ChangeSet Email and Management**  
   
- In this release, you can now view and manage all changes by model and version. You can  also receive email notifications each time a change set status changes for an entity that requires approval. For more information, see [Manage Changesets &#40;Master Data Services&#41;](../master-data-services/manage-changesets-master-data-services.md) and [Notifications &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md).  
+ In this release, you can now view and manage all changes by model and version. You can  also receive email notifications each time a changeset status changes for an entity that requires approval. For more information, see [Manage Changesets &#40;Master Data Services&#41;](../master-data-services/manage-changesets-master-data-services.md) and [Notifications &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md).  
   
  **View and Manage Revision History**  
   

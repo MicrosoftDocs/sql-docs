@@ -1,14 +1,15 @@
 ---
-title: Deprecated Master Data Services Features
-description: "Deprecated Master Data Services Features"
+title: Deprecated Features of Master Data Services
+description: "Deprecated Features of Master Data Services"
 author: CordeliaGrey
 ms.author: jiwang6
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: conceptual
+monikerRange: ">=sql-server-ver16"
 ---
-# Deprecated Master Data Services Features
+# Deprecated Features of Master Data Services
 
 [!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
@@ -46,6 +47,6 @@ Entity transaction log type "Attribute" is deprecated, please migrate to the "Me
  Blog post, [Deprecated: Explicit Hierarchies and Collections](https://techcommunity.microsoft.com/t5/sql-server-integration-services/deprecated-explicit-hierarchies-and-collections/ba-p/388221), on msdn.com.  
   
 ## See Also  
- [Discontinued Master Data Services Features](../master-data-services/discontinued-master-data-services-features.md)  
+ [Discontinued Features of Master Data Services](../master-data-services/discontinued-master-data-services-features.md)  
   
   

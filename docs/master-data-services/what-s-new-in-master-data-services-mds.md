@@ -7,6 +7,7 @@ ms.date: "07/08/2016"
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: conceptual
+monikerRange: ">=sql-server-ver16"
 ---
 # What's New in Master Data Services (MDS)
 
@@ -222,5 +223,5 @@ ms.topic: conceptual
 
 ## See Also  
  [Master Data Services and Data Quality Services Features Supported by the Editions of SQL Server 2016](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
- [Deprecated Master Data Services Features](../master-data-services/deprecated-master-data-services-features.md)  
- [Discontinued Master Data Services Features](../master-data-services/discontinued-master-data-services-features.md)
+ [Deprecated Features of Master Data Services](../master-data-services/deprecated-master-data-services-features.md)  
+ [Discontinued Features of Master Data Services](../master-data-services/discontinued-master-data-services-features.md)

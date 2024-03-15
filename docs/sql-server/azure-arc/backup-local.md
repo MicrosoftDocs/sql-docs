@@ -137,6 +137,12 @@ To enable automated backups using `az` CLI:
     az sql server-arc backups-policy set --name <arc-server-name> --resource-group <resourcegroup> --default-policy 
     ```
 
+    > [!NOTE]
+    > Examples in this article use `<arc-server-name>` to identify the server name, as follows:
+    >
+    > - Default instance, replace: `<arc-server-name>` with the server name.
+    > - Named instance, replace: `<arc-server-name>` with `ServerName_InstanceName`.
+
     Example:
 
     ```azurecli
@@ -271,11 +277,11 @@ Output:
 
 ```json
 {
-  "DiffBackupHours": 24,
-  "FullBackupDays": 7,
-  "InstanceName": "SQLServerPROD",
-  "RetentionPeriodInDays": 24,
-  "TlogBackupMins": 5
+  "differentialBackupHours": 24,
+  "fullBackupDays": 7,
+  "instanceName": "MSSQLSERVER01",
+  "retentionPeriodDays": 16,
+  "transactionLogBackupMinutes": 5
 }
 ```
 

@@ -124,7 +124,7 @@ For the status of signatures used to sign packages, the **BlockedSignatureStates
         New-SelfSignedCertificate @params
     ```
     
-    If you see the error message 'Package signing failed with error 0x80090008 "Invalid algorithm specified."', it indicates that your certificate hash algorithm is not secure, please change your certificate to a more secure hash algorithm like SHA512 and use a CSP (Cryptographic Service Provider). As the .NET framework is upgrade to 4.7.2 for SQL Server 2022, and the default SignedXML algorithm is changed to SHA256 because SHA1 is no longer considered to be secure. Details refer to [this article](https://learn.microsoft.com/dotnet/framework/migration-guide/retargeting/4.7.x#default-signedxml-and-signedxms-algorithms-changed-to-sha256).
+    If you see the error message 'Package signing failed with error 0x80090008 "Invalid algorithm specified."', it indicates that your certificate hash algorithm is not secure, please change your certificate to a more secure hash algorithm like SHA512 and use a CSP (Cryptographic Service Provider). As the .NET framework is upgrade to 4.7.2 for SQL Server 2022, and the default SignedXML algorithm is changed to SHA256 because SHA1 is no longer considered to be secure. Details refer to [this article](/dotnet/framework/migration-guide/retargeting/4.7.x#default-signedxml-and-signedxms-algorithms-changed-to-sha256).
 
      For more information about certificates, see the online Help for the Certificates snap-in. For more information about how to sign digital assets, see the topic, "[Signing and Checking Code with Authenticode](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537364(v=vs.85))," in the MSDN Library.  
   

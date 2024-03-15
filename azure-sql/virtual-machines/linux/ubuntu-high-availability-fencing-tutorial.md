@@ -7,7 +7,7 @@ ms.reviewer: amitkh-msft, randolphwest
 ms.date: 11/29/2023
 ms.service: virtual-machines-sql
 ms.subservice: hadr
-ms.custom: devx-track-azurecli
+ms.custom: devx-track-azurecli, linux-related-content
 ms.topic: tutorial
 ---
 

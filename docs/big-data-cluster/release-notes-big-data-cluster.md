@@ -8,6 +8,7 @@ ms.reviewer: hudequei, randolphwest
 ms.date: 10/22/2023
 ms.service: sql
 ms.subservice: big-data-cluster
+ms.custom: linux-related-content
 ms.topic: release-notes
 ---
 # SQL Server 2019 Big Data Clusters platform release notes

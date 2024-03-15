@@ -6,6 +6,7 @@ ms.author: v-davidengel
 ms.date: 03/08/2024
 ms.service: sql
 ms.subservice: connectivity
+ms.custom: linux-related-content
 ms.topic: conceptual
 ---
 # Using Microsoft Entra ID with the ODBC Driver

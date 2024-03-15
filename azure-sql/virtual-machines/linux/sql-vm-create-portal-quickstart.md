@@ -7,7 +7,7 @@ ms.date: 10/22/2019
 ms.service: virtual-machines-sql
 ms.subservice: deployment
 ms.topic: quickstart
-ms.custom: mode-ui
+ms.custom: mode-ui, linux-related-content
 tags: azure-service-management
 ---
 

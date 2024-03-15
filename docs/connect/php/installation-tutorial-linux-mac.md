@@ -7,7 +7,7 @@ ms.date: 01/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
-ms.custom: intro-installation
+ms.custom: intro-installation, linux-related-content
 ---
 
 # Linux and macOS Installation Tutorial for the Microsoft Drivers for PHP for SQL Server

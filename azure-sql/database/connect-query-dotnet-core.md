@@ -9,10 +9,7 @@ ms.date: 09/26/2023
 ms.service: sql-db-mi
 ms.subservice: connect
 ms.topic: quickstart
-ms.custom:
-  - sqldbrb=2
-  - devx-track-csharp
-  - mode-other
+ms.custom: sqldbrb=2, devx-track-csharp, mode-other, linux-related-content
 ms.devlang: csharp
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---

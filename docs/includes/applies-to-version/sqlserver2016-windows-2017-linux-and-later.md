@@ -3,6 +3,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 01/17/2024
 ms.service: sql
+ms.custom: linux-related-content
 ms.topic: include
 ---
 

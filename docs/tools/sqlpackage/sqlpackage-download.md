@@ -8,9 +8,7 @@ ms.date: 2/27/2024
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-ms.custom:
-  - tools|sos
-  - intro-installation
+ms.custom: tools|sos, intro-installation, linux-related-content
 ---
 
 # Download and install SqlPackage

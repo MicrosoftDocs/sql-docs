@@ -8,6 +8,7 @@ ms.reviewer: hudequei
 ms.date: 08/21/2019
 ms.service: sql
 ms.subservice: big-data-cluster
+ms.custom: linux-related-content
 ms.topic: tutorial
 ---
 

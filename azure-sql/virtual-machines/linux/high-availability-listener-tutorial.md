@@ -7,6 +7,7 @@ ms.reviewer: amitkh-msft, randolphwest
 ms.date: 11/29/2023
 ms.service: virtual-machines-sql
 ms.subservice: hadr
+ms.custom: linux-related-content
 ms.topic: tutorial
 ---
 # Tutorial: Configure an availability group listener on Linux virtual machines

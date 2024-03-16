@@ -95,7 +95,7 @@ There is a limit on the number of SQL targets per watcher, and the number of wat
 
 Database watcher uses [Azure Workbooks](/azure/azure-monitor/visualize/workbooks-overview) to provide monitoring dashboards at the estate level and at the resource level.
 
-Here is an example of a database CPU utilization heatmap on the estate dashboard. Each hexagon represents a monitoring target. There are two logical servers, one with six databases and one with three databases. The high availability secondary replicas are shown on the heatmap as separate targets. Select the image to see additional details, including data ingestion statistics.
+Here is an example of a database CPU utilization heatmap on the estate dashboard. Each hexagon represents a SQL target. There are two logical servers, one with six databases and one with three databases. The high availability secondary replicas are shown on the heatmap as separate targets. Select the image to see additional details, including data ingestion statistics.
 
 :::image type="content" source="media/database-watcher-overview/database-watcher-sql-database-estate-dashboard-cropped.png" alt-text="Screenshot that shows an example of a CPU utilization heatmap on the database watcher estate dashboard." lightbox="media/database-watcher-overview/database-watcher-sql-database-estate-dashboard.png":::
 
@@ -103,7 +103,7 @@ Here is an example showing a partial view of the **Performance** tab of an Azure
 
 :::image type="content" source="media/database-watcher-overview/database-watcher-sql-database-resource-dashboard-cropped.png" alt-text="Screenshot that shows an example of a database watcher dashboard for an Azure SQL database." lightbox="media/database-watcher-overview/database-watcher-sql-database-resource-dashboard.png":::
 
-The following table describes the capabilities of database watcher dashboards in Azure portal.
+The following table describes the capabilities of database watcher dashboards in the Azure portal.
 
 | Capability | Description |
 |:--|:--|
@@ -139,7 +139,7 @@ For more information about network connectivity in Azure SQL, see [Azure SQL Dat
 
 ### Private connectivity
 
-To provide private connectivity, database watcher uses [Azure Private Link](/azure/private-link/private-link-overview). When you configure a watcher, you can [create managed private endpoints](database-watcher-manage.md#create-a-managed-private-endpoint) to let the watcher connect to databases and elastic pools on [logical servers](./database/logical-servers.md), or to managed instances. You can also create a private endpoint for the Azure Data Explorer cluster, and for the key vault storing SQL authentication credentials. At this time, private connectivity is not available for connections to Real-Time Analytics in Microsoft Fabric.
+To provide private connectivity, database watcher uses [Azure Private Link](/azure/private-link/private-link-overview). When you configure a watcher, you can [create managed private endpoints](database-watcher-manage.md#create-a-managed-private-endpoint) to let the watcher connect to databases and elastic pools on [logical servers](./database/logical-servers.md), or to SQL managed instances. You can also create a private endpoint for the Azure Data Explorer cluster, and for the key vault storing SQL authentication credentials. At this time, private connectivity is not available for connections to Real-Time Analytics in Microsoft Fabric.
 
 A resource owner must approve a private endpoint before database watcher can use it. Conversely, resource owners can delete any database watcher private endpoint at any time to stop data collection.
 
@@ -161,7 +161,7 @@ Just like network connectivity, you fully control database watcher access to you
 
 ### Watcher authentication
 
-Database watcher supports [Microsoft Entra authentication](database/authentication-aad-configure.md) (previously known as Azure Active Directory authentication). This is the preferred and recommended way for a watcher to authenticate to a target. You create a Microsoft Entra authentication login for the [managed identity](/entra/identity/managed-identities-azure-resources/overview) of the watcher on all logical servers and SQL managed instances that you want to monitor.
+Database watcher supports [Microsoft Entra authentication](database/authentication-aad-configure.md) (previously known as Azure Active Directory authentication). This is the preferred and recommended way for a watcher to authenticate to a SQL target. You create a Microsoft Entra authentication login for the [managed identity](/entra/identity/managed-identities-azure-resources/overview) of the watcher on all logical servers and SQL managed instances that you want to monitor.
 
 Database watcher also supports password-based SQL authentication. You might use SQL authentication if Microsoft Entra authentication is not enabled on your Azure SQL resources. For more information, see [Additional configuration to use SQL authentication](database-watcher-manage.md#additional-configuration-to-use-sql-authentication).
 
@@ -174,9 +174,9 @@ To collect monitoring data, database watcher requires specific, limited access t
 | Membership in all of the following [server roles](./database/security-server-roles.md): </br>`##MS_ServerPerformanceStateReader##`</br>`##MS_DefinitionReader##`</br>`##MS_DatabaseConnector##`| The following server permissions:</br>`CONNECT SQL`</br>`CONNECT ANY DATABASE`</br>`VIEW ANY DATABASE`</br>`VIEW ANY DEFINITION`</br>`VIEW SERVER PERFORMANCE STATE`</br></br>The `SELECT` permission on the following tables in the `msdb` database:</br>`dbo.backupmediafamily`</br>`dbo.backupmediaset`</br>`dbo.backupset`</br>`dbo.suspect_pages`</br>`dbo.syscategories`</br>`dbo.sysjobactivity`</br>`dbo.sysjobhistory`</br>`dbo.sysjobs`</br>`dbo.sysjobsteps`</br>`dbo.sysoperators`</br>`dbo.syssessions`|
 
 > [!IMPORTANT]
-> When a watcher connects to an Azure SQL resource, it validates SQL permissions. If the permissions granted are insufficient, or *if unnecessary permissions are granted*, the watcher disconnects. This ensures that the watcher can collect system monitoring data, but is not accidentally granted access to any other data in your databases.
+> When a watcher connects to an Azure SQL resource, it validates the SQL permissions it holds. If the permissions granted are insufficient, or *if unnecessary permissions are granted*, the watcher disconnects. This ensures that the watcher can collect system monitoring data, but is not accidentally granted access to any other data in your databases.
 > 
-> When configuring watcher access to a target, always [create a dedicated login using provided scripts](database-watcher-manage.md#grant-access-to-sql-targets-with-t-sql-scripts). Do not add the watcher login or user to any SQL roles or grant any SQL permissions other than the ones listed in the table.
+> When configuring watcher access to a SQL target, always [create a dedicated login using provided scripts](database-watcher-manage.md#grant-access-to-sql-targets-with-t-sql-scripts). Do not add the watcher login or user to any SQL roles or grant any SQL permissions other than the ones listed in the table.
 
 ## Limitations
 
@@ -185,7 +185,7 @@ This section describes database watcher limitations. Workarounds are provided if
 | Limitation | Workaround |
 |:--|:--|
 | If using smaller Azure Data Explorer SKUs such as **Dev/test** or **Extra small**, some dashboard queries might intermittently fail to execute with an "aborted due to throttling" error. | Reload the dashboard, or [scale up the Azure Data Explorer cluster](database-watcher-manage.md#scale-azure-data-explorer-cluster) to the next higher SKU. |
-| If you create a free Azure Data Explorer cluster from the database watcher UI in Azure portal, you might get a "Could not connect to cluster, 403-Forbidden" error if you try to access the cluster in the Azure Data Explorer [web UI](https://dataexplorer.azure.com/). | This issue doesn't occur if you create the free cluster using <https://aka.ms/kustofree>.</br></br>If you already created a free cluster from Azure portal, follow these steps:</br></br>In the [Azure Data Explorer web UI](https://dataexplorer.azure.com/), select your profile name in the main bar to open the account manager, and select **Switch directory**. Select the directory *other than* **Microsoft Account**, and select **Switch**. You should now see the free Azure Data Explorer cluster you created. </br></br>Alternatively, you can edit the cluster connection in the Azure Data Explorer web UI using the edit (pencil) button, and similarly switch the directory. |
+| If you create a free Azure Data Explorer cluster from the database watcher UI in Azure portal, you might get a "Could not connect to cluster, 403-Forbidden" error if you try to access the cluster in the Azure Data Explorer [web UI](https://dataexplorer.azure.com/). | This issue doesn't occur if you create the free cluster using <https://aka.ms/kustofree>.</br></br>If you have already created a free cluster from Azure portal, follow these steps:</br></br>In the [Azure Data Explorer web UI](https://dataexplorer.azure.com/), select your profile name in the main bar to open the account manager, and select **Switch directory**. Select the directory *other than* **Microsoft Account**, and select **Switch**. You should now see the free Azure Data Explorer cluster you created. </br></br>Alternatively, you can edit the cluster connection in the Azure Data Explorer web UI using the edit (pencil) button, and similarly switch the directory. |
 | If CPU consumption for a database, elastic pool, or a SQL managed instance persists near 100%, remaining CPU resources might be insufficient for database watcher data collection queries, causing gaps in the collected data. | If you observe data gaps that correlate with high CPU utilization in the database, elastic pool, or a SQL managed instance, consider tuning your application workload to reduce CPU consumption, or increase the number of vCores or DTUs to enable reliable monitoring. |
 
 ## Known issues
@@ -194,14 +194,14 @@ During preview, database watcher has the following known issues.
 
 | Issue | Mitigation or workaround |
 |:--|:--|
-| If data collection cannot start or continue because of an error (for example, insufficient access to a target), the error is not exposed in the Activity log. | To troubleshoot, see [No new data appears in the data store or on dashboards](#no-new-data-appears-in-the-data-store-or-on-dashboards). |
+| If data collection cannot start or continue because of an error (for example, insufficient access to a SQL target or to the data store), the error is not exposed in the Activity log. | To troubleshoot, see [No new data appears in the data store or on dashboards](#no-new-data-appears-in-the-data-store-or-on-dashboards). |
 | Disabling the system-assigned managed identity of a watcher is not supported. | To delete the system-assigned identity of a watcher from the directory, delete the watcher. |
 | If a [serverless](./database/serverless-tier-overview.md) database has auto-pause enabled, and is added as a database watcher target, it might not auto-pause as expected. For a [free offer](./database/free-offer.md) database, this might exhaust the free monthly credit sooner than expected. | If retaining the auto-pause functionality is required, do not use database watcher to monitor serverless databases at this time. |
 | For Azure SQL Managed Instance, data is not collected from the readable high availability replica or from a geo-replica if you are using SQL authentication. | There are two workarounds: </br>1. Use the Microsoft Entra ID authentication (preferred). </br>2. Disable the password policy check. Execute `ALTER LOGIN [database-watcher-login-placeholder] WITH CHECK_POLICY = OFF;`, replacing `database-watcher-login-placeholder` with the name of the SQL authentication login of the watcher. Execute this command on the primary replica, and on the geo-replica, if any. |
 | If the watcher name is not unique within the Microsoft Entra ID tenant, granting access to targets using Microsoft Entra authentication fails. | Recreate the watcher with a name that is unique within your tenant. |
 | You cannot export an ARM template from an existing watcher resource. | Start creating a new watcher and enter all required details. On the **Review + create** page, use the **View automation template** link to obtain an ARM template and a parameter file. You can then use the template and the customized parameter file in a [custom deployment](/azure/azure-resource-manager/templates/deploy-portal#deploy-resources-from-custom-template) to create a new watcher. |
 | For the listed [datasets](database-watcher-data.md#datasets), the first sample collected after a watcher restart might contain data that has already been collected before restart. Conversely, if a watcher is started after a pause in collection, monitoring data generated during the pause might not be fully collected even if it is present in the monitored database.</br>- **Backup history**</br>- **Change processing**</br>- **Change processing errors**</br>- **Out-of-memory events**</br>- **Query runtime statistics**</br>- **Query wait statistics**</br>- **SQL Agent job history** | None at this time. |
-| Data collection might stop unexpectedly if you use a database in Real-Time Analytics as the data store, and the **OneLake availability** option is enabled. | Disable the **OneLake availability** option and restart the watcher to resume data collection. |
+| Data is not collected if you use a database in Real-Time Analytics as the data store, and the **OneLake availability** option is enabled. | Disable the **OneLake availability** option and restart the watcher to resume data collection. |
 | When adding a **SQL database** target, the list of databases shown in the dropdown is incomplete if there are more than 1,000 databases on the selected logical server. | None at this time. |
 | Feedback sent using the smiley face button on the database watcher dashboards in Azure portal might not reach the database watcher product team. | Use the options in [Send feedback](#send-feedback). |
 

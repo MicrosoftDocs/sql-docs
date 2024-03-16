@@ -10,7 +10,9 @@ ms.subservice: scenario
 ms.topic: tutorial
 ms.custom: sqldbrb=1
 ---
+
 # Run ad hoc analytics queries across multiple databases (Azure SQL Database)
+
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 In this tutorial, you run distributed queries across the entire set of tenant databases to enable ad hoc interactive reporting. These queries can extract insights buried in the day-to-day operational data of the Wingtip Tickets SaaS app. To do these extractions, you deploy an additional analytics database to the catalog server and use Elastic Query to enable distributed queries.

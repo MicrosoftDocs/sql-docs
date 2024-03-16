@@ -8,7 +8,7 @@ metadata:
    ms.topic: conceptual
    ms.service: sql
    ms.subservice: linux
-
+   ms.custom: linux-related-content
 title: SQL Server on Linux frequently asked questions (FAQ)
 summary: |
    [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]

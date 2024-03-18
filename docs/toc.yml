@@ -8643,11 +8643,7 @@ items:
     - name: Download SSMS
       href: ssms/download-sql-server-management-studio-ssms.md
     - name: Release notes
-      href: ssms/release-notes-ssms.md    
-    - name: Download SSMS 20 Preview
-      href: ssms/download-sql-server-management-studio-ssms-20.md
-    - name: Release notes SSMS 20 Preview
-      href: ssms/release-notes-ssms-20.md    
+      href: ssms/release-notes-ssms.md  
     - name: Overview
       items:
       - name: SQL Server Management Studio (SSMS)

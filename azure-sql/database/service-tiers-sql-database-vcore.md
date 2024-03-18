@@ -4,7 +4,7 @@ description: The vCore purchasing model lets you independently scale compute and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake, mathoma, dfurman
-ms.date: 01/17/2024
+ms.date: 03/18/2024
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -126,7 +126,7 @@ The architectural model for the General Purpose service tier is based on a separ
 
 The following figure shows four nodes in standard architectural model with the separated compute and storage layers.
 
-:::image type="content" source="./media/service-tier-general-purpose/general-purpose-service-tier.png" alt-text="A diagram illustrating the separation of compute and storage.":::
+:::image type="content" source="media/service-tier-general-purpose/general-purpose-service-tier.png" alt-text="Diagram illustrating the separation of compute and storage.":::
 
 In the architectural model for the General Purpose service tier, there are two layers:
 
@@ -145,7 +145,7 @@ The Business Critical service tier model is based on a cluster of database engin
 
 In the Business Critical model, compute and storage is integrated on each node. Replication of data between database engine processes on each node of a four-node cluster achieves high availability, with each node using locally attached SSD as data storage. The following diagram shows how the Business Critical service tier organizes a cluster of database engine nodes in availability group replicas.
 
-:::image type="content" source="./media/service-tier-business-critical/business-critical-service-tier.png" alt-text="A diagram showing how the Business Critical service tier organizes a cluster of database engine nodes in availability group replicas.":::
+:::image type="content" source="media/service-tier-business-critical/business-critical-service-tier.png" alt-text="Diagram showing how the Business Critical service tier organizes a cluster of database engine nodes in availability group replicas." lightbox="media/service-tier-business-critical/business-critical-service-tier.png":::
 
 Both the database engine process and underlying .mdf/.ldf files are placed on the same node with locally attached SSD storage, providing low latency to your workload. High availability is implemented using technology similar to SQL Server [Always On availability groups](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server). Every database is a cluster of database nodes with one primary replica that is accessible for customer workloads, and three secondary replicas containing copies of data. The primary replica constantly pushes changes to the secondary replicas in order to ensure the data is available on secondary replicas if the primary fails for any reason. Failover is handled by the Service Fabric and the database engine – one secondary replica becomes the primary, and a new secondary replica is created to ensure there are enough nodes in the cluster. The workload is automatically redirected to the new primary replica.
 
@@ -260,17 +260,17 @@ For detailed information, see [Create a SQL Database](single-database-create-qui
 
 On the **Basics** tab, select the **Configure database** link in the **Compute + storage** section, and then select the **Change configuration** link:
 
-:::image type="content" source="./media/service-tiers-vcore/configure-sql-database.png" alt-text="A screenshot of the Azure portal Create SQL Database deployment, on the Configure page. The Change configuration button is highlighted." loc-scope="azure-portal":::
+:::image type="content" source="media/service-tiers-vcore/configure-sql-database.png" alt-text="Screenshot of the Azure portal Create SQL Database deployment, on the Configure page. The Change configuration button is highlighted." lightbox="media/service-tiers-vcore/configure-sql-database.png":::
 
 Select the desired hardware configuration:
 
-:::image type="content" source="./media/service-tiers-vcore/select-hardware.png" alt-text="A screenshot of the Azure portal on the SQL hardware configuration page for an Azure SQL database." loc-scope="azure-portal":::
+:::image type="content" source="media/service-tiers-vcore/select-hardware.png" alt-text="Screenshot of the Azure portal on the SQL hardware configuration page for an Azure SQL database." lightbox="media/service-tiers-vcore/select-hardware.png":::
 
 **To change hardware configuration of an existing SQL Database or pool**
 
 For a database, on the Overview page, select the **Pricing tier** link:
 
-:::image type="content" source="./media/service-tiers-vcore/change-hardware.png" alt-text="A screenshot of the Azure portal on the overview page of the adventure-works SQL database. The pricing tier 'General Purpose: Standard-series (Gen5), 2 vCores' is highlighted." loc-scope="azure-portal":::
+:::image type="content" source="media/service-tiers-vcore/change-hardware.png" alt-text="Screenshot of the Azure portal on the overview page of Azure SQL Database. The pricing tier 'General Purpose: Standard-series (Gen5), 2 vCores' is highlighted." lightbox="media/service-tiers-vcore/change-hardware.png":::
 
 For a pool, on the **Overview** page, select **Configure**.
 
@@ -290,29 +290,33 @@ Standard-series (Gen5) hardware is available in all public regions worldwide.
  
 Hyperscale service tier premium-series and premium-series memory optimized hardware is available for single databases and elastic pools in the following regions:
 
-- Australia East
+- Australia East \*\*
+- Australia Southeast
 - Brazil South
-- Canada Central
-- Central India
-- Central US \*\*
+- Canada Central \*\*
+- Canada East
 - East Asia
-- East US \*\*
-- East US 2
+- Europe North \*\*
+- Europe West \*\*
 - France Central
 - Germany West Central
+- India Central
 - India South
 - Japan East
 - Japan West \*
-- North Central US
-- North Europe \*\*
 - Southeast Asia
-- South Central US
-- UK South
-- West Central US
-- West Europe \*\*
-- West US 1
-- West US 2
-- West US 3 \*\*
+- Switzerland North
+- UK South \*\*
+- UK West
+- US Central \*\*
+- US East \*\*
+- US East 2
+- US North Central
+- US South Central
+- US West Central
+- US West 1
+- US West 2 \*\*
+- US West 3 \*\*
 
 \* Premium-series memory optimized hardware is not currently available.
 
@@ -321,6 +325,7 @@ Hyperscale service tier premium-series and premium-series memory optimized hardw
 #### Fsv2-series
 
 Fsv2-series is available in the following regions:
+
 - Australia Central
 - Australia Central 2
 - Australia East
@@ -328,30 +333,30 @@ Fsv2-series is available in the following regions:
 - Brazil South
 - Canada Central
 - East Asia
-- East US
+- Europe North
+- Europe West 
 - France Central
 - India Central
 - Korea Central
 - Korea South
-- North Europe
 - South Africa North
 - Southeast Asia
 - UK South
 - UK West
-- West Europe
-- West US 2
+- US East
+- US West 2
 
 #### DC-series
 
 DC-series is available in the following regions:
 
 - Canada Central
-- East US
-- North Europe
-- UK South
-- West Europe
-- West US
+- Europe West
+- Europe North
 - Southeast Asia
+- UK South
+- US West
+- US East
 
 If you need DC-series in a currently unsupported region, [submit a support request](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest). On the **Basics** page, provide the following:
 
@@ -363,7 +368,7 @@ If you need DC-series in a currently unsupported region, [submit a support reque
 1. For **Problem type**, select **Security, Private and Compliance**.
 1. For **Problem subtype**, select **Always Encrypted**.
 
-:::image type="content" source="./media/service-tiers-vcore/request-dc-series.png" alt-text="A screenshot of the Azure portal form to request DC-series in a new region." loc-scope="azure-portal":::
+:::image type="content" source="media/service-tiers-vcore/request-dc-series.png" alt-text="Screenshot of the Azure portal form to request DC-series in a new region." lightbox="media/service-tiers-vcore/request-dc-series.png":::
 
 ## Previous generation hardware
 
@@ -371,13 +376,14 @@ If you need DC-series in a currently unsupported region, [submit a support reque
 
 Gen4 hardware has been retired and isn't available for provisioning, upscaling, or downscaling. Migrate your database to a supported hardware generation for a wider range of vCore and storage scalability, accelerated networking, best IO performance, and minimal latency. Review [hardware options for single databases](resource-limits-vcore-single-databases.md) and [hardware options for elastic pools](resource-limits-vcore-elastic-pools.md). For more information, see [Support has ended for Gen 4 hardware on Azure SQL Database](https://azure.microsoft.com/updates/support-has-ended-for-gen-4-hardware-on-azure-sql-database/).
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md)
+
 ## Related content
 
 - [Azure SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/single/)
 - [Resource limits for single databases using the vCore purchasing model](resource-limits-vcore-single-databases.md)
 - [Resource limits for elastic pools using the vCore purchasing model](resource-limits-vcore-elastic-pools.md)
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md)

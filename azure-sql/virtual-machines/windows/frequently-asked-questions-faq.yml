@@ -238,6 +238,11 @@ sections:
              For SQL Server VMs deployed through Azure Marketplace, the installation media is at `C:\SQLServerFull`. Run Setup.exe from that location to add new SQL Server instances or to change other installed features of SQL Server on the machine. You can also copy this setup media to other virtual machines to install, or upgrade, that same version and edition of SQL Server.  Customers who have [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default?rtc=1&activetab=software-assurance-default-pivot%3aprimaryr3) can obtain their installation media from the [Volume Licensing Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx). 
              
       - question: |
+          How do I install SQL Server for PAYG licensing to an existing Azure VM? 
+        answer: |             
+             From the Azure Marketplace, deploy an extra VM that includes the version of SQL Server required. Copy the folder `C:\SQLServerFull` from this extra VM to your target VM, then delete the extra VM. Install SQL Server from the copied folder. This avoids potential issues related to product license keys.
+
+      - question: |
           How are updates and service packs applied on a SQL Server VM?
         answer: |
              Virtual machines give you control over the host machine, including when and how you apply updates. For the operating system, you can manually apply windows updates, or you can enable a scheduling service called [Automated Patching](automated-patching.md). Automated Patching installs any updates that are marked important, including SQL Server updates in that category. Other optional updates to SQL Server must be installed manually.

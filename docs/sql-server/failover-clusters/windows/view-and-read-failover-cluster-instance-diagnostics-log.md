@@ -134,7 +134,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;
 ```
 
-##### E. Check whether Failover Cluster Instance Diagnostics Log is enable and current configuration.
+##### E. Check whether Failover Cluster Instance Diagnostics Log is enabled and current configuration.
 
  The following example set the maximum size of each diagnostic log to 10 megabytes.
 

@@ -88,7 +88,7 @@ Available languages:
 
 | Feature | Details | Workaround |
 | --- | --- | --- |
-| Connection | When SQL Server is configured with **Force Strict Encryption**, selecting **Azure Data Studio -> New Query** from the server or database menu generates the error, "A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP provider, error: 0 - An existing connection was forcibly closed by the remote host.)" | Update the connection to use *Strict* instead of *Mandatory* for the **Encrypt** property in Azure Data Studio, and then connect. |
+| Connection | When SQL Server is configured with **Force Strict Encryption**, selecting **Azure Data Studio > New Query** from the server or database menu generates the error, "A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP provider, error: 0 - An existing connection was forcibly closed by the remote host.)" | Update the connection to use *Strict* instead of *Mandatory* for the **Encrypt** property in Azure Data Studio, and then connect. |
 | Connection | Connecting to SQL Server with *Strict (SQL 2022 and Azure SQL)* selected for **Encryption** and a non-TCP/IP network protocol generates the error, "Cannot connect to SERVERNAME. A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: Shared Memory Provider, error: 15 - Function not supported) (Microsoft SQL Server, Error: 50)  The request is not supported" | Change the **Network protocol** connection property to use *TCP/IP*, or enable the TCP/IP protocol for the SQL Server. |
 | Database Tuning Advisor | When SQL Server is configured with **Force Strict Encryption**, connection to the server from the Database Tuning Advisor isn't supported. | No alternative. |
 | Maintenance Plans | When you connect to a server with *Strict (SQL Server 2022 and Azure SQL)* encryption, modifying an existing maintenance plan generates the error "Failed to connect to SERVERNAME. (Microsoft.SqlServer.ConnectionInfo) A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The target principal name is incorrect.)" | The problem doesn't occur when you connect with *Mandatory* or *Optional* encryption. |
@@ -204,7 +204,7 @@ SQL Server utility is no longer available in versions 17.x and newer.
 
 If your SSMS installation is having problems, and a standard uninstall and reinstall doesn't resolve them, you can first try [repairing](https://support.microsoft.com/help/4028054/windows-10-repair-or-remove-programs) the Visual Studio 2015 IsoShell. If repairing the Visual Studio 2015 IsoShell doesn't resolve the problem, the following steps have been found to fix many random issues:
 
-1. Uninstall SSMS the same way you uninstall any application (using *Add or remove programs*).
+1. Uninstall SSMS the same way you uninstall any application (using **Add or remove programs**).
 
 1. Uninstall Visual Studio 2015 IsoShell **from an elevated cmd prompt**:
 

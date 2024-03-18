@@ -143,7 +143,7 @@ The following table lists all available configuration options, the range of poss
 | [max server memory](server-memory-server-configuration-options.md) (A, SC) | **Minimum**: `16`<br />**Maximum**: `2147483647`<br />**Default**: `2147483647` | Yes | Yes |
 | [max text repl size](configure-the-max-text-repl-size-server-configuration-option.md) | **Minimum**: `0`<br />**Maximum**: `2147483647`<br />**Default**: `65536` | Yes | Yes |
 | [max worker threads](configure-the-max-worker-threads-server-configuration-option.md) (A) <sup>2</sup> | **Minimum**: `128`<br />**Maximum**: `32767`<br />**Default**: `0`<br /><br />`2048` is the [recommended maximum](configure-the-max-worker-threads-server-configuration-option.md#recommendations) for 64-bit SQL Server (`1024` for 32-bit) | Yes | Yes |
-| [media retention](configure-the-media-retention-server-configuration-option.md) (A, RR) | **Minimum**: `0`<br />**Maximum**: `365`<br />**Default**: `0` | Yes | No |
+| [media retention](configure-the-media-retention-server-configuration-option.md) (A) | **Minimum**: `0`<br />**Maximum**: `365`<br />**Default**: `0` | Yes | No |
 | [min memory per query](configure-the-min-memory-per-query-server-configuration-option.md) (A) | **Minimum**: `512`<br />**Maximum**: `2147483647`<br />**Default**: `1024` | Yes | No |
 | [min server memory](server-memory-server-configuration-options.md) (A, SC) | **Minimum**: `0`<br />**Maximum**: `2147483647`<br />**Default**: `0` | Yes | No |
 | [nested triggers](configure-the-nested-triggers-server-configuration-option.md) | **Minimum**: `0`<br />**Maximum**: `1`<br />**Default**: `1` | Yes | Yes |
@@ -152,7 +152,7 @@ The following table lists all available configuration options, the range of poss
 | [open objects](open-objects-server-configuration-option.md) (A, RR)<br /><br />**Warning:** Obsolete. Don't use. | **Minimum**: `0`<br />**Maximum**: `2147483647`<br />**Default**: `0` | Yes | No |
 | [optimize for ad hoc workloads](optimize-for-ad-hoc-workloads-server-configuration-option.md) (A) | **Minimum**: `0`<br />**Maximum**: `1`<br />**Default**: `0` | Yes | Yes |
 | [PH timeout](ph-timeout-server-configuration-option.md) (A) | **Minimum**: `1`<br />**Maximum**: `3600`<br />**Default**: `60` | Yes | Yes |
-| [polybase enabled](../../relational-databases/polybase/polybase-installation.md#enable) (RR) | **Minimum**: `0`<br />**Maximum**: `1`<br />**Default**: `0` | [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions | No |
+| [polybase enabled](../../relational-databases/polybase/polybase-installation.md#enable)  | **Minimum**: `0`<br />**Maximum**: `1`<br />**Default**: `0` | [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions | No |
 | [polybase network encryption](../../relational-databases/polybase/polybase-installation.md#enable) | **Minimum**: `0`<br />**Maximum**: `1`<br />**Default**: `1` | Yes | Yes |
 | [precompute rank](../discontinued-database-engine-functionality-in-sql-server.md) (A) | **Minimum**: `0`<br />**Maximum**: `1`<br />**Default**: `0` | Yes | Yes |
 | [priority boost](configure-the-priority-boost-server-configuration-option.md) (A, RR) | **Minimum**: `0`<br />**Maximum**: `1`<br />**Default**: `0` | Yes | No |

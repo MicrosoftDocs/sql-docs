@@ -14,7 +14,7 @@ The following table identifies features enabled depending on license type:
 |[SQL Server inventory](../overview.md#manage-your-sql-server-instances-at-scale-from-a-single-point-of-control)|Yes |Yes |Yes |
 |[Best practices assessment](../assess.md) |No |Yes |Yes |
 |[Migration assessment (preview)](../migration-assessment.md) |Yes |Yes |Yes |
-|[Detailed database inventory](../view-databases.md#inventory-databases) |No |Yes |Yes |
+|[Detailed database inventory](../view-databases.md#inventory-databases) |Yes |Yes |Yes |
 |[Microsoft Entra ID authentication](../../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) |Yes |Yes |Yes |
 |[Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-sql-usage)|Yes |Yes |Yes |
 |[Govern through Microsoft Purview](/azure/purview/tutorial-register-scan-on-premises-sql-server)|Yes |Yes |Yes |

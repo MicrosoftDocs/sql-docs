@@ -4,7 +4,7 @@ description: This article describes editions, features, and components supported
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 01/08/2024
+ms.date: 03/07/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -143,9 +143,12 @@ The Developer edition continues to support only one client for [SQL Server Distr
 | Basic auditing | Yes | Yes | Yes | Yes |
 | Fine-grained auditing | Yes | Yes | Yes | Yes |
 | Transparent database encryption (TDE) | Yes | Yes | No | No |
+| Extensible Key Management (EKM) using Azure Key Vault <sup>1</sup> | Yes | Yes | Yes | Yes |
 | User-defined roles | Yes | Yes | Yes | Yes |
 | Contained databases | Yes | Yes | Yes | Yes |
 | Encryption for backups | Yes | Yes | No | No |
+
+<sup>1</sup> EKM using Azure Key Vault is available for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] CU 12. For more information, see [Set up SQL Server TDE Extensible Key Management by using Azure Key Vault](../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md#step-5-configure-sql-server).
 
 ## RDBMS manageability
 
@@ -220,7 +223,7 @@ The following features and services aren't available for [!INCLUDE [sssql22](../
 | | Alerts | |
 | | Managed Backup | |
 | **High Availability** | Database mirroring | This feature is [deprecated](../database-engine/database-mirroring/database-mirroring-sql-server.md). Use Always On availability groups instead. |
-| **Security** | Extensible Key Management (EKM) | |
+| **Security** | Extensible Key Management (EKM) | Extensible Key Management using Azure Key Vault is available for SQL Server on Linux environments, starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] CU 12. Follow the instructions from [Step 5: Configure SQL Server](../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md#step-5-configure-sql-server) onward. |
 | | Windows integrated authentication for linked servers | |
 | | Windows integrated authentication for availability group (AG) endpoints | Create and use certificate based endpoint authentication for availability groups. For more information, see [Configure SQL Server Always On Availability Group for high availability on Linux](sql-server-linux-availability-group-configure-ha.md). |
 | | Always Encrypted with secure enclaves | |

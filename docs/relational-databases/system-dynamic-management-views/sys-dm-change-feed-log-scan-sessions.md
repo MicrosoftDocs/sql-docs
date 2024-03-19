@@ -4,8 +4,9 @@ description: sys.dm_change_feed_log_scan_sessions (Transact-SQL) shows activity 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: imotiwala
-ms.date: 03/08/2024
+ms.date: 03/18/2024
 ms.service: fabric
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_change_feed_log_scan_sessions_TSQL"

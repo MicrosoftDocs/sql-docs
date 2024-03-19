@@ -6,6 +6,7 @@ ms.author: wiassaf
 ms.reviewer: imotiwala
 ms.date: 03/12/2024
 ms.service: fabric
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.sp_change_feed_drop_table_group_TSQL"

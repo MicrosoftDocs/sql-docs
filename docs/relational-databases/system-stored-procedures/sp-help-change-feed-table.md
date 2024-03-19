@@ -4,8 +4,9 @@ description: "The sys.sp_help_change_feed_table system stored procedure provides
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: imotiwala
-ms.date: 03/11/2024
+ms.date: 03/18/2024
 ms.service: fabric
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.sp_help_change_feed_table_TSQL"

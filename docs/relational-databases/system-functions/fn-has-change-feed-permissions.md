@@ -4,8 +4,9 @@ description: "The internal sys.fn_has_change_feed_permissions system function ch
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: imotiwala
-ms.date: 03/12/2024
+ms.date: 03/18/2024
 ms.service: fabric
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.fn_has_change_feed_permissions_TSQL"

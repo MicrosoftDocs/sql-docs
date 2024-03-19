@@ -4,8 +4,8 @@ description: "changefeed.change_feed_tables stores metadata that is used to conf
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: imotiwala
-ms.date: 03/11/2024
-ms.service: sql
+ms.date: 03/18/2024
+ms.service: synapse-analytics
 ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:

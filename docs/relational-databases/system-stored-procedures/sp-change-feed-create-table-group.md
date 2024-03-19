@@ -4,8 +4,9 @@ description: "The sys.sp_change_feed_create_table_group system stored procedure 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: imotiwala
-ms.date: 03/08/2024
+ms.date: 03/18/2024
 ms.service: fabric
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.sp_change_feed_create_table_group_TSQL"

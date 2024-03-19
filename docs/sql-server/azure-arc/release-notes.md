@@ -17,9 +17,15 @@ ms.custom: ignite-2023
 
 **Extension version**: `1.1.2620.127`
 
-## Backup management
+### Backup management
 
 - Schedule backup at instance level or database level. For details, review [Backup schedule level](backup-local.md#backup-schedule-level).
+
+### Streamlined network endpoints
+
+Prior to this release, Azure Arc data processing endpoint was at `san-af-<region>-prod.azurewebsites.net`.
+
+Beginning with this release both Azure Arc data processing, and Azure Arc data telemetry use `*.<region>.arcdataservices.com`.
 
 ## February 13, 2024
 

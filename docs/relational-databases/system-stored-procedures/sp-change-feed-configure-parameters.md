@@ -1,11 +1,12 @@
 ---
 title: "sys.sp_change_feed_configure_parameters (Transact-SQL)"
-description: "The sys.sp_change_feed_configure_parameters system stored procedure is used to reduce latency or reduce the cost by increasing the batch size with higher transactions."
+description: "The sys.sp_change_feed_configure_parameters system stored procedure is used to increase the batch size with higher transactions."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: imotiwala
 ms.date: 03/12/2024
 ms.service: fabric
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.sp_change_feed_configure_parameters_TSQL"

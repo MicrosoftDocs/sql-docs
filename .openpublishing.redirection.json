@@ -59709,6 +59709,16 @@
       "source_path": "docs/relational-databases/performance/intelligent-query-processing-feedback.md",
       "redirect_url": "/sql/relational-databases/performance/intelligent-query-processing-memory-grant-feedback",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/download-sql-server-management-studio-ssms-20.md",
+      "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/release-notes-ssms-20.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms",
+      "redirect_document_id": false
     }
  ]
 }

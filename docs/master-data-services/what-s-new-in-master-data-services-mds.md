@@ -23,23 +23,23 @@ monikerRange: ">=sql-server-ver16"
   
 -   To download [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**.  
   
--   Have an Azure account?  Then go **[here](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2019?tab=Overview)** to spin up a Virtual Machine with [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] already installed.  
+-   Have an Azure account? Then go **[here](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2019?tab=Overview)** to spin up a Virtual Machine with [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] already installed.  
   
 ##  Improved Performance  
   
- Performance improvements enable you to create larger models, load data more efficiently, and get better overall performance. This includes improvement the performance of the add-in for Microsoft Excel has been improved to decrease data load times and enable the add-in to handle larger entities.  
+ Performance improvements enable you to create larger models, load data more efficiently, and get better overall performance. This performance improvement includes decrease data load times of Microsoft Excel add-in and enable the Microsoft Excel add-in to handle larger entities.  
   
  For more information about the add-in for Microsoft Excel, see [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
   
  The following feature improvements are included.  
   
--   There is data compression on the entity level, which by default is enabled. When data compression is enabled, all the entity related tables and indexes are compressed with SQL Row Level compression. This significantly reduces the disk I/O when reading or updating the master data, especially when the master data has millions of rows and/or has a lot of NULL value columns.  
+-   There is data compression on the entity level, which by default is enabled. When data compression is enabled, all the entity related tables and indexes are compressed with SQL Row Level compression. This improvement significantly reduces the disk I/O when reading or updating the master data, especially when the master data has millions of rows and/or has a lot of NULL value columns.  
   
      Because there is a slight increase in the CPU usage on the SQL Server engine side, if you have CPU bound on the server you can turn off data compression by editing the entity.  
   
      For more information, see [Create an Entity &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)and [Data Compression](../relational-databases/data-compression/data-compression.md).  
   
--   The Dynamic Content Compression IIS feature is enabled, by default. This significantly reduces the size of the xml response and saves the network I/O, though CPU usage is increased. If you have CPU bound on the server, you can turn off data compression by adding the following setting to the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web.config file.  
+-   The Dynamic Content Compression IIS feature is enabled, by default. It significantly reduces the size of the xml response and saves the network I/O, though CPU usage is increased. If you have CPU bound on the server, you can turn off data compression by adding the following setting to the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web.config file.  
   
     ```  
     <configuration>  
@@ -58,7 +58,7 @@ monikerRange: ">=sql-server-ver16"
   
     -   MDS_MDM_Sample_Log_Maintenace  
   
- By default the MDS_MDM_Sample_Index_Maintenance job runs weekly. You can modify the schedule. You can also manually run the job at any time by using the udpDefragmentation stored procedure. It is recommended that you run the stored procedure each time a large volume of master data is inserted or updated, or after a new version is created from the existing version.  
+ By default the MDS_MDM_Sample_Index_Maintenance job runs weekly. You can modify the schedule. You can also manually run the job at any time by using the udpDefragmentation stored procedure. When you insert or update a large volume of master data, or after create a new version from the existing version, it is recommended that you run the store procure.
   
  An index with more than 30% fragmentation is rebuilt online. During the rebuild, the performance is affected on the CRUD operation on the same table. If performance degradation is a concern, it is recommended that you run the store procedure during off business hours. For more information about index fragmentation, see [Reorganize and Rebuild Indexes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
@@ -68,9 +68,9 @@ monikerRange: ">=sql-server-ver16"
   
  The new Super User function permission gives a user or group the same permissions as the Server Admin in the previous release of [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. The Super User permission can be assigned to multiple users and groups. In the previous release, the user who originally installed [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] was the server admin, and it was difficult to transfer this permission to another user or a group. For more information, see [Functional Area Permissions &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
- A user can now explicitly be assigned the Admin permission at the model level. This means that if the user is later assigned permissions in the model subtree, such as the entity level, he will not lose this Admin permission.  
+ A user can now explicitly be assigned the Admin permission at the model level. This means that if the user is assigned permissions in the model subtree, such as the entity level, he still has this Admin permission.
   
- In this release of [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], we're providing more levels of permissions by introducing the following new permissions: Read, Create, Update and Delete. For example, a user that has only the Update permission can now update the master data without creating or deleting the data. When you give a user the Create, Update or Delete permission, the user is automatically assigned the Read permission. You can also combine the Read, Create, Update and Delete permissions.  
+ In this release of [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], we're providing more levels of permissions by introducing the following new permissions: Read, Create, Update, and Delete. For example, a user that has only the Update permission can now update the master data without creating or deleting the data. When you give a user the Create, Update or Delete permission, the user is automatically assigned the Read permission. You can also combine the Read, Create, Update, and Delete permissions.  
   
  When you upgrade to [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], old permissions are converted to new permissions as shown in the following table.  
   
@@ -86,7 +86,7 @@ monikerRange: ">=sql-server-ver16"
   
 ##  Improved Transaction Log Maintenance  
   
- You can now clean transaction logs at pre-determined intervals or on a schedule, using the System settings and at the model level. For an MDS system with lot of data changes and ETL processes these tables can grow exponentially and lead to performance degradation and storage space issues.  
+ You can now clean transaction logs at predetermined intervals or on a schedule, using the System settings and at the model level. For an MDS system with lot of data changes and ETL processes, these tables can grow exponentially and lead to performance degradation and storage space issues.  
   
  The following types of data can be removed from the logs.  
   
@@ -104,11 +104,11 @@ monikerRange: ">=sql-server-ver16"
   
 ## Improved Troubleshooting  
   
- In [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], features have been added to improve debugging and make it easier to troubleshoot issues. For more information, see [Tracing &#40;Master Data Services&#41;](../master-data-services/tracing-master-data-services.md).  
+ In [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], added features could improve debugging and make it easier to troubleshoot issues. For more information, see [Tracing &#40;Master Data Services&#41;](../master-data-services/tracing-master-data-services.md).  
   
 ## Improved Manageability  
   
- Improvements in manageability help to lower maintenance costs and positively impact your return on investment (ROI). These improvements include transaction log maintenance and improvements to security, as well as the following new features.  
+ Improvements in manageability help to lower maintenance costs and positively impact your return on investment (ROI). These improvements include transaction log maintenance and improvements to security, and the following new features.  
   
 -   Using attribute names that are longer than 50 characters.  
   
@@ -135,7 +135,7 @@ monikerRange: ">=sql-server-ver16"
  
  **Business Rule Management Experience Redesigned**  
   
- The business rule management experience in MDS has been completely redesigned to improve the experience. For more information about this feature, see [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md).  
+ The business rule management experience in MDS has been redesigned to improve the experience. For more information about this feature, see [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md).  
   
  **Business Rule Management Functionality Removed from the MDS Add-in for Excel**  
   
@@ -149,7 +149,7 @@ monikerRange: ">=sql-server-ver16"
 
  **Many-to-Many Relationships in Derived Hierarchies**  
   
- You can now create a Derived Hierarchy that displays  many-to-many relationships. A many-to-many relationship between two entities may be modeled through the use of a third entity that provides a mapping between them. The mapping entity is an entity that has two or more domain-based attributes referencing other entities.  
+ You can now create a Derived Hierarchy that displays  many-to-many relationships. A many-to-many relationship between two entities may be modeled through by using a third entity that provides a mapping between them. The mapping entity is an entity that has two or more domain-based attributes referencing other entities.  
   
  For example, entity M has a domain-based attribute that references A and a domain-based attribute that references B. You can create a hierarchy from A to B using the mapping entity.  
   
@@ -161,9 +161,9 @@ monikerRange: ">=sql-server-ver16"
  
  **Derived Hierarchy Management Experience Improved**  
   
- The derived hierarchy management experience in MDS has been improved. For more information about this feature, see [Create a Derived Hierarchy &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md).  
+ The derived hierarchy management experience in MDS already be improved. For more information about this feature, see [Create a Derived Hierarchy &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md).  
   
- Business Rule management functionality has been removed from the MDS Add-in for Excel because we redesigned the experience.  
+ Business Rule management functionality already be removed from the MDS Add-in for Excel because we redesigned the experience.  
  
 ## Attribute Improvements   
     
@@ -189,7 +189,7 @@ monikerRange: ">=sql-server-ver16"
   
  **Member Revision History**  
   
- A member revision history is recorded when a member is changed. You can roll back a revision history, as well as view and annotate revisions. Using the **Log Retention Days** property, you can specify how long historical data is retained. For more information, see [Member Revision History &#40;Master Data Services&#41;](../master-data-services/member-revision-history-master-data-services.md).  
+ A member revision history is recorded when a member is changed. You can roll back a revision history, and view and annotate revisions. Using the **Log Retention Days** property, you can specify how long historical data is retained. For more information, see [Member Revision History &#40;Master Data Services&#41;](../master-data-services/member-revision-history-master-data-services.md).  
   
  **Merge Conflicts**  
   

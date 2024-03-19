@@ -58,7 +58,7 @@ monikerRange: ">=sql-server-ver16"
   
     -   MDS_MDM_Sample_Log_Maintenace  
   
- By default the MDS_MDM_Sample_Index_Maintenance job runs weekly. You can modify the schedule. You can also manually run the job at any time by using the udpDefragmentation stored procedure. When you insert or update a large volume of master data, or after create a new version from the existing version, it is recommended that you run the store procure.
+ By default the MDS_MDM_Sample_Index_Maintenance job runs weekly. You can modify the schedule. You can also manually run the job at any time by using the udpDefragmentation stored procedure. When you insert or update a large volume of master data, or after you create a new version from the existing version, it is recommended that you run the store procure.
   
  An index with more than 30% fragmentation is rebuilt online. During the rebuild, the performance is affected on the CRUD operation on the same table. If performance degradation is a concern, it is recommended that you run the store procedure during off business hours. For more information about index fragmentation, see [Reorganize and Rebuild Indexes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
@@ -161,9 +161,9 @@ monikerRange: ">=sql-server-ver16"
  
  **Derived Hierarchy Management Experience Improved**  
   
- The derived hierarchy management experience in MDS already be improved. For more information about this feature, see [Create a Derived Hierarchy &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md).  
+ The derived hierarchy management experience in MDS has already been improved. For more information about this feature, see [Create a Derived Hierarchy &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md).  
   
- Business Rule management functionality already be removed from the MDS Add-in for Excel because we redesigned the experience.  
+ Business Rule management functionality has already been removed from the MDS Add-in for Excel because we redesigned the experience.  
  
 ## Attribute Improvements   
     

@@ -28,7 +28,7 @@ monikerRange: ">=sql-server-ver16"
   
 -   The stored procedure, mdm.udpConvertCollectionAndConsolidatedMembersToLeaf, converts explicit hierarchies to recursive derived hierarchies, and coverts consolidated and collection members to leaf members.  
   
-     Explicit hierarchies and consolidated and collection member types are still supported, so running the stored procedure is optional. However, if you use these items it's recommended that you run the stored procedure because they are deprecated.However, if you use these items it is recommended that you run the stored procedure because they're deprecated.
+     Explicit hierarchies and consolidated and collection member types are still supported, so running the stored procedure is optional. However, if you use these items it's recommended that you run the stored procedure because they are deprecated. However, if you use these items it is recommended that you run the stored procedure because they're deprecated.
   
  For information about explicit hierarchies, collections, and consolidated members see the following topics.  
   

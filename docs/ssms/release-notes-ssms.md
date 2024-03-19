@@ -9,6 +9,7 @@ ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
 ---
+
 # Release notes for SQL Server Management Studio (SSMS)
 
 [!INCLUDE [sql-asdb-asdbmi-asa](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -50,9 +51,9 @@ Available languages:
 | Connection | The connection security properties **Encryption** and **Trust server certificate** now exist on the main sign in page in the Connection dialog for easier access. For more information, see [Connect with SQL Server Management Studio](quickstarts/ssms-connect.md). |
 | Connection | A new property, **Host Name in Certificate**, used with the *Strict (SQL Server 2022 and Azure SQL)* and *Mandatory* **Encryption** options, now exists on the Login page of the Connection dialog. |
 | Connection | Added icons to the Query Editor status bar to indicate the encryption method used for the connection. |
-| Connection | Added Microsoft Entra sign in options to wizard login pages. |
+| Connection | Added Microsoft Entra ID authentication to **New Login** wizard. |
 | Drivers | Updated Microsoft.Data.SqlClient version to 5.1.4, which includes support for Strict encryption and Transport Layer Security (TLS) 1.3. |
-| Libraries | Updated Server Management Objects (SMO) version to 171.1.x. |
+| Libraries | Updated Server Management Objects (SMO) version to 171.30.0|
 | Libraries | Updated DacFx version to 162.1.x. |
 | Options | Introduced a new option, **Trust server certificate for imported connections**, in **Tools > Options > SQL Server Object Explorer > Commands** under **Connection security**. For more information, see [Options (SQL Server Object Explorer - Commands)](menu-help/options-sql-server-object-explorer-commands.md). |
 
@@ -93,8 +94,8 @@ Available languages:
 | Database Tuning Advisor | When SQL Server is configured with **Force Strict Encryption**, connection to the server from the Database Tuning Advisor isn't supported. | No alternative. |
 | Maintenance Plans | When you connect to a server with *Strict (SQL Server 2022 and Azure SQL)* encryption, modifying an existing maintenance plan generates the error "Failed to connect to SERVERNAME. (Microsoft.SqlServer.ConnectionInfo) A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The target principal name is incorrect.)" | The problem doesn't occur when you connect with *Mandatory* or *Optional* encryption. |
 | Profiler | When SQL Server is configured with **Force Strict Encryption**, connection to the server from Profiler isn't supported, and the error "Cannot connect to SERVERNAME. Class not registered (pfutil)" is generated. | Install MSOLEDBSQL version 19, available from [Download Microsoft OLE DB Driver for SQL Server](../connect/oledb/download-oledb-driver-for-sql-server.md). |
-| PowerShell | When you connect to a server with *Strict (SQL Server 2022 and Azure SQL)* encryption, selecting **Start Powershell** from a node in Object Explorer generates the error "SQL Server PowerShell provider error: Could not connect to SERVERNAME. [Failed to connect to server SERVERNAME. --> A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.) --> An existing connection was forcibly closed by the remote host]". | No current alternative. |
 | Profiler | When you connect to a server with *Strict (SQL Server 2022 and Azure SQL)* encryption and MSOLEDBSQL version 19 installed, traces can't be saved to, or loaded from, a database table. | No alternative. |
+| PowerShell | When you connect to a server with *Strict (SQL Server 2022 and Azure SQL)* encryption, selecting **Start Powershell** from a node in Object Explorer generates the error "SQL Server PowerShell provider error: Could not connect to SERVERNAME. [Failed to connect to server SERVERNAME. --> A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.) --> An existing connection was forcibly closed by the remote host]". | No current alternative. |
 | SQL Server Logs | When SQL Server is configured with **Force Strict Encryption**, you can't view the SQL Server ERRORLOG files via Object Explorer, or executing `master.dbo.sp_enumerrorlogs` or `sys.xp_enumerrorlogs` via the Query Editor. | View the ERRORLOG files in the Log folder using File Explorer. |
 
 You can reference [SQL user feedback](https://aka.ms/ssms-feedback) for other known issues (filter on **Tooling** under **Groups**) and to provide feedback to the product team.

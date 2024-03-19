@@ -118,6 +118,21 @@ Follow these steps to install SSMS in the background with no GUI prompts.
 
 1. If all goes well, you can see SSMS installed at *%systemdrive%\SSMSto\Common7\IDE\Ssms.exe* based on the example. If something went wrong, you could inspect the error code returned and review the log file in `%TEMP%\SSMSSetup`.
 
+## Uninstall
+
+SSMS might install shared components if it determines they're missing during SSMS installation. SSMS doesn't automatically uninstall these components when you uninstall SSMS.
+
+The shared components are:
+
+- Microsoft OLE DB Driver 18 for SQL Server
+- Microsoft ODBC Driver 17 for SQL Server
+- Microsoft Visual C++ 2013 Redistributable (x86)
+- Microsoft Visual C++ 2017 Redistributable (x86)
+- Microsoft Visual C++ 2017 Redistributable (x64)
+- Microsoft Visual Studio Tools for Applications 2019
+
+These components aren't uninstalled because they can be shared with other products. If uninstalled, you might run the risk of disabling other products.
+
 ## Installation with Azure Data Studio
 
 - SSMS installs Azure Data Studio by default for versions 18.7 through 19.3.
@@ -127,22 +142,6 @@ Follow these steps to install SSMS in the background with no GUI prompts.
 - The Azure Data Studio installation is completed with the default Azure Data Studio installation options. These are to create a Start Menu folder and add Azure Data Studio to PATH. A desktop shortcut isn't created, and Azure Data Studio isn't registered as a default editor for any file type.
 - Localization of Azure Data Studio is accomplished through Language Pack extensions. Install the corresponding language pack from the [extension marketplace](/azure-data-studio/extensions/add-extensions) to localize Azure Data Studio.
 - For versions 18.7 through 19.3, the installation of Azure Data Studio can be skipped by launching the SSMS installer with the command line flag `DoNotInstallAzureDataStudio=1`.
-
-## Uninstall
-
-SSMS might install shared components if it determines they're missing during SSMS installation. SSMS doesn't automatically uninstall these components when you uninstall SSMS.
-
-The shared components are:
-
-- Azure Data Studio
-- Microsoft OLE DB Driver for SQL Server
-- Microsoft ODBC Driver 17 for SQL Server
-- Microsoft Visual C++ 2013 Redistributable (x86)
-- Microsoft Visual C++ 2017 Redistributable (x86)
-- Microsoft Visual C++ 2017 Redistributable (x64)
-- Microsoft Visual Studio Tools for Applications 2019
-
-These components aren't uninstalled because they can be shared with other products. If uninstalled, you might run the risk of disabling other products.
 
 ## Supported SQL offerings
 

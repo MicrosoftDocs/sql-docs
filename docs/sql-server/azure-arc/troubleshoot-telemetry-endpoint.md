@@ -83,18 +83,21 @@ Check for log entries that indicate a problem connecting to the DPS or telemetry
 
 ## Endpoint reference
 
-The specific endpoints are:
+Beginning with [March, 12 2024](release-notes.md#march-12-2024), DPS and telemetry both use endpoints at:
+
+`*.<region>.arcdataservices.com`.
+
+Replace `<region>` with the short name of the Azure region where the Arc machine resource is located. The short name is derived from the Azure region name without spaces and all lower case.
+
+For example, if your Arc machine resource is located in *East US 2* the short name of the region is `eastus2` and the endpoints are at: 
+
+`*.eastus2.arcdataservices.com`.
+
+Up to and including the [February 13, 2024](release-notes.md#february-13-2024), The specific endpoints were:
 
 - DPS: `san-af-<region>-prod.azurewebsites.net`.
 
 - Telemetry `telemetry.<region>.arcdataservices.com`.
-
-In both cases, replace `<region>` with the short name of the Azure region where the Arc machine resource is located. The short name is derived from the Azure region name without spaces and all lower case.
-
-For example, if your Arc machine resource is located in *East US 2* the short name of the region is `eastus2` and the endpoints are: 
-
-- `san-af-eastus2-prod.azurewebsites.net`
-- `telemetry.eastus2.arcdataservices.com`.
 
 ## Use an HTTPS proxy server for outbound connectivity
 

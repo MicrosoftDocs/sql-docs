@@ -4,7 +4,7 @@ description: Install and configure the SQL Server Connector for Azure Key Vault.
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto, randolphwest
-ms.date: 01/11/2024
+ms.date: 03/07/2024
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -17,11 +17,13 @@ helpviewer_keywords:
 ---
 # Set up SQL Server TDE Extensible Key Management by using Azure Key Vault
 
-[!INCLUDE [sql-windows-only](../../../includes/applies-to-version/sql-windows-only.md)]
+[!INCLUDE [sqlserver](../../../includes/applies-to-version/sqlserver.md)]
 
-In this article, you install and configure the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for Azure Key Vault. Extensible Key Management is [not supported](../../../linux/sql-server-linux-editions-and-components-2019.md#unsupported-features-and-services) for SQL Server on Linux.
+In this article, you install and configure the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for Azure Key Vault.
 
 [!INCLUDE [entra-id](../../../includes/entra-id.md)]
+
+Extensible Key Management using Azure Key Vault is also available for SQL Server on Linux environments, starting with [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] CU 12. Follow the instructions from [Step 5: Configure SQL Server](#step-5-configure-sql-server) onward.
 
 ## Prerequisites
 

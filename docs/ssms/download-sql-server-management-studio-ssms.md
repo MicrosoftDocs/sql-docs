@@ -4,7 +4,7 @@ description: Download the latest version of SQL Server Management Studio (SSMS) 
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan, randolphwest
-ms.date: 02/29/2024
+ms.date: 03/19/2024
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -33,21 +33,23 @@ Use SSMS to query, design, and manage your databases and data warehouses, wherev
 
 For customers needing a cross-platform companion to SSMS for managing SQL and other Azure databases, use [Azure Data Studio](/azure-data-studio/download-azure-data-studio).
 
+For details and more information about what's new in this release, *including important security changes*, see [Release notes for SQL Server Management Studio (SSMS) 20](release-notes-ssms.md).
+
 ## Download SSMS
 
-:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server Management Studio (SSMS) 19.3](https://aka.ms/ssmsfullsetup)**
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server Management Studio (SSMS) 20.0](https://aka.ms/ssmsfullsetup)**
 
-SSMS 19.3 is the latest general availability (GA) version. If you have a *preview* version of SSMS 19 installed, uninstall it before installing SSMS 19.3. If you have SSMS 19.x installed, installing SSMS 19.3 upgrades it to 19.3.
+SSMS 20.0 is the latest generally available (GA) version. If you have a *preview* version of SSMS 20 installed, uninstall it before installing SSMS 20.0. Installing SSMS 20 doesn't upgrade or replace SSMS 19.x and earlier versions.
 
-- Release number: 19.3
-- Build number: 19.3.4.0
-- Release date: January 10, 2024
+- Release number: 20.0
+- Build number: 20.0.70.0
+- Release date: March 19, 2024
 
 By using SQL Server Management Studio, you agree to its [license terms](/Legal/sql/sql-server-management-studio-license-terms) and [privacy statement](https://privacy.microsoft.com/privacystatement). If you have comments or suggestions or want to report issues, the best way to contact the SSMS team is at [SQL user feedback](https://aka.ms/ssms-feedback).
 
-The SSMS 19.x installation doesn't upgrade or replace SSMS 18.x and earlier versions. SSMS 19.x installs alongside previous versions, so both versions are available. However, if you have an earlier *preview* version of SSMS 19 installed, you must uninstall it before installing the latest release of SSMS 19. You can see if you have a preview version by going to the **Help > About** window.
+The SSMS 20.x installation doesn't upgrade or replace SSMS 19.x and earlier versions. SSMS 20.x installs alongside previous versions, so both versions are available. However, if you have an earlier *preview* version of SSMS 20 installed, you must uninstall it before installing the latest release of SSMS 20. You can see if you have a preview version by going to the **Help > About** window.
 
-If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio v19.3**.
+If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio v20.0**.
 
 [!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
 
@@ -55,7 +57,7 @@ If a computer contains side-by-side installations of SSMS, verify you start the 
 
 This release of SSMS can be installed in the following languages:
 
-SQL Server Management Studio 19.3:
+SQL Server Management Studio 20.0:
 
 - [Chinese (Simplified)](https://aka.ms/ssmsfullsetup?clcid=0x804)
 - [Chinese (Traditional)](https://aka.ms/ssmsfullsetup?clcid=0x404)
@@ -116,24 +118,13 @@ Follow these steps to install SSMS in the background with no GUI prompts.
 
 1. If all goes well, you can see SSMS installed at *%systemdrive%\SSMSto\Common7\IDE\Ssms.exe* based on the example. If something went wrong, you could inspect the error code returned and review the log file in `%TEMP%\SSMSSetup`.
 
-## Installation with Azure Data Studio
-
-- SSMS installs Azure Data Studio by default.
-  - The installation of Azure Data Studio by SSMS is skipped if an equal or higher version of Azure Data Studio is already installed.
-  - The Azure Data Studio version can be found in the [release notes](release-notes-ssms.md).
-- The Azure Data Studio system installer requires the same security rights as the SSMS installer.
-- The Azure Data Studio installation is completed with the default Azure Data Studio installation options. These are to create a Start Menu folder and add Azure Data Studio to PATH. A desktop shortcut isn't created, and Azure Data Studio isn't registered as a default editor for any file type.
-- Localization of Azure Data Studio is accomplished through Language Pack extensions. Install the corresponding language pack from the [extension marketplace](/azure-data-studio/extensions/add-extensions) to localize Azure Data Studio.
-- At this time, the installation of Azure Data Studio can be skipped by launching the SSMS installer with the command line flag `DoNotInstallAzureDataStudio=1`.
-
 ## Uninstall
 
 SSMS might install shared components if it determines they're missing during SSMS installation. SSMS doesn't automatically uninstall these components when you uninstall SSMS.
 
 The shared components are:
 
-- Azure Data Studio
-- Microsoft OLE DB Driver for SQL Server
+- Microsoft OLE DB Driver 18 for SQL Server
 - Microsoft ODBC Driver 17 for SQL Server
 - Microsoft Visual C++ 2013 Redistributable (x86)
 - Microsoft Visual C++ 2017 Redistributable (x86)
@@ -142,11 +133,21 @@ The shared components are:
 
 These components aren't uninstalled because they can be shared with other products. If uninstalled, you might run the risk of disabling other products.
 
+## Installation with Azure Data Studio
+
+- SSMS installs Azure Data Studio by default for versions 18.7 through 19.3.
+  - The installation of Azure Data Studio by SSMS is skipped if an equal or higher version of Azure Data Studio is already installed.
+  - The Azure Data Studio version can be found in the [release notes](release-notes-ssms.md).
+- The Azure Data Studio system installer requires the same security rights as the SSMS installer.
+- The Azure Data Studio installation is completed with the default Azure Data Studio installation options. These are to create a Start Menu folder and add Azure Data Studio to PATH. A desktop shortcut isn't created, and Azure Data Studio isn't registered as a default editor for any file type.
+- Localization of Azure Data Studio is accomplished through Language Pack extensions. Install the corresponding language pack from the [extension marketplace](/azure-data-studio/extensions/add-extensions) to localize Azure Data Studio.
+- For versions 18.7 through 19.3, the installation of Azure Data Studio can be skipped by launching the SSMS installer with the command line flag `DoNotInstallAzureDataStudio=1`.
+
 ## Supported SQL offerings
 
 - This version of SSMS works with [!INCLUDE [sssql14-md](../includes/sssql14-md.md)] and later versions. It provides the most significant support for working with the latest cloud features in Azure SQL Database, Azure Synapse Analytics, and Microsoft Fabric.
 
-- Additionally, SSMS 19.x can be installed alongside with SSMS 18.x, SSMS 17.x, and SSMS 16.x.
+- Additionally, SSMS 20.x can be installed alongside with SSMS 19.x, SSMS 18.x, SSMS 17.x, and SSMS 16.x.
 
 - For SQL Server Integration Services (SSIS), SSMS 17.x and later versions don't support connecting to the legacy SQL Server Integration Services service. To connect to an earlier version of the legacy Integration Services, use the version of SSMS aligned with the version of SQL Server. For example, use SSMS 16.x to connect to the legacy [!INCLUDE [sssql16-md](../includes/sssql16-md.md)] Integration Services service. SSMS 17.x and SSMS 16.x can be installed on the same computer. Since the release of [!INCLUDE [sssql11-md](../includes/sssql11-md.md)], the SSIS Catalog database, SSISDB, is the recommended way to store, manage, run, and monitor Integration Services packages. See [SSIS Catalog](../integration-services/catalog/ssis-catalog.md) for details.
 
@@ -173,7 +174,7 @@ Supported hardware:
 
 - 1.8 GHz or faster x86 (Intel, AMD) processor. Dual-core or better recommended
 - 2 GB of RAM; 4 GB of RAM recommended (2.5 GB minimum if running on a virtual machine)
-- Hard disk space: Minimum of 2 GB up to 10 GB of available space
+- Hard disk space: Minimum of 3 GB up to 10 GB of available space
 
 > [!NOTE]  
 > SSMS is available only as a 32-bit application for Windows. If you need a tool that runs on operating systems other than Windows, we recommend Azure Data Studio. Visit [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio), for more details.

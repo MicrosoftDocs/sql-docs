@@ -66,9 +66,9 @@ You can also qualify by connecting your [!INCLUDE [ssSQL11](../../includes/sssql
 
 There are two ways to purchase ESUs:
 
-1. You can purchase an Extended Security Update plan for up to three years after the end of support date directly from [!INCLUDE [msCoName](../../includes/msconame-md.md)] or a [!INCLUDE [msCoName](../../includes/msconame-md.md)] licensing partner. For more information, see [Register Extended Security Updates purchased through volume licensing](#register-instances-for-esus).
+- You can purchase an Extended Security Update plan for up to three years after the end of support date directly from [!INCLUDE [msCoName](../../includes/msconame-md.md)] or a [!INCLUDE [msCoName](../../includes/msconame-md.md)] licensing partner. For more information, see [Register Extended Security Updates purchased through volume licensing](#register-instances-for-esus).
 
-1. If your [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] instances are connected to Azure Arc, you can enable ESUs as a subscription. For more information, see [Subscribe to Extended Security Updates enabled by Azure Arc](#subscribe-instances-for-esus).
+- If your [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] instances are connected to Azure Arc, you can enable ESUs as a subscription. For more information, see [Subscribe to Extended Security Updates enabled by Azure Arc](#subscribe-instances-for-esus).
 
 The following table shows the differences between the two options:
 

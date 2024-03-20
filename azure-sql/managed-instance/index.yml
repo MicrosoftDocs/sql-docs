@@ -185,4 +185,18 @@ landingContent:
           - text: Maintenance window
             url: maintenance-window-configure.md
           - text: Maintenance Window Notifications
-            url: advance-notifications.md
+            url: ../database/advance-notifications.md
+
+  # Card 
+  - title: Monitor
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Monitoring Azure SQL Managed Instance data reference
+            url: monitoring-sql-managed-instance-azure-monitor-reference.md
+          - text: Monitor Azure SQL workloads with database watcher
+            url: ../database-watcher-overview.md
+          - text: Monitor Azure SQL Managed Instance with Azure Monitor
+            url: monitoring-sql-managed-instance-azure-monitor.md
+          - text: Monitoring Microsoft Azure SQL Managed Instance performance using dynamic management views
+            url: monitoring-with-dmvs.md

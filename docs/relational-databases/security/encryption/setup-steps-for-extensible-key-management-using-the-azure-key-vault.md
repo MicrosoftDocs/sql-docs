@@ -669,7 +669,7 @@ SQL Server doesn't have a mechanism to automatically rotate the asymmetric key u
        FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM;
    ```
 
-1. add the credential to principal:
+1. Add the credential to the principal:
 
    ```sql
    ALTER LOGIN [domain\username];
@@ -691,7 +691,7 @@ SQL Server doesn't have a mechanism to automatically rotate the asymmetric key u
    FROM ASYMMETRIC KEY <new_ekm_key_name>;
    ```
 
-1. Drop credential from the principal:
+1. Drop the credential from the principal:
 
    ```sql
    ALTER LOGIN [domain\username]
@@ -709,6 +709,7 @@ SQL Server doesn't have a mechanism to automatically rotate the asymmetric key u
 
    ```sql
    USE [dbname];
+   GO
    ALTER DATABASE ENCRYPTION KEY ENCRYPTION BY SERVER ASYMMETRIC KEY <new_ekm_key_name>;
    ```
 

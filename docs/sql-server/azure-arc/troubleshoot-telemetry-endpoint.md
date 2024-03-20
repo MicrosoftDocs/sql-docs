@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-In addition to the usual endpoints, the Azure Arc Connected Machine agent connects to, the Azure Arc extension for SQL Server connects to two other endpoints:
+In addition to the usual endpoints, the Azure Arc extension for SQL Server connects to two other endpoints:
 
 - Data processing service (DPS) endpoint
 
@@ -22,7 +22,7 @@ In addition to the usual endpoints, the Azure Arc Connected Machine agent connec
 
    The Azure Connected Machine agent logs, the Azure extension for SQL Server logs, and the Dynamic Management Views (DMV) data is sent to this endpoint.
 
-Communication to these endpoints uses HTTPS with SSL/TLS and port TCP/443 for encrypted secure connections. Communication is always initiated by the agent to _send_ the data _to_ Azure. Communication is never initiated from Azure. Connectivity to these endpoints is therefore only one way.
+Communication to these endpoints uses HTTPS with SSL/TLS and port TCP/443 for encrypted secure connections. The agent initiates communication to _send_ the data _to_ Azure. Azure never initiates communication. Connectivity to these endpoints is therefore only one way.
 
 When communication to these endpoints is blocked you will have the following symptoms:
 

@@ -223,3 +223,17 @@ landingContent:
             url: maintenance-window-configure.md
           - text: Maintenance window notifications
             url: advance-notifications.md
+
+  # Card 
+  - title: Monitor
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Monitor Azure SQL Database with metrics and alerts
+            url: monitoring-metrics-alerts.md
+          - text: Monitor Azure SQL workloads with database watcher
+            url: ../database-watcher-overview.md
+          - text: Monitor Azure SQL Database with Azure Monitor
+            url: monitoring-sql-database-azure-monitor.md
+          - text: Monitor Microsoft Azure SQL Database performance using dynamic management views
+            url: monitoring-with-dmvs.md

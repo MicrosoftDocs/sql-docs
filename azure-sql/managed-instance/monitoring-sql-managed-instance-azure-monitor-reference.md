@@ -9,6 +9,7 @@ ms.author: mathoma
 ms.reviewer: wiassaf
 ms.service: sql-managed-instance
 ms.subservice: monitoring
+monikerRange: "= azuresql || = azuresql-mi"
 ---
 
 # Azure SQL Managed Instance monitoring data reference

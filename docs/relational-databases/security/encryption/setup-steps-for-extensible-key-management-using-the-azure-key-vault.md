@@ -23,7 +23,7 @@ In this article, you install and configure the [!INCLUDE[ssNoVersion](../../../i
 
 [!INCLUDE [entra-id](../../../includes/entra-id.md)]
 
-Extensible Key Management using Azure Key Vault is also available for SQL Server on Linux environments, starting with [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] CU 12. Follow the instructions from [Step 5: Configure SQL Server](#step-5-configure-sql-server) onward.
+Extensible Key Management using Azure Key Vault is available for SQL Server on Linux environments, starting with [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] CU 12. Follow the same instructions, but skip steps 3 and 4.
 
 ## Prerequisites
 

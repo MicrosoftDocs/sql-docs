@@ -43,6 +43,7 @@ Before you can Arc-enable an instance of [!INCLUDE [ssnoversion-md](../../includ
   - `Microsoft.AzureArcData/register/action`
   - `Microsoft.HybridCompute/machines/extensions/read`
   - `Microsoft.HybridCompute/machines/extensions/write`
+  - `Microsoft.Resources/deployments/validate/action`
 
 Users can be assigned to built-in roles that have these permissions, for example [Contributor](/azure/role-based-access-control/built-in-roles#contributor) or [Owner](/azure/role-based-access-control/built-in-roles#owner). For more information, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 

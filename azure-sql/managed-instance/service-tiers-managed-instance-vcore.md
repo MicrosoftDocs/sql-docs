@@ -4,7 +4,7 @@ description: The vCore purchasing model lets you independently scale compute and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake, vladiv, mathoma
-ms.date: 12/07/2023
+ms.date: 03/24/2024
 ms.service: sql-managed-instance
 ms.subservice: performance
 ms.topic: conceptual
@@ -35,13 +35,10 @@ SQL Managed Instance compute provides a specific amount of compute resources tha
 
 Since three additional replicas are automatically allocated in the Business Critical service tier, the price is approximately 2.7 times higher than it is in the General Purpose service tier. Likewise, the higher storage price per GB in the Business Critical service tier reflects the higher IO limits and lower latency of the local SSD storage.
 
-For instances in the General Purpose service tier, it's possible to save on compute and licensing costs by stopping your instance when you're not using it. Review [Stop and start an instance (preview)](instance-stop-start-how-to.md) to learn more. 
+For instances in the General Purpose service tier, it's possible to save on compute and licensing costs by stopping your instance when you're not using it. Review [Stop and start an instance](instance-stop-start-how-to.md) to learn more. 
 
 ## Data and log storage
 
-<!--
-The information in this section is duplicated in /managed-instance/resource-limits.md. Please make sure any changes are made to both articles. 
---->
 
 The following factors affect the amount of storage used for data and log files, and apply to General Purpose and Business Critical tiers. 
 
@@ -65,24 +62,28 @@ Storage for database backups is allocated to support the capabilities of SQL Man
 
 ## <a id="compute-tiers"></a>Service tiers
 
-Service tier options in the vCore purchasing model include General Purpose and Business Critical. The service tier generally defines the storage architecture, space and I/O limits, and business continuity options related to availability and disaster recovery. 
+The service tier generally defines the storage architecture, space and I/O limits, and business continuity options related to availability and disaster recovery.
 
+Azure SQL Managed Instance has two service tiers: 
+- General Purpose. You can choose to use the upgraded [Next-gen General Purpose service tier (preview)](service-tiers-next-gen-general-purpose-use.md).
+- Business Critical. 
 
+For a detailed comparison between service tiers, review [resource limits](resource-limits.md), but use the following table for a brief overview: 
 
-|**Category**|**General Purpose**|**Business Critical**|
+|**Category**|**General Purpose**| **Next-gen General Purpose** | **Business Critical**|
 |---|---|---|
-|**Best for**|Most business workloads. Offers budget-oriented, balanced, and scalable compute and storage options. |Offers business applications the highest resilience to failures by using several isolated replicas, and provides the highest I/O performance.|
-|**Read-only replicas**| 0 | 1 | 
-|**Replicas for availability**|One replica for high availability| Three high availability replicas, 1 is also a [read-scale replica](../database/read-scale-out.md) |
-|**Read-only replicas with [failover groups](failover-group-sql-mi.md) enabled**| One additional read-only replica. Two total readable replicas, which includes the primary replica. | Two additional read-only replicas, three total read-only replicas. Four total readable replicas, which includes the primary replica. |
-|**Pricing/billing**| [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/managed/) is charged. <br/>IOPS is not charged| [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/managed/) is charged. <br/>IOPS is not charged.
-|**Discount models**| [Reserved instances](../database/reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|[Reserved instances](../database/reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|
-
-For more details, review [resource limits](resource-limits.md). 
+|**Best for**|Most business workloads. Offers budget-oriented, balanced, and scalable compute and storage options. | Budget-oriented business workloads that need greater capacity, improved throughput, and resource flexibility. |Offers business applications the highest resilience to failures by using several isolated replicas, and provides the highest I/O performance.|
+|**Max number of vCores** | 80 | 128 | 128| 
+|**Max instance storage size**| 16 TB | 32 TB | 16 TB | 
+|**Max databases per instance**| 100 | 500 | 100 | 
+|**Read-only replicas**| 0 |0 |  1 | 
+|**Replicas for availability**|Standby nodes for high availability| Standby nodes for high availability| Three high availability replicas, 1 is also a [read-scale replica](../database/read-scale-out.md) |
+|**Pricing/billing**| [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/managed/) is charged. <br/>IOPS is not charged| vCore, reserved storage, backup storage and IOPS (over the free quota) is charged. | [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/managed/) is charged. <br/>IOPS is not charged. | 
 
 
 > [!NOTE]
 > For more information on the Service Level Agreement (SLA), see [SLA for Azure SQL Managed Instance](https://azure.microsoft.com/support/legal/sla/azure-sql-sql-managed-instance/). 
+
 
 ### General Purpose
 
@@ -102,6 +103,14 @@ Whenever the database engine or operating system is upgraded, some part of under
 #### When to choose this service tier
 
 The General Purpose service tier is the default service tier in Azure SQL Managed Instance designed for most of generic workloads. If you need a fully managed database engine with a default SLA and storage latency between 5 and 10 ms, the General Purpose tier is the option for you.
+
+### Next-gen General Purpose 
+
+> [!NOTE]
+> The Next-gen General Purpose service tier upgrade is currently in preview. To get started, [use the Next-gen General Purpose service tier upgrade](service-tiers-next-gen-general-purpose-use.md) for eligible new and existing instances. 
+
+[!INCLUDE [azure-sql-managed-instance-compare-service-tiers](../includes/sql-managed-instance/azure-sql-managed-instance-next-gen-general-purpose-upgrade.md)]
+
 
 ### Business Critical 
 
@@ -125,8 +134,8 @@ The Business Critical service tier is designed for applications that require low
 
 The key reasons why you should choose Business Critical service tier instead of General Purpose tier are:
 
--    **Low I/O latency requirements** – workloads that need a fast response from the storage layer (1-2 milliseconds in average) should use Business Critical tier. 
--    **Workload with reporting and analytic queries** that can be redirected to the free-of-charge secondary read-only replica.
+-  **Low I/O latency requirements** – workloads that need a fast response from the storage layer (1-2 milliseconds in average) should use Business Critical tier. 
+-  **Workload with reporting and analytic queries** that can be redirected to the free-of-charge secondary read-only replica.
 - **Higher resiliency and faster recovery from failures**. In case there is system failure, the databases on the primary instance are taken offline, and one of the secondary replicas will immediately become the new read-write primary instance, ready to process queries.  There is no need for the database engine to analyze and redo transactions from the log file or load data into memory buffers.
 - **Advanced data corruption protection**. Since the Business Critical tier uses databases replicas behind the scenes, the service leverages automatic page repair available with [mirroring and availability groups](/sql/sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring) to help mitigate data corruption. If a replica can't read a page due to a data integrity issue, a fresh copy of the page is retrieved from another replica, replacing the unreadable page without data loss or customer downtime. This functionality is available in  the General Purpose tier if the managed instance has geo-secondary replica.
 - **Higher availability** - The Business Critical tier in a multi-availability zone configuration provides resiliency to zonal failures and a higher availability SLA.
@@ -138,6 +147,7 @@ When specifying service tier in templates or scripts, tier is provided by using 
 |:-- |:-- |
 |General Purpose|GeneralPurpose|
 |Business Critical|BusinessCritical|
+
 
 
 ## Hardware configurations

@@ -52,7 +52,7 @@ You can use the Next-gen General Purpose tier upgrade for new instances when you
 
 1. Select **Enabled** for *Next-gen General Purpose (preview)* and then use the slider to modify IOPS for your instance. Review the *Cost per IOPS* in the **Estimated costs per month** box: 
 
-  :::image type="content" source="media/service-tiers-next-gen-general-purpose-use/new-instance-configure-managed-instance.png" alt-text="Screenshot of the compute + storage page when you configure your new Azure SQL Managed in the Azure portal.":::
+   :::image type="content" source="media/service-tiers-next-gen-general-purpose-use/new-instance-configure-managed-instance.png" alt-text="Screenshot of the compute + storage page when you configure your new Azure SQL Managed in the Azure portal.":::
 
 1. Select **Apply** to save your instance configuration and go back to the **Create Azure SQL Managed Instance** pane. 
 1. Fill out the rest of the values to configure your new instance. 

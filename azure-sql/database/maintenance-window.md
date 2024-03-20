@@ -5,7 +5,7 @@ description: Understand how the Azure SQL Database maintenance window can be con
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: urosmil, scottkim, mathoma
-ms.date: 03/08/2024
+ms.date: 03/14/2024
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -97,61 +97,63 @@ Choosing a maintenance window for Azure SQL Database other than the default is c
 
 The following table is for databases that are not [zone-redundant](high-availability-sla.md#zone-redundant-availability). For databases in an [Azure Availability Zone](high-availability-sla.md#zone-redundant-availability), see [the table for zone-redundant databases.](#ZR-maintenance-window-availability)
 
-| Azure Region | SQL Database: Hyperscale Premium-series and Premium-series memory optimized | All other Azure SQL Database purchasing models and tiers |
+| Azure Region | Hyperscale premium-series and premium-series memory optimized | Hyperscale standard-series | All other Azure SQL Database purchasing models and tiers |
 |:---|:---|:---|:---|
-| Australia East | Yes | Yes |
-| Australia Southeast | | Yes |
-| Brazil South | | Yes |  
-| Brazil Southeast | | Yes |
-| Canada Central  | Yes | Yes |
-| Canada East  | | Yes |
-| Central India | | Yes |
-| Central US | Yes | Yes |
+| Australia East | Yes | Yes | Yes |
+| Australia Southeast | | Yes | Yes |
+| Brazil South | | Yes | Yes |
+| Brazil Southeast | | Yes | Yes |
+| Canada Central  | Yes | Yes | Yes |
+| Canada East  | | Yes | Yes |
+| Central India | | Yes | Yes |
+| Central US | Yes | Yes | Yes |
 | China East 2 | | Yes |
 | China North 2 | | Yes |
-| East US | Yes | Yes |
-| East US 2  | Yes | Yes |
-| East Asia  | | Yes |
-| France Central  | | Yes |
-| France South  | | Yes |
-| Germany West Central | | Yes |
-| Japan East | Yes | Yes |
-| Japan West | | Yes |
-| North Central US | | Yes |
-| North Europe | Yes | Yes |
-| South Central US | Yes | Yes |
-| South India | | Yes |
-| Southeast Asia | | Yes |
-| Switzerland North | | Yes |
-| UAE North | | Yes |
-| UK South | | Yes |
-| UK West | | Yes |
+| East US 1 | Yes | Yes | Yes |
+| East US 2  | Yes | Yes | Yes |
+| East Asia  | | Yes | Yes |
+| France Central  | | Yes | Yes |
+| France South  | | Yes | Yes |
+| Germany West Central | | Yes | Yes |
+| Japan East | Yes | Yes | Yes |
+| Japan West | | Yes | Yes |
+| North Central US | | Yes | Yes |
+| North Europe | Yes | Yes | Yes |
+| South Africa North | | Yes | Yes |
+| South Central US | Yes | Yes | Yes |
+| South India | | Yes | Yes |
+| Southeast Asia | | Yes | Yes |
+| Switzerland North | | Yes | Yes |
+| UAE North | | Yes | Yes |
+| UK South | Yes | Yes | Yes |
+| UK West | | Yes | Yes |
 | US Gov Texas | | Yes |
 | US Gov Virginia | | Yes |
-| West Central US | | Yes |
-| West Europe | Yes | Yes |
-| West US | Yes | Yes |
-| West US 2 | Yes | Yes |
-| West US 3 | Yes | |
+| West Central US | | Yes | Yes |
+| West Europe | Yes | Yes | Yes |
+| West US | Yes | Yes | Yes |
+| West US 2 | Yes | Yes | Yes |
+| West US 3 | Yes | Yes | Yes |
 
 <a id="ZR-maintenance-window-availability"></a>
 
 The following table is for [zone-redundant](high-availability-sla.md#zone-redundant-availability) databases.
 
-| Azure Region  | All other Azure SQL Database purchasing models and tiers in an [Azure Availability Zone](high-availability-sla.md#zone-redundant-availability) |
-|:---|:---|
-| Australia East |  Yes |
-| Canada Central  |  Yes |
-| Central US |  Yes |
-| East US 1  |  Yes |
-| East US 2  |  Yes |
-| Japan East |  Yes |
-| North Europe |  Yes |
-| South Central US  | Yes |
-| Southeast Asia |  Yes |
-| UK South |  Yes |
-| West Europe |  Yes |
-| West US 2 |  Yes |
+| Azure Region  | Hyperscale premium-series and premium-series memory optimized | Hyperscale standard-series | All other Azure SQL Database purchasing models and tiers in an [Azure Availability Zone](high-availability-sla.md#zone-redundant-availability) |
+|:---|:---|:---|:---|
+| Australia East | Yes | Yes | Yes |
+| Canada Central  |  Yes | Yes | Yes |
+| Central US |  Yes | Yes | Yes |
+| East US 1  |  Yes | Yes | Yes |
+| East US 2  | | | Yes |
+| Japan East | | | Yes |
+| North Europe |  Yes | Yes | Yes |
+| South Central US  | | | Yes |
+| Southeast Asia | | |  Yes |
+| UK South | | | Yes |
+| West Europe |  Yes | Yes | Yes |
+| West US 2 | | | Yes |
+| West US 3 | Yes | Yes | Yes |
 
 ## Gateway maintenance
 

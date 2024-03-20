@@ -27,4 +27,4 @@ The following table identifies features available by SQL Server version:
 | [Monitoring (preview)](../sql-monitoring.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Operate with least privilege (preview)](../configure-least-privilege.md)| Yes | Yes | Yes | Yes | Yes | Yes |
 
-<sup>1</sup> Requires subscription to [Extended Security Updates (ESU) enabled by Azure Arc](../../end-of-support/sql-server-extended-security-updates.md#subscribe-to-extended-security-updates-enabled-by-azure-arc).
+<sup>1</sup> Requires subscription to [Extended Security Updates (ESU) enabled by Azure Arc](../../end-of-support/sql-server-extended-security-updates.md#subscribe-instances-for-esus).

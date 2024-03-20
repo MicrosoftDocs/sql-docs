@@ -24,12 +24,12 @@ In addition to the usual endpoints, the Azure Arc extension for SQL Server conne
 
 Communication to these endpoints uses HTTPS with SSL/TLS and port TCP/443 for encrypted secure connections. The agent initiates communication to _send_ the data _to_ Azure. Azure never initiates communication. Connectivity to these endpoints is therefore only one way.
 
-When communication to these endpoints is blocked you will have the following symptoms:
+When communication to these endpoints is blocked, the service has the following symptoms:
 
-- You don't see SQL Server instances in the Azure portal (DPS endpoint is blocked)
-- You don't see data in the SQL Server instance performance dashboards view (if DPS endpoint is unblocked but the telemetry endpoint is blocked)
-- You see an error in the Azure extension for SQL Server status in the Azure portal (details below)
-- You see an error in the Azure extension for SQL Server log (details below)
+- You don't see SQL Server instances in the Azure portal. DPS endpoint is blocked.
+- You don't see data in the SQL Server instance performance dashboards view. If DPS endpoint is unblocked but the telemetry endpoint is blocked.
+- You see an error in the Azure extension for SQL Server status in the Azure portal. Review [Check the Azure Extension for SQL Server status in the Azure portal](#check-the-azure-extension-for-sql-server-status-in-the-azure-portal).
+- You see an error in the Azure extension for SQL Server log. Review [Check the Azure Extension for SQL Server logs](#check-the-azure-extension-for-sql-server-logs).
 
 ## Azure extension current state
 
@@ -63,7 +63,7 @@ If it's connected to Azure in general, the Azure Extension for SQL Server report
 - Navigate to the **Machines - Azure Arc** view in the Azure portal and locate the machine by name and select it.
 - Select **Extensions**.
 - Select **WindowsAgent.SqlServer** or **LinuxAgent.SqlServer** to bring up the details.
-- Look at the **Status message** and the `uploadStatus` value. If it's anything other than **OK**, there's a problem with connecting to the DPS. If it's **0**, it's likely that there's a firewall blocking the communication to the DPS endpoint. There could be additional details in the status message or the `uploadStatus` error code that can provide insights into the connectivity problem.
+- Look at the **Status message** and the `uploadStatus` value. If it's anything other than **OK**, there's a problem with connecting to the DPS. If it's **0**, it's likely that there's a firewall blocking the communication to the DPS endpoint. There could be more details in the status message or the `uploadStatus` error code that can provide insights into the connectivity problem.
 
 ### Check the Azure Extension for SQL Server logs
 
@@ -71,7 +71,7 @@ The extension log file is at:
 
    `C:\ProgramData\GuestConfig\extension_logs\Microsoft.AzureData.WindowsAgent.SqlServer\`
 
-The log file name depends on the version Azure Extension for SQL Server, for the latest version of Azure Extension for SQL Server, the log file is:
+The log file name depends on the version Azure Extension for SQL Server. For the latest version of Azure Extension for SQL Server, the log file is:
 
    `unifiedagent.log`
 
@@ -130,9 +130,9 @@ The following table shows some of the common DPS upload status values and what y
 | `OK` | 200 | The connection is working as expected. |
 | `Unauthorized` | 401 | Likely cause: the extension is configured to send data through an HTTP proxy that requires authentication. Using an HTTP proxy that requires authentication is not currently supported. Use an unauthenticated HTTP proxy or no proxy.|
 | `Forbidden` | 403 | If the Azure Connected Machine agent is otherwise working as expected and this error doesn't resolve itself after a reboot, create a support case with Microsoft Support through the Azure portal.|
-| `NotFound` | 404 | The endpoint that the extension is trying to connect to does not exist. You can check which endpoint it is trying to connect to by searching in the logs for "san-af". This can happen if the Azure Connected Machine agent was deployed and connected to an Azure region in which the `Microsoft.AzureArcData` resource provider is not yet available. [Redeploy the Azure Connected Machine agent](/azure/azure-arc/servers/manage-agent?tabs=windows#uninstall-the-agent) in a region that the `Microsoft.AzureArcData` resource provider for SQL Server enabled by Azure Arc is available. [Region availability](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/?products=azure-arc) |
+| `NotFound` | 404 | The endpoint that the extension is trying to connect to doesn't exist. You can check which endpoint it is trying to connect to by searching in the logs for `dataprocessingservice` (or before March, 2024 `san-af`). This condition can happen if the Azure Connected Machine agent was deployed and connected to an Azure region in which the `Microsoft.AzureArcData` resource provider is not yet available. [Redeploy the Azure Connected Machine agent](/azure/azure-arc/servers/manage-agent?tabs=windows#uninstall-the-agent) in a region that the `Microsoft.AzureArcData` resource provider for SQL Server enabled by Azure Arc is available. [Region availability](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/?products=azure-arc) |
 | `Conflict` | 409 | Likely cause: temporary error happening inside of the DPS. If this does not resolve itself, create a support case with Microsoft Support through the Azure portal.
-| `InternalServerError` | 500 | This is an error that is happening inside of the DPS. Please create a support case with Microsoft Support through the Azure portal. |
+| `InternalServerError` | 500 | This is an error that is happening inside of the DPS. Create a support case with Microsoft Support through the Azure portal. |
 
 ## Related content
 

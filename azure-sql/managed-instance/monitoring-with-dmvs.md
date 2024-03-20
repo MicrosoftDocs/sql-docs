@@ -7,7 +7,7 @@ ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
 ms.date: 08/03/2022
 ms.service: sql-managed-instance
-ms.subservice: performance
+ms.subservice: monitoring
 ms.topic: how-to
 ms.custom:
   - azure-sql-split

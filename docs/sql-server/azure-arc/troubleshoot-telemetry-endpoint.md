@@ -83,21 +83,23 @@ Check for log entries that indicate a problem connecting to the DPS or telemetry
 
 ## Endpoint reference
 
-Beginning with [March, 12 2024](release-notes.md#march-12-2024), DPS and telemetry both use endpoints at:
+Beginning with [March, 12 2024](release-notes.md#march-12-2024), the Azure Extension for SQL Server uses the following endpoints:
 
-`*.<region>.arcdataservices.com`.
+- DPS: `dataprocessingservice.<region>.arcdataservices.com`
+- Telemetry `telemetry.<region>.arcdataservices.com`
 
 Replace `<region>` with the short name of the Azure region where the Arc machine resource is located. The short name is derived from the Azure region name without spaces and all lower case.
 
-For example, if your Arc machine resource is located in *East US 2* the short name of the region is `eastus2` and the endpoints are at: 
+For example, if your Arc machine resource is located in *East US 2* the short name of the region is `eastus2` and the telemetry endpoint is: 
 
-`*.eastus2.arcdataservices.com`.
+`telemetry.eastus2.arcdataservices.com`
 
 Up to and including the [February 13, 2024](release-notes.md#february-13-2024), The specific endpoints were:
 
 - DPS: `san-af-<region>-prod.azurewebsites.net`.
-
 - Telemetry `telemetry.<region>.arcdataservices.com`.
+
+Your extension continues to use these services until it is updated.
 
 ## Use an HTTPS proxy server for outbound connectivity
 

@@ -393,7 +393,7 @@ During public preview, instances in a pool have the following limitations:
 - The pool name can contain only lowercase letters, numbers and hyphens, and can't start with a hyphen.
 - All instances in the pool use the same licensing model. When you specify a license model for an instance that is different than the license model for the pool, the pool license model is used. When the instance is moved out of the pool, it automatically switches to a full paid license (`LicenseType` = 'LicenseIncluded'). Manually activate the [Azure Hybrid Benefit](../azure-hybrid-benefit.md) or the [hybrid failover rights benefit](managed-instance-link-feature-overview.md#license-free-passive-dr-replica) to change the licensing model. 
 - Pooled instances must belong to the same subnet and resource group. Moving an instance in and out of the pool is only possible within the subnet of the pool and same resource group. 
-- Only the General Purpose service tier is available on standard-series (Gen5) or premium-series hardware. The Business Critical service tier, and premium-series memory optimized hardware isn't available. 
+- Only the General Purpose service tier is available on standard-series (Gen5) or premium-series hardware. The Next-gen General Purpose, Business Critical service tier, and premium-series memory optimized hardware isn't available. 
 - The maximum possible number of instances in the pool is 40. 
 - An instance pool can only be deleted after all instances in the pool are either deleted or moved out of the pool. 
 - You can't use the Azure portal to: 

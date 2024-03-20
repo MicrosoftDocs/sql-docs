@@ -12,7 +12,7 @@ metadata:
   author: MashaMSFT
   ms.author: mathoma
   ms.reviewer: urmilano, danil, nnikolic, wiassaf, mathoma
-  ms.date: 12/20/2023
+  ms.date: 03/23/2024
 title: Azure SQL Managed Instance frequently asked questions (FAQ)
 summary: |
   [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -39,7 +39,7 @@ sections:
 
       - question: What service tier am I eligible for?
         answer: |
-          Any customer is eligible for any service tier. Both Standard and Enterprise editions covered with Software Assurance can be exchanged by using the [Azure Hybrid Benefit (AHB)](../azure-hybrid-benefit.md) for the General Purpose or Business Critical service tier using the following exchange ratios:  1 Standard edition = 1 General Purpose, 1 Enterprise edition = 1 Business Critical, 1 Enterprise edition = 4 General Purpose, and 4 General Purpose = 1 Enterprise Edition. For more information, see [Specific rights of the AHB](../azure-hybrid-benefit.md?tabs=azure-powershell#what-are-the-specific-rights-of-the-azure-hybrid-benefit-for-sql-server).
+          Any customer is eligible for any service tier. Both Standard and Enterprise editions covered with Software Assurance can be exchanged by using the [Azure Hybrid Benefit (AHB)](../azure-hybrid-benefit.md) for the General Purpose (which includes the [Next-gen General Purpose service tier upgrade](service-tiers-next-gen-general-purpose-use.md), currently in preview) or Business Critical service tier using the following exchange ratios  1 Standard edition = 1 General Purpose, 1 Enterprise edition = 1 Business Critical, 1 Enterprise edition = 4 General Purpose, and 4 General Purpose = 1 Enterprise Edition. For more information, see [Specific rights of the AHB](../azure-hybrid-benefit.md?tabs=azure-powershell#what-are-the-specific-rights-of-the-azure-hybrid-benefit-for-sql-server).
 
       - question: What subscription types are supported for SQL Managed Instance?
         answer: |
@@ -55,7 +55,7 @@ sections:
 
       - question: Can I increase the number of databases limit (100) on my managed instance on demand?
         answer: |
-          The limit of 100 databases per SQL Managed Instance is a hard limit that can't be changed.
+          The limit of 100 databases per SQL Managed Instance is a hard limit that can't be changed in the General Purpose and Business Critical service tiers. You can have up to 500 databases in the [Next-gen General Purpose](service-tiers-managed-instance-vcore.md#next-gen-general-purpose) service tier.
 
       - question: Where can I migrate if I have more than 16 TB of data?
         answer: |
@@ -266,7 +266,7 @@ sections:
     questions:
       - question: What is the maximum storage size for SQL Managed Instance?
         answer: |
-          Storage size for SQL Managed Instance depends on the selected service tier (General Purpose or Business Critical). For storage limitations of these service tiers, see [Service tier characteristics](../database/service-tiers-sql-database-vcore.md#service-tiers).
+          Storage size for SQL Managed Instance depends on the selected service tier (General Purpose, Next-gen General Purpose or Business Critical). For storage limitations of these service tiers, see [Resource limits](resource-limits.md#service-tier-characteristics).
 
       - question: What is the minimum storage size available for a managed instance?
         answer: |

@@ -79,7 +79,7 @@ The following table provides recommendations for the compute and storage for you
 
 | Setting| Suggested value | Description |
 | ------ | --------------- | ----------- |
-| **Service Tier** | General Purpose | The **General Purpose** tier is suitable for most production workloads, and is the default option.  For more information, review  [service tiers](service-tiers-managed-instance-vcore.md) and [resource limits](./resource-limits.md).|
+| **Service Tier** | General Purpose | The **General Purpose** tier is suitable for most production workloads, and is the default option. The improved [Next-gen General Purpose](service-tiers-next-gen-general-purpose-use.md) service tier is also a great choice for most workloads. For more information, review [resource limits](resource-limits.md).|
 | **Hardware generation** | Standard-series (Gen5) | Standard-series (gen5) is the default [hardware generation](resource-limits.md#hardware-configuration-characteristics), which defines compute and memory limits. **Standard-series (Gen5)** is the default.|
 | **vCores** | Designate a value. | vCores represent the exact amount of compute resources that are always provisioned for your workload. **Eight vCores** is the default.|
 | **Storage in GB** | Designate a value. | Storage size in GB, select based on expected data size. |

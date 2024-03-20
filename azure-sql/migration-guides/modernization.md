@@ -122,7 +122,7 @@ Moving to Azure SQL brings significant TCO savings by improving operational effi
 
 #### What is the licensing model for SQL Managed Instance?
 
-[SQL Managed Instance licensing](../managed-instance/service-tiers-managed-instance-vcore.md) follows vCore-based licensing model, where you pay for compute, storage, and backup storage resources. You can choose between several service tiers (General Purpose, Business Critical) and hardware generations. The [SQL Managed Instance pricing page](https://azure.microsoft.com/pricing/details/azure-sql-managed-instance/single/) provides a full overview of possible SKUs and prices.
+SQL Managed Instance licensing follows the [vCore-based licensing model](../managed-instance/service-tiers-managed-instance-vcore.md), where you pay for compute, storage, and backup storage resources. You can choose between several service tiers (General Purpose, Business Critical) and hardware generations. The [SQL Managed Instance pricing page](https://azure.microsoft.com/pricing/details/azure-sql-managed-instance/single/) provides a full overview of possible SKUs and prices.
 
 #### What is the licensing model for SQL Database?
 

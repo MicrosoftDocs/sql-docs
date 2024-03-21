@@ -3,7 +3,7 @@ title: "Server properties Advanced page"
 description: Use the Advanced Server Properties page to set system properties on the report server. This tool provides a graphical user interface so that you can set properties without writing code.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 1/12/2023
+ms.date: 3/21/2023
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
@@ -299,7 +299,10 @@ Requires Intune to access your organization's reports via the Power BI mobile ap
 
 *Power BI Report Server January 2019, Reporting Services 2017 and later only* 
 
-Set of mime types users aren't allowed to upload content with. Any resources that are already stored with a restricted mime type can only be downloaded as an application/octet-stream.  By default, there are no restricted items in this list, but we recommended that organizations populate this list to provide the most secure experience.
+Set of mime types users aren't allowed to upload content with. Any resources that are already stored with a restricted mime type can only be downloaded as an application/octet-stream. By default this list will contain 'text/html' unless you had previously allowed the upload of *.html files. We recommended that organizations populate this list to provide the most secure experience.
+
+> [!NOTE]
+> You cannot add 'text\html' to this list if *.html is in the AllowedResourceExtensionsForUpload property.
 
 ### ScheduleRefreshTimeoutMinutes 
 

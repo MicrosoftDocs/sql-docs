@@ -5,7 +5,7 @@ author: bobtabor-msft
 ms.author: rotabor
 ms.reviewer: mathoma
 ms.custom: passwordless-python
-ms.date: 12/28/2023
+ms.date: 03/21/2024
 ms.service: sql-database
 ms.subservice: security
 ms.topic: quickstart
@@ -26,7 +26,7 @@ This quickstart describes how to connect an application to a database in Azure S
 * An Azure SQL database configured with Microsoft Entra authentication. You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
 * The latest version of the [Azure CLI](/cli/azure/get-started-with-azure-cli).
 * Visual Studio Code with the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python).
-* Python 3.8 or later.
+* Python 3.8 or later. If you're using a Linux client machine, see [Install the ODBC driver](/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development?tabs=linux#install-the-odbc-driver).
 
 ## Configure the database
 

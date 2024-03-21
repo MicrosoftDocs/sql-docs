@@ -53,7 +53,7 @@ Users can be assigned to built-in roles that have these permissions, for example
 
 ### Set proxy exclusions
 
-If a proxy server is used, set `noProxy` to exclude proxy traffic for:
+If a proxy server is used, set the `NO_PROXY` environment variable to exclude proxy traffic for:
 
 - `localhost`
 

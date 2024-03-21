@@ -51,6 +51,14 @@ Users can be assigned to built-in roles that have these permissions, for example
   - For Linux, use the root account.
   - For Windows, use an account that is a member of the Local Administrators group.
 
+### Set proxy exclusions
+
+If a proxy server is used, set `noProxy` to exclude proxy traffic for:
+
+- `localhost`
+
+- `127.0.0.1`
+
 ### Connect to Azure Arc data processing service
 
 Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] requires outbound connection to Azure Arc data processing service.

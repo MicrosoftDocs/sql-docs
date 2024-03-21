@@ -113,7 +113,7 @@ After the organization-wide policy has been defined, you can continue classifyin
 
 ### Microsoft Information Protection policy
 
-Microsoft Information Protection (MIP) labels provide a simple and uniform way for users to classify sensitive data uniformly across different Microsoft applications. MIP sensitivity labels are created and managed in [Microsoft 365 compliance center](https://compliance.microsoft.com/). To learn how to create and publish MIP sensitive labels in Microsoft 365 compliance center, see the article, [Create and publish sensitivity labels](/microsoft-365/compliance/create-sensitivity-labels).
+Microsoft Information Protection (MIP) labels provide a simple and uniform way for users to classify sensitive data uniformly across different Microsoft applications. MIP sensitivity labels are created and managed in the [Microsoft Purview compliance portal](https://compliance.microsoft.com/). To learn how to create and publish MIP sensitive labels in Microsoft Purview compliance portal, see the article, [Create and publish sensitivity labels](/microsoft-365/compliance/create-sensitivity-labels).
 
 #### Prerequisites to switch to MIP policy
 
@@ -131,38 +131,41 @@ Microsoft Information Protection (MIP) labels provide a simple and uniform way f
 
    :::image type="content" source="./media/data-discovery-and-classification-overview/select-microsoft-information-protection-policy.png" alt-text="Screenshot of selecting Microsoft Information Protection policy for Azure SQL Database." lightbox="./media/data-discovery-and-classification-overview/select-microsoft-information-protection-policy.png":::
 
-1. If you go to the **Classification** tab, or select **Add classification**, you will now see M365 sensitivity labels appear in the **Sensitivity label** dropdown.
+1. If you go to the **Classification** tab, or select **Add classification**, you'll now see Microsoft 365 sensitivity labels appear in the **Sensitivity label** dropdown.
 
    :::image type="content" source="./media/data-discovery-and-classification-overview/select-sensitivity-label.png" alt-text="Screenshot of Sensitivity label dropdown.":::
 
    :::image type="content" source="./media/data-discovery-and-classification-overview/sensitivity-label-classification-tab.png" alt-text="Screenshot of Sensitivity label in the Classification tab." lightbox="./media/data-discovery-and-classification-overview/sensitivity-label-classification-tab.png":::
 
 - Information type is `[n/a]` while you are in MIP policy mode and automatic data discovery & recommendations remain disabled.
-- A warning icon may appear against an already classified column if the column was classified using a different Information Protection policy than the currently active policy. For example, if the column was classified with a label using SQL Information Protection policy earlier and now you are in Microsoft Information Protection policy mode. You will see a warning icon against that specific column. This warning icon does not indicate any problem, but is used only for information purposes.
+- A warning icon may appear against an already classified column if the column was classified using a different Information Protection policy than the currently active policy. For example, if the column was classified with a label using SQL Information Protection policy earlier and now you are in Microsoft Information Protection policy mode. you'll see a warning icon against that specific column. This warning icon doesn't indicate any problem, but is used only for information purposes.
 
    :::image type="content" source="./media/data-discovery-and-classification-overview/classification-warning.png" alt-text="Screenshot of warnings for classified columns because of different Information Protection policies." lightbox="./media/data-discovery-and-classification-overview/classification-warning.png":::
 
 
-### Enabling access control for sensitive data using Microsoft Information Protection policies (preview)
+### Enabling access control for sensitive data using Microsoft Information Protection policies (public preview)
 
-Azure SQL Database now supports the ability to enforce access control on the columns with sensitive data, that have been labeled using Microsoft Information Protection (MIP) sensitivity labels, using Microsoft Purview access policies.  This capability is currently in preview.
+Azure SQL Database supports the ability to enforce access control on the columns with sensitive data that have been labeled using Microsoft Information Protection (MIP) sensitivity labels using Microsoft Purview access policies.
 
-Access policies in Purview enable organizations to protect sensitive data across their data sources. They enable personas like enterprise security/compliance admins to configure and enforce access control actions on sensitive data in their databases, ensuring that sensitive data cannot be accessed by users not authorized by enterprise admins for a particular sensitivity label. Purview access policies are enforced at column level granularity for Azure SQL database, thus protecting sensitive data without blocking access to non-sensitive data columns in the database tables.  
-To configure and enforce Purview access policies, the user is required to have a valid Microsoft 365 license, and the SQL database must be registered in the Purview Data map and scanned, so that MIP sensitivity labels get assigned by Purview to the database columns containing sensitive data. Once this done, the user can configure Purview access policies to enforce “deny” actions on database columns with a specific sensitivity label, restricting access to sensitive data in those columns to only an allowed user or group of users. 
+Access policies in Purview enable organizations to protect sensitive data across their data sources. They enable personas like enterprise security/compliance admins to configure and enforce access control actions on sensitive data in their databases, ensuring that sensitive data can't be accessed by unauthorized users for a particular sensitivity label. Purview access policies are enforced at column level granularity for Azure SQL database, thus protecting sensitive data without blocking access to non-sensitive data columns in the database tables.
+
+To configure and enforce Purview access policies, the user is required to have a valid Microsoft 365 license, and the database must be registered in the Purview Data Map and scanned, so that MIP sensitivity labels get assigned by Purview to the database columns containing sensitive data. Once sensitivity labels are assigned, the user can configure Purview access policies to enforce *deny* actions on database columns with a specific sensitivity label, restricting access to sensitive data in those columns to only an allowed user or group of users. 
 
 #### Configure and enable access policy in Purview for Azure SQL database 
-Follow the list of steps below to configure and use Purview access policies for Azure SQL Database:
-1.	Ensure you have the required license prerequisites for Microsoft 365 and Purview as defined [here](https://review.learn.microsoft.com/en-us/purview/how-to-create-protection-policy-azure-sources?branch=pr-en-us-930#prerequisites)
-2.  Set up roles and permissions for your users as defined [here](https://review.learn.microsoft.com/en-us/purview/how-to-create-protection-policy-azure-sources?branch=pr-en-us-930#users-and-permissions)
-3.	Create or extend sensitivity labels in Purview to Azure SQL Database as defined [here](https://review.learn.microsoft.com/en-us/purview/how-to-automatically-label-your-content#step-3-create-or-modify-existing-label-to-automatically-label-content). Also ensure that you publish the sensitivity labels to the required users in your organization.
-5.	[Register](https://review.learn.microsoft.com/en-us/purview/register-scan-azure-sql-database#register-the-data-source) and [scan](https://review.learn.microsoft.com/en-us/purview/register-scan-azure-sql-database#create-the-scan) your Azure SQL database to apply sensitivity labels automatically.
-6.	[Create and configure](https://review.learn.microsoft.com/en-us/purview/how-to-create-protection-policy-azure-sources?branch=pr-en-us-930#create-protection-policy) access control policy in Purview for Azure SQL Database.
 
-Once the access policy has been configured and published in Purview, any attempt by an unauthorized user to run a T-SQL query to access columns in a SQL database with sensitivity label scoped to the policy will fail. 
-If the same query does not include sensitive columns, the query would succeed. 
+Follow the list of steps below to configure and use Purview access policies for Azure SQL Database:
+
+1.	Make sure you have the required license prerequisites for Microsoft 365 and Purview as [defined](/purview/how-to-create-protection-policy-azure-sources#prerequisites).
+1. Set up roles and permissions for your users as [defined](/purview/how-to-create-protection-policy-azure-sources#users-and-permissions).
+1.	Create or extend sensitivity labels in Purview to Azure SQL Database as [defined](/purview/how-to-automatically-label-your-content#step-3-create-or-modify-existing-label-to-automatically-label-content). Also ensure that you publish the sensitivity labels to the required users in your organization.
+1.	[Register](/purview/register-scan-azure-sql-database#register-the-data-source) and [scan](/purview/register-scan-azure-sql-database#create-the-scan) your Azure SQL database to apply sensitivity labels automatically.
+1.	[Create and configure](/purview/how-to-create-protection-policy-azure-sources#create-protection-policy) access control policy in Purview for Azure SQL Database.
+
+Once the access policy has been configured and published in Purview, any attempt by an unauthorized user to run a T-SQL query to access columns in a SQL database with sensitivity label scoped to the policy will fail. If the same query doesn't include sensitive columns, the query would succeed. 
 
 #### Limitations
-When creating a database geo-replica or copy, sensitivity labels assigned to columns in the primary database do not automatically flow to the new/secondary database, and Purview access control policies will not automatically apply to the new/secondary database. To enable access control on the new/secondary database, register and scan it separately in Purview. Then configure any access policies to also include the new/secondary database.   
+
+When creating a database geo-replica or copy, sensitivity labels assigned to columns in the primary database don't automatically flow to the new/secondary database, and Purview access control policies won't automatically apply to the new/secondary database. To enable access control on the new/secondary database, register and scan it separately in Purview. Then configure any access policies to also include the new/secondary database.   
 
 
 ## <a id="audit-sensitive-data"></a>Audit access to sensitive data
@@ -286,7 +289,7 @@ You can use the following SQL drivers to retrieve classification metadata:
 ## FAQ - Advanced classification capabilities
 
 **Question**: Will [Microsoft Purview](/azure/purview/overview) replace SQL Data Discovery & Classification or will SQL Data Discovery & Classification be retired soon?
-**Answer**: We continue to support SQL Data Discovery & Classification and encourage you to adopt [Microsoft Purview](/azure/purview/overview) which has richer capabilities to drive advanced classification capabilities and data governance. If we decide to retire any service, feature, API or SKU, you will receive advance notice including a migration or transition path. Learn more about Microsoft Lifecycle policies [here](/lifecycle/index).
+**Answer**: We continue to support SQL Data Discovery & Classification and encourage you to adopt [Microsoft Purview](/azure/purview/overview) which has richer capabilities to drive advanced classification capabilities and data governance. If we decide to retire any service, feature, API or SKU, you'll receive advance notice including a migration or transition path. Learn more about Microsoft Lifecycle policies [here](/lifecycle/index).
 
 ## Next steps
 

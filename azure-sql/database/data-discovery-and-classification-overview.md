@@ -155,11 +155,11 @@ To configure and enforce Purview access policies, the user is required to have a
 
 Follow the list of steps below to configure and use Purview access policies for Azure SQL Database:
 
-1.	Make sure you have the required license prerequisites for Microsoft 365 and Purview as [defined](/purview/how-to-create-protection-policy-azure-sources#prerequisites).
-1. Set up roles and permissions for your users as [defined](/purview/how-to-create-protection-policy-azure-sources#users-and-permissions).
-1.	Create or extend sensitivity labels in Purview to Azure SQL Database as [defined](/purview/how-to-automatically-label-your-content#step-3-create-or-modify-existing-label-to-automatically-label-content). Also ensure that you publish the sensitivity labels to the required users in your organization.
-1.	[Register](/purview/register-scan-azure-sql-database#register-the-data-source) and [scan](/purview/register-scan-azure-sql-database#create-the-scan) your Azure SQL database to apply sensitivity labels automatically.
-1.	[Create and configure](/purview/how-to-create-protection-policy-azure-sources#create-protection-policy) access control policy in Purview for Azure SQL Database.
+1. Make sure you have the required [license prerequisites for Microsoft 365 and Purview](/purview/how-to-create-protection-policy-azure-sources#prerequisites).
+1. [Set up roles and permissions for your users](/purview/how-to-create-protection-policy-azure-sources#users-and-permissions).
+1. [Create or extend sensitivity labels in Purview to Azure SQL Database](/purview/how-to-automatically-label-your-content#step-3-create-or-modify-existing-label-to-automatically-label-content). Also ensure that you publish the sensitivity labels to the required users in your organization.
+1. [Register](/purview/register-scan-azure-sql-database#register-the-data-source) and [scan](/purview/register-scan-azure-sql-database#create-the-scan) your Azure SQL database to apply sensitivity labels automatically.
+1. [Create and configure](/purview/how-to-create-protection-policy-azure-sources#create-protection-policy) access control policy in Purview for Azure SQL Database.
 
 Once the access policy has been configured and published in Purview, any attempt by an unauthorized user to run a T-SQL query to access columns in a SQL database with sensitivity label scoped to the policy will fail. If the same query doesn't include sensitive columns, the query would succeed. 
 

@@ -303,11 +303,11 @@ Hyperscale service tier premium-series and premium-series memory optimized hardw
 - India Central
 - India South
 - Japan East
-- Japan West \*
+- Japan West
 - Southeast Asia
 - Switzerland North
 - UK South \*\*
-- UK West
+- UK West \*
 - US Central \*\*
 - US East \*\*
 - US East 2

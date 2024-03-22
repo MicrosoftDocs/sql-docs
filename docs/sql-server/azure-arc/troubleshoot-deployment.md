@@ -89,3 +89,8 @@ Check the extension log for the following record:
 ```
 
 Make sure to migrate the Arc-enabled SQL Server resource to `Microsoft.AzureArcData`.
+
+## If extension is stuck in an odd state (Creating/Deleting) for long time
+
+Remove and reinstall the extension using `azcmagent` commands. For details, see [`azcmagent` extension remove](/azure/azure-arc/servers/azcmagent-extension#azcmagent-extension-remove).
+

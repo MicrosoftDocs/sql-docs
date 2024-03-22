@@ -3,7 +3,7 @@ title: "Server properties Advanced page"
 description: Use the Advanced Server Properties page to set system properties on the report server. This tool provides a graphical user interface so that you can set properties without writing code.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 1/12/2023
+ms.date: 3/21/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
@@ -65,7 +65,7 @@ Set extensions of resources that can be uploaded to the report server. Extension
 
 ### CustomHeaders 
 
-*Power BI Report Server January 2020, Reporting Services 2019 and later only*
+*Power BI Report Server, Reporting Services 2019 and later only*
 
 Sets header values for all URLs matching the specified regex pattern. Users can update the CustomHeaders value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML. By default in Reporting Services 2019, there are no custom headers and the value is blank. By default in Power BI Report Server January 2020 and later, the value is:
 
@@ -195,7 +195,7 @@ Indicates whether or not a customer can export underlying data from Power BI vis
 
 ### EnablePowerBIReportMigrate  
 
-*Power BI Report Server September 2022, Reporting Services 2022 and later only*
+*Power BI Report Server, Reporting Services 2022 and later only*
 
 Enables .rdl report migrations to Power BI by using the feature to publish in the web portal. The default is **true**. The valid values are as follows:
 
@@ -273,13 +273,13 @@ Set the address of your Office Online Server instance for viewing Excel Workbook
 
 ### PowerBIMigrateCountLimit
 
-*Power BI Report Server September 2022, Reporting Services 2022 and later only*
+*Power BI Report Server, Reporting Services 2022 and later only*
 
 The maximum number of reports that can be migrated to Power BI at a time. *Default is 100.*
 
 ### PowerBIMigrateUrl  
 
-*Power BI Report Server September 2022, Reporting Services 2022 and later only*
+*Power BI Report Server, Reporting Services 2022 and later only*
 
 URL used to define the Power BI cloud endpoint to use. *Default is https://app.powerbi.com*
 
@@ -297,9 +297,12 @@ Requires Intune to access your organization's reports via the Power BI mobile ap
 
 ### RestrictedResourceMimeTypeForUpload
 
-*Power BI Report Server January 2019, Reporting Services 2017 and later only* 
+*Power BI Report Server, Reporting Services 2017 and later only* 
 
-Set of mime types users aren't allowed to upload content with. Any resources that are already stored with a restricted mime type can only be downloaded as an application/octet-stream.  By default, there are no restricted items in this list, but we recommended that organizations populate this list to provide the most secure experience.
+Set of mime types users aren't allowed to upload content with. Any resources that are already stored with a restricted mime type can only be downloaded as an application/octet-stream. By default this list will contain 'text/html' unless you had previously allowed the upload of *.html files. We recommended that organizations populate this list to provide the most secure experience.
+
+> [!NOTE]
+> You cannot add 'text\html' to this list if *.html is in the AllowedResourceExtensionsForUpload property.
 
 ### ScheduleRefreshTimeoutMinutes 
 
@@ -339,7 +342,7 @@ Specifies the maximum number of parameter values that the report server can stor
 
 ### SupportedHyperlinkSchemes 
 
-*Power BI Report Server January 2019, Reporting Services 2019 and later only* 
+*Power BI Report Server, Reporting Services 2019 and later only* 
 
 Sets a comma separated list of the URI schemes allowed to be defined on Hyperlink actions can be rendered or "&ast;" to enable all hyperlink schemes. For example, setting "http, https" would allow hyperlinks to `https://www. contoso.com`, but would remove hyperlinks to `mailto:bill@contoso.com` or `javascript:window.open('www.contoso.com', '_blank')`. Default is `&ast;`.
 

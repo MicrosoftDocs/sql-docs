@@ -265,13 +265,13 @@ This switch is used by the client when connecting to Azure SQL Database or Azure
   The following example exports data using Microsoft Entra username and password credentials. The example exports table `bcptest` from database `testdb` from Azure server `aadserver.database.windows.net` and stores the data in file `c:\last\data1.dat`:
 
   ```cmd
-  bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
+  bcp bcptest out "c:\last\data1.dat" -c -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
   ```
 
   The following example imports data using the credentials of a Microsoft Entra user. The example imports data from file `c:\last\data1.dat` into table `bcptest` for database `testdb` on Azure server `aadserver.database.windows.net` using a Microsoft Entra username and password:
 
   ```cmd
-  bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
+  bcp bcptest in "c:\last\data1.dat" -c -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
   ```
 
 - **Microsoft Entra integrated**
@@ -281,13 +281,13 @@ This switch is used by the client when connecting to Azure SQL Database or Azure
   The following example exports data using Microsoft Entra integrated authentication. The example exports table `bcptest` from database `testdb` on the logical server `aadserver.database.windows.net` and stores the data in file `c:\last\data2.dat`, using Windows credentials federated with Microsoft Entra ID:
 
   ```cmd
-  bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
+  bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c
   ```
 
   The following example imports data using Microsoft Entra integrated authentication. The example imports data from file table `c:\last\data2.dat` into table `bcptest` in the database `testdb` on the logical server `aadserver.database.windows.net`, using Windows credentials federated with Microsoft Entra ID:
 
   ```cmd
-  bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
+  bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c
   ```
 
 - **Microsoft Entra interactive**
@@ -303,13 +303,13 @@ This switch is used by the client when connecting to Azure SQL Database or Azure
   Interactive mode requires a password to be manually entered, or for accounts with multifactor authentication enabled, complete your configured MFA authentication method.
 
   ```cmd
-  bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com
+  bcp bcptest out "c:\last\data1.dat" -c -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com
   ```
 
   If using a Microsoft Entra user that's a Windows account from a federated domain, the username entered in the command line must contain its domain (for example, `joe@contoso.com`):
 
   ```cmd
-  bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com
+  bcp bcptest out "c:\last\data1.dat" -c -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com
   ```
 
   If guest users exist in a specific Microsoft Entra tenant and are part of a group that exists in SQL Database that has database permissions to execute the **bcp** command, their guest user alias is used (for example, `keith0@adventure-works.com`).

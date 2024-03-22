@@ -1,6 +1,6 @@
 --- 
 title: Files deployed by Azure extension for SQL Server
-description: Lists files deployed and managed by the Azure extension for SQL Server
+description: Lists files deployed and managed by the Azure extension for SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: nikitatakru
@@ -31,4 +31,4 @@ This article lists the files that an installation of Azure extension for SQL Ser
 
 ## Related content
 
-[Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)
+- [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)

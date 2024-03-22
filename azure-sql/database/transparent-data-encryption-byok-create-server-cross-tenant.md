@@ -7,7 +7,7 @@ ms.reviewer: vanto, mathoma
 ms.date: 10/10/2023
 ms.service: sql-database
 ms.subservice: security
-ms.custom: devx-track-azurecli, has-azure-ad-ps-ref
+ms.custom: devx-track-azurecli, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.topic: how-to
 ---
 
@@ -42,6 +42,8 @@ Before we can configure TDE for Azure SQL Database with a cross-tenant CMK, we n
 1. Record the application name and application ID. This can be found in the [Azure portal](https://portal.azure.com) > **Microsoft Entra ID** > **Enterprise applications** and search for the created application
 
 ### Required resources on the second tenant
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../azure-sql/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 1. On the second tenant where the Azure Key Vault resides, [create a service principal (application)](/azure/storage/common/customer-managed-keys-configure-cross-tenant-new-account#the-customer-grants-the-service-providers-app-access-to-the-key-in-the-key-vault) using the application ID from the registered application from the first tenant. Here's some examples of how to register the multi-tenant application. Replace `<TenantID>` and `<ApplicationID>` with the client **Tenant ID** from Microsoft Entra ID and **Application ID** from the multi-tenant application, respectively:
    - **PowerShell**:

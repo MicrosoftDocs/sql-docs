@@ -5,7 +5,7 @@ description: Use the COPY statement in Azure Synapse Analytics and Warehouse in 
 author: periclesrocha
 ms.author: procha
 ms.reviewer: wiassaf, mikeray
-ms.date: 10/27/2023
+ms.date: 03/22/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -42,6 +42,10 @@ Use COPY for the following capabilities:
 - Specify wildcards and multiple files in the storage location path
 - Automatic schema discovery simplifies the process of defining and mapping source data into target tables
 - The automatic table creation process automatically creates the tables and works alongside with automatic schema discovery
+- Directly load complex data types from Parquet files such as Maps and Lists into string columns, without using other tools to preprocess the data
+
+> [!NOTE]  
+> To load complex data types from Parquet files, automatic table creation must be turned on by using `AUTO_CREATE_TABLE`.
 
 Visit the following documentation for comprehensive examples and quickstarts using the COPY statement:
 

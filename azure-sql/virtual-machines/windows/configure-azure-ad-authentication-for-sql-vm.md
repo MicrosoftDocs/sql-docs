@@ -7,7 +7,7 @@ ms.reviewer: mathoma
 ms.date: 09/25/2023
 ms.service: virtual-machines-sql
 ms.subservice: security
-ms.custom: has-azure-ad-ps-ref, devx-track-azurecli
+ms.custom: has-azure-ad-ps-ref, devx-track-azurecli, azure-ad-ref-level-one-done
 ms.topic: how-to
 ---
 # Enable Microsoft Entra authentication for SQL Server on Azure VMs
@@ -88,6 +88,8 @@ To grant your managed identity the **Directory Readers** role, follow these step
 ### Add app role permissions
 
 You can use [Azure PowerShell](/powershell/azure/install-azure-powershell) to grant app roles to a managed identity. To do so, follow these steps: 
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../azure-sql/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 1. Search for Microsoft Graph 
 

@@ -167,7 +167,7 @@ There are two ways to configure the SQL Server host in Azure portal.
 
   * **License type**
   * **ESU subscription**
-  * **Automated patching**
+  * **Automatic updates**
 
    :::image type="content" source="media/billing/sql-server-instance-configuration.png" alt-text="Screenshot of Azure portal SQL Server instance configuration."  lightbox="media/billing/sql-server-instance-configuration.png" :::
 
@@ -318,4 +318,4 @@ For more examples of Azure Resource Graph Queries, see [Starter Resource Graph q
 - [Install SQL Server 2022 using the pay-as-you-go activation option](../../database-engine/install-windows/install-sql-server.md)
 - [Learn about Extended Security Updates for SQL Server](../end-of-support/sql-server-extended-security-updates.md).  
 - [Frequently asked questions](faq.yml#billing)
-- [Configure automated patching for SQL Server enabled for Azure Arc](patch.md)
+- [Configure automatic updates for SQL Server enabled for Azure Arc](update.md)

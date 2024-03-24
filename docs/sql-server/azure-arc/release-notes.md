@@ -175,7 +175,7 @@ With SQL Server enabled by Azure Arc, you can run the agent extension service wi
 
 ### Azure extension for SQL Server
 
-- Automatic patching generally available
+- Automatic updates generally available
 
 ## August 10, 2023
 
@@ -187,7 +187,7 @@ With SQL Server enabled by Azure Arc, you can run the agent extension service wi
 
    [!INCLUDE [entra-id](../../includes/entra-id.md)]
 
-- Configure patching in Azure portal. Review [Configure in the Azure portal](patch.md#configure-in-the-azure-portal).
+- Configure automatic updates in Azure portal. Review [Configure in the Azure portal](update.md#configure-in-the-azure-portal).
 
 ## July 13, 2023
 
@@ -245,7 +245,7 @@ With SQL Server enabled by Azure Arc, you can run the agent extension service wi
 ### Azure extension for SQL Server
 
 - [Best practices assessment](assess.md) supports multiple instances of SQL Server on a physical or virtual server host.
-- Support for Microsoft Update to patch an Arc-enabled SQL Server. Automatically installs updates marked as Critical or Important. Doesn't automatically install other updates.
+- Support for Microsoft Update to update an Arc-enabled SQL Server. Automatically installs updates marked as Critical or Important. Doesn't automatically install other updates.
 
 ## February 17, 2023
 

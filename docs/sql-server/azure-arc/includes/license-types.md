@@ -20,7 +20,7 @@ The following table identifies features enabled depending on license type:
 |[Govern through Microsoft Purview](/azure/purview/tutorial-register-scan-on-premises-sql-server)|Yes |Yes |Yes |
 |[Automated backups to local storage (preview)](../backup-local.md)|No |Yes |Yes |
 |[Point-in-time-restore (preview)](../point-in-time-restore.md)|No |Yes |Yes |
-|[Automated patching](../patch.md)|No |Yes |Yes |
+|[Automatic updates](../update.md)|No |Yes |Yes |
 |[Failover cluster instances (preview)](../support-for-fci.md) |Yes | Yes | Yes|
 |[Always On availability groups (preview)](../manage-availability-group.md) |Yes | Yes | Yes|
 |[Monitoring (preview)](../sql-monitoring.md) |No |Yes |Yes|

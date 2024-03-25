@@ -4,15 +4,15 @@ description: "View the dependencies of a table with SQL Server Management Studio
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 02/12/2024
+ms.date: 03/25/2024
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
-  - "table dependencies [SQL Server]"
-  - "dependencies [SQL Server], tables"
-  - "displaying dependences"
-  - "viewing dependencies"
+- "table dependencies [SQL Server]"
+- "dependencies [SQL Server], tables"
+- "displaying dependences"
+- "viewing dependencies"
 monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # View the dependencies of a table

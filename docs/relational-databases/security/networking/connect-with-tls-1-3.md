@@ -67,38 +67,9 @@ The following PowerShell script [updates the registry to](/powershell/scripting/
 > [!WARNING]
 > Before you proceed, [back up the registry](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692). This will allow you to restore the registry in the future, if necessary.
 
-```powershell
-# Learn more at https://learn.microsoft.com/windows-server/security/tls/tls-registry-settings?tabs=diffie-hellman
-Set-StrictMode -Version Latest
+:::code language="powershell" source="~/../sql-server-samples/samples/features/security/tls-1-3/set-reset-tls.ps1":::
 
-$base = 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\'
-$protocols = [ordered]@{
-    "SSL 2.0" = $false
-    "SSL 3.0" = $false
-    "TLS 1.0" = $false
-    "TLS 1.1" = $false
-    "TLS 1.2" = $true
-    "TLS 1.3" = $true
-}
-
-foreach ($version in $protocols.Keys) {
-
-    $enabledValue = $protocols[$version]
-    $path = $base + $version + '\Server'
-
-    New-Item $path -Force | Out-Null
-    New-ItemProperty -Path $path `
-                     -Name 'Enabled' `
-                     -Value $enabledValue `
-                     -PropertyType 'DWord' `
-                     -Force | Out-Null
-                     
-    Write-Host "$version is $enabledValue."
-}
-
-```
-
-This code is available in [GitHub at set-reset-tls.ps1](https://github.com/x509cert/Snippets/blob/main/set-reset-tls.ps1). 
+This code is available in [GitHub](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/tls-1-3/set-reset-tls.ps1).
 
 Once you run this script, restart the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] process for the new TLS settings to take effect. If you now run the code mentioned at the start of the article, it returns:
 

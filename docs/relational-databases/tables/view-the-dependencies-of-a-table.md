@@ -37,7 +37,11 @@ Requires `VIEW DEFINITION` permission on the database and `SELECT` permission on
 
 1. Select an object in the **Dependencies** grid. The type of object (such as "Trigger" or "Stored Procedure"), appears in the **Type** box.
 
-## <a id="TsqlProcedure"></a> Use Transact-SQL
+> [!NOTE]
+> - View the dependencies by using Object Explorer --> View Dependencies is not supported in Azure Synapse Analytics, instead [sys.sql_expression_dependencies](https://learn.microsoft.com/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql) can be used to view dependencies.
+> - Azure Synapse Analytics support tables, views, filtered statistics, and Transact-SQL stored procedures entity types from this list. Dependency information is created and maintained for tables, views, and filtered statistics only.
+
+## <a id="TsqlProcedure"></a>Use Transact-SQL
 
 #### View the objects that depend on a table
 

@@ -5,7 +5,7 @@ description: Data Discovery & Classification for Azure SQL Database, Azure SQL M
 author: Madhumitatripathy
 ms.author: matripathy
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 09/14/2022
+ms.date: 03/26/2024
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual

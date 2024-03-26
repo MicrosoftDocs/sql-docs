@@ -4,15 +4,15 @@ description: "View the dependencies of a table with SQL Server Management Studio
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 02/12/2024
+ms.date: 03/27/2024
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
-  - "table dependencies [SQL Server]"
-  - "dependencies [SQL Server], tables"
-  - "displaying dependences"
-  - "viewing dependencies"
+- "table dependencies [SQL Server]"
+- "dependencies [SQL Server], tables"
+- "displaying dependences"
+- "viewing dependencies"
 monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # View the dependencies of a table
@@ -37,7 +37,10 @@ Requires `VIEW DEFINITION` permission on the database and `SELECT` permission on
 
 1. Select an object in the **Dependencies** grid. The type of object (such as "Trigger" or "Stored Procedure"), appears in the **Type** box.
 
-## <a id="TsqlProcedure"></a> Use Transact-SQL
+> [!NOTE]
+> - Viewing dependencies using **Object Explorer** > **View Dependencies** is not supported in Azure Synapse Analytics, instead use [sys.sql_expression_dependencies](../system-catalog-views/sys-sql-expression-dependencies-transact-sql.md). Azure Synapse Analytics SQL pools support tables, views, filtered statistics, and Transact-SQL stored procedures entity types from this list. Dependency information is created and maintained for tables, views, and filtered statistics only.
+
+## <a id="TsqlProcedure"></a>Use Transact-SQL
 
 #### View the objects that depend on a table
 

@@ -12,7 +12,7 @@ ms.topic: reference
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This article lists the files you can monitor for product deployment integrity.
+This article lists the recommended files to monitor for product deployment integrity.
 
 ## Files
 

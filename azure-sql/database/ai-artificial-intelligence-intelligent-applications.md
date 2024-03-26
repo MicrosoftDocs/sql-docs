@@ -185,8 +185,8 @@ Copilot provides relevant answers to user questions, simplifying database manage
 - Developers can ask questions about their data as they would in text or conversation to generate a T-SQL query. Developers can also learn to write queries faster through detailed explanations of the generated query.
 
 > [!NOTE]
-> Copilot in Azure SQL Database is currently in a limited public preview for a limited number of early adopters. To sign up for this program, visit [Request Access to Copilot in Azure SQL Database: Limited Access Public Preview](https://aka.ms/sqlcopilot-signup).
-The limited public preview of Copilot for Azure SQL Database includes two Azure portal experiences:
+> Copilot in Azure SQL Database is currently in preview for a limited number of early adopters. To sign up for this program, visit [Request Access to Copilot in Azure SQL Database: Preview](https://aka.ms/sqlcopilot-signup).
+The preview of Copilot for Azure SQL Database includes two Azure portal experiences:
 
 | Portal location | Experiences |
 | :-- |:-- |

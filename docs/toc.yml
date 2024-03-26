@@ -7283,6 +7283,14 @@ items:
       href: relational-databases/synonyms/create-synonyms.md
 - name: Reporting & Analytics
   items:
+  - name: Fabric Mirrored Databases
+    items:
+    - name: Mirrored Databases to Microsoft Fabric
+      href: sql-server/fabric-mirrored-database/fabric-mirrored-databases.md
+    - name: Microsoft Fabric mirrored databases
+      href: /fabric/database/mirrored-database/overview
+    - name: Microsoft Fabric mirrored databases from Azure SQL Database
+      href: /fabric/database/mirrored-database/azure-sql-database
   - name: Azure Synapse Link for SQL
     items: 
     - name: Azure Synapse Link for SQL Server >
@@ -13586,7 +13594,7 @@ items:
       items:
       - name: sys.dm_db_objects_disabled_on_compatibility_level_change
         href: relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md
-    - name: Azure Synapse Link for SQL
+    - name: Change feed
       items:
       - name: sys.dm_change_feed_errors
         href: relational-databases/system-dynamic-management-views/sys-dm-change-feed-errors.md
@@ -13905,6 +13913,10 @@ items:
         href: relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md
       - name: sys.fn_trace_gettable
         href: relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md
+    - name: Change feed
+      items:
+      - name: sys.fn_has_change_feed_permissions
+        href: relational-databases/system-functions/fn-has-change-feed-permissions.md
   - name: System information schema views
     href: relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md
     items:
@@ -13956,22 +13968,61 @@ items:
       items:
       - name: sp_wait_for_database_copy_sync
         href: relational-databases/system-stored-procedures/sp-wait-for-database-copy-sync-transact-sql.md
-    - name: Spatial indexes
+    - name: Azure Synapse Analytics
+      href: relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md
       items:
-      - name: Overview
-        href: relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md
-      - name: sp_help_spatial_geometry_index
-        href: relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md
-      - name: sp_help_spatial_geometry_index_xml
-        href: relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md
-      - name: sp_help_spatial_geography_index
-        href: relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md
-      - name: sp_help_spatial_geography_index_xml
-        href: relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md
-      - name: sp_help_spatial_geometry_histogram
-        href: relational-databases/system-stored-procedures/sp-help-spatial-geometry-histogram-transact-sql.md
-      - name: sp_help_spatial_geography_histogram
-        href: relational-databases/system-stored-procedures/sp-help-spatial-geography-histogram-transact-sql.md
+      - name: sp_pdw_add_network_credentials
+        href: relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md
+      - name: sp_pdw_database_encryption
+        href: relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md
+      - name: sp_pdw_database_encryption_regenerate_system_keys
+        href: relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md
+      - name: sp_pdw_log_user_data_masking
+        href: relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md
+      - name: sp_pdw_remove_network_credentials
+        href: relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md
+      - name: sp_special_columns_100
+        href: relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md
+    - name: Change feed
+      items:
+      - name: sp_change_feed_configure_parameters
+        href: relational-databases/system-stored-procedures/sp-change-feed-configure-parameters.md
+      - name: sp_change_feed_create_table_group
+        href: relational-databases/system-stored-procedures/sp-change-feed-create-table-group.md
+      - name: sp_change_feed_disable_db
+        href: relational-databases/system-stored-procedures/sp-change-feed-disable-db.md
+      - name: sp_change_feed_disable_table
+        href: relational-databases/system-stored-procedures/sp-change-feed-disable-table.md        
+      - name: sp_change_feed_drop_table_group
+        href: relational-databases/system-stored-procedures/sp-change-feed-drop-table-group.md
+      - name: sp_change_feed_enable_db
+        href: relational-databases/system-stored-procedures/sp-change-feed-enable-db.md
+      - name: sp_change_feed_enable_table
+        href: relational-databases/system-stored-procedures/sp-change-feed-enable-table.md
+      - name: sp_change_feed_enable_tables_after_reseed
+        href: relational-databases/system-stored-procedures/sp-change-feed-enable-tables-after-reseed.md
+      - name: sp_change_feed_is_slo_allowed 
+        href: relational-databases/system-stored-procedures/sp-change-feed-is-slo-allowed.md
+      - name: sp_change_feed_reseed_table
+        href: relational-databases/system-stored-procedures/sp-change-feed-reseed-table.md
+      - name: sp_change_feed_reseed_db_init 
+        href: relational-databases/system-stored-procedures/sp-change-feed-reseed-db-init.md
+      - name: sp_change_feed_reseed_db_start_replication 
+        href: relational-databases/system-stored-procedures/sp-change-feed-reseed-db-start-replication.md
+      - name: sp_change_feed_vupgrade
+        href: relational-databases/system-stored-procedures/sp-change-feed-vupgrade.md
+      - name: sp_has_change_feed_permissions
+        href: relational-databases/system-stored-procedures/sp-has-change-feed-permissions.md
+      - name: sp_help_change_feed
+        href: relational-databases/system-stored-procedures/sp-help-change-feed.md
+      - name: sp_help_change_feed_table
+        href: relational-databases/system-stored-procedures/sp-help-change-feed-table.md
+      - name: sp_help_change_feed_settings
+        href: relational-databases/system-stored-procedures/sp-help-change-feed-settings.md
+      - name: sp_help_change_feed_table_groups
+        href: relational-databases/system-stored-procedures/sp-help-change-feed-table-groups.md
+      - name: sp_MSchange_feed_ddl_event
+        href: relational-databases/system-stored-procedures/sp-mschange-feed-ddl-event.md
     - name: Catalog
       items:
       - name: Overview
@@ -13984,6 +14035,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-create-openrowset-statistics.md
       - name: sp_databases
         href: relational-databases/system-stored-procedures/sp-databases-transact-sql.md
+      - name: sp_datatype_info_90
+        href: relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md
       - name: sp_drop_openrowset_statistics 
         href: relational-databases/system-stored-procedures/sp-drop-openrowset-statistics.md
       - name: sp_fkeys
@@ -14486,6 +14539,10 @@ items:
         href: relational-databases/system-stored-procedures/sp-delete-target-group-member-elastic-jobs-transact-sql.md
       - name: sp_purge_jobhistory
         href: relational-databases/system-stored-procedures/sp-purge-jobhistory-elastic-jobs-transact-sql.md
+    - name: Extended Events
+      items:
+      - name: sp_trace_generateevent
+        href: relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md
     - name: FILESTREAM and FileTable
       items:
       - name: Overview
@@ -15349,43 +15406,22 @@ items:
         href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md
       - name: sp_delete_backup
         href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md
-    - name: Azure Synapse Analytics
-      href: relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md
+    - name: Spatial indexes
       items:
-      - name: sp_datatype_info_90
-        href: relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md
-      - name: sp_pdw_add_network_credentials
-        href: relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md
-      - name: sp_pdw_database_encryption
-        href: relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md
-      - name: sp_pdw_database_encryption_regenerate_system_keys
-        href: relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md
-      - name: sp_pdw_log_user_data_masking
-        href: relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md
-      - name: sp_pdw_remove_network_credentials
-        href: relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md
-      - name: sp_special_columns_100
-        href: relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md
-    - name: Azure Synapse Link for SQL
-      items:
-      - name: sp_change_feed_disable_db
-        href: relational-databases/system-stored-procedures/sp-change-feed-disable-db.md
-      - name: sp_change_feed_disable_table
-        href: relational-databases/system-stored-procedures/sp-change-feed-disable-table.md        
-      - name: sp_change_feed_drop_table_group
-        href: relational-databases/system-stored-procedures/sp-change-feed-drop-table-group.md
-      - name: sp_help_change_feed
-        href: relational-databases/system-stored-procedures/sp-help-change-feed.md
-      - name: sp_help_change_feed_table
-        href: relational-databases/system-stored-procedures/sp-help-change-feed-table.md
-      - name: sp_change_feed_configure_parameters
-        href: relational-databases/system-stored-procedures/sp-change-feed-configure-parameters.md
-      - name: sp_change_feed_create_table_group
-        href: relational-databases/system-stored-procedures/sp-change-feed-create-table-group.md
-      - name: sp_change_feed_enable_db
-        href: relational-databases/system-stored-procedures/sp-change-feed-enable-db.md
-      - name: sp_change_feed_enable_table
-        href: relational-databases/system-stored-procedures/sp-change-feed-enable-table.md
+      - name: Overview
+        href: relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md
+      - name: sp_help_spatial_geometry_index
+        href: relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md
+      - name: sp_help_spatial_geometry_index_xml
+        href: relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md
+      - name: sp_help_spatial_geography_index
+        href: relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md
+      - name: sp_help_spatial_geography_index_xml
+        href: relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md
+      - name: sp_help_spatial_geometry_histogram
+        href: relational-databases/system-stored-procedures/sp-help-spatial-geometry-histogram-transact-sql.md
+      - name: sp_help_spatial_geography_histogram
+        href: relational-databases/system-stored-procedures/sp-help-spatial-geography-histogram-transact-sql.md
     - name: SQL Server Agent
       href: relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md
       items:
@@ -15545,10 +15581,6 @@ items:
         href: relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md
       - name: sp_update_targetservergroup
         href: relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md
-    - name: Extended Events
-      items:
-      - name: sp_trace_generateevent
-        href: relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md
     - name: SQL Server Profiler
       href: relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md
       items:

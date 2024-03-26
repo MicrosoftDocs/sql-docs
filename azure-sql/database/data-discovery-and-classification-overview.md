@@ -28,7 +28,7 @@ Your most sensitive data might include business, financial, healthcare, or perso
 > For information about SQL Server on-premises, see [SQL Data Discovery & Classification](/sql/relational-databases/security/sql-data-discovery-and-classification).
 
 > [!TIP]
-> Label-based access protection using Microsoft Purview policies is now in preview. For more information, see [Enabling access control for sensitive data using Microsoft Information Protection policies (public preview)](#enabling-access-control-for-sensitive-data-using-microsoft-information-protection-policies-public-preview).
+> Label-based access protection using Microsoft Purview Information Protection policies is now in preview. For more information, see [Enabling access control for sensitive data using Microsoft Purview Information Protection policies (public preview)](#enabling-access-control-for-sensitive-data-using-microsoft-purview-information-protection-policies-public-preview).
 
 ## <a id="what-is-dc"></a>What is Data Discovery & Classification?
 
@@ -146,9 +146,9 @@ Microsoft Information Protection (MIP) labels provide a simple and uniform way f
    :::image type="content" source="./media/data-discovery-and-classification-overview/classification-warning.png" alt-text="Screenshot of warnings for classified columns because of different Information Protection policies." lightbox="./media/data-discovery-and-classification-overview/classification-warning.png":::
 
 
-### Enabling access control for sensitive data using Microsoft Information Protection policies (public preview)
+### Enabling access control for sensitive data using Microsoft Purview Information Protection policies (public preview)
 
-Azure SQL Database supports the ability to enforce access control on the columns with sensitive data that have been labeled using Microsoft Information Protection (MIP) sensitivity labels using Microsoft Purview access policies.
+Azure SQL Database supports the ability to enforce access control on the columns with sensitive data that have been labeled using Microsoft Purview Information Protection (MIP) sensitivity labels using Microsoft Purview Information Protection access policies.
 
 Access policies in Purview enable organizations to protect sensitive data across their data sources. They enable personas like enterprise security/compliance admins to configure and enforce access control actions on sensitive data in their databases, ensuring that sensitive data can't be accessed by unauthorized users for a particular sensitivity label. Purview access policies are enforced at column level granularity for Azure SQL database, thus protecting sensitive data without blocking access to non-sensitive data columns in the database tables.
 

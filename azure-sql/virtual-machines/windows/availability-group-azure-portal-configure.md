@@ -54,6 +54,10 @@ To configure an Always On availability group by using the Azure portal, you must
 
   - A domain SQL Server service account to control SQL Server. This should be the same account for every SQL Server VM that you want to add to the availability group.
 
+
+> [!NOTE]
+> This tutorial assumes that both the DNS Server and domain controller are on the same virtual machine. If the DNS Server is configured on a different VM than the domain controller VM, latency when syncing objects could result in automated deployment issues.
+
 ## <a id="select"></a> Choose an Azure Marketplace image
 
 Use Azure Marketplace to choose one of several preconfigured images from the gallery. There are two entry points to start an availability group deployment in the Azure portal: 

@@ -5,7 +5,7 @@ description: Get notification before planned maintenance for Azure SQL Managed I
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: scottkim, mathoma, urosmil
-ms.date: 02/20/2024
+ms.date: 03/20/2024
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: how-to
@@ -24,7 +24,7 @@ Advance notifications enable customers to configure notifications to be sent up 
 Notifications can be configured so you can get texts, emails, Azure push notifications, and voicemails when planned maintenance is due to begin in the next 24 hours. Follow-up notifications are sent when maintenance begins and when maintenance ends.
 
 > [!NOTE]
-> While [maintenance windows](maintenance-window.md) are generally available, advance notifications for maintenance windows are in preview for Azure SQL Managed Instance.
+> [Maintenance windows](maintenance-window.md) are generally available. Advance notifications for maintenance windows are a [preview feature](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for Azure SQL Managed Instance.
 
 ## Configure an advance notification
 

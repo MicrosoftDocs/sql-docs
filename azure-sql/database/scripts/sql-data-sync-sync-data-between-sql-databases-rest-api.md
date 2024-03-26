@@ -3,8 +3,8 @@ title: "REST API: Sync between multiple databases"
 description: Use a REST API example script to sync between multiple databases.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: wiassaf, mathoma
-ms.date: 03/12/2019
+ms.reviewer: mathoma, hudequei
+ms.date: 03/26/2024
 ms.service: sql-database
 ms.subservice: sql-data-sync
 ms.topic: sample
@@ -27,11 +27,11 @@ For an overview of SQL Data Sync, see [Sync data across multiple cloud and on-pr
 
 Use the [create or update](/rest/api/sql/sync-groups/create-or-update) template to create a sync group.
  
-When creating a sync group, do not pass in the sync schema (table\column) and do not pass in masterSyncMemberName, because at this time sync group does not have table\column information yet.
+When creating a sync group, do not pass in the sync schema (table\column) and do not pass in `masterSyncMemberName`, because at this time sync group does not have table\column information yet.
 
-Sync group names cannot contain special characters, it can contain letters, numbers, underscore(_), dash(-).
+Sync group names cannot contain special characters, but can contain letters, numbers, underscore (`_`), dash (`-`).
 
-The minimum interval time for group synchronization is 5 seconds. If the interval time is smaller, 5 seconds will be used.
+The minimum interval time for group synchronization is five seconds. If the interval time is smaller, five seconds will be used.
 
 Sample request for creating a sync group: 
 
@@ -175,7 +175,7 @@ Only proceed to the next step once your schema refreshes successfully.
 
 Use the [create or update](/rest/api/sql/sync-groups/create-or-update) template to update your sync group.
 
-Update sync group by specifying the sync schema. Include your schema and masterSyncMemberName, which is the name that holds the schema you want to use. 
+Update sync group by specifying the sync schema. Include your schema and `masterSyncMemberName`, which is the name that holds the schema you want to use. 
 
 Sample request for updating sync group: 
 

@@ -173,7 +173,7 @@ Compute statistics by scanning all rows. FULLSCAN and SAMPLE 100 PERCENT have th
 
 When omitted, SQL Server uses sampling to create the statistics, and determines the sample size that is required to create a high quality query plan.
 
-In [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], only single-column FULLSCAN and single-column SAMPLE-based statistics are supported. When no option is included, FULLSCAN statistics are created.
+In [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], only single-column FULLSCAN and single-column SAMPLE-based statistics are supported. When no option is included, SAMPLE statistics are created.
 
 #### SAMPLE number { PERCENT | ROWS }
 Specifies the approximate percentage or number of rows in the table or indexed view for the query optimizer to use when it creates statistics. For PERCENT, *number* can be from 0 through 100 and for ROWS, *number* can be from 0 to the total number of rows. The actual percentage or number of rows the query optimizer samples might not match the percentage or number specified. For example, the query optimizer scans all rows on a data page.

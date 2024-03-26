@@ -37,7 +37,7 @@ This integration means that Copilot can answer questions with prompts like:
 ## Prerequisites
 
 - An existing Azure account and Azure SQL database.
-- Acceptance into the limited preview. To sign up for this program, visit [Request Access to Copilot in Azure SQL Database: Limited Access Public Preview](https://aka.ms/sqlcopilot-signup).
+- Acceptance into the preview. To sign up for this program, visit [Request Access to Copilot in Azure SQL Database: Preview](https://aka.ms/sqlcopilot-signup).
 
 > [!IMPORTANT]
 > Review these [preview terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/#AzureOpenAI-PoweredPreviews) before using natural language to SQL in Copilot in Azure SQL Database.

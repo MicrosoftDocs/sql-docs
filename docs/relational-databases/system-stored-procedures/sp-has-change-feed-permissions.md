@@ -1,32 +1,32 @@
 ---
-title: "sys.sp_change_feed_enable_table (Transact-SQL)"
-description: "The sys.sp_change_feed_enable_table system stored procedure enables the addition of a new table to an existing table group."
+title: "sys.sp_has_change_feed_permissions (Transact-SQL)"
+description: "The internal sys.sp_has_change_feed_permissions system stored procedure checks for permissions when enabling change feed publishing."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: imotiwala
-ms.date: 03/08/2024
+ms.date: 03/12/2024
 ms.service: fabric
 ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
-  - "sys.sp_change_feed_enable_table_TSQL"
-  - "sys.sp_change_feed_enable_table"
-  - "sp_change_feed_enable_table_TSQL"
-  - "sp_change_feed_enable_table"
+  - "sys.sp_has_change_feed_permissions_TSQL"
+  - "sys.sp_has_change_feed_permissions"
+  - "sp_has_change_feed_permissions_TSQL"
+  - "sp_has_change_feed_permissions"
 helpviewer_keywords:
-  - "sp_change_feed_enable_table"
+  - "sp_has_change_feed_permissions"
 dev_langs:
   - "TSQL"
 monikerRange: ">=sql-server-ver16||=azuresqldb-current||=fabric||=azure-sqldw-latest"
 ---
-# sys.sp_change_feed_enable_table (Transact-SQL)
+# sys.sp_has_change_feed_permissions (Transact-SQL)
 
 [!INCLUDE [sqlserver2022-asdb-asa-fabric](../../includes/applies-to-version/sqlserver2022-asdb-asa-fabric.md)]
 
-Stored procedure to enable the creation of a new table to an existing table group.
+Internal procedure that checks for permissions when enabling change feed publishing.
 
-> [!NOTE]  
-> This system stored procedure is used internally and is not recommended for direct administrative use. Use Synapse Studio or the Fabric portal instead. Using this procedure could introduce inconsistency.
+> [!NOTE]
+> This system stored procedure is used internally and is not recommended for direct administrative use. Use Synapse Studio or the Fabric portal instead.
 
 This system stored procedure is used for:
 
@@ -38,35 +38,23 @@ This system stored procedure is used for:
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ```syntaxsql
-sys.sp_change_feed_enable_table
-    @table_group_id
-    , @table_id
-    , @source_schema
-    , @source_name
-[ ; ]
+sys.sp_has_change_feed_permissions
+    @destination_type int
 ```
 
 ## Arguments
 
-#### @table_group_id
+#### destination_type
 
-The unique identifier of the table group.
+Int. `0` = Azure Synapse Link. `2` = Fabric mirroring. Default is `2`.
 
-#### @table_id
+## Result set
 
-The unique identifier for the change feed table generated during setup workflow.
-
-#### @source_schema
-
-The source table schema name.
-
-#### @source_name
-
-The source table name.
+`0` (success) or `1` (failure). `22740` if *destination_type* is invalid. Error message `22702` indicates permissions are insufficient.
 
 ## Permissions
 
-A user with [CONTROL database permissions](../security/permissions-database-engine.md), **db_owner** database role membership, or **sysadmin** server role membership can execute this procedure.
+Only **public** role membership is required to execute this procedure.
 
 ## Related content
 

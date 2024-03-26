@@ -7,6 +7,7 @@ ms.reviewer: atsingh, dinethi, rsetlem
 ms.date: 02/26/2024
 ms.service: sql-database
 ms.subservice: scale-out
+ms.custom: devx-track-azurecli, devx-track-azurepowershell
 ms.topic: how-to
 ---
 # Configure and manage Hyperscale named replicas

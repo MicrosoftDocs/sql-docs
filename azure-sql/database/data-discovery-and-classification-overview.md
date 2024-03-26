@@ -27,6 +27,9 @@ Your most sensitive data might include business, financial, healthcare, or perso
 > [!NOTE]
 > For information about SQL Server on-premises, see [SQL Data Discovery & Classification](/sql/relational-databases/security/sql-data-discovery-and-classification).
 
+> [!TIP]
+> Label-based access protection using Microsoft Purview policies is now in preview. For more information, see [Enabling access control for sensitive data using Microsoft Information Protection policies (public preview)](#enabling-access-control-for-sensitive-data-using-microsoft-information-protection-policies-public-preview).
+
 ## <a id="what-is-dc"></a>What is Data Discovery & Classification?
 
 Data Discovery & Classification currently supports the following capabilities:

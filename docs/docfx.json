@@ -1,10 +1,7 @@
 {
   "build": {
-
     "content": [
       {
-        "group": "gr-sql-2016-a",
-        "src": "./",
         "files": [
           "**/*.md",
           "**/*.yml",
@@ -17,14 +14,13 @@
           "README.md",
           "LICENSE",
           "LICENSE-CODE"
-        ]
+        ],
+        "src": "./",
+        "group": "gr-sql-2016-a"
       }
     ],
-
     "resource": [
       {
-        "group": "gr-sql-2016-a",
-        "src": "./",
         "files": [
           "**/*.png",
           "**/*.gif",
@@ -33,14 +29,13 @@
         ],
         "exclude": [
           "**/obj/**"
-        ]
+        ],
+        "src": "./",
+        "group": "gr-sql-2016-a"
       }
     ],
-
     "overwrite": [],
     "externalReference": [],
-    "markdownEngineName": "markdig",
-
     "globalMetadata": {
       "layout": "Conceptual",
       "uhfHeaderId": "MSDocsHeader-DocsSQL",
@@ -69,22 +64,15 @@
       "titleSuffix": "SQL Server",
       "recommendations": true
     },
-
     "fileMetadata": {
-
-      "feedback_system": {
-
-      },
-      "feedback_product_url": {
-      },
-
+      "feedback_system": {},
+      "feedback_product_url": {},
       "manager": {
         "**/*.md": "jroth",
         "dmx/**/*.md": "kfollis",
         "mdx/**/*.md": "kfollis",
         "reporting-services/**/*.md": "kfollis"
       },
-
       "titleSuffix": {
         "machine-learning/**/*.md": "SQL Server Machine Learning Services",
         "machine-learning/index.yml": "",
@@ -128,17 +116,13 @@
         "tools/synapse-pathway/**/*.md": "Azure Synapse Pathway",
         "sql-server/azure-arc/**/*.md": "SQL Server enabled by Azure Arc"
       },
-
       "breadcrumb_path": {
         "**/*.md": "~/breadcrumb/toc.yml"
       },
-      
-      "layout":{
+      "layout": {
         "**/index.yml": "LandingPage"
       },
-      
       "monikerRange": {
-
         "ado/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016",
         "analytics-platform-system/**/*.md": ">= aps-pdw-2016",
         "azdata/**/*.md": ">= sql-server-ver15 || >= sql-server-linux-ver15",
@@ -204,35 +188,27 @@
         "t-sql/**/*.md": "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current",
         "xquery/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017"
       },
-      
       "zone_pivot_group_filename": {
         "machine-learning/**/*.md": "machine-learning/machine-learning-zone-pivot-groups.json"
       },
-            
       "author": {
         "azdata/**/*.md": "swells"
       },
-
       "ms.author": {
         "azdata/**/*.md": "seanw"
       },
-
       "ms.date": {
         "azdata/**/*.md": "02/09/2021"
       },
-
       "ms.topic": {
         "azdata/**/*.md": "reference"
       },
-
       "ms.service": {
         "sql-server/azure-arc/**/*.md": "sql"
       },
-
       "ms.subservice": {
         "sql-server/azure-arc/**/*.md": "azure-arc-sql-server"
       },
-
       "ms.custom": {
         "ado/*.md": "UpdateFrequency5",
         "ado/guide/appendixes/*.md": "UpdateFrequency5",
@@ -350,24 +326,50 @@
         "tools/dta/*.md": "UpdateFrequency5",
         "tools/sql-server-profiler/*.md": "UpdateFrequency5",
         "tools/ssbdiagnose/*.md": "UpdateFrequency5"
+      },
+      "exclude_monikers": {
+        "ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md": [
+          "sql-server-ver16"
+        ],
+        "odbc/microsoft/**/*.md": [
+          "sql-server-ver16"
+        ],
+        "odbc/odbc-glossary.md": [
+          "sql-server-ver16"
+        ],
+        "relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md": [
+          "sql-server-ver16"
+        ],
+        "ssma/access/legal-notice-ssma-for-access.md": [
+          "sql-server-ver16"
+        ],
+        "ssma/db2/legal-notice-db2tosql.md": [
+          "sql-server-ver16"
+        ],
+        "ssma/mysql/legal-notice-mysqltosql.md": [
+          "sql-server-ver16"
+        ],
+        "ssma/sql-server-migration-assistant.md": [
+          "sql-server-ver16"
+        ],
+        "ssma/sybase/legal-notice-ssma-for-sybase.md": [
+          "sql-server-ver16"
+        ]
       }
     },
-
     "template": [],
-    "dest": "docs",
-
-    "groups": {
-      "gr-sql-2016-a": {
-        "moniker_range": "azuresqldb-current || azuresqldb-mi-current || azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = fabric",
-        "dest": "temp2016a"
-      }
-    },
-
-    "xref":[
+    "markdownEngineName": "markdig",
+    "xref": [
       "mref/System.Reflection.Assembly.Load.yml",
       "mref/System.Web.UI.WebControls.WebParts.IWebPartRow.yml"
     ],
-
+    "groups": {
+      "gr-sql-2016-a": {
+        "dest": "temp2016a",
+        "moniker_range": "azuresqldb-current || azuresqldb-mi-current || azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = fabric"
+      }
+    },
+    "dest": "docs",
     "rules": {
       "docs-link-absolute": {
         "exclude": [
@@ -413,8 +415,7 @@
         ]
       },
       "sensitive-language-bl": {
-        "exclude": [
-        ]
+        "exclude": []
       }
     }
   }

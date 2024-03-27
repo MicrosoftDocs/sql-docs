@@ -17,7 +17,15 @@ This article describes how to migrate your database in Azure SQL Database from t
 
 ## Migrate a database
 
-Migrating a database from the DTU-based purchasing model to the vCore-based purchasing model is similar to scaling between service objectives in the Basic, Standard, and Premium service tiers, with similar [duration](single-database-scale.md#latency) and a [minimal downtime](scale-resources.md) at the end of the migration process. A database migrated to the vCore-based purchasing model can be migrated back to the DTU-based purchasing model at any time in the same fashion, with the exception of databases migrated to the [Hyperscale](service-tier-hyperscale.md) service tier. 
+Migrating a database from the DTU-based purchasing model to the vCore-based purchasing model is similar to scaling between service objectives in the Basic, Standard, and Premium service tiers, with similar [duration](single-database-scale.md#latency) and a [minimal downtime](scale-resources.md) at the end of the migration process. A database migrated to the vCore-based purchasing model can be migrated back to the DTU-based purchasing model at any time using the same steps, except for databases migrated to the [Hyperscale](service-tier-hyperscale.md) service tier. 
+
+To migrate your database in the Azure portal, follow these steps: 
+
+1. Go to your SQL database in the [Azure portal](https://portal.azure.com).
+1. Select **Compute + storage** under **Settings**. 
+1. Use the drop-down under **Service tier** to select a new purchasing model and service tier: 
+
+   :::image type="content" source="media/migrate-dtu-to-vcore/migrate-purchasing-model-portal.png" alt-text="Screenshot of the compute + storage page of the SQL database in the Azure portal with Service tier selected." lightbox="media/migrate-dtu-to-vcore/migrate-purchasing-model-portal.png":::
 
 ## Choose the vCore service tier and service objective
 

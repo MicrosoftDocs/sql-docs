@@ -158,6 +158,6 @@ For zone redundant elastic pools, consider the following:
 - [Elastic pool pricing](https://azure.microsoft.com/pricing/details/sql-database/elastic)
 - [Scale elastic pool resources in Azure SQL Database](elastic-pool-scale.md)
 - [Use PowerShell to monitor and scale an elastic pool in Azure SQL Database](scripts/monitor-and-scale-pool-powershell.md)
-- [Multi-tenant SaaS database tenancy patterns](saas-tenancy-app-design-patterns.md)
+- [Multitenant SaaS database tenancy patterns](saas-tenancy-app-design-patterns.md)
 - [Introduction to a multitenant SaaS app that uses the database-per-tenant pattern with Azure SQL Database](saas-dbpertenant-wingtip-app-overview.md)
 - [Resource management in dense elastic pools](elastic-pool-resource-management.md)

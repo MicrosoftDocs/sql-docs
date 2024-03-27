@@ -5,7 +5,7 @@ description: An overview of database watcher for Azure SQL, a managed monitoring
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 03/21/2024
+ms.date: 03/27/2024
 ms.service: sql-db-mi
 ms.subservice: monitoring
 ms.topic: conceptual
@@ -204,6 +204,7 @@ During preview, database watcher has the following known issues.
 | Data is not collected if you use a database in Real-Time Analytics as the data store, and the **OneLake availability** option is enabled. | Disable the **OneLake availability** option and restart the watcher to resume data collection. |
 | When adding a **SQL database** target, the list of databases shown in the dropdown is incomplete if there are more than 1,000 databases on the selected logical server. | None at this time. |
 | Feedback sent using the smiley face button on the database watcher dashboards in Azure portal might not reach the database watcher product team. | Use the options in [Send feedback](#send-feedback). |
+| Because of a known issue in Azure SQL Database, you cannot use [database copy](./database/database-copy.md) when a login is added to a [server role](./database/security-server-roles.md). Because database watcher logins must be [added to a set of server roles](#watcher-authorization), database copy stops working if you enable database watcher. | To use database copy, remove the database watcher login from the `##MS_ServerPerformanceStateReader##`, `##MS_DefinitionReader##`, and `##MS_DatabaseConnector##` server roles. To restore database watcher functionality once database copy completes, add the login to these server roles again to [grant the watcher access](database-watcher-manage#grant-access-to-sql-targets) to SQL targets. |
 
 ## Troubleshoot
 

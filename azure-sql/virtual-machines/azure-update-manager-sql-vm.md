@@ -18,7 +18,7 @@ This article explains how to integrate Azure Update Manager with your [SQL virtu
 
 ## Overview
 
-[Azure Update Manager](/azure/update-center/overview) is a unified service to help you manage and govern updates for all your virtual machines and SQL Server instances at scale. Unlike with [Automated Patching](windows/automated-patching#migrate-from-automated-patching-to-azure-update-manager), Azure Update Manager installs Cumulative Updates for SQL Server.
+[Azure Update Manager](/azure/update-center/overview) is a unified service to help you manage and govern updates for all your virtual machines and SQL Server instances at scale. Unlike with [Automated Patching](windows/automated-patching.md#migrate-from-automated-patching-to-azure-update-manager), Azure Update Manager installs Cumulative Updates for SQL Server.
 
 With the Azure Update Manager, you can:
 

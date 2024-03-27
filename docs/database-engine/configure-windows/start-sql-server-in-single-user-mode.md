@@ -65,7 +65,8 @@ There are additional considerations when using single-server mode for [!INCLUDE[
 
 ### Availability groups
 
-Startup of the Always On availablity group and databases in the group is skipped when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started in single-user mode. If you need to troubleshoot issues with a database that requires starting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode, and the database is also part of an availability group, you must remove the database from the availability group before starting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode so the database comes online.
+Startup of the Always On availability group and databases in the group is skipped when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started in single-user mode. If you need to troubleshoot issues with a database that requires starting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode, and the database is also part of an availability group, you must remove the database from the availability group before starting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode so the database comes online.
+
 
 ### Failover cluster instances
 

@@ -127,7 +127,7 @@ Reverse migration is available under the following conditions:
 - Reverse migration is only available within 45 days of the original migration to Hyperscale.
 - Databases originally created in the Hyperscale service tier aren't eligible for reverse migration.
 - You might reverse migrate to the [General Purpose](service-tier-general-purpose.md) service tier only. Your migration from Hyperscale to General Purpose can target either the serverless or provisioned compute tiers. If you wish to migrate the database to another service tier, such as [Business Critical](service-tier-business-critical.md) or a [DTU based service tier](service-tiers-dtu.md), first reverse migrate to the General Purpose service tier, then change the service tier.
-- Reverse migration to [General Purpose](service-tier-general-purpose.md) service tier having less than 2 vcore is not supported.
+- Reverse migration to databases with less than 2 vcores is not supported. You can scale the database down to fewer than 2 vcores once the migration is complete.
 - Direct reverse migration from, or to, an elastic pool isn't supported. You can reverse migrate only a Hyperscale single database to a General Purpose single database.
     - If the Hyperscale database is part of a [Hyperscale elastic pool (preview)](./hyperscale-elastic-pool-overview.md), you have to first remove it from the Hyperscale elastic pool prior to reverse migration.
     - After reverse migration is complete, you can then optionally add the General Purpose single database to a General Purpose elastic pool if needed.

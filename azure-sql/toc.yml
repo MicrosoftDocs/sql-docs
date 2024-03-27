@@ -1099,10 +1099,8 @@
     items:
     - name: Create Azure SQL Managed Instance
       items:
-      - name: Azure portal
+      - name: Azure portal, PowerShell, Azure CLI
         href: managed-instance/instance-create-quickstart.md
-      - name: PowerShell
-        href: managed-instance/create-configure-managed-instance-powershell-quickstart.md
       - name: Bicep
         displayName: ARM, Resource Manager, Template
         href: managed-instance/create-bicep-quickstart.md

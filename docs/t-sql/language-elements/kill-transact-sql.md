@@ -3,7 +3,7 @@ title: "KILL (Transact-SQL)"
 description: "KILL (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "08/31/2017"
+ms.date: 03/27/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -134,6 +134,7 @@ The same status report can be obtained by repeating the same KILL _session ID_|_
 
 **[!INCLUDE [fabric](../../includes/fabric.md)]:** Requires Admin permissions.
 
+**Azure Synapse Analytics:** Requires Admin permissions.
   
 ## Examples  
   

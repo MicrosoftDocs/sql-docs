@@ -169,7 +169,7 @@ For example, you could migrate between Hyperscale and non-Hyperscale service tie
 1. Migrate to Hyperscale
 1. Reverse migrate to General Purpose
 
-In this case, the only backups available would be from steps 5 and 6 of the timeline, if they are still within the [configured retention period](automated-backups-overview.md#backup-retention). Any backups from previous steps would be unavailable. Carefully consider the availability of backups when attempting multiple reverse migrations from Hyperscale to the General Purpose tier. In certain situations, if reverse migration is canceled, it would affect point-in-time restore of database. 
+In this case, the only backups available would be from steps 5 and 6 of the timeline, if they are still within the [configured retention period](automated-backups-overview.md#backup-retention). Any backups from previous steps would be unavailable. Carefully consider the availability of backups when attempting repeated migrations of the same database between the Hyperscale and the General Purpose service tiers. Backups of databases older than the immediately previous database become unavailable as soon as a reverse migration is started and remain unavailable even if the migration is canceled. 
 
 ### How to reverse migrate a Hyperscale database to the General Purpose service tier
 

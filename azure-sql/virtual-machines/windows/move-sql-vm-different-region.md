@@ -15,6 +15,11 @@ tags: azure-resource-manager
 # Move a SQL Server VM to another region within Azure with Azure Site Recovery
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
+> [!div class="op_single_selector"]
+> * [Azure SQL Database](../../database/move-resources-across-regions.md?view=azuresql&preserve-view=true)
+> * [Azure SQL Managed Instance](../../managed-instance/move-resources-across-regions.md?view=azuresql&preserve-view=true)
+> * [SQL Server on Azure VMs](move-sql-vm-different-region.md?view=azuresql&preserve-view=true)
+
 This article teaches you how to use Azure Site Recovery to migrate your SQL Server virtual machine (VM) from one region to another within Azure. 
 
 Moving a SQL Server VM to a different region requires doing the following:

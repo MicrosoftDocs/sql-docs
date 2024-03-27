@@ -231,8 +231,6 @@
         href: database/database-import.md
       - name: Export a database to a BACPAC file
         href: database/database-export.md
-      - name: Move resources to a new region
-        href: database/move-resources-across-regions.md
       - name: Load data with ADF
         href: /azure/data-factory/connector-azure-sql-database?toc=/azure/azure-sql/toc.json
     - name: Develop data applications
@@ -696,7 +694,8 @@
       - name: Azure Automation
         href: database/automation-manage.md
       - name: Block geo-replication of Azure SQL Database backups
-        href: database/block-geo-redundant-backup-storage.md
+      - name: Move resources to a new region
+        href: database/move-resources-across-regions.md
     - name: Elastic jobs
       items:
       - name: Job automation overview
@@ -985,7 +984,7 @@
     - name: Azure CLI
       items:
       - name: Samples overview
-        href: database/az-cli-script-samples-content-guide.md?tabs=single-database
+        href: database/az-cli-script-samples-content-guide.md
       - name: Create databases
         items:
         - name: Create single database
@@ -1029,7 +1028,7 @@
     - name: Azure PowerShell 
       items: 
         - name: Azure PowerShell samples guide
-          href: database/powershell-script-content-guide.md?tabs=single-database
+          href: database/powershell-script-content-guide.md
         - name: Create databases
           items: 
           - name: Create single Azure SQL Database
@@ -1071,7 +1070,7 @@
           - name: Update sync schema
             href: database/scripts/update-sync-schema-in-sync-group.md
     - name: Azure Resource Manager
-      href: database/arm-templates-content-guide.md?tabs=single-database
+      href: database/arm-templates-content-guide.md
     - name: Code samples
       href: https://azure.microsoft.com/resources/samples/?service=sql-database
     - name: Azure Resource Graph queries
@@ -1469,6 +1468,8 @@
         href: managed-instance/database-copy-move-how-to.md
       - name: Manage file space
         href: managed-instance/file-space-manage.md
+      - name: Move resources to a new region
+        href: managed-instance/move-resources-across-regions.md
 
     - name: Monitor & Tune
       items:
@@ -1562,7 +1563,7 @@
     - name: Azure CLI
       items:
       - name: Samples overview
-        href: database/az-cli-script-samples-content-guide.md?tabs=managed-instance
+        href: managed-instance/az-cli-script-samples-content-guide.md
       - name: Create Azure SQL Managed Instance
         href: managed-instance/scripts/create-configure-managed-instance-cli.md
       - name: Configure transparent data encryption (TDE)
@@ -1570,7 +1571,7 @@
     - name: Azure PowerShell
       items:
       - name: Samples overview
-        href: database/powershell-script-content-guide.md?tabs=managed-instance
+        href: managed-instance/powershell-script-content-guide.md
       - name: Create Azure SQL Managed Instances
         items:
         - name: Create a managed instance
@@ -1582,7 +1583,7 @@
       - name: Configure transparent data encryption (TDE)
         href: managed-instance/scripts/transparent-data-encryption-byok-powershell.md
     - name: Azure Resource Manager
-      href: database/arm-templates-content-guide.md?tabs=managed-instance
+      href: managed-instance/arm-templates-content-guide.md
     - name: Code samples
       href: https://azure.microsoft.com/resources/samples/?service=sql-database
 

@@ -127,6 +127,7 @@ Reverse migration is available under the following conditions:
 - Reverse migration is only available within 45 days of the original migration to Hyperscale.
 - Databases originally created in the Hyperscale service tier aren't eligible for reverse migration.
 - You might reverse migrate to the [General Purpose](service-tier-general-purpose.md) service tier only. Your migration from Hyperscale to General Purpose can target either the serverless or provisioned compute tiers. If you wish to migrate the database to another service tier, such as [Business Critical](service-tier-business-critical.md) or a [DTU based service tier](service-tiers-dtu.md), first reverse migrate to the General Purpose service tier, then change the service tier.
+- Reverse migration to [General Purpose](service-tier-general-purpose.md) service tier having less than 2 vcore is not supported.
 - Direct reverse migration from, or to, an elastic pool isn't supported. You can reverse migrate only a Hyperscale single database to a General Purpose single database.
     - If the Hyperscale database is part of a [Hyperscale elastic pool (preview)](./hyperscale-elastic-pool-overview.md), you have to first remove it from the Hyperscale elastic pool prior to reverse migration.
     - After reverse migration is complete, you can then optionally add the General Purpose single database to a General Purpose elastic pool if needed.
@@ -168,7 +169,7 @@ For example, you could migrate between Hyperscale and non-Hyperscale service tie
 1. Migrate to Hyperscale
 1. Reverse migrate to General Purpose
 
-In this case, the only backups available would be from steps 5 and 6 of the timeline, if they are still within the [configured retention period](automated-backups-overview.md#backup-retention). Any backups from previous steps would be unavailable. Carefully consider the availability of backups when attempting multiple reverse migrations from Hyperscale to the General Purpose tier.
+In this case, the only backups available would be from steps 5 and 6 of the timeline, if they are still within the [configured retention period](automated-backups-overview.md#backup-retention). Any backups from previous steps would be unavailable. Carefully consider the availability of backups when attempting multiple reverse migrations from Hyperscale to the General Purpose tier. In certain situations, if reverse migration is canceled, it would affect point-in-time restore of database. 
 
 ### How to reverse migrate a Hyperscale database to the General Purpose service tier
 

@@ -36,9 +36,6 @@ helpviewer_keywords:
 ## Using Entities as Constrained Lists  
  When users are assigning attributes to the members in an entity, you can have them choose from a constrained list of values. To do this, you use an entity to populate the list of values for the attribute. This is called a domain-based attribute. For more information, see [Domain-Based Attributes &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md).  
   
-## Base Entities  
- A base entity is a starting point for users when navigating objects in the model. A base entity determines the layout of the screen when a user opens the **Explorer** functional area and clicks **Explorer** on the menu bar. To specify an entity as a base entity, navigate to the **System Administration** functional area. On the **Model View** page, drag the entity from the tree control on the right to the name of the model in the tree control on the left.  
-  
 ## Entity Security  
  You can give users permission to an entity, which includes related model objects. For more information, see [Entity Permissions &#40;Master Data Services&#41;](../master-data-services/entity-permissions-master-data-services.md).  
   

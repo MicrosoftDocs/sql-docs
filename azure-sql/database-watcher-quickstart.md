@@ -57,23 +57,23 @@ Once the deployment completes, select **Go to resource** to open the new databas
 
 1. In the **Grant access** card, select a Microsoft Entra authentication link matching your target type. Copy the T-SQL script that grants the watcher limited, specific access to collect monitoring data from the selected target.
 
+    The following screenshot shows the T-SQL script for Azure SQL databases and elastic pools.
+
     :::image type="content" source="media/database-watcher-quickstart/database-watcher-grant-access-sql-database.png" alt-text="Screenshot of the targets page of a database watcher, showing the T-SQL script that grants access to a database watcher on a SQL database or an elastic pool, and a button that copies it to the clipboard." lightbox="media/database-watcher-quickstart/database-watcher-grant-access-sql-database.png":::
 
-    This screenshot shows the T-SQL script for Azure SQL databases and elastic pools.
+    The following screenshot shows the T-SQL script for Azure SQL managed instances.
 
     :::image type="content" source="media/database-watcher-quickstart/database-watcher-grant-access-sql-managed-instance.png" alt-text="Screenshot of the targets page of a database watcher, showing the T-SQL script that grants access to a database watcher on a SQL managed instance, and a button that copies it to the clipboard." lightbox="media/database-watcher-quickstart/database-watcher-grant-access-sql-managed-instance.png":::
 
-    This screenshot shows the T-SQL script for Azure SQL managed instances.
-
 1. Open a new query window in SQL Server Management Studio or Azure Data Studio. Connect to the `master` database on the Azure SQL logical server or SQL managed instance you selected. Paste the T-SQL script, and select **Execute**.
+
+    The following screenshot shows the T-SQL script for Azure SQL databases and elastic pools.
 
     :::image type="content" source="media/database-watcher-quickstart/database-watcher-grant-access-t-sql-sql-database.png" alt-text="Screenshot of a SQL Server Management Studio query window that is connected to the master database on an Azure SQL logical server, showing a successfully executed T-SQL script that grants access to a database watcher." lightbox="media/database-watcher-quickstart/database-watcher-grant-access-t-sql-sql-database.png":::
 
-    This screenshot shows the T-SQL script for Azure SQL databases and elastic pools.
+    The following screenshot shows the T-SQL script for Azure SQL managed instances.
 
     :::image type="content" source="media/database-watcher-quickstart/database-watcher-grant-access-t-sql-sql-managed-instance.png" alt-text="Screenshot of a SQL Server Management Studio query window that is connected to the master database on an Azure SQL managed instance, showing a successfully executed T-SQL script that grants access to a database watcher." lightbox="media/database-watcher-quickstart/database-watcher-grant-access-t-sql-sql-managed-instance.png":::
-
-    This screenshot shows the T-SQL script for Azure SQL managed instances.
 
 ## Create and approve a managed private endpoint
 

@@ -24,7 +24,7 @@ Version 12.6 is the latest general availability (GA) version. It supports Java 8
 - Release number: 12.6.1
 - Released: February 20, 2024
 
-When you download the driver, there are multiple JAR files. The name of the JAR file indicates the version of Java that it supports.
+When you download the driver, there are multiple JAR files. The JAR file with `jre8` supports Java 8 and the JAR file with `jre11` supports Java 11 and up.
 
 > [!Note]
 > If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please select **Read in English** at the top of this page. You can download different languages from the US-English version site by selecting [available languages](#available-languages).

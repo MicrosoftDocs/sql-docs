@@ -71,7 +71,7 @@ Each virtual or physical server requires connectivity to:
 
 To get the region segment of a regional endpoint, remove all spaces from the Azure region name. For example, *East US 2* region, the region name is `eastus2`.
 
-For example: `*.<region>-arcdataservices.com` should be `*.eastus2-arcdataservices.com` in the East US 2 region.
+For example: `*.<region>.arcdataservices.com` should be `*.eastus2.arcdataservices.com` in the East US 2 region.
 
 For a list of supported regions, review [Supported Azure regions](overview.md#supported-azure-regions).
 

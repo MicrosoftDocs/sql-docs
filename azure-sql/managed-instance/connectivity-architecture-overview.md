@@ -146,7 +146,7 @@ The domain name of the VNet-local endpoint resolves to the private IP address of
 
 The load balancer directs traffic to a SQL Managed Instance gateway. Because multiple managed instances can run inside the same cluster, the gateway uses the SQL Managed Instance host name as seen in the connection string to redirect traffic to the correct SQL engine service.
 
-The value for `zone-id` is automatically generated when you create the cluster. If a newly created cluster hosts a secondary managed instance, it shares its zone ID with the primary cluster.
+The value for `dns-zone` is automatically generated when you create the cluster. If a newly created cluster hosts a secondary managed instance, it shares its zone ID with the primary cluster.
 
 ## Service-aided subnet configuration
 

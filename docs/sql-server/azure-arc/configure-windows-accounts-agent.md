@@ -115,6 +115,8 @@ Base key – `HKEY_LOCAL_MACHINE`.
 | | SELECT dbo.syssubsystems | msdb |
 | | SELECT sys.sql_expression_dependencies | All databases |
 
+Note: Minimum permissions depend on the enabled features. Permissions are updated when it is no longer necessary. Necessary permissions are granted when features are enabled. 
+
 ## Additional permissions
 
 * Permissions to service account to access extension service and configure auto-recovery.

@@ -9,17 +9,6 @@ ms.topic: conceptual
 ms.custom: references_regions
 ---
 
----
-title: Prerequisites
-description: Describes prerequisites required for SQL Server enabled by Azure Arc.
-author: anosov1960
-ms.author: sashan
-ms.reviewer: mikeray, randolphwest
-ms.date: 01/24/2024
-ms.topic: conceptual
-ms.custom: references_regions
----
-
 # Prerequisites - SQL Server enabled by Azure Arc
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]

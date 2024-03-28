@@ -119,7 +119,7 @@ ALTER DATABASE { database_name | CURRENT }
   | <temporal_history_retention>
   | <data_retention_policy>
   | <compatibility_level>
-      { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
+      { 160 | 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 }
 ```
 

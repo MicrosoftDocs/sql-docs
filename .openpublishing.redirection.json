@@ -1,14 +1,6 @@
 {
   "redirections": [
     {
-      "source_path": "docs/ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md",
-      "redirect_url": "/previous-versions/sql/ado/guide/appendixes/microsoft-ole-db-provider-for-odbc",
-      "redirect_document_id": false,
-      "monikers": [
-        "sql-server-ver16"
-      ]
-    },
-    {
       "source_path": "docs/odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md",
       "redirect_url": "/previous-versions/sql/odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel",
       "redirect_document_id": false,
@@ -2515,62 +2507,6 @@
     {
       "source_path": "docs/odbc/microsoft/visual-foxpro-terminology.md",
       "redirect_url": "/previous-versions/sql/odbc/microsoft/visual-foxpro-terminology",
-      "redirect_document_id": false,
-      "monikers": [
-        "sql-server-ver16"
-      ]
-    },
-    {
-      "source_path": "docs/odbc/odbc-glossary.md",
-      "redirect_url": "/previous-versions/sql/odbc/odbc-glossary",
-      "redirect_document_id": false,
-      "monikers": [
-        "sql-server-ver16"
-      ]
-    },
-    {
-      "source_path": "docs/relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md",
-      "redirect_url": "/previous-versions/sql/relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server",
-      "redirect_document_id": false,
-      "monikers": [
-        "sql-server-ver16"
-      ]
-    },
-    {
-      "source_path": "docs/ssma/access/legal-notice-ssma-for-access.md",
-      "redirect_url": "/previous-versions/sql/ssma/access/legal-notice-ssma-for-access",
-      "redirect_document_id": false,
-      "monikers": [
-        "sql-server-ver16"
-      ]
-    },
-    {
-      "source_path": "docs/ssma/db2/legal-notice-db2tosql.md",
-      "redirect_url": "/previous-versions/sql/ssma/db2/legal-notice-db2tosql",
-      "redirect_document_id": false,
-      "monikers": [
-        "sql-server-ver16"
-      ]
-    },
-    {
-      "source_path": "docs/ssma/mysql/legal-notice-mysqltosql.md",
-      "redirect_url": "/previous-versions/sql/ssma/mysql/legal-notice-mysqltosql",
-      "redirect_document_id": false,
-      "monikers": [
-        "sql-server-ver16"
-      ]
-    },
-    {
-      "source_path": "docs/ssma/sql-server-migration-assistant.md",
-      "redirect_url": "/previous-versions/sql/ssma/sql-server-migration-assistant",
-      "redirect_document_id": false,
-      "monikers": [
-        "sql-server-ver16"
-      ]
-    },
-    {
-      "source_path": "docs/ssma/sybase/legal-notice-ssma-for-sybase.md",
-      "redirect_url": "/previous-versions/sql/ssma/sybase/legal-notice-ssma-for-sybase",
       "redirect_document_id": false,
       "monikers": [
         "sql-server-ver16"

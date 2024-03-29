@@ -4315,8 +4315,9 @@ items:
     - name: Breaking changes in SQL Server 2016
       href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md
   - name: Planning
-    href: sql-server/install/planning-a-sql-server-installation.md
     items:
+    - name: Overview
+      href: sql-server/install/planning-a-sql-server-installation.md
     - name: Maximum capacity specifications
       href: sql-server/maximum-capacity-specifications-for-sql-server.md
     - name: Compute capacity limits by edition

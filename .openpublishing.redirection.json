@@ -1,6 +1,134 @@
 {
   "redirections": [
     {
+      "source_path": "docs/database-engine/availability-groups/windows/add-ip-address-dialog-box-sql-server-management-studio.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/add-ip-address-dialog-box-sql-server-management-studio",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/availability-replica-properties-general-page.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/availability-replica-properties-general-page",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/specify-availability-group-name-page.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/specify-availability-group-name-page",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/select-databases-page-new-availability-group-wizard-and-add-database-wizard.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/select-databases-page-new-availability-group-wizard-and-add-database-wizard",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/enter-passwords-page-add-replica-wizard.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/enter-passwords-page-add-replica-wizard",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/validation-page-always-on-availability-group-wizards.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/validation-page-always-on-availability-group-wizards",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/summary-page-always-on-availability-group-wizards.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/summary-page-always-on-availability-group-wizards",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/progress-page-always-on-availability-group-wizards.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/progress-page-always-on-availability-group-wizards",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/results-page-always-on-availability-group-wizards.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/results-page-always-on-availability-group-wizards",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/options-sql-server-always-on-dashboard-page.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/options-sql-server-always-on-dashboard-page",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/policy-evaluation-result-always-on.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/policy-evaluation-result-always-on",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/availability-group-properties-new-availability-group-general-page.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/availability-group-properties-new-availability-group-general-page",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
       "source_path": "docs/odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md",
       "redirect_url": "/previous-versions/sql/odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel",
       "redirect_document_id": false,
@@ -61900,6 +62028,11 @@
     {
       "source_path": "docs/relational-databases/errors-events/mssqlserver-53-database-engine-error.md",
       "redirect_url": "/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/errors-events/mssqlserver-10054-database-engine-error.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/tls-exist-connection-closed",
       "redirect_document_id": false
     },
     {

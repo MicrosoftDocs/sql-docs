@@ -11511,8 +11511,6 @@ items:
           href: relational-databases/errors-events/mssqlserver-10001-database-engine-error.md
         - name: "10003"
           href: relational-databases/errors-events/mssqlserver-10003-database-engine-error.md
-        - name: "10054"
-          href: relational-databases/errors-events/mssqlserver-10054-database-engine-error.md
         - name: "10061"
           href: relational-databases/errors-events/mssqlserver-10061-database-engine-error.md
         - name: "10502"

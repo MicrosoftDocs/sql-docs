@@ -108,8 +108,8 @@ The following table is for databases that are not [zone-redundant](high-availabi
 | Canada East  | | Yes | Yes |
 | Central India | | Yes | Yes |
 | Central US | Yes | Yes | Yes |
-| China East 2 | | Yes |
-| China North 2 | | Yes |
+| China East 2 | | Yes | Yes |
+| China North 2 | | Yes | Yes |
 | East US 1 | Yes | Yes | Yes |
 | East US 2  | Yes | Yes | Yes |
 | East Asia  | | Yes | Yes |
@@ -128,8 +128,8 @@ The following table is for databases that are not [zone-redundant](high-availabi
 | UAE North | | Yes | Yes |
 | UK South | Yes | Yes | Yes |
 | UK West | | Yes | Yes |
-| US Gov Texas | | Yes |
-| US Gov Virginia | | Yes |
+| US Gov Texas | | Yes | Yes |
+| US Gov Virginia | | Yes | Yes |
 | West Central US | | Yes | Yes |
 | West Europe | Yes | Yes | Yes |
 | West US | Yes | Yes | Yes |

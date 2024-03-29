@@ -30,11 +30,11 @@ The data source name used by an ODBC application when it requests a connection t
 
 ### Select or enter a server name
 
-The name of an instance of SQL Server on your network. You will need to specify a server in the next edit box.
+The name of an instance of SQL Server on your network. You'll need to specify a server in the next edit box.
 
 In most cases, the ODBC driver can connect by using the default protocol order and the server name supplied in this box. Use SQL Server Configuration Manager if you want to create an alias for the server or configure client network libraries.
 
-You can enter "(local)" in the server box when you are using the same computer as SQL Server. The user can then connect to the local instance of SQL Server, even when running a non-networked version of SQL Server. Multiple instances of SQL Server can run on the same computer. To specify a named instance of SQL Server, the server name is specified as _ServerName_\\_InstanceName_.
+You can enter "(local)" in the server box when you're using the same computer as SQL Server. The user can then connect to the local instance of SQL Server, even when running a non-networked version of SQL Server. Multiple instances of SQL Server can run on the same computer. To specify a named instance of SQL Server, the server name is specified as _ServerName_\\_InstanceName_.
 
 For more information about server names for different types of networks, see [Logging In to SQL Server](../../../database-engine/configure-windows/logging-in-to-sql-server.md#format-for-specifying-the-name-of-sql-server).
 
@@ -80,11 +80,11 @@ Specifies that the driver authenticate to SQL Server using a Microsoft Entra ser
 
 ### Login ID
 
-Specifies the login ID the driver uses when connecting to SQL Server if **With SQL Server Authentication using a login ID and password entered by the user** or **With Active Directory Password authentication using a login ID and password entered by the user** or **With Active Directory Interactive authentication using a login ID entered by the user** is selected. If **With Managed Identity authentication** is selected, specify the object ID of the managed identity or leave blank to use the default identity. This field only applies to the connection made to determine the server default settings; it does not apply to subsequent connections made using the data source after it has been created except if using Managed Identity authentication.
+Specifies the login ID the driver uses when connecting to SQL Server if **With SQL Server Authentication using a login ID and password entered by the user** or **With Active Directory Password authentication using a login ID and password entered by the user** or **With Active Directory Interactive authentication using a login ID entered by the user** is selected. If **With Managed Identity authentication** is selected, specify the object ID of the managed identity or leave blank to use the default identity. This field only applies to the connection made to determine the server default settings; it doesn't apply to subsequent connections made using the data source after it has been created except if using Managed Identity authentication.
 
 ### Password
 
-Specifies the password the driver uses when connecting to SQL Server if **With SQL Server Authentication using a login ID and password entered by the user** or **With Active Directory Password authentication using a login ID and password entered by the user** is selected. This field only applies to the connection made to determine the server default settings; it does not apply to subsequent connections made using the new data source.
+Specifies the password the driver uses when connecting to SQL Server if **With SQL Server Authentication using a login ID and password entered by the user** or **With Active Directory Password authentication using a login ID and password entered by the user** is selected. This field only applies to the connection made to determine the server default settings; it doesn't apply to subsequent connections made using the new data source.
 
 Both the **Login ID** and **Password** boxes are disabled if **With Integrated Windows authentication** or **With Active Directory Integrated authentication** is selected.
 
@@ -100,7 +100,7 @@ Using the default database for the login ID is more efficient than specifying a 
 
 ### Mirror server
 
-Specifies the name of the failover partner of the database to be mirrored. If a database name is not shown in the **Change the default database to** box, or the name shown is the default database, **Mirror Server** is grayed out.
+Specifies the name of the failover partner of the database to be mirrored. If a database name isn't shown in the **Change the default database to** box, or the name shown is the default database, **Mirror Server** is grayed out.
 
 Optionally, you can specify a server principal name (SPN) for the mirror server. The SPN for the mirror server is used for mutual authentication between client and server.
 
@@ -124,11 +124,11 @@ When this check box is cleared, applications that use quoted identifiers, such a
 
 Specifies that the ANSI_NULLS, ANSI_WARNINGS, and ANSI_PADDINGS options be set on when the ODBC Driver for SQL Server connects.
 
-With ANSI_NULLS set on, the server enforces ANSI rules regarding comparing columns for NULL. The ANSI syntax "IS NULL" or "IS NOT NULL" must be used for all NULL comparisons. The Transact-SQL syntax "= NULL" is not supported.
+With ANSI_NULLS set on, the server enforces ANSI rules regarding comparing columns for NULL. The ANSI syntax "IS NULL" or "IS NOT NULL" must be used for all NULL comparisons. The Transact-SQL syntax "= NULL" isn't supported.
 
-With ANSI_WARNINGS set on, SQL Server issues warning messages for conditions that violate ANSI rules but do not violate the rules of Transact-SQL. Examples of such errors are data truncation on execution of an INSERT or UPDATE statement, or encountering a null value during an aggregate function.
+With ANSI_WARNINGS set on, SQL Server issues warning messages for conditions that violate ANSI rules but don't violate the rules of Transact-SQL. Examples of such errors are data truncation on execution of an INSERT or UPDATE statement, or encountering a null value during an aggregate function.
 
-With ANSI_PADDING set on, trailing blanks on **varchar** values and trailing zeroes on **varbinary** values are not automatically trimmed.
+With ANSI_PADDING set on, trailing blanks on **varchar** values and trailing zeroes on **varbinary** values aren't automatically trimmed.
 
 ### Application intent
 
@@ -136,7 +136,7 @@ Declares the application workload type when connecting to a server. Possible val
 
 ### Multi-subnet failover
 
-If your application is connecting to a high-availability, disaster recovery (Always On Availability Groups) availability group (AG) on different subnets, enabling **Multi-subnet failover.** configures ODBC Driver for SQL Server to provide faster detection of and connection to the (currently) active server.
+If your application is connecting to a high-availability, disaster recovery (Always On Availability Groups) availability group (AG) on different subnets, enabling **Multi-subnet failover** configures ODBC Driver for SQL Server to provide faster detection of and connection to the (currently) active server.
 
 ### Transparent Network IP Resolution
 
@@ -182,7 +182,7 @@ Specifies the hostname to be used when validating the server's certificate. When
 
 When this check box is selected, the ODBC driver for SQL Server converts ANSI strings sent between the client computer and SQL Server by using Unicode. The ODBC driver sometimes converts between the SQL Server code page and Unicode on the client computer. This option requires that the code page used by SQL Server is one of the code pages available on the client computer.
 
-When this check box is cleared, no translation of extended characters in ANSI character strings is done when they're sent between the client application and the server. If the client computer is using an ANSI code page (ACP) different from the SQL Server code page, extended characters in ANSI character strings may be misinterpreted. If the client computer is using the same code page for its ACP that SQL Server is using, the extended characters are interpreted correctly.
+When this check box is cleared, no translation of extended characters in ANSI character strings is done when they're sent between the client application and the server. If the client computer is using an ANSI code page (ACP) different from the SQL Server code page, extended characters in ANSI character strings might be misinterpreted. If the client computer is using the same code page for its ACP that SQL Server is using, the extended characters are interpreted correctly.
 
 ### Use regional settings when outputting currency, numbers, dates, and times
 

@@ -1008,24 +1008,6 @@
   href: ../integration-services/catalog/view-the-list-of-packages-on-the-integration-services-server.md
 - name: SSIS Catalog Transact-SQL Reference
   href: ../integration-services/catalog/integration-services-ssis-catalog-transact-sql-reference.md
-- name: SSIS Catalog dialog boxes
-  items:
-  - name: Browse All Principals Dialog Box
-    href: ../integration-services/catalog/browse-all-principals-dialog-box.md
-  - name: Configure Dialog Box
-    href: ../integration-services/catalog/configure-dialog-box.md
-  - name: Folder Properties Dialog Box
-    href: ../integration-services/catalog/folder-properties-dialog-box.md
-  - name: Package Properties Dialog Box
-    href: ../integration-services/catalog/package-properties-dialog-box.md
-  - name: Project Properties Dialog Box
-    href: ../integration-services/catalog/project-properties-dialog-box.md
-  - name: Project Versions Dialog Box
-    href: ../integration-services/catalog/project-versions-dialog-box.md
-  - name: Set Parameter Value Dialog Box
-    href: ../integration-services/catalog/set-parameter-value-dialog-box.md
-  - name: Validate Dialog Box
-    href: ../integration-services/catalog/validate-dialog-box.md
 - name: Integration Services (SSIS) Service
   href: ../integration-services/service/integration-services-service-ssis-service.md
 - name: Package Management (SSIS Service)

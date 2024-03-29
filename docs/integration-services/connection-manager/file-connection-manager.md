@@ -89,8 +89,6 @@ helpviewer_keywords:
   
 ## Add File Connection Manager Dialog Box UI Reference
 
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
   Use the **Add File Connection Manager** dialog box to define a connection to a group of files or folders.  
   
  To learn more about the Multiple Files connection manager, see [Multiple Files Connection Manager](../../integration-services/connection-manager/multiple-files-connection-manager.md).  
@@ -124,8 +122,6 @@ helpviewer_keywords:
  Select a file or folder, and then use the arrow buttons to move it up or down to specify the sequence of access.
 
 ## Suggest Column Types Dialog Box UI Reference
-
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
   Use the **Suggest Column Types** dialog box to identify the data type and length of columns in a Flat File Connection Manager based on a sampling of the file content.  
   

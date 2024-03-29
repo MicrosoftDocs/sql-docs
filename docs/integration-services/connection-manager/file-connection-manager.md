@@ -96,6 +96,8 @@ helpviewer_keywords:
 > [!NOTE]  
 >  The built-in tasks and data flow components in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] do not use the Multiple Files connection manager. However, you can use this connection manager in the Script task or Script component.
 
+### Dialog box options for Add File Connection Manager
+
  **Usage type**  
  Specify the type of files to use for the multiple files connection manager.  
   
@@ -126,7 +128,9 @@ helpviewer_keywords:
   Use the **Suggest Column Types** dialog box to identify the data type and length of columns in a Flat File Connection Manager based on a sampling of the file content.  
   
  To learn more about the data types used by [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).
- 
+
+### Dialog box options for Suggest Column Types
+
  **Number of rows**  
  Type or select the number of rows in the sample that the algorithm uses.  
   

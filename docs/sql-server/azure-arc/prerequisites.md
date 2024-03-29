@@ -65,7 +65,7 @@ Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] requir
 
 Each virtual or physical server requires connectivity to:
 
-- URL: `*.<region>-arcdataservices.com`
+- URL: `*.<region>.arcdataservices.com`
 - Port: 443
 - Direction: Outbound
 

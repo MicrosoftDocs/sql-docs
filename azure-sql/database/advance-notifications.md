@@ -1,5 +1,5 @@
 ---
-title: Advance notifications (Preview) for planned maintenance events
+title: Advance notifications for planned maintenance events
 titleSuffix: Azure SQL Database
 description: Get notification before planned maintenance for Azure SQL Database.
 author: WilliamDAssafMSFT
@@ -12,14 +12,14 @@ ms.topic: how-to
 ms.custom: azure-sql-split
 monikerRange: "=azuresql||=azuresql-db"
 ---
-# Advance notifications for planned maintenance events in Azure SQL Database (Preview)
+# Advance notifications for planned maintenance events in Azure SQL Database
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
 > * [Azure SQL Database](advance-notifications.md?view=azuresql-db&preserve-view=true)
 > * [Azure SQL Managed Instance](../managed-instance/advance-notifications.md?view=azuresql-mi&preserve-view=true)
 
-Advance notifications (Preview) are available for databases configured to use a nondefault [maintenance window](maintenance-window.md). Advance notifications enable customers to configure notifications to be sent up to 24 hours in advance of any planned event.
+Advance notifications are available for databases configured to use a nondefault [maintenance window](maintenance-window.md). Advance notifications enable customers to configure notifications to be sent up to 24 hours in advance of any planned event.
 
 Notifications can be configured so you can get texts, emails, Azure push notifications, and voicemails when planned maintenance is due to begin in the next 24 hours. Follow-up notifications are sent when maintenance begins and when maintenance ends.
 
@@ -27,7 +27,7 @@ Notifications can be configured so you can get texts, emails, Azure push notific
 > For Azure SQL Database, advance notifications cannot be configured for the **System default** maintenance window option. Choose a maintenance window other than the **System default** to configure and enable Advance notifications.
 
 > [!NOTE]
-> While [maintenance windows](maintenance-window.md) are generally available, advance notifications for maintenance windows are in preview for Azure SQL Database and Azure SQL Managed Instance.
+> [Maintenance windows](maintenance-window.md) are generally available. Advance notifications for maintenance windows are generally available for Azure SQL Database, but are a preview feature for Azure SQL Managed Instance.
 
 ## Configure an advance notification
 

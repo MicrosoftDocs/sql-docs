@@ -61898,6 +61898,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/relational-databases/errors-events/mssqlserver-10054-database-engine-error.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/tls-exist-connection-closed",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "azure-sql/database/sql-vulnerability-assessment.md",
       "redirect_url": "/azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview",
       "redirect_document_id": false

@@ -3,8 +3,8 @@ title: Configure SQL Server Always On availability group on Windows and Linux
 description: Learn how to create a SQL Server Always On Availability Group (AG) with one replica on a Windows server and the other replica on a Linux server.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: vanto, randolphwest
-ms.date: 12/14/2022
+ms.reviewer: vanto
+ms.date: 09/19/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -14,12 +14,16 @@ monikerRange: ">= sql-server-2017"
 ---
 # Configure SQL Server Always On availability group on Windows and Linux (cross-platform)
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE [tsql-appliesto-sslinux-only](../includes/applies-to-version/sqlserver2017.md)]
 
 This article explains the steps to create an Always On availability group (AG) with one replica on a Windows server and the other replica on a Linux server.
 
 > [!IMPORTANT]  
 > [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] cross-platform availability groups, which include heterogeneous replicas with complete high-availability and disaster recovery support, is available with DH2i DxEnterprise. For more information, see [SQL Server Availability Groups with Mixed Operating Systems](https://support.dh2i.com/docs/guides/dxenterprise/sql_server/mssql-ag-mixed-os-qsg).
+>  
+> View the following video to find out about cross-platform availability groups with DH2i.
+>  
+> [!VIDEO https://learn-video.azurefd.net/vod/player?show=data-exposed&ep=get-started-with-sql-server-ags-across-windows-linux-and-container-replicas]
 
 This configuration is cross-platform because the replicas are on different operating systems. Use this configuration for migration from one platform to the other or disaster recovery (DR). This configuration doesn't support high availability.
 
@@ -33,21 +37,21 @@ In this scenario, two servers are on different operating systems. A Windows Serv
 
 ## Configure the AG
 
-The steps to create the AG are the same as the steps to create an AG for [read-scale workloads](sql-server-linux-availability-group-configure-rs.md). The AG cluster type is NONE, because there is no cluster manager.
+The steps to create the AG are the same as the steps to create an AG for [read-scale workloads](sql-server-linux-availability-group-configure-rs.md). The AG cluster type is NONE, because there's no cluster manager.
 
 > [!NOTE]  
-> For the scripts in this article, angle brackets `<` and `>` identify values that you need to replace for your environment. The angle brackets themselves are not required for the scripts.
+> For the scripts in this article, angle brackets `<` and `>` identify values that you need to replace for your environment. The angle brackets themselves aren't required for the scripts.
 
 1. Install [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Windows Server 2022, enable **Always On Availability Groups** from SQL Server Configuration Manager, and set mixed mode authentication.
 
    > [!TIP]  
-   > If you are validating this solution in Azure, place both servers in the same availability set to ensure they are separated in the data center.
+   > If you're validating this solution in Azure, place both servers in the same availability set to ensure they are separated in the data center.
 
    **Enable Availability Groups**
 
    For instructions, see [Enable and disable Always On Availability Groups (SQL Server)](../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).
 
-   :::image type="content" source="./media/sql-server-linux-availability-group-cross-platform/configuration-manager.png" alt-text="Screenshot showing how to enable Availability Groups.":::
+   :::image type="content" source="media/sql-server-linux-availability-group-cross-platform/configuration-manager.png" alt-text="Screenshot showing how to enable Availability Groups.":::
 
    SQL Server Configuration Manager notes that the computer isn't a node in a failover cluster.
 
@@ -110,7 +114,7 @@ The steps to create the AG are the same as the steps to create an AG for [read-s
 
    In the following diagram, ownership and group are set correctly for the certificate and key.
 
-   :::image type="content" source="./media/sql-server-linux-availability-group-cross-platform/certificate-key-owner-group.png" alt-text="Screenshot of a Git Bash window showing the .cer and the .pvk in the /var/opt/mssql/data folder.":::
+   :::image type="content" source="media/sql-server-linux-availability-group-cross-platform/certificate-key-owner-group.png" alt-text="Screenshot of a Git Bash window showing the .cer and the .pvk in the /var/opt/mssql/data folder.":::
 
 1. On the secondary replica, create a database login and password and create a master key.
 
@@ -158,10 +162,10 @@ The steps to create the AG are the same as the steps to create an AG for [read-s
 1. On the primary replica, create the AG with `CLUSTER_TYPE = NONE`. The example script uses `SEEDING_MODE = AUTOMATIC` to create the AG.
 
    > [!NOTE]  
-   > When the Windows instance of SQL Server uses different paths for data and log files, automatic seeding fails to the Linux instance of SQL Server, because these paths do not exist on the secondary replica. To use the following script for a cross-platform AG, the database requires the same path for the data and log files on the Windows server. Alternatively you can update the script to set `SEEDING_MODE = MANUAL` and then back up and restore the database with `NORECOVERY` to seed the database.  
-   >
+   > When the Windows instance of SQL Server uses different paths for data and log files, automatic seeding fails to the Linux instance of SQL Server, because these paths don't exist on the secondary replica. To use the following script for a cross-platform AG, the database requires the same path for the data and log files on the Windows server. Alternatively you can update the script to set `SEEDING_MODE = MANUAL` and then back up and restore the database with `NORECOVERY` to seed the database.  
+   >  
    > This behavior applies to Azure Marketplace images.
-   >
+   >  
    > For more information about automatic seeding, see [Automatic Seeding - Disk Layout](../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md#disklayout).
 
    Before you run the script, update the values for your AGs.
@@ -206,7 +210,7 @@ The steps to create the AG are the same as the steps to create an AG for [read-s
    GO
    ```
 
-1. Create a database for the AG. The example steps use a database named `TestDB`. If you are using automatic seeding, set the same path for both the data and the log files.
+1. Create a database for the AG. The example steps use a database named `TestDB`. If you're using automatic seeding, set the same path for both the data and the log files.
 
    Before you run the script, update the values for your database.
 
@@ -241,7 +245,7 @@ The steps to create the AG are the same as the steps to create an AG for [read-s
 
 ## Fail over the primary replica
 
-[!INCLUDE[Force failover](../includes/ss-force-failover-read-scale-out.md)]
+[!INCLUDE [Force failover](../includes/ss-force-failover-read-scale-out.md)]
 
 This article reviewed the steps to create a cross-platform AG to support migration or read-scale workloads. It can be used for manual disaster recovery. It also explained how to fail over the AG. A cross-platform AG uses cluster type `NONE` and doesn't support high availability.
 

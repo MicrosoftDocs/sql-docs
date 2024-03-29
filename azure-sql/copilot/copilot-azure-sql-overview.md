@@ -4,7 +4,7 @@ description: "Learn more about the features and possibilities of Copilot in Azur
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: josephsack
-ms.date: 03/13/2024
+ms.date: 03/29/2024
 ms.service: sql-database
 ms.subservice: ai-copilot
 ms.topic: overview
@@ -16,6 +16,12 @@ monikerRange: "=azuresql||=azuresql-db"
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 Copilot in Azure SQL Database is an AI assistant designed to streamline the design, operation, optimization, and health of Azure SQL Database-driven applications. It improves productivity in the Azure portal by offering natural language to SQL conversion and self-help for database administration.
+
+To learn more about the current preview of Copilot in Azure SQL Database, watch the following video:
+
+<br/>
+
+> [!VIDEO https://learn-video.azurefd.net/vod/player?show=data-exposed&ep=introducing-copilot-in-azure-sql-database-private-preview-data-exposed]
 
 > [!NOTE]
 > Copilot in Azure SQL Database is currently in a preview for a limited number of early adopters. To sign up for this program, visit [Request Access to Copilot in Azure SQL Database: Preview](https://aka.ms/sqlcopilot-signup).
@@ -45,7 +51,7 @@ This integration means that Copilot can answer questions with prompts like:
  - `Tell me the rank of each agent by property sales and show name, total sales, and rank`
  - Even advanced scenarios such as `Show me a pivot summary table that displays the number of properties sold in each year from 2020 to 2023`
 
-For a tutorial and examples of natural language to SQL capabilities of the Copilot in Azure SQL Database, see [Natural language to SQL in the Azure portal query editor (preview)](../copilot/query-editor-natural-language-to-sql-copilot.md).
+For a tutorial and examples of natural language to SQL capabilities of the Copilot in Azure SQL Database, see [Natural language to SQL in the Azure portal query editor (preview)](query-editor-natural-language-to-sql-copilot.md).
 
 ### Microsoft Copilot for Azure enhanced scenarios
 
@@ -98,9 +104,12 @@ Here are a few examples of sample prompts you can provide today for different ca
 
    :::image type="content" source="media/copilot-azure-sql-overview/high-cpu-query.png" alt-text="Screenshot showing a second query prompt in the conversation and generated sample query about high CPU utilization." lightbox="media/copilot-azure-sql-overview/high-cpu-query.png":::
 
+## Responsible AI
+
+For more information on how Microsoft implements responsible AI tools in [Microsoft Copilot for Azure](/azure/copilot/overview), see [Responsible AI FAQ for Microsoft Copilot for Azure (preview)](/azure/copilot/responsible-ai-faq).
+
 ## Related content
 
 - [Frequently asked questions about Copilot in Azure SQL Database (preview)](copilot-azure-sql-faq.yml)
-- [What is Microsoft Copilot for Azure?](/azure/copilot/overview)
-- [Responsible AI FAQ for Microsoft Copilot for Azure (preview)](/azure/copilot/responsible-ai-faq)
+- [Natural language to SQL in the Azure portal query editor (preview)](query-editor-natural-language-to-sql-copilot.md)
 - [Intelligent applications with Azure SQL Database](../database/ai-artificial-intelligence-intelligent-applications.md)

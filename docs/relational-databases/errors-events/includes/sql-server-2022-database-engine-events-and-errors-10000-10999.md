@@ -33,7 +33,7 @@ ms.topic: include
 | 10042 | 16 | No | Cannot set any properties while there is an open rowset. |
 | 10052 | 16 | No | The insertion was canceled by the provider during notification. |
 | 10053 | 16 | No | Could not convert the data value due to reasons other than sign mismatch or overflow. |
-| [10054](../mssqlserver-10054-database-engine-error.md) | 16 | No | The data value for one or more columns overflowed the type used by the provider. |
+| 10054 | 16 | No | The data value for one or more columns overflowed the type used by the provider. |
 | 10055 | 16 | No | The data violated the integrity constraints for one or more columns. |
 | 10056 | 16 | No | The number of rows that have pending changes has exceeded the limit specified by the DBPROP_MAXPENDINGROWS property. |
 | 10057 | 16 | No | Cannot create the row. Would exceed the total number of active rows supported by the rowset. |

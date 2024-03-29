@@ -1,6 +1,6 @@
 ---
 title: Work with Tables in Database Diagram
-description: "Work with Tables in Database Diagram (Visual Database Tools)"
+description: "Work with Tables in Database Diagram (Visual Database Tools). Learn how to modify and create database tables using Table Designer or Database Diagram Designer."
 author: markingmyname
 ms.author: maghan
 ms.date: 01/19/2017
@@ -37,10 +37,4 @@ You can modify and create database tables in either Table Designer or Database D
   
 [Map Many-to-Many Relationships &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/map-many-to-many-relationships-visual-database-tools.md)  
   
-[Draw Reflexive Relationships &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/draw-reflexive-relationships-visual-database-tools.md)  
-  
-## Reference
-
-[Add Table Dialog Box &#40;Database Designer&#41; &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-table-dialog-box-database-designer-visual-database-tools.md)
-
-## Related Sections
+[Draw Reflexive Relationships &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/draw-reflexive-relationships-visual-database-tools.md)

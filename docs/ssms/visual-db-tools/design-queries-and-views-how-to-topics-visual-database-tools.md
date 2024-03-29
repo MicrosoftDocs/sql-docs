@@ -8,7 +8,6 @@ ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords:
-  - "• vs.solutionexplorer.file.query"
   - "vs.solutionexplorer.file.query"
 helpviewer_keywords:
   - "queries [Visual Database Tools]"

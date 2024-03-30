@@ -46066,6 +46066,101 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/integration-services/catalog/browse-all-principals-dialog-box.md",
+      "redirect_url": "/sql/integration-services/catalog/ssis-catalog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/catalog/configure-dialog-box.md",
+      "redirect_url": "/sql/integration-services/catalog/ssis-catalog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/catalog/folder-properties-dialog-box.md",
+      "redirect_url": "/sql/integration-services/catalog/ssis-catalog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/catalog/package-properties-dialog-box.md",
+      "redirect_url": "/sql/integration-services/catalog/ssis-catalog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/catalog/project-properties-dialog-box.md",
+      "redirect_url": "/sql/integration-services/catalog/ssis-catalog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/catalog/project-versions-dialog-box.md",
+      "redirect_url": "/sql/integration-services/catalog/ssis-catalog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/catalog/set-parameter-value-dialog-box.md",
+      "redirect_url": "/sql/integration-services/catalog/ssis-catalog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/catalog/validate-dialog-box.md",
+      "redirect_url": "/sql/integration-services/catalog/ssis-catalog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/odbc/windows/dsn-wizard-1.md",
+      "redirect_url": "/sql/connect/odbc/windows/odbc-administrator-dsn-creation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/odbc/windows/dsn-wizard-2.md",
+      "redirect_url": "/sql/connect/odbc/windows/odbc-administrator-dsn-creation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/odbc/windows/dsn-wizard-3.md",
+      "redirect_url": "/sql/connect/odbc/windows/odbc-administrator-dsn-creation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/odbc/windows/dsn-wizard-4.md",
+      "redirect_url": "/sql/connect/odbc/windows/odbc-administrator-dsn-creation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md",
+      "redirect_url": "/sql/integration-services/connection-manager/analysis-services-connection-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md",
+      "redirect_url": "/sql/integration-services/connection-manager/file-connection-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md",
+      "redirect_url": "/sql/integration-services/connection-manager/file-connection-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/master-data-services/connect-to-a-master-data-services-database-dialog-box.md",
+      "redirect_url": "/sql/master-data-services/master-data-services-overview-mds",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/master-data-services/create-database-mail-profile-and-account-dialog-box.md",
+      "redirect_url": "/sql/master-data-services/master-data-services-overview-mds",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md",
+      "redirect_url": "/sql/master-data-services/master-data-services-overview-mds",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/master-data-services/create-website-dialog-box-master-data-services-configuration-manager.md",
+      "redirect_url": "/sql/master-data-services/master-data-services-overview-mds",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/relational-databases/replication/what-s-new-replication.md",
       "redirect_url": "/sql/relational-databases/replication/sql-server-replication?view=sql-server-2014",
       "redirect_document_id": false

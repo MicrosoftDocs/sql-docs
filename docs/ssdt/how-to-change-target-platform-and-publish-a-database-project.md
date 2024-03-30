@@ -18,9 +18,6 @@ You can change the target SQL Server version for your SQL Server Data Tools (SSD
   
 SSDT also makes this task simple by being aware of your target platform and automatically detecting any error in your code (for example., when you are using unsupported features for a project that is going to be published to SQL Azure).  
   
-> [!WARNING]  
-> The following procedures utilize entities created in previous procedures in the [Connected Database Development](../ssdt/connected-database-development.md) and [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) sections.  
-  
 ### To change a project's target platform  
   
 1.  Right-click your project in **Solution Explorer** and select **Properties**. Click the **Project Settings** tab on the left to access the **Project Settings** property page.  

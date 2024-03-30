@@ -20,9 +20,6 @@ You can create a new database project and import database schema from an existin
   
 The following two procedures essentially achieve the same goal by creating a new database project and importing schema from an existing database. Each database object will be represented as a SQL script file (.sql) in **Solution Explorer**. For more information on importing database schema from a snapshot, see [How to: Create a Snapshot of a Project](../ssdt/how-to-create-a-snapshot-of-a-project.md).  
   
-> [!WARNING]  
-> The following procedures utilize entities created in previous procedures in the [Connected Database Development](../ssdt/connected-database-development.md) section.  
-  
 ### To create a new database project off a connected database  
   
 1.  Right-click the **TradeDev** node in **SQL Server Object Explorer** and select **Create New Project**.  
@@ -35,7 +32,7 @@ The following two procedures essentially achieve the same goal by creating a new
   
 5.  Examine the hierarchy in the **Solution Explorer**. Expand the **dbo** folder and you will find separate **Functions**, **Tables** and **Views** folders. Notice that the tables and function are grouped under their schema folders.  
   
-6.  Double-click **Products.sql** under **Tables**. The **Table Designer** opens, showing the visual interpretation of the table in the Columns Grid, and the script definition of the table in the Script Pane. This is identical to what we see in the [Connected Database Development](../ssdt/connected-database-development.md) section.  
+6.  Double-click **Products.sql** under **Tables**. The **Table Designer** opens, showing the visual interpretation of the table in the Columns Grid, and the script definition of the table in the Script Pane. This is identical to what we see in the [Manage Tables, Relationships, and Fix Errors](../ssdt/manage-tables-relationships-and-fix-errors.md)section.  
   
 7.  Uncheck the **Allow Nulls** box for the **CustomerId** column. Press CTRL + S to save the file.  
   
@@ -59,7 +56,7 @@ The following two procedures essentially achieve the same goal by creating a new
   
 6.  Examine the hierarchy in the **Solution Explorer**. Expand the **dbo** folder and you will find separate **Functions**, **Tables** and **Views** folders. Notice that the tables and function are grouped under their schema folders.  
   
-7.  Double-click **Products.sql** under **Tables**. The **Table Designer** opens, showing the visual interpretation of the table in the Columns Grid, and the script definition of the table in the Script Pane. This is identical to what we see in the [Connected Database Development](../ssdt/connected-database-development.md) section.  
+7.  Double-click **Products.sql** under **Tables**. The **Table Designer** opens, showing the visual interpretation of the table in the Columns Grid, and the script definition of the table in the Script Pane. This is identical to what we see in the [Manage Tables, Relationships, and Fix Errors](../ssdt/manage-tables-relationships-and-fix-errors.md)section.  
   
 8.  Uncheck the **Allow Nulls** box for the **CustomerId** column. Press CTRL + S to save the file.  
   

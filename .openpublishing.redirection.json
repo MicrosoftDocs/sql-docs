@@ -41481,6 +41481,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/ssdt/connected-database-development.md",
+      "redirect_url": "/sql/ssdt/sql-server-data-tools.md",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/ssms/about-dialog-box.md",
       "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
       "redirect_document_id": false

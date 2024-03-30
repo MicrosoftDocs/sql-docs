@@ -24,9 +24,9 @@ To enable debugging of CLR database objects, open **SQL Server Object Explorer**
 For more information on the requirements of building CLR database objects, see [Building Database Objects with Common Language Runtime (CLR) Integration](../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md).  
   
 > [!WARNING]  
-> The following procedures uses entities created in previous procedures in the [Connected Database Development](../ssdt/connected-database-development.md) and [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) sections.  
+> The following procedure uses entities created in previous procedures in the [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) sections.  
   
-### To add a CLR database object to your project  
+## To add a CLR database object to your project  
   
 1.  Right-click the **TradeDev** database project in **Solution Explorer**, select **Add**, then **New Item**.  
   

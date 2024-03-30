@@ -15,9 +15,6 @@ This task uses some of the steps you learned in previous procedures to create a 
   
 By using these steps, you can easily create a development or test database from a production database with identical schema and data. You can then continue to develop the test database in a connected mode, or create a database project for offline development and testing, all without disrupting the operation of the production database.  
   
-> [!WARNING]  
-> The following procedures uses entities created in previous procedures in the [Connected Database Development](../ssdt/connected-database-development.md) section.  
-  
 ### To create a development database  
   
 1.  In **SQL Server Object Explorer**, under the **SQL Server** node, expand your connected server instance.  

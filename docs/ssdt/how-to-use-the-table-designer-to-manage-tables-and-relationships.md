@@ -21,9 +21,9 @@ The Table Designer provides a visual experience alongside the Transact-SQL Edito
 The designer consists of the Columns Grid, Script Pane and Context Pane. The Columns Grid lists all the columns in the table. You can add, edit and delete columns in this grid.  The Context Pane gives you a logical view of the table definition (Keys, Indices, Constraints, Triggers, etc.), and enables you to select an object to highlight its relationships to individual columns. You can also add new objects to the table in this pane, and edit the properties of a selected object in the Properties Grid. Script Pane shows you the definition of the table structure, and highlights the script of the selected object in the Context Pane or Columns Grid. You can edit the script side-by-side with the Columns Grid and Context Pane in view. Any changes from any of the three panes will propagate to the other two immediately.  
   
 > [!WARNING]  
-> The following procedures use entities created in procedures in the [Connected Database Development](../ssdt/connected-database-development.md) and [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) sections.  
+> The following procedure uses entities created in previous procedures in the [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) sections.
   
-### To create a new table  
+## To create a new table
   
 1.  Open the TradeDev project you have been working on in previous procedures.  
   

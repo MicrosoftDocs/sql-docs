@@ -19,8 +19,8 @@ f1_keywords:
 
 The Refactor contextual menu in the Transact-SQL Editor allows you to rename or move an object to a different schema, and do a preview of all affected areas before committing the change. You can also use the Refactor menu to fully qualify all references to database objects, or expand any wildcard characters in `SELECT` statements in your database project.  
   
-> [!NOTE]  
-> The following procedures utilize entities created in previous procedures in the [Connected Database Development](../ssdt/connected-database-development.md) and [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) sections.  
+> [!WARNING]  
+> The following procedure uses entities created in previous procedures in the [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) sections.
   
 ### To rename a type  
   

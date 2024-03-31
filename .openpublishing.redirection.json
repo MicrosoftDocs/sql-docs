@@ -41477,12 +41477,12 @@
     },
     {
       "source_path": "docs/ssdt/filter-and-sort-dialog-box.md",
-      "redirect_url": "/sql/ssdt/sql-server-data-tools.md",
+      "redirect_url": "/sql/ssdt/sql-server-data-tools",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/ssdt/connected-database-development.md",
-      "redirect_url": "/sql/ssdt/sql-server-data-tools.md",
+      "redirect_url": "/sql/ssdt/sql-server-data-tools",
       "redirect_document_id": false
     },
     {
@@ -41492,12 +41492,12 @@
     },
     {
       "source_path": "docs/ssms/arguments-dialog-box.md",
-      "redirect_url": "/sql/ssms/docs/use-of-sql-server-features-and-capabilities-wwi-oltp",
+      "redirect_url": "/sql/ssms/use-of-sql-server-features-and-capabilities-wwi-oltp",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/ssms/external-tools-dialog-box.md",
-      "redirect_url": "/sql/ssms/docs/use-of-sql-server-features-and-capabilities-wwi-oltp",
+      "redirect_url": "/sql/ssms/use-of-sql-server-features-and-capabilities-wwi-oltp",
       "redirect_document_id": false
     },
     {

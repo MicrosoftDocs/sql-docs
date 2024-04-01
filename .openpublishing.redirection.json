@@ -41472,7 +41472,7 @@
     },
     {
       "source_path": "docs/ssdt/check-for-updates-dialog-box.md",
-      "redirect_url": "/sql/ssdt/sql-server-data-tools.md",
+      "redirect_url": "/sql/ssdt/sql-server-data-tools",
       "redirect_document_id": false
     },
     {

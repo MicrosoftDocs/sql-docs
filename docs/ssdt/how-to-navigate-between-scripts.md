@@ -30,5 +30,5 @@ The Transact-SQL Editor for offline development provides two useful navigation t
   
 3.  Products.sql is automatically opened, showing the location where the `Products` type is defined.  
   
-4.  Go back to GetProductsBySupplier.sql. This time select **Find All References** in the contextual menu for `Products`. In the **Find Symbol Results** pane, you will see a list of locations where the `Products` table is referenced. Double-clicking any of the search results will bring you to the location of the reference.  
+4.  Go back to GetProductsBySupplier.sql. This time selects **Find All References** in the contextual menu for `Products`. In the **Find Symbol Results** pane, you'll see a list of locations where the `Products` table is referenced. Double-clicking any of the search results bring you to the location of the reference.  
   

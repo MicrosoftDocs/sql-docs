@@ -8499,7 +8499,6 @@ items:
         - name: Using MSDeploy with dbSqlPackage Provider
           href: ssdt/using-msdeploy-with-dbsqlpackage-provider.md
       - name: Connected Database Development
-        href: ssdt/connected-database-development.md
         items:
         - name: "How to: Connect to a Database & Browse Existing Objects"
           href: ssdt/how-to-connect-to-a-database-and-browse-existing-objects.md
@@ -9288,14 +9287,8 @@ items:
           href: ssms/the-sql-server-management-studio-environment.md
         - name: General User Interface Elements
           href: ssms/general-user-interface-elements.md
-        - name: Arguments Dialog Box
-          href: ssms/arguments-dialog-box.md
-        - name: About Dialog Box
-          href: ssms/about-dialog-box.md
         - name: SSMS Web Browser
           href: ssms/sql-server-management-studio-web-browser.md
-        - name: External Tools Dialog Box
-          href: ssms/external-tools-dialog-box.md
         - name: Property Pages in SSMS
           href: ssms/property-pages-in-sql-server-management-studio.md
         - name: Properties Window in SSMS
@@ -9352,8 +9345,6 @@ items:
           href: ssms/menu-help/sql-server-management-studio-menu-help.md
         - name: Properties Window F1 Help (Management Studio)
           href: ssms/menu-help/properties-window-f1-help-management-studio.md
-        - name: Options Dialog Boxes F1 Help
-          href: ssms/menu-help/options-dialog-boxes-f1-help.md
         - name: Options (Environment - Help - General Page)
           href: ssms/menu-help/options-environment-help-general-page.md
         - name: Options (Environment - General Page)
@@ -9390,8 +9381,6 @@ items:
           href: ssms/menu-help/save-changes.md
         - name: Open With (New File)
           href: ssms/menu-help/open-with-new-file.md
-        - name: Windows Dialog Box (Microsoft Document Explorer Help)
-          href: ssms/menu-help/windows-dialog-box-microsoft-document-explorer-help.md
         - name: Advanced Save Options
           href: ssms/menu-help/advanced-save-options.md
         - name: Save As
@@ -9400,8 +9389,6 @@ items:
           href: ssms/menu-help/customize-toolbars-page.md
         - name: Options (Designers - Maintenance Plans Page)
           href: ssms/menu-help/options-designers-maintenance-plans-page.md
-        - name: Choose Search Folders Dialog Box (Visual Studio)
-          href: ssms/menu-help/choose-search-folders-dialog-box-visual-studio.md
         - name: Options (Environment - Help - Online Page)
           href: ssms/menu-help/options-environment-help-online-page.md
         - name: Object Explorer
@@ -9424,8 +9411,6 @@ items:
           href: ssms/object/open-and-configure-object-explorer.md
         - name: Connect to an Instance From Object Explorer
           href: ssms/object/connect-to-an-instance-from-object-explorer.md
-        - name: Name Not Found Dialog Box
-          href: ssms/object/name-not-found-dialog-box.md
         - name: Browse for Objects (Object Explorer)
           href: ssms/object/browse-for-objects-object-explorer.md
         - name: Select Object Types (Object Explorer)
@@ -9502,8 +9487,6 @@ items:
         items:
         - name: Visual Database Tools
           href: ssms/visual-db-tools/visual-database-tools.md
-        - name: Add Table Dialog Box (Query & View Designers)
-          href: ssms/visual-db-tools/add-table-dialog-box-query-and-view-designers-visual-database-tools.md
         - name: Save Change Script Dialog Box
           href: ssms/visual-db-tools/save-change-script-dialog-box-visual-database-tools.md
         - name: Reconcile Changes Made by Multiple Users
@@ -9530,8 +9513,6 @@ items:
           href: ssms/visual-db-tools/view-join-properties-visual-database-tools.md
         - name: Column Properties
           href: ssms/visual-db-tools/column-properties-visual-database-tools.md
-        - name: Collation Dialog Box
-          href: ssms/visual-db-tools/collation-dialog-box-visual-database-tools.md
         - name: Create Column Aliases
           href: ssms/visual-db-tools/create-column-aliases-visual-database-tools.md
         - name: Modify Queries
@@ -9552,8 +9533,6 @@ items:
           href: ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md
         - name: Modify Join Operators
           href: ssms/visual-db-tools/modify-join-operators-visual-database-tools.md
-        - name: Choose Name Dialog Box
-          href: ssms/visual-db-tools/choose-name-dialog-box-visual-database-tools.md
         - name: Remove Joins
           href: ssms/visual-db-tools/remove-joins-visual-database-tools.md
         - name: Table Properties
@@ -9588,8 +9567,6 @@ items:
           href: ssms/visual-db-tools/location-dialog-box-visual-database-tools.md
         - name: Create UNION Queries
           href: ssms/visual-db-tools/create-union-queries-visual-database-tools.md
-        - name: Partition Column List Dialog Box
-          href: ssms/visual-db-tools/partition-column-list-dialog-box-visual-database-tools.md
         - name: Open the Query & View Designer
           href: ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md
         - name: Combine Conditions When OR Has Precedence
@@ -9598,8 +9575,6 @@ items:
           href: ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md
         - name: Sort & Group Query Results
           href: ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md
-        - name: Check Constraint Dialog Box
-          href: ssms/visual-db-tools/check-constraint-dialog-box-visual-database-tools.md
         - name: Exclude Duplicate Rows
           href: ssms/visual-db-tools/exclude-duplicate-rows-visual-database-tools.md
         - name: Remove Columns from Query Results
@@ -9614,8 +9589,6 @@ items:
           href: ssms/visual-db-tools/rename-queries-visual-database-tools.md
         - name: Delete Rows in the Results Pane
           href: ssms/visual-db-tools/delete-rows-in-the-results-pane-visual-database-tools.md
-        - name: Column List Dialog Box
-          href: ssms/visual-db-tools/column-list-dialog-box-visual-database-tools.md
         - name: Indexes - Keys Dialog Box
           href: ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md
         - name: Join Tables Manually
@@ -9624,8 +9597,6 @@ items:
           href: ssms/visual-db-tools/open-database-diagram-designer-visual-database-tools.md
         - name: Set Up Database Diagram Designer
           href: ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md
-        - name: Database Changes Detected Dialog Box
-          href: ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md
         - name: Create Self-Joins Manually
           href: ssms/visual-db-tools/create-self-joins-manually-visual-database-tools.md
         - name: Query Definitions Differ Dialog Box
@@ -9638,8 +9609,6 @@ items:
           href: ssms/visual-db-tools/create-queries-using-something-besides-a-table-visual-database-tools.md
         - name: Tables & Columns Dialog Box
           href: ssms/visual-db-tools/tables-and-columns-dialog-box-visual-database-tools.md
-        - name: Color Dialog Box
-          href: ssms/visual-db-tools/color-dialog-box-visual-database-tools.md
         - name: Perform Basic Operations with Queries
           href: ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md
         - name: Create Insert Results Queries
@@ -9676,8 +9645,6 @@ items:
           href: ssms/visual-db-tools/collapse-groups-of-rows-visual-database-tools.md
         - name: Supported Query Types
           href: ssms/visual-db-tools/supported-query-types-visual-database-tools.md
-        - name: Data Type Change Required Dialog Box
-          href: ssms/visual-db-tools/data-type-change-required-dialog-box-visual-database-tools.md
         - name: Remove Columns from Queries
           href: ssms/visual-db-tools/remove-columns-from-queries-visual-database-tools.md
         - name: Open Queries
@@ -9706,10 +9673,6 @@ items:
           href: ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md
         - name: Add New Rows in the Results Pane
           href: ssms/visual-db-tools/add-new-rows-in-the-results-pane-visual-database-tools.md
-        - name: Choose Target Table for Insert Values Dialog Box
-          href: ssms/visual-db-tools/choose-target-table-for-insert-values-dialog-box-visual-database-tools.md
-        - name: Delete Table Dialog Box
-          href: ssms/visual-db-tools/delete-table-dialog-box-visual-database-tools.md
         - name: Join Tables on Multiple Columns
           href: ssms/visual-db-tools/join-tables-on-multiple-columns-visual-database-tools.md
         - name: Add Tables to Diagrams
@@ -9718,16 +9681,12 @@ items:
           href: ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md
         - name: Sort Multiple Columns in Queries
           href: ssms/visual-db-tools/sort-multiple-columns-in-queries-visual-database-tools.md
-        - name: Choose Target Table for Insert Results Dialog Box
-          href: ssms/visual-db-tools/choose-target-table-for-insert-results-dialog-box-visual-database-tools.md
         - name: Navigate in Database Diagram Designer
           href: ssms/visual-db-tools/navigate-in-database-diagram-designer-visual-database-tools.md
         - name: Work with Data in the Results Pane
           href: ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md
         - name: Clear Query Results
           href: ssms/visual-db-tools/clear-query-results-visual-database-tools.md
-        - name: Spatial Indexes Dialog Box
-          href: ssms/visual-db-tools/spatial-indexes-dialog-box-visual-database-tools.md
         - name: Use the Query & View Designer with International Data
           href: ssms/visual-db-tools/use-the-query-and-view-designer-with-international-data-visual-database-tools.md
         - name: Show Query Properties
@@ -9738,8 +9697,6 @@ items:
           href: ssms/visual-db-tools/create-table-aliases-visual-database-tools.md
         - name: Parameter Queries
           href: ssms/visual-db-tools/parameter-queries-visual-database-tools.md
-        - name: Column Selection Dialog Box
-          href: ssms/visual-db-tools/column-selection-dialog-box-visual-database-tools.md
         - name: Copy Queries
           href: ssms/visual-db-tools/copy-queries-visual-database-tools.md
         - name: Sort with ORDER BY
@@ -9748,12 +9705,8 @@ items:
           href: ssms/visual-db-tools/combine-conditions-when-and-has-precedence-visual-database-tools.md
         - name: Create Make Table Queries
           href: ssms/visual-db-tools/create-make-table-queries-visual-database-tools.md
-        - name: Open File Dialog Box
-          href: ssms/visual-db-tools/open-file-dialog-box.md
         - name: Rules for Entering Search Values
           href: ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md
-        - name: Add Table Dialog Box (Database Designer)
-          href: ssms/visual-db-tools/add-table-dialog-box-database-designer-visual-database-tools.md
         - name: Diagram Pane
           href: ssms/visual-db-tools/diagram-pane-visual-database-tools.md
         - name: Create Subqueries
@@ -9762,8 +9715,6 @@ items:
           href: ssms/visual-db-tools/summarize-or-aggregate-values-using-custom-expressions-visual-database-tools.md
         - name: Multiuser Environments
           href: ssms/visual-db-tools/multiuser-environments-visual-database-tools.md
-        - name: Query Parameters Dialog Box
-          href: ssms/visual-db-tools/query-parameters-dialog-box-visual-database-tools.md
         - name: Customize the Amount of Information Displayed in Diagrams
           href: ssms/visual-db-tools/customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md
         - name: Delete a Database Diagram
@@ -9772,8 +9723,6 @@ items:
           href: ssms/visual-db-tools/query-with-parameters-visual-database-tools.md
         - name: Work with Database Diagrams
           href: ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md
-        - name: Save Dialog Box
-          href: ssms/visual-db-tools/save-dialog-box-visual-database-tools.md
         - name: Create Insert Values Queries
           href: ssms/visual-db-tools/create-insert-values-queries-visual-database-tools.md
         - name: Specify Multiple Search Conditions for One Column
@@ -9798,8 +9747,6 @@ items:
           href: ssms/visual-db-tools/how-the-query-and-view-designer-represents-joins-visual-database-tools.md
         - name: Design Queries & Views How-to Topics
           href: ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md
-        - name: Description Property Dialog Box
-          href: ssms/visual-db-tools/description-property-dialog-box-visual-database-tools.md
         - name: Issues of Database Evolution
           href: ssms/visual-db-tools/issues-of-database-evolution-visual-database-tools.md
         - name: Use HAVING & WHERE Clauses in the Same Query
@@ -9810,20 +9757,14 @@ items:
           href: ssms/visual-db-tools/work-with-columns-in-aggregate-queries-visual-database-tools.md
         - name: Select Rows That Do Not Match a Value
           href: ssms/visual-db-tools/select-rows-that-do-not-match-a-value-visual-database-tools.md
-        - name: Post-Save Notifications Dialog Box
-          href: ssms/visual-db-tools/post-save-notifications-dialog-box-visual-database-tools.md
         - name: Save Queries
           href: ssms/visual-db-tools/save-queries-visual-database-tools.md
         - name: Specify Search Conditions
           href: ssms/visual-db-tools/specify-search-conditions-visual-database-tools.md
         - name: Create Outer Joins
           href: ssms/visual-db-tools/create-outer-joins-visual-database-tools.md
-        - name: Print Dialog Box
-          href: ssms/visual-db-tools/print-dialog-box.md
         - name: Create Update Queries
           href: ssms/visual-db-tools/create-update-queries-visual-database-tools.md
-        - name: Update Table Dialog Box
-          href: ssms/visual-db-tools/update-table-dialog-box-visual-database-tools.md
         - name: Copy Tables from One Database Diagrams to Another
           href: ssms/visual-db-tools/copy-tables-from-one-database-diagrams-to-another-visual-database-tools.md
         - name: Change the Font Color, Size, & Style in Diagrams
@@ -9838,8 +9779,6 @@ items:
           href: ssms/visual-db-tools/add-text-annotations-to-diagrams-visual-database-tools.md
         - name: Create Delete Queries
           href: ssms/visual-db-tools/create-delete-queries-visual-database-tools.md
-        - name: Join Dialog Box
-          href: ssms/visual-db-tools/join-dialog-box-visual-database-tools.md
         - name: Delete Queries
           href: ssms/visual-db-tools/delete-queries-visual-database-tools.md
         - name: Query Properties
@@ -9850,8 +9789,6 @@ items:
           href: ssms/visual-db-tools/specify-multiple-search-conditions-for-multiple-columns-visual-database-tools.md
         - name: Add Derived Tables to Queries
           href: ssms/visual-db-tools/add-derived-tables-to-queries-visual-database-tools.md
-        - name: Page Setup Dialog Box
-          href: ssms/visual-db-tools/page-setup-dialog-box.md
         - name: SQL Editor
           href: ssms/visual-db-tools/sql-editor-visual-database-tools.md
         - name: Print Query Results
@@ -10014,8 +9951,6 @@ items:
         href: tools/sql-server-profiler/replay-to-a-cursor-sql-server-profiler.md
       - name: Replay a T-SQL Script
         href: tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md
-      - name: SQL Server Profiler dialog boxes
-        href: tools/sql-server-profiler/sql-server-profiler-f1-help.md
   - name: Visual Studio native helpers
     items:
     - name: SqlToolsVSNativeHelpers

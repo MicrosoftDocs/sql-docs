@@ -3000,14 +3000,8 @@
       href: ../connect/odbc/windows/asynchronous-execution-notification-method-sample.md
     - name: Help topics
       items:
-      - name: Data Source Wizard screen 1
-        href: ../connect/odbc/windows/dsn-wizard-1.md
-      - name: Data Source Wizard screen 2
-        href: ../connect/odbc/windows/dsn-wizard-2.md
-      - name: Data Source Wizard screen 3
-        href: ../connect/odbc/windows/dsn-wizard-3.md
-      - name: Data Source Wizard screen 4
-        href: ../connect/odbc/windows/dsn-wizard-4.md
+      - name: ODBC Data Source Administrator DSN
+        href: ../connect/odbc/windows/odbc-administrator-dsn-creation.md
       - name: SQL Server Login dialog
         href: ../connect/odbc/windows/sql-server-login-dialog.md
   - name: Feature guides

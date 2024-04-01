@@ -41471,6 +41471,261 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/ssdt/check-for-updates-dialog-box.md",
+      "redirect_url": "/sql/ssdt/sql-server-data-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/filter-and-sort-dialog-box.md",
+      "redirect_url": "/sql/ssdt/sql-server-data-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/connected-database-development.md",
+      "redirect_url": "/sql/ssdt/sql-server-data-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/about-dialog-box.md",
+      "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/arguments-dialog-box.md",
+      "redirect_url": "/sql/ssms/use-of-sql-server-features-and-capabilities-wwi-oltp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/external-tools-dialog-box.md",
+      "redirect_url": "/sql/ssms/use-of-sql-server-features-and-capabilities-wwi-oltp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/menu-help/choose-search-folders-dialog-box-visual-studio.md",
+      "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/menu-help/options-dialog-boxes-f1-help.md",
+      "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/menu-help/windows-dialog-box-microsoft-document-explorer-help.md",
+      "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/object/name-not-found-dialog-box.md",
+      "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/add-table-dialog-box-query-and-view-designers-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/add-table-dialog-box-database-designer-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/check-constraint-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/check-constraint-expression-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/choose-name-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/choose-target-table-for-insert-results-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/choose-target-table-for-insert-values-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/collation-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/color-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/column-list-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/column-selection-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/data-type-change-required-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/delete-table-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/description-property-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/full-text-index-columns-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/full-text-index-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/go-to-line-dialog-box.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/index-columns-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/join-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/location-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/make-table-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/open-file-dialog-box.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/page-setup-dialog-box.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/partition-column-list-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/post-save-notifications-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/print-dialog-box.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/query-definitions-differ-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/query-parameters-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/save-change-script-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/save-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/save-not-permitted-dialog-box.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/spatial-indexes-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/sql-comment-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/sql-syntax-errors-encountered-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/tables-and-columns-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/update-table-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/validation-warnings-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/xml-indexes-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/tools/sql-server-profiler/sql-server-profiler-f1-help.md",
+      "redirect_url": "/sql/tools/sql-server-profiler/sql-server-profiler",
+      "redirect_document_id": false
+    },    
+    {
       "source_path": "docs/2014/ssms/visual-db-tools/modify-join-operators-visual-database-tools.md",
       "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/modify-join-operators-visual-database-tools",
       "redirect_document_id": false
@@ -45813,6 +46068,101 @@
     {
       "source_path": "docs/2014/2014-toc/books-online-for-sql-server-2014.md",
       "redirect_url": "/sql/2014-toc/index?view=sql-server-2014",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/catalog/browse-all-principals-dialog-box.md",
+      "redirect_url": "/sql/integration-services/catalog/ssis-catalog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/catalog/configure-dialog-box.md",
+      "redirect_url": "/sql/integration-services/catalog/ssis-catalog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/catalog/folder-properties-dialog-box.md",
+      "redirect_url": "/sql/integration-services/catalog/ssis-catalog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/catalog/package-properties-dialog-box.md",
+      "redirect_url": "/sql/integration-services/catalog/ssis-catalog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/catalog/project-properties-dialog-box.md",
+      "redirect_url": "/sql/integration-services/catalog/ssis-catalog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/catalog/project-versions-dialog-box.md",
+      "redirect_url": "/sql/integration-services/catalog/ssis-catalog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/catalog/set-parameter-value-dialog-box.md",
+      "redirect_url": "/sql/integration-services/catalog/ssis-catalog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/catalog/validate-dialog-box.md",
+      "redirect_url": "/sql/integration-services/catalog/ssis-catalog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/odbc/windows/dsn-wizard-1.md",
+      "redirect_url": "/sql/connect/odbc/windows/odbc-administrator-dsn-creation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/odbc/windows/dsn-wizard-2.md",
+      "redirect_url": "/sql/connect/odbc/windows/odbc-administrator-dsn-creation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/odbc/windows/dsn-wizard-3.md",
+      "redirect_url": "/sql/connect/odbc/windows/odbc-administrator-dsn-creation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/odbc/windows/dsn-wizard-4.md",
+      "redirect_url": "/sql/connect/odbc/windows/odbc-administrator-dsn-creation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md",
+      "redirect_url": "/sql/integration-services/connection-manager/analysis-services-connection-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md",
+      "redirect_url": "/sql/integration-services/connection-manager/file-connection-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md",
+      "redirect_url": "/sql/integration-services/connection-manager/file-connection-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/master-data-services/connect-to-a-master-data-services-database-dialog-box.md",
+      "redirect_url": "/sql/master-data-services/master-data-services-overview-mds",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/master-data-services/create-database-mail-profile-and-account-dialog-box.md",
+      "redirect_url": "/sql/master-data-services/master-data-services-overview-mds",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md",
+      "redirect_url": "/sql/master-data-services/master-data-services-overview-mds",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/master-data-services/create-website-dialog-box-master-data-services-configuration-manager.md",
+      "redirect_url": "/sql/master-data-services/master-data-services-overview-mds",
       "redirect_document_id": false
     },
     {

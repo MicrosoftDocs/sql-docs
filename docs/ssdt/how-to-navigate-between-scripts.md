@@ -16,7 +16,7 @@ f1_keywords:
 The Transact-SQL Editor for offline development provides two useful navigation tools that are familiar to Visual Studio users: Go To Definition and Find All References. For example, you can right-click a table name and use "Find All References" to list all references to the table in the project. You can double-click a search result to go to the specific code file. In this file, you can right-click the table name again, and choose "Go to Definition" to go back to the table definition.  
   
 > [!WARNING]  
-> The following procedure uses entities created in previous procedures in the [Connected Database Development](../ssdt/connected-database-development.md) and [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) sections.  
+> The following procedure uses entities created in previous procedures in the [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) sections.  
   
 ### To navigate between scripts  
   
@@ -30,5 +30,5 @@ The Transact-SQL Editor for offline development provides two useful navigation t
   
 3.  Products.sql is automatically opened, showing the location where the `Products` type is defined.  
   
-4.  Go back to GetProductsBySupplier.sql. This time select **Find All References** in the contextual menu for `Products`. In the **Find Symbol Results** pane, you will see a list of locations where the `Products` table is referenced. Double-clicking any of the search results will bring you to the location of the reference.  
+4.  Go back to GetProductsBySupplier.sql. This time selects **Find All References** in the contextual menu for `Products`. In the **Find Symbol Results** pane, you'll see a list of locations where the `Products` table is referenced. Double-clicking any of the search results bring you to the location of the reference.  
   

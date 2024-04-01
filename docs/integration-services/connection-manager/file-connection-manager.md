@@ -3,12 +3,14 @@ title: "File Connection Manager"
 description: "File Connection Manager"
 author: chugugrace
 ms.author: chugu
-ms.date: "03/14/2017"
+ms.date: "03/29/2024"
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords:
   - "sql13.dts.designer.fileconnectionmanager.f1"
+  - "sql13.dts.designer.suggestdatatypes.f1"
+  - "sql13.dts.designer.fileconnection.f1"
 helpviewer_keywords:
   - "folders [Integration Services], connections"
   - "files [Integration Services], connections"
@@ -85,3 +87,68 @@ helpviewer_keywords:
  **Browse**  
  Select the file or folder by using the **Select File** or **Browse for Folder** dialog box.  
   
+## Add File Connection Manager Dialog Box UI Reference
+
+  Use the **Add File Connection Manager** dialog box to define a connection to a group of files or folders.  
+  
+ To learn more about the Multiple Files connection manager, see [Multiple Files Connection Manager](../../integration-services/connection-manager/multiple-files-connection-manager.md).  
+  
+> [!NOTE]  
+>  The built-in tasks and data flow components in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] do not use the Multiple Files connection manager. However, you can use this connection manager in the Script task or Script component.
+
+### Dialog box options for Add File Connection Manager
+
+ **Usage type**  
+ Specify the type of files to use for the multiple files connection manager.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Create files**|The connection manager will create the files.|  
+|**Existing files**|The connection manager will use existing files.|  
+|**Create folders**|The connection manager will create the folders.|  
+|**Existing folders**|The connection manager will use existing folders.|  
+  
+ **Files / Folders**  
+ View the files or folders that you have added by using the buttons described as follows.  
+  
+ **Add**  
+ Add a file by using the **Select Files** dialog box, or add a folder by using the **Browse for Folder** dialog box.  
+  
+ **Edit**  
+ Select a file or folder, and then replace it with a different file or folder by using the **Select Files** or **Browse for Folder** dialog box.  
+  
+ **Remove**  
+ Select a file or folder, and then remove it from the list by using the **Remove** button.  
+  
+ **Arrow buttons**  
+ Select a file or folder, and then use the arrow buttons to move it up or down to specify the sequence of access.
+
+## Suggest Column Types Dialog Box UI Reference
+
+  Use the **Suggest Column Types** dialog box to identify the data type and length of columns in a Flat File Connection Manager based on a sampling of the file content.  
+  
+ To learn more about the data types used by [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).
+
+### Dialog box options for Suggest Column Types
+
+ **Number of rows**  
+ Type or select the number of rows in the sample that the algorithm uses.  
+  
+ **Suggest the smallest integer data type**  
+ Clear this check box to skip the assessment. If selected, determines the smallest possible integer data type for columns that contain integral numeric data.  
+  
+ **Suggest the smallest real data type**  
+ Clear this check box to skip the assessment. If selected, determines whether columns that contain real numeric data can use the smaller real data type, DT_R4.  
+  
+ **Identify Boolean columns using the following values**  
+ Type the two values that you want to use as the Boolean values true and false. The values must be separated by a comma, and the first value represents True.  
+  
+ **Pad string columns**  
+ Select this check box to enable string padding.  
+  
+ **Percent padding**  
+ Type or select the percentage of the column lengths by which to increase the length of columns for character data types. The percentage must be an integer.
+
+## Related content
+
+ [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)

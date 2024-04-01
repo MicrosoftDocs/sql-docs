@@ -34,7 +34,7 @@ public void CreateSSLCertificateBinding(string application,
  The name of application that the certificate binding should be created for.  
   
  *CertificateHash*  
- The hash for the certificate.  
+ The hash for the certificate. The certificateHash expects a lowercase hash. If the hash contains uppercase characters it fails.
   
  *IPAddress*  
  The IP address for the application.  

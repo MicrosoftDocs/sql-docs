@@ -77,9 +77,8 @@ The rest of this section lists the benefits and limitations of each storage opti
 **Limitations**:
 
 - Premium SSD disk caching isn't supported.
-- Ultra disks don't support availability sets.
-- Availability zones are supported for Ultra Disks, but the VMs must be in the same availability zone, which reduces the availability of the virtual machine to 99.9%
-- Ultra disks don't support Zone Redundant Storage (ZRS)
+- Ultra disks don't support availability sets or Zone Redundant Storage (ZRS). 
+- Availability zones are supported for Ultra Disks, but the VMs must be in the same availability zone, which reduces the availability of the virtual machine to 99.9%.
 
 To get started, see [SQL Server failover cluster instance with Azure shared disks](failover-cluster-instance-azure-shared-disks-manually-configure.md).
 
@@ -117,6 +116,7 @@ To get started, see [SQL Server failover cluster instance with Storage Spaces Di
 
 - Shared storage solution for virtual machines spread over multiple availability zones.
 - Fully managed file system with single-digit latencies and burstable I/O performance.
+- Not all SQL Server features are supported - such as database snapshots, filestream, and CHECKDB without TABLOCK. Review [Limitations](failover-cluster-instance-premium-file-share-manually-configure.md#limitations) for details. 
 
 **Limitations:**
 

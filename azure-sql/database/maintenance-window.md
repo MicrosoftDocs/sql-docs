@@ -5,7 +5,7 @@ description: Understand how the Azure SQL Database maintenance window can be con
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: urosmil, scottkim, mathoma
-ms.date: 03/14/2024
+ms.date: 03/27/2024
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -25,10 +25,10 @@ monikerRange: "=azuresql||=azuresql-db"
 
 The maintenance window feature allows you to configure maintenance schedule for [Azure SQL Database](sql-database-paas-overview.md) and [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md) resources making impactful maintenance events predictable and less disruptive for your workload.
 
-> [!Note]
+> [!NOTE]
 > The maintenance window feature only protects from planned impact from upgrades or scheduled maintenance. It does not protect from all failover causes; exceptions that might cause short connection interruptions outside of a maintenance window include hardware failures, cluster load balancing, and database reconfigurations due to events like a change in database Service Level Objective.
 
-[Advance notifications (Preview)](advance-notifications.md) are available for databases configured to use a nondefault maintenance window. Advance notifications enable customers to configure notifications to be sent up to 24 hours in advance of any planned event.
+[Advance notifications](advance-notifications.md) are available for databases configured to use a nondefault maintenance window. Advance notifications enable customers to configure notifications to be sent up to 24 hours in advance of any planned event.
 
 ## Overview
 
@@ -87,7 +87,8 @@ Choosing a maintenance window other than the default is available on all SLOs **
     - Azure SQL Database DTU Basic, S0 and S1 tiers
     - DC hardware
     - Fsv2 hardware
-    - Hyperscale elastic pools
+
+Maintenance window for Hyperscale elastic pools is in preview and is available in specific regions and configurations. For more information, see [Blog: Maintenance window support for Azure SQL Database Hyperscale elastic pools](https://aka.ms/hsep-fmw).
 
 <!-- Check Known limitations in azure-sql/database/service-tier-hyperscale.md as well -->
 
@@ -107,8 +108,8 @@ The following table is for databases that are not [zone-redundant](high-availabi
 | Canada East  | | Yes | Yes |
 | Central India | | Yes | Yes |
 | Central US | Yes | Yes | Yes |
-| China East 2 | | Yes |
-| China North 2 | | Yes |
+| China East 2 | | Yes | Yes |
+| China North 2 | | Yes | Yes |
 | East US 1 | Yes | Yes | Yes |
 | East US 2  | Yes | Yes | Yes |
 | East Asia  | | Yes | Yes |
@@ -127,8 +128,8 @@ The following table is for databases that are not [zone-redundant](high-availabi
 | UAE North | | Yes | Yes |
 | UK South | Yes | Yes | Yes |
 | UK West | | Yes | Yes |
-| US Gov Texas | | Yes |
-| US Gov Virginia | | Yes |
+| US Gov Texas | | Yes | Yes |
+| US Gov Virginia | | Yes | Yes |
 | West Central US | | Yes | Yes |
 | West Europe | Yes | Yes | Yes |
 | West US | Yes | Yes | Yes |
@@ -187,7 +188,7 @@ For the full reference of the sample queries and how to use them across tools li
 ## Related content
 
 - [Configure maintenance window](maintenance-window-configure.md)
-- [Advance notifications for planned maintenance events (Preview)](advance-notifications.md)
+- [Advance notifications for planned maintenance events](advance-notifications.md)
 - [Maintenance window FAQ](maintenance-window-faq.yml)
 - [Azure SQL Database](sql-database-paas-overview.md)
 - [Plan for Azure maintenance events in Azure SQL Database and Azure SQL Managed Instance](planned-maintenance.md)

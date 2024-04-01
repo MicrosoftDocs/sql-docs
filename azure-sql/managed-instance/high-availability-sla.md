@@ -23,7 +23,7 @@ monikerRange: "= azuresql || = azuresql-mi"
 This article describes high availability in Azure SQL Managed Instance.
 
 > [!IMPORTANT]
-> Zone-redundant configuration is in public preview for the General Purpose service tier and generaly available for the Business Critical service tier.
+> Zone-redundant configuration is in public preview for the General Purpose service tier and generally available for the Business Critical service tier.
 
 ## Overview
 

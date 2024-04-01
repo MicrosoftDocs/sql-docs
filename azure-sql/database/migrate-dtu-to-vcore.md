@@ -4,11 +4,11 @@ description: Migrate a database in Azure SQL Database from the DTU model to the 
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, moslake
-ms.date: 04/10/2023
+ms.date: 03/27/2024
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
-ms.custom: sqldbrb=1
+ms.custom: 
 ---
 # Migrate Azure SQL Database from the DTU-based model to the vCore-based model
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -17,7 +17,55 @@ This article describes how to migrate your database in Azure SQL Database from t
 
 ## Migrate a database
 
-Migrating a database from the DTU-based purchasing model to the vCore-based purchasing model is similar to scaling between service objectives in the Basic, Standard, and Premium service tiers, with similar [duration](single-database-scale.md#latency) and a [minimal downtime](scale-resources.md) at the end of the migration process. A database migrated to the vCore-based purchasing model can be migrated back to the DTU-based purchasing model at any time in the same fashion, with the exception of databases migrated to the [Hyperscale](service-tier-hyperscale.md) service tier. 
+Migrating a database from the DTU-based purchasing model to the vCore-based purchasing model is similar to scaling between service objectives in the Basic, Standard, and Premium service tiers, with similar [duration](single-database-scale.md#latency) and a [minimal downtime](scale-resources.md) at the end of the migration process. A database migrated to the vCore-based purchasing model can be migrated back to the DTU-based purchasing model at any time using the same steps, except for databases migrated to the [Hyperscale](service-tier-hyperscale.md) service tier. 
+
+You can migrate your database to a different purchasing model by using the Azure portal, PowerShell, the Azure CLI, and Transact-SQL. 
+
+### [Azure portal](#tab/azure-portal)
+
+To migrate your database to a different purchasing model by using the Azure portal, follow these steps: 
+
+1. Go to your SQL database in the [Azure portal](https://portal.azure.com).
+1. Select **Compute + storage** under **Settings**. 
+1. Use the drop-down under **Service tier** to select a new purchasing model and service tier: 
+
+   :::image type="content" source="media/migrate-dtu-to-vcore/migrate-purchasing-model-portal.png" alt-text="Screenshot of the compute + storage page of the SQL database in the Azure portal with Service tier selected." lightbox="media/migrate-dtu-to-vcore/migrate-purchasing-model-portal.png":::
+
+### [PowerShell](#tab/powershell)
+
+To migrate your database to a different purchasing model by using PowerShell, use [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) such as the following sample: 
+
+```powershell-interactive
+$parameters = @{
+     ResourceGroupName = "<resource group name>"
+     DatabaseName = "<database name>"
+     ServerName = "<server name>"
+     Edition = "<service tier, such as Hyperscale>"
+     RequestedServiceObjectiveName = "<hardware such as HS_Gen5_2>"
+}
+
+Set-AzSqlDatabase @parameters
+```
+
+
+### [Azure CLI](#tab/azure-cli)
+
+To migrate your database to a different purchasing model by using the Azure CLI, use [az sql db update](/cli/azure/sql/db#az-sql-db-update) such as the following sample: 
+
+```azurecli-interactive
+az sql db update --resource-group "<resource group name>" --server "<server name>" --name "<database name>" --edition <service tier, such as Hyperscale> --capacity 4 --family Gen5
+```
+
+### [Transact-SQL](#tab/tsql)
+
+
+To migrate your database to a different purchasing model by using Transact-SQL,  use [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) such as the following sample: 
+
+```tsql
+ALTER DATABASE <database name> MODIFY (EDITION = '<service tier, such as Hyperscale>');
+```
+
+---
 
 ## Choose the vCore service tier and service objective
 
@@ -191,7 +239,11 @@ If you're creating a geo-secondary in the elastic pool for a single primary data
 
 ## Use database copy to migrate from DTU to vCore
 
-You can copy any database with a DTU-based compute size to a database with a vCore-based compute size without restrictions or special sequencing as long as the target compute size supports the maximum database size of the source database. Database copy creates a transactionally consistent snapshot of the data as of a point in time after the copy operation starts. It doesn't synchronize data between the source and the target after that point in time.
+[Database copy](database-copy.md) creates a transactionally consistent snapshot of the data at a point in time after the copy operation starts. It doesn't synchronize data between the source and the target after that point in time.
+
+You can copy any database with a DTU-based compute size to a database with a vCore-based compute size by using PowerShell, the Azure CLI, or Transact-SQL without restrictions or special sequencing, as long as the target compute size supports the maximum database size of the source database. Copying a database to a different service tier isn't supported in the Azure portal.
+
+
 
 ## Next steps
 

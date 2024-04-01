@@ -7283,14 +7283,6 @@ items:
       href: relational-databases/synonyms/create-synonyms.md
 - name: Reporting & Analytics
   items:
-  - name: Fabric Mirrored Databases
-    items:
-    - name: Mirrored Databases to Microsoft Fabric
-      href: sql-server/fabric-mirrored-database/fabric-mirrored-databases.md
-    - name: Microsoft Fabric mirrored databases
-      href: /fabric/database/mirrored-database/overview
-    - name: Microsoft Fabric mirrored databases from Azure SQL Database
-      href: /fabric/database/mirrored-database/azure-sql-database
   - name: Azure Synapse Link for SQL
     items: 
     - name: Azure Synapse Link for SQL Server >
@@ -8475,8 +8467,6 @@ items:
         href: ssdt/import-into-a-database-project.md
       - name: Add Database Reference Dialog Box
         href: ssdt/add-database-reference-dialog-box.md
-      - name: Check for Updates Dialog Box
-        href: ssdt/check-for-updates-dialog-box.md
       - name: Database Project Settings
         href: ssdt/database-project-settings.md
       - name: "How to: Browse Objects in a SQL Server Database Project"
@@ -8509,7 +8499,6 @@ items:
         - name: Using MSDeploy with dbSqlPackage Provider
           href: ssdt/using-msdeploy-with-dbsqlpackage-provider.md
       - name: Connected Database Development
-        href: ssdt/connected-database-development.md
         items:
         - name: "How to: Connect to a Database & Browse Existing Objects"
           href: ssdt/how-to-connect-to-a-database-and-browse-existing-objects.md
@@ -8517,8 +8506,6 @@ items:
           href: ssdt/how-to-create-database-objects-using-table-designer.md
         - name: "How to: Update a Connected Database with Power Buffer"
           href: ssdt/how-to-update-a-connected-database-with-power-buffer.md
-        - name: Filter & Sort Dialog Box
-          href: ssdt/filter-and-sort-dialog-box.md
         - name: "How to: Create New Database Objects Using Queries"
           href: ssdt/how-to-create-new-database-objects-using-queries.md
         - name: "How to: Edit an Existing Table using Queries"
@@ -9300,14 +9287,8 @@ items:
           href: ssms/the-sql-server-management-studio-environment.md
         - name: General User Interface Elements
           href: ssms/general-user-interface-elements.md
-        - name: Arguments Dialog Box
-          href: ssms/arguments-dialog-box.md
-        - name: About Dialog Box
-          href: ssms/about-dialog-box.md
         - name: SSMS Web Browser
           href: ssms/sql-server-management-studio-web-browser.md
-        - name: External Tools Dialog Box
-          href: ssms/external-tools-dialog-box.md
         - name: Property Pages in SSMS
           href: ssms/property-pages-in-sql-server-management-studio.md
         - name: Properties Window in SSMS
@@ -9364,8 +9345,6 @@ items:
           href: ssms/menu-help/sql-server-management-studio-menu-help.md
         - name: Properties Window F1 Help (Management Studio)
           href: ssms/menu-help/properties-window-f1-help-management-studio.md
-        - name: Options Dialog Boxes F1 Help
-          href: ssms/menu-help/options-dialog-boxes-f1-help.md
         - name: Options (Environment - Help - General Page)
           href: ssms/menu-help/options-environment-help-general-page.md
         - name: Options (Environment - General Page)
@@ -9402,8 +9381,6 @@ items:
           href: ssms/menu-help/save-changes.md
         - name: Open With (New File)
           href: ssms/menu-help/open-with-new-file.md
-        - name: Windows Dialog Box (Microsoft Document Explorer Help)
-          href: ssms/menu-help/windows-dialog-box-microsoft-document-explorer-help.md
         - name: Advanced Save Options
           href: ssms/menu-help/advanced-save-options.md
         - name: Save As
@@ -9412,8 +9389,6 @@ items:
           href: ssms/menu-help/customize-toolbars-page.md
         - name: Options (Designers - Maintenance Plans Page)
           href: ssms/menu-help/options-designers-maintenance-plans-page.md
-        - name: Choose Search Folders Dialog Box (Visual Studio)
-          href: ssms/menu-help/choose-search-folders-dialog-box-visual-studio.md
         - name: Options (Environment - Help - Online Page)
           href: ssms/menu-help/options-environment-help-online-page.md
         - name: Object Explorer
@@ -9436,8 +9411,6 @@ items:
           href: ssms/object/open-and-configure-object-explorer.md
         - name: Connect to an Instance From Object Explorer
           href: ssms/object/connect-to-an-instance-from-object-explorer.md
-        - name: Name Not Found Dialog Box
-          href: ssms/object/name-not-found-dialog-box.md
         - name: Browse for Objects (Object Explorer)
           href: ssms/object/browse-for-objects-object-explorer.md
         - name: Select Object Types (Object Explorer)
@@ -9514,14 +9487,8 @@ items:
         items:
         - name: Visual Database Tools
           href: ssms/visual-db-tools/visual-database-tools.md
-        - name: Add Table Dialog Box (Query & View Designers)
-          href: ssms/visual-db-tools/add-table-dialog-box-query-and-view-designers-visual-database-tools.md
-        - name: Save Change Script Dialog Box
-          href: ssms/visual-db-tools/save-change-script-dialog-box-visual-database-tools.md
         - name: Reconcile Changes Made by Multiple Users
           href: ssms/visual-db-tools/reconcile-changes-made-by-multiple-users-visual-database-tools.md
-        - name: Validation Warnings Dialog Box
-          href: ssms/visual-db-tools/validation-warnings-dialog-box-visual-database-tools.md
         - name: Create Self-Joins Automatically
           href: ssms/visual-db-tools/create-self-joins-automatically-visual-database-tools.md
         - name: Object Already Exists
@@ -9530,10 +9497,6 @@ items:
           href: ssms/visual-db-tools/summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools.md
         - name: Join Tables Automatically
           href: ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md
-        - name: Full-Text Index Dialog Box
-          href: ssms/visual-db-tools/full-text-index-dialog-box-visual-database-tools.md
-        - name: XML Indexes Dialog Box
-          href: ssms/visual-db-tools/xml-indexes-dialog-box-visual-database-tools.md
         - name: Work with Tables in Database Diagram
           href: ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md
         - name: Reconcile a Database Diagram with a Modified Database
@@ -9546,8 +9509,6 @@ items:
           href: ssms/visual-db-tools/view-join-properties-visual-database-tools.md
         - name: Column Properties
           href: ssms/visual-db-tools/column-properties-visual-database-tools.md
-        - name: Collation Dialog Box
-          href: ssms/visual-db-tools/collation-dialog-box-visual-database-tools.md
         - name: Create Column Aliases
           href: ssms/visual-db-tools/create-column-aliases-visual-database-tools.md
         - name: Modify Queries
@@ -9568,8 +9529,6 @@ items:
           href: ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md
         - name: Modify Join Operators
           href: ssms/visual-db-tools/modify-join-operators-visual-database-tools.md
-        - name: Choose Name Dialog Box
-          href: ssms/visual-db-tools/choose-name-dialog-box-visual-database-tools.md
         - name: Remove Joins
           href: ssms/visual-db-tools/remove-joins-visual-database-tools.md
         - name: Table Properties
@@ -9584,14 +9543,10 @@ items:
           href: ssms/visual-db-tools/design-tables-visual-database-tools.md
         - name: Permissions & Visual Database Tools
           href: ssms/visual-db-tools/permissions-and-visual-database-tools-visual-database-tools.md
-        - name: Check Constraint Expression Dialog Box
-          href: ssms/visual-db-tools/check-constraint-expression-dialog-box-visual-database-tools.md
         - name: Add Related Tables to Diagrams
           href: ssms/visual-db-tools/add-related-tables-to-diagrams-visual-database-tools.md
         - name: Visual Database Tool Designers
           href: ssms/visual-db-tools/visual-database-tool-designers.md
-        - name: SQL Syntax Errors Encountered Dialog Box
-          href: ssms/visual-db-tools/sql-syntax-errors-encountered-dialog-box-visual-database-tools.md
         - name: Specify the TOP Clause in Queries
           href: ssms/visual-db-tools/specify-the-top-clause-in-queries-visual-database-tools.md
         - name: Include or Exclude Rows
@@ -9600,12 +9555,8 @@ items:
           href: ssms/visual-db-tools/stop-a-query-visual-database-tools.md
         - name: Show Column Names in the Diagram Pane
           href: ssms/visual-db-tools/show-column-names-in-the-diagram-pane-visual-database-tools.md
-        - name: Location Dialog Box
-          href: ssms/visual-db-tools/location-dialog-box-visual-database-tools.md
         - name: Create UNION Queries
           href: ssms/visual-db-tools/create-union-queries-visual-database-tools.md
-        - name: Partition Column List Dialog Box
-          href: ssms/visual-db-tools/partition-column-list-dialog-box-visual-database-tools.md
         - name: Open the Query & View Designer
           href: ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md
         - name: Combine Conditions When OR Has Precedence
@@ -9614,48 +9565,30 @@ items:
           href: ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md
         - name: Sort & Group Query Results
           href: ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md
-        - name: Check Constraint Dialog Box
-          href: ssms/visual-db-tools/check-constraint-dialog-box-visual-database-tools.md
         - name: Exclude Duplicate Rows
           href: ssms/visual-db-tools/exclude-duplicate-rows-visual-database-tools.md
         - name: Remove Columns from Query Results
           href: ssms/visual-db-tools/remove-columns-from-query-results-visual-database-tools.md
-        - name: Full-Text Index Columns Dialog Box
-          href: ssms/visual-db-tools/full-text-index-columns-dialog-box-visual-database-tools.md
         - name: Discard Changes Made to Diagrams
           href: ssms/visual-db-tools/discard-changes-made-to-diagrams-visual-database-tools.md
-        - name: SQL Comment Dialog Box
-          href: ssms/visual-db-tools/sql-comment-dialog-box-visual-database-tools.md
         - name: Rename Queries
           href: ssms/visual-db-tools/rename-queries-visual-database-tools.md
         - name: Delete Rows in the Results Pane
           href: ssms/visual-db-tools/delete-rows-in-the-results-pane-visual-database-tools.md
-        - name: Column List Dialog Box
-          href: ssms/visual-db-tools/column-list-dialog-box-visual-database-tools.md
-        - name: Indexes - Keys Dialog Box
-          href: ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md
         - name: Join Tables Manually
           href: ssms/visual-db-tools/join-tables-manually-visual-database-tools.md
         - name: Open Database Diagram Designer
           href: ssms/visual-db-tools/open-database-diagram-designer-visual-database-tools.md
         - name: Set Up Database Diagram Designer
           href: ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md
-        - name: Database Changes Detected Dialog Box
-          href: ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md
         - name: Create Self-Joins Manually
           href: ssms/visual-db-tools/create-self-joins-manually-visual-database-tools.md
-        - name: Query Definitions Differ Dialog Box
-          href: ssms/visual-db-tools/query-definitions-differ-dialog-box-visual-database-tools.md
         - name: Remove Tables from Queries
           href: ssms/visual-db-tools/remove-tables-from-queries-visual-database-tools.md
         - name: Query with Joins
           href: ssms/visual-db-tools/query-with-joins-visual-database-tools.md
         - name: Create Queries using Something Besides a Table
           href: ssms/visual-db-tools/create-queries-using-something-besides-a-table-visual-database-tools.md
-        - name: Tables & Columns Dialog Box
-          href: ssms/visual-db-tools/tables-and-columns-dialog-box-visual-database-tools.md
-        - name: Color Dialog Box
-          href: ssms/visual-db-tools/color-dialog-box-visual-database-tools.md
         - name: Perform Basic Operations with Queries
           href: ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md
         - name: Create Insert Results Queries
@@ -9664,24 +9597,18 @@ items:
           href: ssms/visual-db-tools/save-selected-tables-on-a-diagram-visual-database-tools.md
         - name: Show Diagram Properties
           href: ssms/visual-db-tools/show-diagram-properties-visual-database-tools.md
-        - name: Index Columns Dialog Box
-          href: ssms/visual-db-tools/index-columns-dialog-box-visual-database-tools.md
         - name: Create a New Database Diagram
           href: ssms/visual-db-tools/create-a-new-database-diagram-visual-database-tools.md
         - name: Add Columns to Queries
           href: ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md
         - name: Copy an Image of a Database Diagram to the Clipboard
           href: ssms/visual-db-tools/copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md
-        - name: Save (Not Permitted) Dialog Box
-          href: ssms/visual-db-tools/save-not-permitted-dialog-box.md
         - name: Discard Changes Made to Queries
           href: ssms/visual-db-tools/discard-changes-made-to-queries-visual-database-tools.md
         - name: Visual Database Tools F1 Help
           href: ssms/visual-db-tools/visual-database-tools-f1-help.md
         - name: Sort Rows
           href: ssms/visual-db-tools/sort-rows-visual-database-tools.md
-        - name: Go To Line Dialog Box
-          href: ssms/visual-db-tools/go-to-line-dialog-box.md
         - name: Types of Queries
           href: ssms/visual-db-tools/types-of-queries-visual-database-tools.md
         - name: Reorder Output Columns
@@ -9692,8 +9619,6 @@ items:
           href: ssms/visual-db-tools/collapse-groups-of-rows-visual-database-tools.md
         - name: Supported Query Types
           href: ssms/visual-db-tools/supported-query-types-visual-database-tools.md
-        - name: Data Type Change Required Dialog Box
-          href: ssms/visual-db-tools/data-type-change-required-dialog-box-visual-database-tools.md
         - name: Remove Columns from Queries
           href: ssms/visual-db-tools/remove-columns-from-queries-visual-database-tools.md
         - name: Open Queries
@@ -9716,16 +9641,10 @@ items:
           href: ssms/visual-db-tools/display-query-and-view-designer-panes-visual-database-tools.md
         - name: Create Queries with Unnamed Parameters
           href: ssms/visual-db-tools/create-queries-with-unnamed-parameters-visual-database-tools.md
-        - name: Make Table Dialog Box
-          href: ssms/visual-db-tools/make-table-dialog-box-visual-database-tools.md
         - name: Work with Diagram Layout
           href: ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md
         - name: Add New Rows in the Results Pane
           href: ssms/visual-db-tools/add-new-rows-in-the-results-pane-visual-database-tools.md
-        - name: Choose Target Table for Insert Values Dialog Box
-          href: ssms/visual-db-tools/choose-target-table-for-insert-values-dialog-box-visual-database-tools.md
-        - name: Delete Table Dialog Box
-          href: ssms/visual-db-tools/delete-table-dialog-box-visual-database-tools.md
         - name: Join Tables on Multiple Columns
           href: ssms/visual-db-tools/join-tables-on-multiple-columns-visual-database-tools.md
         - name: Add Tables to Diagrams
@@ -9734,16 +9653,12 @@ items:
           href: ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md
         - name: Sort Multiple Columns in Queries
           href: ssms/visual-db-tools/sort-multiple-columns-in-queries-visual-database-tools.md
-        - name: Choose Target Table for Insert Results Dialog Box
-          href: ssms/visual-db-tools/choose-target-table-for-insert-results-dialog-box-visual-database-tools.md
         - name: Navigate in Database Diagram Designer
           href: ssms/visual-db-tools/navigate-in-database-diagram-designer-visual-database-tools.md
         - name: Work with Data in the Results Pane
           href: ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md
         - name: Clear Query Results
           href: ssms/visual-db-tools/clear-query-results-visual-database-tools.md
-        - name: Spatial Indexes Dialog Box
-          href: ssms/visual-db-tools/spatial-indexes-dialog-box-visual-database-tools.md
         - name: Use the Query & View Designer with International Data
           href: ssms/visual-db-tools/use-the-query-and-view-designer-with-international-data-visual-database-tools.md
         - name: Show Query Properties
@@ -9754,8 +9669,6 @@ items:
           href: ssms/visual-db-tools/create-table-aliases-visual-database-tools.md
         - name: Parameter Queries
           href: ssms/visual-db-tools/parameter-queries-visual-database-tools.md
-        - name: Column Selection Dialog Box
-          href: ssms/visual-db-tools/column-selection-dialog-box-visual-database-tools.md
         - name: Copy Queries
           href: ssms/visual-db-tools/copy-queries-visual-database-tools.md
         - name: Sort with ORDER BY
@@ -9764,12 +9677,8 @@ items:
           href: ssms/visual-db-tools/combine-conditions-when-and-has-precedence-visual-database-tools.md
         - name: Create Make Table Queries
           href: ssms/visual-db-tools/create-make-table-queries-visual-database-tools.md
-        - name: Open File Dialog Box
-          href: ssms/visual-db-tools/open-file-dialog-box.md
         - name: Rules for Entering Search Values
           href: ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md
-        - name: Add Table Dialog Box (Database Designer)
-          href: ssms/visual-db-tools/add-table-dialog-box-database-designer-visual-database-tools.md
         - name: Diagram Pane
           href: ssms/visual-db-tools/diagram-pane-visual-database-tools.md
         - name: Create Subqueries
@@ -9778,8 +9687,6 @@ items:
           href: ssms/visual-db-tools/summarize-or-aggregate-values-using-custom-expressions-visual-database-tools.md
         - name: Multiuser Environments
           href: ssms/visual-db-tools/multiuser-environments-visual-database-tools.md
-        - name: Query Parameters Dialog Box
-          href: ssms/visual-db-tools/query-parameters-dialog-box-visual-database-tools.md
         - name: Customize the Amount of Information Displayed in Diagrams
           href: ssms/visual-db-tools/customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md
         - name: Delete a Database Diagram
@@ -9788,8 +9695,6 @@ items:
           href: ssms/visual-db-tools/query-with-parameters-visual-database-tools.md
         - name: Work with Database Diagrams
           href: ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md
-        - name: Save Dialog Box
-          href: ssms/visual-db-tools/save-dialog-box-visual-database-tools.md
         - name: Create Insert Values Queries
           href: ssms/visual-db-tools/create-insert-values-queries-visual-database-tools.md
         - name: Specify Multiple Search Conditions for One Column
@@ -9814,8 +9719,6 @@ items:
           href: ssms/visual-db-tools/how-the-query-and-view-designer-represents-joins-visual-database-tools.md
         - name: Design Queries & Views How-to Topics
           href: ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md
-        - name: Description Property Dialog Box
-          href: ssms/visual-db-tools/description-property-dialog-box-visual-database-tools.md
         - name: Issues of Database Evolution
           href: ssms/visual-db-tools/issues-of-database-evolution-visual-database-tools.md
         - name: Use HAVING & WHERE Clauses in the Same Query
@@ -9826,20 +9729,14 @@ items:
           href: ssms/visual-db-tools/work-with-columns-in-aggregate-queries-visual-database-tools.md
         - name: Select Rows That Do Not Match a Value
           href: ssms/visual-db-tools/select-rows-that-do-not-match-a-value-visual-database-tools.md
-        - name: Post-Save Notifications Dialog Box
-          href: ssms/visual-db-tools/post-save-notifications-dialog-box-visual-database-tools.md
         - name: Save Queries
           href: ssms/visual-db-tools/save-queries-visual-database-tools.md
         - name: Specify Search Conditions
           href: ssms/visual-db-tools/specify-search-conditions-visual-database-tools.md
         - name: Create Outer Joins
           href: ssms/visual-db-tools/create-outer-joins-visual-database-tools.md
-        - name: Print Dialog Box
-          href: ssms/visual-db-tools/print-dialog-box.md
         - name: Create Update Queries
           href: ssms/visual-db-tools/create-update-queries-visual-database-tools.md
-        - name: Update Table Dialog Box
-          href: ssms/visual-db-tools/update-table-dialog-box-visual-database-tools.md
         - name: Copy Tables from One Database Diagrams to Another
           href: ssms/visual-db-tools/copy-tables-from-one-database-diagrams-to-another-visual-database-tools.md
         - name: Change the Font Color, Size, & Style in Diagrams
@@ -9854,8 +9751,6 @@ items:
           href: ssms/visual-db-tools/add-text-annotations-to-diagrams-visual-database-tools.md
         - name: Create Delete Queries
           href: ssms/visual-db-tools/create-delete-queries-visual-database-tools.md
-        - name: Join Dialog Box
-          href: ssms/visual-db-tools/join-dialog-box-visual-database-tools.md
         - name: Delete Queries
           href: ssms/visual-db-tools/delete-queries-visual-database-tools.md
         - name: Query Properties
@@ -9866,8 +9761,6 @@ items:
           href: ssms/visual-db-tools/specify-multiple-search-conditions-for-multiple-columns-visual-database-tools.md
         - name: Add Derived Tables to Queries
           href: ssms/visual-db-tools/add-derived-tables-to-queries-visual-database-tools.md
-        - name: Page Setup Dialog Box
-          href: ssms/visual-db-tools/page-setup-dialog-box.md
         - name: SQL Editor
           href: ssms/visual-db-tools/sql-editor-visual-database-tools.md
         - name: Print Query Results
@@ -10030,8 +9923,6 @@ items:
         href: tools/sql-server-profiler/replay-to-a-cursor-sql-server-profiler.md
       - name: Replay a T-SQL Script
         href: tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md
-      - name: SQL Server Profiler dialog boxes
-        href: tools/sql-server-profiler/sql-server-profiler-f1-help.md
   - name: Visual Studio native helpers
     items:
     - name: SqlToolsVSNativeHelpers
@@ -13596,7 +13487,7 @@ items:
       items:
       - name: sys.dm_db_objects_disabled_on_compatibility_level_change
         href: relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md
-    - name: Change feed
+    - name: Azure Synapse Link for SQL
       items:
       - name: sys.dm_change_feed_errors
         href: relational-databases/system-dynamic-management-views/sys-dm-change-feed-errors.md
@@ -13915,10 +13806,6 @@ items:
         href: relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md
       - name: sys.fn_trace_gettable
         href: relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md
-    - name: Change feed
-      items:
-      - name: sys.fn_has_change_feed_permissions
-        href: relational-databases/system-functions/fn-has-change-feed-permissions.md
   - name: System information schema views
     href: relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md
     items:
@@ -13970,61 +13857,22 @@ items:
       items:
       - name: sp_wait_for_database_copy_sync
         href: relational-databases/system-stored-procedures/sp-wait-for-database-copy-sync-transact-sql.md
-    - name: Azure Synapse Analytics
-      href: relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md
+    - name: Spatial indexes
       items:
-      - name: sp_pdw_add_network_credentials
-        href: relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md
-      - name: sp_pdw_database_encryption
-        href: relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md
-      - name: sp_pdw_database_encryption_regenerate_system_keys
-        href: relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md
-      - name: sp_pdw_log_user_data_masking
-        href: relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md
-      - name: sp_pdw_remove_network_credentials
-        href: relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md
-      - name: sp_special_columns_100
-        href: relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md
-    - name: Change feed
-      items:
-      - name: sp_change_feed_configure_parameters
-        href: relational-databases/system-stored-procedures/sp-change-feed-configure-parameters.md
-      - name: sp_change_feed_create_table_group
-        href: relational-databases/system-stored-procedures/sp-change-feed-create-table-group.md
-      - name: sp_change_feed_disable_db
-        href: relational-databases/system-stored-procedures/sp-change-feed-disable-db.md
-      - name: sp_change_feed_disable_table
-        href: relational-databases/system-stored-procedures/sp-change-feed-disable-table.md        
-      - name: sp_change_feed_drop_table_group
-        href: relational-databases/system-stored-procedures/sp-change-feed-drop-table-group.md
-      - name: sp_change_feed_enable_db
-        href: relational-databases/system-stored-procedures/sp-change-feed-enable-db.md
-      - name: sp_change_feed_enable_table
-        href: relational-databases/system-stored-procedures/sp-change-feed-enable-table.md
-      - name: sp_change_feed_enable_tables_after_reseed
-        href: relational-databases/system-stored-procedures/sp-change-feed-enable-tables-after-reseed.md
-      - name: sp_change_feed_is_slo_allowed 
-        href: relational-databases/system-stored-procedures/sp-change-feed-is-slo-allowed.md
-      - name: sp_change_feed_reseed_table
-        href: relational-databases/system-stored-procedures/sp-change-feed-reseed-table.md
-      - name: sp_change_feed_reseed_db_init 
-        href: relational-databases/system-stored-procedures/sp-change-feed-reseed-db-init.md
-      - name: sp_change_feed_reseed_db_start_replication 
-        href: relational-databases/system-stored-procedures/sp-change-feed-reseed-db-start-replication.md
-      - name: sp_change_feed_vupgrade
-        href: relational-databases/system-stored-procedures/sp-change-feed-vupgrade.md
-      - name: sp_has_change_feed_permissions
-        href: relational-databases/system-stored-procedures/sp-has-change-feed-permissions.md
-      - name: sp_help_change_feed
-        href: relational-databases/system-stored-procedures/sp-help-change-feed.md
-      - name: sp_help_change_feed_table
-        href: relational-databases/system-stored-procedures/sp-help-change-feed-table.md
-      - name: sp_help_change_feed_settings
-        href: relational-databases/system-stored-procedures/sp-help-change-feed-settings.md
-      - name: sp_help_change_feed_table_groups
-        href: relational-databases/system-stored-procedures/sp-help-change-feed-table-groups.md
-      - name: sp_MSchange_feed_ddl_event
-        href: relational-databases/system-stored-procedures/sp-mschange-feed-ddl-event.md
+      - name: Overview
+        href: relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md
+      - name: sp_help_spatial_geometry_index
+        href: relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md
+      - name: sp_help_spatial_geometry_index_xml
+        href: relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md
+      - name: sp_help_spatial_geography_index
+        href: relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md
+      - name: sp_help_spatial_geography_index_xml
+        href: relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md
+      - name: sp_help_spatial_geometry_histogram
+        href: relational-databases/system-stored-procedures/sp-help-spatial-geometry-histogram-transact-sql.md
+      - name: sp_help_spatial_geography_histogram
+        href: relational-databases/system-stored-procedures/sp-help-spatial-geography-histogram-transact-sql.md
     - name: Catalog
       items:
       - name: Overview
@@ -14037,8 +13885,6 @@ items:
         href: relational-databases/system-stored-procedures/sp-create-openrowset-statistics.md
       - name: sp_databases
         href: relational-databases/system-stored-procedures/sp-databases-transact-sql.md
-      - name: sp_datatype_info_90
-        href: relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md
       - name: sp_drop_openrowset_statistics 
         href: relational-databases/system-stored-procedures/sp-drop-openrowset-statistics.md
       - name: sp_fkeys
@@ -14541,10 +14387,6 @@ items:
         href: relational-databases/system-stored-procedures/sp-delete-target-group-member-elastic-jobs-transact-sql.md
       - name: sp_purge_jobhistory
         href: relational-databases/system-stored-procedures/sp-purge-jobhistory-elastic-jobs-transact-sql.md
-    - name: Extended Events
-      items:
-      - name: sp_trace_generateevent
-        href: relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md
     - name: FILESTREAM and FileTable
       items:
       - name: Overview
@@ -15408,22 +15250,43 @@ items:
         href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md
       - name: sp_delete_backup
         href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md
-    - name: Spatial indexes
+    - name: Azure Synapse Analytics
+      href: relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md
       items:
-      - name: Overview
-        href: relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md
-      - name: sp_help_spatial_geometry_index
-        href: relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md
-      - name: sp_help_spatial_geometry_index_xml
-        href: relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md
-      - name: sp_help_spatial_geography_index
-        href: relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md
-      - name: sp_help_spatial_geography_index_xml
-        href: relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md
-      - name: sp_help_spatial_geometry_histogram
-        href: relational-databases/system-stored-procedures/sp-help-spatial-geometry-histogram-transact-sql.md
-      - name: sp_help_spatial_geography_histogram
-        href: relational-databases/system-stored-procedures/sp-help-spatial-geography-histogram-transact-sql.md
+      - name: sp_datatype_info_90
+        href: relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md
+      - name: sp_pdw_add_network_credentials
+        href: relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md
+      - name: sp_pdw_database_encryption
+        href: relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md
+      - name: sp_pdw_database_encryption_regenerate_system_keys
+        href: relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md
+      - name: sp_pdw_log_user_data_masking
+        href: relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md
+      - name: sp_pdw_remove_network_credentials
+        href: relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md
+      - name: sp_special_columns_100
+        href: relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md
+    - name: Azure Synapse Link for SQL
+      items:
+      - name: sp_change_feed_disable_db
+        href: relational-databases/system-stored-procedures/sp-change-feed-disable-db.md
+      - name: sp_change_feed_disable_table
+        href: relational-databases/system-stored-procedures/sp-change-feed-disable-table.md        
+      - name: sp_change_feed_drop_table_group
+        href: relational-databases/system-stored-procedures/sp-change-feed-drop-table-group.md
+      - name: sp_help_change_feed
+        href: relational-databases/system-stored-procedures/sp-help-change-feed.md
+      - name: sp_help_change_feed_table
+        href: relational-databases/system-stored-procedures/sp-help-change-feed-table.md
+      - name: sp_change_feed_configure_parameters
+        href: relational-databases/system-stored-procedures/sp-change-feed-configure-parameters.md
+      - name: sp_change_feed_create_table_group
+        href: relational-databases/system-stored-procedures/sp-change-feed-create-table-group.md
+      - name: sp_change_feed_enable_db
+        href: relational-databases/system-stored-procedures/sp-change-feed-enable-db.md
+      - name: sp_change_feed_enable_table
+        href: relational-databases/system-stored-procedures/sp-change-feed-enable-table.md
     - name: SQL Server Agent
       href: relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md
       items:
@@ -15583,6 +15446,10 @@ items:
         href: relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md
       - name: sp_update_targetservergroup
         href: relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md
+    - name: Extended Events
+      items:
+      - name: sp_trace_generateevent
+        href: relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md
     - name: SQL Server Profiler
       href: relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md
       items:

@@ -4,7 +4,7 @@ description: "The SQL Server Login dialog may appear when an application makes a
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
-ms.date: "08/08/2022"
+ms.date: "03/29/2024"
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -26,6 +26,7 @@ For more information about server names for different types of networks, see the
 ### Authentication Mode
 
 Selects the authentication mode from one of the following:
+
 - **SQL Server** with login ID and password
 - **Windows Integrated** authentication using the currently logged-in user's account
 - **Active Directory Password** with login ID and password
@@ -37,8 +38,7 @@ Selects the authentication mode from one of the following:
 
 - **Active Directory Service Principal** authentication with a Microsoft Entra service principal
 
-
-See [Data Source Wizard Screen 2](../../../connect/odbc/windows/dsn-wizard-2.md) for more information on the authentication modes.
+See [ODBC Data Source Administrator DSN options](odbc-administrator-dsn-creation.md) for more information on the authentication modes.
 
 ### Server SPN
 
@@ -112,6 +112,6 @@ Specifies the hostname to be used when validating the server's certificate. When
 
 This option is applicable only when **Use strong encryption for data** is enabled (ODBC Driver 17 and older), or when **Connection Encryption** is set to **Optional** or **Mandatory** (ODBC Driver 18 and newer). When selected, the server's certificate won't be validated to have the correct hostname of the server and be issued by a trusted certificate authority. The server's certificate will always be validated when using the **Strict** encryption mode.
 
-## See Also
+## Related content
 
 [Microsoft ODBC Driver for SQL Server on Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)

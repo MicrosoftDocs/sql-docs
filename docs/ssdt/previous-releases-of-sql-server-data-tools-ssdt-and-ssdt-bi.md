@@ -94,7 +94,6 @@ This **SSDT for Visual Studio 2017** release can be installed in the following l
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x40a)
 
-
 ### System requirements
 
 SSDT for Visual Studio 2017 has the same [system requirements](/visualstudio/productinfo/vs2017-system-requirements-vs) as Visual Studio.
@@ -186,7 +185,6 @@ For available options, run `SSDT-Setup-ENU.exe /help`
 > If using a full version of Visual Studio 2017, create an offline folder for SSDT only, and run `SSDT-Setup-ENU.exe` from this newly created folder (don't add SSDT to another Visual Studio 2017 offline layout). If you add the SSDT layout to an existing Visual Studio offline layout, the necessary runtime (.exe) components are not created there.
 
 ### Release notes
-
 
 #### 15.9.10,&nbsp; SSDT for VS 2017
 

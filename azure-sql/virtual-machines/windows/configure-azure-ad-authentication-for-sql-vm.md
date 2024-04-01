@@ -7,7 +7,7 @@ ms.reviewer: mathoma
 ms.date: 09/25/2023
 ms.service: virtual-machines-sql
 ms.subservice: security
-ms.custom: has-azure-ad-ps-ref, devx-track-azurecli, azure-ad-ref-level-one-done
+ms.custom: has-azure-ad-ps-ref, devx-track-azurecli
 ms.topic: how-to
 ---
 # Enable Microsoft Entra authentication for SQL Server on Azure VMs

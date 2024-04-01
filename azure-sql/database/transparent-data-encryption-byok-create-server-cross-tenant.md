@@ -7,7 +7,7 @@ ms.reviewer: vanto, mathoma
 ms.date: 10/10/2023
 ms.service: sql-database
 ms.subservice: security
-ms.custom: devx-track-azurecli, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
+ms.custom: devx-track-azurecli, has-azure-ad-ps-ref
 ms.topic: how-to
 ---
 

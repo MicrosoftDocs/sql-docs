@@ -97,9 +97,9 @@ Due to the current limitation of S3 Standard REST API, the temporary uncommitted
 [dell_sheet]: https://www.delltechnologies.com/asset/products/storage/briefs-summaries/dell_emc_ecs_solution_overview.pdf
 [dell_webs]:  https://www.delltechnologies.com/storage/ecs/index.htm
 
-[hitachi_docs]:  https://knowledge.hitachivantara.com/Documents/Storage/HCP_for_Cloud_Scale/2.3.x/Administration/01_Getting_started
-[hitachi_sheet]: https://www.hitachivantara.com/pdf/white-paper/content-platform-architecture-fundamentals-whitepaper.pdf
-[hitachi_webs]:  https://www.hitachivantara.com/en-us/products/storage/object-storage/content-platform.html
+[hitachi_docs]:  https://docs.hitachivantara.com/
+[hitachi_sheet]: https://docs.hitachivantara.com/
+[hitachi_webs]:  https://docs.hitachivantara.com/
 
 [hpe_docs]:  https://docs.datafabric.hpe.com/62/MapRObjectStore/s3-gateway.html
 [hpe_sheet]: https://www.hpe.com/us/en/collaterals/collateral.a50001592enw.html

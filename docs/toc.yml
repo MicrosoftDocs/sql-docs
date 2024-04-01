@@ -9487,12 +9487,8 @@ items:
         items:
         - name: Visual Database Tools
           href: ssms/visual-db-tools/visual-database-tools.md
-        - name: Save Change Script Dialog Box
-          href: ssms/visual-db-tools/save-change-script-dialog-box-visual-database-tools.md
         - name: Reconcile Changes Made by Multiple Users
           href: ssms/visual-db-tools/reconcile-changes-made-by-multiple-users-visual-database-tools.md
-        - name: Validation Warnings Dialog Box
-          href: ssms/visual-db-tools/validation-warnings-dialog-box-visual-database-tools.md
         - name: Create Self-Joins Automatically
           href: ssms/visual-db-tools/create-self-joins-automatically-visual-database-tools.md
         - name: Object Already Exists
@@ -9547,14 +9543,10 @@ items:
           href: ssms/visual-db-tools/design-tables-visual-database-tools.md
         - name: Permissions & Visual Database Tools
           href: ssms/visual-db-tools/permissions-and-visual-database-tools-visual-database-tools.md
-        - name: Check Constraint Expression Dialog Box
-          href: ssms/visual-db-tools/check-constraint-expression-dialog-box-visual-database-tools.md
         - name: Add Related Tables to Diagrams
           href: ssms/visual-db-tools/add-related-tables-to-diagrams-visual-database-tools.md
         - name: Visual Database Tool Designers
           href: ssms/visual-db-tools/visual-database-tool-designers.md
-        - name: SQL Syntax Errors Encountered Dialog Box
-          href: ssms/visual-db-tools/sql-syntax-errors-encountered-dialog-box-visual-database-tools.md
         - name: Specify the TOP Clause in Queries
           href: ssms/visual-db-tools/specify-the-top-clause-in-queries-visual-database-tools.md
         - name: Include or Exclude Rows
@@ -9563,8 +9555,6 @@ items:
           href: ssms/visual-db-tools/stop-a-query-visual-database-tools.md
         - name: Show Column Names in the Diagram Pane
           href: ssms/visual-db-tools/show-column-names-in-the-diagram-pane-visual-database-tools.md
-        - name: Location Dialog Box
-          href: ssms/visual-db-tools/location-dialog-box-visual-database-tools.md
         - name: Create UNION Queries
           href: ssms/visual-db-tools/create-union-queries-visual-database-tools.md
         - name: Open the Query & View Designer
@@ -9579,18 +9569,12 @@ items:
           href: ssms/visual-db-tools/exclude-duplicate-rows-visual-database-tools.md
         - name: Remove Columns from Query Results
           href: ssms/visual-db-tools/remove-columns-from-query-results-visual-database-tools.md
-        - name: Full-Text Index Columns Dialog Box
-          href: ssms/visual-db-tools/full-text-index-columns-dialog-box-visual-database-tools.md
         - name: Discard Changes Made to Diagrams
           href: ssms/visual-db-tools/discard-changes-made-to-diagrams-visual-database-tools.md
-        - name: SQL Comment Dialog Box
-          href: ssms/visual-db-tools/sql-comment-dialog-box-visual-database-tools.md
         - name: Rename Queries
           href: ssms/visual-db-tools/rename-queries-visual-database-tools.md
         - name: Delete Rows in the Results Pane
           href: ssms/visual-db-tools/delete-rows-in-the-results-pane-visual-database-tools.md
-        - name: Indexes - Keys Dialog Box
-          href: ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md
         - name: Join Tables Manually
           href: ssms/visual-db-tools/join-tables-manually-visual-database-tools.md
         - name: Open Database Diagram Designer
@@ -9599,16 +9583,12 @@ items:
           href: ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md
         - name: Create Self-Joins Manually
           href: ssms/visual-db-tools/create-self-joins-manually-visual-database-tools.md
-        - name: Query Definitions Differ Dialog Box
-          href: ssms/visual-db-tools/query-definitions-differ-dialog-box-visual-database-tools.md
         - name: Remove Tables from Queries
           href: ssms/visual-db-tools/remove-tables-from-queries-visual-database-tools.md
         - name: Query with Joins
           href: ssms/visual-db-tools/query-with-joins-visual-database-tools.md
         - name: Create Queries using Something Besides a Table
           href: ssms/visual-db-tools/create-queries-using-something-besides-a-table-visual-database-tools.md
-        - name: Tables & Columns Dialog Box
-          href: ssms/visual-db-tools/tables-and-columns-dialog-box-visual-database-tools.md
         - name: Perform Basic Operations with Queries
           href: ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md
         - name: Create Insert Results Queries
@@ -9617,24 +9597,18 @@ items:
           href: ssms/visual-db-tools/save-selected-tables-on-a-diagram-visual-database-tools.md
         - name: Show Diagram Properties
           href: ssms/visual-db-tools/show-diagram-properties-visual-database-tools.md
-        - name: Index Columns Dialog Box
-          href: ssms/visual-db-tools/index-columns-dialog-box-visual-database-tools.md
         - name: Create a New Database Diagram
           href: ssms/visual-db-tools/create-a-new-database-diagram-visual-database-tools.md
         - name: Add Columns to Queries
           href: ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md
         - name: Copy an Image of a Database Diagram to the Clipboard
           href: ssms/visual-db-tools/copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md
-        - name: Save (Not Permitted) Dialog Box
-          href: ssms/visual-db-tools/save-not-permitted-dialog-box.md
         - name: Discard Changes Made to Queries
           href: ssms/visual-db-tools/discard-changes-made-to-queries-visual-database-tools.md
         - name: Visual Database Tools F1 Help
           href: ssms/visual-db-tools/visual-database-tools-f1-help.md
         - name: Sort Rows
           href: ssms/visual-db-tools/sort-rows-visual-database-tools.md
-        - name: Go To Line Dialog Box
-          href: ssms/visual-db-tools/go-to-line-dialog-box.md
         - name: Types of Queries
           href: ssms/visual-db-tools/types-of-queries-visual-database-tools.md
         - name: Reorder Output Columns
@@ -9667,8 +9641,6 @@ items:
           href: ssms/visual-db-tools/display-query-and-view-designer-panes-visual-database-tools.md
         - name: Create Queries with Unnamed Parameters
           href: ssms/visual-db-tools/create-queries-with-unnamed-parameters-visual-database-tools.md
-        - name: Make Table Dialog Box
-          href: ssms/visual-db-tools/make-table-dialog-box-visual-database-tools.md
         - name: Work with Diagram Layout
           href: ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md
         - name: Add New Rows in the Results Pane

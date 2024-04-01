@@ -1,13 +1,12 @@
 ---
-title: "Backup & restore with S3-compatible object storage"
-description: "SQL Server backup and restore with S3-compatible object storage"
+title: "Backup and restore with S3-compatible object storage"
+description: Learn about SQL Server backup to and restore from S3-compatible object storage, including the benefits of using S3-compatible object storage to store SQL Server backups.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 10/09/2023
+ms.date: 04/01/2024
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
-storage: Learn about SQL Server backup to and restore from S3-compatible object storage, including the benefits of using S3-compatible object storage to store SQL Server backups.
 monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 
@@ -15,17 +14,17 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 
 [!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-This article introduces the concepts, requirements, and components necessary to use S3-compatible object storage as a backup destination. 
+This article introduces the concepts, requirements, and components necessary to use S3-compatible object storage as a backup destination.
 
 ## Overview
 
-[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduces object storage integration to the data platform, enabling you to integrate SQL Server with S3-compatible object storage in addition to Azure Storage. To provide this integration SQL Server is enhanced with a new S3 connector, which uses the S3 REST API to connect to any provider of S3-compatible object storage. [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] extends the existing BACKUP/RESTORE TO/FROM URL syntax by adding support for the new S3 connector using the REST API. For information on supported platforms, see [providers of S3-compatible object storage](#providers-of-s3-compatible-object-storage).
+[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduces object storage integration to the data platform, enabling you to integrate SQL Server with S3-compatible object storage in addition to Azure Storage. To provide this integration, SQL Server provides an S3 connector, which uses the S3 REST API to connect to any provider of S3-compatible object storage. [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] extends the existing BACKUP/RESTORE TO/FROM URL syntax by adding support for the S3 connector using the REST API. For information on supported platforms, see [providers of S3-compatible object storage](#providers-of-s3-compatible-object-storage).
 
 This article contains information on using Backup to URL for S3-compatible object storage. To learn more about using Backup to URL for S3-compatible object storage, see [SQL Server backup to URL for S3-compatible object storage](sql-server-backup-to-url-s3-compatible-object-storage.md).
 
 ### Backup and Restore to S3-compatible storage
 
-The `BACKUP TO URL` and `RESTORE FROM URL` syntax is extended to support the S3 connector. For more information on Backup to URL functionality, see: 
+The `BACKUP TO URL` and `RESTORE FROM URL` syntax support the S3 connector. For more information on Backup to URL functionality, see: 
 
 - [SQL Server backup to URL for S3-compatible object storage](sql-server-backup-to-url-s3-compatible-object-storage.md).
 - [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
@@ -36,7 +35,7 @@ The `BACKUP TO URL` and `RESTORE FROM URL` syntax is extended to support the S3 
 
 There are many providers of S3-compatible object storage in the market today. Object storage is either provided as software-defined, as hardware appliances, or as a combination for hybrid cloud scenarios.
 
-The following table provides a nonexhaustive summary of object storage providers offering an S3 endpoint as part of their solution. Not all solutions have been validated against the current version of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
+The following table provides a nonexhaustive summary of object storage providers offering an S3 endpoint as part of their solution.
 
 | **Vendor (alphabetical)**       | **Offering**                             |
 |---------------------------------|------------------------------------------|
@@ -46,8 +45,8 @@ The following table provides a nonexhaustive summary of object storage providers
 | [Dell Technologies][dell_webs]  | ECS Enterprise Object Storage            |
 | [Hitachi Vantara][hitachi_webs] | Hitachi Content Platform for Cloud Scale |
 | [HPE][hpe_webs]                 | HPE Ezmeral Data Fabric                  |
-| [MinIO][minio_webs]             | Multicloud Object Storage               |
-| [NetApp][netapp_webs]           | StorageGRID<br />ONTAP                     |
+| [MinIO][minio_webs]             | Multicloud Object Storage                |
+| [NetApp][netapp_webs]           | StorageGRID<br />ONTAP                   |
 | [Nutanix][nutanix_webs]         | Nutanix Object Storage                   |
 | [Pure Storage][pure_webs]       | Pure FlashBlade                          |
 | [Red Hat][redhat_webs]          | OpenShift Container Storage              |
@@ -56,15 +55,15 @@ The following table provides a nonexhaustive summary of object storage providers
 
 ## Prerequisites for the S3 endpoint
 
-The S3 endpoint must have been configured as follows:
+The S3 endpoint must be configured as follows:
 
-- TLS is configured. It's assumed that all connections will be securely transmitted over HTTPS not HTTP. SQL Server requires the certificate for this scenario.
-- A user (Access Key ID) is configured and the secret (Secret Key ID) for that user is known to you. You need both to authenticate against the S3 endpoint.
-- At least one bucket is configured. Buckets can't be created or configured inside [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
+- TLS must be configured. It's assumed that all connections will be securely transmitted over HTTPS not HTTP. SQL Server requires the certificate for this scenario.
+- A user (Access Key ID) must be configured and the secret (Secret Key ID) for that user is known to you. You need both to authenticate against the S3 endpoint.
+- At least one bucket must be configured. Buckets can't be created or configured inside [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
 ## Performance best practices
 
-It's recommended to check with your S3-compatible object storage provider for guidance on performance best practices optimization, initial setup, and configuration. Due to a wide variety of solutions and setups, the recommended values for backup and restore parameters and throughput can change.
+Check with your S3-compatible object storage provider for guidance on performance best practices optimization, initial setup, and configuration. Due to a wide variety of solutions and setups, the recommended values for backup and restore parameters and throughput can change.
 
 By using S3 parts in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], you can stripe your backup set to support files size up to 12.8 TB.
 
@@ -74,7 +73,7 @@ Due to the current limitation of S3 Standard REST API, the temporary uncommitted
 
 ## Related content
 
-- [SQL Server backup to URL for S3-compatible object storage](sql-server-backup-to-url-s3-compatible-object-storage.md).
+- [SQL Server backup to URL for S3-compatible object storage](sql-server-backup-to-url-s3-compatible-object-storage.md)
 - [SQL Server back up to URL for S3-compatible object storage best practices and troubleshooting](sql-server-backup-to-url-s3-compatible-object-storage-best-practices-and-troubleshooting.md)
 - [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)
 - [SQL Server Backup to URL for Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-to-url.md)

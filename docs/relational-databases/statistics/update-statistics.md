@@ -115,4 +115,4 @@ Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/
 
 ## Next steps
 
-For more information, see [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md).
+For more information, see [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md).

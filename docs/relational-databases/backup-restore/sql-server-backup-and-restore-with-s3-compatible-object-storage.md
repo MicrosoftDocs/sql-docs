@@ -10,6 +10,7 @@ ms.topic: conceptual
 storage: Learn about SQL Server backup to and restore from S3-compatible object storage, including the benefits of using S3-compatible object storage to store SQL Server backups.
 monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 ---
+
 # SQL Server backup and restore with S3-compatible object storage
 
 [!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
@@ -18,13 +19,13 @@ This article introduces the concepts, requirements, and components necessary to 
 
 ## Overview
 
-[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduces object storage integration to the data platform, enabling you to integrate SQL Server with S3-compatible object storage in addition to Azure Storage. To provide this integration SQL Server has been enhanced with a new S3 connector, which uses the S3 REST API to connect to any provider of S3-compatible object storage. [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] extends the existing BACKUP/RESTORE TO/FROM URL syntax by adding support for the new S3 connector using the REST API. For information on supported platforms, see [providers of S3-compatible object storage](#providers-of-s3-compatible-object-storage).
+[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduces object storage integration to the data platform, enabling you to integrate SQL Server with S3-compatible object storage in addition to Azure Storage. To provide this integration SQL Server is enhanced with a new S3 connector, which uses the S3 REST API to connect to any provider of S3-compatible object storage. [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] extends the existing BACKUP/RESTORE TO/FROM URL syntax by adding support for the new S3 connector using the REST API. For information on supported platforms, see [providers of S3-compatible object storage](#providers-of-s3-compatible-object-storage).
 
-This article contains information on using Backup to URL for S3-compatible object storage. To learn more about using Backup to URL for S3-compatible object storage, see [SQL Server backup to URL for S3-compatible object storage](sql-server-backup-to-url-s3-compatible-object-storage.md). 
+This article contains information on using Backup to URL for S3-compatible object storage. To learn more about using Backup to URL for S3-compatible object storage, see [SQL Server backup to URL for S3-compatible object storage](sql-server-backup-to-url-s3-compatible-object-storage.md).
 
 ### Backup and Restore to S3-compatible storage
 
-The `BACKUP TO URL` and `RESTORE FROM URL` syntax has been extended to support the S3 connector. For more information on Backup to URL functionality, see: 
+The `BACKUP TO URL` and `RESTORE FROM URL` syntax is extended to support the S3 connector. For more information on Backup to URL functionality, see: 
 
 - [SQL Server backup to URL for S3-compatible object storage](sql-server-backup-to-url-s3-compatible-object-storage.md).
 - [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
@@ -37,7 +38,7 @@ There are many providers of S3-compatible object storage in the market today. Ob
 
 The following table provides a nonexhaustive summary of object storage providers offering an S3 endpoint as part of their solution. Not all solutions have been validated against the current version of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
-| **Vendor (alphabetical)**       | **Offering**                             | 
+| **Vendor (alphabetical)**       | **Offering**                             |
 |---------------------------------|------------------------------------------|
 | [AWS][aws_webs]                 | AWS Simple Cloud Storage (S3)            |
 | [Ceph][ceph_webs]               | Ceph                                     |
@@ -57,9 +58,9 @@ The following table provides a nonexhaustive summary of object storage providers
 
 The S3 endpoint must have been configured as follows:
 
-- TLS has been configured. It is assumed that all connections will be securely transmitted over HTTPS not HTTP. SQL Server requires the certificate for this scenario.
-- A user (Access Key ID) has been configured and the secret (Secret Key ID) for that user is known to you. You need both to authenticate against the S3 endpoint.
-- At least one bucket has been configured. Buckets can't be created or configured inside [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
+- TLS is configured. It's assumed that all connections will be securely transmitted over HTTPS not HTTP. SQL Server requires the certificate for this scenario.
+- A user (Access Key ID) is configured and the secret (Secret Key ID) for that user is known to you. You need both to authenticate against the S3 endpoint.
+- At least one bucket is configured. Buckets can't be created or configured inside [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
 ## Performance best practices
 
@@ -69,7 +70,7 @@ By using S3 parts in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], you c
 
 ## Known issues and limitations
 
-Due to the current limitation of S3 Standard REST API, the temporary uncommitted data files are not removed in case of failures. They can be created in the S3-compatible object store due to an ongoing multipart upload operation while the BACKUP T-SQL command is running. These uncommitted data blocks persist in the S3-compatible object storage in the case the BACKUP T-SQL command fails or is canceled. If the backup succeeds, the object store automatically removes these temporary files to form the final backup file. Some S3-providers handle temporary file cleanup through their garbage collector system.
+Due to the current limitation of S3 Standard REST API, the temporary uncommitted data files aren't removed if there are failures. They can be created in the S3-compatible object store due to an ongoing multipart upload operation while the BACKUP T-SQL command is running. These uncommitted data blocks persist in the S3-compatible object storage in the case the BACKUP T-SQL command fails or is canceled. If the backup succeeds, the object store automatically removes these temporary files to form the final backup file. Some S3-providers handle temporary file cleanup through their garbage collector system.
 
 ## Related content
 

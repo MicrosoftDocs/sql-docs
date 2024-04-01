@@ -35,6 +35,8 @@ This topic describes how to organize the servers in Registered Servers in [!INCL
 
 4. In the **Group description** list box, optionally type a friendly name that describes the server group, for example, "Finance Servers for Latin America."  
 
+5. In the **Select a location for the new server group** box, click a location for the group, and then click **Save**.  
+
    > [!NOTE]
    > You can also create a new server group while you are registering a server by clicking **New Group**, and then completing the **New Group** dialog box.  
 

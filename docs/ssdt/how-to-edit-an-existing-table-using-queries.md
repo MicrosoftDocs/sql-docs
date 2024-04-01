@@ -13,10 +13,7 @@ ms.topic: conceptual
 
 You can edit the definition of a table or its data by writing a Transact-SQL query. To view or enter data in a table visually, use the Data Editor as described in [Connected Database Development](../ssdt/connected-database-development.md).  
   
-> [!WARNING]  
-> The following procedures use entities created in previous procedures in the [Connected Database Development](../ssdt/connected-database-development.md) section.  
-  
-### To edit the definition of an existing table  
+## To edit the definition of an existing table
   
 1.  Expand the **Tables** node of the **Trade** database in **SQL Server Object Explorer**, and right-click **dbo.Suppliers**.  
   

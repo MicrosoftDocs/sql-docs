@@ -57,5 +57,5 @@ In the **Register Data-tier Application** dialog box, specify the properties of 
 Unregistering allows you to remove the metadata for a registered data-tier application from the instance. Unregistering does not delete the registered database.  
   
 ## See Also  
-[Connected Database Development](../ssdt/connected-database-development.md)  
+[Manage Tables, Relationships, and Fix Errors](../ssdt/manage-tables-relationships-and-fix-errors.md) 
   

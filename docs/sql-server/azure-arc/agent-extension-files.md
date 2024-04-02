@@ -1,5 +1,5 @@
 --- 
-title: Azure extension for SQL Server files and registry keys
+title: Azure extension for SQL Server files and registry reference
 description: Lists files and registry keys deployed and managed by the Azure extension for SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
@@ -8,11 +8,11 @@ ms.date: 04/02/2024
 ms.topic: reference
 ---
 
-# Azure extension files
+# Azure extension files registry reference
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This article lists files and registry keys to monitor for product deployment integrity when you install extensions to enable servers or SQL Server instances for Azure Arc.
+This article lists files and registry keys to monitor for product deployment integrity when you install extensions to enable servers or SQL Server instances for Azure Arc. 
 
 ## Windows server files
 

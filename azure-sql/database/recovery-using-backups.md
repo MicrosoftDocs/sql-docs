@@ -180,7 +180,7 @@ To restore a database by using the REST API:
 You can restore a deleted database to the deletion time, or an earlier point in time, on the same server by using the Azure portal, the Azure CLI, Azure PowerShell, and the REST API.
 
 > [!IMPORTANT]
-> If you delete a server, all of its databases and their PITR backups are also deleted. You can't restore a deleted server, and you can't restore the deleted databases from PITR backups. If you had configured LTR backups forthose database, you can use those backups to restore the databases to a different server. 
+> If you delete a server, all of its databases and their PITR backups are also deleted. You can't restore a deleted server, and you can't restore the deleted databases from PITR backups. If you had configured LTR backups for those databases, you can use those backups to restore the databases to a different server. 
 
 ### [Azure portal](#tab/azure-portal)
 

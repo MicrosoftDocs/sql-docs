@@ -46,7 +46,7 @@ During troubleshooting efforts, it's important to know the SqlPackage version is
 
 #### Azure Pipelines
 
-When the [script](/azure/devops/pipelines/yaml-schema#script) keyword is used in an Azure Pipeline, a step can be added to an Azure Pipeline that outputs the SqlPackage version number.
+When the [script](/azure/devops/pipelines/yaml-schema/steps-script) keyword is used in an Azure Pipeline, a step can be added to an Azure Pipeline that outputs the SqlPackage version number.
 
 ```yaml
 - script: SqlPackage /version

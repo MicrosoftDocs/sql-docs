@@ -354,54 +354,6 @@
         ],
         "ssma/sybase/legal-notice-ssma-for-sybase.md": [
           "sql-server-ver16"
-        ],
-        "database-engine/availability-groups/windows/add-ip-address-dialog-box-sql-server-management-studio.md": [
-          "sql-server-ver16"
-        ],
-        "database-engine/availability-groups/windows/availability-replica-properties-general-page.md": [
-          "sql-server-ver16"
-        ],
-        "database-engine/availability-groups/windows/specify-availability-group-name-page.md": [
-          "sql-server-ver16"
-        ],
-        "database-engine/availability-groups/windows/select-databases-page-new-availability-group-wizard-and-add-database-wizard.md": [
-          "sql-server-ver16"
-        ],
-        "database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md": [
-          "sql-server-ver16"
-        ],
-        "database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md": [
-          "sql-server-ver16"
-        ],
-        "database-engine/availability-groups/windows/enter-passwords-page-add-replica-wizard.md": [
-          "sql-server-ver16"
-        ],
-        "database-engine/availability-groups/windows/validation-page-always-on-availability-group-wizards.md": [
-          "sql-server-ver16"
-        ],
-        "database-engine/availability-groups/windows/summary-page-always-on-availability-group-wizards.md": [
-          "sql-server-ver16"
-        ],
-        "database-engine/availability-groups/windows/progress-page-always-on-availability-group-wizards.md": [
-          "sql-server-ver16"
-        ],
-        "database-engine/availability-groups/windows/results-page-always-on-availability-group-wizards.md": [
-          "sql-server-ver16"
-        ],
-        "database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md": [
-          "sql-server-ver16"
-        ],
-        "database-engine/availability-groups/windows/options-sql-server-always-on-dashboard-page.md": [
-          "sql-server-ver16"
-        ],
-        "database-engine/availability-groups/windows/policy-evaluation-result-always-on.md": [
-          "sql-server-ver16"
-        ],
-        "database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md": [
-          "sql-server-ver16"
-        ],
-        "database-engine/availability-groups/windows/availability-group-properties-new-availability-group-general-page.md": [
-          "sql-server-ver16"
         ]
       }
     },

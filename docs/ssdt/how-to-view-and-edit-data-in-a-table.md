@@ -17,9 +17,9 @@ f1_keywords:
 You can view, edit, and delete data in an existing table by using a visual Data Editor.  
   
 > [!WARNING]  
-> The following procedures uses entities created in previous procedures in the [Connected Database Development](../ssdt/connected-database-development.md) section.  
+> The following procedure uses entities created in previous procedures in the [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) sections.  
   
-### To edit data in a table visually using the Data Editor  
+## To edit data in a table visually using the Data Editor  
   
 1.  Right-click the **Products** table in **SQL Server Object Explorer**, and select **View Data**.  
   

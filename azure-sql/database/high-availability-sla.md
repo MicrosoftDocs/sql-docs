@@ -103,9 +103,9 @@ For more information on high availability in Hyperscale, see [Database High Avai
 
 ## Zone-redundant availability
 
-Zone-redundant availability is based on storing your database to [zone-redundant storage (ZRS)](/azure/storage/common/storage-redundancy#zone-redundant-storage), which copies your data across three Azure availability zones in the primary region. Each availability zone is a separate physical location with independent power, cooling, and networking.
+Zone-redundant availability ensures your data is spread across three Azure availability zones in the primary region. Each availability zone is a separate physical location with independent power, cooling, and networking.
 
-Zone-redundant availability is available to databases in the General Purpose, Premium, Business Critical and Hyperscale service tiers of the vCore purchasing model, and not the Basic and Standard service tiers of the DTU-based purchasing model. Zone-redundant availability ensures Recovery Point Objective (RPO) which indicates the amount of data loss is zero.
+Zone-redundant availability is available to databases in the Premium, Business Critical, General Purpose and Hyperscale service tiers, and not the Basic and Standard service tiers of the DTU-based purchasing model. Each service tier implements zone-redundant availability differently.  See the details for each service tier in the following sections.  All implementations ensure a Recovery Point Objective (RPO) with zero loss of committed data upon failover.
 
 ### <a id="general-purpose-service-tier-zone-redundant-availability"></a> General Purpose service tier
 
@@ -157,7 +157,7 @@ Consider the following when configuring your General Purpose databases with zone
 
 ### <a id="premium-and-business-critical-service-tier-zone-redundant-availability"></a> Premium and Business Critical service tiers
 
-By default, the cluster of nodes for the local storage availability model is created in the same datacenter. With the introduction of [Azure Availability Zones](/azure/availability-zones/az-overview), SQL Database can place different replicas of a Premium or Business Critical database in different availability zones in the same region. To eliminate a single point of failure, the control ring is also duplicated across multiple zones as three gateway rings (GW). The routing to a specific gateway ring is controlled by [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview). Because the zone-redundant configuration in the Premium or Business Critical service tiers doesn't create additional database redundancy, you can enable it at no extra cost. By selecting a zone-redundant configuration, you can make your Premium or Business Critical databases and elastic pools resilient to a much larger set of failures, including catastrophic datacenter outages, without any changes to the application logic. You can also convert any existing Premium or Business Critical databases or elastic pools to zone-redundant configuration. 
+When Zone Redundancy is enabled for Premium or Business Critical service tier, the replicas are placed in different availability zones in the same region. To eliminate a single point of failure, the control ring is also duplicated across multiple zones as three gateway rings (GW). The routing to a specific gateway ring is controlled by [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview). Because the zone-redundant configuration in the Premium or Business Critical service tiers uses its existing replicas to place in different availablity zones, you can enable it at no extra cost. By selecting a zone-redundant configuration, you can make your Premium or Business Critical databases and elastic pools resilient to a much larger set of failures, including catastrophic datacenter outages, without any changes to the application logic. You can also convert any existing Premium or Business Critical databases or elastic pools to zone-redundant configuration. 
 
 The zone-redundant version of the high availability architecture is illustrated by the following diagram:
 

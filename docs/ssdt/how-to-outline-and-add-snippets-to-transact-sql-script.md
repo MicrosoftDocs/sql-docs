@@ -18,7 +18,7 @@ When you need to browse for an appropriate snippet, you can use the snippet pick
 By default, all text is displayed in the Transact-SQL Editor, but you can choose to hide some code from view. The Transact-SQL Editor allows you to select a region of code and make it collapsible, so that it appears under a plus sign (+).You can then expand or hide the region by clicking the plus sign (+) next to the symbol. Outlined code is not deleted; it is just hidden from view.  
   
 > [!WARNING]  
-> The following procedures utilize entities created in previous procedures in the [Connected Database Development](../ssdt/connected-database-development.md) and [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) sections.  
+> The following procedure uses entities created in previous procedures in the [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) sections.
   
 ### To insert snippets  
   

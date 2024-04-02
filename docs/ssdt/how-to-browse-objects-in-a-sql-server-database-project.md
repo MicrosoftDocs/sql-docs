@@ -22,5 +22,5 @@ The SQL Server Object Explorer in Visual Studio now contains a dedicated Project
 3.  In **SQL Server Object Explorer**, expand the **Projects** node to see all the current SQL Server database projects in your solution under the **Projects** node.  
   
 ## See Also  
-[Connected Database Development](../ssdt/connected-database-development.md)  
+[Manage Tables, Relationships, and Fix Errors](../ssdt/manage-tables-relationships-and-fix-errors.md) 
   

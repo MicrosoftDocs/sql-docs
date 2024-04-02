@@ -16,9 +16,9 @@ In this example, you will add a sequence object to a database project targeting 
 Sequences are introduced in Microsoft SQL Server 2012. A sequence is a user-defined schema-bound object that generates a sequence of numeric values according to the specification with which the sequence was created. The sequence of numeric values is generated in an ascending or descending order at a defined interval and may cycle (repeat) as requested.  For more information on sequence objects, see [Sequence Numbers](../relational-databases/sequence-numbers/sequence-numbers.md). For information on what's new in Microsoft SQL Server 2012, see [What's New in SQL Server 2012](/previous-versions/sql/sql-server-2012/bb500435(v=sql.110)).  
   
 > [!WARNING]  
-> The following procedures utilize entities created in previous procedures in the [Connected Database Development](../ssdt/connected-database-development.md) and [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) sections.  
+> The following procedure uses entities created in previous procedures in the [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) sections.  
   
-### To add a new Sequence object to your project  
+## To add a new Sequence object to your project  
   
 1.  Right-click the **TradeDev** database project in **Solution Explorer**, select **Add**, then **New Item**.  
   

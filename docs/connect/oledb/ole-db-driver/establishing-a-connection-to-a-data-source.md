@@ -36,7 +36,7 @@ CoCreateInstance(MSOLEDBSQL_CLSID,
                  (void **) &pIDBInitialize)
 ```
 
- This call to `CoCreateInstance` creates a single object of the class associated with CLSID_MSOLEDBSQL (CSLID associated with the data and code that will be used to create the object). IID_IDBInitialize is a reference to the identifier of the interface (`IDBInitialize`) to be used to communicate with the object.
+ This call to `CoCreateInstance` creates a single object of the class associated with MSOLEDBSQL_CLSID (CSLID associated with the data and code that will be used to create the object). IID_IDBInitialize is a reference to the identifier of the interface (`IDBInitialize`) to be used to communicate with the object.
 
  The following sample shows how to initialize and establish a connection to the data source.
 

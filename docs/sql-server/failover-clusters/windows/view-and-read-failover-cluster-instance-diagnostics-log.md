@@ -136,7 +136,7 @@ SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;
 
 ##### E. Check whether Failover Cluster Instance Diagnostics Log is enabled and current configuration.
 
- The following example set the maximum size of each diagnostic log to 10 megabytes.
+ The following example uses the dmv sys.dm_os_server_diagnostics_log_configurations to check current configuration
 
 ```sql
 SELECT is_enabled, [path], max_size, max_files

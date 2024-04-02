@@ -217,6 +217,7 @@ Consider the following limitations when working with backups and Azure SQL Manag
 - Recovery time objective (RTO) is approximately 12 hours, but might vary based on database size and activity could go beyond this timeframe.
 - Secondary (paired) region can't be changed.
 - Newly created/restored databases might not immediately appear as restorable in other regions due to a lag in populating new data. It can take up to 24 hours for backups of new database to become visible.
+- The maximum number of databases you can restore in parallel is 200 per single subscription. In some cases, it's possible to increase this limit by opening a support ticket. 
 
 ## Related content
 

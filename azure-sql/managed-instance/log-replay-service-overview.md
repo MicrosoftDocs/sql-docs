@@ -159,6 +159,7 @@ Consider the following limitations of LRS:
 - LRS can support up to 100 simultaneous restore processes per single managed instance.
 - A single LRS job can run for a maximum of 30 days, after which it will be automatically canceled.
 - While it's possible to use an Azure Storage account behind a firewall, extra configuration is necessary, and the storage account and managed instance must either be in the same region, or two paired regions. Review [Configure firewall](log-replay-service-migrate.md#configure-azure-storage-behind-a-firewall) to learn more. 
+- The maximum number of databases you can restore in parallel is 200 per single subscription. In some cases, it's possible to increase this limit by opening a support ticket. 
 
    
 

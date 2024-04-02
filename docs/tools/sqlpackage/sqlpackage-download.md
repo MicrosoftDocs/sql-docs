@@ -13,13 +13,13 @@ ms.custom: tools|sos, intro-installation, linux-related-content
 
 # Download and install SqlPackage
 
-SqlPackage runs on Windows, macOS, and Linux, and is available to install through `dotnet tool` or as a standalone zip download.
+SqlPackage runs on Windows, macOS, and Linux, and is available to install through `dotnet tool` or as a standalone zip download. For details about the latest release, see the [release notes](release-notes-sqlpackage.md).
 
 - **Version number:** 162.2.111
 - **Build number:** 162.2.111.2
 - **Release date:** February 27, 2024
 
-For details about the latest release, see the [release notes](release-notes-sqlpackage.md).
+SqlPackage is developed and released for both .NET and .NET Framework. The .NET SqlPackage releases benefit from the continual advances to the performance and scalability of .NET as part of the [focus on for modern applications](/dotnet/core/introduction#net-ecosystem), contrasting to the maintenance support of .NET Framework for Windows.  Installing the .NET SqlPackage version is recommended via the [convenient `dotnet tool` method](#installation-cross-platform), which is cross-platform and easy to update, or via the [portable self-contained .zip download](#installation-file-download-alternative). The .NET Framework version is only available as a [.msi Windows installer](#windows-net-framework).
 
 > [!NOTE]
 > SqlPackage version numbering has been adjusted to better reflect the DacFx build number it is associated with. Previously, SqlPackage had a distinct version number (19) and build number (160.x). Beginning with version 161, the version number of SqlPackage will match the DacFx version number it is associated with (eg 162.0.52).
@@ -73,10 +73,10 @@ SqlPackage is also prepared as a self-contained download for Windows, macOS, and
 
 |Platform|Download|
 |:---|:---|
-|Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2261576)|
+|Windows .NET 8 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2261576)|
 |Windows|[.msi file](https://go.microsoft.com/fwlink/?linkid=2262108)|
-|macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2261849)|
-|Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2261577)|
+|macOS .NET 8 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2261849)|
+|Linux .NET 8 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2261577)|
 
 
 ### Linux
@@ -143,7 +143,7 @@ SqlPackage is also prepared as a self-contained download for Windows, macOS, and
    sudo spctl --master-enable
    ```
 
-### Windows (.NET 6)
+### Windows (.NET 8)
 
 1. Download [SqlPackage for Windows](https://aka.ms/sqlpackage-windows)
 2. Extract the file by right-clicking on the file in Windows Explorer, and selecting 'Extract All...', and select the target directory

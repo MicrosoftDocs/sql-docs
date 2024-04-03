@@ -20,7 +20,7 @@ helpviewer_keywords:
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-To access the OLE DB Driver for SQL Server, the consumer must first create an instance of a data source object by calling the `CoCreateInstance` method. A unique class identifier (CLSID) identifies each OLE DB provider. For the OLE DB Driver for SQL Server, you can use the MSOLEDBSQL_CLSID symbol defined in the referenced `msoledbsql.h` file.
+To access the OLE DB Driver for SQL Server, the consumer must first create an instance of a data source object by calling the `CoCreateInstance` method. A unique class identifier (CLSID) identifies each OLE DB provider. For the OLE DB Driver for SQL Server, you can use the MSOLEDBSQL_CLSID symbol defined in the `msoledbsql.h` file.
 
 The data source object exposes the `IDBProperties` interface, which the consumer uses to provide basic authentication information such as server name, database name, user ID, and password. The `IDBProperties::SetProperties` method is called to set these properties.
 

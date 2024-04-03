@@ -22,16 +22,19 @@ At this time, this feature is available for preview.
 
 ## Requirements
 
-- The Arc Server – Machine and SQL Server instances must be in the same resource group.
+To complete this task, the *Arc Server – Machine* and SQL Server instances must be in the same resource group.
+
+In addition:
+
 - If Purview is enabled, you must disable Purview in the Purview portal before the move. You can enable Purview after the move.
 - If best practices assessment is enabled, you must disable it before the move.
 
-After the move you can reenable any resources you disable.
+After the move, you can reenable any resources you disable.
 
 ## Move the resources to a new resource group or subscription
 
-1. In Azure portal, locate the resource group which contains your Arc Server machine and select that resource.
-2. Select **Move**>**Move to another resource group** or **Move to another subscription**. 
+1. In Azure portal, locate the resource group with your Arc Server machine and select that resource.
+2. Select **Move**>**Move to another resource group** or **Move to another subscription**.
 3. In **Move resources**, provide the required information. Select **Next**.
 4. Review the information and select **Move**.
 
@@ -41,11 +44,11 @@ Wait for the resource move to complete. It takes resources up to 1 hour to move 
 
 ## Verify the move is complete
 
-Notice that the Arc Server, Arc SQL Server instances and associated databases have moved to the new resource group or subscription. 
+Verify that the Arc Server, Arc SQL Server instances, and associated databases are in the new resource group or subscription.
 
 ## Enable features
 
-Before the move, you may have disabled some features (like Purview or best practices assessment).
+Enable any features you disabled before the move.
 
 The following table identifies features that remain enabled after the resource move, and features that you need to reenable.
 
@@ -80,9 +83,9 @@ Alternatively, use Azure policy to [enable best practices assessment  at scale](
 
 These steps explain how to reconfigure best practices analyzer after a move:
 
-- To a new different subscription
-- With a different resource group
-- With the same log analytics workspace – in the old resource group
+- To a different subscription
+- In a different resource group
+- With the same log analytics workspace
 
 1. Before the move, disable best practices assessment
 2. Move the resource

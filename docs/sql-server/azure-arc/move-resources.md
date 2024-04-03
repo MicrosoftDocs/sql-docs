@@ -33,10 +33,13 @@ After the move, you can reenable any resources you disable.
 
 ## Move the resources to a new resource group or subscription
 
-1. In Azure portal, locate the resource group with your Arc Server machine and select that resource.
-2. Select **Move**>**Move to another resource group** or **Move to another subscription**.
-3. In **Move resources**, provide the required information. Select **Next**.
-4. Review the information and select **Move**.
+1. In Azure portal, locate the resource group with your Arc Server machine resource and select that resource.
+
+   If the SQL Server instance is a failover cluster instance (FCI), select all of the Arc Server machine resources. 
+
+1. Select **Move**>**Move to another resource group** or **Move to another subscription**.
+1. In **Move resources**, provide the required information. Select **Next**.
+1. Review the information and select **Move**.
 
 Azure automatically moves your items.
 

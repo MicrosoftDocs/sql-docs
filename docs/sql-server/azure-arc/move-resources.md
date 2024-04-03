@@ -75,9 +75,9 @@ The way to enable best practices assessment depends on whether the resource move
 
 1. Before the move, disable best practices assessment
 2. Move the resource
-3. [Enable best practices assessment]( assess.md#enable-best-practices-assessment)
+3. [Enable best practices assessment](assess.md#enable-best-practices-assessment)
 
-Alternatively, use Azure policy to [enable best practices assessment  at scale]( /assess.md#enable-best-practices-assessment-at-scale-using-azure-policy).
+Alternatively, use Azure policy to [enable best practices assessment  at scale](assess.md#enable-best-practices-assessment-at-scale-using-azure-policy).
 
 ### Move to a different subscription
 

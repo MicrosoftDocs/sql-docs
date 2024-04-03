@@ -22,14 +22,11 @@ helpviewer_keywords:
 
 # Degree of parallelism (DOP) feedback
 
-**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] (preview)
+**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
 
 [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduced a new feature called degree of parallelism (DOP) feedback to improve query performance by identifying parallelism inefficiencies for repeating queries, based on elapsed time and waits. DOP feedback is part of the [intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) family of features, and addresses suboptimal usage of parallelism for repeating queries. This scenario helps with optimizing resource usage and improving scalability of workloads, when excessive parallelism can cause performance issues. 
 
 Instead of incurring in the pains of an all-encompassing default or manual adjustments to each query, DOP feedback self-adjusts DOP to avoid these issues.
-
-> [!NOTE]
-> This feature is currently available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] as a limited preview. For more information and how to apply for the preview, see [Announcing Degree of Parallelism Feedback Limited Preview](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-degree-of-parallelism-feedback-limited-preview/ba-p/3806924).
 
 For other query feedback features, see [Memory grant feedback](intelligent-query-processing-memory-grant-feedback.md) and [Cardinality estimation (CE) feedback](intelligent-query-processing-cardinality-estimation-feedback.md).
 

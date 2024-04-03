@@ -167,7 +167,7 @@ Convert-SQLVMPatchingSchedule -ResourceGroupName $rgname -VmName $vmname
 
 The output of the script includes details about the old schedule in Automated Patching and details about the new schedule in Azure Update Manager. For example, if the Automated Patching schedule was every Friday, with a start hour of 2am, and a duration of 150 minutes, the output from the script is:
 
-:::image type="content" source="./media/automated-patching/migration-output-powershell.png" alt-text="Screenshot of the output of the PowerShell script that migrates an Automated Patching schedule to Azure Update Manager.":::
+:::image type="content" source="media/azure-update-manager-sql-vm/migration-output-powershell.png" alt-text="Screenshot of the output of the PowerShell script that migrates an Automated Patching schedule to Azure Update Manager.":::
 
 ## Considerations
 

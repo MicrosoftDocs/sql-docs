@@ -19,10 +19,10 @@ SqlPackage runs on Windows, macOS, and Linux, and is available to install throug
 - **Build number:** 162.2.111.2
 - **Release date:** February 27, 2024
 
-SqlPackage is developed and released for both .NET and .NET Framework. The .NET SqlPackage releases benefit from the continual advances to the performance and scalability of .NET as part of the [focus on for modern applications](/dotnet/core/introduction#net-ecosystem), contrasting to the maintenance support of .NET Framework for Windows.  Installing the .NET SqlPackage version is recommended via the [convenient `dotnet tool` method](#installation-cross-platform), which is cross-platform and easy to update, or via the [portable self-contained .zip download](#installation-file-download-alternative). The .NET Framework version is only available as a [.msi Windows installer](#windows-net-framework).
+SqlPackage is developed and released for both .NET 8 and .NET Framework. Installing the .NET 8 SqlPackage version is recommended via the [convenient `dotnet tool` method](#installation-cross-platform), which is cross-platform and easy to update, or via the [portable self-contained .zip download](#installation-file-download-alternative). The .NET 8 SqlPackage releases benefit from the continual advances to the performance and scalability of .NET as part of the [focus on for modern applications](/dotnet/core/introduction#net-ecosystem), which contrasts to the maintenance support of .NET Framework for Windows. The .NET Framework version is only available as a [.msi Windows installer](#windows-net-framework).
 
 > [!NOTE]
-> SqlPackage version numbering has been adjusted to better reflect the DacFx build number it is associated with. Previously, SqlPackage had a distinct version number (19) and build number (160.x). Beginning with version 161, the version number of SqlPackage will match the DacFx version number it is associated with (eg 162.0.52).
+> Previously, SqlPackage had a distinct version number (19) and build number (160.x). Beginning with version 161, the version number of SqlPackage matches the DacFx version number it is associated with (eg 162.0.52).
 
 ## Installation, cross-platform
 
@@ -69,7 +69,7 @@ A list of preview releases is available on the [dotnet tool feed for SqlPackage]
 
 ## Installation, file download (alternative)
 
-SqlPackage is also prepared as a self-contained download for Windows, macOS, and Linux. No .NET install is required, however, the dependencies included in this .zip download are updated more frequently in the dotnet tool option for SqlPackage. The following links are for the latest version of SqlPackage:
+SqlPackage is also prepared as a self-contained download for Windows, macOS, and Linux. No .NET install is required, however, the dependencies included in this .zip download are updated more frequently in the [dotnet tool option for SqlPackage](#installation-cross-platform). The following links are for the latest version of SqlPackage:
 
 |Platform|Download|
 |:---|:---|
@@ -191,33 +191,25 @@ dotnet add package Microsoft.SqlServer.DacFx
 
 ## Supported Operating Systems
 
-SqlPackage runs on Windows, macOS, and Linux and is built using .NET 6. The [.NET 6 OS requirements](https://github.com/dotnet/core/blob/main/release-notes/6.0/supported-os.md) are minimum requirements for SqlPackage, which has extra requirements due to its dependencies.
+SqlPackage runs on Windows, macOS, and Linux and is built using .NET 8. The [.NET 8 OS requirements](https://github.com/dotnet/core/blob/main/release-notes/8.0/supported-os.md) are minimum requirements for SqlPackage, which has extra requirements due to its dependencies.
 
 ### Windows (x64)
 
 - Windows 11
 - Windows 10 (1607+)
-- Windows 8.1
-- Windows 7 SP1
-- Windows Server Core
-- Windows Server 2012 R2
-- Windows Server 2016
-- Windows Server 2019
-- Windows Server 2022
+- Windows Server Core 2012 R2+
+- Windows Server 2012 R2+
 
 ### macOS
 
-- macOS 14 "Sonoma"
-- macOS 13 "Ventura"
-- macOS 12 "Monterey"
-- macOS 11 "Big Sur"
+- macOS 12 "Monterey"+
 
 ### Linux (x64)
 
-- Debian 10, 11
-- Red Hat Enterprise Linux 7+
+- Debian 11+
+- Red Hat Enterprise Linux 8+
 - SUSE Linux Enterprise Server v12 SP2+
-- Ubuntu 16.04, 18.04, 20.04, 22.04
+- Ubuntu 20.04+
 
 ## Available Languages
 

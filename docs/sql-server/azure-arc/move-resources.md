@@ -84,11 +84,11 @@ Alternatively, use Azure policy to [enable best practices assessment  at scale](
 These steps explain how to reconfigure best practices analyzer after a move:
 
 - To a different subscription
-- In a different resource group
+- To a different resource group
 - With the same log analytics workspace
 
 1. Before the move, disable best practices assessment
 2. Move the resource
-3. Update the log analytics workspace with one in new subscription and enable BPA
+3. Update the log analytics workspace with one from the new subscription and enable BPA
 
 Moving to a different subscription requires manual reconfiguration with the above steps for all SQL Server instances impacted for SQL best practices analyzer.

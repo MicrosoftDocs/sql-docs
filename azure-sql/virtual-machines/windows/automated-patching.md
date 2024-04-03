@@ -118,7 +118,7 @@ To understand which updates will be applied through Automated Patching, review t
 
 [Azure Update Manager](/azure/update-center/overview) is a unified service to help you manage and govern updates for all your virtual machines and SQL Server instances at scale. Unlike with Automated Patching, [Azure Update Manager](../azure-update-manager-sql-vm.md) installs Cumulative Updates for SQL Server. It is recommended to only use one automated patching service to manage updates for your SQL Server VM. 
 
-If you are currently using Automated Patching, you can [migrate to Azure Update Manager](azure-update-manager-sql-vm.md#migrate-from-automated-patching-to-azure-update-manager)
+If you are currently using Automated Patching, you can [migrate to Azure Update Manager](../azure-update-manager-sql-vm.md#migrate-from-automated-patching-to-azure-update-manager)
 
 
 ## Next steps

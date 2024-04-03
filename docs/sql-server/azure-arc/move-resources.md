@@ -35,7 +35,7 @@ After the move, you can reenable any resources you disable.
 
 1. In Azure portal, locate the resource group with your Arc Server machine resource and select that resource.
 
-   If the SQL Server instance is a failover cluster instance (FCI), select all of the Arc Server machine resources. 
+   If the SQL Server instance is a failover cluster instance (FCI), select all of the Arc Server machine resources. Include both the active node and all inactive nodes. 
 
 1. Select **Move**>**Move to another resource group** or **Move to another subscription**.
 1. In **Move resources**, provide the required information. Select **Next**.

@@ -36,26 +36,22 @@ You need the following components to complete this walkthrough:
 - An instance of SQL Server to which you can deploy a database project.  
   
 > [!NOTE]  
-> This walkthrough is intended for users who are already familiar with the SQL Server features of SQL Server Data Tools. You are also expected to be familiar with Visual Studio concepts, such as how to create a class library and how to use the code editor to add code to a class.  
+> This walkthrough is intended for users who are already familiar with the SQL Server features of SQL Server Data Tools. You are also expected to be familiar with Visual Studio concepts, such as how to create a class library, add NuGet packages and how to use the code editor to add code to a class.  
   
 ## Creating a Custom Code Analysis Rule for SQL Server  
 
 First create a class library. To create a class library project:  
   
-1. Create a Visual C\# or Visual Basic class library project named SampleRules.  
+1. Create a Visual C\# (.NET Framework) or Visual Basic (.NET Framework) class library project named SampleRules.
   
 2. Rename the file Class1.cs to AvoidWaitForDelayRule.cs.  
   
-3. In Solution Explorer, right-click the project node and then click **Add Reference**.  
+3. In Solution Explorer, right-click the project node and then click **Add** then **Reference**.
   
-4. Select System.ComponentModel.Composition on the Frameworks tab.  
+4. Select System.ComponentModel.Composition on the Assemblies\Frameworks tab.
   
-5. Click **Browse** and navigate to the `C:\Program Files (x86)\Microsoft SQL Server\120\SDK\Assemblies` directory, select Microsoft.SqlServer.TransactSql.ScriptDom.dll, and the click OK.  
-  
-6. Next install the required DACFx references. Click **Browse** and navigate to the `\<Visual Studio Install Dir\>\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\120` directory. Choose the Microsoft.SqlServer.Dac.dll, Microsoft.SqlServer.Dac.Extensions.dll, and Microsoft.Data.Tools.Schema.Sql.dll entries and click **Add**, then click **OK**.  
-  
-    DACFx binaries are now installed inside your Visual Studio install directory. For Visual Studio 2012 the \<Visual Studio Install Dir\> will usually be `C:\Program Files (x86)\Microsoft Visual Studio 11.0`. For Visual Studio 2013 this will usually be `C:\Program Files (x86)\Microsoft Visual Studio 12.0`.  
-  
+5. In Solution Explorer, right-click the project node and then click **Manage NuGet Packages**. Locate and install the `Microsoft.SqlServer.DacFx` NuGet package - the selected version must be `162.x.x`(for example `162.2.111`) with Visual Studio 2022.
+
 Next you will add supporting classes that will be used by the rule.  
   
 ## Creating the Custom Code Analysis Rule Supporting Classes
@@ -68,7 +64,7 @@ The first class that you must define is the WaitForDelayVisitor class, derived f
   
 1. In **Solution Explorer**, select the SampleRules project.  
   
-2. On the **Project** menu, select **Add Class**. The **Add New Item** dialog box appears.  
+2. On the **Project** menu, select **Add Class**. The **Add New Item** dialog box appears.
   
 3. In the **Name** text box, type WaitForDelayVisitor.cs and then click the **Add** button. The WaitForDelayVisitor.cs file is added to the project in **Solution Explorer**.  
   
@@ -122,7 +118,7 @@ The second class is LocalizedExportCodeAnalysisRuleAttribute.cs. This is an exte
   
 1. In **Solution Explorer**, select the SampleRules project.  
   
-2. On the **Project** menu, select **Add Class**. The **Add New Item** dialog box appears.  
+2. On the **Project** menu, select **Add Class**. The **Add New Item** dialog box appears.
   
 3. In the **Name** text box, type LocalizedExportCodeAnalysisRuleAttribute.cs and then click the **Add** button. The file is added to the project in **Solution Explorer**.  
   
@@ -234,7 +230,7 @@ Next, you add a resource file that will define the rule name, rule description, 
   
 1. In **Solution Explorer**, select the SampleRules project.  
   
-2. On the **Project** menu, select **Add New Item**. The **Add New Item** dialog box appears.  
+2. On the **Project** menu, select **Add** then **New Item**. The **Add New Item** dialog box appears.
   
 3. In the list of **Installed Templates**, click **General**.  
   
@@ -259,7 +255,7 @@ Next, define a class that references the resources in the resource file that are
   
 1. In **Solution Explorer**, select the SampleRules project.  
   
-2. On the **Project** menu, select **Add Class**. The **Add New Item** dialog box appears.  
+2. On the **Project** menu, select **Add** then **Class**. The **Add New Item** dialog box appears.
   
 3. In the **Name** text box, type SampleRuleConstants.cs and click the **Add** button. The SampleRuleConstants.cs file is added to the project in **Solution Explorer**.  
   
@@ -307,7 +303,7 @@ Now that you have added the helper classes that the custom Code Analysis rule wi
   
 1. In **Solution Explorer**, select the SampleRules project.  
   
-2. On the **Project** menu, select **Add Class**. The **Add New Item** dialog box appears.  
+2. On the **Project** menu, select **Add** then **Class**. The **Add New Item** dialog box appears.
   
 3. In the **Name** text box, type AvoidWaitForDelayRule.cs and then click **Add**. The AvoidWaitForDelayRule.cs file is added to the project in **Solution Explorer**.  
   
@@ -510,12 +506,14 @@ To install a rule, you must copy the assembly and associated .pdb file to the Ex
   
 ### To Install the SampleRules Assembly
 
-Next, you will copy the assembly information to the Extensions directory. When Visual Studio starts, it will identify any extensions in `<Visual Studio Install Dir>\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\120\Extensions` directory and subdirectories, and make them available for use.  
+Next, you will copy the assembly information to the Extensions directory. When Visual Studio starts, it will identify any extensions in `<Visual Studio Install Dir>\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\Extensions` directory and subdirectories, and make them available for use.
   
-For Visual Studio 2012 the \<Visual Studio Install Dir\> will usually be `C:\Program Files (x86)\Microsoft Visual Studio 11.0`. For Visual Studio 2013 this will usually be `C:\Program Files (x86)\Microsoft Visual Studio 12.0`.  
+For Visual Studio 2022 the \<Visual Studio Install Dir\> will usually be `C:\Program Files\Microsoft Visual Studio\2022\Enterprise`. Replace `Enterprise` with `Professional` or `Community` depedning in your installed Visual Studio edition.
   
-Copy the SampleRules.dll assembly file from the output directory to the `<Visual Studio Install Dir>\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\120\Extensions` directory. By default, the path of your compiled .dll file is YourSolutionPath\YourProjectPath\bin\Debug or YourSolutionPath\YourProjectPath\bin\Release.  
-  
+Copy the SampleRules.dll assembly file from the output directory to the `<Visual Studio Install Dir>\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\Extensions` directory. By default, the path of your compiled .dll file is YourSolutionPath\YourProjectPath\bin\Debug or YourSolutionPath\YourProjectPath\bin\Release.
+
+> You may have to create the `Extensions` directory.
+
 Your rule should now be installed and will appear once you restart Visual Studio. Next, you will start a new session of Visual Studio and create a database project.  
   
 ### Starting a New Visual Studio Session and Creating a Database Project  
@@ -524,7 +522,7 @@ Your rule should now be installed and will appear once you restart Visual Studio
   
 2. Click **File** > **New** > **Project**.  
   
-3. In the **New Project** dialog box, in the list of **Installed Templates**, expand the **SQL Server** node, and then click **SQL Server Database Project**.  
+3. In the **New Project** dialog box, locate and the select **SQL Server Database Project**.
   
 4. In the **Name** text box, type SampleRulesDB and click **OK**.  
   
@@ -536,7 +534,7 @@ Finally, you will see the new rule displaying in the SQL Server project. To view
   
 3. Click **Code Analysis**. You should see a new category named RuleSamples.CategorySamples.  
   
-4. Expand RuleSamples .CategorySamples. You should see SR1004: Avoid WAITFOR DELAY statement in stored procedures, triggers, and functions.  
+4. Expand RuleSamples.CategorySamples. You should see SR1004: Avoid WAITFOR DELAY statement in stored procedures, triggers, and functions.
   
 ## See Also
 

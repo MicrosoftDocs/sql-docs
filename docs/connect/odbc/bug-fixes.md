@@ -4,7 +4,7 @@ description: This page contains a listing of bugs fixed in each release, startin
 author: v-chojas
 ms.author: v-chojas
 ms.reviewer: v-davidengel
-ms.date: 04/08/2024
+ms.date: 04/09/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -16,10 +16,16 @@ helpviewer_keywords:
 This page contains a listing of bugs fixed in each release, starting with [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 18.3.3.1 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
-- TODO
-
+- Fix crashes when receiving invalid data from server
+- Fix infinite loop when receiving invalid data from server
+- Fix App Service Containers MSI Authentication
+    
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17.10.6.1 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
-- TODO
+- Fix crashes when receiving invalid data from server
+- Fix infinite loop when receiving invalid data from server
+- Fix a crash when attempting to connect under low-memory conditions
+- Fix memory leak upon reconnect
+- Fix App Service Containers MSI Authentication
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 18.2.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

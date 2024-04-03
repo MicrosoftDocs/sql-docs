@@ -8,7 +8,7 @@ ms.date: 04/02/2024
 ms.topic: reference
 ---
 
-# Azure extension files registry reference
+# Azure extension for SQL Server files & registry reference
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

@@ -36,8 +36,10 @@ In order for monitoring data to be collected on a [!INCLUDE [ssazurearc](../../i
 
 * SQL Server version must be 2016 or later.
 
-* To view the performance dashboard in the Azure Portal, you must have Contributor access or higher to the SQL Server - Azure Arc resource. 
+* To view the performance dashboard in the Azure Portal, you must be assigned a role with the action `Microsoft.AzureArcData/sqlServerInstances/getTelemetry/` assigned. For convenience, you can use the built-in role "Azure Hybrid Database Administrator - Read Only Service Role", which includes this action.
 
+  - [Learn more about Azure built-in roles](/azure/role-based-access-control/built-in-roles)
+    
 ## Collected data
 
 The following lists reflect the monitoring data that is collected from DMV datasets on [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] when the monitoring feature is enabled. No personally identifiable information (PII), end-user identifiable information (EUII), or customer content is collected.

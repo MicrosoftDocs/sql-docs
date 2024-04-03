@@ -1,8 +1,8 @@
 ---
 title: Move SQL Server enabled for Azure Arc resources to a new resource group or subscription - preview
 description: Explains how to manage resources to a new resource group or subscription for SQL Server enabled by Azure Arc
-author: nikitatakru 
-ms.author: ntakru
+author: ntakru 
+ms.author: nikitatakru
 ms.reviewer: mikeray
 ms.date: 04/04/2024
 ms.topic: conceptual

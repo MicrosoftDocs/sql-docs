@@ -36,7 +36,7 @@ In order for monitoring data to be collected on a [!INCLUDE [ssazurearc](../../i
 
 * SQL Server version must be 2016 or later.
 
-* To view the performance dashboard in the Azure Portal, you must be assigned a role with the action `Microsoft.AzureArcData/sqlServerInstances/getTelemetry/` assigned. For convenience, you can use the built-in role "Azure Hybrid Database Administrator - Read Only Service Role", which includes this action.
+* To view the performance dashboard in the Azure portal, you must be assigned an Azure role with the action `Microsoft.AzureArcData/sqlServerInstances/getTelemetry/` assigned. For convenience, you can use the built-in role "Azure Hybrid Database Administrator - Read Only Service Role", which includes this action. 
 
   - [Learn more about Azure built-in roles](/azure/role-based-access-control/built-in-roles)
     

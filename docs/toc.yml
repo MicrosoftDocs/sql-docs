@@ -8619,7 +8619,7 @@ items:
         - name: Overview of Extensibility for Database Code Analysis Rules
           href: ssdt/overview-of-extensibility-for-database-code-analysis-rules.md
           items:
-          - name: Walkthrough Authoring a Custom Static Code Analysis Rule Assembly for SQL Server
+          - name: Walkthrough authoring a custom static Code Analysis rule assembly for SQL Server
             href: ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md
         - name: "How to: Install & Manage Feature Extensions"
           href: ssdt/how-to-install-and-manage-feature-extensions.md

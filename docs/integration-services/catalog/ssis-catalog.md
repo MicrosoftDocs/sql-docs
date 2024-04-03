@@ -3,7 +3,7 @@ title: "SSIS Catalog"
 description: "SSIS Catalog"
 author: chugugrace
 ms.author: chugu
-ms.date: 09/17/2020
+ms.date: 03/29/2024
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual
@@ -11,6 +11,20 @@ f1_keywords:
   - "sql13.ssis.ssms.iscreatecatalog.f1"
   - "sql13.ssis.ssms.iscatalogprop.general.f1"
   - "sql13.ssis.dbupgradewizard.f1"
+  - "sql13.ssis.ssms.browseprincipals.f1"
+  - "sql13.dts.designer.configure.f1"
+  - "sql13.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1"
+  - "sql13.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1"
+  - "sql13.ssis.ssms.isfolderprop.permissions.f1"
+  - "sql13.ssis.ssms.iscreatefolder.f1"
+  - "sql13.ssis.ssms.isfolderprop.general.f1"
+  - "sql13.ssis.ssms.ispackageprop.general.f1"
+  - "sql13.ssis.ssms.packageproperties.f1"
+  - "sql13.ssis.ssms.isprojectprop.general.f1"
+  - "sql13.ssis.ssms.isprojectprop.permissions.f1"
+  - "sql13.ssis.ssms.isprojectprop.versions.f1"
+  - "sql13.ssis.ssms.isprojectvalidate.f1"
+  - "sql13.ssis.ssms.ispackagevalidate.f1"
 ---
 
 # SSIS Catalog

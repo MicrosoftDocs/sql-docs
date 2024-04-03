@@ -4,7 +4,7 @@ description: Learn how to use the Azure Update Manager to automatically update a
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma, randolphwest
-ms.date: 03/28/2024
+ms.date: 04/09/2024
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
@@ -137,9 +137,37 @@ To configure a schedule for multiple SQL Server VMs, follow these steps:
    :::image type="content" source="media/azure-update-manager-sql-vm/update-classification.png" alt-text="Screenshot of the Create a maintenance configuration page choosing updates as classification in the Azure portal." lightbox="media/azure-update-manager-sql-vm/update-classification.png":::
 
 1. Select **Review + create** to create your schedule.
-1. After the schedule is created, go back to the **Azure Update Manager** and select the VMs you want using the new schedule.
+1. After the schedule is created, go back to the **Azure Update Manager** and select the VMs you want to use the new schedule.
 1. Select **Update settings** on the **Update Settings** dialog box to go to the **Change update settings page**.
 1. Update the **Patch orchestration** option to **Customer Managed Schedules** to ensure your VMs are patched based on your chosen schedule instead of autopatched based on default Microsoft settings.
+
+## Migrate from Automated Patching to Azure Update Manager
+
+If you're currently using [Automated Patching](windows/automated-patching.md), and want to migrate to Azure Update Manager, you can do so by using the [MigrateSQLVMPatchingSchedule](https://www.powershellgallery.com/packages/MigrateSQLVMPatchingSchedule-Module) PowerShell module to perform following steps:
+
+- Disable Automated Patching
+- Enable Microsoft Update on the virtual machine
+- Create a new maintenance configuration in Azure Update Manager with a similar schedule to Automated Patching
+- Assign the virtual machine to the maintenance configuration 
+
+To migrate to Azure Update Manager by using PowerShell, use the following sample script: 
+
+```azurepowershell
+$rgname = 'YourResourceGroup'
+$vmname = 'YourVM'
+
+# Install latest migration module
+Install-Module -Name MigrateSQLVMPatchingSchedule-Module -Force -AllowClobber 
+
+# Import the module
+Import-Module MigrateSQLVMPatchingSchedule-Module
+
+Convert-SQLVMPatchingSchedule -ResourceGroupName $rgname -VmName $vmname
+```
+
+The output of the script includes details about the old schedule in Automated Patching and details about the new schedule in Azure Update Manager. For example, if the Automated Patching schedule was every Friday, with a start hour of 2am, and a duration of 150 minutes, the output from the script is:
+
+:::image type="content" source="./media/automated-patching/migration-output-powershell.png" alt-text="Screenshot of the output of the PowerShell script that migrates an Automated Patching schedule to Azure Update Manager.":::
 
 ## Considerations
 

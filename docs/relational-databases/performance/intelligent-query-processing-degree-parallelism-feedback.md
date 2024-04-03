@@ -22,7 +22,7 @@ helpviewer_keywords:
 
 # Degree of parallelism (DOP) feedback
 
-**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later, [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] (Preview)
+**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] (Preview), [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] (Preview)
 
 [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduced a new feature called degree of parallelism (DOP) feedback to improve query performance by identifying parallelism inefficiencies for repeating queries, based on elapsed time and waits. DOP feedback is part of the [intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) family of features, and addresses suboptimal usage of parallelism for repeating queries. This scenario helps with optimizing resource usage and improving scalability of workloads, when excessive parallelism can cause performance issues. 
 

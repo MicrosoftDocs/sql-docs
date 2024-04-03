@@ -121,7 +121,7 @@ You can use the following built-in functions to interact with the pseudo-columns
 | [NODE_ID_FROM_PARTS](../../t-sql/functions/node-id-from-parts-transact-sql.md)    |Construct a node_id from an object ID for the graph table and a graph ID value.  |
 | [OBJECT_ID_FROM_EDGE_ID](../../t-sql/functions/object-id-from-edge-id-transact-sql.md)    |Extract object ID for the graph table from `edge_id`.  |
 | [GRAPH_ID_FROM_EDGE_ID](../../t-sql/functions/graph-id-from-edge-id-transact-sql.md)    |Extract the graph ID value for a given `edge_id`.  |
-| [EDGE_ID_FROM_PARTS](../../t-sql/functions/node-id-from-parts-transact-sql.md)    |Construct `edge_id` from object ID for the graph table and graph ID value.  |
+| [EDGE_ID_FROM_PARTS](../../t-sql/functions/edge-id-from-parts-transact-sql.md)    |Construct `edge_id` from object ID for the graph table and graph ID value.  |
 
 ## Transact-SQL reference
 

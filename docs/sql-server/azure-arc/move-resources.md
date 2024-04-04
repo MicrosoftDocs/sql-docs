@@ -26,7 +26,7 @@ To complete this task, the *Arc Server – Machine* and SQL Server instances mus
 
 In addition:
 
-- If Purview is enabled, you must disable Purview in the Purview portal before the move. You can enable Purview after the move.
+- If Microsoft Purview is enabled, you must disable Microsoft Purview in the compliance portal before the move. You can re-enable it after the move.
 - If best practices assessment is enabled, you must disable it before the move.
 
 After the move, you can reenable any resources you disable.
@@ -74,15 +74,15 @@ The following table identifies features that remain enabled after the resource m
 
 The way to enable best practices assessment depends on whether the resource moved resource groups or subscriptions.
 
-### Moved resource groups within the same subscription
+### Resources moved within the same subscription
 
-1. Before the move, disable best practices assessment
-2. Move the resource
-3. [Enable best practices assessment](assess.md#enable-best-practices-assessment)
+1. Before the move, disable best practices assessment.
+2. Move the resource.
+3. [Enable best practices assessment](assess.md#enable-best-practices-assessment).
 
 Alternatively, use Azure policy to [enable best practices assessment  at scale](assess.md#enable-best-practices-assessment-at-scale-using-azure-policy).
 
-### Move to a different subscription
+### Resources moved to a different subscription
 
 These steps explain how to reconfigure best practices analyzer after a move:
 
@@ -90,8 +90,8 @@ These steps explain how to reconfigure best practices analyzer after a move:
 - To a different resource group
 - With the same log analytics workspace
 
-1. Before the move, disable best practices assessment
-2. Move the resource
-3. Update the log analytics workspace with one from the new subscription and enable BPA
+1. Before the move, disable best practices assessment.
+2. Move the resource.
+3. Update the log analytics workspace with one from the new subscription and enable BPA.
 
 Moving to a different subscription requires manual reconfiguration with the above steps for all SQL Server instances impacted for SQL best practices analyzer.

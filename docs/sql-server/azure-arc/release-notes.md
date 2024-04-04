@@ -13,7 +13,7 @@ ms.custom: ignite-2023
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-## April, 9 2024
+## April 9, 2024
 
 **Extension version**: `1.1.2620.128`
 
@@ -21,7 +21,7 @@ ms.custom: ignite-2023
 
 - Move instances of SQL Server enabled by Azure Arc to a different subscription or resource group (preview). Review [Move SQL Server enabled by Azure Arc resources to a new resource group or subscription - preview](move-resources.md).
 
-## March, 12 2024
+## March 12, 2024
 
 **Extension version**: `1.1.2620.127`
 

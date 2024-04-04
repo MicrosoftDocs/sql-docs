@@ -19,7 +19,7 @@ helpviewer_keywords:
   
  Specifically, employee salary information might be contained in an Employee model, or company financial information might be in an Account model. You can deny a user access to these models in the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] user interface, but users with access to the database can view this data.  
   
- You can grant permissions to database objects to make specific data available to users. For more information on granting permissions, see [GRANT Object Permissions &#40;Transact-SQL&#41;](../t-sql/statements/grant-object-permissions-transact-sql.md). For more information about securing SQL server, see [Securing SQL Server](../relational-databases/security/securing-sql-server.md).  
+ You can grant permissions to database objects to make specific data available to users. For more information on granting permissions, see [GRANT Object Permissions &#40;Transact-SQL&#41;](../t-sql/statements/grant-object-permissions-transact-sql.md). For more information about securing [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see [Securing SQL Server](../relational-databases/security/securing-sql-server.md).  
   
  The following tasks require access to the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database:  
   

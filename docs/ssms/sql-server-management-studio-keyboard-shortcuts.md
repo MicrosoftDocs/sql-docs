@@ -3,7 +3,7 @@ title: SQL Server Management Studio keyboard shortcuts
 description: SQL Server Management Studio keyboard shortcuts
 author: markingmyname
 ms.author: maghan
-ms.date: 02/08/2021
+ms.date: 09/27/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -234,7 +234,7 @@ All shortcuts aren't implemented in all types of code editors.
 |Swap the characters on either side of the cursor (doesn't apply to the SQL Editor.)|CTRL+T|
 |Delete one character to the right of the cursor|DELETE|
 |Delete one character to the left of the cursor|BACKSPACE<br /><br /> or<br /><br /> SHIFT+<br /><br /> BACKSPACE|
-|Delete whitespace in the selection, or deletes whitespace next to the cursor if there is no selection|CTRL+K, C|
+|Delete whitespace in the selection, or deletes whitespace next to the cursor if there's no selection|CTRL+K, C|
 |Insert the number of spaces configured for the editor|TAB|
 |Insert a blank line above the cursor|CTRL+ENTER|
 |Insert a blank line below the cursor|CTRL+SHIFT+ ENTER|

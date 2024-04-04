@@ -4,7 +4,7 @@ description: "Sends an e-mail message to the specified recipients."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/30/2023
+ms.date: 11/02/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -21,7 +21,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-Sends an e-mail message to the specified recipients. The message may include a query result set, file attachments, or both. When mail is successfully placed in the Database Mail queue, `sp_send_dbmail` returns the `mailitem_id` of the message. This stored procedure is in the `msdb` database.
+Sends an e-mail message to the specified recipients. The message might include a query result set, file attachments, or both. When mail is successfully placed in the Database Mail queue, `sp_send_dbmail` returns the `mailitem_id` of the message. This stored procedure is in the `msdb` database.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -59,7 +59,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
 
 #### [ @profile_name = ] '*profile_name*'
 
-The name of the profile to send the message from. The *@profile_name* is of type **sysname**, with a default of NULL. The *@profile_name* must be the name of an existing Database Mail profile. When no *@profile_name* is specified, `sp_send_dbmail` uses the default private profile for the current user. If the user doesn't have a default private profile, `sp_send_dbmail` uses the default public profile for the `msdb` database. If the user doesn't have a default private profile and there is no default public profile for the database, *@profile_name* must be specified.
+The name of the profile to send the message from. The *@profile_name* is of type **sysname**, with a default of `NULL`. The *@profile_name* must be the name of an existing Database Mail profile. When no *@profile_name* is specified, `sp_send_dbmail` uses the default private profile for the current user. If the user doesn't have a default private profile, `sp_send_dbmail` uses the default public profile for the `msdb` database. If the user doesn't have a default private profile and there's no default public profile for the database, *@profile_name* must be specified.
 
 #### [ @recipients = ] '*recipients*'
 
@@ -75,11 +75,11 @@ A semicolon-delimited list of e-mail addresses to blind carbon copy the message 
 
 #### [ @from_address = ] '*from_address*'
 
-The value of the 'from address' of the email message. This is an optional parameter used to override the settings in the mail profile. This parameter is of type **varchar(max)**. SMTP security settings determine if these overrides are accepted. If no parameter is specified, the default is NULL.
+The value of the 'from address' of the email message. This is an optional parameter used to override the settings in the mail profile. This parameter is of type **varchar(max)**. SMTP security settings determine if these overrides are accepted. If no parameter is specified, the default is `NULL`.
 
 #### [ @reply_to = ] '*reply_to*'
 
-The value of the 'reply to address' of the email message. It accepts only one email address as a valid value. This is an optional parameter used to override the settings in the mail profile. This parameter is of type **varchar(max)**. SMTP security settings determine if these overrides are accepted. If no parameter is specified, the default is NULL.
+The value of the 'reply to address' of the email message. It accepts only one email address as a valid value. This is an optional parameter used to override the settings in the mail profile. This parameter is of type **varchar(max)**. SMTP security settings determine if these overrides are accepted. If no parameter is specified, the default is `NULL`.
 
 #### [ @subject = ] N'*subject*'
 
@@ -87,18 +87,18 @@ The subject of the e-mail message. The subject is of type **nvarchar(255)**. If 
 
 #### [ @body = ] N'*body*'
 
-The body of the e-mail message. The message body is of type **nvarchar(max)**, with a default of NULL.
+The body of the e-mail message. The message body is of type **nvarchar(max)**, with a default of `NULL`.
 
 #### [ @body_format = ] '*body_format*'
 
-The format of the message body. The parameter is of type **varchar(20)**, with a default of NULL. When specified, the headers of the outgoing message are set to indicate that the message body has the specified format. The parameter may contain one of the following values:
+The format of the message body. The parameter is of type **varchar(20)**, with a default of `NULL`. When specified, the headers of the outgoing message are set to indicate that the message body has the specified format. The parameter might contain one of the following values:
 
 - TEXT (default)
 - HTML
 
 #### [ @importance = ] '*importance*'
 
-The importance of the message. The parameter is of type **varchar(6)**. The parameter may contain one of the following values:
+The importance of the message. The parameter is of type **varchar(6)**. The parameter might contain one of the following values:
 
 - `Low`
 - `Normal` (default)
@@ -106,7 +106,7 @@ The importance of the message. The parameter is of type **varchar(6)**. The para
 
 #### [ @sensitivity = ] '*sensitivity*'
 
-The sensitivity of the message. The parameter is of type **varchar(12)**. The parameter may contain one of the following values:
+The sensitivity of the message. The parameter is of type **varchar(12)**. The parameter might contain one of the following values:
 
 - `Normal` (default)
 - `Personal`
@@ -118,13 +118,13 @@ The sensitivity of the message. The parameter is of type **varchar(12)**. The pa
 A semicolon-delimited list of file names to attach to the e-mail message. Files in the list must be specified as absolute paths. The attachments list is of type **nvarchar(max)**. By default, Database Mail limits file attachments to 1 MB per file.
 
 > [!IMPORTANT]  
-> This parameter isn't available in Azure SQL Managed Instance, because it cannot access the local file system.
+> This parameter isn't available in Azure SQL Managed Instance, because it can't access the local file system.
 
 #### [ @query = ] N'*query*'
 
 A query to execute. The results of the query can be attached as a file, or included in the body of the e-mail message. The query is of type **nvarchar(max)**, and can contain any valid [!INCLUDE [tsql](../../includes/tsql-md.md)] statements. The query is executed in a separate session, so local variables in the script calling `sp_send_dbmail` aren't available to the query.
 
-When you use the *@query* parameter, the user that executes `sp_send_dbmail` must be a SQL Server login, or directly mapped to principal (login) of Azure AD or Windows Active Directory. If user is member of an Azure AD group or a Windows Active Directory group, it will not be able to execute the query. This is due to Azure SQL Managed Instance impersonation and [EXECUTE AS limitations](/azure/azure-sql/managed-instance/transact-sql-tsql-differences-sql-server#logins-and-users).
+When you use the *@query* parameter, the principal which executes `sp_send_dbmail` must be connected as an individual, not as part of a group, whether a Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) or Windows Active Directory group. SQL Server logins, Windows identities, and Microsoft Entra identities can execute the query, but group members can't, due to Azure SQL Managed Instance impersonation and [EXECUTE AS limitations](/azure/azure-sql/managed-instance/transact-sql-tsql-differences-sql-server#logins-and-users).
 
 #### [ @execute_query_database = ] '*execute_query_database*'
 
@@ -138,13 +138,13 @@ When the value is `0`, the query results are included in the body of the e-mail 
 
 #### [ @query_attachment_filename = ] N'*query_attachment_filename*'
 
-Specifies the file name to use for the result set of the query attachment. *@query_attachment_filename* is of type **nvarchar(255)**, with a default of NULL. This parameter is ignored when *@attach_query_result_as_file* is `0`. When *@attach_query_result_as_file* is `1` and this parameter is NULL, Database Mail creates an arbitrary filename.
+Specifies the file name to use for the result set of the query attachment. *@query_attachment_filename* is of type **nvarchar(255)**, with a default of `NULL`. This parameter is ignored when *@attach_query_result_as_file* is `0`. When *@attach_query_result_as_file* is `1` and this parameter is `NULL`, Database Mail creates an arbitrary filename.
 
 #### [ @query_result_header = ] *query_result_header*
 
 Specifies whether the query results include column headers. The query_result_header value is of type **bit**. When the value is `1`, query results contain column headers. When the value is `0`, query results don't include column headers. This parameter defaults to `1`. This parameter is only applicable if *@query* is specified.
 
-The following error may occur when setting *@query_result_header* to `0` and setting *@query_no_truncate* to `1`:
+The following error might occur when setting *@query_result_header* to `0` and setting *@query_no_truncate* to `1`:
 
 ```output
 Msg 22050, Level 16, State 1, Line 12: Failed to initialize sqlcmd library with error number -2147024809.
@@ -179,7 +179,7 @@ The type is **bit**. The default is `0`. When you set to `1`, the query results 
 
 In this case, no error occurs.
 
-The following error may occur when setting *@query_result_no_padding* to `1` and providing a parameter for *@query_no_truncate*:
+The following error might occur when setting *@query_result_no_padding* to `1` and providing a parameter for *@query_no_truncate*:
 
 ```output
 Msg 22050, Level 16, State 1, Line 0: Failed to execute the query because the @query_result_no_append and @query_no_truncate options are mutually exclusive.
@@ -195,7 +195,7 @@ Optional output parameter returns the `mailitem_id` of the message. *@mailitem_i
 
 A return code of `0` means success. Any other value means failure. The error code for the statement that failed is stored in the `@@ERROR` variable.
 
-## Result sets
+## Result set
 
 On success, returns the message "Mail queued."
 
@@ -205,7 +205,7 @@ Before use, Database Mail must be enabled using the Database Mail Configuration 
 
 `sysmail_stop_sp` stops Database Mail by stopping the Service Broker objects that the external program uses. `sp_send_dbmail` still accepts mail when Database Mail is stopped using `sysmail_stop_sp`. To start Database Mail, use `sysmail_start_sp`.
 
-When *@profile* isn't specified, `sp_send_dbmail` uses a default profile. If the user sending the e-mail message has a default private profile, Database Mail uses that profile. If the user has no default private profile, `sp_send_dbmail` uses the default public profile. If there is no default private profile for the user and no default public profile, `sp_send_dbmail` returns an error.
+When *@profile* isn't specified, `sp_send_dbmail` uses a default profile. If the user sending the e-mail message has a default private profile, Database Mail uses that profile. If the user has no default private profile, `sp_send_dbmail` uses the default public profile. If there's no default private profile for the user and no default public profile, `sp_send_dbmail` returns an error.
 
 `sp_send_dbmail` doesn't support e-mail messages with no content. To send an e-mail message, you must specify at least one of *@body*, *@query*, *@file_attachments*, or *@subject*. Otherwise, `sp_send_dbmail` returns an error.
 
@@ -227,7 +227,7 @@ Execute permissions for `sp_send_dbmail` default to all members of the **Databas
 
 ### A. Send an e-mail message
 
-This example sends an e-mail message to your friend using the e-mail address `myfriend@adventure-works.com`. The message has the subject `Automated Success Message`. The body of the message contains the sentence `'The stored procedure finished successfully'`.
+This example sends an e-mail message to your friend using the e-mail address `myfriend@adventure-works.com`. The message has the subject `Automated Success Message`. The body of the message contains the sentence `The stored procedure finished successfully`.
 
 ```sql
 EXEC msdb.dbo.sp_send_dbmail
@@ -245,7 +245,7 @@ This example sends an e-mail message to your friend using the e-mail address `yo
 EXEC msdb.dbo.sp_send_dbmail
     @profile_name = 'Adventure Works Administrator',
     @recipients = 'yourfriend@adventure-works.com',
-    @query = 'SELECT COUNT(*) FROM AdventureWorks2012.Production.WorkOrder
+    @query = 'SELECT COUNT(*) FROM AdventureWorks2022.Production.WorkOrder
                   WHERE DueDate > ''2022-04-30''
                   AND  DATEDIFF(dd, ''2022-04-30'', DueDate) < 2',
     @subject = 'Work Order Count',
@@ -288,9 +288,9 @@ EXEC msdb.dbo.sp_send_dbmail @recipients = 'yourfriend@adventure-works.com',
     @body_format = 'HTML';
 ```
 
-## See also
+## Related content
 
-- [Database Mail](../../relational-databases/database-mail/database-mail.md)
-- [Database Mail Configuration Objects](../../relational-databases/database-mail/database-mail-configuration-objects.md)
-- [Database Mail Stored Procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)
-- [sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)
+- [Database Mail](../database-mail/database-mail.md)
+- [Database Mail Configuration Objects](../database-mail/database-mail-configuration-objects.md)
+- [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)
+- [sp_addrolemember (Transact-SQL)](sp-addrolemember-transact-sql.md)

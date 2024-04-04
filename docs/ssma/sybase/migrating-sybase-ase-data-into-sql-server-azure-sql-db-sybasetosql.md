@@ -7,7 +7,9 @@ ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.custom: intro-migration
+ms.custom:
+  - intro-migration
+  - sql-migration-content
 f1_keywords:
   - "ssma.sybase.migratedata.f1"
 helpviewer_keywords:
@@ -108,7 +110,7 @@ When large data size 100GB and above needs to be migrated within a short duratio
 
 1. For large offline migration, click on Migrate data at scale. The offline data migration supports database level migration.
 
-1. Provide Azure active directory account for authentication. Once you entered the user name, click on connect.
+1. Provide Microsoft Entra/Azure AD account for authentication. Once you enter the user name, select **Connect**. 
 
 1. Select the tenant and the subscription that already has the Azure SQL VM or Azure SQL database or managed instance configured and click next.
 

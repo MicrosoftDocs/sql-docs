@@ -71,7 +71,7 @@ CROSS APPLY sys.dm_exec_sql_text(sql_handle) AS st;
  The following example creates a plan guide for a single SELECT statement by specifying a query plan from the plan cache. The example begins by executing a simple `SELECT` statement for which the plan guide will be created. The plan for this query is examined by using the `sys.dm_exec_sql_text` and `sys.dm_exec_text_query_plan` dynamic management views. The plan guide is then created for the query by specifying the query plan in the plan cache that is associated with the query. The final statement in the example verifies that the plan guide exists.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT WorkOrderID, p.Name, OrderQty, DueDate  
 FROM Production.WorkOrder AS w   
@@ -108,7 +108,7 @@ GO
 ### B. Creating multiple plan guides for a multistatement batch  
  The following example creates a plan guide for two statements within a multistatement batch. The plan guides are created within an explicit transaction so that the query plan for the batch is not removed from the plan cache after the first plan guide is created. The example begins by executing a multistatement batch. The plan for the batch is examined by using dynamic management views. Notice that a row for each statement in the batch is returned. A plan guide is then created for the first and third statements in the batch by specifying the `@statement_start_offset` parameter. The final statement in the example verifies that the plan guides exist.  
   
- [!code-sql[PlanGuides#Create_From_Handle2](../../relational-databases/system-stored-procedures/codesnippet/tsql/sp-create-plan-guide-fro_1.sql)]  
+ :::code language="sql" source="codesnippet/tsql/sp-create-plan-guide-fro_1.sql":::
   
 ## See Also  
  [Database Engine Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   

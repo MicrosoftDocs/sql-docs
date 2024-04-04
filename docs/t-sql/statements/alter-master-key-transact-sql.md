@@ -116,7 +116,7 @@ Requires CONTROL permission on the database. If the database master key has been
 The following example creates a new database master key for `AdventureWorks` and reencrypts the keys below it in the encryption hierarchy.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 ALTER MASTER KEY REGENERATE WITH ENCRYPTION BY PASSWORD = 'dsjdkflJ435907NnmM#sX003';
 GO
 ```

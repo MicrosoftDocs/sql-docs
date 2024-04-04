@@ -23,7 +23,7 @@ ms.custom: updatefrequency5
   
 |**Variable**|**Type**|**Description**|  
 |------------------|--------------|---------------------|  
-|**DataSourceReference**|**String**|The full path of the data source definition on the report server. For example, you might include a list of all the data sources a report used as part of a report history. The following example shows the full path for the data source named AdventureWorks2012:<br /><br /> `/DataSources/AdventureWorks2012`.|  
+|**DataSourceReference**|**String**|The full path of the data source definition on the report server. For example, you might include a list of all the data sources a report used as part of a report history. The following example shows the full path for the data source named AdventureWorks2022:<br /><br /> `/DataSources/AdventureWorks2022`.|  
 |**Type**|**String**|The type of data provider for the data source. For example, `SQL`.|  
   
 ## DataSets  

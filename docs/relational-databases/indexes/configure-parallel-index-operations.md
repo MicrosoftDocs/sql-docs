@@ -23,7 +23,7 @@ This topic defines max degree of parallelism and explains how to modify this set
 On multiprocessor systems that are running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise or higher, index statements may use multiple processors (CPUs) to perform the scan, sort, and index operations associated with the index statement just like other queries do. The number of CPUs used to run a single index statement is determined by the [max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) server configuration option, the current workload, and the index statistics. The max degree of parallelism option determines the maximum number of processors to use in parallel plan execution. If the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] detects that the system is busy, the degree of parallelism of the index operation is automatically reduced before statement execution starts. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] can also reduce the degree of parallelism if the leading key column of a non-partitioned index has a limited number of distinct values or the frequency of each distinct value varies significantly. For more information, see [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing). 
   
 > [!NOTE]  
-> Parallel index operations are not available in every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition. For more information, see [Features Supported by the Editions of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
+> Parallel index operations are not available in every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition. For more information, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
   
  **In This Topic**  
   
@@ -103,7 +103,7 @@ On multiprocessor systems that are running [!INCLUDE[ssNoVersion](../../includes
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```sql  
-    USE AdventureWorks2012;   
+    USE AdventureWorks2022;   
     GO  
     /*Alters the IX_ProductVendor_VendorID index on the Purchasing.ProductVendor table so that, if the server has eight or more processors, the Database Engine will limit the execution of the index operation to eight or fewer processors.  
     */  
@@ -114,7 +114,7 @@ On multiprocessor systems that are running [!INCLUDE[ssNoVersion](../../includes
   
  For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
-#### Set max degree of parallelism on a new index  
+#### Specify max degree of parallelism when creating a new index
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -123,7 +123,7 @@ On multiprocessor systems that are running [!INCLUDE[ssNoVersion](../../includes
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     CREATE INDEX IX_ProductVendor_NewVendorID   
     ON Purchasing.ProductVendor (BusinessEntityID)  

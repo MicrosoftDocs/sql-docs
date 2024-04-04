@@ -59,7 +59,7 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
  The following example ranks the products in inventory the specified inventory locations according to their quantities. The result set is partitioned by `LocationID` and logically ordered by `Quantity`. Notice that products 494 and 495 have the same quantity. Because they are tied, they are both ranked one.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT i.ProductID, p.Name, i.LocationID, i.Quantity  
     ,RANK() OVER   
@@ -94,7 +94,7 @@ ProductID   Name                   LocationID   Quantity Rank
  The following example returns the top ten employees ranked by their salary. Because a PARTITION BY clause was not specified, the RANK function was applied to all rows in the result set.  
   
 ```sql  
-USE AdventureWorks2012  
+USE AdventureWorks2022  
 SELECT TOP(10) BusinessEntityID, Rate,   
        RANK() OVER (ORDER BY Rate DESC) AS RankBySalary  
 FROM HumanResources.EmployeePayHistory AS eph1  
@@ -111,14 +111,14 @@ BusinessEntityID Rate                  RankBySalary
 ---------------- --------------------- --------------------  
 1                125.50                1  
 2                63.4615               4  
-3                43.2692               8  
-4                29.8462               19  
-5                32.6923               16  
-6                32.6923               16  
+3                43.2692               11  
+4                29.8462               28  
+5                32.6923               22  
+6                32.6923               22  
 7                50.4808               6  
-8                40.8654               10  
-9                40.8654               10  
-10               42.4808               9  
+8                40.8654               14  
+9                40.8654               14  
+10               42.4808               13  
 ```  
   
 ## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

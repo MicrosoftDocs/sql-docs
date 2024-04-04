@@ -68,7 +68,7 @@ To create and configure managed instances with [Azure CLI](/cli/azure), use the 
 
 ## Transact-SQL: Create and configure instance databases
 
-To create and configure instance databases after the managed instance is created, use the following T-SQL commands. You can issue these commands using the Azure portal, [SQL Server Management Studio](/sql/ssms/use-sql-server-management-studio), [Azure Data Studio](/sql/azure-data-studio/what-is), [Visual Studio Code](https://code.visualstudio.com/docs), or any other program that can connect to a server and pass Transact-SQL commands.
+To create and configure instance databases after the managed instance is created, use the following T-SQL commands. You can issue these commands using the Azure portal, [SQL Server Management Studio](/sql/ssms/use-sql-server-management-studio), [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio), [Visual Studio Code](https://code.visualstudio.com/docs), or any other program that can connect to a server and pass Transact-SQL commands.
 
 > [!TIP]
 > For quickstarts showing you how to configure and connect to a managed instance using SQL Server Management Studio on Microsoft Windows, see [Quickstart: Configure Azure VM to connect to Azure SQL Managed Instance](connect-vm-instance-configure.md) and [Quickstart: Configure a point-to-site connection to Azure SQL Managed Instance from on-premises](point-to-site-p2s-configure.md).
@@ -87,20 +87,20 @@ To create and configure managed instances, use these REST API requests.
 
 | Command | Description |
 | --- | --- |
-|[SQL Managed Instance - Create Or Update](/rest/api/sql/managedinstances/createorupdate)|Creates or updates a managed instance.|
-|[SQL Managed Instance - Delete](/rest/api/sql/managedinstances/delete)|Deletes a managed instance.|
-|[SQL Managed Instance - Get](/rest/api/sql/managedinstances/get)|Gets a managed instance.|
-|[SQL Managed Instance - Stop](/rest/api/sql/2022-08-01-preview/managed-instances/stop) | Stops a managed instance. | 
-|[SQL Managed Instance - Start](/rest/api/sql/2022-08-01-preview/managed-instances/start) | Starts a managed instance | 
+|[SQL Managed Instance - Create Or Update](/rest/api/sql/managed-instances/create-or-update)|Creates or updates a managed instance.|
+|[SQL Managed Instance - Delete](/rest/api/sql/managed-instances/delete)|Deletes a managed instance.|
+|[SQL Managed Instance - Get](/rest/api/sql/managed-instances/get)|Gets a managed instance.|
+|[SQL Managed Instance - Stop](/rest/api/sql/managed-instances/stop) | Stops a managed instance. | 
+|[SQL Managed Instance - Start](/rest/api/sql/managed-instances/start) | Starts a managed instance | 
 |[SQL Managed Instance - List](/rest/api/sql/managedinstances/list)|Returns a list of managed instances in a subscription.|
-|[SQL Managed Instance - List By Resource Group](/rest/api/sql/managedinstances/listbyresourcegroup)|Returns a list of managed instances in a resource group.|
-|[SQL Managed Instance - Update](/rest/api/sql/managedinstances/update)|Updates a managed instance.|
-|[SQL Managed Instance operations - List By Managed Instance](/rest/api/sql/managedinstanceoperations/listbymanagedinstance)|Gets a list of management operations performed on the managed instance.|
-|[SQL Managed Instance operations - Get](/rest/api/sql/managedinstanceoperations/get)|Gets the specific management operation performed on the managed instance.|
-|[SQL Managed Instance operations - Cancel](/rest/api/sql/managedinstanceoperations/cancel)|Cancels the specific management operation performed on the managed instance.|
-|[SQL Managed Instance - Start/stop schedule- Create Or Update](/rest/api/sql/2022-08-01-preview/start-stop-managed-instance-schedules/create-or-update) | Creates or updates a start and stop managed instance schedule. | 
-|[SQL Managed Instance - Start/stop schedule - Get](/rest/api/sql/2022-08-01-preview/start-stop-managed-instance-schedules/get) | Gets an existing start and stop managed instance schedule. |
-|[SQL Managed Instance - Start/stop schedule - Delete](/rest/api/sql/2022-08-01-preview/start-stop-managed-instance-schedules/delete) Deletes an existing start and stop managed instance schedule. | 
+|[SQL Managed Instance - List By Resource Group](/rest/api/sql/managed-instances/list-by-resource-group)|Returns a list of managed instances in a resource group.|
+|[SQL Managed Instance - Update](/rest/api/sql/managed-instances/update)|Updates a managed instance.|
+|[SQL Managed Instance operations - List By Managed Instance](/rest/api/sql/managed-instance-operations/list-by-managed-instance)|Gets a list of management operations performed on the managed instance.|
+|[SQL Managed Instance operations - Get](/rest/api/sql/managed-instance-operations/get)|Gets the specific management operation performed on the managed instance.|
+|[SQL Managed Instance operations - Cancel](/rest/api/sql/managed-instance-operations/cancel)|Cancels the specific management operation performed on the managed instance.|
+|[SQL Managed Instance - Start/stop schedule- Create Or Update](/rest/api/sql/start-stop-managed-instance-schedules/create-or-update) | Creates or updates a start and stop managed instance schedule. | 
+|[SQL Managed Instance - Start/stop schedule - Get](/rest/api/sql/start-stop-managed-instance-schedules/get) | Gets an existing start and stop managed instance schedule. |
+|[SQL Managed Instance - Start/stop schedule - Delete](/rest/api/sql/start-stop-managed-instance-schedules/delete) Deletes an existing start and stop managed instance schedule. | 
 
 ## Next steps
 

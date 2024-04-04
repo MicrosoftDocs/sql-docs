@@ -7,7 +7,9 @@ ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.custom: intro-migration
+ms.custom:
+  - intro-migration
+  - sql-migration-content
 f1_keywords:
   - "ssma.mysql.migratedata.f1"
 helpviewer_keywords:
@@ -20,6 +22,8 @@ After you have successfully synchronized the converted objects with [!INCLUDE[ss
 > [!IMPORTANT]  
 > If the engine being used is Server Side Data Migration Engine, then, before migrating data, you must install the SSMA for MySQL Extension Pack and the MySQL providers on the computer that is running SSMA. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service must also be running. For more information about how to install the extension pack, see [Installing SSMA Components on SQL Server (MySQL to SQL)](./installing-ssma-components-on-sql-server-mysqltosql.md)  
   
+[!INCLUDE [entra-id](../../includes/entra-id-hard-coded.md)]
+
 ## Setting Migration Options  
 Before migrating data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, review the project migration options in the **Project Settings** dialog box.  
   
@@ -108,7 +112,7 @@ When large data size needs to be migrated within a short duration, at scale offl
 
 1. For large offline migration, click on Migrate data at scale. 
 
-1. Provide Azure active directory account for authentication. Once you entered the user name, click on connect.
+1. Provide Microsoft Entra/Azure AD account for authentication. Once you enter the username, select **Connect**.
 
 1. Select the tenant and the subscription that already has the Azure SQL VM or Azure SQL database or managed instance configured and click next.
 
@@ -127,4 +131,4 @@ When large data size needs to be migrated within a short duration, at scale offl
 1. For monitoring the data migration, click on the monitoring URL or go to the data factory monitoring page in Azure portal.
   
 ## See Also  
-[Migrating MySQL Databases to SQL Server - Azure SQL Database &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Migrating MySQL Databases to SQL Server - Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  

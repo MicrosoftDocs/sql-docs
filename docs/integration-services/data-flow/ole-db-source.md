@@ -6,7 +6,7 @@ ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
   - "sql13.dts.designer.oledbsource.f1"
   - "sql13.dts.designer.oledbsourceadapter.connection.f1"
@@ -63,7 +63,7 @@ helpviewer_keywords:
 ### Specifying Parameters by Using Ordinal Positions  
  If no parameter names are returned, the order in which the parameters are listed in the **Parameters** list in the **Set Query Parameter** dialog box governs which parameter marker they are mapped to at run time. The first parameter in the list maps to the first ? in the SQL statement, the second to the second ?, and so on.  
   
- The following SQL statement selects rows from the **Product** table in the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database. The first parameter in the **Mappings** list maps to the first parameter to the **Color** column, the second parameter to the **Size** column.  
+ The following SQL statement selects rows from the **Product** table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. The first parameter in the **Mappings** list maps to the first parameter to the **Color** column, the second parameter to the **Size** column.  
   
  `SELECT * FROM Production.Product WHERE Color = ? AND Size = ?`  
   
@@ -74,7 +74,7 @@ helpviewer_keywords:
 ### Specifying Parameters by Using Names  
  If the actual parameter names are returned from the RDBMS, the parameters used by a SELECT and EXEC statement are mapped by name. The parameter names must match the names that the stored procedure, run by the SELECT statement or the EXEC statement, expects.  
   
- The following SQL statement runs the **uspGetWhereUsedProductID** stored procedure, available in the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database.  
+ The following SQL statement runs the **uspGetWhereUsedProductID** stored procedure, available in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
  `EXEC uspGetWhereUsedProductID ?, ?`  
   
@@ -106,7 +106,7 @@ helpviewer_keywords:
 -   [Sort Data for the Merge and Merge Join Transformations](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## Related Content  
- Wiki article, [SSIS with Oracle Connectors](https://go.microsoft.com/fwlink/?LinkId=220670), on social.technet.microsoft.com.  
+[SSIS with Oracle Connectors](../../integration-services/data-flow/oracle-connector.md)
   
 ## OLE DB Source Editor (Connection Manager Page)
   Use the **Connection Manager** page of the **OLE DB Source Editor** dialog box to select the OLE DB connection manager for the source. This page also lets you select a table or view from the database.  

@@ -6,7 +6,7 @@ ms.author: mathoma
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "Availability Groups [SQL Server], about"
   - "Availability Groups [SQL Server], Transact-SQL statements"

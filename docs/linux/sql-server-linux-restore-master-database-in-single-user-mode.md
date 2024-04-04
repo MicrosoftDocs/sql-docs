@@ -7,7 +7,9 @@ ms.date: 08/09/2022
 ms.service: sql
 ms.subservice: configuration
 ms.topic: how-to
-ms.custom: template-how-to
+ms.custom:
+  - template-how-to
+  - linux-related-content
 helpviewer_keywords:
   - "starting SQL Server on Linux, single-user mode"
   - "single-user mode [SQL Server] Linux"
@@ -16,7 +18,7 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-Under certain circumstances, you may need to restore the `master` database on an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in single-user mode on Linux. Scenarios include migrating to a new instance, or recovering from inconsistencies.
+Under certain circumstances, you might need to restore the `master` database on an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in single-user mode on Linux. Scenarios include migrating to a new instance, or recovering from inconsistencies.
 
 > [!NOTE]  
 > [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] will automatically shut down after the restore is complete. This behavior is by design.
@@ -117,7 +119,7 @@ When you start an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.
 
 When you restore a `master` database backup, any existing user databases that were added to the instance after the backup was taken, won't be visible after restoring `master`. The files should still exist on the storage layer, so you'll need to manually reattach those user database files to bring those databases online. See [Attach a Database](../relational-databases/databases/attach-a-database.md) for more information.
 
-## Next steps
+## Related content
 
 - [Troubleshoot SQL Server on Linux](sql-server-linux-troubleshooting-guide.md)
 - [sqlcmd Utility](../tools/sqlcmd/sqlcmd-utility.md)

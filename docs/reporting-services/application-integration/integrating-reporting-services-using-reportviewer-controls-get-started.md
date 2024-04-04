@@ -11,9 +11,9 @@ ms.custom:
   - intro-get-started
   - updatefrequency5
 ---
-# Integrate Reporting Services Using the Report Viewer Controls - Get Started
+# Integrate Reporting Services by using the Report Viewer controls - get started
 
-The Report Viewer controls can be used to integrate Reporting Services RDL reports into WebForms and WinForms apps. For detailed information about recent updates see the [changelog](./release-notes-ssrs-application-integration.md).
+The Report Viewer controls can be used to integrate Reporting Services RDL reports into WebForms and WinForms apps. For detailed information about recent updates, see the [changelog](./release-notes-ssrs-application-integration.md).
 
 ## Add the Report Viewer control to a new web project
 
@@ -21,7 +21,7 @@ The Report Viewer controls can be used to integrate Reporting Services RDL repor
 
     You can use .NET Framework 4.6 or any newer version.
 
-    ![Screenshot of creating a new ASP.NET Empty Web Site.](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project-4-6.png)
+    :::image type="content" source="media/reporting-services-create-new-aspnet-project-4-6.png" alt-text="Screenshot of Visual Studio, highlighting a new ASP.NET Empty Web Site.":::
 
 2. Install the Report Viewer control NuGet package via the **NuGet package manager console**.
 
@@ -36,7 +36,7 @@ The Report Viewer controls can be used to integrate Reporting Services RDL repor
     
 4. Add a **ScriptManagerControl** to the page.
 
-5. Add the Report Viewer control to the page. The snippet below can be updated to reference a report hosted on a remote report server.
+5. Add the Report Viewer control to the page. The following snippet can be updated to reference a report hosted on a remote report server.
 
     ```
     <rsweb:ReportViewer ID="ReportViewer1" runat="server" ProcessingMode="Remote">
@@ -137,7 +137,7 @@ Make sure to update any assembly references to version *15.0.0.0*, including the
 
     You can use .NET Framework 4.6 or any newer version.
     
-    ![Screenshot of creating a new Windows Forms Application.](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project-4-6.png)
+    :::image type="content" source="media/reporting-services-create-new-winforms-project-4-6.png" alt-text="Screenshot of Visual Studio, highlighting a new Windows Forms Application.":::
 
 2. Install the Report Viewer control NuGet package via the **NuGet package manager console**.
 
@@ -223,19 +223,19 @@ For more information about viewport percentage lengths, see [Viewport-percentage
 
 The Report Viewer Control is now shipped as a NuGet package and no longer shows in the Visual Studio toolbox by default. You can add the control to the toolbox manually.
 
-1. Install the NuGet package for either the WinForms or WebForms as mentioned above.
+1. Install the NuGet package for either the WinForms or WebForms as mentioned previously.
 
 2. Remove the Report Viewer Control that is listed in the toolbox.
 
-    ![Screenshot of deleting the ReportViewer control.](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
+    :::image type="content" source="media/reporting-services-remove-old-report-viewer-control-toolbox.png" alt-text="Screenshot of the Visual Studio toolbox, highlighting Delete on the ReportViewer control.":::
 
 3. Right-click in anywhere in the toolbox and then select **Choose Items...**.
 
-    ![Screenshot of the Choose items option in the toolbox.](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
+    :::image type="content" source="media/reporting-services-toolbox-choose-item.png" alt-text="Screenshot of the Visual Studio toolbox, highlighting the Choose Items option.":::
     
 4. On the **.NET Framework Components**, select **Browse**.
 
-    ![Screenshot of the Browse button in the .NET Framework Components dialog.](../../reporting-services/application-integration/media/ssrs-toolbox-browse.png)
+    :::image type="content" source="media/reporting-services-toolbox-browse.png" alt-text="Screenshot of Visual Studio, highlighting the Browse button in the .NET Framework Components dialog.":::
 
 5. Select the **Microsoft.ReportViewer.WinForms.dll** or **Microsoft.ReportViewer.WebForms.dll** from the NuGet package you installed.
 
@@ -244,11 +244,11 @@ The Report Viewer Control is now shipped as a NuGet package and no longer shows 
 
 6. The new control should display within the toolbox. You can then move it to another tab within the toolbox if you wish.
 
-    ![Screenshot of the new ReportViewer control in the toolbox.](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
+    :::image type="content" source="media/reporting-services-toolbox-report-viewer-control.png" alt-text="Screenshot of the new ReportViewer control in the Visual Studio toolbox.":::
 
 ## Common issues
     
-The viewer control is designed for modern browsers. The control may not work as expected if the browser renders the page using IE compatibility mode. Intranet sites may require a meta tag to override default browser behavior.
+The viewer control is designed for modern browsers. The control might not work as expected if the browser renders the page using IE compatibility mode. Intranet sites might require a meta tag to override default browser behavior.
 
 ```html
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -268,6 +268,6 @@ Here are links to articles on the NuGet.org site about the WebForm and WinForm v
 
 Let the team know about issues on the [Reporting Services forums](/answers/topics/sql-server-reporting-services.html).
 
-## See also
+## Related content
 
 [Data collection in the Report Viewer control](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)

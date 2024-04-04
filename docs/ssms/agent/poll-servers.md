@@ -7,7 +7,7 @@ ms.reviewer: randolphwest
 ms.date: 04/18/2022
 ms.service: sql
 ms.subservice: ssms
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
   - "target servers [SQL Server], polling interval"
   - "polling master servers [SQL Server]"
@@ -18,7 +18,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Poll servers
 
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 > [!IMPORTANT]
 >  

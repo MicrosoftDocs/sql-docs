@@ -159,10 +159,10 @@ When you specify `\n` as a row terminator for bulk import, or implicitly use the
 
 ### Examples
 
- The examples in this section bulk import character data form the `Department-c-t.txt` data file created in the preceding example into the `myDepartment` table in the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] sample database. Before you can run the examples, you must create this table. To create this table under the **dbo** schema, in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:
+ The examples in this section bulk import character data form the `Department-c-t.txt` data file created in the preceding example into the `myDepartment` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database. Before you can run the examples, you must create this table. To create this table under the **dbo** schema, in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:
 
 ```sql
-USE AdventureWorks;
+USE AdventureWorks2022;
 GO
 DROP TABLE myDepartment;
 CREATE TABLE myDepartment
@@ -181,7 +181,7 @@ GO
  At the Windows command prompt enter:
 
 ```cmd
-bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
+bcp AdventureWorks2022..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 ```
 
 #### B. Use BULK INSERT to interactively specify terminators
@@ -197,7 +197,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:
 
 ```sql
-USE AdventureWorks;
+USE AdventureWorks2022;
 GO
 BULK INSERT myDepartment FROM 'C:\myDepartment-c-t.txt'
      WITH (

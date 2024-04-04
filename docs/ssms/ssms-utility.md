@@ -106,10 +106,10 @@ The following scripts opens SQL Server Management Studio from a command prompt u
 Ssms.exe -S servername.database.windows.net -G
 ```
 
-The following script opens SQL Server Management Studio from a command prompt, with Windows Authentication, with the Code Editor set to the server `ACCTG and the database AdventureWorks2012,` without showing the splash screen:
+The following script opens SQL Server Management Studio from a command prompt, with Windows Authentication, with the Code Editor set to the server `ACCTG` and the database [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)], without showing the splash screen:
 
 ```console
-Ssms -E -S ACCTG -d AdventureWorks2012 -nosplash
+Ssms -E -S ACCTG -d AdventureWorks2022 -nosplash
 ```
 
 The following script opens SQL Server Management Studio from a command prompt, and opens the MonthEndQuery script.

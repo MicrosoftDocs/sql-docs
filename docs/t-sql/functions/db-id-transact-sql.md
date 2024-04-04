@@ -79,8 +79,8 @@ This example uses `DB_ID` to return the database ID of the [!INCLUDE[ssSampleDBo
 ```sql
 DECLARE @db_id INT;  
 DECLARE @object_id INT;  
-SET @db_id = DB_ID(N'AdventureWorks2012');  
-SET @object_id = OBJECT_ID(N'AdventureWorks2012.Person.Address');  
+SET @db_id = DB_ID(N'AdventureWorks2022');  
+SET @object_id = OBJECT_ID(N'AdventureWorks2022.Person.Address');  
 IF @db_id IS NULL   
   BEGIN;  
     PRINT N'Invalid database';  
@@ -106,7 +106,7 @@ SELECT DB_ID();
 ```  
   
 ### E. Return the ID of a named database.  
-This example returns the database ID of the AdventureWorksDW2012 database.
+This example returns the database ID of the AdventureWorksDW2022 database.
   
 ```sql
 SELECT DB_ID('AdventureWorksPDW2012');  

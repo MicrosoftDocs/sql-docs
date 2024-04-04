@@ -32,9 +32,9 @@ This code example creates a new table on an existing database for which the <xre
 'Connect to the local, default instance of SQL Server.
 Dim srv As Server
 srv = New Server
-'Reference the AdventureWorks2012 database.
+'Reference the AdventureWorks2022 database.
 Dim db As Database
-db = srv.Databases("AdventureWorks2012")
+db = srv.Databases("AdventureWorks2022")
 'Reference the CreditCard table.
 Dim tb As Table
 tb = db.Tables("CreditCard", "Sales")
@@ -59,7 +59,7 @@ public static void CreatingAndUpdatingStatistics()
     // Connect to the local, default instance of SQL Server.
     var srv = new Server();
 
-    // Reference the AdventureWorks2012 database.
+    // Reference the AdventureWorks2022 database.
     var db = srv.Databases["AdventureWorks"];
 
     // Reference the CreditCard table.

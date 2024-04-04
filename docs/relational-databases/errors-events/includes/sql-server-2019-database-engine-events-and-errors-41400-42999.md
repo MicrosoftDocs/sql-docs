@@ -1,8 +1,7 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
-ms.date: 07/06/2023
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 01/11/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -221,6 +220,7 @@ ms.topic: include
 | 41934 | 16 | No | Statement '%.\*ls' is not supported in the current version of the server. |
 | 41935 | 16 | No | Managed Instance has reached the total capacity of underlying Azure storage account. Azure Premium Storage account is limited to 35TB of allocated space. |
 | 41936 | 16 | No | This feature is not supported in the Hyperscale edition of SQL Database Managed Instance. |
+| 41978 | 16 | No | The parameters (%ls) are not supported for this stored procedure in SQL Database Managed Instance. Review the documentation for supported parameters. |
 | 42001 | 16 | No | Failed to parse XML configuration. The operating system returned error %ls. |
 | 42002 | 16 | No | Failed to parse XML configuration. The parser returned error %.\*ls |
 | 42003 | 16 | No | Failed to parse XML configuration. A required attribute '%ls' is missing. |

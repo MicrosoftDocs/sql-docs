@@ -60,8 +60,8 @@ GO
 DECLARE @MyBitVar BIT;  
 EXEC sp_can_tlog_be_applied  
      @backup_file_name =   
-N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\AdventureWorks2012.bak',  
-     @database_name = N'AdventureWorks2012',  
+N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\AdventureWorks2022.bak',  
+     @database_name = N'AdventureWorks2022',  
      @result = @MyBitVar OUTPUT;  
 GO  
 ```  

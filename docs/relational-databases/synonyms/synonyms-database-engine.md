@@ -181,7 +181,7 @@ GO
 CREATE SCHEMA SynSchema
 GO  
 CREATE SYNONYM SynSchema.MyEmployee   
-FOR AdventureWorks2012.HumanResources.Employee;  
+FOR AdventureWorks2022.HumanResources.Employee;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID('SynSchema.MyEmployee'), 'BaseType') AS BaseType;  
 ```  
@@ -192,7 +192,7 @@ The following example returns the base type of a synonym's base object that is a
 EXECUTE sp_addlinkedserver Server1;  
 GO  
 CREATE SYNONYM SynSchema.MyRemoteEmployee  
-FOR Server1.AdventureWorks2012.HumanResources.Employee;  
+FOR Server1.AdventureWorks2022.HumanResources.Employee;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID('MyRemoteEmployee'), 'BaseType') AS BaseType;  
 GO  

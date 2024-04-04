@@ -23,7 +23,7 @@ dev_langs:
 Restores the authenticated connection between a local database enabled for Stretch and the remote database.
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+> [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -68,7 +68,7 @@ Requires **db_owner** permissions.
 
 When you run [sys.sp_rda_reauthorize_db (Transact-SQL)](sys-sp-rda-reauthorize-db-transact-sql.md) to reconnect to the remote Azure database, this operation automatically resets the query mode to `LOCAL_AND_REMOTE`, which is the default behavior for Stretch Database. That is, queries return results from both local and remote data.
 
-## Example
+## Examples
 
 The following example restores the authenticated connection between a local database enabled for Stretch and the remote database. It makes a copy of the remote data (recommended) and connects to the new copy.
 
@@ -82,7 +82,7 @@ EXEC sp_rda_reauthorize_db
     @with_copy = 1;
 ```
 
-## See also
+## Related content
 
 - [sys.sp_rda_deauthorize_db (Transact-SQL)](sys-sp-rda-deauthorize-db-transact-sql.md)
 - [Stretch Database](../../sql-server/stretch-database/stretch-database.md)

@@ -63,7 +63,7 @@ STATS_DATE ( object_id , stats_id )
  The following example returns the date of the most recent update for each statistics object on the `Person.Address` table.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT name AS stats_name,   
     STATS_DATE(object_id, stats_id) AS statistics_update_date  
@@ -75,7 +75,7 @@ GO
  If statistics correspond to an index, the *stats_id* value in the [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) catalog view is the same as the *index_id* value in the [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) catalog view, and the following query returns the same results as the preceding query. If statistics do not correspond to an index, they are in the sys.stats results but not in the sys.indexes results.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT name AS index_name,   
     STATS_DATE(object_id, index_id) AS statistics_update_date  

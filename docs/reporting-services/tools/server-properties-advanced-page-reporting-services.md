@@ -1,9 +1,9 @@
 ---
-title: "Server Properties Advanced Page"
+title: "Server properties Advanced page"
 description: Use the Advanced Server Properties page to set system properties on the report server. This tool provides a graphical user interface so that you can set properties without writing code.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 1/12/2023
+ms.date: 3/21/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
@@ -11,11 +11,11 @@ ms.custom: updatefrequency5
 monikerRange: ">=sql-server-2016"
 ---
 
-# Server Properties Advanced Page - Power BI Report Server & Reporting Services
+# Server properties Advanced page - Power BI Report Server & Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-Use this page to set system properties on the report server. There are a number of ways to set system properties. This tool provides a graphical user interface so that you can set properties without having to write code.
+Use this page to set system properties on the report server. There are many ways to set system properties. This tool provides a graphical user interface so that you can set properties without having to write code.
 
 To open this page, start SQL Server Management Studio, connect to a report server instance, right-click the report server name, and select **Properties**. Select **Advanced** to open this page.
 
@@ -31,25 +31,25 @@ Indicates whether the response to the client request can be exposed when the `cr
 
 *Power BI Report Server, Reporting Services 2017 and later only* 
 
-A comma-separated list of headers that the server will allow when a client makes a request. This property can be an empty string, specifying * will allow all headers.
+A comma-separated list of headers that the server allows when a client makes a request. This property can be an empty string, specifying * allows all headers.
 
 ### AccessControlAllowMethods
 
 *Power BI Report Server, Reporting Services 2017 and later only* 
 
-A comma-separated list of HTTP methods that the server will allow when a client makes a request. The default values are (GET, PUT, POST, PATCH, DELETE), specifying * will allow all methods.
+A comma-separated list of HTTP methods that the server allows when a client makes a request. The default values are (GET, PUT, POST, PATCH, DELETE), specifying * allows all methods.
 
 ### AccessControlAllowOrigin
 
 *Power BI Report Server, Reporting Services 2017 and later only* 
 
-A comma-separated list of origins that the server will allow when a client makes a request. The default value is blank, which prevents all requests, specifying * will allow all origins when credentials aren't set; if credentials are specified an explicit list of origins must be specified.
+A comma-separated list of origins that the server allows when a client makes a request. The default value is blank, which prevents all requests. Specifying * allows all origins when credentials aren't set. If credentials are specified, an explicit list of origins must be specified.
 
 ### AccessControlExposeHeaders
 
 *Power BI Report Server, Reporting Services 2017 and later only* 
 
-A comma-separated list of headers that the server will expose to clients. The default value is blank.
+A comma-separated list of headers that the server exposes to clients. The default value is blank.
 
 ### AccessControlMaxAge
 
@@ -61,13 +61,13 @@ Specifies the number of seconds the results of the preflight request can be cach
 
 *Power BI Report Server, Reporting Services 2017 and later only* 
 
-Set extensions of resources that can be uploaded to the report server. Extensions for built-in file types like &ast;.rdl and &ast;.pbix aren't required to be included. Default is "&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx".
+Set extensions of resources that can be uploaded to the report server. Extensions for built-in file types like &ast;.rdl and &ast;.pbix aren't required to be included. Default is `&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx`.
 
 ### CustomHeaders 
 
-*Power BI Report Server January 2020, Reporting Services 2019 and later only*
+*Power BI Report Server, Reporting Services 2019 and later only*
 
-Sets header values for all URLs matching the specified regex pattern. Users can update the CustomHeaders value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML. By default in Reporting Services 2019, there are no custom headers and the value is blank. By default in Power BI Report Server January 2020 and later, the value is this:
+Sets header values for all URLs matching the specified regex pattern. Users can update the CustomHeaders value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML. By default in Reporting Services 2019, there are no custom headers and the value is blank. By default in Power BI Report Server January 2020 and later, the value is:
 
 ```xml
 <CustomHeaders>
@@ -82,7 +82,7 @@ Sets header values for all URLs matching the specified regex pattern. Users can 
 > [!NOTE]
 > Too many headers may impact performance. 
 
-We recommend validating the configuration of your topology to ensure the set of headers is compatible with your deployment of Reporting Services. It's possible to choose settings that cause errors in browsers if the browsers don't also have the appropriate settings. For example, you shouldn't add an HSTS configuration if your server isn't configured for https. Incompatible headers may result in browser rendering errors.
+We recommend validating the configuration of your topology to ensure the set of headers is compatible with your deployment of Reporting Services. It's possible to choose settings that cause errors in browsers if the browsers don't also have the appropriate settings. For example, you shouldn't add an HSTS configuration if your server isn't configured for https. Incompatible headers might result in browser rendering errors.
 
 #### CustomHeaders XML format
 
@@ -96,9 +96,9 @@ We recommend validating the configuration of your topology to ensure the set of 
 </CustomHeaders>
 ```
 
-#### Setting the CustomHeaders property
+#### Set the CustomHeaders property
 
-- You can set it using [SetSystemProperties](/dotnet/api/reportservice2010.reportingservice2010.setsystemproperties) SOAP endpoint passing CustomHeaders property as parameter.
+- You can set it by using [SetSystemProperties](/dotnet/api/reportservice2010.reportingservice2010.setsystemproperties) SOAP endpoint passing CustomHeaders property as parameter.
 - You can use REST endpoint [UpdateSystemProperties](https://app.swaggerhub.com/apis/microsoft-rs/PBIRS/2.0#/System/UpdateSystemProperties):  `/System/Properties` passing CustomHeaders property
 
 #### Example
@@ -121,10 +121,10 @@ The below example shows how to set the HSTS and other custom headers for URLs wi
 ```
 
 The first header in the above XML adds `Strict-Transport-Security: max-age=86400; includeSubDomains=true` header to the matched requests.
-- http://adventureworks/Reports/mobilereport/New%20Mobile%20Report - Regex matched and will set HSTS header
+- http://adventureworks/Reports/mobilereport/New%20Mobile%20Report - Regex matched and sets HSTS header
 - http://adventureworks/ReportServer/mobilereport/New%20Mobile%20Report – Match Failed
 
-The second header in above XML adds `Embed: True` header for URL which contains `/reports/` and `rs:embed=true` query parameter.
+The second header in the previous XML example adds `Embed: True` header for the URL that contains `/reports/` and `rs:embed=true` query parameter.
 - https://adventureworks/reports/mobilereport/New%20Mobile%20Report?rs:embed=true - Match
 - https://adventureworks/reports/mobilereport/New%20Mobile%20Report?rs:embed=false - Fail to Match
 
@@ -152,7 +152,7 @@ Specifies the number of seconds until a report edit session times out. The defau
 When enabled, Power BI reports load the latest certified custom visuals from a content delivery network (CDN) hosted by Microsoft. If your server doesn't have access to internet resources, you can turn off this option. In that case, custom visuals are loaded from the report that was published to the server. Default is **True**.  
 
 ###  EnableClientPrinting  
-Determines whether the RSClientPrint ActiveX control is available for download from the report server. The valid values are **true** and **false**. The default value is **true**. For more information about additional settings that are required for this control, see [Enable and Disable Client-Side Printing for Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+Determines whether the RSClientPrint ActiveX control is available for download from the report server. The valid values are **true** and **false**. The default value is **true**. For more information about other settings that are required for this control, see [Enable and disable client-side printing for Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
 
 ### EnableCustomVisuals 
 
@@ -161,7 +161,7 @@ Determines whether the RSClientPrint ActiveX control is available for download f
 To enable the display of Power BI custom visuals. Values are True/False. *Default is True.*  
 
 ###  EnableExecutionLogging  
-Indicates whether report execution logging is enabled. The default value is **true**. For more information about the report server execution log, see [Report Server ExecutionLog and the ExecutionLog3 View](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
+Indicates whether report execution logging is enabled. The default value is **true**. For more information about the report server execution log, see [Report server ExecutionLog and the ExecutionLog3 view](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
 
 ### EnableIntegratedSecurity
 Determines whether Windows-integrated security is supported for report data source connections. The default is **True**. The valid values are as follows:
@@ -169,12 +169,12 @@ Determines whether Windows-integrated security is supported for report data sour
 |Values|Description|
 |---------|---------|
 |**True**|Windows-integrated security is enabled.|
-|**False**|Windows-integrated security isn't enabled. Report data sources that are configured to use Windows-integrated security will not run.|
+|**False**|Windows-integrated security isn't enabled. Report data sources that are configured to use Windows-integrated security doesn't run.|
 
 ### EnableLoadReportDefinition
 Select this option to specify whether users can perform an unplanned report execution from a Report Builder report. Setting this option determines the value of the **EnableLoadReportDefinition** property on the report server.  
 
-If you clear this option, the property is set to False. Report server won't generate clickthrough reports for reports that use a report model as a data source. Any calls to the LoadReportDefinition method are blocked.  
+If you clear this option, the property is set to False. Report server doesn't generate clickthrough reports for reports that use a report model as a data source. Any calls to the LoadReportDefinition method are blocked.  
 
 Turning off this option mitigates a threat whereby a malicious user launches a denial of service attack by overloading the report server with LoadReportDefinition requests.  
 
@@ -195,9 +195,9 @@ Indicates whether or not a customer can export underlying data from Power BI vis
 
 ### EnablePowerBIReportMigrate  
 
-*Power BI Report Server September 2022, Reporting Services 2022 and later only*
+*Power BI Report Server, Reporting Services 2022 and later only*
 
-Enables .rdl report migrations to Power BI using the publish feature in the web portal. The default is **true**. The valid values are as follows:
+Enables .rdl report migrations to Power BI by using the feature to publish in the web portal. The default is **true**. The valid values are as follows:
 
 |Values |Description  |
 |---------|---------|
@@ -207,10 +207,10 @@ Enables .rdl report migrations to Power BI using the publish feature in the web 
 For more information, see [Publish .rdl files to Power BI from Power BI Report Server and Reporting Services](/power-bi/guidance/publish-reporting-services-power-bi-service).
 
 ### EnableRemoteErrors
-Includes external error information (for example, error information about report data sources) with the error messages that are returned for users who request reports from remote computers. Valid values are **true** and **false**. The default value is **false**. For more information, see [Enable Remote Errors &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  
+Includes external error information (for example, error information about report data sources) with the error messages that are returned for users who request reports from remote computers. Valid values are **true** and **false**. The default value is **false**. For more information, see [Enable remote errors &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  
 
 ### EnableTestConnectionDetailedErrors
-Indicates whether to send detailed error messages to the client computer when users test data source connections using the report server. The default value is **true**. If the option is set to **false**, only generic error messages are sent.
+Indicates whether to send detailed error messages to the client computer when users test data source connections by using the report server. The default value is **true**. If the option is set to **false**, only generic error messages are sent.
 
 ###  ExecutionLogDaysKept  
 The number of days to keep report execution information in the execution log. Valid values for this property include **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, entries aren't deleted from the Execution Log table. The default value is **60**.  
@@ -239,7 +239,7 @@ Exclude/included Client IP Address when INFO Logging in Enabled. Default is **
 |Values |Description  |
 |---------|---------|
 |**True** | Client IP is logged  |
-| **False** | Client IP is not logged |
+| **False** | Client IP isn't logged |
 
 ### MaxFileSizeMb
 Set the max file size of the report in MB. *Default is 1000.  Max is 2000.*
@@ -273,18 +273,18 @@ Set the address of your Office Online Server instance for viewing Excel Workbook
 
 ### PowerBIMigrateCountLimit
 
-*Power BI Report Server September 2022, Reporting Services 2022 and later only*
+*Power BI Report Server, Reporting Services 2022 and later only*
 
 The maximum number of reports that can be migrated to Power BI at a time. *Default is 100.*
 
 ### PowerBIMigrateUrl  
 
-*Power BI Report Server September 2022, Reporting Services 2022 and later only*
+*Power BI Report Server, Reporting Services 2022 and later only*
 
 URL used to define the Power BI cloud endpoint to use. *Default is https://app.powerbi.com*
 
 ### RDLXReportTimetout
-RDLX report *(Power View reports in a SharePoint Server)* processing timeout value, in seconds, for all reports managed in the report server namespace. This value can be overridden at the report level. If this property is set, the report server attempts to stop the processing of a report when the specified time has expired. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, reports in the namespace don't time out during processing. The default value is **1800**.
+RDLX report *(Power View reports in a SharePoint Server)* processing timeout value, in seconds, for all reports managed in the report server namespace. This value can be overridden at the report level. If this property is set, the report server attempts to stop the processing of a report when the specified time expires. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, reports in the namespace don't time out during processing. The default value is **1800**.
 
 > [!NOTE]
 > Power View support is no longer available after SQL Server 2017.
@@ -297,9 +297,12 @@ Requires Intune to access your organization's reports via the Power BI mobile ap
 
 ### RestrictedResourceMimeTypeForUpload
 
-*Power BI Report Server January 2019, Reporting Services 2017 and later only* 
+*Power BI Report Server, Reporting Services 2017 and later only* 
 
-Set of mime types users aren't allowed to upload content with. Any resources that are already stored with a restricted mime type can only be downloaded as an application/octet-stream instead of being opened/executed by the browser.  By default, there are no restricted items in this list, but we recommended that organizations populate this to provide the most secure experience.
+Set of mime types users aren't allowed to upload content with. Any resources that are already stored with a restricted mime type can only be downloaded as an application/octet-stream. By default this list will contain 'text/html' unless you had previously allowed the upload of *.html files. We recommended that organizations populate this list to provide the most secure experience.
+
+> [!NOTE]
+> You cannot add 'text\html' to this list if *.html is in the AllowedResourceExtensionsForUpload property.
 
 ### ScheduleRefreshTimeoutMinutes 
 
@@ -335,19 +338,19 @@ Defines how snapshots are compressed. The default value is **SQL**. The valid va
 Specifies the maximum number of days that a stored parameter can be stored. Valid values are **-1**, **+1** through **2,147,483,647**. The default value is **180** days.  
 
 ### StoredParametersThreshold
-Specifies the maximum number of parameter values that can be stored by the report server. Valid values are **-1**, **+1** through **2,147,483,647**. The default value is **1500**.  
+Specifies the maximum number of parameter values that the report server can store. Valid values are **-1**, **+1** through **2,147,483,647**. The default value is **1500**.  
 
 ### SupportedHyperlinkSchemes 
 
-*Power BI Report Server January 2019, Reporting Services 2019 and later only* 
+*Power BI Report Server, Reporting Services 2019 and later only* 
 
-Sets a comma separated list of the URI schemes allowed to be defined on Hyperlink actions that are allowed to be rendered or "&ast;" to enable all hyperlink schemes. For example, setting "http, https" would allow hyperlinks to "https://www. contoso.com", but would remove hyperlinks to "mailto:bill@contoso.com" or "javascript:window.open('www.contoso.com', '_blank')". Default is "&ast;".
+Sets a comma separated list of the URI schemes allowed to be defined on Hyperlink actions can be rendered or "&ast;" to enable all hyperlink schemes. For example, setting "http, https" would allow hyperlinks to `https://www. contoso.com`, but would remove hyperlinks to `mailto:bill@contoso.com` or `javascript:window.open('www.contoso.com', '_blank')`. Default is `&ast;`.
 
 ### SystemReportTimeout
-The default report processing timeout value, in seconds, for all reports managed in the report server namespace. This value can be overridden at the report level. If this property is set, the report server attempts to stop the processing of a report when the specified time has expired. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, reports in the namespace don't time out during processing. The default value is **1800**.  
+The default report processing timeout value, in seconds, for all reports managed in the report server namespace. This value can be overridden at the report level. If this property is set, the report server attempts to stop the processing of a report when the specified time expires. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, reports in the namespace don't time out during processing. The default value is **1800**.  
 
 ### SystemSnapshotLimit
-The maximum number of snapshots that are stored for a report. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, there is no snapshot limit.  
+The maximum number of snapshots that are stored for a report. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, there's no snapshot limit.  
 
 ### TileViewByDefault
 
@@ -370,14 +373,14 @@ Set all the external file formats that open within the browser under the Reporti
 ### UseSessionCookies
 Indicates whether the report server should use session cookies when communicating with client browsers. The default value is **true**.  
 
-## See Also
+## Related content
 
-[Set Report Server Properties &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
-[Connect to a Report Server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
-[Reporting Services Properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties.md)   
-[Report Server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
-[Report Server System Properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)   
-[Script Deployment and Administrative Tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
-[Enable and Disable My Reports](../../reporting-services/report-server/enable-and-disable-my-reports.md)  
+[Set report server properties &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)    
+[Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)    
+[Reporting Services properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties.md)    
+[Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)    
+[Report server system properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)   
+[Script deployment and administrative tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
+[Enable and disable My Reports](../../reporting-services/report-server/enable-and-disable-my-reports.md)  
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

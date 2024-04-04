@@ -8,6 +8,8 @@ ms.date: 08/17/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: quickstart
+ms.custom:
+  - linux-related-content
 ---
 
 # Quickstart: Deploy a SQL Server Linux container to Kubernetes using Helm charts
@@ -148,12 +150,9 @@ Once you've connected, you'll be able to expand the SQL Server instance in **Obj
 
 If you're not going to continue using your AKS cluster, remember to [delete your cluster](/azure/aks/kubernetes-walkthrough#delete-the-cluster).
 
-## See also
+## Related content
 
 - [Quickstart: Deploy SQL Server on Linux using an Ansible playbook](sql-server-linux-deploy-ansible.md)
-
-## Next steps
-
 - [Configure Active Directory authentication with SQL Server on Linux-based containers using adutil](sql-server-linux-containers-ad-auth-adutil-tutorial.md)
 - [Secure SQL Server Docker containers](sql-server-linux-docker-container-security.md)
 - [Troubleshooting SQL Server Docker containers](sql-server-linux-docker-container-troubleshooting.md)

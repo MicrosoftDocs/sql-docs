@@ -37,7 +37,7 @@ sys.sp_cdc_help_jobs
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 | Column name | Data type | Description |
 | --- | --- | --- |
@@ -56,7 +56,7 @@ Requires membership in the **db_owner** fixed database role.
 
 ## Examples
 
-The following example returns information about the defined capture and cleanup jobs for the `AdventureWorks2022` database.
+The following example returns information about the defined capture and cleanup jobs for the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
 USE AdventureWorks2022;
@@ -66,7 +66,7 @@ EXEC sys.sp_cdc_help_jobs;
 GO
 ```
 
-## See also
+## Related content
 
 - [dbo.cdc_jobs (Transact-SQL)](../system-tables/dbo-cdc-jobs-transact-sql.md)
 - [sys.sp_cdc_add_job (Transact-SQL)](sys-sp-cdc-add-job-transact-sql.md)

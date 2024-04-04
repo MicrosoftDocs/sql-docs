@@ -48,10 +48,9 @@ ms.custom: intro-installation
 |Enable Data Quality Services (DQS) integration|For users of the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], enable integration with the DQS feature, which can be used to match similar data.|[Enable Data Quality Services Integration with Master Data Services](../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md)|  
 |Deploy a sample model|Sample model packages are installed with Master Data Services, and can be deployed using MDSModelDeploy.exe.|[Deploying MDS Samples in SQL Server](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md)|
   
- If you encounter issues during the installation process or initial configuration, see [Troubleshooting Installation and Configuration Issues](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-installation-and-configuration-issues-master-data-services.aspx) on TechNet Wiki.  
+ If you encounter issues during the installation process or initial configuration, see [Troubleshooting Installation and Configuration Issues](../../master-data-services/master-data-services-installation-and-configuration.md).  
   
  If you no longer need [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] on a computer, you can uninstall [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] and determine whether to remove items that are not affected by the uninstall process. For more information, see [Uninstall and Remove Master Data Services](../../sql-server/install/uninstall-and-remove-master-data-services.md).  
   
 ## See Also  
  [Install SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
-  

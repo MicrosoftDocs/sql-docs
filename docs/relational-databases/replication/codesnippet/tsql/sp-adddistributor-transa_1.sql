@@ -19,7 +19,7 @@ SET @publisher = $(DistPubServer);
 -- Specify the replication working directory.
 SET @directory = N'\\' + $(DistPubServer) + '\repldata';
 -- Specify the publication database.
-SET @publicationDB = N'AdventureWorks2012'; 
+SET @publicationDB = N'AdventureWorks2022'; 
 
 -- Install the server MYDISTPUB as a Distributor using the defaults,
 -- including autogenerating the distributor password.
@@ -33,7 +33,7 @@ EXEC sp_adddistributiondb @database = @distributionDB,
     @security_mode = 1;
 GO
 
--- Create a Publisher and enable AdventureWorks2012 for replication.
+-- Create a Publisher and enable AdventureWorks2022 for replication.
 -- Add MYDISTPUB as a publisher with MYDISTPUB as a local distributor
 -- and use Windows Authentication.
 DECLARE @distributionDB AS sysname;

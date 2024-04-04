@@ -55,7 +55,7 @@ For **varchar** columns declared with the **max** specifier (**varchar(max)**), 
 This example shows the return values for a column of type `varchar(40)` and a column of type `nvarchar(40)`:
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE TABLE t1(c1 VARCHAR(40), c2 NVARCHAR(40) );  
 GO  

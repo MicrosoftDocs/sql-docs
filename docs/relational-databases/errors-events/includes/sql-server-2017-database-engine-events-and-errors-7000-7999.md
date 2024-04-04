@@ -1,8 +1,7 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
-ms.date: 07/06/2023
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 01/11/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -62,6 +61,7 @@ ms.topic: include
 | 7306 | 16 | No | Cannot open the table "%ls" from OLE DB provider "%ls" for linked server "%ls". %ls |
 | 7307 | 16 | No | Cannot obtain the data source of a session from OLE DB provider "%ls" for linked server "%ls". This action must be supported by the provider. |
 | [7308](../mssqlserver-7308-database-engine-error.md) | 16 | No | OLE DB provider '%ls' cannot be used for distributed queries because the provider is configured to run in single-threaded apartment mode. |
+| 7310 | 16 | No | Cannot obtain the set of schema rowsets supported by OLE DB provider "%ls" for linked server "%ls". The provider supports the interface, but returns a failure code when it is used. |
 | 7311 | 16 | No | Cannot obtain the schema rowset "%ls" for OLE DB provider "%ls" for linked server "%ls". The provider supports the interface, but returns a failure code when it is used. |
 | 7312 | 16 | No | Invalid use of schema or catalog for OLE DB provider "%ls" for linked server "%ls". A four-part name was supplied, but the provider does not expose the necessary interfaces to use a catalog or schema. |
 | 7313 | 16 | No | An invalid schema or catalog was specified for the provider "%ls" for linked server "%ls". |
@@ -101,7 +101,7 @@ ms.topic: include
 | 7354 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" supplied invalid metadata for column "%ls". %ls |
 | 7355 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" supplied inconsistent metadata for a column. The name was changed at execution time. |
 | 7356 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" supplied inconsistent metadata for a column. The column "%ls" (compile-time ordinal %ld) of object "%ls" was reported to have a "%ls" of %ld at compile time and %ld at run time. |
-| 7357 | 16 | No | Cannot process the object "%ls". The OLE DB provider "%ls" for linked server "%ls" indicates that either the object has no columns or the current user does not have permissions on that object. |
+| [7357](../mssqlserver-7357-database-engine-error.md) | 16 | No | Cannot process the object "%ls". The OLE DB provider "%ls" for linked server "%ls" indicates that either the object has no columns or the current user does not have permissions on that object. |
 | 7358 | 16 | No | Cannot execute the query. The OLE DB provider "%ls" for linked server "%ls" did not provide an appropriate interface to access the text, ntext, or image column "%ls.%ls". |
 | 7359 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" reported a change in schema version between compile time ("%ls") and run time ("%ls") for table "%ls". |
 | 7360 | 16 | No | Cannot get the length of a storage object from OLE DB provider "%ls" for linked server "%ls" for table "%ls", column "%ls". |
@@ -122,7 +122,7 @@ ms.topic: include
 | 7377 | 16 | No | Cannot specify an index hint for a remote data source. |
 | 7380 | 16 | No | Table-valued parameters are not allowed in remote calls between servers. |
 | 7390 | 16 | No | The requested operation could not be performed because OLE DB provider "%ls" for linked server "%ls" does not support the required transaction interface. |
-| 7391 | 16 | No | The operation could not be performed because OLE DB provider "%ls" for linked server "%ls" was unable to begin a distributed transaction. |
+| [7391](../mssqlserver-7391-database-engine-error.md) | 16 | No | The operation could not be performed because OLE DB provider "%ls" for linked server "%ls" was unable to begin a distributed transaction. |
 | 7392 | 16 | No | Cannot start a transaction for OLE DB provider "%ls" for linked server "%ls". |
 | 7393 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" reported an error 0x%08X aborting the current transaction. |
 | 7394 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" reported an error committing the current transaction. |
@@ -130,7 +130,7 @@ ms.topic: include
 | 7396 | 16 | No | Varchar(max), nvarchar(max), varbinary(max) and large CLR type data types are not supported as return value or output parameter to remote queries. |
 | 7397 | 16 | No | Remote function returned varchar(max), nvarchar(max), varbinary(max) or large CLR type value which is not supported. |
 | 7398 | 16 | No | The OLE DB provider '%ls' for linked server '%ls' reported an error committing the current inserts. |
-| 7399 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" reported an error. %ls |
+| [7399](../mssqlserver-7399-database-engine-error.md) | 16 | No | The OLE DB provider "%ls" for linked server "%ls" reported an error. %ls |
 | 7401 | 16 | No | The OLE DB provider "%ls" returned invalid literal prefix/suffix string. |
 | 7403 | 16 | No | The OLE DB provider "%ls" has not been registered. |
 | 7404 | 16 | No | The server could not load DCOM. |

@@ -36,15 +36,15 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 
 #### [ @profile_id = ] *profile_id*
 
-The profile ID to update. *@profile_id* is **int**, with a default of NULL. At least one of *@profile_id* or *@profile_name* must be specified. If both are specified, the procedure changes the name of the profile.
+The profile ID to update. *@profile_id* is **int**, with a default of `NULL`. At least one of *@profile_id* or *@profile_name* must be specified. If both are specified, the procedure changes the name of the profile.
 
 #### [ @profile_name = ] '*profile_name*'
 
-The name of the profile to update or the new name for the profile. *@profile_name* is **sysname**, with a default of NULL. At least one of *@profile_id* or *@profile_name* must be specified. If both are specified, the procedure changes the name of the profile.
+The name of the profile to update or the new name for the profile. *@profile_name* is **sysname**, with a default of `NULL`. At least one of *@profile_id* or *@profile_name* must be specified. If both are specified, the procedure changes the name of the profile.
 
 #### [ @description = ] '*description*'
 
-The new description for the profile. *@description* is **nvarchar(256)**, with a default of NULL.
+The new description for the profile. *@description* is **nvarchar(256)**, with a default of `NULL`.
 
 ## Return code values
 
@@ -83,9 +83,9 @@ EXEC msdb.dbo.sysmail_update_profile_sp
     @description = 'Profile to send alert e-mail to operators.';
 ```
 
-## See also
+## Related content
 
-- [Database Mail](../../relational-databases/database-mail/database-mail.md)
-- [Database Mail Configuration Objects](../../relational-databases/database-mail/database-mail-configuration-objects.md)
-- [Create a Database Mail Account](../../relational-databases/database-mail/create-a-database-mail-account.md)
+- [Database Mail](../database-mail/database-mail.md)
+- [Database Mail Configuration Objects](../database-mail/database-mail-configuration-objects.md)
+- [Create a Database Mail Account](../database-mail/create-a-database-mail-account.md)
 - [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)

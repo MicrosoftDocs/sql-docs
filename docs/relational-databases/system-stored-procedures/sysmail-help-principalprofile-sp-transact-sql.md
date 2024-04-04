@@ -36,25 +36,25 @@ sysmail_help_principalprofile_sp [ { [ @principal_id = ] principal_id | [ @princ
 
 #### [ @principal_id = ] *principal_id*
 
-The ID of the database user or role in the `msdb` database for the association to list. *@principal_id* is **int**, with a default of NULL. Either *@principal_id* or *@principal_name* must be specified.
+The ID of the database user or role in the `msdb` database for the association to list. *@principal_id* is **int**, with a default of `NULL`. Either *@principal_id* or *@principal_name* must be specified.
 
 #### [ @principal_name = ] '*principal_name*'
 
-The name of the database user or role in the `msdb` database for the association to list. *@principal_name* is **sysname**, with a default of NULL. Either *@principal_id* or *@principal_name* must be specified.
+The name of the database user or role in the `msdb` database for the association to list. *@principal_name* is **sysname**, with a default of `NULL`. Either *@principal_id* or *@principal_name* must be specified.
 
 #### [ @profile_id = ] *profile_id*
 
-The ID of the profile for the association to list. *@profile_id* is **int**, with a default of NULL. Either *@profile_id* or *@profile_name* may be specified.
+The ID of the profile for the association to list. *@profile_id* is **int**, with a default of `NULL`. Either *@profile_id* or *@profile_name* may be specified.
 
 #### [ @profile_name = ] '*profile_name*'
 
-The name of the profile for the association to list. *@profile_name* is **sysname**, with a default of NULL. Either *@profile_id* or *@profile_name* may be specified.
+The name of the profile for the association to list. *@profile_name* is **sysname**, with a default of `NULL`. Either *@profile_id* or *@profile_name* may be specified.
 
 ## Return code values
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 Returns a result set that contains the columns listed in the following table.
 
@@ -113,7 +113,7 @@ principal_id principal_name     profile_id  profile_name                   is_de
 5            danw               9           AdventureWorks Administrator   1
 ```
 
-## See also
+## Related content
 
-- [Database Mail](../../relational-databases/database-mail/database-mail.md)
+- [Database Mail](../database-mail/database-mail.md)
 - [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)

@@ -45,7 +45,7 @@ The name of the capture instance associated with a source table. *@capture_insta
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 | Column name | Data type | Description |
 | --- | --- | --- |
@@ -86,6 +86,6 @@ EXECUTE sys.sp_cdc_get_ddl_history
 GO
 ```
 
-## See also
+## Related content
 
 - [sys.sp_cdc_help_change_data_capture (Transact-SQL)](sys-sp-cdc-help-change-data-capture-transact-sql.md)

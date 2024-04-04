@@ -28,7 +28,7 @@ If the column name is one of the XPath node tests, the content is mapped as show
 The following query shows the use of the node tests as column names. It adds text nodes and comments in the resulting XML.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT E.BusinessEntityID "@EmpID",
         'Example of using node tests such as text(), comment(), processing-instruction()'  as "comment()",

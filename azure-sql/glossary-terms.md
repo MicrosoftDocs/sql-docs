@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & SQL Managed Instance
 description: A glossary of terms for working with Azure SQL Database, Azure SQL Managed Instance, and SQL on Azure VM.
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: wiassaf
+ms.reviewer: wiassaf, mathoma
 ms.date: 04/06/2022
 ms.service: sql-db-mi
 ms.subservice: service-overview
@@ -12,7 +12,7 @@ ms.topic: reference
 ms.custom: sqldbrb=4
 ---
 # Azure SQL glossary of terms
-[!INCLUDE[appliesto-asf](./includes/appliesto-asf.md)] 
+[!INCLUDE[appliesto-sqldb-sqlmi-sqlvm](./includes/appliesto-sqldb-sqlmi-sqlvm.md)] 
 
 ## Azure SQL Database
 
@@ -28,12 +28,12 @@ ms.custom: sqldbrb=4
 ||DTU-based purchasing model|The [Database Transaction Unit (DTU)-based purchasing model](database/service-tiers-dtu.md) is based on a bundled measure of compute, storage, and I/O resources. Compute sizes are expressed in DTUs for single databases and in elastic database transaction units (eDTUs) for elastic pools. |
 ||vCore-based purchasing model (recommended)| A virtual core (vCore) represents a logical CPU. The [vCore-based purchasing model](database/service-tiers-vcore.md) offers greater control over the hardware configuration to better match compute and memory requirements of the workload, pricing discounts for [Azure Hybrid Benefit (AHB)](azure-hybrid-benefit.md) and [Reserved Instance (RI)](database/reserved-capacity-overview.md), more granular scaling, and greater transparency in hardware details. Newer capabilities (for example, Hyperscale, serverless) are only available in the vCore model. |
 |Service tier|| The service tier defines the storage architecture, storage and I/O limits, and business continuity options. Options for service tiers vary by purchasing model. |
-||DTU-based service tiers | [Basic, standard, and premium service tiers](database/service-tiers-dtu.md#compare-service-tiers) are available in the DTU-based purchasing model.|
-||vCore-based service tiers (recommended) |[General purpose, Business Critical, and Hyperscale service tiers](database/service-tiers-sql-database-vcore.md#service-tiers) are available in the vCore-based purchasing model (recommended).|
+||DTU-based service tiers | [Basic, Standard, and Premium service tiers](database/service-tiers-dtu.md#compare-service-tiers) are available in the DTU-based purchasing model.|
+||vCore-based service tiers (recommended) |[General Purpose, Business Critical, and Hyperscale service tiers](database/service-tiers-sql-database-vcore.md#service-tiers) are available in the vCore-based purchasing model (recommended).|
 |Compute tier|| The compute tier determines whether resources are continuously available (provisioned) or autoscaled (serverless). Compute tier availability varies by purchasing model and service tier. Only the vCore purchasing model's General Purpose service tier makes serverless compute available.|
 ||Provisioned compute|The [provisioned compute tier](database/service-tiers-sql-database-vcore.md#compute) provides a specific amount of compute resources that are continuously provisioned independent of workload activity. Under the provisioned compute tier, you are billed at a fixed price per hour.
 ||Serverless compute| The [serverless compute tier](database/serverless-tier-overview.md) autoscales compute resources based on workload activity and bills for the amount of compute used per second. Azure SQL Database serverless is currently available in the vCore purchasing model's General Purpose service tier with standard-series (Gen5) hardware or newer.|
-|Hardware configuration| Available hardware configurations | The vCore-based purchasing model allows you to select the appropriate hardware configuration for your workload. [Hardware configuration options](database/service-tiers-sql-database-vcore.md#hardware-configuration) include standard series (Gen5), M-series, Fsv2-series, and DC-series.|
+|Hardware configuration| Available hardware configurations | The vCore-based purchasing model allows you to select the appropriate hardware configuration for your workload. [Hardware configuration options](database/service-tiers-sql-database-vcore.md#hardware-configuration) include standard series (Gen5), Fsv2-series, and DC-series.|
 |Compute size (service objective) ||Compute size (service objective) is the amount of CPU, memory, and storage resources available for a single database or elastic pool. Compute size also defines resource consumption limits, such as maximum IOPS, maximum log rate, etc.
 ||vCore-based sizing options| Configure the compute size for your database or elastic pool by selecting the appropriate service tier, compute tier, and hardware for your workload. When using an elastic pool, configure the reserved vCores for the pool, and optionally configure per-database settings. For sizing options and resource limits in the vCore-based purchasing model, see [vCore single databases](database/resource-limits-vcore-single-databases.md), and [vCore elastic pools](database/resource-limits-vcore-elastic-pools.md).|
 ||DTU-based sizing options| Configure the compute size for your database or elastic pool by selecting the appropriate service tier and selecting the maximum data size and number of DTUs. When using an elastic pool, configure the reserved eDTUs for the pool, and optionally configure per-database settings. For sizing options and resource limits in the DTU-based purchasing model, see [DTU single databases](database/resource-limits-dtu-single-databases.md) and [DTU elastic pools](database/resource-limits-dtu-elastic-pools.md).
@@ -50,16 +50,17 @@ ms.custom: sqldbrb=4
 ||Single instance| A single [managed instance](managed-instance/sql-managed-instance-paas-overview.md) is deployed to a dedicated set of isolated virtual machines that run inside the customer's virtual network subnet. These machines form a [virtual cluster](managed-instance/connectivity-architecture-overview.md#high-level-connectivity-architecture).  Multiple managed instances can be deployed into a single virtual cluster if desired. |
 ||Instance pool (preview)|[Instance pools](managed-instance/instance-pools-overview.md) enable you to deploy multiple managed instances to the same virtual machine. Instance pools enable you to migrate smaller and less compute-intensive workloads to the cloud without consolidating them in a single larger managed instance. |
 |Purchasing model|vCore-based purchasing model| SQL Managed Instance is available under the [vCore-based purchasing model](managed-instance/service-tiers-managed-instance-vcore.md). [Azure Hybrid Benefit](azure-hybrid-benefit.md) is available for managed instances. |
-|Service tier| vCore-based service tiers| SQL Managed Instance offers two service tiers. Both service tiers guarantee 99.99% availability and enable you to independently select storage size and compute capacity. Select either the [General Purpose or Business Critical service tier](managed-instance/sql-managed-instance-paas-overview.md#service-tiers) for a managed instance based upon your performance and latency requirements.|
+|Service tier| vCore-based service tiers| SQL Managed Instance offers [two service tiers](managed-instance/service-tiers-managed-instance-vcore.md) that guarantee 99.99% availability and enable you to independently select storage size and compute capacity.  Select from the General Purpose, or Business Critical service tier for a managed instance based upon your performance and latency requirements.|
 |Compute|Provisioned compute| SQL Managed Instance provides a specific amount of [compute resources](managed-instance/service-tiers-managed-instance-vcore.md#compute)  that are continuously provisioned independent of workload activity, and bills for the amount of compute provisioned at a fixed price per hour. |
 |Hardware configuration|Available hardware configurations| SQL Managed Instance [hardware configurations](managed-instance/service-tiers-managed-instance-vcore.md#hardware-configurations) include standard-series (Gen5), premium-series, and memory optimized premium-series hardware. |
 |Compute size | vCore-based sizing options | Compute size (service objective) is the maximum amount of CPU, memory, and storage resources available for a single managed instance or instance pool. Configure the compute size for your managed instance by selecting the appropriate service tier and hardware for your workload. Learn about [resource limits for managed instances](managed-instance/resource-limits.md). |
 
 
 ## SQL Server on Azure VMs
+
 |Context|Term|More information|
 |:---|:---|:---|
-|Azure service|SQL Server on Azure Virtual Machines (VMs) | [SQL Server on Azure VMs](virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md) enables you to use full versions of SQL Server in the cloud without having to manage any on-premises hardware. SQL Server VMs simplify licensing costs when you pay as you go. You have both SQL Server and OS access with some automated manageability features for SQL Server VMs, such as the [ SQL  IaaS Agent extension](virtual-machines/windows/sql-server-iaas-agent-extension-automate-management.md).|
+|Azure service|SQL Server on Azure Virtual Machines (VMs) | [SQL Server on Azure VMs](virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md) enables you to use full versions of SQL Server in the cloud without having to manage any on-premises hardware. SQL Server VMs simplify licensing costs when you pay as you go. You have both SQL Server and OS access with some automated manageability features for SQL Server VMs, such as the [SQL Server IaaS Agent extension](virtual-machines/windows/sql-server-iaas-agent-extension-automate-management.md).|
 | Server entity | Virtual machine or VM | Azure VMs run in many geographic regions around the world. They also offer various machine sizes. The virtual machine image gallery allows you to create a SQL Server VM with the right version, edition, and operating system.  |
 | Image | Windows VMs or Linux VMs | You can choose to deploy SQL Server VMs with [Windows-based images](virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md) or [Linux-based images](virtual-machines/linux/sql-server-on-linux-vm-what-is-iaas-overview.md). Image selection specifies both the OS version and SQL Server edition for your SQL Server VM. |
 | Pricing |  | Pricing for SQL Server on Azure VMs is based on SQL Server licensing, operating system (OS), and virtual machine cost. You can [reduce costs](virtual-machines/windows/pricing-guidance.md#reduce-costs) by optimizing your VM size and shutting down your VM when possible. |

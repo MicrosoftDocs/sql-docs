@@ -52,7 +52,7 @@ sys.fn_cdc_get_column_ordinal ( 'capture_instance','column_name')
  The following example obtains the ordinal position of the `VacationHours` column in the update mask for the `HumanResources_Employee` capture instance. That value is then used in the call to `sys.fn_cdc_is_bit_set` to extract information from the returned update mask.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @from_lsn binary(10), @to_lsn binary(10),  @VacationHoursOrdinal int;  
 SET @from_lsn = sys.fn_cdc_get_min_lsn('HumanResources_Employee');  

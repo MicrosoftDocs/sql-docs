@@ -63,7 +63,7 @@ The input parameters for the collection item. *@parameters* is **xml**, with a d
 
 ## Return code values
 
-`0` (success) or 1 (failure)
+`0` (success) or `1` (failure).
 
 ## Remarks
 
@@ -76,12 +76,12 @@ GO
 SELECT cs.collection_set_id,
     collection_set_uid,
     cs.name,
-    'is running' = CASE 
+    'is running' = CASE
         WHEN is_running = 0
             THEN 'No'
         ELSE 'Yes'
         END,
-    'cache mode' = CASE 
+    'cache mode' = CASE
         WHEN collection_mode = 0
             THEN 'Cached mode'
         ELSE 'Non-cached mode'
@@ -113,7 +113,7 @@ USE msdb;
 GO
 
 EXEC sp_syscollector_update_collection_item
-    @name = N'My custom TSQL query collector item',
+    @name = N'My custom T-SQL query collector item',
     @frequency = 3000;
 GO
 ```
@@ -127,8 +127,8 @@ USE msdb;
 GO
 
 EXEC sp_syscollector_update_collection_item
-    @name = N'My custom TSQL query collector item',
-    @new_name = N'My modified TSQL item';
+    @name = N'My custom T-SQL query collector item',
+    @new_name = N'My modified T-SQL item';
 GO
 ```
 
@@ -155,7 +155,7 @@ EXEC sp_syscollector_update_collection_item
 GO
 ```
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Data collection](../data-collection/data-collection.md)

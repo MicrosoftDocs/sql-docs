@@ -24,15 +24,15 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
  To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## Creating a Scalar User-Defined Function in Visual Basic  
- This code example shows how to create and remove a scalar user-defined function that has an input <xref:System.DateTime> object parameter and an integer return type in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. The user-defined function is created on the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database. The example creates a user-defined function, ISOweek, which takes a date argument and calculates the ISO week number. For this function to calculate correctly, the database DATEFIRST option must be set to 1 before the function is called.  
+ This code example shows how to create and remove a scalar user-defined function that has an input <xref:System.DateTime> object parameter and an integer return type in [!INCLUDE[visual-basic](../../../includes/visual-basic-md.md)]. The user-defined function is created on the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database. The example creates a user-defined function, ISOweek, which takes a date argument and calculates the ISO week number. For this function to calculate correctly, the database DATEFIRST option must be set to 1 before the function is called.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
 Dim srv As Server
 srv = New Server
-'Reference the AdventureWorks2012 2008R2 database.
+'Reference the AdventureWorks2022 database.
 Dim db As Database
-db = srv.Databases("AdventureWorks2012")
+db = srv.Databases("AdventureWorks2022")
 'Define a UserDefinedFunction object variable by supplying the parent database and the name arguments in the constructor.
 Dim udf As UserDefinedFunction
 udf = New UserDefinedFunction(db, "IsOWeek")
@@ -55,14 +55,14 @@ udf.Drop()
 ``` 
   
 ## Creating a Scalar User-Defined Function in Visual C#  
- This code example shows how to create and remove a scalar user-defined function that has an input <xref:System.DateTime> object parameter and an integer return type in [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]. The user-defined function is created on the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database. The example creates the user-defined function. `ISOweek`. This function takes a date argument and calculates the ISO week number. For this function to calculate correctly, the database `DATEFIRST` option must be set to `1` before the function is called.  
+ This code example shows how to create and remove a scalar user-defined function that has an input <xref:System.DateTime> object parameter and an integer return type in [!INCLUDE[c-sharp](../../../includes/c-sharp-md.md)]. The user-defined function is created on the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database. The example creates the user-defined function. `ISOweek`. This function takes a date argument and calculates the ISO week number. For this function to calculate correctly, the database `DATEFIRST` option must be set to `1` before the function is called.  
   
 ```csharp  
 {  
             //Connect to the local, default instance of SQL Server.   
            Server srv = new Server();  
-            //Reference the AdventureWorks2012 database.   
-           Database db = srv.Databases["AdventureWorks2012"];  
+            //Reference the AdventureWorks2022 database.   
+           Database db = srv.Databases["AdventureWorks2022"];  
   
             //Define a UserDefinedFunction object variable by supplying the parent database and the name arguments in the constructor.   
             UserDefinedFunction udf = new UserDefinedFunction(db, "IsOWeek");  
@@ -91,12 +91,12 @@ udf.Drop()
 ```  
   
 ## Creating a Scalar User-Defined Function in PowerShell  
- This code example shows how to create and remove a scalar user-defined function that has an input <xref:System.DateTime> object parameter and an integer return type in [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]. The user-defined function is created on the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database. The example creates the user-defined function. `ISOweek`. This function takes a date argument and calculates the ISO week number. For this function to calculate correctly, the database `DATEFIRST` option must be set to `1` before the function is called.  
+ This code example shows how to create and remove a scalar user-defined function that has an input <xref:System.DateTime> object parameter and an integer return type in [!INCLUDE[c-sharp](../../../includes/c-sharp-md.md)]. The user-defined function is created on the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database. The example creates the user-defined function. `ISOweek`. This function takes a date argument and calculates the ISO week number. For this function to calculate correctly, the database `DATEFIRST` option must be set to `1` before the function is called.  
   
 ```powershell   
-# Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
+# Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2022  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = get-item AdventureWorks2022  
   
 # Define a user defined function object variable by supplying the parent database and name arguments in the constructor.   
 $udf  = New-Object -TypeName Microsoft.SqlServer.Management.SMO.UserDefinedFunction `  

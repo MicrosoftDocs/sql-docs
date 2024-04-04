@@ -8,7 +8,7 @@ ms.date: 06/13/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-monikerRange: ">= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-ver16 || >=sql-server-linux-ver16 || =azuresqldb-mi-current"
 ---
 # sp_reset_dtc_log (Transact-SQL)
 
@@ -33,7 +33,7 @@ There are no arguments for this stored procedure.
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -47,7 +47,7 @@ Requires **sysadmin** or have CONTROL SERVER permissions.
 EXEC sp_reset_dtc_log;
 ```
 
-## See also
+## Related content
 
 - [sys.sp_manage_distributed_transaction (Transact-SQL)](sys-sp-manage-distributed-transaction.md)
 - [sys.dm_tran_distributed_transaction_stats (Transact-SQL)](../system-dynamic-management-views/sys-dm-tran-distributed-transaction-stats.md)

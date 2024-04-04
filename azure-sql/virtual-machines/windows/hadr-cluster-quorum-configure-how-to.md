@@ -54,7 +54,7 @@ A cloud witness requires an Azure Storage Account. To configure a storage accoun
 2. On the Hub menu, select New -> Data + Storage -> Storage account.
 3. In the Create a storage account page, do the following:
     1. Enter a name for your storage account. Storage account names must be between 3 and 24 characters in length and may contain numbers and lowercase letters only. The storage account name must also be unique within Azure.
-    2. For **Account kind**, select **General purpose**.
+    2. For **Account kind**, select **General Purpose**.
     3. For **Performance**, select **Standard**.
     2. For **Replication**, select **Local-redundant storage (LRS)**.
 
@@ -104,7 +104,7 @@ Use the Quorum Configuration Wizard built into Failover Cluster Manager to confi
    2. (Required parameter) Access Key corresponding to the Storage Account.
        1. When creating for the first time, use Primary Access Key 
        2. When rotating the Primary Access Key, use Secondary Access Key
-   3. (Optional parameter) If you intend to use a different Azure service endpoint (for example the Microsoft Azure service in China), then update the endpoint server name.
+   3. (Optional parameter) If you intend to use a different Azure service endpoint (for example, Azure operated by 21Vianet), update the endpoint server name.
 
     ![Snapshot of the Cloud Witness configuration pane in the Cluster Quorum wizard](./media/hadr-create-quorum-windows-failover-cluster-how-to/cloud-witness-10.png)
       

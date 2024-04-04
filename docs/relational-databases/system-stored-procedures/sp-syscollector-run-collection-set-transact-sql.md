@@ -65,7 +65,7 @@ This procedure starts the collection and upload jobs for the specified collectio
 
 Requires membership in the **dc_operator** (with EXECUTE permission) fixed database role to execute this procedure.
 
-## Example
+## Examples
 
 Start a collection set using its identifier.
 
@@ -76,7 +76,7 @@ EXEC sp_syscollector_run_collection_set
     @collection_set_id = 1;
 ```
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Data collection](../data-collection/data-collection.md)

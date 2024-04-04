@@ -63,7 +63,7 @@ If a trigger applies to a column, the `UPDATED` value will return as `true` or `
  The following example creates a trigger that prints a message to the client when anyone tries to update the `StateProvinceID` or `PostalCode` columns of the `Address` table.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF EXISTS (SELECT name FROM sys.objects  
       WHERE name = 'reminder' AND type = 'TR')  

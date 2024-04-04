@@ -1,14 +1,15 @@
 ---
 title: "Export a paginated report to Microsoft Word (Report Builder)"
-description: The Word rendering extension renders paginated reports to the Microsoft Word format (.docx). The format is Office Open XML.
+description: The Microsoft Word rendering extension renders paginated reports to the Microsoft Word format (.docx). The format is Office Open XML.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/02/2021
+ms.date: 09/20/2023
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
+
 # Export a paginated report to Microsoft Word (Report Builder)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
@@ -24,7 +25,7 @@ After you export the report to a Word document, you can change the contents of y
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-## <a id="ReportItemsWord"></a> Report Items in Word
+## <a id="ReportItemsWord"></a> Report items in Word
 
 Reports exported to Word appear as a nested table that represents the report body. A tablix data region is rendered as a nested table that reflects the structure of the data region in the report. Text boxes and rectangles are each rendered as a cell within the table. The text box value is displayed inside the cell.
 
@@ -38,17 +39,17 @@ After the report is opened in Word, Word repaginates the entire report again bas
 
 This renderer supports only logical page breaks.
 
-### Page Sizing
+### Page sizing
 
 When the report is rendered, the Word page height and width are set by the following RDL properties: paper size height and width, left and right page margins, and the top and bottom page margins.
 
-### Page Width
+### Page width
 
 Word supports page widths that are up to 22 inches wide. If the report is wider than 22 inches, the renderer will still render the report; however, Word will not display the report contents while in print layout view or reading layout view. To view the data, switch to normal view or Web layout view. In these views, Word reduces the amount of whitespace, thereby displaying more of your report contents.
 
 When rendered, the report grows as wide as required, up to 22 inches, to display the contents. The minimum width of the report is based on the RDL Width property in the Properties pane.
 
-## <a id="DocumentProperties"></a> Document Properties
+## <a id="DocumentProperties"></a> Document properties
 
 The Word renderer writes the following metadata to the DOCX file.
 
@@ -58,7 +59,7 @@ The Word renderer writes the following metadata to the DOCX file.
 | Report.Author | Author |
 | Report.Description | Comments |
 
-## <a id="ReportHeadersFooters"></a> Page Headers and Footers
+## <a id="ReportHeadersFooters"></a> Page headers and footers
 
 Page headers and footers are rendered as header and footer regions in Word. If a report page number or an expression that indicates the total number of report pages appears in the page header or footer, they are translated to a Word field so that the accurate page number is displayed in the rendered report. If the header or footer height is set in the report, Word cannot support this setting. The PrintOnFirstPage property can under some circumstances specify whether text in a page header page footer prints on the first page of a report. If the rendered report has multiple pages and each page contains only a single section, then you can set PrintOnFirstPage to False and the text is suppressed on the first and page; otherwise, the text prints regardless of the value of the PrintOnFirstPage property.
 
@@ -78,23 +79,33 @@ This occurs because Word renderer parses the report for fields related to pagina
 
 To avoid this problem, use multiple text runs instead of one complex expression when you use expressions in footers and headers. The following two expressions are equivalent. The first one is a complex expression the second one uses text runs. The Word renderer parses only the second expression successfully.
 
-## Document Map
+## Document map
 
-If any document map labels exist in the report, they are rendered as Word Table of Contents (TOC) labels on the respective report items and groups. The document map label is used as the label text for the TOC labels. The target link is positioned near the item on which the label is set. While a TOC is not created for you in the Word document, you can build your own TOC using the document map labels that are rendered in the report. See [Create a document map or table of contents (Report Builder)](../report-design/create-a-document-map-report-builder-and-ssrs.md) for more information.
+If any document map labels exist in the report, they're available to be used as Word Table of Contents (TOC) labels on the respective report items and groups. The document map label is used as the label text for the TOC labels. The target link is positioned near the item on which the label is set. While a TOC isn't created for you on export in the Word document, you can build your own TOC using the document map labels that are rendered in the report with the following steps.
+
+1. In the Word document, select the position where the TOC should go.
+1. From the ribbon, select **Insert**.
+1. Select the **Quick Parts** dropdown menu.
+1. Select **Field** from the dropdown menu.
+1. From Field names, select **TOC**, and select the **Table of Contents** button from the **Field properties** pane.
+1. In the popup window, select the **Options** button, and ensure the **Table entry fields** box is **checked**.
+1. Select **OK** from both popup windows to complete the process and generate the TOC.
+
+See [Create a document map or table of contents (Report Builder)](../report-design/create-a-document-map-report-builder-and-ssrs.md) for more information about creating document maps.
 
 ## <a id="Interactivity"></a> Interactivity
 
 Some interactive elements are supported in Word. The following is a description of specific behaviors.
 
-### Show and Hide
+### Show and hide
 
 The Word renderer renders report items based on their state when rendered. If a report item's state is hidden, the report item is not rendered in the Word document. If a report item's state is shown, the report item is rendered in the Word document. Toggle functionality is not supported in Word.
 
-### Hyperlink and Drillthrough Links
+### Hyperlink and drillthrough links
 
 Hyperlinks and drillthrough links on text box and image report items are rendered as hyperlinks in the Word document. When you select the hyperlink, the default Web browser opens and navigates to the URL. When you select the drillthrough hyperlink, the originating report server is accessed.
 
-### Interactive Sorting
+### Interactive sorting
 
 The report contents are rendered based on how they are currently sorted within the report data region. Word does not support interactive sorting. After the report is rendered, you can apply table sorting within Word.
 
@@ -102,11 +113,11 @@ The report contents are rendered based on how they are currently sorted within t
 
 Bookmarks in the report are rendered as Word bookmarks. Bookmark links are rendered as hyperlinks that connect to the bookmark labels within the document. Bookmark labels must be fewer than 40 characters long. The only special character that can be used in a bookmark label is an underscore (_). Unsupported special characters are stripped from the bookmark label name and, if the name is longer than 40 characters, the name is truncated. If there are duplicate bookmark names in the report, the bookmarks are not rendered in Word.
 
-## <a id="WordStyleRendering"></a> Word Style Rendering
+## <a id="WordStyleRendering"></a> Word style rendering
 
 The following is a brief description of how styles are rendered in Word.
 
-### Color Palette
+### Color palette
 
 Colors rendered in the report are rendered in the Word document.
 
@@ -114,7 +125,7 @@ Colors rendered in the report are rendered in the Word document.
 
 Borders for report items, other than the page border, are rendered as Word table cell borders.
 
-## <a id="SquigglyLines"></a> Squiggly Lines in Exported Reports
+## <a id="SquigglyLines"></a> Squiggly lines in exported reports
 
 When exported and viewed in Word, report data or constants might be underlined by red or green squiggly lines. The red squiggly lines identify spelling errors. The green squiggly lines identify grammar errors. This occurs when the report includes words that do not comply with the proofing (spelling and grammar) of the editing language that is specified in Word. For example, English report column titles will likely be underlined by red squiggly lines when the report is rendered in a Spanish version of Word. Perceived spelling errors are more common in reports than perceived grammar errors because reports typically include only short text, not complete sentences or paragraphs.
 
@@ -131,7 +142,7 @@ The following topics provide additional information about setting Office and Wor
 > [!NOTE]  
 > When you change the editing language in **Microsoft Office Language Preferences** or the **Word Options** dialog box in Word, the change applies to all Office programs.
 
-## <a id="WordLimitations"></a> Word Limitations
+## <a id="WordLimitations"></a> Word limitations
 
 The following limitations are applied by [!INCLUDE[ofprword](../../includes/ofprword-md.md)]:
 
@@ -149,17 +160,17 @@ The following limitations are applied by [!INCLUDE[ofprword](../../includes/ofpr
 
 - When text is exported to Word, text with font decoration in certain fonts may generate unexpected or missing glyphs in the rendered report.
 
-## <a id="WordBenefits"></a> Benefits of Using the Word Renderer
+## <a id="WordBenefits"></a> Benefits of using the Word renderer
 
 In addition to making the features that are new in [!INCLUDE[ofprword](../../includes/ofprword-md.md)] .docx files available to exported reports, *.docx files of exported reports tend to be smaller. Reports exported by using the Word renderer are typically significantly smaller than the same reports exported by using the Word 2003 renderer.
 
-## Backward Compatibility of Exported Reports
+## Backward compatibility of exported reports
 
 You can select a Word compatibility mode and set compatibility options. The Word renderer creates documents with compatibility mode turned on. Resaving the documents with compatibility mode turned off might affect the layout of the document.
 
 If you turn off compatibility mode and then resave a report, the report layout might change in unexpected ways.
 
-## <a id="AvailabilityWord"></a> The Word 2003 Renderer
+## <a id="AvailabilityWord"></a> The Word 2003 renderer
 
 > [!IMPORTANT]  
 > The [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) rendering extension is deprecated. For more information, see [Deprecated Features in SQL Server Reporting Services in SQL Server 2016](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).
@@ -182,7 +193,7 @@ If the **Word 2003** renderer is configured to be visible, both the **Word** and
 
 - SharePoint site when Reporting Services is installed in SharePoint integrated mode.
 
-- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and you preview reports.
+- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] when you preview reports.
 
 - Report Builder connected to a report server.
 
@@ -196,11 +207,11 @@ The following XML shows the elements for the two Word rendering extensions in th
 
 The WORDOPENXML extension defines the Word renderer for [!INCLUDE[ofprword](../../includes/ofprword-md.md)] .docx files. The WORD extension defines the [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 version. `Visible = "false"` indicates the Word 2003 renderer is hidden. For more information, see [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) and [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).
 
-### Differences Between the Word and Word 2003 Renderers
+### Differences between the Word and Word 2003 renderers
 
 Reports, rendered by using the Word or Word 2003 renderers tend to be visually indistinguishable. However, you might notice minor differences between the two the Word or Word 2003formats.
 
-## <a id="DeviceInfo"></a> Device Information Settings
+## <a id="DeviceInfo"></a> Device information settings
 
 You can change some default settings for this renderer, such as omit hyperlinks and drillthrough links or expand all items that can be toggled regardless of the original state of the item when rendered, by changing the device information settings. For more information, see [Word Device Information Settings](../../reporting-services/word-device-information-settings.md).
 
@@ -213,3 +224,4 @@ You can change some default settings for this renderer, such as omit hyperlinks 
 - [Tables, Matrices, and Lists](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+

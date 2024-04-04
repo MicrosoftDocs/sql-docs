@@ -72,7 +72,7 @@ A local unique identifier that points to the [!INCLUDE [ssIS](../../includes/ssi
 
 Requires membership in the **dc_admin** (with EXECUTE permission) fixed database role to execute this procedure.
 
-## Example
+## Examples
 
 This example creates the Generic T-SQL Query collector type.
 
@@ -80,7 +80,7 @@ This example creates the Generic T-SQL Query collector type.
 EXEC sp_syscollector_create_collector_type
     @collector_type_uid = '302E93D1-3424-4be7-AA8E-84813ECF2419',
     @name = 'Generic T-SQL Query Collector Type',
-    @parameter_schema = 
+    @parameter_schema =
     '<?xml version="1.0" encoding="utf-8"?>
   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="DataCollectorType">
     <xs:element name="TSQLQueryCollector">
@@ -112,7 +112,7 @@ EXEC sp_syscollector_create_collector_type
 GO
 ```
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Data collection](../data-collection/data-collection.md)

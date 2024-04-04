@@ -8,7 +8,9 @@ ms.date: 07/25/2022
 ms.service: sql
 ms.subservice: dma
 ms.topic: conceptual
-ms.custom: intro-whats-new
+ms.custom:
+  - intro-whats-new
+  - sql-migration-content
 helpviewer_keywords:
   - "Data Migration Assistant, new features"
 ---
@@ -229,7 +231,7 @@ The v2.1 release of Data Migration Assistant includes the following additions:
 The v2.0 release of Data Migration Assistant includes improved Stretch database feature recommendations to provide proper prioritized tables that maximize the storage savings.
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../includes/ssnotedepfutureavoid-md.md)]
+> [!INCLUDE [stretch-database-deprecation](../includes/stretch-database-deprecation.md)]
 
 ## Data Migration Assistant v1.0
 

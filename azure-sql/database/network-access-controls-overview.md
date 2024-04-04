@@ -13,6 +13,7 @@ ms.custom: sqldbrb=3
 ---
 
 # Azure SQL Database and Azure Synapse Analytics network access controls
+[!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa-formerly-sqldw.md)] 
 
 When you create a logical server from the [Azure portal](single-database-create-quickstart.md) for Azure SQL Database and Azure Synapse Analytics, the result is a public endpoint in the format, *yourservername.database.windows.net*.
 
@@ -102,9 +103,7 @@ Ip based firewall is a feature of the logical server in Azure that prevents all 
 
 ## Virtual network firewall rules
 
-In addition to IP rules, the server firewall allows you to define *virtual network rules*. To learn more, see [Virtual network service endpoints and rules for Azure SQL Database](vnet-service-endpoint-rule-overview.md) or watch this video:
-
-> [!VIDEO https://learn.microsoft.com/shows/Data-Exposed/Data-Exposed--Demo--Vnet-Firewall-Rules-for-SQL-Database/player?WT.mc_id=dataexposed-c9-niner]
+In addition to IP rules, the server firewall allows you to define *virtual network rules*. To learn more, see [Virtual network service endpoints and rules for Azure SQL Database](vnet-service-endpoint-rule-overview.md). 
 
 ### Azure Networking terminology
 

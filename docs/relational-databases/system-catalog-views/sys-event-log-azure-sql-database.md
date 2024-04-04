@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current"
 
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-Returns successful [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] database connections and connection failures. You can use this information to track or troubleshoot your database activity.  
+Returns successful [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] database connections and connection failures. You can use this information to track or troubleshoot your database activity.  
   
 > [!CAUTION]  
 > For [logical servers](/azure/azure-sql/database/logical-servers) with a large number of databases and/or high numbers of logins, querying sys.event_log can cause high resource usage in the master database, possibly resulting in login failures. To reduce the impact of this issue, limit queries of sys.event_log.

@@ -1,14 +1,16 @@
 ---
 title: Import or export an Azure SQL Database using Private link
 description: Import or export an Azure SQL Database using Private Link without requiring Azure services to access the server.
-author: SudhirRaparla
-ms.author: nvraparl
-ms.reviewer: wiassaf
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: mathoma, hudequei
 ms.date: 12/22/2022
 ms.service: sql-database
 ms.subservice: migration
 ms.topic: how-to
-ms.custom: sqldbrb=1
+ms.custom:
+  - sqldbrb=1
+  - sql-migration-content
 ---
 # Import or export an Azure SQL Database using private link
 
@@ -118,7 +120,7 @@ $importRequest = New-AzSqlDatabaseExport -ResourceGroupName "<resourceGroupName>
 
 ## Create import/export private link using REST API
 
-Existing APIs to perform Import and Export jobs have been enhanced to support Private Link. Refer to [Import Database API](/rest/api/sql/2021-08-01-preview/servers/import-database)
+Existing APIs to perform Import and Export jobs have been enhanced to support Private Link. Refer to [Import Database API](/rest/api/sql/servers/import-database).
 
 ## Limitations
 

@@ -30,7 +30,7 @@ The following examples illustrate the use of the TYPE directive with FOR XML que
 The following query retrieves customer contact information from the `Contacts` table. Because the `TYPE` directive is specified in `FOR XML`, the result is returned as **xml** type.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 Go
 SELECT BusinessEntityID, FirstName, LastName
 FROM Person.Person
@@ -51,7 +51,7 @@ This is the partial result:
 In the following example, a FOR XML result is assigned to an **xml** type variable, `@x`. The query retrieves contact information, such as the `BusinessEntityID`, `FirstName`, `LastName`, and additional telephone numbers, from the `AdditionalContactInfo` column of **xml**`TYPE`. Because the `FOR XML` clause specifies `TYPE` directive, the XML is returned as **xml** type and is assigned to a variable.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 DECLARE @x xml;
 SET @x = (
@@ -75,7 +75,7 @@ The FOR XML queries return XML. Therefore, you can apply **xml** type methods, s
 In the following query, the `query()` method of the **xml** data type is used to query the result of the `FOR XML` query. For more information, see [query&#40;&#41; Method &#40;xml Data Type&#41;](../../t-sql/xml/query-method-xml-data-type.md).
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT (SELECT BusinessEntityID, FirstName, LastName, AdditionalContactInfo.query('
 DECLARE namespace aci="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";
@@ -102,7 +102,7 @@ This is the result:
 In the following query, the `value()` method of the **xml** data type is used to retrieve a value from the XML result returned by the `SELECT...FOR XML` query. For more information, see [value&#40;&#41; Method &#40;xml Data Type&#41;](../../t-sql/xml/value-method-xml-data-type.md).
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 DECLARE @FirstPhoneFromAdditionalContactInfo varchar(40);
 SELECT @FirstPhoneFromAdditionalContactInfo =

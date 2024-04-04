@@ -64,7 +64,7 @@ DROP USER user_name
  Requires ALTER ANY USER permission on the database.  
   
 ## Examples  
- The following example removes database user `AbolrousHazem` from the `AdventureWorks2012` database.  
+ The following example removes database user `AbolrousHazem` from the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
 DROP USER AbolrousHazem;  

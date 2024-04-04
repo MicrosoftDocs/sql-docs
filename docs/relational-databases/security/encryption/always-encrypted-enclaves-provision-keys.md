@@ -7,6 +7,7 @@ ms.reviewer: vanto
 ms.date: 04/05/2023
 ms.service: sql
 ms.subservice: security
+ms.custom: devx-track-azurepowershell
 ms.topic: conceptual
 ---
 # Provision enclave-enabled keys
@@ -48,7 +49,7 @@ To provision an enclave-enabled column master key, follow the steps in [Provisio
 ![Allow enclave computations](./media/always-encrypted-enclaves/allow-enclave-computations.png)
 
 > [!NOTE]
-> The **Allow enclave computations** checkbox appears only if a secure enclave is  configured for your database. If you are using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Configure the secure enclave in SQL Server](always-encrypted-enclaves-configure-enclave-type.md). If you are using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], see [Enable Always Encrypted with secure enclaves for your Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-enable).
+> The **Allow enclave computations** checkbox appears only if a secure enclave is  configured for your database. If you are using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Configure the secure enclave in SQL Server](always-encrypted-enclaves-configure-enclave-type.md). If you are using [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)], see [Enable Always Encrypted with secure enclaves for your Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-enable).
 
 > [!TIP]
 > To check if a column master key is enclave-enabled, right-click on it in Object Explorer and select **Properties**. If the key is enclave-enabled, **Enclave Computations: Allowed** appears in the window showing the properties of the key. Alternativelly, you can use the [sys.column_master_keys (Transact-SQL)](../../system-catalog-views/sys-column-master-keys-transact-sql.md) view.

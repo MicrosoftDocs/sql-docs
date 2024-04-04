@@ -9,7 +9,6 @@ ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords:
   - "data-at-execution"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Managing text and image Columns - Use Data-at-Execution Columns
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +46,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Execute the third ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing to delete the table used by the sample.  
   
 ```  
-use AdventureWorks  
+USE AdventureWorks2022;
+GO
 CREATE TABLE emp3 (NAME char(30), AGE int, BIRTHDAY datetime, Memo1 text)  
 INSERT INTO emp3 (NAME, AGE, Memo1) VALUES   ('Name1', '12', 'This is the first employee')  
 INSERT INTO emp3 (NAME, AGE, Memo1) VALUES   ('Name2', '18', 'This is the second employee')  
@@ -171,7 +171,8 @@ int main() {
 ```  
   
 ```  
-use AdventureWorks  
+USE AdventureWorks2022;
+GO
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'emp3')  
      DROP TABLE emp3  
 GO  

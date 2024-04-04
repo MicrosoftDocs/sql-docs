@@ -4,13 +4,13 @@ description: This article discusses how to configure a ledger database in Azure 
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mathoma
-ms.date: 05/23/2023
+ms.date: 11/14/2023
 ms.service: sql-database
 ms.subservice: security
-ms.custom: devx-track-azurecli
+ms.custom: devx-track-azurecli, ignite-2023
 ms.topic: how-to
 zone_pivot_groups: as1-azuresql-sql
-monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 
 # Configure a ledger database
@@ -102,10 +102,6 @@ az sql db create \
     --ledger-on
 ```
 
-
-
-
-
 ---
 
 ::: zone-end
@@ -113,9 +109,6 @@ az sql db create \
 ::: zone pivot="as1-azure-sql-managed-instance"
 
 This article provides information on configuring a [ledger database](ledger-overview.md) using T-SQL, PowerShell, or the Azure CLI for **Azure SQL Managed Instance**. For information on creating a ledger database in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or Azure SQL Database, use the switch at the top of this page.
-
-> [!NOTE]
-> Ledger in Azure SQL Managed Instance is currently in public preview.
 
 ## Prerequisites
 
@@ -126,46 +119,6 @@ This article provides information on configuring a [ledger database](ledger-over
 
 > [!NOTE]
 > Enabling the ledger functionality at the database level will make all tables in this database updatable ledger tables. This option cannot be changed after the database is created. Creating a table with the option `LEDGER = OFF` will throw an error message.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # [T-SQL](#tab/t-sql2)
 
@@ -212,10 +165,6 @@ az sql midb create \
     --ledger-on
 ```
 
-
-
-
-
 ---
 
 ::: zone-end
@@ -242,11 +191,9 @@ For more information, see [CREATE DATABASE (Transact-SQL)](../../../t-sql/statem
 
 ::: zone-end
 
-## Next steps
+## Related content
 
 - [Ledger overview](ledger-overview.md)
 - [Append-only ledger tables](ledger-append-only-ledger-tables.md)
 - [Updatable ledger tables](ledger-updatable-ledger-tables.md)
 - [Enable automatic digest storage](ledger-how-to-enable-automatic-digest-storage.md)
-
-

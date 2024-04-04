@@ -50,7 +50,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  The following example lists all of the metadata for registered search properties.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT * FROM sys.registered_search_properties;   
 GO  

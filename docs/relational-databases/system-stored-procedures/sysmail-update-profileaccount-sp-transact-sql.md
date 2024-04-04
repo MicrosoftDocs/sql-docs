@@ -38,19 +38,19 @@ sysmail_update_profileaccount_sp { [ @profile_id = ] profile_id
 
 #### [ @profile_id = ] *profile_id*
 
-The profile ID of the profile to update. *@profile_id* is **int**, with a default of NULL. Either the *@profile_id* or the *@profile_name* must be specified.
+The profile ID of the profile to update. *@profile_id* is **int**, with a default of `NULL`. Either the *@profile_id* or the *@profile_name* must be specified.
 
 #### [ @profile_name = ] '*profile_name*'
 
-The profile name of the profile to update. *@profile_name* is **sysname**, with a default of NULL. Either the *@profile_id* or the *@profile_name* must be specified.
+The profile name of the profile to update. *@profile_name* is **sysname**, with a default of `NULL`. Either the *@profile_id* or the *@profile_name* must be specified.
 
 #### [ @account_id = ] *account_id*
 
-The account ID to update. *@account_id* is **int**, with a default of NULL. Either the *@account_id* or the *@account_name* must be specified.
+The account ID to update. *@account_id* is **int**, with a default of `NULL`. Either the *@account_id* or the *@account_name* must be specified.
 
 #### [ @account_name = ] '*account_name*'
 
-The name of the account to update. *@account_name* is **sysname**, with a default of NULL. Either the *@account_id* or the *@account_name* must be specified.
+The name of the account to update. *@account_name* is **sysname**, with a default of `NULL`. Either the *@account_id* or the *@account_name* must be specified.
 
 #### [ @sequence_number = ] *sequence_number*
 
@@ -60,7 +60,7 @@ The new sequence number for the account. *@sequence_number* is **int**, with no 
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -68,7 +68,7 @@ None.
 
 Returns an error if the account specified isn't associated with the profile specified.
 
-The sequence number determines the order in which Database Mail uses accounts in the profile. For a new e-mail message, Database Mail starts with the account that has the lowest sequence number. Should that account fail, Database Mail uses the account with the next highest sequence number, and so on, until either Database Mail sends the message successfully, or the account with the highest sequence number fails. If the account with the highest sequence number fails, the e-mail message fails.
+The sequence number determines the order in which Database Mail uses accounts in the profile. For a new e-mail message, Database Mail starts with the account that's the lowest sequence number. Should that account fail, Database Mail uses the account with the next highest sequence number, and so on, until either Database Mail sends the message successfully, or the account with the highest sequence number fails. If the account with the highest sequence number fails, the e-mail message fails.
 
 If more than one account exists with the same sequence number, Database Mail only uses one of those accounts for a given e-mail message. In this case, Database Mail makes no guarantees as to which of the accounts is used for that sequence number or that the same account is used from message to message.
 
@@ -89,9 +89,9 @@ EXEC msdb.dbo.sysmail_update_profileaccount_sp
     @sequence_number = 3;
 ```
 
-## See also
+## Related content
 
-- [Database Mail](../../relational-databases/database-mail/database-mail.md)
-- [Create a Database Mail Account](../../relational-databases/database-mail/create-a-database-mail-account.md)
-- [Database Mail Configuration Objects](../../relational-databases/database-mail/database-mail-configuration-objects.md)
+- [Database Mail](../database-mail/database-mail.md)
+- [Create a Database Mail Account](../database-mail/create-a-database-mail-account.md)
+- [Database Mail Configuration Objects](../database-mail/database-mail-configuration-objects.md)
 - [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)

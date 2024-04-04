@@ -46,7 +46,7 @@ dev_langs:
  The following example displays the ID and name of the search property lists in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT property_list_id, name FROM sys.registered_search_property_lists;  
 GO  

@@ -1,12 +1,13 @@
 ---
 title: "Configure and use Always Encrypted with secure enclaves| Microsoft Docs"
 description: Learn how to configure and use Always Encrypted with secure enclaves in SQL Server and Azure SQL Database, which enables richer functionality on sensitive data.
-author: jaszymas
-ms.author: jaszymas
+author: Pietervanhove
+ms.author: pivanho
 ms.reviewer: "vanto"
-ms.date: 04/05/2023
+ms.date: 11/14/2023
 ms.service: sql
 ms.subservice: security
+ms.custom: ignite-2023
 ms.topic: conceptual
 ---
 # Configure and use Always Encrypted with secure enclaves
@@ -21,9 +22,9 @@ For tutorials that show you how to quickly get started with Always Encrypted wit
 
 ## Set up the secure enclave and attestation
 
-Before you can use Always Encrypted with secure enclaves, you need to configure your environment to ensure the secure enclave is available for the database. You may also need to set up [enclave attestation](always-encrypted-enclaves.md#secure-enclave-attestation), if applicable.
+Before you can use Always Encrypted with secure enclaves, you need to configure your environment to ensure the secure enclave is available for the database. You might also need to set up [enclave attestation](always-encrypted-enclaves.md#secure-enclave-attestation), if applicable.
 
-The process for setting up your environment depends on whether you're using [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] or [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
+The process for setting up your environment depends on whether you're using [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later or [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)].
 
 ### Set up the secure enclave and attestation in [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]
 
@@ -39,16 +40,16 @@ To set up Always Encrypted with secure enclaves and attestation, see:
 - [Register  computer with the Host Guardian Service](./always-encrypted-enclaves-host-guardian-service-register.md)
 - [Configure the secure enclave in SQL Server](always-encrypted-enclaves-configure-enclave-type.md)
 
-### Set up the secure enclave and attestation in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]
+### Set up the secure enclave and attestation in [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)]
 
 For details, see the following articles:
 
-- [Plan for secure enclaves in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]](/azure/azure-sql/database/always-encrypted-enclaves-plan)
-- [Enable Always Encrypted with secure enclaves for your [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]](/azure/azure-sql/database/always-encrypted-enclaves-enable)
+- [Plan for secure enclaves in [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)]](/azure/azure-sql/database/always-encrypted-enclaves-plan)
+- [Enable Always Encrypted with secure enclaves for your [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)]](/azure/azure-sql/database/always-encrypted-enclaves-enable)
 - [Configure Azure Attestation for your Azure SQL Database logical server](/azure/azure-sql/database/always-encrypted-enclaves-configure-attestation)
 
 > [!IMPORTANT]
-> VBS enclaves in Azure SQL Database (in preview) currently do not support attestation. Configuring Azure Attestation only applies to Intel SGX enclaves.
+> VBS enclaves in Azure SQL Database do not support attestation. Configuring Azure Attestation only applies to Intel SGX enclaves.
 
 ## Manage keys for Always Encrypted with secure enclaves
 

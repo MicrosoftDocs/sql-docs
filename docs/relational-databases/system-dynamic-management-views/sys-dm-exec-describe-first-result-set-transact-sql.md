@@ -125,7 +125,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
  The following code returns information about the results of a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT * FROM sys.dm_exec_describe_first_result_set  
 (N'SELECT object_id, name, type_desc FROM sys.indexes', null, 0) ;  
@@ -135,7 +135,7 @@ SELECT * FROM sys.dm_exec_describe_first_result_set
  The following example creates a stored procedure named pr_TestProc that returns two result sets. Then the example demonstrates that **sys.dm_exec_describe_first_result_set** returns information about the first result set in the procedure.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
   
 CREATE PROC Production.TestProc  
@@ -152,7 +152,7 @@ SELECT * FROM sys.dm_exec_describe_first_result_set
  The following example evaluates a batch that contains two [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. The result set describes the first result set returned.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
   
 SELECT * FROM sys.dm_exec_describe_first_result_set(  

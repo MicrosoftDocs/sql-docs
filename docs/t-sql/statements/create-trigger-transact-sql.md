@@ -30,7 +30,7 @@ dev_langs:
 
 # CREATE TRIGGER (Transact-SQL)
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]	
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]    
 
 Creates a DML, DDL, or logon trigger. A trigger is a special type of stored procedure that automatically runs when an event occurs in the database server. DML triggers run when a user tries to modify data through a data manipulation language (DML) event. DML events are INSERT, UPDATE, or DELETE statements on a table or view. These triggers fire when any valid event fires, whether table rows are affected or not. For more information, see [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
   
@@ -188,7 +188,7 @@ Specifies the security context under which the trigger is executed. Enables you 
   
 This option is required for triggers on memory-optimized tables.  
   
-For more information, see[EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
+For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
 NATIVE_COMPILATION  
 Indicates that the trigger is natively compiled.  
@@ -436,7 +436,7 @@ ON Sales.Customer
 AFTER INSERT, UPDATE, DELETE   
 AS  
    EXEC msdb.dbo.sp_send_dbmail  
-        @profile_name = 'AdventureWorks2012 Administrator',  
+        @profile_name = 'AdventureWorks2022 Administrator',  
         @recipients = 'danw@Adventure-Works.com',  
         @body = 'Don''t forget to print a report for the sales force.',  
         @subject = 'Reminder';  
@@ -446,7 +446,7 @@ GO
 ### C. Using a DML AFTER trigger to enforce a business rule between the PurchaseOrderHeader and Vendor tables  
 Because CHECK constraints reference only the columns on which the column-level or table-level constraint is defined, you must define any cross-table constraints (in this case, business rules) as triggers.  
   
-The following example creates a DML trigger in the AdventureWorks2012 database. This trigger checks to make sure the credit rating for the vendor is good (not 5) when there's an attempt to insert a new purchase order into the `PurchaseOrderHeader` table. To get the credit rating of the vendor, the `Vendor` table must be referenced. If the credit rating is too low, a message appears and the insertion doesn't happen.  
+The following example creates a DML trigger in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. This trigger checks to make sure the credit rating for the vendor is good (not 5) when there's an attempt to insert a new purchase order into the `PurchaseOrderHeader` table. To get the credit rating of the vendor, the `Vendor` table must be referenced. If the credit rating is too low, a message appears and the insertion doesn't happen.  
   
 :::code language="sql" source="../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql":::
 

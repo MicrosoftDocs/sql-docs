@@ -5,6 +5,8 @@ ms.date: 09/15/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: include
+ms.custom:
+  - linux-related-content
 ---
 ## Prerequisites
 

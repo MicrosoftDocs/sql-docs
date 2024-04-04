@@ -4,20 +4,19 @@ description: The vCore purchasing model lets you independently scale compute and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake, mathoma, dfurman
-ms.date: 07/05/2023
+ms.date: 03/18/2024
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom:
-  - references_regions
-  - azure-sql-split
+ms.custom: references_regions, azure-sql-split, ignite-2023
 ---
-# vCore purchasing model - Azure SQL Database 
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+# vCore purchasing model - Azure SQL Database
+
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](service-tiers-sql-database-vcore.md)
-> * [Azure SQL Managed Instance](../managed-instance/service-tiers-managed-instance-vcore.md)
+> * [Azure SQL Database](service-tiers-sql-database-vcore.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](../managed-instance/service-tiers-managed-instance-vcore.md?view=azuresql-mi&preserve-view=true)
 
 This article reviews the [vCore purchasing model](service-tiers-vcore.md) for [Azure SQL Database](sql-database-paas-overview.md). 
 
@@ -85,14 +84,14 @@ To monitor the current allocated and used data storage size in SQL Database, use
 To monitor the current allocated and used storage size of individual data and log files in a database by using T-SQL, use the [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) view and the [FILEPROPERTY(... , 'SpaceUsed')](/sql/t-sql/functions/fileproperty-transact-sql) function.
 
 > [!TIP]
-> Under some circumstances, you may need to shrink a database to reclaim unused space. For more information, see [Manage file space in Azure SQL Database](file-space-manage.md).
+> Under some circumstances, you might need to shrink a database to reclaim unused space. For more information, see [Manage file space in Azure SQL Database](file-space-manage.md).
 
 ## Backup storage
 
 Storage for database backups is allocated to support the [point-in-time restore (PITR)](recovery-using-backups.md) and [long-term retention (LTR)](long-term-retention-overview.md) capabilities of SQL Database. This storage is separate from data and log file storage, and is billed separately.
 
 - **PITR**: In General Purpose and Business Critical tiers, individual database backups are copied to [Azure storage](automated-backups-overview.md#restore-capabilities) automatically. The storage size increases dynamically as new backups are created. The storage is used by full, differential, and transaction log backups. The storage consumption depends on the rate of change of the database and the retention period configured for backups. You can configure a separate retention period for each database between 1 and 35 days for SQL Database. A backup storage amount equal to the configured maximum data size is provided at no extra charge.
-- **LTR**: You also have the option to configure long-term retention of full backups for up to 10 years. If you set up an LTR policy, these backups are stored in Azure Blob storage automatically, but you can control how often the backups are copied. To meet different compliance requirements, you can select different retention periods for weekly, monthly, and/or yearly backups. The configuration you choose determines how much storage is used for LTR backups. For more information, see [Long-term backup retention](long-term-retention-overview.md).
+- **LTR**: You also can configure long-term retention of full backups for up to 10 years. If you set up an LTR policy, these backups are stored in Azure Blob storage automatically, but you can control how often the backups are copied. To meet different compliance requirements, you can select different retention periods for weekly, monthly, and/or yearly backups. The configuration you choose determines how much storage is used for LTR backups. For more information, see [Long-term backup retention](long-term-retention-overview.md).
 
 For backup storage in Hyperscale, see [Automated backups for Hyperscale databases](hyperscale-automated-backups-overview.md).
 
@@ -103,21 +102,17 @@ Service tier options in the vCore purchasing model include General Purpose, Busi
 |**Use case**|**General Purpose**|**Business Critical**|**Hyperscale**|
 |---|---|---|---|
 |**Best for**|Most business workloads. Offers budget-oriented, balanced, and scalable compute and storage options. |Offers business applications the highest resilience to failures by using several high availability secondary replicas, and provides the highest I/O performance. | The widest variety of workloads, including those workloads with highly scalable storage and read-scale requirements.  Offers higher resilience to failures by allowing configuration of more than one high availability secondary replica. |
-| **Compute size** | 2 to 128 vCores | 2 to 128 vCores  |2 to 128 vCores<sup>1</sup> |
+| **Compute size** | 2 to 128 vCores | 2 to 128 vCores  |2 to 128 vCores  |
 | **Storage type** | Premium remote storage (per instance) |Super-fast local SSD storage (per instance)  | Decoupled storage with local SSD cache (per compute replica) |
 | **Storage size**| 1 GB – 4 TB | 1 GB – 4 TB  | 10 GB – 100 TB |
-| **IOPS** | 16,000 maximum IOPS | 8,000 IOPS per vCore with 200,000 maximum IOPS   | 327,680 IOPS with max local SSD <br/>Hyperscale is a multi-tiered architecture with caching at multiple levels. Effective IOPS depend on the workload. |
-| **Memory/vCore** | 5.1 GB | 5.1 GB | 5.1 GB or 10.2 GB<sup>3</sup>| 
-| **Backups** | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) <br/> Long term retention available up to 10 years | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) <br/> Long term retention available up to 10 years  | A choice of locally redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (7 days by default) retention <sup>1</sup>, with up to 10 years of long-term retention available <sup>2</sup> |
-|**Availability**|One replica, no read-scale replicas, <br/>zone-redundant high availability (HA) |Three replicas, one [read-scale replica](read-scale-out.md),<br/>zone-redundant high availability (HA)|zone-redundant high availability (HA) (preview)|
+| **IOPS** | 320 IOPS per vCore with 16,000 maximum IOPS | 4,000 IOPS per vCore with 327,680 maximum IOPS | 327,680 IOPS with max local SSD <br/>Hyperscale is a multi-tiered architecture with caching at multiple levels. Effective IOPS depend on the workload. |
+| **Memory/vCore** | 5.1 GB | 5.1 GB | 5.1 GB or 10.2 GB | 
+| **Backups** | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) <br/> Long term retention available up to 10 years | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) <br/> Long term retention available up to 10 years  | A choice of locally redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (7 days by default) retention, with up to 10 years of long-term retention available |
+|**Availability**|One replica, no read-scale replicas, <br/>zone-redundant high availability (HA) |Three replicas, one [read-scale replica](read-scale-out.md),<br/>zone-redundant high availability (HA)|zone-redundant high availability (HA)|
 |**Pricing/billing**  | [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS aren't charged. |[vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS aren't charged. |  [vCore for each replica and used storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS aren't charged. |
-|**Discount models**| [Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|[Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions  | [Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|
+|**Discount models**| [Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|[Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions  | [Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions) <sup>1</sup><br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|
 
-<sup>1</sup> Short-term backup retention for 1-35 days for Hyperscale databases is now in preview.   
-
-<sup>2</sup> Long-term retention for Hyperscale databases is now in preview. 
-
-<sup>3</sup> 10.2 GB/vCore is available with premium-series memory optimized hardware (preview).
+<sup>1</sup> Simplified pricing for SQL Database Hyperscale coming soon. Review the [Hyperscale pricing blog](https://aka.ms/hsignite2023) for details.
 
 For greater details, review resource limits for [logical server](resource-limits-logical-server.md), [single databases](resource-limits-vcore-single-databases.md), and [pooled databases](resource-limits-vcore-elastic-pools.md). 
 
@@ -131,14 +126,14 @@ The architectural model for the General Purpose service tier is based on a separ
 
 The following figure shows four nodes in standard architectural model with the separated compute and storage layers.
 
-![Separation of compute and storage](./media/service-tier-general-purpose/general-purpose-service-tier.png)
+:::image type="content" source="media/service-tier-general-purpose/general-purpose-service-tier.png" alt-text="Diagram illustrating the separation of compute and storage.":::
 
 In the architectural model for the General Purpose service tier, there are two layers:
 
-- A stateless compute layer that is running the `sqlservr.exe` process and contains only transient and cached data (for example – plan cache, buffer pool, column store pool). This stateless node is operated by Azure Service Fabric that initializes process, controls health of the node, and performs failover to another place if necessary.
+- A stateless compute layer that is running the `sqlservr.exe` process and contains only transient and cached data (for example – plan cache, buffer pool, columnstore pool). This stateless node is operated by Azure Service Fabric that initializes process, controls health of the node, and performs failover to another place if necessary.
 - A stateful data layer with database files (.mdf/.ldf) that are stored in Azure Blob storage. Azure Blob storage guarantees that there's no data loss of any record that is placed in any database file. Azure Storage has built-in data availability/redundancy that ensures that every record in log file or page in data file is preserved even if the process crashes.
 
-Whenever the database engine or operating system is upgraded, some part of underlying infrastructure fails, or if some critical issue is detected in the `sqlservr.exe` process, Azure Service Fabric moves the stateless process to another stateless compute node. There's a set of spare nodes that is waiting to run new compute service if a failover of the primary node happens in order to minimize failover time. Data in Azure storage layer isn't affected, and data/log files are attached to newly initialized process. This process guarantees 99.99% availability by default and 99.995% availability when [zone redundancy](high-availability-sla.md#zone-redundant-availability) is enabled. There may be some performance impacts to heavy workloads that are in-flight due to transition time and the fact the new node starts with cold cache.
+Whenever the database engine or operating system is upgraded, some part of underlying infrastructure fails, or if some critical issue is detected in the `sqlservr.exe` process, Azure Service Fabric moves the stateless process to another stateless compute node. There's a set of spare nodes that is waiting to run new compute service if a failover of the primary node happens in order to minimize failover time. Data in Azure storage layer isn't affected, and data/log files are attached to newly initialized process. This process guarantees 99.99% availability by default and 99.995% availability when [zone redundancy](high-availability-sla.md#zone-redundant-availability) is enabled. There might be some performance impacts to heavy workloads that are in-flight due to transition time and the fact the new node starts with cold cache.
 
 ### When to choose this service tier
 
@@ -148,9 +143,9 @@ The General Purpose service tier is the default service tier in Azure SQL Databa
 
 The Business Critical service tier model is based on a cluster of database engine processes. This architectural model relies on a quorum of database engine nodes to minimize performance impacts to your workload, even during maintenance activities. Upgrades and patches of the underlying operating system, drivers, and the database engine occur transparently, with minimal down-time for end users. 
 
-In the Business Critical model, compute and storage is integrated on each node. Replication of data between database engine processes on each node of a four-node cluster achieves high availability, with each node using locally attached SSD as data storage. 
+In the Business Critical model, compute and storage is integrated on each node. Replication of data between database engine processes on each node of a four-node cluster achieves high availability, with each node using locally attached SSD as data storage. The following diagram shows how the Business Critical service tier organizes a cluster of database engine nodes in availability group replicas.
 
-![Cluster of database engine nodes](./media/service-tier-business-critical/business-critical-service-tier.png)
+:::image type="content" source="media/service-tier-business-critical/business-critical-service-tier.png" alt-text="Diagram showing how the Business Critical service tier organizes a cluster of database engine nodes in availability group replicas." lightbox="media/service-tier-business-critical/business-critical-service-tier.png":::
 
 Both the database engine process and underlying .mdf/.ldf files are placed on the same node with locally attached SSD storage, providing low latency to your workload. High availability is implemented using technology similar to SQL Server [Always On availability groups](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server). Every database is a cluster of database nodes with one primary replica that is accessible for customer workloads, and three secondary replicas containing copies of data. The primary replica constantly pushes changes to the secondary replicas in order to ensure the data is available on secondary replicas if the primary fails for any reason. Failover is handled by the Service Fabric and the database engine – one secondary replica becomes the primary, and a new secondary replica is created to ensure there are enough nodes in the cluster. The workload is automatically redirected to the new primary replica.
 
@@ -175,7 +170,7 @@ The Hyperscale service tier is suitable for all workload types. Its cloud native
 
 To learn more, review [Hyperscale service tier for Azure SQL Database](service-tier-hyperscale.md).
 
-### When to choose this service tier 
+### When to choose this service tier
 
 The Hyperscale service tier removes many of the practical limits traditionally seen in cloud databases. Where most other databases are limited by the resources available in a single node, databases in the Hyperscale service tier have no such limits. With its flexible storage architecture, a Hyperscale database grows as needed - and you're billed only for the storage capacity you use.
 
@@ -183,7 +178,7 @@ Besides its advanced scaling capabilities, Hyperscale is a great option for any 
 
 - Achieve **high resiliency and fast failure recovery** while controlling cost, by choosing the number of high availability replicas from 0 to 4.
 - Improve **high availability** by enabling zone redundancy for compute and storage.
-- Achieve **low I/O latency** (1-2 milliseconds on average) for the frequently accessed part of your database. For smaller databases, this may apply to the entire database.
+- Achieve **low I/O latency** (1-2 milliseconds on average) for the frequently accessed part of your database. For smaller databases, this might apply to the entire database.
 - Implement a large variety of **read scale-out scenarios** with named replicas.
 - Take advantage of **fast scaling**, without waiting for data to be copied to local storage on new nodes.
 - Enjoy **zero-impact continuous database backup** and **fast restore**.
@@ -191,9 +186,9 @@ Besides its advanced scaling capabilities, Hyperscale is a great option for any 
 
 ## Hardware configuration
 
-Common hardware configurations in the vCore model include standard-series (Gen5), Fsv2-series, and DC-series. Hyperscale also provides an option for premium-series and premium-series memory optimized hardware. Hardware configuration defines compute and memory limits and other characteristics that impact workload performance.
+Common hardware configurations in the vCore model include standard-series (Gen5), Fsv2-series, and DC-series. Hyperscale also provides an option for premium-series and premium-series memory optimized hardware. Hardware configuration defines compute and memory limits and other characteristics that affect workload performance.
 
-Certain hardware configurations such as standard-series (Gen5) may use more than one type of processor (CPU), as described in [Compute resources (CPU and memory)](#compute-resources-cpu-and-memory). While a given database or elastic pool tends to stay on the hardware with the same CPU type for a long time (commonly for multiple months), there are certain events that can cause a database or pool to be moved to hardware that uses a different CPU type. For example, a database or pool can be moved if you scale up or down to a different service objective, or if the current infrastructure in a datacenter is approaching its capacity limits, or if the currently used hardware is being decommissioned due to its end of life.
+Certain hardware configurations such as standard-series (Gen5) can use more than one type of processor (CPU), as described in [Compute resources (CPU and memory)](#compute-resources-cpu-and-memory). While a given database or elastic pool tends to stay on the hardware with the same CPU type for a long time (commonly for multiple months), there are certain events that can cause a database or pool to be moved to hardware that uses a different CPU type. For example, a database or pool can be moved if you scale up or down to a different service objective, or if the current infrastructure in a datacenter is approaching its capacity limits, or if the currently used hardware is being decommissioned due to its end of life.
 
 For some workloads, a move to a different CPU type can change performance. SQL Database configures hardware with the goal to provide predictable workload performance even if CPU type changes, keeping performance changes within a narrow band. However, across the wide spectrum of customer workloads in SQL Database, and as new types of CPUs become available, it's occasionally possible to see more noticeable changes in performance, if a database or pool moves to a different CPU type.
 
@@ -205,12 +200,11 @@ The following table compares compute resources in different hardware configurati
 
 |Hardware configuration  |CPU  |Memory  |
 |:---------|:---------|:---------|
-|Standard-series (Gen5) |**Provisioned compute**<br>- Intel&reg; E5-2673 v4 (Broadwell) 2.3 GHz, Intel&reg; SP-8160 (Skylake)\*, Intel&reg; 8272CL (Cascade Lake) 2.5 GHz\*, Intel&reg; Xeon Platinum 8307C (Ice Lake)\*, AMD EPYC 7763v (Milan) processors<br>- Provision up to 128 vCores (hyper-threaded)<br><br>**Serverless compute**<br>- Intel&reg; E5-2673 v4 (Broadwell) 2.3 GHz, Intel&reg; SP-8160 (Skylake)\*, Intel&reg; 8272CL (Cascade Lake) 2.5 GHz\*, Intel Xeon&reg; Platinum 8307C (Ice Lake)\*, AMD EPYC 7763v (Milan) processors<br>- Autoscale up to 80 vCores (hyper-threaded)<br>- The memory-to-vCore ratio dynamically adapts to memory and CPU usage based on workload demand and can be as high as 24 GB per vCore.  For example, at a given point in time a workload may use and be billed for 240-GB memory and only 10 vCores.|**Provisioned compute**<br>- 5.1 GB per vCore<br>- Provision up to 625 GB<br><br>**Serverless compute**<br>- Autoscale up to 24 GB per vCore<br>- Autoscale up to 240 GB max|
+|Standard-series (Gen5) |**Provisioned compute**<br>- Intel&reg; E5-2673 v4 (Broadwell) 2.3 GHz, Intel&reg; SP-8160 (Skylake)\*, Intel&reg; 8272CL (Cascade Lake) 2.5 GHz\*, Intel&reg; Xeon&reg; Platinum 8370C (Ice Lake)\*, AMD EPYC 7763v (Milan) processors<br>- Provision up to 128 vCores (hyper-threaded)<br><br>**Serverless compute**<br>- Intel&reg; E5-2673 v4 (Broadwell) 2.3 GHz, Intel&reg; SP-8160 (Skylake)\*, Intel&reg; 8272CL (Cascade Lake) 2.5 GHz\*, Intel&reg; Xeon&reg; Platinum 8370C (Ice Lake)\*, AMD EPYC 7763v (Milan) processors<br>- Autoscale up to 80 vCores (hyper-threaded)<br>- The memory-to-vCore ratio dynamically adapts to memory and CPU usage based on workload demand and can be as high as 24 GB per vCore.  For example, at a given point in time a workload might use and be billed for 240-GB memory and only 10 vCores.|**Provisioned compute**<br>- 5.1 GB per vCore<br>- Provision up to 625 GB<br><br>**Serverless compute**<br>- Autoscale up to 24 GB per vCore<br>- Autoscale up to 240 GB max|
 |Fsv2-series     |- Intel&reg; 8168 (Skylake) processors<br>- Featuring a sustained all core turbo clock speed of 3.4 GHz and a maximum single core turbo clock speed of 3.7 GHz.<br>- Provision up to 72 vCores (hyper-threaded)|- 1.9 GB per vCore<br>- Provision up to 136 GB|
-|M-series     |- Intel&reg; E7-8890 v3 2.5 GHz and Intel&reg; 8280M 2.7 GHz (Cascade Lake) processors<br>- Provision up to 128 vCores (hyper-threaded)|- 29 GB per vCore<br>- Provision up to 3.7 TB|
-|DC-series     | - Intel&reg; XEON E-2288G processors<br>- Featuring Intel Software Guard Extension (Intel SGX)<br>- Provision up to 8 vCores (physical) | 4.5 GB per vCore |
+|DC-series     | - Intel&reg; Xeon&reg; E-2288G processors<br>- Featuring Intel Software Guard Extension (Intel SGX)<br>- Provision up to 8 vCores (physical) | 4.5 GB per vCore |
 
-\* In the [sys.dm_user_db_resource_governance](/sql/relational-databases/system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database) dynamic management view, hardware generation for databases using Intel&reg; SP-8160 (Skylake) processors appears as Gen6, hardware generation for databases using Intel&reg; 8272CL (Cascade Lake) appears as Gen7, and hardware generation for databases using Intel Xeon&reg; Platinum 8307C (Ice Lake) or AMD&reg; EPYC&reg; 7763v (Milan) appear as Gen8. For a given compute size and hardware configuration, resource limits are the same regardless of CPU type (Intel Broadwell, Skylake, Ice Lake, Cascade Lake, or AMD Milan).
+\* In the [sys.dm_user_db_resource_governance](/sql/relational-databases/system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database) dynamic management view, hardware generation for databases using Intel&reg; SP-8160 (Skylake) processors appears as Gen6, hardware generation for databases using Intel&reg; 8272CL (Cascade Lake) appears as Gen7, and hardware generation for databases using Intel&reg; Xeon&reg; Platinum 8370C (Ice Lake) or AMD&reg; EPYC&reg; 7763v (Milan) appear as Gen8. For a given compute size and hardware configuration, resource limits are the same regardless of CPU type (Intel Broadwell, Skylake, Ice Lake, Cascade Lake, or AMD Milan).
 
 For more information, see resource limits for [single databases](resource-limits-vcore-single-databases.md) and [elastic pools](resource-limits-vcore-elastic-pools.md).
 
@@ -226,9 +220,10 @@ Standard-series (Gen5) hardware is available in all public regions worldwide.
 
 - Premium-series hardware options use the latest CPU and memory technology from Intel and AMD. Premium-series provides a boost to compute performance relative to standard-series hardware.
 - Premium-series option offers faster CPU performance compared to Standard-series and a higher number of maximum vCores.
-- Premium-series memory optimized option offers double the amount of memory relative to premium-series.
+- Premium-series memory optimized option offers double the amount of memory relative to Standard-series.
+- Standard-series, premium-series, and premium-series memory optimized are available for [Hyperscale elastic pools (preview)](hyperscale-elastic-pool-overview.md).
 
-- For more information, see the [Hyperscale premium series blog announcement](https://aka.ms/AAiq28n).
+For more information, see the [Hyperscale premium series blog announcement](https://aka.ms/AAiq28n).
  
 For regions available, see [Hyperscale premium-series availability](#hyperscale-premium-series-availability).
 
@@ -236,14 +231,14 @@ For regions available, see [Hyperscale premium-series availability](#hyperscale-
 
 - Fsv2-series is a compute optimized hardware configuration delivering low CPU latency and high clock speed for the most CPU demanding workloads. Similar to [Hyperscale premium-series](#hyperscale-premium-series) hardware configurations, Fsv2-series is powered by the latest CPU and memory technology from Intel and AMD, allowing customers to take advantage of the latest hardware while using databases and elastic pools in the General Purpose service tier.
 - Depending on the workload, Fsv2-series can deliver more CPU performance per vCore than other types of hardware. For example, the 72 vCore Fsv2 compute size can provide more CPU performance than 80 vCores on Standard-series (Gen5), at lower cost.
-- Fsv2 provides less memory and `tempdb` per vCore than other hardware, so workloads sensitive to those limits may perform better on standard-series (Gen5).
+- Fsv2 provides less memory and `tempdb` per vCore than other hardware, so workloads sensitive to those limits might perform better on standard-series (Gen5).
 
 Fsv2-series in only supported in the General Purpose tier. For regions where Fsv2-series is available, see [Fsv2-series availability](#fsv2-series-1).
 
 ### DC-series
 
 - DC-series hardware uses Intel processors with Software Guard Extensions (Intel SGX) technology.
-- DC-series is required for [Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves), which isn't supported with other hardware configurations.
+- DC-series is required for [Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves) workloads that require stronger security protection of hardware enclaves, compared to Virtualization-based Security (VBS) enclaves.
 - DC-series is designed for workloads that process sensitive data and demand confidential query processing capabilities, provided by Always Encrypted with secure enclaves.
 - DC-series hardware provides balanced compute and memory resources.
 
@@ -253,7 +248,9 @@ DC-series is only supported for Provisioned compute (Serverless isn't supported)
 
 To create databases or elastic pools on DC-series hardware, the subscription must be a paid offer type including Pay-As-You-Go or Enterprise Agreement (EA).  For a complete list of Azure offer types supported by DC-series, see [current offers without spending limits](https://azure.microsoft.com/support/legal/offer-details).
 
-### Selecting hardware configuration
+<a id="selecting-hardware-configuration"></a>
+
+### Select hardware configuration
 
 You can select hardware configuration for a database or elastic pool in SQL Database at the time of creation. You can also change hardware configuration of an existing database or elastic pool.
 
@@ -263,17 +260,17 @@ For detailed information, see [Create a SQL Database](single-database-create-qui
 
 On the **Basics** tab, select the **Configure database** link in the **Compute + storage** section, and then select the **Change configuration** link:
 
-:::image type="content" source="./media/service-tiers-vcore/configure-sql-database.png" alt-text="A screenshot of the Azure portal Create SQL Database deployment, on the Configure page. The Change configuration button is highlighted." loc-scope="azure-portal":::
+:::image type="content" source="media/service-tiers-vcore/configure-sql-database.png" alt-text="Screenshot of the Azure portal Create SQL Database deployment, on the Configure page. The Change configuration button is highlighted." lightbox="media/service-tiers-vcore/configure-sql-database.png":::
 
 Select the desired hardware configuration:
 
-:::image type="content" source="./media/service-tiers-vcore/select-hardware.png" alt-text="A screenshot of the Azure portal on the SQL hardware configuration page for a SQL database." loc-scope="azure-portal":::
+:::image type="content" source="media/service-tiers-vcore/select-hardware.png" alt-text="Screenshot of the Azure portal on the SQL hardware configuration page for an Azure SQL database." lightbox="media/service-tiers-vcore/select-hardware.png":::
 
 **To change hardware configuration of an existing SQL Database or pool**
 
 For a database, on the Overview page, select the **Pricing tier** link:
 
-:::image type="content" source="./media/service-tiers-vcore/change-hardware.png" alt-text="A screenshot of the Azure portal on the overview page of the adventure-works SQL database. The pricing tier 'General Purpose: Standard-series (Gen5), 2 vCores' is highlighted." loc-scope="azure-portal":::
+:::image type="content" source="media/service-tiers-vcore/change-hardware.png" alt-text="Screenshot of the Azure portal on the overview page of Azure SQL Database. The pricing tier 'General Purpose: Standard-series (Gen5), 2 vCores' is highlighted." lightbox="media/service-tiers-vcore/change-hardware.png":::
 
 For a pool, on the **Overview** page, select **Configure**.
 
@@ -283,32 +280,52 @@ Follow the steps to change configuration, and select hardware configuration as d
 
 For information on previous generation hardware, see [Previous generation hardware availability](#previous-generation-hardware).
 
-#### <a id="gen4gen5-1"></a><a id="gen5"></a> Standard-series (Gen5)
+<a id="gen4gen5-1"></a> <a id="gen5"></a>
+
+#### Standard-series (Gen5)
 
 Standard-series (Gen5) hardware is available in all public regions worldwide.
 
 #### <a id="hyperscale-premium-series-availability"></a> Hyperscale premium-series
  
-Hyperscale service tier premium-series and premium-series memory optimized hardware is available in the following regions:
+Hyperscale service tier premium-series and premium-series memory optimized hardware is available for single databases and elastic pools in the following regions:
 
-- Australia East
-- Canada Central
-- Central India
-- Central US
-- East US
-- East US 2
+- Australia East \*\*
+- Australia Southeast
+- Brazil South
+- Canada Central \*\*
+- Canada East
+- East Asia
+- Europe North \*\*
+- Europe West \*\*
+- France Central
+- Germany West Central
+- India Central
+- India South
 - Japan East
-- North Europe
-- North Central US
-- South Central US
-- UK South
-- West Europe
-- West US 1
-- West US 2
+- Japan West
+- Southeast Asia
+- Switzerland North
+- UK South \*\*
+- UK West \*
+- US Central \*\*
+- US East \*\*
+- US East 2
+- US North Central
+- US South Central
+- US West Central
+- US West 1
+- US West 2 \*\*
+- US West 3 \*\*
+
+\* Premium-series memory optimized hardware is not currently available.
+
+\*\* Includes support for [zone redundancy](high-availability-sla.md#zone-redundant-availability).
 
 #### Fsv2-series
 
 Fsv2-series is available in the following regions:
+
 - Australia Central
 - Australia Central 2
 - Australia East
@@ -316,30 +333,30 @@ Fsv2-series is available in the following regions:
 - Brazil South
 - Canada Central
 - East Asia
-- East US
+- Europe North
+- Europe West 
 - France Central
 - India Central
 - Korea Central
 - Korea South
-- North Europe
 - South Africa North
 - Southeast Asia
 - UK South
 - UK West
-- West Europe
-- West US 2
+- US East
+- US West 2
 
 #### DC-series
 
 DC-series is available in the following regions:
 
 - Canada Central
-- Canada East
-- East US
-- North Europe
+- Europe West
+- Europe North
+- Southeast Asia
 - UK South
-- West Europe
-- West US
+- US West
+- US East
 
 If you need DC-series in a currently unsupported region, [submit a support request](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest). On the **Basics** page, provide the following:
 
@@ -351,7 +368,7 @@ If you need DC-series in a currently unsupported region, [submit a support reque
 1. For **Problem type**, select **Security, Private and Compliance**.
 1. For **Problem subtype**, select **Always Encrypted**.
 
-:::image type="content" source="./media/service-tiers-vcore/request-dc-series.png" alt-text="A screenshot of the Azure portal form to request DC-series in a new region." loc-scope="azure-portal":::
+:::image type="content" source="media/service-tiers-vcore/request-dc-series.png" alt-text="Screenshot of the Azure portal form to request DC-series in a new region." lightbox="media/service-tiers-vcore/request-dc-series.png":::
 
 ## Previous generation hardware
 
@@ -359,18 +376,14 @@ If you need DC-series in a currently unsupported region, [submit a support reque
 
 Gen4 hardware has been retired and isn't available for provisioning, upscaling, or downscaling. Migrate your database to a supported hardware generation for a wider range of vCore and storage scalability, accelerated networking, best IO performance, and minimal latency. Review [hardware options for single databases](resource-limits-vcore-single-databases.md) and [hardware options for elastic pools](resource-limits-vcore-elastic-pools.md). For more information, see [Support has ended for Gen 4 hardware on Azure SQL Database](https://azure.microsoft.com/updates/support-has-ended-for-gen-4-hardware-on-azure-sql-database/).
 
-### <a id="azure-offer-types-supported-by-m-series"></a> M-series
+## Next step
 
-For Azure SQL Database, M-series hardware has been retired and isn't available for new deployments.
+> [!div class="nextstepaction"]
+> [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md)
 
-Existing customers should migrate to other hardware tiers before September 2023.
+## Related content
 
-M-series is only supported in the Business Critical tier and doesn't support zone redundancy.
+- [Azure SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/single/)
+- [Resource limits for single databases using the vCore purchasing model](resource-limits-vcore-single-databases.md)
+- [Resource limits for elastic pools using the vCore purchasing model](resource-limits-vcore-elastic-pools.md)
 
-## Next steps
-
-- To get started, see [Creating a SQL Database using the Azure portal](single-database-create-quickstart.md)
-- For pricing details, see the [Azure SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/single/)
-- For details about the specific compute and storage sizes available, see:
-    - [vCore-based resource limits for Azure SQL Database](resource-limits-vcore-single-databases.md)
-    - [vCore-based resource limits for pooled Azure SQL Database](resource-limits-vcore-elastic-pools.md)

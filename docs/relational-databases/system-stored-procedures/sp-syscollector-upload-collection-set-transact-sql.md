@@ -61,7 +61,7 @@ This procedure can be used for starting an on-demand upload for a running collec
 
 Requires membership in the **dc_operator** (with EXECUTE permission) fixed database role to execute this procedure.
 
-## Example
+## Examples
 
 Does an on-demand upload of a collection set named `Simple Collection Set`.
 
@@ -71,7 +71,7 @@ GO
 EXEC sp_syscollector_upload_collection_set @name = 'Simple Collection Set';
 ```
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Data collection](../data-collection/data-collection.md)

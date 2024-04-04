@@ -71,7 +71,7 @@ INSERT INTO [dbo].[CustomerInformation] ([CustomerID], [CustomerName], [Company]
 
     The "master_key_password" is a strong password of your choosing used to encrypt the connection credentials. 
     The "username" and "password" should be the username and password used to log in into the Customers database (create a new user in Customers database if one does not already exists).
-    Authentication using Azure Active Directory with elastic queries is not currently supported.
+    Authentication using Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) with elastic queries is not currently supported.
 
 ### External data sources
 
@@ -82,7 +82,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
     (TYPE = RDBMS,
     LOCATION = '<server_name>.database.windows.net',
     DATABASE_NAME = 'Customers',
-    CREDENTIAL = ElasticDBQueryCred,
+    CREDENTIAL = ElasticDBQueryCred
 ) ;
 ```
 
@@ -119,7 +119,7 @@ For pricing information, see [SQL Database Pricing](https://azure.microsoft.com/
 ## Next steps
 
 * For an overview of elastic query, see [Elastic query overview](elastic-query-overview.md).
-* For syntax and sample queries for vertically partitioned data, see [Querying vertically partitioned data)](elastic-query-vertical-partitioning.md)
+* For syntax and sample queries for vertically partitioned data, see [Querying vertically partitioned data](elastic-query-vertical-partitioning.md).
 * For a horizontal partitioning (sharding) tutorial, see [Getting started with elastic query for horizontal partitioning (sharding)](elastic-query-getting-started.md).
-* For syntax and sample queries for horizontally partitioned data, see [Querying horizontally partitioned data)](elastic-query-horizontal-partitioning.md)
-* See [sp\_execute \_remote](/sql/relational-databases/system-stored-procedures/sp-execute-remote-azure-sql-database) for a stored procedure that executes a Transact-SQL statement on a single remote Azure SQL Database or set of databases serving as shards in a horizontal partitioning scheme.
+* For syntax and sample queries for horizontally partitioned data, see [Querying horizontally partitioned data](elastic-query-horizontal-partitioning.md).
+* See [sp\_execute\_remote](/sql/relational-databases/system-stored-procedures/sp-execute-remote-azure-sql-database) for a stored procedure that executes a Transact-SQL statement on a single remote Azure SQL Database or set of databases serving as shards in a horizontal partitioning scheme.

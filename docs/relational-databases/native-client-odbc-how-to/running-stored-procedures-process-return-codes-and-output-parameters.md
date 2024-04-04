@@ -10,7 +10,6 @@ ms.topic: "reference"
 helpviewer_keywords:
   - "return codes [ODBC]"
   - "output parameters [ODBC]"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Running Stored Procedures - Process Return Codes and Output Parameters
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +45,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The third ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the stored procedure used by this sample.  
   
 ```  
-use AdventureWorks  
+USE AdventureWorks2022;
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'TestParm')  
    DROP PROCEDURE TestParm  
 GO  
@@ -179,7 +178,7 @@ int main() {
 ```  
   
 ```  
-use AdventureWorks  
+USE AdventureWorks2022;
 DROP PROCEDURE TestParm  
 GO  
 ```  

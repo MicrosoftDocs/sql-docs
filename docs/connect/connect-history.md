@@ -1,9 +1,9 @@
 ---
-title: "Driver history for Microsoft SQL Server"
-description: "This page describes Microsoft's historical data connection technologies for connecting to SQL Server."
+title: Driver history for Microsoft SQL Server
+description: This page describes Microsoft's historical data connection technologies for connecting to SQL Server and other legacy sources.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 11/03/2022
+ms.date: 09/01/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -86,7 +86,7 @@ MDAC/WDAC includes these components:
 * **ADOMD:** ADO Multi-Dimensional (ADOMD) is to be used with multidimensional data providers such as Microsoft OLAP Provider, also known as Microsoft Analysis Services Provider. No major feature enhancements have been made to it since MDAC 2.0.
 * **ADOX:** ADO Extensions for DDL and Security (ADOX) enable the creation and modification of definitions of a database, table, index, or stored procedure. You can use ADOX with any provider. The Microsoft Jet OLE DB Provider provides full support for ADOX, while the Microsoft SQL Server OLE DB Provider provides limited support.
 * **Microsoft SQL Server Network Libraries:** The SQL Server Network Libraries allow SQLOLEDB and SQLODBC to communicate with the SQL Server database. The following SQL Server Network Libraries have been deprecated in MDAC/WDAC releases: Banyan Vines, AppleTalk, ServerNet, IPX/SPX, Giganet, and RPC. TCP/IP and Named Pipes will continue to be supported and are available on the 64-bit Windows operating system.
-* **MSDASQL:** The Microsoft OLE DB Provider for ODBC (MSDASQL) allows applications that are built on OLE DB and ADO (which uses OLEDB internally) to access data sources through an ODBC driver. MSDASQL is an OLEDB provider that connects to ODBC, instead of a database. It is meant as a bridge from OLE DB to an ODBC driver when no direct OLE DB provider exists for a data source. MSDASQL ships with the Windows operating system, and Windows Server 2008 and Vista SP1 were the first Windows releases to include a 64-bit version of the technology.
+* **MSDASQL:** The Microsoft OLE DB Provider for ODBC (MSDASQL) allows applications that are built on OLE DB and ADO (which uses OLEDB internally) to access data sources through an ODBC driver. MSDASQL is an OLEDB provider that connects to ODBC, instead of a database. It's meant as a bridge from OLE DB to an ODBC driver when no direct OLE DB provider exists for a data source. MSDASQL ships with the Windows operating system, and Windows Server 2008 and Vista SP1 were the first Windows releases to include a 64-bit version of the technology.
 
 ### Deprecated MDAC/WDAC Components
 
@@ -94,11 +94,11 @@ These components are still supported in the current release of MDAC/WDAC, but th
 
 * **SQLOLEDB:** The Microsoft OLE DB Provider for SQL Server (SQLOLEDB), which supports access to Microsoft SQL Server, has been deprecated. Its connectivity to future versions of SQL Server may not be supported. The ability to connect to versions earlier than SQL Server 7 will be removed from the operating system after Windows 7. New applications should use the Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL), which supports new SQL Server features. Existing applications should migrate to the Microsoft OLE DB Driver for SQL Server as well for better performance, reliability, and supportability. For more information, see [Updating an Application to OLE DB Driver for SQL Server from MDAC](oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md).
 * **SQLODBC:** The Microsoft SQL Server ODBC Driver (SQLODBC), which supports access to Microsoft SQL Server, has been deprecated. Its connectivity to future versions of SQL Server may not be supported. The ability to connect to versions earlier than SQL Server 7 will be removed from the operating system after Windows 7. New applications should use the Microsoft ODBC Driver for SQL Server on Windows, which supports new SQL Server features. Existing applications should migrate to the Microsoft ODBC Driver for SQL Server as well for better performance, reliability, and supportability. For relevant information, see [Updating an Application to SQL Server Native Client from MDAC](../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md).
-* **Microsoft Jet Database Engine 4.0:** Starting with version 2.6, MDAC no longer contains Jet components. In other words, MDAC 2.6, 2.7, and 2.8 don't contain Microsoft Jet, the Microsoft Jet OLE DB Provider, the ODBC Desktop Database Drivers, or Jet Data Access Objects (DAO). 
+* **Microsoft Jet Database Engine 4.0:** Starting with version 2.6, MDAC no longer contains Jet components. In other words, MDAC 2.6, 2.7, and 2.8 don't contain Microsoft Jet, the Microsoft Jet OLE DB Provider, the ODBC Desktop Database Drivers, or Jet Data Access Objects (DAO).
 
   There's no 64-bit version of the Jet Database Engine, the Jet OLEDB Driver, the Jet ODBC Drivers, or Jet DAO available. For more information, see [KB article 957570](https://support.microsoft.com/kb/957570). On 64-bit versions of Windows, 32-bit Jet runs under the Windows WOW64 subsystem. For more information on WOW64, see the [MSDN WOW64 documentation](/windows/desktop/WinProg64/wow64-implementation-details). Native 64-bit applications cannot communicate with the 32-bit Jet drivers running in WOW64.
 
-  Instead of Microsoft Jet, Microsoft recommends using [Microsoft SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express) when developing new, non-Microsoft Access applications requiring a relational data store. These new or converted Jet applications can continue to use Jet with the intention of using Microsoft Office 2003 and earlier files (.mdb and .xls) for non-primary data storage. However, for these applications, you should plan to migrate from Jet to the Microsoft Access Database Engine. You can [download the Microsoft Access Database Engine](https://www.microsoft.com/download/details.aspx?id=54920), which allows you to read from and write to pre-existing files in either Office 2003 (.mdb and .xls) or the Office 2007 (*.accdb, *.xlsm, *.xlsx and *.xlsb) file formats.
+  Instead of Microsoft Jet, Microsoft recommends using [Microsoft SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express) when developing new, non-Microsoft Access applications requiring a relational data store. These new or converted Jet applications can continue to use Jet with the intention of using Microsoft Office 2003 and earlier files (.mdb and .xls) for non-primary data storage. However, for these applications, you should plan to migrate from Jet to the Microsoft Access Database Engine. You can [download the Microsoft Access Database Engine](https://www.microsoft.com/download/details.aspx?id=54920), which allows you to read from and write to pre-existing files in either Office 2003 (.mdb and .xls) or the Office 2007 (`*.accdb`, `*.xlsm`, `*.xlsx` and `*.xlsb`) file formats.
 
   > [!IMPORTANT]
   > Please read the 2007 Office System End User License Agreement for specific usage limitations.
@@ -135,7 +135,7 @@ Here's a list of the supportability scenarios of past MDAC/WDAC releases, starti
 
 ## Obsolete data access technologies
 
-Obsolete technologies are technologies that have not been enhanced or updated in several product releases and that will be excluded from future product releases. Don't use these technologies when you write new applications. When you modify existing applications that are written by using these technologies, consider migrating those applications to ADO.NET or another current technology.
+Obsolete technologies are technologies that haven't been enhanced or updated in several product releases and that will be excluded from future product releases. Don't use these technologies when you write new applications. When you modify existing applications that are written by using these technologies, consider migrating those applications to ADO.NET or another current technology.
 
 The following components are considered obsolete:
 
@@ -143,5 +143,6 @@ The following components are considered obsolete:
 * **Embedded SQL (E-SQL):** E-SQL is a SQL Server-specific programming model that enables Transact-SQL statements to be embedded in Visual C code. No feature enhancements have been made to the E-SQL since SQL Server 6.5. Its final release was with SQL Server 2000, and it won't be ported to the 64-bit Windows operating system.
 * **Data Access Objects (DAO):** DAO provides access to JET (Access) databases. This API can be used from Microsoft Visual Basic, Microsoft Visual C++, and scripting languages. It was included with Microsoft Office 2000 and Office XP. DAO 3.6 is the final version of this technology. It won't be available on the 64-bit Windows operating system.
 * **Remote Data Objects (RDO):** RDO was designed specifically to access remote ODBC relational data sources, and made it easier to use ODBC without complex application code. It was included with Microsoft Visual Basic versions 4, 5, and 6. RDO version 2.0 was the final version of this technology.
+* **System.Data.OracleClient:** System.Data.OracleClient provides access to Oracle database servers. It was built by using Oracle Call Interface (OCI) version 7 and originally provided full support for Oracle 7. It uses Oracle 7 emulation to provide limited support for Oracle 8i databases. Oracle no longer supports applications that use OCI version 7 calls. As a result, System.Data.OracleClient isn't officially supported for use against Oracle 9i or later. These technologies are deprecated. If you're using Oracle data sources, you should migrate to the Oracle Data Provider for .NET (ODP.NET) that is supported with the version of Oracle Server being used. The System.Data.OracleClient namespace was officially deprecated in .NET Framework 4.0 and is no longer maintained.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

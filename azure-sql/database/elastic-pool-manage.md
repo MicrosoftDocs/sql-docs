@@ -9,7 +9,7 @@ ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: conceptual
 ms.custom:
-  - seoapril2019 sqldbrb=1
+  - sqldbrb=1
   - devx-track-azurecli
 ---
 
@@ -21,7 +21,7 @@ With an elastic pool, you determine the amount of resources that the elastic poo
 
 ## Azure portal
 
-All pool settings can be found in one place: the **Configure pool** blade. To get here, find an elastic pool in the Azure portal and select **Configure** either from the **Overview** page menu, or from the resource menu under **Settings**.
+All pool settings can be found in one place: the **Configure pool** pane. To get here, find an elastic pool in the Azure portal and select **Configure** either from the **Overview** page menu, or from the resource menu under **Settings**.
 
 From here you can make any combination of the following changes and save them all in one batch:
 
@@ -99,17 +99,17 @@ To create and manage SQL Database elastic pools and pooled databases, use these 
 
 | Command | Description |
 | --- | --- |
-|[Elastic pools - Create or update](/rest/api/sql/elasticpools/createorupdate)|Creates a new elastic pool or updates an existing elastic pool.|
-|[Elastic pools - Delete](/rest/api/sql/elasticpools/delete)|Deletes the elastic pool.|
-|[Elastic pools - Get](/rest/api/sql/elasticpools/get)|Gets an elastic pool.|
-|[Elastic pools - List by server](/rest/api/sql/elasticpools/listbyserver)|Returns a list of elastic pools in a server.|
-|[Elastic pools - Update](/rest/api/sql/2020-11-01-preview/elasticpools/update)|Updates an existing elastic pool.|
-|[Elastic pool activities](/rest/api/sql/elasticpoolactivities)|Returns elastic pool activities.|
-|[Elastic pool database activities](/rest/api/sql/elasticpooldatabaseactivities)|Returns activity on databases inside of an elastic pool.|
-|[Databases - Create or update](/rest/api/sql/2022-08-01-preview/databases/create-or-update)|Creates a new database or updates an existing database.|
+|[Elastic pools - Create or update](/rest/api/sql/elastic-pools/create-or-update)|Creates a new elastic pool or updates an existing elastic pool.|
+|[Elastic pools - Delete](/rest/api/sql/elastic-pools/delete)|Deletes the elastic pool.|
+|[Elastic pools - Get](/rest/api/sql/elastic-pools/get)|Gets an elastic pool.|
+|[Elastic pools - List by server](/rest/api/sql/elastic-pools/list-by-server)|Returns a list of elastic pools in a server.|
+|[Elastic pools - Update](/rest/api/sql/elastic-pools/update)|Updates an existing elastic pool.|
+|[Elastic pool activities](/rest/api/sql/elastic-pool-activities)|Returns elastic pool activities.|
+|[Elastic pool database activities](/rest/api/sql/elastic-pool-database-activities)|Returns activity on databases inside of an elastic pool.|
+|[Databases - Create or update](/rest/api/sql/databases/create-or-update)|Creates a new database or updates an existing database.|
 |[Databases - Get](/rest/api/sql/databases/get)|Gets a database.|
-|[Databases - List by elastic pool](/rest/api/sql/2022-08-01-preview/databases/list-by-elastic-pool)|Returns a list of databases in an elastic pool.|
-|[Databases - List by server](/rest/api/sql/2022-08-01-preview/databases/list-by-server)|Returns a list of databases in a server.|
+|[Databases - List by elastic pool](/rest/api/sql/databases/list-by-elastic-pool)|Returns a list of databases in an elastic pool.|
+|[Databases - List by server](/rest/api/sql/databases/list-by-server)|Returns a list of databases in a server.|
 |[Databases - Update](/rest/api/sql/databases/update)|Updates an existing database.|
 
 ## Next steps

@@ -7,8 +7,8 @@ ms.reviewer: matteot, drskwier, jopilov
 ms.date: 05/24/2023
 ms.service: sql
 ms.subservice: sql-server-powershell
-ms.topic: conceptual
-ms.custom: intro-installation
+ms.topic: how-to
+ms.custom: intro-installation, linux-related-content
 ---
 # Install the SQL Server PowerShell module
 

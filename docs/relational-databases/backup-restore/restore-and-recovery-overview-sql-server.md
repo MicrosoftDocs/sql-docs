@@ -183,7 +183,7 @@ For more information, see about the Database Recovery Advisor, see the following
 
 ## <a id="adr"></a> Accelerated database recovery
 
-[Accelerated database recovery](/azure/sql-database/sql-database-accelerated-database-recovery/) is available beginning in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Accelerated database recovery greatly improves database availability, especially in the presence of long-running transactions, by redesigning the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [recovery process](#TlogAndRecovery). A database for which accelerated database recovery was enabled completes the recovery process significantly faster after a failover or other non-clean shut down. When enabled, Accelerated database recovery also completes rollback of canceled long-running transactions significantly faster.
+[Accelerated database recovery](/azure/sql-database/sql-database-accelerated-database-recovery/) is available beginning in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. Accelerated database recovery greatly improves database availability, especially in the presence of long-running transactions, by redesigning the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [recovery process](#TlogAndRecovery). A database for which accelerated database recovery was enabled completes the recovery process significantly faster after a failover or other non-clean shut down. When enabled, Accelerated database recovery also completes rollback of canceled long-running transactions significantly faster.
 
 You can enable accelerated database recovery per-database on [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] using the following syntax:
 
@@ -192,7 +192,7 @@ ALTER DATABASE [<db_name>] SET ACCELERATED_DATABASE_RECOVERY = ON;
 ```
 
 > [!NOTE]  
-> Accelerated database recovery is enabled by default on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+> Accelerated database recovery is enabled by default on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 ## Next steps
 

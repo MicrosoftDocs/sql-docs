@@ -52,7 +52,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  Copy and paste the following example into the query window and click **Execute**. The example creates a table with an IDENTITY column and a CHECK constraint on the table. The example then drops the constraint and recreates it specifying the NOT FOR REPLICATION clause.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     CREATE TABLE dbo.doc_exd (column_a int IDENTITY (1,1)   
     CONSTRAINT exd_check CHECK (column_a > 1))   

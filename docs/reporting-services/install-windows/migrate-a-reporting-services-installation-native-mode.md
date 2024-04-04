@@ -5,6 +5,7 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/01/2020
 ms.service: reporting-services
+ms.subservice: report-server
 ms.topic: conceptual
 ms.custom:
   - intro-migration
@@ -83,7 +84,7 @@ For information on migrating a [!INCLUDE[ssRSnoversion](../../includes/ssrsnover
   
  If the database name from the existing installation is not suited for the new installation, you should consider creating a new database that has the name, and then load existing application data using the techniques in the following list:  
   
-* Write a [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] script that calls Report Server Web service SOAP methods to copy data between databases. You can use the RS.exe utility to run the script. For more information about this approach, see [Scripting and PowerShell with Reporting Services](../../reporting-services/tools/scripting-and-powershell-with-reporting-services.md).  
+* Write a [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] script that calls Report Server Web service SOAP methods to copy data between databases. You can use the RS.exe utility to run the script. For more information about this approach, see [Scripting and PowerShell with Reporting Services](../../reporting-services/tools/scripting-and-powershell-with-reporting-services.md).  
   
 * Write code that calls the WMI provider to copy data between databases. For more information about this approach, see [Access the Reporting Services WMI Provider](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   

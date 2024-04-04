@@ -84,7 +84,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 ```sql  
 --Create the trigger.  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF OBJECT_ID(N'Sales.bonus_reminder', N'TR') IS NOT NULL  
     DROP TRIGGER Sales.bonus_reminder;  
@@ -100,7 +100,7 @@ GO
   
 ```sql  
 --Delete the trigger.  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF OBJECT_ID ('Sales.bonus_reminder', 'TR') IS NOT NULL  
    DROP TRIGGER Sales.bonus_reminder;  
@@ -118,7 +118,7 @@ GO
   
 ```sql  
 --Create the trigger.  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF OBJECT_ID(N'Sales.bonus_reminder', N'TR') IS NOT NULL  
     DROP TRIGGER Sales.bonus_reminder;  
@@ -134,7 +134,7 @@ GO
   
 ```sql  
 --Disable the trigger.  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DISABLE TRIGGER Sales.bonus_reminder ON Sales.SalesPersonQuotaHistory;  
 GO  
@@ -143,7 +143,7 @@ GO
   
 ```sql  
 --Enable the trigger.  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 ENABLE TRIGGER Sales.bonus_reminder ON Sales.SalesPersonQuotaHistory;  
 GO  

@@ -23,7 +23,7 @@ dev_langs:
 Removes the authenticated connection between a local Stretch-enabled database and the remote Azure database. Run `sp_rda_deauthorize_db`  when the remote database is unreachable or in an inconsistent state and you want to change query behavior for all Stretch-enabled tables in the database.
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+> [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -50,7 +50,7 @@ After you run `sp_rda_deauthorize_db`, all queries against Stretch-enabled datab
 
 - Run [sys.sp_rda_set_query_mode (Transact-SQL)](sys-sp-rda-set-query-mode-transact-sql.md) with the `LOCAL_ONLY` argument to let queries continue to run against local data only.
 
-## See also
+## Related content
 
 - [sys.sp_rda_set_query_mode (Transact-SQL)](sys-sp-rda-set-query-mode-transact-sql.md)
 - [sys.sp_rda_reauthorize_db (Transact-SQL)](sys-sp-rda-reauthorize-db-transact-sql.md)

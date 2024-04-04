@@ -66,7 +66,7 @@ Is the object part to return. *object_piece* is of type **int**, and can have th
   
 ## Examples
 
- The following example uses `PARSENAME` to return information about the `Person` table in the `AdventureWorks2012` database.  
+ The following example uses `PARSENAME` to return information about the `Person` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
 -- Uses AdventureWorks  

@@ -7,6 +7,8 @@ ms.date: "09/16/2022"
 ms.service: sql
 ms.subservice: dma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 helpviewer_keywords:
   - "Data Migration Assistant, Assess"
 ---
@@ -46,10 +48,10 @@ The following step-by-step instructions help you perform your first assessment f
 ## Connect to a server
 
 1. Follow the default option, and click **Next** towards **Select sources**.
-1. Enter the SQL server instance name, choose the Authentication type, set the correct connection properties.
+1. Enter the SQL Server instance name, choose the Authentication type, set the correct connection properties.
 1. (Optional) Enter a folder path that contains SSIS packages.
 1. (Optional) Enter package encryption password if applicable.
-1. Click **Connect** to the source SQL server.
+1. Click **Connect** to the source SQL Server.
   ![Screenshot showing the Connect to a server pane with the Enter a folder path that contains SSIS packages option and Enter package encryption password if applicable option called out.](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
 
 ## Add sources to assess

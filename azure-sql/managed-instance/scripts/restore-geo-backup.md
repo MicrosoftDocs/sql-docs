@@ -9,7 +9,7 @@ ms.service: sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: sample
 ms.custom: devx-track-azurepowershell
-ms.devlang: PowerShell
+ms.devlang: powershell
 ---
 # Use PowerShell to restore an Azure SQL Managed Instance database to another geo-region
 

@@ -103,7 +103,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
     ```sql  
     -- Trigger valid for multirow and single row inserts  
     -- and optimal for single row inserts.  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     CREATE TRIGGER NewPODetail3  
     ON Purchasing.PurchaseOrderDetail  

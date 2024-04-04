@@ -3,7 +3,7 @@ title: Install SQL Server Machine Learning Services on Windows
 description: Learn how to install SQL Server Machine Learning Services on Windows to run Python and R scripts in-database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 10/12/2022
+ms.date: 10/20/2023
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
@@ -21,11 +21,11 @@ This article shows you how to install [SQL Server Machine Learning Services](../
 
 ## <a name="bkmk_prereqs"> </a> Pre-installation checklist
 
-+ A database engine instance is required. You can't install just Python or R features, although you can add them incrementally to an existing instance.
++ A database engine instance is required. You can't install just Python or R features, although you can add them incrementally to an existing standalone instance.
 
 + For business continuity, [Always On availability groups](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) are supported for Machine Learning Services. Install Machine Learning Services, and configure packages, on each node.
 
-+ Installing Machine Learning Services *is not supported* on an [Always On failover cluster instance](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) in SQL Server 2017. It's supported with SQL Server 2019 and later.
++ Installing Machine Learning Services *is not supported* on an [Always On failover cluster instance](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) in SQL Server 2017. It's supported with SQL Server 2019 and later. You must install Machine Learning Services at installation time, and features can't be added to an existing failover cluster instance once installed.
  
 + Don't install Machine Learning Services on a domain controller. The Machine Learning Services portion of setup will fail.
 
@@ -53,7 +53,7 @@ For more information on which SQL Server editions support Python and R integrati
 ::: moniker-end
 
 ::: moniker range="=sql-server-ver15"
-For more information on which SQL Server editions support Python and R integration with Machine Learning Services, see [Editions and supported features of SQL Server 2019 (15.x)](../../sql-server/editions-and-components-of-sql-server-2019.md).
+For more information on which SQL Server editions support Python and R integration with Machine Learning Services, see [Editions and supported features of SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-2019.md).
 ::: moniker-end
 
 ## Run setup

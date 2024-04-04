@@ -8,13 +8,18 @@ ms.date: 05/03/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: tutorial
-ms.custom: intro-deployment
+ms.custom:
+  - intro-deployment
+  - linux-related-content
 ---
 # Deploy availability groups with DH2i DxEnterprise on Kubernetes
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This tutorial explains how to configure SQL Server Always On availability groups for SQL Server Linux based containers deployed to an Azure Kubernetes Service (AKS) Kubernetes cluster, using DH2i DxEnterprise. You can choose between a [sidecar configuration](/azure/architecture/patterns/sidecar) (preferred), or build your own custom container image.
+
+> [!NOTE]  
+> Microsoft supports data movement, availability group, and SQL Server components. DH2i is responsible for support of the DxEnterprise product, which includes cluster and quorum management.
 
 # [Sidecar configuration](#tab/sidecar)
 
@@ -229,9 +234,6 @@ In this tutorial, Azure Kubernetes Service (AKS) is used as the Kubernetes clust
 > - Configure `Read_Write_Routing_URL` for listener functionality (optional)
 
 For more information about DxEnterprise, see [DH2i DxEnterprise](https://dh2i.com/dxenterprise-high-availability/).
-
-> [!NOTE]  
-> Microsoft supports data movement, availability group, and SQL Server components. DH2i is responsible for support of the DxEnterprise product, which includes cluster and quorum management.
 
 ## Prerequisites
 
@@ -663,7 +665,7 @@ WITH (PRIMARY_ROLE(READ_WRITE_ROUTING_URL = 'TCP://<External IP address of secon
 GO
 ```
 
-## Next steps
+## Related content
 
 - [Deploy SQL Server containers on Azure Kubernetes Service](quickstart-sql-server-containers-kubernetes.md)
 - [Deploy SQL Server Linux containers on Kubernetes with StatefulSets](sql-server-linux-kubernetes-best-practices-statefulsets.md)

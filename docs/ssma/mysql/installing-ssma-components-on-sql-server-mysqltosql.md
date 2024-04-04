@@ -1,5 +1,5 @@
 ---
-title: "Installing SSMA components on SQL Server (MySQLToSql)"
+title: "Installing SSMA components on SQL Server (MySQLToSQL)"
 description: Install components on the server that runs SQL Server to support MySQL database conversion with SSMA, including the SSMA extension pack and MySQL providers.
 author: cpichuka
 ms.author: cpichuka
@@ -7,12 +7,14 @@ ms.date: "07/14/2020"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.custom: intro-installation
+ms.custom:
+  - intro-installation
+  - sql-migration-content
 helpviewer_keywords:
   - "SSMA extension pack, Installation"
 ---
 
-# Installing SSMA components on SQL Server (MySQLToSql)
+# Installing SSMA components on SQL Server (MySQLToSQL)
 
 In addition to installing SSMA, you must also install components on the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. These components include the SSMA extension pack, which supports data migration, and MySQL providers to enable server-to-server connectivity.
 

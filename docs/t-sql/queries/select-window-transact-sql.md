@@ -32,7 +32,7 @@ Named window definition in the WINDOW clause determines the partitioning and ord
 > [!NOTE]
 > The WINDOW clause requires database compatibility level 160 or higher. If your database compatibility level is lower than 160, SQL Server cannot execute queries with the WINDOW clause.
 >
->You can check compatibility level in the sys.databases view or in database properties. You can change the compatibility level of a database with the following command:
+>You can check the compatibility level in the sys.databases view or in database properties. You can change the compatibility level of a database with the following command:
 >
 >```sql
 >ALTER DATABASE DatabaseName SET COMPATIBILITY_LEVEL = 160
@@ -106,10 +106,10 @@ The restrictions for usage of window specifications in the OVER clause with the 
 The following example query shows uses a named window in the OVER clause.
 
 ```sql
-ALTER DATABASE AdventureWorks2012 SET Compatibility_level = 160;
+ALTER DATABASE AdventureWorks2022 SET Compatibility_level = 160;
 GO
 
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 
 SELECT ROW_NUMBER() OVER win AS "Row Number",
@@ -129,7 +129,7 @@ GO
 The following query is the equivalent of the above query without using the WINDOW clause.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 
 SELECT ROW_NUMBER() OVER (PARTITION BY PostalCode ORDER BY SalesYTD DESC) AS "Row Number",
@@ -169,10 +169,10 @@ Here is the result set.
 The following example shows defining a window specification and using it multiple times in an OVER clause.
 
 ```sql
-ALTER DATABASE AdventureWorks2012 SET Compatibility_level = 160;
+ALTER DATABASE AdventureWorks2022 SET Compatibility_level = 160;
 GO
 
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 
 SELECT SalesOrderID, ProductID, OrderQty
@@ -190,7 +190,7 @@ GO
 The following query is the equivalent of the above query without using the WINDOW clause.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT SalesOrderID, ProductID, OrderQty
     ,SUM(OrderQty) OVER (PARTITION BY SalesOrderID) AS Total
@@ -233,10 +233,10 @@ Here is the result set.
 This example shows defining a common specification in a window and using it to define additional specifications in the OVER clause.
 
 ```sql
-ALTER DATABASE AdventureWorks2012 SET Compatibility_level = 160;
+ALTER DATABASE AdventureWorks2022 SET Compatibility_level = 160;
 GO
 
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 
 SELECT SalesOrderID AS OrderNumber, ProductID,
@@ -254,7 +254,7 @@ GO
 The following query is the equivalent of the above query without using the WINDOW clause.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 
 SELECT SalesOrderID AS OrderNumber, ProductID,
@@ -285,10 +285,10 @@ Here is the result set.
 This example shows using named windows as forward and backward references when defining a new window in the WINDOW clause.
 
 ```sql
-ALTER DATABASE AdventureWorks2012 SET Compatibility_level = 160;
+ALTER DATABASE AdventureWorks2022 SET Compatibility_level = 160;
 GO
 
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 
 SELECT SalesOrderID AS OrderNumber, ProductID,
@@ -307,7 +307,7 @@ GO
 The following query is the equivalent of the above query without using the WINDOW clause.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 
 SELECT SalesOrderID AS OrderNumber, ProductID,

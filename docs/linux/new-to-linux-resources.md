@@ -9,6 +9,8 @@ ms.date: 03/15/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # New to Linux resources for SQL users
 
@@ -24,7 +26,7 @@ The [What is Linux](https://www.linux.org/threads/what-is-linux.4106/) module in
 
 ## Select a distribution
 
-After you know the history of Linux, decide which [distribution of Linux](https://www.linux.org/threads/selecting-a-linux-distribution.4117/) best suits your business needs. [SQL Server is supported](sql-server-linux-release-notes-2019.md#supported-platforms) on various distributions such as RedHat Enterprise Linux (RHEL), SUSE Enterprise Linux Server (SLES), and Ubuntu.
+After you know the history of Linux, decide which [distribution of Linux](https://www.linux.org/threads/selecting-a-linux-distribution.4117/) best suits your business needs. [SQL Server is supported](sql-server-linux-release-notes-2019.md#supported-platforms) on various distributions such as Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu.
 
 ## Get around directories
 
@@ -52,7 +54,7 @@ After you're familiar with recognizing different users and groups in Linux, lear
 
 Introduce yourself to the [frequently used commands](https://www.linux.org/threads/commands-for-system-administration.4126/) system administrators rely on to control their Linux operating systems. These commands include: `df`, `du`, `TOP`, `ps`, `mkdir`, `rmdir`, `rm`, and `mv`.
 
-## Next steps
+## Related content
 
 - [Editions and supported features of SQL Server 2022 on Linux](sql-server-linux-editions-and-components-2022.md)
 - [Release notes for SQL Server 2022 on Linux](sql-server-linux-release-notes-2022.md)

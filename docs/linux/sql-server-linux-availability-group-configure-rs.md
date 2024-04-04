@@ -8,6 +8,8 @@ ms.date: 04/11/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Configure a SQL Server Availability Group for read-scale on Linux
 
@@ -49,7 +51,7 @@ CREATE AVAILABILITY GROUP [ag1]
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 ```
 
-### Join secondary SQL Servers to the AG
+### Join secondary SQL Server instances to the AG
 
 The following Transact-SQL script joins a server to an AG named `ag1`. Update the script for your environment. On each secondary SQL Server replica, run the following Transact-SQL script to join the AG:
 
@@ -74,7 +76,7 @@ There are two ways to connect to read-only secondary replicas. Applications can 
 
 [!INCLUDE[Force failover](../includes/ss-force-failover-read-scale-out.md)]
 
-## Next steps
+## Related content
 
 - [Configure a distributed Availability Group](../database-engine/availability-groups/windows/distributed-availability-groups.md)
 - [Learn more about availability groups](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)

@@ -23,7 +23,7 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-This page provides links to help you locate the information that you need about performance in the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] and [!INCLUDE [ssSDSFull](../../includes/sssdsfull-md.md)].
+This page provides links to help you locate the information that you need about performance in the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 **Legend**
 
@@ -31,7 +31,7 @@ This page provides links to help you locate the information that you need about 
 
 ## Configuration options for performance
 
-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] provides the ability to affect database engine performance  through a number of configuration options at the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] level. With [!INCLUDE [ssSDSFull](../../includes/sssdsfull-md.md)], Microsoft performs most, but not all, of these optimizations for you.
+[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] provides the ability to affect database engine performance  through a number of configuration options at the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] level. With [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], Microsoft performs most, but not all, of these optimizations for you.
 
 | Options | Description |
 | - | - |

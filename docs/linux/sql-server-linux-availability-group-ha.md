@@ -8,6 +8,8 @@ ms.date: 12/14/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # High availability and data protection for availability group configurations
 
@@ -79,7 +81,7 @@ An availability group with two synchronous replicas provides read-scale and data
 
 ## Two synchronous replicas and a configuration only replica
 
-An availability group with two (or more) synchronous replicas and a configuration only replica provides data protection and may also provide high availability. The following diagram represents this architecture:
+An availability group with two (or more) synchronous replicas and a configuration only replica provides data protection and might also provide high availability. The following diagram represents this architecture:
 
 :::image type="content" source="media/sql-server-linux-availability-group-ha/2-configuration-only.png" alt-text="Diagram showing a configuration-only availability group.":::
 
@@ -124,6 +126,6 @@ The default value for `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 0. The fo
 
 [!INCLUDE [cluster-pacemaker-concepts](includes/cluster-pacemaker-concepts.md)]
 
-## See also
+## Related content
 
 - [Availability groups on Linux](sql-server-linux-availability-group-overview.md)

@@ -56,7 +56,7 @@ Indicates the current status of the operator. *@enabled* is **tinyint**, with a 
 
 #### [ @email_address = ] N'*email_address*'
 
-The e-mail address of the operator. This string is passed directly to the e-mail system. *@email_address* is **nvarchar(100)**, with a default of NULL.
+The e-mail address of the operator. This string is passed directly to the e-mail system. *@email_address* is **nvarchar(100)**, with a default of `NULL`.
 
 You can specify either a physical e-mail address or an alias for *@email_address*. For example:
 
@@ -67,7 +67,7 @@ You can specify either a physical e-mail address or an alias for *@email_address
 
 #### [ @pager_address = ] N'*pager_address*'
 
-The pager address of the operator. This string is passed directly to the e-mail system. *@pager_address* is **nvarchar(100)**, with a default of NULL.
+The pager address of the operator. This string is passed directly to the e-mail system. *@pager_address* is **nvarchar(100)**, with a default of `NULL`.
 
 #### [ @weekday_pager_start_time = ] *weekday_pager_start_time*
 
@@ -109,17 +109,17 @@ A number that indicates the days that the operator is available for pages (subje
 
 #### [ @netsend_address = ] N'*netsend_address*'
 
-The network address of the operator to whom the network message is sent. *@netsend_address* is **nvarchar(100)**, with a default of NULL.
+The network address of the operator to whom the network message is sent. *@netsend_address* is **nvarchar(100)**, with a default of `NULL`.
 
 #### [ @category_name = ] '*category*'
 
-The name of the category for this operator. *@category_name* is **sysname**, with a default of NULL.
+The name of the category for this operator. *@category_name* is **sysname**, with a default of `NULL`.
 
 ## Return code values
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -153,7 +153,7 @@ EXEC dbo.sp_add_operator @name = N'Dan Wilson',
 GO
 ```
 
-## See also
+## Related content
 
 - [sp_delete_operator (Transact-SQL)](sp-delete-operator-transact-sql.md)
 - [sp_help_operator (Transact-SQL)](sp-help-operator-transact-sql.md)

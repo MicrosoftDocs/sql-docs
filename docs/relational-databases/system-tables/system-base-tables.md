@@ -37,7 +37,7 @@ dev_langs:
 |----------------|-----------------|  
 |**sys.sysschobjs**|Exists in every database. Each row represents an object in the database.|  
 |**sys.sysbinobjs**|Exists in every database. Contains a row for each Service Broker entity in the database. Service Broker entities include the following:<br /><br /> Message type<br /><br /> Service contract<br /><br /> Service<br /><br /> The names and types use binary collation that is fixed.|  
-|**sys.sysclsobjs**|Exists in every database. Contains a row for each classified entity that shares the same common properties that include the following:<br /><br /> Assembly<br /><br /> Backup device<br /><br /> Full-text catalog<br /><br /> Partition function<br /><br /> Partition scheme<br /><br /> File group<br /><br /> Obfuscation key|  
+|**sys.sysclsobjs**|Exists in every database. Contains a row for each classified entity that shares the same common properties that include the following:<br /><br /> Assembly<br /><br /> Backup device<br /><br /> Full-text catalog<br /><br /> Partition function<br /><br /> Partition scheme<br /><br /> File group<br /><br /> Obfuscation key <br /><br />Schema|  
 |**sys.sysnsobjs**|Exists in every database. Contains a row for each namespace-scoped entity. This table is used for storing XML collection entities.|  
 |**sys.syscolpars**|Exists in every database. Contains a row for every column in a table, view, or table-valued function. It also contains rows for every parameter of a procedure or function.|  
 |**sys.systypedsubobjs**|Exists in every database. Contains a row for each typed subentity. Only parameters for partition function fall into this category.|  
@@ -79,7 +79,7 @@ dev_langs:
 |**sys.sysguidrefs**|Exists in every database. Contains a row for each GUID classified ID reference.|  
   
 ## Updating System Base Tables    
-You can view the data in the system tables through the system catalog views. To update the metadata in a system base table, use the appropriate TSQL interface (for example, DDL statements). You can't manually update system tables. SQL Server reports the following messages when you perform direct updates to system tables.
+You can view the data in the system tables through the system catalog views. To update the metadata in a system base table, use the appropriate Transact-SQL interface (for example, DDL statements). You can't manually update system tables. SQL Server reports the following messages when you perform direct updates to system tables.
 
 ### A system table is manually updated
 Msg 17659: Warning: System table ID \<id\> has been updated directly in database ID \<id\> and cache coherence may not have been maintained. SQL Server should be restarted.

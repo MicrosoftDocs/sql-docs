@@ -113,7 +113,7 @@ EXEC sp_serveroption
 GO
 ```
 
-## See also
+## Related content
 
 - [Distributed Queries stored procedures (Transact-SQL)](distributed-queries-stored-procedures-transact-sql.md)
 - [sp_adddistpublisher (Transact-SQL)](sp-adddistpublisher-transact-sql.md)

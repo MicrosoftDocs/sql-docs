@@ -28,7 +28,7 @@ helpviewer_keywords:
   
  The SQL Server backup and restore component provides an essential safeguard for protecting critical data stored in your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases. To minimize the risk of catastrophic data loss, you need to back up your databases to preserve modifications to your data on a regular basis. A well-planned backup and restore strategy helps protect databases against data loss caused by a variety of failures. Test your strategy by restoring a set of backups and then recovering your database to prepare you to respond effectively to a disaster.
   
- In addition to local storage for storing the backups, SQL Server also supports backup to and restore from Azure Blob Storage. For more information, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). For database files stored using Azure Blob Storage, [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] provides the option to use Azure snapshots for nearly instantaneous backups and faster restores. For more information, see [File-Snapshot Backups for Database Files in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md). Azure also offers an enterprise-class backup solution for SQL Server running in Azure VMs. A fully-managed backup solution, it supports Always On availability groups, long-term retention, point-in-time recovery, and central management and monitoring. For more information, see [Azure Backup for SQL Server in Azure VM](/azure/backup/backup-azure-sql-database).
+ In addition to local storage for storing the backups, SQL Server also supports backup to and restore from Azure Blob Storage. For more information, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). For database files stored using Azure Blob Storage, [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] provides the option to use Azure snapshots for nearly instantaneous backups and faster restores. For more information, see [File-Snapshot Backups for Database Files in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md). Azure also offers an enterprise-class backup solution for SQL Server running in Azure VMs. A fully managed backup solution, it supports Always On availability groups, long-term retention, point-in-time recovery, and central management and monitoring. For more information, see [Azure Backup for SQL Server in Azure VM](/azure/backup/backup-azure-sql-database).
   
 ##  Why back up?  
 -   Backing up your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases, running test restores procedures on your backups, and storing copies of backups in a safe, off-site location protects you from potentially catastrophic data loss. **Backing up is the only way to protect your data.**
@@ -95,18 +95,28 @@ helpviewer_keywords:
   
 -   Constraints on resources, such as: hardware, personnel, space for storing backup media, the physical security of the stored media, and so on.  
 
-## Best Practice Recommendations
+## Best practice recommendations
+
+The accounts that perform backup or restore operations should not be granted more privileges than necessary. Review [backup](../../t-sql/statements/backup-transact-sql.md#permissions) and [restore](../../t-sql/statements/restore-statements-transact-sql.md#permissions) for specific permission details. It's recommended that backups are [encrypted](../security/encryption/transparent-data-encryption.md) and, if possible, [compressed](backup-compression-sql-server.md). 
+
+To ensure security, backup files should have extensions that follow proper conventions: 
+-	Database backup files should have the `.BAK` extension
+-	Log backup files should have the `.TRN` extension. 
+
 
 ### Use Separate Storage 
+
 > [!IMPORTANT] 
 > Ensure that you place your database backups on a separate physical location or device from the database files. When your physical drive that stores your databases malfunctions or crashes, recoverability depends on the ability to access the separate drive or remote device that stored the backups in order to perform a restore. Keep in mind that you could create several logical volumes or partitions from a same physical disk drive. Carefully study the disk partition and logical volume layouts before choosing a storage location for the backups.
 
 ### Choose appropriate recovery model
+
  Backup and restore operations occur within the context of a [recovery model](../backup-restore/recovery-models-sql-server.md). A recovery model is a database property that controls how the transaction log is managed. Thus, the recovery model of a database determines what types of backups and restore scenarios are supported for the database, and what the size of the transaction log backups would be. Typically, a database uses either the simple recovery model or the full recovery model. The full recovery model can be augmented by switching to the bulk-logged recovery model before bulk operations. For an introduction to these recovery models and how they affect transaction log management, see [The Transaction Log (SQL Server)](../logs/the-transaction-log-sql-server.md)  
   
  The best choice of recovery model for the database depends on your business requirements. To avoid transaction log management and simplify backup and restore, use the simple recovery model. To minimize work-loss exposure, at the cost of administrative overhead, use the full recovery model. To minimize impact on log size during bulk-logged operations while at the same time allowing for recoverability of those operations, use bulk-logged recovery model. For information about the effect of recovery models on backup and restore, see [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
 ### Design your backup strategy  
+
  After you have selected a recovery model that meets your business requirements for a specific database, you have to plan and implement a corresponding backup strategy. The optimal backup strategy depends on a variety of factors, of which the following are especially significant:  
   
 -   How many hours a day do applications have to access the database?  
@@ -123,7 +133,7 @@ helpviewer_keywords:
   
 -   Are changes likely to occur in only a small part of the database or in a large part of the database?  
   
-     For a large database in which changes are concentrated in a part of the files or filegroups, partial backups and or file backups can be useful. For more information, see [Partial Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md) and [Full File Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md).  
+     For a large database in which changes are concentrated in a part of the files or filegroups, partial backups and or full file backups can be useful. For more information, see [Partial Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md) and [Full File Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md).  
   
 -   How much disk space will a full database backup require?  
 -   How far in the past does your business require to maintain backups? 
@@ -132,9 +142,11 @@ helpviewer_keywords:
 
   
  ### Estimate the size of a full database backup  
+
  Before you implement a backup and restore strategy, you should estimate how much disk space a full database backup will use. The backup operation copies the data in the database to the backup file. The backup contains only the actual data in the database and not any unused space. Therefore, the backup is usually smaller than the database itself. You can estimate the size of a full database backup by using the **sp_spaceused** system stored procedure. For more information, see [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md).  
   
 ### Schedule backups  
+
  Performing a backup operation has minimal effect on transactions that are running; therefore, backup operations can be run during regular operations. You can perform a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup with minimal effect on production workloads.  
    
 >  For information about concurrency restrictions during backup, see [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
@@ -142,19 +154,22 @@ helpviewer_keywords:
  After you decide what types of backups you require and how frequently you have to perform each type, we recommend that you schedule regular backups as part of a database maintenance plan for the database. For information about maintenance plans and how to create them for database backups and log backups, see [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md).
   
 ### Test your backups!  
+
  You do not have a restore strategy until you have tested your backups. It is very important to thoroughly test your backup strategy for each of your databases by restoring a copy of the database onto a test system. You must test restoring every type of backup that you intend to use. It is also recommended that once you restore the backup, you perform database consistency checks via DBCC CHECKDB of the database to validate the backup media was not damaged. 
 
 ### Verify Media Stability and Consistency
-Use the verification options provided by the backup utilities (BACKUP T-SQL command, SQL Server Maintenance Plans, your backup software or solution, etc). For an example, see [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md)
+
+Use the verification options provided by the backup utilities (BACKUP T-SQL command, SQL Server Maintenance Plans, your backup software or solution, etc.). For an example, see [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md)
 Use advanced features like BACKUP CHECKSUM to detect problems with the backup media itself. For more information see [Possible Media Errors During Backup and Restore (SQL Server)](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)
 
 ### Document Backup/Restore Strategy 
+
 We recommend that you document your backup and restore procedures and keep a copy of the documentation in your run book.
 We also recommend that you maintain an operations manual for each database. This operations manual should document the location of the backups, backup device names (if any), and the amount of time that is required to restore the test backups.
 
 
-
 ## Monitor progress with xEvent
+
 Backup and restore operations can take a considerable amount of time due to the size of a database and the complexity of the operations involved. When issues arise with either operation, you can use the **backup_restore_progress_trace** extended event to monitor progress live. For more information about extended events, see [extended events](../extended-events/extended-events.md).
 
   >[!WARNING]

@@ -1,20 +1,20 @@
 ---
 title: Connect and query
-titleSuffix: Azure SQL Database & SQL Managed Instance
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Links to Azure SQL Database quickstarts showing how to connect to and query Azure SQL Database, and Azure SQL Managed Instance.
 author: dzsquared
 ms.author: drskwier
-ms.reviewer: wiassaf, mathoma
-ms.date: 03/20/2023
-ms.service: sql-database
+ms.reviewer: wiassaf, mathoma, randolphwest
+ms.date: 09/15/2023
+ms.service: sql-db-mi
 ms.subservice: connect
 ms.topic: conceptual
 ms.custom: sqldbrb=1
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
+monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 ---
 # Azure SQL Database and Azure SQL Managed Instance connect and query articles
 
-[!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
+[!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 The following document includes links to Azure examples showing how to connect and query Azure SQL Database and Azure SQL Managed Instance. For some related recommendations for Transport Level Security, see [TLS considerations for database connectivity](#tls-considerations-for-database-connectivity).
 
@@ -23,7 +23,7 @@ The following document includes links to Azure examples showing how to connect a
 | Quickstart | Description |
 | --- | --- |
 | [SQL Server Management Studio](connect-query-ssms.md) | This quickstart demonstrates how to use SSMS to connect to a database, and then use Transact-SQL statements to query, insert, update, and delete data in the database. |
-| [Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database?toc=%2fazure%2fsql-database%2ftoc.json) | This quickstart demonstrates how to use Azure Data Studio to connect to a database, and then use Transact-SQL (T-SQL) statements to create the `TutorialDB` used in Azure Data Studio tutorials. |
+| [Azure Data Studio](/azure-data-studio/quickstart-sql-database?toc=%2fazure%2fsql-database%2ftoc.json) | This quickstart demonstrates how to use Azure Data Studio to connect to a database, and then use Transact-SQL (T-SQL) statements to create the `TutorialDB` used in Azure Data Studio tutorials. |
 | [Azure portal](connect-query-portal.md) | This quickstart demonstrates how to use the [query editor](query-editor.md) to connect to a database (Azure SQL Database only), and then use Transact-SQL statements to query, insert, update, and delete data in the database. |
 | [Visual Studio Code](connect-query-vscode.md) | This quickstart demonstrates how to use Visual Studio Code to connect to a database, and then use Transact-SQL statements to query, insert, update, and delete data in the database. |
 | [.NET with Visual Studio](connect-query-dotnet-visual-studio.md) | This quickstart demonstrates how to use the .NET framework to create a C# program with Visual Studio to connect to a database and use Transact-SQL statements to query data. |
@@ -50,11 +50,11 @@ Get the connection information you need to connect to the database in Azure SQL 
 
 ## Get ADO.NET connection information (optional - SQL Database only)
 
-1. Navigate to the database blade in the Azure portal and, under **Settings**, select **Connection strings**.
+1. Navigate to the database pane in the Azure portal and, under **Settings**, select **Connection strings**.
 
 1. Review the complete **ADO.NET** connection string.
 
-   :::image type="content" source="./media/connect-query-dotnet-core/adonet-connection-string2.png" alt-text="Screenshot showing the ADO.NET connection string.":::
+   :::image type="content" source="media/connect-query-dotnet-core/adonet-connection-string2.png" alt-text="Screenshot showing the ADO.NET connection string.":::
 
 1. Copy the **ADO.NET** connection string if you intend to use it.
 
@@ -74,35 +74,22 @@ Standard (PCI-DSS).
 
 Non-Microsoft drivers might not use TLS by default. This can be a factor when connecting to Azure SQL Database or Azure SQL Managed Instance. Applications with embedded drivers might not allow you to control these connection settings. We recommend that you examine the security of such drivers and applications before using them on systems that interact with sensitive data.
 
-## Drivers
-
-The following minimal versions of the tools and drivers are recommended if you want to connect to Azure SQL database:
-
-| Driver/tool | Version |
-| --- | --- |
-| .NET Framework | 4.6.1 (or .NET Core) |
-| ODBC driver | v17 |
-| PHP driver | 5.2.0 |
-| JDBC driver | 6.4.0 |
-| Node.js driver | 2.1.1 |
-| OLEDB driver | 18.0.2.0 |
-| [SMO](/sql/relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide) | [150](https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects) or higher |
-
 ## Libraries
 
-You can use various libraries and frameworks to connect to Azure SQL Database or Azure SQL Managed Instance. Check out our [Get started tutorials](https://aka.ms/sqldev) to quickly get started with programming languages such as C#, Java, Node.js, PHP, and Python. Then build an app by using SQL Server on Linux or Windows, or a SQL Server container on Linux.
+You can use various libraries and frameworks to connect to Azure SQL Database or Azure SQL Managed Instance. You can then build an app by using SQL Server on Linux or Windows, or a SQL Server container on Linux.
 
 The following table lists connectivity libraries or *drivers* that client applications can use from a variety of languages to connect to and use SQL Server running on-premises or in the cloud. You can use them on Linux, Windows, or in containers, and use them to connect to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
 
 | Language | Platform | Additional resources | Download | Get started |
 | :-- | :-- | :-- | :-- | :-- |
-| C# | Windows, Linux, macOS | [Microsoft ADO.NET for SQL Server](/sql/connect/ado-net/microsoft-ado-net-sql-server) | [Download](https://dotnet.microsoft.com/download) | [Get started](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu)
-| Java | Windows, Linux, macOS | [Microsoft JDBC driver for SQL Server](/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server/) | [Download](/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server) |  [Get started](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu)
-| PHP | Windows, Linux, macOS| [PHP SQL driver for SQL Server](/sql/connect/php/microsoft-php-driver-for-sql-server) | [Download](/sql/connect/php/download-drivers-php-sql-server) | [Get started](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)
-| Node.js | Windows, Linux, macOS | [Node.js driver for SQL Server](/sql/connect/node-js/node-js-driver-for-sql-server/) | [Install](/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development/) |  [Get started](https://www.microsoft.com/sql-server/developer-get-started/node/ubuntu)
-| Python | Windows, Linux, macOS | [Python SQL driver](/sql/connect/python/python-driver-for-sql-server/) | Install choices: <br/> \* [pymssql](/sql/connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development/) <br/> \* [pyodbc](/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development/) |  [Get started](https://www.microsoft.com/sql-server/developer-get-started/python/ubuntu)
-| Ruby | Windows, Linux, macOS | [Ruby driver for SQL Server](/sql/connect/ruby/ruby-driver-for-sql-server/) | [Install](/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development/) | [Get started](https://www.microsoft.com/sql-server/developer-get-started/ruby/ubuntu)
+| C# | Windows, Linux, macOS | [Microsoft ADO.NET for SQL Server](/sql/connect/ado-net/microsoft-ado-net-sql-server) | [Download](https://dotnet.microsoft.com/download) |
 | C++ | Windows, Linux, macOS | [Microsoft ODBC driver for SQL Server](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server/) | [Download](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server/) |
+| Go | Windows, Linux, macOS | [Microsoft Go driver for SQL Server](https://github.com/microsoft/go-mssqldb#readme) | [Install](https://github.com/microsoft/go-mssqldb#install) |  [Get started](connect-query-go.md)
+| Java | Windows, Linux, macOS | [Microsoft JDBC driver for SQL Server](/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server/) | [Download](/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server) |
+| Node.js | Windows, Linux, macOS | [Node.js driver for SQL Server](/sql/connect/node-js/node-js-driver-for-sql-server/) | [Install](/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development/) |
+| PHP | Windows, Linux, macOS | [PHP SQL driver for SQL Server](/sql/connect/php/microsoft-php-driver-for-sql-server) | [Download](/sql/connect/php/download-drivers-php-sql-server) |
+| Python | Windows, Linux, macOS | [Python SQL driver](/sql/connect/python/python-driver-for-sql-server/) | Install choices:<br />\* [pymssql](/sql/connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development/)<br />\* [pyodbc](/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development/) |
+| Ruby | Windows, Linux, macOS | [Ruby driver for SQL Server](/sql/connect/ruby/ruby-driver-for-sql-server/) | [Install](/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development/) |
 
 ### Data-access frameworks
 
@@ -111,9 +98,10 @@ The following table lists examples of object-relational mapping (ORM) frameworks
 | Language | Platform | ORM(s) |
 | :-- | :-- | :-- |
 | C# | Windows, Linux, macOS | [Entity Framework](/ef)<br />[Entity Framework Core](/ef/core/index) |
+| Go | Windows, Linux, macOS | [GORM](https://gorm.io/) |
 | Java | Windows, Linux, macOS | [Hibernate ORM](https://hibernate.org/orm) |
-| PHP | Windows, Linux, macOS | [Laravel (Eloquent)](https://laravel.com/docs/eloquent)<br />[Doctrine](https://www.doctrine-project.org/projects/orm.html) |
 | Node.js | Windows, Linux, macOS | [Sequelize ORM](https://sequelize.org/) |
+| PHP | Windows, Linux, macOS | [Laravel (Eloquent)](https://laravel.com/docs/eloquent)<br />[Doctrine](https://www.doctrine-project.org/projects/orm.html) |
 | Python | Windows, Linux, macOS | [Django](https://www.djangoproject.com/) |
 | Ruby | Windows, Linux, macOS | [Ruby on Rails](https://rubyonrails.org/) |
 
@@ -123,9 +111,10 @@ The following table lists examples of object-relational mapping (ORM) frameworks
 - Find [SQL Server drivers](/sql/connect/sql-connection-libraries/) that are used to connect from client applications.
 - Connect to Azure SQL Database or Azure SQL Managed Instance:
   - [Connect and query using .NET (C#)](connect-query-dotnet-core.md)
-  - [Connect and query using PHP](connect-query-php.md)
-  - [Connect and query using Node.js](connect-query-nodejs.md)
+  - [Connect and query using Go](connect-query-go.md)
   - [Connect and query using Java](connect-query-java.md)
+  - [Connect and query using Node.js](connect-query-nodejs.md)
+  - [Connect and query using PHP](connect-query-php.md)
   - [Connect and query using Python](connect-query-python.md)
   - [Connect and query using Ruby](connect-query-ruby.md)
   - [Install sqlcmd and bcp the SQL Server command-line tools on Linux](/sql/linux/sql-server-linux-setup-tools) - For Linux users, try connecting to Azure SQL Database or Azure SQL Managed Instance using [sqlcmd](/sql/ssms/scripting/sqlcmd-use-the-utility).

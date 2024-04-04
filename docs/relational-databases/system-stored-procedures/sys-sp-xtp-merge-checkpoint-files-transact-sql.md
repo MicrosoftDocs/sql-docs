@@ -22,10 +22,10 @@ dev_langs:
 
 Merges all data and delta files in the transaction range specified.
 
-> [!NOTE]
+> [!NOTE]  
 > This stored procedure is deprecated in [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]. It is no longer needed, and cannot be used, starting [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)].
 
-For more information, see [Creating and Managing Storage for Memory-Optimized Objects](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).
+For more information, see [Creating and Managing Storage for Memory-Optimized Objects](../in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -47,11 +47,11 @@ The name of the database on which to invoke the merge. *@database_name* is **sys
 
 #### [ @transaction_lower_bound = ] *lower_bound_tid*
 
-The **bigint** lower bound of transactions for a data file as shown in [sys.dm_db_xtp_checkpoint_files (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md) corresponding to the start checkpoint file of the merge. An error is generated for an invalid transaction ID.
+The **bigint** lower bound of transactions for a data file as shown in [sys.dm_db_xtp_checkpoint_files (Transact-SQL)](../system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md) corresponding to the start checkpoint file of the merge. An error is generated for an invalid transaction ID.
 
 #### [ @transaction_upper_bound = ] *upper_bound_tid*
 
-The **bigint** upper bound of transactions for a data file as shown in [sys.dm_db_xtp_checkpoint_files (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md). An error is generated for an invalid transaction ID.
+The **bigint** upper bound of transactions for a data file as shown in [sys.dm_db_xtp_checkpoint_files (Transact-SQL)](../system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md). An error is generated for an invalid transaction ID.
 
 ## Return code values
 
@@ -69,7 +69,7 @@ Requires **sysadmin** fixed server role and the **db_owner** fixed database role
 
 Merges all data and delta files in the valid range to produce a single data and delta file. This procedure doesn't honor the merge policy.
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [In-Memory OLTP (In-Memory Optimization)](../in-memory-oltp/overview-and-usage-scenarios.md)

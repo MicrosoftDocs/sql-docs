@@ -3,6 +3,7 @@ title: "Bicep: Create a single database in Azure SQL Database"
 description: Create a single database in Azure SQL Database using Bicep.
 author: dimitri-furman
 ms.author: dfurman
+ms.reviewer: mathoma
 ms.date: 05/16/2022
 ms.service: sql-database
 ms.subservice: deployment-configuration
@@ -11,6 +12,8 @@ ms.custom: subject-armqs sqldbrb=1, mode-arm, devx-track-bicep
 ---
 
 # Quickstart: Create a single database in Azure SQL Database using Bicep
+
+[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 Creating a [single database](single-database-overview.md) is the quickest and simplest option for creating a database in Azure SQL Database. This quickstart shows you how to create a single database using Bicep.
 
@@ -100,7 +103,7 @@ Remove-AzResourceGroup -Name exampleRG
 - Create a server-level firewall rule to connect to the single database from on-premises or remote tools. For more information, see [Create a server-level firewall rule](firewall-create-server-level-portal-quickstart.md).
 - After you create a server-level firewall rule, [connect and query](connect-query-content-reference-guide.md) your database using several different tools and languages.
   - [Connect and query using SQL Server Management Studio](connect-query-ssms.md)
-  - [Connect and query using Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database?toc=%2fazure%2fsql-database%2ftoc.json)
+  - [Connect and query using Azure Data Studio](/azure-data-studio/quickstart-sql-database?toc=%2fazure%2fsql-database%2ftoc.json)
 - To create a single database using the Azure CLI, see [Azure CLI samples](az-cli-script-samples-content-guide.md).
 - To create a single database using Azure PowerShell, see [Azure PowerShell samples](powershell-script-content-guide.md).
 - To learn how to create Bicep files, see [Create Bicep files with Visual Studio Code](/azure/azure-resource-manager/bicep/quickstart-create-bicep-use-visual-studio-code).

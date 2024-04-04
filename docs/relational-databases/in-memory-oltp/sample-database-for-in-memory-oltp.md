@@ -19,7 +19,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 > [!NOTE]  
 >  To view this topic for [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], see [Extensions to AdventureWorks to Demonstrate In-Memory OLTP](./overview-and-usage-scenarios.md#-overview).  
   
- The sample migrates five tables in the `AdventureWorks` database to memory-optimized, and it includes a demo workload for sales order processing. You can use this demo workload to see the performance benefit of using In-Memory OLTP on your server.  
+ The sample migrates five tables in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to memory-optimized, and it includes a demo workload for sales order processing. You can use this demo workload to see the performance benefit of using In-Memory OLTP on your server.  
   
  In the description of the sample, we discuss the tradeoffs that were made in migrating the tables to In-Memory OLTP to account for the features that are not (yet) supported for memory-optimized tables.  
   
@@ -29,7 +29,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 -   Instructions for [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks).  
   
--   [Description of the sample tables and procedures](#Descriptionofthesampletablesandprocedures) - includes descriptions of the tables and procedures added to `AdventureWorks` by the In-Memory OLTP sample, as well as considerations for migrating some of the original `AdventureWorks` tables to be memory-optimized.  
+-   [Description of the sample tables and procedures](#Descriptionofthesampletablesandprocedures) - includes descriptions of the tables and procedures added to [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] by the In-Memory OLTP sample, as well as considerations for migrating some of the original [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] tables to be memory-optimized.  
   
 -   Instructions for performing [Performance Measurements using the Demo Workload](#PerformanceMeasurementsusingtheDemoWorkload) - includes instructions for installing and running ostress, a tool using for driving the workload, as well as running the demo workload itself.  
   
@@ -44,36 +44,36 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installing the In-Memory OLTP sample based on AdventureWorks  
  Follow these steps to install the sample:  
   
-1.  Download AdventureWorks2016.bak and SQLServer2016Samples.zip from: [https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks) to a local folder, for example 'c:\temp'.  
+1.  Download `AdventureWorks2016_EXT.bak` and `SQLServer2016Samples.zip` from: [https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks) to a local folder, for example `C:\Temp`.  
   
 2.  Restore the database backup using [!INCLUDE[tsql](../../includes/tsql-md.md)] or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
     1.  Identify the target folder and filename for the data file, for example  
   
-         'h:\DATA\AdventureWorks2016_Data.mdf'  
+         'h:\DATA\AdventureWorks2022_Data.mdf'  
   
     2.  Identify the target folder and filename for the log file, for example  
   
-         'i:\DATA\AdventureWorks2016_log.ldf'  
+         'i:\DATA\AdventureWorks2022_log.ldf'  
   
         1.  The log file should be placed on a different drive than the data file, ideally a low latency drive such as an SSD or PCIe storage, for maximum performance.  
   
      Example T-SQL script:  
   
     ```sql
-    RESTORE DATABASE [AdventureWorks2016]   
-      FROM DISK = N'C:\temp\AdventureWorks2016.bak'   
+    RESTORE DATABASE [AdventureWorks2022]   
+      FROM DISK = N'C:\temp\AdventureWorks2022.bak'   
         WITH FILE = 1,    
-      MOVE N'AdventureWorks2016_Data' TO N'h:\DATA\AdventureWorks2016_Data.mdf',    
-      MOVE N'AdventureWorks2016_Log' TO N'i:\DATA\AdventureWorks2016_log.ldf',  
-      MOVE N'AdventureWorks2016_mod' TO N'h:\data\AdventureWorks2016_mod'  
+      MOVE N'AdventureWorks2022_Data' TO N'h:\DATA\AdventureWorks2022_Data.mdf',    
+      MOVE N'AdventureWorks2022_Log' TO N'i:\DATA\AdventureWorks2022_log.ldf',  
+      MOVE N'AdventureWorks2022_mod' TO N'h:\data\AdventureWorks2022_mod'  
      GO  
     ```  
   
 3.  To view the sample scripts and workload, unpack the file SQLServer2016Samples.zip to a local folder. Consult the file In-Memory OLTP\readme.txt  for instructions on running the workload.  
   
 ##  <a name="Descriptionofthesampletablesandprocedures"></a> Description of the sample tables and procedures  
- The sample creates new tables for products and sales orders, based on existing tables in `AdventureWorks`. The schema of the new tables is similar to the existing tables, with a few differences, as explained below.  
+ The sample creates new tables for products and sales orders, based on existing tables in [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)]. The schema of the new tables is similar to the existing tables, with a few differences, as explained below.  
   
  The new memory-optimized tables carry the suffix '_inmem'. The sample also includes corresponding tables carrying the suffix '_ondisk' - these tables can be used to make a one-to-one comparison between the performance of memory-optimized tables and disk-based tables on your system. 
   
@@ -85,7 +85,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
  The new schema `Demo` contains helper tables and stored procedures to execute a demo workload.  
   
- Concretely, the In-Memory OLTP sample adds the following objects to `AdventureWorks`:  
+ Concretely, the In-Memory OLTP sample adds the following objects to [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)]:  
   
 ### Tables added by the sample  
   
@@ -295,7 +295,7 @@ For more information:
   
     -   Optional parameter: @object_id - ID of the object to validate integrity for  
   
-    -   This procedure relies on the tables `dbo.DomainIntegrity`, `dbo.ReferentialIntegrity`, and `dbo.UniqueIntegrity` for the integrity rules that need to be verified - the sample populates these tables based on the check, foreign key, and unique constraints that exist for the original tables in the `AdventureWorks` database.  
+    -   This procedure relies on the tables `dbo.DomainIntegrity`, `dbo.ReferentialIntegrity`, and `dbo.UniqueIntegrity` for the integrity rules that need to be verified - the sample populates these tables based on the check, foreign key, and unique constraints that exist for the original tables in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
     -   It relies on the helper procedures `dbo.usp_GenerateCKCheck`, `dbo.usp_GenerateFKCheck`, and `dbo.GenerateUQCheck` to generate the T-SQL needed for performing the integrity checks.  
   
@@ -326,7 +326,7 @@ For more information:
   
 -   -E use Windows authentication to connect (default); if you use SQL Server authentication, use the options -U and -P to specify the username and password, respectively  
   
--   -d name of the database, for this example `AdventureWorks2014`  
+-   -d name of the database, for this example [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)]  
   
 -   -Q the T-SQL statement to be executed  
   
@@ -387,7 +387,7 @@ END
  Select the **Copy** button to copy the command, and paste it into the RML Utilities command prompt.  
   
 ```console
-ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2022 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  On one test server with a total number of 8 physical (16 logical) cores, this took 2 minutes and 5 seconds. On a second test server with 24 physical (48 logical) cores, this took 1 minute and 0 seconds.  
@@ -402,7 +402,7 @@ ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016 -q -Q"DECLARE @i int = 0, @
  Select the Copy button to copy the command, and paste it into the RML Utilities command prompt.  
   
 ```console
-ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2022 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  On one test server with a total number of 8 physical (16 logical) cores, this took 41 minutes and 25 seconds. On a second test server with 24 physical (48 logical) cores, this took 52 minutes and 16 seconds.  
@@ -417,7 +417,7 @@ ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016 -q -Q"DECLARE @i int = 0, @
  To reset the demo, open the RML Cmd Prompt, and execute the following command:  
   
 ```console
-ostress.exe -S. -E -dAdventureWorks2016 -Q"EXEC Demo.usp_DemoReset"  
+ostress.exe -S. -E -dAdventureWorks2022 -Q"EXEC Demo.usp_DemoReset"  
 ```  
   
  Depending on the hardware, this may take a few minutes to run.  

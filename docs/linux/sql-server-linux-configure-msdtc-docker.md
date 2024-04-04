@@ -8,6 +8,8 @@ ms.date: 09/21/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 
 # How to use distributed transactions with SQL Server Linux containers
@@ -291,7 +293,7 @@ NAME                     READY   AGE
 statefulset.apps/mssql   2/2     5d1h
 ```
 
-You can use tools like SQL Server Management Studio (SSMS) to connect to either of the above two SQL Servers and run a sample DTC transaction. In this example, you will connect to `mssql-1` (20.72.137.129) and create the linked server to `mssql-0` (40.88.213.209) to run the distributed transaction, as shown below.
+You can use tools like SQL Server Management Studio (SSMS) to connect to either of the above two SQL Server instances and run a sample DTC transaction. In this example, you will connect to `mssql-1` (20.72.137.129) and create the linked server to `mssql-0` (40.88.213.209) to run the distributed transaction, as shown below.
 
 ```sql
 USE [master]
@@ -314,6 +316,6 @@ COMMIT
 GO
 ```
 
-## Next steps
+## Related content
 
-For more information about MSDTC on Linux, see [How to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux](sql-server-linux-configure-msdtc.md).
+- [How to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux](sql-server-linux-configure-msdtc.md)

@@ -1,11 +1,12 @@
 ---
-title: "GetSvcInstanceIDFromName"
+title: "GetSvcInstanceIDFromName()"
 description: "GetSvcInstanceIDFromName()"
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "06/18/2021"
 ms.service: sql
 ms.topic: reference
+topictype: apiref
 apilocation: "instapi.dll"
 apiname: "GetSvcInstanceIDFromName"
 apitype: "DllExport"

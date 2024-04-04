@@ -4,7 +4,7 @@ description: This article provides details about the configuration and use of th
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 04/05/2023
+ms.date: 11/22/2023
 ms.service: sql
 ms.topic: conceptual
 ms.custom: P360
@@ -47,9 +47,9 @@ The following table lists the initial configuration values of the `tempdb` data 
 
 | File | Logical name | Physical name | Initial size | File growth |
 | --- | --- | --- | --- | --- |
-| Primary data | tempdev | tempdb.mdf | 8 megabytes | Autogrow by 64 MB until the disk is full |
-| Secondary data files | temp# | tempdb_mssql_#.ndf | 8 megabytes | Autogrow by 64 MB until the disk is full |
-| Log | templog | templog.ldf | 8 megabytes | Autogrow by 64 megabytes to a maximum of 2 terabytes |
+| Primary data | `tempdev` | `tempdb.mdf` | 8 megabytes | Autogrow by 64 MB until the disk is full |
+| Secondary data files | `temp#` | `tempdb_mssql_#.ndf` | 8 megabytes | Autogrow by 64 MB until the disk is full |
+| Log | `templog` | `templog.ldf` | 8 megabytes | Autogrow by 64 megabytes to a maximum of 2 terabytes |
 
 The number of secondary data files depends on the number of (logical) processors on the machine. As a general rule, if the number of logical processors is less than or equal to eight, use the same number of data files as logical processors. If the number of logical processors is greater than eight, use eight data files. Then if contention continues, increase the number of data files by multiples of four until the contention decreases to acceptable levels, or make changes to the workload/code.
 
@@ -101,7 +101,7 @@ For a description of these database options, see [ALTER DATABASE SET Options (Tr
 
 ## tempdb in Azure SQL
 
-The behavior of `tempdb` in Azure SQL Database differs from the behavior SQL Server, Azure SQL Managed Instance, and SQL Server on Azure VMs.
+The behavior of `tempdb` in Azure SQL Database differs from the behavior SQL Server, Azure SQL Managed Instance, and SQL Server on Azure VMs. 
 
 ### tempdb in SQL Database
 
@@ -116,7 +116,9 @@ To learn more about `tempdb` sizes in Azure SQL Database, review:
 
 ### tempdb in SQL Managed Instance
 
-[Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview) supports temporary objects in the same way as SQL Server, where all global temporary tables and global temporary stored procedures are accessible by all user sessions within the same managed instance. Likewise, all system databases are accessible.
+Azure SQL Managed Instance supports temporary objects in the same way as SQL Server, where all global temporary tables and global temporary stored procedures are accessible by all user sessions within the same managed instance. Likewise, all system databases are accessible.
+
+You can configure the number of `tempdb` files, their growth increments, and their maximum size. For more information on configuring `tempdb` settings in Azure SQL Managed Instance, see [Configure tempdb settings for Azure SQL Managed Instance](/azure/azure-sql/managed-instance/tempdb-configure?view=azuresql-mi&preserve-view=true). 
 
 To learn more about `tempdb` sizes in Azure SQL Managed Instance, review [resource limits](/azure/azure-sql/managed-instance/resource-limits).
 
@@ -154,7 +156,7 @@ Preallocate space for all `tempdb` files by setting the file size to a value lar
 
 Data files should be of equal size within each [filegroup](../../relational-databases/databases/database-files-and-filegroups.md#filegroups), because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses a proportional-fill algorithm that favors allocations in files with more free space. Dividing `tempdb` into multiple data files of equal size provides a high degree of parallel efficiency in operations that use `tempdb`.
 
-Set the file growth increment to a reasonable size and set it to the same increment in all data files, to prevent the `tempdb` database files from growing by too small a value. If the file growth is too small compared to the amount of data that's being written to `tempdb`, `tempdb` might have to constantly expand. That will affect performance.
+Set the file growth increment to a reasonable size and set it to the same increment in all data files, to prevent the `tempdb` database files from growing by too small a value. If the file growth is too small compared to the amount of data that's being written to `tempdb`, `tempdb` might have to frequently expand via autogrowth events. Autogrowth events negatively affect performance.
 
 To check current size and growth parameters for `tempdb`, use the following query:
 
@@ -186,32 +188,50 @@ Put the `tempdb` database on a fast I/O subsystem. Use disk striping if there ar
 
 Put the `tempdb` database on disks that differ from the disks that user databases use.
 
+> [!NOTE]
+> Even though the database option `DELAYED_DURABILITY` is set to DISABLED for `tempdb`, SQL Server uses [lazy commits](../logs/control-transaction-durability.md) to flush `tempdb` log changes to disk, since `tempdb` is created at startup and doesn't need to run the recovery process.
+
 ## Performance improvements in tempdb for SQL Server
 
-Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], `tempdb` performance is further optimized in the following ways:
+#### Introduced in [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]
 
 - Temporary tables and table variables are cached. Caching allows operations that drop and create the temporary objects to run very quickly. Caching also reduces page allocation and metadata contention.
 - The allocation page latching protocol is improved to reduce the number of `UP` (update) latches that are used.
 - Logging overhead for `tempdb` is reduced to reduce disk I/O bandwidth consumption on the `tempdb` log file.
 - Setup adds multiple `tempdb` data files during a new instance installation. You can accomplish this task by using the new UI input control in the **Database Engine Configuration** section and the command-line parameter `/SQLTEMPDBFILECOUNT`. By default, setup adds as many `tempdb` data files as the logical processor count or eight, whichever is lower.
-- When there are multiple `tempdb` data files, all files autogrow at the same time and by the same amount, depending on growth settings. [Trace flag 1117](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) is no longer required.
-- All allocations in `tempdb` use uniform extents. [Trace flag 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) is no longer required.
+- When there are multiple `tempdb` data files, all files autogrow at the same time and by the same amount, depending on growth settings. [Trace flag 1117](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) is no longer required. For more information, read [-T1117 and -T1118 changes for TEMPDB and user databases](/archive/blogs/psssql/sql-2016-it-just-runs-faster-t1117-and-t1118-changes-for-tempdb-and-user-databases).
+- All allocations in `tempdb` use uniform extents. [Trace flag 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) is no longer required. For more information on performance improvements in `tempdb`, see the blog article [TEMPDB - Files and Trace Flags and Updates, Oh My!](/archive/blogs/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my).
 - For the primary filegroup, the `AUTOGROW_ALL_FILES` property is turned on and the property can't be modified.
 
-For more information on performance improvements in `tempdb`, see the blog article [TEMPDB - Files and Trace Flags and Updates, Oh My!](/archive/blogs/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my).
+#### Introduced in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]
+
+- The SQL Setup experience improves guidance for initial `tempdb` file allocation. SQL Setup warns customers if the initial file size is set to a value greater than 1 GB and if [instant file initialization](database-instant-file-initialization.md) is not enabled, preventing instance startup delays.
+- A new DMV [sys.dm_tran_version_store_space_usage](../system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) is introduced in SQL Server 2017 to track version store usage per database. This new DMV will be useful in monitoring `tempdb` for version store usage for DBAs who can proactively plan `tempdb` sizing based on the version store usage requirement per database.
+- New [intelligent query processing](../performance/intelligent-query-processing.md) features such as adaptive joins and memory grant feedback reduce memory spills on consecutive executions of a query, reducing unnecessary `tempdb` utilization.
+
+#### Introduced in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)]
+
+- Starting in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], SQL Server does not use the `FILE_FLAG_WRITE_THROUGH` option when opening files for `tempdb` to allow for maximum disk throughput. Since `tempdb` is recreated on startup of SQL Server, these options are not needed as they are for other system databases and user databases for data consistency. For more information on `FILE_FLAG_WRITE_THROUGH`, see [Logging and data storage algorithms that extend data reliability in SQL Server](/troubleshoot/sql/database-engine/database-file-operations/logging-data-storage-algorithms#performance-impacts).
+- Memory-optimized TempDB metadata removes a bottleneck on PAGELATCH waits in `tempdb`, and unlocks a new level of scalability. For more information, watch this [video demo on How (and When) To: Memory Optimized TempDB Metadata](/shows/data-exposed/how-and-when-to-memory-optimized-tempdb-metadata). For more information, read [monitoring and troubleshooting memory-optimized tempdb metadata](/troubleshoot/sql/database-engine/performance/memory-optimized-tempdb-out-of-memory).
+- Concurrent Page Free Space (PFS) page updates reduce patch latch contention in all databases, an issue most commonly seen in `tempdb`. This improvement changes the way that concurrency is managed with PFS updates so that they can be updated under a shared latch, rather than an exclusive latch. This behavior is on by default in all databases (including TempDB) starting with SQL Server 2019 (15.x). For more information on PFS pages, read [Under the covers: GAM, SGAM, and PFS pages](https://techcommunity.microsoft.com/t5/sql-server-blog/under-the-covers-gam-sgam-and-pfs-pages/ba-p/383125).
+- By default, a new installation of SQL Server on Linux creates multiple `tempdb` data files, based on the number of logical cores (with up to eight data files). This doesn't apply to in-place minor or major version upgrades. Each `tempdb` file is 8 MB, with an auto growth of 64 MB. This behavior is similar to the default SQL Server installation on Windows.
+
+#### Introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
+
+- [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduced [improved scalability with system page latch concurrency enhancements](https://cloudblogs.microsoft.com/sqlserver/2022/07/21/improve-scalability-with-system-page-latch-concurrency-enhancements-in-sql-server-2022/). Concurrent updates to global allocation map (GAM) pages and shared global allocation map (SGAM) pages reduce page latch contention while allocating/deallocating data pages and extents. These enhancements apply to all user databases and especially benefit `tempdb` heavy workloads. For more information on GAM and SGAM pages, read [Under the covers: GAM, SGAM, and PFS pages](https://techcommunity.microsoft.com/t5/sql-server-blog/under-the-covers-gam-sgam-and-pfs-pages/ba-p/383125). For more information, watch [System Page Latch Concurrency Enhancements (Ep. 6) | Data Exposed](/shows/data-exposed/system-page-latch-concurrency-enhancements).
 
 ## Memory-optimized tempdb metadata
 
-Metadata contention in `tempdb` has historically been a bottleneck to scalability for many workloads running on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] introduces a new feature that's part of the [in-memory database](../in-memory-database.md) feature family: memory-optimized `tempdb` metadata.
+Metadata contention in `tempdb` has historically been a bottleneck to scalability for many workloads running on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] introduces a new feature that's part of the [in-memory database](../in-memory-database.md) feature family: Memory-optimized TempDB metadata.
 
 This feature effectively removes this bottleneck and unlocks a new level of scalability for `tempdb`-heavy workloads. In [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], the system tables involved in managing temporary table metadata can be moved into latch-free, non-durable, memory-optimized tables.
 
 > [!NOTE]  
-> Currently the memory-optimized `tempdb` metadata feature is not available in Azure SQL Database or Azure SQL Managed Instance.
+> Currently the Memory-optimized TempDB metadata feature is not available in Azure SQL Database or Azure SQL Managed Instance.
 
-Watch this seven-minute video for an overview of how and when to use memory-optimized `tempdb` metadata:
+Watch this seven-minute video for an overview of how and when to use Memory-optimized TempDB metadata:
 
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-and-When-To-Memory-Optimized-TempDB-Metadata/player?WT.mc_id=dataexposed-c9-niner]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?show=data-exposed&ep=how-and-when-to-memory-optimized-tempdb-metadata]
 
 ### Configure and use memory-optimized tempdb metadata
 
@@ -229,7 +249,7 @@ You can verify whether or not `tempdb` is memory-optimized by using the followin
 SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized');
 ```
 
-If the server fails to start for any reason after you enable memory-optimized `tempdb` metadata, you can bypass the feature by starting the SQL Server instance with [minimal configuration](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) through the **-f** startup option. You can then disable the feature and restart SQL Server in normal mode.
+If the server fails to start for any reason after you enable Memory-optimized TempDB metadata, you can bypass the feature by starting the SQL Server instance with [minimal configuration](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) through the **-f** startup option. You can then disable the feature and restart SQL Server in normal mode.
 
 To protect the server from potential out-of-memory conditions, you can bind `tempdb` to a [resource pool](../in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md). This is done through the [`ALTER SERVER`](../../t-sql/statements/alter-server-configuration-transact-sql.md) command rather than the steps you would normally follow to bind a resource pool to a database.
 
@@ -237,13 +257,13 @@ To protect the server from potential out-of-memory conditions, you can bind `tem
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON (RESOURCE_POOL = 'pool_name');
 ```
 
-This change also requires a restart to take effect, even if memory-optimized `tempdb` metadata is already enabled.
+This change also requires a restart to take effect, even if Memory-optimized TempDB metadata is already enabled.
 
 ### Memory-optimized tempdb limitations
 
 - Toggling the feature on and off is not dynamic. Because of the intrinsic changes that need to be made to the structure of `tempdb`, a restart is required to either enable or disable the feature.
 
-- A single transaction is not allowed to access memory-optimized tables in more than one database. Any transactions that involve a memory-optimized table in a user database won't be able to access `tempdb` system views in the same transaction. If you try to access `tempdb` system views in the same transaction as a memory-optimized table in a user database, you'll receive the following error:
+- A single transaction is not allowed to access memory-optimized tables in more than one database. Any transactions that involve a memory-optimized table in a user database won't be able to access `tempdb` system views in the same transaction. If you try to access `tempdb` system views in the same transaction as a memory-optimized table in a user database, you receive the following error:
 
   ```output
   A user transaction that accesses memory optimized tables or natively compiled modules cannot access more than one user database or databases model and msdb, and it cannot write to master.
@@ -263,11 +283,11 @@ This change also requires a restart to take effect, even if memory-optimized `te
   COMMIT TRAN;
   ```
 
-- Queries against memory-optimized tables don't support locking and isolation hints, so queries against memory-optimized `tempdb` catalog views won't honor locking and isolation hints. As with other system catalog views in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], all transactions against system views will be in `READ COMMITTED` (or in this case, `READ COMMITTED SNAPSHOT`) isolation.
+- Queries against memory-optimized tables don't support locking and isolation hints, so queries against memory-optimized `tempdb` catalog views won't honor locking and isolation hints. As with other system catalog views in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], all transactions against system views are in `READ COMMITTED` (or in this case, `READ COMMITTED SNAPSHOT`) isolation.
 
-- [Columnstore indexes](../indexes/columnstore-indexes-overview.md) can't be created on temporary tables when memory-optimized `tempdb` metadata is enabled.
+- [Columnstore indexes](../indexes/columnstore-indexes-overview.md) can't be created on temporary tables when Memory-optimized TempDB metadata is enabled.
 
-- Due to the limitation on columnstore indexes, use of the `sp_estimate_data_compression_savings` system stored procedure with the `COLUMNSTORE` or `COLUMNSTORE_ARCHIVE` data compression parameter is not supported when memory-optimized `tempdb` metadata is enabled.
+- Due to the limitation on columnstore indexes, use of the `sp_estimate_data_compression_savings` system stored procedure with the `COLUMNSTORE` or `COLUMNSTORE_ARCHIVE` data compression parameter is not supported when Memory-optimized TempDB metadata is enabled.
 
 - A system stored procedure is available to manually cause the in-memory engine to release memory related to deleted rows of in-memory data that are eligible for garbage collection. This can help with troubleshooting specific [memory-optimized tempdb metadata (HkTempDB) out of memory errors](/troubleshoot/sql/admin/memory-optimized-tempdb-out-of-memory). For more information, see [sys.sp_xtp_force_gc (Transact-SQL)](../system-stored-procedures/sys-sp-xtp-force-gc-transact-sql.md).
 
@@ -276,16 +296,20 @@ This change also requires a restart to take effect, even if memory-optimized `te
 
 ## Capacity planning for tempdb in SQL Server
 
-Determining the appropriate size for `tempdb` in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] production environment depends on many factors. As described earlier, these factors include the existing workload and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that are used. We recommend that you analyze the existing workload by performing the following tasks in a SQL Server test environment:
+Determining the appropriate size for `tempdb` in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] production environment depends on many factors. As described earlier, these factors include the existing workload and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that are used. 
 
-- Set autogrow on for `tempdb`.
+We recommend that you analyze the existing workload by performing the following tasks in a SQL Server test environment:
+
+- Set [autogrow on](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) for `tempdb`.
 - Run individual queries or workload trace files and monitor `tempdb` space use.
 - Execute index maintenance operations such as rebuilding indexes, and monitor `tempdb` space.
 - Use the space-use values from the previous steps to predict your total workload usage. Adjust this value for projected concurrent activity, and then set the size of `tempdb` accordingly.
 
 ## <a id="monitoring-tempdb-use"></a> Monitor tempdb use
 
-Running out of disk space in `tempdb` can cause significant disruptions in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] production environment. It can also prevent applications that are running from completing operations. You can use the [sys.dm_db_file_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) dynamic management view to monitor the disk space that's used in the `tempdb` files:
+Running out of disk space in `tempdb` can cause significant disruptions in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] production environment. It can also prevent applications that are running from completing operations. You can use the [sys.dm_db_file_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) dynamic management view to monitor the disk space that's used in the `tempdb` files.
+
+For example, the following four sample scripts find the amount of free space in `tempdb`, the amount of space used by the version store, the amount of space used by internal objects, and amount of space used by user objects:
 
 ```sql
  -- Determining the amount of free space in tempdb
@@ -311,6 +335,8 @@ FROM tempdb.sys.dm_db_file_space_usage;
 
 To monitor the page allocation or deallocation activity in `tempdb` at the session or task level, you can use the [sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md) and [sys.dm_db_task_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md) dynamic management views. These views can help you identify large queries, temporary tables, or table variables that are using lots of `tempdb` disk space. You can also use several counters to monitor the free space that's available in `tempdb` and the resources that are using `tempdb`.
 
+For example, use the following script to obtaining the `tempdb` space consumed by internal objects in all currently running tasks in each session:
+
 ```sql
 -- Obtaining the space consumed by internal objects in all currently running tasks in each session
 SELECT session_id,
@@ -318,7 +344,11 @@ SELECT session_id,
   SUM(internal_objects_dealloc_page_count) AS task_internal_objects_dealloc_page_count
 FROM sys.dm_db_task_space_usage
 GROUP BY session_id;
+```
 
+Use the following script to find the `tempdb` space consumed by internal objects in the current session, for both running and completed tasks:
+
+```sql
 -- Obtaining the space consumed by internal objects in the current session for both running and completed tasks
 SELECT R2.session_id,
   R1.internal_objects_alloc_page_count
@@ -331,10 +361,10 @@ GROUP BY R2.session_id, R1.internal_objects_alloc_page_count,
   R1.internal_objects_dealloc_page_count;
 ```
 
-## Next steps
+## Related content
 
-- [SORT_IN_TEMPDB option for indexes](../../relational-databases/indexes/sort-in-TempDB-option-for-indexes.md)
-- [System databases](../../relational-databases/databases/system-databases.md)
-- [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
-- [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)
-- [Move database files](../../relational-databases/databases/move-database-files.md)
+- [SORT_IN_TEMPDB Option For Indexes](../indexes/sort-in-tempdb-option-for-indexes.md)
+- [System databases](system-databases.md)
+- [sys.databases](../system-catalog-views/sys-databases-transact-sql.md)
+- [sys.master_files](../system-catalog-views/sys-master-files-transact-sql.md)
+- [Move database files](move-database-files.md)

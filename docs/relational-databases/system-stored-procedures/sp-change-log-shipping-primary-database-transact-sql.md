@@ -101,7 +101,7 @@ The length of time in minutes in which the history is retained. *@history_retent
 
 #### [ @backup_compression = ] *backup_compression_option*
 
-Specifies whether a log shipping configuration uses [backup compression](../../relational-databases/backup-restore/backup-compression-sql-server.md). This parameter is supported in Enterprise edition for [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] (and later versions), and all editions on [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] with Service Pack 1 (and later versions).
+Specifies whether a log shipping configuration uses [backup compression](../backup-restore/backup-compression-sql-server.md). This parameter is supported in Enterprise edition for [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] (and later versions), and all editions on [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] with Service Pack 1 (and later versions).
 
 - `0`: Disabled. Never compress log backups
 
@@ -113,7 +113,7 @@ Specifies whether a log shipping configuration uses [backup compression](../../r
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -133,7 +133,7 @@ Only members of the **sysadmin** fixed server role can run this procedure.
 
 ## Examples
 
-This example illustrates the use of `sp_change_log_shipping_primary_database` to update the settings associated with the primary database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
+This example illustrates the use of `sp_change_log_shipping_primary_database` to update the settings associated with the primary database [!INCLUDE [ssSampleDBobject](../../includes/sssampledbobject-md.md)].
 
 ```sql
 EXEC master.dbo.sp_change_log_shipping_primary_database
@@ -149,7 +149,7 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
     @backup_compression = 1;
 ```
 
-## See also
+## Related content
 
 - [About Log Shipping (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

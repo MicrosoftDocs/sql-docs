@@ -99,7 +99,7 @@ User must have CREATE FULLTEXT CATALOG permission on the database, or be a membe
 The following example creates a full-text catalog and also a full-text index.
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE FULLTEXT CATALOG ftCatalog AS DEFAULT;  
 GO  

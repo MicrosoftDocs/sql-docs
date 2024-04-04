@@ -51,7 +51,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
  The following example uses `@@ERROR` to check for a check constraint violation (error #547) in an `UPDATE` statement.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE HumanResources.EmployeePayHistory  
     SET PayFrequency = 4  
@@ -67,7 +67,7 @@ GO
  The following example uses `IF...ELSE` statements to test `@@ERROR` after an `DELETE` statement in a stored procedure. The value of the `@@ERROR` variable determines the return code sent to the calling program, indicating success or failure of the procedure.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Drop the procedure if it already exists.  
 IF OBJECT_ID(N'HumanResources.usp_DeleteCandidate', N'P') IS NOT NULL  
@@ -102,7 +102,7 @@ GO
  The following example uses `@@ERROR` with `@@ROWCOUNT` to validate the operation of an `UPDATE` statement. The value of `@@ERROR` is checked for any indication of an error, and `@@ROWCOUNT` is used to ensure that the update was successfully applied to a row in the table.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF OBJECT_ID(N'Purchasing.usp_ChangePurchaseOrderHeader',N'P')IS NOT NULL  
     DROP PROCEDURE Purchasing.usp_ChangePurchaseOrderHeader;  

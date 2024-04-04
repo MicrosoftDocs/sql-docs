@@ -53,7 +53,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 
 ## Remarks
 
-The `sys.fn_validate_plan_guide` function is not available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+The `sys.fn_validate_plan_guide` function is not available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 ## Examples  
   
@@ -61,7 +61,7 @@ The `sys.fn_validate_plan_guide` function is not available in [!INCLUDE[ssSDSful
  The following example checks the validity of all plan guides in the current database. If an empty result set is returned, all plan guides are valid.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT plan_guide_id, msgnum, severity, state, message  
 FROM sys.plan_guides  
@@ -73,7 +73,7 @@ GO
  The following example uses an explicit transaction to drop an index. The `sys.fn_validate_plan_guide` function is executed to determine whether this action will invalidate any plan guides in the database. Based on the results of the function, the `DROP INDEX` statement is either committed or the transaction is rolled back, and the index is not dropped.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 BEGIN TRANSACTION;  
 DROP INDEX IX_SalesOrderHeader_CustomerID ON Sales.SalesOrderHeader;  

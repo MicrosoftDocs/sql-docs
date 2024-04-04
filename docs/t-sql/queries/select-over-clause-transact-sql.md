@@ -278,7 +278,7 @@ BETWEEN <window frame bound > AND <window frame bound >
 > If ORDER BY is not specified entire partition is used for a window frame. This applies only to functions that do not require ORDER BY clause. If ROWS/RANGE is not specified but ORDER BY is specified, RANGE UNBOUNDED PRECEDING AND CURRENT ROW is used as default for window frame. This applies only to functions that have can accept optional ROWS/RANGE specification. For example, ranking functions cannot accept ROWS/RANGE, therefore this window frame is not applied even though ORDER BY is present and ROWS/RANGE is not.  
     
 ## Limitations and Restrictions  
- The OVER clause cannot be used with the CHECKSUM aggregate function.  
+ The OVER clause cannot be used with the DISTINCT aggregations.  
   
  RANGE cannot be used with \<unsigned value specification> PRECEDING or \<unsigned value specification> FOLLOWING.  
   
@@ -290,7 +290,7 @@ BETWEEN <window frame bound > AND <window frame bound >
  The following example shows using the OVER clause with ROW_NUMBER function to display a row number for each row within a partition. The ORDER BY clause specified in the OVER clause orders the rows in each partition by the column `SalesYTD`. The ORDER BY clause in the SELECT statement determines the order in which the entire query result set is returned.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT ROW_NUMBER() OVER(PARTITION BY PostalCode ORDER BY SalesYTD DESC) AS "Row Number",   
     p.LastName, s.SalesYTD, a.PostalCode  
@@ -330,7 +330,7 @@ GO
  The following example uses the `OVER` clause with aggregate functions over all rows returned by the query. In this example, using the `OVER` clause is more efficient than using subqueries to derive the aggregate values.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT SalesOrderID, ProductID, OrderQty  
     ,SUM(OrderQty) OVER(PARTITION BY SalesOrderID) AS Total  
@@ -373,7 +373,7 @@ SalesOrderID ProductID   OrderQty Total       Avg         Count       Min    Max
  The following example shows using the `OVER` clause with an aggregate function in a calculated value.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT SalesOrderID, ProductID, OrderQty  
     ,SUM(OrderQty) OVER(PARTITION BY SalesOrderID) AS Total  
@@ -417,7 +417,7 @@ SalesOrderID ProductID   OrderQty Total       Percent by ProductID
  The following example uses the AVG and SUM functions with the OVER clause to provide a moving average and cumulative total of yearly sales for each territory in the `Sales.SalesPerson` table. The data is partitioned by `TerritoryID` and logically ordered by `SalesYTD`. This means that the AVG function is computed for each territory based on the sales year. Notice that for `TerritoryID` 1, there are two rows for sales year 2005 representing the two sales people with sales that year. The average sales for these two rows is computed and then the third row representing sales for the year 2006 is included in the computation.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
@@ -616,7 +616,7 @@ ORDER BY SalesOrderNumber,ProductKey;
  The following example shows using the OVER clause with an aggregate function in a calculated value. Notice that the aggregates are calculated by `SalesOrderNumber` and the percentage of the total sales order is calculated for each line of each `SalesOrderNumber`.  
   
 ```sql  
--- Uses AdventureWorksDW2019
+-- Uses AdventureWorksDW2022
   
 SELECT SalesOrderNumber AS OrderNumber, ProductKey AS Product,   
        OrderQuantity AS Qty,   

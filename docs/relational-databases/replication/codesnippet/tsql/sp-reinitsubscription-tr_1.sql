@@ -6,10 +6,10 @@
 
 DECLARE @subscriptionDB AS sysname;
 DECLARE @publication AS sysname;
-SET @subscriptionDB = N'AdventureWorks2012Replica';
+SET @subscriptionDB = N'AdventureWorks2022Replica';
 SET @publication = N'AdvWorksProductTran';
 
-USE [AdventureWorks2012Replica]
+USE [AdventureWorks2022Replica]
 
 -- Execute at the Publisher to reinitialize the push subscription.
 EXEC sp_reinitsubscription 

@@ -3,7 +3,7 @@ title: "Set or change the database collation"
 description: "Set or change the database collation"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "02/03/2022"
+ms.date: 07/11/2023
 ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,20 +17,20 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 This article describes how to set or change the database collation by using [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md) or [!INCLUDE[tsql](../../includes/tsql-md.md)]. If no collation is specified, the [server collation](set-or-change-the-server-collation.md) is used.  
   
-## <a name="Restrictions"></a> Limitations and restrictions
+## <a id="Restrictions"></a> Limitations and restrictions
   
 - Windows Unicode-only collations can only be used with [the COLLATE clause](../../t-sql/statements/collations.md) to apply collations to the **nchar**, **nvarchar**, and **ntext** data types on column level and expression-level data. They can't be used with the COLLATE clause to change the collation of a database or server instance.  
   
 - If the specified collation or the collation used by the referenced object uses a code page that isn't supported by Windows, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] displays an error.
 
-- Server-level collation in Azure SQL Managed Instance can be specified when the instance is created and cannot be changed later. Learn more in [Set or change the server collation](set-or-change-the-server-collation.md#setting-the-server-collation-in-managed-instance).
+- Server-level collation in Azure SQL Managed Instance can be specified when the instance is created and cannot be changed later. Learn more in [Set or change the server collation](set-or-change-the-server-collation.md#set-the-server-collation-in-azure-sql-managed-instance).
 
 > [!IMPORTANT]
-> The `ALTER DATABASE COLLATE` statement is not supported on Azure SQL Database.
+> The `ALTER DATABASE COLLATE` statement is not supported on Azure SQL Database. Specify database collation and catalog collation at the time of [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-current&preserve-view=true#collation_name).
 
-## <a name="Recommendations"></a> Recommendations  
+## <a id="Recommendations"></a> Recommendations
   
-You can find the supported collation names in [Windows Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) and [SQL Server Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md); or you can use the [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) system function.  
+You can find the supported collation names in [Windows Collation Name (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md) and [SQL Server Collation Name (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md); or you can use the [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) system function.  
   
 When you change the database collation, you change:  
   
@@ -69,12 +69,12 @@ When a database collation is changed, only new tables will inherit the new datab
 
 -  Copy data to a new database that uses the new collation, and replace the original database. Create a new database using the new collation, and transfer the data from the original database via tools like [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] or the Import/Export Wizard in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. This is a simpler approach for complex schemas. It would also require a final data synchronization between the original and the new databases before the final cut-off, if data continues to be changed by applications.
   
-##  <a name="Permissions"></a> Permissions  
- To create a new database, requires `CREATE DATABASE` permission in the **master** database, or requires `CREATE ANY DATABASE`, or `ALTER ANY DATABASE` permission.  
+## <a id="Permissions"></a> Permissions
+ To create a new database, requires `CREATE DATABASE` permission in the `master` database, or requires `CREATE ANY DATABASE`, or `ALTER ANY DATABASE` permission.  
   
  To change the collation of an existing database, requires `ALTER` permission on the database.  
   
-## <a name="SSMSProcedure"></a> Set or change the database collation using SSMS
+## <a id="SSMSProcedure"></a> Set or change the database collation using SSMS
   
 1. In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], expand that instance, and then expand **Databases**.  
   
@@ -84,7 +84,7 @@ When a database collation is changed, only new tables will inherit the new datab
   
 1. After you are finished, select **OK**.  
   
-## <a name="TsqlProcedure"></a> Set the database collation using Transact-SQL
+## <a id="TsqlProcedure"></a> Set the database collation using Transact-SQL
   
 1. Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].
   
@@ -136,14 +136,14 @@ GO
 
 Learn more about collation:
 
-- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)   
-- [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
-- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
-- [SQL Server Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)   
-- [Windows Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)   
-- [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
-- [Collation Precedence &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)   
-- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
-- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)   
-- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
-- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
+- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)
+- [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)
+- [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
+- [SQL Server Collation Name (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md)
+- [Windows Collation Name (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)
+- [COLLATE (Transact-SQL)](~/t-sql/statements/collations.md)
+- [Collation Precedence (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)
+- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
+- [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md)
+- [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)
+- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)

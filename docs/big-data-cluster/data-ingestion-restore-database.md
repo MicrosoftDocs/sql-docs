@@ -38,7 +38,7 @@ kubectl cp <path to .bak file> master-0:/var/tmp/<.bak filename> -c mssql-server
 Example:
 
 ```bash
-kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/var/tmp/AdventureWorks2016CTP3.bak -c mssql-server -n clustertest
+kubectl cp ~/Downloads/AdventureWorks2022.bak master-0:/var/tmp/AdventureWorks2022.bak -c mssql-server -n clustertest
 ```
 
 Then, verify that the backup file was copied to the pod container.
@@ -70,7 +70,7 @@ RESTORE FILELISTONLY FROM DISK='/tmp/<db file name>.bak'
 Example:
 
 ```sql
-RESTORE FILELISTONLY FROM DISK='/tmp/AdventureWorks2016CTP3.bak'
+RESTORE FILELISTONLY FROM DISK='/tmp/AdventureWorks2022.bak'
 ```
 
 ![Backup file list](media/restore-database/database-restore-file-list.png)
@@ -78,11 +78,11 @@ RESTORE FILELISTONLY FROM DISK='/tmp/AdventureWorks2016CTP3.bak'
 Now, restore the database. The following script is an example. Replace the names/paths as needed depending on your database backup.
 
 ```sql
-RESTORE DATABASE AdventureWorks2016CTP3
-FROM DISK='/tmp/AdventureWorks2016CTP3.bak'
-WITH MOVE 'AdventureWorks2016CTP3_Data' TO '/var/opt/mssql/data/AdventureWorks2016CTP3_Data.mdf',
-        MOVE 'AdventureWorks2016CTP3_Log' TO '/var/opt/mssql/data/AdventureWorks2016CTP3_Log.ldf',
-        MOVE 'AdventureWorks2016CTP3_mod' TO '/var/opt/mssql/data/AdventureWorks2016CTP3_mod'
+RESTORE DATABASE AdventureWorks2022
+FROM DISK='/tmp/AdventureWorks2022.bak'
+WITH MOVE 'AdventureWorks2022_Data' TO '/var/opt/mssql/data/AdventureWorks2022_Data.mdf',
+        MOVE 'AdventureWorks2022_Log' TO '/var/opt/mssql/data/AdventureWorks2022_Log.ldf',
+        MOVE 'AdventureWorks2022_mod' TO '/var/opt/mssql/data/AdventureWorks2022_mod'
 ```
 
 ## Configure data pool and HDFS access
@@ -90,7 +90,7 @@ WITH MOVE 'AdventureWorks2016CTP3_Data' TO '/var/opt/mssql/data/AdventureWorks20
 Now, for the SQL Server master instance to access data pools and HDFS, run the data pool and storage pool stored procedures. Run the following Transact-SQL scripts against your newly restored database:
 
 ```sql
-USE AdventureWorks2016CTP3
+USE AdventureWorks2022;
 GO
 -- Create the SqlDataPool data source:
 IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')

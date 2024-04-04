@@ -56,7 +56,7 @@ SET STATISTICS TIME { ON | OFF }
  This example shows the server execution, parse, and compile times.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO         
 SET STATISTICS TIME ON;  
 GO  

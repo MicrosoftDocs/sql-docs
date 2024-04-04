@@ -1,5 +1,6 @@
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
+
 SELECT ProductID, OrderQty, SUM(LineTotal) AS Total
 FROM Sales.SalesOrderDetail
 WHERE UnitPrice < $5.00

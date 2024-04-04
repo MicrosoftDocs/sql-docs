@@ -45,7 +45,7 @@ The name of the account to delete. *@account_name* is **sysname**, with no defau
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -68,11 +68,11 @@ EXEC msdb.dbo.sysmail_delete_account_sp
     @account_name = 'AdventureWorks Administrator';
 ```
 
-## See also
+## Related content
 
-- [Database Mail](../../relational-databases/database-mail/database-mail.md)
-- [Create a Database Mail Account](../../relational-databases/database-mail/create-a-database-mail-account.md)
-- [Database Mail Configuration Objects](../../relational-databases/database-mail/database-mail-configuration-objects.md)
+- [Database Mail](../database-mail/database-mail.md)
+- [Create a Database Mail Account](../database-mail/create-a-database-mail-account.md)
+- [Database Mail Configuration Objects](../database-mail/database-mail-configuration-objects.md)
 - [sysmail_add_account_sp (Transact-SQL)](sysmail-add-account-sp-transact-sql.md)
 - [sysmail_delete_profile_sp (Transact-SQL)](sysmail-delete-profile-sp-transact-sql.md)
 - [sysmail_delete_profileaccount_sp (Transact-SQL)](sysmail-delete-profileaccount-sp-transact-sql.md)

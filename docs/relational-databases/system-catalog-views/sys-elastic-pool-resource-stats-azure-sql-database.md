@@ -41,9 +41,9 @@ Returns resource usage statistics for all the [elastic pools](/azure/azure-sql/d
 |**avg_instance_cpu_percent**|**decimal(5,2)**| Average CPU usage for the database as a percentage of the pool limit at the end of the reporting interval. Includes CPU utilization by both user and internal workloads.|
 |**avg_instance_memory_percent**|**decimal(5,2)**|Average database memory usage as a percentage of the pool limit at the end of the reporting interval. |
 |**elastic_pool_cpu_limit**|**decimal(5,2)**| Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.|
-|**avg_allocated_storage_percent**|**decimal(5,2)**|The percentage of data space allocated by all databases in the elastic pool.  This is the ratio of data space allocated to data max size for the elastic pool.  For more information, visit [File space management in SQL Database](/azure/sql-database/sql-database-file-space-management).|  
+|**avg_allocated_storage_percent**|**decimal(5,2)**|The percentage of data space allocated by all databases in the elastic pool.  This is the ratio of data space allocated to data max size for the elastic pool.  For more information, visit [File space management in SQL Database](/azure/azure-sql/database/file-space-manage).|  
 
-  
+
 ## Remarks
 
  This view exists in the `master` database of the [logical server](/azure/azure-sql/database/logical-servers). You must be connected to the `master` database to query `sys.elastic_pool_resource_stats`.  

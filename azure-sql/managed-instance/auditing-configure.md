@@ -3,7 +3,7 @@ title: SQL Managed Instance auditing
 description: Learn how to get started with Azure SQL Managed Instance auditing using T-SQL
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto, randolphwest, mathoma
 ms.date: 12/23/2022
 ms.service: sql-managed-instance
 ms.subservice: security
@@ -190,7 +190,7 @@ Audit logs from a managed instance can be  sent to Azure Event Hubs or Azure Mon
 
 1. Select **Save**.
 
-   :::image type="content" source="media/auditing-configure/9_mi_configure_diagnostics.png" alt-text="Screenshot showing how to configure diagnostic settings.":::
+   :::image type="content" source="media/auditing-configure/9-mi-configure-diagnostics.png" alt-text="Screenshot showing how to configure diagnostic settings.":::
 
 1. Connect to the managed instance using **SQL Server Management Studio (SSMS)** or any other supported client.
 
@@ -298,4 +298,3 @@ The key differences in the `CREATE AUDIT` syntax for auditing to Azure Blob stor
 ## Next steps
 
 - For a full list of audit log consumption methods, refer to [Get started with Azure SQL Database auditing](../database/auditing-overview.md).
-- For more information about Azure programs that support standards compliance, see the [Azure Trust Center](https://gallery.technet.microsoft.com/Overview-of-Azure-c1be3942), where you can find the most current list of compliance certifications.

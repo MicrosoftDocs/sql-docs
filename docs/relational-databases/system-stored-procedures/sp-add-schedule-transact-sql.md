@@ -4,7 +4,7 @@ description: "Creates a schedule that can be used by any number of jobs."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 06/02/2023
+ms.date: 08/28/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -79,9 +79,9 @@ The days that a job is executed. *@freq_interval* is **int**, with a default of 
 | --- | --- |
 | `1` (once) | *@freq_interval* is unused. |
 | `4` (daily) | Every *@freq_interval* days. |
-| `8` (weekly) | *@freq_interval* is one or more of the following (combined with an `OR` logical operator):<br /><br />1 = Sunday<br />2 = Monday<br />4 = Tuesday<br />8 = Wednesday<br />16 = Thursday<br />32 = Friday<br />64 = Saturday |
+| `8` (weekly) | *@freq_interval* is one or more of the following (combined with an `OR` logical operator):<br /><br />`1` = Sunday<br />`2` = Monday<br />`4` = Tuesday<br />`8` = Wednesday<br />`16` = Thursday<br />`32` = Friday<br />`64` = Saturday |
 | `16` (monthly) | On the *@freq_interval* day of the month. |
-| `32` (monthly relative) | *@freq_interval* is one of the following:<br /><br />1 = Sunday<br />2 = Monday<br />3 = Tuesday<br />4 = Wednesday<br />5 = Thursday<br />6 = Friday<br />7 = Saturday<br />8 = Day<br />9 = Weekday<br />10 = Weekend day |
+| `32` (monthly relative) | *@freq_interval* is one of the following:<br /><br />`1` = Sunday<br />`2` = Monday<br />`3` = Tuesday<br />`4` = Wednesday<br />`5` = Thursday<br />`6` = Friday<br />`7` = Saturday<br />`8` = Day<br />`9` = Weekday<br />`10` = Weekend day |
 | `64` (when SQLServerAgent service starts) | *@freq_interval* is unused. |
 | `128` | *@freq_interval* is unused. |
 
@@ -118,15 +118,15 @@ The number of weeks or months between the scheduled execution of a job. *@freq_r
 
 #### [ @active_start_date = ] *active_start_date*
 
-The date on which execution of a job can begin. *@active_start_date* is **int**, with a default of NULL, which indicates today's date. The date is formatted as `yyyyMMdd`. If *@active_start_date* isn't NULL, the date must be greater than or equal to 19900101.
+The date on which execution of a job can begin. *@active_start_date* is **int**, with a default of `NULL`, which indicates today's date. The date is formatted as `yyyyMMdd`. If *@active_start_date* isn't NULL, the date must be greater than or equal to 19900101.
 
-After the schedule is created, review the start date and confirm that it is the correct date. For more information, see the section "Scheduling Start Date" in [Create and Attach Schedules to Jobs](../../ssms/agent/create-and-attach-schedules-to-jobs.md).
+After the schedule is created, review the start date and confirm that it's the correct date. For more information, see the section "Scheduling Start Date" in [Create and Attach Schedules to Jobs](../../ssms/agent/create-and-attach-schedules-to-jobs.md).
 
-For weekly or monthly schedules, the Agent ignores if *@active_start_date* is in the past, and instead uses the current date. When a SQL Server Agent schedule is created using `sp_add_schedule` there is an option to specify the parameter *@active_start_date* that is the date that job execution begins. If the schedule type is weekly or monthly, and the *@active_start_date* parameter is set to a date in the past, the *@active_start_date* parameter is ignored and the current date is used for *@active_start_date*.
+For weekly or monthly schedules, the Agent ignores if *@active_start_date* is in the past, and instead uses the current date. When a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent schedule is created using `sp_add_schedule` there's an option to specify the parameter *@active_start_date* that is the date that job execution begins. If the schedule type is weekly or monthly, and the *@active_start_date* parameter is set to a date in the past, the *@active_start_date* parameter is ignored and the current date is used for *@active_start_date*.
 
 #### [ @active_end_date = ] *active_end_date*
 
-The date on which execution of a job can stop. *@active_end_date* is **int**, with a default of **99991231**, which indicates December 31, 9999. Formatted as yyyyMMdd.
+The date on which execution of a job can stop. *@active_end_date* is **int**, with a default of `99991231`, which indicates December 31, 9999. Formatted as `yyyyMMdd`.
 
 #### [ @active_start_time = ] *active_start_time*
 
@@ -138,7 +138,7 @@ The time on any day between *@active_start_date* and *@active_end_date* to end e
 
 #### [ @owner_login_name = ] '*owner_login_name*'
 
-The name of the server principal that owns the schedule. *@owner_login_name* is **sysname**, with a default of NULL, which indicates that the schedule is owned by the creator.
+The name of the server principal that owns the schedule. *@owner_login_name* is **sysname**, with a default of `NULL`, which indicates that the schedule is owned by the creator.
 
 #### [ @schedule_uid = ] *schedule_uid* OUTPUT
 
@@ -156,7 +156,7 @@ An identifier for the schedule. *@schedule_id* is a variable of type **int**.
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -222,7 +222,7 @@ EXEC sp_attach_schedule
 GO
 ```
 
-## See also
+## Related content
 
 - [Create and Attach Schedules to Jobs](../../ssms/agent/create-and-attach-schedules-to-jobs.md)
 - [Schedule a Job](../../ssms/agent/schedule-a-job.md)

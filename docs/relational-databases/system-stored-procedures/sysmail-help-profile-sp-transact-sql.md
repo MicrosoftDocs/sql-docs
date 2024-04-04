@@ -35,17 +35,17 @@ sysmail_help_profile_sp [ [ @profile_id = ] profile_id | [ @profile_name = ] 'pr
 
 #### [ @profile_id = ] *profile_id*
 
-The profile ID to return information for. *@profile_id* is **int**, with a default of NULL.
+The profile ID to return information for. *@profile_id* is **int**, with a default of `NULL`.
 
 #### [ @profile_name = ] '*profile_name*'
 
-The profile name to return information for. *@profile_name* is **sysname**, with a default of NULL.
+The profile name to return information for. *@profile_name* is **sysname**, with a default of `NULL`.
 
 ## Return code values
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 Returns a result set with the following columns.
 
@@ -101,7 +101,7 @@ profile_id  name                          description
 56          AdventureWorks Administrator  Administrative mail profile.
 ```
 
-## See also
+## Related content
 
-- [Database Mail](../../relational-databases/database-mail/database-mail.md)
+- [Database Mail](../database-mail/database-mail.md)
 - [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)

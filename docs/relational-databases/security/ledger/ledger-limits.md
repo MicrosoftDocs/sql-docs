@@ -4,11 +4,12 @@ description: Limitations and considerations for the ledger feature
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mathoma
-ms.date: 05/23/2023
+ms.date: 11/28/2023
 ms.service: sql-database
 ms.subservice: security
+ms.custom: ignite-2023
 ms.topic: conceptual
-monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 
 # Ledger considerations and limitations
@@ -16,9 +17,6 @@ monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ve
 [!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 There are some considerations and limitations to be aware of when working with ledger tables due to the nature of system-versioning and immutable data.
-
-> [!NOTE]
-> Ledger in Azure SQL Managed Instance is currently in public preview.
 
 ## General considerations and limitations
 
@@ -46,12 +44,13 @@ Consider the following when working with ledger.
 - Ledger tables can't be FileTables.
 - Ledger tables can't have a rowstore non-clustered index when they have a clustered columnstore index.
 - Change tracking isn't allowed on the history table but is allowed on ledger tables.
-- Change data capture isn't supported for ledger tables.
+- Change data capture isn't allowed on the history table, but is allowed on ledger tables.
 - Transactional replication isn't supported for ledger tables.
 - Database mirroring isn't supported.
 - Azure Synapse Link is supported but only for the ledger table, not the history table.
-- The Managed Instance link feature is not supported.
-- Change the digest path manually after a native restore of a database backup to an Azure SQL managed instance.
+- Change the digest path manually after a native restore of a database backup to an Azure SQL Managed Instance.
+- Change the digest path manually after a Managed Instance link was created to an Azure SQL Managed Instance.
+- SQL Data Sync isn't supported with ledger tables.
 
 ### Unsupported data types
 
@@ -62,7 +61,7 @@ Consider the following when working with ledger.
 
 ### Temporal table limitations
 
-Updatable ledger tables are based on the technology of [temporal tables](../../tables/temporal-tables.md) and inherits most of the [limitations](../../tables/temporal-table-considerations-and-limitations.md) but not all of them. Below is a list of limitations that is inherited from temporal tables.
+Updatable ledger tables are based on the technology of [temporal tables](../../tables/temporal-tables.md) and inherit most of the [limitations](../../tables/temporal-table-considerations-and-limitations.md) but not all of them. Below is a list of limitations that is inherited from temporal tables.
 
 - If the name of a history table is specified during history table creation, you must specify the schema and table name and also the name of the ledger view.
 - By default, the history table is PAGE compressed.
@@ -110,7 +109,7 @@ Normally, dropping a column or table completely erases the underlying data from 
 
 ### Altering Columns
 
-Any changes that don't impact the underlying data of a ledger table are supported without any special handling as they don't impact the hashes being captured in the ledger. These changes includes:
+Any changes that don't impact the underlying data of a ledger table are supported without any special handling as they don't impact the hashes being captured in the ledger. These changes include:
 
 - Changing nullability
 - Collation for Unicode strings
@@ -118,7 +117,7 @@ Any changes that don't impact the underlying data of a ledger table are supporte
 
 However, any operations that might affect the format of existing data, such as changing the data type aren't supported.
 
-## Next steps
+## Related content
 
 - [Ledger overview](ledger-overview.md)
 - [Updatable ledger tables](ledger-updatable-ledger-tables.md)

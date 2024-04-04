@@ -37,19 +37,19 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
 
 #### [ @profile_id = ] *profile_id*
 
-The profile ID to add the account to. *@profile_id* is **int**, with a default of NULL. Either the *@profile_id* or the *@profile_name* must be specified.
+The profile ID to add the account to. *@profile_id* is **int**, with a default of `NULL`. Either the *@profile_id* or the *@profile_name* must be specified.
 
 #### [ @profile_name = ] '*profile_name*'
 
-The profile name to add the account to. *@profile_name* is **sysname**, with a default of NULL. Either the *@profile_id* or the *@profile_name* must be specified.
+The profile name to add the account to. *@profile_name* is **sysname**, with a default of `NULL`. Either the *@profile_id* or the *@profile_name* must be specified.
 
 #### [ @account_id = ] *account_id*
 
-The account ID to add to the profile. *@account_id* is **int**, with a default of NULL. Either the *@account_id* or the *@account_name* must be specified.
+The account ID to add to the profile. *@account_id* is **int**, with a default of `NULL`. Either the *@account_id* or the *@account_name* must be specified.
 
 #### [ @account_name = ] '*account_name*'
 
-The name of the account to add to the profile. *@account_name* is **sysname**, with a default of NULL. Either the *@account_id* or the *@account_name* must be specified.
+The name of the account to add to the profile. *@account_name* is **sysname**, with a default of `NULL`. Either the *@account_id* or the *@account_name* must be specified.
 
 #### [ @sequence_number = ] *sequence_number*
 
@@ -86,9 +86,9 @@ EXEC msdb.dbo.sysmail_add_profileaccount_sp
     @sequence_number = 1;
 ```
 
-## See also
+## Related content
 
-- [Database Mail](../../relational-databases/database-mail/database-mail.md)
-- [Create a Database Mail Account](../../relational-databases/database-mail/create-a-database-mail-account.md)
-- [Database Mail Configuration Objects](../../relational-databases/database-mail/database-mail-configuration-objects.md)
+- [Database Mail](../database-mail/database-mail.md)
+- [Create a Database Mail Account](../database-mail/create-a-database-mail-account.md)
+- [Database Mail Configuration Objects](../database-mail/database-mail-configuration-objects.md)
 - [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)

@@ -54,7 +54,7 @@ DROP CERTIFICATE certificate_name
  The following example drops the certificate `Shipping04` from the `AdventureWorks` database.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 DROP CERTIFICATE Shipping04;  
 ```  
   

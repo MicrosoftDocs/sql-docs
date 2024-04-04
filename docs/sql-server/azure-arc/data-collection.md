@@ -1,36 +1,38 @@
 ---
-title: Azure Arc-enabled SQL Server data collection and reporting
-description: Explains data that Microsoft collects for reporting for Azure Arc-enabled SQL Server
+title: Data collection and reporting
+description: Explains data that Microsoft collects for reporting for SQL Server enabled by Azure Arc, and how to configure related settings.
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 07/06/2023
-ms.service: sql
+ms.date: 12/15/2023
 ms.topic: conceptual
 ms.custom: references_regions
 ---
-# Azure Arc-enabled SQL Server data collection and reporting
 
-This article describes the data that Azure Arc-enabled SQL Server transmits to Microsoft.
+# Data collection and reporting for SQL Server enabled by Azure Arc
 
-Azure Arc-enabled SQL Server, and any of the related Azure Arc-enabled services, don't store any customer data.
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
+This article describes the data that [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] transmits to Microsoft. [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] collects usage data as described in this article and at [Monitor Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]](sql-monitoring.md).
+
+[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] does not collect any personally identifiable information (PII) or end-user identifiable information or store any customer data.
 
 ## Related products
 
-Azure Arc-enabled SQL Server uses the following products:
+[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] uses the following products:
 
 - Azure Arc-enabled servers
 
-The following data is collected to Azure for Azure Arc-enabled SQL Servers:
+## [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]
 
-## Azure Arc-enabled SQL Server
+The following data is collected for [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instances:
 
 | Description | Property name | Property type |
 | :-- | :-- | :-- |
 | SQL Server edition | `Edition` | `string` |
 | Resource ID of the hosting Azure Arc for Servers resource | `ContainerResourceId` | `string` |
-| Time when the resource was created | `CreateTime` | string |
-| The number of logical processors used by the SQL Server instance | `VCore` | `string` |
+| Time when the resource was created | `CreateTime` | `string` |
+| The number of logical processors used by the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance | `VCore` | `string` |
 | Cloud connectivity status | `Status` | `string` |
 | SQL Server update level | `PatchLevel` | `string` |
 | SQL Server collation | `Collation` | `string` |
@@ -39,13 +41,12 @@ The following data is collected to Azure for Azure Arc-enabled SQL Servers:
 | Dynamic TCP ports used by SQL Server | `TcpDynamicPorts` | `string` |
 | Static TCP ports used by SQL Server | `TcpStaticPorts` | `string` |
 | SQL Server product ID | `ProductId` | `string` |
-| SQL Server provisioning state | `ProvisioningState` | `string` |
+| [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] provisioning state | `ProvisioningState` | `string` |
 
-The following JSON document is an example of the SQL Server - Azure Arc resource.
+The following JSON document is an example of the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] - Azure Arc resource
 
 ```json
 {
-
     "name": "SQL22-EE",
     "version": "SQL Server 2022",
     "edition": "Enterprise",
@@ -82,13 +83,13 @@ The following JSON document is an example of the SQL Server - Azure Arc resource
 | Auto create stats enabled | `isAutoCreateStatsOn` | `boolean` |
 | Auto update stats enabled | `isAutoUpdateStatsOn` | `boolean` |
 | Remote data archive enabled | `isRemoteDataArchiveEnabled` | `boolean` |
-! Memory optimization enabled | `isMemoryOptimizationEnabled` | `boolean` |
+| Memory optimization enabled | `isMemoryOptimizationEnabled` | `boolean` |
 | Encryption enabled | `isEncrypted` | `boolean` |
 | Trustworthy mode enabled | `isTrustworthyOn` | `boolean` |
 | Backup information | `backupInformation` | `object` |
 | Provisioning state | `provisioningState` | `string` |
 
-The following JSON document is an example of the SQL Server database - Azure Arc resource.
+The following JSON document is an example of the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] database - Azure Arc resource.
 
 ```json
 {
@@ -114,7 +115,8 @@ The following JSON document is an example of the SQL Server database - Azure Arc
 }
 ```
 
-## Next steps
+## Related content
 
-- [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
-- [Configure best practices assessment on an Azure Arc-enabled SQL Server instance](assess.md)
+- [Automatically connect your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] to Azure Arc](automatically-connect.md)
+- [Configure advanced data security for your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance](configure-advanced-data-security.md)
+- [Configure best practices assessment on an Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance](assess.md)

@@ -3,10 +3,12 @@ title: Configure repositories for installing and upgrading SQL Server on Linux
 description: Check and configure source repositories for SQL Server on Linux. The source repository affects the version of SQL Server that is applied during installation and upgrade.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 08/22/2022
+ms.date: 11/17/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 zone_pivot_groups: ld2-linux-distribution
 ---
 # Configure repositories for installing and upgrading SQL Server on Linux
@@ -22,7 +24,7 @@ This article describes how to configure the correct repository for [!INCLUDE [ss
 ::: zone-end
 
 ::: zone pivot="ld2-ubuntu"
-This article describes how to configure the correct repository for [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] and [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] installations and upgrades on Linux. At the top, your current selection is **Ubuntu**.   
+This article describes how to configure the correct repository for [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] and [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] installations and upgrades on Linux. At the top, your current selection is **Ubuntu**.
 ::: zone-end
 
 > [!TIP]  
@@ -33,7 +35,7 @@ This article describes how to configure the correct repository for [!INCLUDE [ss
 When you install SQL Server on Linux, you must configure a Microsoft repository. This repository is used to acquire the database engine package, **mssql-server**, and related SQL Server packages. There are currently three main repositories:
 
 | Repository | Name | Description |
-|---|---|---|
+| --- | --- | --- |
 | **2022** | `mssql-server-2022` | [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] repository. |
 | **2019** | `mssql-server-2019` | [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] Cumulative Update (CU) repository. |
 | **2017** | `mssql-server-2017` | [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] Cumulative Update (CU) repository. |
@@ -127,7 +129,7 @@ This command assumes that the file identified in the previous section was named 
 If necessary, remove the old repository. Use one of the following commands based on the type of previously configured repository.
 
 | Repository | Command to remove |
-|---|---|
+| --- | --- |
 | **2022** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2022'` |
 | **2019 CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2019'` |
 | **2017 CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
@@ -139,14 +141,14 @@ If necessary, remove the old repository. Use one of the following commands based
 If necessary, remove the old repository. Use one of the following commands based on the type of previously configured repository.
 
 > [!NOTE]  
->
+>  
 > - Starting with [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU10, Ubuntu 20.04 is supported.
 > - Starting with [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU3 and [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] CU20, Ubuntu 18.04 is supported.
-> - If you are using Ubuntu 16.04, change the path below to `/ubuntu/16.04` instead of `/ubuntu/18.04`, and use the correct [distribution code name](https://releases.ubuntu.com/).
+> - If you use Ubuntu 18.04, change the path below to `/ubuntu/18.04` instead of `/ubuntu/20.04`, and use the correct [distribution code name](https://releases.ubuntu.com/).
 
 | Repository | Command to remove |
-|---|---|
-| **2022** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/20.04/mssql-server-2022 focal main'` |
+| --- | --- |
+| **2022** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/22.04/mssql-server-2022 jammy main'` |
 | **2019 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019 focal main'` |
 | **2017 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017 bionic main'` |
 
@@ -159,15 +161,16 @@ If necessary, remove the old repository. Use one of the following commands based
 Configure the new repository to use for SQL Server installations and upgrades. Use one of the following commands to configure the repository of your choice.
 
 > [!NOTE]  
-> The following commands for [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] points to the RHEL 8 repository. RHEL 8 does not come preinstalled with python2, which is required by SQL Server. For more information, see the following blog on installing python2 and configuring it as the default interpreter: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
->
-> Starting with [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] CU20, RHEL 8 is supported.
->
-> If you are using RHEL 7 or RHEL 8, ensure the paths match `/rhel/7` or `/rhel/8`. Our packages are agnostic to RHEL minor versions. This means that if you are using RHEL 7.7, you will need to use the path `/rhel/7` to configure your repository.
+> The following commands for [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] points to the RHEL 8 repository. RHEL 8 doesn't come preinstalled with `python2`, which is required by SQL Server. For more information, see [Installing Microsoft SQL Server on Red Hat Enterprise Linux 8 Beta](https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta).
+>  
+> - Starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] CU 10, RHEL 9 is supported.
+> - Starting with [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] CU 20, RHEL 8 is supported.
+>  
+> Depending on the version of RHEL you use, ensure the paths match `/rhel/8`, or `/rhel/9`. Our packages are agnostic to RHEL minor versions. This means that if you use RHEL 8.7, you'll need to use the path `/rhel/8` to configure your repository.
 
 | Repository | Version | Command |
-|---|---|---|
-| **2022** | 2022 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2022.repo` |
+| --- | --- | --- |
+| **2022** | 2022 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/9/mssql-server-2022.repo` |
 | **2019 CU** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo` |
 | **2017 CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2017.repo` |
 
@@ -178,8 +181,8 @@ Configure the new repository to use for SQL Server installations and upgrades. U
 Configure the new repository to use for SQL Server installations and upgrades. Use one of the following commands to configure the repository of your choice.
 
 | Repository | Version | Command |
-|---|---|---|
-| **Preview** | 2022 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/mssql-server-2022.repo` |
+| --- | --- | --- |
+| **2022** | 2022 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/mssql-server-2022.repo` |
 | **2019 CU** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/mssql-server-2019.repo` |
 | **2017 CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
 
@@ -190,22 +193,23 @@ Configure the new repository to use for SQL Server installations and upgrades. U
 Configure the new repository to use for SQL Server installations and upgrades.
 
 > [!NOTE]  
->
-> - Starting with [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU10, Ubuntu 20.04 is supported
-> - Starting with [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU3 and [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] CU20, Ubuntu 18.04 is supported.
-> - The following commands points to the Ubuntu 18.04 repository. If you are using Ubuntu 16.04, change the path below to `/ubuntu/16.04` instead of `/ubuntu/18.04`.
+>  
+> - Starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] CU 10, Ubuntu 22.04 is supported
+> - Starting with [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU 10, Ubuntu 20.04 is supported
+> - Starting with [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU 3 and [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] CU20, Ubuntu 18.04 is supported.
+> - The following commands points to the Ubuntu 18.04 repository. If you use Ubuntu 18.04, change the path below to `/ubuntu/18.04` instead of `/ubuntu/20.04`.
 
 1. Import the public repository GPG keys.
 
    ```bash
-   sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
    ```
 
 1. Use one of the following commands to configure the repository of your choice.
 
    | Repository | Version | Command |
-   |---|---|---|
-   | **2022** | 2022 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-2022.list)"` |
+   | --- | --- | --- |
+   | **2022** | 2022 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/22.04/mssql-server-2022.list)"` |
    | **2019 CU** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-2019.list)"` |
    | **2017 CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2017.list)"` |
 
@@ -217,23 +221,23 @@ Configure the new repository to use for SQL Server installations and upgrades.
 
 ::: zone-end
 
-## Next steps
+## Related content
 
 After you have configured the correct repository, you can proceed to [install](sql-server-linux-setup.md#platforms) or [update](sql-server-linux-setup.md#upgrade) SQL Server and any related packages from the new repository.
 
 ::: zone pivot="ld2-rhel"
-> [!IMPORTANT]  
-> At this point, if you choose to use the [RHEL quickstart](quickstart-install-connect-red-hat.md), remember that you have already configured the target repository. Do not repeat that step in the tutorials.
+> [!IMPORTANT]
+> At this point, if you choose to use the [RHEL quickstart](quickstart-install-connect-red-hat.md), remember that you have already configured the target repository. Don't repeat that step in the tutorials.
 ::: zone-end
 
 ::: zone pivot="ld2-sles"
-> [!IMPORTANT]  
-> At this point, if you choose to use the [SLES quickstart](quickstart-install-connect-suse.md), remember that you have already configured the target repository. Do not repeat that step in the tutorials.
+> [!IMPORTANT]
+> At this point, if you choose to use the [SLES quickstart](quickstart-install-connect-suse.md), remember that you have already configured the target repository. Don't repeat that step in the tutorials.
 ::: zone-end
 
 ::: zone pivot="ld2-ubuntu"
-> [!IMPORTANT]  
-> At this point, if you choose to use the [Ubuntu quickstart](quickstart-install-connect-ubuntu.md), remember that you have already configured the target repository. Do not repeat that step in the tutorials.
+> [!IMPORTANT]
+> At this point, if you choose to use the [Ubuntu quickstart](quickstart-install-connect-ubuntu.md), remember that you have already configured the target repository. Don't repeat that step in the tutorials.
 ::: zone-end
 
 For more information on how to install SQL Server on Linux, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).

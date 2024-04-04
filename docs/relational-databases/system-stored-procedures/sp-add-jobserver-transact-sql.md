@@ -4,7 +4,7 @@ description: "Targets the specified job at the specified server."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 06/02/2023
+ms.date: 11/02/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -15,6 +15,7 @@ helpviewer_keywords:
   - "sp_add_jobserver"
 dev_langs:
   - "TSQL"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017"
 ---
 # sp_add_jobserver (Transact-SQL)
 
@@ -38,25 +39,25 @@ sp_add_jobserver
 
 #### [ @job_id = ] *job_id*
 
-The identification number of the job. *job_id* is **uniqueidentifier**, with a default of NULL.
+The identification number of the job. *job_id* is **uniqueidentifier**, with a default of `NULL`.
 
 Either *@job_id* or *@job_name* must be specified, but both can't be specified.
 
 #### [ @job_name = ] '*job_name*'
 
-The name of the job. *job_name* is **sysname**, with a default of NULL.
+The name of the job. *job_name* is **sysname**, with a default of `NULL`.
 
 Either *@job_id* or *@job_name* must be specified, but both can't be specified.
 
 #### [ @server_name = ] N'*server*'
 
-The name of the server at which to target the job. *@server_name* is **nvarchar(30)**, with a default of `N'(LOCAL)'`. *@server_name* can be either `N'(LOCAL)'` for a local server, or the name of an existing target server.
+The name of the server at which to target the job. *@server_name* is **nvarchar(30)**, with a default of `(LOCAL)`. *@server_name* can be either `(LOCAL)` for a local server, or the name of an existing target server.
 
 ## Return code values
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -113,7 +114,7 @@ EXEC dbo.sp_add_jobserver @job_name = N'Weekly Sales Backups',
 GO
 ```
 
-## See also
+## Related content
 
 - [sp_apply_job_to_targets (Transact-SQL)](sp-apply-job-to-targets-transact-sql.md)
 - [sp_delete_jobserver (Transact-SQL)](sp-delete-jobserver-transact-sql.md)

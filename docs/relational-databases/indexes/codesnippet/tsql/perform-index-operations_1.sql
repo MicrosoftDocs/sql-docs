@@ -21,9 +21,9 @@ GO
 IF NOT EXISTS (SELECT name FROM sys.filegroups
                 WHERE name = N'NewGroup')
     BEGIN
-    ALTER DATABASE AdventureWorks2012
+    ALTER DATABASE AdventureWorks2022
         ADD FILEGROUP NewGroup;
-    ALTER DATABASE AdventureWorks2012
+    ALTER DATABASE AdventureWorks2022
         ADD FILE (NAME = File1,
             FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA\File1.ndf')
         TO FILEGROUP NewGroup;

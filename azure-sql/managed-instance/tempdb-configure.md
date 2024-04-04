@@ -86,7 +86,7 @@ ALTER DATABASE tempdb ADD FILE (NAME = 'file_name')
 To remove an existing `tempdb` file, use the following command: 
 
 ```sql
-ALTER DATABASE tempdb ADD FILE (NAME = 'file_name')
+ALTER DATABASE tempdb REMOVE FILE [file_name]
 ```
 
 ---

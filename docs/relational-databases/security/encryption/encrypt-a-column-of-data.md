@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 This article describes how to encrypt a column of data by using symmetric encryption in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. This is sometimes known as column-level encryption, or cell-level encryption.  
 
-The examples in this article have been validated against `AdventureWorks2017`. To get sample databases, see [AdventureWorks sample databases](../../../samples/adventureworks-install-configure.md).
+[!INCLUDE [article-uses-adventureworks](../../../includes/article-uses-adventureworks.md)]
 
 ## Security  
   
@@ -122,7 +122,7 @@ Always back up your database master key. For more information on database master
         ENCRYPTION BY CERTIFICATE HumanResources037;  
     GO  
   
-    USE [AdventureWorks2012];  
+    USE [AdventureWorks2022];  
     GO  
   
     -- Create a column in which to store the encrypted data.  

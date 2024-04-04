@@ -1,6 +1,6 @@
 
 -- Execute at the Publisher on the publication database.
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 
 -- Create the database master key if it doesn't exist.
@@ -37,7 +37,7 @@ GO
 -- Insert encrypted data from the CreditCardApprovalCode column.
 UPDATE Sales.SalesOrderHeader
 SET EncryptedCreditCardApprovalCode
-    = EncryptByKey(Key_GUID('key_DataShare'), CreditCardApprovalCode);
+    = EncryptByKey(Key_GUID('key_ReplDataShare'), CreditCardApprovalCode);
 GO
 
 CLOSE SYMMETRIC KEY [key_ReplDataShare];

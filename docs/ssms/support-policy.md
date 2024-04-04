@@ -1,38 +1,46 @@
 ---
-title: "SQL Server Management Studio (SSMS) Support Policy"
-description: "SQL Server Management Studio (SSMS) Support Policy"
-ms.date: "03/08/2023"
+title: "SQL Server Management Studio (SSMS) support policy"
+description: "SQL Server Management Studio (SSMS) support policy"
+author: erinstellato-ms
+ms.author: erinstellato
+ms.reviewer: maghan, randolphwest
+ms.date: 03/19/2024
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords:
   - "SQL Server Management Studio"
-author: erinstellato-ms
-ms.author: erinstellato
-ms.reviewer: maghan
 ---
-
-# SQL Server Management Studio (SSMS) Support Policy
+# SQL Server Management Studio (SSMS) support policy
 
 The support policy for SQL Server Management Studio is stated as follows.
 
-## Support Policy for SSMS
-- Starting with SSMS 17.0, the SQL Tools team has adopted the [Microsoft Modern Lifecycle Policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
-- Read the original [Modern Lifecycle Policy announcement](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy).
-- For additional information, see [Modern Policy FAQs](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq).
+## Support policy for SSMS
 
-## SSMS Updates 
+- Starting with SSMS 17.0, the SQL Tools team has adopted the [Microsoft Modern Lifecycle Policy](/lifecycle/policies/modern).
+- Read the original [Modern Lifecycle Policy announcement](/lifecycle/announcements/modern-policy).
+- For more information, see [Modern Policy FAQs](/lifecycle/faq/modern-policy).
 
-Beginning with version 18.0, all security updates, critical updates, hotfixes, as well as any new features will be released only in the latest point version of the major version. Once a new version of SSMS is released for public, whether it's a point version within a major version or a major version itself, all prior versions are out of support, as per the [Modern Lifecycle Policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
+For the best experience, we recommend that you install the most recent version via <https://aka.ms/ssms>.
 
+## SSMS updates
 
-For instance, SSMS 18.12.1 was released in June 2022. 18.12.1 had full support until January 2023 when 19.0 was released. At this point, 18.12.1 would be out of support. When 19.0.1 was released in February 2023, all prior versions were out of support.
+Beginning with version 18.0, all security updates, critical updates, hotfixes, and any new features, are released only in the latest point release of a major version. Once a new version of SSMS is released to the public, whether it's a point release within a major version or a major version itself, we recommend that you update to the latest release.
 
-For best experience, it is recommended for customers to install the most recent version via https://aka.ms/ssms  
+For example, SSMS 19.3 was released in January 2024, and SSMS 20.0 was released in March 2024. If a customer is using SSMS 19.3 and encounters an issue, the customer must upgrade to SSMS 20.0 and determine if the issue still exists. If the issue still exists in SSMS 20.0, it should be [reported to the SSMS team](https://aka.ms/ssms-feedback). A fix may be then provided in a later release of SSMS.
 
-**Full Support** servicing phase: When running the latest current branch version of SQL Server Management Studio, you receive all updates - Security Updates, Critical Updates, new features etc.
+The SSMS team doesn't actively back-port fixes to an earlier release.
 
-:::image type="content" source="media/support-policy/ssms-support-policy.png" alt-text="Screenshot of SSMS support life cycle.":::
+**Full support** servicing phase: When running the latest current branch version of SQL Server Management Studio, you receive all updates, such as security updates, critical updates, and new features.
 
-> [!NOTE]
-> The latest current branch version is always in the **Full Support** servicing phase. This support statement means that if you encounter a code defect that warrants a critical update, you must have the latest current branch version installed in order to receive a fix.
+Refer to the following table for SQL Server Management Studio servicing support.
+
+| Version | November 2018 | June 2022 | January 2024 | March 2024 |
+| ---: | :---: | :---: | :---: | :---: |
+| 17.9.1 | Full support | Upgrade | Upgrade | Upgrade |
+| 18.12.1 | | Full support | Upgrade | Upgrade |
+| 19.3 | | | Full support | Upgrade |
+| 20.0 | | | | Full support |
+
+> [!NOTE]  
+> The latest current branch version is always in the **Full support** servicing phase. This support statement means that if you encounter a code defect that warrants a critical update, you must have the latest current branch version installed in order to receive a fix.

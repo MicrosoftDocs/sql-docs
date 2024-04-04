@@ -4,7 +4,7 @@ description: "Learn about deadlocks in the SQL Server database engine."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 03/21/2023
+ms.date: 10/09/2023
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -35,7 +35,7 @@ Both transactions in a deadlock will wait forever unless the deadlock is broken 
   
 Deadlocking is often confused with normal blocking. When a transaction requests a lock on a resource locked by another transaction, the requesting transaction waits until the lock is released. By default, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] transactions do not time out, unless LOCK_TIMEOUT is set. The requesting transaction is blocked, not deadlocked, because the requesting transaction has not done anything to block the transaction owning the lock. Eventually, the owning transaction will complete and release the lock, and then the requesting transaction will be granted the lock and proceed. Deadlocks are resolved almost immediately, whereas blocking can, in theory, persist indefinitely. Deadlocks are sometimes called a deadly embrace.  
   
-Deadlock is a condition that can occur on any system with multiple threads, not just on a relational database management system, and can occur for resources other than locks on database objects. For example, a thread in a multithreaded operating system might acquire one or more resources, such as blocks of memory. If the resource being acquired is currently owned by another thread, the first thread may have to wait for the owning thread to release the target resource. The waiting thread is said to have a dependency on the owning thread for that particular resource. In an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], sessions can deadlock when acquiring non-database resources, such as memory or threads.  
+Deadlock is a condition that can occur on any system with multiple threads, not just on a relational database management system, and can occur for resources other than locks on database objects. For example, a thread in a multithreaded operating system might acquire one or more resources, such as blocks of memory. If the resource being acquired is currently owned by another thread, the first thread might have to wait for the owning thread to release the target resource. The waiting thread is said to have a dependency on the owning thread for that particular resource. In an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], sessions can deadlock when acquiring non-database resources, such as memory or threads.  
   
 :::image type="content" source="media/sql-server-deadlocks-guide/deadlock.png" alt-text="Diagram showing a transaction deadlock." lightbox="media/sql-server-deadlocks-guide/deadlock.png":::
   
@@ -65,7 +65,7 @@ Each user session might have one or more tasks running on its behalf where each 
   
 -   **Memory**. When concurrent requests are waiting for memory grants that cannot be satisfied with the available memory, a deadlock can occur. For example, two concurrent queries, Q1 and Q2, execute as user-defined functions that acquire 10 MB and 20 MB of memory respectively. If each query needs 30 MB and the total available memory is 20 MB, then Q1 and Q2 must wait for each other to release memory, and this results in a deadlock.  
   
--   **Parallel query execution-related resources**. Coordinator, producer, or consumer threads associated with an exchange port may block each other causing a deadlock usually when including at least one other process that is not a part of the parallel query. Also, when a parallel query starts execution, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] determines the degree of parallelism, or the number of worker threads, based upon the current workload. If the system workload unexpectedly changes, for example, where new queries start running on the server or the system runs out of worker threads, then a deadlock could occur.  
+-   **Parallel query execution-related resources**. Coordinator, producer, or consumer threads associated with an exchange port might block each other causing a deadlock usually when including at least one other process that is not a part of the parallel query. Also, when a parallel query starts execution, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] determines the degree of parallelism, or the number of worker threads, based upon the current workload. If the system workload unexpectedly changes, for example, where new queries start running on the server or the system runs out of worker threads, then a deadlock could occur.  
   
 -   **Multiple Active Result Sets (MARS) resources**. These resources are used to control interleaving of multiple active requests under MARS. For more information, see [Using Multiple Active Result Sets (MARS)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
@@ -161,7 +161,7 @@ The following example shows the output, after selecting on the first link of the
         <process-list>
           <process id="process27b9b0b9848" taskpriority="0" logused="0" waitresource="KEY: 5:72057594214350848 (1a39e6095155)" waittime="1631" ownerId="11088595" transactionname="SELECT" lasttranstarted="2022-02-18T00:26:23.073" XDES="0x27b9f79fac0" lockMode="S" schedulerid="9" kpid="15336" status="suspended" spid="62" sbid="0" ecid="0" priority="0" trancount="0" lastbatchstarted="2022-02-18T00:26:22.893" lastbatchcompleted="2022-02-18T00:26:22.890" lastattention="1900-01-01T00:00:00.890" clientapp="SQLCMD" hostname="ContosoServer" hostpid="7908" loginname="CONTOSO\user" isolationlevel="read committed (2)" xactid="11088595" currentdb="5" lockTimeout="4294967295" clientoption1="538968096" clientoption2="128056">
             <executionStack>
-              <frame procname="AdventureWorks2019.dbo.p1" line="3" stmtstart="78" stmtend="180" sqlhandle="0x0300050020766505ca3e07008ba8000001000000000000000000000000000000000000000000000000000000">
+              <frame procname="AdventureWorks2022.dbo.p1" line="3" stmtstart="78" stmtend="180" sqlhandle="0x0300050020766505ca3e07008ba8000001000000000000000000000000000000000000000000000000000000">
 SELECT c2, c3 FROM t1 WHERE c2 BETWEEN @p1 AND @p1+    </frame>
               <frame procname="adhoc" line="4" stmtstart="82" stmtend="98" sqlhandle="0x020000006263ec01ebb919c335024a072a2699958d3fcce60000000000000000000000000000000000000000">
 unknown    </frame>
@@ -176,7 +176,7 @@ END
           </process>
           <process id="process27b9ee33c28" taskpriority="0" logused="252" waitresource="KEY: 5:72057594214416384 (e5b3d7e750dd)" waittime="1631" ownerId="11088593" transactionname="UPDATE" lasttranstarted="2022-02-18T00:26:23.073" XDES="0x27ba15a4490" lockMode="X" schedulerid="6" kpid="5584" status="suspended" spid="58" sbid="0" ecid="0" priority="0" trancount="2" lastbatchstarted="2022-02-18T00:26:22.890" lastbatchcompleted="2022-02-18T00:26:22.890" lastattention="1900-01-01T00:00:00.890" clientapp="SQLCMD" hostname="ContosoServer" hostpid="15316" loginname="CONTOSO\user" isolationlevel="read committed (2)" xactid="11088593" currentdb="5" lockTimeout="4294967295" clientoption1="538968096" clientoption2="128056">
             <executionStack>
-              <frame procname="AdventureWorks2019.dbo.p2" line="3" stmtstart="76" stmtend="150" sqlhandle="0x03000500599a5906ce3e07008ba8000001000000000000000000000000000000000000000000000000000000">
+              <frame procname="AdventureWorks2022.dbo.p2" line="3" stmtstart="76" stmtend="150" sqlhandle="0x03000500599a5906ce3e07008ba8000001000000000000000000000000000000000000000000000000000000">
 UPDATE t1 SET c2 = c2+1 WHERE c1 = @p    </frame>
               <frame procname="adhoc" line="4" stmtstart="82" stmtend="98" sqlhandle="0x02000000008fe521e5fb1099410048c5743ff7da04b2047b0000000000000000000000000000000000000000">
 unknown    </frame>
@@ -191,7 +191,7 @@ END
           </process>
         </process-list>
         <resource-list>
-          <keylock hobtid="72057594214350848" dbid="5" objectname="AdventureWorks2019.dbo.t1" indexname="cidx" id="lock27b9dd26a00" mode="X" associatedObjectId="72057594214350848">
+          <keylock hobtid="72057594214350848" dbid="5" objectname="AdventureWorks2022.dbo.t1" indexname="cidx" id="lock27b9dd26a00" mode="X" associatedObjectId="72057594214350848">
             <owner-list>
               <owner id="process27b9ee33c28" mode="X" />
             </owner-list>
@@ -199,7 +199,7 @@ END
               <waiter id="process27b9b0b9848" mode="S" requestType="wait" />
             </waiter-list>
           </keylock>
-          <keylock hobtid="72057594214416384" dbid="5" objectname="AdventureWorks2019.dbo.t1" indexname="idx1" id="lock27afa392600" mode="S" associatedObjectId="72057594214416384">
+          <keylock hobtid="72057594214416384" dbid="5" objectname="AdventureWorks2022.dbo.t1" indexname="idx1" id="lock27afa392600" mode="S" associatedObjectId="72057594214416384">
             <owner-list>
               <owner id="process27b9b0b9848" mode="S" />
             </owner-list>
@@ -221,14 +221,14 @@ For more information, see [Use the system_health Session](../relational-database
 When deadlocks occur, Trace Flag 1204 and Trace Flag 1222 return information that is captured in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error log. Trace Flag 1204 reports deadlock information formatted by each node involved in the deadlock. Trace Flag 1222 formats deadlock information, first by processes and then by resources. It is possible to enable both trace flags to obtain two representations of the same deadlock event.  
 
 > [!IMPORTANT]
-> Avoid using Trace Flag 1204 and 1222 on workload-intensive systems that are experiencing deadlocks. Using these trace flags may introduce performance issues. Instead, use the [Deadlock Extended Event](#deadlock_xevent) to capture the necessary information.
+> Avoid using Trace Flag 1204 and 1222 on workload-intensive systems that are experiencing deadlocks. Using these trace flags might introduce performance issues. Instead, use the [Deadlock Extended Event](#deadlock_xevent) to capture the necessary information.
   
 In addition to defining the properties of Trace Flag 1204 and 1222, the following table also shows the similarities and differences.  
   
 |Property|Trace Flag 1204 and Trace Flag 1222|Trace Flag 1204 only|Trace Flag 1222 only|  
 |--------------|-----------------------------------------|--------------------------|--------------------------|  
 |Output format|Output is captured in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error log.|Focused on the nodes involved in the deadlock. Each node has a dedicated section, and the final section describes the deadlock victim.|Returns information in an XML-like format that does not conform to an XML Schema Definition (XSD) schema. The format has three major sections. The first section declares the deadlock victim. The second section describes each process involved in the deadlock. The third section describes the resources that are synonymous with nodes in Trace Flag 1204.|  
-|Identifying attributes|**SPID:<x\> ECID:<x\>.** Identifies the system process ID thread in cases of parallel processes. The entry `SPID:<x> ECID:0`, where <x\> is replaced by the SPID value, represents the main thread. The entry `SPID:<x> ECID:<y>`, where <x\> is replaced by the SPID value and <y\> is greater than 0, represents the subthreads for the same SPID.<br /><br /> **BatchID** (**sbid** for Trace Flag 1222). Identifies the batch from which code execution is requesting or holding a lock. When Multiple Active Result Sets (MARS) is disabled, the BatchID value is 0. When MARS is enabled, the value for active batches is 1 to *n*. If there are no active batches in the session, BatchID is 0.<br /><br /> **Mode**. Specifies the type of lock for a particular resource that is requested, granted, or waited on by a thread. Mode can be IS (Intent Shared), S (Shared), U (Update), IX (Intent Exclusive), SIX (Shared with Intent Exclusive), and X (Exclusive).<br /><br /> **Line #** (**line** for Trace Flag 1222). Lists the line number in the current batch of statements that was being executed when the deadlock occurred.<br /><br /> **Input Buf** (**inputbuf** for Trace Flag 1222). Lists all the statements in the current batch.|**Node**. Represents the entry number in the deadlock chain.<br /><br /> **Lists**. The lock owner can be part of these lists:<br /><br /> **Grant List**. Enumerates the current owners of the resource.<br /><br /> **Convert List**. Enumerates the current owners that are trying to convert their locks to a higher level.<br /><br /> **Wait List**. Enumerates current new lock requests for the resource.<br /><br /> **Statement Type**. Describes the type of DML statement (SELECT, INSERT, UPDATE, or DELETE) on which the threads have permissions.<br /><br /> **Victim Resource Owner**. Specifies the participating thread that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] chooses as the victim to break the deadlock cycle. The chosen thread and all existing subthreads are terminated.<br /><br /> **Next Branch**. Represents the two or more subthreads from the same SPID that are involved in the deadlock cycle.|**deadlock victim**. Represents the physical memory address of the task (see [sys.dm_os_tasks (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)) that was selected as a deadlock victim. It may be 0 (zero) in the case of an unresolved deadlock. A task that is rolling back cannot be chosen as a deadlock victim.<br /><br /> **executionstack**. Represents [!INCLUDE[tsql](../includes/tsql-md.md)] code that is being executed at the time the deadlock occurs.<br /><br /> **priority**. Represents deadlock priority. In certain cases, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] may opt to alter the deadlock priority for a short duration to achieve better concurrency.<br /><br /> **logused**. Log space used by the task.<br /><br /> **owner id**. The ID of the transaction that has control of the request.<br /><br /> **status**. State of the task. It is one of the following values:<br /><br /> >> **pending**. Waiting for a worker thread.<br /><br /> >> **runnable**. Ready to run but waiting for a quantum.<br /><br /> >> **running**. Currently running on the scheduler.<br /><br /> >> **suspended**. Execution is suspended.<br /><br /> >> **done**. Task has completed.<br /><br /> >> **spinloop**. Waiting for a spinlock to become free.<br /><br /> **waitresource**. The resource needed by the task.<br /><br /> **waittime**. Time in milliseconds waiting for the resource.<br /><br /> **schedulerid**. Scheduler associated with this task. See [sys.dm_os_schedulers (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).<br /><br /> **hostname**. The name of the workstation.<br /><br /> **isolationlevel**. The current transaction isolation level.<br /><br /> **Xactid**. The ID of the transaction that has control of the request.<br /><br /> **currentdb**. The ID of the database.<br /><br /> **lastbatchstarted**. The last time a client process started batch execution.<br /><br /> **lastbatchcompleted**. The last time a client process completed batch execution.<br /><br /> **clientoption1 and clientoption2**. Set options on this client connection. This is a bitmask that includes information about options usually controlled by SET statements such as SET NOCOUNT and SET XACTABORT.<br /><br /> **associatedObjectId**. Represents the HoBT (heap or B-tree) ID.|  
+|Identifying attributes|**SPID:<x\> ECID:<x\>.** Identifies the system process ID thread in cases of parallel processes. The entry `SPID:<x> ECID:0`, where <x\> is replaced by the SPID value, represents the main thread. The entry `SPID:<x> ECID:<y>`, where <x\> is replaced by the SPID value and <y\> is greater than 0, represents the subthreads for the same SPID.<br /><br /> **BatchID** (**sbid** for Trace Flag 1222). Identifies the batch from which code execution is requesting or holding a lock. When Multiple Active Result Sets (MARS) is disabled, the BatchID value is 0. When MARS is enabled, the value for active batches is 1 to *n*. If there are no active batches in the session, BatchID is 0.<br /><br /> **Mode**. Specifies the type of lock for a particular resource that is requested, granted, or waited on by a thread. Mode can be IS (Intent Shared), S (Shared), U (Update), IX (Intent Exclusive), SIX (Shared with Intent Exclusive), and X (Exclusive).<br /><br /> **Line #** (**line** for Trace Flag 1222). Lists the line number in the current batch of statements that was being executed when the deadlock occurred.<br /><br /> **Input Buf** (**inputbuf** for Trace Flag 1222). Lists all the statements in the current batch.|**Node**. Represents the entry number in the deadlock chain.<br /><br /> **Lists**. The lock owner can be part of these lists:<br /><br /> **Grant List**. Enumerates the current owners of the resource.<br /><br /> **Convert List**. Enumerates the current owners that are trying to convert their locks to a higher level.<br /><br /> **Wait List**. Enumerates current new lock requests for the resource.<br /><br /> **Statement Type**. Describes the type of DML statement (SELECT, INSERT, UPDATE, or DELETE) on which the threads have permissions.<br /><br /> **Victim Resource Owner**. Specifies the participating thread that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] chooses as the victim to break the deadlock cycle. The chosen thread and all existing subthreads are terminated.<br /><br /> **Next Branch**. Represents the two or more subthreads from the same SPID that are involved in the deadlock cycle.|**deadlock victim**. Represents the physical memory address of the task (see [sys.dm_os_tasks (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)) that was selected as a deadlock victim. It might be 0 (zero) in the case of an unresolved deadlock. A task that is rolling back cannot be chosen as a deadlock victim.<br /><br /> **executionstack**. Represents [!INCLUDE[tsql](../includes/tsql-md.md)] code that is being executed at the time the deadlock occurs.<br /><br /> **priority**. Represents deadlock priority. In certain cases, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] might opt to alter the deadlock priority for a short duration to achieve better concurrency.<br /><br /> **logused**. Log space used by the task.<br /><br /> **owner id**. The ID of the transaction that has control of the request.<br /><br /> **status**. State of the task. It is one of the following values:<br /><br /> >> **pending**. Waiting for a worker thread.<br /><br /> >> **runnable**. Ready to run but waiting for a quantum.<br /><br /> >> **running**. Currently running on the scheduler.<br /><br /> >> **suspended**. Execution is suspended.<br /><br /> >> **done**. Task has completed.<br /><br /> >> **spinloop**. Waiting for a spinlock to become free.<br /><br /> **waitresource**. The resource needed by the task.<br /><br /> **waittime**. Time in milliseconds waiting for the resource.<br /><br /> **schedulerid**. Scheduler associated with this task. See [sys.dm_os_schedulers (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).<br /><br /> **hostname**. The name of the workstation.<br /><br /> **isolationlevel**. The current transaction isolation level.<br /><br /> **Xactid**. The ID of the transaction that has control of the request.<br /><br /> **currentdb**. The ID of the database.<br /><br /> **lastbatchstarted**. The last time a client process started batch execution.<br /><br /> **lastbatchcompleted**. The last time a client process completed batch execution.<br /><br /> **clientoption1 and clientoption2**. Set options on this client connection. This is a bitmask that includes information about options usually controlled by SET statements such as SET NOCOUNT and SET XACTABORT.<br /><br /> **associatedObjectId**. Represents the HoBT (heap or B-tree) ID.|  
 |Resource attributes|**RID**. Identifies the single row within a table on which a lock is held or requested. RID is represented as RID: `db_id:file_id:page_no:row_no`. For example, `RID: 6:1:20789:0`.<br /><br /> **OBJECT**. Identifies the table on which a lock is held or requested. OBJECT is represented as OBJECT: `db_id:object_id`. For example, `TAB: 6:2009058193`.<br /><br /> **KEY**. Identifies the key range within an index on which a lock is held or requested. KEY is represented as KEY: `db_id:hobt_id` (*index key hash value*). For example, `KEY: 6:72057594057457664 (350007a4d329)`.<br /><br /> **PAG**. Identifies the page resource on which a lock is held or requested. PAG is represented as PAG: `db_id:file_id:page_no`. For example, `PAG: 6:1:20789`.<br /><br /> **EXT**. Identifies the extent structure. EXT is represented as EXT: `db_id:file_id:extent_no`. For example, `EXT: 6:1:9`.<br /><br /> **DB**. Identifies the database lock. **DB is represented in one of the following ways:**<br /><br /> DB: `db_id`<br /><br /> DB: `db_id[BULK-OP-DB]`, which identifies the database lock taken by the backup database.<br /><br /> DB: `db_id[BULK-OP-LOG]`, which identifies the lock taken by the backup log for that particular database.<br /><br /> **APP**. Identifies the lock taken by an application resource. APP is represented as APP: `lock_resource`. For example, `APP: Formf370f478`.<br /><br /> **METADATA**. Represents metadata resources involved in a deadlock. Because METADATA has many subresources, the value returned depends upon the subresource that has deadlocked. For example, `METADATA.USER_TYPE` returns `user_type_id = *integer_value*`. For more information about METADATA resources and subresources, see [sys.dm_tran_locks (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).<br /><br /> **HOBT**. Represents a heap or B-tree involved in a deadlock.|None exclusive to this trace flag.|None exclusive to this trace flag.|  
   
 #### Trace Flag 1204 example
@@ -293,7 +293,7 @@ deadlock-list
    isolationlevel=read committed (2) xactid=310444 currentdb=6   
    lockTimeout=4294967295 clientoption1=671090784 clientoption2=390200  
     executionStack  
-     frame procname=AdventureWorks2019.dbo.usp_p1 line=6 stmtstart=202   
+     frame procname=AdventureWorks2022.dbo.usp_p1 line=6 stmtstart=202   
      sqlhandle=0x0300060013e6446b027cbb00c69600000100000000000000  
      UPDATE T2 SET COL1 = 3 WHERE COL1 = 1;       
      frame procname=adhoc line=3 stmtstart=44   
@@ -314,7 +314,7 @@ deadlock-list
    isolationlevel=read committed (2) xactid=310462 currentdb=6   
    lockTimeout=4294967295 clientoption1=671090784 clientoption2=390200  
     executionStack  
-     frame procname=AdventureWorks2019.dbo.usp_p2 line=6 stmtstart=200   
+     frame procname=AdventureWorks2022.dbo.usp_p2 line=6 stmtstart=200   
      sqlhandle=0x030006004c0a396c027cbb00c69600000100000000000000  
      UPDATE T1 SET COL1 = 4 WHERE COL1 = 1;       
      frame procname=adhoc line=3 stmtstart=44   
@@ -324,13 +324,13 @@ deadlock-list
       BEGIN TRANSACTION  
         EXEC usp_p2      
   resource-list  
-   ridlock fileid=1 pageid=20789 dbid=6 objectname=AdventureWorks2019.dbo.T2   
+   ridlock fileid=1 pageid=20789 dbid=6 objectname=AdventureWorks2022.dbo.T2   
    id=lock3136940 mode=X associatedObjectId=72057594057392128  
     owner-list  
      owner id=process689978 mode=X  
     waiter-list  
      waiter id=process6891f8 mode=U requestType=wait  
-   keylock hobtid=72057594057457664 dbid=6 objectname=AdventureWorks2019.dbo.T1   
+   keylock hobtid=72057594057457664 dbid=6 objectname=AdventureWorks2022.dbo.T1   
    indexname=nci_T1_COL1 id=lock3136fc0 mode=X   
    associatedObjectId=72057594057457664  
     owner-list  
@@ -475,12 +475,12 @@ The second update statement in **Session A** will be blocked by **Session B** on
 
 After a few seconds, the deadlock monitor will identify that the transactions in **Session A** and **Session B** are mutually blocking one another, and that neither can make progress. You should see a deadlock occur, with **Session A** chosen as the deadlock victim. **Session B** will complete successfully. An error message will appear in **Session A** with text similar to the following:
 
-```
+```output
 Msg 1205, Level 13, State 51, Line 7
 Transaction (Process ID 51) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction.
 ```
 
-If a deadlock is not raised, verify that READ_COMMITTED_SNAPSHOT has been enabled in your sample database. Deadlocks may occur in any database configuration, but this example requires READ_COMMITTED_SNAPSHOT to be enabled.
+If a deadlock is not raised, verify that READ_COMMITTED_SNAPSHOT has been enabled in your sample database. Deadlocks can occur in any database configuration, but this example requires READ_COMMITTED_SNAPSHOT to be enabled.
 
 You could then view details of the deadlock in the ring_buffer target of the `system_health` Extended Events session, which is enabled and active by default in SQL Server. Consider the following query:
 
@@ -509,7 +509,60 @@ You can view the XML in the `Deadlock_XML` column inside SSMS, by selecting the 
 
 :::image type="content" source="media/sql-server-deadlocks-guide/graphical-deadlock-xdl.png" alt-text="A screenshot of a visual deadlock graph in an .xdl file in SSMS." lightbox="media/sql-server-deadlocks-guide/graphical-deadlock-xdl.png":::
 
-## <a id="Additional_Reading"></a> See also
+## Optimized locking and deadlocks
+
+**Applies to:** [!INCLUDE[ssazure-sqldb](../includes/ssazure-sqldb.md)]
+
+[Optimized locking](performance/optimized-locking.md) introduced a different method for locking mechanics that changes how deadlocks involving exclusive TID locks might be reported. Under each resource in the deadlock report's `<resource-list>`, each `<xactlock>` element reports the underlying resources and specific information for locks of each member of a deadlock. 
+
+Consider the following example where optimized locking is enabled:
+
+```sql
+CREATE TABLE t2 
+(a int PRIMARY KEY not null 
+,b int null); 
+
+INSERT INTO t2 VALUES (1,10),(2,20),(3,30) 
+GO 
+```
+
+The following TSQL commands in two sessions will create a deadlock on table `t2`:
+
+In session 1:
+
+```sql
+--session 1
+BEGIN TRAN foo;
+UPDATE t2 SET b = b+ 10 WHERE a = 1; 
+```
+
+In session 2:
+
+```sql
+--session 2:
+BEGIN TRAN bar 
+UPDATE t2 SET b = b+ 10 WHERE a = 2; 
+```
+
+In session 1:
+
+```sql
+--session 1:
+UPDATE t2 SET b = b + 100 WHERE a = 2; 
+```
+
+In session 2:
+
+```sql
+--session 2:
+UPDATE t2 SET b = b + 20 WHERE a = 1; 
+```
+
+This scenario of competing `UPDATE` statements results in a deadlock. In this case, a keylock resource, where each session holds an X lock on its own TID and is waiting on the S lock on the other TID, resulting in a deadlock. The following XML, captured as the deadlock report, contains elements and attributes specific to optimized locking:
+
+:::image type="content" source="media/sql-server-deadlocks-guide/optimized-locking-tid-lock-deadlock-xml.png" alt-text="A screenshot of the XML of a deadlock report showing the UnderlyingResource nodes and keylock nodes specific to optimized locking." lightbox="media/sql-server-deadlocks-guide/optimized-locking-tid-lock-deadlock-xml.png":::
+
+## <a id="Additional_Reading"></a> Related content
 
 - [Extended Events](../relational-databases/extended-events/extended-events.md)   
 - [sys.dm_tran_locks (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)     
@@ -518,8 +571,5 @@ You can view the XML in the `Deadlock_XML` column inside SSMS, by selecting the 
 - [Lock:Deadlock Chain Event Class](event-classes/lock-deadlock-chain-event-class.md)
 - [Lock:Deadlock Event Class](event-classes/lock-deadlock-event-class.md)
 - [SET DEADLOCK_PRIORITY (Transact-SQL)](../t-sql/statements/set-deadlock-priority-transact-sql.md)
-
-## Next steps
-
 - [Analyze and prevent deadlocks in Azure SQL Database](/azure/azure-sql/database/analyze-prevent-deadlocks)
 - [Open, view, and print a deadlock file in SQL Server Management Studio (SSMS)](performance/open-view-and-print-a-deadlock-file-sql-server-management-studio.md)

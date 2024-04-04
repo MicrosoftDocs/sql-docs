@@ -20,16 +20,16 @@ For information on how to run queries using secure enclaves, see [Run Transact-S
 
 ## Database connection errors
 
-To run statements using a secure enclave, you need to enable Always Encrypted, specify an attestation protocol and, if applicable, an attestation URL, for the database connection, as explained in [Prerequisites for running statements using secure enclaves](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-statements-using-secure-enclaves). However, your connection will fail if you specify an attestation protocol but your [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] or your target [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance doesn't support secure enclaves, or is incorrectly configured.
+To run statements using a secure enclave, you need to enable Always Encrypted, specify an attestation protocol and, if applicable, an attestation URL, for the database connection, as explained in [Prerequisites for running statements using secure enclaves](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-statements-using-secure-enclaves). However, your connection will fail if you specify an attestation protocol but your [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] or your target [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance doesn't support secure enclaves, or is incorrectly configured.
 
-- If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] with Intel SGX enclaves, check that your database uses the [DC-series](/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series) hardware configuration. For more information, see [Enable Intel SGX enclaves for your Azure SQL database](/azure/azure-sql/database/always-encrypted-enclaves-enable#tab/IntelSGXenclaves).
-- If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] with VBS enclaves, verify that the preferredEnclaveType database property is set to VBS. For more information, see [Enable VBS Enclaves for your Azure SQL database](/azure/azure-sql/database/always-encrypted-enclaves-enable#tab/VBSenclaves).
+- If you're using [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] with Intel SGX enclaves, check that your database uses the [DC-series](/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series) hardware configuration. For more information, see [Enable Intel SGX enclaves for your Azure SQL database](/azure/azure-sql/database/always-encrypted-enclaves-enable#tab/IntelSGXenclaves).
+- If you're using [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] with VBS enclaves, verify that the preferredEnclaveType database property is set to VBS. For more information, see [Enable VBS Enclaves for your Azure SQL database](/azure/azure-sql/database/always-encrypted-enclaves-enable#tab/VBSenclaves).
 - If you're using [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] or later, check secure enclave is correctly configured for your instance. For more information, see [Configure the secure enclave in SQL Server](always-encrypted-enclaves-configure-enclave-type.md).
 
 ## Attestation errors when using Microsoft Azure Attestation
 
 > [!NOTE]
-> This section applies only to [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] with Intel SGX enclaves.
+> This section applies only to [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] with Intel SGX enclaves.
 
 Before a client driver submits a T-SQL statement to Azure SQL logical server for execution, the driver triggers the following enclave attestation workflow using Microsoft Azure Attestation.
 

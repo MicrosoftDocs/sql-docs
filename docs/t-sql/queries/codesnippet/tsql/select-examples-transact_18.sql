@@ -1,6 +1,7 @@
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
-SELECT ProductID 
+
+SELECT ProductID
 FROM Sales.SalesOrderDetail
 GROUP BY ProductID
 HAVING AVG(OrderQty) > 5

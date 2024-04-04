@@ -54,7 +54,7 @@ The computer on which you create the deployment bundle **must have the following
 
 - Sample data, completed packages, configurations, and a Readme. To download the sample data and the lesson packages as a Zip file, see [SQL Server Integration Services Tutorial Files](https://www.microsoft.com/download/details.aspx?id=56827). Most of the files in the Zip file are read-only to prevent unintended changes. To write output to a file or to change it, you may have to turn off the read-only attribute in the file properties.
 
--   The **AdventureWorks2014** sample database. To download the **AdventureWorks2014** database, download `AdventureWorks2014.bak` from [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) and restore the backup.  
+-   The [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] sample database. You can download the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database from [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) and restore the backup.  
 
 -   You must have permission to create and drop tables in the AdventureWorks database.
     
@@ -68,7 +68,7 @@ The computer to which you deploy packages **must have the following components i
 
 - Sample data, completed packages, configurations, and a Readme. To download the sample data and the lesson packages as a Zip file, see [SQL Server Integration Services Tutorial Files](https://www.microsoft.com/download/details.aspx?id=56827). Most of the files in the Zip file are read-only to prevent unintended changes. To write output to a file or to change it, you may have to turn off the read-only attribute in the file properties.
 
--   The **AdventureWorks2014** sample database. To download the **AdventureWorks2014** database, download `AdventureWorks2014.bak` from [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) and restore the backup.  
+-   The [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] sample database. You can download the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database from [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) and restore the backup.  
     
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).    
     

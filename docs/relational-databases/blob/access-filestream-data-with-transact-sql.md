@@ -28,19 +28,19 @@ To add a row to a table that supports FILESTREAM data, use the [!INCLUDE[tsql](.
 
 The following example shows how to insert `NULL`. When the FILESTREAM value is `NULL`, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] doesn't create a file in the file system.
 
-[!code-sql[FILESTREAM#FS_InsertNULL](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_1.sql)]
+:::code language="sql" source="codesnippet/tsql/access-filestream-data-w_1_1.sql":::
 
 ### Insert a zero-length record
 
 The following example shows how to use `INSERT` to create a zero-length record. This is useful for when you want to obtain a file handle, but will be manipulating the file by using Win32 APIs.
 
-[!code-sql[FILESTREAM#FS_InsertZero](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_2.sql)]
+:::code language="sql" source="codesnippet/tsql/access-filestream-data-w_1_2.sql":::
 
 ### Create a data file
 
 The following example shows how to use `INSERT` to create a file that contains data. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] converts the string `Seismic Data` to a `varbinary(max)` value. FILESTREAM creates the Windows file if it doesn't already exist. The data is then added to the data file.
 
-[!code-sql[FILESTREAM#FS_InsertData](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_3.sql)]
+:::code language="sql" source="codesnippet/tsql/access-filestream-data-w_1_3.sql":::
 
 When you select all data from the `Archive.dbo.Records` table, the results are similar to the results that are shown in the following table. However, the `Id` column will contain different GUIDs.
 
@@ -56,7 +56,7 @@ You can use [!INCLUDE[tsql](../../includes/tsql-md.md)] to update the data in th
 
 The following example replaces any text in the file record with the text `Xray 1`.
 
-[!code-sql[FILESTREAM#FS_UpdateData](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_4.sql)]
+:::code language="sql" source="codesnippet/tsql/access-filestream-data-w_1_4.sql":::
 
 ## <a id="del"></a> Delete FILESTREAM data
 
@@ -64,7 +64,7 @@ When you delete a row that contains a FILESTREAM field, you also delete its unde
 
 The following example shows how to delete a row and its associated file system files.
 
-[!code-sql[FILESTREAM#FS_DeleteData](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_5.sql)]
+:::code language="sql" source="codesnippet/tsql/access-filestream-data-w_1_5.sql":::
 
 When you select all data from the `Archive.dbo.Records` table, the row is gone, and you can no longer use the associated file.
 
@@ -77,7 +77,7 @@ To find out whether a database or table contains FILESTREAM data, you must query
 
 The following extended example shows the steps to create a new database, create tables which have FILESTREAM data, and query system views to see whether the tables, and the database itself, contain FILESTREAM data.
 
-[!code-sql[FILESTREAM#FS_ValidateData](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_6.sql)]
+:::code language="sql" source="codesnippet/tsql/access-filestream-data-w_1_6.sql":::
 
 ## See also
 

@@ -63,10 +63,10 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
  Requires CONTROL permission on the table.  
   
 ## Examples  
- The following example estimates the rowsize reduction if the `Production.WorkOrderRouting` table in the `AdventureWorks2012` database is compressed.  
+ The following example estimates the rowsize reduction if the `Production.WorkOrderRouting` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database is compressed.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_estimated_rowsize_reduction_for_vardecimal 'Production.WorkOrderRouting' ;  
 GO  

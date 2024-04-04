@@ -45,7 +45,7 @@ None.
 
 A return code of `1` indicates success. Any other value indicates failure.
 
-## Result sets
+## Result set
 
 None.
 
@@ -55,6 +55,6 @@ None.
 EXEC sys.sp_flush_log;
 ```
 
-## Next steps
+## Related content
 
 - [SQL Server transaction log architecture and management guide](../sql-server-transaction-log-architecture-and-management-guide.md)

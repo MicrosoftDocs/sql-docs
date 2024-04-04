@@ -21,7 +21,7 @@ An *application* is a program that calls the ODBC API to access data. Although m
   
 -   **Generic Applications** These are also referred to as shrink-wrapped applications or off-the-shelf applications. Generic applications are designed to work with a variety of different DBMSs. Examples include a spreadsheet or statistics package that uses ODBC to import data for further analysis and a word processor that uses ODBC to get a mailing list from a database.  
   
-     An important subcategory of generic applications is application development environments, such as PowerBuilder or Microsoft® Visual Basic®. Although the applications constructed with these environments will probably work only with a single DBMS, the environment itself needs to work with multiple DBMSs.  
+     An important subcategory of generic applications is application development environments, such as PowerBuilder or Microsoft Visual Basic. Although the applications constructed with these environments will probably work only with a single DBMS, the environment itself needs to work with multiple DBMSs.  
   
      What all generic applications have in common is that they are highly interoperable among DBMSs and they need to use ODBC in a relatively generic manner. For more information about interoperability, see [Choosing a Level of Interoperability](../../odbc/reference/develop-app/choosing-a-level-of-interoperability.md).  
   

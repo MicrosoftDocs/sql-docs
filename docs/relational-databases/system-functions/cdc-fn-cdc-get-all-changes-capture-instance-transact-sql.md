@@ -86,7 +86,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 -- ========  
 -- Enumerate All Changes for Valid Range Template  
 -- ========  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
   
 DECLARE @from_lsn binary(10), @to_lsn binary(10);  

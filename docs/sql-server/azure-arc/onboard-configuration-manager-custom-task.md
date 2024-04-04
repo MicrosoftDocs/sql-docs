@@ -1,26 +1,30 @@
 ---
 title: Connect SQL Server machines at scale with a Configuration Manager custom task sequence | Arc-enabled SQL Server
-description: You can use a custom task sequence that can deploy the Connected Machine Agent to onboard a collection of devices to Azure Arc-enabled servers for Azure Arc-enabled SQL Server.
+description: You can use a custom task sequence that can deploy the Connected Machine Agent to onboard a collection of devices to Azure Arc.
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mikeray, randolphwest
-ms.date: 05/10/2023
-ms.service: sql
+ms.date: 03/08/2024
 ms.topic: how-to
 ---
 
 # Connect SQL Server machines at scale with a Configuration Manager custom task sequence
 
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
+[!INCLUDE [automatic](includes/if-manual.md)]
+
 Microsoft Endpoint Configuration Manager facilitates comprehensive management of servers supporting the secure and scalable deployment of applications, software updates, and operating systems. Configuration Manager offers the custom task sequence as a flexible paradigm for application deployment.
 
-You can use a custom task sequence, that can deploy the Connected Machine Agent to onboard a collection of devices to Azure Arc-enabled servers.
+You can use a custom task sequence that can deploy the Connected Machine Agent to onboard a collection of devices to Azure Arc-enabled servers.
 
 Before you get started, be sure to review the [prerequisites](prerequisites.md) and verify that your subscription and resources meet the requirements. 
 
-
 ## Generate a service principal
 
-Create an Azure Active Directory [service principal](/azure/active-directory/develop/app-objects-and-service-principals). A service principal is a special limited management identity that is granted only the minimum permission necessary to connect machines to Azure and to create the Azure resources for Azure Arc-enabled server and Azure Arc-enabled SQL Server.
+Create a Microsoft Entra ID [service principal](/azure/active-directory/develop/app-objects-and-service-principals). A service principal is a special limited management identity that is granted only the minimum permission necessary to connect machines to Azure and to create the Azure resources for Azure Arc-enabled server and [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)].
+
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
 
 Before you get started, be sure to review the [prerequisites](prerequisites.md) and assign the necessary roles and permissions to the service principal.
 
@@ -96,4 +100,4 @@ After you connected the SQL Server instances to Azure, go to the [Azure portal](
 
 - Learn how to [Configure your SQL Server instance for periodic environment health check using on-demand SQL assessment](assess.md)
 
-- Learn how to [Protect Azure Arc-enabled SQL Server with Microsoft Defender for Cloud](configure-advanced-data-security.md)
+- Learn how to [Protect [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] with Microsoft Defender for Cloud](configure-advanced-data-security.md)

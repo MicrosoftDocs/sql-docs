@@ -1,6 +1,2646 @@
 {
   "redirections": [
     {
+      "source_path": "docs/database-engine/availability-groups/windows/add-ip-address-dialog-box-sql-server-management-studio.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/add-ip-address-dialog-box-sql-server-management-studio",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/availability-replica-properties-general-page.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/availability-replica-properties-general-page",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/specify-availability-group-name-page.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/specify-availability-group-name-page",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/select-databases-page-new-availability-group-wizard-and-add-database-wizard.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/select-databases-page-new-availability-group-wizard-and-add-database-wizard",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/enter-passwords-page-add-replica-wizard.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/enter-passwords-page-add-replica-wizard",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/validation-page-always-on-availability-group-wizards.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/validation-page-always-on-availability-group-wizards",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/summary-page-always-on-availability-group-wizards.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/summary-page-always-on-availability-group-wizards",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/progress-page-always-on-availability-group-wizards.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/progress-page-always-on-availability-group-wizards",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/results-page-always-on-availability-group-wizards.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/results-page-always-on-availability-group-wizards",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/options-sql-server-always-on-dashboard-page.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/options-sql-server-always-on-dashboard-page",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/policy-evaluation-result-always-on.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/policy-evaluation-result-always-on",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/availability-group-properties-new-availability-group-general-page.md",
+      "redirect_url": "/previous-versions/sql/database-engine/availability-groups/windows/availability-group-properties-new-availability-group-general-page",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/adding-a-visual-foxpro-data-source.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/adding-a-visual-foxpro-data-source",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/adding-and-modifying-data-sources-using-setup.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/adding-and-modifying-data-sources-using-setup",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/additional-supported-odbc-sql-grammar.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/additional-supported-odbc-sql-grammar",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/alter-table-sql-command.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/alter-table-sql-command",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/alter-table-statement-limitations.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/alter-table-statement-limitations",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/alter-table-statement.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/alter-table-statement",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/api-conformance-level-odbc-driver-for-oracle.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/api-conformance-level-odbc-driver-for-oracle",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/api-functions-odbc-driver-for-oracle.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/api-functions-odbc-driver-for-oracle",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/arithmetic-errors.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/arithmetic-errors",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/base-address-of-drivers.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/base-address-of-drivers",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/between-predicate.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/between-predicate",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/bookmark-support-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/bookmark-support-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/column-name-limitations.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/column-name-limitations",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/configuring-the-odbc-driver-for-oracle.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/configuring-the-odbc-driver-for-oracle",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/connect-options.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/connect-options",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/connecting-to-a-data-source-odbc-driver-for-oracle.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/connecting-to-a-data-source-odbc-driver-for-oracle",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/connecting-to-a-visual-foxpro-data-source.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/connecting-to-a-visual-foxpro-data-source",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/connection-string-format-and-attributes.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/connection-string-format-and-attributes",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/correlation-names.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/correlation-names",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/create-index-for-paradox.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/create-index-for-paradox",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/create-index-statement-limitations.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/create-index-statement-limitations",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/create-index-statement.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/create-index-statement",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/create-table-sql-command.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/create-table-sql-command",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/create-table-statement-limitations.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/create-table-statement-limitations",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/creating-and-dropping-views-and-procedures-using-extendedansisql.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/creating-and-dropping-views-and-procedures-using-extendedansisql",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/creating-and-opening-tables-text-file-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/creating-and-opening-tables-text-file-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/cursor-type-and-concurrency-combinations.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/cursor-type-and-concurrency-combinations",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/data-truncation-detection-enabled-using-extendedansisql.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/data-truncation-detection-enabled-using-extendedansisql",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/data-type-limitations.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/data-type-limitations",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/date-arithmetic.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/date-arithmetic",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/dbase-data-types.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/dbase-data-types",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/dbase-driver-programming-considerations.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/dbase-driver-programming-considerations",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/dbase-indexes.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/dbase-indexes",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/defining-text-format-text-file-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/defining-text-format-text-file-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/delete-sql-command.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/delete-sql-command",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/delete-statement-limitations.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/delete-statement-limitations",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/delete-tag-command.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/delete-tag-command",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/deleting-a-visual-foxpro-data-source.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/deleting-a-visual-foxpro-data-source",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/descriptors-and-desktop-database-drivers.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/descriptors-and-desktop-database-drivers",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/desktop-database-driver-compatibility.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/desktop-database-driver-compatibility",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/desktop-database-driver-performance-issues.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/desktop-database-driver-performance-issues",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/desktop-database-drivers-architecture.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/desktop-database-drivers-architecture",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/determining-installed-oracle-components.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/determining-installed-oracle-components",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/diagnostics-for-desktop-database-drivers.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/diagnostics-for-desktop-database-drivers",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/driver-architecture-overview.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/driver-architecture-overview",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/driver-version-scheme.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/driver-version-scheme",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/drop-index-statement.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/drop-index-statement",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/drop-table-command.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/drop-table-command",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/enabling-new-data-types-by-setting-extendedansisql.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/enabling-new-data-types-by-setting-extendedansisql",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/encryption-access-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/encryption-access-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/error-messages-odbc-driver-for-oracle.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/error-messages-odbc-driver-for-oracle",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/error-messages-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/error-messages-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/files-to-use-with-the-desktop-database-drivers.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/files-to-use-with-the-desktop-database-drivers",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/fixed-width-text-file.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/fixed-width-text-file",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/functions-accepting-string-parameters.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/functions-accepting-string-parameters",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/group-by-expression-list.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/group-by-expression-list",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/hardware-and-software-requirements-odbc.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/hardware-and-software-requirements-odbc",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/history-of-the-desktop-database-drivers.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/history-of-the-desktop-database-drivers",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/identifiers-limitations.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/identifiers-limitations",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/implementing-desktop-database-drivers.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/implementing-desktop-database-drivers",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/importing-visual-foxpro-data-into-microsoft-access.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/importing-visual-foxpro-data-into-microsoft-access",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/index-command.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/index-command",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/insert-sql-command.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/insert-sql-command",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/insert-statement-limitations.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/insert-statement-limitations",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/installing-and-configuring.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/installing-and-configuring",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/installing-the-software-odbc.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/installing-the-software-odbc",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/international-support-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/international-support-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/jet-4-0-uses-sql-92-reserved-words-list-when-extendedansisql-set.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/jet-4-0-uses-sql-92-reserved-words-list-when-extendedansisql-set",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/jet-date-time-and-timestamp-literals.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/jet-date-time-and-timestamp-literals",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/jet-outer-joins.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/jet-outer-joins",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/like-predicate-limitations.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/like-predicate-limitations",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/limitations-of-using-keyset-driven-cursors.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/limitations-of-using-keyset-driven-cursors",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/limitations.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/mapping-data-types-odbc-driver-for-oracle.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/mapping-data-types-odbc-driver-for-oracle",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/messages-returned-by-the-odbc-driver-for-oracle.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/messages-returned-by-the-odbc-driver-for-oracle",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/microsoft-access-data-types.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/microsoft-access-data-types",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/microsoft-access-driver-programming-considerations.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/microsoft-access-driver-programming-considerations",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/microsoft-excel-data-types.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/microsoft-excel-data-types",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/microsoft-excel-driver-programming-considerations.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/microsoft-excel-driver-programming-considerations",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/microsoft-odbc-desktop-database-drivers.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/microsoft-odbc-desktop-database-drivers",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/microsoft-supplied-odbc-drivers.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/microsoft-supplied-odbc-drivers",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/modifying-a-visual-foxpro-data-source.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/modifying-a-visual-foxpro-data-source",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/multiple-hstmts-paradox-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/multiple-hstmts-paradox-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/native-error.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/native-error",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/numeric-functions-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/numeric-functions-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/odbc-component-files.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/odbc-component-files",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/odbc-driver-for-oracle-conformance-levels",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/odbc-driver-for-oracle-programmer-s-reference.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/odbc-driver-for-oracle-programmer-s-reference",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/odbc-driver-for-oracle-user-s-guide.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/odbc-driver-for-oracle-user-s-guide",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/odbc-driver-for-oracle.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/odbc-driver-for-oracle",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/odbc-error-codes-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/odbc-error-codes-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/odbc-errors.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/odbc-errors",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/odbc-functions-and-the-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/odbc-functions-and-the-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/odbc-jet-error-messages.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/odbc-jet-error-messages",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/odbc-visual-foxpro-setup-dialog-box",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/oracle-software-patches.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/oracle-software-patches",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/order-by-expression-list.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/order-by-expression-list",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/order-by-with-group-by.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/order-by-with-group-by",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/other-access-driver-programming-details.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/other-access-driver-programming-details",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/other-dbase-driver-programming-details.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/other-dbase-driver-programming-details",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/other-excel-driver-programming-details.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/other-excel-driver-programming-details",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/other-paradox-driver-programming-details.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/other-paradox-driver-programming-details",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/other-text-file-driver-programming-details.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/other-text-file-driver-programming-details",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/paradox-data-types.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/paradox-data-types",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/paradox-driver-programming-considerations.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/paradox-driver-programming-considerations",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/procedure-invocation.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/procedure-invocation",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/product-support.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/product-support",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/querying-and-updating-visual-foxpro-data-from-microsoft-access.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/querying-and-updating-visual-foxpro-data-from-microsoft-access",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/read-only-status-excel-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/read-only-status-excel-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/read-only-status-text-file-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/read-only-status-text-file-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/registry-entries-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/registry-entries-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/reserved-word-limitations.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/reserved-word-limitations",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/returning-array-parameters-from-stored-procedures.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/returning-array-parameters-from-stored-procedures",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/revoking-and-granting-rights-when-using-stored-procedures.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/revoking-and-granting-rights-when-using-stored-procedures",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/scalar-functions.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/scalar-functions",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/schema-ini-file-text-file-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/schema-ini-file-text-file-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/schema-text-file-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/schema-text-file-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/select-sql-command.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/select-sql-command",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/select-statement-limitations.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/select-statement-limitations",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/set-ansi-command.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/set-ansi-command",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/set-blocksize-command.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/set-blocksize-command",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/set-collate-command.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/set-collate-command",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/set-deleted-command.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/set-deleted-command",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/set-exact-command.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/set-exact-command",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/set-exclusive-command.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/set-exclusive-command",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/set-null-command.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/set-null-command",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/set-path-command.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/set-path-command",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/set-reprocess-command.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/set-reprocess-command",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/set-unique-command.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/set-unique-command",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/setting-extendedansisql.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/setting-extendedansisql",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/setting-options-programmatically-for-the-access-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/setting-options-programmatically-for-the-access-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/setting-options-programmatically-for-the-dbase-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/setting-options-programmatically-for-the-dbase-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/setting-options-programmatically-for-the-excel-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/setting-options-programmatically-for-the-excel-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/setting-options-programmatically-for-the-paradox-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/setting-options-programmatically-for-the-paradox-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/setting-options-programmatically-for-the-text-file-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/setting-options-programmatically-for-the-text-file-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/setting-the-date-format-on-connection.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/setting-the-date-format-on-connection",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/setting-up-the-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/setting-up-the-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/setup-dll.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/setup-dll",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sql-92-compliance.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sql-92-compliance",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sql-conformance-levels-odbc-driver-for-oracle.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sql-conformance-levels-odbc-driver-for-oracle",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sql-row-count-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sql-row-count-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlallocconnect-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlallocconnect-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlallocenv-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlallocenv-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlallocstmt-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlallocstmt-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlbindcol-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlbindcol-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlbindparameter-excel-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlbindparameter-excel-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlbindparameter-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlbindparameter-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlcancel-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlcancel-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlcolattributes-access-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlcolattributes-access-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlcolattributes-dbase-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlcolattributes-dbase-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlcolattributes-excel-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlcolattributes-excel-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlcolattributes-paradox-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlcolattributes-paradox-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlcolattributes-text-file-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlcolattributes-text-file-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlcolattributes-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlcolattributes-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlcolumns-access-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlcolumns-access-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlcolumns-dbase-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlcolumns-dbase-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlcolumns-excel-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlcolumns-excel-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlcolumns-paradox-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlcolumns-paradox-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlcolumns-text-file-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlcolumns-text-file-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlconfigdatasource-access-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlconfigdatasource-access-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlconfigdatasource-dbase-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlconfigdatasource-dbase-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlconfigdatasource-paradox-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlconfigdatasource-paradox-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlconfigdatasource-text-file-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlconfigdatasource-text-file-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqldatasources-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqldatasources-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqldescribecol-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqldescribecol-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqldisconnect-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqldisconnect-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqldriverconnect-access-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqldriverconnect-access-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqldriverconnect-dbase-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqldriverconnect-dbase-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqldriverconnect-excel-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqldriverconnect-excel-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqldriverconnect-paradox-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqldriverconnect-paradox-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqldriverconnect-text-file-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqldriverconnect-text-file-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqldrivers-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqldrivers-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlerror-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlerror-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlextendedfetch-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlextendedfetch-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlfreeconnect-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlfreeconnect-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlfreeenv-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlfreeenv-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlfreestmt-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlfreestmt-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlgetconnectoption-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlgetconnectoption-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlgetcursorname-desktop-database-drivers.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlgetcursorname-desktop-database-drivers",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlgetcursorname-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlgetcursorname-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlgetdata-desktop-database-drivers.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlgetdata-desktop-database-drivers",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlgetfunctions-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlgetfunctions-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlgetinfo-access-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlgetinfo-access-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlgetinfo-dbase-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlgetinfo-dbase-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlgetinfo-excel-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlgetinfo-excel-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlgetinfo-paradox-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlgetinfo-paradox-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlgetinfo-returned-values-for-access.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlgetinfo-returned-values-for-access",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlgetinfo-returned-values-for-dbase.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlgetinfo-returned-values-for-dbase",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlgetinfo-returned-values-for-excel.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlgetinfo-returned-values-for-excel",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlgetinfo-returned-values-for-paradox.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlgetinfo-returned-values-for-paradox",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlgetinfo-returned-values-for-text-files.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlgetinfo-returned-values-for-text-files",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlgetinfo-text-file-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlgetinfo-text-file-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlgetinfo-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlgetinfo-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlgetstmtoption-desktop-database-drivers.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlgetstmtoption-desktop-database-drivers",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlgetstmtoption-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlgetstmtoption-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlgettypeinfo-access-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlgettypeinfo-access-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlgettypeinfo-dbase-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlgettypeinfo-dbase-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlgettypeinfo-excel-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlgettypeinfo-excel-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlgettypeinfo-paradox-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlgettypeinfo-paradox-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlgettypeinfo-text-file-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlgettypeinfo-text-file-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlgettypeinfo-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlgettypeinfo-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlmoreresults-desktop-database-drivers.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlmoreresults-desktop-database-drivers",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlmoreresults-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlmoreresults-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlnumparams-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlnumparams-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlnumresultcols-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlnumresultcols-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlparamdata-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlparamdata-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlparamoptions-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlparamoptions-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlprepare-desktop-database-drivers.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlprepare-desktop-database-drivers",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlprimarykeys-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlprimarykeys-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlprocedurecolumns-access-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlprocedurecolumns-access-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlprocedures-desktop-database-drivers.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlprocedures-desktop-database-drivers",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlputdata-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlputdata-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlsetconnectoption-access-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlsetconnectoption-access-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlsetconnectoption-dbase-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlsetconnectoption-dbase-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlsetconnectoption-excel-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlsetconnectoption-excel-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlsetconnectoption-paradox-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlsetconnectoption-paradox-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlsetconnectoption-text-file-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlsetconnectoption-text-file-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlsetconnectoption-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlsetconnectoption-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlsetcursorname-desktop-database-drivers.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlsetcursorname-desktop-database-drivers",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlsetcursorname-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlsetcursorname-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlsetpos-desktop-database-drivers.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlsetpos-desktop-database-drivers",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlsetpos-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlsetpos-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlsetscrolloptions-desktop-database-drivers.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlsetscrolloptions-desktop-database-drivers",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlsetscrolloptions-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlsetscrolloptions-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlsetstmtoption-desktop-database-drivers.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlsetstmtoption-desktop-database-drivers",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlspecialcolumns-desktop-database-drivers.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlspecialcolumns-desktop-database-drivers",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlspecialcolumns-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlspecialcolumns-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlstate.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlstate",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlstatistics-access-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlstatistics-access-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlstatistics-dbase-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlstatistics-dbase-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlstatistics-excel-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlstatistics-excel-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlstatistics-paradox-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlstatistics-paradox-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlstatistics-text-file-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlstatistics-text-file-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqlstatistics-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqlstatistics-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqltables-access-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqltables-access-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqltables-dbase-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqltables-dbase-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqltables-excel-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqltables-excel-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqltables-paradox-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqltables-paradox-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqltables-text-file-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqltables-text-file-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqltables-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqltransact-access-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqltransact-access-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqltransact-dbase-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqltransact-dbase-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqltransact-excel-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqltransact-excel-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqltransact-paradox-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqltransact-paradox-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqltransact-text-file-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqltransact-text-file-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sqltransact-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/sqltransact-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/statement-options.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/statement-options",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/stored-procedure-parameter-limitations.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/stored-procedure-parameter-limitations",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/stored-procedures-odbc-driver-for-oracle",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/string-functions-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/string-functions-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/string-limitations.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/string-limitations",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/support-rules-triggers-defaults-stored-procedures-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/support-rules-triggers-defaults-stored-procedures-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/supported-concurrency-model-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/supported-concurrency-model-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/supported-cursor-model-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/supported-cursor-model-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/supported-data-types-odbc-driver-for-oracle",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/supported-data-types-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/supported-data-types-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/supported-odbc-api-functions.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/supported-odbc-api-functions",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/supported-odbc-sql-grammar-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/supported-odbc-sql-grammar-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/supported-options-odbc-driver-for-oracle.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/supported-options-odbc-driver-for-oracle",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/supported-scalar-functions-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/supported-scalar-functions-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/supported-set-commands-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/supported-set-commands-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/supported-versions-of-foxpro.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/supported-versions-of-foxpro",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/system-requirements-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/system-requirements-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/table-name-limitations.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/table-name-limitations",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/table-names.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/table-names",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/testing-the-odbc-connection.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/testing-the-odbc-connection",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/text-file-data-types.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/text-file-data-types",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/text-file-driver-programming-considerations.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/text-file-driver-programming-considerations",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/text-file-format-text-file-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/text-file-format-text-file-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/thread-safety-notes-on-api-functions-odbc-driver-for-oracle.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/thread-safety-notes-on-api-functions-odbc-driver-for-oracle",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/thread-support-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/thread-support-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/translation-dlls-and-desktop-database-drivers.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/translation-dlls-and-desktop-database-drivers",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/troubleshooting-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/troubleshooting-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/update-sql-command.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/update-sql-command",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/update-statement-limitations.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/update-statement-limitations",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/using-16-bit-and-32-bit-applications-with-32-bit-drivers.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/using-16-bit-and-32-bit-applications-with-32-bit-drivers",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/using-16-bit-applications-with-32-bit-drivers.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/using-16-bit-applications-with-32-bit-drivers",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/using-32-bit-applications-with-32-bit-drivers.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/using-32-bit-applications-with-32-bit-drivers",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/using-connection-strings.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/using-connection-strings",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/using-microsoft-component-services.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/using-microsoft-component-services",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/using-microsoft-internet-information-services.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/using-microsoft-internet-information-services",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/using-operating-system-authentication.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/using-operating-system-authentication",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/using-sqlconfigdatasource-with-the-odbc-driver-for-oracle.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/using-sqlconfigdatasource-with-the-odbc-driver-for-oracle",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/using-synonyms-with-stored-procedures.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/using-synonyms-with-stored-procedures",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/using-the-extendedansisql-connection-string-attribute-access-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/using-the-extendedansisql-connection-string-attribute-access-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/using-the-visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/using-the-visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/varchar-column-size-odbc-driver-for-oracle",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/visual-foxpro-field-data-types.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/visual-foxpro-field-data-types",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/visual-foxpro-language-reference.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/visual-foxpro-language-reference",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/visual-foxpro-odbc-driver-native-error-messages.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/visual-foxpro-odbc-driver-native-error-messages",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/visual-foxpro-odbc-driver-programmer-s-reference.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/visual-foxpro-odbc-driver-programmer-s-reference",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/visual-foxpro-odbc-driver.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/visual-foxpro-odbc-driver",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
+      "source_path": "docs/odbc/microsoft/visual-foxpro-terminology.md",
+      "redirect_url": "/previous-versions/sql/odbc/microsoft/visual-foxpro-terminology",
+      "redirect_document_id": false,
+      "monikers": [
+        "sql-server-ver16"
+      ]
+    },
+    {
       "source_path": "docs/sql-server/sql-server-privacy-ver15.md",
       "redirect_url": "/sql/sql-server/sql-server-privacy",
       "redirect_document_id": false
@@ -36,6 +2676,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path_from_root": "/docs/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md",
+      "redirect_url": "/sql/relational-databases/sql-server-index-design-guide",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/2014-toc/sql-server-index-design-guide.md",
       "redirect_url": "/previous-versions/sql/2014/2014-toc/sql-server-index-design-guide",
       "redirect_document_id": false
@@ -49,6 +2694,11 @@
       "source_path": "docs/2014/2014-toc/sql-server-transaction-log-architecture-and-management.md",
       "redirect_url": "/previous-versions/sql/2014/2014-toc/sql-server-transaction-log-architecture-and-management",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md",
+      "redirect_url": "/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server",
+      "redirect_document_id": true
     },
     {
       "source_path": "docs/2014/analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md",
@@ -38821,6 +41471,261 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/ssdt/check-for-updates-dialog-box.md",
+      "redirect_url": "/sql/ssdt/sql-server-data-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/filter-and-sort-dialog-box.md",
+      "redirect_url": "/sql/ssdt/sql-server-data-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/connected-database-development.md",
+      "redirect_url": "/sql/ssdt/sql-server-data-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/about-dialog-box.md",
+      "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/arguments-dialog-box.md",
+      "redirect_url": "/sql/ssms/use-of-sql-server-features-and-capabilities-wwi-oltp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/external-tools-dialog-box.md",
+      "redirect_url": "/sql/ssms/use-of-sql-server-features-and-capabilities-wwi-oltp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/menu-help/choose-search-folders-dialog-box-visual-studio.md",
+      "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/menu-help/options-dialog-boxes-f1-help.md",
+      "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/menu-help/windows-dialog-box-microsoft-document-explorer-help.md",
+      "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/object/name-not-found-dialog-box.md",
+      "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/add-table-dialog-box-query-and-view-designers-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/add-table-dialog-box-database-designer-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/check-constraint-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/check-constraint-expression-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/choose-name-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/choose-target-table-for-insert-results-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/choose-target-table-for-insert-values-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/collation-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/color-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/column-list-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/column-selection-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/data-type-change-required-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/delete-table-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/description-property-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/full-text-index-columns-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/full-text-index-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/go-to-line-dialog-box.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/index-columns-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/join-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/location-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/make-table-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/open-file-dialog-box.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/page-setup-dialog-box.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/partition-column-list-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/post-save-notifications-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/print-dialog-box.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/query-definitions-differ-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/query-parameters-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/save-change-script-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/save-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/save-not-permitted-dialog-box.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/spatial-indexes-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/sql-comment-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/sql-syntax-errors-encountered-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/tables-and-columns-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/update-table-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/validation-warnings-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/visual-db-tools/xml-indexes-dialog-box-visual-database-tools.md",
+      "redirect_url": "/sql/ssms/visual-db-tools/visual-database-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/tools/sql-server-profiler/sql-server-profiler-f1-help.md",
+      "redirect_url": "/sql/tools/sql-server-profiler/sql-server-profiler",
+      "redirect_document_id": false
+    },    
+    {
       "source_path": "docs/2014/ssms/visual-db-tools/modify-join-operators-visual-database-tools.md",
       "redirect_url": "/previous-versions/sql/2014/ssms/visual-db-tools/modify-join-operators-visual-database-tools",
       "redirect_document_id": false
@@ -41321,8 +44226,33 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/sql-server/azure-arc/connect-at-scale-policy.md",
+      "redirect_url": "/sql/sql-server/azure-arc/automatically-connect",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/azure-arc/connect-at-scale-autodeploy.md",
+      "redirect_url": "/sql/sql-server/azure-arc/manage-autodeploy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/azure-arc/quick-enabled-sql-server.md",
+      "redirect_url": "/sql/sql-server/azure-arc/automatically-connect",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/azure-arc/plan-evaluate-on-azure-virtual-machine.md",
+      "redirect_url": "/sql/sql-server/azure-arc/automatically-connect#evaluate-azure-arc-enabled-sql-server-on-an-azure-vm",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/sql-server/azure-arc/billing.md",
-      "redirect_url": "/sql/sql-server/azure-arc/manage-license-type",
+      "redirect_url": "/sql/sql-server/azure-arc/manage-configuration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/azure-arc/manage-license-type.md",
+      "redirect_url": "/sql/sql-server/azure-arc/manage-configuration",
       "redirect_document_id": false
     },
     {
@@ -41818,6 +44748,11 @@
     {
       "source_path": "docs/relational-databases/polybase/get-started-with-polybase.md",
       "redirect_url": "/sql/relational-databases/polybase/polybase-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/track-changes/known-issues-and-limitations.md",
+      "redirect_url": "/sql/relational-databases/track-changes/known-issues-and-errors-change-data-capture",
       "redirect_document_id": false
     },
     {
@@ -42318,11 +45253,6 @@
     {
       "source_path": "docs/machine-learning/data-collection-ml-troubleshooting-process.md",
       "redirect_url": "/sql/machine-learning/troubleshooting/data-collection-ml-troubleshooting-process",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/table-designer-azure-data-studio.md",
-      "redirect_url": "/sql/azure-data-studio/overview-of-the-table-designer-in-azure-data-studio",
       "redirect_document_id": true
     },
     {
@@ -43138,6 +46068,101 @@
     {
       "source_path": "docs/2014/2014-toc/books-online-for-sql-server-2014.md",
       "redirect_url": "/sql/2014-toc/index?view=sql-server-2014",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/catalog/browse-all-principals-dialog-box.md",
+      "redirect_url": "/sql/integration-services/catalog/ssis-catalog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/catalog/configure-dialog-box.md",
+      "redirect_url": "/sql/integration-services/catalog/ssis-catalog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/catalog/folder-properties-dialog-box.md",
+      "redirect_url": "/sql/integration-services/catalog/ssis-catalog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/catalog/package-properties-dialog-box.md",
+      "redirect_url": "/sql/integration-services/catalog/ssis-catalog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/catalog/project-properties-dialog-box.md",
+      "redirect_url": "/sql/integration-services/catalog/ssis-catalog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/catalog/project-versions-dialog-box.md",
+      "redirect_url": "/sql/integration-services/catalog/ssis-catalog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/catalog/set-parameter-value-dialog-box.md",
+      "redirect_url": "/sql/integration-services/catalog/ssis-catalog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/catalog/validate-dialog-box.md",
+      "redirect_url": "/sql/integration-services/catalog/ssis-catalog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/odbc/windows/dsn-wizard-1.md",
+      "redirect_url": "/sql/connect/odbc/windows/odbc-administrator-dsn-creation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/odbc/windows/dsn-wizard-2.md",
+      "redirect_url": "/sql/connect/odbc/windows/odbc-administrator-dsn-creation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/odbc/windows/dsn-wizard-3.md",
+      "redirect_url": "/sql/connect/odbc/windows/odbc-administrator-dsn-creation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/odbc/windows/dsn-wizard-4.md",
+      "redirect_url": "/sql/connect/odbc/windows/odbc-administrator-dsn-creation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md",
+      "redirect_url": "/sql/integration-services/connection-manager/analysis-services-connection-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md",
+      "redirect_url": "/sql/integration-services/connection-manager/file-connection-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md",
+      "redirect_url": "/sql/integration-services/connection-manager/file-connection-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/master-data-services/connect-to-a-master-data-services-database-dialog-box.md",
+      "redirect_url": "/sql/master-data-services/master-data-services-overview-mds",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/master-data-services/create-database-mail-profile-and-account-dialog-box.md",
+      "redirect_url": "/sql/master-data-services/master-data-services-overview-mds",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md",
+      "redirect_url": "/sql/master-data-services/master-data-services-overview-mds",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/master-data-services/create-website-dialog-box-master-data-services-configuration-manager.md",
+      "redirect_url": "/sql/master-data-services/master-data-services-overview-mds",
       "redirect_document_id": false
     },
     {
@@ -47971,139 +50996,9 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/sql-operations-studio/code-snippets.md",
-      "redirect_url": "/sql/azure-data-studio/code-snippets",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/sql-operations-studio/dashboards.md",
-      "redirect_url": "/sql/azure-data-studio/dashboards",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/sql-operations-studio/download.md",
-      "redirect_url": "/sql/azure-data-studio/download",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/sql-operations-studio/enable-kerberos.md",
-      "redirect_url": "/sql/azure-data-studio/enable-kerberos",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/sql-operations-studio/extensions.md",
-      "redirect_url": "/sql/azure-data-studio/extensions",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/sql-operations-studio/faq.md",
-      "redirect_url": "/sql/azure-data-studio/faq",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/sql-operations-studio/insight-widgets.md",
-      "redirect_url": "/sql/azure-data-studio/insight-widgets",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/sql-operations-studio/integrated-terminal.md",
-      "redirect_url": "/sql/azure-data-studio/integrated-terminal",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/sql-operations-studio/keyboard-shortcuts.md",
-      "redirect_url": "/sql/azure-data-studio/keyboard-shortcuts",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/sql-operations-studio/quickstart-sql-database.md",
-      "redirect_url": "/sql/azure-data-studio/quickstart-sql-database",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/sql-operations-studio/quickstart-sql-dw.md",
-      "redirect_url": "/sql/azure-data-studio/quickstart-sql-dw",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/sql-operations-studio/quickstart-sql-server.md",
-      "redirect_url": "/sql/azure-data-studio/quickstart-sql-server",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/sql-operations-studio/release-notes.md",
-      "redirect_url": "/sql/azure-data-studio/release-notes-azure-data-studio",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/azure-data-studio/release-notes.md",
-      "redirect_url": "/sql/azure-data-studio/release-notes-azure-data-studio",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "docs/big-data-cluster/big-data-cluster-release-notes.md",
       "redirect_url": "/sql/big-data-cluster/release-notes-big-data-cluster",
       "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/sql-operations-studio/server-groups.md",
-      "redirect_url": "/sql/azure-data-studio/server-groups",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/sql-operations-studio/settings.md",
-      "redirect_url": "/sql/azure-data-studio/settings",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/sql-operations-studio/source-control.md",
-      "redirect_url": "/sql/azure-data-studio/source-control",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/sql-operations-studio/sql-server-agent-extension.md",
-      "redirect_url": "/sql/azure-data-studio/sql-server-agent-extension",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/sql-operations-studio/sql-server-profiler-extension.md",
-      "redirect_url": "/sql/azure-data-studio/sql-server-profiler-extension",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/sql-operations-studio/tutorial-backup-restore-sql-server.md",
-      "redirect_url": "/sql/azure-data-studio/tutorial-backup-restore-sql-server",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/sql-operations-studio/tutorial-build-custom-insight-sql-server.md",
-      "redirect_url": "/sql/azure-data-studio/tutorial-build-custom-insight-sql-server",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/sql-operations-studio/tutorial-qds-sql-server.md",
-      "redirect_url": "/sql/azure-data-studio/tutorial-qds-sql-server",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/sql-operations-studio/tutorial-sql-editor.md",
-      "redirect_url": "/sql/azure-data-studio/tutorial-sql-editor",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/sql-operations-studio/tutorial-table-space-sql-server.md",
-      "redirect_url": "/sql/azure-data-studio/tutorial-table-space-sql-server",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/sql-operations-studio/usage-data-collection.md",
-      "redirect_url": "/sql/azure-data-studio/usage-data-collection",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/sql-operations-studio/what-is.md",
-      "redirect_url": "/sql/azure-data-studio/what-is",
-      "redirect_document_id": false
     },
     {
       "source_path": "docs/linux/tutorial-sql-server-ag-kubernetes.md",
@@ -52509,11 +55404,6 @@
       "source_path": "docs/2014/analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md",
       "redirect_url": "/sql/analysis-services/tabular-models/process-partitions-in-the-workspace-database-ssas-tabular?view=sql-server-2014",
       "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/azure-data-studio/dashboards.md",
-      "redirect_url": "/sql/azure-data-studio/insight-widgets",
-      "redirect_document_id": true
     },
     {
       "source_path": "docs/ssdt/sql-server-data-tools-license-terms-vs2017.md",
@@ -57371,6 +60261,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/analytics-platform-system/provision-certificate.md",
+      "redirect_url": "/sql/analytics-platform-system/pdw-certificate-provisioning",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/connect/ado-net/index.md",
       "redirect_url": "/sql/connect/ado-net/microsoft-ado-net-sql-server",
       "redirect_document_id": false
@@ -59086,11 +61981,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/azure-data-studio/download.md",
-      "redirect_url": "/sql/azure-data-studio/download-azure-data-studio",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "docs/ssms/scripting/database-engine-query-editor-sql-server-management-studio.md",
       "redirect_url": "/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio",
       "redirect_document_id": true
@@ -59113,21 +62003,6 @@
     {
       "source_path": "docs/kb-support/index.md",
       "redirect_url": "/sql/sql-server/",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/big-data-cluster/notebooks-guidance.md",
-      "redirect_url": "/sql/azure-data-studio/notebooks-guidance",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/azure-data-studio/sql-notebooks.md",
-      "redirect_url": "/sql/azure-data-studio/notebooks-guidance",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/azure-data-studio/notebooks-manage-sql-server.md",
-      "redirect_url": "/sql/azure-data-studio/notebooks-guidance",
       "redirect_document_id": false
     },
     {
@@ -59196,159 +62071,14 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/azure-data-studio/tutorial-create-extension.md",
-      "redirect_url": "/sql/azure-data-studio/extensions/keymap-extension",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/linux/sql-server-linux-configure-docker.md",
       "redirect_url": "/sql/linux/sql-server-linux-docker-container-deployment",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/azure-sql-managed-instance-extension.md",
-      "redirect_url": "/sql/azure-data-studio/extensions/azure-sql-managed-instance-extension",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/dashboard-extension.md",
-      "redirect_url": "/sql/azure-data-studio/extensions/dashboard-extension",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/data-virtualization-extension.md",
-      "redirect_url": "/sql/azure-data-studio/extensions/data-virtualization-extension",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/extension-authoring.md",
-      "redirect_url": "/sql/azure-data-studio/extensions/extension-authoring",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/extensions.md",
-      "redirect_url": "/sql/azure-data-studio/extensions/add-extensions",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/postgres-extension.md",
-      "redirect_url": "/sql/azure-data-studio/extensions/postgres-extension",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/powershell-extension.md",
-      "redirect_url": "/sql/azure-data-studio/extensions/powershell-extension",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/schema-compare-extension.md",
-      "redirect_url": "/sql/azure-data-studio/extensions/schema-compare-extension",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/sql-database-project-extension-build-from-command-line.md",
-      "redirect_url": "/sql/azure-data-studio/extensions/sql-database-project-extension-build-from-command-line",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/sql-database-project-extension-build.md",
-      "redirect_url": "/sql/azure-data-studio/extensions/sql-database-project-extension-build",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/sql-database-project-extension-getting-started.md",
-      "redirect_url": "/sql/azure-data-studio/extensions/sql-database-project-extension-getting-started",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/sql-database-project-extension.md",
-      "redirect_url": "/sql/azure-data-studio/extensions/sql-database-project-extension",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/sql-server-agent-extension.md",
-      "redirect_url": "/sql/azure-data-studio/extensions/sql-server-agent-extension",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/sql-server-cms-extension.md",
-      "redirect_url": "/sql/azure-data-studio/extensions/sql-server-cms-extension",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/sql-server-dacpac-extension.md",
-      "redirect_url": "/sql/azure-data-studio/extensions/sql-server-dacpac-extension",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/sql-server-import-extension.md",
-      "redirect_url": "/sql/azure-data-studio/extensions/sql-server-import-extension",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/sql-server-profiler-extension.md",
-      "redirect_url": "/sql/azure-data-studio/extensions/sql-server-profiler-extension",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/machine-learning-extension-import-view-models.md",
-      "redirect_url": "/sql/azure-data-studio/extensions/machine-learning-extension-import-view-models",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/machine-learning-extension-manage-packages.md",
-      "redirect_url": "/sql/azure-data-studio/extensions/machine-learning-extension-manage-packages",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/machine-learning-extension-predictions.md",
-      "redirect_url": "/sql/azure-data-studio/extensions/machine-learning-extension-predictions",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/machine-learning-extension.md",
-      "redirect_url": "/sql/azure-data-studio/extensions/machine-learning-extension",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/notebooks-guidance.md",
-      "redirect_url": "/sql/azure-data-studio/notebooks/notebooks-guidance",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/notebooks-kqlmagic.md",
-      "redirect_url": "/sql/azure-data-studio/notebooks/notebooks-kqlmagic",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/notebooks-tutorial-python-kernel.md",
-      "redirect_url": "/sql/azure-data-studio/notebooks/notebooks-python-kernel",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/notebooks-tutorial-sql-kernel.md",
-      "redirect_url": "/sql/azure-data-studio/notebooks/notebooks-sql-kernel",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/notebooks/notebooks-parameterization.md",
-      "redirect_url": "/sql/azure-data-studio/notebooks/parameterize-papermill",
       "redirect_document_id": true
     },
     {
       "source_path": "docs/ssms/tutorials/connect-query-sql-server.md",
       "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
       "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/azure-data-studio/sanddance-extension.md",
-      "redirect_url": "/sql/azure-data-studio/extensions/sanddance-extension",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/azure-data-studio/what-is.md",
-      "redirect_url": "/sql/azure-data-studio/what-is-azure-data-studio",
-      "redirect_document_id": true
     },
     {
       "source_path": "docs/ssma/db2/connecting-to-sql-server-db2etosql.md",
@@ -59646,6 +62376,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/relational-databases/errors-events/mssqlserver-10054-database-engine-error.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/tls-exist-connection-closed",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "azure-sql/database/sql-vulnerability-assessment.md",
       "redirect_url": "/azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview",
       "redirect_document_id": false
@@ -59698,11 +62433,6 @@
     {
       "source_path": "docs/linux/tutorial-sql-server-dh2i-sidecar.md",
       "redirect_url": "/sql/linux/tutorial-sql-server-containers-kubernetes-dh2i",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/azure-data-studio/azure-resource-explorer.md",
-      "redirect_url": "/sql/azure-data-studio/azure-view",
       "redirect_document_id": false
     },
     {
@@ -59831,9 +62561,159 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/tools/sqlcmd/go-sqlcmd-utility.md",
+      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-utility",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/relational-databases/system-stored-procedures/active-geo-replication-sp-wait-for-database-copy-sync.md",
       "redirect_url": "/sql/relational-databases/system-stored-procedures/sp-wait-for-database-copy-sync-transact-sql",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/release-notes-integration-services-2022.md",
+      "redirect_url": "/sql/ssdt/ssis-vs2022-troubleshooting-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/release-notes-ssdt-2019.md",
+      "redirect_url": "/sql/ssdt/ssis-vs2019-troubleshooting-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/release-notes-ssdt.md",
+      "redirect_url": "/sql/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi",
+      "redirect_document_id": false
+    },    
+    {
+      "source_path": "docs/odbc/microsoft/aggregate-function-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/and-predicate-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/call-statement-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/convert-function-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/date-arithmetic-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/distinct-keyword-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/drop-index-statement-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/drop-table-statement-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/from-clause-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/having-clause-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/index-name-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/not-null-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/order-by-clause-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/parameterized-query-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/scalar-function-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/select-distinct-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/set-functions-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/sorting-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/table-references-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/views-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/where-clause-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/odbc/microsoft/where-current-of-clause-limitations.md",
+      "redirect_url": "/sql/odbc/microsoft/limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/f1-help/connect-to-server-database-engine.md",
+      "redirect_url": "/sql/ssms/f1-help/connect-to-server-login-page-database-engine",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/performance/intelligent-query-processing-feedback.md",
+      "redirect_url": "/sql/relational-databases/performance/intelligent-query-processing-memory-grant-feedback",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/download-sql-server-management-studio-ssms-20.md",
+      "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/release-notes-ssms-20.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms",
+      "redirect_document_id": false
     }
-  ]
+ ]
 }

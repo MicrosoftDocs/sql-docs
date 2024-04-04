@@ -25,7 +25,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 :::image type="content" source="media/always-encrypted-database-engine/always-encrypted.png" alt-text="Diagram of Always Encrypted.":::
 
-Always Encrypted is a feature designed to protect sensitive data, such as credit card numbers or national/regional identification numbers (for example, U.S. social security numbers), stored in [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], Azure SQL Managed Instance, and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases. Always Encrypted allows clients to encrypt sensitive data inside client applications and never reveal the encryption keys to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. This provides a separation between those who own the data and can view it, and those who manage the data but should have no access - on-premises database administrators, cloud database operators, or other high-privileged unauthorized users. As a result, Always Encrypted enables customers to confidently store their sensitive data in the cloud, and to reduce the likelihood of data theft by malicious insiders.
+Always Encrypted is a feature designed to protect sensitive data, such as credit card numbers or national/regional identification numbers (for example, U.S. social security numbers), stored in [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)], Azure SQL Managed Instance, and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases. Always Encrypted allows clients to encrypt sensitive data inside client applications and never reveal the encryption keys to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. This provides a separation between those who own the data and can view it, and those who manage the data but should have no access - on-premises database administrators, cloud database operators, or other high-privileged unauthorized users. As a result, Always Encrypted enables customers to confidently store their sensitive data in the cloud, and to reduce the likelihood of data theft by malicious insiders.
 
 Always Encrypted can be configured to support limited confidential queries on encrypted data, the queries that involve equality comparisons. For example, point lookup-searches or equality joins. Such queries leverage [deterministic encryption](#selecting--deterministic-or-randomized-encryption).
 
@@ -175,13 +175,13 @@ The following limitations apply to queries on encrypted columns:
   - Columns in [stretch database tables](../../../sql-server/stretch-database/stretch-database.md). (Tables with columns encrypted with Always Encrypted can be enabled for Stretch.)
 
   > [!IMPORTANT]  
-  > Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../../includes/ssnotedepfutureavoid-md.md)]
+  > [!INCLUDE [stretch-database-deprecation](../../../includes/stretch-database-deprecation.md)]
 
   - Columns in external (PolyBase) tables (note: using external tables and tables with encrypted columns in the same query is supported).
 
 - The following features don't work on encrypted columns:
 
-  - [SQL Server replication](../../replication/sql-server-replication.md) (transactional, merge, or snapshot replication). Physical replication features, including [Always](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md), are supported.
+  - [SQL Server replication](../../replication/sql-server-replication.md) (transactional, merge, or snapshot replication). Physical replication features, including [Always](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md), are supported.
   - Distributed queries ([linked servers](../../linked-servers/linked-servers-database-engine.md), [OPENROWSET (Transact-SQL)](../../../t-sql/functions/openrowset-transact-sql.md), [OPENDATASOURCE (Transact-SQL)](../../../t-sql/functions/opendatasource-transact-sql.md)).
   - [Cross-database queries](../../in-memory-oltp/cross-database-queries.md) that perform joins on columns (using deterministic encryption) from different databases.
 

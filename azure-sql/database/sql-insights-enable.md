@@ -1,10 +1,13 @@
 ---
 title: Enable SQL Insights (preview)
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Enable SQL Insights (preview) in Azure Monitor
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 08/03/2022
+ms.reviewer: mathoma
+ms.date: 10/11/2023
 ms.service: sql-db-mi
+ms.subservice: monitoring
 ms.topic: conceptual
 ms.custom: subject-monitoring
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
@@ -34,7 +37,7 @@ The instructions below cover the process per type of SQL that you can monitor. T
 > [!NOTE]
 > SQL Insights (preview) does not support the following Azure SQL Database scenarios:
 > - **Elastic pools**: Metrics cannot be gathered for elastic pools. Metrics cannot be gathered for databases within elastic pools.
-> - **Low service tiers**: Metrics cannot be gathered for databases on Basic, S0, S1, and S2 [service tiers](./resource-limits-dtu-single-databases.md)
+> - **Low service tiers**: Metrics cannot be gathered for databases on Basic, S0, and S1 [service objectives](./resource-limits-dtu-single-databases.md)
 > 
 > SQL Insights (preview) has limited support for the following Azure SQL Database scenarios:
 > - **Serverless tier**: Metrics can be gathered for databases using the [serverless compute tier](./serverless-tier-overview.md). However, the process of gathering metrics will reset the auto-pause delay timer, preventing the database from entering an auto-paused state.
@@ -119,7 +122,7 @@ You will need to create one or more Azure virtual machines that will be used to 
 ### Azure virtual machine requirements
 The Azure virtual machine has the following requirements:
 
-- Operating system: Ubuntu 18.04 using Azure Marketplace [image](https://azuremarketplace.microsoft.com/marketplace/apps/canonical.0001-com-ubuntu-pro-bionic). Custom images are not supported.
+- Operating system: Ubuntu 18.04 using the Azure Marketplace image. Custom images are not supported. To obtain Extended Security Maintenance (ESM) for this version of Ubuntu, we recommend using the Ubuntu Pro 18.04 LTS marketplace [image](https://azuremarketplace.microsoft.com/marketplace/apps/canonical.0001-com-ubuntu-pro-bionic). For more information, see [Support for Linux and open-source technology in Azure](/troubleshoot/azure/cloud-services/support-linux-open-source-technology).
 - Recommended minimum Azure virtual machine sizes: Standard_B2s (2 CPUs, 4-GiB memory) 
 - Deployed in any Azure region [supported](/azure/azure-monitor/agents/azure-monitor-agent-overview#supported-regions) by the Azure Monitor agent, and meeting all Azure Monitor agent [prerequisites](/azure/azure-monitor/agents/azure-monitor-agent-manage#prerequisites).
 
@@ -189,11 +192,43 @@ The profile is stored as a [data collection rule](/azure/azure-monitor/essential
 Select **Create monitoring profile** once you've entered the details for your monitoring profile. It can take up to a minute for the profile to be deployed.  If you don't see the new profile listed in **Monitoring profile** combo box, select the refresh button and it should appear once the deployment is completed.  Once you've selected the new profile, select the **Manage profile** tab to add a monitoring machine that will be associated with the profile.
 
 ### Add monitoring machine
-Select **Add monitoring machine** to open a context panel to choose the virtual machine from which to monitor your SQL instances and provide the connection strings.
+Select **Add monitoring machine** to open an `Add monitoring virtual machine` context panel to choose the virtual machine from which to monitor your SQL instances and provide the connection strings.
 
-Select the subscription and name of your monitoring virtual machine. If you're using Key Vault to store your password for the monitoring user, select the Key Vault resources with these secrets and enter the URI and secret name for the password to be used in the connection strings. See the next section for details on identifying the connection string for different SQL deployments.
+Select the subscription and name of your monitoring virtual machine. If you're using Key Vault to store passwords for the monitoring logins (strongly recommended), select the subscription of that Key Vault under `Key vault subscriptions`, and then select the Key Vault that stores secrets under `KeyVault`. In the `Connection strings` field, enter the vault URI and the secret name for each password to be used in the connection strings.
+
+For example, if the Key Vault URI is `https://mykeyvault.vault.azure.net/`, and the secret names are `sqlPassword1` and `sqlPassword2`, then the JSON in the `Connection strings` field will contain the following:
+
+```json
+{
+   "secrets": {
+      "telegrafPassword1": {
+         "keyvault": "https://mykeyvault.vault.azure.net/",
+         "name": "sqlPassword1"
+      },
+      "telegrafPassword2": {
+         "keyvault": "https://mykeyvault.vault.azure.net/",
+         "name": "sqlPassword2"
+      }
+   }
+}
+```
+
+You can now reference these secrets further in the `Connection strings` field. In the following example, the two connection strings reference the `telegrafPassword1` and `telegrafPassword2` secrets defined earlier:
+
+```json
+{
+   "sqlAzureConnections": [
+      "Server=mysqlserver.database.windows.net;Port=1433;Database=mydatabase;User Id=telegraf;Password=$telegrafPassword1;"
+   ],
+   "sqlVmConnections": [
+      "Server=mysqlserver1;Port=1433;Database=master;User Id=telegraf;Password=$telegrafPassword2;"
+   ]
+}
+```
 
 :::image type="content" source="media/sql-insights-enable/add-monitoring-machine.png" alt-text="A screenshot of the Azure portal Add monitoring virtual machine page. Choose the VM, specify the KV url (if used) and the secret name. Enter connection strings for each system to monitor. Choose the KV where you created the secret used in the connection strings." lightbox="media/sql-insights-enable/add-monitoring-machine.png":::
+
+See the next section for details on identifying the connection string for different SQL deployments.
 
 ### Add connection strings 
 The connection string specifies the login name that SQL Insights (preview) should use when logging into SQL to collect monitoring data. If you're using a Key Vault to store the password for your monitoring user, provide the Key Vault URI and name of the secret that contains the password.

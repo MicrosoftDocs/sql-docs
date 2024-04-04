@@ -33,12 +33,12 @@ To use any code example that is provided, you will have to choose the programmin
 'Connect to the local, default instance of SQL Server.
 Dim srv As Server
 srv = New Server
-'Reference the AdventureWorks2012 2008R2 database
+'Reference the AdventureWorks2022 database
 Dim db As Database
-db = srv.Databases("AdventureWorks2012")
+db = srv.Databases("AdventureWorks2022")
 'Create a new database that is to be destination database.
 Dim dbCopy As Database
-dbCopy = New Database(srv, "AdventureWorks2012Copy")
+dbCopy = New Database(srv, "AdventureWorks2022Copy")
 dbCopy.Create()
 'Define a Transfer object and set the required options and properties.
 Dim xfr As Transfer
@@ -46,7 +46,7 @@ xfr = New Transfer(db)
 xfr.CopyAllTables = True
 xfr.Options.WithDependencies = True
 xfr.Options.ContinueScriptingOnError = True
-xfr.DestinationDatabase = "AdventureWorks2012Copy"
+xfr.DestinationDatabase = "AdventureWorks2022Copy"
 xfr.DestinationServer = srv.Name
 xfr.DestinationLoginSecure = True
 xfr.CopySchema = True
@@ -61,12 +61,12 @@ xfr.ScriptTransfer()
 {  
             Server srv;  
             srv = new Server();  
-            //Reference the AdventureWorks2012 database   
+            //Reference the AdventureWorks2022 database   
             Database db;  
-            db = srv.Databases["AdventureWorks2012"];  
+            db = srv.Databases["AdventureWorks2022"];  
             //Create a new database that is to be destination database.   
             Database dbCopy;  
-            dbCopy = new Database(srv, "AdventureWorks2012Copy");  
+            dbCopy = new Database(srv, "AdventureWorks2022Copy");  
             dbCopy.Create();  
             //Define a Transfer object and set the required options and properties.   
             Transfer xfr;  
@@ -74,7 +74,7 @@ xfr.ScriptTransfer()
             xfr.CopyAllTables = true;  
             xfr.Options.WithDependencies = true;  
             xfr.Options.ContinueScriptingOnError = true;  
-            xfr.DestinationDatabase = "AdventureWorks2012Copy";  
+            xfr.DestinationDatabase = "AdventureWorks2022Copy";  
             xfr.DestinationServer = srv.Name;  
             xfr.DestinationLoginSecure = true;  
             xfr.CopySchema = true;  
@@ -93,8 +93,8 @@ xfr.ScriptTransfer()
 #Get a server object which corresponds to the default instance  
 $srv = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Server  
   
-#Reference the AdventureWorks2012 database.  
-$db = $srv.Databases["AdventureWorks2012"]  
+#Reference the AdventureWorks2022 database.  
+$db = $srv.Databases["AdventureWorks2022"]  
   
 #Create a database to hold the copy of AdventureWorks  
 $dbCopy = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Database -argumentlist $srv, "AdventureWorksCopy"  

@@ -46,7 +46,7 @@ dev_langs:
  The following example creates two procedures: one that calls the other, and one that displays the `@@NESTLEVEL` setting of each.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF OBJECT_ID (N'usp_OuterProc', N'P')IS NOT NULL  
     DROP PROCEDURE usp_OuterProc;  

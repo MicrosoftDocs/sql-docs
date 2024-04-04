@@ -72,7 +72,7 @@ sp_help_log_shipping_primary_database
  This example illustrates using **sp_help_log_shipping_primary_database** to retrieve primary database settings for the database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  
-EXEC master.dbo.sp_help_log_shipping_primary_database @database=N'AdventureWorks2012';  
+EXEC master.dbo.sp_help_log_shipping_primary_database @database=N'AdventureWorks2022';  
 GO  
 ```  
   

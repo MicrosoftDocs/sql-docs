@@ -3,6 +3,7 @@ title: Reporting queries across multiple databases
 description: Cross-tenant reporting using distributed queries.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: mathoma
 ms.date: 01/25/2019
 ms.service: sql-database
 ms.subservice: scenario
@@ -135,7 +136,7 @@ Now you can run distributed queries, and gather insights across all tenants!
 
 ## Run distributed queries
 
-Now that the *adhocreporting* database is set up, go ahead and run some distributed queries. Include the execution plan for a better understanding of where the query processing is happening. 
+Now that the *adhocreporting* database is set up, run some distributed queries. Include the execution plan for a better understanding of where the query processing is happening. 
 
 When inspecting the execution plan, hover over the plan icons for details. 
 

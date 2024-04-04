@@ -5,21 +5,21 @@ description: Learn how to buy Azure SQL Database and SQL Managed Instance reserv
 author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma
-ms.date: 04/06/2022
+ms.date: 09/12/2023
 ms.service: sql-db-mi
 ms.subservice: service-overview
 ms.topic: conceptual
 ms.custom: sqldbrb=2
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Save costs for resources with reserved capacity - Azure SQL Database & SQL Managed Instance
-[!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)] 
+[!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)] 
 
-Save money with Azure SQL Database and SQL Managed Instance by committing to a reservation for compute resources compared to pay-as-you-go prices. With reserved capacity, you make a commitment for SQL Database and/or SQL Managed Instance use for a period of one or three years to get a significant discount on the compute costs. To purchase reserved capacity, you need to specify the Azure region, deployment type, performance tier, and term.
+Save money with Azure SQL Database or SQL Managed Instance by committing to a reservation for compute resources compared to pay-as-you-go prices. With reserved capacity, you make a commitment for SQL Database and/or SQL Managed Instance use for a period of one or three years to get a significant discount on the compute costs. To purchase reserved capacity, you need to specify the Azure region, deployment type, performance tier, and term.
 
-You do not need to assign the reservation to a specific database or managed instance. Matching existing deployments that are already running or ones that are newly deployed automatically get the benefit. Hence, by purchasing a reserved capacity, existing resources infrastructure would not be modified and thus no failover/downtime is triggered on existing resources. By purchasing a reservation, you commit to usage for the compute costs for a period of one or three years. As soon as you buy a reservation, the compute charges that match the reservation attributes are no longer charged at the pay-as-you go rates. 
+You do not need to assign the reservation to a specific database or managed instance. Matching existing deployments that are already running, or ones that are newly deployed automatically, get the benefit. Hence, by purchasing a reserved capacity, existing resources infrastructure would not be modified and thus no failover/downtime is triggered on existing resources. By purchasing a reservation, you commit to usage for the compute costs for a period of one or three years. As soon as you buy a reservation, the compute charges that match the reservation attributes are no longer charged at the pay-as-you-go rates.
 
-A reservation applies to both primary and billable secondary compute replicas, but does not cover software, networking, or storage charges associated with the service. At the end of the reservation term, the billing benefit expires and the database or managed instance is billed at the pay-as-you go price. Reservations do not automatically renew. For pricing information, see the [reserved capacity offering](https://azure.microsoft.com/pricing/details/sql-database/managed/).
+A reservation applies to both primary and billable secondary compute replicas, but does not cover software, networking, or storage charges associated with the service. At the end of the reservation term, the billing benefit expires and the database or managed instance is billed at the pay-as-you-go price. Reservations do not automatically renew. For pricing information, see the [reserved capacity offering](https://azure.microsoft.com/pricing/details/sql-database/managed/).
 
 You can buy reserved capacity in the [Azure portal](https://portal.azure.com). Pay for the reservation [up front or with monthly payments](/azure/cost-management-billing/reservations/prepare-buy-reservation). To buy reserved capacity:
 
@@ -31,7 +31,7 @@ For more information about how enterprise customers and Pay-As-You-Go customers 
 > [!NOTE]
 > Purchasing reserved capacity does not pre-allocate or reserve specific infrastructure resources (virtual machines or nodes) for your use.
 
-## Determine correct size before purchase
+## Determine the correct size before purchase
 
 The size of reservation should be based on the total amount of compute used by the existing or soon-to-be-deployed database or managed instance within a specific region and using the same performance tier and hardware configuration.
 
@@ -48,13 +48,15 @@ Also, let's suppose that you know that you will need these resources for at leas
 ## Buy reserved capacity
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
-2. Select **All services** > **Reservations**.
-3. Select **Add** and then in the **Purchase Reservations** pane, select **SQL Database** to purchase a new reservation for SQL Database.
-4. Fill in the required fields. Existing databases in SQL Database and SQL Managed Instance that match the attributes you select qualify to get the reserved capacity discount. The actual number of databases or managed instances that get the discount depends on the scope and quantity selected.
+1. Select **All services** > **Reservations**.
+1. Select **Add** and then in the **Purchase Reservations** pane, 
+    - Select **SQL Database** to purchase a new reservation for Azure SQL Database.
+    - Select **SQL Managed Instance** to purchase a new reservation for Azure SQL Managed Instance.
+1. Fill in the required fields. Existing databases in SQL Database and SQL Managed Instance that match the attributes you select qualify to get the reserved capacity discount. The actual number of databases or managed instances that get the discount depends on the scope and quantity selected.
 
-    ![Screenshot before submitting the reserved capacity purchase](./media/reserved-capacity-overview/sql-reserved-vcores-purchase.png)
+    :::image type="content" source="./media/reserved-capacity-overview/sql-reserved-vcores-purchase.png" alt-text="Screenshot before submitting the reserved capacity purchase.":::
 
-    The following table describes required fields.
+    The following table describes the required fields.
     
     | Field      | Description|
     |------------|--------------|

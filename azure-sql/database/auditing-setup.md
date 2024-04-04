@@ -4,6 +4,7 @@ titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: This article provides an overview of how to set up Auditing and storing those audits to an Azure storage account, Log Analytics workspace, or Event Hubs destination.
 author: sravanisaluru
 ms.author: srsaluru
+ms.reviewer: mathoma
 ms.date: 04/26/2023
 ms.service: sql-database
 ms.subservice: security
@@ -69,6 +70,9 @@ To configure writing audit logs to a Log Analytics workspace, select **Log Analy
 To configure writing audit logs to an event hub, select **Event Hub**. Select the event hub where you want logs stored, and then select **Save**. Be sure that the event hub is in the same region as your database and server.
 
 :::image type="content" source="./media/auditing-overview/auditing_select_event_hub.png" alt-text="Screenshot showing the Event hub.":::
+
+> [!NOTE]
+> If you are using multiple targets like storage account , log analytics or event hub , make sure you have permissions for all the targets else saving audit configuration would fail as it will try to save the settings for all targets. 
 
 ## Next steps
 

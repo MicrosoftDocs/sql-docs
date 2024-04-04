@@ -7,6 +7,7 @@ ms.reviewer: vanto
 ms.date: "10/30/2019"
 ms.service: sql
 ms.subservice: security
+ms.custom: ignite-2023
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.alwaysencryptedwizard.f1"
@@ -23,9 +24,9 @@ The Always Encrypted Wizard is a powerful tool that allows you to set the desire
 
 The wizard allows you to encrypt columns with existing column encryption keys, or you can choose to generate a new column encryption key or both a new column encryption key and a new column master key. 
 
-When your database is configured with a secure enclave, you can run cryptographic operations in-place, without moving data out of the database. The wizard removes all dependencies blocking the schema change of the column to be encrypted. It issues an in-place encryption for each column by using the enclave within the database engine. When the encryption is finished, the wizard recreates the dependencies. For more information about Always Encrypted with secure enclaves , see [Always Encrypted with secure enclaves](always-encrypted-enclaves.md).
+When your database is configured with a secure enclave, you can run cryptographic operations in-place, without moving data out of the database. The wizard removes all dependencies blocking the schema change of the column to be encrypted. It issues an in-place encryption for each column by using the enclave within the database engine. When the encryption is finished, the wizard recreates the dependencies. For more information about Always Encrypted with secure enclaves, see [Always Encrypted with secure enclaves](always-encrypted-enclaves.md).
 
-When your database is *not* configured with a secure enclave or you are *not* using enclave-enabled keys, the wizard works by moving data out of the database and performing cryptographic operations within the SSMS process. The wizard creates a new table (or tables) with the desired encryption configuration in the database, loads all data from the original tables, performs the requested cryptographic operations, uploads the data to the new table(s), and then swaps the original table(s) with the new table(s).
+When your database is *not* configured with a secure enclave, the wizard will give you the opportunity to enable a secure enclave. If you choose not to enable a secure enclave or you are *not* using enclave-enabled keys, the wizard works by moving data out of the database and performing cryptographic operations within the SSMS process. The wizard creates a new table (or tables) with the desired encryption configuration in the database, loads all data from the original tables, performs the requested cryptographic operations, uploads the data to the new table(s), and then swaps the original table(s) with the new table(s). 
 
 > [!TIP]
 > Using in-place encryption using Always Encrypted with secure enclaves, if available in your environment, may substantially reduce the time and the reliability of cryptographic operations. 
@@ -68,7 +69,7 @@ If you want the wizard to encrypt or re-encrypt one or more columns using a new 
 To decrypt a column that is currently encrypted, select **Plaintext** for the encryption type.
 
 > [!NOTE]
-> If you want to leverage in-place encryption and you’re using existing keys, make sure you select enclave-enabled keys – annotated with **(enclave-enabled)**. 
+> If you want to leverage in-place encryption and you're using existing keys, make sure you select enclave-enabled keys – annotated with **(enclave-enabled)**. 
 
 > [!NOTE]
 > The wizard does not support cryptographic operations on temporal and in-memory tables. You can create empty temporal or in-memory tables using Transact-SQL and insert data using your application.
@@ -86,7 +87,7 @@ For more information about creating and storing column master keys in Windows Ce
 > The wizard allows you to browse and create keys only in Windows Certificate Store and Azure Key Vault. It also auto-generates the names of both the new keys and the database metadata objects describing the keys. If you need more control for how your keys are provisioned (and more choices for a key store containing your column master key), you can use the **New Column Master Key** and **New Column Encryption Key** dialogs to create the keys first, and then run the wizard and pick the keys you have created. See [Provision Column Master Keys with the New Column Master Key Dialog](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog) or [Provision enclave-enabled keys](always-encrypted-enclaves-provision-keys.md) and [Provision Column Encryption Keys with the New Column Encryption Key Dialog](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog). 
 
 ## In-Place Encryption Settings Page
-If you have configured a secure enclave in your database and you’re using enclave-enabled keys, this page allows you to specify the enclave attestation parameters, required for in-place encryption. If you don’t want to use in-place encryption, unselect **Use in-place encryption for eligible columns** to proceed with client-side encryption. We recommend you to leave this checkbox enabled so that the wizard can use in-place encryption.
+If you have configured a secure enclave in your database and you're using enclave-enabled keys, this page allows you to specify the enclave attestation parameters, required for in-place encryption. If you don't want to use in-place encryption, unselect **Use in-place encryption for eligible columns** to proceed with client-side encryption. We recommend you to leave this checkbox enabled so that the wizard can use in-place encryption.
 
 For more information about enclave attestation, see [Configure attestation for Always Encrypted using Azure Attestation](/azure/azure-sql/database/always-encrypted-enclaves-configure-attestation) 
 

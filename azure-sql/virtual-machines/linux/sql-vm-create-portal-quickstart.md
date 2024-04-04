@@ -7,7 +7,7 @@ ms.date: 10/22/2019
 ms.service: virtual-machines-sql
 ms.subservice: deployment
 ms.topic: quickstart
-ms.custom: mode-ui
+ms.custom: mode-ui, linux-related-content
 tags: azure-service-management
 ---
 
@@ -44,7 +44,7 @@ If you don't have an Azure subscription, create a [free account](https://azure.m
 
 1. In the search box, type **SQL Server 2019**, and select **Enter** to start the search.
 
-1. Limit the search results by selecting **Operating system** > **Redhat**.
+1. Limit the search results by selecting **Operating system** > **Red Hat**.
 
     ![Search filter for SQL Server 2019 VM images](./media/sql-vm-create-portal-quickstart/searchfilter.png)
 

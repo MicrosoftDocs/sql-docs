@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  The following GetContacts stored procedure returns **FirstName** and **LastName** of employees in the Person.Contact table in the AdventureWorks database.  
   
 ```  
-USE AdventureWorks  
+USE AdventureWorks2022;
 CREATE PROCEDURE GetContacts @LastName varchar(20)  
 AS  
 SELECT FirstName, LastName  

@@ -1,10 +1,10 @@
 ---
 title: "Set up Transparent Data Encryption (TDE) Extensible Key Management with Azure Key Vault"
 description: Install and configure the SQL Server Connector for Azure Key Vault.
-author: Rupp29
-ms.author: arupp
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto, randolphwest
-ms.date: 03/20/2023
+ms.date: 03/07/2024
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -17,12 +17,13 @@ helpviewer_keywords:
 ---
 # Set up SQL Server TDE Extensible Key Management by using Azure Key Vault
 
-[!INCLUDE [sql-windows-only](../../../includes/applies-to-version/sql-windows-only.md)]
+[!INCLUDE [sqlserver](../../../includes/applies-to-version/sqlserver.md)]
 
 In this article, you install and configure the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for Azure Key Vault.
 
-> [!NOTE]  
-> Extensible Key Management is [not supported](../../../linux/sql-server-linux-editions-and-components-2019.md#Unsupported) for SQL Server on Linux.
+[!INCLUDE [entra-id](../../../includes/entra-id.md)]
+
+Extensible Key Management using Azure Key Vault is available for SQL Server on Linux environments, starting with [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] CU 12. Follow the same instructions, but skip steps 3 and 4.
 
 ## Prerequisites
 
@@ -32,9 +33,11 @@ Before you begin using Azure Key Vault with your SQL Server instance, be sure th
 
 - Install [Azure PowerShell version 5.2.0 or later](/powershell/azure/).
 
-- Create an Azure Active Directory (Azure AD) instance.
+- Create a Microsoft Entra tenant.
 
 - Familiarize yourself with the principles of Extensible Key Management (EKM) storage with Azure Key Vault by reviewing [EKM with Azure Key Vault (SQL Server)](extensible-key-management-using-azure-key-vault-sql-server.md).
+
+- Be able to modify the registry on the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] computer.
 
 - Install the version of Visual Studio C++ Redistributable that's based on the version of SQL Server that you're running:
 
@@ -45,27 +48,29 @@ Before you begin using Azure Key Vault with your SQL Server instance, be sure th
 
 - Familiarize yourself with [Access Azure Key Vault behind a firewall](/azure/key-vault/general/access-behind-firewall) if you plan to use the SQL Server Connector for Azure Key Vault behind a firewall or with a proxy server.
 
-## Step 1: Set up an Azure AD service principal
+<a name='step-1-set-up-an-azure-ad-service-principal'></a>
 
-To grant your SQL Server instance access permissions to your Azure key vault, you need a service principal account in Azure AD.
+## Step 1: Set up a Microsoft Entra service principal
+
+To grant your SQL Server instance access permissions to your Azure key vault, you need a service principal account in Microsoft Entra ID.
 
 1. Sign in to the [Azure portal](https://ms.portal.azure.com/), and do either of the following:
 
-    - Select the **Azure Active Directory** button.
+    - Select the **Microsoft Entra ID** button.
 
       :::image type="content" source="media/ekm/ekm-part1-login-portal.png" alt-text="Screenshot of the Azure services pane.":::
 
-    - Select **More services** and then, in the **All services** box, type **Azure Active Directory**.
+    - Select **More services** and then, in the **All services** box, type **Microsoft Entra ID**.
 
       :::image type="content" source="media/ekm/ekm-part1-select-aad.png" alt-text="Screenshot of the All Azure services pane.":::
 
-1. Register an application with Azure Active Directory by doing the following. (For detailed step-by-step instructions, see the "Get an identity for the application" section of the [Azure Key Vault blog post](/archive/blogs/kv/azure-key-vault-step-by-step).)
+1. Register an application with Microsoft Entra ID by doing the following. (For detailed step-by-step instructions, see the "Get an identity for the application" section of the [Azure Key Vault blog post](/archive/blogs/kv/azure-key-vault-step-by-step).)
 
-   1. On the **Azure Active Directory Overview** pane, select **App registrations**.
+   1. On the **Overview** page of your **Microsoft Entra ID** resource, select **App registrations**.
 
-      :::image type="content" source="media/ekm/ekm-part1-azure-active-directory-app-register.png" alt-text="Screenshot of the Azure Active Directory Overview pane.":::
+      :::image type="content" source="media/ekm/ekm-part1-azure-active-directory-app-register.png" alt-text="Screenshot of the Microsoft Entra ID Overview page in the Azure portal.":::
 
-   1. On the **App registrations** pane, select **New registration**.
+   1. On the **App registrations** page, select **New registration**.
 
       :::image type="content" source="media/ekm/ekm-part1-azure-active-directory-new-registration.png" alt-text="Screenshot of the App registrations pane.":::
 
@@ -97,7 +102,7 @@ Select the method you want to use to create a key vault.
 
 ### Create a key vault by using the Azure portal
 
-You can use the Azure portal to create the key vault and then add an Azure AD principal to it.
+You can use the Azure portal to create the key vault and then add a Microsoft Entra principal to it.
 
 1. Create a resource group.
 
@@ -117,6 +122,9 @@ You can use the Azure portal to create the key vault and then add an Azure AD pr
 
     :::image type="content" source="media/ekm/ekm-part2-add-access-policy.png" alt-text="Screenshot of the Add Access Policy link on the Access policies pane.":::
 
+    > [!NOTE]  
+    > SQL Server Connector for Azure Key Vault doesn't support Azure Key Vault access using RBAC.
+
 1. On the **Add access policy** pane, do the following:
 
    1. In the **Configure from template (optional)** drop-down list, select **Key Management**.
@@ -129,7 +137,7 @@ You can use the Azure portal to create the key vault and then add an Azure AD pr
 
 1. In the left pane, select the **Select principal** tab, and then do the following:
 
-   1. In the **Principal** pane, under **Select**, start typing the name of your Azure AD application and then, in the results list, select the application you want to add.
+   1. In the **Principal** pane, under **Select**, start typing the name of your Microsoft Entra application and then, in the results list, select the application you want to add.
 
       :::image type="content" source="media/ekm/ekm-part2-select-principal.png" alt-text="Screenshot of application search box on the Principal pane.":::
 
@@ -170,7 +178,7 @@ To ensure quick key recovery and be able to access your data outside of Azure, w
 The key vault and key that you create here are used by the [!INCLUDE [ssdenoversion-md](../../../includes/ssdenoversion-md.md)] for encryption key protection.
 
 > [!IMPORTANT]  
-> The subscription where the key vault is created must be in the same default Azure AD instance where the Azure AD service principal was created. If you want to use an Azure AD instance other than your default instance for creating a service principal for the SQL Server Connector, you must change the default Azure AD instance in your Azure account before you create your key vault. To learn how to change the default Azure AD instance to the one you want to use, see the "Frequently asked questions" section of [SQL Server Connector maintenance & troubleshooting](sql-server-connector-maintenance-troubleshooting.md#AppendixB).
+> The subscription where the key vault is created must be in the same default Microsoft Entra tenant where the Microsoft Entra service principal was created. If you want to use a Microsoft Entra tenant other than your default tenant to create a service principal for the SQL Server Connector, you must change the default Microsoft Entra tenant in your Azure account before you create your key vault. To learn how to change the default Microsoft Entra tenant to the one you want to use, see the "Frequently asked questions" section of [SQL Server Connector maintenance & troubleshooting](sql-server-connector-maintenance-troubleshooting.md#AppendixB).
 
 1. Install and sign in to [Azure PowerShell 5.2.0 or later](/powershell/azure/) by using the following command:
 
@@ -250,14 +258,14 @@ The key vault and key that you create here are used by the [!INCLUDE [ssdenovers
    Tags                             :
    ```
 
-1. Grant permissions for the Azure AD service principal to access the Azure key vault.
+1. Grant permissions for the Microsoft Entra service principal to access the Azure key vault.
 
-   You can authorize other users and applications to use your key vault.  For our example, let's use the service principal that you created in [Step 1: Set up an Azure AD service principal](#step-1-set-up-an-azure-ad-service-principal) to authorize the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance.
+   You can authorize other users and applications to use your key vault.  For our example, let's use the service principal that you created in [Step 1: Set up a Microsoft Entra service principal](#step-1-set-up-an-azure-ad-service-principal) to authorize the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance.
 
    > [!IMPORTANT]  
-   > The Azure AD service principal must have at least the *get*, *list*,*wrapKey*, and *unwrapKey* permissions for the key vault.
+   > The Microsoft Entra service principal must have at least the *get*, *list*, *wrapKey*, and *unwrapKey* permissions for the key vault.
 
-   As shown in the following command, you use the **App (Client) ID** from [Step 1: Set up an Azure AD service principal](#step-1-set-up-an-azure-ad-service-principal) for the `ServicePrincipalName` parameter. `Set-AzKeyVaultAccessPolicy` runs silently with no output if it runs successfully.
+   As shown in the following command, you use the **App (Client) ID** from [Step 1: Set up a Microsoft Entra service principal](#step-1-set-up-an-azure-ad-service-principal) for the `ServicePrincipalName` parameter. `Set-AzKeyVaultAccessPolicy` runs silently with no output if it runs successfully.
 
    ```powershell
    Set-AzKeyVaultAccessPolicy -VaultName 'ContosoEKMKeyVault' `
@@ -265,7 +273,7 @@ The key vault and key that you create here are used by the [!INCLUDE [ssdenovers
      -PermissionsToKeys get, list, wrapKey, unwrapKey
    ```
 
-   Call the `Get-AzKeyVault` cmdlet to confirm the permissions. In the statement output under `Access Policies`, you should see your Azure AD application name listed as another tenant that has access to this key vault.
+   Call the `Get-AzKeyVault` cmdlet to confirm the permissions. In the statement output under `Access Policies`, you should see your Microsoft Entra application name listed as another tenant that has access to this key vault.
 
 1. Generate an asymmetric key in the key vault. You can do so in either of two ways: import an existing key or create a new key.
 
@@ -320,7 +328,7 @@ Then you can run the following command to import the key from the PFX file, whic
 
 ### Create a new key
 
-Alternatively, you can create a new encryption key directly in your Azure key vault and make it either software-protected or HSM-protected.  In this example, let's create a software-protected key by using the `Add-AzureKeyVaultKey` cmdlet:
+Alternatively, you can create a new encryption key directly in your Azure key vault and make it either software-protected or HSM-protected. In this example, let's create a software-protected key by using the `Add-AzureKeyVaultKey` cmdlet:
 
 ```powershell
 Add-AzureKeyVaultKey -VaultName 'ContosoEKMKeyVault' `
@@ -353,10 +361,11 @@ Download the SQL Server Connector from the [Microsoft Download Center](https://g
 >  
 > - SQL Server Connector versions 1.0.0.440 and older have been replaced and are no longer supported in production environments and using the instructions on the [SQL Server Connector Maintenance & Troubleshooting](sql-server-connector-maintenance-troubleshooting.md) page under [Upgrade of SQL Server Connector](sql-server-connector-maintenance-troubleshooting.md#upgrade-of--connector).
 > - Starting with version 1.0.3.0, the SQL Server Connector reports relevant error messages to the Windows event logs for troubleshooting.
-> - Starting with version 1.0.4.0, there is support for private Azure clouds, including Azure China, Azure Germany, and Azure Government.
+> - Starting with version 1.0.4.0, there is support for private Azure clouds, including Azure operated by 21Vianet, Azure Germany, and Azure Government.
 > - There is a breaking change in version 1.0.5.0 in terms of the thumbprint algorithm. You may experience database restore failures after upgrading to 1.0.5.0. For more information, see [KB article 447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
 > - Starting with version 1.0.5.0 (TimeStamp: September 2020), the SQL Server Connector supports filtering messages and network request retry logic.
 > - **Starting with updated version 1.0.5.0 (TimeStamp: November 2020), the SQL Server Connector supports RSA 2048, RSA 3072, RSA-HSM 2048 and RSA-HSM 3072 keys.**
+> - SQL Server Connector supports Azure Key Vault access using Access Policies only and not RBAC.
 
 :::image type="content" source="media/ekm/ekm-connector-install.png" alt-text="Screenshot of the SQL Server Connector installation wizard.":::
 
@@ -371,7 +380,31 @@ To view error code explanations, configuration settings, or maintenance tasks fo
 - [A. Maintenance Instructions for the SQL Server Connector](sql-server-connector-maintenance-troubleshooting.md#AppendixA)
 - [C. Error Code Explanations for the SQL Server Connector](sql-server-connector-maintenance-troubleshooting.md#AppendixC)
 
-## Step 4: Configure SQL Server
+## Step 4: Add registry key to support EKM provider
+
+> [!WARNING]
+> Modifying the registry should be performed by users that know exactly what they are doing. Serious problems might occur if you modify the registry incorrectly. For added protection, back up the registry before you modify it. You can restore the registry if a problem occurs.
+
+1. Make sure that SQL Server is installed and running.
+1. Run **regedit** to open the Registry Editor.
+1. Create a `SQL Server Cryptographic Provider` registry key on `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft`. The full path is `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Cryptographic Provider`.
+1. Right-click the `SQL Server Cryptographic Provider` registry key, and then select **Permissions**.
+
+1. Give **Full Control** permissions on the `SQL Server Cryptographic Provider` registry key to the user account running the SQL Server service.
+
+   :::image type="content" source="media/ekm/ekm-part4-registry-permissions.png" alt-text="Screenshot of the EKM registry key in Registry Editor.":::
+
+1. Select **Apply** and then **OK**.
+1. Close Registry Editor and restart the SQL Server service.
+
+   > [!NOTE]  
+   > If you use TDE with EKM or Azure Key Vault on a failover cluster instance, you must complete an additional step to add `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Cryptographic Provider` to the Cluster Registry Checkpoint routine, so the registry can sync across the nodes. Syncing facilitates database recovery after failover and key rotation.
+   >  
+   > To add the registry key to the Cluster Registry Checkpoint routine, in PowerShell, run the following command:
+   >  
+   > `Add-ClusterCheckpoint -RegistryCheckpoint "SOFTWARE\Microsoft\SQL Server Cryptographic Provider" -Resourcename "SQL Server"`
+
+## Step 5: Configure SQL Server
 
 For a note about the minimum permission levels needed for each action in this section, see [B. Frequently Asked Questions](sql-server-connector-maintenance-troubleshooting.md#AppendixB).
 
@@ -419,26 +452,26 @@ For a note about the minimum permission levels needed for each action in this se
 
    - Other [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] logins that might enable TDE or other [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption features.
 
-   There is one-to-one mapping between credentials and logins. That is, each login must have a unique credential.
+   There's one-to-one mapping between credentials and logins. That is, each login must have a unique credential.
 
    Modify this [!INCLUDE[tsql](../../../includes/tsql-md.md)] script in the following ways:
 
    - Edit the `IDENTITY` argument (`ContosoEKMKeyVault`) to point to your Azure key vault.
      - If you're using *global Azure*, replace the `IDENTITY` argument with the name of your Azure key vault from [Step 2: Create a key vault](#step-2-create-a-key-vault).
-     - If you're using a *private Azure cloud* (for example, Azure Government, Azure China 21Vianet, or Azure Germany), replace the `IDENTITY` argument with the Vault URI that's returned in step 3 of the [Create a key vault and key by using PowerShell](#create-a-key-vault-and-key-by-using-powershell) section. Don't include "https://" in the Vault URI.
-   - Replace the first part of the `SECRET` argument with the Azure Active Directory Client ID from [Step 1: Set up an Azure AD service principal](#step-1-set-up-an-azure-ad-service-principal). In this example, the **Client ID** is `9A57CBC54C4C40E2B517EA677E0EFA00`.
+     - If you're using a *private Azure cloud* (for example, Azure Government, Microsoft Azure operated by 21Vianet, or Azure Germany), replace the `IDENTITY` argument with the Vault URI that's returned in step 3 of the [Create a key vault and key by using PowerShell](#create-a-key-vault-and-key-by-using-powershell) section. Don't include "https://" in the Vault URI.
+   - Replace the first part of the `SECRET` argument with the Microsoft Entra Client ID from [Step 1: Set up a Microsoft Entra service principal](#step-1-set-up-an-azure-ad-service-principal). In this example, the **Client ID** is `9A57CBC54C4C40E2B517EA677E0EFA00`.
 
      > [!IMPORTANT]  
      > Be sure to remove the hyphens from the App (Client) ID.
 
-   - Complete the second part of the `SECRET` argument with **Client Secret** from [Step 1: Set up an Azure AD service principal](#step-1-set-up-an-azure-ad-service-principal).  In this example, the Client Secret is `08:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m`. The final string for the `SECRET` argument will be a long sequence of letters and numbers, without hyphens.
+   - Complete the second part of the `SECRET` argument with **Client Secret** from [Step 1: Set up a Microsoft Entra service principal](#step-1-set-up-an-azure-ad-service-principal). In this example, the Client Secret is `08:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m`. The final string for the `SECRET` argument will be a long sequence of letters and numbers, without hyphens (except for the Client Secret section, in case the Client Secret contains any hyphens).
 
      ```sql
      USE master;
      CREATE CREDENTIAL sysadmin_ekm_cred
          WITH IDENTITY = 'ContosoEKMKeyVault',                            -- for public Azure
          -- WITH IDENTITY = 'ContosoEKMKeyVault.vault.usgovcloudapi.net', -- for Azure Government
-         -- WITH IDENTITY = 'ContosoEKMKeyVault.vault.azure.cn',          -- for Azure China 21Vianet
+         -- WITH IDENTITY = 'ContosoEKMKeyVault.vault.azure.cn',          -- for Microsoft Azure operated by 21Vianet
          -- WITH IDENTITY = 'ContosoEKMKeyVault.vault.microsoftazure.de', -- for Azure Germany
                 --<----Application (Client) ID ---><--Azure AD app (Client) ID secret-->
          SECRET = '9A57CBC54C4C40E2B517EA677E0EFA0008:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m'
@@ -479,18 +512,6 @@ For a note about the minimum permission levels needed for each action in this se
 
    In the preceding example script, `1a4d3b9b393c4678831ccc60def75379` represents the specific version of the key that will be used. If you use this script, it doesn't matter if you update the key with a new version. The key version (for example) `1a4d3b9b393c4678831ccc60def75379` will always be used for database operations.
 
-   For this scenario, you must complete two Registry prerequisites:
-
-   1. Create a `SQL Server Cryptographic Provider` registry key on `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft`.
-   1. Delegate `Full Control` permissions on the `SQL Server Cryptographic Provider` registry key to the user account running the [!INCLUDE [ssdenoversion-md](../../../includes/ssdenoversion-md.md)] service.
-
-      > [!NOTE]  
-      > If you use TDE with EKM or Azure Key Vault on a failover cluster instance, you must complete an additional step to add `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Cryptographic Provider` to the Cluster Registry Checkpoint routine, so the registry can sync across the nodes. Syncing facilitates database recovery after failover and key rotation.
-      >  
-      > To add the registry key to the Cluster Registry Checkpoint routine, in PowerShell, run the following command:
-      >  
-      > `Add-ClusterCheckpoint -RegistryCheckpoint "SOFTWARE\Microsoft\SQL Server Cryptographic Provider" -Resourcename "SQL Server"`
-
 1. Create a new login by using the asymmetric key in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that you created in the preceding step.
 
     ```sql
@@ -499,7 +520,7 @@ For a note about the minimum permission levels needed for each action in this se
    FROM ASYMMETRIC KEY EKMSampleASYKey;
    ```
 
-1. Create a new login from the asymmetric key in SQL Server. Drop the credential mapping from [Step 4: Configure SQL Server](#step-4-configure-sql-server) so that the credentials can be mapped to the new login.
+1. Create a new login from the asymmetric key in SQL Server. Drop the credential mapping from [Step 5: Configure SQL Server](#step-5-configure-sql-server) so that the credentials can be mapped to the new login.
 
    ```sql
    --Now drop the credential mapping from the original association
@@ -542,6 +563,38 @@ For a note about the minimum permission levels needed for each action in this se
    SET ENCRYPTION ON;
    ```
 
+### Registry details
+
+1. Execute the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] query in the `master` database to show the asymmetric key used.
+
+   ```sql
+   SELECT name, algorithm_desc, thumbprint FROM sys.asymmetric_keys;
+   ```
+
+   The statement returns:
+
+   ```output
+   name            algorithm_desc    thumbprint
+   EKMSampleASYKey RSA_2048          <key thumbprint>
+   ```
+
+1. In the user database (`TestTDE`), execute the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] query to show the encryption key used.
+
+   ```sql
+   SELECT encryptor_type, encryption_state_desc, encryptor_thumbprint 
+   FROM sys.dm_database_encryption_keys
+   WHERE database_id = DB_ID('TestTDE');
+   ```
+
+   The statement returns:
+
+   ```output
+   encryptor_type encryption_state_desc encryptor_thumbprint
+   ASYMMETRIC KEY ENCRYPTED             <key thumbprint>
+   ```
+
+### Clean up
+
 1. Clean up the test objects. Delete all the objects that were created in this test script.
 
    ```sql
@@ -568,11 +621,29 @@ For a note about the minimum permission levels needed for each action in this se
 
 For sample scripts, see the blog at [SQL Server Transparent Data Encryption and Extensible Key Management with Azure Key Vault](https://techcommunity.microsoft.com/t5/sql-server/intro-sql-server-transparent-data-encryption-and-extensible-key/ba-p/1427549).
 
+1. The `SQL Server Cryptographic Provider` registry key isn't cleaned up automatically after a key or all EKM keys are deleted. It must be cleaned up manually. Cleaning the registry key should be done with extreme caution, since cleaning the registry prematurely can break the EKM functionality. To clean up the registry key, delete the `SQL Server Cryptographic Provider` registry key on `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft`.
+
+### Troubleshooting
+
+If the registry key `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Cryptographic Provider` isn't created or the required permissions aren't granted, the following DDL statement will fail:
+
+```sql
+CREATE ASYMMETRIC KEY EKMSampleASYKey
+FROM PROVIDER [AzureKeyVault_EKM]
+WITH PROVIDER_KEY_NAME = 'ContosoRSAKey0',
+CREATION_DISPOSITION = OPEN_EXISTING;
+```
+
+```output
+Msg 33049, Level 16, State 2, Line 65
+Key with name 'ContosoRSAKey0' does not exist in the provider or access is denied. Provider error code: 2058.  (Provider Error - No explanation is available, consult EKM Provider for details)
+```
+
 ## Client secrets that are about to expire
 
 If the credential has a client secret that is about to expire, a new secret can be assigned to the credential.
 
-1. Update the secret originally created in [Step 1: Set up an Azure AD service principal](#step-1-set-up-an-azure-ad-service-principal).
+1. Update the secret originally created in [Step 1: Set up a Microsoft Entra service principal](#step-1-set-up-an-azure-ad-service-principal).
 
 1. Alter the credential using the same identity and new secret using the following code. Replace `<New Secret>` with your new secret:
 

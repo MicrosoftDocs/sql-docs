@@ -18,10 +18,11 @@ helpviewer_keywords:
   - "FOR clause [Transact-SQL]"
 dev_langs:
   - "TSQL"
+ms.custom: ignite-2023
 ---
 # SELECT - FOR Clause (Transact-SQL)
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Fabric Lakehouse SQL Endpoint Fabric Synapse Data Warehouse](../../includes/applies-to-version/sql-asdb-asdbmi-fabricse-fabricdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Fabric Lakehouse SQL analytics endpoint Fabric Synapse Data Warehouse](../../includes/applies-to-version/sql-asdb-asdbmi-fabricse-fabricdw.md)]
 
 Use the FOR clause to specify one of the following options for query results.
   
@@ -234,7 +235,7 @@ _Suppress unwanted line breaks:_ You might use SQL Server Management Studio (SSM
  The following example specifies `FOR XML AUTO` with the `TYPE` and `XMLSCHEMA` options. Because of the `TYPE` option, the result set is returned to the client as an **xml** type. The `XMLSCHEMA` option specifies that the inline XSD schema is included in the XML data returned, and the `ELEMENTS` option specifies that the XML result is element-centric.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT p.BusinessEntityID, FirstName, LastName, PhoneNumber AS Phone  
 FROM Person.Person AS p  
@@ -271,4 +272,3 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
 ## See Also
 
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
-

@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "disabling publishing"
@@ -86,11 +86,11 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This example script removes replication objects from the subscription database.  
   
- [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/disable-publishing-and-d_1.sql)]  
+ :::code language="sql" source="codesnippet/tsql/disable-publishing-and-d_1.sql":::
   
  This example script disables publishing and distribution on a server that is a Publisher and Distributor and drops the distribution database.  
   
- [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/disable-publishing-and-d_2.sql)]  
+ :::code language="sql" source="codesnippet/tsql/disable-publishing-and-d_2.sql":::
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
   

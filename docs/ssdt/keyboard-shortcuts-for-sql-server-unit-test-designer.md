@@ -15,7 +15,7 @@ You can use the following keyboard shortcuts to navigate within the SQL Server U
   
 |Action or Menu Option|Keyboard Shortcut|  
 |-|-|   
-|Move from the Transact\-SQL editor to the navigation bar.|CTRL + F2|  
+|Move from the Transact-SQL editor to the navigation bar.|CTRL + F2|  
 |Move forward through navigation bar elements.|TAB|  
 |Move backward through navigation bar elements.|SHIFT+TAB|  
 |Move between different panes in the Database Unit Test Designer.<br /><br />**NOTE:** This shortcut will not work if you specified C# for your developer profile the first time that you opened Visual Studio.|F6/SHIFT+F6|  

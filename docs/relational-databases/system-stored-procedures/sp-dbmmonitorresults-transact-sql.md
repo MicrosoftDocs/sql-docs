@@ -104,7 +104,7 @@ sp_dbmmonitorresults database_name
   
 ```  
 USE msdb;  
-EXEC sp_dbmmonitorresults AdventureWorks2012, 2, 0;  
+EXEC sp_dbmmonitorresults AdventureWorks2022, 2, 0;  
 ```  
   
 ## See Also  

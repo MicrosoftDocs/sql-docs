@@ -40,23 +40,23 @@ core.sp_purge_data
 
 ## Arguments
 
-#### [ @retention_days =] *retention_days*
+#### [ @retention_days = ] *retention_days*
 
-The number of days to retain data in the management data warehouse tables. Data with a time stamp older than *@retention_days* is removed. *@retention_days* is **smallint**, with a default of NULL. If specified, the value must be positive. When NULL, the value in the valid_through column in the `core.snapshots` view determines the rows that are eligible for removal.
+The number of days to retain data in the management data warehouse tables. Data with a time stamp older than *@retention_days* is removed. *@retention_days* is **smallint**, with a default of `NULL`. If specified, the value must be positive. When NULL, the value in the valid_through column in the `core.snapshots` view determines the rows that are eligible for removal.
 
 #### [ @instance_name = ] '*instance_name*'
 
-The name of the instance for the collection set. *@instance_name* is **sysname**, with a default of NULL.
+The name of the instance for the collection set. *@instance_name* is **sysname**, with a default of `NULL`.
 
 *instance_name* must be the fully qualified instance name, which consists of the computer name and the instance name in the form *computername*\\*instancename*. When NULL, the default instance on the local server is used.
 
 #### [ @collection_set_uid = ] '*collection_set_uid*'
 
-The GUID for the collection set. *@collection_set_uid* is **uniqueidentifier**, with a default of NULL. When NULL, qualifying rows from all collection sets are removed. To obtain this value, query the `syscollector_collection_sets` catalog view.
+The GUID for the collection set. *@collection_set_uid* is **uniqueidentifier**, with a default of `NULL`. When NULL, qualifying rows from all collection sets are removed. To obtain this value, query the `syscollector_collection_sets` catalog view.
 
 #### [ @duration = ] *duration*
 
-The maximum number of minutes the purge operation should run. *@duration* is **smallint**, with a default of NULL. If specified, the value must be zero or a positive integer. When NULL, the operation runs until all qualified rows are removed or the operation is manually stopped.
+The maximum number of minutes the purge operation should run. *@duration* is **smallint**, with a default of `NULL`. If specified, the value must be zero or a positive integer. When NULL, the operation runs until all qualified rows are removed or the operation is manually stopped.
 
 ## Return code values
 
@@ -106,12 +106,12 @@ GO
 -- Get the collection set unique identifier for the Disk Usage system collection set.
 DECLARE @disk_usage_collection_set_uid uniqueidentifier = (SELECT collection_set_uid
     FROM msdb.dbo.syscollector_collection_sets WHERE name = N'Disk Usage');
-  
+
 EXECUTE core.sp_purge_data @instance_name = @@SERVERNAME, @collection_set_uid = @disk_usage_collection_set_uid;
 GO
 ```
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Data Collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)

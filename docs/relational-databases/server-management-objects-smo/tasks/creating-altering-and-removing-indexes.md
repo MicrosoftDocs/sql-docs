@@ -37,9 +37,9 @@ Public Class A
         Dim srv As Server  
         srv = New Server()  
   
-        ' Reference the AdventureWorks2012 database.   
+        ' Reference the AdventureWorks2022 database.   
         Dim db As Database  
-        db = srv.Databases("AdventureWorks2012")  
+        db = srv.Databases("AdventureWorks2022")  
   
         ' Declare a Table object and reference the HumanResources table.   
         Dim tb As Table  
@@ -95,9 +95,9 @@ public class A {
       Server srv;  
       srv = new Server();  
   
-      // Reference the AdventureWorks2012 database.   
+      // Reference the AdventureWorks2022 database.   
       Database db;  
-      db = srv.Databases["AdventureWorks2012"];  
+      db = srv.Databases["AdventureWorks2022"];  
   
       // Declare a Table object and reference the HumanResources table.   
       Table tb;  
@@ -141,8 +141,8 @@ public class A {
   
 ```  
 # Set the path context to the local, default instance of SQL Server and to the  
-#database tables in Adventureworks2012  
-CD \sql\localhost\default\databases\AdventureWorks2012\Tables\  
+#database tables in AdventureWorks2022  
+CD \sql\localhost\default\databases\AdventureWorks2022\Tables\  
   
 #Get a reference to the table  
 $tb = get-item HumanResources.Employee  
@@ -307,9 +307,9 @@ public class A {
  This code example shows how to create an XML index on an XML data type. The XML data type is an XML schema collection called MySampleCollection, which is created in [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). XML indexes have some restrictions, one of which is that it must be created on a table that already has a clustered, primary key.  
   
 ```  
-# Set the path context to the local, default instance of SQL Server and get a reference to adventureworks2012  
+# Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2022  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = get-item AdventureWorks2022  
   
 #Define a Table object variable and add an XML type column.   
 #This sample requires that an XML schema type called MySampleCollection exists on the database.   

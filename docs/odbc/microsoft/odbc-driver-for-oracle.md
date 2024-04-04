@@ -16,7 +16,7 @@ helpviewer_keywords:
 > [!IMPORTANT]  
 >  This feature will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Instead, use the ODBC driver provided by Oracle.  
   
- The Microsoft® ODBC Driver for Oracle allows you to connect your ODBC-compliant application to an Oracle database. The ODBC Driver for Oracle conforms to the Open Database Connectivity (ODBC) specification described in the *ODBC Programmer's Reference*. It allows access to PL/SQL packages, XA/DTC integration, and Oracle access from within Internet Information Services (IIS).  
+ The Microsoft ODBC Driver for Oracle allows you to connect your ODBC-compliant application to an Oracle database. The ODBC Driver for Oracle conforms to the Open Database Connectivity (ODBC) specification described in the *ODBC Programmer's Reference*. It allows access to PL/SQL packages, XA/DTC integration, and Oracle access from within Internet Information Services (IIS).  
   
  Oracle RDBMS is a multiuser relational database management system that runs with various workstation and minicomputer operating systems. IBM-compatible computers running Microsoft Windows can communicate with Oracle database servers over a network. Supported networks include Microsoft LAN Manager, NetWare, VINES, DECnet, and any network that supports TCP/IP.  
   

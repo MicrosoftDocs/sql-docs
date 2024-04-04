@@ -52,7 +52,7 @@ To step through this tutorial, you need the following things:
       or
    - **A SQL Server instance**. SQL Server runs on premises or on an Azure virtual machine. To download a free evaluation or developer edition of SQL Server, see [SQL Server downloads](https://www.microsoft.com/sql-server/sql-server-downloads).
 
-5. **Sample data**. This tutorial uses sample data stored in SQL Server in the AdventureWorks sample database as the source data. To get the AdventureWorks sample database, see [AdventureWorks Sample Databases][AdventureWorks 2014 Sample Databases].
+5. **Sample data**. This tutorial uses sample data stored in SQL Server in the AdventureWorks sample database as the source data. To get the AdventureWorks sample database, see [AdventureWorks Sample Databases][AdventureWorks Sample Databases].
 6. **A firewall rule** if you're loading data into SQL Database. You have to create a firewall rule on SQL Database with the IP address of your local computer before you can upload data to the SQL Database.
 
 ## Create a new Integration Services project
@@ -199,4 +199,4 @@ Congratulations! You've successfully used SQL Server Integration Services to loa
 [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]: https://www.microsoft.com/download/details.aspx?id=54798
 [SQL Server Evaluations]: https://www.microsoft.com/evalcenter/evaluate-sql-server-2017
 [Visual Studio Community]: https://www.visualstudio.com/products/visual-studio-community-vs.aspx
-[AdventureWorks 2014 Sample Databases]: https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks
+[AdventureWorks Sample Databases]: https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks

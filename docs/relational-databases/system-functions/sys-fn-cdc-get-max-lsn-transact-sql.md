@@ -49,7 +49,7 @@ sys.fn_cdc_get_max_lsn ()
  The following example returns the maximum LSN for all capture instances in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT sys.fn_cdc_get_max_lsn()AS max_lsn;  
 ```  
@@ -58,7 +58,7 @@ SELECT sys.fn_cdc_get_max_lsn()AS max_lsn;
  The following example uses the maximum LSN returned by `sys.fn_cdc_get_max_lsn` to set the high endpoint for a query range for the capture instance `HumanResources_Employee`.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @from_lsn binary(10), @to_lsn binary(10);  
 SET @from_lsn = sys.fn_cdc_get_min_lsn(N'HumanResources_Employee');  

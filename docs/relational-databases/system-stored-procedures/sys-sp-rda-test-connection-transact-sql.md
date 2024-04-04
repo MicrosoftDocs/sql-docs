@@ -41,7 +41,7 @@ EXECUTE sys.sp_rda_test_connection
 The name of the Stretch-enabled SQL Server database. This parameter is optional.
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+> [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
 #### @server_address = N'*azure_server_fully_qualified_address*'
 
@@ -69,7 +69,7 @@ In case of success, `sp_rda_test_connection` returns error 14855 (`STRETCH_MAJOR
 
 In case of failure, `sp_rda_test_connection` returns error 14856 (`STRETCH_MAJOR, STRETCH_CONNECTION_TEST_PROC_FAILED`) with severity `EX_USER` and an error return code.
 
-## Result sets
+## Result set
 
 | Column name | Data type | Description |
 | --- | --- | --- |

@@ -3,7 +3,8 @@ title: Extend Database Project Deployment to Modify the Deployment Plan
 description: Create a deployment contributor of type DeploymentPlanModifier that programs the deployment script batches to rerun if errors occur during execution.
 author: markingmyname
 ms.author: maghan
-ms.date: 02/09/2017
+ms.reviewer: drskwier
+ms.date: 07/31/2023
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
@@ -11,9 +12,9 @@ ms.topic: conceptual
 
 # Walkthrough: Extend Database Project Deployment to Modify the Deployment Plan
 
-You can create deployment contributors to perform custom actions when you deploy a SQL project. You can create either a [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) or a [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor). Use a [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) to change the plan before it is executed and a [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor) to perform operations while the plan is being executed. In this walkthrough, you create a [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) named SqlRestartableScriptContributor that adds IF statements to the batches in the deployment script to enable the script to be re-run until they are completed if an error occurs during execution.  
+You can create deployment contributors to perform custom actions when you deploy a SQL project. You can create either a [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) or a [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor). Use a [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) to change the plan before it is executed and a [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor) to perform operations while the plan is being executed. In this walkthrough, you create a [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) named SqlRestartableScriptContributor. The DeploymentPlanModifier SqlRestartableScriptContributor adds IF statements to the batches in the deployment script to enable the script to be re-run until they are completed if an error occurs during execution.  
   
-In this walkthrough, you will accomplish the following major tasks:  
+In this walkthrough, you accomplish the following major tasks:  
   
 -   [Create the DeploymentPlanModifier type of deployment contributor](#CreateDeploymentContributor)  
   
@@ -24,7 +25,7 @@ In this walkthrough, you will accomplish the following major tasks:
 ## Prerequisites  
 You need the following components to complete this walkthrough:  
   
--   You must have installed a version of Visual Studio that includes SQL Server Data Tools and supports C# or VB development.  
+-   You must have installed a version of Visual Studio that includes SQL Server Data Tools and supports C# development.
   
 -   You must have a SQL project that contains SQL objects.  
   
@@ -48,7 +49,7 @@ To create a deployment contributor, you must perform the following tasks:
   
 #### To create a class library project  
   
-1.  Create a Visual C# or Visual Basic class library project named MyOtherDeploymentContributor.  
+1.  Create a C# class library (.NET Framework) project named MyOtherDeploymentContributor.  
   
 2.  Rename the file "Class1.cs" to "SqlRestartableScriptContributor.cs."  
   
@@ -56,10 +57,8 @@ To create a deployment contributor, you must perform the following tasks:
   
 4.  Select **System.ComponentModel.Composition** on the Frameworks tab.  
   
-5.  Click **Browse** and navigate to the **C:\Program Files (x86)\Microsoft SQL Server\110\SDK\Assemblies** directory, select **Microsoft.SqlServer.TransactSql.ScriptDom.dll**, and the click **OK**.  
-  
-6.  Add required SQL references: right-click the project node and then click **Add Reference**. Click **Browse** and navigate to the **C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin** folder. Choose the **Microsoft.SqlServer.Dac.dll**, **Microsoft.SqlServer.Dac.Extensions.dll**, and **Microsoft.Data.Tools.Schema.Sql.dll** entries and click **Add**, then click **OK**.  
-  
+5. From the **Project** menu, select the **Manage NuGet packages** option.  Install the latest stable releases for **Microsoft.SqlServer.DacFx**.
+
 Next, start to add code to the class.  
   
 #### To define the SqlRestartableScriptContributor class  
@@ -91,7 +90,7 @@ Next, start to add code to the class.
   
     ```  
   
-    Now you have defined your deployment contributor that inherits from [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier). During the build and deployment processes, custom contributors are loaded from a standard extension directory. Deployment plan modifying contributors are identified by an [ExportDeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.exportdeploymentplanmodifierattribute) attribute. This attribute is required so that contributors can be discovered. This attribute should look similar to the following:  
+    Now you have defined your deployment contributor that inherits from [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier). During the build and deployment processes, custom contributors are loaded from a standard extension directory. Deployment plan modifying contributors are identified with a [ExportDeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.exportdeploymentplanmodifierattribute) attribute. This attribute is required so that contributors can be discovered. This attribute should look similar to the following function decorator:  
   
     ```csharp  
     [ExportDeploymentPlanModifier("MyOtherDeploymentContributor.RestartableScriptContributor", "1.0.0.0")]  
@@ -100,7 +99,7 @@ Next, start to add code to the class.
   
 3.  Add the following member declarations:  
   
-    ```vb  
+    ```csharp
          private const string BatchIdColumnName = "BatchId";  
             private const string DescriptionColumnName = "Description";  
   
@@ -141,11 +140,11 @@ Next, start to add code to the class.
   
     ```  
   
-    You override the [OnExecute](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute) method from the base class, [DeploymentPlanContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributor), which is the base class for both [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) and [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor). The OnExecute method is passed a [DeploymentPlanContributorContext](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext) object that provides access to any specified arguments, the source and target database model, the deployment plan, and deployment options. In this example, we get the deployment plan and the target database name.  
+    You override the [OnExecute](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute) method from the base class, [DeploymentPlanContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributor). [DeploymentPlanContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributor) is the base class for both [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) and [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor). A [DeploymentPlanContributorContext](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext) object is passed to the OnExecute method, providing access to any specified arguments, the source and database model of the target, the deployment plan, and deployment options. In this example, we get the deployment plan and the target database name.  
   
 2.  Now add the beginnings of a body to the OnExecute method:  
   
-    ```vb  
+    ```csharp
     // Obtain the first step in the Plan from the provided context  
     DeploymentStep nextStep = context.PlanHandle.Head;  
     int batchId = 0;  
@@ -173,7 +172,7 @@ Next, start to add code to the class.
   
     ```  
   
-    In this code, we define a few local variables, and set up the loop that will handle processing of all the steps in the deployment plan. After the loop completes, we will have to do some post-processing, and then will drop the temporary table that we created during deployment to track progress as the plan executed. Key types here are: [DeploymentStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentstep) and [DeploymentScriptStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentscriptstep). A key method is AddAfter.  
+    In this code, we define a few local variables, and set up the loop that handles processing of all the steps in the deployment plan. After the loop completes, we will have to do some post-processing, and then will drop the temporary table that we created during deployment to track progress as the plan executed. Key types here are: [DeploymentStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentstep) and [DeploymentScriptStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentscriptstep). A key method is AddAfter.  
   
 3.  Now add the additional step processing, to replace the comment that reads "Add additional step processing here":  
   
@@ -240,7 +239,7 @@ Next, start to add code to the class.
   
     ```  
   
-    The code comments explain the processing. At a high-level, this code looks for the steps that you care about, skipping others and stopping when you reach the beginning of the post-deployment steps. If the step contains statements that we must surround with conditionals, we will perform additional processing. Key types, methods, and properties include the following: [BeginPreDeploymentScriptStep](/dotnet/api/microsoft.sqlserver.dac.deployment.beginpredeploymentscriptstep), [BeginPostDeploymentScriptStep](/dotnet/api/microsoft.sqlserver.dac.deployment.beginpostdeploymentscriptstep), [TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject), [TSqlScript](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlscript), Script, [DeploymentScriptDomStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep), and [SqlPrintStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqlprintstep).  
+    The code comments explain the processing. At a high-level, this code looks for the steps that you care about, skipping others and stopping when you reach the beginning of the post-deployment steps. If the step contains statements that we must surround with conditionals, we perform additional processing. Key types, methods, and properties include the following components from the DacFx library: [BeginPreDeploymentScriptStep](/dotnet/api/microsoft.sqlserver.dac.deployment.beginpredeploymentscriptstep), [BeginPostDeploymentScriptStep](/dotnet/api/microsoft.sqlserver.dac.deployment.beginpostdeploymentscriptstep), [TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject), [TSqlScript](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlscript), Script, [DeploymentScriptDomStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep), and [SqlPrintStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqlprintstep).  
   
 4.  Now, add the batch processing code by replacing the comment that reads "Add batch processing here":  
   
@@ -341,9 +340,12 @@ Next, start to add code to the class.
   
     ```  
   
-    If our processing found one or more steps that we surrounded with a conditional statement, we must add statements to the deployment script to define SQLCMD variables. The first variable, CompletedBatches, contains a unique name for the temporary table that the deployment script uses to keep track of which batches were successfully completed when the script was executed. The second variable, TotalBatchCount, contains the total number of batches in the deployment script.  
+    If our processing found one or more steps that we surrounded with a conditional statement, we must add statements to the deployment script to define SQLCMD variables.
+    The variables are:
+    - **CompletedBatches** contains a unique name for the temporary table that the deployment script uses to keep track of which batches are successfully completed when the script executes
+    - **TotalBatchCount** contains the total number of batches in the deployment script
   
-    Additional types, properties, and methods of interest include:  
+    Other types, properties, and methods of interest include:  
   
     StringBuilder, [DeploymentScriptStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentscriptstep), and AddBefore.  
   
@@ -355,10 +357,10 @@ Next, start to add code to the class.
   
     |**Method**|**Description**|  
     |--------------|-------------------|  
-    |CreateExecuteSQL|Define the CreateExecuteSQL method to surround a provided statement with an EXEC sp_executesql statement. Key types, methods, and properties include the following: [ExecuteStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.executestatement), [ExecutableProcedureReference](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.executableprocedurereference), [SchemaObjectName](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname), [ProcedureReference](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.procedurereference), and [ExecuteParameter](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.executeparameter).|  
-    |CreateCompletedBatchesName|Define the CreateCompletedBatchesName method. This method creates the name that will be inserted into the temporary table for a batch.Key types, methods, and properties include the following: [SchemaObjectName](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname).|  
-    |IsStatementEscaped|Define the IsStatementEscaped method. This method determines whether the type of model element requires the statement to be wrapped in an EXEC sp_executesql statement before it can be enclosed within an IF statement. Key types, methods, and properties include the following: TSqlObject.ObjectType, ModelTypeClass, and the TypeClass property for the following model types: Schema, Procedure, View,  TableValuedFunction, ScalarFunction, DatabaseDdlTrigger, DmlTrigger, ServerDdlTrigger.|  
-    |CreateBatchCompleteInsert|Define the CreateBatchCompleteInsert method. This method creates the INSERT statement that will be added to the deployment script to track progress of script execution. Key types, methods, and properties include the following: InsertStatement, NamedTableReference, ColumnReferenceExpression, ValuesInsertSource, and RowValue.|  
+    |CreateExecuteSQL|Define the CreateExecuteSQL method to surround a provided statement with an EXEC sp_executesql statement. Key types, methods, and properties include the following DacFx API components: [ExecuteStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.executestatement), [ExecutableProcedureReference](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.executableprocedurereference), [SchemaObjectName](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname), [ProcedureReference](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.procedurereference), and [ExecuteParameter](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.executeparameter).|  
+    |CreateCompletedBatchesName|Define the CreateCompletedBatchesName method. This method creates the name that is inserted into the temporary table for a batch.Key types, methods, and properties include the following DacFx API components: [SchemaObjectName](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname).|  
+    |IsStatementEscaped|Define the IsStatementEscaped method. This method determines whether the type of model element requires the statement to be wrapped in an EXEC sp_executesql statement before it can be enclosed within an IF statement. Key types, methods, and properties include the following DacFx API components: TSqlObject.ObjectType, ModelTypeClass, and the TypeClass property for the following model types: Schema, Procedure, View,  TableValuedFunction, ScalarFunction, DatabaseDdlTrigger, DmlTrigger, ServerDdlTrigger.|  
+    |CreateBatchCompleteInsert|Define the CreateBatchCompleteInsert method. This method creates the INSERT statement that is added to the deployment script to track progress of script execution. Key types, methods, and properties include the following DacFx API components: InsertStatement, NamedTableReference, ColumnReferenceExpression, ValuesInsertSource, and RowValue.|  
     |CreateIfNotExecutedStatement|Define the CreateIfNotExecutedStatement method. This method generates an IF statement that checks to see if the temporary batches executes table indicates that this batch has already been executed. Key types, methods, and properties include the following: IfStatement, ExistsPredicate, ScalarSubquery, NamedTableReference, WhereClause, ColumnReferenceExpression, IntegerLiteral, BooleanComparisonExpression, and BooleanNotExpression.|  
     |GetStepInfo|Define the GetStepInfo method. This method extracts information about the model element used to create the step's script, in addition to the step name. Types and methods of interest include the following: [DeploymentPlanContributorContext](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext), [DeploymentScriptDomStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep), [TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject), [CreateElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.createelementstep), [AlterElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.alterelementstep), and [DropElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.dropelementstep).|  
     |GetElementName|Creates a formatted name for a TSqlObject.|  
@@ -636,9 +638,9 @@ To install a deployment contributor, you must copy the assembly and associated .
   
 #### To install the MyOtherDeploymentContributor assembly  
   
-1.  Next, you will copy the assembly information to the Extensions directory. When Visual Studio starts, it will identify any extensions in the %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions directory and subdirectories, and make them available for use.  
+1.  Next, you will copy the assembly information to the Extensions directory. When Visual Studio 2022 starts, it will identify any extensions in the %Program Files%\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\Extensions\Microsoft\SQLDB\DAC directory and subdirectories, and make them available for use.
   
-2.  Copy the **MyOtherDeploymentContributor.dll** assembly file from the output directory to the %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions directory. By default, the path of your compiled .dll file is YourSolutionPath\YourProjectPath\bin\Debug or YourSolutionPath\YourProjectPath\bin\Release.  
+2.  Copy the **MyOtherDeploymentContributor.dll** assembly file from the output directory to the %Program Files%\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\Extensions\Microsoft\SQLDB\DAC directory. By default, the path of your compiled .dll file is YourSolutionPath\YourProjectPath\bin\Debug or YourSolutionPath\YourProjectPath\bin\Release.  
   
 ## <a name="TestDeploymentContributor"></a>Run or Test your Deployment Contributor  
 To run or test your deployment contributor, you must perform the following tasks:  
@@ -648,11 +650,11 @@ To run or test your deployment contributor, you must perform the following tasks
 -   Deploy the database project by using MSBuild and providing the appropriate parameters.  
   
 ### Add Properties to the SQL Project (.sqlproj) File  
-You must always update the SQL project file to specify the ID of the contributors you wish to run. You can do this in one of two ways:  
+You must always update the SQL project file to specify the ID of the contributors you wish to run. You can do update the SQL project in one of two ways:  
   
 1.  You can manually modify the .sqlproj file to add the required arguments. You might choose to do this if your contributor does not have any contributor arguments required for configuration, or if you do not intend to reuse the build contributor across a large number of projects. If you choose this option, add the following statements to the .sqlproj file after the first Import node in the file:  
   
-    ```  
+    ```xml
     <PropertyGroup>  
       <DeploymentContributors>  
         $(DeploymentContributors); MyOtherDeploymentContributor.RestartableScriptContributor  
@@ -664,11 +666,11 @@ You must always update the SQL project file to specify the ID of the contributor
   
     1.  Navigate to %Program Files%\MSBuild.  
   
-    2.  Create a new folder "MyContributors" where your targets files will be stored.  
+    2.  Create a new folder "MyContributors" where your targets files are stored.  
   
     3.  Create a new file "MyContributors.targets" inside this directory, add the following text to it and save the file:  
   
-        ```  
+        ```xml
         <?xml version="1.0" encoding="utf-8"?>  
   
         <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -681,7 +683,7 @@ You must always update the SQL project file to specify the ID of the contributor
   
     4.  Inside the .sqlproj file for any project you want to run contributors, import the targets file by adding the following statement to the .sqlproj file after the \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> node in the file :  
   
-        ```  
+        ```xml
         <Import Project="$(MSBuildExtensionsPath)\MyContributors\MyContributors.targets " />  
   
         ```  
@@ -695,7 +697,7 @@ After you have followed one of these approaches, you can use MSBuild to pass in 
   
 #### To deploy your SQL project and generate a deployment report  
   
--   Your project can be published or deployed as normal inside Visual Studio. Simply open a solution containing your SQL project and choose the Publish... option from the right-click context menu for the project, or use F5 for a debug deployment to LocalDB. In this example we will use the "Publish..." dialog to generate a deployment script.  
+-   Your project can be published or deployed as normal inside Visual Studio. Simply open a solution containing your SQL project and choose the Publish... option from the right-click context menu for the project, or use F5 for a debug deployment to LocalDB. In this example we use the "Publish..." dialog to generate a deployment script.  
   
     1.  Open Visual Studio and open the solution containing your SQL Project.  
   
@@ -703,11 +705,11 @@ After you have followed one of these approaches, you can use MSBuild to pass in 
   
     3.  Set the server name and database name to publish to.  
   
-    4.  Choose **Generate Script** from the options at the bottom of the dialog. This will create a script that can be used for deployment. We will examine this to verify that our IF statements have been added in order to make the script restartable.  
+    4.  Choose **Generate Script** from the options at the bottom of the dialog. This action creates a script that can be used for deployment. We can examine this script to verify that our IF statements have been added in order to make the script restartable.  
   
     5.  Examine the resulting deployment script. Just before the section labeled "Pre-Deployment Script Template", you should see something that resembles the following Transact-SQL syntax:  
   
-        ```  
+        ```sql
         :setvar CompletedBatches __completedBatches_CompareProjectDB_cd1e348a-8f92-44e0-9a96-d25d65900fca  
         :setvar TotalBatchCount 17  
         GO  
@@ -725,9 +727,9 @@ After you have followed one of these approaches, you can use MSBuild to pass in 
   
         ```  
   
-        Later in the deployment script, around each batch, you see an IF statement that surrounds the original statement. For example, the following might appear for a CREATE SCHEMA statement:  
+        Later in the deployment script, around each batch, you see an IF statement that surrounds the original statement. For example, the following T-SQL script might appear for a CREATE SCHEMA statement:  
   
-        ```  
+        ```sql
         IF NOT EXISTS (SELECT 1  
                        FROM   [tempdb].[dbo].[$(CompletedBatches)]  
                        WHERE  [BatchId] = 0)  
@@ -742,9 +744,9 @@ After you have followed one of these approaches, you can use MSBuild to pass in 
   
         ```  
   
-        Notice that CREATE SCHEMA is one of the statements that must be enclosed within an EXECUTE sp_executesql statement within the IF statement. Statements such as CREATE TABLE do not require the EXECUTE sp_executesql statement and will resemble the following example:  
+        Notice that CREATE SCHEMA is one of the statements that must be enclosed within an EXECUTE sp_executesql statement within the IF statement. Statements such as CREATE TABLE do not require the EXECUTE sp_executesql statement and resembles the following example:  
   
-        ```  
+        ```sql
         IF NOT EXISTS (SELECT 1  
                        FROM   [tempdb].[dbo].[$(CompletedBatches)]  
                        WHERE  [BatchId] = 1)  
@@ -767,7 +769,7 @@ After you have followed one of these approaches, you can use MSBuild to pass in 
         > If you deploy a database project that is identical to the target database, the resulting report will not be very meaningful. For more meaningful results, either deploy changes to a database or deploy a new database.  
   
 ## Command-line deployment using generated dacpac file  
-Once a SQL project has been built, a dacpac file is created that can be used to deploy the schema from the command line, and which can enable deployment from a different machine such as a build machine. SqlPackage is a command-line utility that enables deployment of dacpacs with a full range of options that enable users to deploy a dacpac or generate a deployment script, among other actions. For more information, see [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md).  
+The ouput artifact from a SQL project build is a dacpac file. A dacpac file can be used to deploy the schema from the command line, and which can enable deployment from a different machine such as a build machine. SqlPackage is a command-line utility with a full range of options that enables users to deploy a dacpac or generate a deployment script, among other actions. For more information, see [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md).  
   
 > [!NOTE]  
 > To successfully deploy dacpacs built from projects with the DeploymentContributors property defined, the DLL(s) containing your deployment contributor(s) must be installed on the machine being used. This is because they have been marked as required for the deployment to complete successfully.  
@@ -779,7 +781,7 @@ You can experiment with other types of modifications to deployment plans before 
   
 -   Adding an extended property to all database objects that associate a version number with them.  
   
--   Adding or removing additional diagnostic print statements or comments from deployment scripts.  
+-   Adding or removing extra diagnostic print statements or comments from deployment scripts.  
   
 ## See Also  
 [Customize Database Build and Deployment by Using Build and Deployment Contributors](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  

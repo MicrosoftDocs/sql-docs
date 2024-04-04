@@ -55,7 +55,7 @@ A placeholder that indicates that a maximum of 50 arguments can be specified.
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 `xp_sprintf` returns the following message:
 
@@ -67,7 +67,7 @@ The command(s) completed successfully.
 
 Requires membership in the **public** role.
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [General extended stored procedures (Transact-SQL)](general-extended-stored-procedures-transact-sql.md)

@@ -3,7 +3,7 @@ title: "Back up to URL best practices & troubleshooting for S3-compatible object
 description: Learn about best practices and troubleshooting tips for SQL Server backup and restores to S3-compatible object storage.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 05/24/2022
+ms.date: 11/28/2023
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
@@ -29,14 +29,14 @@ Following are some quick ways to troubleshoot errors when backing up to or resto
 Here's an example of a virtual host URL formed correctly when issuing a T-SQL backup query such as follows:
 
 ```sql
-BACKUP DATABASE AdventureWorks2019
+BACKUP DATABASE AdventureWorks2022
 TO URL = 's3://<bucketName>.<virtualHost>/<pathToBackup>/<backupFileName>' 
 ```
 
 Or for URL path style:
 
 ```sql
-BACKUP DATABASE AdventureWorks2019
+BACKUP DATABASE AdventureWorks2022
 TO URL = 's3://<domainName>/<bucketName>/<pathToBackup>/<backupFileName>';
 ```
 
@@ -47,15 +47,15 @@ Review in the URL:
 1. `<bucketName>` is the name of this bucket where the backup is written. This must be created before running the backup T-SQL. The backup T-SQL doesn't create the bucket for the customer. For example, if the user doesn't create the bucket 'nonExistingBucket' beforehand and runs a T-SQL statement as follows:
     
     ```sql
-    BACKUP DATABASE AdventureWorks2019
-    TO URL = 's3://<your-endpoint>/nonExistingBucket/AdventureWorks2019.bak';
+    BACKUP DATABASE AdventureWorks2022
+    TO URL = 's3://<your-endpoint>/nonExistingBucket/AdventureWorks2022.bak';
     ```
     
     A URL that is not correctly formed may return the following:
     
     ```
     Msg 3201, Level 16, State 1, Line 50
-    Cannot open backup device 's3://<your-endpoint>/nonExistingBucket/AdventureWorks2019.bak'. Operating system error 50(The request is not supported.).
+    Cannot open backup device 's3://<your-endpoint>/nonExistingBucket/AdventureWorks2022.bak'. Operating system error 50(The request is not supported.).
     Msg 3013, Level 16, State 1, Line 50
     BACKUP DATABASE is terminating abnormally.
     ```
@@ -63,18 +63,18 @@ Review in the URL:
 1. The `<pathToBackup>` need not exist before running the backup T-SQL. It is created in the storage server automatically. For example, if the user creates the bucket 'existingBucket' beforehand and not the path `'existingBucket/sqlbackups'`, the following will still run successfully:
 
 ```sql
-BACKUP DATABASE AdventureWorks2019
-TO URL =  's3://<your-endpoint>/existingBucket/sqlbackups/AdventureWorks2019.bak';
+BACKUP DATABASE AdventureWorks2022
+TO URL =  's3://<your-endpoint>/existingBucket/sqlbackups/AdventureWorks2022.bak';
 ```
 
 ### Create a server-level credential prior to running backup/restore
 
-Before running backup/restore TSQL queries to S3-compatible storage, you must create a server level credential. This credential needs to contain the Access key and Secret Key set up by customers on their S3-compatible object storage server prior to issuing backup/restore queries.
+Before running backup/restore Transact-SQL queries to S3-compatible storage, you must create a server level credential. This credential needs to contain the Access key and Secret Key set up by customers on their S3-compatible object storage server prior to issuing backup/restore queries.
 
-An example of a credential that needs to be created for URL: `s3://<your-endpoint>/myS3Bucket/sqlbackups/AdventureWorks2019.bak` would be the following:
+An example of a credential that needs to be created for URL: `s3://<your-endpoint>/myS3Bucket/sqlbackups/AdventureWorks2022.bak` would be the following:
 
 ```sql
-CREATE CREDENTIAL [s3://<your-endpoint>/myS3Bucket/sqlbackups/AdventureWorks2019.bak]
+CREATE CREDENTIAL [s3://<your-endpoint>/myS3Bucket/sqlbackups/AdventureWorks2022.bak]
 WITH IDENTITY = 'S3 Access Key',
 SECRET = '<AccessKeyID>:<SecretKeyID>';
 ```
@@ -83,14 +83,14 @@ In this statement `<AccessKeyID>` is not allowed to contain a `:` character. If 
 
 ```
 Msg 3201, Level 16, State 1, Line 50
-Cannot open backup device 's3://<your-endpoint>/myS3Bucket/sqlbackups/AdventureWorks2019.bak'. Operating system error 50(The request is not supported.).
+Cannot open backup device 's3://<your-endpoint>/myS3Bucket/sqlbackups/AdventureWorks2022.bak'. Operating system error 50(The request is not supported.).
 Msg 3013, Level 16, State 1, Line 50
 BACKUP DATABASE is terminating abnormally.
 ```
 
-The name of the credential is not required to match the exact URL path. Here is an example how credential lookup will work. If we need to query path `s3://10.193.16.183:9000/myS3Bucket/sqlbackups/AdventureWorks2019.bak`, the following credential names are tried:
+The name of the credential is not required to match the exact URL path. Here is an example how credential lookup will work. If we need to query path `s3://10.193.16.183:9000/myS3Bucket/sqlbackups/AdventureWorks2022.bak`, the following credential names are tried:
 
-1. `s3://10.193.16.183:8787/myS3Bucket/sqlbackups/AdventureWorks2019.bak`
+1. `s3://10.193.16.183:8787/myS3Bucket/sqlbackups/AdventureWorks2022.bak`
 1. `s3://10.193.16.183:8787/myS3Bucket/sqlbackups`
 1. `s3://10.193.16.183:8787/myS3Bucket`
 
@@ -100,11 +100,11 @@ If there are multiple credentials matching search, such as more specific `s3://1
 
 Currently, the BACKUP TSQL option FILE_SNAPSHOT is not supported for S3-compatible object storage. This is an Azure Blob Storage-specific option.
 
-If the user runs the following TSQL for example:
+If the user runs the following Transact-SQL for example:
 
 ```sql
-BACKUP DATABASE AdventureWorks2019
-TO URL = 's3://<your-endpoint>/myS3Bucket/sqlbackups/AdventureWorks2019.bak'
+BACKUP DATABASE AdventureWorks2022
+TO URL = 's3://<your-endpoint>/myS3Bucket/sqlbackups/AdventureWorks2022.bak'
 WITH FILE_SNAPSHOT;
 ```
 
@@ -131,7 +131,7 @@ BACKUP DATABASE is terminating abnormally.
 Current guidance for user's backup large databases is use multiple stripes for the database backup, each of allowable sizes less than or equal to 100 GB. The BACKUP T-SQL supports striping up to 64 URLs, for example:
 
 ```sql
-BACKUP DATABASE AdventureWorks2019
+BACKUP DATABASE AdventureWorks2022
 TO URL = 's3://<endpoint>:<port>/<bucket>/<path>/<db_file>_1.bak',
 URL = 's3://<endpoint>:<port>/<bucket>/<path>/<db_file>_2.bak';
 ```
@@ -139,8 +139,8 @@ URL = 's3://<endpoint>:<port>/<bucket>/<path>/<db_file>_2.bak';
 An alternative option for users is to use the 'COMPRESSION' option:
 
 ```sql
-BACKUP DATABASE AdventureWorks2019
-TO URL = 's3://<your-endpoint>/myS3Bucket/sqlbackups/AdventureWorks2019.bak'
+BACKUP DATABASE AdventureWorks2022
+TO URL = 's3://<your-endpoint>/myS3Bucket/sqlbackups/AdventureWorks2022.bak'
 WITH COMPRESSION;
 ```
 
@@ -185,7 +185,20 @@ Up to 50 files can be stored in this location, if the folder is not created, whe
 2022-02-05 00:32:10.88 Server      Error searching first file in /var/opt/mssql/security/ca-certificates: 3(The system cannot find the path specified.)
 ```
 
-## Next steps
+### Object Lock - delete retention is not supported
+
+The SQL Server backup to S3-compatible object storage feature does not support Object Lock, also called the Delete Retention feature. Object Lock prevents files from being deleted or overwritten for the duration of its retention period.
+
+The bucket and folder location targeted by your backup operation must not have Object Lock enabled. If this feature is enabled and configured in your S3-compatible object storage, the backup operation fails with the following message:
+
+```output
+Msg 3202, Level 16, State 1, Line 13
+Write on 's3://<your-endpoint>/nonExistingBucket/AdventureWorks2022.bak' failed: 87 (The parameter is incorrect).
+Msg 3013, Level 16, State 1, Line 13
+BACKUP DATABASE is terminating abnormally.
+```
+
+## Related content
 
  - [SQL Server backup and restore with S3-compatible object storage](sql-server-backup-and-restore-with-s3-compatible-object-storage.md)  
  - [SQL Server backup to URL for S3-compatible object storage](sql-server-backup-to-url-s3-compatible-object-storage.md)

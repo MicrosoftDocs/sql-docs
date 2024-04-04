@@ -1,39 +1,35 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/11/2023
+ms.date: 11/29/2023
 ms.service: sql
 ms.topic: include
+ms.custom:
+  - linux-related-content
 ---
 <a id="RHEL"></a>
 
 Use the following steps to install the **mssql-tools18** on Red Hat Enterprise Linux.
 
-1. Enter superuser mode.
-
-   ```bash
-   sudo su
-   ```
-
 1. Download the Microsoft Red Hat repository configuration file.
+
+   - For Red Hat 9, use the following command:
+
+     ```bash
+     curl https://packages.microsoft.com/config/rhel/9/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
+     ```
 
    - For Red Hat 8, use the following command:
 
      ```bash
-     curl https://packages.microsoft.com/config/rhel/8/prod.repo > /etc/yum.repos.d/mssql-release.repo
+     curl https://packages.microsoft.com/config/rhel/8/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
      ```
 
    - For Red Hat 7, use the following command:
 
      ```bash
-     curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
+     curl https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
      ```
-
-1. Exit superuser mode.
-
-   ```bash
-   exit
-   ```
 
 1. If you had a previous version of **mssql-tools** installed, remove any older unixODBC packages.
 
@@ -44,7 +40,7 @@ Use the following steps to install the **mssql-tools18** on Red Hat Enterprise L
 1. Run the following commands to install **mssql-tools18** with the unixODBC developer package.
 
    ```bash
-   sudo yum install -y mssql-tools18 unixodbc-dev
+   sudo yum install -y mssql-tools18 unixODBC-devel
    ```
 
    > [!NOTE]  

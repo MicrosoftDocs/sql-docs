@@ -1,6 +1,6 @@
 ---
-title: "PathName Property (WMI MSReportServer_ConfigurationSetting)"
-description: "PathName Property (WMI MSReportServer_ConfigurationSetting)"
+title: "PathName property (WMI MSReportServer_ConfigurationSetting)"
+description: "PathName property (WMI MSReportServer_ConfigurationSetting)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -14,7 +14,7 @@ apilocation: "reportingservices.mof"
 apiname: "PathName Property"
 apitype: MOFDef
 ---
-# ConfigurationSetting Property - PathName
+# ConfigurationSetting property - PathName
   Specifies the installation path of a report server instance. Read-only.  
   
 ## Syntax  
@@ -27,16 +27,16 @@ public Dim PathName As String
 public string PathName;  
 ```  
   
-## Property Values  
+## Property values  
  A **String** object that represents the installation path.  
   
-## Example Code  
- [MSReportServer_ConfigurationSetting Class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
+## Example code  
+ [MSReportServer_ConfigurationSetting class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+## Related content  
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

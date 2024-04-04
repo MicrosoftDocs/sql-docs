@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "system stored procedures [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 # System stored procedures (Transact-SQL)
 
@@ -65,7 +65,7 @@ In [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)], many administrati
 > Unless specifically documented otherwise, all system stored procedures return a value of `0` to indicate success. To indicate failure, a nonzero value is returned.
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+> [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
 ## API system stored procedures
 
@@ -740,11 +740,10 @@ The following stored procedures aren't documented:
     :::column-end:::
 :::row-end:::
 
-## See also
+## Related content
 
 - [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)
-- [Stored Procedures (Database Engine)](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)
-- [Running stored procedures (OLE DB)](../../relational-databases/native-client/ole-db/stored-procedures-running.md)
-- [Running stored procedures](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
+- [Stored Procedures (Database Engine)](../stored-procedures/stored-procedures-database-engine.md)
+- [Running stored procedures (OLE DB)](../native-client/ole-db/stored-procedures-running.md)
+- [Running stored procedures](../native-client-odbc-stored-procedures/running-stored-procedures.md)
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
-- [Running stored procedures](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)

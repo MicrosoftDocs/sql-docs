@@ -56,7 +56,7 @@ fn_trace_gettable ( 'filename' , number_files )
  The following example calls `fn_trace_gettable` inside the `FROM` clause of a `SELECT...INTO` statement.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT * INTO temp_trc  
 FROM fn_trace_gettable('c:\temp\mytrace.trc', default);  
@@ -67,7 +67,7 @@ GO
  The following example calls the function as part of a `SELECT...INTO` statement and returns a table with an `IDENTITY` column that can be loaded into the table `temp_trc`.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT IDENTITY(int, 1, 1) AS RowNumber, * INTO temp_trc  
 FROM fn_trace_gettable('c:\temp\mytrace.trc', default);  

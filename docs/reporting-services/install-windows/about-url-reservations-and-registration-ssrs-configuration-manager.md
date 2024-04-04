@@ -1,10 +1,11 @@
 ---
-title: "URL Reservations & Registration (Configuration Manager)"
+title: "URL reservations & registration (Report Server Configuration Manager)"
 description: "URLs for Reporting Services applications are defined as URL reservations in HTTP.SYS."
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 01/16/2020
 ms.service: reporting-services
+ms.subservice: report-server
 ms.topic: conceptual
 ms.custom: updatefrequency5
 helpviewer_keywords:
@@ -12,14 +13,14 @@ helpviewer_keywords:
   - "URL registration"
   - "Report Server service, URL reservations"
 ---
-# About URL Reservations and Registration  (Report Server Configuration Manager)
+# About URL reservations and registration (Report Server Configuration Manager)
   URLs for Reporting Services applications are defined as URL reservations in HTTP.SYS. A URL reservation defines the syntax of a URL endpoint to a Web application. URL reservations are defined for both the Report Server Web service and the web portal when you configure the applications on the report server. URL reservations are created for you automatically when configure URLs through Setup or the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool:  
   
--   Setup will create URL reservations using default values. If Setup installs the default configuration, it will reserve two URLs; one for the Report Server Web service, and another for the web portal. You can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to add more URLs or modify the default URLs that Setup creates.  
+-   Setup creates URL reservations using default values. If Setup installs the default configuration, it reserves two URLs; one for the Report Server Web service, and another for the web portal. You can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to add more URLs or modify the default URLs that Setup creates.  
   
--   The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool will create a URL reservation based on the URL you specify in the **Web Service URL** or **Web Portal URL** pages in the tool.  
+-   The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool creates a URL reservation based on the URL you specify in the **Web Service URL** or **Web Portal URL** pages in the tool.  
   
- Both Setup and the tool will also assign permissions on the URL to the Report Server service, check for duplicate instances, and add the URL reservation to HTTP.SYS. Never create or modify a Reporting Services URL reservation directly using HttpCfg.exe or other tool. If you skip a step or set an invalid value, you will encounter problems that might be difficult to diagnose or fix.  
+ Both Setup and the tool also assign permissions on the URL to the Report Server service, check for duplicate instances, and add the URL reservation to HTTP.SYS. Never create or modify a Reporting Services URL reservation directly using HttpCfg.exe or other tool. If you skip a step or set an invalid value, you encounter problems that might be difficult to diagnose or fix.  
   
 > [!NOTE]  
 > HTTP.SYS is an operating system component that listens for network requests and routes them to a request queue. In this release of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], HTTP.SYS establishes and maintains the request queue for the Report Server Web service and the web portal. Internet Information Services (IIS) is no longer used to host or access [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications. For more information about HTTP.SYS functionality, see [HTTP Server API](/windows/win32/http/http-api-start-page).  
@@ -31,36 +32,36 @@ helpviewer_keywords:
   
 -   Web portal  
   
--   Reports that have been published to a report server  
+-   Reports published to a report server  
   
- Other published URL-addressable items, such as shared data sources, should not be accessed through URLs as stand-alone items. The report server does not display those items in a meaningful format when viewed in a browser window.  
+ Other published URL-addressable items, such as shared data sources, shouldn't be accessed through URLs as stand-alone items. The report server doesn't display those items in a meaningful format when viewed in a browser window.  
   
 > [!NOTE]  
-> This article does not describe URL access to specific reports that are stored on the report server. For more information about URL access to these items, see [Access Report Server Items Using URL Access](../../reporting-services/access-report-server-items-using-url-access.md).  
+> This article does not describe URL access to specific reports that are stored on the report server. For more information about URL access to these items, see [Access report server items by using URL access](../../reporting-services/access-report-server-items-using-url-access.md).  
   
 ##  <a name="URLreservation"></a> URL reservation and registration  
- A URL reservation defines the URLs that can be used to access a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] will reserve one or more URLs for the Report Server Web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] in HTTP.SYS, and then register them when the service starts. By appending parameters to the URL, you can open reports through the Web service. Reservations and registration are provided by HTTP.SYS. For more information, see [Namespace Reservations, Registration, and Routing](/windows/win32/http/namespace-reservations-registrations-and-routing).  
+ A URL reservation defines the URLs that can be used to access a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reserves one or more URLs for the Report Server Web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] in HTTP.SYS, and then register them when the service starts. By appending parameters to the URL, you can open reports through the Web service. Reservations and registration are provided by HTTP.SYS. For more information, see [Namespace reservations, registration, and routing](/windows/win32/http/namespace-reservations-registrations-and-routing).  
   
  *URL reservation* is a process by which a URL endpoint to a Web application is created and stored in HTTP.SYS. HTTP.SYS is the common repository of all URL reservations that are defined on a computer and defines a set of common rules that guarantee unique URL reservations.  
   
- *URL registration* occurs when the service starts. The request queue is created and HTTP.SYS begins routing requests to that queue. A URL endpoint must be registered before requests that are directed to that endpoint are added to the queue. When the Report Server service starts, it will register all URLs that it has reserved for all enabled applications. This means that the Web service must be enabled in order for registration to occur. If you set the **WebServiceAndHTTPAccessEnabled** property to **False** in the Surface Area Configuration for Reporting Services facet of Policy-Based Management, the URL for the Web service will not register when the service starts.  
+ *URL registration* occurs when the service starts. The request queue is created and HTTP.SYS begins routing requests to that queue. A URL endpoint must be registered before requests that are directed to that endpoint are added to the queue. When the Report Server service starts, it registers all URLs that it reserves for all enabled applications. So the Web service must be enabled in order for registration to occur. If you set the **WebServiceAndHTTPAccessEnabled** property to **False** in the Surface Area Configuration for Reporting Services facet of Policy-Based Management, the URL for the Web service doesn't register when the service starts.  
   
- URLs are unregistered if you stop the service or recycle the Web service or the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] application domain. If you modify a URL reservation while the service is running, the report server will recycle the application domain immediately so that the old URL can be unregistered and the new one put into use.  
+ URLs are unregistered if you stop the service or recycle the Web service or the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] application domain. If you modify a URL reservation while the service is running, the report server recycles the application domain immediately so that the old URL can be unregistered and the new one put into use.  
   
  A few simple examples illustrate the concept of a URL reservation and how it relates to URL addresses used for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications. A key point to notice is that the URL reservation has different syntax than the URL you use to access the application:  
   
 |URL Reservation in HTTP.SYS|URL|Explanation|  
 |---------------------------------|---------|-----------------|  
-|`https://+:80/reportserver`|`https://<computername>/reportserver`<br /><br /> `https://<IPAddress>/reportserver`<br /><br /> `https://localhost/reportserver`|The URL reservation specifies a wildcard (+) on port 80. This puts into the report server queue any incoming request that specifies a host that resolves to the report server computer on port 80. Notice that with this URL reservation, any number of URLs can be used to access the report server.<br /><br /> This is the default URL reservation for a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server for most operating systems.|  
+|`https://+:80/reportserver`|`https://<computername>/reportserver`<br /><br /> `https://<IPAddress>/reportserver`<br /><br /> `https://localhost/reportserver`|The URL reservation specifies a wildcard (+) on port 80. This puts into the report server queue any incoming request that specifies a host that resolves to the report server computer on port 80. Notice that with this URL reservation, any number of URLs can be used to access the report server.<br /><br /> This URL reservation is the default for a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server for most operating systems.|  
 |`https://123.45.67.0:80/reportserver`|`https://123.45.67.0/reportserver`|This URL reservation specifies an IP address and is much more restrictive than the wildcard URL reservation. Only URLs that include the IP address can be used to connect to the report server. Given this URL reservation, a request to a report server at `https://<computername>/reportserver` or `https://localhost/reportserver` would fail.|  
   
 ##  <a name="DefaultURLs"></a> Default URLs  
- If you install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in the default configuration, Setup will reserve URLs for the Report Server Web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. You can also accept these default values when you define URL reservations in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool. Default URLs will include an instance name if you install [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] or if you install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] as a named instance.  
+ If you install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in the default configuration, Setup reserves URLs for the Report Server Web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. You can also accept these default values when you define URL reservations in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool. Default URLs include an instance name if you install [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] or if you install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] as a named instance.  
   
 > [!IMPORTANT]  
 > The instance character is an underscore character (**_**).  
   
- URL reservations include a port number. The following operating systems will allow multiple Web applications to share a port:  
+ URL reservations include a port number. The following operating systems allow multiple Web applications to share a port:  
   
 -   [!INCLUDE[winserver2012](../../includes/winserver2012-md.md)] R2  
   
@@ -87,16 +88,17 @@ helpviewer_keywords:
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL reservations display the account of the URL reservation. The virtual service account is used for all URLs that are created for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications that run in the same instance.
   
  
- Anonymous access is disabled because the default security is **RSWindowsNegotiate**. For intranet access, report server URLs use network computer names. If you want to configure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] for Internet connections, you must use different settings. For more information about authentication, see [Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md).  
+ Anonymous access is disabled because the default security is **RSWindowsNegotiate**. For intranet access, report server URLs use network computer names. If you want to configure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] for Internet connections, you must use different settings. For more information about authentication, see [Authentication with the report server](../../reporting-services/security/authentication-with-the-report-server.md).  
   
 ##  <a name="URLlocalAdmin"></a> URLs for local administration  
  You can use `https://localhost/reportserver` or `https://localhost/reports` if you specified a strong or weak wildcard for the URL reservation.  
   
- The `https://localhost` URL is interpreted as `https://127.0.0.1`. If you pegged the URL reservation to a computer name or single IP address, you cannot use localhost unless you create an additional reservation for 127.0.0.1 on the local computer. Similarly, if localhost or 127.0.0.1 is disabled on your computer, you cannot use that URL.  
+ The `https://localhost` URL is interpreted as `https://127.0.0.1`. If you pegged the URL reservation to a computer name or single IP address, you can't use localhost unless you create an extra reservation for 127.0.0.1 on the local computer. Similarly, if localhost or 127.0.0.1 is disabled on your computer, you can't use that URL.  
   
- [!INCLUDE[winvista](../../includes/winvista-md.md)], [!INCLUDE[winserver2008](../../includes/winserver2008-md.md)] and later include new security features to minimize the risk of accidentally running programs with elevated privileges. Additional steps are necessary to enable local administration on these operating systems. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ [!INCLUDE[winvista](../../includes/winvista-md.md)], [!INCLUDE[winserver2008](../../includes/winserver2008-md.md)] and later include new security features to minimize the risk of accidentally running programs with elevated privileges. Extra steps are necessary to enable local administration on these operating systems. For more information, see [Configure a Native mode report server for local administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
-## See also  
- [Configure a URL  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [URL Reservation Syntax  &#40;Report Server Configuration Manager Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
+## Related content
+
+- [Configure a URL &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+- [URL Reservation Syntax &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
 

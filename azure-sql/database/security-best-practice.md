@@ -18,6 +18,8 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 This article provides best practices on how to solve common security requirements. Not all requirements are applicable to all environments, and you should consult your database and security team on which features to implement.
 
+[!INCLUDE [entra-id](../includes/entra-id.md)]
+
 ## Solve common security requirements
 
 This document provides guidance on how to solve common security requirements for new or existing applications using Azure SQL Database and Azure SQL Managed Instance. It's organized by high-level security areas. For addressing specific threats, refer to the [Common security threats and potential mitigations](#common-security-threats-and-potential-mitigations) section. Although some of the presented recommendations are applicable when migrating applications from on-premises to Azure, migration scenarios aren't the focus of this document.
@@ -50,7 +52,7 @@ This document is intended as a companion to our existing [Azure SQL Database sec
 Unless otherwise stated, we recommend you follow all best practices listed in each section to achieve the respective goal or requirement. To meet specific security compliance standards or best practices, important regulatory compliance controls are listed under the Requirements or Goals section wherever applicable. These are the security standards and regulations that are referenced in this paper:
 
 - [FedRAMP](https://www.fedramp.gov/documents/): AC-04, AC-06
-- [SOC](https://www.aicpa.org/interestareas/frc/assuranceadvisoryservices/sorhome.html): CM-3, SDL-3
+- [SOC](https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services): CM-3, SDL-3
 - [ISO/IEC 27001](https://www.iso27001security.com/html/27001.html): Access Control, Cryptography
 - [Microsoft Operational Security Assurance (OSA) practices](https://www.microsoft.com/securityengineering/osa/practices): Practice #1-6 and #9
 - [NIST Special Publication 800-53 Security Controls](https://csrc.nist.gov/Projects/risk-management/sp800-53-controls/release-search#/): AC-5, AC-6
@@ -63,10 +65,10 @@ We plan on continuing to update the recommendations and best practices listed he
 Authentication is the process of proving the user is who they claim to be. Azure SQL Database and SQL Managed Instance support two types of authentication:
 
 - SQL authentication
-- Azure Active Directory authentication
+- Microsoft Entra authentication
 
 > [!NOTE]  
-> Azure Active Directory authentication may not be supported for all tools and 3rd party applications.
+> Microsoft Entra authentication may not be supported for all tools and 3rd party applications.
 
 ### Central management for identities
 
@@ -78,73 +80,75 @@ Central identity management offers the following benefits:
 
 **How to implement**
 
-- Use Azure Active Directory (Azure AD) authentication for centralized identity management.
+- Use Microsoft Entra authentication for centralized identity management.
 
 **Best practices**
 
-- Create an Azure AD tenant and [create users](/azure/active-directory/fundamentals/add-users-azure-active-directory) to represent human users and create [service principals](/azure/active-directory/develop/app-objects-and-service-principals) to represent apps, services, and automation tools. Service principals are equivalent to service accounts in Windows and Linux.
+- Create a Microsoft Entra tenant and [create users](/azure/active-directory/fundamentals/add-users-azure-active-directory) to represent human users and create [service principals](/azure/active-directory/develop/app-objects-and-service-principals) to represent apps, services, and automation tools. Service principals are equivalent to service accounts in Windows and Linux.
 
-- Assign access rights to resources to Azure AD principals via group assignment: Create Azure AD groups, grant access to groups, and add individual members to the groups. In your database, create contained database users that map your Azure AD groups. To assign permissions inside the database, put the users that are associated with your Azure AD groups in database roles with the appropriate permissions.
-  - See the articles, [Configure and manage Azure Active Directory authentication with SQL](authentication-aad-configure.md) and [Use Azure AD for authentication with SQL](authentication-aad-overview.md).
+- Assign access rights to resources to Microsoft Entra principals via group assignment: Create Microsoft Entra groups, grant access to groups, and add individual members to the groups. In your database, create contained database users that map to your Microsoft Entra groups. To assign permissions inside the database, add the contained database users representing your groups to database roles, or grant permissions to them directly.
+  - See the articles, [Configure and manage Microsoft Entra authentication with SQL](authentication-aad-configure.md) and [Use Microsoft Entra authentication with SQL](authentication-aad-overview.md).
 
   > [!NOTE]  
-  > In SQL Managed Instance, you can also create logins that map to Azure AD principals in the `master` database. See [CREATE LOGIN (Transact-SQL)](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current&preserve-view=true).
+  > In SQL Managed Instance, you can also create logins that map to Microsoft Entra principals in the `master` database. See [CREATE LOGIN (Transact-SQL)](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current&preserve-view=true).
 
-- Using Azure AD groups simplifies permission management and both the group owner, and the resource owner can add/remove members to/from the group.
+- Using Microsoft Entra groups simplifies permission management and both the group owner, and the resource owner can add/remove members to/from the group.
 
-- Create a separate group for Azure AD administrators for each server or managed instance.
+- Create a separate group for Microsoft Entra administrators for each server or managed instance.
 
-  - See the article, [Provision an Azure Active Directory administrator for your server](authentication-aad-configure.md#provision-azure-ad-admin-sql-database).
+  - See the article, [Provision a Microsoft Entra administrator for your server](authentication-aad-configure.md#provision-azure-ad-admin-sql-database).
 
-- Monitor Azure AD group membership changes using Azure AD audit activity reports.
+- Monitor Microsoft Entra group membership changes using Microsoft Entra ID audit activity reports.
 
-- For a managed instance, a separate step is required to create an Azure AD admin.
-  - See the article, [Provision an Azure Active Directory administrator for your managed instance](authentication-aad-configure.md#provision-azure-ad-admin-sql-managed-instance).
+- For a managed instance, a separate step is required to create a Microsoft Entra admin.
+  - See the article, [Provision a Microsoft Entra administrator for your managed instance](authentication-aad-configure.md#provision-azure-ad-admin-sql-managed-instance).
 
 > [!NOTE]  
 >  
-> - Azure AD authentication is recorded in Azure SQL audit logs, but not in Azure AD sign-in logs.
+> - Microsoft Entra authentication is recorded in Azure SQL audit logs, but not in Microsoft Entra sign-in logs.
 > - Azure RBAC permissions granted in Azure do not apply to Azure SQL Database or SQL Managed Instance  permissions. Such permissions must be created/mapped manually using existing SQL permissions.
-> - On the client-side, Azure AD authentication needs access to the internet or via User Defined Route (UDR) to a virtual network.
-> - The Azure AD access token is cached on the client side and its lifetime depends on token configuration. See the article, [Configurable token lifetimes in Azure Active Directory](/azure/active-directory/develop/active-directory-configurable-token-lifetimes)
-> - For guidance on troubleshooting Azure AD Authentication issues, see the following blog: [Troubleshooting Azure AD](https://techcommunity.microsoft.com/t5/azure-sql-database/troubleshooting-problems-related-to-azure-ad-authentication-with/ba-p/1062991).
+> - On the client-side, Microsoft Entra authentication needs access to the internet or via User Defined Route (UDR) to a virtual network.
+> - The Microsoft Entra access token is cached on the client side and its lifetime depends on token configuration. See the article, [Configurable token lifetimes in Microsoft Entra ID](/azure/active-directory/develop/active-directory-configurable-token-lifetimes)
+> - For guidance on troubleshooting Microsoft Entra authentication issues, see the following blog: [Troubleshooting Microsoft Entra ID](https://techcommunity.microsoft.com/t5/azure-sql-database/troubleshooting-problems-related-to-azure-ad-authentication-with/ba-p/1062991).
 
-### Azure AD Multi-Factor Authentication
+<a name='azure-ad-multi-factor-authentication'></a>
+
+### Microsoft Entra multifactor authentication
 
 > Mentioned in: OSA Practice #2, ISO Access Control (AC)
 
-Azure AD Multi-Factor Authentication helps provides additional security by requiring more than one form of authentication.
+Microsoft Entra multifactor authentication helps provides additional security by requiring more than one form of authentication.
 
 **How to implement**
 
-- [Enable Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks) in Azure AD using Conditional Access and use interactive authentication.
+- [Enable multifactor authentication](/azure/active-directory/authentication/concept-mfa-howitworks) in Microsoft Entra ID using Conditional Access and use interactive authentication.
 
-- The alternative is to enable Multi-Factor Authentication for the entire Azure AD or AD domain.
+- The alternative is to enable multifactor authentication for the entire Microsoft Entra tenant or Active Directory domain.
 
 **Best practices**
 
-- Activate Conditional Access in Azure AD (requires Premium subscription).
-  - See the article, [Conditional Access in Azure AD](/azure/active-directory/conditional-access/overview).
+- Activate Conditional Access in Microsoft Entra ID (requires Premium subscription).
+  - See the article, [Conditional Access in Microsoft Entra ID](/azure/active-directory/conditional-access/overview).
 
-- Create Azure AD group(s) and enable Multi-Factor Authentication policy for selected groups using Azure AD Conditional Access.
+- Create Microsoft Entra group(s) and enable multifactor authentication policy for selected groups using Microsoft Entra Conditional Access.
   - See the article, [Plan Conditional Access Deployment](/azure/active-directory/conditional-access/plan-conditional-access).
 
-- Multi-Factor Authentication can be enabled for the entire Azure AD or for the whole Active Directory federated with Azure AD.
+- Multifactor authentication can be enabled for the entire Microsoft Entra tenant or for Active Directory federated with Microsoft Entra ID.
 
-- Use Azure AD Interactive authentication mode for Azure SQL Database and Azure SQL Managed Instance where a password is requested interactively, followed by Multi-Factor Authentication:
-  - Use Universal Authentication in SSMS. See the article, [Using Multi-factor Azure AD authentication with Azure SQL Database, SQL Managed Instance, Azure Synapse (SSMS support for Multi-Factor Authentication)](authentication-mfa-ssms-overview.md).
-  - Use Interactive Authentication supported in SQL Server Data Tools (SSDT). See the article, [Azure Active Directory support in SQL Server Data Tools (SSDT)](/sql/ssdt/azure-active-directory?view=azuresqldb-current&preserve-view=true).
-  - Use other SQL tools supporting Multi-Factor Authentication.
+- Use Microsoft Entra interactive authentication mode for Azure SQL Database and Azure SQL Managed Instance where a password is requested interactively, followed by multifactor authentication:
+  - Use universal authentication in SSMS. See the article, [Using Microsoft Entra multifactor authentication with Azure SQL Database, SQL Managed Instance, Azure Synapse (SSMS support for multifactor authentication)](authentication-mfa-ssms-overview.md).
+  - Use interactive authentication supported in SQL Server Data Tools (SSDT). See the article, [Microsoft Entra ID support in SQL Server Data Tools (SSDT)](/sql/ssdt/azure-active-directory?view=azuresqldb-current&preserve-view=true).
+  - Use other SQL tools supporting multifactor authentication.
     - SSMS Wizard support for export/extract/deploy database
     - [SqlPackage](/sql/tools/sqlpackage): option '/ua'
     - [sqlcmd Utility](/sql/tools/sqlcmd-utility): option -G (interactive)
     - [bcp Utility](/sql/tools/bcp-utility): option -G (interactive)
 
-- Implement your applications to connect to Azure SQL Database or Azure SQL Managed Instance using interactive authentication with Multi-Factor Authentication support.
-  - See the article, [Connect to Azure SQL Database with Azure AD Multi-Factor Authentication](active-directory-interactive-connect-azure-sql-db.md).
+- Implement your applications to connect to Azure SQL Database or Azure SQL Managed Instance using interactive authentication with multifactor authentication support.
+  - See the article, [Connect to Azure SQL Database with Microsoft Entra multifactor authentication](active-directory-interactive-connect-azure-sql-db.md).
 
   > [!NOTE]  
-  > This authentication mode requires user-based identities. In cases where a trusted identity model is used that is bypassing individual Azure AD user authentication (e.g. using managed identity for Azure resources), Multi-Factor Authentication does not apply.
+  > This authentication mode requires user-based identities. In cases where a trusted identity model is used that is bypassing individual Microsoft Entra user authentication (for example, using managed identity for Azure resources), multifactor authentication does not apply.
 
 ### Minimize the use of password-based authentication for users
 
@@ -154,12 +158,12 @@ Password-based authentication methods are a weaker form of authentication. Crede
 
 **How to implement**
 
-- Use an Azure AD integrated authentication that eliminates the use of passwords.
+- Use Microsoft Entra integrated authentication that eliminates the use of passwords.
 
 **Best practices**
 
-- Use single sign-on authentication using Windows credentials. Federate the on-premises AD domain with Azure AD and use integrated Windows authentication (for domain-joined machines with Azure AD).
-  - See the article, [SSMS support for Azure AD Integrated authentication](authentication-aad-configure.md#active-directory-integrated-authentication).
+- Use single sign-on authentication using Windows credentials. Federate the on-premises Active Directory domain with Microsoft Entra ID and use integrated Windows authentication (for domain-joined machines with Microsoft Entra ID).
+  - See the article, [SSMS support for Microsoft Entra integrated authentication](authentication-aad-configure.md#azure-active-directory---integrated).
 
 ### Minimize the use of password-based authentication for applications
 
@@ -180,7 +184,7 @@ Password-based authentication methods are a weaker form of authentication. Crede
 - Use cert-based authentication for an application.
   - See this [code sample](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/security/azure-active-directory-auth/token).
 
-- Use Azure AD authentication for integrated federated domain and domain-joined machine (see section above).
+- Use Microsoft Entra authentication for integrated federated domain and domain-joined machine (see section above).
   - See the [sample application for integrated authentication](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/security/azure-active-directory-auth/integrated).
 
 ### Protect passwords and secrets
@@ -189,7 +193,7 @@ For cases when passwords aren't avoidable, make sure they're secured.
 
 **How to implement**
 
-- Use Azure Key Vault to store passwords and secrets. Whenever applicable, use Multi-Factor Authentication for Azure SQL Database with Azure AD users.
+- Use Azure Key Vault to store passwords and secrets. Whenever applicable, use multifactor authentication for Azure SQL Database with Microsoft Entra users.
 
 **Best practices**
 
@@ -344,7 +348,7 @@ For the readers that want to dive deeper into SoD, we recommend the following re
 - For Azure Resource Management:
   - [Azure built-in roles](/azure/role-based-access-control/built-in-roles)
   - [Azure custom roles](/azure/role-based-access-control/custom-roles)
-  - [Using Azure AD Privileged Identity Management for elevated access](https://www.microsoft.com/itshowcase/using-azure-ad-privileged-identity-management-for-elevated-access)
+  - [Using Microsoft Entra Privileged Identity Management for elevated access](https://www.microsoft.com/itshowcase/using-azure-ad-privileged-identity-management-for-elevated-access)
 
 ### Perform regular code reviews
 
@@ -397,7 +401,7 @@ Encryption at rest is the cryptographic protection of data when it is persisted 
 
 **How to implement**
 
-- [Transparent Database Encryption (TDE)](transparent-data-encryption-tde-overview.md) with service managed keys are enabled by default for any databases created after 2017 in Azure SQL Database and SQL Managed Instance.
+- [Transparent data encryption (TDE)](transparent-data-encryption-tde-overview.md) with service managed keys are enabled by default for any databases created after 2017 in Azure SQL Database and SQL Managed Instance.
 - In a managed instance, if the database is created from a restore operation using an on-premises server, the TDE setting of the original database will be honored. If the original database doesn't have TDE enabled, we recommend that TDE be manually turned on for the managed instance.
 
 **Best practices**
@@ -794,7 +798,7 @@ Most security standards address data availability in terms of operational contin
   - [Automated backups](automated-backups-overview.md)
   - [Recover a database using automated database backups - Point-in-time restore](recovery-using-backups.md#point-in-time-restore)
 
-- Additional business continuity features such as the zone redundant configuration and auto-failover groups across different Azure geos can be configured:  
+- Additional business continuity features such as the zone redundant configuration and failover groups across different Azure geos can be configured:  
   - [High-availability - Zone redundant configuration for Premium & Business Critical service tiers](high-availability-sla.md#zone-redundant-availability)
   - [High-availability - Zone redundant configuration for General Purpose service tier](high-availability-sla.md#zone-redundant-availability)
   - [Overview of business continuity](business-continuity-high-availability-disaster-recover-hadr-overview.md)

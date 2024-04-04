@@ -1,8 +1,7 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
-ms.date: 07/06/2023
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 03/14/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -396,7 +395,7 @@ ms.topic: include
 | 21403 | 10 | No | The 'max_concurrent_dynamic_snapshots' publication property must be greater than or equal to zero. |
 | 21404 | 10 | No | '%s' is not a valid value for the '%s' parameter. The value must be a positive integer greater than 300 or 0. |
 | 21405 | 10 | No | '%s' is not a valid value for the '%s' parameter. The value must be an integer greater than or equal to %d. |
-| 21406 | 10 | No | '%s' is not a valid value for the '%s' parameter. The value must be 0 or 1. |
+| 21406 | 10 | No | '%s' is not a valid value for the '%s' parameter. The value must be 0, 1, 2, 3, or 4. |
 | 21407 | 16 | No | Cannot create the subscription. If you specify a value of "initialize with backup" for the @sync_type parameter, you must subscribe to all articles in the publication by specifying a value of "all" for the @article parameter. |
 | 21408 | 16 | No | Cannot create the subscription. You must specify a value of "Active" or "Subscribed" for the @status parameter. This is because the value specified for the @sync_type parameter is "initialize with backup" or "replication support only". |
 | 21409 | 16 | No | Only one of parameters %s and %s can be set. |

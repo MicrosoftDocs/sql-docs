@@ -109,7 +109,7 @@ ORDER BY SchemaName + ''; -- wrong
  OFFSET { *integer_constant* | *offset_row_count_expression* } { ROW | ROWS }  
  Specifies the number of rows to skip before it starts to return rows from the query expression. The value can be an integer constant or expression that is greater than or equal to zero.  
   
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].s  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].s  
   
  *offset_row_count_expression* can be a variable, parameter, or constant scalar subquery. When a subquery is used, it cannot reference any columns defined in the outer query scope. That is, it cannot be correlated with the outer query.  
   
@@ -120,7 +120,7 @@ ORDER BY SchemaName + ''; -- wrong
  FETCH { FIRST \| NEXT } { *integer_constant* \| *fetch_row_count_expression* } { ROW \| ROWS } ONLY  
  Specifies the number of rows to return after the OFFSET clause has been processed. The value can be an integer constant or expression that is greater than or equal to one.  
   
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].  
   
  *fetch_row_count_expression* can be a variable, parameter, or constant scalar subquery. When a subquery is used, it cannot reference any columns defined in the outer query scope. That is, it cannot be correlated with the outer query.  
   
@@ -209,7 +209,7 @@ ORDER BY SchemaName + ''; -- wrong
  The following example orders the result set by the numeric `ProductID` column. Because a specific sort order is not specified, the default (ascending order) is used.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
 WHERE Name LIKE 'Lock Washer%'  
@@ -220,7 +220,7 @@ ORDER BY ProductID;
  The following example orders the result set by a column that is not included in the select list, but is defined in the table specified in the FROM clause.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT ProductID, Name, Color  
 FROM Production.Product  
@@ -231,7 +231,7 @@ ORDER BY ListPrice;
  The following example specifies the column alias `SchemaName` as the sort order column.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT name, SCHEMA_NAME(schema_id) AS SchemaName  
 FROM sys.objects  
@@ -243,7 +243,7 @@ ORDER BY SchemaName;
  The following example uses an expression as the sort column. The expression is defined by using the DATEPART function to sort the result set by the year in which employees were hired.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT BusinessEntityID, JobTitle, HireDate  
 FROM HumanResources.Employee  
@@ -256,7 +256,7 @@ ORDER BY DATEPART(year, HireDate);
  The following example orders the result set by the numeric column `ProductID` in descending order.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
 WHERE Name LIKE 'Lock Washer%'  
@@ -267,7 +267,7 @@ ORDER BY ProductID DESC;
  The following example orders the result set by the `Name` column in ascending order. The characters are sorted alphabetically, not numerically. That is, 10 sorts before 2.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
 WHERE Name LIKE 'Lock Washer%'  
@@ -278,7 +278,7 @@ ORDER BY Name ASC ;
  The following example orders the result set by two columns. The query result set is first sorted in ascending order by the `FirstName` column and then sorted in descending order by the `LastName` column.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT LastName, FirstName FROM Person.Person  
 WHERE LastName LIKE 'R%'  
@@ -328,7 +328,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
  The following example uses the ORDER BY clause in the ranking functions ROW_NUMBER, RANK, DENSE_RANK, and NTILE.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT p.FirstName, p.LastName  
     ,ROW_NUMBER() OVER (ORDER BY a.PostalCode) AS "Row Number"  
@@ -347,13 +347,13 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ###  <a name="Offset"></a> Limiting the number of rows returned  
  The following examples use OFFSET and FETCH to limit the number of rows returned by a query.  
   
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].  
   
 #### A. Specifying integer constants for OFFSET and FETCH values  
  The following example specifies an integer constant as the value for the OFFSET and FETCH clauses. The first query returns all rows sorted by the column `DepartmentID`. Compare the results returned by this query with the results of the two queries that follow it. The next query uses the clause `OFFSET 5 ROWS` to skip the first 5 rows and return all remaining rows. The final query uses the clause `OFFSET 0 ROWS` to start with the first row and then uses `FETCH NEXT 10 ROWS ONLY` to limit the rows returned to 10 rows from the sorted result set.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Return all rows sorted by the column DepartmentID.  
 SELECT DepartmentID, Name, GroupName  
@@ -377,7 +377,7 @@ ORDER BY DepartmentID
  The following example declares the variables `@RowsToSkip` and `@FetchRows` and specifies these variables in the OFFSET and FETCH clauses.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Specifying variables for OFFSET and FETCH values    
 DECLARE @RowsToSkip TINYINT = 2
@@ -393,7 +393,7 @@ ORDER BY DepartmentID ASC
  The following example uses the expression `@StartingRowNumber - 1` to specify the OFFSET value and the expression `@EndingRowNumber - @StartingRowNumber + 1` to specify the FETCH value. In addition, the query hint, OPTIMIZE FOR, is specified. This hint can be used to provide a particular value for a local variable when the query is compiled and optimized. The value is used only during query optimization, and not during query execution. For more information, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
   
 -- Specifying expressions for OFFSET and FETCH values      
@@ -412,7 +412,7 @@ OPTION ( OPTIMIZE FOR (@StartingRowNumber = 1, @EndingRowNumber = 20) );
   
 ```sql
 -- Specifying a constant scalar subquery  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE TABLE dbo.AppSettings (AppSettingID INT NOT NULL, PageSize INT NOT NULL);  
 GO  
@@ -430,12 +430,12 @@ ORDER BY DepartmentID ASC
  The following example shows one method of implementing a paging solution that ensures stable results are returned in all requests from the query. The query is executed in a single transaction using the snapshot isolation level, and the column specified in the ORDER BY clause ensures column uniqueness.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
   
 -- Ensure the database can support the snapshot isolation level set for the query.  
-IF (SELECT snapshot_isolation_state FROM sys.databases WHERE name = N'AdventureWorks2012') = 0  
-    ALTER DATABASE AdventureWorks2012 SET ALLOW_SNAPSHOT_ISOLATION ON;  
+IF (SELECT snapshot_isolation_state FROM sys.databases WHERE name = N'AdventureWorks2022') = 0  
+    ALTER DATABASE AdventureWorks2022 SET ALLOW_SNAPSHOT_ISOLATION ON;  
 GO  
   
 -- Set the transaction isolation level  to SNAPSHOT for this query.  
@@ -473,7 +473,7 @@ GO
  When a query uses the UNION, EXCEPT, or INTERSECT operators, the ORDER BY clause must be specified at the end of the statement and the results of the combined queries are sorted. The following example returns all products that are red or yellow and sorts this combined list by the column `ListPrice`.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT Name, Color, ListPrice  
 FROM Production.Product  

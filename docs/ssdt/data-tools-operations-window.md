@@ -24,7 +24,7 @@ The **Data Tools Operations** window shows the progress when you perform the fol
   
 -   Expanding a database in the **SQL Server Object Explorer**. This operation starts an import of the database model.  
   
--   Committing changes to a database or generating scripts through the **Update Database** button in the Transact\-SQL Editor. For more information, see [How to: Update a Connected Database with Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
+-   Committing changes to a database or generating scripts through the **Update Database** button in the Transact-SQL Editor. For more information, see [How to: Update a Connected Database with Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
   
 -   Deleting an object from the **SQL Server Object Explorer**. For more information, see [How to: Delete Objects and Resolve Dependencies](../ssdt/how-to-delete-objects-and-resolve-dependencies.md).  
   

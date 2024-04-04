@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "data-at-execution"
   - "ODBC data-at-execution"
   - "image columns [ODBC]"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Data-at-Execution and Text, ntext, or Image Columns
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

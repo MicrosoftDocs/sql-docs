@@ -3,7 +3,7 @@ title: "sys.sp_query_store_set_hints (Transact-SQL)"
 description: "Creates or updates Query Store hints for a given query, allowing you to influence queries without changing application code or database objects."
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 05/29/2023
+ms.date: 11/02/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "language-reference"
@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "sp_query_store_set_hints"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||>=sql-server-linux-ver16"
+monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-ver16 || >=sql-server-linux-ver16"
 ---
 # sp_query_store_set_hints (Transact-SQL)
 
@@ -45,7 +45,7 @@ The Query Store `query_id` column from [sys.query_store_query](../system-catalog
 
 #### [ @query_hints = ] N'*query_hints*'
 
-A character string of query options beginning with `'OPTION`. *@query_hints* is **nvarchar(max)**. For more information, see [Supported query hints](#supported-query-hints) in this article.
+A character string of query options beginning with `OPTION`. *@query_hints* is **nvarchar(max)**. For more information, see [Supported query hints](#supported-query-hints) in this article.
 
 #### [ @query_hint_scope = ] '*replica_group_id*'
 
@@ -94,12 +94,12 @@ These [query hints](../../t-sql/queries/hints-transact-sql-query.md) are support
 
 The following query hints are currently unsupported:
 
--  `OPTIMIZE FOR ( @var = val)`
--  `MAXRECURSION`
--  `USE PLAN` (instead, consider Query Store's original plan forcing capability, [sp_query_store_force_plan](sp-query-store-force-plan-transact-sql.md)).
--  `DISABLE_DEFERRED_COMPILATION_TV`
--  `DISABLE_TSQL_SCALAR_UDF_INLINING`
--  [Table hints (for example, FORCESEEK, READUNCOMMITTED, INDEX)](../../t-sql/queries/hints-transact-sql-table.md)
+- `OPTIMIZE FOR ( @var = val)`
+- `MAXRECURSION`
+- `USE PLAN` (instead, consider Query Store's original plan forcing capability, [sp_query_store_force_plan](sp-query-store-force-plan-transact-sql.md)).
+- `DISABLE_DEFERRED_COMPILATION_TV`
+- `DISABLE_TSQL_SCALAR_UDF_INLINING`
+- [Table hints (for example, FORCESEEK, READUNCOMMITTED, INDEX)](../../t-sql/queries/hints-transact-sql-table.md)
 
 ## Permissions
 
@@ -176,10 +176,10 @@ Use the following example to remove the hint from *query_id* 39, using the [sp_q
 EXEC sys.sp_query_store_clear_hints @query_id = 39;
 ```
 
-## Next steps
+## Related content
 
 - [Query Store hints](../performance/query-store-hints.md)
-- [Table Hints (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)
+- [Table hints (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)
 - [sp_query_store_clear_hints (Transact-SQL)](sys-sp-query-store-clear-hints-transact-sql.md)
 - [sys.query_store_query_hints (Transact-SQL)](../system-catalog-views/sys-query-store-query-hints-transact-sql.md)
-- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)

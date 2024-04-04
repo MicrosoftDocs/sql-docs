@@ -88,7 +88,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  The example creates aggregate `Concatenate`. Before the aggregate is created, the assembly `StringUtilities.dll` is registered in the local database.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @SamplesPath nvarchar(1024)  
 -- You may have to modify the value of the this variable if you have  

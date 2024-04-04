@@ -196,7 +196,7 @@ sections:
           Please refer to the licensing guide which goes into much more detail, [download the PDF](https://aka.ms/sql-bdc-licensing).<BR>For a summary, watch the video [SQL Server Licensing: Big Data Clusters | Data Exposed](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-Licensing-Big-Data-Clusters--Data-Exposed).
   - name: Security
     questions: 
-      - question: Does Big Data Cluster support Azure Active Directory?
+      - question: Does Big Data Cluster support Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name))?
         answer: |
           Not at this time.
       - question: Can we connect to Big Data Cluster master using integrated authentication?
@@ -204,7 +204,7 @@ sections:
           Yes, you can connect to various Big Data Cluster services using integrated authentication (with Active Directory). For more information, see [Deploy SQL Server Big Data Cluster in Active Directory mode](active-directory-deploy.md). Also see [Security concepts for Big Data Clusters](concept-security.md).
       - question: How can I add new users for various services within Big Data Cluster?
         answer: |
-          In basic authentication mode (username/password), there is no support for adding multiple users for controller or Knox gateway/HDFS endpoints. The only user supported for these endpoints is root. For SQL Server, you can add users using TSQL as you would for any other SQL Server instance. 
+          In basic authentication mode (username/password), there is no support for adding multiple users for controller or Knox gateway/HDFS endpoints. The only user supported for these endpoints is root. For SQL Server, you can add users using Transact-SQL as you would for any other SQL Server instance. 
           If you deploy Big Data Cluster with AD auth for its endpoints, multiple users are supported. See here for details on how to configure the AD groups at deployment time. For more information, see [Deploy SQL Server Big Data Cluster in Active Directory mode](active-directory-deploy.md).
       - question: For Big Data Cluster to pull the latest container images, is there an outbound IP range I can restrict?
         answer: |

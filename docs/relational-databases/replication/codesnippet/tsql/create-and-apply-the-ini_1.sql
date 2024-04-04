@@ -8,7 +8,7 @@ DECLARE @publicationDB AS sysname;
 DECLARE @publication AS sysname;
 DECLARE @login AS sysname;
 DECLARE @password AS sysname;
-SET @publicationDB = N'AdventureWorks2012'; --publication database
+SET @publicationDB = N'AdventureWorks2022'; --publication database
 SET @publication = N'AdvWorksCustomerTran'; -- transactional publication name
 SET @login = $(Login);
 SET @password = $(Password);
@@ -29,7 +29,7 @@ EXEC sp_addlogreader_agent
   @publisher_security_mode = 1;
 
 -- Create new transactional publication, using the defaults. 
-USE [AdventureWorks2012]
+USE [AdventureWorks2022]
 EXEC sp_addpublication 
   @publication = @publication, 
   @description = N'transactional publication';

@@ -22,12 +22,12 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] securable has associated permissions that can be granted to a principal. Permissions in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] are managed at the server level assigned to logins and server roles, and at the database level assigned to database users and database roles. The model for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] has the same system for the  database permissions, but the server level permissions aren't available. This article contains the complete list of permissions. For a typical implementation of the permissions, see [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
+Every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] securable has associated permissions that can be granted to a principal. Permissions in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] are managed at the server level assigned to logins and server roles, and at the database level assigned to database users and database roles. The model for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] has the same system for the  database permissions, but the server level permissions aren't available. This article contains the complete list of permissions. For a typical implementation of the permissions, see [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
 
-The total number of permissions for [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] is 292. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] exposes 292 permissions. Most permissions apply to all platforms, but some don't. For example, most [server level permissions](authentication-access/server-level-roles.md) can't be granted on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and a few permissions only make sense on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+The total number of permissions for [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] is 292. [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] exposes 292 permissions. Most permissions apply to all platforms, but some don't. For example, most [server level permissions](authentication-access/server-level-roles.md) can't be granted on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and a few permissions only make sense on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 New permissions are being introduced gradually with new releases. [!INCLUDE[ssSQLv15_md](../../includes/sssql19-md.md)] exposes 248 permissions.[!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] exposed 238 permissions. [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] exposed 230 permissions. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] exposed 219 permissions. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] exposed 214 permissions. [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] exposed 195 permissions. The [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) article specifies which permissions are new in recent versions.
 
-Once you understand the permissions, apply server level permissions to logins or server roles and database level permissions users or database roles with the [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md), and [DENY](../../t-sql/statements/deny-transact-sql.md) statements. For Example:
+Once you understand the permissions required, you can apply server level permissions to logins or server roles, and database level permissions to users or database roles, by using the [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md), and [DENY](../../t-sql/statements/deny-transact-sql.md) statements. For example:
 
 ```sql
 GRANT SELECT ON SCHEMA::HumanResources TO role_HumanResourcesDept;
@@ -119,7 +119,7 @@ The following table lists major classes of permissions and the kinds of securabl
 
 ## SQL Server permissions
 
- The following table provides a complete list of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permissions. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] permissions are only available for base securables that are supported. Server level permissions can't be granted in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], however in some cases database permissions are available instead.
+ The following table provides a complete list of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permissions. [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] permissions are only available for base securables that are supported. Server level permissions can't be granted in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], however in some cases database permissions are available instead.
 
 |Base securable|Granular permissions on base securable|Permission type code|Securable that contains base securable|Permission on container securable that implies granular permission on base securable|
 |--------------------|--------------------------------------------|--------------------------|--------------------------------------------|------------------------------------------------------------------------------------------|
@@ -158,8 +158,8 @@ The following table lists major classes of permissions and the kinds of securabl
 |DATABASE|ALTER ANY ASSEMBLY|ALAS|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY ASYMMETRIC KEY|ALAK|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY CERTIFICATE|ALCF|SERVER|CONTROL SERVER|
-|DATABASE|ALTER ANY COLUMN ENCRYPTION KEY|ALCK<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|
-|DATABASE|ALTER ANY COLUMN MASTER KEY|ALCM<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|
+|DATABASE|ALTER ANY COLUMN ENCRYPTION KEY|ALCK<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|SERVER|CONTROL SERVER|
+|DATABASE|ALTER ANY COLUMN MASTER KEY|ALCM<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY CONTRACT|ALSC|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|
@@ -172,7 +172,7 @@ The following table lists major classes of permissions and the kinds of securabl
 |DATABASE|ALTER ANY DATABASE EVENT SESSION DROP TARGET|LDDT|SERVER|ALTER ANY EVENT SESSION DROP TARGET|
 |DATABASE|ALTER ANY DATABASE EVENT SESSION ENABLE|EDES|SERVER|ALTER ANY EVENT SESSION ENABLE|
 |DATABASE|ALTER ANY DATABASE EVENT SESSION OPTION|LDSO|SERVER|ALTER ANY EVENT SESSION OPTION|
-|DATABASE|ALTER ANY DATABASE SCOPED CONFIGURATION|ALDC<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|
+|DATABASE|ALTER ANY DATABASE SCOPED CONFIGURATION|ALDC<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY EXTERNAL DATA SOURCE|AEDS|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY EXTERNAL FILE FORMAT|AEFF|SERVER|CONTROL SERVER|
@@ -181,14 +181,14 @@ The following table lists major classes of permissions and the kinds of securabl
 |DATABASE|ALTER ANY EXTERNAL LIBRARY|ALEL|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY EXTERNAL STREAM|AEST|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|
-|DATABASE|ALTER ANY MASK|AAMK<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|
+|DATABASE|ALTER ANY MASK|AAMK<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY REMOTE SERVICE BINDING|ALSB|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|
-|DATABASE|ALTER ANY SENSITIVITY CLASSIFICATION|AASC<br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2019 (15.x) through current), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|SERVER|CONTROL SERVER|
+|DATABASE|ALTER ANY SENSITIVITY CLASSIFICATION|AASC<br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2019 (15.x) through current), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|
@@ -237,16 +237,16 @@ The following table lists major classes of permissions and the kinds of securabl
 |DATABASE|EXECUTE ANY EXTERNAL ENDPOINT|EAEE|SERVER|CONTROL SERVER|
 |DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current).|SERVER|CONTROL SERVER|
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br />Only applies to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Use ALTER ANY CONNECTION in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br />Only applies to [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. Use ALTER ANY CONNECTION in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|
 |DATABASE|SUBSCRIBE QUERY NOTIFICATIONS|SUQN|SERVER|CONTROL SERVER|
 |DATABASE|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|
-|DATABASE|UNMASK|UMSK<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|
+|DATABASE|UNMASK|UMSK<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|SERVER|CONTROL SERVER|
 |DATABASE|UPDATE|UP|SERVER|CONTROL SERVER|
-|DATABASE|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION|VWCK<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|VIEW SERVER STATE|
-|DATABASE|VIEW ANY COLUMN MASTER KEY DEFINITION|VWCM<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|VIEW SERVER STATE|
+|DATABASE|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION|VWCK<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|SERVER|VIEW SERVER STATE|
+|DATABASE|VIEW ANY COLUMN MASTER KEY DEFINITION|VWCM<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|SERVER|VIEW SERVER STATE|
 |DATABASE|VIEW ANY SENSITIVITY CLASSIFICATION|VASC|SERVER|CONTROL SERVER|
 |DATABASE|VIEW CRYPTOGRAPHICALLY SECURED DEFINITION|VCD|SERVER|VIEW ANY CRYPTOGRAPHICALLY SECURED DEFINITION|
 |DATABASE|VIEW DATABASE PERFORMANCE STATE|VDP|SERVER|VIEW SERVER PERFORMANCE STATE|

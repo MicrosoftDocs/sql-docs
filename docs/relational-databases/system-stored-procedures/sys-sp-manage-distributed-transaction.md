@@ -8,7 +8,7 @@ ms.date: 07/06/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-ver16 || >=sql-server-linux-ver16 || =azuresqldb-mi-current"
 ---
 # sys.sp_manage_distributed_transaction (Transact-SQL)
 
@@ -41,7 +41,7 @@ Specifies operation to perform. Valid values are `commit`, `abort`, or `forget`.
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -57,7 +57,7 @@ EXEC sys.sp_manage_distributed_transaction
     @operation = N'commit'
 ```
 
-## See also
+## Related content
 
 - [sys.dm_tran_distributed_transaction_stats (Transact-SQL)](../system-dynamic-management-views/sys-dm-tran-distributed-transaction-stats.md)
 - [sp_reset_dtc_log (Transact-SQL)](sp-reset-dtc-log.md)

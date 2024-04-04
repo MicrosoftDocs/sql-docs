@@ -95,6 +95,11 @@ If necessary, you can perform an extra manual failover to return the AG to its o
 >
 > If `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is set to either `1` or `2`, the Primary replica may be unavailable for read/writes when a corresponding number of sync secondary replicas are not available during the update process.
 
+> [!NOTE]  
+> When you perform an in-place upgrade of a secondary replica to a newer version of SQL Server, the database inside the availability group remains in the **Synchronizing / In recovery** or **Synchronized / In Recovery** state until the availability group is manually failed over, which finishes the recovery and upgrades the database.  An upgraded primary replica can no longer ship logs to any lower version secondary replica and data movement stops and no automatic failover can occur for that replica, and your availability databases are vulnerable to data loss. After you upgrade the old primary, you may need to resume synchronization. It is recommended to upgrade all secondary replicas before failing over to a replica with the new version.  That way you have the option of doing a failover after the database(es) are upgraded to the new format.
+
+
+
 ## AG with one remote secondary replica
 
 If you have deployed an AG only for disaster recovery, you may need to fail over the AG to an asynchronous-commit secondary replica. Such configuration is illustrated by the following figure:

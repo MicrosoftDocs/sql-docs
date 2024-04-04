@@ -48,10 +48,10 @@ sp_resetstatus [ @dbname = ] 'database'
  Requires membership in the sysadmin fixed server role.  
   
 ## Examples  
- The following example resets the status of the `AdventureWorks2012` database.  
+ The following example resets the status of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```  
-EXEC sp_resetstatus 'AdventureWorks2012';  
+EXEC sp_resetstatus 'AdventureWorks2022';  
 ```  
   
 ## See Also  

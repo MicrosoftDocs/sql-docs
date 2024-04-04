@@ -4,7 +4,7 @@ description: "CREATE EXTERNAL TABLE AS SELECT (CETAS) creates an external table 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest, wiassaf, mlandzic, nzagorac
-ms.date: 05/18/2023
+ms.date: 07/26/2023
 ms.service: sql
 ms.topic: reference
 f1_keywords:
@@ -33,7 +33,7 @@ Creates an external table and then exports, in parallel, the results of a [!INCL
 - [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions support CREATE EXTERNAL TABLE AS SELECT (CETAS) to create an external table and then export, in parallel, the result of a [!INCLUDE [tsql](../../includes/tsql-md.md)] SELECT statement to Azure Data Lake Storage (ADLS) Gen2, Azure Storage Account V2, and S3-compatible object storage.
 
 > [!NOTE]
-> The capabilities and security of CETAS for [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] are different from [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. For more information, see the [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] version of [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true).
+> The capabilities and security of CETAS for [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] are different from [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. For more information, see the [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] version of [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true).
 
 > [!NOTE]
 > The capabilities and security of CETAS for serverless pools in [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)] are different from [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [CETAS with Synapse SQL](/azure/synapse-analytics/sql/develop-tables-cetas#cetas-in-serverless-sql-pool).
@@ -246,9 +246,45 @@ In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INC
 
 To use CREATE EXTERNAL TABLE AS SELECT containing these characters, you must first run the CREATE EXTERNAL TABLE AS SELECT statement to export the data to delimited text files where you can then convert them to Parquet or ORC by using an external tool.
 
+## Working with parquet
+
+When working with parquet files, `CREATE EXTERNAL TABLE AS SELECT` will generate one parquet file per available CPU, up to the configured maximum degree of parallelism (MAXDOP). Each file can grow up to 190 GB, after that SQL Server will generate more Parquet files as needed.
+
+The query hint `OPTION (MAXDOP n)` will only affect the SELECT part of `CREATE EXTERNAL TABLE AS SELECT`, it has no influence on the amount of parquet files. Only database-level MAXDOP and instance-level MAXDOP is considered.
+
+
 ## Locking
 
 Takes a shared lock on the SCHEMARESOLUTION object.
+
+## Supported data types
+
+CETAS can be used to store result sets with the following SQL data types:
+
+- binary
+- varbinary
+- char
+- varchar
+- nchar
+- nvarchar
+- smalldate
+- date
+- datetime
+- datetime2
+- datetimeoffset
+- time
+- decimal
+- numeric
+- float
+- real
+- bigint
+- tinyint
+- smallint
+- int
+- bigint
+- bit
+- money
+- smallmoney
 
 ## Examples
 
@@ -341,7 +377,7 @@ GO
 
 **Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
 
-The following example creates a new external table named `ext_sales` that uses the data from the table `SalesOrderDetail` of `AdventureWorks2019` database. The [allow polybase export configuration option](../../database-engine/configure-windows/allow-polybase-export.md) must be enabled.
+The following example creates a new external table named `ext_sales` that uses the data from the table `SalesOrderDetail` of [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)]. The [allow polybase export configuration option](../../database-engine/configure-windows/allow-polybase-export.md) must be enabled.
 
 The result of the SELECT statement will be saved on S3-compatible object storage previously configured and named `s3_eds`, and proper credential created as `s3_dsc`. The parquet file location will be `<ip>:<port>/cetas/sales.parquet` where `cetas` is the previously created storage bucket.
 
@@ -375,7 +411,7 @@ CREATE EXTERNAL TABLE ext_sales
             ) AS
 
 SELECT *
-FROM AdventureWorks2019.[Sales].[SalesOrderDetail];
+FROM AdventureWorks2022.[Sales].[SalesOrderDetail];
 GO
 ```
 
@@ -407,7 +443,7 @@ GO
 
 **Applies to:** [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] serverless SQL pools and dedicated SQL pools.
 
-In this example, we can see example of a template code for writing CETAS with a user-defined view as source, using Managed Identity as an authentication, and `wasbs:`.
+In this example, we can see example of a template code for writing CETAS with a user-defined view as source, using managed identity as an authentication, and `wasbs:`.
 
 ```sql
 CREATE DATABASE [<mydatabase>];
@@ -418,7 +454,7 @@ GO
 
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<strong password>';
 
-CREATE DATABASE SCOPED CREDENTIAL [WorkspaceIdentity] WITH IDENTITY = 'Managed Identity';
+CREATE DATABASE SCOPED CREDENTIAL [WorkspaceIdentity] WITH IDENTITY = 'managed identity';
 GO
 
 CREATE EXTERNAL FILE FORMAT [ParquetFF] WITH (
@@ -446,7 +482,7 @@ GO
 
 **Applies to:** [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] serverless SQL pools and dedicated SQL pools.
 
-In this example, we can see example of a template code for writing CETAS with a user-defined view as source, using Managed Identity as an authentication, and `https:`.
+In this example, we can see example of a template code for writing CETAS with a user-defined view as source, using managed identity as an authentication, and `https:`.
 
 ```sql
 CREATE DATABASE [<mydatabase>];
@@ -457,7 +493,7 @@ GO
 
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<strong password>';
 
-CREATE DATABASE SCOPED CREDENTIAL [WorkspaceIdentity] WITH IDENTITY = 'Managed Identity';
+CREATE DATABASE SCOPED CREDENTIAL [WorkspaceIdentity] WITH IDENTITY = 'managed identity';
 GO
 
 CREATE EXTERNAL FILE FORMAT [ParquetFF] WITH (
@@ -503,10 +539,10 @@ You can use CREATE EXTERNAL TABLE AS SELECT (CETAS) to complete the following ta
 
 - Create an external table on top of Parquet or CSV files in Azure Blob storage or Azure Data Lake Storage (ADLS) Gen2.
 - Export, in parallel, the results of a T-SQL SELECT statement into the created external table.
-- For more data virtualization capabilities of [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)], see [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview).
+- For more data virtualization capabilities of [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], see [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview).
 
 > [!NOTE]
-> This content applies to [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] only. For other platforms, choose the appropriate version of [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) from the dropdrown selector.
+> This content applies to [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] only. For other platforms, choose the appropriate version of [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) from the dropdrown selector.
 
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -569,14 +605,14 @@ Populates the new table with the results from a SELECT statement. *select_criter
 
 You need to have permissions to list folder content and write to the LOCATION path for CETAS to work.
 
-Supported authentication methods are the managed service identity or a Shared Access Signature (SAS) token.
+Supported authentication methods are managed identity or a Shared Access Signature (SAS) token.
 
-- If you are using Managed Identity for authentication, make sure that the service principal of your SQL managed instance has a role of **Storage Blob Data Contributor** on the destination container.
+- If you are using managed identity for authentication, make sure that the service principal of your SQL managed instance has a role of **Storage Blob Data Contributor** on the destination container.
 - If you are using an SAS token, **Read**, **Write**, and **List** permissions are required.
 - For Azure Blog Storage, the `Allowed Services`: `Blob` checkbox must be selected to generate the SAS token.
 - For Azure Data Lake Gen2, the `Allowed Services`: `Container` and `Object` checkboxes must be selected to generate the SAS token.
 
-A user managed identity is not supported. Azure Active Directory passthrough authentication is not supported.
+A user-assigned managed identity is not supported. Microsoft Entra passthrough authentication is not supported. Microsoft Entra ID is ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)).
 
 ### Permissions in the SQL managed instance
 
@@ -623,7 +659,6 @@ CETAS stores result sets with following SQL data types:
 - bit
 - money
 - smallmoney
-- uniqueidentifier
 
 > [!NOTE]
 > LOBs larger than 1MB can't be used with CETAS.
@@ -631,8 +666,8 @@ CETAS stores result sets with following SQL data types:
 
 ## Limitations and restrictions
 
-- CREATE EXTERNAL TABLE AS SELECT (CETAS) for [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] is disabled by default. For more information, see the next section, [Disabled by default](#disabled-by-default).
-- For more information on limitations or known issues with data virtualization in [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)], see [Limitations and Known issues](/azure/azure-sql/managed-instance/data-virtualization-overview#limitations).
+- CREATE EXTERNAL TABLE AS SELECT (CETAS) for [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] is disabled by default. For more information, see the next section, [Disabled by default](#disabled-by-default).
+- For more information on limitations or known issues with data virtualization in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], see [Limitations and Known issues](/azure/azure-sql/managed-instance/data-virtualization-overview#limitations).
 
 Because external table data resides outside of the database, backup and restore operations only operate on data stored in the database. As a result, only the metadata is backed up and restored.
 
@@ -668,15 +703,15 @@ adls://<container>@<storage_account>.blob.core.windows.net/<path>/<file_name>.pa
 
 ## Disabled by default
 
-CREATE EXTERNAL TABLE AS SELECT (CETAS) allows you to export data from your SQL managed instance into an external storage account, so there is potential for data exfiltration risk with these capabilities. Therefore, CETAS is disabled by default for [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)].
+CREATE EXTERNAL TABLE AS SELECT (CETAS) allows you to export data from your SQL managed instance into an external storage account, so there is potential for data exfiltration risk with these capabilities. Therefore, CETAS is disabled by default for [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)].
 
 ### Enable CETAS
 
-CETAS for [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] can only be enabled via a method that requires elevated Azure permissions, and cannot be enabled via T-SQL. Because of the risk of unauthorized data exfiltration, CETAS cannot be enabled via the `sp_configure` T-SQL stored procedure, but instead requires that the user action outside of the SQL managed instance. 
+CETAS for [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] can only be enabled via a method that requires elevated Azure permissions, and cannot be enabled via T-SQL. Because of the risk of unauthorized data exfiltration, CETAS cannot be enabled via the `sp_configure` T-SQL stored procedure, but instead requires that the user action outside of the SQL managed instance. 
 
 #### Permissions to enable CETAS
 
-To enable via Azure PowerShell, your Azure AD user running the command must have **Contributor** or **SQL Security Manager** Azure RBAC roles for your SQL managed instance. 
+To enable via Azure PowerShell, your user running the command must have **Contributor** or **SQL Security Manager** Azure RBAC roles for your SQL managed instance.
 
 A custom role can be created for this as well, requiring the **Read** and **Write** action for the `Microsoft.Sql/managedInstances/serverConfigurationOptions` action.
 
@@ -865,7 +900,7 @@ Connect to your SQL managed instance. Run the following T-SQL and observe the `v
 
 ## Troubleshoot
 
-For more steps to troubleshoot data virtualization in [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)], see [Troubleshoot](/azure/azure-sql/managed-instance/data-virtualization-overview#troubleshoot). Error handling and common error messages for CETAS in [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] follows.
+For more steps to troubleshoot data virtualization in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], see [Troubleshoot](/azure/azure-sql/managed-instance/data-virtualization-overview#troubleshoot). Error handling and common error messages for CETAS in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] follows.
 
 ### Error handling
 
@@ -957,7 +992,7 @@ Takes a shared lock on the SCHEMARESOLUTION object.
 
 ### A. Use CETAS with a view to create an external table using the managed identity
 
-This example provides code for writing CETAS with a view as source, using system Managed Identity an authentication.
+This example provides code for writing CETAS with a view as source, using system managed identity an authentication.
 
 ```sql
 CREATE DATABASE [<mydatabase>];
@@ -968,7 +1003,7 @@ GO
 
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<strong password>';
 
-CREATE DATABASE SCOPED CREDENTIAL [WorkspaceIdentity] WITH IDENTITY = 'Managed Identity';
+CREATE DATABASE SCOPED CREDENTIAL [WorkspaceIdentity] WITH IDENTITY = 'managed identity';
 GO
 
 CREATE EXTERNAL FILE FORMAT [ParquetFF] WITH (
@@ -1035,22 +1070,22 @@ GO
 
 ### C. Create an external table into a single parquet file on the storage
 
-The next two examples show how to offload some of the data from a local table into an external table stored as parquet file(s) on Azure Blob storage container. They're designed to work with `AdventureWorks2019` database. This example shows creating an external table as a single parquet file, where the next example shows how to create an external table and partition it into multiple folders with parquet files.
+The next two examples show how to offload some of the data from a local table into an external table stored as parquet file(s) on Azure Blob storage container. They're designed to work with [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. This example shows creating an external table as a single parquet file, where the next example shows how to create an external table and partition it into multiple folders with parquet files.
 
-The example below works using Managed Identity for authentication. As such, make sure that your Azure SQL Managed Instance service principal has **Storage Blob Data Contributor** role on your Azure Blob Storage Container. Alternatively, you can modify the example and use Shared Access Secret (SAS) tokens for authentication.
+The example below works using managed identity for authentication. As such, make sure that your Azure SQL Managed Instance service principal has **Storage Blob Data Contributor** role on your Azure Blob Storage Container. Alternatively, you can modify the example and use Shared Access Secret (SAS) tokens for authentication.
 
 The following sample, you create an external table into a single parquet file in Azure Blob Storage, selecting from `SalesOrderHeader` table for orders older than 1-Jan-2014:
 
 ```sql
 --Example 1: Creating an external table into a single parquet file on the storage, selecting from SalesOrderHeader table for orders older than 1-Jan-2014:
-USE [AdventureWorks2019]
+USE [AdventureWorks2022]
 GO
 
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Strong Password';
 GO
 
 CREATE DATABASE SCOPED CREDENTIAL [CETASCredential]
-    WITH IDENTITY = 'Managed Identity';
+    WITH IDENTITY = 'managed identity';
 GO
 
 CREATE EXTERNAL DATA SOURCE [CETASExternalDataSource]
@@ -1067,7 +1102,7 @@ WITH(
 GO
 
 -- Count how many rows we plan to offload
-SELECT COUNT(*) FROM [AdventureWorks2019].[Sales].[SalesOrderHeader] WHERE
+SELECT COUNT(*) FROM [AdventureWorks2022].[Sales].[SalesOrderHeader] WHERE
         OrderDate < '2013-12-31';
 
 -- CETAS write to a single file, archive all data older than 1-Jan-2014:
@@ -1080,7 +1115,7 @@ AS
     SELECT 
         *
     FROM 
-        [AdventureWorks2019].[Sales].[SalesOrderHeader]
+        [AdventureWorks2022].[Sales].[SalesOrderHeader]
     WHERE
         OrderDate < '2013-12-31';
 
@@ -1112,7 +1147,7 @@ AS
         *,
         YEAR(OrderDate) AS [Year],
         MONTH(OrderDate) AS [Month]
-    FROM [AdventureWorks2019].[Sales].[SalesOrderHeader]
+    FROM [AdventureWorks2022].[Sales].[SalesOrderHeader]
     WHERE
         OrderDate < '2013-12-31';
 GO

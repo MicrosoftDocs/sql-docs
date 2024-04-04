@@ -9,7 +9,9 @@ ms.date: 08/17/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: intro-get-started
+ms.custom:
+  - intro-get-started
+  - linux-related-content
 ---
 # Quickstart: Run SQL Server in the cloud
 

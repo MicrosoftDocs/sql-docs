@@ -1,10 +1,10 @@
 ---
 title: "What is a contained availability group?"
-description: "An overview of the contained availability group feature of Always On availability groups within SQL Server."
-author: kfarlee
-ms.author: kfarlee
-ms.reviewer: mathoma
-ms.date: "05/11/2020"
+description: An overview of the contained availability group feature of Always On availability groups within SQL Server.
+author: MashaMSFT
+ms.author: mathoma
+ms.reviewer: mathoma, randolphwest
+ms.date: 01/19/2024
 ms.service: sql
 ms.subservice: high-availability
 ms.topic: conceptual
@@ -18,65 +18,84 @@ monikerRange: ">=sql-server-ver16"
 
 [!INCLUDE [sqlserver2022](../../../includes/applies-to-version/sqlserver2022.md)]
 
-A contained availability group is an Always On availability group that supports:
+A contained availability group is an Always On availability group (AG) that supports:
 
-- managing metadata objects (users, logins, permissions, SQL Agent jobs etc.) at the availability group level in addition to the instance level.
-- specialized contained system databases within the availability group.
+- managing metadata objects (users, logins, permissions, SQL Agent jobs, and so on) at the AG level in addition to the instance level.
 
-This article details the similarities, differences, and functionalities of contained availability groups.
+- specialized contained system databases within the AG.
+
+This article details the similarities, differences, and functionalities of contained AGs.
 
 ## Overview
 
-Always On availability groups generally consist of one or more user databases intended to operate as a coordinated group, and which are replicated on some number of nodes in a cluster. When there is a failure in the node, or in the health of SQL Server on the node that hosts the primary copy, the group of databases are moved as a unit to another replica node in the availability group.  All of the user databases are kept in sync across all replicas of the availability group, either in synchronous or asynchronous mode.
+AGs generally consist of one or more user databases intended to operate as a coordinated group, and which are replicated on some number of nodes in a cluster. When there's a failure in the node, or in the health of [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] on the node that hosts the primary copy, the group of databases are moved as a unit to another replica node in the AG. All of the user databases are kept in sync across all replicas of the AG, either in synchronous or asynchronous mode.
 
-This works well for applications that only interact with that set of user databases, but there are challenges when applications also rely on objects such as users, logins, permissions, agent jobs, etc., which are stored in one of the system databases (`master` or `msdb`). For the applications to function smoothly and predictably, the admin must _manually_ ensure that any change to these objects is duplicated across all replica instances in the availability group.  If a new instance is brought into the availability group, the databases can be automatically or manually seeded in a straightforward process, but then all of the system database customizations must be reconfigured on the new instance to match the other replicas.
-  
-Contained availability groups extend the concept of the group of databases being replicated to include relevant portions of the `master` and `msdb` databases.  Think of it as the execution context for applications using the contained availability group. The idea is that the contained AG environment includes settings that would affect the application relying on them.  As such, the contained AG environment concerns all databases the application interacts with, the authentication it uses (logins, users, permissions), any scheduled jobs that it expects to be running, and other configuration settings that impact the application.
+This works well for applications that only interact with that set of user databases, but there are challenges when applications also rely on objects such as users, logins, permissions, agent jobs, etc., which are stored in one of the system databases (`master` or `msdb`). For the applications to function smoothly and predictably, the admin must *manually* ensure that any change to these objects is duplicated across all replica instances in the AG. If a new instance is brought into the AG, the databases can be automatically or manually seeded in a straightforward process, but then all of the system database customizations must be reconfigured on the new instance to match the other replicas.
 
-This is different from contained databases, which use a different mechanism for the user accounts, storing the user information within the database itself.  Contained databases only replicate logins and users, and the scope of the replicated login or user is limited to that single database (and its replicas).
+Contained AGs extend the concept of the group of databases being replicated to include relevant portions of the `master` and `msdb` databases. Think of it as the execution context for applications using the contained AG. The idea is that the contained AG environment includes settings that would affect the application relying on them. As such, the contained AG environment concerns all databases the application interacts with, the authentication it uses (logins, users, permissions), any scheduled jobs that it expects to be running, and other configuration settings that impact the application.
 
-In contrast, in a contained availability group, you can create users, logins, permissions, etc. at the availability group level, and they will _automatically_ be consistent across replicas in the availability group, as well as consistent across databases within that contained availability group. This saves the admin from having to manually make these changes themselves.
+This is different from contained databases, which use a different mechanism for the user accounts, storing the user information within the database itself. Contained databases only replicate logins and users, and the scope of the replicated login or user is limited to that single database (and its replicas).
+
+In contrast, in a contained AG, you can create users, logins, permissions, and so on, at the AG level, and they are *automatically* consistent across replicas in the AG, as well as consistent across databases within that contained AG. This saves the admin from having to manually make these changes themselves.
 
 ## Differences
 
-There are some practical differences to consider when working with contained availability groups, such as the creation of contained system databases, and forcing the  connection at the contained availability group level, rather than connecting at the instance level.
+There are some practical differences to consider when working with contained AGs, such as the creation of contained system databases, and forcing the connection at the contained AG level, rather than connecting at the instance level.
 
-### Contained System Databases
+### Contained system databases
 
-Each contained availability group has its own `master` and `msdb` system databases, named after the name of the availability group. For example, in contained availability group `MyContainedAG`, you will have databases named `MyContainedAG_master` and `MyContainedAG_msdb`. These system databases are automatically seeded to new replicas and updates are replicated to these databases just like any other database in an availability group.  This means that when you add an object such as a login, or agent job while connected to the contained availability group, when the contained availability group fails over to another instance, connecting to the contained availability group, you will still see the agent jobs, and be able to authenticate using the login created in the contained availability group.
+Each contained AG has its own `master` and `msdb` system databases, named after the name of the availability group. For example, in contained AG `MyContainedAG`, you have databases named `MyContainedAG_master` and `MyContainedAG_msdb`. These system databases are automatically seeded to new replicas and updates are replicated to these databases just like any other database in an availability group. This means that when you add an object such as a login, or agent job while connected to the contained AG, when the contained AG fails over to another instance, connecting to the contained AG, you still see the agent jobs, and be able to authenticate using the login created in the contained AG.
 
->[!IMPORTANT]
->Contained availability groups are a mechanism for keeping execution environment configurations consistent across the replicas of an availability group.  They do NOT represent a security boundary.  There is no boundary which keeps a connection to a contained availability group from accessing databases outside of the AG, for example.
+> [!IMPORTANT]  
+> Contained AGs are a mechanism for keeping execution environment configurations consistent across the replicas of an availability group. They **don't** represent a security boundary. There's no boundary which keeps a connection to a contained AG from accessing databases outside of the AG, for example.
 
-The system databases in a newly created contained availability group are not copies from the instance where the CREATE AVAILABILITY GROUP command is run.  They are initially empty templates without any data.  Immediately after creation, the admin accounts on the instance creating the contained AG are copied into Contained Master.  That way the admin can log into the contained AG and set up the rest of the configuration.  If you've created local users or configurations in your instance, they will not automatically appear when you create your contained system databases, and they will not be visible when you connect to the contained availability group. You need to manually re-create them in the contained system databases within the context of the contained availability group.  The exception to this is that all of the logins in the sysadmin role in the parent instance are copied into the new AG specific master DB.
+The system databases in a newly created contained AG aren't copies from the instance where the `CREATE AVAILABILITY GROUP` command is run. They are initially empty templates without any data. Immediately after creation, the admin accounts on the instance creating the contained AG are copied into the contained AG `master`. That way, the administrator can log into the contained AG and set up the rest of the configuration. If you create local users or configurations in your instance, they don't automatically appear when you create your contained system databases, and they aren't visible when you connect to the contained AG. You need to manually re-create them in the contained system databases within the context of the contained AG. The exception to this is that all of the logins in the sysadmin role in the parent instance are copied into the new AG specific `master` database.
 
-### Connect (Contained environment)
+#### Restore a contained system database
 
-It's important to distinguish the difference between connecting to the instance, and connecting to the contained availability group. The only way to access the environment of the contained availability group is to connect to the contained availability group listener, or to connect to a database which is in the contained availability group. i.e.
+You can restore a contained system database using one of two different ways.
 
-```csharp
+- **Restore a contained database using a secondary replica**:
+
+  1. Restore the contained `master` and `msdb` database onto a server instance that hosts the secondary replica, using `RESTORE WITH NORECOVERY` for every restore operation. For more information, see [Prepare a secondary database for an Always On availability group](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).
+
+  1. Join each contained database to the availability group. For more information, see [Join a secondary database to an Always On availability group](join-a-secondary-database-to-an-availability-group-sql-server.md).
+
+- **Restore a contained database by dropping the contained AG**:
+
+  1. Drop the contained AG.
+
+  1. Restore the contained `master` and `msdb` database in each of the instances participating in the contained AG.
+
+  1. Recreate the contained AG using original nodes and name, using `WITH (CONTAINED, REUSE_SYSTEM_DATABASES)` syntax.
+
+### Connect (contained environment)
+
+It's important to distinguish the difference between connecting to the instance, and connecting to the contained AG. The only way to access the environment of the contained AG is to connect to the contained AG listener, or to connect to a database that is in the contained AG.
+
+```output
 "Persist Security Info=False;
 User ID=MyUser;Password=*****;
 Initial Catalog=MyContainedDatabase;
 Server=MyServer;"
 ```
 
-Where MyContainedDatabase is a database within the contained availability group which you wish to interact with.
+Where `MyContainedDatabase` is a database within the contained AG that you wish to interact with.
 
-**This means that you must create a listener for the contained availability group to effectively use a contained availability group.** If you connect to one of the _instances_ hosting the  contained availability group rather than _directly to the contained availability group through the listener_, you will be in the environment of the instance, and not the contained availability group.
+**This means that you must create a listener for the contained AG to effectively use a contained AG.** If you connect to one of the *instances* hosting the contained AG rather than *directly to the contained AG through the listener*, you're in the environment of the instance, and not the contained AG.
 
-For example, if your availability group `MyContainedAG` is hosted on server `SERVER\MSSQLSERVER`, and instead of connecting to the listener `MyContainedAG_Listener`, you connect to the instance using `SERVER\MSSQLSERVER`, you will be in the environment of the instance, and not in the environment of `MyContainedAG`. This means you will be subject to the contents (users, permissions, jobs, etc.) that are found in the system databases of the instance. To access the contents found in the contained system databases of the contained availability group, connect to the contained availability group listener (`MyContainedAG_Listener`, for example) instead. When you are connected to the instance through the contained availability group listener,  when you interact with `master`, you are actually redirected to the contained `master` database (for example,  `MyContainedAG_`master`).
+For example, if your availability group `MyContainedAG` is hosted on server `SERVER\MSSQLSERVER`, and instead of connecting to the listener `MyContainedAG_Listener`, you connect to the instance using `SERVER\MSSQLSERVER`, you're in the environment of the instance, and not in the environment of `MyContainedAG`. This means you're subject to the contents (users, permissions, jobs, etc.) that are found in the system databases of the instance. To access the contents found in the contained system databases of the contained AG, connect to the contained AG listener (`MyContainedAG_Listener`, for example) instead. When you're connected to the instance through the contained AG listener, when you interact with `master`, you're actually redirected to the contained `master` database (for example, `MyContainedAG_master`).
 
 #### Read-only routing and contained availability groups
 
-If you have configured read-only routing to redirect connections with read intent to a secondary replica (see [Configure read-only routing for an Always On availability group](./configure-read-only-routing-for-an-availability-group-sql-server.md)) and you wish to connect using a login which is created in the contained availability group only, there are some additional considerations:
+If you configure read-only routing to redirect connections with read intent to a secondary replica (see [Configure read-only routing for an Always On availability group](configure-read-only-routing-for-an-availability-group-sql-server.md)) and you wish to connect using a login that is created in the contained AG only, there are some additional considerations:
 
-- You must specify a database which is part of the contained availability group in the connection string
-- The user specified in the connection string must have permission to access the database(s) in the contained availability group.
+- You must specify a database that is part of the contained AG in the connection string
+- The user specified in the connection string must have permission to access the databases in the contained AG.
 
-For example in the following connection string, where AdventureWorks is a database within the contained availability group which has MyContainedListener, and where _MyUser_ is a user defined in the contained availability group and none of the participating instances:
+For example in the following connection string, where `AdventureWorks` is a database within the contained AG that has `MyContainedListener`, and where `MyUser` is a user defined in the contained AG and none of the participating instances:
 
-```csharp
+```output
 "Persist Security Info=False;
 User ID=MyUser;Password=*****;
 Initial Catalog=AdventureWorks;
@@ -84,79 +103,83 @@ Server=MyContainedListener;
 ApplicationIntent=ReadOnly"
 ```
 
-This connection string would get you connected to the readable secondary which is part of the ReadOnly Routing configuration, and you would be within the context of the contained availability group.
+This connection string would get you connected to the readable secondary that is part of the ReadOnly Routing configuration, and you would be within the context of the contained AG.
 
 #### Differences between connecting to the instance and connecting to the contained availability group
 
-- When connected to contained AG, users will only see databases in the contained AG, plus tempdb.
-- At instance level, contained AG master and msdb names will be [contained AG]_master, and [contained AG]_msdb. Inside contained AG, their names are master and msdb.
-- Database ID for contained AG master is 1 from inside contained AG, but something else when connected to the instance.
-- While users will not see databases outside of the contained AG in sys.databases when connected in a contained AG connection, they will be able to access those databases by three part name or through the _use_ command.
-- Server configuration through sp_configure can be read from contained AG connection but can only be written from instance level.
-- From contained AG connections, sysadmin is able to perform instance level operations, such as shutting down SQL Server.
-- Most DB level, end point level, or AG level operations can only be performed from instance connections, not contained AG connections.
+- When connected to a contained AG, users only see databases in the contained AG, plus `tempdb`.
+- At instance level, the contained AG `master` and `msdb` names are `[contained AG]_master`, and `[contained AG]_msdb`. Inside the contained AG, their names are `master` and `msdb`.
+- The database ID for the contained AG `master` is `1` from inside the contained AG, but something else when connected to the instance.
+- While users don't see databases outside of the contained AG in `sys.databases` when connected in a contained AG connection, they can access those databases by three-part name, or through the `USE` command.
+- Server configuration through `sp_configure` can be read from the contained AG connection but can only be written from instance level.
+- From contained AG connections, the sysadmin is able to perform instance level operations, such as shutting down [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
+- Most database level, endpoint level, or AG level operations can only be performed from instance connections, not contained AG connections.
 
 ## Interactions with other features
 
-There are additional considerations when using certain features with contained availability groups, and there are some features that are currently unsupported.
+There are additional considerations when using certain features with contained AGs, and there are some features that are currently unsupported.
 
 ### Not supported
 
-Currently, the following SQL Server features are not supported with a contained availability group:
+Currently, the following [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] features aren't supported with a contained AG:
 
-- SQL Server Replication of any type (transactional, merge, snapshot, etc.).
+- [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Replication of any type (transactional, merge, snapshot, and so on).
 - Distributed availability groups.
-- Log shipping where the target database is in the contained availability group. Log shipping with the source database in the contained availability group is supported.
+- Log shipping where the target database is in the contained AG. Log shipping with the source database in the contained AG is supported.
 
-### Change Data Capture
+### Change data capture
 
-Change data capture (CDC) is implemented as SQL Agent jobs, so the SQL Agent needs to be running on all instances with replicas in the contained availability group.
+Change data capture (CDC) is implemented as SQL Agent jobs, so the SQL Agent needs to be running on all instances with replicas in the contained AG.
 
-To use change data capture with a contained availability group, connect to the availability group listener when you configure CDC so that the CDC metadata is configured using the contained system databases.  
+To use change data capture with a contained AG, connect to the AG listener when you configure CDC so that the CDC metadata is configured using the contained system databases.
 
-### Log Shipping
+### Log shipping
 
-Log shipping can be configured if the source database is in the contained availability group. However, a log shipping target is not supported within a contained availability  group. Additionally, there is an extra step to modify the log shipping job after CDC is configured.
+Log shipping can be configured if the source database is in the contained AG. However, a log shipping target isn't supported within a contained AG. Additionally, there's an extra step to modify the log shipping job after CDC is configured.
 
-To configure log shipping with a contained availability group, do the following:
+To configure log shipping with a contained AG, follow these steps:
 
-1. Connect to the contained availability group listener.
+1. Connect to the contained AG listener.
 1. Configure [log shipping](../../log-shipping/configure-log-shipping-sql-server.md) as you normally would.
-1. After the log shipping job is configured, alter the job to connect to the contained availability group listener before taking a backup.
+1. After the log shipping job is configured, alter the job to connect to the contained AG listener before taking a backup.
 
-### Transparent Data Encryption (TDE)
+### Transparent data encryption (TDE)
 
-To use transparent data encryption (TDE) with databases in a contained availability group, manually install the Database Master Key (DMK) to the contained `master` database within the contained availability group.
+To use transparent data encryption (TDE) with databases in a contained AG, manually install the Database Master Key (DMK) to the contained `master` database within the contained AG.
 
-Databases that use TDE rely on certificates in the `master` database to decrypt the Database Encryption Key (DEK). Without that certificate, SQL Server cannot decrypt databases encrypted with TDE or bring them online. In a contained availability group, SQL Server will check both `master` databases for the Database Master Key (DMK), the `master` database for the instance, and the contained `master` database within the contained availability group to decrypt the database. If it cannot find the certificate in either location, then SQL Server will be unable to bring the database online.
+Databases that use TDE rely on certificates in the `master` database to decrypt the Database Encryption Key (DEK). Without that certificate, [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] can't decrypt databases encrypted with TDE or bring them online. In a contained AG, [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] checks both `master` databases for the DMK, the `master` database for the instance, and the contained `master` database within the contained AG to decrypt the database. If it can't find the certificate in either location, then [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] is unable to bring the database online.
 
-To transfer the DMK from the `master` database of the instance, to the contained `master` database, see [Move a TDE Protected Database to Another SQL Server](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md), primarily focusing on the portions where the DMK is transferred from the old server to the new one.
+To transfer the DMK from the `master` database of the instance, to the contained `master` database, see [Move a TDE protected database to another SQL Server](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md), primarily focusing on the portions where the DMK is transferred from the old server to the new one.
+
+### SSIS packages & maintenance plans
+
+Using SSIS packages, including maintenance plans, is not supported with contained availability groups.
 
 ## DDL changes
 
-The only DDL changes are in the CREATE AVAILABILITY GROUP workflow.  There are two new 'WITH' clauses:
+The only DDL changes are in the `CREATE AVAILABILITY GROUP` workflow. There are two new `WITH` clauses:
 
-```sql
-
-<with_option_spec>::=
+```syntaxsql
+<with_option_spec> ::=
 CONTAINED |
 REUSE_SYSTEM_DATABASES
+```
 
-```  
+#### CONTAINED
 
-`CONTAINED`
-This specifies that the availability group being created should be a contained availability group
+This specifies that the AG being created should be a contained AG.
 
-`REUSE_SYSTEM_DATABASES`
-This option is only valid for CONTAINED availability groups, and specifies that the newly created availability group should reuse existing contained system databases for a previous contained availability group of the same name.  For example, if you had a contained availability group with the name _MyContainedAG_, and wanted to drop and recreate it, you could use this option to reuse the contents of the original contained system databases.
+#### REUSE_SYSTEM_DATABASES
 
-## DMV Changes
+This option is only valid for contained AGs, and specifies that the newly created AG should reuse existing contained system databases for a previous contained AG of the same name. For example, if you had a contained AG with the name `MyContainedAG`, and wanted to drop and recreate it, you could use this option to reuse the contents of the original contained system databases.
 
- There are two additions to DMVs related to contained availability groups:
+## DMV changes
 
-- The DMV `SYS.DM_EXEC_SESSIONS` has an added column: CONTAINED_AVAILABILITY_GROUP_ID
-- The `SYS.AVAILABILITY_GROUPS` catalog view has the added column: IS_CONTAINED
+There are two additions to DMVs related to contained AGs:
 
-## Next steps
+- The DMV `sys.dm_exec_sessions` has an added column: `contained_availability_group_id`
+- The `sys.availability_groups` catalog view has the added column: `is_contained`
 
-To configure an availability group, see [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md).
+## Related content
+
+- [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)

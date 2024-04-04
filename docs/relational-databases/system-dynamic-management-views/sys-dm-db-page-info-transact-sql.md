@@ -57,7 +57,7 @@ Determines the level of detail in the output of the function. `'LIMITED'` will r
 
 | Column name | Data type | Description |
 | --- | --- | --- |
-| database_id | **int** | Database ID. <br /><br />In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|
+| database_id | **int** | Database ID. <br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|
 | file_id | **int** | File ID |
 | page_id | **int** | Page ID |
 | page_header_version | **int** | Page header version |

@@ -10,7 +10,6 @@ ms.topic: "reference"
 helpviewer_keywords:
   - "SQLBrowseConnect function"
 apitype: "DLLExport"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLBrowseConnect
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -22,7 +21,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Keyword|List returned?|Optional?|Description|  
 |-------------|--------------------|---------------|-----------------|  
 |DSN|N/A|No|Name of the data source returned by **SQLDataSources**. The DSN keyword cannot be used if the DRIVER keyword is used.|  
-|DRIVER|N/A|No|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver name is {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. The DRIVER keyword cannot be used if the DSN keyword is used.|  
+|DRIVER|N/A|No|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver name is {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. The DRIVER keyword cannot be used if the DSN keyword is used.|  
   
 ## Level 2  
   

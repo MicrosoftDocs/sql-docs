@@ -62,14 +62,14 @@ Beginning with version 17.4, the driver supports Always Encrypted with secure en
 
 - `<attestation protocol>` - specifies a protocol used for enclave attestation.
   - If you're using [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), `<attestation protocol>` should be `VBS-HGS`.
-  - If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, `<attestation protocol>` should be `SGX-AAS`.
+  - If you're using [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and Microsoft Azure Attestation, `<attestation protocol>` should be `SGX-AAS`.
   - If you do not require attestation, `<attestation-protocol>` should be `VBS-NONE`. (Version 18.1+)
 
 
 - `<attestation URL>` - specifies an attestation URL (an attestation service endpoint). You need to obtain an attestation URL for your environment from your attestation service administrator.
 
   - If you're using [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see [Determine and share the HGS attestation URL](../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
-  - If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](../../relational-databases/security/encryption/always-encrypted-enclaves.md#secure-enclave-attestation).
+  - If you're using [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](../../relational-databases/security/encryption/always-encrypted-enclaves.md#secure-enclave-attestation).
   - If you do not require attestation, do not specify an attestation URL (nor the preceding comma). (Version 18.1+)
 
 Examples of connection strings enabling enclave computations for a database connection:
@@ -80,7 +80,7 @@ Examples of connection strings enabling enclave computations for a database conn
    "Driver=ODBC Driver 18 for SQL Server;Server=myServer.myDomain;Encrypt=yes;Database=myDataBase;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://myHGSServer.myDomain/Attestation"
    ```
 
-- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]:
+- [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]:
   
    ```cpp
    "Driver=ODBC Driver 18 for SQL Server;Server=myServer.database.windows.net;Database=myDataBase;Uid=myUsername;Pwd=myPassword;Encrypt=yes;ColumnEncryption=SGX-AAS,https://myAttestationProvider.uks.attest.azure.net/"
@@ -452,22 +452,22 @@ The ODBC Driver for SQL Server comes with the following built-in keystore provid
 Azure Key Vault (AKV) is a convenient option to store and manage column master keys for Always Encrypted (especially if your applications are hosted in Azure). The ODBC Driver for SQL Server on Linux, macOS, and Windows includes a built-in column master key store provider for Azure Key Vault. For more information on configuring an Azure Key Vault for Always Encrypted, see [Azure Key Vault - Step by Step](/archive/blogs/kv/azure-key-vault-step-by-step), [Getting Started with Key Vault](/azure/key-vault/general/overview), and [Creating Column Master Keys in Azure Key Vault](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
 
 > [!NOTE]
-> The ODBC Driver only supports AKV authentication directly against Azure Active Directory. If you are using Azure Active Directory authentication to AKV and your Active Directory configuration requires authentication against an Active Directory Federation Services endpoint, authentication may fail.
+> The ODBC Driver only supports AKV authentication directly against Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). If you are using Microsoft Entra authentication to AKV and your configuration requires authentication against an Active Directory Federation Services endpoint, authentication may fail.
 > On Linux and macOS, for driver version 17.2 and later, `libcurl` is required to use this provider, but is not an explicit dependency since other operations with the driver do not require it. If you encounter an error regarding `libcurl`, ensure it is installed.
 
 The driver supports authenticating to Azure Key Vault using the following credential types:
 
-- Username/Password - with this method, the credentials are the name of an Azure Active Directory user and its password.
+- Username/Password - with this method, the credentials are the name of a Microsoft Entra user and its password.
 
 - Client ID/Secret - with this method, the credentials are an application client ID and an application secret.
 
 - Managed Identity (17.5.2+) - either system or user-assigned; for more information, see [Managed Identities for Azure resources](/azure/active-directory/managed-identities-azure-resources/).
 
-- Azure Key Vault Interactive (17.7+ Windows drivers) - with this method, the credentials are authenticated through Azure Active Directory with Login ID.
+- Azure Key Vault Interactive (17.7+ Windows drivers) - with this method, the credentials are authenticated through Microsoft Entra ID with Login ID.
 
 To allow the driver to use CMKs stored in AKV for column encryption, use the following connection-string-only keywords:
 
-| Credential Type | <code>KeyStoreAuthentication</code> | <code>KeyStorePrincipalId</code> | <code>KeyStoreSecret</code> |
+| Credential Type | `KeyStoreAuthentication` | `KeyStorePrincipalId` | `KeyStoreSecret` |
 |--|--|--|--|
 | Username/password | `KeyVaultPassword` | User Principal Name | Password |
 | Client ID/secret | `KeyVaultClientSecret` | Client ID | Secret |
@@ -684,7 +684,7 @@ When using the **bcp** utility: To control the `ColumnEncryption` setting, use t
 
 The following table provides a summary of the actions when operating on an encrypted column:
 
-| <code>ColumnEncryption</code> | BCP Direction | Description |
+| `ColumnEncryption` | BCP direction | Description |
 |--|--|--|
 | `Disabled` | OUT (to client) | Retrieves ciphertext. The observed datatype is **varbinary(max)**. |
 | `Enabled` | OUT (to client) | Retrieves plaintext. The driver will decrypt the column data. |
@@ -705,8 +705,8 @@ For more information, see [Migrate Sensitive Data Protected by Always Encrypted]
 |--|--|
 | `ColumnEncryption` | Accepted values are `Enabled`/`Disabled`.<br>`Enabled` - enables Always Encrypted functionality for the connection.<br>`Disabled` - disable Always Encrypted functionality for the connection.<br>*attestation protocol*, *attestation URL* - (version 17.4 and later) enables Always Encrypted with secure enclave using the specified attestation protocol and the attestation URL. <br><br>The default is `Disabled`. |
 | `KeyStoreAuthentication` | Valid Values: `KeyVaultPassword`, `KeyVaultClientSecret`, `KeyVaultInteractive`, `KeyVaultManagedIdentity` |
-| `KeyStorePrincipalId` | When `KeyStoreAuthentication` = `KeyVaultPassword`, set this value to a valid Azure Active Directory User Principal Name. <br>When `KeyStoreAuthetication` = `KeyVaultClientSecret` set this value to a valid Azure Active Directory Application Client ID <br>When `KeyStoreAuthetication` = `KeyVaultManagedIdentity`, set this value to the Object ID of a user-assigned identity. Otherwise, the system-assigned identity is used. |
-| `KeyStoreSecret` | When `KeyStoreAuthentication` = `KeyVaultPassword` set this value to the password for the corresponding user name. <br>When `KeyStoreAuthentication` = `KeyVaultClientSecret` set this value to the Application Secret associated with a valid Azure Active Directory Application Client ID |
+| `KeyStorePrincipalId` | When `KeyStoreAuthentication` = `KeyVaultPassword`, set this value to a valid Microsoft Entra user principal name. <br>When `KeyStoreAuthetication` = `KeyVaultClientSecret` set this value to a valid Microsoft Entra application client ID <br>When `KeyStoreAuthetication` = `KeyVaultManagedIdentity`, set this value to the object ID of a user-assigned managed identity. If no value is provided, the system-assigned managed identity is used. |
+| `KeyStoreSecret` | When `KeyStoreAuthentication` = `KeyVaultPassword` set this value to the password for the corresponding user name. <br>When `KeyStoreAuthentication` = `KeyVaultClientSecret` set this value to the application secret associated with a valid Microsoft Entra application client ID |
 
 ### Connection attributes
 

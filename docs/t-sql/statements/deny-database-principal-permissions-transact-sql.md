@@ -70,7 +70,7 @@ DENY permission [ ,...n ]
  Specifies the class and name of the role on which the permission is being denied. The scope qualifier (**::**) is required.  
   
  APPLICATION ROLE ::*application_role*  
- **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sssds](../../includes/sssds-md.md)].  
   
  Specifies the class and name of the application role on which the permission is being denied. The scope qualifier (**::**) is required.  
   
@@ -87,7 +87,7 @@ DENY permission [ ,...n ]
  Specifies a database role.  
   
  *Application_role*  
- **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sssds](../../includes/sssds-md.md)].  
   
  Specifies an application role.  
   
@@ -148,7 +148,7 @@ DENY permission [ ,...n ]
  The following example denies `CONTROL` permission on the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] user `Wanida` to user `RolandX`.  
   
 ```sql 
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 DENY CONTROL ON USER::Wanida TO RolandX;  
 GO  
 ```  
@@ -157,7 +157,7 @@ GO
  The following example denies `VIEW DEFINITION` permission on the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] role `SammamishParking` to database user `JinghaoLiu`. The `CASCADE` option is specified because user `JinghaoLiu` was granted VIEW DEFINITION permission WITH GRANT OPTION.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 DENY VIEW DEFINITION ON ROLE::SammamishParking   
     TO JinghaoLiu CASCADE;  
 GO  
@@ -166,10 +166,10 @@ GO
 ### C. Denying IMPERSONATE permission on a user to an application role  
  The following example denies `IMPERSONATE` permission on user `HamithaL` to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] application role `AccountsPayable17`.  
   
-**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sssds](../../includes/sssds-md.md)].  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 DENY IMPERSONATE ON USER::HamithaL TO AccountsPayable17;  
 GO    
 ```  

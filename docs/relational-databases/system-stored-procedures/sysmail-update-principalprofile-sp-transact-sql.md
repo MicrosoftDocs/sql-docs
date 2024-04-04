@@ -37,19 +37,19 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 
 #### [ @principal_id = ] *principal_id*
 
-The ID of the database user or role in the `msdb` database for the association to change. *principal_id* is **int**, with a default of NULL. Either *@principal_id* or *@principal_name* must be specified.
+The ID of the database user or role in the `msdb` database for the association to change. *principal_id* is **int**, with a default of `NULL`. Either *@principal_id* or *@principal_name* must be specified.
 
 #### [ @principal_name = ] '*principal_name*'
 
-The name of the database user or role in the `msdb` database for the association to update. *principal_name* is **sysname**, with a default of NULL. Either *@principal_id* or *@principal_name* must be specified.
+The name of the database user or role in the `msdb` database for the association to update. *principal_name* is **sysname**, with a default of `NULL`. Either *@principal_id* or *@principal_name* must be specified.
 
 #### [ @profile_id = ] *profile_id*
 
-The ID of the profile for the association to change. *@profile_id* is **int**, with a default of NULL. Either *@profile_id* or *@profile_name* must be specified.
+The ID of the profile for the association to change. *@profile_id* is **int**, with a default of `NULL`. Either *@profile_id* or *@profile_name* must be specified.
 
 #### [ @profile_name = ] '*profile_name*'
 
-The name of the profile for the association to change. *@profile_name* is **sysname**, with a default of NULL. Either *@profile_id* or *@profile_name* must be specified.
+The name of the profile for the association to change. *@profile_name* is **sysname**, with a default of `NULL`. Either *@profile_id* or *@profile_name* must be specified.
 
 #### [ @is_default = ] *is_default*
 
@@ -59,7 +59,7 @@ Whether this profile is the default profile for the database user. A database us
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -101,8 +101,8 @@ EXEC msdb.dbo.sysmail_update_principalprofile_sp
     @is_default = '1' ;
 ```
 
-## See also
+## Related content
 
-- [Database Mail](../../relational-databases/database-mail/database-mail.md)
-- [Database Mail Configuration Objects](../../relational-databases/database-mail/database-mail-configuration-objects.md)
+- [Database Mail](../database-mail/database-mail.md)
+- [Database Mail Configuration Objects](../database-mail/database-mail-configuration-objects.md)
 - [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)

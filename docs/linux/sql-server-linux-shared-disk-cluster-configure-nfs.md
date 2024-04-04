@@ -4,246 +4,245 @@ description: Learn to configure a failover cluster instance (FCI) using NFS stor
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: vanto
-ms.date: 08/28/2017
+ms.date: 08/23/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Configure failover cluster instance - NFS - SQL Server on Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This article explains how to configure NFS storage for a failover cluster instance (FCI) on Linux. 
+This article explains how to configure NFS storage for a failover cluster instance (FCI) on Linux.
 
-NFS, or network file system, is a common method for sharing disks in the Linux world but not the Windows one. Similar to iSCSI, NFS can be configured on a server or some sort of appliance or storage unit as long as it meets the storage requirements for SQL Server.
+NFS, or network file system, is a common method for sharing disks in the Linux world but not the Windows one. Similar to iSCSI, NFS can be configured on a server or some sort of appliance or storage unit as long as it meets the storage requirements for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)].
 
 ## Important NFS server information
 
-The source hosting NFS (either a Linux server or something else) must be using/compliant with version 4.2 or later. Earlier versions will not work with SQL Server on Linux.
+The source hosting NFS (either a Linux server or something else) must be using/compliant with version 4.2 or later. Earlier versions don't work with [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux.
 
 When configuring the folder(s) to be shared on the NFS server, make sure they follow these guidelines general options:
+
 - `rw` to ensure that the folder can be read from and written to
 - `sync` to ensure guaranteed writes to the folder
-- Do not use `no_root_squash` as an option; it is considered a security risk
-- Make sure the folder has full rights (777) applied
+- Don't use `no_root_squash` as an option; it's considered a security risk
+- Make sure the folder has full rights (`777`) applied
 
-Ensure that your security standards are enforced for accessing. When configuring the folder, make sure that only the servers participating in the FCI should see the NFS folder. An example of a modified /etc/exports on a Linux-based NFS solution is shown below where the folder is restricted to FCIN1 and FCIN2.
+Ensure that your security standards are enforced for accessing. When configuring the folder, make sure that only the servers participating in the FCI should see the NFS folder. In the following example, a modified `/etc/exports` on a Linux-based NFS solution is shown, where the folder is restricted to `FCIN1` and `FCIN2`.
 
-![Screenshot of an example of a modified /etc/exports on a Linux-based NFS solution is shown below where the folder is restricted to FCIN1 and FCIN2.][1]
+```output
+# /etc/exports: the access control list for filesystems which may be exported
+#               to NFS clients. See export(5).
+#
+/var/nfs/fci1   FCIN1(rw,sync) FCIN2(rw,sync)
+```
 
 ## Instructions
 
-1. Choose one of the servers that will participate in the FCI configuration. It does not matter which one. 
+1. Choose one of the servers that will participate in the FCI configuration. It doesn't matter which one.
 
-2. Check to see that the server can see the mount(s) on the NFS server.
+1. Check to see that the server can see the mount(s) on the NFS server.
 
-    ```bash
-    sudo showmount -e <IPAddressOfNFSServer>
-    ```
+   ```bash
+   sudo showmount -e <IPAddressOfNFSServer>
+   ```
 
-    \<IPAddressOfNFSServer> is the IP address of the NFS server that you are going to use.
+   - `<IPAddressOfNFSServer>` is the IP address of the NFS server that you're going to use.
 
-3. For system databases or anything stored in the default data location, follow these steps. Otherwise, skip to Step 4.
- 
-   * Ensure that SQL Server is stopped on the server that you are working on.
+1. For system databases or anything stored in the default data location, follow these steps. Otherwise, skip to Step 4.
 
-    ```bash
-    sudo systemctl stop mssql-server
-    sudo systemctl status mssql-server
-    ```
-   * Switch fully to be the superuser. You will not receive any acknowledgement if successful.
+   - Ensure that [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is stopped on the server that you're working on.
 
-    ```bash
-    sudo -i
-    ```
+     ```bash
+     sudo systemctl stop mssql-server
+     sudo systemctl status mssql-server
+     ```
 
-   * Switch to be the mssql user. You will not receive any acknowledgement if successful.
+   - Switch fully to be the superuser.
 
-    ```bash
-    su mssql
-    ```
+     ```bash
+     sudo -i
+     ```
 
-   * Create a temporary directory to store the SQL Server data and log files. You will not receive any acknowledgement if successful.
+   - Switch to be the `mssql` user.
 
-    ```bash
-    mkdir <TempDir>
-    ```
+     ```bash
+     su mssql
+     ```
 
-    \<TempDir> is the name of the folder. The following example creates a folder named /var/opt/mssql/tmp.
+   - Create a temporary directory to store the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] data and log files.
 
-    ```bash
-    mkdir /var/opt/mssql/tmp
-    ```
+     ```bash
+     mkdir <TempDir>
+     ```
 
-   * Copy the SQL Server data and log files to the temporary directory. You will not receive any acknowledgement if successful.
-    
-    ```bash
-    cp /var/opt/mssql/data/* <TempDir>
-    ```
+     - `<TempDir>` is the name of the folder. The following example creates a folder named `/var/opt/mssql/tmp`.
 
-    \<TempDir> is the name of the folder from the previous step.
+     ```bash
+     mkdir /var/opt/mssql/tmp
+     ```
 
-   * Verify that the files are in the directory.
+   - Copy the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] data and log files to the temporary directory.
 
-    ```bash
-    ls TempDir
-    ```
+     ```bash
+     cp /var/opt/mssql/data/* <TempDir>
+     ```
 
-    \<TempDir> is the name of the folder from Step d.
+     - `<TempDir>` is the name of the folder from the previous step.
 
-   * Delete the files from the existing SQL Server data directory. You will not receive any acknowledgement if successful.
+   - Verify that the files are in the directory.
 
-    ```bash
-    rm - f /var/opt/mssql/data/*
-    ```
+     ```bash
+     ls TempDir
+     ```
 
-   * Verify that the files have been deleted. 
+     - `<TempDir>` is the name of the folder from the previous step.
 
-    ```bash
-    ls /var/opt/mssql/data
-    ```
-    
-   * Type exit to switch back to the root user.
+   - Delete the files from the existing [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] data directory.
 
-   * Mount the NFS share in the SQL Server data folder. You will not receive any acknowledgement if successful.
+     ```bash
+     rm - f /var/opt/mssql/data/*
+     ```
 
-    ```bash
-    mount -t nfs4 <IPAddressOfNFSServer>:<FolderOnNFSServer> /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
-    ```
+   - Verify that the files have been deleted.
 
-    \<IPAddressOfNFSServer> is the IP address of the NFS server that you are going to use 
+     ```bash
+     ls /var/opt/mssql/data
+     ```
 
-    \<FolderOnNFSServer> is the name of the NFS share. The following example syntax matches the NFS information from Step 2.
+   - Type exit to switch back to the root user.
 
-    ```bash
-    mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
-    ```
+   - Mount the NFS share in the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] data folder.
 
-   * Check to see that the mount was successful by issuing mount with no switches.
+     ```bash
+     mount -t nfs4 <IPAddressOfNFSServer>:<FolderOnNFSServer> /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
+     ```
 
-    ```bash
-    mount
-    ```
+     - `<IPAddressOfNFSServer>` is the IP address of the NFS server that you're going to use
+     - `<FolderOnNFSServer>` is the name of the NFS share. The following example syntax matches the NFS information from Step 2.
 
-    ![Screenshot of the mount command and the response to the command showing no switches.][2]
+     ```bash
+     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
+     ```
 
-   * Switch to the mssql user. You will not receive any acknowledgement if successful.
+   - Check to see that the mount was successful by issuing mount with no switches.
 
-    ```bash
-    su mssql
-    ```
+     ```bash
+     mount
+     ```
 
-   * Copy the files from the temporary directory /var/opt/mssql/data. You will not receive any acknowledgement if successful.
+     :::image type="content" source="media/sql-server-linux-shared-disk-cluster-configure-nfs/10-mountnoswitches.png" alt-text="Screenshot of the mount command and the response to the command showing no switches.":::
 
-    ```bash
-    cp /var/opt/mssql/tmp/* /var/opt/mssqldata
-    ```
+   - Switch to the `mssql` user.
 
-   * Verify the files are there.
+     ```bash
+     su mssql
+     ```
 
-    ```bash
-    ls /var/opt/mssql/data
-    ```
+   - Copy the files from the temporary directory /var/opt/mssql/data.
 
-   * Enter exit to not be mssql 
-    
-   * Enter exit to not be root
+     ```bash
+     cp /var/opt/mssql/tmp/* /var/opt/mssqldata
+     ```
 
-   * Start SQL Server. If everything was copied correctly and security applied correctly, SQL Server should show as started.
+   - Verify the files are there.
 
-    ```bash
-    sudo systemctl start mssql-server
-    sudo systemctl status mssql-server
-    ```
-    
-   * Create a database to test that security is set up properly. The following example shows that being done via Transact-SQL; it can be done via SSMS.
- 
-    ![CreateTestdatabase][3]
+     ```bash
+     ls /var/opt/mssql/data
+     ```
 
-   * Stop SQL Server and verify it is shut down.
+   - Enter `exit` to not be `mssql`.
 
-    ```bash
-    sudo systemctl stop mssql-server
-    sudo systemctl status mssql-server
-    ```
+   - Enter `exit` to not be root.
 
-   * If you are not creating any other NFS mounts, unmount the share. If you are, do not unmount.
+   - Start [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. If everything was copied correctly and security applied correctly, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] should show as started.
 
-    ```bash
-    sudo umount <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn>
-    ```
+     ```bash
+     sudo systemctl start mssql-server
+     sudo systemctl status mssql-server
+     ```
 
-    \<IPAddressOfNFSServer> is the IP address of the NFS server that you are going to use
+   - Create a database to test that security is set up properly. The following example shows that being done via Transact-SQL; it can be done via SSMS.
 
-    \<FolderOnNFSServer> is the name of the NFS share
+     :::image type="content" source="media/sql-server-linux-shared-disk-cluster-configure-nfs/20-createtestdatabase.png" alt-text="Screenshot showing how to create the test database.":::
 
-    \<FolderMountedIn> is the folder created in the previous step. 
+   - Stop [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] and verify it's shut down.
 
-4. For things other than system databases, such as user databases or backups, follow these steps. If only using the default location, skip to Step 5.
+     ```bash
+     sudo systemctl stop mssql-server
+     sudo systemctl status mssql-server
+     ```
 
-   * Switch to be the superuser. You will not receive any acknowledgement if successful.
+   - If you aren't creating any other NFS mounts, unmount the share. If you are, don't unmount.
 
-    ```bash
-    sudo -i
-    ```
+     ```bash
+     sudo umount <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn>
+     ```
 
-   * Create a folder that will be used by SQL Server. 
+     - `<IPAddressOfNFSServer>` is the IP address of the NFS server that you're going to use
+     - `<FolderOnNFSServer>` is the name of the NFS share
+     - `<FolderMountedIn>` is the folder created in the previous step.
 
-    ```bash
-    mkdir <FolderName>
-    ```
+1. For things other than system databases, such as user databases or backups, follow these steps. If only using the default location, skip to Step 5.
 
-    \<FolderName> is the name of the folder. The folder's full path needs to be specified if not in the right location. The following example creates a folder named /var/opt/mssql/userdata.
+   - Switch to be the superuser.
 
-    ```bash
-    mkdir /var/opt/mssql/userdata
-    ```
+     ```bash
+     sudo -i
+     ```
 
-   * Mount the NFS share in the folder that was created in the previous step. You will not receive any acknowledgement if successful.
+   - Create a folder that will be used by [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)].
 
-    ```bash
-    Mount -t nfs4 <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn> -o nfsvers=4.2,timeo=14,intr
-    ```
+     ```bash
+     mkdir <FolderName>
+     ```
 
-    \<IPAddressOfNFSServer> is the IP address of the NFS server that you are going to use
+     - `<FolderName>` is the name of the folder. The folder's full path needs to be specified if not in the right location.
 
-    \<FolderOnNFSServer> is the name of the NFS share
+     The following example creates a folder named `/var/opt/mssql/userdata`.
 
-    \<FolderToMountIn> is the folder created in the previous step. Below is an example. 
+     ```bash
+     mkdir /var/opt/mssql/userdata
+     ```
 
-    ```bash
-    mount -t nfs4 200.201.202.63:/var/nfs/fci2 /var/opt/mssql/userdata -o nfsvers=4.2,timeo=14,intr
-    ```
+   - Mount the NFS share in the folder that was created in the previous step.
 
-   * Check to see that the mount was successful by issuing mount with no switches.
-  
-   * Type exit to no longer be the superuser.
+     ```bash
+     mount -t nfs4 <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn> -o nfsvers=4.2,timeo=14,intr
+     ```
 
-   * To test, create a database in that folder. The following example uses sqlcmd to create a database, switch context to it, verify the files exist at the OS level, and then deletes the temporary location. You can use SSMS.
+     - `<IPAddressOfNFSServer>` is the IP address of the NFS server that you're going to use
+     - `<FolderOnNFSServer>` is the name of the NFS share
+     - `<FolderToMountIn>` is the folder created in the previous step.
 
-    ![Screenshot of the sqlcmd command and the response to the command.][4]
- 
-   * Unmount the share 
+     The following example mounts the NFS share.
 
-    ```bash
-    sudo umount <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn>
-    ```
+     ```bash
+     mount -t nfs4 200.201.202.63:/var/nfs/fci2 /var/opt/mssql/userdata -o nfsvers=4.2,timeo=14,intr
+     ```
 
-    \<IPAddressOfNFSServer> is the IP address of the NFS server that you are going to use
-    
-    \<FolderOnNFSServer> is the name of the NFS share
+   - Check to see that the mount was successful by issuing mount with no switches.
 
-    \<FolderMountedIn> is the folder created in the previous step. Below is an example. 
- 
-5. Repeat the steps on the other node(s).
+   - Type exit to no longer be the superuser.
 
+   - To test, create a database in that folder. The following example uses sqlcmd to create a database, switch context to it, verify the files exist at the OS level, and then deletes the temporary location. You can use SSMS.
 
-## Next steps
+     :::image type="content" source="media/sql-server-linux-shared-disk-cluster-configure-nfs/15-createtestdatabase.png" alt-text="Screenshot of the sqlcmd command and the response to the command.":::
 
-[Configure failover cluster instance - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
+   - Unmount the share
 
-<!--Image references-->
-[1]: ./media/sql-server-linux-shared-disk-cluster-configure-nfs/05-nfsacl.png
-[2]: ./media/sql-server-linux-shared-disk-cluster-configure-nfs/10-mountnoswitches.png
-[3]: ./media/sql-server-linux-shared-disk-cluster-configure-nfs/20-createtestdatabase.png
-[4]: ./media/sql-server-linux-shared-disk-cluster-configure-nfs/15-createtestdatabase.png
+     ```bash
+     sudo umount <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn>
+     ```
+
+     - `<IPAddressOfNFSServer>` is the IP address of the NFS server that you're going to use
+     - `<FolderOnNFSServer>` is the name of the NFS share
+     - `<FolderMountedIn>` is the folder created in the previous step.
+
+1. Repeat the steps on the other node(s).
+
+## Related content
+
+- [Configure failover cluster instance - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)

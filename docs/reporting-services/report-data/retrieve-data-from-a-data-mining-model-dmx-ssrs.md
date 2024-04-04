@@ -40,7 +40,7 @@ helpviewer_keywords:
      Contact your database administrator for connection information and for the credentials to use to connect to the data source. The following connection string example specifies the sample [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] database on the local client.  
   
     ```  
-    Data Source=localhost;Initial Catalog=AdventureWorksDW2012  
+    Data Source=localhost;Initial Catalog=AdventureWorksDW2022  
     ```  
   
 6.  Click **Credentials**.  

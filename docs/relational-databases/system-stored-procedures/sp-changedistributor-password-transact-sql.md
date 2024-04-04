@@ -45,9 +45,9 @@ The new password. *@password* is **sysname**, with no default. If the Distributo
 
 `sp_changedistributor_password` is used in all types of replication.
 
-## Example
+## Examples
 
-[!code-sql[HowTo#sp_changedistributor_password](../../relational-databases/replication/codesnippet/tsql/sp-changedistributor-pas_1.sql)]
+:::code language="sql" source="../replication/codesnippet/tsql/sp-changedistributor-pas_1.sql":::
 
 ## Permissions
 

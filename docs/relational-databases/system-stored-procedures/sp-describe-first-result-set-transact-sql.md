@@ -425,7 +425,7 @@ EXEC(@SQL)
   
  Result: Column1 **bigint NOT NULL**  
   
-#### Error caused by a ambiguous result set  
+#### Error caused by an ambiguous result set  
  This example assumes that another user named user1 has a table named t1 in the default schema s1 with columns (a **int NOT NULL**).  
   
 ```  

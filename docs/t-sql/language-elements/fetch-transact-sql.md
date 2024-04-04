@@ -97,7 +97,7 @@ FETCH
  The following example declares a simple cursor for the rows in the `Person.Person` table with a last name that starts with `B`, and uses `FETCH NEXT` to step through the rows. The `FETCH` statements return the value for the column specified in `DECLARE CURSOR` as a single-row result set.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE contact_cursor CURSOR FOR  
 SELECT LastName FROM Person.Person  
@@ -125,7 +125,7 @@ GO
  The following example is similar to example A, except the output of the `FETCH` statements is stored in local variables instead of being returned directly to the client. The `PRINT` statement combines the variables into a single string and returns them to the client.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Declare the variables to store the values returned by FETCH.  
 DECLARE @LastName VARCHAR(50), @FirstName VARCHAR(50);  
@@ -165,7 +165,7 @@ GO
  The following example creates a `SCROLL` cursor to allow full scrolling capabilities through the `LAST`, `PRIOR`, `RELATIVE`, and `ABSOLUTE` options.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Execute the SELECT statement alone to show the   
 -- full result set that is used by the cursor.  

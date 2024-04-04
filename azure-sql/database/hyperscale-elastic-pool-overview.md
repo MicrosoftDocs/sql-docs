@@ -3,114 +3,161 @@ title: Hyperscale elastic pools overview
 description: Manage and scale multiple Hyperscale databases in Azure SQL Database by using Hyperscale elastic pools. For one price, you can distribute resources where they're needed.
 author: arvindshmicrosoft
 ms.author: arvindsh
-ms.reviewer: wiassaf, mathoma
-ms.date: 05/21/2023
+ms.reviewer: wiassaf, mathoma, randolphwest
+ms.date: 03/27/2024
 ms.service: sql-database
 ms.subservice: elastic-pools
+ms.custom: ignite-2023
 ms.topic: conceptual
-ms.custom: 
 ---
 # Hyperscale elastic pools overview in Azure SQL Database
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This article provides an overview of Hyperscale elastic pools in Azure SQL Database. 
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-An Azure SQL Database [elastic pool](./elastic-pool-overview.md) enables software as a service (SaaS) developers to optimize the price performance ratio for a group of databases within a prescribed budget, while delivering performance elasticity for each database. Azure SQL Database Hyperscale elastic pools introduces a shared resource model for Hyperscale databases. 
+This article provides an overview of Hyperscale elastic pools in Azure SQL Database.
 
-For examples to create, scale, or move databases into a Hyperscale elastic pool by using the Azure CLI or PowerShell, review [Working with Hyperscale elastic pools using command-line tools](./hyperscale-elastic-pool-command-line.md)
+An Azure SQL Database [elastic pool](elastic-pool-overview.md) enables software-as-a-service (SaaS) developers to optimize the price-performance ratio for a group of databases within a prescribed budget while delivering performance elasticity for each database. Azure SQL Database Hyperscale elastic pools introduces a shared resource model for Hyperscale databases.
+
+For examples to create, scale, or move databases into a Hyperscale elastic pool by using the Azure CLI or PowerShell, review [Working with Hyperscale elastic pools using command-line tools](hyperscale-elastic-pool-command-line.md)
 
 > [!NOTE]
-> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) are currently in preview.
+> [Elastic pools for Hyperscale](hyperscale-elastic-pool-overview.md) are currently in preview.
 
 ## Overview
 
-Deploy your Hyperscale database to an [elastic pool](elastic-pool-overview.md) to share resources between databases within the pool and optimize the cost of having multiple databases with different usage patterns. 
+Deploy your Hyperscale database to an [elastic pool](elastic-pool-overview.md) to share resources between databases within the pool and optimize the cost of having multiple databases with different usage patterns.
 
-Scenarios to use an elastic pool with your Hyperscale databases: 
+Scenarios to use an elastic pool with your Hyperscale databases:
 
-- When you need to scale the compute resources allocated to the elastic pool up or down in a predictable amount of time, independent of the amount of allocated storage. 
-- When you want to scale out the compute resources allocated to the elastic pool by adding one or more read-scale replicas. 
-- If you want to use high transaction log throughput for write-intensive workloads, even with lower compute resources. 
+- When you need to scale the compute resources allocated to the elastic pool up or down in a predictable amount of time, independent of the amount of allocated storage.
+- When you want to scale out the compute resources allocated to the elastic pool by adding one or more read-scale replicas.
+- If you want to use high transaction log throughput for write-intensive workloads, even with lower compute resources.
 
-Migrating non-Hyperscale databases to a Hyperscale elastic pool upgrades the databases to the Hyperscale service tier. 
+Migrating non-Hyperscale databases to a Hyperscale elastic pool upgrades the databases to the Hyperscale service tier.
 
-## Architecture 
+## Architecture
 
 Traditionally, the [architecture of a standalone Hyperscale database](service-tier-hyperscale.md#distributed-functions-architecture) consists of three main independent components: Compute, Storage ("Page Servers"), and the log ("Log Service"). When you create an elastic pool for your Hyperscale databases, the databases within the pool share compute and log resources. Additionally, if you choose to configure high availability, then each high availability pool is created with an equivalent and independent set of compute and log resources.
 
-The following describes the architecture of an elastic pool for Hyperscale databases: 
+The following describes the architecture of an elastic pool for Hyperscale databases:
 
-- A Hyperscale elastic pool consists of a primary pool that hosts primary Hyperscale databases, and, if configured, up to four additional high availability pools. 
-- Primary Hyperscale databases hosted in the primary elastic pool share the SQL Server database engine (sqlservr.exe) compute process, vCores, memory, and SSD cache. 
-- Configuring high availability for the primary pool creates additional high availability pools that contain read-only database replicas for the databases in the primary pool. Each primary pool can have a maximum of four high availability replica pools. Each high availability pool shares compute, SSD cache, and memory resources for all the secondary read-only databases in the pool. 
-- Hyperscale databases in the primary elastic pool all share the same log service. Since databases in the high availability pools don't have write workload, they don't utilize the log service. 
-- Each Hyperscale database has its own set of page servers, and these page servers are shared between the primary database in the primary pool, and all secondary replica databases in the high availability pool. 
-- Geo-replicated secondary Hyperscale databases can be placed inside another elastic pool. 
-- Specifying `ApplicationIntent=ReadOnly` in your database connection string routes you to a read-only replica database in one of the high availability pools. 
+- A Hyperscale elastic pool consists of a primary pool that hosts primary Hyperscale databases and, if configured, up to four additional high-availability pools.
+- Primary Hyperscale databases hosted in the primary elastic pool share the SQL Server database engine (sqlservr.exe) compute process, vCores, memory, and SSD cache.
+- Configuring high availability for the primary pool creates additional high availability pools that contain read-only database replicas for the databases in the primary pool. Each primary pool can have a maximum of four high-availability replica pools. Each high-availability pool shares compute, SSD cache, and memory resources for all the secondary read-only databases in the pool.
+- Hyperscale databases in the primary elastic pool all share the same log service. Since databases in the high availability pools don't have a write workload, they don't utilize the log service.
+- Each Hyperscale database has its own set of page servers, and these page servers are shared between the primary database in the primary pool, and all secondary replica databases in the high availability pool.
+- Geo-replicated secondary Hyperscale databases can be placed inside another elastic pool.
+- Specifying `ApplicationIntent=ReadOnly` in your database connection string routes you to a read-only replica database in one of the high availability pools.
 
-The following diagram shows the architecture of an elastic pool for Hyperscale databases: 
+The following diagram shows the architecture of an elastic pool for Hyperscale databases:
 
 :::image type="content" source="media/hyperscale-elastic-pool-overview/elastic-pool-hyperscale-architecture.png" alt-text="Diagram showing the Hyperscale elastic pool architecture.":::
 
 ## Manage Hyperscale elastic pool databases
 
-You can use the [same commands](elastic-pool-manage.md) to manage your pooled Hyperscale databases as pooled databases in the other service tiers. Just be sure to specify `Hyperscale` for the edition when creating your Hyperscale elastic pool. 
+You can use the [same commands](elastic-pool-manage.md) to manage your pooled Hyperscale databases as pooled databases in the other service tiers. Just be sure to specify `Hyperscale` for the edition when creating your Hyperscale elastic pool.
 
 The only difference is the ability to modify the number of high availability (H/A) replicas for an existing Hyperscale elastic pool. To do so:
 
-- Use the `HighAvailabilityReplicaCount` parameter of the Azure PowerShell [Set-AzSqlElasticPool](/powershell/module/az.sql/set-azsqlelasticpool) command. 
+- Use the `HighAvailabilityReplicaCount` parameter of the Azure PowerShell [Set-AzSqlElasticPool](/powershell/module/az.sql/set-azsqlelasticpool) command.
 - Use the `--ha-replicas` parameter of the Azure CLI [az sql elastic-pool update](/cli/azure/sql/elastic-pool) command.
 
-You can use the following client tools to manage your Hyperscale databases in an elastic pool: 
+You can use the following client tools to manage your Hyperscale databases in an elastic pool:
 
-- Azure PowerShell: [Az.Sql.3.11.0 or higher](https://www.powershellgallery.com/packages/Az.Sql/3.11.0). PowerShell AzureRM.Sql isn't supported. 
+- Azure PowerShell: [Az.Sql.3.11.0 or higher](https://www.powershellgallery.com/packages/Az.Sql/3.11.0). PowerShell AzureRM.Sql isn't supported.
 - The Azure CLI: [Az version 2.40.0 or higher](/cli/azure/install-azure-cli).
-- Transact-SQL (T-SQL) starting with: [SQL Server Management Studio (SSMS) v18.12.1](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio v1.39.1](/sql/azure-data-studio/download-azure-data-studio).
+- Transact-SQL (T-SQL) starting with: [SQL Server Management Studio (SSMS) v18.12.1](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio v1.39.1](/azure-data-studio/download-azure-data-studio).
+
+## Migrate non-Hyperscale databases to Hyperscale elastic pools
+
+When migrating a database to Hyperscale, you can add the database to an existing Hyperscale elastic pool. For these migrations, the Hyperscale elastic pool needs to exist on the same logical server as the source database.
+
+When migrating databases to Hyperscale elastic pools, be aware of the [maximum number of databases per Hyperscale elastic pool](#resource-limits).
+
+### Migrate non-Hyperscale databases to Hyperscale elastic pools using T-SQL
+
+You can use T-SQL commands to migrate multiple General Purpose databases and add them to an existing Hyperscale elastic pool named `hsep1`:
+
+```sql
+ALTER DATABASE gpepdb1 MODIFY (SERVICE_OBJECTIVE = ELASTIC_POOL(NAME = [hsep1]))
+ALTER DATABASE gpepdb2 MODIFY (SERVICE_OBJECTIVE = ELASTIC_POOL(NAME = [hsep1]))
+ALTER DATABASE gpepdb3 MODIFY (SERVICE_OBJECTIVE = ELASTIC_POOL(NAME = [hsep1]))
+ALTER DATABASE gpepdb4 MODIFY (SERVICE_OBJECTIVE = ELASTIC_POOL(NAME = [hsep1]))
+```
+
+In this example, you're implicitly requesting a migration from General Purpose to Hyperscale, by specifying that the target `SERVICE_OBJECTIVE` is a Hyperscale elastic pool. Each of the above commands starts migrating the respective General Purpose database to Hyperscale. These `ALTER DATABASE` commands return quickly and don't wait for the migration to complete. In the example shown, you would have four such migrations from General Purpose to Hyperscale running in parallel. 
+
+You can query the [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database?view=azuresqldb-current&preserve-view=true) dynamic management view to monitor the status of these background migration operations.
+
+### Migrate non-Hyperscale databases to Hyperscale elastic pools using PowerShell
+
+You can use PowerShell commands to migrate multiple General Purpose databases and add them to an existing Hyperscale elastic pool named `hsep1`. For example, the following sample script performs these steps:
+
+1. Use the [Get-AzSqlElasticPoolDatabase](/powershell/module/az.sql/get-azsqlelasticpooldatabase) cmdlet to list all the databases in the General Purpose elastic pool named `gpep1`.
+1. The `Where-Object` cmdlet filters the list to only those database names starting with `gpepdb`.
+1. For each database, [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) cmdlet starts a migration. In this case, you're implicitly requesting a migration to the Hyperscale service tier by specifying the target Hyperscale elastic pool named `hsep1`.
+   - The `-AsJob` parameter allows each of the `Set-AzSqlDatabase` requests to run in parallel. If you prefer to run the migrations one-by-one, you can remove the `-AsJob` parameter.
+
+```powershell
+$dbs = Get-AzSqlElasticPoolDatabase -ResourceGroupName "myResourceGroup" -ServerName "mylogicalserver" -ElasticPoolName "gpep1"
+$dbs | Where-Object { $_.DatabaseName -like "gpepdb*" } | % { Set-AzSqlDatabase -ResourceGroupName "myResourceGroup" -ServerName "mylogicalserver" -DatabaseName ($_.DatabaseName) -ElasticPoolName "hsep1" -AsJob }
+```
+
+In addition to the [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database?view=azuresqldb-current&preserve-view=true) dynamic management view, you can use the PowerShell cmdlet [Get-AzSqlDatabaseActivity](/powershell/module/az.sql/get-azsqldatabaseactivity) to monitor the status of these background migration operations.
 
 ## Resource limits
 
-The following lists the supported limits for working with Hyperscale databases within elastic pools: 
+The following lists the supported limits for working with Hyperscale databases within elastic pools:
 
-- Supported hardware generation: Standard-series (Gen5) only. 
-- vCore maximum per pool: 80 vCores. 
+- Supported hardware generation: Standard-series (Gen5), premium-series, and premium-series memory optimized.
+- vCore maximum per pool: 80 or 128 vCores, depending on the service level objective.
 - Maximum supported data size per database: 100 TB.
 - Maximum supported total data size across DBs in the pool: 100 TB.
 - Maximum supported transaction log throughput per database: 100 MB.
-- Maximum supported total transaction log throughput across databases in the pool: 130 MB/second.
-- Each Hyperscale elastic pool can have up to 25 databases. 
+- Maximum supported total transaction log throughput across databases in the pool: 131.25 MB/second.
+- Each Hyperscale elastic pool can have up to 25 databases.
 
-For greater detail, see the [Hyperscale elastic pool resource limits](resource-limits-vcore-elastic-pools.md#hyperscale---provisioned-compute---standard-series-gen5). 
+For greater detail, see the resource limits of Hyperscale elastic pools for [standard-series](resource-limits-vcore-elastic-pools.md#hyperscale---provisioned-compute---standard-series-gen5),  [premium-series](resource-limits-vcore-elastic-pools.md#hyperscale---premium-series), and [premium-series memory optimized](resource-limits-vcore-elastic-pools.md#hyperscale---premium-series-memory-optimized).
 
-> [!NOTE]
-> Performance profiles, supported capabilities, and published limits are subject to change while the feature is in preview. As such, it's best to validate your use case with regular functional, performance, and scale testing of workloads. 
+> [!NOTE]  
+> Performance profiles, supported capabilities, and published limits are subject to change while the feature is in preview. As such, it's best to validate your use case with regular functional, performance, and scale testing of workloads.
 
 ## Limitations
 
-During preview, consider the following limitations: 
+Consider the following limitations:
 
-- Changing an existing non-Hyperscale elastic pool to the Hyperscale edition isn't supported. Individual databases need to be moved out of their respective existing pool before they can be added to the Hyperscale elastic pool.
+- Changing an existing non-Hyperscale elastic pool to the Hyperscale edition isn't supported. The [migration section](#migrate-non-hyperscale-databases-to-hyperscale-elastic-pools) provides some alternatives you can use.
 - Changing the edition of a Hyperscale elastic pool to a non-Hyperscale edition isn't supported.
-- In order to [reverse migrate](./manage-hyperscale-database.md#reverse-migrate-from-hyperscale) an eligible database, which is in a  Hyperscale elastic pool, it must first be removed from the Hyperscale elastic pool. The standalone Hyperscale database can then be reverse migrated to a General Purpose standalone database.
-- Maintenance of databases in a pool is performed, and maintenance windows are configured, at the pool level. It isn't currently possible to configure a maintenance window for Hyperscale elastic pools. 
-- Zone redundancy isn't currently available for Hyperscale elastic pools. Attempting to add a zone-redundant Hyperscale database to a Hyperscale elastic pool results in an error. 
-- Adding a [named replica](./service-tier-hyperscale-replicas.md#named-replica) inside a Hyperscale elastic pool isn't supported. Attempting to add a named replica of a Hyperscale database to a Hyperscale elastic pool results in a `UnsupportedReplicationOperation` error. Instead, create the named replica as a single Hyperscale database.
+- In order to [reverse migrate](./manage-hyperscale-database.md#reverse-migrate-from-hyperscale) an eligible database, which is in a Hyperscale elastic pool, it must first be removed from the Hyperscale elastic pool. The standalone Hyperscale database can then be reverse migrated to a General Purpose standalone database.
+- For the Hyperscale service tier, zone redundancy support can only be specified during database or elastic pool creation and can't be modified once the resource is provisioned. For more information, see [Migrate Azure SQL Database to availability zone support](/azure/reliability/migrate-sql-database#downtime-requirements).
+- Adding a [named replica](./service-tier-hyperscale-replicas.md#named-replica) into a Hyperscale elastic pool isn't supported. Attempting to add a named replica of a Hyperscale database to a Hyperscale elastic pool results in an `UnsupportedReplicationOperation` error. Instead, create the named replica as a single Hyperscale database.
+
+### Zone redundant elastic pools considerations
+
+For zone redundant elastic pools, consider the following:
+
+> [!NOTE]
+> Hyperscale elastic pools with zone redundancy are available, currently in preview. For more information, see [Blog post: Hyperscale elastic pools with zone redundancy](https://aka.ms/hsep-zr).
+
+- Only databases with zone-redundant storage redundancy (ZRS or GZRS) can be added to Hyperscale elastic pools with zone redundancy.
+- A standalone Hyperscale database must be created with zone redundancy and zone-redundant backup storage (ZRS or GZRS) in order to add it to a zone-redundant Hyperscale elastic pool.  For Hyperscale databases without zone redundancy, perform a data transfer to a new Hyperscale database with the zone redundancy option enabled. A clone must be created using database copy, point-in-time restore, or geo-replica. For more information, see [Redeployment (Hyperscale)](/azure/reliability/migrate-sql-database#redeployment-hyperscale).
+- To move a Hyperscale database from one elastic pool to another, the zone redundancy and zone-redundant backup storage settings must match.
+- To migrate a database from another non-Hyperscale service tier into a Hyperscale elastic pool with zone redundancy: 
+  - Via the Azure portal, first enable both zone redundancy and zone redundant backup storage (ZRS). Then, you can add the database to the zone redundant Hyperscale elastic pool. 
+  - Via PowerShell, first enable zone redundancy. Then, with [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase), ensure that the `-BackupStorageRedundancy` parameter is used to specify zone redundant backup storage (ZRS or GZRS).
 
 ## Known issues
 
 | Issue | Recommendation |
-|--|--|
-| In rare cases, you may get the error `45122 - This Hyperscale database cannot be added into an elastic pool at this time. In case of any questions, please contact Microsoft support`, when trying to move / restore / copy a Hyperscale database into an elastic pool. | This limitation is due to implementation-specific details. If this error is blocking you, raise a support incident and request help. |
-| If you create a [geo-replica](./service-tier-hyperscale-replicas.md#geo-replica) inside a Hyperscale pool on the geo-secondary server, the request fails with the error `40987 - Source database 'MYDB' does not exist on server 'SOURCESERVER' within the supported recovery period. If restoring a dropped database, please specify its deletion date.` | To work around this issue, add the geo-secondary database as a standalone Hyperscale database. Later, add ("move") the geo-secondary database to the elastic pool on the geo-secondary server. |
-| If you use Azure PowerShell or the Azure CLI to create a [geo-replica with Geo-Zone backup storage redundancy](./hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) inside a Hyperscale pool, the request fails with the error `(UnsupportedBackupStorageRedundancyForEdition) The requested backup storage redundancy of GeoZone is not supported for edition.` | To work around this issue, use the T-SQL [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true#add-secondary-on-server-partner_server_name) command to add the geo-secondary database. |
-| If you try to create a new Hyperscale elastic pool from PowerShell with the `-ZoneRedundant` parameter specified, you get a vague `One or more errors occurred`. If you run the PowerShell command with the respective `-Verbose` and `-Debug` parameters specified, you get the actual error: `Provisioning of zone redundant database/pool is not supported for your current request`. | At this time, creating Hyperscale elastic pools with zone redundancy specified is unsupported. |
-| If you try to copy a Hyperscale database to a Hyperscale elastic pool on a server in another region, the request fails with an error `The server encountered an unexpected exception`. | To work around this issue, copy the Hyperscale database as a standalone database on the remote server, and then add the database (copy) into the elastic pool. |
-| If you try to use the Azure portal to add an existing Hyperscale database, which has Geo Zone specified as the backup storage redundancy level, into a Hyperscale elastic pool, you get an error `Changing the backup storage account type value for Hyperscale is not supported`. | To work around this issue, use the [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true#add-secondary-on-server-partner_server_name) command, or the equivalent [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase), or [az sql db update](/cli/azure/sql/db#az-sql-db-update) commands to add the database to the elastic pool. |
+| *-- | *-- |
+| In rare cases, you might get the error `45122 - This Hyperscale database cannot be added into an elastic pool at this time. In case of any questions, please contact Microsoft support`, when trying to move / restore / copy a Hyperscale database into an elastic pool. | This limitation is due to implementation-specific details. If this error is blocking you, raise a support incident and request help. |
 
-## Next steps
+## Related content
 
-- For examples to create, scale, and move databases into a Hyperscale elastic pool by using the Azure CLI or PowerShell, review [Working with Hyperscale elastic pools using command-line tools](./hyperscale-elastic-pool-command-line.md).
-- For pricing information, see [Elastic pool pricing](https://azure.microsoft.com/pricing/details/sql-database/elastic).
-- To scale elastic pools, see [Scale elastic pools](elastic-pool-scale.md) and [Scale an elastic pool - sample code](scripts/monitor-and-scale-pool-powershell.md).
-- To learn more about design patterns for SaaS applications by using elastic pools, see [Design patterns for multitenant SaaS applications with SQL Database](saas-tenancy-app-design-patterns.md).
-- For a SaaS tutorial by using elastic pools, see [Introduction to the Wingtip SaaS application](saas-dbpertenant-wingtip-app-overview.md).
-- To learn about resource management in elastic pools with many databases, see [Resource management in dense elastic pools](elastic-pool-resource-management.md).
+- [Working with Hyperscale elastic pools using command-line tools](hyperscale-elastic-pool-command-line.md)
+- [Elastic pool pricing](https://azure.microsoft.com/pricing/details/sql-database/elastic)
+- [Scale elastic pool resources in Azure SQL Database](elastic-pool-scale.md)
+- [Use PowerShell to monitor and scale an elastic pool in Azure SQL Database](scripts/monitor-and-scale-pool-powershell.md)
+- [Multitenant SaaS database tenancy patterns](saas-tenancy-app-design-patterns.md)
+- [Introduction to a multitenant SaaS app that uses the database-per-tenant pattern with Azure SQL Database](saas-dbpertenant-wingtip-app-overview.md)
+- [Resource management in dense elastic pools](elastic-pool-resource-management.md)

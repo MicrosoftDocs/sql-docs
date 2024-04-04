@@ -1,9 +1,12 @@
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
-SELECT 'Total income is', ((OrderQty * UnitPrice) * (1.0 - UnitPriceDiscount)), ' for ',
-p.Name AS ProductName 
-FROM Production.Product AS p 
+
+SELECT 'Total income is',
+    ((OrderQty * UnitPrice) * (1.0 - UnitPriceDiscount)),
+    ' for ',
+    p.Name AS ProductName
+FROM Production.Product AS p
 INNER JOIN Sales.SalesOrderDetail AS sod
-ON p.ProductID = sod.ProductID 
+    ON p.ProductID = sod.ProductID
 ORDER BY ProductName ASC;
 GO

@@ -84,7 +84,7 @@ CREATE PROCEDURE dbo. usp_InsertProductionLocation
    @TVP LocationTableType READONLY
       AS
       SET NOCOUNT ON
-      INSERT INTO AdventureWorks2012.Production.Location
+      INSERT INTO AdventureWorks2022.Production.Location
          (
             Name
             , CostRate
@@ -99,7 +99,7 @@ DECLARE @LocationTVP AS LocationTableType;
 /* Add data to the table variable. */
 INSERT INTO @LocationTVP (LocationName, CostRate)
    SELECT Name, 0.00
-   FROM AdventureWorks2012.Person.StateProvince;
+   FROM AdventureWorks2022.Person.StateProvince;
   
 /* Pass the table variable data to a stored procedure. */
 EXEC usp_InsertProductionLocation @LocationTVP;

@@ -1,22 +1,43 @@
 ---
-title: "Troubleshoot Azure Arc-enabled SQL Server deployment"
-description: "Describes how to troubleshoot Azure Arc-enabled SQL Server deployment."
+title: "Troubleshoot deployment"
+description: "Describes how to troubleshoot SQL Server enabled by Azure Arc deployment."
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 02/01/2023
-ms.service: sql
 ms.topic: troubleshooting-general
 ---
 
 # Troubleshoot Azure extension for SQL Server
 
-Before you start, note the logs location. The extension log is created in this folder:
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-`C:\ProgramData\GuestConfig\extension_logs\Microsoft.AzureData.WindowsAgent.SqlServer\ExtensionLog_0.log`
+Before you start, note the logs locations.
 
-The deployer logs are created in this folder:
+## Log file locations
 
-`C:\ProgramData\GuestConfig\extension_logs\Microsoft.AzureData.WindowsAgent.SqlServer\1.1.0.0\deployer.log`
+### Extension log
+
+The extension log file is at:
+
+   `C:\ProgramData\GuestConfig\extension_logs\Microsoft.AzureData.WindowsAgent.SqlServer\`
+
+The log file name depends on the version Azure Extension for SQL Server, for the latest version of Azure Extension for SQL Server, the log file is:
+
+   `unifiedagent.log`
+
+For extension version `1.1.24724.69` and earlier, the log file is:
+
+   `ExtensionLog_0.log`
+
+### Deployer logs
+
+The deployer logs are deployed at:
+
+   `C:\ProgramData\GuestConfig\extension_logs\Microsoft.AzureData.WindowsAgent.SqlServer\<extension version>\deployer.log`
+
+   Replace `<extension version>` with your extension version. For example:
+
+   `C:\ProgramData\GuestConfig\extension_logs\Microsoft.AzureData.WindowsAgent.SqlServer\1.1.0.0\deployer.log`
 
 The failure to create the Arc-enabled SQL Server resource could be caused by several issues.
 
@@ -67,4 +88,9 @@ Check the extension log for the following record:
 [YY/MM/DDDD HH:MM:SS PM UTC] [INFO] [UploadServiceProvider] [ExtensionHandlerArcUploadServicesNotifications] [AzureUpload] Arc for Sql Server upload response status: InternalServerError.`
 ```
 
-Make sure to migrate the Arc-enabled SQL Server resource to `Microsoft.AzureArcData` following [these steps](.\release-notes.md#breaking-change-1).
+Make sure to migrate the Arc-enabled SQL Server resource to `Microsoft.AzureArcData`.
+
+## If extension is stuck in an odd state (Creating/Deleting) for long time
+
+Remove and reinstall the extension using `azcmagent` commands. For details, see [`azcmagent` extension remove](/azure/azure-arc/servers/azcmagent-extension#azcmagent-extension-remove).
+

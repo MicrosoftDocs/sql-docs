@@ -60,7 +60,7 @@ Requires ALTER permission on the database.
    The following example sets the target recovery time of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to `60` seconds.
 
    ```sql
-   ALTER DATABASE AdventureWorks2019 SET TARGET_RECOVERY_TIME = 60 SECONDS;
+   ALTER DATABASE AdventureWorks2022 SET TARGET_RECOVERY_TIME = 60 SECONDS;
    ```
 
 ## See also

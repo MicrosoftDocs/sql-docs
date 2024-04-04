@@ -1,8 +1,10 @@
 ---
 title: Auditing policy at the server and database level
+titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: This article explains the differences for Auditing policies of Azure SQL Database and Azure Synapse Analytics at the server and database level.
 author: sravanisaluru
 ms.author: srsaluru
+ms.reviewer: mathoma
 ms.date: 04/26/2023
 ms.service: sql-database
 ms.subservice: security

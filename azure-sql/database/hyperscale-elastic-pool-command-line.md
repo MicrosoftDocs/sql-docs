@@ -4,17 +4,16 @@ description: Working with Hyperscale elastic pools using command-line tools such
 author: arvindshmicrosoft
 ms.author: arvindsh
 ms.reviewer: wiassaf, mathoma
-ms.date: 05/21/2023
+ms.date: 02/26/2024
 ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: conceptual
-ms.custom: 
+ms.custom: devx-track-azurecli, devx-track-azurepowershell, ignite-2023
 ---
 # Working with Hyperscale elastic pools using command-line tools
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 In this article, learn to create, scale, and move databases into a [Hyperscale elastic pool](hyperscale-elastic-pool-overview.md) using command line tools such as the Azure CLI and PowerShell. In addition to these methods, you can always use the Azure portal for most operations.
-
 
 > [!NOTE]
 > [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) are currently in preview.
@@ -34,13 +33,18 @@ You can use the Azure CLI or Azure PowerShell to create a Hyperscale elastic poo
 
 ### [Azure CLI](#tab/azure-cli)
 
-
 Use the [az sql elastic-pool create](/cli/azure/sql/elastic-pool#az_sql_elastic_pool_create) command to create a Hyperscale elastic pool. 
 
 The following example creates a Hyperscale elastic pool with four vCores, and two secondary pool replicas:
 
 ```azurecli
 az sql elastic-pool create --resource-group "my-example-rg" --server "my-example-sql-svr" --name "my_hs_pool" --edition "Hyperscale" --capacity 4 --family Gen5 --ha-replicas 2
+```
+
+The following example creates a zone redundant Hyperscale elastic pool with four vCores and one secondary pool replica:
+
+```azurecli
+az sql elastic-pool create --resource-group "myresourcegroup" --server "mylogicalserver" --name "zr-hs-ep" --family Gen5 --edition Hyperscale --capacity 4 --ha-replicas 1 --zone-redundant
 ```
 
 ### [PowerShell](#tab/azure-powershell)
@@ -51,6 +55,12 @@ The following example creates a Hyperscale elastic pool configured with four vCo
 
 ```powershell
 New-AzSqlElasticPool -ResourceGroupName "my-example-rg" -ServerName "my-example-sql-svr" -ElasticPoolName "my_hs_pool" -Edition "Hyperscale" -VCore 4 -ComputeGeneration Gen5 -HighAvailabilityReplicaCount 2
+```
+
+The following example creates zone redundant a Hyperscale elastic pool configured with four vCores, and one secondary pool replica:
+
+```powershell
+New-AzSqlElasticPool -ResourceGroupName "myresourcegroup" -ServerName "mylogicalserver" -ElasticPoolName "zr-hs-ep" -Edition Hyperscale -ComputeGeneration Gen5 -VCore 4 -HighAvailabilityReplicaCount 1 -ZoneRedundant
 ```
 
 ---
@@ -151,9 +161,60 @@ Set-AzSqlDatabase -ResourceGroupName "my-example-rg" -ServerName "my-example-sql
 
 ---
 
+## Upgrade an existing elastic pool from Gen5 to premium-series hardware
+
+You can use the Azure CLI or Azure PowerShell to upgrade an existing elastic pool from Gen5 to premium-series hardware.
+
+### [Azure CLI](#tab/azure-cli)
+
+<!--
+Use the [az sql elastic-pool update](/cli/azure/sql/elastic-pool#az-sql-elastic-pool-update) command to upgrade an existing Hyperscale elastic pool.
+
+The following example upgrade an existing Hyperscale elastic pool `my_hs_pool` to premium-series hardware:
+
+```azurecli
+az sql elastic-pool update --resource-group "my-example-rg" --server "my-example-sql-svr" --name "my_hs_pool" --family "premium-series"
+```
+-->
+
+Currently unavailable via Azure CLI. Use Azure PowerShell or the Azure portal instead.
+
+### [PowerShell](#tab/azure-powershell)
+
+Use the [Set-AzSqlElasticPool](/powershell/module/az.sql/set-azsqlelasticpool) cmdlet to scale up an existing Hyperscale elastic pool. 
+
+The following example upgrade an existing Hyperscale elastic pool `my_hs_pool` to premium-series hardware:
+
+
+```powershell
+Set-AzSqlElasticPool -ResourceGroupName "my-example-rg" -ServerName "my-example-sql-svr" -ElasticPoolName "my_hs_pool" -ComputeGeneration "PRMS"
+```
+
+---
+
+
+## Migrate an existing General Purpose database to a zone redundant Hyperscale elastic pool
+
+You can use the Azure CLI or Azure PowerShell to migrate an existing General Purpose database to a zone redundant Hyperscale elastic pool.
+
+### [Azure CLI](#tab/azure-cli)
+
+```azurecli
+az sql db update --resource-group "myresourcegroup" --server "mylogicalserver" --name "gp_zrs_standalone_db" --elastic-pool "zr-hs-ep" --backup-storage-redundancy Zone
+```
+
+
+### [PowerShell](#tab/azure-powershell)
+
+```powershell
+Set-AzSqlDatabase -ResourceGroupName "myResourceGroup" -ServerName "mylogicalserver" -DatabaseName gp1 -ElasticPoolName "my-ZR-Hyperscale-EP" -BackupStorageRedundancy Zone
+```
+
+---
+
 ## REST API
 
-Use the [2021-11-01-preview](/rest/api/sql/2021-11-01-preview/elastic-pools/update?tabs=HTTP#update-high-availability-replica-count-of-a-hyperscale-elastic-pool) REST API (or later) to work with secondary replicas for Hyperscale elastic pools. 
+Use the [2021-11-01](/rest/api/sql/elastic-pools/update?tabs=HTTP#update-high-availability-replica-count-of-a-hyperscale-elastic-pool) REST API (or later) to work with secondary replicas for Hyperscale elastic pools.
 
 The following example scales out  an existing Hyperscale elastic pool to use four secondary replicas:
 
@@ -167,9 +228,9 @@ PATCH https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups
 }
 ```
 
-## Next steps
+## Related content
 
 - [Azure SQL Database CLI commands](/cli/azure/sql).
 - [Azure SQL Database PowerShell cmdlets](/powershell/module/az.sql/).
-- [Azure SQL Database elastic pools REST API](/rest/api/sql/2021-11-01-preview/elastic-pools/).
+- [Azure SQL Database elastic pools REST API](/rest/api/sql/elastic-pools/).
 - [Hyperscale elastic pools overview](./hyperscale-elastic-pool-overview.md).

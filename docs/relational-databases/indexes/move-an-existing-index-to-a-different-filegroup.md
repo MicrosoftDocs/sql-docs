@@ -77,7 +77,7 @@ For design considerations including why you might want to place a nonclustered i
   
      If you are moving a clustered index, you can use online processing. Online processing allows concurrent user access to the underlying data and to nonclustered indexes during the index operation. For more information, see [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
   
-     On multiprocessor computers using [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], you can configure the number of processors used to execute the index statement by specifying a maximum degree of parallelism value. The Parallel indexed operations feature is not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see Features Supported by the Editions of SQL Server 2016. For more information about Parallel indexed operations, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
+     On multiprocessor computers using [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], you can configure the number of processors used to execute the index statement by specifying a maximum degree of parallelism value. The parallel index operations feature is not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see Features Supported by the Editions of SQL Server 2016. For more information about parallel index operations, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 8.  Click **OK**.  
   
@@ -134,15 +134,15 @@ For design considerations including why you might want to place a nonclustered i
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
-    -- Creates the TransactionsFG1 filegroup on the AdventureWorks2012 database  
-    ALTER DATABASE AdventureWorks2012  
+    -- Creates the TransactionsFG1 filegroup on the AdventureWorks2022 database  
+    ALTER DATABASE AdventureWorks2022  
     ADD FILEGROUP TransactionsFG1;  
     GO  
     /* Adds the TransactionsFG1dat3 file to the TransactionsFG1 filegroup. Please note that you will have to change the filename parameter in this statement to execute it without errors.  
     */  
-    ALTER DATABASE AdventureWorks2012   
+    ALTER DATABASE AdventureWorks2022   
     ADD FILE   
     (  
         NAME = TransactionsFG1dat3,  

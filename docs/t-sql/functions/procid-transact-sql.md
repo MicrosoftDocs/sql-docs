@@ -44,7 +44,7 @@ dev_langs:
  The following example uses `@@PROCID` as the input parameter in the `OBJECT_NAME` function to return the name of the stored procedure in the `RAISERROR` message.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF OBJECT_ID ( 'usp_FindName', 'P' ) IS NOT NULL   
 DROP PROCEDURE usp_FindName;  

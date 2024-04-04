@@ -95,7 +95,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 > Before you run this example, you must first run example B in [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md) to enable CDC on the table `HumanResources.Department`. In the below example, HR_Department is the name of the CDC capture instance, as specified in `sys.sp_cdc_enable_table`.
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @begin_time datetime, @end_time datetime, @from_lsn binary(10), @to_lsn binary(10);  
 -- Obtain the beginning of the time interval.  

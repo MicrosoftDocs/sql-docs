@@ -3,7 +3,7 @@ title: Overview of SQL Server on Azure Windows Virtual Machines
 description: Learn how to run full editions of SQL Server on Azure Virtual Machines in the cloud without having to manage any on-premises hardware.
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: randolphwest
+ms.reviewer: randolphwest, mathoma
 ms.date: 03/15/2023
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
@@ -82,14 +82,14 @@ Azure only maintains one virtual machine image for each supported operating syst
 
 The following table provides a matrix of pay-as-you-go SQL Server images.
 
-| Version | Operating system | Edition |
-| --- | --- | --- |
-| **SQL Server 2022** | Windows Server 2022 | [Enterprise](https://portal.azure.com/#create/microsoftsqlserver.sql2022-ws2022enterprise-gen2), [Standard](https://portal.azure.com/#create/microsoftsqlserver.sql2022-ws2022standard-gen2), [Web](https://portal.azure.com/#create/microsoftsqlserver.sql2022-ws2022web-gen2), [Developer](https://portal.azure.com/#create/microsoftsqlserver.sql2022-ws2022sqldev-gen2) |
-| **SQL Server 2019** | Windows Server 2019 | [Enterprise](https://portal.azure.com/#create/microsoftsqlserver.sql2019-ws2019enterprise), [Standard](https://portal.azure.com/#create/microsoftsqlserver.sql2019-ws2019standard), [Web](https://portal.azure.com/#create/microsoftsqlserver.sql2019-ws2019web), [Developer](https://portal.azure.com/#create/microsoftsqlserver.sql2019-ws2019sqldev) |
-| **SQL Server 2017** | Windows Server 2016 | [Enterprise](https://portal.azure.com/#create/Microsoft.SQLServer2017EnterpriseWindowsServer2016), [Standard](https://portal.azure.com/#create/Microsoft.SQLServer2017StandardonWindowsServer2016), [Web](https://portal.azure.com/#create/Microsoft.SQLServer2017WebonWindowsServer2016), [Express](https://portal.azure.com/#create/Microsoft.FreeSQLServerLicenseSQLServer2017ExpressonWindowsServer2016), [Developer](https://portal.azure.com/#create/Microsoft.FreeSQLServerLicenseSQLServer2017DeveloperonWindowsServer2016) |
-| **SQL Server 2016 SP2** | Windows Server 2016 | [Enterprise](https://portal.azure.com/#create/Microsoft.SQLServer2016SP2EnterpriseWindowsServer2016), [Standard](https://portal.azure.com/#create/Microsoft.SQLServer2016SP2StandardWindowsServer2016), [Web](https://portal.azure.com/#create/Microsoft.SQLServer2016SP2WebWindowsServer2016), [Express](https://portal.azure.com/#create/Microsoft.FreeLicenseSQLServer2016SP2ExpressWindowsServer2016), [Developer](https://portal.azure.com/#create/Microsoft.FreeLicenseSQLServer2016SP2DeveloperWindowsServer2016) |
-| **SQL Server 2014 SP2** | Windows Server 2012 R2 | [Enterprise](https://portal.azure.com/#create/Microsoft.SQLServer2014SP2EnterpriseWindowsServer2012R2), [Standard](https://portal.azure.com/#create/Microsoft.SQLServer2014SP2StandardWindowsServer2012R2), [Web](https://portal.azure.com/#create/Microsoft.SQLServer2014SP2WebWindowsServer2012R2), [Express](https://portal.azure.com/#create/Microsoft.SQLServer2014SP2ExpressWindowsServer2012R2) |
-| **SQL Server 2012 SP4** | Windows Server 2012 R2 | [Enterprise](https://portal.azure.com/#create/Microsoft.SQLServer2012SP4EnterpriseWindowsServer2012R2), [Standard](https://portal.azure.com/#create/Microsoft.SQLServer2012SP4StandardWindowsServer2012R2), [Web](https://portal.azure.com/#create/Microsoft.SQLServer2012SP4WebWindowsServer2012R2), [Express](https://portal.azure.com/#create/Microsoft.SQLServer2012SP4ExpressWindowsServer2012R2) |
+| Version | Operating System | 
+| --- | --- | 
+| **SQL Server 2022** | [Windows Server 2022](https://portal.azure.com/#create/microsoftsqlserver.sql2022-ws2022enterprise-gen2) | 
+| **SQL Server 2019** | [Windows Server 2022](https://portal.azure.com/#create/microsoftsqlserver.sql2019-ws2022enterprise-gen2), [Windows Server 2019](https://portal.azure.com/#create/microsoftsqlserver.sql2019-ws2019enterprise-ARM) | 
+| **SQL Server 2017** | [Windows Server 2019](https://portal.azure.com/#create/microsoftsqlserver.sql2017-ws2019enterprise-ARM), [Windows Server 2016](https://portal.azure.com/#create/Microsoft.SQLServer2017EnterpriseWindowsServer2016-ARM)|
+| **SQL Server 2016** | [Windows Server 2019](https://portal.azure.com/#create/microsoftsqlserver.sql2016sp3-ws2019enterprise), [Windows Server 2016](https://portal.azure.com/#create/Microsoft.SQLServer2016SP2EnterpriseWindowsServer2016-ARM)|
+| **SQL Server 2014** | [Windows Server 2012 R2](https://portal.azure.com/#create/microsoftsqlserver.sql2014sp3-ws2012r2enterprise-ARM)| 
+| **SQL Server 2012** | [Windows Server 2012 R2](https://portal.azure.com/#create/Microsoft.SQLServer2012SP4EnterpriseWindowsServer2012R2-ARM)| 
 
 [!INCLUDE[appliesto-sqlvm](../../includes/virtual-machines-2008-end-of-support.md)]
 

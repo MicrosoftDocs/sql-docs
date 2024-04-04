@@ -3,11 +3,13 @@ title: "SUSE: Install SQL Server on Linux"
 description: This quickstart shows how to install SQL Server on SUSE Linux Enterprise Server and then create and query a database with sqlcmd.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/11/2023
+ms.date: 10/24/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: intro-installation
+ms.custom:
+  - intro-installation
+  - linux-related-content
 ---
 # Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server
 
@@ -39,7 +41,7 @@ For more information on supported platforms, see [Release notes for SQL Server 2
 ::: moniker-end
 
 > [!TIP]  
-> This tutorial requires user input and an internet connection. If you are interested in the [unattended](sql-server-linux-setup.md#unattended) or [offline](sql-server-linux-setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
+> This tutorial requires user input and an internet connection. If you're interested in the [unattended](sql-server-linux-setup.md#unattended) or [offline](sql-server-linux-setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
 
 ## Prerequisites
 
@@ -66,10 +68,10 @@ You must have a SLES v15 (SP1 - SP4) machine with **at least 2 GB** of memory. T
 
 To install SUSE Linux Enterprise Server on your own machine, go to [https://www.suse.com/products/server](https://www.suse.com/products/server). You can also create SLES virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm), and use `--image SLES` in the call to `az vm create`.
 
-If you've previously installed a community technology preview (CTP) or release candidate (RC) of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], you must first remove the old repository before following these steps. For more information, see [Configure Linux repositories for SQL Server](sql-server-linux-change-repo.md).
+If you've previously installed a community technology preview (CTP) or release candidate (RC) of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], you must first remove the old repository before following these steps. For more information, see [Configure repositories for installing and upgrading SQL Server on Linux](sql-server-linux-change-repo.md).
 
 > [!NOTE]  
-> At this time, the [Windows Subsystem for Linux](/windows/wsl/about) for Windows 10 or Windows 11 is not supported as an installation target.
+> At this time, the [Windows Subsystem for Linux](/windows/wsl/about) for Windows 10 or Windows 11 isn't supported as an installation target.
 
 For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
@@ -103,7 +105,7 @@ To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on SLES,
 
 1. Before you install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], and after you have registered and activated your SUSE Linux Enterprise Server with SUSE Customer Center, you must activate both the [Desktop Applications module and Development Tools module](https://documentation.suse.com/sles/15-SP3/html/SLES-all/cha-register-sle.html). These modules are required for some of the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] package dependencies.
 
-1. Now, you are ready to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. Run the following commands to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]:
+1. Now, you're ready to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. Run the following commands to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]:
 
    ```bash
    sudo zypper install -y mssql-server
@@ -123,7 +125,7 @@ To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on SLES,
    systemctl status mssql-server
    ```
 
-1. If you plan to connect remotely, you might also need to open the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] TCP port (default 1433) on your firewall. If you're using the SuSE firewall, you need to edit the `/etc/sysconfig/SuSEfirewall2` configuration file. Modify the `FW_SERVICES_EXT_TCP` entry to include the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] port number.
+1. If you plan to connect remotely, you might also need to open the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] TCP port (default 1433) on your firewall. If you're using the SUSE firewall, you need to edit the `/etc/sysconfig/SuSEfirewall2` configuration file. Modify the `FW_SERVICES_EXT_TCP` entry to include the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] port number.
 
    ```ini
    FW_SERVICES_EXT_TCP="1433"
@@ -140,9 +142,6 @@ At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is run
    ```bash
    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/mssql-server-2019.repo
    ```
-
-   > [!WARNING]  
-   > SUSE Linux Enterprise Server (SLES) is not a supported platform for the Community Technology Preview (CTP) 2.1 release of [!INCLUDE [sssql22](../includes/sssql22-md.md)]. You won't be able to install [!INCLUDE [sssql22](../includes/sssql22-md.md)].
 
    > [!TIP]  
    > If you want to install a different version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see the [[!INCLUDE [sssql17-md](../includes/sssql17-md.md)]](quickstart-install-connect-suse.md?view=sql-server-linux-2017&preserve-view=true#install) or [[!INCLUDE [sssql22-md](../includes/sssql22-md.md)]](quickstart-install-connect-suse.md?view=sql-server-linux-ver16&preserve-view=true#install) version of this article.
@@ -161,7 +160,7 @@ At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is run
 
 1. Before you install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], and after you have registered and activated your SUSE Linux Enterprise Server with SUSE Customer Center, you must activate both the [Desktop Applications module and Development Tools module](https://documentation.suse.com/sles/15-SP3/html/SLES-all/cha-register-sle.html). These modules are required for some of the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] package dependencies.
 
-1. Now, you are ready to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. Run the following commands to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]:
+1. Now, you're ready to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. Run the following commands to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]:
 
    ```bash
    sudo zypper install -y mssql-server
@@ -215,7 +214,7 @@ At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is run
 
 1. Before you install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], and after you have registered and activated your SUSE Linux Enterprise Server with SUSE Customer Center, you must activate both the [Desktop Applications module and Development Tools module](https://documentation.suse.com/sles/15-SP3/html/SLES-all/cha-register-sle.html). These modules are required for some of the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] package dependencies.
 
-1. Now, you are ready to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. Run the following commands to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]:
+1. Now, you're ready to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. Run the following commands to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]:
 
    ```bash
    sudo zypper install -y mssql-server
@@ -244,9 +243,13 @@ At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is run
 
 ::: moniker-end
 
+## Disable the `sa` account as a best practice
+
+[!INCLUDE [connect-with-sa](includes/connect-with-sa.md)]
+
 ## <a id="tools"></a> Install the SQL Server command-line tools
 
-To create a database, you need to connect with a tool that can run Transact-SQL statements on [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. The following steps install the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] command-line tools: [sqlcmd](../tools/sqlcmd/sqlcmd-utility.md) and [bcp](../tools/bcp-utility.md).
+To create a database, you need to connect with a tool that can run Transact-SQL statements on [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. The following steps install the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] command-line tools: [sqlcmd utility](../tools/sqlcmd/sqlcmd-utility.md) and [bcp utility](../tools/bcp-utility.md).
 
 [!INCLUDE [odbc-sles](includes/odbc-sles.md)]
 

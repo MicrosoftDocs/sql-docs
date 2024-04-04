@@ -5,10 +5,10 @@ description: Use the COPY statement in Azure Synapse Analytics and Warehouse in 
 author: periclesrocha
 ms.author: procha
 ms.reviewer: wiassaf, mikeray
-ms.date: 06/05/2023
+ms.date: 03/22/2024
 ms.service: sql
 ms.subservice: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
   - "COPY_TSQL"
   - "COPY INTO"
@@ -37,17 +37,23 @@ Use COPY for the following capabilities:
 - Specify a finer permission model without exposing storage account keys using Share Access Signatures (SAS)
 - Use a different storage account for the ERRORFILE location (REJECTED_ROW_LOCATION)
 - Customize default values for each target column and specify source data fields to load into specific target columns
-- Specify a custom row terminator for CSV files
+- Specify a custom row terminator, field terminator, and field quote for CSV files
 - Use SQL Server Date formats for CSV files
 - Specify wildcards and multiple files in the storage location path
 - Automatic schema discovery simplifies the process of defining and mapping source data into target tables
 - The automatic table creation process automatically creates the tables and works alongside with automatic schema discovery
+- Directly load complex data types from Parquet files such as Maps and Lists into string columns, without using other tools to preprocess the data
+
+> [!NOTE]  
+> To load complex data types from Parquet files, automatic table creation must be turned on by using `AUTO_CREATE_TABLE`.
 
 Visit the following documentation for comprehensive examples and quickstarts using the COPY statement:
 
 - [Quickstart: Bulk load data using the COPY statement](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
 - [Quickstart: Examples using the COPY statement and its supported authentication methods](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
 - [Quickstart: Creating the COPY statement using the rich Synapse Studio UI](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
 
 ## Syntax
 
@@ -79,7 +85,7 @@ WITH
 
 #### *schema_name*
 
-Optional if the default schema for the user performing the operation is the schema of the specified table. If *schema* isn't specified, and the default schema of the user performing the COPY operation is different from the specified table, COPY is canceled, and an error message is returned.
+Optional if the default schema for the user performing the operation is the schema of the specified table. If *schema* isn't specified, and the default schema of the user performing the COPY operation is different from the schema of the specified table, COPY is canceled, and an error message is returned.
 
 #### *table_name*
 
@@ -97,7 +103,7 @@ Don't specify a *column_list* when `AUTO_CREATE_TABLE = 'ON'`.
 
 - *Column_name* - the name of the column in the target table.
 - *Default_value* - the default value that replaces any NULL value in the input file. Default value applies to all file formats. COPY attempts to load NULL from the input file when a column is omitted from the column list or when there's an empty input file field. Default value precedes the keyword 'default'
-- *Field_number* - the input file field number that is mapped to the target column name.
+- *Field_number* - the input file field number that is mapped to the target column.
 - The field indexing starts at 1.
 
 When a column list isn't specified, COPY maps columns based on the source and target order: Input field 1 goes to target column 1, field 2 goes to column 2, etc.
@@ -161,8 +167,8 @@ Multiple file locations can only be specified from the same storage account and 
 
 > [!NOTE]  
 >  
-> - When authenticating using Azure Active Directory (Azure AD) or to a public storage account, CREDENTIAL does not need to be specified.  
-> - If your storage account is associated with a VNet, you must authenticate using MSI (Managed Identity).
+> - When authenticating using Microsoft Entra ID or to a public storage account, CREDENTIAL does not need to be specified.  
+> - If your storage account is associated with a VNet, you must authenticate using a managed identity.
 
 - Authenticating with Shared Access Signatures (SAS)
 
@@ -173,7 +179,7 @@ Multiple file locations can only be specified from the same storage account and 
 - Authenticating with [*Service Principals*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
 
   - *IDENTITY: \<ClientID\>@<OAuth_2.0_Token_EndPoint>*
-  - *SECRET: Azure AD Application Service Principal key*
+  - *SECRET: Microsoft Entra application service principal key*
   -  Minimum RBAC roles required: Storage blob data contributor, Storage blob data contributor, Storage blob data owner, or Storage blob data reader
 
 - Authenticating with Storage account key
@@ -184,27 +190,30 @@ Multiple file locations can only be specified from the same storage account and 
 - Authenticating with [Managed Identity](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNet Service Endpoints)
 
   - *IDENTITY: A constant with a value of 'Managed Identity'*
-  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Azure AD registered SQL Database server
+  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Microsoft Entra registered [logical server in Azure](/azure/azure-sql/database/logical-servers). When using a dedicated SQL pool (formerly SQL DW) that is not associated with a Synapse Workspace this RBAC role is not required, but the managed identity requires Access Control List (ACL) permissions on the target objects to enable read access to the source files
 
-- Authenticating with an Azure AD user
+- Authenticating with a Microsoft Entra user
 
   - *CREDENTIAL isn't required*
-  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Azure AD user
+  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Microsoft Entra user
 
 #### *ERRORFILE = Directory Location*
 
 *ERRORFILE* only applies to CSV. Specifies the directory within the COPY statement where the rejected rows and the corresponding error file should be written. The full path from the storage account can be specified or the path relative to the container can be specified. If the specified path doesn't exist, one is created on your behalf. A child directory is created with the name "\_rejectedrows". The "\_" character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter.
 
+> [!NOTE]
+> When a relative path is passed to *ERRORFILE*, the path is relative to the container path specified in *external_location*. 
+
 Within this directory, there's a folder created based on the time of load submission in the format YearMonthDay -HourMinuteSecond (Ex. 20180330-173205). In this folder, two types of files are written, the reason (Error) file and the data (Row) file each preappending with the queryID, distributionID, and a file guid. Because the data and the reason are in separate files, corresponding files have a matching prefix.
 
-If ERRORFILE has the full path of the storage account defined, then the ERRORFILE_CREDENTIAL is used to connect to that storage. Otherwise, the value mentioned for CREDENTIAL is used.
+If ERRORFILE has the full path of the storage account defined, then the ERRORFILE_CREDENTIAL is used to connect to that storage. Otherwise, the value mentioned for CREDENTIAL is used. When the same credential that is used for the source data is used for ERRORFILE, restrictions that apply to ERRORFILE_CREDENTIAL also apply
 
 #### *ERRORFILE_CREDENTIAL = (IDENTITY= '', SECRET = '')*
 
 *ERRORFILE_CREDENTIAL* only applies to CSV files. Supported data source and authentication methods are:
 
-- Azure Blob Storage  - SAS/SERVICE PRINCIPAL/KEY/AAD
-- Azure Data Lake Gen2 -   SAS/MSI/SERVICE PRINCIPAL/KEY/AAD
+- Azure Blob Storage  - SAS/SERVICE PRINCIPAL/AAD
+- Azure Data Lake Gen2 -   SAS/MSI/SERVICE PRINCIPAL/AAD
 
 - Authenticating with Shared Access Signatures (SAS)
   - *IDENTITY: A constant with a value of 'Shared Access Signature'*
@@ -213,30 +222,32 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
 
 - Authenticating with [*Service Principals*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
   - *IDENTITY: \<ClientID\>@<OAuth_2.0_Token_EndPoint>*
-  - *SECRET: Azure AD Application Service Principal key*
+  - *SECRET: Microsoft Entra application service principal key*
   - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner
 
 > [!NOTE]  
 > Use the OAuth 2.0 token endpoint **V1**
 
-- Authenticating with Storage account key
-  - *IDENTITY: A constant with a value of 'Storage Account Key'*
-  - *SECRET: Storage account key*
-
 - Authenticating with [Managed Identity](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNet Service Endpoints)
   - *IDENTITY: A constant with a value of 'Managed Identity'*
-  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Azure AD registered SQL Database server
+  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Microsoft Entra registered SQL Database server
 
-- Authenticating with an Azure AD user
+- Authenticating with a Microsoft Entra user
   - *CREDENTIAL isn't required*
-  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Azure AD user
+  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Microsoft Entra user
+
+Using a storage account key with ERRORFILE_CREDENTIAL is not supported. 
 
 > [!NOTE]  
 > If you are using the same storage account for your ERRORFILE and specifying the ERRORFILE path relative to the root of the container, you do not need to specify the ERROR_CREDENTIAL.
 
 #### *MAXERRORS = max_errors*
 
-*MAXERRORS* specifies the maximum number of reject rows allowed in the load before the COPY operation is canceled. Each row that can't be imported by the COPY operation is ignored and counted as one error. If max_errors isn't specified, the default is 0.
+*MAXERRORS* specifies the maximum number of reject rows allowed in the load before the COPY operation fails. Each row that can't be imported by the COPY operation is ignored and counted as one error. If max_errors isn't specified, the default is 0.
+
+*MAXERRORS* cannot be used with AUTO_CREATE_TABLE. 
+
+When *FILE_TYPE* is 'PARQUET', exceptions that are caused by data type conversion errors (e.g., Parquet binary to SQL integer) still cause COPY INTO will to fail, ignoring *MAXERRORS*. 
 
 #### *COMPRESSION = { 'DefaultCodec ' | 'Snappy' | 'GZIP' | 'NONE'}*
 
@@ -255,14 +266,14 @@ The COPY command autodetects the compression type based on the file extension wh
 
 #### *FIELDQUOTE = 'field_quote'*
 
-*FIELDQUOTE* applies to CSV and specifies a single character that is used as the quote character (string delimiter) in the CSV file. If not specified, the quote character (") is used as the quote character as defined in the RFC 4180 standard. Extended ASCII and multi-byte characters and aren't supported with UTF-8 for FIELDQUOTE.
+*FIELDQUOTE* applies to CSV and specifies a single character that is used as the quote character (string delimiter) in the CSV file. If not specified, the quote character (") is used as the quote character as defined in the RFC 4180 standard. Hexadecimal notation is also supported for FIELDQUOTE. Extended ASCII and multi-byte characters aren't supported with UTF-8 for FIELDQUOTE.
 
 > [!NOTE]  
 > FIELDQUOTE characters are escaped in string columns where there is a presence of a double FIELDQUOTE (delimiter).
 
 #### *FIELDTERMINATOR = 'field_terminator'*
 
-*FIELDTERMINATOR* Only applies to CSV. Specifies the field terminator that is used in the CSV file. The field terminator can be specified using hexadecimal notation. The field terminator can be multi-character. The default field terminator is a (,). Extended ASCII and multi-byte characters and aren't supported with UTF-8 for FIELDTERMINATOR.
+*FIELDTERMINATOR* Only applies to CSV. Specifies the field terminator that is used in the CSV file. The field terminator can be specified using hexadecimal notation. The field terminator can be multi-character. The default field terminator is a (,). Extended ASCII and multi-byte characters aren't supported with UTF-8 for FIELDTERMINATOR.
 
 #### ROW TERMINATOR = 'row_terminator'
 
@@ -270,7 +281,7 @@ The COPY command autodetects the compression type based on the file extension wh
 
 The COPY command prefixes the `\r` character when specifying `\n` (newline) resulting in `\r\n`. To specify only the `\n` character, use hexadecimal notation (`0x0A`). When specifying multi-character row terminators in hexadecimal, don't specify 0x between each character.
 
-Extended ASCII and multi-byte characters and aren't supported with UTF-8 for ROW TERMINATOR.
+Extended ASCII and multi-byte characters aren't supported with UTF-8 for ROW TERMINATOR.
 
 #### *FIRSTROW = First_row_int*
 
@@ -343,6 +354,7 @@ The following example is the simplest form of the COPY command, which loads data
 ```sql
 COPY INTO dbo.[lineitem]
 FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv'
+WITH (FIELDTERMINATOR = '|')
 ```
 
 The default values of the COPY command are:
@@ -353,7 +365,7 @@ The default values of the COPY command are:
 
 - COMPRESSION default is uncompressed
 
-- FIELDQUOTE = ''
+- FIELDQUOTE = '"'
 
 - FIELDTERMINATOR = ','
 
@@ -548,7 +560,7 @@ Use COPY for the following capabilities:
 - Specify a finer permission model without exposing storage account keys using Share Access Signatures (SAS).
 - Use a different storage account for the ERRORFILE location (REJECTED_ROW_LOCATION).
 - Customize default values for each target column and specify source data fields to load into specific target columns.
-- Specify a custom row terminator for CSV files.
+- Specify a custom row terminator, field terminator, and field quote for CSV files
 - Specify wildcards and multiple files in the storage location path.
 - For more on data ingestion options and best practices, see [Ingest data into your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] using the COPY statement](/fabric/data-warehouse/ingest-data-copy).
 
@@ -571,6 +583,7 @@ WITH
  [ , ROWTERMINATOR = 'row_terminator' ]
  [ , FIRSTROW = first_row ]
  [ , ENCODING = { 'UTF8' | 'UTF16' } ]
+ [ , PARSER_VERSION = { '1.0' | '2.0' } ]
 )
 ```
 
@@ -582,7 +595,7 @@ Optional if the current warehouse for the user performing the operation is the w
 
 #### *schema_name*
 
-Optional if the default schema for the user performing the operation is the schema of the specified table. If *schema* isn't specified, and the default schema of the user performing the COPY operation is different from the specified table, COPY fails, and an error message is returned.
+Optional if the default schema for the user performing the operation is the schema of the specified table. If *schema* isn't specified, and the default schema of the user performing the COPY operation is different from the schema of the specified table, COPY is canceled, and an error message is returned.
 
 #### *table_name*
 
@@ -598,7 +611,7 @@ An optional list of one or more columns used to map source data fields to target
 
 - *Column_name* - the name of the column in the target table.
 - *Default_value* - the default value that replaces any NULL value in the input file. Default value applies to all file formats. COPY attempts to load NULL from the input file when a column is omitted from the column list or when there's an empty input file field. Default value is preceded by the keyword 'default'
-- *Field_number* - applies only to CSV. The input file field number that is mapped to the target column name. For Parquet, columns are always bound by name.
+- *Field_number* - The input file field number that is mapped to the target column. 
 - The field indexing starts at 1.
 
 When *column_list* isn't specified, COPY maps columns based on the source and target order: Input field 1 goes to target column 1, field 2 goes to column 2, etc.
@@ -667,9 +680,12 @@ Multiple file locations can only be specified from the same storage account and 
 
 *ERRORFILE* only applies to CSV. Specifies the directory where the rejected rows and the corresponding error file should be written. The full path from the storage account can be specified or the path relative to the container can be specified. If the specified path doesn't exist, one is created on your behalf. A child directory is created with the name "\_rejectedrows". The "\_" character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter.
 
+> [!NOTE]
+> When a relative path is passed to *ERRORFILE*, the path is relative to the container path specified in *external_location*. 
+
 Within this directory, there's a folder created based on the time of load submission in the format YearMonthDay -HourMinuteSecond (Ex. 20180330-173205). In this folder a folder with the statement ID is created, and under that folder two types of files are written: an error.Json file containing the reject reasons, and a row.csv file containing the rejected rows.
 
-If ERRORFILE has the full path of the storage account defined, then the ERRORFILE_CREDENTIAL is used to connect to that storage. Otherwise, the value mentioned for CREDENTIAL is used.
+If ERRORFILE has the full path of the storage account defined, then the ERRORFILE_CREDENTIAL is used to connect to that storage. Otherwise, the value mentioned for CREDENTIAL is used. When the same credential that is used for the source data is used for ERRORFILE, restrictions that apply to ERRORFILE_CREDENTIAL also apply.
 
 #### *ERRORFILE_CREDENTIAL = (IDENTITY= '', SECRET = '')*
 
@@ -685,7 +701,9 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
 
 #### *MAXERRORS = max_errors*
 
-*MAXERRORS* specifies the maximum number of reject rows allowed in the load before the COPY operation is canceled. Each row that the COPY operation can't import is ignored and counted as one error. If max_errors isn't specified, the default is 0.
+*MAXERRORS* specifies the maximum number of reject rows allowed in the load before the COPY operation fails. Each row that the COPY operation can't import is ignored and counted as one error. If max_errors isn't specified, the default is 0.
+
+In Microsoft Fabric, *MAXERRORS* cannot be used when *FILE_TYPE* is 'PARQUET'. 
 
 #### *COMPRESSION = { 'Snappy' | 'GZIP' | 'NONE'}*
 
@@ -698,24 +716,26 @@ The COPY command autodetects the compression type based on the file extension wh
 
 - .gz  - **GZIP**
 
+Loading compressed files is currently only supported with *PARSER_VERSION* 1.0. 
+
 #### *FIELDQUOTE = 'field_quote'*
 
-*FIELDQUOTE* only applies to CSV. Specifies a single character that is used as the quote character (string delimiter) in the CSV file. If not specified, the quote character (") is used as the quote character as defined in the RFC 4180 standard. Extended ASCII and multi-byte characters and aren't supported with UTF-8 for FIELDQUOTE.
+*FIELDQUOTE* only applies to CSV. Specifies a single character that is used as the quote character (string delimiter) in the CSV file. If not specified, the quote character (") is used as the quote character as defined in the RFC 4180 standard. Hexadecimal notation is also supported for FIELDQUOTE. Extended ASCII and multi-byte characters aren't supported with UTF-8 for FIELDQUOTE.
 
 > [!NOTE]  
 > FIELDQUOTE characters are escaped in string columns where there is a presence of a double FIELDQUOTE (delimiter).
 
 #### *FIELDTERMINATOR = 'field_terminator'*
 
-*FIELDTERMINATOR* only applies to CSV. Specifies the field terminator that is used in the CSV file. The field terminator can also be specified using hexadecimal notation. The field terminator can be multi-character. The default field terminator is a (,). Extended ASCII and multi-byte characters and aren't supported with UTF-8 for FIELDTERMINATOR.
+*FIELDTERMINATOR* only applies to CSV. Specifies the field terminator that is used in the CSV file. The field terminator can also be specified using hexadecimal notation. The field terminator can be multi-character. The default field terminator is a (,). Extended ASCII and multi-byte characters aren't supported with UTF-8 for FIELDTERMINATOR.
 
-#### ROW TERMINATOR = 'row_terminator'
+#### ROWTERMINATOR = 'row_terminator'
 
-*ROW TERMINATOR* only applies to CSV. Specifies the row terminator that is used in the CSV file. The row terminator can be specified using hexadecimal notation. The row terminator can be multi-character. By default, the row terminator is `\r\n`.
+*ROWTERMINATOR* only applies to CSV. Specifies the row terminator that is used in the CSV file. The row terminator can be specified using hexadecimal notation. The row terminator can be multi-character. The default terminators are `\r\n`, `\n`, and `\r`.
 
 The COPY command prefixes the `\r` character when specifying `\n` (newline) resulting in `\r\n`. To specify only the `\n` character, use hexadecimal notation (`0x0A`). When specifying multi-character row terminators in hexadecimal, don't specify 0x between each character.
 
-Extended ASCII and multi-byte characters and aren't supported with UTF-8 for ROW TERMINATOR.
+Extended ASCII and multi-byte characters aren't supported with UTF-8 for ROWTERMINATOR.
 
 #### *FIRSTROW = First_row_int*
 
@@ -723,7 +743,24 @@ Extended ASCII and multi-byte characters and aren't supported with UTF-8 for ROW
 
 #### *ENCODING = 'UTF8' | 'UTF16'*
 
-ENCODING only applies to CSV. Default is UTF8. Specifies the data encoding standard for the files loaded by the COPY command.
+*ENCODING* only applies to CSV. Default is UTF8. Specifies the data encoding standard for the files loaded by the COPY command.
+
+#### PARSER_VERSION = { '1.0' | '2.0' }
+
+*PARSER_VERSION* only applies to CSV. Default is 2.0. Specifies the file parser used for ingestion when the source file type is CSV. The 2.0 parser offers improved performance for ingestion of CSV files. 
+
+Parser version 2.0 has the following limitations: 
+
+- Compressed CSV files are not supported
+- Files with UTF-16 encoding are not supported
+- Multicharacter or multibyte ROWTERMINATOR, FIELDTERMINATOR, or FIELDQUOTE is not supported. However, '\r\n' is accepted as a default ROWTERMINATOR
+
+When using parser version 1.0 with UTF-8 files, multibyte and multicharacter terminators are not supported for FIELDTERMINATOR. 
+
+Parser version 1.0 is available for backward compatibility only, and should be used only when these limitations are encountered.  
+
+> [!NOTE]  
+> When COPY INTO is used with compressed CSV files or files with UTF-16 encoding, COPY INTO automatically switches to PARSER_VERSION 1.0, without user action required. For multi-character terminators on FIELDTERMINATOR or ROWTERMINATOR, the COPY INTO statement will fail. Use PARSER_VERSION = '1.0' if multi-character separators are needed.
 
 ## Remarks
 
@@ -750,7 +787,7 @@ The default values of the COPY command are:
 
 - COMPRESSION default is uncompressed
 
-- FIELDQUOTE = ''
+- FIELDQUOTE = '"'
 
 - FIELDTERMINATOR = ','
 
@@ -815,6 +852,7 @@ This example uses a wildcard to load all Parquet files under a folder.
 COPY INTO test_parquet
 FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder1/*.parquet'
 WITH (
+    FILE_TYPE = 'PARQUET',
     CREDENTIAL=(IDENTITY= 'Shared Access Signature', SECRET='<Your_SAS_Token>')
 )
 ```
@@ -837,11 +875,11 @@ WITH (
 
 ### What is the file splitting guidance for the COPY command loading compressed CSV files?
 
-Consider splitting large CSV files, but keep files at a minimum of 4 MB each for better performance.
+Consider splitting large CSV files, especially when the number of files is small, but keep files at a minimum of 4 MB each for better performance.
 
 ### What is the file splitting guidance for the COPY command loading Parquet files?
 
-There's no need to split Parquet because the COPY command splits files automatically. Parquet files in the Azure storage account should be 256 MB or larger for best performance.
+Consider splitting large Parquet files, especially when the number of files is small. 
 
 ### Are there any limitations on the number or size of files?
 

@@ -69,11 +69,11 @@ helpviewer_keywords:
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  In the [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) statement, specify a logical or physical backup device to use for the backup operation. This example restores from a disk file that has the physical name `Z:\SQLServerBackups\AdventureWorks2012.bak`.  
+3.  In the [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) statement, specify a logical or physical backup device to use for the backup operation. This example restores from a disk file that has the physical name `Z:\SQLServerBackups\AdventureWorks2022.bak`.  
   
 ```sql  
-RESTORE DATABASE AdventureWorks2012  
-   FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak' ;  
+RESTORE DATABASE AdventureWorks2022  
+   FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2022.bak' ;  
   
 ```  
   

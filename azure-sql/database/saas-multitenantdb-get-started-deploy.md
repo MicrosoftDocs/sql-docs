@@ -1,6 +1,6 @@
 ---
 title: Deploy a sharded multi-tenant database SaaS app
-description: Deploy and explore the sharded Wingtip Tickets SaaS multi-tenant database application, that demonstrates SaaS patterns by using Azure SQL Database.
+description: Deploy and explore the sharded Wingtip Tickets SaaS multi-tenant database application that demonstrates SaaS patterns by using Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
@@ -192,7 +192,7 @@ Next, we provision another tenant, this time in its own database:
 
    ![Salix Salsa events page](./media/saas-multitenantdb-get-started-deploy/salix-salsa.png)
 
-   - Scroll to the bottom of the page. There in the banner you see the database name in which the tenant data is stored.
+   - Scroll to the bottom of the page. In the banner you see the database name in which the tenant data is stored.
 
 3. Refresh the **Events Hub** and the two new tenants now appears in the list.
 
@@ -206,13 +206,13 @@ Now we look at some of the resources that were deployed:
 
 2. Click **catalog-mt&lt;user&gt;** server. The catalog server contains two databases named *tenantcatalog* and *basetenantdb*. The *basetenantdb* database is an empty template database. It is copied to create a new tenant database, whether used for many tenants or just one tenant.
 
-   ![catalog server](./media/saas-multitenantdb-get-started-deploy/catalog-server.png)
+   :::image type="content" source="./media/saas-multitenantdb-get-started-deploy/catalog-server.png" alt-text="Screenshot of the server Overview page that shows tenant catalog and base tenant db databases." lightbox="./media/saas-multitenantdb-get-started-deploy/catalog-server.png":::
 
 3. Go back to the resource group and select the *tenants1-mt* server that holds the tenant databases.
     - The tenants1 database is a multi-tenant database in which the original three tenants, plus the first tenant you added, are stored. It is configured as a 50 DTU Standard database.
     - The **salixsalsa** database holds the Salix Salsa dance venue as its only tenant. It is configured as a Standard edition database with 50 DTUs by default.
 
-   ![tenants server](./media/saas-multitenantdb-get-started-deploy/tenants-server.png)
+   :::image type="content" source="./media/saas-multitenantdb-get-started-deploy/tenants-server.png" alt-text="Screenshot of the tenants1-mt server Overview page that shows the salixsalsa and tenants1 databases." lightbox="./media/saas-multitenantdb-get-started-deploy/tenants-server.png":::
 
 ## Monitor the performance of the database
 

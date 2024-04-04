@@ -79,6 +79,6 @@ dev_langs:
     :::column-end:::
 :::row-end:::
 
-## See also
+## Related content
 
-- [Database Mail](../../relational-databases/database-mail/database-mail.md)
+- [Database Mail](../database-mail/database-mail.md)

@@ -1,88 +1,103 @@
 ---
-title: Azure Active Directory server principals
-description: Using Azure Active Directory server principals (logins) in Azure SQL
-author: GithubMirek
-ms.author: mireks
-ms.reviewer: vanto
-ms.date: 08/24/2022
+title: Microsoft Entra server principals
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
+description: Using Microsoft Entra server principals (logins) in Azure SQL
+author: nofield
+ms.author: nofield
+ms.reviewer: vanto, mathoma
+ms.date: 02/15/2024
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
-# Azure Active Directory server principals
+# Microsoft Entra server principals
 
 [!INCLUDE[appliesto-sqldb-sqlmi-asa-dedicated-only](../includes/appliesto-sqldb-sqlmi-asa-dedicated-only.md)]
 
-> [!NOTE]
-> Azure Active Directory (Azure AD) server principals (logins) are currently in public preview for Azure SQL Database. Azure SQL Managed Instance can already utilize Azure AD logins.
-
-You can now create and utilize Azure AD server principals, which are logins in the virtual `master` database of a SQL Database. There are several benefits of using Azure AD server principals for SQL Database:
+You can now create and utilize server principals from Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)), which are logins in the virtual `master` database of a SQL Database. There are several benefits of using Microsoft Entra server principals for SQL Database:
 
 - Support [Azure SQL Database server roles for permission management](security-server-roles.md).
-- Support multiple Azure AD users with [special roles for SQL Database](/sql/relational-databases/security/authentication-access/database-level-roles#special-roles-for--and-azure-synapse), such as the `loginmanager` and `dbmanager` roles.
-- Functional parity between SQL logins and Azure AD logins.
-- Increase functional improvement support, such as utilizing [Azure AD-only authentication](authentication-azure-ad-only-authentication.md). Azure AD-only authentication allows SQL authentication to be disabled, which includes the SQL server admin, SQL logins and users.
-- Allows Azure AD principals to support geo-replicas. Azure AD principals will be able to connect to the geo-replica of a user database, with a *read-only* permission and *deny* permission to the primary server.
-- Ability to use Azure AD service principal logins with special roles to execute a full automation of user and database creation, as well as maintenance provided by Azure AD applications.
-- Closer functionality between Managed Instance and SQL Database, as Managed Instance already supports Azure AD logins in the `master` database.
+- Support multiple Microsoft Entra users with [special roles for SQL Database](/sql/relational-databases/security/authentication-access/database-level-roles#special-roles-for--and-azure-synapse), such as the `loginmanager` and `dbmanager` roles.
+- Functional parity between SQL logins and Microsoft Entra logins.
+- Increase functional improvement support, such as utilizing [Microsoft Entra-only authentication](authentication-azure-ad-only-authentication.md). Microsoft Entra-only authentication allows SQL authentication to be disabled, which includes the SQL server admin, SQL logins and users.
+- Allows Microsoft Entra principals to support geo-replicas. Microsoft Entra principals can connect to the geo-replica of a user database, with *read-only* and *deny* permissions to the primary server.
+- Use Microsoft Entra service principal logins with special roles to fully automate user and database creation and maintenance with Microsoft Entra applications.
 
-For more information on Azure AD authentication in Azure SQL, see [Use Azure Active Directory authentication](authentication-aad-overview.md)
+For more information on Microsoft Entra authentication in Azure SQL, see [Use Microsoft Entra authentication](authentication-aad-overview.md).
+
+> [!NOTE]
+> Microsoft Entra server principals (logins) are currently in public preview for Azure SQL Database and Azure Synapse Analytics. Microsoft Entra logins is generally available for Azure SQL Managed Instance and SQL Server 2022.
 
 ## Permissions
 
-The following permissions are required to utilize or create Azure AD logins in the virtual `master` database.
+The following permissions are required to utilize or create Microsoft Entra logins in the virtual `master` database.
 
-- Azure AD admin permission or membership in the `loginmanager` server role. The first Azure AD login can only be created by the Azure AD admin.
-- Must be a member of Azure AD within the same directory used for Azure SQL Database 
+- Microsoft Entra admin permission or membership in the `loginmanager` server role. The first Microsoft Entra login can only be created by the Microsoft Entra admin.
+- Must be a member of Microsoft Entra ID within the same directory used for Azure SQL Database.
 
-By default, the standard permission granted to newly created Azure AD login in the `master` database is **VIEW ANY DATABASE**. 
+By default, newly created Microsoft Entra logins in the `master` database are granted the **VIEW ANY DATABASE** permission. 
 
-## Azure AD logins syntax
+<a name='azure-ad-logins-syntax'></a>
 
-New syntax for Azure SQL Database to use Azure AD server principals has been introduced with this feature release.
+## Microsoft Entra principals syntax
 
-### Create login syntax
+Use the following syntax to create and manage Microsoft Entra server and database principals.
+
+### Create login
+
+This syntax creates a server-level login based on a Microsoft Entra identity. Only the Microsoft Entra admin can execute this command in the virtual `master` database.
 
 ```syntaxsql
-CREATE LOGIN login_name { FROM EXTERNAL PROVIDER | WITH <option_list> [,..] }  
+CREATE LOGIN login_name
+  { 
+    FROM EXTERNAL PROVIDER [WITH OBJECT_ID = 'objectid'] 
+    | WITH <option_list> [,..] 
+  }
 
-<option_list> ::=      
-    PASSWORD = {'password'}   
-    | , SID = sid, ] 
+<option_list> ::=
+    PASSWORD = { 'password' }
+    [ , SID = sid ]
 ```
 
-The *login_name* specifies the Azure AD principal, which is an Azure AD user, group, or application.
+The *login_name* specifies the Microsoft Entra principal, which is a Microsoft Entra user, group, or application.
 
 For more information, see [CREATE LOGIN (Transact-SQL)](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-current&preserve-view=true).
 
-### Create user syntax
+### Create user from login
 
-The below T-SQL syntax is already available in SQL Database, and can be used for creating database-level Azure AD principals mapped to Azure AD logins in the virtual `master` database.
+The following T-SQL syntax creates a database-level Microsoft Entra principal mapped to a Microsoft Entra login in the virtual `master` database. Similar to the syntax for creating a database contained Microsoft Entra user, the only difference is specifying `FROM LOGIN [login_name]` rather than `FROM EXTERNAL PROVIDER`.
 
-To create an Azure AD user from an Azure AD login, use the following syntax. Only the Azure AD admin can execute this command in the virtual `master` database.
-
-```syntaxsql
-CREATE USER user_name FROM LOGIN login_name
-```
-
-For more information, see [CREATE USER (Transact-SQL)](/sql/t-sql/statements/create-user-transact-sql).
-
-### Disable or enable a login using ALTER LOGIN syntax
-
-The [ALTER LOGIN (Transact-SQL)](/sql/t-sql/statements/alter-login-transact-sql?view=azuresqldb-current&preserve-view=true) DDL syntax can be used to enable or disable an Azure AD login in Azure SQL Database.
+To create a Microsoft Entra user from a Microsoft Entra login, use the following syntax. 
 
 ```syntaxsql
-ALTER LOGIN login_name DISABLE 
+CREATE USER [user_name] FROM LOGIN [login_name]
 ```
 
-The Azure AD principal `login_name` won't be able to log into any user database in the SQL Database logical server where an Azure AD user principal, `user_name` mapped to login `login_name` was created.
+You can use the `SID` column from **sys.database_principals** to distinguish between a Microsoft Entra contained database user and a Microsoft Entra user created from a login. For a contained database user, the `SID` is a binary string of length 16. For a login-based user, the `SID` is of length 18 with an `AADE` suffix.
 
 > [!NOTE]
-> - `ALTER LOGIN login_name DISABLE` is not supported for contained users.
-> - `ALTER LOGIN login_name DISABLE` is not supported for Azure AD groups.
-> - An individual disabled login cannot belong to a user who is part of a login group created in the `master` database (for example, an Azure AD admin group). 
+> Appending the `AADE` suffix to the SID is how we identify a Microsoft Entra user as being created from a login. However, this also means that the SIDs for the login and its user(s) don't match between `sys.server_principals` and `sys.database_principals`. To correlate the user back to its login, the `AADE` suffix must first be removed.
+
+To understand the conceptual difference between login-based users and contained database users, see [contained database users](/sql/relational-databases/security/contained-database-users-making-your-database-portable).
+
+For more information on all create user syntax, see [CREATE USER (Transact-SQL)](/sql/t-sql/statements/create-user-transact-sql).
+
+### Disable or enable a login using ALTER LOGIN
+
+The [ALTER LOGIN (Transact-SQL)](/sql/t-sql/statements/alter-login-transact-sql?view=azuresqldb-current&preserve-view=true) DDL syntax is used to enable or disable a Microsoft Entra login in Azure SQL Database.
+
+```syntaxsql
+ALTER LOGIN [login_name] DISABLE 
+```
+
+When a login is disabled, connections are no longer allowed using that server principal. It also disables all database principals (users) created from that login from being able to connect to their respective databases.
+
+> [!NOTE]
+> - `ALTER LOGIN login_name DISABLE` won't affect contained database users, since they aren't associated to logins.
+> - `ALTER LOGIN login_name DISABLE` is not supported for Microsoft Entra groups.
+> - An individual disabled login cannot belong to a user who is part of a login group created in the `master` database (for example, a Microsoft Entra admin group). 
 > - For the `DISABLE` or `ENABLE` changes to take immediate effect, the authentication cache and the **TokenAndPermUserStore** cache must be cleared using the T-SQL commands.
 >
 >   ```sql
@@ -90,44 +105,51 @@ The Azure AD principal `login_name` won't be able to log into any user database 
 >   DBCC FREESYSTEMCACHE('TokenAndPermUserStore') WITH NO_INFOMSGS 
 >   ```
 
-## Roles for Azure AD principals
+<a name='roles-for-azure-ad-principals'></a>
 
-[Special roles for SQL Database](/sql/relational-databases/security/authentication-access/database-level-roles#special-roles-for--and-azure-synapse) can be assigned to *users* in the virtual `master` database for Azure AD principals, including **dbmanager** and **loginmanager**. 
+## Roles for Microsoft Entra principals
+
+[Special roles for SQL Database](/sql/relational-databases/security/authentication-access/database-level-roles#special-roles-for--and-azure-synapse) can be assigned to *users* in the virtual `master` database for Microsoft Entra principals, including **dbmanager** and **loginmanager**. 
 
 [Azure SQL Database server roles](security-server-roles.md) can be assigned to *logins* in the virtual `master` database.
 
-For a tutorial on how to grant these roles, see [Tutorial: Create and utilize Azure Active Directory server logins](authentication-azure-ad-logins-tutorial.md).
-
+For a tutorial on how to grant these roles, see [Tutorial: Create and utilize Microsoft Entra server logins](authentication-azure-ad-logins-tutorial.md).
 
 ## Limitations and remarks
 
-- The SQL server admin can't create Azure AD logins or users in any databases.
-- Changing a database ownership to an Azure AD group as database owner isn't supported.
+- The SQL server admin can't create Microsoft Entra logins or users in any databases.
+- A SQL admin or SQL user can't execute the following Microsoft Entra operations:
+  - `CREATE LOGIN [bob@contoso.com] FROM EXTERNAL PROVIDER`
+  - `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`
+  - `EXECUTE AS USER [bob@contoso.com]`
+  - `ALTER AUTHORIZATION ON securable::name TO [bob@contoso.com]`
+- Impersonation of Microsoft Entra server principals (logins) isn't supported for Azure SQL Database and Azure Synapse Analytics. It [is supported](/azure/azure-sql/managed-instance/aad-security-configure-tutorial?view=azuresql&preserve-view=true#impersonate-azure-ad-server-level-principals-logins) for SQL Managed Instance:
+  - [EXECUTE AS Clause (Transact-SQL)](/sql/t-sql/statements/execute-as-clause-transact-sql)
+  - [EXECUTE AS (Transact-SQL)](/sql/t-sql/statements/execute-as-transact-sql)
+  - Impersonation of Microsoft Entra database principals (users) in a user database is supported on all Microsoft SQL products.
+- Microsoft Entra logins can't overlap with the Microsoft Entra administrator. The Microsoft Entra admin takes precedence over any login. If a Microsoft Entra account already has access to the server as a Microsoft Entra admin, individually or as part of a group, any login created for this account won't have any effect. However, the login creation isn't blocked through T-SQL. After the account authenticates to the server, the login will have the effective permissions of a Microsoft Entra admin, and not of a newly created login.
+- Changing permissions on specific Microsoft Entra login object isn't supported:
+  - `GRANT <PERMISSION> ON LOGIN :: <Microsoft Entra account> TO <Any other login> `
+- When you alter permissions for a Microsoft Entra login, by default the changes only take effect the next time the login connects to the Azure SQL Database. Any existing open connections with the login aren't affected. To force permissions changes to take immediate effect, you can manually clear the authentication and TokenAndPermUserStore, as described earlier in [disable or enable a login using ALTER LOGIN](#disable-or-enable-a-login-using-alter-login). This behavior also applies when making server role membership changes with [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql).
+- In SQL Server Management Studio and Azure Data Studio, the scripting command to create a user doesn't check if there's already a Microsoft Entra login in `master` with the same name. It always generates the T-SQL for a contained database Microsoft Entra user.
+- An error might occur if you're trying to create a login or user from a service principal with a nonunique display name. For more information about mitigating this error, see [Microsoft Entra logins and users with nonunique display names](authentication-microsoft-entra-create-users-with-nonunique-names.md).
+
+### Microsoft Entra group server principal limitations
+
+With Microsoft Entra logins in public preview for Azure SQL Database and Azure Synapse Analytics, the following are known limitations:
+
+- [Azure SQL Database server roles](security-server-roles.md) aren't supported for Microsoft Entra groups.
+- If your SQL admin is a Microsoft Entra group, there are some limitations when users of that group connect. Each Microsoft Entra user individually isn't part of the `sys.server_principals` table. This has various consequences, including calls to `SUSER_SID` returning `NULL`.
+- Microsoft Entra user logins that are part of Microsoft Entra group logins are also not implicitly created, meaning they won't have a default schema, and not be able to perform operations like `CREATE SCHEMA` until a login for the Microsoft Entra user is created, or a default schema is assigned to the group.
+- Changing a database's ownership to a Microsoft Entra group as database owner isn't supported.
   - `ALTER AUTHORIZATION ON database::<mydb> TO [my_aad_group]` fails with an error message:
+
     ```output
     Msg 33181, Level 16, State 1, Line 4
     The new owner cannot be Azure Active Directory group.
     ```
-  - Changing a database ownership to an individual user is supported.
-- A SQL admin or SQL user can't execute the following Azure AD operations: 
-  - `CREATE LOGIN [bob@contoso.com] FROM EXTERNAL PROVIDER` 
-  - `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER` 
-  - `EXECUTE AS USER [bob@contoso.com]`
-  - `ALTER AUTHORIZATION ON securable::name TO [bob@contoso.com]`
-- Impersonation of Azure AD server-level principals (logins) isn't supported: 
-  - [EXECUTE AS Clause (Transact-SQL)](/sql/t-sql/statements/execute-as-clause-transact-sql)
-  - [EXECUTE AS (Transact-SQL)](/sql/t-sql/statements/execute-as-transact-sql)
-  - Impersonation of Azure AD database-level principals (users) at a user database-level is still supported.
-- Azure AD logins overlapping with Azure AD administrator aren't supported. Azure AD admin takes precedence over any login. If an Azure AD account already has access to the server as an Azure AD admin, either directly or as a member of the admin group, the login created for this user won't have any effect. The login creation isn't blocked through T-SQL. After the account authenticates to the server, the login will have the effective permissions of an Azure AD admin, and not of a newly created login.
-- Changing permissions on specific Azure AD login object isn't supported:
-  - `GRANT <PERMISSION> ON LOGIN :: <Azure AD account> TO <Any other login> `
-- When permissions are altered for an Azure AD login with existing open connections to an Azure SQL Database, permissions aren't effective until the user reconnects. Also [flush the authentication cache and the TokenAndPermUserStore cache](#disable-or-enable-a-login-using-alter-login-syntax). This applies to server role membership change using the [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) statement. 
-- Setting an Azure AD login mapped to an Azure AD group as the database owner isn't supported.
-- [Azure SQL Database server roles](security-server-roles.md) aren't supported for Azure AD groups.
-- The current scripting command in SQL Server Management Studio and in Azure Data Studio for Azure AD users with logins does not generate a correct T-SQL syntax for a user creation with a login. Instead, the script generates a T-SQL syntax for a contained Azure AD user without a login in the virtual `master` database.
-- To distinguish between the Azure AD contained user without a login in the virtual `master` database and an Azure AD user created from a login in the virtual `master` database, view the `SID` in **sys.database_principals**, and check for the `AADE` suffix appended in the `SID` column for a user created with a login.
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Tutorial: Create and utilize Azure Active Directory server logins](authentication-azure-ad-logins-tutorial.md)
+> [Tutorial: Create and utilize Microsoft Entra server logins](authentication-azure-ad-logins-tutorial.md)

@@ -1,6 +1,7 @@
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
-SELECT ProductID 
+
+SELECT ProductID
 FROM Sales.SalesOrderDetail
 WHERE UnitPrice < 25.00
 GROUP BY ProductID

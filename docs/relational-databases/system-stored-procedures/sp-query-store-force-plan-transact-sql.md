@@ -109,18 +109,15 @@ INNER JOIN sys.query_store_replicas AS qsr
 WHERE qsr.replica_name = 'yourSecondaryReplicaName';
 ```
 
-## Next steps
-
-Learn more about related concepts in the following articles:
+## Related content
 
 - [sys.query_store_plan_forcing_locations (Transact-SQL)](../system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md)
 - [sys.query_store_replicas (Transact-SQL)](../system-catalog-views/sys-query-store-replicas.md)
-- [sys.query_store_plan_forcing_locations (Transact-SQL)](../system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md)
 - [sp_query_store_remove_plan (Transact-SQL)](sp-query-store-remove-plan-transact-sql.md)
 - [sp_query_store_remove_query (Transact-SQL)](sp-query-store-remove-query-transact-sql.md)
 - [sp_query_store_unforce_plan (Transact-SQL)](sp-query-store-unforce-plan-transact-sql.md)
-- [Query Store Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)
-- [Monitoring Performance by using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [Query Store Catalog Views (Transact-SQL)](../system-catalog-views/query-store-catalog-views-transact-sql.md)
+- [Monitoring Performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
 - [sp_query_store_reset_exec_stats (Transact-SQL)](sp-query-store-reset-exec-stats-transact-sql.md)
 - [sp_query_store_flush_db (Transact-SQL)](sp-query-store-flush-db-transact-sql.md)
-- [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md#CheckForced)
+- [Best Practice with the Query Store](../performance/best-practice-with-the-query-store.md#CheckForced)

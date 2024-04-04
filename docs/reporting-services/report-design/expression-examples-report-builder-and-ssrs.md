@@ -28,14 +28,14 @@ helpviewer_keywords:
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 
-Expressions are used frequently in paginated reports to control content and report appearance. Expressions are written in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], and can use built-in functions, custom code, report and group variables, and user-defined variables. Expressions begin with an equal sign (=). For more information about the expression editor and the types of references that you can include, see [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md), and [Add an Expression &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
+Expressions are used frequently in paginated reports to control content and report appearance. Expressions are written in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)], and can use built-in functions, custom code, report and group variables, and user-defined variables. Expressions begin with an equal sign (=). For more information about the expression editor and the types of references that you can include, see [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md), and [Add an Expression &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
   
 > [!IMPORTANT]  
 >  When RDL Sandboxing is enabled, only certain types and members can be used in expression text at report publish time. For more information, see [Enable and Disable RDL Sandboxing](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md).  
   
 This topic provides examples of expressions that can be used for common tasks in a report.  
   
--   [Visual Basic Functions](#VisualBasicFunctions) Examples for date, string, conversion and conditional [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] functions.  
+-   [Visual Basic Functions](#VisualBasicFunctions) Examples for date, string, conversion and conditional [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] functions.  
   
 -   [Report Functions](#ReportFunctions) Examples for aggregates and other built-in report functions.  
   
@@ -63,10 +63,10 @@ To learn how to write expressions that use many of the functions and operators a
 
   
 ## Functions  
- Many expressions in a report contain functions. You can format data, apply logic, and access report metadata using these functions. You can write expressions that use functions from the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] run-time library, and from the <xref:System.Convert> and <xref:System.Math> namespaces. You can add references to functions from other assemblies or custom code. You can also use classes from the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], including <xref:System.Text.RegularExpressions>.  
+ Many expressions in a report contain functions. You can format data, apply logic, and access report metadata using these functions. You can write expressions that use functions from the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] run-time library, and from the <xref:System.Convert> and <xref:System.Math> namespaces. You can add references to functions from other assemblies or custom code. You can also use classes from the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], including <xref:System.Text.RegularExpressions>.  
   
 ##  <a name="VisualBasicFunctions"></a> Visual Basic Functions  
- You can use [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] functions to manipulate the data that is displayed in text boxes or that is used for parameters, properties, or other areas of the report. This section provides examples demonstrating some of these functions. For more information, see [Visual Basic Runtime Library Members](/dotnet/visual-basic/language-reference/runtime-library-members) on MSDN.  
+ You can use [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] functions to manipulate the data that is displayed in text boxes or that is used for parameters, properties, or other areas of the report. This section provides examples demonstrating some of these functions. For more information, see [Visual Basic Runtime Library Members](/dotnet/visual-basic/language-reference/runtime-library-members) on MSDN.  
   
  The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provides many custom format options, for example, for specific date formats. For more information, see [Formatting Types](/previous-versions/) on MSDN.  
   
@@ -117,7 +117,7 @@ To learn how to write expressions that use many of the functions and operators a
     =DateAdd(DateInterval.Month, 6, Parameters!StartDate.Value)  
     ```  
   
--   The **Year** function displays the year for a particular date. You can use this to group dates together or to display the year as a label for a set of dates. This expression provides the year for a given group of sales order dates. The **Month** function and other functions can also be used to manipulate dates. For more information, see the [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] documentation.  
+-   The **Year** function displays the year for a particular date. You can use this to group dates together or to display the year as a label for a set of dates. This expression provides the year for a given group of sales order dates. The **Month** function and other functions can also be used to manipulate dates. For more information, see the [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] documentation.  
   
     ```  
     =Year(Fields!OrderDate.Value)  
@@ -191,7 +191,7 @@ To learn how to write expressions that use many of the functions and operators a
   
 ###  <a name="StringFunctions"></a> String Functions  
   
--   Combine more than one field by using concatenation operators and [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] constants. The following expression returns two fields, each on a separate line in the same text box:  
+-   Combine more than one field by using concatenation operators and [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] constants. The following expression returns two fields, each on a separate line in the same text box:  
   
     ```  
     =Fields!FirstName.Value & vbCrLf & Fields!LastName.Value   
@@ -211,7 +211,7 @@ To learn how to write expressions that use many of the functions and operators a
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
     ```  
   
-     The following expression results in the same value as the previous one, using members of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> class instead of [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] functions:  
+     The following expression results in the same value as the previous one, using members of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> class instead of [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] functions:  
   
     ```  
     =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
@@ -256,7 +256,7 @@ To learn how to write expressions that use many of the functions and operators a
     ```  
   
 ###  <a name="ConversionFunctions"></a> Conversion Functions  
- You can use [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] functions to convert a field from the one data type to a different data type. Conversion functions can be used to convert the default data type for a field to the data type needed for calculations or to combine text.  
+ You can use [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] functions to convert a field from the one data type to a different data type. Conversion functions can be used to convert the default data type for a field to the data type needed for calculations or to combine text.  
   
 -   The following expression converts the constant 500 to type Decimal in order to compare it to a [!INCLUDE[tsql](../../includes/tsql-md.md)] money data type in the Value field for a filter expression.  
   
@@ -300,13 +300,13 @@ To learn how to write expressions that use many of the functions and operators a
     =IIF(DateDiff("d",Fields!ImportantDate.Value, Now())>7,"Red","Blue")  
     ```  
   
--   Test the value of the `PhoneNumber` field and return "No Value" if it is **null** (**Nothing** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]); otherwise return the phone number value. This expression can be used to control the value of a text box in a report item.  
+-   Test the value of the `PhoneNumber` field and return "No Value" if it is **null** (**Nothing** in [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)]); otherwise return the phone number value. This expression can be used to control the value of a text box in a report item.  
   
     ```  
     =IIF(Fields!PhoneNumber.Value Is Nothing,"No Value",Fields!PhoneNumber.Value)  
     ```  
   
--   Test the value of the `Department` field and return either a subreport name or a **null** (**Nothing** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]). This expression can be used for conditional drillthrough subreports.  
+-   Test the value of the `Department` field and return either a subreport name or a **null** (**Nothing** in [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)]). This expression can be used for conditional drillthrough subreports.  
   
     ```  
     =IIF(Fields!Department.Value = "Development", "EmployeeReport", Nothing)  
@@ -423,7 +423,7 @@ To learn how to write expressions that use many of the functions and operators a
     =Iif(Fields!Profit.Value < 0, "Red", "Black")  
     ```  
   
-     You can also use the [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] object variable `Me`. This variable is another way of referring to the value of a text box.  
+     You can also use the [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] object variable `Me`. This variable is another way of referring to the value of a text box.  
   
      `=Iif(Me.Value < 0, "Red", "Black")`  
   
@@ -526,7 +526,7 @@ To learn how to write expressions that use many of the functions and operators a
     =IIF(Field!B.Value=0, 0, Field!A.Value / IIF(Field!B.Value =0, 1, Field!B.Value))  
     ```  
   
--   Use a custom code function to return the value for the expression. The following example returns the percentage difference between a current value and a previous value. This can be used to calculate the difference between any two successive values and it handles the edge case of the first comparison (when there is no previous value) and cases whether either the previous value or the current value is **null** (**Nothing** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]).  
+-   Use a custom code function to return the value for the expression. The following example returns the percentage difference between a current value and a previous value. This can be used to calculate the difference between any two successive values and it handles the edge case of the first comparison (when there is no previous value) and cases whether either the previous value or the current value is **null** (**Nothing** in [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)]).  
   
     ```  
     Public Function GetDeltaPercentage(ByVal PreviousValue, ByVal CurrentValue) As Object  

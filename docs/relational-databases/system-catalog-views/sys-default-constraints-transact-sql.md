@@ -37,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The following example returns the definition of the DEFAULT constraint that is applied to the `VacationHours` column of the `HumanResources.Employee` table.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT d.definition   
 FROM sys.default_constraints AS d  

@@ -3,7 +3,7 @@ title: "SSIS Catalog"
 description: "SSIS Catalog"
 author: chugugrace
 ms.author: chugu
-ms.date: 09/17/2020
+ms.date: 03/29/2024
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual
@@ -11,6 +11,20 @@ f1_keywords:
   - "sql13.ssis.ssms.iscreatecatalog.f1"
   - "sql13.ssis.ssms.iscatalogprop.general.f1"
   - "sql13.ssis.dbupgradewizard.f1"
+  - "sql13.ssis.ssms.browseprincipals.f1"
+  - "sql13.dts.designer.configure.f1"
+  - "sql13.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1"
+  - "sql13.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1"
+  - "sql13.ssis.ssms.isfolderprop.permissions.f1"
+  - "sql13.ssis.ssms.iscreatefolder.f1"
+  - "sql13.ssis.ssms.isfolderprop.general.f1"
+  - "sql13.ssis.ssms.ispackageprop.general.f1"
+  - "sql13.ssis.ssms.packageproperties.f1"
+  - "sql13.ssis.ssms.isprojectprop.general.f1"
+  - "sql13.ssis.ssms.isprojectprop.permissions.f1"
+  - "sql13.ssis.ssms.isprojectprop.versions.f1"
+  - "sql13.ssis.ssms.isprojectvalidate.f1"
+  - "sql13.ssis.ssms.ispackagevalidate.f1"
 ---
 
 # SSIS Catalog
@@ -554,9 +568,12 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
      ![Review the results in the SSISDB Upgrade Wizard](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "Review the results in the SSISDB Upgrade Wizard")  
 
 ## Always On for SSIS Catalog (SSISDB)
-  The Always On Availability Groups feature is a high-availability and disaster-recovery solution that provides an enterprise-level alternative to database mirroring. An availability group supports a failover environment for a discrete set of user databases, known as availability databases, that fail over together. For more information,  see [Always On Availability Groups](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
+  The Always On Availability Groups feature is a high-availability and disaster-recovery solution that provides an enterprise-level alternative to database mirroring. An availability group supports a failover environment for a discrete set of user databases, known as availability databases, that fail over together. For more information,  see [Always On Availability Groups](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
  In order to provide the high-availability for the SSIS catalog (SSISDB) and its contents (projects, packages, execution logs, etc.), you can add the SSISDB database (just the same as any other user database) to an Always On Availability Group. When a failover occurs, one of the secondary nodes automatically becomes the new primary node.  
+
+ > [!NOTE]
+ > Contained availability groups, which were introduced in SQL Server 2022, are not supported yet. 
  
  > [!IMPORTANT]
  > When a failover occurs, packages that were running do not restart or resume. 
@@ -658,11 +675,11 @@ If the **Enable Always On support** option on the context menu appears to be dis
 
 By default, the remote invocation of SSIS packages stored under the SSISDB catalog doesn't support the delegation of credentials, sometimes referred to as a double-hop. 
 
-Imagine a scenario in which a user logs in to client machine A and launches SQL Server Management Studio (SSMS). From within SSMS, the user connects to a SQL server that's hosted on machine B, which has the SSISDB catalog. The SSIS package is stored under this SSISDB catalog and the package in turn connects to a SQL Server service that is running on machine C (the package could also be accessing any other services). When the user invokes the execution of the SSIS package from machine A, SSMS first successfully passes the user credentials from machine A to machine B (where the SSIS runtime process is executing the package). The SSIS execution runtime process (ISServerExec.exe) is now required to delegate the user credentials from machine B to machine C for the execution to complete successfully. However, delegation of credentials is not enabled by default.
+Imagine a scenario in which a user logs in to client machine A and launches SQL Server Management Studio (SSMS). From within SSMS, the user connects to a SQL Server that's hosted on machine B, which has the SSISDB catalog. The SSIS package is stored under this SSISDB catalog and the package in turn connects to a SQL Server service that is running on machine C (the package could also be accessing any other services). When the user invokes the execution of the SSIS package from machine A, SSMS first successfully passes the user credentials from machine A to machine B (where the SSIS runtime process is executing the package). The SSIS execution runtime process (ISServerExec.exe) is now required to delegate the user credentials from machine B to machine C for the execution to complete successfully. However, delegation of credentials is not enabled by default.
 
 A user can enable the delegation of credentials by granting the *Trust this user for delegation to any service (Kerberos Only)* right to the SQL Server service account (on machine B), which launches ISServerExec.exe as a child process. This process is referred to as setting up unconstrained delegation or open delegation for a SQL Server service account. Before you grant this right, consider whether it meets the security requirements of your organization.
 
-SSISDB doesn't support constrained delegation. In a double-hop environment, if the service account of the SQL server that hosts the SSISDB catalog (machine B in our example) is set up for constrained delegation, ISServerExec.exe won't be able to delegate the credentials to the third machine (machine C). This is applicable to scenarios in which Windows Credential Guard is enabled, which mandatorily requires constrained delegation to be set up.
+SSISDB doesn't support constrained delegation. In a double-hop environment, if the service account of the SQL Server that hosts the SSISDB catalog (machine B in our example) is set up for constrained delegation, ISServerExec.exe won't be able to delegate the credentials to the third machine (machine C). This is applicable to scenarios in which Windows Credential Guard is enabled, which mandatorily requires constrained delegation to be set up.
 
   
 ##  <a name="RelatedContent"></a> Related Content  

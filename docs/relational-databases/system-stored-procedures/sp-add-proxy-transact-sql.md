@@ -42,7 +42,7 @@ sp_add_proxy
 
 #### [ @proxy_name = ] '*proxy_name*'
 
-The name of the proxy to create. The *@proxy_name* is **sysname**, with a default of NULL. When the *@proxy_name* is NULL or an empty string, the name of the proxy defaults to the *@credential_name* or *@credential_id* supplied.
+The name of the proxy to create. The *@proxy_name* is **sysname**, with a default of `NULL`. When the *@proxy_name* is NULL or an empty string, the name of the proxy defaults to the *@credential_name* or *@credential_id* supplied.
 
 #### [ @enabled = ] *is_enabled*
 
@@ -50,15 +50,15 @@ Specifies whether the proxy is enabled. The *@enabled* flag is **tinyint**, with
 
 #### [ @description = ] '*description*'
 
-A description of the proxy. The description is **nvarchar(512)**, with a default of NULL. The description allows you to document the proxy, but isn't otherwise used by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Therefore, this argument is optional.
+A description of the proxy. The description is **nvarchar(512)**, with a default of `NULL`. The description allows you to document the proxy, but isn't otherwise used by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Therefore, this argument is optional.
 
 #### [ @credential_name = ] '*credential_name*'
 
-The name of the credential for the proxy. The *@credential_name* is **sysname**, with a default of NULL. Either *@credential_name* or *@credential_id* must be specified.
+The name of the credential for the proxy. The *@credential_name* is **sysname**, with a default of `NULL`. Either *@credential_name* or *@credential_id* must be specified.
 
 #### [ @credential_id = ] *credential_id*
 
-The identification number of the credential for the proxy. The *@credential_id* is **int**, with a default of NULL. Either *@credential_name* or *@credential_id* must be specified.
+The identification number of the credential for the proxy. The *@credential_id* is **int**, with a default of `NULL`. Either *@credential_name* or *@credential_id* must be specified.
 
 #### [ @proxy_id = ] *proxy_id* OUTPUT
 
@@ -68,7 +68,7 @@ The proxy identification number assigned to the proxy if created successfully.
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -100,7 +100,7 @@ EXEC dbo.sp_add_proxy
 GO
 ```
 
-## See also
+## Related content
 
 - [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md)
 - [sp_grant_login_to_proxy (Transact-SQL)](sp-grant-login-to-proxy-transact-sql.md)

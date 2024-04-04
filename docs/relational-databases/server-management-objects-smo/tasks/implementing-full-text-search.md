@@ -150,7 +150,7 @@ public class A {
 # Set the path context to the local, default instance of SQL Server and database tables  
   
 CD \sql\localhost\default\databases  
-$db = get-item AdventureWorks2012  
+$db = get-item AdventureWorks2022  
   
 CD AdventureWorks\tables  
   

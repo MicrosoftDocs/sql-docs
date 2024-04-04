@@ -66,9 +66,9 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
 ```sql  
 USE tempdb;  
 GO  
--- Create a synonym for the Product table in AdventureWorks2012.  
+-- Create a synonym for the Product table in AdventureWorks2022.  
 CREATE SYNONYM MyProduct  
-FOR AdventureWorks2012.Production.Product;  
+FOR AdventureWorks2022.Production.Product;  
 GO  
 -- Drop synonym MyProduct.  
 USE tempdb;  

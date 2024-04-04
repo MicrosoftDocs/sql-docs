@@ -3,17 +3,19 @@ title: "SSMA: Automate migration to SQL Server on Linux"
 description: Automate database migrations to SQL Server on Linux using SQL Server Migration Assistant (SSMA) for Microsoft Access, DB2, MySQL, Oracle and Sybase.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 01/30/2018
+ms.date: 11/16/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: intro-migration
+ms.custom:
+  - intro-migration
+  - linux-related-content
 ---
 # Automate database migration to Linux with the SQL Server Migration Assistant (SSMA)
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This article introduces [SQL Server Migration Assistant (SSMA)](../ssma/sql-server-migration-assistant.md) that helps you easily migrate databases to SQL Server on Linux from Microsoft Access, DB2, MySQL, Oracle, and Sybase. SSMA is a Windows application, so use SSMA when you have a Windows machine that can connect to a remote SQL Server instance on Linux. 
+This article introduces [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md) that helps you easily migrate databases to SQL Server on Linux from Microsoft Access, DB2, MySQL, Oracle, and Sybase. SSMA is a Windows application, so use SSMA when you have a Windows machine that can connect to a remote SQL Server instance on Linux.
 
 SSMA supports a variety of source databases including Oracle, MySQL, Sybase, DB2, and Microsoft Access to SQL Server on Linux and helps automate migration tasks such as:
 
@@ -24,14 +26,16 @@ SSMA supports a variety of source databases including Oracle, MySQL, Sybase, DB2
 - Test the migration
 
 To get started, download SQL Server Migration Assistant (SSMA) for your source database from the following list:
+
 - [SSMA for Access](https://aka.ms/ssmaforaccess)
 - [SSMA for DB2](https://aka.ms/ssmafordb2)
-- [SSMA for MySql](https://aka.ms/ssmaformysql) 
+- [SSMA for MySQL](https://aka.ms/ssmaformysql)
 - [SSMA for Oracle](https://aka.ms/ssmafororacle)
-- [SSMA for Sybase ASE](https://aka.ms/ssmaforsybase) 
+- [SSMA for Sybase ASE](https://aka.ms/ssmaforsybase)
 
-Next, follow the [SQL Server Migration Assistant (SSMA)](../ssma/sql-server-migration-assistant.md) to migrate your source database to SQL Server on Linux.
+Next, follow the [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md) to migrate your source database to SQL Server on Linux.
 
-## See also
+## Related content
+
 - [Microsoft Data Migration blog](https://blogs.msdn.microsoft.com/datamigration)
 - [SQL Server Migration Assistant (SSMA) blog](/archive/blogs/ssma/)

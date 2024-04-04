@@ -55,16 +55,13 @@ The following example flushes the in-memory portion of the Query Store data to d
 EXEC sp_query_store_flush_db;
 ```
 
-## Next steps
+## Related content
 
-Learn more about Query Store in the following articles:
-
-- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [Monitoring Performance By Using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
 - [Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md)
 - [sp_query_store_force_plan (Transact-SQL)](sp-query-store-force-plan-transact-sql.md)
 - [sp_query_store_remove_query (Transact-SQL)](sp-query-store-remove-query-transact-sql.md)
 - [sp_query_store_unforce_plan (Transact-SQL)](sp-query-store-unforce-plan-transact-sql.md)
 - [sp_query_store_reset_exec_stats (Transact-SQL)](sp-query-store-reset-exec-stats-transact-sql.md)
 - [sp_query_store_remove_plan (Transact-SQL)](sp-query-store-remove-plan-transact-sql.md)
-- [sp_query_store_reset_exec_stats (Transact-SQL)](sp-query-store-reset-exec-stats-transact-sql.md)
-- [Query Store Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)
+- [Query Store Catalog Views (Transact-SQL)](../system-catalog-views/query-store-catalog-views-transact-sql.md)

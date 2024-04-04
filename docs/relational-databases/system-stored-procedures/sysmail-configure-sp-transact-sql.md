@@ -51,7 +51,7 @@ A description of the parameter.
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -95,8 +95,8 @@ EXEC msdb.dbo.sysmail_configure_sp
     'MaxFileSize', '2097152';
 ```
 
-## See also
+## Related content
 
-- [Database Mail](../../relational-databases/database-mail/database-mail.md)
+- [Database Mail](../database-mail/database-mail.md)
 - [sysmail_help_configure_sp (Transact-SQL)](sysmail-help-configure-sp-transact-sql.md)
 - [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)

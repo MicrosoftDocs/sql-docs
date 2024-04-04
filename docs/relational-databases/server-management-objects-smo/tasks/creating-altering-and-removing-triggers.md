@@ -27,9 +27,9 @@ To use any code example that is provided, you will have to choose the programmin
 'Connect to the local, default instance of SQL Server.
 Dim mysrv As Server
 mysrv = New Server
-'Reference the AdventureWorks2012 2008R2 database.
+'Reference the AdventureWorks2022 database.
 Dim mydb As Database
-mydb = mysrv.Databases("AdventureWorks2012")
+mydb = mysrv.Databases("AdventureWorks2022")
 'Declare a Table object variable and reference the Customer table.
 Dim mytab As Table
 mytab = mydb.Tables("Customer", "Sales")
@@ -59,9 +59,9 @@ tr.Drop()
             //Connect to the local, default instance of SQL Server.   
             Server mysrv;  
             mysrv = new Server();  
-            //Reference the AdventureWorks2012 database.   
+            //Reference the AdventureWorks2022 database.   
             Database mydb;  
-            mydb = mysrv.Databases["AdventureWorks2012"];  
+            mydb = mysrv.Databases["AdventureWorks2022"];  
             //Declare a Table object variable and reference the Customer table.   
             Table mytab;  
             mytab = mydb.Tables["Customer", "Sales"];  
@@ -89,8 +89,8 @@ tr.Drop()
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server and to the  
-#database tables in Adventureworks2012  
-CD \sql\localhost\default\databases\AdventureWorks2012\Tables\  
+#database tables in AdventureWorks2022  
+CD \sql\localhost\default\databases\AdventureWorks2022\Tables\  
   
 #Get reference to the trigger's target table  
 $mytab = get-item Sales.Customer  

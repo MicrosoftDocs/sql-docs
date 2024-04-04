@@ -11,7 +11,6 @@ helpviewer_keywords:
   - "Open method"
   - "ISequentialStream interface, samples"
   - "GetColumns method"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Example  
  This example shows how to fetch a single row using IRow. In this example one column at a time is retrieved from the row. This example illustrate the use of IRow::Open() as well as IRow::GetColumns(). To read the column data, the example uses ISequentialStream::Read.  
   
- This sample requires the AdventureWorks sample database, which you can download from the [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) home page.  
+ [!INCLUDE [article-uses-adventureworks](../../includes/article-uses-adventureworks.md)]
   
  The first ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing creates a table used by the sample.  
   
@@ -47,7 +46,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The third ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the table used by the sample.  
   
 ```sql
-USE AdventureWorks  
+USE AdventureWorks2022;
 GO  
   
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'MyTable')  
@@ -655,7 +654,7 @@ int InitializeAndEstablishConnection() {
 ```  
   
 ```sql
-USE AdventureWorks  
+USE AdventureWorks2022;
 GO  
   
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'MyTable')  

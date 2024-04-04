@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "sp_help_fulltext_system_components"
 dev_langs:
   - "TSQL"
-monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sp_help_fulltext_system_components (Transact-SQL)
 
@@ -63,7 +63,7 @@ Depending on component type, *param* is one of the following options:
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 The following result set is returned for the system components.
 
@@ -113,7 +113,7 @@ GO
 
 ### C. Determine whether a specific word breaker is registered
 
-The following example will list the word breaker for the Turkish language (LCID = 1055) if it has been installed on the system and registered on the service instance. This example specifies the parameter names, `@component_type` and `@param`.
+The following example will list the word breaker for the Turkish language (LCID = 1055) if it's been installed on the system and registered on the service instance. This example specifies the parameter names, `@component_type` and `@param`.
 
 ```sql
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;
@@ -124,7 +124,7 @@ By default, this word breaker isn't installed, so the result set is empty.
 
 ### D. Determine whether a specific filter has been registered
 
-The following example lists the filter for the `.xdoc` component if it has been manually installed on the system and registered on the server instance.
+The following example lists the filter for the `.xdoc` component if it's been manually installed on the system and registered on the server instance.
 
 ```sql
 EXEC sp_help_fulltext_system_components 'filter', '.xdoc';
@@ -143,9 +143,9 @@ EXEC sp_help_fulltext_system_components 'fullpath',
 GO
 ```
 
-## Next steps
+## Related content
 
-- [View or Change Registered Filters and Word Breakers](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)
-- [Configure and Manage Word Breakers and Stemmers for Search](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)
-- [Configure and Manage Filters for Search](../../relational-databases/search/configure-and-manage-filters-for-search.md)
+- [View or Change Registered Filters and Word Breakers](../search/view-or-change-registered-filters-and-word-breakers.md)
+- [Configure and Manage Word Breakers and Stemmers for Search](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)
+- [Configure and Manage Filters for Search](../search/configure-and-manage-filters-for-search.md)
 - [Full-Text Search and Semantic Search stored procedures (Transact-SQL)](full-text-search-and-semantic-search-stored-procedures-transact-sql.md)

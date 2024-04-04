@@ -3,7 +3,7 @@ title: "Troubleshoot full transaction log error 9002"
 description: Learn about possible responses to a full transaction log in SQL Server and how to avoid the problem in the future.
 author: "MashaMSFT"
 ms.author: "mathoma"
-ms.date: "09/14/2021"
+ms.date: 08/30/2023
 ms.service: sql
 ms.subservice: supportability
 ms.topic: troubleshooting
@@ -15,12 +15,17 @@ helpviewer_keywords:
   - "back up transaction logs [SQL Server], full logs"
   - "transaction logs [SQL Server], full log"
   - "full transaction logs [SQL Server]"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017"
 ---
-# Troubleshoot a Full Transaction Log (SQL Server Error 9002)
+# Troubleshoot a full transaction log (SQL Server Error 9002)
  
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
  
- 
+This article applies to SQL Server instances.
+
+> [!NOTE]
+> **This article is focused on SQL Server.** For more specific information on this error in Azure SQL platforms, see [Troubleshooting transaction log errors with Azure SQL Database](/azure/azure-sql/database/troubleshoot-transaction-log-errors-issues?view=azuresql-db&preserve-view=true) and [Troubleshooting transaction log errors with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/troubleshoot-transaction-log-errors-issues?view=azuresql-mi&preserve-view=true). Azure SQL Database and Azure SQL Managed Instance are based on the latest stable version of the Microsoft SQL Server database engine, so much of the content is similar though troubleshooting options and tools may differ.
+
  ### Option 1: Run the steps directly in an executable notebook via Azure Data Studio
 
 > [!NOTE]
@@ -28,17 +33,12 @@ helpviewer_keywords:
  
  > [!div class="nextstepaction"]
 > [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/mssql-support/master/sample-scripts/DOCs-to-Notebooks/T-Shooting_LogFull_9002.ipynb)  
- 
- 
+  
  ### Option 2: Follow the step manually
  
- 
-  This topic discusses possible responses to a full transaction log and suggests how to avoid it in the future. 
+This article discusses possible responses to a full transaction log and suggests how to avoid it in the future.
   
-  When the transaction log becomes full, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] issues a **9002 error**. The log can fill when the database is online, or in recovery. If the log fills while the database is online, the database remains online but can only be read, not updated. If the log fills during recovery, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] marks the database as RESOURCE PENDING. In either case, user action is required to make log space available.  
-
-> [!NOTE]
-> **This article is focused on SQL Server.** For more specific information on this error in Azure SQL Database and Azure SQL Managed Instance, see [Troubleshooting transaction log errors with Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/troubleshoot-transaction-log-errors-issues). Azure SQL Database and Azure SQL Managed Instance are based on the latest stable version of the Microsoft SQL Server database engine, so much of the content is similar though troubleshooting options and tools may differ.
+  When the transaction log becomes full, [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] issues a **9002 error**. The log can fill when the database is online, or in recovery. If the log fills while the database is online, the database remains online but can only be read, not updated. If the log fills during recovery, the [!INCLUDE [ssDE](../../includes/ssde-md.md)] marks the database as RESOURCE PENDING. In either case, user action is required to make log space available.  
   
 ## Common reasons for a full transaction log
 
@@ -48,7 +48,6 @@ helpviewer_keywords:
  - Disk volume is full
  - Log size is set to a fixed maximum value or autogrow is disabled
  - Replication or availability group synchronization that is unable to complete
-
 
 ## How to resolve a full transaction log
 
@@ -67,15 +66,13 @@ There's a difference between truncating a transaction log and shrinking a transa
 
 ### What is preventing log truncation?
 
-To discover what is preventing log truncation in a given case, use the `log_reuse_wait` and `log_reuse_wait_desc` columns of the `sys.databases` catalog view. For more information, see [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). For descriptions of factors that can delay log truncation, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).
+To discover what is preventing log truncation in a given case, use the `log_reuse_wait` and `log_reuse_wait_desc` columns of the `sys.databases` catalog view. For more information, see [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). For descriptions of factors that can delay log truncation, see [The Transaction Log (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md).
 
 The following set of T-SQL commands will help you identify if a database transaction log isn't truncated and the reason for it. The following script will also recommend steps to resolve the issue:
-
 
 ```sql
 SET NOCOUNT ON
 DECLARE @SQL VARCHAR (8000), @log_reuse_wait tinyint, @log_reuse_wait_desc nvarchar(120), @dbname sysname, @database_id int, @recovery_model_desc varchar (24)
-
 
 IF ( OBJECT_id (N'tempdb..#CannotTruncateLog_Db') is not null)
 BEGIN
@@ -83,7 +80,7 @@ BEGIN
 END
 
 
---get info about transaction logs in each db. Use a DMV which supports all supported versions
+--get info about transaction logs in each database.
 
 IF ( OBJECT_id (N'tempdb..#dm_db_log_space_usage') is not null)
 BEGIN
@@ -99,32 +96,32 @@ FETCH NEXT FROM log_space into @dbname
 WHILE @@FETCH_STATUS = 0
 BEGIN
 
-	set @SQL = '
-	insert into #dm_db_log_space_usage (
-	database_id, 
-	total_log_size_in_bytes, 
-	used_log_space_in_bytes, 
-	used_log_space_in_percent, 
-	log_space_in_bytes_since_last_backup
-	)
-	select
-	database_id, 
-	total_log_size_in_bytes, 
-	used_log_space_in_bytes, 
-	used_log_space_in_percent, 
-	log_space_in_bytes_since_last_backup
-	from ' + @dbname +'.sys.dm_db_log_space_usage'
+    set @SQL = '
+    insert into #dm_db_log_space_usage (
+    database_id, 
+    total_log_size_in_bytes, 
+    used_log_space_in_bytes, 
+    used_log_space_in_percent, 
+    log_space_in_bytes_since_last_backup
+    )
+    select
+    database_id, 
+    total_log_size_in_bytes, 
+    used_log_space_in_bytes, 
+    used_log_space_in_percent, 
+    log_space_in_bytes_since_last_backup
+    from ' + @dbname +'.sys.dm_db_log_space_usage'
 
-	
-	BEGIN TRY  
-		exec (@SQL)
-	END TRY  
+    
+    BEGIN TRY  
+        exec (@SQL)
+    END TRY  
 
-	BEGIN CATCH  
+    BEGIN CATCH  
         SELECT ERROR_MESSAGE() AS ErrorMessage;  
-	END CATCH;
+    END CATCH;
 
-	FETCH NEXT FROM log_space into @dbname
+    FETCH NEXT FROM log_space into @dbname
 END
 
 CLOSE log_space 
@@ -152,8 +149,8 @@ SELECT
 
     sdb.database_id,
     sdb.recovery_model_desc,
-    lsu.used_log_space_in_bytes/1024 as Used_log_size_MB,
-	lsu.total_log_size_in_bytes /1024 as Total_log_size_MB,
+    lsu.used_log_space_in_bytes / 1024 as Used_log_size_MB,
+    lsu.total_log_size_in_bytes / 1024 as Total_log_size_MB,
     100 - lsu.used_log_space_in_percent as Percent_Free_Space
 INTO #CannotTruncateLog_Db
 FROM sys.databases AS sdb INNER JOIN #dm_db_log_space_usage lsu ON sdb.database_id = lsu.database_id
@@ -265,21 +262,21 @@ The transaction log may be failing to truncate with LOG_BACKUP log_reuse_wait ca
 
 #### Back up the log
 
-Under the FULL or BULK_LOGGED recovery model, if the transaction log has not been backed up recently, backup might be what is preventing log truncation. You must back up the transaction log to allow log records to be released and the log truncated. If the log has never been backed up, you **must create two log backups** to permit the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to truncate the log to the point of the last backup. Truncating the log frees logical space for new log records. To keep the log from filling up again, take log backups regularly and more frequently. For more information, see [Recovery Models](../backup-restore/recovery-models-sql-server.md).
+Under the FULL or BULK_LOGGED recovery model, if the transaction log has not been backed up recently, backup might be what is preventing log truncation. You must back up the transaction log to allow log records to be released and the log truncated. If the log has never been backed up, you **must create two log backups** to permit the [!INCLUDE [ssDE](../../includes/ssde-md.md)] to truncate the log to the point of the last backup. Truncating the log frees logical space for new log records. To keep the log from filling up again, take log backups regularly and more frequently. For more information, see [Recovery Models](../backup-restore/recovery-models-sql-server.md).
 
 A complete history of all SQL Server backup and restore operations on a server instance is stored in the `msdb` system database. To review the complete backup history of a database, use the following sample script:
 
 ```sql
 SELECT bs.database_name
 , backuptype = CASE 
-	WHEN bs.type = 'D' and bs.is_copy_only = 0 THEN 'Full Database'
-	WHEN bs.type = 'D' and bs.is_copy_only = 1 THEN 'Full Copy-Only Database'
-	WHEN bs.type = 'I' THEN 'Differential database backup'
-	WHEN bs.type = 'L' THEN 'Transaction Log'
-	WHEN bs.type = 'F' THEN 'File or filegroup'
-	WHEN bs.type = 'G' THEN 'Differential file'
-	WHEN bs.type = 'P' THEN 'Partial'
-	WHEN bs.type = 'Q' THEN 'Differential partial' END + ' Backup'
+    WHEN bs.type = 'D' and bs.is_copy_only = 0 THEN 'Full Database'
+    WHEN bs.type = 'D' and bs.is_copy_only = 1 THEN 'Full Copy-Only Database'
+    WHEN bs.type = 'I' THEN 'Differential database backup'
+    WHEN bs.type = 'L' THEN 'Transaction Log'
+    WHEN bs.type = 'F' THEN 'File or filegroup'
+    WHEN bs.type = 'G' THEN 'Differential file'
+    WHEN bs.type = 'P' THEN 'Partial'
+    WHEN bs.type = 'Q' THEN 'Differential partial' END + ' Backup'
 , bs.recovery_model
 , BackupStartDate = bs.Backup_Start_Date
 , BackupFinishDate = bs.Backup_Finish_Date
@@ -289,8 +286,8 @@ SELECT bs.database_name
 , database_backup_lsn -- For tlog and differential backups, this is the checkpoint_lsn of the FULL backup it is based on. 
 , checkpoint_lsn
 , begins_log_chain
-FROM msdb.dbo.backupset bs	
-LEFT OUTER JOIN msdb.dbo.backupmediafamily bf ON bs.[media_set_id] = bf.[media_set_id]
+FROM msdb.dbo.backupset AS bs    
+LEFT OUTER JOIN msdb.dbo.backupmediafamily AS bf ON bs.[media_set_id] = bf.[media_set_id]
 WHERE recovery_model in ('FULL', 'BULK-LOGGED')
 AND bs.backup_start_date > DATEADD(month, -2, sysdatetime()) --only look at last two months
 ORDER BY bs.database_name asc, bs.Backup_Start_Date desc;
@@ -306,15 +303,13 @@ Example of how to back up the log:
 BACKUP LOG [dbname] TO DISK = 'some_volume:\some_folder\dbname_LOG.trn'
 ```
 
-- [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
+- [Back Up a Transaction Log (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
 - <xref:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup%2A> (SMO)  
   
 > [!IMPORTANT]  
-> If the database is damaged, see [Tail-Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
+> If the database is damaged, see [Tail-Log Backups (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
 
-
-  
 ### ACTIVE_TRANSACTION log_reuse_wait
 
 The steps to troubleshoot ACTIVE_TRANSACTION reason include discovering the long running transaction and resolving it (in some case using the KILL command to do so).
@@ -357,11 +352,11 @@ For more details see [Factors that can delay log truncation](../../relational-da
 
 In some situations the disk volume that hosts the transaction log file may fill up. You can take one of the following actions to resolve the log-full scenario that results from a full disk:
 
-### Free disk space  
+### Free disk space
 
  You might be able to free disk space on the disk drive that contains the transaction log file for the database by deleting or moving other files. The freed disk space allows the recovery system to enlarge the log file automatically.  
   
-### Move the log file to a different disk  
+### Move the log file to a different disk
 
 If you cannot free enough disk space on the drive that currently contains the log file, consider moving the file to another drive with sufficient space.  
   
@@ -370,19 +365,15 @@ If you cannot free enough disk space on the drive that currently contains the lo
   
 See [Move Database Files](../../relational-databases/databases/move-database-files.md) for information on how to change the location of a log file.
   
-### Add a log file on a different disk  
+### Add a log file on a different disk
 
 Add a new log file to the database on a different disk that has sufficient space by using `ALTER DATABASE <database_name> ADD LOG FILE`. Multiple log files for a single database should be considered a temporary condition to resolve a space issue, not a long-term condition. Most databases should only have one transaction log file. Continue to investigate the reason why the transaction log is full and cannot be truncated. Consider adding temporary additional transaction log files as an advanced troubleshooting step. 
 
-
 For more information see [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md).  
-
 
 ### Utility script for recommended actions
 
-
 These steps can be partly automated by running this T-SQL script which will identify logs files that using a large percentage of disk space and suggest actions:
-
 
 ```sql
 DECLARE @log_reached_disk_size BIT = 0
@@ -433,9 +424,6 @@ BEGIN
         SELECT 'ALTER DATABASE ' + @db_name_filled_disk + ' ADD LOG FILE ( NAME = N''' + @log_name_filled_disk + '_new'', FILENAME = N''NEW_VOLUME_AND_FOLDER_LOCATION\' + @log_name_filled_disk + '_NEW.LDF'', SIZE = 81920KB , FILEGROWTH = 65536KB )' AS AddNewFile
         SELECT 'If shrink does not reduce the file size, likely it is because it has not been truncated. Please review next section below. See https://learn.microsoft.com/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql' AS TruncateFirst
         SELECT 'Can you free some disk space on this volume? If so, do this to allow for the log to continue growing when needed.' AS FreeDiskSpace
-
-
-
 
          FETCH NEXT FROM log_filled_disk into @db_name_filled_disk , @log_name_filled_disk
 
@@ -523,16 +511,16 @@ If space is available on the log disk, you can increase the size of the log file
 If autogrow is disabled, the database is online, and sufficient space is available on the disk, do either of these:  
   
 - Manually increase the file size to produce a single growth increment. These are [general recommendations](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations) on log size growth and size.
-- Turn on autogrow by using the ALTER DATABASE statement to set a non-zero growth increment for the FILEGROWTH option. See [Considerations for the autogrow and autoshrink settings in SQL Server](/troubleshoot/sql/admin/considerations-autogrow-autoshrink)  
+- Turn on autogrow by using the ALTER DATABASE statement to set a non-zero growth increment for the FILEGROWTH option. See [Considerations for the autogrow and autoshrink settings in SQL Server](/troubleshoot/sql/admin/considerations-autogrow-autoshrink).
   
 > [!NOTE]
 > In either case, if the current size limit has been reached, increase the MAXSIZE value.  
   
-## See also
+## Next steps
 
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
- [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
- [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  
- [MSSQLSERVER_9002](../errors-events/mssqlserver-9002-database-engine-error.md)  
- [How a log file structure can affect database recovery time - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/sql-server-support/how-a-log-file-structure-can-affect-database-recovery-time/ba-p/315780)
+- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
+- [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)
+- [Transaction Log Backups (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)
+- [sp_add_log_file_recover_suspect_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)
+- [MSSQLSERVER_9002](../errors-events/mssqlserver-9002-database-engine-error.md)
+- [How a log file structure can affect database recovery time - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/sql-server-support/how-a-log-file-structure-can-affect-database-recovery-time/ba-p/315780)

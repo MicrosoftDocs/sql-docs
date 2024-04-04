@@ -1,9 +1,20 @@
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
-SELECT BusinessEntityID, JobTitle, HireDate, VacationHours, SickLeaveHours
+
+SELECT BusinessEntityID,
+    JobTitle,
+    HireDate,
+    VacationHours,
+    SickLeaveHours
 FROM HumanResources.Employee AS e1
+
 UNION
-SELECT BusinessEntityID, JobTitle, HireDate, VacationHours, SickLeaveHours
+
+SELECT BusinessEntityID,
+    JobTitle,
+    HireDate,
+    VacationHours,
+    SickLeaveHours
 FROM HumanResources.Employee AS e2
 OPTION (MERGE UNION);
 GO

@@ -4,7 +4,7 @@ description: Learn about fully processing results, including multiple result set
 author: DavidEngel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
-ms.date: 08/12/2019
+ms.date: 10/30/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -54,7 +54,7 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-When SQL Server returns an error message in a result set, the result set needs to be processed to retrieve the exception.
+When SQL Server returns an error message in a result set, the result set needs to be processed to retrieve the exception. Furthermore, this processing must be done before any additional operations involving the result set (e.g. retrieval of output parameters).
 
 ```java
 String SQL = "SELECT 1/0;";
@@ -71,7 +71,7 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-If statement execution generates multiple result sets, each result set needs to be processed until the one with the exception is reached.
+If statement execution generates multiple result sets, each result set needs to be processed until the one with the exception is reached. Additionally, not only does each result set need to be processed, they need to be processed before retrieving any output parameters from the stored procedures.
 
 ```java
 String SQL = "SELECT 1; SELECT * FROM nonexistentTable;";

@@ -3,7 +3,7 @@ title: "Rename a Database"
 description: "Rename a Database"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "04/06/2022"
+ms.date: "08/22/2023"
 ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,21 +14,20 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 # Rename a Database
 
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
-  This article describes how to rename a user-defined database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] or Azure SQL Database by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The name of the database can include any characters that follow the rules for identifiers.  
+  This article describes how to rename a user-defined database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], Azure SQL Database, or Azure SQL Managed Instance by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) or [!INCLUDE[tsql](../../includes/tsql-md.md)] (T-SQL). The name of the database can include any characters that follow the rules for identifiers.  
 
 > [!NOTE]
 > To rename a database in Azure Synapse Analytics or Parallel Data Warehouse, use the [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md) statement.
   
 ## Limitations and restrictions  
   
-- System databases cannot be renamed.
-- The database name cannot be changed while other users are accessing the database. 
+- System databases can't be renamed.
+- The database name can't be changed while other users are accessing the database. 
   - Use SQL Server Management Studio Activity Monitor to find other connections to the database, and close them. For more information, see [Open Activity Monitor in SQL Server Management Studio (SSMS)](../performance-monitor/open-activity-monitor-sql-server-management-studio.md).
   - In SQL Server, you can set a database in single user mode to close any open connections. For more information, see [set the database to single-user mode](../../relational-databases/databases/set-a-database-to-single-user-mode.md).
   - In Azure SQL Database, you must make sure no other users have an open connection to the database to be renamed.
-- Renaming a database does not change the physical name of the database files on disk, or the logical names of the files. For more information, see [Database Files and Filegroups](database-files-and-filegroups.md#logical-and-physical-file-names).
+- Renaming a database doesn't change the physical name of the database files on disk, or the logical names of the files. For more information, see [Database Files and Filegroups](database-files-and-filegroups.md#logical-and-physical-file-names).
 - It's not possible to rename an Azure SQL database configured in an [active geo-replication](/azure/azure-sql/database/active-geo-replication-overview) relationship.
-
 
 ## Permissions
 
@@ -42,7 +41,7 @@ Use the following steps to rename a SQL Server or Azure SQL database using SQL S
   
 2. In **Object Explorer**, connect to an instance of SQL Server, and then expand that instance.
   
-3. Make sure that there are no open connections to the database. If you are using SQL Server, you can [set the database to single-user mode](../../relational-databases/databases/set-a-database-to-single-user-mode.md) to close any open connections and prevent other users from connecting while you are changing the database name.  
+3. Make sure that there are no open connections to the database. If you're using SQL Server, you can [set the database to single-user mode](../../relational-databases/databases/set-a-database-to-single-user-mode.md) to close any open connections and prevent other users from connecting while you're changing the database name.  
   
 4. In Object Explorer, expand **Databases**, right-click the database to rename, and then select **Rename**.  
   
@@ -93,7 +92,7 @@ Use the following steps to rename an Azure SQL database using T-SQL in SQL Serve
 
 ## Backup after renaming a database  
 
-After renaming a database in SQL Server, back up the `master` database. In Azure SQL Database, this is not needed as backups occur automatically.  
+After renaming a database in SQL Server, back up the `master` database. In Azure SQL Database, this isn't needed as backups occur automatically.  
   
 ## Reset your default database after rename
 

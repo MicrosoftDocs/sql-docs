@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "SSPROP_ALLOWNATIVEVARIANT property"
   - "GetParameterInfo function"
   - "OLE DB, data types"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Native Client Data Type Mapping in Rowsets and Parameters
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,7 +61,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The **sql_variant** objects can hold data of any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type except text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml, timestamp, and Microsoft .NET Framework common language runtime (CLR) user-defined types. An instance of sql_variant data also cannot have sql_variant as its underlying base data type. For example, the column can contain **smallint** values for some rows, **float** values for other rows, and **char**/**nchar** values in the remainder.  
   
 > [!NOTE]  
->  The **sql_variant** data type is similar to the Variant data type in Microsoft Visual Basic® and the DBTYPE_VARIANT, DBTYPE_SQLVARIANT in OLEDB.  
+>  The **sql_variant** data type is similar to the Variant data type in [!INCLUDE [visual-basic-md](../../includes/visual-basic-md.md)] and the DBTYPE_VARIANT, DBTYPE_SQLVARIANT in OLEDB.  
   
  When **sql_variant** data is fetched as DBTYPE_VARIANT, it is put in a VARIANT structure in the buffer. But the subtypes in the VARIANT structure may not map to subtypes defined in the **sql_variant** data type. The **sql_variant** data must then be fetched as DBTYPE_SQLVARIANT in order for all the subtypes to match.  
   

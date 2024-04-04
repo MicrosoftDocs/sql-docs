@@ -57,11 +57,11 @@ EXECUTE sys.sp_db_selective_xml_index
 GO  
 ```  
   
- The following example enables Selective XML Index on the AdventureWorks2012 database.  
+ The following example enables Selective XML Index on the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql
 EXECUTE sys.sp_db_selective_xml_index  
-    @dbname = N'AdventureWorks2012'  
+    @dbname = N'AdventureWorks2022'  
   , @selective_xml_index = N'true';  
 GO  
 ```  
@@ -76,11 +76,11 @@ EXECUTE sys.sp_db_selective_xml_index
 GO  
 ```  
   
- The following example disables Selective XML Index on the AdventureWorks2012 database.  
+ The following example disables Selective XML Index on the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql
 EXECUTE sys.sp_db_selective_xml_index  
-    @dbname = N'AdventureWorks2012'  
+    @dbname = N'AdventureWorks2022'  
   , @selective_xml_index = N'false';  
 GO  
 ```  

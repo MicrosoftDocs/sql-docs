@@ -44,9 +44,9 @@ Module SMO_VBBackup3
         Dim srv As Server  
         srv = New Server  
   
-        'Reference the AdventureWorks2012 database.  
+        'Reference the AdventureWorks2022 database.  
         Dim db As Database  
-        db = srv.Databases("AdventureWorks2012")  
+        db = srv.Databases("AdventureWorks2022")  
   
         'Store the current recovery model in a variable.  
         Dim recoverymod As Integer  
@@ -57,9 +57,9 @@ Module SMO_VBBackup3
   
         'Specify the type of backup, the description, the name, and the database to be backed up.  
         bk.Action = BackupActionType.Database  
-        bk.BackupSetDescription = "Full backup of AdventureWorks2012"  
-        bk.BackupSetName = "AdventureWorks 2012 Backup"  
-        bk.Database = "AdventureWorks2012"  
+        bk.BackupSetDescription = "Full backup of AdventureWorks2022"  
+        bk.BackupSetName = "AdventureWorks 2022 Backup"  
+        bk.Database = "AdventureWorks2022"  
   
         'Declare a BackupDeviceItem by supplying the backup device file name in the constructor, and the type of device is a file.  
         Dim bdi As BackupDeviceItem  
@@ -115,8 +115,8 @@ Module SMO_VBBackup3
         'Remove the device from the Backup object.  
         bk.Devices.Remove(bdid)  
   
-        'Delete the AdventureWorks2012 database before restoring it.  
-        srv.Databases("AdventureWorks2012").Drop()  
+        'Delete the AdventureWorks2022 database before restoring it.  
+        srv.Databases("AdventureWorks2022").Drop()  
   
         'Define a Restore object variable.  
         Dim rs As Restore  
@@ -129,7 +129,7 @@ Module SMO_VBBackup3
         rs.Devices.Add(bdi)  
   
         'Specify the database name.  
-        rs.Database = "AdventureWorks2012"  
+        rs.Database = "AdventureWorks2022"  
   
         'Restore the full database backup with no recovery.  
         rs.SqlRestore(srv)  
@@ -155,12 +155,12 @@ Module SMO_VBBackup3
         'Remove the device.  
         rs.Devices.Remove(bdid)  
   
-        'Set the database recovery mode back to its original value.  
-        srv.Databases("AdventureWorks2012").DatabaseOptions.RecoveryModel = recoverymod  
+        'Set the database recovery model back to its original value.  
+        srv.Databases("AdventureWorks2022").DatabaseOptions.RecoveryModel = recoverymod  
   
         'Drop the table that was added.  
-        srv.Databases("AdventureWorks2012").Tables("test_table").Drop()  
-        srv.Databases("AdventureWorks2012").Alter()  
+        srv.Databases("AdventureWorks2022").Tables("test_table").Drop()  
+        srv.Databases("AdventureWorks2022").Alter()  
   
         'Remove the backup files from the hard disk.  
         My.Computer.FileSystem.DeleteFile("C:\Program Files\Microsoft SQL Server\MSSQL.12\MSSQL\Backup\Test_Full_Backup1")  
@@ -180,9 +180,9 @@ class A {
    public static void Main() {  
       // Connect to the local, default instance of SQL Server.   
       Server srv = new Server();  
-      // Reference the AdventureWorks2012 database.   
+      // Reference the AdventureWorks2022 database.   
       Database db = default(Database);  
-      db = srv.Databases["AdventureWorks2012"];  
+      db = srv.Databases["AdventureWorks2022"];  
   
       // Store the current recovery model in a variable.   
       int recoverymod;  
@@ -193,9 +193,9 @@ class A {
   
       // Specify the type of backup, the description, the name, and the database to be backed up.   
       bk.Action = BackupActionType.Database;  
-      bk.BackupSetDescription = "Full backup of Adventureworks2012";  
-      bk.BackupSetName = "AdventureWorks2012 Backup";  
-      bk.Database = "AdventureWorks2012";  
+      bk.BackupSetDescription = "Full backup of AdventureWorks2022";  
+      bk.BackupSetName = "AdventureWorks2022 Backup";  
+      bk.Database = "AdventureWorks2022";  
   
       // Declare a BackupDeviceItem by supplying the backup device file name in the constructor, and the type of device is a file.   
       BackupDeviceItem bdi = default(BackupDeviceItem);  
@@ -250,7 +250,7 @@ class A {
       // Remove the device from the Backup object.   
       bk.Devices.Remove(bdid);  
   
-      // Delete the AdventureWorks2012 database before restoring it  
+      // Delete the AdventureWorks2022 database before restoring it  
       // db.Drop();  
   
       // Define a Restore object variable.  
@@ -263,7 +263,7 @@ class A {
       rs.Devices.Add(bdi);  
   
       // Specify the database name.   
-      rs.Database = "AdventureWorks2012";  
+      rs.Database = "AdventureWorks2022";  
   
       // Restore the full database backup with no recovery.   
       rs.SqlRestore(srv);  
@@ -272,7 +272,7 @@ class A {
       Console.WriteLine("Full Database Restore complete.");  
   
       // reacquire a reference to the database  
-      db = srv.Databases["AdventureWorks2012"];  
+      db = srv.Databases["AdventureWorks2022"];  
   
       // Remove the device from the Restore object.  
       rs.Devices.Remove(bdi);  
@@ -292,7 +292,7 @@ class A {
       // Remove the device.   
       rs.Devices.Remove(bdid);  
   
-      // Set the database recovery mode back to its original value.  
+      // Set the database recovery model back to its original value.  
       db.RecoveryModel = (RecoveryModel)recoverymod;  
   
       // Drop the table that was added.   
@@ -426,7 +426,7 @@ $rs.SqlRestore($srv)
 #Remove the device.  
 $rs.Devices.Remove($bdid)  
   
-#Set the database recovery mode back to its original value.  
+#Set the database recovery model back to its original value.  
 $db = $srv.Databases["AdventureWorks"]  
 $db.DatabaseOptions.RecoveryModel = $recoverymod  
   
@@ -454,9 +454,9 @@ Module S
       'Connect to the local, default instance of SQL Server.  
       Dim srv As Server  
       srv = New Server  
-      'Reference the AdventureWorks2012 database.  
+      'Reference the AdventureWorks2022 database.  
       Dim db As Database  
-      db = srv.Databases("AdventureWorks2012")  
+      db = srv.Databases("AdventureWorks2022")  
       'Note, to use the StringCollection type the System.Collections.Specialized system namespace must be included in the imports statements.  
       Dim sc As StringCollection  
       'Run the CheckTables method and display the results from the returned StringCollection variable.  
@@ -485,8 +485,8 @@ class A {
       // Connect to the local, default instance of SQL Server.   
       Server srv = new Server();  
   
-      // Reference the AdventureWorks2012 database.             
-      Database db = srv.Databases["AdventureWorks2012"];  
+      // Reference the AdventureWorks2022 database.             
+      Database db = srv.Databases["AdventureWorks2022"];  
   
       // Note, to use the StringCollection type the System.Collections.Specialized system namespace must be included in the imports statements.   
       System.Collections.Specialized.StringCollection sc;  
@@ -508,9 +508,9 @@ class A {
 >  The <xref:System.Collections.Specialized.StringCollection> object requires a reference to the namespace using the `imports System.Collections.Specialized` statement.  
   
 ```  
-# Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
+# Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2022  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = get-item AdventureWorks2022  
   
 $sc = $db.CheckTables([Microsoft.SqlServer.Management.SMO.RepairType]::None)  
 foreach ($c in $sc)  

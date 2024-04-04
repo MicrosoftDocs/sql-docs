@@ -39,7 +39,7 @@ landingContent:
     linkLists:
     - linkListType: learn
       links:
-      - text: Redhat
+      - text: Red Hat
         url: quickstart-install-connect-red-hat.md
       - text: SUSE
         url: quickstart-install-connect-suse.md

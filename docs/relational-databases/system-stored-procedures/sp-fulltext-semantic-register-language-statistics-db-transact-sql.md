@@ -33,7 +33,6 @@ sp_fulltext_semantic_register_language_statistics_db [ @dbname = ] N'dbname'
 [ ; ]
 ```
 
-
 ## Arguments
 
 #### [ @dbname = ] N'*dbname*'
@@ -88,6 +87,6 @@ EXEC sp_fulltext_semantic_register_language_statistics_db
 GO
 ```
 
-## See also
+## Related content
 
 - [Install and Configure Semantic Search](../search/install-and-configure-semantic-search.md)

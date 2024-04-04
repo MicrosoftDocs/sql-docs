@@ -67,7 +67,7 @@ The name of the category to be added. The name must be unique within the specifi
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -94,7 +94,7 @@ EXEC dbo.sp_add_category
 GO
 ```
 
-## See also
+## Related content
 
 - [sp_delete_category (Transact-SQL)](sp-delete-category-transact-sql.md)
 - [sp_help_category (Transact-SQL)](sp-help-category-transact-sql.md)

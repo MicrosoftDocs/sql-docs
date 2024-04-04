@@ -43,17 +43,17 @@ The identifier for the policy category subscription that you want to update. *@p
 
 #### [ @target_type = ] N'*target_type*'
 
-The target type of the category subscription. *@target_type* is **sysname**, with a default of NULL.
+The target type of the category subscription. *@target_type* is **sysname**, with a default of `NULL`.
 
 If you specify *@target_type*, the value must be set to `DATABASE`.
 
 #### [ @target_object = ] N'*target_object*'
 
-The name of the database that will subscribe to the policy category. *@target_object* is **sysname**, with a default of NULL.
+The name of the database that will subscribe to the policy category. *@target_object* is **sysname**, with a default of `NULL`.
 
 #### [ @policy_category = ] N'*policy_category*'
 
-The name of the policy category that you want the database to subscribe to. *@policy_category* is **sysname**, with a default of NULL.
+The name of the policy category that you want the database to subscribe to. *@policy_category* is **sysname**, with a default of `NULL`.
 
 ## Return code values
 
@@ -83,7 +83,7 @@ Requires membership in the **PolicyAdministratorRole** fixed database role.
 
 ## Examples
 
-The following example updates an existing policy category subscription so that the `AdventureWorks2022` database subscribes to the `Finance` policy category.
+The following example updates an existing policy category subscription so that the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database subscribes to the `Finance` policy category.
 
 ```sql
 EXEC msdb.dbo.sp_syspolicy_update_policy_category_subscription
@@ -93,7 +93,7 @@ EXEC msdb.dbo.sp_syspolicy_update_policy_category_subscription
 GO
 ```
 
-## Next steps
+## Related content
 
 - [Policy-Based Management stored procedures (Transact-SQL)](policy-based-management-stored-procedures-transact-sql.md)
 - [sp_syspolicy_add_policy_category_subscription (Transact-SQL)](sp-syspolicy-add-policy-category-subscription-transact-sql.md)

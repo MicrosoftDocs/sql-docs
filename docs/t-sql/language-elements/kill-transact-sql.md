@@ -3,7 +3,7 @@ title: "KILL (Transact-SQL)"
 description: "KILL (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "08/31/2017"
+ms.date: 03/27/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -134,6 +134,7 @@ The same status report can be obtained by repeating the same KILL _session ID_|_
 
 **[!INCLUDE [fabric](../../includes/fabric.md)]:** Requires Admin permissions.
 
+**Azure Synapse Analytics:** Requires Admin permissions.
   
 ## Examples  
   
@@ -152,8 +153,11 @@ The following example generates a status of the rollback process for the specifi
 KILL 54;  
 KILL 54 WITH STATUSONLY;  
 GO  
-  
---This is the progress report.  
+```
+
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
+
+```output
 spid 54: Transaction rollback in progress. Estimated rollback completion: 80% Estimated time left: 10 seconds.  
 ```  
   

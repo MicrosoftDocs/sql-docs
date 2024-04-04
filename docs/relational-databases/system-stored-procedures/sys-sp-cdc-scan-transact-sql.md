@@ -58,7 +58,7 @@ Number of seconds between log scan cycles. *@pollinginterval* is **bigint** with
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -70,6 +70,6 @@ None.
 
 Requires membership in the **db_owner** fixed database role.
 
-## See also
+## Related content
 
 - [dbo.cdc_jobs (Transact-SQL)](../system-tables/dbo-cdc-jobs-transact-sql.md)

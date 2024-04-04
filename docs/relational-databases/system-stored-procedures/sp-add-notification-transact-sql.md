@@ -55,7 +55,7 @@ The method by which the operator is notified. *@notification_method* is **tinyin
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -91,7 +91,7 @@ EXEC dbo.sp_add_notification
 GO
 ```
 
-## See also
+## Related content
 
 - [sp_delete_notification (Transact-SQL)](sp-delete-notification-transact-sql.md)
 - [sp_help_notification (Transact-SQL)](sp-help-notification-transact-sql.md)

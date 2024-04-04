@@ -54,7 +54,7 @@ sp_helpconstraint [ @objname = ] 'table'
  The following example shows all constraints for the `Product` table.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_helpconstraint 'Production.Product';  
 ```  

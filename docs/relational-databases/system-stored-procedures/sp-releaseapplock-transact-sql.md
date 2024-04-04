@@ -60,10 +60,10 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
  Requires membership in the public role.  
   
 ## Examples  
- The following example releases the lock associated with the current transaction on the resource `Form1` in the `AdventureWorks2012` database.  
+ The following example releases the lock associated with the current transaction on the resource `Form1` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_getapplock @DbPrincipal = 'dbo', @Resource = 'Form1',   
      @LockMode = 'Shared';  

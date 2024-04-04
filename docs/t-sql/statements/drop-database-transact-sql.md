@@ -102,9 +102,9 @@ Any database snapshots on a database must be dropped before the database can be 
 Dropping a database enable for Stretch Database does not remove the remote data. If you want to delete the remote data, you have to remove it manually.
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+> [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
-### [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+### [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 You must be connected to the master database to drop a database.
 
@@ -122,7 +122,7 @@ The DROP DATABASE statement must be the only statement in a SQL batch and you ca
 
 Requires the **CONTROL** permission on the database, or **ALTER ANY DATABASE** permission, or membership in the **db_owner** fixed database role.
 
-### [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+### [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 Only the server-level principal login (created by the provisioning process) or members of the **dbmanager** database role can drop a database.
 

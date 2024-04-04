@@ -92,6 +92,17 @@ az sql vm update -n <vm name> -g <resource group> --image-sku <edition>
 
 The `image-sku` parameter accepts the following editions: Developer, Express, Standard, Enterprise, Web. When using Web, Express, and Developer, the license-type must be pay-as-you-go (PAYG). 
 
+
+### [PowerShell](#tab/azure-powershell)
+
+To change the edition property of the SQL Server VM for billing purposes by using PowerShell, run this sample command: 
+
+```azure-powershell
+Update-AzSqlVM -ResourceGroupName <resource group> -Name <vm name> -Sku <edition> 
+```
+
+The `Sku` parameter accepts the following editions: Developer, Express, Standard, Enterprise, Web. When using Web, Express, and Developer, the license-type must be pay-as-you-go (PAYG). 
+
 ---
 
 ## Remarks
@@ -105,9 +116,9 @@ The `image-sku` parameter accepts the following editions: Developer, Express, St
 
 For more information, see the following articles: 
 
-* [Overview of SQL Server on a Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)
-* [FAQ for SQL Server on a Windows VM](frequently-asked-questions-faq.yml)
-* [Pricing guidance for SQL Server on a Windows VM](pricing-guidance.md)
+* [Overview of SQL Server on Windows VMs](sql-server-on-azure-vm-iaas-what-is-overview.md)
+* [FAQ for SQL Server on Windows VMs](frequently-asked-questions-faq.yml)
+* [Pricing guidance for SQL Server on Windows VMs](pricing-guidance.md)
 * [What's new for SQL Server on Azure VMs](doc-changes-updates-release-notes-whats-new.md)
 
 

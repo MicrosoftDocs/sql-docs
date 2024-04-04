@@ -65,7 +65,7 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
  The following example runs a query against the `Address` table and then runs a query using the `sys.dm_db_missing_index_columns` dynamic management view to return the table columns that are missing an index.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT City, StateProvinceID, PostalCode  
 FROM Person.Address  

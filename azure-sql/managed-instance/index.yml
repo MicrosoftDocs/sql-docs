@@ -12,8 +12,8 @@ metadata:
   ms.topic: landing-page
   author: MashaMSFT
   ms.author: mathoma
-  ms.reviewer:
-  ms.date: 05/27/2020
+  ms.reviewer: mathoma
+  ms.date: 07/30/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -24,6 +24,10 @@ landingContent:
   # Card 
   - title: Azure SQL Managed Instance 
     linkLists:
+      - linkListType: overview
+        links:
+          - text: What is Azure SQL Managed Instance?
+            url: sql-managed-instance-paas-overview.md    
       - linkListType: whats-new
         links:
           - text: What's new? 
@@ -32,26 +36,45 @@ landingContent:
         links:
           - text: Create SQL Managed Instance
             url: instance-create-quickstart.md
+          - text: Restore a backup
+            url: restore-sample-database-quickstart.md          
       - linkListType: video
         links:
           - text: Azure SQL Managed Instance overview
             url: /shows/Azure-SQL-for-Beginners/Azure-SQL-Managed-Instance-Overview-6-of-61
       - linkListType: concept
         links:
-          - text: What is SQL Managed Instance?
-            url: sql-managed-instance-paas-overview.md
           - text: vCore purchasing model
             url: service-tiers-managed-instance-vcore.md
-          - text: Transactional replication 
-            url: replication-transactional-overview.md 
-          - text: Migrate from SQL Server
-            url: ../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md
           - text: T-SQL differences with SQL Server
             url: transact-sql-tsql-differences-sql-server.md
-          - text: Connect apps to Azure SQL Managed Instance 
-            url: ../database/develop-overview.md#client-connections
-          - text: What is an instance pool? 
-            url: instance-pools-overview.md
+          - text: Connectivity architecture
+            url:  connectivity-architecture-overview.md
+          - text: Frequently asked questions
+            url: frequently-asked-questions-faq.yml
+
+  # Card 
+  - title: Management
+    linkLists:
+      - linkListType: concept
+        links:
+        - text: Migrate from SQL Server
+          url: ../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md
+        - text: November 2022 feature wave
+          url:  november-2022-feature-wave-enroll.md
+        - text: Management operations
+          url:  management-operations-overview.md
+        - text: Start and stop instance 
+          url:  instance-stop-start-how-to.md
+        - text: Managed Instance link
+          url: managed-instance-link-feature-overview.md 
+        - text: Copy or move a database
+          url:  database-copy-move-how-to.md
+        - text: Transactional replication
+          url:  replication-transactional-overview.md
+        - text: Connect apps to Azure SQL Managed Instance 
+          url: ../database/develop-overview.md#client-connections
+
 
   # Card 
   - title: Learn Azure SQL 
@@ -69,6 +92,23 @@ landingContent:
         - text: Educational SQL resources
           url: /sql/sql-server/educational-sql-resources
 
+  # Card 
+  - title: Business continuity  
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Business continuity 
+            url: ../database/business-continuity-high-availability-disaster-recover-hadr-overview.md
+          - text: High availability
+            url: ../database/high-availability-sla.md
+          - text: Failover groups
+            url: failover-group-sql-mi.md 
+          - text: Automated backups
+            url: automated-backups-overview.md
+          - text: Recover with backup 
+            url: ../database/recovery-using-backups.md 
+          - text: Long-term backup retention  
+            url: ../database/long-term-retention-overview.md
 
   # Card 
   - title: Advanced security
@@ -81,7 +121,7 @@ landingContent:
             url: ../database/security-best-practice.md
           - text: Logins, user accounts, roles, and permissions
             url: ../database/logins-create-manage.md
-          - text: Azure Active Directory
+          - text: Microsoft Entra ID (formerly Azure Active Directory)
             url: ../database/authentication-aad-overview.md
           - text: Auditing
             url: auditing-configure.md 
@@ -91,48 +131,8 @@ landingContent:
             url: ../database/dynamic-data-masking-overview.md 
           - text: Public endpoints
             url: public-endpoint-overview.md 
-
-
-
-
-
-  # Card 
-  - title: Business continuity  
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Business continuity 
-            url: ../database/business-continuity-high-availability-disaster-recover-hadr-overview.md
-          - text: High availability
-            url: ../database/high-availability-sla.md
-          - text: Auto-failover groups
-            url: auto-failover-group-sql-mi.md 
-          - text: Automated backups
-            url: ../database/automated-backups-overview.md
-          - text: Recover with backup 
-            url: ../database/recovery-using-backups.md 
-          - text: Long-term backup retention  
-            url: ../database/long-term-retention-overview.md
-
-  # Card 
-  - title: Planned maintenance
-    linkLists:
-      - linkListType: concept
-        links:
-          - text: Plan for Azure maintenance events
-            url: ../database/planned-maintenance.md
-          - text: Maintenance window
-            url: ../database/maintenance-window.md
-          - text: Resource health
-            url: ../database/resource-health-to-troubleshoot-connectivity.md
-
-      - linkListType: how-to-guide
-        links:
-          - text: Maintenance window
-            url: ../database/maintenance-window-configure.md
-          - text: Maintenance Window Notifications
-            url: ../database/advance-notifications.md
-
+          - text: Private endpoints
+            url: private-endpoint-overview.md 
 
   # Card 
   - title: Reference 
@@ -150,7 +150,7 @@ landingContent:
         - text: SQL Server Management Studio (SSMS)
           url: /sql/ssms/download-sql-server-management-studio-ssms
         - text: Azure Data Studio 
-          url: /sql/azure-data-studio/download-azure-data-studio
+          url: /azure-data-studio/download-azure-data-studio
         - text: SQL Server Data Tools 
           url: /sql/ssdt/download-sql-server-data-tools-ssdt
         - text: Visual Studio 2019
@@ -168,4 +168,35 @@ landingContent:
           - text: REST API
             url: /rest/api/sql/  
 
+  # Card 
+  - title: Planned maintenance
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Plan for Azure maintenance events
+            url: ../database/planned-maintenance.md
+          - text: Maintenance window
+            url: maintenance-window.md
+          - text: Resource health
+            url: ../managed-instance/resource-health-to-troubleshoot-connectivity.md?view=azuresql-mi&preserve-view=true
 
+      - linkListType: how-to-guide
+        links:
+          - text: Maintenance window
+            url: maintenance-window-configure.md
+          - text: Maintenance Window Notifications
+            url: ../database/advance-notifications.md
+
+  # Card 
+  - title: Monitor
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Monitoring Azure SQL Managed Instance data reference
+            url: monitoring-sql-managed-instance-azure-monitor-reference.md
+          - text: Monitor Azure SQL workloads with database watcher
+            url: ../database-watcher-overview.md
+          - text: Monitor Azure SQL Managed Instance with Azure Monitor
+            url: monitoring-sql-managed-instance-azure-monitor.md
+          - text: Monitoring Microsoft Azure SQL Managed Instance performance using dynamic management views
+            url: monitoring-with-dmvs.md

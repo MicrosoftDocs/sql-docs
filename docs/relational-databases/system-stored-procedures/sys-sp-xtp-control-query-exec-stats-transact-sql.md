@@ -49,7 +49,7 @@ Determines whether procedure-level statistics collection is on (`1`) or off (`0`
 
 The database ID and object ID (data type **int**) for the natively compiled stored procedure. If statistics collection is enabled for the instance ([sys.sp_xtp_control_proc_exec_stats (Transact-SQL)](sys-sp-xtp-control-proc-exec-stats-transact-sql.md)), statistics on a natively compiled stored procedure are collected. Turning off statistics collection on the instance doesn't turn off statistics collection for individual natively compiled stored procedures.
 
-Use [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md), [sys.procedures (Transact-SQL)](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md), [DB_ID (Transact-SQL)](../../t-sql/functions/db-id-transact-sql.md), or [OBJECT_ID (Transact-SQL)](../../t-sql/functions/object-id-transact-sql.md) to get IDs for a database and stored procedure.
+Use [sys.databases (Transact-SQL)](../system-catalog-views/sys-databases-transact-sql.md), [sys.procedures (Transact-SQL)](../system-catalog-views/sys-procedures-transact-sql.md), [DB_ID (Transact-SQL)](../../t-sql/functions/db-id-transact-sql.md), or [OBJECT_ID (Transact-SQL)](../../t-sql/functions/object-id-transact-sql.md) to get IDs for a database and stored procedure.
 
 #### [ @old_collection_value = ] *old_collection_value* OUTPUT
 
@@ -87,7 +87,7 @@ EXEC sys.sp_xtp_control_query_exec_stats @database_id = 5,
 SELECT @c AS 'collection status';
 ```
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [In-Memory OLTP (In-Memory Optimization)](../in-memory-oltp/overview-and-usage-scenarios.md)

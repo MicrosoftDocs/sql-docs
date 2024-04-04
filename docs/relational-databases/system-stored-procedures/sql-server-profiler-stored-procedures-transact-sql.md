@@ -38,10 +38,10 @@ dev_langs:
     :::column-end:::
 :::row-end:::
 
-For an example of using trace stored procedures, see [Create a Trace (Transact-SQL)](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).
+For an example of using trace stored procedures, see [Create a Trace (Transact-SQL)](../sql-trace/create-a-trace-transact-sql.md).
 
-## See also
+## Related content
 
-- [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)
-- [SQL Trace](../../relational-databases/sql-trace/sql-trace.md)
+- [SQL Server Event Class Reference](../event-classes/sql-server-event-class-reference.md)
+- [SQL Trace](../sql-trace/sql-trace.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

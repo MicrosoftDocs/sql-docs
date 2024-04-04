@@ -72,11 +72,11 @@ sp_column_privileges [ @table_name = ] 'table_name'
  The following example returns column privilege information for a specific column.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_column_privileges @table_name = 'Employee'   
     ,@table_owner = 'HumanResources'  
-    ,@table_qualifier = 'AdventureWorks2012'  
+    ,@table_qualifier = 'AdventureWorks2022'  
     ,@column_name = 'SalariedFlag';  
 ```  
   

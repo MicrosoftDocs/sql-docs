@@ -4,6 +4,8 @@ ms.author: randolphwest
 ms.date: 07/11/2023
 ms.service: sql
 ms.subservice: linux
+ms.custom:
+  - linux-related-content
 ---
 ## Connect locally
 
@@ -151,8 +153,8 @@ For other installation scenarios, see the following resources:
 
 For answers to frequently asked questions, see the [SQL Server on Linux FAQ](../sql-server-linux-faq.yml).
 
-## Next steps
+## Related content
 
-- [Explore the tutorials for SQL Server on Linux](../sql-server-linux-migrate-restore-database.md).
+- [Explore the tutorials for SQL Server on Linux](../sql-server-linux-migrate-restore-database.md)
 
 [!INCLUDE [contribute-to-content](../../includes/paragraph-content/contribute-to-content.md)]

@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: ui-reference
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "databases [SQL Server replication]"
@@ -29,7 +29,7 @@ You can enable a database for replication with the following Transact-SQL code:
 
 ```sql
 USE master
-EXEC sp_replicationdboption @dbname = 'AdventureWorks2017',
+EXEC sp_replicationdboption @dbname = 'AdventureWorks2022',
 @optname = 'publish',
 @value = 'true'
 GO

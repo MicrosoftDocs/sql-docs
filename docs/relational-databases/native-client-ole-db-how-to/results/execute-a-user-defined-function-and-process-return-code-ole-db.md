@@ -9,14 +9,13 @@ ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords:
   - "user-defined functions [OLE DB]"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Execute a SQL Server Native Client User-Defined Function and Process Return Code (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   In this example, a user-defined function is executed, and the return code is printed. This sample is not supported on IA64.  
   
- This sample requires the AdventureWorks sample database, which you can download from the [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) home page.  
+ [!INCLUDE [article-uses-adventureworks](../../../includes/article-uses-adventureworks.md)]
   
 > [!IMPORTANT]  
 >  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference).  
@@ -29,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Execute the third ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing to delete the stored procedure used by the application.  
   
 ```sql
-USE AdventureWorks  
+USE AdventureWorks2022;
 if exists (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[fn_RectangleArea]'))  
    drop function fn_RectangleArea  
 go  
@@ -352,7 +351,7 @@ void InitializeAndEstablishConnection() {
 ```  
   
 ```sql
-USE AdventureWorks  
+USE AdventureWorks2022;
 drop function fn_RectangleArea  
 go  
 ```  

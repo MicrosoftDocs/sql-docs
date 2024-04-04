@@ -4,7 +4,7 @@ description: This article explains the Automated Backup feature for SQL Server 2
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma
-ms.date: 06/27/2023
+ms.date: 09/12/2023
 ms.service: virtual-machines-sql
 ms.subservice: backup
 ms.topic: how-to
@@ -58,7 +58,7 @@ The following table describes the options that can be configured for Automated B
 
 | Setting | Range (Default) | Description |
 | --- | --- | --- |
-| **System Database Backups** | Enable/Disable (Disabled) | When enabled, this feature also backs up the system databases: `master`, `msdb`, and `model`. For the `msdb` and `model` databases, verify that they are in full recovery mode if you want log backups to be taken. Log backups are never taken for `master`, and no backups are taken for `tempdb`. |
+| **System Database Backups** | Enable/Disable (Disabled) | When enabled, this feature also backs up the system databases: `master`, `msdb`, and `model`. For the `msdb` and `model` databases, verify that they are in the full recovery model if you want log backups to be taken. Log backups are never taken for `master`, and no backups are taken for `tempdb`. |
 | **Backup Schedule** | Manual/Automated (Automated) | By default, the backup schedule is automatically determined based on the log growth. Manual backup schedule allows the user to specify the time window for backups. In this case, backups only take place at the specified frequency and during the specified time window of a given day. |
 | **Full backup frequency** | Daily/Weekly | Frequency of full backups. In both cases, full backups begin during the next scheduled time window. When weekly is selected, backups could span multiple days until all databases have successfully backed up. |
 | **Full backup start time** | 00:00 – 23:00 (01:00) | Start time of a given day during which full backups can take place. |
@@ -162,8 +162,8 @@ You can use PowerShell to configure Automated Backup. Before you begin, you must
 If you provisioned a SQL Server virtual machine from the Azure portal, the SQL Server IaaS Extension should already be installed. You can determine whether it's installed for your VM by calling **Get-AzVM** command and examining the **Extensions** property.
 
 ```powershell
-$vmname = "vmname"
-$resourcegroupname = "resourcegroupname"
+$vmname = "yourvmname"
+$resourcegroupname = "yourresourcegroupname"
 
 (Get-AzVM -Name $vmname -ResourceGroupName $resourcegroupname).Extensions 
 ```
@@ -214,63 +214,91 @@ You can use PowerShell to enable Automated Backup as well as to modify its confi
 First, select, or create a storage account for the backup files. The following script selects a storage account or creates it if it doesn't exist.
 
 ```powershell
+$vmname = "yourvmname"
+$resourcegroupname = "yourresourcegroupname"
 $storage_accountname = "yourstorageaccount"
-$storage_resourcegroupname = $resourcegroupname
+$storage_url = "https://yourstorageaccount.blob.core.windows.net/"
 
 $storage = Get-AzStorageAccount -ResourceGroupName $resourcegroupname `
     -Name $storage_accountname -ErrorAction SilentlyContinue
 If (-Not $storage)
-    { $storage = New-AzStorageAccount -ResourceGroupName $storage_resourcegroupname `
-    -Name $storage_accountname -SkuName Standard_GRS -Location $region } 
+    { $storage = New-AzStorageAccount -ResourceGroupName $resourcegroupname `
+    -Name $storage_accountname -SkuName Standard_GRS -Location $region }
 ```
 
 > [!NOTE]
 > Automated Backup does not support storing backups in premium storage, but it can take backups from VM disks which use Premium Storage.
 
-Then use the **New-AzVMSqlServerAutoBackupConfig** command to enable and configure the Automated Backup settings to store backups in the Azure storage account. In this example, the backups are set to be retained for 10 days. System database backups are enabled. Full backups are scheduled for weekly with a time window starting at 20:00 for two hours. Log backups are scheduled for every 30 minutes. The second command, **Set-AzVMSqlServerExtension**, updates the specified Azure VM with these settings.
+If you want to use a custom container in the storage account for the backups, use the following script to check for the container or create it if it doesn't exist. 
 
 ```powershell
-$autobackupconfig = New-AzVMSqlServerAutoBackupConfig -Enable `
-    -RetentionPeriodInDays 10 -StorageContext $storage.Context `
-    -ResourceGroupName $storage_resourcegroupname -BackupSystemDbs `
-    -BackupScheduleType Manual -FullBackupFrequency Weekly `
-    -FullBackupStartHour 20 -FullBackupWindowInHours 2 `
-    -LogBackupFrequencyInMinutes 30 
+$storage_container = "backupcontainer"
 
-Set-AzVMSqlServerExtension -AutoBackupSettings $autobackupconfig `
-    -VMName $vmname -ResourceGroupName $resourcegroupname 
+New-AzStorageContainer -Name $storage_container -Context $storage.Context
+
+if (!(Get-AzStorageAccount -StorageAccountName $storage_accountname -ResourceGroupName $resourcegroupname | Get-AzStorageContainer | Where-Object { $_.Name -eq $storage_container })){ `
+	New-AzStorageContainer -Name $storage_container -Context $storage.Context `
+} `
+ else `
+{ `
+	Write-Warning "Container $storage_container already exists." `
+}
+```
+
+Next, use the following script to get the Access key for the storage account:
+
+```powershell
+$accesskey = (Get-AzStorageAccountKey -ResourceGroupName $resourcegroupname  -Name $storage_accountname)[0].value
+```
+
+Then use the **Update-AzSqlVM** command to enable and configure the Automated Backup settings to store backups in the Azure storage account. In this example, the backups are set to be retained for 10 days. System database backups are enabled. Full backups are scheduled for every Saturday (weekly) with a time window starting at 20:00 for two hours. Log backups are scheduled for every 30 minutes. 
+
+```powershell
+Update-AzSqlVM -ResourceGroupName $resourcegroupname -Name $vmname -AutoBackupSettingEnable `
+-AutoBackupSettingBackupScheduleType Manual `
+-AutoBackupSettingFullBackupFrequency Weekly 
+-AutoBackupSettingDaysOfWeek Saturday `
+-AutoBackupSettingFullBackupStartTime 20 `
+-AutoBackupSettingFullBackupWindowHour 2 `
+-AutoBackupSettingStorageAccessKey $accesskey `
+-AutoBackupSettingStorageAccountUrl $storage_url `
+-AutoBackupSettingRetentionPeriod 10 `
+-AutoBackupSettingLogBackupFrequency 30 `
+-AutoBackupSettingStorageContainerName $storage_container `
+-AutoBackupSettingBackupSystemDb
 ```
 
 It could take several minutes to install and configure the SQL Server IaaS Agent. 
 
-To enable encryption, modify the previous script to pass the **EnableEncryption** parameter along with a password (secure string) for the **CertificatePassword** parameter. The following script enables the Automated Backup settings in the previous example and adds encryption.
+To enable encryption, modify the previous script to pass the **-AutoBackupSettingEnableEncryption** parameter along with a password (secure string) for the **-AutoBackupSettingPassword** parameter. The following script enables the Automated Backup settings in the previous example and adds encryption.
 
 ```powershell
-$password = "P@ssw0rd"
+$password = "r@ndom Va1ue"
 $encryptionpassword = $password | ConvertTo-SecureString -AsPlainText -Force  
 
-$autobackupconfig = New-AzVMSqlServerAutoBackupConfig -Enable `
-    -EnableEncryption -CertificatePassword $encryptionpassword `
-    -RetentionPeriodInDays 10 -StorageContext $storage.Context `
-    -ResourceGroupName $storage_resourcegroupname -BackupSystemDbs `
-    -BackupScheduleType Manual -FullBackupFrequency Weekly `
-    -FullBackupStartHour 20 -FullBackupWindowInHours 2 `
-    -LogBackupFrequencyInMinutes 30 
-
-Set-AzVMSqlServerExtension -AutoBackupSettings $autobackupconfig `
-    -VMName $vmname -ResourceGroupName $resourcegroupname
+Update-AzSqlVM -ResourceGroupName $resourcegroupname -Name $vmname -AutoBackupSettingEnable `
+-AutoBackupSettingBackupScheduleType Manual `
+-AutoBackupSettingFullBackupFrequency Weekly `
+-AutoBackupSettingDaysOfWeek Saturday `
+-AutoBackupSettingFullBackupStartTime 20 `
+-AutoBackupSettingFullBackupWindowHour 2 `
+-AutoBackupSettingStorageAccessKey $accesskey `
+-AutoBackupSettingStorageAccountUrl $storage_url `
+-AutoBackupSettingRetentionPeriod 10 `
+-AutoBackupSettingLogBackupFrequency 30 `
+-AutoBackupSettingEnableEncryption `
+-AutoBackupSettingPassword $encryptionpassword `
+-AutoBackupSettingStorageContainerName $storage_container `
+-AutoBackupSettingBackupSystemDb
 ```
 
 To confirm your settings are applied, [verify the Automated Backup configuration](#verifysettings).
 
 ### Disable Automated Backup
-To disable Automated Backup, run the same script without the **-Enable** parameter to the **New-AzVMSqlServerAutoBackupConfig** command. The absence of the **-Enable** parameter signals the command to disable the feature. As with installation, it can take several minutes to disable Automated Backup.
+To disable Automated Backup, run the same script with the **-AutoBackupSettingEnable** parameter set to **$false** in the **Update-AzSqlVM** command. By setting the value to **$false** the feature is disabled. As with installation, it can take several minutes to disable Automated Backup.
 
 ```powershell
-$autobackupconfig = New-AzVMSqlServerAutoBackupConfig -ResourceGroupName $storage_resourcegroupname
-
-Set-AzVMSqlServerExtension -AutoBackupSettings $autobackupconfig `
-    -VMName $vmname -ResourceGroupName $resourcegroupname
+Update-AzSqlVM -ResourceGroupName $resourcegroupname -Name $vmname -AutoBackupSettingEnable:$false
 ```
 
 ### Example script
@@ -278,13 +306,14 @@ The following script provides a set of variables that you can customize to enabl
 
 ```powershell
 $vmname = "yourvmname"
-$resourcegroupname = "vmresourcegroupname"
+$resourcegroupname = "yourresourcegroupname"
 $region = "Azure region name such as EASTUS2"
-$storage_accountname = "storageaccountname"
-$storage_resourcegroupname = $resourcegroupname
+$storage_accountname = "yourstorageaccount"
+$storage_url = "https://yourstorageaccount.blob.core.windows.net/"
 $retentionperiod = 10
 $backupscheduletype = "Manual"
 $fullbackupfrequency = "Weekly"
+$fullbackupdayofweek = "Saturday"
 $fullbackupstarthour = "20"
 $fullbackupwindow = "2"
 $logbackupfrequency = "30"
@@ -300,22 +329,38 @@ Set-AzVMSqlServerExtension -VMName $vmname `
 $storage = Get-AzStorageAccount -ResourceGroupName $resourcegroupname `
     -Name $storage_accountname -ErrorAction SilentlyContinue
 If (-Not $storage)
-    { $storage = New-AzStorageAccount -ResourceGroupName $storage_resourcegroupname `
+    { $storage = New-AzStorageAccount -ResourceGroupName $resourcegroupname `
     -Name $storage_accountname -SkuName Standard_GRS -Location $region }
+
+# Creates/uses a custom storage account container
+
+$storage_container = "yourbackupcontainer"
+
+if (!(Get-AzStorageAccount -StorageAccountName $storage_accountname -ResourceGroupName $resourcegroupname | Get-AzStorageContainer | Where-Object { $_.Name -eq $storage_container })){ `
+	New-AzStorageContainer -Name $storage_container -Context $storage.Context `
+} `
+ else `
+{ `
+	Write-Warning "Container $storage_container already exists." `
+}
+
+# Get storage account access key
+$accesskey = (Get-AzStorageAccountKey -ResourceGroupName $resourcegroupname  -Name $storage_accountname)[0].value
 
 # Configure Automated Backup settings
 
-$autobackupconfig = New-AzVMSqlServerAutoBackupConfig -Enable `
-    -RetentionPeriodInDays $retentionperiod -StorageContext $storage.Context `
-    -ResourceGroupName $storage_resourcegroupname -BackupSystemDbs `
-    -BackupScheduleType $backupscheduletype -FullBackupFrequency $fullbackupfrequency `
-    -FullBackupStartHour $fullbackupstarthour -FullBackupWindowInHours $fullbackupwindow `
-    -LogBackupFrequencyInMinutes $logbackupfrequency
-
-# Apply the Automated Backup settings to the VM
-
-Set-AzVMSqlServerExtension -AutoBackupSettings $autobackupconfig `
-    -VMName $vmname -ResourceGroupName $resourcegroupname
+Update-AzSqlVM -ResourceGroupName $resourcegroupname -Name $vmname -AutoBackupSettingEnable `
+-AutoBackupSettingBackupScheduleType $backupscheduletype `
+-AutoBackupSettingFullBackupFrequency $fullbackupfrequency `
+-AutoBackupSettingDaysOfWeek $fullbackupdayofweek `
+-AutoBackupSettingFullBackupStartTime $fullbackupstarthour `
+-AutoBackupSettingFullBackupWindowHour $fullbackupwindow `
+-AutoBackupSettingStorageAccessKey $accesskey `
+-AutoBackupSettingStorageAccountUrl $storage_url `
+-AutoBackupSettingRetentionPeriod $retentionperiod `
+-AutoBackupSettingLogBackupFrequency $logbackupfrequency `
+-AutoBackupSettingStorageContainerName $storage_container `
+-AutoBackupSettingBackupSystemDb
 ```
 
 ## Monitoring

@@ -41,7 +41,7 @@ The name of the configuration setting to retrieve. When specified, the value of 
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 When no *@parameter_name* is specified, `sysmail_help_configure_sp` returns a result set with the following columns.
 
@@ -85,7 +85,7 @@ MaxFileSize                     1000000         Default maximum file size
 ProhibitedExtensions            exe,dll,vbs,js  Extensions not allowed in outgoing mails
 ```
 
-## See also
+## Related content
 
-- [Database Mail](../../relational-databases/database-mail/database-mail.md)
+- [Database Mail](../database-mail/database-mail.md)
 - [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)

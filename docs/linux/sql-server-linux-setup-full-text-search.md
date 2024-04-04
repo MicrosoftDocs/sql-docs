@@ -3,30 +3,28 @@ title: Install SQL Server Full-Text Search on Linux
 description: Learn how to install SQL Server Full-Text Search on Linux. Full-Text Search enables you to run full-text queries against character-based data in SQL Server tables.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 10/02/2017
+ms.date: 08/23/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: intro-installation
+ms.custom:
+  - intro-installation
+  - linux-related-content
 ---
 # Install SQL Server Full-Text Search on Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-The following steps install [SQL Server Full-Text Search](../relational-databases/search/full-text-search.md) (**mssql-server-fts**) on Linux. Full-Text Search enables you to run full-text queries against character-based data in SQL Server tables. For known issues for this release, see the [Release Notes](sql-server-linux-release-notes-2017.md).
+The following steps install [SQL Server Full-Text Search](../relational-databases/search/full-text-search.md) (**mssql-server-fts**) on Linux. Full-Text Search enables you to run full-text queries against character-based data in [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] tables. For known issues for this release, see the [Release notes for SQL Server 2022 on Linux](sql-server-linux-release-notes-2022.md).
 
-> [!NOTE]
-> Before installing SQL Server Full-Text Search, first [install SQL Server](sql-server-linux-setup.md#platforms). This configures the keys and repositories that you use when installing the **mssql-server-fts** package.
+> [!NOTE]  
+> Before installing [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Full-Text Search, first [install SQL Server](sql-server-linux-setup.md#platforms). This configures the keys and repositories that you use when installing the **mssql-server-fts** package.
 
-Install SQL Server Full-Text Search for your platform:
+Install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Full-Text Search for your platform:
 
-- [Red Hat Enterprise Linux](#RHEL)
-- [Ubuntu](#ubuntu)
-- [SUSE Linux Enterprise Server](#SLES)
+## [Red Hat Enterprise Linux](#tab/rhel)
 
-## <a id="RHEL"></a> Install on RHEL
-
-Use the following commands to install the **mssql-server-fts** on Red Hat Enterprise Linux. 
+Use the following commands to install the **mssql-server-fts** on Red Hat Enterprise Linux.
 
 ```bash
 sudo yum install -y mssql-server-fts
@@ -41,27 +39,9 @@ sudo yum update mssql-server-fts
 
 If you need an offline installation, locate the Full-text Search package download in the [Release notes](sql-server-linux-release-notes-2017.md). Then use the same offline installation steps described in the article [Install SQL Server](sql-server-linux-setup.md#offline).
 
-## <a id="ubuntu"></a> Install on Ubuntu
+## [SUSE Linux Enterprise Server](#tab/sles)
 
-Use the following commands to install the **mssql-server-fts** on Ubuntu. 
-
-```bash
-sudo apt-get update 
-sudo apt-get install -y mssql-server-fts
-```
-
-If you already have **mssql-server-fts** installed, you can update to the latest version with the following commands:
-
-```bash
-sudo apt-get update 
-sudo apt-get install -y mssql-server-fts 
-```
-
-If you need an offline installation, locate the Full-text Search package download in the [Release notes](sql-server-linux-release-notes-2017.md). Then use the same offline installation steps described in the article [Install SQL Server](sql-server-linux-setup.md#offline).
-
-## <a id="SLES"></a> Install on SLES
-
-Use the following commands to install the **mssql-server-fts** on SUSE Linux Enterprise Server. 
+Use the following commands to install the **mssql-server-fts** on SUSE Linux Enterprise Server.
 
 ```bash
 sudo zypper install mssql-server-fts
@@ -76,12 +56,32 @@ sudo zypper update mssql-server-fts
 
 If you need an offline installation, locate the Full-text Search package download in the [Release notes](sql-server-linux-release-notes-2017.md). Then use the same offline installation steps described in the article [Install SQL Server](sql-server-linux-setup.md#offline).
 
+## [Ubuntu](#tab/ubuntu)
+
+Use the following commands to install the **mssql-server-fts** on Ubuntu.
+
+```bash
+sudo apt-get update
+sudo apt-get install -y mssql-server-fts
+```
+
+If you already have **mssql-server-fts** installed, you can update to the latest version with the following commands:
+
+```bash
+sudo apt-get update
+sudo apt-get install -y mssql-server-fts
+```
+
+If you need an offline installation, locate the Full-text Search package download in the [Release notes](sql-server-linux-release-notes-2017.md). Then use the same offline installation steps described in the article [Install SQL Server](sql-server-linux-setup.md#offline).
+
+---
+
 ## Supported languages
 
-Full-Text Search uses [word breakers](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) that determine how to identify individual words based on language. You can get a list of registered word breakers by querying the **sys.fulltext_languages** catalog view. Word breakers for the following languages are installed with SQL Server:
+Full-Text Search uses [word breakers](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) that determine how to identify individual words based on language. You can get a list of registered word breakers by querying the `sys.fulltext_languages` catalog view. Word breakers for the following languages are installed with [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]:
 
 | Language | Language ID |
-|---|---|
+| --- | --- |
 | Neutral | 0 |
 | Arabic | 1025 |
 | Bengali (India) | 1093 |
@@ -136,144 +136,148 @@ Full-Text Search uses [word breakers](../relational-databases/search/configure-a
 | Urdu | 1056 |
 | Vietnamese | 1066 |
 
-## <a id="filters"></a> Filters
+## Filters
 
 Full-Text Search also works with text stored in binary files. But in this case, an installed filter is required to process the file. For more information about filters, see [Configure and Manage Filters for Search](../relational-databases/search/configure-and-manage-filters-for-search.md).
 
-You can see a list of installed filters by calling **sp_help_fulltext_system_components 'filter'**. For SQL Server, the following filters are installed:
+You can see a list of installed filters by calling `sp_help_fulltext_system_components 'filter'`. For [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], the following filters are installed:
 
 | Component Name | Class ID | Version |
-|---|---|---|
-|.a | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.ans | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.asc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.ascx | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|.asm | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.asp | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|.aspx | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|.asx | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.bas | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.bat | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.bcp | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.c | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.cc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.cls | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.cmd | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.cpp | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.cs | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.csa | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.css | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|.csv | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.cxx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.dbs | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.def | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.dic | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.dos | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.dsp | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.dsw | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.ext | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.faq | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.fky | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.h | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.hhc | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|.hpp | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.hta | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|.htm | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|.html | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|.htt | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|.htw | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|.htx | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|.hxx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.i | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.ibq | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.ics | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.idl | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.idq | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.inc | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.inf | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.ini | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.inl | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.inx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.jav | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.java | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.js | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.kci | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.lgn | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.log | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.lst | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.m3u | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.mak | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.mk | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.odc | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|.odh | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.odl | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.pkgdef | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.pkgundef | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.pl | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.prc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.rc | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.rc2 | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.rct | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.reg | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.rgs | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.rtf | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.rul | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.s | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.scc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.shtm | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|.shtml | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|.snippet | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.sol | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.sor | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|.srf | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|.stm | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|.tab | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.tdl | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.tlh | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.tli | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.trg | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.txt | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.udf | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.udt | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.url | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.usr | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.vbs | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.viw | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.vsct | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.vsixlangpack | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.vsixmanifest | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.vspscc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.vsscc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.vssscc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.wri | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.wtx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.xml | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
+| --- | --- | --- |
+| `.a` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.ans` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.asc` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.ascx` | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+| `.asm` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.asp` | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+| `.aspx` | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+| `.asx` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.bas` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.bat` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.bcp` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.c` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.cc` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.cls` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.cmd` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.cpp` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.cs` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.csa` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.css` | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+| `.csv` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.cxx` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.dbs` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.def` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.dic` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.dos` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.dsp` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.dsw` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.ext` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.faq` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.fky` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.h` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.hhc` | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+| `.hpp` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.hta` | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+| `.htm` | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+| `.html` | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+| `.htt` | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+| `.htw` | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+| `.htx` | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+| `.hxx` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.i` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.ibq` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.ics` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.idl` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.idq` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.inc` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.inf` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.ini` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.inl` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.inx` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.jav` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.java` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.js` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.kci` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.lgn` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.log` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.lst` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.m3u` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.mak` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.mk` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.odc` | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+| `.odh` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.odl` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.pkgdef` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.pkgundef` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.pl` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.prc` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.rc` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.rc2` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.rct` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.reg` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.rgs` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.rtf` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.rul` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.s` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.scc` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.shtm` | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+| `.shtml` | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+| `.snippet` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.sol` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.sor` | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+| `.srf` | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+| `.stm` | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+| `.tab` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.tdl` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.tlh` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.tli` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.trg` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.txt` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.udf` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.udt` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.url` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.usr` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.vbs` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.viw` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.vsct` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.vsixlangpack` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.vsixmanifest` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.vspscc` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.vsscc` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.vssscc` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.wri` | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+| `.wtx` | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+| `.xml` | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 
 ## Semantic search
-[Semantic Search](../relational-databases/search/semantic-search-sql-server.md) builds on the Full-Text Search feature to extract and index statistically relevant *key phrases*. This enables you to query the meaning within documents in your database. It also helps to identify documents that are similar.
 
-In order to use Semantic Search, you must first restore the Semantic Language Statistics database to your machine.
+[Semantic Search](../relational-databases/search/semantic-search-sql-server.md) builds on the Full-Text Search feature to extract and index statistically relevant *key phrases*. This feature enables you to query the meaning within documents in your database. It also helps to identify documents that are similar.
 
-1. Use a tool, such as [sqlcmd](sql-server-linux-setup-tools.md), to run the following Transact-SQL command on your Linux SQL Server instance. This command restores the Language Statistics database.
+To use Semantic Search, you must first restore the Semantic Language Statistics database to your machine.
+
+1. Use a tool, such as [sqlcmd](sql-server-linux-setup-tools.md), to run the following Transact-SQL command on your Linux [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instance. This command restores the Language Statistics database.
 
    ```sql
-   RESTORE DATABASE [semanticsdb] FROM
-   DISK = N'/opt/mssql/misc/semanticsdb.bak' WITH FILE = 1,
-   MOVE N'semanticsdb' TO N'/var/opt/mssql/data/semanticsDB.mdf',
-   MOVE N'semanticsdb_log' TO N'/var/opt/mssql/data/semanticsdb_log.ldf', NOUNLOAD, STATS = 5
+   RESTORE DATABASE [semanticsdb]
+   FROM DISK = N'/opt/mssql/misc/semanticsdb.bak'
+   WITH FILE = 1,
+       MOVE N'semanticsdb' TO N'/var/opt/mssql/data/semanticsDB.mdf',
+       MOVE N'semanticsdb_log' TO N'/var/opt/mssql/data/semanticsdb_log.ldf',
+       NOUNLOAD,
+       STATS = 5
    GO
    ```
 
-   > [!NOTE]
+   > [!NOTE]  
    > If necessary, update the paths in the previous RESTORE command to adjust for your configuration.
 
 1. Run the following Transact-SQL command to register the semantic language statistics database.
 
     ```sql
-    EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsdb';  
+    EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsdb';
     GO
     ```
 
-## Next steps
+## Related content
 
-For information about Full-Text Search, see [SQL Server Full-Text Search](../relational-databases/search/full-text-search.md). 
+- [SQL Server Full-Text Search](../relational-databases/search/full-text-search.md)

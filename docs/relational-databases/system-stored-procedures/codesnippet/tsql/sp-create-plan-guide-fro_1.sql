@@ -1,4 +1,4 @@
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT * FROM Production.Product WHERE ProductSubcategoryID > 4;
 SELECT * FROM Person.Address;

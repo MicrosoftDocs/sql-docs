@@ -159,7 +159,7 @@ SELECT column_name FROM table_name
  For example, the following query searches on an indexed property, `Title`, in the `Document` column of the `Production.Document` table of the `AdventureWorks` database. The query returns only documents whose `Title` property contains the string `Maintenance` or `Repair`  
   
 ```  
-USE AdventureWorks  
+USE AdventureWorks2022;
 GO  
 SELECT Document FROM Production.Document  
   WHERE CONTAINS ( PROPERTY ( Document, 'Title' ), 'Maintenance OR Repair')  

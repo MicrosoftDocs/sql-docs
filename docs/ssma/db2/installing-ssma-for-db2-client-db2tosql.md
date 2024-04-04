@@ -7,7 +7,9 @@ ms.date: "07/14/2020"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.custom: intro-installation
+ms.custom:
+  - intro-installation
+  - sql-migration-content
 ---
 
 # Installing SSMA for DB2 client (DB2ToSQL)
@@ -24,7 +26,7 @@ This topic provides the installation prerequisites and instructions for installi
 
 ## Prerequisites
 
-SSMA is designed to work with DB2 on z/OS version 9.0 and 10.0, DB2 on LUW version 9.8 and 10.1 or later versions, DB2 for i version 7.1 or greater and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 or later versions.
+SSMA is designed to work with DB2 on z/OS version 9.0, 10.0, and later versions, DB2 on LUW version 9.8, 10.1, and later versions, DB2 for i version 7.1 and later versions, and [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] and later versions.
 
 Before you install SSMA, make sure that the computer meets the following requirements:
 
@@ -37,7 +39,7 @@ Before you install SSMA, make sure that the computer meets the following require
 
 ## Microsoft OLE DB Provider for DB2
 
-To download the OLE DB provider for DB2 version 6.0, go to [Microsoft® SQL Server® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
+To download the OLE DB provider for DB2 version 6.0, go to [Microsoft SQL Server 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
 
 SSMA is a Web download. To download the latest version, see the [SQL Server Migration Assistant download page](https://aka.ms/ssmafordb2).
 

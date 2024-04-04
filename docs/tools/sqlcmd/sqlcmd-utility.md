@@ -1,15 +1,17 @@
 ---
 title: sqlcmd utility
-description: The sqlcmd utility lets you enter Transact-SQL statements, system procedures, and script files using different modes, and uses ODBC to run Transact-SQL batches.
-author: grrlgeek
-ms.author: jeschult
+description: The sqlcmd utility lets you enter Transact-SQL statements, system procedures, and script files using different modes, using go-mssqldb or ODBC to run T-SQL batches.
+author: dlevy-msft
+ms.author: dlevy
 ms.reviewer: randolphwest, maghan
-ms.date: 05/15/2023
+ms.date: 12/12/2023
 ms.service: sql
 ms.subservice: tools-other
+ms.custom: linux-related-content
 ms.topic: conceptual
 helpviewer_keywords:
   - "statements [SQL Server], command prompt"
+  - "go-sqlcmd"
   - "QUIT command"
   - "Transact-SQL statements, command prompt"
   - "EXIT command"
@@ -24,11 +26,12 @@ helpviewer_keywords:
   - "scripts [SQL Server], command prompt"
   - "RESET command"
   - "GO command"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017"
+zone_pivot_groups: cs1-command-shell
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017"
 ---
 # sqlcmd utility
 
-[!INCLUDE[sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The **sqlcmd** utility lets you enter Transact-SQL statements, system procedures, and script files through various modes:
 
@@ -37,69 +40,194 @@ The **sqlcmd** utility lets you enter Transact-SQL statements, system procedures
 - In a Windows script file.
 - In an operating system (`cmd.exe`) job step of a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent job.
 
-The utility uses ODBC to execute Transact-SQL batches.
+[!INCLUDE [entra-id](../../includes/entra-id-hard-coded.md)]
+
+## Find out which version you have installed
+
+There are two versions of **sqlcmd**:
+
+- The `go-mssqldb`-based **sqlcmd**, sometimes styled as **go-sqlcmd**. This version is a standalone tool you can download independently of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)].
+
+- The ODBC-based **sqlcmd**, available with [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] or the Microsoft Command Line Utilities, and part of the `mssql-tools` package on Linux.
+
+To determine the version you have installed, run the following statement at the command line:
+
+::: zone pivot="cs1-bash"
+
+```bash
+sqlcmd "-?"
+```
+
+::: zone-end
+
+::: zone pivot="cs1-powershell"
+
+```powershell
+sqlcmd "-?"
+```
+
+::: zone-end
+
+::: zone pivot="cs1-cmd"
+
+```cmd
+sqlcmd -?
+```
+
+::: zone-end
+
+### [sqlcmd (Go)](#tab/go)
+
+If you're using the new version of **sqlcmd** (Go), the output is similar to the following example:
+
+```output
+Version: 1.3.1
+```
+
+#### Check version
+
+You can use `sqlcmd --version` to determine which version is installed. You should have at least version 1.0.0 installed.
+
+### [sqlcmd (ODBC)](#tab/odbc)
+
+If you're using **sqlcmd** (ODBC), the output is similar to the following example:
+
+```output
+Microsoft (R) SQL Server Command Line Tool
+Version 16.0.4025.1 NT
+Copyright (C) 2022 Microsoft Corporation. All rights reserved.
+```
+
+#### Check version
+
+You may have several versions of **sqlcmd** (ODBC) installed on your computer. Be sure you're using the correct version. You should have at least version 15.0.4298.1 installed.
+
+Always Encrypted (`-g`) and Microsoft Entra authentication (`-G`) require at least version 13.1.
+
+[!INCLUDE [entra-id-hard-coded](../../includes/entra-id-hard-coded.md)]
+
+---
 
 > [!NOTE]  
 > For [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] and previous versions, see [sqlcmd utility](/previous-versions/sql/2014/tools/sqlcmd-utility?view=sql-server-2014&preserve-view=true).
->
+>  
 > For using **sqlcmd** on Linux, see [Install sqlcmd and bcp on Linux](../../linux/sql-server-linux-setup-tools.md).
+
+> [!IMPORTANT]  
+> Installing **sqlcmd** (Go) via a package manager will replace **sqlcmd** (ODBC) with **sqlcmd** (Go) in your environment path. Any current command line sessions will need to be closed and reopened for this take to effect. **sqlcmd** (ODBC) won't be removed and can still be used by specifying the full path to the executable. You can also update your `PATH` variable to indicate which will take precedence. To do so in Windows 11, open **System settings** and go to **About > Advanced system settings**. When **System Properties** opens, select the **Environment Variables** button. In the lower half, under **System variables**, select **Path** and then select **Edit**. If the location **sqlcmd** (Go) is saved to (`C:\Program Files\sqlcmd` is default) is listed before `C:\Program Files\Microsoft SQL Server\<version>\Tools\Binn`, then **sqlcmd** (Go) is used. You can reverse the order to make **sqlcmd** (ODBC) the default again.
 
 ## Download and install sqlcmd
 
-### Windows
+### [sqlcmd (Go)](#tab/go)
 
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft Command Line Utilities 15 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2230791)**
+[!INCLUDE [install-go](includes/install-go.md)]
 
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft Command Line Utilities 15 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2231320)**
+### [sqlcmd (ODBC)](#tab/odbc)
 
-The command line tools are General Availability (GA), however they're being released with the installer package for [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)].
+[!INCLUDE [install-odbc](includes/install-odbc.md)]
 
-#### Version information
-
-- Release number: 15.0.4298.1
-- Build number: 15.0.4298.1
-- Release date: April 7, 2023
-
-The new version of **sqlcmd** supports Azure Active Directory (Azure AD) authentication, including Multi-Factor Authentication (MFA) support for Azure SQL Database, Azure Synapse Analytics, and Always Encrypted features.
-
-#### System requirements
-
-- Windows 7 through Windows 11
-- Windows Server 2008 through Windows Server - 2022
-
-This component requires both the built-in [Windows Installer 5](/windows/win32/msi/what-s-new-in-windows-installer-5-0) and the [Microsoft ODBC Driver 17 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md).
-
-### Linux and macOS
-
-See [Install sqlcmd and bcp on Linux](../../linux/sql-server-linux-setup-tools.md) for instructions to install sqlcmd on Linux and macOS.
-
-## Check version
-
-To check the **sqlcmd** version, execute the `sqlcmd -?` command and confirm that 15.0.4298.1, or a later version, is in use.
-
-> [!NOTE]  
-> You need version 13.1 or higher to support Always Encrypted (`-g`) and Azure AD authentication (`-G`). You may have several versions of **sqlcmd** installed on your computer. Be sure you are using the correct version. To determine the version, execute `sqlcmd -?`.
+---
 
 ## Preinstalled
 
 ### Azure Cloud Shell
 
-You can try the **sqlcmd** utility from Azure Cloud Shell, as it is preinstalled by default: [Launch Cloud Shell](https://shell.azure.com)
+You can try the **sqlcmd** utility from Azure Cloud Shell, as it's preinstalled by default:
+
+- [Launch Cloud Shell](https://shell.azure.com)
 
 ### Azure Data Studio
 
-To run **sqlcmd** statements in [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md), select "Enable SQLCMD" from the editor toolbar.
+To run SQLCMD statements in [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md), select **Enable SQLCMD** from the editor toolbar.
 
 ### SQL Server Management Studio (SSMS)
 
-To run **sqlcmd** statements in [SSMS](../../ssms/download-sql-server-management-studio-ssms.md), select SQLCMD Mode from the top navigation Query Menu dropdown.
+To run SQLCMD statements in [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) (SSMS), select SQLCMD Mode from the top navigation Query Menu dropdown list.
 
-> [!IMPORTANT]  
-> [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] (SSMS) uses the Microsoft [!INCLUDE[dnprdnshort_md](../../includes/dnprdnshort-md.md)] SqlClient for execution in regular and SQLCMD mode in **Query Editor**. When **sqlcmd** is run from the command-line, **sqlcmd** uses the ODBC driver. Because different default options may apply, you might see different behavior when you execute the same query in [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] in SQLCMD Mode and in the **sqlcmd** utility.
+SSMS uses the Microsoft [!INCLUDE [dnprdnshort_md](../../includes/dnprdnshort-md.md)] `SqlClient` for execution in regular and SQLCMD mode in **Query Editor**. When **sqlcmd** is run from the command-line, **sqlcmd** uses the ODBC driver. Because different default options may apply, you might see different behavior when you execute the same query in SSMS in SQLCMD Mode and in the **sqlcmd** utility.
 
 ## Syntax
 
-```console
+### [sqlcmd (Go)](#tab/go)
+
+```output
+Usage:
+  sqlcmd [flags]
+  sqlcmd [command]
+
+Examples:
+# Install/Create, Query, Uninstall SQL Server
+  sqlcmd create mssql --accept-eula --using https://aka.ms/AdventureWorksLT.bak
+  sqlcmd open ads
+  sqlcmd query "SELECT @@version"
+  sqlcmd delete
+# View configuration information and connection strings
+  sqlcmd config view
+  sqlcmd config cs
+
+Available Commands:
+  completion  Generate the autocompletion script for the specified shell
+  config      Modify sqlconfig files using subcommands like "sqlcmd config use-context mssql"
+  create      Install/Create SQL Server, Azure SQL, and Tools
+  delete      Uninstall/Delete the current context
+  help        Help about any command
+  open        Open tools (e.g ADS) for current context
+  query       Run a query against the current context
+  start       Start current context
+  stop        Stop current context
+
+Flags:
+  -?, --?                  help for backwards compatibility flags (-S, -U, -E etc.)
+  -h, --help               help for sqlcmd
+      --sqlconfig string   configuration file (default "/Users/<currentUser>/.sqlcmd/sqlconfig")
+      --verbosity int      log level, error=0, warn=1, info=2, debug=3, trace=4 (default 2)
+      --version            print version of sqlcmd
+
+Use "sqlcmd [command] --help" for more information about a command.
+```
+
+For more in-depth information on **sqlcmd** syntax and use, see [ODBC sqlcmd syntax](?tabs=mac#syntax).
+
+#### Breaking changes from sqlcmd (ODBC)
+
+Several switches and behaviors are altered in the **sqlcmd** (Go) utility. For the most up-to-date list of missing flags for backward compatibility, visit the [Prioritize implementation of back-compat flags](https://github.com/microsoft/go-sqlcmd/discussions/292) GitHub discussion.
+
+- In earlier versions of **sqlcmd** (Go), the `-P` switch was temporarily removed, and passwords for SQL Server Authentication could only be provided through these mechanisms:
+  - The `SQLCMDPASSWORD` environment variable
+  - The `:CONNECT` command
+  - When prompted, the user could type the password to complete a connection
+
+- `-r` requires a `0` or `1` argument
+
+- `-R` switch is removed.
+
+- `-I` switch is removed. To disable quoted identifier behavior, add `SET QUOTED IDENTIFIER OFF` in your scripts.
+
+- `-N` now takes a string value that can be one of `true`, `false`, or `disable` to specify the encryption choice. (`default` is the same as omitting the parameter)
+  - If `-N` and `-C` aren't provided, **sqlcmd** negotiates authentication with the server without validating the server certificate.
+  - If `-N` is provided but `-C` isn't, **sqlcmd** requires validation of the server certificate. A `false` value for encryption could still lead to the encryption of the login packet.
+  - If both `-N` and `-C` are provided, **sqlcmd** uses their values for encryption negotiation.
+  - More information about client/server encryption negotiation can be found at [MS-TDS PRELOGIN](/openspecs/windows_protocols/ms-tds/60f56408-0188-4cd5-8b90-25c6f2423868).
+
+- `-u` The generated Unicode output file has the UTF-16 Little-Endian Byte-order mark (BOM) written to it.
+
+- Some behaviors that were kept to maintain compatibility with `OSQL` may be changed, such as alignment of column headers for some data types.
+
+- All commands must fit on one line, even `EXIT`. Interactive mode doesn't check for open parentheses or quotes for commands, and doesn't prompt for successive lines. This behavior is different to the ODBC version, which allows the query run by `EXIT(query)` to span multiple lines.
+
+Connections from the **sqlcmd** (Go) utility are limited to TCP connections. Named pipes aren't supported at this time in the `go-mssqldb` driver.
+
+#### Enhancements
+
+- `:Connect` now has an optional `-G` parameter to select one of the authentication methods for Azure SQL Database  - `SqlAuthentication`, `ActiveDirectoryDefault`, `ActiveDirectoryIntegrated`, `ActiveDirectoryServicePrincipal`, `ActiveDirectoryManagedIdentity`, `ActiveDirectoryPassword`. For more information, see [Microsoft Entra authentication](sqlcmd-authentication.md). If `-G` isn't provided, Integrated security or SQL Server authentication is used, depending on the presence of a `-U` user name parameter.
+
+- The new `--driver-logging-level` command line parameter allows you to see traces from the `go-mssqldb` driver. Use `64` to see all traces.
+
+- **sqlcmd** can now print results using a vertical format. Use the new `-F vertical` command line switch to set it. The `SQLCMDFORMAT` scripting variable also controls it.
+
+### [sqlcmd (ODBC)](#tab/odbc)
+
+```output
 sqlcmd
    -a packet_size
    -A (dedicated administrator connection)
@@ -152,17 +280,25 @@ sqlcmd
 
 Currently, **sqlcmd** doesn't require a space between the command-line option and the value. However, in a future release, a space may be required between the command-line option and the value.
 
+---
+
 ## Command-line options
 
 ### Login-related options
 
 #### -A
 
-Signs in to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] with a dedicated administrator connection (DAC). This kind of connection is used to troubleshoot a server. This connection works only with server computers that support DAC. If DAC isn't available, **sqlcmd** generates an error message, and then exits. For more information about DAC, see [Diagnostic Connection for Database Administrators](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). The `-A` option isn't supported with the `-G` option. When connecting to Azure SQL Database using `-A`, you must be an administrator on the logical SQL server. DAC isn't available for an Azure AD administrator.
+Signs in to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] with a dedicated administrator connection (DAC). This kind of connection is used to troubleshoot a server. This connection works only with server computers that support DAC. If DAC isn't available, **sqlcmd** generates an error message, and then exits. For more information about DAC, see [Diagnostic Connection for Database Administrators](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). The `-A` option isn't supported with the `-G` option. When connecting to Azure SQL Database using `-A`, you must be an administrator on the logical SQL server. DAC isn't available for a Microsoft Entra administrator.
 
 #### -C
 
 This option is used by the client to configure it to implicitly trust the server certificate without validation. This option is equivalent to the ADO.NET option `TRUSTSERVERCERTIFICATE = true`.
+
+For the **sqlcmd** (Go) utility, the following conditions also apply:
+
+- If `-N` and `-C` aren't provided, **sqlcmd** negotiates authentication with the server without validating the server certificate.
+- If `-N` is provided but `-C` isn't, **sqlcmd** requires validation of the server certificate. A `false` value for encryption could still lead to the encryption of the login packet.
+- If both `-N` and `-C` are provided, **sqlcmd** uses their values for encryption negotiation.
 
 #### -d *db_name*
 
@@ -177,7 +313,7 @@ Interprets the server name provided to `-S` as a DSN instead of a hostname. For 
 
 #### -l *login_timeout*
 
-Specifies the number of seconds before a **sqlcmd** login to the ODBC driver times out when you try to connect to a server. This option sets the **sqlcmd** scripting variable `SQLCMDLOGINTIMEOUT`. The default time-out for login to **sqlcmd** is 8 seconds. When using the `-G` option to connect to Azure SQL Database or Azure Synapse Analytics and authenticate using Azure AD, a timeout value of at least 30 seconds is recommended. The login time-out must be a number between `0` and `65534`. If the value supplied isn't numeric, or doesn't fall into that range, **sqlcmd** generates an error message. A value of `0` specifies time-out to be infinite.
+Specifies the number of seconds before a **sqlcmd** login to the ODBC driver times out when you try to connect to a server. This option sets the **sqlcmd** scripting variable `SQLCMDLOGINTIMEOUT`. The default time-out for login to **sqlcmd** is 8 seconds. When using the `-G` option to connect to Azure SQL Database or Azure Synapse Analytics and authenticate using Microsoft Entra ID, a timeout value of at least 30 seconds is recommended. The login time-out must be a number between `0` and `65534`. If the value supplied isn't numeric, or doesn't fall into that range, **sqlcmd** generates an error message. A value of `0` specifies time-out to be infinite.
 
 #### -E
 
@@ -191,75 +327,13 @@ Sets the Column Encryption setting to `Enabled`. For more information, see [Alwa
 
 #### -G
 
-This option is used by the client when connecting to Azure SQL Database or Azure Synapse Analytics to specify that the user be authenticated using Azure AD authentication. This option sets the **sqlcmd** scripting variable `SQLCMDUSEAAD = true`. The `-G` option requires at least **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute `sqlcmd -?`. For more information, see [Connecting to SQL Database or Azure Synapse Analytics By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview). The `-A` option isn't supported with the `-G` option.
+This option is used by the client when connecting to Azure SQL Database or Azure Synapse Analytics to specify that the user be authenticated using Microsoft Entra authentication. This option sets the **sqlcmd** scripting variable `SQLCMDUSEAAD = true`. The `-G` option requires at least **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute `sqlcmd -?`. For more information, see [Connecting to SQL Database or Azure Synapse Analytics By Using Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview). The `-A` option isn't supported with the `-G` option.
 
 The `-G` option only applies to Azure SQL Database and Azure Synapse Analytics.
 
-Azure AD interactive authentication isn't currently supported on Linux or macOS. Azure AD integrated authentication requires [Microsoft ODBC Driver 17 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [Configured Kerberos environment](../../connect/odbc/linux-mac/using-integrated-authentication.md).
+Microsoft Entra interactive authentication isn't currently supported on Linux or macOS. Microsoft Entra integrated authentication requires [Microsoft ODBC Driver 17 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [Configured Kerberos environment](../../connect/odbc/linux-mac/using-integrated-authentication.md).
 
-- **Azure Active Directory username and password**
-
-  When you want to use an Azure AD user name and password, you can provide the `-G` option with the user name and password, by using the `-U` and `-P` options.
-
-   ```console
-   sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -U bob@contoso.com -P MyAzureADPassword -G
-   ```
-
-   The `-G` parameter generates the following connection string in the backend:
-
-   ```output
-    SERVER = Target_DB_or_DW.testsrv.database.windows.net;UID=bob@contoso.com;PWD=MyAzureADPassword;AUTHENTICATION=ActiveDirectoryPassword;
-   ```
-
-- **Azure Active Directory integrated authentication**
-
-  For Azure AD integrated authentication, provide the `-G` option without a user name or password. Azure AD integrated authentication requires [Microsoft ODBC Driver 17 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 and later versions, and a properly [configured Kerberos environment](../../connect/odbc/linux-mac/using-integrated-authentication.md).
-
-   ```console
-   sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G
-   ```
-
-   This generates the following connection string in the backend:
-
-   ```output
-   SERVER = Target_DB_or_DW.testsrv.database.windows.net;Authentication=ActiveDirectoryIntegrated;Trusted_Connection=NO;
-   ```
-
-   > [!NOTE]  
-   > The `-E` option (`Trusted_Connection`) cannot be used along with the `-G` option.
-
-- **Azure Active Directory interactive authentication**
-
-  The Azure AD interactive authentication for Azure SQL Database and Azure Synapse Analytics, allows you to use an interactive method supporting multi-factor authentication. For more information, see [Active Directory Interactive Authentication](../../ssdt/azure-active-directory.md#active-directory-interactive-authentication).
-
-  Azure AD interactive authentication requires **sqlcmd** [version 15.0.1000.34](#download-and-install-sqlcmd) and later versions, as well as [ODBC version 17.2 and later versions](../../connect/odbc/download-odbc-driver-for-sql-server.md).
-
-  To enable interactive authentication, provide the `-G` option with user name (`-U`) only, without a password.
-
-  The following example exports data using Azure AD interactive mode, indicating a username where the user represents an Azure AD account. This is the same example used in the previous section, **Azure Active Directory username and password**.
-
-  Interactive mode requires manually entering a password, or for accounts with multi-factor authentication enabled, complete your configured MFA authentication method.
-
-  ```console
-  sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U alice@aadtest.onmicrosoft.com
-  ```
-
-  The previous command generates the following connection string in the backend:
-
-  ```output
-  SERVER = Target_DB_or_DW.testsrv.database.windows.net;UID=alice@aadtest.onmicrosoft.com;AUTHENTICATION=ActiveDirectoryInteractive
-  ```
-
-  In case an Azure AD user is a domain federated user using a Windows account, the user name required in the command-line contains its domain account (for example `joe@contoso.com`):
-
-  ```console
-  sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U joe@contoso.com
-  ```
-
-  If guest users exist in a specific Azure AD tenant, and are part of a group that exists in Azure SQL Database that has database permissions to execute the **sqlcmd** command, their guest user alias is used (for example, `keith0@adventureworks.com`).
-
-  > [!IMPORTANT]  
-  > There is a known issue when using the `-G` and `-U` option with **sqlcmd**, where putting the `-U` option before the `-G` option may cause authentication to fail. Always start with the `-G` option followed by the `-U` option.
+For more information about Microsoft Entra authentication, see [Microsoft Entra authentication in sqlcmd](sqlcmd-authentication.md).
 
 #### -H *workstation_name*
 
@@ -281,6 +355,12 @@ Always specify `-M` when connecting to the availability group listener of a [!IN
 
 This option is used by the client to request an encrypted connection.
 
+For the **sqlcmd** (Go) utility, `-N` now takes a string value that can be one of `true`, `false`, or `disable` to specify the encryption choice. (`default` is the same as omitting the parameter):
+
+- If `-N` and `-C` aren't provided, **sqlcmd** negotiates authentication with the server without validating the server certificate.
+- If `-N` is provided but `-C` isn't, **sqlcmd** requires validation of the server certificate. A `false` value for encryption could still lead to the encryption of the login packet.
+- If both `-N` and `-C` are provided, **sqlcmd** uses their values for encryption negotiation.
+
 #### -P *password*
 
 A user-specified password. Passwords are case-sensitive. If the `-U` option is used and the `-P` option isn't used, and the `SQLCMDPASSWORD` environment variable hasn't been set, **sqlcmd** prompts the user for a password. We don't recommend the use of a null (blank) password, but you can specify the null password by using a pair of contiguous double-quotation marks for the parameter value (`""`).
@@ -298,15 +378,32 @@ The `SQLCMDPASSWORD` environment variable lets you set a default password for th
 
 At the command prompt, type:
 
-```console
+::: zone pivot="cs1-bash"
+
+```bash
 SET SQLCMDPASSWORD=p@a$$w0rd
-```
-
-At the following command prompt, type:
-
-```console
 sqlcmd
 ```
+
+::: zone-end
+
+::: zone pivot="cs1-powershell"
+
+```powershell
+SET SQLCMDPASSWORD=p@a$$w0rd
+sqlcmd
+```
+
+::: zone-end
+
+::: zone pivot="cs1-cmd"
+
+```cmd
+SET SQLCMDPASSWORD=p@a$$w0rd
+sqlcmd
+```
+
+::: zone-end
 
 If the user name and password combination is incorrect, an error message is generated.
 
@@ -316,6 +413,8 @@ If the user name and password combination is incorrect, an error message is gene
 If the `-P` option is used with the `-E` option, an error message is generated.
 
 If the `-P` option is followed by more than one argument, an error message is generated and the program exits.
+
+A password containing special characters can generate an error message. You should escape special characters when using `-P`, or use the `SQLCMDPASSWORD` environment variable instead.
 
 #### -S [*protocol*:]*server*[\\*instance_name*][,*port*]
 
@@ -345,17 +444,57 @@ If the `-U` option is used with the `-E` option (described later in this article
 
 Change the password:
 
-```console
+::: zone pivot="cs1-bash"
+
+```bash
 sqlcmd -U someuser -P s0mep@ssword -z a_new_p@a$$w0rd
 ```
+
+::: zone-end
+
+::: zone pivot="cs1-powershell"
+
+```powershell
+sqlcmd -U someuser -P s0mep@ssword -z a_new_p@a$$w0rd
+```
+
+::: zone-end
+
+::: zone pivot="cs1-cmd"
+
+```cmd
+sqlcmd -U someuser -P s0mep@ssword -z a_new_p@a$$w0rd
+```
+
+::: zone-end
 
 #### -Z *new_password*
 
 Change the password and exit:
 
-```console
+::: zone pivot="cs1-bash"
+
+```bash
 sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd
 ```
+
+::: zone-end
+
+::: zone pivot="cs1-powershell"
+
+```powershell
+sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd
+```
+
+::: zone-end
+
+::: zone pivot="cs1-cmd"
+
+```cmd
+sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd
+```
+
+::: zone-end
 
 ### Input/output options
 
@@ -381,7 +520,7 @@ Identifies the file that contains a batch of Transact-SQL statements or stored p
 
 Path examples:
 
-```console
+```output
 -i C:\<filename>
 -i \\<Server>\<Share$>\<filename>
 -i "C:\Some Folder\<file name>"
@@ -391,19 +530,39 @@ File paths that contain spaces must be enclosed in quotation marks.
 
 This option may be used more than once:
 
-```console
+::: zone pivot="cs1-bash"
+
+```bash
 sqlcmd -i <input_file1> -i <input_file2>
 ```
+
+::: zone-end
+
+::: zone pivot="cs1-powershell"
+
+```powershell
+sqlcmd -i <input_file1> -i <input_file2>
+```
+
+::: zone-end
+
+::: zone pivot="cs1-cmd"
+
+```cmd
+sqlcmd -i <input_file1> -i <input_file2>
+```
+
+::: zone-end
 
 #### -o *output_file*
 
 Identifies the file that receives output from **sqlcmd**.
 
-If `-u` is specified, the *output_file* is stored in Unicode format. If the file name isn't valid, an error message is generated, and **sqlcmd** exits. **sqlcmd** doesn't support concurrent writing of multiple **sqlcmd** processes to the same file. The file output will be corrupted or incorrect. The `-f` option is also relevant to file formats. This file is created if it doesn't exist. A file of the same name from a prior **sqlcmd** session is overwritten. The file specified here isn't the `stdout` file. If a `stdout` file is specified, this file isn't used.
+If `-u` is specified, the *output_file* is stored in Unicode format. If the file name isn't valid, an error message is generated, and **sqlcmd** exits. **sqlcmd** doesn't support concurrent writing of multiple **sqlcmd** processes to the same file. The file output is corrupted or incorrect. The `-f` option is also relevant to file formats. This file is created if it doesn't exist. A file of the same name from a prior **sqlcmd** session is overwritten. The file specified here isn't the `stdout` file. If a `stdout` file is specified, this file isn't used.
 
 Path examples:
 
-```console
+```output
 -o C:< filename>
 -o \\<Server>\<Share$>\<filename>
 -o "C:\Some Folder\<file name>"
@@ -415,13 +574,21 @@ File paths that contain spaces must be enclosed in quotation marks.
 
 Redirects the error message output to the screen (`stderr`). If you don't specify a parameter or if you specify `0`, only error messages that have a severity level of 11 or higher are redirected. If you specify `1`, all error message output including `PRINT` is redirected. This option has no effect if you use `-o`. By default, messages are sent to `stdout`.
 
+> [!NOTE]  
+> For the **sqlcmd** (Go) utility, `-r` requires a `0` or `1` argument.
+
 #### -R
+
+**Applies to:** ODBC **sqlcmd** only.
 
 Causes **sqlcmd** to localize numeric, currency, date, and time columns retrieved from [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] based on the client's locale. By default, these columns are displayed using the server's regional settings.
 
 #### -u
 
 Specifies that *output_file* is stored in Unicode format, regardless of the format of *input_file*.
+
+> [!NOTE]  
+> For the **sqlcmd** (Go) utility, the generated Unicode output file has the UTF-16 Little-Endian Byte-order mark (BOM) written to it.
 
 ### Query execution options
 
@@ -431,7 +598,12 @@ Writes input scripts to the standard output device (`stdout`).
 
 #### -I
 
+**Applies to:** ODBC **sqlcmd** only.
+
 Sets the `SET QUOTED_IDENTIFIER` connection option to `ON`. By default, it's set to `OFF`. For more information, see [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
+
+> [!NOTE]  
+> To disable quoted identifier behavior in the **sqlcmd** (Go) utility, add `SET QUOTED IDENTIFIER OFF` in your scripts.
 
 #### -q "*cmdline query*"
 
@@ -439,11 +611,35 @@ Executes a query when **sqlcmd** starts, but doesn't exit **sqlcmd** when the qu
 
 At the command prompt, type:
 
-```console
+::: zone pivot="cs1-bash"
+
+```bash
 sqlcmd -d AdventureWorks2022 -q "SELECT FirstName, LastName FROM Person.Person WHERE LastName LIKE 'Whi%';"
 
 sqlcmd -d AdventureWorks2022 -q "SELECT TOP 5 FirstName FROM Person.Person;SELECT TOP 5 LastName FROM Person.Person;"
 ```
+
+::: zone-end
+
+::: zone pivot="cs1-powershell"
+
+```powershell
+sqlcmd -d AdventureWorks2022 -q "SELECT FirstName, LastName FROM Person.Person WHERE LastName LIKE 'Whi%';"
+
+sqlcmd -d AdventureWorks2022 -q "SELECT TOP 5 FirstName FROM Person.Person;SELECT TOP 5 LastName FROM Person.Person;"
+```
+
+::: zone-end
+
+::: zone pivot="cs1-cmd"
+
+```cmd
+sqlcmd -d AdventureWorks2022 -q "SELECT FirstName, LastName FROM Person.Person WHERE LastName LIKE 'Whi%';"
+
+sqlcmd -d AdventureWorks2022 -q "SELECT TOP 5 FirstName FROM Person.Person;SELECT TOP 5 LastName FROM Person.Person;"
+```
+
+::: zone-end
 
 > [!IMPORTANT]  
 > Don't use the `GO` terminator in the query.
@@ -458,11 +654,35 @@ Use quotation marks around the query, as shown in the following example.
 
 At the command prompt, type:
 
-```console
+::: zone pivot="cs1-bash"
+
+```bash
 sqlcmd -d AdventureWorks2022 -Q "SELECT FirstName, LastName FROM Person.Person WHERE LastName LIKE 'Whi%';"
 
 sqlcmd -d AdventureWorks2022 -Q "SELECT TOP 5 FirstName FROM Person.Person;SELECT TOP 5 LastName FROM Person.Person;"
 ```
+
+::: zone-end
+
+::: zone pivot="cs1-powershell"
+
+```powershell
+sqlcmd -d AdventureWorks2022 -Q "SELECT FirstName, LastName FROM Person.Person WHERE LastName LIKE 'Whi%';"
+
+sqlcmd -d AdventureWorks2022 -Q "SELECT TOP 5 FirstName FROM Person.Person;SELECT TOP 5 LastName FROM Person.Person;"
+```
+
+::: zone-end
+
+::: zone pivot="cs1-cmd"
+
+```cmd
+sqlcmd -d AdventureWorks2022 -Q "SELECT FirstName, LastName FROM Person.Person WHERE LastName LIKE 'Whi%';"
+
+sqlcmd -d AdventureWorks2022 -Q "SELECT TOP 5 FirstName FROM Person.Person;SELECT TOP 5 LastName FROM Person.Person;"
+```
+
+::: zone-end
 
 > [!IMPORTANT]  
 > Don't use the `GO` terminator in the query.
@@ -480,11 +700,35 @@ Specifies the number of seconds before a command (or Transact-SQL statement) tim
 
 Creates a **sqlcmd** scripting variable that can be used in a **sqlcmd** script. Enclose the value in quotation marks if the value contains spaces. You can specify multiple `<var>="<value>"` values. If there are errors in any of the values specified, **sqlcmd** generates an error message and then exits.
 
-```console
+::: zone pivot="cs1-bash"
+
+```bash
 sqlcmd -v MyVar1=something MyVar2="some thing"
 
 sqlcmd -v MyVar1=something -v MyVar2="some thing"
 ```
+
+::: zone-end
+
+::: zone pivot="cs1-powershell"
+
+```powershell
+sqlcmd -v MyVar1=something MyVar2="some thing"
+
+sqlcmd -v MyVar1=something -v MyVar2="some thing"
+```
+
+::: zone-end
+
+::: zone pivot="cs1-cmd"
+
+```cmd
+sqlcmd -v MyVar1=something MyVar2="some thing"
+
+sqlcmd -v MyVar1=something -v MyVar2="some thing"
+```
+
+::: zone-end
 
 #### -x
 
@@ -498,7 +742,11 @@ Specifies the number of rows to print between the column headings. The default i
 
 #### -k [1 | 2]
 
-Removes all control characters, such as tabs and new line characters from the output. This parameter preserves column formatting when data is returned. If `1` is specified, the control characters are replaced by a single space. If `2` is specified, consecutive control characters are replaced by a single space. `-k` is the same as `-k1`.
+Removes all control characters, such as tabs and new line characters from the output. This parameter preserves column formatting when data is returned.
+
+- `-k` removes control characters.
+- `-k1` replaces each control character with a space.
+- `-k2` replaces consecutive control characters with a single space.
 
 #### -s *col_separator*
 
@@ -545,7 +793,7 @@ Sets the **sqlcmd** scripting variable `SQLCMDMAXFIXEDTYPEWIDTH`. The default is
 
 #### -b
 
-Specifies that **sqlcmd** exits and returns a `DOS ERRORLEVEL` value when an error occurs. The value that is returned to the `ERRORLEVEL` variable is `1` when the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] error message has a severity level greater than 10; otherwise, the value returned is `0`. If the `-V` option has been set in addition to `-b`, **sqlcmd** won't report an error if the severity level is lower than the values set using `-V`. Command prompt batch files can test the value of `ERRORLEVEL` and handle the error appropriately. **sqlcmd** doesn't report errors for severity level 10 (informational messages).
+Specifies that **sqlcmd** exits and returns a `DOS ERRORLEVEL` value when an error occurs. The value that is returned to the `ERRORLEVEL` variable is `1` when the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] error message has a severity level greater than 10; otherwise, the value returned is `0`. If the `-V` option has been set in addition to `-b`, **sqlcmd** doesn't report an error if the severity level is lower than the values set using `-V`. Command prompt batch files can test the value of `ERRORLEVEL` and handle the error appropriately. **sqlcmd** doesn't report errors for severity level 10 (informational messages).
 
 If the **sqlcmd** script contains an incorrect comment, syntax error, or is missing a scripting variable, the `ERRORLEVEL` returned is `1`.
 
@@ -615,6 +863,9 @@ If the `-X` option is specified, it prevents environment variables from being pa
 #### -?
 
 Displays the version of **sqlcmd** and a syntax summary of **sqlcmd** options.
+
+> [!NOTE]  
+> On macOS, run `sqlcmd '-?'` (with quotation marks) instead.
 
 ## Remarks
 
@@ -766,7 +1017,7 @@ Be aware of the following when you use **sqlcmd** commands:
 
 Starts the text editor. This editor can be used to edit the current Transact-SQL batch, or the last executed batch. To edit the last executed batch, the `ED` command must be typed immediately after the last batch has completed execution.
 
-The text editor is defined by the `SQLCMDEDITOR` environment variable. The default editor is 'Edit'. To change the editor, set the `SQLCMDEDITOR` environment variable. For example, to set the editor to Microsoft Notepad, at the command prompt, type:
+The text editor is defined by the `SQLCMDEDITOR` environment variable. The default editor is `Edit`. To change the editor, set the `SQLCMDEDITOR` environment variable. For example, to set the editor to Microsoft Notepad, at the command prompt, type:
 
 `SET SQLCMDEDITOR=notepad`
 
@@ -820,7 +1071,7 @@ Redirect all error output to the file specified by *filename*, to `stderr` or to
 
 - *filename*
 
-  Creates and opens a file that receives the output. If the file already exists, it is truncated to zero bytes. If the file isn't available because of permissions or other reasons, the output won't be switched and is sent to the last specified or default destination.
+  Creates and opens a file that receives the output. If the file already exists, it's truncated to zero bytes. If the file isn't available because of permissions or other reasons, the output isn't switched, and is sent to the last specified or default destination.
 
 - STDERR
 
@@ -832,11 +1083,11 @@ Redirect all error output to the file specified by *filename*, to `stderr` or to
 
 #### :Out \<*filename*> | STDERR | STDOUT
 
-Creates and redirects all query results to the file specified by *file name*, to `stderr` or to `stdout`. By default, output is sent to `stdout`. If the file already exists, it is truncated to zero bytes. The `:Out` command can appear multiple times in a script.
+Creates and redirects all query results to the file specified by *file name*, to `stderr` or to `stdout`. By default, output is sent to `stdout`. If the file already exists, it's truncated to zero bytes. The `:Out` command can appear multiple times in a script.
 
 #### :Perftrace \<*filename*> | STDERR | STDOUT
 
-Creates and redirects all performance trace information to the file specified by *file name*, to `stderr` or to `stdout`. By default performance trace output is sent to `stdout`. If the file already exists, it is truncated to zero bytes. The `:Perftrace` command can appear multiple times in a script.
+Creates and redirects all performance trace information to the file specified by *file name*, to `stderr` or to `stdout`. By default performance trace output is sent to `stdout`. If the file already exists, it's truncated to zero bytes. The `:Perftrace` command can appear multiple times in a script.
 
 ### Execution control commands
 
@@ -870,7 +1121,7 @@ The **sqlcmd** utility sends everything between the parentheses (`()`) to the se
 
 When an incorrect query is specified, **sqlcmd** exits without a return value.
 
-Here is a list of EXIT formats:
+Here is a list of `EXIT` formats:
 
 - `:EXIT`
 
@@ -884,7 +1135,7 @@ Here is a list of EXIT formats:
 
   Executes the batch that includes the query, and then quits after it returns the results of the query.
 
-If `RAISERROR` is used within a **sqlcmd** script, and a state of 127 is raised, **sqlcmd** will quit and return the message ID back to the client. For example:
+If `RAISERROR` is used within a **sqlcmd** script, and a state of 127 is raised, **sqlcmd** quits, and returns the message ID back to the client. For example:
 
 ```text
 RAISERROR(50001, 10, 127)
@@ -912,7 +1163,7 @@ Parses additional Transact-SQL statements and **sqlcmd** commands from the file 
 
 If the file contains Transact-SQL statements that aren't followed by `GO`, you must enter `GO` on the line that follows `:r`.
 
-The file will be read and executed after a batch terminator is encountered. You can issue multiple `:r` commands. The file may include any **sqlcmd** command. This includes the batch terminator `GO`.
+The file will be read and executed after a batch terminator is encountered. You can issue multiple `:r` commands. The file may include any **sqlcmd** command, including the batch terminator `GO`.
 
 > [!NOTE]  
 > The line count that is displayed in interactive mode will be increased by one for every `:r` command encountered. The `:r` command will appear in the output of the list command.
@@ -936,13 +1187,13 @@ The `SQLCMDSERVER` scripting variable reflects the current active connection.
 
 If *timeout* isn't specified, the value of the `SQLCMDLOGINTIMEOUT` variable is the default.
 
-If only *user_name* is specified (either as an option, or as an environment variable), the user is prompted to enter a password. Users aren't prompted if the `SQLCMDUSER` or `SQLCMDPASSWORD` environment variables have been set. If you don't provide options or environment variables, Windows Authentication mode is used to sign in. For example to connect to an instance, `instance1`, of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], `myserver`, by using integrated security you would use the following command:
+If only *user_name* is specified (either as an option, or as an environment variable), the user is prompted to enter a password. Users aren't prompted if the `SQLCMDUSER` or `SQLCMDPASSWORD` environment variables have been set. If you don't provide options or environment variables, Windows Authentication mode is used to sign in. For example, to connect to an instance, `instance1`, of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], `myserver`, by using integrated security you would use the following command:
 
 ```text
 :connect myserver\instance1
 ```
 
-To connect to the default instance of `myserver` using scripting variables, you would use the following:
+To connect to the default instance of `myserver` using scripting variables, you would use the following settings:
 
 ```text
 :setvar myusername test
@@ -977,7 +1228,7 @@ Lists **sqlcmd** commands, together with a short description of each command.
 
 - If an input file that is located on a remote server is called from **sqlcmd** on a local computer, and the file contains a drive file path such as `:Out c:\OutputFile.txt`, the output file is created on the local computer and not on the remote server.
 
-- Valid file paths include: `C:\<filename>`, `\\<Server>\<Share$>\<filename>`, and `"C:\Some Folder\<file name>"`. If there is a space in the path, use quotation marks.
+- Valid file paths include: `C:\<filename>`, `\\<Server>\<Share$>\<filename>`, and `"C:\Some Folder\<file name>"`. If there's a space in the path, use quotation marks.
 
 - Each new **sqlcmd** session overwrites existing files that have the same names.
 
@@ -985,20 +1236,18 @@ Lists **sqlcmd** commands, together with a short description of each command.
 
 **sqlcmd** prints any informational message that is sent by the server. In the following example, after the Transact-SQL statements are executed, an informational message is printed.
 
-At the command prompt, type the command:
-
-```console
-sqlcmd
-```
-
-At the **sqlcmd** prompt type:
+Start **sqlcmd**. At the **sqlcmd** command prompt, type the query:
 
 ```console
 USE AdventureWorks2022;
 GO
 ```
 
-When you press <kbd>ENTER</kbd>, the following informational message is printed: "Changed database context to 'AdventureWorks2022'."
+When you press <kbd>ENTER</kbd>, the following informational message is printed:
+
+```output
+Changed database context to 'AdventureWorks2022'.
+```
 
 ### Output format from Transact-SQL queries
 
@@ -1025,7 +1274,7 @@ BusinessEntityID FirstName    LastName
 (2 row(s) affected)
 ```
 
-Although the `BusinessEntityID` column is only four characters wide, it has been expanded to accommodate the longer column name. By default, output is terminated at 80 characters. This can be changed by using the `-w` option, or by setting the `SQLCMDCOLWIDTH` scripting variable.
+Although the `BusinessEntityID` column is only four characters wide, it has been expanded to accommodate the longer column name. By default, output is terminated at 80 characters. This width can be changed by using the `-w` option, or by setting the `SQLCMDCOLWIDTH` scripting variable.
 
 ### <a id="OutputXML"></a> XML output format
 
@@ -1053,15 +1302,41 @@ To set the XML mode to off, use the following command: `:XML OFF`.
 
 For more info, see [XML Output Format](#OutputXML) in this article.
 
-### Use Azure AD authentication
+<a name='use-azure-ad-authentication'></a>
 
-Examples using Azure AD authentication:
+### Use Microsoft Entra authentication
 
-```console
+Examples using Microsoft Entra authentication:
+
+::: zone pivot="cs1-bash"
+
+```bash
 sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net  -G  -l 30
 
 sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G -U bob@contoso.com -P MyAzureADPassword -l 30
 ```
+
+::: zone-end
+
+::: zone pivot="cs1-powershell"
+
+```powershell
+sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net  -G  -l 30
+
+sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G -U bob@contoso.com -P MyAzureADPassword -l 30
+```
+
+::: zone-end
+
+::: zone pivot="cs1-cmd"
+
+```cmd
+sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net  -G  -l 30
+
+sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G -U bob@contoso.com -P MyAzureADPassword -l 30
+```
+
+::: zone-end
 
 ## sqlcmd best practices
 
@@ -1081,17 +1356,19 @@ Use the following practices to help maximize correctness:
 
 - Use `-V16` to log any [severity 16 level messages](../../relational-databases/errors-events/database-engine-error-severities.md#levels-of-severity).  Severity 16 messages indicate general errors that can be corrected by the user.
 
-- Check the exit code and `DOS ERRORLEVEL` variable after the process has exited.  **sqlcmd** will return `0` normally, otherwise it sets the `ERRORLEVEL` as configured by `-V`.  In other words, `ERRORLEVEL` shouldn't be expected to be the same value as the error number reported from [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. The error number is a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]-specific value corresponding to the system function [**@@ERROR**](../../t-sql/functions/error-transact-sql.md). `ERRORLEVEL` is a **sqlcmd**-specific value to indicate why **sqlcmd** terminated, and its value is influenced by specifying `-b` command line argument.
+- Check the exit code and `DOS ERRORLEVEL` variable after the process has exited.  **sqlcmd** returns `0` normally, otherwise it sets the `ERRORLEVEL` as configured by `-V`.  In other words, `ERRORLEVEL` shouldn't be expected to be the same value as the error number reported from [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. The error number is a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]-specific value corresponding to the system function [**@@ERROR**](../../t-sql/functions/error-transact-sql.md). `ERRORLEVEL` is a **sqlcmd**-specific value to indicate why **sqlcmd** terminated, and its value is influenced by specifying `-b` command line argument.
 
 Using `-V16` in combination with checking the exit code and `DOS ERRORLEVEL` can help catch errors in automated environments, particularly quality gates before a production release.
 
-## Next steps
+## Related content
 
-- [Start the sqlcmd Utility](sqlcmd-start-utility.md)
-- [Run Transact-SQL Script Files Using sqlcmd](sqlcmd-run-transact-sql-script-files.md)
-- [Use the sqlcmd Utility](sqlcmd-use-utility.md)
-- [Use sqlcmd with Scripting Variables](sqlcmd-use-scripting-variables.md)
-- [Connect to the Database Engine With sqlcmd](sqlcmd-connect-database-engine.md)
+- [Learn more about the new go-sqlcmd utility on GitHub](https://github.com/microsoft/go-sqlcmd)
+- [Quickstart: Run SQL Server Linux container images with Docker](../../linux/quickstart-install-connect-docker.md)
+- [sqlcmd - Start the utility](sqlcmd-start-utility.md)
+- [sqlcmd - Run Transact-SQL script files](sqlcmd-run-transact-sql-script-files.md)
+- [sqlcmd - use the utility](sqlcmd-use-utility.md)
+- [sqlcmd - Use with scripting variables](sqlcmd-use-scripting-variables.md)
+- [sqlcmd - Connect to the database engine](sqlcmd-connect-database-engine.md)
 - [Edit SQLCMD Scripts with Query Editor](edit-sqlcmd-scripts-query-editor.md)
 - [Manage Job Steps](../../ssms/agent/manage-job-steps.md)
 - [Create a CmdExec Job Step](../../ssms/agent/create-a-cmdexec-job-step.md)

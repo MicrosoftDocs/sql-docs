@@ -21,7 +21,7 @@ dev_langs:
 
 Replication system stored procedures are documented and available as a method for accomplishing one-time tasks, such as implementing replication, and for using in batch files and scripts.
 
-For more information on how to program most of the common replication tasks using replication stored procedures, see [Replication System stored procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md).
+For more information on how to program most of the common replication tasks using replication stored procedures, see [Replication System stored procedures Concepts](../replication/concepts/replication-system-stored-procedures-concepts.md).
 
 > [!IMPORTANT]  
 > Only the replication stored procedures documented in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Books Online are supported. Undocumented stored procedures are only for the use of internal replication components and should not be used to administer replication.
@@ -260,7 +260,7 @@ For more information on how to program most of the common replication tasks usin
     :::column-end:::
 :::row-end:::
 
-## See also
+## Related content
 
-- [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)
-- [Replication Programming Concepts](../../relational-databases/replication/concepts/replication-programming-concepts.md)
+- [Replication Management Objects Concepts](../replication/concepts/replication-management-objects-concepts.md)
+- [Replication Programming Concepts](../replication/concepts/replication-programming-concepts.md)

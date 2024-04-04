@@ -27,7 +27,7 @@ sp_pdw_database_encryption_regenerate_system_keys
 [ ; ]
 ```
 
-> [!NOTE]  
+> [!NOTE]
 > [!INCLUDE [synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Return code values
@@ -44,7 +44,7 @@ This procedure should be used when the traffic in the appliance is low.
 
 Requires membership in the **sysadmin** fixed database role, or CONTROL SERVER permission.
 
-## Example
+## Examples
 
 The following example regenerates the database encryption keys.
 
@@ -52,7 +52,7 @@ The following example regenerates the database encryption keys.
 EXEC sys.sp_pdw_database_encryption_regenerate_system_keys;
 ```
 
-## See also
+## Related content
 
 - [sp_pdw_database_encryption (Azure Synapse Analytics)](sp-pdw-database-encryption-sql-data-warehouse.md)
 - [sp_pdw_log_user_data_masking (Azure Synapse Analytics)](sp-pdw-log-user-data-masking-sql-data-warehouse.md)

@@ -29,7 +29,7 @@ ms.topic: conceptual
  You can delete these objects in SQL Server Management Studio by right-clicking the object, and clicking **Delete** in the shortcut menu.  
   
 > [!IMPORTANT]  
->  If you just uninstall [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] from a SQL server instance using the `-uninstall` command line parameter from the command prompt, all the DQS objects are deleted as part of the uninstall process. You do not have to delete them manually after uninstalling [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]. To uninstall [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] from command prompt, type the following command at the command prompt, and press ENTER:   
+>  If you just uninstall [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] from a SQL Server instance using the `-uninstall` command line parameter from the command prompt, all the DQS objects are deleted as part of the uninstall process. You do not have to delete them manually after uninstalling [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]. To uninstall [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] from command prompt, type the following command at the command prompt, and press ENTER:   
 > `dqsinstaller.exe -uninstall`  
   
 ## Uninstall SQL Server Instance Containing Data Quality Server  

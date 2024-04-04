@@ -26,9 +26,9 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 'Connect to the local, default instance of SQL Server.
 Dim srv As Server
 srv = New Server
-'Reference the AdventureWorks2012 2008R2 database.
+'Reference the AdventureWorks2022 database.
 Dim db As Database
-db = srv.Databases("AdventureWorks2012")
+db = srv.Databases("AdventureWorks2022")
 'Define a View object variable by supplying the parent database, view name and schema in the constructor.
 Dim myview As View
 myview = New View(db, "Test_View", "Sales")
@@ -49,9 +49,9 @@ myview.Drop()
         //Connect to the local, default instance of SQL Server.   
         Server srv;   
         srv = new Server();   
-        //Reference the AdventureWorks2012 database.   
+        //Reference the AdventureWorks2022 database.   
         Database db;   
-        db = srv.Databases["AdventureWorks2012"];   
+        db = srv.Databases["AdventureWorks2022"];   
         //Define a View object variable by supplying the parent database, view name and schema in the constructor.   
         View myview;   
         myview = new View(db, "Test_View", "Sales");   
@@ -69,9 +69,9 @@ myview.Drop()
  This code sample shows how to create a view of two tables by using an inner join. The view is created by using text mode, so the <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A> property must be set.  
   
 ```powershell   
-# Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
+# Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2022  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = get-item AdventureWorks2022  
   
 # Define a View object variable by supplying the parent database, view name and schema in the constructor.   
 $myview  = New-Object -TypeName Microsoft.SqlServer.Management.SMO.View `  

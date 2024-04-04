@@ -72,7 +72,7 @@ A local unique identifier that points to the [!INCLUDE [ssIS](../../includes/ssi
 
 Requires membership in the **dc_admin** (with EXECUTE permission) fixed database role.
 
-## Example
+## Examples
 
 This example updates the Generic T-SQL Query collector type. (In the example, the default schema for the Generic T-SQL Query collector type is used.)
 
@@ -113,7 +113,7 @@ EXEC sp_syscollector_update_collector_type @collector_type_uid = '302E93D1-3424-
 GO
 ```
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Data collection](../data-collection/data-collection.md)

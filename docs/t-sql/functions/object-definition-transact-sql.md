@@ -79,7 +79,7 @@ OBJECT_DEFINITION ( object_id )
  The following example returns the definition of a user-defined trigger, `uAddress`, in the `Person` schema. The built-in function `OBJECT_ID` is used to return the object ID of the trigger to the `OBJECT_DEFINITION` statement.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT OBJECT_DEFINITION (OBJECT_ID(N'Person.uAddress')) AS [Trigger Definition];   
 GO  
@@ -89,7 +89,7 @@ GO
  The following example returns the definition of the system stored procedure `sys.sp_columns`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT OBJECT_DEFINITION (OBJECT_ID(N'sys.sp_columns')) AS [Object Definition];  
 GO  

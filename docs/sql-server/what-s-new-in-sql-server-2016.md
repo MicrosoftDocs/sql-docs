@@ -39,7 +39,7 @@ This page provides summary information and links to more detailed SQL Server 201
 - **In-memory OLTP:** 
     - Now supports FOREIGN KEY, UNIQUE and CHECK constraints, and native compiled stored procedures OR, NOT, SELECT DISTINCT, OUTER JOIN, and subqueries in SELECT.
     - Supports tables up to 2TB (up from 256GB). 
-    - Has column store index enhancements for sorting and Always On Availability Group support.
+    - Has columnstore index enhancements for sorting and Always On Availability Group support.
 - New security features:
     - **Always Encrypted:** When enabled, only the application that has the encryption key can access the encrypted sensitive data in the SQL Server 2016 database. The key is never passed to SQL Server.
     - **Dynamic Data Masking:** If specified in the table definition, masked data is hidden from most users, and only users with UNMASK permission can see the complete data.
@@ -88,11 +88,12 @@ Microsoft has thoroughly revamped Reporting Services in this release.
 
 See [Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
-## Next steps   
+## Related content
+
 - [SQL Server setup](../database-engine/install-windows/install-sql-server.md)   
 - [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md) 
 - [SQL Server 2016 datasheet](https://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
-- [Features supported by Editions of SQL Server](./editions-and-components-of-sql-server-2016.md)
+- [Editions and supported features of SQL Server 2016](editions-and-components-of-sql-server-2016.md)
 - [Hardware and Software Requirements for Installing SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 - [Install SQL Server 2016 from the Installation Wizard](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
 - [Setup and Servicing Installation](../database-engine/install-windows/install-sql-server-servicing-updates.md)

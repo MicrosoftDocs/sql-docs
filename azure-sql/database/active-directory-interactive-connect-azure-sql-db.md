@@ -1,10 +1,10 @@
 ---
 title: ActiveDirectoryInteractive connects to SQL
 description: "C# Code example, with explanations, for connecting to Azure SQL Database by using SqlAuthenticationMethod.ActiveDirectoryInteractive mode."
-author: GithubMirek
-ms.author: MirekS
+author: nofield
+ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 04/06/2022
+ms.date: 09/27/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
@@ -13,30 +13,34 @@ ms.custom:
   - has-adal-ref
   - sqldbrb=1
 ---
-# Connect to Azure SQL Database with Azure AD Multi-Factor Authentication
+# Connect to Azure SQL Database with Microsoft Entra multifactor authentication
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This article provides a C# program that connects to Azure SQL Database. The program uses interactive mode authentication, which supports [Azure AD Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks).
+This article provides a C# program that connects to Azure SQL Database. The program uses interactive mode authentication, which supports [multifactor authentication](/azure/active-directory/authentication/concept-mfa-howitworks) using Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)).
 
-For more information about Multi-Factor Authentication support for SQL tools, see [Using Azure Active Directory Multi-Factor Authentication](./authentication-mfa-ssms-overview.md).
+For more information about multifactor authentication support for SQL tools, see [Using Microsoft Entra multifactor authentication](./authentication-mfa-ssms-overview.md).
 
-## Multi-Factor Authentication for Azure SQL Database
+[!INCLUDE [entra-id](../includes/entra-id.md)]
 
-`Active Directory Interactive` authentication supports multi-factor authentication using [Microsoft.Data.SqlClient](/sql/connect/ado-net/introduction-microsoft-data-sqlclient-namespace) to connect to Azure SQL data sources. In a client C# program, the enum value directs the system to use the Azure Active Directory (Azure AD) interactive mode that supports Multi-Factor Authentication to connect to Azure SQL Database. The user who runs the program sees the following dialog boxes:
+<a name='multi-factor-authentication-for-azure-sql-database'></a>
 
-* A dialog box that displays an Azure AD user name and asks for the user's password.
+## Multifactor authentication for Azure SQL Database
 
-   If the user's domain is federated with Azure AD, the dialog box doesn't appear, because no password is needed.
+`Active Directory Interactive` authentication supports multifactor authentication using [Microsoft.Data.SqlClient](/sql/connect/ado-net/introduction-microsoft-data-sqlclient-namespace) to connect to Azure SQL data sources. In a client C# program, the enum value directs the system to use the Microsoft Entra interactive mode that supports multifactor authentication to connect to Azure SQL Database. The user who runs the program sees the following dialog boxes:
 
-   If the Azure AD policy imposes Multi-Factor Authentication on the user, a dialog box to sign in to your account will display.
+* A dialog box that displays a Microsoft Entra user name and asks for the user's password.
 
-* The first time a user goes through Multi-Factor Authentication, the system displays a dialog box that asks for a mobile phone number to send text messages to. Each message provides the *verification code* that the user must enter in the next dialog box.
+   If the user's domain is federated with Microsoft Entra ID, the dialog box doesn't appear, because no password is needed.
 
-* A dialog box that asks for a Multi-Factor Authentication verification code, which the system has sent to a mobile phone.
+   If the Microsoft Entra policy imposes multifactor authentication on the user, a dialog box to sign in to your account will display.
 
-For information about how to configure Azure AD to require Multi-Factor Authentication, see [Getting started with Azure AD Multi-Factor Authentication in the cloud](/azure/active-directory/authentication/howto-mfa-getstarted).
+* The first time a user goes through multifactor authentication, the system displays a dialog box that asks for a mobile phone number to send text messages to. Each message provides the *verification code* that the user must enter in the next dialog box.
 
-For screenshots of these dialog boxes, see [Using Azure Active Directory Multi-Factor Authentication](./authentication-mfa-ssms-overview.md).
+* A dialog box that asks for a multifactor authentication verification code, which the system has sent to a mobile phone.
+
+For information about how to configure Microsoft Entra ID to require multifactor authentication, see [Getting started with Microsoft Entra multifactor authentication in the cloud](/azure/active-directory/authentication/howto-mfa-getstarted).
+
+For screenshots of these dialog boxes, see [Using Microsoft Entra multifactor authentication](./authentication-mfa-ssms-overview.md).
 
 > [!TIP]
 > You can search .NET Framework APIs with the [.NET API Browser tool page](/dotnet/api/).
@@ -47,20 +51,22 @@ For screenshots of these dialog boxes, see [Using Azure Active Directory Multi-F
 
 Before you begin, you should have a [logical SQL server](logical-servers.md) created and available.
 
-### Set an Azure AD admin for your server
+<a name='set-an-azure-ad-admin-for-your-server'></a>
 
-For the C# example to run, a [logical SQL server](logical-servers.md) admin needs to assign an Azure AD admin for your server.
+### Set a Microsoft Entra admin for your server
 
-On the **SQL server** page, select **Active Directory admin** > **Set admin**.
+For the C# example to run, a [logical server](logical-servers.md) admin needs to assign a Microsoft Entra admin from Microsoft Entra ID for your server.
 
-For more information about Azure AD admins and users for Azure SQL Database, see the screenshots in [Configure and manage Azure Active Directory authentication with SQL Database](authentication-aad-configure.md#provision-azure-ad-admin-sql-database).
+In the Azure portal, on the **SQL server** page, select **Microsoft Entra ID** from the resource menu, then select **Set admin**.
+
+For more information about Microsoft Entra admins and users for Azure SQL Database, see the screenshots in [Configure and manage Microsoft Entra authentication with SQL Database](authentication-aad-configure.md#provision-azure-ad-admin-sql-database).
 
 ## Microsoft.Data.SqlClient
 
-The C# example relies on the [Microsoft.Data.SqlClient](/sql/connect/ado-net/introduction-microsoft-data-sqlclient-namespace) namespace. For more information, see [Using Azure Active Directory authentication with SqlClient](/sql/connect/ado-net/sql/azure-active-directory-authentication).
+The C# example relies on the [Microsoft.Data.SqlClient](/sql/connect/ado-net/introduction-microsoft-data-sqlclient-namespace) namespace. For more information, see [Using Microsoft Entra authentication with SqlClient](/sql/connect/ado-net/sql/azure-active-directory-authentication).
 
 > [!NOTE]
-> [System.Data.SqlClient](/dotnet/api/system.data.sqlclient) uses the Azure Active Directory Authentication Library (ADAL), which will be deprecated. If you're using the [System.Data.SqlClient](/dotnet/api/system.data.sqlclient) namespace for Azure Active Directory authentication, migrate applications to [Microsoft.Data.SqlClient](/sql/connect/ado-net/introduction-microsoft-data-sqlclient-namespace) and the [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-migration). For more information about using Azure AD authentication with SqlClient, see [Using Azure Active Directory authentication with SqlClient](/sql/connect/ado-net/sql/azure-active-directory-authentication).
+> [System.Data.SqlClient](/dotnet/api/system.data.sqlclient) uses the Azure Active Directory Authentication Library (ADAL), which is deprecated. If you're using the [System.Data.SqlClient](/dotnet/api/system.data.sqlclient) namespace for Microsoft Entra authentication, migrate applications to [Microsoft.Data.SqlClient](/sql/connect/ado-net/introduction-microsoft-data-sqlclient-namespace) and the [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-migration). For more information about using Microsoft Entra authentication with SqlClient, see [Using Microsoft Entra authentication with SqlClient](/sql/connect/ado-net/sql/azure-active-directory-authentication).
 
 ## Verify with SQL Server Management Studio
 
@@ -70,16 +76,18 @@ Before you run the C# example, it's a good idea to check that your setup and con
 
 Run SSMS from the same computer, in the same building, where you plan to run the C# example. For this test, any **Authentication** mode is OK. If there's any indication that the server isn't accepting your IP address, see [server-level and database-level firewall rules](firewall-configure.md) for help.
 
-### Verify Azure Active Directory Multi-Factor Authentication
+<a name='verify-azure-active-directory-multi-factor-authentication'></a>
+
+### Verify Microsoft Entra multifactor authentication
 
 Run SSMS again, this time with **Authentication** set to **Azure Active Directory - Universal with MFA**. This option requires SSMS version 18.6 or later.
 
-For more information, see [Using Azure Active Directory Multi-Factor Authentication](./authentication-mfa-ssms-overview.md).
+For more information, see [Using Microsoft Entra multifactor authentication](./authentication-mfa-ssms-overview.md).
 
 > [!NOTE]
-> If you are a guest user in the database, you also need to provide the Azure AD domain name for the database: Select **Options** > **AD domain name or tenant ID**. If you are running SSMS 18.x or later, the AD domain name or tenant ID is no longer needed for guest users because 18.x or later automatically recognizes it.
+> For SSMS versions prior to 18.x, guest users must provide the Microsoft Entra domain name or tenant ID for the database: Select **Options** > **AD domain name or tenant ID**. SSMS 18.x and later automatically recognizes the tenant.
 >
->To find the domain name in the Azure portal, select **Azure Active Directory** > **Custom domain names**. In the C# example program, providing a domain name is not necessary.
+>To find the domain name in the Azure portal, select **Microsoft Entra ID** > **Custom domain names**. In the C# example program, providing a domain name is not necessary.
 
 ## C# code example
 
@@ -135,6 +143,6 @@ Microsoft SQL Azure (RTM) - 12.0.2000.8
 
 ## Next steps
 
-- [Azure Active Directory server principals](authentication-azure-ad-logins.md)
-- [Azure AD-only authentication with Azure SQL](authentication-azure-ad-only-authentication.md)
-- [Using Azure Active Directory Multi-Factor Authentication](./authentication-mfa-ssms-overview.md)
+- [Microsoft Entra server principals](authentication-azure-ad-logins.md)
+- [Microsoft Entra-only authentication with Azure SQL](authentication-azure-ad-only-authentication.md)
+- [Using Microsoft Entra multifactor authentication](./authentication-mfa-ssms-overview.md)

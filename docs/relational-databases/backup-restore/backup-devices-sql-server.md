@@ -64,8 +64,8 @@ helpviewer_keywords:
  For example:  
   
 ```sql  
-BACKUP DATABASE AdventureWorks2012   
-   TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak';  
+BACKUP DATABASE AdventureWorks2022   
+   TO DISK = 'Z:\SQLServerBackups\AdventureWorks2022.bak';  
 GO  
 ```  
   
@@ -78,8 +78,8 @@ GO
  For example,  
   
 ```sql  
-RESTORE DATABASE AdventureWorks2012   
-   FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak';   
+RESTORE DATABASE AdventureWorks2022   
+   FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2022.bak';   
 ```  
   
   
@@ -89,8 +89,8 @@ RESTORE DATABASE AdventureWorks2012
  To avoid ambiguity, especially in scripts, we recommend that you explicitly specify the path of the backup directory in every DISK clause. However, this is less important when you are using Query Editor. In that case, if you are sure that the backup file resides in the default backup directory, you can omit the path from a DISK clause. For example, the following `BACKUP` statement backs up the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to the default backup directory.  
   
 ```sql  
-BACKUP DATABASE AdventureWorks2012   
-   TO DISK = 'AdventureWorks2012.bak';  
+BACKUP DATABASE AdventureWorks2022   
+   TO DISK = 'AdventureWorks2022.bak';  
 GO  
 ```  
   
@@ -116,7 +116,7 @@ GO
  For example:  
   
 ```sql  
-BACKUP DATABASE AdventureWorks2012   
+BACKUP DATABASE AdventureWorks2022   
    TO DISK = '\\BackupSystem\BackupDisk1\AW_backups\AdventureWorksData.Bak';  
 GO  
 ```  
@@ -147,7 +147,7 @@ GO
  For example:  
   
 ```sql  
-BACKUP LOG AdventureWorks2012   
+BACKUP LOG AdventureWorks2022   
    TO TAPE = '\\.\tape0';  
 GO  
 ```  
@@ -184,14 +184,14 @@ GO
 ##  <a name="LogicalBackupDevice"></a> Use a logical backup device  
  A *logical backup device* is an optional, user-defined name that points to a specific physical backup device (a disk file or tape drive). A logical backup device lets you use indirection when referencing the corresponding physical backup device.  
   
- Defining a logical backup device involves assigning a logical name to a physical device. For example, a logical device, AdventureWorksBackups, could be defined to point to the Z:\SQLServerBackups\AdventureWorks2012.bak file or the \\\\.\tape0 tape drive. Backup and restore commands can then specify AdventureWorksBackups as the backup device, instead of DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak' or TAPE = '\\\\.\tape0'.  
+ Defining a logical backup device involves assigning a logical name to a physical device. For example, a logical device, `AdventureWorksBackups`, could be defined to point to the `Z:\SQLServerBackups\AdventureWorks2022.bak` file or the `\\.\tape0` tape drive. Backup and restore commands can then specify `AdventureWorksBackups` as the backup device, instead of `DISK = 'Z:\SQLServerBackups\AdventureWorks2022.bak'` or `TAPE = '\\.\tape0'`.  
   
  The logical device name must be unique among all the logical backup devices on the server instance. To view the existing logical device names, query the [sys.backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) catalog view. This view displays the name of each logical backup device and describes the type and physical file name or path of the corresponding physical backup device.  
   
- After a logical backup device is defined, in a BACKUP or RESTORE command, you can specify the logical backup device instead of the physical name of the device. For example, the following statement backs up the `AdventureWorks2012` database to the `AdventureWorksBackups` logical backup device.  
+ After a logical backup device is defined, in a BACKUP or RESTORE command, you can specify the logical backup device instead of the physical name of the device. For example, the following statement backs up the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to the `AdventureWorksBackups` logical backup device.  
   
 ```sql  
-BACKUP DATABASE AdventureWorks2012   
+BACKUP DATABASE AdventureWorks2022   
    TO AdventureWorksBackups;  
 GO  
 ```  

@@ -17,7 +17,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 
   A collection is a list of objects that have been constructed from the same object class and that share the same parent object. The collection object always contains the name of the object type with the Collection suffix. For example, to access the columns in a specified table, use the <xref:Microsoft.SqlServer.Management.Smo.ColumnCollection> object type. It contains all the <xref:Microsoft.SqlServer.Management.Smo.Column> objects that belong to the same <xref:Microsoft.SqlServer.Management.Smo.Table> object.  
   
- The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] **For...Each** statement or the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] **foreach** statement can be used to iterate through each member of the collection.  
+ The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[visual-basic](../../../includes/visual-basic-md.md)] **For...Each** statement or the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[c-sharp](../../../includes/c-sharp-md.md)] **foreach** statement can be used to iterate through each member of the collection.  
   
 ## Examples  
 To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
@@ -30,9 +30,9 @@ To use any code example that is provided, you will have to choose the programmin
 Dim srv As Server
 srv = New Server
 'Modify a property using the Databases, Tables, and Columns collections to reference a column.
-srv.Databases("AdventureWorks2012").Tables("Person", "Person").Columns("ModifiedDate").Nullable = True
+srv.Databases("AdventureWorks2022").Tables("Person", "Person").Columns("ModifiedDate").Nullable = True
 'Call the Alter method to make the change on the instance of SQL Server.
-srv.Databases("AdventureWorks2012").Tables("Person", "Person").Columns("ModifiedDate").Alter()
+srv.Databases("AdventureWorks2022").Tables("Person", "Person").Columns("ModifiedDate").Alter()
 ```
   
 ## Referencing an Object by Using a Collection in Visual C#  
@@ -44,9 +44,9 @@ srv.Databases("AdventureWorks2012").Tables("Person", "Person").Columns("Modified
 Server srv;   
 srv = new Server();   
 //Modify a property using the Databases, Tables, and Columns collections to reference a column.   
-srv.Databases["AdventureWorks2012"].Tables["Person", "Person"].Columns["LastName"].Nullable = true;   
+srv.Databases["AdventureWorks2022"].Tables["Person", "Person"].Columns["LastName"].Nullable = true;   
 //Call the Alter method to make the change on the instance of SQL Server.   
-srv.Databases["AdventureWorks2012"].Tables["Person", "Person"].Columns["LastName"].Alter();   
+srv.Databases["AdventureWorks2022"].Tables["Person", "Person"].Columns["LastName"].Alter();   
 }  
 ```  
   

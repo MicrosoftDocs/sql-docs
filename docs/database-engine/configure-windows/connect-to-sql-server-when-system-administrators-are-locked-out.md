@@ -3,7 +3,7 @@ title: "Connect to SQL Server when system administrators are locked out"
 description: Learn how to regain access to SQL Server as a system administrator if you've been mistakenly locked out.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/14/2022
+ms.date: 08/21/2023
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -25,7 +25,7 @@ This article describes how you can regain access to the [!INCLUDE[ssDEnoversion]
 
 - The logins that are members of the sysadmin fixed server role are for individuals who have left the company or who aren't available.
 
-- The sa account is disabled or no one knows the password.
+- The `sa` account is disabled or no one knows the password.
 
 ## Resolution
 
@@ -33,7 +33,7 @@ In order to resolve your access issue, we recommend that you start the instance 
 
 You can start an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode with either the `-m` or `-f` options from the command line. Any member of the computer's local Administrators group can then connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as a member of the **sysadmin** fixed server role.
 
-When you start the instance in single-user mode, first stop the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service. Otherwise, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent might connect first, taking the only available connection to the server and blocking you from logging in.
+When you start the instance in single-user mode, stop the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service. Otherwise, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent might connect first, taking the only available connection to the server and blocking you from logging in.
 
 It's also possible for an unknown client application to take the only available connection before you're able to sign in. In order to prevent this from happening, you can use the `-m` option followed by an application name to limit connections to a single connection from the specified application. For example, starting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with `-mSQLCMD` limits connections to a single connection that identifies itself as the **sqlcmd** client program. To connect through the Query Editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], use `-m"Microsoft SQL Server Management Studio - Query"`.
 
@@ -55,10 +55,10 @@ For step-by-step instructions about how to start [!INCLUDE[ssNoVersion](../../in
 
 ### Use PowerShell
 
-#### Option 1: Run the steps directly in an executable notebook via Azure Data Studio
+#### Option 1: Run the steps directly in an executable notebook using Azure Data Studio
 
 > [!NOTE]  
-> Before attempting to open this notebook, check that Azure Data Studio is installed on your local machine. To install, go to [Learn how to install Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md).
+> Before attempting to open this notebook, check that Azure Data Studio is installed on your local machine. To install Azure Data Studio, see [Learn how to install Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md).
 
 > [!div class="nextstepaction"]
 > [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/mssql-support/master/sample-scripts/DOCs-to-Notebooks/T-shooting-SQL-SystemAdmins-Locked-out.ipynb)
@@ -108,7 +108,7 @@ For step-by-step instructions about how to start [!INCLUDE[ssNoVersion](../../in
    > `Sqlcmd: Error: Microsoft ODBC Driver X for SQL Server : Login failed for user 'CONTOSO\BobD'. Reason: Server is in single user mode. Only one administrator can connect at this time..`
 
 1. **Mixed Mode (optional):** If your SQL Server is running in mixed authentication mode, you can also:
-    1. Grant the Sysadmin role membership to a SQL login. Execute code such as the following to create a new SQL Server authentication login that is a member of the sysadmin fixed server role. Replace "?j8:z$G=JE9" with a strong password of your choice.
+    1. Grant the **sysadmin** role membership to a SQL login. Execute code such as the following to create a new SQL Server authentication login that is a member of the **sysadmin** fixed server role. Replace `?j8:z$G=JE9` with a strong password of your choice.
 
        If you have a default instance, use the name of the server.
 
@@ -117,7 +117,7 @@ For step-by-step instructions about how to start [!INCLUDE[ssNoVersion](../../in
        sqlcmd.exe -E -S $sql_server_instance -Q "CREATE LOGIN TempLogin WITH PASSWORD = '$strong_password'; ALTER SERVER ROLE sysadmin ADD MEMBER TempLogin; "
        ```
 
-    1. Also, if your SQL Server is running in mixed authentication mode and you want to reset the password of an enabled **sa** account. Change the password of the sa account with the following syntax. Be sure to replace "j8:zG=J?E9" with a strong password of your choice:
+    1. Also, if your SQL Server is running in mixed authentication mode and you want to reset the password of an enabled **sa** account. Change the password of the sa account with the following syntax. Be sure to replace `j8:zG=J?E9` with a strong password of your choice:
 
        If you have a default instance, use the name of the server.
 
@@ -151,17 +151,17 @@ Perform these instructions while logged in to Windows as a member of the local a
 
 1. On the **Startup Parameters** tab, in the **Specify a startup parameter** box, type `-m` and then select **Add**. (That's a dash then lower case letter m.)
 
-   For some earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] there is no **Startup Parameters** tab. In that case, on the **Advanced** tab, double-click **Startup Parameters**. The parameters open up in a small window. Be careful not to change any of the existing parameters. At the very end, add a new parameter `;-m` and then select **OK**. (That's a semi-colon then a dash then lower case letter m.)
+   For some earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], there's no **Startup Parameters** tab. In that case, on the **Advanced** tab, double-click **Startup Parameters**. The parameters open up in a small window. Be careful not to change any of the existing parameters. At the very end, add a new parameter `;-m` and then select **OK**. (That's a semi-colon then a dash then lower case letter m.)
 
 1. Select **OK**, and after the message to restart, right-click your server name, and then select **Restart**.
 
 1. After [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has restarted, your server will be in single-user mode. Make sure that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent isn't running. If started, it will take your only connection.
 
-1. From the Windows Start menu, right-click the icon for [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and select **Run as administrator**. This will pass your administrator credentials to SSMS.
+1. From the Windows Start menu, right-click the icon for [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and select **Run as administrator**. This passes your administrator credentials to SSMS.
 
    For earlier versions of Windows, the **Run as administrator** option appears as a submenu.
 
-   In some configurations, SSMS will attempt to make several connections. Multiple connections will fail because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is in single-user mode. Based on your scenario, perform one of the following actions.
+   In some configurations, SSMS attempts to make several connections. Multiple connections will fail because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is in single-user mode. Based on your scenario, perform one of the following actions.
 
    1. Connect with Object Explorer using Windows Authentication, which includes your Administrator credentials. Expand **Security**, expand **Logins**, and double-click your own login. On the **Server Roles** page, select **sysadmin**, and then select **OK**.
 
@@ -199,7 +199,7 @@ Perform these instructions while logged in to Windows as a member of the local a
 
 1. On the **Startup Parameters** tab, in the **Existing parameters** box, select `-m` and then select **Remove**.
 
-   For some earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] there is no **Startup Parameters** tab. In that case, on the **Advanced** tab, double-click **Startup Parameters**. The parameters open up in a small window. Remove the `;-m` that you added earlier, and then select **OK**.
+   For some earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], there's no **Startup Parameters** tab. In that case, on the **Advanced** tab, double-click **Startup Parameters**. The parameters open up in a small window. Remove the `;-m` that you added earlier, and then select **OK**.
 
 1. Right-click your server name, and then select **Restart**. Make sure to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent again if you stopped it before starting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode.
 

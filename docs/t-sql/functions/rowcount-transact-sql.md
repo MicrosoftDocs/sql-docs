@@ -64,7 +64,7 @@ dev_langs:
  The following example executes an `UPDATE` statement and uses `@@ROWCOUNT` to detect if any rows were changed.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE HumanResources.Employee   
 SET JobTitle = N'Executive'  

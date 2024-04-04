@@ -8,6 +8,8 @@ ms.date: "10/02/2020"
 ms.service: sql
 ms.subservice: dma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 helpviewer_keywords:
   - "Data Migration Assistant, on-premises SQL Server"
 ---
@@ -52,7 +54,7 @@ The contents of sample `Assess-for-AzureSQLMI.xml` define the elements to assess
    <AssessmentTargetPlatform>ManagedSqlServer</AssessmentTargetPlatform>
    <AssessmentDatabases>
       <AssessmentDatabase>Server=ServerName\SQL2017;Integrated Security=true</AssessmentDatabase>
-      <AssessmentDatabase>Server=ServerName\SQL2016;Integrated Security=true;Initial Catalog=AdventureWorks2016</AssessmentDatabase>
+      <AssessmentDatabase>Server=ServerName\SQL2016;Integrated Security=true;Initial Catalog=AdventureWorks2022</AssessmentDatabase>
       <AssessmentDatabase>Server=ServerName\SQL2016;Integrated Security=true;Initial Catalog=TestDB</AssessmentDatabase>
    </AssessmentDatabases>
    <AssessmentResultDma>C:\Demo\ScaleAssessment\AssessmentConfiguration\Scale-Assessment-for-AzureSQLManagedInstance.dma</AssessmentResultDma>
@@ -75,6 +77,8 @@ The contents of sample `Assess-for-AzureSQLMI.xml` define the elements to assess
 
 ## XML Elements 
 
+[!INCLUDE [entra-id](../includes/entra-id-hard-coded.md)]
+
 The XML elements that are passed to DMACMD are defined in the following table: 
 
 
@@ -92,7 +96,7 @@ The XML elements that are passed to DMACMD are defined in the following table:
 |`AzureMigrateProjectName`|Azure Migrate project name to upload assessment results to.|
 |`ResourceGroupName`|Azure Migrate resource group name.|
 |`AzureAuthenticationInteractiveAuthentication`|Set to `true` to pop up the authentication window.|
-|`AzureAuthenticationTenantId`|Azure Active Directory tenant ID. </br></br>Obtain this from the **Overview** blade of Azure Active Directory in the [Azure portal](https://portal.azure.com). |
+|`AzureAuthenticationTenantId`|Microsoft Entra tenant ID. </br></br>Obtain this from the **Overview** pane of Microsoft Entra ID in the [Azure portal](https://portal.azure.com). |
 |`EnableAssessmentUploadToAzureMigrate`| Set to `true` to upload and publish assessment results to Azure Migrate hub.|
 
 
@@ -116,7 +120,7 @@ JSON result file      : C:\Demo\ScaleAssessment\Scale-Assessment-for-AzureSQLMan
 --------------------------------------------------------------------------------
 ```
 
-View uploaded results in [Azure Migrate](dma-assess-sql-data-estate-to-sqldb.md#view-target-readiness-assessment-results) for a centralized view of the entire data estate. . 
+View uploaded results in [Azure Migrate](dma-assess-sql-data-estate-to-sqldb.md#view-target-readiness-assessment-results) for a centralized view of the entire data estate.
 
 ## Best practices 
 
@@ -132,4 +136,3 @@ Consider the following best practices when using DMACMD:
 * [Data Migration Assistant (DMA)](../dma/dma-overview.md)
 * [Data Migration Assistant: Configuration settings](../dma/dma-configurationsettings.md)
 * [Data Migration Assistant: Best Practices](../dma/dma-bestpractices.md)
-

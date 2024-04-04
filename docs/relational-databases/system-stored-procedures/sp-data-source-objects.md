@@ -52,7 +52,7 @@ This call only returns external objects that begin with the value set for *@obje
 If an ODBC data source connects to a relational database management system (RDBMS) that uses three-part names, *@object_root_name* can't contain a partial database name. In these cases, the parameter *@object_root_name* should contain all three parts, with the third part being the object name to search.
 
 > [!CAUTION]  
-> Due to differences between external data platforms, some platforms do not return any results if the default value of `NULL` is provided. Some treat `NULL` as the lack of a filter. For example, Oracle RDMBS will not return results if `NULL` is provided for *@object_root_name*.
+> Due to differences between external data platforms, some platforms don't return any results if the default value of `NULL` is provided. Some treat `NULL` as the lack of a filter. For example, Oracle RDMBS will not return results if `NULL` is provided for *@object_root_name*.
 
 #### [ @max_search_depth = ] *max_search_depth*
 
@@ -68,7 +68,7 @@ The `search_options` parameter is nvarchar(max) with a default of `NULL`.
 
 This parameter isn't used but may be implemented in the future.
 
-## Result sets
+## Result set
 
 | Column name | Data type | Description |
 | --- | --- | --- |
@@ -83,7 +83,7 @@ Requires ALTER ANY EXTERNAL DATA SOURCE permission.
 
 ## Remarks
 
-The SQL Server instance must have the [PolyBase](../../relational-databases/polybase/polybase-guide.md) feature installed. This procedure was first introduced in SQL Server 2019 CU5.
+The SQL Server instance must have the [PolyBase](../polybase/polybase-guide.md) feature installed. This procedure was first introduced in SQL Server 2019 CU5.
 
 This stored procedure supports connectors for:
 
@@ -252,9 +252,9 @@ EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
 | `TABLE` | `"database"."nation"` | `nation` | `[database].[nation]` |
 | `TABLE` | `"database"."orders"` | `orders` | `[database].[orders]` |
 
-## See also
+## Related content
 
-- [sp_data_source_columns](./sp-data-source-table-columns.md)
+- [sp_data_source_columns](sp-data-source-table-columns.md)
 - [CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)](../../t-sql/statements/create-external-table-as-select-transact-sql.md)
 - [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)
 - [Data Virtualization extension for Azure Data Studio](../../azure-data-studio/extensions/data-virtualization-extension.md)

@@ -59,7 +59,7 @@ This function encrypts data with the certificate's public key. The ciphertext ca
 This example encrypts the plaintext stored in `@cleartext` with the certificate called `JanainaCert02`. The encrypted data is inserted into table `ProtectedData04`.  
   
 ```sql  
-INSERT INTO [AdventureWorks2012].[ProtectedData04]   
+INSERT INTO [AdventureWorks2022].[ProtectedData04]   
     VALUES ( N'Data encrypted by certificate ''Shipping04''',  
     EncryptByCert(Cert_ID('JanainaCert02'), @cleartext) );  
 GO  

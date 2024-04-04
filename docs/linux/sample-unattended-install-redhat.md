@@ -4,11 +4,13 @@ titleSuffix: SQL Server
 description: Use a sample bash script to install SQL Server on Red Hat Enterprise Linux (RHEL) without interactive input.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest
-ms.date: 05/20/2022
+ms.reviewer: armaha
+ms.date: 11/16/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Sample: Unattended SQL Server installation script for Red Hat Enterprise Linux
 
@@ -17,7 +19,7 @@ ms.topic: conceptual
 This sample bash script installs [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Red Hat Enterprise Linux (RHEL) without interactive input. It provides examples of installing the [!INCLUDE [ssde-md](../includes/ssde-md.md)], the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
 
 > [!TIP]  
-> If you don't need an unattended installation script, the fastest way to install SQL Server is to follow the [quickstart for Red Hat](quickstart-install-connect-red-hat.md). For other setup information, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
+> If you don't need an unattended installation script, the fastest way to install SQL Server is to follow the [Quickstart: Install SQL Server and create a database on Red Hat](quickstart-install-connect-red-hat.md). For other setup information, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
 
 ## Prerequisites
 
@@ -29,7 +31,7 @@ This sample bash script installs [!INCLUDE [ssnoversion-md](../includes/ssnovers
 
 This example installs [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on RHEL 8.x. If you want to install a different version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] or RHEL, change the Microsoft repository paths accordingly.
 
-Save the sample script to a file and then to customize it. You'll need to replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
+Save the sample script to a file. To customize it, you need to replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
 
 > [!IMPORTANT]  
 > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
@@ -42,7 +44,7 @@ Save the sample script to a file and then to customize it. You'll need to replac
 # Password for the SA user (required)
 MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 
-# Product ID of the version of SQL server you're installing
+# Product ID of the version of SQL Server you're installing
 # Must be evaluation, developer, express, web, standard, enterprise, or your 25 digit product key
 # Defaults to developer
 MSSQL_PID='evaluation'
@@ -183,7 +185,7 @@ The first thing the bash script does is set a few variables. These variables can
 
 1. Configure SQL Server with the `MSSQL_SA_PASSWORD` and automatically accept the End-User License Agreement.
 
-1. Automatically accept the End-User License Agreement for the SQL Server command-line tools, install them, and install the `unixodbc-dev` package.
+1. Automatically accept the End-User License Agreement for the SQL Server command-line tools, install them, and install the `unixODBC-devel` package.
 
 1. Add the SQL Server command-line tools to the path for ease of use.
 
@@ -201,7 +203,7 @@ The first thing the bash script does is set a few variables. These variables can
 
 1. Create a new server administrator user if `SQL_INSTALL_USER` and `SQL_INSTALL_USER_PASSWORD` are both set.
 
-## Next steps
+## Unattended install
 
 Simplify multiple unattended installs and create a stand-alone bash script that sets the proper environment variables. You can remove any of the variables the sample script uses and put them in their own bash script.
 
@@ -220,4 +222,6 @@ Then run the bash script as follows:
 . ./my_script_name.sh
 ```
 
-For more information about SQL Server on Linux, see [SQL Server on Linux overview](sql-server-linux-overview.md).
+## Related content
+
+- [What is SQL Server on Linux?](sql-server-linux-overview.md)

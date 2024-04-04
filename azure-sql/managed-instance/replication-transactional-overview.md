@@ -1,9 +1,9 @@
 ---
 title: Transactional replication
 titleSuffix: Azure SQL Managed Instance
-description: Learn about using SQL Server transactional replication with Azure SQL Managed Instance
-author: MashaMSFT
-ms.author: mathoma
+description: Learn about using SQL Server transactional replication with Azure SQL Managed Instance.
+author: sasapopo
+ms.author: sasapopo
 ms.reviewer: mathoma, randolphwest
 ms.date: 06/09/2023
 ms.service: sql-managed-instance
@@ -43,7 +43,7 @@ The key components in transactional replication are the **Publisher**, **Distrib
 
 The **Publisher** publishes changes made on some tables (articles) by sending the updates to the Distributor. The publisher can be an Azure SQL managed instance or a SQL Server instance.
 
-The **Distributor** collects changes in the articles from a Publisher and distributes them to the Subscribers. The Distributor can be either an Azure SQL managed instance or a SQL Server instance (any version as long it is equal to or higher than the Publisher version).
+The **Distributor** collects changes in the articles from a Publisher and distributes them to the Subscribers. The Distributor can be either an Azure SQL managed instance or a SQL Server instance (any version as long it's equal to or higher than the Publisher version).
 
 The **Subscriber** receives changes made on the Publisher. A SQL Server instance and Azure SQL managed instance can both be push and pull subscribers, though a pull subscription isn't supported when the distributor is an Azure SQL managed instance and the subscriber isn't. A database in Azure SQL Database can only be a push subscriber.
 
@@ -147,7 +147,7 @@ Transactional replication has some limitations that are specific to Azure SQL Ma
 
 Azure SQL Managed Instance is using user configured Azure Storage Account for snapshot files used for transactional replication. Unlike SQL Server in the on-premises environment, Azure SQL Managed Instance isn't deleting snapshot files from Azure Storage Account. **Once files are no longer needed, you should delete them.** This can be done via Azure Storage interface on Azure portal, [Microsoft Azure Storage Explorer](https://azure.microsoft.com/products/storage/storage-explorer/), or via command line clients (Azure PowerShell or CLI) or Azure Storage Management REST API.
 
-Here is an example of how you can delete file and how you can delete an empty folder.
+Here's an example of how you can delete file and how you can delete an empty folder.
 
 ``` CLI
 az storage file delete-batch --source <file_path> --account-key <account_key> --account-name <account_name>
@@ -162,7 +162,7 @@ Number of distribution agents configured to run continuously is limited to 30 on
 
 Using transactional replication with instances that are in a failover group is supported. However, if you configure replication before adding your SQL managed instance into a failover group, replication pauses when you start to create your failover group, and replication monitor shows a status of `Replicated transactions are waiting for the next log backup or for mirroring partner to catch up`. Replication resumes once the failover group is created successfully.
 
-If a **publisher** or **distributor** SQL managed instance is in a [failover group](auto-failover-group-sql-mi.md), the SQL managed instance administrator must clean up all publications on the old primary and reconfigure them on the new primary after a failover occurs. The following activities are needed in this scenario:
+If a **publisher** or **distributor** SQL managed instance is in a [failover group](failover-group-sql-mi.md), the SQL managed instance administrator must clean up all publications on the old primary and reconfigure them on the new primary after a failover occurs. The following activities are needed in this scenario:
 
 1. Stop all replication jobs running on the database, if there are any.
 1. Drop subscription metadata from publisher by running the following script on publisher database. Replace the `<name of publication>` and `<name of subscriber>` values:
@@ -200,12 +200,39 @@ If a **subscriber** SQL managed instance is in a failover group, the publication
 - For a failover with data loss, replication works as well. It replicates the lost changes again.
 - For a failover with data loss, but the data loss is outside of the distribution database retention period, the SQL managed instance administrator needs to reinitialize the subscription database.
 
+## Troubleshoot common issues
+
+### Transaction log and Transactional Replication
+
+In usual circumstances, transcation log is used for recording changes of the data within a database. Changes are recorded in the transaction log, and that makes the log storage consumption to grow. There's also an automatic process that allows safe truncation of the transaction log, and this process reduces the used storage space for the log.
+When publishing for Transactional Replication is configured, transaction log truncation is prevented until changes in the log are processed by the log reader job. In some circumstances, processing of the transaction log is effectively blocked, and that state can lead to filling up entire storage reserved for transaction log. When there's no free space for transaction log, and there's no more space for transaction log to grow, we have full transaction log. In this state, the database can no longer process any write workload, and effectively becomes read-only database. 
+
+#### Disabled log reader agent
+
+Sometimes Transactional Replication publication is configured for a database, but log reader agent isn't configured to run. In that case, changes are accumulating in the transaction log, and they aren't being processed. This leads to constant growth of transactional log, and eventually to the full transcation log.
+User should make sure that log reader job exists and is active. Alternative would be to disable Transactional Replication, if it's not needed.
+
+#### Log reader agent query timeouts
+
+Sometimes, log reader job can't make effective progress due to repeated query timeouts. A way to fix query timeouts is to increase the query timeout setting for the log reader agent job.
+
+Increasing query timeout for log reader job can be done with SSMS. In the object explorer, under SQL Server Agent, find the job you'd like to modify. First stop it, and then open its properties. Find `step 2` and edit it. Append the command value with `-QueryTimeout <timeout_in_seconds>`. For the query timeout value try `21600` or higher. Finally, start the job again.
+
+#### Log storage size reached max limit of 2 TB
+
+When transaction log storage size reaches max limit, which is 2 TB, log physically can't grow more than that. In this case, the only available mitigation is marking all transactions that are to be replicated as processed, to allow transaction log to be truncated. This effectively means that remaining transactions in the log will not be replicated, and you need to reinitialize the replication.
+
+> [!NOTE]
+> After performing mitigation you will need to reinitialize the replication, which means replicating entire data set again. This is size of data operation, and might be long running, depending on the amount of data that should be replicated.
+
+To perform the mitigation, first you need to stop the log reader agent on the distributor. Then you should run the `sp_repldone` stored procedure with `reset` flag set to `1` on the publisher database, to allow transaction log truncation. This command should look like this `EXEC sp_repldone @xactid = NULL, @xact_seqno = NULL, @numtrans = 0,  @time = 0, @reset = 1`. After this, you'll need to reinitialize the replication.
+
 ## Next steps
 
 For more information about configuring transactional replication, see the following tutorials:
 
-- [Configure replication between a SQL Managed Instance publisher and subscriber](../managed-instance/replication-between-two-instances-configure-tutorial.md)
-- [Configure replication between a SQL Managed Instance publisher, SQL Managed Instance distributor, and SQL Server subscriber](../managed-instance/replication-two-instances-and-sql-server-configure-tutorial.md)
+- [Configure replication between a SQL Managed Instance publisher and subscriber](../managed-instance/replication-between-two-instances-configure-tutorial.md).
+- [Configure replication between a SQL Managed Instance publisher, SQL Managed Instance distributor, and SQL Server subscriber](../managed-instance/replication-two-instances-and-sql-server-configure-tutorial.md).
 - [Create a publication](/sql/relational-databases/replication/publish/create-a-publication).
 - [Create a push subscription](/sql/relational-databases/replication/create-a-push-subscription) by using the server name as the subscriber (for example `N'azuresqldbdns.database.windows.net`), and the database in Azure SQL Database name as the destination database (for example, `Adventureworks`).
 

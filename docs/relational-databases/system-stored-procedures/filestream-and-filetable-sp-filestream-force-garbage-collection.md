@@ -55,22 +55,22 @@ Specifies the logical name of the FILESTREAM container to run the GC on. *@filen
 | `0` | Operation success |
 | `1` | Operation failure |
 
-## Result sets
+## Result set
 
 | Value | Description |
 | --- | --- |
 | `file_name` | Indicates the FILESTREAM container name |
 | `num_collected_items` | Indicates the number of FILESTREAM items (files or directories) that have been garbage collected (deleted) in this container. |
 | `num_marked_for_collection_items` | Indicates the number of FILESTREAM items (files or directories) that have been marked for GC in this container. These items haven't been deleted yet, but may be eligible for deletion following the GC phase. |
-| `num_unprocessed_items` | Indicates the number of eligible FILESTREAM items (files or directories) that weren't processed for GC in this FILESTREAM container. Items may be unprocessed for various reasons, including:<br /><br />- Files that need to be pinned down because a log backup or checkpoint hasn't been taken.<br /><br />- Files in the FULL or BULK_LOGGED recovery model.<br /><br />- There is a long-running active transaction.<br /><br />- The replication log reader job has not run. See the white paper [FILESTREAM Storage in SQL Server 2008](/previous-versions/sql/sql-server-2008/hh461480(v=msdn.10)) for more information. |
+| `num_unprocessed_items` | Indicates the number of eligible FILESTREAM items (files or directories) that weren't processed for GC in this FILESTREAM container. Items may be unprocessed for various reasons, including:<br /><br />- Files that need to be pinned down because a log backup or checkpoint hasn't been taken.<br /><br />- Files in the FULL or BULK_LOGGED recovery model.<br /><br />- There's a long-running active transaction.<br /><br />- The replication log reader job hasn't run. See the white paper [FILESTREAM Storage in SQL Server 2008](/previous-versions/sql/sql-server-2008/hh461480(v=msdn.10)) for more information. |
 | `last_collected_xact_seqno` | Returns the last corresponding log sequence number (LSN) up to which the files have been garbage collected for the specified FILESTREAM container. |
 
 ## Remarks
 
-Explicitly runs the FILESTREAM garbage collection task to completion on the requested database (and FILESTREAM container). The GC process removes files that are no longer needed. The time needed for this operation to complete depends on the size of the FILESTREAM data in that database or container, and the amount of DML activity that has recently occurred on the FILESTREAM data. Though this operation can be run with the database online, this may affect the performance of the database during its run due to various I/O activities done by the GC process.
+Explicitly runs the FILESTREAM garbage collection task to completion on the requested database (and FILESTREAM container). The GC process removes files that are no longer needed. The time needed for this operation to complete depends on the size of the FILESTREAM data in that database or container, and the amount of DML activity that recently occurred on the FILESTREAM data. Though this operation can be run with the database online, this may affect the performance of the database during its run due to various I/O activities done by the GC process.
 
 > [!NOTE]  
-> It is recommended that this operation be run only when necessary and outside usual operation hours.
+> It's recommended that this operation be run only when necessary and outside usual operation hours.
 
 Multiple invocations of this stored procedure can be run simultaneously only on separate containers or separate databases.
 
@@ -103,7 +103,7 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'fsdb',
     @filename = N'FSContainer';
 ```
 
-## See also
+## Related content
 
 - [FILESTREAM (SQL Server)](../blob/filestream-sql-server.md)
 - [FileTables (SQL Server)](../blob/filetables-sql-server.md)

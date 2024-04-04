@@ -3,12 +3,13 @@ title: "SQL Server Backup to URL for Microsoft Azure Blob Storage"
 description: Learn about the concepts, requirements, and components necessary for SQL Server to use the Microsoft Azure Blob Storage as a backup destination.
 author: dplessMSFT
 ms.author: dpless
-ms.reviewer: mathoma, wiassaf
+ms.reviewer: mathoma, wiassaf, hudequei 
 ms.date: 03/01/2023
 ms.service: sql
 ms.subservice: backup-restore
 ms.custom: devx-track-azurepowershell
 ms.topic: conceptual
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server backup to URL for Microsoft Azure Blob Storage
 
@@ -51,13 +52,13 @@ If the database is too large, either:
    or
 - Back up to multiple block blobs
 
-#### Support on Linux, containers, and Azure Arc-enabled SQL Managed Instance
+#### Support on Linux, containers, and SQL Managed Instance enabled by Azure Arc
 
 If the SQL Server instance is hosted on Linux, including:
 
 - Stand-alone operating system
 - Containers
-- Azure Arc-enabled SQL Managed Instance
+- SQL Managed Instance enabled by Azure Arc
 - Any other Linux-based environment
 
 The only supported backup to URL for Azure Blob Storage is to block blobs, using the Shared Access Signature.
@@ -109,9 +110,9 @@ The following are security considerations and requirements when backing up to or
     > [!IMPORTANT]  
     >  Although the maximum backup size supported by a single block blob is 200 GB, it's possible for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to write in smaller block sizes, which can lead [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to reach the 50,000 block limit before the entire backup is transferred. Stripe backups (even if they're smaller than 200 GB) to avoid the block limit, especially when if you use differential or uncompressed backups.
 
-- You can issue backup or restore statements by using TSQL, SMO, PowerShell cmdlets, SQL Server Management Studio Backup or Restore wizard.
+- You can issue backup or restore statements by using Transact-SQL, SMO, PowerShell cmdlets, SQL Server Management Studio Backup or Restore wizard.
   
-- Backup to Azure Storage account using Azure Active Directory, User Managed or System Managed Identities is not supported by SQL Server.
+- Backup to Azure Storage account only supports authentication with Shared Access Signature (SAS) tokens or storage account keys. All other authentication methods, including authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)), are not supported.
 
 - Creating a logical device name is not supported. So adding URL as a backup device using sp_dumpdevice or through SQL Server Management Studio is not supported.  
 
@@ -354,11 +355,11 @@ $cbc = $container.CloudBlobContainer
 # Sets up a Stored Access Policy and a Shared Access Signature for the new container  
 $policy = New-AzStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission "rwld"
 $sas = New-AzStorageContainerSASToken -Policy $policyName -Context $storageContext -Container $containerName
-Write-Host 'Shared Access Signature= '$($sas.Substring(1))''  
+Write-Host 'Shared Access Signature= '$($sas.TrimStart('?'))''  
 
 # Outputs the Transact SQL to the clipboard and to the screen to create the credential using the Shared Access Signature  
 Write-Host 'Credential T-SQL'  
-$tSql = "CREATE CREDENTIAL [{0}] WITH IDENTITY='Shared Access Signature', SECRET='{1}'" -f $cbc.Uri,$sas.Substring(1)   
+$tSql = "CREATE CREDENTIAL [{0}] WITH IDENTITY='Shared Access Signature', SECRET='{1}'" -f $cbc.Uri,$sas.TrimStart('?')   
 $tSql | clip  
 Write-Host $tSql  
 ```  
@@ -396,21 +397,21 @@ The following examples create [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 
 ### <a id="complete"></a> Perform a full database backup
 
-The following examples perform a full database backup of the `AdventureWorks2016` database to Azure Blob Storage. Use one of the following samples:
+The following examples perform a full database backup of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to Azure Blob Storage. Use one of the following samples:
 
 1. **To URL using Shared Access Signature**  
 
    ```sql  
-   BACKUP DATABASE AdventureWorks2016   
-   TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak';  
+   BACKUP DATABASE AdventureWorks2022   
+   TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2022.bak';  
    GO   
    ```  
 
 1. **To URL using storage account identity and access key**  
 
    ```sql
-   BACKUP DATABASE AdventureWorks2016  
-   TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak'   
+   BACKUP DATABASE AdventureWorks2022  
+   TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2022.bak'   
          WITH CREDENTIAL = '<mycredentialname>'   
         ,COMPRESSION  
         ,STATS = 5;  
@@ -419,27 +420,27 @@ The following examples perform a full database backup of the `AdventureWorks2016
 
 ### <a id="PITR"></a> Restore to a point-in-time using STOPAT
 
-The following example restores the `AdventureWorks2016` sample database to its state at a point in time, and shows a restore operation.  
+The following example restores the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database to its state at a point in time, and shows a restore operation.  
 
 **From URL using Shared Access Signature**  
 
    ```sql
-   RESTORE DATABASE AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_16_00_00.bak'   
-   WITH MOVE 'AdventureWorks2016_data' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.mdf'  
-   ,MOVE 'AdventureWorks2016_log' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.ldf'  
+   RESTORE DATABASE AdventureWorks2022 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2022_2015_05_18_16_00_00.bak'   
+   WITH MOVE 'AdventureWorks2022_data' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2022.mdf'  
+   ,MOVE 'AdventureWorks2022_log' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2022.ldf'  
    ,NORECOVERY  
    ,REPLACE  
    ,STATS = 5;  
    GO   
   
-   RESTORE LOG AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_18_00_00.trn'   
+   RESTORE LOG AdventureWorks2022 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2022_2015_05_18_18_00_00.trn'   
    WITH   
    RECOVERY   
    ,STOPAT = 'May 18, 2015 5:35 PM'   
    GO  
    ```  
 
-## Next steps
+## Related content
 
 - [SQL Server Backup to URL for Azure Blob Storage best practices and troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)
 - [Back Up and Restore of System Databases (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)

@@ -9,7 +9,6 @@ ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords:
   - "bcp_setbulkmode function"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # bcp_setbulkmode
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -247,7 +246,7 @@ BOOL BCPSetBulkMode(TCHAR * pszServer, TCHAR * pszQureryOut, char BCPType, TCHAR
                ODBCCleanUp();  
                return false;  
             }  
-            // set queryout TSQL statement  
+            // set queryout T-SQL statement  
             rc = bcp_control(g_hDbc, BCPHINTS , pszQureryOut);  
             if (SUCCEED != rc) {  
                printf("bcp_control(..BCP_OPTION_HINTS..) failed\n");  

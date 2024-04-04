@@ -121,7 +121,7 @@ After you compare the data in two databases, you can synchronize them by updatin
 
 1. (Optional) Select **Generate Script**.
 
-    A Transact\-SQL editor window opens and shows the *Data Manipulation Language* (DML) script that would be used to update the target.
+    A Transact-SQL editor window opens and shows the *Data Manipulation Language* (DML) script that would be used to update the target.
 
 1. To synchronize records that are different, missing, or new, select **Update Target**.
 
@@ -133,7 +133,7 @@ After you compare the data in two databases, you can synchronize them by updatin
     > [!NOTE]  
     > If you opt to update indexed views, the **Update Target** operation might fail if this action causes duplicate keys to be inserted into the same table.
 
-### Update target data by using a transact\-sql script
+### Update target data by using a Transact-SQL script
 
 1. Compare the data in a source and a target database. For more information, see [Compare Database Data](#CompareDatabaseData).
 
@@ -143,7 +143,7 @@ After you compare the data in two databases, you can synchronize them by updatin
 
 1. Select **Generate Script**.
 
-    A new window shows the Transact\-SQL script that would propagate the changes necessary to make the data in the target match the data in the source. The new window is given a name such as **DataUpdate_Database_1.sql**.
+    A new window shows the Transact-SQL script that would propagate the changes necessary to make the data in the target match the data in the source. The new window is given a name such as **DataUpdate_Database_1.sql**.
 
     This script reflects changes that you have made in the details pane. For example, you might have cleared a check box for a given row in the Only in Target page for the [dbo].[Shippers] table. In that case, the script wouldn't update that row.
 

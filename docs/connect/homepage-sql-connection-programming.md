@@ -27,9 +27,6 @@ For details about the connection strings for connecting to Azure SQL Database, s
 - [Use .NET Core (C#) to query an Azure SQL database](/azure/sql-database/sql-database-connect-query-dotnet-core).
 - Other Azure SQL Database articles that are nearby the preceding article in the table of contents, about other languages. For instance, see [Use PHP to query an Azure SQL database](/azure/sql-database/sql-database-connect-query-php).
 
-#### Build-an-app webpages
-
-Our *Build-an-app* webpages present code examples, along with configuration information, in an alternative format. For more information, see later in this article the [section labeled *Build-an-app website*](#build-an-app).
 
 ## Languages and drivers for client programs
 
@@ -74,7 +71,6 @@ The .NET managed languages, such as C# and Visual Basic, are the most common use
 | [Proof of concept connecting to SQL using ADO.NET](./ado-net/step-3-connect-sql-ado-net.md) | A small code example focused on connecting and querying SQL Server. |
 | [Connect resiliently to SQL with ADO.NET](./ado-net/step-4-connect-resiliently-sql-ado-net.md) | Retry logic in a code example, because connections can occasionally experience moments of connectivity loss.<br /><br />Retry logic applies well to connections maintained through the internet into any cloud database, such as to Azure SQL Database. |
 | [Azure SQL Database: Demonstration of how to use .NET Core on Windows/Linux/macOS to create a C# program, to connect and query](/azure/sql-database/sql-database-connect-query-dotnet-core) | Azure SQL Database example. |
-| [Build-an-app: C#, ADO.NET, Windows](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/) | Configuration information, along with code examples. |
 
 #### Documentation
 
@@ -122,7 +118,6 @@ Microsoft provides a Java Database Connectivity (JDBC) driver for use with SQL S
 | [Connection URL Sample](./jdbc/connection-url-sample.md) | Describes how to use a connection URL to connect to SQL Server. Then use it to use an SQL statement to retrieve data. |
 | [Data Source Sample](./jdbc/data-source-sample.md) | Describes how to use a data source to connect to SQL Server. Then use a stored procedure to retrieve data. |
 | [Use Java to query an Azure SQL database](/azure/sql-database/sql-database-connect-query-java) | Azure SQL Database example. |
-| [Create Java apps using SQL Server on Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/) | Configuration information, along with code examples. |
 
 #### Documentation
 
@@ -146,7 +141,6 @@ The Node.js connection driver for SQL Server is implemented in JavaScript. The d
 | :-- | :-- |
 | [Proof of concept connecting to SQL using Node.js](./node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md) | Bare bones source code for connecting to SQL Server, and executing a query. |
 | [Azure SQL database: Use Node.js to query](/azure/sql-database/sql-database-connect-query-nodejs) | Example for Azure SQL Database in the cloud. |
-| [Create Node.js apps to use SQL Server on macOS](https://www.microsoft.com/sql-server/developer-get-started/node/mac/) | Configuration information, along with code examples. |
 
 ## <a id="cpp-odbc"></a> ODBC for C++
 
@@ -189,7 +183,6 @@ You can use PHP to interact with SQL Server. The root of our PHP documentation i
 | [Proof of concept connecting to SQL using PHP](./php/step-3-proof-of-concept-connecting-to-sql-using-php.md) | A small code example focused on connecting and querying SQL Server. |
 | [Connect resiliently to SQL with PHP](./php/step-4-connect-resiliently-to-sql-with-php.md) | Retry logic in a code example, because connections through the Internet and the cloud can occasionally experience moments of connectivity loss. |
 | [Azure SQL database: Use PHP to query](/azure/sql-database/sql-database-connect-query-php) | Azure SQL Database example. |
-| [Create PHP apps to use SQL Server on RHEL](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/) | Configuration information, along with code examples. |
 
 ## Python
 
@@ -201,7 +194,6 @@ You can use Python to interact with SQL Server.
 | :-- | :-- |
 | [Proof of concept connecting to SQL with Python using pyodbc](./python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md) | A small code example focused on connecting and querying SQL Server. |
 | [Azure SQL database: Use Python to query](/azure/sql-database/sql-database-connect-query-python) | Azure SQL Database example. |
-| [Create PHP apps to use SQL Server on SLES](https://www.microsoft.com/sql-server/developer-get-started/python/sles/) | Configuration information, along with code examples. |
 
 #### Documentation
 
@@ -221,61 +213,6 @@ You can use Ruby to interact with SQL Server. The root of our Ruby documentation
 | :-- | :-- |
 | [Proof of concept connecting to SQL with Ruby](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | A small code example focused on connecting and querying SQL Server. |
 | [Azure SQL database: Use Ruby to query](/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL Database example. |
-| [Create Ruby apps to use SQL Server on macOS](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | Configuration information, along with code examples. |
-
-## <a id="build-an-app"></a> Build-an-app website, for SQL client development
-
-On our [*Build-an-app*](https://www.microsoft.com/sql-server/developer-get-started/) webpages, you can choose from a long list of programming languages for connecting to SQL Server. And your client program can run on various operating systems.
-
-*Build-an-app* emphasizes simplicity and completeness for the developer who is just getting started. The steps explain the following tasks:
-
-1. How to install Microsoft SQL Server
-1. How to download and install tools and drivers.
-1. How to make any necessary configurations, as appropriate for your chosen operating system.
-1. How to compile the provided source code.
-1. How to run the program.
-
-Next are a couple approximate outlines of the detail provided on the website:
-
-#### Java on Ubuntu
-
-1. Set up your environment
-   1. Install SQL Server
-   1. Install Java
-   1. Install the Java Development Kit (JDK)
-   1. Install Maven
-1. Create Java application with SQL Server
-   1. Create a Java app that connects to SQL Server and executes queries
-   1. Create a Java app that connects to SQL Server using the popular framework Hibernate
-1. Make your Java app up to 100x faster
-   1. Create a Java app to demonstrate Columnstore indexes
-
-#### Python on Windows
-
-1. Set up your environment
-   1. Install SQL Server
-   1. Install Python
-   1. Install the ODBC Driver and SQL Command Line Utility for SQL Server
-1. Create Python application with SQL Server
-   1. Install the Python driver for SQL Server
-   1. Create a database for your application
-   1. Create a Python app that connects to SQL Server and executes queries
-1. Make your Python app up to 100x faster
-   1. Create a new table with 5 million using sqlcmd
-   1. Create a Python app that queries this table and measures the time taken
-   1. Measure how long it takes to run the query
-   1. Add a columnstore index to your table
-   1. Measure how long it takes to run the query with a columnstore index
-
-The following screenshots give you an idea of what our SQL development documentation website looks like.
-
-#### Choose a language
-
-:::image type="content" source="./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png" alt-text="Screenshot of SQL Developer website, getting started with Java.":::
-
-#### Choose an operating system
-
-:::image type="content" source="./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-java-ubuntu-c31.png" alt-text="Screenshot of SQL Developer website, with Java on Ubuntu.":::
 
 ## Other development
 
@@ -290,6 +227,3 @@ This section provides links about other development options. These include using
 - [Azure for Python developers](/python/azure/)
 - [Create a PHP web app in Azure](/azure/app-service-web/app-service-web-get-started-php)
 
-#### Other languages
-
-- [Create Go apps using SQL Server on Windows](https://www.microsoft.com/sql-server/developer-get-started/go/windows/)

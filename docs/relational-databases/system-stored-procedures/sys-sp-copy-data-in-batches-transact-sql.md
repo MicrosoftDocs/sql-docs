@@ -10,7 +10,7 @@ ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+monikerRange: "=azuresqldb-current || >=sql-server-ver16 || >=sql-server-linux-ver16"
 ---
 # sys.sp_copy_data_in_batches (Transact-SQL)
 
@@ -44,7 +44,7 @@ The name of the table to be used as the target of the data copy.
 
 0 (success)
 
-## Result sets
+## Result set
 
 None.
 
@@ -52,7 +52,7 @@ None.
 
 This operation requires **SELECT** on the source table, **INSERT** in the target table, and **ALTER** on the target table if there are foreign key or check constraints that will be disabled, or an identity column that will be adjusted.
 
-## Next steps
+## Related content
 
 - [Ledger considerations and limitations](../security/ledger/ledger-limits.md)
 - [Ledger overview](../security/ledger/ledger-overview.md)

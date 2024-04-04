@@ -9,6 +9,7 @@ ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
 ---
+
 # Certificate requirements for SQL Server
 
 This article describes certificate requirements for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and how to check if a certificate meets these requirements.
@@ -32,7 +33,7 @@ For using TLS for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] 
 
 - When connecting to an availability group listener, the certificates that are provisioned for each participating server node in the failover cluster should also have a list of all availability group listeners set in the **Subject Alternate Name** of the certificate. For more information, see [Listeners and TLS/SSL certificates](../availability-groups/windows/listeners-client-connectivity-application-failover.md#SSLcertificates). For more information on SQL Always On, see [Connect to an Always On availability group listener](../availability-groups/windows/listeners-client-connectivity-application-failover.md).
 
-- The **Subject Alternate Name** should include all the names your clients may use to connect to a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance.
+- The **Subject Alternate Name** should include all the names your clients may use to connect to a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance. If using Availability Groups, the Subject Alternate Name should include the NetBIOS and Fully Qualified Domain Name (FQDN) of the localhost and created listeners.
 
 The client must be able to verify the ownership of the certificate used by the server. If the client has the public key certificate of the certification authority that signed the server certificate, no further configuration is necessary. Microsoft Windows includes the public key certificates of many certification authorities. If the server certificate was signed by a public or private certification authority for which the client doesn't have the public key certificate, you must install the public key certificate of the certification authority that signed the server certificate on each client that is going to connect to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)].
 
@@ -64,3 +65,8 @@ You can use one of the following methods to check the validity of the certificat
 ### Expired certificates
 
 [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] only checks the validity of the certificates at the time of configuration. For example, you won't be able to use Configuration Manager on [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions, to provision an expired certificate. [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] will continue to run without problems if the certificate expires after it has already been provisioned. But some client applications like Power BI check the validity of the certificate on each connection and will error out if the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance is configured to use an expired certificate for encryption. We recommend that you don't use an expired certificate for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] encryption.
+
+## Related content
+
+- [TLS 1.3 support](../../relational-databases/security/networking/tls-1-3.md)
+- [Configure TLS 1.3](../../relational-databases/security/networking/connect-with-tls-1-3.md)

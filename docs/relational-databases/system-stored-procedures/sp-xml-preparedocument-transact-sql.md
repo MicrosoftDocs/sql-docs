@@ -57,7 +57,7 @@ The handle to the newly created document. *hdoc* is an integer.
 The original XML document. The MSXML parser parses this XML document. *xmltext* is a text parameter: **char**, **nchar**, **varchar**, **nvarchar**, **text**, **ntext** or **xml**. The default value is NULL, in which case an internal representation of an empty XML document is created.
 
 > [!NOTE]  
-> `sp_xml_preparedocument` can only process text or untyped XML. If an instance value to be used as input is already typed XML, first cast it to a new untyped XML instance or as a string and then pass that value as input. For more information, see [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).
+> `sp_xml_preparedocument` can only process text or untyped XML. If an instance value to be used as input is already typed XML, first cast it to a new untyped XML instance or as a string and then pass that value as input. For more information, see [Compare Typed XML to Untyped XML](../xml/compare-typed-xml-to-untyped-xml.md).
 
 #### [ *xpath_namespaces* ]
 
@@ -152,7 +152,7 @@ SET @doc ='
 EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc, '<ROOT xmlns:xyz="urn:MyNamespace"/>';
 ```
 
-## Next steps
+## Related content
 
 - [XML Stored Procedures(Transact-SQL)](xml-stored-procedures-transact-sql.md)
 - [System Stored Procedures(Transact-SQL)](system-stored-procedures-transact-sql.md)

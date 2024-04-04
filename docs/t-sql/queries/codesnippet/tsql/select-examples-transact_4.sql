@@ -1,10 +1,11 @@
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
-SELECT p.Name AS ProductName, 
-NonDiscountSales = (OrderQty * UnitPrice),
-Discounts = ((OrderQty * UnitPrice) * UnitPriceDiscount)
-FROM Production.Product AS p 
+
+SELECT p.Name AS ProductName,
+    NonDiscountSales = (OrderQty * UnitPrice),
+    Discounts = ((OrderQty * UnitPrice) * UnitPriceDiscount)
+FROM Production.Product AS p
 INNER JOIN Sales.SalesOrderDetail AS sod
-ON p.ProductID = sod.ProductID 
+    ON p.ProductID = sod.ProductID
 ORDER BY ProductName DESC;
 GO

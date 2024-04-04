@@ -152,9 +152,9 @@ $scrp.Options.ScriptDrops = $false
 $scrp.Options.WithDependencies = $true  
 $scrp.Options.IncludeIfNotExists = $true  
   
-# Set the path context to the tables in AdventureWorks2012.  
+# Set the path context to the tables in AdventureWorks2022.  
   
-CD Databases\AdventureWorks2012\Tables  
+CD Databases\AdventureWorks2022\Tables  
   
 foreach ($Item in Get-ChildItem)  
  {    

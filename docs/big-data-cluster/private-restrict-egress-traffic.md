@@ -4,25 +4,27 @@ description: Learn how to restrict egress traffic from Big Data Clusters in Azur
 author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
-ms.date: 06/20/2022
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: big-data-cluster
-ms.topic: conceptual
-ms.custom: kr2b-contr-experiment, devx-track-azurecli
+ms.topic: how-to
+ms.custom:
+  - kr2b-contr-experiment
+  - devx-track-azurecli
 ---
 
-# Restrict egress traffic from big data clusters in Azure Kubernetes Service (AKS) private cluster
+# Restrict egress traffic from SQL Server 2019 Big Data Clusters in Azure Kubernetes Service (AKS) private cluster
 
-[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+[!INCLUDE [big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
-You can restrict egress traffic from Big Data Clusters with *Azure Kubernetes Service (AKS)*. The service provisions a standard SKU Load Balancer. This is set up and used for egress by default. Now, the default setup may not meet all scenarios and requirements. For example, if public IPs are disallowed or additional *hops* are required for egress. You can define a *user-defined route (UDR)* table if the cluster disallows public IPs and sits behind a *network virtual appliance (NVA)*.
+You can restrict egress traffic from Big Data Clusters with *Azure Kubernetes Service (AKS)*. The service provisions a standard SKU Load Balancer. This is set up and used for egress by default. Now, the default setup might not meet all scenarios and requirements. For example, if public IPs are disallowed or additional *hops* are required for egress. You can define a *user-defined route (UDR)* table if the cluster disallows public IPs and sits behind a *network virtual appliance (NVA)*.
 
 AKS clusters have unrestricted outbound (egress) internet access. This is for management and operational purposes. Worker nodes in an AKS cluster need to access certain ports and *fully qualified domain names (FQDNs)*. The following are examples of this:
 
-* When the cluster needs to pull base system container images from Microsoft Container Registry (MCR) during Worker node OS security updates.
-* When GPU enabled AKS worker nodes need to access endpoints from Nvidia to install a driver.
-* When customers use AKS work in conjunction with Azure services, such as Azure policy for enterprise-grade compliance, Azure Monitoring (with container insights).
-* When a Dev Space is enabled, and other similar scenarios.
+- When the cluster needs to pull base system container images from Microsoft Container Registry (MCR) during Worker node OS security updates.
+- When GPU enabled AKS worker nodes need to access endpoints from Nvidia to install a driver.
+- When customers use AKS work in conjunction with Azure services, such as Azure policy for enterprise-grade compliance, Azure Monitoring (with container insights).
+- When a Dev Space is enabled, and other similar scenarios.
 
 > [!NOTE]
 > When you deploy a *big data cluster (BDC)* in Azure Kubernetes Service (AKS) private cluster, there are no inbound dependencies except for those that are mentioned in this article. You can find all outbound dependencies at [control egress traffic for cluster nodes in Azure Kubernetes Service (AKS)](/azure/aks/limit-egress-traffic) .
@@ -37,18 +39,18 @@ For complete information on the FQDN tag, visit [Restrict egress traffic using A
 
 The following image shows how traffic is restricted on an AKS private cluster.
 
-:::image type="content" source="media/private-cluster-restrict-egress-traffic/aks-azure-firewall-egress.png" alt-text="A screenshot that shows AKS private cluster firewall egress traffic":::
+:::image type="content" source="media/private-cluster-restrict-egress-traffic/aks-azure-firewall-egress.png" alt-text="Screenshot that shows AKS private cluster firewall egress traffic." lightbox="media/private-cluster-restrict-egress-traffic/aks-azure-firewall-egress.png":::
 
 Develop the basic architecture for a Big Data Cluster with Azure Firewall:
 
 1. Create the resource group & VNet
-2. Create & set up Azure firewall
-3. Create user-defined route table
-4. Set up firewall rules
-5. Create service principal (SP)
-6. Create AKS private cluster
-7. Create BDC deployment profile
-8. Deploy BDC
+1. Create & set up Azure firewall
+1. Create user-defined route table
+1. Set up firewall rules
+1. Create service principal (SP)
+1. Create AKS private cluster
+1. Create BDC deployment profile
+1. Deploy BDC
 
 ## Create the resource group and VNet
 
@@ -218,7 +220,8 @@ You can create a big data cluster with a custom profile:
 azdata bdc config init --source aks-dev-test --target private-bdc-aks --force
 ```
 
-## Generate and configure a custom BDC deployment profile: 
+## Generate and configure a custom BDC deployment profile
+
 ```console
 azdata bdc config replace -c private-bdc-aks/control.json -j "$.spec.docker.imageTag=2019-CU6-ubuntu-16.04"
 azdata bdc config replace -c private-bdc-aks/control.json -j "$.spec.storage.data.className=default"
@@ -245,16 +248,15 @@ azdata bdc create --config-profile private-bdc-aks --accept-eula yes
 
 You can use third-party firewalls to restrict egress traffic with a deployed BDC and AKS private cluster. To view an example, visit [Azure Marketplace firewalls](https://azuremarketplace.microsoft.com/marketplace/apps?search=firewall&page=1). Third-party firewalls can be used in private deployment solutions with more compliant configurations. The firewall should provide the following network rules:
 
-* View all of the [required outbound network rules and FQDNs for AKS clusters](/azure/aks/limit-egress-traffic#required-outbound-network-rules-and-fqdns-for-aks-clusters). This URL also includes all of the wildcard HTTP/HTTPS endpoints and dependencies. These can vary with your AKS cluster, based on a number of qualifiers, and your actual requirements.
-* Azure Global required network rules / FQDN/application rules mentioned [here](/azure/aks/limit-egress-traffic#azure-global-required-network-rules).
-* Optional recommended FQDN / application rules for AKS clusters mentioned [here](/azure/aks/limit-egress-traffic#optional-recommended-fqdn--application-rules-for-aks-clusters). 
+- View all of the [required outbound network rules and FQDNs for AKS clusters](/azure/aks/limit-egress-traffic#required-outbound-network-rules-and-fqdns-for-aks-clusters). This URL also includes all of the wildcard HTTP/HTTPS endpoints and dependencies. These can vary with your AKS cluster, based on a number of qualifiers, and your actual requirements.
+- Azure Global required network rules / FQDN/application rules mentioned [here](/azure/aks/limit-egress-traffic#azure-global-required-network-rules).
+- Optional recommended FQDN / application rules for AKS clusters mentioned [here](/azure/aks/limit-egress-traffic#optional-recommended-fqdn--application-rules-for-aks-clusters). 
 
 Please check how to [manage a big data cluster in AKS private cluster](private-manage.md)  and then the next step is to [connect to a big data cluster](connect-to-big-data-cluster.md).
 
 See automation scripts for this scenario at [SQL Server Samples repository on GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/private-aks).
 
-## Next steps
+## Related content
 
-[Manage a big data cluster in AKS private cluster](private-manage.md)
-
-[Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md)
+- [Manage SQL Server Big Data Clusters in AKS private cluster](private-manage.md)
+- [Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md)

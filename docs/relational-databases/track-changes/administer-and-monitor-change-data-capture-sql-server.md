@@ -1,9 +1,10 @@
 ---
 title: "Administer and monitor change data capture"
 description: "Learn how to administer and monitor change data capture on SQL Server, Azure SQL Managed Instance, and Azure SQL Database."
-author: MikeRayMSFT
-ms.author: mikeray
-ms.date: 03/16/2023
+author: croblesm
+ms.author: roblescarlos
+ms.reviewer: "mathoma"
+ms.date: "10/19/2023"
 ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,18 +13,17 @@ helpviewer_keywords:
   - "change data capture, jobs"
 ---
 # Administer and monitor change data capture 
-[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-This topic describes how to administer and monitor change data capture.  
+This topic describes how to administer and monitor change data capture for SQL Server and Azure SQL Managed Instance. 
+
+For Azure SQL Database, which uses a different job mechanism, see [CDC with Azure SQL Database](/azure/azure-sql/database/change-data-capture-overview).  
   
-> [!NOTE]  
-> In Azure SQL Database, the capture and cleanup SQL Server Agent jobs are replaced by a change data capture scheduler that invokes stored procedures to start periodic capture and cleanup of the change tables. For more information, see the section on [CDC in Azure SQL Database](#cdc-in-azure-sql-database) later in this article.
 
 ## <a name="Capture"></a> Capture job
 
 The capture job is initiated by running the parameterless stored procedure `sp_MScdc_capture_job`. This stored procedure starts by extracting the configured values for `maxtrans`, `maxscans`, `continuous`, and `pollinginterval` for the capture job from `msdb.dbo.cdc_jobs`. These configured values are then passed as parameters to the stored procedure `sp_cdc_scan`. This is used to invoke `sp_replcmds` to perform the log scan. 
 
-In Azure SQL Database, `continuous` and `pollinginterval` parameters do not apply. For more information, see [CDC in Azure SQL Database](#cdc-in-azure-sql-database).
   
 ### Capture job parameters  
 
@@ -85,17 +85,14 @@ When a cleanup is performed, the low watermark for all capture instances is init
 
  For the cleanup job, the possibility for customization is in the strategy used to determine which change table entries are to be discarded. The only supported strategy in the delivered cleanup job is a time-based one. In that situation, the new low watermark is computed by subtracting the allowed retention period from the commit time of the last transaction processed. Because the underlying cleanup procedures are based on `lsn` instead of time, any number of strategies can be used to determine the smallest `lsn` to keep in the change tables. Only some of these are strictly time-based. Knowledge about the clients, for example, could be used to provide a failsafe if downstream processes that require access to the change tables cannot run. Also, although the default strategy applies the same `lsn` to clean up all the databases' change tables, the underlying cleanup procedure, can also be called to clean up at the capture instance level.  
  
-> [!NOTE]  
-> In Azure SQL Database, the change data capture scheduler periodically invokes a stored procedure to capture and cleanup change tables.  As such, the customization of the capture and cleanup process in Azure SQL Database is not currently possible. Though the scheduler runs the stored procedures automatically, it's also possible to start them manually by the user. For more information, see the section on [CDC in Azure SQL Database](#cdc-in-azure-sql-database) later in this doc.
-
 
 ## <a name="Monitor"></a> Monitor the process
 
-Monitoring the change data capture process lets you determine if changes are being written correctly and with a reasonable latency to the change tables. Monitoring can also help you to identify any errors that might occur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes two dynamic management views to help you monitor change data capture: [sys.dm_cdc_log_scan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md) and [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md).  
+Monitoring the change data capture process lets you determine if changes are being written correctly and with a reasonable latency to the change tables. Monitoring can also help you to identify any errors that might occur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes two dynamic management views to help you monitor change data capture: [sys.dm_cdc_log_scan_sessions](../system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md) and [sys.dm_cdc_errors](../system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md).  
   
 ### Identify sessions with empty result sets
 
-Every row in `sys.dm_cdc_log_scan_sessions` represents a log scan session (except the row with an ID of 0). A log scan session is equivalent to one execution of [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md). During a session, the scan can either return changes or return an empty result. If the result set is empty, the empty_scan_count column in `sys.dm_cdc_log_scan_sessions` is set to 1. If there are consecutive empty result sets, such as if the capture job is running continuously, the empty_scan_count in the last existing row is incremented. For example, if `sys.dm_cdc_log_scan_sessions` already contains 10 rows for scans that returned changes and there are five empty results in a row, the view contains 11 rows. The last row has a value of 5 in the empty_scan_count column. To determine sessions that had an empty scan, run the following query:  
+Every row in `sys.dm_cdc_log_scan_sessions` represents a log scan session (except the row with an ID of 0). A log scan session is equivalent to one execution of [sp_cdc_scan](../system-stored-procedures/sys-sp-cdc-scan-transact-sql.md). During a session, the scan can either return changes or return an empty result. If the result set is empty, the empty_scan_count column in `sys.dm_cdc_log_scan_sessions` is set to 1. If there are consecutive empty result sets, such as if the capture job is running continuously, the empty_scan_count in the last existing row is incremented. For example, if `sys.dm_cdc_log_scan_sessions` already contains 10 rows for scans that returned changes and there are five empty results in a row, the view contains 11 rows. The last row has a value of 5 in the empty_scan_count column. To determine sessions that had an empty scan, run the following query:  
 
 ```sql
 SELECT * from sys.dm_cdc_log_scan_sessions where empty_scan_count <> 0
@@ -123,7 +120,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data collector let
 
 #### Configuring data collection
 
-1. Enable data collector and configure a management data warehouse. For more information, see [Manage Data Collection](../../relational-databases/data-collection/manage-data-collection.md).  
+1. Enable data collector and configure a management data warehouse. For more information, see [Manage Data Collection](../data-collection/manage-data-collection.md).  
   
 2. Execute the following code to create a custom collector for change data capture.  
 
@@ -179,27 +176,10 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data collector let
 
 When you apply cumulatives updates or service packs to an instance, at restart, the instance can enter in Script Upgrade mode. In this mode, SQL Server may run a step to analyze and upgrade internal CDC tables, which could result in recreating objects like indexes on capture tables. Depending on the amount of data involved, this step might take some time or cause high transaction log usage for enabled CDC databases.
 
-## CDC in Azure SQL Database
+## Related content
 
-In Azure SQL Database, the same configuration options and objects are not available because the capture and cleanup SQL Server Agent jobs are replaced by a change data capture scheduler. The scheduler invokes stored procedures to start periodic capture and cleanup of the change tables. 
-
-However, some limited customizations are supported.
-
-- The frequency of the CDC capture and cleanup jobs cannot be customized.
-- The `pollinginterval` and `continuous` values are not used in Azure SQL DB for capture and cleanup jobs.
-- Dropping the capture job entry from the `cdc.cdc_jobs` table doesn't stop the capture job running in the background.
-- Dropping the cleanup job causes the cleanup job to not run.
-- The `cdc.cdc_jobs` table exists in the `cdc` schema, not `msdb`.
-
-Given those limitations, it is possible to:
-
-- Query the `cdc.cdc_jobs` table for current configuration information.
-- Configure the `maxtrans` and `maxscans` options using the `sp_cdc_change_job` stored procedure.
-- Drop and add jobs using `sp_cdc_drop_job` and `sp_cdc_add_job`.
-
-## See also
-
-- [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)
-- [About change data capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)
-- [Enable and Disable change data capture &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)
-- [Work with Change Data &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
+* [CDC with Azure SQL Database](/azure/azure-sql/database/change-data-capture-overview)
+* [Track Data Changes (SQL Server)](track-data-changes-sql-server.md)
+* [About change data capture (SQL Server)](about-change-data-capture-sql-server.md)
+* [Enable and Disable change data capture (SQL Server)](enable-and-disable-change-data-capture-sql-server.md)
+* [Work with Change Data (SQL Server)](work-with-change-data-sql-server.md)

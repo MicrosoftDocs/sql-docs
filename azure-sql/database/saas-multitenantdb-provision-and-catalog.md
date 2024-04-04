@@ -214,7 +214,7 @@ This exercise provisions a batch of 17 tenants. It's recommended you provision t
 
 At this stage, you have a mix of tenants deployed into a shared database and tenants deployed into their own databases. The Azure portal can be used to inspect the databases created. In the [Azure portal](https://portal.azure.com), open the **tenants1-mt-\<USER\>** server by browsing to the list of SQL servers.  The **SQL databases** list should include the shared **tenants1** database and the databases for the tenants that are in their own database:
 
-   ![database list](./media/saas-multitenantdb-provision-and-catalog/Databases.png)
+   :::image type="content" source="./media/saas-multitenantdb-provision-and-catalog/databases.png" alt-text="Screenshot of the tenants1-mt-USER server Overview page that highlights the databases." lightbox="./media/saas-multitenantdb-provision-and-catalog/databases.png":::
 
 While the Azure portal shows the tenant databases, it doesn't let you see the tenants *inside* the shared database. The full list of tenants can be seen in the **Events Hub** webpage of Wingtip, and by browsing the catalog.
 

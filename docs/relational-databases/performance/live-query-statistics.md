@@ -24,7 +24,7 @@ helpviewer_keywords:
 > [!NOTE]
 > Internally, live query statistics leverages the [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV.
   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].  
   
 > [!WARNING]  
 > This feature is primarily intended for troubleshooting purposes. Using this feature can moderately slow the overall query performance, especially in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. For more information, see [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).  
@@ -56,8 +56,10 @@ The live execution plan can also be accessed from the **[Activity Monitor](../..
 ## Permissions  
 Requires the database level `SHOWPLAN` permission to populate the **Live Query Statistics** results page, and requires any permissions necessary to execute the query.
 On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requires the server level `VIEW SERVER STATE` permission to see the live statistics.  
-On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database to see the live statistics. On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the **Server admin** or an **Azure Active Directory admin** account to see the live statistics.
+On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database to see the live statistics. On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the **Server admin** or **Microsoft Entra admin** account to see the live statistics.
   
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
+
 ## See Also  
  [Execution Plans](../../relational-databases/performance/execution-plans.md)    
  [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)    

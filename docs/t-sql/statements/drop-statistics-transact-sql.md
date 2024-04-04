@@ -79,7 +79,7 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
   
 ```sql  
 -- Create the statistics groups.  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE STATISTICS VendorCredit  
     ON Purchasing.Vendor (Name, CreditRating)  

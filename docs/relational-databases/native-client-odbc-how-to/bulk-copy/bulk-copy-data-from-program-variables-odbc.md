@@ -10,7 +10,6 @@ ms.topic: "reference"
 helpviewer_keywords:
   - "bulk copy [ODBC], program variables"
   - "bulk copy [ODBC]"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Copy Data from Program Variables (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +63,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ```  
 // compile with: odbc32.lib odbcbcp.lib  
-use AdventureWorks  
+USE AdventureWorks2022;
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPSource')  
      DROP TABLE BCPSource  
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPTarget')  
@@ -286,7 +285,7 @@ SQLLEN lDataLengthB;
 ```  
   
 ```  
-use AdventureWorks  
+USE AdventureWorks2022;
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPSource')  
      DROP TABLE BCPSource  
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPTarget')  

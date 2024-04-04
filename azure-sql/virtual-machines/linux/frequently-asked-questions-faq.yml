@@ -6,6 +6,7 @@ metadata:
   documentationcenter: ''
   author: MashaMSFT
   tags: azure-service-management
+  ms.custom: linux-related-content
   ms.service: virtual-machines-sql
   ms.subservice: service-overview
   ms.topic: faq
@@ -78,7 +79,7 @@ sections:
       - question: |
           Can I manage a Linux virtual machine running SQL Server with SQL Server Management Studio (SSMS)?
         answer: |
-             Yes, but SSMS is currently a Windows-only tool. You must connect remotely from a Windows machine to use SSMS with Linux VMs running SQL Server. Locally on Linux, the new [mssql-conf](/sql/linux/sql-server-linux-configure-mssql-conf) tool can perform many administrative tasks. For a cross-platform database management tool, see [Azure Data Studio](/sql/azure-data-studio/what-is).
+             Yes, but SSMS is currently a Windows-only tool. You must connect remotely from a Windows machine to use SSMS with Linux VMs running SQL Server. Locally on Linux, the new [mssql-conf](/sql/linux/sql-server-linux-configure-mssql-conf) tool can perform many administrative tasks. For a cross-platform database management tool, see [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio).
           
       - question: |
           Can I remove SQL Server completely from a SQL Server VM?
@@ -110,6 +111,6 @@ additionalContent: |
   
   **Windows VMs**:
   
-  * [Overview of SQL Server on a Windows VM](../windows/sql-server-on-azure-vm-iaas-what-is-overview.md)
-  * [Provision SQL Server on a Windows VM](../windows/sql-vm-create-portal-quickstart.md)
+  * [Overview of SQL Server on Windows VMs](../windows/sql-server-on-azure-vm-iaas-what-is-overview.md)
+  * [Provision SQL Server on Windows VMs](../windows/sql-vm-create-portal-quickstart.md)
   * [FAQ (Windows)](../windows/frequently-asked-questions-faq.yml)

@@ -1,13 +1,15 @@
 ---
 title: Manage SQL Server on Linux with PowerShell Core
-description: Learn about SQL Server PowerShell by walking through a couple of examples on how to use SQL Server PowerShell with PowerShell Core (PS Core) on macOS and Linux.
+description: Learn about SQL Server PowerShell by walking through a couple of examples on how to use SQL Server PowerShell with PowerShell Core on macOS and Linux.
 author: SQLvariant
 ms.author: aanelson
-ms.reviewer: vanto
-ms.date: 04/22/2019
+ms.reviewer: vanto, randolphwest
+ms.date: 11/16/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Manage SQL Server on Linux with PowerShell Core
 
@@ -17,9 +19,9 @@ This article introduces [SQL Server PowerShell](../powershell/sql-server-powersh
 
 ## Cross-platform editor options
 
-All of the steps PowerShell Core below will work in a regular terminal, or you can run them from a terminal within VS Code or Azure Data Studio.  Both VS Code and Azure Data Studio are available on macOS and Linux.  For more information on Azure Data Studio, see [this quickstart](../azure-data-studio/quickstart-sql-server.md).  You may also want to consider using the [PowerShell extension](../azure-data-studio/extensions/powershell-extension.md) for it.
+All of the following steps for PowerShell Core work in a regular terminal, or you can run them from a terminal within Visual Studio Code or Azure Data Studio. Both VS Code and Azure Data Studio are available on macOS and Linux. For more information on Azure Data Studio, see [Quickstart: Use Azure Data Studio to connect and query SQL Server](../azure-data-studio/quickstart-sql-server.md). You may also want to consider using the [PowerShell Editor Support for Azure Data Studio](../azure-data-studio/extensions/powershell-extension.md).
 
-## Installing PowerShell Core
+## Install PowerShell Core
 
 For more information on installing PowerShell Core on various supported and experimental platforms, see the following articles:
 
@@ -38,13 +40,13 @@ To install the SqlServer module, open a PowerShell Core session and run the foll
 Install-Module -Name SqlServer
 ```
 
-For more information on how to install the SqlServer module from the PowerShell Gallery, see this [page](../powershell/download-sql-server-ps-module.md).
+For more information on how to install the SqlServer module from the PowerShell Gallery, see [Install the SQL Server PowerShell module](../powershell/download-sql-server-ps-module.md).
 
-## Using the SqlServer module
+## Use the SqlServer module
 
-Let's start by launching PowerShell Core.  If you are on macOS or Linux, Open a *terminal session* on your computer, and type **pwsh** to launch a new PowerShell Core session.  On Windows, use <kbd>Win</kbd>+<kbd>R</kbd>, and type `pwsh` to launch a new PowerShell Core session.
+Let's start by launching PowerShell Core. If you're on macOS or Linux, Open a *terminal session* on your computer, and type `pwsh` to launch a new PowerShell Core session. On Windows, use <kbd>Win</kbd>+<kbd>R</kbd>, and type `pwsh` to launch a new PowerShell Core session.
 
-```
+```console
 pwsh
 ```
 
@@ -99,16 +101,16 @@ Instance Name                   Version    ProductLevel UpdateLevel  HostPlatfor
 your_server_instance            14.0.3048  RTM          CU13         Linux        Ubuntu
 ```
 
-> [!NOTE]
+> [!NOTE]  
 > If nothing is displayed for these values, the connection to the target SQL Server instance most likely failed. Make sure that you can use the same connection information to connect from SQL Server Management Studio. Then review the [connection troubleshooting recommendations](sql-server-linux-troubleshooting-guide.md#connection).
 
-## Using the SQL Server PowerShell Provider
+## Use the SQL Server PowerShell Provider
 
-Another option for connecting to your SQL Server instance is to use the [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md).  Using the provider allows you to navigate SQL Server instance similar to as if you were navigating the tree structure in Object Explorer, but at the cmdline.  By default this provider is presented as a PSDrive named `SQLSERVER:\` which you can use to connect & navigate SQL Server instances that your domain account has access to.  See [Configuration steps](./sql-server-linux-active-directory-auth-overview.md#configuration-steps) for information on how to setup Active Directory authentication for SQL Server on Linux.
+Another option for connecting to your SQL Server instance is to use the [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md). Using the provider allows you to navigate SQL Server instance similar to as if you were navigating the tree structure in Object Explorer, but at the cmdline. By default this provider is presented as a PSDrive named `SQLSERVER:\`, which you can use to connect & navigate SQL Server instances that your domain account has access to. See [Configuration steps](./sql-server-linux-active-directory-auth-overview.md#configuration-steps) for information on how to set up Active Directory authentication for SQL Server on Linux.
 
 You can also use SQL authentication with the SQL Server PowerShell Provider. To do this, use the `New-PSDrive` cmdlet to create a new PSDrive and supply the proper credentials to connect.
 
-In this example below, you will see an example of how to create a new PSDrive using SQL authentication.
+In the following example, you see an example of how to create a new PSDrive using SQL authentication.
 
 ```powershell
 # NOTE: We are reusing the values saved in the $credential variable from the above example.
@@ -128,24 +130,24 @@ Once you have created your new PSDrive, you can start navigating it.
 dir SQLonDocker:\Databases
 ```
 
-Here is what the output might look like.  You might notice this output is similar to what SSMS will display at the Databases node.  It displays the user databases, but not the system databases.
+Here is what the output might look like. You might notice this output is similar to what SSMS displays at the Databases node. It displays the user databases, but not the system databases.
 
 ```powershell
 Name                 Status           Size     Space  Recovery Compat. Owner
                                             Available  Model     Level
 ----                 ------           ---- ---------- -------- ------- -----
-AdventureWorks2016   Normal      209.63 MB    1.31 MB Simple       130 sa
-AdventureWorksDW2012 Normal      167.00 MB   32.47 MB Simple       110 sa
-AdventureWorksDW2014 Normal      188.00 MB   78.10 MB Simple       120 sa
-AdventureWorksDW2016 Normal      172.00 MB   74.76 MB Simple       130 sa
-AdventureWorksDW2017 Normal      208.00 MB   40.57 MB Simple       140 sa
+AdventureWorks2022   Normal      209.63 MB    1.31 MB Simple       130 sa
+AdventureWorksDW2022 Normal      167.00 MB   32.47 MB Simple       110 sa
+AdventureWorksDW2022 Normal      188.00 MB   78.10 MB Simple       120 sa
+AdventureWorksDW2022 Normal      172.00 MB   74.76 MB Simple       130 sa
+AdventureWorksDW2022 Normal      208.00 MB   40.57 MB Simple       140 sa
 ```
 
 If you need to see all databases on your instance, one option is to use the `Get-SqlDatabase` cmdlet.
 
 ## Get Databases
 
-An important cmdlet to know is the `Get-SqlDatabase`.  For many operations that involve a database, or objects within a database, the `Get-SqlDatabase` cmdlet can be used.  If you supply values for both the `-ServerInstance` and `-Database` parameters, only that one database object will be retrieved.  However, if you specify only the `-ServerInstance` parameter, a full list of all databases on that instance will be returned.
+An important cmdlet to know is the `Get-SqlDatabase`. For many operations that involve a database, or objects within a database, the `Get-SqlDatabase` cmdlet can be used. If you supply values for both the `-ServerInstance` and `-Database` parameters, only that one database object is retrieved. However, if you specify only the `-ServerInstance` parameter, a full list of all databases on that instance are returned.
 
 ```powershell
 # NOTE: We are reusing the values saved in the $credential variable from the above example.
@@ -154,22 +156,21 @@ An important cmdlet to know is the `Get-SqlDatabase`.  For many operations that 
 Get-SqlDatabase -ServerInstance ServerB -Credential $credential
 ```
 
-Here is a sample of what might be returned by the Get-SqlDatabase command above:
+Here is a sample of what the Get-SqlDatabase command returns:
 
 ```powershell
 Name                 Status           Size     Space  Recovery Compat. Owner
                                             Available  Model     Level
 ----                 ------           ---- ---------- -------- ------- -----
-AdventureWorks2016   Normal      209.63 MB    1.31 MB Simple       130 sa
-AdventureWorksDW2012 Normal      167.00 MB   32.47 MB Simple       110 sa
-AdventureWorksDW2014 Normal      188.00 MB   78.10 MB Simple       120 sa
-AdventureWorksDW2016 Normal      172.00 MB   74.88 MB Simple       130 sa
-AdventureWorksDW2017 Normal      208.00 MB   40.63 MB Simple       140 sa
+AdventureWorks2022   Normal      209.63 MB    1.31 MB Simple       130 sa
+AdventureWorksDW2022 Normal      167.00 MB   32.47 MB Simple       110 sa
+AdventureWorksDW2022 Normal      188.00 MB   78.10 MB Simple       120 sa
+AdventureWorksDW2022 Normal      172.00 MB   74.88 MB Simple       130 sa
+AdventureWorksDW2022 Normal      208.00 MB   40.63 MB Simple       140 sa
 master               Normal        6.00 MB  600.00 KB Simple       140 sa
 model                Normal       16.00 MB    5.70 MB Full         140 sa
 msdb                 Normal       15.50 MB    1.14 MB Simple       140 sa
 tempdb               Normal       16.00 MB    5.49 MB Simple       140 sa
-
 ```
 
 ## Examine SQL Server error logs
@@ -193,10 +194,11 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 # done
 ```
 
-## Explore cmdlets currently available in PS Core
-While the SqlServer module currently has 109 cmdlets available in Windows PowerShell, only 62 of the 109 are available in PSCore. A full list of 62 cmdlets currently available is included below.  For in-depth documentation of all cmdlets in the SqlServer module, see the SqlServer [cmdlet reference](/powershell/module/sqlserver/).
+## Explore cmdlets currently available in PowerShell Core
 
-The following command will show you all of the cmdlets available on the version of PowerShell you are using.
+While the SqlServer module currently has 109 cmdlets available in Windows PowerShell, only 62 of the 109 are available in PSCore. Following is a full list of 62 cmdlets currently available. For in-depth documentation of all cmdlets in the SqlServer module, see the SqlServer [cmdlet reference](/powershell/module/sqlserver/).
+
+The following command shows you all of the cmdlets available on the version of PowerShell you're using.
 
 ```powershell
 Get-Command -Module SqlServer -CommandType Cmdlet |
@@ -267,5 +269,6 @@ SELECT Name
 - Read-SqlXEvent
 - Convert-UrnToPath
 
-## See also
+## Related content
+
 - [SQL Server PowerShell](../powershell/sql-server-powershell.md)

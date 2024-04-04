@@ -4,6 +4,7 @@ ms.author: wiassaf
 ms.date: 03/16/2021
 ms.service: sql
 ms.subservice: machine-learning-services
+ms.custom: linux-related-content
 ms.topic: include
 ---
 ## Prerequisites

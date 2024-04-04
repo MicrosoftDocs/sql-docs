@@ -58,7 +58,7 @@ This example uses `@@FETCH_STATUS` to control cursor activities in a `WHILE` loo
 ```sql  
 DECLARE Employee_Cursor CURSOR FOR  
 SELECT BusinessEntityID, JobTitle  
-FROM AdventureWorks2012.HumanResources.Employee;  
+FROM AdventureWorks2022.HumanResources.Employee;  
 OPEN Employee_Cursor;  
 FETCH NEXT FROM Employee_Cursor;  
 WHILE @@FETCH_STATUS = 0  

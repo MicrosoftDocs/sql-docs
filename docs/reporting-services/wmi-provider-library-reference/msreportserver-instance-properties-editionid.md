@@ -1,6 +1,6 @@
 ---
-title: "EditionID Property (WMI MSReportServer_Instance)"
-description: "EditionID Property (WMI MSReportServer_Instance)"
+title: "EditionID property (WMI MSReportServer_Instance)"
+description: "EditionID property (WMI MSReportServer_Instance)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -11,7 +11,7 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "EditionID property"
 ---
-# MSReportServer_Instance Properties - EditionID
+# MSReportServer_Instance properties - EditionID
   Returns the edition of the report server. Read-only.  
   
 ## Syntax  
@@ -24,16 +24,16 @@ Public Dim EditionID As UInt
 public uint EditionID;  
 ```  
   
-## Property Value  
+## Property value  
  A **uint** that contains the edition of the report server.  
   
-## Example Code  
- [MSReportServer_ConfigurationSetting Class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
+## Example code  
+ [MSReportServer_ConfigurationSetting class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## See Also  
- [MSReportServer_Instance Members](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
+## Related content
+ [MSReportServer_Instance members](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   

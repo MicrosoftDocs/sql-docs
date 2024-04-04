@@ -16,11 +16,12 @@ f1_keywords:
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
-
-
 You can submit U-SQL jobs to Azure Data Lake Analytics service with the Data Lake Analytics task. This task is a component of the [SQL Server Integration Services (SSIS) feature pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
 For general background, see [Azure Data Lake Analytics](https://azure.microsoft.com/services/data-lake-analytics/).
+
+> [!IMPORTANT]
+> Azure Data Lake Analytics will be retired on **29 February 2024**. Learn more [with this announcement](https://azure.microsoft.com/updates/migrate-to-azure-synapse-analytics/).
 
 ## Configure the task
 

@@ -4,7 +4,7 @@ description: "Manually release memory related to deleted rows of in-memory data 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 06/13/2023
+ms.date: 09/27/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -24,9 +24,9 @@ Causes the in-memory engine to release memory related to deleted rows of in-memo
 
 In cases where a large volume of in-memory data has been released, and where the memory isn't soon be needed for other in-memory data, this procedure can free up memory for other uses. If you anticipate the memory being used soon for other in-memory data, freeing it here would only cause extra overhead, as it would need to be reallocated for the new data.
 
-For more information on memory-optimized `tempdb` metadata out of memory errors, see [Memory-optimized tempdb metadata (HkTempDB) out of memory errors](/troubleshoot/sql/admin/memory-optimized-tempdb-out-of-memory).
+For more information on Memory-optimized TempDB metadata out of memory errors, see [Memory-optimized tempdb metadata (HkTempDB) out of memory errors](/troubleshoot/sql/admin/memory-optimized-tempdb-out-of-memory).
 
-The `sys.sp_xtp_force_gc` system stored procedure was introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] [CU 1](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate1#2087479) and [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] [CU 13](https://support.microsoft.com/topic/kb5005679-cumulative-update-13-for-sql-server-2019-5c1be850-460a-4be4-a569-fe11f0adc535). This stored procedure isn't currently supported on [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)].
+The `sys.sp_xtp_force_gc` system stored procedure was introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] [CU 1](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate1#2087479) and [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] [CU 13](https://support.microsoft.com/topic/kb5005679-cumulative-update-13-for-sql-server-2019-5c1be850-460a-4be4-a569-fe11f0adc535). This stored procedure isn't currently supported on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)].
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -46,11 +46,11 @@ The database to release unused memory for memory-optimized tables. *@dbname* is 
 
 - When the *@dname* parameter isn't specified, only system-level memory structures in the instance are considered.
 
-- When the *@dname* parameter provided is `'tempdb'`, the memory structures related to [memory-optimized tempdb metadata](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) are affected.
+- When the *@dname* parameter provided is `tempdb`, the memory structures related to [memory-optimized tempdb metadata](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) are affected.
 
 - When the *@dname* parameter provided is a user database, the memory structures related memory-optimized tables are affected.
 
-Therefore, you may expect to see different results when executing `sys.sp_xtp_force_gc`: without a parameter, with `@dbname = N'tempdb'`, or with `@dbname = ` a user database name.
+Therefore, you may expect to see different results when executing `sys.sp_xtp_force_gc`: without a parameter, with `@dbname = N'tempdb'`, or with `@dbname =` a user database name.
 
 ## Return code values
 
@@ -70,7 +70,7 @@ Prior to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], execute this sto
 
 ## Examples
 
-To execute garbage cleanup on system-level memory structures and memory-optimized `tempdb` metadata in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]:
+To execute garbage cleanup on system-level memory structures and Memory-optimized TempDB metadata in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]:
 
 ```sql
 EXEC sys.sp_xtp_force_gc N'tempdb';
@@ -80,7 +80,7 @@ EXEC sys.sp_xtp_force_gc;
 GO
 ```
 
-To execute garbage cleanup on system-level memory structures and memory-optimized `tempdb` metadata prior to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]:
+To execute garbage cleanup on system-level memory structures and Memory-optimized TempDB metadata prior to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]:
 
 ```sql
 EXEC sys.sp_xtp_force_gc N'tempdb';
@@ -96,12 +96,9 @@ EXEC sys.sp_xtp_force_gc;
 GO
 ```
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-
-## Next steps
-
 - [sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)](sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql.md)
 - [sys.dm_xtp_system_memory_consumers (Transact-SQL)](../system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql.md)
 - [In-Memory OLTP (In-Memory Optimization)](../in-memory-oltp/overview-and-usage-scenarios.md)

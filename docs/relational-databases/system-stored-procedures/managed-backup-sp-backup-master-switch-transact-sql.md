@@ -76,6 +76,6 @@ EXEC managed_backup.sp_backup_master_switch @new_state = 1;
 Go
 ```
 
-## See also
+## Related content
 
-- [SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)
+- [SQL Server Managed Backup to Microsoft Azure](../backup-restore/sql-server-managed-backup-to-microsoft-azure.md)

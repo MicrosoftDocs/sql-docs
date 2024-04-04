@@ -8,7 +8,9 @@ ms.date: 02/21/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
+ms.custom:
+  - linux-related-content
+monikerRange: ">=sql-server-linux-2017||>=sql-server-2017||=sqlallproducts-allversions"
 ---
 
 # Troubleshoot Active Directory authentication for SQL Server on Linux and containers
@@ -54,7 +56,7 @@ Before you begin troubleshooting, you must validate the current user, `mssql.con
 
    All should return `<hostname>.contoso.com`. If that isn't the case, check the PTR (pointer) records that are created in Active Directory.
 
-   You may have to work with your domain administrator to get rDNS working. If you can't add PTR entries for all the IP addresses returned, you can also [limit SQL Server to a subset of domain controllers](#validate-realm-information-in-krb5conf). This change affects any other services using `krb5.conf` on the host.
+   You might have to work with your domain administrator to get rDNS working. If you can't add PTR entries for all the IP addresses returned, you can also [limit SQL Server to a subset of domain controllers](#validate-realm-information-in-krb5conf). This change affects any other services using `krb5.conf` on the host.
 
    For more information about reverse DNS, see [What is reverse DNS?](/azure/dns/dns-reverse-dns-overview#what-is-reverse-dns)
 
@@ -265,7 +267,7 @@ You can refer to this list of common errors to identify the possible cause for e
 
 #### Possible cause
 
- You may encounter this error when trying to create the Windows login, or during [group refresh](sql-server-linux-ad-auth-understanding.md#sql-server-group-refresh).
+ You might encounter this error when trying to create the Windows login, or during [group refresh](sql-server-linux-ad-auth-understanding.md#sql-server-group-refresh).
 
 #### Guidance
 
@@ -299,7 +301,7 @@ Check the [DNS and reverse DNS lookups](#dns-and-reverse-dns-lookups). Once the 
 
 - **Add rDNS entries for all domain controllers**
 
-  This isn't a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] setting, and must be configured at the domain level. You may have to work with your domain administration team to create the required PTR records for all the domain controllers returned when running `nslookup` on the domain name.
+  This isn't a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] setting, and must be configured at the domain level. You might have to work with your domain administration team to create the required PTR records for all the domain controllers returned when running `nslookup` on the domain name.
 
 - **Restrict [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to a subset of domain controllers**
 
@@ -412,7 +414,7 @@ This table shows the common ports used by [!INCLUDE[ssNoVersion](../includes/ssn
 |LDAPS|636|
 |Kerberos|88|
 
-## Next steps
+## Related content
 
 - [Understanding Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-understanding.md)
 - [Tutorial: Use adutil to configure Active Directory authentication with SQL Server on Linux](sql-server-linux-ad-auth-adutil-tutorial.md)

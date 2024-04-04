@@ -60,7 +60,7 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
  The following example removes the signature of certificate `HumanResourcesDP` from the stored procedure `HumanResources.uspUpdateEmployeeLogin`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 DROP SIGNATURE FROM HumanResources.uspUpdateEmployeeLogin   
     BY CERTIFICATE HumanResourcesDP;  
 GO  

@@ -4,7 +4,7 @@ description: "Create Foreign Key Relationships"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto, randolphwest
-ms.date: 07/25/2022
+ms.date: 08/21/2023
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
@@ -39,7 +39,7 @@ Creating a foreign key in an existing table requires [ALTER](../../t-sql/stateme
   - Greater than 253 foreign key references aren't currently available for columnstore indexes, memory-optimized tables, or Stretch Database.
 
   > [!IMPORTANT]  
-  > Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+  > [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
 - FOREIGN KEY constraints aren't enforced on temporary tables.
 - If a foreign key is defined on a CLR user-defined type column, the implementation of the type must support binary ordering. For more information, see [CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).

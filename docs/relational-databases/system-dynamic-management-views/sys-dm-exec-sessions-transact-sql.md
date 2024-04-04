@@ -3,7 +3,7 @@ title: "sys.dm_exec_sessions (Transact-SQL)"
 description: sys.dm_exec_sessions returns one row per authenticated session on SQL Server.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "02/24/2023"
+ms.date: 08/10/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -39,7 +39,7 @@ The `sys.dm_exec_connections`, `sys.dm_exec_sessions`, and `sys.dm_exec_requests
 | client_version | **int** | TDS protocol version of the interface that is used by the client to connect to the server. The value is NULL for internal sessions. Is nullable. |
 | client_interface_name | **nvarchar(32)** | Name of library/driver being used by the client to communicate with the server. The value is NULL for internal sessions. Is nullable. |
 | security_id | **varbinary(85)** | Microsoft Windows security ID associated with the login. Not nullable. |
-| login_name | **nvarchar(128)** | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login name under which the session is currently executing. For the original login name that created the session, see original_login_name. Can be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authenticated login name or a Windows authenticated domain user name. Not nullable. |
+| login_name | **nvarchar(128)** | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login name under which the session is currently executing. For the original login name that created the session, see `original_login_name`. Can be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authenticated login name or a Windows authenticated domain user name. Not nullable. |
 | nt_domain | **nvarchar(128)** | **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions<br /><br />Windows domain for the client if the session is using Windows Authentication or a trusted connection. This value is NULL for internal sessions and non-domain users. Is nullable. |
 | nt_user_name | **nvarchar(128)** | **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions<br /><br />Windows user name for the client if the session is using Windows Authentication or a trusted connection. This value is NULL for internal sessions and non-domain users. Is nullable. |
 | status | **nvarchar(30)** | Status of the session. Possible values:<br /><br />**Running** - Currently running one or more requests<br /><br />**Sleeping** - Currently running no requests<br /><br />**Dormant** - Session has been reset because of connection pooling and is now in prelogin state.<br /><br />**Preconnect** - Session is in the Resource Governor classifier.<br /><br />Not nullable. |
@@ -72,14 +72,14 @@ The `sys.dm_exec_connections`, `sys.dm_exec_sessions`, and `sys.dm_exec_requests
 | deadlock_priority | **int** | DEADLOCK_PRIORITY setting for the session. Not nullable. |
 | row_count | **bigint** | Number of rows returned on the session up to this point. Not nullable. |
 | prev_error | **int** | ID of the last error returned on the session. Not nullable. |
-| original_security_id | **varbinary(85)** | [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows security ID that is associated with the original_login_name. Not nullable. |
+| original_security_id | **varbinary(85)** | [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows security ID that is associated with the `original_login_name`. Not nullable. |
 | original_login_name | **nvarchar(128)** | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login name that the client used to create this session. Can be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authenticated login name, a Windows authenticated domain user name, or a contained database user. The session could have gone through many implicit or explicit context switches after the initial connection. For example, if [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) is used. Not nullable. |
 | last_successful_logon | **datetime** | **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions<br /><br />Time of the last successful logon for the original_login_name before the current session started. |
 | last_unsuccessful_logon | **datetime** | **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions<br /><br />Time of the last unsuccessful logon attempt for the original_login_name before the current session started. |
-| unsuccessful_logons | **bigint** | **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions<br /><br />Number of unsuccessful logon attempts for the original_login_name between the last_successful_logon and login_time. |
+| unsuccessful_logons | **bigint** | **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions<br /><br />Number of unsuccessful logon attempts for the `original_login_name` between the `last_successful_logon` and `login_time`. |
 | group_id | **int** | ID of the workload group to which this session belongs. Not nullable. |
-| database_id | **smallint** | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later versions<br /><br />ID of the current database for each session. <br /><br />In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|
-| authenticating_database_id | **int** | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later versions<br /><br />ID of the database authenticating the principal. For Logins, the value will be 0. For contained database users, the value will be the database ID of the contained database. |
+| database_id | **smallint** | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later versions<br /><br />ID of the current database for each session. <br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|
+| authenticating_database_id | **int** | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later versions<br /><br />ID of the database authenticating the principal. For logins, the value will be 0. For contained database users, the value will be the database ID of the contained database. |
 | open_transaction_count | **int** | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later versions<br /><br />Number of open transactions per session. |
 | pdw_node_id | **int** | **Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br />The identifier for the node that this distribution is on. |
 | page_server_reads | **bigint** | **Applies to**: Azure SQL Database Hyperscale<br /><br />Number of page server reads performed, by requests in this session, during this session. Not nullable. |
@@ -106,7 +106,9 @@ When the **common criteria compliance enabled** server configuration option is e
 
 If this option isn't enabled, these columns will return null values. For more information about how to set this server configuration option, see [common criteria compliance enabled server configuration option](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md).
 
-The admin connections on Azure SQL Database will see one row per authenticated session. The "sa" sessions that appear in the resultset, don't have any effect on the user quota for sessions. The non-admin connections will only see information related to their database user sessions.
+The admin connections on Azure SQL Database see one row per authenticated session. The "sa" sessions that appear in the resultset, don't have any effect on the user quota for sessions. The non-admin connections will only see information related to their database user sessions.
+
+Because of differences in how they are recorded, `open_transaction_count` may not match `sys.dm_tran_session_transactions`.`open_transaction_count`.
 
 ## Relationship cardinalities
 
@@ -194,7 +196,7 @@ INNER JOIN sys.dm_exec_sessions AS s
 WHERE c.session_id = @@SPID;
 ```
 
-## See also
+## Next steps
 
 - [Dynamic Management Views and Functions (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
 - [Execution Related Dynamic Management Views and Functions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)

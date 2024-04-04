@@ -70,13 +70,13 @@ The language of the data stored in the column. *@language* is **int**, with a de
 
 #### [ @type_colname = ] N'*type_colname*'
 
-The name of a column in *@tabname* that holds the document type of *@colname*. This column must be **char**, **nchar**, **varchar**, or **nvarchar**. It is only used when the data type of *@colname* is of type **varbinary(max)** or **image**. *@type_colname* is **sysname**, with a default of `NULL`.
+The name of a column in *@tabname* that holds the document type of *@colname*. This column must be **char**, **nchar**, **varchar**, or **nvarchar**. It's only used when the data type of *@colname* is of type **varbinary(max)** or **image**. *@type_colname* is **sysname**, with a default of `NULL`.
 
 ## Return code values
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -121,7 +121,7 @@ The result set would include rows with different forms of `trabajar` (to work), 
 > [!NOTE]  
 > All columns listed in a single full-text query function clause must use the same language.
 
-## See also
+## Related content
 
 - [OBJECTPROPERTY (Transact-SQL)](../../t-sql/functions/objectproperty-transact-sql.md)
 - [sp_help_fulltext_columns (Transact-SQL)](sp-help-fulltext-columns-transact-sql.md)

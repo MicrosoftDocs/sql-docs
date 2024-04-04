@@ -31,7 +31,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-20
 ---
 # ALTER DATABASE SET options (Transact-SQL)
 
-Sets database options in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. For other ALTER DATABASE options, see [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
+Sets database options in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. For other ALTER DATABASE options, see [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
 
 > [!NOTE]  
 > Setting some options with ALTER DATABASE may require exclusive database access. If the ALTER DATABASE statement does not complete in a timely manner, check to see if other sessions within the database are blocking the ALTER DATABASE session.
@@ -376,7 +376,7 @@ For more information, see the section "Using the Database-wide statistics option
 
 #### INCREMENTAL = ON | OFF
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 Set AUTO_CREATE_STATISTICS to ON, and set INCREMENTAL to ON. This sets automatically created stats as incremental whenever incremental stats are supported. The default value is OFF. For more information, see [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md).
 
@@ -471,7 +471,7 @@ Enables or disables `FORCE_LAST_GOOD_PLAN` [Automatic tuning](../../relational-d
 
 #### \<change_tracking_option> ::=
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)]
+**Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the [Examples](#examples) section later in this article.
 
@@ -682,7 +682,7 @@ Controls whether updates are allowed on the database.
 To change this state, you must have exclusive access to the database. For more information, see the SINGLE_USER clause.
 
 > [!NOTE]  
-> On [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] federated databases, `SET { READ_ONLY | READ_WRITE }` is disabled.
+> On [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] federated databases, `SET { READ_ONLY | READ_WRITE }` is disabled.
 
 #### \<db_user_access_option> ::=
 
@@ -889,7 +889,7 @@ Controls whether the Query Store is enabled in this database, and also controls 
   Disables the Query Store. <!--OFF is the default value for [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)].--> FORCED is optional. FORCED aborts all running Query Store background tasks, and skips the synchronous flush when Query Store is turned off. Causes the Query Store to shut down as fast as possible. FORCED applies to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU14, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU21, [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU6, and later builds.
 
   > [!NOTE]  
-  > Query Store cannot be disabled in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database and Elastic Pool. Executing `ALTER DATABASE [database] SET QUERY_STORE = OFF` will return the warning `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`.
+  > Query Store cannot be disabled in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] single database and Elastic Pool. Executing `ALTER DATABASE [database] SET QUERY_STORE = OFF` will return the warning `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`.
 
 - CLEAR [ ALL ]
 
@@ -927,7 +927,7 @@ Once enough space has been cleared, the Query Store mode will automatically swit
 
 > [!IMPORTANT]  
 > If you think that your workload capture will need more than 10 GB of disk space, you should probably rethink and optimize your workload to reuse query plans (for example using [forced parameterization](../../relational-databases/query-processing-architecture-guide.md#forced-parameterization), or adjust the Query Store configurations.
-> Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can set `QUERY_CAPTURE_MODE` to CUSTOM for additional control over the query capture policy.
+> Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you can set `QUERY_CAPTURE_MODE` to CUSTOM for additional control over the query capture policy.
 
 #### INTERVAL_LENGTH_MINUTES
 
@@ -960,7 +960,7 @@ Designates the currently active query capture mode. Each mode defines specific q
 
 - AUTO
 
-  Capture relevant queries based on execution count and resource consumption. This is the default configuration value for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+  Capture relevant queries based on execution count and resource consumption. This is the default configuration value for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 - NONE
 
@@ -1115,7 +1115,7 @@ The current setting of this option can be determined by examining the `page_veri
 Enables or disables Stretch Database for the database. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+> [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
 #### REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<server_name>, { CREDENTIAL = \<db_scoped_credential_name> | FEDERATED_SERVICE_ACCOUNT = ON | OFF } ) | OFF
 
@@ -1138,8 +1138,8 @@ Enables or disables Stretch Database for the database. For more info, see [Stret
     You can use a federated service account for the on-premises SQL Server to communicate with the remote Azure server when the following conditions are all true.
 
     - The service account under which the instance of SQL Server is running is a domain account.
-    - The domain account belongs to a domain whose Active Directory is federated with Azure Active Directory.
-    - The remote Azure server is configured to support Azure Active Directory authentication.
+    - The domain account belongs to a domain whose Active Directory is federated with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)).
+    - The remote Azure server is configured to support Microsoft Entra authentication.
     - The service account under which the instance of SQL Server is running must be configured as a `dbmanager` or `sysadmin` account on the remote Azure server.
 
     If you specify that the federated service account is ON, you can't also specify the CREDENTIAL argument. Provide the CREDENTIAL argument if you specify OFF.
@@ -2145,7 +2145,7 @@ Controls whether updates are allowed on the database.
 To change this state, you must have exclusive access to the database. For more information, see the SINGLE_USER clause.
 
 > [!NOTE]  
-> On [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] federated databases, `SET { READ_ONLY | READ_WRITE }` is disabled.
+> On [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] federated databases, `SET { READ_ONLY | READ_WRITE }` is disabled.
 
 #### \<db_user_access_option> ::=
 
@@ -2153,11 +2153,11 @@ Controls user access to the database.
 
 - RESTRICTED_USER
 
-  Allows for only members of the `db_owner` fixed database role and `dbcreator` and `sysadmin` fixed server roles to connect to the database, but doesn't limit their number. All connections to the database are disconnected in the timeframe specified by the termination clause of the ALTER DATABASE statement. After the database has transitioned to the RESTRICTED_USER state, connection attempts by unqualified users are refused.  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], should be executed from within the user database. From the `master` database, you may encounter an error message `Msg 42008, Level 16, State 3, Line 1 ODBC error: State: 28000: Error: 18456 Message:'[Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user '##MS_InstanceCertificate##'.'.`
+  Allows for only members of the `db_owner` fixed database role and `dbcreator` and `sysadmin` fixed server roles to connect to the database, but doesn't limit their number. All connections to the database are disconnected in the timeframe specified by the termination clause of the ALTER DATABASE statement. After the database has transitioned to the RESTRICTED_USER state, connection attempts by unqualified users are refused.  In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], should be executed from within the user database. From the `master` database, you may encounter an error message `Msg 42008, Level 16, State 3, Line 1 ODBC error: State: 28000: Error: 18456 Message:'[Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user '##MS_InstanceCertificate##'.'.`
 
 - MULTI_USER
 
-  All users that have the appropriate permissions to connect to the database are allowed. You can determine this option's status by examining the `user_access` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the `UserAccess` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], should be executed from within the user database. From the `master` database, you may encounter an error message `Msg 42008, Level 16, State 3, Line 1 ODBC error: State: 28000: Error: 18456 Message:'[Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user '##MS_InstanceCertificate##'.'.`
+  All users that have the appropriate permissions to connect to the database are allowed. You can determine this option's status by examining the `user_access` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the `UserAccess` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.  In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], should be executed from within the user database. From the `master` database, you may encounter an error message `Msg 42008, Level 16, State 3, Line 1 ODBC error: State: 28000: Error: 18456 Message:'[Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user '##MS_InstanceCertificate##'.'.`
 
 #### \<delayed_durability_option> ::=
 
@@ -2206,7 +2206,7 @@ The current setting of this option can be determined by examining the `is_parame
     Disables the Query Store.
 
     > [!NOTE]  
-    > Query Store cannot be disabled in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database and Elastic Pool. Executing `ALTER DATABASE [database] SET QUERY_STORE = OFF` will return the warning `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`.
+    > Query Store cannot be disabled in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] single database and Elastic Pool. Executing `ALTER DATABASE [database] SET QUERY_STORE = OFF` will return the warning `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`.
 
   - CLEAR
 
@@ -2218,7 +2218,7 @@ Describes the operation mode of the Query Store. Valid values are READ_ONLY and 
 
 #### CLEANUP_POLICY
 
-Describes the data retention policy of the Query Store. STALE_QUERY_THRESHOLD_DAYS determines the number of days for which the information for a query is kept in the Query Store. STALE_QUERY_THRESHOLD_DAYS is type **bigint**. The default value is 30. For [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic edition, default is **7** days.
+Describes the data retention policy of the Query Store. STALE_QUERY_THRESHOLD_DAYS determines the number of days for which the information for a query is kept in the Query Store. STALE_QUERY_THRESHOLD_DAYS is type **bigint**. The default value is 30. For [!INCLUDE[sssds](../../includes/sssds-md.md)] Basic edition, default is **7** days.
 
 #### DATA_FLUSH_INTERVAL_SECONDS
 
@@ -2229,7 +2229,7 @@ Determines the frequency at which data written to the Query Store is persisted t
 Determines the space allocated to the Query Store. MAX_STORAGE_SIZE_MB is type **bigint**.
 
 > [!NOTE]  
-> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the default `MAX_STORAGE_SIZE_MB` value differs by service tier, as follows: Premium, Business Critical, and Hyperscale: **1,024 MB**; Standard and General Purpose: **100 MB**; Basic: **10 MB** The maximum allowed `MAX_STORAGE_SIZE_MB` value is **10,240 MB**.
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the default `MAX_STORAGE_SIZE_MB` value differs by service tier, as follows: Premium, Business Critical, and Hyperscale: **1,024 MB**; Standard and General Purpose: **100 MB**; Basic: **10 MB** The maximum allowed `MAX_STORAGE_SIZE_MB` value is **10,240 MB**.
 
 > [!NOTE]  
 > `MAX_STORAGE_SIZE_MB` limit isn't strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the `DATA_FLUSH_INTERVAL_SECONDS` option or the [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] Query Store dialog option **Data Flush Interval**. The interval default value is 900 seconds (or 15 minutes).
@@ -2238,7 +2238,7 @@ Determines the space allocated to the Query Store. MAX_STORAGE_SIZE_MB is type *
 
 > [!IMPORTANT]  
 > If you think that your workload capture will need more than 10 GB of disk space, you should probably rethink and optimize your workload to reuse query plans (for example using [forced parameterization](../../relational-databases/query-processing-architecture-guide.md#forced-parameterization), or adjust the Query Store configurations.
-> Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can set `QUERY_CAPTURE_MODE` to CUSTOM for additional control over the query capture policy.
+> Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you can set `QUERY_CAPTURE_MODE` to CUSTOM for additional control over the query capture policy.
 
 #### INTERVAL_LENGTH_MINUTES
 
@@ -2271,7 +2271,7 @@ Designates the currently active query capture mode. Each mode defines specific q
 
 - AUTO
 
-  Capture relevant queries based on execution count and resource consumption. This is the default configuration value for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+  Capture relevant queries based on execution count and resource consumption. This is the default configuration value for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 - NONE
 
@@ -2363,7 +2363,7 @@ The current setting of this option can be determined by examining the `is_read_c
 > When a table is created with `DURABILITY = SCHEMA_ONLY`, and **READ_COMMITTED_SNAPSHOT** is subsequently changed using `ALTER DATABASE`, data in the table will be lost.
 
 > [!TIP]  
-> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the `ALTER DATABASE` command to set READ_COMMITTED_SNAPSHOT ON or OFF for a database must be executed in the `master` database.
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the `ALTER DATABASE` command to set READ_COMMITTED_SNAPSHOT ON or OFF for a database must be executed in the `master` database.
 
 #### MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | OFF }
 
@@ -3193,7 +3193,7 @@ Describes the operation mode of the Query Store. Valid values are READ_ONLY and 
 
 #### CLEANUP_POLICY
 
-Describes the data retention policy of the Query Store. STALE_QUERY_THRESHOLD_DAYS determines the number of days for which the information for a query is kept in the Query Store. STALE_QUERY_THRESHOLD_DAYS is type **bigint**. The default value is 30. For [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic edition, default is **7** days.
+Describes the data retention policy of the Query Store. STALE_QUERY_THRESHOLD_DAYS determines the number of days for which the information for a query is kept in the Query Store. STALE_QUERY_THRESHOLD_DAYS is type **bigint**. The default value is 30. For [!INCLUDE[sssds](../../includes/sssds-md.md)] Basic edition, default is **7** days.
 
 #### DATA_FLUSH_INTERVAL_SECONDS
 
@@ -3211,8 +3211,8 @@ Once enough space has been cleared, the Query Store mode will automatically swit
 
 > [!IMPORTANT]  
 > - If you think that your workload capture will need more than 10 GB of disk space, you should probably rethink and optimize your workload to reuse query plans (for example using [forced parameterization](../../relational-databases/query-processing-architecture-guide.md#forced-parameterization), or adjust the Query Store configurations.
-> - Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can set `QUERY_CAPTURE_MODE` to CUSTOM for additional control over the query capture policy.
-> - `MAX_STORAGE_SIZE_MB` setting limit is 10,240 MB on [!INCLUDE[sssdsmifull](../../includes/sssdsmifull-md.md)]. 
+> - Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you can set `QUERY_CAPTURE_MODE` to CUSTOM for additional control over the query capture policy.
+> - `MAX_STORAGE_SIZE_MB` setting limit is 10,240 MB on [!INCLUDE[ssazuremi](../../includes/ssazuremi-md.md)]. 
 
 #### INTERVAL_LENGTH_MINUTES
 
@@ -3242,7 +3242,7 @@ Designates the currently active query capture mode.
 
 - AUTO
 
-  Capture relevant queries based on execution count and resource consumption. This is the default configuration value for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+  Capture relevant queries based on execution count and resource consumption. This is the default configuration value for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 - NONE
 

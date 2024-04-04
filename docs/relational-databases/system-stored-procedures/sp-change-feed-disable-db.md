@@ -1,29 +1,29 @@
 ---
-title: "sp_change_feed_disable_db (Transact-SQL)"
-description: "The sp_change_feed_disable_db system stored procedure disables the Azure Synapse Link for SQL change feed at the database level."
+title: "sys.sp_change_feed_disable_db (Transact-SQL)"
+description: "The sys.sp_change_feed_disable_db system stored procedure disables the SQL change feed at the database level."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
-ms.date: 02/03/2023
-ms.service: synapse-analytics
+ms.reviewer: imotiwala
+ms.date: 03/13/2024
+ms.service: fabric
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
+  - "sys.sp_change_feed_disable_db_TSQL"
+  - "sys.sp_change_feed_disable_db"
   - "sp_change_feed_disable_db_TSQL"
   - "sp_change_feed_disable_db"
 helpviewer_keywords:
   - "sp_change_feed_disable_db"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
+monikerRange: ">=sql-server-ver16||=azuresqldb-current||=azure-sqldw-latest||=fabric"
 ---
-# sp_change_feed_disable_db (Transact-SQL)
+# sys.sp_change_feed_disable_db (Transact-SQL)
 
-[!INCLUDE [sqlserver2022-asdb](../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [sqlserver2022-asdb-asa-fabric](../../includes/applies-to-version/sqlserver2022-asdb-asa-fabric.md)]
 
-Disable the change feed at the database level, and subsequently the metadata for all the associated tables for [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview). For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
-
-> [!NOTE]  
-> This stored procedure is used internally and is not recommended for direct administrative use. Use Synapse Studio instead. Using this procedure will introduce inconsistency with Synapse Workspace configuration and keep Azure Synapse resources allocated.
+Disable the change feed at the database level, and then the metadata for all the associated tables for [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview). For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
 
 ## Syntax
 
@@ -40,15 +40,26 @@ A user with [CONTROL database permissions](../security/permissions-database-engi
 
 ## Remarks
 
-When the change feed is disabled with active table groups, all connections and schedulers will be stopped immediately/forcefully without waiting for the current operations are completed. No new change feed table groups can be created for the database, and all the existing metadata describing the table groups will be deleted without waiting for the current operations to complete. Re-enabling change feed will result in clean initializations of all table groups and reseeding of all the data.
+When the change feed is disabled with active table groups, all connections and schedulers are stopped immediately/forcefully without waiting for the current operations are completed. No new change feed table groups can be created for the database, and all the existing metadata describing the table groups will be deleted without waiting for the current operations to complete. Re-enabling change feed results in clean initializations of all table groups and reseeding of all the data.
 
-## See also
+You should only execute this stored procedure when unsupported actions or unexpected errors have occurred, that require the Mirroring feature to be disabled manually, and cannot be removed via the Synapse workspace or Fabric portal.
 
-- [What is Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
-- [sp_change_feed_drop_table_group (Transact-SQL)](sp-change-feed-drop-table-group.md)
-- [sp_change_feed_disable_table (Transact-SQL)](sp-change-feed-disable-table.md)
+## Related content
 
-## Next steps
+- [sys.sp_help_change_feed (Transact-SQL)](sp-help-change-feed.md)
+- [sys.sp_help_change_feed_table (Transact-SQL)](sp-help-change-feed-table.md)
+- [sys.sp_change_feed_configure_parameters (Transact-SQL)](sp-change-feed-configure-parameters.md)
+- [sys.dm_change_feed_log_scan_sessions (Transact-SQL)](../system-dynamic-management-views/sys-dm-change-feed-log-scan-sessions.md)
+- [sys.dm_change_feed_errors (Transact-SQL)](../system-dynamic-management-views/sys-dm-change-feed-errors.md)
 
+**For Microsoft Fabric mirrored databases**:
+
+- [Microsoft Fabric mirrored databases (Preview)](/fabric/database/mirrored-database/overview)
+- [Microsoft Fabric mirrored databases monitoring](/fabric/database/mirrored-database/monitor)
+- [Explore data in your Mirrored database using Microsoft Fabric](/fabric/database/mirrored-database/explore)
+
+**For Azure Synapse Link**:
+
+- [What is Azure Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
 - [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md)
-- [Get started with Synapse Link for SQL Server 2022](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022)
+- [Troubleshoot: Azure Synapse Link for SQL initial snapshot issues](/azure/synapse-analytics/synapse-link/troubleshoot/troubleshoot-sql-snapshot-issues)

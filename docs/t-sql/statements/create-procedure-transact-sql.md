@@ -50,7 +50,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
-Creates a [!INCLUDE[tsql](../../includes/tsql-md.md)] or common language runtime (CLR) stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Stored procedures are similar to procedures in other programming languages in that they can:
+Creates a [!INCLUDE[tsql](../../includes/tsql-md.md)] or common language runtime (CLR) stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Stored procedures are similar to procedures in other programming languages in that they can:
 
 - Accept input parameters and return multiple values in the form of output parameters to the calling procedure or batch.
 - Contain programming statements that perform operations in the database, including calling other procedures.
@@ -174,7 +174,7 @@ The complete name for a procedure or a global temporary procedure, including `##
 
 #### ; *number*
 
-**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 An optional integer that is used to group procedures of the same name. These grouped procedures can be dropped together by using one DROP PROCEDURE statement.
 
@@ -234,7 +234,7 @@ To instruct the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to discard query pla
 
 #### ENCRYPTION
 
-**Applies to**: SQL Server ( [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: SQL Server ( [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 Indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converts the original text of the CREATE PROCEDURE statement to an obfuscated format. The output of the obfuscation isn't directly visible in any of the catalog views in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Users who have no access to system tables or database files can't retrieve the obfuscated text. However, the text is available to privileged users who can either access system tables over the [DAC port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) or directly access database files. Also, users who can attach a debugger to the server process can retrieve the decrypted procedure from memory at runtime. For more information about accessing system metadata, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
 
@@ -246,13 +246,13 @@ Procedures created with this option can't be published as part of [!INCLUDE[ssNo
 
 Specifies the security context under which to execute the procedure.
 
-For natively compiled stored procedures, starting [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], there are no limitations on the EXECUTE AS clause. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] the SELF, OWNER, and *'user_name'* clauses are supported with natively compiled stored procedures.
+For natively compiled stored procedures, starting [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], there are no limitations on the EXECUTE AS clause. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] the SELF, OWNER, and *'user_name'* clauses are supported with natively compiled stored procedures.
 
 For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).
 
 #### FOR REPLICATION
 
-**Applies to**: SQL Server ( [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: SQL Server ( [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 Specifies that the procedure is created for replication. Consequently, it can't be executed on the Subscriber. A procedure created with the FOR REPLICATION option is used as a procedure filter and is executed only during replication. Parameters can't be declared if FOR REPLICATION is specified. FOR REPLICATION can't be specified for CLR procedures. The RECOMPILE option is ignored for procedures created with FOR REPLICATION.
 
@@ -264,7 +264,7 @@ One or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements comprising th
 
 #### EXTERNAL NAME *assembly_name*.*class_name*.*method_name*
 
-**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sssds](../../includes/sssds-md.md)].
 
 Specifies the method of a [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly for a CLR procedure to reference. *class_name* must be a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier and must exist as a class in the assembly. If the class has a namespace-qualified name that uses a period (`.`) to separate namespace parts, the class name must be delimited by using brackets (`[]`) or quotation marks (`""`). The specified method must be a static method of the class.
 
@@ -275,7 +275,7 @@ By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can't exec
 
 #### ATOMIC WITH
 
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 Indicates atomic stored procedure execution. Changes are either committed or all of the changes rolled back by throwing an exception. The ATOMIC WITH block is required for natively compiled stored procedures.
 
@@ -303,25 +303,25 @@ Determines whether null values are allowed in a parameter. NULL is the default.
 
 #### NATIVE_COMPILATION
 
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 Indicates that the procedure is natively compiled. NATIVE_COMPILATION, SCHEMABINDING, and EXECUTE AS can be specified in any order. For more information, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md).
 
 #### SCHEMABINDING
 
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 Ensures that tables that are referenced by a procedure can't be dropped or altered. SCHEMABINDING is required in natively compiled stored procedures. (For more information, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md).) The SCHEMABINDING restrictions are the same as they are for user-defined functions. For more information, see the SCHEMABINDING section in [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).
 
 #### LANGUAGE = [N] 'language'
 
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 Equivalent to [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md) session option. LANGUAGE = [N] 'language' is required.
 
 #### TRANSACTION ISOLATION LEVEL
 
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 Required for natively compiled stored procedures. Specifies the transaction isolation level for the stored procedure. The options are as follows:
 
@@ -345,7 +345,7 @@ Specifies that data read by any statement in a transaction is the transactionall
 
 #### DATEFIRST = *number*
 
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 Specifies the first day of the week to a number from 1 through 7. DATEFIRST is optional. If it isn't specified, the setting is inferred from the specified language.
 
@@ -353,7 +353,7 @@ For more information, see [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/sta
 
 #### DATEFORMAT = *format*
 
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 Specifies the order of the month, day, and year date parts for interpreting date, smalldatetime, datetime, datetime2, and datetimeoffset character strings. DATEFORMAT is optional. If it isn't specified, the setting is inferred from the specified language.
 
@@ -361,7 +361,7 @@ For more information, see [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/st
 
 #### DELAYED_DURABILITY = { OFF | ON }
 
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction commits can be either fully durable, the default, or delayed durable.
 
@@ -580,7 +580,7 @@ GO
 
 The following example creates the `GetPhotoFromDB` procedure that references the `GetPhotoFromDB` method of the `LargeObjectBinary` class in the `HandlingLOBUsingCLR` assembly. Before the procedure is created, the `HandlingLOBUsingCLR` assembly is registered in the local database.
 
-**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (if using an assembly created from *assembly_bits.*
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sssds](../../includes/sssds-md.md)] (if using an assembly created from *assembly_bits.*
 
 ```sql
 CREATE ASSEMBLY HandlingLOBUsingCLR
@@ -751,7 +751,7 @@ CREATE PROCEDURE usp_InsertProductionLocation
     @TVP LocationTableType READONLY
     AS
     SET NOCOUNT ON
-    INSERT INTO [AdventureWorks2012].[Production].[Location]
+    INSERT INTO [AdventureWorks2022].[Production].[Location]
        ([Name]
        , [CostRate]
        , [Availability]
@@ -768,7 +768,7 @@ AS LocationTableType;
 INSERT INTO @LocationTVP (LocationName, CostRate)
     SELECT [Name], 0.00
     FROM
-    [AdventureWorks2012].[Person].[StateProvince];
+    [AdventureWorks2022].[Person].[StateProvince];
 
 /* Pass the table variable data to a stored procedure. */
 EXEC usp_InsertProductionLocation @LocationTVP;

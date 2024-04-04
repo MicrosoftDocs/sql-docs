@@ -4,20 +4,25 @@ description: Connect an instance of SQL Server to Azure Arc. Allows you to manag
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, maghan
-ms.date: 07/06/2023
-ms.service: sql
+ms.date: 03/08/2024
 ms.topic: conceptual
 ---
+
 # Connect your SQL Server to Azure Arc
 
-This article explains how to connect your SQL Server instance to Azure Arc. Before you proceed, complete the [Prerequisites](prerequisites.md#prerequisites).
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
+[!INCLUDE [automatic](includes/if-manual.md)]
+
+This article explains how to connect your SQL Server instance to Azure Arc. Before you proceed, complete the [Prerequisites](prerequisites.md).
 
 ## Onboard the server to Azure Arc
 
 If the server that runs your SQL Server instance isn't yet connected to Azure, you can initiate the connection from the target machine using the onboarding script. This script connects the server to Azure and installs the Azure extension for SQL Server.
 
 > [!NOTE]  
-> If your server is already connected to Azure, proceed to [When the machine is already connected to an Arc-enabled Server](connect-already-enabled.md).
+> If your server is already connected to Azure and to deploy Azure SQL Server extension for SQL Server proceed to [When the machine is already connected to an Arc-enabled Server](connect-already-enabled.md).
+
 
 ### Generate an onboarding script for SQL Server
 
@@ -42,7 +47,7 @@ If the server that runs your SQL Server instance isn't yet connected to Azure, y
 
    :::image type="content" source="media/join/server-details-sql-server-azure-arc.png" alt-text="Screenshot of server details for Azure Arc.":::
 
-1. Select the SQL Server edition and license type you are using on this machine. Some Arc-enabled SQL Server features are only available for SQL Servers with Software Assurance (Paid) or with Azure pay-as-you-go. For more information, review [Manage SQL Server license type](manage-license-type.md).
+1. Select the SQL Server edition and license type you are using on this machine. Some Arc-enabled SQL Server features are only available for SQL Server instances with Software Assurance (Paid) or with Azure pay-as-you-go. For more information, review [Manage SQL Server license type](manage-configuration.md).
 
 1. Specify the SQL Server instance(s) you want to exclude from registering (if you have multiple instances installed on the server).  Separate each excluded instance by a space.
 
@@ -92,7 +97,6 @@ In this step, execute the script you downloaded from the Azure portal, on the ta
    ```
 
 ---
-
 ## Validate your Arc-enabled SQL Server resources
 
 Go to **Azure Arc > SQL Server** and open the newly registered Arc-enabled SQL Server resource to validate.
@@ -102,4 +106,4 @@ Go to **Azure Arc > SQL Server** and open the newly registered Arc-enabled SQL S
 ## Next steps
 
 - [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
-- [Configure best practices assessment on an Azure Arc-enabled SQL Server instance](assess.md)
+- [Configure best practices assessment on a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instance](assess.md)

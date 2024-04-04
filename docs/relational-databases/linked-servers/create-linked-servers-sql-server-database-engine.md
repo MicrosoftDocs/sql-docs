@@ -3,7 +3,7 @@ title: "Create linked servers"
 description: "Create linked servers (SQL Server Database Engine)"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "1/10/2022"
+ms.date: "07/31/2023"
 ms.service: sql
 ms.topic: conceptual
 f1_keywords:
@@ -18,17 +18,15 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-This article shows how to create a linked server and access data from another [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], an Azure SQL Managed Instance, or another data source by using [SQL Server Management Studio](../../ssms/menu-help/about-sql-server-management-studio.md) (SSMS) or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Linked servers enable the SQL Server database engine and Azure SQL Managed Instance to read data from the remote data sources and execute commands against the remote database servers (for example, OLE DB data sources) outside of the instance of SQL Server.
+This article shows how to create a linked server and access data from another [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], an Azure SQL Managed Instance, or another data source by using [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Linked servers enable the SQL Server database engine and Azure SQL Managed Instance to read data from the remote data sources and execute commands against the remote database servers (for example, OLE DB data sources) outside of the instance of SQL Server.
   
 ## <a name="Background"></a> Background
 
-
 Linked servers are typically configured to enable the database engine to execute a Transact-SQL statement that includes tables in another instance of SQL Server, or another database product such as Oracle. Many types of data sources can be configured as linked servers, including third-party database providers and Azure Cosmos DB.
-
 
 After a linked server is created, distributed queries can be run against this server, and queries can join tables from more than one data source. If the linked server is defined as an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or an Azure SQL Managed Instance, remote stored procedures can be executed.  
   
-The capabilities and required arguments of the linked server can vary significantly. The examples in this article provide a typical example but all options are not described. For more information, see [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
+The capabilities and required arguments of the linked server can vary significantly. The examples in this article provide a typical example but all options aren't described. For more information, see [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
 ## Permissions
 
@@ -42,14 +40,14 @@ Create a linked server with SSMS using the following procedure:
 
 In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
-- Open Object Explorer.
-- Expand **Server Objects**.
-- Right-click **Linked Servers**.
-- Select **New Linked Server**.  
+1. Open Object Explorer.
+1. Expand **Server Objects**.
+1. Right-click **Linked Servers**.
+1. Select **New Linked Server**.  
   
 ### Edit the General page for the linked server properties
 
-On the **General** page, in the **Linked server** box, type the name of the instance of **SQL Server** that you area linking to.
+On the **General** page, in the **Linked server** box, type the name of the instance of **SQL Server** that you're linking to.
 
   > [!NOTE]  
   > If the instance of **SQL Server** is the default instance, enter the name of the computer that hosts the instance of **SQL Server**. If the **SQL Server** is a named instance, enter the name of the computer and the name of the instance, such as **Accounting\SQLExpress**.
@@ -69,7 +67,7 @@ Specify the **Server type** and related information if needed:
       Type the product name of the OLE DB data source to add as a linked server.  
 
   - **Data source**  
-        Type the name of the data source as interpreted by the OLE DB provider. If you are connecting to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], provide the instance name.  
+        Type the name of the data source as interpreted by the OLE DB provider. If you're connecting to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], provide the instance name.  
 
   - **Provider string**  
         Type the unique programmatic identifier (PROGID) of the OLE DB provider that corresponds to the data source. For examples of valid provider strings, see [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
@@ -82,37 +80,38 @@ Specify the **Server type** and related information if needed:
 
 ### Edit the Security page for the linked server properties
   
-On the **Security** page, specify the security context that will be used when the original instance connects to the linked server. There are two strategies to configure here that can be used alone or combined. The first is to map logins from the local server to the remote server, and the second is how the linked server should treat logins that are not mapped. 
+On the **Security** page, specify the security context that is used when the original instance connects to the linked server. There are two strategies to configure here that can be used alone or combined. The first is to map logins from the local server to the remote server, and the second is how the linked server should treat logins that aren't mapped.
+
 #### Add login mappings
 
-You can optionally specify how specific local server logins will authenticate using the linked server.
+You can optionally specify how specific local server logins authenticate using the linked server.
 
 Under **Local server login to remote server login mappings**, repeat the following process for each login you would like to map:
 
-- Select **Add**.
+1. Select **Add**.
   
-- Specify a **Local login**.
+1. Specify a **Local login**.
 
-    Specify the local login that can connect to the linked server. The local login can be either a login using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication or a Windows Authentication login. Using a Windows group is not supported. Use this list to restrict the connection to specific logins, or to allow some logins to connect as a different login.  
-    
-> [!NOTE]
-> Common issues with linked servers using Windows Authentication to a remote SQL Server instance arise from issues with service principal names (SPNs). For more information, see [Service Principal Name (SPN) Support in Client Connections](../../connect/oledb/features/service-principal-name-spn-support-in-client-connections.md). **Microsoft Kerberos Configuration Manager for SQL Server** is a diagnostic tool that helps troubleshoot Kerberos related connectivity issues with SQL Server. For more information, see [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).
+    Specify the local login that can connect to the linked server. The local login can be either a login using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication or a Windows authentication login. Using a Windows group isn't supported. Use this list to restrict the connection to specific logins, or to allow some logins to connect as a different login.
 
-- Select **Impersonate** (optional).
+   > [!NOTE]
+   > Common issues with linked servers using Windows authentication to a remote SQL Server instance arise from issues with service principal names (SPNs). For more information, see [Service Principal Name (SPN) Support in Client Connections](../../connect/oledb/features/service-principal-name-spn-support-in-client-connections.md). **Microsoft Kerberos Configuration Manager for SQL Server** is a diagnostic tool that helps troubleshoot Kerberos related connectivity issues with SQL Server. For more information, see [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).
 
-    Pass the username and password from the local login to the linked server. For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, a login with the exact same name and password must exist on the remote server. For Windows logins, the login must be a valid login on the linked server.  
+1. Select **Impersonate** (optional).
 
-    To use impersonation, the configuration must meet the requirement for delegation.  
+   Pass the username and password from the local login to the linked server. For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication, a login with the exact same name and password must exist on the remote server. For Windows logins, the login must be a valid login on the linked server.  
 
-- Specify a **Remote User** if you aren't using impersonation.
+   To use impersonation, the configuration must meet the requirement for delegation.  
 
-    Use the remote user to map user defined in **Local login**. The **Remote User** must be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication login on the remote server.  
+1. Specify a **Remote User** if you aren't using impersonation.
 
-- Specify a **Remote Password** if you aren't using impersonation.
-  - Specify the password of the Remote User.  
+   Use the remote user to map user defined in **Local login**. The **Remote User** must be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication login on the remote server.  
 
+1. Specify a **Remote Password** if you aren't using impersonation.
 
-Select **Remove** to remove an existing local login, if desired.
+   - Specify the password of the Remote User.  
+
+1. Select **Remove** to remove an existing local login, if desired.
 
 #### Specify the default security context for logins not present in the mapping list
 
@@ -121,7 +120,7 @@ In a domain environment where users are connecting by using their domain logins,
 Select one of the following options:
 
 - **Not be made**  
-    A connection will not be made for logins not defined in the list.  
+    A connection won't be made for logins not defined in the list.  
 
 - **Be made without using a security context**  
     A connection will be made without using a security context for logins not defined in the list.  
@@ -137,9 +136,9 @@ Select one of the following options:
 To view or specify server options, select the **Server Options** page. You can edit any of the following options:
   
 - **Collation Compatible**  
-     Affects Distributed Query execution against linked servers. If this option is set to true, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assumes that all characters in the linked server are compatible with the local server, with regard to character set and collation sequence (or sort order). This enables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to send comparisons on character columns to the provider. If this option is not set, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] always evaluates comparisons on character columns locally.  
+     Affects Distributed Query execution against linked servers. If this option is set to true, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assumes that all characters in the linked server are compatible with the local server, with regard to character set and collation sequence (or sort order). This enables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to send comparisons on character columns to the provider. If this option isn't set, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] always evaluates comparisons on character columns locally.  
   
-     This option should be set only if it is certain that the data source corresponding to the linked server has the same character set and sort order as the local server.  
+     This option should be set only if it's certain that the data source corresponding to the linked server has the same character set and sort order as the local server.  
   
 - **Data Access**  
      Enables and disables a linked server for distributed query access.  
@@ -147,7 +146,6 @@ To view or specify server options, select the **Server Options** page. You can e
 - **RPC**  
      Enables remote procedure calls (RPC) from the specified server.  
 
-  
 - **RPC Out**  
      Enables RPC to the specified server.  
   
@@ -159,11 +157,11 @@ To view or specify server options, select the **Server Options** page. You can e
      If false, distributed queries will always use the default collation of the local server, while collation name and the collation of remote columns are ignored. The default is false.  
   
 - **Collation Name**  
-     Specifies the name of the collation used by the remote data source if use remote collation is true and the data source is not a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source. The name must be one of the collations supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Specifies the name of the collation used by the remote data source if use remote collation is true and the data source isn't a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source. The name must be one of the collations supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      Use this option when accessing an OLE DB data source other than [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but whose collation matches one of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collations.  
   
-     The linked server must support a single collation to be used for all columns in that server. Do not set this option if the linked server supports multiple collations within a single data source, or if the linked server's collation cannot be determined to match one of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collations.  
+     The linked server must support a single collation to be used for all columns in that server. Don't set this option if the linked server supports multiple collations within a single data source, or if the linked server's collation can't be determined to match one of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collations.  
   
 - **Connection Timeout**  
      Time-out value in seconds for connecting to a linked server.  
@@ -184,13 +182,14 @@ Select **OK**.
   
 ## View or edit linked server provider options in SSMS
   
-All providers do not have the same options available. For example, some types of data have indexes available and some might not. Use this dialog box to help [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] understand the capabilities of the provider. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installs some common data providers, however when the product providing the data changes, the provider installed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might not support all the newest features. The best source of information about the capabilities of the product providing the data is the documentation for that product.  
+All providers don't have the same options available. For example, some types of data have indexes available and some might not. Use this dialog box to help [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] understand the capabilities of the provider. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installs some common data providers, however when the product providing the data changes, the provider installed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might not support all the newest features. The best source of information about the capabilities of the product providing the data is the documentation for that product.  
 To open the linked server **Providers Options** page in SSMS:
-- Open Object Explorer.
-- Expand **Server Objects**.
-- Expand **Linked Servers**.
-- Expand **Providers**.
-- Right-click a provider and select **Properties**.
+
+1. Open Object Explorer.
+1. Expand **Server Objects**.
+1. Expand **Linked Servers**.
+1. Expand **Providers**.
+1. Right-click a provider and select **Properties**.
 
 Provider options are defined as follows:
   
@@ -205,16 +204,16 @@ Provider options are defined as follows:
   
 - **Allow inprocess**  
 
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows the provider to be instantiated as an in-process server. When this option is not set, the default behavior is to instantiate the provider outside the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process. Instantiating the provider outside the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process protects the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process from errors in the provider. When the provider is instantiated outside the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process, updates or inserts referencing long columns (**text**, **ntext**, or **image**) are not allowed.  
-      
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows the provider to be instantiated as an in-process server. When this option isn't set, the default behavior is to instantiate the provider outside the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process. Instantiating the provider outside the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process protects the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process from errors in the provider. When the provider is instantiated outside the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process, updates or inserts referencing long columns (**text**, **ntext**, or **image**) aren't allowed.
+
 - **Non transacted updates**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows updates, even if **ITransactionLocal** is not available. If this option is enabled, updates against the provider are not recoverable, because the provider does not support transactions.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows updates, even if **ITransactionLocal** isn't available. If this option is enabled, updates against the provider aren't recoverable, because the provider doesn't support transactions.  
   
 - **Index as access path**  
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attempts to use indexes of the provider to fetch data. By default, indexes are used only for metadata and are never opened  
   
 - **Disallow ad hoc access**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not allow ad hoc access through the OPENROWSET and OPENDATASOURCE functions against the OLE DB provider. When this option is not set, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also does not allow ad hoc access.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doesn't allow ad hoc access through the OPENROWSET and OPENDATASOURCE functions against the OLE DB provider. When this option isn't set, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also doesn't allow ad hoc access.  
   
 - **Supports 'Like' operator**  
      Indicates that the provider supports queries using the LIKE key word.  
@@ -253,18 +252,15 @@ The following steps help you validate a linked server.
   
 ### Test the linked server  
 
- Considering either of the following two approaches to test a linked server's authentication in your current security context.
- 
-   - To test the ability to connect to a linked server in SSMS, browse to the linked server in Object Explorer, right-click the linked server and then select **Test Connection**.  
+Considering either of the following two approaches to test a linked server's authentication in your current security context.
 
+- To test the ability to connect to a linked server in SSMS, browse to the linked server in **Object Explorer**, right-click the linked server and then select **Test Connection**.  
 
-- To test the ability to connect to a linked server in T-SQL , execute a simple SELECT statement, for example, to retrieve basic database catalog information. This example returns the names of the databases on the linked server.  
+- To test the ability to connect to a linked server in T-SQL, execute a simple `SELECT` statement, for example, to retrieve basic database catalog information. This example returns the names of the databases on the linked server.  
 
-  
     ```sql  
     SELECT name FROM [SRVR002\ACCTG].master.sys.databases;  
     GO  
-  
     ```  
   
 ### Join tables from a linked server
@@ -279,16 +275,15 @@ LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked
 GO  
 ```
 
-When `NULL` is returned for the linked server login, it indicates that the login does not exist on the linked server. These logins will not be able to use the linked server unless the linked server is configured to pass a different security context or the linked server accepts anonymous connections.  
-
+When `NULL` is returned for the linked server login, it indicates that the login doesn't exist on the linked server. These logins won't be able to use the linked server unless the linked server is configured to pass a different security context or the linked server accepts anonymous connections.  
 
 ## Linked servers with Azure SQL Managed Instance
 
 If you're using Azure SQL Managed Instance, see the following examples from [sp_addlinkedserver (Transact-SQL)](../system-stored-procedures/sp-addlinkedserver-transact-sql.md):
 
-- [Create SQL Managed Instance linked server with managed identity Azure AD authentication](../system-stored-procedures/sp-addlinkedserver-transact-sql.md#h-create-sql-managed-instance-linked-server-with-managed-identity-azure-ad-authentication)
+- [Create SQL Managed Instance linked server with managed identity Microsoft Entra authentication](../system-stored-procedures/sp-addlinkedserver-transact-sql.md#managed-identity-authentication)
 
-- [Create SQL Managed Instance linked server with pass-through Azure AD authentication](../system-stored-procedures/sp-addlinkedserver-transact-sql.md#i-create-sql-managed-instance-linked-server-with-pass-through-azure-ad-authentication)
+- [Create SQL Managed Instance linked server with pass-through Microsoft Entra authentication](../system-stored-procedures/sp-addlinkedserver-transact-sql.md#pass-through-authentication)
 
 ## Next steps
 

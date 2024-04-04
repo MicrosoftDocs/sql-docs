@@ -3,11 +3,13 @@ title: Configure the SQL Server Agent on Linux
 description: Learn how to enable or install the SQL Server Agent on Linux. Starting with SQL Server 2017 CU4, SQL Server Agent is included with the mssql-server package.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 12/05/2019
+ms.date: 11/16/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: intro-installation
+ms.custom:
+  - intro-installation
+  - linux-related-content
 ---
 
 # Install SQL Server Agent on Linux
@@ -16,7 +18,7 @@ ms.custom: intro-installation
 
 This article describes how to enable or install the SQL Server Agent on Linux.
 
-The [SQL Server Agent](../ssms/agent/sql-server-agent.md) runs scheduled SQL Server jobs. Starting with SQL Server 2017 CU4, SQL Server Agent is included with the **mssql-server** package and is disabled by default. For information on the features supported for this release of the SQL Server Agent along with version information, see the [Release Notes](sql-server-linux-release-notes-2017.md).
+The [SQL Server Agent](../ssms/agent/sql-server-agent.md) runs scheduled SQL Server jobs. Starting with SQL Server 2017 CU4, SQL Server Agent is included with the **mssql-server** package and is disabled by default. For information on the features supported for this release of the SQL Server Agent along with version information, see the [Release notes for SQL Server 2017 on Linux](sql-server-linux-release-notes-2017.md).
 
 ## Instructions
 
@@ -32,32 +34,32 @@ Before using the SQL Server Agent on Linux, use the following steps to enable or
 1. Follow the instructions in one of the following sections based on your version of SQL Server:
 
    | Versions | Instructions |
-   |---|---|
-   | SQL Server 2017 CU4 and higher</br>SQL Server 2019 | [Enable the SQL Server Agent](#EnableAgentAfterCU4) |
+   | --- | --- |
+   | SQL Server 2017 CU4 and higher<br />SQL Server 2019 | [Enable the SQL Server Agent](#EnableAgentAfterCU4) |
    | SQL Server 2017 CU3 and lower | [Install the SQL Server Agent](#InstallAgentBelowCU4) |
 
 ## <a id="EnableAgentAfterCU4"></a> Enable the SQL Server Agent
 
-For SQL Server 2019 and SQL Server 2017 CU4 and higher, you only need to enable the SQL Server Agent. You do not need to install a separate package.
+For SQL Server 2019 and SQL Server 2017 CU4 and higher, you only need to enable the SQL Server Agent. You don't need to install a separate package.
 
 To enable SQL Server Agent, follow the steps below.
 
 ```bash
-sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
+sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true
 sudo systemctl restart mssql-server
 ```
 
-> [!NOTE]
-> If you are upgrading from 2017 CU3 or below with Agent installed, SQL Server Agent will be enabled automatically and previous Agent packages will be uninstalled.  
+> [!NOTE]  
+> If you're upgrading from 2017 CU3 or below with Agent installed, SQL Server Agent will be enabled automatically and previous Agent packages will be uninstalled.
 
-> [!NOTE]
-> SQL Server Management Studio Object Explorer does not display the contents of the SQL Server Agent node unless *Agent XPs* extended stored procedures are enabled, regardless of the SQL Server Agent service state. For more information, see [Agent XPs Server Configuration Option](../database-engine/configure-windows/agent-xps-server-configuration-option.md)
+> [!NOTE]  
+> SQL Server Management Studio Object Explorer doesn't display the contents of the SQL Server Agent node unless *Agent XPs* extended stored procedures are enabled, regardless of the SQL Server Agent service state. For more information, see [Agent XPs (server configuration option)](../database-engine/configure-windows/agent-xps-server-configuration-option.md)
 
 ## <a id="InstallAgentBelowCU4"></a> Install the SQL Server Agent
 
 For SQL Server 2017 CU3 and earlier, you must install the SQL Server Agent package.
 
-> [!NOTE]
+> [!NOTE]  
 > The install instructions below apply to SQL Server Versions 2017 CU3 and below. Before installing SQL Server Agent, first [install SQL Server](sql-server-linux-setup.md#platforms). This configures the keys and repositories that you use when you install the **mssql-server-agent** package.
 
 Install the SQL Server Agent for your platform:
@@ -67,7 +69,7 @@ Install the SQL Server Agent for your platform:
 
 ### <a id="RHEL"></a> Install on RHEL
 
-Use the following steps to install the **mssql-server-agent** on Red Hat Enterprise Linux. 
+Use the following steps to install the **mssql-server-agent** on Red Hat Enterprise Linux.
 
 ```bash
 sudo yum install mssql-server-agent
@@ -82,14 +84,14 @@ sudo yum update mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-If you need an offline installation, locate the SQL Server Agent package download in the [Release notes](sql-server-linux-release-notes-2017.md). Then use the same offline installation steps described in the article [Install SQL Server](sql-server-linux-setup.md#offline).
+If you need an offline installation, locate the SQL Server Agent package download in the [Release notes for SQL Server 2017 on Linux](sql-server-linux-release-notes-2017.md). Then use the same offline installation steps described in the article [Install SQL Server](sql-server-linux-setup.md#offline).
 
 ### <a id="ubuntu"></a> Install on Ubuntu
 
-Use the following steps to install the **mssql-server-agent** on Ubuntu. 
+Use the following steps to install the **mssql-server-agent** on Ubuntu.
 
 ```bash
-sudo apt-get update 
+sudo apt-get update
 sudo apt-get install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
@@ -97,18 +99,18 @@ sudo systemctl restart mssql-server
 If you already have **mssql-server-agent** installed, you can update to the latest version with the following commands:
 
 ```bash
-sudo apt-get update 
+sudo apt-get update
 sudo apt-get install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-If you need an offline installation, locate the SQL Server Agent package download in the [Release notes](sql-server-linux-release-notes-2017.md). Then use the same offline installation steps described in the article [Install SQL Server](sql-server-linux-setup.md#offline).
+If you need an offline installation, locate the SQL Server Agent package download in the [Release notes for SQL Server 2017 on Linux](sql-server-linux-release-notes-2017.md). Then use the same offline installation steps described in the article [Install SQL Server](sql-server-linux-setup.md#offline).
 
 ### <a id="SLES"></a> Install on SLES
 
-Use the following steps to install the **mssql-server-agent** on SUSE Linux Enterprise Server. 
+Use the following steps to install the **mssql-server-agent** on SUSE Linux Enterprise Server.
 
-Install **mssql-server-agent** 
+Install **mssql-server-agent**
 
 ```bash
 sudo zypper install mssql-server-agent
@@ -123,7 +125,8 @@ sudo zypper update mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-If you need an offline installation, locate the SQL Server Agent package download in the [Release notes](sql-server-linux-release-notes-2017.md). Then use the same offline installation steps described in the article [Install SQL Server](sql-server-linux-setup.md#offline).
+If you need an offline installation, locate the SQL Server Agent package download in the [Release notes for SQL Server 2017 on Linux](sql-server-linux-release-notes-2017.md). Then use the same offline installation steps described in the article [Install SQL Server](sql-server-linux-setup.md#offline).
 
-## Next steps
-For more information on how to use SQL Server Agent to create, schedule, and run jobs, see [Run a SQL Server Agent job on Linux](sql-server-linux-run-sql-server-agent-job.md).
+## Related content
+
+- [Create and run SQL Server Agent jobs on Linux](sql-server-linux-run-sql-server-agent-job.md)

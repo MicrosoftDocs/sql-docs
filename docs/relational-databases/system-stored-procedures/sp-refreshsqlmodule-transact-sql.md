@@ -86,7 +86,7 @@ The system stored procedure `sp_refreshsqlmodule` should be run when changes are
   
 ```sql
 -- Create an alias type.  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF EXISTS (SELECT 'mytype' FROM sys.types WHERE name = 'mytype')  
 DROP TYPE mytype;  
@@ -143,7 +143,7 @@ GO
  The following example refreshes a database-level DDL trigger.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sys.sp_refreshsqlmodule @name = 'ddlDatabaseTriggerLog' , @namespace = 'DATABASE_DDL_TRIGGER';  
 GO  

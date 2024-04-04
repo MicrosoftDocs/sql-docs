@@ -57,8 +57,8 @@ Use two hyphens (**--**) for single-line or nested comments. Comments inserted w
  The following example uses the -- commenting characters.  
   
 ```sql  
--- Choose the AdventureWorks2012 database.  
-USE AdventureWorks2012;  
+-- Choose the AdventureWorks2022 database.  
+USE AdventureWorks2022;  
 GO  
 -- Choose all columns and all rows from the Address table.  
 SELECT *  

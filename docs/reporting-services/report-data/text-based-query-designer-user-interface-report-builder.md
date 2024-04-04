@@ -48,7 +48,7 @@ helpviewer_keywords:
 |Result|Displays the results of the query. To run the query, right-click in any pane and click **Run**, or click the **Run** button on the toolbar.|  
   
 #### Example  
- The following query returns the list of names from the  AdventureWorks2014 database **ContactType** table for the **Person** schema.  
+ The following query returns the list of names from the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database **ContactType** table for the **Person** schema.  
   
 ```  
 SELECT Name FROM Person.ContactType  
@@ -71,7 +71,7 @@ SELECT Name FROM Person.ContactType
 |Result|Displays the results of the query. To run the query, right-click in any pane and click **Run**, or click the **Run** button on the toolbar.|  
   
 #### Example  
- The following query calls the AdventureWorks2014 stored procedure **uspGetWhereUsedProductID**. You must enter a value for the product identification number parameter when you run the query.  
+ The following query calls the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] stored procedure **uspGetWhereUsedProductID**. You must enter a value for the product identification number parameter when you run the query.  
   
 ```  
 uspGetWhereUsedProductID  
@@ -90,7 +90,7 @@ uspGetWhereUsedProductID
  When you select **Command typeTableDirect**, the text-based query designer presents two panes: the Query pane and the Result pane. When you enter a table and click the **Run** button, all the columns for that table are returned.  
   
 #### Example  
- For a data source type OLE DB, the following dataset query returns a result set for all contact types in the AdventureWorks2014 database.  
+ For a data source type OLE DB, the following dataset query returns a result set for all contact types in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
  `Person.ContactType`  
   

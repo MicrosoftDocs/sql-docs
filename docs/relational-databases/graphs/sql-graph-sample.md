@@ -192,7 +192,7 @@ DROP DATABASE graphdemo;
 go
 ```
 
-Clean up the schema and database created for the sample in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+Clean up the schema and database created for the sample in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 ```sql
 --Connect to the graphdemo database

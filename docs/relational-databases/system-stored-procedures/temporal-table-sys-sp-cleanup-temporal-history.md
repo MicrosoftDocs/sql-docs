@@ -54,7 +54,7 @@ It is always recommended to rely on an internal background task for cleanup that
 
 Requires **db_owner** permissions.
 
-## Example
+## Examples
 
 ```sql
 DECLARE @rowcnt INT;
@@ -64,6 +64,6 @@ EXEC sys.sp_cleanup_temporal_history 'dbo', 'Department', @rowcnt OUTPUT;
 SELECT @rowcnt;
 ```
 
-## Next steps
+## Related content
 
 - [Temporal tables retention policy](/azure/sql-database/sql-database-temporal-tables-retention-policy)

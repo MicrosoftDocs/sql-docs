@@ -18,4 +18,4 @@ In COM, most operations return an HRESULT return code that indicates whether a f
   
  Remember, these are ADO errors: they result from the ADO operation failing. Errors returned by the underlying provider appear as **Error** objects in the **Connection** object's **Errors** collection.  
   
- The #import directive only creates error-handling routines for methods and properties declared in the ADO .dll. However, you can take advantage of this same error-handling mechanism by writing your own error-checking macro or inline function. See the topic Visual C++® Extensions for examples.
+ The #import directive only creates error-handling routines for methods and properties declared in the ADO .dll. However, you can take advantage of this same error-handling mechanism by writing your own error-checking macro or inline function. See the topic [!INCLUDE [vcprvc-md](../../../includes/vcprvc-md.md)] Extensions for examples.

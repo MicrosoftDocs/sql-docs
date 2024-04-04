@@ -114,7 +114,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  The following example revokes `ALTER` permission on the symmetric key `SamInventory42` from the user `HamidS` and from other principals to which `HamidS` has granted `ALTER` permission.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 REVOKE ALTER ON SYMMETRIC KEY::SamInventory42 TO HamidS CASCADE;  
 GO  
 ```  

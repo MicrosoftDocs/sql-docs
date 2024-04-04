@@ -63,7 +63,7 @@ The name of an option, and can be one of the following values.
 
 `1` (success).
 
-## Result sets
+## Result set
 
 `xp_msver`, without any parameters, returns a four-column result set that lists all the option values. `xp_msver`, for any parameter, returns the four-column result set with values for that option.
 
@@ -71,7 +71,7 @@ The name of an option, and can be one of the following values.
 
 Requires membership in the **public** role.
 
-## See also
+## Related content
 
 - [System Functions (Transact-SQL)](../system-functions/system-functions-category-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

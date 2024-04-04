@@ -4,11 +4,11 @@ titleSuffix: Azure SQL Database
 description: A how-to guide on creating, updating, and utilizing database level customer-managed keys with transparent data encryption (TDE) in Azure SQL Database.
 author: strehan1993
 ms.author: strehan
-ms.reviewer: vanto
-ms.date: 05/25/2023
+ms.reviewer: vanto, mathoma
+ms.date: 01/05/2024
 ms.service: sql-database
 ms.subservice: security
-ms.custom: devx-track-azurecli, devx-track-azurepowershell
+ms.custom: devx-track-azurecli, devx-track-azurepowershell, has-azure-ad-ps-ref
 ms.topic: how-to
 monikerRange: "= azuresql || = azuresql-db"
 ---
@@ -18,43 +18,42 @@ monikerRange: "= azuresql || = azuresql-db"
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!NOTE]
-> Database Level TDE CMK is in public preview.
->
-> This preview feature is available for Azure SQL Database (all SQL Database editions). It is not available for Azure SQL Managed Instance, SQL Server on-premises, Azure VMs, and Azure Synapse Analytics (dedicated SQL pools (formerly SQL DW)).
+> - Database Level TDE CMK is available for Azure SQL Database (all SQL Database editions). It is not available for Azure SQL Managed Instance, SQL Server on-premises, Azure VMs, and Azure Synapse Analytics (dedicated SQL pools (formerly SQL DW)).
+> - The same guide can be applied to configure database level customer-managed keys in the same tenant by excluding the federated client ID parameter. For more information on database level customer-managed keys, see [Transparent data encryption (TDE) with customer-managed keys at the database level](transparent-data-encryption-byok-database-level-overview.md).
 
-In this guide, we go through the steps to create, update, and retrieve an Azure SQL Database with transparent data encryption (TDE) and customer-managed keys (CMK) at the database level, utilizing a [user-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) to access [Azure Key Vault](/azure/key-vault/general/quick-create-portal). The Azure Key Vault is in an Azure Active Directory (Azure AD) that is distinct from the Azure SQL logical server tenant. For more information, see [Cross-tenant customer-managed keys with transparent data encryption](transparent-data-encryption-byok-cross-tenant.md).
+In this guide, we go through the steps to create, update, and retrieve an Azure SQL Database with transparent data encryption (TDE) and customer-managed keys (CMK) at the database level, utilizing a [user-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) to access [Azure Key Vault](/azure/key-vault/general/quick-create-portal). The Azure Key Vault is in a different Microsoft Entra tenant than the Azure SQL Database. For more information, see [Cross-tenant customer-managed keys with transparent data encryption](transparent-data-encryption-byok-cross-tenant.md).
 
-> [!NOTE]
-> The same guide can be applied to configure database level customer-managed keys in the same tenant by excluding the federated client ID parameter.
->
-> For more information on database level customer-managed keys, see [Transparent data encryption (TDE) with customer-managed keys at the database level](transparent-data-encryption-byok-database-level-overview.md).
+[!INCLUDE [entra-id](../includes/entra-id.md)]
 
 ## Prerequisites
 
-- This guide assumes that you have two Azure AD tenants.
-  - The first consists of the Azure SQL Database resource, a multi-tenant Azure AD application, and a user-assigned managed identity.
+- This guide assumes that you have two Microsoft Entra tenants.
+  - The first consists of the Azure SQL Database resource, a multi-tenant Microsoft Entra application, and a user-assigned managed identity.
   - The second tenant houses the Azure Key Vault.
-- For comprehensive instructions on setting up cross-tenant CMK and the RBAC permissions necessary for configuring Azure AD applications and Azure Key Vault, refer to one of the following guides:
+- For comprehensive instructions on setting up cross-tenant CMK and the RBAC permissions necessary for configuring Microsoft Entra applications and Azure Key Vault, refer to one of the following guides:
   - [Configure cross-tenant customer-managed keys for a new storage account](/azure/storage/common/customer-managed-keys-configure-cross-tenant-new-account)
   - [Configure cross-tenant customer-managed keys for an existing storage account](/azure/storage/common/customer-managed-keys-configure-cross-tenant-existing-account)
-- The Azure CLI version 2.46.0 or higher.
-- Az PowerShell module version 9.5.0 or higher.
+- The Azure CLI version 2.52.0 or higher.
+- Az PowerShell module version 10.3.0 or higher.
+- The RBAC permissions necessary for database level CMK are the same permissions that are required for server level CMK. Specifically, the same RBAC permissions that are applicable when using [Azure Key Vault](transparent-data-encryption-byok-configure.md#grant-key-vault-permissions-to-your-server), [managed identities](transparent-data-encryption-byok-identity.md), and [cross-tenant CMK](transparent-data-encryption-byok-cross-tenant.md) for TDE at the server level are applicable at the database level. For more information on key management and access policy, see [Key management](transparent-data-encryption-byok-database-level-overview.md#key-management).
 
 ### Required resources on the first tenant
 
 For the purpose of this tutorial, we'll assume the first tenant belongs to an independent software vendor (ISV), and the second tenant is from their client. For more information on this scenario, see [Cross-tenant customer-managed keys with transparent data encryption](transparent-data-encryption-byok-cross-tenant.md#setting-up-cross-tenant-cmk).
 
-Before we can configure TDE for Azure SQL Database with a cross-tenant CMK, we need to have a multi-tenant Azure AD application that is configured with a user-assigned managed identity assigned as a federated identity credential for the application. Follow one of the guides in the Prerequisites.
+Before we can configure TDE for Azure SQL Database with a cross-tenant CMK, we need to have a multi-tenant Microsoft Entra application that is configured with a user-assigned managed identity assigned as a federated identity credential for the application. Follow one of the guides in the Prerequisites.
 
-1. On the first tenant where you want to create the Azure SQL Database, [create and configure a multi-tenant Azure AD application](/azure/storage/common/customer-managed-keys-configure-cross-tenant-new-account#the-service-provider-creates-a-new-multi-tenant-app-registration).
+1. On the first tenant where you want to create the Azure SQL Database, [create and configure a multi-tenant Microsoft Entra application](/azure/storage/common/customer-managed-keys-configure-cross-tenant-new-account#the-service-provider-creates-a-new-multi-tenant-app-registration).
 
 1. [Create a user-assigned managed identity](/azure/storage/common/customer-managed-keys-configure-cross-tenant-new-account#the-service-provider-creates-a-user-assigned-managed-identity).
 1. [Configure the user-assigned managed identity](/azure/storage/common/customer-managed-keys-configure-cross-tenant-new-account#the-service-provider-configures-the-user-assigned-managed-identity-as-a-federated-credential-on-the-application) as a [federated identity credential](/graph/api/resources/federatedidentitycredentials-overview) for the multi-tenant application.
-1. Record the application name and application ID. This can be found in the [Azure portal](https://portal.azure.com) > **Azure Active Directory** > **Enterprise applications** and search for the created application.
+1. Record the application name and application ID. This can be found in the [Azure portal](https://portal.azure.com) > **Microsoft Entra ID** > **Enterprise applications** and search for the created application.
 
 ### Required resources on the second tenant
 
-1. On the second tenant where the Azure Key Vault resides, [create a service principal (application)](/azure/storage/common/customer-managed-keys-configure-cross-tenant-new-account#the-customer-grants-the-service-providers-app-access-to-the-key-in-the-key-vault) using the application ID from the registered application from the first tenant. Here's some examples of how to register the multi-tenant application. Replace `<TenantID>` and `<ApplicationID>` with the client **Tenant ID** from Azure AD and **Application ID** from the multi-tenant application, respectively:
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../azure-sql/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
+
+1. On the second tenant where the Azure Key Vault resides, [create a service principal (application)](/azure/storage/common/customer-managed-keys-configure-cross-tenant-new-account#the-customer-grants-the-service-providers-app-access-to-the-key-in-the-key-vault) using the application ID from the registered application from the first tenant. Here's some examples of how to register the multi-tenant application. Replace `<TenantID>` and `<ApplicationID>` with the client **Tenant ID** from Microsoft Entra ID and **Application ID** from the multi-tenant application, respectively:
    - **PowerShell**:
 
       ```powershell
@@ -69,7 +68,7 @@ Before we can configure TDE for Azure SQL Database with a cross-tenant CMK, we n
       az ad sp create --id <ApplicationID>
       ```
 
-1. Go to the [Azure portal](https://portal.azure.com) > **Azure Active Directory** > **Enterprise applications** and search for the application that was created.
+1. Go to the [Azure portal](https://portal.azure.com) > **Microsoft Entra ID** > **Enterprise applications** and search for the application that was created.
 1. Create an [Azure Key Vault](/azure/key-vault/general/quick-create-portal) if you don't have one, and [create a key](/azure/key-vault/keys/quick-create-portal).
 1. [Create or set the access policy](/azure/key-vault/general/assign-access-policy).
    1. Select the *Get, Wrap Key, Unwrap Key* permissions under **Key permissions** when creating the access policy.
@@ -97,18 +96,20 @@ The following are examples for creating a database on Azure SQL Database with a 
 
    :::image type="content" source="media/transparent-data-encryption-byok-database-level-basic-actions/configure-transparent-data-encryption.png" alt-text="Screenshot of the Azure portal and the Security menu when creating an Azure SQL Database.":::
 
-1. On the **Transparent data encryption (preview)** menu, select **Database level customer managed key**.
+1. On the **Transparent data encryption** menu, select **Database level customer managed key (CMK)**.
 
    :::image type="content" source="media/transparent-data-encryption-byok-database-level-basic-actions/transparent-data-encryption-configuration-menu.png" alt-text="Screenshot of the Azure portal transparent data encryption menu.":::
 
-1. Select **Configure Identities** to enable a **Database identity** and **Add** a user assigned managed identity to the resource if a desired identity isn't list in the **Identity** menu. Then select **Apply**.
+1. For **User-Assigned Managed Identity**, select **Configure** to enable a **Database identity** and **Add** a user assigned managed identity to the resource if a desired identity isn't list in the **Identity** menu. Then select **Apply**.
 
    :::image type="content" source="media/transparent-data-encryption-byok-database-level-basic-actions/configure-identity-transparent-data-encryption.png" alt-text="Screenshot of the Azure portal Identity menu.":::
 
    > [!NOTE]
    > You can configure the **Federated client identity** here if you are configuring [cross-tenant CMK for TDE](transparent-data-encryption-byok-cross-tenant.md).
 
-1. On the **Transparent data encryption (preview)** menu, select **Change key**. Select the desired **Subscription**, **Key vault**, **Key**, and **Version** for the customer-managed key to be used for TDE. Select the **Select** button. After you have selected a key, you can also add additional database keys as needed using the [Azure Key vault URI (object identifier)](/azure/key-vault/general/about-keys-secrets-certificates) in the **Transparent data encryption (preview)** menu.
+1. On the **Transparent data encryption** menu, select **Change key**. Select the desired **Subscription**, **Key vault**, **Key**, and **Version** for the customer-managed key to be used for TDE. Select the **Select** button. After you have selected a key, you can also add additional database keys as needed using the [Azure Key vault URI (object identifier)](/azure/key-vault/general/about-keys-secrets-certificates) in the **Transparent data encryption** menu.
+
+   [Automatic key rotation](transparent-data-encryption-byok-key-rotation.md#automatic-key-rotation-at-the-database-level) can also be enabled on the database level by using the **Auto-rotate key** checkbox in the **Transparent data encryption** menu.
 
    :::image type="content" source="media/transparent-data-encryption-byok-database-level-basic-actions/additional-keys.png" alt-text="Screenshot of the transparent data encryption menu in the Azure portal referencing adding additional keys.":::
 
@@ -125,12 +126,12 @@ The following are examples for creating a database on Azure SQL Database with a 
 
 For information on installing the current release of Azure CLI, see [Install the Azure CLI](/cli/azure/install-azure-cli) article.
 
-Create a database configured with user-assigned managed identity and cross-tenant customer-managed TDE using the [az sql db create](/cli/azure/sql/db) command. The **Key Identifier** from the second tenant can be used in the `encryption-protector` field. The **Application ID** of the multi-tenant application can be used in the `federated-client-id` field.
+Create a database configured with user-assigned managed identity and cross-tenant customer-managed TDE using the [az sql db create](/cli/azure/sql/db) command. The **Key Identifier** from the second tenant can be used in the `encryption-protector` field. The **Application ID** of the multi-tenant application can be used in the `federated-client-id` field. The `--encryption-protector-auto-rotation` parameter can be used to enable [automatic key rotation](transparent-data-encryption-byok-key-rotation.md#automatic-key-rotation-at-the-database-level) on the database level.
 
 To get your user-assigned managed identity **Resource ID**, search for **Managed Identities** in the [Azure portal](https://portal.azure.com). Find your managed identity, and go to **Properties**. An example of your UMI **Resource ID** looks like `/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentity>`
 
 ```azurecli
-az sql db create --resource-group $resourceGroupName --server $serverName --name mySampleDatabase --sample-name AdventureWorksLT --edition GeneralPurpose --compute-model Serverless --family Gen5 --capacity 2 --assign-identity --user-assigned-identity-id $identityid --encryption-protector $keyid --federated-client-id $federatedclientid
+az sql db create --resource-group $resourceGroupName --server $serverName --name mySampleDatabase --sample-name AdventureWorksLT --edition GeneralPurpose --compute-model Serverless --family Gen5 --capacity 2 --assign-identity --user-assigned-identity-id $identityid --encryption-protector $keyid --federated-client-id $federatedclientid --encryption-protector-auto-rotation True
 ```
 
 # [PowerShell](#tab/azure-powershell)
@@ -149,12 +150,24 @@ Replace the following values in the example:
 - `<UserAssignedIdentityId>`: The list of user-assigned managed identities to be assigned to the server (can be one or multiple)
 - `<CustomerManagedKeyId>`: The **Key Identifier** from the second tenant Key Vault
 - `<FederatedClientId>`: The **Application ID** of the multi-tenant application
+- `-EncryptionProtectorAutoRotation`: Can be used to enable [automatic key rotation](transparent-data-encryption-byok-key-rotation.md#automatic-key-rotation-at-the-database-level) on the database level
 
 To get your user-assigned managed identity **Resource ID**, search for **Managed Identities** in the [Azure portal](https://portal.azure.com). Find your managed identity, and go to **Properties**. An example of your UMI **Resource ID** looks like `/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentity>`
 
 ```powershell
-# create a server with user-assigned managed identity and cross-tenant customer-managed TDE
-New-AzSqlDatabase -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <DatabaseName> -AssignIdentity -UserAssignedIdentityId <UserAssignedIdentityId> -EncryptionProtector <CustomerManagedKeyId> -FederatedClientId <FederatedClientId>
+# create a server with user-assigned managed identity and cross-tenant customer-managed TDE with automatic key rotation enabled
+$params = @{
+    ResourceGroupName = '<ResourceGroupName>'
+    ServerName = '<ServerName>'
+    DatabaseName = '<DatabaseName>'
+    AssignIdentity = $true
+    UserAssignedIdentityId = '<UserAssignedIdentityId>'
+    EncryptionProtector = '<CustomerManagedKeyId>'
+    FederatedClientId = '<FederatedClientId>'
+    EncryptionProtectorAutoRotation = $true
+}
+
+New-AzSqlDatabase @params
 ```
 
 # [ARM Template](#tab/arm-template)
@@ -189,13 +202,16 @@ To get your user-assigned managed identity **Resource ID**, search for **Managed
     },
     "location": {
       "type": "String"
+    },
+    "encryption_protector_auto_rotation": {
+      "type": "bool"
     }
   },
   "variables": {},
   "resources": [
     {
       "type": "Microsoft.Sql/servers/databases",
-      "apiVersion": "2022-08-01-preview",
+      "apiVersion": "2023-02-01-preview",
       "name": "[concat(parameters('server_name'), concat('/',parameters('database_name')))]",
       "location": "[parameters('location')]",
       "sku": {
@@ -219,7 +235,8 @@ To get your user-assigned managed identity **Resource ID**, search for **Managed
         "maintenanceConfigurationId": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default",
         "isLedgerOn": false,
         "encryptionProtector": "[parameters('encryption_protector')]",
-        "federatedClientId": "[parameters('federated_client_id')]"
+        "federatedClientId": "[parameters('federated_client_id')]",
+        "encryptionProtectorAutoRotation": "[parameters('encryption_protector_auto_rotation')]"
       }
     }
   ]
@@ -237,11 +254,13 @@ This following are examples of updating an existing database on Azure SQL Databa
 
 1. In the [Azure portal](https://portal.azure.com), navigate to the **SQL database** resource that you want to update with a database level customer-managed key.
 
-1. Under **Security**, select **Identity (preview)**. Add a **User assigned managed identity** for this database, and then select **Save**
+1. Under **Security**, select **Identity**. Add a **User assigned managed identity** for this database, and then select **Save**
 
-1. Now go to the **Transparent data encryption (preview)** menu under **Security** for your database. Select **Database level customer managed key**. The **Database identity** for the database should already be **Enabled** as you have configured the identity in the last step.
+1. Now go to the **Data Encryption** menu under **Security** for your database. Select **Database level customer managed key (CMK)**. The **Database Identity** for the database should already be **Enabled** as you have configured the identity in the last step.
 
-1. Select **Change key**. Select the desired **Subscription**, **Key vault**, **Key**, and **Version** for the customer-managed key to be used for TDE. Select the **Select** button. After you have selected a key, you can also add additional database keys as needed using the [Azure Key vault URI (object identifier)](/azure/key-vault/general/about-keys-secrets-certificates) in the **Transparent data encryption (preview)** menu.
+1. Select **Change key**. Select the desired **Subscription**, **Key vault**, **Key**, and **Version** for the customer-managed key to be used for TDE. Select the **Select** button. After you have selected a key, you can also add additional database keys as needed using the [Azure Key vault URI (object identifier)](/azure/key-vault/general/about-keys-secrets-certificates) in the **Data Encryption** menu.
+
+   Select the **Auto-rotate key** checkbox if you want to enable [automatic key rotation](transparent-data-encryption-byok-key-rotation.md#automatic-key-rotation) on the database level.
 
    :::image type="content" source="media/transparent-data-encryption-byok-database-level-basic-actions/configure-transparent-data-encryption-existing-database.png" alt-text="Screenshot of the Azure portal transparent data encryption menu when updating an existing database.":::
 
@@ -253,10 +272,10 @@ For information on installing the current release of Azure CLI, see [Install the
 
 Update a database configured with user-assigned managed identity and cross-tenant customer-managed TDE using the [az sql db create](/cli/azure/sql/db) command. The **Key Identifier** from the second tenant can be used in the `encryption-protector` field. The **Application ID** of the multi-tenant application can be used in the `federated-client-id` field.
 
-To get your user-assigned managed identity **Resource ID**, search for **Managed Identities** in the [Azure portal](https://portal.azure.com). Find your managed identity, and go to **Properties**. An example of your UMI **Resource ID** looks like `/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentity>`
+To get your user-assigned managed identity **Resource ID**, search for **Managed Identities** in the [Azure portal](https://portal.azure.com). Find your managed identity, and go to **Properties**. An example of your UMI **Resource ID** looks like `/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentity>`. The `--encryption-protector-auto-rotation` parameter can be used to enable [automatic key rotation](transparent-data-encryption-byok-key-rotation.md#automatic-key-rotation-at-the-database-level) on the database level.
 
 ```azurecli
-az sql db update --resource-group $resourceGroupName --server $serverName --name mySampleDatabase --sample-name AdventureWorksLT --edition GeneralPurpose --compute-model Serverless --family Gen5 --capacity 2 --assign-identity --user-assigned-identity-id $identityid --encryption-protector $keyid --federated-client-id $federatedclientid --keys $keys --keys-to-remove $keysToRemove
+az sql db update --resource-group $resourceGroupName --server $serverName --name mySampleDatabase --sample-name AdventureWorksLT --edition GeneralPurpose --compute-model Serverless --family Gen5 --capacity 2 --assign-identity --user-assigned-identity-id $identityid --encryption-protector $keyid --federated-client-id $federatedclientid --keys $keys --keys-to-remove $keysToRemove --encryption-protector-auto-rotation True
 ```
 
 The list `$keys` are a space separated list of keys that are to be added on the database and `$keysToRemove` is a space separated list of keys that have to be removed from the database
@@ -285,12 +304,25 @@ Replace the following values in the example:
 - `<FederatedClientId>`: The **Application ID** of the multi-tenant application
 - `<ListOfKeys>`: The comma separated list of database level customer-managed keys to be added to the database
 - `<ListOfKeysToRemove>`: The comma separated list of database level customer-managed keys to be removed from the database
+- `-EncryptionProtectorAutoRotation`: Can be used to enable [automatic key rotation](transparent-data-encryption-byok-key-rotation.md#automatic-key-rotation-at-the-database-level) on the database level
 
-To get your user-assigned managed identity **Resource ID**, search for **Managed Identities** in the [Azure portal](https://portal.azure.com). Find your managed identity, and go to **Properties**. An example of your UMI **Resource ID** looks like `/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentity>`
+To get your user-assigned managed identity **Resource ID**, search for **Managed Identities** in the [Azure portal](https://portal.azure.com). Find your managed identity, and go to **Properties**. An example of your UMI **Resource ID** looks like `/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentity>`.
 
 ```powershell
-Set-AzSqlDatabase -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <DatabaseName> -AssignIdentity -UserAssignedIdentityId <UserAssignedIdentityId> -EncryptionProtector <CustomerManagedKeyId> -FederatedClientId <FederatedClientId>
--KeyList <ListOfKeys> -KeysToRemove <ListOfKeysToRemove>
+$params = @{
+    ResourceGroupName = "<ResourceGroupName>"
+    ServerName = "<ServerName>"
+    DatabaseName = "<DatabaseName>"
+    AssignIdentity = $true
+    UserAssignedIdentityId = "<UserAssignedIdentityId>"
+    EncryptionProtector = "<CustomerManagedKeyId>"
+    FederatedClientId = "<FederatedClientId>"
+    KeyList = "<ListOfKeys>"
+    KeysToRemove = "<ListOfKeysToRemove>"
+    EncryptionProtectorAutoRotation = $true
+}
+
+Set-AzSqlDatabase @params
 ```
 
 An example of -KeyList and -KeysToRemove is:
@@ -336,13 +368,16 @@ To get your user-assigned managed identity **Resource ID**, search for **Managed
     },
     "keys_to_add": {
       "type": "Object"
+    },
+    "encryption_protector_auto_rotation": {
+      "type": "bool"
     }
   },
   "variables": {},
   "resources": [
     {
       "type": "Microsoft.Sql/servers/databases",
-      "apiVersion": "2022-08-01-preview",
+      "apiVersion": "2023-02-01-preview",
       "name": "[concat(parameters('server_name'), concat('/',parameters('database_name')))]",
       "location": "[parameters('location')]",
       "sku": {
@@ -367,7 +402,8 @@ To get your user-assigned managed identity **Resource ID**, search for **Managed
         "isLedgerOn": false,
         "encryptionProtector": "[parameters('encryption_protector')]",
         "keys": "[parameters('keys_to_add')]",
-        "federatedClientId": "[parameters('federated_client_id')]"
+        "federatedClientId": "[parameters('federated_client_id')]",
+        "encryptionProtectorAutoRotation": "[parameters('encryption_protector_auto_rotation')]"
       }
     }
   ]
@@ -399,7 +435,7 @@ The following are examples of retrieving the database level customer-managed key
 
 # [Portal](#tab/azure-portal2)
 
-To view the database level customer-managed keys in the [Azure portal](https://portal.azure.com), go to the **Transparent data encryption (preview)** menu of the SQL database resource.
+To view the database level customer-managed keys in the [Azure portal](https://portal.azure.com), go to the **Data Encryption** menu of the SQL database resource.
 
 # [Azure CLI](#tab/azure-cli2)
 
@@ -464,7 +500,7 @@ GET https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 Retrieve the basic database level customer-managed key settings from a database and the current keys in use
 
 ```rest
-GET https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}?api-version=2022-08-01-preview&$expand=keys($filter=pointInTime(‘current’))
+GET https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}?api-version=2022-08-01-preview&$expand=keys($filter=pointInTime('current'))
 ```
 
 Retrieve the basic database level customer-managed key settings from a database and the keys in use at a particular point in time
@@ -495,7 +531,7 @@ In case of an inaccessible TDE protector as described in [Transparent Data Encry
 
 # [Portal](#tab/azure-portal2)
 
-Using the [Azure portal](https://portal.azure.com), find your SQL database resource. Once you have selected your SQL database resource, go to the **Transparent data encryption (preview)** menu under the **Security** settings. If the database has lost access to the Azure Key Vault, a **Revalidate key** button will appear, and you'll have the option to revalidate the existing key by selecting **Retry existing key**, or another key by selecting **Select backup key**.
+Using the [Azure portal](https://portal.azure.com), find your SQL database resource. Once you have selected your SQL database resource, go to the **Transparent Data Encryption** tab of the **Data Encryption** menu under the **Security** settings. If the database has lost access to the Azure Key Vault, a **Revalidate key** button will appear, and you'll have the option to revalidate the existing key by selecting **Retry existing key**, or another key by selecting **Select backup key**.
 
 # [Azure CLI](#tab/azure-cli2)
 
@@ -531,7 +567,7 @@ A database configured with database level CMK can be reverted to server level en
 
 # [Portal](#tab/azure-portal2)
 
-To revert the database level customer-managed key setting to server level encryption key in the [Azure portal](https://portal.azure.com), go to the **Transparent data encryption (preview)** menu of the SQL database resource. Select **Server level encryption key** and select **Save** to save the settings.
+To revert the database level customer-managed key setting to server level encryption key in the [Azure portal](https://portal.azure.com), go to the **Transparent Data Encryption** tab of the **Data Encryption** menu of the SQL database resource. Select **Server level encryption key** and select **Save** to save the settings.
 
 > [!NOTE]
 > In order to use the **Server level encryption key** setting for individual databases, the logical server for the Azure SQL Database must be configured to use **Service-managed key** for TDE.

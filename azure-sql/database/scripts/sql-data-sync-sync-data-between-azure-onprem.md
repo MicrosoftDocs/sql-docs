@@ -11,7 +11,7 @@ ms.topic: sample
 ms.custom:
   - sqldbrb=1
   - devx-track-azurepowershell
-ms.devlang: PowerShell
+ms.devlang: powershell
 ---
 
 # Use PowerShell to sync data between SQL Database and SQL Server

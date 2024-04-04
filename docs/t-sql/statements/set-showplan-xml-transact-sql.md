@@ -87,7 +87,7 @@ The two statements that follow use the SET SHOWPLAN_XML settings to show the way
 The first query uses the Equals comparison operator (`=`) in the WHERE clause on an indexed column. The second query uses the LIKE operator in the WHERE clause. This forces [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use a clustered index scan and find the data meeting the WHERE clause condition. The values in the `EstimateRows` and the `EstimatedTotalSubtreeCost` attributes are smaller for the first indexed query, indicating that it is processed much faster and uses fewer resources than the non-indexed query.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SET SHOWPLAN_XML ON;
 GO

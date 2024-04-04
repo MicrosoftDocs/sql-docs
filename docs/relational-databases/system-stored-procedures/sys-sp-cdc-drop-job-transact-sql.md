@@ -43,9 +43,9 @@ Type of job to remove. *job_type* is **nvarchar(20)** and can't be NULL. Valid i
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
-Nones
+None.
 
 ## Remarks
 
@@ -57,7 +57,7 @@ Requires membership in the **db_owner** fixed database role.
 
 ## Examples
 
-The following example removes the cleanup job for the `AdventureWorks2022` database.
+The following example removes the cleanup job for the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
 USE AdventureWorks2022;
@@ -66,7 +66,7 @@ GO
 EXEC sys.sp_cdc_drop_job @job_type = N'cleanup';
 ```
 
-## See also
+## Related content
 
 - [dbo.cdc_jobs (Transact-SQL)](../system-tables/dbo-cdc-jobs-transact-sql.md)
 - [sys.sp_cdc_disable_db (Transact-SQL)](sys-sp-cdc-disable-db-transact-sql.md)

@@ -33,9 +33,7 @@ This section contains the following stored procedures used to configure the Quer
 - [sp_query_store_set_hints (Transact-SQL)](sys-sp-query-store-set-hints-transact-sql.md)
 - [sp_query_store_clear_message_queues (Transact-SQL)](sp-query-store-clear-message-queues-transact-sql.md)
 
-## Next steps
+## Related content
 
-Learn more about the Query Store in the following articles:
-
-- [Query Store Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)
-- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [Query Store Catalog Views (Transact-SQL)](../system-catalog-views/query-store-catalog-views-transact-sql.md)
+- [Monitoring Performance By Using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)

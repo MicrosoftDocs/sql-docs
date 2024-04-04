@@ -3,12 +3,14 @@ title: Import or export an Azure SQL Database without allowing Azure services to
 description: Import or export an Azure SQL Database without allowing Azure services to access the server.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
+ms.reviewer: mathoma, hudequei
 ms.date: 01/08/2020
 ms.service: sql-database
 ms.subservice: migration
 ms.topic: how-to
-ms.custom: sqldbrb=1
+ms.custom:
+  - sqldbrb=1
+  - sql-migration-content
 ---
 # Import or export an Azure SQL Database without allowing Azure services to access the server
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -23,7 +25,7 @@ Sign in to the [Azure portal](https://portal.azure.com/).
 
 Create an Azure virtual machine by selecting the **Deploy to Azure** button.
 
-This template allows you to deploy a simple Windows virtual machine using a few different options for the Windows version, using the latest patched version. This will deploy a A2 size VM in the resource group location and return the fully qualified domain name of the VM.
+This template allows you to deploy a simple Windows virtual machine using a few different options for the Windows version, using the latest patched version. This will deploy an A2 size VM in the resource group location and return the fully qualified domain name of the VM.
 <br><br>
 
 [![Image showing a button labeled "Deploy to Azure".](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.compute%2Fvm-simple-windows%2Fazuredeploy.json)
@@ -103,10 +105,10 @@ To import a SQL Server database using the [SqlPackage](/sql/tools/sqlpackage) co
 
 For scale and performance, we recommend using SqlPackage in most production environments rather than using the Azure portal. For a SQL Server Customer Advisory Team blog about migrating using `BACPAC` files, see [migrating from SQL Server to Azure SQL Database using BACPAC Files](/archive/blogs/sqlcat/migrating-from-sql-server-to-azure-sql-database-using-bacpac-files).
 
-The following SqlPackage command imports the **AdventureWorks2017** database from local storage to an Azure SQL Database. It creates a new database called **myMigratedDatabase** with a **Premium** service tier and a **P6** Service Objective. Change these values as appropriate for your environment.
+The following SqlPackage command imports the `AdventureWorks2022` database from local storage to an Azure SQL Database. It creates a new database called `myMigratedDatabase` with a **Premium** service tier and a **P6** Service Objective. Change these values as appropriate for your environment.
 
 ```cmd
-SqlPackage /a:import /tcs:"Data Source=<serverName>.database.windows.net;Initial Catalog=myMigratedDatabase>;User Id=<userId>;Password=<password>" /sf:AdventureWorks2017.bacpac /p:DatabaseEdition=Premium /p:DatabaseServiceObjective=P6
+SqlPackage /a:import /tcs:"Data Source=<serverName>.database.windows.net;Initial Catalog=myMigratedDatabase>;User Id=<userId>;Password=<password>" /sf:AdventureWorks2022.bacpac /p:DatabaseEdition=Premium /p:DatabaseServiceObjective=P6
 ```
 
 > [!IMPORTANT]

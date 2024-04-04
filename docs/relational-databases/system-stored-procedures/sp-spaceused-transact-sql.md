@@ -56,7 +56,7 @@ If *objname* is not specified, results are returned for the whole database.
  Indicates the scope of the results. For a stretched table or database, the *mode* parameter lets you include or exclude the remote portion of the object. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+> [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
  The *mode* argument can have the following values:  
   
@@ -186,7 +186,7 @@ If *objname* is omitted, the value of oneresultset is 1, and *include_total_xtp_
  The following example reports disk space information for the `Vendor` table and its indexes.  
   
 ```sql  
-USE AdventureWorks2016;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_spaceused N'Purchasing.Vendor';  
 GO  
@@ -196,7 +196,7 @@ GO
  The following example summarizes space used in the current database and uses the optional parameter `@updateusage` to ensure current values are returned.  
   
 ```sql  
-USE AdventureWorks2016;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_spaceused @updateusage = N'TRUE';  
 GO  
@@ -206,7 +206,7 @@ GO
  The following example summarizes the space used by the remote table associated with a Stretch-enabled table by using the **\@mode** argument to specify the remote target. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
 ```sql  
-USE StretchedAdventureWorks2016  
+USE StretchedAdventureWorks2022  
 GO  
 EXEC sp_spaceused N'Purchasing.Vendor', @mode = 'REMOTE_ONLY'  
 ```  
@@ -215,7 +215,7 @@ EXEC sp_spaceused N'Purchasing.Vendor', @mode = 'REMOTE_ONLY'
  The following example summarizes space usage for the current database in a single result set.  
   
 ```sql  
-USE AdventureWorks2016  
+USE AdventureWorks2022  
 GO  
 EXEC sp_spaceused @oneresultset = 1  
 ```  

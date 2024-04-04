@@ -48,7 +48,7 @@ BEGIN { TRAN | TRANSACTION }
 ```  
  
 ```syntaxsql
---Applies to Synpase Data Warehouse in Microsoft Fabric, Azure Synapse Analytics and Parallel Data Warehouse
+--Applies to Synapse Data Warehouse in Microsoft Fabric, Azure Synapse Analytics and Parallel Data Warehouse
  
 BEGIN { TRAN | TRANSACTION }   
 [ ; ]  
@@ -174,8 +174,8 @@ DECLARE @TranName VARCHAR(20);
 SELECT @TranName = 'MyTransaction';  
   
 BEGIN TRANSACTION @TranName;  
-USE AdventureWorks2012;  
-DELETE FROM AdventureWorks2012.HumanResources.JobCandidate  
+USE AdventureWorks2022;  
+DELETE FROM AdventureWorks2022.HumanResources.JobCandidate  
     WHERE JobCandidateID = 13;  
   
 COMMIT TRANSACTION @TranName;  
@@ -191,9 +191,9 @@ The following example shows how to mark a transaction. The transaction `Candidat
 BEGIN TRANSACTION CandidateDelete  
     WITH MARK N'Deleting a Job Candidate';  
 GO  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
-DELETE FROM AdventureWorks2012.HumanResources.JobCandidate  
+DELETE FROM AdventureWorks2022.HumanResources.JobCandidate  
     WHERE JobCandidateID = 13;  
 GO  
 COMMIT TRANSACTION CandidateDelete;  

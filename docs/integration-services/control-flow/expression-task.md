@@ -28,5 +28,5 @@ f1_keywords:
  [Use an Expression in a Data Flow Component](/previous-versions/sql/sql-server-2016/ms141007(v=sql.130))  
   
 ## Related Content  
- Technical article, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=746575), on pragmaticworks.com  
+ Technical article, [SSIS Expression Cheat Sheet](https://pragmaticworks.com/resources/cheat-sheet/ssis), on pragmaticworks.com  
   

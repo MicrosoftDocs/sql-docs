@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services Extension Library"
+title: "Reporting Services extension library"
 description: Learn about the Reporting Services extension library, a set of classes, interfaces, and value types that provide access to system functionality.
 author: maggiesMSFT
 ms.author: maggies
@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "extensions [Reporting Services], library"
   - "library [Reporting Services]"
 ---
-# Reporting Services Extension Library
-  The Reporting Services Extension Library is a set of classes, interfaces, and value types that are included in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. This library provides access to system functionality and is designed to be the foundation on which [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] applications can be used to extend [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components.  
+# Reporting Services extension library
+  The Reporting Services extension library is a set of classes, interfaces, and value types that are included in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. This library provides access to system functionality and is designed to be the foundation on which [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] applications can be used to extend [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components.  
   
 ## Namespaces  
  The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] extension library provides the following namespaces.  
@@ -29,7 +29,8 @@ helpviewer_keywords:
  **Microsoft.ReportingServices.ReportRendering**  
  Contains classes and interfaces that enable you to extending the rendering capabilities of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Using the members of this namespace along with members of the <xref:Microsoft.ReportingServices.Interfaces> namespace, you can build your own, custom rendering extensions for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-## See Also  
- [Reporting Services Extensions](../../reporting-services/extensions/reporting-services-extensions.md)  
+## Related content
+
+- [Reporting Services extensions](../../reporting-services/extensions/reporting-services-extensions.md)  
   
   

@@ -8,6 +8,8 @@ ms.date: 12/29/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Pacemaker for availability groups and failover cluster instances on Linux
 
@@ -107,7 +109,7 @@ This section discusses the important planning points for a Pacemaker cluster.
 
 ### Virtualize Linux-based Pacemaker clusters for [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 
-Using virtual machines to deploy Linux-based [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] deployments for AGs and FCIs is covered by the same rules as for their Windows-based counterparts. There is a base set of rules for supportability of virtualized [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] deployments provided by Microsoft in [Support policy for Microsoft SQL Server products that are running in a hardware virtualization environment](/troubleshoot/sql/general/support-policy-hardware-virtualization-product). Different hypervisors such as Microsoft's Hyper-V and VMware's ESXi may have different variances on top of that, due to differences in the platforms themselves.
+Using virtual machines to deploy Linux-based [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] deployments for AGs and FCIs is covered by the same rules as for their Windows-based counterparts. There is a base set of rules for supportability of virtualized [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] deployments provided by Microsoft in [Support policy for Microsoft SQL Server products that are running in a hardware virtualization environment](/troubleshoot/sql/general/support-policy-hardware-virtualization-product). Different hypervisors such as Microsoft's Hyper-V and VMware's ESXi might have different variances on top of that, due to differences in the platforms themselves.
 
 When it comes to AGs and FCIs under virtualization, ensure that anti-affinity is set for the nodes of a given Pacemaker cluster. When configured for high availability in an AG or FCI configuration, the VMs hosting [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] should never be running on the same hypervisor host. For example, if a two-node FCI is deployed, there would need to be *at least* three hypervisor hosts so that there's somewhere for one of the VMs hosting a node to go in the event of a host failure, especially if using features like Live Migration or vMotion.
 
@@ -143,9 +145,9 @@ Currently, there's no direct way for a WSFC and a Pacemaker cluster to work toge
 
 #### Other Linux distributions
 
-On Linux, all nodes of a Pacemaker cluster must be on the same distribution. For example, this means that a RHEL node can't be part of a Pacemaker cluster that has a SLES node. The main reason for this was previously stated: the distributions may have different versions and functionality, so things couldn't work properly. Mixing distributions has the same story as mixing WSFCs and Linux: use None or distributed AGs.
+On Linux, all nodes of a Pacemaker cluster must be on the same distribution. For example, this means that a RHEL node can't be part of a Pacemaker cluster that has a SLES node. The main reason for this was previously stated: the distributions might have different versions and functionality, so things couldn't work properly. Mixing distributions has the same story as mixing WSFCs and Linux: use None or distributed AGs.
 
-## Next steps
+## Related content
 
 - [Deploy a Pacemaker cluster for SQL Server on Linux](sql-server-linux-deploy-pacemaker-cluster.md)
 - [Configure a Pacemaker cluster for SQL Server availability groups](sql-server-linux-availability-group-cluster-pacemaker.md)

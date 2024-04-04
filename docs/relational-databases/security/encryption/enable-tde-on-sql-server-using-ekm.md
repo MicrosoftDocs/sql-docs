@@ -118,7 +118,7 @@ helpviewer_keywords:
     GO  
   
     -- Create the database encryption key that will be used for TDE.  
-    USE AdventureWorks2012 ;  
+    USE AdventureWorks2022;  
     GO  
     CREATE DATABASE ENCRYPTION KEY  
     WITH ALGORITHM  = AES_128  
@@ -126,7 +126,7 @@ helpviewer_keywords:
     GO  
   
     -- Alter the database to enable transparent data encryption.  
-    ALTER DATABASE AdventureWorks2012   
+    ALTER DATABASE AdventureWorks2022   
     SET ENCRYPTION ON ;  
     GO  
     ```  

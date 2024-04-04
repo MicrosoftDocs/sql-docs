@@ -4,18 +4,19 @@ description: Learn about the Always Encrypted with secure enclaves feature for S
 author: Pietervanhove
 ms.author: pivanho
 ms.reviewer: "vanto"
-ms.date: 02/15/2023
+ms.date: 11/14/2023
 ms.service: sql
 ms.subservice: security
+ms.custom: ignite-2023
 ms.topic: conceptual
 ---
 # Always Encrypted with secure enclaves
 
 [!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
-Always Encrypted with secure enclaves expands confidential computing capabilities of [Always Encrypted](always-encrypted-database-engine.md) by enabling in-place encryption and richer confidential queries. Always Encrypted with secure enclaves is available in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later, as well as in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
+Always Encrypted with secure enclaves expands confidential computing capabilities of [Always Encrypted](always-encrypted-database-engine.md) by enabling in-place encryption and richer confidential queries. Always Encrypted with secure enclaves is available in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later, as well as in [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)].
 
-Introduced in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] in 2015 and in [!INCLUDE[sssql16](../../../includes/sssql16-md.md)], Always Encrypted protects the confidentiality of sensitive data from malware and high-privileged *unauthorized* users: Database Administrators (DBAs), computer admins, cloud admins, or anyone else who has legitimate access to server instances, hardware, etc., but shouldn't have access to some or all of the actual data.
+Introduced in [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] in 2015 and in [!INCLUDE[sssql16](../../../includes/sssql16-md.md)], Always Encrypted protects the confidentiality of sensitive data from malware and high-privileged *unauthorized* users: Database Administrators (DBAs), computer admins, cloud admins, or anyone else who has legitimate access to server instances, hardware, etc., but shouldn't have access to some or all of the actual data.
 
 Without the enhancements discussed in this article, Always Encrypted protects the data by encrypting it on the client side and *never* allowing the data or the corresponding cryptographic keys to appear in plaintext inside the [!INCLUDE[ssde-md](../../../includes/ssde-md.md)]. As a result, the functionality on encrypted columns inside the database is severely restricted. The only operations the [!INCLUDE[ssde-md](../../../includes/ssde-md.md)] can perform on encrypted data are equality comparisons (only available with [deterministic encryption](always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)). All other operations, including cryptographic operations (initial data encryption or key rotation) and richer queries (for example, pattern matching) aren't supported inside the database. Users need to move their data outside of the database to perform these operations on the client-side.
 
@@ -44,19 +45,16 @@ Always Encrypted supports the following enclave technologies (or enclave types):
 - [Virtualization-based Security (VBS) enclaves](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) (also known as Virtual Secure Mode, or VSM enclaves) - a software-based technology that relies on Windows hypervisor and doesn't require any special hardware.
 - [Intel Software Guard Extensions (Intel SGX) enclaves](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html) - a hardware-based trusted execution environment technology.
 
-The type of the enclave available for your database depends on the SQL product hosting it ([!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] vs. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) and (in the case of [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]) the configuration of your database.
+The type of the enclave available for your database depends on the SQL product hosting it ([!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] vs. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) and (in the case of [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)]) the configuration of your database.
 
 - In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later, Always Encrypted supports VBS enclaves. (Intel SGX enclaves aren't supported.)
-- In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], a database can use either an Intel SGX enclave or a VBS enclave, depending on the hardware the database is configured to run on:
+- In [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)], a database can use either an Intel SGX enclave or a VBS enclave, depending on the hardware the database is configured to run on:
 
   - Databases using the [DC-series](/azure/azure-sql/database/service-tiers-sql-database-vcore#dc-series) hardware configuration (available with the [vCore purchasing model](/azure/azure-sql/database/service-tiers-vcore)) use Intel SGX enclaves.
   - Databases using a configuration other than DC-series with the vCore purchasing model and databases using the [DTU purchasing model](/azure/azure-sql/database/service-tiers-dtu) can be configured to use VBS enclaves.
 
-  > [!IMPORTANT]
-  > VBS enclaves in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] are currently in preview. The [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, in preview, or otherwise not yet released into general availability.
-
   > [!NOTE]
-  > VBS enclaves are currently available in all [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] regions **except**: Jio India Central.
+  > VBS enclaves are currently available in all [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] regions **except**: Jio India Central.
 
 See the [Security considerations](#security-considerations) section for important information on the level protection each enclave type provides.
 
@@ -76,14 +74,14 @@ To enable Always Encrypted with secure enclaves for your application, you need t
 | Hosting product | Enclave type | Supported attestation protocols |
 |:---|:---|:---|
 | [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later | VBS enclaves | HGS, No attestation |
-| [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] | SGX enclaves (DC-series databases) | Microsoft Azure Attestation |
-| [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] | VBS enclaves  | No attestation |
+| [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] | SGX enclaves (DC-series databases) | Microsoft Azure Attestation |
+| [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] | VBS enclaves | No attestation |
 
 A few important points to call out:
 
 - Attesting VBS enclaves in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later requires HGS. You can also use VBS enclaves without attestation (the latest client drivers are required).
-- With Intel SGX enclaves (in DC-series databases) in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], attestation is mandatory and it requires Microsoft Azure Attestation.
-- VBS enclaves in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] (in preview) currently don't support attestation.
+- With Intel SGX enclaves (in DC-series databases) in [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)], attestation is mandatory and it requires Microsoft Azure Attestation.
+- VBS enclaves in [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] don't support attestation.
 
 For more information, see:
 
@@ -132,7 +130,7 @@ Confidential queries are [DML queries](../../../t-sql/queries/queries.md) that i
 
 The operations supported inside the secure enclaves are:
 
-| Operation| [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] | [!INCLUDE[sql-server-2022](../../../includes/sssql22-md.md)] | [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] | 
+| Operation| [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] | [!INCLUDE[sql-server-2022](../../../includes/sssql22-md.md)] | [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] | 
 |:---|:---|:---| :---|
 | [Comparison Operators](../../../mdx/comparison-operators.md) | Supported | Supported | Supported |
 | [BETWEEN (Transact-SQL)](../../../t-sql/language-elements/between-transact-sql.md) | Supported | Supported | Supported |
@@ -148,7 +146,7 @@ The operations supported inside the secure enclaves are:
 >
 > The [compatibility level](../../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) of the database should be set to SQL Server 2022 (160) or higher.
 >
-> In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and in [!INCLUDE[sql-server-2022](../../../includes/sssql22-md.md)], confidential queries using enclaves on a character string column (`char`, `nchar`) require the column uses a [binary-code point (_BIN2) collation or a UTF-8 collation](../../../relational-databases/collations/collation-and-unicode-support.md). In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], a_BIN2 collation is required. 
+> In [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] and in [!INCLUDE[sql-server-2022](../../../includes/sssql22-md.md)], confidential queries using enclaves on a character string column (`char`, `nchar`) require the column uses a [binary-code point (_BIN2) collation or a UTF-8 collation](../../../relational-databases/collations/collation-and-unicode-support.md). In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], a_BIN2 collation is required. 
 
 For more information, see [Run Transact-SQL statements using secure enclaves](always-encrypted-enclaves-query-columns.md).
 
@@ -156,7 +154,7 @@ For more information, see [Run Transact-SQL statements using secure enclaves](al
 
 You can create nonclustered indexes on enclave-enabled columns using randomized encryption to make confidential DML queries using the secure enclave run faster.
 
-To ensure an index on a column that is encrypted using randomized encryption doesn't leak sensitive data, the key values in the index data structure (B-tree) are encrypted and sorted based on their plaintext values. Sorting by the plaintext value is also useful for processing queries inside the enclave. When the query executor in the [!INCLUDE[ssde-md](../../../includes/ssde-md.md)] uses an index on an encrypted column for computations inside the enclave, it searches the index to look up specific values stored in the column. Each search may involve multiple comparisons. The query executor delegates each comparison to the enclave, which decrypts a value stored in the column and the encrypted index key value to be compared, it performs the comparison on plaintext and it returns the result of the comparison to the executor.
+To ensure an index on a column that is encrypted using randomized encryption doesn't leak sensitive data, the key values in the index data structure (B-tree) are encrypted and sorted based on their plaintext values. Sorting by the plaintext value is also useful for processing queries inside the enclave. When the query executor in the [!INCLUDE[ssde-md](../../../includes/ssde-md.md)] uses an index on an encrypted column for computations inside the enclave, it searches the index to look up specific values stored in the column. Each search might involve multiple comparisons. The query executor delegates each comparison to the enclave, which decrypts a value stored in the column and the encrypted index key value to be compared, it performs the comparison on plaintext and it returns the result of the comparison to the executor.
 
 Creating indexes on columns that use randomized encryption and aren't enclave-enabled remains unsupported.
 
@@ -166,12 +164,12 @@ For more information, see [Create and use indexes on columns using Always Encryp
 
 ### Database recovery
 
-If an instance of SQL Server fails, its databases may be left in a state where the data files may contain some modifications from incomplete transactions. When the instance is started, it runs a process called [database recovery](../../logs/the-transaction-log-sql-server.md#recovery-of-all-incomplete-transactions-when--is-started), which involves rolling back every incomplete transaction found in the transaction log to make sure the integrity of the database is preserved. If an incomplete transaction made any changes to an index, those changes also need to be undone. For example, some key values in the index may need to be removed or reinserted.
+If an instance of SQL Server fails, its databases might be left in a state where the data files might contain some modifications from incomplete transactions. When the instance is started, it runs a process called [database recovery](../../logs/the-transaction-log-sql-server.md#recovery-of-all-incomplete-transactions-when--is-started), which involves rolling back every incomplete transaction found in the transaction log to make sure the integrity of the database is preserved. If an incomplete transaction made any changes to an index, those changes also need to be undone. For example, some key values in the index might need to be removed or reinserted.
 
 > [!IMPORTANT]
-> Microsoft strongly recommends enabling [Accelerated database recovery (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) for your database, **before** creating the first index on an enclave-enabled column encrypted with randomized encryption. ADR is enabled by default in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], but not in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later.
+> Microsoft strongly recommends enabling [Accelerated database recovery (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) for your database, **before** creating the first index on an enclave-enabled column encrypted with randomized encryption. ADR is enabled by default in [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)], but not in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later.
 
-With the [traditional database recovery process](/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process) (that follows the [ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf) recovery model), to undo a change to an index, SQL Server needs to wait until an application provides the column encryption key for the column to the enclave, which can take a long time. Accelerated database recovery (ADR) dramatically reduces the number of undo operations that must be deferred because a column encryption key isn't available in the cache inside the enclave. Consequently, it substantially increases the database availability by minimizing a chance for a new transaction to get blocked. With ADR enabled, SQL Server still may need a column encryption key to complete cleaning up old data versions but it does that as a background task that doesn't impact the availability of the database or user transactions. You may see error messages in the error log, indicating failed cleanup operations due to a missing column encryption key.
+With the [traditional database recovery process](/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process) (that follows the [ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf) recovery model), to undo a change to an index, SQL Server needs to wait until an application provides the column encryption key for the column to the enclave, which can take a long time. Accelerated database recovery (ADR) dramatically reduces the number of undo operations that must be deferred because a column encryption key isn't available in the cache inside the enclave. Consequently, it substantially increases the database availability by minimizing a chance for a new transaction to get blocked. With ADR enabled, SQL Server still might need a column encryption key to complete cleaning up old data versions but it does that as a background task that doesn't impact the availability of the database or user transactions. You might see error messages in the error log, indicating failed cleanup operations due to a missing column encryption key.
 
 ## Security considerations
 
@@ -179,7 +177,7 @@ The following security considerations apply to Always Encrypted with secure encl
 
 - VBS enclaves help protect your data from attacks inside the VM. However, they don't provide any protection from attacks using privileged system accounts originating from the host. Intel SGX enclaves protect data from attacks originating from both the guest OS and host OS.
 - Using enclave attestation is recommended if it's available for your environment and if you're concerned about protecting your data from attacks by users with the OS-level admin access to the machine hosting your database. If you use attestation, you need to ensure the attestation service and its configuration are managed by a trusted administrator. Also, both supported attestation services offer different policies and attestation modes, some of which perform minimal verification of the enclave and its environment, and are designed for testing and development. Closely follow the guidelines specific to your attestation service to ensure you're using the recommended configurations and policies for your production deployments.
-- Encrypting a column using randomized encryption with an enclave-enabled column encryption key may result in leaking the order of data stored in the column, as such columns support range comparisons. For example, if an encrypted column, containing employee salaries, has an index, a malicious DBA could scan the index to find the maximum encrypted salary value and identify a person with the maximum salary (assuming the name of the person isn't encrypted).
+- Encrypting a column using randomized encryption with an enclave-enabled column encryption key might result in leaking the order of data stored in the column, as such columns support range comparisons. For example, if an encrypted column, containing employee salaries, has an index, a malicious DBA could scan the index to find the maximum encrypted salary value and identify a person with the maximum salary (assuming the name of the person isn't encrypted).
 - If you use Always Encrypted to protect sensitive data from unauthorized access by DBAs, don't share the column master keys or column encryption keys with the DBAs. A DBA can manage indexes on encrypted columns without having direct access to the keys by using the cache of column encryption keys inside the enclave.
 
 ## <a name="anchorname-1-considerations-availability-groups-db-migration"></a> Considerations for business continuity, disaster recovery, and data migration
@@ -191,7 +189,7 @@ When you copy or migrate a database using Always Encrypted with secure enclaves,
 Here are the specific considerations you should keep in mind:
 
 - **SQL Server**
-  - When configuring an [Always On availability group](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md), make sure that each SQL Server instance hosting a database in the availability group support Always Encrypted with secure enclaves, and have an enclave and attestation configured.
+  - When configuring an [Always On availability group](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md), make sure that each SQL Server instance hosting a database in the availability group support Always Encrypted with secure enclaves, and have an enclave and attestation configured.
   - When restoring from a backup file of a database that uses the functionality of Always Encrypted with secure enclaves on a SQL Server instance that doesn't have the enclave configured, the restore operation will succeed and all the functionality that doesn't rely on the enclave will be available. However, any subsequent statement using the enclave functionality will fail, and indexes on enclave-enabled columns using randomized encryption will become invalid. The same applies when attaching a database using Always Encrypted with secure enclaves on the instance that doesn't have the enclave configured.
   - If your database contains indexes on enclave-enabled columns using randomized encryption, make sure to enable [Accelerated database recovery (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) in the database before creating a database backup. ADR will ensure the database, including the indexes, is available immediately after you restore the database. For more information, see [Database Recovery](#database-recovery).
   
@@ -210,7 +208,7 @@ The following limitations are specific to Always Encrypted with secure enclaves:
 
 - Clustered indexes can't be created on enclave-enabled columns using randomized encryption.
 - Enclave-enabled columns using randomized encryption can't be primary key columns and can't be referenced by foreign key constraints or unique key constraints.
-- In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] (this limitation doesn't apply to [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] or [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)]) only nested loop joins (using indexes, if available) are supported on enclave-enabled columns using randomized encryption. For information about other differences among different products, see [Confidential queries](#confidential-queries).
+- In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] (this limitation doesn't apply to [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] or [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)]) only nested loop joins (using indexes, if available) are supported on enclave-enabled columns using randomized encryption. For information about other differences among different products, see [Confidential queries](#confidential-queries).
 - In-place cryptographic operations can't be combined with any other changes of column metadata, except changing a collation within the same code page and nullability. For example, you can't encrypt, re-encrypt, or decrypt a column AND change a data type of the column in a single `ALTER TABLE`/`ALTER COLUMN` Transact-SQL statement. Use two separate statements.
 - Using enclave-enabled keys for columns in in-memory tables isn't supported.
 - Expressions defining computed columns can't perform any computations on enclave-enabled columns using randomized encryption (even if the computations are among the supported operations listed in [Confidential queries](#confidential-queries)).

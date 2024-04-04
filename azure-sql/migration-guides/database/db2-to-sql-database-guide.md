@@ -8,6 +8,8 @@ ms.date: 05/14/2021
 ms.service: sql-database
 ms.subservice: migration-guide
 ms.topic: how-to
+ms.custom:
+  - sql-migration-content
 ---
 # Migration guide: IBM Db2 to Azure SQL Database
 [!INCLUDE[appliesto-sqldb-sqlmi](../../includes/appliesto-sqldb.md)]

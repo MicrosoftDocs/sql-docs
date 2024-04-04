@@ -1,5 +1,6 @@
 ---
 title: DNS alias
+titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: Your applications can connect to an alias for the name of the server for Azure SQL Database. Meanwhile, you can change the SQL Database the alias points to anytime, to facilitate testing and so on.
 author: rajeshsetlem
 ms.author: rsetlem
@@ -99,17 +100,13 @@ Presently, a DNS alias has the following limitations:
 - *Delay of up to 2 minutes:* It takes up to 2 minutes for a DNS alias to be updated or removed.
   - Regardless of any brief delay, the alias immediately stops referring client connections to the legacy server.
 - *DNS lookup:* For now, the only authoritative way to check what server a given DNS alias refers to is by performing a [DNS lookup](/windows-server/administration/windows-commands/nslookup).
-- _Table auditing is not supported:_ You cannot use a DNS alias on a server that has *table auditing* enabled on a database.
-  - Table auditing is deprecated.
-  - We recommend that you move to [Blob Auditing](auditing-overview.md).
-  - We recommend that you move to [Blob Auditing](./auditing-overview.md).
 - DNS alias is subject to [naming restrictions](/azure/azure-resource-manager/management/resource-name-rules).
 
 ## Related resources
 
 - [Overview of business continuity with Azure SQL Database](business-continuity-high-availability-disaster-recover-hadr-overview.md), including disaster recovery.
 - [Azure REST API reference](/rest/api/azure/)
-- [Server Dns Aliases API](/rest/api/sql/2020-11-01-preview/serverdnsaliases)
+- [Server Dns Aliases API](/rest/api/sql/server-dns-aliases)
 
 ## Next steps
 

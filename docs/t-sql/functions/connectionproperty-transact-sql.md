@@ -46,7 +46,7 @@ The property of the connection. *property* can have one of these values:
 |\<Any other string>||Returns NULL for invalid input.|  
   
 ## Remarks  
-**local_net_address** and **local_tcp_port** return NULL in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**local_net_address** and **local_tcp_port** return NULL in [!INCLUDE[sssds](../../includes/sssds-md.md)].
   
 The returned values match the options shown for the corresponding columns in the [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md) dynamic management view. For example:
   

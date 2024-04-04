@@ -351,7 +351,7 @@ WHERE ProductModelID=7
  The following query retrieves all the telephone numbers for a specific customer from the AdditionalContactInfo column. The results are sorted by telephone number.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT AdditionalContactInfo.query('  
    declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  

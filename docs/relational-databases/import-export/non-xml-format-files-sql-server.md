@@ -68,7 +68,7 @@ The other format-file fields describe the data fields that are to be bulk import
 
 ## <a id="Examples"></a> Example of a non-XML format file
 
-The following example shows a previously created non-XML format file (`myDepartmentIdentical-f-c.fmt`). This file describes a character-data field for every column in the `HumanResources.Department` table in the `AdventureWorks2012` sample database.
+The following example shows a previously created non-XML format file (`myDepartmentIdentical-f-c.fmt`). This file describes a character-data field for every column in the `HumanResources.Department` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database.
 
 The generated format file, `myDepartmentIdentical-f-c.fmt`, contains the following information:
 

@@ -19,7 +19,7 @@ Remote table copy is a feature of SQL Server PDW that enables Hub and Spoke scen
 ## <a name="BasicsPrerequisites"></a>Requirements for Using Remote Table Copy  
 You can use remote table copy to copy tables from SQL Server PDW to a SQL Server database when these conditions are met:  
   
--   The destination database must be an instance of Microsoft® SQL Server® that is running on a Microsoft Windows® system that can connect to the SQL Server PDW appliance but does not reside on a server within the appliance. The remote SQL Server can be connected to the SQL Server PDW using the InfiniBand network or through the Ethernet network.  
+-   The destination database must be an instance of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] that is running on a Microsoft Windows system that can connect to the SQL Server PDW appliance but does not reside on a server within the appliance. The remote SQL Server can be connected to the SQL Server PDW using the InfiniBand network or through the Ethernet network.  
   
 -   The data to be copied must be selectable using a single valid SQL Server PDW [SELECT](../t-sql/queries/select-transact-sql.md) statement.  
   
@@ -39,8 +39,6 @@ To use remote table copy, you need to purchase and configure a Windows server, c
 ## <a name="PerformRemote"></a>Perform a Remote Table COpy  
 To perform a remote table copy, use the [CREATE REMOTE TABLE AS SELECT](../t-sql/statements/create-remote-table-as-select-parallel-data-warehouse.md) SQL statement. Examples are included with the CREATE REMOTE TABLE topic.  
   
-<!-- MISSING LINKS 
-## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
--->
-  
+## Related content
+
+- [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md)

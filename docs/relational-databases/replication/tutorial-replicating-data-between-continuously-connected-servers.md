@@ -1,12 +1,12 @@
 ---
 title: "Tutorial: Configure Transactional Replication"
-description: This tutorial teaches you how to configure Transactional Replication between two fully connected SQL Servers.
+description: This tutorial teaches you how to configure Transactional Replication between two fully connected SQL Server instances.
 author: "MashaMSFT"
 ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: tutorial
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "tutorials [SQL Server replication]"
@@ -37,7 +37,7 @@ To complete this tutorial, you need SQL Server, SQL Server Management Studio (SS
 - At the publisher server (source), install:  
   
    - Any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], except SQL Server Express or SQL Server Compact. These editions cannot be replication publishers.   
-   - The [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] sample database. To enhance security, the sample databases are not installed by default.  
+   - The [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database. To enhance security, the sample databases are not installed by default.  
   
 - At the subscriber server (destination), install any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], except [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] cannot be a subscriber in transactional replication.  
   

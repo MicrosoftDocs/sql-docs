@@ -24,7 +24,7 @@ dev_langs:
 Contains one row for each schema update task for the remote data archive of each Stretch-enabled table in the current database. Tasks are identified by their task ids.
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+> [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
 `sys.dm_db_rda_schema_update_status` is scoped to the current database context. Make sure you are in the database context of the Stretch-enabled table for which you want to see schema update status.
 

@@ -106,13 +106,13 @@ Specifies whether an alert is raised when *@restore_threshold* is exceeded. A va
 
 #### [ @history_retention_period = ] '*@history_retention_period*'
 
-The length of time in minutes in which the history is retained. *@history_retention_period* is **int**, with a default of NULL. A value of 14420 is used if none is specified.
+The length of time in minutes in which the history is retained. *@history_retention_period* is **int**, with a default of `NULL`. A value of 14420 is used if none is specified.
 
 ## Return code values
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -150,7 +150,7 @@ EXEC master.dbo.sp_add_log_shipping_secondary_database
 GO
 ```
 
-## See also
+## Related content
 
 - [About Log Shipping (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

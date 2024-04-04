@@ -1,9 +1,9 @@
 ---
 title: "OPENROWSET (DMX)"
 description: "&lt;source data query&gt; - OPENROWSET"
-author: minewiskan
-ms.author: owend
-ms.reviewer: owend
+author: kfollis
+ms.author: kfollis
+ms.reviewer: kfollis
 ms.date: 02/17/2022
 ms.service: sql
 ms.subservice: analysis-services
@@ -42,7 +42,7 @@ OPENROWSET(provider_name,provider_string,query_syntax)
 OPENROWSET  
 (  
 'SQLOLEDB.1',  
-'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security     Info=False;Initial Catalog=AdventureWorksDW2012;Data Source=localhost',  
+'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security     Info=False;Initial Catalog=AdventureWorksDW2022;Data Source=localhost',  
 'SELECT TOP 1000 * FROM vTargetMail'  
 )  
 ```  

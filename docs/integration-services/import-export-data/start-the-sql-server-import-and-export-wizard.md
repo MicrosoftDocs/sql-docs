@@ -4,7 +4,7 @@ titleSuffix: Integration Services (SSIS)
 description: "Start the SQL Server Import and Export Wizard"
 author: chugugrace
 ms.author: chugu
-ms.date: 12/18/2021
+ms.date: 08/16/2023
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual
@@ -19,10 +19,7 @@ helpviewer_keywords:
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
-Start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard in one of the ways that is described in this topic to import data from and export data to any supported data source.
-
-> [!IMPORTANT]
-> This topic describes only how to **start** the wizard. If you're looking for something else, see [Related tasks and content](#related-tasks-and-content).
+This article describes four ways to start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard. Use this tool to import data from and export data to any supported data source.
 
 You can start the wizard:
 
@@ -30,6 +27,9 @@ You can start the wizard:
 - From the [command prompt](#command-prompt).
 - From [SQL Server Management Studio (SSMS)](#sql-server-management-studio-ssms).
 - From [Visual Studio with SQL Server Data Tools (SSDT)](#visual-studio).
+
+> [!TIP]
+> Another way to import data is in [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) with [SQL Server Import extension](../../azure-data-studio/extensions/sql-server-import-extension.md).
 
 ## Prerequisite - Is the wizard installed on your computer?
 
@@ -42,14 +42,12 @@ If you want to run the wizard, but you don't have [!INCLUDE[msCoName](../../incl
 
 ### Start the SQL Server Import and Export Wizard from the Start menu
 
-1. On the **Start** menu, find and expand **Microsoft SQL Server 20xx**.
-2. Click one of the following options.
-    - **SQL Server 20xx Import and Export Data (64-bit)**
-    - **SQL Server 20xx Import and Export Data (32-bit)**
+1. On the **Start** menu, find and expand folder for your SQL Server version.
+2. Select the SQL Server (version) Import and Export data tool you want to use.
 
     Run the 64-bit version of the wizard unless you know that your data source requires a 32-bit data provider.
 
-    :::image type="content" source="../../integration-services/import-export-data/media/start-wizard-start-64.png" alt-text="Start wizard Start":::
+    :::image type="content" source="../../integration-services/import-export-data/media/start-wizard-start-64.png" alt-text="Screenshot of Start menu find Import and Export Wizard." lightbox="media/start-wizard-start-64.png":::
 
 ## Command prompt
 
@@ -57,16 +55,20 @@ If you want to run the wizard, but you don't have [!INCLUDE[msCoName](../../incl
 
 In a Command Prompt window, run **DTSWizard.exe** from one of the following locations.
 
-- **C:\Program Files\Microsoft SQL Server\140\DTS\Binn** for the 64-bit version.
-  - *140* = SQL Server 2017.  This value depends on the version of SQL Server you have.
+- **C:\Program Files\Microsoft SQL Server\160\DTS\Binn** for the 64-bit version.
+  - *160* = SQL Server 2022.  This value depends on the version of SQL Server you have.
 
-- **C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn** for the 32-bit version.
-  - *140* = SQL Server 2017.  This value depends on the version of SQL Server you have.
+- **C:\Program Files (x86)\Microsoft SQL Server\160\DTS\Binn** for the 32-bit version.
+  - *160* = SQL Server 2022.  This value depends on the version of SQL Server you have.
 
 Run the 64-bit version of the wizard unless you know that your data source requires a 32-bit data provider.
 
-:::image type="content" source="../../integration-services/import-export-data/media/start-wizard-cmd.png" alt-text="Start wizard cmd":::
-  
+For example, to launch the 64-bit version of the wizard from the command prompt on SQL Server 2022, run the following command:
+
+```console
+C:\Program Files\Microsoft SQL Server\160\DTS\Binn\DTSWizard.exe
+```
+
 ## SQL Server Management Studio (SSMS)
 
 ### Start the SQL Server Import and Export Wizard from SQL Server Management Studio (SSMS)
@@ -85,9 +87,9 @@ Run the 64-bit version of the wizard unless you know that your data source requi
 
    - **Export Data**  
 
-   :::image type="content" source="../../integration-services/import-export-data/media/start-wizard-ssms.jpg" alt-text="Start wizard SSMS"::: 
+   :::image type="content" source="../../integration-services/import-export-data/media/start-wizard-ssms.jpg" alt-text="Screetshot of start wizard SSMS.":::
 
-If you don't have SQL Server installed, or you have SQL Server but don't have SQL Server Management Studio installed, see [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
+If you don't have SQL Server Management Studio installed, see [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
 ## Visual Studio
 
@@ -134,7 +136,6 @@ Here are some other basic tasks.
      - **Learn more about the wizard.** If you're looking for an overview of the wizard, see [Import and Export Data with the SQL Server Import and Export Wizard](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
      - **Learn about the steps in the wizard.** If you're looking for info about the steps in the wizard, see [Steps in the SQL Server Import and Export Wizard](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). There's also a separate page of documentation for each page of the wizard.
      - **Learn how to connect to data sources and destinations.** If you're looking for info about how to connect to your data, select the page you want from the list here - [Connect to data sources with the SQL Server Import and Export Wizard](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md). There's a separate page of documentation for each of several commonly used data sources.
-
 
 ## Next steps 
 

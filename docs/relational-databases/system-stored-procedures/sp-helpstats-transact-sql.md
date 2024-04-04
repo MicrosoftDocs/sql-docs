@@ -62,7 +62,7 @@ sp_helpstats[ @objname = ] 'object_name'
  The following example creates single-column statistics for all eligible columns for all user tables in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database by executing `sp_createstats`. Then, `sp_helpstats` is run to find the resultant statistics created on the `Customer` table.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_createstats;  
 GO  

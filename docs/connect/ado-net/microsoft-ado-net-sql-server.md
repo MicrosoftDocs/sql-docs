@@ -62,8 +62,4 @@ ADO.NET is the core data access technology for .NET languages. Use the Microsoft
 ## More samples
 
 * [ADO.NET Code Examples](/dotnet/framework/data/adonet/ado-net-code-examples)
-* [Getting Started with .NET Framework on Windows](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/)
-* [Getting Started with .NET Core on macOS](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
-* [Getting Started with .NET Core on Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)
-* [Getting Started with .NET Core on Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/csharp/rhel/)
 

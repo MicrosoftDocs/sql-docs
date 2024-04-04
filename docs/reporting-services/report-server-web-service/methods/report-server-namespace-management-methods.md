@@ -1,5 +1,5 @@
 ---
-title: "Report Server Namespace Management Methods"
+title: "Report Server namespace management methods"
 description: The Report Server Management Web service contains methods that you can use to manage reports, folders, and resources in the report server database.
 author: maggiesMSFT
 ms.author: maggies
@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "methods [Reporting Services], about methods"
   - "methods [Reporting Services]"
 ---
-# Report Server Namespace Management Methods
+# Report Server namespace management methods
   The Report Server Management Web service contains methods that you can use to manage reports, folders, and resources in the report server database.  
   
 |Method|Action|  
@@ -54,8 +54,8 @@ helpviewer_keywords:
 |<xref:ReportService2010.ReportingService2010.SetSystemProperties%2A>|Sets one or more system properties in the report server or SharePoint farm.|  
 |<xref:ReportService2010.ReportingService2010.ValidateExtensionSettings%2A>|Validates [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] extension settings.|  
   
-## See Also  
- [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+## Related content  
+ [Building Applications by using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Report Server Web Service Methods](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
  [Technical Reference &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  

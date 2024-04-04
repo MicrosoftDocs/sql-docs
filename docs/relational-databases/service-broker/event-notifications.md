@@ -30,7 +30,7 @@ helpviewer_keywords:
  Event data can be used by applications that are running together with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to track progress and make decisions. For example, the following event notification sends a notice to a certain service every time an `ALTER TABLE` statement is issued in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE EVENT NOTIFICATION NotifyALTER_T1  
 ON DATABASE  

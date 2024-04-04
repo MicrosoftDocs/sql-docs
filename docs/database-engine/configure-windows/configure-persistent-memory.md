@@ -25,7 +25,7 @@ This article describes how to configure the persistent memory (PMEM) for [!INCLU
 
 ### Create namespaces for PMEM devices
 
-In Windows, use the `ipmctl` utility to configure the PMEM disks (referred to as namespaces in Linux). You can find Intel® Optane™ specific instructions [here](https://www.intel.com/content/www/us/en/developer/articles/guide/qsg-part3-windows-provisioning-with-optane-pmem.html). Details on supported PMEM hardware on different Windows versions are at [Understand and deploy persistent memory](/azure-stack/hci/concepts/deploy-persistent-memory#supported-hardware). PMEM disks should be interleaved across PMEM NVDIMMs and can provide different types of user-space access to memory regions on the device. For more information on interleaved sets in Windows, see [Understand and deploy persistent memory](/azure-stack/hci/concepts/deploy-persistent-memory#understand-interleaved-sets).
+In Windows, use the `ipmctl` utility to configure the PMEM disks (referred to as namespaces in Linux). You can find Intel&reg; Optane&trade; specific instructions [here](https://www.intel.com/content/www/us/en/developer/articles/guide/qsg-part3-windows-provisioning-with-optane-pmem.html). Details on supported PMEM hardware on different Windows versions are at [Understand and deploy persistent memory](/azure-stack/hci/concepts/deploy-persistent-memory#supported-hardware). PMEM disks should be interleaved across PMEM NVDIMMs and can provide different types of user-space access to memory regions on the device. For more information on interleaved sets in Windows, see [Understand and deploy persistent memory](/azure-stack/hci/concepts/deploy-persistent-memory#understand-interleaved-sets).
 
 ## PMEM disks
 
@@ -83,7 +83,7 @@ Get-Partition | Select-Object DiskNumber, DriveLetter, IsDAX, Offset, Size, Part
 Check the file alignment of a particular file using `fsutil`. Our file size must be a modulo of 2 MB.
 
 ```bash
-fsutil dax queryFileAlignment A:\AdventureWorks2019_A.mdf
+fsutil dax queryFileAlignment A:\AdventureWorks2022_A.mdf
 ```
 
 ## Replacing PMEM

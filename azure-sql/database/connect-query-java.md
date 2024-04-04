@@ -3,7 +3,8 @@ title: Use Java and JDBC with Azure SQL Database
 description: Learn how to use Java and JDBC with an Azure SQL Database.
 author: jdubois
 ms.author: judubois
-ms.date: 06/26/2020
+ms.reviewer: mathoma
+ms.date: 12/07/2023
 ms.service: sql-database
 ms.subservice: development
 ms.topic: quickstart
@@ -12,10 +13,10 @@ ms.custom:
   - devx-track-azurecli
   - mode-api
 ms.devlang: java
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db"
 ---
 
-# Use Java and JDBC with  Azure SQL Database
+# Use Java and JDBC with Azure SQL Database
 
 This topic demonstrates creating a sample application that uses Java and [JDBC](https://en.wikipedia.org/wiki/Java_Database_Connectivity) to store and retrieve information in [Azure SQL Database](/azure/sql-database/).
 
@@ -99,7 +100,7 @@ az sql server firewall-rule create \
     | jq
 ```
 
-### Configure a Azure SQL database
+### Configure an Azure SQL database
 
 The Azure SQL Database server that you created earlier is empty. It doesn't have any database that you can use with the Java application. Create a new database called `demo` by running the following command:
 
@@ -118,7 +119,7 @@ Using your favorite IDE, create a new Java project, and add a `pom.xml` file in 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.example</groupId>
     <artifactId>demo</artifactId>
@@ -126,16 +127,14 @@ Using your favorite IDE, create a new Java project, and add a `pom.xml` file in 
     <name>demo</name>
 
     <properties>
-        <java.version>1.8</java.version>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <java.version>17</java.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.microsoft.sqlserver</groupId>
             <artifactId>mssql-jdbc</artifactId>
-            <version>7.4.1.jre8</version>
+            <version>12.4.2.jre11</version>
         </dependency>
     </dependencies>
 </project>
@@ -143,7 +142,7 @@ Using your favorite IDE, create a new Java project, and add a `pom.xml` file in 
 
 This file is an [Apache Maven](https://maven.apache.org/) that configures our project to use:
 
-- Java 8
+- Java 17
 - A recent SQL Server driver for Java
 
 ### Prepare a configuration file to connect to Azure SQL database
@@ -174,7 +173,7 @@ CREATE TABLE todo (id INT PRIMARY KEY, description VARCHAR(255), details VARCHAR
 
 Next, add the Java code that will use JDBC to store and retrieve data from your Azure SQL database.
 
-Create a *src/main/java/DemoApplication.java* file, that contains:
+Create a *src/main/java/com/example/demo/DemoApplication.java* file, that contains:
 
 ```java
 package com.example.demo;
@@ -208,14 +207,14 @@ public class DemoApplication {
             statement.execute(scanner.nextLine());
         }
 
-		/*
-		Todo todo = new Todo(1L, "configuration", "congratulations, you have set up JDBC correctly!", true);
+        /*
+        Todo todo = new Todo(1L, "configuration", "congratulations, you have set up JDBC correctly!", true);
         insertData(todo, connection);
         todo = readData(connection);
         todo.setDetails("congratulations, you have updated data!");
         updateData(todo, connection);
         deleteData(todo, connection);
-		*/
+        */
 
         log.info("Closing database connection");
         connection.close();
@@ -233,7 +232,7 @@ In this file, you can see that we commented methods to insert, read, update and 
 You can now execute this main class with your favorite tool:
 
 - Using your IDE, you should be able to right-click on the *DemoApplication* class and execute it.
-- Using Maven, you can run the application by executing: `mvn exec:java -Dexec.mainClass="com.example.demo.DemoApplication"`.
+- Using Maven, you can run the application by executing: `mvn package exec:java -Dexec.mainClass="com.example.demo.DemoApplication"`.
 
 The application should connect to the Azure SQL Database, create a database schema, and then close the connection, as you should see in the console logs:
 

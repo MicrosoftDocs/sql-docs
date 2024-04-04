@@ -57,7 +57,7 @@ The name of the encryption algorithm used during the backup to encrypt the backu
 - TRIPLE_DES_3KEY
 - NO_ENCRYPTION
 
-For more information on encryption algorithms, see [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md).
+For more information on encryption algorithms, see [Choose an Encryption Algorithm](../security/encryption/choose-an-encryption-algorithm.md).
 
 #### [ @encryptor_type = ] { 'CERTIFICATE' | 'ASYMMETRIC_KEY' }
 
@@ -67,7 +67,7 @@ The type of encryptor, which can be either `CERTIFICATE` or `ASYMMETRIC_KEY`. *@
 
 The name of an existing certificate or asymmetric key to use to encrypt the backup. *@encryptor_name* is **sysname**. If using an asymmetric key, it must be configured with Extensible Key Management (EKM). This parameter is optional if you specify `NO_ENCRYPTION` for the *@encryption_algorithm* parameter.
 
-For more information, see [Extensible Key Management (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md).
+For more information, see [Extensible Key Management (EKM)](../security/encryption/extensible-key-management-ekm.md).
 
 #### [ @local_cache_path = ] 'NOT AVAILABLE'
 
@@ -95,7 +95,7 @@ EXEC managed_backup.sp_backup_config_advanced @encryption_algorithm = 'AES_128',
 GO
 ```
 
-## See also
+## Related content
 
 - [managed_backup.sp_backup_config_basic (Transact-SQL)](managed-backup-sp-backup-config-basic-transact-sql.md)
 - [managed_backup.sp_backup_config_schedule (Transact-SQL)](managed-backup-sp-backup-config-schedule-transact-sql.md)

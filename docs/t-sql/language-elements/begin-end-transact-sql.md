@@ -52,7 +52,7 @@ END
  In the following example, `BEGIN` and `END` define a series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that execute together. If the `BEGIN...END` block were not included, both `ROLLBACK TRANSACTION` statements would execute and both `PRINT` messages would be returned.  
   
 ```sql
-USE AdventureWorks2012
+USE AdventureWorks2022;
 GO  
 BEGIN TRANSACTION
 GO  

@@ -9,6 +9,8 @@ ms.date: 03/28/2023
 ms.service: virtual-machines-sql
 ms.subservice: migration-guide
 ms.topic: how-to
+ms.custom:
+  - sql-migration-content
 ---
 # Migration guide: SQL Server to SQL Server on Azure Virtual Machines
 
@@ -31,7 +33,7 @@ For information about extra migration strategies, see the [SQL Server VM migrati
 
 Migrating to SQL Server on Azure Virtual Machines requires the following resources:
 
-- [Azure SQL migration extension for Azure Data Studio](/sql/azure-data-studio/extensions/azure-sql-migration-extension).
+- [Azure SQL migration extension for Azure Data Studio](/azure-data-studio/extensions/azure-sql-migration-extension).
 - An [Azure Migrate project](/azure/migrate/create-manage-projects) (only required for SQL Server discovery in your data estate).
 - A prepared target [SQL Server on Azure Virtual Machines](../../virtual-machines/windows/create-sql-vm-portal.md) instance that's the same or greater version than the SQL Server source.
 - [Connectivity between Azure and on-premises](/azure/architecture/reference-architectures/hybrid-networking).
@@ -115,7 +117,7 @@ The following sections provide options for performing a migration in order of pr
 
 To perform a minimal downtime migration using Azure Data Studio, follow the high level steps below. For a detailed step-by-step tutorial, see [Migrate SQL Server to SQL Server on Azure Virtual Machine online using Azure Data Studio](/azure/dms/tutorial-sql-server-to-virtual-machine-online-ads):
 
-1. Download and install [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio) and the [Azure SQL migration extension](/sql/azure-data-studio/extensions/azure-sql-migration-extension).
+1. Download and install [Azure Data Studio](/azure-data-studio/download-azure-data-studio) and the [Azure SQL migration extension](/azure-data-studio/extensions/azure-sql-migration-extension).
 1. Launch the Migrate to Azure SQL wizard in the extension in Azure Data Studio.
 1. Select databases for assessment and view migration readiness or issues (if any). Additionally, collect performance data and get right-sized Azure recommendation.
 1. Select your Azure account and your target SQL Server on Azure Machine from your subscription.

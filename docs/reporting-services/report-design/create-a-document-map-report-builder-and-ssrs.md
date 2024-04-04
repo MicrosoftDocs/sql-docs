@@ -75,19 +75,19 @@ Create a document map to provides a set of clickable links or table of contents 
   
 1.  In the web portal, browse to the report that has the document map.  
   
-     For example, for the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] sample reports, the following URL specifies the report named Product Catalog.  
+     For example, for the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample reports, the following URL specifies the report named Product Catalog.  
   
     ```  
-    https://localhost/Reports/Pages/Report.aspx?ItemPath=%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
+    https://localhost/Reports/Pages/Report.aspx?ItemPath=%2fAdventureWorks2022+Sample+Reports%2fProduct+Catalog  
     ```  
   
-2.  Copy the report path on the server. In the example, the report path is `%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog`.  
+2.  Copy the report path on the server. In the example, the report path is `%2fAdventureWorks2022+Sample+Reports%2fProduct+Catalog`.  
   
 3.  Create a new URL with the following three components:  
   
     -   The report viewer on the report server: `https://localhost/ReportServer/Pages/ReportViewer.aspx?`  
   
-    -   The name of the report you copied in step 1, for example: `%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog`  
+    -   The name of the report you copied in step 1, for example: `%2fAdventureWorks2022+Sample+Reports%2fProduct+Catalog`  
   
     -   The device information parameters that specify hiding the document map: `&rs%3aCommand=Render&rc%3aFormat=HTML4.0&rc%3aDocMap=False`  
   
@@ -95,7 +95,7 @@ Create a document map to provides a set of clickable links or table of contents 
   
     ```  
     https://localhost/ReportServer/Pages/ReportViewer.aspx?  
-    %2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
+    %2fAdventureWorks2022+Sample+Reports%2fProduct+Catalog  
     &rs%3aCommand=Render&rc%3aFormat=HTML4.0&rc%3aDocMap=False  
     ```  
   
@@ -104,9 +104,7 @@ Create a document map to provides a set of clickable links or table of contents 
 4.  Paste the URL in the web portal, and then press ENTER. The report runs, and the document map is hidden.  
   
 > [!NOTE]  
->  For more information about downloading sample reports, see [Report Builder and Report Designer sample reports](https://social.technet.microsoft.com/wiki/contents/articles/1093.reporting-services-samples-on-codeplex-sql-server-reporting-services-ssrs.aspx).  
->   
-  >  For more information, see [URL Access](../url-access-ssrs.md). 
+>  For more information, see [URL Access](../url-access-ssrs.md). 
 
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

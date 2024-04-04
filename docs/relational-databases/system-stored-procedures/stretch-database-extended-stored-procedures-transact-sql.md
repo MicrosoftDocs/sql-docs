@@ -21,7 +21,7 @@ dev_langs:
 This section describes the extended stored procedures that are related to Stretch Database.
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+> [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
 ## In this section
 
@@ -61,6 +61,6 @@ This section describes the extended stored procedures that are related to Stretc
 
   Tests the connection from SQL Server to the remote Azure server and reports problems that may prevent data migration.
 
-## See also
+## Related content
 
 - [Stretch Database](../../sql-server/stretch-database/stretch-database.md)

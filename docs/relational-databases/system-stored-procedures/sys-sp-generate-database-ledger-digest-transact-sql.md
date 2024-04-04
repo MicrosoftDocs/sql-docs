@@ -10,7 +10,7 @@ ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+monikerRange: "=azuresqldb-current || >=sql-server-ver16 || >=sql-server-linux-ver16"
 ---
 # sys.sp_generate_database_ledger_digest (Transact-SQL)
 
@@ -34,7 +34,7 @@ None.
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 | Column name | Description |
 | --- | --- |
@@ -56,7 +56,7 @@ None.
 
 Users with the **public** role are allowed to execute this stored procedure.
 
-## Next steps
+## Related content
 
 - [Digest management](../security/ledger/ledger-digest-management.md)
 - [Ledger overview](../security/ledger/ledger-overview.md)

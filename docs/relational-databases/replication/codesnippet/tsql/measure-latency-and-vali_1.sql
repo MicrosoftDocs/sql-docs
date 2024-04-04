@@ -2,7 +2,7 @@ DECLARE @publication AS sysname;
 DECLARE @tokenID AS int;
 SET @publication = N'AdvWorksProductTran'; 
 
-USE [AdventureWorks2012]
+USE [AdventureWorks2022]
 
 -- Insert a new tracer token in the publication database.
 EXEC sys.sp_posttracertoken 

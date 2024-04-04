@@ -34,7 +34,7 @@ This query error can be caused by one of the following problems.
 -   A column alias, defined in the SELECT clause, is referenced in another clause such as a WHERE or GROUP BY clause. For example, the following query defines the column alias `Year` in the SELECT clause and refers to it in the GROUP BY clause.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     SELECT DATEPART(yyyy,OrderDate) AS Year, SUM(TotalDue) AS Total  
     FROM Sales.SalesOrderHeader  
@@ -89,7 +89,7 @@ Verify the following information and correct the statement as appropriate.
 -   A column alias is referenced incorrectly. Modify the statement by repeating the expression that defines the alias in the appropriate clause or by using a derived table. The following example repeats the expressions that define the `Year` alias in the GROUP BY clause.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     SELECT DATEPART(yyyy,OrderDate) AS Year ,SUM(TotalDue) AS Total  
     FROM Sales.SalesOrderHeader  
@@ -99,7 +99,7 @@ Verify the following information and correct the statement as appropriate.
     The following example uses a derived table to make the alias name available to other clauses in the query. Notice that the alias `Year` is defined in the FROM clause, which is processed first, and so makes the alias available for use in other clauses in the query.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     SELECT d.Year, SUM(TotalDue) AS Total  
     FROM (SELECT DATEPART(yyyy,OrderDate) AS Year, TotalDue  

@@ -8,6 +8,8 @@ ms.date: 03/20/2023
 ms.service: sql-database
 ms.subservice: migration-guide
 ms.topic: how-to
+ms.custom:
+  - sql-migration-content
 ---
 # Migration overview: SQL Server to Azure SQL Database
 [!INCLUDE[appliesto--sqldb](../../includes/appliesto-sqldb.md)]
@@ -65,8 +67,8 @@ Consider general guidelines to help you choose the right deployment model and se
 
 **Service tiers**: Choose between three service tiers designed for different types of applications.
 
-- [General Purpose/standard service tier](../../database/service-tier-general-purpose.md) offers a balanced budget-oriented option with compute and storage suitable to deliver applications in the middle and lower tiers. Redundancy is built in at the storage layer to recover from failures. It's designed for most database workloads. 
-- [Business Critical/premium service tier](../../database/service-tier-business-critical.md) is for high-tier applications that require high transaction rates, low-latency I/O, and a high level of resiliency. Secondary replicas are available for failover and to offload read workloads.
+- [General Purpose/Standard service tier](../../database/service-tier-general-purpose.md) offers a balanced budget-oriented option with compute and storage suitable to deliver applications in the middle and lower tiers. Redundancy is built in at the storage layer to recover from failures. It's designed for most database workloads. 
+- [Business Critical/Premium service tier](../../database/service-tier-business-critical.md) is for high-tier applications that require high transaction rates, low-latency I/O, and a high level of resiliency. Secondary replicas are available for failover and to offload read workloads.
 - [Hyperscale service tier](../../database/service-tier-hyperscale.md) is intended for all customers who require higher performance and availability, fast backup and restore, and/or fast storage and compute scalability. This includes customers who are moving to the cloud to modernize their applications as well as customers who are already using other service tiers in Azure SQL Database. The Hyperscale service tier supports a broad range of database workloads, from pure OLTP to pure analytics. It is optimized for OLTP and hybrid transaction and analytical processing (HTAP) workloads.
 
 > [!IMPORTANT]
@@ -139,25 +141,25 @@ Migrate SQL Server Integration Services (SSIS) packages to Azure by redeploying 
 Migrate SQL Server Reporting Services (SSRS) reports to paginated reports in Power BI. Use the [RDL Migration Tool](https://github.com/microsoft/RdlMigration) to help prepare and migrate your reports. Microsoft developed this tool to help customers migrate Report Definition Language (RDL) reports from their SSRS servers to Power BI. It's available on GitHub, and it documents an end-to-end walkthrough of the migration scenario. 
 
 ### High availability
-Manual setup of SQL Server high-availability features like Always On failover cluster instances and Always On availability groups becomes obsolete on the target SQL database. High-availability architecture is already built into both [General Purpose (standard availability model)](../../database/high-availability-sla.md#locally-redundant-availability) and [Business Critical (premium availability model)](../../database/high-availability-sla.md#locally-redundant-availability) service tiers for Azure SQL Database. The Business Critical/premium service tier also provides read scale-out that allows connecting into one of the secondary nodes for read-only purposes. 
+Manual setup of SQL Server high-availability features like Always On failover cluster instances and Always On availability groups becomes obsolete on the target SQL database. High-availability architecture is already built into both [General Purpose (standard availability model)](../../database/high-availability-sla.md#locally-redundant-availability) and [Business Critical (premium availability model)](../../database/high-availability-sla.md#locally-redundant-availability) service tiers for Azure SQL Database. The Business Critical/Premium service tier also provides read scale-out that allows connecting into one of the secondary nodes for read-only purposes. 
 
-Beyond the high-availability architecture that's included in Azure SQL Database, the [auto-failover groups](../../database/auto-failover-group-sql-db.md) feature allows you to manage the replication and failover of databases in a managed instance to another region. 
+Beyond the high-availability architecture that's included in Azure SQL Database, the [failover groups](../../database/failover-group-sql-db.md) feature allows you to manage the replication and failover of databases to a server in another region. 
 
 ### Logins and groups
 
-Windows logins are not supported in Azure SQL Database, create an Azure Active Directory login instead. Manually recreate any SQL logins. 
+Windows logins are not supported in Azure SQL Database, create a login from Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) instead. Manually recreate any SQL logins. 
 
 ### SQL Agent jobs
 SQL Agent jobs are not directly supported in Azure SQL Database and need to be deployed to [elastic database jobs (preview)](../../database/job-automation-overview.md).
 
 ### System databases
-For Azure SQL Database, the only applicable system databases are [master](/sql/relational-databases/databases/master-database) and tempdb. To learn more, see [Tempdb in Azure SQL Database](/sql/relational-databases/databases/tempdb-database#tempdb-database-in-sql-database).
+For Azure SQL Database, the only applicable system databases are [master](/sql/relational-databases/databases/master-database) and `tempdb`. To learn more, see [Tempdb in Azure SQL Database](/sql/relational-databases/databases/tempdb-database#tempdb-database-in-sql-database).
 
 ## Advanced features 
 
 Be sure to take advantage of the advanced cloud-based features in SQL Database. For example, you don't need to worry about managing backups because the service does it for you. You can restore to any [point in time within the retention period](../../database/recovery-using-backups.md#point-in-time-restore). 
 
-To strengthen security, consider using [Azure AD authentication](../../database/authentication-aad-overview.md), [auditing](../../database/auditing-overview.md), [threat detection](../../database/azure-defender-for-sql.md), [row-level security](/sql/relational-databases/security/row-level-security), and [dynamic data masking](/sql/relational-databases/security/dynamic-data-masking).
+To strengthen security, consider using [Microsoft Entra authentication](../../database/authentication-aad-overview.md), [auditing](../../database/auditing-overview.md), [threat detection](../../database/azure-defender-for-sql.md), [row-level security](/sql/relational-databases/security/row-level-security), and [dynamic data masking](/sql/relational-databases/security/dynamic-data-masking).
 
 In addition to advanced management and security features, SQL Database provides tools that can help you [monitor and tune your workload](../../database/monitor-tune-overview.md). [Azure SQL Analytics (Preview)](/azure/azure-monitor/insights/azure-sql) is an advanced solution for monitoring the performance of all of your databases in Azure SQL Database at scale and across multiple subscriptions in a single view. Azure SQL Analytics collects and visualizes key performance metrics with built-in intelligence for performance troubleshooting.
 
@@ -174,7 +176,7 @@ For more assistance, see the following resources that were developed for real-wo
 |[Bulk database creation with PowerShell](https://www.microsoft.com/download/details.aspx?id=103107)|You can use a set of three PowerShell scripts that create a resource group (create_rg.ps1), the [logical server in Azure](../../database/logical-servers.md) (create_sqlserver.ps1), and a SQL database (create_sqldb.ps1). The scripts include loop capabilities so you can iterate and create as many servers and databases as necessary.|
 |[Bulk schema deployment with MSSQL-Scripter and PowerShell](https://www.microsoft.com/download/details.aspx?id=103032)|This asset creates a resource group, creates one or multiple [logical servers in Azure](../../database/logical-servers.md) to host Azure SQL Database, exports every schema from an on-premises SQL Server instance (or multiple SQL Server 2005+ instances), and imports the schemas to Azure SQL Database.|
 |[Convert SQL Server Agent jobs into elastic database jobs](https://www.microsoft.com/download/details.aspx?id=103123)|This script migrates your source SQL Server Agent jobs to elastic database jobs.|
-|[Utility to move on-premises SQL Server logins to Azure SQL Database](https://www.microsoft.com/download/details.aspx?id=103111)|A PowerShell script can create a T-SQL command script to re-create logins and select database users from on-premises SQL Server to Azure SQL Database. The tool allows automatic mapping of Windows Server Active Directory accounts to Azure AD accounts, along with optionally migrating SQL Server native logins.|
+|[Utility to move on-premises SQL Server logins to Azure SQL Database](https://www.microsoft.com/download/details.aspx?id=103111)|A PowerShell script can create a T-SQL command script to re-create logins and select database users from on-premises SQL Server to Azure SQL Database. The tool allows automatic mapping of Windows Server Active Directory accounts to Microsoft Entra accounts, along with optionally migrating SQL Server native logins.|
 |[Perfmon data collection automation by using Logman](https://www.microsoft.com/download/details.aspx?id=103114)|You can use the Logman tool to collect Perfmon data (to help you understand baseline performance) and get migration target recommendations. This tool uses logman.exe to create the command that will create, start, stop, and delete performance counters set on a remote SQL Server instance.|
 
 The Data SQL Engineering team developed these resources. This team's core charter is to unblock and accelerate complex modernization for data platform migration projects to Microsoft's Azure data platform.

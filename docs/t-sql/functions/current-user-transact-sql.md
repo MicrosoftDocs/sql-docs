@@ -57,7 +57,7 @@ GO
 This example creates a table that uses `CURRENT_USER` as a `DEFAULT` constraint, for the `order_person` column, on a sales row.
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF EXISTS (SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES  
       WHERE TABLE_NAME = 'orders22')  

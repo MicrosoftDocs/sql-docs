@@ -13,24 +13,24 @@ f1_keywords:
 
 # Using Test Conditions in SQL Server Unit Tests
 
-In a SQL Server unit test, one or more Transact\-SQL test scripts are executed. The results can be evaluated within the Transact\-SQL script and THROW or RAISERROR used to return an error and fail the test, or test conditions can be defined in the test to evaluate the results. The test returns an instance of the [SqlExecutionResult](/previous-versions/sql/sql-server-data-tools/jj856590(v=vs.103)) class. The instance of this class contains one or more DataSets, the execution time, and the rows affected by the script. All of this information is collected during execution of the script. These results can be evaluated by using test conditions. SQL Server Data Tools provides a set of predefined test conditions. You can also create and use custom conditions; see [Custom Test Conditions  for SQL Server Unit Tests](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md).  
+In a SQL Server unit test, one or more Transact-SQL test scripts are executed. The results can be evaluated within the Transact-SQL script and THROW or RAISERROR used to return an error and fail the test, or test conditions can be defined in the test to evaluate the results. The test returns an instance of the [SqlExecutionResult](/previous-versions/sql/sql-server-data-tools/jj856590(v=vs.103)) class. The instance of this class contains one or more DataSets, the execution time, and the rows affected by the script. All of this information is collected during execution of the script. These results can be evaluated by using test conditions. SQL Server Data Tools provides a set of predefined test conditions. You can also create and use custom conditions; see [Custom Test Conditions  for SQL Server Unit Tests](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md).  
   
 ## Predefined Test Conditions  
 The following table lists the predefined test conditions that you can add by using the Test Conditions pane in the SQL Server Unit Test Designer.  
   
 |**Test Condition**|**Test Condition Description**|  
 |----------------------|----------------------------------|  
-|Data Checksum|Fails if the checksum of the result set returned from the Transact\-SQL script does not match the expected checksum. For more information, see [Specifying a Data Checksum](#SpecifyDataChecksum).<br /><br />**NOTE:** This test condition is not recommended if you are returning data that will vary between test runs. For example, if your result set contains generated dates or times, or contains identity columns, your tests will fail because the checksum will be different on each run.|  
-|Empty ResultSet|Fails if the result set returned from the Transact\-SQL script is not empty.|  
-|Execution Time|Fails if the Transact\-SQL test script takes longer than expected to execute. The default execution time is 30 seconds.<br /><br />The execution time applies to the test script test only, not to the pre-test script or the post-test script.|  
+|Data Checksum|Fails if the checksum of the result set returned from the Transact-SQL script does not match the expected checksum. For more information, see [Specifying a Data Checksum](#SpecifyDataChecksum).<br /><br />**NOTE:** This test condition is not recommended if you are returning data that will vary between test runs. For example, if your result set contains generated dates or times, or contains identity columns, your tests will fail because the checksum will be different on each run.|  
+|Empty ResultSet|Fails if the result set returned from the Transact-SQL script is not empty.|  
+|Execution Time|Fails if the Transact-SQL test script takes longer than expected to execute. The default execution time is 30 seconds.<br /><br />The execution time applies to the test script test only, not to the pre-test script or the post-test script.|  
 |Expected Schema|Fails if the columns and data types of the result set do not match those specified for the test condition. You must specify a schema through the properties of the test condition. For more information, see [Specifying an Expected Schema](#SpecifyExpectedSchema).|  
 |Inconclusive|Always produces a test with a result of Inconclusive. This is the default condition added to every test. This test condition is included to indicate that test verification has not been implemented. Delete this test condition from your test after you have added other test conditions.|  
-|Not Empty ResultSet|Fails if the result set is empty. You can use this test condition or the EmptyResultSet with the Transact\-SQL @@RAISERROR function in your test script to test whether an update worked correctly. For example, you can save pre-update values, run the update, compare post-update values, and raise an error if you do not get the expected results.|  
+|Not Empty ResultSet|Fails if the result set is empty. You can use this test condition or the EmptyResultSet with the Transact-SQL @@RAISERROR function in your test script to test whether an update worked correctly. For example, you can save pre-update values, run the update, compare post-update values, and raise an error if you do not get the expected results.|  
 |Row Count|Fails if the result set does not contain the expected number of rows.|  
 |Scalar Value|Fails if a particular value in the result set does not equal the specified value. The default **Expected value** is null.|  
   
 > [!NOTE]  
-> The Execution Time test condition specifies a time limit under which the Transact\-SQL test script must run. If this time limit is exceeded, the test fails. Test results also include a Duration statistic, which differs from the Execution Time test condition. The Duration statistic includes not only the execution time but also the time to connect to the database two times; the time to run any other test scripts, such as the pre-test script and the post-test script; and the time to run the test conditions. Therefore, a test can pass even if its duration is longer than its execution time.  
+> The Execution Time test condition specifies a time limit under which the Transact-SQL test script must run. If this time limit is exceeded, the test fails. Test results also include a Duration statistic, which differs from the Execution Time test condition. The Duration statistic includes not only the execution time but also the time to connect to the database two times; the time to run any other test scripts, such as the pre-test script and the post-test script; and the time to run the test conditions. Therefore, a test can pass even if its duration is longer than its execution time.  
 >   
 > The reported Duration does not include time used for data generation and schema deployment because they occur before the tests are run. To view the test duration, select a test run in the **Test Results** window, right-click, and choose **View Test Results Details**.  
   
@@ -86,16 +86,16 @@ After you add a Data Checksum test condition to your database unit test, you mus
   
 5.  Specify a connection to the database that you want to test. For more information, see [How to: Create a Database Connection](/previous-versions/visualstudio/visual-studio-2010/aa833420(v=vs.100)).  
   
-6.  By default, the Transact\-SQL body of your test appears in the edit pane. You can modify the code, if necessary, to produce the expected results. For example, if your test has code in the pre-test, you might have to add that code.  
+6.  By default, the Transact-SQL body of your test appears in the edit pane. You can modify the code, if necessary, to produce the expected results. For example, if your test has code in the pre-test, you might have to add that code.  
   
     > [!IMPORTANT]  
     > If you modify a checksum condition for which you had previously specified a checksum, any changes that you made in the edit pane are not saved. You must make those changes again before you click **Retrieve**.  
   
 7.  Click **Retrieve**.  
   
-    The Transact\-SQL is executed against the specified database connection and the results appear in the dialog box.  
+    The Transact-SQL is executed against the specified database connection and the results appear in the dialog box.  
   
-8.  If the results match the expected results of your test, click **OK**. Otherwise modify the Transact\-SQL body and repeat steps 6, 7, and 8 until the results are as expected.  
+8.  If the results match the expected results of your test, click **OK**. Otherwise modify the Transact-SQL body and repeat steps 6, 7, and 8 until the results are as expected.  
   
     The **Value** column of the test condition displays the value of the expected checksum.  
   
@@ -116,16 +116,16 @@ After you add an Expected Schema test condition to your SQL Server unit test, yo
   
 5.  Specify a connection to the database that you want to test. For more information, see [How to: Create a Database Connection](/previous-versions/visualstudio/visual-studio-2010/aa833420(v=vs.100)).  
   
-6.  By default, the Transact\-SQL body of your test appears in the edit pane. You can modify the code, if necessary, to produce the expected results. For example, if your test has code in the pre-test, you might have to add that code.  
+6.  By default, the Transact-SQL body of your test appears in the edit pane. You can modify the code, if necessary, to produce the expected results. For example, if your test has code in the pre-test, you might have to add that code.  
   
     > [!IMPORTANT]  
     > If you modify an expected schema condition for which you had previously specified a schema, any changes that you made in the edit pane are not saved. You must make those changes again before you click **Retrieve**.  
   
 7.  Click **Retrieve**.  
   
-    The Transact\-SQL is executed against the specified database connection and the results appear in the dialog box. Because you are verifying the schema, or shape, of the result set and not the values of the results, you do not have to see any data in the returned results, as long as the columns appear the way that you expect them to appear.  
+    The Transact-SQL is executed against the specified database connection and the results appear in the dialog box. Because you are verifying the schema, or shape, of the result set and not the values of the results, you do not have to see any data in the returned results, as long as the columns appear the way that you expect them to appear.  
   
-8.  If the results match the expected results of your test, click **OK**. Otherwise modify the Transact\-SQL body and repeat steps 6, 7, and 8 until the results are as expected.  
+8.  If the results match the expected results of your test, click **OK**. Otherwise modify the Transact-SQL body and repeat steps 6, 7, and 8 until the results are as expected.  
   
     The **Value** column of the test condition displays information about the expected schema. For example, it might say "Expected: 2 tables".  
   

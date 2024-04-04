@@ -4,7 +4,7 @@ titleSuffix: SQL machine learning
 description: Learn helpful tips on using R packages in SQL Server for those who are new to R or to SQL Server.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 08/06/2019
+ms.date: 08/01/2023
 ms.service: sql
 ms.subservice: machine-learning
 ms.topic: how-to
@@ -24,11 +24,11 @@ As an administrator installing R packages for the first time, knowing a few basi
 
 R packages frequently depend on multiple other packages, some of which might not be available in the default R library used by the instance. Sometimes a package requires a different version of a dependent package than what's already installed. Package dependencies are noted in a DESCRIPTION file embedded in the package, but are sometimes incomplete. You can use a package called [iGraph](https://igraph.org/r/) to fully articulate the dependency graph.
 
-If you need to install multiple packages, or want to ensure that everyone in your organization gets the correct package type and version, we recommend that you use the [miniCRAN](https://mran.microsoft.com/package/miniCRAN) package to analyze the complete dependency chain. minicRAN creates a local repository that can be shared among multiple users or computers. For more information, see [Create a local package repository using miniCRAN](create-a-local-package-repository-using-minicran.md).
+If you need to install multiple packages, or want to ensure that everyone in your organization gets the correct package type and version, we recommend that you use the [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN) package to analyze the complete dependency chain. miniCRAN creates a local repository that can be shared among multiple users or computers.
 
 ### Package sources, versions, and formats
 
-There are multiple sources for R packages, such as [CRAN](https://cran.r-project.org/) and [Bioconductor](https://www.bioconductor.org/). The official site for the R language (<https://www.r-project.org/>) lists many of these resources. Microsoft offers [MRAN](https://mran.microsoft.com/) for its distribution of open-source R ([MRO](https://mran.microsoft.com/open)) and other packages. Many packages are published to GitHub, where developers can obtain the source code.
+There are multiple sources for R packages, such as [CRAN](https://cran.r-project.org/) and [Bioconductor](https://www.bioconductor.org/). The official site for the R language (<https://www.r-project.org/>) lists many of these resources. Many packages are published to GitHub, where developers can obtain the source code. 
 
 ::: moniker range=">=sql-server-2016"
 R packages run on multiple computing platforms. Be sure that the versions you install are Windows binaries.

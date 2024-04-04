@@ -94,8 +94,8 @@ EXEC msdb.dbo.sysmail_delete_log_sp
 GO
 ```
 
-## See also
+## Related content
 
-- [sysmail_event_log (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)
+- [sysmail_event_log (Transact-SQL)](../system-catalog-views/sysmail-event-log-transact-sql.md)
 - [sysmail_delete_mailitems_sp (Transact-SQL)](sysmail-delete-mailitems-sp-transact-sql.md)
-- [Create a SQL Server Agent Job to Archive Database Mail Messages and Event Logs](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)
+- [Create a SQL Server Agent Job to Archive Database Mail Messages and Event Logs](../database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)

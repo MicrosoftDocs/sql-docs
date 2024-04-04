@@ -35,7 +35,8 @@ For information about privacy, see the [SQL IaaS Agent extension privacy stateme
 
 To register your SQL Server VM with the extension, you'll need the following: 
 
-- An [Azure subscription](https://azure.microsoft.com/free/) that has been [registered with the **Microsoft.SqlVirtualMachine** resource provider](sql-agent-extension-manually-register-single-vm.md#register-subscription-with-rp) and contains unregistered SQL Server virtual machines. 
+- An [Azure subscription](https://azure.microsoft.com/free/) that has been [registered with the **Microsoft.SqlVirtualMachine** resource provider](sql-agent-extension-manually-register-single-vm.md#register-subscription-with-rp) and contains unregistered SQL Server virtual machines.
+- Ensure the Azure VM is running.
 - The client credentials used to register the virtual machines exist in any of the following Azure roles: **Virtual Machine contributor**, **Contributor**, or **Owner**. 
 - [Az PowerShell 5.0](/powershell/azure/new-azureps-module-az) - versions higher than 5.0 currently only support MFA and are not compatible with the script to register multiple VMs. 
 
@@ -244,7 +245,7 @@ Copy the full script and save it as `RegisterSqLVMs.psm1`.
 
 To learn more, review the following articles:
 
-* [Overview of SQL Server on a Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)
-* [FAQ for SQL Server on a Windows VM](frequently-asked-questions-faq.yml)
-* [Pricing guidance for SQL Server on a Azure VMs](../windows/pricing-guidance.md)
+* [Overview of SQL Server on Windows VMs](sql-server-on-azure-vm-iaas-what-is-overview.md)
+* [FAQ for SQL Server on Windows VMs](frequently-asked-questions-faq.yml)
+* [Pricing guidance for SQL Server on Azure VMs](../windows/pricing-guidance.md)
 * [What's new for SQL Server on Azure VMs](../windows/doc-changes-updates-release-notes-whats-new.md)

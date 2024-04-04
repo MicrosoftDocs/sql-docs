@@ -35,17 +35,17 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 
 #### [ @account_id = ] *account_id*
 
-The account ID of the account to list information for. *@account_id* is **int**, with a default of NULL.
+The account ID of the account to list information for. *@account_id* is **int**, with a default of `NULL`.
 
 #### [ @account_name = ] '*account_name*'
 
-The name of the account to list information for. *@account_name* is **sysname**, with a default of NULL.
+The name of the account to list information for. *@account_name* is **sysname**, with a default of `NULL`.
 
 ## Return code values
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 Returns a result set containing the columns listed below.
 
@@ -110,8 +110,8 @@ account_id  name                         description                            
 148         AdventureWorks Administrator Mail account for administrative e-mail. dba@adventure-works.com   AdventureWorks Automated Mailer  NULL            SMTP       smtp.adventure-works.com  25          NULL     0                       0
 ```
 
-## See also
+## Related content
 
-- [Database Mail](../../relational-databases/database-mail/database-mail.md)
-- [Create a Database Mail Account](../../relational-databases/database-mail/create-a-database-mail-account.md)
+- [Database Mail](../database-mail/database-mail.md)
+- [Create a Database Mail Account](../database-mail/create-a-database-mail-account.md)
 - [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)

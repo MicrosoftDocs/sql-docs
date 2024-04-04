@@ -48,7 +48,7 @@ You can configure stored credentials that a [!INCLUDE[ssRSnoversion](../../inclu
 5.  For **Connection String**, specify the connection string that the report server uses to connect to the data source. The following example illustrates a connection string used to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database:  
   
     ```  
-    data source=<servername>;initial catalog=AdventureWorks2012  
+    data source=<servername>;initial catalog=AdventureWorks2022  
     ```  
   
 6.  For **Connect Using**, select **Credentials stored securely in the report server**.  
@@ -76,7 +76,7 @@ You can configure stored credentials that a [!INCLUDE[ssRSnoversion](../../inclu
 5.  For **Connection String**, specify the connection string that the report server uses to connect to the data source. The following example illustrates a connection string used to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database:  
   
     ```  
-    data source=<servername>;initial catalog=AdventureWorks2012  
+    data source=<servername>;initial catalog=AdventureWorks2022  
     ```  
   
 6.  For **Credentials**, select **Stored Credentials**.  
@@ -104,7 +104,7 @@ You can configure stored credentials that a [!INCLUDE[ssRSnoversion](../../inclu
      The following example illustrates a connection string used to connect to the local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database:  
   
     ```  
-    data source=<localservername>; initial catalog=AdventureWorks2012  
+    data source=<localservername>; initial catalog=AdventureWorks2022  
     ```  
   
 5.  Type a user name and password.  
@@ -132,7 +132,7 @@ You can configure stored credentials that a [!INCLUDE[ssRSnoversion](../../inclu
      The following example illustrates a connection string used to connect to the local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database:  
   
     ```  
-    data source=<localservername>; initial catalog=AdventureWorks2012  
+    data source=<localservername>; initial catalog=AdventureWorks2022  
     ```  
   
 6.  Type a user name and password.  

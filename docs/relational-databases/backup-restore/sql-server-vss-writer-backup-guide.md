@@ -565,7 +565,7 @@ Microsoft Distributed Transaction Coordinator (MS DTC) component to be released 
 
 ### Security implications for autorecovered snapshots
 
-For VSS snapshots, after the auto recovery, the files will be secured using Access Control Lists(ACLs) to allow access only to the special builtin group which SQL server account belongs to.  This implies that member of either box admin or that special group will be able to attach the database. The client requesting an attach of the database files on a snapshot either has to be a member of Builtin/Administrators or the SQL Server account.
+For VSS snapshots, after the auto recovery, the files will be secured using Access Control Lists (ACLs) to allow access only to the special builtin group which the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] account belongs to.  This implies that member of either box admin or that special group will be able to attach the database. The client requesting an attach of the database files on a snapshot either has to be a member of Builtin/Administrators or the SQL Server account.
 
 #### Simple Recovery model user databases
 
@@ -579,7 +579,7 @@ The procedure is as follows:
 
 1. Ensure that the SQL Server instance is stopped.
 1. Perform the restore in two phases.
-    1. Restore the system databases and user databases that should be recovered at the same time (that is, Simple Recovery mode user databases) via file copy /volume-mount through VSS.
+    1. Restore the system databases and user databases that should be recovered at the same time (that is, user databases in the simple recovery model) via file copy /volume-mount through VSS.
         1. If the user databases to be rolled forward are not on the same volume as the system databases, then that volume should not be brought back at this time. This scenario requires planning prior to back up.
         1. If the user databases are on the same volume as the system databases, then the user databases need to be hidden from SQL Server.
     1. Start the SQL Server instance using the -f parameter.  (When using the -f startup option, only the master database can be restored.)

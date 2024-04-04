@@ -50,7 +50,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a user can only vi
  The following example returns the increment value for the `Person.Address` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT IDENT_INCR('Person.Address') AS Identity_Increment;  
 GO  
@@ -60,7 +60,7 @@ GO
  The following example returns the tables in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database that includes an identity column with an increment value.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT TABLE_SCHEMA, TABLE_NAME,   
    IDENT_INCR(TABLE_SCHEMA + '.' + TABLE_NAME) AS IDENT_INCR  

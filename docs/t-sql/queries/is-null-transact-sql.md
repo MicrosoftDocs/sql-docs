@@ -67,7 +67,7 @@ expression IS [ NOT ] NULL
  The following example returns the name and the weight for all products for which either the weight is less than `10` pounds or the color is unknown, or `NULL`.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT Name, Weight, Color  
 FROM Production.Product  

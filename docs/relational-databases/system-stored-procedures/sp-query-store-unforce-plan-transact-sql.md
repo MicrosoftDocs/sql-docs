@@ -82,7 +82,7 @@ After you identify the *query_id* and *plan_id* that you want to unforce, use th
 EXEC sp_query_store_unforce_plan 3, 3;
 ```
 
-## Next steps
+## Related content
 
 - [sys.query_store_replicas (Transact-SQL)](../system-catalog-views/sys-query-store-replicas.md)
 - [sys.query_store_plan_forcing_locations (Transact-SQL)](../system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md)
@@ -91,6 +91,6 @@ EXEC sp_query_store_unforce_plan 3, 3;
 - [sp_query_store_remove_query (Transact-SQL)](sp-query-store-remove-query-transact-sql.md)
 - [sp_query_store_reset_exec_stats (Transact-SQL)](sp-query-store-reset-exec-stats-transact-sql.md)
 - [sp_query_store_flush_db (Transact-SQL)](sp-query-store-flush-db-transact-sql.md)
-- [Query Store Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)
-- [Monitoring Performance by using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
-- [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md#CheckForced)
+- [Query Store Catalog Views (Transact-SQL)](../system-catalog-views/query-store-catalog-views-transact-sql.md)
+- [Monitoring Performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
+- [Best Practice with the Query Store](../performance/best-practice-with-the-query-store.md#CheckForced)

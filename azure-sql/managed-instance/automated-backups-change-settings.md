@@ -24,12 +24,12 @@ Some of the content in this article is duplicated in /azure-sql/database/automat
 --->
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](../database/automated-backups-change-settings.md)
-> * [Azure SQL Managed Instance](automated-backups-change-settings.md)
+> * [Azure SQL Database](../database/automated-backups-change-settings.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](automated-backups-change-settings.md?view=azuresql-mi&preserve-view=true)
 
 This article provides examples to modify [automated backup](automated-backups-overview.md) settings for Azure SQL Managed Instance, such as the short-term retention policy and the backup storage redundancy option that's used for backups. For Azure SQL Database, see [Change automated backup settings for Azure SQL Database](../database/automated-backups-change-settings.md).
 
-[!INCLUDE [GDPR-related guidance](~/../azure/includes/gdpr-intro-sentence.md)]
+[!INCLUDE [GDPR-related guidance](~/../docs/includes/gdpr-intro-sentence.md)]
 
 ## Change short-term retention policy
 
@@ -153,7 +153,7 @@ Status code: 200
 }
 ```
 
-For more information, see [Backup retention REST API](/rest/api/sql/2020-08-01-preview/backup-short-term-retention-policies).
+For more information, see [Backup retention REST API](/rest/api/sql/backup-short-term-retention-policies).
 
 ---
 

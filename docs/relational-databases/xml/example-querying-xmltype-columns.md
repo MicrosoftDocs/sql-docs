@@ -21,7 +21,7 @@ The following query includes columns of **xml** type. The query retrieves produc
 ## Example
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT ProductModelID, Name,
    Instructions.query('
@@ -46,7 +46,7 @@ The following is the result. The table stores manufacturing instructions for onl
 If the query specifies a column name for the XML returned by the XQuery, as specified in the following `SELECT` statement, the manufacturing steps are wrapped in the element that has the specified name.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT ProductModelID, Name,
    Instructions.query('
@@ -74,7 +74,7 @@ The following query specifies the `ELEMENTS` directive. Therefore, the result re
 
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT ProductModelID, Name,
    Instructions.query('

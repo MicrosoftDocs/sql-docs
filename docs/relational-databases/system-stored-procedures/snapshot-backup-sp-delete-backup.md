@@ -15,7 +15,7 @@ dev_langs:
 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-Deletes all snapshots and the backup file that comprise a snapshot backup set from the specified database. This system stored procedure is the only recommended method for managing snapshot backup sets. For more information, see [File-Snapshot Backups for Database Files in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).
+Deletes all snapshots and the backup file that comprise a snapshot backup set from the specified database. This system stored procedure is the only recommended method for managing snapshot backup sets. For more information, see [File-Snapshot Backups for Database Files in Azure](../backup-restore/file-snapshot-backups-for-database-files-in-azure.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -41,7 +41,7 @@ The name of the database containing the snapshot to be deleted. When a database 
 
 Requires ALTER ANY DATABASE permission or ALTER permission on the specified database.
 
-## See also
+## Related content
 
 - [sys.fn_db_backup_file_snapshots (Transact-SQL)](../system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)
 - [sp_delete_backup_file_snapshot (Transact-SQL)](snapshot-backup-sp-delete-backup-file-snapshot.md)

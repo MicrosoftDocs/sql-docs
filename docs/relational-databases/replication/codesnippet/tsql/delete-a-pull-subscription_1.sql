@@ -11,9 +11,9 @@ DECLARE @publisher AS sysname;
 DECLARE @publicationDB     AS sysname;
 SET @publication = N'AdvWorksProductTran';
 SET @publisher = $(PubServer);
-SET @publicationDB = N'AdventureWorks2012';
+SET @publicationDB = N'AdventureWorks2022';
 
-USE [AdventureWorks2012Replica]
+USE [AdventureWorks2022Replica]
 EXEC sp_droppullsubscription 
   @publisher = @publisher, 
   @publisher_db = @publicationDB, 

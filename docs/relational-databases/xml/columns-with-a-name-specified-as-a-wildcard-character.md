@@ -18,7 +18,7 @@ helpviewer_keywords:
 If the column name specified is a wildcard character (\*), the content of that column is inserted as if there's no column name specified. If this column is a non-**xml** type column, the column content is inserted as a text node, as shown in the following example:
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT E.BusinessEntityID "@EmpID",
        FirstName "*",

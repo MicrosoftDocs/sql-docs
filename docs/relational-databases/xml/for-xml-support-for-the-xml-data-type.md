@@ -21,7 +21,7 @@ If a FOR XML query specifies a column of **xml** type in the SELECT clause, colu
 For example, the following query retrieves customer contact information such as the `BusinessEntityID`, `FirstName`, and `LastName` columns, and the telephone numbers from the `AdditionalContactInfo` column of **xml** type.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT BusinessEntityID, FirstName, LastName, AdditionalContactInfo.query('
 declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";
@@ -125,7 +125,7 @@ FOR XML queries can be used for returning XML from a user-defined function that 
 For example, the following user-defined function returns a table with a single column of **xm**l type:
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 CREATE FUNCTION dbo.MyUDF (@ProudctModelID int)
 RETURNS @T TABLE

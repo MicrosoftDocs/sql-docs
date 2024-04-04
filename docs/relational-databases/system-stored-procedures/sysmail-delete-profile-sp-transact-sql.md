@@ -35,17 +35,17 @@ sysmail_delete_profile_sp { [ @profile_id = ] profile_id | [ @profile_name = ] '
 
 #### [ @profile_id = ] *profile_id*
 
-The profile ID of the profile to be deleted. *@profile_id* is **int**, with a default of NULL. Either *@profile_id* or *@profile_name* must be specified.
+The profile ID of the profile to be deleted. *@profile_id* is **int**, with a default of `NULL`. Either *@profile_id* or *@profile_name* must be specified.
 
 #### [ @profile_name = ] '*profile_name*'
 
-The name of the profile to be deleted. *@profile_name* is **sysname**, with a default of NULL. Either *@profile_id* or *@profile_name* must be specified.
+The name of the profile to be deleted. *@profile_name* is **sysname**, with a default of `NULL`. Either *@profile_id* or *@profile_name* must be specified.
 
 ## Return code values
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -70,8 +70,8 @@ EXEC msdb.dbo.sysmail_delete_profile_sp
     @profile_name = 'AdventureWorks Administrator';
 ```
 
-## See also
+## Related content
 
-- [Database Mail](../../relational-databases/database-mail/database-mail.md)
-- [Database Mail Configuration Objects](../../relational-databases/database-mail/database-mail-configuration-objects.md)
+- [Database Mail](../database-mail/database-mail.md)
+- [Database Mail Configuration Objects](../database-mail/database-mail-configuration-objects.md)
 - [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)

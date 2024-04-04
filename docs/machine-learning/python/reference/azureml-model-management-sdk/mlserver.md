@@ -7,7 +7,7 @@ ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: "machine-learning-services"
 ms.topic: "reference"
-ms.devlang: Python
+ms.devlang: python
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---
 # Class MLServer
@@ -29,7 +29,7 @@ This module provides a service implementation for the ML Server.
 authentication(context)
 ```
 
-
+[!INCLUDE [entra-id](../../../../includes/entra-id-hard-coded.md)]
 
 
 **Override**
@@ -51,8 +51,7 @@ ML Server supports two forms of authentication contexts:
 
 ### context
 
-The authentication context: LDAP, Azure Active Directory
-(AAD), or existing *access-token* string.
+The authentication context: LDAP, Azure Active Directory (AAD), or existing *access-token* string. 
 
 
 ### HttpException

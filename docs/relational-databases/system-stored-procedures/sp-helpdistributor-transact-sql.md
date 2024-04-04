@@ -83,11 +83,11 @@ The name of the distribution cleanup agent. *@distrib_cleanupagent* is **nvarcha
 
 #### [ @publisher = ] '*publisher*'
 
-The name of the Publisher. *@publisher* is **sysname**, with a default of NULL.
+The name of the Publisher. *@publisher* is **sysname**, with a default of `NULL`.
 
 #### [ @local = ] '*local*'
 
-Whether [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] should get local server values. *@local* is **nvarchar(5)**, with a default of NULL.
+Whether [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] should get local server values. *@local* is **nvarchar(5)**, with a default of `NULL`.
 
 #### [ @rpcsrvname = ] '*rpcsrvname*' OUTPUT
 
@@ -97,7 +97,7 @@ The name of the server that issues remote procedure calls. *@rpcsrvname* is **sy
 
 The publisher type of the Publisher. *@publisher_type* is **sysname**, with a default of `%`, which is the only value that returns a result set.
 
-## Result sets
+## Result set
 
 | Column name | Data type | Description |
 | --- | --- | --- |
@@ -151,8 +151,8 @@ The following result set columns are returned to all users.
 | `rpc server name` | *@rpcsrvname* |
 | `publisher type` | *@publisher_type* |
 
-## See also
+## Related content
 
-- [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)
+- [View and Modify Distributor and Publisher Properties](../replication/view-and-modify-distributor-and-publisher-properties.md)
 - [sp_adddistpublisher (Transact-SQL)](sp-adddistpublisher-transact-sql.md)
 - [sp_dropdistpublisher (Transact-SQL)](sp-dropdistpublisher-transact-sql.md)

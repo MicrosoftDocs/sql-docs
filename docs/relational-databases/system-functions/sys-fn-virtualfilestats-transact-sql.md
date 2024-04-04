@@ -79,7 +79,7 @@ GO
   
 ```sql  
 SELECT *  
-FROM fn_virtualfilestats(DB_ID(N'AdventureWorks2012'), 2);  
+FROM fn_virtualfilestats(DB_ID(N'AdventureWorks2022'), 2);  
 GO  
 ```  
   

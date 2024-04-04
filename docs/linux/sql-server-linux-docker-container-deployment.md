@@ -4,11 +4,13 @@ description: Explore how SQL Server can be deployed on Linux containers and lear
 author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: vanto, randolphwest
-ms.date: 07/11/2023
+ms.date: 01/10/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: intro-deployment
+ms.custom:
+  - intro-deployment
+  - linux-related-content
 zone_pivot_groups: cs1-command-shell
 monikerRange: ">=sql-server-linux-2017||>=sql-server-2017"
 ---
@@ -251,7 +253,7 @@ Packages
 
 There are scenarios where you might not want to use the latest SQL Server container image. To run a specific SQL Server container image, use the following steps:
 
-1. Identify the Docker `tag` for the release you want to use. To view the available tags, see [the mssql-server-linux Docker hub page](https://hub.docker.com/_/microsoft-mssql-server).
+1. Identify the Docker `tag` for the release you want to use. To view the available tags, see the [Microsoft Artifact Registry](https://mcr.microsoft.com/product/mssql/server/tags).
 
 1. Pull the SQL Server container image with the tag. For example, to pull the `2019-CU18-ubuntu-20.04` image, replace `<image_tag>` in the following command with `2019-CU18-ubuntu-20.04`.
 
@@ -327,20 +329,20 @@ docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU18-rhel-8.4
 
 ## <a id="production"></a> Run production container images
 
-The [quickstart](quickstart-install-connect-docker.md) in the previous section runs the free Developer edition of SQL Server from Docker Hub. Most of the information still applies if you want to run production container images, such as Enterprise, Standard, or Web editions. However, there are a few differences that are outlined here.
+The [quickstart](quickstart-install-connect-docker.md) in the previous section runs the free Developer edition of SQL Server from the Microsoft Artifact Registry. Most of the information still applies if you want to run production container images, such as Enterprise, Standard, or Web editions. However, there are a few differences that are outlined here.
 
 - You can only use SQL Server in a production environment if you have a valid license. You can obtain a free SQL Server Express production license [here](https://go.microsoft.com/fwlink/?linkid=857693). SQL Server Standard and Enterprise edition licenses are available through [Microsoft Volume Licensing](https://www.microsoft.com/licensing/default.aspx).
 
 - The Developer container image can be configured to run the production editions as well.
 
-To run a production edition, review the requirements and run procedures in the [quickstart](quickstart-install-connect-docker.md). You must specify your production edition with the `MSSQL_PID` environment variable. The following example shows how to run the latest [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] container image for the Enterprise edition.
+To run a production edition, review the requirements and run procedures in the [quickstart](quickstart-install-connect-docker.md). You must specify your production edition with the `MSSQL_PID` environment variable. The following example shows how to run the latest [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] container image for the Enterprise Core edition.
 
 ::: zone pivot="cs1-bash"
 
 ```bash
 docker run --name sqlenterprise \
 -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
--e 'MSSQL_PID=Enterprise' -p 1433:1433 \
+-e 'MSSQL_PID=EnterpriseCore' -p 1433:1433 \
 -d mcr.microsoft.com/mssql/server:2022-latest
 ```
 
@@ -351,7 +353,7 @@ docker run --name sqlenterprise \
 ```PowerShell
 docker run --name sqlenterprise `
 -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
--e "MSSQL_PID=Enterprise" -p 1433:1433 `
+-e "MSSQL_PID=EnterpriseCore" -p 1433:1433 `
 -d "mcr.microsoft.com/mssql/server:2022-latest"
 ```
 
@@ -362,7 +364,7 @@ docker run --name sqlenterprise `
 ```cmd
 docker run --name sqlenterprise ^
 -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" ^
--e "MSSQL_PID=Enterprise" -p 1433:1433 ^
+-e "MSSQL_PID=EnterpriseCore" -p 1433:1433 ^
 -d "mcr.microsoft.com/mssql/server:2022-latest"
 ```
 
@@ -533,7 +535,7 @@ This updates the SQL Server image for any new containers you create, but it does
 
 1. Optionally, remove the old container with `docker rm`.
 
-## Next steps
+## Related content
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

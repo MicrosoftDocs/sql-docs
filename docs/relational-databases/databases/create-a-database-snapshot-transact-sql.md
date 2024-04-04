@@ -4,7 +4,7 @@ description: "Find out how to create a SQL Server database snapshot by using Tra
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 05/04/2023
+ms.date: 10/02/2023
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -15,13 +15,13 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-The only way to create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database snapshot is to use [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] doesn't support the creation of database snapshots.
+The only way to create a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] database snapshot is to use [!INCLUDE [tsql](../../includes/tsql-md.md)]. [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] doesn't support the creation of database snapshots.
 
 ## Prerequisites
 
 The source database, which can use any recovery model, must meet the following prerequisites:
 
-- The server instance must be running an edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that supports database snapshot. For information about support for database snapshots in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
+- The server instance must be running an edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] that supports database snapshot. For information about support for database snapshots in [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
 
 - The source database must be online, unless the database is a mirror database within a database mirroring session.
 
@@ -29,7 +29,7 @@ The source database, which can use any recovery model, must meet the following p
 
 - The source database can't be configured as a scalable shared database.
 
-- The source database must not contain a MEMORY_OPTIMIZED_DATA filegroup.
+- Prior to [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], the source database couldn't contain a `MEMORY_OPTIMIZED_DATA` filegroup. Support for in-memory database snapshots was added in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)].
 
 > [!IMPORTANT]  
 > For information about other significant considerations, see [Database Snapshots (SQL Server)](database-snapshots-sql-server.md).
@@ -44,7 +44,7 @@ This section discusses the following best practices:
 
 #### <a id="naming"></a> Best practice: naming database snapshots
 
-Before creating snapshots, it is important to consider how to name them. Each database snapshot requires a unique database name. For administrative ease, the name of a snapshot can incorporate information that identifies the database, such as:
+Before creating snapshots, it's important to consider how to name them. Each database snapshot requires a unique database name. For administrative ease, the name of a snapshot can incorporate information that identifies the database, such as:
 
 - The name of the source database.
 
@@ -52,7 +52,7 @@ Before creating snapshots, it is important to consider how to name them. Each da
 
 - The creation date and time of the snapshot, a sequence number, or some other information, such as time of day, to distinguish sequential snapshots on a given database.
 
-For example, consider a series of snapshots for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. Three daily snapshots are created at 6-hour intervals between 6 A.M. and 6 P.M., based on a 24-hour clock. Each daily snapshot is kept for 24 hours before being dropped and replaced by a new snapshot of the same name. Each snapshot name indicates the hour, but not the day:
+For example, consider a series of snapshots for the [!INCLUDE [ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. Three daily snapshots are created at 6-hour intervals between 6 A.M. and 6 P.M., based on a 24-hour clock. Each daily snapshot is kept for 24 hours before being dropped and replaced by a new snapshot of the same name. Each snapshot name indicates the hour, but not the day:
 
 ```output
 AdventureWorks_snapshot_0600
@@ -70,14 +70,14 @@ AdventureWorks_snapshot_evening
 
 #### <a id="limiting-number"></a> Best practice: limiting the number of database snapshots
 
-Creating a series of snapshots over time captures sequential snapshots of the source database. Each snapshot persists until it is explicitly dropped. Because each snapshot will continue to grow as original pages are updated, you may want to conserve disk space by deleting an older snapshot after creating a new snapshot.
+Creating a series of snapshots over time captures sequential snapshots of the source database. Each snapshot persists until it's explicitly dropped. Because each snapshot will continue to grow as original pages are updated, you may want to conserve disk space by deleting an older snapshot after creating a new snapshot.
 
 > [!NOTE]  
 > To revert to a database snapshot, you need to delete any other snapshots from that database.
 
 #### <a id="client-connections"></a> Best practice: client connections to a database snapshot
 
-To use a database snapshot, clients need to know where to find it. Users can read from one database snapshot while another is being created or deleted. However, when you substitute a new snapshot for an existing one, you need to redirect clients to the new snapshot. Users can manually connect to a database snapshot with [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or Azure Data Studio. However, to support a production environment, you should create a programmatic solution that transparently directs report-writing clients to the latest database snapshot of the database.
+To use a database snapshot, clients need to know where to find it. Users can read from one database snapshot while another is being created or deleted. However, when you substitute a new snapshot for an existing one, you need to redirect clients to the new snapshot. Users can manually connect to a database snapshot with [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or Azure Data Studio. However, to support a production environment, you should create a programmatic solution that transparently directs report-writing clients to the latest database snapshot of the database.
 
 ## Permissions
 
@@ -87,7 +87,7 @@ Any user who can create a database can create a database snapshot; however, to c
 
 1. Based on the current size of the source database, ensure that you have sufficient disk space to hold the database snapshot. The maximum size of a database snapshot is the size of the source database at snapshot creation. For more information, see [View the Size of the Sparse File of a Database Snapshot (Transact-SQL)](view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).
 
-1. Issue a CREATE DATABASE statement on the files using the AS SNAPSHOT OF clause. Creating a snapshot requires specifying the logical name of every database file of the source database. The syntax is as follows:
+1. Issue a `CREATE DATABASE` statement on the files using the `AS SNAPSHOT OF` clause. Creating a snapshot requires specifying the logical name of every database file of the source database. The syntax is as follows:
 
    ```syntaxsql
    CREATE DATABASE database_snapshot_name
@@ -96,7 +96,7 @@ Any user who can create a database can create a database snapshot; however, to c
        NAME = logical_file_name
        , FILENAME = 'os_file_name'
    ) [ , ...n ]
-  
+
    AS SNAPSHOT OF source_database_name
    [;]
    ```
@@ -105,21 +105,21 @@ Any user who can create a database can create a database snapshot; however, to c
 
    | Argument | Description |
    | --- | --- |
-   | *database_snapshot_name* | The name of the snapshot to which you want to revert the database. |
-   | *logical_file_name* | The logical name of the source database used in SQL Server when referencing the file. |
-   | '*os_file_name*' | The path and file name used by the operating system when you create the file. |
-   | *source_database_name* | The source database. |
+   | `database_snapshot_name` | The name of the snapshot to which you want to revert the database. |
+   | `logical_file_name` | The logical name the source database uses in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] when referencing the file. |
+   | `os_file_name` | The path and file name used by the operating system when you create the file. |
+   | `source_database_name` | The source database. |
 
-   For a full description of this syntax, see [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md).
+   For a full description of this syntax, see [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md#as-snapshot-of-source_database_name).
 
    > [!NOTE]  
-   >  When you create a database snapshot, log files, offline files, restoring files, and defunct files are not allowed in the `CREATE DATABASE` statement.
+   > When you create a database snapshot, log files, offline files, restoring files, and defunct files aren't allowed in the `CREATE DATABASE` statement.
 
 ## Examples
 
-The `.ss` extension used in these examples is for convenience, and is not required.
+The `.ss` extension used in these examples is for convenience, and isn't required. In databases containing multiple files, all files must be specified, in conformance with the syntax. Filegroups aren't specified.
 
-#### A. Create a snapshot on the `AdventureWorks` database
+#### A. Create a snapshot on the AdventureWorks database
 
 This example creates a database snapshot on the `AdventureWorks` database. The snapshot name, `AdventureWorks_dbss_1800`, and the file name of its sparse file, `AdventureWorks_data_1800.ss`, indicate the creation time of 6 P.M. (1800 hours).
 
@@ -131,7 +131,7 @@ CREATE DATABASE AdventureWorks_dbss1800 ON (
 GO
 ```
 
-#### B. Create a snapshot on the `Sales` database
+#### B. Create a snapshot on the Sales database
 
 This example creates a database snapshot, `sales_snapshot1200`, on the `Sales` database, which is the same example database from [Create a database that has filegroups](../../t-sql/statements/create-database-transact-sql.md#d-create-a-database-that-has-filegroups) in [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md).
 
@@ -164,13 +164,10 @@ CREATE DATABASE sales_snapshot1200 ON (
 GO
 ```
 
-## See also
+## Related content
 
-- [CREATE DATABASE (Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md)
-- [Database Snapshots (SQL Server)](database-snapshots-sql-server.md)
-
-## Next steps
-
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
+- [Database snapshots (SQL Server)](database-snapshots-sql-server.md)
 - [View a Database Snapshot (SQL Server)](view-a-database-snapshot-sql-server.md)
 - [Revert a Database to a Database Snapshot](revert-a-database-to-a-database-snapshot.md)
 - [Drop a Database Snapshot (Transact-SQL)](drop-a-database-snapshot-transact-sql.md)

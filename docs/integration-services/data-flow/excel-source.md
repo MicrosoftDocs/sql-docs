@@ -6,7 +6,7 @@ ms.author: chugu
 ms.date: "05/15/2018"
 ms.service: sql
 ms.subservice: integration-services
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
   - "sql13.dts.designer.excelsource.f1"
   - "sql13.dts.designer.excelsourceadapter.connection.f1"

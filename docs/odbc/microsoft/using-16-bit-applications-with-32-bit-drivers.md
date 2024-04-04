@@ -6,7 +6,7 @@ ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "ODBC drivers [ODBC], 16-bit applications"
   - "16-bit applications with 32-bit drivers [ODBC]"
@@ -26,7 +26,7 @@ helpviewer_keywords:
 >  Anytime a 16-bit application interacts with a 32-bit driver, the 32-bit Driver Manager always returns "2.0" as the version of ODBC supported by the driver.  
   
 ## Administration  
- You can manage data sources for 32-bit drivers by using the ODBC Data Source Administrator. To open the ODBC Administrator on computers running Microsoft® Windows® 2000, open the Windows Control Panel, double-click **Administrative Tools**, and then double-click **Data Sources (ODBC)**. On computers running previous versions of Microsoft Windows, the icon is named **32-bit ODBC** or simply **ODBC**.  
+ You can manage data sources for 32-bit drivers by using the ODBC Data Source Administrator. To open the ODBC Administrator on computers running Microsoft Windows 2000, open the Windows Control Panel, double-click **Administrative Tools**, and then double-click **Data Sources (ODBC)**. On computers running previous versions of Microsoft Windows, the icon is named **32-bit ODBC** or simply **ODBC**.  
   
  The following illustration shows how a 16-bit application calls a 32-bit driver setup DLL. Between the 16-bit installer DLL and the 32-bit driver setup DLL is a generic thunking DLL that converts 16-bit installer DLL calls to 32-bit installer DLL calls.  
   

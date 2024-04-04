@@ -8,7 +8,7 @@ ms.reviewer: hudequei
 ms.date: 06/19/2023
 ms.service: sql
 ms.subservice: big-data-cluster
-ms.topic: conceptual
+ms.topic: release-notes
 ---
 
 # SQL Server 2019 Big Data Clusters CU20 release notes
@@ -41,7 +41,7 @@ Reference Architecture White Papers for [!INCLUDE[big-data-clusters-nover](../in
 ## System environment
 
 * __Operating System__: Ubuntu 20.04.5 LTS
-* __SQL Server__:     15.0.4312.1
+* __SQL Server__:     15.0.4312.2
     * __Java__: Azul Zulu JRE 11.0.9.1
     * __Python__: 3.7.2 (miniconda 4.5.12)
     * __R__: Microsoft R 3.5.2
@@ -210,7 +210,7 @@ Reference Architecture White Papers for [!INCLUDE[big-data-clusters-nover](../in
 
 ## Runtime for Apache Spark release 2022.1 (BDC.3.2022.1) - Installed R libraries
 
-_Packages from [CRAN Snapshot 2021-09-21](https://cran.microsoft.com/snapshot/2021-09-21)_
+_[Packages from the CRAN Archive](https://cran.r-project.org/web/packages/available_packages_by_date.html)_
 
 The following table lists packages available in this release.
 

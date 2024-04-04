@@ -44,7 +44,7 @@ Type of job to add. *@job_type* is **nvarchar(20)** with a default of `capture`.
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -58,7 +58,7 @@ Requires membership in the **db_owner** fixed database role.
 
 ## Examples
 
-The following example stops the capture job for the `AdventureWorks2022` database.
+The following example stops the capture job for the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
 USE AdventureWorks2022;
@@ -69,7 +69,7 @@ EXEC sys.sp_cdc_stop_job
 GO
 ```
 
-## See also
+## Related content
 
 - [dbo.cdc_jobs (Transact-SQL)](../system-tables/dbo-cdc-jobs-transact-sql.md)
 - [sys.sp_cdc_start_job (Transact-SQL)](sys-sp-cdc-start-job-transact-sql.md)

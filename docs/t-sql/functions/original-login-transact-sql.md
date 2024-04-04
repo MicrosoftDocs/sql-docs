@@ -48,7 +48,7 @@ ORIGINAL_LOGIN( )
   > Although the ORIGINAL_LOGIN function is supported on Azure SQL Database, the following script will fail because *Execute as LOGIN* is not supported on Azure SQL Database. 
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 --Create a temporary login and user.  
 CREATE LOGIN login1 WITH PASSWORD = 'J345#$)thb';  

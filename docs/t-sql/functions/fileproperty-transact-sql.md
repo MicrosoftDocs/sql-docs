@@ -59,7 +59,7 @@ FILEPROPERTY ( file_name , property )
  The following example returns the setting for the `IsPrimaryFile` property for the `AdventureWorks_Data` file name in [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] the database.  
   
 ```sql
-SELECT FILEPROPERTY('AdventureWorks2012_Data', 'IsPrimaryFile')AS [Primary File];  
+SELECT FILEPROPERTY('AdventureWorks2022_Data', 'IsPrimaryFile')AS [Primary File];  
 GO  
 ```  
   

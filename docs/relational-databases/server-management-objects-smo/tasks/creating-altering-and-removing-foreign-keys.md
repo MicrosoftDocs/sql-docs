@@ -29,9 +29,9 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 'Connect to the local, default instance of SQL Server.
 Dim srv As Server
 srv = New Server
-'Reference the AdventureWorks2012 database.
+'Reference the AdventureWorks2022 database.
 Dim db As Database
-db = srv.Databases("AdventureWorks2012")
+db = srv.Databases("AdventureWorks2022")
 'Declare a Table object variable and reference the Employee table.
 Dim tbe As Table
 tbe = db.Tables("Employee", "HumanResources")
@@ -60,9 +60,9 @@ fk.Create()
             //Connect to the local, default instance of SQL Server.   
             Server srv;  
             srv = new Server();  
-            //Reference the AdventureWorks2012 database.   
+            //Reference the AdventureWorks2022 database.   
             Database db;  
-            db = srv.Databases["AdventureWorks2012"];  
+            db = srv.Databases["AdventureWorks2022"];  
             //Declare another Table object variable and reference the EmployeeDepartmentHistory table.   
             Table tbea;  
             tbea = db.Tables["EmployeeDepartmentHistory", "HumanResources"];  
@@ -86,8 +86,8 @@ fk.Create()
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server and to the  
-#database tables in Adventureworks2012  
-CD \sql\localhost\default\databases\AdventureWorks2012\Tables\  
+#database tables in AdventureWorks2022  
+CD \sql\localhost\default\databases\AdventureWorks2022\Tables\  
   
 #Get reference to the FK table  
 $tbea = get-item HumanResources.EmployeeDepartmentHistory  

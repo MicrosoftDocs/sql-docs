@@ -45,7 +45,7 @@ helpviewer_keywords:
  Expressions can also be used to update the values of properties of packages, containers such as the For Loop and Foreach Loop, tasks, package and project level connection managers, log providers, and Foreach enumerators. For example, using a property expression, the string "Localhost.AdventureWorks" can be assigned to the ConnectionName property of the Execute SQL task. For more information, see [Use Property Expressions in Packages](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
 ## Icon Markers for Expressions  
- In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], a special icon marker displays next to connection managers, variables, and tasks that have expressions set on them. The **HasExpressions** property is available on all SSIS objects that support expresions, with the exception of variables. The property enables you to easily identy which objects have expressions.  
+ In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], a special icon marker displays next to connection managers, variables, and tasks that have expressions set on them. The **HasExpressions** property is available on all SSIS objects that support expressions, with the exception of variables. The property enables you to easily identify which objects have expressions.  
   
 ## Expression Builder  
  The expression builder is a graphical tool for building expressions. It is available in the **Conditional Split Transformation Editor**, **Derived Column Transformation Editor** dialog boxes, and in the **Expression Builder** dialog box, is a graphical tool for building expressions.  
@@ -61,7 +61,7 @@ helpviewer_keywords:
  [Use an Expression in a Data Flow Component](/previous-versions/sql/sql-server-2016/ms141007(v=sql.130))  
   
 ## Related Content  
- Technical article, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
+- [SSIS Expression Examples](../../integration-services/expressions/use-property-expressions-in-packages.md)
   
 ## See Also  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  

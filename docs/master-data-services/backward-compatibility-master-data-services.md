@@ -7,6 +7,7 @@ ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: conceptual
+monikerRange: ">=sql-server-ver16"
 ---
 # Backward Compatibility (Master Data Services)
 
@@ -16,8 +17,8 @@ ms.topic: conceptual
   
 ## In This Section  
   
--   [Deprecated Master Data Services Features](../master-data-services/deprecated-master-data-services-features.md)  
+-   [Deprecated Features of Master Data Services](../master-data-services/deprecated-master-data-services-features.md)  
   
--   [Discontinued Master Data Services Features](../master-data-services/discontinued-master-data-services-features.md)  
+-   [Discontinued Features of Master Data Services](../master-data-services/discontinued-master-data-services-features.md)  
   
   

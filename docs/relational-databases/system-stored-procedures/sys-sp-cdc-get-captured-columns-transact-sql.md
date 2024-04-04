@@ -48,7 +48,7 @@ To report on the capture instances for the table, run the [sys.sp_cdc_help_chang
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 | Column name | Data type | Description |
 | --- | --- | --- |
@@ -73,7 +73,7 @@ Use [sys.sp_cdc_get_ddl_history](sys-sp-cdc-get-ddl-history-transact-sql.md) to 
 
 ## Permissions
 
-Requires membership in the **db_owner** fixed database role. For all other users, requires SELECT permission on all captured columns in the source table and, if a gating role for the capture instance was defined, membership in that database role. When the caller doesn't have permission to view the source data, the function returns Error 22981 (`Object does not exist or access is denied.`).
+Requires membership in the **db_owner** fixed database role. For all other users, requires SELECT permission on all captured columns in the source table and, if a gating role for the capture instance was defined, membership in that database role. When the caller doesn't have permission to view the source data, the function returns Error 22981 (`Object doesn't exist or access is denied.`).
 
 ## Examples
 
@@ -88,6 +88,6 @@ EXECUTE sys.sp_cdc_get_captured_columns
 GO
 ```
 
-## See also
+## Related content
 
 - [sys.sp_cdc_help_change_data_capture (Transact-SQL)](sys-sp-cdc-help-change-data-capture-transact-sql.md)

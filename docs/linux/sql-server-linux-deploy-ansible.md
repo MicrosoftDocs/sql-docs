@@ -4,12 +4,13 @@ description: Learn how to deploy SQL Server on Linux to several managed nodes us
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh
-ms.date: 08/17/2022
+ms.date: 08/23/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: quickstart
+ms.custom:
+  - linux-related-content
 ---
-
 # Quickstart: Deploy SQL Server on Linux using an Ansible playbook
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -26,7 +27,7 @@ This quickstart takes you through the steps to automate a SQL Server on Linux de
 
 - Create a new [resource group](/cli/azure/manage-azure-groups-azure-cli#create-a-resource-group) using Azure CLI, which contains three Azure Virtual Machines (VMs):
 
-  - [Create an Azure VM](/azure/virtual-machines/linux/create-cli-complete), running Red Hat Enterprise Linux (RHEL) 8.5 or higher. This VM will become the *controller node*.
+  - [Create an Azure VM](/azure/virtual-machines/linux/create-cli-complete), running Red Hat Enterprise Linux (RHEL) 8.5 or higher. This VM becomes the *controller node*.
 
   - [Create an Azure VM](/azure/virtual-machines/linux/create-cli-complete), running RHEL, to serve as the first *managed node*.
 
@@ -36,11 +37,11 @@ This quickstart takes you through the steps to automate a SQL Server on Linux de
 
 The first VM, where you configure Ansible Core, is the controller node. On this node, you'll install the SQL Server *system role*.
 
-The remaining VMs will be the target machines, also known as *managed nodes*, for deploying and configuring SQL Server using the system role.
+The remaining VMs are the target machines, also known as *managed nodes*, for deploying and configuring SQL Server using the system role.
 
 ## Install Ansible Core
 
-Starting with RHEL 8.5 on Azure VMs, the `ansible-core` package can be installed from the pre-configured AppStream repository. You can install Ansible Core on the controller node using the following command:
+Starting with RHEL 8.x on Azure VMs, the `ansible-core` package can be installed from the pre-configured AppStream repository. You can install Ansible Core on the controller node using the following command:
 
 ```bash
 sudo yum install ansible-core
@@ -52,7 +53,7 @@ You can check that the installation was successful with the following command:
 ansible --version
 ```
 
-You will see output similar to the following example:
+You'll see output similar to the following example:
 
 ```output
 ansible [core 2.12.2]
@@ -95,7 +96,7 @@ You'll need to configure a Secure Shell (SSH) connection between the controller 
 
 If SSH has already been configured, you can skip this step.
 
-Use the `ssh-keygen` command to generate SSH keys. When you run the command, you'll be prompted to accept the default values. When complete, you'll have a private and public key pair.
+Use the `ssh-keygen` command to generate SSH keys. When you run the command, you are prompted to accept the default values. When complete, you'll have a private and public key pair.
 
 ### Copy the public key to the managed nodes
 
@@ -108,7 +109,7 @@ Use the `ssh-keygen` command to generate SSH keys. When you run the command, you
     sudo ssh-copy-id user@10.0.0.14
     ```
 
-1. To confirm that the SSH public key was copied to each node, use the `ssh` command from the controller node. If you copied the keys correctly, you won't be prompted for a password, and the connection will be successful.
+1. To confirm that the SSH public key was copied to each node, use the `ssh` command from the controller node. If you copied the keys correctly, you aren't prompted for a password, and the connection is successful.
 
     ```bash
     ssh user@10.0.0.12
@@ -164,7 +165,7 @@ To deploy SQL Server on managed nodes using the Ansible playbook, run the follow
 sudo ansible-playbook -u user playbook.yaml
 ```
 
-This process will begin the deployment, and at the end, you should see a summary of the play that looks similar to this:
+This process begins the deployment, and at the end, you should see a summary of the play that looks similar to this:
 
 ```output
 PLAY RECAP *******
@@ -178,12 +179,9 @@ PLAY RECAP *******
 
 If you're not going to continue using your Azure VMs, remember to remove them. If you created the three VMs in a new resource group, you can remove all the resources inside that resource group using [Azure CLI](/cli/azure/manage-azure-groups-azure-cli#clean-up-resources).
 
-## See also
+## Related content
 
 - [Quickstart: Deploy a SQL Server Linux container to Kubernetes using Helm charts](sql-server-linux-containers-deploy-helm-charts-kubernetes.md)
-
-## Next steps
-
 - [Introduction to adutil - Active Directory utility](sql-server-linux-ad-auth-adutil-introduction.md)
 - [Backup and restore SQL Server databases on Linux](sql-server-linux-backup-and-restore-database.md)
 - [How to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux](sql-server-linux-configure-msdtc.md)

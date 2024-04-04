@@ -20,7 +20,7 @@ This article lists files and registry keys installed or set when you enable serv
 | :----- | :----- |
 | `%ProgramFiles%\AzureConnectedMachineAgent\*` | `azcmagent` CLI and instance metadata service executables |
 | `%ProgramFiles%\AzureConnectedMachineAgent\GCArcService\GC\*` | Extension service executables |
-| `%ProgramData%\AzureConnectedMachineAgent\*` | Configuration, log and identity token files for azcmagent CLI and instance metadata service |
+| `%ProgramData%\AzureConnectedMachineAgent\*` | Configuration, log, and identity token files for `azcmagent` CLI and instance metadata service |
 | `%ProgramData%\Application Data\Microsoft\Crypto\RSA\MachineKeys` | Windows certificate private keys | 
 
 ## SQL Server files

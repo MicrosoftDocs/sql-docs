@@ -149,7 +149,7 @@ The recommended method is to use Azure role-based access control (RBAC) to assig
 #### Vault access policy
 
 > [!NOTE]
-> If you are using the **Azure role-based access control** option, you can skip this section. If you are changing the permission model, you can do so by going to the **Access configuration** menu of the Key vault. Make sure you have the correct permissions to manage the key vault. For more information, see [Enable Azure RBAC permissions on Key Vault](/azure/key-vault/general/rbac-guide#enable-azure-rbac-permissions-on-key-vault).
+> If you are using the **Azure role-based access control** option, you can skip this section. If you are changing the permission model, you can do so by going to the **Access configuration** menu of the key vault. Make sure you have the correct permissions to manage the key vault. For more information, see [Enable Azure RBAC permissions on Key Vault](/azure/key-vault/general/rbac-guide#enable-azure-rbac-permissions-on-key-vault).
 
 1. From the **Access configuration** tab, select **Vault access policy**. If you're using an existing Key vault, you can select the **Access policies** menu from the Key vault resource, and select **Create**.
 

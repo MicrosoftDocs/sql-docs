@@ -26,7 +26,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # SET DATEFIRST (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Sets the first day of the week to a number from 1 through 7. Like all [SET Statements](../../t-sql/statements/set-statements-transact-sql.md), SET DATEFIRST affects the current session.
+  Sets the first day of the week to a number from 1 through 7. 
   
  For an overview of all [!INCLUDE [tsql](../../includes/tsql-md.md)] date and time data types and functions, see [Date and Time Data Types and Functions (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
@@ -71,7 +71,9 @@ SET DATEFIRST 7 ;
  The setting of SET DATEFIRST is set at execute or run time and not at parse time.  
   
  Specifying SET DATEFIRST has no effect on DATEDIFF. DATEDIFF always uses Sunday as the first day of the week to ensure the function is deterministic.  
-  
+
+ Like all [SET Statements](../../t-sql/statements/set-statements-transact-sql.md), SET DATEFIRST affects the current session.  
+
 ## Permissions
 
  Requires membership in the **public** role.  

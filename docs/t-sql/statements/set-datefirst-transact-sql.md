@@ -62,7 +62,7 @@ SET DATEFIRST 7 ;
 | `4` |Thursday|  
 | `5` |Friday|  
 | `6` |Saturday|  
-| `7** (default, U.S. English)` |Sunday|  
+| `7` (default, U.S. English) |Sunday|  
   
 ## Remarks
 

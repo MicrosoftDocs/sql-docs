@@ -674,26 +674,59 @@ If the credential has a client secret that is about to expire, a new secret can 
 
 ## Rotate asymmetric key with a new AKV key or a new AKV key version
 
-SQL Server doesn't have a mechanism to automatically rotate the certificate or asymmetric key used for TDE. The steps to rotate an asymmetric key manually are as follows.
+SQL Server doesn't have a mechanism to automatically rotate the asymmetric key used for TDE. The steps to rotate an asymmetric key manually are as follows.
 
-1. Create NEW_ASYMMETRIC_KEY pointing to same AKV key (points to most recent valid key version) or a new AKV key.
-1. Create a new login from the new asymmetric key:
+1. Create a new credential for the new asymmetric key:
 
    ```sql
-   CREATE LOGIN TDE_LOGIN_NEW FROM ASYMMETRIC KEY NEW_ASYMMETRIC_KEY;
+   CREATE CREDENTIAL <new_credential_name>
+       WITH IDENTITY = <key vault>,
+       SECRET = 'existing/new secret'
+       FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM;
+   ```
+
+1. Add the credential to the principal:
+
+   ```sql
+   ALTER LOGIN [domain\username];
+   ADD CREDENTIAL <new_credential_name>;
+   ```
+
+1. Create the new asymmetric key based on the new key:
+
+   ```sql
+   CREATE ASYMMETRIC KEY <new_ekm_key_name>
+    FROM PROVIDER [AzureKeyVault_EKM]  
+    WITH PROVIDER_KEY_NAME = <new_key_from_keyvault>,  
+    CREATION_DISPOSITION = OPEN_EXISTING;
+   ```
+
+1. Create a new login from the new asymmetric key:
+   ```sql
+   CREATE LOGIN <new_login_name>
+   FROM ASYMMETRIC KEY <new_ekm_key_name>;
+   ```
+
+1. Drop the credential from the principal:
+
+   ```sql
+   ALTER LOGIN [domain\username]
+   DROP CREDENTIAL <new_credential_name>;
    ```
 
 1. Map AKV credential to the new login:
 
    ```sql
-   ALTER LOGIN TDE_LOGIN_NEW;
-   ADD CREDENTIAL AKV_Credential;
+   ALTER LOGIN <new_login_name>;
+   ADD CREDENTIAL <new_credential_name>;
    ```
 
 1. Alter the database encryption key (DEK) to re-encrypt with the new asymmetric key:
 
    ```sql
-   ALTER DATABASE ENCRYPTION KEY ENCRYPTION BY SERVER ASYMMETRIC KEY NEW_ASYMMETRIC_KEY;
+   USE [dbname];
+   GO
+   ALTER DATABASE ENCRYPTION KEY ENCRYPTION BY SERVER ASYMMETRIC KEY <new_ekm_key_name>;
    ```
 
 > [!NOTE]  

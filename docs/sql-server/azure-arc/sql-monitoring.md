@@ -21,24 +21,19 @@ During the feature preview, monitoring is available for free. Fees for this feat
 
 ## Prerequisites
 
-In order for monitoring data to be collected on a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)], the following conditions must be met:
+In order for monitoring data to be collected on a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] and view the performance metrics in Azure, the following conditions must be met:
 
 * The version of Azure Extension for SQL Server (WindowsAgent.SqlServer) is v1.1.2504.99 or later
 * [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is running on Windows operating system
    - [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] running on [!INCLUDE [winserver2012-md](../../includes/winserver2012-md.md)] and older versions aren't supported
 * [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is a Standard or Enterprise Edition
-* The server has connectivity to telemetry.{region}.arcdataservices.com (for more information, see [Network Requirements ](/azure/azure-arc/servers/network-requirements?tabs=azure-cloud))
+* SQL Server version must be 2016 or later
+* The server has connectivity to `*.<region>.arcdataservices.com` (for more information, see [Network Requirements ](/azure/azure-arc/servers/network-requirements?tabs=azure-cloud))
 * The license type on the [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is set to "License with Software Assurance" or "Pay-as-you-go"
+* To view the performance dashboard in the Azure portal, you must be assigned an Azure role with the action `Microsoft.AzureArcData/sqlServerInstances/getTelemetry/` assigned. For convenience, you can use the built-in role "Azure Hybrid Database Administrator - Read Only Service Role", which includes this action. (For more information, see [Learn more about Azure built-in roles](/azure/role-based-access-control/built-in-roles))
 
 ### Current Limitations
-* FCI clusters aren't supported at this time.
-* After adding or removing a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance on your Windows machine, you must restart the [!INCLUDE [msconame-md](../../includes/msconame-md.md)] [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] (sqlServerExtension) extension service for the update to take effect. This restart is only required to add/remove the instance from monitoring collection.
-
-* SQL Server version must be 2016 or later.
-
-* To view the performance dashboard in the Azure portal, you must be assigned an Azure role with the action `Microsoft.AzureArcData/sqlServerInstances/getTelemetry/` assigned. For convenience, you can use the built-in role "Azure Hybrid Database Administrator - Read Only Service Role", which includes this action. 
-
-  - [Learn more about Azure built-in roles](/azure/role-based-access-control/built-in-roles)
+* FCI clusters aren't supported at this time
     
 ## Collected data
 

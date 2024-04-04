@@ -99,6 +99,15 @@ Consider the following limitations:
 - While the instance is in a stopped state, it's not possible to take backups. For example, let's say that you have [long-term backups](long-term-backup-retention-configure.md) configured, with yearly backups in place. If you stop the instance during the defined yearly backup period, the backup is skipped. We recommend that you keep the instance up and running during the yearly backup period.
 - It's not possible to cancel the stop or start operation after it's been initiated.
 
+## Prerequisites
+
+To use the instance stop and start feature, your instance must meet the following prerequisites: 
+
+- Your instance has to be part of a subnet with the November 2022 feature wave enabled. 
+- Your instance has to be in the General Purpose service tier. 
+
+Instances that don't meet the prerequisites won't see the stop and start controls on the **Overview** page for the SQL managed instance resource. 
+
 ## Prepare command line environment
 
 Skip this step if you're using the Azure portal. 

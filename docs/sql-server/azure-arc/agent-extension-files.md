@@ -12,7 +12,7 @@ ms.topic: reference
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This article lists files and registry keys installed or set when you enable servers or SQL Server instances for Azure Arc. 
+This article lists the files and the registry keys created by the installation of Connected machine agent and Azure extension for SQL server.
 
 ## Windows server files
 

@@ -10377,6 +10377,8 @@ items:
           href: sql-server/azure-arc/sql-monitoring.md
         - name: Use activity logs
           href: sql-server/azure-arc/activity-logs.md
+        - name: Move resources
+          href: sql-server/azure-arc/move-resources.md
       - name: Business continuity
         items:
         - name: Automated backups to local storage (preview)

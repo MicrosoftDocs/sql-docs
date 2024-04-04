@@ -40,7 +40,7 @@ Base key: `HKEY_LOCAL_MACHINE`
 
 | Key | Description & notes |
 | :----- | :----- |
-| `SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRegistryName>\MSSQLSERVER` | Entra ID registry key |
+| `SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRegistryName>\MSSQLSERVER` | Microsoft Entra ID registry key |
 | `SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRegistryName>\PurviewConfig` | Purview registry key |
 | `SOFTWARE\Microsoft\SystemCertificates` | Windows certificate registry key |
 

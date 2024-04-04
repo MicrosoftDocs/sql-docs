@@ -23,7 +23,7 @@ In this article, you install and configure the [!INCLUDE[ssNoVersion](../../../i
 
 [!INCLUDE [entra-id](../../../includes/entra-id.md)]
 
-Extensible Key Management using Azure Key Vault is available for SQL Server on Linux environments, starting with [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] CU 12. Follow the same instructions, but skip steps 3 and 4.
+Extensible Key Management using Azure Key Vault is available for SQL Server on Linux environments, starting with [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] Cumulative Update 12. Follow the same instructions, but skip steps 3 and 4.
 
 ## Prerequisites
 
@@ -116,7 +116,7 @@ You can use the Azure portal to create the key vault and then add a Microsoft En
 
     :::image type="content" source="media/ekm/ekm-part2-create-key-vault.png" alt-text="Screenshot of the Create key vault pane in the Azure portal.":::
 
-1. On the **Access configuration** tab, you have the option of selecting **Azure role-based access control** or **Vault access policy**. We'll go over both options, but the **Azure role-based access control** option is recommended. For more information, see [Access model overview](/azure/key-vault/general/security-features#access-model-overview).
+1. On the **Access configuration** tab, you have the option of selecting **Azure role-based access control** or **Vault access policy**. We go over both options, but the **Azure role-based access control** option is recommended. For more information, see [Access model overview](/azure/key-vault/general/security-features#access-model-overview).
 
     :::image type="content" source="media/ekm/ekm-part2-access-configuration.png" alt-text="Screenshot of the Create key vault pane and Access configuration tab in the Azure portal.":::
 
@@ -124,9 +124,9 @@ You can use the Azure portal to create the key vault and then add a Microsoft En
 
 #### Azure role-based access control
 
-The recommended method is to use Azure role-based access control (RBAC) to assign permissions to the key vault. This method allows you to assign permissions to users, groups, and applications at a more granular level. You can assign permissions to the key vault at the management plane (Azure role assignments), and at the data plane (key vault access policies). If you are only able to use access policy, you can skip this section and go to the [Vault access policy](#vault-access-policy) section.
+The recommended method is to use Azure role-based access control (RBAC) to assign permissions to the key vault. This method allows you to assign permissions to users, groups, and applications at a more granular level. You can assign permissions to the key vault at the management plane (Azure role assignments), and at the data plane (key vault access policies). If you're only able to use access policy, you can skip this section and go to the [Vault access policy](#vault-access-policy) section.
 
-1. Go to the key vault resource that you just created, and select the **Access control (IAM)** setting.
+1. Go to the key vault resource that you created, and select the **Access control (IAM)** setting.
 
 1. Select **Add** > **Add role assignment**.
 
@@ -151,7 +151,7 @@ The recommended method is to use Azure role-based access control (RBAC) to assig
 > [!NOTE]
 > If you are using the **Azure role-based access control** option, you can skip this section. If you are changing the permission model, you can do so by going to the **Access configuration** menu of the Key vault. Make sure you have the correct permissions to manage the key vault. For more information, see [Enable Azure RBAC permissions on Key Vault](/azure/key-vault/general/rbac-guide#enable-azure-rbac-permissions-on-key-vault).
 
-1. From the **Access configuration** tab, select **Vault access policy**. If you are using an existing Key vault, you can select the **Access policies** menu from the Key vault resource, and select **Create**.
+1. From the **Access configuration** tab, select **Vault access policy**. If you're using an existing Key vault, you can select the **Access policies** menu from the Key vault resource, and select **Create**.
 
 1. On the **Create an access policy** pane, select *Get* and *List* permissions from the **Key Management Operations** options. Select *Unwrap Key* and *Wrap Key* permissions from the **Cryptographic Operations** options. Select **Next**
 
@@ -299,16 +299,16 @@ The key vault and key that you create here are used by the [!INCLUDE [ssdenovers
 To ensure quick key recovery and be able to access your data outside of Azure, we recommend the following best practices:
 
 - Create your encryption key locally on a local hardware security module (HSM) device. Be sure to use an asymmetric RSA 2048 or 3072 key so that it's supported by SQL Server.
-- Import the encryption key to your Azure key vault. This process is described in the next sections.
-- Before you use the key in your Azure key vault for the first time, do an Azure key vault key backup using the `Backup-AzureKeyVaultKey` PowerShell cmdlet.
-- Whenever you make any changes to the key (for example, adding ACLs, tags, or key attributes), be sure to do another Azure key vault key backup.
+- Import the encryption key to your Azure Key Vault. This process is described in the next sections.
+- Before you use the key in your Azure Key Vault for the first time, do an Azure Key Vault key backup using the `Backup-AzureKeyVaultKey` PowerShell cmdlet.
+- Whenever you make any changes to the key (for example, adding ACLs, tags, or key attributes), be sure to do another Azure Key Vault key backup.
 
   > [!NOTE]  
   > Backing up a key is an Azure Key Vault key operation which returns a file that can be saved anywhere.
 
 ### Types of keys
 
-You can generate four types of keys in an Azure key vault that will work with SQL Server. Asymmetric 2048-bit & 3072-bit RSA keys and  2048-bit & 3072-bit RSA-HSM keys.
+You can generate four types of keys in an Azure Key Vault that will work with SQL Server. Asymmetric 2048-bit & 3072-bit RSA keys and  2048-bit & 3072-bit RSA-HSM keys.
 
 - **Software-protected**: Processed in software and encrypted at rest. Operations on software-protected keys occur on Azure virtual machines. We recommend this type for keys that aren't used in a production deployment.
 
@@ -316,13 +316,13 @@ You can generate four types of keys in an Azure key vault that will work with SQ
 
   > [!IMPORTANT]  
   > For the SQL Server Connector, use only the characters a-z, A-Z, 0-9, and hyphens (-), with a 26-character limit.
-  > Different key versions under the same key name in an Azure key vault don't work with the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector. To rotate an Azure key vault key that's being used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see the Key Rollover steps in the "A. Maintenance Instructions for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector" section of [SQL Server Connector Maintenance & Troubleshooting](sql-server-connector-maintenance-troubleshooting.md).
+  > Different key versions under the same key name in an Azure Key Vault don't work with the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector. To rotate an Azure Key Vault key that's being used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see the Key Rollover steps in the "A. Maintenance Instructions for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector" section of [SQL Server Connector Maintenance & Troubleshooting](sql-server-connector-maintenance-troubleshooting.md).
   >
   > When rotating versions of the key, do not disable the version originally used to encrypt the database. SQL Server will be unable to recover the database (it will be in a 'recovery pending' state) and may generate a 'Crypto Exception' memory dump until the old version is enabled.
 
 ### Import an existing key
 
-If you have an existing 2048-bit RSA software-protected key, you can upload the key to your Azure key vault. For example, if you have a PFX file saved to your `C:\` drive in a file named `softkey.pfx` that you want to upload to the Azure key vault, run the following command to set the variable `securepfxpwd` for a password of `12987553` for the PFX file:
+If you have an existing 2048-bit RSA software-protected key, you can upload the key to your Azure Key Vault. For example, if you have a PFX file saved to your `C:\` drive in a file named `softkey.pfx` that you want to upload to the Azure Key Vault, run the following command to set the variable `securepfxpwd` for a password of `12987553` for the PFX file:
 
 ```powershell
 $securepfxpwd = ConvertTo-SecureString -String '12987553' `
@@ -342,7 +342,7 @@ Then you can run the following command to import the key from the PFX file, whic
 
 ### Create a new key
 
-Alternatively, you can create a new encryption key directly in your Azure key vault and make it either software-protected or HSM-protected. In this example, let's create a software-protected key by using the `Add-AzureKeyVaultKey` cmdlet:
+Alternatively, you can create a new encryption key directly in your Azure Key Vault and make it either software-protected or HSM-protected. In this example, let's create a software-protected key by using the `Add-AzureKeyVaultKey` cmdlet:
 
 ```powershell
 Add-AzureKeyVaultKey -VaultName 'DocsSampleEKMKeyVault' `
@@ -446,7 +446,7 @@ For a note about the minimum permission levels needed for each action in this se
 
 1. Register the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector as an EKM provider with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
-   Create a cryptographic provider by using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector, which is an EKM provider for the Azure key vault.
+   Create a cryptographic provider by using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector, which is an EKM provider for the Azure Key Vault.
    In this example, the provider name is `AzureKeyVault_EKM`.
 
    ```sql
@@ -470,8 +470,8 @@ For a note about the minimum permission levels needed for each action in this se
 
    Modify this [!INCLUDE[tsql](../../../includes/tsql-md.md)] script in the following ways:
 
-   - Edit the `IDENTITY` argument (`DocsSampleEKMKeyVault`) to point to your Azure key vault.
-     - If you're using *global Azure*, replace the `IDENTITY` argument with the name of your Azure key vault from [Step 2: Create a key vault](#step-2-create-a-key-vault).
+   - Edit the `IDENTITY` argument (`DocsSampleEKMKeyVault`) to point to your Azure Key Vault.
+     - If you're using *global Azure*, replace the `IDENTITY` argument with the name of your Azure Key Vault from [Step 2: Create a key vault](#step-2-create-a-key-vault).
      - If you're using a *private Azure cloud* (for example, Azure Government, Microsoft Azure operated by 21Vianet, or Azure Germany), replace the `IDENTITY` argument with the Vault URI that's returned in step 3 of the [Create a key vault and key by using PowerShell](#create-a-key-vault-and-key-by-using-powershell) section. Don't include `https://` in the key vault URI.
    - Replace the first part of the `SECRET` argument with the Microsoft Entra Client ID from [Step 1: Set up a Microsoft Entra service principal](#step-1-set-up-an-azure-ad-service-principal). In this example, the **Client ID** is `9A57CBC54C4C40E2B517EA677E0EFA00`.
 
@@ -498,7 +498,7 @@ For a note about the minimum permission levels needed for each action in this se
 
     For an example of using variables for the `CREATE CREDENTIAL` argument and programmatically removing the hyphens from the Client ID, see [CREATE CREDENTIAL (Transact-SQL)](../../../t-sql/statements/create-credential-transact-sql.md).
 
-1. Open your Azure key vault key in your SQL Server instance.
+1. Open your Azure Key Vault key in your SQL Server instance.
 
    Whether you created a new key or imported an asymmetric key, as described in [Step 2: Create a key vault](#step-2-create-a-key-vault), you need to open the key. Open it by providing your key name in the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] script.
 
@@ -506,7 +506,7 @@ For a note about the minimum permission levels needed for each action in this se
      > Be sure to first complete the Registry prerequisites for this step.
 
    - Replace `EKMSampleASYKey` with the name you'd like the key to have in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
-   - Replace `ContosoRSAKey0` with the name of your key in your Azure key vault.
+   - Replace `ContosoRSAKey0` with the name of your key in your Azure Key Vault.
 
    ```sql
    CREATE ASYMMETRIC KEY EKMSampleASYKey
@@ -515,7 +515,7 @@ For a note about the minimum permission levels needed for each action in this se
    CREATION_DISPOSITION = OPEN_EXISTING;
    ```
 
-   Beginning with updated version 1.0.5.0 of the SQL Server connector, you can refer to a specific key version in the Azure key vault:
+   Beginning with updated version 1.0.5.0 of the SQL Server connector, you can refer to a specific key version in the Azure Key Vault:
 
    ```sql
    CREATE ASYMMETRIC KEY EKMSampleASYKey
@@ -552,10 +552,10 @@ For a note about the minimum permission levels needed for each action in this se
 
 ### Configure the user database to be encrypted
 
-1. Create a test database that will be encrypted with the Azure key vault key.
+1. Create a test database that will be encrypted with the Azure Key Vault key.
 
    ```sql
-   --Create a test database that will be encrypted with the Azure key vault key
+   --Create a test database that will be encrypted with the Azure Key Vault key
    CREATE DATABASE TestTDE;
    ```
 

@@ -1989,6 +1989,12 @@
     href: https://social.msdn.microsoft.com/Forums/home
   - name: Stack Overflow
     href: https://stackoverflow.com/questions/tagged/azure-sql-database
+  - name: Microsoft Q&A
+    items: 
+    - name: Azure SQL Database
+      href: /answers/tags/51/azure-sql-database
+    - name: SQL Server on Azure VMs
+      href: /answers/tags/19/azure-sql-virtual-machines
   - name: What's New Archives
     items: 
     - name: Azure SQL Database

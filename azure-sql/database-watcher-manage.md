@@ -5,7 +5,7 @@ description: Setup and configuration details for database watcher
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 03/21/2024
+ms.date: 04/04/2024
 ms.service: sql-db-mi
 ms.subservice: monitoring
 ms.topic: how-to
@@ -275,7 +275,7 @@ USE master;
 
 CREATE LOGIN [watcher-name-placeholder] FROM EXTERNAL PROVIDER;
 
-GRANT CONNECT SQL, CONNECT ANY DATABASE, VIEW ANY DATABASE, VIEW ANY DEFINITION, VIEW SERVER STATE TO [watcher-name-placeholder];
+GRANT CONNECT SQL, CONNECT ANY DATABASE, VIEW ANY DATABASE, VIEW ANY DEFINITION, VIEW SERVER PERFORMANCE STATE TO [watcher-name-placeholder];
 
 USE msdb;
 
@@ -325,7 +325,7 @@ USE master;
 
 CREATE LOGIN [login-name-placeholder] WITH PASSWORD = 'password-placeholder';
 
-GRANT CONNECT SQL, CONNECT ANY DATABASE, VIEW ANY DATABASE, VIEW ANY DEFINITION, VIEW SERVER STATE TO [login-name-placeholder];
+GRANT CONNECT SQL, CONNECT ANY DATABASE, VIEW ANY DATABASE, VIEW ANY DEFINITION, VIEW SERVER PERFORMANCE STATE TO [login-name-placeholder];
 
 USE msdb;
 

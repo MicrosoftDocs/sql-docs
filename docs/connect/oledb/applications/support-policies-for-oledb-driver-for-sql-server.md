@@ -46,6 +46,7 @@ The following table lists which operating systems are supported by OLE DB Driver
 |19.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |19.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |19.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|18.7.2|Yes|Yes|Yes|   |   |Yes|Yes|   |
 |18.7|Yes|Yes|Yes|   |   |Yes|Yes|   |
 |18.6|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |18.5|   |Yes|Yes|Yes|Yes|   |Yes|Yes|

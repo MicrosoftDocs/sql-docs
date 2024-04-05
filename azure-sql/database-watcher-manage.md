@@ -5,7 +5,7 @@ description: Setup and configuration details for database watcher
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 04/04/2024
+ms.date: 04/05/2024
 ms.service: sql-db-mi
 ms.subservice: monitoring
 ms.topic: how-to

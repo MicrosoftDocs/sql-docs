@@ -5,7 +5,7 @@ description: Overview of private endpoint feature.
 author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, vanto, mathoma, randolphwest
-ms.date: 01/30/2024
+ms.date: 04/05/2024
 ms.service: sql-database
 ms.subservice: security
 ms.topic: overview
@@ -39,8 +39,11 @@ Once the network admin creates the Private Endpoint (PE), the SQL admin can mana
 
 1. Navigate to the server resource in the [Azure portal](https://portal.azure.com).
 
-1. Select **Networking** in the left pane.
-1. Select the **Private access** tab. The page shows the following:
+1. Navigate to the private endpoint approval page:
+    - In Azure SQL Database, under **Security** in the resource menu, select **Networking**. Select the **Private access** tab.
+    - In Synapse workspace, under **Security** in the resource menu, select **Private endpoint connections**.
+
+1. The page shows the following:
 
    - A list of all Private Endpoint Connections (PECs)
    - Private endpoints (PE) created
@@ -76,7 +79,7 @@ Once the network admin creates the Private Endpoint (PE), the SQL admin can mana
 
 ## Disable public access to your logical server
 
-For this scenario, assume you want to disable all public access to your logical server and allow connections only from your virtual network.
+In Azure SQL Database logical SQL server, assume you want to disable all public access to your logical server and allow connections only from your virtual network.
 
 First, ensure that your private endpoint connections are enabled and configured. Then, to disable public access to your logical server:
 
@@ -96,7 +99,7 @@ For this scenario, assume you've created an Azure Virtual Machine (VM) running a
    - Telnet
    - PsPing
    - Nmap
-   - SQL Server Management Studio (SSMS)
+   - [SQL Server Management Studio (SSMS)](https://aka.ms/ssms)
 
 ### Check connectivity using Telnet
 

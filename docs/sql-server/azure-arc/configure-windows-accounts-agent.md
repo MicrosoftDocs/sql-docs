@@ -8,13 +8,17 @@ ms.date: 03/28/2024
 ms.topic: reference
 ---
 
-# Configure Windows service accounts and permissions for Azure Extension for SQL Server
+# Configure Windows service accounts and permissions for Azure extension for SQL Server
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This article lists the permissions Azure Extension for SQL Server requires for SQL Server enabled by Azure Arc.
+This article lists the permissions Azure extension for SQL Server requires for SQL Server enabled by Azure Arc.
 
-These permissions are set automatically, when you configure least privilege. To configure least privilege, follow the steps in [Operate SQL Server enabled by Azure Arc with least privilege (preview)](configure-least-privilege.md).
+Azure extension for SQL Server sets permissions when you enable features on the Azure portal. These permissions are set automatically, when you configure least privilege. If you don't enable features, the extension does not set the permissions.
+
+[SQL permissions](#sql-permissions) lists the permissions tied to features that the extension grants when features are enabled.
+
+To configure least privilege, follow the steps in [Operate SQL Server enabled by Azure Arc with least privilege (preview)](configure-least-privilege.md).
 
 We don't recommend that you manually set the permissions described in this article.
 
@@ -37,10 +41,6 @@ We don't recommend that you manually set the permissions described in this artic
 
 <sup>1</sup> For more information, see [File Locations and Registry Mapping](../install/file-locations-for-default-and-named-instances-of-sql-server.md#file-locations-and-registry-mapping).
 
-## Account
-
-SQL Extension for Azure Arc creates the following user in each database: `NT Service\SqlServerExtension`.
-
 ## Registry permissions
 
 Base key: `HKEY_LOCAL_MACHINE`
@@ -61,58 +61,63 @@ Base key: `HKEY_LOCAL_MACHINE`
 
 ## SQL permissions
 
-`NT Service\SQLServerExtension` is added as a SQL login to all the instances present currently on machine.
+`NT Service\SQLServerExtension` is added:
 
-| Feature | Permission | Level |
-| --- | --- | --- |
-| **Default** | `VIEW DATABASE STATE` | Server level |
-| | `VIEW SERVER STATE` | Server level |
-| | `CONNECT SQL` | Server level |
-| **Database as a resource** | Default public role | Server level (This is granted by default to newly added logins) |
-| **Best practices assessment** | `VIEW ANY DEFINITION` | Server level |
-| | `VIEW ANY DATABASE` | Server level |
-| | `SELECT` | `master` |
-| | `SELECT` | `msdb` |
-| | `EXECUTE ON sys.xp_enumerrorlogs` | `master` |
-| | `EXECUTE ON sys.xp_readerrorlog` | `master` |
-| **Backup** | `CREATE ANY DATABASE` | Server level |
-| | **db_backupoperator** role | All databases |
-| | **dbcreator** | Server role |
-| **Azure Control Plane** | `CREATE TABLE` | `msdb` |
-| | `ALTER ANY SCHEMA` | `msdb` |
-| | `CREATE TYPE` | `msdb` |
-| | `EXECUTE` | `msdb` |
-| | **db_datawriter** role | `msdb` |
-| | **db_datareader** role | `msdb` |
-| **Availability group discovery** | `VIEW ANY DEFINITION` | Server level |
-| **Purview** | `SELECT` | All databases |
-| | `EXECUTE` | All databases |
-| | `CONNECT ANY DATABASE` | Server level |
-| | `VIEW ANY DATABASE` | Server level |
-| **Monitoring** | `SELECT dbo.sysjobactivity` | `msdb` |
-| | `SELECT dbo.sysjobs` | `msdb` |
-| | `SELECT dbo.syssessions` | `msdb` |
-| | `SELECT dbo.sysjobHistory` | `msdb` |
-| | `SELECT dbo.sysjobSteps` | `msdb` |
-| | `SELECT dbo.syscategories` | `msdb` |
-| | `SELECT dbo.sysoperators` | `msdb` |
-| | `SELECT dbo.suspectpages` | `msdb` |
-| | `SELECT dbo.backupset` | `msdb` |
-| | `SELECT dbo.backupmediaset` | `msdb` |
-| | `SELECT dbo.backupmediafamily` | `msdb` |
-| | `SELECT dbo.backupfile` | `msdb` |
-| | `CONNECT ANY DATABASE` | Server level |
-| | `VIEW ANY DATABASE` | Server level |
-| | `VIEW ANY DEFINITION` | Server level |
-| **Migration Assessment** | `EXECUTE dbo.agent_datetime` | `msdb` |
-| | `SELECT dbo.syscategories` | `msdb` |
-| | `SELECT dbo.sysjobHistory` | `msdb` |
-| | `SELECT dbo.sysjobs` | `msdb` |
-| | `SELECT dbo.sysjobSteps` | `msdb` |
-| | `SELECT dbo.sysmail_account` | `msdb` |
-| | `SELECT dbo.sysmail_profile` | `msdb` |
-| | `SELECT dbo.sysmail_profileaccount` | `msdb` |
-| | `SELECT dbo.syssubsystems` | `msdb` |
+- As a SQL login to all the instances present currently on machine
+- As a user in each database
+
+The extension also grants permissions to instance and database objects as features are enabled. The table below provides details.
+
+| Feature | Permission | Level | Requirement |
+| --- | --- | --- | --- |
+| **Default** | `VIEW DATABASE STATE` | Server level | Essential |
+| | `VIEW SERVER STATE` | Server level | Essential |
+| | `CONNECT SQL` | Server level | Essential |
+| **Database as a resource** | Default public role | Server level (This is granted by default to newly added logins) | Essential |
+| **Best practices assessment** | `VIEW ANY DEFINITION` | Server level | Feature dependent |
+| | `VIEW ANY DATABASE` | Server level | Feature dependent |
+| | `SELECT` | `master` | Feature dependent |
+| | `SELECT` | `msdb` | Feature dependent |
+| | `EXECUTE ON sys.xp_enumerrorlogs` | `master` | Feature dependent |
+| | `EXECUTE ON sys.xp_readerrorlog` | `master` | Feature dependent |
+| **Backup** | `CREATE ANY DATABASE` | Server level | Feature dependent |
+| | **db_backupoperator** role | All databases | Feature dependent |
+| | **dbcreator** | Server role | Feature dependent |
+| **Azure Control Plane** | `CREATE TABLE` | `msdb` | Feature dependent |
+| | `ALTER ANY SCHEMA` | `msdb` | Feature dependent |
+| | `CREATE TYPE` | `msdb` | Feature dependent |
+| | `EXECUTE` | `msdb` | Feature dependent |
+| | **db_datawriter** role | `msdb` | Feature dependent |
+| | **db_datareader** role | `msdb` | Feature dependent |
+| **Availability group discovery** | `VIEW ANY DEFINITION` | Server level | Feature dependent |
+| **Purview** | `SELECT` | All databases | Feature dependent |
+| | `EXECUTE` | All databases | Feature dependent |
+| | `CONNECT ANY DATABASE` | Server level | Feature dependent |
+| | `VIEW ANY DATABASE` | Server level | Feature dependent |
+| **Monitoring** | `SELECT dbo.sysjobactivity` | `msdb` | Feature dependent |
+| | `SELECT dbo.sysjobs` | `msdb` | Feature dependent |
+| | `SELECT dbo.syssessions` | `msdb` | Feature dependent |
+| | `SELECT dbo.sysjobHistory` | `msdb` | Feature dependent |
+| | `SELECT dbo.sysjobSteps` | `msdb` | Feature dependent |
+| | `SELECT dbo.syscategories` | `msdb` | Feature dependent |
+| | `SELECT dbo.sysoperators` | `msdb` | Feature dependent |
+| | `SELECT dbo.suspectpages` | `msdb` | Feature dependent |
+| | `SELECT dbo.backupset` | `msdb` | Feature dependent |
+| | `SELECT dbo.backupmediaset` | `msdb` | Feature dependent |
+| | `SELECT dbo.backupmediafamily` | `msdb` | Feature dependent |
+| | `SELECT dbo.backupfile` | `msdb` | Feature dependent |
+| | `CONNECT ANY DATABASE` | Server level | Feature dependent |
+| | `VIEW ANY DATABASE` | Server level | Feature dependent |
+| | `VIEW ANY DEFINITION` | Server level | Feature dependent |
+| **Migration Assessment** | `EXECUTE dbo.agent_datetime` | `msdb` | Feature dependent |
+| | `SELECT dbo.syscategories` | `msdb` | Feature dependent |
+| | `SELECT dbo.sysjobHistory` | `msdb` | Feature dependent |
+| | `SELECT dbo.sysjobs` | `msdb` | Feature dependent |
+| | `SELECT dbo.sysjobSteps` | `msdb` | Feature dependent |
+| | `SELECT dbo.sysmail_account` | `msdb` | Feature dependent |
+| | `SELECT dbo.sysmail_profile` | `msdb` | Feature dependent |
+| | `SELECT dbo.sysmail_profileaccount` | `msdb` | Feature dependent |
+| | `SELECT dbo.syssubsystems` | `msdb` | Feature dependent |
 | | `SELECT sys.sql_expression_dependencies` | All databases |
 
 > [!NOTE]  

@@ -3,7 +3,7 @@ title: "SET DATEFIRST (Transact-SQL)"
 description: SET DATEFIRST (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "03/14/2017"
+ms.date: 04/04/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -26,53 +26,60 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # SET DATEFIRST (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Sets the first day of the week to a number from 1 through 7.  
+  Sets the first day of the week to a number from 1 through 7. 
   
- For an overview of all [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time data types and functions, see [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ For an overview of all [!INCLUDE [tsql](../../includes/tsql-md.md)] date and time data types and functions, see [Date and Time Data Types and Functions (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## Syntax  
+## Syntax
   
-```syntaxsql
--- Syntax for SQL Server and Azure SQL Database  
-  
+#### Syntax for SQL Server and Azure SQL Database  
+
+```syntaxsql 
 SET DATEFIRST { number | @number_var }   
 ```  
   
-```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
-  
+#### Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
+
+```syntaxsql 
 SET DATEFIRST 7 ;  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
- *number* | **@**_number_var_  
+
+#### *number* | *@number_var*  
+
  Is an integer that indicates the first day of the week. It can be one of the following values.  
   
 |Value|First day of the week is|  
 |-----------|------------------------------|  
-|**1**|Monday|  
-|**2**|Tuesday|  
-|**3**|Wednesday|  
-|**4**|Thursday|  
-|**5**|Friday|  
-|**6**|Saturday|  
-|**7** (default, U.S. English)|Sunday|  
+| `1` |Monday|  
+| `2` |Tuesday|  
+| `3` |Wednesday|  
+| `4` |Thursday|  
+| `5` |Friday|  
+| `6` |Saturday|  
+| `7` (default, U.S. English) |Sunday|  
   
-## Remarks  
+## Remarks
+
  To see the current setting of SET DATEFIRST, use the [@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md) function.  
   
  The setting of SET DATEFIRST is set at execute or run time and not at parse time.  
   
  Specifying SET DATEFIRST has no effect on DATEDIFF. DATEDIFF always uses Sunday as the first day of the week to ensure the function is deterministic.  
-  
-## Permissions  
+
+ Like all [SET Statements](../../t-sql/statements/set-statements-transact-sql.md), SET DATEFIRST affects the current session.  
+
+## Permissions
+
  Requires membership in the **public** role.  
   
-## Examples  
+## Examples
+
  The following example displays the day of the week for a date value and shows the effects of changing the `DATEFIRST` setting.  
   
 ```sql
@@ -94,9 +101,7 @@ SELECT CAST('1999-1-1' AS datetime2) AS SelectDate
     ,DATEPART(dw, '1999-1-1') AS DayOfWeek;  
 GO  
 ```  
-  
-## See Also  
- [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
-  
-  
 
+## Related content
+
+- [SET Statements (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)

@@ -5,7 +5,7 @@ description: In this quickstart, learn how to restore a database backup to Azure
 author: Stralle
 ms.author: strrodic
 ms.reviewer: mathoma, nvraparl
-ms.date: 12/28/2023
+ms.date: 04/04/2024
 ms.service: sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: quickstart
@@ -176,6 +176,9 @@ As an alternative to the restore wizard, you can use T-SQL statements to restore
    ```
 
    :::image type="content" source="media/restore-sample-database-quickstart/restore-database.png" alt-text="Screenshot that shows the SSMS Query Editor. The RESTORE DATABASE statement is visible, and a message indicates that the query ran successfully." lightbox="media/restore-sample-database-quickstart/restore-database.png":::
+
+   > [!TIP]
+   > If you receive `Error: 3201` or `Operating system error 86(The specified network password is not correct.)`, it is likely because your SAS credential (created in previous steps) is incorrectly created. `DROP CREDENTIAL` and recreate, review the credential name, identity, and secret.
 
 1. Run the following statement to track the status of your restore process.
 

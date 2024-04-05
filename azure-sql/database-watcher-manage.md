@@ -508,9 +508,11 @@ Similarly, creating any new objects such as tables, external tables, materialize
 > [!IMPORTANT]
 > If you change database watcher access to its data store, or make any database schema or configuration changes that impact data ingestion, you might need to [change the data store](#change-the-data-store-for-a-watcher) for that watcher to a new empty database, and grant the watcher [access](#grant-access-to-data-store) to this new database to resume data collection and revert to a supported configuration.
 
-### Automatic cluster stop
+### Stopped Azure Data Explorer clusters
 
-By default, an Azure Data Explorer cluster is [automatically stopped](/azure/data-explorer/auto-stop-clusters) after several days of inactivity. For example, this can happen if you stop the watcher that ingests data into the only database on your cluster, and do not run any queries in this database. Before the watcher can resume data collection, you will need to manually resume the cluster.
+An Azure Data Explorer cluster can be stopped to save costs. By default, an Azure Data Explorer cluster is [stopped automatically](/azure/data-explorer/auto-stop-clusters) after several days of inactivity. For example, this can happen if you stop the watcher that ingests data into the only database on your cluster, and do not run any queries in this database. 
+
+If the cluster is stopped, database watcher data collection stops as well, and monitoring data does not appear on dashboards. To resume data collection and make data accessible via dashboards, you need to manually resume the cluster. Once the cluster is running, restart the watcher.
 
 You can [disable the automatic stop behavior](/azure/data-explorer/auto-stop-clusters#manage-automatic-stop-behavior-on-your-cluster) if you want the cluster to remain available even when it's inactive. This might increase cluster cost.
 

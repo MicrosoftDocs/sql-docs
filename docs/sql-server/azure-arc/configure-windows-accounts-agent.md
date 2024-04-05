@@ -12,7 +12,7 @@ ms.topic: reference
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This article lists the permissions Azure extension on SQL Server sets for SQL Server enabled by Azure Arc for `NT Service\SQLServerExtension` account. This account is used when you [Operate SQL Server enabled by Azure Arc with least privilege (preview)](configure-least-privilege.md).
+This article lists the permissions Azure extension for SQL Server sets on an instance of for the `NT Service\SQLServerExtension` account. This account is used when you [Operate SQL Server enabled by Azure Arc with least privilege (preview)](configure-least-privilege.md).
 
 Manually setting the permissions for the agent account is not supported.
 

@@ -118,7 +118,7 @@ The extension also grants permissions to instance and database objects as featur
 | | `SELECT dbo.sysmail_profile` | `msdb` | Feature dependent |
 | | `SELECT dbo.sysmail_profileaccount` | `msdb` | Feature dependent |
 | | `SELECT dbo.syssubsystems` | `msdb` | Feature dependent |
-| | `SELECT sys.sql_expression_dependencies` | All databases |
+| | `SELECT sys.sql_expression_dependencies` | All databases | Feature dependent |
 
 > [!NOTE]  
 > Minimum permissions depend on enabled features. Permissions are updated when they are no longer necessary. Necessary permissions are granted when features are enabled.

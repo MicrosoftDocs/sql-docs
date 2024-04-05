@@ -1,4 +1,4 @@
---- 
+---
 title: Azure extension for SQL Server files and registry reference
 description: Lists files and registry keys deployed and managed by the Azure extension for SQL Server.
 author: MikeRayMSFT
@@ -12,7 +12,7 @@ ms.topic: reference
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This article lists files and registry keys to monitor for product deployment integrity when you install extensions to enable servers or SQL Server instances for Azure Arc. 
+This article lists the files and the registry keys created by the installation of Connected machine agent and Azure extension for SQL server.
 
 ## Windows server files
 
@@ -20,7 +20,7 @@ This article lists files and registry keys to monitor for product deployment int
 | :----- | :----- |
 | `%ProgramFiles%\AzureConnectedMachineAgent\*` | `azcmagent` CLI and instance metadata service executables |
 | `%ProgramFiles%\AzureConnectedMachineAgent\GCArcService\GC\*` | Extension service executables |
-| `%ProgramData%\AzureConnectedMachineAgent\*` | Configuration, log and identity token files for azcmagent CLI and instance metadata service |
+| `%ProgramData%\AzureConnectedMachineAgent\*` | Configuration, log, and identity token files for `azcmagent` CLI and instance metadata service |
 | `%ProgramData%\Application Data\Microsoft\Crypto\RSA\MachineKeys` | Windows certificate private keys | 
 
 ## SQL Server files

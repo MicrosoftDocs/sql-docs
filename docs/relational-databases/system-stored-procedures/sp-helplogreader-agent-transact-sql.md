@@ -31,7 +31,7 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
   
 ## Arguments  
 `[ @publisher = ] 'publisher'`
- Is the name of the Publisher. *publisher* is **sysname**, with a default of NULL.  
+ Is the name of the Publisher. *publisher* is **sysname**, with a default of NULL. This parameter is for non-SQL Server Publishers only. The value of this parameter must be "NULL" for a SQL Server Publisher.
   
 ## Result Sets  
   

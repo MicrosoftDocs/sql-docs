@@ -48,7 +48,7 @@ For each of these options, you have to decide how you want to pay for the licens
 
 <sup>1</sup> You already have a license with active Software Assurance or an active SQL subscription.
 
-<sup>2</sup> You own a perpetual license.
+<sup>2</sup> You own a perpetual license or use a Server+CAL license.
 
 > [!NOTE]
 >

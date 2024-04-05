@@ -30,7 +30,7 @@ To enable automated backups, set the retention days to a nonzero value.
 
 ### Supported license types
 
-Automated backups are only available for licenses with Software Assurance, SQL subscription, or pay-as-you-go. For details, see [Feature availability depending on license type](overview.md#feature-availability-depending-on-license-type).
+Automated backups are only available for licenses with Software Assurance, SQL subscription, or pay-as-you-go. For details, see [Feature availability depending on license type](overview.md#feature-differentiation).
 
 ## Backup frequency and retention days
 
@@ -316,7 +316,7 @@ When the built-in automated backups are enabled on an instance of [!INCLUDE [ssn
 - The user databases need to be in full recovery model for the backups to be performed. Databases that aren't in full recovery model aren't automatically backed up.
 - Automated backups are currently not supported for Always On failover cluster instances (FCI).
 - Automated backups aren't supported on any instance that hosts an availability group (AG) replica.
-- Automated backups are only available for licenses with Software Assurance, SQL subscription, or pay-as-you-go. For details, see [Feature availability depending on license type](overview.md#feature-availability-depending-on-license-type).
+- Automated backups are only available for licenses with Software Assurance, SQL subscription, or pay-as-you-go. For details, see [Feature availability depending on license type](overview.md#feature-differentiation).
 
 ## Related tasks
 

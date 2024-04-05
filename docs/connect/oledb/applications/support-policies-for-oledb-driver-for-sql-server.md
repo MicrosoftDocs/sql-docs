@@ -21,6 +21,7 @@ OLE DB Driver for SQL Server is tested with and supports connections to the foll
 
 | Database version&nbsp;&#8594;<br />&#8595; Driver version | Azure SQL Database | Azure Synapse Analytics | Azure SQL Managed Instance | SQL Server 2022 | SQL Server 2019 | SQL Server 2017 | SQL Server 2016 | SQL Server 2014 | SQL Server 2012 |
 |----|---|---|---|---|---|---|---|---|---|
+|19.3.3|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |
 |19.3|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |19.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |19.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
@@ -40,10 +41,12 @@ The following table lists which operating systems are supported by OLE DB Driver
 
 | Operating system&nbsp;&#8594;<br />&#8595; Driver version | Windows Server 2022 | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | Windows 11 | Windows 10 | Windows 8.1<sup>3</sup> |
 |----|---|---|---|---|---|---|---|---|
+|19.3.3|Yes|Yes|Yes|   |   |Yes|Yes|   |
 |19.3|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |
 |19.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |19.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |19.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|18.7.2|Yes|Yes|Yes|   |   |Yes|Yes|   |
 |18.7|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |18.6|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |18.5|   |Yes|Yes|Yes|Yes|   |Yes|Yes|

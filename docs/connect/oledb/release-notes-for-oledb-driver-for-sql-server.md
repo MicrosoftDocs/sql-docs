@@ -182,20 +182,12 @@ If you need to download the installer in a language other than the one detected 
 
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2266757)  
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2266858)  
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Arm64 installer](https://go.microsoft.com/fwlink/?linkid=2266857)  
 
 Released: April 09, 2024
 
 If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
     For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2266757&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2266757&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2266757&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2266757&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2266757&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2266757&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2266757&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2266757&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2266757&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2266757&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2266757&clcid=0x40a)  
     For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2266858&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2266858&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2266858&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2266858&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2266858&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2266858&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2266858&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2266858&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2266858&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2266858&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2266858&clcid=0x40a)
-    For the Arm64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2266857&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2266857&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2266857&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2266857&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2266857&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2266857&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2266857&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2266857&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2266857&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2266857&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2266857&clcid=0x40a)
-
-### Features added
-
-| Feature added | Details |
-| :------------ | :------ |
-| Windows Arm64 support | The Arm64 driver is for 64-bit ARM applications only and does not include 32-bit ARM nor x86/x64 emulation drivers. |
 
 ### Bugs fixed
 

@@ -103,6 +103,39 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  
  > [!NOTE]
  > A `TRUNCATE TABLE` operation can be rolled back.
+ >
+ > The following example which selects records before and after truncate and again after rollback demonstrates this.
+```sql
+ -- Create Test Table
+CREATE TABLE TruncateTest (ID INT)
+INSERT INTO TruncateTest (ID)
+SELECT 1
+UNION ALL
+SELECT 2
+UNION ALL
+SELECT 3
+GO
+-- Check the data before truncate
+SELECT * FROM TruncateTest
+GO
+-- Begin Transaction
+BEGIN TRAN
+-- Truncate Table
+TRUNCATE TABLE TruncateTest
+GO
+-- Check the data after truncate
+SELECT * FROM TruncateTest
+GO
+-- Rollback Transaction
+ROLLBACK TRAN
+GO
+-- Check the data after Rollback
+SELECT * FROM TruncateTest
+GO
+-- Clean up
+DROP TABLE TruncateTest
+GO
+```
   
 ## Restrictions  
  You cannot use `TRUNCATE TABLE` on tables that:  

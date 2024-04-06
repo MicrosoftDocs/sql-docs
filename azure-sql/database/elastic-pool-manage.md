@@ -4,7 +4,7 @@ description: Create and manage Azure SQL Database elastic pools using the Azure 
 author: arvindshmicrosoft
 ms.author: arvindsh
 ms.reviewer: wiassaf, mathoma
-ms.date: 09/26/2022
+ms.date: 04/04/2024
 ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: conceptual
@@ -15,7 +15,7 @@ ms.custom:
 
 # Manage elastic pools in Azure SQL Database
 
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 With an elastic pool, you determine the amount of resources that the elastic pool requires to handle the workload of its databases, and the amount of resources for each pooled database.
 
@@ -87,7 +87,7 @@ To create and move databases within existing elastic pools or to return informat
 | Command | Description |
 | --- | --- |
 |[CREATE DATABASE (Azure SQL Database)](/sql/t-sql/statements/create-database-azure-sql-database)|Creates a new database in an existing pool or as a single database. You must be connected to the `master` database to create a new database.|
-| [ALTER DATABASE (Azure SQL Database)](/sql/t-sql/statements/alter-database-azure-sql-database) |Move a database into, out of, or between elastic pools.|
+|[ALTER DATABASE (Azure SQL Database)](/sql/t-sql/statements/alter-database-azure-sql-database) |Move a database into, out of, or between elastic pools.|
 |[DROP DATABASE (Transact-SQL)](/sql/t-sql/statements/drop-database-transact-sql)|Deletes a database.|
 |[sys.elastic_pool_resource_stats (Azure SQL Database)](/sql/relational-databases/system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database)|Returns resource usage statistics for all the elastic pools on a server. For each elastic pool, there is one row for each 15 second reporting window (four rows per minute). This includes CPU, IO, Log, storage consumption and concurrent request/session utilization by all databases in the pool.|
 |[sys.dm_elastic_pool_resource_stats (Azure SQL Database)](/sql/relational-databases/system-dynamic-management-views/sys-dm-elastic-pool-resource-stats-azure-sql-database)|Returns resource usage statistics for the elastic pool containing the current database on an Azure SQL Database [logical server](./logical-servers.md). This includes CPU, Data IO, Log IO, storage consumption and concurrent request/session utilization by the pool. This data is retained for roughly 40 minutes.|
@@ -112,7 +112,7 @@ To create and manage SQL Database elastic pools and pooled databases, use these 
 |[Databases - List by server](/rest/api/sql/databases/list-by-server)|Returns a list of databases in a server.|
 |[Databases - Update](/rest/api/sql/databases/update)|Updates an existing database.|
 
-## Next steps
+## Related content
 
 - To learn more about design patterns for SaaS applications using elastic pools, see [Design Patterns for Multi-tenant SaaS Applications with Azure SQL Database](saas-tenancy-app-design-patterns.md).
 - For a SaaS tutorial using elastic pools, see [Introduction to the Wingtip SaaS application](saas-dbpertenant-wingtip-app-overview.md).

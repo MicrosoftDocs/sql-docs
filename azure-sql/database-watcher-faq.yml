@@ -5,7 +5,7 @@ metadata:
   description: Frequently asked questions about database watcher for Azure SQL
   author: dimitri-furman
   ms.author: dfurman
-  ms.date: 03/21/2024
+  ms.date: 04/08/2024
   ms.reviewer: wiassaf
   ms.service: sql-db-mi
   ms.subservice: monitoring
@@ -66,6 +66,10 @@ sections:
       - question: |
           Can I monitor a large Azure SQL estate?
         answer: Yes. For more information, see [Monitor large estates](database-watcher-manage.md#monitor-large-estates).
+
+      - question: |
+          Does it support cross-subscription and cross-tenant monitoring?
+        answer: The watcher and the SQL targets it monitors can be in different subscriptions within the same Microsoft Entra ID tenant. The watcher and its data store can be in different subscriptions in the same Microsoft Entra ID tenant, or in different tenants.
 
   - name: Watcher
     questions:

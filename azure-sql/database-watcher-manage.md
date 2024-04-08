@@ -5,7 +5,7 @@ description: Setup and configuration details for database watcher
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 04/05/2024
+ms.date: 04/08/2024
 ms.service: sql-db-mi
 ms.subservice: monitoring
 ms.topic: how-to
@@ -125,7 +125,7 @@ In the Azure portal, you can add or remove targets, create or delete private end
 To enable database watcher monitoring for an Azure SQL database, elastic pool, or SQL managed instance, you need to add this resource as a SQL target.
 
 1. To add a target, on the **SQL targets** page, select **Add**. 
-1. Find the Azure SQL resource you want to monitor. Select the resource type and subscription, and then select the SQL target from the list of resources.
+1. Find the Azure SQL resource you want to monitor. Select the resource type and subscription, and then select the SQL target from the list of resources. The SQL target can be in any subscription within the same Microsoft Entra ID tenant as the watcher.
 1. To monitor the primary replica and a high availability [secondary replica](./database/read-scale-out.md) of a database, elastic pool, or SQL managed instance, add two separate targets for the same resource, and check the **Read intent** box for *one of them*. 
     - Checking the **Read intent** box configures the watcher to monitor the high availability secondary replica only.
     - Do not check the **Read intent** box if you want to monitor only the primary replica, or if a high availability secondary replica does not exist for this resource, or if the read scale-out feature is disabled.

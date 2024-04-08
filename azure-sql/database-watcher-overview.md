@@ -5,7 +5,7 @@ description: An overview of database watcher for Azure SQL, a managed monitoring
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 03/27/2024
+ms.date: 04/08/2024
 ms.service: sql-db-mi
 ms.subservice: monitoring
 ms.topic: conceptual
@@ -42,6 +42,8 @@ To start monitoring your Azure SQL resources, create a **watcher** resource in y
 Database watcher supports all service tiers, compute tiers, and service objectives in Azure SQL Database and Azure SQL Managed Instance. This includes [vCore](./database/service-tiers-sql-database-vcore.md) and [DTU](./database/service-tiers-dtu.md) purchasing models, [provisioned](./database/service-tiers-sql-database-vcore.md#compute) and [serverless](./database/serverless-tier-overview.md) compute tiers, [single databases](./database/single-database-overview.md) and [elastic pools](./database/elastic-pool-overview.md), and [Hyperscale](./database/service-tier-hyperscale.md).
 
 Database watcher can monitor all types of secondary [readable replicas](./database/read-scale-out.md), including high availability replicas, [geo-replicas](./database/active-geo-replication-overview.md), and Hyperscale [named secondary](./database/service-tier-hyperscale-replicas.md) replicas.
+
+For a given watcher, the SQL targets can be in any subscription within the same Microsoft Entra ID tenant.
 
 ## Database watcher price
 

@@ -43,12 +43,12 @@ For each of these options, you have to decide how you want to pay for the licens
 | Payment option | V-core licensing | P-core licensing without VMs | P-core licensing with unlimited virtualization |
 |---|---|---|---|
 | Subscribe to the service through Microsoft Azure using a pay-as-you-go method | Yes | Yes | Yes |
-| Bring your own license with SA<sup>1</sup> | Yes | Yes | Yes |
+| Bring your own license with SA or SQL subscription<sup>1</sup> | Yes | Yes | Yes |
 | Bring your own license without SA<sup>2</sup> | Yes | Yes | No |
 
-<sup>1</sup> Using a license with Software assurance that you pay for as part of your Enterprise Agreement with Microsoft.
+<sup>1</sup> You already have a license with active Software Assurance or an active SQL subscription.
 
-<sup>2</sup> Using a perpetual license that you own.
+<sup>2</sup> You own a perpetual license or use a Server+CAL license.
 
 > [!NOTE]
 >
@@ -78,8 +78,8 @@ The following license types are supported when licensing v-cores:
 | License type | Description | Value |  
 |---|---|---|
 | Pay-as-you-go | Subscribe to the Standard or Enterprise Edition service and be billed on an hourly meter. See [SQL Server prices and licensing](https://www.microsoft.com/sql-server/sql-server-2022-pricing). | `PAYG` |
-| License with Software Assurance | Bring your own Standard or Enterprise Edition license or SQL Subscription with Software Assurance. Your software usage is reported using a free hourly meter according to the metering rules. See  [Metering software usage](#usage-metering). | `Paid`|
-| License only | You own an existing Standard or Enterprise Edition license without Software Assurance, or use Developer, Evaluation, or Express Edition. Your software usage is reported according to the metering rules. See [Metering software usage](#usage-metering). | `LicenseOnly` |
+| License with Software Assurance | Bring your own Standard or Enterprise Edition license with Software Assurance or SQL Subscription. Your software usage is reported using a free hourly meter according to the metering rules. See  [Metering software usage](#usage-metering). | `Paid`|
+| License only | You use a perpetual or Server+CAL license for Standard or Enterprise Edition,  or you use Developer, Evaluation, or Express Edition. Your software usage is reported according to the metering rules. See [Metering software usage](#usage-metering). | `LicenseOnly` |
 
 > [!IMPORTANT]
 >
@@ -126,7 +126,7 @@ This licensing option is most effective when:
 To leverage the UV benefit, you need to create a *SQLServerLicense* resource covering the specific *SQL Server - Azure Arc* instances that you intend to include. For  details of creating *SQLServerLicense* resources, see [Create SQL Server license](manage-configuration.md#create-license-resource).
 
 > [!CAUTION]
-> The UV benefit is not available to VMs running on any listed providers' infrastructure. They can only be licensed by v-cores. If you create a *SQLServerLicense* resource with the intent of licensing these VMs using UV, you will be charged for the consumption of v-cores based on the SQL Server configuration of the host, and any existing p-core licenses will not apply. See [Listed providers](https://aka.ms/listedproviders) for details.
+> The UV benefit is not available to VMs running on any listed providers' infrastructure. They can only be licensed by v-cores. If you create a *SQLServerLicense* resource with the intent of licensing these VMs using UV, you will be charged for the consumption of v-cores based on the SQL Server configuration of the host, and any existing p-core licenses will not apply to offset such charge. See [Listed providers](https://aka.ms/listedproviders) for details.
 
 A single *SqlServerLicense* resource can cover multiple virtual machines connected to Azure Arc. It includes several properties that define how the license is applied and billed. 
 

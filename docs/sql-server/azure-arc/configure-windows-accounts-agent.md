@@ -81,42 +81,42 @@ The extension also grants permissions to instance and database objects as featur
 | **Backup** | `CREATE ANY DATABASE` | Server level | Feature dependent |
 | | **db_backupoperator** role | All databases | Feature dependent |
 | | **dbcreator** | Server role | Feature dependent |
-| **Azure Control Plane** | `CREATE TABLE` | `msdb` | Feature dependent |
-| | `ALTER ANY SCHEMA` | `msdb` | Feature dependent |
-| | `CREATE TYPE` | `msdb` | Feature dependent |
-| | `EXECUTE` | `msdb` | Feature dependent |
+| **Azure Control Plane** | `CREATE TABLE` | `msdb` | Essential |
+| | `ALTER ANY SCHEMA` | `msdb` | Essential |
+| | `CREATE TYPE` | `msdb` | Essential |
+| | `EXECUTE` | `msdb` | Essential |
 | | **db_datawriter** role | `msdb` | Feature dependent |
 | | **db_datareader** role | `msdb` | Feature dependent |
-| **Availability group discovery** | `VIEW ANY DEFINITION` | Server level | Feature dependent |
+| **Availability group discovery** | `VIEW ANY DEFINITION` | Server level | Essential |
 | **Purview** | `SELECT` | All databases | Feature dependent |
 | | `EXECUTE` | All databases | Feature dependent |
 | | `CONNECT ANY DATABASE` | Server level | Feature dependent |
 | | `VIEW ANY DATABASE` | Server level | Feature dependent |
-| **Monitoring** | `SELECT dbo.sysjobactivity` | `msdb` | Feature dependent |
-| | `SELECT dbo.sysjobs` | `msdb` | Feature dependent |
-| | `SELECT dbo.syssessions` | `msdb` | Feature dependent |
-| | `SELECT dbo.sysjobHistory` | `msdb` | Feature dependent |
-| | `SELECT dbo.sysjobSteps` | `msdb` | Feature dependent |
-| | `SELECT dbo.syscategories` | `msdb` | Feature dependent |
-| | `SELECT dbo.sysoperators` | `msdb` | Feature dependent |
-| | `SELECT dbo.suspectpages` | `msdb` | Feature dependent |
-| | `SELECT dbo.backupset` | `msdb` | Feature dependent |
-| | `SELECT dbo.backupmediaset` | `msdb` | Feature dependent |
-| | `SELECT dbo.backupmediafamily` | `msdb` | Feature dependent |
-| | `SELECT dbo.backupfile` | `msdb` | Feature dependent |
-| | `CONNECT ANY DATABASE` | Server level | Feature dependent |
-| | `VIEW ANY DATABASE` | Server level | Feature dependent |
-| | `VIEW ANY DEFINITION` | Server level | Feature dependent |
-| **Migration Assessment** | `EXECUTE dbo.agent_datetime` | `msdb` | Feature dependent |
-| | `SELECT dbo.syscategories` | `msdb` | Feature dependent |
-| | `SELECT dbo.sysjobHistory` | `msdb` | Feature dependent |
-| | `SELECT dbo.sysjobs` | `msdb` | Feature dependent |
-| | `SELECT dbo.sysjobSteps` | `msdb` | Feature dependent |
-| | `SELECT dbo.sysmail_account` | `msdb` | Feature dependent |
-| | `SELECT dbo.sysmail_profile` | `msdb` | Feature dependent |
-| | `SELECT dbo.sysmail_profileaccount` | `msdb` | Feature dependent |
-| | `SELECT dbo.syssubsystems` | `msdb` | Feature dependent |
-| | `SELECT sys.sql_expression_dependencies` | All databases | Feature dependent |
+| **Monitoring** | `SELECT dbo.sysjobactivity` | `msdb` | Essential |
+| | `SELECT dbo.sysjobs` | `msdb` | Essential |
+| | `SELECT dbo.syssessions` | `msdb` | Essential |
+| | `SELECT dbo.sysjobHistory` | `msdb` | Essential |
+| | `SELECT dbo.sysjobSteps` | `msdb` | Essential |
+| | `SELECT dbo.syscategories` | `msdb` | Essential |
+| | `SELECT dbo.sysoperators` | `msdb` | Essential |
+| | `SELECT dbo.suspectpages` | `msdb` | Essential |
+| | `SELECT dbo.backupset` | `msdb` | Essential |
+| | `SELECT dbo.backupmediaset` | `msdb` | Essential |
+| | `SELECT dbo.backupmediafamily` | `msdb` | Essential |
+| | `SELECT dbo.backupfile` | `msdb` | Essential |
+| | `CONNECT ANY DATABASE` | Server level | Essential |
+| | `VIEW ANY DATABASE` | Server level | Essential |
+| | `VIEW ANY DEFINITION` | Server level | Essential |
+| **Migration Assessment** | `EXECUTE dbo.agent_datetime` | `msdb` | Essential |
+| | `SELECT dbo.syscategories` | `msdb` | Essential |
+| | `SELECT dbo.sysjobHistory` | `msdb` | Essential |
+| | `SELECT dbo.sysjobs` | `msdb` | Essential |
+| | `SELECT dbo.sysjobSteps` | `msdb` | Essential |
+| | `SELECT dbo.sysmail_account` | `msdb` | Essential |
+| | `SELECT dbo.sysmail_profile` | `msdb` | Essential |
+| | `SELECT dbo.sysmail_profileaccount` | `msdb` | Essential |
+| | `SELECT dbo.syssubsystems` | `msdb` | Essential |
+| | `SELECT sys.sql_expression_dependencies` | All databases | Essential |
 
 > [!NOTE]  
 > Minimum permissions depend on enabled features. Permissions are updated when they are no longer necessary. Necessary permissions are granted when features are enabled.

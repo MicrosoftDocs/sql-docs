@@ -355,7 +355,7 @@ To store authentication credentials securely, using SQL authentication in databa
 
 To configure database watcher to connect to a target using SQL authentication, follow these steps:
 
-1. [Create a vault](/azure/key-vault/general/quick-create-portal) in Azure Key Vault, or identify an existing vault you can use. The vault must use the [RBAC permission model](/azure/key-vault/general/rbac-guide).
+1. [Create a vault](/azure/key-vault/general/quick-create-portal) in Azure Key Vault, or identify an existing vault you can use. The vault must use the [RBAC permission model](/azure/key-vault/general/rbac-guide). The **RBAC** permission model is the default for new vaults. If you want to use an existing vault, make sure that it is not [configured](/azure/key-vault/general/rbac-access-policy) to use the older **access policy** model.
 
     If you want to use private connectivity to the vault, create a private endpoint on the **Managed private endpoints** page. Select `Microsoft.KeyVault/vaults` as **Resource type**, and `vault` as **Target sub-resource**. Ensure that the private endpoint is approved before starting the watcher.
 
@@ -368,7 +368,7 @@ To configure database watcher to connect to a target using SQL authentication, f
 
     To create secrets, you need to be a member of the **Key Vault Secrets Officer** RBAC role.
 
-1. From the **Access control (IAM)** page of each secret, add a role assignment for the managed identity of the watcher in the **Key Vault Secrets User** RBAC role. To follow the principle of least privilege, add this role assignment for each secret, rather than for the entire vault.
+1. From the **Access control (IAM)** page of each secret, add a role assignment for the managed identity of the watcher in the **Key Vault Secrets User** RBAC role. To follow the principle of least privilege, add this role assignment for each secret, rather than for the entire vault. The **Access control (IAM)** page appears only if the vault is configured to use the **RBAC** permission model.
 
 1. [Add the SQL target](#add-sql-targets-to-a-watcher) to a watcher. When adding a target, check the **Use SQL authentication** box, and select the vault where the login name and password secrets are stored. Enter the secret names for login name and password.
 

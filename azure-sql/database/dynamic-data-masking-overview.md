@@ -119,7 +119,7 @@ Prevent unauthorized access to sensitive data and gain control by masking it to 
 
    ```sql
    CREATE TABLE Data.Membership (
-       MemberID INT IDENTITY(1, 1) NOT NULL PRIMARY KEY CLUSTERED,
+       MemberID INT IDENTITY(1, 1) NOT NULL,
        FirstName VARCHAR(100) MASKED WITH (FUNCTION = 'partial(1, "xxxxx", 1)') NULL,
        LastName VARCHAR(100) NOT NULL,
        Phone VARCHAR(12) MASKED WITH (FUNCTION = 'default()') NULL,
@@ -151,7 +151,7 @@ Prevent unauthorized access to sensitive data and gain control by masking it to 
 
    ```sql
    CREATE TABLE Service.Feedback (
-       MemberID INT IDENTITY(1, 1) NOT NULL PRIMARY KEY CLUSTERED,
+       MemberID INT IDENTITY(1, 1) NOT NULL,
        Feedback VARCHAR(100) MASKED WITH (FUNCTION = 'default()') NULL,
        Rating INT MASKED WITH (FUNCTION = 'default()'),
        Received_On DATETIME

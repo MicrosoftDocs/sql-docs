@@ -33,9 +33,10 @@ For details, review:
 - [Manage licensing and billing of SQL Server enabled by Azure Arc](manage-license-billing.md).
 - [Configure SQL Server enabled by Azure Arc](manage-configuration.md)
 
-### Updated metrics
+### Updated performance dashboard
 
-Review [Monitor [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] (preview)](sql-monitoring.md).
+* New built-in role and action available to manage access to the performance dashboard
+  * Review [Monitor [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] (preview)](sql-monitoring.md).
 
 ## March 12, 2024
 

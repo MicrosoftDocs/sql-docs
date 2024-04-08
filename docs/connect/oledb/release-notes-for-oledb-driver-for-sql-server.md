@@ -61,7 +61,7 @@ If you need to download the installer in a language other than the one detected 
 
 | Feature added | Details |
 | :------------ | :------ |
-| Error message improvement | Improved MARS and encryption related error messaging. |
+| Error message improvement. | Improved MARS and encryption related error messaging. |
 
 ### Bugs fixed
 

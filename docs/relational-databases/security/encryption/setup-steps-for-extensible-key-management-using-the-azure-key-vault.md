@@ -4,7 +4,7 @@ description: Install and configure the SQL Server Connector for Azure Key Vault.
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto, randolphwest
-ms.date: 04/02/2024
+ms.date: 04/08/2024
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -23,7 +23,7 @@ In this article, you install and configure the [!INCLUDE[ssNoVersion](../../../i
 
 [!INCLUDE [entra-id](../../../includes/entra-id.md)]
 
-Extensible Key Management using Azure Key Vault is available for SQL Server on Linux environments, starting with [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] Cumulative Update 12. Follow the same instructions, but skip steps 3 and 4.
+Extensible Key Management using Azure Key Vault (AKV) is available for SQL Server on Linux environments, starting with [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] Cumulative Update 12. Follow the same instructions, but skip steps 3 and 4.
 
 ## Prerequisites
 
@@ -124,7 +124,7 @@ You can use the Azure portal to create the key vault and then add a Microsoft En
 
 #### Azure role-based access control
 
-The recommended method is to use Azure role-based access control (RBAC) to assign permissions to the key vault. This method allows you to assign permissions to users, groups, and applications at a more granular level. You can assign permissions to the key vault at the management plane (Azure role assignments), and at the data plane (key vault access policies). If you're only able to use access policy, you can skip this section and go to the [Vault access policy](#vault-access-policy) section.
+The recommended method is to use [Azure role-based access control (RBAC)](/azure/role-based-access-control/overview) to assign permissions to the key vault. This method allows you to assign permissions to users, groups, and applications at a more granular level. You can assign permissions to the key vault at the management plane (Azure role assignments), and at the data plane (key vault access policies). If you're only able to use access policy, you can skip this section and go to the [Vault access policy](#vault-access-policy) section. For more information on Azure Key Vault RBAC permissions, see [Azure built-in roles for Key Vault data plane operations](/azure/key-vault/general/rbac-guide#azure-built-in-roles-for-key-vault-data-plane-operations).
 
 1. Go to the key vault resource that you created, and select the **Access control (IAM)** setting.
 
@@ -378,8 +378,8 @@ Download the SQL Server Connector from the [Microsoft Download Center](https://g
 > - Starting with version 1.0.4.0, there is support for private Azure clouds, including Azure operated by 21Vianet, Azure Germany, and Azure Government.
 > - There is a breaking change in version 1.0.5.0 in terms of the thumbprint algorithm. You may experience database restore failures after upgrading to 1.0.5.0. For more information, see [KB article 447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
 > - Starting with version 1.0.5.0 (TimeStamp: September 2020), the SQL Server Connector supports filtering messages and network request retry logic.
-> - **Starting with updated version 1.0.5.0 (TimeStamp: November 2020), the SQL Server Connector supports RSA 2048, RSA 3072, RSA-HSM 2048 and RSA-HSM 3072 keys.**
-> - SQL Server Connector supports Azure Key Vault access using Access Policies only and not RBAC.
+> - Starting with updated version 1.0.5.0 (TimeStamp: November 2020), the SQL Server Connector supports RSA 2048, RSA 3072, RSA-HSM 2048 and RSA-HSM 3072 keys.
+> - Starting with updated version 1.0.5.0, you can refer to a specific key version in the Azure Key Vault.
 
 :::image type="content" source="media/ekm/ekm-connector-install.png" alt-text="Screenshot of the SQL Server Connector installation wizard.":::
 
@@ -473,12 +473,12 @@ For a note about the minimum permission levels needed for each action in this se
    - Edit the `IDENTITY` argument (`DocsSampleEKMKeyVault`) to point to your Azure Key Vault.
      - If you're using *global Azure*, replace the `IDENTITY` argument with the name of your Azure Key Vault from [Step 2: Create a key vault](#step-2-create-a-key-vault).
      - If you're using a *private Azure cloud* (for example, Azure Government, Microsoft Azure operated by 21Vianet, or Azure Germany), replace the `IDENTITY` argument with the Vault URI that's returned in step 3 of the [Create a key vault and key by using PowerShell](#create-a-key-vault-and-key-by-using-powershell) section. Don't include `https://` in the key vault URI.
-   - Replace the first part of the `SECRET` argument with the Microsoft Entra Client ID from [Step 1: Set up a Microsoft Entra service principal](#step-1-set-up-an-azure-ad-service-principal). In this example, the **Client ID** is `9A57CBC54C4C40E2B517EA677E0EFA00`.
+   - Replace the first part of the `SECRET` argument with the Microsoft Entra Client ID from [Step 1: Set up a Microsoft Entra service principal](#step-1-set-up-an-azure-ad-service-principal). In this example, the **Client ID** is `d956f6b9xxxxxxx`.
 
      > [!IMPORTANT]  
      > Be sure to remove the hyphens from the App (Client) ID.
 
-   - Complete the second part of the `SECRET` argument with **Client Secret** from [Step 1: Set up a Microsoft Entra service principal](#step-1-set-up-an-azure-ad-service-principal). In this example, the Client Secret is `08:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m`. The final string for the `SECRET` argument will be a long sequence of letters and numbers, without hyphens (except for the Client Secret section, in case the Client Secret contains any hyphens).
+   - Complete the second part of the `SECRET` argument with **Client Secret** from [Step 1: Set up a Microsoft Entra service principal](#step-1-set-up-an-azure-ad-service-principal). In this example, the Client Secret is `yrA8X~PldtMCvUZPxxxxxxxx`. The final string for the `SECRET` argument will be a long sequence of letters and numbers, without hyphens (except for the Client Secret section, in case the Client Secret contains any hyphens).
 
      ```sql
      USE master;
@@ -487,8 +487,8 @@ For a note about the minimum permission levels needed for each action in this se
          -- WITH IDENTITY = 'DocsSampleEKMKeyVault.vault.usgovcloudapi.net', -- for Azure Government
          -- WITH IDENTITY = 'DocsSampleEKMKeyVault.vault.azure.cn',          -- for Microsoft Azure operated by 21Vianet
          -- WITH IDENTITY = 'DocsSampleEKMKeyVault.vault.microsoftazure.de', -- for Azure Germany
-                --<----Application (Client) ID ---><--Azure AD app (Client) ID secret-->
-         SECRET = '9A57CBC54C4C40E2B517EA677E0EFA0008:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m'
+                --<----Application (Client) ID ---><--Microsoft Entra app (Client) ID secret-->
+         SECRET = 'd956f6b9xxxxxxxyrA8X~PldtMCvUZPxxxxxxxx'
      FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM;
   
      -- Add the credential to the SQL Server administrator's domain login
@@ -506,7 +506,7 @@ For a note about the minimum permission levels needed for each action in this se
      > Be sure to first complete the Registry prerequisites for this step.
 
    - Replace `EKMSampleASYKey` with the name you'd like the key to have in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
-   - Replace `ContosoRSAKey0` with the name of your key in your Azure Key Vault.
+   - Replace `ContosoRSAKey0` with the name of your key in your Azure Key Vault. The below is an example of a version-less key.
 
    ```sql
    CREATE ASYMMETRIC KEY EKMSampleASYKey
@@ -674,9 +674,15 @@ If the credential has a client secret that is about to expire, a new secret can 
 
 ## Rotate asymmetric key with a new AKV key or a new AKV key version
 
+> [!NOTE]
+>
+> - When manually rotating an AKV key, SQL Server supports both AKV version-less key or versioned key and there's no need to use a different AKV key.
+> - The original AKV key can be rotated creating a new version that can replace the previous key created in SQL Server.
+> - For manual key rotation, a new SQL Server asymmetric key must be created referring to the version-less key or versioned key that was rotated in AKV. For the new SQL Server asymmetric key, the version-less AKV key will automatically be chosen using the highest key version in AKV. For the versioned key, you must indicate the highest version in AKV using the syntax `WITH PROVIDER_KEY_NAME = <key_name>/<version>`. You can alter the database encryption key to re-encrypt with the new asymmetric key. The same key name (versioned or version-less) can be used with AKV rotation policy. For versioned key, the current version must be added. For version-less key, use the same key name.
+
 SQL Server doesn't have a mechanism to automatically rotate the asymmetric key used for TDE. The steps to rotate an asymmetric key manually are as follows.
 
-1. Create a new credential for the new asymmetric key:
+1. The credential used in our initial setup (`sysadmin_ekm_cred`) can also be reused for the key rotation. Optionally, create a new credential for the new asymmetric key.
 
    ```sql
    CREATE CREDENTIAL <new_credential_name>
@@ -688,20 +694,21 @@ SQL Server doesn't have a mechanism to automatically rotate the asymmetric key u
 1. Add the credential to the principal:
 
    ```sql
-   ALTER LOGIN [domain\username];
+   ALTER LOGIN [domain\userName];
    ADD CREDENTIAL <new_credential_name>;
    ```
 
-1. Create the new asymmetric key based on the new key:
+1. Create the new asymmetric key based on the new key (after rotating the key):
 
    ```sql
    CREATE ASYMMETRIC KEY <new_ekm_key_name>
     FROM PROVIDER [AzureKeyVault_EKM]  
-    WITH PROVIDER_KEY_NAME = <new_key_from_keyvault>,  
+    WITH PROVIDER_KEY_NAME = <new_key_from_key_vault>,  
     CREATION_DISPOSITION = OPEN_EXISTING;
    ```
 
 1. Create a new login from the new asymmetric key:
+
    ```sql
    CREATE LOGIN <new_login_name>
    FROM ASYMMETRIC KEY <new_ekm_key_name>;
@@ -724,16 +731,25 @@ SQL Server doesn't have a mechanism to automatically rotate the asymmetric key u
 1. Alter the database encryption key (DEK) to re-encrypt with the new asymmetric key:
 
    ```sql
-   USE [dbname];
+   USE [databaseName];
    GO
    ALTER DATABASE ENCRYPTION KEY ENCRYPTION BY SERVER ASYMMETRIC KEY <new_ekm_key_name>;
    ```
 
-> [!NOTE]  
-> Rotating the logical TDE protector for a server means switching to a new asymmetric key or certificate that protects the database encryption key (DEK). Key rotation is an online operation and should only take a few seconds to complete, because this only decrypts and re-encrypts the DEK, not the entire database.
+1. You can verify the new asymmetric key and the encryption key used in the database:
 
-> [!IMPORTANT]  
-> Don't delete previous versions of the key after rotation. When keys are rotated, some data is still encrypted with the previous keys, such as older database backups, backed-up log files, and transaction log files.
+   ```sql
+   SELECT encryptor_type, encryption_state_desc, encryptor_thumbprint 
+   FROM sys.dm_database_encryption_keys 
+   WHERE database_id = DB_ID('databaseName');
+   ```
+
+   This thumbprint should match the registry key under the path `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Cryptographic Provider\Azure Key Vault\<key_vault_url>\<thumbprint>` and give you the `KeyUri` for your rotated key.
+
+> [!IMPORTANT]
+> Rotating the logical TDE protector for a server means switching to a new asymmetric key or certificate that protects the database encryption key (DEK). Key rotation is an online operation and should only take a few seconds to complete, because this only decrypts and re-encrypts the DEK and not the entire database.
+>
+> Don't delete previous versions of the key after rotation. When keys are rotated, some data is still encrypted with the previous keys, such as older database backups, backed-up log files, and transaction log files. Previous keys might also be required for a database recovery or a database restore.
 
 ## Next steps
 

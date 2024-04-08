@@ -5,7 +5,7 @@ description: Learn how to create a new database watcher to monitor an Azure SQL 
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 03/28/2024
+ms.date: 04/08/2024
 ms.service: sql-db-mi
 ms.subservice: monitoring
 ms.topic: quickstart
@@ -16,7 +16,7 @@ monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 
 # Quickstart: Create a database watcher to monitor Azure SQL (preview)
 
-This article shows you how to create a new database watcher to monitor an Azure SQL database, elastic pool, or SQL managed instance. For an introduction to database watcher, see [Monitor Azure SQL workloads with database watcher](database-watcher-overview.md).
+This article shows you how to create a new database watcher to monitor an Azure SQL database, elastic pool, or SQL managed instance. For an introduction to database watcher, see [Monitor Azure SQL workloads with database watcher](database-watcher-overview.md). For a detailed description of database watcher setup and configuration, see [Create and configure a database watcher](database-watcher-manage.md).
 
 Follow the steps to create a database watcher and start monitoring your Azure SQL resources in minutes. The watcher you create uses Microsoft Entra authentication and private connectivity to the monitoring targets.
 

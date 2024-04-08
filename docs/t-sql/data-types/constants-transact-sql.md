@@ -4,7 +4,7 @@ description: "Constants (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 03/20/2023
+ms.date: 04/04/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: "reference"
@@ -36,6 +36,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 A constant, also known as a literal or a scalar value, is a symbol that represents a specific data value. The format of a constant depends on the data type of the value it represents.
+
+> [!NOTE]
+> The term *constant* in application development and the concept of a *constant* in Transact-SQL (T-SQL) are not the same. There is no specific way to set a global static value in T-SQL. Constants in T-SQL are the equivalent of string literal values.
 
 ## Character string constants
 
@@ -156,7 +159,7 @@ The following are examples of **float** or **real** values:
 
 **money** constants are represented as string of numbers with an optional decimal point and an optional currency symbol as a prefix. **money** constants aren't enclosed in quotation marks.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doesn't enforce any kind of grouping rules such as inserting a comma (`,`) every three digits in strings that represent money.
+[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] doesn't enforce any kind of grouping rules such as inserting a comma (`,`) every three digits in strings that represent money.
 
 > [!NOTE]  
 > Commas are ignored anywhere in a string literal that is cast to the **money** data type.
@@ -214,9 +217,9 @@ Signed **money** expressions:
 
 ## Enhanced collations
 
-The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] supports character and Unicode string constants that support enhanced collations. For more information, see the [COLLATE (Transact-SQL)](../../t-sql/statements/collations.md) clause.
+The [!INCLUDE [ssDE-md](../../includes/ssde-md.md)] supports character and Unicode string constants that support enhanced collations. For more information, see the [COLLATE (Transact-SQL)](../../t-sql/statements/collations.md) clause.
 
-## See also
+## Related content
 
 - [Data Types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
 - [Expressions (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)

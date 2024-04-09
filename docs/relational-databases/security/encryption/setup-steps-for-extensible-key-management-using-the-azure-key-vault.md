@@ -698,7 +698,7 @@ SQL Server doesn't have a mechanism to automatically rotate the asymmetric key u
    ADD CREDENTIAL <new_credential_name>;
    ```
 
-1. Create the new asymmetric key based on the new key (after rotating the key):
+1. Create the new asymmetric key based on the new key (after rotating the key). The new key could be a version-less key (`ContosoRSAKey0` in our example) or a versioned key (`ContosoRSAKey0/1a4d3b9b393c4678831ccc60def75379` where `1a4d3b9b393c4678831ccc60def75379` is the version of the updated key in AKV):
 
    ```sql
    CREATE ASYMMETRIC KEY <new_ekm_key_name>

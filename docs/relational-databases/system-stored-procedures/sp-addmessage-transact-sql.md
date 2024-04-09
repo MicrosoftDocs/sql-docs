@@ -4,7 +4,7 @@ description: Stores a new user-defined error message in an instance of the SQL S
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 01/23/2024
+ms.date: 04/08/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -53,9 +53,7 @@ The text of the error message. *@msgtext* is **nvarchar(255)**, with a default o
 
 #### [ @lang = ] N'*lang*'
 
-*@lang* is **sysname**, with a default of `NULL`.
-
-The language for this message. *@lang* is **sysname** with a default of `NULL`. Because multiple languages can be installed on the same server, *@lang* specifies the language in which each message is written. When *@lang* is omitted, the language is the default language for the session.
+The language for this message. *@lang* is **sysname**, with a default of `NULL`. Because multiple languages can be installed on the same server, *@lang* specifies the language in which each message is written. When *@lang* is omitted, the language is the default language for the session.
 
 #### [ @with_log = ] '*with_log*'
 
@@ -88,7 +86,7 @@ When localizing messages that contain parameters, use parameter numbers that cor
 
 | Original message | Localized message |
 | --- | --- |
-| 'Original message param 1: %s,<br />param 2: %d' | 'Localized message param 1: %1!,<br />param 2: %2!' |
+| `Original message param 1: %s,<br />param 2: %d` | `Localized message param 1: %1!,<br />param 2: %2!` |
 
 Because of language syntax differences, the parameter numbers in the localized message might not occur in the same sequence as in the original message.
 
@@ -130,7 +128,7 @@ GO
 
 ### C. Change the order of parameters
 
-The following example first adds a message in U.S. English, and then adds a localized message in which the parameter order is changed.
+The following example first adds a message in U.S. English, and then adds a localized message in which the parameter order is changed. In the localized version of the message, the parameter order has changed. The string parameters are in first and second place in the message, and the numeric parameter is third place.
 
 ```sql
 USE master;
@@ -140,24 +138,14 @@ EXEC sp_addmessage
     @msgnum = 60000,
     @severity = 16,
     @msgtext =
-        N'This is a test message with one numeric
-        parameter (%d), one string parameter (%s),
-        and another string parameter (%s).',
+        N'This is a test message with one numeric parameter (%d), one string parameter (%s), and another string parameter (%s).',
     @lang = 'us_english';
 
 EXEC sp_addmessage
     @msgnum = 60000,
     @severity = 16,
     @msgtext =
-        -- In the localized version of the message,
-        -- the parameter order has changed. The
-        -- string parameters are first and second
-        -- place in the message, and the numeric
-        -- parameter is third place.
-        N'Dies ist eine Testmeldung mit einem
-        Zeichenfolgenparameter (%3!),
-        einem weiteren Zeichenfolgenparameter (%2!),
-        und einem numerischen Parameter (%1!).',
+        N'Dies ist eine Testmeldung mit einem Zeichenfolgenparameter (%3!), einem weiteren Zeichenfolgenparameter (%2!), und einem numerischen Parameter (%1!).',
     @lang = 'German';
 GO
 

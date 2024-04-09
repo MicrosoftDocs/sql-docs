@@ -121,7 +121,7 @@ Not implemented in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] ve
 
 #### [ @performance_condition = ] N'*performance_condition*'
 
-A value expressed in the format '*ItemComparatorValue*'. *@performance_condition* is **nvarchar(512)** with a default of `NULL`, and consists of these elements.
+A value expressed in the format '*ItemComparatorValue*'. *@performance_condition* is **nvarchar(512)**, with a default of `NULL`, and consists of these elements.
 
 | Format element | Description |
 | --- | --- |

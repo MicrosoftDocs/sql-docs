@@ -180,7 +180,7 @@ To collect monitoring data, database watcher requires specific, limited access t
 > 
 > When configuring watcher access to a SQL target, always [create a dedicated login using provided scripts](database-watcher-manage.md#grant-access-to-sql-targets-with-t-sql-scripts). Do not add the watcher login or user to any SQL roles or grant any SQL permissions other than the ones listed in the table.
 
-If you [deny](/sql/t-sql/statements/deny-transact-sql.md) required permissions to the database watcher login, or to the `public` database role in any database, database watcher will not collect monitoring data. Depending on which permissions are denied, this might affect some or all datasets.
+If you [deny](/sql/t-sql/statements/deny-transact-sql) required permissions to the database watcher login, or to the `public` database role in any database, database watcher will not collect monitoring data. Depending on which permissions are denied, this might affect some or all datasets.
 
 ## Limitations
 

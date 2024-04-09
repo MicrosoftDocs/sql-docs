@@ -78,7 +78,7 @@ Available languages:
 | Profiler | The Profiler menu isn't localized. | No current alternative. |
 | Query Store Reports | Track Queries report does not update when alternate Metric and Execution options are selected within Configure. | Use SSMS 19.x. |
 | Replication | If Azure SQL Managed Instance is the publisher and SSMS is running on a machine that isn't in the same virtual network as the publisher, you aren't able to insert a tracer token via Replication Monitor. | To insert tracer tokens, use Replication Monitor in SSMS on a machine that is in the same virtual network as the Azure SQL Managed Instance publisher. |
-| SSIS | When creating or modifying a SSIS job step in a SQL Agent job, you receive the error "A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.) (Framework Microsoft SqlClient Data Provider)" regardless of whether Optional or Mandatory is selected for the Encryption property. | Use SSMS 19.3 to create or modify SSIS job steps. |
+| SSIS | When creating or modifying an SSIS job step in a SQL Agent job, you receive the error "A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.) (Framework Microsoft SqlClient Data Provider)" regardless of whether Optional or Mandatory is selected for the Encryption property. | Use SSMS 19.3 to create or modify SSIS job steps. |
 | Stretch Database | Removed Stretch Database Wizard. | Use T-SQL to configure Stretch Database or use SSMS 18.9.1 or earlier to use the Stretch Database Wizard. |
 
 See [Known issues using Strict Encryption in 20.0](#known-issues-using-strict-encryption-in-200) for known issues using SSMS 20.x and Strict Encryption.
@@ -91,7 +91,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 | SSMS version | Build number | Release date |
 | --- | --- | --- |
-| [20.0](#200) | 20.0.70.0 | Narch 19, 2024 |
+| [20.0](#200) | 20.0.70.0 | March 19, 2024 |
 | [19.3](#193) | 19.3.4.0 | January 10, 2024 |
 | [18.12.1](#18121) | 15.0.18420.0 | June 21, 2022 |
 | [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
@@ -159,7 +159,7 @@ Available languages:
 | Profiler | The Profiler menu isn't localized. | No current alternative. |
 | Query Store Reports | Track Queries report does not update when alternate Metric and Execution options are selected within Configure. | Use SSMS 19.x. |
 | Replication | If Azure SQL Managed Instance is the publisher and SSMS is running on a machine that isn't in the same virtual network as the publisher, you aren't able to insert a tracer token via Replication Monitor. | To insert tracer tokens, use Replication Monitor in SSMS on a machine that is in the same virtual network as the Azure SQL Managed Instance publisher. |
-| SSIS | When creating or modifying a SSIS job step in a SQL Agent job, you receive the error "A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.) (Framework Microsoft SqlClient Data Provider)" regardless of whether Optional or Mandatory is selected for the Encryption property. | Use SSMS 19.3 to create or modify SSIS job steps. |
+| SSIS | When creating or modifying an SSIS job step in a SQL Agent job, you receive the error "A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.) (Framework Microsoft SqlClient Data Provider)" regardless of whether Optional or Mandatory is selected for the Encryption property. | Use SSMS 19.3 to create or modify SSIS job steps. |
 | Stretch Database | Removed Stretch Database Wizard. | Use T-SQL to configure Stretch Database or use SSMS 18.9.1 or earlier to use the Stretch Database Wizard. |
 
 #### Known issues using Strict Encryption in 20.0

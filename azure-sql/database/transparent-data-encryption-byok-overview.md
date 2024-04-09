@@ -149,7 +149,7 @@ Rotating the TDE protector for a server means to switch to a new asymmetric key 
 
 [Rotation of the TDE protector](transparent-data-encryption-byok-key-rotation.md) can either be done manually or by using the automated rotation feature.
 
-[Automated rotation of the TDE protector](transparent-data-encryption-byok-key-rotation.md#automatic-key-rotation) can be enabled when configuring the TDE protector for the server. Automated rotation is disabled by default. When enabled, the server will continuously check the key vault for any new versions of the key being used as the TDE protector. If a new version of the key is detected, the TDE protector on the server will be automatically rotated to the latest key version within 60 minutes.
+[Automated rotation of the TDE protector](transparent-data-encryption-byok-key-rotation.md#automatic-key-rotation) can be enabled when configuring the TDE protector for the server. Automated rotation is disabled by default. When enabled, the server will continuously check the key vault for any new versions of the key being used as the TDE protector. If a new version of the key is detected, the TDE protector on the server or database will be automatically rotated to the latest key version within 24 hours.
 
 When used with [automated key rotation in Azure Key Vault](/azure/key-vault/keys/how-to-configure-key-rotation), this feature enables end-to-end zero-touch rotation for the TDE protector on Azure SQL Database and Azure SQL Managed Instance.
 

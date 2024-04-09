@@ -53,10 +53,14 @@ Users can be assigned to built-in roles that have these permissions, for example
 
 ### Set proxy exclusions
 
+> [!NOTE]
+> The exclusion in this section is required for the March, 2024 release and before.
+>
+> Beginning with the release in April, 2024 this exclusion is not required.
+
 If a proxy server is used, set the `NO_PROXY` environment variable to exclude proxy traffic for:
 
 - `localhost`
-
 - `127.0.0.1`
 
 ### Connect to Azure Arc data processing service

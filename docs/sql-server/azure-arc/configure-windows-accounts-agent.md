@@ -51,7 +51,7 @@ Base key: `HKEY_LOCAL_MACHINE`
 | `SYSTEM\CurrentControlSet\Services` | Read | SQL Server account name. | Default |
 | `SOFTWARE\Microsoft\AzureDefender\SQL` | Read | Azure Defender status and last update time. | Default |
 | `SOFTWARE\Microsoft\SqlServerExtension` | Full control | Extension related values. | Default |
-| `SOFTWARE\Policies\Microsoft\Windows` | Read and Write | Enabling automatic windows update via extension. | Patching |
+| `SOFTWARE\Policies\Microsoft\Windows` | Read and Write | Enabling automatic windows update via extension. | Automatic updates |
 
 ## Group permissions
 

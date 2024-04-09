@@ -4,7 +4,7 @@ description: Release notes for SQL Server Management Studio (SSMS).
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan, randolphwest
-ms.date: 04/02/2024
+ms.date: 04/09/2024
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -20,9 +20,82 @@ This article details updates, improvements, and bug fixes for the current and pr
 
 ## Current SSMS release
 
-:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server Management Studio (SSMS) 20.0](https://aka.ms/ssmsfullsetup)**
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server Management Studio (SSMS) 20.1](https://aka.ms/ssmsfullsetup)**
 
-SSMS 20.0 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
+SSMS 20.1 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
+
+### 20.1
+
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 20.1](https://go.microsoft.com/fwlink/?linkid=2267019&clcid=0x409)
+
+- Release number: 20.1
+- Build number: 20.1.10.0
+- Release date: April 9, 2024
+
+Available languages:
+
+- [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2267019&clcid=0x804)
+- [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2267019&clcid=0x404)
+- [English (United States)](https://go.microsoft.com/fwlink/?linkid=2267019&clcid=0x409)
+- [French](https://go.microsoft.com/fwlink/?linkid=2267019&clcid=0x40c)
+- [German](https://go.microsoft.com/fwlink/?linkid=2267019&clcid=0x407)
+- [Italian](https://go.microsoft.com/fwlink/?linkid=2267019&clcid=0x410)
+- [Japanese](https://go.microsoft.com/fwlink/?linkid=2267019&clcid=0x411)
+- [Korean](https://go.microsoft.com/fwlink/?linkid=2267019&clcid=0x412)
+- [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2267019&clcid=0x416)
+- [Russian](https://go.microsoft.com/fwlink/?linkid=2267019&clcid=0x419)
+- [Spanish](https://go.microsoft.com/fwlink/?linkid=2267019&clcid=0x40a)
+
+#### What's new in 20.1
+
+| Feature | Details |
+| --- | --- |
+| Client Drivers | Updated SSMS to use the latest driver versions for MSODBCSQL.MSI (17.10.6.1) and MSOLEDBSQL.MSI (18.7.2). The inclusion of these new versions could require users who also have older versions of the drivers to reboot after installing SSMS 20.1. For more information, review the release notes for the [Microsoft ODBC driver](../connect/odbc/windows/release-notes-odbc-sql-server-windows.md) and the [Microsoft OLE DB driver](../connect/oledb/release-notes-for-oledb-driver-for-sql-server.md). |
+| Libraries | Updated Server Management Objects (SMO) version to 171.31.0. |
+| Libraries | Updated Microsoft Visual C++ Redistributable version to 14.38.33135.0. The inclusion of these new versions could require users who also have older versions of the drivers to reboot after installing SSMS 20.1. |
+| Object Explorer | Updated Object Explorer to display table names prefixed with schema in Graph edge constraint connections. |
+
+#### Bug fixes in 20.1
+
+| Feature | Details |
+| --- | --- |
+| Maintenance Plans | Resolved issue where Backup Database Task dialog closed after selecting the **Files and Filegroups** radio button in the dialog. |
+| SqlParser | Added support for DEFAULT_DATABASE option to CREATE LOGIN T-SQL syntax when using EXTERNAL PROVIDER. |
+| SqlParser | Added support for NATIVE_COMPILATION and SCHEMABINDING options to CREATE TRIGGER T-SQL syntax. |
+
+#### Known issues 20.1
+
+| Feature | Details | Workaround |
+| --- | --- | --- |
+| Analysis Services | When you connect to Analysis Services with Microsoft Entra MFA, if you add a new role or open properties for a role, the message "the identity of the user being added to the role isn't fetched properly" appears. | This error is benign and can be ignored. The error is addressed within the Azure infrastructure, and no updates to SSMS are required. |
+| Analysis Services | After adding a new role, or when opening properties for an existing role, you can't use **Search by name or email address** to add a user. | A user can be added with the **Manual Entry** option. |
+| Database Designer | Selecting the Design option for a view referencing a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
+| Database Mirroring | If you launch the Database Mirroring Monitor from the mirrored node, the primary node isn't listed. | Register the mirrored node from Database Mirroring Monitoring, or use SSMS 18.12.1 to monitor from the mirrored node. |
+| General SSMS | Import settings from SSMS 17 option not available. | Settings can be imported from SSMS 18. |
+| Link feature for Azure SQL Managed Instance | After you remove an existing mirroring endpoint certificate on [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], link creation through the wizard might fail due to unestablished trust between [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] and Azure SQL Managed Instance, even though all checks are successful. | Use PowerShell command `Get-AzSqlInstanceServerTrustCertificate` to check whether [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] mirroring endpoint certificate named `<SQL_Server_Instance_Name>` exists in the Azure SQL Managed Instance. If so, use PowerShell command `Remove-AzSqlInstanceServerTrustCertificate` to remove it before a new link creation attempt. |
+| Linked servers | Creating a linked server to Azure SQL Database with [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] selected as Server type connects to the `master` database. | To create a linked server to Azure SQL Database, select **Other data source** for the **Server type**, and select **Microsoft OLE DB Provider for SQL Server** or **Microsoft OLE DB Driver for SQL Server** as the **Provider**. Enter the logical server name in the Data source field and the database name in the Catalog field. |
+| PolyBase | PolyBase node isn't visible in Object Explorer when you connect to [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. | Use SSMS 18.12.1. |
+| Profiler | The Profiler menu isn't localized. | No current alternative. |
+| Query Store Reports | Track Queries report does not update when alternate Metric and Execution options are selected within Configure. | Use SSMS 19.x. |
+| Replication | If Azure SQL Managed Instance is the publisher and SSMS is running on a machine that isn't in the same virtual network as the publisher, you aren't able to insert a tracer token via Replication Monitor. | To insert tracer tokens, use Replication Monitor in SSMS on a machine that is in the same virtual network as the Azure SQL Managed Instance publisher. |
+| SSIS | When creating or modifying a SSIS job step in a SQL Agent job, you receive the error "A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.) (Framework Microsoft SqlClient Data Provider)" regardless of whether Optional or Mandatory is selected for the Encryption property. | Use SSMS 19.3 to create or modify SSIS job steps. |
+| Stretch Database | Removed Stretch Database Wizard. | Use T-SQL to configure Stretch Database or use SSMS 18.9.1 or earlier to use the Stretch Database Wizard. |
+
+See [Known issues using Strict Encryption in 20.0](#known-issues-using-strict-encryption-in-200) for known issues using SSMS 20.x and Strict Encryption.
+
+You can reference [SQL user feedback](https://aka.ms/ssms-feedback) for other known issues (filter on **Tooling** under **Groups**) and to provide feedback to the product team.
+
+## Previous SSMS releases
+
+Download previous SSMS versions by selecting the download link in the related section.
+
+| SSMS version | Build number | Release date |
+| --- | --- | --- |
+| [20.0](#200) | 20.0.70.0 | Narch 19, 2024 |
+| [19.3](#193) | 19.3.4.0 | January 10, 2024 |
+| [18.12.1](#18121) | 15.0.18420.0 | June 21, 2022 |
+| [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
+| [16.5.3](#1653) | 13.0.16106.4 | January 30, 2017 |
 
 ### 20.0
 
@@ -84,7 +157,9 @@ Available languages:
 | Maintenance Plans | Selecting the **Files and Filegroups** radio button in the Backup Database Task causes the dialog to close unexpectedly. | No current alternative. |
 | PolyBase | PolyBase node isn't visible in Object Explorer when you connect to [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. | Use SSMS 18.12.1. |
 | Profiler | The Profiler menu isn't localized. | No current alternative. |
+| Query Store Reports | Track Queries report does not update when alternate Metric and Execution options are selected within Configure. | Use SSMS 19.x. |
 | Replication | If Azure SQL Managed Instance is the publisher and SSMS is running on a machine that isn't in the same virtual network as the publisher, you aren't able to insert a tracer token via Replication Monitor. | To insert tracer tokens, use Replication Monitor in SSMS on a machine that is in the same virtual network as the Azure SQL Managed Instance publisher. |
+| SSIS | When creating or modifying a SSIS job step in a SQL Agent job, you receive the error "A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.) (Framework Microsoft SqlClient Data Provider)" regardless of whether Optional or Mandatory is selected for the Encryption property. | Use SSMS 19.3 to create or modify SSIS job steps. |
 | Stretch Database | Removed Stretch Database Wizard. | Use T-SQL to configure Stretch Database or use SSMS 18.9.1 or earlier to use the Stretch Database Wizard. |
 
 #### Known issues using Strict Encryption in 20.0
@@ -100,18 +175,6 @@ Available languages:
 | PowerShell | When you connect to a server with *Strict (SQL Server 2022 and Azure SQL)* encryption, selecting **Start Powershell** from a node in Object Explorer generates the error "SQL Server PowerShell provider error: Could not connect to SERVERNAME. [Failed to connect to server SERVERNAME. --> A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.) --> An existing connection was forcibly closed by the remote host]". | No current alternative. |
 | SQL Server Logs | When SQL Server is configured with **Force Strict Encryption**, you can't view the SQL Server ERRORLOG files via Object Explorer, or executing `master.dbo.sp_enumerrorlogs` or `sys.xp_enumerrorlogs` via the Query Editor. | View the ERRORLOG files in the Log folder using File Explorer. |
 
-You can reference [SQL user feedback](https://aka.ms/ssms-feedback) for other known issues (filter on **Tooling** under **Groups**) and to provide feedback to the product team.
-
-## Previous SSMS releases
-
-Download previous SSMS versions by selecting the download link in the related section.
-
-| SSMS version | Build number | Release date |
-| --- | --- | --- |
-| [19.3](#193) | 19.3.4.0 | January 10, 2024 |
-| [18.12.1](#18121) | 15.0.18420.0 | June 21, 2022 |
-| [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
-| [16.5.3](#1653) | 13.0.16106.4 | January 30, 2017 |
 
 ### 19.3
 
@@ -121,7 +184,19 @@ Download previous SSMS versions by selecting the download link in the related se
 - Build number: 19.3.4.0
 - Release date: January 10, 2024
 
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x40a) |
+Available languages:
+
+- [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x804)
+- [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x404)
+- [English (United States)](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x409)
+- [French](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x40c)
+- [German](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x407)
+- [Italian](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x410)
+- [Japanese](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x411)
+- [Korean](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x412)
+- [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x416)
+- [Russian](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x419)
+- [Spanish](https://go.microsoft.com/fwlink/?linkid=2257624&clcid=0x40a) |
 
 #### What's new in 19.3
 
@@ -166,7 +241,19 @@ Download previous SSMS versions by selecting the download link in the related se
 - Build number: 15.0.18424.0
 - Release date: June 21, 2022
 
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x40a)
+Available languages:
+
+- [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x804)
+- [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x404)
+- [English (United States)](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x409)
+- [French](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x40c)
+- [German](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x407)
+- [Italian](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x410)
+- [Japanese](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x411)
+- [Korean](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x412)
+- [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x416)
+- [Russian](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x419)
+- [Spanish](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x40a)
 
 #### What's new in 18.12.1
 
@@ -190,7 +277,19 @@ Download previous SSMS versions by selecting the download link in the related se
 - Build number: 14.0.17289.0
 - Release date: November 21, 2018
 
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804)| [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404)| [English (United States)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)| [French](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c)| [German](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407)| [Italian](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410)| [Japanese](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411)| [Korean](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412)| [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416)| [Russian](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419)| [Spanish](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
+Available languages:
+
+- [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804)
+- [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404)
+- [English (United States)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+- [French](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c)
+- [German](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407)
+- [Italian](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410)
+- [Japanese](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411)
+- [Korean](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412)
+- [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416)
+- [Russian](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419)
+- [Spanish](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
 
 #### What's new in 17.9.1
 
@@ -239,7 +338,19 @@ If your SSMS installation is having problems, and a standard uninstall and reins
 - Build number: 13.0.16106.4
 - Release date: January 30, 2017
 
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804)| [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404)| [English (United States)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409)| [French](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c)| [German](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407)| [Italian](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410)| [Japanese](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411)| [Korean](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412)| [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416)| [Russian](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419)| [Spanish](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
+Available languages:
+
+- [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804)
+- [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404)
+- [English (United States)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409)
+- [French](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c)
+- [German](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407)
+- [Italian](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410)
+- [Japanese](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411)
+- [Korean](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412)
+- [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416)
+- [Russian](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419)
+- [Spanish](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
 
 #### Bug fixes in 16.5.3
 

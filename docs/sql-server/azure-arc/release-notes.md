@@ -34,7 +34,7 @@ For details, review:
 - [Configure SQL Server enabled by Azure Arc](manage-configuration.md)
 
 > [!NOTE]
-> The feature roll out to allow the updated licensing and billing support is in process. It may not be available in all regions immediately. It should be available in all regions within 5 business days of the release.
+> The new licensing and billing features may not be available in all regions immediately. They should be available in all regions within 5 business days of the release.
 
 ### Updated performance dashboard
 

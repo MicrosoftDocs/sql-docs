@@ -129,6 +129,8 @@ If the caller of `sys.databases` isn't the owner of the database and the databas
 
 In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] this view is available in the `master` database and in user databases. In the `master` database, this view returns the information on the `master` database and all user databases on the server. In a user database, this view returns information only on the current database and the `master` database.
 
+Due to possible metadata synchronization, the `sys.databases` view may provide incorrect information regarding database encryption. To ensure accurate results, we recommend you use the [sys.dm_database_encryption_keys](../system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) view to obtain the actual encryption status.
+
 Use the `sys.databases` view in the `master` database of the [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] server where the new database is being created. After the database copy starts, you can query the `sys.databases` and `sys.dm_database_copies` views from the `master` database of the destination server to retrieve more information about the copying progress.
 
 ## Examples

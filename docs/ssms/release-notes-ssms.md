@@ -50,7 +50,8 @@ Available languages:
 
 | Feature | Details |
 | --- | --- |
-| Client Drivers | Updated SSMS to use the latest driver versions for MSODBCSQL.MSI (17.10.6.1) and MSOLEDBSQL.MSI (18.7.2). The inclusion of these new versions could require users who also have older versions of the drivers to reboot after installing SSMS 20.1. For more information, review the release notes for the [Microsoft ODBC driver](../connect/odbc/windows/release-notes-odbc-sql-server-windows.md) and the [Microsoft OLE DB driver](../connect/oledb/release-notes-for-oledb-driver-for-sql-server.md). |
+| Drivers | Updated SSMS to use the latest driver versions for MSODBCSQL.MSI (17.10.6.1) and MSOLEDBSQL.MSI (18.7.2). The inclusion of these new versions could require users who also have older versions of the drivers to reboot after installing SSMS 20.1. For more information, review the release notes for the [Microsoft ODBC driver](../connect/odbc/windows/release-notes-odbc-sql-server-windows.md) and the [Microsoft OLE DB driver](../connect/oledb/release-notes-for-oledb-driver-for-sql-server.md). |
+| Drivers | Updated Microsoft.Data.SqlClient version from 5.1.4 to 5.1.5. |
 | Libraries | Updated Server Management Objects (SMO) version to 171.31.0. |
 | Libraries | Updated Microsoft Visual C++ Redistributable version to 14.38.33135.0. The inclusion of these new versions could require users who also have older versions of the drivers to reboot after installing SSMS 20.1. |
 | Object Explorer | Updated Object Explorer to display table names prefixed with schema in Graph edge constraint connections. |

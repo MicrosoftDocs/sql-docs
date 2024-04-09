@@ -10369,14 +10369,20 @@ items:
           href: sql-server/azure-arc/view-databases.md
         - name: Configure SQL Server
           href: sql-server/azure-arc/manage-configuration.md
+        - name: Configure billing model
+          href: sql-server/azure-arc/manage-license-billing.md
         - name: Automate patching
           href: sql-server/azure-arc/patch.md
+        - name: Automate updates
+          href: sql-server/azure-arc/update.md
         - name: Disconnect and unregister from Azure Arc
           href: sql-server/azure-arc/delete-from-azure-arc.md
         - name: Monitor (preview)
           href: sql-server/azure-arc/sql-monitoring.md
         - name: Use activity logs
           href: sql-server/azure-arc/activity-logs.md
+        - name: Move resources
+          href: sql-server/azure-arc/move-resources.md
       - name: Business continuity
         items:
         - name: Automated backups to local storage (preview)

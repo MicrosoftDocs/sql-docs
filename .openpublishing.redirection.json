@@ -44261,6 +44261,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/sql-server/azure-arc/patch.md",
+      "redirect_url": "/sql/sql-server/azure-arc/update",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/azdata/reference/reference-azdata-arc.md",
       "redirect_url": "/azure/azure-arc/data/reference/overview",
       "redirect_document_id": false

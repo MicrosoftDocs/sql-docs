@@ -20,7 +20,7 @@ The following table identifies features available by SQL Server edition:
 | [Microsoft Purview: Govern using DevOps and data owner policies](/azure/purview/tutorial-register-scan-on-premises-sql-server) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Automated backups to local storage (preview)](../backup-local.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Point-in-time-restore (preview)](../point-in-time-restore.md) | Yes | Yes | Yes | Yes | Yes | Yes |
-| [Automated patching](../patch.md) | Yes | Yes | Yes | Yes | Yes | Yes |
+| [Automatic updates](../update.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Failover cluster instances (preview)](../support-for-fci.md)| Yes | Yes | Not applicable | Not applicable | Yes | Not applicable |
 | [Always On availability groups (preview)](../manage-availability-group.md)| Yes | Yes | Not applicable | Not applicable | Yes | Not applicable |
 | [Monitoring (preview)](../sql-monitoring.md)| Yes | Yes | No | No | No | No |

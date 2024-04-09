@@ -112,8 +112,6 @@ The **–MaxCmdsInTran** parameter specifies the maximum number of statements gr
 The **–SubscriptionStreams** parameter can greatly improve aggregate replication throughput. It allows multiple connections to a Subscriber to apply batches of changes in parallel, while maintaining many of the transactional characteristics present when using a single thread. If one of the connections fails to execute or commit, all connections will abort the current batch, and the agent will use a single stream to retry the failed batches. Before this retry phase completes, there can be temporary transactional inconsistencies at the Subscriber. After the failed batches are successfully committed, the Subscriber is brought back to a state of transactional consistency.  
   
 A value for this agent parameter can be specified using the `@subscriptionstreams` of [sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).  
-
-For more information on implementing subscription streams, see [Navigating SQL replication subscriptionStream setting](https://repltalk.com/2010/03/01/navigating-sql-replication-subscriptionstreams-setting/).
   
 ### Blocking Monitor Thread
 
@@ -152,10 +150,8 @@ Distribution Agent uses one session to retry the batch that could not be applied
   
 Committing a set of transactions has a fixed overhead; by committing a larger number of transactions less frequently, the overhead is spread across a larger volume of data.  Increasing CommitBatchSize (up to 200) can improve performance as more transactions are committed to the subscriber. However, the benefit of increasing this parameter drops off as the cost of applying changes is gated by other factors, such as the maximum I/O of the disk that contains the log. Additionally, there is a trade-off to be considered: any failure that causes the Distribution Agent to start over must roll back and reapply a larger number of transactions. For unreliable networks, a lower value can result in fewer failures and a smaller number of transactions to roll back and reapply if a failure occurs.  
   
+## Related content
 
-## See more
-  
-[Work with Replication Agent Profiles](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
-[View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
-[Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
-  
+- [Work with Replication Agent Profiles](../agents/work-with-replication-agent-profiles.md)
+- [View and Modify Replication Agent Command Prompt Parameters](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)
+- [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)

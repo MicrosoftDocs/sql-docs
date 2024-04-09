@@ -33,6 +33,9 @@ For details, review:
 - [Manage licensing and billing of SQL Server enabled by Azure Arc](manage-license-billing.md).
 - [Configure SQL Server enabled by Azure Arc](manage-configuration.md)
 
+> [!NOTE]
+> The feature roll out to allow the updated licensing and billing support is in process. It may not be available in all regions immediately. It should be available in all regions within 5 business days of the release.
+
 ### Updated performance dashboard
 
 * New built-in role and action available to manage access to the performance dashboard

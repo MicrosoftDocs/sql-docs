@@ -5,7 +5,7 @@ description: An overview of database watcher for Azure SQL, a managed monitoring
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 04/08/2024
+ms.date: 04/09/2024
 ms.service: sql-db-mi
 ms.subservice: monitoring
 ms.topic: conceptual
@@ -179,6 +179,8 @@ To collect monitoring data, database watcher requires specific, limited access t
 > When a watcher connects to an Azure SQL resource, it validates the SQL permissions it holds. If the permissions granted are insufficient, or *if unnecessary permissions are granted*, the watcher disconnects. This ensures that the watcher can collect system monitoring data, but is not accidentally granted access to any other data in your databases.
 > 
 > When configuring watcher access to a SQL target, always [create a dedicated login using provided scripts](database-watcher-manage.md#grant-access-to-sql-targets-with-t-sql-scripts). Do not add the watcher login or user to any SQL roles or grant any SQL permissions other than the ones listed in the table.
+
+If you [deny](/sql/t-sql/statements/deny-transact-sql.md) required permissions to the database watcher login, or to the `public` database role in any database, database watcher will not collect monitoring data. Depending on which permissions are denied, this might affect some or all datasets.
 
 ## Limitations
 

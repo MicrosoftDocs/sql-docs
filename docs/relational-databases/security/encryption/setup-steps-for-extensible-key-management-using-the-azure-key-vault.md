@@ -751,7 +751,7 @@ SQL Server doesn't have a mechanism to automatically rotate the asymmetric key u
 >
 > Don't delete previous versions of the key after rotation. When keys are rotated, some data is still encrypted with the previous keys, such as older database backups, backed-up log files, virtual log files (VLF), and transaction log files. Previous keys might also be required for a database recovery or a database restore.
 
-## Next steps
+## Related content
 
 - [Use the SQL Server Connector with SQL encryption features](use-sql-server-connector-with-sql-encryption-features.md)
 - [Extensible Key Management with Azure Key Vault](extensible-key-management-using-azure-key-vault-sql-server.md)

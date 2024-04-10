@@ -506,7 +506,7 @@ For a note about the minimum permission levels needed for each action in this se
      > Be sure to first complete the Registry prerequisites for this step.
 
    - Replace `EKMSampleASYKey` with the name you'd like the key to have in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
-   - Replace `ContosoRSAKey0` with the name of your key in your Azure Key Vault. The below is an example of a version-less key.
+   - Replace `ContosoRSAKey0` with the name of your key in your Azure Key Vault. Below is an example of a version-less key.
 
    ```sql
    CREATE ASYMMETRIC KEY EKMSampleASYKey
@@ -633,7 +633,7 @@ For a note about the minimum permission levels needed for each action in this se
    GO
    ```
 
-For sample scripts, see the blog at [SQL Server Transparent Data Encryption and Extensible Key Management with Azure Key Vault](https://techcommunity.microsoft.com/t5/sql-server/intro-sql-server-transparent-data-encryption-and-extensible-key/ba-p/1427549).
+   For sample scripts, see the blog at [SQL Server Transparent Data Encryption and Extensible Key Management with Azure Key Vault](https://techcommunity.microsoft.com/t5/sql-server/intro-sql-server-transparent-data-encryption-and-extensible-key/ba-p/1427549).
 
 1. The `SQL Server Cryptographic Provider` registry key isn't cleaned up automatically after a key or all EKM keys are deleted. It must be cleaned up manually. Cleaning the registry key should be done with extreme caution, since cleaning the registry prematurely can break the EKM functionality. To clean up the registry key, delete the `SQL Server Cryptographic Provider` registry key on `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft`.
 

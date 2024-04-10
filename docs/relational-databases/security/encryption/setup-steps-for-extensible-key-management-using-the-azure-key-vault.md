@@ -4,7 +4,7 @@ description: Install and configure the SQL Server Connector for Azure Key Vault.
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto, randolphwest
-ms.date: 04/08/2024
+ms.date: 04/10/2024
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -379,7 +379,7 @@ Download the SQL Server Connector from the [Microsoft Download Center](https://g
 > - There is a breaking change in version 1.0.5.0 in terms of the thumbprint algorithm. You may experience database restore failures after upgrading to 1.0.5.0. For more information, see [KB article 447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
 > - Starting with version 1.0.5.0 (TimeStamp: September 2020), the SQL Server Connector supports filtering messages and network request retry logic.
 > - Starting with updated version 1.0.5.0 (TimeStamp: November 2020), the SQL Server Connector supports RSA 2048, RSA 3072, RSA-HSM 2048 and RSA-HSM 3072 keys.
-> - Starting with updated version 1.0.5.0, you can refer to a specific key version in the Azure Key Vault.
+> - Starting with updated version 1.0.5.0 (TimeStamp: November 2020), you can refer to a specific key version in the Azure Key Vault.
 
 :::image type="content" source="media/ekm/ekm-connector-install.png" alt-text="Screenshot of the SQL Server Connector installation wizard.":::
 
@@ -749,7 +749,7 @@ SQL Server doesn't have a mechanism to automatically rotate the asymmetric key u
 > [!IMPORTANT]
 > Rotating the logical TDE protector for a server means switching to a new asymmetric key or certificate that protects the database encryption key (DEK). Key rotation is an online operation and should only take a few seconds to complete, because this only decrypts and re-encrypts the DEK and not the entire database.
 >
-> Don't delete previous versions of the key after rotation. When keys are rotated, some data is still encrypted with the previous keys, such as older database backups, backed-up log files, and transaction log files. Previous keys might also be required for a database recovery or a database restore.
+> Don't delete previous versions of the key after rotation. When keys are rotated, some data is still encrypted with the previous keys, such as older database backups, backed-up log files, virtual log files (VLF), and transaction log files. Previous keys might also be required for a database recovery or a database restore.
 
 ## Next steps
 

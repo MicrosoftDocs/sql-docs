@@ -4,7 +4,7 @@ description: Learn about maintenance instructions and common troubleshooting ste
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto, maghan
-ms.date: 09/09/2023
+ms.date: 04/10/2024
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -114,7 +114,7 @@ Versions 1.0.0.440 and older have been replaced and are no longer supported in p
 1. Uninstall the new version using **Control Panel\Programs\Programs and Features**
     1. Application name: SQL Server Connector for Microsoft Azure Key Vault
     1. Version: 15.0.2000.440
-    1. DLL file date: 09/11/2020 ‏‎5:17 AM
+    1. DLL file date: 11/24/2020 ‏‎5:17 AM
 
 1. Install old version of SQL Server Connector for Microsoft Azure Key Vault
     1. Version: 15.0.300.96
@@ -129,7 +129,7 @@ Versions 1.0.0.440 and older have been replaced and are no longer supported in p
 
 Deep links to older versions of the SQL Server Connector
 
-- Current: [1.0.5.0 (version 15.0.2000.440) – File date September 11, 2020](https://download.microsoft.com/download/8/0/9/809494f2-bac9-4388-ad07-7eaf9745d77b/1033_15.0.2000.440/SQLServerConnectorforMicrosoftAzureKeyVault.msi)
+- Current: [1.0.5.0 (version 15.0.2000.440) – File date November 24, 2020](https://download.microsoft.com/download/8/0/9/809494f2-bac9-4388-ad07-7eaf9745d77b/1033_15.0.2000.440/SQLServerConnectorforMicrosoftAzureKeyVault.msi)
 - [1.0.5.0 (version 15.0.300.96) – File date January 30, 2018](https://download.microsoft.com/download/8/0/9/809494f2-bac9-4388-ad07-7eaf9745d77b/SQL%20Server%20Connector%20for%20Microsoft%20Azure%20Key%20Vault%201.0.5.0.msi)
 - [1.0.4.0: (version 13.0.811.168)](https://download.microsoft.com/download/8/0/9/809494f2-bac9-4388-ad07-7eaf9745d77b/SQL%20Server%20Connector%20for%20Microsoft%20Azure%20Key%20Vault%201.0.4.0.msi)
 

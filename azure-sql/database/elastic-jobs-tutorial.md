@@ -1,23 +1,20 @@
 ---
-title: Create, configure, and manage elastic jobs (preview)
+title: Create, configure, and manage elastic jobs
 description: "Learn how to create, configure, and manage elastic jobs to run Transact-SQL (T-SQL) scripts across a set of one or more databases in Azure SQL Database."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: srinia, mathoma
-ms.date: 12/04/2023
+ms.date: 04/03/2024
 ms.service: sql-database
 ms.subservice: elastic-jobs
 ms.topic: how-to
 ms.custom: sqldbrb=1
 ---
-# Create, configure, and manage elastic jobs (preview)
+# Create, configure, and manage elastic jobs
 
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 This article provides the steps required to create, configure, and manage elastic jobs for Azure SQL Database. You can accomplish many of these steps in the Azure portal and by using T-SQL, PowerShell, and the REST API. [Elastic jobs](elastic-jobs-overview.md) enable the running of one or more Transact-SQL (T-SQL) scripts in parallel across many databases. For more information, [learn more about the job automation concepts in Azure SQL Database](job-automation-overview.md) or read more about [Elastic jobs in Azure SQL Database](elastic-jobs-overview.md).
-
-> [!NOTE]
-> Elastic jobs are in preview. Features currently in preview are available under [supplemental terms of use](https://azure.microsoft.com/support/legal/preview-supplemental-terms/), review for legal terms that apply to Azure features that are in preview. Azure SQL Database provides previews to give you a chance to evaluate and [share feedback with the product group](https://feedback.azure.com/d365community/forum/ef2b2b38-2f25-ec11-b6e6-000d3a4f0f84) on features before they become generally available (GA).
 
 ## Create and configure the elastic job agent
 
@@ -167,7 +164,6 @@ To proceed with the Azure portal:
     :::image type="content" source="media/elastic-jobs-tutorial/create-alert-rule-condition.png" alt-text="Screenshot from the Azure portal showing the Create an alert rule page." lightbox="media/elastic-jobs-tutorial/create-alert-rule-condition.png":::
 1. Under **Alert logic**, leave the **Threshold**, **Aggregation type**, **Operator**, and **Unit** as default. 
 1. Set **Threshold value** to `0`. Leave other settings as default.
-1. Review the cost estimate in the cost **Preview**.
 1. Select **Next: Actions**.
 1. Select **Create action group** or choose an existing action group. 
     1. Create [Azure Monitor Alert action groups](/azure/azure-monitor/alerts/action-groups#create-an-action-group-in-the-azure-portal) in the Azure portal to set notification settings, for example, to email administrators or developers of the failure.
@@ -229,7 +225,7 @@ You can use the [Job agent REST API](/rest/api/sql/job-agents) to scale a job ag
 
 ## Related content
 
-- [Create and manage elastic jobs by using PowerShell (preview)](elastic-jobs-powershell-create.md)
-- [Create and manage elastic jobs by using T-SQL (preview)](elastic-jobs-tsql-create-manage.md)
-- [Elastic jobs in Azure SQL Database (preview)](elastic-jobs-overview.md)
+- [Create and manage elastic jobs by using PowerShell](elastic-jobs-powershell-create.md)
+- [Create and manage elastic jobs by using T-SQL](elastic-jobs-tsql-create-manage.md)
+- [Elastic jobs in Azure SQL Database](elastic-jobs-overview.md)
 - [Security best practices for elastic jobs](elastic-jobs-overview.md#security-best-practices)

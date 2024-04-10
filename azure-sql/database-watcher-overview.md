@@ -215,7 +215,9 @@ During preview, database watcher has the following known issues.
 
 This section describes the steps you can take to solve common problems. If the steps in this section don't solve the problem, [open a support case](https://azure.microsoft.com/support/create-ticket/).
 
-### No new data appears in the data store or on dashboards
+### No new data is ingested into the data store
+
+If you created a new watcher and do not see monitoring data, or if you see only older data on dashboards, review this section.
 
 - On the watcher **Overview** page, check the **Status** field to see if the watcher is running. If not, use the **Start** button on the same page to start data collection. A new watcher is not [started](database-watcher-manage.md#start-and-stop-a-watcher) automatically.
 - Check that the watcher has the specific, limited access to all [SQL targets](database-watcher-manage.md#grant-access-to-sql-targets) and to the [data store](database-watcher-manage.md#grant-access-to-data-store). Additionally, if using SQL authentication for any targets, check watcher [access to key vault](database-watcher-manage.md#additional-configuration-to-use-sql-authentication), or use the recommended Microsoft Entra authentication instead.
@@ -225,6 +227,30 @@ This section describes the steps you can take to solve common problems. If the s
 - If you are using the free Azure Data Explorer cluster, make sure that you haven't reached the [storage capacity](/azure/data-explorer/start-for-free#specifications) of the cluster. When the cluster is close to reaching its capacity, or is at capacity, a warning message appears on the [free cluster page](https://dataexplorer.azure.com/freecluster). If storage capacity is reached, new monitoring data cannot be ingested. You can [upgrade to a full Azure Data Explorer cluster](/azure/data-explorer/start-for-free-upgrade), or you can reduce data retention to delete older data and free up space for new data. For more information, see [Retention policy](/azure/data-explorer/kusto/management/retention-policy).
 
 If you make changes to watcher access or connectivity as part of troubleshooting, you might need to stop and restart the watcher for the changes to take effect.
+
+### The dashboards are blank
+
+If you select the **Dashboards** page of a watcher, but do not see a summary of SQL targets on the page, expand the **Data store** section. If you see a *Cannot connect ...* error, review this section.
+
+- You might not have access to the data store. For more information, see [Grant users and groups access to the data store](database-watcher-manage.md#grant-users-and-groups-access-to-the-data-store).
+- The Azure Data Explorer cluster might be stopped. For more information, see [Stopped Azure Data Explorer clusters](database-watcher-manage.md#stopped-azure-data-explorer-clusters).
+- The Azure Data Explorer cluster or database, or the Real-Time Analytics database might have been deleted after it was selected as the data store for your watcher. Navigate to the cluster and the database, and confirm that it exists.
+
+To validate that you have access and can connect to the data store, and that the data store database exists, follow these steps:
+
+- On the **Dashboards** page of a watcher, expand the **Data store** section, and copy the **Kusto query URI** value. Make sure to copy the entire URI string. Make a note of the **Kusto database** value as well.
+- Open the Azure Data Explorer [web UI](https://dataexplorer.azure.com/clusters). Sign in if prompted.
+- Select **Add**, **Connection**, and enter the copied URI as the **Connection URI**.
+- Select **Add** to create a new connection.
+- Once a new connection entry is added, expand it to view the databases.
+- Select the database referenced as the **Kusto database** on the **Dashboards** page of your watcher, and select the **+** sign on the top menu to open a new query connection to this database.
+- Enter and run the following KQL command:
+
+  ```kusto
+  .show database principals;
+  ```
+
+  Check that a row for a **Viewer** or higher privileged role exists for your user account, or for an Microsoft Entra ID group that contains your user account.
 
 ## Send feedback
 

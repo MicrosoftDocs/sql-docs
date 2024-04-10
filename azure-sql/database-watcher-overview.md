@@ -220,9 +220,9 @@ This section describes the steps you can take to solve common problems. If the s
 If you create a new watcher and do not see monitoring data on dashboards and in the data store, or if you only see older data, review this section.
 
 - On the watcher **Overview** page, check the **Status** field to see if the watcher is running. If not, use the **Start** button on the same page to start data collection. A new watcher is not [started](database-watcher-manage.md#start-and-stop-a-watcher) automatically.
-- Check that the watcher has access to the [data store](database-watcher-manage.md#grant-access-to-data-store).
+- Check that the watcher has [access to the data store](database-watcher-manage.md#grant-access-to-data-store).
 - If you use an Azure Data Explorer database as the data store, check that the Azure Data Explorer cluster is started. For more information, see [Stopped Azure Data Explorer clusters](database-watcher-manage.md#stopped-azure-data-explorer-clusters).
-- Check that the watcher has the specific, limited access to all [SQL targets](database-watcher-manage.md#grant-access-to-sql-targets). Additionally, if using SQL authentication for any targets, check watcher [access to key vault](database-watcher-manage.md#additional-configuration-to-use-sql-authentication), or use the recommended Microsoft Entra authentication instead.
+- Check that the watcher has the specific, limited [access to SQL targets](database-watcher-manage.md#grant-access-to-sql-targets). Additionally, if using SQL authentication for any targets, check watcher [access to key vault](database-watcher-manage.md#additional-configuration-to-use-sql-authentication), or use the recommended Microsoft Entra authentication instead.
 - If you want the watcher to use Microsoft Entra authentication to connect to SQL targets, make sure that [Microsoft Entra authentication is enabled](database/authentication-aad-configure.md) on the logical servers hosting the database and elastic pool targets, and on the managed instance targets.
 - If you created any private endpoints for the watcher, make sure that they are approved by the resource owner.
 - If you are using public connectivity, make sure that the [requirements](database-watcher-overview.md#public-connectivity) to allow the watcher to connect to targets, data store, and key vault are met.
@@ -245,14 +245,14 @@ To validate that you have access and can connect to the data store, and that the
 - Select **Add**, **Connection**, and enter the copied URI as the **Connection URI**.
 - Select **Add** to create a new connection.
 - Once a new connection entry is added, expand it to view the databases.
-- Select the database referenced as the **Kusto database** on the **Dashboards** page of your watcher, and select the **+** sign on the top menu to open a new query connection to this database.
-- Enter and run the following KQL command:
+- Select the database referenced as the **Kusto database** on the **Dashboards** page of your watcher, and select the **+** sign on the tab bar to open a new query tab connected to this database.
+- Run the following KQL command:
 
   ```kusto
   .show database principals;
   ```
 
-  Check that a row for a **Viewer** or a higher privileged role exists for your user account, or for an Microsoft Entra ID group that contains your user account.
+  Check that a row for a **Viewer** or a higher privileged role exists for your user account, or for a Microsoft Entra ID group that contains your user account.
 
 ## Send feedback
 

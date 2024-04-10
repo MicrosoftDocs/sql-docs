@@ -5,7 +5,7 @@ description: Setup and configuration details for database watcher
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 04/08/2024
+ms.date: 04/10/2024
 ms.service: sql-db-mi
 ms.subservice: monitoring
 ms.topic: how-to
@@ -424,7 +424,9 @@ For more information, see [Kusto role-based access control](/azure/data-explorer
 
 ### Grant users and groups access to the data store
 
-You can use Azure portal or a KQL command to grant users and groups access to a database on an Azure Data Explorer cluster. Use a KQL command to grant access to a database on the free Azure Data Explorer cluster or in Real-Time Analytics. To follow the principle of least privilege, we recommend that you do not add users and groups to any RBAC role other than **Viewers**.
+You can use Azure portal or a KQL command to grant users and groups access to a database on an Azure Data Explorer cluster or in Real-Time Analytics. To grant access, you must be a member of the **Admin** RBAC role in the database.
+
+Use a KQL command to grant access to a database on the free Azure Data Explorer cluster or in Real-Time Analytics. To follow the principle of least privilege, we recommend that you do not add users and groups to any RBAC role other than **Viewer**.
 
 > [!IMPORTANT]
 > Carefully consider your data privacy and security requirements when granting access to view SQL monitoring data collected by database watcher.

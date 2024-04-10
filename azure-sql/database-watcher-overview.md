@@ -5,7 +5,7 @@ description: An overview of database watcher for Azure SQL, a managed monitoring
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 04/09/2024
+ms.date: 04/10/2024
 ms.service: sql-db-mi
 ms.subservice: monitoring
 ms.topic: conceptual
@@ -198,7 +198,7 @@ During preview, database watcher has the following known issues.
 
 | Issue | Mitigation or workaround |
 |:--|:--|
-| If data collection cannot start or continue because of an error (for example, insufficient access to a SQL target or to the data store), the error is not exposed in the Activity log. | To troubleshoot, see [No new data appears in the data store or on dashboards](#no-new-data-appears-in-the-data-store-or-on-dashboards). |
+| If data collection cannot start or continue because of an error (for example, insufficient access to a SQL target or to the data store), the error is not exposed in the Activity log. | To troubleshoot, see [Data is not collected](#data-is-not-collected). |
 | Disabling the system-assigned managed identity of a watcher is not supported. | To delete the system-assigned identity of a watcher from the directory, delete the watcher. |
 | If a [serverless](./database/serverless-tier-overview.md) database has auto-pause enabled, and is added as a database watcher target, it might not auto-pause as expected. For a [free offer](./database/free-offer.md) database, this might exhaust the free monthly credit sooner than expected. | If retaining the auto-pause functionality is required, do not use database watcher to monitor serverless databases at this time. |
 | For Azure SQL Managed Instance, data is not collected from the readable high availability replica or from a geo-replica if you are using SQL authentication. | There are two workarounds: </br>1. Use the Microsoft Entra ID authentication (preferred). </br>2. Disable the password policy check. Execute `ALTER LOGIN [database-watcher-login-placeholder] WITH CHECK_POLICY = OFF;`, replacing `database-watcher-login-placeholder` with the name of the SQL authentication login of the watcher. Execute this command on the primary replica, and on the geo-replica, if any. |
@@ -215,16 +215,44 @@ During preview, database watcher has the following known issues.
 
 This section describes the steps you can take to solve common problems. If the steps in this section don't solve the problem, [open a support case](https://azure.microsoft.com/support/create-ticket/).
 
-### No new data appears in the data store or on dashboards
+### Data is not collected
+
+If you create a new watcher and do not see monitoring data on dashboards and in the data store, or if you only see older data, review this section.
 
 - On the watcher **Overview** page, check the **Status** field to see if the watcher is running. If not, use the **Start** button on the same page to start data collection. A new watcher is not [started](database-watcher-manage.md#start-and-stop-a-watcher) automatically.
-- Check that the watcher has the specific, limited access to all [SQL targets](database-watcher-manage.md#grant-access-to-sql-targets) and to the [data store](database-watcher-manage.md#grant-access-to-data-store). Additionally, if using SQL authentication for any targets, check watcher [access to key vault](database-watcher-manage.md#additional-configuration-to-use-sql-authentication), or use the recommended Microsoft Entra authentication instead.
+- Check that the watcher has [access to the data store](database-watcher-manage.md#grant-access-to-data-store).
+- If you use an Azure Data Explorer database as the data store, check that the Azure Data Explorer cluster is started. For more information, see [Stopped Azure Data Explorer clusters](database-watcher-manage.md#stopped-azure-data-explorer-clusters).
+- Check that the watcher has the specific, limited [access to SQL targets](database-watcher-manage.md#grant-access-to-sql-targets). Additionally, if using SQL authentication for any targets, check watcher [access to key vault](database-watcher-manage.md#additional-configuration-to-use-sql-authentication), or use the recommended Microsoft Entra authentication instead.
 - If you want the watcher to use Microsoft Entra authentication to connect to SQL targets, make sure that [Microsoft Entra authentication is enabled](database/authentication-aad-configure.md) on the logical servers hosting the database and elastic pool targets, and on the managed instance targets.
 - If you created any private endpoints for the watcher, make sure that they are approved by the resource owner.
 - If you are using public connectivity, make sure that the [requirements](database-watcher-overview.md#public-connectivity) to allow the watcher to connect to targets, data store, and key vault are met.
 - If you are using the free Azure Data Explorer cluster, make sure that you haven't reached the [storage capacity](/azure/data-explorer/start-for-free#specifications) of the cluster. When the cluster is close to reaching its capacity, or is at capacity, a warning message appears on the [free cluster page](https://dataexplorer.azure.com/freecluster). If storage capacity is reached, new monitoring data cannot be ingested. You can [upgrade to a full Azure Data Explorer cluster](/azure/data-explorer/start-for-free-upgrade), or you can reduce data retention to delete older data and free up space for new data. For more information, see [Retention policy](/azure/data-explorer/kusto/management/retention-policy).
 
 If you make changes to watcher access or connectivity as part of troubleshooting, you might need to stop and restart the watcher for the changes to take effect.
+
+### Dashboards are blank
+
+If you select the **Dashboards** page of a watcher, but do not see a summary of SQL targets on the page, expand the **Data store** section. If you see a *Cannot connect ...* error, review this section.
+
+- You might not have access to the data store. For more information, see [Grant users and groups access to the data store](database-watcher-manage.md#grant-users-and-groups-access-to-the-data-store).
+- The Azure Data Explorer cluster might be stopped. For more information, see [Stopped Azure Data Explorer clusters](database-watcher-manage.md#stopped-azure-data-explorer-clusters).
+- The Azure Data Explorer cluster or database, or the Real-Time Analytics database might have been deleted after it was selected as the data store for your watcher. Navigate to the cluster and the database, and confirm that they exist.
+
+To validate that you have access and can connect to the data store, and that the data store database exists, follow these steps:
+
+- On the **Dashboards** page of a watcher, expand the **Data store** section, and copy the **Kusto query URI** value. Make sure to copy the entire URI string. Make a note of the **Kusto database** value as well.
+- Open the Azure Data Explorer [web UI](https://dataexplorer.azure.com/clusters). Sign in if prompted.
+- Select **Add**, **Connection**, and enter the copied URI as the **Connection URI**.
+- Select **Add** to create a new connection.
+- Once a new connection entry is added, expand it to view the databases.
+- Select the database referenced as the **Kusto database** on the **Dashboards** page of your watcher, and select the **+** sign on the tab bar to open a new query tab connected to this database.
+- Run the following KQL command:
+
+  ```kusto
+  .show database principals;
+  ```
+
+  Check that a row for a **Viewer** or a higher privileged role exists for your user account, or for a Microsoft Entra ID group that contains your user account.
 
 ## Send feedback
 

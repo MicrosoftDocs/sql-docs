@@ -192,7 +192,7 @@ The [SQL Managed Instance link feature](../managed-instance/managed-instance-lin
 
 #### Can I keep running on-premises, while modernizing my applications in Azure?
 
-With SQL Server 2016, 2017, 2019, and 2022, you can use the [Link feature for Azure SQL Managed Instance](../managed-instance/managed-instance-link-feature-overview.md) to create a hybrid connection between SQL Server and Azure SQL Managed Instance. Data is replicated near real-time from SQL Server to Azure, and can be used to modernize your workloads in Azure. You can use the replicated data in Azure for read scale-out and for offloading analytics.
+With SQL Server 2016, 2019, and 2022, you can use the [Link feature for Azure SQL Managed Instance](../managed-instance/managed-instance-link-feature-overview.md) to create a hybrid connection between SQL Server and Azure SQL Managed Instance. Data is replicated near real-time from SQL Server to Azure, and can be used to modernize your workloads in Azure. You can use the replicated data in Azure for read scale-out and for offloading analytics.
 
 #### For how long can I keep the hybrid solution using Link feature for Azure SQL Managed Instance running?
 

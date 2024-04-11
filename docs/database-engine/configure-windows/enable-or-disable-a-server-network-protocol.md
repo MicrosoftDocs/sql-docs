@@ -62,8 +62,7 @@ All network protocols are installed during installation, by [!INCLUDE[ssNoVersio
    You can run this script from any machine, with or withour SQL Server installed. Make sure you have the **SqlServer** module installed.
 
    ```powershell
-   #requires SqlServer
-
+   #requires the SqlServer module
    Import-Module SQLServer
 
    $wmi = New-Object Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer <#computer_name#>

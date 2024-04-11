@@ -3,7 +3,7 @@ title: Enable or disable a server network protocol
 description: Use SQL Server Configuration Manager or PowerShell to enable or disable a SQL Server server network protocol.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 04/10/2023
+ms.date: 04/11/2024
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -53,16 +53,23 @@ All network protocols are installed during installation, by [!INCLUDE[ssNoVersio
 
 1. Start Windows PowerShell from the taskbar or Start menu.
 
-1. Import the **sqlps** module by entering `Import-Module sqlps`.
+1. Import the **SqlServer** module by entering `Import-Module SqlServer`.
 
 1. Execute the following statements to enable both the TCP and named pipes protocols. Replace `<computer_name>` with the name of the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you are configuring a named instance (including [!INCLUDE [ssexpress-md](../../includes/ssexpress-md.md)] edition), replace `MSSQLSERVER` with the instance name.
 
    To disable protocols, set the `IsEnabled` properties to `$false`.
 
+   You can run this script from any machine, with or withour SQL Server installed. Make sure you have the **SqlServer** module installed.
+
    ```powershell
-   $smo = 'Microsoft.SqlServer.Management.Smo.'
-   $wmi = new-object ($smo + 'Wmi.ManagedComputer') <computer_name>
- 
+   #requires SqlServer
+
+   Import-Module SQLServer
+
+   $wmi = New-Object Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer <#computer_name#>
+   $uri = "ManagedComputer[@Name='<#computer_name#>']/ServerInstance[@Name='<#instance name or MSSQLSERVER for the default instance#>']/ServerProtocol[@Name='Tcp']"
+   $Tcp = $wmi.GetSmoObject($uri)
+
    # List the object properties, including the instance names.
    $Wmi
  
@@ -119,7 +126,7 @@ $DfltInstance
 > [!NOTE]  
 > If you have a named instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], including [!INCLUDE [ssexpress-md](../../includes/ssexpress-md.md)] edition, you should also restart the SQL Server Browser service.
 
-## Next steps
+## Related content
 
 - [Start, stop, pause, resume, and restart SQL Server services](start-stop-pause-resume-restart-sql-server-services.md)
 - [SQL Server Browser (SQL Server Configuration Manager)](../../tools/configuration-manager/sql-server-browser-sql-server-configuration-manager.md)

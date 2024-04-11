@@ -68,6 +68,21 @@ Now, with [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)], you have the op
 
 Once [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] has reached the end of its support lifecycle, you can sign up for an Extended Security Update (ESU) subscription for your servers and remain protected for up to three years. When you upgrade to a newer version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], your ESU subscription is automatically canceled. When you [migrate to Azure SQL](/azure/azure-sql/migration-guides/), the ESU charges automatically stop but you continue to have access to the ESUs.
 
+## Migration assessment
+
+[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] assessment is a crucial tool for your cloud migration and modernization journey. It simplifies the discovery and readiness assessment for migration by providing:
+
+- Cloud readiness analysis
+- Identification of risks and mitigation strategies
+- Recommendations for the specific service tier and Azure SQL configuration (SKU size) that best fits the workload needs
+- Automatic generation of the assessment
+- Continuous running on a default schedule of once per week
+- Availability for all SQL Server editions
+
+This assessment is for SQL Servers located in various environments, including your data center, edge sites, or any public cloud or hosting provider. It is available for any instance of SQL Server that is enabled by Azure Arc.
+
+For details, review [Configure SQL best practices assessment - SQL Server enabled by Azure Arc](assess.md).
+
 ## Architecture
 
 The SQL Server instance that you want to enable with Azure Arc can be installed in a virtual or physical machine running Windows or Linux. The [Azure Connected Machine agent](/azure/azure-arc/servers/agent-overview) and the Azure Extension for SQL Server securely connect to Azure to establish communication channels with multiple Azure services using only outbound HTTPS traffic on TCP port 443 using Transport Layer Security (TLS). The Azure Connected Machine agent can communicate through a configurable HTTPS proxy server over Azure Express Route, Azure Private Link or over the Internet. Review the [overview](/azure/azure-arc/servers/agent-overview), [network requirements](/azure/azure-arc/servers/network-requirements), and [prerequisites](/azure/azure-arc/servers/prerequisites) for the Azure Connected Machine agent.

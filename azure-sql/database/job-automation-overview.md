@@ -5,7 +5,7 @@ description: "Features for job automation to run Transact-SQL (T-SQL) scripts in
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: srinia, mathoma
-ms.date: 11/02/2023
+ms.date: 04/09/2024
 ms.service: sql-db-mi
 ms.topic: conceptual
 ms.custom: sqldbrb=1
@@ -21,7 +21,7 @@ This article summarizes job automation options in Azure SQL platforms, including
 
 Consider the following job scheduling and task automation technologies on different Azure SQL platforms:
 
-- **Elastic jobs** (Preview) are job scheduling services that execute custom jobs on one or many databases in [Azure SQL Database](sql-database-paas-overview.md) or [Azure SQL Database elastic pools](elastic-pool-overview.md). For more information, see the [elastic jobs overview](elastic-jobs-overview.md).
+- **Elastic jobs** are job scheduling services that execute custom jobs on one or many databases in [Azure SQL Database](sql-database-paas-overview.md) or [Azure SQL Database elastic pools](elastic-pool-overview.md). For more information, see the [elastic jobs overview](elastic-jobs-overview.md).
 - **SQL Agent Jobs** are executed by the [SQL Agent service](/sql/ssms/agent/sql-server-agent) that continues to be used for task automation in SQL Server and is also included with Azure SQL Managed Instances. For T-SQL script job automation in Azure SQL Managed Instance, consider [SQL Agent for Azure SQL Managed Instance](../managed-instance/job-automation-managed-instance.md). The SQL Agent on SQL managed instances is very similar to SQL Server. SQL Agent is not available in Azure SQL Database.
 - **Pipelines with recurring triggers** can be used for T-SQL script automation in Azure Synapse Analytics. [Pipelines with recurring triggers](/azure/synapse-analytics/data-integration/concepts-data-factory-differences) are [based on Azure Data Factory](/azure/synapse-analytics/data-integration/concepts-data-factory-differences).
 
@@ -38,4 +38,4 @@ The following table summarizes key differences between elastic jobs and SQL Agen
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Elastic jobs in Azure SQL Database (preview)](elastic-jobs-overview.md)
+> [Elastic jobs in Azure SQL Database](elastic-jobs-overview.md)

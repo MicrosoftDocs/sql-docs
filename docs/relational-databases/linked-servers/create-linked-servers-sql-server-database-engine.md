@@ -92,7 +92,7 @@ Under **Local server login to remote server login mappings**, repeat the followi
   
 1. Specify a **Local login**.
 
-    Specify the local login that can connect to the linked server. The local login can be either a login using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication or a Windows authentication login. Using a Windows group isn't supported. Use this list to restrict the connection to specific logins, or to allow some logins to connect as a different login.
+    Specify the local login that can connect to the linked server. The local login can be either a login using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication or a Windows authentication login. Using a Windows group or a contained database user isn't supported. Use this list to restrict the connection to specific logins, or to allow some logins to connect as a different login.
 
    > [!NOTE]
    > Common issues with linked servers using Windows authentication to a remote SQL Server instance arise from issues with service principal names (SPNs). For more information, see [Service Principal Name (SPN) Support in Client Connections](../../connect/oledb/features/service-principal-name-spn-support-in-client-connections.md). **Microsoft Kerberos Configuration Manager for SQL Server** is a diagnostic tool that helps troubleshoot Kerberos related connectivity issues with SQL Server. For more information, see [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).

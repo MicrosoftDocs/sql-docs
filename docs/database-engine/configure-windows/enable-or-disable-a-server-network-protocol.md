@@ -70,16 +70,16 @@ All network protocols are installed during installation, by [!INCLUDE[ssNoVersio
 
    # List the object properties, including the instance names.
    $Wmi
- 
+
    # Enable the TCP protocol on the default instance.
-   $uri = "ManagedComputer[@Name='<#computer_name#>']/ServerInstance[@Name='<#instance name or MSSQLSERVER for the default instance#>']/ServerProtocol[@Name='Tcp']"
+   $uri = "ManagedComputer[@Name='<#computer_name#>']/ServerInstance[@Name='MSSQLSERVER']/ServerProtocol[@Name='Tcp']"
    $Tcp = $wmi.GetSmoObject($uri)
    $Tcp.IsEnabled = $true
    $Tcp.Alter()
    $Tcp
  
    # Enable the named pipes protocol for the default instance.
-   $uri = "ManagedComputer[@Name='<#computer_name#>']/ServerInstance[@Name='<#instance name or MSSQLSERVER for the default instance#>']/ServerProtocol[@Name='Np']"
+   $uri = "ManagedComputer[@Name='<#computer_name#>']/ServerInstance[@Name='MSSQLSERVER']/ServerProtocol[@Name='Np']"
    $Np = $wmi.GetSmoObject($uri)
    $Np.IsEnabled = $true
    $Np.Alter()

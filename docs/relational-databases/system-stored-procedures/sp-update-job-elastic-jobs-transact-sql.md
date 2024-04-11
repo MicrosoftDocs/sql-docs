@@ -3,7 +3,7 @@ title: "jobs.sp_update_job (Azure Elastic Jobs) (Transact-SQL)"
 description: "jobs.sp_update_job updates a job created for the Azure Elastic Jobs service for Azure SQL Database."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 10/30/2023
+ms.date: 04/03/2024
 ms.service: sql-database
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -46,7 +46,7 @@ The new name of the job. *new_name* is nvarchar(128).
 
 #### @description  
 
-The description of the job. *description* is nvarchar(512).
+The description of the job. The *description* argument is nvarchar(512).
 
 #### @enabled  
 
@@ -85,7 +85,7 @@ All times in elastic jobs are in the UTC time zone.
 
 ## Remarks
 
-After `jobs.sp_add_job` has been executed to add a job, use [jobs.sp_add_jobstep](sp-add-jobstep-elastic-jobs-transact-sql.md) to add steps that perform the activities for the job.
+After `jobs.sp_add_job` is executed to add a job, use [jobs.sp_add_jobstep](sp-add-jobstep-elastic-jobs-transact-sql.md) to add steps that perform the activities for the job.
 
 ## Permissions
 
@@ -93,6 +93,6 @@ By default, members of the sysadmin fixed server role can execute this stored pr
 
 ## Related content
 
-- [Elastic jobs in Azure SQL Database (preview)](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true)
-- [Create, configure, and manage elastic jobs (preview)](/azure/azure-sql/database/elastic-jobs-tutorial?view=azuresql-db&preserve-view=true)
-- [Create and manage elastic jobs by using T-SQL (preview)](/azure/azure-sql/database/elastic-jobs-tsql-create-manage?view=azuresql-db&preserve-view=true)
+- [Elastic jobs in Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true)
+- [Create, configure, and manage elastic jobs](/azure/azure-sql/database/elastic-jobs-tutorial?view=azuresql-db&preserve-view=true)
+- [Create and manage elastic jobs by using T-SQL](/azure/azure-sql/database/elastic-jobs-tsql-create-manage?view=azuresql-db&preserve-view=true)

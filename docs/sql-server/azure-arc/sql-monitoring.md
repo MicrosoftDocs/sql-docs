@@ -22,7 +22,7 @@ During the feature preview, monitoring is available for free. Fees for this feat
 To view metrics in the portal:
 
 1. Select an instance of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]
-1. Select **Monitoring **Performance Dashboard**
+1. Select **Monitoring** > **Performance Dashboard**
 
 Monitoring is automatic, assuming all prerequisites are met.
 

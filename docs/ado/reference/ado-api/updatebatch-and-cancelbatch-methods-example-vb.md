@@ -40,7 +40,7 @@ Public Sub Main()
         "Initial Catalog='Pubs';Integrated Security='SSPI';"  
     Cnxn.Open strCnxn  
   
-     ' open recordset for batch uodate  
+     ' open recordset for batch update  
     Set rstTitles = New ADODB.Recordset  
     strSQLTitles = "titles"  
     rstTitles.Open strSQLTitles, Cnxn, adOpenKeyset, adLockBatchOptimistic, adCmdTable  

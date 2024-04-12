@@ -1294,7 +1294,7 @@ End Sub
                         <html:i>Anatomic design</html:i> and made from durable leather for a full-day of riding in comfort.</wf:saddle><wf:pedal>  
                         <html:b>Top-of-the-line</html:b> clipless pedals with adjustable tension.</wf:pedal><wf:BikeFrame>Each frame is hand-crafted in our Bothell facility to the optimum diameter   
           and wall-thickness required of a premium mountain frame.   
-          The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.</wf:BikeFrame><wf:crankset> Triple crankset; alumunim crank arm; flawless shifting. </wf:crankset></p1:Features>  
+          The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.</wf:BikeFrame><wf:crankset> Triple crankset; aluminum crank arm; flawless shifting. </wf:crankset></p1:Features>  
                 <!-- add one or more of these elements... one for each specific product in this product model -->  
                 <p1:Picture>  
                     <p1:Angle>front</p1:Angle>  
@@ -1303,7 +1303,7 @@ End Sub
                 </p1:Picture>  
                 <!-- add any tags in <specifications> -->  
                 <p1:Specifications> These are the product specifications.  
-                       <Material>Almuminum Alloy</Material><Color>Available in most colors</Color><ProductLine>Mountain bike</ProductLine><Style>Unisex</Style><RiderExperience>Advanced to Professional riders</RiderExperience></p1:Specifications>  
+                       <Material>Aluminum Alloy</Material><Color>Available in most colors</Color><ProductLine>Mountain bike</ProductLine><Style>Unisex</Style><RiderExperience>Advanced to Professional riders</RiderExperience></p1:Specifications>  
             </p1:ProductDescription>  
         </Desc>  
     </ProductModel>  

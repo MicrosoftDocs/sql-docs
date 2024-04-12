@@ -66,7 +66,7 @@ int main() {
       m_pKeyPrimary->Columns->GetItem("NumField")->RelatedColumn = "CustomerId";  
       m_pKeyPrimary->DeleteRule = adRICascade;  
   
-      // to pass an optional column parameter to Key's Apppend method  
+      // to pass an optional column parameter to Key's Append method  
       _variant_t vOptional;  
       vOptional.vt = VT_ERROR;  
       vOptional.scode = DISP_E_PARAMNOTFOUND;  

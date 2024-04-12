@@ -31,7 +31,7 @@ For detailed SQL Server engine changes, check the [official SQL Server 2019 CU23
 
 | Container OS | Kubernetes API | Runtime | Data Storage | Log Storage |
 | ------------ | ------- | ------- | ------------ | ----------- |
-| Ubuntu 20.04 LTS | 1.25.4 | containerd 1.4.6<br/>CRI-O 1.20.4 | Block only | Block only |
+| Ubuntu 20.04 LTS | 1.25.4 | contained 1.4.6<br/>CRI-O 1.20.4 | Block only | Block only |
 
 Reference Architecture White Papers for [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] can be found on the following pages:
 

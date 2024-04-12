@@ -61,7 +61,7 @@ ms.topic: include
 | 22209 | 16 | No | Internal error. Unable to populate instance member list. |
 | 22210 | 16 | No | Internal error. Unable to get instance member. |
 | 22211 | 16 | No | Internal error. Invalid instance member state. |
-| 22212 | 21 | No | An error occurred while reading remote column store segment HoBt 0x%I64X, Object %d, Column %d, Type %d in database %d. The segement could not be decrypted. |
+| 22212 | 21 | No | An error occurred while reading remote column store segment HoBt 0x%I64X, Object %d, Column %d, Type %d in database %d. The segment could not be decrypted. |
 | 22213 | 16 | No | Internal error. Unable to get catalog information via the sp. |
 | 22214 | 16 | No | Internal error. Unable to initialise XODBC Connection Manager. |
 | 22215 | 16 | No | Internal error. Unable to get catalog information. |
@@ -366,7 +366,7 @@ ms.topic: include
 | 22583 | 16 | No | Article '%s' cannot be added or modified in publication '%s'. The replication of FILESTREAM columns is not supported for articles that have a 'schema_option' set to 0x20000000. This converts large object data types to data types that are supported on earlier versions of Microsoft SQL Server. Remove this 'schema_option' setting by using sp_addmergepublication or sp_changemergepublication, or partition the article vertically so that the FILESTREAM column is not replicated. |
 | 22584 | 10 | No | Warning: Values of some of the flags specified in the 'schema_option' property are not compatible with the publication's compatibility level. The modified schema_option value of '%s' will be used instead. |
 | 22585 | 10 | No | The schema option to script out the FILESTREAM attribute on varbinary(max) columns has been enabled for article '%s'. Enabling this option after the article is created can cause replication to fail when the data in a FILESTREAM column exceeds 2GB and there is a conflict during replication. If you want FILESTREAM data to be replicated, drop and re-create the article, and specify the appropriate schema option when you re-create the article. |
-| 22586 | 16 | No | Column '%s' cannot be added or modified in article '%s' of publication '%s'. The DDL operatoin on hierarchyid and FILESTREAM columns is not supported for publications that have a 'sync_mode' of 1 (character mode) or with a lower than 90RTM backward compatibility level. |
+| 22586 | 16 | No | Column '%s' cannot be added or modified in article '%s' of publication '%s'. The DDL operation on hierarchyid and FILESTREAM columns is not supported for publications that have a 'sync_mode' of 1 (character mode) or with a lower than 90RTM backward compatibility level. |
 | 22587 | 16 | No | Non-SQL Server Publishers and Subscribers are supported only on Windows. The platform detected is %s. |
 | 22588 | 16 | No | Publications on non-Windows platforms cannot support updateable subscriptions. The platform detected is %s. The values of @allow_sync_tran and @allow_queued_tran must be 'false' or NULL. |
 | 22701 | 16 | No | Cannot run this stored procedure as Change Feed feature is not enabled. |

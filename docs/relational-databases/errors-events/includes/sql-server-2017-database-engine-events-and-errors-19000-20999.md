@@ -242,7 +242,7 @@ ms.topic: include
 | 19509 | 16 | No | Cannot create a distributed availability group '%.\*ls'. An availability group with the same name already exists. |
 | 19510 | 16 | No | Distributed availability group '%.\*ls' not found. Rerun the command with an existing distributed availbility group. |
 | 19511 | 16 | No | Cannot join distributed availability group '%.\*ls'. The local availability group '%.\*ls' contains one or more databases. Remove all the databases or create an empty availability group to join a distributed availability group. |
-| 19512 | 16 | No | The requested operation only applies to distributed availability group, and is not supported on the specified availability group '%.\*ls'. Please make sure you are specifing the correct availability group name. |
+| 19512 | 16 | No | The requested operation only applies to distributed availability group, and is not supported on the specified availability group '%.\*ls'. Please make sure you are specifying the correct availability group name. |
 | 19516 | 16 | No | Creating Availability Group Listener '%.\*ls' in Availability Group '%.\*ls' with DISTRIBUTED_NETWORK_NAME option is not supported in non WSFC cluster. |
 | 19517 | 16 | No | The specified listener with DNS name, '%.\*ls' in Availability Group '%.\*ls' is a DISTRIBUTED_NETWORK_NAME listener. Cannot add IP to a DISTRIBUTED_NETWORK_NAME listener. |
 | 19518 | 16 | No | The listener port '%.\*ls' is in conflict with other Availability Group listeners. Retry the operation with a unique port. |

@@ -143,7 +143,7 @@ ms.topic: include
 | 4194 | 15 | No | RANGE is only supported with UNBOUNDED and CURRENT ROW window frame delimiters. |
 | 4195 | 16 | No | The reference to column "%.\*ls" is not allowed in an argument to the NTILE function. Only references to columns at an outer scope or standalone expressions and subqueries are allowed here. |
 | 4196 | 16 | No | Column '%ls.%.\*ls' cannot be referenced in the OUTPUT clause because the column definition contains an expression using a window function. |
-| 4197 | 16 | No | An internal query compilation error occured during binding. |
+| 4197 | 16 | No | An internal query compilation error occurred during binding. |
 | 4198 | 16 | No | Collation '%.\*ls' is supported on Unicode data types only. Unicode-only collations cannot be used to specify partition function parameters. |
 | 4202 | 16 | No | BACKUP LOG is not possible because bulk logged changes exist in the database and one or more filegroups are unavailable. |
 | 4208 | 16 | No | The statement %hs is not allowed while the recovery model is SIMPLE. Use BACKUP DATABASE or change the recovery model using ALTER DATABASE. |

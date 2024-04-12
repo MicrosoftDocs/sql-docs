@@ -408,7 +408,7 @@ ms.topic: include
 | 33285 | 16 | No | Cannot set default constraint on encrypted column '%.\*ls.%.\*ls'. Default constraints are unsupported on encrypted columns. |
 | 33286 | 16 | No | Cannot encrypt column '%.\*ls', because it is of a user-defined type. |
 | 33287 | 16 | No | Cannot drop column encryption key '%.\*ls' because the key is referenced by column '%.\*ls.%.\*ls'. |
-| 33288 | 16 | No | The encrypted value for the column encryption key cannot be added. There can be no more than two encrypted values for each column encryption key. Drop an exisiting encrypted value before adding the new one. |
+| 33288 | 16 | No | The encrypted value for the column encryption key cannot be added. There can be no more than two encrypted values for each column encryption key. Drop an existing encrypted value before adding the new one. |
 | 33289 | 16 | No | Cannot create or alter encrypted column '%.\*ls'. Character strings that do not use a \*_BIN2 collation cannot be encrypted using deterministic encryption. |
 | 33290 | 16 | No | There is no column encryption key value associated with the column master key '%.\*ls'. |
 | 33291 | 16 | No | There is already a column encryption key value associated with the column master key '%.\*ls'. |

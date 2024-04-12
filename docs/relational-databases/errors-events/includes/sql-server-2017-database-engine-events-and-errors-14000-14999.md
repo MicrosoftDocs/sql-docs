@@ -93,7 +93,7 @@ ms.topic: include
 | 14096 | 16 | No | The path and name of the table creation script must be specified if the @pre_creation_cmd parameter value is 'drop'. |
 | 14097 | 16 | No | The 'status' value must be 'no column names', 'include column names', 'string literals', 'parameters', 'DTS horizontal partitions' or 'no DTS horizontal partitions'. |
 | 14098 | 16 | No | Cannot drop Distribution Publisher '%s'. The remote Publisher is using '%s' as Distributor. Disable publishing at the Publisher before attempting to drop this relationship. |
-| 14099 | 16 | No | The server '%s' is already defined as a Distributor. To reconfigure the server as a Distributor, you must first uninstall the exisiting Distributor. Use the stored procedure sp_dropdistributor, or use the Disable Publishing and Distribution Wizard. |
+| 14099 | 16 | No | The server '%s' is already defined as a Distributor. To reconfigure the server as a Distributor, you must first uninstall the existing Distributor. Use the stored procedure sp_dropdistributor, or use the Disable Publishing and Distribution Wizard. |
 | 14100 | 16 | No | Specify all articles when subscribing to a publication using concurrent snapshot processing. |
 | 14101 | 16 | No | The publication '%s' already has a Snapshot Agent defined. |
 | 14102 | 16 | No | Specify all articles when unsubscribing from a publication using concurrent snapshot processing. |
@@ -507,7 +507,7 @@ ms.topic: include
 | 14689 | 16 | No | A collection set cannot start if the management data warehouse is not configured. Run the instmdw.sql script to create and configure the management data warehouse. |
 | 14690 | 16 | No | Cannot perform this procedure when the collector is enabled. Disable the collector and then try again. |
 | 14691 | 16 | No | The status of the collector cannot be null. This may indicate an internal corruption in the collector configuration data. |
-| 14692 | 16 | No | Insufficient priveleges to start collection set: '%s'. Only a member of the 'sysadmin' fixed server role can start a collection set without a SQL Server Agent proxy. Attach a SQL Server Agent proxy to the collection set before retrying. |
+| 14692 | 16 | No | Insufficient privileges to start collection set: '%s'. Only a member of the 'sysadmin' fixed server role can start a collection set without a SQL Server Agent proxy. Attach a SQL Server Agent proxy to the collection set before retrying. |
 | 14693 | 16 | No | A collection set cannot start without a schedule. Specify a schedule for the collection set. |
 | 14694 | 16 | No | Cannot upload data on-demand for the collection set '%s' in non-cached mode. |
 | 14695 | 16 | No | Cannot collect data on-demand for the collection set '%s' in cached mode. |

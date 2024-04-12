@@ -142,7 +142,7 @@ ms.topic: include
 | 41832 | 16 | No | Index '%.\*ls' cannot be created on table '%.\*ls', because at least one key column is stored off-row. Index key columns memory-optimized tables must fit within the %d byte limit for in-row data. Simplify the index key or reduce the size of the columns to fit within %d bytes. |
 | 41833 | 16 | No | Columnstore index '%.\*ls' cannot be created, because table '%.\*ls' has columns stored off-row. Columnstore indexes can only be created on memory-optimized table if the columns fit within the %d byte limit for in-row data. Reduce the size of the columns to fit within %d bytes. |
 | 41834 | 16 | No | ALTER TABLE has failed for '%.\*ls' with error code %d. |
-| 41835 | 21 | No | An error (error code: 0x%08lx) occured while adding encryption keys to XTP database '%.\*ls'. |
+| 41835 | 21 | No | An error (error code: 0x%08lx) occurred while adding encryption keys to XTP database '%.\*ls'. |
 | 41836 | 16 | No | Rebuilding log is not supported for databases containing files belonging to MEMORY_OPTIMIZED_DATA filegroup. |
 | 41837 | 16 | No | Boot-page adjustment of XTP database '%.\*ls' requires restart of XTP engine. |
 | 41839 | 16 | No | Transaction exceeded the maximum number of commit dependencies and the last statement was aborted. Retry the statement. |

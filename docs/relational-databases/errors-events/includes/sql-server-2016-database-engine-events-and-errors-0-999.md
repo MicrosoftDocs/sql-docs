@@ -488,7 +488,7 @@ ms.topic: include
 | 687 | 16 | No | Cannot compress a nchar or nvarchar column that has an odd number of bytes. |
 | 688 | 16 | No | Operation not allowed due to an active online index build. |
 | 689 | 16 | No | Operation not allowed because of pending cleanup of online index build. Wait for cleanup to complete and re-run the operation. |
-| 691 | 16 | Yes | An internal error occured. Error code %X. |
+| 691 | 16 | Yes | An internal error occurred. Error code %X. |
 | 692 | 16 | No | Internal error. Buffer provided to write a fixed column value is too large. Run DBCC CHECKDB to check for any corruption. |
 | [701](../mssqlserver-701-database-engine-error.md) | 19 | Yes | There is insufficient system memory in resource pool '%ls' to run this query. |
 | 708 | 10 | Yes | Server is running low on virtual address space or machine is running low on virtual memory. Reserved memory used %d times since startup. Cancel query and re-run, decrease server load, or cancel other applications. |

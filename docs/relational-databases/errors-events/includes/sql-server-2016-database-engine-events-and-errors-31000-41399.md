@@ -111,7 +111,7 @@ ms.topic: include
 | 33022 | 16 | No | Cannot obtain cryptographic provider properties. Provider error code: %d. |
 | 33023 | 16 | No | The %S_MSG is too long. Maximum allowed length is %d bytes. |
 | 33024 | 16 | No | Cryptographic provider %S_MSG '%ls' in dll is different from the guid recorded in system catalog for provider with id %d. |
-| 33025 | 16 | No | Invalid cryptograpihic provider property: %S_MSG. |
+| 33025 | 16 | No | Invalid cryptographic provider property: %S_MSG. |
 | 33026 | 16 | No | Cryptographic provider with guid '%ls' already exists. |
 | [33027](../mssqlserver-33027-database-engine-error.md) | 16 | No | Cannot load library '%.\*ls'. See errorlog for more information. |
 | [33028](../mssqlserver-33028-database-engine-error.md) | 16 | No | Cannot open session for %S_MSG '%.\*ls'. Provider error code: %d. (%S_MSG) |
@@ -341,7 +341,7 @@ ms.topic: include
 | 33285 | 16 | No | Cannot set default constraint on encrypted column '%.\*ls.%.\*ls'. Default constraints are unsupported on encrypted columns. |
 | 33286 | 16 | No | Cannot encrypt column '%.\*ls', because it is of a user-defined type. |
 | 33287 | 16 | No | Cannot drop column encryption key '%.\*ls' because the key is referenced by column '%.\*ls.%.\*ls'. |
-| 33288 | 16 | No | The encrypted value for the column encryption key cannot be added. There can be no more than two encrypted values for each column encryption key. Drop an exisiting encrypted value before adding the new one. |
+| 33288 | 16 | No | The encrypted value for the column encryption key cannot be added. There can be no more than two encrypted values for each column encryption key. Drop an existing encrypted value before adding the new one. |
 | 33289 | 16 | No | Cannot create encrypted column '%.\*ls', character strings that do not use a \*_BIN2 collation cannot be encrypted. |
 | 33290 | 16 | No | There is no column encryption key value associated with the column master key '%.\*ls'. |
 | 33291 | 16 | No | There is already a column encryption key value associated with the column master key '%.\*ls'. |
@@ -403,7 +403,7 @@ ms.topic: include
 | 33417 | 16 | No | An invalid path locator caused a FileTable check constraint error. The path locator has a level of %d, which is deeper than the limit of %d supported by FileTable. Reduce the depth of the directory hierarchy. |
 | 33418 | 16 | No | FILETABLE_DIRECTORY '%.\*s' attempting to be set on table '%.\*s' is not unique in the database '%.\*s'. Provide a unique value for the option FILETABLE_DIRECTORY to this operation. |
 | 33419 | 16 | No | Function %ls is only valid on the varbinary(max) FILESTREAM column in a FileTable. |
-| 33420 | 16 | No | Unable to process object '%.\*s' because it is a three-part or four-part name. Specifying the server or database is not supported in the object identifer. |
+| 33420 | 16 | No | Unable to process object '%.\*s' because it is a three-part or four-part name. Specifying the server or database is not supported in the object identifier. |
 | 33421 | 16 | No | The object name '%.\*s' is not a valid FileTable object. |
 | 33422 | 16 | No | The column '%.\*s' cannot be added to table '%.\*s' as it is a FileTable. Adding columns to the fixed schema of a FileTable object is not permitted. |
 | 33423 | 16 | No | Invalid FileTable path name or format. |
@@ -565,7 +565,7 @@ ms.topic: include
 | 35268 | 16 | Yes | Synchronization of a secondary database, '%.\*ls', was interrupted, leaving the database in an inconsistent state. The database will enter the RESTORING state. To complete recovery and bring the database online, use current log backups from the primary database to restore the log records past LSN %S_LSN. Alternatively, drop this secondary database, and prepare a new one by restoring a full database backup of the primary database followed by all subsequent log backups. |
 | 35269 | 21 | Yes | Synchronization of a secondary database, '%.\*ls', was interrupted, leaving the database in an inconsistent state. The database will be marked SUSPECT. To return the database to a consistent state, restore it from a clean database backup followed by all subsequent log backups. |
 | 35270 | 10 | No | Received a corrupt FileStream transport message. The '%ls' message section is invalid. |
-| 35271 | 16 | No | The availability database %ls in availailability group %ls failed to complete a reconfiguration. Refer to the error code for more details. If this condition persists, contact the system administrator. |
+| 35271 | 16 | No | The availability database %ls in availability group %ls failed to complete a reconfiguration. Refer to the error code for more details. If this condition persists, contact the system administrator. |
 | 35272 | 16 | No | Either nvalid parameters were supplied for sys.sp_availability_group_command_internal or user does not have permissions to execute this procedure. |
 | 35273 | 10 | Yes | Bypassing recovery for database '%ls' because it is marked as an inaccessible availability database. The session with the primary replica was interrupted while reverting the database to the common recovery point. Either the WSFC node lacks quorum or the communications links are broken because of problems with links, endpoint configuration, or permissions (for the server account or security certificate). To gain access to the database, you need to determine what has changed in the session configuration and undo the change. |
 | 35274 | 10 | Yes | Recovery for availability database '%ls' is pending until the secondary replica receives additional transaction log from the primary before it complete and come online. Ensure that the server instance that hosts the primary replica is running. |
@@ -671,7 +671,7 @@ ms.topic: include
 | 35376 | 16 | No | Tuple mover stvf got passed invalid arguments |
 | 35377 | 16 | No | When MARS is on, accessing clustered columnstore indexes is not allowed. |
 | 35378 | 16 | No | Row groups stvf got passed invalid arguments |
-| 35379 | 16 | No | Internal error occured while flushing delete buffer database id %d, table id %d, index id %d, partition number %d. Additional messages in the SQL Server error log may provide more details. |
+| 35379 | 16 | No | Internal error occurred while flushing delete buffer database id %d, table id %d, index id %d, partition number %d. Additional messages in the SQL Server error log may provide more details. |
 | 35380 | 16 | No | The non-clustered columnstore index '%.\*ls' on table '%.\*ls' cannot be reorganized due to an active snapshot transaction. |
 | 35381 | 22 | No | The columnstore blob dictionary header is invalid. |
 | 35382 | 16 | No | The specified COMPRESSION_DELAY option value %d is invalid. The valid range for disk-based table is between (0, 10080) minutes and for memory-optimized table is 0 or between (60, 10080) minutes. |
@@ -725,7 +725,7 @@ ms.topic: include
 | 35452 | 10 | No | Database unavailable |
 | 35453 | 10 | No | it is a system database. Make sure to target a user database. If you want temporary clustered columnstore tables, consider creating a regular user database for them |
 | 35454 | 10 | No | a transaction is currently active. Execute sp_db_enable_clustered_columnstores by itself |
-| 35455 | 10 | No | an internal error occured |
+| 35455 | 10 | No | an internal error occurred |
 | 35456 | 10 | No | it is involved in a mirroring pair. Consider disabling mirroring, changing the setting, then re-establishing mirroring |
 | 35457 | 10 | No | it is a database snapshot |
 | 35458 | 10 | No | it is part of an Always On availability group. Consider removing the database from the availability group, changing the setting, and then adding the database back to the availability group |
@@ -813,7 +813,7 @@ ms.topic: include
 | 39005 | 10 | No | STDOUT message(s) from external script: %.\*ls%.\*ls |
 | 39006 | 10 | No | External script execution status: %.\*ls. |
 | 39007 | 16 | No | The specified language ': %.\*ls' is not supported/configured. |
-| 39008 | 16 | No | Invlid Parameter name '%ls' specified for Procedure. This clashes with internal parameters. |
+| 39008 | 16 | No | Invalid Parameter name '%ls' specified for Procedure. This clashes with internal parameters. |
 | 39009 | 16 | No | Output parameter in external script execution is not yet supported. |
 | 39010 | 16 | No | External script execution encountered an unexpected error (HRESULT = 0x%x). |
 | 39011 | 16 | No | SQL Server was unable to communicate with the LaunchPad service. Please verify the configuration of the service. |

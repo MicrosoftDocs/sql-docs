@@ -357,7 +357,7 @@ ms.topic: include
 | 33285 | 16 | No | Cannot set default constraint on encrypted column '%.\*ls.%.\*ls'. Default constraints are unsupported on encrypted columns. |
 | 33286 | 16 | No | Cannot encrypt column '%.\*ls', because it is of a user-defined type. |
 | 33287 | 16 | No | Cannot drop column encryption key '%.\*ls' because the key is referenced by column '%.\*ls.%.\*ls'. |
-| 33288 | 16 | No | The encrypted value for the column encryption key cannot be added. There can be no more than two encrypted values for each column encryption key. Drop an exisiting encrypted value before adding the new one. |
+| 33288 | 16 | No | The encrypted value for the column encryption key cannot be added. There can be no more than two encrypted values for each column encryption key. Drop an existing encrypted value before adding the new one. |
 | 33289 | 16 | No | Cannot create encrypted column '%.\*ls', character strings that do not use a \*_BIN2 collation cannot be encrypted. |
 | 33290 | 16 | No | There is no column encryption key value associated with the column master key '%.\*ls'. |
 | 33291 | 16 | No | There is already a column encryption key value associated with the column master key '%.\*ls'. |
@@ -419,7 +419,7 @@ ms.topic: include
 | 33417 | 16 | No | An invalid path locator caused a FileTable check constraint error. The path locator has a level of %d, which is deeper than the limit of %d supported by FileTable. Reduce the depth of the directory hierarchy. |
 | 33418 | 16 | No | FILETABLE_DIRECTORY '%.\*s' attempting to be set on table '%.\*s' is not unique in the database '%.\*s'. Provide a unique value for the option FILETABLE_DIRECTORY to this operation. |
 | 33419 | 16 | No | Function %ls is only valid on the varbinary(max) FILESTREAM column in a FileTable. |
-| 33420 | 16 | No | Unable to process object '%.\*s' because it is a three-part or four-part name. Specifying the server or database is not supported in the object identifer. |
+| 33420 | 16 | No | Unable to process object '%.\*s' because it is a three-part or four-part name. Specifying the server or database is not supported in the object identifier. |
 | 33421 | 16 | No | The object name '%.\*s' is not a valid FileTable object. |
 | 33422 | 16 | No | The column '%.\*s' cannot be added to table '%.\*s' as it is a FileTable. Adding columns to the fixed schema of a FileTable object is not permitted. |
 | 33423 | 16 | No | Invalid FileTable path name or format. |
@@ -475,7 +475,7 @@ ms.topic: include
 | 33524 | 10 | No | The fn_get_audit_file function is skipping records from '%.\*ls'. You must be connected to database '%.\*ls' to access its audit logs. |
 | 33525 | 10 | No | The fn_get_audit_file function is skipping records from '%.\*ls'. You must be connected to server '%.\*ls' to access its audit logs. |
 | 33526 | 10 | No | The fn_get_audit_file function is skipping records from '%.\*ls', as it does not conform to the auditing blob naming convention. |
-| 33527 | 16 | No | Error occured while initializing the security functions lookup table. This might be because the installation of SQL Server is corrupted and a required file is missing. |
+| 33527 | 16 | No | Error occurred while initializing the security functions lookup table. This might be because the installation of SQL Server is corrupted and a required file is missing. |
 | 34001 | 16 | No | Dialog with queue 'syspolicy_event_queue' has encountered an error: %s. |
 | 34002 | 16 | No | Dialog with queue 'syspolicy_event_queue' has ended. |
 | 34003 | 16 | No | Error number %d was encountered while processing an event. The error message is: %s. |

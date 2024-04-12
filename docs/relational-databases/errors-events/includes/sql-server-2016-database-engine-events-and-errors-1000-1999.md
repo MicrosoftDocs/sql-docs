@@ -383,7 +383,7 @@ ms.topic: include
 | 1849 | 16 | No | CREATE DATABASE failed because FILESTREAM filegroups were declared and ALLOW_SNAPSHOT_ISOLATION or READ_COMMITTED_SNAPSHOT is set to ON in the model database. Either set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the model database, or create the database without declaring any FILESTREAM filegroups, set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the new database, and then use ALTER DATABSE to add FILESTREAM filegroups and files. |
 | 1850 | 16 | No | Cannot attach database '%.\*ls' because the file name '%.\*ls' is valid on more than one brick. |
 | 1851 | 16 | No | File name '%.\*ls' as relative path is too long after prefixed with default path '%ls'. |
-| 1852 | 21 | No | Error occured when shrinking the physical file. Please check ERRORLOG for more detail. |
+| 1852 | 21 | No | Error occurred when shrinking the physical file. Please check ERRORLOG for more detail. |
 | 1853 | 16 | No | The logical database file '%.\*ls' cannot be found. Specify the full path for the file. |
 | 1854 | 16 | No | The original file name '%.\*ls' for logical database file '%.\*ls' is too long to be combined with the full path to the new primary data file location. |
 | 1855 | 16 | No | System table sysfiles1 is corrupted. |

@@ -12,6 +12,9 @@ ms.topic: conceptual
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
+> [!CAUTION]
+> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+
 This page contains the support matrix and support lifecycle policy for the Microsoft JDBC Driver for SQL Server.
 
 ## Microsoft JDBC Driver support lifecycle matrix and policy

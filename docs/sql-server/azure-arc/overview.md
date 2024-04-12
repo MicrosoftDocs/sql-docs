@@ -70,7 +70,7 @@ Once [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] has reached the 
 
 ## Migration assessment
 
-[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] assessment is a crucial tool for your cloud migration and modernization journey. It simplifies the discovery and readiness assessment for migration by providing:
+[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] migration assessment is a crucial tool for your cloud migration and modernization journey. It simplifies the discovery and readiness assessment for migration by providing:
 
 - Cloud readiness analysis
 - Identification of risks and mitigation strategies
@@ -79,7 +79,7 @@ Once [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] has reached the 
 - Continuous running on a default schedule of once per week
 - Availability for all SQL Server editions
 
-This assessment is for SQL Servers located in various environments, including your data center, edge sites, or any public cloud or hosting provider. It is available for any instance of SQL Server that is enabled by Azure Arc.
+Migration assessment assessment is for SQL Servers located in various environments, including your data center, edge sites, or any public cloud or hosting provider. It is available for any instance of SQL Server that is enabled by Azure Arc.
 
 For details, review [Configure SQL best practices assessment - SQL Server enabled by Azure Arc](assess.md).
 

@@ -9,15 +9,22 @@ ms.topic: conceptual
 ms.custom: ignite-2023
 ---
 
-# Monitor [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] (preview)
+# Monitor SQL Server enabled by Azure Arc (preview)
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-Monitor the performance of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] within the Azure portal. Performance metrics are automatically collected from DMV datasets on eligible instances of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] and sent to the Azure telemetry pipeline for near real-time processing. Performance data can then be viewed on the Performance Dashboard section of a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]. Monitoring data collection is automatic, assuming all prerequisites are met.
+Monitor the performance of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] with performance dashboard in Azure Portalin the Azure portal. Performance metrics are automatically collected from DMV datasets on eligible instances of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] and sent to the Azure telemetry pipeline for near real-time processing.
 
 [!INCLUDE [azure-arc-sql-preview](includes/azure-arc-sql-preview.md)]
 
 During the feature preview, monitoring is available for free. Fees for this feature after general availability are to be determined.
+
+To view metrics in the portal:
+
+1. Select an instance of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]
+1. Select **Monitoring **Performance Dashboard**
+
+Monitoring is automatic, assuming all prerequisites are met.
 
 ## Prerequisites
 

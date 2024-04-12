@@ -57,6 +57,9 @@ To support the [!INCLUDE [ssHADR](../../../includes/sshadr-md.md)] feature, ensu
 
 - **Sufficient disk space:** Every computer on which a server instance hosts an availability replica must possess sufficient disk space for all the databases in the availability group. Keep in mind that as primary databases grow, their corresponding secondary databases grow the same amount.
 
+- ** Identical disk layout:** Every computer on which a server instance hosts an availability replica should have identical list of disks (with exact disk drive letters and sizes) to ensure database files (mdf,ldf) file paths are mirrored and synched without any complications. please refer to
+section for secondary replicas with different disk layout: Restrictions (availability databases)
+
 ### <a id="PermissionsWindows"></a> Permissions (Windows system)
 
 To administer a WSFC, the user must be a system administrator on every cluster node.

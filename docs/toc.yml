@@ -8826,7 +8826,7 @@ items:
             href: ssms/scripting/xml-editor-sql-server-management-studio.md
           - name: Color Coding in Query Editors
             href: ssms/scripting/color-coding-in-query-editors.md
-        - name: Code Outlining
+        - name: Code outlining
           href: ssms/scripting/code-outlining.md
         - name: Drag & Drop Text
           href: ssms/scripting/drag-and-drop-text.md

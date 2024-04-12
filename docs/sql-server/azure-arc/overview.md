@@ -87,7 +87,7 @@ For details, see [Monitor SQL Server enabled by Azure Arc (preview)](sql-monitor
 - Continuous running on a default schedule of once per week
 - Availability for all SQL Server editions
 
-Migration assessment assessment is for SQL Servers located in various environments, including your data center, edge sites, or any public cloud or hosting provider. It is available for any instance of SQL Server that is enabled by Azure Arc.
+Migration assessment is for SQL Servers located in various environments, including your data center, edge sites, or any public cloud or hosting provider. It is available for any instance of SQL Server that is enabled by Azure Arc.
 
 For details, review [Configure SQL best practices assessment - SQL Server enabled by Azure Arc](assess.md).
 

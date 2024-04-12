@@ -33,11 +33,11 @@ If health detection fails to report an update to the resource DLL for multiple i
 
 Unlike other failover mechanisms, the SQL Server instance plays an active role in the lease mechanism. The lease mechanism is used as a Looks-Alive validation between the Cluster resource host and the SQL Server process. The mechanism is used to ensure that the two sides (the Cluster Service and SQL Server service) are in frequent contact, checking each other's state and ultimately preventing a split-brain scenario. When bringing the AG online as the primary replica, the SQL Server instance spawns a dedicated lease worker thread for the AG. The lease worker shares a small region of memory with the resource host containing lease renewal and lease stop events. The lease worker and resource host work in a circular fashion, signaling their respective lease renewal event and then sleeping, waiting for the other party to signal its own lease renewal event or stop event. Both the resource host and the SQL Server lease thread maintain a time-to-live value, which is updated each time the thread wakes up after being signaled by the other thread. If the time-to-live is reached while waiting for the signal, the lease expires and then replica transitions to the resolving state for that specific AG. If the lease stop event is signaled, then the replica transitions to a resolving role.
 
-:::image type="content" source="media/availability-group-lease-healthcheck-timeout/image1.png" alt-text="Image.":::
+:::image type="content" source="media/availability-group-lease-healthcheck-timeout/resource-dll.png" alt-text="Diagram showing the communication between the resource health DLL and SQL Server.":::
 
 The lease mechanism enforces synchronization between SQL Server and Windows Server Failover Cluster. When a failover command is issued the cluster service makes the `Offline` call to the resource DLL of the current primary replica. The resource DLL first attempts to take the AG offline using a stored procedure. If this stored procedure fails or times out, the failure is reported back to the cluster service, which then issues a terminate command. The terminate again attempts to execute the same stored procedure, but the cluster this time doesn't wait for the resource DLL to report success or failure before bringing the AG online on a new replica. If this second procedure call fails, then the resource host has to rely on the lease mechanism to take the instance offline. When the resource DLL is called to take the AG offline, the resource DLL signals the lease stop event, waking up the SQL Server lease worker thread to take the AG offline. Even if this stop event isn't signaled, the lease expires, and the replica will transition to the resolving state.
 
-The lease is primarily a synchronization mechanism between the primary instance and the cluster, but it can also create failure conditions where there was otherwise no need to fail over. For example, high CPU, out-of-memory conditions (low virtual memory, process paging), SQL process not responding while generating a memory dump, system not responding, cluster (WSFC) going offline (e.g due to quorum loss) can prevent lease renewal from the SQL instance and causing a restart or failover.
+The lease is primarily a synchronization mechanism between the primary instance and the cluster, but it can also create failure conditions where there was otherwise no need to fail over. For example, high CPU, out-of-memory conditions (low virtual memory, process paging), SQL process not responding while generating a memory dump, system not responding, cluster (WSFC) going offline (such as due to quorum loss) can prevent lease renewal from the SQL instance and causing a restart or failover.
 
 ## Guidelines for cluster timeout values
 
@@ -73,9 +73,9 @@ The failure condition level of the AG changes the failure conditions for the hea
 | 4: OnModerateServerError | If the resource component reports an error  
 | 5: OnAnyQualifiedFailureConitions | If the query processing component reports an error
 
-## Updating Cluster and Always On Timeout Values
+## Updating cluster and Always On timeout values
 
-### Cluster Values
+### Cluster values
 
 There are four values in the WSFC configuration that are responsible for determining cluster timeout values: 
 
@@ -98,9 +98,9 @@ To update any of these values, run the following command in an elevated PowerShe
 (Get-Cluster).<ValueName> = <NewValue>
 ```
 
-When increasing the Delay \* Threshold product to make the cluster timeout more tolerant, it's more effective to first increase the delay value before increasing the threshold. By increasing the delay, the time between each heartbeat is increased. More time between heartbeats, allows for more time for transient network issues to resolve themselves and decrease network congestion relative to sending more heartbeats in the same period.
+When increasing the Delay \* Threshold product to make the cluster timeout more tolerant, it's more effective to first increase the delay value before increasing the threshold. By increasing the delay, the time between each heartbeat is increased. More time between heartbeats gives more time for transient network issues to resolve themselves and decrease network congestion relative to sending more heartbeats in the same period.
 
-### Lease Timeout
+### Lease timeout
 
 The lease mechanism is controlled by a single value specific to each AG in a WSFC cluster. A lease timeout might result in the following errors:
 
@@ -116,18 +116,18 @@ To modify the lease time-out value, use the Failover Cluster Manager and follow 
 1. In the roles tab, find the target AG role. Select the target AG role.
 1. Right-click the AG resource at the bottom of the window and select **Properties**.
 
-   :::image type="content" source="media/availability-group-lease-healthcheck-timeout/image2.png" alt-text="Failover cluster manager.":::
+   :::image type="content" source="media/availability-group-lease-healthcheck-timeout/failover-cluster-manager.png" alt-text="Screenshot of the Failover cluster manager.":::
 
 1. In the popup window, navigate to the properties tab to view a list of values specific to this AG. Select the LeaseTimeout value to change it.
 
-   :::image type="content" source="media/availability-group-lease-healthcheck-timeout/image3.png" alt-text="Properties.":::
+   :::image type="content" source="media/availability-group-lease-healthcheck-timeout/availability-group-properties.png" alt-text="Screenshot of the availability group properties.":::
 
    Depending on the AG's configuration there might be additional resources for listeners, shared disks, file shares, etc., these resources don't require any additional configuration.
 
 > [!NOTE]  
 > The new value of property 'LeaseTimeout' will take effect after the resource is taken offline and brought online again.
 
-### Health Check Values
+### Health check values
 
 Two values control the Always On health check: FailureConditionLevel and HealthCheckTimeout. The FailureConditionLevel indicates the tolerance level to specific failure conditions reported by `sp_server_diagnostics` and the HealthCheckTimeout configures the time the resource DLL can go without receiving an update from `sp_server_diagnostics`. The update interval for `sp_server_diagnostics` is always HealthCheckTimeout / 3.
 
@@ -143,7 +143,7 @@ To configure the health check timeout, use the `HEALTH_CHECK_TIMEOUT` option of 
 ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
 ```
 
-## Summary of Timeout Guidelines
+## Summary of timeout guidelines
 
   - Lowering any timeout values below their default values isn't advised. 
 

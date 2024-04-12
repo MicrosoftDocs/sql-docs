@@ -102,7 +102,7 @@ void MoveFirstX() {
             PrintProviderError(vtConnect);  
             break;  
          default:  
-            printf("Errors occured.");  
+            printf("Errors occurred.");  
             break;  
       }  
    }  
@@ -157,7 +157,7 @@ void MoveAny(int intChoice, _RecordsetPtr pRstTemp) {
             PrintProviderError(vtConnect);  
             break;  
          default:  
-            printf("Errors occured.");  
+            printf("Errors occurred.");  
             break;  
       }  
    }  

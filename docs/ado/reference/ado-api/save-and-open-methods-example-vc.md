@@ -86,7 +86,7 @@ void SaveX1() {
          PrintProviderError(vtConnect);  
          break;  
       default:  
-         printf("Errors occured.");  
+         printf("Errors occurred.");  
          break;  
       }  
    }  
@@ -143,7 +143,7 @@ void SaveX2() {
          PrintProviderError(vtConnect);  
          break;  
       default:  
-         printf("Errors occured.");  
+         printf("Errors occurred.");  
          break;  
       }  
    }  
@@ -196,7 +196,7 @@ void SaveX3() {
          PrintProviderError(vtConnect);  
          break;  
       default:  
-         printf("Errors occured.");  
+         printf("Errors occurred.");  
          break;  
       }  
    }  

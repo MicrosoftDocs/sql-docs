@@ -68,6 +68,12 @@ Now, with [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)], you have the op
 
 Once [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] has reached the end of its support lifecycle, you can sign up for an Extended Security Update (ESU) subscription for your servers and remain protected for up to three years. When you upgrade to a newer version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], your ESU subscription is automatically canceled. When you [migrate to Azure SQL](/azure/azure-sql/migration-guides/), the ESU charges automatically stop but you continue to have access to the ESUs.
 
+## Performance dashboards
+
+Monitor SQL Server instances from Azure portal with performance dashboards. Performance dashboards simplify performance monitoring in Azure portal.
+
+For details, see [Monitor SQL Server enabled by Azure Arc (preview)](sql-monitoring.md).
+
 ## Migration assessment
 
 [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] migration assessment is a crucial tool for your cloud migration and modernization journey. It simplifies the discovery and readiness assessment for migration by providing:

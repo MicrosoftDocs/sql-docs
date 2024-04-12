@@ -72,6 +72,8 @@ Once [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] has reached the 
 
 Monitor SQL Server instances from Azure portal with performance dashboards. Performance dashboards simplify performance monitoring in Azure portal.
 
+:::image type="content" source="media/overview/performance-dashboard.png" alt-text="Screenshot of performance dashboard for SQL Server enabled by Azure Arc." lightbox="media/overview/performance-dashboard.png":::
+
 For details, see [Monitor SQL Server enabled by Azure Arc (preview)](sql-monitoring.md).
 
 ## Migration assessment

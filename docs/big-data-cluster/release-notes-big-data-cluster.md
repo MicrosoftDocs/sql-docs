@@ -33,20 +33,20 @@ The following table contains the tested configuration matrix for each release of
 
 | Release | Container OS | Kubernetes API | Runtime | Data Storage | Log Storage |
 | --- | --- | --- | --- | --- | --- |
-| CU23 | Ubuntu 20.04 LTS | 1.25.4 | contained 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
-| CU22 | Ubuntu 20.04 LTS | 1.25.4 | contained 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
-| CU21 | Ubuntu 20.04 LTS | 1.23.1 | contained 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
-| CU20 | Ubuntu 20.04 LTS | 1.23.1 | contained 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
-| CU19 | Ubuntu 20.04 LTS | 1.23.1 | contained 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
-| CU18 GDR | Ubuntu 20.04 LTS | 1.23.1 | contained 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
-| CU18 | Ubuntu 20.04 LTS | 1.23.1 | contained 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
-| CU17 | Ubuntu 20.04 LTS | 1.23.1 | contained 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
-| CU16 GDR | Ubuntu 20.04 LTS | 1.21 | contained 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
-| CU16 | Ubuntu 20.04 LTS | 1.21 | contained 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
-| CU15 | Ubuntu 20.04 LTS | 1.21 | contained 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
-| CU14 | Ubuntu 20.04 LTS | 1.21 | contained 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
-| CU13 | Ubuntu 20.04 LTS | 1.20 | contained 1.4.6<br />CRI-O 1.20.0 | Block only | Block only |
-| CU12 | Ubuntu 20.04 LTS | 1.20 | contained 1.4.3<br />docker 20.10.2<br />CRI-O 1.20.0 | Block only | Block only |
+| CU23 | Ubuntu 20.04 LTS | 1.25.4 | containerd 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
+| CU22 | Ubuntu 20.04 LTS | 1.25.4 | containerd 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
+| CU21 | Ubuntu 20.04 LTS | 1.23.1 | containerd 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
+| CU20 | Ubuntu 20.04 LTS | 1.23.1 | containerd 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
+| CU19 | Ubuntu 20.04 LTS | 1.23.1 | containerd 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
+| CU18 GDR | Ubuntu 20.04 LTS | 1.23.1 | containerd 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
+| CU18 | Ubuntu 20.04 LTS | 1.23.1 | containerd 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
+| CU17 | Ubuntu 20.04 LTS | 1.23.1 | containerd 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
+| CU16 GDR | Ubuntu 20.04 LTS | 1.21 | containerd 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
+| CU16 | Ubuntu 20.04 LTS | 1.21 | containerd 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
+| CU15 | Ubuntu 20.04 LTS | 1.21 | containerd 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
+| CU14 | Ubuntu 20.04 LTS | 1.21 | containerd 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
+| CU13 | Ubuntu 20.04 LTS | 1.20 | containerd 1.4.6<br />CRI-O 1.20.0 | Block only | Block only |
+| CU12 | Ubuntu 20.04 LTS | 1.20 | containerd 1.4.3<br />docker 20.10.2<br />CRI-O 1.20.0 | Block only | Block only |
 
 Restrictions:
 

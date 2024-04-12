@@ -68,6 +68,14 @@ Now, with [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)], you have the op
 
 Once [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] has reached the end of its support lifecycle, you can sign up for an Extended Security Update (ESU) subscription for your servers and remain protected for up to three years. When you upgrade to a newer version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], your ESU subscription is automatically canceled. When you [migrate to Azure SQL](/azure/azure-sql/migration-guides/), the ESU charges automatically stop but you continue to have access to the ESUs.
 
+## Performance dashboards
+
+Monitor SQL Server instances from Azure portal with performance dashboards. Performance dashboards simplify performance monitoring in Azure portal.
+
+:::image type="content" source="media/overview/performance-dashboard.png" alt-text="Screenshot of performance dashboard for SQL Server enabled by Azure Arc." lightbox="media/overview/performance-dashboard.png":::
+
+For details, see [Monitor SQL Server enabled by Azure Arc (preview)](sql-monitoring.md).
+
 ## Migration assessment
 
 [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] migration assessment is a crucial tool for your cloud migration and modernization journey. It simplifies the discovery and readiness assessment for migration by providing:
@@ -79,7 +87,7 @@ Once [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] has reached the 
 - Continuous running on a default schedule of once per week
 - Availability for all SQL Server editions
 
-Migration assessment assessment is for SQL Servers located in various environments, including your data center, edge sites, or any public cloud or hosting provider. It is available for any instance of SQL Server that is enabled by Azure Arc.
+Migration assessment is for SQL Servers located in various environments, including your data center, edge sites, or any public cloud or hosting provider. It is available for any instance of SQL Server that is enabled by Azure Arc.
 
 For details, review [Configure SQL best practices assessment - SQL Server enabled by Azure Arc](assess.md).
 

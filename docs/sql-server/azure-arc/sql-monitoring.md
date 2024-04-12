@@ -9,15 +9,24 @@ ms.topic: conceptual
 ms.custom: ignite-2023
 ---
 
-# Monitor [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] (preview)
+# Monitor SQL Server enabled by Azure Arc (preview)
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-Monitor the performance of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] within the Azure portal. Performance metrics are automatically collected from DMV datasets on eligible instances of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] and sent to the Azure telemetry pipeline for near real-time processing. Performance data can then be viewed on the Performance Dashboard section of a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]. Monitoring data collection is automatic, assuming all prerequisites are met.
+Monitor [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] with performance dashboard in the Azure portal. Performance metrics are automatically collected from DMV datasets on eligible instances of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] and sent to the Azure telemetry pipeline for near real-time processing.
 
 [!INCLUDE [azure-arc-sql-preview](includes/azure-arc-sql-preview.md)]
 
 During the feature preview, monitoring is available for free. Fees for this feature after general availability are to be determined.
+
+To view metrics in the portal:
+
+1. Select an instance of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]
+1. Select **Monitoring** > **Performance Dashboard**
+
+Monitoring is automatic, assuming all prerequisites are met.
+
+:::image type="content" source="media/overview/performance-dashboard.png" alt-text="Screenshot of performance dashboard for SQL Server enabled by Azure Arc." lightbox="media/overview/performance-dashboard.png":::
 
 ## Prerequisites
 
@@ -33,8 +42,9 @@ In order for monitoring data to be collected on a [!INCLUDE [ssazurearc](../../i
 * To view the performance dashboard in the Azure portal, you must be assigned an Azure role with the action `Microsoft.AzureArcData/sqlServerInstances/getTelemetry/` assigned. For convenience, you can use the built-in role "Azure Hybrid Database Administrator - Read Only Service Role", which includes this action. (For more information, see [Learn more about Azure built-in roles](/azure/role-based-access-control/built-in-roles))
 
 ### Current Limitations
-* FCI clusters aren't supported at this time
-    
+
+Failover cluster instances (FCI) aren't supported at this time.
+
 ## Collected data
 
 The following lists reflect the monitoring data that is collected from DMV datasets on [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] when the monitoring feature is enabled. No personally identifiable information (PII), end-user identifiable information (EUII), or customer content is collected.

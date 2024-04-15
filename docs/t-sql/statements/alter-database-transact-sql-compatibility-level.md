@@ -305,7 +305,7 @@ This section describes new behaviors introduced with compatibility level 100.
 
 | Compatibility level setting of 90 | Compatibility level setting of 100 | Possibility of impact |
 | --- | --- | --- |
-| The QUOTED_IDENTIFER setting is always set to ON for multistatement table-valued functions when they are created regardless of the session level setting. | The QUOTED IDENTIFIER session setting is honored when multistatement table-valued functions are created. | Medium |
+| The QUOTED_IDENTIFIER setting is always set to ON for multistatement table-valued functions when they are created regardless of the session level setting. | The QUOTED IDENTIFIER session setting is honored when multistatement table-valued functions are created. | Medium |
 | When you create or alter a partition function, **datetime** and **smalldatetime** literals in the function are evaluated assuming US_English as the language setting. | The current language setting is used to evaluate **datetime** and **smalldatetime** literals in the partition function. | Medium |
 | The `FOR BROWSE` clause is allowed (and ignored) in `INSERT` and `SELECT INTO` statements. | The `FOR BROWSE` clause isn't allowed in `INSERT` and `SELECT INTO` statements. | Medium |
 | Full-text predicates are allowed in the `OUTPUT` clause. | Full-text predicates aren't allowed in the `OUTPUT` clause. | Low |

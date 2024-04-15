@@ -28,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
 |**role_principal_id**|**int**|Server-Principal ID of the role.|  
 |**member_principal_id**|**int**|Server-Principal ID of the member.|  
   
- To add or remove server role membership, use the [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)statement.  
+ To add or remove server role membership, use the [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md) statement.  
   
 ## Permissions
 

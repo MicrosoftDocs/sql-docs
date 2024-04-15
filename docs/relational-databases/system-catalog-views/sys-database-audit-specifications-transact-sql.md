@@ -30,7 +30,7 @@ This article contains information about the database audit specifications in a [
 |database_specification_id|**int**|ID of the database specification.|
 |create_date|**datetime**|Date the audit specification was created.|
 |modify_date|**datetime**|Date the audit specification was last modified.|
-|audit_guid|**uniqueidentifer**|GUID for the audit that contains this specification. Used during enumeration of member database audit specifications during database attach/startup.|
+|audit_guid|**uniqueidentifier**|GUID for the audit that contains this specification. Used during enumeration of member database audit specifications during database attach/startup.|
 |is_state_enabled|**bit**|Audit specification state:<br /><br />0 - DISABLED<br /><br />1 - ENABLED|
 
 ## Remarks

@@ -77,7 +77,7 @@ In most cases, you can use the New Availability Group Wizard to complete all of 
  
 6.  On the **Select Databases** page, the grid lists user databases on the connected server instance that are eligible to become the *availability databases*. Select one or more of the listed databases to participate in the new availability group. These databases will initially be the initial *primary databases*.  
   
-     For each listed database, the **Size** column displays the database size, if known. The **Status** column indicates whether a given database meets the [prerequisites](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)for availability databases. It the prerequisites are not met, a brief status description indicates the reason that the database is ineligible; for example, if it does not use the full recovery model. For more information, click the status description.  
+     For each listed database, the **Size** column displays the database size, if known. The **Status** column indicates whether a given database meets the [prerequisites](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md) for availability databases. It the prerequisites are not met, a brief status description indicates the reason that the database is ineligible; for example, if it does not use the full recovery model. For more information, click the status description.  
   
      If you change a database to make it eligible, click **Refresh** to update the databases grid.  
   

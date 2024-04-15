@@ -114,7 +114,7 @@ snapshot [ -?]
  Is used to set a value for [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) in filtering when a dynamic snapshot is created. For example, if the subset filter clause `rep_id = HOST_NAME()` is specified for an article, and you set the **DynamicFilterHostName** property to "FBJones" before calling the Merge Agent, only rows having "FBJones" in the **rep_id** column will be replicated.  
   
  **-DynamicFilterLogin** _dynamic_filter_login_  
- Is used to set a value for [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md)in filtering when a dynamic snapshot is created. For example, if the subset filter clause `user_id = SUSER_SNAME()` is specified for an article, and you set the **DynamicFilterLogin** property to "rsmith" before calling the **Run** method of the **SQLSnapshot** object, only rows having "rsmith" in the **user_id** column will be included in the snapshot.  
+ Is used to set a value for [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) in filtering when a dynamic snapshot is created. For example, if the subset filter clause `user_id = SUSER_SNAME()` is specified for an article, and you set the **DynamicFilterLogin** property to "rsmith" before calling the **Run** method of the **SQLSnapshot** object, only rows having "rsmith" in the **user_id** column will be included in the snapshot.  
   
  **-DynamicSnapshotLocation** _dynamic_snapshot_location_  
  Is the location where the dynamic snapshot should be generated.  

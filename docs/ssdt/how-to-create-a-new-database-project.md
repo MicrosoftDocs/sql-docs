@@ -32,7 +32,7 @@ The following two procedures essentially achieve the same goal by creating a new
   
 5.  Examine the hierarchy in the **Solution Explorer**. Expand the **dbo** folder and you'll find separate **Functions**, **Tables, and **Views** folders. Notice that the tables and function are grouped under their schema folders.  
   
-6.  Double-click **Products.sql** under **Tables**. The **Table Designer** opens, showing the visual interpretation of the table in the Columns Grid, and the script definition of the table in the Script Pane. This is identical to what we see in the [Manage Tables, Relationships, and Fix Errors](../ssdt/manage-tables-relationships-and-fix-errors.md)section.  
+6.  Double-click **Products.sql** under **Tables**. The **Table Designer** opens, showing the visual interpretation of the table in the Columns Grid, and the script definition of the table in the Script Pane. This is identical to what we see in the [Manage Tables, Relationships, and Fix Errors](../ssdt/manage-tables-relationships-and-fix-errors.md) section.  
   
 7.  Uncheck the **Allow Nulls** box for the **CustomerId** column. Press CTRL + S to save the file.  
   
@@ -56,7 +56,7 @@ The following two procedures essentially achieve the same goal by creating a new
   
 6.  Examine the hierarchy in the **Solution Explorer**. Expand the **dbo** folder and you'll find separate **Functions**, **Tables, and **Views** folders. Notice that the tables and function are grouped under their schema folders.  
   
-7.  Double-click **Products.sql** under **Tables**. The **Table Designer** opens, showing the visual interpretation of the table in the Columns Grid, and the script definition of the table in the Script Pane. This is identical to what we see in the [Manage Tables, Relationships, and Fix Errors](../ssdt/manage-tables-relationships-and-fix-errors.md)section.  
+7.  Double-click **Products.sql** under **Tables**. The **Table Designer** opens, showing the visual interpretation of the table in the Columns Grid, and the script definition of the table in the Script Pane. This is identical to what we see in the [Manage Tables, Relationships, and Fix Errors](../ssdt/manage-tables-relationships-and-fix-errors.md) section.  
   
 8.  Uncheck the **Allow Nulls** box for the **CustomerId** column. Press CTRL + S to save the file.  
   

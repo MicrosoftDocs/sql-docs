@@ -10,7 +10,7 @@ ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: how-to
 ms.custom: sqldbrb=1
-tag: azure-synpase
+tag: azure-synapse
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 

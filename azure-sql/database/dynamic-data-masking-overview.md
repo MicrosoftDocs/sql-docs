@@ -10,7 +10,7 @@ ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
 ms.custom: sqldbrb=1
-tags: azure-synpase
+tags: azure-synapse
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Dynamic data masking
@@ -283,8 +283,7 @@ Prevent unauthorized access to sensitive data and gain control by masking it to 
    REVOKE UNMASK FROM ServiceHead;
    ```
 
-## See also
+## Related content
 
 - [Dynamic Data Masking](/sql/relational-databases/security/dynamic-data-masking) for SQL Server.
-- [Dynamic Data Masking](/sql/relational-databases/security/dynamic-data-masking) for limitations and restrictions.
 - Data Exposed episode about [Granular Permissions for Azure SQL Dynamic Data Masking](/Shows/Data-Exposed/Granular-Permissions-for-Azure-SQL-Dynamic-Data-Masking) on Channel 9.

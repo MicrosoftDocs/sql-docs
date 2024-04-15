@@ -4,7 +4,7 @@ description: Learn about dynamic data masking, which limits sensitive data expos
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 10/31/2023
+ms.date: 04/15/2024
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -103,11 +103,14 @@ A masking rule can't be defined for the following column types:
 
 For users without the **UNMASK** permission, the deprecated **READTEXT**, **UPDATETEXT**, and **WRITETEXT** statements don't function properly on a column configured for Dynamic Data Masking.
 
-Adding a dynamic data mask is implemented as a schema change on the underlying table, and therefore can't be performed on a column with dependencies. To work around this restriction, you can first remove the dependency, then add the dynamic data mask and then re-create the dependency. For example, if the dependency is due to an index dependent on that column, you can drop the index, then add the mask, and then re-create the dependent index.
+Adding a dynamic data mask is implemented as a schema change on the underlying table, and therefore can't be performed on a column with dependencies (for example, column referenced by computed column). Trying to add dynamic data mask against columns with dependency will result in an error, `ALTER TABLE ALTER COLUMN _columnname_ failed because one or more objects access this column`. To work around this restriction, you can first remove the dependency, then add the dynamic data mask and then re-create the dependency. For example, if the dependency is due to an index dependent on that column, you can drop the index, then add the mask, and then re-create the dependent index.
 
 Whenever you project an expression referencing a column for which a data masking function is defined, the expression is also masked. Regardless of the function (default, email, random, custom string) used to mask the referenced column, the resulting expression will always be masked with the default function.
 
 Cross database queries spanning two different Azure SQL databases or databases hosted on different SQL Server Instances, and involve any kind of comparison or join operation on MASKED columns do not provide correct results. The results returned from the remote server are already in MASKED form and not suitable for any kind of comparison or join operation locally.
+
+> [!NOTE]
+> Dynamic data masking is not supported when the underlying base table is referenced in an indexed view.
 
 ## Security Note: Bypassing masking using inference or brute-force techniques
 

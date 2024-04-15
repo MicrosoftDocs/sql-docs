@@ -4,7 +4,7 @@ description: Learn about the new features for and improvements to SQL Server on 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest, mathoma
-ms.date: 03/01/2024
+ms.date: 04/09/2024
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -36,7 +36,6 @@ The following table lists the features of SQL Server on Azure VMs that are curre
 
 | Feature | Details |
 | --- | --- |
-| [Azure Update Manager](../azure-update-manager-sql-vm.md) | Automatically patch multiple SQL Server VMs at scale with the Azure Update Manager integrated in to the [SQL virtual machines](manage-sql-vm-portal.md) resource in the Azure portal, including Cumulative Updates. |
 | [Premium SSD v2 in the Azure portal](storage-configuration-premium-ssd-v2.md) | Provision your SQL Server on Azure VM with Premium SSD v2 disks in the Azure portal for improved throughput and performance. |  
 
 ## General availability (GA)
@@ -45,6 +44,7 @@ The following table lists features of SQL Server on Azure VMs that have been mad
 
 | Changes | Month | Details |
 | --- | --- |--- |
+| [Azure Update Manager](../azure-update-manager-sql-vm.md) | April 2024 | Automatically patch multiple SQL Server VMs at scale with the Azure Update Manager integrated in to the [SQL virtual machines](manage-sql-vm-portal.md) resource in the Azure portal, including Cumulative Updates. |
 | [Azure SQL triggers for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql-trigger) | March 2024 | Azure Functions supports function triggers for SQL Server on Azure VMs. |
 | [Azure Elastic SAN](performance-guidelines-best-practices-storage.md#azure-elastic-san) | February 2024 | Place your SQL Server workloads on an Azure Elastic SAN for improved performance, throughput, and cost. | 
 | [SQL VM health notifications](manage-sql-vm-portal.md#overview-page) | September 2023 | The **Overview** page of the SQL virtual machines resource in the Azure portal now displays information about the health of the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md), as well as error conditions when the state is _unhealthy_ or _failed_. Review [Troubleshoot the extension](sql-agent-extension-troubleshoot-known-issues.md) to learn more. | 
@@ -56,6 +56,12 @@ The following table lists features of SQL Server on Azure VMs that have been mad
 ## Documentation changes 
 
 Learn about significant changes to the SQL Server on Azure VMs documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
+
+### April 2024
+
+| Changes | Details |
+| --- | --- |
+| **Azure Update Manager GA** | Automatically patch multiple SQL Server VMs at scale with the Azure Update Manager integrated in to the [SQL virtual machines](manage-sql-vm-portal.md) resource in the Azure portal, including Cumulative Updates, which isn't currently possible with the existing Automated Patching feature. This feature is now generally available. To learn more, review [Azure Update Manager for SQL Server on Azure VMs](../azure-update-manager-sql-vm.md). | 
 
 ### March 2024
 

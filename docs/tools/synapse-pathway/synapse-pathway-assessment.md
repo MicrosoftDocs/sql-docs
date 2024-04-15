@@ -52,11 +52,11 @@ To complete this tutorial, make sure you installed [Azure Synapse Pathway](synap
 1. The duration of the assessment depends on the number of databases added and the schema size of each database. Results are displayed for each database as soon as they're available.
  ![Azure Synapse assessment report.](./media/synapse-pathway-assessment/assessment-report-rendering.png)
 
-1. When you select view results, it takes you to the output directory specified in the previous step and you'll see the translated script file(s) based on your input directory structure.
+1. When you select view results, it takes you to the output directory specified in the previous step and you see the translated script file(s) based on your input directory structure.
 
 1. It includes the project structure that can be easily committed to your GitHub repo.
   
-1. A results file, which has a list of errors and warnings, will be uploaded in the same output directory.
+1. A results file, which has a list of errors and warnings, is uploaded in the same output directory.
 
 ## Run the translation using command line
 1. On installation, AspCmd.exe will be available in C:\Program Files (x86)\Azure Synapse Pathway

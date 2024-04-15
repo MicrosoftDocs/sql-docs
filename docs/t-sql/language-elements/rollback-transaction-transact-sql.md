@@ -102,7 +102,7 @@ The effect of a ROLLBACK on cursors is defined by these three rules:
 3.  An error that terminates a batch and generates an internal rollback deallocates all cursors that were declared in the batch containing the error statement. All cursors are deallocated regardless of their type or the setting of CURSOR_CLOSE_ON_COMMIT. This includes cursors declared in stored procedures called by the error batch. Cursors declared in a batch before the error batch are subject to rules 1 and 2. A deadlock error is an example of this type of error. A ROLLBACK statement issued in a trigger also automatically generates this type of error.  
   
 ## Locking Behavior  
- A ROLLBACK TRANSACTION statement specifying a *savepoint_name* releases any locks that are acquired beyond the savepoint, exception for escalations and conversions. These locks are not released, and they are not converted back to their previous lock mode.  
+ A ROLLBACK TRANSACTION statement specifying a *savepoint_name* releases any locks that are acquired beyond the savepoint, except for escalations and conversions. These locks are not released, and they are not converted back to their previous lock mode.  
   
 ## Permissions  
  Requires membership in the **public** role.  

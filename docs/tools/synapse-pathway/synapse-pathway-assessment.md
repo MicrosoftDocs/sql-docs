@@ -21,7 +21,7 @@ For more information, see [Azure Synapse Pathway overview](azure-synapse-pathway
 In this tutorial, you learn how to:
 
 > [!div class="checklist"]
-> * Run your first translation of the SQL scripts in from your existing data warehouse to T-SQL scripts for Azure Synpase SQL 
+> * Run your first translation of the SQL scripts in from your existing data warehouse to T-SQL scripts for Azure Synapse SQL 
 > * Choose from one of the available sources
 > * View the errors and warnings about objects that didn't get translated
 

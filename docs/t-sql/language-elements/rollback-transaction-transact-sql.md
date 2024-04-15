@@ -34,22 +34,23 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
-  
-```syntaxsql
---Applies to SQL Server and Azure SQL Database
 
+Syntax for SQL Server and Azure SQL Database.
+
+```syntaxsql
 ROLLBACK { TRAN | TRANSACTION }   
      [ transaction_name | @tran_name_variable  
      | savepoint_name | @savepoint_variable ]   
 [ ; ]  
 ```  
- 
-```syntaxsql
--- Applies to Synpase Data Warehouse in Microsoft Fabric, Azure Synapse Analytics and Parallel Data Warehouse Database
-  
+
+Syntax for Synapse Data Warehouse in Microsoft Fabric, Azure Synapse Analytics and Parallel Data Warehouse Database.
+
+```syntaxsql  
 ROLLBACK { TRAN | TRANSACTION } 
 [ ; ]  
-```   
+```
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments

@@ -218,7 +218,7 @@ Clear();
 return E_OUTOFMEMORY;  
 }  
   
-// Copy callers memory to internal bufffer and update write position.  
+// Copy callers memory to internal buffer and update write position.  
 memcpy( (void*)((BYTE*)m_pBuffer + m_iWritePos), pv, cb );  
 m_iWritePos += cb;  
   

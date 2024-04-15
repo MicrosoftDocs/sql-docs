@@ -275,7 +275,7 @@ Combining all 3 above components together to use in a connection string would be
 
 `RetryExec={1000,2000:3,10+7:SELECT}`
 
-Which would mean: "For errors 1000 and 2000, on a query that starts with SELECT. Retry twice with an intial delay of 10 seconds and adding 7 seconds for each following attempt"
+Which would mean: "For errors 1000 and 2000, on a query that starts with SELECT. Retry twice with an initial delay of 10 seconds and adding 7 seconds for each following attempt"
 
 **Examples**
 

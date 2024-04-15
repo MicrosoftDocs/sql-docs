@@ -37,7 +37,7 @@ monikerRange: ">=sql-server-ver16"
   
      Because there is a slight increase in the CPU usage on the SQL Server engine side, if you have CPU bound on the server you can turn off data compression by editing the entity.  
   
-     For more information, see [Create an Entity &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)and [Data Compression](../relational-databases/data-compression/data-compression.md).  
+     For more information, see [Create an Entity &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md) and [Data Compression](../relational-databases/data-compression/data-compression.md).  
   
 -   The Dynamic Content Compression IIS feature is enabled, by default. It significantly reduces the size of the xml response and saves the network I/O, though CPU usage is increased. If you have CPU bound on the server, you can turn off data compression by adding the following setting to the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web.config file.  
   
@@ -96,7 +96,7 @@ monikerRange: ">=sql-server-ver16"
   
 -   Staging batches that ran before a specified number of days.  
   
- You can configure the frequency that data is removed from the transaction logs, using the System settings and at the model level. For more information, see [System Settings &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)and [Create a Model &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md). For more information about transactions, see [Transactions &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md).  
+ You can configure the frequency that data is removed from the transaction logs, using the System settings and at the model level. For more information, see [System Settings &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md) and [Create a Model &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md). For more information about transactions, see [Transactions &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md).  
   
  The SQL Server Agent job, MDS_MDM_Sample_Log_Maintenace, triggers cleanup of the transaction logs and runs every night. You can use SQL Server Agent to modify the schedule for this job.  
   

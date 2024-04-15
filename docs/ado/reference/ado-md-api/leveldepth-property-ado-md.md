@@ -21,7 +21,7 @@ Indicates the number of levels between the root of the hierarchy and a [member](
  Returns a **Long** integer, and is read-only.  
   
 ## Remarks  
- Use the **LevelDepth** property to determine the distance of the [Member](./member-object-ado-md.md)object from the root level of the hierarchy. The **LevelDepth**of a member at the root level is 0. This corresponds to the [Depth](./depth-property-ado-md.md) property of a [Level](./level-object-ado-md.md) object.  
+ Use the **LevelDepth** property to determine the distance of the [Member](./member-object-ado-md.md) object from the root level of the hierarchy. The **LevelDepth**of a member at the root level is 0. This corresponds to the [Depth](./depth-property-ado-md.md) property of a [Level](./level-object-ado-md.md) object.  
   
 ## Applies To  
  [Member Object (ADO MD)](./member-object-ado-md.md)  

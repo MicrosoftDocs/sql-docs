@@ -242,7 +242,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  When you execute the script, the output file is stored in \<Program Files>\Microsoft SQL Server\110\DTS\DataDumps. If a file with the name already exists, a new file with a suffix (for example: output[1].txt)  is created.  
   
- As mentioned earlier, you can also use [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)stored procedure instead of using add_data_tap stored procedure. This stored procedure takes the ID of data flow task as a parameter instead of task_package_path. You can get the ID of data flow task from the properties window in Visual Studio.  
+ As mentioned earlier, you can also use [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md) stored procedure instead of using add_data_tap stored procedure. This stored procedure takes the ID of data flow task as a parameter instead of task_package_path. You can get the ID of data flow task from the properties window in Visual Studio.  
   
 ### Removing a data tap  
  You can remove a data tap before starting the execution by using the [catalog.remove_data_tap](../../integration-services/system-stored-procedures/catalog-remove-data-tap.md) stored procedure. This stored procedure takes the ID of data tap as a parameter, which you can get as an output of the add_data_tap stored procedure.  

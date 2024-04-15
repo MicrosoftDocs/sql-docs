@@ -145,7 +145,7 @@ This section describes how to grant permissions to manage logins, database users
   
 The following SQL statements create a Login named KimAbercrombie  that can create new logins by using the [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) statement and alter existing logins by using the [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md) statement.  
   
-The **ALTER ANY LOGIN** permission grants the ability to create new logins and drop exisiting. Once a login exists, the login can be managed by logins with the **ALTER ANY LOGIN** permission or the **ALTER** permission on that login. A login can change the password and default database for its own login.  
+The **ALTER ANY LOGIN** permission grants the ability to create new logins and drop existing. Once a login exists, the login can be managed by logins with the **ALTER ANY LOGIN** permission or the **ALTER** permission on that login. A login can change the password and default database for its own login.  
   
 ```sql 
 CREATE LOGIN KimAbercrombie   

@@ -36,7 +36,7 @@ dm_db_exec_cursors (session_id | 0 )
 #### *session_id* | 0  
  ID of the session. If `session_id` is specified, this function returns information about cursors in the specified session. The current user must have VIEW DATABASE STATE permission to view cursor information from other sessions.
   
- If `0` is specified in a single database or elastic pool, and the current user has VIEW DATABASE STATE permission, the function returns information about all cursors for all sessions in the _current_ database. Otherwise, without the VIEW DATABSE STATE permission, the function returns information about cursors for only the current session.
+ If `0` is specified in a single database or elastic pool, and the current user has VIEW DATABASE STATE permission, the function returns information about all cursors for all sessions in the _current_ database. Otherwise, without the VIEW DATABASE STATE permission, the function returns information about cursors for only the current session.
   
 ## Table returned  
   

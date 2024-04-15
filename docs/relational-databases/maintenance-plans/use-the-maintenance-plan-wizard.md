@@ -145,7 +145,7 @@ To create or manage maintenance plans, you must be a member of the **sysadmin** 
 
 ## Define Database Check Integrity (CHECKDB)
 
-On the **Define Database Check Integrity Task** page, choose the database or databases where the allocation and structural integrity of user and system tables and indexes are checked. By running the `DBCC CHECKDB` [!INCLUDE[tsql](../../includes/tsql-md.md)] statement, this task ensures that any integrity problems with the database are reported, thereby allowing them to be addressed later by a system administrator or database owner. For more information, see [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)When complete, select **Next**.
+On the **Define Database Check Integrity Task** page, choose the database or databases where the allocation and structural integrity of user and system tables and indexes are checked. By running the `DBCC CHECKDB` [!INCLUDE[tsql](../../includes/tsql-md.md)] statement, this task ensures that any integrity problems with the database are reported, thereby allowing them to be addressed later by a system administrator or database owner. For more information, see [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md). When complete, select **Next**.
 
 The following options are available on this page.
 
@@ -419,7 +419,7 @@ The following options are available on this page.
 
 #### Define the Execute Agent Job Task
 
-1. On the **Define Execute Agent Job Task** page, under **Available SQL Server Agent jobs**, choose the job or jobs to run. This option isn't available if you have no SQL Agent jobs. This task uses the `EXEC sp_start_job` statement. For more information, see [sp_start_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)When finished, select **Next**.
+1. On the **Define Execute Agent Job Task** page, under **Available SQL Server Agent jobs**, choose the job or jobs to run. This option isn't available if you have no SQL Agent jobs. This task uses the `EXEC sp_start_job` statement. For more information, see [sp_start_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md). When finished, select **Next**.
 
 #### Define Backup Tasks
 

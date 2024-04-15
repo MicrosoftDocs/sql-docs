@@ -53,7 +53,7 @@ helpviewer_keywords:
     ALTER DATABASE <database_name> SET TRUSTWORTHY ON  
     ```  
   
-     For more information, see[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+     For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
 5.  Optionally, manually failover again to return to the original principal.  
   

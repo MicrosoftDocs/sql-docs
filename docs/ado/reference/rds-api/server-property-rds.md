@@ -16,7 +16,7 @@ apitype: "COM"
 # Server Property (RDS)
 Indicates the Internet Information Services (IIS) name and communication protocol.  
   
- You can set the **Server** property at design time in the OBJECT tags of the[RDS.DataControl](./datacontrol-object-rds.md) object, or at run time in scripting code.  
+ You can set the **Server** property at design time in the OBJECT tags of the [RDS.DataControl](./datacontrol-object-rds.md) object, or at run time in scripting code.  
   
 > [!IMPORTANT]
 >  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](/dotnet/framework/wcf/).  

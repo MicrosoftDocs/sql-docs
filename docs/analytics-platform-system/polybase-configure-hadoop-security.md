@@ -16,7 +16,7 @@ This article provides a reference for various configuration settings that affect
 > [!NOTE]
 > On APS, changes on XML files are needed on all compute nodes and control node.
 > 
-> Take special care when modifying XML files in APS. Any missing tags or unwanted characters can invalidate the xml file hindering the usablilty of the feature.
+> Take special care when modifying XML files in APS. Any missing tags or unwanted characters can invalidate the xml file hindering the usability of the feature.
 > Hadoop configuration files are located in the following path:  
 > `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf` 
 > Any changes to the xml files require a service restart to be effective.

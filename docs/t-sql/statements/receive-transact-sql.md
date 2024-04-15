@@ -91,7 +91,7 @@ dev_langs:
  Specifies the conversation or conversation group for the received messages. If omitted, returns messages from the next available conversation group.  
   
  conversation_handle = *conversation_handle*  
- Specifies the conversation for received messages. The *conversation handle* provided must be a **uniqueidentifer**, or a type that is convertible to **uniqueidentifier**.  
+ Specifies the conversation for received messages. The *conversation handle* provided must be a **uniqueidentifier**, or a type that is convertible to **uniqueidentifier**.  
   
  conversation_group_id = *conversation_group_id*  
  Specifies the conversation group for received messages. The *conversation group ID that is* provided must be a **uniqueidentifier**, or a type convertible to **uniqueidentifier**.  

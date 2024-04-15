@@ -50,7 +50,7 @@ Represents a row from a [Recordset](./recordset-object-ado.md) or the data provi
   
 -   Indicate the current status of the **Record** with the [State](./state-property-ado.md) property.  
   
--   Indicate the type of **Record** - *simple*, *collection*, or *structured document* - with the [RecordType](./recordtype-property-ado.md)property.  
+-   Indicate the type of **Record** - *simple*, *collection*, or *structured document* - with the [RecordType](./recordtype-property-ado.md) property.  
   
 -   Stop execution of an asynchronous operation with the [Cancel](./cancel-method-ado.md) method.  
   

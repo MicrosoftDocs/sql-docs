@@ -84,7 +84,7 @@ For more information, see [Enable and Disable Always On Availability Groups &#40
     ```
 
   
-2.  If [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is running under a built-in account, such as Local System, Local Service, or Network Service, or a nondomain account, you must use certificates for endpoint authentication. If your service accounts are using domain accounts in the same domain, you can choose to grant CONNECT access for each service account on all the replica locations or you can use certificates. For more information, see[Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
+2.  If [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is running under a built-in account, such as Local System, Local Service, or Network Service, or a nondomain account, you must use certificates for endpoint authentication. If your service accounts are using domain accounts in the same domain, you can choose to grant CONNECT access for each service account on all the replica locations or you can use certificates. For more information, see [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
 ##  <a name="Endpoints"></a> Endpoints  
  Endpoints must be correctly configured.  

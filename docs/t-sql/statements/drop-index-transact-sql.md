@@ -223,7 +223,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
   
  When indexes with 128 extents or more are dropped, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] defers the actual page deallocations, and their associated locks, until after the transaction commits.  
   
- Sometimes indexes are dropped and re-created to reorganize or rebuild the index, such as to apply a new fill factor value or to reorganize data after a bulk load. To do this, using [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)is more efficient, especially for clustered indexes. ALTER INDEX REBUILD has optimizations to prevent the overhead of rebuilding the nonclustered indexes.  
+ Sometimes indexes are dropped and re-created to reorganize or rebuild the index, such as to apply a new fill factor value or to reorganize data after a bulk load. To do this, using [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) is more efficient, especially for clustered indexes. ALTER INDEX REBUILD has optimizations to prevent the overhead of rebuilding the nonclustered indexes.  
   
 ## Using Options with DROP INDEX  
  You can set the following index options when you drop a clustered index: MAXDOP, ONLINE, and MOVE TO.  

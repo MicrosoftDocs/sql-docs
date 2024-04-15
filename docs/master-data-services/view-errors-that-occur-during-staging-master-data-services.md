@@ -37,7 +37,7 @@ helpviewer_keywords:
   
      `SELECT * FROM stg.viw_name_MemberErrorDetails`  
   
-4.  Excecute the query. Error details are displayed in the **ErrorDescription** field.  
+4.  Execute the query. Error details are displayed in the **ErrorDescription** field.  
   
 ## Next Steps  
  For more details on error messages, see [Staging Process Errors &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md).  

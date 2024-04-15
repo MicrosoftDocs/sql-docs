@@ -28,7 +28,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 
   Rolls back an explicit or implicit transaction to the beginning of the transaction, or to a savepoint inside the transaction. You can use ROLLBACK TRANSACTION to erase all data modifications made from the start of the transaction or to a savepoint. It also frees resources held by the transaction.  
   
-  This does not include changes made to local variables or table variables. These are not erased by this statement.
+  This action doesn't affect changes made to local variables or table variables. These are not erased by this statement.
   
 
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -74,7 +74,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
  ROLLBACK TRANSACTION cannot reference a *savepoint_name* in distributed transactions started either explicitly with BEGIN DISTRIBUTED TRANSACTION or escalated from a local transaction.  
   
- A transaction cannot be rolled back after a COMMIT TRANSACTION statement is executed, except when the COMMIT TRANSACTION is associated with a nested transaction that is contained within the transaction being rolled back. In this instance, the nested transaction is rolled back, even if you have issued a COMMIT TRANSACTION for it.  
+ A transaction cannot be rolled back after a COMMIT TRANSACTION statement is executed, except when the COMMIT TRANSACTION is associated with a nested transaction that is contained within the transaction being rolled back. In this instance, the nested transaction is rolled back, even if you issued a COMMIT TRANSACTION for it.  
   
  Within a transaction, duplicate savepoint names are allowed, but a ROLLBACK TRANSACTION using the duplicate savepoint name rolls back only to the most recent SAVE TRANSACTION using that savepoint name.  
   
@@ -97,12 +97,12 @@ The effect of a ROLLBACK on cursors is defined by these three rules:
   
 1.  With CURSOR_CLOSE_ON_COMMIT set ON, ROLLBACK closes, but does not deallocate all open cursors.  
   
-2.  With CURSOR_CLOSE_ON_COMMIT set OFF, ROLLBACK does not affect any open synchronous STATIC or INSENSITIVE cursors or asynchronous STATIC cursors that have been fully populated. Open cursors of any other type are closed but not deallocated.  
+2.  With CURSOR_CLOSE_ON_COMMIT set OFF, ROLLBACK does not affect any open synchronous STATIC or INSENSITIVE cursors or asynchronous STATIC cursors that were fully populated. Open cursors of any other type are closed but not deallocated.  
   
 3.  An error that terminates a batch and generates an internal rollback deallocates all cursors that were declared in the batch containing the error statement. All cursors are deallocated regardless of their type or the setting of CURSOR_CLOSE_ON_COMMIT. This includes cursors declared in stored procedures called by the error batch. Cursors declared in a batch before the error batch are subject to rules 1 and 2. A deadlock error is an example of this type of error. A ROLLBACK statement issued in a trigger also automatically generates this type of error.  
   
 ## Locking Behavior  
- A ROLLBACK TRANSACTION statement specifying a *savepoint_name* releases any locks that are acquired beyond the savepoint, with the exception of escalations and conversions. These locks are not released, and they are not converted back to their previous lock mode.  
+ A ROLLBACK TRANSACTION statement specifying a *savepoint_name* releases any locks that are acquired beyond the savepoint, exception for escalations and conversions. These locks are not released, and they are not converted back to their previous lock mode.  
   
 ## Permissions  
  Requires membership in the **public** role.  

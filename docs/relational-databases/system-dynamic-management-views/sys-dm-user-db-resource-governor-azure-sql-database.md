@@ -3,7 +3,7 @@ title: "sys.dm_user_db_resource_governance (Transact-SQL)"
 description: sys.dm_user_db_resource_governance (Transact-SQL)
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 07/21/2023
+ms.date: 02/26/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -22,7 +22,10 @@ monikerRange: "=azuresqldb-current"
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
-Returns actual configuration and capacity settings used by resource governance mechanisms in the current database or elastic pool.
+Returns the actual configuration and capacity settings used by resource governance mechanisms in the current database or elastic pool.
+
+For single databases, returns a single row for the current database. For elastic pools, returns a row for each database where the caller holds the `VIEW DATABASE STATE` or `VIEW DATABASE PERFORMANCE STATE` permission, or rows for all databases in the elastic pool if the caller holds the `VIEW SERVER STATE` or `VIEW SERVER PERFORMANCE STATE` permission.
+
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -89,7 +92,7 @@ Returns actual configuration and capacity settings used by resource governance m
 
 ## Permissions
 
-This view requires VIEW DATABASE STATE permission.
+On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Microsoft Entra admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.
 
 ## Remarks
 

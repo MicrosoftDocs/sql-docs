@@ -286,4 +286,5 @@ Prevent unauthorized access to sensitive data and gain control by masking it to 
 ## See also
 
 - [Dynamic Data Masking](/sql/relational-databases/security/dynamic-data-masking) for SQL Server.
+- [Dynamic Data Masking](/sql/relational-databases/security/dynamic-data-masking) for limitations and restrictions.
 - Data Exposed episode about [Granular Permissions for Azure SQL Dynamic Data Masking](/Shows/Data-Exposed/Granular-Permissions-for-Azure-SQL-Dynamic-Data-Masking) on Channel 9.

@@ -102,7 +102,7 @@ After the organization-wide policy has been defined, you can continue classifyin
    ![Recommendations for classification](./media/data-discovery-and-classification-overview/recommendation.png)
 
 > [!NOTE]
-> Recommendation engine which does automatic data discovery and provides sensitive column recommendations is disabled when Microsoft Purview Information Protection policy mode is used.
+> The recommendation engine, which does automatic data discovery and provides sensitive column recommendations, is disabled when Microsoft Purview Information Protection policy mode is used.
 
 1. You can also classify columns manually, as an alternative or in addition to the recommendation-based classification:
 
@@ -119,13 +119,13 @@ After the organization-wide policy has been defined, you can continue classifyin
 
 ### Microsoft Purview Information Protection policy
 > [!NOTE]
-> Microsoft Information Protection (abbreviated as MIP) has been rebranded as Microsoft Purview Information Protection. Both the terms MIP and Microsoft Purview Information Protection are often used interchangeably in this document but both refer to the same concept.
+> Microsoft Information Protection (MIP) has been rebranded as Microsoft Purview Information Protection. Both "MIP" and "Microsoft Purview Information Protection" are used interchangeably in this document, but refer to the same concept.
 
-Microsoft Purview Information Protection labels provide a simple and uniform way for users to classify sensitive data uniformly across different Microsoft applications. MIP sensitivity labels are created and managed in the [Microsoft Purview compliance portal](https://compliance.microsoft.com/). To learn how to create and publish MIP sensitive labels in Microsoft Purview compliance portal, see the article, [Create and publish sensitivity labels](/microsoft-365/compliance/create-sensitivity-labels).
+Microsoft Purview Information Protection labels provide a simple and uniform way for users to classify sensitive data uniformly across different Microsoft applications. MIP sensitivity labels are created and managed in the [Microsoft Purview compliance portal](https://compliance.microsoft.com/). To learn how to create and publish MIP sensitive labels in Microsoft Purview compliance portal, see [Create and publish sensitivity labels](/microsoft-365/compliance/create-sensitivity-labels).
 
 #### Prerequisites to switch to Microsoft Purview Information Protection policy
 
-- Setting/changing information protection policy in Azure SQL Database sets the respective information protection policy for all databases under the tenant, hence the user or persona needs to have tenant wide security admin permission to change the information protection policy from SQL Information Protection policy to MIP policy or vice versa.
+- Setting/changing information protection policy in Azure SQL Database sets the respective information protection policy for all databases under the tenant. The user or persona must have tenant wide **Security Admin** permission to change the information protection policy from SQL Information Protection policy to MIP policy, or vice versa.
 - The user or persona having tenant wide **Security Admin** permission can apply policy at the tenant root management group level. For more information, see [Grant tenant-wide permissions to yourself](/azure/defender-for-cloud/tenant-wide-permissions-management#grant-tenant-wide-permissions-to-yourself).
   :::image type="content" source="media/data-discovery-and-classification-overview/request-security-admin-permissions.png" alt-text="Screenshot of Azure portal request for tenant level Security Admin permissions.":::
 - Your tenant has an active Microsoft 365 subscription and you have labels published for the current user. For more information, see [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels).

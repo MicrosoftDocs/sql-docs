@@ -92,7 +92,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  [STMPolyFromWKB &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stmpolyfromwkb-geography-data-type.md)  
   
  **To construct a geography GeometryCollection instance from WKB input**  
- [STGeomCollFromWKB &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stgeomcollfromwkb-geography-data-type.md)STGeomCollFromWKB (geography Data Type)  
+ [STGeomCollFromWKB &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stgeomcollfromwkb-geography-data-type.md) STGeomCollFromWKB (geography Data Type)  
   
 ###  <a name="gml"></a> Constructing a geography Instance from GML Text Input  
  The **geography** data type provides a method that generates a **geography** instance from GML, an XML representation of a **geography** instance. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports a subset of GML.  
@@ -135,7 +135,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  [STNumGeometries &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md)  
   
  **To return a specific geography in a GeometryCollection instance**  
- [STGeometryN &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stgeometryn-geography-data-type.md)STGeometryN (geography Data Type)  
+ [STGeometryN &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stgeometryn-geography-data-type.md) STGeometryN (geography Data Type)  
   
 ###  <a name="number"></a> Number of Points  
  All nonempty **geography** instances are comprised of *points*. These points represent the latitude and longitude coordinates of the earth on which the **geography** instances are drawn. The data type **geography** provides numerous built-in methods for querying the points of an instance.  

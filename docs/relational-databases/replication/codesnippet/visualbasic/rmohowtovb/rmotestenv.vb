@@ -180,7 +180,7 @@ Class RMOTestEnv
                     Console.Error.WriteLine("bad parameter passed")
             End Select
         Catch ex As Exception
-            Console.Error.WriteLine("The following error occured: " + ex.ToString())
+            Console.Error.WriteLine("The following error occurred: " + ex.ToString())
         Finally
 
         End Try
@@ -245,7 +245,7 @@ Class RMOTestEnv
 
         Catch ex As Exception
             ' Implement appropriate error handling here.
-            Throw New ApplicationException("An error occured when installing distribution and publishing.", ex)
+            Throw New ApplicationException("An error occurred when installing distribution and publishing.", ex)
 
         Finally
             conn.Disconnect()
@@ -302,7 +302,7 @@ Class RMOTestEnv
             End If
         Catch ex As Exception
             ' Implement the appropriate error handling here. 
-            Throw New ApplicationException("An error occured when changing Distributor " + _
+            Throw New ApplicationException("An error occurred when changing Distributor " + _
                 " or distribution database properties.", ex)
         Finally
             conn.Disconnect()
@@ -2791,7 +2791,7 @@ Class RMOTestEnv
         Catch ex As Exception
             ' Implement the appropriate error handling here. 
             Throw New ApplicationException(String.Format( _
-             "An error occured when changing agent login " + _
+             "An error occurred when changing agent login " + _
              " credentials on {0}.", serverName), ex)
         Finally
             conn.Disconnect()

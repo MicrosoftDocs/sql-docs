@@ -33,7 +33,7 @@ The Microsoft OLE DB Remoting Provider enables a local user on a client machine 
 |**Data Source**|Specifies the name of the remote data source. It is passed to the OLE DB Remoting Provider for processing.<br /><br /> This keyword is equivalent to the [RDS.DataControl](../../reference/rds-api/datacontrol-object-rds.md) object's [Connect](../../reference/rds-api/connect-property-rds.md) property.|
 
 ## Dynamic Properties
- When this service provider is invoked, the following dynamic properties are added to the [Connection](../../reference/ado-api/connection-object-ado.md)object's [Properties](../../reference/ado-api/properties-collection-ado.md) collection.
+ When this service provider is invoked, the following dynamic properties are added to the [Connection](../../reference/ado-api/connection-object-ado.md) object's [Properties](../../reference/ado-api/properties-collection-ado.md) collection.
 
 |Dynamic Property Name|Description|
 |---------------------------|-----------------|
@@ -68,7 +68,7 @@ cn.Properties("Internet Timeout") = 5000
  **Note** Specifying "...;Remote Provider=MS Remote;..." would create a four-tier scenario. Scenarios beyond three tiers have not been tested and should not be needed.
 
 ## Example
- This example performs a query on the **Authors** table of the **Pubs** database on a server named *YourServer*. The names of the remote data source and remote server are provided in the [Open](../../reference/ado-api/open-method-ado-connection.md) method of the[Connection](../../reference/ado-api/connection-object-ado.md) object, and the SQL query is specified in the[Open](../../reference/ado-api/open-method-ado-recordset.md) method of the [Recordset](../../reference/ado-api/recordset-object-ado.md) object. A **Recordset** object is returned, edited, and used to update the data source.
+ This example performs a query on the **Authors** table of the **Pubs** database on a server named *YourServer*. The names of the remote data source and remote server are provided in the [Open](../../reference/ado-api/open-method-ado-connection.md) method of the [Connection](../../reference/ado-api/connection-object-ado.md) object, and the SQL query is specified in the [Open](../../reference/ado-api/open-method-ado-recordset.md) method of the [Recordset](../../reference/ado-api/recordset-object-ado.md) object. A **Recordset** object is returned, edited, and used to update the data source.
 
 ```vb
 Dim rs as New ADODB.Recordset

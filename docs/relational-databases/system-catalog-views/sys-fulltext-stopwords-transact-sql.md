@@ -31,7 +31,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |-----------------|---------------|-----------------|  
 |**stoplist_id**|**int**|ID of the stoplist to which **stopword** belongs. This ID is  unique within the database.|  
 |**stopword**|**nvarchar(64)**|The term to be considered for a stop-word match.|  
-|**language**|**sysname**|Is either the value of the alias in [sys.fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)corresponding to the value of the locale identifier (**LCID**), or is the string representation of the numeric LCID.|  
+|**language**|**sysname**|Is either the value of the alias in [sys.fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) corresponding to the value of the locale identifier (**LCID**), or is the string representation of the numeric LCID.|  
 |**language_id**|**int**|LCID used for word breaking.|  
   
 ## Permissions  

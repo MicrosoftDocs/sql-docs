@@ -214,7 +214,7 @@ void DeleteX() {
          PrintProviderError(vtConnect);  
          break;  
       default:  
-         printf("Errors occured.");  
+         printf("Errors occurred.");  
          break;  
       }  
    }  

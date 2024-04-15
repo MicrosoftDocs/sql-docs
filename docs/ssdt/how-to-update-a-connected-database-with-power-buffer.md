@@ -17,7 +17,7 @@ SQL Server Data Tools Power Buffer technology makes it easy for you to apply cha
   
 SSDT is also aware of any changes made to your database schema outside Visual Studio. For example, if you add a new table to an existing database in SQL Server Management Studio, such change will immediately show up in the SQL Server Object Explorer in Visual Studio without manually refreshing it. The drift detection feature ensures that you're always viewing the latest schema definition of a database in SQL Server Object Explorer. Notice that any database objects opened in Table Designer or Transact-SQL Editor for editing won't be refreshed to show changes outside Visual Studio.  
   
-The following procedures utilize entities created in previous procedures in the [Manage Tables, Relationships, and Fix Errors](../ssdt/manage-tables-relationships-and-fix-errors.md)section.  
+The following procedures utilize entities created in previous procedures in the [Manage Tables, Relationships, and Fix Errors](../ssdt/manage-tables-relationships-and-fix-errors.md) section.  
   
 ## To apply the changes made in the previous procedures
   

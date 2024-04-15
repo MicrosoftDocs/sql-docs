@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords:
   - "current time zone id [SQL Server]"
   - "current timezoneid [SQL Server]"
-  - "system time zone id[SQL Server]"
-  - "system timezone id[SQL Server]"
+  - "system time zone id [SQL Server]"
+  - "system timezone id [SQL Server]"
   - "functions [SQL Server], time zone id"
   - "functions [SQL Server], timezoneid"
   - "timezoneid [SQL Server], functions"

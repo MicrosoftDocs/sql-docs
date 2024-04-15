@@ -51,7 +51,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
  For information about how to insert a mark into a transaction that spans multiple databases, see [Use Marked Transactions to Recover Related Databases Consistently &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
 ## Transact-SQL Syntax for Recovering to a Mark  
- When you target a marked transaction by using a[RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md)statement, you can use one the following clauses to stop at or immediately before the mark:  
+ When you target a marked transaction by using a[RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md) statement, you can use one the following clauses to stop at or immediately before the mark:  
   
 -   Use the WITH STOPATMARK = **'**_<mark_name>_**'** clause to specify that the marked transaction is the recovery point.  
   

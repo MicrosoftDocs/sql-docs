@@ -23,14 +23,14 @@ dev_langs:
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**collector_type_uid**|**uniqueidentifer**|The GUID for a collection type. Is not nullable.|  
+|**collector_type_uid**|**uniqueidentifier**|The GUID for a collection type. Is not nullable.|  
 |**name**|**sysname**|The name of the collection type. Is not nullable.|  
 |**parameter_schema**|**xml**|The XML schema that describes what the configuration for the specified collector type looks like. This XML schema is used to validate the actual XML configuration associated with a particular collection item instance. Is nullable.|  
 |**parameter_formatter**|**xml**|Determines the template to use to transform the XML for use in the collection set property page. Is nullable.|  
-|**collection_package_id**|**uniqueidentifer**|The GUID for a collection package. Is not nullable.|  
+|**collection_package_id**|**uniqueidentifier**|The GUID for a collection package. Is not nullable.|  
 |**collection_package_path**|**nvarchar(4000)**|Provides the path to the collection package. Is nullable.|  
 |**collection_package_name**|**sysname**|The name of the collection package. Is not nullable.|  
-|**upload_package_id**|**uniqueidentifer**|The GUID for the upload package. Is not nullable.|  
+|**upload_package_id**|**uniqueidentifier**|The GUID for the upload package. Is not nullable.|  
 |**upload_package_path**|**nvarchar(4000)**|Provides the path to the upload package. Is nullable.|  
 |**upload_package_name**|**sysname**|The name of the upload package. Is not nullable.|  
 |**is_system**|**bit**|Turned on (1) or off (0) to indicate if the collector type was shipped with the data collector or if it was added later by the **dc_admin**. This could be a custom type developed in-house or by a third party. Is not nullable.|  

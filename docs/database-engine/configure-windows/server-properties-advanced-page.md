@@ -77,7 +77,7 @@ f1_keywords:
  For information about how to choose the full-text upgrade option, see [Upgrade Full-Text Search](../../relational-databases/search/upgrade-full-text-search.md).  
   
 > [!NOTE]  
->  The full-text upgrade option can also be set by using the [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)upgrade_option action.  
+>  The full-text upgrade option can also be set by using the [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md) upgrade_option action.  
   
  After you attach, restore, or copy a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database, the database becomes available immediately and is then automatically upgraded. If the database has full-text indexes, the upgrade process either imports, resets, or rebuilds them, depending on the setting of the **Full-Text Upgrade Option** server property. If the upgrade option is set to **Import** or **Rebuild**, the full-text indexes will be unavailable during the upgrade. Depending on the amount of data being indexed, importing can take several hours, and rebuilding can take up to ten times longer. Note also that when the upgrade option is set to **Import**, if a full-text catalog is not available, the associated full-text indexes are rebuilt. For information about viewing or changing the setting of the **Full-Text Upgrade Option** property, see [Manage and Monitor Full-Text Search for a Server Instance](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   

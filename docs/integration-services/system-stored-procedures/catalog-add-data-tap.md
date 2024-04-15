@@ -72,7 +72,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ```  
   
 ## Remarks  
- To add data taps, the instance of the execution must be in the created state (a value of 1 in the **status** column of the [catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)view) . The state value changes once you run the execution. You can create an execution by calling [catalog.create_execution &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
+ To add data taps, the instance of the execution must be in the created state (a value of 1 in the **status** column of the [catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) view) . The state value changes once you run the execution. You can create an execution by calling [catalog.create_execution &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
   
  The following are considerations for the add_data_tap stored procedure.  
   

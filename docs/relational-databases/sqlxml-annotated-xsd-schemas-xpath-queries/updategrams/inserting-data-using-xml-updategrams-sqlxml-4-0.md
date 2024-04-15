@@ -628,7 +628,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
     <wf:pedal>  
        <html:b>Top-of-the-line</html:b> clipless pedals with adjustable tension.</wf:pedal>  
     <wf:BikeFrame>Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.</wf:BikeFrame>  
-    <wf:crankset> Triple crankset; alumunim crank arm; flawless shifting. </wf:crankset>  
+    <wf:crankset> Triple crankset; aluminum crank arm; flawless shifting. </wf:crankset>  
    </p1:Features>  
    <p1:Picture>  
       <p1:Angle>front</p1:Angle>  

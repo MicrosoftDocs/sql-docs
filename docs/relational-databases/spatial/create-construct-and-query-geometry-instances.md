@@ -164,7 +164,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  [STNumGeometries &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stnumgeometries-geometry-data-type.md)  
   
  To return a specific geometry in a geometry collection instance  
- [STGeometryN &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stgeometryn-geometry-data-type.md)STGeometryN (geometry Data type)  
+ [STGeometryN &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stgeometryn-geometry-data-type.md) STGeometryN (geometry Data type)  
   
   
 ###  <a name="number"></a> Number of Points  

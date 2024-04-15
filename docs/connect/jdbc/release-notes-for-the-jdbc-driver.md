@@ -375,7 +375,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Added better error logging for missing MSAL library | Added an error message when MSAL is missing in the case of `ActiveDirectoryServicePrincipal`. |
 | Refactored Idle Connection Resiliency timeout to use existing SharedTimer | Improved efficiency with Idle Connection Resilency by using the existing SharedTimer. |
 | Send TDS version 8 in Login7 when in strict mode | Added additional information to Login7 packet by including TDS version 8 when encrypt=strict. |
-| Changed default loginTimeout value to 30s | Changed the default loginTimeout value from 15 seconds to 30 seconds to allow more time for intial connections to be resolved before timing out. |
+| Changed default loginTimeout value to 30s | Changed the default loginTimeout value from 15 seconds to 30 seconds to allow more time for initial connections to be resolved before timing out. |
 | `msal4j` dependency is now explicit | Added an explicit dependency for `msal4j` (was a transitive dependency in previous releases). |
 | Updated dependencies | Updated dependency versions for `azure-identity`, `azure-security-keyvault-keys`. |
 

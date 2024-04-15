@@ -25,7 +25,7 @@ helpviewer_keywords:
 ```
 
 ## Dynamic Properties
- When this service provider is invoked, the following dynamic properties are added to the [Properties](../../reference/ado-api/properties-collection-ado.md) collection of the[Connection](../../reference/ado-api/connection-object-ado.md) object.
+ When this service provider is invoked, the following dynamic properties are added to the [Properties](../../reference/ado-api/properties-collection-ado.md) collection of the [Connection](../../reference/ado-api/connection-object-ado.md) object.
 
 |Dynamic Property Name|Description|
 |---------------------------|-----------------|

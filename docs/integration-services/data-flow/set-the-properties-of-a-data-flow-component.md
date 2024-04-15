@@ -271,7 +271,7 @@ For information about custom properties, see the following topics
   
 -   [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md)  
   
--   [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)OLE DB Custom Properties  
+-   [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md) OLE DB Custom Properties  
   
 -   [Partition Processing Destination Custom Properties](../../integration-services/data-flow/partition-processing-destination-custom-properties.md)  
   

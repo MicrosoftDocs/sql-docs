@@ -21,13 +21,13 @@ For more information, see [Azure Synapse Pathway overview](azure-synapse-pathway
 In this tutorial, you learn how to:
 
 > [!div class="checklist"]
-> * Run your first translation of the SQL scripts in from your existing data warehouse to T-SQL scripts for Azure Synpase SQL 
+> * Run your first translation of the SQL scripts in from your existing data warehouse to T-SQL scripts for Azure Synapse SQL 
 > * Choose from one of the available sources
 > * View the errors and warnings about objects that didn't get translated
 
 ## Prerequisites
 
-To complete this tutorial, make sure you've installed [Azure Synapse Pathway](synapse-pathway-download.md). If you need an introduction, see [Azure Synapse Pathway overview](azure-synapse-pathway-overview.md).
+To complete this tutorial, make sure you install [Azure Synapse Pathway](synapse-pathway-download.md). If you need an introduction, see [Azure Synapse Pathway overview](azure-synapse-pathway-overview.md).
 
 ## Run the translation
 
@@ -42,7 +42,7 @@ To complete this tutorial, make sure you've installed [Azure Synapse Pathway](sy
 1. When translating the Netezza code to Azure Synapse Analytics, choose IBM Netezza in the Translation Type drop down.
   ![Azure Synapse assessment input.](./media/synapse-pathway-assessment/assessment-input.png)
 
-1. To select the output directory, select browse to specify the location where the output will be generated.
+1. To select the output directory, select browse to specify the location for the output.
  ![Azure Synapse output directory.](./media/synapse-pathway-assessment/output-directory.png)
 
 1. Select **Translate** to start the translation
@@ -52,11 +52,11 @@ To complete this tutorial, make sure you've installed [Azure Synapse Pathway](sy
 1. The duration of the assessment depends on the number of databases added and the schema size of each database. Results are displayed for each database as soon as they're available.
  ![Azure Synapse assessment report.](./media/synapse-pathway-assessment/assessment-report-rendering.png)
 
-1. When you select view results, it will take you to the output directory specified in the previous step and you'll see the translated script file(s) based on your input directory structure.
+1. When you select view results, it takes you to the output directory specified in the previous step and you see the translated script file(s) based on your input directory structure.
 
 1. It includes the project structure that can be easily committed to your GitHub repo.
   
-1. A results file, which will have a list of errors and warnings, will be uploaded in the same output directory.
+1. A results file, which has a list of errors and warnings, is uploaded in the same output directory.
 
 ## Run the translation using command line
 1. On installation, AspCmd.exe will be available in C:\Program Files (x86)\Azure Synapse Pathway

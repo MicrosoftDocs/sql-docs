@@ -49,9 +49,9 @@ As a preview feature, once enrolled, you can find Copilot in Azure SQL Database 
 To use natural language to SQL in Copilot in Azure SQL Database, follow these steps:
 
 1. In the query editor toolbar, select the **Launch inline copilot** button.
-1. In the **Table selection** drop-down menu, select the table and views for consideration by Copilot.
+1. In the **Table selection** dropdown menu, select the table and views for consideration by Copilot.
 1. Type your question in the input box. When ready, select the **Generate Query** button. This will generate the suggested T-SQL code statement.
-1. Click the **Accept** or **Decline** button for the generated T-SQL query.
+1. Select **Accept** or **Decline** for the generated T-SQL query.
 1. Execute the generated T-SQL query by selecting **Run**, or you can edit the prompt and regenerate new code. This regeneration will append, and not replace, any existing code in your query editor window.
 
 > [!NOTE]
@@ -61,7 +61,7 @@ To use natural language to SQL in Copilot in Azure SQL Database, follow these st
 
 We use feedback on generated queries to help improve Copilot in Azure SQL Database. This feedback is crucial to improving the quality of the suggestions.
 
-1. To send feedback on queries, click the thumbs-up or thumbs-down beneath the **Generate Query** button.
+1. To send feedback on queries, select the thumbs-up or thumbs-down beneath the **Generate Query** button.
 1. Within the feedback dialog, provide the nature of the feedback, a description of what went right or wrong, and then an option to share your prompts with Microsoft.
 1. Select **Submit**.
 

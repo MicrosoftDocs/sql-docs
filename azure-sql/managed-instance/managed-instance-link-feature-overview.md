@@ -18,8 +18,6 @@ ms.custom: ignite-2023
 
 This article provides an overview of the Managed Instance link feature, which enables near real-time data replication between SQL Server and Azure SQL Managed Instance. The link provides hybrid flexibility and database mobility as it unlocks several scenarios, such as scaling read-only workloads, offloading analytics and reporting to Azure, and migrating to Azure. And, with SQL Server 2022, the link enables online disaster recovery with fail back to SQL Server (currently in preview), as well as configuring the link from SQL Managed Instance to SQL Server 2022 (also in preview). 
 
-If you have product improvement suggestions or comments, or you want to report issues, contact the product group through [Managed Instance link user feedback](https://aka.ms/mi-link-feedback).
-
 ## Overview
 
 The Managed Instance link uses [distributed availability groups](/sql/database-engine/availability-groups/windows/distributed-availability-groups) to extend your data estate in a safe and secure manner, replicating data in near real-time from SQL Server hosted anywhere to Azure SQL Managed Instance, or from Azure SQL Managed Instance to SQL Server 2022 hosted anywhere. 

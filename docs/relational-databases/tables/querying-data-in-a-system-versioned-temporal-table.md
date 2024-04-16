@@ -99,16 +99,6 @@ SELECT * FROM [vw_GetOrgChart]
 FOR SYSTEM_TIME AS OF'2021-09-01 T10:00:00.7230011';
 ```
 
-Alternatively, you can query the view using the `AS OF` subclause with a local time zone and `AT TIME ZONE`:
-
-```sql
-/* Querying view AS OF with local time*/
-DECLARE @LocalTime DATETIMEOFFSET = '2021-09-01 10:00:00.7230011 -07:00';
-
-SELECT * FROM [vw_GetOrgChart]
-FOR SYSTEM_TIME AS OF @LocalTime AT TIME ZONE 'UTC';
-```
-
 ## Query for changes to specific rows over time
 
 The temporal subclauses `FROM ... TO`, `BETWEEN ... AND` and `CONTAINED IN` are useful when you need to get all historical changes for a specific row in the current table (also known as a data audit).
@@ -155,7 +145,6 @@ ORDER BY [DeptID],
 
 - [Temporal Tables](temporal-tables.md)
 - [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)
-- [AT TIME ZONE (Transact-SQL)](../../t-sql/queries/at-time-zone-transact-sql.md)
 - [Create a system-versioned temporal table](creating-a-system-versioned-temporal-table.md)
 - [Modify data in a system-versioned temporal table](modifying-data-in-a-system-versioned-temporal-table.md)
 - [Change the schema of a system-versioned temporal table](changing-the-schema-of-a-system-versioned-temporal-table.md)

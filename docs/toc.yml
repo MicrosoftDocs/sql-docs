@@ -10371,13 +10371,13 @@ items:
           href: sql-server/azure-arc/view-databases.md
         - name: Configure SQL Server
           href: sql-server/azure-arc/manage-configuration.md
-        - name: Configure billing model
+        - name: Licensing & billing
           href: sql-server/azure-arc/manage-license-billing.md
         - name: Automate patching
           href: sql-server/azure-arc/patch.md
         - name: Automate updates
           href: sql-server/azure-arc/update.md
-        - name: Disconnect and unregister from Azure Arc
+        - name: Disconnect & unregister from Azure Arc
           href: sql-server/azure-arc/delete-from-azure-arc.md
         - name: Monitor (preview)
           href: sql-server/azure-arc/sql-monitoring.md
@@ -10415,11 +10415,11 @@ items:
             href: sql-server/azure-arc/agent-extension-files.md
       - name: Migrate
         items:
-        - name: Discover and assess
+        - name: Discover & assess
           href: sql-server/azure-arc/migration-assessment.md
       - name: FAQ
         href: sql-server/azure-arc/faq.yml
-      - name: Data collection and reporting
+      - name: Data collection & reporting
         href: sql-server/azure-arc/data-collection.md
       - name: Troubleshoot
         items:
@@ -10431,7 +10431,6 @@ items:
           href: sql-server/azure-arc/troubleshoot-assessment.md
     - name: Azure Arc-enabled data services >
       href: /azure/azure-arc/data/overview
-
 
 - name: Big Data Clusters
   items:

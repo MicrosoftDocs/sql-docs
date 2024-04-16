@@ -190,7 +190,7 @@ These errors occur because the query editor is unable to communicate through por
    1. Keep **Domain**, **Private**, and **Public** selected.
    1. Give the rule a name, for example *Access Azure SQL query editor*, and optionally provide a description. Then select **Finish**.
 
-#### Allow 443 and 1443 in MacOS
+#### Allow 443 and 1443 in macOS
 
 1. On the Apple menu, open **System Preferences**.
 1. Select **Security & Privacy**, and then select **Firewall**.

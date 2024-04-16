@@ -405,7 +405,7 @@ CREATE LOGIN login_name
 
 When used with the **FROM EXTERNAL PROVIDER** clause, the login specifies the Microsoft Entra principal, which is a Microsoft Entra user, group, or application. Otherwise, the login represents the name of the SQL login that was created.
 
-Microsoft Entra users and service principals that are members of more than 2048 Microsoft Entra security groups aren't supported to login into the database in SQL Database, SQL Managed Instance, or Azure Synapse.
+Microsoft Entra users and service principals that are members of more than 2048 Microsoft Entra security groups aren't supported to sign in to the database in SQL Database, SQL Managed Instance, or Azure Synapse.
 
 #### FROM EXTERNAL PROVIDER
 Specifies that the login is for Microsoft Entra authentication.
@@ -442,7 +442,7 @@ In some methods of connecting to SQL Database, such as **sqlcmd**, you must appe
 
 In SQL Database, you must be connected to the `master` database with the appropriate permissions to create a login. For more information, see [Create additional logins and users having administrative permissions](/azure/sql-database/sql-database-manage-logins?view=azuresql-db&preserve-view=true#create-additional-logins-and-users-having-administrative-permissions).
 
-SQL Server rules allow you create a SQL Server authentication login in the format \<loginname>@\<servername>. If your [!INCLUDE [ssSDS](../../includes/sssds-md.md)] server is **myazureserver** and your login is **myemail@contoso.com**, then you must supply your login as **myemail@contoso.com@myazureserver**.
+SQL Server rules allow you to create a SQL Server authentication login in the format \<loginname>@\<servername>. If your [!INCLUDE [ssSDS](../../includes/sssds-md.md)] server is **myazureserver** and your login is **myemail@contoso.com**, then you must supply your login as **myemail@contoso.com@myazureserver**.
 
 In SQL Database, login data required to authenticate a connection and server-level firewall rules is temporarily cached in each database. This cache is periodically refreshed. To force a refresh of the authentication cache and make sure that a database has the latest version of the logins table, execute [DBCC FLUSHAUTHCACHE](../database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
@@ -635,7 +635,7 @@ After creating a login, the login can connect to a managed instance, but only ha
   - EXECUTE AS USER
   - EXECUTE AS LOGIN
 - External (guest) users imported from another Microsoft Entra directory can't be directly configured as a Microsoft Entra admin for SQL Managed Instance using the Azure portal. Instead, join external user to a [role-assignable group](/entra/identity/role-based-access-control/groups-create-eligible) and configure the group as the instance administrator. You can use PowerShell or Azure CLI to set individual guest users as the instance administrator.
-- Logins aren't replicated to the secondary instance in a failover group. Login are saved in the `master` database, which is a system database, and as such isn't geo-replicated. To solve this, logins must be created with the same SID on the secondary instance.
+- Logins aren't replicated to the secondary instance in a failover group. Logins are saved in the `master` database, which is a system database, and as such isn't geo-replicated. To solve this, logins must be created with the same SID on the secondary instance.
 
 ```SQL
 -- Code to create login on the secondary instance
@@ -822,7 +822,7 @@ When connecting to Azure Synapse using tools such as **sqlcmd**, you must append
 
 To create a login, you must be connected to the `master` database.
 
-SQL Server rules allow you create a SQL Server authentication login in the format \<loginname>@\<servername>. If your [!INCLUDE [ssSDS](../../includes/sssds-md.md)] server is **myazureserver** and your login is **myemail@contoso.com**, then you must supply your login as **myemail@contoso.com@myazureserver**.
+SQL Server rules allow you to create a SQL Server authentication login in the format \<loginname>@\<servername>. If your [!INCLUDE [ssSDS](../../includes/sssds-md.md)] server is **myazureserver** and your login is **myemail@contoso.com**, then you must supply your login as **myemail@contoso.com@myazureserver**.
 
 Login data required to authenticate a connection and server-level firewall rules is temporarily cached in each database. This cache is periodically refreshed. To force a refresh of the authentication cache and make sure that a database has the latest version of the logins table, execute [DBCC FLUSHAUTHCACHE](../database-console-commands/dbcc-flushauthcache-transact-sql.md).
 

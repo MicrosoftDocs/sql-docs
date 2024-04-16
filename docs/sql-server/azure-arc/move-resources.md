@@ -22,7 +22,7 @@ At this time, this feature is available for preview.
 
 ## Requirements
 
-To complete this task, the *Arc Server – Machine* and SQL Server instances must be in the same resource group.
+To complete this task, the *Machine - Azure Arc* resource and all SQL Server instances must be in the same resource group.
 
 In addition:
 
@@ -33,9 +33,15 @@ After the move, you can reenable any resources you disable.
 
 ## Move the resources to a new resource group or subscription
 
-1. In Azure portal, locate the resource group with your Arc Server machine resource and select that resource.
+1. In Azure portal, locate the resource group.
 
-   If the SQL Server instance is a failover cluster instance (FCI), select all of the Arc Server machine resources. Include both the active node and all inactive nodes. 
+1. Select the server.
+
+   The server resource type is **Machine - Azure Arc**. Don't select any other types of resources.
+
+   :::image type="content" source="media/move-resources/machine-azure-arc.png" alt-text="Screenshot of Azure Arc machine from the portal.":::
+
+   If the SQL Server instance is a failover cluster instance (FCI), select all of the **Machine - Azure Arc** type server resources for the active and inactive nodes.
 
 1. Select **Move**>**Move to another resource group** or **Move to another subscription**.
 1. In **Move resources**, provide the required information. Select **Next**.
@@ -92,6 +98,6 @@ These steps explain how to reconfigure best practices analyzer after a move:
 
 1. Before the move, disable best practices assessment.
 2. Move the resource.
-3. Update the log analytics workspace with one from the new subscription and enable BPA.
+3. Update the log analytics workspace with one from the new subscription and enable best practices assessment.
 
-Moving to a different subscription requires manual reconfiguration with the above steps for all SQL Server instances impacted for SQL best practices analyzer.
+Moving to a different subscription requires manual reconfiguration with the above steps for all SQL Server instances impacted for SQL best practices assessment.

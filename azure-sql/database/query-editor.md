@@ -5,7 +5,7 @@ description: Learn how to run T-SQL queries all from within the browser via the 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: ivujic, mathoma
-ms.date: 03/13/2024
+ms.date: 04/15/2024
 ms.service: sql-database
 ms.subservice: development
 ms.topic: conceptual
@@ -51,7 +51,7 @@ For examples, see [Quickstart: Use the Azure portal query editor (preview) to qu
 - To use SQL Authentication to connect to an Azure SQL database via the query editor, you must have a login in the logical server's `master` database or a contained SQL user in the desired user database. For more information, see [Logins](logins-create-manage.md).
     - Enter your username and password, then select **OK**.
 - To use Microsoft Entra authentication to connect to an Azure SQL database via the query editor, your database must be configured with Microsoft Entra authentication, and you must have a [Microsoft Entra user created in the database](authentication-azure-ad-logins-tutorial.md).
-    - Select `Continue as <user@domain>`.
+    - Select **Continue as \<user@domain>**.
 
 ### Permissions required to access the query editor
 
@@ -66,7 +66,7 @@ There are four main sections of the query editor:
 - Query window
 - Copilot for Azure SQL Database
 
-   :::image type="content" source="media/query-editor/query-editor.png" alt-text="Screenshot from the Azure portal showing red rectangles highlighting the Query editor in the main menu and the Navigation bar, Object Explorer, and Query window.":::
+   :::image type="content" source="media/query-editor/query-editor.png" alt-text="Screenshot from the Azure portal showing red rectangles highlighting the Query editor in the main menu and the Navigation bar, Object Explorer, and Query window." lightbox="media/query-editor/query-editor.png":::
 
 ### Navigation bar
 
@@ -221,4 +221,3 @@ When using Azure VMs, you have an [Azure network security group](/azure/virtual-
 - [What is Azure SQL?](../azure-sql-iaas-vs-paas-what-is-overview.md)
 - [Azure SQL glossary of terms](../glossary-terms.md)
 - [T-SQL differences between SQL Server and Azure SQL Database](transact-sql-tsql-differences-sql-server.md)
-

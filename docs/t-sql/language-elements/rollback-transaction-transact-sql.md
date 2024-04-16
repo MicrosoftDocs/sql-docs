@@ -103,11 +103,11 @@ If a `ROLLBACK TRANSACTION` is issued in a trigger:
 
 The effect of a `ROLLBACK` on cursors is defined by these three rules:
 
-1. With `CURSOR_CLOSE_ON_COMMIT` set `ON`, `ROLLBACK` closes, but doesn't deallocate all open cursors.
+- With `CURSOR_CLOSE_ON_COMMIT` set `ON`, `ROLLBACK` closes, but doesn't deallocate all open cursors.
 
-1. With `CURSOR_CLOSE_ON_COMMIT` set `OFF`, `ROLLBACK` doesn't affect any open synchronous `STATIC` or `INSENSITIVE` cursors or asynchronous `STATIC` cursors that were fully populated. Open cursors of any other type are closed but not deallocated.
+- With `CURSOR_CLOSE_ON_COMMIT` set `OFF`, `ROLLBACK` doesn't affect any open synchronous `STATIC` or `INSENSITIVE` cursors or asynchronous `STATIC` cursors that were fully populated. Open cursors of any other type are closed but not deallocated.
 
-1. An error that terminates a batch and generates an internal rollback deallocates all cursors that were declared in the batch containing the error statement. All cursors are deallocated regardless of their type or the setting of `CURSOR_CLOSE_ON_COMMIT`. This includes cursors declared in stored procedures called by the error batch. Cursors declared in a batch before the error batch are subject to the first two rules. A deadlock error is an example of this type of error. A `ROLLBACK` statement issued in a trigger also automatically generates this type of error.
+- An error that terminates a batch and generates an internal rollback deallocates all cursors that were declared in the batch containing the error statement. All cursors are deallocated regardless of their type or the setting of `CURSOR_CLOSE_ON_COMMIT`. This includes cursors declared in stored procedures called by the error batch. Cursors declared in a batch before the error batch are subject to the first two rules. A deadlock error is an example of this type of error. A `ROLLBACK` statement issued in a trigger also automatically generates this type of error.
 
 ## Locking behavior
 

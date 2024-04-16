@@ -1,6 +1,6 @@
 ---
-title: "Quickstart: Create an Azure SQL Managed Instance"
-description: Create an Azure SQL Managed Instance by using the Azure portal, PowerShell, and the Azure CLI. 
+title: "Quickstart: Create Azure SQL Managed Instance"
+description: Create Azure SQL Managed Instance by using the Azure portal, PowerShell, and the Azure CLI. 
 author: urosran
 ms.author: urandjelovic
 ms.reviewer: mathoma
@@ -10,10 +10,10 @@ ms.subservice: deployment-configuration
 ms.topic: quickstart
 ms.custom: mode-ui, devx-track-azurecli
 ---
-# Quickstart: Create an Azure SQL Managed Instance
+# Quickstart: Create Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This quickstart teaches you to create an [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md) by using the Azure portal, PowerShell, and the Azure CLI. 
+This quickstart teaches you to create a deployment of [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md) by using the Azure portal, PowerShell, and the Azure CLI. 
 
 [!INCLUDE [azure-sql-managed-instance-free-offer-note](../includes/azure-sql-managed-instance-free-offer-note.md)]
 
@@ -24,9 +24,9 @@ This quickstart teaches you to create an [Azure SQL Managed Instance](sql-manage
 
 For limitations, see [Supported regions](resource-limits.md#supported-regions) and [Supported subscription types](resource-limits.md#supported-subscription-types).
 
-## Create an Azure SQL Managed Instance
+## Create Azure SQL Managed Instance
 
-You can create an Azure SQL Managed Instance by using the Azure portal, PowerShell, and the Azure CLI. 
+You can create a deployment of Azure SQL Managed Instance by using the Azure portal, PowerShell, and the Azure CLI. 
 
 Consider the following:
 
@@ -103,13 +103,11 @@ The following table provides details for information on the **Networking** tab:
 
 Select **Review + create** to review your choices before you create a managed instance. Or, configure security settings by selecting **Next: Security settings**.
 
-
 ### Security tab
 
 For the purpose of this quickstart, leave the settings on the **Security** tab at their default values. 
 
 Select **Review + create** to review your choices before you create a managed instance.  Or, configure more custom settings by selecting **Next: Additional settings**.
-
 
 ### Additional settings
 
@@ -150,7 +148,6 @@ Once deployment completes, navigate to your resource group to view your managed 
 
 > [!TIP]
 > If you closed your web browser or moved away from the deployment progress screen, you can [monitor the provisioning operation](management-operations-monitor.md#monitor-operations) via the managed instance's **Overview** page in the Azure portal, PowerShell or the Azure CLI. 
-
 
 ### [PowerShell](#tab/powershell)
 

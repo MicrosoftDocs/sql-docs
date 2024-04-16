@@ -37,12 +37,12 @@ After the move, you can reenable any resources you disable.
 
 1. Select the server.
 
-   The server resource type is **Machine - Azure Arc**.
+   The server resource type is **Machine - Azure Arc**. Don't select any other types of resources.
+
+   :::image type="content" source="media/move-resources/machine-azure-arc.png" alt-text="Screenshot of machine azure arc in Azure portal.":::
 
    If the SQL Server instance is a failover cluster instance (FCI), select all of the **Machine - Azure Arc** type server resources for the active and inactive nodes.
 
-   Do not select any other types of resources.
-  
 1. Select **Move**>**Move to another resource group** or **Move to another subscription**.
 1. In **Move resources**, provide the required information. Select **Next**.
 1. Review the information and select **Move**.

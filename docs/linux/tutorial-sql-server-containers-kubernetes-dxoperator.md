@@ -4,7 +4,7 @@ description: Set up an availability group in SQL Server on Kubernetes using DH2i
 author: aravindmahadevan-ms
 ms.author: armaha
 ms.reviewer: amitkh, randolphwest
-ms.date: 04/10/2024
+ms.date: 04/17/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: tutorial
@@ -57,8 +57,6 @@ This tutorial consists of the following steps:
    
        [sqlagent]
        enabled = true
-   
-       ssl-protocols = TLSv1.3
    ```
 
 1. Create the object by executing the following command.
@@ -88,7 +86,8 @@ To install DxOperator, you must download the DxOperator YAML file using the foll
 1. Deploy the YAML describing how to set up an AG, using the following command. Save the file with a custom name, such as `DxEnterpriseSqlAg.yaml`.
 
    ```bash
-   wget https://dxoperator.dh2i.com/dxesqlag/files/v1.yaml
+   curl -L https://dxoperator.dh2i.com/dxesqlag/files/v1.yaml -o DxEnterpriseSqlAg.yaml
+   kubectl apply –f DxEnterpriseSqlAg.yaml
    ```
 
    The YAML file looks similar to the following example.
@@ -180,7 +179,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    dh2i.com/entity: beta2
+    dh2i.com/entity: dxesqlag
   ports:
     - name: sql
       protocol: TCP

@@ -245,6 +245,21 @@ Review the configure failover group guide for a list of [permissions](failover-g
 
 Failover groups can also be managed programmatically using Azure PowerShell, Azure CLI, and REST API. Review [configure failover group](failover-group-configure-sql-mi.md) to learn more.
 
+## Disaster recovery drills
+
+The recommended way to perform a DR drill is using the manual planned failover, as per the following tutorial: [Test failover](failover-group-configure-sql-mi.md#test-failover).
+
+Performing a drill using forced failover is **not recommended**, as this operation doesn't provide guardrails aganinst data loss. Nevertheless, it's possible to achieve data lossless forced failover by ensuring the following conditions are met prior to initiating the forced failover:
+
+- The workload is stopped on the primary managed instance.
+- All long running transactions have completed.
+- All client connections to the primary managed instance have been disconnected.
+- [Failover group status](failover-group-sql-mi.md#failover-group-status) is 'Synchronizing'.
+
+Please ensure the two managed instances have switched roles and that the failover group status has switched from 'Failover in progress' to 'Synchronizing' before optionally establishing connections to the new primary managed instance and starting read-write workload.
+
+To perform a data lossless failback to the original managed instnce roles using forced failover, please follow the same instructions as for the data lossless failover.
+
 ## Related content
 
 - [Configure a failover group](failover-group-configure-sql-mi.md)

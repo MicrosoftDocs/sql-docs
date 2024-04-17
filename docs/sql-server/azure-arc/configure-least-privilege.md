@@ -21,6 +21,9 @@ To optionally configure the service to run with least privilege, follow the step
 
 [Configure Windows service accounts and permissions for Azure Extension for SQL Server](configure-windows-accounts-agent.md) describes the least privilege permissions for the agent extension service.
 
+> [!NOTE]
+> [!INCLUDE [least-privilege-default](includes/least-privilege-default.md)]
+
 Support for this configuration is currently available for preview.
 
 [!INCLUDE [azure-arc-sql-preview](includes/azure-arc-sql-preview.md)]

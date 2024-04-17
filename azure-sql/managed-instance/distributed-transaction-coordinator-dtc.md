@@ -86,7 +86,7 @@ az sql mi dtc update --id /subscriptions/00000000-0000-0000-0000-000000000000/re
 
 To use DTC, all transaction participants must have a network connection to Azure. Because managed instances are always deployed to a dedicated virtual network in Azure, you must connect your external environment to the virtual network of your managed instance. In this context, *external* refers to any object or process that isn't your managed instance. If your external resource also uses a virtual network in Azure, you can use virtual network peering. Otherwise, establish connectivity by using your preferred method, such as point-to-site VPN, Azure ExpressRoute, or another network connectivity technology that meets your business needs.
 
-Port 135 and port 1024-65535 must allow both inbound and outbound communication in both the virtual network [network security group](/azure/virtual-network/network-security-groups-overview) for the managed instance and in any firewall that's set up in the external environment.
+Port 135 must allow both inbound and outbound communication, port range 14000-15000 must allow inbound, and 49152-65535 must allow outbound communication, in both the virtual network [network security group](/azure/virtual-network/network-security-groups-overview) for the managed instance and in any firewall that's set up in the external environment.
 
 ## DNS settings
 

@@ -14,6 +14,9 @@ ms.topic: reference
 
 This article lists the permissions Azure extension for SQL Server sets on an instance of for the `NT Service\SQLServerExtension` account. This account is used when you [Operate SQL Server enabled by Azure Arc with least privilege (preview)](configure-least-privilege.md).
 
+> [!NOTE]
+> [!INCLUDE [least-privilege-default](includes/least-privilege-default.md)]
+
 Manually setting the permissions for the agent account is not supported.
 
 The extension sets permissions when you enable features on the Azure portal. If you don't enable a feature, the extension does not set the permissions for that feature. If you disable a feature, the extension removes the permissions.

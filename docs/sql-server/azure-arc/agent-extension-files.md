@@ -34,6 +34,9 @@ This article lists the files and the registry keys created by the installation o
 | `C:\Windows\ServiceProfiles\SqlServerExtension\AppData\Local\Microsoft SQL Server Extension Agent\*` | When configured for [least privilege](configure-least-privilege.md) <br/><br/> Feature application |
 | `C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft SQL Server Extension Agent\*`| When not configured for [least privilege](configure-least-privilege.md) <br/></br> Feature application |
 
+> [!NOTE]
+> [!INCLUDE [least-privilege-default](includes/least-privilege-default.md)]
+
 ## Registry keys
 
 Base key: `HKEY_LOCAL_MACHINE`

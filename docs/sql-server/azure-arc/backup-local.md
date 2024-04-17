@@ -62,6 +62,9 @@ If both database and instance level backup schedule is set, database level sched
 
 The backup service within the Azure extension for Arc-enabled SQL Server uses [NT AUTHORITY\SYSTEM] account to perform the backups. If you're [operating SQL Server enabled by Arc with least privilege](configure-least-privilege.md), A local Windows account - [NT Service\SQLServerExtension] - performs the backup.
 
+> [!NOTE]
+> [!INCLUDE [least-privilege-default](includes/least-privilege-default.md)]
+
 If you use Azure extension for SQL Server [version 1.1.2504.99](release-notes.md#november-14-2023) or later, the necessary permissions are granted to [NT AUTHORITY\SYSTEM] automatically. You don't need to assign permissions manually.
 
 **For earlier extensions only**, follow the below steps to assign permission to [NT AUTHORITY\SYSTEM] account.

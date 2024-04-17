@@ -80,7 +80,7 @@ The server principal isn't able to access the database under the current securit
 
 Ensure the SQL Server built-in login NT AUTHORITY\SYSTEM is a member of the SQL Server sysadmin server role for all the SQL Server instances running on the machine.
 
-If this isn't allowed, you can configure a least privilege account for the Azure extension for SQL Server service on your SQL Server machine. Least Privilege account is available for preview.
+If this isn't allowed, you can configure a least privilege account for the Azure extension for SQL Server service on your SQL Server machine. Least privilege account is available for preview.
 
 To configure your server, follow the steps in [Operate SQL Server enabled by Azure Arc with least privilege (preview)](configure-least-privilege.md).
 

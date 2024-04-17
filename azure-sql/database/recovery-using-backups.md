@@ -142,7 +142,7 @@ To perform a restore operation on a long-term backup, you can use the Azure port
 
 ### [Azure portal](#tab/azure-portal)
 
-To recover a long-term backup by using the Azure portal, go to your logical server. Select **Backups** under **Settings**, and then select **Manage** under **Available LTR backups** for the database you're trying to restore. 
+To recover a long-term backup by using the Azure portal, go to your logical server. Select **Backups** under **Data Management**, and then select **Manage** under **Available LTR backups** for the database you're trying to restore. 
 
 :::image type="content" source="media/long-term-backup-retention-configure/ltr-available-backups-tab.png" alt-text="Screenshot of the Azure portal that shows available long-term retention backups.":::
 

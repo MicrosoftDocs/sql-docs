@@ -25,7 +25,7 @@ dev_langs:
 
 Returns the Extended Events logged by Smart Admin.
 
-Use this stored procedure to monitor Extended Events logged by Smart Admin. [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)] events are logged in this system, and can be reviewed and monitored using this stored procedure.
+Use this stored procedure to monitor Extended Events logged by Smart Admin. [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)] events are logged in this system, and can be reviewed and monitored using this stored procedure.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

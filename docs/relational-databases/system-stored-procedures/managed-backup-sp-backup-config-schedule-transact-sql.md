@@ -23,7 +23,7 @@ dev_langs:
 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-Configures automated or custom scheduling options for [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)].
+Configures automated or custom scheduling options for [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)].
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

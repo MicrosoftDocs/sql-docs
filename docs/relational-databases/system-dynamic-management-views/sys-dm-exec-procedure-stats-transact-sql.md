@@ -3,7 +3,7 @@ title: "sys.dm_exec_procedure_stats (Transact-SQL)"
 description: sys.dm_exec_procedure_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/19/2023"
+ms.date: "04/18/2024"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -21,7 +21,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 # sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Returns aggregate performance statistics for cached stored procedures. The view returns one row for each cached stored procedure plan, and the lifetime of the row is as long as the stored procedure remains cached. When a stored procedure is removed from the cache, the corresponding row is eliminated from this view. At that time, a Performance Statistics SQL trace event is raised similar to **sys.dm_exec_query_stats**.  
+  Returns aggregate performance statistics for cached stored procedures. The view returns one row for each cached stored procedure plan, and the lifetime of the row is as long as the stored procedure remains cached. When a stored procedure is removed from the cache, the corresponding row is eliminated from this view. At that time, the `query_cache_removal_statistics` event is raised similar to **sys.dm_exec_query_stats** for [!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssazuremi-md.md](../../includes/ssazuremi-md.md)].
   
  In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], dynamic management views cannot expose information that would impact database containment or expose information about other databases the user has access to. To avoid exposing this information, every row that contains data that doesn't belong to the connected tenant is filtered out.  
   

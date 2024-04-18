@@ -49,13 +49,13 @@ Enter the time in seconds to wait before the execution of a query is completed o
 
 Forces encryption of the connection. When enabled, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] uses TLS encryption for all the data sent between the client and server. For more information, see [SQL Server and client encryption summary](../../database-engine/configure-windows/sql-server-and-client-encryption-summary.md).
 
-The **Encrypt connection** property appears on the Connection Properties for SSMS 19.x and below.
+The **Encrypt connection** property appears on the Connection Properties for SSMS 19.x and earlier versions.
 
 ### Trust server certificate
 
-When enabled, with **Encrypt connection** also enabled or if the server is configured to force encryption, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] doesn't validate the server certificate on the client machine when you enable encryption on the network communication between client and server.
+When enabled, with **Encrypt connection** also enabled or if the server is configured to force encryption, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] doesn't validate the server certificate on the client machine when you enable encryption on the network connection between client and server.
 
-The **Trust server certificate** property appears on the Connection Properties page for SSMS 19.x and below.
+The **Trust server certificate** property appears on the Connection Properties page for SSMS 19.x and earlier versions.
 
 ### Use custom color
 

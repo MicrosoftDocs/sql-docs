@@ -15,7 +15,7 @@ dev_langs:
 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-The following stored procedures can be used to configure [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)].
+The following stored procedures can be used to configure [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)].
 
 ## In this section
 

@@ -249,7 +249,7 @@ Failover groups can also be managed programmatically using Azure PowerShell, Azu
 
 The recommended way to perform a DR drill is using the manual planned failover, as per the following tutorial: [Test failover](failover-group-configure-sql-mi.md#test-failover).
 
-Performing a drill using forced failover is **not recommended**, as this operation doesn't provide guardrails aganinst data loss. Nevertheless, it's possible to achieve data lossless forced failover by ensuring the following conditions are met prior to initiating the forced failover:
+Performing a drill using forced failover is **not recommended**, as this operation doesn't provide guardrails against the data loss. Nevertheless, it's possible to achieve data lossless forced failover by ensuring the following conditions are met prior to initiating the forced failover:
 
 - The workload is stopped on the primary managed instance.
 - All long running transactions have completed.
@@ -258,7 +258,10 @@ Performing a drill using forced failover is **not recommended**, as this operati
 
 Please ensure the two managed instances have switched roles and that the failover group status has switched from 'Failover in progress' to 'Synchronizing' before optionally establishing connections to the new primary managed instance and starting read-write workload.
 
-To perform a data lossless failback to the original managed instnce roles using forced failover, please follow the same instructions as for the data lossless failover.
+To perform a data lossless failback to the original managed instance roles, using manual planned failover instead of forced failover is **strongly recommended**. To proceed with forced failback:
+
+- Follow the same steps as for the data lossless failover.
+- Longer failback execution time is expected if the forced failback is executed **shortly after** the initial forced failover is completed, as it has to wait for completion of outstanding automatic backup operations on the former primary managed instance.
 
 ## Related content
 

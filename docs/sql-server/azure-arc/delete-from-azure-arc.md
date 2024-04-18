@@ -98,6 +98,8 @@ This section explains files and database objects left after you uninstall.
 
 Uninstalling deletes the binary files.
 
+Extension logs and other data may not be deleted.
+
 Disabling doesn't delete any binary files or folders.
 
 ### Tables

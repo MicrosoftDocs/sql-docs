@@ -5,7 +5,7 @@ metadata:
   description: Frequently asked questions about database watcher for Azure SQL
   author: dimitri-furman
   ms.author: dfurman
-  ms.date: 04/08/2024
+  ms.date: 04/10/2024
   ms.reviewer: wiassaf
   ms.service: sql-db-mi
   ms.subservice: monitoring
@@ -73,6 +73,10 @@ sections:
 
   - name: Watcher
     questions:
+      - question: |
+          Can I create and configure a watcher using Bicep or an ARM template?
+        answer: Yes. See [Create a database watcher](/samples/azure/azure-quickstart-templates/create-watcher/) for an example you can customize to your needs.
+
       - question: |
           Can I create and configure a watcher with PowerShell or Azure CLI?
         answer: Not at this time. You can create and configure watchers in the Azure portal, using ARM and Bicep templates, or using [REST API](/rest/api/databasewatcher). For planned improvements to database watcher, see the roadmap section in the database watcher [preview announcement](https://aka.ms/dbwatcher-preview-announcement).

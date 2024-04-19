@@ -24,7 +24,7 @@ This article contains detailed steps for creating, configuring, and starting a d
 
 For a step-by-step example of creating and configuring a database watcher, see [Quickstart: Create a database watcher to monitor Azure SQL](database-watcher-quickstart.md).
 
-To see how you can create and configure a database watcher with Bicep or an ARM template, see [Create a database watcher](/samples/azure/azure-quickstart-templates/create-watcher/).
+To see how you can create and configure a database watcher with [Bicep](/azure/azure-resource-manager/bicep/overview) or an ARM template, see [Create a database watcher](/samples/azure/azure-quickstart-templates/create-watcher/).
 
 To manage database watchers programmatically, see the database watcher [REST API](/rest/api/databasewatcher) documentation.
 

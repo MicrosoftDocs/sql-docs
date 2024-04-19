@@ -79,7 +79,7 @@ sections:
 
       - question: |
           Can I create and configure a watcher with PowerShell or Azure CLI?
-        answer: Not at this time. You can create and configure watchers in the Azure portal, using ARM and Bicep templates, or using [REST API](/rest/api/databasewatcher). For planned improvements to database watcher, see the roadmap section in the database watcher [preview announcement](https://aka.ms/dbwatcher-preview-announcement).
+        answer: Not at this time. You can create and configure watchers in the Azure portal, using [Bicep](/azure/azure-resource-manager/bicep/overview) and ARM templates, or using [REST API](/rest/api/databasewatcher). For planned improvements to database watcher, see the roadmap section in the database watcher [preview announcement](https://aka.ms/dbwatcher-preview-announcement).
 
       - question: |
           Does a watcher have an identity I can use to grant it access to my Azure resources?

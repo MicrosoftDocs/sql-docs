@@ -13,6 +13,15 @@ ms.custom: ignite-2023
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
+This article lists:
+
+- Release dates
+- Extension version numbers
+- High level feature descriptions
+- Links to additional feature documentation
+
+Extension versions are cumulative. Higher extension versions include all of the updates from previous version. A release may include internal features. A If the version release notes don't describe features, then the updates were internal.
+
 ## April 16, 2024
 
 **Extension version**: `1.1.2656.138`

@@ -20,7 +20,7 @@ This article lists:
 - High level feature descriptions
 - Links to additional feature documentation
 
-Extension versions are cumulative. Higher extension versions include all of the updates from previous version. A release may include internal features. If the version release notes don't describe features, then the updates were internal.
+Extension versions are cumulative. Higher extension versions include all of the updates from previous versions. A release may include internal features. If the version release notes don't describe features, then the updates were internal.
 
 ## April 16, 2024
 

@@ -4,18 +4,18 @@ description: "Managed Backup stored procedures (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 04/18/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
 ---
-# Managed Backup stored procedures (Transact-SQL)
+# SQL Server managed backup to Microsoft Azure stored procedures (Transact-SQL)
 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-The following stored procedures can be used to configure [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)].
+The following stored procedures can be used to configure [SQL Server backups to Microsoft Azure Blob storage](../backup-restore/sql-server-managed-backup-to-microsoft-azure.md).
 
 ## In this section
 
@@ -29,4 +29,4 @@ The following stored procedures can be used to configure [!INCLUDE [ss_smartback
 
 ## Related content
 
-- [SQL Server Managed Backup to Microsoft Azure](../backup-restore/sql-server-managed-backup-to-microsoft-azure.md)
+- [SQL Server managed backup to Microsoft Azure](../backup-restore/sql-server-managed-backup-to-microsoft-azure.md)

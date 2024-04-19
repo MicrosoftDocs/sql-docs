@@ -55,11 +55,7 @@ For a tutorial and examples of natural language to SQL capabilities of the Copil
 
 ### Microsoft Copilot for Azure enhanced scenarios
 
-You can ask and receive helpful, context-rich suggestions from [Microsoft Copilot for Azure](/azure/copilot/overview) within the Azure portal. Get answers with prompts like: 
-
-- `What are the active connections running right now?`
-- `What are the top high CPU queries run in the last week`
-- `My database is slow.`
+You can ask and receive helpful, context-rich suggestions from [Microsoft Copilot for Azure](/azure/copilot/overview) within the Azure portal. 
 
 > [!WARNING]
 > Copilot in Azure SQL Database is a preview set of experiences that are powered by large language models (LLMs). Output produced by Copilot might contain inaccuracies, biases, or other unintended content. This occurs because the model powering Copilot in Azure SQL Database was trained on information from the internet and other sources. As with any generative AI model, humans should review the output produced by Copilot before use.
@@ -89,7 +85,7 @@ Here are a few examples of sample prompts you can provide today for different ca
 | Get Database Names for Server           | Lists all databases on a specific server.                                 | `List all the databases on this server.`                                |
 | High CPU Consuming Query Analysis      | Identifies and analyzes queries with high CPU usage.                       | `Why is the CPU usage high on this database?`                          |
 | Index Listing                           | Shows all indexes in the database.                                       | `What are all the indexes?`                                            |
-| Index Recommendations for Specific Table| Provides index recommendations for a specific table.                     | `Should I add an index on this table?`                                  |
+| Index Recommendations for Specific Table| Provides index recommendations for one or more tables.                     | `Should I add an index on this table?`                                  |
 | Latest Backup Information                | Provides information about the most recent database backup.               | `When was the most recent backup of my database created?`                 |
 | MAXDOP Optimization                     | Analyzes and suggests optimizations for the MAXDOP setting.              | `What's the current MAXDOP and how to optimize?`                        |
 | Memory Grant Analysis                    | Analyzes memory grant issues and potential causes.                        | `Why am I having memory grant issues?`                                 | 
@@ -99,6 +95,8 @@ Here are a few examples of sample prompts you can provide today for different ca
 | Query Store - Find Forced Plans         | Shows queries with forced plans within a specified timeframe.              | `Show me all the queries from the past 2 days that have forced plans.` |
 | Query Store - Find High Execution Time Variation | Identifies queries with high variation in execution time.            | `Which queries on my database have a high variation in execution time?`  |
 | Query Store - Find Highest I/O Queries | Shows queries with the highest I/O usage.                                | `What queries on this database use the most I/O?`                      |
+| Query Store - Get query text by ID| Shows the query text based on the provided Query ID | `What is the query text for Query ID 1333?`
+|
 | Query Store - Latest Executed Queries   | Displays the most recently executed queries.                             | `What are the most recently executed queries in my database?`           |
 | Query Store - Longest Running Queries   | Shows the longest running queries within a specified timeframe.        | `What are the longest running queries in the past day?`                 | 
 | Query Store - Queries with Highest Wait Times | Identifies queries with the highest wait times.                       | `Which queries have had the highest wait times?`                        |

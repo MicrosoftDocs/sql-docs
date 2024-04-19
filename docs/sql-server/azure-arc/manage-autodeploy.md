@@ -86,9 +86,9 @@ The value 'Configuration needed' indicates that the onboarding process didn't ha
 > [!NOTE]
 > Setting license type to **Paid** or **PAYG** will unlock to valuable management features provided to SA customers. 
 
-## How to opt out of automatic connecting
+## Opt out of automatic connecting
 
-If you want to opt out of the automatic installation of Azure extension for SQL Server, you can add the following tag and value to a subscription or resource group(s) or Arc Server resource(s).
+To opt out of the automatic installation of Azure extension for SQL Server, add the following tag and value to a subscription, resource group(s), or Arc Server resource(s).
 
 | Tag | Value |
 | --- | ----- |

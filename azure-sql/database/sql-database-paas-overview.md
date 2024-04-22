@@ -88,6 +88,10 @@ You can build your first app on a small, single database at a low cost per month
 - Use scripts to schedule or automate scalability for a single database. For an example, see [Use PowerShell to monitor and scale a single database](scripts/monitor-and-scale-database-powershell.md).
 - Use [elastic pools](#elastic-pools-to-maximize-resource-utilization), which allow databases to share resources in a pool based on individual database needs. [Elastic pools can also be scaled with custom scripts](scripts/monitor-and-scale-pool-powershell.md), allowing you to schedule or automate scalability.
 
+Watch this video in the [Azure SQL Database essentials series](/shows/azure-sql-database-essentials/) for a brief overview of scaling your database:  
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=e10562ba-2079-48c9-abc7-b3163c079341]
+
+
 ### Elastic pools to maximize resource utilization
 
 For many businesses and applications, being able to create single databases and dial performance up or down on demand is enough, especially if usage patterns are relatively predictable. Unpredictable usage patterns can make it hard to manage costs and your business model. [Elastic pools](elastic-pool-overview.md) are designed to solve this problem. You allocate performance resources to a pool rather than an individual database. You pay for the collective performance resources of the pool rather than for single database performance.

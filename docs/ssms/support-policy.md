@@ -41,7 +41,7 @@ Refer to the following table for SQL Server Management Studio servicing support.
 | 18.12.1 | | Full support | Upgrade | Upgrade | Upgrade |
 | 19.3 | | | Full support | Upgrade | Upgrade |
 | 20.0 | | | | Full support | Upgrade |
-| 20.0 | | | | | Full support |
+| 20.1 | | | | | Full support |
 
 > [!NOTE]  
 > The latest current branch version is always in the **Full support** servicing phase. This support statement means that if you encounter a code defect that warrants a critical update, you must have the latest current branch version installed in order to receive a fix.

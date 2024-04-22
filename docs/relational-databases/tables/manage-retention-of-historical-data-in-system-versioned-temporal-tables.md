@@ -248,7 +248,7 @@ DECLARE @historyTableSchema SYSNAME
 DECLARE @periodColumnName SYSNAME
 
 /*Generate script to discover history table name and end of period column for given temporal table name*/
-EXECUTE usp_executesql
+EXECUTE sp_executesql
 N'SELECT @hst_tbl_nm = t2.name,
       @hst_sch_nm = s2.name,
       @period_col_nm = c.name
@@ -263,7 +263,8 @@ N'@tblName sysname,
     @schName sysname,
     @hst_tbl_nm sysname OUTPUT,
     @hst_sch_nm sysname OUTPUT,
-    @period_col_nm sysname OUTPUT' @tblName = @temporalTableName,
+    @period_col_nm sysname OUTPUT',
+@tblName = @temporalTableName,
 @schName = @temporalTableSchema,
 @hst_tbl_nm = @historyTableName OUTPUT,
 @hst_sch_nm = @historyTableSchema OUTPUT,

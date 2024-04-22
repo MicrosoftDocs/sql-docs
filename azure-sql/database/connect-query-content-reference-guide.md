@@ -18,6 +18,9 @@ monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 
 The following document includes links to Azure examples showing how to connect and query Azure SQL Database and Azure SQL Managed Instance. For some related recommendations for Transport Level Security, see [TLS considerations for database connectivity](#tls-considerations-for-database-connectivity).
 
+Watch this video in the [Azure SQL Database essentials series](/shows/azure-sql-database-essentials/) for a brief connect and query overview: 
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=c2edd421-da6b-4598-a142-5980e4f38de9]
+
 ## Quickstarts
 
 | Quickstart | Description |

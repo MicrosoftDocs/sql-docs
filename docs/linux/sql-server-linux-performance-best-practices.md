@@ -107,7 +107,7 @@ mssql - nofile 1048576
 ```
 
 > [!NOTE]
-> This setting do not apply to SQL Server service started by systemd. See explanation for [RHEL](https://access.redhat.com/solutions/1257953).
+> This setting doesn't apply to SQL Server services started by `systemd`. For more information, see [How to set limits for services in RHEL and systemd](https://access.redhat.com/solutions/1257953).
 
 ### Disable last accessed date/time on filesystems for SQL Server data and log files
 

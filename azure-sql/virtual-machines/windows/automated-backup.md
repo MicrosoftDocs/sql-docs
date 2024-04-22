@@ -4,7 +4,7 @@ description: This article explains the Automated Backup feature for SQL Server 2
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma
-ms.date: 09/12/2023
+ms.date: 04/22/2024
 ms.service: virtual-machines-sql
 ms.subservice: backup
 ms.topic: how-to
@@ -128,7 +128,7 @@ By default the schedule is set automatically, but you can create your own schedu
 
 The following Azure portal screenshot shows the **Automated Backup** settings when you create a new SQL Server VM:
 
-![Automated Backup configuration in the Azure portal](./media/automated-backup/automated-backup-blade.png)
+:::image type="content" source="./media/automated-backup/automated-backup-blade.png" alt-text="Screenshot of Automated Backup configuration in the Azure portal.":::
 
 
 ## Configure existing VMs
@@ -139,11 +139,12 @@ Select **Enable** to configure your Automated Backup settings.
 
 You can configure the retention period (up to 90 days), the container for the storage account where you want to store your backups, as well as the encryption, and the backup schedule. By default, the schedule is automated.
 
-![Automated Backup for existing VMs](./media/automated-backup/sql-server-configuration.png)
+:::image type="content" source="./media/automated-backup/sql-server-configuration.png" alt-text="Screenshot of Automated Backup for existing VMs in the portal.":::
+
 
 If you want to set your own backup schedule, choose **Manual** and configure the backup frequency, whether or not you want system databases backed up, and the transaction log backup interval in minutes. 
 
-![Select manual to configure your own backup schedule](./media/automated-backup/configure-manual-backup-schedule.png)
+:::image type="content" source="./media/automated-backup/configure-manual-backup-schedule.png" alt-text="Screenshot of selecting manual to configure your own backup schedule.":::
 
 When finished, select the **Apply** button on the bottom of the **Backups** settings page to save your changes.
 
@@ -362,6 +363,32 @@ Update-AzSqlVM -ResourceGroupName $resourcegroupname -Name $vmname -AutoBackupSe
 -AutoBackupSettingStorageContainerName $storage_container `
 -AutoBackupSettingBackupSystemDb
 ```
+
+## Backup with Encryption Certificates
+
+If you decide to encrypt your backups, an encryption certificate will be generated and saved in the same storage account as the backups. In this scenario, you will also need to enter a password which will be used to protect the encryption certificates used for encrypting and decrypting your backups. This allows you to not worry about your backups beyond the configuration of this feature, and also ensures you can trust that your backups are secure.
+
+When backup encryption is enabled, we strongly recommend that you ascertain whether the encryption certificate has been successfully created and uploaded to ensure restorability of your databases. You can do so by creating a database right away and checking the encryption certificates and data were backed up to the newly created container properly. This will show that everything was configured correctly and no anomalies took place.
+
+If the certificate failed to upload for some reason, you can use the certificate manager to export the certificate and save it. You do not want to save it on the same VM, however, as this does not ensure you have access to the certificate when the VM is down. To know if the certificate was backed up properly after changing or creating the Automated Backup configuration, you can check the event logs in the VM,  and if it failed you will see this error message:
+
+:::image type="content" source="./media/automated-backup/automated-backup-event-log.png" alt-text="Screenshot of the error message shown in the Event Log in VM.":::
+
+If the certificates were backed up correctly, you will see this message in the Event Logs:
+
+:::image type="content" source="./media/automated-backup/automated-backup-success.png" alt-text="Screenshot of the successful backup of encryption certificate in event logs.":::
+
+As a general practice, it is recommended to check on the health of your backups from time to time. In order to be able to restore your backups, you should do the following:
+
+1. Confirm that your encryption certificates have been backed up and you remember your password. If you do not do this, you will not be able to decrypt and restore your backups. If for some reason your certificates were not properly backed up, you can accomplish this manually by executing the following T-SQL query:
+
+   ```sql
+   BACKUP MASTER KEY TO FILE = <file_path> ENCRYPTION BY PASSWORD = <password>
+   BACKUP CERTIFICATE [AutoBackup_Certificate] TO FILE = <file_path> WITH PRIVATE KEY (FILE = <file_path>, ENCRYPTION BY PASSWORD = <password>)
+   ```
+
+1. Confirm that your backup files are uploaded with at least 1 full backup. Because mistakes happen, you should be sure you always have at least one full backup before deleting your VM, or in case your VM gets corrupted, so you know you can still access your data. You should make sure the backup in storage is safe and recoverable before deleting your VM’s data disks.
+
 
 ## Monitoring
 

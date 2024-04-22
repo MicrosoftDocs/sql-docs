@@ -22,6 +22,15 @@ This article lists:
 
 Extension versions are cumulative. Higher extension versions include all of the updates from previous versions. A release may include internal features. If the version release notes don't describe features, then the updates were internal.
 
+## May 12, 2024
+
+**Extension version**: `1.1.2656.138`
+
+## Business continuity
+
+- Support for availability groups is now generally available.
+- Update portal display for failover cluster instance information
+
 ## April 16, 2024
 
 **Extension version**: `1.1.2656.138`
@@ -51,8 +60,7 @@ For details, review:
 
 ### Updated performance dashboard
 
-* New built-in role and action available to manage access to the performance dashboard
-  * Review [Monitor [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] (preview)](sql-monitoring.md).
+New built-in role and action available to manage access to the performance dashboard. Review [Monitor [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] (preview)](sql-monitoring.md).
 
 ## March 12, 2024
 
@@ -166,7 +174,7 @@ For more information, review [Monitor [!INCLUDE [ssazurearc](../../includes/ssaz
 
 #### High availability
 
-- Manage Always On availability group - manual failover - public preview.
+- Manage Always On availability group - manual failover - preview.
   - Perform a planned, manual failover on an availability group replica, using Azure portal.
 - Availability group status - Track the availability upload status | public preview.
   - Beginning with this release, track the status and see the last time that the availability group inventory data is updated.  The portal shows two new properties, **Upload status** and **Last collected time** in the **Availability Groups** tab of the Arc-enabled SQL Server.

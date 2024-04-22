@@ -1,5 +1,5 @@
 ---
-title: Always On availability groups inventory and status (preview)
+title: Always On availability groups inventory and status
 description: Describes how to view Always On availability groups and their status in Azure portal
 author: AbdullahMSFT
 ms.author: amamun 
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.custom: ignite-2023
 ---
 
-# Always On availability groups inventory and status (preview)
+# Always On availability groups inventory and status
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 

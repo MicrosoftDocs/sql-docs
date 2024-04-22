@@ -40,9 +40,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  In the **Check Constraint Expression** dialog box, type the SQL expressions for the check constraint. For example, to limit the entries in the `SellEndDate` column of the `Product` table to a value that is either greater than or equal to the date in the `SellStartDate` column or is a NULL value, type:  
   
     ```sql  
-    SellEndDate >= SellStartDate OR SellEndDate IS NULL  
+    SellEndDate >= SellStartDate  
     ```  
-  
+    
      Or, to require entries in the `zip` column to be five digits, type:  
   
     ```sql  

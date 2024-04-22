@@ -40,9 +40,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  In the **Check Constraint Expression** dialog box, type the SQL expressions for the check constraint. For example, to limit the entries in the `SellEndDate` column of the `Product` table to a value that is either greater than or equal to the date in the `SellStartDate` column or is a NULL value, type:  
   
     ```sql  
-    SellEndDate >= SellStartDate OR SellEndDate IS NULL  
+    SellEndDate >= SellStartDate  
     ```  
-  
+    Note that SellEndDate does not need to be checked for NULL as the check constraint must evaluate to anything but false, and a null comparison results in neither true nor false
+    
      Or, to require entries in the `zip` column to be five digits, type:  
   
     ```sql  
@@ -52,11 +53,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
     > [!NOTE]  
     >  Make sure to enclose any non-numeric constraint values in single quotation marks (').  
   
-4.  Select **OK**.  
+5.  Select **OK**.  
   
-5.  In the **Identity** category, you can change the name of the check constraint and add a description (extended property) for the constraint.  
+6.  In the **Identity** category, you can change the name of the check constraint and add a description (extended property) for the constraint.  
   
-6.  In the **Table Designer** category, you can set when the constraint is enforced.  
+7.  In the **Table Designer** category, you can set when the constraint is enforced.  
   
     |**To:**|**Select Yes in the Following Fields:**|  
     |-------------|---------------------------------------------|  
@@ -64,7 +65,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
     |Enforce the constraint whenever a replication operation occurs on this table|**Enforce For Replication**|  
     |Enforce the constraint whenever a row of this table is inserted or updated|**Enforce For INSERTs And UPDATEs**|  
   
-7.  Select **Close**.  
+8.  Select **Close**.  
   
 ##  <a name="TsqlProcedure"></a> Use Transact-SQL  
   

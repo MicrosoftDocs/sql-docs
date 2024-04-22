@@ -17,6 +17,10 @@ This article provides an overview of using artificial intelligence (AI) options,
 
 For samples and examples, please visit the [SQL AI Samples repository](https://aka.ms/sqlaisamples).
 
+Watch this video in the [Azure SQL Database essentials series](/shows/azure-sql-database-essentials/) for a brief overview of building an AI ready application:  
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=466d4554-4747-45dd-8f21-5ae73b1fa981]
+
+
 ## Overview
 
 Large language models (LLMs) enable developers to create AI-powered applications with a familiar user experience.

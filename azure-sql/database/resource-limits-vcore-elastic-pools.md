@@ -569,6 +569,8 @@ The following table covers these SLOs: `BC_DC_14`, `BC_DC_16`, `BC_DC_18`, `BC_D
 
 ## Hyperscale - provisioned compute - standard-series (Gen5)
 
+Although the published Hyperscale resource limits for standard-series and premium-series are the same, premium-series offers faster CPU performance compared to standard-series, and scales up to 128 vCores, compared to 80 vCores for standard-series. Resources using premium-series are guaranteed to run on hardware with newer CPUs. Standard-series does not provide this guarantee and, depending on availability, resources may be placed on older hardware. There is no price difference between the two, but premium-series may not be available in all regions.
+
 > [!NOTE]
 > Elastic pools for Hyperscale databases are currently in preview.
 

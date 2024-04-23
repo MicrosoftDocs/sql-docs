@@ -114,6 +114,8 @@ The Sql Service tag consists of IP addresses that are required to establish conn
 - [Ledger](/sql/relational-databases/security/ledger/ledger-digest-management) 
 - [Azure SQL transparent data encryption with customer-managed key](/transparent-data-encryption-byok-configure.md)
 
+## SqlManagement Service Tag
+SqlManagement service tag is used for control plane operations against Azure SQL Database
 
 
 ## Virtual network firewall rules

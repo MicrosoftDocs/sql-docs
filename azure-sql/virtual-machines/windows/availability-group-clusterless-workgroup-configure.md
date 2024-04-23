@@ -130,6 +130,10 @@ In this step, enable the availability group feature. If you're unfamiliar with t
 
 In this step, create certificates that a SQL login uses on the encrypted endpoint. Create a folder on each node to hold the certificate backups, such as `c:\certs`. 
 
+   > [!NOTE]
+   >  If you don't specify an expiration date for the certificate, its validity will be one year from the date of creation. If the certificate expires, the connection between endpoints will fail.
+
+
 To configure the first node, follow these steps: 
 
 1. Open **SQL Server Management Studio** and connect to your first node, such as `AGNode1`. 

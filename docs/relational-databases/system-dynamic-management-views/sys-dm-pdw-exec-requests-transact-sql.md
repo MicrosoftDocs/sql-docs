@@ -1,22 +1,22 @@
 ---
 title: "sys.dm_pdw_exec_requests (Transact-SQL)"
-description: sys.dm_pdw_exec_requests holds information about all requests currently or recently active in Azure Synapse Analytics.
+description: sys.dm_pdw_exec_requests holds information about all requests currently or recently active in Azure Synapse Analytics dedicated SQL pools and Analytics Platform System (PDW).
 author: jacinda-eng
 ms.author: jacindaeng
 ms.reviewer: wiassaf, randolphwest
-ms.date: 04/15/2024
+ms.date: 04/23/2024
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_pdw_exec_requests (Transact-SQL)
 
 [!INCLUDE [applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-Holds information about all requests currently or recently active in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. It lists one row per request/query.
+Holds information about all requests currently or recently active in Azure Synapse Analytics dedicated SQL pools and Analytics Platform System (PDW). It lists one row per request/query.
 
 > [!NOTE]  
 > [!INCLUDE [synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] For serverless SQL pool, use [sys.dm_exec_requests](sys-dm-exec-requests-transact-sql.md).
@@ -30,9 +30,9 @@ Holds information about all requests currently or recently active in [!INCLUDE [
 | `start_time` | **datetime** | Time at which the request execution was started. | `NULL` for queued requests; otherwise, valid **datetime** smaller or equal to current time. |
 | `end_compile_time` | **datetime** | Time at which the engine completed compiling the request. | `NULL` for requests that haven't been compiled yet; otherwise a valid **datetime** less than `start_time` and less than or equal to the current time. |
 | `end_time` | **datetime** | Time at which the request execution completed, failed, or was canceled. | `NULL` for queued or active requests; otherwise, a valid **datetime** smaller or equal to current time. |
-| `total_elapsed_time` | **int** | Time elapsed in execution since the request was started, in milliseconds. | Between 0 and the difference between `submit_time` and `end_time`.<br /><br />If `total_elapsed_time` exceeds the maximum value for an integer, `total_elapsed_time` continues to be the maximum value. This condition generates the warning "The maximum value has been exceeded."<br /><br />The maximum value in milliseconds is the same as 24.8 days. |
+| `total_elapsed_time` | **int** | Time elapsed in execution since the request was started, in milliseconds. | Between 0 and the difference between `submit_time` and `end_time`.<br /><br />If `total_elapsed_time` exceeds the maximum value for an integer, `total_elapsed_time` continues to be the maximum value. This condition generates the warning "The maximum value has been exceeded."<br />The maximum value in milliseconds is the same as 24.8 days. |
 | `label` | **nvarchar(255)** | Optional label string associated with some `SELECT` query statements. | Any string containing `a-z`, `A-Z`,`0-9`,`_`. |
-| `error_id` | **nvarchar(36)** | Unique ID of the error associated with the request, if any. | 
+| `error_id` | **nvarchar(36)** | Unique ID of the error associated with the request, if any. | |
 | `database_id` | **int** | Identifier of database used by explicit context (for example, `USE DB_X`). | See `database_id` in [sys.databases](../system-catalog-views/sys-databases-transact-sql.md). |
 | `command` | **nvarchar(4000)** | Holds the full text of the request as submitted by the user. | Any valid query or request text. Queries that are longer than 4,000 bytes are truncated. |
 | `resource_class` | **nvarchar(20)** | The workload group used for this request. | Static Resource Classes<br />`staticrc10`<br />`staticrc20`<br />`staticrc30`<br />`staticrc40`<br />`staticrc50`<br />`staticrc60`<br />`staticrc70`<br />`staticrc80`<br /><br />Dynamic Resource Classes<br />`SmallRC`<br />`MediumRC`<br />`LargeRC`<br />`XLargeRC` |
@@ -77,4 +77,4 @@ Requires `VIEW SERVER STATE` permission.
 
 ## Related content
 
-- [SQL and Parallel Data Warehouse Dynamic Management Views](sql-and-parallel-data-warehouse-dynamic-management-views.md)
+- [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)

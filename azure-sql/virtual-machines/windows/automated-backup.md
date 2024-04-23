@@ -364,7 +364,7 @@ Update-AzSqlVM -ResourceGroupName $resourcegroupname -Name $vmname -AutoBackupSe
 -AutoBackupSettingBackupSystemDb
 ```
 
-## Backup with Encryption Certificates
+## Backup with encryption certificates
 
 If you decide to encrypt your backups, an encryption certificate will be generated and saved in the same storage account as the backups. In this scenario, you will also need to enter a password which will be used to protect the encryption certificates used for encrypting and decrypting your backups. This allows you to not worry about your backups beyond the configuration of this feature, and also ensures you can trust that your backups are secure.
 

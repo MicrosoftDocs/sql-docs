@@ -46,7 +46,7 @@ This section identifies the system requirements and tools you need to complete t
 The configuration with least privilege requires:
 
 - [!INCLUDE [winserver2012-md](../../includes/winserver2012-md.md)] or later
-- [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] or later
+- SQL Server 2012 or later
 
 The configuration with least privilege is not currently supported on Linux.
 

@@ -92,5 +92,5 @@ Make sure to migrate the Arc-enabled SQL Server resource to `Microsoft.AzureArcD
 
 ## If extension is stuck in an odd state (Creating/Deleting) for long time
 
-Remove and reinstall the extension using `azcmagent` commands. For details, see [`azcmagent` extension remove](/azure/azure-arc/servers/azcmagent-extension#azcmagent-extension-remove).
+[Disconnect your SQL Server instances from Azure Arc](delete-from-azure-arc.md)
 

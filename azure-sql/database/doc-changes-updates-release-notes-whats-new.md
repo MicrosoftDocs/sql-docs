@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, randolphwest
-ms.date: 04/09/2024
+ms.date: 04/24/2024
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -77,6 +77,7 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 | Changes | Details |
 | --- | --- |
 | **Elastic jobs GA**| [Elastic jobs](elastic-jobs-overview.md), [now generally available](https://techcommunity.microsoft.com/t5/azure-sql-blog/general-availability-elastic-jobs-in-azure-sql-database/ba-p/4087140), are the SQL Server Agent replacement for Azure SQL Database. Elastic jobs support Microsoft Entra ID authentication, private endpoints, management via REST APIs, Azure Alerts, and more new features since public preview began. |
+|**Convert existing replica to standby** | It's now possible to convert an existing geo-replica to standby or an existing standby replica back to a regular geo-replica by using the Azure portal and REST API. Review [Standby replica](standby-replica-how-to-configure.md) to learn more. |
 
 ### March 2024
 

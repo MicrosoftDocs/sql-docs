@@ -20,6 +20,8 @@ This tutorial explains how to configure [!INCLUDE [ssnoversion-md](../includes/s
 
 > [!NOTE]  
 > Microsoft supports data movement, AG, and [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] components. DH2i is responsible for support of the DxEnterprise product, which includes cluster and quorum management. DxOperator is a software extension to Kubernetes that uses custom resource definitions to automate the deployment of DxEnterprise clusters. DxEnterprise then provides all of the instrumentation to create, configure, manage and provide automatic failover for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] AG workloads in Kubernetes.
+>
+> You can register for a [free DxEnterprise software license](https://dh2i.com/dxoperator-for-sql-server-kubernetes-deployments/). For more information, see the [DxOperator Quick Start Guide](https://support.dh2i.com/docs/guides/dxoperator/dxoperator-qsg/).
 
 Using the steps mentioned in this article, learn how to deploy a StatefulSet and use the DH2i DxOperator to create and configure an AG with three replicas, hosted on AKS.
 
@@ -104,7 +106,7 @@ To install DxOperator, you must download the DxOperator YAML file using the foll
      configurationOnlyReplicas: 0
      availabilityGroupName: AG1
      # Listener port for the availability group (uncomment to apply)
-     availabilityGroupListenerPort: 14033
+     availabilityGroupListenerPort: 51433
      # For a contained availability group, add the option CONTAINED
      availabilityGroupOptions: null
      # Valid options are EXTERNAL (automatic failover) and NONE (no automatic failover)
@@ -141,7 +143,7 @@ To install DxOperator, you must download the DxOperator YAML file using the foll
            mssqlSecret: mssql
            acceptEula: true
            mssqlPID: Developer
-           mssqlConfigMap: null
+           mssqlConfigMap: mssql-config
            # QoS – guaranteed (uncomment to apply)
            #resources:
              #limits:
@@ -161,7 +163,7 @@ To install DxOperator, you must download the DxOperator YAML file using the foll
              #args: [ "-c", "tail -f /dev/null" ]
    ```
 
-1. Deploy the custom resource.
+Deploy the `DxEnterpriseSqlAg.yaml` file.
 
    ```bash
    kubectl apply -f DxEnterpriseSqlAg.yaml
@@ -179,7 +181,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    dh2i.com/entity: dxesqlag
+    dh2i.com/entity: contoso-sql
   ports:
     - name: sql
       protocol: TCP
@@ -187,8 +189,8 @@ spec:
       targetPort: 1433
     - name: listener
       protocol: TCP
-      port: 14033
-      targetPort: 14033
+      port: 51433
+      targetPort: 51433
     - name: dxe
       protocol: TCP
       port: 7979

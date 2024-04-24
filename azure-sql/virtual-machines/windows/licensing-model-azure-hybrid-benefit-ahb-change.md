@@ -99,7 +99,7 @@ Update-AzSqlVM -ResourceGroupName <resource_group_name> -Name <VM_name> -License
 
 - Move all pay-as-you-go (full price) SQL PaaS/IaaS workloads to take advantage of your Azure Hybrid Benefits without have to individually configure them to enable the benefit.
 - Ensure that all your SQL workloads are licensed in compliance with the existing license agreements.
-- Separate the license compliance management roles from devops roles using RBAC
+- Separate the license compliance management roles from devops roles using RBAC.
 - Take advantage of free business continuity by ensuring that your passive & disaster recovery (DR) environments are properly identified.
 - Use MSDN licenses in Azure for non-production environments.
 
@@ -143,7 +143,7 @@ Additionally, changing the license model to **Azure Hybrid Benefit** requires [S
 
 To avoid being charged for your SQL Server instance, see [Pricing guidance for SQL Server on Azure VMs](pricing-guidance.md).
 
-To remove a SQL Server instance and associated billing from a Pay-As-You-Go SQL Server VM, or if you're being charged for a SQL instance after uninstalling it:
+To remove a SQL Server instance and associated billing from a pay-as-you-go SQL Server VM, or if you're being charged for a SQL instance after uninstalling it:
 
 1. Back up your data.
 1. If necessary, uninstall SQL Server, including the SQL IaaS Agent extension.

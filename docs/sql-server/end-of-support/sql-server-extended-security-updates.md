@@ -53,7 +53,7 @@ Azure services running [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)
 
 ### On-premises or hosted environments
 
-If you deploy your SQL Server instances to Azure Stack HCI or Azure Stack Hub, you'll have access to ESUs for [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] for up to three years after the end of support, at **no additional charge** above the cost of running the Azure service. You don't need Software Assurance to receive ESUs in Azure.
+If you deploy your SQL Server instances to an Azure service, you can access ESUs for [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] for up to three years after the end of support, at no additional charge above the cost of running the Azure service. Services include SQL Server on Azure VMs, Azure VMware Solution, Azure Stack HCI, or Azure Stack Hub.
 
 In all other cases, you can purchase Extended Security Updates if you qualify. To qualify for receiving Extended Security Updates (ESU), you must have Software Assurance under one of the following agreements:
 

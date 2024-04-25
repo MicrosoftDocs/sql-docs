@@ -50,7 +50,7 @@ It might take a few minutes for the permission grant to take effect. For more in
 
 ## Monitor resource use
 
-You can monitor resource usage at the database level using the following views. These view are applicable to standalone databases, and databases in an elastic pool.
+You can monitor resource usage at the database level using the following views. These views are applicable to standalone databases, and databases in an elastic pool.
 
 * [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database?view=azuresqldb-current&preserve-view=true)
 * [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database?view=azuresqldb-current&preserve-view=true)

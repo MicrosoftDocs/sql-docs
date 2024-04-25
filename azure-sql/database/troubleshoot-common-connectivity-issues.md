@@ -380,7 +380,7 @@ database_xml_deadlock_report  2015-10-16 20:28:01.0090000  NULL   NULL   NULL   
 
 ## Enterprise Library 6
 
-Enterprise Library 6 (EntLib60) is a framework of .NET classes that helps you implement robust clients of cloud services, one of which is SQL Database. To locate topics dedicated to each area in which EntLib60 can assist, see [Enterprise Library 6 - April 2013](/previous-versions/msp-n-p/dn169621(v=pandp.10)).
+Enterprise Library 6 (EntLib60) is a framework of .NET classes that helps you implement robust clients of cloud services, one of which is SQL Database. To locate topics dedicated to each area in which EntLib60 can assist, see [Enterprise Library 6](/previous-versions/msp-n-p/dn169621(v=pandp.10)).
 
 Retry logic for handling transient errors is one area in which EntLib60 can assist. For more information, see [4 - Perseverance, secret of all triumphs: Use the Transient Fault Handling Application Block](/previous-versions/msp-n-p/dn440719(v=pandp.60)).
 
@@ -430,7 +430,7 @@ For more information, see
 
 ### EntLib60 IsTransient method source code
 
-Next, from the **SqlDatabaseTransientErrorDetectionStrategy** class, is the C# source code for the **IsTransient** method. The source code clarifies which errors were considered transient and worthy of retry, as of April 2013.
+Next, from the **SqlDatabaseTransientErrorDetectionStrategy** class, is the C# source code for the **IsTransient** method. The source code clarifies which errors were considered transient and worthy of retry.
 
 ```csharp
 public bool IsTransient(Exception ex)

@@ -1,6 +1,6 @@
 ---
 title: "Change an item within a cell in a paginated report"
-description: Replace a non-container item, such as a text box, line, or image, in paginated reports with a new report item in Report Builder.
+description: Replace a noncontainer item, such as a text box, line, or image, in paginated reports with a new report item in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -13,7 +13,7 @@ ms.custom: updatefrequency5
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 
-In paginated reports, only a non-container item, such as a text box, line, or image, can be replaced by a new report item. For example, you can drag a table into a text box to replace the text box with a table.  
+In paginated reports, you can replace only a noncontainer item, such as a text box, line, or image, with a new report item. For example, you can drag a table into a text box to replace the text box with a table.  
   
  If the cell contains a container item such as a rectangle, list, table, or matrix, the new item is added to the containing item instead of replacing it. To replace a container item with a new item, delete the container. Deleting the container item replaces it with a text box, which you can then replace with another item.  
   
@@ -22,15 +22,15 @@ In paginated reports, only a non-container item, such as a text box, line, or im
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## To change an item within a cell  
+## Change an item within a cell  
   
--   On the **Insert** tab, in the **Data Regions** or **Report Items** group, click the item that you want to add to the report, and then click the report. The item is added to the report.  
+-   On the **Insert** tab, in the **Data Regions** or **Report Items** group, select the item that you want to add to the report, and then choose the report. The item is added to the report.  
   
 > [!NOTE]  
->  The **Image Properties** dialog box opens when you drag an image report item to a cell, where you can set properties such as the source of the image before the image is added to the cell.  
+>  The **Image Properties** dialog opens when you drag an image report item to a cell, where you can set properties such as the source of the image before the image is added to the cell.  
   
-## See Also  
- [Images, Text Boxes, Rectangles, and Lines &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+## Related content 
+ [Images, text boxes, rectangles, and lines &#40;Report Builder&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
+ [Tables, matrices, and lists &#40;Report Builder&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

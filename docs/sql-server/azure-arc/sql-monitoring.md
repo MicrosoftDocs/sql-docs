@@ -45,12 +45,6 @@ In order for monitoring data to be collected on a [!INCLUDE [ssazurearc](../../i
 
 Failover cluster instances (FCI) aren't supported at this time.
 
-## Collected data
-
-The following lists reflect the monitoring data that is collected from DMV datasets on [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] when the monitoring feature is enabled. No personally identifiable information (PII), end-user identifiable information (EUII), or customer content is collected.
-
-[!INCLUDE [azure-arc-data-regions](includes/dmv-collection.md)]
-
 ## Disable or enable collection
 
 > [!IMPORTANT]
@@ -81,7 +75,13 @@ To enable the monitoring data collection for a [!INCLUDE [ssazurearc](../../incl
 az resource update --ids "/subscriptions/<sub_id>/resourceGroups/<resource_group>/providers/Microsoft.AzureArcData/SqlServerInstances/<resource_name>" --set 'properties.monitoring.enabled=true' --api-version 2023-09-01-preview
 ```
 
-Note that this command might run successfully, but all requirements in the [Prerequisites section](#prerequisites) must be met for monitoring data to be collected and shown in the Azure portal.
+This command might run successfully, but all [prerequisites]](#prerequisites) must be met for monitoring data to be collected and shown in the Azure portal.
+
+## Collected data
+
+The following lists reflect the monitoring data that is collected from DMV datasets on [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] when the monitoring feature is enabled. No personally identifiable information (PII), end-user identifiable information (EUII), or customer content is collected.
+
+[!INCLUDE [azure-arc-data-regions](includes/dmv-collection.md)]
 
 ## Next steps
   

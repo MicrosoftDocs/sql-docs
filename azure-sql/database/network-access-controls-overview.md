@@ -104,7 +104,8 @@ You can now add these as distinct firewall rules and then disable the setting **
 [Service tags](/azure/virtual-network/service-tags-overview) can be used in security rules and routes from clients to SQL Database. Service tags can be used in  in network security groups, Azure Firewall, and user-defined routes by specifying them in the  source or destination field of a security rule. 
 The **Sql** service tag consists of all the IP addresses that are being used by Azure SQL Database. The tag is further segmented by regions. For example **Sql.WestUS** lists all the IP addresses used by SQL Database in West US.
 
-The Sql Service tag consists of IP addresses that are required to establish connectivity to Sql Database as documented [here](/connectivity-architecture.md#gateway-ip-addresses). Additionally Service tag will also be associated with any outbound traffic from SQL Database used in features such as 
+The **Sql** Service tag consists of IP addresses that are required to establish connectivity to SQL Database as documented in [Gateway IP addresses](connectivity-architecture.md#gateway-ip-addresses). Additionally, a service tag will also be associated with any outbound traffic from SQL Database used in features such as:
+
 - [Auditing](auditing-overview.md)
 - [Vulnerability assessment](/azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview)
 - [Import/Export service](database-import-export-azure-services-off.md)
@@ -112,18 +113,18 @@ The Sql Service tag consists of IP addresses that are required to establish conn
 - [Bulk Insert](/sql/t-sql/statements/bulk-insert-transact-sql)
 - [sp_invoke_external_rest_endpoint](/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql)
 - [Ledger](/sql/relational-databases/security/ledger/ledger-digest-management) 
-- [Azure SQL transparent data encryption with customer-managed key](/transparent-data-encryption-byok-configure.md)
+- [Azure SQL transparent data encryption with customer-managed key](transparent-data-encryption-byok-configure.md)
 
 ## SqlManagement Service Tag
 SqlManagement service tag is used for control plane operations against Azure SQL Database
 
 
 ## Virtual network firewall rules
-[Virtual network firewall rules](/vnet-service-endpoint-rule-overview.md) are easier alternative to establish and to manage access from a specific subnet that contains your VMs.
+[Virtual network firewall rules](vnet-service-endpoint-rule-overview.md) are easier alternative to establish and to manage access from a specific subnet that contains your VMs.
 
 
 ## Private Link
-Private Link allows you to connect to a server via a **private endpoint**. A [private endpoint](/private-endpoint-overview.md) is a private IP address within a specific [virtual network](/azure/virtual-network/virtual-networks-overview) and subnet.
+Private Link allows you to connect to a server via a **private endpoint**. A [private endpoint](private-endpoint-overview.md) is a private IP address within a specific [virtual network](/azure/virtual-network/virtual-networks-overview) and subnet.
 
 
 ## Next steps

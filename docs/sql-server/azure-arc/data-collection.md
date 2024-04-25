@@ -115,19 +115,25 @@ The following JSON document is an example of the [!INCLUDE [ssnoversion-md](../.
 }
 ```
 
-## Monitoring data
+## Extension logs
 
-You can enable and disable monitoring data that is collected. See [Monitor SQL Server enabled by Azure Arc (preview)](sql-monitoring.md).
+The extension sends logs to Azure about extension events.
 
-The following lists reflect the monitoring data that is collected from DMV datasets on [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] when the monitoring feature is enabled. No personally identifiable information (PII), end-user identifiable information (EUII), or customer content is collected.
-
-[!INCLUDE [dmv-collection](includes/dmv-collection.md)]
+[!INCLUDE [extension-logs](includes/extension-logs.md)]
 
 ## Migration assessment metrics
 
 Migration assessment automatically produces an assessment for migration to Azure. Learn more at [Select the optimal Azure SQL target using Migration assessment (preview) - SQL Server enabled by Azure Arc](migration-assessment.md).
 
 [!INCLUDE [assessment-metrics](includes/assessment-metrics.md)]
+
+## Monitoring data
+
+The agent sends SQL Server monitoring data to Azure. You can enable and disable monitoring data that is collected. See [Monitor SQL Server enabled by Azure Arc (preview)](sql-monitoring.md).
+
+The following lists reflect the monitoring data that is collected from DMV datasets on [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] when the monitoring feature is enabled. No personally identifiable information (PII), end-user identifiable information (EUII), or customer content is collected.
+
+[!INCLUDE [dmv-collection](includes/dmv-collection.md)]
 
 ## Related content
 

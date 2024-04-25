@@ -64,7 +64,7 @@ To configure the system's %TEMP% folder:
 
 ### <a id="Permissions"></a> Permissions
 
-To export a DAC, you need to possess at least ALTER ANY sign-in and database-level VIEW DEFINITION permissions and SELECT permissions on sys.sql_expression_dependencies`. This task is achievable for individuals holding membership in the security admin fixed server role and the database_owner fixed database role within the source database of the DAC. Furthermore, exporting a DAC is feasible for those who are part of the sysadmin fixed server role or those with access to the built-in SQL Server system administrator account named sa.
+To export a DAC, you need to possess at least ALTER ANY sign-in and database-level VIEW DEFINITION permissions and SELECT permissions on sys.sql_expression_dependencies`. This task is achievable for individuals holding membership in the securityadmin fixed server role and the database_owner fixed database role within the source database of the DAC. Furthermore, exporting a DAC is feasible for those who are part of the sysadmin fixed server role or those with access to the built-in SQL Server system administrator account named sa.
 
 On Azure SQL Database, you must grant **for each database** VIEW DEFINITION and SELECT permission on all tables or specific tables.
 

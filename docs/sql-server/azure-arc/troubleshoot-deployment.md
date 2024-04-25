@@ -15,6 +15,8 @@ Before you start, note the logs locations.
 
 ## Log file locations
 
+### Extension log
+
 [!INCLUDE [extension-logs](includes/extension-logs.md)]
 
 ### Deployer logs

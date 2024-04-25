@@ -16,6 +16,12 @@ When you install Azure extension for SQL Server, the installation:
 
 In addition, Azure extension for SQL Server revokes permissions for these roles when they're no longer needed for specific features.
 
-A Windows scheduled task runs hourly to reconcile privileges and permissions. For details, review [Configure Windows service accounts and permissions for Azure extension for SQL Server](../sql-server/azure-arc/configure-windows-accounts-agent.md).
+A Windows scheduled task runs hourly to grant or revoke privileges in SQL Server in cases where:
+
+- A new SQL Server instance is installed on the host
+- A new database is created
+- A feature is enabled or disabled
+
+For details, review [Configure Windows service accounts and permissions for Azure extension for SQL Server](../sql-server/azure-arc/configure-windows-accounts-agent.md).
 
 If you uninstall Azure extension for SQL Server, the server and database level roles are removed.

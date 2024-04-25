@@ -3,7 +3,8 @@ title: "CURRENT_TIMESTAMP (Transact-SQL)"
 description: "CURRENT_TIMESTAMP (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.date: "07/24/2017"
+ms.reviewer: wiassaf
+ms.date: 04/24/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -27,15 +28,15 @@ helpviewer_keywords:
   - "time [SQL Server], system"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current || =fabric"
 ---
 # CURRENT_TIMESTAMP (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 This function returns the current database system timestamp as a **datetime** value, without the database time zone offset. `CURRENT_TIMESTAMP` derives this value from the operating system of the computer on which the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs.
-  
+
 > [!NOTE]  
->  `SYSDATETIME` and `SYSUTCDATE` have more precision, as measured by fractional seconds precision, than `GETDATE` and `GETUTCDATE`. The `SYSDATETIMEOFFSET` function includes the system time zone offset. You can assign `SYSDATETIME`, `SYSUTCDATETIME`, and `SYSDATETIMEOFFSET` to a variable of any of the date and time types.  
+> `SYSDATETIME` and `SYSUTCDATE` have more precision, as measured by fractional seconds precision, than `GETDATE` and `GETUTCDATE`. The `SYSDATETIMEOFFSET` function includes the system time zone offset. You can assign `SYSDATETIME`, `SYSUTCDATETIME`, and `SYSDATETIMEOFFSET` to a variable of any of the date and time types.  
   
 This function is the ANSI SQL equivalent to [GETDATE](../../t-sql/functions/getdate-transact-sql.md).
   
@@ -52,12 +53,15 @@ CURRENT_TIMESTAMP
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
+
 This function takes no arguments.
   
-## Return Type  
+## Return Type
+
 **datetime**
   
-## Remarks  
+## Remarks
+
 [!INCLUDE[tsql](../../includes/tsql-md.md)] statements can refer to `CURRENT_TIMESTAMP`, anywhere they can refer to a **datetime** expression.
   
 `CURRENT_TIMESTAMP` is a nondeterministic function. Views and expressions that reference this column cannot be indexed.
@@ -130,8 +134,6 @@ GETUTCDATE()       20:18:45.3470000
 SELECT CURRENT_TIMESTAMP;  
 ```  
   
-## See also
-[CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
-  
-  
+## Related content
 
+- [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)

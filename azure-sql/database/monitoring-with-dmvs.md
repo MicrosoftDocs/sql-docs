@@ -14,7 +14,7 @@ ms.custom:
   - sqldbrb=2
 monikerRange: "= azuresql || = azuresql-db "
 ---
-# Monitor Microsoft Azure SQL Database performance using dynamic management views
+# Monitor Azure SQL Database performance using dynamic management views
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
@@ -32,7 +32,7 @@ This article provides information on how to detect common performance problems b
 
 ## Permissions
 
-In Azure SQL Database, depending on the compute size, deployment option, and the data in the DMV, querying a DMV may require either `VIEW DATABASE STATE`, or `VIEW SERVER PERFORMANCE STATE`, or `VIEW SERVER SECURITY STATE` permission. The last two permissions are included in the `VIEW SERVER STATE` permission. View server state permissions are granted via membership in the corresponding [server roles](security-server-roles.md). To determine which permissions are required to query a specific DMV, see the [documentation article](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views) for that DMV.
+In Azure SQL Database, depending on the compute size, deployment option, and the data in the DMV, querying a DMV may require either `VIEW DATABASE STATE`, or `VIEW SERVER PERFORMANCE STATE`, or `VIEW SERVER SECURITY STATE` permission. The last two permissions are included in the `VIEW SERVER STATE` permission. View server state permissions are granted via membership in the corresponding [server roles](security-server-roles.md). To determine which permissions are required to query a specific DMV, see [Dynamic management views](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views) and find the article describing the DMV.
 
 To grant the `VIEW DATABASE STATE` permission to a database user, run the following query, replacing `database_user` with the name of the user principal in the database:
 
@@ -40,7 +40,7 @@ To grant the `VIEW DATABASE STATE` permission to a database user, run the follow
 GRANT VIEW DATABASE STATE TO [database_user];
 ```
 
-To grant membership to the `##MS_ServerStateReader##` server role to a login named `login_name` for the [logical server in Azure](logical-servers.md), connect to the `master` database, then run the following query as an example:
+To grant membership in the `##MS_ServerStateReader##` server role to a login named `login_name` on a [logical server](logical-servers.md), connect to the `master` database, then run the following query as an example:
 
 ```sql
 ALTER SERVER ROLE [##MS_ServerStateReader##] ADD MEMBER [login_name];
@@ -351,32 +351,32 @@ If issue is occurring right now, there are two possible scenarios:
 
 #### Many individual queries that cumulatively consume high CPU
 
- - Use the following query to identify top queries by query hash:
+Use the following query to identify top queries by query hash:
 
-    ```sql
-    PRINT '-- top 10 Active CPU Consuming Queries (aggregated)--';
-    SELECT TOP 10 GETDATE() runtime, *
-    FROM (SELECT query_stats.query_hash, SUM(query_stats.cpu_time) 'Total_Request_Cpu_Time_Ms', SUM(logical_reads) 'Total_Request_Logical_Reads', MIN(start_time) 'Earliest_Request_start_Time', COUNT(*) 'Number_Of_Requests', SUBSTRING(REPLACE(REPLACE(MIN(query_stats.statement_text), CHAR(10), ' '), CHAR(13), ' '), 1, 256) AS "Statement_Text"
-        FROM (SELECT req.*, SUBSTRING(ST.text, (req.statement_start_offset / 2)+1, ((CASE statement_end_offset WHEN -1 THEN DATALENGTH(ST.text)ELSE req.statement_end_offset END-req.statement_start_offset)/ 2)+1) AS statement_text
-              FROM sys.dm_exec_requests AS req
-                    CROSS APPLY sys.dm_exec_sql_text(req.sql_handle) AS ST ) AS query_stats
-        GROUP BY query_hash) AS t
-    ORDER BY Total_Request_Cpu_Time_Ms DESC;
-    ```
+```sql
+PRINT '-- top 10 Active CPU Consuming Queries (aggregated)--';
+SELECT TOP 10 GETDATE() runtime, *
+FROM (SELECT query_stats.query_hash, SUM(query_stats.cpu_time) 'Total_Request_Cpu_Time_Ms', SUM(logical_reads) 'Total_Request_Logical_Reads', MIN(start_time) 'Earliest_Request_start_Time', COUNT(*) 'Number_Of_Requests', SUBSTRING(REPLACE(REPLACE(MIN(query_stats.statement_text), CHAR(10), ' '), CHAR(13), ' '), 1, 256) AS "Statement_Text"
+    FROM (SELECT req.*, SUBSTRING(ST.text, (req.statement_start_offset / 2)+1, ((CASE statement_end_offset WHEN -1 THEN DATALENGTH(ST.text)ELSE req.statement_end_offset END-req.statement_start_offset)/ 2)+1) AS statement_text
+            FROM sys.dm_exec_requests AS req
+                CROSS APPLY sys.dm_exec_sql_text(req.sql_handle) AS ST ) AS query_stats
+    GROUP BY query_hash) AS t
+ORDER BY Total_Request_Cpu_Time_Ms DESC;
+```
 
 #### Long running queries that consume CPU are still running
 
- - Use the following query to identify these queries:
+Use the following query to identify these queries:
 
-    ```sql
-    PRINT '--top 10 Active CPU Consuming Queries by sessions--';
-    SELECT TOP 10 req.session_id, req.start_time, cpu_time 'cpu_time_ms', OBJECT_NAME(ST.objectid, ST.dbid) 'ObjectName', SUBSTRING(REPLACE(REPLACE(SUBSTRING(ST.text, (req.statement_start_offset / 2)+1, ((CASE statement_end_offset WHEN -1 THEN DATALENGTH(ST.text)ELSE req.statement_end_offset END-req.statement_start_offset)/ 2)+1), CHAR(10), ' '), CHAR(13), ' '), 1, 512) AS statement_text
-    FROM sys.dm_exec_requests AS req
-        CROSS APPLY sys.dm_exec_sql_text(req.sql_handle) AS ST
-    ORDER BY cpu_time DESC;
-    GO
-    ```
-    
+```sql
+PRINT '--top 10 Active CPU Consuming Queries by sessions--';
+SELECT TOP 10 req.session_id, req.start_time, cpu_time 'cpu_time_ms', OBJECT_NAME(ST.objectid, ST.dbid) 'ObjectName', SUBSTRING(REPLACE(REPLACE(SUBSTRING(ST.text, (req.statement_start_offset / 2)+1, ((CASE statement_end_offset WHEN -1 THEN DATALENGTH(ST.text)ELSE req.statement_end_offset END-req.statement_start_offset)/ 2)+1), CHAR(10), ' '), CHAR(13), ' '), 1, 512) AS statement_text
+FROM sys.dm_exec_requests AS req
+    CROSS APPLY sys.dm_exec_sql_text(req.sql_handle) AS ST
+ORDER BY cpu_time DESC;
+GO
+```
+
 ### The CPU issue occurred in the past
 
 If the issue occurred in the past and you want to do root cause analysis, use [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store?view=azuresqldb-current&preserve-view=true). Users with database access can use T-SQL to query Query Store data. By default, Query Store captures aggregate query statistics for one-hour intervals.
@@ -825,7 +825,7 @@ You can use the [sys.dm_exec_connections](/sql/relational-databases/system-dynam
 
 The following query retrieves information for your current connection and session. To view all connections and sessions, remove the `WHERE` clause.
 
-You see all executing sessions on the database only if you have **VIEW DATABASE STATE** permission on the database when executing the `sys.dm_exec_requests` and `sys.dm_exec_sessions` views. Otherwise, you see only the current session.
+You see all executing sessions on the database only if you have `VIEW DATABASE STATE` permission on the database when executing the `sys.dm_exec_requests` and `sys.dm_exec_sessions` views. Otherwise, you see only the current session.
 
 ```sql
 SELECT

@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Learn how to detect and diagnose common performance problems by using dynamic management views to monitor Microsoft Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dimitri-furman, mathoma
+ms.reviewer: dfurman, mathoma
 ms.date: 04/24/2024
 ms.service: sql-database
 ms.subservice: monitoring

@@ -12,7 +12,7 @@ ms.topic: reference
 
 # SqlPackage CLI reference
 
-SqlPackage is a command-line utility commonly used for interacting with database schemas and data in Windows, Linux, and macOS environments.  The command-line interface (CLI) parses each SqlPackage invocation for parameters, properties, and SQLCMD variables.
+SqlPackage is a command-line utility for database portability and deployments in Windows, Linux, and macOS environments.  The SqlPackage command-line interface (CLI) parses each invocation for parameters, properties, and SQLCMD variables.
 
 ```bash
 SqlPackage {parameters} {properties} {SQLCMD variables}
@@ -27,7 +27,9 @@ To create a SqlPackage command, you must specify an action and its additional pa
 In the following example, SqlPackage is used to create a .dacpac file of the current database schema:
 
 ```cmd
-SqlPackage /Action:Extract /TargetFile:"C:\sqlpackageoutput\output_current_version.dacpac" /SourceServerName:"localhost" /SourceDatabaseName:"Contoso" /p:IgnoreUserLoginMappings=True /p:Storage=Memory
+SqlPackage /Action:Extract /TargetFile:"C:\sqlpackageoutput\output_current_version.dacpac" \
+ /SourceServerName:"localhost" /SourceDatabaseName:"Contoso" \
+ /p:IgnoreUserLoginMappings=True /p:Storage=Memory
 ```
 In that example, the parameters were:
 - `/Action:Extract`

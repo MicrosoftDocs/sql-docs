@@ -5,7 +5,7 @@ description: An overview of database watcher for Azure SQL, a managed monitoring
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 04/19/2024
+ms.date: 04/26/2024
 ms.service: sql-db-mi
 ms.subservice: monitoring
 ms.topic: conceptual
@@ -214,6 +214,7 @@ During preview, database watcher has the following known issues.
 | In Azure SQL Managed Instance, data is not collected if the `EXECUTE` permission on the `sys.xp_msver` system stored procedure is revoked or denied to the `public` role. | Grant the `EXECUTE` permission on `sys.xp_msver` to the database watcher login.</br></br>On every SQL managed instance added as a database watcher target, execute `USE master; CREATE USER [database-watcher-login-placeholder] FOR LOGIN [database-watcher-login-placeholder]; GRANT EXECUTE ON sys.xp_msver TO [database-watcher-login-placeholder];`, replacing `database-watcher-login-placeholder` with the name of the watcher login. |
 | If you create a managed private endpoint for a watcher to connect to a SQL managed instance that is stopped, the provisioning state of the private endpoint is reported as **Failed**, and the watcher cannot connect to the instance. | Delete the managed private endpoint with the **Failed** provisioning state and [start](./managed-instance/instance-stop-start-how-to.md) the SQL managed instance. Once the failed private endpoint is deleted and the instance is running, [re-create](database-watcher-manage.md#create-a-managed-private-endpoint) the managed private endpoint. |
 | If you use a Bicep or ARM template to create a watcher and add more than one SQL target, data might not be collected from some of the SQL targets specified in the template. | Remove the targets where data is not collected and [add](database-watcher-manage.md#add-sql-targets-to-a-watcher) them in the Azure portal. |
+| If you create a managed private endpoint and then try to delete the private endpoint or delete the watcher, the delete operation is reported as successful, but the private endpoint or watcher might not be deleted. This happens if there is a delete [lock](/azure/azure-resource-manager/management/lock-resources) on the resource, resource group, or subscription of the resource for which you created the managed private endpoint. | To delete the the managed private endpoint or the watcher, remove the delete lock from the resource, resource group, or subscription. You can add the lock again after the deletion completes successfully. |
 
 ## Troubleshoot
 

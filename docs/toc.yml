@@ -10411,7 +10411,7 @@ items:
             href: sql-server/azure-arc/permissions-granted-agent-extension.md
           - name: Required permissions
             href: sql-server/azure-arc/configure-windows-accounts-agent.md
-          - name: Files & registry reference
+          - name: System object reference
             href: sql-server/azure-arc/agent-extension-files.md
       - name: Migrate
         items:

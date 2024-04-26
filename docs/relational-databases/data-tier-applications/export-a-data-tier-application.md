@@ -30,8 +30,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 Exporting a deployed data-tier application (DAC) or database creates an export file that includes the definitions of the objects in the database and all of the data in the tables. The export file can then be imported to another instance of the [!INCLUDE [ssDE](../../includes/ssde-md.md)], or to [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. The export-import operations can be combined to migrate a DAC between instances, to create an archive, or to create an on-premises copy of a database deployed in [!INCLUDE [ssSDS](../../includes/sssds-md.md)].
 
-## Before You Begin
-
 The export process builds a DAC export file in two stages.
 
 1. The export builds a DAC definition in the export file - BACPAC file - the same way a DAC extract builds a DAC definition in a DAC package file. The exported DAC definition includes all of the objects in the current database. Suppose the export process is run against a database initially deployed from a DAC, and changes were made directly to the database after deployment. In that case, the exported definition matches the object set in the database, not what was defined in the original DAC.
@@ -40,27 +38,7 @@ The export process builds a DAC export file in two stages.
 
 The export process sets the DAC version to 1.0.0.0 and the DAC description in the export file to an empty string. If the database was deployed from a DAC, the DAC definition in the export file contains the name given to the original DAC. Otherwise, the DAC name is set to the database name.
 
-### <a id="LimitationsRestrictions"></a> Limitations and Restrictions
-
-A DAC or database can only be exported from a database in [!INCLUDE [ssSDS](../../includes/sssds-md.md)], or [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later.
-
-You can't export a database with objects that aren't supported in a DAC or contain users. For more information about the types of objects supported in a DAC, see [DAC Support For SQL Server Objects and Versions](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110)).
-
-If you receive a *failing with Out of Disk space* message, it's advisable to configure the % TEMP % folder of the system to reside on a distinct data disk. By doing so, you can ensure sufficient space for the export process to execute smoothly, avoiding potential disk space complications.
-
-To configure the system's %TEMP% folder:
-
-- Open the System Properties window by pressing the Windows key + Pause/Break or right-clicking on **This PC** and selecting Properties.
-
-- Select the link labeled **Advanced system settings** on the left-hand side.
-
-- In the ensuing System Properties window, navigate to the bottom and select **Environment Variables**.
-
-- Under the System Variables section, locate the TEMP and TMP variables, then select **Edit** associated with each.
-
-- Modify the values of both variables to point to a pathway on the separate data disk you have established. For instance, if your data disk is designated as `D:`, set the values as `D:\Temp`.
-
-- Confirm the changes by selecting OK and closing all open windows.
+## Prerequisites
 
 ### <a id="Permissions"></a> Permissions
 
@@ -88,7 +66,7 @@ On Azure SQL Database, you must grant **for each database** VIEW DEFINITION and 
 - [Progress Page](#Progress)
 - [Results Page](#Results)
 
-## <a id="Introduction"></a> Introduction page
+### <a id="Introduction"></a> Introduction page
 
 This page describes the steps for the Export Data-tier Application Wizard.
 
@@ -102,7 +80,7 @@ This page describes the steps for the Export Data-tier Application Wizard.
 
 :::image type="content" source="export-a-data-tier-application/introduction.png" alt-text="Screensheet of the export a data-tier application introduction page." lightbox="export-a-data-tier-application/introduction.png":::
 
-## <a id="Export_settings"></a> Export Settings page
+### <a id="Export_settings"></a> Export Settings page
 
 Use this page to specify the location where you want the BACPAC file to be created.
 
@@ -114,17 +92,17 @@ To specify a subset of tables to export, use the **Advanced** option.
 
 :::image type="content" source="export-a-data-tier-application/export-settings-page.png" alt-text="Screenshot of the export a data-tier application export settings page." lightbox="export-a-data-tier-application/export-settings-page.png":::
 
-## <a id="Summary"></a> Summary Page
+### <a id="Summary"></a> Summary Page
 
 Use this page to review the operation's specified source and target settings. To complete the export operation using the specified settings, select **Finish**. To cancel the export operation and exit the Wizard, select **Cancel**.
 
 :::image type="content" source="export-a-data-tier-application/summary-page.png" alt-text="Screenshot of the export data- tier summary page." lightbox="export-a-data-tier-application/summary-page.png":::
 
-## <a id="Progress"></a> Progress Page
+### <a id="Progress"></a> Progress Page
 
 This page displays a progress bar that indicates the status of the operation. To view detailed status, select the **View details** option.
 
-## <a id="Results"></a> Results Page
+### <a id="Results"></a> Results Page
 
 This page reports the export operation's success or failure, showing each action's results. Any action that encountered an error has a link in the **Result** column. Select the link to view a report of the error for that action.
 
@@ -141,6 +119,28 @@ Select **Finish** to close the Wizard.
 1. Open a **ServerConnection** object and connect to the same instance.
 
 1. Use the **Export** method of the **Microsoft.SqlServer.Management.Dac.DacStore** type to export the DAC. Specify the name of the DAC to be exported and the path to the folder where the export file is to be placed.
+
+## <a id="LimitationsRestrictions"></a> Limitations and Restrictions
+
+A DAC or database can only be exported from a database in [!INCLUDE [ssSDS](../../includes/sssds-md.md)], or [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later.
+
+You can't export a database with objects that aren't supported in a DAC or contain users. For more information about the types of objects supported in a DAC, see [DAC Support For SQL Server Objects and Versions](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110)).
+
+If you receive a *failing with Out of Disk space* message, it's advisable to configure the % TEMP % folder of the system to reside on a distinct data disk. By doing so, you can ensure sufficient space for the export process to execute smoothly, avoiding potential disk space complications.
+
+To configure the system's %TEMP% folder:
+
+- Open the System Properties window by pressing the Windows key + Pause/Break or right-clicking on **This PC** and selecting Properties.
+
+- Select the link labeled **Advanced system settings** on the left-hand side.
+
+- In the ensuing System Properties window, navigate to the bottom and select **Environment Variables**.
+
+- Under the System Variables section, locate the TEMP and TMP variables, then select **Edit** associated with each.
+
+- Modify the values of both variables to point to a pathway on the separate data disk you have established. For instance, if your data disk is designated as `D:`, set the values as `D:\Temp`.
+
+- Confirm the changes by selecting OK and closing all open windows.
 
 ## Related content
 

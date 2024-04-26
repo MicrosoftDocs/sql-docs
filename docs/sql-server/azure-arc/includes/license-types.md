@@ -24,6 +24,6 @@ The following table identifies features enabled depending on license type:
 |[Failover cluster instances (preview)](../support-for-fci.md) |Yes | Yes | Yes|
 |[Always On availability groups (preview)](../manage-availability-group.md) |Yes | Yes | Yes|
 |[Monitoring (preview)](../sql-monitoring.md) |No |Yes |Yes|
-|[Operate with least privilege (preview)](../configure-least-privilege.md)|Yes | Yes | Yes|
+|[Operate with least privilege](../configure-least-privilege.md)|Yes | Yes | Yes|
 
 <sup>1</sup> License only includes SQL Server instances that are Developer, Express, Web, or Evaluation Edition and instances using a Server/CAL license.

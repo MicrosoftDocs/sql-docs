@@ -48,12 +48,12 @@ The **SqlPackage** command line tool allows you to specify these actions along w
 
 ## Command-Line Syntax
 
-**SqlPackage** initiates the actions specified using the [parameters](#parameters), [properties](#properties), and SQLCMD variables specified on the command line. 
+**SqlPackage** initiates the actions specified using the [parameters](cli-reference.md#parameters), [properties](cli-reference.md#properties), and SQLCMD variables specified on the command line. 
   
 ```bash
 SqlPackage {parameters} {properties} {SQLCMD variables}
 ```
-More information on the SqlPackage command-line syntax is detailed in the [SqlPackage CLI reference](sqlpackage-cli-reference.md) and individual action pages.
+More information on the SqlPackage command-line syntax is detailed in the [SqlPackage CLI reference](cli-reference.md) and individual action pages.
 
 ## Utility commands
 

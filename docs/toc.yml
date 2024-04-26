@@ -9801,6 +9801,7 @@ items:
       - name: SqlPackage Script
         href: tools/sqlpackage/sqlpackage-script.md
     - name: Database portability
+      items:
       - name: SqlPackage with data in Parquet files
         href: tools/sqlpackage/sqlpackage-with-data-in-parquet-files.md
       - name: SqlPackage for Azure Synapse Analytics

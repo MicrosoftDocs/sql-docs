@@ -1,10 +1,10 @@
 ---
 title: Configure
-description: Explains how to manage SQL Server enabled by Azure Arc configuration options. 
+description: Explains how to manage SQL Server enabled by Azure Arc configuration options.
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 01/05/2024
+ms.date: 04/26/2024
 ms.topic: conceptual
 ---
 
@@ -16,26 +16,28 @@ Each Azure Arc-enabled server includes a set of properties that apply to all SQL
 
 Azure portal SQL Server Configuration allows you to perform the following management tasks:
 
-1. [Configure SQL Server license type](manage-license-billing.md)
-1. [Set the **Extended Security Updates** property](#set-the-extended-security-updates-property)
-1. [Add to the **Exclude instances** list](#add-to-the-exclude-instances-list)
+1. [Manage licensing and billing of SQL Server enabled by Azure Arc](manage-license-billing.md)
+1. [Set the Extended Security Updates property](#set-the-extended-security-updates-property)
+1. [Add to the excluded instances list](#add-to-the-excluded-instances-list)
 
 ## Prerequisites
 
 - You're in a [Contributor role](/azure/role-based-access-control/built-in-roles#contributor) in at least one of the Azure subscriptions your organization created. Learn how to [create a new billing subscription](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions).
+
 - You're in a [Contributor role](/azure/role-based-access-control/built-in-roles#contributor) for the resource group in which the SQL Server instance will be registered. See [Managed Azure resource groups](/azure/azure-resource-manager/management/manage-resource-groups-portal) for details.
-- The **Microsoft.AzureArcData** and **Microsoft.HybridCompute** resource providers are registered in each subscription you use for SQL Server pay-as-you-go billing.
+
+- The `Microsoft.AzureArcData` and `Microsoft.HybridCompute` resource providers are registered in each subscription you use for SQL Server pay-as-you-go billing.
 
 ### Register resource providers
 
-To register the resource providers, use one of the methods below:  
+To register the resource providers, use one of the following methods:
 
 ### [Azure portal](#tab/azure)
 
 1. Select **Subscriptions**
-2. Choose your subscription
-3. Under **Settings**, select **Resource providers**
-4. Search for `Microsoft.AzureArcData` and `Microsoft.HybridCompute` and select **Register**
+1. Choose your subscription
+1. Under **Settings**, select **Resource providers**
+1. Search for `Microsoft.AzureArcData` and `Microsoft.HybridCompute` and select **Register**
 
 ### [PowerShell](#tab/powershell)
 
@@ -57,17 +59,17 @@ az provider register --namespace 'Microsoft.AzureArcData'
 
 ## Modify SQL Server configuration
 
-You can use Azure portal, PowerShell or CLI to change all or some configuration settings on a specific Arc-enabled server to the desired state.
+You can use Azure portal, PowerShell, or CLI to change all or some configuration settings on a specific Arc-enabled server to the desired state.
 
 To modify the SQL Server Configuration for a larger scope, such as a resource group, subscription, or multiple subscriptions with a single command, use the [`modify-license-type.ps1`](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/modify-license-type) PowerShell script. It's published as an open source SQL Server sample and includes the step-by-step instructions.
 
 > [!TIP]  
 > Run the script from Azure Cloud shell because:
->
+>  
 > - It has the required Azure PowerShell modules pre-installed
 > - It automatically authenticates you
->
->For details, see [Running the script using Cloud Shell](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/modify-license-type#running-the-script-using-cloud-shell).
+>  
+> For details, see [Running the script using Cloud Shell](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/modify-license-type#running-the-script-using-cloud-shell).
 
 ### [Azure portal](#tab/azure)
 
@@ -75,7 +77,7 @@ There are two ways to configure the SQL Server host in Azure portal.
 
 - Open the Arc-enabled Server overview page and select **SQL Server Configuration** as shown.
 
-   :::image type="content" source="media/billing/overview-of-sql-server-azure-arc.png" alt-text="Screenshot of the SQL Server enabled by Azure Arc in Azure portal."  lightbox="media/billing/overview-of-sql-server-azure-arc.png" :::
+   :::image type="content" source="media/billing/overview-of-sql-server-azure-arc.png" alt-text="Screenshot of the SQL Server enabled by Azure Arc in Azure portal." lightbox="media/billing/overview-of-sql-server-azure-arc.png":::
 
   Or
 
@@ -85,29 +87,31 @@ There are two ways to configure the SQL Server host in Azure portal.
   - **ESU subscription**
   - **Automated updates**
 
-   :::image type="content" source="media/billing/sql-server-instance-configuration.png" alt-text="Screenshot of Azure portal SQL Server instance configuration."  lightbox="media/billing/sql-server-instance-configuration.png" :::
+   :::image type="content" source="media/billing/sql-server-instance-configuration.png" alt-text="Screenshot of Azure portal SQL Server instance configuration." lightbox="media/billing/sql-server-instance-configuration.png":::
 
-#### Set **License Type** property
+#### Set license type property
 
 Choose one of the license types. See [License types](manage-license-billing.md#license-types) for descriptions.
 
-#### Set the **Extended Security Updates** property
+#### Set the Extended Security Updates property
 
-Extended Security Updates (ESU) is available for qualified SQL Server instances that use License with Software assurance or Pay-as-you-go as the license type. If the  license type is license only, the option to activate the ESU subscription is disabled. See [Extended Security Updates for SQL Server](../end-of-support/sql-server-extended-security-updates.md).  
+Extended Security Updates (ESU) is available for qualified SQL Server instances that use License with Software assurance or Pay-as-you-go as the license type. If the license type is license only, the option to activate the ESU subscription is disabled. See [What are Extended Security Updates for SQL Server?](../end-of-support/sql-server-extended-security-updates.md).
 
-> [!NOTE]
-> - To activate an ESU subscription, the license type must be set to Pay-as-you-go or License with Software assurance.  If it is set to License only, the Extended Security Updates options will be disabled. 
-> - If ESU is enabled **License Type** cannot be changed to `LicenseOnly` until the ESU subscription is cancelled.
+> [!NOTE]  
+>
+> - To activate an ESU subscription, the license type must be set to Pay-as-you-go or License with Software assurance. If it's set to License only, the Extended Security Updates options will be disabled.
+> - If ESU is enabled **License Type** can't be changed to `LicenseOnly` until the ESU subscription is canceled.
 
 #### Apply physical core license
 
-Select this check-box if this is a virtual machine and you are leveraging the unlimited virtualization benefit for licensing the SQL Server software or for your SQL subscription. If selected, the p-core will take precedence and the SQL Server software costs or USU costs associated with this VM will be nullified. 
+Select this checkbox if you're configuring a virtual machine, and you're using the unlimited virtualization benefit for licensing the SQL Server software or for your SQL subscription. If selected, the p-core takes precedence, and the SQL Server software costs, or ESU costs associated with this VM, are nullified.
 
-> [!IMPORTANT]
-> 1. The UV benefit is not supported for the VMs running on the listed providers' infrastructure. If you select this option for such a VM, this intent will be ignored and you will be charged for the v-cores of the VM. See [Listed providers](https://aka.ms/listedproviders) for details.
-> 1. If you are configuring a VM that is not subject to the above restriction, make sure the selected **License type** matches the **Billing plan** configured in the p-core license resource. 
+> [!IMPORTANT]  
+>
+> 1. The UV benefit isn't supported for the VMs running on the listed providers' infrastructure. If you select this option for such a VM, this intent will be ignored and you'll be charged for the v-cores of the VM. See [Listed providers](https://aka.ms/listedproviders) for details.
+> 1. If you're configuring a VM that isn't subject to the above restriction, make sure the selected **License type** matches the **Billing plan** configured in the p-core license resource.
 
-#### Add to the **Exclude instances** list
+#### Add to the excluded instances list
 
 You can exclude certain instances from the at-scale onboarding operations driven by Azure policy or by automatic onboarding processes. To exclude specific instances from these operations, add the instance names to the **Skip Instances** list. For details about at-scale onboarding options, see [Alternate deployment options for SQL Server enabled by Azure Arc](deployment-options.md).
 
@@ -120,39 +124,37 @@ After you verify the license type, ESU setting, and any instance to exclude, sel
 
 ### [PowerShell](#tab/powershell)
 
-The following command sets the license type to "PAYG", enable the ESU subscription and add two instances to the exclusion list.
+The following command sets the license type to `PAYG`, which enables the ESU subscription and add two instances to the exclusion list.
 
 ```powershell
-//Updated settings object
-$Settings = @{ 
-  SqlManagement = @{ IsEnabled = $true };
-  ExcludedSqlInstances = @( "Foo","Bar"); 
-  LicenseType="PAYG";
-  enableExtendedSecurityUpdates = $True;
-  esuLastUpdatedTimestamp = [DateTime]::UtcNow.ToString('yyyy-MM-ddTHH:mm:ss.fffZ')
+# Updated settings object
+$Settings = @{
+    SqlManagement = @{ IsEnabled = $true };
+    ExcludedSqlInstances = @( "Foo", "Bar");
+    LicenseType = "PAYG";
+    enableExtendedSecurityUpdates = $True;
+    esuLastUpdatedTimestamp = [DateTime]::UtcNow.ToString('yyyy-MM-ddTHH:mm:ss.fffZ')
 }
 
-// Command stays the same as before, only settings is changed above:
-New-AzConnectedMachineExtension -Name "WindowsAgent.SqlServer" -ResourceGroupName {your resource group name} -MachineName {your machine name} -Location {azure region} -Publisher "Microsoft.AzureData" -Settings $Settings -ExtensionType "WindowsAgent.SqlServer"
+# Command stays the same as before, only settings is changed previously:
+New-AzConnectedMachineExtension -Name "WindowsAgent.SqlServer" -ResourceGroupName { your resource group name } -MachineName { your machine name } -Location { azure region } -Publisher "Microsoft.AzureData" -Settings $Settings -ExtensionType "WindowsAgent.SqlServer"
 ```
 
-> [!IMPORTANT]
->  
-> - The update command overwrites all settings. If your extension settings have a list of excluded SQL Server instances, make sure to specify the full exclusion list with the update command.
-> - If you already have an older version of the Azure extension installed, make sure to upgrade it first, and then use one the modify methods to set the correct license type. For details, see [How to upgrade a machine extension](/azure/azure-arc/servers/manage-automatic-vm-extension-upgrade) for details.
+The update command overwrites all settings. If your extension settings have a list of excluded SQL Server instances, make sure to specify the full exclusion list with the update command.
+
+If you already have an older version of the Azure extension installed, make sure to upgrade it first, and then use one the modify methods to set the correct license type. For details, see [How to upgrade a machine extension](/azure/azure-arc/servers/manage-automatic-vm-extension-upgrade) for details.
 
 ### [Azure CLI](#tab/az)
 
-The following command will set the license type to "PAYG":
+The following command sets the license type to "PAYG":
 
 ```azurecli
-az connectedmachine extension update --machine-name "simple-vm" -g "<resource-group>" --name "WindowsAgent.SqlServer" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{"LicenseType":"PAYG", "SqlManagement": {"IsEnabled":true}}'    
+az connectedmachine extension update --machine-name "simple-vm" -g "<resource-group>" --name "WindowsAgent.SqlServer" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{"LicenseType":"PAYG", "SqlManagement": {"IsEnabled":true}}'
 ```
 
-> [!IMPORTANT]
->
-> - The update command overwrites all settings. If your extension settings have a list of excluded SQL Server instances, make sure to specify the full exclusion list with the update command.
-> - If you already have an older version of the Azure extension installed, make sure to upgrade it first, and then use one the modify methods to set the correct license type. For details, see [How to upgrade a machine extension](/azure/azure-arc/servers/manage-automatic-vm-extension-upgrade) for details. 
+The update command overwrites all settings. If your extension settings have a list of excluded SQL Server instances, make sure to specify the full exclusion list with the update command.
+
+If you already have an older version of the Azure extension installed, make sure to upgrade it first, and then use one the modify methods to set the correct license type. For details, see [How to upgrade a machine extension](/azure/azure-arc/servers/manage-automatic-vm-extension-upgrade) for details.
 
 ---
 
@@ -186,7 +188,7 @@ resources
 
 #### List configuration details for each SQL Server instance
 
-This query identifies many details about each instance, including the license type, ESU setting and enabled features.
+This query identifies many details about each instance, including the license type, ESU setting, and enabled features.
 
 ```kusto
 resources
@@ -235,10 +237,9 @@ resources
 on $left.machineIdHasSQLServerDiscovered == $right.machineIdHasSQLServerExtensionInstalled
 | where isempty(machineIdHasSQLServerExtensionInstalled)
 | project machineIdHasSQLServerDiscoveredButNotTheExtension = machineIdHasSQLServerDiscovered
-
 ```
 
-For more examples of Azure Resource Graph Queries, see [Starter Resource Graph queries](/azure/governance/resource-graph/samples/starter).
+For more examples of Azure Resource Graph Queries, see [Starter Resource Graph query samples](/azure/governance/resource-graph/samples/starter).
 
 ## Manage unlimited virtualization
 
@@ -248,28 +249,28 @@ To enable unlimited virtualization, SQL Server enabled by Azure Arc supports a s
 
 Your RBAC role includes the following permissions:
 
-- *Microsoft. AzureArcData/SqlLicenses/read*
-- *Microsoft. AzureArcData/SqlLicenses/write*
-- *Microsoft.Management/managementGroups/read*
-- *Microsoft.Resources/subscriptions/read*
-- *Microsoft.Resources/subscriptions/resourceGroups/read*
-- *Microsoft.Support/supporttickets/write*
+- `Microsoft.AzureArcData/SqlLicenses/read`
+- `Microsoft.AzureArcData/SqlLicenses/write`
+- `Microsoft.Management/managementGroups/read`
+- `Microsoft.Resources/subscriptions/read`
+- `Microsoft.Resources/subscriptions/resourceGroups/read`
+- `Microsoft.Support/supporttickets/write`
 
 ### <a id="create-license-resource"></a> Create SQL Server license
 
-To create the  SQL Server license resource, use one of the methods below:  
+To create the SQL Server license resource, use one of the following methods:
 
 ### [Azure portal](#tab/azure)
 
-1. Select **Azure Arc** 
+1. Select **Azure Arc**
 1. Under **Data Services**, select **SQL Server licenses**
-1. Click **+Create**
+1. Select **+Create**
 1. Select **SQL Server physical core license**
 1. Complete the creation wizard
 
 ### [PowerShell](#tab/powershell)
 
-Instructions are not available in PowerShell.
+Instructions aren't available in PowerShell.
 
 ### [Azure CLI](#tab/az)
 
@@ -279,10 +280,10 @@ Run:
 $subscriptionId="<sub id>"
 $apiVersion="2024-03-01-preview"
 $templateFile="sqlserverlicense.json"
- 
+
 $resourceGroupName="<rg-name>"
 $uri = "https://management.azure.com/subscriptions/{0}/resourceGroups/{1}/providers/Microsoft.AzureArcData/sqlserverlicenses/{2}?api-version={3}" -f $subscriptionId, $resourceGroupName, $serverName, $apiVersion
- 
+
 az rest --method put --uri "$uri" --body "@$templateFile" --headers "Content-Type=application/json"
 ```
 
@@ -291,31 +292,31 @@ Here's an example of `sqlserverlicense.json` that creates a deactivated license.
 ```json
 "location": "westeurope",
 "properties": {
-    "billingPlan": "PAYG",    
+    "billingPlan": "PAYG",
     "physicalCores": 32,
     "activationState": "Deactivated",
-    "scopeType": "ResourceGroup",   
+    "scopeType": "ResourceGroup",
     "licenseCategory": "Core"
 }
- ```
+```
 
 ---
 
 ### <a id="change-license-resource"></a> Change SQL Server license properties
 
-To change the SQL Server license property, for example activate it at a later date, use one of the methods below:  
+To change the SQL Server license property, for example activate it at a later date, use one of the following methods:
 
 ### [Azure portal](#tab/azure)
 
-1. Select **Azure Arc** 
+1. Select **Azure Arc**
 1. Under **Data Services**, select **SQL Server licenses**
-1. Click on the license in question 
+1. Select on the license in question
 1. Select **Configure** under **Management**
-1. Make the changes and click **Apply**
+1. Make the changes and select **Apply**
 
 ### [PowerShell](#tab/powershell)
 
-Instructions are not available in PowerShell.
+Instructions aren't available in PowerShell.
 
 ### [Azure CLI](#tab/az)
 
@@ -325,10 +326,10 @@ Run:
 $subscriptionId="<sub id>"
 $apiVersion="2024-03-01-preview"
 $templateFile="activate.json"
- 
+
 $resourceGroupName="<rg-name>"
 $uri = "https://management.azure.com/subscriptions/{0}/resourceGroups/{1}/providers/Microsoft.AzureArcData/sqlserverlicenses/{2}?api-version={3}" -f $subscriptionId, $resourceGroupName, $serverName, $apiVersion
- 
+
 az rest --method patch --uri "$uri" --body "@$templateFile" --headers "Content-Type=application/json"
 ```
 
@@ -337,36 +338,35 @@ Here's the content of `activate.json` to activate the license.
 ```json
 {
   "activationState": "Activated"
-} ```
+}
 ```
 
 ---
 
 ### Manage resources in scope
 
-You can manage the resources in scope of a specific SQL Server physical core license using the following steps:  
+You can manage the resources in scope of a specific SQL Server physical core license using the following steps:
 
 ### [Azure portal](#tab/azure)
 
-1. Select **Azure Arc** 
+1. Select **Azure Arc**
 1. Under **Data Services**, select **SQL Server licenses**
-1. Click on the license in question 
+1. Select on the license in question
 1. Select **Resources in scope** under **Management**
 
-If the specific resources are not configured to use this license (**Apply physical core license** column displays "NO"), you can change that:
+If the specific resources aren't configured to use this license (**Apply physical core license** column displays "NO"), you can change that:
 
-1. Select the specific resource(s) on the list
-1. Click the **Apply license** tab.  
-1. Read the disclaimer and click **Confirm**.
+1. Select the specific resources on the list
+1. Select the **Apply license** tab
+1. Read the disclaimer and select **Confirm**
 
 ### [PowerShell](#tab/powershell)
 
-Instructions are not available in PowerShell.
-
+Instructions aren't available in PowerShell.
 
 ### [Azure CLI](#tab/az)
 
-Instructions are not available for `az`.
+Instructions aren't available for `az`.
 
 ---
 
@@ -374,7 +374,7 @@ Instructions are not available for `az`.
 
 This query lists all Azure Arc-enabled servers in scope of the license and the relevant properties of each.
 
-```Kusto
+```kusto
 resources
         | where type =~ 'Microsoft.HybridCompute/machines'
         | where ('${scopeType}'!= 'Subscription' or subscriptionId == '${subscription}')
@@ -397,9 +397,9 @@ resources
 
 ## Related content
 
-- [Review licensing and billing](manage-license-billing.md)
-- [Review SQL Server 2022 Pricing](https://www.microsoft.com/sql-server/sql-server-2022-pricing)
+- [Manage licensing and billing of SQL Server enabled by Azure Arc](manage-license-billing.md)
+- [SQL Server 2022 Pricing](https://www.microsoft.com/sql-server/sql-server-2022-pricing)
 - [Install SQL Server 2022 using the pay-as-you-go activation option](../../database-engine/install-windows/install-sql-server.md)
-- [Learn about Extended Security Updates for SQL Server](../end-of-support/sql-server-extended-security-updates.md).  
+- [What are Extended Security Updates for SQL Server?](../end-of-support/sql-server-extended-security-updates.md)
 - [Frequently asked questions](faq.yml#billing)
-- [Configure automatic updates for SQL Server enabled for Azure Arc](update.md)
+- [Configure automatic updates for SQL Server instances enabled for Azure Arc](update.md)

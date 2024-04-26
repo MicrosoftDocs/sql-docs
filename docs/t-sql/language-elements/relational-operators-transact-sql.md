@@ -1,9 +1,9 @@
 ---
 title: "Relational operators (Transact-SQL)"
-description: "Relational operators (Transact-SQL)"
+description: A relational operator is a syntax element that can accept one or more named or unnamed input parameters and returns a result set.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 05/09/2022
+ms.date: 04/26/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -20,7 +20,7 @@ A relational operator is a syntax element that can accept one or more named or u
 
 SQL Server implements the following relational operators:
 
-- [GENERATE_SERIES &#40;Transact-SQL&#41;](../functions/generate-series-transact-sql.md)
+- [GENERATE_SERIES (Transact-SQL)](../functions/generate-series-transact-sql.md)
 - [OPENDATASOURCE (Transact-SQL)](../functions/opendatasource-transact-sql.md)
 - [OPENQUERY (Transact-SQL)](../functions/openquery-transact-sql.md)
 - [OPENROWSET (Transact-SQL)](../functions/openrowset-transact-sql.md)
@@ -31,8 +31,8 @@ SQL Server implements the following relational operators:
 
 ## Use
 
-Use a relational operator like a [table-valued function](../statements/create-function-transact-sql.md#c-creating-a-multi-statement-table-valued-function) in a query or T-SQL statement. 
+Use a relational operator like a [table-valued function](../statements/create-function-transact-sql.md#c-create-a-multi-statement-table-valued-function) in a query or T-SQL statement.
 
-## See also
+## Related content
 
-[What are the SQL database functions?](../functions/functions.md)
+- [What are the SQL database functions?](../functions/functions.md)

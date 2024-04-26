@@ -4,10 +4,11 @@ description: An overview of Azure SQL Database monitoring using Azure Monitor me
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 11/14/2023
+ms.date: 05/21/2024
 ms.service: sql-database
 ms.subservice: monitoring
 ms.topic: conceptual
+ms.custom: build-2024
 monikerRange: "= azuresql || = azuresql-db"
 ---
 
@@ -28,7 +29,7 @@ See [database metrics](/azure/azure-monitor/reference/supported-metrics/microsof
 > [!NOTE]
 > Some metrics apply only to specific types of databases or elastic pools. The description of each metric mentions if its use it limited to a specific database or elastic pool type, such as vCore, Hyperscale, serverless, etc.
 
-In Azure SQL Database portal, several commonly used metrics are charted on the **Monitoring** tab of the **Overview** page. This lets you assess resource consumption and health of a database or an elastic pool at a glance.
+In Azure SQL Database portal, several commonly used metrics are charted on the **Monitoring** tab of the **Overview** page. The metrics let you assess resource consumption and health of a database or an elastic pool at a glance.
 
 :::image type="content" source="media/monitoring-metrics-alerts/portal-overview-metrics.png" alt-text="A screenshot from the Azure portal of a metrics chart shown on the Azure SQL Database Overview page." lightbox="media/monitoring-metrics-alerts/portal-overview-metrics.png":::
 
@@ -68,6 +69,46 @@ The following table describes commonly used metrics in Azure SQL Database.
 | **Failed Connections : System Errors** | `connection_failed` | This metric shows the number of connection attempts to a database that failed because of internal service errors. Most commonly, such errors are transient. This metric can be split by two dimensions, `Error` and `ValidatedDriverNameAndVersion`, to see the number of failed connection attempts due to a specific error, or from a specific client driver. |
 | **Failed Connections : User Errors** | `connection_failed_user_error` | This metric shows the number of connection attempts to a database that failed because of user-correctable errors, such as an incorrect password or connection being blocked by firewall. This metric can be split by two dimensions, `Error` and `ValidatedDriverNameAndVersion`, to see the number of failed connection attempts due to a specific error, or from a specific client driver. |
 | **Deadlocks** | `deadlock` | This metric shows the number of [deadlocks](analyze-prevent-deadlocks.md) in a database.|
+| **Availability** | `service_availability` | Availability is determined based on the database being operational for connections. For each one-minute data point, the possible values are either `100%` or `0%`. For more information, see [Availability metric](#availability-metric). |
+
+#### Availability metric
+
+The Availability metric tracks availability at individual Azure SQL Database level. This feature is currently in preview.
+
+Service availability is granular to one minute of connection outage. Availability is determined based on the database being operational for connections. A minute is considered as downtime or unavailable if all continuous attempts by users to establish connection to the database within the minute fail due to a service issue. If there is intermittent unavailability, the duration of continuous unavailability must cross the minute boundary to be considered as downtime. Typically, the latency to display availability is less than three minutes.
+
+Here's the logic used for calculating Availability for every one-minute interval:
+
+- If there is at least one successful connection, then availability is 100%.
+- If all connections fail due to user errors, availability is 100%.
+- If there are no connection attempts, availability is 100%.
+- If all connections fail due to system errors, availability is 0%.
+
+Availability metric is therefore a composite metric derived from following existing metrics:
+
+- **Successful Connections**
+- **Failed Connections : User Errors**
+- **Blocked by Firewall**
+- **Failed Connections : System Errors**
+
+User errors include all connections that fail due to user configuration, workload, or management. System errors include all the connections that fail due to transient issues related to Azure SQL Database service.
+
+- Examples of errors caused by user configuration:
+    - [Firewall related](troubleshoot-common-errors-issues.md?view=azuresql-db&preserve-view=true#cannot-connect-to-server-due-to-firewall-issues)
+    - [Incorrect user credentials](troubleshoot-common-errors-issues.md?view=azuresql-db&preserve-view=true#unable-to-log-in-to-the-server-errors-18456-40531)
+    - [Application unable to connect](troubleshoot-common-errors-issues.md?view=azuresql-db&preserve-view=true#the-serverinstance-was-not-found-or-was-not-accessible-errors-26-40-10053)
+    - [Connection timeout caused by application](troubleshoot-common-errors-issues.md?view=azuresql-db&preserve-view=true#connection-timeout-expired-errors)
+
+- Examples of errors caused by user workload:
+    - [Connection failure due to resource governance](troubleshoot-common-errors-issues.md?view=azuresql-db&preserve-view=true#resource-governance-errors)
+
+- Examples of errors caused by user management:
+    - Scaling up or down the database or elastic pool
+    - Geo replication planned or unplanned failover
+    - Failover group planned or unplanned failover
+    - Geo secondary database in seeding state
+    - Database that is in restoring state due to Point In Time Restore (PITR), Long Term Restore (LTR), or restore from a deleted database
+    - Database that is not yet finished being copied (Database Copy)
 
 ## Alerts
 

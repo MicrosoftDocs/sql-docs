@@ -4,11 +4,11 @@ description: Learn how to recover a database from a regional data center outage 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, rsetlem
-ms.date: 12/15/2023
+ms.date: 05/21/2024
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
-ms.custom: 
+ms.custom: build-2024
 monikerRange: "= azuresql || = azuresql-db"
 ---
 # Disaster recovery guidance - Azure SQL Database
@@ -44,9 +44,13 @@ In the event of an Azure SQL Database service outage, you can find additional de
 
     If you have set up alerts, an email notification is sent from `azure-noreply@microsoft.com` when a service outage impacts your subscription and resource. The body of the email typically begins with "The activity log alert ... was triggered by a service issue for the Azure subscription...". For more information on service health alerts, see [Receive activity log alerts on Azure service notifications using Azure portal](/azure/service-health/alerts-activity-log-service-notifications-portal).
 
+- **Availability metric**
+
+    You can [monitor and configure alerts the Azure SQL Database Availability metric](monitoring-metrics-alerts.md#availability-metric) in the Azure portal.
+
 ## When to initiate disaster recovery during an outage
 
-In the event of a service outage impacting application resources, consider the following courses of action: 
+In the event of a service outage impacting application resources, consider the following courses of action:
 
 - The Azure teams work diligently to restore service availability as quickly as possible but depending on the root cause it can sometimes take hours. If your application can tolerate significant downtime, you can simply wait for the recovery to complete. In this case, no action on your part is required. View the health of individual resources in the **Resource health** page of any resource under the **Help** menu. Refer to the **Resource health** page for updates and the latest information regarding an outage. After the recovery of the region, your application's availability is restored.
 

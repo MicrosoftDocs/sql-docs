@@ -56,7 +56,7 @@ To configure the system's %TEMP% folder:
 
 - In the ensuing System Properties window, navigate to the bottom and select **Environment Variables**.
 
-- Under the System Variables section, locate the TEMP and TMP variables, then select **Edit** associated with each.
+- Under the **System variables** section, locate the TEMP and TMP variables, then select **Edit** associated with each.
 
 - Modify the values of both variables to point to a pathway on the separate data disk you have established. For instance, if your data disk is designated as `D:`, set the values as `D:\Temp`.
 

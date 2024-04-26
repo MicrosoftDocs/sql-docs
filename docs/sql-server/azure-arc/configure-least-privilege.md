@@ -1,5 +1,5 @@
 ---
-title: "Enable least privilege (preview)"
+title: "Enable least privilege"
 description: "Describes how to configure a service account for SQL Server enabled by Azure Arc to run with least privilege."
 author: MikeRayMSFT
 ms.author: mikeray
@@ -11,7 +11,7 @@ ms.date: 01/17/2024
 
 ---
 
-# Operate SQL Server enabled by Azure Arc with least privilege (preview) 
+# Operate SQL Server enabled by Azure Arc with least privilege 
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
@@ -23,10 +23,6 @@ To optionally configure the service to run with least privilege, follow the step
 
 > [!NOTE]
 > [!INCLUDE [least-privilege-default](includes/least-privilege-default.md)]
-
-Support for this configuration is currently available for preview.
-
-[!INCLUDE [azure-arc-sql-preview](includes/azure-arc-sql-preview.md)]
 
 After you configure the agent extension service to run with least privilege, it uses the `NT Service\SQLServerExtension` service account.
 

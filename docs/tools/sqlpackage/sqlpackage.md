@@ -4,7 +4,7 @@ description: Learn how to automate database development tasks with SqlPackage. V
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
-ms.date: 5/10/2023
+ms.date: 4/29/2024
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
@@ -12,7 +12,17 @@ ms.topic: conceptual
 
 # SqlPackage
 
-**SqlPackage** is a command-line utility that automates the following database development tasks by exposing some of the public Data-Tier Application Framework (DacFx) APIs:  
+**SqlPackage** is a command-line utility that automates the database development tasks by exposing some of the public Data-Tier Application Framework (DacFx) APIs.  The primary use cases for SqlPackage focus on database portability and deployments for the SQL Server, Azure SQL, and Azure Synapse Analytics family of databases. SqlPackage can be automated using [Azure DevOps pipelines and GitHub actions](sqlpackage-pipelines.md) or other CI/CD tools.
+
+## Portability
+
+Database portability is the ability to move a database schema and data between different instances of SQL Server, Azure SQL, and Azure Synapse Analytics. Exporting a database from Azure SQL Database to an on-premises SQL Server instance, or from SQL Server to Azure SQL Database, are examples of database portability. SqlPackage supports database portability through the [Export](sqlpackage-export.md) and [Import](sqlpackage-import.md) actions, which create and consume BACPAC files. SqlPackage also supports database portability through the [Extract](sqlpackage-extract.md) and [Publish](sqlpackage-publish.md) actions, which create and consume DACPAC files, which can either contain the data directly or reference [data stored in Azure Blob Storage](sqlpackage-with-data-in-parquet-files.md).
+
+## Deployments
+
+Database deployments are the process of updating a database schema and data to match a desired state. SqlPackage supports database deployments through the [Publish](sqlpackage-publish.md) and [Extract](sqlpackage-extract.md) actions. The Publish action updates a database schema to match the schema of a source .dacpac file, while the Extract action creates a data-tier application (.dacpac) file containing the schema or schema and user data from a connected SQL database. SqlPackage enables deployments against both new or existing databases from the same artifact (.dacpac) by automatically creating a deployment plan that will apply the necessary changes to the target database.  The deployment plan can be reviewed before applying the changes to the target database with either the [Script](sqlpackage-script.md) or [DeployReport](sqlpackage-deploy-drift-report.md) actions.
+
+### SqlPackage actions
   
 - [Version](#version): Returns the build number of the SqlPackage application.
 
@@ -43,69 +53,7 @@ The **SqlPackage** command line tool allows you to specify these actions along w
 ```bash
 SqlPackage {parameters} {properties} {SQLCMD variables}
 ```
-
-### Exit codes
-
-SqlPackage commands return the following exit codes:
-
-- 0 = success
-- nonzero = failure
-
-### Usage example
-
-Further examples are available on the individual action pages.
-
-**Creating a .dacpac file of the current database schema:**
-
-```cmd
-SqlPackage /TargetFile:"C:\sqlpackageoutput\output_current_version.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
-```
-
-### Parameters
-
-Some parameters are shared between the SqlPackage actions. Below is a table summarizing the parameters, for more information, click into the specific action pages.
-
-| Parameter | Short Form | [Extract](sqlpackage-extract.md#parameters-for-the-extract-action) | [Publish](sqlpackage-publish.md#parameters-for-the-publish-action) | [Export](sqlpackage-export.md#parameters-for-the-export-action) | [Import](sqlpackage-import.md#parameters-for-the-import-action) | [DeployReport](sqlpackage-deploy-drift-report.md#deployreport-action-parameters) | [DriftReport](sqlpackage-deploy-drift-report.md#driftreport-action-parameters) | [Script](sqlpackage-script.md#parameters-for-the-script-action) |
-|---|---|---|---|---|---|---|---|---|
-|**/AccessToken:**|**/at**| x | x | x | x | x | x | x |
-|**/ClientId:**|**/cid**| | x | | | | | |
-|**/DeployScriptPath:**|**/dsp**| | x | | | | | x |
-|**/DeployReportPath:**|**/drp**| | x | | | | | x |
-|**/Diagnostics:**|**/d**| x | x | x | x | x | x | x |
-|**/DiagnosticsFile:**|**/df**| x | x | x | x | x | x | x |
-|**/MaxParallelism:**|**/mp**| x | x | x | x | x | x | x |
-|**/OutputPath:**|**/op**|  |  |  | | x | x | x |
-|**/OverwriteFiles:**|**/of**| x | x | x | | x | x | x |
-|**/Profile:**|**/pr**| | x | | | x | | x |
-|**/Properties:**|**/p**| x | x | x | x | x | | x |
-|**/Quiet:**|**/q**| x | x | x | x | x | x | x |
-|**/Secret:**|**/secr**| | x | | | | | |
-|**/SourceConnectionString:**|**/scs**| x | x | x | | x | | x |
-|**/SourceDatabaseName:**|**/sdn**| x | x | x | | x | | x |
-|**/SourceEncryptConnection:**|**/sec**| x | x | x | | x | | x |
-|**/SourceFile:**|**/sf**| | x | | x | x | | x |
-|**/SourcePassword:**|**/sp**| x | x | x | | x | | x |
-|**/SourceServerName:**|**/ssn**| x | x | x | | x | | x |
-|**/SourceTimeout:**|**/st**| x | x | x | | x | | x |
-|**/SourceTrustServerCertificate:**|**/stsc**| x | x | x | | x | | x |
-|**/SourceUser:**|**/su**| x | x | x | | x | | x |
-|**/TargetConnectionString:**|**/tcs**| | | | x | x | x | x |
-|**/TargetDatabaseName:**|**/tdn**| | x | | x | x | x | x |
-|**/TargetEncryptConnection:**|**/tec**| | x | | x | x | x | x |
-|**/TargetFile:**|**/tf**| x | | x | | x | | x |
-|**/TargetPassword:**|**/tp**| | x | | x | x | x | x |
-|**/TargetServerName:**|**/tsn**| | x | | x | x | x | x |
-|**/TargetTimeout:**|**/tt**| | x | | x | x | x | x |
-|**/TargetTrustServerCertificate:**|**/ttsc**| | x | | x | x | x | x |
-|**/TargetUser:**|**/tu**| | x | | x | x | x | x |
-|**/TenantId:**|**/tid**| x | x | x | x | x | x | x |
-|**/UniversalAuthentication:**|**/ua**| x | x | x | x | x | x | x |
-|**/Variables:**|**/v**| | | | | x | | x |
-
-### Properties
-
-SqlPackage actions support a large number of properties to modify the default behavior of an action. For more information click into the specific action pages.
-
+More information on the SqlPackage command-line syntax is detailed in the [SqlPackage CLI reference](sqlpackage-cli-reference.md) and individual action pages.
 
 ## Utility commands
 
@@ -207,6 +155,8 @@ Get help with SqlPackage, submit feature requests, and report issues in the [Dac
 ### Supported SQL offerings
 
 SqlPackage and DacFx support all [supported SQL versions](/lifecycle/products/?products=sql-server) at time of the SqlPackage/DacFx release. For example, a SqlPackage release on January 14 2022 supports all supported versions of SQL in January 14 2022. For more on SQL support policies, see [the SQL support policy](/troubleshoot/sql/general/support-policy-sql-server#support-policy).
+
+In addition to SQL Server, SqlPackage and DacFx supports Azure SQL Managed Instance, Azure SQL Database, Azure Synapse Analytics, and Synapse Data Warehouse in Microsoft Fabric.
 
 ## Next steps
 

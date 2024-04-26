@@ -9782,6 +9782,10 @@ items:
       href: tools/sqlpackage/sqlpackage-download.md
     - name: Release notes
       href: tools/sqlpackage/release-notes-sqlpackage.md
+    - name: CLI reference
+      href: tools/sqlpackage/cli-reference.md
+    - name: SqlPackage in development pipelines
+      href: tools/sqlpackage/sqlpackage-pipelines.md
     - name: SqlPackage Actions
       items:
       - name: SqlPackage Extract
@@ -9796,12 +9800,11 @@ items:
         href: tools/sqlpackage/sqlpackage-deploy-drift-report.md
       - name: SqlPackage Script
         href: tools/sqlpackage/sqlpackage-script.md
-    - name: SqlPackage in development pipelines
-      href: tools/sqlpackage/sqlpackage-pipelines.md
-    - name: SqlPackage with data in Parquet files
-      href: tools/sqlpackage/sqlpackage-with-data-in-parquet-files.md
-    - name: SqlPackage for Azure Synapse Analytics
-      href: tools/sqlpackage/sqlpackage-for-azure-synapse-analytics.md
+    - name: Database portability
+      - name: SqlPackage with data in Parquet files
+        href: tools/sqlpackage/sqlpackage-with-data-in-parquet-files.md
+      - name: SqlPackage for Azure Synapse Analytics
+        href: tools/sqlpackage/sqlpackage-for-azure-synapse-analytics.md
     - name: Troubleshooting SqlPackage
       href: tools/sqlpackage/troubleshooting-issues-and-performance-with-sqlpackage.md
   - name: SQL Server Profiler

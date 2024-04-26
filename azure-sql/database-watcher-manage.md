@@ -5,7 +5,7 @@ description: Setup and configuration details for database watcher
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 04/18/2024
+ms.date: 04/26/2024
 ms.service: sql-db-mi
 ms.subservice: monitoring
 ms.topic: how-to
@@ -148,6 +148,8 @@ You must create managed [private endpoints](/azure/private-link/private-endpoint
 
 To create a managed private endpoint:
 
+1. If there is a read-only [lock](/azure/azure-resource-manager/management/lock-resources) on the resource, resource group, or subscription of the resource for which you are creating a managed private endpoint, remove the lock. You can add the lock again after the private endpoint is created successfully.
+
 1. Navigate to a database watcher in Azure portal, open the **Managed private endpoints** page, and select **Add**.
 
 1. Enter a name for the private endpoint.
@@ -184,6 +186,7 @@ If a watcher is already running when a private endpoint is approved, it must be 
 
 ### Delete a managed private endpoint
 
+1. If there is a delete [lock](/azure/azure-resource-manager/management/lock-resources) on the resource, resource group, or subscription of the resource for which you are creating a managed private endpoint, remove the lock. You can add the lock again after the private endpoint is deleted successfully.
 1. In the Azure portal page for your database watcher, open the **Managed private endpoints** page.
 1. Select the private endpoints you want to delete.
 1. Select **Delete**.

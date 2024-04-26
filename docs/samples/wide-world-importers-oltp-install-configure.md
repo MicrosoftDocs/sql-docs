@@ -54,7 +54,7 @@ To import a bacpac into a new SQL Database, you can use Management Studio.
 3. Right-click on the **Databases** node, and select **Import Data-Tier Application**.
 4. In the **Import Settings** select **Import from local disk** and select the bacpac of the sample database from your file system.
 5. Under **Database Settings** change the database name to *WideWorldImporters* and select the target edition and service objective to use.
-6. Click **Next** and **Finish** to kick off deployment. It will a few minutes to complete on a P1. If a lower pricing tier is desired, it is recommended to import into a new P1 database, and then change the pricing tier to the desired level.
+6. Click **Next** and **Finish** to kick off deployment. It will take a few minutes to complete on a P1. If a lower pricing tier is desired, it is recommended to import into a new P1 database, and then change the pricing tier to the desired level.
 
 ## Configuration
 

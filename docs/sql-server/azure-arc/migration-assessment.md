@@ -115,12 +115,7 @@ SQL Server extension for Azure collects performance data for compute settings wi
 
 1. The high level metrics collected to decide the optimal Azure SQL target include.
 
-   - CPU utilization (%)
-   - Memory utilization (%)
-   - Read IO/s and Write IO/s (Data and Log files)
-   - Read MB/s and Write MB/s (Throughput)
-   - Latency of IO operations
-   - Total DB size and database file organizations
+    [!INCLUDE [extension-logs](includes/extension-logs.md)]
 
 ## Disable migration assessment
 

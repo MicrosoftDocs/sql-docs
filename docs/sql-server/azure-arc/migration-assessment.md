@@ -56,7 +56,7 @@ To assess SQL Server, the SQL Server instance needs to:
 
 - The server has connectivity to telemetry.{region}.arcdataservices.com (for more information, see [Network Requirements ](/azure/azure-arc/servers/network-requirements?tabs=azure-cloud))
 
-- To view the assessment reports in the Azure Portal, you must have Contributor access or higher to the SQL Server - Azure Arc resource.
+- To view the assessment reports in Azure portal, you must have Contributor access or higher to the SQL Server - Azure Arc resource.
 
 ## Permissions
 

@@ -3,7 +3,7 @@ title: "What are Extended Security Updates?"
 description: Learn about Extended Security Updates enabled by Azure Arc, for your end-of-support and end-of-life SQL Server products such as SQL Server 2012.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 03/13/2024
+ms.date: 04/26/2024
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
@@ -53,7 +53,10 @@ Azure services running [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)
 
 ### On-premises or hosted environments
 
-If you deploy your SQL Server instances to an Azure service, you can access ESUs for [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] for up to three years after the end of support, at no additional charge above the cost of running the Azure service. Services include SQL Server on Azure VMs, Azure VMware Solution, Azure Stack HCI, or Azure Stack Hub.
+If you deploy your SQL Server instances to an Azure service, you can access ESUs for [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] for up to three years after the end of support, at no additional charge above the cost of running the Azure service. Services include SQL Server on Azure VMs, Azure VMware Solution, Azure Stack Hub, or Azure Stack HCI.
+
+> [!NOTE]  
+> Azure Stack HCI customers must [enable Azure benefits](/azure-stack/hci/manage/azure-benefits?#enable-azure-benefits) to receive free ESUs.
 
 In all other cases, you can purchase Extended Security Updates if you qualify. To qualify for receiving Extended Security Updates (ESU), you must have Software Assurance under one of the following agreements:
 
@@ -76,7 +79,6 @@ The following table shows the differences between the two options:
 | --- | --- | --- |
 | **ESU plan** | Volume licensing center | - Supports SQL Server instances both connected and not connected to Azure Arc<br />- Each year of coverage must be purchased separately, must be paid in full, and is differently priced<br />- Requires registration on Azure portal<br />- Supports manual installation of patches |
 | **ESU subscription** | Microsoft Azure | - The covered SQL Server instances must be connected to Azure Arc<br />- Continuous coverage until canceled<br />- Billed by Azure on an hourly basis<br />- Can be manually canceled at any time<br />- Automatic cancellation when migrated to Azure or upgraded to a supported version<br />- Supports automatic and manual installation of patches |
-
 
 > [!NOTE]  
 > Connecting or registering instances is free of charge. Both *connected* and *registered* instances don't incur additional charges when downloading ESUs, which are delivered through the Azure portal.
@@ -135,7 +137,7 @@ If you have multiple [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 
 - an Azure subscription, or
 - all Azure subscriptions your Azure account has access to.
 
-The script preserves all the existing settings. It is published as an open source [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] sample and includes step-by-step instructions.
+The script preserves all the existing settings. It's published as an open source [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] sample and includes step-by-step instructions.
 
 ### [Azure CLI](#tab/cli)
 
@@ -279,7 +281,7 @@ If you have multiple [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 
 - an Azure subscription, or
 - all Azure subscriptions your Azure account has access to.
 
-The script preserves all the existing settings. It is published as an open source [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] sample and includes step-by-step instructions.
+The script preserves all the existing settings. It's published as an open source [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] sample and includes step-by-step instructions.
 
 ### [Azure CLI](#tab/cli)
 
@@ -484,7 +486,7 @@ For the full list of frequently asked questions, review the [Extended Security U
 - [SQL Server 2014 lifecycle page](/lifecycle/products/sql-server-2014)
 - [SQL Server end of support page](sql-server-end-of-support-overview.md?WT.mc_id=akamseos)
 - [Extended Security Updates frequently asked questions (FAQ)](/lifecycle/faq/extended-security-updates)
-- [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com/security-guidance/summary)
+- [Microsoft Security Response Center (MSRC)](https://msrc.microsoft.com/security-guidance/summary)
 - [Update Management overview](/azure/automation/update-management/overview)
 - [Automated Patching for SQL Server on Azure virtual machines](/azure/azure-sql/virtual-machines/windows/automated-patching)
 - [Microsoft Data Migration Guide](/data-migration/)

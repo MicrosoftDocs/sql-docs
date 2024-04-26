@@ -30,7 +30,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 Exporting a deployed data-tier application (DAC) or database creates an export file that includes the definitions of the objects in the database and all of the data in the tables. The export file can then be imported to another instance of the [!INCLUDE [ssDE](../../includes/ssde-md.md)], or to [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. The export-import operations can be combined to migrate a DAC between instances, to create an archive, or to create an on-premises copy of a database deployed in [!INCLUDE [ssSDS](../../includes/sssds-md.md)].
 
-## Prequisites
+## Prerequisites
 
 The export process builds a DAC export file in two stages.
 
@@ -92,17 +92,17 @@ To specify a subset of tables to export, use the **Advanced** option.
 
 :::image type="content" source="export-a-data-tier-application/export-settings-page.png" alt-text="Screenshot of the export a data-tier application export settings page." lightbox="export-a-data-tier-application/export-settings-page.png":::
 
-### <a id="Summary"></a> Summary Page
+### <a id="Summary"></a> Summary page
 
 Use this page to review the operation's specified source and target settings. To complete the export operation using the specified settings, select **Finish**. To cancel the export operation and exit the Wizard, select **Cancel**.
 
 :::image type="content" source="export-a-data-tier-application/summary-page.png" alt-text="Screenshot of the export data- tier summary page." lightbox="export-a-data-tier-application/summary-page.png":::
 
-### <a id="Progress"></a> Progress Page
+### <a id="Progress"></a> Progress page
 
 This page displays a progress bar that indicates the status of the operation. To view detailed status, select the **View details** option.
 
-### <a id="Results"></a> Results Page
+### <a id="Results"></a> Results page
 
 This page reports the export operation's success or failure, showing each action's results. Any action that encountered an error has a link in the **Result** column. Select the link to view a report of the error for that action.
 
@@ -120,7 +120,7 @@ Select **Finish** to close the Wizard.
 
 1. Use the **Export** method of the **Microsoft.SqlServer.Management.Dac.DacStore** type to export the DAC. Specify the name of the DAC to be exported and the path to the folder where the export file is to be placed.
 
-## <a id="LimitationsRestrictions"></a> Limitations and Restrictions
+## <a id="LimitationsRestrictions"></a> Limitations and restrictions
 
 A DAC or database can only be exported from a database in [!INCLUDE [ssSDS](../../includes/sssds-md.md)], or [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later.
 

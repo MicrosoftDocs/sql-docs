@@ -1,9 +1,9 @@
 ---
 title: "Export a Data-tier Application"
 description: "Export a Data-tier Application."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: maghan
+author: markingmyname
+ms.author: maghan
+ms.reviewer: wiassaf
 ms.date: 04/25/2024
 ms.service: sql
 ms.topic: concept-article

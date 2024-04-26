@@ -10,6 +10,7 @@ ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: whats-new
 ms.custom: ignite-2023
+monikerRange: "= azuresql || = azuresql-db"
 ---
 # What's new in Azure SQL Database?
 

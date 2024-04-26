@@ -8,7 +8,7 @@ ms.date: 04/26/2024
 ms.topic: reference
 ---
 
-# Azure extension for SQL Server sysetem objects
+# Azure extension for SQL Server system objects
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

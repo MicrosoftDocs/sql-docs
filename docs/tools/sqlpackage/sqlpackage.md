@@ -97,7 +97,7 @@ SqlPackage authenticates using methods available in [SqlClient](/dotnet/api/micr
 
 [!INCLUDE [entra-id](../../includes/entra-id.md)]
 
-In automated environments, [Microsoft Entra managed identity](/azure/azure-sql/database/authentication-azure-ad-user-assigned-managed-identity) is the recommended authentication method. This method doesn't require passing credentials to SqlPackage at runtime. When the managed identity is configured for the environment where the SqlPackage action is run, the SqlPackage action can use that identity to authenticate to Azure SQL. For more information on configuring a managed identity for your environment, see the [Managed identity documentation](/azure/active-directory/managed-identities-azure-resources/overview).
+In automated environments, [Microsoft Entra managed identity](/azure/azure-sql/database/authentication-azure-ad-user-assigned-managed-identity) is the recommended authentication method. This method doesn't require passing credentials to SqlPackage at runtime as SqlPackage uses managed identities to connect to databases that support Microsoft Entra authentication, and to obtain Microsoft Entra tokens, without credentials management. When the managed identity is configured for the environment where the SqlPackage action is run, the SqlPackage action can use that identity to authenticate to Azure SQL. For more information on configuring a managed identity for your environment, see the [Managed identity documentation](/entra/architecture/service-accounts-managed-identities).
 
 An example connection string using system-assigned managed identity is:
 
@@ -105,6 +105,30 @@ An example connection string using system-assigned managed identity is:
 Server=sampleserver.database.windows.net; Authentication=Active Directory Managed Identity; Database=sampledatabase;
 ```
 
+Managed identities are supported in both [Azure DevOps](/azure/devops/integrate/get-started/authentication/service-principal-managed-identity) and [GitHub actions](https://github.com/azure/login) CI/CD pipelines.
+
+### Service principal
+
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
+
+[Microsoft Entra application service principals](/azure/azure-sql/database/authentication-aad-service-principal) are security objects within a Microsoft Entra application that define what an application can do in a given tenant. They're set up in the Azure portal during the application registration process and configured to access Azure resources, like Azure SQL. For more information on configuring a service principal for your environment, see the [Service principal documentation](/entra/architecture/service-accounts-principal).
+
+When using SqlPackage with a service principal, it may be required to retrieve the access token and pass it to SqlPackage. The access token can be retrieved using the [Azure PowerShell module](/powershell/azure) or the [Azure CLI](/cli/azure). The access token can be passed to SqlPackage using the `/at` parameter.
+
+```powershell
+# example export connecting using an access token associated with a service principal
+$Account = Connect-AzAccount -ServicePrincipal -Tenant $Tenant -Credential $Credential
+$AccessToken_Object = (Get-AzAccessToken -Account $Account -ResourceUrl "https://database.windows.net/")
+$AccessToken = $AccessToken_Object.Token
+
+SqlPackage /at:$AccessToken /Action:Export /TargetFile:"C:\AdventureWorksLT.bacpac" \
+    /SourceConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+# OR
+SqlPackage /at:$($AccessToken_Object.Token) /Action:Export /TargetFile:"C:\AdventureWorksLT.bacpac" \
+    /SourceConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+```
+
+Service principals are supported in both [Azure DevOps](/azure/devops/integrate/get-started/authentication/service-principal-managed-identity) and [GitHub actions](https://github.com/azure/login) CI/CD pipelines.
 
 ## Environment variables
 

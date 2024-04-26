@@ -9,6 +9,7 @@ ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
 ms.custom: 
+monikerRange: "= azuresql || = azuresql-db"
 ---
 # Disaster recovery guidance - Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

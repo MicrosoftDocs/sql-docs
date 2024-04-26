@@ -5,7 +5,7 @@ ms.date: 04/24/2024
 ms.topic: include
 ---
 
-### Active Sessions
+### Active sessions
 
 Description: Sessions running a request, is a blocker, or has an open transaction.\
 Dataset Name: SqlServerActiveSessions\
@@ -37,7 +37,7 @@ Collection Frequency: 10 seconds\
 * sql_process_cpu_percent
 * sql_server_instance_name
 
-### Database Properties
+### Database properties
 
 Description: Includes database options and other database metadata.\
 Dataset Name: SqlServerDatabaseProperties\
@@ -88,7 +88,7 @@ Collection Frequency: 5 minutes\
 * updateability
 * user_access_desc
 
-### Database Storage Utilization
+### Database storage utilization
 
 Description: Includes its storage usage and persistent version store.\
 Dataset Name: SqlServerDatabaseStorageUtilization\
@@ -111,7 +111,7 @@ Collection Frequency: 1 minute\
 * sample_time_utc
 * sql_server_instance_name
 
-### Memory Utilization
+### Memory utilization
 
 Description: Memory clerks and memory consumption by the clerk.\
 Dataset Name: SqlServerMemoryUtilization\
@@ -125,7 +125,7 @@ Collection Frequency: 10 seconds\
 * sample_time_utc
 * sql_server_instance_name
 
-### Performance Counters (Common)
+### Performance counters (common)
 
 Description: Includes common performance counters recorded by SQL Server.\
 Dataset Name: SqlServerPerformanceCountersCommon\
@@ -173,7 +173,7 @@ Collection Frequency: 1 minute\
 * User Connections
 * Write Transactions/sec
 
-### Performance Counters (Detailed)
+### Performance counters (detailed)
 
 Description: Includes detailed performance counters recorded by SQL Server.\
 Dataset Name: SqlServerPerformanceCountersDetailed\
@@ -237,7 +237,7 @@ Collection Frequency: 10 seconds\
 * size_on_disk_bytes
 * sql_server_instance_name
 
-### Wait Stats
+### Wait stats
 
 Description: Includes wait types and wait statistics for the database engine instance.\
 Dataset Name: SqlServerWaitStats\

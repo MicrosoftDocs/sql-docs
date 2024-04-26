@@ -8,7 +8,7 @@ ms.date: 11/14/2023
 ms.service: sql-database
 ms.subservice: monitoring
 ms.topic: conceptual
-monikerRange: "=azuresql-db"
+monikerRange: "= azuresql || = azuresql-db"
 ---
 
 # Monitor Azure SQL Database with metrics and alerts

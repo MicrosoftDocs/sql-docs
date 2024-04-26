@@ -17,17 +17,7 @@ Before you start, note the logs locations.
 
 ### Extension log
 
-The extension log file is at:
-
-   `C:\ProgramData\GuestConfig\extension_logs\Microsoft.AzureData.WindowsAgent.SqlServer\`
-
-The log file name depends on the version Azure Extension for SQL Server, for the latest version of Azure Extension for SQL Server, the log file is:
-
-   `unifiedagent.log`
-
-For extension version `1.1.24724.69` and earlier, the log file is:
-
-   `ExtensionLog_0.log`
+[!INCLUDE [extension-logs](includes/extension-logs.md)]
 
 ### Deployer logs
 

@@ -146,7 +146,7 @@ This section describes the datasets available for each target type, including co
 | Wait statistics | `sqldb_database_wait_stats` | `00:00:10` | Each row represents a wait type and includes cumulative wait statistics of the database engine instance. For databases in an elastic pool, only database-scoped wait statistics are collected. |
 
 > [!NOTE]
-> For databases in an elastic pool, the **SQL Database** datasets containing pool-level data are not collected. This includes the **Memory utilization**, **Out-of-memory events**, **Performance counters (common)**, and **Performance counters (detailed)** datasets. The **Wait statistics** dataset is collected but contains only database-scoped waits. This avoids collection of the same data from every database in the pool.
+> For databases in an elastic pool, the **SQL database** datasets containing pool-level data are not collected. This includes the **Memory utilization**, **Out-of-memory events**, **Performance counters (common)**, and **Performance counters (detailed)** datasets. The **Wait statistics** dataset is collected but contains only database-scoped waits. This avoids collection of the same data from every database in the pool.
 >
 > Pool-level data is collected in the **SQL elastic pool** datasets. For a given elastic pool, the **Performance counters (common)** and **Performance counters (detailed)** datasets contain pool-level metrics and certain database-level metrics such as **CPU**, **Data IO**, **Log write**, **Requests**, **Transactions**, etc.
 

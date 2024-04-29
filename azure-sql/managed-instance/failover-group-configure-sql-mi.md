@@ -307,7 +307,7 @@ Let's assume instance A is the primary instance, instance B is the existing seco
 6. Delete instance A if not needed to avoid unnecessary charges.
 
 > [!CAUTION]
-> After step 3 and until step 4 is completed the databases in instance A will remain unprotected from a catastrophic failure of instance A.
+> After step 3 and until step 4 is completed, the databases in instance A will remain unprotected from a catastrophic failure of instance A.
 
 > [!IMPORTANT]
 > When the failover group is deleted, the DNS records for the listener endpoints are also deleted. At that point, there's a non-zero probability of somebody else creating a failover group with the same name. Because failover group names must be globally unique, this will prevent you from using the same name again. To minimize this risk, don't use generic failover group names.
@@ -351,15 +351,17 @@ The sequence is recommended specifically to avoid the problem where the geo-seco
 
 Permissions for a failover group are managed via [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview). 
 
-Azure RBAC write access is necessary to create and manage failover groups. The [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) role has all the necessary permissions to manage failover groups.
+The [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) role, scoped to the *resource groups* of the primary and the secondary managed instance, is sufficient to perform all management operations on failover groups.
 
-The following table lists specific permission scopes for Azure SQL Managed Instance: 
+The following table provides granular view of **minimal required permissions** and their respective **minimal required scope levels** for management operations on failover groups:
 
-| **Action** | **Permission** | **Scope**|
-| :---- | :---- | :---- | 
-|**Create failover group**| Azure RBAC write access | Primary managed instance </br> Secondary managed instance|
-| **Update failover group**| Azure RBAC write access | Failover group </br> All databases within the managed instance|
-| **Fail over failover group** | Azure RBAC write access | Failover group on new primary managed instance |
+| **Management operation** | **Permission** | **Scope** |
+| :---- | :---- | :---- |
+| **Create/Update failover group** | `Microsoft.Sql/locations/instanceFailoverGroups/write` | Resource groups of primary and secondary managed instance |
+| **Create/Update failover group** | `Microsoft.Sql/managedInstances/write` | Primary and secondary managed instance |
+| **Failover failover group** | `Microsoft.Sql/locations/instanceFailoverGroups/failover/action` | Resource groups of primary and secondary managed instance |
+| **Force failover failover group** | `Microsoft.Sql/locations/instanceFailoverGroups/forceFailoverAllowDataLoss/action` | Resource groups of primary and secondary managed instance |
+| **Delete failover group** | `Microsoft.Sql/locations/instanceFailoverGroups/delete` | Resource groups of primary and secondary managed instance |
 
 ## Limitations
 

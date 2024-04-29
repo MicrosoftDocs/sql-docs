@@ -376,9 +376,7 @@ More information: [Resolving Transact-SQL differences during migration to SQL Da
 SQL Server Agent is a Microsoft Windows service that executes scheduled administrative tasks, which are called jobs in SQL Server. SQL Server Agent jobs aren't available in Azure SQL Database.
 
 **Recommendation**  
-Use elastic jobs (preview), which are the replacement for SQL Server Agent jobs in Azure SQL Database. Elastic Database jobs for Azure SQL Database allow you to reliably execute T-SQL scripts that span multiple databases while automatically retrying and providing eventual completion guarantees. Alternatively consider migrating to  Azure SQL Managed Instance or SQL Server on Azure Virtual Machines.
-
-More information: [Getting started with Elastic Database jobs (Preview)](../../database/elastic-jobs-overview.md)
+Use elastic jobs, which are the replacement for SQL Server Agent jobs in Azure SQL Database. Elastic jobs for Azure SQL Database allow you to reliably execute T-SQL scripts that span multiple databases while automatically retrying and providing eventual completion guarantees. Alternatively consider migrating to Azure SQL Managed Instance or SQL Server on Azure Virtual Machines. For more information, see [Getting started with elastic jobs](../../database/elastic-jobs-overview.md).
 
 ## <a id="SQLDBDatabaseSize"></a> SQL Database size
 

@@ -150,7 +150,7 @@ Beyond the high-availability architecture that's included in Azure SQL Database,
 Windows logins are not supported in Azure SQL Database, create a login from Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) instead. Manually recreate any SQL logins. 
 
 ### SQL Agent jobs
-SQL Agent jobs are not directly supported in Azure SQL Database and need to be deployed to [elastic database jobs (preview)](../../database/job-automation-overview.md).
+SQL Agent jobs are not directly supported in Azure SQL Database. Instead, use [elastic jobs](../../database/job-automation-overview.md).
 
 ### System databases
 For Azure SQL Database, the only applicable system databases are [master](/sql/relational-databases/databases/master-database) and `tempdb`. To learn more, see [Tempdb in Azure SQL Database](/sql/relational-databases/databases/tempdb-database#tempdb-database-in-sql-database).

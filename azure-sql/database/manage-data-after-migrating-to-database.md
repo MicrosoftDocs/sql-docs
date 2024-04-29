@@ -270,7 +270,7 @@ The Azure portal shows a database's utilization by selecting the database and cl
 
 ![Monitoring chart2](./media/manage-data-after-migrating-to-database/chart.png)
 
-From this chart, you can also configure alerts by resource. These alerts allow you to respond to resource conditions with an email, write to an HTTPS/HTTP endpoint or perform an action. For more information, see [Create alerts](alerts-insights-configure-portal.md).
+From this chart, you can also configure alerts by resource. These alerts allow you to respond to resource conditions with an email, write to an HTTPS/HTTP endpoint or perform an action. For more information, see [Create alerts](alerts-create.md).
 
 #### Dynamic management views
 

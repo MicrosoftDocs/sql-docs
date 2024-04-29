@@ -734,6 +734,11 @@
       "source_path_from_root": "/azure-sql/in-memory-sample.md",
       "redirect_url": "/azure/azure-sql/database/in-memory-oltp-sample",
       "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/alerts-insights-configure-portal.md",
+      "redirect_url": "/azure/azure-sql/database/alerts-create",
+      "redirect_document_id": false      
     }
   ]
 }

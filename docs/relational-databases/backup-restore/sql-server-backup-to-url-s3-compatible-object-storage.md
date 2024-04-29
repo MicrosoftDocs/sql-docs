@@ -219,10 +219,10 @@ Only super user should be able to write in the folder, while the `mssql` user mu
 
 The following are the current limitations of backup and restore with S3-compatible object storage:
 
-1. Due to the current limitation of S3 Standard REST API, the temporary uncommitted data files that are created in the customer's S3-compatible object store (due to an ongoing multipart upload operation) while the BACKUP T-SQL command is running, are not removed in case of failures. These uncommitted data blocks continue to persist in S3-compatible object storage in the case the BACKUP T-SQL command fails or is canceled. If the backup succeeds, these temporary files are automatically removed by the object store to form the final backup file. Some S3-compatible storage providers handle temporary files through their garbage collector system.
-1. The total URL length is limited to 259 characters. The full string is counted in this limitation, including the `s3://` connector name. So, the usable limit is 254 characters. However, we recommend sticking to a limit of 200 characters to allow for possible introduction of query parameters.
-1. The SQL credential name is limited by 128 characters in UTF-16 format.
-1. Secret key ID must not have `:` character.
+- Due to the current limitation of S3 Standard REST API, the temporary uncommitted data files that are created in the customer's S3-compatible object store (due to an ongoing multipart upload operation) while the BACKUP T-SQL command is running, are not removed in case of failures. These uncommitted data blocks continue to persist in S3-compatible object storage in the case the BACKUP T-SQL command fails or is canceled. If the backup succeeds, these temporary files are automatically removed by the object store to form the final backup file. Some S3-compatible storage providers handle temporary files through their garbage collector system.
+- The total URL length is limited to 259 characters. The full string is counted in this limitation, including the `s3://` connector name. So, the usable limit is 254 characters. However, we recommend sticking to a limit of 200 characters to allow for possible introduction of query parameters.
+- The SQL credential name is limited by 128 characters in UTF-16 format.
+- Secret key ID must not have `:` character.
 
 ### Path style and virtual host style
 

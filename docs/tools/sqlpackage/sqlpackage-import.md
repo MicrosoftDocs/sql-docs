@@ -4,19 +4,20 @@ description: Learn how to automate database development tasks with SqlPackage Im
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
-ms.date: 9/29/2022
+ms.date: 4/29/2024
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
 ---
 
 # SqlPackage Import parameters and properties
-The SqlPackage Import action imports the schema and table data from a BACPAC file (.bacpac) into a new or empty database in SQL Server or Azure SQL Database. At the time of the import operation to an existing database the target database cannot contain any user-defined schema objects. Alternatively, a new database can be created by the import action when the authenticated user has [create database permissions](../../t-sql/statements/create-database-transact-sql.md#permissions).
+
+The SqlPackage Import action imports the schema and table data from a BACPAC file (.bacpac) into a new or empty database in SQL Server or Azure SQL Database. At the time of the import operation to an existing database the target database cannot contain any user-defined schema objects. Alternatively, a new database can be created by the import action when the authenticated user has [create database permissions](../../t-sql/statements/create-database-transact-sql.md#permissions).  The Import action is part of the [database portability](sqlpackage.md#portability) functionality of SqlPackage.
 
 [!INCLUDE [entra-id](../../includes/entra-id-hard-coded.md)]
 
 > [!NOTE]
-> SqlPackage import performs best for databases under 200GB. For larger databases, you may want to optimize the operation using properties available in this article and tips in [Troubleshooting with SqlPackage](./troubleshooting-issues-and-performance-with-sqlpackage.md).
+> SqlPackage import performs best for databases under 200GB. For larger databases, you may want to optimize the operation using properties available in this article and tips in [Troubleshooting with SqlPackage](./troubleshooting-issues-and-performance-with-sqlpackage.md) or alternatively achieve database portability through [data in parquet files](sqlpackage-with-data-in-parquet-files.md).
 
 ## Command-line syntax
 
@@ -25,6 +26,13 @@ The SqlPackage Import action imports the schema and table data from a BACPAC fil
 ```bash
 SqlPackage /Action:Import {parameters} {properties}
 ```
+### Required parameters
+
+The Import action requires a `SourceFile` parameter to specify the name and location of the .bacpac file containing the database objects and data.
+
+The Export action requires a target connection where a new database will be created by SqlPackage or where a blank database is present. This is specified either through a combination of:
+- `TargetServerName` and `TargetDatabaseName` parameters, or
+- `TargetConnectionString` parameter.
 
 ### Examples
 
@@ -50,18 +58,6 @@ SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" /UniversalAut
     /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 ```
 
-```powershell
-# example import connecting using an access token associated with a service principal
-$Account = Connect-AzAccount -ServicePrincipal -Tenant $Tenant -Credential $Credential
-$AccessToken_Object = (Get-AzAccessToken -Account $Account -Resource "https://database.windows.net/")
-$AccessToken = $AccessToken_Object.Token
-
-SqlPackage /at:$AccessToken /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" \
-    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
-# OR
-SqlPackage /at:$($AccessToken_Object.Token) /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" \
-    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
-```
 
 ## Parameters for the Import action
 
@@ -114,3 +110,4 @@ SqlPackage /at:$($AccessToken_Object.Token) /Action:Import /SourceFile:"C:\Adven
 
 - Learn more about [SqlPackage](sqlpackage.md)
 - [Troubleshooting with SqlPackage](./troubleshooting-issues-and-performance-with-sqlpackage.md)
+- [Import from Azure Blob Storage](sqlpackage-with-data-in-parquet-files.md)

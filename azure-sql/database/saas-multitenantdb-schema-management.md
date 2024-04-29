@@ -44,20 +44,15 @@ In this tutorial you learn how to:
 
 - Azure PowerShell must be installed. For details, see [Getting started with Azure PowerShell](/powershell/azure/get-started-azureps).
 
-> [!NOTE]
-> This tutorial uses features of the Azure SQL Database service that are in a limited preview ([Elastic Database jobs](elastic-database-client-library.md)). If you wish to do this tutorial, provide your subscription ID to *SaaSFeedback\@microsoft.com* with subject=Elastic Jobs Preview. After you receive confirmation that your subscription has been enabled, [download and install the latest pre-release jobs cmdlets](https://github.com/jaredmoo/azure-powershell/releases). This preview is limited, so contact *SaaSFeedback\@microsoft.com* for related questions or support.
-
 ## Introduction to SaaS schema management patterns
 
 The sharded multi-tenant database model used in this sample enables a tenants database to contain one or more tenants. This sample explores the potential to use a mix of a many-tenant and one-tenant databases, enabling a *hybrid* tenant management model. Managing changes to these databases can be complicated. [Elastic Jobs](./elastic-jobs-overview.md) facilitates administration and management of large numbers of database. Jobs enable you to securely and reliably run Transact-SQL scripts as tasks, against a group of tenant databases. The tasks are independent of user interaction or input. This method can be used to deploy changes to schema or to common reference data, across all tenants in an application. Elastic Jobs can also be used to maintain a golden template copy of the database. The template is used to create new tenants, always ensuring the latest schema and reference data are in use.
 
 ![screen](./media/saas-multitenantdb-schema-management/schema-management.png)
 
-## Elastic Jobs limited preview
+## Elastic jobs
 
-There is a new version of Elastic Jobs that is now an integrated feature of Azure SQL Database. This new version of Elastic Jobs is currently in limited preview. The limited preview currently supports using PowerShell to create a job agent, and T-SQL to create and manage jobs.
-> [!NOTE]
-> This tutorial uses features of the SQL Database service that are in a limited preview (Elastic Database jobs). If you wish to do this tutorial, provide your subscription ID to SaaSFeedback@microsoft.com with subject=Elastic Jobs Preview. After you receive confirmation that your subscription has been enabled, download and install the latest pre-release jobs cmdlets. This preview is limited, so contact SaaSFeedback@microsoft.com for related questions or support.
+In 2024, elastic jobs was released as a generally available product with new features. An integrated feature of Azure SQL Database, see [elastic database jobs](./elastic-jobs-overview.md).
 
 ## Get the Wingtip Tickets SaaS Multi-tenant Database application source code and scripts
 

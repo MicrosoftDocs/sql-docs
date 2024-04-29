@@ -10,6 +10,8 @@ ms.topic: conceptual
 ---
 # How to Edit the CDC Instance Properties
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   This procedure describes how to use the CDC Designer Console to edit the configuration properties for a CDC instance.  
   
 ### To edit the CDC instance configuration properties  

@@ -10,6 +10,8 @@ ms.topic: conceptual
 ---
 # How to Create the SQL Server Change Database Instance
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   This procedure describes how to use the CDC Designer Console to create CDC instances.  
   
 ### To create CDC instances  

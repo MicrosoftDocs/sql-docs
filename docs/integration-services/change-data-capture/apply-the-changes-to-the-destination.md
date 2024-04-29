@@ -14,7 +14,6 @@ helpviewer_keywords:
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
-
   In the data flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the third and final task is to apply the changes to your destination. You will need one component to apply inserts, one to apply updates, and one to apply deletes.  
   
 > [!NOTE]  

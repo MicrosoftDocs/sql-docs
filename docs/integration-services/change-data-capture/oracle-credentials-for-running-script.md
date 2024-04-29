@@ -10,6 +10,8 @@ ms.topic: conceptual
 ---
 # Oracle Credentials for Running Script
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   To run the Oracle supplemental logging script from the Oracle CDC Designer console, the program prompts you for the credentials of the Oracle user who is running the script. To run this script, the Oracle user must have ALTER TABLE permission for all the tables to be captured and SELECT permission on the DBA_LOG_GROUPS view.  
   
 ## Task List  

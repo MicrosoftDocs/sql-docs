@@ -10,6 +10,8 @@ ms.topic: conceptual
 ---
 # The CDC Designer Console Introduction
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   The section describes the installation procedures for the Change Data Capture Designer for Oracle by Attunity.  
   
 ## Installation  

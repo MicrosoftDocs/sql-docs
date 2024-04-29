@@ -12,6 +12,8 @@ f1_keywords:
 ---
 # Select Oracle Tables and Columns
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   Use the Select Oracle Tables and Columns page to select the tables from the Oracle source database where changes are captured. This page has the following elements:  
   
 ## Options  

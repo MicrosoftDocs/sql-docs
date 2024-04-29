@@ -15,10 +15,7 @@ ms.custom: ignite-2023
 
 This task creates a new database as a copy of another database. The new database is restored from backup to a point-in-time in the past that is within the retention period.  
 
-You can restore a database to a point-in-time:
-
-- From an existing database
-- To a new database on the same Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance
+You can restore a database to a point-in-time to a new database on the same instance of SQL Server enabled by Azure Arc.
 
 [!INCLUDE [azure-arc-sql-preview](includes/azure-arc-sql-preview.md)]
 

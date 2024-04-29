@@ -52,7 +52,7 @@ In this article you can find a content reference of various guides, scripts, and
 - [Enable automatic tuning](automatic-tuning-enable.md) to let Azure SQL Database optimize performance of your workload.
 - [Enable e-mail notifications for automatic tuning](automatic-tuning-email-notifications-configure.md) to get information about tuning recommendations.
 - [Apply performance recommendations](database-advisor-find-recommendations-portal.md) and optimize your database.
-- [Create alerts](alerts-insights-configure-portal.md) to get notifications from Azure SQL Database.
+- [Create alerts](alerts-create.md) to get notifications from Azure SQL Database.
 - [Troubleshoot connectivity](troubleshoot-common-errors-issues.md) if you notice some connectivity issues between the applications and the database. You can also use [Resource Health for connectivity issues](resource-health-to-troubleshoot-connectivity.md?view=azuresql-db&preserve-view=true).
 - [Troubleshoot performance with Intelligent Insights](intelligent-insights-troubleshoot-performance.md)
 - [Manage file space](file-space-manage.md) to monitor storage usage in your database.

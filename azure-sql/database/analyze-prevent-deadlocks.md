@@ -114,7 +114,7 @@ For detailed instructions on how to create `AdventureWorksLT` with the Azure por
 
 ### Set up deadlock alerts in the Azure portal
 
-To set up alerts for deadlock events, follow the steps in the article [Create alerts for Azure SQL Database and Azure Synapse Analytics using the Azure portal](alerts-insights-configure-portal.md). 
+To set up alerts for deadlock events, follow the steps in the article [Create alerts for Azure SQL Database and Azure Synapse Analytics using the Azure portal](alerts-create.md). 
 
 Select **Deadlocks** as the signal name for the alert. Configure the **Action group** to notify you using the method of your choice, such as the **Email/SMS/Push/Voice** action type.
 

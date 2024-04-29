@@ -4,8 +4,8 @@ titleSuffix: SQL Server Language Extensions
 description: Learn how to install the SQL Server Java Language Extension feature on Windows.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: monamaki
-ms.date: 03/11/2024
+ms.reviewer: monamaki, randolphwest
+ms.date: 04/29/2024
 ms.service: sql
 ms.subservice: language-extensions
 ms.topic: how-to
@@ -21,7 +21,7 @@ monikerRange: ">=sql-server-ver15"
 Learn how to install the [Java Language Extension](../java-overview.md) component for SQL Server on Windows. The Java Language Extension is part of [SQL Server Language Extensions](../language-extensions-overview.md).
 
 > [!NOTE]  
-> This article is for installation of Java Language Extension for SQL Server on Windows. For Linux, see [Install SQL Server Java Language Extension on Linux](../../linux/sql-server-linux-setup-language-extensions-java.md).
+> This article is for installation of the Java Language Extension for SQL Server on Windows. For Linux, see [Install SQL Server Java Language Extension on Linux](../../linux/sql-server-linux-setup-language-extensions-java.md). For the C# Language Extension on Windows, see [Install SQL Server .NET Language Extension on Windows](windows-c-sharp.md).
 
 ## Prerequisites
 
@@ -88,11 +88,11 @@ For local installations, you must run Setup as an administrator. If you install 
 
 1. Start the setup wizard for SQL Server.
 
-1. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
+2. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
 
 ::: moniker range="=sql-server-ver15"
 
-1. On the **Feature Selection** page, select these options:
+3. On the **Feature Selection** page, select these options:
 
    **Database Engine Services**: To use Language Extensions with SQL Server, you must install an instance of the [!INCLUDE [ssde-md](../../includes/ssde-md.md)]. You can use either a default or a named instance.
 
@@ -115,7 +115,7 @@ For local installations, you must run Setup as an administrator. If you install 
 ::: moniker-end
 ::: moniker range=">=sql-server-ver16"
 
-1. On the **Feature Selection** page, select these options:
+3. On the **Feature Selection** page, select these options:
 
    **Database Engine Services**: To use Language Extensions with SQL Server, you must install an instance of the [!INCLUDE [ssde-md](../../includes/ssde-md.md)]. You can use either a default or a named instance.
 
@@ -125,14 +125,14 @@ For local installations, you must run Setup as an administrator. If you install 
 
 ::: moniker-end
 
-1. On the **Ready to Install** page, verify that these selections are included, and select **Install**.
+4. On the **Ready to Install** page, verify that these selections are included, and select **Install**.
 
    - [!INCLUDE [ssde-md](../../includes/ssde-md.md)] Services
    - Machine Learning Services and Language Extensions
 
    Note the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the Summary file.
 
-1. After setup is complete, if you're instructed to restart the computer, do so now. It's important to read the message from the Installation Wizard when you finish with Setup. For more information, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
+5. After setup is complete, if you're instructed to restart the computer, do so now. It's important to read the message from the Installation Wizard when you finish with Setup. For more information, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ## Add the JRE_HOME variable
 
@@ -212,7 +212,7 @@ Run the **icacls** commands from an *elevated* line to grant access to the **SQL
 
 1. Give **SQLRUserGroup** permissions
 
-   For a named instance,  append the instance name to **SQLRUsergroup** (for example, `SQLRUsergroupINSTANCENAME`).
+   For a named instance, append the instance name to **SQLRUsergroup** (for example, `SQLRUsergroupINSTANCENAME`).
 
    ```cmd
    icacls "<PATH to JRE>" /grant "SQLRUsergroup":(OI)(CI)RX /T
@@ -315,7 +315,7 @@ The default settings for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.m
 
 To ensure that language extensions jobs are prioritized and resourced appropriately, we recommend that you use SQL Server Resource Governor to configure an external resource pool. You might also want to change the amount of memory allocated to the [!INCLUDE [ssde-md](../../includes/ssde-md.md)], or increase the number of accounts that run under the [!INCLUDE [rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
 
-- To configure a resource pool for managing external resources, see [Create an external resource pool](../../t-sql/statements/create-external-resource-pool-transact-sql.md).
+- To configure a resource pool for managing external resources, see [CREATE EXTERNAL RESOURCE POOL (Transact-SQL)](../../t-sql/statements/create-external-resource-pool-transact-sql.md).
 
 - To change the amount of memory reserved for the database, see [Server memory configuration options](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
 

@@ -26,7 +26,7 @@ To create a SqlPackage command, you must specify an action and its additional pa
 
 In the following example, SqlPackage is used to create a .dacpac file of the current database schema:
 
-```cmd
+```bash
 SqlPackage /Action:Extract /TargetFile:"C:\sqlpackageoutput\output_current_version.dacpac" \
  /SourceServerName:"localhost" /SourceDatabaseName:"Contoso" \
  /p:IgnoreUserLoginMappings=True /p:Storage=Memory

@@ -14,37 +14,31 @@ ms.topic: conceptual
 
 **SqlPackage** is a command-line utility that automates the database development tasks by exposing some of the public Data-Tier Application Framework (DacFx) APIs.  The primary use cases for SqlPackage focus on database portability and deployments for the SQL Server, Azure SQL, and Azure Synapse Analytics family of databases. SqlPackage can be automated using [Azure DevOps pipelines and GitHub actions](sqlpackage-pipelines.md) or other CI/CD tools.
 
+**[Download the latest version](sqlpackage-download.md)**. For details about the latest release, see the [release notes](release-notes-sqlpackage.md).
+
+[!INCLUDE [entra-id](../../includes/entra-id-hard-coded.md)]
+
 ## Portability
 
 Database portability is the ability to move a database schema and data between different instances of SQL Server, Azure SQL, and Azure Synapse Analytics. Exporting a database from Azure SQL Database to an on-premises SQL Server instance, or from SQL Server to Azure SQL Database, are examples of database portability. SqlPackage supports database portability through the [Export](sqlpackage-export.md) and [Import](sqlpackage-import.md) actions, which create and consume BACPAC files. SqlPackage also supports database portability through the [Extract](sqlpackage-extract.md) and [Publish](sqlpackage-publish.md) actions, which create and consume DACPAC files, which can either contain the data directly or reference [data stored in Azure Blob Storage](sqlpackage-with-data-in-parquet-files.md).
+
+- [Export](sqlpackage-export.md): Exports a connected SQL database - including database schema and user data - to a BACPAC file (.bacpac). 
+  
+- [Import](sqlpackage-import.md): Imports the schema and table data from a BACPAC file into a new user database. 
 
 ## Deployments
 
 Database deployments are the process of updating a database schema to match a desired state, such as adding columns to a table or changing the contents of a stored procedure. SqlPackage supports database deployments through the [Publish](sqlpackage-publish.md) and [Extract](sqlpackage-extract.md) actions. The Publish action updates a database schema to match the contents of a source .dacpac file, while the Extract action creates a data-tier application (.dacpac) file containing the schema or schema and user data from a connected SQL database. SqlPackage enables deployments against both new or existing databases from the same artifact (.dacpac) by automatically creating a deployment plan that will apply the necessary changes to the target database.  The deployment plan can be reviewed before applying the changes to the target database with either the [Script](sqlpackage-script.md) or [DeployReport](sqlpackage-deploy-drift-report.md) actions.
 
-## SqlPackage actions
-  
-- [Version](#version): Returns the build number of the SqlPackage application.
-
 - [Extract](sqlpackage-extract.md): Creates a data-tier application (.dacpac) file containing the schema or schema and user data from a connected SQL database. 
   
 - [Publish](sqlpackage-publish.md): Incrementally updates a database schema to match the schema of a source .dacpac file. If the database doesn't exist on the server, the publish operation creates it. Otherwise, an existing database is updated. 
-  
-- [Export](sqlpackage-export.md): Exports a connected SQL database - including database schema and user data - to a BACPAC file (.bacpac). 
-  
-- [Import](sqlpackage-import.md): Imports the schema and table data from a BACPAC file into a new user database. 
   
 - [DeployReport](sqlpackage-deploy-drift-report.md): Creates an XML report representing the changes that a publish action would take. 
   
 - [DriftReport](sqlpackage-deploy-drift-report.md): Creates an XML report representing the changes applied to a registered database since it was last registered. 
   
 - [Script](sqlpackage-script.md): Creates a Transact-SQL incremental update script that updates the schema of a target to match the schema of a source. 
-  
-The **SqlPackage** command line tool allows you to specify these actions along with action-specific parameters and properties. 
-
-**[Download the latest version](sqlpackage-download.md)**. For details about the latest release, see the [release notes](release-notes-sqlpackage.md).
-  
-[!INCLUDE [entra-id](../../includes/entra-id-hard-coded.md)]
 
 ## Command-Line Syntax
 
@@ -61,7 +55,7 @@ More information on the SqlPackage command-line syntax is detailed in the [SqlPa
 
 Displays the sqlpackage version as a build number. Can be used in interactive prompts and in [automated pipelines](sqlpackage-pipelines.md).
 
-```cmd
+```bash
 SqlPackage /Version
 ```
 
@@ -69,13 +63,13 @@ SqlPackage /Version
 
 You can display SqlPackage usage information by using `/?` or `/help:True`.
 
-```cmd
+```bash
 SqlPackage /?
 ```
 
 For parameter and property information specific to a particular action, use the help parameter in addition to that action's parameter.
 
-```cmd
+```bash
 SqlPackage /Action:Publish /?
 ```
 

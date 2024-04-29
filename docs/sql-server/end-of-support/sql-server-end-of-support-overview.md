@@ -218,7 +218,9 @@ Another option is to migrate your workload to an [Azure Virtual Machine running 
 
 ## Azure VMware Solution
 
-You can enable ESUs with Azure VMware Solution. For benefits, considerations, and resources, review [ESUs for SQL Server and Windows Server in Azure VMware Solution VMs](/azure/azure-vmware/extended-security-updates-windows-sql-server).
+Azure VMware Solution allows you to run your VMware environment in Azure with familar tooling and a quick migration path. 
+
+Running SQL Server in VMs in this environment provides you with the free ESU benefits extended to running in Azure. For information on how to configure ESUs in Azure VMware Solution review: [ESUs for SQL Server and Windows Server in Azure VMware Solution VMs](/azure/azure-vmware/extended-security-updates-windows-sql-server).
 
 ## Azure SQL Database
 

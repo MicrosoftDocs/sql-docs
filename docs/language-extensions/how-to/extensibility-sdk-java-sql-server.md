@@ -3,7 +3,7 @@ title: Microsoft Extensibility SDK for Java
 description: Learn how you can implement a Java program for SQL Server using the Microsoft Extensibility SDK for Java.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 03/11/2024
+ms.date: 04/29/2024
 ms.service: sql
 ms.subservice: language-extensions
 ms.topic: conceptual

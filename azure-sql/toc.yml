@@ -697,7 +697,7 @@
         href: database/automation-manage.md
       - name: Block geo-replication of Azure SQL Database backups
         href: database/block-geo-redundant-backup-storage.md
-    - name: Elastic jobs (preview)
+    - name: Elastic jobs
       items:
       - name: Job automation overview
         href: database/job-automation-overview.md
@@ -815,7 +815,7 @@
       - name: Apply performance recommendations
         href: database/database-advisor-find-recommendations-portal.md
       - name: Create alerts
-        href: database/alerts-insights-configure-portal.md
+        href: database/alerts-create.md
       - name: Implement database advisor recommendations
         href: database/database-advisor-implement-performance-recommendations.md
       - name: Stream data with Stream Analytics

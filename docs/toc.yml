@@ -2644,14 +2644,20 @@ items:
         href: language-extensions/csharp-overview.md
       - name: What's new?
         href: language-extensions/language-extensions-whats-new.md
+      - name: Security
+        href: machine-learning/concepts/security.md
     - name: Install
       items:
       - name: Install Java Language Extension on Windows
         href: language-extensions/install/windows-java.md
+      - name: Install .NET Language Extension on Windows
+        href: language-extensions/install/windows-c-sharp.md
     - name: Tutorials
       items:
       - name: Search for string using RegEx in Java
         href: language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md
+      - name: Search for string using RegEx in C#
+        href: language-extensions/tutorials/search-for-string-using-regular-expressions-in-c-sharp.md
     - name: Concepts
       items:
       - name: Extensibility framework
@@ -2660,14 +2666,26 @@ items:
         href: language-extensions/concepts/compare-extensibility-to-clr.md
     - name: How-to guides
       items:
-      - name: Call Java from SQL Server
-        href: language-extensions/how-to/call-java-from-sql.md
-      - name: Extensibility SDK for Java
-        href: language-extensions/how-to/extensibility-sdk-java-sql-server.md
-      - name: Java to SQL data types
-        href: language-extensions/how-to/java-to-sql-data-types.md
-      - name: Create a Java jar file
-        href: language-extensions/how-to/create-a-java-jar-file-from-class-files.md
+      - name: Java
+        items:
+        - name: Call Java from SQL Server
+          href: language-extensions/how-to/call-java-from-sql.md
+        - name: Extensibility SDK for Java
+          href: language-extensions/how-to/extensibility-sdk-java-sql-server.md
+        - name: Java to SQL data types
+          href: language-extensions/how-to/java-to-sql-data-types.md
+        - name: Create a Java jar file
+          href: language-extensions/how-to/create-a-java-jar-file-from-class-files.md
+      - name: C#
+        items:
+        - name: Call C# from SQL Server
+          href: language-extensions/how-to/call-c-sharp-from-sql.md
+        - name: Extensibility SDK for C#
+          href: language-extensions/how-to/extensibility-sdk-c-sharp-sql-server.md
+        - name: C# to SQL data types
+          href: language-extensions/how-to/c-sharp-to-sql-data-types.md
+        - name: Create a .NET DLL file
+          href: language-extensions/how-to/create-a-c-sharp-library.md
     - name: Reference
       items:
       - name: Extensibility Framework API

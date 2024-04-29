@@ -3,7 +3,7 @@ title: What is SQL Server Language Extensions?
 description: "Language Extensions is a feature of SQL Server used for executing external code. In SQL Server, Java, C#, Python, and R are supported. Relational data can be used in the external code using the extensibility framework."
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 03/11/2024
+ms.date: 04/29/2024
 ms.service: sql
 ms.subservice: language-extensions
 ms.topic: overview
@@ -36,11 +36,15 @@ Language Extensions provides multiple advantages:
 
 The native [Common Language Runtime Integration](../relational-databases/clr-integration/common-language-runtime-integration-overview.md) allows you to implement some of the functionalities of SQL Server with .NET languages. For a discussion of the differences between SQL CLR and SQL language extensions, see [Compare SQL Server Language Extensions to SQL CLR](concepts/compare-extensibility-to-clr.md).
 
+For more information about security with the extensibility framework, see [Security architecture for the extensibility framework in SQL Server Machine Learning Services](../machine-learning/concepts/security.md).
+
 ## Related content
 
 - [Install SQL Server Java Language Extension on Windows](install/windows-java.md)
 - [Install SQL Server Java Language Extension on Linux](../linux/sql-server-linux-setup-language-extensions-java.md)
-- [What is C# Language Extension?](csharp-overview.md)
+- [What is the C# Language Extension?](csharp-overview.md)
+- [Install SQL Server .NET Language Extension on Windows](install/windows-c-sharp.md)
 - [Install a Python custom runtime for SQL Server](../machine-learning/install/custom-runtime-python.md)
 - [Install an R custom runtime for SQL Server](../machine-learning/install/custom-runtime-r.md)
 - [Microsoft Extensibility SDK for Java for SQL Server](how-to/extensibility-sdk-java-sql-server.md)
+- [Microsoft Extensibility SDK for C# for SQL Server](how-to/extensibility-sdk-c-sharp-sql-server.md)

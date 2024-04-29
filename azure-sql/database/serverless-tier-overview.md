@@ -133,7 +133,7 @@ The following features do not support auto-pausing, but do support auto-scaling.
 - [Long-term backup retention](long-term-retention-overview.md) (LTR).
 - The sync database used in [SQL Data Sync](sql-data-sync-data-sql-server-sql-database.md). Unlike sync databases, hub and member databases support auto-pausing.
 - [DNS alias](dns-alias-overview.md) created for the logical server containing a serverless database.
-- [Elastic Jobs (preview)](elastic-jobs-overview.md), Auto-pause enabled serverless database is not supported as a *Job Database*. Serverless databases targeted by elastic jobs do support auto-pausing. Job connections will resume a database.
+- [Elastic Jobs](elastic-jobs-overview.md), Auto-pause enabled serverless database is not supported as a *Job Database*. Serverless databases targeted by elastic jobs do support auto-pausing. Job connections will resume a database.
 
 Auto-pausing is temporarily prevented during the deployment of some service updates, which require the database be online. In such cases, auto-pausing becomes allowed again once the service update completes.
 

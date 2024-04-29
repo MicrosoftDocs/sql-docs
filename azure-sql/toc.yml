@@ -1732,6 +1732,8 @@
             - name: Azure portal
               displayName: Always On, alwayson, availability group
               href: virtual-machines/windows/availability-group-azure-portal-configure.md
+            - name: PowerShell or Az CLI
+              href: virtual-machines/windows/availability-group-az-commandline-configure-multi-subnet.md
             - name: Migrate single subnet to multi-subnet
               href: virtual-machines/windows/availability-group-manually-migrate-multi-subnet.md
             - name: Manually

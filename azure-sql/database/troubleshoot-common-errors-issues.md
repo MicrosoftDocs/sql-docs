@@ -468,7 +468,7 @@ To resolve this issue, follow these steps:
 
 If you attempt to write to a database that is read-only, you receive an error. In some scenarios, the cause of the database's read-only status might not be immediately clear.
 
-### Error 3906: Failed to update database '<database>' because the database is read-only.
+### Error 3906: Failed to update database 'databaseName' because the database is read-only.
 
 When attempting to modify a read-only database, the following error is raised.
 

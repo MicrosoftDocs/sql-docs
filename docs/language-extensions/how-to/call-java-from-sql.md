@@ -4,7 +4,7 @@ titleSuffix: SQL Server Language Extensions
 description: Learn how to call Java classes from a SQL Server stored procedures using SQL Server Language Extensions.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 03/11/2024
+ms.date: 04/29/2024
 ms.service: sql
 ms.subservice: language-extensions
 ms.topic: how-to
@@ -27,7 +27,7 @@ There are two methods for calling Java classes in SQL Server:
 1. Upload compiled classes in a `.jar` file and other dependencies into the database using the [external library](#external-library) DDL.
 
 > [!NOTE]  
-> As a general recommendation, use `.jar` files and not individual `.class` files. This is common practice in Java and will make the overall experience easier. See also, [Create a Java jar file from class files](create-a-java-jar-file-from-class-files.md).
+> As a general recommendation, use `.jar` files and not individual `.class` files. This is common practice in Java and will make the overall experience easier. See also, [Create a Java .jar file from class files](create-a-java-jar-file-from-class-files.md).
 
 ## <a id="classpath"></a> Use Classpath
 
@@ -41,7 +41,7 @@ The following are some basic principles when executing Java on SQL Server.
 
 - If the class belongs to a package, the `packageName` must be provided.
 
-- `params` is used to pass parameters to a Java class. Calling a method that requires arguments isn't supported. Therefore, parameters the only way to pass argument values to your method.
+- `params` is used to pass parameters to a Java class. Calling a method that requires arguments isn't supported. Therefore, parameters are the only way to pass argument values to your method.
 
 > [!NOTE]  
 > This note restates supported and unsupported operations specific to Java in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions. On the stored procedure, input parameters are supported, while output parameters aren't supported.
@@ -76,7 +76,7 @@ Once you compile your Java class or classes, and created a `.jar` file in your J
 
 1. Register a system environment variable
 
-    You can create a system environment variable and provide the paths to your jar file that contains the classes. Create a system environment variable called `CLASSPATH`.
+    You can create a system environment variable and provide the paths to your `.jar` file that contains the classes. Create a system environment variable called `CLASSPATH`.
 
 ## <a id="external-library"></a> Use external library
 
@@ -116,7 +116,7 @@ jdbc:sqlserver://localhost:1433;databaseName=Adventureworks;integratedSecurity=t
 
 To make a loopback connection in Linux the JDBC driver requires three connection properties defined in the following Certificate:
 
-[Client-Certificate-Authenication](https://github.com/microsoft/mssql-jdbc/wiki/Client-Certificate-Authentication-for-Loopback-Scenarios)
+[Client-Certificate-Authentication](https://github.com/microsoft/mssql-jdbc/wiki/Client-Certificate-Authentication-for-Loopback-Scenarios)
 
 ## Related content
 

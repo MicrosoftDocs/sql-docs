@@ -12,7 +12,7 @@ ms.topic: conceptual
 
 # SqlPackage
 
-**SqlPackage** is a command-line utility that automates the database development tasks by exposing some of the public Data-Tier Application Framework (DacFx) APIs.  The primary use cases for SqlPackage focus on database portability and deployments for the SQL Server, Azure SQL, and Azure Synapse Analytics family of databases. SqlPackage can be automated using [Azure DevOps pipelines and GitHub actions](sqlpackage-pipelines.md) or other CI/CD tools.
+**SqlPackage** is a command-line utility that automates the database development tasks by exposing some of the public Data-Tier Application Framework (DacFx) APIs.  The primary use cases for SqlPackage focus on database portability and deployments for the SQL Server, Azure SQL, and Azure Synapse Analytics family of databases. SqlPackage can be automated using [Azure Pipelines and GitHub actions](sqlpackage-pipelines.md) or other CI/CD tools.
 
 **[Download the latest version](sqlpackage-download.md)**. For details about the latest release, see the [release notes](release-notes-sqlpackage.md).
 

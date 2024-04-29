@@ -4,7 +4,7 @@ titleSuffix: SQL Server Language Extensions
 description: You can use the extensibility framework to write programming language extensions for SQL Server. The Extensibility Framework API for Microsoft SQL Server is an API that can be used by a language extension to interact with and exchange data with SQL Server.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 03/11/2024
+ms.date: 04/29/2024
 ms.service: sql
 ms.subservice: language-extensions
 ms.topic: reference
@@ -168,7 +168,7 @@ SQLRETURN InitParam(
 | --- | --- | --- |
 | `SessionId` | Input | GUID uniquely identifying this script session |
 | `TaskId` | Input | An integer uniquely identifying this execution process.<br /><br />When `@parallel` is `1` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), this value ranges from `0` to the degree of parallelism of the query |
-| `ParamNumber` | Input |An integer identifying the index of this parameter. Parameters are numbered sequentially in increasing order starting at `0` |
+| `ParamNumber` | Input | An integer identifying the index of this parameter. Parameters are numbered sequentially in increasing order starting at `0` |
 | `ParamName` | Input | Null-terminated UTF-8 string containing the parameter's name |
 | `ParamNameLength` | Input | Length in bytes of `ParamName` (excluding the null termination character) |
 | `Data type` | Input | The ODBC C type identifying this parameter's data type |
@@ -303,7 +303,7 @@ This function returns an integer representing the extension's interface version.
 
 Supported values:
 
-1. Version 1 is the  initial API version. Supported at [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] RTM.
+1. Version 1 is the initial API version. Supported at [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] RTM.
 1. Version 2 has added support for `InstallExternalLibrary` and `UninstallExternalLibrary` API and is supported from [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU 3.
 
 ### Syntax
@@ -350,7 +350,7 @@ There's a counter named `script_executions`, which is sent by the framework. The
 
 Each telemetry entry is a key-value pair. The keys are strings. The values are 64-bit integers, or counters. Thus, the output comprises for two logical arrays: the names and their corresponding counters. Each array is output.
 
-The length of each array is `RowsNumber`, which is an output. The first logical output contains pointers to strings. It is represented by two arrays: `CounterNames` (the actual string data) and `CounterNamesLength` (the length of each string). The second logical output is stored in the `CounterValues` pointer.
+The length of each array is `RowsNumber`, which is an output. The first logical output contains pointers to strings. It's represented by two arrays: `CounterNames` (the actual string data) and `CounterNamesLength` (the length of each string). The second logical output is stored in the `CounterValues` pointer.
 
 ### Syntax
 

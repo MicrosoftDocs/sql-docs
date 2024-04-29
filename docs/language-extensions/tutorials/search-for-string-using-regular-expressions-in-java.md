@@ -3,7 +3,7 @@ title: "Tutorial: Regex string search in Java"
 description: This tutorial shows you how to use SQL Server Language Extensions and run Java code that search a string with regular expressions (regex).
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 03/11/2024
+ms.date: 04/29/2024
 ms.service: sql
 ms.subservice: language-extensions
 ms.topic: tutorial
@@ -172,7 +172,7 @@ public class RegexSample extends AbstractSqlServerExtensionExecutor {
 
 Package your classes and dependencies into a `.jar` files. Most Java IDEs (for example, Eclipse or IntelliJ) support generating `.jar` files when you build or compile the project. Name the `.jar` file `regex.jar`.
 
-If you aren't using a Java IDE, you can manually create a `.jar` file. For more information, see [Create a Java jar file from class files](../how-to/create-a-java-jar-file-from-class-files.md).
+If you aren't using a Java IDE, you can manually create a `.jar` file. For more information, see [Create a Java .jar file from class files](../how-to/create-a-java-jar-file-from-class-files.md).
 
 > [!NOTE]  
 > This tutorial uses packages. The `package pkg;` line at the top of the class ensures that the compiled code is saved in a sub folder called `pkg`. If you use an IDE, the compiled code is automatically saved in this folder. If you use `javac` to manually compile the classes, you need to place the compiled code in the `pkg` folder.
@@ -256,7 +256,7 @@ In this sample, you create two external libraries. One for the SDK and one for t
 > [!NOTE]  
 > Skip this step, if you use external libraries in the previous step. The recommended way is to create an external library from your `.jar` file.
 
-If you don't want to use external libraries, you need to set the necessary permissions. Script execution only succeeds if the process identities have access to your code. You can find more information about setting permissions in  the [installation guide](../install/windows-java.md).
+If you don't want to use external libraries, you need to set the necessary permissions. Script execution only succeeds if the process identities have access to your code. You can find more information about setting permissions in the [installation guide](../install/windows-java.md).
 
 ### On Linux
 

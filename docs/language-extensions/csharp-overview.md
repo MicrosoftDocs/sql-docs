@@ -1,10 +1,10 @@
 ---
-title: "What is C# Language Extension?"
+title: "What is the C# Language Extension?"
 titleSuffix: SQL Server Language Extensions
-description: "C# Language Extension is a feature of SQL Server used for executing external C# code. Relational data can be used in the external C# code using the extensibility framework."
+description: "The C# Language Extension is a feature of SQL Server used for executing external C# code. Relational data can be used in the external C# code using the extensibility framework."
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 03/11/2024
+ms.date: 04/29/2024
 ms.service: sql
 ms.subservice: language-extensions
 ms.topic: overview
@@ -13,16 +13,16 @@ ms.custom:
 monikerRange: ">=sql-server-ver15 || >=sql-server-linux-ver15"
 ---
 
-# What is C# Language Extension?
+# What is the C# Language Extension?
 
 [!INCLUDE [sqlserver2019-and-later](../includes/applies-to-version/sqlserver2019-and-later.md)]
 
-The open-source [.NET C# language extension](https://github.com/microsoft/sql-server-language-extensions/tree/main/language-extensions/dotnet-core-CSharp) is a feature of [SQL Server Language Extensions](language-extensions-overview.md) that can be used for executing C# code within SQL Server. You can pass an existing SQL Server table to a C# application as a DataFrame, perform operations in C# using rich libraries, and obtain back a result set. This C# language extension allows you to reuse existing C# code, calculations, logic, or extensive libraries that provide functionality you can't get in T-SQL.
+The C# Language Extension is a feature of [SQL Server Language Extensions](language-extensions-overview.md) that can be used for executing C# code within SQL Server. You can pass an existing SQL Server table to a C# application as a DataFrame, perform operations in C# using rich libraries, and obtain back a result set. This C# language extension allows you to reuse existing C# code, calculations, logic, or extensive libraries that provide functionality you can't get in Transact-SQL (T-SQL).
 
 The external C# language is defined with [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). The system stored procedure [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) is used as the interface for executing the C# code.
 
 > [!NOTE]  
-> The C# language extension is compatible with [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU 3 and later versions. Currently, it integrates .NET Core on SQL Server for Windows only.
+> The C# language extension is compatible with [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU 3 and later versions. Currently, it integrates .NET Core on SQL Server for Windows only. Linux isn't supported.
 
 ## What you can do
 
@@ -32,9 +32,20 @@ You can do data cleaning, fast data querying, or any other processing in C# that
 
 ## Get started
 
-The C# language extension isn't installed with SQL Server. To install and configure the C# extension, see [.NET Core CSharp Language Extension](https://github.com/microsoft/sql-server-language-extensions/tree/main/language-extensions/dotnet-core-CSharp). The [Regex Sample](https://github.com/microsoft/sql-server-language-extensions/blob/main/language-extensions/dotnet-core-CSharp/sample/regex/README.md) tutorial shows you how to create a C# program that uses a regular expression to check text in a SQL table.
+1. [Install SQL Server .NET Language Extension on Windows](install/windows-c-sharp.md).
+
+1. Configure development tools.
+
+   - Use the IDE you prefer for developing C# code.
+   - Install the [Microsoft Extensibility SDK for C# for SQL Server](how-to/extensibility-sdk-c-sharp-sql-server.md) to execute C# code on SQL Server.
+   - Use [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) or [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md) for executing external code on SQL Server.
+   - Use the system stored procedure [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute your C# code on SQL Server.
+
+1. Write your first C# code. Use the following tutorial as a starting point. [Tutorial: Search for a string using regular expressions (regex) in C#](tutorials/search-for-string-using-regular-expressions-in-c-sharp.md).
 
 ## Related content
 
+- [Install SQL Server .NET Language Extension on Windows](install/windows-c-sharp.md)
+- [Microsoft Extensibility SDK for C# for SQL Server](how-to/extensibility-sdk-c-sharp-sql-server.md)
 - [Install SQL Server Java Language Extension on Windows](install/windows-java.md)
-- [.NET Core CSharp Language Extension](https://github.com/microsoft/sql-server-language-extensions/tree/main/language-extensions/dotnet-core-CSharp)
+- [Security architecture for the extensibility framework in SQL Server Machine Learning Services](../machine-learning/concepts/security.md)

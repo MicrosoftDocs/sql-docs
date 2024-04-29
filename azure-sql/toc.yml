@@ -697,7 +697,7 @@
         href: database/automation-manage.md
       - name: Block geo-replication of Azure SQL Database backups
         href: database/block-geo-redundant-backup-storage.md
-    - name: Elastic jobs (preview)
+    - name: Elastic jobs
       items:
       - name: Job automation overview
         href: database/job-automation-overview.md

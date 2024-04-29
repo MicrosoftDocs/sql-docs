@@ -114,11 +114,11 @@ SELECT * FROM sys.external_data_sources;
 
 #### Limitations of Basic Authentication
 
-1. For S3-compatible object storage, customers are not allowed to create their access key ID with a `:` character in it.
-1. The total URL length is limited to 259 characters. This means `s3://<hostname>/<objectkey>` shouldn't exceed 259 characters. The `s3://` counts toward this limit, so the path length cannot exceed 259-5 = 254 characters.
-1. The SQL credential name is limited by 128 characters in UTF-16 format.
-1. The credential name created must contain the bucket name unless this credential is for a new external data source.
-1. Access Key ID and Secret Key ID must only contain alphanumeric values.
+- For S3-compatible object storage, customers are not allowed to create their access key ID with a `:` character in it.
+- The total URL length is limited to 259 characters. This means `s3://<hostname>/<objectkey>` shouldn't exceed 259 characters. The `s3://` counts toward this limit, so the path length cannot exceed 259-5 = 254 characters.
+- The SQL credential name is limited by 128 characters in UTF-16 format.
+- The credential name created must contain the bucket name unless this credential is for a new external data source.
+- Access Key ID and Secret Key ID must only contain alphanumeric values.
 
 ### Pass-through (STS) authorization
 
@@ -213,8 +213,8 @@ Pass-through authorization relies on Active Directory Federation Service (ADFS) 
 
 For PolyBase on SQL Server on Linux, more configuration is needed.
 
-1. TLS must be configured. It is assumed that all connections will be securely transmitted over HTTPS not HTTP. The endpoint is validated by a certificate installed on the SQL Server OS Host.
-1. Certificate management is different on Linux. Review and follow the configuration detailed in [Linux support for S3-compatible storage](../backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md#linux-support).
+- TLS must be configured. It is assumed that all connections will be securely transmitted over HTTPS not HTTP. The endpoint is validated by a certificate installed on the SQL Server OS Host.
+- Certificate management is different on Linux. Review and follow the configuration detailed in [Linux support for S3-compatible storage](../backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md#linux-support).
 
 ## Related content
 

@@ -815,7 +815,7 @@
       - name: Apply performance recommendations
         href: database/database-advisor-find-recommendations-portal.md
       - name: Create alerts
-        href: database/alerts-insights-configure-portal.md
+        href: database/alerts-create.md
       - name: Implement database advisor recommendations
         href: database/database-advisor-implement-performance-recommendations.md
       - name: Stream data with Stream Analytics

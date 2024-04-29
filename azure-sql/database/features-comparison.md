@@ -69,7 +69,7 @@ The following table lists the major features of SQL Server and provides informat
 | [DML triggers](/sql/relational-databases/triggers/create-dml-triggers) | Most, see individual statements |  Yes |
 | [DMVs](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views) | Most, see individual DMVs |  Yes, see [T-SQL differences](../managed-instance/transact-sql-tsql-differences-sql-server.md) |
 | [Elastic query](elastic-query-overview.md) | Yes, with required RDBMS type (public preview) | No, use native cross-DB queries and Linked Server |
-| [Event notifications](/sql/relational-databases/service-broker/event-notifications) | No, see [Alerts](alerts-insights-configure-portal.md) | No |
+| [Event notifications](/sql/relational-databases/service-broker/event-notifications) | No, see [Alerts](alerts-create.md) | No |
 | [Expressions](/sql/t-sql/language-elements/expressions-transact-sql) |Yes | Yes |
 | [Extended events (XEvent)](/sql/relational-databases/extended-events/extended-events) | Some, see [Extended events in SQL Database](xevent-db-diff-from-svr.md) | Yes, see [Extended events differences](../managed-instance/transact-sql-tsql-differences-sql-server.md#extended-events). |
 | [Extended stored procedures](/sql/relational-databases/extended-stored-procedures-programming/creating-extended-stored-procedures) | No | No |

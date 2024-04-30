@@ -62,7 +62,7 @@ In order for the [logical server in Azure](logical-servers.md) to use the TDE pr
   - **wrapKey** - to be able to protect (encrypt) DEK
   - **unwrapKey** - to be able to unprotect (decrypt) DEK
 
-For step by step instructions on setting up an Azure Key Vault access configuration for TDE, see [Set up SQL Server TDE Extensible Key Management by using Azure Key Vault](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault?tabs=portal). For more information on the access models, see [Azure Key Vault security](/azure/key-vault/general/security-features#access-model-overview).
+In the **Access configuration** Azure portal menu of the key vault, you have the option of selecting **Azure role-based access control** or **Vault access policy**. For step by step instructions on setting up an Azure Key Vault access configuration for TDE, see [Set up SQL Server TDE Extensible Key Management by using Azure Key Vault](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault?tabs=portal). For more information on the access models, see [Azure Key Vault security](/azure/key-vault/general/security-features#access-model-overview).
 
 A **Key Vault Administrator** can also [enable logging of key vault audit events](/azure/azure-monitor/insights/key-vault-insights-overview), so they can be audited later.
 

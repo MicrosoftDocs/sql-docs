@@ -37,7 +37,8 @@ Automatic updates:
 To configure automatic updates, use:
 
 - Azure portal
-- ARM AP
+- ARM API
+
 - Azure Policy
 
 The following table describes the options that you may configure for automatic updates. 

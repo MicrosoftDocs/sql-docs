@@ -10,6 +10,8 @@ ms.topic: conceptual
 ---
 # How to Create and Edit a CDC Service
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   These procedures describe how to create and edit a new Oracle CDC Service from the CDC Service Configuration Console.  
   
  This procedure requires a Windows user with administrator privileges on the computer where the Oracle CDC service is configured.  

@@ -10,6 +10,8 @@ ms.topic: conceptual
 ---
 # How to Manage a Local CDC Service
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   This procedure describes how to use the CDC Service Configuration Console to manage specific CDC services.  
   
 ### To manage a specific CDC Service  

@@ -10,6 +10,8 @@ ms.topic: conceptual
 ---
 # Oracle Supplemental Logging Script
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   This dialog box shows the script the Oracle supplemental logging script.  
   
  When you prepare a CDC Instance for use, the CDC Designer creates an Oracle SQL script that sets up supplemental logging for the tables to be captured. The supplemental logging script tells Oracle that when a specific table is updated, the change records it writes to the transaction log should contain the data of all columns of interest, not just the columns that changed.  

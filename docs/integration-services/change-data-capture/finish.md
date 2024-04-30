@@ -12,6 +12,8 @@ f1_keywords:
 ---
 # Finish 
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   The **Finish** page summarizes the wizard process. Click **Finish** to close the wizard and generate all of the tables you defined in the Create CDC Instance wizard.  
   
 ## See Also  

@@ -13,6 +13,8 @@ f1_keywords:
 
 # Create and Edit an Oracle CDC Service
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   You create and edit a new Oracle CDC Windows Service from the CDC Service Configuration Console.  
   
  To create a new Oracle CDC Windows service, select **Local CDC Services** from the left pane, then click **New Service** from the **Actions** pane. You can also right-click **Local CDC Services** and select **New Service**. The New Oracle CDC Windows Service dialog box opens.  

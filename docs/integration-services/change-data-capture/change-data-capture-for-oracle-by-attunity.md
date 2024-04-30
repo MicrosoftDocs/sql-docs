@@ -10,6 +10,8 @@ ms.topic: conceptual
 ---
 # Change Data Capture for Oracle by Attunity
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
 The Change Data Capture for Oracle by Attunity download includes the following two components.
 
 -   [Change Data Capture Designer for Oracle by Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)

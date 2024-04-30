@@ -10,6 +10,8 @@ ms.topic: conceptual
 ---
 # Prepare SQL Server for Oracle CDC-View Script
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   This dialog box shows the Prepare SQL script that creates the MSXDBCDC database. This database is must be on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance for it to be used with Oracle CDC for SQL Server.  
   
  Do the following in the Prepare SQL Server Script dialog box.  

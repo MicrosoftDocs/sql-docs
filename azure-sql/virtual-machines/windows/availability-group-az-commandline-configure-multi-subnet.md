@@ -1,6 +1,6 @@
 ---
-title: Configure a single-subnet availability group (PowerShell & Az CLI)
-description: "Use either PowerShell or the Azure CLI to create the Windows failover cluster, the availability group listener, and the internal load balancer on a SQL Server VM in Azure."
+title: Configure a multi-subnet availability group (PowerShell & Az CLI)
+description: "Use either PowerShell or the Azure CLI to create the Windows failover cluster, and the availability group listener on a SQL Server VM in Azure."
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma
@@ -14,16 +14,16 @@ ms.custom:
 tags: azure-resource-manager
 ---
 
-# Use PowerShell or Az CLI to configure a single-subnet availability group for SQL Server on Azure VM 
+# Use PowerShell or Az CLI to configure a multi-subnet availability group for SQL Server on Azure VM 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 [!INCLUDE[tip-for-multi-subnet-ag](../../includes/virtual-machines-ag-listener-multi-subnet.md)]
 
-This article describes how to use [PowerShell](/powershell/scripting/install/installing-powershell) or the [Azure CLI](/cli/azure/sql/vm) to deploy a Windows failover cluster, add SQL Server VMs to the cluster, and create the internal load balancer and listener for an Always On availability group within a single subnet. 
+This article describes how to use [PowerShell](/powershell/scripting/install/installing-powershell) or the [Azure CLI](/cli/azure/sql/vm) to deploy a Windows failover cluster, add SQL Server VMs to the cluster, and listener for an Always On availability group within multiple subnets. 
 
 Deployment of the availability group is still done manually through SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL). 
 
-While this article uses PowerShell and the Az CLI to configure the availability group environment, it's also possible to do so from the [Azure portal](availability-group-azure-portal-configure.md), using [Azure Quickstart Templates](availability-group-quickstart-template-configure.md), or [Manually](availability-group-manually-configure-tutorial-single-subnet.md) as well. 
+While this article uses PowerShell and the Az CLI to configure the availability group environment, it's also possible to do so from the [Azure portal](availability-group-azure-portal-configure.md), or [Manually](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) as well. 
 
 > [!NOTE]
 > It's now possible to lift and shift your availability group solution to SQL Server on Azure VMs using Azure Migrate. See [Migrate availability group](../../migration-guides/virtual-machines/sql-server-availability-group-to-sql-on-azure-vm.md) to learn more. 
@@ -34,10 +34,10 @@ To configure an Always On availability group, you must have the following prereq
 
 - An [Azure subscription](https://azure.microsoft.com/free/).
 - A resource group with a domain controller. 
-- One or more domain-joined [VMs in Azure running SQL Server 2016 (or later) Enterprise edition](./create-sql-vm-portal.md) in the *same* availability set or *different* availability zones that have been [registered with the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md).  
+- One or more domain-joined [VMs in Azure running SQL Server 2016 (or later) Enterprise edition](./create-sql-vm-portal.md) in separate subnets in the same virtual network. The VMs are in either the *same* availability set or *different* availability zones that have been [registered with the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md).  
 - The latest version of [PowerShell](/powershell/scripting/install/installing-powershell) or the [Azure CLI](/cli/azure/install-azure-cli). 
-- Two available (not used by any entity) IP addresses. One is for the internal load balancer. The other is for the availability group listener within the same subnet as the availability group. If you're using an existing load balancer, you only need one available IP address for the availability group listener.
-- Windows Server Core isn't a supported operating system for the PowerShell commands referenced in this article as there's a dependency on [RSAT](/windows-server/remote/remote-server-administration-tools), which isn't included in Core installations of Windows.
+- Two available (not used by any entity) IP addresses, in the same subnet as each virtual machine. Each virtual machine will have an IP Address for the availability group listener. 
+- Windows Server Core is not a supported operating system for the PowerShell commands referenced in this article as there's a dependency on [RSAT](/windows-server/remote/remote-server-administration-tools), which is not included in Core installations of Windows.
 
 ## Permissions
 
@@ -93,19 +93,19 @@ The following code snippet defines the metadata for the cluster:
 ```azurecli-interactive
 # Define the cluster metadata
 # example: az sql vm group create -n Cluster -l 'West US' -g SQLVM-RG `
-#  --image-offer SQL2017-WS2016 --image-sku Enterprise --domain-fqdn domain.com `
+#  --image-offer sql2019-ws2019 --image-sku Enterprise --domain-fqdn domain.com `
 #  --operator-acc vmadmin@domain.com --bootstrap-acc vmadmin@domain.com --service-acc sqlservice@domain.com `
 #  --sa-key '4Z4/i1Dn8/bpbseyWX' `
 #  --storage-account 'https://cloudwitness.blob.core.windows.net/'
-#  --cluster-subnet-type 'SingleSubnet'
+#  --cluster-subnet-type 'MultiSubnet'
 
 az sql vm group create -n <cluster name> -l <region ex:eastus> -g <resource group name> `
-  --image-offer <SQL2016-WS2016 or SQL2017-WS2016> --image-sku Enterprise --domain-fqdn <FQDN ex: domain.com> `
+  --image-offer <sql2019-ws2019> --image-sku Enterprise --domain-fqdn <FQDN ex: domain.com> `
   --operator-acc <domain account ex: testop@domain.com> --bootstrap-acc <domain account ex:bootacc@domain.com> `
   --service-acc <service account ex: testservice@domain.com> `
   --sa-key '<PublicKey>' `
   --storage-account '<ex:https://cloudwitness.blob.core.windows.net/>'
-  --cluster-subnet-type 'SingleSubnet'
+  --cluster-subnet-type 'MultiSubnet'
 ```
 
 # [PowerShell](#tab/azure-powershell)
@@ -118,7 +118,7 @@ az sql vm group create -n <cluster name> -l <region ex:eastus> -g <resource grou
 #  -ClusterBootstrapAccount vmadmin@domain.com  -SqlServiceAccount sqlservice@domain.com 
 #  -StorageAccountUrl '<ex:https://cloudwitness.blob.core.windows.net/>' `
 #  -StorageAccountPrimaryKey '4Z4/i1Dn8/bpbseyWX'
-#  -ClusterSubnetType 'SingleSubnet'
+#  -ClusterSubnetType 'MultiSubnet'
 
 $storageAccountPrimaryKey = ConvertTo-SecureString -String "<PublicKey>" -AsPlainText -Force
 $group = New-AzSqlVMGroup -Name <name> -Location <region> 
@@ -127,7 +127,7 @@ $group = New-AzSqlVMGroup -Name <name> -Location <region>
   -ClusterBootstrapAccount <domain account>  -SqlServiceAccount <service account> 
   -StorageAccountUrl '<ex:StorageAccountUrl>' `
   -StorageAccountPrimaryKey $storageAccountPrimaryKey
-  -ClusterSubnetType 'SingleSubnet'
+  -ClusterSubnetType 'MultiSubnet'
 ```
 
 ---
@@ -211,45 +211,6 @@ Manually create the availability group as you normally would, by using [SQL Serv
 >[!IMPORTANT]
 > Do *not* create a listener at this time because this is done through the Azure CLI in the following sections.  
 
-## Create internal load balancer
-
-[!INCLUDE [sql-ag-use-dnn-listener](../../includes/sql-ag-use-dnn-listener.md)]
-
-The Always On availability group listener requires an internal instance of Azure Load Balancer. The internal load balancer provides a "floating" IP address for the availability group listener that allows for faster failover and reconnection. If the SQL Server VMs in an availability group are part of the same availability set, you can use a Basic load balancer. Otherwise, you need to use a Standard load balancer.  
-
-> [!NOTE]
-> The internal load balancer should be in the same virtual network as the SQL Server VM instances. 
-
-The following code snippet creates the internal load balancer:
-
-# [Azure CLI](#tab/azure-cli)
-
-```azurecli-interactive
-# Create the internal load balancer
-# example: az network lb create --name sqlILB -g SQLVM-RG --sku Standard `
-# --vnet-name SQLVMvNet --subnet default
-
-az network lb create --name sqlILB -g <resource group name> --sku Standard `
-  --vnet-name <VNet Name> --subnet <subnet name>
-```
-
-# [PowerShell](#tab/azure-powershell)
-
-```powershell-interactive
-# Create the internal load balancer
-# example: New-AzLoadBalancer -name sqlILB -ResourceGroupName SQLVM-RG  `
-#  -Sku Standard -Location West US
-
-$intLb = New-AzLoadBalancer -name <load balancer name> -ResourceGroupName <resource group name> `
-   -Sku Standard -Location SouthCentralUS
-
-```
-
----
-
->[!IMPORTANT]
-> The public IP resource for each SQL Server VM should have a Standard SKU to be compatible with the Standard load balancer. To determine the SKU of your VM's public IP resource, go to **Resource Group**, select your **Public IP Address** resource for the desired SQL Server VM, and locate the value under **SKU** in the **Overview** pane.  
-
 ## Create listener
 
 After you manually create the availability group, you can create the listener by using [az sql vm ag-listener](/cli/azure/sql/vm/group/ag-listener#az-sql-vm-group-ag-listener-create). 
@@ -289,50 +250,53 @@ az sql vm group ag-listener create -n <listener name> -g <resource group name> `
 
 ```powershell-interactive
 # example
-# $AgReplica1 = New-AzSqlVirtualMachineAgReplicaObject -Commit 'SYNCHRONOUS_COMMIT' `
-#     -Failover 'AUTOMATIC' -ReadableSecondary 'NO' -Role 'PRIMARY' `
-#     -SqlVirtualMachineInstanceId $sqlvm1.id
-# $AgReplica2 = New-AzSqlVirtualMachineAgReplicaObject -Commit 'SYNCHRONOUS_COMMIT' `
-#     -Failover 'AUTOMATIC' -ReadableSecondary 'NO' -Role 'SECONDARY' `
-#     -SqlVirtualMachineInstanceId $sqlvm2.id
 
-# $SubnetResource = Get-AzVirtualNetworkSubnetConfig -Name "admin" `
-#     -VirtualNetwork (Get-AzVirtualNetwork -Name "autoHAVNET" `
+# $SubnetResource1 = Get-AzVirtualNetworkSubnetConfig -Name "sql-subnet-1" `
+#     -VirtualNetwork (Get-AzVirtualNetwork -Name "sqlhavnet" `
 #     -ResourceGroupName "SQLVM-RG")
 
-# New-AzAvailabilityGroupListener -ResourceGroupName  SQLVM-RG `
-#    -SqlVMGroupName 'Cluster' `
-#    -Name 'AGListenerName' `
-#    -AvailabilityGroupName 'AGName' `
-#    -IpAddress '192.168.15.201' `
-#    -LoadBalancerResourceId $intLb.id `
-#    -SubnetId $SubnetResource.Id `
-#    -ProbePort 59999 `
-#    -AvailabilityGroupConfigurationReplica $AgReplica1, $AgReplica2 `
-#    -SqlVirtualMachineId $sqlvm1.id,$sqlvm2.id
+# $SubnetResource2 = Get-AzVirtualNetworkSubnetConfig -Name "sql-subnet-1" `
+#     -VirtualNetwork (Get-AzVirtualNetwork -Name "sqlhavnet" `
+#     -ResourceGroupName "SQLVM-RG")
+
+# $AgReplica1 = New-AzSqlVirtualMachineMultiSubnetIPConfigurationObject `
+#      -PrivateIPAddressSubnetResourceId $SubnetResource1.Id `
+#      -PrivateIPAddressIpaddress '10.38.1.25' `
+#      -SqlVirtualMachineInstance $sqlvm1.Id
+
+# $AgReplica2 = New-AzSqlVirtualMachineMultiSubnetIPConfigurationObject `
+#      -PrivateIPAddressSubnetResourceId $SubnetResource1.Id `
+#      -PrivateIPAddressIpaddress '10.38.2.25' `
+#      -SqlVirtualMachineInstance $sqlvm2.Id
+
+# New-AzAvailabilityGroupListener -Name 'AGListenerName' `
+#     -ResourceGroupName SQLVM-RG -SqlVMGroupName Cluster `
+#     -AvailabilityGroupName 'AGName' `
+#     -MultiSubnetIPConfiguration $AgReplica1,$AgReplica2
 
 
-$AgReplica1 = New-AzSqlVirtualMachineAgReplicaObject -Commit 'SYNCHRONOUS_COMMIT' `
-   -Failover 'AUTOMATIC' -ReadableSecondary 'NO' -Role 'PRIMARY' `
-   -SqlVirtualMachineInstanceId $sqlvm1.id
-$AgReplica2 = New-AzSqlVirtualMachineAgReplicaObject -Commit 'SYNCHRONOUS_COMMIT' `
-   -Failover 'AUTOMATIC' -ReadableSecondary 'NO' -Role 'SECONDARY' `
-   -SqlVirtualMachineInstanceId $sqlvm2.id
+$SubnetResource1 = Get-AzVirtualNetworkSubnetConfig -Name <subnet1 name> `
+    -VirtualNetwork (Get-AzVirtualNetwork -Name <virtual network> `
+    -ResourceGroupName <resource group name>)
 
-$SubnetResource = Get-AzVirtualNetworkSubnetConfig -Name <Subnet Name> `
-   -VirtualNetwork (Get-AzVirtualNetwork -Name <virtual network name> `
-   -ResourceGroupName <resource group name>)
+$SubnetResource2 = Get-AzVirtualNetworkSubnetConfig -Name <subnet2 name> `
+    -VirtualNetwork (Get-AzVirtualNetwork -Name <virtual network> `
+    -ResourceGroupName <resource group name>)
 
-New-AzAvailabilityGroupListener -ResourceGroupName <resource group name> `
-   -SqlVMGroupName <Cluster Name> `
-   -Name <Listerner Name> `
-   -AvailabilityGroupName <Availability Group Name> `
-   -IpAddress <IP Address> `
-   -LoadBalancerResourceId $intLb.id `
-   -SubnetId $SubnetResource.Id `
-   -ProbePort 59999 `
-   -AvailabilityGroupConfigurationReplica $AgReplica1, $AgReplica2 `
-   -SqlVirtualMachineId $sqlvm1.id,$sqlvm2.id
+$AgReplica1 = New-AzSqlVirtualMachineMultiSubnetIPConfigurationObject `
+     -PrivateIPAddressSubnetResourceId $SubnetResource1.Id `
+     -PrivateIPAddressIpaddress <IP Address> `
+     -SqlVirtualMachineInstance $sqlvm1.Id
+
+$AgReplica2 = New-AzSqlVirtualMachineMultiSubnetIPConfigurationObject `
+     -PrivateIPAddressSubnetResourceId $SubnetResource1.Id `
+     -PrivateIPAddressIpaddress <IP Address> `
+     -SqlVirtualMachineInstance $sqlvm2.Id
+
+New-AzAvailabilityGroupListener -Name <listener name> `
+    -ResourceGroupName <resource group name> -SqlVMGroupName <cluster name> `
+    -AvailabilityGroupName <Availability Group Name> `
+    -MultiSubnetIPConfiguration $AgReplica1,$AgReplica2
 ```
 
 ---
@@ -440,7 +404,7 @@ az sql vm remove-from-group --name <VM1 name>  --resource-group <resource group 
 az sql vm remove-from-group --name <VM2 name>  --resource-group <resource group name>
 ```
 
-If these are the only VMs in the cluster, then the cluster is destroyed. If there are any other VMs in the cluster apart from the SQL Server VMs that were removed, the other VMs aren't removed and the cluster isn't destroyed. 
+If these are the only VMs in the cluster, then the cluster is destroyed. If there are any other VMs in the cluster apart from the SQL Server VMs that were removed, the other VMs are not removed and the cluster is not destroyed. 
 
 Next, remove the cluster metadata from the SQL IaaS Agent extension: 
 

@@ -4,11 +4,11 @@ description: Learn about the new features for and improvements to SQL Server on 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest, mathoma
-ms.date: 04/09/2024
+ms.date: 04/29/2024
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
 ms.topic: whats-new
-ms.custom: ignite-2023
+ms.custom: 
 tags: azure-service-management
 ---
 # What's new with SQL Server on Azure Virtual Machines?
@@ -36,7 +36,7 @@ The following table lists the features of SQL Server on Azure VMs that are curre
 
 | Feature | Details |
 | --- | --- |
-| [Premium SSD v2 in the Azure portal](storage-configuration-premium-ssd-v2.md) | Provision your SQL Server on Azure VM with Premium SSD v2 disks in the Azure portal for improved throughput and performance. |  
+| [Premium SSD v2 in the Azure portal](storage-configuration-premium-ssd-v2.md) | Deploy your SQL Server on Azure VM with Premium SSD v2 disks in the Azure portal for improved throughput and performance. |  
 
 ## General availability (GA)
 
@@ -62,6 +62,7 @@ Learn about significant changes to the SQL Server on Azure VMs documentation. Fo
 | Changes | Details |
 | --- | --- |
 | **Azure Update Manager GA** | Automatically patch multiple SQL Server VMs at scale with the Azure Update Manager integrated in to the [SQL virtual machines](manage-sql-vm-portal.md) resource in the Azure portal, including Cumulative Updates, which isn't currently possible with the existing Automated Patching feature. This feature is now generally available. To learn more, review [Azure Update Manager for SQL Server on Azure VMs](../azure-update-manager-sql-vm.md). | 
+| **Deploy multi-subnet AG with commandline tools** | You can deploy an Always On availability group to multiple subnets by using PowerShell and the Azure CLI. Review [Deploy multi-subnet AG](availability-group-az-commandline-configure-multi-subnet.md) to get started. | 
 
 ### March 2024
 

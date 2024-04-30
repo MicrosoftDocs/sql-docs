@@ -10,6 +10,8 @@ ms.topic: conceptual
 ---
 # How to Work with CDC Services
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   This procedure describes how to use the CDC Service Configuration Console to prepare a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to work with Oracle CDC Services and to create a new CDC service.  
   
 ### To work with CDC services  

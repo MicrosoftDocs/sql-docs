@@ -44,7 +44,7 @@ sections:
       - question: |
           Can SQL Server virtual machine images get removed from the gallery?
         answer: |
-             Yes. Azure only maintains one image per major version and edition. For example, when a new SQL Server service pack is released, Azure adds a new image to the gallery for that service pack. The SQL Server image for the previous service pack is immediately removed from the Azure portal. However, it is still available for provisioning from PowerShell for the next three months. After three months, the previous service pack image is no longer available. This removal policy would also apply if a SQL Server version becomes unsupported when it reaches the end of its lifecycle.
+             Yes. Only one image per major version and edition is maintained in Azure. For example, when a new SQL Server service pack is released, a new image is added to the gallery for that service pack and the SQL Server image for the previous service pack is immediately removed from the Azure portal. However, it's still available for provisioning from PowerShell for the next three months. After three months, the previous service pack image is no longer available. This removal policy also applies if a SQL Server version becomes unsupported when it reaches the end of its lifecycle.
                 
       - question: |
           Is it possible to deploy an older image of SQL Server that isn't visible in the Azure portal?
@@ -54,7 +54,7 @@ sections:
       - question: |
           Is it possible to create a generalized Azure Marketplace SQL Server image of my SQL Server VM and use it to deploy VMs?
         answer: |
-             Yes, but you must then [register each SQL Server VM with the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md) to manage your SQL Server VM in the portal, as well as utilize features such as automated patching and automatic backups. When registering with the extension, you will also need to specify the license type for each SQL Server VM.
+             Yes, but you must then [register each SQL Server VM with the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md) to manage your SQL Server VM in the portal, as well as utilize features such as automated patching and automatic backups. When registering with the extension, you also need to specify the license type for each SQL Server VM.
           
       - question: |
           How do I generalize SQL Server on Azure VM and use it to deploy new VMs?
@@ -77,7 +77,7 @@ sections:
       - question: |
           Is it possible to set up configurations not shown in the virtual machine gallery (for example Windows 2008 R2 + SQL Server 2012)?
         answer: |
-             No. For virtual machine gallery images that include SQL Server, you must select one of the provided images either through the Azure portal or via [PowerShell](create-sql-vm-powershell.md). However, you have the ability to deploy a [supported](/lifecycle/products/?terms=windows%20server) Windows VM and self-install a [supported](/lifecycle/products/?terms=sql%20server) SQL Server version to it. You must then [register your SQL Server VM with the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md) to manage your SQL Server VM in the Azure portal, as well as utilize features such as automated patching and automatic backups. 
+               No. For virtual machine gallery images that include SQL Server, you must select one of the provided images either through the Azure portal or via [PowerShell](create-sql-vm-powershell.md). However, you have the ability to deploy a [supported](/lifecycle/products/?terms=windows%20server) Windows VM and self-install a [supported](/lifecycle/products/?terms=sql%20server) SQL Server version to it. You must then [register your SQL Server VM with the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md) to manage your SQL Server VM in the Azure portal, as well as utilize features such as automated patching and automatic backups. 
 
       - question: |
           I can't find the version and edition of SQL Server that I want from the images available on Azure Marketplace. 
@@ -118,7 +118,7 @@ sections:
           
       - question: |
           Does a customer need SQL Server Client Access Licenses (CALs) to connect to a SQL Server pay-as-you-go image that is running on Azure Virtual Machines?
-        answer:    No. Customers need CALs when they use bring-your-own-license and move their SQL Server SA server / CAL VM to Azure VMs. 
+        answer:  No. Customers need CALs when they use bring-your-own-license and move their SQL Server SA server / CAL VM to Azure VMs. 
 
       - question: |
           Can I change a VM to use my own SQL Server license if it was created from one of the pay-as-you-go gallery images?
@@ -129,16 +129,16 @@ sections:
       - question: |
           Will switching licensing models require any downtime for SQL Server?
         answer: |
-             No. [Changing the licensing model](licensing-model-azure-hybrid-benefit-ahb-change.md) doesn't require any downtime for SQL Server as the change is effective immediately and doesn't require a restart of the VM.  
+               No. [Changing the licensing model](licensing-model-azure-hybrid-benefit-ahb-change.md) doesn't require any downtime for SQL Server as the change is effective immediately and doesn't require a restart of the VM.  
              
       - question: |
           Is it possible to switch licensing models on a SQL Server VM deployed using classic model?
-        answer:    No. Changing licensing models isn't supported on a classic VM. You may migrate your VM to the Azure Resource Manager model and register with the SQL IaaS Agent extension. Once the VM is registered with the SQL IaaS Agent extension, licensing model changes are available on the VM.
+        answer:  No. Changing licensing models isn't supported on a classic VM. You can migrate your VM to the Azure Resource Manager model and register with the SQL IaaS Agent extension. Once the VM is registered with the SQL IaaS Agent extension, licensing model changes are available on the VM.
 
       - question: |
           Can I use the Azure portal to manage multiple instances on the same VM?
         answer: |
-             No. Through the SQL IaaS Agent extension, you can manage a single default instance, a single named instance, or, if the SQL Server VM has multiple instances, then one of those instances must be the default instance for it to be managed by the Azure portal. For more information on these limitations, see [SQL Server IaaS agent extension](sql-server-iaas-agent-extension-automate-management.md#multiple-instance-support). 
+               No. Through the SQL IaaS Agent extension, you can manage a single default instance, a single named instance, or, if the SQL Server VM has multiple instances, then one of those instances must be the default instance for it to be managed by the Azure portal. For more information on these limitations, see [SQL Server IaaS agent extension](sql-server-iaas-agent-extension-automate-management.md#multiple-instance-support). 
           
       - question: |
           Can CSP subscriptions activate the Azure Hybrid Benefit?
@@ -146,21 +146,21 @@ sections:
              Yes, Azure Cloud Solution Provider (CSP) customers can use the Azure Hybrid Benefit by first deploying a pay-as-you-go VM and then converting it to [bring-your-own-license](licensing-model-azure-hybrid-benefit-ahb-change.md), if they have active Software Assurance.
            
       - question: |
-          Do I have to pay to license SQL Server on an Azure VM if it is only being used for standby/failover?
+          Do I have to pay to license SQL Server on an Azure VM if it's only being used for standby/failover?
         answer: |
              To have a free passive license for a standby secondary availability group or failover clustered instance, you must meet all of the following criteria as outlined by the [Product Licensing Terms](https://www.microsoft.com/licensing/product-licensing/products):
           
              1. You have [license mobility](https://www.microsoft.com/licensing/licensing-programs/software-assurance-license-mobility?activetab=software-assurance-license-mobility-pivot:primaryr2) through [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default?activetab=software-assurance-default-pivot%3aprimaryr3). 
-             1. The passive SQL Server instance doesn't serve SQL Server data to clients or run active SQL Server workloads. It is only used to synchronize with the primary server and otherwise maintain the passive database in a warm standby state. If it is serving data, such as reports to clients running active SQL Server workloads, or performing any work  other than what is specified in the product terms, it must be a paid licensed SQL Server instance. The following activity is permitted on the secondary instance: database consistency checks or CheckDB, full backups, transaction log backups, and monitoring resource usage data. You may also run the primary and corresponding disaster recovery instance simultaneously for brief periods of disaster recovery testing every 90 days. 
+             1. The passive SQL Server instance doesn't serve SQL Server data to clients or run active SQL Server workloads. It's only used to synchronize with the primary server and otherwise maintain the passive database in a warm standby state. If it's serving data, such as reports to clients running active SQL Server workloads, or performing any work  other than what is specified in the product terms, it must be a paid licensed SQL Server instance. The following activity is permitted on the secondary instance: database consistency checks or CheckDB, full backups, transaction log backups, and monitoring resource usage data. You can also run the primary and corresponding disaster recovery instance simultaneously for brief periods of disaster recovery testing every 90 days. 
              1. The active SQL Server license is covered by Software Assurance and allows for **one** passive secondary SQL Server instance, with up to the same amount of compute as the licensed active server, only. 
              1. The secondary SQL Server VM utilizes the [Disaster Recovery](business-continuity-high-availability-disaster-recovery-hadr-overview.md#free-dr-replica-in-azure) license in the Azure portal.
              
       - question: |
           What is considered a passive instance?
         answer: |
-             The passive SQL Server instance doesn't serve SQL Server data to clients or run active SQL Server workloads. It is only used to synchronize with the primary server and otherwise maintain the passive database in a warm standby state. If it is serving data, such as reports to clients running active SQL Server workloads, or performing any work other than what is specified in the product terms, it must be a paid licensed SQL Server instance. The following activity is permitted on the secondary instance: database consistency checks or CheckDB, full backups, transaction log backups, and monitoring resource usage data. You may also run the primary and corresponding disaster recovery instance simultaneously for brief periods of disaster recovery testing every 90 days.
+             The passive SQL Server instance doesn't serve SQL Server data to clients or run active SQL Server workloads. It's only used to synchronize with the primary server and otherwise maintain the passive database in a warm standby state. If it's serving data, such as reports to clients running active SQL Server workloads, or performing any work other than what is specified in the product terms, it must be a paid licensed SQL Server instance. The following activity is permitted on the secondary instance: database consistency checks or CheckDB, full backups, transaction log backups, and monitoring resource usage data. You can also run the primary and corresponding disaster recovery instance simultaneously for brief periods of disaster recovery testing every 90 days.
              
-          
+     
       - question: |
           What scenarios can utilize the Disaster Recovery (DR) benefit?
         answer: |
@@ -169,15 +169,25 @@ sections:
       - question: |
           Which subscriptions support the Disaster Recovery (DR) benefit?
         answer: |
-             Comprehensive programs that offer Software Assurance equivalent subscription rights as a fixed benefit support the DR benefit. This includes. but isn't limited to, the Open Value (OV), Open Value Subscription (OVS), Enterprise Agreement (EA), Enterprise Agreement Subscription (EAS), and the Server and Cloud Enrollment (SCE). Refer to the [product terms](https://www.microsoft.com/licensing/product-licensing/products) and talk to your licensing contacts or account manager for more information. 
+             Comprehensive programs that offer Software Assurance equivalent subscription rights as a fixed benefit support the DR benefit. This includes, but isn't limited to, the Open Value (OV), Open Value Subscription (OVS), Enterprise Agreement (EA), Enterprise Agreement Subscription (EAS), and the Server and Cloud Enrollment (SCE). Refer to the [product terms](https://www.microsoft.com/licensing/product-licensing/products) and talk to your licensing contacts or account manager for more information. 
           
-         
+      - question: |
+          Why is my license type for my SQL VM 'Centrally Managed'?
+        answer: |
+             SQL Server VMs deployed to subscriptions with [Centrally managed Azure Hybrid Benefit](licensing-model-azure-hybrid-benefit-ahb-change.md#integration-with-centrally-managed-azure-hybrid-benefit) enabled show the license type as 'Centrally Managed'. This means that the Azure Hybrid Benefit is managed centrally by the organization's Enterprise Agreement (EA) or Microsoft Customer Agreement (MCA) administrator. 
+
+      - question: |
+          Why do I see that my licenses are assigned at a scope level when I try to modify the license for my SQL Server VM?
+        answer: |
+              Changing the license type for individual SQL Server VMs deployed to subscriptions with [Centrally managed Azure Hybrid Benefit](licensing-model-azure-hybrid-benefit-ahb-change.md#integration-with-centrally-managed-azure-hybrid-benefit) isn't supported as the licensing is managed at the subscription level - a message displays such as `Your organization manages licenses assigned to Azure at a scope level such as Azure subscription instead of each individual resources.`
+              
+                   
   - name: Administration
     questions:
       - question: |
           Can I install a second instance of SQL Server on the same VM? Can I change installed features of the default instance?
         answer: |
-             Yes. The SQL Server installation media is located in a folder on the **C** drive. Run **Setup.exe** from that location to add new SQL Server instances or to change other installed features of SQL Server on the machine. Some features, such as Automated Backup, Automated Patching, and Azure Key Vault Integration, only operate against the default instance, or a named instance that was configured properly (See Question 3). Customers using [Software Assurance through the Azure Hybrid Benefit](licensing-model-azure-hybrid-benefit-ahb-change.md) or the **pay-as-you-go** licensing model can install multiple instances of SQL Server on the virtual machine without incurring extra licensing costs. Additional SQL Server instances may strain system resources unless configured correctly. 
+             Yes. The SQL Server installation media is located in a folder on the **C** drive. Run **Setup.exe** from that location to add new SQL Server instances or to change other installed features of SQL Server on the machine. Some features, such as Automated Backup, Automated Patching, and Azure Key Vault Integration, only operate against the default instance, or a named instance that was configured properly (See Question 3). Customers using [Software Assurance through the Azure Hybrid Benefit](licensing-model-azure-hybrid-benefit-ahb-change.md) or the **pay-as-you-go** licensing model can install multiple instances of SQL Server on the virtual machine without incurring extra licensing costs. Additional SQL Server instances can strain system resources unless configured correctly. 
           
       - question: |
           What is the maximum number of instances on a VM?
@@ -185,14 +195,14 @@ sections:
              SQL Server 2012 to SQL Server 2019 can support [50 instances](/sql/sql-server/editions-and-components-of-sql-server-version-15#RDBMSSP) on a stand-alone server. This is the same limit regardless of in Azure on-premises. See [best practices](./performance-guidelines-best-practices-checklist.md) to learn how to better prepare your environment. 
       
       - question: |
-          Microsoft Visual C++ Redistributable installed with SQL Server is flagged as end of life or obsolete
+          Microsoft Visual C++ Redistributable installed with SQL Server is flagged as end of life or obsolete?
         answer: |
-             When you provision SQL Server on Azure VM, the SQL Server setup program installs a Microsoft Visual C++ Redistributable, which is required for SQL Server components to run properly. Your security software may send alerts about end of life (EOL) or obsolete software components due to the version of the Microsoft Visual C++ Redistributable components that were installed by SQL Server, particularly for older versions of SQL Server (SQL Server 2016 and earlier). According to the support lifecycle policy, Microsoft Visual C++ Redistributable components are supported [as long as the product that installed them is supported](/troubleshoot/sql/database-engine/install/windows/visual-c-redistributable-installed-sql-server-flagged-end-of-life-obsolete). As long as your installed version of SQL Server is still supported, you can safely ignore this warning. We recommend not removing VC++ as it may break some SQL Server functionality.
+             When you provision SQL Server on Azure VM, the SQL Server setup program installs a Microsoft Visual C++ Redistributable, which is required for SQL Server components to run properly. Your security software might send alerts about end of life (EOL) or obsolete software components due to the version of the Microsoft Visual C++ Redistributable components that were installed by SQL Server, particularly for older versions of SQL Server (SQL Server 2016 and earlier). According to the support lifecycle policy, Microsoft Visual C++ Redistributable components are supported [as long as the product that installed them is supported](/troubleshoot/sql/database-engine/install/windows/visual-c-redistributable-installed-sql-server-flagged-end-of-life-obsolete). As long as your installed version of SQL Server is still supported, you can safely ignore this warning. We recommend not removing VC++ as it can break some SQL Server functionality.
 
       - question: |
           Can I uninstall the default instance of SQL Server?
         answer: |
-             Yes, but there are some considerations. First, SQL Server-associated billing may continue to occur depending on the license model for the VM. Second, as stated in the previous answer, there are features that rely on the [SQL Server IaaS Agent Extension](sql-server-iaas-agent-extension-automate-management.md). If you uninstall the default instance without removing the IaaS extension also, the extension continues to look for the default instance and may generate event log errors. These errors are from the following two sources: **Microsoft SQL Server Credential Management** and **Microsoft SQL Server IaaS Agent**. One of the errors might be similar to the following:
+             Yes, but there are some considerations. First, SQL Server-associated billing may continue to occur depending on the license model for the VM. Second, as stated in the previous answer, there are features that rely on the [SQL Server IaaS Agent Extension](sql-server-iaas-agent-extension-automate-management.md). If you uninstall the default instance without also removing the IaaS Agent extension, the extension continues to look for the default instance and might generate event log errors from the following two sources: **Microsoft SQL Server Credential Management** and **Microsoft SQL Server IaaS Agent**. One of the errors might be similar to the following:
           
                 A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server wasn't found or wasn't accessible.
           
@@ -201,24 +211,24 @@ sections:
       - question: |
           Can I use a named instance of SQL Server with the IaaS extension?
         answer: |
-             Yes, if the named instance is the only instance on the SQL Server, and if the original default instance was [uninstalled properly](sql-server-iaas-agent-extension-automate-management.md#named-instance-support). If there is no default instance, and there are multiple named instances on a single SQL Server VM, the SQL Server IaaS agent extension fails to install.  
+             Yes, if the named instance is the only instance on the SQL Server, and if the original default instance was [uninstalled properly](sql-server-iaas-agent-extension-automate-management.md#named-instance-support). If there's no default instance, and there are multiple named instances on a single SQL Server VM, the SQL Server IaaS agent extension fails to install.  
           
       - question: |
           Can I remove SQL Server and the associated license billing from a SQL Server VM?
         answer: |
-             Yes, but you'll need to take additional steps to avoid being charged for your SQL Server instance as described in [Pricing guidance](pricing-guidance.md). If you want to completely remove the SQL Server instance, you can migrate to another Azure VM without SQL Server preinstalled on the VM and delete the current SQL Server VM. If you want to keep the VM but stop SQL Server billing, follow these steps: 
+             Yes, but you need to take additional steps to avoid being charged for your SQL Server instance as described in [Pricing guidance](pricing-guidance.md). If you want to completely remove the SQL Server instance, you can migrate to another Azure VM without SQL Server preinstalled on the VM and delete the current SQL Server VM. If you want to keep the VM but stop SQL Server billing, follow these steps: 
           
              1. Back up all of your data, including system databases, if necessary. 
              1. Uninstall SQL Server completely, including the SQL IaaS Agent extension (if present).
              1. Install the free [SQL Express edition](https://www.microsoft.com/sql-server/sql-server-downloads).
              1. Register with the SQL IaaS Agent extension. 
              1. [Change the edition of SQL Server](change-sql-server-edition.md#change-edition-property-for-billing) in the [Azure portal](https://portal.azure.com) to Express to stop billing.  
-             1. (optional) Disable the Express SQL Server service by disabling service startup. 
+             1. (Optional) Disable the Express SQL Server service by disabling service startup. 
           
       - question: |
           Can I use the Azure portal to manage multiple instances on the same VM?
         answer: |
-             No. Portal management is provided by the SQL IaaS Agent extension, which relies on the SQL Server IaaS Agent extension. As such, the same limitations apply to the portal as the extension. The portal can either only manage one default instance, or one named instance as long as it's configured correctly. For more information, see [SQL Server IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) 
+               No. Portal management is provided by the SQL IaaS Agent extension, which relies on the SQL Server IaaS Agent extension. As such, the same limitations apply to the portal as the extension. The portal can either only manage one default instance, or one named instance as long as it's configured correctly. For more information, see [SQL Server IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) 
       
       - question: |
           Is Microsoft Entra Domain Services supported with SQL Server on Azure VMs? 
@@ -230,13 +240,18 @@ sections:
       - question: |
           How do I change to a different version/edition of SQL Server in an Azure VM?
         answer: |
-             Customers can change their version/edition of SQL Server by using setup media that contains their desired version or edition of SQL Server. Once the edition has been changed, use the Azure portal to modify the edition property of the VM to accurately reflect billing for the VM. For more information, see [change edition of a SQL Server VM](change-sql-server-edition.md). There is no billing difference for different versions of SQL Server, so once the version of SQL Server has been changed, no further action is needed.
+             Customers can change their version/edition of SQL Server by using setup media that contains their desired version or edition of SQL Server. Once the edition has been changed, use the Azure portal to modify the edition property of the VM to accurately reflect billing for the VM. For more information, see [change edition of a SQL Server VM](change-sql-server-edition.md). There's no billing difference for different versions of SQL Server, so once the version of SQL Server has been changed, no further action is needed.
           
       - question: |
           How do I get the SQL Server installation media? 
         answer: |             
-             For SQL Server VMs deployed through Azure Marketplace, the installation media is at `C:\SQLServerFull`. Run Setup.exe from that location to add new SQL Server instances or to change other installed features of SQL Server on the machine. You can also copy this setup media to other virtual machines to install, or upgrade, that same version and edition of SQL Server.  Customers who have [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default?rtc=1&activetab=software-assurance-default-pivot%3aprimaryr3) can obtain their installation media from the [Volume Licensing Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx). 
+             For SQL Server VMs deployed through Azure Marketplace, the installation media is located at `C:\SQLServerFull`. You can run `Setup.exe` from that location to add new SQL Server instances or to change other installed features of SQL Server on the machine. You can also copy this setup media to other virtual machines to install, or upgrade, that same version, and edition of SQL Server.  Customers who have [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) can obtain their installation media from the [Volume Licensing Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx). 
              
+      - question: |
+          How do I install SQL Server for PAYG licensing to an existing Azure VM? 
+        answer: |             
+             To install SQL Server with pay-as-you-go licensing to an existing Azure VM, use installation media from an existing SQL Server VM that has the desired edition. Deploy a new SQL Server VM from the Azure Marketplace if you don't already have a SQL Server VM with the desired edition. Copy the folder `C:\SQLServerFull` from the existing VM to your target VM, then install SQL Server from the copied folder to avoid potential issues related to product license keys. After SQL Server is installed, [Register with the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md#register-with-extension) and [validate the edition](change-sql-server-edition.md#change-edition-property-for-billing) of SQL Server used for billing in the Azure portal. Be sure to delete the SQL Server VM that was used to copy the installation media to avoid billing for the unused VM.
+
       - question: |
           How are updates and service packs applied on a SQL Server VM?
         answer: |
@@ -276,11 +291,11 @@ sections:
           
       - question: |
           Are distributed transactions with MSDTC supported on SQL Server VMs?
-        answer:     Yes. Local DTC is supported for SQL Server 2016 SP2 and greater. However, applications must be tested when utilizing Always On availability groups, as transactions in-flight during a failover will fail and must be retried. Clustered DTC is available starting with Windows Server 2019. 
+        answer:     Yes. Local DTC is supported for SQL Server 2016 SP2 and greater. However, applications must be tested when utilizing Always On availability groups, as transactions in-flight during a failover fail and must be retried. Clustered DTC is available starting with Windows Server 2019. 
 
       - question: |
           Does Azure SQL virtual machine move or store customer data out of region?
-        answer:    No. In fact, Azure SQL virtual machine and the SQL IaaS Agent extension don't store any customer data. Review the [SQL IaaS Agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#in-region-data-residency) to learn more. 
+        answer:  No. In fact, Azure SQL virtual machine and the SQL IaaS Agent extension don't store any customer data. Review the [SQL IaaS Agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#in-region-data-residency) to learn more. 
         
       - question: |
           What Azure Load Balancer SKU should be used for a cross-cluster migration of an availability group? 
@@ -292,7 +307,7 @@ sections:
 
       - question: |
           Can I use Premium SSD v2 with my SQL Server on Azure VMs?
-        answer:    Yes, for specific virtual machines in supported regions. Review [Premium SSDv2 with SQL Server on Azure VMs](storage-configuration-premium-ssd-v2.md) to learn more. If you would like to use Premium SSD v2 with a virtual machine type or region that is not in the list, you may be able to do so by deploying the VM first, then adding the Premium SSD v2 drives after the VM is created.
+        answer:    Yes, for specific virtual machines in supported regions. Review [Premium SSDv2 with SQL Server on Azure VMs](storage-configuration-premium-ssd-v2.md) to learn more. If you would like to use Premium SSD v2 with a virtual machine type or region that isn't in the list, you might be able to do so by first deploying the VM, and then adding the Premium SSD v2 drives after the VM is created.
 
       - question: |
           Why do I see **Not extendable** when I try to make changes to my storage in the SQL virtual machines resource? 
@@ -302,7 +317,7 @@ sections:
     questions:
       - question: |
           Should I register my SQL Server VM provisioned from a SQL Server image in Azure Marketplace?
-        answer:    No. Microsoft automatically registers VMs provisioned from the SQL Server images in Azure Marketplace. Registering with the extension is required only if the VM was *not* provisioned from the SQL Server images in Azure Marketplace and SQL Server was self-installed.
+        answer:  No. Microsoft automatically registers VMs provisioned from the SQL Server images in Azure Marketplace. Registering with the extension is required only if the VM was *not* provisioned from the SQL Server images in Azure Marketplace and SQL Server was self-installed.
 
       - question: |
           Is the SQL IaaS Agent extension available for all customers? 
@@ -327,7 +342,7 @@ sections:
 
       - question: | 
            Why do I see SQL virtual machines resource in the Azure portal? Who created it? Do I get billed for this?
-        answer: The [SQL virtual machines resource](manage-sql-vm-portal.md) is a free resource that allows you to manage your SQL Server VM from the Azure portal. The SQL virtual machines resource is created when you deploy a SQL Server VM image from Azure Marketplace, or manually register a SQL Server VM with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md). Azure can also create this resource automatically for existing VMs if a SQL Server instance is detected. There is no cost associated with SQL virtual machines resource.
+        answer: The [SQL virtual machines resource](manage-sql-vm-portal.md) is a free resource that allows you to manage your SQL Server VM from the Azure portal. The SQL virtual machines resource is created when you deploy a SQL Server VM image from Azure Marketplace, or manually register a SQL Server VM with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md). Azure can also create this resource automatically for existing VMs if a SQL Server instance is detected. There's no cost associated with SQL virtual machines resource.
 
       - question: |
           Will registering with the SQL IaaS Agent extension restart SQL Server on my VM?
@@ -335,7 +350,7 @@ sections:
        
       - question: |
           Can I register with the SQL IaaS Agent extension without specifying the SQL Server license type?
-        answer:    No. The SQL Server license type isn't an optional property when you're registering with the SQL IaaS Agent extension. You have to set the SQL Server license type as pay-as-you-go or Azure Hybrid Benefit when registering with the SQL IaaS Agent extension. If you have any of the free versions of SQL Server installed, such as Developer or Evaluation edition, you must register with pay-as-you-go licensing. Azure Hybrid Benefit is only available for paid versions of SQL Server such as Enterprise and Standard editions.
+        answer:  No. The SQL Server license type isn't an optional property when you're registering with the SQL IaaS Agent extension. You have to set the SQL Server license type as pay-as-you-go or Azure Hybrid Benefit when registering with the SQL IaaS Agent extension. If you have any of the free versions of SQL Server installed, such as Developer or Evaluation edition, you must register with pay-as-you-go licensing. Azure Hybrid Benefit is only available for paid versions of SQL Server such as Enterprise and Standard editions.
 
       - question: |
           What is the default license type when using the automatic registration feature?
@@ -352,15 +367,15 @@ sections:
 
       - question: |
           Can I register with the SQL IaaS Agent extension from the Azure portal?
-        answer:    No. Registering a single VM with the SQL IaaS Agent extension isn't available in the Azure portal. Registering with the SQL IaaS Agent extension is only supported with the Azure CLI or Azure PowerShell. 
+        answer:  No. Registering a single VM with the SQL IaaS Agent extension isn't available in the Azure portal. Registering with the SQL IaaS Agent extension is only supported with the Azure CLI or Azure PowerShell. 
 
       - question: |
           Can I register a VM with the SQL IaaS Agent extension before SQL Server is installed?
-        answer:    No. A VM must have at least one SQL Server (Database Engine) instance to successfully register with the SQL IaaS Agent extension. If there is no SQL Server instance on the VM, the new Microsoft.SqlVirtualMachine resource is in a failed state.
+        answer:  No. A VM must have at least one SQL Server (Database Engine) instance to successfully register with the SQL IaaS Agent extension. If there's no SQL Server instance on the VM, the new Microsoft.SqlVirtualMachine resource is in a failed state.
 
       - question: |
           Can I register a VM with the SQL IaaS Agent extension if there are multiple SQL Server instances?
-        answer:    Yes, provided there is a default instance on the VM. The SQL IaaS Agent extension registers only one SQL Server (Database Engine) instance. The SQL IaaS Agent extension registers the default SQL Server instance in the case of multiple instances.
+        answer:    Yes, provided there's a default instance on the VM. The SQL IaaS Agent extension registers only one SQL Server (Database Engine) instance. The SQL IaaS Agent extension registers the default SQL Server instance in the case of multiple instances.
 
       - question: |
           Can I register a SQL Server failover cluster instance with the SQL IaaS Agent extension?
@@ -372,12 +387,12 @@ sections:
 
       - question: |
           What is the cost for registering with the SQL IaaS Agent extension?
-        answer:    None. There is no fee associated with registering with the SQL IaaS Agent extension. Managing your SQL Server VM with the extension is free. 
+        answer:    None. There's no fee associated with registering with the SQL IaaS Agent extension. Managing your SQL Server VM with the extension is free. 
 
       - question: |
           What is the performance impact of using SQL IaaS Agent extension? 
         answer: |
-             Once you enable a feature that requires installing the agent, there is minimal impact from the two services that are installed to the OS. These can be monitored via task manager and seen in the built-in Windows Services console. 
+             Once you enable a feature that requires installing the agent, there's minimal impact from the two services that are installed to the OS. These can be monitored via task manager and seen in the built-in Windows Services console. 
           
              The two service names are:
              - `SQLIaaSExtension` (Display name - `Microsoft SQL Server IaaS Agent`)
@@ -389,7 +404,7 @@ sections:
              Remove the extension by [unregistering](sql-agent-extension-manually-register-single-vm.md#unregister-from-extension) the SQL Server VM from the SQL IaaS Agent extension. 
       - question: |
           Will registering my VM with the new SQL IaaS Agent extension bring additional costs?
-        answer:    No. The SQL IaaS Agent extension just enables additional manageability for SQL Server on Azure VM with no additional charges. 
+        answer:  No. The SQL IaaS Agent extension just enables additional manageability for SQL Server on Azure VM with no additional charges. 
 
       - question: |
           Is the SQL IaaS Agent extension available for all customers?
@@ -406,7 +421,7 @@ sections:
       
       - question: |
           Is the extension necessary to receive Extended Security Updates (ESU)?
-        answer: No. [Extended Security Updates (ESU)](/sql/sql-server/end-of-support/sql-server-extended-security-updates) are applied automatically to the VM whether or not your SQL Server VM has registered with the SQL IaaS Agent extension. 
+        answer:  No. [Extended Security Updates (ESU)](/sql/sql-server/end-of-support/sql-server-extended-security-updates) are applied automatically to the VM whether or not your SQL Server VM has registered with the SQL IaaS Agent extension. 
 
       - question: |
           What happened to management modes of the SQL IaaS Agent extension? 

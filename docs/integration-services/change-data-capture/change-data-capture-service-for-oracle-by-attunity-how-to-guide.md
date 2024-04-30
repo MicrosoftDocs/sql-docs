@@ -10,6 +10,8 @@ ms.topic: conceptual
 ---
 # Change Data Capture Service for Oracle by Attunity How to Guide
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   This section describes how to carry out tasks in the CDC Service Configuration Console.  
   
 ## Learn how to use the CDC Service for Oracle Service Configuration UI  

@@ -133,6 +133,8 @@ The following support limitations and considerations are specific to [!INCLUDE [
 
 - Backups of databases in an availability group are [copy-only backups](copy-only-backups-sql-server.md).
 
+- Backups of databases on secondary replica's in an availabiity group need to be readable in order to stripe to multiple files. 
+
 ## Related content
 
 - [Enable SQL Server managed backup to Azure](enable-sql-server-managed-backup-to-microsoft-azure.md)

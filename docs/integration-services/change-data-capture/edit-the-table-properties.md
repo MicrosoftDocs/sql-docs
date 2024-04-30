@@ -12,6 +12,8 @@ f1_keywords:
 ---
 # Edit the Table Properties
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   Use this dialog box to edit the specific columns from the selected table where changes are being captured. You can also edit the **Security Role** and **Capture Instance** information.  
   
 ### To edit the columns to include in the CDC instance  

@@ -11,6 +11,8 @@ ms.topic: conceptual
 
 # Manage an Oracle CDC Service
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   You can use the CDC Service Configuration Console to manage a specific CDC Service. 
   
  **To select the CDC service you want to work with**  

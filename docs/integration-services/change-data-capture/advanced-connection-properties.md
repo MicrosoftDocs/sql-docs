@@ -10,6 +10,8 @@ ms.topic: conceptual
 ---
 # Advanced Connection Properties
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   Use the **Advanced Connection Properties** dialog box to add more connection parameters to the connection string.  
   
  The additional connection parameters can be any ODBC connection parameter that is supported by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database instance you are using.  

@@ -5,7 +5,7 @@ description: Bring Your Own Key (BYOK) support for transparent data encryption (
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 09/28/2023
+ms.date: 04/29/2024
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
@@ -27,7 +27,6 @@ Managing the TDE protector at the database level in Azure SQL Database is availa
 > [!NOTE]
 > - This article applies to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics (dedicated SQL pools (formerly SQL DW)). For documentation on transparent data encryption for dedicated SQL pools inside Synapse workspaces, see [Azure Synapse Analytics encryption](/azure/synapse-analytics/security/workspaces-encryption).
 > - <a id="doubleencryption"></a> To provide Azure SQL customers with two layers of encryption of data at rest, infrastructure encryption (using AES-256 encryption algorithm) with platform managed keys is being rolled out. This provides an addition layer of encryption at rest along with TDE with customer-managed keys, which is already available. For Azure SQL Database and Azure SQL Managed Instance, all databases, including the `master` database and other system databases, will be encrypted when infrastructure encryption is turned on. At this time, customers must request access to this capability. If you are interested in this capability, contact AzureSQLDoubleEncryptionAtRest@service.microsoft.com.
-
 
 [!INCLUDE [entra-id](../includes/entra-id.md)]
 
@@ -54,15 +53,18 @@ Customer-managed TDE provides the following benefits to the customer:
 
 ![Setup and functioning of the customer-managed TDE](./media/transparent-data-encryption-byok-overview/customer-managed-tde-with-roles.PNG)
 
-In order for the [logical server in Azure](logical-servers.md) to use the TDE protector stored in AKV for encryption of the DEK, the key vault administrator needs to give the following access rights to the server using its unique Microsoft Entra identity:
+In order for the [logical server in Azure](logical-servers.md) to use the TDE protector stored in AKV for encryption of the DEK, the **Key Vault Administrator** needs to give access rights to the server using its unique Microsoft Entra identity. There are two access models to grant the server access to the key vault:
 
-- **get** - for retrieving the public part and properties of the key in the Key Vault
+- Azure role-based access control - Use Azure RBAC to grant a user, group, or application access to the key vault. This method is recommended for its flexibility and granularity. The [Key Vault Crypto Service Encryption User](/azure/key-vault/general/rbac-guide#azure-built-in-roles-for-key-vault-data-plane-operations) role is needed by the server identity to be able to use the key for encryption and decryption operations.
+- Vault access policy - Use the key vault access policy to grant the server access to the key vault. This method is simpler and more straightforward, but less flexible. The server identity needs to have the following permissions on the key vault:
 
-- **wrapKey** - to be able to protect (encrypt) DEK
+  - **get** - for retrieving the public part and properties of the key in the Key Vault
+  - **wrapKey** - to be able to protect (encrypt) DEK
+  - **unwrapKey** - to be able to unprotect (decrypt) DEK
 
-- **unwrapKey** - to be able to unprotect (decrypt) DEK
+For step by step instructions on setting up an Azure Key Vault access configuration for TDE, see [Set up SQL Server TDE Extensible Key Management by using Azure Key Vault](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault?tabs=portal). For more information on the access models, see [Azure Key Vault security](/azure/key-vault/general/security-features#access-model-overview).
 
-Key vault administrator can also [enable logging of key vault audit events](/azure/azure-monitor/insights/key-vault-insights-overview), so they can be audited later.
+A **Key Vault Administrator** can also [enable logging of key vault audit events](/azure/azure-monitor/insights/key-vault-insights-overview), so they can be audited later.
 
 When server is configured to use a TDE protector from AKV, the server sends the DEK of each TDE-enabled database to the key vault for encryption. Key vault returns the encrypted DEK, which is then stored in the user database.
 

@@ -12,6 +12,8 @@ f1_keywords:
 ---
 # Edit the Oracle Database Properties
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   Use the Oracle tab in the Properties editor to make changes to the description you provided in the Create CDC database page in the New Instance wizard and to make changes to the Oracle Log Mining database connection information.  
   
  The following describes the information in the **Oracle** tab.  

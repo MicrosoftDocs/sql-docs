@@ -12,6 +12,8 @@ f1_keywords:
 ---
 # Review and Generate Supplemental Logging Scripts
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   Use the **Scripts** tab to run or re-run a script on the Oracle source database that sets up supplemental logging.  
   
  Before you run the scripts select one of the following:  

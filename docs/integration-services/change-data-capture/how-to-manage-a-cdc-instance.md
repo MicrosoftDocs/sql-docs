@@ -10,6 +10,8 @@ ms.topic: conceptual
 ---
 # How to Manage a CDC Instance
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   This procedure describes how to use the CDC Designer Console to manage CDC instance operations at runtime.  
   
 ### To manage CDC instance operations  

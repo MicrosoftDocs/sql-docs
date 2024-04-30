@@ -12,6 +12,8 @@ f1_keywords:
 ---
 # Connect to an Oracle Source Database
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   Use the Oracle Source page to provide the information necessary to connect to the Oracle source database. The CDC instance will read the redo logs of the Oracle database you are connected to.  
   
  **Oracle Connect String**  

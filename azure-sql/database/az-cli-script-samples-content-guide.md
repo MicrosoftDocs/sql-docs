@@ -1,18 +1,17 @@
 ---
-title: Azure CLI samples for Azure SQL Database & Managed Instances
-titleSuffix: Azure SQL Database & SQL Managed Instance
-description: Find Azure CLI script samples to create and manage Azure SQL Database and Azure SQL Managed Instance.
+title: Azure CLI samples
+description: Find Azure CLI script samples to create and manage Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 12/22/2021
-ms.service: sql-db-mi
+ms.date: 04/30/2024
+ms.service: sql-database
 ms.subservice: deployment-configuration
 ms.topic: sample
 ms.custom:
   - overview-samples
   - mvc
-  - sqldbrb=2
+  - azure-sql-split
   - devx-track-azurecli
   - seo-azure-cli
 keywords:
@@ -23,14 +22,17 @@ keywords:
   - "azure cli code samples"
   - "azure cli script examples"
 ms.devlang: azurecli
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db"
 ---
 
-# Azure CLI samples for Azure SQL Database and SQL Managed Instance
+# Azure CLI samples for Azure SQL Database
+[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-[!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
+> [!div class="op_single_selector"]
+> * [Azure SQL Database](az-cli-script-samples-content-guide.md?view=azuresql&preserve-view=true)
+> * [Azure SQL Managed Instance](../managed-instance/az-cli-script-samples-content-guide.md?view=azuresql&preserve-view=true)
 
-You can configure Azure SQL Database and SQL Managed Instance by using the <a href="/cli/azure">Azure CLI</a>.
+You can configure Azure SQL Database by using the <a href="/cli/azure">Azure CLI</a>.
 
 [!INCLUDE [quickstarts-free-trial-note](../includes/quickstarts-free-trial-note.md)]
 
@@ -38,7 +40,6 @@ You can configure Azure SQL Database and SQL Managed Instance by using the <a hr
 
 ## Samples
 
-## [Azure SQL Database](#tab/single-database)
 
 The following table includes links to Azure CLI script examples to manage single and pooled databases in Azure SQL Database.
 
@@ -66,19 +67,7 @@ The following table includes links to Azure CLI script examples to manage single
 
 Learn more about the [single-database Azure CLI API](single-database-manage.md#azure-cli).
 
-## [Azure SQL Managed Instance](#tab/managed-instance)
+## Related content 
 
-The following table includes links to Azure CLI script examples for Azure SQL Managed Instance.
-
-|Area|Description|
-|---|---|
-| [Create SQL Managed Instance](../managed-instance/scripts/create-configure-managed-instance-cli.md)| Creates a SQL Managed Instance. |
-| [Configure Transparent Data Encryption (TDE)](../managed-instance/scripts/transparent-data-encryption-byok-sql-managed-instance-cli.md)| Configures Transparent Data Encryption (TDE) in SQL Managed Instance by using Azure Key Vault with various key scenarios. |
-
-
-
-For additional SQL Managed Instance examples, see the [create](/archive/blogs/sqlserverstorageengine/create-azure-sql-managed-instance-using-azure-cli), [update](/archive/blogs/sqlserverstorageengine/modify-azure-sql-database-managed-instance-using-azure-cli), [move a database](/archive/blogs/sqlserverstorageengine/cross-instance-point-in-time-restore-in-azure-sql-database-managed-instance), and [working with](https://medium.com/azure-sqldb-managed-instance/working-with-sql-managed-instance-using-azure-cli-611795fe0b44) scripts.
-
-Learn more about the [SQL Managed Instance Azure CLI API](../managed-instance/api-references-create-manage-instance.md#azure-cli-create-and-configure-managed-instances).
-
----
+- [Az sql cmdlets](/cli/azure/sql)
+- [PowerShell scripts](powershell-script-content-guide.md)

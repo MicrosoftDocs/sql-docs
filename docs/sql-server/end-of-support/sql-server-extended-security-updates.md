@@ -48,15 +48,23 @@ If you migrate your workloads to an Azure service (for more information, see the
 
 Azure services running [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] receive ESUs automatically through existing [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] update channels or Windows Update. You don't need to install the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] IaaS Agent extension to download ESU patches on an Azure SQL Virtual Machine.
 
-> [!NOTE]  
-> For [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] workloads deployed to Nutanix Cloud Clusters, which operate on Azure bare-metal infrastructure, or for Azure Stack, you must follow the same process as on-premises or hosted environments not connected to Azure Arc.
-
-### On-premises or hosted environments
+For [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] workloads deployed to Nutanix Cloud Clusters, which operate on Azure bare-metal infrastructure, or for Azure Stack, follow the same process as on-premises or hosted environments not connected to Azure Arc.
 
 If you deploy your SQL Server instances to an Azure service, you can access ESUs for [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] for up to three years after the end of support, at no additional charge above the cost of running the Azure service. Services include SQL Server on Azure VMs, Azure VMware Solution, Azure Stack Hub, or Azure Stack HCI.
 
-> [!NOTE]  
-> Azure Stack HCI customers must [enable Azure benefits](/azure-stack/hci/manage/azure-benefits?#enable-azure-benefits) to receive free ESUs.
+On Azure VMware Solution, to receive free ESUs, you need to:
+
+1. Deploy a resource bridge to manage AVS through Arc
+1. Associate the Arc server with that AVS resource bridge
+
+For details see:
+
+- [Deploy Arc-enabled VMware vSphere for Azure VMware Solution private cloud](/azure/azure-vmware/deploy-arc-for-azure-vmware-solution).
+- [Enable additional capabilities on Arc-enabled Server machines by linking to vCenter](/azure/azure-arc/vmware-vsphere/enable-virtual-hardware)
+
+On Azure Stack HCI, to receive free ESUs [enable Azure benefits](/azure-stack/hci/manage/azure-benefits?#enable-azure-benefits).
+
+### On-premises or hosted environments
 
 In all other cases, you can purchase Extended Security Updates if you qualify. To qualify for receiving Extended Security Updates (ESU), you must have Software Assurance under one of the following agreements:
 

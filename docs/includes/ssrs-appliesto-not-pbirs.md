@@ -6,4 +6,4 @@ ms.date: 01/12/2023
 ms.service: powerbi
 ms.topic: include
 ---
-❌ Power BI Report Server
+❌&nbsp;Power&nbsp;BI Report Server

@@ -6,4 +6,4 @@ ms.date: 01/12/2023
 ms.service: reporting-services
 ms.topic: include
 ---
-❌ Microsoft Report Builder (SSRS)
+❌&nbsp;Microsoft Report Builder (SSRS)

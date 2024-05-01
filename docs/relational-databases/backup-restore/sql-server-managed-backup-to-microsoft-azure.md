@@ -39,6 +39,7 @@ Microsoft Azure Storage is used by [!INCLUDE [ss-managed-backup](../../includes/
 | **Blob container** | Blobs are organized in containers. You specify the target container for the backup files. You can create a container in the [Azure Management Portal](https://portal.azure.com/), or you use the `New-AzureStorageContainer`[Azure PowerShell](/powershell/azure/) command. |
 | **Shared access signature (SAS)** | Access to the target container is controlled by a Shared Access Signature (SAS). For an overview of SAS, see [Grant limited access to Azure Storage resources using shared access signatures (SAS)](/azure/storage/common/storage-sas-overview). You can create a SAS token in code or with the `New-AzureStorageContainerSASToken` PowerShell command. For a PowerShell script that simplifies this process, see [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with PowerShell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell). The SAS token can be stored in a **SQL Credential** for use with [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)]. |
 | **SQL Server Agent** | SQL Server Agent must be running for [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)] to work. Consider setting the startup option to automatic. |
+| **Readable AG secondary** | If you're offloading your managed backups to a secondary replica of an Always On availability group, the secondary replica must be set to **Readable** for managed backups to succeed. | 
 
 ## Components
 
@@ -132,6 +133,8 @@ The following support limitations and considerations are specific to [!INCLUDE [
 - [!INCLUDE [ss-managed-backup](../../includes/ss-managed-backup-md.md)] might have some limitations when it's configured with other technologies supporting backup, high availability, or disaster recovery.
 
 - Backups of databases in an availability group are [copy-only backups](copy-only-backups-sql-server.md).
+
+- If you're offloading your managed backups to a secondary replica of an Always On availability group, the secondary replica must be set to **Readable** for managed backups to stripe multiple files. 
 
 ## Related content
 

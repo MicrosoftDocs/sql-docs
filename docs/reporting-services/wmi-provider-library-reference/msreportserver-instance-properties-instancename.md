@@ -1,6 +1,6 @@
 ---
-title: "InstanceName Property (WMI MSReportServer_Instance)"
-description: "InstanceName Property (WMI MSReportServer_Instance)"
+title: "InstanceName property (WMI MSReportServer_Instance)"
+description: "InstanceName property (WMI MSReportServer_Instance)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -14,7 +14,7 @@ apilocation: "reportingservices.mof"
 apiname: "InstanceName Property (WMI MSReportServer_Instance)"
 apitype: MOFDef
 ---
-# MSReportServer_Instance Properties - InstanceName
+# MSReportServer_Instance properties - InstanceName
   Returns the name of a report server instance on a specific computer. Read-only.  
   
 ## Syntax  
@@ -27,16 +27,16 @@ Public Dim InstanceName As String
 public string InstanceName;  
 ```  
   
-## Property Value  
+## Property value  
  A **String** object that represents the name of the report server instance.  
   
-## Example Code  
- [MSReportServer_ConfigurationSetting Class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
+## Example code  
+ [MSReportServer_ConfigurationSetting class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## See Also  
- [MSReportServer_Instance Members](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
+## Related content 
+ [MSReportServer_Instance members](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   

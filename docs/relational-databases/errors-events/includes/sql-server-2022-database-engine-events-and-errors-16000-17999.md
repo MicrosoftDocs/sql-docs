@@ -1,8 +1,7 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
-ms.date: 07/06/2023
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 01/11/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -472,6 +471,7 @@ ms.topic: include
 | 17439 | 10 | Yes | %.\*ls session tear down failed with error %d. |
 | 17440 | 10 | Yes | %.\*ls session close failed with error %d. |
 | 17441 | 10 | Yes | This operation requires %.\*ls libraries to be loaded. |
+| 17442 | 10 | Yes | SQL Server detected the following NUMA node configuration (NUMA Node number %d, Processor Group number %d, CPU Mask 0x%0\*I64x). |
 | 17550 | 10 | Yes | DBCC TRACEON %d, server process ID (SPID) %d. This is an informational message only; no user action is required. |
 | 17551 | 10 | Yes | DBCC TRACEOFF %d, server process ID (SPID) %d. This is an informational message only; no user action is required. |
 | 17557 | 16 | Yes | DBCC DBRECOVER failed for database ID %d. Restore the database from a backup. |

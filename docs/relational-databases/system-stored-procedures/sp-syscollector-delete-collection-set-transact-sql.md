@@ -71,7 +71,7 @@ EXEC dbo.sp_syscollector_delete_collection_set
     @collection_set_id = 4;
 ```
 
-## See also
+## Related content
 
 - [Data Collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)
 - [Data collection](../data-collection/data-collection.md)

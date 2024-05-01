@@ -200,6 +200,10 @@ Only calls to endpoints in the following services are allowed:
 | Azure Files | *.file.core.windows.net |
 | Azure Queue Storage | *.queue.core.windows.net |
 | Azure Table Storage | *.table.core.windows.net |
+| Azure Communication Services | *.communications.azure.com |
+| Bing Search | api.bing.microsoft.com |
+| Azure Key Vault | *.vault.azure.net |
+| Azure AI Search | *.search.windows.net |
 
 [Outbound Firewall Rules](/azure/azure-sql/database/outbound-firewall-rule-overview) control mechanism can be used to further restrict outbound access to external endpoints.
 
@@ -285,22 +289,24 @@ WITH IDENTITY = 'HTTPEndpointQueryString', SECRET = '{"code":"<your-function-key
 
 ### [Managed Identity](#tab/managed-identity)
 
-With this IDENTITY value, the DATABASE SCOPED CREDENTIAL the authentication information will be taken from the System-Assigned Managed Identity of the logical Azure SQL server in which the Azure SQL database is in and it will be passed in the request headers. The SECRET must be set to the APP_ID (or CLIENT_ID) used to configure Azure AD Authentication of the called endpoint. (For example: [Configure your App Service or Azure Functions app to use Azure AD login](/azure/app-service/configure-authentication-provider-aad))
+[!INCLUDE [entra-authentication-options](../../includes/entra-authentication-options.md)]
+
+With this IDENTITY value, the authentication information for the DATABASE SCOPED CREDENTIAL is taken from the system-assigned managed identity of the logical server in which the database resides, and is passed in the request headers. The SECRET must be set to the APP_ID (or CLIENT_ID) used to configure Microsoft Entra authentication of the called endpoint. (For example: [Configure your App Service or Azure Functions app to use Microsoft Entra login](/azure/app-service/configure-authentication-provider-aad))
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL [https://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>]
 WITH IDENTITY = 'Managed Identity', SECRET = '{"resourceid":"<APP_ID>"}';
 ```
 
-Both System-Assigned and User-Assigned Managed Identities are supported:
+Both system-assigned and user-assigned managed identities are supported:
 
-- If there is at least one User Managed Identity assigned, the defined Primary Identity will be used for authenticating when using a Managed Identity based Database Scoped Credential.
+- If there is at least one user-assigned managed identity, the defined primary identity is used for authentication when using a managed identity-based database scoped credential.
 
-- If there is no User Managed Identity assigned then the System Assigned Managed Identity will be used, if enabled, for authenticating when using a Managed Identity based Database Scoped Credential.
+- If there is no user-assigned managed identity assigned then the system-assigned managed identity is used, if it's enabled, for authentication when using a managed identity-based database scoped credential.
 
-- In case there are both User and System Managed Identities defined, the User-Assigned Managed Identity will be used.
+- If both user-assigned and system-assigned managed identities are defined, the user-assigned managed identity is used.
 
-- If there is more than one User Managed Identity assigned, only the Primary Identity will be used.
+- If there is more than one user-assigned managed identity assigned, only the primary identity is used.
 
 ---
 
@@ -381,7 +387,7 @@ For the *accept* header, the following are the accepted values.
 For more information on text header types, please refer to the [text type registry at IANA](https://www.iana.org/assignments/media-types/media-types.xhtml#text).
 
 > [!NOTE]  
-> If you are testing invocation of the REST endpoint with other tools, like [cURL](https://curl.se/) or any modern REST client like [Postman](https://www.postman.com/) or [Insomnia](https://insomnia.rest/), make sure to include the same headers that are automatically injected by `sp_invoke_external_rest_endpoint` to have the same behavior and results.
+> If you are testing invocation of the REST endpoint with other tools, like [cURL](https://curl.se/) or any modern REST client like [Insomnia](https://insomnia.rest/), make sure to include the same headers that are automatically injected by `sp_invoke_external_rest_endpoint` to have the same behavior and results.
 
 ## Best practices
 
@@ -477,7 +483,7 @@ az sql server update -g <resource-group> -n <azure-sql-server> --identity-type S
 
 After that, configure Event Hubs to allow Azure SQL Server's Managed Identity to be able to send messages ("Azure Event Hubs Data Sender" role) to the desired event hub. For more information, see [Use Event Hubs with managed identities](/azure/event-hubs/authenticate-managed-identity?tabs=latest#use-event-hubs-with-managed-identities).
 
-Once this is done, you can use the `Managed Identity` identity name when defining the Database Scoped Credential that will be used by `sp_invoke_external_rest_endpoint`. As explained in the [Authenticate an application with Azure Active Directory to access Event Hubs resources](/azure/event-hubs/authenticate-application) document, the resource name (or ID) to use when using Azure AD authentication is `https://eventhubs.azure.net`:
+Once this is done, you can use the `Managed Identity` identity name when defining the database scoped credential that will be used by `sp_invoke_external_rest_endpoint`. As explained in [Authenticate an application with Microsoft Entra ID to access Event Hubs resources](/azure/event-hubs/authenticate-application), the resource name (or ID) to use when using Microsoft Entra authentication is `https://eventhubs.azure.net`:
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL [https://<EVENT-HUBS-NAME>.servicebus.windows.net]
@@ -581,7 +587,7 @@ select cast(@response as xml)
 go
 ```
 
-## See also
+## Related content
 
 - [Resource management in Azure SQL Database](/azure/azure-sql/database/resource-limits-logical-server)
 - [sys.dm_resource_governor_resource_pools_history_ex](../system-dynamic-management-views/sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database.md)

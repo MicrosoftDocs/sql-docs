@@ -175,7 +175,7 @@ This topic defines terms relevant to ADO.
   
 ## I-L  
  ISAPI (Internet Server Application Programming Interface)  
- A set of functions for Internet servers, such as a Windows NT® Server/Windows 2000 Server running Microsoft® Internet Information Services (IIS).  
+ A set of functions for Internet servers, such as a Windows NT Server/Windows 2000 Server running Microsoft Internet Information Services (IIS).  
   
  Key  
  A column or columns in a table that uniquely identify a row; often used to index a table.  
@@ -242,10 +242,10 @@ This topic defines terms relevant to ADO.
   
 ## R  
  relative URL  
- A partially qualified URL that specifies a resource on the Internet or an intranet whose location is relative to a starting point specified by an absolute URL or equivalent ADO Connection object. In effect, the concatenated absolute and relative URLs consitute a complete URL. See also URL and absolute URL.  
+ A partially qualified URL that specifies a resource on the Internet or an intranet whose location is relative to a starting point specified by an absolute URL or equivalent ADO Connection object. In effect, the concatenated absolute and relative URLs constitute a complete URL. See also URL and absolute URL.  
   
  remote data source  
- A data source that exists on a another computer, rather than on the local system (where the client application runs).  
+ A data source that exists on another computer, rather than on the local system (where the client application runs).  
   
  resource record  
  A record from a document source provider that contains fields for the definition and description of a folder or document. The document itself is not contained in the resource record but typically can be accessed by the default stream or a field in the resource record containing a URL. See also document source provider, default stream, URL.  

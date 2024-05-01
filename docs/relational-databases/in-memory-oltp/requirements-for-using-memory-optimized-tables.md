@@ -13,7 +13,9 @@ ms.topic: conceptual
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-For using [!INCLUDE [inmemory-md](../../includes/inmemory-md.md)] in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], see [Get started with In-Memory in SQL Database](/azure/azure-sql/in-memory-oltp-overview).
+This article describes the requirements for adoption of In-Memory features in SQL Server.
+
+## Requirements
 
 In addition to the [SQL Server 2022: Hardware and software requirements](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2022.md), the following are requirements to use [!INCLUDE [inmemory-md](../../includes/inmemory-md.md)]:
 
@@ -34,6 +36,10 @@ In addition to the [SQL Server 2022: Hardware and software requirements](../../s
 - [!INCLUDE [inmemory-md](../../includes/inmemory-md.md)] is installed as part of **Database Engine Services**.
 
   To install report generation ([Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) and [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (to manage [!INCLUDE [inmemory-md](../../includes/inmemory-md.md)] via [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Object Explorer), [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
+
+> [!NOTE]
+> - For more information specific to in-memory data in Azure SQL Database, see [Optimize performance by using in-memory technologies in Azure SQL Database](/azure/azure-sql/database/in-memory-oltp-overview?view=azuresql-db&preserve-view=true) and [Blog: [!INCLUDE [inmemory](../../includes/inmemory-md.md)] in Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/).
+> - For more information specific to in-memory data in Azure SQL Managed Instance, see [Optimize performance by using in-memory technologies in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/in-memory-oltp-overview?view=azuresql-mi&preserve-view=true).
 
 ## Important notes on using [!INCLUDE [inmemory](../../includes/inmemory-md.md)]
 

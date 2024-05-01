@@ -367,7 +367,7 @@ select @x.query('xs:date("2000-01-01Z")')
   
 -   The XQuery expressions **typeswitch**, **castable**, and **treat** are not supported.  
   
--   **cast as** requires a question mark (?)after the atomic type.  
+-   **cast as** requires a question mark (?) after the atomic type.  
   
 -   **xs:QName** is not supported as a type for casting. Use **expanded-QName** instead.  
   

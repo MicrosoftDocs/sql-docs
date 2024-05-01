@@ -10,7 +10,7 @@ ms.topic: "reference"
 keywords:
   - models
   - prediction
-ms.devlang: Python
+ms.devlang: python
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---
 # *microsoftml.rx_predict*: Scores using a Microsoft machine learning model

@@ -30,7 +30,7 @@ helpviewer_keywords:
 > [!NOTE]  
 >  This example refers to the Archive database that is created in [Create a FILESTREAM-Enabled Database](../../relational-databases/blob/create-a-filestream-enabled-database.md).  
   
- [!code-sql[FILESTREAM#FS_CreateTable](../../relational-databases/blob/codesnippet/tsql/create-a-table-for-stori_1.sql)]  
+ :::code language="sql" source="codesnippet/tsql/create-a-table-for-stori_1.sql":::
   
 ## See Also  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   

@@ -6,7 +6,7 @@ ms.author: chugu
 ms.date: "08/14/2019"
 ms.service: sql
 ms.subservice: integration-services
-ms.topic: conceptual
+ms.topic: reference
 ---
 # Microsoft Connector for Oracle data type support
 

@@ -98,7 +98,7 @@ Console.WriteLine(srv.Information.Version);
 
 When you connect to an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] by using Windows Authentication, you don't have to specify the authentication type. Windows Authentication is the default.
 
-This example is [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET code that connects to the remote instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] by using Windows Authentication. The string variable *strServer* contains the name of the remote instance.
+This example is [!INCLUDE[visual-basic](../../../includes/visual-basic-md.md)] .NET code that connects to the remote instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] by using Windows Authentication. The string variable *strServer* contains the name of the remote instance.
 
 ```VBNET
 'Connect to a remote instance of SQL Server.
@@ -132,7 +132,7 @@ Console.WriteLine(srv.Information.Version);
 
 When you connect to an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, you must specify the authentication type. This example demonstrates the alternative method of declaring a <xref:Microsoft.SqlServer.Management.Common.ServerConnection> object variable, which enables the connection information to be reused.
 
-The example is [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET code that demonstrates how to connect to the remote and *vPassword* contain the sign-in and password.
+The example is [!INCLUDE[visual-basic](../../../includes/visual-basic-md.md)] .NET code that demonstrates how to connect to the remote and *vPassword* contain the sign-in and password.
 
 ```VBNET
 ' compile with:

@@ -1,6 +1,6 @@
 ---
-title: "ListSSLCertificateBindings Method (WMI MSReportServer_ConfigurationSetting)"
-description: "ListSSLCertificateBindings Method (WMI MSReportServer_ConfigurationSetting)"
+title: "ListSSLCertificateBindings method (WMI MSReportServer_ConfigurationSetting)"
+description: "ListSSLCertificateBindings method (WMI MSReportServer_ConfigurationSetting)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -11,7 +11,7 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "ListSSLCertificateBindings method"
 ---
-# ConfigurationSetting Method - ListSSLCertificateBindings
+# ConfigurationSetting method - ListSSLCertificateBindings
   Returns a list of installed TLS/SSL certificates on the computer.  
   
 ## Syntax  
@@ -44,7 +44,7 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
  [out] The IP address for the applications.  
   
  *Port[]*  
- [out] The port number stored in the binding in rsreportserver.config.  
+ [out] The port number stored in the binding in `rsreportserver.config`.  
   
  *Errors[]*  
  [out] The descriptions for errors that occurred.  
@@ -55,15 +55,13 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
  *HRESULT*  
  [out] Value indicating whether the call succeeded or failed.  
   
-## Return Value  
- Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A non-zero value indicates that an error has occurred.  
-  
-## Remarks  
-  
+## Return value  
+ Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A nonzero value indicates that an error occurred.  
+    
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+## Related content 
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

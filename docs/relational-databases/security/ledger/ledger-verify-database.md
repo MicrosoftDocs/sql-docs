@@ -8,7 +8,7 @@ ms.date: "05/24/2022"
 ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
-monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 
 # Verify a ledger table to detect tampering
@@ -22,7 +22,7 @@ In this article, you'll verify the integrity of the data in your ledger tables. 
 - Have an active Azure subscription if you're using Azure SQL Database or Azure SQL Managed Instance. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
 - [Create and use updatable ledger tables](ledger-how-to-updatable-ledger-tables.md) or [create and use append-only ledger tables](ledger-how-to-append-only-ledger-tables.md).
 - [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
-- The database option [ALLOW_SNAPSHOT_ISOLATION](../../../t-sql/statements/alter-database-transact-sql-set-options.md) has to be enabled on the database before you can run the verifcation stored procedures.
+- The database option [ALLOW_SNAPSHOT_ISOLATION](../../../t-sql/statements/alter-database-transact-sql-set-options.md) has to be enabled on the database before you can run the verification stored procedures.
 
 ## Run ledger verification for the database
 
@@ -141,7 +141,7 @@ In this article, you'll verify the integrity of the data in your ledger tables. 
 
 ---
 
-## Next steps
+## Related content
 
 - [Ledger overview](ledger-overview.md)
 - [sys.database_ledger_digest_locations](../../system-catalog-views/sys-database-ledger-digest-locations-transact-sql.md)

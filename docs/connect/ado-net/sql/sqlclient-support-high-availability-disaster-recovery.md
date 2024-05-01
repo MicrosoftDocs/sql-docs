@@ -41,7 +41,7 @@ The `MultiSubnetFailover` connection property indicates that the application is 
   
 For more information about connection string keywords in SqlClient, see <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
-Specifying `MultiSubnetFailover=True` when connecting to something other than a availability group listener or SQL Server 2012 Failover Cluster Instance may result in a negative performance impact, and is not supported.  
+Specifying `MultiSubnetFailover=True` when connecting to something other than an availability group listener or SQL Server 2012 Failover Cluster Instance may result in a negative performance impact, and is not supported.  
   
 Use the following guidelines to connect to a server in an availability group or SQL Server 2012 Failover Cluster Instance:  
   

@@ -44,6 +44,9 @@ Is the name of the collation to be applied to the expression, column definition,
 
 *SQL_collation_name* is the collation name for a [SQL Server Collation Name](../../t-sql/statements/sql-server-collation-name-transact-sql.md).
 
+> [!NOTE]  
+> In Microsoft Fabric, the only collation allowed is: Latin1_General_100_BIN2_UTF8.
+
 **database_default**
 Causes the COLLATE clause to inherit the collation of the current database.
 

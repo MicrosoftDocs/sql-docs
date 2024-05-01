@@ -97,7 +97,7 @@ sp_helparticle [ @publication = ] 'publication'
  Only members of the **sysadmin** fixed server role, the **db_owner** fixed database role, or the publication access list for the current publication can execute **sp_helparticle**.  
   
 ## Example  
- [!code-sql[HowTo#sp_helptranarticle](../../relational-databases/replication/codesnippet/tsql/sp-helparticle-transact-_1.sql)]  
+ :::code language="sql" source="../replication/codesnippet/tsql/sp-helparticle-transact-_1.sql":::
   
 ## See Also  
  [View and Modify Article Properties](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   

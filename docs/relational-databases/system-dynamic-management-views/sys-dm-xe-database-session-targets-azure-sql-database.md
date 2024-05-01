@@ -17,7 +17,7 @@ monikerRange: "=azuresqldb-current || =azuresqldb-mi-current"
 
 Returns information about *active* database-scoped session targets. For information about targets for all database-scoped sessions, see [sys.database_event_session_targets](../system-catalog-views/sys-database-event-session-targets-azure-sql-database.md).
 
-[!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] supports only [database-scoped sessions](/azure/azure-sql/database/xevent-db-diff-from-svr). [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] supports both database-scoped sessions and [server-scoped sessions](../extended-events/extended-events.md). Server-scoped sessions are recommended for SQL managed instances. For more information, see [CREATE EVENT SESSION](../../t-sql/statements/create-event-session-transact-sql.md#code-examples-can-differ-for-azure-sql-database-and-sql-managed-instance).
+[!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] supports only [database-scoped sessions](/azure/azure-sql/database/xevent-db-diff-from-svr). [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] supports both database-scoped sessions and [server-scoped sessions](../extended-events/extended-events.md). Server-scoped sessions are recommended for SQL managed instances. For more information, see [CREATE EVENT SESSION](../../t-sql/statements/create-event-session-transact-sql.md#code-examples-can-differ-for-azure-sql-database-and-sql-managed-instance).
 
 | Column name | Data type | Description |
 | --- | --- | --- |

@@ -1,6 +1,6 @@
 ---
-title: "Using Try and Catch Blocks"
-description: Learn how to provide another layer of protection against requests that are not valid by applying adequate exception handling through the use of try/catch blocks.
+title: "Use try and catch blocks"
+description: Learn how to provide another layer of protection against requests that aren't valid by applying adequate exception handling by using try/catch blocks.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/06/2017
@@ -12,8 +12,9 @@ helpviewer_keywords:
   - "exceptions [Reporting Services], try/catch blocks"
   - "try/catch blocks [Reporting Services]"
 ---
-# Using Try and Catch Blocks
-  After you limit invalid requests to the report server by adding conditional statements to your code, you should supply adequate exception handling through the use of try/catch blocks. This technique provides another layer of protection against requests that are not valid. If a request to the report server is encased in a try block and that request causes the report server to throw an exception, the exception is caught in the catch block, thus preventing your application from ending unexpectedly. Once the exception is caught, you can use the exception to either instruct the user to do something differently, or just let the user know, in a friendly way, that an error has occurred. You can then use a finally block to clean up any resources. Ideally, you should generate a general exception-handling plan to avoid unnecessary duplication of try/catch blocks.  
+
+# Use try and catch blocks
+  After you limit invalid requests to the report server by adding conditional statements to your code, you should supply adequate exception handling by using try/catch blocks. This technique provides another layer of protection against requests that aren't valid. Let's say a request to the report server is encased in a try block and that request causes the report server to throw an exception. The exception is caught in the catch block, thus preventing your application from ending unexpectedly. Once the exception is caught, you can use the exception to either instruct the user to do something differently. Or, you can just let the user know, in a friendly way, that an error occurred. You can then use a finally block to clean up any resources. Ideally, you should generate a general exception-handling plan to avoid unnecessary duplication of try/catch blocks.  
   
  The following example uses try/catch blocks to enhance the reliability of the exception handling code.  
   
@@ -80,8 +81,8 @@ private void PublishReport()
 }  
 ```  
   
-## See Also  
- [Introducing Exception Handling in Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
- [Reporting Services SoapException Class](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)  
+## Related content  
+ [Introduction to exception management in Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
+ [Reporting Services SoapException class](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)  
   
   

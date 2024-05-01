@@ -80,9 +80,9 @@ FROM sys.query_store_query_hints
 WHERE query_id = 39;
 ```
 
-## Next steps
+## Related content
 
 - [sys.sp_query_store_set_hints (Transact-SQL)](sys-sp-query-store-set-hints-transact-sql.md)
 - [sys.query_store_query_hints (Transact-SQL)](../system-catalog-views/sys-query-store-query-hints-transact-sql.md)
-- [Query Store hints](../performance/query-store-hints.md).
+- [Query Store hints](../performance/query-store-hints.md)
 - [Monitoring Performance By Using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)

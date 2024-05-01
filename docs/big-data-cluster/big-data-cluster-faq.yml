@@ -196,7 +196,7 @@ sections:
           Please refer to the licensing guide which goes into much more detail, [download the PDF](https://aka.ms/sql-bdc-licensing).<BR>For a summary, watch the video [SQL Server Licensing: Big Data Clusters | Data Exposed](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-Licensing-Big-Data-Clusters--Data-Exposed).
   - name: Security
     questions: 
-      - question: Does Big Data Cluster support Azure Active Directory?
+      - question: Does Big Data Cluster support Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name))?
         answer: |
           Not at this time.
       - question: Can we connect to Big Data Cluster master using integrated authentication?

@@ -3,10 +3,10 @@ title: "SQL Server, Resource Pool Stats object"
 description: "Learn about the SQLServer:Resource Pool Stats object, which contains performance counters that report about Resource Governor resource pool statistics."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/13/2021"
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "Reosurce Pool Stats object"
   - "SQLServer: Resource Pool Stats object"
@@ -32,7 +32,7 @@ helpviewer_keywords:
 |**CPU delayed % base**|For internal use only.|
 |**CPU effective %**|System CPU usage by all requests in the specified instance of the performance object as a percentage of the total time active.|
 |**CPU effective % base**|For internal use only.|
-|**CPU usage %**|The CPU bandwidth usage by all requests in all workload groups belonging to this pool. This is measured relative to the computer and normalized to all CPUs on the system. This value will change as the amount of CPU available to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process changes. It is not normalized to what the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process receives.|  
+|**CPU usage %**|The CPU bandwidth usage by all requests in all workload groups belonging to this pool. This is measured relative to the computer and normalized to all CPUs on the system. This value will change as the amount of CPU available to the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] process changes. It is not normalized to what the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] process receives.|  
 |**CPU usage % base**|For internal use only.|
 |**CPU usage target %**|The target value of CPU usage % for the resource pool based on the resource pool configuration settings and system load.|  
 |**CPU violated %**|The difference between the CPU reservation and the effective scheduling percentage.|
@@ -67,9 +67,8 @@ SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%Resource Pool Stats%';
 ```    
 
-## See also  
- [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
- [SQL Server, Workload Group Stats Object](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)   
- [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
-  
-  
+## Related content
+
+- [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)
+- [SQL Server, Workload Group Stats object](sql-server-workload-group-stats-object.md)
+- [Resource Governor](../resource-governor/resource-governor.md)

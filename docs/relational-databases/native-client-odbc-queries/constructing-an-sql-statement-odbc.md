@@ -11,7 +11,6 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, statements"
   - "statements [ODBC], constructing"
   - "ODBC applications, statements"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Constructing an SQL Statement (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

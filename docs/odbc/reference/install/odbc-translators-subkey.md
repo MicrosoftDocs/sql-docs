@@ -21,7 +21,7 @@ The values under the ODBC Translators subkey list the installed translators. The
   
  The *translator-desc* name is defined by the translator developer.  
   
- For example, suppose a user has installed the Microsoft® Code Page Translator and a custom ASCII to EBCDIC translator. The values under the ODBC Translators subkey might be as follows:  
+ For example, suppose a user has installed the Microsoft Code Page Translator and a custom ASCII to EBCDIC translator. The values under the ODBC Translators subkey might be as follows:  
   
 ```  
 MS Code Page Translator: REG_SZ : Installed  

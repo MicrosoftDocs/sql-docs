@@ -1,5 +1,6 @@
 ---
 title: Assign Directory Readers role to a Microsoft Entra group and manage role assignments
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
 description: This article guides you through enabling the Directory Readers role using Microsoft Entra groups to manage Microsoft Entra role assignments with Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics
 author: nofield
 ms.author: nofield
@@ -8,7 +9,7 @@ ms.date: 09/27/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: tutorial
-ms.custom: azure-synapse, has-azure-ad-ps-ref
+ms.custom: azure-synapse, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
@@ -16,7 +17,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
 
-This article guides you through creating a group in Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)), and assigning that group the [**Directory Readers**](/azure/active-directory/roles/permissions-reference#directory-readers) role. The Directory Readers permissions allow the group owners to add additional members to the group, such as a [managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) of [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), and [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is). This bypasses the need for a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) or [Privileged Role Administrator](/azure/active-directory/roles/permissions-reference#privileged-role-administrator) to assign the Directory Readers role directly for each [logical server](logical-servers.md) identity in the tenant.
+This article guides you through creating a group in Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)), and assigning that group the [**Directory Readers**](/azure/active-directory/roles/permissions-reference#directory-readers) role. The Directory Readers permissions allow the group owners to add additional members to the group, such as a [managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) of [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), and [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is). This bypasses the need for a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) or [Privileged Role Administrator](/azure/active-directory/roles/permissions-reference#privileged-role-administrator) to assign the Directory Readers role directly for each [logical server](logical-servers.md) identity in the tenant.
 
 [!INCLUDE [entra-id](../includes/entra-id.md)]
 
@@ -73,7 +74,7 @@ For subsequent steps, the Global Administrator or Privileged Role Administrator 
 
     - Go to the **Microsoft Entra ID** resource. Under the **Manage** setting, select **Enterprise applications**. The **Object ID** is the identity of the instance.
     
-    :::image type="content" source="media/authentication-aad-directory-readers-role/azure-ad-managed-instance-service-principal.png" alt-text="Screenshot of the Enterprise applications page for a Microsoft Entra I D resource with the Object I D of the SQL Managed instance highlighted.":::
+    :::image type="content" source="media/authentication-aad-directory-readers-role/azure-ad-managed-instance-service-principal.png" alt-text="Screenshot of the Enterprise applications page for a Microsoft Entra ID resource with the Object ID of the SQL Managed instance highlighted.":::
 
 1. Go to the **Microsoft Entra ID** resource. Under **Managed**, go to **Groups**. Select the group that you created. Under the **Managed** setting of your group, select **Members**. Select **Add members** and add your SQL Managed Instance service principal as a member of the group by searching for the name found above.
 
@@ -95,19 +96,19 @@ Assigning the **Directory Readers** role to the server identity isn't required f
 > [!IMPORTANT]
 > A [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) or [Privileged Role Administrator](/azure/active-directory/roles/permissions-reference#privileged-role-administrator) will need to run these initial steps. In addition to PowerShell, Microsoft Entra ID offers Microsoft Graph API to [Create a role-assignable group in Microsoft Entra ID](/azure/active-directory/roles/groups-create-eligible#microsoft-graph-api).
 
-1. Download the Azure AD PowerShell module using the following commands. You may need to run PowerShell as an administrator.
+1. Download the Microsoft Graph PowerShell module using the following commands. You may need to run PowerShell as an administrator.
 
     ```powershell
-    Install-Module azuread
-    Import-Module azuread
-    #To verify that the module is ready to use, use the following command:
-    Get-Module azuread
+    Install-Module Microsoft.Graph.Authentication
+    Import-Module Microsoft.Graph.Authentication
+    # To verify that the module is ready to use, run the following command:
+    Get-Module Microsoft.Graph.Authentication
     ```
 
 1. Connect to your Microsoft Entra tenant.
 
     ```powershell
-    Connect-AzureAD
+    Connect-MgGraph
     ```
 
 1. Create a security group to assign the **Directory Readers** role.
@@ -115,7 +116,7 @@ Assigning the **Directory Readers** role to the server identity isn't required f
     - `DirectoryReaderGroup`, `Directory Reader Group`, and `DirRead` can be changed according to your preference.
 
     ```powershell
-    $group = New-AzureADMSGroup -DisplayName "DirectoryReaderGroup" -Description "Directory Reader Group" -MailEnabled $False -SecurityEnabled $true -MailNickName "DirRead" -IsAssignableToRole $true
+    $group = New-MgGroup -DisplayName "DirectoryReaderGroup" -Description "Directory Reader Group" -SecurityEnabled:$true -IsAssignableToRole:$true -MailEnabled:$false -MailNickname "DirRead"
     $group
     ```
 
@@ -123,13 +124,13 @@ Assigning the **Directory Readers** role to the server identity isn't required f
 
     ```powershell
     # Displays the Directory Readers role information
-    $roleDefinition = Get-AzureADMSRoleDefinition -Filter "displayName eq 'Directory Readers'" 
+    $roleDefinition = Get-MgRoleManagementDirectoryRoleDefinition -Filter "DisplayName eq 'Directory Readers'"
     $roleDefinition
     ```
 
     ```powershell
     # Assigns the Directory Readers role to the group
-    $roleAssignment = New-AzureADMSRoleAssignment -ResourceScope '/' -RoleDefinitionId $roleDefinition.Id -PrincipalId $group.Id
+    $roleAssignment = New-MgRoleManagementDirectoryRoleAssignment -DirectoryScopeId '/' -RoleDefinitionId $roleDefinition.Id -PrincipalId $group.Id
     $roleAssignment
     ```
 
@@ -138,18 +139,18 @@ Assigning the **Directory Readers** role to the server identity isn't required f
     - Replace `<username>` with the user you want to own this group. Several owners can be added by repeating these steps.
 
     ```powershell
-    $RefObjectID = Get-AzureADUser -ObjectId "<username>"
-    $RefObjectID
+    $newGroupOwner = Get-MgUser -UserId "<username>"
+    $newGroupOwner
     ```
 
     ```powershell
-    $GrOwner = Add-AzureADGroupOwner -ObjectId $group.ID -RefObjectId $RefObjectID.ObjectID
+    $GrOwner = New-MgGroupOwnerByRef -GroupId $group.Id -DirectoryObjectId $newGroupOwner.Id
     ```
 
-    Check owners of the group using the following command:
+    Check owners of the group:
 
     ```powershell
-    Get-AzureADGroupOwner -ObjectId $group.ID
+    Get-MgGroupOwner -GroupId $group.Id
     ```
 
     You can also verify owners of the group in the [Azure portal](https://portal.azure.com). Follow the steps in [Checking the group that was created](#checking-the-group-that-was-created).
@@ -158,31 +159,31 @@ Assigning the **Directory Readers** role to the server identity isn't required f
 
 For subsequent steps, the Global Administrator or Privileged Role Administrator user is no longer needed.
 
-1. Using an owner of the group, that also manages the Azure SQL resource, run the following command to connect to your Microsoft Entra ID.
+1. Using an owner of the group that also manages the Azure SQL resource, run the following command to connect to your Microsoft Entra ID.
 
     ```powershell
-    Connect-AzureAD
+    Connect-MgGraph
     ```
 
 1. Assign the service principal as a member of the group that was created.
 
-    - Replace `<ServerName>` with your Azure SQL logical server name, or your Managed Instance name. For more information, see the section, [Add Azure SQL service identity to the group](#add-azure-sql-managed-identity-to-the-group)
+    - Replace `<ServerName>` with the name of your logical server or managed instance. For more information, see the section, [Add Azure SQL service identity to the group](#add-azure-sql-managed-identity-to-the-group)
 
     ```powershell
     # Returns the service principal of your Azure SQL resource
-    $miIdentity = Get-AzureADServicePrincipal -SearchString "<ServerName>"
-    $miIdentity
+    $managedIdentity = Get-MgServicePrincipal -Filter "displayName eq '<ServerName>'"
+    $managedIdentity
     ```
 
     ```powershell
-    # Adds the service principal to the group as a member
-    Add-AzureADGroupMember -ObjectId $group.ID -RefObjectId $miIdentity.ObjectId 
+    # Adds the service principal to the group
+    New-MgGroupMember -GroupId $group.Id -DirectoryObjectId $managedIdentity.Id
     ```
 
     The following command will return the service principal Object ID indicating that it has been added to the group:
 
     ```powershell
-    Add-AzureADGroupMember -ObjectId $group.ID -RefObjectId $miIdentity.ObjectId
+    Get-MgGroupMember -GroupId $group.Id -Filter "Id eq '$($managedIdentity.Id)'"
     ```
 
 ## Next steps

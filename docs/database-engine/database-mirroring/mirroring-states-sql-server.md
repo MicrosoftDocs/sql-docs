@@ -6,7 +6,7 @@ ms.author: mikeray
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: database-mirroring
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "states [SQL Server], database mirroring"
   - "PENDING_FAILOVER state"

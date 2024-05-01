@@ -5,15 +5,16 @@ description: Learn about point-in-time restore, which enables you to roll back a
 author: Stralle
 ms.author: strrodic
 ms.reviewer: wiassaf, mathoma, danil
-ms.date: 06/23/2023
+ms.date: 12/27/2023
 ms.service: sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: how-to
-ms.custom: azure-sql-split
-monikerRange: "= azuresql ||  = azuresql-mi"
+ms.custom:
+  - azure-sql-split
+monikerRange: "=azuresql||=azuresql-mi"
 ---
 # Restore a database from a backup in Azure SQL Managed Instance
-[!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
+[!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 
 <!---
@@ -57,9 +58,9 @@ For a large or very active database, the restore might take several hours. A pro
 > [!TIP]
 > For Azure SQL Managed Instance, system updates take precedence over database restores in progress. If there's a system update for SQL Managed Instance, all pending restores are suspended and then resumed after the update has been applied. This system behavior might prolong the time of restores and might be especially impactful to long-running restores. 
 >
-> To achieve a predictable time of database restores, consider configuring [maintenance windows](../database/maintenance-window.md) that allow scheduling of system updates at a specific day and time. Also consider running database restores outside the scheduled maintenance window.
+> To achieve a predictable time of database restores, consider configuring [maintenance windows](maintenance-window.md) that allow scheduling of system updates at a specific day and time. Also consider running database restores outside the scheduled maintenance window.
 
-## Permissions 
+## Permissions
 
 To recover by using automated backups, you must be either:
 
@@ -95,11 +96,11 @@ You generally restore a database to an earlier point for recovery purposes. You 
 
 To recover a database in SQL Managed Instance to a point in time by using the Azure portal, you can go to the database in the portal and choose **Restore**. Alternatively, you can open the target SQL Managed Instance overview page, and select **+ New database** on the toolbar to open the **Create Azure SQL Managed Database** page. 
 
-:::image type="content" source="media/point-in-time-restore/choose-database-to-restore.png" alt-text="Screenshot that shows the SQL Managed Instance overview pane in the Azure portal, with adding a new database selected. ":::
+:::image type="content" source="media/point-in-time-restore/choose-database-to-restore.png" alt-text="Screenshot that shows the SQL Managed Instance overview pane in the Azure portal, with adding a new database selected." lightbox="media/point-in-time-restore/choose-database-to-restore.png":::
 
 Provide target managed instance details on the **Basics** tab, and choose a type of backup from the **Data source** tab. 
 
-:::image type="content" source="./media/point-in-time-restore/database-data-source.png" alt-text="Screenshot of the Azure portal that shows the data source tab of the Create Azure SQL Managed Database page, with point-in-time restore selected.":::
+:::image type="content" source="media/point-in-time-restore/database-data-source.png" alt-text="Screenshot of the Azure portal that shows the data source tab of the Create Azure SQL Managed Database page, with point-in-time restore selected." lightbox="media/point-in-time-restore/database-data-source.png" :::
 
 For greater details, review the [Point in time restore](point-in-time-restore.md#restore-an-existing-database) article. 
 
@@ -137,7 +138,7 @@ You can restore a deleted database to the deletion time, or an earlier point in 
 
 To recover a database by using the Azure portal, open the managed instance's overview page and select **Backups**. Choose to show **Deleted** backups, and then select **Restore** next to the deleted backup you want to recover to open the **Create Azure SQL Managed Database** page. Provide target managed instance details on the **Basics** tab, and source managed instance details on the **Data source** tab. Configure retention settings on the **Additional settings** tab. 
 
-:::image type="content" source="./media/point-in-time-restore/restore-deleted-sql-managed-instance-annotated.png" alt-text="Screenshot of the Azure portal, Backups page of the SQL Managed Instance, showing deleted databases and selecting the Restore action. " lightbox="./media/point-in-time-restore/restore-deleted-sql-managed-instance-annotated.png":::
+:::image type="content" source="media/point-in-time-restore/restore-deleted-sql-managed-instance-annotated.png" alt-text="Screenshot of the Azure portal, Backups page of the SQL Managed Instance, showing deleted databases and selecting the Restore action." lightbox="media/point-in-time-restore/restore-deleted-sql-managed-instance-annotated.png":::
 
 > [!TIP]
 > It might take several minutes for recently deleted databases to appear on the **Deleted databases** page in the Azure portal, or when you want to display deleted databases by using the command line. 
@@ -162,7 +163,7 @@ Geo-restore is the default recovery option when your database is unavailable bec
 
 There's a delay between when a backup is taken and when it's geo-replicated to an Azure blob in a different region. As a result, the restored database can be up to one hour behind the original database. The following illustration shows a database restore from the last available backup in another region.
 
-:::image type="content" source="../database/media/recovery-using-backups/geo-restore-2.png" alt-text="Illustration of restoring a database across regions for the purpose of geo-restore.":::
+:::image type="content" source="../database/media/recovery-using-backups/geo-restore-2.png" alt-text="Illustration of restoring a database across regions for the purpose of geo-restore." lightbox="../database/media/recovery-using-backups/geo-restore-2.png":::
 
 ### [Azure portal](#tab/azure-portal)
 
@@ -172,7 +173,7 @@ To restore to an existing instance, follow the steps in [Point-in-time restore](
 
 To geo-restore to a new instance by using the Azure portal, follow these steps: 
 
-1. Go to your new managed instance. 
+1. Go to your new Azure SQL managed instance. 
 1. Select **New database**.
 1. Enter a database name. 
 1. Under **Data source**, choose the appropriate type of backup, and then provide details for the data source. 
@@ -192,9 +193,14 @@ For a PowerShell script that shows how to perform geo-restore for a database in 
 
 ### Geo-restore considerations
 
-Geo-restore is the most basic disaster-recovery solution available in SQL Managed Instance. It relies on automatically created geo-replicated backups with a recovery point objective (RPO) of up to 1 hour and an estimated recovery time objective (RTO) of up to 12 hours. It doesn't guarantee that the target region will have the capacity to restore your databases after a regional outage, because a sharp increase of demand is likely. If your application uses relatively small databases and isn't critical to the business, geo-restore is an appropriate disaster-recovery solution. 
+Geo-restore is the most basic disaster-recovery solution available in Azure SQL Managed Instance. It relies on automatically created geo-replicated backups in a secondary (paired) region. Here're some considerations for geo-restore:
 
-For business-critical applications that require large databases and must ensure business continuity, use [auto-failover groups](auto-failover-group-sql-mi.md). That feature offers a much lower RPO and RTO, and the capacity is always guaranteed. 
+- Recovery point objective (RPO) is up to 1 hour.
+- Restore processes (recovery time objective - RTO) usually take less than 12 hours but might vary based on database size and activity so restoration could extend beyond this time frame.
+- Secondary (paired) region is Azure storage settings for the primary region. You can't change the secondary region.
+- Newly created/restored databases might not immediately appear as restorable in other regions due to a lag in populating new data. If customers do not see the backups of new databases, they should anticipate a waiting period of up to 24 hours.
+
+It's essential to acknowledge that geo-restore serves as an appropriate disaster-recovery solution for applications with relatively small databases that aren't critical to the business. For business-critical applications that require large databases and must ensure business continuity, use [failover groups](failover-group-sql-mi.md). That feature offers a much lower RPO and RTO, and the capacity is always guaranteed.
 
 For more information about business continuity choices, see [Overview of business continuity](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md).
 
@@ -203,13 +209,18 @@ For more information about business continuity choices, see [Overview of busines
 Consider the following limitations when working with backups and Azure SQL Managed Instance: 
 
 - Geo-restore of a database can only be performed to an instance in the same subscription as the source SQL managed instance. 
-- SQL Managed Instance databases can only be [restored to SQL Server 2022](restore-database-to-sql-server.md) (either on-premises, or on a virtual machine) if the source SQL Managed Instance has enrolled in the [November 2022 feature wave](november-2022-feature-wave-enroll.md).
-- SQL Managed Instance databases are encrypted with TDE by default. When the source database uses a customer-managed key (CMK) as the TDE protector, to restore your database to an instance other than the source SQL Managed Instance, the target instance must have access to the same key used to encrypt the source database in Azure Key Vault, or you must disable TDE encryption on the source database before taking the backup.
+- Native backups taken on Azure SQL Managed Instance databases can only be [restored to SQL Server 2022](restore-database-to-sql-server.md) (either on-premises, or on a virtual machine) if the source SQL Managed Instance has enrolled in the [November 2022 feature wave](november-2022-feature-wave-enroll.md).
+- Azure SQL Managed Instance databases are encrypted with TDE by default. When the source database uses a customer-managed key (CMK) as the TDE protector, to restore your database to an instance other than the source SQL Managed Instance, the target instance must have access to the same key used to encrypt the source database in Azure Key Vault, or you must disable TDE encryption on the source database before taking the backup.
 - You can only track the progress of the restore process by using the [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) and [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) dynamic management views.
-- When [service endpoint policies](service-endpoint-policies-configure.md) are enabled on Azure SQL Managed Instance, placing a service endpoint policy on a subnet prevents point-in-time restores (PITR) from instances in different subnets. 
+- When [service endpoint policies](service-endpoint-policies-configure.md) are enabled on Azure SQL Managed Instance, placing a service endpoint policy on a subnet prevents point-in-time restores (PITR) from instances in different subnets.
+- Recovery point objective (RPO) is up to 1 hour.
+- Recovery time objective (RTO) is approximately 12 hours, but might vary based on database size and activity could go beyond this timeframe.
+- Secondary (paired) region can't be changed.
+- Newly created/restored databases might not immediately appear as restorable in other regions due to a lag in populating new data. It can take up to 24 hours for backups of new database to become visible.
+- The maximum number of databases you can restore in parallel is 200 per single subscription. In some cases, it's possible to increase this limit by opening a support ticket. 
 
-## Next steps
+## Related content
 
 - [SQL Managed Instance automated backups](automated-backups-overview.md)
 - [Long-term retention](../database/long-term-retention-overview.md)
-- To learn about faster recovery options, see [Auto-failover groups](auto-failover-group-sql-mi.md).
+- To learn about faster recovery options, see [Failover groups](failover-group-sql-mi.md).

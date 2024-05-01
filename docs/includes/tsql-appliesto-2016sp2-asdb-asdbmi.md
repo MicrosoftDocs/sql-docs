@@ -1,10 +1,9 @@
 ---
 author: nneugebauer
 ms.author: nneugebauer
-ms.date: 14/12/2022
+ms.date: 01/29/2024
 ms.service: sql
 ms.topic: include
 ---
 
-[!INCLUDE [applies-md](applies-md.md)] :::image type="icon" source="media/yes-icon.svg"::: SQL Server 2016 SP 2 and later :::image type="icon" source="media/yes-icon.svg"::: Azure SQL Database :::image type="icon" source="media/yes-icon.svg"::: Azure SQL Managed Instance 
-
+[!INCLUDE [applies-md](applies-md.md)] :::image type="icon" source="media/yes-icon.svg" border="false"::: [!INCLUDE [sssql16-md](sssql16-md.md)] SP 2 and later :::image type="icon" source="media/yes-icon.svg" border="false"::: Azure SQL Database :::image type="icon" source="media/yes-icon.svg" border="false"::: Azure SQL Managed Instance

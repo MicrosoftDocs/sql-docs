@@ -3,9 +3,10 @@ title: "Microsoft Drivers for PHP Support Matrix"
 description: "This page contains the support matrix and support lifecycle policy for the Microsoft PHP Drivers for SQL Server."
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 02/28/2023
+ms.date: 01/31/2024
 ms.service: sql
 ms.subservice: connectivity
+ms.custom: linux-related-content
 ms.topic: conceptual
 ---
 # Microsoft PHP Drivers for SQL Server Support Matrix
@@ -24,6 +25,7 @@ The following Microsoft PHP Drivers are supported, until the indicated End of Su
 
 |Driver Name|Driver Package Version|End of Mainstream Support|
 |-|:-:|-|
+|Microsoft PHP Drivers 5.12 for SQL Server|5.12|January 25, 2029|
 |Microsoft PHP Drivers 5.11 for SQL Server|5.11|February 28, 2028|
 |Microsoft PHP Drivers 5.10 for SQL Server|5.10|January 31, 2027|
 |Microsoft PHP Drivers 5.9 for SQL Server|5.9|January 29, 2026|
@@ -47,19 +49,19 @@ The following Microsoft PHP Drivers are no longer supported.
 ## SQL Server Version Certified Compatibility
  The following matrix lists database versions that have been tested and certified as compatible with the corresponding driver version. We strive to maintain backward compatibility with previous driver versions, but only the latest supported driver is tested and certified with new SQL Server versions as SQL Server is released.
 
-|Driver version&nbsp;&#8594;<br />&#8595; Database version|5.11|5.10|5.9|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
-|---|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Azure SQL Database        |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
-|Azure SQL Managed Instance|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
-|Azure Synapse Analytics   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
-|SQL Server 2022           |Yes|Yes|   |   |   |   |   |   |   |   |
-|SQL Server 2019           |Yes|Yes|Yes|Yes|   |   |   |   |   |   |
-|SQL Server 2017           |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
-|SQL Server 2016           |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |
-|SQL Server 2014           |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|SQL Server 2012           |   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|SQL Server 2008 R2        |   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
-|SQL Server 2008           |   |   |   |   |   |   |   |   |Yes|Yes|
+|Driver version&nbsp;&#8594;<br />&#8595; Database version|5.12|5.11|5.10|5.9|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|Azure SQL Database        |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
+|Azure SQL Managed Instance|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
+|Azure Synapse Analytics   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
+|SQL Server 2022           |Yes|Yes|Yes|   |   |   |   |   |   |   |   |
+|SQL Server 2019           |Yes|Yes|Yes|Yes|Yes|   |   |   |   |   |   |
+|SQL Server 2017           |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
+|SQL Server 2016           |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |
+|SQL Server 2014           |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|SQL Server 2012           |   |   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|SQL Server 2008 R2        |   |   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
+|SQL Server 2008           |   |   |   |   |   |   |   |   |   |Yes|Yes|
 
 For information about using PHP with Azure SQL Database, see [Connecting to Microsoft Azure SQL Database](connecting-to-microsoft-azure-sql-database.md).
 
@@ -67,19 +69,20 @@ For information about using PHP with Azure SQL Database, see [Connecting to Micr
 
 The following versions of PHP are supported with the listed version of the Microsoft PHP Drivers:
 
-|Driver version&nbsp;&#8594;<br />&#8595; PHP version|5.11|5.10|5.9|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
-|:---:|---|---|---|---|---|---|---|---|---|---|
-|8.2|8.2.0+ | |   |   |   |   |   |   |   |   |
-|8.1|8.1.0+ |8.1.0+ |   |   |   |   |   |   |   |   |
-|8.0|8.0.0+ |8.0.0+ |8.0.0+ |   |   |   |   |   |   |   |
-|7.4|   |7.4.0+ |7.4.0+ |7.4.0+ |   |   |   |   |   |   |
-|7.3|   |   |7.3.0+ |7.3.0+ |7.3.0+ |   |   |   |   |   |
-|7.2|   |   |   |7.2+<sup>1</sup>|7.2+<sup>1</sup>|7.2+<sup>1</sup>|7.2+<sup>1</sup>|   |   |   |
-|7.1|   |   |   |   |7.1.0+ |7.1.0+ |7.1.0+ |7.1.0+ |   |   |
-|7.0|   |   |   |   |   |7.0.0+ |7.0.0+ |7.0.0+ |7.0.0+ |   |
-|5.6|   |   |   |   |   |   |   |   |   |5.6.4+ |
-|5.5|   |   |   |   |   |   |   |   |   |5.5.16+|
-|5.4|   |   |   |   |   |   |   |   |   |5.4.32 |
+|Driver version&nbsp;&#8594;<br />&#8595; PHP version|5.12|5.11|5.10|5.9|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|:---:|---|---|---|---|---|---|---|---|---|---|---|
+|8.3|8.3.0+ |       |       |   |   |   |   |   |   |   |   |
+|8.2|8.2.0+ |8.2.0+ |       |   |   |   |   |   |   |   |   |
+|8.1|8.1.0+ |8.1.0+ |8.1.0+ |   |   |   |   |   |   |   |   |
+|8.0|       |8.0.0+ |8.0.0+ |8.0.0+ |   |   |   |   |   |   |   |
+|7.4|       |       |7.4.0+ |7.4.0+ |7.4.0+ |   |   |   |   |   |   |
+|7.3|       |       |       |7.3.0+ |7.3.0+ |7.3.0+ |   |   |   |   |   |
+|7.2|       |       |       |   |7.2+<sup>1</sup>|7.2+<sup>1</sup>|7.2+<sup>1</sup>|7.2+<sup>1</sup>|   |   |   |
+|7.1|       |       |       |   |   |7.1.0+ |7.1.0+ |7.1.0+ |7.1.0+ |   |   |
+|7.0|       |       |       |   |   |   |7.0.0+ |7.0.0+ |7.0.0+ |7.0.0+ |   |
+|5.6|       |       |       |   |   |   |   |   |   |   |5.6.4+ |
+|5.5|       |       |       |   |   |   |   |   |   |   |5.5.16+|
+|5.4|       |       |       |   |   |   |   |   |   |   |5.4.32 |
 
 <sup>1</sup> Versions 7.2.1 and later are supported on Windows, while versions 7.2.0 and later are supported on Linux and macOS.
 
@@ -87,53 +90,56 @@ The following versions of PHP are supported with the listed version of the Micro
 
 The following Windows operating system versions are supported with the listed version of the Microsoft PHP Drivers:
 
-|Driver version&nbsp;&#8594;<br />&#8595; Operating system|5.11|5.10|5.9|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Windows Server 2022                |Yes|Yes|   |   |   |   |   |   |   |   |
-|Windows Server 2019                |Yes|Yes|Yes|Yes|Yes|   |   |   |   |   |
-|Windows Server 2016                |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
-|Windows Server 2012 R2             |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|Windows Server 2012                |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|Windows Server 2008 R2 SP1         |   |   |   |   |   |   |   |   |Yes|Yes|
-|Windows Server 2008 R2             |   |   |   |   |   |   |   |   |   |   |
-|Windows Server 2008 SP2            |   |   |   |   |   |   |   |   |Yes|Yes|
-|Windows 11                         |Yes|Yes|   |   |   |   |   |   |   |   |
-|Windows 10                         |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |
-|Windows 8.1                        |   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|Windows 8                          |   |   |   |   |   |   |   |Yes|Yes|Yes|
-|Windows 7 SP1                      |   |   |   |   |   |   |   |   |Yes|Yes|
-|Windows Vista SP2                  |   |   |   |   |   |   |   |   |Yes|Yes|
+|Driver version&nbsp;&#8594;<br />&#8595; Operating system|5.12|5.11|5.10|5.9|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|Windows Server 2022                |Yes|Yes|Yes|   |   |   |   |   |   |   |   |
+|Windows Server 2019                |Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |   |
+|Windows Server 2016                |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
+|Windows Server 2012 R2             |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|Windows Server 2012                |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|Windows Server 2008 R2 SP1         |   |   |   |   |   |   |   |   |   |Yes|Yes|
+|Windows Server 2008 R2             |   |   |   |   |   |   |   |   |   |   |   |
+|Windows Server 2008 SP2            |   |   |   |   |   |   |   |   |   |Yes|Yes|
+|Windows 11                         |Yes|Yes|Yes|   |   |   |   |   |   |   |   |
+|Windows 10                         |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |
+|Windows 8.1                        |   |   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|Windows 8                          |   |   |   |   |   |   |   |   |Yes|Yes|Yes|
+|Windows 7 SP1                      |   |   |   |   |   |   |   |   |   |Yes|Yes|
+|Windows Vista SP2                  |   |   |   |   |   |   |   |   |   |Yes|Yes|
 
 
 The following Linux and macOS operating system versions (64-bit only) are supported with the listed version of the Microsoft PHP Drivers:
 
-|Driver version&nbsp;&#8594;<br />&#8595; Operating system|5.11|5.10|5.9|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Ubuntu 22.04 (64-bit)               |Yes|Yes|   |   |   |   |   |   |   |   |
-|Ubuntu 20.04 (64-bit)               |Yes|Yes|Yes|Yes|   |   |   |   |   |   |
-|Ubuntu 18.04 (64-bit)               |Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
-|Ubuntu 16.04 (64-bit)               |   |   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |
-|Ubuntu 15.04 (64-bit)               |   |   |   |   |   |   |   |   |Yes|   |
-|Debian 11 (64-bit)                  |Yes|Yes|   |   |   |   |   |   |   |   |
-|Debian 10 (64-bit)                  |Yes|Yes|Yes|Yes|Yes|   |   |   |   |   |
-|Debian 9 (64-bit)                   |   |Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
-|Debian 8 (64-bit)                   |   |   |   |Yes|Yes|Yes|Yes|Yes|   |   |
-|Red Hat Enterprise Linux 8 (64-bit) |Yes|Yes|Yes|Yes|   |   |   |   |   |   |
-|Red Hat Enterprise Linux 7 (64-bit) |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |
-|Suse Enterprise Linux 15 (64-bit)   |Yes|Yes|Yes|Yes|Yes|   |   |   |   |   |
-|Suse Enterprise Linux 12 (64-bit)   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
-|Alpine Linux 3.15 (64-bit)          |Yes|Yes|   |   |   |   |   |   |   |   |
-|Alpine Linux 3.14 (64-bit)          |Yes|Yes|   |   |   |   |   |   |   |   |
-|Alpine Linux 3.13 (64-bit)          |   |Yes|   |   |   |   |   |   |   |   |
-|Alpine Linux 3.12 (64-bit)          |   |   |Yes|   |   |   |   |   |   |   |
-|Alpine Linux 3.11 (64-bit)          |   |   |Yes|Yes<sup>1</sup>|   |   |   |
-|macOS Monterey (64-bit)             |Yes|Yes|   |   |   |   |   |   |   |   |
-|macOS Big Sur (64-bit)              |Yes|Yes|Yes|   |   |   |   |   |   |   |
-|macOS Catalina (64-bit)             |   |Yes|Yes|Yes|   |   |   |   |   |   |
-|macOS Mojave (64-bit)               |   |   |Yes|Yes|Yes|   |   |   |   |   |
-|macOS High Sierra (64-bit)          |   |   |   |Yes|Yes|Yes|   |   |   |   |
-|macOS Sierra (64-bit)               |   |   |   |   |Yes|Yes|Yes|Yes|   |   |
-|macOS El Capitan (64-bit)           |   |   |   |   |   |Yes|Yes|Yes|   |   |
+|Driver version&nbsp;&#8594;<br />&#8595; Operating system|5.12|5.11|5.10|5.9|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|Ubuntu 22.04 (64-bit)                      |Yes|Yes|Yes|   |   |   |   |   |   |   |   |
+|Ubuntu 20.04 (64-bit)                      |Yes|Yes|Yes|Yes|Yes|   |   |   |   |   |   |
+|Ubuntu 18.04 (64-bit)                      |   |Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
+|Ubuntu 16.04 (64-bit)                      |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |
+|Debian 11 (64-bit)                         |Yes|Yes|Yes|   |   |   |   |   |   |   |   |
+|Debian 10 (64-bit)                         |Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |   |
+|Debian 9 (64-bit)                          |   |   |Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
+|Debian 8 (64-bit)                          |   |   |   |   |Yes|Yes|Yes|Yes|Yes|   |   |
+|Red Hat Enterprise Linux 8 (64-bit)        |Yes|Yes|Yes|Yes|Yes|   |   |   |   |   |   |
+|Red Hat Enterprise Linux 7 (64-bit)        |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |
+|SUSE Linux Enterprise Server 15 (64-bit)   |Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |   |
+|SUSE Linux Enterprise Server 12 (64-bit)   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
+|Alpine Linux 3.19 (64-bit)                 |Yes|   |   |   |   |   |   |   |   |   |   |
+|Alpine Linux 3.18 (64-bit)                 |Yes|Yes|   |   |   |   |   |   |   |   |   |
+|Alpine Linux 3.17 (64-bit)                 |Yes|Yes|   |   |   |   |   |   |   |   |   |
+|Alpine Linux 3.16 (64-bit)                 |Yes|Yes|   |   |   |   |   |   |   |   |   |
+|Alpine Linux 3.15 (64-bit)                 |   |Yes|Yes|   |   |   |   |   |   |   |   |
+|Alpine Linux 3.14 (64-bit)                 |   |Yes|Yes|   |   |   |   |   |   |   |   |
+|Alpine Linux 3.13 (64-bit)                 |   |   |Yes|   |   |   |   |   |   |   |   |
+|Alpine Linux 3.12 (64-bit)                 |   |   |   |Yes|   |   |   |   |   |   |   |
+|Alpine Linux 3.11 (64-bit)                 |   |   |   |Yes|Yes<sup>1</sup>|   |   |   |
+|macOS Monterey (64-bit)                    |Yes|Yes|Yes|   |   |   |   |   |   |   |   |
+|macOS Big Sur (64-bit)                     |Yes|Yes|Yes|Yes|   |   |   |   |   |   |   |
+|macOS Catalina (64-bit)                    |   |   |Yes|Yes|Yes|   |   |   |   |   |   |
+|macOS Mojave (64-bit)                      |   |   |   |Yes|Yes|Yes|   |   |   |   |   |
+|macOS High Sierra (64-bit)                 |   |   |   |   |Yes|Yes|Yes|   |   |   |   |
+|macOS Sierra (64-bit)                      |   |   |   |   |   |Yes|Yes|Yes|Yes|   |   |
+|macOS El Capitan (64-bit)                  |   |   |   |   |   |   |Yes|Yes|Yes|   |   |
 
 <sup>1</sup> Alpine Linux support is experimental for version 5.8.0. Version 5.8.1 introduces production support.
 

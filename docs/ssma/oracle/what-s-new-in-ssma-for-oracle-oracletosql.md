@@ -14,6 +14,14 @@ ms.custom:
 # What's New in SSMA for Oracle (OracleToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for Oracle changes in each release.
+
+[!INCLUDE [entra-id](../../includes/entra-id-hard-coded.md)]
+
+## SSMA v9.5
+
+The v9.5 release of SSMA for Oracle contains the following changes:
+* Support for exclude schema in SSMA console mode
+
 ## SSMA v9.4
 
 The v9.4 release of SSMA for Oracle contains the following changes:
@@ -134,7 +142,7 @@ In addition to several accessibility improvements, the v8.15 release of SSMA for
 
 * Add setting to use full type specification for `%type` and `%rowtype` attributes
 * Revamp assessment reports to work in modern browsers
-* Use authority provided by the database for Azure AD authentication
+* Use authority provided by the database for Microsoft Entra/Azure AD authentication
 * Improve naming for statements loaded from files
 
 ## SSMA v8.14
@@ -171,7 +179,7 @@ The v8.11 release of SSMA for Oracle contains the following changes:
 * Improved conversion of `COMMIT` statement
 * Fix bug in `CONNECT BY LEVEL` clause conversion
 * Updated parser error recovery logic to be less greedy
-* Use MSAL.NET library for interactive Azure Active Directory authentication
+* Use MSAL.NET library for interactive Microsoft Entra/Azure AD authentication
 
 ## SSMA v8.10
 
@@ -228,7 +236,7 @@ In addition, SSMA for Oracle now provides improved parsing of the `XMLTABLE` cla
 
 ## SSMA v8.5
 
-The v8.5 release of SSMA for Oracle is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL Server, together with a targeted set of fixes designed to improve usability and performance.
+The v8.5 release of SSMA for Oracle is enhanced with support for Microsoft Entra/Azure AD authentication and basic support for JSON features in SQL Server, together with a targeted set of fixes designed to improve usability and performance.
 
 In addition, SSMA for Oracle has been enhanced with support for:
 
@@ -412,7 +420,7 @@ The v7.2 release of SSMA for Oracle contains the following changes:
 
 The v7.1 release of SSMA for Oracle contains the following changes:
 
-* SQL Server 2017 on Windows and Linux CTP1 is now a supported target platform for migration. This feature is in technical preview and allows schema and data movement to target SQL servers.
+* SQL Server 2017 on Windows and Linux CTP1 is now a supported target platform for migration. This feature is in technical preview and allows schema and data movement to target SQL Server instances.
 * SSMA now supports automatic updates to download the latest version of SSMA as soon as it's available.
 * SSMA installable binaries are now delivered through Windows Installer package files (.msi).
 
@@ -453,7 +461,7 @@ The March 2016 preview release of SSMA for Oracle added support for:
 
 * Migration to SQL Server 2016.
 * Migrating Oracle Row Level Security (with some limitations).
-* Migrating Oracle in memory tables to SQL Server Column Store.
+* Migrating Oracle in memory tables to SQL Server columnstore.
 
 ## January 2016
 

@@ -3,7 +3,7 @@ title: "Back up to URL best practices & troubleshooting for S3-compatible object
 description: Learn about best practices and troubleshooting tips for SQL Server backup and restores to S3-compatible object storage.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 05/24/2022
+ms.date: 11/28/2023
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
@@ -185,7 +185,20 @@ Up to 50 files can be stored in this location, if the folder is not created, whe
 2022-02-05 00:32:10.88 Server      Error searching first file in /var/opt/mssql/security/ca-certificates: 3(The system cannot find the path specified.)
 ```
 
-## Next steps
+### Object Lock - delete retention is not supported
+
+The SQL Server backup to S3-compatible object storage feature does not support Object Lock, also called the Delete Retention feature. Object Lock prevents files from being deleted or overwritten for the duration of its retention period.
+
+The bucket and folder location targeted by your backup operation must not have Object Lock enabled. If this feature is enabled and configured in your S3-compatible object storage, the backup operation fails with the following message:
+
+```output
+Msg 3202, Level 16, State 1, Line 13
+Write on 's3://<your-endpoint>/nonExistingBucket/AdventureWorks2022.bak' failed: 87 (The parameter is incorrect).
+Msg 3013, Level 16, State 1, Line 13
+BACKUP DATABASE is terminating abnormally.
+```
+
+## Related content
 
  - [SQL Server backup and restore with S3-compatible object storage](sql-server-backup-and-restore-with-s3-compatible-object-storage.md)  
  - [SQL Server backup to URL for S3-compatible object storage](sql-server-backup-to-url-s3-compatible-object-storage.md)

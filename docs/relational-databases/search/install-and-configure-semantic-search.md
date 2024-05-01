@@ -56,7 +56,7 @@ GO
   
         1.  Locate the Windows installer package named **SemanticLanguageDatabase.msi** on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation media.  
   
-        2.  Download the installer package from the [Microsoft® SQL Server® 2016 Semantic Language Statistics](https://www.microsoft.com/download/details.aspx?id=52681) page on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center.  
+        2.  Download the installer package from the [Microsoft SQL Server 2016 Semantic Language Statistics](https://www.microsoft.com/download/details.aspx?id=52681) page on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center.  
   
 2.  Run the **SemanticLanguageDatabase.msi** Windows installer package to extract the database and log file.  
   

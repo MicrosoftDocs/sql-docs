@@ -6,6 +6,7 @@ ms.author: v-davidengel
 ms.date: "01/16/2018"
 ms.service: sql
 ms.subservice: connectivity
+ms.custom: linux-related-content
 ms.topic: conceptual
 helpviewer_keywords:
   - "retrieving data, ASCII data"

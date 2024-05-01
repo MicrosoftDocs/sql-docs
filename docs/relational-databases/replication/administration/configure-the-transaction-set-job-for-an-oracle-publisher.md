@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "03/07/2017"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "sp_publisherproperty"
@@ -47,7 +47,7 @@ dev_langs:
 ## Example  
  The following example enables the `Xactset` job and sets an interval of three minutes between runs.  
   
- [!code-sql[HowTo#sp_enable_xactsetjob](../../../relational-databases/replication/codesnippet/tsql/configure-the-transactio_1.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/configure-the-transactio_1.sql":::
   
 ## See Also  
  [Performance Tuning for Oracle Publishers](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md)   

@@ -1,5 +1,5 @@
 ---
-title: "Report History Methods"
+title: "Report history methods"
 description: In Reporting Services, you can use these report history methods to create and manage item history snapshots.
 author: maggiesMSFT
 ms.author: maggies
@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "historical data [Reporting Services]"
   - "methods [Reporting Services], report history"
 ---
-# Report History Methods
+# Report history methods
   You can use these methods to create and manage item history snapshots.  
   
 |Method|Action|  
@@ -26,7 +26,7 @@ helpviewer_keywords:
 |<xref:ReportService2010.ReportingService2010.SetItemHistoryLimit%2A>|Specifies how many snapshots of an item the report server retains.|  
 |<xref:ReportService2010.ReportingService2010.SetItemHistoryOptions%2A>|Sets item history options that specify when an item history snapshot is created for a specified catalog item.|  
   
-## See Also  
+## Related content  
  [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Report Server Web Service Methods](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

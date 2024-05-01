@@ -26,6 +26,10 @@ Most services and their properties can be configured by using SQL Server Configu
 | [SQL Server 2014](/previous-versions/sql/2014/) | `C:\Windows\SysWOW64\SQLServerManager12.msc` |
 | [SQL Server 2012](/previous-versions/sql/sql-server-2012/hh231622(v=sql.110)) | `C:\Windows\SysWOW64\SQLServerManager11.msc` |
 
+## SQL Server enabled by Azure Arc
+
+For permissions required by the Azure Extension for SQL Server, see [Configure Windows service accounts and permissions for Azure Extension for SQL Server](../../sql-server/azure-arc/configure-windows-accounts-agent.md).
+
 ## <a id="Service_Details"></a> Services installed by SQL Server
 
 Depending on the components that you decide to install, SQL Server Setup installs the following services:
@@ -134,7 +138,7 @@ The following table lists the default service accounts used by setup when instal
 >   1. Restart  SQL Server Agent Service 
 >   1. Change the service account back to the desired domain account
 >   1. Restart SQL Server Agent service
-> - For [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instances that you deploy in a SharePoint farm, always use SharePoint Central Administration to change the server accounts for [!INCLUDE[power-pivot-service-md](../../includes/power-pivot-service-md.md)] applications and the [!INCLUDE[analysis-services-service-md](../../includes/analysis-services-service-md.md)]. Associated settings and permissions are updated to use the new account information when you use Central Administration.
+> - For [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instances that you deploy in a SharePoint farm, always use SharePoint Central Administration to change the server accounts for Power Pivot service applications and the Analysis Services service. Associated settings and permissions are updated to use the new account information when you use Central Administration.
 > - To change [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] options, use the Reporting Services Configuration Tool.
 
 ### <a id="New_Accounts"></a> Managed service accounts, group-managed service accounts, and virtual accounts

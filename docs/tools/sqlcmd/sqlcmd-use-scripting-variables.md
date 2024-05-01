@@ -154,7 +154,7 @@ sqlcmd -i c:\test.sql
 
 The following example shows how to set a scripting variable interactively by using the `setvar` command.
 
-```sql
+```console
 sqlcmd
 :setvar MYDATABASE AdventureWorks2022
 USE $(MYDATABASE);

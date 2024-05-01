@@ -9,7 +9,6 @@ ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords:
   - "cursors [ODBC], how to topics"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Cursors How-to Topics (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

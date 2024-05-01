@@ -3,7 +3,7 @@ title: "Install and configure SQL Server on Windows from the command prompt"
 description: This article describes command prompt parameters for SQL Server installation on Windows. You can specify features to install and configure.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 11/01/2023
+ms.date: 01/11/2024
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
@@ -326,7 +326,7 @@ setup.exe /qs /ACTION=Uninstall /FEATURES=AZUREEXTENSION  /IACCEPTSQLSERVERLIC
 
 For more information about connecting to Azure Arc, see:
 
-- [Azure Arc-enabled SQL Server](../../sql-server/azure-arc/overview.md)
+- [[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]](../../sql-server/azure-arc/overview.md)
 - [Connect your SQL Server to Azure Arc](../../sql-server/azure-arc/connect.md)
 
 ## <a id="SysPrep"></a> SysPrep parameters
@@ -794,7 +794,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName=MSSQLSERVER /INDICATE
 Run the following command at the command prompt to complete failover cluster installation for a named instance:
 
 ```console
-setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Name>" /INDICATEPROGRESS /ASSYSADMINACCOUNTS="<DomainName\UserName>" /ASDATADIR=<Drive>:\KATMAI\Data /ASLOGDIR=<drive>:\KATMAI\Log /ASBACKUPDIR=<Drive>:\KATMAI\Backup /ASCONFIGDIR=<Drive>:\KATMAI\Config /ASTEMPDIR=<Drive>:\KATMAI\Temp /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'>" /FAILOVERCLUSTERNETWORKNAME="CompNamedFOI" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;ClusterNetwork1;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="<Insert New Group Name>" /INSTALLSQLDATADIR="<Drive>:\<Path>\MSSQLSERVER_KATMAI" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSYSADMINACCOUNTS="<DomainName\Username>"
+setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Name>" /INDICATEPROGRESS /ASSYSADMINACCOUNTS="<DomainName\UserName>" /ASDATADIR=<Drive>:\INSTANCE\Data /ASLOGDIR=<drive>:\INSTANCE\Log /ASBACKUPDIR=<Drive>:\INSTANCE\Backup /ASCONFIGDIR=<Drive>:\INSTANCE\Config /ASTEMPDIR=<Drive>:\INSTANCE\Temp /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'>" /FAILOVERCLUSTERNETWORKNAME="CompNamedFOI" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;ClusterNetwork1;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="<Insert New Group Name>" /INSTALLSQLDATADIR="<Drive>:\<Path>\MSSQLSERVER_INSTANCE" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSYSADMINACCOUNTS="<DomainName\Username>"
 ```
 
 #### Upgrade failover cluster parameters

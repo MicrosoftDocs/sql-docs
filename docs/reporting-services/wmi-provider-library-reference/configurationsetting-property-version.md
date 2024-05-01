@@ -1,6 +1,6 @@
 ---
-title: "Version Property  (WMI MSReportServer_ConfigurationSetting)"
-description: "Version Property  (WMI MSReportServer_ConfigurationSetting)"
+title: "Version property  (WMI MSReportServer_ConfigurationSetting)"
+description: "Version property  (WMI MSReportServer_ConfigurationSetting)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -11,8 +11,8 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "Version property"
 ---
-# ConfigurationSetting Property - Version
-  Returns the version of the report server in the format Major.Minor.Build.Revision. Read-only.  
+# ConfigurationSetting property - Version
+  Returns the version of the report server in the format `Major.Minor.Build.Revision`. Read-only.  
   
 ## Syntax  
   
@@ -24,16 +24,16 @@ Public Dim Version As String
 public string Version;  
 ```  
   
-## Property Value  
+## Property value  
  A **string** that contains the version of the report server.  
   
-## Example Code  
- [MSReportServer_ConfigurationSetting Class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
+## Example code  
+ [MSReportServer_ConfigurationSetting class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## See Also  
- [MSReportServer_Instance Members](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
+## Related content  
+ [MSReportServer_Instance members](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   

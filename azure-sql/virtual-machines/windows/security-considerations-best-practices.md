@@ -8,7 +8,6 @@ ms.date: 03/29/2023
 ms.service: virtual-machines-sql
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: ignite-2022
 tags: azure-service-management
 ---
 # Security considerations for SQL Server on Azure Virtual Machines
@@ -64,7 +63,7 @@ Recommendations for disk encryption are different for confidential VMs than for 
 
 ## Microsoft Entra authentication
 
-Starting with SQL Server 2022, you can connect to SQL Server using any of the following authentication methods with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)):
+Starting with SQL Server 2022, you can connect to SQL Server using any of the following authentication methods with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)):
 
 [!INCLUDE [entra-authentication-options](../../includes/entra-authentication-options.md)]
 

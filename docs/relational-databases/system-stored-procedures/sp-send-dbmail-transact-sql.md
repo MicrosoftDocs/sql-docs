@@ -124,7 +124,7 @@ A semicolon-delimited list of file names to attach to the e-mail message. Files 
 
 A query to execute. The results of the query can be attached as a file, or included in the body of the e-mail message. The query is of type **nvarchar(max)**, and can contain any valid [!INCLUDE [tsql](../../includes/tsql-md.md)] statements. The query is executed in a separate session, so local variables in the script calling `sp_send_dbmail` aren't available to the query.
 
-When you use the *@query* parameter, the user that executes `sp_send_dbmail` must be a SQL Server login, or directly mapped to principal (login) of Azure AD or Windows Active Directory. If user is member of an Azure AD group or a Windows Active Directory group, it will not be able to execute the query. This is due to Azure SQL Managed Instance impersonation and [EXECUTE AS limitations](/azure/azure-sql/managed-instance/transact-sql-tsql-differences-sql-server#logins-and-users).
+When you use the *@query* parameter, the principal which executes `sp_send_dbmail` must be connected as an individual, not as part of a group, whether a Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) or Windows Active Directory group. SQL Server logins, Windows identities, and Microsoft Entra identities can execute the query, but group members can't, due to Azure SQL Managed Instance impersonation and [EXECUTE AS limitations](/azure/azure-sql/managed-instance/transact-sql-tsql-differences-sql-server#logins-and-users).
 
 #### [ @execute_query_database = ] '*execute_query_database*'
 

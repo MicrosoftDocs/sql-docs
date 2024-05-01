@@ -1,10 +1,10 @@
 ---
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 10/13/2023
+ms.date: 03/11/2024
 ms.service: sql
 ms.topic: include
 ---
 
-> [!NOTE]
-> Microsoft Entra ID is the [new name for Azure Active Directory (Azure AD)](/azure/active-directory/fundamentals/new-name). We are updating documentation at this time.
+> [!NOTE]  
+> [Microsoft Entra ID](/entra/fundamentals/new-name) was previously known as Azure Active Directory (Azure AD).

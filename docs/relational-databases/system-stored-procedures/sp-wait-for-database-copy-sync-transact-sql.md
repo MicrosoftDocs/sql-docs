@@ -71,7 +71,7 @@ EXEC sys.sp_wait_for_database_copy_sync @target_server = N'serverSecondary', @ta
 GO
 ```
 
-## See also
+## Related content
 
 - [sys.dm_continuous_copy_status (Azure SQL Database)](../system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)
 - [Geo-Replication Dynamic Management Views (DMVs) and Functions (Azure SQL Database)](../system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)

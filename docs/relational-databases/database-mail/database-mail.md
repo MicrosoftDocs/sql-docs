@@ -16,7 +16,7 @@ helpviewer_keywords:
   Database Mail is an enterprise solution for sending e-mail messages from the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] or [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-index). Your applications can send e-mail messages to users using Database Mail via an external SMTP server. The messages can contain query results, and can also include files from any resource on your network.  
   
 > [!NOTE] 
-> Database Mail is available in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-index), but not in Azure SQL database singleton and elastic pools. For more information on using Database Mail in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], see [Automate management tasks using SQL Agent jobs in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/job-automation-managed-instance).
+> Database Mail is available in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-index), but not in Azure SQL database singleton and elastic pools. For more information on using Database Mail in [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], see [Automate management tasks using SQL Agent jobs in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/job-automation-managed-instance).
 
 ##  <a name="Benefits"></a> Benefits of using Database Mail  
  Database Mail is designed for reliability, scalability, security, and supportability.  

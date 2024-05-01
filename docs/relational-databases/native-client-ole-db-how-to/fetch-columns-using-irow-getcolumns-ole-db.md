@@ -9,7 +9,6 @@ ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords:
   - "IRow interface"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Fetch Columns in SQL Server Native Client Using IRow::GetColumns (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -318,7 +317,7 @@ HRESULT GetColumns(IRow* pUnkRow, ULONG iStart, ULONG iEnd) {
   
    hr = pUnkRow->GetColumns(cUserCols, prgColumns);   // cUserCols = 1  
    if (FAILED(hr))  
-      printf("Error occured\n");  
+      printf("Error occurred\n");  
   
    // Show data.  
    PrintData(cUserCols, iStart, prgInfo, prgColumns);  
@@ -375,7 +374,7 @@ HRESULT GetColumnSize(IRow* pUnkRow, ULONG iCol) {
    // We know which column to get. The column.columnid gives the column no.  
    hr = pUnkRow->GetColumns(1, &column);   
    if (FAILED(hr))  
-      printf("Errors occured\n");  
+      printf("Errors occurred\n");  
   
    // Show data  
    PrintData(1, iCol, prgInfo, &column);  

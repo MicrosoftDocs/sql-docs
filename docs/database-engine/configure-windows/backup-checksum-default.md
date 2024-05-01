@@ -1,30 +1,37 @@
 ---
-title: "backup checksum default"
+title: "Configure the backup checksum default (server configuration option)"
 description: Find out about the backup checksum default option. See how to use it to turn backup checksum on or off during SQL Server backup and restore operations.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 10/31/2022
+ms.date: 03/28/2024
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
 ---
 
-# backup checksum default
+# Configure the backup checksum default (server configuration option)
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Use the backup checksum default setting to enable or disable backup checksum during all backup and restore operations at the instance level.
 
-To configure checking for errors for individual backup or restore operations, see [Enable or Disable Backup Checksums During Backup or Restore (SQL Server)](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md).
+To configure checking for errors for individual backup or restore operations, see [Enable or disable backup checksums during backup or restore (SQL Server)](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md).
 
 The following table describes the valid values:
 
 | Value | Meaning |
 | --- | --- |
-| 0 | Disabled. This is the default setting. |
-| 1 | Enabled |
+| `0` (default) | Disabled |
+| `1` | Enabled |
 
- The setting takes effect immediately.
+To enable backup checksum for all backup and restore operations at the instance level, run the following command:
+
+```sql
+EXEC sp_configure 'backup checksum default', 1;
+RECONFIGURE;
+```
+
+The setting takes effect immediately.
 
 ## Usage scenarios
 
@@ -51,7 +58,7 @@ To determine whether checksum was being used during a backup to protect a backup
   FROM msdb..backupset
   ```
 
-If the backup is performed by using the `CHECKSUM` option, the restore operation automatically performs the validation and then displays error message 3183. For more information on the error and troubleshooting steps, see the error page for [MSSQLSERVER_3183](../../relational-databases/errors-events/mssqlserver-3183-database-engine-error.md).
+If the backup is performed by using the `CHECKSUM` option, the restore operation automatically performs the validation, and then displays error message 3183. For more information on the error and troubleshooting steps, see the error page for [MSSQLSERVER_3183](../../relational-databases/errors-events/mssqlserver-3183-database-engine-error.md).
 
 ## SQL Server 2012 and earlier versions
 
@@ -60,15 +67,16 @@ In [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] and earlier versions, t
 ### Dynamic usage
 
 ```sql
-DBCC TRACEON(3023,-1);
+DBCC TRACEON(3023, -1);
 BACKUP DATABASE...;
-DBCC TRACEOFF(3023,-1);
+DBCC TRACEOFF(3023, -1);
 ```
 
 ### Startup parameter usage
 
 Add the trace flag as a startup parameter to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] (`-T3023`), and then stop and restart the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] service.
 
-## See also
+## Related content
 
-- [Enable or Disable Backup Checksums During Backup or Restore (SQL Server)](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)
+- [Enable or disable backup checksums during backup or restore (SQL Server)](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)
+- [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)

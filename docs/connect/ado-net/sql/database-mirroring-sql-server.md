@@ -15,6 +15,9 @@ dev_langs:
 
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
+> [!NOTE]
+> Database Mirroring in SQL Server is a distinct technology from [Microsoft Fabric Database Mirroring](/fabric/database/mirrored-database/overview).
+
 Database mirroring in SQL Server allows you to keep a copy, or mirror, of a SQL Server database on a standby server. Mirroring ensures two separate copies of the data always exist, providing high availability and complete data redundancy. The Microsoft SqlClient Provider for SQL Server provides implicit support for database mirroring. The developer doesn't need to do anything once the client has been configured for a SQL Server database. Also, the <xref:Microsoft.Data.SqlClient.SqlConnection> object supports an explicit connection mode that allows supplying the name of a failover partner server in the <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A>.
 
 The following simplified sequence of events occurs for a <xref:Microsoft.Data.SqlClient.SqlConnection> object that targets a database configured for mirroring:

@@ -99,7 +99,7 @@ EXEC dbo.sp_update_proxy
 GO
 ```
 
-## See also
+## Related content
 
 - [SQL Server Agent stored procedures (Transact-SQL)](sql-server-agent-stored-procedures-transact-sql.md)
 - [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)

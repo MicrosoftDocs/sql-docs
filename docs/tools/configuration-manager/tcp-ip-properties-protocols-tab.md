@@ -14,7 +14,7 @@ helpviewer_keywords:
 [!INCLUDE [SQL Server Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   Use the **TCP/IP Properties** dialog box to configure the options for the TCP/IP protocol. Click **TCP/IP** in the left pane, to show individual IP address configurations in the details pane.  
   
- Microsoft SQL Servermust be restarted before the changes take effect.  
+ Microsoft SQL Server must be restarted before the changes take effect.  
   
 ## Options  
  **Enabled**  
@@ -27,7 +27,7 @@ helpviewer_keywords:
  Specify whether SQL Server will listen on all the IP addresses that are bound to network cards on the computer. If set to **No**, configure each IP address separately using the properties dialog box for each IP address. If set to **Yes**, the settings of the **IPAll** properties box will apply to all IP addresses. Default value is **Yes**.  
   
  **No Delay**  
- SQL Serverdoes not implement changes to this property.  
+ SQL Server does not implement changes to this property.  
   
 ## See Also  
  [Choosing a Network Protocol](/previous-versions/sql/sql-server-2016/ms187892(v=sql.130))   

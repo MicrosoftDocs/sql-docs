@@ -3,7 +3,7 @@ title: What's New for SQL Server 2019 on Linux
 description: This article highlights what's new for SQL Server 2019 on Linux.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 11/22/2021
+ms.date: 01/10/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -45,7 +45,7 @@ The updates have been made in SQL Server 2019 on Linux:
 |`tempdb` improvements | By default, a new installation of SQL Server on Linux creates multiple `tempdb` data files based on the number of logical cores (with up to 8 data files). This does not apply to in-place minor or major version upgrades. Each `tempdb` file is 8 MB with an auto growth of 64 MB. This behavior is similar to the default SQL Server installation on Windows. |
 | PolyBase on Linux | [Install PolyBase](../relational-databases/polybase/polybase-linux-setup.md) on Linux for non-Hadoop connectors.<br/><br/>[PolyBase type mapping](../relational-databases/polybase/polybase-type-mapping.md). |
 | Change Data Capture (CDC) support | Change Data Capture (CDC) is now supported on Linux for SQL Server 2019. |
-| Microsoft Container Registry | The [Microsoft Container Registry](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/) now replaces Docker Hub for new official Microsoft container images, including [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]. |
+| Microsoft Container Registry | The [Microsoft Container Registry](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/) replaces Docker Hub for official Microsoft container images, including [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. |
 | Non-root containers | [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] introduces the ability to create safer containers by starting the [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] process as a non-root user by default. See [build and run SQL Server containers as a non-root user](./sql-server-linux-docker-container-security.md#buildnonrootcontainer) for more details. |
 
 ## Related content

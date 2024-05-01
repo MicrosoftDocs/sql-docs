@@ -410,7 +410,7 @@ Syed Abbas, Catherine Abel, Kim Abercrombie,
 
 ### F. Use sqlcmd in a Windows script file
 
-A **sqlcmd**command such as `sqlcmd -i C:\Temp\InputFile.txt -o C:\Temp\OutputFile.txt,` can be executed in a .bat file together with VBScript. In this case, don't use interactive options. **sqlcmd** must be installed on the computer that is executing the .bat file.
+A **sqlcmd** command such as `sqlcmd -i C:\Temp\InputFile.txt -o C:\Temp\OutputFile.txt,` can be executed in a .bat file together with VBScript. In this case, don't use interactive options. **sqlcmd** must be installed on the computer that is executing the .bat file.
 
 First, create the following four files in `C:\Temp`:
 

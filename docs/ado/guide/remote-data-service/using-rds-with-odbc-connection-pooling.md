@@ -58,9 +58,9 @@ If you're using an ODBC data source, you can use the connection pooling option i
 5.  Click OK to finish, and exit setup.  
   
 ## Configuring the Web Server to Use TCP/IP Sockets  
- There are two options for configuring the Web server to use TCP/IP Sockets. What you do depends on whether all SQL Servers are accessed from the Web server, or only a specific SQL Server is accessed from the Web server.  
+ There are two options for configuring the Web server to use TCP/IP Sockets. What you do depends on whether all SQL Server instances are accessed from the Web server, or only a specific SQL Server is accessed from the Web server.  
   
- If all SQL Servers are accessed from the Web server, you need to run the SQL Server Client Configuration Utility on the Web server computer. The following steps change the default network library for all SQL Server connections made from this IIS Web server to use the TCP/IP Sockets network library.  
+ If all SQL Server instances are accessed from the Web server, you need to run the SQL Server Client Configuration Utility on the Web server computer. The following steps change the default network library for all SQL Server connections made from this IIS Web server to use the TCP/IP Sockets network library.  
   
 ### To configure the Web server (all SQL Servers)  
   

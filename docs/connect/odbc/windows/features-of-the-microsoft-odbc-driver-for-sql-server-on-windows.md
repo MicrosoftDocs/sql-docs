@@ -1,7 +1,7 @@
 ---
 title: Features of the Microsoft ODBC Driver
 description: Learn about the different features supported by the Microsoft ODBC Driver for SQL Server on Windows.
-author: v-makouz
+author: David-Engel
 ms.author: v-davidengel
 ms.date: 01/31/2023
 ms.service: sql
@@ -39,11 +39,13 @@ The values are `REG_SZ` and are as follows:
 
 ## Microsoft ODBC Driver 13.1 for SQL Server on Windows
 
-The ODBC Driver 13.1 for SQL Server contains all the functionality of the previous version (11). It also adds support for Always Encrypted and Azure Active Directory authentication.
+The ODBC Driver 13.1 for SQL Server contains all the functionality of the previous version (11). It also adds support for Always Encrypted and authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)).
+
 
 Always Encrypted allows clients to encrypt sensitive data inside client applications and never reveal the encryption keys to SQL Server. An Always Encrypted enabled driver installed on the client computer achieves this security by automatically encrypting and decrypting sensitive data in the SQL Server client application. The driver encrypts the data in sensitive columns before passing the data to SQL Server. It also automatically rewrites queries so that the semantics to the application are preserved. Similarly, the driver transparently decrypts data stored in encrypted database columns that are contained in query results. For more information, see [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md).
 
-Azure Active Directory allows users, DBAs, and application programmers to use Azure Active Directory authentication. For more information, see [Using Azure Active Directory with the ODBC Driver](../using-azure-active-directory.md), and [Connecting to SQL Database or Azure Synapse Analytics By Using Azure Active Directory Authentication](/azure/sql-database/sql-database-aad-authentication).
+Microsoft Entra ID allows users, DBAs, and application programmers to use Microsoft Entra authentication. For more information, see [Using Microsoft Entra ID with the ODBC Driver](../using-azure-active-directory.md), and [Connecting to Azure SQL or Azure Synapse Analytics By Using Microsoft Entra authentication](/azure/sql-database/sql-database-aad-authentication).
+
 
 ## Microsoft ODBC Driver 11 for SQL Server on Windows
 

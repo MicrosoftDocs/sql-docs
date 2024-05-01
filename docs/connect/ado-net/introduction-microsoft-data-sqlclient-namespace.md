@@ -3,7 +3,7 @@ title: Introduction to Microsoft.Data.SqlClient namespace
 description: Learn about the Microsoft.Data.SqlClient namespace and how it's the preferred way to connect to SQL for .NET applications.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 04/19/2023
+ms.date: 02/28/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -19,6 +19,140 @@ There are a few differences in less-used APIs compared to System.Data.SqlClient 
 ## API reference
 
 The Microsoft.Data.SqlClient API details can be found in the [.NET API Browser](/dotnet/api/microsoft.data.sqlclient).
+
+## Release notes for Microsoft.Data.SqlClient 5.2
+
+### New features in 5.2
+
+- Added support of `SqlDiagnosticListener` on **.NET Standard**. [#1931](https://github.com/dotnet/SqlClient/pull/1931)
+- Added new property `RowsCopied64` to `SqlBulkCopy`. [#2004](https://github.com/dotnet/SqlClient/pull/2004) [Read more](#added-new-property-rowscopied64-to-sqlbulkcopy)
+- Added a new `AccessTokenCallBack` API to `SqlConnection`. [#1260](https://github.com/dotnet/SqlClient/pull/1260) [Read more](#added-new-property-accesstokencallback-to-sqlconnection)
+- Added support for the `SuperSocketNetLib` registry option for Encrypt on .NET on Windows. [#2047](https://github.com/dotnet/SqlClient/pull/2047)
+- Added `SqlBatch` support on .NET 6+ [#1825](https://github.com/dotnet/SqlClient/pull/1825), [#2223](https://github.com/dotnet/SqlClient/pull/2223) [Read more](#sqlbatch-api)
+- Added Workload Identity authentication support [#2159](https://github.com/dotnet/SqlClient/pull/2159), [#2264](https://github.com/dotnet/SqlClient/pull/2264)
+- Added Localization support on .NET [#2210](https://github.com/dotnet/SqlClient/pull/2110)
+- Added support for Georgian collation [#2194](https://github.com/dotnet/SqlClient/pull/2194)
+- Added support for Big Endian systems [#2170](https://github.com/dotnet/SqlClient/pull/2170)
+- Added .NET 8 support [#2230](https://github.com/dotnet/SqlClient/pull/2230)
+- Added explicit version for major .NET version dependencies on System.Runtime.Caching 8.0.0, System.Configuration.ConfigurationManager 8.0.0, and System.Diagnostics.DiagnosticSource 8.0.0 [#2303](https://github.com/dotnet/SqlClient/pull/2303)
+- Added the ability to generate debugging symbols in a separate package file [#2137](https://github.com/dotnet/SqlClient/pull/2137)
+
+### Added new property `RowsCopied64` to SqlBulkCopy
+
+SqlBulkCopy has a new property `RowsCopied64` which supports `long` value types.
+
+**Note that the existing `SqlBulkCopy.RowsCopied` behavior is unchanged. When the value exceeds `int.MaxValue`, `RowsCopied` can return a negative number.**
+
+Example usage:
+
+```C#
+    using (SqlConnection srcConn = new SqlConnection(srcConstr))
+    using (SqlCommand srcCmd = new SqlCommand("select top 5 * from employees", srcConn))
+    {
+        srcConn.Open();
+        using (DbDataReader reader = srcCmd.ExecuteReader())
+        {
+            using (SqlBulkCopy bulkcopy = new SqlBulkCopy(dstConn))
+            {
+                bulkcopy.DestinationTableName = dstTable;
+                SqlBulkCopyColumnMappingCollection ColumnMappings = bulkcopy.ColumnMappings;
+
+                ColumnMappings.Add("EmployeeID", "col1");
+                ColumnMappings.Add("LastName", "col2");
+                ColumnMappings.Add("FirstName", "col3");
+
+                bulkcopy.WriteToServer(reader);
+                long rowsCopied = bulkcopy.RowsCopied64;
+            }
+        }
+    }
+```
+
+### Added new property `AccessTokenCallBack` to SqlConnection
+
+SqlConnection supports `TokenCredential` authentication by introducing a new `AccessTokenCallBack` property as a `Func<SqlAuthenticationParameters, CancellationToken,Task<SqlAuthenticationToken>>` delegate to return a federated authentication access token.
+
+Example usage:
+
+```C#
+    using Microsoft.Data.SqlClient;
+    using Azure.Identity;
+
+    const string defaultScopeSuffix = "/.default";
+    string connectionString = GetConnectionString();
+    using SqlConnection connection = new SqlConnection(connectionString);
+    
+    connection.AccessTokenCallback = async (authParams, cancellationToken) =>
+    {
+        var cred = new DefaultAzureCredential();
+        string scope = authParams.Resource.EndsWith(defaultScopeSuffix) ? authParams.Resource : authParams.Resource + defaultScopeSuffix;
+        AccessToken token = await cred.GetTokenAsync(new TokenRequestContext(new[] { scope }), cancellationToken);
+        return new SqlAuthenticationToken(token.Token, token.ExpiresOn);
+    }
+    
+    connection.Open();
+    Console.WriteLine("ServerVersion: {0}", connection.ServerVersion);
+    Console.WriteLine("State: {0}", connection.State);
+```
+
+### SqlBatch API
+
+Example usage:
+
+```csharp
+using Microsoft.Data.SqlClient;
+
+class Program
+{
+    static void Main()
+    {
+        string str = "Data Source=(local);Initial Catalog=Northwind;"
+        + "Integrated Security=SSPI;Encrypt=False";
+        RunBatch(str);
+    }
+
+    static void RunBatch(string connString)
+    {
+        using var connection = new SqlConnection(connString);
+        connection.Open();
+
+        var batch = new SqlBatch(connection);
+
+        const int count = 10;
+        const string parameterName = "parameter";
+        for (int i = 0; i < count; i++)
+        {
+            var batchCommand = new SqlBatchCommand($"SELECT @{parameterName} as value");
+            batchCommand.Parameters.Add(new SqlParameter(parameterName, i));
+            batch.BatchCommands.Add(batchCommand);
+        }
+
+        // Optionally Prepare
+        batch.Prepare();
+
+        var results = new List<int>(count);
+        using (SqlDataReader reader = batch.ExecuteReader())
+        {
+            do
+            {
+                while (reader.Read())
+                {
+                    results.Add(reader.GetFieldValue<int>(0));
+                }
+            } while (reader.NextResult());
+        }
+        Console.WriteLine(string.Join(", ", results));
+    }
+}
+```
+
+## 5.2 Target Platform Support
+
+- .NET Framework 4.6.2+ (Windows x86, Windows x64)
+- .NET 6.0+ (Windows x86, Windows x64, Windows ARM64, Windows ARM, Linux, macOS)
+- .NET Standard 2.0+ (Windows x86, Windows x64, Windows ARM64, Windows ARM, Linux, macOS)
+
+Full release notes, including dependencies, are available in the GitHub Repository: [5.2 Release Notes](https://github.com/dotnet/SqlClient/tree/main/release-notes/5.2).
 
 ### Breaking changes in 5.1
 
@@ -380,24 +514,26 @@ PerfView /onlyProviders=*Microsoft.Data.SqlClient.EventSource:EventCounterInterv
 `SqlDataReader` returns a `DBNull` value instead of an empty `byte[]`. To enable the legacy behavior, you must enable the following AppContext switch on application startup:
 **"Switch.Microsoft.Data.SqlClient.LegacyRowVersionNullBehavior"**
 
-### Active Directory Default authentication support
+### Microsoft Entra default authentication support
 
-This PR introduces a new SQL Authentication method, **Active Directory Default**. This authentication mode widens the possibilities of user authentication, extending login solutions to the client environment, Visual Studio Code, Visual Studio, Azure CLI etc.
+[!INCLUDE [entra-id](../../includes/entra-id-hard-coded.md)]
+
+This PR introduces a new SQL Authentication method, **Active Directory Default**. This authentication mode widens the possibilities of user authentication with Microsoft Entra ID, extending login solutions to the client environment, Visual Studio Code, Visual Studio, Azure CLI etc.
 
 With this authentication mode, the driver acquires a token by passing "[DefaultAzureCredential](/dotnet/api/azure.identity.defaultazurecredential)" from the Azure Identity library to acquire an access token. This mode attempts to use these credential types to acquire an access token in the following order:
 
 - **EnvironmentCredential**
-  - Enables authentication to Azure Active Directory using client and secret, or username and password, details configured in the following environment variables: AZURE_TENANT_ID, AZURE_CLIENT_ID, AZURE_CLIENT_SECRET, AZURE_CLIENT_CERTIFICATE_PATH, AZURE_USERNAME, AZURE_PASSWORD ([More details](/dotnet/api/azure.identity.environmentcredential))
+  - Enables authentication with Microsoft Entra ID using client and secret, or username and password, details configured in the following environment variables: AZURE_TENANT_ID, AZURE_CLIENT_ID, AZURE_CLIENT_SECRET, AZURE_CLIENT_CERTIFICATE_PATH, AZURE_USERNAME, AZURE_PASSWORD ([More details](/dotnet/api/azure.identity.environmentcredential))
 - **ManagedIdentityCredential**
-  - Attempts authentication to Azure Active Directory using a managed identity that has been assigned to the deployment environment. **"Client Id" of "User Assigned Managed Identity"** is read from the **"User Id" connection property**.
+  - Attempts authentication with Microsoft Entra ID using a managed identity that has been assigned to the deployment environment. **The "Client Id" of a "user-assigned managed identity"** is read from the **"User Id" connection property**.
 - **SharedTokenCacheCredential**
   - Authenticates using tokens in the local cache shared between Microsoft applications.
 - **VisualStudioCredential**
-  - Enables authentication to Azure Active Directory using data from Visual Studio
+  - Enables authentication with Microsoft Entra ID using data from Visual Studio
 - **VisualStudioCodeCredential**
-  - Enables authentication to Azure Active Directory using data from Visual Studio Code.
+  - Enables authentication with Microsoft Entra ID using data from Visual Studio Code.
 - **AzureCliCredential**
-  - Enables authentication to Azure Active Directory using Azure CLI to obtain an access token.
+  - Enables authentication with Microsoft Entra ID using Azure CLI to obtain an access token.
 
 > InteractiveBrowserCredential is disabled in the driver implementation of "Active Directory Default", and "Active Directory Interactive" is the only option available to acquire a token using MFA/Interactive authentication.*
 
@@ -490,7 +626,9 @@ Microsoft.Data.SqlClient v2.1 extends support for Always Encrypted on the follow
 > <sup>1</sup> Before Microsoft.Data.SqlClient version v2.1, Always Encrypted is only supported on Windows.
 > <sup>2</sup> Always Encrypted with secure enclaves is not supported on .NET Standard 2.0.
 
-### Azure Active Directory Device Code Flow authentication
+<a name='azure-active-directory-device-code-flow-authentication'></a>
+
+### Microsoft Entra Device Code Flow authentication
 
 Microsoft.Data.SqlClient v2.1 provides support for "Device Code Flow" authentication with MSAL.NET.
 Reference documentation: [OAuth2.0 Device Authorization Grant flow](/azure/active-directory/develop/v2-oauth2-device-code)
@@ -509,9 +647,11 @@ public class ActiveDirectoryAuthenticationProvider
 }
 ```
 
-### Azure Active Directory Managed Identity authentication
+<a name='azure-active-directory-managed-identity-authentication'></a>
 
-Microsoft.Data.SqlClient v2.1 introduces support for Azure Active Directory authentication using [managed identities](/azure/active-directory/managed-identities-azure-resources/overview).
+### Microsoft Entra managed identity authentication
+
+Microsoft.Data.SqlClient v2.1 introduces support for Microsoft Entra authentication using [managed identities](/azure/active-directory/managed-identities-azure-resources/overview).
 
 The following authentication mode keywords are supported:
 
@@ -534,9 +674,11 @@ Connection string examples:
 "Server={serverURL}; Authentication=Active Directory Managed Identity; Encrypt=True; User Id={ObjectIdOfManagedIdentity}; Initial Catalog={db};"
 ```
 
-### Azure Active Directory Interactive authentication enhancements
+<a name='azure-active-directory-interactive-authentication-enhancements'></a>
 
-Microsoft.Data.SqlClient v2.1 adds the following APIs to customize the "Active Directory Interactive" authentication experience:
+### Microsoft Entra Interactive authentication enhancements
+
+Microsoft.Data.SqlClient v2.1 adds the following APIs to customize the **Microsoft Entra Interactive** authentication experience:
 
 ```csharp
 public class ActiveDirectoryAuthenticationProvider
@@ -561,9 +703,11 @@ Microsoft.Data.SqlClient v2.1 introduces a new configuration section, `SqlClient
 
 The new section allows application config files to contain both a SqlAuthenticationProviders section for System.Data.SqlClient and a SqlClientAuthenticationProviders section for Microsoft.Data.SqlClient.
 
-### Azure Active Directory authentication using an application client ID
+<a name='azure-active-directory-authentication-using-an-application-client-id'></a>
 
-Microsoft.Data.SqlClient v2.1 introduces support for passing a user-defined application client ID to the Microsoft Authentication Library. Application Client ID is used when authenticating with Azure Active Directory.
+### Microsoft Entra authentication using an application client ID
+
+Microsoft.Data.SqlClient v2.1 introduces support for passing a user-defined application client ID to the Microsoft Authentication Library. Application Client ID is used when authenticating with Microsoft Entra ID.
 
 The following new APIs are introduced:
 
@@ -785,7 +929,7 @@ sqlConnection.Open(SqlConnectionOverrides.OpenWithoutRetry);
 
 #### Username support for Active Directory Interactive mode
 
-A username can be specified in the connection string when using Azure Active Directory Interactive authentication mode for both .NET Framework and .NET Core
+A username can be specified in the connection string when using Microsoft Entra Interactive authentication mode for both .NET Framework and .NET Core
 
 Set a username using the **User ID** or **UID** connection string property:
 

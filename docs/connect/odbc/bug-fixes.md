@@ -4,7 +4,7 @@ description: This page contains a listing of bugs fixed in each release, startin
 author: v-chojas
 ms.author: v-chojas
 ms.reviewer: v-davidengel
-ms.date: 10/10/2023
+ms.date: 04/09/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -14,6 +14,18 @@ helpviewer_keywords:
 # List of bugs fixed
 
 This page contains a listing of bugs fixed in each release, starting with [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 18.3.3.1 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+- Fix crashes when receiving invalid data from server
+- Fix infinite loop when receiving invalid data from server
+- Fix App Service Containers MSI Authentication
+    
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17.10.6.1 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+- Fix crashes when receiving invalid data from server
+- Fix infinite loop when receiving invalid data from server
+- Fix a crash when attempting to connect under low-memory conditions
+- Fix memory leak upon reconnect
+- Fix App Service Containers MSI Authentication
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 18.3.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -28,6 +40,7 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 18.3.1 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Fix a bug in setting of data classification version attribute
+
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 18.2.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -78,7 +91,7 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 - Fix UI issues where text was cut off and position of items was off.
 - Fix issue with Active Directory Interactive login where attempting to login after closing the window of the first failure would automatically succeed if cached credentials were available.
 - Fix use of XADTC with Azure SQL Managed Instance.
-- Fix loss of Azure Active Directory authentication mode when reconnecting an idle connection.
+- Fix loss of Microsoft Entra authentication mode when reconnecting an idle connection.
 - Fix an issue with federated authentication when using PingFed.
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17.10.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
@@ -100,7 +113,7 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 - Fix UI issues where text was cut off and position of items was off.
 - Fix issue with Active Directory Interactive login where attempting to login after closing the window of the first failure would automatically succeed if cached credentials were available.
 - Fix use of XADTC with Azure SQL Managed Instance.
-- Fix loss of Azure Active Directory authentication mode when reconnecting an idle connection.
+- Fix loss of Microsoft Entra authentication mode when reconnecting an idle connection.
 - Fix an issue with federated authentication when using PingFed.
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17.8 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
@@ -123,7 +136,7 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 - Fix SQLDescribeParam in FMTONLY mode for statements containing comments
 - Fix an issue with federated authentication when using Okta
 - Fix excessive memory usage on multi-processor systems
-- Fix Azure AD authentication for some variants of Azure SQL DB
+- Fix Microsoft Entra authentication for some variants of Azure SQL
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17.6 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -163,7 +176,7 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 - Fix connection resiliency issue when async notification is enabled where the driver stops responding
 - Fix crash when retrieving diagnostic records for multithreaded connection attempts
 - Fix 'Encryption not supported' upon reconnect after calling SQLGetInfo() with SQL_USER_NAME and SQL_DATA_SOURCE_READ_ONLY
-- Fix COM initialization error during Azure Active Directory Interactive Authentication
+- Fix COM initialization error during Microsoft Entra interactive authentication
 - Fix SQLGetData() for multi-byte UTF8 data
 - Fix retrieving length of sql_variant columns using SQLGetData()
 - Fix importing of sql_variant columns containing more than 7992 bytes using bcp
@@ -177,7 +190,7 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- Fixed an error message about Azure Active Directory Authentication
+- Fixed an error message about Microsoft Entra authentication
 - Fixed encoding detection when locale environment variables are set differently
 - Fixed a crash upon disconnect with connection recovery in progress
 - Fixed detection of connection liveness

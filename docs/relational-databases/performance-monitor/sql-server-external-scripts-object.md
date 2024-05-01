@@ -3,10 +3,10 @@ title: "SQL Server, External Scripts object"
 description: "Learn about the SQLServer:External Scripts object, which provides counters to monitor the actions associated with executing external scripts."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/13/2021"
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance
-ms.topic: "language-reference"
+ms.topic: reference
 helpviewer_keywords:
   - "External Scripts object"
   - "SQLServer:External Scripts"
@@ -16,9 +16,9 @@ dev_langs:
 # SQL Server, External Scripts object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  The **SQLServer:External Scripts** object in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides counters to monitor the actions associated with executing external scripts. For information about executing external scripts, see [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).  
+  The **SQLServer:External Scripts** object in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] provides counters to monitor the actions associated with executing external scripts. For information about executing external scripts, see [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).  
   
- This table describes the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **External Scripts** counters.  
+ This table describes the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] **External Scripts** counters.  
   
 |SQL Server External Scripts counters|Description|  
 |------------------------------------------|-----------------|  
@@ -41,8 +41,8 @@ SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%External Scripts%';
 ```  
   
-## See also  
- - [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
- - [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)   
- - [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
-  
+## Related content
+
+- [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)
+- [sys.resource_governor_external_resource_pools (Transact-SQL)](../system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)
+- [sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)](../system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)

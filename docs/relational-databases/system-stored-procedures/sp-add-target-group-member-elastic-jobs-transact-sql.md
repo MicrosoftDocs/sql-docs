@@ -52,7 +52,7 @@ Specifies if the target group member will be included or excluded. *membership_t
 
 #### @target_type
 
-The type of target database or collection of databases including all databases in an Azure SQL Database logical server, all databases in an elastic pool, or an individual database. *target_type* is nvarchar(128), with no default. 
+The type of target database or collection of databases including all databases in an Azure SQL Database logical server, all databases in an elastic pool, or an individual database. *target_type* is nvarchar(128), with no default.
 
 Valid values for *target_type* are `SqlServer`, `SqlElasticPool`, `SqlDatabase`.
 
@@ -238,6 +238,6 @@ GO
 
 ## Related content
 
-- [Elastic jobs in Azure SQL Database (preview)](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true)
-- [Create, configure, and manage elastic jobs (preview)](/azure/azure-sql/database/elastic-jobs-tutorial?view=azuresql-db&preserve-view=true)
-- [Create and manage elastic jobs by using T-SQL (preview)](/azure/azure-sql/database/elastic-jobs-tsql-create-manage?view=azuresql-db&preserve-view=true)
+- [Elastic jobs in Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true)
+- [Create, configure, and manage elastic jobs](/azure/azure-sql/database/elastic-jobs-tutorial?view=azuresql-db&preserve-view=true)
+- [Create and manage elastic jobs by using T-SQL](/azure/azure-sql/database/elastic-jobs-tsql-create-manage?view=azuresql-db&preserve-view=true)

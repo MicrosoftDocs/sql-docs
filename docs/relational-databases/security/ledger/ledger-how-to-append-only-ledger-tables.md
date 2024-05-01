@@ -8,7 +8,7 @@ ms.date: 05/23/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
-monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 
 # Create and use append-only ledger tables
@@ -94,7 +94,7 @@ We'll create a `KeyCardEvents` table with the following schema.
 ## Permissions
 Creating append-only ledger tables requires the `ENABLE LEDGER` permission. For more information on permissions related to ledger tables, see [Permissions](../permissions-database-engine.md). 
 
-## Next steps
+## Related content
 
 - [Append-only ledger tables](ledger-append-only-ledger-tables.md)
 - [How to migrate data from regular tables to ledger tables](ledger-how-to-migrate-data-to-ledger-tables.md)

@@ -38,7 +38,7 @@ helpviewer_keywords:
 
 
 > [!NOTE]  
-> For authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) in Azure SQL Database, install the latest driver, such as [ODBC Driver 18 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md).
+> For authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) in Azure SQL Database, install the latest driver, such as [ODBC Driver 18 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md).
 
 
   

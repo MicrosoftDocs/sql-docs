@@ -6,7 +6,7 @@ ms.author: chugu
 ms.date: 01/09/2019
 ms.service: sql
 ms.subservice: integration-services
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
   - "sql13.ssis.designer.hdfsfiledest.f1"
 ---

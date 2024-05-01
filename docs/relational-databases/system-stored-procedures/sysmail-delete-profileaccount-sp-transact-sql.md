@@ -82,7 +82,7 @@ EXEC msdb.dbo.sysmail_delete_profileaccount_sp
     @account_name = 'Audit Account';
 ```
 
-## See also
+## Related content
 
 - [Database Mail](../database-mail/database-mail.md)
 - [Create a Database Mail Account](../database-mail/create-a-database-mail-account.md)

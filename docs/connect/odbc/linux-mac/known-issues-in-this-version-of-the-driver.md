@@ -6,6 +6,7 @@ ms.author: v-davidengel
 ms.date: 02/17/2022
 ms.service: sql
 ms.subservice: connectivity
+ms.custom: linux-related-content
 ms.topic: conceptual
 helpviewer_keywords:
   - "known issues"

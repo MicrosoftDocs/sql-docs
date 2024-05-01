@@ -13,7 +13,7 @@ ms.custom: updatefrequency5
 
 [!INCLUDE [ssrs-mobile-report-deprecated](../../includes/ssrs-mobile-report-deprecated.md)]
 
-The [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] data model is simple. Data is imported into [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] as a collection of datasets. Formal relationships between datasets aren't necessary. Lookups from one dataset to another work as long as the key values match. Date/time aggregations are handled by the mobile report runtime and they will match between different datasets, even if the date/time data granularity is different between datasets.   
+The [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] data model is simple. Data is imported into [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] as a collection of datasets. Formal relationships between datasets aren't necessary. Lookups from one dataset to another work as long as the key values match. The mobile report runtime handles date/time aggregations and they match between different datasets, even if the date/time data granularity is different between datasets.   
   
 You can import data from two types of sources:   
   
@@ -25,13 +25,13 @@ You can import data from two types of sources:
   
 After you import data into [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)], the rest of the mobile report creation and design experience is the same, regardless of where the data came from.   
   
-## Connect mobile report elements to data ##  
+## Connect mobile report elements to data 
   
 Each SQL Server Mobile Report Publisher element contains one or more data settings. For example, the Radial Gauge element contains two data settings: Main Value and Comparison Value. Each of these settings points to exactly one field (column) in a specific dataset.   
   
-The mobile report runtime provides aggregated values for the gauge, based on user selections. Note that the Comparison Value of the same Radial Gauge instance can be bound to a field from a different dataset.   
+The mobile report runtime provides aggregated values for the gauge, based on user selections. The Comparison Value of the same Radial Gauge instance can be bound to a field from a different dataset.   
   
-### See also  
+### Related content 
 -  [Prepare data for Reporting Services mobile reports](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 - [Get data from shared datasets](../../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md)

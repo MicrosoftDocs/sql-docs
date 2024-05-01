@@ -153,7 +153,7 @@ EXEC dbo.sp_add_operator @name = N'Dan Wilson',
 GO
 ```
 
-## See also
+## Related content
 
 - [sp_delete_operator (Transact-SQL)](sp-delete-operator-transact-sql.md)
 - [sp_help_operator (Transact-SQL)](sp-help-operator-transact-sql.md)

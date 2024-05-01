@@ -4,31 +4,29 @@ description: "Download and Install SqlPackage for Windows, macOS, or Linux"
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
-ms.date: 5/10/2023
+ms.date: 2/27/2024
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-ms.custom:
-  - tools|sos
-  - intro-installation
+ms.custom: tools|sos, intro-installation, linux-related-content
 ---
 
 # Download and install SqlPackage
 
-SqlPackage runs on Windows, macOS, and Linux, and is available to install through `dotnet tool` or as a standalone zip download.
+SqlPackage runs on Windows, macOS, and Linux, and is available to install through `dotnet tool` or as a standalone zip download. For details about the latest release, see the [release notes](release-notes-sqlpackage.md).
 
-- **Version number:** 162.1.167
-- **Build number:** 162.1.167
-- **Release date:** October 19, 2023
+- **Version number:** 162.2.111
+- **Build number:** 162.2.111.2
+- **Release date:** February 27, 2024
 
-For details about the latest release, see the [release notes](release-notes-sqlpackage.md).
+SqlPackage is developed and released for both .NET 8 and .NET Framework. Installing the .NET 8 SqlPackage version is recommended via the [convenient `dotnet tool` method](#installation-cross-platform), which is cross-platform and easy to update, or via the [portable self-contained .zip download](#installation-file-download-alternative). The .NET 8 SqlPackage releases benefit from the continual advances to the performance and scalability of .NET as part of the [focus on for modern applications](/dotnet/core/introduction#net-ecosystem), which contrasts to the maintenance support of .NET Framework for Windows. The .NET Framework version is only available as a [.msi Windows installer](#windows-net-framework).
 
 > [!NOTE]
-> SqlPackage version numbering has been adjusted to better reflect the DacFx build number it is associated with. Previously, SqlPackage had a distinct version number (19) and build number (160.x). Beginning with version 161, the version number of SqlPackage will match the DacFx version number it is associated with (eg 162.0.52).
+> Previously, SqlPackage had a distinct version number (19) and build number (160.x). Beginning with version 161, the version number of SqlPackage matches the DacFx version number it is associated with (eg 162.0.52).
 
 ## Installation, cross-platform
 
-Installing SqlPackage as a [dotnet tool](/dotnet/core/tools/global-tools) requires the [.NET Core SDK](https://dotnet.microsoft.com/download/dotnet/6.0) v6.0 or later to be installed on your machine.  Installing SqlPackage as a global tool will make it available on your path as `sqlpackage` and is the recommended way to install SqlPackage for Windows, macOS, and Linux.
+Installing SqlPackage as a [dotnet tool](/dotnet/core/tools/global-tools) requires the [.NET SDK](https://dotnet.microsoft.com/download/dotnet/8.0) to be installed on your machine. Installing SqlPackage as a global tool makes it available on your path as `sqlpackage` and is the recommended method to install SqlPackage for Windows, macOS, and Linux. SqlPackage is available as a dotnet tool for .NET 6 and .NET 8.
 
 To install SqlPackage as a global .NET tool, run the following command:
 
@@ -52,22 +50,39 @@ To uninstall SqlPackage, run the following command:
    dotnet tool uninstall -g microsoft.sqlpackage
    ```
 
+### Preview releases
+
+Preview releases of SqlPackage are available with the dotnet tool feed. To access preview releases, use the `--prerelease` option with the `dotnet tool` command. For example, to install the latest preview release, run the following command:
+
+   ```bash
+   dotnet tool install -g --prerelease microsoft.sqlpackage
+   ```
+
+To update SqlPackage to the latest preview version, run the following command:
+
+   ```bash
+   dotnet tool update -g --prerelease microsoft.sqlpackage
+   ```
+
+A list of preview releases is available on the [dotnet tool feed for SqlPackage](https://www.nuget.org/packages/microsoft.sqlpackage/).
 
 
-## Installation, zip download
+## Installation, file download (alternative)
+
+SqlPackage is also prepared as a self-contained download for Windows, macOS, and Linux. No .NET install is required, however, the dependencies included in this .zip download are updated more frequently in the [dotnet tool option for SqlPackage](#installation-cross-platform). The following links are for the latest version of SqlPackage:
 
 |Platform|Download|
 |:---|:---|
-|Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2249738)|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2249478)|
-|macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2249674)|
-|Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2249739)|
+|Windows .NET 8 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2261576)|
+|Windows|[.msi file](https://go.microsoft.com/fwlink/?linkid=2262108)|
+|macOS .NET 8 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2261849)|
+|Linux .NET 8 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2261577)|
 
 
 ### Linux
 
-1. Download [SqlPackage for Linux](https://aka.ms/sqlpackage-linux).
-2. To extract the file and launch SqlPackage, open a new Terminal window and type the following commands:
+1. Download [SqlPackage for Linux](https://aka.ms/sqlpackage-linux)
+2. Extract the file and launch SqlPackage, open a new Terminal window and type the following commands:
 
    ```bash
    cd ~
@@ -103,8 +118,8 @@ To uninstall SqlPackage, run the following command:
 
 ### macOS
 
-1. Download [SqlPackage for macOS](https://aka.ms/sqlpackage-macos).
-2. To extract the file and launch SqlPackage, open a new Terminal window and type the following commands:
+1. Download [SqlPackage for macOS](https://aka.ms/sqlpackage-macos)
+2. Extract the file and launch SqlPackage, open a new Terminal window and type the following commands:
 
    ```bash
    mkdir sqlpackage
@@ -128,10 +143,10 @@ To uninstall SqlPackage, run the following command:
    sudo spctl --master-enable
    ```
 
-### Windows (.NET 6)
+### Windows (.NET 8)
 
-1. Download [SqlPackage for Windows](https://aka.ms/sqlpackage-windows).
-2. To extract the file by right-clicking on the file in Windows Explorer, and selecting 'Extract All...', and select the target directory.
+1. Download [SqlPackage for Windows](https://aka.ms/sqlpackage-windows)
+2. Extract the file by right-clicking on the file in Windows Explorer, and selecting 'Extract All...', and select the target directory
 3. Open a new Terminal window and cd to the location where SqlPackage was extracted:
 
    ```cmd
@@ -142,7 +157,7 @@ To uninstall SqlPackage, run the following command:
 
 This release of SqlPackage includes a standard Windows installer experience, and a .zip: 
 
-1. Download and run the [DacFramework.msi installer for Windows](https://aka.ms/dacfx-msi).
+1. Download and run the [DacFramework.msi installer for Windows](https://aka.ms/dacfx-msi)
 2. Open a new Command Prompt window, and run SqlPackage
     - SqlPackage is installed to the ```C:\Program Files\Microsoft SQL Server\160\DAC\bin``` folder
 
@@ -162,7 +177,7 @@ Evergreen links are available for downloading the latest Sqlpackage versions:
 
 ## DacFx
 
-SqlPackage is a command-line interface for the DacFx framework, exposing some of the public DacFx APIs. DacServices ([Microsoft.SqlServer.Dac](/dotnet/api/microsoft.sqlserver.dac.dacservices)) is a related mechanism for integrating database deployment into your application pipeline.  The DacServices API is available in a package through NuGet, [Microsoft.SqlServer.DacFx](https://www.NuGet.org/packages/Microsoft.SqlServer.DacFx).  The current DacFx version is 162.1.167.1.
+SqlPackage is a command-line interface for the DacFx framework, exposing some of the public DacFx APIs. DacServices ([Microsoft.SqlServer.Dac](/dotnet/api/microsoft.sqlserver.dac.dacservices)) is a related mechanism for integrating database deployment into your application pipeline. The DacServices API is available in a package through NuGet, [Microsoft.SqlServer.DacFx](https://www.NuGet.org/packages/Microsoft.SqlServer.DacFx).
 
 Adding the NuGet package to a .NET project is accomplished via the .NET CLI with this command:
 
@@ -176,53 +191,48 @@ dotnet add package Microsoft.SqlServer.DacFx
 
 ## Supported Operating Systems
 
-SqlPackage runs on Windows, macOS, and Linux and is built using .NET 6.  The [.NET 6 OS requirements](https://github.com/dotnet/core/blob/main/release-notes/6.0/supported-os.md) are minimum requirements for SqlPackage, which has additional requirements due to its dependencies.
+SqlPackage runs on Windows, macOS, and Linux and is built using .NET 8. The [.NET 8 OS requirements](https://github.com/dotnet/core/blob/main/release-notes/8.0/supported-os.md) are minimum requirements for SqlPackage, which has extra requirements due to its dependencies.
 
 ### Windows (x64)
 
 - Windows 11
 - Windows 10 (1607+)
-- Windows 8.1
-- Windows 7 SP1
-- Windows Server Core
-- Windows Server 2012 R2
-- Windows Server 2016
-- Windows Server 2019
-- Windows Server 2022
+- Windows Server Core 2012 R2+
+- Windows Server 2012 R2+
 
 ### macOS
 
-- macOS 14 "Sonoma"
-- macOS 13 "Ventura"
-- macOS 12 "Monterey"
-- macOS 11 "Big Sur"
+- macOS 12 "Monterey"+
 
 ### Linux (x64)
 
-- Debian 10, 11
-- Red Hat Enterprise Linux 7+
+- Debian 11+
+- Red Hat Enterprise Linux 8+
 - SUSE Linux Enterprise Server v12 SP2+
-- Ubuntu 16.04, 18.04, 20.04, 22.04
+- Ubuntu 20.04+
 
 ## Available Languages
 
 This release of SqlPackage can be installed in the following languages:
 
-SqlPackage .NET 6 Windows:  
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2249738&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2249738&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2249738&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2249738&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2249738&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2249738&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2249738&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2249738&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2249738&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2249738&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2249738&clcid=0x40a)
+SqlPackage .NET 8 Windows:  
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2261576&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2261576&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2261576&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2261576&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2261576&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2261576&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2261576&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2261576&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2261576&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2261576&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2261576&clcid=0x40a)
 
 SqlPackage .NET Framework Windows:  
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2249478&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2249478&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2249478&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2249478&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2249478&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2249478&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2249478&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2249478&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2249478&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2249478&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2249478&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2262108&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2262108&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2262108&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2262108&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2262108&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2262108&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2262108&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2262108&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2262108&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2262108&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2262108&clcid=0x40a)
 
-SqlPackage .NET 6 macOS:  
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2249674&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2249674&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2249674&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2249674&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2249674&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2249674&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2249674&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2249674&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2249674&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2249674&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2249674&clcid=0x40a)
+SqlPackage .NET 8 macOS:  
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2261849&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2261849&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2261849&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2261849&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2261849&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2261849&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2261849&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2261849&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2261849&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2261849&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2261849&clcid=0x40a)
 
-SqlPackage .NET 6 Linux:  
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2249739&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2249739&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2249739&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2249739&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2249739&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2249739&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2249739&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2249739&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2249739&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2249739&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2249739&clcid=0x40a)
+SqlPackage .NET 8 Linux:  
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2261577&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2261577&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2261577&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2261577&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2261577&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2261577&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2261577&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2261577&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2261577&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2261577&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2261577&clcid=0x40a)
 
 
 ## Next Steps
 
 - Learn more about [SqlPackage](sqlpackage.md)
+- Learn more about [SqlPackage in CI/CD pipelines](sqlpackage-pipelines.md)
+- Learn more about [troubleshooting issues with SqlPackage](troubleshooting-issues-and-performance-with-sqlpackage.md)
+- Share feedback on SqlPackage in the [DacFx GitHub repository](https://github.com/microsoft/DacFx)
 
 [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839)

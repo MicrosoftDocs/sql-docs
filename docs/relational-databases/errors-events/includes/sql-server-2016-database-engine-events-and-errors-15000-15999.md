@@ -1,8 +1,7 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
-ms.date: 07/06/2023
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 01/11/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -80,6 +79,7 @@ ms.topic: include
 | 15097 | 16 | No | The size associated with an extended property cannot be more than 7,500 bytes. |
 | 15098 | 16 | No | The name change cannot be performed because the SID of the new name does not match the old SID of the principal. |
 | 15099 | 16 | No | The MUST_CHANGE option cannot be used when CHECK_EXPIRATION is OFF. |
+| 15100 | 16 | No | Usage: sp_bindefault defaultname, objectname \[, 'futureonly'\] |
 | 15101 | 16 | No | Cannot bind a default to a computed column, a sparse column, or to a column of the following data types: timestamp, varchar(max), nvarchar(max), varbinary(max), xml, or CLR type. |
 | 15102 | 16 | No | Cannot bind a default to an identity column. |
 | 15103 | 16 | No | Cannot bind a default to a column created with or altered to have a default value. |
@@ -168,6 +168,7 @@ ms.topic: include
 | 15197 | 16 | No | There is no text for object '%s'. |
 | 15198 | 16 | No | The name supplied (%s) is not a user, role, or aliased login. |
 | 15199 | 16 | No | The current security context cannot be reverted. Please switch to the original database where '%ls' was called and try it again. |
+| 15200 | 16 | No | There are no remote servers defined. |
 | 15201 | 16 | No | There are no remote logins for the remote server '%s'. |
 | 15202 | 16 | No | There are no remote logins defined. |
 | 15203 | 16 | No | There are no remote logins for '%s'. |
@@ -498,3 +499,32 @@ ms.topic: include
 | 15597 | 10 | No | Warning: use of an IDENTITY column on a table with row-level security can allow information disclosure. |
 | 15598 | 10 | No | Warning: use of an indexed view on a table with row-level security can allow information disclosure. |
 | [15599](../mssqlserver-15599-database-engine-error.md) | 10 | No | Auditing and permissions can't be set on local temporary objects. |
+| 15600 | 15 | No | An invalid parameter or option was specified for procedure '%s'. |
+| 15601 | 16 | No | Full-Text Search is not enabled for the current database. Use sp_fulltext_database to enable Full-Text Search. The functionality to disable and enable full-text search for a database is deprecated. Please change your application. |
+| 15612 | 16 | No | DBCC DBCONTROL error. Database was not made read-only. |
+| 15615 | 16 | No | DBCC DBCONTROL error. Database was not made single user. |
+| 15622 | 10 | No | No permission to access database '%s'. |
+| 15625 | 10 | No | Option '%ls' not recognized for '%ls' parameter. |
+| 15626 | 10 | No | You attempted to acquire a transactional application lock without an active transaction. |
+| 15627 | 10 | No | sp_dboption command failed. |
+| 15635 | 16 | No | Cannot execute '%ls' because the database is in read-only access mode. |
+| 15645 | 16 | No | Column '%ls' does not exist. |
+| 15646 | 16 | No | Column '%ls' is not a computed column. |
+| 15647 | 10 | No | No views with schema binding reference table '%ls'. |
+| 15650 | 10 | No | Updating %s |
+| 15651 | 10 | No | %d index(es)/statistic(s) have been updated, %d did not require update. |
+| 15652 | 10 | No | %s has been updated... |
+| 15653 | 10 | No | %s, update is not necessary... |
+| 15654 | 10 | No | Table %s: cannot perform the operation on the table because its clustered index is disabled. |
+| 15656 | 16 | No | Cannot create user defined types from XML data type. |
+| 15657 | 16 | No | Vardecimal storage format is not available in system database '%s'. |
+| 15658 | 16 | No | Cannot run sp_resetstatus against a database snapshot. |
+| 15659 | 16 | No | The schema '%ls' specified for parameter schema_name does not exist. |
+| 15660 | 16 | No | Compressing XML index is not supported by the stored procedure sp_estimate_data_compression_savings. |
+| [15661](../mssqlserver-15661-database-engine-error.md) | 16 | No | Compressing temporary tables is not supported by the stored procedure sp_estimate_data_compression_savings. |
+| 15662 | 16 | No | Compressing tables with sparse columns or column sets is not supported by the stored procedure sp_estimate_data_compression_savings. |
+| 15663 | 16 | No | Feature "sp_addserver" is no longer supported. Replace remote servers by using linked servers. |
+| 15664 | 16 | No | Cannot set key '%ls' in the session context. The key has been set as read_only for this session. |
+| 15665 | 16 | No | The value was not set for key '%ls' because the total size of keys and values in the session context would exceed the 1 MB limit. |
+| 15666 | 16 | No | Cannot set key '%ls' in the session context. The size of the key cannot exceed 256 bytes. |
+| 15667 | 16 | No | Reset session context is not allowed when a another batch is active in session. |

@@ -177,6 +177,6 @@ dev_langs:
     :::column-end:::
 :::row-end:::
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

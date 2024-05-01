@@ -61,7 +61,7 @@ Full-Text Search queries don't return rows with a `Status` value of `0`. This is
 
 To find out how many changes are pending for a particular table, use the `TableFullTextPendingChanges` property of the `OBJECTPROPERTYEX` function.
 
-## See also
+## Related content
 
 - [Full-Text Search and Semantic Search stored procedures (Transact-SQL)](full-text-search-and-semantic-search-stored-procedures-transact-sql.md)
 - [OBJECTPROPERTYEX (Transact-SQL)](../../t-sql/functions/objectpropertyex-transact-sql.md)

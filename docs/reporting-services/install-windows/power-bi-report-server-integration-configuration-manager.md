@@ -5,6 +5,7 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 09/17/2017
 ms.service: reporting-services
+ms.subservice: report-server
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
@@ -13,17 +14,17 @@ ms.custom: updatefrequency5
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-The  **Power BI Integration** page  in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager is used to register the report server with the desired Azure Active Directory (AD) managed tenant to allow users of the report server to pin supported report items to [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] dashboards. For a list of the supported items you can pin, see [Pin Reporting Services items to Power BI Dashboards](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).
+The  **Power BI Integration** page  in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager is used to register the report server with the desired Microsoft Entra tenant to allow users of the report server to pin supported report items to [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] dashboards. For a list of the supported items you can pin, see [Pin Reporting Services items to Power BI Dashboards](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).
 
 ## <a name="bkmk_requirements"></a> Requirements for Power BI Integration
 
 In addition to an active internet connection so you can browse to the [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] service, the following are requirements to complete [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]integration.
 
-- **Azure Active Directory:** Your organization must use Azure Active Directory, which provides directory and identity management for Azure services and web applications. For more information, see [What is Azure Active Directory?](/azure/active-directory/fundamentals/active-directory-whatis)
+- **Microsoft Entra ID:** Your organization must use Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)), which provides directory and identity management for Azure services and web applications. For more information, see [What is Microsoft Entra ID?](/azure/active-directory/fundamentals/active-directory-whatis)
 
-- **Managed Tenant:** The [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] dashboard you want to pin report items to must be part of an Azure AD managed tenant.  A managed tenant is created automatically the first time your organization subscribes to Azure services such as Microsoft 365 and Microsoft Intune.   Viral tenants are currently not supported.  For more information, see  the sections "What is an Azure AD tenant" and "how to get an Azure AD Directory" in [What is an Azure AD directory?](/previous-versions/azure/azure-services/jj573650(v=azure.100)#BKMK_WhatIsAnAzureADTenant)
+- **Microsoft Entra tenant:** The [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] dashboard you want to pin report items to must be part of a [Microsoft Entra tenant](/entra/identity/multi-tenant-organizations/overview).  A tenant is created automatically the first time your organization subscribes to Azure services such as [Microsoft 365](/microsoft-365/education/deploy/intro-azure-active-directory) and [Microsoft Intune](/mem/intune/fundamentals/deployment-plan-setup#3---configure-a-custom-domain-name-for-your-intune-tenant). [Viral tenants](/entra/identity/users/clean-up-unmanaged-accounts) are not supported.
 
-- The user performing the [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] integration needs to be a member of the Azure AD tenant, a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] system administrator and a system administrator for the ReportServer catalog database.
+- The user performing the [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] integration needs to be a member of the Microsoft Entra tenant, a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] system administrator and a system administrator for the ReportServer catalog database.
 
 - The user performing the [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] integration needs to start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager either with the account used to install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], or the account the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service is running under.
 
@@ -61,7 +62,7 @@ Complete the following steps from the [!INCLUDE[ssRSnoversion](../../includes/ss
 
 ## <a name="bkmk_unregister"></a> Unregister With Power BI
 
-**Unregister:** Un-registering the report server from Azure Active Directory will result in the following:
+**Unregister:** Un-registering the report server from Microsoft Entra ID will result in the following:
 
 - The **My Settings** link will no longer be visible from the web portal menu bar.
 
@@ -87,7 +88,7 @@ Use the **Update Registration** if the configuration of your report server has c
 
 - On the **Power BI Integration** page, select **Update Registration**.
 
-     You will be prompted to login to Azure AD. The page will refresh and you will see the new URL listed in the **Redirect URLs**.
+     You will be prompted to login to Microsoft Entra ID. The page will refresh and you will see the new URL listed in the **Redirect URLs**.
 
 ##  <a name="bkmk_integration_process"></a> Summary of the Power BI Integration and Pin Process
 
@@ -95,11 +96,11 @@ This sections summarizes the basic steps and technologies involved when you inte
 
  **Integrate:**
 
-1. In Configuration manager, when you select the **Register with Power BI** button, you  will be prompted to sign in to Azure Active Directory.
+1. In Configuration manager, when you select the **Register with Power BI** button, you  will be prompted to sign in to Microsoft Entra ID.
 
 2. The [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] Client App is registered with your managed Tenant.
 
-3. Your managed tenant within Azure Active Directory is where the Power BI Client app is created.
+3. Your managed tenant within Microsoft Entra ID is where the Power BI Client app is created.
 
 4. The registration includes a redirect URL(s) that are used when users sign in from the report server.  The App ID and URLS are saved to the ReportServer database. The redirect URL is used during authentication calls to Azure so that the call can return to the report server. For example, when users sign in or pin items to a dashboard.
 
@@ -111,7 +112,7 @@ This sections summarizes the basic steps and technologies involved when you inte
 
 1. Users preview reports in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] and the first time they click to pin a report item from the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].
 
-2. They will be redirected to the Azure AD sign-in page. They can also sign in from the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. When users sign in to the Azure managed tenant, a relationship is established between their Azure account and the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] permissions.  For more information, see [My Settings for Power BI Integration &#40;web portal&#41;](../my-settings-for-power-bi-integration-web-portal.md).
+2. They will be redirected to the Microsoft Entra sign-in page. They can also sign in from the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. When users sign in to the Azure managed tenant, a relationship is established between their Azure account and the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] permissions.  For more information, see [My Settings for Power BI Integration &#40;web portal&#41;](../my-settings-for-power-bi-integration-web-portal.md).
 
 3. A user security token is returned to the report server.
 
@@ -137,7 +138,7 @@ The second time a user pins an item, the steps 1-4 are skipped and instead the A
 
 3. The report item state and data is sent with the token to the [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]service.
 
-4. The token is sent to Azure AD for validation. If the token is valid, the report item data is sent to the dashboard tile and the date property of the tile is updated.
+4. The token is sent to Microsoft Entra ID for validation. If the token is valid, the report item data is sent to the dashboard tile and the date property of the tile is updated.
 
 5. If the token is not valid, and error is returned and logged with the report server.  No status or other information is sent to the dashboard.
 

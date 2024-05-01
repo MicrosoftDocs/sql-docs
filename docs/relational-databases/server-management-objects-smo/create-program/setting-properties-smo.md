@@ -146,7 +146,7 @@ tb.Create();
 ## Iterating Through All Properties of an Object in Visual Basic  
  This code example iterates through the **Properties** collection of the <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> object and displays them on the [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Output screen.  
   
- In the example, the <xref:Microsoft.SqlServer.Management.Smo.Property> object has been put in square parentheses because it is also a [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] keyword.  
+ In the example, the <xref:Microsoft.SqlServer.Management.Smo.Property> object has been put in square parentheses because it is also a [!INCLUDE[visual-basic](../../../includes/visual-basic-md.md)] keyword.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.

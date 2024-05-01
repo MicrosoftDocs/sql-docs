@@ -7,7 +7,7 @@ ms.reviewer: matteot
 ms.date: 08/06/2020
 ms.service: sql
 ms.subservice: sql-server-powershell
-ms.topic: conceptual
+ms.topic: how-to
 ---
 
 # How to enable the TCP protocol

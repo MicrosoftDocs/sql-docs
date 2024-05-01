@@ -7,7 +7,6 @@ ms.date: "03/07/2017"
 ms.service: sql
 ms.subservice: native-client
 ms.topic: "reference"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ConnectionValidSharedMemory function in dbmslpcn.dll Shared Memory
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

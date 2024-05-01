@@ -51,7 +51,7 @@ Represents an open connection to a data source.
  You can execute named commands or stored procedures as if they were native methods on a **Connection** object, as shown in the next section. When a named command has the same name as that of a stored procedure, invoke the "native method call" on a **Connection** object always execute the named command instead of the store procedure.  
   
 > [!NOTE]
->  Do not use this feature (calling a named command or stored procedure as if it were a native method on the **Connection** object) in a Microsoft® .NET Framework application, because the underlying implementation of the feature conflicts with the way the .NET Framework interoperates with COM.  
+>  Do not use this feature (calling a named command or stored procedure as if it were a native method on the **Connection** object) in a Microsoft .NET Framework application, because the underlying implementation of the feature conflicts with the way the .NET Framework interoperates with COM.  
   
 ## Execute a command as a native method of a Connection object  
  To execute a command, give the command a name using the **Command** object [Name](./name-property-ado.md) property. Set the **ActiveConnection** property of the **Command** object to the connection. Then issue a statement where the command name is used as if it were a method on the **Connection** object, followed by any parameters, and a **Recordset** object if any rows are returned. Set the **Recordset** properties to customize the resulting **Recordset**. For example:  

@@ -1,10 +1,10 @@
 ---
 title: Parameter Sensitive Plan optimization
 description: Learn about Parameter Sensitive Plan Optimization in the Query Store.
-author: thesqlsith
-ms.author: derekw
-ms.reviewer: maghan, randolphwest
-ms.date: 05/29/2023
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: derekw, maghan, randolphwest
+ms.date: 01/08/2024
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -16,7 +16,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16
 ---
 # Parameter Sensitive Plan optimization
 
-[!INCLUDE[sqlserver2022-and-later](../../includes/applies-to-version/sqlserver2022-and-later.md)]
+[!INCLUDE [sqlserver2022-and-later](../../includes/applies-to-version/sqlserver2022-and-later.md)]
 
 Parameter Sensitive Plan (PSP) optimization is part of the [Intelligent query processing](intelligent-query-processing.md) family of features. It addresses the scenario where a single cached plan for a parameterized query isn't optimal for all possible incoming parameter values. This is the case with non-uniform data distributions. For more information, see [Parameter Sensitivity](../query-processing-architecture-guide.md#parameter-sensitivity) and [Parameters and Execution Plan Reuse](../query-processing-architecture-guide.md#parameters-and-execution-plan-reuse).
 
@@ -30,9 +30,9 @@ PSP optimization automatically enables multiple, active cached plans for a singl
 
 ## Understand parameterization
 
-In the [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssde-md](../../includes/ssde-md.md)], using parameters or parameter markers in Transact-SQL (T-SQL) statements increases the ability of the relational engine to match new T-SQL statements with existing, previously compiled execution plans and promote plan reutilization. For more information, see [Simple Parameterization](../query-processing-architecture-guide.md#simple-parameterization).
+In the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] [!INCLUDE [ssde-md](../../includes/ssde-md.md)], using parameters or parameter markers in Transact-SQL (T-SQL) statements increases the ability of the relational engine to match new T-SQL statements with existing, previously compiled execution plans and promote plan reutilization. For more information, see [Simple Parameterization](../query-processing-architecture-guide.md#simple-parameterization).
 
-You can also override the default simple parameterization behavior of [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] by specifying that all `SELECT`, `INSERT`, `UPDATE`, and `DELETE` statements in a database are parameterized, subject to certain limitations. For more information, see [Forced Parameterization](../query-processing-architecture-guide.md#forced-parameterization).
+You can also override the default simple parameterization behavior of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] by specifying that all `SELECT`, `INSERT`, `UPDATE`, and `DELETE` statements in a database are parameterized, subject to certain limitations. For more information, see [Forced Parameterization](../query-processing-architecture-guide.md#forced-parameterization).
 
 ## PSP optimization implementation
 
@@ -58,7 +58,7 @@ As a dispatcher plan evaluates the cardinality of predicates based on runtime pa
 
 At runtime, the cardinality of each predicate is evaluated based on runtime parameter values. The dispatcher bucketizes the cardinality values into three predicate cardinality ranges at compile time. For example, the PSP optimization feature can create three ranges that would represent low, medium, and high cardinality ranges, as shown in the following diagram.
 
-:::image type="content" source="media/parameter-sensitivity-plan-optimization/parameter-sensitive-plan-boundaries.png" alt-text="Diagram showing the Parameter Sensitive Plan boundaries.":::
+:::image type="content" source="media/parameter-sensitivity-plan-optimization/parameter-sensitive-plan-boundaries.png" alt-text="Diagram showing the Parameter Sensitive Plan boundaries." lightbox="media/parameter-sensitivity-plan-optimization/parameter-sensitive-plan-boundaries.png":::
 
 In other words, when a parameterized query is initially compiled, the PSP optimization feature generates a shell plan known as a dispatcher plan. The dispatcher expression has the logic that bucketizes queries into query variants based on the runtime values of parameters. When actual execution begins, the dispatcher performs two steps:
 
@@ -222,7 +222,7 @@ SET QUERY_STORE = ON (
 ```
 
 > [!NOTE]  
-> Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], Query Store is now enabled by default for all newly created databases.
+> Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], Query Store is now enabled by default for all newly created databases.
 
 - To disable PSP optimization at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SENSITIVE_PLAN_OPTIMIZATION = OFF` database scoped configuration.
 
@@ -234,7 +234,7 @@ SET QUERY_STORE = ON (
 
 - The number of unique plan variants stored for a query in the Query Store store is limited by the `max_plans_per_query` configuration option. As query variants can have more than one plan, a total of 200 plans can be present per query within the Query Store. This number includes all query variant plans for all the dispatchers that belong to a parent query. Consider increasing the `max_plans_per_query` Query Store configuration option.
 
-  - An example of how the number of unique plans can exceed the default Query Store `max_plans_per_query` limit would be a scenario in which you have the following behavior. Let's assume that you have query with a Query ID of 10, which has two dispatcher plans and each dispatcher plan has 20 query variants each (40 query variants in total). The total number of plans for Query ID 10 is 40 plans for the query variants and the two dispatcher plans. It is also possible that the parent query itself (Query ID 10) can have 5 regular (non-dispatcher) plans. This makes 47 plans (40 from query variants, 2 dispatcher, and 5 non-PSP related plans). Further, if each query variant also has an average of five plans, it is possible in this scenario to have more than 200 plans in the Query Store for a parent query. This would also depend upon heavy data skew in the dataset(s) that this example parent query may be referencing.
+  - An example of how the number of unique plans can exceed the default Query Store `max_plans_per_query` limit would be a scenario in which you have the following behavior. Let's assume that you have query with a Query ID of 10, which has two dispatcher plans and each dispatcher plan has 20 query variants each (40 query variants in total). The total number of plans for Query ID 10 is 40 plans for the query variants and the two dispatcher plans. It is also possible that the parent query itself (Query ID 10) can have 5 regular (non-dispatcher) plans. This makes 47 plans (40 from query variants, 2 dispatcher, and 5 non-PSP related plans). Further, if each query variant also has an average of five plans, it is possible in this scenario to have more than 200 plans in the Query Store for a parent query. This would also depend upon heavy data skew in the dataset(s) that this example parent query might be referencing.
 
 - For each query variant mapping to a given dispatcher:
 
@@ -286,14 +286,14 @@ PSP with query hints and plan forcing behavior can be summarized in the followin
   SELECT name, map_value FROM sys.dm_xe_map_values WHERE name ='psp_skipped_reason_enum' ORDER BY map_key;
   ```
 
-- `parameter_sensitive_plan_optimization`: Occurs when a query uses PSP optimization feature. Debug channel only. Some fields of interest may be:
+- `parameter_sensitive_plan_optimization`: Occurs when a query uses PSP optimization feature. Debug channel only. Some fields of interest might be:
   - ***is_query_variant***: describes if this is a dispatcher plan (parent) or a query variant plan (child)
   - ***predicate_count***: number of predicates selected by PSP
   - ***query_variant_id***: displays the query variant ID. A value of 0 means the object is a dispatcher plan (parent).
 
 ### SQL Server Audit behavior
 
-PSP optimization provides audit data for the dispatcher plan statement, and any query variants associated with the dispatcher. The `additional_information` column within [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] Audit also provides the appropriate T-SQL stack information for query variants. Using the `MyNewDatabase` database as an example, if this database has a table called `T2` and a stored procedure with the name of `usp_test`, after the execution of the usp_test stored procedure, the audit log may contain the following entries:
+PSP optimization provides audit data for the dispatcher plan statement, and any query variants associated with the dispatcher. The `additional_information` column within [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Audit also provides the appropriate T-SQL stack information for query variants. Using the `MyNewDatabase` database as an example, if this database has a table called `T2` and a stored procedure with the name of `usp_test`, after the execution of the usp_test stored procedure, the audit log might contain the following entries:
 
 | action_id | object_name | statement | additional_information |
 | --- | --- | --- | --- |
@@ -309,14 +309,14 @@ PSP optimization provides audit data for the dispatcher plan statement, and any 
 
 | Issue | Date discovered | Status | Date resolved |
 | --- | --- | --- | --- |
-| Access Violation exception occurs in Query Store in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] under certain conditions. You may encounter Access violation exceptions when PSP optimization Query Store integration is enabled. | March 2023 | Resolved | August 2023 (CU 7) |
+| Access Violation exception occurs in Query Store in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] under certain conditions. You may encounter Access violation exceptions when PSP optimization Query Store integration is enabled. For more information, see the update in [Parameter Sensitive Plan Optimization, Why?](https://techcommunity.microsoft.com/t5/sql-server-blog/parameter-sensitive-plan-optimization-why/ba-p/3836281). | March 2023 | Resolved | August 2023 (CU 7) |
 
-## Resolved
+### Resolved
 
-### Access violation exception occurs in Query Store in SQL Server 2022 under certain conditions
+#### Access violation exception occurs in Query Store in SQL Server 2022 under certain conditions
 
 > [!NOTE]  
-> Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Cumulative Update 7, several fixes for a race condition which can lead to an access violation have been released. If access violations related to PSP optimization with Query Store integration occur after applying Cumulative Update 7 for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], consider the following workaround section.
+> Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Cumulative Update 7, several fixes for a race condition which can lead to an access violation have been released. If access violations related to PSP optimization with Query Store integration occur after applying Cumulative Update 7 for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], consider the following workaround section.
 
 This issue occurs because of a race condition that can be caused when the runtime statistics for an executed query are being persisted from the in memory representation of the Query Store (found in the `MEMORYCLERK_QUERYDISKSTORE_HASHMAP` memory clerk) to the on disk version of the Query Store. The runtime statistics, shown as Runtime Stats, are kept in memory for a period of time, defined by the `DATA_FLUSH_INTERVAL_SECONDS` option of the `SET QUERY_STORE` statement (the default value is 15 minutes). You can use the Management Studio Query Store dialog box to enter a value for Data Flush Interval (Minutes), which is internally converted to seconds. If the system is under memory pressure, runtime statistics can be flushed to disk earlier than defined with the `DATA_FLUSH_INTERVAL_SECONDS` option. When additional Query Store background threads related to Query Store query plan cleanup (that is, `STALE_QUERY_THRESHOLD_DAYS` and/or `MAX_STORAGE_SIZE_MB` Query Store options), queries from the Query Store, there is a scenario in which a query variant and/or its associated dispatcher statement can become dereferenced prematurely. This can result in an access violation during insert or delete operations of query variants into the Query Store.
 
@@ -372,18 +372,15 @@ ALTER DATABASE [<database>] SET QUERY_STORE = ON;
 GO
 ```
 
-If your Query Store is large, or if your system has a substantial workload and/or high number of ad hoc non-parameterized queries that qualify for capturing by Query Store, turning off the Query Store may take some time. To forcibly turn off the Query Store in these scenarios, use the `ALTER DATABASE [<database>] SET QUERY_STORE = OFF (FORCED)` command instead, in the previous sample T-SQL. To find non-parameterized queries, see [Find non-parameterized queries in Query Store](best-practice-with-the-query-store.md#find-non-parameterized-queries-in-query-store).
+If your Query Store is large, or if your system has a substantial workload and/or high number of ad hoc non-parameterized queries that qualify for capturing by Query Store, turning off the Query Store might take some time. To forcibly turn off the Query Store in these scenarios, use the `ALTER DATABASE [<database>] SET QUERY_STORE = OFF (FORCED)` command instead, in the previous sample T-SQL. To find non-parameterized queries, see [Find non-parameterized queries in Query Store](best-practice-with-the-query-store.md#find-non-parameterized-queries-in-query-store).
 
-## See also
+## Related content
 
 - [Recompiling Execution Plans](../query-processing-architecture-guide.md#recompiling-execution-plans)
 - [Parameters and Execution Plan Reuse](../query-processing-architecture-guide.md#parameters-and-execution-plan-reuse)
 - [Simple Parameterization](../query-processing-architecture-guide.md#simple-parameterization)
 - [Forced Parameterization](../query-processing-architecture-guide.md#forced-parameterization)
-- [Hints query](../../t-sql/queries/hints-transact-sql-query.md)
-
-## Next steps
-
-- [Intelligent query processing](intelligent-query-processing.md)
+- [Hints (Transact-SQL) - Query](../../t-sql/queries/hints-transact-sql-query.md)
+- [Intelligent query processing in SQL databases](intelligent-query-processing.md)
 - [Parameter Sensitivity](../query-processing-architecture-guide.md#parameter-sensitivity)
 - [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)

@@ -106,6 +106,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path_from_root": "/azure-sql/managed-instance/create-configure-managed-instance-powershell-quickstart.md",
+      "redirect_url": "/azure/azure-sql/managed-instance/instance-create-quickstart",
+      "redirect_document_id": true
+    },
+    {
       "source_path_from_root": "/azure-sql/managed-instance/scripts/create-powershell-azure-resource-manager-template.md",
       "redirect_url": "/azure/azure-sql/managed-instance/create-template-quickstart",
       "redirect_document_id": false
@@ -156,18 +161,73 @@
       "redirect_document_id": false
     },
     {
+      "source_path_from_root": "/azure-sql/database/auto-failover-group-configure-sql-db.md",
+      "redirect_url": "/azure/azure-sql/database/failover-group-configure-sql-db",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/auto-failover-group-sql-db.md",
+      "redirect_url": "/azure/azure-sql/database/failover-group-sql-db",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/failover-group-add-single-database-tutorial.md",
+      "redirect_url": "/azure/azure-sql/database/failover-group-configure-sql-db",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/failover-group-add-elastic-pool-tutorial.md",
+      "redirect_url": "/azure/azure-sql/database/failover-group-configure-sql-db",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/managed-instance/failover-group-add-instance-tutorial.md",
+      "redirect_url": "/azure/azure-sql/managed-instance/failover-group-configure-sql-mi",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/managed-instance/auto-failover-group-configure-sql-mi.md",
+      "redirect_url": "/azure/azure-sql/managed-instance/failover-group-configure-sql-mi",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/azure-sql/managed-instance/auto-failover-group-sql-mi.md",
+      "redirect_url": "/azure/azure-sql/managed-instance/failover-group-sql-mi",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/azure-sql/managed-instance/auto-failover-group-standby-replica-how-to-configure.md",
+      "redirect_url": "/azure/azure-sql/managed-instance/failover-group-standby-replica-how-to-configure",
+      "redirect_document_id": true
+    },
+    {
       "source_path_from_root": "/azure-sql/virtual-machines/linux/sql/sql-server-linux-faq.md",
       "redirect_url": "/azure/azure-sql/virtual-machines/linux/frequently-asked-questions-faq",
       "redirect_document_id": false
     },
     {
+      "source_path_from_root": "/azure-sql/virtual-machines/linux/rhel-high-availability-stonith-tutorial.md",
+      "redirect_url": "/azure/azure-sql/virtual-machines/linux/rhel-high-availability-fencing-tutorial",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/virtual-machines/linux/sles-high-availability-stonith-tutorial.md",
+      "redirect_url": "/azure/azure-sql/virtual-machines/linux/sles-high-availability-fencing-tutorial",
+      "redirect_document_id": false
+    },
+    {
       "source_path_from_root": "/azure-sql/virtual-machines/linux/sql/sql-server-linux-rhel-ha-listener-tutorial.md",
-      "redirect_url": "/azure/azure-sql/virtual-machines/linux/rhel-high-availability-listener-tutorial",
+      "redirect_url": "/azure/azure-sql/virtual-machines/linux/high-availability-listener-tutorial",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/virtual-machines/linux/rhel-high-availability-listener-tutorial.md",
+      "redirect_url": "/azure/azure-sql/virtual-machines/linux/high-availability-listener-tutorial",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/azure-sql/virtual-machines/linux/sql/sql-server-linux-rhel-ha-stonith-tutorial.md",
-      "redirect_url": "/azure/azure-sql/virtual-machines/linux/rhel-high-availability-stonith-tutorial",
+      "redirect_url": "/azure/azure-sql/virtual-machines/linux/rhel-high-availability-fencing-tutorial",
       "redirect_document_id": false
     },
     {
@@ -614,7 +674,7 @@
       "source_path_from_root": "/azure-sql/database/service-tiers-vcore.md",
       "redirect_url": "/azure/azure-sql/database/service-tiers-sql-database-vcore",
       "redirect_document_id": false
-    },    
+    },
     {
       "source_path_from_root": "/azure-sql/managed-instance/management-endpoint-verify-built-in-firewall.md",
       "redirect_url": "/azure/azure-sql/managed-instance/connectivity-architecture-overview",
@@ -624,17 +684,17 @@
       "source_path_from_root": "/azure-sql/managed-instance/scripts/restore-geo-backup-cli.md",
       "redirect_url": "/azure/azure-sql/managed-instance/scripts/restore-geo-backup",
       "redirect_document_id": false
-    },  
+    },
     {
       "source_path_from_root": "/azure-sql/database/elastic-jobs-migrate.md",
       "redirect_url": "/azure/azure-sql/database/job-automation-overview",
       "redirect_document_id": false
-    }, 
+    },
     {
       "source_path_from_root": "/azure-sql/virtual-machines/windows/sql-agent-extension-manually-register-single-vm.md#repair-extension",
       "redirect_url": "/azure/azure-sql/virtual-machines/windows/sql-agent-extension-troubleshoot-known-issues#repair-extension",
       "redirect_document_id": false
-    },    
+    },
     {
       "source_path_from_root": "/azure-sql/database/sql-database-vulnerability-assessment-rules.md",
       "redirect_url": "/azure/defender-for-cloud/sql-azure-vulnerability-assessment-rules",
@@ -654,6 +714,31 @@
       "source_path_from_root": "/azure-sql/managed-instance/virtual-cluster-delete.md",
       "redirect_url": "/azure/azure-sql/managed-instance/virtual-cluster-architecture",
       "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/in-memory-oltp-configure.md",
+      "redirect_url": "/azure/azure-sql/database/in-memory-oltp-configure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/in-memory-oltp-monitor-space.md",
+      "redirect_url": "/azure/azure-sql/database/in-memory-oltp-monitor-space",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/in-memory-oltp-overview.md",
+      "redirect_url": "/azure/azure-sql/database/in-memory-oltp-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/in-memory-sample.md",
+      "redirect_url": "/azure/azure-sql/database/in-memory-oltp-sample",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/alerts-insights-configure-portal.md",
+      "redirect_url": "/azure/azure-sql/database/alerts-create",
+      "redirect_document_id": false      
     }
   ]
 }

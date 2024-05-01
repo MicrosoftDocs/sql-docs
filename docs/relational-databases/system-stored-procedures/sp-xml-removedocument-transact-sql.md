@@ -55,7 +55,7 @@ The following example removes the internal representation of an XML document. Th
 EXEC sp_xml_removedocument @hdoc;
 ```
 
-## Next steps
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [XML stored procedures (Transact-SQL)](xml-stored-procedures-transact-sql.md)

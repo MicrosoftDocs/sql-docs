@@ -67,7 +67,7 @@ If *partition_function_name* generates fewer partitions than filegroups, the fir
  
 When you specify the primary filegroup in *file_group_name* [ **,**_...n_], PRIMARY must be delimited, as in **[**PRIMARY**]**, because it is a keyword.  
  
-Only PRIMARY is supported for [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]. See example below. 
+Only PRIMARY is supported for [!INCLUDE[sssds](../../includes/sssds-md.md)]. See example below. 
   
 ## Permissions
 
@@ -154,7 +154,7 @@ Partition scheme 'myRangePS4' has been created successfully. 'test5fg' is marked
 
 ### E. Creating a partition scheme only on PRIMARY
 
- In Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], adding files and file groups is not supported, but table partitioning is supported by partitioning across only the PRIMARY filegroup. 
+ In Azure [!INCLUDE[sssds](../../includes/sssds-md.md)], adding files and file groups is not supported, but table partitioning is supported by partitioning across only the PRIMARY filegroup. 
 
 The following example creates a partition function to partition a table or index into four partitions. A partition scheme is then created that specifies that all partitions are created in the PRIMARY filegroup.  
   

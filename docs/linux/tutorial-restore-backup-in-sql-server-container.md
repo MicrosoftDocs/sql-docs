@@ -3,7 +3,7 @@ title: Restore a SQL Server database in a Linux container
 description: This tutorial shows how to restore a SQL Server database backup in a new Linux container.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 10/29/2023
+ms.date: 02/22/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -35,9 +35,6 @@ This tutorial demonstrates how to move and restore a [!INCLUDE [ssnoversion-md](
 
 ::: moniker-end
 
-> [!TIP]  
-> You can use **sqlcmd** (Go) to create a new instance of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] in a container, and restore a sample database. For more information, see [Create and query a SQL Server container](../tools/sqlcmd/sqlcmd-use-utility.md#create-and-query-a-sql-server-container).
-
 > [!div class="checklist"]
 > - Pull and run the latest [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Linux container image.
 > - Copy the Wide World Importers database file into the container.
@@ -47,12 +44,19 @@ This tutorial demonstrates how to move and restore a [!INCLUDE [ssnoversion-md](
 
 ## Prerequisites
 
-- Docker Engine 1.8+ on any supported Linux distribution. For more information, see [Install Docker](https://docs.docker.com/engine/installation/).
-- Minimum of 2 GB of disk space
-- Minimum of 2 GB of RAM
-- [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
+- A container runtime installed, such as [Docker](https://www.docker.com/) or [Podman](https://podman.io/)
+- Install the latest **[sqlcmd](../tools/sqlcmd/sqlcmd-utility.md?tabs=go%2Clinux&pivots=cs1-bash)**
+- [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system)
 
-## Pull and run the container image
+## Deployment options
+
+This section provides deployment options for your environment.
+
+**sqlcmd** doesn't currently support the `MSSQL_PID` parameter when creating containers. If you use the **sqlcmd** instructions in this tutorial, you create a container with the Developer edition of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. Use the command line interface (CLI) instructions to create a container using the license of your choice. For more information, see [Deploy and connect to SQL Server Linux containers](sql-server-linux-docker-container-deployment.md).
+
+## [CLI](#tab/cli)
+
+### Pull and run the container image
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -177,11 +181,12 @@ This tutorial demonstrates how to move and restore a [!INCLUDE [ssnoversion-md](
    ```
 
 ::: moniker-end
-## Change the SA password
+
+### Change the SA password
 
 [!INCLUDE [change-docker-password](includes/change-docker-password.md)]
 
-## Copy a backup file into the container
+### Copy a backup file into the container
 
 This tutorial uses the [Wide World Importers sample databases for Microsoft SQL](../samples/wide-world-importers-what-is.md). Use the following steps to download and copy the Wide World Importers database backup file into your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container.
 
@@ -204,7 +209,7 @@ This tutorial uses the [Wide World Importers sample databases for Microsoft SQL]
    sudo docker cp wwi.bak sql1:/var/opt/mssql/backup
    ```
 
-## Restore the database
+### Restore the database
 
 The backup file is now located inside the container. Before restoring the backup, it's important to know the logical file names and file types inside the backup. The following Transact-SQL commands inspect the backup and perform the restore using **sqlcmd** in the container.
 
@@ -267,7 +272,7 @@ The backup file is now located inside the container. Before restoring the backup
    RESTORE DATABASE successfully processed 58455 pages in 18.069 seconds (25.273 MB/sec).
    ```
 
-## Verify the restored database
+### Verify the restored database
 
 Run the following query to display a list of database names in your container:
 
@@ -279,7 +284,7 @@ sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
 
 You should see `WideWorldImporters` in the list of databases.
 
-## Make a change
+### Make a change
 
 Follow these steps to make a change in the database.
 
@@ -325,7 +330,7 @@ Follow these steps to make a change in the database.
              1 USB missile launcher (Dark Green)
    ```
 
-## Create a new backup
+### Create a new backup
 
 After you've restored your database into a container, you might also want to regularly create database backups inside the running container. The steps follow a similar pattern to the previous steps but in reverse.
 
@@ -364,7 +369,7 @@ After you've restored your database into a container, you might also want to reg
    ls -l wwi*
    ```
 
-## Use the persisted data
+### Use the persisted data
 
 In addition to taking database backups for protecting your data, you can also use data volume containers. The beginning of this tutorial created the `sql1` container with the `-v sql1data:/var/opt/mssql` parameter. The `sql1data` data volume container persists the `/var/opt/mssql` data even after the container is removed. The following steps completely remove the `sql1` container and then create a new container, `sql2`, with the persisted data.
 
@@ -474,6 +479,99 @@ In addition to taking database backups for protecting your data, you can also us
 
 ::: moniker-end
 
+## [sqlcmd](#tab/sqlcmd)
+
+### Create a container and restore a database
+
+You can use a single command in **sqlcmd** (Go) to create a new container, and restore a database to that container to create a new local copy of a database, for development or testing. For more information, see [Create and query a SQL Server container](../tools/sqlcmd/sqlcmd-use-utility.md#create-and-query-a-sql-server-container).
+
+[!INCLUDE [sqlcmd-create-container](../includes/paragraph-content/sqlcmd-create-container.md)]
+
+### Make a change
+
+Follow these steps to make a change in the database.
+
+1. Run a query to view the top 10 items in the `Warehouse.StockItems` table.
+
+   ```bash
+   sqlcmd -Q "SELECT TOP 10 StockItemID, StockItemName FROM Warehouse.StockItems ORDER BY StockItemID"
+   ```
+
+   You should see a list of item identifiers and names:
+
+   ```output
+   StockItemID StockItemName
+   ----------- -----------------
+             1 USB missile launcher (Green)
+             2 USB rocket launcher (Gray)
+             3 Office cube periscope (Black)
+             4 USB food flash drive - sushi roll
+             5 USB food flash drive - hamburger
+             6 USB food flash drive - hot dog
+             7 USB food flash drive - pizza slice
+             8 USB food flash drive - dim sum 10 drive variety pack
+             9 USB food flash drive - banana
+            10 USB food flash drive - chocolate bar
+   ```
+
+1. Update the description of the first item with the following `UPDATE` statement:
+
+   ```bash
+   sqlcmd -Q "UPDATE Warehouse.StockItems SET StockItemName='USB missile launcher (Dark Green)' WHERE StockItemID=1; SELECT StockItemID, StockItemName FROM Warehouse.StockItems WHERE StockItemID=1"
+   ```
+
+   You should see an output similar to the following text:
+
+   ```output
+   (1 rows affected)
+   StockItemID StockItemName
+   ----------- ------------------------------------
+             1 USB missile launcher (Dark Green)
+   ```
+
+### Create a new backup
+
+After you've restored your database into a container, you might also want to regularly create database backups inside the running container. The steps follow a similar pattern to the previous steps but in reverse.
+
+1. Use the `BACKUP DATABASE` Transact-SQL command to create a database backup in the container. This tutorial creates a new backup file, `wwi_2.bak` in the `/var/opt/mssql/backup` directory.
+
+   ```bash
+   sqlcmd -Q "BACKUP DATABASE [WideWorldImporters-Full] TO DISK = N'/var/opt/mssql/backup/wwi_2.bak' WITH NOFORMAT, NOINIT, NAME = 'WideWorldImporters-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
+   ```
+
+   You should see output similar to the following:
+
+   ```output
+   10 percent processed.
+   20 percent processed.
+   Processed 1536 pages for database 'WideWorldImporters-Full', file 'WWI_Primary' on file 1.
+   Processed 53112 pages for database 'WideWorldImporters-Full', file 'WWI_UserData' on file 1.
+   Processed 3865 pages for database 'WideWorldImporters-Full', file 'WWI_InMemory_Data_1' on file 1.
+   Processed 287 pages for database 'WideWorldImporters-Full', file 'WWI_Log' on file 1.
+   100 percent processed.
+   BACKUP DATABASE successfully processed 58800 pages in 3.536 seconds (129.913 MB/sec).
+   ```
+
+1. Next, copy the backup file out of the container and onto your host machine.
+
+   ```bash
+   cd ~
+   sudo docker cp sql1:/var/opt/mssql/backup/wwi_2.bak wwi_2.bak
+   ls -l wwi*
+   ```
+
+### Clean up
+
+Now that the backup has been copied off the container, it can be cleaned up. The following steps completely remove the `sql1` container.
+
+1. Remove the container. **sqlcmd** has built-in safeguards to prevent deleting a container that is in use. The way it determines if a container is still in use is whether it has any user databases. For production scenarios it is recommended to delete user databases individually after verifying they are no long in use. For development/testing we can use the `--force` parameter to delete the container without deleting the user database.
+
+   ```bash
+   sqlcmd delete --force
+   ```
+
+---
+
 ## Next step
 
 <!--SQL Server 2017 on Linux -->
@@ -498,9 +596,9 @@ In this tutorial, you learned how to back up a database on Windows and move it t
 > [!div class="checklist"]
 > - Create [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Linux container images.
 > - Copy [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] database backups into a container.
-> - Run Transact-SQL statements inside the container with `sqlcmd`.
+> - Run Transact-SQL statements with **sqlcmd**.
 > - Create and extract backup files from a container.
-> - Use data volume containers to persist [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] data.
+> - Use data volume containers to persist [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] production data.
 
 Next, review other container configuration and troubleshooting scenarios:
 

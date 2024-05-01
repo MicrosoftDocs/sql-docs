@@ -3,10 +3,10 @@ title: "SQL Server Agent, Alerts object"
 description: Learn about the SQL Server Agent Alerts performance object, which contains performance counters that report information about SQL Server Agent alerts.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/12/2021"
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "Alerts object"
   - "SQLAgent:Alerts"
@@ -26,9 +26,8 @@ helpviewer_keywords:
 > [!NOTE]  
 >  To use this SQL Server Agent object, users must be a member of the **sysadmin** fixed server role.  
   
-## See also  
- [Alerts](../../ssms/agent/alerts.md)   
- [Use Performance Objects](../../ssms/agent/use-performance-objects.md)   
- [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
-  
-  
+## Related content
+
+- [Alerts](../../ssms/agent/alerts.md)
+- [Use Performance Objects](../../ssms/agent/use-performance-objects.md)
+- [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)

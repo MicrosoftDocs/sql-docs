@@ -1,9 +1,9 @@
 ---
 title: "CREATE MEMBER Statement (MDX)"
 description: "MDX Data Definition - CREATE MEMBER"
-author: minewiskan
-ms.author: owend
-ms.reviewer: owend
+author: kfollis
+ms.author: kfollis
+ms.reviewer: kfollis
 ms.date: 07/22/2020
 ms.service: sql
 ms.subservice: analysis-services

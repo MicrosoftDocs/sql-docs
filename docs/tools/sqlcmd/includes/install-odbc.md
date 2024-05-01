@@ -1,7 +1,7 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 08/15/2023
+ms.date: 03/06/2024
 ms.service: sql
 ms.topic: include
 ---
@@ -21,7 +21,10 @@ The command line tools are General Availability (GA), however they're being rele
 - Build number: 15.0.4298.1
 - Release date: April 7, 2023
 
-**sqlcmd** (ODBC) supports Azure Active Directory (Azure AD) authentication, including Multi-Factor Authentication (MFA) support for Azure SQL Database, Azure Synapse Analytics, and Always Encrypted features.
+> [!NOTE]
+> The **sqlcmd** download provided here might not have the same release and build number as **sqlcmd** installed with the latest SQL Server cumulative update (CU). This is expected behavior. This version contains all the fixes included in the latest CU.
+
+**sqlcmd** (ODBC) supports authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)), including multifactor authentication (MFA) support for Azure SQL Database, Azure Synapse Analytics, and Always Encrypted features.
 
 #### System requirements
 

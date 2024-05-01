@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for Report Viewer controls"
+title: "Release notes for Report Viewer controls"
 description: The release notes for the Report Viewer controls of WebForms and WinForms, related to Reporting Services.
 author: RhysSchmidtke
 ms.author: petebro
@@ -11,22 +11,22 @@ ms.topic: reference
 ms.custom: updatefrequency5
 ---
 
-# Release Notes for Report Viewer controls for WebForms and WinForms of SSRS
+# Release notes for Report Viewer controls for WebForms and WinForms of SSRS
 
-These are the release notes for the Report Viewer controls of WebForms and WinForms, related to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS).
+These release notes for the Report Viewer controls of WebForms and WinForms, related to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS).
 
 For the release notes for SSRS, see [Release notes for SQL Server Reporting Services (SSRS) 2017 and later](../release-notes-reporting-services.md).
 ## 150.1586.0
 
 | Change description | Details |
 | :----------------- | :------ |
-| Bug Fixes | Fixed issues with PDF Renderer: Can detect complex clusters and write them out using Glyph ID's. |
+| Bug Fixes | Fixed issues with PDF Renderer: Can detect complex clusters and write them out by using Glyph IDs. |
 |           | Jquery was updated from 3.5.1 to 3.6.0 to resolve security vulnerability |
 
 ## 150.1537.0
 | Change description | Details |
 | :----------------- | :------ |
-| Bug Fixes | Fixed an issue with datepicker closing on certain size screens. |
+| Bug Fixes | Fixed an issue with DatePicker closing on certain size screens. |
 |           | Fixed many screen reader issues. |
 
 ## 150.1484.0 
@@ -38,7 +38,7 @@ For the release notes for SSRS, see [Release notes for SQL Server Reporting Serv
 ## 150.1427.0
 | Change description | Details |
 | :----------------- | :------ |
-| Bug Fixes | Fixed an issue with links not looking visited after being clicked. |
+| Bug Fixes | Fixed an issue with links not looking visited after being selected. |
 |           | Fixed a datetime parsing issue affecting certain locales. |
 
 ## 150.1404.0
@@ -50,13 +50,13 @@ For the release notes for SSRS, see [Release notes for SQL Server Reporting Serv
 ## 150.1400.0
 | Change description | Details |
 | :----------------- | :------ |
-| Bug Fixes | Fixed an issue where the viewer control would not load in design mode. |
+| Bug Fixes | Fixed an issue where the viewer control wouldn't load in design mode. |
 
 ## 150.1358.0
 | Change description | Details |
 | :----------------- | :------ |
 | Bug Fixes | Reverted a change that removed the Microsoft.ReportViewer.Design assemblies from the project references. |
-|           | As part of other changes, two assemblies were changed from 15.0 version to 15.3. This has been reverted. |
+|           | As part of other changes, two assemblies were changed from 15.0 version to 15.3. These changes were reverted. |
 
 ## 150.1357.0
 | Change description | Details |
@@ -75,7 +75,7 @@ For the release notes for SSRS, see [Release notes for SQL Server Reporting Serv
 | Change description | Details |
 | :----------------- | :------ |
 | Fix for a bug preventing reports without parameters to be loaded through **Server.LoadReportDefinition**. | &nbsp; |
-| The WebForms Report Viewer Control. | Supports embedding in RTL pages (pages that change the text flow using the *direction: rtl;* css property).<br/><br/>Supports customizing print dialog text via the *IReportViewerMessages5* localization interface.<br/><br/>Improved accessibility support.<br/><br/>&bull; &nbsp; &nbsp; [NuGet package for the Report Viewer control of WebForms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Webforms/150.900.148). |
+| The WebForms Report Viewer Control. | Supports embedding in RTL pages (pages that change the text flow by using the *direction: rtl;* css property).<br/><br/>Supports customizing print dialog text via the *IReportViewerMessages5* localization interface.<br/><br/>Improved accessibility support.<br/><br/>&bull; &nbsp; &nbsp; [NuGet package for the Report Viewer control of WebForms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Webforms/150.900.148). |
 | The WinForms Report Viewer Control. | Fix for printing when an app is running in a High DPI mode.<br/><br/>&bull; &nbsp; &nbsp; [NuGet package for the Report Viewer control of WinForms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Winforms/150.900.148). |
 
 ## Next steps

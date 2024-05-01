@@ -56,7 +56,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**subscription type**|**int**|Subscription type to the publication.|  
 |**distribution agent**|**nvarchar(100)**|Distribution Agent handling the subscription.|  
 |**publication description**|**nvarchar(255)**|Description of the publication.|  
-|**last updating time**|**date**|Time the subscription information was updated. This is a UNICODE string of ISO date (114) + ODBC time (121). The format is yyyymmdd hh:mi:sss.mmm where 'yyyy' is year, 'mm' is month, 'dd' is day, 'hh' is hour, 'mi' is minute, 'sss' is seconds, and 'mmm' is milliseconds.|  
+|**last updating time**|**date**|Time the subscription information was updated. This is a UNICODE string of ISO date (114) + ODBC time (121). The format is `yyyymmdd hh:mi:sss.mmm` where 'yyyy' is year, 'mm' is month, 'dd' is day, 'hh' is hour, 'mi' is minute, 'sss' is seconds, and 'mmm' is milliseconds.|  
 |**subscription name**|**varchar(386)**|Name of the subscription.|  
 |**last transaction timestamp**|**varbinary(16)**|Timestamp of the last replicated transaction.|  
 |**update mode**|**tinyint**|Type of updates allowed.|  
@@ -86,7 +86,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**offload_server**|**sysname**|Specifies the network name of the server used for remote activation.|  
 |**last_sync_status**|**int**|Subscription status:<br /><br /> **0** = All jobs are waiting to start<br /><br /> **1** = One or more jobs are starting<br /><br /> **2** = All jobs have executed successfully<br /><br /> **3** = At least one job is executing<br /><br /> **4** = All jobs are scheduled and idle<br /><br /> **5** = At least one job is attempting to execute after a previous failure<br /><br /> **6** = At least one job has failed to execute successfully|  
 |**last_sync_summary**|**sysname**|Description of last synchronization results.|  
-|**last_sync_time**|**datetime**|Time the subscription information was updated. This is a UNICODE string of ISO date (114) + ODBC time (121). The format is yyyymmdd hh:mi:sss.mmm where 'yyyy' is year, 'mm' is month, 'dd' is day, 'hh' is hour, 'mi' is minute, 'sss' is seconds, and 'mmm' is milliseconds.|  
+|**last_sync_time**|**datetime**|Time the subscription information was updated. This is a UNICODE string of ISO date (114) + ODBC time (121). The format is `yyyymmdd hh:mi:sss.mmm` where 'yyyy' is year, 'mm' is month, 'dd' is day, 'hh' is hour, 'mi' is minute, 'sss' is seconds, and 'mmm' is milliseconds.|  
 |**job_login**|**nvarchar(512)**|Is the Windows account under which the Distribution agent runs, which is returned in the format *domain*\\*username*.|  
 |**job_password**|**sysname**|For security reasons, a value of "**\*\*\*\*\*\*\*\*\*\***" is always returned.|  
   

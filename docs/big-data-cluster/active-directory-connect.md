@@ -8,6 +8,7 @@ ms.reviewer: wiassaf
 ms.date: 09/30/2020
 ms.service: sql
 ms.subservice: big-data-cluster
+ms.custom: linux-related-content
 ms.topic: conceptual
 ---
 

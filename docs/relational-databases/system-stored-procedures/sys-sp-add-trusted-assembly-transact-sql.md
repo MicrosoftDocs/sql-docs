@@ -64,7 +64,7 @@ EXEC sp_add_trusted_assembly
     N'pointudt, version=0.0.0.0, culture=neutral, publickeytoken=null, processorarchitecture=msil';
 ```
 
-## Next steps
+## Related content
 
 - [sys.sp_drop_trusted_assembly](sys-sp-drop-trusted-assembly-transact-sql.md)
 - [sys.trusted_assemblies](../system-catalog-views/sys-trusted-assemblies-transact-sql.md)

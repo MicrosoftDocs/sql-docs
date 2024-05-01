@@ -152,7 +152,7 @@ SET @doc ='
 EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc, '<ROOT xmlns:xyz="urn:MyNamespace"/>';
 ```
 
-## Next steps
+## Related content
 
 - [XML Stored Procedures(Transact-SQL)](xml-stored-procedures-transact-sql.md)
 - [System Stored Procedures(Transact-SQL)](system-stored-procedures-transact-sql.md)

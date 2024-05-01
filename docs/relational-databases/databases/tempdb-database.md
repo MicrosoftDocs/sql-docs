@@ -4,7 +4,7 @@ description: This article provides details about the configuration and use of th
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 08/10/2023
+ms.date: 11/22/2023
 ms.service: sql
 ms.topic: conceptual
 ms.custom: P360
@@ -106,6 +106,8 @@ The behavior of `tempdb` in Azure SQL Database differs from the behavior SQL Ser
 ### tempdb in SQL Database
 
 Single and pooled databases in [Azure SQL Database](/azure/azure-sql/database/sql-database-paas-overview) support global temporary tables and global temporary stored procedures scoped to the database level, and stored in `tempdb`.  Global temporary tables and global temporary stored procedures are shared for all users' sessions within the same database. User sessions from other databases can't access global temporary tables. For more information, see [Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database).
+
+For single databases, each single database on a logical server has its own `tempdb`. In an elastic pool, `tempdb` is a shared resource for all databases in the same pool but temporary objects created by one database are not visible to other databases in the pool. 
 
 For single and pooled databases in Azure SQL Database, out of all the system databases, only the `master` database and `tempdb` database are accessible.  For more information, see [What is a logical server in Azure?](/azure/azure-sql/database/logical-servers)
 
@@ -231,7 +233,7 @@ This feature effectively removes this bottleneck and unlocks a new level of scal
 
 Watch this seven-minute video for an overview of how and when to use Memory-optimized TempDB metadata:
 
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-and-When-To-Memory-Optimized-TempDB-Metadata/player?WT.mc_id=dataexposed-c9-niner]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?show=data-exposed&ep=how-and-when-to-memory-optimized-tempdb-metadata]
 
 ### Configure and use memory-optimized tempdb metadata
 

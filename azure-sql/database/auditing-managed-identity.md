@@ -1,9 +1,10 @@
 ---
 title: Auditing using managed identity
+titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: How to use managed identity with storage accounts for auditing
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: randolphwest
+ms.reviewer: randolphwest, mathoma
 ms.date: 05/31/2023
 ms.service: sql-database
 ms.subservice: security
@@ -100,7 +101,7 @@ PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 }
 ```
 
-For more information, see [Server Auditing Settings - Create Or Update](/rest/api/sql/2017-03-01-preview/server-auditing-settings/create-or-update).
+For more information, see [Server Auditing Settings - Create Or Update](/rest/api/sql/server-blob-auditing-policies/create-or-update).
 
 ---
 
@@ -112,7 +113,7 @@ In the Azure portal for Azure Synapse Analytics, there is no option to explicitl
 
 - If the storage account is behind a VNet or firewall, auditing is automatically configured using SMI authentication.
 
-- If the storage account isn't behind a VNet or firewall, then auditing is automatically configured using SAS key based authentication.
+- If the storage account isn't behind a VNet or firewall, auditing is automatically configured using SAS key based authentication. However, managed identity cannot be used if the storage account isn't behind a VNet or firewall.
 
 To force the use of SMI authentication, regardless of whether the storage account is behind a VNet or firewall, use REST API or PowerShell, as follows:
 
@@ -120,8 +121,8 @@ To force the use of SMI authentication, regardless of whether the storage accoun
 
   For more information, reference:
 
-  - [Server Blob Auditing Policies - Create Or Update - REST API (Azure SQL Database)](/rest/api/sql/2022-08-01-preview/server-blob-auditing-policies/create-or-update?tabs=HTTP)
-  - [Database Blob Auditing Policies - Create Or Update - REST API (Azure SQL Database](/rest/api/sql/2021-02-01-preview/database-blob-auditing-policies/create-or-update?tabs=HTTP)
+  - [Server Blob Auditing Policies - Create Or Update - REST API (Azure SQL Database)](/rest/api/sql/server-blob-auditing-policies/create-or-update)
+  - [Database Blob Auditing Policies - Create Or Update - REST API (Azure SQL Database](/rest/api/sql/database-blob-auditing-policies/create-or-update)
 
 - If using PowerShell, pass the `UseIdentity` parameter as `true`.
 

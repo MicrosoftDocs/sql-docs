@@ -9,7 +9,7 @@ ms.date: 06/22/2020
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.custom: intro-deployment
+ms.custom: intro-deployment, linux-related-content
 ---
 
 # How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes

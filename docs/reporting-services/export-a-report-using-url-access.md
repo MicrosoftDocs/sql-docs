@@ -1,5 +1,5 @@
 ---
-title: "Export a Report Using URL Access"
+title: "Export a report by using URL access"
 description: "Learn how to export a report using URL access by specifying the format in which to render a report by using the rs:Format URL parameter."
 author: maggiesMSFT
 ms.author: maggies
@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "formats [Reporting Services], URL rendering"
   - "URL access [Reporting Services], rendering formats"
 ---
-# Export a Report Using URL Access
-  You can optionally specify the format in which to render a report by using the *rs:Format* URL parameter.  The HTML4.0 and HTM5 formats (rendering extension) will render in the browser and for other formats, the browser will prompt to save the report output to a local file.  
+# Export a report by using URL access
+  You can optionally specify the format in which to render a report by using the ``rs:Format`` URL parameter.  The HTML4.0 and HTM5 formats (rendering extension) render in the browser and for other formats, the browser prompts to save the report output to a local file.  
   
  For example, to get a PDF copy of a report directly from a native mode report server:  
   
@@ -37,12 +37,13 @@ https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/myrerepo
 https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportfolder%2freport+name+with+spaces&rs:Format=pptx  
 ```  
   
- Valid values for this parameter are based on the report rendering extensions that are installed on the report server being accessed. Common extensions are HTML4.0, MHTML, IMAGE, EXCELOPENXML (xlsx) , WORDOPENXML (docx), CSV, PDF, XML, and NULL. If a specified rendering extension is not installed on the report server, the report is not rendered and an error is generated and displayed in the browser.  
+ Valid values for this parameter are based on the report rendering extensions that are installed on the report server being accessed. Common extensions are HTML4.0, MHTML, IMAGE, EXCELOPENXML (xlsx), WORDOPENXML (docx), CSV, PDF, XML, and NULL. If a specified rendering extension isn't installed on the report server, the report isn't rendered and an error is generated and displayed in the browser.  
   
- If you do not include the *Format* parameter as part of the URL, the report server detects the browser and renders the report in the appropriate HTML format.  
+ If you don't include the *Format* parameter as part of the URL, the report server detects the browser and renders the report in the appropriate HTML format.  
   
-## See Also  
- [URL Access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md)  
+## Related content
+
+- [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
+- [URL access parameter reference](../reporting-services/url-access-parameter-reference.md)  
   
   

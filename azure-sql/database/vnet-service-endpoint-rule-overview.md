@@ -3,7 +3,7 @@ title: Virtual network endpoints and rules for databases
 description: Mark a subnet as a virtual network service endpoint. Then add the endpoint as a virtual network rule to the ACL for your database. Your database then accepts communication from all virtual machines and other nodes on the subnet.
 author: rohitnayakmsft
 ms.author: rohitna
-ms.reviewer: wiassaf, vanto, genemi, mathoma
+ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 09/27/2023
 ms.service: sql-database
 ms.subservice: security
@@ -304,7 +304,7 @@ Error 40615 is similar, except it relates to *IP address rules* on the firewall.
 
 <!-- Link references, to text, Outside this GitHub repo (HTTP). -->
 [http-azure-portal-link-ref-477t]: https://portal.azure.com/
-[rest-api-virtual-network-rules-operations-862r]: /rest/api/sql/virtualnetworkrules
+[rest-api-virtual-network-rules-operations-862r]: /rest/api/sql/virtual-network-rules
 
 <!-- ??2
 #### Syntax related articles

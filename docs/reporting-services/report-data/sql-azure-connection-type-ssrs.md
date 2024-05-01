@@ -149,14 +149,16 @@ For more information about platform and version support, see [Data Sources Suppo
 
 ::: moniker range=">=sql-server-2016"
 
-## Azure SQL Database and AAD
+<a name='azure-sql-database-and-aad'></a>
 
-You can use the Azure SQL database with Azure Active Directory (AAD).
+## Azure SQL Database and Microsoft Entra ID
+
+You can use Azure SQL Database with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)).
 
 This scenario is supported when you set up the following items properly:
 
 - Active Directory Authentication Library for SQL Server (ADALSQL) is installed on the report server.
-- [Active Directory Federation Services (ADFS)](/windows-server/identity/active-directory-federation-services) is configured to federate across on-premises Active Directory (AD) and AAD.
+- [Active Directory Federation Services (ADFS)](/windows-server/identity/active-directory-federation-services) is configured to federate across on-premises Active Directory (AD) and Microsoft Entra ID.
 - [Kerberos Constrained Delegation (KCD)](/windows-server/security/kerberos/kerberos-constrained-delegation-overview) is configured from the report server to the ADFS server.
 - Configure the report/data source to authenticate to [Azure SQL Database](/azure/sql-database/sql-database-technical-overview) as the user viewing the report.
 

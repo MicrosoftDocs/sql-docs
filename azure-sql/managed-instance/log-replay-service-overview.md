@@ -112,7 +112,7 @@ Use continuous mode migration when you don't have the entire backup chain in adv
 
 If you're migrating large databases of several terabytes in size, consider the following:
 - A single LRS job can run for a maximum of 30 days. When this period expires, the job is automatically canceled.
-- For long-running jobs, system updates will interrupt and prolong migration jobs. We highly recommend that you use a [maintenance window]( ../database/maintenance-window.md) to schedule planned system updates. Plan your migration around the scheduled maintenance window.
+- For long-running jobs, system updates will interrupt and prolong migration jobs. We highly recommend that you use a [maintenance window]( maintenance-window.md) to schedule planned system updates. Plan your migration around the scheduled maintenance window.
 - Migration jobs that are interrupted by system updates are automatically suspended and resumed for General Purpose managed instances, and they're restarted for Business Critical managed instances. These updates will affect the timeframe of your migration.
 - To increase the upload speed of your SQL Server backup files to the Blob Storage account, if your infrastructure has sufficient network bandwidth, consider using parallelization with multiple threads.
 
@@ -147,7 +147,7 @@ Consider the following limitations of LRS:
 
 - Only database `.bak`, `.log`, and `.diff` files are supported by LRS. Dacpac and bacpac files are not supported. 
 - During the migration process, databases that are being migrated can't be used for read-only access on SQL Managed Instance.
-- You have to configure a [maintenance window](../database/maintenance-window.md) to allow scheduling of system updates at a specific day and time. Plan to run and finish migrations outside the scheduled maintenance window.
+- You have to configure a [maintenance window](maintenance-window.md) to allow scheduling of system updates at a specific day and time. Plan to run and finish migrations outside the scheduled maintenance window.
 - Database backups that are taken without `CHECKSUM` take longer to restore than do database backups with `CHECKSUM` enabled. 
 - The shared access signature (SAS) token that LRS uses must be generated for the entire Azure Blob Storage container, and it must have Read and List permissions only. For example, if you grant Read, List, and Write permissions, LRS won't be able to start because of the extra Write permission.
 - Using SAS tokens created with permissions that are set through defining a [stored access policy](/rest/api/storageservices/define-stored-access-policy) isn't supported. Follow the instructions in this article to manually specify Read and List permissions for the SAS token.
@@ -155,9 +155,11 @@ Consider the following limitations of LRS:
 - If you're using autocomplete mode, the entire backup chain needs to be available in advance on the Blob Storage account. It isn't possible to add new backup files in autocomplete mode. Use continuous mode if you need to add new backup files while migration is in progress.
 - You must start LRS separately for each database that points to the full URI path that contains an individual database folder. 
 - The backup URI path, container name or folder names should not contain `backup` or `backups` as these are reserved keywords.
+- When starting multiple Log Replay restores in parallel, targeting the same storage container, ensure that the same valid SAS token is provided for every restore operation.
 - LRS can support up to 100 simultaneous restore processes per single managed instance.
 - A single LRS job can run for a maximum of 30 days, after which it will be automatically canceled.
 - While it's possible to use an Azure Storage account behind a firewall, extra configuration is necessary, and the storage account and managed instance must either be in the same region, or two paired regions. Review [Configure firewall](log-replay-service-migrate.md#configure-azure-storage-behind-a-firewall) to learn more. 
+- The maximum number of databases you can restore in parallel is 200 per single subscription. In some cases, it's possible to increase this limit by opening a support ticket. 
 
    
 

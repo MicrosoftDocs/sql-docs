@@ -1,6 +1,6 @@
 ---
-title: "ConfigurationSetting Property - VirtualDirectoryReportManager"
-description: "ConfigurationSetting Property - VirtualDirectoryReportManager"
+title: "ConfigurationSetting property - VirtualDirectoryReportManager"
+description: "ConfigurationSetting property - VirtualDirectoryReportManager"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -11,7 +11,7 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "VirtualDirectoryReportManager property"
 ---
-# ConfigurationSetting Property - VirtualDirectoryReportManager
+# ConfigurationSetting property - VirtualDirectoryReportManager
   Returns the virtual directory for the report manager application. Read-only.  
   
 ## Syntax  
@@ -24,16 +24,16 @@ Public Dim VirtualDirectoryReportManager As String
 public string VirtualDirectoryReportManager;  
 ```  
   
-## Property Values  
+## Property values  
  A **string** that contains the virtual directory.  
   
-## Example Code  
- [MSReportServer_ConfigurationSetting Class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
+## Example code  
+ [MSReportServer_ConfigurationSetting class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+## Related content 
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

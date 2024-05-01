@@ -3,10 +3,10 @@ title: "SQL Server, Deprecated Features object"
 description: "Learn about the SQLServer:Deprecated Features object, which provides a counter to monitor the features designated as deprecated."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/13/2021"
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "SQLServer:Deprecated Features"
   - "performance counters [SQL Server], deprecated features"
@@ -16,7 +16,7 @@ helpviewer_keywords:
 # SQL Server, Deprecated Features object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  The SQLServer:Deprecated Features object in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a counter to monitor the features designated as deprecated. In each case the counter provides a usage count that lists the number of times the deprecated feature was encountered since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] last started.  
+  The SQLServer:Deprecated Features object in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] provides a counter to monitor the features designated as deprecated. In each case the counter provides a usage count that lists the number of times the deprecated feature was encountered since [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] last started.  
   
  The value of these counters are also available by executing the following statement:  
   
@@ -33,8 +33,8 @@ This following table describes the SQL Server **Deprecated Features** performanc
 |SQL Server Deprecated Features counter instances|Description|  
 |------------------------------------------------------|-----------------|  
 |'#' and '##' as the name of temporary tables and stored procedures|An identifier was encountered that did not contain any characters other than #. Use at least one additional character. Occurs once per compilation.|  
-|'::' function calling syntax|The :: function calling syntax was encountered for a table-valued function. Replace with `SELECT column_list FROM` *< function_name>*`()`. For example, replace `SELECT * FROM ::fn_virtualfilestats(2,1)`with `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Occurs once per compilation.|  
-|'\@' and names that start with '\@\@' as [!INCLUDE[tsql](../../includes/tsql-md.md)] identifiers|An identifier was encountered that began with \@ or \@\@. Do not use \@ or \@v@ or names that begin with \@\@ as identifiers. Occurs once per compilation.|  
+|'::' function calling syntax|The :: function calling syntax was encountered for a table-valued function. Replace with `SELECT column_list FROM <function_name>()`. For example, replace `SELECT * FROM ::fn_virtualfilestats(2,1)` with `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Occurs once per compilation.|  
+|'\@' and names that start with '\@\@' as [!INCLUDE [tsql](../../includes/tsql-md.md)] identifiers|An identifier was encountered that began with \@ or \@\@. Do not use \@ or \@v@ or names that begin with \@\@ as identifiers. Occurs once per compilation.|  
 |ADDING TAPE DEVICE|The deprecated feature `sp_addumpdevice'**tape**'` was encountered. Use `sp_addumpdevice'**disk**'` instead. Occurs once per use.|  
 |ALL Permission|Total number of times the GRANT ALL, DENY ALL, or REVOKE ALL syntax was encountered. Modify the syntax to deny specific permissions. Occurs once per query.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Total number of times the deprecated feature TORN_PAGE_DETECTION option of ALTER DATABASE has been used since the server instance was started. Use the PAGE_VERIFY syntax instead. Occurs once per use in a DDL statement.|  
@@ -68,7 +68,7 @@ This following table describes the SQL Server **Deprecated Features** performanc
 |DBCC_IND||
 |DEFAULT keyword as a default value|Syntax that uses the DEFAULT keyword as a default value was encountered. Do not use. Occurs once per compilation.|  
 |Deprecated Attested Option||
-|Deprecated encryption algorithm|Deprecated encryption algorithm rc4 will be removed in the next version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. The RC4 algorithm is weak and is only supported for backward compatibility. New material can only be encrypted using RC4 or RC4_128 when the database is in compatibility level 90 or 100. (Not recommended.) Use a newer algorithm such as one of the AES algorithms instead. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and higher material encrypted using RC4 or RC4_128 can be unencrypted in any compatibility level.|  
+|Deprecated encryption algorithm|Deprecated encryption algorithm rc4 will be removed in the next version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. The RC4 algorithm is weak and is only supported for backward compatibility. New material can only be encrypted using RC4 or RC4_128 when the database is in compatibility level 90 or 100. (Not recommended.) Use a newer algorithm such as one of the AES algorithms instead. In [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and higher material encrypted using RC4 or RC4_128 can be unencrypted in any compatibility level.|  
 |Deprecated hash algorithm|Use of the MD2, MD4, MD5, SHA, or SHA1 algorithms.|  
 |DESX algorithm|Syntax that uses the DESX encryption algorithm was encountered. Use another algorithm for encryption. Occurs once per compilation.|  
 |dm_fts_active_catalogs|The dm_fts_active_catalogs counter always remains at 0 because some columns of the `sys.dm_fts_active_catalogs` view are not deprecated. To monitor a deprecated column, use the column-specific counter; for example, `sys.dm_fts_active_catalogs.is_paused`.|  
@@ -114,7 +114,7 @@ This following table describes the SQL Server **Deprecated Features** performanc
 |Index view select list without COUNT_BIG(\*)|The select list of an aggregate indexed view must contain COUNT_BIG (*) .|  
 |INDEX_OPTION|Encountered CREATE TABLE, ALTER TABLE, or CREATE INDEX syntax without parentheses around the options. Rewrite the statement to use the current syntax. Occurs once per query.|  
 |INDEXKEY_PROPERTY|The INDEXKEY_PROPERTY syntax was encountered. Rewrite statements to query `sys.index_columns`. Occurs once per compilation.|  
-|Indirect TVF hints|The indirect application, through a view, of table hints to an invocation of a multistatement table-valued function (TVF) will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|Indirect TVF hints|The indirect application, through a view, of table hints to an invocation of a multistatement table-valued function (TVF) will be removed in a future version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |INSERT NULL into TIMESTAMP columns|A NULL value was inserted to a TIMESTAMP column. Use a default value instead. Occurs once per compilation.|  
 |INSERT_HINTS||  
 |Korean_Wansung_Unicode|Event occurs once per database start and once per collation use. Plan to modify applications that use this collation.|  
@@ -132,7 +132,7 @@ This following table describes the SQL Server **Deprecated Features** performanc
 |objidupdate||
 |Oldstyle RAISEERROR|The deprecated RAISERROR (Format: RAISERROR integer string) syntax was encountered. Rewrite the statement using the current RAISERROR syntax. Occurs once per compilation.|  
 |Old NEAR Syntax|Use the new NEAR syntax. See [NEAR](../search/search-for-words-close-to-another-word-with-near.md)|
-|OLEDB for ad hoc connections|SQLOLEDB is not a supported provider. Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client for ad hoc connections.|  
+|OLEDB for ad hoc connections|SQLOLEDB is not a supported provider. Use [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Native Client for ad hoc connections.|  
 |PERMISSIONS|References to the PERMISSIONS intrinsic function were encountered. Query `sys.fn_my_permissions` instead. Occurs once per query.|  
 |ProcNums|The deprecated ProcNums syntax was encountered. Rewrite statements to remove the references. Occurs once per compilation.|  
 |READTEXT|The READTEXT syntax was encountered. Rewrite applications to use the **varchar(max)** data type and removed **text** data type syntax. Occurs once per query.|  
@@ -300,12 +300,11 @@ This following table describes the SQL Server **Deprecated Features** performanc
 |xp_loginconfig|The `xp_loginconfig` procedure was encountered. Use the **IsIntegratedSecurityOnly** argument of SERVERPROPERTY instead. Occurs once per query.|  
 |xp_revokelogin|The `xp_revokelogin` procedure was encountered. Use ALTER LOGIN DISABLE or DROP LOGIN instead. Occurs once per compilation.|  
   
-## See also  
- - [Deprecated Database Engine Features in SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
- - [Deprecated Full-Text Search Features in SQL Server 2016](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
- - [Deprecation Announcement Event Class](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
- - [Deprecation Final Support Event Class](../../relational-databases/event-classes/deprecation-final-support-event-class.md)   
- - [Discontinued Database Engine Functionality in SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)   
- - [Discontinued Full-Text Search Features in SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)   
- - [Use SQL Server Objects](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
-  
+## Related content
+
+- [Deprecated Database Engine features in SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)
+- [Deprecated Full-Text Search features in SQL Server 2016](../search/deprecated-full-text-search-features-in-sql-server-2016.md)
+- [Deprecation Announcement Event Class](../event-classes/deprecation-announcement-event-class.md)
+- [Deprecation Final Support Event Class](../event-classes/deprecation-final-support-event-class.md)
+- [Discontinued Database Engine functionality in SQL Server](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)
+- [Use SQL Server Objects](use-sql-server-objects.md)

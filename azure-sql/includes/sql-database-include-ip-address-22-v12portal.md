@@ -21,9 +21,9 @@ keywords:
     ![Find your Azure SQL Database server in the portal][b21-FindServerInPortal]
 5. In the filter text box, start typing the name of your server. Your row is displayed.
 
-6. Select the row for your server. A blade for your server is displayed.
+6. Select the row for your server. A pane for your server is displayed.
 
-7. On your server blade, select **Settings**.
+7. On your server pane, select **Settings**.
 
 8. Select **Firewall**.
 

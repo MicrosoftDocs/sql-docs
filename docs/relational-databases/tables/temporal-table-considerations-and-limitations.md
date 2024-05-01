@@ -27,7 +27,7 @@ There are some considerations and limitations to be aware of when working with t
 
 - If current table is partitioned, the history table is created on default file group because partitioning configuration isn't replicated automatically from the current table to the history table.
 
-- Temporal and history tables can't be FileTable and can contain columns of any supported data type other than FILESTREAM, since FileTable and FILESTREAM allow data manipulation outside of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and thus system versioning can't be guaranteed.
+- Temporal and history tables can't use FileTable or FILESTREAM, since FileTable and FILESTREAM allow data manipulation outside of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and thus system versioning can't be guaranteed.
 
 - A node or edge table can't be created as or altered to a temporal table.
 

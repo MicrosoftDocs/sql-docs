@@ -3,7 +3,7 @@ title: "sys.dm_db_partition_stats (Transact-SQL)"
 description: sys.dm_db_partition_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "02/27/2023"
+ms.date: 02/26/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -16,39 +16,39 @@ helpviewer_keywords:
   - "sys.dm_db_partition_stats dynamic management view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_partition_stats (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns page and row-count information for every partition in the current database.  
   
 > [!NOTE]  
-> To call this from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_db_partition_stats**. The partition_id in sys.dm_pdw_nodes_db_partition_stats differs from the partition_id in the sys.partitions catalog view for Azure Synapse Analytics. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> To call this from [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE [ssPDW](../../includes/sspdw-md.md)], use the name `sys.dm_pdw_nodes_db_partition_stats`. The partition_id in `sys.dm_pdw_nodes_db_partition_stats` differs from the partition_id in the `sys.partitions` catalog view for Azure Synapse Analytics. [!INCLUDE [synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**partition_id**|**bigint**|ID of the partition. This is unique within a database. This is the same value as the **partition_id** in the **sys.partitions** catalog view except for Azure Synapse Analytics.|  
-|**object_id**|**int**|Object ID of the table or indexed view that the partition is part of.|  
-|**index_id**|**int**|ID of the heap or index the partition is part of.<br /><br /> 0 = Heap<br /><br /> 1 = Clustered index.<br /><br /> > 1 = Nonclustered index|  
-|**partition_number**|**int**|1-based partition number within the index or heap.|  
-|**in_row_data_page_count**|**bigint**|Number of pages in use for storing in-row data in this partition. If the partition is part of a heap, the value is the number of data pages in the heap. If the partition is part of an index, the value is the number of pages in the leaf level. (Nonleaf pages in the B+ tree are not included in the count.) IAM (Index Allocation Map) pages are not included in either case. Always 0 for an xVelocity memory optimized columnstore index.|  
-|**in_row_used_page_count**|**bigint**|Total number of pages in use to store and manage the in-row data in this partition. This count includes nonleaf B+ tree pages, IAM pages, and all pages included in the **in_row_data_page_count** column. Always 0 for a columnstore index.|  
-|**in_row_reserved_page_count**|**bigint**|Total number of pages reserved for storing and managing in-row data in this partition, regardless of whether the pages are in use or not. Always 0 for a columnstore index.|  
-|**lob_used_page_count**|**bigint**|Number of pages in use for storing and managing out-of-row **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, and **xml** columns within the partition. IAM pages are included.<br /><br /> Total number of LOBs used to store and manage columnstore index in the partition.|  
-|**lob_reserved_page_count**|**bigint**|Total number of pages reserved for storing and managing out-of-row **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, and **xml** columns within the partition, regardless of whether the pages are in use or not. IAM pages are included.<br /><br /> Total number of LOBs reserved for storing and managing a columnstore index in the partition.|  
-|**row_overflow_used_page_count**|**bigint**|Number of pages in use for storing and managing row-overflow **varchar**, **nvarchar**, **varbinary**, and **sql_variant** columns within the partition. IAM pages are included.<br /><br /> Always 0 for a columnstore index.|  
-|**row_overflow_reserved_page_count**|**bigint**|Total number of pages reserved for storing and managing row-overflow **varchar**, **nvarchar**, **varbinary**, and **sql_variant** columns within the partition, regardless of whether the pages are in use or not. IAM pages are included.<br /><br /> Always 0 for a columnstore index.|  
-|**used_page_count**|**bigint**|Total number of pages used for the partition. Computed as **in_row_used_page_count** + **lob_used_page_count** + **row_overflow_used_page_count**.|  
-|**reserved_page_count**|**bigint**|Total number of pages reserved for the partition. Computed as **in_row_reserved_page_count** + **lob_reserved_page_count** + **row_overflow_reserved_page_count**.|  
-|**row_count**|**bigint**|The approximate number of rows in the partition.|  
-|**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
-|**distribution_id**|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The unique numeric id associated with the distribution.|  
+| `partition_id` |**bigint**|ID of the partition. This is unique within a database. This is the same value as the `partition_id` in the `sys.partitions` catalog view except for Azure Synapse Analytics.|  
+| `object_id` |**int**|Object ID of the table or indexed view that the partition is part of.|  
+| `index_id` |**int**|ID of the heap or index the partition is part of.<br /><br /> 0 = Heap<br /> 1 = Clustered index.<br /> > 1 = Nonclustered index|  
+| `partition_number` |**int**|1-based partition number within the index or heap.|  
+| `in_row_data_page_count` |**bigint**|Number of pages in use for storing in-row data in this partition. If the partition is part of a heap, the value is the number of data pages in the heap. If the partition is part of an index, the value is the number of pages in the leaf level. (Nonleaf pages in the B+ tree are not included in the count.) IAM (Index Allocation Map) pages are not included in either case. Always 0 for an xVelocity memory optimized columnstore index.|  
+| `in_row_used_page_count` |**bigint**|Total number of pages in use to store and manage the in-row data in this partition. This count includes nonleaf B+ tree pages, IAM pages, and all pages included in the **in_row_data_page_count** column. Always 0 for a columnstore index.|  
+| `in_row_reserved_page_count` |**bigint**|Total number of pages reserved for storing and managing in-row data in this partition, regardless of whether the pages are in use or not. Always 0 for a columnstore index.|  
+| `lob_used_page_count` |**bigint**|Number of pages in use for storing and managing out-of-row **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, and **xml** columns within the partition. IAM pages are included.<br /><br /> Total number of LOBs used to store and manage columnstore index in the partition.|  
+| `lob_reserved_page_count` |**bigint**|Total number of pages reserved for storing and managing out-of-row **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, and **xml** columns within the partition, regardless of whether the pages are in use or not. IAM pages are included.<br /><br /> Total number of LOBs reserved for storing and managing a columnstore index in the partition.|  
+| `row_overflow_used_page_count` |**bigint**|Number of pages in use for storing and managing row-overflow **varchar**, **nvarchar**, **varbinary**, and **sql_variant** columns within the partition. IAM pages are included.<br /><br /> Always 0 for a columnstore index.|  
+| `row_overflow_reserved_page_count` |**bigint**|Total number of pages reserved for storing and managing row-overflow **varchar**, **nvarchar**, **varbinary**, and **sql_variant** columns within the partition, regardless of whether the pages are in use or not. IAM pages are included.<br /><br /> Always 0 for a columnstore index.|  
+| `used_page_count` |**bigint**|Total number of pages used for the partition. Computed as **in_row_used_page_count** + **lob_used_page_count** + **row_overflow_used_page_count**.|  
+| `reserved_page_count` |**bigint**|Total number of pages reserved for the partition. Computed as **in_row_reserved_page_count** + **lob_reserved_page_count** + **row_overflow_reserved_page_count**.|  
+| `row_count` |**bigint**|The approximate number of rows in the partition.|  
+| `pdw_node_id` |**int**|**Applies to**: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
+| `distribution_id` |**int**|**Applies to**: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]<br /><br /> The unique numeric ID associated with the distribution.|  
   
-## Remarks  
- **sys.dm_db_partition_stats** displays information about the space used to store and manage in-row data LOB data, and row-overflow data for all partitions in a database. One row is displayed per partition.  
+## Remarks
+ The `sys.dm_db_partition_stats` dynamic management view (DMV) displays information about the space used to store and manage in-row data LOB data, and row-overflow data for all partitions in a database. One row is displayed per partition.  
   
- The counts on which the output is based are cached in memory or stored on disk in various system tables.  
+ The counts on which the output are based are cached in memory or stored on disk in various system tables.  
   
  In-row data, LOB data, and row-overflow data represent the three allocation units that make up a partition. The [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) catalog view can be queried for metadata about each allocation unit in the database.  
   
@@ -56,17 +56,18 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  The total count for an individual table or an index can be obtained by adding the counts for all relevant partitions.  
   
-## Permissions  
- Requires `VIEW DATABASE STATE` and `VIEW DEFINITION` permissions to query the **sys.dm_db_partition_stats** dynamic management view. For more information about permissions on dynamic management views, see [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+## Permissions
+
+ Requires `VIEW DATABASE STATE` and `VIEW DEFINITION` permissions to query the `sys.dm_db_partition_stats` dynamic management view. For more information about permissions on dynamic management views, see [Dynamic Management Views and Functions (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ### Permissions for SQL Server 2022 and later
 
 Requires VIEW DATABASE PERFORMANCE STATE and VIEW SECURITY DEFINITION permissions on the database.
 
-## Examples  
+## Examples
   
-### A. Returning all counts for all partitions of all indexes and heaps in a database  
- The following example shows all counts for all partitions of all indexes and heaps in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+### <a id="a-returning-all-counts-for-all-partitions-of-all-indexes-and-heaps-in-a-database"></a> A. Return all counts for all partitions of all indexes and heaps in a database
+ The following example shows all counts for all partitions of all indexes and heaps in the [!INCLUDE [ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```sql  
 USE AdventureWorks2022;  
@@ -75,7 +76,7 @@ SELECT * FROM sys.dm_db_partition_stats;
 GO  
 ```  
   
-### B. Returning all counts for all partitions of a table and its indexes  
+### <a id="b-returning-all-counts-for-all-partitions-of-a-table-and-its-indexes"></a> B. Return all counts for all partitions of a table and its indexes
  The following example shows all counts for all partitions of the `HumanResources.Employee` table and its indexes.  
   
 ```sql  
@@ -86,7 +87,7 @@ WHERE object_id = OBJECT_ID('HumanResources.Employee');
 GO  
 ```  
   
-### C. Returning total used pages and total number of rows for a heap or clustered index  
+### <a id="c-returning-total-used-pages-and-total-number-of-rows-for-a-heap-or-clustered-index"></a> C. Return total used pages and total number of rows for a heap or clustered index
  The following example returns total used pages and total number of rows for the heap or clustered index of the `HumanResources.Employee` table. Because the `Employee` table is not partitioned by default, note the sum includes only one partition.  
   
 ```sql  
@@ -99,10 +100,7 @@ WHERE object_id=OBJECT_ID('HumanResources.Employee')    AND (index_id=0 or index
 GO  
 ```  
   
-## See Also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Database Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
-  
-  
+## Related content
 
-
+- [Dynamic Management Views and Functions (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+- [Database related dynamic management views (Transact-SQL)](database-related-dynamic-management-views-transact-sql.md)

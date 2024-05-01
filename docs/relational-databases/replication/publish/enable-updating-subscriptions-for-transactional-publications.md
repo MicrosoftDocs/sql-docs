@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "transactional replication, updatable subscriptions"
@@ -94,7 +94,7 @@ helpviewer_keywords:
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This example creates a publication that supported both immediate and queued updating pull subscriptions.  
   
- [!code-sql[HowTo#sp_createtranupdatingpub](../../../relational-databases/replication/codesnippet/tsql/enable-updating-subscrip_1.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/enable-updating-subscrip_1.sql":::
   
 ## See Also  
  [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)   

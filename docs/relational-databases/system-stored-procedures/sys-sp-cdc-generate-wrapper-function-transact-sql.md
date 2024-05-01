@@ -111,7 +111,7 @@ CLOSE #hfunctions;
 DEALLOCATE #hfunctions;
 ```
 
-## See also
+## Related content
 
 - [Change Data Capture stored procedures (Transact-SQL)](change-data-capture-stored-procedures-transact-sql.md)
 - [Change Data Capture (SSIS)](../../integration-services/change-data-capture/change-data-capture-ssis.md)

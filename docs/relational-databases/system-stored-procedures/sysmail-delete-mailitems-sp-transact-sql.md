@@ -98,7 +98,7 @@ EXEC msdb.dbo.sysmail_delete_mailitems_sp
 GO
 ```
 
-## See also
+## Related content
 
 - [sysmail_allitems (Transact-SQL)](../system-catalog-views/sysmail-allitems-transact-sql.md)
 - [sysmail_event_log (Transact-SQL)](../system-catalog-views/sysmail-event-log-transact-sql.md)

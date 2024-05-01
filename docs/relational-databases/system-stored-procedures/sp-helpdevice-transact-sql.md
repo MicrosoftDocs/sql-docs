@@ -18,7 +18,7 @@ dev_langs:
 # sp_helpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Reports information about Microsoft® SQL Server™ backup devices.  
+  Reports information about [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] backup devices.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] We recommend that you use the [sys.backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) catalog view instead  

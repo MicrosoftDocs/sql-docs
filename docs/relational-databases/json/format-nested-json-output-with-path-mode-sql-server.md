@@ -10,7 +10,8 @@ ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Format Nested JSON Output with PATH Mode (SQL Server)
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-serverless-pool-only](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-serverless-pool-only.md)]
 
 To maintain full control over the output of the **FOR JSON** clause, specify the **PATH** option.  
   
@@ -43,35 +44,35 @@ SELECT TOP 5
   
 ```json  
 [{
-	"Id": 1,
-	"FirstName": "Ken",
-	"LastName": "Sanchez",
-	"Info": {
-		"MiddleName": "J"
-	}
+    "Id": 1,
+    "FirstName": "Ken",
+    "LastName": "Sanchez",
+    "Info": {
+        "MiddleName": "J"
+    }
 }, {
-	"Id": 2,
-	"FirstName": "Terri",
-	"LastName": "Duffy",
-	"Info": {
-		"MiddleName": "Lee"
-	}
+    "Id": 2,
+    "FirstName": "Terri",
+    "LastName": "Duffy",
+    "Info": {
+        "MiddleName": "Lee"
+    }
 }, {
-	"Id": 3,
-	"FirstName": "Roberto",
-	"LastName": "Tamburello"
+    "Id": 3,
+    "FirstName": "Roberto",
+    "LastName": "Tamburello"
 }, {
-	"Id": 4,
-	"FirstName": "Rob",
-	"LastName": "Walters"
+    "Id": 4,
+    "FirstName": "Rob",
+    "LastName": "Walters"
 }, {
-	"Id": 5,
-	"FirstName": "Gail",
-	"LastName": "Erickson",
-	"Info": {
-		"Title": "Ms.",
-		"MiddleName": "A"
-	}
+    "Id": 5,
+    "FirstName": "Gail",
+    "LastName": "Erickson",
+    "Info": {
+        "Title": "Ms.",
+        "MiddleName": "A"
+    }
 }]
 ```  
    
@@ -95,21 +96,21 @@ FOR JSON PATH
   
 ```json  
 [{
-	"Order": {
-		"Number": "SO43659",
-		"Date": "2011-05-31T00:00:00"
-	},
-	"Product": {
-		"Price": 2024.9940,
-		"Quantity": 1
-	}
+    "Order": {
+        "Number": "SO43659",
+        "Date": "2011-05-31T00:00:00"
+    },
+    "Product": {
+        "Price": 2024.9940,
+        "Quantity": 1
+    }
 }, {
-	"Order": {
-		"Number": "SO43659"
-	},
-	"Product": {
-		"Price": 2024.9940
-	}
+    "Order": {
+        "Number": "SO43659"
+    },
+    "Product": {
+        "Price": 2024.9940
+    }
 }]
 ```  
 

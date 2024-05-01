@@ -8,7 +8,7 @@ ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
 ms.custom: intro-installation
-ms.devlang: PowerShell
+ms.devlang: powershell
 monikerRange: ">=sql-server-2016"
 ---
 

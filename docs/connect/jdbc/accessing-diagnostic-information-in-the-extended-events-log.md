@@ -12,7 +12,7 @@ ms.topic: conceptual
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-In the [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], tracing ([Tracing driver operation](tracing-driver-operation.md)) makes it easier to correlate client events with diagnostic information. Things like connection failures from the server's connectivity ring buffer and application performance information in the extended events log can be traced. For information about reading the extended events log, see [Extended Events](../../relational-databases/extended-events/extended-events.md).
+In the [!INCLUDE[jdbc-40](../../includes/jdbc-40-md.md)], tracing ([Tracing driver operation](tracing-driver-operation.md)) makes it easier to correlate client events with diagnostic information. Things like connection failures from the server's connectivity ring buffer and application performance information in the extended events log can be traced. For information about reading the extended events log, see [Extended Events](../../relational-databases/extended-events/extended-events.md).
 
 ## Details
 

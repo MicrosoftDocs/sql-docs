@@ -9,7 +9,7 @@ ms.service: sql-database
 ms.subservice: security
 ms.custom: ignite-2023
 ms.topic: conceptual
-monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 
 # Ledger overview
@@ -113,7 +113,7 @@ The ledger feature doesn't allow modifying the content of ledger system views, a
 
 The [ledger verification](ledger-database-verification.md) process takes as input one or more previously generated database digests and recomputes the hashes stored in the database ledger based on the current state of the ledger tables. If the computed hashes don't match the input digests, the verification fails, indicating that the data has been tampered with. Ledger then reports all inconsistencies that it has detected.
 
-## Next steps
+## Related content
 
 - [What is the database ledger](ledger-database-ledger.md)
 - [Create and use append-only ledger tables](ledger-how-to-append-only-ledger-tables.md)

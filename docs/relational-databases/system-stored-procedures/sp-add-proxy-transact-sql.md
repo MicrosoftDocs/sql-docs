@@ -100,7 +100,7 @@ EXEC dbo.sp_add_proxy
 GO
 ```
 
-## See also
+## Related content
 
 - [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md)
 - [sp_grant_login_to_proxy (Transact-SQL)](sp-grant-login-to-proxy-transact-sql.md)

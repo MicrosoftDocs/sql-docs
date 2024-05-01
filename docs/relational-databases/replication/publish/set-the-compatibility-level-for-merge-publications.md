@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "compatibility [SQL Server], replication"
@@ -65,30 +65,30 @@ helpviewer_keywords:
 -- how to use scripting variables on the command line and in SQL Server  
 -- Management Studio, see the "Executing Replication Scripts" section in  
 -- the topic "Programming Replication Using System Stored Procedures".  
-  
+
 --Add a new merge publication.  
-DECLARE @publicationDB AS sysname;  
-DECLARE @publication AS sysname;  
-DECLARE @login AS sysname;  
-DECLARE @password AS sysname;  
-SET @publicationDB = N'AdventureWorks2022';   
-SET @publication = N'AdvWorksSalesOrdersMerge'   
-SET @login = $(Login);  
-SET @password = $(Password);  
-  
+DECLARE @publicationDB AS sysname;
+DECLARE @publication AS sysname;
+DECLARE @login AS sysname;
+DECLARE @password AS sysname;
+SET @publicationDB = N'AdventureWorks2022';
+SET @publication = N'AdvWorksSalesOrdersMerge';
+SET @login = $(Login);
+SET @password = $(Password);
+
 -- Create a new merge publication.   
-USE [AdventureWorks2022]  
-EXEC sp_addmergepublication   
-@publication = @publication,   
--- Set the compatibility level to SQL Server 2014.  
-@publication_compatibility_level = '120RTM';   
-  
+USE [AdventureWorks2022];
+EXEC sp_addmergepublication
+    @publication = @publication,
+    -- Set the compatibility level to SQL Server 2014.  
+    @publication_compatibility_level = '120RTM';
+
 -- Create the snapshot job for the publication.  
-EXEC sp_addpublication_snapshot   
-@publication = @publication,  
-@job_login = @login,  
-@job_password = @password;  
-GO  
+EXEC sp_addpublication_snapshot
+    @publication = @publication,
+    @job_login = @login,
+    @job_password = @password;
+GO
 ```  
   
  This example changes the publication compatibility level for the merge publication.  
@@ -97,15 +97,15 @@ GO
 >  Changing the publication compatibility level might not be allowed if the publication uses any features that require a particular compatibility level. For more information, see [Replication Backward Compatibility](../../../relational-databases/replication/replication-backward-compatibility.md).  
   
 ```sql  
-DECLARE @publication AS sysname;  
-SET @publication = N'AdvWorksSalesOrdersMerge' ;  
-  
+DECLARE @publication AS sysname;
+SET @publication = N'AdvWorksSalesOrdersMerge';
+
 -- Change the publication compatibility level to   
--- SQL Server 2008 or later.  
-EXEC sp_changemergepublication   
-@publication = @publication,   
-@property = N'publication_compatibility_level',   
-@value = N'100RTM';  
+-- SQL Server 2008 or later.
+EXEC sp_changemergepublication
+    @publication = @publication,
+    @property = N'publication_compatibility_level',
+    @value = N'100RTM';
 GO  
   
 ```  
@@ -113,12 +113,11 @@ GO
  This example returns the current publication compatibility level for the merge publication.  
   
 ```sql  
-DECLARE @publication AS sysname;  
-SET @publication = N'AdvWorksSalesOrdersMerge' ;  
-EXEC sp_helpmergepublication   
-@publication = @publication;  
-GO  
-  
+DECLARE @publication AS sysname;
+SET @publication = N'AdvWorksSalesOrdersMerge';
+EXEC sp_helpmergepublication
+    @publication = @publication;
+GO
 ```  
   
 ## See Also  

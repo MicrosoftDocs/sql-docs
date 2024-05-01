@@ -92,17 +92,17 @@ In the next section you'll configure shared storage and move your database files
 
 There are various solutions for providing shared storage. This walk-through demonstrates configuring shared storage with NFS. We recommend following best practices and use Kerberos to secure NFS:
 
-- [Sharing File Systems with NFS](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#cha.nfs)
+- [Sharing File Systems with NFS](https://documentation.suse.com/sles/12-SP5/single-html/SLES-admin/#cha-nfs)
 
 If you don't follow this guidance, anyone who can access your network and spoof the IP address of a SQL node will be able to access your data files. As always, make sure that you threat model your system before using it in production.
 
 Another storage option is to use SMB file share:
 
-- [Samba section of SUSE documentation](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#cha.samba)
+- [Samba section of SUSE documentation](https://documentation.suse.com/sles/12-SP5/single-html/SLES-admin/#cha-samba)
 
 ### Configure an NFS server
 
-To configure an NFS server, see the following steps in the SUSE documentation: [Configuring NFS Server](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server).
+To configure an NFS server, see the following steps in the SUSE documentation: [Configuring NFS Server](https://documentation.suse.com/sles/12-SP5/single-html/SLES-admin/#sec-nfs-configuring-nfs-server).
 
 ### Configure all cluster nodes to connect to the NFS shared storage
 
@@ -120,7 +120,7 @@ Before configuring the client NFS to mount the [!INCLUDE [ssnoversion-md](../inc
 
    Configure the NFS client on all cluster nodes:
 
-   - [Configuring Clients](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-clients)
+   - [Configuring Clients](https://documentation.suse.com/sles/12-SP5/single-html/SLES-admin/#sec-nfs-configuring-nfs-clients)
 
    > [!NOTE]  
    > It's recommended to follow SUSE's best practices and recommendations regarding Highly Available NFS storage: [Highly Available NFS Storage with DRBD and Pacemaker](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html).

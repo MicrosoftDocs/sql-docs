@@ -4,7 +4,7 @@ description: This article describes how to scale the compute and storage resourc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 10/20/2023
+ms.date: 01/18/2024
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -81,13 +81,13 @@ A service tier change or compute rescaling operation can be monitored and cancel
 
 ### [Azure portal](#tab/azure-portal)
 
-In the database overview blade, navigate to **Notifications** and select the tile indicating there's an ongoing operation:
+In the SQL database **Overview** page, look for the banner indicating a scaling operation is ongoing, and select the **See more** link for the deployment in progress.
 
-![Screenshot from the Azure portal of an ongoing operation.](./media/single-database-scale/ongoing-operations.png)
+:::image type="content" source="media/single-database-scale/scaling-operation-in-progress-see-more.png" alt-text="Screenshot from the Azure portal showing a scaling operation in progress.":::
 
-Next, select **Cancel this operation**.
+On the resulting **Ongoing operations** page, select **Cancel this operation**.
 
-![Screenshot from the Azure portal of the cancellation of an ongoing operation.](./media/single-database-scale/cancel-ongoing-operation.png)
+:::image type="content" source="media/single-database-scale/ongoing-operations-cancel-this-operation.png" alt-text="Screenshot from the Azure portal showing the Ongoing operations page and the cancel this operation button.":::
 
 ### [PowerShell](#tab/azure-powershell)
 
@@ -115,15 +115,21 @@ Stop-AzSqlDatabaseActivity -ResourceGroupName "ResourceGroup01" -ServerName "Ser
 
 ### [Azure CLI](#tab/azure-cli)
 
-From a Cloud shell terminal, use the following sample command to identify operations currently executing:
+From a Cloud shell terminal, use the following sample command to identify operations currently executing. From a Cloud shell terminal, set the `$resourceGroupName`, `$serverName`, and `$databaseName` variables, and then run the following command:
 
 ```azurecli
+$resourceGroupName = "<resource group name>"
+$serverName = "<server name>"
+$databaseName = "<sql database name>"
 az sql db op list --resource-group $resourceGroupName --server $serverName --database $databaseName --query "[?state=='InProgress'].name" --out tsv
 ```
 
-To stop an asynchronous operation like a database scale, from a Cloud shell terminal, set the `$resourceGroupName`, `$serverName`, and `$databaseName`, and then run the following command:
+To stop an asynchronous operation like a database scale, from a Cloud shell terminal, set the `$resourceGroupName`, `$serverName`, and `$databaseName` variables, and then run the following command:
 
 ```azurecli
+$resourceGroupName = "<resource group name>"
+$serverName = "<server name>"
+$databaseName = "<sql database name>"
 $operationName = (az sql db op list --resource-group $resourceGroupName --server $serverName --database $databaseName --query "[?state=='InProgress'].name" --out tsv)
 if (-not [string]::IsNullOrEmpty($operationName)) {
     (az sql db op cancel --resource-group $resourceGroupName --server $serverName --database $databaseName --name $operationName)
@@ -138,7 +144,7 @@ else {
 
 ## Permissions
 
-To scale databases via T-SQL, ALTER DATABASE permissions are needed. To scale a database a login must be either the server admin login (created when the Azure SQL Database logical server was provisioned), the Microsoft Entra admin of the server, a member of the dbmanager database role in `master`, a member of the db_owner database role in the current database, or `dbo` of the database. For more information, see [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true#permissions-1).
+To scale databases via Transact-SQL, `ALTER DATABASE` is used. To scale a database a login must be either the server admin login (created when the Azure SQL Database logical server was provisioned), the Microsoft Entra admin of the server, a member of the dbmanager database role in `master`, a member of the db_owner database role in the current database, or `dbo` of the database. For more information, see [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true#permissions-1).
 
 To scale databases via the Azure portal, PowerShell, Azure CLI, or REST API, Azure RBAC permissions are needed, specifically the Contributor, SQL DB Contributor role, or SQL Server Contributor Azure RBAC roles. For more information, visit [Azure RBAC built-in roles](/azure/role-based-access-control/built-in-roles).
 
@@ -164,9 +170,13 @@ You're billed for each hour a database exists using the highest service tier + c
 
 - Storage can be provisioned up to the data storage max size limit using 1-GB increments. The minimum configurable data storage is 1 GB. For data storage max size limits in each service objective, see resource limit documentation pages for [Resource limits for single databases using the vCore purchasing model](resource-limits-vcore-single-databases.md) and [Resource limits for single databases using the DTU purchasing model](resource-limits-dtu-single-databases.md).
 - Data storage for a single database can be provisioned by increasing or decreasing its max size using the [Azure portal](https://portal.azure.com), [Transact-SQL](/sql/t-sql/statements/alter-database-transact-sql#examples-1), [PowerShell](/powershell/module/az.sql/set-azsqldatabase), [Azure CLI](/cli/azure/sql/db#az-sql-db-update), or [REST API](/rest/api/sql/databases/update). If the max size value is specified in bytes, it must be a multiple of 1 GB (1073741824 bytes).
-- The amount of data that can be stored in the data files of a database is limited by the configured data storage max size. In addition to that storage, Azure SQL Database automatically allocates 30% more storage to be used for the transaction log.
-- Azure SQL Database automatically allocates 32 GB per vCore for the `tempdb` database. `tempdb` is located on the local SSD storage in all service tiers.
-- The price of storage for a single database or an elastic pool is the sum of data storage and transaction log storage amounts multiplied by the storage unit price of the service tier. The cost of `tempdb` is included in the price. For details on storage price, see [Azure SQL Database pricing](https://azure.microsoft.com/pricing/details/sql-database/).
+- The amount of data that can be stored in the data files of a database is limited by the configured data storage max size. In addition to that storage, Azure SQL Database automatically adds 30% more storage to be used for the transaction log. The price of storage for a single database or an elastic pool is the sum of data storage and transaction log storage amounts multiplied by the storage unit price of the service tier. For example, if data storage is set to _10 GB_, the additional transaction log storage is _10 GB * 30% = 3 GB_, and the total amount of billable storage is _10 GB + 3 GB = 13 GB_.
+
+  > [!NOTE]
+  > The maximum size of the transaction log file is managed automatically, and in some cases can be greater than 30% of the data storage maximum size. This does not increase the price of storage for the database.
+
+- Azure SQL Database automatically allocates 32 GB per vCore for the `tempdb` database. `tempdb` is located on the local SSD storage in all service tiers. The cost of `tempdb` is included in the price of a single database or an elastic pool.
+- For details on storage price, see [Azure SQL Database pricing](https://azure.microsoft.com/pricing/details/sql-database/).
 
 > [!IMPORTANT]
 > Under some circumstances, you may need to shrink a database to reclaim unused space. For more information, see [Manage file space in Azure SQL Database](file-space-manage.md).

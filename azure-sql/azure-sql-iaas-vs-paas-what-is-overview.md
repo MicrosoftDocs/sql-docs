@@ -3,7 +3,7 @@ title: "What is Azure SQL?"
 description: "Learn about the different options within the Azure SQL family of services: Azure SQL Database, Azure SQL Managed Instance, and SQL Server on Azure VM."
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: wiassaf
+ms.reviewer: wiassaf, mathoma
 ms.date: 08/21/2023
 ms.service: sql-database
 ms.subservice: service-overview
@@ -84,7 +84,7 @@ With SQL Server, built-in features and functionality often require extensive con
 
 Azure SQL Database offers the following deployment options:
   - As a [*single database*](database/single-database-overview.md) with its own set of resources managed via a [logical server](database/logical-servers.md). A single database is similar to a [contained database](/sql/relational-databases/databases/contained-databases) in SQL Server. This option is optimized for modern application development of new cloud-born applications. [Hyperscale](database/service-tier-hyperscale.md) and [serverless](database/serverless-tier-overview.md) options are available.
-  - An [*elastic pool*](database/elastic-pool-overview.md), which is a collection of databases with a shared set of resources managed via a [logical server](database/logical-servers.md). Single databases can be moved into and out of an elastic pool. This option is optimized for modern application development of new cloud-born applications using the multi-tenant SaaS application pattern. Elastic pools provide a cost-effective solution for managing the performance of multiple databases that have variable usage patterns. [Elastic pools for Hyperscale](database/hyperscale-elastic-pool-overview.md) are currently in preview
+  - An [*elastic pool*](database/elastic-pool-overview.md), which is a collection of databases with a shared set of resources managed via a [logical server](database/logical-servers.md). Single databases can be moved into and out of an elastic pool. This option is optimized for modern application development of new cloud-born applications using the multi-tenant SaaS application pattern. Elastic pools provide a cost-effective solution for managing the performance of multiple databases that have variable usage patterns. [Elastic pools for Hyperscale](database/hyperscale-elastic-pool-overview.md) are currently in preview.
 
 
 ### Azure SQL Managed Instance

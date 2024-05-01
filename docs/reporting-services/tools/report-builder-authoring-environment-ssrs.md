@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
 # Report Builder authoring environment (SSRS)
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] is a stand-alone authoring environment for creating [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports outside of Visual Studio. When you design a report, you specify where to get the data, which data to get, and how to display the data. When you run the report, the report processor takes all the information you have specified, retrieves the data, and combines it with the report layout to generate the report. You can install it from the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal or from the Microsoft Download Center.  
+  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] is a stand-alone authoring environment for creating [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports outside of Visual Studio. When you design a report, you specify where to get the data, which data to get, and how to display the data. When you run the report, the report processor takes all the information you specified, retrieves the data, and combines it with the report layout to generate the report. You can install it from the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal or from the Microsoft Download Center.  
   
  [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md) from the Microsoft Download Center.  
   
@@ -37,9 +37,9 @@ ms.custom: updatefrequency5
   
  Report Builder and Report Designer share many features. Read more about [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md).  
   
-## See Also  
+## Related content 
  [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)   
- [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md)   
- [Design Reports with Report Designer &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
+ [Reporting Services tools](../../reporting-services/tools/reporting-services-tools.md)   
+ [Design reports with Report Designer &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   
   

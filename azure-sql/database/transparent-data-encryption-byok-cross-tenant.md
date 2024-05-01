@@ -4,9 +4,9 @@ titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: Overview of cross-tenant customer-managed keys (CMK) support using transparent data encryption (TDE)
 author: GithubMirek
 ms.author: mireks
-ms.reviewer: vanto
+ms.reviewer: vanto, mathoma
 ms.date: 05/01/2023
-ms.service: sql-db-mi
+ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
 monikerRange: "= azuresql || = azuresql-db"
@@ -18,7 +18,7 @@ monikerRange: "= azuresql || = azuresql-db"
 
 Azure SQL now offers support for cross-tenant customer-managed keys (CMK) with [transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption). Cross-tenant CMK expands on the [Bring Your Own Key (BYOK)](transparent-data-encryption-byok-overview.md) scenario for utilizing TDE without the need to have the [logical server in Azure](logical-servers.md) in the same Microsoft Entra tenant as the Azure Key Vault that stores the customer-managed key used to protect the server.
 
-You can configure TDE with CMK for Azure SQL Database for keys stored in key vaults that are configured in different Microsoft Entra tenants. Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) introduces a feature called workload identity federation, and it allows Azure resources from one Microsoft Entra tenant the capability to access resources in another Microsoft Entra tenant.
+You can configure TDE with CMK for Azure SQL Database for keys stored in key vaults that are configured in different Microsoft Entra tenants. Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) introduces a feature called workload identity federation, and it allows Azure resources from one Microsoft Entra tenant the capability to access resources in another Microsoft Entra tenant.
 
 For documentation on transparent data encryption for dedicated SQL pools inside Synapse workspaces, see [Azure Synapse Analytics encryption](/azure/synapse-analytics/security/workspaces-encryption).
 

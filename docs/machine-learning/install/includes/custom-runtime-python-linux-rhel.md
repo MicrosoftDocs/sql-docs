@@ -5,7 +5,7 @@ ms.date: 02/08/2021
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: include
-ms.custom: intro-installation
+ms.custom: intro-installation, linux-related-content
 ---
 ## Install Language Extensions
 

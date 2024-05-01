@@ -26,7 +26,7 @@ In cases where a large volume of in-memory data has been released, and where the
 
 For more information on Memory-optimized TempDB metadata out of memory errors, see [Memory-optimized tempdb metadata (HkTempDB) out of memory errors](/troubleshoot/sql/admin/memory-optimized-tempdb-out-of-memory).
 
-The `sys.sp_xtp_force_gc` system stored procedure was introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] [CU 1](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate1#2087479) and [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] [CU 13](https://support.microsoft.com/topic/kb5005679-cumulative-update-13-for-sql-server-2019-5c1be850-460a-4be4-a569-fe11f0adc535). This stored procedure isn't currently supported on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)].
+The `sys.sp_xtp_force_gc` system stored procedure was introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] [CU 1](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate1#2087479) and [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] [CU 13](https://support.microsoft.com/topic/kb5005679-cumulative-update-13-for-sql-server-2019-5c1be850-460a-4be4-a569-fe11f0adc535). This stored procedure isn't currently supported on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)].
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -50,7 +50,7 @@ The database to release unused memory for memory-optimized tables. *@dbname* is 
 
 - When the *@dname* parameter provided is a user database, the memory structures related memory-optimized tables are affected.
 
-Therefore, you may expect to see different results when executing `sys.sp_xtp_force_gc`: without a parameter, with `@dbname = N'tempdb'`, or with `@dbname = ` a user database name.
+Therefore, you may expect to see different results when executing `sys.sp_xtp_force_gc`: without a parameter, with `@dbname = N'tempdb'`, or with `@dbname =` a user database name.
 
 ## Return code values
 

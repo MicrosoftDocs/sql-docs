@@ -6,7 +6,7 @@ ms.author: mikeray
 ms.date: "01/16/2019"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "replication [SQL Server], distribution"
@@ -73,6 +73,7 @@ After a distribution database in the AG is configured based on the steps describ
 - If any replication agents run under a proxy account, the proxy account needs to exist in every node in the distribution database AG and have the same privilege on each node.
 - Make changes to distributor or distribution database properties in all replicas participating in distribution database AG.
 - Make replication jobs changes through msdb stored procedures or SQL Server Management Studio in all replicas participating in distribution database AG.
+- If using a custom profile for any agent, it must be manually created on all secondary replicas by using the procedure sp_add_agent_profile. The profile must have the same id on all replicas.
 - Configuring distributor on the publisher needs to be done with scripts. The replication wizard cannot be used. Replication wizards and property sheets for other purposes are supported.
 - Configuring the AG for distribution databases can only be done through scripts.
 - Setting up distribution databases in an AG needs to be a new replication configuration. Switching an existing distribution database to an AG is not supported. Also once a distribution database is taken out an AG, it can no longer function as a valid distribution database and should be dropped.
@@ -305,60 +306,72 @@ The following script enables a distribution database in an availability group.
 
 -- Step1 - Configure the Distribution DB nodes (AG Replicas) to act as a distributor
 :Connect SQLNode1
-EXEC sys.sp_adddistributor @distributor = @@ServerName, @password = 'Pass@word1';
-Go 
+EXEC [sys].[sp_adddistributor]
+    @distributor = @@SERVERNAME,
+    @password = 'Pass@word1';
+GO
 :Connect SQLNode2
-EXEC sys.sp_adddistributor @distributor = @@ServerName, @password = 'Pass@word1';
-Go
+EXEC [sys].[sp_adddistributor]
+    @distributor = @@SERVERNAME,
+    @password = 'Pass@word1';
+GO
 
 -- Step2 - Configure the Distribution Database
 :Connect SQLNode1
-USE master
-EXEC sys.sp_adddistributiondb @database = 'DistributionDB', @security_mode = 1;
+USE [master];
+EXEC [sys].[sp_adddistributiondb]
+    @database = 'DistributionDB',
+    @security_mode = 1;
 GO
 ALTER DATABASE [DistributionDB] SET RECOVERY FULL;
-Go
-BACKUP DATABASE [DistributionDB] TO DISK = 'Nul';
-Go
+GO
+BACKUP DATABASE [DistributionDB] TO DISK = 'NUL';
+GO
 -- Step 3 - Create AG for the Distribution DB.
 :Connect SQLNode1
-USE [master]
+USE [master];
 GO
-CREATE ENDPOINT [Hadr_endpoint] 
-	STATE=STARTED
-	AS TCP (LISTENER_PORT = 5022, LISTENER_IP = ALL)   
-	FOR DATA_MIRRORING (ROLE = ALL, AUTHENTICATION = WINDOWS NEGOTIATE
-, ENCRYPTION = REQUIRED ALGORITHM AES);
+CREATE ENDPOINT [Hadr_endpoint]
+    STATE = STARTED
+    AS TCP (LISTENER_PORT = 5022, LISTENER_IP = ALL)
+    FOR DATA_MIRRORING (
+        ROLE = ALL,
+        AUTHENTICATION = WINDOWS NEGOTIATE,
+        ENCRYPTION = REQUIRED ALGORITHM AES
+    );
 GO
 
 :Connect SQLNode2
-USE [master]
+USE [master];
 GO
-CREATE ENDPOINT [Hadr_endpoint] 
-	STATE=STARTED
-	AS TCP (LISTENER_PORT = 5022, LISTENER_IP = ALL)   
-	FOR DATA_MIRRORING (ROLE = ALL, AUTHENTICATION = WINDOWS NEGOTIATE
-, ENCRYPTION = REQUIRED ALGORITHM AES);
+CREATE ENDPOINT [Hadr_endpoint]
+    STATE = STARTED
+    AS TCP (LISTENER_PORT = 5022, LISTENER_IP = ALL)
+    FOR DATA_MIRRORING (
+        ROLE = ALL,
+        AUTHENTICATION = WINDOWS NEGOTIATE,
+        ENCRYPTION = REQUIRED ALGORITHM AES
+    );
 GO
 
 :Connect SQLNode1
 -- Create the Availability Group
 CREATE AVAILABILITY GROUP [DistributionDB_AG]
 FOR DATABASE [DistributionDB]
-REPLICA ON 'SQLNode1'
-WITH (ENDPOINT_URL = N'TCP://SQLNode1.contoso.com:5022', 
-		 FAILOVER_MODE = AUTOMATIC, 
-		 AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-		 BACKUP_PRIORITY = 50, 
-		 SECONDARY_ROLE(ALLOW_CONNECTIONS = ALL), 
-		 SEEDING_MODE = AUTOMATIC),
+REPLICA ON
+N'SQLNode1' WITH (ENDPOINT_URL = N'TCP://SQLNode1.contoso.com:5022', 
+	 FAILOVER_MODE = AUTOMATIC, 
+	 AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
+	 BACKUP_PRIORITY = 50, 
+	 SECONDARY_ROLE(ALLOW_CONNECTIONS = ALL), 
+	 SEEDING_MODE = AUTOMATIC),
 N'SQLNode2' WITH (ENDPOINT_URL = N'TCP://SQLNode2.contoso.com:5022', 
 	 FAILOVER_MODE = AUTOMATIC, 
 	 AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
 	 BACKUP_PRIORITY = 50, 
 	 SECONDARY_ROLE(ALLOW_CONNECTIONS = ALL), 
 	 SEEDING_MODE = AUTOMATIC);
- GO
+GO
 
 
 :Connect SQLNode2
@@ -379,22 +392,22 @@ WITH IP
 GO
 
 -- STEP 5 - Enable SQLNode2 also as a Distributor
-:CONNECT SQLNODE2
+:Connect SQLNode2
 EXEC sys.sp_adddistributiondb @database = 'DistributionDB', @security_mode = 1;
 GO
 
 --STEP 6 - On all Distributor Nodes Configure the Publisher Details 
-:CONNECT SQLNODE1
+:Connect SQLNode1
 EXEC sys.sp_adddistpublisher @publisher = 'SQLNode4', @distribution_db = 'DistributionDB', 
 	@working_directory = '\\sqlfileshare\Dist_Work_Directory\';
 GO
-:CONNECT SQLNODE2
+:Connect SQLNode2
 EXEC sys.sp_adddistpublisher @publisher = 'SQLNode4', @distribution_db = 'DistributionDB', 
 	@working_directory = '\\sqlfileshare\Dist_Work_Directory\';
 GO
 
 -- SECTION 2 ---- CONFIGURE THE PUBLISHER SERVER
-:CONNECT SQLNODE4
+:Connect SQLNode4
 EXEC sys.sp_adddistributor @distributor = 'DistributionDBList', -- Listener for the Distribution DB.	
 	@password = 'Pass@word1';
 GO
@@ -402,18 +415,16 @@ GO
 -- SECTION 3 ---- CONFIGURE THE SUBSCRIBERS 
 -- On Publisher, create the publication as one would normally do.
 -- On the Secondary replicas of the Distribution DB, add the Subscriber as a linked server.
-:CONNECT SQLNODE2
+:Connect SQLNode2
 EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct = N'SQL Server';
 /* For security reasons the linked server remote logins password is changed with ######## */
 EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname = N'SQLNODE5', @useself = N'True',
 	@locallogin = NULL,@rmtuser = NULL,@rmtpassword = NULL;
 ```
 
-## See Also  
+## Related content
  [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Secure the Distributor](../../relational-databases/replication/security/secure-the-distributor.md)  
-  
-## Next steps
  [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)  
  [Disable Publishing and Distribution](disable-publishing-and-distribution.md)  
  [Enable a Database for Replication (SQL Server Management Studio)](enable-a-database-for-replication-sql-server-management-studio.md) 

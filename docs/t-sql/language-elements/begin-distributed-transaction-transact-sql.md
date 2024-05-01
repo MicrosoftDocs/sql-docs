@@ -31,7 +31,7 @@ dev_langs:
 
   Specifies the start of a [!INCLUDE[tsql](../../includes/tsql-md.md)] distributed transaction. When using SQL Server the distributed transaction is managed by [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC).
 
- - In case of Azure SQL Managed Instance, the distributed transaction is managed by the service itself and not MS DTC. For information on distributed transactions in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], see [Distributed transactions across cloud databases](/azure/azure-sql/database/elastic-transactions-overview).
+ - In case of Azure SQL Managed Instance, the distributed transaction is managed by the service itself and not MS DTC. For information on distributed transactions in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], see [Distributed transactions across cloud databases](/azure/azure-sql/database/elastic-transactions-overview).
 
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

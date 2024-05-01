@@ -102,7 +102,7 @@ Tactics to alleviate this error:
 ![Error Reporting Results](media/import-flat-file-wizard/import-flat-file-error.png)
 
 ```
-Error inserting data into table occured while inserting rows 1 - 2. (Microsoft.SqlServer.Prose.Import)
+Error inserting data into table occurred while inserting rows 1 - 2. (Microsoft.SqlServer.Prose.Import)
 The given value of type String from the data source cannot be converted to type float of the specified target column. (System.Data)
 Failed to convert parameter value from a String to a Double. (System.Data)
 ```

@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "ODBC data types, image columns"
   - "ODBC data types, text columns"
   - "image columns [ODBC]"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bound vs. Unbound Text and Image Columns
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

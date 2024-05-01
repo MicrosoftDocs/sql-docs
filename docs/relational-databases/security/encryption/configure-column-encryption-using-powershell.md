@@ -7,6 +7,7 @@ ms.reviewer: vanto
 ms.date: "04/05/2023"
 ms.service: sql
 ms.subservice: security
+ms.custom: devx-track-azurepowershell
 ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

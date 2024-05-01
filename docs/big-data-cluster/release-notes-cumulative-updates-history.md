@@ -5,10 +5,11 @@ description: This article describes the updates for SQL Server Big Data Clusters
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei, randolphwest
-ms.date: 10/22/2023
+ms.date: 12/01/2023
 ms.service: sql
 ms.subservice: big-data-cluster
-ms.topic: conceptual
+ms.custom: linux-related-content
+ms.topic: release-notes
 ---
 # SQL Server 2019 Big Data Clusters cumulative updates history
 
@@ -92,7 +93,7 @@ Cumulative Update 16 (CU16) GDR release for [!INCLUDE[sssql19-md](../includes/ss
 | --- | --- | --- |
 | 15.0.4236.7 | [2019-CU16-GDR3-ubuntu-20.04] | [SQL Server Big Data Clusters Cumulative Update 17](release-notes-cumulative-update-17.md) |
 
-## <a id="cu16"></a> CU16 ( 2022)
+## <a id="cu16"></a> CU16 (May 2022)
 
 Cumulative Update 16 (CU16) release for [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] Big Data Clusters.
 
@@ -179,7 +180,7 @@ SQL Server Big Data Clusters CU10 includes important capabilities:
 
 - Upgraded base images from Ubuntu 16.04 to Ubuntu 20.04.
   > [!CAUTION]
-  > Ubuntu 20.04 has stricter security requirements and you  see issues when using BDC to connect to SQL Server instances before SQL Server 2017. For more information, see [Failed to connect to remote instance of SQL Server 2016 or older](known-issues.md#failed-to-connect-to-remote-instance-of-sql-server-2016-or-older).
+  > Ubuntu 20.04 has stricter security requirements, and you might see issues when using BDC to connect to SQL Server instances before SQL Server 2017. For more information, see [Failed to connect to remote instance of SQL Server 2016 or older](known-issues.md#failed-to-connect-to-remote-instance-of-sql-server-2016-or-older).
 - High availability support for Hadoop KMS components.
 - Additional configuration settings for SQL Server networking and process affinity at the resource-scope. See [Master Pool resource-scope settings](reference-config-bdc-overview.md#master-pool-resource-scope-settings).
 - Resource management for Spark-related containers through [cluster-scope settings](reference-config-bdc-overview.md#cluster-scope-settings).

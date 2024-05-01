@@ -1,6 +1,6 @@
 ---
-title: Configure best practices assessment on an Azure Arc-enabled SQL Server instance
-description: Configure best practices assessment on an Azure Arc-enabled SQL Server instance
+title: Configure best practices assessment
+description: Explains how to configure best practices assessment on SQL Server instance for SQL Server enabled by Azure Arc.
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mikeray, randolphwest
@@ -8,7 +8,9 @@ ms.date: 06/14/2023
 ms.topic: conceptual
 ---
 
-# Configure SQL best practices assessment
+# Configure SQL best practices assessment - SQL Server enabled by Azure Arc
+
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 Best practices assessment provides a mechanism to evaluate the configuration of your SQL Server. After you enable best practices assessment, an assessment scans your SQL Server instance and databases to provide recommendations for things like:
 
@@ -21,10 +23,10 @@ Best practices assessment provides a mechanism to evaluate the configuration of 
 
 Assessment run time depends on your environment (number of databases, objects, and so on), with a duration from a few minutes, up to an hour. Similarly, the size of the assessment result also depends on your environment. Assessment runs against your instance and all databases on that instance. In our testing, we observed that an assessment run can have up to 5-10% CPU impact on the machine. In these tests, the assessment was done while a TPC-C like application was running against the SQL Server.
 
-This article provides instructions for using best practices assessment on an instance of Azure Arc-enabled SQL Server.
+This article provides instructions for using best practices assessment on an instance of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)].
 
 >[!IMPORTANT]
->Best practices assessment is available only for SQL Servers purchased through either [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) or [pay-as-you-go (PAYG)](https://www.microsoft.com/sql-server/sql-server-2022-pricing) licensing options.
+>Best practices assessment is available only for SQL Server instances purchased through either [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) or [pay-as-you-go (PAYG)](https://www.microsoft.com/sql-server/sql-server-2022-pricing) licensing options.
 >
 >For instructions to configure the appropriate license type, review [Manage SQL Server license and billing options](manage-configuration.md).
 
@@ -35,15 +37,26 @@ This article provides instructions for using best practices assessment on an ins
   > [!NOTE]
   > Best practices assessment is currently limited to SQL Server running on Windows machines. The assessment doesn't apply to SQL on Linux machines currently.
 
-- If SQL Server is hosting a single SQL Server instance, make sure that the version of Azure Extension for SQL Server (`WindowsAgent.SqlServer`) is "**1.1.2202.47**" or later.  In the case of SQL Server hosting multiple SQL Server instances, make sure that the version of Azure Extension for SQL Server (`WindowsAgent.SqlServer`) is greater than "**1.1.2231.59".** Learn how to [check the](/azure/azure-arc/servers/manage-vm-extensions-portal#upgrade-extensions)**[Azure Extension for SQL Server](/azure/azure-arc/servers/manage-vm-extensions-portal#upgrade-extensions)**[ version and update to the latest.](/azure/azure-arc/servers/manage-vm-extensions-portal#upgrade-extensions)
-- [A Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace?tabs=azure-portal) in the same subscription as your Arc-enabled SQL Server resource to upload assessment results to.
-- The user configuring SQL BPA must have the following permissions.
+- If the server hosts a single SQL Server instance: Make sure that the version of Azure Extension for SQL Server (`WindowsAgent.SqlServer`) is "**1.1.2202.47**" or later.  
+
+- If the server hosts multiple instances of SQL Server: Make sure that the version of Azure Extension for SQL Server (`WindowsAgent.SqlServer`) is greater than "**1.1.2231.59".** 
+
+   > [!TIP]
+   > To check the version and update to update to the latest, review [Upgrade extension](/azure/azure-arc/servers/manage-vm-extensions-portal#upgrade-extensions).
+
+- If the server hosts a named instance of SQL Server, [SQL Server browser service](../../tools/configuration-manager/sql-server-browser-service.md) must be running.
+
+- [A Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace?tabs=azure-portal) must be in the same subscription as your SQL Server enabled by Azure Arc resource.
+
+- The user configuring SQL best practices assessment (BPA) must have the following permissions.
+
   - Log Analytics Contributor role on resource group or subscription of the Log Analytics workspace.
   - Azure Connected Machine Resource Administrator role on the resource group or subscription of the Arc-enabled SQL Server.
   - Monitoring Contributor role on the Resource group or subscription of Log Analytics Workspace & Resource group or subscription of Arc Machine.
-  - Users can be assigned to built-in roles such as Contributor or Owner. These roles have sufficient permissions. For more information, review [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) for more information.
+  - Users assigned to built-in roles such as Contributor or Owner have sufficient permissions. For more information, review [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) for more information.
 
 - The minimum permissions required to access or read the assessment report are:
+
   - Reader role on the resource group or subscription of the Arc-enabled SQL Server resource.
   - [Log analytics reader](/azure/azure-monitor/logs/manage-access?tabs=portal#log-analytics-reader).
   - [Monitoring reader](/azure/role-based-access-control/built-in-roles#monitoring-reader) on resource group/subscription of Log Analytics workspace.
@@ -57,7 +70,7 @@ This article provides instructions for using best practices assessment on an ins
 
 - Your SQL Server instance must have the [TCP/IP protocol enabled](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
-- The [SQL Server browser service](../../tools/configuration-manager/sql-server-browser-service.md) must be running if you're operating a named instance of SQL Server.
+- SQL BPA uses Azure Monitor Agent (AMA) to collect and analyze data from your SQL servers. If you have AMA installed on your SQL servers before enabling BPA, BPA uses the same AMA agent and proxy settings. You don't need to do anything else. However, if you don't have AMA installed on your SQL servers, BPA installs it for you. BPA will not set up proxy settings for AMA automatically. You need to re-deploy AMA with the proxy settings that you want. Review [AMA Network Settings and Proxy Configuration](/azure/azure-monitor/agents/azure-monitor-agent-data-collection-endpoint?tabs=ArmPolicy#proxy-configuration) for more information on AMA network and proxy settings.
 
 - If you use *Configure Arc-enabled Servers with SQL Server extension installed to enable or disable SQL best practices assessment* Azure policy to enable assessment at [scale](#enable-best-practices-assessment-at-scale-using-azure-policy), you need to create an Azure Policy assignment. Your subscription requires the Resource Policy Contributor role assignment for the scope that you're targeting. The scope may be either subscription or resource group. Further, if you are going to create a new user assigned managed identity, you need the User Access Administrator role assignment in the subscription.
 
@@ -88,11 +101,11 @@ This article provides instructions for using best practices assessment on an ins
 
 ## Enable best practices assessment at scale using Azure policy
 
-You can automatically enable best practices assessment on multiple Arc-enabled SQL Server instances at scale using an Azure policy definition called *Configure Arc-enabled Servers with SQL Server extension installed to enable or disable SQL best practices assessment.*  This policy definition is not assigned to a scope by default. If you assign this policy definition to a scope of your choice, it enables the SQL best practices assessment on all the Arc-enabled SQL Servers within the defined scope, and auto schedule to every Sunday 12:00 AM local time by default.
+You can automatically enable best practices assessment on multiple Arc-enabled SQL Server instances at scale using an Azure policy definition called *Configure Arc-enabled Servers with SQL Server extension installed to enable or disable SQL best practices assessment.*  This policy definition is not assigned to a scope by default. If you assign this policy definition to a scope of your choice, it enables the SQL best practices assessment on all SQL Server instances enabled for Azure Arc within the defined scope, and auto schedule to every Sunday 12:00 AM local time by default.
 
 
 >[!IMPORTANT]
->The policy enables best practices assessment only for SQL Servers purchased through either [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) or [pay-as-you-go (PAYG)](https://www.microsoft.com/sql-server/sql-server-2022-pricing) licensing options.
+>The policy enables best practices assessment only for SQL Server instances purchased through either [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) or [pay-as-you-go (PAYG)](https://www.microsoft.com/sql-server/sql-server-2022-pricing) licensing options.
 >
 >For instructions to configure the appropriate license type, review [Manage SQL Server license and billing options](manage-configuration.md).
 

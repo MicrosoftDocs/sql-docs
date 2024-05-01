@@ -8,7 +8,7 @@ ms.date: 05/23/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
-monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 
 # What is the database ledger?
@@ -68,9 +68,8 @@ The following example of a ledger table consists of four transactions that made 
 ### Permissions
 Viewing the database ledger requires the `VIEW LEDGER CONTENT` permission. For details on permissions related to ledger tables, see [Permissions](../permissions-database-engine.md).
 
-## See also
+## Related content
 
 - [Ledger overview](ledger-overview.md)
 - [Data Manipulation Language (DML)](../../../t-sql/queries/queries.md)
 - [Ledger views](../../system-catalog-views/security-catalog-views-transact-sql.md#ledger-views)
-

@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "10/29/2018"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: reference
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "Merge Agent, executables"

@@ -6,6 +6,7 @@ ms.author: v-davidengel
 ms.date: 11/07/2022
 ms.service: sql
 ms.subservice: connectivity
+ms.custom: linux-related-content
 ms.topic: conceptual
 ---
 
@@ -13,7 +14,7 @@ ms.topic: conceptual
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Beginning in [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], an application can use the **authenticationScheme** connection property to indicate that it wants to connect to a database using type 4 Kerberos integrated authentication. For more information on connection properties, see [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md). For more information on Kerberos, see [Microsoft Kerberos](/windows/win32/secauthn/microsoft-kerberos).
+Beginning in [!INCLUDE[jdbc-40](../../includes/jdbc-40-md.md)], an application can use the **authenticationScheme** connection property to indicate that it wants to connect to a database using type 4 Kerberos integrated authentication. For more information on connection properties, see [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md). For more information on Kerberos, see [Microsoft Kerberos](/windows/win32/secauthn/microsoft-kerberos).
 
 When using integrated authentication with the Java **Krb5LoginModule**, you can configure the module using [Class Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html).
 
@@ -29,9 +30,9 @@ The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sets the follo
 
 ## Remarks
 
-Prior to [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], applications could specify integrated authentication (using Kerberos or NTLM, depending on which is available) by using the **integratedSecurity** connection property and by referencing **mssql-jdbc_auth-\<version>-\<arch>.dll**, as described in [Building the connection URL](../../connect/jdbc/building-the-connection-url.md).
+Prior to [!INCLUDE[jdbc-40](../../includes/jdbc-40-md.md)], applications could specify integrated authentication (using Kerberos or NTLM, depending on which is available) by using the **integratedSecurity** connection property and by referencing **mssql-jdbc_auth-\<version>-\<arch>.dll**, as described in [Building the connection URL](../../connect/jdbc/building-the-connection-url.md).
 
-Beginning in [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], an application can use the **authenticationScheme** connection property to indicate that it wants to connect to a database using Kerberos integrated authentication using the pure Java Kerberos implementation:
+Beginning in [!INCLUDE[jdbc-40](../../includes/jdbc-40-md.md)], an application can use the **authenticationScheme** connection property to indicate that it wants to connect to a database using Kerberos integrated authentication using the pure Java Kerberos implementation:
 
 - If you want integrated authentication using **Krb5LoginModule**, you must still specify the **integratedSecurity=true** connection property. You would then also specify the **authenticationScheme=JavaKerberos** connection property.
 
@@ -212,7 +213,7 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 
 1. Domain-join the client machine to the same domain as the server.
 2. (Optional) Set the default Kerberos ticket location. This step is most conveniently done by setting the `KRB5CCNAME` environment variable.
-3. Get the Kerberos ticket, either by generating a new one or placing an existing one in the default Kerberos ticket location. To generate a ticket, use a terminal and initialize the ticket via `kinit USER@DOMAIN.AD` where "USER" and "DOMAIN.AD" is the principal and domain respectively. For example: `kinit SQL_SERVER_USER03@MICROSOFT.COM`. The ticket will be generated in the default ticket location or in the `KRB5CCNAME` path if set.
+3. Get the Kerberos ticket, either by generating a new one or placing an existing one in the default Kerberos ticket location. To generate a ticket, use a terminal and initialize the ticket via `kinit USER@DOMAIN.AD` where "USER" and "DOMAIN.AD" is the principal and domain respectively. For example: `kinit SQL_SERVER_USER03@EXAMPLE.COM`. The ticket will be generated in the default ticket location or in the `KRB5CCNAME` path if set.
 4. The terminal will prompt for a password, enter the password.
 5. Verify the credentials in the ticket via `klist` and confirm the credentials are the ones you intend to use for authentication.
 6. Run the above sample code and confirm that Kerberos Authentication was successful.

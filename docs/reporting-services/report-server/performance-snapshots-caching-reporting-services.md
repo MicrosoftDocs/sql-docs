@@ -1,5 +1,5 @@
 ---
-title: "Performance, Snapshots, Caching (Reporting Services)"
+title: "Performance, snapshots, caching (Reporting Services)"
 description: Learn how to get baseline data and run tests to understand performance factors specific to your installation and to produce the results you want.
 author: maggiesMSFT
 ms.author: maggies
@@ -12,12 +12,12 @@ helpviewer_keywords:
   - "performance [Reporting Services]"
   - "Reporting Services, performance"
 ---
-# Performance, Snapshots, Caching (Reporting Services)
-  Report server performance is affected by a combination of factors that include hardware, number of concurrent users accessing reports, the amount of data in a report, and output format. To understand the performance factors that are specific to your installation and which remedies will produce the results you want, you will need to get baseline data and run tests. For more information about tools and guidelines, see the following publications on MSDN: [Reporting Services Performance Optimization](/archive/blogs/sqlcat/reporting-services-performance-and-optimization) and [Using Visual Studio 2005 to Perform Load Testing on a SQL Server 2005 Reporting Services Report Server](/previous-versions/sql/sql-server-2005/administrator/aa964139(v=sql.90)).  
+# Performance, snapshots, caching (Reporting Services)
+  A combination of factors affects report server performance. These factors include hardware, number of concurrent users accessing reports, the amount of data in a report, and output format. It's important to understand the performance factors that are specific to your installation and the remedies produce the results you want. To do so, you need to get baseline data and run tests. For more information about tools and guidelines, see [Reporting Services performance optimization](/archive/blogs/sqlcat/reporting-services-performance-and-optimization) and [Use Visual Studio 2005 to perform load testing on a SQL Server 2005 Reporting Services report server](/previous-versions/sql/sql-server-2005/administrator/aa964139(v=sql.90)).  
   
- General principles to consider include the following:  
+ General principles to consider include:  
   
--   Report processing and rendering are memory intensive operations. When possible, choose a computer that has a lot of memory.  
+-   Report processing and rendering are memory intensive operations. When possible, choose a computer that has sufficient memory.  
   
 -   Hosting the report server and the report server database on separate computers tends to provide better performance than hosting both on a single high-end computer.  
   
@@ -25,35 +25,35 @@ helpviewer_keywords:
   
 -   If a single report is processing slowly, tune report dataset queries if the report must run on demand. You might also consider using shared datasets that you can cache, caching the report, or running the report as a snapshot.  
   
--   If all reports process slowly in a specific format (for example, while rendering to PDF), consider file share delivery, adding more memory, or choosing a different format.  
+-   If all reports process slowly in a specific format, like while rendering to PDF, consider file share delivery, adding more memory, or choosing a different format.  
   
--   To find out how long it takes to process a report and other usage metrics, review the report server execution log. For more information, see [Report Server ExecutionLog and the ExecutionLog3 View](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
+-   To find out how long it takes to process a report and other usage metrics, review the report server execution log. For more information, see [Report server ExecutionLog and the ExecutionLog3 view](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
--   For more information about how to mitigate performance issues by tuning memory management configuration settings, see [Configure Available Memory for Report Server Applications](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).  
+-   For more information about how to mitigate performance issues by tuning memory management configuration settings, see [Configure available memory for report server applications](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).  
   
-## In This Section  
- [Monitoring Report Server Performance](../../reporting-services/report-server/monitoring-report-server-performance.md)  
+## In this section  
+ [Monitor report server performance](../../reporting-services/report-server/monitoring-report-server-performance.md)  
  Describes the performance objects you can use to track the processing load on your server.  
   
- [Set Report Processing Properties](../../reporting-services/report-server/set-report-processing-properties.md)  
+ [Set report processing properties](../../reporting-services/report-server/set-report-processing-properties.md)  
  Describes ways of configuring a report to run on demand, from cache, or on a schedule as a report snapshot.  
   
- [Configure Available Memory for Report Server Applications](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)  
+ [Configure available memory for report server applications](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)  
  Describes how you can override default memory management behavior.  
   
- [Caching Reports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)  
+ [Cache reports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)  
  Describes report caching behavior on a report server.  
   
- [Cache Shared Datasets &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  
+ [Cache shared datasets &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  
  Describes shared dataset caching behavior on a report server.  
   
- [Process Large Reports](../../reporting-services/report-server/process-large-reports.md)  
+ [Process large reports](../../reporting-services/report-server/process-large-reports.md)  
  Provides recommendations on how to configure and distribute a large report.  
   
- [Setting Time-out Values for Report and Shared Dataset Processing &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [Set time-out values for report and shared dataset processing &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
  Explains how to set time outs on query and report processing.  
   
-## See Also  
- [Manage a Running Process](../../reporting-services/subscriptions/manage-a-running-process.md)   
- [Verifying a Report Run](../../reporting-services/report-server/verifying-a-report-run.md)  
+## Related content  
+ [Manage a running process](../../reporting-services/subscriptions/manage-a-running-process.md)   
+ [Verify a report run](../../reporting-services/report-server/verifying-a-report-run.md)  
   

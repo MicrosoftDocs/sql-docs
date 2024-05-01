@@ -1,12 +1,12 @@
 ---
 title: Read queries on replicas
-titleSuffix: Azure SQL Database & SQL Managed Instance
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Azure SQL provides the ability to use the capacity of read-only replicas for read workloads, called Read Scale-Out.
 author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 06/19/2023
-ms.service: sql-database
+ms.date: 11/28/2023
+ms.service: sql-db-mi
 ms.subservice: scale-out
 ms.topic: conceptual
 ms.custom:
@@ -22,7 +22,7 @@ As part of [High Availability architecture](high-availability-sla.md#locally-red
 
 The *read scale-out* feature is also available in the Hyperscale service tier when at least one [secondary replica](service-tier-hyperscale-replicas.md) is added. Hyperscale secondary [named replicas](service-tier-hyperscale-replicas.md#named-replica) provide independent scaling, access isolation, workload isolation, support for various read scale-out scenarios, and other benefits. Multiple secondary [HA replicas](service-tier-hyperscale-replicas.md#high-availability-replica) can be used for load-balancing read-only workloads that require more resources than available on one secondary HA replica.
 
-The High Availability architecture of Basic, Standard, and General Purpose service tiers doesn't include any replicas. The *read scale-out* feature isn't available in these service tiers. However, when using Azure SQL Database, [geo-replicas](active-geo-replication-overview.md) can provide similar functionality in these service tiers.  When using Azure SQL Managed Instance and failover groups, the [failover group read-only listener](../managed-instance/auto-failover-group-sql-mi.md) can provide similar functionality respectively.
+The High Availability architecture of Basic, Standard, and General Purpose service tiers doesn't include any replicas. The *read scale-out* feature isn't available in these service tiers. However, when using Azure SQL Database, [geo-replicas](active-geo-replication-overview.md) can provide similar functionality in these service tiers.  When using Azure SQL Managed Instance and failover groups, the [failover group read-only listener](../managed-instance/failover-group-sql-mi.md) can provide similar functionality respectively.
 
 The following diagram illustrates the feature for Premium and Business Critical databases and managed instances.
 
@@ -114,7 +114,14 @@ The following views are commonly used for replica monitoring and troubleshooting
 
 An extended event session can't be created when connected to a read-only replica. However, in Azure SQL Database, the definitions of database-scoped [Extended Event](xevent-db-diff-from-svr.md) sessions created and altered on the primary replica replicate to read-only replicas, including geo-replicas, and capture events on read-only replicas.
 
-An extended event session on a read-only replica that is based on a session definition from the primary replica can be started and stopped independently of the primary replica. When an extended event session is dropped on the primary replica, it is also dropped on all read-only replicas.
+An extended event session on a read-only replica that is based on a session definition from the primary replica can be started and stopped independently of the session on the primary replica.
+
+To drop an event session on a read-only replica, follow these steps:
+
+1. [Connect](#connect-to-a-read-only-replica) SSMS Object Explorer or a query window to the read-only replica.
+1. Stop the session on the read-only replica, either by selecting **Stop Session** on the session context menu in Object Explorer, or by executing `ALTER EVENT SESSION [session-name-here] ON DATABASE STATE = STOP;` in a query window. 
+1. Connect Object Explorer or a query window to the primary replica.
+1. Drop the session on the primary replica, either by selecting **Delete** on the session context menu, or by executing `DROP EVENT SESSION [session-name-here] ON DATABASE;`
 
 ### Transaction isolation level on read-only replicas
 
@@ -191,7 +198,7 @@ Body: {
 }
 ```
 
-For more information, see [Databases - Create or update](/rest/api/sql/2022-08-01-preview/databases/create-or-update).
+For more information, see [Databases - Create or update](/rest/api/sql/databases/create-or-update).
 
 ## Use the `tempdb` database on a read-only replica
 

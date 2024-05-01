@@ -3,7 +3,7 @@ title: Import or export an Azure SQL Database without allowing Azure services to
 description: Import or export an Azure SQL Database without allowing Azure services to access the server.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, jeschult
+ms.reviewer: mathoma, hudequei
 ms.date: 01/08/2020
 ms.service: sql-database
 ms.subservice: migration
@@ -25,7 +25,7 @@ Sign in to the [Azure portal](https://portal.azure.com/).
 
 Create an Azure virtual machine by selecting the **Deploy to Azure** button.
 
-This template allows you to deploy a simple Windows virtual machine using a few different options for the Windows version, using the latest patched version. This will deploy a A2 size VM in the resource group location and return the fully qualified domain name of the VM.
+This template allows you to deploy a simple Windows virtual machine using a few different options for the Windows version, using the latest patched version. This will deploy an A2 size VM in the resource group location and return the fully qualified domain name of the VM.
 <br><br>
 
 [![Image showing a button labeled "Deploy to Azure".](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.compute%2Fvm-simple-windows%2Fazuredeploy.json)

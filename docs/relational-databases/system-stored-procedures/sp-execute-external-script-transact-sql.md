@@ -187,6 +187,7 @@ You can control the resources used by external scripts by configuring an externa
 Monitor script execution using [sys.dm_external_script_requests](../system-dynamic-management-views/sys-dm-external-script-requests.md) and [sys.dm_external_script_execution_stats](../system-dynamic-management-views/sys-dm-external-script-execution-stats.md).
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
+
 ### Parameters for partition modeling
 
 You can set two additional parameters that enable modeling on partitioned data, where partitions are based on one or more columns you provide that naturally segment a data set into logical partitions, created and used only during script execution. Columns containing repeating values for age, gender, geographic region, date or time, are a few examples that lend themselves to partitioned data sets.
@@ -309,6 +310,7 @@ GO
 Column headings used in Python code aren't output to SQL Server; therefore, use the WITH RESULT statement to specify the column names and data types for SQL to use.
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
+
 ### C. Generate an R model based on data from SQL Server
 
 The following example creates a stored procedure that uses `sp_execute_external_script` to generate an iris model and return the model.
@@ -342,10 +344,10 @@ To generate a similar model using Python, you would change the language identifi
 
 For scoring, you can also use the native [PREDICT](../../t-sql/queries/predict-transact-sql.md) function, which is typically faster because it avoids calling the Python or R runtime.
 
-## See also
+## Related content
 
 - [SQL machine learning](../../machine-learning/index.yml)
-- [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md).
+- [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [CREATE EXTERNAL LIBRARY (Transact-SQL)](../../t-sql/statements/create-external-library-transact-sql.md)
 - [sp_prepare (Transact SQL)](sp-prepare-transact-sql.md)

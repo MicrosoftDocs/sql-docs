@@ -6,6 +6,7 @@ ms.author: randolphwest
 ms.date: 12/20/2022
 ms.service: sql
 ms.subservice: install
+ms.custom: linux-related-content
 ms.topic: conceptual
 helpviewer_keywords:
   - "removing CU from SQL Server"

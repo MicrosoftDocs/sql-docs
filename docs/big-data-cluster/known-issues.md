@@ -5,16 +5,16 @@ description: This article includes known issues for SQL Server Big Data Clusters
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei, randolphwest
-ms.date: 10/22/2023
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: big-data-cluster
-ms.topic: conceptual
+ms.topic: troubleshooting-known-issue
 ---
 # SQL Server 2019 Big Data Clusters platform known issues
 
-[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE [SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+[!INCLUDE [big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 ## Known issues
 
@@ -57,7 +57,7 @@ ms.topic: conceptual
 ### Failed to connect to remote instance of SQL Server 2016 or older
 
 - **Affected releases**: CU10
-- **Issue and customer effect**: When using PolyBase in [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] CU10 to connect to an existing SQL Server instance that is using a certificate for channel encryption that was created using the SHA1 algorithm, you might observe the following error:
+- **Issue and customer effect**: When using PolyBase in [!INCLUDE [ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] CU10 to connect to an existing SQL Server instance that is using a certificate for channel encryption that was created using the SHA1 algorithm, you might observe the following error:
 
 > `Msg 105082, Level 16, State 1, Line 1`
 > `105082;Generic ODBC error: [Microsoft][ODBC Driver 17 for SQL Server]SSL Provider: An existing connection was forcibly closed by the remote host.`
@@ -70,7 +70,7 @@ ms.topic: conceptual
 
 - **Affected releases**: Affects existing clusters, when a failed upgrade to CU9 results in a rollback or user issues a downgrade to an older release.
 
-- **Issue and customer effect**: The software version used for Elastic Search was upgraded with CU9 and the new version isn't backwards compatible with previous logs format/metadata. If ElasticSearch component upgrades successfully, but a later rollback is triggered, the logs collected between the ElasticSearch upgrade and the rollback is permanently lost. If you issue a downgrade to older version of [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] (not recommended), logs stored in Elasticsearch will be lost. If you upgrade back to CU9, the data is restored.
+- **Issue and customer effect**: The software version used for Elastic Search was upgraded with CU9 and the new version isn't backward compatible with previous logs format/metadata. If ElasticSearch component upgrades successfully, but a later rollback is triggered, the logs collected between the ElasticSearch upgrade and the rollback is permanently lost. If you issue a downgrade to older version of [!INCLUDE [ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] (not recommended), logs stored in Elasticsearch will be lost. If you upgrade back to CU9, the data is restored.
 
 - **Workaround**: If needed, you can troubleshoot using logs collected using `azdata bdc debug copy-logs` command.
 
@@ -82,7 +82,7 @@ ms.topic: conceptual
 
 - **Workaround**: You can ask an administrator to create or update the role and the corresponding service account (either before or after the deployment/upgrade), and the big data cluster will use them. [This article](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) describes how to create the required artifacts.
 
-### Issuing `azdata bdc copy-logs` does not result in logs being copied
+### Issuing azdata bdc copy-logs does not result in logs being copied
 
 - **Affected releases**: [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version *20.0.0*
 
@@ -151,11 +151,11 @@ For other scenarios where  you must provide credentials for accessing service th
 
 - **Affected releases**: New and existing clusters that are using CU5 images
 
-- **Issue and customer effect**: As a result of a security fix related to the API that `telegraf` was using to collect metrics pod and host node metrics, customers might notice that the metrics aren't being collected. This is possible in both new and existing deployments of [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] (after upgrade to CU5). As a result of the fix, Telegraf now requires a service account with cluster-wide role permissions. The deployment attempts to create the necessary service account and cluster role, but if the user deploying the cluster or performing the upgrade doesn't have sufficient permissions, deployment/upgrade proceeds with a warning and succeeds, but the pod and node metrics won't be collected.
+- **Issue and customer effect**: As a result of a security fix related to the API that `telegraf` was using to collect metrics pod and host node metrics, customers might notice that the metrics aren't being collected. This is possible in both new and existing deployments of [!INCLUDE [ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] (after upgrade to CU5). As a result of the fix, Telegraf now requires a service account with cluster-wide role permissions. The deployment attempts to create the necessary service account and cluster role, but if the user deploying the cluster or performing the upgrade doesn't have sufficient permissions, deployment/upgrade proceeds with a warning and succeeds, but the pod and node metrics won't be collected.
 
 - **Workaround**: You can ask an administrator to create the role and service account (either before or after the deployment/upgrade), and the big data cluster will use them. [This article](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) describes how to create the required artifacts.
 
-### `azdata bdc copy-logs` command failure
+### azdata bdc copy-logs command failure
 
 - **Affected releases**: [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version *20.0.0*
 
@@ -192,7 +192,7 @@ Upgrading using different repositories for current and target builds isn't suppo
   Control plane upgrade failed. Failed to upgrade controller.
   ```
 
-  This error is more likely to occur when you upgrade [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] in Azure Kubernetes Service (AKS).
+  This error is more likely to occur when you upgrade [!INCLUDE [ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] in Azure Kubernetes Service (AKS).
 
 - **Workaround**: Increase the timeout for the upgrade.
 

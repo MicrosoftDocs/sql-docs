@@ -45,9 +45,9 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "feedback_system": "GitHub",
+      "feedback_system": "Standard",
       "feedback_github_repo": "MicrosoftDocs/azure-docs",
-      "feedback_product_url": "https://feedback.azure.com/d365community/forum/79b1327d-d925-ec11-b6e6-000d3a4f06a4",
+      "feedback_product_url": "https://aka.ms/sqlfeedback",
       "layout": "Conceptual",
       "uhfHeaderId": "Azure",
       "contributors_to_exclude": [
@@ -79,9 +79,9 @@
         "**/*.md": "/azure/azure-sql/breadcrumb/toc.json"
       },
       "feedback_product_url": {
-        "articles/azure-sql/*.md": "https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0",
-        "articles/azure-sql/database/**/*.md": "https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0",
-        "articles/azure-sql/virtual-machines/**/*.md": "https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0",
+        "articles/azure-sql/*.md": "https://aka.ms/sqlfeedback",
+        "articles/azure-sql/database/**/*.md": "https://feedback.azure.com/d365community/forum/ef2b2b38-2f25-ec11-b6e6-000d3a4f0f84",
+        "articles/azure-sql/virtual-machines/**/*.md": "https://aka.ms/sqlfeedback",
         "articles/azure-sql/managed-instance/**/*.md": "https://feedback.azure.com/d365community/forum/a99f7006-3425-ec11-b6e6-000d3a4f0f84"
       },
       "titleSuffix": {
@@ -121,9 +121,10 @@
     "rules": {
       "sensitive-language-sl": {
         "exclude": [
-          "virtual-machines/linux/rhel-high-availability-stonith-tutorial.md",
-          "virtual-machines/linux/rhel-high-availability-listener-tutorial.md",
-          "virtual-machines/linux/sles-high-availability-stonith-tutorial.md"
+          "virtual-machines/linux/rhel-high-availability-fencing-tutorial.md",
+          "virtual-machines/linux/sles-high-availability-fencing-tutorial.md",
+          "virtual-machines/linux/ubuntu-high-availability-fencing-tutorial.md",
+          "virtual-machines/linux/high-availability-listener-tutorial.md"
         ]
       }
     }

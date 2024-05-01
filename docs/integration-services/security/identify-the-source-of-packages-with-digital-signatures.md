@@ -105,8 +105,27 @@ For the status of signatures used to sign packages, the **BlockedSignatureStates
   
     -   Obtain a certificate from a certificate server, that enables an organization to internally issue certificates. You have to add the root certificate that is used to sign the certificate to the **Trusted Root Certification Authorities** store. To add the root certificate, you can use the Certificates snap-in for the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC). For more information, see the topic, "[Certificate Services](/windows/win32/seccrypto/certificate-services)," in the MSDN library.  
   
-    -   Create your own certificate for testing purposes only. The Certificate Creation Tool (Makecert.exe) generates X.509 certificates for testing purposes. For more information, see the topic, "[Certificate Creation Tool (Makecert.exe)](/previous-versions/dotnet/netframework-2.0/bfsktky3(v=vs.80))," in the MSDN Library.  
-  
+    -   Create your own certificate for testing purposes only. The PowerShell command New-SelfSignedCertificate can creating a new self-signed certificate with secure hash algorithm for testing purpose. For example: 
+    ```powershell
+        $params = @{
+            Type = 'CodeSigningCert'
+            Provider = 'Microsoft Enhanced RSA and AES Cryptographic Provider'
+            Subject = 'CN=PS code signing Certificate 2'
+            TextExtension = @(
+                '2.5.29.37={text}1.3.6.1.5.5.7.3.3',
+                '2.5.29.17={text}upn=yourupn' )
+            KeyExportPolicy = 'NonExportable'
+            KeyUsage = 'DigitalSignature'
+            KeyAlgorithm = 'RSA'
+            KeyLength = 2048
+            CertStoreLocation = 'Cert:\CurrentUser\My'
+                     HashAlgorithm = 'sha512'
+        }
+        New-SelfSignedCertificate @params
+    ```
+    
+    If you see the error message 'Package signing failed with error 0x80090008 "Invalid algorithm specified."', it indicates that your certificate hash algorithm is not secure, please change your certificate to a more secure hash algorithm like SHA512 and use a CSP (Cryptographic Service Provider). As the .NET framework is upgrade to 4.7.2 for SQL Server 2022, and the default SignedXML algorithm is changed to SHA256 because SHA1 is no longer considered to be secure. Details refer to [this article](/dotnet/framework/migration-guide/retargeting/4.7.x#default-signedxml-and-signedxms-algorithms-changed-to-sha256).
+
      For more information about certificates, see the online Help for the Certificates snap-in. For more information about how to sign digital assets, see the topic, "[Signing and Checking Code with Authenticode](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537364(v=vs.85))," in the MSDN Library.  
   
 -   Make sure that the certificate has been enabled for code signing. To determine whether a certificate is enabled for code signing, review the properties of the certificate in the Certificates snap-in.  

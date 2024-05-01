@@ -112,7 +112,7 @@ Floating point values are likely to generate checksum differences if character-m
 
 To execute `sp_table_validation`, you must have SELECT permissions on the table being validated.
 
-## See also
+## Related content
 
 - [CHECKSUM (Transact-SQL)](../../t-sql/functions/checksum-transact-sql.md)
 - [@@ROWCOUNT (Transact-SQL)](../../t-sql/functions/rowcount-transact-sql.md)

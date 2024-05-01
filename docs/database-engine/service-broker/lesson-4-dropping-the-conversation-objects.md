@@ -7,7 +7,7 @@ ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ms.service: sql
 ms.subservice: configuration
-ms.topic: conceptual
+ms.topic: how-to
 ---
 
 # Lesson 4: Dropping the Conversation Objects
@@ -91,4 +91,4 @@ This concludes the tutorial. Tutorials are brief introductions only. They do not
 - [DROP SERVICE (Transact-SQL)](../../t-sql/statements/drop-service-transact-sql.md)
 - [DROP QUEUE (Transact-SQL)](../../t-sql/statements/drop-queue-transact-sql.md)
 - [DROP MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/drop-message-type-transact-sql.md)
-- [DROP CONTRACT (Transact-SQL)](../../t-sql/statements/drop-contract-transact-sql.md)ms190475\(v=SQL.105\))
+- [DROP CONTRACT (Transact-SQL)](../../t-sql/statements/drop-contract-transact-sql.md)

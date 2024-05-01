@@ -22,7 +22,7 @@ The Microsoft ODBC Driver for SQL Server can be used to create new applications.
 | ------------- |---------------|
 | Microsoft ODBC Driver 18 for SQL Server | <ul><li>Support for TDS 8.0</li><li>Extensions to SQLGetData</li><li>Option to send `SQL_LONG_*` types as `(max)`-types</li></ul>  |
 | Microsoft ODBC Driver 17 for SQL Server | <ul><li>Always Encrypted support for BCP API</li><li>New connection string attribute UseFMTONLY causes driver to use legacy metadata in special cases requiring temp tables</li>
-| Microsoft ODBC Driver 13.1 for SQL Server     | <ul><li>Always Encrypted</li><li>Azure AD Authentication</li><li>Always On Availability Groups (AG)</li></ul>   |
+| Microsoft ODBC Driver 13.1 for SQL Server     | <ul><li>Always Encrypted</li><li>Microsoft Entra authentication</li><li>Always On Availability Groups (AG)</li></ul>   |
 | Microsoft ODBC Driver 13 for SQL Server      | <ul><li>Internationalized Domain Name (IDN)</li></ul> |
 | Microsoft ODBC Driver 11 for SQL Server | <ul><li>Driver-Aware Connection Pooling</li><li>Connection Resiliency</li><li>Asynchronous execution (Polling Method)</li></ul> |
 
@@ -37,15 +37,14 @@ This documentation for the Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../.
 - [Asynchronous Execution &#40;Notification Method&#41; Sample](asynchronous-execution-notification-method-sample.md)
 - [Connection Resiliency in the Windows ODBC Driver](../connection-resiliency.md)
 - [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md)
-- [Using Azure Active Directory with the ODBC Driver](../using-azure-active-directory.md)
+- [Using Microsoft Entra ID with the ODBC Driver](../using-azure-active-directory.md)
 - [Using Transparent Network IP Resolution](../using-transparent-network-ip-resolution.md)
 
 ## Community
 
 - [SQL Server Drivers blog](https://techcommunity.microsoft.com/t5/sql-server/bg-p/SQLServer/label-name/SQLServerDrivers)
-- [SQL Server Data Access Forum](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)
 
-## See Also
+## Related content
 
 - [Building Applications with SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)
 - [SQL Server Native Client FAQ](/previous-versions/aa937707(v=msdn.10))

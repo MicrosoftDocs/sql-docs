@@ -72,10 +72,10 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
  Is the time of day when the distribution task stops being scheduled. *active_end_time_of_day* is **int**, with a default of **235959**, which means 11:59:59 P.M. on a 24-hour clock.  
   
 `[ @active_start_date = ] active_start_date`
- Is the date when the distribution task is first scheduled, formatted as YYYYMMDD. *active_start_date* is **int**, with a default of **0**.  
+ Is the date when the distribution task is first scheduled, formatted as `yyyyMMdd`. *active_start_date* is **int**, with a default of **0**.  
   
 `[ @active_end_date = ] active_end_date`
- Is the date when the distribution task stops being scheduled, formatted as YYYYMMDD. *active_end_date* is **int**, with a default of **99991231**, which means December 31, 9999.  
+ Is the date when the distribution task stops being scheduled, formatted as `yyyyMMdd`. *active_end_date* is **int**, with a default of `99991231`, which means December 31, 9999.  
   
 `[ @publisher = ] 'publisher'`
  Specifies a non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  

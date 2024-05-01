@@ -8,9 +8,7 @@ ms.date: 03/27/2023
 ms.service: virtual-machines-sql
 ms.subservice: deployment
 ms.topic: quickstart
-ms.custom:
-  - mode-ui
-  - ignite-2022
+ms.custom: mode-ui
 tags: azure-resource-manager
 ---
 

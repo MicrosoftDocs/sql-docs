@@ -3,10 +3,10 @@ title: "SQL Server, Memory Broker Clerks object"
 description: "Learn about the SQLServer:Memory Broker Clerks performance object, which provides counters for statistics related to memory broker clerks."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/13/2021"
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "SQLServer:Memory Broker Clerks"
 ---
@@ -25,7 +25,7 @@ This following table describes the SQL Server **Memory Broker Clerks** performan
 |**Simulation benefit**|The value of memory to the clerk, in ms per page per ms, multiplied by 10 billion and truncated to an integer.|
 |**Simulation size**|The current size of the clerk simulation, in pages.|
 
-There is an instance of the counter for the buffer pool, and the column store object pool.
+There is an instance of the counter for the buffer pool, and the columnstore object pool.
 
 ## Example
 
@@ -36,5 +36,6 @@ SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%Memory Broker Clerks%';
 ```  
 
-## See also  
-[Monitor Resource Usage (System Monitor)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)
+## Related content
+
+- [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)

@@ -6,7 +6,7 @@ ms.author: mikeray
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: database-mirroring
-ms.topic: conceptual
+ms.topic: ui-reference
 f1_keywords:
   - "sql13.swb.configdbmsecurwiz.serviceaccounts.f1"
 ---

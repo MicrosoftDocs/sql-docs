@@ -3,10 +3,10 @@ title: "SQL Server, FileTable object"
 description: "Learn about the SQLServer:FileTable performance object, which provides counters for statistics associated with FileTable and non-transacted access."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/13/2021"
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "SQLServer:FileTable"
 ---
@@ -55,8 +55,8 @@ You begin to explore the query performance counters in this object using this T-
 ```sql
 SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%FileTable%';
-```  
+```
  
- 
-## See also  
-[Monitor Resource Usage (System Monitor)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)
+## Related content
+
+- [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)

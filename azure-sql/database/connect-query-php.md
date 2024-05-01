@@ -6,7 +6,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: wiassaf, mathoma, v-masebo, randolphwest
 ms.date: 09/15/2023
-ms.service: sql-database
+ms.service: sql-db-mi
 ms.subservice: connect
 ms.topic: quickstart
 ms.custom:
@@ -15,7 +15,7 @@ ms.custom:
 ms.devlang: php
 monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 ---
-# Quickstart: Use PHP to query a database in Azure SQL Database
+# Quickstart: Use PHP to query a database in Azure SQL Database or Azure SQL Managed Instance
 
 [!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 

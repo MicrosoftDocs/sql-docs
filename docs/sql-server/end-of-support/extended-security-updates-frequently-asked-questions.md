@@ -127,7 +127,7 @@ Extended Security Updates enabled by Azure Arc (ESU subscription) includes sever
 - It's offered as a monthly subscription that automatically cancels when you migrate or upgrade. You pay only for what you need.
 - You don't need to resubscribe for Year 3.
 
-#### How do I activate an ESU subscription on multiple SQL Servers?
+#### How do I activate an ESU subscription on multiple SQL Server instances?
 
 If you want to activate Extended Security Updates enabled by Azure Arc subscriptions on a large set of [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] instances, you can use an [open source PowerShell script](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/modify-license-type) that allows you to do it for different scopes, such as resource group, Azure subscription, multiple subscriptions or the entire account.
 
@@ -141,7 +141,7 @@ Yes, you must have purchased the Year 1 ESU from VLSC to qualify for the monthly
 
 #### Can I continue to use the Year 2 ESU purchased from VLSC for Arc-enabled SQL Server 2012 instances?
 
-Yes, you can use your VLSC purchased Year 2 ESU for both registered (disconnected) and Arc-enabled SQL Servers. However, the patches aren't be automatically deployed. You must manually install them. Unlike the ESU subscription, VLSC customers commit for the whole year of the ESU term.
+Yes, you can use your VLSC purchased Year 2 ESU for both registered (disconnected) SQL Server instances enabled for Azure Arc. However, the patches aren't be automatically deployed. You must manually install them. Unlike the ESU subscription, VLSC customers commit for the whole year of the ESU term.
 
 #### How can I cancel the ESU charges?
 

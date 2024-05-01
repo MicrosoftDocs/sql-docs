@@ -384,13 +384,6 @@ For information about the Business Intelligence Client features supported by the
 | [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration Assistant | Yes | Yes | Yes | Yes | Yes |
 | Database mail | Yes | Yes | Yes | No | No |
 
-## <a id="Other"></a> Other components
-
-| Feature | Enterprise | Standard | Web | Express<br />with<br />Advanced<br />Services | Express |
-| --- | :---: | :---: | :---: | :---: | :---: |
-| StreamInsight | StreamInsight Premium Edition | StreamInsight Standard Edition | StreamInsight Standard Edition | No | No |
-| StreamInsight HA | StreamInsight Premium Edition | No | No | No | No |
-
 :::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download the latest version of SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**
 
 ## Next steps

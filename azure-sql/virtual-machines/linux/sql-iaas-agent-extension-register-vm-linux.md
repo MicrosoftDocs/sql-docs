@@ -8,10 +8,7 @@ ms.date: 10/26/2021
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
-ms.custom:
-  - devx-track-azurecli
-  - devx-track-azurepowershell
-  - contperf-fy21q2
+ms.custom: devx-track-azurecli, devx-track-azurepowershell, linux-related-content
 tags: azure-resource-manager
 ---
 # Register Linux SQL Server VM with SQL IaaS Agent extension 
@@ -157,7 +154,7 @@ An error indicates that the SQL Server VM has not been registered with the exten
 
 For more information, see the following articles:
 
-* [Overview of SQL Server on a Windows VM](sql-server-on-linux-vm-what-is-iaas-overview.md)
-* [FAQ for SQL Server on a Windows VM](frequently-asked-questions-faq.yml)
-* [Pricing guidance for SQL Server on a Windows VM](../windows/pricing-guidance.md)
-* [Release notes for SQL Server on a Windows VM](../windows/doc-changes-updates-release-notes-whats-new.md)
+* [Overview of SQL Server on Windows VMs](sql-server-on-linux-vm-what-is-iaas-overview.md)
+* [FAQ for SQL Server on Windows VMs](frequently-asked-questions-faq.yml)
+* [Pricing guidance for SQL Server on Windows VMs](../windows/pricing-guidance.md)
+* [Release notes for SQL Server on Windows VMs](../windows/doc-changes-updates-release-notes-whats-new.md)

@@ -23,8 +23,8 @@ The Connection tab is provider-specific and displays only the connection propert
 
 |Option|Description|
 |---   |---        |
-|Select or enter a server name|Select a server name from the drop-down list, or type the location of the server where the database you want to access is located. Selecting the database on the server is a separate action. Update the list by clicking "Refresh".
-|Enter information to sign in to the server|You can select the following authentication options from this drop-down list: <ul><li>`Windows Authentication:` Authentication to SQL Server using the currently logged-in user's Windows account credentials.</li><li>`SQL Server Authentication:` Authentication using login ID and password.</li><li>`Active Directory - Integrated:` Integrated authentication with an Azure Active Directory identity. This mode can also be used for Windows authentication to SQL Server.</li><li>`Active Directory - Password:` User ID and password authentication with an Azure Active Directory identity.</li><li>`Active Directory - Universal with MFA support:` Interactive authentication with an Azure Active Directory identity. This mode supports Azure Active Directory Multi-Factor Authentication (MFA).</li><li>`Active Directory - Service Principal:` Authentication with an Azure Active Directory service principal. **User name** should be set to the application (client) ID. **Password** should be set to the application (client) secret.</li></ul>|
+|Select or enter a server name|Select a server name from the drop-down list, or type the location of the server where the database you want to access is located. Selecting the database on the server is a separate action. Update the list by selecting **Refresh**. |
+| Enter information to sign in to the server | You can select the following authentication options from this drop-down list: <ul><li>`Windows Authentication:` Authenticate to SQL Server using the currently logged-in user's Windows account credentials. </li><li>`SQL Server Authentication:` Authenticate using SQL username and password. </li><li>`Active Directory - Integrated:` Integrated Windows authentication through Microsoft Entra ID. This mode is used for Windows authentication in Active Directory environments federated with Microsoft Entra ID.</li><li>`Active Directory - Password:` Username and password authentication with a Microsoft Entra identity. </li><li>`Active Directory - Universal with MFA support:` Interactive authentication with a Microsoft Entra identity. This mode supports Microsoft Entra multifactor authentication. </li><li>`Active Directory - Service Principal:` Authentication with a Microsoft Entra service principal. **Login ID** should be set to the application (client) ID. **Password** should be set to the application (client) secret. </li></ul>|
 |Server SPN|If you use a trusted connection, you can specify a service principal name (SPN) for the server.|
 |User name|Type the User ID to use for authentication when you sign in to the data source.|
 |Password|Type the password to use for authentication when you sign in to the data source.|
@@ -57,6 +57,6 @@ Use the Advanced tab to view and set additional initialization properties.
 >  For more general Data Link connection information, see the [Data Link API Overview](/previous-versions/windows/desktop/ms718102(v=vs.85)).
 
 ## Next steps
-- [Authenticate to Azure Active Directory](../features/using-azure-active-directory.md) using the OLE DB driver.
+- [Authenticate to Microsoft Entra ID](../features/using-azure-active-directory.md) using the OLE DB driver.
 
 - [Prompt user for authentication credentials](../help-topics/sql-server-login-dialog.md) using the OLE DB driver.

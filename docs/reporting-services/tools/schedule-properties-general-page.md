@@ -1,5 +1,5 @@
 ---
-title: "Schedule Properties (General Page)"
+title: "Schedule properties (General page)"
 description: Learn about the options for viewing or modifying a shared schedule on the Reporting Services page in SQL Server Management Studio.
 author: maggiesMSFT
 ms.author: maggies
@@ -11,10 +11,10 @@ ms.custom: updatefrequency5
 f1_keywords:
   - "sql13.swb.reportserver.scheduleproperties.general.f1"
 ---
-# Schedule Properties (General Page)
-  Use the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] page in [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] to view or modify a shared schedule. Shared schedules can be used in place of report-specific or subscription-specific schedules. Changes to the schedule are applied after you save the schedule. Editing a schedule has no effect on jobs that are currently in progress. If you edit a schedule while it is being used, all currently processing reports and subscriptions triggered from that schedule will be allowed to finish.  
+# Schedule properties (General page)
+  Use the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] page in [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] to view or modify a shared schedule. Shared schedules can be used in place of report-specific or subscription-specific schedules. Changes to the schedule are applied after you save the schedule. Editing a schedule has no effect on jobs that are currently in progress. If you edit a schedule while it's being used, all currently processing reports and subscriptions triggered from that schedule are allowed to finish.  
   
- Not all frequency combinations can be supported in a single schedule. For example, if you want to run a report at 12:00 P.M. and 4:00 P.M. every Friday, you must create two daily schedules that specify a Friday run date, one with a start time of 12:00 P.M. and another with a start time of 4:00 P.M.  
+ Not all frequency combinations can be supported in a single schedule. For example, if you want to run a report at 12:00 P.M. and 4:00 P.M. every Friday, you must create two daily schedules. These schedules should specify a Friday run date, with one having a start time of 12:00 P.M. and the other with a start time of 4:00 P.M.  
   
  Schedule processing is based on the local time of the report server that hosts and processes the schedule.  
   
@@ -55,10 +55,10 @@ f1_keywords:
  **Once**  
  Specifies a schedule that runs only once, on a specific date and time.  
   
-## See Also  
+## Related content  
  [Report Server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Connect to a Report Server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
+ [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Create, modify, and delete schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
  [Schedules](../../reporting-services/subscriptions/schedules.md)  
   
   

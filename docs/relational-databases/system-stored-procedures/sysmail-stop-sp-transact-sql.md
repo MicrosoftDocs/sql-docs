@@ -68,7 +68,7 @@ EXECUTE dbo.sysmail_stop_sp;
 GO
 ```
 
-## See also
+## Related content
 
 - [Database Mail](../database-mail/database-mail.md)
 - [sysmail_start_sp (Transact-SQL)](sysmail-start-sp-transact-sql.md)

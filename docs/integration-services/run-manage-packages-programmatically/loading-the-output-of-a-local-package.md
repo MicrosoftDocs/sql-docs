@@ -34,7 +34,7 @@ dev_langs:
   
 1.  In the package, configure a DataReader destination to receive the output that you want to read into the client application. Give the DataReader destination a descriptive name, since you will use this name later in your client application. Make a note of the name of the DataReader destination.  
   
-2.  In the development project, set a reference to the **Microsoft.SqlServer.Dts.DtsClient** namespace by locating the assembly **Microsoft.SqlServer.Dts.DtsClient.dll**. By default, this assembly is installed in **C:\Program Files\Microsoft SQL Server\100\DTS\Binn**. Import the namespace into your code by using the C# **Using** or the [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **Imports** statement.  
+2.  In the development project, set a reference to the **Microsoft.SqlServer.Dts.DtsClient** namespace by locating the assembly **Microsoft.SqlServer.Dts.DtsClient.dll**. By default, this assembly is installed in **C:\Program Files\Microsoft SQL Server\100\DTS\Binn**. Import the namespace into your code by using the C# **Using** or the [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] **Imports** statement.  
   
 3.  In your code, create an object of type **DtsClient.DtsConnection** with a connection string that contains the command-line parameters required by **dtexec.exe** to run the package. For more information, see [dtexec Utility](../../integration-services/packages/dtexec-utility.md). Then open the connection with this connection string. You can also use the **dtexecui** utility to create the required connection string visually.  
   

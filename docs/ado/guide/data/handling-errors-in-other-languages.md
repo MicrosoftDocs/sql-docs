@@ -9,7 +9,7 @@ ms.subservice: ado
 ms.topic: conceptual
 ---
 # Handling Errors In Other Languages
-So far, this section has discussed errors from a Microsoft® Visual Basic® point of view. The remainder of this section will give you an overview of error handling in languages other than Visual Basic.  
+So far, this section has discussed errors from a [!INCLUDE [visual-basic-md](../../../includes/visual-basic-md.md)] point of view. The remainder of this section will give you an overview of error handling in languages other than Visual Basic.  
   
  This section contains the following topics.  
   

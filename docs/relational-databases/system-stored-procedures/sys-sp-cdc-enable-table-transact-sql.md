@@ -175,7 +175,7 @@ EXEC sys.sp_cdc_enable_table
 GO
 ```
 
-## See also
+## Related content
 
 - [sys.sp_cdc_disable_table (Transact-SQL)](sys-sp-cdc-disable-table-transact-sql.md)
 - [sys.sp_cdc_help_change_data_capture (Transact-SQL)](sys-sp-cdc-help-change-data-capture-transact-sql.md)

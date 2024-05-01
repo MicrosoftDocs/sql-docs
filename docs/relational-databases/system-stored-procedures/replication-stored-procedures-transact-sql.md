@@ -260,7 +260,7 @@ For more information on how to program most of the common replication tasks usin
     :::column-end:::
 :::row-end:::
 
-## See also
+## Related content
 
 - [Replication Management Objects Concepts](../replication/concepts/replication-management-objects-concepts.md)
 - [Replication Programming Concepts](../replication/concepts/replication-programming-concepts.md)

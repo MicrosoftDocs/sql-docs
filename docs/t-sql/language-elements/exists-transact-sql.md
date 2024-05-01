@@ -106,7 +106,7 @@ Willis                                             Johnson
  ```  
   
 ### C. Comparing queries by using EXISTS and = ANY  
- The following example shows two queries to find stores whose name is the same name as a vendor. The first query uses `EXISTS` and the second uses `=``ANY`.  
+ The following example shows two queries to find stores whose name is the same name as a vendor. The first query uses `EXISTS` and the second uses `= ANY`.  
   
 ```sql  
 -- Uses AdventureWorks  

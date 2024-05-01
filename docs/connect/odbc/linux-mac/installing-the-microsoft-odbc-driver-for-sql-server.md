@@ -4,11 +4,11 @@ description: Learn how to install the Microsoft ODBC Driver for SQL Server on Li
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: randolphwest
-ms.date: 10/10/2023
+ms.date: 04/09/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
-ms.custom: intro-installation
+ms.custom: intro-installation, linux-related-content
 helpviewer_keywords:
   - "driver, installing"
 ---
@@ -37,23 +37,20 @@ then
     exit;
 fi
 
-
 #Download the desired package(s)
-curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/msodbcsql18_18.3.2.1-1_$architecture.apk
+curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/msodbcsql18_18.3.3.1-1_$architecture.apk
 curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/mssql-tools18_18.3.1.1-1_$architecture.apk
 
-
 #(Optional) Verify signature, if 'gpg' is missing install it using 'apk add gnupg':
-curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/msodbcsql18_18.3.2.1-1_$architecture.sig
+curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/msodbcsql18_18.3.3.1-1_$architecture.sig
 curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/mssql-tools18_18.3.1.1-1_$architecture.sig
 
 curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
-gpg --verify msodbcsql18_18.3.2.1-1_$architecture.sig msodbcsql18_18.3.2.1-1_$architecture.apk
+gpg --verify msodbcsql18_18.3.3.1-1_$architecture.sig msodbcsql18_18.3.3.1-1_$architecture.apk
 gpg --verify mssql-tools18_18.3.1.1-1_$architecture.sig mssql-tools18_18.3.1.1-1_$architecture.apk
 
-
 #Install the package(s)
-sudo apk add --allow-untrusted msodbcsql18_18.3.2.1-1_$architecture.apk
+sudo apk add --allow-untrusted msodbcsql18_18.3.3.1-1_$architecture.apk
 sudo apk add --allow-untrusted mssql-tools18_18.3.1.1-1_$architecture.apk
 ```
 
@@ -93,7 +90,30 @@ sudo apt-get install -y libgssapi-krb5-2
 ```
 
 > [!NOTE]  
-> You can substitute setting the environment variable 'ACCEPT_EULA' with setting the debconf variable 'msodbcsql/ACCEPT_EULA' instead: `echo msodbcsql18 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
+> You can substitute setting the environment variable `ACCEPT_EULA` with setting the debconf variable `msodbcsql/ACCEPT_EULA` instead: `echo msodbcsql18 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
+
+#### Error: The following signatures couldn't be verified because the public key is not available
+
+**Symptom**
+
+You get an error while running `apt-get update` similar to the following text:
+
+```output
+W: GPG error: https://packages.microsoft.com/debian/12/prod bookworm InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY EB3E94ADBE1229CF
+E: The repository 'https://packages.microsoft.com/debian/12/prod bookworm InRelease' is not signed.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+```
+
+**Resolution**
+
+Once you download the `/etc/apt/sources.list.d/mssql-release.list` file, edit it to remove the `signed-by` value.
+
+- **Old:** `deb [arch=amd64,arm64,armhf signed-by=/usr/share/keyrings/microsoft-prod.gpg] https://packages.microsoft.com/debian/12/prod bookworm main`
+
+- **New:** `deb [arch=amd64,arm64,armhf] https://packages.microsoft.com/debian/12/prod bookworm main`
+
+Run `sudo apt-get update` and continue the installation from there.
 
 ### [RHEL and Oracle Linux](#tab/redhat18-install)
 

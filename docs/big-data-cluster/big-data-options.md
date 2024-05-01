@@ -5,7 +5,7 @@ description: This article discusses migration strategies for SQL Server 2019 Big
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei, randolphwest
-ms.date: 05/03/2023
+ms.date: 03/08/2024
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
@@ -13,19 +13,19 @@ monikerRange: ">=sql-server-ver15"
 ---
 # Big data options on the Microsoft SQL Server platform
 
-[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019-and-later.md)]
 
 Microsoft SQL Server 2019 Big Clusters is an add-on for the SQL Server Platform that allows you to deploy scalable clusters of SQL Server, Spark, and HDFS containers running on Kubernetes. These components are running side by side to enable you to read, write, and process big data using Transact-SQL or Spark libraries, allowing you to easily combine and analyze your high-value relational data with non-relational high-volume big data. Big data clusters also allow you to virtualize data with PolyBase, so that you can query data from external SQL Server, Oracle, Teradata, MongoDB, and other data sources using external tables. The Microsoft SQL Server 2019 Big Clusters add-on provides high availability for the SQL Server master instance and all databases by using Always On availability group technology.
 
-The [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] add-on runs on-premises and in the cloud using the Kubernetes platform, for any standard deployment of Kubernetes. Additionally, the [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] add-on integrates with Active Directory and includes role-based access control to satisfy security and compliance needs of your enterprise.
+The [!INCLUDE [ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] add-on runs on-premises and in the cloud using the Kubernetes platform, for any standard deployment of Kubernetes. Additionally, the [!INCLUDE [ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] add-on integrates with Active Directory and includes role-based access control to satisfy security and compliance needs of your enterprise.
 
-## Retirement of the [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] add-on
+## Retirement of the [!INCLUDE [ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] add-on
 
-On February 28, 2025, we will retire [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)]. All existing users of SQL Server 2019 with Software Assurance will be fully supported on the platform and the software will continue to be maintained through SQL Server cumulative updates until that time. **For more information, see [the announcement blog post](https://aka.ms/sqlserver_bigdataclusters).**
+On February 28, 2025, we will retire [!INCLUDE [ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)]. All existing users of SQL Server 2019 with Software Assurance will be fully supported on the platform and the software will continue to be maintained through SQL Server cumulative updates until that time. **For more information, see [the announcement blog post](https://aka.ms/sqlserver_bigdataclusters).**
 
 ## Changes to PolyBase support in SQL Server
 
-Related to the [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] retirement are some features related to scale out queries.
+Related to the [!INCLUDE [ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] retirement are some features related to scale out queries.
 
 The PolyBase scale-out groups feature of Microsoft SQL Server has been retired. Scale-out group functionality is removed from the product in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. In-market versions of SQL Server 2019, SQL Server 2017, and SQL Server 2016, continue to support the functionality to the end of life of those products. PolyBase data virtualization continues to be fully supported as a scale-up feature in SQL Server.
 
@@ -43,9 +43,9 @@ In [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] and later versions, users 
 
 ## Understand the Big Data Clusters architecture for replacement and migration options
 
-To create your replacement solution for a Big Data storage and processing system, it's important to understand what [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] provides, and its architecture can help inform your choices. The architecture of a big data cluster is as follows:
+To create your replacement solution for a Big Data storage and processing system, it's important to understand what [!INCLUDE [ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] provides, and its architecture can help inform your choices. The architecture of a big data cluster is as follows:
 
-:::image type="content" source="media/big-data-options/architecture-diagram-overview.png" alt-text="Diagram that shows the SQL Server 2019 Big Data Clusters architecture overview" lightbox="media/big-data-options/architecture-diagram-overview.png":::
+:::image type="content" source="media/big-data-options/architecture-diagram-overview.png" alt-text="Diagram that shows the SQL Server 2019 Big Data Clusters architecture overview." lightbox="media/big-data-options/architecture-diagram-overview.png":::
 
 This architecture provides the following functionality mapping:
 
@@ -58,7 +58,7 @@ This architecture provides the following functionality mapping:
 | **Storage Pool** | The storage pool consists of storage pool pods comprised of SQL Server on Linux, Spark, and HDFS. All the storage nodes in a big data cluster are members of an HDFS cluster. |
 | **App Pool** | Enables the deployment of applications on a big data cluster by providing interfaces to create, manage, and run applications. |
 
-For more information on these functions, see [Introducing [!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).
+For more information on these functions, see [Introducing [!INCLUDE [big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).
 
 ## Functionality replacement options for Big Data and SQL Server
 
@@ -89,7 +89,7 @@ You can replace the functionality of SQL Server Big Data Clusters by using one o
 
 Microsoft Azure Synapse is an enterprise analytics service that accelerates time to insight across data warehouses and big data systems, using distributed processing and data constructs. Azure Synapse brings together SQL technologies used in enterprise data warehousing, Spark technologies used for big data, Pipelines for data integration and ETL/ELT, and deep integration with other Azure services such as Power BI, Cosmos DB, and Azure Machine Learning.
 
-Use Microsoft Azure Synapse as a replacement for [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] when you need to:
+Use Microsoft Azure Synapse as a replacement for [!INCLUDE [ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] when you need to:
 
 - Use both serverless and dedicated resource models. For predictable performance and cost, create dedicated SQL pools to reserve processing power for data stored in SQL tables.
 - Process unplanned or "burst" workloads, access an always-available, serverless SQL endpoint.
@@ -111,7 +111,7 @@ Use Microsoft Azure Synapse as a replacement for [!INCLUDE[ssbigdataclusters-ver
 
 The architecture of Microsoft Azure Synapse is as follows:
 
-:::image type="content" source="media/big-data-options/synapse-architecture.png" alt-text="Diagram that shows Azure Synapse architecture overview" lightbox="media/big-data-options/synapse-architecture.png":::
+:::image type="content" source="media/big-data-options/synapse-architecture.png" alt-text="Diagram that shows Azure Synapse architecture overview." lightbox="media/big-data-options/synapse-architecture.png":::
 
 For more information on Microsoft Azure Synapse, see [What is Azure Synapse Analytics?](/azure/synapse-analytics/overview-what-is)
 
@@ -121,7 +121,7 @@ You can replace the functionality of SQL Server Big Data Clusters by using one o
 
 Azure Machine Learning is a cloud-based service that can be used for any kind of machine learning, from classical ML to deep learning, supervised, and unsupervised learning. Whether you prefer to write Python or R code with the SDK or work with no-code/low-code options in the studio, you can build, train, and track machine learning and deep-learning models in an Azure Machine Learning Workspace. With Azure Machine Learning, you can start training on your local machine and then scale out to the cloud. The service also interoperates with popular deep learning and reinforcement open-source tools such as PyTorch, TensorFlow, scikit-learn, and Ray RLlib.
 
-Use Microsoft Azure Machine Learning as a replacement for [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] when you need:
+Use Microsoft Azure Machine Learning as a replacement for [!INCLUDE [ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] when you need:
 
 - A designer-based web environment for Machine Learning: drag-n-drop modules to build your experiments and then deploy pipelines in a    low-code environment.
 - Jupyter notebooks: use our example notebooks or create your own notebooks to use our SDK for Python samples for your machine    learning.
@@ -135,7 +135,7 @@ Use Microsoft Azure Machine Learning as a replacement for [!INCLUDE[ssbigdataclu
 
 The architecture of a Microsoft Azure Machine Learning deployment is as follows:
 
-:::image type="content" source="media/big-data-options/azure-machine-learning-architecture.svg" alt-text="Diagram that shows Azure Machine Learning architecture of a workspace and its components" lightbox="media/big-data-options/azure-machine-learning-architecture.svg":::
+:::image type="content" source="media/big-data-options/azure-machine-learning-architecture.svg" alt-text="Diagram that shows Azure Machine Learning architecture of a workspace and its components.":::
 
 For more information on Microsoft Azure Machine Learning, see [How Azure Machine Learning works](/azure/machine-learning/overview-what-is-azure-ml).
 
@@ -149,7 +149,7 @@ Azure Databricks SQL Analytics provides an easy-to-use platform for analysts who
 
 Azure Databricks Workspace provides an interactive workspace that enables collaboration between data engineers, data scientists, and machine learning engineers. For a big data pipeline, the data (raw or structured) is ingested into Azure through Azure Data Factory in batches, or streamed near real-time using Apache Kafka, Event Hubs, or IoT Hub. This data lands in a data lake for long term persisted storage, in Azure Blob Storage or Azure Data Lake Storage. As part of your analytics workflow, use Azure Databricks to read data from multiple data sources and turn it into breakthrough insights using Spark.
 
-Use Microsoft Azure Databricks as a replacement for [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] when you need:
+Use Microsoft Azure Databricks as a replacement for [!INCLUDE [ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] when you need:
 
 - Fully managed Spark clusters with Spark SQL and DataFrames.
 - Streaming for real-time data processing and analysis for analytical and interactive applications, Integrating with HDFS, Flume, and Kafka.
@@ -165,26 +165,46 @@ Use Microsoft Azure Databricks as a replacement for [!INCLUDE[ssbigdataclusters-
 - An interactive workspace for exploration and visualization.
 - Fully managed SQL endpoints in the cloud.
 - SQL queries that run on fully managed SQL endpoints sized according to query latency and number of concurrent users.
-- Integration with Azure Active Directory.
+- Integration with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)).
 - Role-based access for fine-grained user permissions for notebooks, clusters, jobs, and data.
 - Enterprise-grade SLAs.
 - Dashboards for sharing insights, combining visualizations and text to share insights drawn from your queries.
 - Alerts help you monitor and integrate, and notification when a field returned by a query meets a threshold. Use alerts to monitor your business or integrate them with tools to start workflows such as user onboarding or support tickets.
-- Enterprise security, including Azure Active Directory integration, role-based controls, and SLAs that protect your data and your business.
+- Enterprise security, including Microsoft Entra ID integration, role-based controls, and SLAs that protect your data and your business.
 - Integration with Azure services and Azure databases and stores including Synapse Analytics, Cosmos DB, Data Lake Store, and Blob storage.
 - Integration with Power BI and other BI tools, such as Tableau Software.
 
 The architecture of a Microsoft Azure Databricks deployment is as follows:
 
-:::image type="content" source="media/big-data-options/azure-databricks-overview.png" alt-text="Diagram: architecture of an Azure Databricks workspace and its components and data flows, from people to applications" lightbox="media/big-data-options/azure-databricks-overview.png":::
+:::image type="content" source="media/big-data-options/azure-databricks-overview.png" alt-text="Diagram: architecture of an Azure Databricks workspace and its components and data flows, from people to applications.":::
 
 For more information on Microsoft Azure Databricks, see [What is Databricks Data Science & Engineering?](/azure/databricks/scenarios/what-is-azure-databricks)
 
 ## Hybrid
 
+### Fabric Mirrored Database
+
+As a data replication experience, [Database Mirroring in Fabric (Preview)](/fabric/database/mirrored-database/overview) is a low-cost and low-latency solution to bring data from various systems together into a single analytics platform. You can continuously replicate your existing data estate directly into Fabric's OneLake, including data from Azure SQL Database, Snowflake, and Cosmos DB.
+
+With the most up-to-date data in a queryable format in OneLake, you can now use all the different services in Fabric, such as running analytics with Spark, executing notebooks, data engineering, visualizing through Power BI Reports, and more.
+
+Mirroring in Fabric provides an easy experience to speed the time-to-value for insights and decisions, and to break down data silos between technology solutions, without developing expensive Extract, Transform, and Load (ETL) processes to move data.
+
+With Mirroring in Fabric, you don't need to piece together different services from multiple vendors. Instead, you can enjoy a highly integrated, end-to-end, and easy-to-use product that is designed to simplify your analytics needs, and built for openness and collaboration between technology solutions that can read the open-source Delta Lake table format.
+
+For more information, see:
+
+- [Microsoft Fabric mirrored databases (Preview)](/fabric/database/mirrored-database/overview)
+- [Microsoft Fabric mirrored databases monitoring](/fabric/database/mirrored-database/monitor)
+- [Explore data in your Mirrored database using Microsoft Fabric](/fabric/database/mirrored-database/explore)
+- [What is Microsoft Fabric?](/fabric/get-started/microsoft-fabric-overview)
+- [Model data in the default Power BI semantic model in Microsoft Fabric](/fabric/data-warehouse/model-default-power-bi-dataset)
+- [What is the SQL analytics endpoint for a Lakehouse?](/fabric/data-engineering/lakehouse-sql-analytics-endpoint)
+- [Direct Lake](/power-bi/enterprise/directlake-overview)
+
 ### Use SQL Server 2022 with Azure Synapse Link for SQL
 
-[!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] contains a new feature that allows connectivity between SQL Server tables and the Microsoft Azure Synapse platform, the [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview). Azure Synapse Link for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] provides automatic change feeds that capture the changes within SQL Server and load them into Azure Synapse Analytics. It provides near real-time analysis and hybrid  transactional and analytical processing with minimal impact on operational systems. Once the data is in Synapse, you can combine it with many different data sources regardless of their size, scale, or format and run powerful analytics over all of it using your choice of Azure Machine Learning, Spark, or Power BI. Since the automated change feeds only push what is new or different, data transfer happens much faster and now allows for near real-time insights, with minimal impact on the performance of the source database in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].
+[!INCLUDE [sql-server-2022](../includes/sssql22-md.md)] contains a new feature that allows connectivity between SQL Server tables and the Microsoft Azure Synapse platform, the [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview). Azure Synapse Link for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] provides automatic change feeds that capture the changes within SQL Server and load them into Azure Synapse Analytics. It provides near real-time analysis and hybrid  transactional and analytical processing with minimal impact on operational systems. Once the data is in Synapse, you can combine it with many different data sources regardless of their size, scale, or format and run powerful analytics over all of it using your choice of Azure Machine Learning, Spark, or Power BI. Since the automated change feeds only push what is new or different, data transfer happens much faster and now allows for near real-time insights, with minimal impact on the performance of the source database in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].
 
 For your operational and even much of your analytic workloads, SQL Server can handle massive database sizes - for more information on maximum capacity specifications for SQL Server, see [Compute capacity limits by edition of SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md). Using multiple SQL Server Instances on separate machines with partitioned T-SQL requests allow a scale-out environment for applications.
 
@@ -202,7 +222,7 @@ The Microsoft Apache Spark connector for SQL Server and Azure SQL also has that 
 
 You can also use the Kubernetes container orchestration system for your deployment. This allows a declarative-architecture that can run on-premises or in any Cloud that supports Kubernetes or the Red Hat OpenShift platform. To learn more about deploying SQL Server into a Kubernetes environment, see [Deploy a SQL Server container cluster on Azure](../linux/quickstart-sql-server-containers-azure.md) or watch [Deploying SQL Server 2019 in Kubernetes](/shows/data-exposed/deploying-sql-server-2019-in-kubernetes).
 
-Use SQL Server and Hadoop/Spark on-premises as a replacement for [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] when you need to:
+Use SQL Server and Hadoop/Spark on-premises as a replacement for [!INCLUDE [ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] when you need to:
 
 - Retain the entire solution on-premises
 - Use dedicated hardware for all parts of the solution
@@ -249,7 +269,7 @@ There are two common approaches for data movement in a large-scale analytic syst
 
 In some cases, all data needs to move from the legacy system to the new system. In this case, you can mount the original file stores from SQL Server Big Data Clusters if the new system supports it and then copy the data piecewise to the new system, or you can create a physical move.
 
-Migrating your current data from [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] to another system is highly dependent on two factors: the location of your current data, and the destination being on-premises or to-cloud.
+Migrating your current data from [!INCLUDE [ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] to another system is highly dependent on two factors: the location of your current data, and the destination being on-premises or to-cloud.
 
 #### On-premises data migration
 
@@ -267,7 +287,7 @@ If you want to transfer data using disk drives supplied by Microsoft, you can us
 
 For more information on these choices and the decisions that accompany them, see [Using Azure Data Lake Storage Gen1 for big data requirements](/azure/data-lake-store/data-lake-store-data-scenarios).
 
-## Next steps
+## Related content
 
 - [Microsoft Azure Big data architecture guide](/azure/architecture/data-guide/big-data/)
 - [Data Architecture discussion space](https://techcommunity.microsoft.com/t5/data-architecture/ct-p/DataArchitecture)

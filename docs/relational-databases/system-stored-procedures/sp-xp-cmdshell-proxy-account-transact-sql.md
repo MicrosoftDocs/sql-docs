@@ -84,7 +84,7 @@ EXEC sp_xp_cmdshell_proxy_account NULL;
 GO
 ```
 
-## Next steps
+## Related content
 
 - [xp_cmdshell (Transact-SQL)](xp-cmdshell-transact-sql.md)
 - [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md)

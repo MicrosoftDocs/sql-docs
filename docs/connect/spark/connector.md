@@ -88,7 +88,7 @@ Environment
 
 ### `java.lang.NoClassDefFoundError: com/microsoft/aad/adal4j/AuthenticationException`
 
-This issue arises from using an older version of the mssql driver (which is now included in this connector) in your hadoop environment. If you are coming from using the previous Azure SQL Connector and have manually installed drivers onto that cluster for Azure Active Directory compatibility, you will need to remove those drivers.
+This issue arises from using an older version of the mssql driver (which is now included in this connector) in your hadoop environment. If you are coming from using the previous Azure SQL Connector and have manually installed drivers onto that cluster for Microsoft Entra authentication compatibility, you will need to remove those drivers.
 
 Steps to fix the issue:
 
@@ -179,7 +179,9 @@ jdbcDF = spark.read \
         .option("password", password).load()
 ```
 
-## Azure Active Directory Authentication
+<a name='azure-active-directory-authentication'></a>
+
+## Microsoft Entra authentication
 
 ### Python Example with Service Principal
 

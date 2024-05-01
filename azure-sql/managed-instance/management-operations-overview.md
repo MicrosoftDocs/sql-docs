@@ -9,7 +9,7 @@ ms.date: 08/20/2021
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: overview
-ms.custom: ignite-fall-2021, ignite-2023
+ms.custom: ignite-2023
 ---
 
 # Overview of Azure SQL Managed Instance management operations
@@ -38,7 +38,8 @@ Fast provisioning only applies:
 - to the first instance provisioned in the subnet. 
 - to instances with 4-8 vCores. 
 - to instances that use the default maintenance window. 
-- to instances that are deployed into subnets that have the November 2022 feature wave enabled, which includes both dev/test and production subscriptions. 
+- to instances that are deployed into subnets that have the November 2022 feature wave enabled, which includes both dev/test and production subscriptions.
+- to instances that are not zone redundant.
 
 ## Duration
 
@@ -50,7 +51,7 @@ The following table lists the long running steps that can be triggered as part o
 |---------|---------|---------|
 |**Virtual cluster creation (fast provisioning)**<sup>1</sup>|Fast provisioning is a synchronous step in instance management operations during which the very first virtual machine group is instantly available.|**90% of operations finish in 30 minutes**|
 |**Virtual cluster creation**|Creation is a synchronous step in instance management operations during which the very first virtual machine group is created.|**90% of operations finish in less than 4 hours**|
-|**Virtual cluster resizing (expansion or shrinking)**|Adding new machines to the existing virtual machine group, removing unused virtual machines, adding or removing the entire virtual machine group. Expansion is a synchronous step, while shrinking is performed asynchronously (without impact on the duration of instance management operations).|**90% of cluster expansions with creation of new virtual machine group finish in less than 4 hours** <br><br> **90% of cluster expansions with expansion of existing virtual machine group finish in 60 minutes**|
+|**Virtual cluster resizing (expansion or shrinking)**|Adding new machines to the existing virtual machine group, removing unused virtual machines, adding or removing the entire virtual machine group. Expansion is a synchronous step, while shrinking is performed asynchronously (without impact on the duration of instance management operations).|**90% of cluster expansions with creation of new virtual machine group finish in less than 4 hours** <br /><br /> **90% of cluster expansions with expansion of existing virtual machine group finish in 60 minutes**|
 |**Virtual cluster deletion**|Virtual cluster deletion is triggered when the very last instance is deleted from the subnet.|**90% of cluster deletions finish in 1.5 hours**|
 |**Seeding database files**<sup>2</sup>|A synchronous step, triggered during compute (vCores), or storage scaling in the Business Critical service tier as well as in changing the service tier from General Purpose to Business Critical (or vice versa). Duration of this operation is proportional to the total database size as well as current database activity (number of active transactions). Database activity when updating an instance can introduce significant variance to the total duration.|**90% of these operations execute at 220 GB/hour or higher**|
 
@@ -74,21 +75,25 @@ The following tables summarize operations and typical overall durations, based o
 |First instance with a different hardware generation or maintenance window in a non-empty subnet (for example, the first Premium-series instance in a subnet with Standard-series instances)|Adding new [virtual machine group](virtual-cluster-architecture.md#role-in-management-operations) to the virtual cluster<sup>2</sup>|90% of operations finish in less than 4 hours.|
 |Subsequent instance creation within the non-empty subnet (2nd, 3rd, etc. instance)|Virtual cluster resizing|90% of operations finish in 60 minutes.|
 
-<sup>1</sup> Fast provisioning is currently supported only for the first instance in the subnet, with 4 or 8 vCores, and with default maintenance window configuration.   
+<sup>1</sup> Fast provisioning is currently supported only for the first instance in the subnet, with 4 or 8 vCores, and with default maintenance window configuration.
 <sup>2</sup> A separate [virtual machine group](virtual-cluster-architecture.md#role-in-management-operations) is created for each hardware generation and maintenance window configuration.
 
 **Category: Update**
 
 |Operation  |Long-running segment  |Estimated duration  |
 |---------|---------|---------|
-|Instance property change (admin password, Microsoft Entra login, Azure Hybrid Benefit flag)|N/A|Up to 1 minute.|
-|Instance storage scaling up/down (General Purpose)|No long-running segment|99% of operations finish in 5 minutes.|
-|Instance storage scaling up/down (Business Critical)|- Virtual cluster resizing<br>- Always On availability group seeding|90% of operations finish in 60 minutes + time to seed all databases (220 GB/hour).|
-|Instance compute (vCores) scaling up and down (General Purpose)|- Virtual cluster resizing|90% of operations finish in 60 minutes.|
-|Instance compute (vCores) scaling up and down (Business Critical)|- Virtual cluster resizing<br>- Always On availability group seeding|90% of operations finish in 60 minutes + time to seed all databases (220 GB/hour).|
-|Instance service tier change (General Purpose to Business Critical and vice versa)|- Virtual cluster resizing<br>- Always On availability group seeding|90% of operations finish in 60 minutes + time to seed all databases (220 GB/hour).|
-|Instance hardware or maintenance window change (General Purpose)|- Virtual cluster resizing<sup>1</sup>|90% of operations finish in less than 4 hours (virtual machine group creation) or 60 minutes (virtual machine group resizing) .|
-|Instance hardware or maintenance window change (Business Critical)|- Virtual cluster resizing<sup>1</sup><br>- Always On availability group seeding|90% of operations finish in less than 4 hours (virtual machine group creation) or 60 minutes (virtual machine group resizing) + time to seed all databases (220 GB/hour).|
+|Instance property change  <br /> (admin password, Microsoft Entra login, Azure Hybrid Benefit flag)|N/A|Up to 1 minute.|
+|Instance storage scaling up/down <br /> (General Purpose)|No long-running segment|99% of operations finish in 5 minutes.|
+|Instance storage scaling up/down <br /> (Business Critical)|- Virtual cluster resizing<br />- Always On availability group seeding|90% of operations finish in 60 minutes + time to seed all databases (220 GB/hour).|
+|Instance storage scaling up/down <br /> (Next-gen General Purpose)|- Virtual cluster creation / virtual machine group resizing <br /> - Always On availability group seeding| 90% of operations finish in less than 4 hours (virtual machine group creation) or 60 minutes (virtual machine group resizing) + time to seed all databases (220 GB/hour) + failover + cleaning up old instance |
+|Instance compute (vCores) scaling up and down  <br />(General Purpose)|- Virtual cluster resizing|90% of operations finish in 60 minutes.|
+|Instance compute (vCores) scaling up and down  <br />(Business Critical)|- Virtual cluster resizing<br />- Always On availability group seeding|90% of operations finish in 60 minutes + time to seed all databases (220 GB/hour).|
+|Instance compute (vCores) scaling up and down  <br />(Next-gen General Purpose)| Virtual cluster creation / virtual machine group resizing <br />- Always On availability group seeding| 90% of operations finish in less than 4 hours (virtual machine group creation) or 60 minutes (virtual machine group resizing) + time to seed all databases (220 GB/hour) + failover + cleaning up old instance|
+|Instance service tier change  <br />(General Purpose to Business Critical and vice versa)|- Virtual cluster resizing<br />- Always On availability group seeding|90% of operations finish in 60 minutes + time to seed all databases (220 GB/hour).|
+|Instance service tier change  <br />(General Purpose or Business Critical to Next-gen General Purpose and vice versa)| Virtual cluster creation / virtual machine group resizing <br />- Always On availability group seeding| 90% of operations finish in less than 4 hours (virtual machine group creation) or 60 minutes (virtual machine group resizing) + time to seed all databases (220 GB/hour) + failover + cleaning up old instance| 
+|Instance hardware or maintenance window change  <br />(General Purpose)|- Virtual cluster resizing<sup>1</sup>|90% of operations finish in less than 4 hours (virtual machine group creation) or 60 minutes (virtual machine group resizing) .|
+|Instance hardware or maintenance window change  <br />(Business Critical)|- Virtual cluster resizing<sup>1</sup><br />- Always On availability group seeding|90% of operations finish in less than 4 hours (virtual machine group creation) or 60 minutes (virtual machine group resizing) + time to seed all databases (220 GB/hour).|
+|Instance hardware or maintenance window change <br /> (Next-gen General Purpose)|- Virtual cluster creation / virtual machine group resizing <br />- Always On availability group seeding|90% of operations finish in less than 4 hours (virtual machine group creation) or 60 minutes (virtual machine group resizing) + time to seed all databases (220 GB/hour) + failover + cleaning up old instance |
 
 <sup>1</sup> Managed instance must be placed in a virtual machine group with the same corresponding hardware and maintenance window. If there is no such group in the virtual cluster, a new one must be created first to accommodate the instance configuration.
 
@@ -97,7 +102,7 @@ The following tables summarize operations and typical overall durations, based o
 |Operation  |Long-running segment  |Estimated duration  |
 |---------|---------|---------|
 |Non-last instance deletion|Log tail backup for all databases|90% of operations finish in up to 1 minute.<sup>1</sup>|
-|Last instance deletion |- Log tail backup for all databases <br> - Virtual cluster deletion|90% of operations finish in up to 1.5 hours.<sup>2</sup>|
+|Last instance deletion |- Log tail backup for all databases <br /> - Virtual cluster deletion|90% of operations finish in up to 1.5 hours.<sup>2</sup>|
 
 
 <sup>1</sup> If there are multiple virtual machine groups in the cluster, deleting the last instance in the group immediately triggers deleting the virtual machine group **asynchronously**.   

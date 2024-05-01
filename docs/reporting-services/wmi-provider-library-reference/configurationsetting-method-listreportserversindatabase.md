@@ -1,6 +1,6 @@
 ---
-title: "ListReportServersInDatabase Method (WMI MSReportServer_ConfigurationSetting)"
-description: "ListReportServersInDatabase Method (WMI MSReportServer_ConfigurationSetting)"
+title: "ListReportServersInDatabase method (WMI MSReportServer_ConfigurationSetting)"
+description: "ListReportServersInDatabase method (WMI MSReportServer_ConfigurationSetting)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -14,7 +14,7 @@ apilocation: "reportingservices.mof"
 apiname: "ListReportServersInDatabase (WMI MSReportServer_ConfigurationSetting Class)"
 apitype: MOFDef
 ---
-# ConfigurationSetting Method - ListReportServersInDatabase
+# ConfigurationSetting method - ListReportServersInDatabase
   Returns the list of report server installations that are present in the report server database, regardless of whether they have access to secure information.  
   
 ## Syntax  
@@ -53,18 +53,18 @@ public void ListReportServersInDatabase (out string[] MachineNames,
  [out] Value indicating whether the call succeeded or failed.  
   
  *ExtendedErrors[]*  
- [out] A string array containing additional errors returned by the call.  
+ [out] A string array containing other errors returned by the call.  
   
-## Return Value  
- Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A non-zero value indicates that an error has occurred.  
+## Return value  
+ Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A nonzero value indicates that an error occurred.  
   
 ## Remarks  
- ListReportServersInDatabase lists the report server installations that are present in the report server database, regardless of whether they have access to secure information, and returns a matched set of arrays containing information about each installation.  
+ *ListReportServersInDatabase* lists the report server installations that are present in the report server database, regardless of whether they have access to secure information. It returns a matched set of arrays containing information about each installation.  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+## Related content  
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

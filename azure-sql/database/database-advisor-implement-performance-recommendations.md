@@ -71,7 +71,7 @@ This process repeats until there's enough available storage to create an index, 
 Besides detecting missing indexes, Azure SQL Database continuously analyzes the performance of existing indexes. If an index is not used, Azure SQL Database recommends dropping it. Dropping an index is recommended in two cases:
 
 - The index is a duplicate of another index (same indexed and included column, partition schema, and filters).
-- The index hasn't been used for a prolonged period (93 days).
+- The index hasn't been used for a prolonged period (>90 days).
 
 Drop index recommendations also go through the verification after implementation. If the performance improves, the impact report is available. If performance degrades, the recommendation is reverted.
 

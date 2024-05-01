@@ -138,11 +138,11 @@ To restore a database by using the REST API:
 
 ## Long-term backup restore
 
-To perform a restore operation on a long-term backup, you can use the Azure portal, the Azure CLI, Azure PowerShell, or the REST API. For more information, see [Restore a long-term backup](long-term-backup-retention-configure.md#view-backups-and-restore-from-a-backup). Long-term retention isn't applicable to Hyperscale databases. 
+To perform a restore operation on a long-term backup, you can use the Azure portal, the Azure CLI, Azure PowerShell, or the REST API. For more information, see [Restore a long-term backup](long-term-backup-retention-configure.md#view-backups-and-restore-from-a-backup). 
 
 ### [Azure portal](#tab/azure-portal)
 
-To recover a long-term backup by using the Azure portal, go to your logical server. Select **Backups** under **Settings**, and then select **Manage** under **Available LTR backups** for the database you're trying to restore. 
+To recover a long-term backup by using the Azure portal, go to your logical server. Select **Backups** under **Data Management**, and then select **Manage** under **Available LTR backups** for the database you're trying to restore. 
 
 :::image type="content" source="media/long-term-backup-retention-configure/ltr-available-backups-tab.png" alt-text="Screenshot of the Azure portal that shows available long-term retention backups.":::
 
@@ -180,7 +180,7 @@ To restore a database by using the REST API:
 You can restore a deleted database to the deletion time, or an earlier point in time, on the same server by using the Azure portal, the Azure CLI, Azure PowerShell, and the REST API.
 
 > [!IMPORTANT]
-> If you delete a server, all of its databases and their PITR backups are also deleted. You can't restore a deleted server, and you can't restore the deleted databases from PITR backups. If you had configured LTR backups forthose database, you can use those backups to restore the databases to a different server. 
+> If you delete a server, all of its databases and their PITR backups are also deleted. You can't restore a deleted server, and you can't restore the deleted databases from PITR backups. If you had configured LTR backups for those databases, you can use those backups to restore the databases to a different server. 
 
 ### [Azure portal](#tab/azure-portal)
 
@@ -285,7 +285,7 @@ For more information on using geo-restore, see [Recovery using Geo-restore](reco
 
 Geo-restore is the most basic disaster-recovery solution available in SQL Database. It relies on automatically created geo-replicated backups with a recovery point objective (RPO) of up to 1 hour and an estimated recovery time objective (RTO) of up to 12 hours. It doesn't guarantee that the target region will have the capacity to restore your databases after a regional outage, because a sharp increase of demand is likely. If your application uses relatively small databases and isn't critical to the business, geo-restore is an appropriate disaster-recovery solution. 
 
-For business-critical applications that require large databases and must ensure business continuity, use [auto-failover groups](auto-failover-group-sql-db.md). That feature offers a much lower RPO and RTO, and the capacity is always guaranteed. 
+For business-critical applications that require large databases and must ensure business continuity, use [failover groups](failover-group-sql-db.md). That feature offers a much lower RPO and RTO, and the capacity is always guaranteed. 
 
 For more information about business continuity choices, see [Overview of business continuity](business-continuity-high-availability-disaster-recover-hadr-overview.md).
 
@@ -296,4 +296,4 @@ For more information about business continuity choices, see [Overview of busines
 
 - [SQL Database automated backups](automated-backups-overview.md)
 - [Long-term retention](long-term-retention-overview.md)
-- To learn about faster recovery options, see [Active geo-replication](active-geo-replication-overview.md) or [Auto-failover groups](auto-failover-group-sql-db.md).
+- To learn about faster recovery options, see [Active geo-replication](active-geo-replication-overview.md) or [Failover groups](failover-group-sql-db.md).

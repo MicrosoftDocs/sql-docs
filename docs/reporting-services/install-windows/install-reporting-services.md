@@ -5,6 +5,7 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 09/16/2022
 ms.service: reporting-services
+ms.subservice: report-server
 ms.topic: conceptual
 ms.custom:
   - intro-installation

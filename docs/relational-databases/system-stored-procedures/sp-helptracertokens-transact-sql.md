@@ -60,7 +60,7 @@ sp_helptracertokens [ @publication = ] 'publication'
  **sp_helptracertokens** is used to obtain tracer token IDs when executing [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md).  
   
 ## Example  
- [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-helptracertokens-tran_1.sql)]  
+ :::code language="sql" source="../replication/codesnippet/tsql/sp-helptracertokens-tran_1.sql":::
   
 ## Permissions  
  Only members of the **sysadmin** fixed server role, the **db_owner** fixed database role in the publication database, or **db_owner** fixed database or **replmonitor** roles in the distribution database can execute **sp_helptracertokenhistory**.  

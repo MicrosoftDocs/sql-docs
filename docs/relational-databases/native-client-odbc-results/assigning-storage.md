@@ -18,14 +18,13 @@ helpviewer_keywords:
   - "row-wise binding"
   - "binding result sets [SQL Server Native Client]"
   - "array binding"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Assigning Storage
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   An application can assign storage for results before or after it executes a SQL statement. If an application prepares or executes the SQL statement first, it can inquire about the result set before it assigns storage for results. For example, if the result set is unknown, the application must retrieve the number of columns before it can assign storage for them.  
   
- To associate storage for a column of data, an application calls [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)and passes it:  
+ To associate storage for a column of data, an application calls [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) and passes it:  
   
 -   The data type to which the data is to be converted.  
   

@@ -16,7 +16,9 @@ The ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
 - Whatever the connection properties, connections that use `SQLDriverConnect` go into a separate pool from connections that use `SQLConnect`.
 - When using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication and driver-aware connection pooling, the driver doesn't use the Windows user's security context for the current thread to separate connections in the pool. That is, if connections are equivalent in their parameters for Windows impersonation scenarios with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, and they're using the same [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication credentials to connect to the backend, different Windows users can potentially use the same pool of connections. When using Windows Authentication and driver-aware connection pooling, the driver uses the current Windows user's security context to separate connections in the pool. That is, for Windows impersonation scenarios, different Windows users don't share connections even if the connections use the same parameters.
-- When using Azure Active Directory and driver-aware connection pooling, the driver also uses the Authentication value to determine the membership in the connection pool.
+- When using Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name))
+ and driver-aware connection pooling, the driver also uses the Authentication value to determine the membership in the connection pool.
+
 - Driver-aware connection pooling prevents a bad connection from being returned from the pool.
 - Driver-aware connection pooling recognizes driver-specific connection attributes. So, if a connection uses `SQL_COPT_SS_APPLICATION_INTENT` set to read only, that connection gets its own connection pool.
 - Setting the `SQL_COPT_SS_ACCESS_TOKEN` attribute causes a connection to be pooled separately

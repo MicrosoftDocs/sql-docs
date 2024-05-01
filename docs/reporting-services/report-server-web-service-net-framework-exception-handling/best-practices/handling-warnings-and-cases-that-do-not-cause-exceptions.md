@@ -1,5 +1,5 @@
 ---
-title: "Handling Warnings and Cases That Do Not Cause Exceptions"
+title: "Handle warnings and cases that do not cause exceptions"
 description: Learn how to handle warnings and cases that don't cause exceptions so that appropriate action can be taken.
 author: maggiesMSFT
 ms.author: maggies
@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "exceptions [Reporting Services], warnings that don't cause"
   - "warnings [Reporting Services]"
 ---
-# Handling Warnings and Cases That Do Not Cause Exceptions
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] does not throw exceptions for warnings and certain errors. For example, when you use the <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> method to publish a new report to a report server, any warnings that occur are returned as an array of <xref:ReportService2010.Warning> objects. These warnings should be handled and displayed so that appropriate action can be taken.  
+# Handle warnings and cases that do not cause exceptions
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] doesn't throw exceptions for warnings and certain errors. For example, when you use the <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> method to publish a new report to a report server, any warnings that occur are returned as an array of <xref:ReportService2010.Warning> objects. These warnings should be handled and displayed so that appropriate action can be taken.  
   
 ```vb  
 Try  
@@ -57,9 +57,9 @@ catch (SoapException ex)
   
  Another way to handle errors is to evaluate the return values of certain methods. For example, the <xref:ReportService2010.ReportingService2010.FindItems%2A> method can be used to search for specific items in the report server database. If no items are found that match the search criteria, a null array of <xref:ReportService2010.CatalogItem> objects is returned. You should evaluate the array, check for **null**, and let the user know if no items were found.  
   
-## See Also  
+## Related content  
  <xref:ReportService2010.CatalogItem>   
- [Introducing Exception Handling in Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
- [Reporting Services SoapException Class](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)  
+ [Introduction to exception management in Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
+ [Reporting Services SoapException class](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)  
   
   

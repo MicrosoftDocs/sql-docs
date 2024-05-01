@@ -6,6 +6,7 @@ ms.author: v-davidengel
 ms.date: 02/15/2022
 ms.service: sql
 ms.subservice: connectivity
+ms.custom: linux-related-content
 ms.topic: conceptual
 helpviewer_keywords:
   - "sqlcmd"
@@ -58,11 +59,14 @@ Use trusted connection (integrated authentication.) For more information about m
 Specifies the input and output code pages. The codepage number is a numeric value that specifies an installed Linux code page. (available since 17.5.1.1)
 
 **-G**  
-This switch is used by the client when connecting to SQL Database or Azure Synapse Analytics to specify that the user be authenticated using Azure Active Directory authentication. It can be combined with just the -P option to use access token authentication (v17.8+). This option sets the sqlcmd scripting variable SQLCMDUSEAAD = true. The `-G` switch requires at least sqlcmd version 17.6. To determine your version, execute `sqlcmd -?`.
+This switch is used by the client when connecting to Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse Analytics to specify that the user be authenticated with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). It can be combined with just the -P option to use access token authentication (v17.8+). This option sets the sqlcmd scripting variable SQLCMDUSEAAD = true. The `-G` switch requires at least sqlcmd version 17.6. To determine your version, execute `sqlcmd -?`.
+
 
 > [!IMPORTANT]
-> The **-G** option only applies to Azure SQL Database and Azure Synapse Analytics.
-> AAD Interactive Authentication isn't currently supported on Linux or macOS. AAD Integrated Authentication requires [Microsoft ODBC Driver 17 for SQL Server](../download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [configured Kerberos environment](using-integrated-authentication.md#configure-kerberos).
+> The **-G** option only applies to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
+
+> Microsoft Entra interactive authentication isn't currently supported on Linux or macOS. Microsoft Entra integrated authentication requires [Microsoft ODBC Driver 17 for SQL Server](../download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [configured Kerberos environment](using-integrated-authentication.md#configure-kerberos).
+
 
 **-h** *number_of_rows*  
 Specify the number of rows to print between the column headings.
@@ -226,7 +230,7 @@ You can use the following alternative method: Put the parameters inside one file
 Then create a file called `b.sql`, with the parameters for replacement:
 
 ```sql
-select $(ColumnName) from $(TableName)
+SELECT $(ColumnName) FROM $(TableName)
 ```
 
 At the command line, combine `a.sql` and `b.sql` into `c.sql` using the following commands:

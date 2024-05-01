@@ -1,6 +1,6 @@
 ---
-title: "BackupEncryptionKey Method (WMI MSReportServer_ConfigurationSetting)"
-description: "BackupEncryptionKey Method (WMI MSReportServer_ConfigurationSetting)"
+title: "BackupEncryptionKey method (WMI MSReportServer_ConfigurationSetting)"
+description: "BackupEncryptionKey method (WMI MSReportServer_ConfigurationSetting)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -14,7 +14,7 @@ apilocation: "reportingservices.mof"
 apiname: "BackupEncryptionKey Method (WMI MSReportServer_ConfigurationSetting Class)"
 apitype: MOFDef
 ---
-# ConfigurationSetting Method - BackupEncryptionKey
+# ConfigurationSetting method - BackupEncryptionKey
   Backs up the encryption key for the specified report server instance. The encryption key is stored encrypted with a password.  
   
 ## Syntax  
@@ -33,7 +33,7 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
   
 ## Parameters  
  *Password*  
- A string used to encrypt the encryption key before it is returned.  
+ A string used to encrypt the encryption key before it's returned.  
   
  *KeyFile[]*  
  [out] An array containing the encrypted encryption key.  
@@ -45,15 +45,15 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
  [out] Value indicating whether the call succeeded or failed.  
   
  *ExtendedErrors[]*  
- [out] A string array containing additional errors returned by the call.  
+ [out] A string array containing other errors returned by the call.  
   
-## Return Value  
- Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A non-zero value indicates that an error has occurred.  
+## Return value  
+ Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A nonzero value indicates that an error occurred.  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+## Related content  
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

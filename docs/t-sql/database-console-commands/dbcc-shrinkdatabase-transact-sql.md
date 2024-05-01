@@ -4,7 +4,7 @@ description: DBCC SHRINKDATABASE shrinks the size of the data and log files in t
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: umajay, KevinConanMSFT, dplessMSFT, randolphwest
-ms.date: 03/14/2023
+ms.date: 02/01/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: "language-reference"
@@ -25,7 +25,7 @@ helpviewer_keywords:
   - "reducing database size"
 dev_langs:
   - "TSQL"
-monikerRange: "= azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017|| =azure-sqldw-latest|| =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
 ---
 # DBCC SHRINKDATABASE (Transact-SQL)
 
@@ -76,7 +76,7 @@ DBCC SHRINKDATABASE
 [ WITH NO_INFOMSGS ]
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
@@ -90,7 +90,7 @@ The percentage of free space that you want left in the database file after the d
 
 #### NOTRUNCATE
 
-Moves assigned pages from the file's end to unassigned pages in the front of the file. This action compacts the data within the file. *target_percent* is optional. [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] doesn't support this option.
+Moves assigned pages from the file's end to unassigned pages in the front of the file. This action compacts the data within the file. *target_percent* is optional. [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] doesn't support this option.
 
 The free space at the end of the file isn't returned to the operating system, and the physical size of the file doesn't change. As such, the database appears not to shrink when you specify `NOTRUNCATE`.
 
@@ -98,7 +98,7 @@ The free space at the end of the file isn't returned to the operating system, an
 
 #### TRUNCATEONLY
 
-Releases all free space at the end of the file to the operating system. Doesn't move any pages inside the file. The data file shrinks only to the last assigned extent. Ignores *target_percent* if specified with `TRUNCATEONLY`. [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] doesn't support this option.
+Releases all free space at the end of the file to the operating system. Doesn't move any pages inside the file. The data file shrinks only to the last assigned extent. Ignores *target_percent* if specified with `TRUNCATEONLY`. [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] doesn't support this option.
 
 `DBCC SHRINKDATABASE` with the `TRUNCATEONLY` option affects the database transaction log file only. To truncate the data file, use `DBCC SHRINKFILE` instead. For more information, see [DBCC SHRINKFILE](dbcc-shrinkfile-transact-sql.md).
 
@@ -108,7 +108,7 @@ Suppresses all informational messages that have severity levels from 0 through 1
 
 ### WAIT_AT_LOW_PRIORITY with shrink operations
 
-**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]
+**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]
 
 The wait at low priority feature reduces lock contention. For more information, see [Understanding concurrency issues with DBCC SHRINKDATABASE](#understand-concurrency-issues-with-dbcc-shrinkdatabase).
 
@@ -132,21 +132,21 @@ If a new shrink operation in `WAIT_AT_LOW_PRIORITY` mode cannot obtain a lock du
 
   Kill all user transactions that block the shrink database operation so that the operation can continue. The `BLOCKERS` option requires the login to have `ALTER ANY CONNECTION` permission.
 
-## Result sets
+## <a id="result-sets"></a> Result set
 
 The following table describes the columns in the result set.
 
 | Column name | Description |
 | --- | --- |
-| **DbId** | Database identification number of the file the [!INCLUDE[ssDE](../../includes/ssde-md.md)] tried to shrink. |
-| **FileId** | File identification number of the file the [!INCLUDE[ssDE](../../includes/ssde-md.md)] tried to shrink. |
-| **CurrentSize** | Number of 8-KB pages the file currently occupies. |
-| **MinimumSize** | Number of 8-KB pages the file could occupy, at minimum. This value corresponds to the minimum size or originally created size of a file. |
-| **UsedPages** | Number of 8-KB pages currently used by the file. |
-| **EstimatedPages** | Number of 8-KB pages that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] estimates the file could be shrunk down to. |
+| `DbId` | Database identification number of the file the [!INCLUDE [ssDE](../../includes/ssde-md.md)] tried to shrink. |
+| `FileId` | File identification number of the file the [!INCLUDE [ssDE](../../includes/ssde-md.md)] tried to shrink. |
+| `CurrentSize` | Number of 8-KB pages the file currently occupies. |
+| `MinimumSize` | Number of 8-KB pages the file could occupy, at minimum. This value corresponds to the minimum size or originally created size of a file. |
+| `UsedPages` | Number of 8-KB pages currently used by the file. |
+| `EstimatedPages` | Number of 8-KB pages that the [!INCLUDE [ssDE](../../includes/ssde-md.md)] estimates the file could be shrunk down to. |
 
 > [!NOTE]  
-> The [!INCLUDE[ssDE](../../includes/ssde-md.md)] does not display rows for those files not shrunk.
+> The [!INCLUDE [ssDE](../../includes/ssde-md.md)] does not display rows for those files not shrunk.
 
 ## Remarks
 
@@ -171,27 +171,33 @@ You can't shrink a database while the database is being backed up. Conversely, y
 
 When specified with WAIT_AT_LOW_PRIORITY, the shrink operation's Sch-M lock request will wait with low priority when executing the command for 1 minute. If the operation is blocked for the duration, the specified ABORT_AFTER_WAIT action will be executed.
 
+### Known issues
+
+**Applies to:** [!INCLUDE [sql-server](../../includes/ssnoversion-md.md)], [!INCLUDE[ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] dedicated SQL pool
+
+- Currently, LOB columns (varbinary(max), varchar(max), and nvarchar(max)) in compressed columnstore segments are not affected by DBCC SHRINKDATABASE and DBCC SHRINKFILE.
+
 ## How DBCC SHRINKDATABASE works
 
 `DBCC SHRINKDATABASE` shrinks data files on a per-file basis, but shrinks log files as if all the log files existed in one contiguous log pool. Files are always shrunk from the end.
 
-Assume you have a couple of log files, a data file, and a database named `mydb`. The data and log files are 10 MB each and the data file contains 6 MB of data. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] calculates a target size for each file. This value is the size to which the file is to be shrunk. When `DBCC SHRINKDATABASE` is specified with *target_percent*, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] calculates target size to be the *target_percent* amount of space free in the file after shrinking.
+Assume you have a couple of log files, a data file, and a database named `mydb`. The data and log files are 10 MB each and the data file contains 6 MB of data. The [!INCLUDE [ssDE](../../includes/ssde-md.md)] calculates a target size for each file. This value is the size to which the file is to be shrunk. When `DBCC SHRINKDATABASE` is specified with *target_percent*, the [!INCLUDE [ssDE](../../includes/ssde-md.md)] calculates target size to be the *target_percent* amount of space free in the file after shrinking.
 
-For example, if you specify a *target_percent* of 25 for shrinking `mydb`, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] calculates the target size for the data file to be 8 MB (6 MB of data plus 2 MB of free space). As such, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] moves any data from the data file's last 2 MB to any free space in the data file's first 8 MB and then shrinks the file.
+For example, if you specify a *target_percent* of 25 for shrinking `mydb`, the [!INCLUDE [ssDE](../../includes/ssde-md.md)] calculates the target size for the data file to be 8 MB (6 MB of data plus 2 MB of free space). As such, the [!INCLUDE [ssDE](../../includes/ssde-md.md)] moves any data from the data file's last 2 MB to any free space in the data file's first 8 MB and then shrinks the file.
 
 Assume the data file of `mydb` contains 7 MB of data. Specifying a *target_percent* of 30 allows for this data file to be shrunk to the free percentage of 30. However, specifying a *target_percent* of 40 doesn't shrink the data file because not enough free space can be created in the current total size of the data file.
 
 You can think of this issue another way: 40 percent wanted free space + 70 percent full data file (7 MB out of 10 MB) is more than 100 percent. Any *target_percent* greater than 30 won't shrink the data file. It won't shrink because the percentage free you want plus the current percentage that the data file occupies is over 100 percent.
 
-For log files, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] uses *target_percent* to calculate the target size for the whole log. That's why *target_percent* is the amount of free space in the log after the shrink operation. Target size for the whole log is then translated to a target size for each log file.
+For log files, the [!INCLUDE [ssDE](../../includes/ssde-md.md)] uses *target_percent* to calculate the target size for the whole log. That's why *target_percent* is the amount of free space in the log after the shrink operation. Target size for the whole log is then translated to a target size for each log file.
 
-`DBCC SHRINKDATABASE` tries to shrink each physical log file to its target size immediately. Let's say no part of the logical log stays in the virtual logs beyond the target size of the log file. Then the file is successfully truncated and `DBCC SHRINKDATABASE` finishes without any messages. However, if part of the logical log stays in the virtual logs beyond the target size, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] frees as much space as possible, and then issues an informational message. The message describes what actions are required to move the logical log out of the virtual logs at the end of the file. After the actions are run, `DBCC SHRINKDATABASE` can be used to free the remaining space.
+`DBCC SHRINKDATABASE` tries to shrink each physical log file to its target size immediately. Let's say no part of the logical log stays in the virtual logs beyond the target size of the log file. Then the file is successfully truncated and `DBCC SHRINKDATABASE` finishes without any messages. However, if part of the logical log stays in the virtual logs beyond the target size, the [!INCLUDE [ssDE](../../includes/ssde-md.md)] frees as much space as possible, and then issues an informational message. The message describes what actions are required to move the logical log out of the virtual logs at the end of the file. After the actions are run, `DBCC SHRINKDATABASE` can be used to free the remaining space.
 
-A log file can only be shrunk to a virtual log file boundary. That's why shrinking a log file to a size smaller than the size of a virtual log file might not be possible. It might not be possible even if it isn't being used. The size of the virtual log file is chosen dynamically by the [!INCLUDE[ssDE](../../includes/ssde-md.md)] when log files are created or extended.
+A log file can only be shrunk to a virtual log file boundary. That's why shrinking a log file to a size smaller than the size of a virtual log file might not be possible. It might not be possible even if it isn't being used. The size of the virtual log file is chosen dynamically by the [!INCLUDE [ssDE](../../includes/ssde-md.md)] when log files are created or extended.
 
 ### Understand concurrency issues with DBCC SHRINKDATABASE
 
-The shrink database and shrink file commands can lead to concurrency issues, especially with active maintenance such as rebuilding indexes, or on busy OLTP environments. When your application executes queries against database tables, these queries will acquire and maintain a schema stability lock (Sch-S) until the queries complete their operations. When attempting to reclaim space during regular usage, shrink database and shrink file operations currently require a schema modify lock (Sch-M) when moving or deleting Index Allocation Map (IAM) pages, blocking the Sch-S locks needed by user queries. As a result, long-running queries will block a shrink operation until the queries complete. This means that any new queries requiring Sch-S locks are also queued behind the waiting shrink operation and will also be blocked, further exacerbating this concurrency issue. This can significantly impact application query performance and will also cause difficulties completing the necessary maintenance to shrink database files. Introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], the shrink wait at low priority (WLP) feature addresses this problem by taking a schema modify lock in `WAIT_AT_LOW_PRIORITY` mode. For more information, see [WAIT_AT_LOW_PRIORITY with shrink operations](#wait_at_low_priority-with-shrink-operations).
+The shrink database and shrink file commands can lead to concurrency issues, especially with active maintenance such as rebuilding indexes, or on busy OLTP environments. When your application executes queries against database tables, these queries will acquire and maintain a schema stability lock (Sch-S) until the queries complete their operations. When attempting to reclaim space during regular usage, shrink database and shrink file operations currently require a schema modify lock (Sch-M) when moving or deleting Index Allocation Map (IAM) pages, blocking the Sch-S locks needed by user queries. As a result, long-running queries will block a shrink operation until the queries complete. This means that any new queries requiring Sch-S locks are also queued behind the waiting shrink operation and will also be blocked, further exacerbating this concurrency issue. This can significantly impact application query performance and will also cause difficulties completing the necessary maintenance to shrink database files. Introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], the shrink wait at low priority (WLP) feature addresses this problem by taking a schema modify lock in `WAIT_AT_LOW_PRIORITY` mode. For more information, see [WAIT_AT_LOW_PRIORITY with shrink operations](#wait_at_low_priority-with-shrink-operations).
 
 For more information on Sch-S and Sch-M locks, see [Transaction locking and row versioning guide](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md).
 
@@ -206,7 +212,7 @@ Consider the following information when you plan to shrink a database:
 
 ## Troubleshoot
 
-It's possible to block shrink operations by a transaction that is running under a [row versioning-based isolation level](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). For example, a large delete operation running under a row versioning-based isolation level is in progress when a `DBCC SHRINKDATABASE` operation is executed. When this situation happens, the shrink operation will wait for the delete operation to complete before it shrinks the files. When the shrink operation waits, `DBCC SHRINKFILE` and `DBCC SHRINKDATABASE` operations print an informational message (5202 for `SHRINKDATABASE` and 5203 for `SHRINKFILE`). This message prints to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log every five minutes in the first hour and then every upcoming hour. For example, if the error log contains the following error message:
+It's possible to block shrink operations by a transaction that is running under a [row versioning-based isolation level](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). For example, a large delete operation running under a row versioning-based isolation level is in progress when a `DBCC SHRINKDATABASE` operation is executed. When this situation happens, the shrink operation will wait for the delete operation to complete before it shrinks the files. When the shrink operation waits, `DBCC SHRINKFILE` and `DBCC SHRINKDATABASE` operations print an informational message (5202 for `SHRINKDATABASE` and 5203 for `SHRINKFILE`). This message prints to the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] error log every five minutes in the first hour and then every upcoming hour. For example, if the error log contains the following error message:
 
 ```output
 DBCC SHRINKDATABASE for database ID 9 is waiting for the snapshot
@@ -260,16 +266,13 @@ The following example attempts to reduce the size of the data and log files in t
 DBCC SHRINKDATABASE ([AdventureWorks2022], 20) WITH WAIT_AT_LOW_PRIORITY (ABORT_AFTER_WAIT = SELF);
 ```
 
-## See also
+## Related content
 
+- [Shrink a database](../../relational-databases/databases/shrink-a-database.md)
+- [Shrink a file](../../relational-databases/databases/shrink-a-file.md)
+- [DBCC SHRINKFILE (Transact-SQL)](dbcc-shrinkfile-transact-sql.md)
 - [Considerations for the autogrow and autoshrink settings in SQL Server](/troubleshoot/sql/admin/considerations-autogrow-autoshrink)
 - [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)
 - [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
 - [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)
-
-## Next steps
-
-- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
-- [DBCC SHRINKFILE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)
-- [Shrink a database](../../relational-databases/databases/shrink-a-database.md)
-- [Shrink a file](../../relational-databases/databases/shrink-a-file.md)
+- [ALTER DATABASE (Transact-SQL)](../statements/alter-database-transact-sql.md)

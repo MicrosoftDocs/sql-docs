@@ -12,7 +12,8 @@ helpviewer_keywords:
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Include Null Values in JSON - INCLUDE_NULL_VALUES Option
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-serverless-pool-only](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-serverless-pool-only.md)]
 
   To include null values in the JSON output of the **FOR JSON** clause, specify the **INCLUDE_NULL_VALUES** option.  
   
@@ -39,11 +40,11 @@ FOR JSON AUTO, INCLUDE_NULL_VALUES
   
 ```json  
 [{
-	"name": "John",
-	"surname": null
+    "name": "John",
+    "surname": null
 }, {
-	"name": "Jane",
-	"surname": "Doe"
+    "name": "Jane",
+    "surname": "Doe"
 }] 
 ```  
 

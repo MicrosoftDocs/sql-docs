@@ -13,6 +13,7 @@ ms.custom: sqldbrb=3
 ---
 
 # Azure SQL Database and Azure Synapse Analytics network access controls
+[!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa-formerly-sqldw.md)] 
 
 When you create a logical server from the [Azure portal](single-database-create-quickstart.md) for Azure SQL Database and Azure Synapse Analytics, the result is a public endpoint in the format, *yourservername.database.windows.net*.
 

@@ -11,7 +11,7 @@ metadata:
   ms.topic: landing-page
   author: VanMSFT
   ms.author: vanto
-  ms.reviewer:
+  ms.reviewer: mathoma
   ms.date: 09/27/2023
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -53,9 +53,7 @@ landingContent:
           - text: What is Windows Authentication for Microsoft Entra principals on Azure SQL Managed Instance?
             url: ../managed-instance/winauth-azuread-overview.md
           - text: The new name for Azure Active Directory is Microsoft Entra ID 
-            url: /azure/active-directory/fundamentals/new-name
-          - text: The new name for Azure Active Directory is Microsoft Entra ID 
-            url: /azure/active-directory/fundamentals/new-name
+            url: /entra/fundamentals/new-name
 
 
   # Card

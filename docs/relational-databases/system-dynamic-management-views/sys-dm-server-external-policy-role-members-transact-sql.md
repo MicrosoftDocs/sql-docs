@@ -22,11 +22,11 @@ dev_langs:
 
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-Lists Azure AD principals assigned to a given role on a given resource scope. 
+Lists all database and server principals created from Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) assigned to a given role on a given resource scope. 
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**principal_aad_object_id**|**int**|Azure AD Object ID of the principal. Is unique within an Azure tenant.|  
+|**principal_aad_object_id**|**int**|Microsoft Entra Object ID of the principal. Is unique within an Azure tenant.|  
 |**role_guid**|**nvarchar(36)**|The role name as defined in external policy source.|  
 |**action_type**|**nvarchar(128)**|The type of an operation: Connect, Select.|  
 |**policy_guid**|**nvarchar(128)**|Unique identifier of the policy that defines this assignment.|  

@@ -39,7 +39,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 
 The name for the new profile. *@profile_name* is **sysname**, with no default.
 
-To send e-mail using SQL Server Agent jobs in [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)], SQL Server Agent can use only one Database Mail profile, and it must be called `AzureManagedInstance_dbmail_profile`. For more information and a sample script, see [Azure SQL Managed Instance SQL Agent job notifications](/azure/azure-sql/managed-instance/job-automation-managed-instance#sql-agent-job-notifications).
+To send e-mail using SQL Server Agent jobs in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], SQL Server Agent can use only one Database Mail profile, and it must be called `AzureManagedInstance_dbmail_profile`. For more information and a sample script, see [Azure SQL Managed Instance SQL Agent job notifications](/azure/azure-sql/managed-instance/job-automation-managed-instance#sql-agent-job-notifications).
 
 #### [ @description = ] N'*description*'
 
@@ -94,14 +94,11 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
 SELECT @profileId;
 ```
 
-## See also
+## Related content
 
 - [Database Mail](../database-mail/database-mail.md)
 - [Database Mail Configuration Objects](../database-mail/database-mail-configuration-objects.md)
 - [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)
-
-## Next steps
-
 - [Configure Database Mail](../database-mail/configure-database-mail.md)
 - [Create a Database Mail Account](../database-mail/create-a-database-mail-account.md)
 - [Configure SQL Server Agent Mail to Use Database Mail](../database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)

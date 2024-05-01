@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, multiple rowsets"
   - "commands [OLE DB]"
   - "multiple-rowset results"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Native Client Commands Generating Multiple-Rowset Results
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

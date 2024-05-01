@@ -13,9 +13,6 @@ ms.topic: conceptual
 
 The Transact-SQL Editor allows you to highlight a specific segment of the script and execute it as a single query. This makes it easy for you to debug sections of complex queries.  
   
-> [!WARNING]  
-> The following procedure uses entities created in previous procedures in the [Connected Database Development](../ssdt/connected-database-development.md) and [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) sections.  
-  
 ## To partially execute a query  
   
 1. In **SQL Server Object Explorer**, double-click **PerishableFruits** under **Views** to open it in Transact-SQL editor.  

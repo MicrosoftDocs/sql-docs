@@ -43,13 +43,13 @@ The duration of virtual group change operations depends on the operation type. F
 
 The number of virtual machine groups in a virtual cluster depends on the following:
 - The number of different [hardware generation configurations](service-tiers-managed-instance-vcore.md#hardware-configurations)
-- The number of different [maintenance window configurations](../database/maintenance-window.md)
+- The number of different [maintenance window configurations](maintenance-window.md)
 - Limits of the virtual machine group size (which are defined at the compute layer and are subject to change)
 
 
 You can determine the number of virtual machine groups in a virtual cluster by multiplying the number of different hardware generation configurations by the number of different maintenance window configurations in your subnet. For example, if you have two hardware generation configurations (such as one Standard-series and one Premium-series instance) and two different maintenance window configurations, the virtual cluster has four virtual machine groups. 
 
-SQL Managed Instance supports three different [hardware generation configurations](service-tiers-managed-instance-vcore.md#hardware-configurations) and three different [maintenance window configurations](../database/maintenance-window.md). Therefore, the minimum number of virtual machine groups in a virtual cluster is 1 (one hardware generation configuration, one maintenance window configuration), and the maximum is 9 (three different hardware generation configurations, three different maintenance window configurations).
+SQL Managed Instance supports three different [hardware generation configurations](service-tiers-managed-instance-vcore.md#hardware-configurations) and three different [maintenance window configurations](maintenance-window.md). Therefore, the minimum number of virtual machine groups in a virtual cluster is 1 (one hardware generation configuration, one maintenance window configuration), and the maximum is 9 (three different hardware generation configurations, three different maintenance window configurations).
 
 > [!IMPORTANT]
 > Since there is a limit to the number of virtual machines that can join a group, a lack of space in an existing group can result in creating a virtual machine group with identical specifications. It's possible for a subnet with a large number of instances to have multiple machine groups with the same configuration, and exceed 9 virtual machine groups.

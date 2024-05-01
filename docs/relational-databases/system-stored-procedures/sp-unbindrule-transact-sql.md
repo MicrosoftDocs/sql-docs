@@ -105,7 +105,7 @@ GO
 EXEC sp_unbindrule '[t.4].c1';
 ```
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
@@ -113,4 +113,3 @@ EXEC sp_unbindrule '[t.4].c1';
 - [DROP RULE (Transact-SQL)](../../t-sql/statements/drop-rule-transact-sql.md)
 - [sp_bindrule (Transact-SQL)](sp-bindrule-transact-sql.md)
 - [sp_helptext (Transact-SQL)](sp-helptext-transact-sql.md)
-- [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

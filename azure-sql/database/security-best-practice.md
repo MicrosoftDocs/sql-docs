@@ -52,7 +52,7 @@ This document is intended as a companion to our existing [Azure SQL Database sec
 Unless otherwise stated, we recommend you follow all best practices listed in each section to achieve the respective goal or requirement. To meet specific security compliance standards or best practices, important regulatory compliance controls are listed under the Requirements or Goals section wherever applicable. These are the security standards and regulations that are referenced in this paper:
 
 - [FedRAMP](https://www.fedramp.gov/documents/): AC-04, AC-06
-- [SOC](https://www.aicpa.org/interestareas/frc/assuranceadvisoryservices/sorhome.html): CM-3, SDL-3
+- [SOC](https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services): CM-3, SDL-3
 - [ISO/IEC 27001](https://www.iso27001security.com/html/27001.html): Access Control, Cryptography
 - [Microsoft Operational Security Assurance (OSA) practices](https://www.microsoft.com/securityengineering/osa/practices): Practice #1-6 and #9
 - [NIST Special Publication 800-53 Security Controls](https://csrc.nist.gov/Projects/risk-management/sp800-53-controls/release-search#/): AC-5, AC-6
@@ -401,7 +401,7 @@ Encryption at rest is the cryptographic protection of data when it is persisted 
 
 **How to implement**
 
-- [Transparent Database Encryption (TDE)](transparent-data-encryption-tde-overview.md) with service managed keys are enabled by default for any databases created after 2017 in Azure SQL Database and SQL Managed Instance.
+- [Transparent data encryption (TDE)](transparent-data-encryption-tde-overview.md) with service managed keys are enabled by default for any databases created after 2017 in Azure SQL Database and SQL Managed Instance.
 - In a managed instance, if the database is created from a restore operation using an on-premises server, the TDE setting of the original database will be honored. If the original database doesn't have TDE enabled, we recommend that TDE be manually turned on for the managed instance.
 
 **Best practices**
@@ -798,7 +798,7 @@ Most security standards address data availability in terms of operational contin
   - [Automated backups](automated-backups-overview.md)
   - [Recover a database using automated database backups - Point-in-time restore](recovery-using-backups.md#point-in-time-restore)
 
-- Additional business continuity features such as the zone redundant configuration and auto-failover groups across different Azure geos can be configured:  
+- Additional business continuity features such as the zone redundant configuration and failover groups across different Azure geos can be configured:  
   - [High-availability - Zone redundant configuration for Premium & Business Critical service tiers](high-availability-sla.md#zone-redundant-availability)
   - [High-availability - Zone redundant configuration for General Purpose service tier](high-availability-sla.md#zone-redundant-availability)
   - [Overview of business continuity](business-continuity-high-availability-disaster-recover-hadr-overview.md)

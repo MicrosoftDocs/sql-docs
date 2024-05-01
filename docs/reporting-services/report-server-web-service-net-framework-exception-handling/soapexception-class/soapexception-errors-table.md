@@ -1,5 +1,5 @@
 ---
-title: "SoapException Errors Table"
+title: "SoapException Errors table"
 description: Learn about the errors that are accessible from methods through a SoapException in the Report Server Web service.
 author: maggiesMSFT
 ms.author: maggies
@@ -11,8 +11,8 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "SoapException class"
 ---
-# SoapException Errors Table
-  The report server generates errors and error messages in the SOAP exception based on errors that occur in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. The following table shows the errors that are accessible from methods through a **SoapException** in the Report Server Web service. It is organized by the method or methods that throw the exception.  
+# SoapException Errors table
+  The report server generates errors and error messages in the SOAP exception based on errors that occur in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. The following table shows the errors that are accessible from methods through a **SoapException** in the Report Server Web service. The table is organized by the method or methods that throw the exception.  
   
 |Method(s)|Error code|  
 |-----------------|----------------|  
@@ -91,10 +91,10 @@ helpviewer_keywords:
 |**CancelJob**|**rsJobWasCanceled**|  
 |**ListSecureMethods**|**rsServerConfigurationError**|  
   
-## See Also  
- [Introducing Exception Handling in Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
- [Errors and Events Reference &#40;Reporting Services&#41;](../../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)   
- [Reporting Services SoapException Class](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)   
- [Using the Detail Property to Handle Specific Errors](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md)  
+## Related content  
+ [Introduction to exception management in Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
+ [Errors and events reference &#40;Reporting Services&#41;](../../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)   
+ [Reporting Services SoapException class](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)   
+ [Use the Detail property to handle specific errors](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md)  
   
   

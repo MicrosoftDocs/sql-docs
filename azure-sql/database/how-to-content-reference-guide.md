@@ -3,6 +3,7 @@ title: Configure & manage content reference
 description: Find a reference of content that teaches you to configure and manage Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: mathoma
 ms.date: 01/14/2020
 ms.service: sql-database
 ms.subservice: deployment-configuration
@@ -31,12 +32,12 @@ In this article you can find a content reference of various guides, scripts, and
 - [Microsoft Entra multifactor authentication](authentication-mfa-ssms-overview.md)
 - [Configure backup retention](long-term-backup-retention-configure.md) for a database to keep your backups on Azure Blob Storage. 
 - [Configure geo-replication](active-geo-replication-overview.md) to keep a replica of your database in another region.
-- [Configure auto-failover group](auto-failover-group-configure-sql-db.md) to automatically fail over a group of single or pooled databases to a secondary server in another region in the event of a disaster. 
+- [Configure failover group](failover-group-configure-sql-db.md) to fail over a group of single or pooled databases to a secondary server in another region in the event of a disaster. 
 - [Configure temporal retention policy](temporal-tables-retention-policy.md)
 - [Configure TDE with BYOK](transparent-data-encryption-byok-configure.md)
 - [Rotate TDE BYOK keys](transparent-data-encryption-byok-key-rotation.md)
 - [Remove TDE protector](transparent-data-encryption-byok-remove-tde-protector.md)
-- [Configure In-Memory OLTP](../in-memory-oltp-configure.md)
+- [Configure In-Memory OLTP](in-memory-oltp-configure.md)
 - [Configure Azure Automation](automation-manage.md)
 - [Configure transactional replication](replication-to-sql-database.md) to replicate your date between databases.
 - [Configure threat detection](threat-detection-configure.md) to let Azure SQL Database identify suspicious activities such as SQL Injection or access from suspicious locations.
@@ -51,12 +52,12 @@ In this article you can find a content reference of various guides, scripts, and
 - [Enable automatic tuning](automatic-tuning-enable.md) to let Azure SQL Database optimize performance of your workload.
 - [Enable e-mail notifications for automatic tuning](automatic-tuning-email-notifications-configure.md) to get information about tuning recommendations.
 - [Apply performance recommendations](database-advisor-find-recommendations-portal.md) and optimize your database.
-- [Create alerts](alerts-insights-configure-portal.md) to get notifications from Azure SQL Database.
+- [Create alerts](alerts-create.md) to get notifications from Azure SQL Database.
 - [Troubleshoot connectivity](troubleshoot-common-errors-issues.md) if you notice some connectivity issues between the applications and the database. You can also use [Resource Health for connectivity issues](resource-health-to-troubleshoot-connectivity.md?view=azuresql-db&preserve-view=true).
 - [Troubleshoot performance with Intelligent Insights](intelligent-insights-troubleshoot-performance.md)
 - [Manage file space](file-space-manage.md) to monitor storage usage in your database.
 - [Use Intelligent Insights diagnostics log](intelligent-insights-use-diagnostics-log.md)
-- [Monitor In-memory OLTP space](../in-memory-oltp-monitor-space.md)
+- [Monitor In-memory OLTP space](in-memory-oltp-monitor-space.md)
 
 ### Extended events
 
@@ -118,12 +119,12 @@ In this article you can find a content reference of various guides, scripts, and
 - [Design for elastic pools](disaster-recovery-strategies-for-applications-with-elastic-pool.md)
 - [Design for app upgrades](manage-application-rolling-upgrade.md)
 
-### Design Multi-tenant software as a service (SaaS) applications
+### Design multitenant software as a service (SaaS) applications
 
 - [SaaS design patterns](saas-tenancy-app-design-patterns.md)
 - [SaaS video indexer](saas-tenancy-video-index-wingtip-brk3120-20171011.md)
 - [SaaS app security](saas-tenancy-elastic-tools-multi-tenant-row-level-security.md)
 
-## Next steps
+## Related content
 
 - Learn more about [How-to guides for Azure SQL Managed Instance](../managed-instance/how-to-content-reference-guide.md)

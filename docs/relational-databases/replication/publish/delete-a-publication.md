@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "removing publications"
@@ -79,11 +79,11 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This example shows how to remove a transactional publication and disable transactional publishing for a database. This example assumes that all subscriptions were previously removed. For more information, see [Delete a Pull Subscription](../../../relational-databases/replication/delete-a-pull-subscription.md) or [Delete a Push Subscription](../../../relational-databases/replication/delete-a-push-subscription.md).  
   
- [!code-sql[HowTo#sp_droppublication](../../../relational-databases/replication/codesnippet/tsql/delete-a-publication_1.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/delete-a-publication_1.sql":::
   
  This example shows how to remove a merge publication and disable merge publishing for a database. This example assumes that all subscriptions were previously removed. For more information, see [Delete a Pull Subscription](../../../relational-databases/replication/delete-a-pull-subscription.md) or [Delete a Push Subscription](../../../relational-databases/replication/delete-a-push-subscription.md).  
   
- [!code-sql[HowTo#sp_dropmergepublication](../../../relational-databases/replication/codesnippet/tsql/delete-a-publication_2.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/delete-a-publication_2.sql":::
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
  You can delete publications programmatically by using Replication Management Objects (RMO). The RMO classes that you use to remove a publication depend on the type of publication you remove.  

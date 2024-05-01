@@ -1,9 +1,8 @@
 ---
 description: "Learn to configure Transactional or Snapshot replication with Microsoft Entra authentication."
-title: "Configure replication with Microsoft Entra authentication for Azure Arc-enabled SQL Server"
-tittleSuffix: Arc-enabled SQL Server
-ms.custom: ""
-ms.date: 07/15/2023
+title: "Configure replication with Microsoft Entra authentication for SQL Server enabled by Azure Arc"
+titleSuffix: SQL Server enabled by Azure Arc
+ms.date: 03/14/2024
 ms.service: sql
 ms.reviewer: ""
 ms.subservice: replication
@@ -11,14 +10,17 @@ ms.topic: how-to
 author: "MashaMSFT"
 ms.author: "mathoma"
 ---
-# Configure replication with Microsoft Entra authentication - Arc-enabled SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver2022.md)]
+# Configure replication with Microsoft Entra authentication - SQL Server enabled by Azure Arc
 
-This article provides steps to configure Transactional and Snapshot replication by using authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) for [Azure-Arc enabled SQL Server](../../sql-server/azure-arc/overview.md). 
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver2022.md)]
+
+This article provides steps to configure Transactional and Snapshot replication by using authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) for [Azure-Arc enabled SQL Server](../../sql-server/azure-arc/overview.md). 
 
 ## Overview
 
-Support for Microsoft Entra authentication with SQL Server replication was added in SQL Server 2022 CU 6. When configuring replication with Microsoft Entra authentication for Arc-enabled SQL Server, the only step that's different is the first step, when you create a Microsoft Entra login, and grant sysadmin permissions. Then use that Microsoft Entra login in the replication stored procedures to configure replication. 
+Microsoft Entra authentication support for replication was introduced in Cumulative Update 6 for SQL Server 2022, and made generally available in Cumulative Update 12. When you use Microsoft Entra authentication for replication, the only different step is the first step. Specifically, create a Microsoft Entra login, and grant sysadmin permissions.
+
+After that, use the Microsoft Entra login in the replication stored procedures to configure Transactional or Snapshot replication as you normally would.
 
 > [!NOTE]
 > Starting with SQL Server 2022 CU 6, disable Microsoft Entra authentication for replication by using session trace flag 11561.
@@ -28,7 +30,7 @@ Support for Microsoft Entra authentication with SQL Server replication was added
 
 To configure replication with Microsoft Entra authentication, you must meet the following prerequisites: 
 
-- Have [Azure Arc-enabled](../../sql-server/azure-arc/connect.md) SQL Server 2022 starting with [Cumulative Update 6](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate6). 
+- Have SQL Server 2022 [enabled by Azure-Arc](../../sql-server/azure-arc/connect.md) starting with [Cumulative Update 6](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate6). 
 - Configured Microsoft Entra authentication for every server in the replication topology. Review [Tutorial: Set up Microsoft Entra authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md) to learn more. 
 - [SQL Server Management Studio (SSMS) v19.1 or higher](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md). 
 - The user connecting to the publisher and subscriber is a member of the **sysadmin** fixed server role.
@@ -47,7 +49,7 @@ Configuring your replication with Microsoft Entra authentication currently has t
 
 ## Create SQL login from Microsoft Entra ID
 
-When configuring replication with Microsoft Entra authentication, you first need to [create the Microsoft Entra login](../../t-sql/statements/create-login-transact-sql.md), and grant it the `sysadmin` role. 
+[Create the Microsoft Entra login](../../t-sql/statements/create-login-transact-sql.md), and grant it the `sysadmin` role. 
 
 To create the Microsoft Entra login and assign it as a `sysadmin`, use the following Transact-SQL (T-SQL) command: 
 

@@ -1,9 +1,9 @@
 ---
 author: mikeccs
 ms.author: v-hassmi
-ms.date: 04/24/2019
+ms.date: 01/29/2024
 ms.service: reporting-services
 ms.topic: include
 ---
 
-SQL Server 2016 Reporting Services or later (SSRS)
+[!INCLUDE [sssql16-md](sssql16-md.md)] Reporting Services or later (SSRS)

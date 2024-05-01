@@ -45,7 +45,7 @@ ADO gives developers a powerful, logical object model for programmatically acces
   
  Four primary operations are involved in most applications that use ADO: getting data, examining data, editing data, and updating data. These operations are examined in more detail later in this section.  
   
- However, before we discuss these details, we will present an overview of the ADO object model and a simple ADO application, which is written in Microsoft® Visual Basic® and performs each of the four primary ADO operations:  
+ However, before we discuss these details, we will present an overview of the ADO object model and a simple ADO application, which is written in [!INCLUDE [visual-basic-md](../../../includes/visual-basic-md.md)] and performs each of the four primary ADO operations:  
   
 -   [ADO Objects and Collections](./ado-objects-and-collections.md)  
   

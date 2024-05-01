@@ -14,6 +14,7 @@ helpviewer_keywords:
   - "file database"
   - "LocalDB"
 ---
+
 # SQL Server Express LocalDB
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -131,7 +132,7 @@ To connect to a shared instance of LocalDB, add `\.\` (backslash + dot + backsla
 
 ## Troubleshoot
 
-For information about troubleshooting LocalDB, see [Troubleshooting SQL Server 2012 Express LocalDB](https://social.technet.microsoft.com/wiki/contents/articles/4609.aspx).
+For information about troubleshooting LocalDB, see [Troubleshooting SQL Server 2012 Express LocalDB](/troubleshoot/sql/database-engine/install/windows/sql-server-2012-setup-issues).
 
 ## Permissions
 
@@ -140,6 +141,6 @@ An instance of SQL Server Express LocalDB is an instance created by a user for t
 > [!NOTE]  
 > LocalDB always runs under the users security context; that is, LocalDB never runs with credentials from the local Administrator's group. This means that all database files used by a LocalDB instance must be accessible using the owning user's Windows account, without considering membership in the local Administrators group.
 
-## Next steps
+## Related content
 
-- [SqlLocalDB Utility](../../tools/sqllocaldb-utility.md)
+- [SqlLocalDB utility](../../tools/sqllocaldb-utility.md)

@@ -1,6 +1,6 @@
 ---
-title: "CreateSSLCertificateBinding Method (WMI MSReportServer_ConfigurationSetting)"
-description: "CreateSSLCertificateBinding Method (WMI MSReportServer_ConfigurationSetting)"
+title: "CreateSSLCertificateBinding method (WMI MSReportServer_ConfigurationSetting)"
+description: "CreateSSLCertificateBinding method (WMI MSReportServer_ConfigurationSetting)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -11,8 +11,8 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "CreateSSLCertificateBinding"
 ---
-# ConfigurationSetting Method - CreateSSLCertificateBinding
-  Creates a TLS/SSL Certificate binding.  
+# ConfigurationSetting method - CreateSSLCertificateBinding
+  Creates a TLS/SSL certificate binding.  
   
 ## Syntax  
   
@@ -34,7 +34,7 @@ public void CreateSSLCertificateBinding(string application,
  The name of application that the certificate binding should be created for.  
   
  *CertificateHash*  
- The hash for the certificate.  
+ The hash for the certificate. The certificateHash expects a lowercase hash. If the hash contains uppercase characters it fails.
   
  *IPAddress*  
  The IP address for the application.  
@@ -51,30 +51,30 @@ public void CreateSSLCertificateBinding(string application,
  *HRESULT*  
  [out] Value indicating whether the call succeeded or failed.  
   
-## Return Value  
- Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful; an error code indicates the call was not successful.  
+## Return value  
+ Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful; an error code indicates the call wasn't successful.  
   
 ## Remarks  
- This method adds a binding to rsreportserver.config for the application. If a binding does not already exist in HTTP.SYS, it is created there.  
+ This method adds a binding to rsreportserver.config for the application. If a binding doesn't already exist in HTTP.SYS, one is created there.  
   
- Before creating the binding, the method call examines the Url Reservations for the specified application to determine if the TLS/SSL Certificate Binding is valid.  
+ Before it creates the binding, the method call examines the Url Reservations for the specified application to determine if the TLS/SSL Certificate Binding is valid.  
   
  The following conditions are validated and can result in errors:  
   
-1.  Certificate does not exist.  
+1.  Certificate doesn't exist.  
   
-2.  The IPAddress specified does not correspond to an IPAddress of this computer.  
+2.  The IPAddress specified doesn't correspond to an IPAddress of this computer.  
   
 3.  The IPAddress specified is a DHCP IPAddress (changes periodically) - use the Wildcard IP address instead (0.0.0.0).  
   
-4.  IPAddress specified does not match the IP address of a URL reservations AND neither a wildcard or host name URL reservation exist.  
+4.  IPAddress specified doesn't match the IP address of a URL reservation AND a wildcard nor a host name URL reservation exist.  
   
-5.  A URL reservation that specifies a host name exists, but the host name does not match the certificate host name.  
+5.  A URL reservation that specifies a host name exists, but the host name doesn't match the certificate host name.  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+## Related content
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

@@ -302,16 +302,14 @@ TO login_name;
 ### Create a new endpoint pointing to a specific IPv6 address and port
 
 ```sql
-CREATE ENDPOINT ipv6_endpoint_special
-STATE = STARTED
-AS TCP (
-    LISTENER_PORT = 55555, LISTENER_IP = ('::1')
+CREATE ENDPOINT ipv6_endpoint_special STATE = STARTED AS TCP (
+    LISTENER_PORT = 55555,
+    LISTENER_IP = ('::1')
 )
-FOR TSQL ();
+FOR TSQL();
 
-GRANT CONNECT ON ENDPOINT::[TSQL Default TCP] TO public;
-GRANT CONNECT ON ENDPOINT::ipv6_endpoint_special
-
+GRANT CONNECT ON ENDPOINT::[TSQL Default TCP] TO PUBLIC;
+GRANT CONNECT ON ENDPOINT::ipv6_endpoint_special TO PUBLIC;
 ```
   
 ## See also  

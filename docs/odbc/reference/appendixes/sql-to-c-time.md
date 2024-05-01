@@ -35,4 +35,4 @@ The identifier for the time ODBC SQL data type is:
   
  [d]   This is the size of the corresponding C data type.  
   
- When time SQL data is converted to character C data, the resulting string is in the "*hh*:*mm*:*ss*" format. This format is not affected by the Windows® country/region setting.
+ When time SQL data is converted to character C data, the resulting string is in the "*hh*:*mm*:*ss*" format. This format is not affected by the Windows country/region setting.

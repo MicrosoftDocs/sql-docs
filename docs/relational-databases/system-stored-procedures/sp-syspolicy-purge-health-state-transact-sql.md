@@ -66,6 +66,6 @@ EXEC msdb.dbo.sp_syspolicy_purge_health_state
 GO
 ```
 
-## Next steps
+## Related content
 
 - [Policy-Based Management stored procedures (Transact-SQL)](policy-based-management-stored-procedures-transact-sql.md)

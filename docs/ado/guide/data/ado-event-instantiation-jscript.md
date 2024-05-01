@@ -11,4 +11,4 @@ dev_langs:
   - "JScript"
 ---
 # ADO Event Instantiation: JScript
-Microsoft® JScript® does not support ADO events.
+Microsoft JScript does not support ADO events.

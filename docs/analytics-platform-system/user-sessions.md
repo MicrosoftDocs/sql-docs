@@ -86,8 +86,6 @@ Sessions with an 'Active' or 'Idle' status can be ended by using the KILL comman
 KILL 'SID137';  
 ```  
   
-<!-- MISSING LINKS 
-## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
--->
-  
+## Related content
+
+- [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md)

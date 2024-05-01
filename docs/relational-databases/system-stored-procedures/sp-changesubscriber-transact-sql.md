@@ -115,16 +115,16 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  Is the interval for *frequence_subday*. *frequency_subday_interval* is **int**, with a default of NULL.  
   
 `[ @active_start_time_of_day = ] active_start_time_of_day`
- Is the time of day when the distribution task is first scheduled, formatted as HHMMSS. *active_start_time_of_day* is **int**, with a default of NULL.  
+ Is the time of day when the distribution task is first scheduled, formatted as `HHmmss`. *active_start_time_of_day* is **int**, with a default of NULL.  
   
 `[ @active_end_time_of_day = ] active_end_time_of_day`
- Is the time of day when the distribution task stops being scheduled, formatted as HHMMSS. *active_end_time_of_day*is **int**, with a default of NULL.  
+ Is the time of day when the distribution task stops being scheduled, formatted as `HHmmss`. *active_end_time_of_day*is **int**, with a default of NULL.  
   
 `[ @active_start_date = ] active_start_date`
- Is the date when the distribution task is first scheduled, formatted as YYYYMMDD. *active_start_date* is **int**, with a default of NULL.  
+ Is the date when the distribution task is first scheduled, formatted as `yyyyMMdd`. *active_start_date* is **int**, with a default of NULL.  
   
 `[ @active_end_date = ] active_end_date`
- Is the date when the distribution task stops being scheduled, formatted as YYYYMMDD. *active_end_date*is **int**, with a default of NULL.  
+ Is the date when the distribution task stops being scheduled, formatted as `yyyyMMdd`. *active_end_date*is **int**, with a default of NULL.  
   
 `[ @description = ] 'description'`
  Is an optional text description. *description* is **nvarchar(255)**, with a default of NULL.  

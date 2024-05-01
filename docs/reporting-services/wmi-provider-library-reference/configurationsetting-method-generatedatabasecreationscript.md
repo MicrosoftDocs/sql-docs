@@ -1,6 +1,6 @@
 ---
-title: "ConfigurationSetting Method - GenerateDatabaseCreationScript"
-description: "ConfigurationSetting Method - GenerateDatabaseCreationScript"
+title: "ConfigurationSetting method - GenerateDatabaseCreationScript"
+description: "ConfigurationSetting method - GenerateDatabaseCreationScript"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/14/2017
@@ -14,8 +14,8 @@ apilocation: "reportingservices.mof"
 apiname: "GenerateDatabaseCreationScript (WMI MSReportServer_ConfigurationSetting Class)"
 apitype: MOFDef
 ---
-# ConfigurationSetting Method - GenerateDatabaseCreationScript
-  Generates a SQL Script that can be used to create a report server database.  
+# ConfigurationSetting method - GenerateDatabaseCreationScript
+  Generates a SQL script that can be used to create a report server database.  
   
 ## Syntax  
   
@@ -49,24 +49,24 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  *HRESULT*  
  [out] Value indicating whether the call succeeded or failed.  
   
-## Return Value  
- Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A non-zero value indicates that an error has occurred.  
+## Return value  
+ Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A nonzero value indicates that an error occurred.  
   
 ## Remarks  
  This method generates an SQL script that creates report server databases for the version of the report server currently connected to.  
   
  The value supplied in the *DatabaseName* parameter must conform to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database naming conventions.  
   
- The method does not check the existence of the database when generating the script.  
+ The method doesn't check the existence of the database when generating the script.  
   
- This method does not check for the existence of the report server database when generating the script.  
+ This method doesn't check for the existence of the report server database when generating the script.  
   
  The generated script supports [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, and [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)].  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+## Related content 
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

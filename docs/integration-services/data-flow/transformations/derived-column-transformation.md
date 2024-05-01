@@ -110,4 +110,4 @@ helpviewer_keywords:
  Specify how to handle errors by using the [Configure Error Output](../error-handling-in-data.md) dialog box.  
   
 ## Related Content  
- Technical article, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com
+- [SSIS Expression Examples](../../../integration-services/expressions/use-property-expressions-in-packages.md)

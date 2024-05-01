@@ -12,7 +12,7 @@ ms.custom: template-how-to
 
 # Run a trace against Azure SQL Managed Instance using Windows Authentication for Microsoft Entra principals
 
-This article shows how to connect and run a trace against Azure SQL Managed Instance using Windows Authentication for principals in Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). Windows authentication provides a convenient way for customers to connect to a managed instance, especially for database administrators and developers who are accustomed to launching [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) with their Windows credentials.
+This article shows how to connect and run a trace against Azure SQL Managed Instance using Windows Authentication for principals in Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). Windows authentication provides a convenient way for customers to connect to a managed instance, especially for database administrators and developers who are accustomed to launching [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) with their Windows credentials.
 
 This article shares two options to run a trace against a managed instance: you can trace with [extended events](/sql/relational-databases/extended-events/extended-events) or with  [SQL Server Profiler](/sql/tools/sql-server-profiler/sql-server-profiler). While SQL Server Profiler may still be used, the trace functionality used by SQL Server Profiler is deprecated and will be removed in a future version of Microsoft SQL Server.
 

@@ -1,36 +1,37 @@
 ---
-title: Azure Arc-enabled SQL Server data collection and reporting
-description: Explains data that Microsoft collects for reporting for Azure Arc-enabled SQL Server
+title: Data collection and reporting
+description: Explains data that Microsoft collects for reporting for SQL Server enabled by Azure Arc, and how to configure related settings.
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 10/03/2023
+ms.date: 12/15/2023
 ms.topic: conceptual
 ms.custom: references_regions
 ---
-# Azure Arc-enabled SQL Server data collection and reporting
+
+# Data collection and reporting for SQL Server enabled by Azure Arc
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-This article describes the data that Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] transmits to Microsoft. Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] collects usage data as described in this article and at [Monitor Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]](sql-monitoring.md).
+This article describes the data that [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] transmits to Microsoft. [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] collects usage data as described in this article and at [Monitor Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]](sql-monitoring.md).
 
-Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] does not collect any personally identifiable information (PII) or end-user identifiable information, or store any customer data.
+[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] does not collect any personally identifiable information (PII) or end-user identifiable information or store any customer data.
 
 ## Related products
 
-Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] uses the following products:
+[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] uses the following products:
 
 - Azure Arc-enabled servers
 
-## Azure Arc-enabled SQL Server
+## SQL Server enabled by Azure Arc instance
 
-The following data is collected for Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances:
+The following data is collected for [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instances:
 
 | Description | Property name | Property type |
 | :-- | :-- | :-- |
 | SQL Server edition | `Edition` | `string` |
 | Resource ID of the hosting Azure Arc for Servers resource | `ContainerResourceId` | `string` |
-| Time when the resource was created | `CreateTime` | string |
+| Time when the resource was created | `CreateTime` | `string` |
 | The number of logical processors used by the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance | `VCore` | `string` |
 | Cloud connectivity status | `Status` | `string` |
 | SQL Server update level | `PatchLevel` | `string` |
@@ -46,16 +47,16 @@ The following JSON document is an example of the [!INCLUDE [ssnoversion-md](../.
 
 ```json
 {
-    "name": "SQL22-EE",
+    "name": "<server name>",
     "version": "SQL Server 2022",
     "edition": "Enterprise",
-    "containerResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/arc-eastasia/providers/Microsoft.HybridCompute/machines/SQL22-EE",
+    "containerResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/arc-eastasia/providers/Microsoft.HybridCompute/machines/<server name>",
     "vCore": "8",
     "status": "Connected",
     "patchLevel": "16.0.1000.6",
     "collation": "SQL_Latin1_General_CP1_CI_AS",
     "currentVersion": "16.0.1000.6",
-    "instanceName": "SQL22-EE",
+    "instanceName": "<instance name>",
     "tcpDynamicPorts": "61394",
     "tcpStaticPorts": "",
     "productId": "00488-00010-05000-AB944",
@@ -113,6 +114,26 @@ The following JSON document is an example of the [!INCLUDE [ssnoversion-md](../.
     "provisioningState": "Succeeded"
 }
 ```
+
+## Extension logs
+
+The extension sends logs to Azure about extension events.
+
+[!INCLUDE [extension-logs](includes/extension-logs.md)]
+
+## Migration assessment metrics
+
+Migration assessment automatically produces an assessment for migration to Azure. Learn more at [Select the optimal Azure SQL target using Migration assessment (preview) - SQL Server enabled by Azure Arc](migration-assessment.md).
+
+[!INCLUDE [assessment-metrics](includes/assessment-metrics.md)]
+
+## Monitoring data
+
+The agent sends SQL Server monitoring data to Azure. You can enable and disable monitoring data that is collected. See [Monitor SQL Server enabled by Azure Arc (preview)](sql-monitoring.md).
+
+The following lists reflect the monitoring data that is collected from DMV datasets on [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] when the monitoring feature is enabled. No personally identifiable information (PII), end-user identifiable information (EUII), or customer content is collected.
+
+[!INCLUDE [dmv-collection](includes/dmv-collection.md)]
 
 ## Related content
 

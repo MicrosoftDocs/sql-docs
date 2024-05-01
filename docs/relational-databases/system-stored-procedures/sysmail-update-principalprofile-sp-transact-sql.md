@@ -101,7 +101,7 @@ EXEC msdb.dbo.sysmail_update_principalprofile_sp
     @is_default = '1' ;
 ```
 
-## See also
+## Related content
 
 - [Database Mail](../database-mail/database-mail.md)
 - [Database Mail Configuration Objects](../database-mail/database-mail-configuration-objects.md)

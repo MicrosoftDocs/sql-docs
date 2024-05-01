@@ -326,7 +326,7 @@ a           b                   c            d
       4      join4
 ```    
 
-A join that compares the values in column a against column `c` does not get a match on the columns that have values of `NULL`:
+A join that compares the values in column `a` against column `c` does not get a match on the columns that have values of `NULL`:
 
 ```sql
 SELECT *

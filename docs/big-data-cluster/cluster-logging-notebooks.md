@@ -64,4 +64,7 @@ A set of notebooks to gather and analyze logs from a SQL Server big data cluster
 
 ## Next steps
 
-For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).
+- [Monitor Big Data Clusters status by using Azure Data Studio](cluster-monitor-ads.md)
+- [Monitor Big Data Clusters by using azdata and Grafana Dashboard](cluster-monitor-grafana.md)
+- [Monitor Big Data Clusters by using azdata and kubectl](cluster-monitor-cmdlet.md)
+- [Monitor Big Data Clusters by using Jupyter Notebooks and Azure Data Studio](cluster-monitor-notebooks.md)

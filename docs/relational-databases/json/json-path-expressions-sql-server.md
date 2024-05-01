@@ -13,7 +13,8 @@ helpviewer_keywords:
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # JSON Path Expressions (SQL Server)
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-serverless-pool-only](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-serverless-pool-only.md)]
 
  Use JSON path expressions to reference the properties of JSON objects.  
   
@@ -57,7 +58,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info');
   
 -   The property path is a set of path steps. Path steps can contain the following elements and operators.  
   
-    -   Key names. For example, `$.name` and `$."first name"`. If the key name starts with a dollar sign or contains special characters such as spaces, surround it with quotes.   
+    -   Key names. For example, `$.name` and `$."first name"`. If the key name starts with a dollar sign or contains special characters such as spaces or dot operators(`.`), surround it with quotes.   
   
     -   Array elements. For example, `$.product[3]`. Arrays are zero-based.  
   
@@ -68,14 +69,14 @@ SELECT * FROM OPENJSON(@json, N'lax $.info');
   
 ```json  
 {
-	"people": [{
-		"name": "John",
-		"surname": "Doe"
-	}, {
-		"name": "Jane",
-		"surname": null,
-		"active": true
-	}]
+    "people": [{
+        "name": "John",
+        "surname": "Doe"
+    }, {
+        "name": "Jane",
+        "surname": null,
+        "active": true
+    }]
 }
 ```  
   

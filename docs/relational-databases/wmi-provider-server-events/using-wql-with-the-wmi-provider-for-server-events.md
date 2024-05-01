@@ -75,7 +75,7 @@ A property of an event. Examples include `PostTime`, `SPID`, and `LoginName`. Lo
 Any event against which an event notification can be created. For a list of available events, see [WMI Provider for Server Events classes and properties](wmi-provider-for-server-events-classes-and-properties.md). *event type* names correspond to the same *event_type* | *event_group* that can be specified when you manually create an event notification by using `CREATE EVENT NOTIFICATION`. Examples of *event type* include `CREATE_TABLE`, `LOCK_DEADLOCK`, `DDL_USER_EVENTS`, and `TRC_DATABASE`.
 
 > [!NOTE]  
-> Certain system stored procedures that perform DDL-like operations can also fire event notifications. Test your event notifications to determine their responses to system stored procedures that are run. For example, the `CREATE TYPE` statement and `sp_addtype` stored procedure will both fire an event notification that is created on a `CREATE_TYPE` event. However, the `sp_rename` stored procedure doesn't fire any event notifications. For more information, see[DDL Events](../triggers/ddl-events.md).
+> Certain system stored procedures that perform DDL-like operations can also fire event notifications. Test your event notifications to determine their responses to system stored procedures that are run. For example, the `CREATE TYPE` statement and `sp_addtype` stored procedure will both fire an event notification that is created on a `CREATE_TYPE` event. However, the `sp_rename` stored procedure doesn't fire any event notifications. For more information, see [DDL Events](../triggers/ddl-events.md).
 
 #### *where_condition*
 

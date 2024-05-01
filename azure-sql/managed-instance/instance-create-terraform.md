@@ -3,6 +3,7 @@ title: "Quickstart: Create managed instance with Terraform"
 description: Learn how to create and deploy SQL Managed Instance with Terraform
 author: urosran
 ms.author: urandjelovic
+ms.reviewer: mathoma
 ms.date: 12/06/2022
 ms.service: sql-managed-instance
 ms.topic: quickstart

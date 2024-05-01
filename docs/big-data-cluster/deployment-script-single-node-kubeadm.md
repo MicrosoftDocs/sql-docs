@@ -5,18 +5,18 @@ description: Use a bash deployment script to deploy a SQL Server 2019 big data c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
-ms.date: 12/13/2019
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: big-data-cluster
-ms.topic: conceptual
-ms.custom: intro-deployment
+ms.topic: how-to
+ms.custom: intro-deployment, linux-related-content
 ---
 
 # Deploy with a bash script to a single node kubeadm cluster
 
-[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE [SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+[!INCLUDE [big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 In this tutorial, you use a sample bash deployment script to deploy a single node Kubernetes cluster using  kubeadm and a SQL Server big data cluster on it.
 
@@ -51,13 +51,13 @@ In this tutorial, you use a sample bash deployment script to deploy a single nod
    curl --output setup-bdc.sh https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu-single-node-vm/setup-bdc.sh
    ```
 
-2. Make the script executable with the following command.
+1. Make the script executable with the following command.
 
    ```bash
    chmod +x setup-bdc.sh
    ```
 
-3. Run the script (make sure you are running with *sudo*)
+1. Run the script (make sure you are running with *sudo*)
 
    ```bash
    sudo ./setup-bdc.sh
@@ -65,13 +65,13 @@ In this tutorial, you use a sample bash deployment script to deploy a single nod
 
    When prompted, provide your input for the password to use for the following external endpoints: controller, SQL Server master, and gateway. The password should be sufficiently complex based on existing rules for SQL Server password. The controller username defaults to *admin*.
 
-4. Set up an alias for the **azdata** tool.
+1. Set up an alias for the **azdata** tool.
 
    ```bash
    source ~/.bashrc
    ```
 
-5. Refresh alias setup for azdata.
+1. Refresh alias setup for azdata.
 
    ```bash
    azdata --version
@@ -81,6 +81,7 @@ In this tutorial, you use a sample bash deployment script to deploy a single nod
 
 The [cleanup-bdc.sh](https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu-single-node-vm/cleanup-bdc.sh) script is provided as convenience to reset the environment if necessary. However, we recommend that you use a virtual machine for testing purposes and use the snapshot capability in your hypervisor to roll back the virtual machine to a clean state.
 
-## Next steps
+## Next step
 
-To get started with using big data clusters, see [Tutorial: Load sample data into a SQL Server big data cluster](tutorial-load-sample-data.md).
+> [!div class="nextstepaction"]
+> [Tutorial: Load sample data into a SQL Server big data cluster](tutorial-load-sample-data.md)

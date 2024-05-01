@@ -40,7 +40,7 @@ dev_langs:
 
 For an example of using trace stored procedures, see [Create a Trace (Transact-SQL)](../sql-trace/create-a-trace-transact-sql.md).
 
-## See also
+## Related content
 
 - [SQL Server Event Class Reference](../event-classes/sql-server-event-class-reference.md)
 - [SQL Trace](../sql-trace/sql-trace.md)

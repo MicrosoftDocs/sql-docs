@@ -26,7 +26,7 @@ The [What is Linux](https://www.linux.org/threads/what-is-linux.4106/) module in
 
 ## Select a distribution
 
-After you know the history of Linux, decide which [distribution of Linux](https://www.linux.org/threads/selecting-a-linux-distribution.4117/) best suits your business needs. [SQL Server is supported](sql-server-linux-release-notes-2019.md#supported-platforms) on various distributions such as Red Hat Enterprise Linux (RHEL), SUSE Enterprise Linux Server (SLES), and Ubuntu.
+After you know the history of Linux, decide which [distribution of Linux](https://www.linux.org/threads/selecting-a-linux-distribution.4117/) best suits your business needs. [SQL Server is supported](sql-server-linux-release-notes-2019.md#supported-platforms) on various distributions such as Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu.
 
 ## Get around directories
 

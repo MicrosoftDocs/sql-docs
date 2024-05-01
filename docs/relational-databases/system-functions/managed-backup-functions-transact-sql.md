@@ -16,7 +16,7 @@ dev_langs:
 # Managed Backup Functions (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following functions for [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following functions for [!INCLUDE[ss-managed-backup](../../includes/ss-managed-backup-md.md)].  
   
 ## In this section  
  [managed_backup.fn_backup_db_config &#40;Transact-SQL&#41;](../../relational-databases/system-functions/managed-backup-fn-backup-db-config-transact-sql.md)  

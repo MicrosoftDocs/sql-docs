@@ -50,7 +50,7 @@ After you run `sp_rda_deauthorize_db`, all queries against Stretch-enabled datab
 
 - Run [sys.sp_rda_set_query_mode (Transact-SQL)](sys-sp-rda-set-query-mode-transact-sql.md) with the `LOCAL_ONLY` argument to let queries continue to run against local data only.
 
-## See also
+## Related content
 
 - [sys.sp_rda_set_query_mode (Transact-SQL)](sys-sp-rda-set-query-mode-transact-sql.md)
 - [sys.sp_rda_reauthorize_db (Transact-SQL)](sys-sp-rda-reauthorize-db-transact-sql.md)

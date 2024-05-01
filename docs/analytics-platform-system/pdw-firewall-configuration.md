@@ -4,28 +4,28 @@ description: The firewall page of the SQL Server PDW Configuration Manager enabl
 author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
-ms.date: 04/17/2018
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: data-warehouse
-ms.topic: conceptual
+ms.topic: how-to
 ---
-# Parallel Data Warehouse firewall configuration in Analytics Platform System
+# Parallel Data Warehouse firewall configuration in Analytics Platform System (PDW)
 
 The **Firewall** page of the SQL Server PDW Configuration Manager enables you to enable or disable firewall rules that allow or prevent access to specific ports on the Analytics Platform System appliance.  
   
-## To manage ports and firewall rules for appliance nodes  
+## <a id="to-manage-ports-and-firewall-rules-for-appliance-nodes"></a> Manage ports and firewall rules for appliance nodes
   
-1.  Launch the Configuration Manager. For more information, see [Launch the Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
+1. Launch the Configuration Manager. For more information, see [Launch the Configuration Manager (Analytics Platform System)](launch-the-configuration-manager.md).  
   
-2.  In the left pane of the Configuration Manager, expand **Parallel Data Warehouse Topology**, and then click **Firewall**.  
+1. In the left pane of the Configuration Manager, expand **Parallel Data Warehouse Topology**, and then select **Firewall**.  
   
-3.  Locate the port or firewall rule to update in the configuration list, and then select or clear the box next to that item. Only SQL Server PDW admin-configurable options are shown in this list, including opening and closing ports on externally facing nodes.  
+1. Locate the port or firewall rule to update in the configuration list, and then select or clear the box next to that item. Only SQL Server PDW admin-configurable options are shown in this list, including opening and closing ports on externally facing nodes.  
   
-4.  Click **Apply** to save your changes.  
+1. Select **Apply** to save your changes.  
   
-![DWConfig Appliance PDW Firewall](./media/pdw-firewall-configuration/SQL_Server_PDW_DWConfig_ApplPDWFirewall.png "SQL_Server_PDW_DWConfig_ApplPDWFirewall")  
+:::image type="content" source="./media/pdw-firewall-configuration/SQL_Server_PDW_DWConfig_ApplPDWFirewall.png" alt-text="Screenshot of the Microsoft Analytics Platform System Configuration Manager, showing the Firewall page.":::
   
-## External Ports  
+## External Ports
 The following ports are opened for client connections coming from outside of PDW.  
   
 |Purpose|Port #|Nodes|  
@@ -37,10 +37,10 @@ The following ports are opened for client connections coming from outside of PDW
 |dwloader BinaryLoaderDataChannel|16551|CMP|  
 |SSL encrypted connections (For internal communications, to access the Admin Console)|443|All nodes|  
 |SQL Server PDW Load Control Flow - Windows Credentials|8002|CTL|  
-|_Kerberos|88|AD01 and AD02,|  
+|_Kerberos|88|AD01 and AD02|  
 |_ldap|389|AD01 and AD02|  
   
-## Internal Ports  
+## Internal Ports
 The following ports are used by PDW for internal communication, but are not opened for connections coming from outside of the PDW appliance.  
   
 |Purpose|Port #|Nodes|  
@@ -54,9 +54,13 @@ The following ports are used by PDW for internal communication, but are not open
 |SQL Server port ranges (TDS)|1433, 1500-1508|CTL, CMP|  
   
 > [!NOTE]  
-> Creating external tables or external data sources uses TCP port 8020 by default. These statements can be configured to use other ports instead. The Hortonworks JOB_TRACKER_LOCATION default port is 50300. Integrating with other systems and tools may require additional ports.  
+> Creating external tables or external data sources uses TCP port 8020 by default. These statements can be configured to use other ports instead. The Hortonworks JOB_TRACKER_LOCATION default port is 50300. Integrating with other systems and tools might require additional ports.  
   
 <!-- MISSING LINKS ## See Also  
-[HDInsight Firewall Configuration &#40;Analytics Platform System&#41;](hdinsight-firewall-configuration.md)
+[HDInsight Firewall Configuration (Analytics Platform System)](hdinsight-firewall-configuration.md)
 -->
-  
+
+## Related content
+
+- [Topology of Analytics Platform System (PDW)](pdw-topology.md)
+- [PDW certificate provisioning - Analytics Platform System (PDW)](pdw-certificate-provisioning.md)

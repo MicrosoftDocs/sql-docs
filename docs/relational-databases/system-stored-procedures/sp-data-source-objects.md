@@ -252,9 +252,9 @@ EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
 | `TABLE` | `"database"."nation"` | `nation` | `[database].[nation]` |
 | `TABLE` | `"database"."orders"` | `orders` | `[database].[orders]` |
 
-## See also
+## Related content
 
-- [sp_data_source_columns](./sp-data-source-table-columns.md)
+- [sp_data_source_columns](sp-data-source-table-columns.md)
 - [CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)](../../t-sql/statements/create-external-table-as-select-transact-sql.md)
 - [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)
 - [Data Virtualization extension for Azure Data Studio](../../azure-data-studio/extensions/data-virtualization-extension.md)

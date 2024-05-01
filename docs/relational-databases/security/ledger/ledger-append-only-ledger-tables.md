@@ -8,7 +8,7 @@ ms.date: "05/24/2022"
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
-monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 
 # Append-only ledger tables
@@ -51,7 +51,7 @@ For every append-only ledger table, the system automatically generates a view, c
 | ledger_operation_type | tinyint | Contains `1` (**INSERT**) or `2` (**DELETE**). Inserting a row into the ledger table produces a new row in the ledger view that contains `1` in this column. Deleting a row from the ledger table produces a new row in the ledger view that contains `2` in this column. Updating a row in the ledger table produces two new rows in the ledger view. One row contains `2` (**DELETE**), and the other row contains `1` (**INSERT**) in this column. A DELETE shouldn't occur on an append-only ledger table. |
 | ledger_operation_type_desc | nvarchar(128) | Contains `INSERT` or `DELETE`. For more information, see the preceding row. |
 
-## Next steps
+## Related content
 
 - [Create and use append-only ledger tables](ledger-how-to-append-only-ledger-tables.md)
 - [Create and use updatable ledger tables](ledger-how-to-updatable-ledger-tables.md)

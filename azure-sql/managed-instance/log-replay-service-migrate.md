@@ -62,9 +62,8 @@ Make sure that you meet the following requirements for Azure:
 
 Running LRS through the provided clients requires one of the following Azure role-based access control (RBAC) roles:
 
-- Subscription Owner role
 - [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) role
-- Custom role with the following permission: `Microsoft.Sql/managedInstances/databases/*`
+- A role with the following permission: `Microsoft.Sql/managedInstances/databases/*`
 
 
 ## Best practices
@@ -75,13 +74,13 @@ When you're using LRS, consider the following best practices:
 - Split full and differential backups into multiple files, instead of using a single file.
 - Enable backup compression to help the network transfer speeds.
 - Use Cloud Shell to run PowerShell or CLI scripts, because it will always be updated to use the latest released cmdlets.
-- Configure a [maintenance window](../database/maintenance-window.md) to allow scheduling of system updates at a specific day and time. This configuration helps achieve a more predictable time for database migrations, because system upgrades can interrupt in-progress migrations.
+- Configure a [maintenance window](maintenance-window.md) to allow scheduling of system updates at a specific day and time. This configuration helps achieve a more predictable time for database migrations, because system upgrades can interrupt in-progress migrations.
 - Plan to complete a single LRS migration job within a maximum of 30 days. On expiration of this time frame, the LRS job is automatically canceled.
 - For a faster database restore, enable `CHECKSUM` when you're taking your backups. SQL Managed Instance performs an integrity check on backups without `CHECKSUM`, which increases restore time. 
 
 System updates for SQL Managed Instance take precedence over database migrations in progress. During a system update on an instance, all pending LRS migrations are suspended and resumed only after the update is applied. This system behavior might prolong migration time, especially for large databases. 
 
-To achieve a predictable time for database migrations, consider configuring a [maintenance window](../database/maintenance-window.md) to schedule system updates for a specific day and time, and run and complete migration jobs outside the designated maintenance window timeframe.
+To achieve a predictable time for database migrations, consider configuring a [maintenance window](maintenance-window.md) to schedule system updates for a specific day and time, and run and complete migration jobs outside the designated maintenance window timeframe.
 
 
 > [!IMPORTANT]
@@ -177,7 +176,7 @@ Follow these steps to generate the token:
 1. Select the time frame for token expiration. Ensure that the token is valid during your migration.
 
 1. Select the time zone for the token: UTC or your local time.
-	
+    
    > [!IMPORTANT]
    > The time zone of the token and your managed instance might mismatch. Ensure that the SAS token has the appropriate time validity, taking time zones into consideration. To account for time zone differences, set the validity **FROM** value well before your migration window starts, and the **TO** value well after you expect your migration to finish.
 
@@ -443,21 +442,21 @@ The following PowerShell example starts LRS in autocomplete mode by using a SAS 
 
 ```PowerShell
 Start-AzSqlInstanceDatabaseLogReplay -ResourceGroupName "ResourceGroup01" `
-	-InstanceName "ManagedInstance01" `
-	-Name "ManagedDatabaseName" `
-	-Collation "SQL_Latin1_General_CP1_CI_AS" `
-	-StorageContainerUri "https://<mystorageaccountname>.blob.core.windows.net/<containername>/<databasefolder>" `
-	-StorageContainerSasToken "sv=2019-02-02&ss=b&srt=sco&sp=rl&se=2023-12-02T00:09:14Z&st=2019-11-25T16:09:14Z&spr=https&sig=92kAe4QYmXaht%2Fgjocqwerqwer41s%3D" `
-	-AutoCompleteRestore `
-	-LastBackupName "last_backup.bak"
+    -InstanceName "ManagedInstance01" `
+    -Name "ManagedDatabaseName" `
+    -Collation "SQL_Latin1_General_CP1_CI_AS" `
+    -StorageContainerUri "https://<mystorageaccountname>.blob.core.windows.net/<containername>/<databasefolder>" `
+    -StorageContainerSasToken "sv=2019-02-02&ss=b&srt=sco&sp=rl&se=2023-12-02T00:09:14Z&st=2019-11-25T16:09:14Z&spr=https&sig=92kAe4QYmXaht%2Fgjocqwerqwer41s%3D" `
+    -AutoCompleteRestore `
+    -LastBackupName "last_backup.bak"
 ```
 
 The following Azure CLI example starts LRS in autocomplete mode by using a SAS token: 
 
 ```CLI
 az sql midb log-replay start -g mygroup --mi myinstance -n mymanageddb -a --last-bn "backup.bak"
-	--storage-uri "https://<mystorageaccountname>.blob.core.windows.net/<containername>/<databasefolder>"
-	--storage-sas "sv=2019-02-02&ss=b&srt=sco&sp=rl&se=2023-12-02T00:09:14Z&st=2019-11-25T16:09:14Z&spr=https&sig=92kAe4QYmXaht%2Fgjocqwerqwer41s%3D"
+    --storage-uri "https://<mystorageaccountname>.blob.core.windows.net/<containername>/<databasefolder>"
+    --storage-sas "sv=2019-02-02&ss=b&srt=sco&sp=rl&se=2023-12-02T00:09:14Z&st=2019-11-25T16:09:14Z&spr=https&sig=92kAe4QYmXaht%2Fgjocqwerqwer41s%3D"
 ```
 
 ### [Managed identity](#tab/managed-identity)
@@ -466,13 +465,13 @@ The following PowerShell example starts LRS in autocomplete mode by using a mana
 
 ```PowerShell
 Start-AzSqlInstanceDatabaseLogReplay -ResourceGroupName "ResourceGroup01" `
-	-InstanceName "ManagedInstance01" `
-	-Name "ManagedDatabaseName" `
-	-Collation "SQL_Latin1_General_CP1_CI_AS" `
-	-StorageContainerUri "https://<mystorageaccountname>.blob.core.windows.net/<containername>/<databasefolder>" `
-	-StorageContainerIdentity ManagedIdentity  `
-	-AutoCompleteRestore `
-	-LastBackupName "last_backup.bak"
+    -InstanceName "ManagedInstance01" `
+    -Name "ManagedDatabaseName" `
+    -Collation "SQL_Latin1_General_CP1_CI_AS" `
+    -StorageContainerUri "https://<mystorageaccountname>.blob.core.windows.net/<containername>/<databasefolder>" `
+    -StorageContainerIdentity ManagedIdentity  `
+    -AutoCompleteRestore `
+    -LastBackupName "last_backup.bak"
 ```
 
 ---
@@ -491,18 +490,18 @@ The following PowerShell example starts LRS in continuous mode by using a SAS to
 
 ```PowerShell
 Start-AzSqlInstanceDatabaseLogReplay -ResourceGroupName "ResourceGroup01" `
-	-InstanceName "ManagedInstance01" `
-	-Name "ManagedDatabaseName" `
-	-Collation "SQL_Latin1_General_CP1_CI_AS" -StorageContainerUri "https://<mystorageaccountname>.blob.core.windows.net/<containername>/<databasefolder>" `
-	-StorageContainerSasToken "sv=2019-02-02&ss=b&srt=sco&sp=rl&se=2023-12-02T00:09:14Z&st=2019-11-25T16:09:14Z&spr=https&sig=92kAe4QYmXaht%2Fgjocqwerqwer41s%3D"
+    -InstanceName "ManagedInstance01" `
+    -Name "ManagedDatabaseName" `
+    -Collation "SQL_Latin1_General_CP1_CI_AS" -StorageContainerUri "https://<mystorageaccountname>.blob.core.windows.net/<containername>/<databasefolder>" `
+    -StorageContainerSasToken "sv=2019-02-02&ss=b&srt=sco&sp=rl&se=2023-12-02T00:09:14Z&st=2019-11-25T16:09:14Z&spr=https&sig=92kAe4QYmXaht%2Fgjocqwerqwer41s%3D"
 ```
 
 The following Azure CLI example starts LRS in continuous mode:
 
 ```CLI
 az sql midb log-replay start -g mygroup --mi myinstance -n mymanageddb
-	--storage-uri "https://<mystorageaccountname>.blob.core.windows.net/<containername>/<databasefolder>"
-	--storage-sas "sv=2019-02-02&ss=b&srt=sco&sp=rl&se=2023-12-02T00:09:14Z&st=2019-11-25T16:09:14Z&spr=https&sig=92kAe4QYmXaht%2Fgjocqwerqwer41s%3D"
+    --storage-uri "https://<mystorageaccountname>.blob.core.windows.net/<containername>/<databasefolder>"
+    --storage-sas "sv=2019-02-02&ss=b&srt=sco&sp=rl&se=2023-12-02T00:09:14Z&st=2019-11-25T16:09:14Z&spr=https&sig=92kAe4QYmXaht%2Fgjocqwerqwer41s%3D"
 ```
 
 
@@ -513,10 +512,10 @@ The following PowerShell example starts LRS in continuous mode by using a manage
 
 ```PowerShell
 Start-AzSqlInstanceDatabaseLogReplay -ResourceGroupName "ResourceGroup01" `
-	-InstanceName "ManagedInstance01" `
-	-Name "ManagedDatabaseName" `
-	-Collation "SQL_Latin1_General_CP1_CI_AS" -StorageContainerUri "https://<mystorageaccountname>.blob.core.windows.net/<containername>/<databasefolder>" `
-	-StorageContainerIdentity ManagedIdentity
+    -InstanceName "ManagedInstance01" `
+    -Name "ManagedDatabaseName" `
+    -Collation "SQL_Latin1_General_CP1_CI_AS" -StorageContainerUri "https://<mystorageaccountname>.blob.core.windows.net/<containername>/<databasefolder>" `
+    -StorageContainerIdentity ManagedIdentity
 ```
 
 ---
@@ -541,14 +540,14 @@ az sql midb log-replay start <required parameters> &
 
 ## Monitor migration progress
 
-[Az.SQL 4.0.0 and later](https://www.powershellgallery.com/packages/Az.Sql/4.0.0) provides a detailed progress report. Review [Managed Database Restore Details - Get](/rest/api/sql/2022-02-01-preview/managed-database-restore-details/get?tabs=HTTP) for a sample output.  
+[Az.SQL 4.0.0 and later](https://www.powershellgallery.com/packages/Az.Sql/4.0.0) provides a detailed progress report. Review [Managed Database Restore Details - Get](/rest/api/sql/managed-database-restore-details/get) for a sample output.  
 
 To monitor migration progress through PowerShell, use the following command:
 
 ```PowerShell
 Get-AzSqlInstanceDatabaseLogReplay -ResourceGroupName "ResourceGroup01" `
-	-InstanceName "ManagedInstance01" `
-	-Name "ManagedDatabaseName"
+    -InstanceName "ManagedInstance01" `
+    -Name "ManagedDatabaseName"
 ```
 
 To monitor migration progress through the Azure CLI, use the following command:
@@ -565,8 +564,8 @@ To stop the migration process through PowerShell, use the following command:
 
 ```PowerShell
 Stop-AzSqlInstanceDatabaseLogReplay -ResourceGroupName "ResourceGroup01" `
-	-InstanceName "ManagedInstance01" `
-	-Name "ManagedDatabaseName"
+    -InstanceName "ManagedInstance01" `
+    -Name "ManagedDatabaseName"
 ```
 
 To stop the migration process through the Azure CLI, use the following command:
@@ -610,6 +609,7 @@ If LRS fails to start after some time and you get an error, check for the most c
 - Are the permissions granted for the SAS token Read and List _only_?
 - Did you copy the SAS token for LRS after the question mark (`?`), with content that looks like `sv=2020-02-10...`? 
 - Is the SAS token validity time appropriate for the time window of starting and completing the migration? There might be mismatches because of the different time zones used for your SQL Managed Instance deployment and the SAS token. Try regenerating the SAS token and extending the token validity of the time window before and after the current date.
+- When starting multiple Log Replay restores in parallel targeting the same storage container, ensure that the same valid SAS token is provided for every restore operation. 
 - Are the database name, resource group name, and managed instance name spelled correctly?
 - If you started LRS in autocomplete mode, was a valid file name for the last backup file specified?
 - Does the backup URI path contain keywords `backup` or `backups`? Rename the container or folders that are using `backup` or `backups` as these are reserved keywords.

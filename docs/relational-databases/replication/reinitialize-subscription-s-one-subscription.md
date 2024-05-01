@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: ui-reference
 ms.custom: updatefrequency5
 f1_keywords:
   - "sql13.rep.reinit.single.f1"

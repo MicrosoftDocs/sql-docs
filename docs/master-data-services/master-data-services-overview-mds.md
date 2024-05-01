@@ -7,6 +7,11 @@ ms.date: "02/14/2017"
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: conceptual
+f1_keywords:
+  - "sql13.mds.configmanager.srvconnect.f1"
+  - "sql13.mds.configmanager.dbmailprofileacct.f1"
+  - "sql13.mds.configmanager.createapp.f1"
+  - "sql13.mds.configmanager.createsite.f1"
 helpviewer_keywords:
   - "Master Data Services, overview"
   - "Master Data Services"

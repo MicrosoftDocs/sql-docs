@@ -66,7 +66,7 @@ The name of the MySQL server.
 The name of the MySQL database.
 
 **UID** and **PWD**   
-The user id and password to connect.
+The user ID and password to connect.
 
 ### Connection string format
 Here's the format of a typical connection string.

@@ -39,7 +39,7 @@ Before you install SSMA, make sure that the computer meets the following require
 
 ## Microsoft OLE DB Provider for DB2
 
-To download the OLE DB provider for DB2 version 6.0, go to [Microsoft® SQL Server® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
+To download the OLE DB provider for DB2 version 6.0, go to [Microsoft SQL Server 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
 
 SSMA is a Web download. To download the latest version, see the [SQL Server Migration Assistant download page](https://aka.ms/ssmafordb2).
 

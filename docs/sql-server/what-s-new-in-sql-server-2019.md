@@ -52,7 +52,7 @@ With [Intelligent Query Processing](../relational-databases/performance/intellig
 
 | New feature or update | Details |
 | :--- | :--- |
-| Row mode memory grant feedback | Expands on the batch mode memory grant feedback feature by adjusting memory grant sizes for both batch and row mode operators. This adjustment can automatically correct excessive grants, which result in wasted memory and reduced concurrency. It can also correct insufficient memory grants that cause expensive spills to disk. See [Row mode memory grant feedback](../relational-databases/performance/intelligent-query-processing-feedback.md#row-mode-memory-grant-feedback). |
+| Row mode memory grant feedback | Expands on the batch mode memory grant feedback feature by adjusting memory grant sizes for both batch and row mode operators. This adjustment can automatically correct excessive grants, which result in wasted memory and reduced concurrency. It can also correct insufficient memory grants that cause expensive spills to disk. See [Row mode memory grant feedback](../relational-databases/performance/intelligent-query-processing-memory-grant-feedback.md#row-mode-memory-grant-feedback). |
 | Batch mode on rowstore | Enables batch mode execution without requiring columnstore indexes. Batch mode execution uses CPU more efficiently during analytical workloads but, until [!INCLUDE [sql-server-2019](../includes/sssql19-md.md)], it was used only when a query included operations with columnstore indexes. However, some applications might use features that aren't supported with columnstore indexes and, therefore, can't use batch mode. Starting with [!INCLUDE [sql-server-2019](../includes/sssql19-md.md)], batch mode is enabled on eligible analytical workloads whose queries include operations with any type of index (rowstore or columnstore). See [Batch mode on rowstore](../relational-databases/performance/intelligent-query-processing-details.md#batch-mode-on-rowstore). |
 | Scalar UDF Inlining | Automatically transforms scalar UDFs into relational expressions and embeds them in the calling SQL query. This transformation improves the performance of workloads that take advantage of scalar UDFs. See [Scalar UDF Inlining](../relational-databases/performance/intelligent-query-processing-details.md#scalar-udf-inlining). |
 | Table variable deferred compilation | Improves plan quality and overall performance for queries that reference table variables. During optimization and initial compilation, this feature propagates cardinality estimates that are based on actual table variable row counts. This accurate row count information optimizes downstream plan operations. See [Table variable deferred compilation](../relational-databases/performance/intelligent-query-processing-details.md#table-variable-deferred-compilation). |
@@ -178,7 +178,7 @@ One common task that everyone who deploys [!INCLUDE [ssNoVersion](../includes/ss
 | :--- | :--- |
 | Online clustered columnstore index build and rebuild | See [Perform Index Operations Online](../relational-databases/indexes/perform-index-operations-online.md). |
 | Resumable online rowstore index build | See [Perform Index Operations Online](../relational-databases/indexes/perform-index-operations-online.md). |
-| Suspend and resume initial scan for Transparent Data Encryption (TDE) | See [Transparent Data Encryption (TDE) scan - suspend and resume](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume). |
+| Suspend and resume initial scan for transparent data encryption (TDE) | See [Transparent Data Encryption (TDE) scan - suspend and resume](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume). |
 
 ## Platform choice
 
@@ -253,7 +253,7 @@ This release introduces new features to improve file operations.
 
 ## SQL Server Reporting Services
 
-This release of SQL Server Reporting Services features support for Azure SQL Managed Instances, Power BI Premium datasets, enhanced accessibility, Azure Active Directory Application Proxy, and Transparent Database Encryption. It also brings an update to Microsoft Report Builder. See [What's new in SQL Server Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) for details.
+This release of SQL Server Reporting Services features support for Azure SQL Managed Instance, Power BI Premium datasets, enhanced accessibility, Microsoft Entra application proxy, and transparent data encryption (TDE). It also brings an update to Microsoft Report Builder. See [What's new in SQL Server Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) for details.
 
 ## Related content
 

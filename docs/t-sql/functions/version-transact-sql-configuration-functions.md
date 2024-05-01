@@ -57,7 +57,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 -   Operating system version  
   
- For [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [sssdsmifull-md](../../includes/sssdsmifull-md.md)], the following information is returned.  
+ For [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], the following information is returned.  
   
 -   Edition- "Microsoft SQL Azure"  
   

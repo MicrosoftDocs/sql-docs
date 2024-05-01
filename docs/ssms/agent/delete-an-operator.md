@@ -6,7 +6,7 @@ ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
   - "SQL Server Agent jobs, operators"
   - "canceling operators"
@@ -59,7 +59,7 @@ Members of the **sysadmin** fixed server role can delete operators.
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ``` sql
     -- deletes operator 'Test Operator' and reassigns all alerts and jobs
     --  sent to that operator to 'François Ajenstat'  
     USE msdb ;  

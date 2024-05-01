@@ -6,7 +6,7 @@ ms.author: maghan
 ms.date: 05/14/2021
 ms.service: sql
 ms.subservice: ssms
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
   - "sql13.ag.msxwiz.operator.f1"
   - "sql13.ag.msxwiz.login.f1"

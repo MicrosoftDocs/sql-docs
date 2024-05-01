@@ -1,6 +1,6 @@
 ---
-title: "How to: Deploy a Custom Report Item"
-description: Learn how to deploy a custom report item. You'll modify the report server configuration files and copy the component assemblies to the appropriate folders.
+title: "How to deploy a custom report item"
+description: Learn how to deploy a custom report item. Modify the report server configuration files and copy the component assemblies to the appropriate folders.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/18/2017
@@ -11,12 +11,12 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "custom report items, deploying"
 ---
-# How to: Deploy a Custom Report Item
+# How to deploy a custom report item
   To deploy a custom report item in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you must modify the report server configuration files and copy the design-time and run-time component assemblies into the appropriate application folders for both Report Designer and the report server.  
   
-### To deploy a custom report item  
+### Deploy a custom report item  
   
-1.  Edit the Rsreportdesigner.config file to configure the custom report item run-time and design-time components for use in the designer. Note that the **ReportItemName** entry must match the **CustomReportItemAttribute** attribute used in your **CustomReportItemDesigner** class. For example:  
+1.  Edit the Rsreportdesigner.config file to configure the custom report item run-time and design-time components for use in the designer. The **ReportItemName** entry must match the **CustomReportItemAttribute** attribute used in your **CustomReportItemDesigner** class. For example:  
   
     ```  
     <ReportItems>  
@@ -53,12 +53,12 @@ helpviewer_keywords:
     </CodeGroup>  
     ```  
   
-4.  Copy the custom report item run-time component DLL to the %ProgramFiles%\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies and \Program Files\Microsoft SQL Server\MSRS10_50.SQLSERVER\Reporting Services\ReportServer\bin directories.  
+4.  Copy the custom report item run-time component DLL to the ```%ProgramFiles%\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies and \Program Files\Microsoft SQL Server\MSRS10_50.SQLSERVER\Reporting Services\ReportServer\bin``` directories.  
   
-5.  Copy the custom report item design-time component DLL to the %ProgramFiles%\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies directory.  
+5.  Copy the custom report item design-time component DLL to the ```%ProgramFiles%\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies``` directory.  
   
-## See Also  
- [Reporting Services Configuration Files](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Custom Report Item Class Libraries](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
+## Related content  
+ [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)   
+ [Custom report item class libraries](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
   
   

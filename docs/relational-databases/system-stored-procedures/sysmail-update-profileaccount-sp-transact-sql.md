@@ -89,7 +89,7 @@ EXEC msdb.dbo.sysmail_update_profileaccount_sp
     @sequence_number = 3;
 ```
 
-## See also
+## Related content
 
 - [Database Mail](../database-mail/database-mail.md)
 - [Create a Database Mail Account](../database-mail/create-a-database-mail-account.md)

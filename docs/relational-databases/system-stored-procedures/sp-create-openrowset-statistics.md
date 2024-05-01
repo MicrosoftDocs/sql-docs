@@ -18,7 +18,7 @@ monikerRange: "=azure-sqldw-latest||=azuresqldb-mi-current"
 # sp_create_openrowset_statistics (Transact-SQL)
 [!INCLUDE [asdbmi-asa-svrless-poolonly](../../includes/applies-to-version/asdbmi-asa-svrless-poolonly.md)]
 
-  Creates column statistics for a column in the OPENROWSET path of Azure Synapse serverless SQL pools. For more information, see [Statistics in Synapse SQL](/azure/synapse-analytics/sql/develop-tables-statistics). This procedure is also used by [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] for column statistics in external data sources via OPENROWSET.
+  Creates column statistics for a column in the OPENROWSET path of Azure Synapse serverless SQL pools. For more information, see [Statistics in Synapse SQL](/azure/synapse-analytics/sql/develop-tables-statistics). This procedure is also used by [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)] for column statistics in external data sources via OPENROWSET.
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

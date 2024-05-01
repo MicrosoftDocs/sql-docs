@@ -7,7 +7,6 @@ ms.date: "03/07/2017"
 ms.service: sql
 ms.subservice: native-client
 ms.topic: "reference"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Read a FILESTREAM Column to File Using IBCPSession in SQL Server Native Client (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -217,7 +216,7 @@ HRESULT CISSHelper::Write( const void *pv, ULONG cb, ULONG* pcbWritten ) {
       return E_OUTOFMEMORY;  
    }  
   
-   // Copy callers memory to internal bufffer and update write position.  
+   // Copy callers memory to internal buffer and update write position.  
    memcpy( (void*)((BYTE*)m_pBuffer + m_iWritePos), pv, cb );  
    m_iWritePos += cb;  
   

@@ -5,7 +5,7 @@ description: Learn about the Azure SQL Managed Instance service high availabilit
 author: Stralle
 ms.author: strrodic
 ms.reviewer: mathoma, randolphwest
-ms.date: 11/16/2023
+ms.date: 12/05/2023
 ms.service: sql-managed-instance
 ms.subservice: high-availability
 ms.topic: conceptual
@@ -23,15 +23,17 @@ monikerRange: "= azuresql || = azuresql-mi"
 This article describes high availability in Azure SQL Managed Instance.
 
 > [!IMPORTANT]
-> Zone-redundant configuration is in public preview for the General Purpose service tier and generaly available for the Business Critical service tier.
+> Zone-redundant configuration is in public preview for the General Purpose service tier and generally available for the Business Critical service tier.
 
 ## Overview
 
-The goal of the high availability architecture in Azure SQL Managed Instance is to minimize impact on customer workloads from customer initiated [management operations](management-operations-overview.md) that result with a brief downtime, service maintenance operations, and unplanned outages. For more information regarding specific SLAs for different service tiers, review [Azure SQL Managed Instance](https://azure.microsoft.com/support/legal/sla/azure-sql-sql-managed-instance/). High-availability is the concept that protects you from impact that is scoped on the 
-- availability zone forming the datacenter (in case of multi-zone region),
-- rack where nodes powering your service are running,
-- node itself,
-- application layer.
+The goal of the high availability architecture in Azure SQL Managed Instance is to minimize impact on customer workloads from customer initiated [management operations](management-operations-overview.md) that result with a brief downtime, service maintenance operations, and unplanned outages. For more information regarding specific SLAs for different service tiers, review [Azure SQL Managed Instance](https://azure.microsoft.com/support/legal/sla/azure-sql-sql-managed-instance/). 
+
+High-availability protects you from impact on the: 
+- Availability zone that forms the datacenter (in case of multi-zone region)
+- Rack where nodes powering your service are running
+- Node itself
+- Application layer
 
 To minimize the impact in case of regional or bigger outages, you can use one of the available techniques covered with our [overview of business continuity](business-continuity-high-availability-disaster-recover-hadr-overview.md).
 
@@ -41,7 +43,7 @@ The high availability solution is designed to ensure that committed data is neve
 
 There are two different high availability architectural models based on the service tier: 
 
-- The **remote storage model** is based on a separation of compute and storage in the [General Purpose service tier](service-tiers-managed-instance-vcore.md#general-purpose) that relies on the high availability and reliability of the [remote storage](/azure/storage/common/storage-redundancy) and the high availability of compute clusters managed by [Azure Service Fabric](/azure/service-fabric/service-fabric-azure-clusters-overview). This high availability model targets budget-oriented business applications that can tolerate some performance degradation during maintenance activities. 
+- The **remote storage model** is based on a separation of compute and storage in the [General Purpose](service-tiers-managed-instance-vcore.md#general-purpose) and [Next-gen General Purpose](service-tiers-next-gen-general-purpose-use.md) service tiers that relies on the high availability and reliability of the [remote storage](/azure/storage/common/storage-redundancy) and the high availability of compute clusters managed by [Azure Service Fabric](/azure/service-fabric/service-fabric-azure-clusters-overview). This high availability model targets budget-oriented business applications that can tolerate some performance degradation during maintenance activities. 
 - The **local storage model** is based on a cluster of database engine processes that rely on a quorum of available database engine nodes in the [Business Critical service tier](service-tiers-managed-instance-vcore.md#business-critical) that have local storage. This local storage model targets mission-critical applications that have a high transaction rate and require high IO performance. The high availability architecture guarantees minimal performance impact on your workload during maintenance activities. 
 
 
@@ -61,6 +63,13 @@ The remote storage availability model includes two layers:
 - A stateful data layer with the database files (`.mdf` and `.ldf`) stored in Azure Blob Storage. Azure Blob Storage has built-in data availability and redundancy features. Locally redundant availability is based on storing your data on [locally redundant storage (LRS)](/azure/storage/common/storage-redundancy#locally-redundant-storage) which copies your data three times within a single datacenter in the primary region. It guarantees that every record in the log file or page in the data file will be preserved even if database engine process crashes. 
 
 Whenever the database engine or the operating system is upgraded, or a failure is detected, Azure Service Fabric will move the stateless database engine process to another stateless compute node with sufficient free capacity. Data in Azure Blob storage isn't affected by the move, and the data/log files are attached to the newly initialized database engine process. This process guarantees high availability, but a heavy workload might experience some performance degradation during the transition since the new database engine process starts with cold cache.
+
+### Next-gen General Purpose service tier 
+
+> [!NOTE]
+> The [Next-gen General Purpose service tier upgrade](service-tiers-next-gen-general-purpose-use.md) is currently in preview. 
+
+Next-gen General Purpose is an architectural upgrade to the existing General Purpose service tier that uses an upgraded remote storage layer which stores instance data and log files on managed disks instead of page blobs. 
 
 ### Business Critical service tier 
 
@@ -87,11 +96,11 @@ The zone-redundant version of the high availability architecture is illustrated 
 
 :::image type="content" source="../database/media/high-availability-sla/zone-redundant-business-critical-service-tier.png" alt-text="Diagram of the zone-redundant high availability architecture.":::
 
+Consider the following when using zone-redundancy:
 
-Consider the following when using zone-redundancy: 
-
+- Zone-redundancy is not available for the Next-gen General Purpose service tier. 
 - For up to date information about the regions that support zone-redundant configurations, see [Services support by region](/azure/availability-zones/az-region).
-- For zone redundant availability, choosing a [maintenance window](../database/maintenance-window.md) other than the default is currently available in [select regions](../database/maintenance-window.md?preserve-view=true&view=azuresql#azure-sql-managed-instance-region-support-for-maintenance-windows).
+- For zone redundant availability, choosing a [maintenance window](../managed-instance/maintenance-window.md) other than the default is currently available in [select regions](maintenance-window.md?preserve-view=true&view=azuresql#azure-sql-managed-instance-region-support-for-maintenance-windows).
 
 ### Supported regions for Business Critical instances
 
@@ -100,14 +109,13 @@ Zone redundancy for Business Critical SQL Managed Instance is supported in the f
 | Americas | Europe | Middle East | Africa | Asia Pacific |
 |---|---|---|---|---|
 | Brazil South | France Central | Qatar Central | South Africa North | Australia East |
-| Canada Central | Germany West Central | | | Central India |
-| Central US | Italy North | | | Japan East |
+| Canada Central | Italy North | Israel Central | | Central India |
+| Central US | Germany West Central | | | Japan East |
 | East US | Norway East | | | Korea Central |
-| South Central US | North Europe | | | East Asia |
-| West US 2 | UK South | | | |
-| West US 3 | West Europe | | | |
-| | Sweden Central | | | |
-| | Switzerland North | | | |
+| East US 2 | North Europe | | | Southeast Asia |
+| South Central US | UK South | | | East Asia |
+| West US 2 | Sweden Central | | | |
+| West US 3 | Switzerland North | | | |
 | | Poland Central | | | |
 
 ### Supported regions for General Purpose instances
@@ -117,11 +125,15 @@ Zone redundancy for Business Critical SQL Managed Instance is supported in the f
 
 | Americas | Europe | Middle East | Africa | Asia Pacific |
 |---|---|---|---|---|
-| Brazil South | France Central | Qatar Central | | Australia East |
-| East US | North Europe | | | Japan East |
-| South Central US | UK South | | | Korea Central |
-| West US 2 | West Europe | | | Southeast Asia |
-| | | | | East Asia |
+| Brazil South | France Central | Qatar Central | South Africa North | Australia East |
+| East US | Italy North | Israel Central | | Central India |
+| East US 2 | Germany West Central | | | Japan East |
+| South Central US | Norway East | | | Korea Central |
+| West US 2 | North Europe | | | Southeast Asia |
+| West US 3 | UK South | | | East Asia |
+| | Sweden Central | | | |
+| | Switzerland North | | | |
+| | Poland Central | | | |
 
 ## <a id="testing-application-fault-resiliency"></a> Test application fault resiliency
 
@@ -130,8 +142,8 @@ High availability is a fundamental part of the SQL Managed Instance platform tha
 A failover can be initiated using PowerShell, REST API, or Azure CLI:
 
 | PowerShell | REST API | Azure CLI |
- :--- | :--- | :--- |
- [Invoke-AzSqlInstanceFailover](/powershell/module/az.sql/Invoke-AzSqlInstanceFailover/) | [SQL Managed Instance - Failover](/rest/api/sql/managed%20instances%20-%20failover/failover) | [az sql mi failover](/cli/azure/sql/mi/#az-sql-mi-failover) can be used to invoke a REST API call from Azure CLI |
+| :--- | :--- | :--- |
+| [Invoke-AzSqlInstanceFailover](/powershell/module/az.sql/Invoke-AzSqlInstanceFailover/) | [SQL Managed Instance - Failover](/rest/api/sql/managed-instances/failover) | [az sql mi failover](/cli/azure/sql/mi/#az-sql-mi-failover) can be used to invoke a REST API call from Azure CLI |
 
 
 ## Conclusion

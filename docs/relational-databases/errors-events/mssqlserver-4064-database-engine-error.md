@@ -3,8 +3,8 @@ title: "MSSQLSERVER_4064"
 description: "MSSQLSERVER_4064"
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: sureshka, randolphwest
-ms.date: 03/01/2023
+ms.reviewer: sureshka, randolphwest, v-jayaramanp
+ms.date: 01/10/2024
 ms.service: sql
 ms.subservice: supportability
 ms.topic: "reference"
@@ -40,6 +40,7 @@ The default database may be unavailable at the time of connection for the follow
 
 - The default database is in suspect mode.
 - The default database no longer exists.
+- The default database name is not correct. 
 - The default database is in single-user mode, and the only available connection is already used by someone or something else.
 - The default database has been detached.
 - The default database is set to a RESTRICTED_USER state.
@@ -91,6 +92,7 @@ Use the following table to determine the appropriate action for fixing the issue
 | No database user exists for the login | [Create a database user](../security/authentication-access/create-a-database-user.md) and assign relevant permissions to access the database. |
 | Database user account denied permissions to access the database | Navigate to the user properties in the database (Expand database node > **Security** > **Users**) and check if the user is part of **db_denydatareader** role in the **Membership** page. You can also check effective permissions of a user using [sys.fn_my_permissions](../system-functions/sys-fn-my-permissions-transact-sql.md). |
 | The default database is in suspect mode. | A database can become suspect for several reasons. Possible causes include denial of access to a database resource by the operating system and the unavailability or corruption of one or more database files. You can check the state of the database using this query: `SELECT DATABASEPROPERTYEX (N'<dbname>', N'STATUS') AS N'Database Status';`. In SSMS, the status of suspect databases shows as (Recovery Pending). You may have to recover the database from its backup to resolve this situation. |
+|Incorrect database name in connection string|When you attempt to connect to a database that doesn't exist, you might see the following error message:<br/>`Cannot open database "AdventureWorks" requested by the login. The login failed.`<br/>The database management system (DBMS) might also show the `Login failed for user CONTOSO\user1` error message. For more information, see [MSSQLSERVER_18456](mssqlserver-18456-database-engine-error.md).<br/>The SQL Server error log will have the following message:<br/>"Login failed for user 'CONTOSO\User1'. Reason: Failed to open the explicitly specified database 'AdventureWorks'."<br/>To resolve this error, make sure that the database name is the same in both the error message and the error log entry. Change the connection string if it's incorrect, or grant the user the required permissions.|
 | The default database no longer exists. | If you've intentionally removed the database from the server, change the default database for the login to another existing database on the server using SSMS or an [ALTER LOGIN (Transact-SQL)](../../t-sql/statements/alter-login-transact-sql.md) statement. Optionally, you may want to check if there are other logins on the server whose default database is set to this non-existing database by using this query: `SELECT name AS Login_Name FROM sys.server_principals where default_database_name = '<removed-dbname>';`. |
 | The default database is in a single-user mode, and the only connection is being used by the administrator or someone else. | If the database is set to single-user mode for maintenance purposes, you should set it back to multi-user mode after the completion of maintenance activity, using this query: `ALTER DATABASE <dbname> SET MULTI_USER;`.<br />For more information, see [Set a database to single-user mode](../databases/set-a-database-to-single-user-mode.md).<br />**Note**: To check if a database is in single-user mode, you can use this query: `SELECT name, user_access_desc FROM sys.databases WHERE name = '<dbname>';`.<br />If you still need to restrict access to the database but want to enable connectivity for the affected logins, change their default database to a different database on the server. |
 | The default database has been detached. | Detaching a database removes it from the instance of SQL Server and is no longer accessible. To make it available for logins, attach the database using SSMS or an [sp_attach_db](../system-stored-procedures/sp-attach-db-transact-sql.md) stored procedure. For more information, see [Database Detach and Attach (SQL Server)](../databases/database-detach-and-attach-sql-server.md). |

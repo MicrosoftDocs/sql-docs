@@ -3,7 +3,7 @@ title: "jobs.job_executions (Azure Elastic Jobs) (Transact-SQL)"
 description: "The jobs.job_executions system view contains information about Azure Elastic job execution history."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 11/13/2023
+ms.date: 04/03/2024
 ms.service: sql-database
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -54,17 +54,17 @@ The following table lists the possible job execution states in `lifecycle`:
 |**Created** | The job execution was just created and is not yet in progress.|
 |**InProgress** | The job execution is currently in progress.|
 |**WaitingForRetry** | The job execution wasn't able to complete its action and is waiting to retry.|
-|**Succeeded** | The job execution has completed successfully.|
-|**SucceededWithSkipped** | The job execution has completed successfully, but some of its children were skipped.|
-|**Failed** | The job execution has failed and exhausted its retries.|
-|**TimedOut** | The job execution has timed out.|
+|**Succeeded** | The job execution completed successfully.|
+|**SucceededWithSkipped** | The job execution completed successfully, but some of its children were skipped.|
+|**Failed** | The job execution failed and exhausted its retries.|
+|**TimedOut** | The job execution timed out.|
 |**Canceled** | The job execution was canceled.|
 |**Skipped** | The job execution was skipped because another execution of the same job step was already running on the same target.|
 |**WaitingForChildJobExecutions** | The job execution is waiting for its child executions to complete.|
 
 ## Permissions
 
-Members of the *jobs_reader* role can SELECT from this view. For more information, see [Elastic jobs in Azure SQL Database (preview)](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true#elastic-job-database-permissions).
+Members of the *jobs_reader* role can SELECT from this view. For more information, see [Elastic jobs in Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true#elastic-job-database-permissions).
 
 > [!CAUTION]
 > You should not update internal catalog views in the *job database*. Manually changing these catalog views can corrupt the *job database* and cause failure. These views are for read-only querying only. You can use the stored procedures on your *job database*.
@@ -72,9 +72,6 @@ Members of the *jobs_reader* role can SELECT from this view. For more informatio
 ## Remarks
 
 All times in elastic jobs are in the UTC time zone.
-
-## Examples
-
 
 ### Monitor job execution status
 
@@ -126,6 +123,6 @@ SELECT * FROM jobs.job_executions WHERE job_execution_id = @je;
 
 ## Related content
 
-- [Elastic jobs in Azure SQL Database (preview)](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true)
-- [Create, configure, and manage elastic jobs (preview)](/azure/azure-sql/database/elastic-jobs-tutorial?view=azuresql-db&preserve-view=true)
-- [Create and manage elastic jobs by using T-SQL (preview)](/azure/azure-sql/database/elastic-jobs-tsql-create-manage?view=azuresql-db&preserve-view=true)
+- [Elastic jobs in Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true)
+- [Create, configure, and manage elastic jobs](/azure/azure-sql/database/elastic-jobs-tutorial?view=azuresql-db&preserve-view=true)
+- [Create and manage elastic jobs by using T-SQL](/azure/azure-sql/database/elastic-jobs-tsql-create-manage?view=azuresql-db&preserve-view=true)

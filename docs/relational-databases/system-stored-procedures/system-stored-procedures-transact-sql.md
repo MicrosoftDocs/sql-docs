@@ -740,11 +740,10 @@ The following stored procedures aren't documented:
     :::column-end:::
 :::row-end:::
 
-## See also
+## Related content
 
 - [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)
 - [Stored Procedures (Database Engine)](../stored-procedures/stored-procedures-database-engine.md)
 - [Running stored procedures (OLE DB)](../native-client/ole-db/stored-procedures-running.md)
 - [Running stored procedures](../native-client-odbc-stored-procedures/running-stored-procedures.md)
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
-- [Running stored procedures](../native-client-odbc-stored-procedures/running-stored-procedures.md)

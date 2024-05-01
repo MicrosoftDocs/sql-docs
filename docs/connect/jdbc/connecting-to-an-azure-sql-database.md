@@ -18,7 +18,8 @@ This article discusses issues when you use the [!INCLUDE[jdbcNoVersion](../../in
   
 - [How to: Connect to Azure SQL Using JDBC](/azure/sql-database/sql-database-connect-query-java)  
 
-- [Connect using Azure Active Directory Authentication](connecting-using-azure-active-directory-authentication.md)  
+- [Connect using authentication with Microsoft Entra ID (formerly Azure Active Directory)](connecting-using-azure-active-directory-authentication.md)  
+
   
 ## Details
 
@@ -67,7 +68,7 @@ To configure this in an Azure VM, create a startup task to add the registry keys
 </Startup>  
 ```
 
-Then add a AddKeepAlive.cmd file to your project. Set the "Copy to Output Directory" setting to Copy always. The following script is a sample AddKeepAlive.cmd file:  
+Then add an AddKeepAlive.cmd file to your project. Set the "Copy to Output Directory" setting to Copy always. The following script is a sample AddKeepAlive.cmd file:  
 
 ```bat
 if exist keepalive.txt goto done  

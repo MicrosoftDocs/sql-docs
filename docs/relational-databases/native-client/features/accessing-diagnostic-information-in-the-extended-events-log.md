@@ -7,7 +7,6 @@ ms.date: 03/14/2017
 ms.service: sql
 ms.subservice: native-client
 ms.topic: "reference"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Accessing SQL Server Native Client Diagnostic Information in the Extended Events Log
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

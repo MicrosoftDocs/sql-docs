@@ -64,7 +64,7 @@ EXECUTE dbo.sp_syscollector_enable_collector;
 GO
 ```
 
-## See also
+## Related content
 
 - [Data Collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)
 - [sp_syscollector_set_cache_window (Transact-SQL)](sp-syscollector-set-cache-window-transact-sql.md)

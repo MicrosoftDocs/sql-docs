@@ -3,7 +3,7 @@ title: "Return data from a stored procedure"
 description: Learn how to return data from a procedure to a calling program by using result sets, output parameters, and return codes.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 07/13/2023
+ms.date: 01/19/2024
 ms.service: sql
 ms.subservice: stored-procedures
 ms.topic: conceptual
@@ -76,7 +76,7 @@ AS
 GO 
 ```  
   
-The following example calls the procedure created in the first example and saves the output value returned from the called procedure in the `@SalesYTD` variable, which is local to the calling program.
+The following example calls the procedure created in the first example and saves the output parameter `@SalesYTD` returned from the called procedure into the `@SalesYTDBySalesPerson` variable.
 
 The example:
 
@@ -301,7 +301,7 @@ ELSE IF @ret_code = 4
 GO
 ```  
 
-## Next steps
+## Related content
 
 For more information about stored procedures and related concepts, see the following articles:
 

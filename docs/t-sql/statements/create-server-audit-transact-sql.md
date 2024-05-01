@@ -28,7 +28,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2016 || >=sql-server-linux
 
 Creates a server audit object using [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Audit. For more information, see [SQL Server Audit (Database Engine)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).
 
-:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="true":::
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -79,25 +79,25 @@ Determines the location of the audit target. The options are a binary file, The 
 The `URL` target isn't supported for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)].
 
 > [!IMPORTANT]  
-> In [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)], SQL Audit works at the server level. Locations can only be `URL` or `EXTERNAL_MONITOR`.
+> In [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], SQL Audit works at the server level. Locations can only be `URL` or `EXTERNAL_MONITOR`.
 
 #### FILEPATH = '*os_file_path*'
 
-The path of the audit log. The file name is generated based on the audit name and audit GUID.
+The path of the audit log. The file name is generated based on the audit name and audit GUID. If this path is invalid, the audit isn't created.
 
-`FILEPATH` target isn't supported for [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)]. You need to use `PATH` instead.
+`FILEPATH` target isn't supported for [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]. You need to use `PATH` instead.
 
 #### MAXSIZE = *max_size*
 
 Specifies the maximum size to which the audit file can grow. The *max_size* value must be an integer followed by MB, GB, TB, or `UNLIMITED`. The minimum size that you can specify for *max_size* is 2 MB and the maximum is 2,147,483,647 TB. When `UNLIMITED` is specified, the file grows until the disk is full. (`0` also indicates `UNLIMITED`.) Specifying a value lower than 2 MB raises the error `MSG_MAXSIZE_TOO_SMALL`. The default value is `UNLIMITED`.
 
-`MAXSIZE` target isn't supported for [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)].
+`MAXSIZE` target isn't supported for [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)].
 
 #### MAX_ROLLOVER_FILES = { *integer* | UNLIMITED }
 
 Specifies the maximum number of files to retain in the file system in addition to the current file. The `MAX_ROLLOVER_FILES` value must be an integer or `UNLIMITED`. The default value is `UNLIMITED`. This parameter is evaluated whenever the audit restarts (which can happen when the instance of the [!INCLUDE [ssDE](../../includes/ssde-md.md)] restarts or when the audit is turned off and then on again) or when a new file is needed because the `MAXSIZE` is reached. When `MAX_ROLLOVER_FILES` is evaluated, if the number of files exceeds the `MAX_ROLLOVER_FILES` setting, the oldest file is deleted. As a result, when the setting of `MAX_ROLLOVER_FILES` is 0 a new file is created each time the `MAX_ROLLOVER_FILES` setting is evaluated. Only one file is automatically deleted when `MAX_ROLLOVER_FILES` setting is evaluated, so when the value of `MAX_ROLLOVER_FILES` is decreased, the number of files doesn't shrink unless old files are manually deleted. The maximum number of files that can be specified is 2,147,483,647.  
 
-`MAX_ROLLOVER_FILES` isn't supported for [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)].
+`MAX_ROLLOVER_FILES` isn't supported for [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)].
 
 #### MAX_FILES = *integer*
 
@@ -109,7 +109,7 @@ Specifies the maximum number of audit files that can be created. Doesn't roll ov
 
 This option preallocates the file on the disk to the `MAXSIZE` value. It applies only if `MAXSIZE` isn't equal to `UNLIMITED`. The default value is `OFF`.
 
-`RESERVE_DISK_SPACE` target isn't supported for [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)].
+`RESERVE_DISK_SPACE` target isn't supported for [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)].
 
 #### QUEUE_DELAY = *integer*
 
@@ -139,7 +139,7 @@ To support scenarios such as database mirroring, an audit needs a specific GUID 
 
 #### OPERATOR_AUDIT
 
-**Applies to:** [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] only.
+**Applies to:** [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] only.
 
 Indicates whether auditing captures Microsoft support engineer operations when they need to access your server during a support request.
 

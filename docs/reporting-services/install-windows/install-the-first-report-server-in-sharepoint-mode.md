@@ -5,6 +5,7 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 10/05/2017
 ms.service: reporting-services
+ms.subservice: report-server-sharepoint
 ms.topic: conceptual
 ms.custom:
   - intro-installation

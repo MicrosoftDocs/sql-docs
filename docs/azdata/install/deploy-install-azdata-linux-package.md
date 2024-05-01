@@ -8,7 +8,7 @@ ms.date: 04/07/2021
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.custom: intro-installation
+ms.custom: intro-installation, linux-related-content
 ---
 
 # Install [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] with apt

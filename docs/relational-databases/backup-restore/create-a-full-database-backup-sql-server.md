@@ -3,7 +3,7 @@ title: "Create a Full Database Backup"
 description: This article shows you how to create a full database backup in SQL Server using SQL Server Management Studio, Transact-SQL, or PowerShell.
 author: MashaMSFT
 ms.author: mathoma
-ms.date: "05/12/2021"
+ms.date: "01/09/2024"
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
@@ -17,14 +17,14 @@ helpviewer_keywords:
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This topic describes how to create a full database backup in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell.
+This article describes how to create a full database backup in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell.
 
 For more information, see [SQL Server Backup and Restore with Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) and [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
 ## <a name="Restrictions"></a> Limitations and restrictions
 
 - The `BACKUP` statement isn't allowed in an explicit or implicit transaction.
-- Backups created by more recent version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot be restored in earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+- Backups created by more recent version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can't be restored in earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 For an overview of, and deeper dive into, backup concepts and tasks, see [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md) before proceeding.
 
@@ -55,7 +55,7 @@ Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the **PASSWORD
 
 1. Expand **Databases**, and either select a user database or expand **System Databases** and select a system database.
 
-1. Right-click the database that you wish to backup, point to **Tasks**, and then select **Back Up...**.
+1. Right-click the database that you wish to back up, point to **Tasks**, and then select **Back Up...**.
 
 1. In the **Back Up Database** dialog box, the database that you selected appears in the drop-down list (which you can change to any other database on the server).
 
@@ -404,7 +404,7 @@ Backup-SqlDatabase -ServerInstance $server -Database $database -BackupFile $back
 - [Restore a Database to a New Location &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)
 - [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)
 
-## See also
+## Related content
 
 - [Troubleshooting SQL Server backup and restore operations](https://support.microsoft.com/kb/224071)
 - [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)

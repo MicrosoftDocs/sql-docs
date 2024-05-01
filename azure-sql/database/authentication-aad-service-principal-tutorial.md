@@ -1,13 +1,13 @@
 ---
 title: Create Microsoft Entra users using service principals
-description: This tutorial walks you through creating a Microsoft Entra user with a Microsoft Entra applications (service principals) in Azure SQL Database
+description: This tutorial walks you through creating Microsoft Entra users with a Microsoft Entra application (service principal) in Azure SQL Database.
 author: nofield
 ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 09/27/2023
+ms.date: 02/16/2024
 ms.service: sql-database
 ms.subservice: security
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.topic: tutorial
 ---
 
@@ -15,7 +15,7 @@ ms.topic: tutorial
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This article explains how to configure your Azure SQL Database with a Microsoft Entra application that can create other Microsoft Entra database users. To support this scenario, a Microsoft Entra identity must be generated and assigned to the  [logical server in Azure](logical-servers.md).
+This article explains how to configure a service principal so it can create Microsoft Entra users in Azure SQL Database. This capability enables programmatic configuration of access management to Azure SQL resources for users and applications in your Microsoft Entra tenant.
 
 [!INCLUDE [entra-id](../includes/entra-id.md)]
 
@@ -24,21 +24,22 @@ For more information on Microsoft Entra authentication for Azure SQL, see the ar
 In this tutorial, you learn how to:
 
 > [!div class="checklist"]
-> - Assign an identity to the Azure SQL logical server
-> - Assign Directory Readers permission to the SQL logical server identity
-> - Create a service principal (a Microsoft Entra application) in Microsoft Entra ID
-> - Create a service principal user in Azure SQL Database
-> - Create a different Microsoft Entra user in SQL Database using a Microsoft Entra service principal user
+> - Assign an identity to the logical server
+> - Assign the Directory Readers role to the server identity
+> - Register an application in Microsoft Entra ID
+> - Create a database user for that application's service principal in Azure SQL Database
+> - Create a Microsoft Entra database user with the service principal
 
 ## Prerequisites
 
 - An existing [Azure SQL Database](single-database-create-quickstart.md) deployment. We assume you have a working SQL Database for this tutorial.
-- Access to an existing Microsoft Entra tenant.
-- [Az.Sql 2.9.0](https://www.powershellgallery.com/packages/Az.Sql/2.9.0) module or higher is needed when using PowerShell to set up an individual Microsoft Entra application as Microsoft Entra admin for Azure SQL. Ensure you are upgraded to the latest module.
+- Microsoft Entra `Global Administrator` or `Privileged Role Administrator` permissions in the tenant where your SQL database resides.
+- The latest version of the [Az.Sql](https://www.powershellgallery.com/packages/Az.Sql/) PowerShell module. 
+- The latest version of the [Microsoft.Graph](https://www.powershellgallery.com/packages/Microsoft.Graph) PowerShell module.
 
-## Assign an identity to the Azure SQL logical server
+## Assign an identity to the logical server
 
-1. Connect to your Microsoft Entra ID. You will need to find your Tenant ID. This can be found by going to the [Azure portal](https://portal.azure.com), and going to your **Microsoft Entra ID** resource. In the **Overview** pane, you should see your **Tenant ID**. Run the following PowerShell command:
+1. Connect to Azure, specifying the Microsoft Entra tenant that hosts your SQL database. The Tenant ID can be found on the **Overview** page for your **Microsoft Entra ID** resource in the [Azure portal](https://portal.azure.com). Copy the **Tenant ID** and then run the following PowerShell command:
 
     - Replace `<TenantId>` with your **Tenant ID**.
 
@@ -48,31 +49,20 @@ In this tutorial, you learn how to:
 
     Record the `TenantId` for future use in this tutorial.
 
-1. Generate and assign a Microsoft Entra identity to the logical server. Execute the following PowerShell command:
+1. Generate a system-assigned managed identity and assign it to the [logical server in Azure](logical-servers.md). Execute the following PowerShell command:
 
-    - Replace `<resource group>` and `<server name>` with your resources. If your server name is `myserver.database.windows.net`, replace `<server name>` with `myserver`.
+    - Replace `<ResourceGroupName>` and `<ServerName>` with your resources in the [Set-AzSqlServer](/powershell/module/az.sql/set-azsqlserver) command. If your server name is `myserver.database.windows.net`, replace `<ServerName>` with `myserver`.
 
     ```powershell
-    Set-AzSqlServer -ResourceGroupName <resource group> -ServerName <server name> -AssignIdentity
+    Set-AzSqlServer -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -AssignIdentity
     ```
-
-    For more information, see the [Set-AzSqlServer](/powershell/module/az.sql/set-azsqlserver) command.
-
-    > [!IMPORTANT]
-    > If a Microsoft Entra identity is set up for the logical server, the [**Directory Readers**](/azure/active-directory/roles/permissions-reference#directory-readers) permission must be granted to the identity. We will walk through this step in following section. **Do not** skip this step as Microsoft Entra authentication will stop working.
-    >
-    > With [Microsoft Graph](/graph/overview) support for Azure SQL, the Directory Readers role can be replaced with using lower level permissions. For more information, see [User-assigned managed identity in Microsoft Entra ID for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md).
-    > 
-    > If a system-assigned or user-assigned managed identity is used as the server or instance identity, deleting the identity will result in the server or instance inability to access Microsoft Graph. Microsoft Entra authentication and other functions will fail. To restore Microsoft Entra functionality, a new SMI or UMI must be assigned to the server with appropriate permissions.
-
-    - If you used the [New-AzSqlServer](/powershell/module/az.sql/new-azsqlserver) command with the parameter `AssignIdentity` for a new SQL server creation in the past, you'll need to execute the [Set-AzSqlServer](/powershell/module/az.sql/set-azsqlserver) command afterwards as a separate command to enable this property in the Azure fabric.
 
 1. Check the server identity was successfully assigned. Execute the following PowerShell command:
 
-    - Replace `<resource group>` and `<server name>` with your resources. If your server name is `myserver.database.windows.net`, replace `<server name>` with `myserver`.
+    - Replace `<ResourceGroupName>` and `<ServerName>` with your resources. If your server name is `myserver.database.windows.net`, replace `<ServerName>` with `myserver`.
     
     ```powershell
-    $xyz = Get-AzSqlServer  -ResourceGroupName <resource group> -ServerName <server name>
+    $xyz = Get-AzSqlServer -ResourceGroupName <ResourceGroupName> -ServerName <ServerName>
     $xyz.identity
     ```
 
@@ -80,168 +70,163 @@ In this tutorial, you learn how to:
 
 1. You can also check the identity by going to the [Azure portal](https://portal.azure.com).
 
-    - Under the **Microsoft Entra ID** resource, go to **Enterprise applications**. Type in the name of your SQL logical server. You will see that it has an **Object ID** attached to the resource.
-    
+    - In the **Microsoft Entra ID** resource, go to **Enterprise applications**. Type in the name of your logical server. The **Object ID** that appears on the resource is the ID of the primary server identity.
+
     :::image type="content" source="media/authentication-aad-service-principals-tutorial/enterprise-applications-object-id.png" alt-text="Screenshot shows where to find the Object ID for an enterprise application.":::
 
-## Assign Directory Readers permission to the SQL logical server identity
+## Add server identity to Directory Readers role
 
-To allow the Microsoft Entra assigned identity to work properly for Azure SQL, the Microsoft Entra ID `Directory Readers` permission must be granted to the server identity.
+The server identity requires permissions to query Microsoft Entra ID for administrative functions, which includes creating Microsoft Entra users and logins, and doing group expansion to apply user permissions based on their Microsoft Entra group membership. If server identity permissions to query Microsoft Entra ID are revoked, or the server identity is deleted, Microsoft Entra authentication stops working. 
 
-To grant this required permission, run the following script.
+Assign Microsoft Entra query permissions to the server identity by adding it to the [Directory Readers](/entra/identity/role-based-access-control/permissions-reference#directory-readers) role or assigning the following lower-level [Microsoft Graph](/graph/overview) permissions: 
+- [User.Read.All](/graph/permissions-reference#userreadall)
+- [GroupMember.Read.All](/graph/permissions-reference#groupmemberreadall), and 
+- [Application.Read.All](/graph/permissions-reference#applicationreadall). 
 
 > [!NOTE] 
-> This script must be executed by a Microsoft Entra ID `Global Administrator` or a `Privileged Roles Administrator`.
->
-> You can assign the `Directory Readers` role to a group in Microsoft Entra ID. The group owners can then add the managed identity as a member of this group, which would bypass the need for a `Global Administrator` or `Privileged Roles Administrator` to grant the `Directory Readers` role. For more information on this feature, see [Directory Readers role in Microsoft Entra ID for Azure SQL](authentication-aad-directory-readers-role.md).
+> This script must be executed by a Microsoft Entra ID `Global Administrator` or a `Privileged Role Administrator`.
+
+The following script grants the Microsoft Entra **Directory Readers** permission to an identity that represents the logical server for Azure SQL Database.
 
 - Replace `<TenantId>` with your `TenantId` gathered earlier.
-- Replace `<server name>` with your SQL logical server name. If your server name is `myserver.database.windows.net`, replace `<server name>` with `myserver`.
+- Replace `<ServerName>` with your logical server name. If your server name is `myserver.database.windows.net`, replace `<ServerName>` with `myserver`.
 
 ```powershell
-# This script grants Azure "Directory Readers" permission to a Service Principal representing the Azure SQL logical server
-# It can be executed only by a "Global Administrator" or "Privileged Roles Administrator" type of user.
-# To check if the "Directory Readers" permission was granted, execute this script again
+# This script grants "Directory Readers" permission to a service principal representing a logical server for Azure SQL Database
+# It can be executed only by a user who is a member of the **Global Administrator** or **Privileged Role Administrator** role.
+# To check if the "Directory Readers" role was granted, re-execute this script
 
-Import-Module AzureAD
-Connect-AzureAD -TenantId "<TenantId>"    #Enter your actual TenantId
-$AssignIdentityName = "<server name>"     #Enter Azure SQL logical server name
- 
-# Get Azure AD role "Directory Users" and create if it doesn't exist
+Import-Module Microsoft.Graph.Authentication
+$ServerIdentityName = "<ServerName>"    # Enter your logical server name
+$TenantId = "<TenantId>"                # Enter your tenant ID
+
+Connect-MgGraph -TenantId "<TenantId>" -Scopes "RoleManagement.ReadWrite.Directory,Application.Read.All"
+
+# Get Microsoft Entra "Directory Readers" role and create if it doesn't exist
 $roleName = "Directory Readers"
-$role = Get-AzureADDirectoryRole | Where-Object {$_.displayName -eq $roleName}
+$role = Get-MgDirectoryRole -Filter "DisplayName eq '$roleName'"
 if ($role -eq $null) {
     # Instantiate an instance of the role template
-    $roleTemplate = Get-AzureADDirectoryRoleTemplate | Where-Object {$_.displayName -eq $roleName}
-    Enable-AzureADDirectoryRole -RoleTemplateId $roleTemplate.ObjectId
-    $role = Get-AzureADDirectoryRole | Where-Object {$_.displayName -eq $roleName}
+    $roleTemplate = Get-MgDirectoryRoleTemplate -Filter "DisplayName eq '$roleName'"
+    New-MgDirectoryRoleTemplate -RoleTemplateId $roleTemplate.Id
+    $role = Get-MgDirectoryRole -Filter "DisplayName eq '$roleName'"
 }
- 
+
 # Get service principal for server
-$roleMember = Get-AzureADServicePrincipal -SearchString $AssignIdentityName
+$roleMember = Get-MgServicePrincipal -Filter "DisplayName eq '$ServerIdentityName'"
 $roleMember.Count
 if ($roleMember -eq $null) {
-    Write-Output "Error: No Service Principals with name '$($AssignIdentityName)', make sure that AssignIdentityName parameter was entered correctly."
+    Write-Output "Error: No service principal with name '$($ServerIdentityName)' found, make sure that ServerIdentityName parameter was entered correctly."
+    exit
+}
+if (-not ($roleMember.Count -eq 1)) {
+    Write-Output "Error: Multiple service principals with name '$($ServerIdentityName)'"
+    Write-Output $roleMember | Format-List DisplayName, Id, AppId
     exit
 }
 
-if (-not ($roleMember.Count -eq 1)) {
-    Write-Output "Error: More than one service principal with name pattern '$($AssignIdentityName)'"
-    Write-Output "Dumping selected service principals...."
-    $roleMember
-    exit
-}
- 
-# Check if service principal is already member of readers role
-$allDirReaders = Get-AzureADDirectoryRoleMember -ObjectId $role.ObjectId
-$selDirReader = $allDirReaders | where{$_.ObjectId -match $roleMember.ObjectId}
- 
-if ($selDirReader -eq $null) {
-    # Add principal to readers role
-    Write-Output "Adding service principal '$($AssignIdentityName)' to 'Directory Readers' role'..."
-    Add-AzureADDirectoryRoleMember -ObjectId $role.ObjectId -RefObjectId $roleMember.ObjectId
-    Write-Output "'$($AssignIdentityName)' service principal added to 'Directory Readers' role'..."
- 
-    #Write-Output "Dumping service principal '$($AssignIdentityName)':"
-    #$allDirReaders = Get-AzureADDirectoryRoleMember -ObjectId $role.ObjectId
-    #$allDirReaders | where{$_.ObjectId -match $roleMember.ObjectId}
+# Check if service principal is already member of Directory Readers role
+$isDirReader = Get-MgDirectoryRoleMember -DirectoryRoleId $role.Id -Filter "Id eq '$($roleMember.Id)'"
+
+if ($isDirReader -eq $null) {
+    # Add principal to Directory Readers role
+    Write-Output "Adding service principal '$($ServerIdentityName)' to 'Directory Readers' role'..."
+    $body = @{
+        "@odata.id"= "https://graph.microsoft.com/v1.0/directoryObjects/{$($roleMember.Id)}"
+    }
+    New-MgDirectoryRoleMemberByRef -DirectoryRoleId $role.Id -BodyParameter $body
+    Write-Output "'$($ServerIdentityName)' service principal added to 'Directory Readers' role'."
 } else {
-    Write-Output "Service principal '$($AssignIdentityName)' is already member of 'Directory Readers' role'."
+    Write-Output "Service principal '$($ServerIdentityName)' is already member of 'Directory Readers' role'."
 }
 ```
 
 > [!NOTE]
-> The output from this above script will indicate if the Directory Readers permission was granted to the identity. You can re-run the script if you are unsure if the permission was granted.
+> The output from this script indicates if the identity is assigned to the **Directory Readers** role. You can re-run the script if you are unsure if the permission was granted.
 
-For a similar approach on how to set the **Directory Readers** permission for SQL Managed Instance, see [Provision Microsoft Entra admin (SQL Managed Instance)](authentication-aad-configure.md#powershell).
+For a similar approach on how to assign the **Directory Readers** role for SQL Managed Instance, see [Provision Microsoft Entra admin (SQL Managed Instance)](authentication-aad-configure.md#powershell).
+
+In production environments, a common management practice is to assign the **Directory Readers** role to a role-assignable group in Microsoft Entra ID. Then, group owners can add managed identities to the group. This maintains the principle of least privilege, and bypasses the need for a **Global Administrator** or **Privileged Role Administrator** to grant the **Directory Readers** role individually to every SQL instance. For more information on this feature, see [Directory Readers role in Microsoft Entra ID for Azure SQL](authentication-aad-directory-readers-role.md).
 
 <a name='create-a-service-principal-an-azure-ad-application-in-azure-ad'></a>
 
-## Create a service principal (a Microsoft Entra application) in Microsoft Entra ID
+## Create an application in Microsoft Entra ID
 
-Register your application if you have not already done so. To register an app, you need to either be a Microsoft Entra admin or a user assigned the Microsoft Entra ID *Application Developer* role. For more information about assigning roles, see [Assign administrator and non-administrator roles to users with Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal).
+Register your applications. To register an app, you need at least the Microsoft Entra ID *Application Developer* role. For more information about assigning roles, see [Assign user roles in Microsoft Entra ID](/entra/fundamentals/users-assign-role-azure-portal).
 
-Completing an app registration generates and displays an **Application ID**.
+This tutorial uses two service principals. The first service principal, *DBOwnerApp*, is used to create other users in the database. The second service principal, *myapp*, is the application that *DBOwnerApp* creates a database user for later in this tutorial.
 
-To register your application:
+To register your applications:
 
 1. In the Azure portal, select **Microsoft Entra ID** > **App registrations** > **New registration**.
 
     :::image type="content" source="media/authentication-aad-service-principals-tutorial/new-registration.png" alt-text="Screenshot shows the Register an application page.":::
 
-    After the app registration is created, the **Application ID** value is generated and displayed.
+    After the app registration is created, the **Application (client) ID** value is generated and displayed. Record this value for future use in this tutorial.
 
-    ![App ID displayed](./media/active-directory-interactive-connect-azure-sql-db/image2.png)
+    ![Screenshot of the Azure portal that shows the App ID.](./media/active-directory-interactive-connect-azure-sql-db/image2.png)
 
-1. You'll also need to create a client secret for signing in. Follow the guide here to [upload a certificate or create a secret for signing in](/azure/active-directory/develop/howto-create-service-principal-portal#authentication-two-options).
+1. Create a client secret for the application to sign in with. Follow [upload a certificate or create a secret for signing in](/entra/identity-platform/howto-create-service-principal-portal#set-up-authentication). Record the client secret for *DBOwnerApp* for future use in this tutorial.
 
-1. Record the following from your application registration. It should be available from your **Overview** pane:
-    - **Application ID**
-    - **Tenant ID** - This should be the same as before
+For more information, review [Use the portal to create a Microsoft Entra application and service principal that can access resources](/azure/active-directory/develop/howto-create-service-principal-portal).
 
-In this tutorial, we'll be using *AppSP* as our main service principal, and *myapp* as the second service principal user that will be created in Azure SQL by *AppSP*. You'll need to create two applications, *AppSP* and *myapp*.
+## Create the service principal user
 
-For more information on how to create a Microsoft Entra application, see the article [How to: Use the portal to create a Microsoft Entra application and service principal that can access resources](/azure/active-directory/develop/howto-create-service-principal-portal).
+Add the newly created service principal, *DBOwnerApp*, as a user in SQL Database and assign permissions to it.
 
-## Create the service principal user in Azure SQL Database
-
-Once a service principal is created in Microsoft Entra ID, create the user in SQL Database. You'll need to connect to your SQL Database with a valid login with permissions to create users in the database.
+Connect to your SQL Database using a Microsoft Entra identity that has permissions to create other users.
 
 > [!IMPORTANT]
-> Only Microsoft Entra users can create other Microsoft Entra users in Azure SQL Database. Any SQL user with SQL authentication, including a server admin cannot create a Microsoft Entra user. The Microsoft Entra admin is the only user who can initially create Microsoft Entra users in SQL Database. After the Microsoft Entra admin has created other users, any Microsoft Entra user with proper permissions can create other Microsoft Entra users.
+> Only Microsoft Entra users can create other Microsoft Entra users in Azure SQL Database. No users based on SQL authentication, including the server admin, can create a Microsoft Entra user. The Microsoft Entra admin is the only user who can initially create other Microsoft Entra users in SQL Database. After the Microsoft Entra admin has created other users, any Microsoft Entra user with proper permissions can create other Microsoft Entra users.
 
-1. Create the user *AppSP* in the SQL Database using the following T-SQL command:
+1. Create the user *DBOwnerApp* in the SQL Database using the following T-SQL command:
 
     ```sql
-    CREATE USER [AppSP] FROM EXTERNAL PROVIDER
+    CREATE USER [DBOwnerApp] FROM EXTERNAL PROVIDER
     GO
     ```
 
-2. Grant `db_owner` permission to *AppSP*, which allows the user to create other Microsoft Entra users in the database.
+2. In order to create other Microsoft Entra users, at minimum, the `ALTER ANY USER` SQL permission is required. This permission is also inherited through membership in `db_owner`, and through assignment as the Microsoft Entra admin. The following examples demonstrate three different options to assign permissions to *DBOwnerApp* that allow it to create other Microsoft Entra users in the database.
 
-    ```sql
-    EXEC sp_addrolemember 'db_owner', [AppSP]
-    GO
-    ```
+   You can add *DBOwnerApp* to the `db_owner` role with [sp_addrolemember](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql):
 
-    For more information, see [sp_addrolemember](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)
+   ```sql
+   EXEC sp_addrolemember 'db_owner', [DBOwnerApp]
+   GO
+   ```
 
-    Alternatively, `ALTER ANY USER` permission can be granted instead of giving the `db_owner` role. This will allow the service principal to add other Microsoft Entra users.
+   You can assign the `ALTER ANY USER` permission to *DBOwnerApp* like the following T-SQL sample:
 
-    ```sql
-    GRANT ALTER ANY USER TO [AppSp]
-    GO
-    ```
+   ```sql
+   GRANT ALTER ANY USER TO [DBOwnerApp]
+   GO
+   ```
 
-    > [!NOTE]
-    > The above setting is not required when *AppSP* is set as a Microsoft Entra admin for the server. To set the service principal as an AD admin for the SQL logical server, you can use the Azure portal, PowerShell, or Azure CLI commands. For more information, see [Provision Microsoft Entra admin (SQL Database)](authentication-aad-configure.md?tabs=azure-powershell#powershell-for-sql-database-and-azure-synapse).
+    You can set the *DBOwnerApp* as the Microsoft Entra admin. This can be done using the Azure portal, PowerShell, or Azure CLI commands. For more information, see [Provision Microsoft Entra admin (SQL Database)](authentication-aad-configure.md?tabs=azure-powershell#powershell-for-sql-database-and-azure-synapse).
 
 <a name='create-an-azure-ad-user-in-sql-database-using-an-azure-ad-service-principal'></a>
 
-## Create a Microsoft Entra user in SQL Database using a Microsoft Entra service principal
+## Create a user with a service principal
 
-> [!IMPORTANT]
-> The service principal used to login to SQL Database must have a client secret. If it doesn't have one, follow step 2 of [Create a service principal (a Microsoft Entra application) in Microsoft Entra ID](#create-a-service-principal-an-azure-ad-application-in-azure-ad). This client secret needs to be added as an input parameter in the script below.
-
-1. Use the following script to create a Microsoft Entra service principal user *myapp* using the service principal *AppSP*.
+1. Use the following script to create a Microsoft Entra service principal user *myapp* using the service principal *DBOwnerApp*:
 
     - Replace `<TenantId>` with your `TenantId` gathered earlier.
     - Replace `<ClientId>` with your `ClientId` gathered earlier.
     - Replace `<ClientSecret>` with your client secret created earlier.
-    - Replace `<server name>` with your SQL logical server name. If your server name is `myserver.database.windows.net`, replace `<server name>` with `myserver`.
+    - Replace `<ServerName>` with your logical server name. If your server name is `myserver.database.windows.net`, replace `<ServerName>` with `myserver`.
     - Replace `<database name>` with your SQL Database name.
 
     ```powershell
-    # PowerShell script for creating a new SQL user called myapp using application AppSP with secret
-    # AppSP is part of an Azure AD admin for the Azure SQL server below
+    # PowerShell script for creating a new SQL user called myapp using application DBOwnerApp with secret
+    # DBOwnerApp is an admin for the server
     
     # Download latest  MSAL  - https://www.powershellgallery.com/packages/MSAL.PS
     Import-Module MSAL.PS
     
-    $tenantId = "<TenantId>"   # tenantID (Azure Directory ID) were AppSP resides
-    $clientId = "<ClientId>"   # AppID also ClientID for AppSP     
-    $clientSecret = "<ClientSecret>"   # Client secret for AppSP 
-    $scopes = "https://database.windows.net/.default" # The end-point
+    $tenantId = "<TenantId>"   # Microsoft Entra tenant ID where DBOwnerApp resides
+    $clientId = "<ClientId>"   # Application (client) ID recorded earlier for DBOwnerApp
+    $clientSecret = "<ClientSecret>"   # Client secret for DBOwnerApp 
+    $scopes = "https://database.windows.net/.default" # The endpoint
     
     $result = Get-MsalToken -RedirectUri $uri -ClientId $clientId -ClientSecret (ConvertTo-SecureString $clientSecret -AsPlainText -Force) -TenantId $tenantId -Scopes $scopes
     
@@ -249,8 +234,8 @@ Once a service principal is created in Microsoft Entra ID, create the user in SQ
     #Write-host "token"
     $Tok
       
-    $SQLServerName = "<server name>"    # Azure SQL logical server name 
-    $DatabaseName = "<database name>"     # Azure SQL database name
+    $SQLServerName = "<ServerName>"    # Logical server name 
+    $DatabaseName = "<database name>"   # Azure SQL database name
     
     Write-Host "Create SQL connection string"
     $conn = New-Object System.Data.SqlClient.SQLConnection 
@@ -270,13 +255,14 @@ Once a service principal is created in Microsoft Entra ID, create the user in SQ
     $conn.Close()
     ``` 
 
-    Alternatively, you can use the code sample in the blog, [Microsoft Entra service Principal authentication to SQL DB - Code Sample](https://techcommunity.microsoft.com/t5/azure-sql-database/azure-ad-service-principal-authentication-to-sql-db-code-sample/ba-p/481467). Modify the script to execute a DDL statement `CREATE USER [myapp] FROM EXTERNAL PROVIDER`. The same script can be used to create a regular Microsoft Entra user or a group in SQL Database.
-
+    Alternatively, you can use the following code: [Microsoft Entra service principal authentication to Azure SQL Database](https://techcommunity.microsoft.com/t5/azure-sql-database/azure-ad-service-principal-authentication-to-sql-db-code-sample/ba-p/481467). Modify the script to execute the DDL statement `CREATE USER [myapp] FROM EXTERNAL PROVIDER`. The same script can be used to create a Microsoft Entra user or group in your database.
     
 2. Check if the user *myapp* exists in the database by executing the following command:
 
     ```sql
-    SELECT name, type, type_desc, CAST(CAST(sid as varbinary(16)) as uniqueidentifier) as appId from sys.database_principals WHERE name = 'myapp'
+    SELECT name, type, type_desc, CAST(CAST(sid as varbinary(16)) as uniqueidentifier) as appId
+    FROM sys.database_principals
+    WHERE name = 'myapp'
     GO
     ```
 

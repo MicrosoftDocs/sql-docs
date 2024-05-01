@@ -1,6 +1,6 @@
 ---
-title: "Removing a Rendering Extension"
-description: Find out how to remove a rendering extension from Reporting Services so that it is no longer available to the report server and Report Designer.
+title: "Remove a rendering extension"
+description: Find out how to remove a rendering extension from Reporting Services so that it's no longer available to the report server and Report Designer.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/18/2017
@@ -13,15 +13,16 @@ helpviewer_keywords:
   - "removing rendering extensions"
   - "rendering extensions [Reporting Services], removing"
 ---
-# Removing a Rendering Extension
-  To remove a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] rendering extension, simply remove the **Extension** element for your rendering extension from the rsreportserver.config file, located in **%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<Instance Name>\Reporting Services\ReportServer** folder. If you made entries for a Report Designer as well as a report server, remove the **Extension** element from the [RSReportDesigner Configuration File](../../../reporting-services/report-server/rsreportdesigner-configuration-file.md) as well. After the configuration information is removed, the rendering extension is no longer available to the component.  
+# Remove a rendering extension
+  To remove a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] rendering extension, remove the **Extension** element for your rendering extension from the rsreportserver.config file, located in the ``%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<Instance Name>\Reporting Services\ReportServer`` folder. If you made entries for a Report Designer and a report server, remove the **Extension** element from the [RSReportDesigner configuration file](../../../reporting-services/report-server/rsreportdesigner-configuration-file.md) as well. After the configuration information is removed, the rendering extension is no longer available to the component.  
   
-## See Also  
- [Reporting Services Configuration Files](../../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Implementing a Rendering Extension](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
- [Rendering Extensions Overview](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)   
- [Implementing the IRenderingExtension Interface](../../../reporting-services/extensions/rendering-extension/implementing-the-irenderingextension-interface.md)   
- [Security Considerations for Extensions](../../../reporting-services/extensions/security-considerations-for-extensions.md)   
- [Deploying a Rendering Extension](../../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)  
+## Related content
+
+- [Reporting Services configuration files](../../../reporting-services/report-server/reporting-services-configuration-files.md)   
+- [Implement a rendering extension](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
+- [Rendering extensions overview](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)   
+- [Implement the IRenderingExtension interface](../../../reporting-services/extensions/rendering-extension/implementing-the-irenderingextension-interface.md)   
+- [Security considerations for extensions](../../../reporting-services/extensions/security-considerations-for-extensions.md)   
+- [Deploy a rendering extension](../../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)  
   
   

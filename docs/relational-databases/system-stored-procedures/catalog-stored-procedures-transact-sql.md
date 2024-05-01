@@ -63,6 +63,6 @@ Stored procedures for certain platforms only as specified, including Azure Synap
     :::column-end:::
 :::row-end:::
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

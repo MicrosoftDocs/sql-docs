@@ -105,7 +105,7 @@ EXEC sp_bindefault 'default2', '[t.3].c1';
 EXEC sp_unbindefault '[t.3].c1';
 ```
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
@@ -113,4 +113,3 @@ EXEC sp_unbindefault '[t.3].c1';
 - [DROP DEFAULT (Transact-SQL)](../../t-sql/statements/drop-default-transact-sql.md)
 - [sp_bindefault (Transact-SQL)](sp-bindefault-transact-sql.md)
 - [sp_helptext (Transact-SQL)](sp-helptext-transact-sql.md)
-- [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

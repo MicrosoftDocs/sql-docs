@@ -178,7 +178,7 @@ MDS also supports Active Directory password authentication and SQL Server authen
 - Active Directory password authentication
 
    ```xml
-   <add name="MDS1" connectionString="Data Source=*****.*****.database.windows.net;Initial Catalog=MasterDataServices;Integrated Security=False;Connect Timeout=60;Authentication=&quot;Active Directory Password&quot; ; UID=bob@contoso.onmicrosoft.com; PWD=MyPassWord!" />
+   <add name="MDS1" connectionString="Data Source=*****.*****.database.windows.net;Initial Catalog=MasterDataServices;Integrated Security=False;Connect Timeout=60;Authentication=&quot;Active Directory Password&quot; ; UID=bob@example.com; PWD=MyPassWord!" />
    ```
 
 - SQL Server authentication

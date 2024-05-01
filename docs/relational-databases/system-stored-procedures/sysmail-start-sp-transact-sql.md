@@ -70,7 +70,7 @@ EXECUTE dbo.sysmail_start_sp;
 GO
 ```
 
-## See also
+## Related content
 
 - [Database Mail](../database-mail/database-mail.md)
 - [Database Mail XPs Server Configuration Option](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)

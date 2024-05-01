@@ -6,7 +6,7 @@ ms.author: mikeray
 ms.date: "03/09/2017"
 ms.service: sql
 ms.subservice: database-mirroring
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
   - "TRUSTWORTHY database option"
   - "mirror database [SQL Server]"
@@ -53,7 +53,7 @@ helpviewer_keywords:
     ALTER DATABASE <database_name> SET TRUSTWORTHY ON  
     ```  
   
-     For more information, see[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+     For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
 5.  Optionally, manually failover again to return to the original principal.  
   

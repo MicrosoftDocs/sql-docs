@@ -6,9 +6,9 @@ ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
 ms.date: 11/14/2023
 ms.service: sql-database
-ms.subservice: performance
+ms.subservice: monitoring
 ms.topic: conceptual
-monikerRange: "=azuresql-db"
+monikerRange: "= azuresql || = azuresql-db"
 ---
 
 # Monitor Azure SQL Database with metrics and alerts
@@ -32,7 +32,7 @@ In Azure SQL Database portal, several commonly used metrics are charted on the *
 
 :::image type="content" source="media/monitoring-metrics-alerts/portal-overview-metrics.png" alt-text="A screenshot from the Azure portal of a metrics chart shown on the Azure SQL Database Overview page." lightbox="media/monitoring-metrics-alerts/portal-overview-metrics.png":::
 
-Under **Key metrics**, select **See all metrics** or anywhere inside the chart to open [metrics explorer](/azure/azure-monitor/essentials/analyze-metrics). In the **Metrics** page, you can view all other available metrics for the database or elastic pool resource. In metrics explorer, you can change the time range, granularity, and aggregation type for the chart, change the type of chart, expand the scope to include metrics from other Azure resources, create alert rules, etc. You can also open metrics explorer from the **Metrics** menu item in the **Monitoring** section on the left menu.
+Under **Key metrics**, select **See all metrics** or anywhere inside the chart to open [metrics explorer](/azure/azure-monitor/essentials/analyze-metrics). In the **Metrics** page, you can view all other available metrics for the database or elastic pool resource. In metrics explorer, you can change the time range, granularity, and aggregation type for the chart, change the type of chart, expand the scope to include metrics from other Azure resources, create alert rules, etc. You can also open metrics explorer by selecting **Metrics** menu item, under **Monitoring** in the resource menu.
 
 ### Use metrics to monitor databases and elastic pools
 
@@ -87,7 +87,7 @@ If an [alert rule](/azure/azure-monitor/alerts/alerts-create-new-alert-rule?tabs
 
 To learn more about Azure Monitor alerts, see [Azure Monitor alerts overview](/azure/azure-monitor/alerts/alerts-overview). To get familiar with metric alerts, review [Metric alerts](/azure/azure-monitor/alerts/alerts-types#metric-alerts), [Manage alert rules](/azure/azure-monitor/alerts/alerts-manage-alert-rules), and [Action groups](/azure/azure-monitor/alerts/action-groups).
 
-### Recommended alert rules
+## Recommended alert rules
 
 The metrics and optimal thresholds to use in alert rules vary across the wide spectrum of customer workloads in Azure SQL Database.
 
@@ -115,6 +115,7 @@ By default, metric alerts are stateful. This means that once an alert rule is tr
 ## Related content
 
 - [Azure Monitor metrics overview](/azure/azure-monitor/essentials/data-platform-metrics)
+- [Monitor Azure SQL workloads with database watcher (preview)](../database-watcher-overview.md)
 - [Analyze metrics with Azure Monitor metrics explorer](/azure/azure-monitor/essentials/analyze-metrics)
 - [Azure Monitor metrics aggregation and display explained](/azure/azure-monitor/essentials/metrics-aggregation-explained)
 - [Azure Monitor alerts overview](/azure/azure-monitor/alerts/alerts-overview)

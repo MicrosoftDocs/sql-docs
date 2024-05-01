@@ -12,7 +12,7 @@ ms.topic: how-to
 ---
 # Troubleshoot Windows Authentication for Microsoft Entra principals on Azure SQL Managed Instance
 
-This article contains troubleshooting steps for use when implementing [Windows Authentication principals](winauth-azuread-overview.md) in Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)).
+This article contains troubleshooting steps for use when implementing [Windows Authentication principals](winauth-azuread-overview.md) in Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)).
 
 [!INCLUDE [entra-id](../includes/entra-id.md)]
 

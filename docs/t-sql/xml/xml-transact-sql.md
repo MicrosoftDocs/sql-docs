@@ -26,7 +26,7 @@ It's the data type that stores XML data. You can store **xml** instances in a co
   
 ## Syntax  
   
-```sql
+```syntaxsql
 xml [ ( [ CONTENT | DOCUMENT ] xml_schema_collection ) ]
 ```  
   

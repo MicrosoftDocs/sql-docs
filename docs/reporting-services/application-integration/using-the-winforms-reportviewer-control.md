@@ -11,20 +11,20 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "ReportViewer controls"
 ---
-# Use the WinForms ReportViewer Control
-  To view reports that have been deployed to a report server or reports that exist on the local file system, you can use the WinForms ReportViewer control to render them in a Windows application.  
+# Use the WinForms ReportViewer control
+  To view reports that are deployed to a report server or reports that exist on the local file system, use the WinForms ReportViewer control to render them in a Windows application.  
   
-## To add the ReportViewer Control to a Windows application  
+## Add the ReportViewer control to a Windows application  
   
-1.  Create a new Windows application using either [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Create a new Windows application using either [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[c-sharp](../../includes/c-sharp-md.md)] or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)].  
   
      \- Or -  
   
      Open an exiting Windows application project and add a new form.  
   
-2.  Locate the ReportViewer control in the **Toolbox**. If the **Toolbox** is not visible, you can access it from the **View** menu by selecting **Toolbox**.  
+2.  Locate the ReportViewer control in the **Toolbox**. If the **Toolbox** isn't visible, you can access it from the **View** menu by selecting **Toolbox**.  
   
-     :::image type="content" source="media/windows-app-toolbox-report-viewer.png" alt-text="Screenshot of selecting ReportViewer control in the Toolbox.":::  
+     :::image type="content" source="media/windows-app-toolbox-report-viewer.png" alt-text="Screenshot of the Toolbox, highlighting ReportViewer control.":::  
   
 3.  Drag the ReportViewer control onto the design surface of the Windows Form.  
   
@@ -32,16 +32,16 @@ helpviewer_keywords:
   
  After the control is added to the form, the **ReportViewer Tasks** smart tag appears and prompts you to select a report.  
   
- If the report you wish to view has been deployed to a report server, select the **\<Server Report>** option from the **Choose Report** drop-down list. After the **\<Server Report>** option is selected, two additional properties appear: **Report Server Url** and **Report Path**. The **Report Server Url** is the address to the report server and the **Report Path** is the full path to the report to render.  
+ If the report you wish to view is deployed to a report server, select the **\<Server Report>** option from the **Choose Report** drop-down list. After the **\<Server Report>** option is selected, two more properties appear: **Report Server Url** and **Report Path**. The **Report Server Url** is the address to the report server and the **Report Path** is the full path to the report to render.  
   
- :::image type="content" source="media/windows-app-server-report-settings.png" alt-text="Screenshot of selecting server report in the ReportViewer Tasks smart tag.":::  
+ :::image type="content" source="media/windows-app-server-report-settings.png" alt-text="Screenshot of the ReportViewer Tasks smart tag, highlighting the server report.":::  
   
  If the report you wish to view a report in local mode, select either the **Design a new report** option to launch the report designer or select a report that is already part of the existing project.  
   
- :::image type="content" source="media/windows-app-local-report-settings.png" alt-text="Screenshot of selecting local report in the ReportViewer Tasks smart tag.":::  
+ :::image type="content" source="media/windows-app-local-report-settings.png" alt-text="Screenshot of the ReportViewer Tasks smart tag, highlighting the local report.":::  
   
-## Viewing Reports in Remote Processing Mode  
- The following example demonstrates how to render a report that has been deployed to a report server using the WinForms ReportViewer control. This example uses the Sales Order Detail report that is included with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample reports project.  
+## Viewing reports in remote processing mode  
+ The following example demonstrates how to render a report that is deployed to a report server using the WinForms ReportViewer control. This example uses the Sales Order Detail report that is included with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample reports project.  
  
 **C#**
 ```csharp  
@@ -134,8 +134,8 @@ Public Class Form1
 End Class  
 ```  
   
-## Viewing Reports in Local Processing Mode  
- The following example demonstrates how to render a report that is part of the Windows application and has not been deployed to a report server.  
+## View reports in local processing mode  
+ The following example demonstrates how to render a report that is part of the Windows application and isn't deployed to a report server.  
   
 ### To add the Sales Order Detail report to a Windows application  
   
@@ -147,26 +147,26 @@ End Class
   
      The download the report samples, go to [AdventureWorks Report Samples](https://go.microsoft.com/fwlink/?LinkId=404153)  
   
-4.  Select the Sales Order Detail.rdl file and click the **Add** button.  
+4.  Select the Sales Order Detail.rdl file and select the **Add** button.  
   
      The Sales Order Detail.rdl file should now be part of the project.  
   
-     :::image type="content" source="media/windows-app-sales-order-detail-report.png" alt-text="Screenshot of Sales Order Detail Report in the Solution Explorer.":::  
+     :::image type="content" source="media/windows-app-sales-order-detail-report.png" alt-text="Screenshot of the Solution Explorer, highlighting the Sales Order Detail Report.":::  
   
 5.  Right-click the Sales Order Detail.rdl file in Solution Explorer and select **Rename**. Rename the report to **Sales Order Detail.rdlc** and press ENTER.  
   
-     If Solution Explorer is not visible, you can open it from the **View** menu by selecting **Solution Explorer**.  
+     If Solution Explorer isn't visible, you can open it from the **View** menu by selecting **Solution Explorer**.  
   
     > [!NOTE]  
     >  Renaming the file extension from rdl to rdlc will allow you to edit the report using report designer for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs2005](../../includes/vsprvs2005-md.md)].  
   
-6.  After the report has been renamed, select the file and locate the Properties window. Change the **Copy to Output Directory** property to **Copy if Newer**.  
+6.  After the report is renamed, select the file and locate the Properties window. Change the **Copy to Output Directory** property to **Copy if Newer**.  
   
-     :::image type="content" source="media/windows-app-copy-to-output-setting.png" alt-text="Screenshot of configuring Copy To Output setting in the Properties window.":::  
+     :::image type="content" source="media/windows-app-copy-to-output-setting.png" alt-text="Screenshot of the Properties window, highlighting the Copy To Output setting.":::  
   
-     If the **Properties** window is not visible, you can open it from the **View** menu by selecting **Properties Window**.  
+     If the **Properties** window isn't visible, you can open it from the **View** menu by selecting **Properties Window**.  
   
- The following code example will create a dataset for the sales order data and then render the Sales Order Detail report in local mode.  
+ The following code example creates a dataset for the sales order data and then renders the Sales Order Detail report in local mode.  
 
 **C#**
 ```csharp  
@@ -495,7 +495,7 @@ Public Class Form1
 End Class  
 ```  
   
-## See Also  
- [Integrating Reporting Services Using the ReportViewer Controls](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
+## Related content  
+ [Integrating Reporting Services by using the ReportViewer controls](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
   
   

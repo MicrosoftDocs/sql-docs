@@ -57,7 +57,7 @@ This article describes how to set a user-defined database to single-user mode in
 > [!WARNING]
 > To quickly obtain exclusive access, the code sample uses the termination option `WITH ROLLBACK IMMEDIATE`. This will cause all incomplete transactions to be rolled back and any other connections to the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to be immediately disconnected.  
   
- [!code-sql[DatabaseDDL#AlterDatabase8](../../relational-databases/databases/codesnippet/tsql/set-a-database-to-single_1.sql)]  
+ :::code language="sql" source="codesnippet/tsql/set-a-database-to-single_1.sql":::
   
 ## Next steps  
  - [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  

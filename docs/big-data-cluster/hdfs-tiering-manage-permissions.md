@@ -1,20 +1,20 @@
 ---
-title: HDFS tiering permissions for SQL Server Big Data Clusters
-titleSuffix: Manage HDFS tiering permissions for SQL Server Big Data Clusters
+title: HDFS tiering permissions for SQL Server 2019 Big Data Clusters
 description: Manage security for HDFS tiering on SQL Server Big Data Clusters like permissions on other Linux-based systems.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 11/04/2019
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: big-data-cluster
-ms.topic: conceptual
+ms.custom: linux-related-content
+ms.topic: how-to
 ---
 
-# Manage HDFS permissions for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# Manage HDFS permissions for [!INCLUDE [big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
 
-[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE [SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+[!INCLUDE [big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 HDFS as a file system is similar to the Linux based file systems that use POSIX for file permissions. In addition to the traditional POSIX permissions model, HDFS also supports POSIX access control lists (ACL). For more information, see the [Apache Hadoop article about ACLs](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#ACLs_.28Access_Control_Lists.29).
 
@@ -104,7 +104,7 @@ Set the sticky bit can on directories to prevent unintentional file deletion or 
 azdata bdc hdfs chmod --path /sales/users --permission 1750
 ```
 
-## Setting ACLs on files and directories
+## <a id="setting-acls-on-files-and-directories"></a> Set ACLs on files and directories
 
 To set ACLs on files and directories in HDFS, use the [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] commands.
 
@@ -127,8 +127,7 @@ Below is an example of how to set default ACL using azdata.
 azdata bdc hdfs acl set --path '/sale' --aclspec  'user::rw-,user:tom:rwx,group::rw-,other::rw-,default:group::rw-,default:user::rw-,default:other::rw-'
 ```
 
-## Next steps
+## Related content
 
 - [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] reference](../azdata/reference/reference-azdata.md)
-
 - [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)

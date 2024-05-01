@@ -6,7 +6,7 @@ ms.author: maghan
 ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: tools-other
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "KeepExisting element"
 dev_langs:

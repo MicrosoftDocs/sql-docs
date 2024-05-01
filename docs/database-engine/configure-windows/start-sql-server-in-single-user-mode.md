@@ -1,9 +1,9 @@
 ---
-title: "Start SQL Server in Single-User Mode"
+title: "Start SQL Server in single-user mode"
 description: "Learn about single-user mode in SQL Server. See when it is useful and how to use the startup option -m to start an instance of SQL Server in this mode."
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/21/2022
+ms.date: 03/27/2024
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -11,15 +11,30 @@ helpviewer_keywords:
   - "starting SQL Server, single-user mode"
   - "single-user mode [SQL Server]"
 ---
-# Start SQL Server in single-user mode
+# Single-user mode for SQL Server
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Under certain circumstances, you might have to start an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode by using the **startup option** `-m`. For example, you might want to change server configuration options or recover a damaged `master` database or other system database. Both actions require starting an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode.
+This article provides information and steps to start your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance in single-user mode, which allows only one user to connect to the instance. 
 
-For restoring a `master` database on Linux in single-user mode, see [Restore the master database on Linux in single-user mode](../../linux/sql-server-linux-restore-master-database-in-single-user-mode.md).
+
+## Start instance in single-user mode
 
 Starting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode enables any member of the computer's local Administrators group to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as a member of the **sysadmin** fixed server role. For more information, see [Connect to SQL Server when system administrators are locked out](connect-to-sql-server-when-system-administrators-are-locked-out.md).
+
+Under certain circumstances, you might have to start an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode by using the **startup option** `-m`. For example, you might want to change server configuration options or recover a damaged `master` database or other system database. Both actions require starting an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode.
+
+The following example starts the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance in single-user mode and only allows connection through the SQL Server Management Studio Query Editor.
+
+
+```console
+net start "SQL Server (MSSQLSERVER)" /m"Microsoft SQL Server Management Studio - Query"
+```
+
+To restore a `master` database on Linux in single-user mode, see [Restore the master database on Linux in single-user mode](../../linux/sql-server-linux-restore-master-database-in-single-user-mode.md).
+
+
+## General considerations
 
 When you start an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode, note the following:
 
@@ -42,13 +57,18 @@ For example, `-m"SQLCMD"` limits connections to a single connection and that con
 > [!IMPORTANT]  
 > Don't use this option as a security feature. The client application provides the client application name, and can provide a false name as part of the connection string.
 
-The following example starts the SQL Server instance in single-user mode and only allows connection through the SQL Server Management Studio Query Editor.
 
-```console
-net start "SQL Server (MSSQLSERVER)" /m"Microsoft SQL Server Management Studio - Query"
-```
+## Always On considerations
 
-## Note for clustered installations
+There are additional considerations when using single-server mode for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances that are configured as an Always On failover cluster instance (FCI), or your databases are part of an Always On availability group (AG). 
+
+
+### Availability groups
+
+Startup of the Always On availability group and databases in the group is skipped when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started in single-user mode. If you need to troubleshoot issues with a database that requires starting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode, and the database is also part of an availability group, you must remove the database from the availability group before starting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode so the database comes online.
+
+
+### Failover cluster instances
 
 For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation in a clustered environment, when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started in single user mode, the cluster resource dll uses up the available connection thereby blocking any other connections to the server. When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is in this state, if you try to bring [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent resource online, it might fail over the SQL resource to a different node if the resource is configured to affect the group.
 
@@ -70,7 +90,7 @@ To get around the problem use the following procedure:
 
 1. Once the operation is complete, close the command prompt and bring back the SQL and other resources online through cluster administrator.
 
-## See also
+## Related content
 
 - [Restore the master database on Linux in single-user mode](../../linux/sql-server-linux-restore-master-database-in-single-user-mode.md)
 - [Start, Stop, or Pause the SQL Server Agent Service](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)

@@ -104,7 +104,7 @@ EXEC sp_fulltext_service
 GO
 ```
 
-## See also
+## Related content
 
 - [Full-Text Search](../search/full-text-search.md)
 - [FULLTEXTSERVICEPROPERTY (Transact-SQL)](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)

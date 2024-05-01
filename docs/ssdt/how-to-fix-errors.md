@@ -13,10 +13,7 @@ ms.topic: conceptual
 
 The Error List pane displays any deployment or build errors. Syntax and semantic errors caused by editing in either the Transact-SQL Editor or Table Designer also shows up in the list when you are editing database entities and its definitions. The Error List is dynamically updated as you edit scripts across different tabs. You can then follow the errors identified for further troubleshooting.  
   
-> [!WARNING]  
-> The following procedures use entities created in procedures in the [Connected Database Development](../ssdt/connected-database-development.md) and [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) sections.  
-  
-### To fix errors  
+## To fix errors
   
 1.  Right-click the **Product** table (Product.sql) in **Solution Explorer** and select **View Designer**.  
   
@@ -36,6 +33,7 @@ The Error List pane displays any deployment or build errors. Syntax and semantic
   
 7.  Notice that the warning and error disappear from the **Error List** immediately after you fix the problems.  
   
-## See Also  
+## See Also
+
 [Use Transact-SQL Editor to Edit and Execute Scripts](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md)  
   

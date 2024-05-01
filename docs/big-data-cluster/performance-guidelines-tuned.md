@@ -6,6 +6,7 @@ ms.author: wiassaf
 ms.date: 06/30/2020
 ms.service: sql
 ms.subservice: big-data-cluster
+ms.custom: linux-related-content
 ms.topic: conceptual
 ---
 

@@ -17,9 +17,6 @@ f1_keywords:
 
 When you rename or delete an object in **SQL Server Object Explorer**, SQL Server Data Tools automatically detects all its dependency objects, and will prepare an ALTER script to rename or drop the dependency as needed.  
   
-> [!WARNING]  
-> The following procedures uses entities created in previous procedures in the [Connected Database Development](../ssdt/connected-database-development.md) section.  
-  
 ### To delete a database  
   
 1.  Right-click a database in **SQL Server Object Explorer**, and select **Delete**.  

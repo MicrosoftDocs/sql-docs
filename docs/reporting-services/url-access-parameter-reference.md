@@ -17,7 +17,7 @@ helpviewer_keywords:
   You can use the following parameters as part of a URL to configure the look and feel of your [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] reports. The most common parameters are listed in this section. Parameters are case-insensitive and begin with the parameter prefix *rs:* if directed to the report server and *rc:* if directed to an HTML Viewer. You can also specify parameters that are specific to devices or rendering extensions. For more information about device-specific parameters, see [Specify device information settings in a URL](../reporting-services/specify-device-information-settings-in-a-url.md).
   
 > [!IMPORTANT]  
->  For a SharePoint mode report server it's important that the URL includes the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds context to the HTTP request that's required to ensure proper execution of the report for SharePoint mode report servers. For examples, see [Access report server items using URL access](../reporting-services/access-report-server-items-using-url-access.md).
+>  For a SharePoint mode report server it's important that the URL includes the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds context to the HTTP request that's required to ensure proper execution of the report for SharePoint mode report servers. For examples, see [Access report server items by using URL access](../reporting-services/access-report-server-items-using-url-access.md).
 > 
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
   
@@ -30,7 +30,7 @@ helpviewer_keywords:
     > [!IMPORTANT]  
     >  *rc:Toolbar*=**false** doesn't work for URL access strings that use an IP address, instead of a domain name, to target a report hosted on a SharePoint site.
   
--   **Parameters**: Shows or hides the parameters area of the toolbar. If you set this parameter to **true**, the parameters area of the toolbar is displayed. If you set this parameter to **false**, the parameters area isn't displayed and can't be displayed by the user. If you set this parameter to a value of **Collapsed**, the parameters area won't be displayed but can be toggled by the user. The default value of this parameter is **true**.  
+-   **Parameters**: Shows or hides the parameters area of the toolbar. If you set this parameter to **true**, the parameters area of the toolbar is displayed. If you set this parameter to **false**, the parameters area isn't displayed and can't be displayed by the user. If you set this parameter to a value of **Collapsed**, the parameters area aren't displayed but can be toggled by the user. The default value of this parameter is **true**.  
   
      For example, in native mode:
   
@@ -44,7 +44,7 @@ helpviewer_keywords:
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Parameters=Collapsed  
     ```  
   
--   **Zoom**: Sets the report zoom value as an integer percentage or a string constant. Standard string values include **Page Width** and **Whole Page**. This parameter is ignored by versions of Internet Explorer earlier than Internet Explorer 5.0 and all non-[!INCLUDE[msCoName](../includes/msconame-md.md)] browsers. The default value of this parameter is **100**.
+-   **Zoom**: Sets the report zoom value as an integer percentage or a string constant. Standard string values include **Page Width** and **Whole Page**. Versions of Internet Explorer earlier than Internet Explorer 5.0 and all non-[!INCLUDE[msCoName](../includes/msconame-md.md)] browsers ignore this parameter. The default value of this parameter is **100**.
   
      For example, in native mode:
   
@@ -97,7 +97,7 @@ helpviewer_keywords:
     https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
     ```  
   
--   **EndFind**: Sets the number of the last page to use in the search. For example, a value of **5** indicates that the last page to be searched is page 5 of the report. The default value is the number of the current page. Use this parameter in conjunction with the *StartFind* parameter. See the previous example.
+-   **EndFind**: Sets the number of the last page to use in the search. For example, a value of **5** indicates that the last page to be searched is page 5 of the report. The default value is the number of the current page. Use this parameter with the *StartFind* parameter. See the previous example.
   
 -   **FallbackPage**: Sets the number of the page to display if a search or a document map selection fails. The default value is the number of the current page.
   
@@ -252,7 +252,7 @@ helpviewer_keywords:
   
 -   **SessionID**: Specifies an established active report session between the client application and the report server. The value of this parameter is set to the session identifier.
   
-     You can specify the session ID as a cookie or as part of the URL. When the report server has been configured not to use session cookies, the first request without a specified session ID results in a redirection with a session ID. For more information about report server sessions, see [Identifying execution state](../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md).
+     You can specify the session ID as a cookie or as part of the URL. When the report server has been configured not to use session cookies, the first request without a specified session ID results in a redirection with a session ID. For more information about report server sessions, see [Identify execution state](../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md).
   
 -   **ClearSession**: A value of **true** directs the report server to remove a report from the report session. All report instances associated with an authenticated user are removed from the report session. (A report instance is defined as the same report run multiple times with different report parameter values.) The default value is **false**.
   
@@ -355,8 +355,9 @@ helpviewer_keywords:
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
     ```  
   
-## See also
- - [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)
- - [Export a report using URL access](../reporting-services/export-a-report-using-url-access.md)
+## Related content
+
+- [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)
+- [Export a report using URL access](../reporting-services/export-a-report-using-url-access.md)
   
   

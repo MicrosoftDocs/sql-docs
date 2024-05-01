@@ -1,10 +1,7 @@
 {
   "build": {
-
     "content": [
       {
-        "group": "gr-sql-2016-a",
-        "src": "./",
         "files": [
           "**/*.md",
           "**/*.yml",
@@ -17,14 +14,13 @@
           "README.md",
           "LICENSE",
           "LICENSE-CODE"
-        ]
+        ],
+        "src": "./",
+        "group": "gr-sql-2016-a"
       }
     ],
-
     "resource": [
       {
-        "group": "gr-sql-2016-a",
-        "src": "./",
         "files": [
           "**/*.png",
           "**/*.gif",
@@ -33,14 +29,13 @@
         ],
         "exclude": [
           "**/obj/**"
-        ]
+        ],
+        "src": "./",
+        "group": "gr-sql-2016-a"
       }
     ],
-
     "overwrite": [],
     "externalReference": [],
-    "markdownEngineName": "markdig",
-
     "globalMetadata": {
       "layout": "Conceptual",
       "uhfHeaderId": "MSDocsHeader-DocsSQL",
@@ -69,92 +64,15 @@
       "titleSuffix": "SQL Server",
       "recommendations": true
     },
-
     "fileMetadata": {
-
-      "feedback_system": {
-        "connect/**/*.md": "GitHub",
-        "odbc/**/*.md": "GitHub",
-        "machine-learning/**/*.md": "GitHub",
-        "azure-data-studio/**/*.md": "GitHub",
-        "big-data-cluster/**/*.md": "GitHub",
-        "database-engine/**/*.md": "Standard",
-        "linux/**/*.md": "GitHub",
-        "powershell/**/*.md": "GitHub",
-        "sql-server/**/*.md": "GitHub",
-        "sql-server/azure-arc/**/*.md": "Standard",
-        "ssms/**/*.md": "GitHub",
-        "tools/**/*.md": "GitHub",
-        "relational-databases/*.md": "GitHub",
-        "relational-databases/automatic-tuning/**/*.md": "GitHub",
-        "relational-databases/backup-restore/**/*.md": "GitHub",
-        "relational-databases/blob/**/*.md": "GitHub",
-        "relational-databases/clr-integration/**/*.md": "GitHub",
-        "relational-databases/clr-integration-data-access-in-process-ado-net/**/*.md": "GitHub",
-        "relational-databases/clr-integration-data-access-transactions/**/*.md": "GitHub",
-        "relational-databases/clr-integration-database-objects-types-net-framework/**/*.md": "GitHub",
-        "relational-databases/clr-integration-database-objects-user-defined-functions/**/*.md": "GitHub",
-        "relational-databases/clr-integration-database-objects-user-defined-types/**/*.md": "GitHub",
-        "relational-databases/clr-integration-security-host-protection-attributes/**/*.md": "GitHub",
-        "relational-databases/collations/**/*.md": "GitHub",
-        "relational-databases/database-mail/**/*.md": "GitHub",
-        "relational-databases/databases/**/*.md": "GitHub",
-        "relational-databases/data-collection/**/*.md": "GitHub",
-        "relational-databases/data-compression/**/*.md": "GitHub",
-        "relational-databases/data-tier-applications/**/*.md": "GitHub",
-        "relational-databases/extended-stored-procedures-programming/**/*.md": "GitHub",
-        "relational-databases/extended-stored-procedures-reference/**/*.md": "GitHub",
-        "relational-databases/graphs/**/*.md": "GitHub",
-        "relational-databases/import-export/**/*.md": "GitHub",
-        "relational-databases/indexes/**/*.md": "GitHub",
-        "relational-databases/in-memory-oltp/**/*.md": "GitHub",
-        "relational-databases/json/**/*.md": "GitHub",
-        "relational-databases/linked-servers/**/*.md": "GitHub",
-        "relational-databases/logs/**/*.md": "GitHub",
-        "relational-databases/maintenance-plans/**/*.md": "GitHub",
-        "relational-databases/manage/**/*.md": "GitHub",
-        "relational-databases/media/**/*.md": "GitHub",
-        "relational-databases/partitions/**/*.md": "GitHub",
-        "relational-databases/performance/**/*.md": "GitHub",
-        "relational-databases/performance-monitor/**/*.md": "GitHub",
-        "relational-databases/policy-based-management/**/*.md": "GitHub",
-        "relational-databases/polybase/**/*.md": "GitHub",
-        "relational-databases/replication/**/*.md": "GitHub",
-        "relational-databases/resource-governor/**/*.md": "GitHub",
-        "relational-databases/search/**/*.md": "GitHub",
-        "relational-databases/security/**/*.md": "GitHub",
-        "relational-databases/sequence-numbers/**/*.md": "GitHub",
-        "relational-databases/server-management-objects-smo/**/*.md": "GitHub",
-        "relational-databases/spatial/**/*.md": "GitHub",
-        "relational-databases/sql-trace/**/*.md": "GitHub",
-        "relational-databases/sqlxml/**/*.md": "GitHub",
-        "relational-databases/sqlxml-annotated-xsd-schemas-using/**/*.md": "GitHub",
-        "relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/**/*.md": "GitHub",
-        "relational-databases/statistics/**/*.md": "GitHub",
-        "relational-databases/stored-procedures/**/*.md": "GitHub",
-        "relational-databases/synonyms/**/*.md": "GitHub",
-        "relational-databases/tables/**/*.md": "GitHub",
-        "relational-databases/track-changes/**/*.md": "GitHub",
-        "relational-databases/triggers/**/*.md": "GitHub",
-        "relational-databases/user-defined-functions/**/*.md": "GitHub",
-        "relational-databases/views/**/*.md": "GitHub",
-        "relational-databases/wmi-provider-configuration/**/*.md": "GitHub",
-        "relational-databases/wmi-provider-configuration-classes/**/*.md": "GitHub",
-        "relational-databases/wmi-provider-server-events/**/*.md": "GitHub",
-        "relational-databases/xml/**/*.md": "GitHub"
-      },
-      "feedback_product_url": {
-        "azure-data-studio/**/*.md": "https://github.com/microsoft/azuredatastudio/issues/",
-        "big-data-cluster/**/*.md": "https://feedback.azure.com/d365community/forum/f453a4de-3425-ec11-b6e6-000d3a4f0f84"
-      },
-
+      "feedback_system": {},
+      "feedback_product_url": {},
       "manager": {
         "**/*.md": "jroth",
         "dmx/**/*.md": "kfollis",
         "mdx/**/*.md": "kfollis",
         "reporting-services/**/*.md": "kfollis"
       },
-
       "titleSuffix": {
         "machine-learning/**/*.md": "SQL Server Machine Learning Services",
         "machine-learning/index.yml": "",
@@ -198,17 +116,13 @@
         "tools/synapse-pathway/**/*.md": "Azure Synapse Pathway",
         "sql-server/azure-arc/**/*.md": "SQL Server enabled by Azure Arc"
       },
-
       "breadcrumb_path": {
         "**/*.md": "~/breadcrumb/toc.yml"
       },
-      
-      "layout":{
+      "layout": {
         "**/index.yml": "LandingPage"
       },
-      
       "monikerRange": {
-
         "ado/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016",
         "analytics-platform-system/**/*.md": ">= aps-pdw-2016",
         "azdata/**/*.md": ">= sql-server-ver15 || >= sql-server-linux-ver15",
@@ -230,6 +144,33 @@
         "odbc/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = fabric",
         "powershell/**/*.md": ">= aps-pdw-2016 || = azure-sqldw-latest || = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = fabric",
         "relational-databases/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017",
+        "relational-databases/native-client/**/*.md": "=aps-pdw-2016 || = aps-pdw-2016-au7 || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-odbc-api/*.md": "=aps-pdw-2016 || = aps-pdw-2016-au7 || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-odbc-bulk-copy-operations/*.md": "=aps-pdw-2016 || = aps-pdw-2016-au7 || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-odbc-communication/*.md": "=aps-pdw-2016 || = aps-pdw-2016-au7 || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-odbc-cursors/**/*.md": "=aps-pdw-2016 || = aps-pdw-2016-au7 || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-odbc-date-time/*.md": "=aps-pdw-2016 || = aps-pdw-2016-au7 || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-odbc-error-messages/*.md": "=aps-pdw-2016 || = aps-pdw-2016-au7 || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-odbc-extensions-bulk-copy-functions/*.md": "=aps-pdw-2016 || = aps-pdw-2016-au7 || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-odbc-how-to/**/*.md": "=aps-pdw-2016 || = aps-pdw-2016-au7 || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-odbc-queries/**/*.md": "=aps-pdw-2016 || = aps-pdw-2016-au7 || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-odbc-results/*.md": "=aps-pdw-2016 || = aps-pdw-2016-au7 || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-odbc-stored-procedures/*.md": "=aps-pdw-2016 || = aps-pdw-2016-au7 || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-odbc-table-valued-parameters/*.md": "=aps-pdw-2016 || = aps-pdw-2016-au7 || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-odbc-text-image-columns/*.md": "=aps-pdw-2016 || = aps-pdw-2016-au7 || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-ole-db-blobs/*.md": "=aps-pdw-2016 || = aps-pdw-2016-au7 || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-ole-db-commands/*.md": "=aps-pdw-2016 || = aps-pdw-2016-au7 || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-ole-db-data-source-objects/*.md": "=aps-pdw-2016 || = aps-pdw-2016-au7 || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-ole-db-data-types/*.md": "=aps-pdw-2016 || = aps-pdw-2016-au7 || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-ole-db-date-time/*.md": "=aps-pdw-2016 || = aps-pdw-2016-au7 || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-ole-db-errors/*.md": "=aps-pdw-2016 || = aps-pdw-2016-au7 || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-ole-db-how-to/**/*.md": "=aps-pdw-2016 || = aps-pdw-2016-au7 || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-ole-db-interfaces/*.md": "=aps-pdw-2016 || = aps-pdw-2016-au7 || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-ole-db-provider/*.md": "=aps-pdw-2016 || = aps-pdw-2016-au7 || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-ole-db-rowsets/*.md": "=aps-pdw-2016 || = aps-pdw-2016-au7 || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-ole-db-tables-indexes/*.md": "=aps-pdw-2016 || = aps-pdw-2016-au7 || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-ole-db-table-valued-parameters/*.md": "=aps-pdw-2016 || = aps-pdw-2016-au7 || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-ole-db-transactions/*.md": "=aps-pdw-2016 || = aps-pdw-2016-au7 || =sql-server-2016 || =sql-server-2017 || =sql-server-linux-2017 ||=sql-server-ver15 || =sql-server-linux-ver15",
         "relational-databases/system-dynamic-management-views/*.md": "= azuresqldb-current",
         "relational-databases/resource-governor/**/*.md": "=azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017",
         "relational-databases/security/**/*.md": "azuresqldb-current || azuresqldb-mi-current || azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = fabric",
@@ -247,35 +188,27 @@
         "t-sql/**/*.md": "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current",
         "xquery/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017"
       },
-      
       "zone_pivot_group_filename": {
         "machine-learning/**/*.md": "machine-learning/machine-learning-zone-pivot-groups.json"
       },
-            
       "author": {
         "azdata/**/*.md": "swells"
       },
-
       "ms.author": {
         "azdata/**/*.md": "seanw"
       },
-
       "ms.date": {
         "azdata/**/*.md": "02/09/2021"
       },
-
       "ms.topic": {
         "azdata/**/*.md": "reference"
       },
-
       "ms.service": {
-        "sql-server/azure-arc**/*.md": "sql"
+        "sql-server/azure-arc/**/*.md": "sql"
       },
-
       "ms.subservice": {
         "sql-server/azure-arc/**/*.md": "azure-arc-sql-server"
       },
-
       "ms.custom": {
         "ado/*.md": "UpdateFrequency5",
         "ado/guide/appendixes/*.md": "UpdateFrequency5",
@@ -393,24 +326,50 @@
         "tools/dta/*.md": "UpdateFrequency5",
         "tools/sql-server-profiler/*.md": "UpdateFrequency5",
         "tools/ssbdiagnose/*.md": "UpdateFrequency5"
+      },
+      "exclude_monikers": {
+        "ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md": [
+          "sql-server-ver16"
+        ],
+        "odbc/microsoft/**/*.md": [
+          "sql-server-ver16"
+        ],
+        "odbc/odbc-glossary.md": [
+          "sql-server-ver16"
+        ],
+        "relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md": [
+          "sql-server-ver16"
+        ],
+        "ssma/access/legal-notice-ssma-for-access.md": [
+          "sql-server-ver16"
+        ],
+        "ssma/db2/legal-notice-db2tosql.md": [
+          "sql-server-ver16"
+        ],
+        "ssma/mysql/legal-notice-mysqltosql.md": [
+          "sql-server-ver16"
+        ],
+        "ssma/sql-server-migration-assistant.md": [
+          "sql-server-ver16"
+        ],
+        "ssma/sybase/legal-notice-ssma-for-sybase.md": [
+          "sql-server-ver16"
+        ]
       }
     },
-
     "template": [],
-    "dest": "docs",
-
-    "groups": {
-      "gr-sql-2016-a": {
-        "moniker_range": "azuresqldb-current || azuresqldb-mi-current || azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = fabric",
-        "dest": "temp2016a"
-      }
-    },
-
-    "xref":[
+    "markdownEngineName": "markdig",
+    "xref": [
       "mref/System.Reflection.Assembly.Load.yml",
       "mref/System.Web.UI.WebControls.WebParts.IWebPartRow.yml"
     ],
-
+    "groups": {
+      "gr-sql-2016-a": {
+        "dest": "temp2016a",
+        "moniker_range": "azuresqldb-current || azuresqldb-mi-current || azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = fabric"
+      }
+    },
+    "dest": "docs",
     "rules": {
       "docs-link-absolute": {
         "exclude": [
@@ -456,8 +415,7 @@
         ]
       },
       "sensitive-language-bl": {
-        "exclude": [
-        ]
+        "exclude": []
       }
     }
   }

@@ -71,7 +71,7 @@ The name of an option, and can be one of the following values.
 
 Requires membership in the **public** role.
 
-## See also
+## Related content
 
 - [System Functions (Transact-SQL)](../system-functions/system-functions-category-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

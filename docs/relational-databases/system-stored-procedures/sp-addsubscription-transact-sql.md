@@ -306,7 +306,7 @@ Specifies if a tape backup device should be unloaded after the initialization fr
 
 #### [ @subscriptionlsn = ] *subscriptionlsn*
 
-Specifies the log sequence number (LSN) at which a subscription should start delivering changes to a node in a peer-to-peer transactional replication topology. *@subscriptionlsn* is **binary({item.DataType.MaximumLength})**, with a default of `NULL`. Used with a *@sync_type* value of `initialize from lsn` to make sure that all relevant transactions are replicated to a new node. For more information, see [Peer-to-Peer - Transactional Replication](../replication/transactional/peer-to-peer-transactional-replication.md).
+Specifies the log sequence number (LSN) at which a subscription should start delivering changes to a node in a peer-to-peer transactional replication topology. *@subscriptionlsn* is **binary(10)**, with a default of `NULL`. Used with a *@sync_type* value of `initialize from lsn` to make sure that all relevant transactions are replicated to a new node. For more information, see [Peer-to-Peer - Transactional Replication](../replication/transactional/peer-to-peer-transactional-replication.md).
 
 #### [ @subscriptionstreams = ] *subscriptionstreams*
 
@@ -362,7 +362,7 @@ Only members of the **sysadmin** fixed server role or **db_owner** fixed databas
 
 ## Examples
 
-[!code-sql[HowTo#sp_addtranpushsubscription_agent](../replication/codesnippet/tsql/sp-addsubscription-trans_1.sql)]
+:::code language="sql" source="../replication/codesnippet/tsql/sp-addsubscription-trans_1.sql":::
 
 ## Related content
 

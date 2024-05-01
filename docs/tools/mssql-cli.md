@@ -8,7 +8,7 @@ ms.date: 02/22/2018
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-ms.custom: tools|mssql-cli
+ms.custom: tools|mssql-cli, linux-related-content
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 

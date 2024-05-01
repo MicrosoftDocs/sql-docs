@@ -12,7 +12,7 @@ metadata:
   ms.topic: landing-page
   author: MashaMSFT
   ms.author: mathoma
-  ms.reviewer:
+  ms.reviewer: mathoma
   ms.date: 07/30/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -101,8 +101,8 @@ landingContent:
             url: ../database/business-continuity-high-availability-disaster-recover-hadr-overview.md
           - text: High availability
             url: ../database/high-availability-sla.md
-          - text: Auto-failover groups
-            url: auto-failover-group-sql-mi.md 
+          - text: Failover groups
+            url: failover-group-sql-mi.md 
           - text: Automated backups
             url: automated-backups-overview.md
           - text: Recover with backup 
@@ -176,13 +176,27 @@ landingContent:
           - text: Plan for Azure maintenance events
             url: ../database/planned-maintenance.md
           - text: Maintenance window
-            url: ../database/maintenance-window.md
+            url: maintenance-window.md
           - text: Resource health
             url: ../managed-instance/resource-health-to-troubleshoot-connectivity.md?view=azuresql-mi&preserve-view=true
 
       - linkListType: how-to-guide
         links:
           - text: Maintenance window
-            url: ../database/maintenance-window-configure.md
+            url: maintenance-window-configure.md
           - text: Maintenance Window Notifications
             url: ../database/advance-notifications.md
+
+  # Card 
+  - title: Monitor
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Monitoring Azure SQL Managed Instance data reference
+            url: monitoring-sql-managed-instance-azure-monitor-reference.md
+          - text: Monitor Azure SQL workloads with database watcher
+            url: ../database-watcher-overview.md
+          - text: Monitor Azure SQL Managed Instance with Azure Monitor
+            url: monitoring-sql-managed-instance-azure-monitor.md
+          - text: Monitoring Microsoft Azure SQL Managed Instance performance using dynamic management views
+            url: monitoring-with-dmvs.md

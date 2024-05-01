@@ -68,7 +68,7 @@ EXEC msdb.dbo.sysmail_delete_account_sp
     @account_name = 'AdventureWorks Administrator';
 ```
 
-## See also
+## Related content
 
 - [Database Mail](../database-mail/database-mail.md)
 - [Create a Database Mail Account](../database-mail/create-a-database-mail-account.md)

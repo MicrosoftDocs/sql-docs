@@ -137,7 +137,7 @@ Specifies if the mapping has the potential for data loss. *@dataloss* is **bit**
 
 Only members of the **sysadmin** fixed server role can execute `sp_getdefaultdatatypemapping`.
 
-## See also
+## Related content
 
 - [sp_helpdatatypemap (Transact-SQL)](sp-helpdatatypemap-transact-sql.md)
 - [sp_setdefaultdatatypemapping (Transact-SQL)](sp-setdefaultdatatypemapping-transact-sql.md)

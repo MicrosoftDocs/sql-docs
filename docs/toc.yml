@@ -1247,23 +1247,23 @@ items:
     items:
       - name: Overview
         href: relational-databases/indexes/indexes.md
-      - name: Heaps (Tables without Clustered Indexes)
+      - name: Heaps (tables without a clustered index)
         href: relational-databases/indexes/heaps-tables-without-clustered-indexes.md
-      - name: Clustered & Nonclustered Indexes
+      - name: Clustered & nonclustered indexes
         items:
         - name: Described
           href: relational-databases/indexes/clustered-and-nonclustered-indexes-described.md
         - name: Create
           items:
-          - name: Clustered Indexes
+          - name: Clustered index
             href: relational-databases/indexes/create-clustered-indexes.md
-          - name: Nonclustered Indexes
+          - name: Nonclustered index
             href: relational-databases/indexes/create-nonclustered-indexes.md
-          - name: Unique Indexes
+          - name: Unique index
             href: relational-databases/indexes/create-unique-indexes.md
-          - name: Filtered Indexes
+          - name: Filtered index
             href: relational-databases/indexes/create-filtered-indexes.md
-          - name: With Included Columns
+          - name: With included columns
             href: relational-databases/indexes/create-indexes-with-included-columns.md
         - name: Delete
           href: relational-databases/indexes/delete-an-index.md
@@ -1698,8 +1698,9 @@ items:
     - name: Create, Modify, & Drop Spatial Indexes
       href: relational-databases/spatial/create-modify-and-drop-spatial-indexes.md
   - name: Stored procedures
-    href: relational-databases/stored-procedures/stored-procedures-database-engine.md
     items:
+    - name: Overview
+      href: relational-databases/stored-procedures/stored-procedures-database-engine.md
     - name: Create
       href: relational-databases/stored-procedures/create-a-stored-procedure.md
     - name: Modify
@@ -1716,7 +1717,7 @@ items:
       href: relational-databases/stored-procedures/parameters.md
     - name: Properties
       href: relational-databases/stored-procedures/stored-procedure-properties-general-page.md
-    - name: Return Data
+    - name: Return data
       href: relational-databases/stored-procedures/return-data-from-a-stored-procedure.md
     - name: Recompile
       href: relational-databases/stored-procedures/recompile-a-stored-procedure.md
@@ -1724,16 +1725,16 @@ items:
       href: relational-databases/stored-procedures/rename-a-stored-procedure.md
     - name: View definition
       href: relational-databases/stored-procedures/view-the-definition-of-a-stored-procedure.md
-    - name: View dependence
+    - name: View dependencies
       href: relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md
-    - name: OLE Automation Objects in T-SQL
+    - name: OLE automation objects in T-SQL
       href: relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md
       items:
-      - name: OLE Automation Return Codes & Error Information
+      - name: OLE automation return codes & error information
         href: relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md
-      - name: OLE Automation Result Sets
+      - name: OLE automation result sets
         href: relational-databases/stored-procedures/ole-automation-result-sets.md
-      - name: OLE Automation Sample Script
+      - name: OLE automation sample script
         href: relational-databases/stored-procedures/ole-automation-sample-script.md
   - name: Tables
     href: relational-databases/tables/tables.md
@@ -2609,18 +2610,19 @@ items:
         href: relational-databases/json/use-openjson-with-the-default-schema-sql-server.md
       - name: Explicit Schema
         href: relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md
-    - name: Format Query Results
-      href: relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md
+    - name: Format query results
       items:
-      - name: Format nested output with PATH Mode
+      - name: Format results as JSON
+        href: relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md
+      - name: Format nested output with PATH mode
         href: relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md
-      - name: Format with AUTO Mode
+      - name: Format with AUTO mode
         href: relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md
-      - name: Add a Root Node with the ROOT Option
+      - name: Add a root node with the ROOT option
         href: relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md
-      - name: Include Null Values with the INCLUDE_NULL_VALUES Option
+      - name: Include null values with the INCLUDE_NULL_VALUES option
         href: relational-databases/json/include-null-values-in-json-include-null-values-option.md
-      - name: Remove Square Brackets WITHOUT_ARRAY_WRAPPER Option (SQL Server)
+      - name: Remove square brackets WITHOUT_ARRAY_WRAPPER option (SQL Server)
         href: relational-databases/json/remove-square-brackets-from-json-without-array-wrapper-option.md
     - name: FOR JSON
       items:
@@ -2642,14 +2644,20 @@ items:
         href: language-extensions/csharp-overview.md
       - name: What's new?
         href: language-extensions/language-extensions-whats-new.md
+      - name: Security
+        href: machine-learning/concepts/security.md
     - name: Install
       items:
       - name: Install Java Language Extension on Windows
         href: language-extensions/install/windows-java.md
+      - name: Install .NET Language Extension on Windows
+        href: language-extensions/install/windows-c-sharp.md
     - name: Tutorials
       items:
       - name: Search for string using RegEx in Java
         href: language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md
+      - name: Search for string using RegEx in C#
+        href: language-extensions/tutorials/search-for-string-using-regular-expressions-in-c-sharp.md
     - name: Concepts
       items:
       - name: Extensibility framework
@@ -2658,14 +2666,26 @@ items:
         href: language-extensions/concepts/compare-extensibility-to-clr.md
     - name: How-to guides
       items:
-      - name: Call Java from SQL Server
-        href: language-extensions/how-to/call-java-from-sql.md
-      - name: Extensibility SDK for Java
-        href: language-extensions/how-to/extensibility-sdk-java-sql-server.md
-      - name: Java to SQL data types
-        href: language-extensions/how-to/java-to-sql-data-types.md
-      - name: Create a Java jar file
-        href: language-extensions/how-to/create-a-java-jar-file-from-class-files.md
+      - name: Java
+        items:
+        - name: Call Java from SQL Server
+          href: language-extensions/how-to/call-java-from-sql.md
+        - name: Extensibility SDK for Java
+          href: language-extensions/how-to/extensibility-sdk-java-sql-server.md
+        - name: Java to SQL data types
+          href: language-extensions/how-to/java-to-sql-data-types.md
+        - name: Create a Java jar file
+          href: language-extensions/how-to/create-a-java-jar-file-from-class-files.md
+      - name: C#
+        items:
+        - name: Call C# from SQL Server
+          href: language-extensions/how-to/call-c-sharp-from-sql.md
+        - name: Extensibility SDK for C#
+          href: language-extensions/how-to/extensibility-sdk-c-sharp-sql-server.md
+        - name: C# to SQL data types
+          href: language-extensions/how-to/c-sharp-to-sql-data-types.md
+        - name: Create a .NET DLL file
+          href: language-extensions/how-to/create-a-c-sharp-library.md
     - name: Reference
       items:
       - name: Extensibility Framework API
@@ -4500,9 +4520,10 @@ items:
       href: database-engine/configure-windows/sql-server-monitor-overview.md
     - name: Buffer Pool Extension
       href: database-engine/configure-windows/buffer-pool-extension.md
-    - name: Server Configuration Options
-      href: database-engine/configure-windows/server-configuration-options-sql-server.md
+    - name: Server configuration options
       items:
+      - name: Overview
+        href: database-engine/configure-windows/server-configuration-options-sql-server.md
       - name: access check cache
         href: database-engine/configure-windows/access-check-cache-server-configuration-options.md
       - name: ad hoc distributed queries
@@ -4994,7 +5015,7 @@ items:
       items:
       - name: Configure replication
         items:
-        - name: With Azure AD authentication
+        - name: With Microsoft Entra authentication
           href: relational-databases/replication/configure-replication-with-azure-ad-authentication.md
         - name: Distribution
           href: relational-databases/replication/configure-distribution.md
@@ -5946,22 +5967,22 @@ items:
         href: relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md
       - name: Import Native & Character Format Data from Earlier Versions of SQL Server
         href: relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md
-    - name: Format Files for Importing or Exporting Data
+    - name: Format files for importing or exporting data
       href: relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md
       items:
-      - name: Non-XML Format Files
+      - name: Non-XML format files
         href: relational-databases/import-export/non-xml-format-files-sql-server.md
-      - name: XML Format Files
+      - name: XML format files
         href: relational-databases/import-export/xml-format-files-sql-server.md
-      - name: Create a Format File
+      - name: Create a format file with bcp
         href: relational-databases/import-export/create-a-format-file-sql-server.md
-      - name: Use a Format File to Bulk Import Data
+      - name: Use a format file to bulk import data
         href: relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md
-      - name: Use a Format File to Skip a Table Column
+      - name: Use a format file to skip a table column
         href: relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md
-      - name: Use a Format File to Skip a Data Field
+      - name: Use a format file to skip a data field
         href: relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md
-      - name: Use a Format File to Map Table Columns to Data-File Fields
+      - name: Use a format file to map table columns to data-file fields
         href: relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md
   - name: Stretch database
     href: sql-server/stretch-database/stretch-database.md
@@ -6008,8 +6029,6 @@ items:
       items:
       - name: Pricing >>
         href: https://azure.microsoft.com/pricing/details/sql-server-stretch-database/
-      - name: Blog >>
-        href: https://blogs.technet.microsoft.com/dataplatforminsider/tag/stretch-database/
       - name: Service updates >>
         href: https://azure.microsoft.com/updates/?product=sql-server-stretch-database
       - name: Videos >>
@@ -6755,9 +6774,16 @@ items:
         href: relational-databases/performance/intelligent-query-processing.md
       - name: Intelligent Query Processing details
         href: relational-databases/performance/intelligent-query-processing-details.md
-      - name: Query Processing feedback features
-        href: relational-databases/performance/intelligent-query-processing-feedback.md
-      - name: Parameter Sensitive Plan Optimization
+      - name: Memory grant feedback
+        displayName: Memory grant feedback
+        href: relational-databases/performance/intelligent-query-processing-memory-grant-feedback.md
+      - name: Degree of parallelism (DOP) feedback
+        displayName: DOP feedback
+        href: relational-databases/performance/intelligent-query-processing-degree-parallelism-feedback.md
+      - name: Cardinality estimation (CE) feedback
+        displayName: CE feedback
+        href: relational-databases/performance/intelligent-query-processing-cardinality-estimation-feedback.md        
+      - name: Parameter Sensitive Plan optimization
         href: relational-databases/performance/parameter-sensitive-plan-optimization.md
       - name: Performance Center
         href: relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
@@ -7086,14 +7112,16 @@ items:
     href: relational-databases/performance/subqueries.md
   - name: Data virtualization (PolyBase)
     items:
-    - name: Overview
-      items:
-      - name: What is PolyBase?
-        href: relational-databases/polybase/polybase-guide.md
+    - name: What is PolyBase?
+      href: relational-databases/polybase/polybase-guide.md
+    - name: Get started with PolyBase
+      href: relational-databases/polybase/polybase-get-started.md?view=sql-server-ver16&preserve-view=true
     - name: Concepts
       items:
       - name: Query scenarios
         href: relational-databases/polybase/polybase-queries.md
+      - name: PolyBase performance 
+        href: relational-databases/polybase/polybase-performance.md        
       - name: Pushdown computation
         href: relational-databases/polybase/polybase-pushdown-computation.md
       - name: How to tell if external pushdown occurred
@@ -7779,7 +7807,7 @@ items:
         href: relational-databases/security/authentication-access/create-an-application-role.md
       - name: Create a credential
         href: relational-databases/security/authentication-access/create-a-credential.md
-      - name: Linked servers with Azure AD authentication
+      - name: Linked servers with Microsoft Entra authentication
         href: relational-databases/security/authentication-access/azure-ad-authentication-sql-server-linked-server.md
     - name: Encryption
       items:
@@ -7931,6 +7959,8 @@ items:
       items:
       - name: Configure a ledger database
         href: relational-databases/security/ledger/ledger-how-to-configure-ledger-database.md?view=sql-server-ver16&preserve-view=true
+      - name: Configure SQL MI NSG rules to work with Azure Confidential Ledger
+        href: relational-databases/security/ledger/ledger-nsg-policies-configure.md
       - name: Create append-only ledger tables
         href: relational-databases/security/ledger/ledger-how-to-append-only-ledger-tables.md?view=sql-server-ver16&preserve-view=true
       - name: Create updatable ledger tables
@@ -7945,6 +7975,8 @@ items:
       items:
       - name: Connect using strict connection encryption
         href: relational-databases/security/networking/connect-with-strict-encryption.md
+      - name: Connect with TLS 1.3
+        href: relational-databases/security/networking/connect-with-tls-1-3.md
   - name: Concepts
     items:
     - name: Protecting SQL Server Intellectual Property
@@ -7993,7 +8025,7 @@ items:
         href: relational-databases/security/using-service-sids-to-grant-permissions-to-services-in-sql-server.md
       - name: Ownership and user-schema separation
         href: relational-databases/security/authentication-access/ownership-and-user-schema-separation.md
-      - name: Azure Active Directory authentication
+      - name: Microsoft Entra authentication
         href: relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md
     - name: Encryption
       items:
@@ -8083,11 +8115,11 @@ items:
         href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
       - name: Develop a .NET Framework application using Always Encrypted with secure enclaves
         href: relational-databases/security/tutorial-always-encrypted-enclaves-develop-net-framework-apps.md
-    - name: Azure Active Directory authentication
+    - name: Microsoft Entra authentication
       items: 
-      - name: Set up Azure AD authentication
+      - name: Set up Microsoft Entra authentication
         href: relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md
-      - name: Set Azure AD admin automation
+      - name: Set Microsoft Entra admin automation
         href: relational-databases/security/authentication-access/azure-ad-authentication-sql-server-automation-setup-tutorial.md
   - name: Reference
     items:
@@ -8222,13 +8254,14 @@ items:
         - name: "Lesson 3: Using the dta Command Prompt Utility"
           href: tools/dta/lesson-3-using-the-dta-command-prompt-utility.md
   - name: Distributed Replay
-    href: tools/distributed-replay/sql-server-distributed-replay.md
     items:
+    - name: Overview
+      href: tools/distributed-replay/sql-server-distributed-replay.md
     - name: Install
       href: tools/distributed-replay/install-distributed-replay.md
-    - name: Complete the Post-Installation Steps
+    - name: Complete the post-installation steps
       href: tools/distributed-replay/complete-the-post-installation-steps.md
-    - name: Modify the Controller & Client Services Accounts
+    - name: Modify the Controller & Client services accounts
       href: tools/distributed-replay/modify-the-controller-and-client-services-accounts.md
     - name: Configure
       href: tools/distributed-replay/configure-distributed-replay.md
@@ -8404,7 +8437,7 @@ items:
     items:
     - name: sqlcmd overview
       href: tools/sqlcmd/sqlcmd-utility.md
-    - name: Authenticate sqlcmd with Azure AD
+    - name: Authenticate sqlcmd with Microsoft Entra ID
       href: tools/sqlcmd/sqlcmd-authentication.md
     - name: Start the utility
       href: tools/sqlcmd/sqlcmd-start-utility.md
@@ -8443,7 +8476,7 @@ items:
       href: ssdt/anonymous-usage-data.md
     - name: Connect to an existing database in SSDT
       href: ssdt/connect-to-an-existing-database-in-sql-server-data-tools.md   
-    - name: Azure Active Directory support
+    - name: Microsoft Entra ID support
       href: ssdt/azure-active-directory.md
     - name: Project-Oriented Offline Database Development
       href: ssdt/project-oriented-offline-database-development.md
@@ -8452,8 +8485,6 @@ items:
         href: ssdt/import-into-a-database-project.md
       - name: Add Database Reference Dialog Box
         href: ssdt/add-database-reference-dialog-box.md
-      - name: Check for Updates Dialog Box
-        href: ssdt/check-for-updates-dialog-box.md
       - name: Database Project Settings
         href: ssdt/database-project-settings.md
       - name: "How to: Browse Objects in a SQL Server Database Project"
@@ -8486,7 +8517,6 @@ items:
         - name: Using MSDeploy with dbSqlPackage Provider
           href: ssdt/using-msdeploy-with-dbsqlpackage-provider.md
       - name: Connected Database Development
-        href: ssdt/connected-database-development.md
         items:
         - name: "How to: Connect to a Database & Browse Existing Objects"
           href: ssdt/how-to-connect-to-a-database-and-browse-existing-objects.md
@@ -8494,8 +8524,6 @@ items:
           href: ssdt/how-to-create-database-objects-using-table-designer.md
         - name: "How to: Update a Connected Database with Power Buffer"
           href: ssdt/how-to-update-a-connected-database-with-power-buffer.md
-        - name: Filter & Sort Dialog Box
-          href: ssdt/filter-and-sort-dialog-box.md
         - name: "How to: Create New Database Objects Using Queries"
           href: ssdt/how-to-create-new-database-objects-using-queries.md
         - name: "How to: Edit an Existing Table using Queries"
@@ -8609,7 +8637,7 @@ items:
         - name: Overview of Extensibility for Database Code Analysis Rules
           href: ssdt/overview-of-extensibility-for-database-code-analysis-rules.md
           items:
-          - name: Walkthrough Authoring a Custom Static Code Analysis Rule Assembly for SQL Server
+          - name: Walkthrough authoring a custom static Code Analysis rule assembly for SQL Server
             href: ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md
         - name: "How to: Install & Manage Feature Extensions"
           href: ssdt/how-to-install-and-manage-feature-extensions.md
@@ -8628,13 +8656,15 @@ items:
     - name: Download SSMS
       href: ssms/download-sql-server-management-studio-ssms.md
     - name: Release notes
-      href: ssms/release-notes-ssms.md    
+      href: ssms/release-notes-ssms.md  
     - name: Overview
       items:
       - name: SQL Server Management Studio (SSMS)
         href: ssms/sql-server-management-studio-ssms.md
     - name: Quickstarts
       items:
+      - name: Connect with SQL Server Management Studio
+        href: ssms/quickstarts/ssms-connect.md
       - name: Connect and query SQL Server
         href: ssms/quickstarts/ssms-connect-query-sql-server.md
       - name: Connect & query SQL Server on Azure VM
@@ -8814,7 +8844,7 @@ items:
             href: ssms/scripting/xml-editor-sql-server-management-studio.md
           - name: Color Coding in Query Editors
             href: ssms/scripting/color-coding-in-query-editors.md
-        - name: Code Outlining
+        - name: Code outlining
           href: ssms/scripting/code-outlining.md
         - name: Drag & Drop Text
           href: ssms/scripting/drag-and-drop-text.md
@@ -9275,14 +9305,8 @@ items:
           href: ssms/the-sql-server-management-studio-environment.md
         - name: General User Interface Elements
           href: ssms/general-user-interface-elements.md
-        - name: Arguments Dialog Box
-          href: ssms/arguments-dialog-box.md
-        - name: About Dialog Box
-          href: ssms/about-dialog-box.md
         - name: SSMS Web Browser
           href: ssms/sql-server-management-studio-web-browser.md
-        - name: External Tools Dialog Box
-          href: ssms/external-tools-dialog-box.md
         - name: Property Pages in SSMS
           href: ssms/property-pages-in-sql-server-management-studio.md
         - name: Properties Window in SSMS
@@ -9339,8 +9363,6 @@ items:
           href: ssms/menu-help/sql-server-management-studio-menu-help.md
         - name: Properties Window F1 Help (Management Studio)
           href: ssms/menu-help/properties-window-f1-help-management-studio.md
-        - name: Options Dialog Boxes F1 Help
-          href: ssms/menu-help/options-dialog-boxes-f1-help.md
         - name: Options (Environment - Help - General Page)
           href: ssms/menu-help/options-environment-help-general-page.md
         - name: Options (Environment - General Page)
@@ -9377,8 +9399,6 @@ items:
           href: ssms/menu-help/save-changes.md
         - name: Open With (New File)
           href: ssms/menu-help/open-with-new-file.md
-        - name: Windows Dialog Box (Microsoft Document Explorer Help)
-          href: ssms/menu-help/windows-dialog-box-microsoft-document-explorer-help.md
         - name: Advanced Save Options
           href: ssms/menu-help/advanced-save-options.md
         - name: Save As
@@ -9387,8 +9407,6 @@ items:
           href: ssms/menu-help/customize-toolbars-page.md
         - name: Options (Designers - Maintenance Plans Page)
           href: ssms/menu-help/options-designers-maintenance-plans-page.md
-        - name: Choose Search Folders Dialog Box (Visual Studio)
-          href: ssms/menu-help/choose-search-folders-dialog-box-visual-studio.md
         - name: Options (Environment - Help - Online Page)
           href: ssms/menu-help/options-environment-help-online-page.md
         - name: Object Explorer
@@ -9411,8 +9429,6 @@ items:
           href: ssms/object/open-and-configure-object-explorer.md
         - name: Connect to an Instance From Object Explorer
           href: ssms/object/connect-to-an-instance-from-object-explorer.md
-        - name: Name Not Found Dialog Box
-          href: ssms/object/name-not-found-dialog-box.md
         - name: Browse for Objects (Object Explorer)
           href: ssms/object/browse-for-objects-object-explorer.md
         - name: Select Object Types (Object Explorer)
@@ -9489,14 +9505,8 @@ items:
         items:
         - name: Visual Database Tools
           href: ssms/visual-db-tools/visual-database-tools.md
-        - name: Add Table Dialog Box (Query & View Designers)
-          href: ssms/visual-db-tools/add-table-dialog-box-query-and-view-designers-visual-database-tools.md
-        - name: Save Change Script Dialog Box
-          href: ssms/visual-db-tools/save-change-script-dialog-box-visual-database-tools.md
         - name: Reconcile Changes Made by Multiple Users
           href: ssms/visual-db-tools/reconcile-changes-made-by-multiple-users-visual-database-tools.md
-        - name: Validation Warnings Dialog Box
-          href: ssms/visual-db-tools/validation-warnings-dialog-box-visual-database-tools.md
         - name: Create Self-Joins Automatically
           href: ssms/visual-db-tools/create-self-joins-automatically-visual-database-tools.md
         - name: Object Already Exists
@@ -9505,10 +9515,6 @@ items:
           href: ssms/visual-db-tools/summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools.md
         - name: Join Tables Automatically
           href: ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md
-        - name: Full-Text Index Dialog Box
-          href: ssms/visual-db-tools/full-text-index-dialog-box-visual-database-tools.md
-        - name: XML Indexes Dialog Box
-          href: ssms/visual-db-tools/xml-indexes-dialog-box-visual-database-tools.md
         - name: Work with Tables in Database Diagram
           href: ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md
         - name: Reconcile a Database Diagram with a Modified Database
@@ -9521,8 +9527,6 @@ items:
           href: ssms/visual-db-tools/view-join-properties-visual-database-tools.md
         - name: Column Properties
           href: ssms/visual-db-tools/column-properties-visual-database-tools.md
-        - name: Collation Dialog Box
-          href: ssms/visual-db-tools/collation-dialog-box-visual-database-tools.md
         - name: Create Column Aliases
           href: ssms/visual-db-tools/create-column-aliases-visual-database-tools.md
         - name: Modify Queries
@@ -9543,8 +9547,6 @@ items:
           href: ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md
         - name: Modify Join Operators
           href: ssms/visual-db-tools/modify-join-operators-visual-database-tools.md
-        - name: Choose Name Dialog Box
-          href: ssms/visual-db-tools/choose-name-dialog-box-visual-database-tools.md
         - name: Remove Joins
           href: ssms/visual-db-tools/remove-joins-visual-database-tools.md
         - name: Table Properties
@@ -9559,14 +9561,10 @@ items:
           href: ssms/visual-db-tools/design-tables-visual-database-tools.md
         - name: Permissions & Visual Database Tools
           href: ssms/visual-db-tools/permissions-and-visual-database-tools-visual-database-tools.md
-        - name: Check Constraint Expression Dialog Box
-          href: ssms/visual-db-tools/check-constraint-expression-dialog-box-visual-database-tools.md
         - name: Add Related Tables to Diagrams
           href: ssms/visual-db-tools/add-related-tables-to-diagrams-visual-database-tools.md
         - name: Visual Database Tool Designers
           href: ssms/visual-db-tools/visual-database-tool-designers.md
-        - name: SQL Syntax Errors Encountered Dialog Box
-          href: ssms/visual-db-tools/sql-syntax-errors-encountered-dialog-box-visual-database-tools.md
         - name: Specify the TOP Clause in Queries
           href: ssms/visual-db-tools/specify-the-top-clause-in-queries-visual-database-tools.md
         - name: Include or Exclude Rows
@@ -9575,12 +9573,8 @@ items:
           href: ssms/visual-db-tools/stop-a-query-visual-database-tools.md
         - name: Show Column Names in the Diagram Pane
           href: ssms/visual-db-tools/show-column-names-in-the-diagram-pane-visual-database-tools.md
-        - name: Location Dialog Box
-          href: ssms/visual-db-tools/location-dialog-box-visual-database-tools.md
         - name: Create UNION Queries
           href: ssms/visual-db-tools/create-union-queries-visual-database-tools.md
-        - name: Partition Column List Dialog Box
-          href: ssms/visual-db-tools/partition-column-list-dialog-box-visual-database-tools.md
         - name: Open the Query & View Designer
           href: ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md
         - name: Combine Conditions When OR Has Precedence
@@ -9589,48 +9583,30 @@ items:
           href: ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md
         - name: Sort & Group Query Results
           href: ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md
-        - name: Check Constraint Dialog Box
-          href: ssms/visual-db-tools/check-constraint-dialog-box-visual-database-tools.md
         - name: Exclude Duplicate Rows
           href: ssms/visual-db-tools/exclude-duplicate-rows-visual-database-tools.md
         - name: Remove Columns from Query Results
           href: ssms/visual-db-tools/remove-columns-from-query-results-visual-database-tools.md
-        - name: Full-Text Index Columns Dialog Box
-          href: ssms/visual-db-tools/full-text-index-columns-dialog-box-visual-database-tools.md
         - name: Discard Changes Made to Diagrams
           href: ssms/visual-db-tools/discard-changes-made-to-diagrams-visual-database-tools.md
-        - name: SQL Comment Dialog Box
-          href: ssms/visual-db-tools/sql-comment-dialog-box-visual-database-tools.md
         - name: Rename Queries
           href: ssms/visual-db-tools/rename-queries-visual-database-tools.md
         - name: Delete Rows in the Results Pane
           href: ssms/visual-db-tools/delete-rows-in-the-results-pane-visual-database-tools.md
-        - name: Column List Dialog Box
-          href: ssms/visual-db-tools/column-list-dialog-box-visual-database-tools.md
-        - name: Indexes - Keys Dialog Box
-          href: ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md
         - name: Join Tables Manually
           href: ssms/visual-db-tools/join-tables-manually-visual-database-tools.md
         - name: Open Database Diagram Designer
           href: ssms/visual-db-tools/open-database-diagram-designer-visual-database-tools.md
         - name: Set Up Database Diagram Designer
           href: ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md
-        - name: Database Changes Detected Dialog Box
-          href: ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md
         - name: Create Self-Joins Manually
           href: ssms/visual-db-tools/create-self-joins-manually-visual-database-tools.md
-        - name: Query Definitions Differ Dialog Box
-          href: ssms/visual-db-tools/query-definitions-differ-dialog-box-visual-database-tools.md
         - name: Remove Tables from Queries
           href: ssms/visual-db-tools/remove-tables-from-queries-visual-database-tools.md
         - name: Query with Joins
           href: ssms/visual-db-tools/query-with-joins-visual-database-tools.md
         - name: Create Queries using Something Besides a Table
           href: ssms/visual-db-tools/create-queries-using-something-besides-a-table-visual-database-tools.md
-        - name: Tables & Columns Dialog Box
-          href: ssms/visual-db-tools/tables-and-columns-dialog-box-visual-database-tools.md
-        - name: Color Dialog Box
-          href: ssms/visual-db-tools/color-dialog-box-visual-database-tools.md
         - name: Perform Basic Operations with Queries
           href: ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md
         - name: Create Insert Results Queries
@@ -9639,24 +9615,18 @@ items:
           href: ssms/visual-db-tools/save-selected-tables-on-a-diagram-visual-database-tools.md
         - name: Show Diagram Properties
           href: ssms/visual-db-tools/show-diagram-properties-visual-database-tools.md
-        - name: Index Columns Dialog Box
-          href: ssms/visual-db-tools/index-columns-dialog-box-visual-database-tools.md
         - name: Create a New Database Diagram
           href: ssms/visual-db-tools/create-a-new-database-diagram-visual-database-tools.md
         - name: Add Columns to Queries
           href: ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md
         - name: Copy an Image of a Database Diagram to the Clipboard
           href: ssms/visual-db-tools/copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md
-        - name: Save (Not Permitted) Dialog Box
-          href: ssms/visual-db-tools/save-not-permitted-dialog-box.md
         - name: Discard Changes Made to Queries
           href: ssms/visual-db-tools/discard-changes-made-to-queries-visual-database-tools.md
         - name: Visual Database Tools F1 Help
           href: ssms/visual-db-tools/visual-database-tools-f1-help.md
         - name: Sort Rows
           href: ssms/visual-db-tools/sort-rows-visual-database-tools.md
-        - name: Go To Line Dialog Box
-          href: ssms/visual-db-tools/go-to-line-dialog-box.md
         - name: Types of Queries
           href: ssms/visual-db-tools/types-of-queries-visual-database-tools.md
         - name: Reorder Output Columns
@@ -9667,8 +9637,6 @@ items:
           href: ssms/visual-db-tools/collapse-groups-of-rows-visual-database-tools.md
         - name: Supported Query Types
           href: ssms/visual-db-tools/supported-query-types-visual-database-tools.md
-        - name: Data Type Change Required Dialog Box
-          href: ssms/visual-db-tools/data-type-change-required-dialog-box-visual-database-tools.md
         - name: Remove Columns from Queries
           href: ssms/visual-db-tools/remove-columns-from-queries-visual-database-tools.md
         - name: Open Queries
@@ -9691,16 +9659,10 @@ items:
           href: ssms/visual-db-tools/display-query-and-view-designer-panes-visual-database-tools.md
         - name: Create Queries with Unnamed Parameters
           href: ssms/visual-db-tools/create-queries-with-unnamed-parameters-visual-database-tools.md
-        - name: Make Table Dialog Box
-          href: ssms/visual-db-tools/make-table-dialog-box-visual-database-tools.md
         - name: Work with Diagram Layout
           href: ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md
         - name: Add New Rows in the Results Pane
           href: ssms/visual-db-tools/add-new-rows-in-the-results-pane-visual-database-tools.md
-        - name: Choose Target Table for Insert Values Dialog Box
-          href: ssms/visual-db-tools/choose-target-table-for-insert-values-dialog-box-visual-database-tools.md
-        - name: Delete Table Dialog Box
-          href: ssms/visual-db-tools/delete-table-dialog-box-visual-database-tools.md
         - name: Join Tables on Multiple Columns
           href: ssms/visual-db-tools/join-tables-on-multiple-columns-visual-database-tools.md
         - name: Add Tables to Diagrams
@@ -9709,16 +9671,12 @@ items:
           href: ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md
         - name: Sort Multiple Columns in Queries
           href: ssms/visual-db-tools/sort-multiple-columns-in-queries-visual-database-tools.md
-        - name: Choose Target Table for Insert Results Dialog Box
-          href: ssms/visual-db-tools/choose-target-table-for-insert-results-dialog-box-visual-database-tools.md
         - name: Navigate in Database Diagram Designer
           href: ssms/visual-db-tools/navigate-in-database-diagram-designer-visual-database-tools.md
         - name: Work with Data in the Results Pane
           href: ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md
         - name: Clear Query Results
           href: ssms/visual-db-tools/clear-query-results-visual-database-tools.md
-        - name: Spatial Indexes Dialog Box
-          href: ssms/visual-db-tools/spatial-indexes-dialog-box-visual-database-tools.md
         - name: Use the Query & View Designer with International Data
           href: ssms/visual-db-tools/use-the-query-and-view-designer-with-international-data-visual-database-tools.md
         - name: Show Query Properties
@@ -9729,8 +9687,6 @@ items:
           href: ssms/visual-db-tools/create-table-aliases-visual-database-tools.md
         - name: Parameter Queries
           href: ssms/visual-db-tools/parameter-queries-visual-database-tools.md
-        - name: Column Selection Dialog Box
-          href: ssms/visual-db-tools/column-selection-dialog-box-visual-database-tools.md
         - name: Copy Queries
           href: ssms/visual-db-tools/copy-queries-visual-database-tools.md
         - name: Sort with ORDER BY
@@ -9739,12 +9695,8 @@ items:
           href: ssms/visual-db-tools/combine-conditions-when-and-has-precedence-visual-database-tools.md
         - name: Create Make Table Queries
           href: ssms/visual-db-tools/create-make-table-queries-visual-database-tools.md
-        - name: Open File Dialog Box
-          href: ssms/visual-db-tools/open-file-dialog-box.md
         - name: Rules for Entering Search Values
           href: ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md
-        - name: Add Table Dialog Box (Database Designer)
-          href: ssms/visual-db-tools/add-table-dialog-box-database-designer-visual-database-tools.md
         - name: Diagram Pane
           href: ssms/visual-db-tools/diagram-pane-visual-database-tools.md
         - name: Create Subqueries
@@ -9753,8 +9705,6 @@ items:
           href: ssms/visual-db-tools/summarize-or-aggregate-values-using-custom-expressions-visual-database-tools.md
         - name: Multiuser Environments
           href: ssms/visual-db-tools/multiuser-environments-visual-database-tools.md
-        - name: Query Parameters Dialog Box
-          href: ssms/visual-db-tools/query-parameters-dialog-box-visual-database-tools.md
         - name: Customize the Amount of Information Displayed in Diagrams
           href: ssms/visual-db-tools/customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md
         - name: Delete a Database Diagram
@@ -9763,8 +9713,6 @@ items:
           href: ssms/visual-db-tools/query-with-parameters-visual-database-tools.md
         - name: Work with Database Diagrams
           href: ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md
-        - name: Save Dialog Box
-          href: ssms/visual-db-tools/save-dialog-box-visual-database-tools.md
         - name: Create Insert Values Queries
           href: ssms/visual-db-tools/create-insert-values-queries-visual-database-tools.md
         - name: Specify Multiple Search Conditions for One Column
@@ -9789,8 +9737,6 @@ items:
           href: ssms/visual-db-tools/how-the-query-and-view-designer-represents-joins-visual-database-tools.md
         - name: Design Queries & Views How-to Topics
           href: ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md
-        - name: Description Property Dialog Box
-          href: ssms/visual-db-tools/description-property-dialog-box-visual-database-tools.md
         - name: Issues of Database Evolution
           href: ssms/visual-db-tools/issues-of-database-evolution-visual-database-tools.md
         - name: Use HAVING & WHERE Clauses in the Same Query
@@ -9801,20 +9747,14 @@ items:
           href: ssms/visual-db-tools/work-with-columns-in-aggregate-queries-visual-database-tools.md
         - name: Select Rows That Do Not Match a Value
           href: ssms/visual-db-tools/select-rows-that-do-not-match-a-value-visual-database-tools.md
-        - name: Post-Save Notifications Dialog Box
-          href: ssms/visual-db-tools/post-save-notifications-dialog-box-visual-database-tools.md
         - name: Save Queries
           href: ssms/visual-db-tools/save-queries-visual-database-tools.md
         - name: Specify Search Conditions
           href: ssms/visual-db-tools/specify-search-conditions-visual-database-tools.md
         - name: Create Outer Joins
           href: ssms/visual-db-tools/create-outer-joins-visual-database-tools.md
-        - name: Print Dialog Box
-          href: ssms/visual-db-tools/print-dialog-box.md
         - name: Create Update Queries
           href: ssms/visual-db-tools/create-update-queries-visual-database-tools.md
-        - name: Update Table Dialog Box
-          href: ssms/visual-db-tools/update-table-dialog-box-visual-database-tools.md
         - name: Copy Tables from One Database Diagrams to Another
           href: ssms/visual-db-tools/copy-tables-from-one-database-diagrams-to-another-visual-database-tools.md
         - name: Change the Font Color, Size, & Style in Diagrams
@@ -9829,8 +9769,6 @@ items:
           href: ssms/visual-db-tools/add-text-annotations-to-diagrams-visual-database-tools.md
         - name: Create Delete Queries
           href: ssms/visual-db-tools/create-delete-queries-visual-database-tools.md
-        - name: Join Dialog Box
-          href: ssms/visual-db-tools/join-dialog-box-visual-database-tools.md
         - name: Delete Queries
           href: ssms/visual-db-tools/delete-queries-visual-database-tools.md
         - name: Query Properties
@@ -9841,8 +9779,6 @@ items:
           href: ssms/visual-db-tools/specify-multiple-search-conditions-for-multiple-columns-visual-database-tools.md
         - name: Add Derived Tables to Queries
           href: ssms/visual-db-tools/add-derived-tables-to-queries-visual-database-tools.md
-        - name: Page Setup Dialog Box
-          href: ssms/visual-db-tools/page-setup-dialog-box.md
         - name: SQL Editor
           href: ssms/visual-db-tools/sql-editor-visual-database-tools.md
         - name: Print Query Results
@@ -9864,6 +9800,10 @@ items:
       href: tools/sqlpackage/sqlpackage-download.md
     - name: Release notes
       href: tools/sqlpackage/release-notes-sqlpackage.md
+    - name: CLI reference
+      href: tools/sqlpackage/cli-reference.md
+    - name: SqlPackage in development pipelines
+      href: tools/sqlpackage/sqlpackage-pipelines.md
     - name: SqlPackage Actions
       items:
       - name: SqlPackage Extract
@@ -9878,12 +9818,12 @@ items:
         href: tools/sqlpackage/sqlpackage-deploy-drift-report.md
       - name: SqlPackage Script
         href: tools/sqlpackage/sqlpackage-script.md
-    - name: SqlPackage in development pipelines
-      href: tools/sqlpackage/sqlpackage-pipelines.md
-    - name: SqlPackage with data in Parquet files
-      href: tools/sqlpackage/sqlpackage-with-data-in-parquet-files.md
-    - name: SqlPackage for Azure Synapse Analytics
-      href: tools/sqlpackage/sqlpackage-for-azure-synapse-analytics.md
+    - name: Database portability
+      items:
+      - name: SqlPackage with data in Parquet files
+        href: tools/sqlpackage/sqlpackage-with-data-in-parquet-files.md
+      - name: SqlPackage for Azure Synapse Analytics
+        href: tools/sqlpackage/sqlpackage-for-azure-synapse-analytics.md
     - name: Troubleshooting SqlPackage
       href: tools/sqlpackage/troubleshooting-issues-and-performance-with-sqlpackage.md
   - name: SQL Server Profiler
@@ -10005,8 +9945,6 @@ items:
         href: tools/sql-server-profiler/replay-to-a-cursor-sql-server-profiler.md
       - name: Replay a T-SQL Script
         href: tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md
-      - name: SQL Server Profiler dialog boxes
-        href: tools/sql-server-profiler/sql-server-profiler-f1-help.md
   - name: Visual Studio native helpers
     items:
     - name: SqlToolsVSNativeHelpers
@@ -10102,6 +10040,8 @@ items:
         href: linux/sql-server-linux-editions-and-components-2017.md
     - name: FAQ
       href: linux/sql-server-linux-faq.yml
+    - name: Known issues
+      href: linux/sql-server-linux-known-issues.md
   - name: Quickstarts
     items:
     - name: Install and connect (Red Hat)
@@ -10329,6 +10269,8 @@ items:
           href: linux/quickstart-sql-server-containers-azure.md
         - name: Deploy AGs with DH2i DxEnterprise
           href: linux/tutorial-sql-server-containers-kubernetes-dh2i.md
+        - name: Deploy AGs with DH2i DxOperator
+          href: linux/tutorial-sql-server-containers-kubernetes-dxoperator.md
     - name: Security
       items:
       - name: Overview
@@ -10411,11 +10353,11 @@ items:
       href: /azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview
 - name: Azure Arc
   items:
-    - name: Azure Arc-enabled SQL Server
+    - name: SQL Server enabled by Azure Arc
       items:
       - name: Documentation
         href: sql-server/azure-arc/index.yml
-      - name: What is Azure Arc-enabled SQL Server?
+      - name: Overview
         href: sql-server/azure-arc/overview.md
       - name: Release notes
         href: sql-server/azure-arc/release-notes.md
@@ -10451,14 +10393,20 @@ items:
           href: sql-server/azure-arc/view-databases.md
         - name: Configure SQL Server
           href: sql-server/azure-arc/manage-configuration.md
+        - name: Licensing & billing
+          href: sql-server/azure-arc/manage-license-billing.md
         - name: Automate patching
           href: sql-server/azure-arc/patch.md
-        - name: Disconnect and unregister from Azure Arc
+        - name: Automate updates
+          href: sql-server/azure-arc/update.md
+        - name: Disconnect & unregister from Azure Arc
           href: sql-server/azure-arc/delete-from-azure-arc.md
-        - name: Monitor
+        - name: Monitor (preview)
           href: sql-server/azure-arc/sql-monitoring.md
         - name: Use activity logs
           href: sql-server/azure-arc/activity-logs.md
+        - name: Move resources
+          href: sql-server/azure-arc/move-resources.md
       - name: Business continuity
         items:
         - name: Automated backups to local storage (preview)
@@ -10471,15 +10419,29 @@ items:
           href: sql-server/azure-arc/manage-availability-group.md
       - name: Secure
         items:
+        - name: Configure least privilege
+          href: sql-server/azure-arc/configure-least-privilege.md
         - name: Configure advanced data Security
           href: sql-server/azure-arc/configure-advanced-data-security.md
         - name: Certificate rotation
           href: sql-server/azure-arc/rotate-certificates.md
         - name: Extended Security Updates
           href: sql-server/azure-arc/extended-security-updates.md
+        - name: Roles, permissions, & files
+          items:
+          - name: Agent roles
+            href: sql-server/azure-arc/permissions-granted-agent-extension.md
+          - name: Required permissions
+            href: sql-server/azure-arc/configure-windows-accounts-agent.md
+          - name: System object reference
+            href: sql-server/azure-arc/agent-extension-files.md
+      - name: Migrate
+        items:
+        - name: Discover & assess
+          href: sql-server/azure-arc/migration-assessment.md
       - name: FAQ
         href: sql-server/azure-arc/faq.yml
-      - name: Data collection and reporting
+      - name: Data collection & reporting
         href: sql-server/azure-arc/data-collection.md
       - name: Troubleshoot
         items:
@@ -10491,7 +10453,6 @@ items:
           href: sql-server/azure-arc/troubleshoot-assessment.md
     - name: Azure Arc-enabled data services >
       href: /azure/azure-arc/data/overview
-
 
 - name: Big Data Clusters
   items:
@@ -11332,7 +11293,9 @@ items:
         - name: 7357
           href: relational-databases/errors-events/mssqlserver-7357-database-engine-error.md
         - name: 7391
-          href: relational-databases/errors-events/mssqlserver-7391-database-engine-error.md  
+          href: relational-databases/errors-events/mssqlserver-7391-database-engine-error.md
+        - name: 7399
+          href: relational-databases/errors-events/mssqlserver-7399-database-engine-error.md
         - name: 7711
           href: relational-databases/errors-events/mssqlserver-7711-database-engine-error.md
         - name: 7901
@@ -11469,6 +11432,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-10001-database-engine-error.md
         - name: 10003
           href: relational-databases/errors-events/mssqlserver-10003-database-engine-error.md
+        - name: 10054
+          href: relational-databases/errors-events/mssqlserver-10054-database-engine-error.md
         - name: 10061
           href: relational-databases/errors-events/mssqlserver-10061-database-engine-error.md
         - name: 10502
@@ -12204,6 +12169,8 @@ items:
       href: relational-databases/event-classes/objecttype-trace-event-column.md
   - name: Native interfaces
     items: 
+    - name: CreateVersionedSOSHostObject
+      href: native-interfaces/createversionedsoshostobject.md
     - name: GetSvcInstanceIDFromName
       href: native-interfaces/getsvcinstanceidfromname.md
     - name: GetSQLInstanceRegStringByID
@@ -15295,7 +15262,7 @@ items:
       - name: sp_setapprole
         href: relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md
       - name: sp_srvrolepermission
-
+        href: relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md
       - name: sp_unsetapprole
         href: relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md
       - name: sp_validatelogins
@@ -15508,6 +15475,10 @@ items:
         href: relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md
       - name: sp_update_targetservergroup
         href: relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md
+    - name: Extended Events
+      items:
+      - name: sp_trace_generateevent
+        href: relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md
     - name: SQL Server Profiler
       href: relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md
       items:
@@ -15715,272 +15686,6 @@ items:
         href: relational-databases/system-tables/dbo-systargetservers-transact-sql.md
       - name: dbo.systaskids
         href: relational-databases/system-tables/dbo-systaskids-transact-sql.md
-      - name: sp_unsetapprole
-        href: relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md
-      - name: sp_validatelogins
-        href: relational-databases/system-stored-procedures/sp-validatelogins-transact-sql.md
-      - name: sp_verify_database_ledger
-        href: relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-transact-sql.md
-      - name: sp_verify_database_ledger_from_digest_storage
-        href: relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql.md
-      - name: sp_xp_cmdshell_proxy_account
-        href: relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md
-    - name: Snapshot backup
-      items:
-      - name: sp_delete_backup_file_snapshot
-        href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md
-      - name: sp_delete_backup
-        href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md
-    - name: Azure Synapse Analytics
-      items:
-      - name: Overview
-        href: relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md
-      - name: sp_datatype_info_90
-        href: relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md
-      - name: sp_pdw_add_network_credentials
-        href: relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md
-      - name: sp_pdw_database_encryption
-        href: relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md
-      - name: sp_pdw_database_encryption_regenerate_system_keys
-        href: relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md
-      - name: sp_pdw_log_user_data_masking
-        href: relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md
-      - name: sp_pdw_remove_network_credentials
-        href: relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md
-      - name: sp_special_columns_100
-        href: relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md
-    - name: Azure Synapse Link for SQL
-      items:
-      - name: sp_change_feed_disable_db
-        href: relational-databases/system-stored-procedures/sp-change-feed-disable-db.md
-      - name: sp_change_feed_disable_table
-        href: relational-databases/system-stored-procedures/sp-change-feed-disable-table.md
-      - name: sp_change_feed_drop_table_group
-        href: relational-databases/system-stored-procedures/sp-change-feed-drop-table-group.md
-      - name: sp_help_change_feed
-        href: relational-databases/system-stored-procedures/sp-help-change-feed.md
-      - name: sp_help_change_feed_table
-        href: relational-databases/system-stored-procedures/sp-help-change-feed-table.md
-      - name: sp_change_feed_configure_parameters
-        href: relational-databases/system-stored-procedures/sp-change-feed-configure-parameters.md
-      - name: sp_change_feed_create_table_group
-        href: relational-databases/system-stored-procedures/sp-change-feed-create-table-group.md
-      - name: sp_change_feed_enable_db
-        href: relational-databases/system-stored-procedures/sp-change-feed-enable-db.md
-      - name: sp_change_feed_enable_table
-        href: relational-databases/system-stored-procedures/sp-change-feed-enable-table.md
-    - name: SQL Server Agent
-      items:
-      - name: Overview
-        href: relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md
-      - name: sp_add_alert
-        href: relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md
-      - name: sp_add_category
-        href: relational-databases/system-stored-procedures/sp-add-category-transact-sql.md
-      - name: sp_add_job
-        href: relational-databases/system-stored-procedures/sp-add-job-transact-sql.md
-      - name: sp_add_jobschedule
-        href: relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md
-      - name: sp_add_jobserver
-        href: relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md
-      - name: sp_add_jobstep
-        href: relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md
-      - name: sp_add_notification
-        href: relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md
-      - name: sp_add_operator
-        href: relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md
-      - name: sp_add_proxy
-        href: relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md
-      - name: sp_add_schedule
-        href: relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md
-      - name: sp_add_targetservergroup
-        href: relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md
-      - name: sp_add_targetsvrgrp_member
-        href: relational-databases/system-stored-procedures/sp-add-targetsvrgrp-member-transact-sql.md
-      - name: sp_apply_job_to_targets
-        href: relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md
-      - name: sp_attach_schedule
-        href: relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md
-      - name: sp_cycle_agent_errorlog
-        href: relational-databases/system-stored-procedures/sp-cycle-agent-errorlog-transact-sql.md
-      - name: sp_cycle_errorlog
-        href: relational-databases/system-stored-procedures/sp-cycle-errorlog-transact-sql.md
-      - name: sp_delete_alert
-        href: relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md
-      - name: sp_delete_category
-        href: relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md
-      - name: sp_delete_job
-        href: relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md
-      - name: sp_delete_jobschedule
-        href: relational-databases/system-stored-procedures/sp-delete-jobschedule-transact-sql.md
-      - name: sp_delete_jobserver
-        href: relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md
-      - name: sp_delete_jobstep
-        href: relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md
-      - name: sp_delete_jobsteplog
-        href: relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md
-      - name: sp_delete_notification
-        href: relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md
-      - name: sp_delete_operator
-        href: relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md
-      - name: sp_delete_proxy
-        href: relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md
-      - name: sp_delete_schedule
-        href: relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md
-      - name: sp_delete_targetserver
-        href: relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md
-      - name: sp_delete_targetservergroup
-        href: relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md
-      - name: sp_delete_targetsvrgrp_member
-        href: relational-databases/system-stored-procedures/sp-delete-targetsvrgrp-member-transact-sql.md
-      - name: sp_detach_schedule
-        href: relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md
-      - name: sp_enum_login_for_proxy
-        href: relational-databases/system-stored-procedures/sp-enum-login-for-proxy-transact-sql.md
-      - name: sp_enum_proxy_for_subsystem
-        href: relational-databases/system-stored-procedures/sp-enum-proxy-for-subsystem-transact-sql.md
-      - name: sp_grant_proxy_to_subsystem
-        href: relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md
-      - name: sp_grant_login_to_proxy
-        href: relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md
-      - name: sp_help_alert
-        href: relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md
-      - name: sp_help_category
-        href: relational-databases/system-stored-procedures/sp-help-category-transact-sql.md
-      - name: sp_help_downloadlist
-        href: relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md
-      - name: sp_help_job
-        href: relational-databases/system-stored-procedures/sp-help-job-transact-sql.md
-      - name: sp_help_jobactivity
-        href: relational-databases/system-stored-procedures/sp-help-jobactivity-transact-sql.md
-      - name: sp_help_jobcount
-        href: relational-databases/system-stored-procedures/sp-help-jobcount-transact-sql.md
-      - name: sp_help_jobhistory
-        href: relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md
-      - name: sp_help_jobs_in_schedule
-        href: relational-databases/system-stored-procedures/sp-help-jobs-in-schedule-transact-sql.md
-      - name: sp_help_jobschedule
-        href: relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql.md
-      - name: sp_help_jobserver
-        href: relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md
-      - name: sp_help_jobstep
-        href: relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md
-      - name: sp_help_jobsteplog
-        href: relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md
-      - name: sp_help_notification
-        href: relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md
-      - name: sp_help_operator
-        href: relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md
-      - name: sp_help_proxy
-        href: relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md
-      - name: sp_help_schedule
-        href: relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md
-      - name: sp_help_targetserver
-        href: relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md
-      - name: sp_help_targetservergroup
-        href: relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md
-      - name: sp_manage_jobs_by_login
-        href: relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql.md
-      - name: sp_msx_defect
-        href: relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md
-      - name: sp_msx_enlist
-        href: relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md
-      - name: sp_msx_get_account
-        href: relational-databases/system-stored-procedures/sp-msx-get-account-transact-sql.md
-      - name: sp_msx_set_account
-        href: relational-databases/system-stored-procedures/sp-msx-set-account-transact-sql.md
-      - name: sp_notify_operator
-        href: relational-databases/system-stored-procedures/sp-notify-operator-transact-sql.md
-      - name: sp_post_msx_operation
-        href: relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md
-      - name: sp_purge_jobhistory
-        href: relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md
-      - name: sp_readerrorlog
-        href: relational-databases/system-stored-procedures/sp-readerrorlog-transact-sql.md
-      - name: sp_remove_job_from_targets
-        href: relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md
-      - name: sp_resync_targetserver
-        href: relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql.md
-      - name: sp_revoke_login_from_proxy
-        href: relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md
-      - name: sp_revoke_proxy_from_subsystem
-        href: relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md
-      - name: sp_start_job
-        href: relational-databases/system-stored-procedures/sp-start-job-transact-sql.md
-      - name: sp_stop_job
-        href: relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md
-      - name: sp_update_alert
-        href: relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md
-      - name: sp_update_category
-        href: relational-databases/system-stored-procedures/sp-update-category-transact-sql.md
-      - name: sp_update_job
-        href: relational-databases/system-stored-procedures/sp-update-job-transact-sql.md
-      - name: sp_update_jobschedule
-        href: relational-databases/system-stored-procedures/sp-update-jobschedule-transact-sql.md
-      - name: sp_update_jobstep
-        href: relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md
-      - name: sp_update_notification
-        href: relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md
-      - name: sp_update_operator
-        href: relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md
-      - name: sp_update_proxy
-        href: relational-databases/system-stored-procedures/sp-update-proxy-transact-sql.md
-      - name: sp_update_schedule
-        href: relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md
-      - name: sp_update_targetservergroup
-        href: relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md
-    - name: SQL Server Profiler
-      items:
-      - name: Overview
-        href: relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md
-      - name: sp_trace_create
-        href: relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md
-      - name: sp_trace_generateevent
-        href: relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md
-      - name: sp_trace_setevent
-        href: relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md
-      - name: sp_trace_setfilter
-        href: relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md
-      - name: sp_trace_setstatus
-        href: relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md
-    - name: Stretch Database extended
-      items:
-      - name: Overview
-        href: relational-databases/system-stored-procedures/stretch-database-extended-stored-procedures-transact-sql.md
-      - name: sys.sp_rda_deauthorize_db
-        href: relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md
-      - name: sys.sp_rda_get_rpo_duration
-        href: relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md
-      - name: sys.sp_rda_reauthorize_db
-        href: relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md
-      - name: sys.sp_rda_reconcile_batch
-        href: relational-databases/system-stored-procedures/sys-sp-rda-reconcile-batch-transact-sql.md
-      - name: sys.sp_rda_reconcile_columns
-        href: relational-databases/system-stored-procedures/sys-sp-rda-reconcile-columns-transact-sql.md
-      - name: sys.sp_rda_reconcile_indexes
-        href: relational-databases/system-stored-procedures/sys-sp-rda-reconcile-indexes-transact-sql.md
-      - name: sys.sp_rda_set_query_mode
-        href: relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md
-      - name: sys.sp_rda_set_rpo_duration
-        href: relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md
-      - name: sys.sp_rda_test_connection
-        href: relational-databases/system-stored-procedures/sys-sp-rda-test-connection-transact-sql.md
-    - name: Temporal tables
-      items:
-      - name: sys.sp_cleanup_temporal_history
-        href: relational-databases/system-stored-procedures/temporal-table-sys-sp-cleanup-temporal-history.md
-      - name: sp_xtp_flush_temporal_history
-        href: relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md
-    - name: XML
-      items:
-      - name: Overview
-        href: relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md
-      - name: sp_xml_preparedocument
-        href: relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md
-      - name: sp_xml_removedocument
-        href: relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md
-      - name: sp_db_selective_xml_index
-        href: relational-databases/system-stored-procedures/sp-db-selective-xml-index-transact-sql.md
     - name: Replication Tables
       href: relational-databases/system-tables/replication-tables-transact-sql.md
       items:

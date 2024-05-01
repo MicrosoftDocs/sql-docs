@@ -180,7 +180,7 @@ EXEC dbo.sp_syscollector_create_collection_set
 GO
 ```
 
-## See also
+## Related content
 
 - [Data collection](../data-collection/data-collection.md)
 - [Create a Custom Collection Set That Uses the Generic T-SQL Query Collector Type (Transact-SQL)](../data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)

@@ -5,7 +5,7 @@ description: "Learn how to install SQL Server 2022 Machine Learning Services on 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: arunguru-msft
-ms.date: 04/03/2023
+ms.date: 01/03/2024
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
@@ -150,7 +150,7 @@ Available installation packages for [!INCLUDE [sssql22-md](../includes/sssql22-m
 
 ### Install Python runtime
 
-1. Download and install the version of Python that is desired. Choose a version of Python 3.10 or higher, [available for download directly from python.org](https://docs.python.org/3/using/unix.html). Follow the instructions for the desired runtime. Also, install the shared python runtime library for the desired runtime version. For example, to install `libpython3.10` for Ubuntu: `sudo apt-get install libpython3.10`.
+1. Download and install Python. Choose version Python 3.10 specifically, [available for download directly from python.org](https://docs.python.org/3/using/unix.html). Follow the instructions provided. Also, install the shared python runtime library for the runtime version. For example, to install `libpython3.10` for Ubuntu: `sudo apt-get install libpython3.10`.
 
 1. Download and install `revoscalepy` for the root user.
 

@@ -8,9 +8,7 @@ ms.date: 11/02/2021
 ms.service: sql-managed-instance
 ms.subservice: security
 ms.topic: how-to
-ms.custom:
-  - references_regions
-  - ignite-fall-2021
+ms.custom: references_regions
 ---
 
 

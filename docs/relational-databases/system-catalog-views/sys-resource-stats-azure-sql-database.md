@@ -25,7 +25,7 @@ monikerRange: "=azuresqldb-current"
 Returns CPU usage and storage data for a database in Azure SQL Database. The data is collected and aggregated within five-minute intervals. For each user database, there is one row for every five-minute reporting window in which there is a change in resource consumption. The data returned includes CPU usage, storage size change, and database SKU modification. Idle databases with no changes may not have rows for every five-minute interval. Historical data is retained for approximately 14 days.  
 
 > [!NOTE]
-> This dynamic management view applies to Azure SQL Database only. For an equivalent view for Azure SQL Managed Instance, use [sys.server_resource_stats](sys-server-resource-stats-azure-sql-database.md).
+> This dynamic management view applies to Azure SQL Database only. For an equivalent view for Azure SQL Managed Instance, use [sys.server_resource_stats](sys-server-resource-stats-azure-sql-database.md?view=azuresqldb-mi-current&preserve-view=true).
 
 |Columns|Data Type|Description|  
 |----------------------------|---------------|-----------------|  
@@ -40,7 +40,7 @@ Returns CPU usage and storage data for a database in Azure SQL Database. The dat
 |max_worker_percent|**decimal(5,2)**|Maximum concurrent workers (requests) in percentage based on the limit of the database's service tier.<br /><br /> Maximum is currently calculated for the five-minute interval based on the 15-second samples of concurrent worker counts.|  
 |max_session_percent|**decimal(5,2)**|Maximum concurrent sessions in percentage based on the limit of the database's service tier.<br /><br /> Maximum is currently calculated for the five-minute interval based on the 15-second samples of concurrent session counts.|  
 |dtu_limit|**int**|Current max database DTU setting for this database during this interval. |
-|xtp_storage_percent|**decimal (5,2)**|Storage utilization for In-Memory OLTP in percentage of the limit of the service tier (at the end of the reporting interval). This includes memory used for storage of the following In-Memory OLTP objects: memory-optimized tables, indexes, and table variables. It also includes memory used for processing ALTER TABLE operations. For more information, see [Monitor In-Memory OLTP](/azure/azure-sql/in-memory-oltp-monitor-space).<br /><br /> Returns 0 if In-Memory OLTP is not used in the database.|
+|xtp_storage_percent|**decimal (5,2)**|Storage utilization for In-Memory OLTP in percentage of the limit of the service tier (at the end of the reporting interval). This includes memory used for storage of the following In-Memory OLTP objects: memory-optimized tables, indexes, and table variables. It also includes memory used for processing ALTER TABLE operations. For more information, see [Monitor In-Memory OLTP](/azure/azure-sql/database/in-memory-oltp-monitor-space?view=azuresql-db&preserve-view=true).<br /><br /> Returns 0 if In-Memory OLTP is not used in the database.|
 |avg_login_rate_percent|**decimal (5,2)**|Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.|
 |avg_instance_cpu_percent|**decimal (5,2)**|Average database CPU usage as a percentage of the SQL Database process.|
 |avg_instance_memory_percent|**decimal (5,2)**|Average database memory usage as a percentage of the SQL Database process.|

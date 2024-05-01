@@ -1,5 +1,5 @@
 ---
-title: "Use WebForms ReportViewer Control"
+title: "Use WebForms ReportViewer control"
 description: To view reports deployed to a report server or on a local file system, you can use the WebForms ReportViewer control to render them in a Web application.
 author: maggiesMSFT
 ms.author: maggies
@@ -11,12 +11,12 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "ReportViewer controls"
 ---
-# Use the WebForms ReportViewer Control
+# Use the WebForms ReportViewer control
   To view reports deployed to a report server or reports that exist on the local file system, you can use the WebForms ReportViewer control to render them in a Web application.  
   
-## To use the ReportViewer Control in a Web application  
+## Use the ReportViewer control in a Web application  
   
-1.  Create a new [!INCLUDE[msCoName](../../includes/msconame-md.md)] ASP.NET Web Site using either [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Create a new [!INCLUDE[msCoName](../../includes/msconame-md.md)] ASP.NET Web Site using either [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[c-sharp](../../includes/c-sharp-md.md)] or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)].  
   
      \- Or -  
   
@@ -24,15 +24,15 @@ helpviewer_keywords:
   
 2.  Locate the **ScriptManager** control in the **AJAX Extensions** group in the **Toolbox** window, and drag it to the design surface of the Web form.  
   
-     If the **Toolbox** is not visible, you can access it from the **View** menu by selecting **Toolbox**.  
+     If the **Toolbox** isn't visible, you can access it from the **View** menu by selecting **Toolbox**.  
   
 3.  Locate the **ReportViewer** control in the **Toolbox** and drag it to the design surface below the **ScriptManager** control.  
   
      The **ReportViewer** control named reportViewer1 is added to the form.  
   
- After the control is added to the form the **ReportViewer Tasks** smart tag will appear prompting you to select a report. If the report you wish to view has been deployed to a report server select the **\<Server Report>** option from the **Choose Report** drop-down list. Once the **\<Server Report>** option is selected two additional properties will appear, **Report Server Url** and **Report Path**. The **Report Server Url** is the address to the report server and the **Report Path** is the full path to the report you want to render.  
+ After the control is added to the form, the **ReportViewer Tasks** smart tag appears, prompting you to select a report. If the report you wish to view is deployed to a report server, select the **\<Server Report>** option from the **Choose Report** drop-down list. Once the **\<Server Report>** option is selected two more properties appear, **Report Server Url** and **Report Path**. The **Report Server Url** is the address to the report server and the **Report Path** is the full path to the report you want to render.  
   
- If you want to view a report in local mode select either the **Design a new report** option to launch the report designer or select a report that is already part of the existing project. After you have selected a report, be sure to enter the name of the report RDLC file in the **ReportPath** property of the ReportViewer control. This property appears under the **LocalReport** node in the **Properties** pane.  
+ If you want to view a report in local mode, select either the **Design a new report** option to launch the report designer or select a report that is already part of the existing project. After you select a report, be sure to enter the name of the report RDLC file in the **ReportPath** property of the ReportViewer control. This property appears under the **LocalReport** node in the **Properties** pane.  
   
  You have the option of hiding one or more of the items on the ReportViewer toolbar when the report is rendered. For example, you can hide the print button. To hide toolbar items, set the following ReportViewer properties to **False** in the **Properties** pane.  
   
@@ -50,8 +50,8 @@ helpviewer_keywords:
   
 -   **ShowZoomControl**  
   
-## Viewing Reports in Remote Processing Mode  
- The following example demonstrates how to render a report that has been deployed to a report server. This example uses the Sales Order Detail report that is included with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample reports project.  
+## View reports in remote processing mode  
+ The following example demonstrates how to render a report that is deployed to a report server. This example uses the Sales Order Detail report that is included with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample reports project.  
   
  The example uses integrated Windows Authentication so you first must enable impersonation. To do this insert the following line into the **web.config** file:  
   
@@ -132,10 +132,10 @@ Partial Class _Default
 End Class  
 ```  
   
-## Viewing Reports in Local Processing Mode  
- The following example demonstrates how to render a report that is part of the Windows application and has not been deployed to a report server.  
+## View reports in local processing mode  
+ The following example demonstrates how to render a report that is part of the Windows application and isn't deployed to a report server.  
   
-###### To add the Sales Order Detail report to a Web Site  
+###### To add the Sales Order Detail report to a Web site  
   
 1.  Open the Web Site that the report will be added to.  
   
@@ -145,15 +145,15 @@ End Class
   
      The default location is C:\Program Files\Microsoft SQL Server\100\Samples\Reporting Services\Report Samples\AdventureWorks Sample Reports.  
   
-4.  Select the Sales Order Detail.rdl file and click the **Add** button.  
+4.  Select the Sales Order Detail.rdl file and select the **Add** button.  
   
      The Sales Order Detail.rdl file should now be part of the project.  
   
 5.  Right-click the Sales Order Detail.rdl file in Solution Explorer and select **Rename**. Rename the report to **Sales Order Detail.rdlc** and press ENTER.  
   
-     If Solution Explorer is not visible, you can open it from the **View** menu by selecting Solution Explorer.  
+     If Solution Explorer isn't visible, you can open it from the **View** menu by selecting Solution Explorer.  
   
- The following code example will create a dataset for the sales order data and then render the Sales Order Detail report in local mode.  
+ The following code example creates a dataset for the sales order data and then renders the Sales Order Detail report in local mode.  
 
 **C#**
 ```csharp  
@@ -473,8 +473,8 @@ Partial Class _Default
 End Class  
 ```  
   
-## See Also  
- [Integrating Reporting Services Using the ReportViewer Controls](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
+## Related content  
+ [Integrating Reporting Services by using the ReportViewer controls](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
  [Data collection in ReportViewer Control 2016](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)
   
   

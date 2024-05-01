@@ -3,7 +3,7 @@ title: Failover cluster instances
 description: "Learn about failover cluster instances (FCIs) with SQL Server on Azure Virtual Machines."
 author: tarynpratt
 ms.author: tarynpratt
-ms.reviewer: randolphwest
+ms.reviewer: randolphwest, mathoma
 ms.date: 10/02/2023
 ms.service: virtual-machines-sql
 ms.subservice: hadr
@@ -77,9 +77,8 @@ The rest of this section lists the benefits and limitations of each storage opti
 **Limitations**:
 
 - Premium SSD disk caching isn't supported.
-- Ultra disks don't support availability sets.
-- Availability zones are supported for Ultra Disks, but the VMs must be in the same availability zone, which reduces the availability of the virtual machine to 99.9%
-- Ultra disks don't support Zone Redundant Storage (ZRS)
+- Ultra disks don't support availability sets or Zone Redundant Storage (ZRS). 
+- Availability zones are supported for Ultra Disks, but the VMs must be in the same availability zone, which reduces the availability of the virtual machine to 99.9%.
 
 To get started, see [SQL Server failover cluster instance with Azure shared disks](failover-cluster-instance-azure-shared-disks-manually-configure.md).
 
@@ -117,6 +116,7 @@ To get started, see [SQL Server failover cluster instance with Storage Spaces Di
 
 - Shared storage solution for virtual machines spread over multiple availability zones.
 - Fully managed file system with single-digit latencies and burstable I/O performance.
+- Not all SQL Server features are supported - such as database snapshots, filestream, and CHECKDB without TABLOCK. Review [Limitations](failover-cluster-instance-premium-file-share-manually-configure.md#limitations) for details. 
 
 **Limitations:**
 
@@ -165,7 +165,7 @@ At this time, SQL Server failover cluster instances on Azure virtual machines, r
 
 If your SQL Server VM has already been registered with the SQL IaaS Agent extension and you've enabled any features that require the agent, you need to [unregister](sql-agent-extension-manually-register-single-vm.md#unregister-from-extension) from the extension by deleting the **SQL virtual machine** resource for the corresponding VMs and then register it with the SQL IaaS Agent extension again. When you're deleting the **SQL virtual machine** resource by using the Azure portal, clear the check box next to the correct virtual machine to avoid deleting the virtual machine.
 
-SQL Server FCIs registered with the extension don't support features that require the agent, such as automated backup, patching, and advanced portal management. See the [table of benefits](sql-server-iaas-agent-extension-automate-management.md#feature-benefits).
+SQL Server FCIs registered with the SQL IaaS Agent extension don't support features that require the agent, such as automated backup, patching, Microsoft Entra authentication and advanced portal management. See the [table of benefits](sql-server-iaas-agent-extension-automate-management.md#feature-benefits) for more information.
 
 ### MSDTC
 
@@ -175,6 +175,10 @@ On Azure Virtual Machines, MSDTC isn't supported for Windows Server 2016 or earl
 
 - The clustered MSDTC resource can't be configured to use shared storage. On Windows Server 2016, if you create an MSDTC resource, it doesn't show any shared storage available for use, even if storage is available. This issue has been fixed in Windows Server 2019.
 - The basic load balancer doesn't handle RPC ports.
+
+### Azure Elastic SAN
+
+[Azure Elastic SAN](performance-guidelines-best-practices-storage.md#azure-elastic-san) is not currently supported on Windows Server Failover Cluster so SQL Server failover cluster instances (FCIs) are unsupported. 
 
 ## Related content
 

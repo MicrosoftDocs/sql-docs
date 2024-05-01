@@ -69,7 +69,7 @@ Requires **sysadmin** fixed server role and the **db_owner** fixed database role
 
 Merges all data and delta files in the valid range to produce a single data and delta file. This procedure doesn't honor the merge policy.
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [In-Memory OLTP (In-Memory Optimization)](../in-memory-oltp/overview-and-usage-scenarios.md)

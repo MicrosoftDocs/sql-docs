@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "ODBC, bulk copy operations"
   - "batches [ODBC]"
   - "bulk copy [ODBC], batch sizes"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Managing Bulk Copy Batch Sizes
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -10,6 +10,8 @@ ms.topic: conceptual
 ---
 # How to Manage a CDC Service from the CDC Designer Console
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   This procedure describes how to use the CDC Designer Console to manage a CDC service.  
   
 ### To manage a CDC service from the CDC Designer Console  

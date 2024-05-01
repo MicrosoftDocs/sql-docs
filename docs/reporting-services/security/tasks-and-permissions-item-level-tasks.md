@@ -1,5 +1,5 @@
 ---
-title: "Item-Level Tasks"
+title: "Item-level tasks"
 description: "Tasks and Permissions - Item-Level Tasks"
 author: maggiesMSFT
 ms.author: maggies
@@ -11,16 +11,16 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "item-level tasks [Reporting Services]"
 ---
-# Tasks and Permissions - Item-Level Tasks
+# Item-level tasks
   
   [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
   
-  An item-level task is a collection of permissions that relate to a report, folder, report model, resource, or shared data source. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] also includes system-level tasks that apply to the report server site as a whole. For more information, see [System-Level Tasks](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md). For more information about tasks and permissions in general, see [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md).  
+  An item-level task is a collection of permissions that relate to a report, folder, report model, resource, or shared data source. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] also includes system-level tasks that apply to the report server site as a whole. For more information, see [System-level tasks](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md). For more information about tasks and permissions in general, see [Tasks and permissions](../../reporting-services/security/tasks-and-permissions.md).  
   
 > [!NOTE]  
 >  If you are working with these tasks programmatically, you must use methods that support item-level tasks. For more information, see <xref:ReportService2010.ReportingService2010.ListTasks%2A> and <xref:ReportService2010.ReportingService2010.ListRoles%2A>.  
   
-## Permissions in Item-Level Tasks  
+## Permissions in item-level tasks  
  The following table lists item-level tasks, the permissions that are included in each task, and the items to which the permissions apply. Permissions are listed for informational purposes only to provide a more exact description of the functionality available through each task.  
   
  Shared datasets use the same set of permissions as reports. Report parts use the same set of permissions as Resources.  
@@ -57,7 +57,7 @@ helpviewer_keywords:
 
 [!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
   
-## See Also  
- [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+## Related content 
+ [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

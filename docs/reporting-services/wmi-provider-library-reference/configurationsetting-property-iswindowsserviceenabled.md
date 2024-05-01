@@ -1,6 +1,6 @@
 ---
-title: "IsWindowsServiceEnabled Property (WMI MSReportServer_ConfigurationSetting)"
-description: "IsWindowsServiceEnabled Property (WMI MSReportServer_ConfigurationSetting)"
+title: "IsWindowsServiceEnabled property (WMI MSReportServer_ConfigurationSetting)"
+description: "IsWindowsServiceEnabled property (WMI MSReportServer_ConfigurationSetting)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -14,7 +14,7 @@ apilocation: "reportingservices.mof"
 apiname: "IsWindowsServiceEnabled"
 apitype: MOFDef
 ---
-# ConfigurationSetting Property - IsWindowsServiceEnabled
+# ConfigurationSetting property - IsWindowsServiceEnabled
   Indicates whether the Report Server Windows service is enabled. Read-only.  
   
 ## Syntax  
@@ -27,16 +27,16 @@ Public Dim IsWindowsServiceEnabled As Boolean
 public boolean IsWindowsServiceEnabled;  
 ```  
   
-## Property Values  
+## Property values  
  A read-only **Boolean** value. A value of **true** indicates that the Report Server Windows service is enabled.  
   
-## Example Code  
- [MSReportServer_ConfigurationSetting Class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
+## Example code  
+ [MSReportServer_ConfigurationSetting class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+## Related content  
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

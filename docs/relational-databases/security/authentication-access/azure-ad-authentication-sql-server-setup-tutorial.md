@@ -15,14 +15,13 @@ monikerRange: ">=sql-server-ver16||>= sql-server-linux-ver16"
 
 [!INCLUDE [SQL Server 2022](../../../includes/applies-to-version/sqlserver2022.md)]
 
-This article describes a step-by-step process on how to set up authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) for SQL Server, and how to use different Microsoft Entra authentication methods. 
+This article describes a step-by-step process to set up authentication with Microsoft Entra ID, and demonstrates how to use different Microsoft Entra authentication methods.
 
-While this feature is available in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and later versions, and is only for SQL Server on-premises, for Windows and Linux hosts and SQL Server on Azure VMs, this article is intended for SQL Server on-premises only. For SQL Server on Azure VMs, review [Microsoft Entra authentication for SQL Server 2022 on Azure VMs](/azure/azure-sql/virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm).
+[!INCLUDE [entra-id](../../../includes/entra-id.md)]
 
 In this tutorial, you learn how to:
 
 > [!div class="checklist"]
-
 > - Create and register a Microsoft Entra application
 > - Grant permissions to the Microsoft Entra application
 > - Create and assign a certificate
@@ -32,8 +31,11 @@ In this tutorial, you learn how to:
 
 ## Prerequisites
 
-- [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] is installed.
-- SQL Server is connected to Azure cloud. For more information, see [Connect your SQL Server to Azure Arc](../../../sql-server/azure-arc/connect.md).
+- A physical or virtual Windows Server on-premises with an instance of [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)].
+
+    For SQL Server on Azure VMs, review [Microsoft Entra authentication for SQL Server 2022 on Azure VMs](/azure/azure-sql/virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm).
+
+- The server and instance enabled by Azure Arc. For more information, see [Connect your SQL Server to Azure Arc](../../../sql-server/azure-arc/connect.md).
 - Access to Microsoft Entra ID is available for authentication purpose. For more information, see [Microsoft Entra authentication for SQL Server](azure-ad-authentication-sql-server-overview.md).
 - [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) version 18.0 or higher is installed on the client machine. Or download the latest [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
 
@@ -293,7 +295,7 @@ A new database user is given the **Connect** permission by default. All other SQ
 
 ### Microsoft Entra guest accounts
 
-The `CREATE LOGIN` and `CREATE USER` syntax also supports guest users. For example, if `testuser@outlook.com` is invited to the `contoso.com` tenant, it can be added as a login to SQL Server with the following syntax. In the examples, `outlook.com` is provided even though SQL Server uses the account registered in the `contoso.com` tenant.
+The `CREATE LOGIN` and `CREATE USER` syntax also supports guest users. For example, if `testuser@outlook.com` is invited to the `contoso.com` tenant, it can be added as a login to SQL Server with the same syntax as creating any other Microsoft Entra user or login. When creating guest users and logins, use the guest account's originating email, not its user principal name in the tenant. In the examples, `outlook.com` is provided even though the account is registered in the `contoso.com` tenant.
 
 #### Create a guest user from an existing login
 

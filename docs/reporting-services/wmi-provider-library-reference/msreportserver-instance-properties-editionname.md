@@ -1,6 +1,6 @@
 ---
-title: "EditionName Property (WMI MSReportServer_Instance)"
-description: "EditionName Property (WMI MSReportServer_Instance)"
+title: "EditionName property (WMI MSReportServer_Instance)"
+description: "EditionName property (WMI MSReportServer_Instance)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -11,7 +11,7 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "EditionName property"
 ---
-# MSReportServer_Instance Properties - EditionName
+# MSReportServer_Instance properties - EditionName
   Returns the human readable name of the report server edition. Read-only.  
   
 ## Syntax  
@@ -24,16 +24,16 @@ Public Dim EditionName As String
 public string EditionName;  
 ```  
   
-## Property Value  
+## Property value  
  A **string** that contains human readable name of the report server edition.  
   
-## Example Code  
- [MSReportServer_ConfigurationSetting Class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
+## Example code  
+ [MSReportServer_ConfigurationSetting class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## See Also  
- [MSReportServer_Instance Members](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
+## Related content  
+ [MSReportServer_Instance members](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   

@@ -24,6 +24,6 @@ The following system stored procedures are used for Microsoft Distributed Transa
     :::column-end:::
 :::row-end:::
 
-## See also
+## Related content
 
 - [sys.dm_tran_distributed_transaction_stats (Transact-SQL)](../system-dynamic-management-views/sys-dm-tran-distributed-transaction-stats.md)

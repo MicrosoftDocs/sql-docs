@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
 title: SQL Server on Azure VM documentation
-summary: Find concepts, quickstarts, tutorials, and samples for SQL Server installed to Azure virtual machines, both Windows and Linux. 
+summary: Find concepts, quickstarts, tutorials, and samples for SQL Server installed to Azure virtual machines, both Windows and Linux.
 
 metadata:
   title: SQL Server on Azure VM documentation
@@ -20,8 +20,8 @@ landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
 
-  # Card 
-  - title: SQL Server on Azure VM 
+  # Card
+  - title: SQL Server on Azure VM
     linkLists:
       - linkListType: quickstart
         links:
@@ -30,98 +30,100 @@ landingContent:
           - text: Create Windows SQL VM (PowerShell)
             url: windows/sql-vm-create-powershell-quickstart.md
           - text: Create Linux SQL VM (portal)
-            url: linux/sql-vm-create-portal-quickstart.md 
+            url: linux/sql-vm-create-portal-quickstart.md
       - linkListType: video
         links:
           - text: SQL Server on Azure VM overview
             url: /shows/Azure-SQL-for-Beginners/SQL-Server-on-Azure-VM-Overview-4-of-61
-      - linkListType: overview 
+      - linkListType: overview
         links:
-          - text: What's new? 
+          - text: What's new?
             url: windows/doc-changes-updates-release-notes-whats-new.md
-          - text: What is SQL Server on Windows VM? 
+          - text: What is SQL Server on Windows VMs?
             url: windows/sql-server-on-azure-vm-iaas-what-is-overview.md
-          - text: What is SQL Server on Linux VM?
+          - text: What is SQL Server on Linux VMs?
             url: linux/sql-server-on-linux-vm-what-is-iaas-overview.md
           - text: Security considerations
             url: windows/security-considerations-best-practices.md
           - text: Performance guidelines
             url: ./windows/performance-guidelines-best-practices-checklist.md
-          - text: Pricing guidance 
-            url: windows/pricing-guidance.md 
+          - text: Pricing guidance
+            url: windows/pricing-guidance.md
 
-  # Card 
+  # Card
   - title: Manage
     linkLists:
       - linkListType: concept
         links:
           - text: SQL Server IaaS Agent extension
-            url: windows/sql-server-iaas-agent-extension-automate-management.md 
+            url: windows/sql-server-iaas-agent-extension-automate-management.md
           - text: Manage with Azure portal
             url: windows/manage-sql-vm-portal.md
           - text: Register with SQL VM resource provider
             url: windows/sql-agent-extension-manually-register-single-vm.md
           - text: Automated patching
-            url: windows/automated-patching.md 
-          - text: Change license type 
+            url: windows/automated-patching.md
+          - text: Change license type
             url: windows/licensing-model-azure-hybrid-benefit-ahb-change.md
           - text: Change edition of SQL Server
             url: windows/change-sql-server-edition.md
           - text: Move to new region
-            url: windows/move-sql-vm-different-region.md 
+            url: windows/move-sql-vm-different-region.md
           - text: Integrate with Azure Key Vault
             url: windows/azure-key-vault-integration-configure.md
 
-  # Card 
-  - title: Business continuity 
+  # Card
+  - title: Business continuity
     linkLists:
       - linkListType: overview
         links:
           - text: High availability & disaster recovery
             url: windows/business-continuity-high-availability-disaster-recovery-hadr-overview.md
-          - text: Backup and restore 
+          - text: Backup and restore
             url: windows/backup-restore.md
           - text: Availability groups
             url: windows/availability-group-overview.md
       - linkListType: how-to-guide
         links:
-          - text: Availability group (Az CLI)
+          - text: Availability group (Azure CLI)
             url: ./windows/availability-group-az-commandline-configure.md
           - text: Clusterless availability group
             url: windows/availability-group-clusterless-workgroup-configure.md
-          - text: FCI (Storage Spaces Direct) 
+          - text: FCI (Storage Spaces Direct)
             url: windows/failover-cluster-instance-storage-spaces-direct-manually-configure.md
           - text: FCI (Premium File Share)
             url: windows/failover-cluster-instance-premium-file-share-manually-configure.md
       - linkListType: tutorial
         links:
           - text: Availability group (manual)
-            url: windows/availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md 
-          - text: STONITH availability group (RHEL)
-            url: linux/rhel-high-availability-stonith-tutorial.md
-          - text: STONITH availability group (SLES)
-            url: linux/sles-high-availability-stonith-tutorial.md
-          - text: Availability group listener (RHEL)
-            url: linux/rhel-high-availability-listener-tutorial.md 
+            url: windows/availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md
+          - text: Fencing availability group (RHEL)
+            url: linux/rhel-high-availability-fencing-tutorial.md
+          - text: Fencing availability group (SLES)
+            url: linux/sles-high-availability-fencing-tutorial.md
+          - text: Fencing availability group (Ubuntu)
+            url: linux/ubuntu-high-availability-fencing-tutorial.md
+          - text: Availability group listener
+            url: linux/high-availability-listener-tutorial.md
 
-  # Card 
-  - title: Learn Azure SQL 
+  # Card
+  - title: Learn Azure SQL
     linkLists:
       - linkListType: learn
         links:
         - text: Azure SQL for beginners
           url: /shows/azure-sql-for-beginners/
-        - text: Azure SQL fundamentals 
+        - text: Azure SQL fundamentals
           url: /training/paths/azure-sql-fundamentals/
         - text: Azure SQL hands-on labs
           url: https://aka.ms/asqlworkshop
-        - text: Azure SQL bootcamp 
+        - text: Azure SQL bootcamp
           url: /users/marisabrasile/collections/8oq1i8p0z2qygw
         - text: Educational SQL resources
           url: /sql/sql-server/educational-sql-resources
 
-  # Card 
-  - title: Reference 
+  # Card
+  - title: Reference
     linkLists:
       - linkListType: deploy
         links:
@@ -131,15 +133,15 @@ landingContent:
           url: /cli/azure/azure-cli-reference-for-sql#sql-virtual-machines-references
         - text: PowerShell samples
           url: windows/sql-vm-create-powershell-quickstart.md
-        - text: ARM template samples 
+        - text: ARM template samples
           url: windows/create-sql-vm-resource-manager-template.md
       - linkListType: download
         links:
         - text: SQL Server Management Studio (SSMS)
           url: /sql/ssms/download-sql-server-management-studio-ssms
-        - text: Azure Data Studio 
+        - text: Azure Data Studio
           url: /azure-data-studio/download-azure-data-studio
-        - text: SQL Server Data Tools 
+        - text: SQL Server Data Tools
           url: /sql/ssdt/download-sql-server-data-tools-ssdt
         - text: Visual Studio 2019
           url: https://visualstudio.microsoft.com/downloads/

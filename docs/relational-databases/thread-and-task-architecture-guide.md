@@ -61,7 +61,7 @@ The number of worker threads spawned for each task depends on:
 
 - Whether the request was eligible for parallelism as determined by the Query Optimizer.
 
-- What the actual available [degree of parallelism (DOP)](../relational-databases/query-processing-architecture-guide.md#degree-of-parallelism-dop) in the system is, based on current load. This may differ from estimated DOP, which is based on the server configuration for max degree of parallelism (MAXDOP). For example, the server configuration for MAXDOP may be 8 but the available DOP at runtime can be only 2, which affects query performance.
+- What the actual available [degree of parallelism (DOP)](../relational-databases/query-processing-architecture-guide.md#degree-of-parallelism-dop) in the system is, based on current load. This may differ from estimated DOP, which is based on the server configuration for max degree of parallelism (MAXDOP). For example, the server configuration for MAXDOP may be 8 but the available DOP at runtime can be only 2, which affects query performance. Memory pressure and lack of workers are two conditions which reduce available DOP at runtime.
 
 > [!NOTE]  
 > The **max degree of parallelism (MAXDOP)** limit is set per task, not per request. This means that during a parallel query execution, a single request can spawn multiple tasks up to the MAXDOP limit, and each task will use one worker. For more information about MAXDOP, see [Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
@@ -250,7 +250,7 @@ In addition to adjusting the **max degree of parallelism (MAXDOP)** server confi
 
 ### Maximum number of worker threads option
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dynamically configures the **max worker threads** server configuration option at startup. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses the number of available CPUs and the system architecture to determine this server configuration during startup, using a documented [formula](../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md#Recommendations).
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dynamically configures the **max worker threads** server configuration option at startup. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses the number of available CPUs and the system architecture to determine this server configuration during startup, using a documented [formula](../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md#recommendations).
 
 This option is an advanced option and should be changed only by an experienced database administrator or certified [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] professional. If you suspect that there is a performance problem, it is probably not the availability of worker threads. The cause is more likely something like I/O that is causing the worker threads to wait. It is best to find the root cause of a performance issue before you change the max worker threads setting. However, if you need to manually set the maximum number of worker threads, this configuration value must always be set to a value of at least seven times the number of CPUs that are present on the system. For more information, see [Configure the max worker threads](../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md).
 

@@ -1,6 +1,6 @@
 ---
-title: "DeleteEncryptionKey Method (WMI MSReportServer_ConfigurationSetting)"
-description: "DeleteEncryptionKey Method (WMI MSReportServer_ConfigurationSetting)"
+title: "DeleteEncryptionKey method (WMI MSReportServer_ConfigurationSetting)"
+description: "DeleteEncryptionKey method (WMI MSReportServer_ConfigurationSetting)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -14,7 +14,7 @@ apilocation: "reportingservices.mof"
 apiname: "DeleteEncryptionKey (WMI MSReportServer_ConfigurationSetting Class)"
 apitype: MOFDef
 ---
-# ConfigurationSetting Method - DeleteEncryptionKey
+# ConfigurationSetting method - DeleteEncryptionKey
   Deletes the encryption keys from the report server database.  
   
 ## Syntax  
@@ -37,18 +37,18 @@ public void DeleteEncryptionKeys(string InstallationID, out Int32 HRESULT,
  [out] Value indicating whether the call succeeded or failed.  
   
  *ExtendedErrors[]*  
- [out] A string array containing additional errors returned by the call.  
+ [out] A string array containing other errors returned by the call.  
   
-## Return Value  
- Returns an HRESULT indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A non-zero value indicates that an error has occurred.  
+## Return value  
+ Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A nonzero value indicates that an error occurred.  
   
 ## Remarks  
- The *DeleteEncryptionKey* method deletes entries from the keys table for any report servers that have access to the secure information in the report server database. If the *InstallationID* parameter specified does not correspond to an installation ID in the database, the method returns an error.  
+ The *DeleteEncryptionKey* method deletes entries from the keys table for any report servers that have access to the secure information in the report server database. If the *InstallationID* parameter specified doesn't correspond to an installation ID in the database, the method returns an error.  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+## Related content  
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

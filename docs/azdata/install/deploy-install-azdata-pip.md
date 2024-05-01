@@ -8,12 +8,15 @@ ms.date: 07/29/2021
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.custom: intro-installation
+ms.custom: intro-installation, linux-related-content
 ---
 
 # Install [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] with `pip`
 
 [!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
+
+> [!CAUTION]
+> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
 
 This article describes how to install the [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] tool on Windows, Linux or macOS/OS X using `pip`.
 

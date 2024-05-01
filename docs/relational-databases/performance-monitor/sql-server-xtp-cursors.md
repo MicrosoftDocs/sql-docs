@@ -3,10 +3,10 @@ title: "SQL Server XTP Cursors object"
 description: Learn about the SQL Server XTP Cursors performance object, which contains counters related to internal In-Memory OLTP engine cursors.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/13/2021"
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "SQL Server 2016 XTP Cursors"
   - "SQL Server 2017 XTP Cursors"
@@ -15,7 +15,7 @@ helpviewer_keywords:
 # SQL Server XTP Cursors object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  The **SQL Server XTP Cursors** performance object contains counters related to internal In-Memory OLTP engine cursors. Cursors are the low-level building blocks the In-Memory OLTP engine uses to process [!INCLUDE[tsql](../../includes/tsql-md.md)] queries. As such, you do not typically have direct control over them.  
+  The **SQL Server XTP Cursors** performance object contains counters related to internal In-Memory OLTP engine cursors. Cursors are the low-level building blocks the In-Memory OLTP engine uses to process [!INCLUDE [tsql](../../includes/tsql-md.md)] queries. As such, you do not typically have direct control over them.  
   
  This table describes the **SQL Server XTP Cursors** counters.  
   
@@ -44,7 +44,7 @@ SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%XTP Cursors%';
 ```  
   
-## See also  
- - [In-Memory OLTP and Memory-Optimization](../in-memory-oltp/overview-and-usage-scenarios.md)
- - [SQL Server XTP &#40;In-Memory OLTP&#41; Performance Counters](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
-  
+## Related content
+
+- [In-Memory OLTP overview and usage scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
+- [SQL Server XTP (In-memory OLTP) Performance Counters](sql-server-xtp-in-memory-oltp-performance-counters.md)

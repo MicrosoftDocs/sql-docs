@@ -14,7 +14,6 @@ helpviewer_keywords:
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
-
   In the control flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the third and final task is to prepare to query for the change data and add a Data Flow task.  
   
 > [!NOTE]  
@@ -90,7 +89,7 @@ helpviewer_keywords:
   
          \- or -  
   
-    -   If you are programming in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], enter the following lines of code:  
+    -   If you are programming in [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)], enter the following lines of code:  
   
         ```vb  
         Dim dataReady As Integer  

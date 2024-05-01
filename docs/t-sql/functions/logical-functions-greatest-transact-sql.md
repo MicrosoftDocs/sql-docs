@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "GREATEST function"
 dev_langs:
   - "TSQL"
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest||=fabric"
+monikerRange: ">=sql-server-ver16 || >=sql-server-linux-ver16 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest||=fabric"
 ---
 # Logical functions - GREATEST (Transact-SQL)
 

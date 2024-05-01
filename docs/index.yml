@@ -8,7 +8,7 @@ metadata:
    ms.topic: hub-page
    ms.service: sql
    ms.custom: FY22Q2Fresh
-   date: 03/15/2022
+   date: 01/09/2024
 
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -104,7 +104,7 @@ conceptualContent:
         - text: SQL Server Machine Learning Services
           url: machine-learning/what-s-new-in-sql-server-machine-learning-services.md
           itemType: whats-new
-        - text: Azure Arc-enabled SQL Server
+        - text: SQL Server enabled by Azure Arc
           url: sql-server/azure-arc/overview.md
           itemType: whats-new
     - title: Install 

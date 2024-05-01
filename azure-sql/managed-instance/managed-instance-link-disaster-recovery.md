@@ -83,14 +83,13 @@ With SQL Server 2022, after the disaster is mitigated, you can choose to fail ba
 
 To get started, review [Restore database to SQL Server 2022](restore-database-to-sql-server.md). 
 
-## License-free passive replica 
+## License-free passive DR replica 
 
-You can save on licensing costs by activating the [Hybrid failover benefit](business-continuity-high-availability-disaster-recover-hadr-overview.md#license-free-dr-replicas) for your passive secondary SQL managed instance when it's used only for disaster recovery. 
+You can save on licensing costs by activating the [Hybrid failover benefit](business-continuity-high-availability-disaster-recover-hadr-overview.md#license-free-dr-replicas) for your passive secondary SQL managed instance when it's used only for disaster recovery.  The **Hybrid failover benefit** can be activated for new and existing instances. 
 
 > [!NOTE]
-> The **Hybrid failover benefit** is only applicable when you configure a secondary instance as a passive _in a hybrid environment between SQL Server and SQL Managed Instance_. For failover benefits between two instances in an _auto-failover group_,  use the [failover benefit](auto-failover-group-standby-replica-how-to-configure.md) instead. 
+> The **Hybrid failover benefit** is only applicable when you configure a secondary instance as a passive _in a hybrid environment between SQL Server and SQL Managed Instance_. For failover benefits between two instances in a _failover group_, use the [failover benefit](failover-group-standby-replica-how-to-configure.md) instead. 
 
-The **Hybrid failover benefit** can be activated for new and existing instances. 
 
 ### New instances 
 

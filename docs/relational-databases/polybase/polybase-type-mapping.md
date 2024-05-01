@@ -3,7 +3,8 @@ title: "Type mapping with PolyBase"
 description: Refer to these tables for mapping between PolyBase external data sources and SQL Server. Define external tables with Transact-SQL CREATE EXTERNAL TABLE.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 08/30/2022
+ms.reviewer: hudequei, nathansc
+ms.date: 12/06/2023
 ms.service: sql
 ms.subservice: polybase
 ms.topic: conceptual
@@ -50,6 +51,53 @@ For external tables that reference files in external data sources, the column an
 | decimal       | Decimal                   | decimal        | BigDecimalWritable    | Applies to Hive0.11 and later. |
 
 <sup>1</sup> Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Hadoop is no longer supported.
+
+## Parquet and Delta Type mapping reference
+
+Parquet and Delta external table type mapping to SQL Server datatypes are listed below. 
+
+Parquet and Delta Lake files contain type descriptions for every column. The following table describes how Parquet types are mapped to SQL native types.
+
+<!-- If updating, see also azure-docs /azure/synapse-analytics/sql/develop-openrowset#type-mapping-for-parquet.md -->
+
+| Parquet type | Parquet logical type (annotation) | SQL data type |
+| --- | --- | --- |
+| BOOLEAN | | bit |
+| BINARY / BYTE_ARRAY | | varbinary |
+| DOUBLE | | float |
+| FLOAT | | real |
+| INT32 | | int |
+| INT64 | | bigint |
+| INT96 | |datetime2 |
+| FIXED_LEN_BYTE_ARRAY | |binary |
+| BINARY |UTF8 |varchar \*(UTF8 collation) |
+| BINARY |STRING |varchar \*(UTF8 collation) |
+| BINARY |ENUM|varchar \*(UTF8 collation) |
+| FIXED_LEN_BYTE_ARRAY |UUID |uniqueidentifier |
+| BINARY |DECIMAL |decimal |
+| BINARY |JSON |varchar(8000) \*(UTF8 collation) |
+| BINARY |BSON | Not supported |
+| FIXED_LEN_BYTE_ARRAY |DECIMAL |decimal |
+| BYTE_ARRAY |INTERVAL | Not supported |
+| INT32 |INT(8, true) |smallint |
+| INT32 |INT(16, true) |smallint |
+| INT32 |INT(32, true) |int |
+| INT32 |INT(8, false) |tinyint |
+| INT32 |INT(16, false) |int |
+| INT32 |INT(32, false) |bigint |
+| INT32 |DATE |date |
+| INT32 |DECIMAL |decimal |
+| INT32 |TIME (MILLIS)|time |
+| INT64 |INT(64, true) |bigint |
+| INT64 |INT(64, false) |decimal(20,0) |
+| INT64 |DECIMAL |decimal |
+| INT64 |TIME (MICROS) | time |
+| INT64 |TIME (NANOS) | Not supported |
+| INT64 |TIMESTAMP ([normalized to utc](https://github.com/apache/parquet-format/blob/master/LogicalTypes.md#instant-semantics-timestamps-normalized-to-utc)) (MILLIS / MICROS) | datetime2 |
+| INT64 |TIMESTAMP ([not normalized to utc](https://github.com/apache/parquet-format/blob/master/LogicalTypes.md#local-semantics-timestamps-not-normalized-to-utc)) (MILLIS / MICROS) | bigint - make sure that you explicitly adjust `bigint` value with the timezone offset before converting it to a datetime value. |
+| INT64 |TIMESTAMP (NANOS) | Not supported |
+|[Complex type](https://github.com/apache/parquet-format/blob/master/LogicalTypes.md#lists) |LIST |varchar(8000), serialized into JSON |
+|[Complex type](https://github.com/apache/parquet-format/blob/master/LogicalTypes.md#maps)|MAP|varchar(8000), serialized into JSON |
 
 <!--SQL Server 2019-->
 ::: moniker range=">= sql-server-ver15 "

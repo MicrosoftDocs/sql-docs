@@ -157,7 +157,7 @@ To list publication objects in the Active Directory using the **publish_to_activ
  When immediate sync is off, changes are kept at least the min retention period and cleaned up immediately for all the transactions that are already replicated. If immediate sync is off and configured with the default retention period, it is likely that the required changes after the backup was taken were cleaned up and the new peer node will not be initialized properly. The only option left is to quiesce the topology. Setting immediate sync to on provides greater flexibility and is the recommended setting for P2P replication.  
   
 ## Example  
- [!code-sql[HowTo#sp_changepublication](../../relational-databases/replication/codesnippet/tsql/sp-changepublication-tra_1.sql)]  
+ :::code language="sql" source="../replication/codesnippet/tsql/sp-changepublication-tra_1.sql":::
   
 ## Permissions  
  Only members of the **sysadmin** fixed server role or **db_owner** fixed database role can execute **sp_changepublication**.  

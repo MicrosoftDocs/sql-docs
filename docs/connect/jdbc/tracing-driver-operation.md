@@ -3,7 +3,7 @@ title: Tracing driver operation (logging)
 description: Learn how to use tracing to log details and resolve issues and problems when using the JDBC Driver for SQL Server.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 11/03/2022
+ms.date: 01/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -68,6 +68,8 @@ When you create a Logger object, you must tell the object, which named entity or
 |DataSource|Logs messages in the [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) class. The applications can set the logging level as FINE.|
 |ResultSet|Logs messages in the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) class. The applications can set the logging level as FINER.|
 |Driver|Logs messages in the [SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md) class. The applications can set the logging level as FINER.|
+|Resiliency|Logs messages in the [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) class relating only to idle connection resiliency reconnects. The applications can set the logging level as FINE and FINER.|
+|Redirection|Logs messages in the [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) class relating only to connection open retries. The applications can set the logging level as FINE.|
 
 Starting with the Microsoft JDBC Driver version 2.0, the driver also provides the com.microsoft.sqlserver.jdbc.internals package, which includes the logging support for the following internal logging categories.
 

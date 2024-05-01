@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "viewing replication properties"
@@ -127,19 +127,19 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This transactional replication example returns the properties of the publication.  
   
- [!code-sql[HowTo#sp_helppublication](../../../relational-databases/replication/codesnippet/tsql/view-and-modify-publicat_1.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/view-and-modify-publicat_1.sql":::
   
  This transactional replication example disables schema replication for the publication.  
   
- [!code-sql[HowTo#sp_changepublication](../../../relational-databases/replication/codesnippet/tsql/view-and-modify-publicat_2.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/view-and-modify-publicat_2.sql":::
   
  This merge replication example returns the properties of the publication.  
   
- [!code-sql[HowTo#sp_helpmergepublication](../../../relational-databases/replication/codesnippet/tsql/view-and-modify-publicat_3.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/view-and-modify-publicat_3.sql":::
   
  This merge replication example disables schema replication for the publication.  
   
- [!code-sql[HowTo#sp_changemergepublication](../../../relational-databases/replication/codesnippet/tsql/view-and-modify-publicat_4.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/view-and-modify-publicat_4.sql":::
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
  You can modify publications and access their properties programmatically by using Replication Management Objects (RMO). The RMO classes that you use to view or modify publication properties depend on the type of publication.  

@@ -334,8 +334,6 @@ All connection managers can be configured using the **Properties** window.
   
 -   Video, [Leverage Microsoft Attunity Connector for Oracle to enhance Package Performance](/previous-versions/dn912438(v=msdn.10)), on technet.microsoft.com  
   
--   Wiki articles, [SSIS Connectivity](https://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity), on social.technet.microsoft.com  
-  
 -   Blog entry, [Connecting to MySQL from SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/connecting-to-mysql-from-ssis/ba-p/387400), on blogs.msdn.com.  
   
 -   Technical article, [Extracting and Loading SharePoint Data in SQL Server Integration Services](/previous-versions/sql/sql-server-2012/hh368261(v=msdn.10)), on msdn.microsoft.com.  

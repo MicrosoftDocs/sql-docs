@@ -61,19 +61,19 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
  The severity level of the error message returned by SQL Server when executing the job. *sql_severity* is **int**, with a default of NULL.  
   
 `[ @start_run_date = ] start_run_date`
- The date the job was started. *start_run_date*is **int**, with a default of NULL. *start_run_date* must be entered in the form YYYYMMDD, where YYYY is a four-character year, MM is a two-character month name, and DD is a two-character day name.  
+ The date the job was started. *start_run_date*is **int**, with a default of NULL. *start_run_date* must be entered in the form `yyyyMMdd`, where YYYY is a four-character year, MM is a two-character month name, and DD is a two-character day name.  
   
 `[ @end_run_date = ] end_run_date`
- The date the job was completed. *end_run_date* is **int**, with a default of NULL. *end_run_date*must be entered in the form YYYYMMDD, where YYYY is a four-digit year, MM is a two-character month name, and DD is a two-character day name.  
+ The date the job was completed. *end_run_date* is **int**, with a default of NULL. *end_run_date*must be entered in the form `yyyyMMdd`, where YYYY is a four-digit year, MM is a two-character month name, and DD is a two-character day name.  
   
 `[ @start_run_time = ] start_run_time`
- The time the job was started. *start_run_time* is **int**, with a default of NULL. *start_run_time*must be entered in the form HHMMSS, where HH is a two-character hour of the day, MM is a two-character minute of the day, and SS is a two-character second of the day.  
+ The time the job was started. *start_run_time* is **int**, with a default of NULL. *start_run_time*must be entered in the form `HHmmss`, where HH is a two-character hour of the day, MM is a two-character minute of the day, and SS is a two-character second of the day.  
   
 `[ @end_run_time = ] end_run_time`
- The time the job completed its execution. *end_run_time* is **int**, with a default of NULL. *end_run_time*must be entered in the form HHMMSS, where HH is a two-character hour of the day, MM is a two-character minute of the day, and SS is a two-character second of the day.  
+ The time the job completed its execution. *end_run_time* is **int**, with a default of NULL. *end_run_time*must be entered in the form `HHmmss`, where HH is a two-character hour of the day, MM is a two-character minute of the day, and SS is a two-character second of the day.  
   
 `[ @minimum_run_duration = ] minimum_run_duration`
- The minimum length of time for the completion of the job. *minimum_run_duration* is **int**, with a default of NULL. *minimum_run_duration*must be entered in the form HHMMSS, where HH is a two-character hour of the day, MM is a two-character minute of the day, and SS is a two-character second of the day.  
+ The minimum length of time for the completion of the job. *minimum_run_duration* is **int**, with a default of NULL. *minimum_run_duration*must be entered in the form `HHmmss`, where HH is a two-character hour of the day, MM is a two-character minute of the day, and SS is a two-character second of the day.  
   
 `[ @run_status = ] run_status`
  The execution status of the job. *run_status* is **int**, with a default of NULL, and can be one of these values.  
@@ -118,7 +118,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**run_status**|**int**|Outcome of the job or step.|  
 |**run_date**|**int**|Date the job or step began executing.|  
 |**run_time**|**int**|Time the job or step began executing.|  
-|**run_duration**|**int**|Elapsed time in the execution of the job or step in HHMMSS format.|  
+|**run_duration**|**int**|Elapsed time in the execution of the job or step in `HHmmss` format.|  
 |**operator_emailed**|**nvarchar(20)**|Operator who was e-mailed regarding this job (is NULL for step history).|  
 |**operator_netsent**|**nvarchar(20)**|Operator who was sent a network message regarding this job (is NULL for step history).|  
 |**operator_paged**|**nvarchar(20)**|Operator who was paged regarding this job (is NULL for step history).|  

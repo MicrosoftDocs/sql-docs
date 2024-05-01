@@ -3,17 +3,20 @@ title: Connect to and query Azure SQL Database using Python and the pyodbc libra
 description: Learn how to connect to a database in Azure SQL Database and query data using Python and the pyodbc library.
 author: bobtabor-msft
 ms.author: rotabor
+ms.reviewer: mathoma
 ms.custom: passwordless-python
-ms.date: 05/11/2023
+ms.date: 03/21/2024
 ms.service: sql-database
 ms.subservice: security
 ms.topic: quickstart
 monikerRange: "= azuresql || = azuresql-db"
 content_well_notification: 
   - AI-contribution
+ai-usage: ai-assisted
 ---
 
 # Connect to and query Azure SQL Database using Python and the pyodbc driver
+[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using Python and the [Python SQL Driver - pyodbc](/sql/connect/python/pyodbc/python-sql-driver-pyodbc). This quickstart follows the recommended passwordless approach to connect to the database. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
 
@@ -23,7 +26,7 @@ This quickstart describes how to connect an application to a database in Azure S
 * An Azure SQL database configured with Microsoft Entra authentication. You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
 * The latest version of the [Azure CLI](/cli/azure/get-started-with-azure-cli).
 * Visual Studio Code with the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python).
-* Python 3.7 or later.
+* Python 3.8 or later. If you're using a Linux client machine, see [Install the ODBC driver](/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development?tabs=linux#install-the-odbc-driver).
 
 ## Configure the database
 
@@ -315,7 +318,7 @@ Append */docs* to the URL to see the Swagger UI and test the API methods.
 
 Congratulations! Your application is now connected to Azure SQL Database in both local and hosted environments.
 
-## Next steps
+## Related content
 
 - [Migrate a Python application to use passwordless connections with Azure SQL Database](./azure-sql-passwordless-migration-python.md) - Shows user-assigned managed identity.
 - [Passwordless connections for Azure services](/azure/developer/intro/passwordless-overview)

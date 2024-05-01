@@ -49,7 +49,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
  **sp_changedistributor_property** is used in all types of replication.  
   
 ## Example  
- [!code-sql[HowTo#sp_changedistributor_property](../../relational-databases/replication/codesnippet/tsql/sp-changedistributor-pro_1.sql)]  
+ :::code language="sql" source="../replication/codesnippet/tsql/sp-changedistributor-pro_1.sql":::
   
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_changedistributor_property**.  

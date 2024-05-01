@@ -221,7 +221,7 @@ Specifies whether or not to optimize for last-page insert contention. The defaul
  For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
 XML_COMPRESSION   
-**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi_md.md)].
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)].
 
 Specifies the XML compression option for any **xml** data type columns in the table. The options are as follows:
 

@@ -147,7 +147,7 @@ EXEC sp_fulltext_table 'Production.Document', 'drop';
 GO
 ```
 
-## See also
+## Related content
 
 - [INDEXPROPERTY (Transact-SQL)](../../t-sql/functions/indexproperty-transact-sql.md)
 - [OBJECTPROPERTY (Transact-SQL)](../../t-sql/functions/objectproperty-transact-sql.md)

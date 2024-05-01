@@ -4,9 +4,10 @@ description: A quickstart that walks through using creating a new container and 
 author: dlevy-msft
 ms.author: dlevy
 ms.reviewer: maghan, randolphwest
-ms.date: 09/18/2023
+ms.date: 12/06/2023
 ms.service: sql
 ms.subservice: tools-other
+ms.custom: linux-related-content
 ms.topic: quickstart
 monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017"
 ---
@@ -18,7 +19,7 @@ In this quickstart, you'll use a single command in **sqlcmd** to create a new co
 ## Prerequisites
 
 - A container runtime installed, such as [Docker](https://www.docker.com/) or [Podman](https://podman.io/)
-- Download and install [[!INCLUDE [name-sos-short](../../includes/name-sos-short.md)]](../../azure-data-studio/download-azure-data-studio.md)
+- Download and install [[!INCLUDE [azure-data-studio](../../includes/azure-data-studio-short.md)]](../../azure-data-studio/download-azure-data-studio.md)
 - Install the latest **sqlcmd**
 
 ## Remarks
@@ -39,17 +40,11 @@ This quickstart walks through the process of creating a local copy of a database
 
 ## Create a new container and restore a database
 
-Create a new [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance in a container using the latest version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. The command also restores the `WideWorldImporters` database.
-
-Open a new terminal window and run the following command:
-
-```bash
-sqlcmd create mssql --accept-eula --using https://github.com/Microsoft/sql-server-samples/releases/download/wide-world-importers-v1.0/WideWorldImporters-Full.bak
- ```
+[!INCLUDE [sqlcmd-create-container](../../includes/paragraph-content/sqlcmd-create-container.md)]
 
 ## Query the database in Azure Data Studio
 
-Open [!INCLUDE [name-sos-short](../../includes/name-sos-short.md)] and have a look at the data.
+Open [!INCLUDE [azure-data-studio](../../includes/azure-data-studio-short.md)] and have a look at the data.
 
 1. In the same terminal window, run the following command:
 
@@ -93,7 +88,7 @@ Open [!INCLUDE [name-sos-short](../../includes/name-sos-short.md)] and have a lo
 
 ## How did we solve the problem?
 
-You were able to quickly create a local copy of a database for development and testing purposes. With a single command, you created a new local instance and restored the most recent backup to it. You then ran another command to connect to it via Azure Data Studio. You then queried the database using [!INCLUDE [name-sos-short](../../includes/name-sos-short.md)] to analyze spending by customer.
+You were able to quickly create a local copy of a database for development and testing purposes. With a single command, you created a new local instance and restored the most recent backup to it. You then ran another command to connect to it via Azure Data Studio. You then queried the database using [!INCLUDE [azure-data-studio](../../includes/azure-data-studio-short.md)] to analyze spending by customer.
 
 ## Clean up resources
 
@@ -105,6 +100,6 @@ sqlcmd delete --force
 
 The `--force` flag is used here for convenience since we are in a demo environment. In most cases, it's better to leave the `--force` flag off to make sure you aren't inadvertently deleting a database you don't mean to.
 
-## Next steps
+## Related content
 
 - [Create and query a SQL Server container](sqlcmd-use-utility.md#create-and-query-a-sql-server-container)

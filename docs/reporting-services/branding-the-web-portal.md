@@ -1,5 +1,5 @@
 ---
-title: "Branding the web portal"
+title: "Brand the web portal"
 description: Learn to brand your web portal's appearance to your business through a brand package. The brand package is designed so that you don't need deep CSS knowledge.
 author: maggiesMSFT
 ms.author: maggies
@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
 
-# Branding the web portal
+# Brand the web portal
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirs](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -18,7 +18,7 @@ You can alter the appearance of the web portal by branding it to your business. 
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/m08kLuofwFA]
 
-## Creating the brand package
+## Create the brand package
   
 A brand package for Reporting Services consists of three items and is packaged as a zip file.
   
@@ -111,19 +111,19 @@ The interface section is broken down into the following groupings.
 ::: moniker range="<=sql-server-ver15"
 
 The first time you connect to a server with the Mobile Report Publisher that has a brand package deployed, the theme will be added to the available themes you can use in the upper right-hand menu of the app.  
-  
-![Screenshot of the Choose a color palette dialog box.](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
+
+:::image type="content" source="../reporting-services/media/ssrsbrandingmobilereportpublisher.png" alt-text="Screenshot of the Choose a color palette dialog box.":::
   
 You can then use that theme for any mobile reports that you create, even if they aren't for the same server that you have the theme deployed on.
 ::: moniker-end 
  
-### Using a logo
+### Use a logo
   
 If you include a logo with your brand package, it will appear in the web portal in place of the name you set for the web portal in the Site Settings menu.  
   
 The file you include for the logo must use the PNG file format. The file dimensions will be scaled once uploaded to the server. It should scale to around 290 px x 60 px.  
    
-## <a name="#applying-the-brand-package-to-the-web-portal"></a>Applying the brand package to the web portal
+## <a name="#applying-the-brand-package-to-the-web-portal"></a>Apply the brand package to the web portal
   
 Follow these steps to add, download, or remove a brand package.  
   
@@ -131,11 +131,11 @@ Follow these steps to add, download, or remove a brand package.
   
 2.  Select **Site Settings**.  
   
-    ![Screenshot of the Settings dropdown list with Site Settings option called out.](../reporting-services/media/ssrsgearmenu.png)  
+    :::image type="content" source="../reporting-services/media/ssrsgearmenu.png" alt-text="Screenshot of the Settings dropdown list with Site Settings option called out.":::
   
 3.  Select **Branding**.  
   
-    ![Screenshot of the Site Settings page with the Branding option selected.](../reporting-services/media/ssrsbranding.png) 
+    :::image type="content" source="../reporting-services/media/ssrsbranding.png" alt-text="Screenshot of the Site Settings page with the Branding option selected.":::
   
 **Currently installed brand package** either displays the name of the package that has been uploaded, or it displays None.  
   
@@ -273,10 +273,10 @@ You can also **Download** or **Remove** the package. Removing the package resets
 }  
 ```
 
-##  <a name="bkmk_download_samples"></a> To Download the Sample Branding Packages
- Download the samples from the GitHub site [Sample Branding Packages](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/reporting-services/branding) to a local folder. For more information, see the section [Applying the brand package to the web portal](#applying-the-brand-package-to-the-web-portal) in this article. 
+##  <a name="bkmk_download_samples"></a> Download the Sample Branding Packages
+ Download the samples from the GitHub site [Sample Branding Packages](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/reporting-services/branding) to a local folder. For more information, see the section [Apply the brand package to the web portal](#apply-the-brand-package-to-the-web-portal) in this article. 
 
-## Next steps
+## Related content
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
 

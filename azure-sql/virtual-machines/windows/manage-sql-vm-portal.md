@@ -8,7 +8,6 @@ ms.date: 10/16/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
-ms.custom: ignite-fall-2021
 tags: azure-resource-manager
 ---
 # Manage SQL Server VMs by using the Azure portal
@@ -20,14 +19,13 @@ In the [Azure portal](https://portal.azure.com), the [**SQL virtual machines**](
 
 The **SQL virtual machines** resource management point is different to the **Virtual machine** resource used to manage the underlying VM such as to start it, stop it, or restart it. 
 
-
 ## Prerequisites
 
 The **SQL virtual machines** resource is only available to SQL Server VMs that have been [registered with the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md). 
 
 ## Access the resource
 
-To access the **SQL virtual machines** resource, do the following:
+To access the **SQL virtual machines** resource, follow these steps:
 
 1. Open the [Azure portal](https://portal.azure.com). 
 1. Select **All Services**. 
@@ -56,7 +54,6 @@ The **Notifications** tab displays information from [SQL best practices assessme
 
    :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-resource.png" alt-text="Screenshot of the Azure portal, the overview pane of the SQL virtual machines resource." lightbox="./media/manage-sql-vm-portal/sql-vm-resource.png":::
 
-
 ## License and edition 
 
 Use the **Configure** page of the SQL virtual machines resource to change your SQL Server licensing metadata to **Pay as you go**, **Azure Hybrid Benefit**, or **HA/DR** for your [free Azure replica for disaster recovery](business-continuity-high-availability-disaster-recovery-hadr-overview.md#free-dr-replica-in-azure).
@@ -67,7 +64,10 @@ You can also modify the edition of SQL Server from the **Configure** page as wel
 
 Changing the license and edition metadata in the Azure portal is only supported once the version and edition of SQL Server has been modified internally to the VM. To learn more see, change the [version](change-sql-server-version.md) and [edition](change-sql-server-edition.md) of SQL Server on Azure VMs. 
 
-## Storage 
+## Storage configuration
+
+> [!NOTE]
+> Making changes to [Premium SSD v2](storage-configuration-premium-ssd-v2.md) for SQL Server VMs in the Azure portal is not currently supported so the **Storage Configuration** page of the SQL virtual machines resource shows **Not extendable** for Premium SSD v2 disks.  Review [Adjust performance](/azure/virtual-machines/disks-deploy-premium-v2?tabs=azure-cli#adjust-disk-performance) to learn more.
 
 Use the **Storage Configuration** page of the SQL virtual machines resource to extend your data, log, and `tempdb` drives. For guidance, review [storage configuration](storage-configuration.md) and [Storage: Performance best practices for SQL Server on Azure VMs](performance-guidelines-best-practices-storage.md).
 
@@ -75,13 +75,11 @@ For example, you can extend your storage:
 
 :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-storage-configuration.png" alt-text="Screenshot of the Azure portal, SQL virtual machines resource, showing where to extend storage.":::
 
-It's also possible to modify your `tempdb` settings using the **Storage configuration** page, such as the number of `tempdb` files, as well as the initial size, and the autogrowth ratio. Select **Configure** next to **tempdb** to open the **tempdb Configuration** page.
 
-Choose **Yes** next to **Configure tempdb data files** to modify your settings, and then choose **Yes** next to **Manage tempdb database folders on restart** to allow Azure to manage your `tempdb` configuration, folder and permissions the next time your SQL Server service starts. This does not require that you created the SQL virtual machine with an image from the Azure Marketplace.  
+> [!NOTE]
+> Storage is only extendable for SQL Server VMs that were deployed from a SQL Server image in Azure Marketplace, and not currently supported for [Premium SSD v2](storage-configuration-premium-ssd-v2.md) disks.
 
-:::image type="content" source="media/manage-sql-vm-portal/tempdb-configuration.png" alt-text="Screenshot of the tempdb configuration page of the Azure portal from the SQL virtual machines resource page.":::
 
-Restart your SQL Server service to apply your changes.
 
 ## Updates
 
@@ -108,7 +106,7 @@ Use the **Backups** page of the SQL virtual machines resource to configure your 
 To learn more, see, [Automated patching](automated-backup.md). 
 
 
-## High availability (Preview)
+## High availability
 
 Once you've configured your [availability group by using the Azure portal](availability-group-azure-portal-configure.md), use the **High Availability** page of the SQL virtual machines resource to monitor the health of your existing Always On availability group. 
 
@@ -122,7 +120,7 @@ To learn more, see [SQL best practices assessment for SQL Server on Azure VMs](s
 
 ## Security Configuration 
 
-Use the **Security Configuration** page of the SQL virtual machines resource to configure SQL Server security settings such as Azure Key Vault integration, [least privilege mode](sql-server-iaas-agent-extension-automate-management.md) or if you're on SQL Server 2022, [authentication](configure-azure-ad-authentication-for-sql-vm.md) with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). 
+Use the **Security Configuration** page of the SQL virtual machines resource to configure SQL Server security settings such as Azure Key Vault integration, [least privilege mode](sql-server-iaas-agent-extension-automate-management.md) or if you're on SQL Server 2022, [authentication](configure-azure-ad-authentication-for-sql-vm.md) with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). 
 
 :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-security-configuration.png" alt-text="Screenshot of the Azure portal, the SQL Server security page, where you can enable authentication.":::
 
@@ -135,7 +133,7 @@ To learn more, see the [Security best practices](security-considerations-best-pr
 
 ## Defender for Cloud 
 
-Use the **Defender for SQL** page of the SQL virtual machine's resource to view Defender for Cloud recommendations directly in the SQL virtual machine blade. Enable [Microsoft Defender for SQL](/azure/security-center/defender-for-sql-usage) to leverage this feature. 
+Use the **Defender for SQL** page of the SQL virtual machine's resource to view Defender for Cloud recommendations directly in the SQL virtual machine pane. Enable [Microsoft Defender for SQL](/azure/security-center/defender-for-sql-usage) to leverage this feature. 
 
 :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-security-center.png" alt-text="Screenshot of the Azure portal, SQL virtual machines resource, showing where to configure SQL Server Defender for Cloud settings.":::
 
@@ -147,8 +145,8 @@ From the **SQL IaaS Agent Extension Settings** page, you can [repair the extensi
 
 ## Related content
 
-- [Overview of SQL Server on a Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)
-- [FAQ for SQL Server on a Windows VM](frequently-asked-questions-faq.yml)
-- [Pricing guidance for SQL Server on a Windows VM](pricing-guidance.md)
+- [Overview of SQL Server on Windows VMs](sql-server-on-azure-vm-iaas-what-is-overview.md)
+- [FAQ for SQL Server on Windows VMs](frequently-asked-questions-faq.yml)
+- [Pricing guidance for SQL Server on Windows VMs](pricing-guidance.md)
 - [What's new for SQL Server on Azure VMs](doc-changes-updates-release-notes-whats-new.md)
 - [Checklist: Best practices for SQL Server on Azure VMs](performance-guidelines-best-practices-checklist.md)

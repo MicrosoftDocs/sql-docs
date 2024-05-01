@@ -4,9 +4,10 @@ description: "Learn what's new and changed in released versions of the Microsoft
 author: v-chojas
 ms.author: v-chojas
 ms.reviewer: v-davidengel
-ms.date: 10/10/2023
+ms.date: 04/09/2024
 ms.service: sql
 ms.subservice: connectivity
+ms.custom: linux-related-content
 ms.topic: conceptual
 ---
 # Release Notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS
@@ -27,6 +28,18 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+## 18.3.3, April 2024
+
+| New item | Details |
+| :------- | :------ |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+
+## 17.10.6, April 2024
+
+| New item | Details |
+| :------- | :------ |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
 
 ## 18.3.2, October 2023
 

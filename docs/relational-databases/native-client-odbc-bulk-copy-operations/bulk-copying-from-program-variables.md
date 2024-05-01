@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "data types [ODBC], bulk copying"
   - "ODBC, bulk copy operations"
   - "program variables [ODBC]"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Copying from Program Variables
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  **bcp_bind** supports three methods for dealing with variable-length data:  
   
--   Use *cbData* with only a data variable. Place the length of the data in *cbData*. Each time the length of the data to be bulk copied changes, call [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)to reset *cbData*. If one of the other two methods is being used, specify SQL_VARLEN_DATA for *cbData*. If all the data values being supplied for a column are NULL, specify SQL_NULL_DATA for *cbData*.  
+-   Use *cbData* with only a data variable. Place the length of the data in *cbData*. Each time the length of the data to be bulk copied changes, call [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) to reset *cbData*. If one of the other two methods is being used, specify SQL_VARLEN_DATA for *cbData*. If all the data values being supplied for a column are NULL, specify SQL_NULL_DATA for *cbData*.  
   
 -   Use indicator variables. As each new data value is moved into the data variable, store the length of the value in the indicator variable. If one of the other two methods is being used, specify 0 for *cbIndicator*.  
   

@@ -6,6 +6,7 @@ ms.author: v-davidengel
 ms.date: 02/15/2022
 ms.service: sql
 ms.subservice: connectivity
+ms.custom: linux-related-content
 ms.topic: conceptual
 helpviewer_keywords:
   - "bcp"
@@ -69,11 +70,14 @@ Specifies the full path of a format file.
 Specifies the number of the first row to export from a table or import from a data file.
 
 **-G**  
-This switch is used by the client when connecting to Azure SQL Database or Azure Synapse Analytics to specify that the user be authenticated using Azure Active Directory authentication. It can be combined with just the -P option to use access token authentication (v17.8+). The -G switch requires at least bcp version 17.6. To determine your version, execute bcp -v.
+This switch is used by the client when connecting to Azure SQL Database, Azure SQL Managed Instance or Azure Synapse Analytics to specify that the user be authenticated with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). It can be combined with just the -P option to use access token authentication (v17.8+). The -G switch requires at least bcp version 17.6. To determine your version, execute bcp -v.
+
 
 > [!IMPORTANT]
-> The `-G` option only applies to Azure SQL Database and Azure Synapse Analytics.
-> AAD Interactive Authentication is not currently supported on Linux or macOS. AAD Integrated Authentication requires [Microsoft ODBC Driver 17 for SQL Server](../download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [configured Kerberos environment](using-integrated-authentication.md#configure-kerberos).
+> The `-G` option only applies to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
+
+> Microsoft Entra interactive authentication is not currently supported on Linux or macOS. Microsoft Entra integrated authentication requires [Microsoft ODBC Driver 17 for SQL Server](../download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [configured Kerberos environment](using-integrated-authentication.md#configure-kerberos).
+
 
 **-k**  
 Specifies that empty columns should keep a null value during the operation, rather than have any default values for the columns inserted.

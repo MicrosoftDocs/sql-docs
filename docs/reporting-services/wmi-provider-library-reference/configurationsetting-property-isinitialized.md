@@ -1,6 +1,6 @@
 ---
-title: "IsInitialized Property (WMI MSReportServer_ConfigurationSetting)"
-description: "IsInitialized Property (WMI MSReportServer_ConfigurationSetting)"
+title: "IsInitialized property (WMI MSReportServer_ConfigurationSetting)"
+description: "IsInitialized property (WMI MSReportServer_ConfigurationSetting)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -14,7 +14,7 @@ apilocation: "reportingservices.mof"
 apiname: "IsInitialized"
 apitype: MOFDef
 ---
-# ConfigurationSetting Property - IsInitialized
+# ConfigurationSetting property - IsInitialized
   Indicates whether the report server instance is initialized. Read-only.  
   
 ## Syntax  
@@ -27,16 +27,16 @@ Public Dim IsInitialized As Boolean
 public Boolean DatabaseLogonName;  
 ```  
   
-## Property Values  
+## Property values  
  A **Boolean** object indicating whether the report server instance is initialized.  
   
-## Example Code  
- [MSReportServer_ConfigurationSetting Class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
+## Example code  
+ [MSReportServer_ConfigurationSetting class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+## Related content  
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

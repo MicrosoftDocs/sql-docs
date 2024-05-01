@@ -86,7 +86,7 @@ The following example certifies that the `inventory` database is ready to be rem
 EXEC sp_certify_removable inventory, AUTO;
 ```
 
-## See also
+## Related content
 
 - [Database Detach and Attach (SQL Server)](../databases/database-detach-and-attach-sql-server.md)
 - [sp_create_removable (Transact-SQL)](sp-create-removable-transact-sql.md)

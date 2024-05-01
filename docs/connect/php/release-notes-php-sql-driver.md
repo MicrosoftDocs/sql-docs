@@ -4,9 +4,10 @@ description: This page discusses what was changed in each version of the Microso
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
-ms.date: 09/06/2023
+ms.date: 01/31/2024
 ms.service: sql
 ms.subservice: connectivity
+ms.custom: linux-related-content
 ms.topic: conceptual
 helpviewer_keywords:
   - "what's new in version 1.1"
@@ -15,9 +16,27 @@ helpviewer_keywords:
 
 This page discusses what was added in each version of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 
+## 5.12.0
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft Drivers for PHP for SQL Server (Windows)](https://go.microsoft.com/fwlink/?linkid=2258816)**   
+[GitHub Release Tag v5.12.0 (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/v5.12.0)
+
+- Release number: 5.12.0
+- Released: January 31, 2024
+
+### What's new in 5.12.0
+| New item | Details |
+| :------- | :------ | 
+| Added support for PHP 8.3. | &nbsp; |
+| Removed support for PHP 8.0. | &nbsp; |
+| Removed support for Ubuntu 18.04. | &nbsp; |
+| Fixed invalid precision error for varchar. | &nbsp; |
+
+## Previous releases
+
 ## 5.11.1
 
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft Drivers for PHP for SQL Server (Windows)](https://go.microsoft.com/fwlink/?linkid=2246325)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Microsoft Drivers for PHP for SQL Server (Windows)](https://go.microsoft.com/fwlink/?linkid=2246325)   
 [GitHub Release Tag v5.11.1 (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/v5.11.1)
 
 - Release number: 5.11.1
@@ -32,11 +51,10 @@ This page discusses what was added in each version of the [!INCLUDE[ssDriverPHP]
 | Change connection options to case insensitive. | &nbsp; |
 | Bugfix for 1465 Adding a NULL check. | &nbsp; |
 
-## Previous releases
 
 ## 5.11.0
 
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft Drivers for PHP for SQL Server (Windows)](https://go.microsoft.com/fwlink/?linkid=2226724)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Microsoft Drivers for PHP for SQL Server (Windows)](https://go.microsoft.com/fwlink/?linkid=2226724)  
 [GitHub Release Tag v5.11.0 (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/v5.11.0)
 
 - Release number: 5.11.0
@@ -191,7 +209,7 @@ This release only applies to Linux and macOS.
 | Dropped support for PHP 7.0. | &nbsp; |
 | Support for Microsoft ODBC Driver 17.3 on all platforms. | &nbsp; |
 | Support for macOS Mojave. | Requires ODBC Driver 17.3 or above. |
-| Support for Ubuntu 18.10 and Suse Linux 15. | Both require ODBC Driver 17.3 or above. |
+| Support for Ubuntu 18.10 and SUSE Linux 15. | Both require ODBC Driver 17.3 or above. |
 | Dropped support for Linux Ubuntu 17.10 and macOS El Capitan. | &nbsp; |
 | Support for Azure AD Access Token. | In Linux and macOS, requires ODBC Driver 17.2+ and unixODBC 2.3.6+. |
 | Support for Authentication with Azure AD using Managed Identity for Azure Resources. | Requires ODBC Driver 17.3+. |
@@ -232,7 +250,7 @@ This release only applies to Linux and macOS.
 - Support for PHP 7.2.1 and up on Windows, and 7.2.0 and up on other platforms
 - Support for Microsoft ODBC Driver 17
   - Version 17 is now the default on all platforms
-- Support for Ubuntu 17.10, Debian 9, and Suse Enterprise Linux 12
+- Support for Ubuntu 17.10, Debian 9, and SUSE Linux Enterprise Server 12
 - Dropped support for Ubuntu 15.10
 - Support for Always Encrypted with CRUD functionalities on Windows. For more information, see [Using Always Encrypted with the PHP Drivers for SQL Server](using-always-encrypted-php-drivers.md)
   - Support for Windows Certificate Store

@@ -1,6 +1,6 @@
 ---
 title: "sp_add_job (Transact-SQL)"
-description: "sp_add_job creates a new job to be executed by the SQL Agent service."
+description: "sp_add_job creates a new job to be executed by the SQL Server Agent service."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
@@ -53,7 +53,7 @@ sp_add_job
 
 ## Arguments
 
-#### @job_name 
+#### @job_name
 
 The name of the job. The name must be unique and can't contain the percent (`%`) character. *@job_name* is **nvarchar(128)**, with no default. Required.
 
@@ -61,7 +61,7 @@ The name of the job. The name must be unique and can't contain the percent (`%`)
 
 Indicates the status of the added job. *enabled* is **tinyint**, with a default of `1` (enabled). If `0`, the job isn't enabled and doesn't run according to its schedule; however, it can be run manually.
 
-#### @description 
+#### @description
 
 The description of the job. *@description* is **nvarchar(512)**, with a default of `NULL`. If *@description* is omitted, `N'No description available'` is used.
 
@@ -112,7 +112,7 @@ The e-mail name of the person to send e-mail to when *@notify_email_operator_nam
 
 The name of the operator to whom the network message is sent upon completion of this job. *@notify_netsend_operator_name* is **sysname**, with a default of `NULL`.
 
-#### @notify_page_operator_name 
+#### @notify_page_operator_name
 
 The name of the person to page upon completion of this job. *@notify_page_operator_name* is **sysname**, with a default of `NULL`.
 
@@ -139,9 +139,9 @@ None.
 
 *@originating_server* exists in `sp_add_job`, but isn't listed under Arguments. *@originating_server* is reserved for internal use.
 
-After `sp_add_job` has been executed to add a job, `sp_add_jobstep` can be used to add steps that perform the activities for the job. `sp_add_jobschedule` can be used to create the schedule that the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent service uses to execute the job. 
+After `sp_add_job` has been executed to add a job, `sp_add_jobstep` can be used to add steps that perform the activities for the job. `sp_add_jobschedule` can be used to create the schedule that the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent service uses to execute the job.
 
-Use `sp_add_jobserver` to set the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance where the job executes, and `sp_delete_jobserver` to remove the job from the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance. If the job executes on one or more target servers in a multiserver environment, use `sp_apply_job_to_targets` to set the target servers or target server groups for the job. To remove jobs from target servers or target server groups, use `sp_remove_job_from_targets`. The [Multi Server Administration (MSX/TSX) feature is not supported on [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)]](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+Use `sp_add_jobserver` to set the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance where the job executes, and `sp_delete_jobserver` to remove the job from the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance. If the job executes on one or more target servers in a multiserver environment, use `sp_apply_job_to_targets` to set the target servers or target server groups for the job. To remove jobs from target servers or target server groups, use `sp_remove_job_from_targets`. The [Multi Server Administration (MSX/TSX) feature is not supported on [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides an easy, graphical way to manage jobs, and is the recommended way to create and manage the job infrastructure.
 
@@ -202,7 +202,7 @@ EXEC dbo.sp_add_job
 GO
 ```
 
-## Next steps
+## Related content
 
 - [sp_add_schedule (Transact-SQL)](sp-add-schedule-transact-sql.md)
 - [sp_add_jobstep (Transact-SQL)](sp-add-jobstep-transact-sql.md)

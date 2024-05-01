@@ -21,7 +21,7 @@ helpviewer_keywords:
  There are two ways to add a proxy class to your development project using the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]: with the WSDL tool in the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], and by adding a Web reference in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. The following sections discuss this subject in further detail.  
   
 ## Adding the Proxy Using the WSDL Tool  
- The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK includes the Web Services Description Language tool (Wsdl.exe), which enables you to generate a Web service proxy for use in the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] development environment. The most common way to create a client proxy in languages that support Web services (currently C# and [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) is to use the WSDL tool.  
+ The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK includes the Web Services Description Language tool (Wsdl.exe), which enables you to generate a Web service proxy for use in the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] development environment. The most common way to create a client proxy in languages that support Web services (currently C# and [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[visual-basic](../../../includes/visual-basic-md.md)]) is to use the WSDL tool.  
   
  **To add a proxy class to your project using Wsdl.exe**  
   
@@ -33,7 +33,7 @@ helpviewer_keywords:
     wsdl /language:CS /n:"Microsoft.SqlServer.ReportingServices2010" https://<Server Name>/reportserver/reportservice2010.asmx?wsdl  
     ```  
   
-     The WSDL tool accepts a number of command-prompt arguments for generating a proxy. The preceding example specifies the language C#, a suggested namespace to use in the proxy (to prevent name collision if using more than one Web service endpoint), and generates a C# file called ReportingService2010.cs. If the example had specified [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], the example would have generated a proxy file with the name ReportingService2010.vb. This file is created in the directory from which you run the command.  
+     The WSDL tool accepts a number of command-prompt arguments for generating a proxy. The preceding example specifies the language C#, a suggested namespace to use in the proxy (to prevent name collision if using more than one Web service endpoint), and generates a C# file called ReportingService2010.cs. If the example had specified [!INCLUDE[visual-basic](../../../includes/visual-basic-md.md)], the example would have generated a proxy file with the name ReportingService2010.vb. This file is created in the directory from which you run the command.  
   
 2.  Compile the proxy class into an assembly file (with the extension .dll) and reference it in your project, or add the class as a project item.  
   
@@ -110,7 +110,7 @@ rs.Credentials = System.Net.CredentialCache.DefaultCredentials;
   
 ```  
   
- You can also add a **using** (**Import** in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) directive to the Report Server Web service reference. If you use this directive, you do not need to fully qualify the types in the namespace. To do this, add the following code to your file:  
+ You can also add a **using** (**Import** in [!INCLUDE[visual-basic](../../../includes/visual-basic-md.md)]) directive to the Report Server Web service reference. If you use this directive, you do not need to fully qualify the types in the namespace. To do this, add the following code to your file:  
   
 ```vb  
 Import myNamespace.myReferenceName  

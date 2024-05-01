@@ -118,7 +118,7 @@ For a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnover
 
   - For Microsoft Connectors for Oracle and Teradata by Attunity for SQL Server 2017 and before, see [Attunity connectors](../attunity-connectors.md).
 
-  - Microsoft® Connector for SAP BW for Microsoft SQL Server®. To get these components, see [Microsoft® SQL Server® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
+  - Microsoft Connector for SAP BW for Microsoft SQL Server. To get these components, see [Microsoft SQL Server 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
 
 ## Next steps
 

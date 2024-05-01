@@ -4,17 +4,18 @@ description: This article contains the release notes and supported features for 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 10/10/2023
+ms.date: 02/15/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: linux-related-content
+ms.custom:
+  - linux-related-content
 ---
 # Release notes for SQL Server 2017 on Linux
 
 [!INCLUDE [sqlserver2017-linux](../includes/applies-to-version/sqlserver2017-linux.md)]
 
-The following release notes apply to [!INCLUDE [ssSQL17](../includes/sssql17-md.md)] running on Linux. This article is broken into sections for each release. For detailed supportability and known issues, see [Known issues](#known-issues). Each release links to a support article describing the changes, in addition to the Linux package downloads.
+The following release notes apply to [!INCLUDE [ssSQL17](../includes/sssql17-md.md)] running on Linux. This article is broken into sections for each release. For detailed supportability and known issues, see [SQL Server on Linux: Known issues](sql-server-linux-known-issues.md). Each release links to a support article describing the changes, in addition to the Linux package downloads.
 
 These release notes are specifically for [!INCLUDE [ssSQL17](../includes/sssql17-md.md)] releases. For release notes on other editions, see the following articles:
 
@@ -27,11 +28,11 @@ These release notes are specifically for [!INCLUDE [ssSQL17](../includes/sssql17
 
 ## Tools
 
-Most existing client tools that target [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] can seamlessly target [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] running on Linux. Some tools might have a specific version requirement to work well with Linux. For a full list of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] tools, see [SQL Tools and Utilities for SQL Server](../tools/overview-sql-tools.md).
+Most existing client tools that target [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] can seamlessly target [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] running on Linux. Some tools might have a specific version requirement to work well with Linux. For a full list of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] tools, see [SQL tools overview](../tools/overview-sql-tools.md).
 
 ## Latest versions for all packages
 
-This section lists the latest versions of each package per distribution, for [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] 2017. The following table shows the most recent release, which is **CU 31 GDR 2**. For full release history, see [Release history for [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] 2017](/troubleshoot/sql/linux/release-history-2017).
+This section lists the latest versions of each package per distribution, for [!INCLUDE [ssSQL17](../includes/sssql17-md.md)]. The following table shows the most recent release, which is **CU 31 GDR 2**. For full release history, see [Release history for [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] 2017](/troubleshoot/sql/linux/release-history-2017).
 
 | Version | Release | Date | Build | KB article |
 | --- | --- | --- | --- | --- |
@@ -40,8 +41,8 @@ This section lists the latest versions of each package per distribution, for [!I
 > [!IMPORTANT]  
 > This is the final cumulative update for [!INCLUDE [ssSQL17](../includes/sssql17-md.md)].
 
-- As of CU 4, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Agent is no longer installed as a separate package. It is installed with the Database Engine package and must be enabled to use.
-- The **mssql-server-is** package isn't supported on SUSE in this release. For more information, see [SQL Server Integration Services (SSIS)](#ssis).
+- As of CU 4, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Agent is no longer installed as a separate package. It's installed with the Database Engine package and must be enabled to use.
+- The **mssql-server-is** package isn't supported on SUSE in this release. For more information, see [SQL Server on Linux: Known issues](sql-server-linux-known-issues.md#sql-server-integration-services-ssis).
 
 | Distribution | Package name | Package version | Download |
 | --- | --- | --- | --- |
@@ -50,7 +51,7 @@ This section lists the latest versions of each package per distribution, for [!I
 | RHEL 8 | Full-Text Search | 14.0.3465.1-1 | [Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3465.1-1.x86_64.rpm) |
 | RHEL 8 | High Availability | 14.0.3465.1-1 | [High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3465.1-1.x86_64.rpm) |
 | RHEL 7 | SSIS | 14.0.3015.40-1 | [SSIS RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/mssql-server-is-14.0.3015.40-1.x86_64.rpm) |
-| **SUSE Enterprise Linux Server** | | | |
+| **SUSE Linux Enterprise Server** | | | |
 | SLES 12 | Database Engine | 14.0.3465.1-1 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-14.0.3465.1-1.x86_64.rpm) |
 | SLES 12 | Full-Text Search | 14.0.3465.1-1 | [Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3465.1-1.x86_64.rpm) |
 | SLES 12 | High Availability | 14.0.3465.1-1 | [High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3465.1-1.x86_64.rpm) |
@@ -62,13 +63,13 @@ This section lists the latest versions of each package per distribution, for [!I
 
 ## <a id="cuinstall"></a> How to install updates
 
-When you configure the CU repository (`mssql-server-2017`), you get the latest CU of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] packages when you perform new installations. If you require Docker container images, see official images for [Microsoft SQL Server on Linux for Docker Engine](https://hub.docker.com/r/microsoft/mssql-server/). For more information about repository configuration, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
+When you configure the CU repository (`mssql-server-2017`), you get the latest CU of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] packages when you perform new installations. If you require Docker container images, see official images for [Microsoft SQL Server on Linux for Docker Engine](https://hub.docker.com/_/microsoft-mssql-server). For more information about repository configuration, see [Configure repositories for installing and upgrading SQL Server on Linux](sql-server-linux-change-repo.md).
 
-If you are updating existing [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] packages, run the appropriate update command for each package to get the latest CU. For specific update instructions for each package, see the following installation guides:
+If you update existing [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] packages, run the appropriate update command for each package to get the latest CU. For specific update instructions for each package, see the following installation guides:
 
 - [Install SQL Server package](sql-server-linux-setup.md#upgrade)
-- [Install Full-Text Search package](sql-server-linux-setup-full-text-search.md)
-- [Install SQL Server Integration Services](sql-server-linux-setup-ssis.md)
+- [Install SQL Server Full-Text Search on Linux](sql-server-linux-setup-full-text-search.md)
+- [Install SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)
 - [Enable SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 
 ## Release history
@@ -121,14 +122,14 @@ The following table lists the release history for [!INCLUDE [ssSQL17](../include
 
 ## Known issues
 
-[!INCLUDE [linux-known-issues-2017](includes/linux-known-issues-2017.md)]
+For more information, see [SQL Server on Linux: Known issues](sql-server-linux-known-issues.md).
 
 ## Related content
 
 - [SQL Server on Linux FAQ](sql-server-linux-faq.yml)
-- [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
-- [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
-- [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Run on Docker](quickstart-install-connect-docker.md)
+- [Quickstart: Install SQL Server and create a database on Red Hat](quickstart-install-connect-red-hat.md)
+- [Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+- [Quickstart: Install SQL Server and create a database on Ubuntu](quickstart-install-connect-ubuntu.md)
+- [Quickstart: Run SQL Server Linux container images with Docker](quickstart-install-connect-docker.md)
 - [Create a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart)
-- [Run & Connect - Cloud](quickstart-install-connect-clouds.md)
+- [Quickstart: Run SQL Server in the cloud](quickstart-install-connect-clouds.md)

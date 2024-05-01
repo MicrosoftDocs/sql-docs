@@ -5,6 +5,7 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 08/24/2022
 ms.service: reporting-services
+ms.subservice: report-server-sharepoint
 ms.topic: conceptual
 ms.custom: updatefrequency5
 helpviewer_keywords:
@@ -22,7 +23,7 @@ The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](.
 ##  [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Reporting Services Add-in for SharePoint Products  
  To download and install the add-in see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center:  
   
--   [Microsoft® SQL Server 2016 Reporting Services Add-in for Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=103442)  
+-   [Microsoft SQL Server 2016 Reporting Services Add-in for Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=103442)  
   
  The [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] version of the add-in is also available in the [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Installation wizard:  
   
@@ -33,7 +34,7 @@ The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](.
 ##  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services Add-in for SharePoint Products  
  To download and install the add-in see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center:  
   
--   [Microsoft® SQL Server 2014 Reporting Services Add-in for Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=57959)  
+-   [Microsoft SQL Server 2014 Reporting Services Add-in for Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=57959)  
   
  The [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] version of the add-in is also available in the [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Installation wizard:  
   
@@ -46,7 +47,7 @@ The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](.
   
  To download and install the add-in see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center:  
  
-  -   [Microsoft® SQL Server 2012 Reporting Services Add-in for Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=56052)  
+  -   [Microsoft SQL Server 2012 Reporting Services Add-in for Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=56052)  
 
 ## Next steps
 

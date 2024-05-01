@@ -4,7 +4,7 @@ description: This article explains the Automated Backup feature for SQL Server 2
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma
-ms.date: 09/12/2023
+ms.date: 04/22/2024
 ms.service: virtual-machines-sql
 ms.subservice: backup
 ms.topic: how-to
@@ -39,6 +39,7 @@ To use Automated Backup, review the following prerequisites:
 
 - Target _user_ databases must use the full recovery model. System databases don't have to use the full recovery model. However, if you require log backups to be taken for `model` or `msdb`, you must use the full recovery model. For more information about the impact of the full recovery model on backups, see [Backup under the full recovery model](/previous-versions/sql/sql-server-2008-r2/ms190217(v=sql.105)). 
 - The SQL Server VM has been registered with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) and the **Automated Backup** feature is enabled. Since Automated Backup relies on the extension, Automated Backup is only supported on target databases from the default instance, or a single named instance. If there's no default instance, and multiple named instances, the SQL IaaS Agent extension fails and Automated Backup won't work. 
+- If you're running automated backups on a secondary Always On availability group replica, the replica must be **Readable** for the backups to succeed. 
 
 ## Settings
 
@@ -49,7 +50,7 @@ The following table describes the options that can be configured for Automated B
 | Setting | Range (Default) | Description |
 | --- | --- | --- |
 | **Automated Backup** | Enable/Disable (Disabled) | Enables or disables Automated Backup for an Azure VM running SQL Server 2016 or later Developer, Standard, or Enterprise. |
-| **Retention Period** | 1-90 days (90 days) | The number of days to retain backups. |
+| **Retention Period** | 1-90 days (90 days) | The number of days the service retains backup metadata in `msdb`. After the retention period expires for a backup, the metadata is deleted from `msdb`, but files aren't deleted from the storage container. You can use a [lifecycle management policy](/azure/storage/blobs/lifecycle-management-policy-configure) for your storage account to balance backup retention with cost management according to your business needs.    |
 | **Storage Account** | Azure storage account | An Azure storage account to use for storing Automated Backup files in blob storage. A container is created at this location to store all backup files. The backup file naming convention includes the date, time, and database GUID. |
 | **Encryption** |Enable/Disable (Disabled) | Enables or disables backup encryption. When backup encryption is enabled, the certificates used to restore the backup are located in the specified storage account in the same `automaticbackup` container using the same naming convention. If the password changes, a new certificate is generated with that password, but the old certificate remains to restore prior backups. |
 | **Password** |Password text | A password for encryption keys. This password is only required if encryption is enabled. In order to restore an encrypted backup, you must have the correct password and related certificate that was used at the time the backup was taken. |
@@ -128,7 +129,7 @@ By default the schedule is set automatically, but you can create your own schedu
 
 The following Azure portal screenshot shows the **Automated Backup** settings when you create a new SQL Server VM:
 
-![Automated Backup configuration in the Azure portal](./media/automated-backup/automated-backup-blade.png)
+:::image type="content" source="./media/automated-backup/automated-backup-blade.png" alt-text="Screenshot of Automated Backup configuration in the Azure portal.":::
 
 
 ## Configure existing VMs
@@ -139,11 +140,12 @@ Select **Enable** to configure your Automated Backup settings.
 
 You can configure the retention period (up to 90 days), the container for the storage account where you want to store your backups, as well as the encryption, and the backup schedule. By default, the schedule is automated.
 
-![Automated Backup for existing VMs](./media/automated-backup/sql-server-configuration.png)
+:::image type="content" source="./media/automated-backup/sql-server-configuration.png" alt-text="Screenshot of Automated Backup for existing VMs in the portal.":::
+
 
 If you want to set your own backup schedule, choose **Manual** and configure the backup frequency, whether or not you want system databases backed up, and the transaction log backup interval in minutes. 
 
-![Select manual to configure your own backup schedule](./media/automated-backup/configure-manual-backup-schedule.png)
+:::image type="content" source="./media/automated-backup/configure-manual-backup-schedule.png" alt-text="Screenshot of selecting manual to configure your own backup schedule.":::
 
 When finished, select the **Apply** button on the bottom of the **Backups** settings page to save your changes.
 
@@ -363,6 +365,32 @@ Update-AzSqlVM -ResourceGroupName $resourcegroupname -Name $vmname -AutoBackupSe
 -AutoBackupSettingBackupSystemDb
 ```
 
+## Backup with encryption certificates
+
+If you decide to encrypt your backups, an encryption certificate will be generated and saved in the same storage account as the backups. In this scenario, you will also need to enter a password which will be used to protect the encryption certificates used for encrypting and decrypting your backups. This allows you to not worry about your backups beyond the configuration of this feature, and also ensures you can trust that your backups are secure.
+
+When backup encryption is enabled, we strongly recommend that you ascertain whether the encryption certificate has been successfully created and uploaded to ensure restorability of your databases. You can do so by creating a database right away and checking the encryption certificates and data were backed up to the newly created container properly. This will show that everything was configured correctly and no anomalies took place.
+
+If the certificate failed to upload for some reason, you can use the certificate manager to export the certificate and save it. You do not want to save it on the same VM, however, as this does not ensure you have access to the certificate when the VM is down. To know if the certificate was backed up properly after changing or creating the Automated Backup configuration, you can check the event logs in the VM,  and if it failed you will see this error message:
+
+:::image type="content" source="./media/automated-backup/automated-backup-event-log.png" alt-text="Screenshot of the error message shown in the Event Log in VM.":::
+
+If the certificates were backed up correctly, you will see this message in the Event Logs:
+
+:::image type="content" source="./media/automated-backup/automated-backup-success.png" alt-text="Screenshot of the successful backup of encryption certificate in event logs.":::
+
+As a general practice, it is recommended to check on the health of your backups from time to time. In order to be able to restore your backups, you should do the following:
+
+1. Confirm that your encryption certificates have been backed up and you remember your password. If you do not do this, you will not be able to decrypt and restore your backups. If for some reason your certificates were not properly backed up, you can accomplish this manually by executing the following T-SQL query:
+
+   ```sql
+   BACKUP MASTER KEY TO FILE = <file_path> ENCRYPTION BY PASSWORD = <password>
+   BACKUP CERTIFICATE [AutoBackup_Certificate] TO FILE = <file_path> WITH PRIVATE KEY (FILE = <file_path>, ENCRYPTION BY PASSWORD = <password>)
+   ```
+
+1. Confirm that your backup files are uploaded with at least 1 full backup. Because mistakes happen, you should be sure you always have at least one full backup before deleting your VM, or in case your VM gets corrupted, so you know you can still access your data. You should make sure the backup in storage is safe and recoverable before deleting your VM’s data disks.
+
+
 ## Monitoring
 
 To monitor Automated Backup on SQL Server 2016 and later, you have two main options. Because Automated Backup uses the SQL Server Managed Backup feature, the same monitoring techniques apply to both.
@@ -413,6 +441,7 @@ The following table lists possible errors and solutions when working with Automa
 | **Managed backup fails intermittently/Error:Execution timeout Expired** | This is a known issue fixed in [CU18](https://support.microsoft.com/topic/kb5017593-cumulative-update-18-for-sql-server-2019-5fa00c36-edeb-446c-94e3-c4882b7526bc#bkmk_14913295) for SQL Server 2019 and [KB4040376] for SQL Server 2014-2017.|
 | **Error: The remote server returned an error: (403) Forbidden**  | Repair the [SQL IaaS Agent extension](sql-agent-extension-troubleshoot-known-issues.md#repair-extension). | 
 | **Error 3202: Write on Storage account failed 13 (The data is invalid)** | Remove the immutable blob policy on the storage container and make sure the storage account is using, at minimum, TLS 1.0.  | 
+| **Error 3063: Write to backup block blob device. Device has reached its limit of allowed blocks.** | This can happen if you're running automated backups from a secondary Always On availability group replica that has the `Readable` configuration set to `NO`. For automated backups to work on a secondary replica, the replica must be readable. | 
 
 
 

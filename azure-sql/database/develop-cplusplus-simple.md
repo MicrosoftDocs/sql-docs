@@ -8,7 +8,7 @@ ms.date: 12/12/2018
 ms.service: sql-database
 ms.subservice: development
 ms.topic: how-to
-ms.custom: sqldbrb=1
+ms.custom: sqldbrb=1, linux-related-content
 ms.devlang: cpp
 ---
 # Connect to SQL Database using C and C++

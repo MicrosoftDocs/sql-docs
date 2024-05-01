@@ -12,6 +12,7 @@ f1_keywords:
 ---
 # Change Data Capture Designer for Oracle by Attunity F1 Help Reference
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
 
   The Change Data Capture Designer for Oracle by Attunity is used to create and manage Oracle CDC Instance. The topics in this section explain how to carry out the available tasks in the CDC Designer Console.  
   

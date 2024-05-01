@@ -6,7 +6,7 @@ ms.author: maghan
 ms.date: 12/16/2021
 ms.service: sql
 ms.subservice: ssms
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
   - "SQL Server Agent jobs, action flow logic"
   - "successful jobs [SQL Server]"

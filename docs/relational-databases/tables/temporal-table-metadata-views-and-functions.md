@@ -15,7 +15,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 
-[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] include a number of metabase views and functions to enable administrators to retrieve information about temporal tables.
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] and [!INCLUDE[sssds](../../includes/sssds-md.md)] include a number of metabase views and functions to enable administrators to retrieve information about temporal tables.
 
 Information about temporal tables is exposed in the following metadata views:
 

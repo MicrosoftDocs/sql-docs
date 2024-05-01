@@ -13,6 +13,8 @@ ms.topic: conceptual
 # SqlPackage Extract parameters and properties
 The SqlPackage Extract action creates a schema of a connected database in a DACPAC file (.dacpac). By default, data is not included in the .dacpac file. To include data, utilize the [Export action](sqlpackage-export.md) or use the Extract properties *ExtractAllTableData*/*TableData*. 
 
+[!INCLUDE [entra-id](../../includes/entra-id-hard-coded.md)]
+
 ## Command-line syntax
 
 **SqlPackage** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
@@ -40,17 +42,17 @@ SqlPackage /Action:Extract /TargetFile:{filename}.dacpac /DiagnosticsFile:{logFi
     /SourceServerName:{serverFQDN} /SourceDatabaseName:{databaseName} /SourceUser:{username} /SourcePassword:{password}
 
 
-# example extract to create a schema-only .dacpac file connecting using Active Directory Managed Identity
+# example extract to create a schema-only .dacpac file connecting using Microsoft Entra managed identity
 SqlPackage /Action:Extract /TargetFile:"C:\AdventureWorksLT.dacpac" \
     /SourceConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Managed Identity;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 
 
-# example extract to create a schema-only .dacpac file connecting using Azure Active Directory username and password
+# example extract to create a schema-only .dacpac file connecting using Microsoft Entra username and password
 SqlPackage /Action:Extract /TargetFile:"C:\AdventureWorksLT.dacpac" \
     /SourceConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Password;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;User ID={yourusername};Password={yourpassword}"
 
 
-# example extract to create a schema-only .dacpac file connecting using Azure Active Directory universal authentication
+# example extract to create a schema-only .dacpac file connecting using Microsoft Entra universal authentication
 SqlPackage /Action:Extract /TargetFile:"C:\AdventureWorksLT.dacpac" /UniversalAuthentication:True \
     /SourceConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 ```
@@ -74,7 +76,7 @@ SqlPackage /at:$($AccessToken_Object.Token) /Action:Extract /TargetFile:"C:\Adve
 |---|---|---|---|
 |**/AccessToken:**|**/at:**|{string}| Specifies the token based authentication access token to use when connect to the target database. |
 |**/Action:**|**/a:**|Extract|Specifies the action to be performed. |
-|**/AzureCloudConfig:**|**/acc:**|{string}|Specifies the custom endpoints for connecting to Azure Active Directory in the format: AzureActiveDirectoryAuthority={value};DatabaseServicePrincipalName={value}" .|
+|**/AzureCloudConfig:**|**/acc:**|{string}|Specifies the custom endpoints for connecting to Microsoft Entra ID in the format: AzureActiveDirectoryAuthority={value};DatabaseServicePrincipalName={value}" .|
 |**/Diagnostics:**|**/d:**|{True&#124;False}|Specifies whether diagnostic logging is output to the console. Defaults to False. |
 |**/DiagnosticsFile:**|**/df:**|{string}|Specifies a file to store diagnostic logs. |
 |**/MaxParallelism:**|**/mp:**|{int}| Specifies the degree of parallelism for concurrent operations running against a database. The default value is 8. |
@@ -91,9 +93,9 @@ SqlPackage /at:$($AccessToken_Object.Token) /Action:Extract /TargetFile:"C:\Adve
 |**/SourceTrustServerCertificate:**|**/stsc:**|{True&#124;False}|Specifies whether to use TLS to encrypt the source database connection and bypass walking the certificate chain to validate trust. Default value is False. |
 |**/SourceUser:**|**/su:**|{string}|For SQL Server Auth scenarios, defines the SQL Server user to use to access the source database. |
 |**/TargetFile:**|**/tf:**|{string}| Specifies a target file (that is, a .dacpac file) in local storage to be used as the target of action instead of a database. If this parameter is used, no other target parameter shall be valid. This parameter shall be invalid for actions that only support database targets.| 
-|**/TenantId:**|**/tid:**|{string}|Represents the Azure AD tenant ID or domain name. This option is required to support guest or imported Azure AD users as well as Microsoft accounts such as outlook.com, hotmail.com, or live.com. If this parameter is omitted, the default tenant ID for Azure AD will be used, assuming that the authenticated user is a native user for this AD. However, in this case any guest or imported users and/or Microsoft accounts hosted in this Azure AD are not supported and the operation will fail. <br/> For more information about Active Directory Universal Authentication, see [Universal Authentication with SQL Database and Azure Synapse Analytics (SSMS support for MFA)](/azure/sql-database/sql-database-ssms-mfa-authentication).|
+|**/TenantId:**|**/tid:**|{string}|Represents the Microsoft Entra tenant ID or domain name. This option is required to support guest or imported Microsoft Entra users as well as Microsoft accounts such as outlook.com, hotmail.com, or live.com. If this parameter is omitted, the default tenant ID for Microsoft Entra ID will be used, assuming that the authenticated user is a native user for this tenant. However, in this case any guest or imported users and/or Microsoft accounts hosted in this Microsoft Entra ID are not supported and the operation will fail. <br/> For more information, see [Universal authentication with SQL Database and Azure Synapse Analytics (SSMS support for MFA)](/azure/azure-sql/database/authentication-mfa-ssms-overview).|
 |**/ThreadMaxStackSize:**|**/tmss:**|{int}|Specifies the maximum size in megabytes for the thread running the SqlPackage action. This option should only be used when encountering stack overflow exceptions that occur when parsing very large Transact-SQL statements.|
-|**/UniversalAuthentication:**|**/ua:**|{True&#124;False}|Specifies if Universal Authentication should be used. When set to True, the interactive authentication protocol is activated supporting MFA. This option can also be used for Azure AD authentication without MFA, using an interactive protocol requiring the user to enter their username and password or integrated authentication (Windows credentials). When /UniversalAuthentication is set to True, no Azure AD authentication can be specified in SourceConnectionString (/scs). When /UniversalAuthentication is set to False, Azure AD authentication must be specified in SourceConnectionString (/scs). <br/> For more information about Active Directory Universal Authentication, see [Universal Authentication with SQL Database and Azure Synapse Analytics (SSMS support for MFA)](/azure/sql-database/sql-database-ssms-mfa-authentication).|
+|**/UniversalAuthentication:**|**/ua:**|{True&#124;False}|Specifies if universal authentication should be used. When set to True, the interactive authentication protocol is activated supporting MFA. This option can also be used for Microsoft Entra authentication without MFA, using an interactive protocol requiring the user to enter their username and password or integrated authentication (Windows credentials). When /UniversalAuthentication is set to True, no Microsoft Entra authentication can be specified in SourceConnectionString (/scs). When /UniversalAuthentication is set to False, Microsoft Entra authentication must be specified in SourceConnectionString (/scs). <br/> For more information, see [Universal authentication with SQL Database and Azure Synapse Analytics (SSMS support for MFA)](/azure/sql-database/sql-database-ssms-mfa-authentication).|
 
 ## Properties specific to the Extract action
 

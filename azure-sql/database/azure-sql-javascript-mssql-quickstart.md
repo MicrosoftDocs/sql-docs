@@ -3,6 +3,7 @@ title: Connect to and query Azure SQL Database using Node.js and mssql npm packa
 description: Learn how to connect to a database in Azure SQL Database and query data using Node.js and mssql npm package.
 author: diberry
 ms.author: diberry
+ms.reviewer: mathoma
 ms.custom: passwordless-js
 ms.date: 05/08/2023
 ms.service: sql-database
@@ -12,13 +13,26 @@ monikerRange: "= azuresql || = azuresql-db"
 ---
 
 # Connect to and query Azure SQL Database using Node.js and mssql npm package
+[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using Node.js and mssql. This quickstart follows the recommended passwordless approach to connect to the database. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
+This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using Node.js and mssql. This quickstart follows the recommended passwordless approach to connect to the database. 
+
+## Passwordless connections for developers
+
+Passwordless connections offer a more secure mechanism for accessing Azure resources. The following high-level steps are used to connect to Azure SQL Database using passwordless connections in this article:
+
+* Prepare your environment for password-free authentication.
+    * For a local environment: Your personal identity is used. This identity can be pulled from an IDE, CLI, or other local development tools.
+    * For a cloud environment: A [managed identity](/azure/azure-sql/database/authentication-azure-ad-user-assigned-managed-identity) is used.
+* Authenticate in the environment using the `DefaultAzureCredential` from the Azure Identity library to obtain a verified credential.
+* Use the verified credential to create Azure SDK client objects for resource access.
+
+You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
 
 ## Prerequisites
 
 * An [Azure subscription](https://azure.microsoft.com/free/nodejs/)
-* A database in Azure SQL Database configured for authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
+* A database in Azure SQL Database configured for authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
 * Bash-enabled shell
 * [Node.js LTS](https://nodejs.org/)
 * [Visual Studio Code](https://code.visualstudio.com/)

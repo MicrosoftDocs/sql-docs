@@ -4,6 +4,7 @@ titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: Use Auditing to analyze logs in Log Analytics, Event Hubs, or through an Azure storage account.
 author: sravanisaluru
 ms.author: srsaluru
+ms.reviewer: mathoma
 ms.date: 04/26/2023
 ms.service: sql-database
 ms.subservice: security
@@ -48,7 +49,7 @@ You have two ways to view the logs:
 If you chose to write audit logs to Event Hubs:
 
 - To consume audit logs data from Event Hubs, you need to set up a stream to consume events and write them to a target. For more information, see [Azure Event Hubs Documentation](/azure/event-hubs/index).
-- Audit logs in Event Hubs are captured in the body of [Apache Avro](https://avro.apache.org/) events and stored using JSON formatting with UTF-8 encoding. To read the audit logs, you can use [Avro Tools](/azure/event-hubs/event-hubs-capture-overview#use-avro-tools) or similar tools that process this format.
+- Audit logs in Event Hubs are captured in the body of [Apache Avro](https://avro.apache.org/) events and stored using JSON formatting with UTF-8 encoding. To read the audit logs, you can use [Avro Tools](/azure/event-hubs/event-hubs-capture-overview#use-avro-tools), [Microsoft Fabric event streams](/fabric/real-time-analytics/event-streams/overview), or similar tools that process this format.
 
 ## Analyze logs using logs in an Azure storage account
 

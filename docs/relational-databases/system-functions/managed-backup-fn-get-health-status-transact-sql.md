@@ -23,7 +23,7 @@ dev_langs:
 
   Returns a table of 0, one or more rows of aggregated count of the errors reported by Extended Events for a specified period of time.  
   
- The function is used to report health status of services under Smart Admin.  Currently [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is supported under the Smart Admin umbrella. So the errors returned are related to [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+ The function is used to report health status of services under Smart Admin.  Currently [!INCLUDE[ss-managed-backup](../../includes/ss-managed-backup-md.md)] is supported under the Smart Admin umbrella. So the errors returned are related to [!INCLUDE[ss-managed-backup](../../includes/ss-managed-backup-md.md)].  
   
  
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -50,7 +50,7 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
 |number_of_invalid_credential_errors|int|Number of errors returned when the program tries to authenticate using SQL Credentials.|  
 |number_of_other_errors|int|Number of errors in other categories besides connectivity, SQL, or credential.|  
 |number_of_corrupted_or_deleted_backups|int|Number of deleted or corrupted backup files.|  
-|number_of_backup_loops|int|The number of times backup agent scans all the databases configured with [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
+|number_of_backup_loops|int|The number of times backup agent scans all the databases configured with [!INCLUDE[ss-managed-backup](../../includes/ss-managed-backup-md.md)].|  
 |number_of_retention_loops|int|The number of times the databases are scanned to assess set retention period.|  
   
 ## Best Practices  

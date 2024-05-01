@@ -7,7 +7,7 @@ ms.reviewer: maghan
 ms.date: 10/10/2022
 ms.service: sql
 ms.subservice: integration-services
-ms.topic: conceptual
+ms.topic: how-to
 ---
 
 # Microsoft Connector for Teradata (SSIS)

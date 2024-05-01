@@ -24,8 +24,6 @@
       href: database/features-comparison.md
     - name: Multi-model features
       href: multi-model-features.md
-    - name: In-memory OLTP
-      href: in-memory-oltp-overview.md
     - name: Temporal tables
       href: temporal-tables.md
     - name: Scale up / down
@@ -36,14 +34,8 @@
       href: database/elastic-transactions-overview.md
     - name: Scheduled maintenance
       items:
-      - name: Maintenance window
-        href: database/maintenance-window.md
-      - name: Configure maintenance window
-        href: database/maintenance-window-configure.md
-      - name: Maintenance window FAQ
-        href: database/maintenance-window-faq.yml
-      - name: Advance notifications
-        href: database/advance-notifications.md
+      - name: Maintenance window in Azure SQL
+        href: maintenance-window-azure-sql.md
     - name: Security
       items:
       - name: Overview
@@ -96,6 +88,8 @@
           href: database/authentication-azure-ad-only-authentication-policy.md
         - name: Managed identity
           href: database/authentication-azure-ad-user-assigned-managed-identity.md
+        - name: Microsoft Entra nonunique display names
+          href: database/authentication-microsoft-entra-create-users-with-nonunique-names.md
       - name: Transparent data encryption (TDE)
         items:
         - name: Overview
@@ -124,10 +118,22 @@
         href: database/monitoring-tuning-index.yml
       - name: Overview
         href: database/monitor-tune-overview.md
-      - name: Metrics and alerts
-        href: database/monitoring-metrics-alerts.md
       - name: Intelligent Insights
         href: database/intelligent-insights-overview.md
+      - name: Database watcher (preview)
+        items:
+        - name: Overview
+          href: ./database-watcher-overview.md
+        - name: Quickstart
+          href: ./database-watcher-quickstart.md
+        - name: Create and configure
+          href: ./database-watcher-manage.md
+        - name: Data collection and datasets
+          href: ./database-watcher-data.md
+        - name: Analyze monitoring data
+          href: ./database-watcher-analyze.md
+        - name: FAQ
+          href: ./database-watcher-faq.yml
       - name: SQL Analytics
         href: /azure/azure-monitor/insights/azure-sql?toc=/azure/azure-sql/toc.json
       - name: SQL Insights (preview)
@@ -142,8 +148,6 @@
           href: database/sql-insights-troubleshoot.md
       - name: Automatic tuning
         href: database/automatic-tuning-overview.md
-      - name: In-memory OLTP
-        href: in-memory-oltp-overview.md
       - name: Extended events
         items:
         - name: Extended events
@@ -221,23 +225,12 @@
         href: database/performance-guidance.md
       - name: Log diagnostic telemetry
         href: database/metrics-diagnostic-telemetry-logging-streaming-export-configure.md
-      - name: In-memory OLTP
-        items:
-        - name: Configure In-Memory OLTP
-          href: in-memory-oltp-configure.md
-        - name: Try in-memory features
-          href: in-memory-sample.md
-        - name: Monitor In-memory OLTP space
-          href: in-memory-oltp-monitor-space.md
-
     - name: Load and move data
       items:
       - name: Import a database from a BACPAC file
         href: database/database-import.md
       - name: Export a database to a BACPAC file
         href: database/database-export.md
-      - name: Move resources to a new region
-        href: database/move-resources-across-regions.md
       - name: Load data with ADF
         href: /azure/data-factory/connector-azure-sql-database?toc=/azure/azure-sql/toc.json
     - name: Develop data applications
@@ -283,8 +276,14 @@
       href: database/free-offer.md
     - name: Try Azure SQL Database free FAQ
       href: database/free-offer-faq.yml
+    - name: Copilot in SQL Database
+      href: copilot/copilot-azure-sql-overview.md
+    - name: Copilot in SQL Database FAQ
+      href: copilot/copilot-azure-sql-faq.yml
+    - name: Natural language to SQL
+      href: copilot/query-editor-natural-language-to-sql-copilot.md
     - name: Intelligent applications and AI
-      href: database/ai-artificial-intelligence-intelligent-applications.md
+      href: database/ai-artificial-intelligence-intelligent-applications.md      
   - name: Quickstarts
     href: database/quickstart-content-reference-guide.md
     items:
@@ -342,12 +341,6 @@
         href: database/design-first-database-csharp-tutorial.md
     - name: Business continuity
       items: 
-        - name: Add db to failover group 
-          href: database/failover-group-add-single-database-tutorial.md
-        - name: Add pool to failover group
-          href: database/failover-group-add-elastic-pool-tutorial.md
-        - name: Configure security for replicas
-          href: database/active-geo-replication-security-configure.md
         - name: Geo-distributed application
           href: database/geo-distributed-application-configure-tutorial.md
         - name: Active geo-replication
@@ -375,10 +368,10 @@
         href: database/migrate-sqlite-db-to-azure-sql-serverless-offline-tutorial.md
     - name: Scale out
       items: 
-      - name: Configure security for named replicas
-        displayName: Configure named replicas for Hyperscale
+      - name: Configure Hyperscale named replicas
+        href: database/hyperscale-named-replica-configure.md
+      - name: Configure isolated access for Hyperscale named replicas
         href: database/hyperscale-named-replica-security-configure.md
-
   - name: Concepts
     items:
     - name: Single databases
@@ -389,7 +382,18 @@
       href: database/logical-servers.md
     - name: Serverless
       href: database/serverless-tier-overview.md
-
+    - name: T-SQL differences from SQL Server
+      href: database/transact-sql-tsql-differences-sql-server.md
+    - name: In-memory OLTP in Azure SQL Database
+      items:
+      - name: In-memory OLTP overview
+        href: database/in-memory-oltp-overview.md
+      - name: Configure In-memory OLTP
+        href: database/in-memory-oltp-configure.md
+      - name: Try in-memory features
+        href: database/in-memory-oltp-sample.md
+      - name: Monitor In-memory OLTP space
+        href: database/in-memory-oltp-monitor-space.md
     - name: Hyperscale
       items: 
       - name: Overview
@@ -523,18 +527,20 @@
         href: database/business-continuity-high-availability-disaster-recover-hadr-overview.md
       - name: High availability
         href: database/high-availability-sla.md
-      - name: Automated backups
-        href: database/automated-backups-overview.md
-      - name: Active geo-replication
-        href: database/active-geo-replication-overview.md
-      - name: Auto-failover groups
-        href: database/auto-failover-group-sql-db.md
       - name: HA/DR checklist
         href: database/high-availability-disaster-recovery-checklist.md
-      - name: Outage recovery guidance
-        href: database/disaster-recovery-guidance.md
-      - name: Recovery drills
-        href: database/disaster-recovery-drills.md
+      - name: Automated backups
+        href: database/automated-backups-overview.md
+      - name: Disaster recovery
+        items: 
+        - name: Active geo-replication
+          href: database/active-geo-replication-overview.md
+        - name: Failover groups
+          href: database/failover-group-sql-db.md
+        - name: Outage recovery guidance
+          href: database/disaster-recovery-guidance.md
+        - name: Recovery drills
+          href: database/disaster-recovery-drills.md
 
 
     - name: SQL Data Sync
@@ -589,6 +595,17 @@
         - name: DTU resource limits
           href: database/resource-limits-dtu-elastic-pools.md
 
+    - name: Scheduled maintenance
+      items:
+      - name: Maintenance window
+        href: database/maintenance-window.md
+      - name: Configure maintenance window
+        href: database/maintenance-window-configure.md
+      - name: Maintenance window FAQ
+        href: database/maintenance-window-faq.yml
+      - name: Advance notifications
+        href: database/advance-notifications.md
+
   - name: Migration guides
     items: 
 
@@ -615,8 +632,6 @@
   - name: How to
     href: database/how-to-content-reference-guide.md
     items:
-    - name: T-SQL differences
-      href: database/transact-sql-tsql-differences-sql-server.md
     - name: Plan and manage costs 
       href: database/cost-management.md      
     - name: Connect and query
@@ -679,8 +694,9 @@
       - name: Azure Automation
         href: database/automation-manage.md
       - name: Block geo-replication of Azure SQL Database backups
-        href: database/block-geo-redundant-backup-storage.md
-    - name: Elastic jobs (preview)
+      - name: Move resources to a new region
+        href: database/move-resources-across-regions.md
+    - name: Elastic jobs
       items:
       - name: Job automation overview
         href: database/job-automation-overview.md
@@ -701,10 +717,8 @@
         href: database/long-term-backup-retention-configure.md
       - name: Recover using backups
         href: database/recovery-using-backups.md
-      - name: Create auto-failover group
-        href: database/auto-failover-group-configure-sql-db.md
-      - name: Configure geo-replication - Portal
-        href: database/active-geo-replication-configure-portal.md
+      - name: Create failover group
+        href: database/failover-group-configure-sql-db.md
       - name: Configure security for geo-replicas
         href: database/active-geo-replication-security-configure.md
       - name: Configure license-free standby replica 
@@ -712,14 +726,14 @@
 
     - name: Monitor & Tune
       items:
+        - name: Monitor
+          href: database/monitoring-sql-database-azure-monitor.md 
         - name: Identify query performance bottlenecks
           href: database/identify-query-performance-issues.md
         - name: Use DMVs to monitor performance
           href: database/monitoring-with-dmvs.md
-        - name: Azure Monitor for SQL Database
-          href: database/monitoring-sql-database-azure-monitor.md 
-        - name: Azure Monitor for SQL Database reference 
-          href: database/monitoring-sql-database-azure-monitor-reference.md
+        - name: Azure Monitor metrics and alerts for SQL Database
+          href: database/monitoring-metrics-alerts.md          
     - name: Hyperscale databases
       items: 
       - name: Manage Hyperscale databases
@@ -789,6 +803,8 @@
 
     - name: Performance
       items:
+      - name: Tune applications and databases for performance
+        href: database/performance-guidance.md
       - name: Use Query Performance Insights
         href: database/query-performance-insight-use.md
       - name: Enable automatic tuning
@@ -798,7 +814,7 @@
       - name: Apply performance recommendations
         href: database/database-advisor-find-recommendations-portal.md
       - name: Create alerts
-        href: database/alerts-insights-configure-portal.md
+        href: database/alerts-create.md
       - name: Implement database advisor recommendations
         href: database/database-advisor-implement-performance-recommendations.md
       - name: Stream data with Stream Analytics
@@ -896,6 +912,8 @@
         href: database/develop-cplusplus-simple.md
       - name: Excel
         href: database/connect-excel.md
+      - name: Develop a Kubernetes app with Azure SQL Database
+        href: database/develop-kubernetes-application.md
       - name: Ports - ADO.NET
         href: database/adonet-v12-develop-direct-route-ports.md
       - name: Multi-tenant SaaS
@@ -966,7 +984,7 @@
     - name: Azure CLI
       items:
       - name: Samples overview
-        href: database/az-cli-script-samples-content-guide.md?tabs=single-database
+        href: database/az-cli-script-samples-content-guide.md
       - name: Create databases
         items:
         - name: Create single database
@@ -1010,7 +1028,7 @@
     - name: Azure PowerShell 
       items: 
         - name: Azure PowerShell samples guide
-          href: database/powershell-script-content-guide.md?tabs=single-database
+          href: database/powershell-script-content-guide.md
         - name: Create databases
           items: 
           - name: Create single Azure SQL Database
@@ -1021,7 +1039,7 @@
           items:
           - name: Configure and fail over a single database
             href: database/scripts/setup-geodr-and-failover-database-powershell.md
-          - name: Configure and fail over a poooled database
+          - name: Configure and fail over a pooled database
             href: database/scripts/setup-geodr-and-failover-elastic-pool-powershell.md
         - name: Configure a failover group
           items: 
@@ -1052,7 +1070,7 @@
           - name: Update sync schema
             href: database/scripts/update-sync-schema-in-sync-group.md
     - name: Azure Resource Manager
-      href: database/arm-templates-content-guide.md?tabs=single-database
+      href: database/arm-templates-content-guide.md
     - name: Code samples
       href: https://azure.microsoft.com/resources/samples/?service=sql-database
     - name: Azure Resource Graph queries
@@ -1069,6 +1087,8 @@
       href: managed-instance/sql-managed-instance-paas-overview.md
     - name: What's new?
       href: managed-instance/doc-changes-updates-release-notes-whats-new.md
+    - name: Try for free
+      href: managed-instance/free-offer.md
     - name: Frequently asked questions
       displayName: faq
       href: managed-instance/frequently-asked-questions-faq.yml
@@ -1078,10 +1098,8 @@
     items:
     - name: Create Azure SQL Managed Instance
       items:
-      - name: Azure portal
+      - name: Azure portal, PowerShell, Azure CLI
         href: managed-instance/instance-create-quickstart.md
-      - name: PowerShell
-        href: managed-instance/create-configure-managed-instance-powershell-quickstart.md
       - name: Bicep
         displayName: ARM, Resource Manager, Template
         href: managed-instance/create-bicep-quickstart.md
@@ -1118,8 +1136,6 @@
       href: /azure/dms/tutorial-sql-server-to-managed-instance?toc=/azure/azure-sql/toc.json
     - name: Configure security
       href: managed-instance/aad-security-configure-tutorial.md
-    - name: Add instance to failover group
-      href: managed-instance/failover-group-add-instance-tutorial.md
     - name: Migrate on-premises users and groups
       href: managed-instance/migrate-sql-server-users-to-instance-transact-sql-tsql-tutorial.md
     - name: Transactional replication
@@ -1167,6 +1183,16 @@
       href: managed-instance/instance-pools-overview.md
     - name: Data virtualization 
       href: managed-instance/data-virtualization-overview.md
+    - name: In-memory OLTP in Azure SQL Managed Instance
+      items:
+      - name: In-memory OLTP Overview
+        href: managed-instance/in-memory-oltp-overview.md
+      - name: Configure In-memory OLTP
+        href: managed-instance/in-memory-oltp-configure.md
+      - name: Monitor In-memory OLTP space
+        href: managed-instance/in-memory-oltp-monitor-space.md
+      - name: Try in-memory features
+        href: managed-instance/in-memory-oltp-sample.md
     - name: Business continuity
       items: 
       - name: Overview
@@ -1177,8 +1203,8 @@
         href: managed-instance/automated-backups-overview.md 
       - name: Backup transparency
         href: managed-instance/backup-transparency.md
-      - name: Auto-failover groups
-        href: managed-instance/auto-failover-group-sql-mi.md
+      - name: Failover groups
+        href: managed-instance/failover-group-sql-mi.md
     - name: Management operations
       items:
       - name: Overview
@@ -1403,6 +1429,16 @@
         - name: Troubleshoot
           displayName: Troubleshoot Windows authentication for Microsoft Entra with Kerberos
           href: managed-instance\winauth-azuread-troubleshoot.md
+    - name: Scheduled maintenance
+      items:
+      - name: Maintenance window
+        href: managed-instance/maintenance-window.md
+      - name: Configure maintenance window
+        href: managed-instance/maintenance-window-configure.md
+      - name: Maintenance window FAQ
+        href: managed-instance/maintenance-window-faq.yml
+      - name: Advance notifications
+        href: managed-instance/advance-notifications.md
   - name: How to
     items:
     - name: How-to documentation
@@ -1414,6 +1450,8 @@
       href: managed-instance/distributed-transaction-coordinator-dtc.md
     - name: Enroll in November 2022 feature wave
       href: managed-instance/november-2022-feature-wave-enroll.md
+    - name: Use Next-gen General Purpose tier
+      href: managed-instance/service-tiers-next-gen-general-purpose-use.md
 
     - name: Automation
       items:
@@ -1430,26 +1468,25 @@
         href: managed-instance/database-copy-move-how-to.md
       - name: Manage file space
         href: managed-instance/file-space-manage.md
+      - name: Move resources to a new region
+        href: managed-instance/move-resources-across-regions.md
 
     - name: Monitor & Tune
       items:
+        - name: Monitor
+          href: managed-instance/monitoring-sql-managed-instance-azure-monitor.md 
+        - name: Tune applications and databases for performance
+          href: managed-instance/performance-guidance.md
         - name: Identify query performance bottlenecks
           href: managed-instance/identify-query-performance-issues.md
         - name: Use DMVs to monitor performance
           href: managed-instance/monitoring-with-dmvs.md
-        - name: Azure Monitor for Azure SQL Managed Instance
-          href: managed-instance/monitoring-sql-managed-instance-azure-monitor.md 
-        - name: Azure Monitor for Azure SQL Managed Instance reference 
-          href: managed-instance/monitoring-sql-managed-instance-azure-monitor-reference.md
-          
     - name: Configure settings
       items: 
       - name: tempdb
         href: managed-instance/tempdb-configure.md
       - name: Customize time zone
         href: managed-instance/timezones-overview.md
-      - name: Configure connection types
-        href: managed-instance/connection-types-overview.md
       - name: Create alerts on SQL MI
         href: managed-instance/alerts-create.md
       - name: Configure threat detection
@@ -1463,6 +1500,8 @@
         href: managed-instance/virtual-network-subnet-create-arm-template.md
       - name: Configure existing VNet and subnet for SQL MI
         href: managed-instance/vnet-existing-add-subnet.md
+      - name: Configure connection types
+        href: managed-instance/connection-types-overview.md
       - name: Configure service endpoint policies for SQL MI
         href: managed-instance/service-endpoint-policies-configure.md
       - name: Configure public endpoint
@@ -1475,8 +1514,6 @@
         href: managed-instance/resolve-private-domain-names.md
       - name: Find management endpoint IP address
         href: managed-instance/management-endpoint-find-ip-address.md
-      - name: Verify built-in firewall protection
-        href: managed-instance/management-endpoint-verify-built-in-firewall.md
     
     - name: Migrate
       items: 
@@ -1513,20 +1550,20 @@
         href: managed-instance/restore-database-to-sql-server.md
       - name: Monitor backup
         href: managed-instance/backup-activity-monitor.md
-      - name: Auto-failover groups
+      - name: Manually initiate a failover
+        href: managed-instance/user-initiated-failover.md
+      - name: Failover groups
         items: 
         - name: Create failover group
-          href: managed-instance/auto-failover-group-configure-sql-mi.md
+          href: managed-instance/failover-group-configure-sql-mi.md
         - name: Configure standby replica
-          href: managed-instance/auto-failover-group-standby-replica-how-to-configure.md
-        - name: Manually initiate a failover
-          href: managed-instance/user-initiated-failover.md          
+          href: managed-instance/failover-group-standby-replica-how-to-configure.md        
   - name: Samples
     items:
     - name: Azure CLI
       items:
       - name: Samples overview
-        href: database/az-cli-script-samples-content-guide.md?tabs=managed-instance
+        href: managed-instance/az-cli-script-samples-content-guide.md
       - name: Create Azure SQL Managed Instance
         href: managed-instance/scripts/create-configure-managed-instance-cli.md
       - name: Configure transparent data encryption (TDE)
@@ -1534,7 +1571,7 @@
     - name: Azure PowerShell
       items:
       - name: Samples overview
-        href: database/powershell-script-content-guide.md?tabs=managed-instance
+        href: managed-instance/powershell-script-content-guide.md
       - name: Create Azure SQL Managed Instances
         items:
         - name: Create a managed instance
@@ -1546,7 +1583,7 @@
       - name: Configure transparent data encryption (TDE)
         href: managed-instance/scripts/transparent-data-encryption-byok-powershell.md
     - name: Azure Resource Manager
-      href: database/arm-templates-content-guide.md?tabs=managed-instance
+      href: managed-instance/arm-templates-content-guide.md
     - name: Code samples
       href: https://azure.microsoft.com/resources/samples/?service=sql-database
 
@@ -1644,8 +1681,10 @@
           href: virtual-machines/windows/change-sql-server-edition.md
         - name: Change version
           href: virtual-machines/windows/change-sql-server-version.md
-        - name: Storage
+        - name: Storage configuration
           href: virtual-machines/windows/storage-configuration.md
+        - name: Premium SSD v2 (preview)
+          href: virtual-machines/windows/storage-configuration-premium-ssd-v2.md
         - name: Microsoft Entra authentication
           href: virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm.md
         - name: Azure Update Manager
@@ -1656,7 +1695,7 @@
           href: virtual-machines/windows/sql-assessment-for-sql-vm.md
         - name: Azure Key Vault Integration
           href: virtual-machines/windows/azure-key-vault-integration-configure.md
-        - name: Migrate storage to UltraSSD
+        - name: Migrate storage to Ultradisk
           href: virtual-machines/windows/storage-migrate-to-ultradisk.md
         - name: SQL IaaS Agent extension
           displayName: resource provider, registration, sql vm rp
@@ -1677,6 +1716,8 @@
         items:
         - name: Configure cluster quorum 
           href: virtual-machines/windows/hadr-cluster-quorum-configure-how-to.md
+        - name: Configure log shipping
+          href: virtual-machines/windows/log-shipping-configure.md
         - name: Backup and restore
           items:
           - name: Automated backup (SQL 2016+)
@@ -1692,6 +1733,8 @@
             - name: Azure portal
               displayName: Always On, alwayson, availability group
               href: virtual-machines/windows/availability-group-azure-portal-configure.md
+            - name: PowerShell or Az CLI
+              href: virtual-machines/windows/availability-group-az-commandline-configure-multi-subnet.md
             - name: Migrate single subnet to multi-subnet
               href: virtual-machines/windows/availability-group-manually-migrate-multi-subnet.md
             - name: Manually
@@ -1763,7 +1806,6 @@
             - name: DNN interoperability
               href: virtual-machines/windows/failover-cluster-instance-dnn-interoperability.md
 
-
     - name: Reference
       items:
       - name: Azure PowerShell
@@ -1818,12 +1860,14 @@
         href: virtual-machines/linux/sql-iaas-agent-extension-register-vm-linux.md
     - name: Tutorials
       items:
-      - name: Set up Azure RHEL VM availability group with STONITH
-        href: virtual-machines/linux/rhel-high-availability-stonith-tutorial.md
-      - name: Set up Azure SLES VM availability group with STONITH
-        href: virtual-machines/linux/sles-high-availability-stonith-tutorial.md
-      - name: Configure availability group listener for SQL Server on RHEL virtual machines in Azure
-        href: virtual-machines/linux/rhel-high-availability-listener-tutorial.md
+      - name: Set up Azure RHEL VM availability group with fencing
+        href: virtual-machines/linux/rhel-high-availability-fencing-tutorial.md
+      - name: Set up Azure SLES VM availability group with fencing
+        href: virtual-machines/linux/sles-high-availability-fencing-tutorial.md
+      - name: Set up Azure Ubuntu VM availability group with fencing
+        href: virtual-machines/linux/ubuntu-high-availability-fencing-tutorial.md
+      - name: Configure availability group listener for SQL Server on Linux virtual machines in Azure
+        href: virtual-machines/linux/high-availability-listener-tutorial.md
       - name: Set up Always On availability group with DH2i DxEnterprise
         href: virtual-machines/linux/dh2i-high-availability-tutorial.md
     - name: Resources
@@ -1926,7 +1970,10 @@
     href: ./database/policy-reference.md
   - name: DTU benchmark
     href: database/dtu-benchmark.md
-
+  - name: SQL Database monitoring data reference 
+    href: database/monitoring-sql-database-azure-monitor-reference.md
+  - name: SQL Managed Instance monitoring data reference 
+    href: managed-instance/monitoring-sql-managed-instance-azure-monitor-reference.md
 - name: Resources
   items:
   - name: Build your skills with Microsoft Learn training
@@ -1945,6 +1992,12 @@
     href: https://social.msdn.microsoft.com/Forums/home
   - name: Stack Overflow
     href: https://stackoverflow.com/questions/tagged/azure-sql-database
+  - name: Microsoft Q&A
+    items: 
+    - name: Azure SQL Database
+      href: /answers/tags/51/azure-sql-database
+    - name: SQL Server on Azure VMs
+      href: /answers/tags/19/azure-sql-virtual-machines
   - name: What's New Archives
     items: 
     - name: Azure SQL Database

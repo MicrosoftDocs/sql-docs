@@ -26,6 +26,7 @@ helpviewer_keywords:
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] instead.  
+> Database Mirroring in SQL Server is a distinct technology from [Microsoft Fabric Database Mirroring](/fabric/database/mirrored-database/overview).
   
  *Database mirroring* is a solution for increasing the availability of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Mirroring is implemented on a per-database basis and works only with databases that use the full recovery model.  
   
@@ -138,7 +139,7 @@ helpviewer_keywords:
   
  The second operating mode, *high-performance mode*, runs asynchronously. The mirror server tries to keep up with the log records sent by the principal server. The mirror database might lag somewhat behind the principal database. However, typically, the gap between the databases is small. However, the gap can become significant if the principal server is under a heavy work load or the system of the mirror server is overloaded.  
   
- In high-performance mode, as soon as the principal server sends a log record to the mirror server, the principal server sends a confirmation to the client. It does not wait for an acknowledgement from the mirror server. This means that transactions commit without waiting for the mirror server to write the log to disk. Such asynchronous operation enables the principal server to run with minimum transaction latency, at the potential risk of some data loss.  
+ In high-performance mode, as soon as the principal server sends a log record to the mirror server, the principal server sends a confirmation to the client. It does not wait for an acknowledgment from the mirror server. This means that transactions commit without waiting for the mirror server to write the log to disk. Such asynchronous operation enables the principal server to run with minimum transaction latency, at the potential risk of some data loss.  
   
  All database mirroring sessions support only one principal server and one mirror server. This configuration is shown in the following illustration.  
   

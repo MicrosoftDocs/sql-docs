@@ -9,7 +9,7 @@ ms.subservice: security
 ms.custom: ignite-2023
 ms.topic: conceptual
 zone_pivot_groups: as1-azuresql-sql
-monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 
 # Monitor digest uploads
@@ -56,7 +56,7 @@ We recommend you to use custom SQL Agent jobs to read and process an Extended Ev
 
 ::: zone-end
 
-## Next steps
+## Related content
 
 - [Ledger overview](ledger-overview.md)
 - [Enable automatic digest storage](ledger-how-to-enable-automatic-digest-storage.md)

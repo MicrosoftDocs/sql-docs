@@ -107,9 +107,9 @@ The following topics describe the conversion behaviors exhibited by their corres
  - [uniqueidentifier &#40;Transact-SQL&#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)  
   
 ###  Converting Data Types by Using OLE Automation Stored Procedures  
-Because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses [!INCLUDE[tsql](../../includes/tsql-md.md)] data types and OLE Automation uses [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] data types, the OLE Automation stored procedures must convert the data that passes between them.
+Because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses [!INCLUDE[tsql](../../includes/tsql-md.md)] data types and OLE Automation uses [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] data types, the OLE Automation stored procedures must convert the data that passes between them.
   
-The following table describes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] data type conversions.
+The following table describes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] data type conversions.
   
 |SQL Server data type|Visual Basic data type|  
 |--------------------------|----------------------------|  
@@ -126,9 +126,9 @@ The following table describes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 |**datetime**, **smalldatetime**|**Date**|  
 |Anything set to NULL|**Variant** set to Null|  
   
-All single [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] values are converted to a single [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] value with the exception of **binary**, **varbinary**, and **image** values. These values are converted to a one-dimensional **Byte()** array in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. This array has a range of **Byte(** 0 to _length_ 1**)** where *length* is the number of bytes in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary**, or **image** values.
+All single [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] values are converted to a single [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] value with the exception of **binary**, **varbinary**, and **image** values. These values are converted to a one-dimensional **Byte()** array in [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)]. This array has a range of **Byte(** 0 to _length_ 1**)** where *length* is the number of bytes in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary**, or **image** values.
   
-These are the conversions from [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] data types to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types.
+These are the conversions from [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] data types to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types.
   
 |Visual Basic data type|SQL Server data type|  
 |----------------------------|--------------------------|  

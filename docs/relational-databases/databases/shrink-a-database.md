@@ -100,7 +100,7 @@ For information on file management and shrink operations specific to Azure SQL D
 
 1. Copy and paste the following example into the query window and select **Execute**. This example uses [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) to decrease the size of the data and log files in the `UserDB` database, and to allow for `10` percent free space in the database.
 
-[!code-sql[DBCC#DBCC_SHRINKDB1](codesnippet/tsql/shrink-a-database_1.sql)]
+:::code language="sql" source="codesnippet/tsql/shrink-a-database_1.sql":::
 
 ## <a id="FollowUp"></a> After you shrink a database
 

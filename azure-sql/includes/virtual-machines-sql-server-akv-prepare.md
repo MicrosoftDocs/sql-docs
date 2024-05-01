@@ -30,7 +30,7 @@ First, you need to have an [Microsoft Entra](https://azure.microsoft.com/trial/g
 
 Next, register an application with Microsoft Entra ID. This gives you a Service Principal account that has access to your key vault, which your VM needs. In the Azure Key Vault article, you can find these steps in the [Register an application with Microsoft Entra ID](/azure/key-vault/general/manage-with-cli2#registering-an-application-with-azure-active-directory) section, or you can see the steps with screenshots in the **Get an identity for the application section** of [this blog post](/archive/blogs/kv/azure-key-vault-step-by-step). Before completing these steps, you need to collect the following information during this registration that is needed later when you enable Azure Key Vault Integration on your SQL VM.
 
-* After the application is added, find the **Application ID** (also known as ClientID or AppID) on the **Registered app** blade.
+* After the application is added, find the **Application ID** (also known as ClientID or AppID) on the **Registered app** pane.
     The application ID is assigned later to the **$spName** (Service Principal name) parameter in the PowerShell script to enable Azure Key Vault Integration.
 
    ![Application ID](./media/virtual-machines-sql-server-akv-prepare/aad-application-id.png)

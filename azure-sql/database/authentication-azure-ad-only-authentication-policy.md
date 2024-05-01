@@ -19,7 +19,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 Azure Policy can enforce the creation of an Azure SQL Database or Azure SQL Managed Instance with [Microsoft Entra-only authentication](authentication-azure-ad-only-authentication.md) enabled during provisioning. With this policy in place, any attempts to create a [logical server in Azure](logical-servers.md) or managed instance will fail if it isn't created with Microsoft Entra-only authentication enabled.
 
 > [!NOTE]
-> Although Azure Active Directory (Azure AD) has been [renamed to Microsoft Entra ID](/azure/active-directory/fundamentals/new-name), the policy names currently contain the original Azure AD name, so Microsoft Entra-only and Azure AD-only authentication is used interchangeably in this article. 
+> Although Azure Active Directory (Azure AD) has been [renamed to Microsoft Entra ID](/entra/fundamentals/new-name), the policy names currently contain the original Azure AD name, so Microsoft Entra-only and Azure AD-only authentication is used interchangeably in this article. 
 
 The Azure Policy can be applied to the whole Azure subscription, or just within a resource group.
 

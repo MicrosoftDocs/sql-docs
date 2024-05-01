@@ -52,7 +52,7 @@ The following example regenerates the database encryption keys.
 EXEC sys.sp_pdw_database_encryption_regenerate_system_keys;
 ```
 
-## See also
+## Related content
 
 - [sp_pdw_database_encryption (Azure Synapse Analytics)](sp-pdw-database-encryption-sql-data-warehouse.md)
 - [sp_pdw_log_user_data_masking (Azure Synapse Analytics)](sp-pdw-log-user-data-masking-sql-data-warehouse.md)

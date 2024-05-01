@@ -26,7 +26,7 @@ Each data source listed in the ODBC Data Sources subkey has a subkey of its own.
 |TranslationOption|REG_SZ|*translation-option*|  
 |*opt-value-name*|*opt-value-type*|*opt-value-data*|  
   
- For example, suppose the SQL Server driver requires the server name and a flag for OEM to ANSI conversion and defines the Server and OEMTOANSI values for these. Suppose also that the Inventory data source uses the Microsoft® Code Page Translator to translate between the Windows® Latin 1 (1250) and Multilingual (850) code pages. The values under the Inventory subkey might be as follows:  
+ For example, suppose the SQL Server driver requires the server name and a flag for OEM to ANSI conversion and defines the Server and OEMTOANSI values for these. Suppose also that the Inventory data source uses the Microsoft Code Page Translator to translate between the Windows Latin 1 (1250) and Multilingual (850) code pages. The values under the Inventory subkey might be as follows:  
   
 ```  
 Description : REG_SZ : Inventory database on server InvServ  

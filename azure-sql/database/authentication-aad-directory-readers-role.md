@@ -1,5 +1,6 @@
 ---
 title: Directory Readers role in Microsoft Entra ID for Azure SQL
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Learn about the directory reader's role in Microsoft Entra for Azure SQL.
 author: nofield
 ms.author: nofield
@@ -16,7 +17,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
 
-Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) has introduced [using groups to manage role assignments](/azure/active-directory/roles/groups-concept). This allows for Microsoft Entra roles to be assigned to groups.
+Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) has introduced [using groups to manage role assignments](/azure/active-directory/roles/groups-concept). This allows for Microsoft Entra roles to be assigned to groups.
 
 > [!NOTE]
 > With [Microsoft Graph](/graph/overview) support for Azure SQL, the Directory Readers role can be replaced with using lower level permissions. For more information, see [User-assigned managed identity in Microsoft Entra for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md).

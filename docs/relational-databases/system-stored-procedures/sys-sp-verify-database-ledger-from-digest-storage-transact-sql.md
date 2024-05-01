@@ -73,7 +73,7 @@ One row, with one column called `last_verified_block_id`.
 
 Requires the **VIEW LEDGER CONTENT** permission.
 
-## Next steps
+## Related content
 
 - [Database Verification](../security/ledger/ledger-database-verification.md)
 - [Verify a ledger table to detect tampering](../security/ledger/ledger-verify-database.md)

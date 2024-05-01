@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: A how-to guide for configuring geo replication for transparent data encryption (TDE) with database level customer-managed keys for Azure SQL Database.
 author: strehan1993
 ms.author: strehan
-ms.reviewer: vanto
+ms.reviewer: vanto, mathoma
 ms.date: 09/29/2023
 ms.service: sql-database
 ms.subservice: security

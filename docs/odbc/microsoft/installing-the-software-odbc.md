@@ -6,7 +6,7 @@ ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: intro-installation
 helpviewer_keywords:
   - "ODBC driver for Oracle [ODBC], installing"

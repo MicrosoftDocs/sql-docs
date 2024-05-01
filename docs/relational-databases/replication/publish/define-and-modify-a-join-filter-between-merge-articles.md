@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "filters [SQL Server replication], join"
@@ -121,11 +121,11 @@ helpviewer_keywords:
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This example defines an article for a merge publication, where the `SalesOrderDetail` table article is filtered against the `SalesOrderHeader` table that is itself filtered using a static row filter. For more information, see [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
- [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-join_1.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/define-and-modify-a-join_1.sql":::
   
  This example defines a group of articles in a merge publication where the articles are filtered with a series of join filters against the `Employee` table that is itself filtered using a parameterized row filter on the value of [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md) in the **LoginID** column. For more information, see [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
- [!code-sql[HowTo#sp_MergeDynamicPub1](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-join_2.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/define-and-modify-a-join_2.sql":::
   
 ## See Also  
  [Join Filters](../../../relational-databases/replication/merge/join-filters.md)   

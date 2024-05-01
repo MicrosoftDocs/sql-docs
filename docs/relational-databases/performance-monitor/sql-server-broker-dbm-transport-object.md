@@ -3,10 +3,10 @@ title: "SQL Server, Broker/DBM Transport object"
 description: Learn about Broker / DBM Transport performance object, which contains performance counters for networking information for Service Broker and database mirroring.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/12/2021"
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "Broker / DBM Transport object"
   - "SQLServer:Broker/DBM Transport"
@@ -46,15 +46,14 @@ helpviewer_keywords:
 |**Receive I/O Bytes Total**|This counter reports the total number of bytes received over the network by Service Broker endpoints and Database Mirroring endpoints.|  
 |**Receive I/O Len Avg**|This counter reports the average number of bytes for a transport receive operation.|  
 |**Receive I/O Len Avg Base**|For internal use only.|
-|**Receive I/Os/sec**|This counter reports the number of transport receive I/O operations per second that the Service Broker / DBM transport layer has completed. Notice that a transport receive operation may contain more than one message fragment.|  
+|**Receive I/Os/sec**|This counter reports the number of transport receive I/O operations per second that the Service Broker / DBM transport layer has completed. A transport receive operation might contain more than one message fragment.|  
 |**Recv I/O Buffer Copies bytes/sec**|The rate at which transport receive I/O operations had to move buffer fragments in memory.|
 |**Recv I/O Buffer Copies Count**|The number of times when transport receive I/O operations had to move buffer fragments in memory.| 
 |**Send I/O bytes/sec**|This counter reports the number of bytes per second sent over the network by Service Broker endpoints and Database Mirroring endpoints.|   
 |**Send I/O Bytes Total**|This counter reports the total number of bytes sent over the network by Service Broker endpoints and Database Mirroring endpoints.| 
-|**Send I/O Len Avg**|This counter reports the average size in bytes of each transport send operation. Notice that a transport send operation may contain more than one message fragment.|  
+|**Send I/O Len Avg**|This counter reports the average size in bytes of each transport send operation. A transport send operation might contain more than one message fragment.|  
 |**Send I/O Len Avg Base**|For internal use only.|
-|**Send I/Os/sec**|This counter reports the number of transport send I/O operations per second that have completed. Notice that a transport send operation may contain more than one message fragment.|  
-  
+|**Send I/Os/sec**|This counter reports the number of transport send I/O operations per second that have completed. A transport send operation might contain more than one message fragment.|  
   
 ## Example
 
@@ -65,9 +64,8 @@ SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%Broker/DBM Transport%';
 ```  
 
-## See also  
- - [sys.dm_broker_forwarded_messages &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-broker-forwarded-messages-transact-sql.md)   
- - [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
- - [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
-  
-  
+## Related content
+
+- [sys.dm_broker_forwarded_messages (Transact-SQL)](../system-dynamic-management-views/sys-dm-broker-forwarded-messages-transact-sql.md)
+- [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)
+- [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)

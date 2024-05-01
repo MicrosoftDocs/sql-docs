@@ -40,11 +40,9 @@ The database per tenant pattern isolates tenant data effectively, but increases 
 
 ![screen](./media/saas-tenancy-schema-management/schema-management-dpt.png)
 
+## Elastic Jobs
 
-## Elastic Jobs public preview
-
-There's a new version of Elastic Jobs that is now an integrated feature of Azure SQL Database. This new version of Elastic Jobs is currently in public preview. This public preview currently supports using PowerShell to create a job agent, and T-SQL to create and manage jobs.
-See article on [Elastic Database Jobs](./elastic-jobs-overview.md) for more information.
+In 2024, elastic jobs was released as a generally available product with new features. An integrated feature of Azure SQL Database, see [elastic database jobs](./elastic-jobs-overview.md).
 
 ## Get the Wingtip Tickets SaaS database per tenant application scripts
 

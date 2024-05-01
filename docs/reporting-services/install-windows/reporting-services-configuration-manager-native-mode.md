@@ -5,6 +5,7 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 09/20/2017
 ms.service: reporting-services
+ms.subservice: report-server
 ms.topic: conceptual
 ms.custom: updatefrequency5
 helpviewer_keywords:
@@ -30,7 +31,7 @@ Use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configurat
   
 -   Configure the Report Server service account. The account is initially configured during setup, but can be modified by using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager if you update the password or want to use a different account.  
   
--   Create and configure URLs. The report server and the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] are [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications accessed through URLs. The report server URL provides access to the SOAP endpoints of the report server. The [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] URL is used to open the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] You can configure a single URL or multiple URLs for each application.  
+-   Create and configure URLs. The report server and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] are [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications accessed through URLs. The report server URL provides access to the SOAP endpoints of the report server. The [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] URL is used to open the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] You can configure a single URL or multiple URLs for each application.  
   
 -   Create and configure the report server database. The report server is a stateless server that requires a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database for internal storage. You can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to create and configure a connection to the report server database. You can also select an existing report server database that already contains the content you want to use.  
   

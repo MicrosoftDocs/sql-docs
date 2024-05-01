@@ -8,7 +8,7 @@ ms.topic: include
 ms.custom:
   - linux-related-content
 ---
-1. **On all SQL Servers, create a Server login for Pacemaker**. The following Transact-SQL creates a login:
+1. **On all SQL Server instances, create a Server login for Pacemaker**. The following Transact-SQL creates a login:
 
    ```sql
    USE [master]
@@ -20,7 +20,7 @@ ms.custom:
 
    At the time of availability group creation, the pacemaker user will require ALTER, CONTROL and VIEW DEFINITION permissions on the availability group, after it's created but before any nodes are added to it.
 
-1. **On all SQL Servers, save the credentials for the SQL Server login**.
+1. **On all SQL Server instances, save the credentials for the SQL Server login**.
 
    ```bash
    echo 'pacemakerLogin' >> ~/pacemaker-passwd

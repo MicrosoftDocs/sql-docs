@@ -4,11 +4,14 @@ description: Learn how Hyperscale databases are architected to scale out storage
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 10/04/2023
+ms.date: 02/22/2024
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
-ms.custom: build-2023, build-2023-dataai, ignite-2023
+ms.custom:
+  - build-2023
+  - build-2023-dataai
+  - ignite-2023
 ---
 
 # Hyperscale distributed functions architecture
@@ -18,7 +21,7 @@ ms.custom: build-2023, build-2023-dataai, ignite-2023
 The [Hyperscale service tier](service-tier-hyperscale.md) utilizes an architecture with highly scalable and separate storage and compute tiers. This article describes the components that enable customers to quickly scale Hyperscale databases while benefiting from nearly instantaneous backups and highly scalable transaction logging.
 
 > [!TIP]
-> Simplified pricing for SQL Database Hyperscale coming soon. Review the [Hyperscale pricing blog](https://aka.ms/hsignite2023) for details.
+> Simplified pricing for SQL Database Hyperscale arrived in December 2023. Review the [Hyperscale pricing blog](https://aka.ms/hsignite2023) for details.
 
 ## Hyperscale architecture overview
 
@@ -62,9 +65,7 @@ Page servers also maintain covering SSD-based caches to enhance performance. Lon
 
 The log service accepts transaction log records that correspond to data changes from the primary compute replica. Page servers then receive the log records from the log service and apply the changes to their respective slices of data. Additionally, compute secondary replicas receive log records from the log service and replay only the changes to pages already in their buffer pool or local RBPEX cache. All data changes from the primary compute replica are propagated through the log service to all the secondary compute replicas and page servers.
 
-Finally, transaction log records are pushed out to long-term storage in Azure Storage, which is a virtually infinite storage repository. This mechanism removes the need for frequent log truncation. The log service has local memory and SSD caches to speed up access to log records.
-
-The log for Hyperscale is practically infinite, with the restriction that a single transaction can't generate more than 1 TB of log. Additionally, if using [Change Data Capture](/sql/relational-databases/track-changes/about-change-data-capture-sql-server), at most 1 TB of log can be generated since the start of the oldest active transaction. Avoid unnecessarily large transactions to stay below this limit.
+Finally, transaction log records are pushed out to long-term storage in Azure Storage, which is a virtually infinite storage repository. This mechanism removes the need for frequent log truncation. The common reasons for log growth such as missed log backups or slow data replication to secondary replicas do not apply to Hyperscale. The log service has local memory and SSD caches to speed up access to log records.
 
 ## Azure storage
 

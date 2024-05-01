@@ -8,7 +8,7 @@ ms.reviewer: hudequei
 ms.date: 09/13/2022
 ms.service: sql
 ms.subservice: big-data-cluster
-ms.topic: conceptual
+ms.topic: release-notes
 ---
 
 # SQL Server 2019 Big Data Clusters CU17 release notes

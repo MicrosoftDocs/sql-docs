@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "data access [SQL Server Native Client], components"
   - "components [SQL Server Native Client]"
   - "SQLNCLI, about SQL Server Native Client"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Components of SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

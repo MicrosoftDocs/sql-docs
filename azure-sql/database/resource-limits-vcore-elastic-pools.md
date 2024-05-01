@@ -569,6 +569,8 @@ The following table covers these SLOs: `BC_DC_14`, `BC_DC_16`, `BC_DC_18`, `BC_D
 
 ## Hyperscale - provisioned compute - standard-series (Gen5)
 
+Although the published Hyperscale resource limits for standard-series and premium-series are the same, premium-series offers faster CPU performance compared to standard-series, and scales up to 128 vCores, compared to 80 vCores for standard-series. Resources using premium-series are guaranteed to run on hardware with newer CPUs. Standard-series does not provide this guarantee and, depending on availability, resources may be placed on older hardware. There is no price difference between the two, but premium-series may not be available in all regions.
+
 > [!NOTE]
 > Elastic pools for Hyperscale databases are currently in preview.
 
@@ -878,7 +880,7 @@ The following table covers these SLOs: `HS_MOPRMS_64` and `HS_MOPRMS_80`:
 | In-memory OLTP storage (GB) | N/A | N/A |
 | Max data size per pool (TB) | 100 | 100 |
 | `tempdb` max data size (GB) | 2,048 | 2,560 | 
-| Max local SSD IOPS per pool <sup>2</sup> | 368,640 | 460,800 | 
+| Max local SSD IOPS per pool <sup>2</sup> | 368,640 | 409,600 |
 | Max log rate per pool (MBps) | 125 | 125 | 
 | Local read IO latency<sup>3</sup> | 1-2 ms | 1-2 ms | 
 | Remote read IO latency<sup>3</sup> | 1-5 ms | 1-5 ms | 

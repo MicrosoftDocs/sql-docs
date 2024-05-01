@@ -18,7 +18,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
 
-This article provides an overview of using Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) to authenticate to [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), [SQL Server on Windows Azure VMs](../virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md), [Synapse SQL in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) and [SQL Server for Windows and Linux](/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview).
+This article provides an overview of using Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) to authenticate to [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), [SQL Server on Windows Azure VMs](../virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md), [Synapse SQL in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) and [SQL Server for Windows and Linux](/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview).
 
 To learn how to create and populate Microsoft Entra ID, and then configure Microsoft Entra ID with Azure SQL Database, Azure SQL Managed Instance, and Synapse SQL in Azure Synapse Analytics, review [Configure Microsoft Entra ID](authentication-aad-configure.md) and [Microsoft Entra ID with SQL Server on Azure VMs](../virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm.md).
 
@@ -101,10 +101,9 @@ To create a contained database user in Azure SQL Database, Azure SQL Managed Ins
 
 - The following members of Microsoft Entra ID can be provisioned for Azure SQL Database:
 
-  - Native members: A member created in Microsoft Entra ID in the managed domain or in a customer domain. For more information, see [Add your own domain name to Microsoft Entra ID](/azure/active-directory/fundamentals/add-custom-domain).
-  - Members of an Active Directory domain federated with Microsoft Entra ID on a managed domain configured for seamless single sign-on with pass-through or password hash authentication. For more information, see [Federation with Microsoft Entra ID](/azure/active-directory/hybrid/connect/whatis-fed) and [Microsoft Entra seamless single sign-on](/azure/active-directory/hybrid/how-to-connect-sso).
-  - Guest users, a feature of Microsoft Entra External ID that allows you to invite users into your Microsoft Entra tenant from accounts from outside your Microsoft Entra tenant.
-  - Active Directory groups created as security groups.
+  - Microsoft Entra users: Any [type of user](/entra/fundamentals/how-to-create-delete-users#types-of-users) in a Microsoft Entra tenant, including internal, external, guests, and members. Members of an Active Directory domain configured for [federation with Microsoft Entra ID](/entra/identity/hybrid/connect/whatis-fed) are also supported, and can be configured for [seamless single sign-on](/entra/identity/hybrid/connect/how-to-connect-sso).
+  - Applications: applications that exist in Azure can use service principals or managed identities to authenticate directly to Azure SQL Database. Using managed identities for authentication is preferred due to it being passwordless and eliminating the need for developer-managed credentials.
+  - Microsoft Entra groups, which can simplify access management across your organization by managing appropriate user and application access based on their group membership.
 
 - Microsoft Entra users that are part of a group that is member of the `db_owner` database role cannot use the **[CREATE DATABASE SCOPED CREDENTIAL](/sql/t-sql/statements/create-database-scoped-credential-transact-sql)** syntax against Azure SQL Database and Azure Synapse. You'll see the following error:
 
@@ -112,7 +111,7 @@ To create a contained database user in Azure SQL Database, Azure SQL Managed Ins
 
     To mitigate the **CREATE DATABASE SCOPED CREDENTIAL** issue add the individual Microsoft Entra user the `db_owner` role directly.
 
-- These system functions aren't supported and return NULL values when executed under Microsoft Entra principals:
+- These system functions aren't supported and return NULL values when executed by Microsoft Entra principals:
 
   - `SUSER_ID()`
   - `SUSER_NAME(<ID>)`

@@ -90,7 +90,7 @@ Binds a data query [Recordset](../ado-api/recordset-object-ado.md) to one or mor
   
  Remote Data Service client components are already included as part of Internet Explorer 4.0; therefore, you do not need to include a CODEBASE parameter in your **RDS.DataControl** object tag.  
   
- With Internet Explorer 4.0 or later, you can bind to data by using HTML controls and ActiveX® controls only if they are marked as apartment model controls.  
+ With Internet Explorer 4.0 or later, you can bind to data by using HTML controls and ActiveX controls only if they are marked as apartment model controls.  
   
 > [!NOTE]
 >  **Microsoft Visual Basic Users** The **RDS.DataControl** is safe for scripting and is used only in Web-based applications. A Visual Basic client application has no need for it.  

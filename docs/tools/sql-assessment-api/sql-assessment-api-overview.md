@@ -7,6 +7,7 @@ ms.reviewer: randolphwest
 ms.date: 01/18/2023
 ms.service: sql
 ms.subservice: tools-other
+ms.custom: linux-related-content
 ms.topic: conceptual
 ---
 # SQL Assessment API

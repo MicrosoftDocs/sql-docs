@@ -3,7 +3,7 @@ title: Microsoft ODBC Driver for SQL Server
 description: The Microsoft ODBC Driver for SQL Server provides connectivity to SQL Server and Azure SQL Database via standard ODBC APIs.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 07/31/2023
+ms.date: 04/09/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -38,7 +38,8 @@ The following sample demonstrates how to use the ODBC APIs to connect to and acc
 - [DSN and Connection String Keywords and Attributes](dsn-connection-string-attribute.md)
 - [SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md) (the features available also apply, without OLEDB, to the ODBC Driver for SQL Server)
 - [Using Always Encrypted](using-always-encrypted-with-the-odbc-driver.md)
-- [Using Azure Active Directory](using-azure-active-directory.md)
+- [Using Microsoft Entra ID (formerly Azure Active Directory)](using-azure-active-directory.md)
+
 - [Using Transparent Network IP Resolution](using-transparent-network-ip-resolution.md)
 - [Using XA Transactions](use-xa-with-dtc.md)
 - [Connection Troubleshooting](connection-troubleshooting.md)
@@ -71,4 +72,3 @@ The following sample demonstrates how to use the ODBC APIs to connect to and acc
 ## Community
 
 - [SQL Server Drivers blog](https://techcommunity.microsoft.com/t5/SQL-Server/bg-p/SQLServer/label-name/SQLServerDrivers)  
-- [SQL Server Data Access Forum](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)

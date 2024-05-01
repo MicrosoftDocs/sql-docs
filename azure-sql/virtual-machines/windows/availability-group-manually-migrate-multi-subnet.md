@@ -47,7 +47,7 @@ The first method to move to a multi-subnet availability group is to set up a new
 
 Initially in the new multi-subnet environment, create the listener with a different name than the existing single subnet environment. A newly named listener in a new availability group allows for side-by-side testing of the application (testing with both the multi-subnet and the current load balancer or DNN in place).
 
-Once the multi-subnet environment is thoroughly validated, then you could cut over to the new infrastructure. Depending on the environment (production, test), use a maintenance window to complete the change. During the maintenance window, restore the database to the new primary replica, drop the availability group listener in both environments, and then recreate the listener in the multi-subnet environment using the same name as the previous listener, the one used in the application connection string. 
+Once the multi-subnet environment is thoroughly validated, then you could cut over to the new infrastructure. Depending on the environment (production, test), use a maintenance window to complete the change. During the maintenance window, restore the database to the new primary replica, remove the availability group listener in both environments, and then recreate the listener in the multi-subnet environment using the same name as the previous listener, the one used in the application connection string. 
 
 Setting up a new environment in a [multi-subnet configuration is now easier with the Azure portal deployment experience](availability-group-azure-portal-configure.md).
 

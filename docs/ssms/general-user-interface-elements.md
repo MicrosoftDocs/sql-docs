@@ -1,9 +1,10 @@
 ---
 title: "General User Interface Elements"
 description: "General User Interface Elements"
-author: "markingmyname"
-ms.author: "maghan"
-ms.date: "01/19/2017"
+author: erinstellato-ms
+ms.author: erinstellato
+ms.reviewer: maghan
+ms.date: 12/21/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: ui-reference
@@ -23,7 +24,7 @@ The **Editor**, the **Properties** window, and the **Toolbox** are some of the b
 Describes the dialog box that provides information about SQL Server Management Studio and about the computer that it is running on.  
   
 [SQL Server Management Studio Web Browser](../ssms/sql-server-management-studio-web-browser.md)  
-Describes how SQL Server Management Studio hosts a Web browser in a document window.  
+Describes how SQL Server Management Studio invokes a web browser.  
   
 [External Tools Dialog Box](../ssms/external-tools-dialog-box.md)  
 Allows you to add tools to the **Tools** menu that are not part of SQL Server Management Studio.  

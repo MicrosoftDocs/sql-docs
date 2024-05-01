@@ -57,7 +57,7 @@ The feature described in this article requires SQL Server Management Studio vers
 
     ![Optionally edit the new pipeline](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image6-edit.png)
 
-    The **Edit Trigger** blade opens for you to customize the scheduling options.
+    The **Edit Trigger** pane opens for you to customize the scheduling options.
 
     ![Edit Trigger](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image7-edit2.png)
 

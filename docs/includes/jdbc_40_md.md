@@ -1,1 +1,0 @@
- Microsoft JDBC Driver 4.0 for SQL Server 

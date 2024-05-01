@@ -1,5 +1,5 @@
 ---
-title: "Lesson 9: Build and Run the Application"
+title: "Lesson 9: Build and run the application"
 description: Learn how to build and run the website application after you create a data filter for the data table.
 author: maggiesMSFT
 ms.author: maggies
@@ -9,10 +9,10 @@ ms.subservice: reporting-services
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
-# Lesson 9: Build and Run the Application
+# Lesson 9: Build and run the application
 After you create a data filter for the data table, your next step is to build and run the website application.  
   
-### To build and run the application  
+### Build and run the application  
   
 1.  Press **CTRL+F5** to run the Default.aspx page without debugging, or press F5 to run the page with debugging.  
   
@@ -20,11 +20,11 @@ After you create a data filter for the data table, your next step is to build an
   
     The webpage appears in the browser. The ReportViewer control displays the report. You can use the toolbar to browse through the report, zoom, and export the report to Excel.  
   
-2.  Hover the mouse over any of the rows under **Name** column. The mouse cursor will display a Hand symbol.  
+2.  Hover over any of the rows under **Name** column. The cursor displays a Hand symbol.  
   
 3.  Select a value in the **Name** column. The child report is shown with the corresponding filtered data.  
   
-4.  Select the icon, **Go back to parent report**, in the **ReportViewer** tool bar to navigate back to the **Parent** report.  
+4.  Select the icon, **Go back to parent report**, in the **ReportViewer** tool bar to go back to the **Parent** report.  
   
 5.  Close the browser to exit.  
   

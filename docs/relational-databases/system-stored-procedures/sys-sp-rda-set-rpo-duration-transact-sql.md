@@ -53,7 +53,7 @@ Requires **db_owner** permissions.
 
 Get the current value by running [sys.sp_rda_get_rpo_duration (Transact-SQL)](sys-sp-rda-get-rpo-duration-transact-sql.md).
 
-## See also
+## Related content
 
 - [sys.sp_rda_get_rpo_duration (Transact-SQL)](sys-sp-rda-get-rpo-duration-transact-sql.md)
 - [Restore Stretch-enabled databases (Stretch Database)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)

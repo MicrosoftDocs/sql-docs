@@ -162,7 +162,7 @@ Number of distribution agents configured to run continuously is limited to 30 on
 
 Using transactional replication with instances that are in a failover group is supported. However, if you configure replication before adding your SQL managed instance into a failover group, replication pauses when you start to create your failover group, and replication monitor shows a status of `Replicated transactions are waiting for the next log backup or for mirroring partner to catch up`. Replication resumes once the failover group is created successfully.
 
-If a **publisher** or **distributor** SQL managed instance is in a [failover group](auto-failover-group-sql-mi.md), the SQL managed instance administrator must clean up all publications on the old primary and reconfigure them on the new primary after a failover occurs. The following activities are needed in this scenario:
+If a **publisher** or **distributor** SQL managed instance is in a [failover group](failover-group-sql-mi.md), the SQL managed instance administrator must clean up all publications on the old primary and reconfigure them on the new primary after a failover occurs. The following activities are needed in this scenario:
 
 1. Stop all replication jobs running on the database, if there are any.
 1. Drop subscription metadata from publisher by running the following script on publisher database. Replace the `<name of publication>` and `<name of subscriber>` values:

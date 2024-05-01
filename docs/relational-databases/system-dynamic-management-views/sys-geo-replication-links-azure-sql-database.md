@@ -42,7 +42,7 @@ Contains a row for each replication link between primary and secondary databases
 
 ## Permissions
 
-This view is only available in the **master** database on the [logical server](/azure/azure-sql/database/logical-servers) to the server-level principal login. Results will only be returned for the server administrator, Azure Active Directory admin, or for a user with the dbmanager role.
+This view is only available in the **master** database on the [logical server](/azure/azure-sql/database/logical-servers) to the server-level principal login. Results will only be returned for the server administrator, [Microsoft Entra admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure), or for a user with the dbmanager role.
   
 ## Example
 

@@ -54,7 +54,7 @@ ms.custom: updatefrequency5
   
 -   The chart type is polar, radar, pie, doughnut, funnel, pyramid, or any stacked chart.  
   
- An example of chart with scale breaks is available as a sample report. For more information about downloading this sample report and others, see [Report Builder and Report Designer sample reports](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ An example of chart with scale breaks is available as a sample report. For more information about downloading this sample report and others, see [Report Builder and Report Designer sample reports](../../reporting-services/tools/reporting-services-tools.md).
 
 ## Next steps
 

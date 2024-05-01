@@ -6,7 +6,7 @@ ms.author: mikeray
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: database-mirroring
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
   - "sessions [SQL Server], database mirroring"
   - "resuming database mirroring"

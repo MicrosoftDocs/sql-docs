@@ -65,17 +65,17 @@ An optional parameter that returns a description of the cursor result set column
 The following example prepares and executes a basic Transact-SQL statement.
 
 ```sql
-DECLARE @P1 INT;
+DECLARE @handle INT;
 
-EXEC sp_prepare @P1 OUTPUT,
+EXEC sp_prepare @handle OUTPUT,
     N'@P1 NVARCHAR(128), @P2 NVARCHAR(100)',
     N'SELECT database_id, name FROM sys.databases WHERE name=@P1 AND state_desc = @P2';
 
-EXEC sp_execute @P1,
+EXEC sp_execute @handle,
     N'tempdb',
     N'ONLINE';
 
-EXEC sp_unprepare @P1;
+EXEC sp_unprepare @handle;
 ```
 
 ### B. Prepare and execute a statement using the handle
@@ -84,9 +84,9 @@ The following example prepares a statement in the [!INCLUDE [sssampledbobject-md
 
 ```sql
 -- Prepare query
-DECLARE @P1 INT;
+DECLARE @handle INT;
 
-EXEC sp_prepare @P1 OUTPUT,
+EXEC sp_prepare @handle OUTPUT,
     N'@Param INT',
     N'SELECT *
 FROM Sales.SalesOrderDetail AS sod
@@ -95,7 +95,7 @@ WHERE SalesOrderID = @Param
 ORDER BY Style DESC;';
 
 -- Return handle for calling application
-SELECT @P1;
+SELECT @handle;
 GO
 ```
 
@@ -118,6 +118,6 @@ EXEC sp_unprepare 1;
 GO
 ```
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

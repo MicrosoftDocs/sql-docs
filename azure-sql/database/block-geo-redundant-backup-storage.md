@@ -1,6 +1,5 @@
 ---
 title: Block geo-replication of Azure SQL Database backups 
-titleSuffix: Block Azure SQL Databases from using geo-redundant backup storage
 description: This article details a feature that allows Azure administrators to block geo-replication of Azure SQL Databases.
 author: SudhirRaparla
 ms.author: nvraparl
@@ -14,7 +13,6 @@ ROBOTS: NOINDEX
 
 # What is Block Geo-replication of Azure SQL Database Backups feature?
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
-
 
 This feature allows Azure administrators to prevent Azure SQL Databases using geo-redundant storage options (RA-GRS, RA-GZRS) as preferred backup storage redundancy via T-SQL, Azure portal, PowerShell, Azure CLI and API. This is enforced at the subscription level to block geo-replication of Azure SQL database backups.
 

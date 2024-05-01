@@ -1,5 +1,6 @@
 ---
 title: Manage historical data in temporal tables
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Learn how to use temporal retention policy to keep historical data under your control.
 author: MladjoA
 ms.author: mlandzic

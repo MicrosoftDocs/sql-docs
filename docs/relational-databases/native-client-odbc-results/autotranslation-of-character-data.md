@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "autotranslating character data"
   - "SQL Server Native Client ODBC driver, data types"
   - "ODBC data types, autotranslating character data"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Autotranslation of Character Data
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +41,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  Because all of these conversions are done by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver executing on the client, the server ACP must be one of the code pages installed on the client computer.  
   
- Making the character conversions through Unicode ensures the proper conversion of all characters that exist in both code pages. If a character exists in one code page but not another, however, then the character cannot be represented in the target code page. For example, code page 1252 has the registered trademark symbol (®), while code page 437 does not.  
+ Making the character conversions through Unicode ensures the proper conversion of all characters that exist in both code pages. If a character exists in one code page but not another, however, then the character cannot be represented in the target code page. For example, code page 1252 has the registered trademark symbol (&reg;), while code page 437 does not.  
   
  The AutoTranslate setting has no effect on these conversions:  
   

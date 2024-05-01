@@ -143,14 +143,14 @@ Migrate SQL Server Reporting Services (SSRS) reports to paginated reports in Pow
 ### High availability
 Manual setup of SQL Server high-availability features like Always On failover cluster instances and Always On availability groups becomes obsolete on the target SQL database. High-availability architecture is already built into both [General Purpose (standard availability model)](../../database/high-availability-sla.md#locally-redundant-availability) and [Business Critical (premium availability model)](../../database/high-availability-sla.md#locally-redundant-availability) service tiers for Azure SQL Database. The Business Critical/Premium service tier also provides read scale-out that allows connecting into one of the secondary nodes for read-only purposes. 
 
-Beyond the high-availability architecture that's included in Azure SQL Database, the [auto-failover groups](../../database/auto-failover-group-sql-db.md) feature allows you to manage the replication and failover of databases in a managed instance to another region. 
+Beyond the high-availability architecture that's included in Azure SQL Database, the [failover groups](../../database/failover-group-sql-db.md) feature allows you to manage the replication and failover of databases to a server in another region. 
 
 ### Logins and groups
 
-Windows logins are not supported in Azure SQL Database, create a login from Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) instead. Manually recreate any SQL logins. 
+Windows logins are not supported in Azure SQL Database, create a login from Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) instead. Manually recreate any SQL logins. 
 
 ### SQL Agent jobs
-SQL Agent jobs are not directly supported in Azure SQL Database and need to be deployed to [elastic database jobs (preview)](../../database/job-automation-overview.md).
+SQL Agent jobs are not directly supported in Azure SQL Database. Instead, use [elastic jobs](../../database/job-automation-overview.md).
 
 ### System databases
 For Azure SQL Database, the only applicable system databases are [master](/sql/relational-databases/databases/master-database) and `tempdb`. To learn more, see [Tempdb in Azure SQL Database](/sql/relational-databases/databases/tempdb-database#tempdb-database-in-sql-database).

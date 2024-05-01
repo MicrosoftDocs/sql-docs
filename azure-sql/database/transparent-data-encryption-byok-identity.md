@@ -1,9 +1,10 @@
 ---
 title: Customer-managed keys with transparent data encryption using user-assigned managed identity
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Bring Your Own Key (BYOK) support for transparent data encryption (TDE) using user-assigned managed identity (UMI)
 author: GithubMirek
 ms.author: mireks
-ms.reviewer: vanto
+ms.reviewer: vanto, mathoma
 ms.date: 09/28/2023
 ms.service: sql-db-mi
 ms.subservice: security
@@ -14,7 +15,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 # Managed identities for transparent data encryption with customer-managed key
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-Microsoft Entra ID [formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name) provides an automatically managed identity to authenticate to any Azure service that supports Microsoft Entra authentication, such as [Azure Key Vault](/azure/key-vault/general/overview), without exposing credentials in the code. For more information, see [Managed identity types](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) in Azure.
+Microsoft Entra ID [formerly Azure Active Directory](/entra/fundamentals/new-name) provides an automatically managed identity to authenticate to any Azure service that supports Microsoft Entra authentication, such as [Azure Key Vault](/azure/key-vault/general/overview), without exposing credentials in the code. For more information, see [Managed identity types](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) in Azure.
 
 Managed Identities can be of two types:
 
@@ -57,7 +58,7 @@ In addition to the system-assigned managed identity that is already supported fo
   - `Failed to save Transparent Data Encryption settings for SQL resource: <ServerName>. Error message: The managed identity with ID '/subscriptions/subsriptionID/resourcegroups/resource_name/providers/Microsoft.ManagedIdentity/userAssignedIdentities/umi_name' requires the following Azure Key Vault permissions: 'Get, WrapKey, UnwrapKey' to the key 'https://keyvault_name/keys/key_name'. Please grant the missing permissions to the identity. Additionally ensure the key is not expired and is not disabled. For expired key, please extend the key expiry time so that SQL can use it to perform wrap and unwrap operations. If your key vault is behind a virtual network or firewall, ensure you select the 'Allow trusted Microsoft services to bypass this firewall' option. (https://aka.ms/sqltdebyokcreateserver).`
   - If you get the above error, check if the key vault is behind a virtual network or firewall, and make sure the option **Allow Trusted Microsoft Services to bypass this firewall** is enabled.
 - User Assigned Managed Identity for SQL Managed Instances is currently only supported on key vaults that have public access from all networks enabled. It is not supported when the AKV firewall is filtering specific virtual networks and IP addresses or using private endpoint connections.
-- When multiple user-assigned managed identities are assigned to the server or managed instance, if a single identity is removed from the server using the *Identity* blade of the Azure portal, the operation succeeds but the identity doesn't get removed from the server. Removing all user-assigned managed identities together from the Azure portal works successfully.
+- When multiple user-assigned managed identities are assigned to the server or managed instance, if a single identity is removed from the server using the *Identity* pane of the Azure portal, the operation succeeds but the identity doesn't get removed from the server. Removing all user-assigned managed identities together from the Azure portal works successfully.
 - When the server or managed instance is configured with customer-managed TDE and both system-assigned and user-assigned managed identities are enabled on the server, removing the user-assigned managed identities from the server without first giving the system-assigned managed identity access to the key vault results in an *Unexpected error occurred* message. Ensure the system-assigned managed identity has been provided key vault access prior to removing the primary user-assigned managed identity (and any other user-assigned managed identities) from the server.
 
 ## Next steps

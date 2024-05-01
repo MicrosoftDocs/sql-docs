@@ -64,7 +64,7 @@ This article provides step-by-step instructions for upgrading SQL Server on-prem
 
 3. Enter a shared location that the source and target SQL Server instances have access to, in the **Share location options** box.
 
-4. If you can't provide a shared location that both the source and target SQL Servers have access to, select **Copy the database backups to a different location that the target server can read and restore from**. Then, enter a value for the **Location for backups for restore option** box. 
+4. If you can't provide a shared location that both the source and target SQL Server instances have access to, select **Copy the database backups to a different location that the target server can read and restore from**. Then, enter a value for the **Location for backups for restore option** box. 
 
    Make sure that the user account running Data Migration Assistant has read privileges to the backup location and write privileges to the location from which the target server restores.
 

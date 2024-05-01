@@ -76,13 +76,10 @@ EXEC sp_recompile N'Sales.Customer';
 GO
 ```
 
-## See also
+## Related content
 
 - [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)
 - [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [SQL:StmtRecompile Event Class](../event-classes/sql-stmtrecompile-event-class.md)
-
-## Next steps
-
 - [Recompile a stored procedure](../stored-procedures/recompile-a-stored-procedure.md)

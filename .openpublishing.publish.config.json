@@ -91,6 +91,12 @@
       "branch_mapping": {}
     },
     {
+      "path_to_root": "azure_powershell_scripts",
+      "url": "https://github.com/Azure-Samples/azure-docs-powershell-samples",
+      "branch": "main",
+      "branch_mapping": {}
+    },
+    {
       "path_to_root": "powershell_scripts",
       "url": "https://github.com/Azure/azure-docs-powershell-samples",
       "branch": "master",
@@ -126,6 +132,18 @@
       "path_to_root": "sql-server-samples",
       "url": "https://github.com/Microsoft/sql-server-samples",
       "branch": "master",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "azure-docs-pr",
+      "url": "https://github.com/MicrosoftDocs/azure-docs-pr",
+      "branch": "main",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "azure-reference-other-repo",
+      "url": "https://github.com/MicrosoftDocs/azure-reference-other-pr",
+      "branch": "main",
       "branch_mapping": {}
     },
     {

@@ -54,9 +54,9 @@ These are the APIs:
 
 | Command | Description |
 | --- | --- |
-|[Managed Instance Operations - Get](/rest/api/sql/managedinstanceoperations/get)|Gets a management operation on a managed instance.|
-|[Managed Instance Operations - Cancel](/rest/api/sql/managedinstanceoperations/cancel)|Cancels the asynchronous operation on the managed instance.|
-|[Managed Instance Operations - List By Managed Instance](/rest/api/sql/managedinstanceoperations/listbymanagedinstance)|Gets a list of operations performed on the managed instance.|
+|[Managed Instance Operations - Get](/rest/api/sql/managed-instance-operations/get)|Gets a management operation on a managed instance.|
+|[Managed Instance Operations - Cancel](/rest/api/sql/managed-instance-operations/cancel)|Cancels the asynchronous operation on the managed instance.|
+|[Managed Instance Operations - List By Managed Instance](/rest/api/sql/managed-instance-operations/list-by-managed-instance)|Gets a list of operations performed on the managed instance.|
 
 > [!NOTE]
 > Use API version 2020-02-02 to see the managed instance create operation in the list of operations. This is the default version used in the Azure portal and the latest PowerShell and Azure CLI packages.

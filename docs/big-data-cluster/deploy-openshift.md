@@ -9,7 +9,7 @@ ms.date: 07/29/2021
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.custom: intro-deployment
+ms.custom: intro-deployment, linux-related-content
 ---
 
 # Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on OpenShift on-premises and Azure Red Hat OpenShift
@@ -122,7 +122,7 @@ This article outlines deployment steps that are specific to the OpenShift platfo
    - [Other customizations](deployment-custom-configuration.md)
 
    > [!NOTE]
-   > Integrating with Azure Active Directory for BDC is not supported, hence you can not use this authentication method when deploying on ARO.
+   > Integration with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) for BDC is not supported, hence you can't use this authentication method when deploying on ARO.
 
 1. Set [environment variables](deployment-guidance.md#env)
 

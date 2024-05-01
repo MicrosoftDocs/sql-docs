@@ -1,29 +1,32 @@
 ---
-title: "sp_change_feed_disable_table (Transact-SQL)"
-description: "The sp_change_feed_disable_table system stored procedure disables a table in the change feed for Azure Synapse Link for SQL."
+title: "sys.sp_change_feed_disable_table (Transact-SQL)"
+description: "The internal sys.sp_change_feed_disable_table system stored procedure disables a table in the change feed."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 06/13/2023
+ms.date: 03/12/2024
 ms.service: synapse-analytics
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sp_change_feed_disable_table_TSQL"
   - "sp_change_feed_disable_table"
+  - "sys.sp_change_feed_disable_table_TSQL"
+  - "sys.sp_change_feed_disable_table"
 helpviewer_keywords:
   - "sp_change_feed_disable_table"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
+monikerRange: ">=sql-server-ver16||=azuresqldb-current||=azure-sqldw-latest||=fabric"
 ---
-# sp_change_feed_disable_table (Transact-SQL)
+# sys.sp_change_feed_disable_table (Transact-SQL)
 
-[!INCLUDE [sqlserver2022-asdb](../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [sqlserver2022-asdb-asa-fabric](../../includes/applies-to-version/sqlserver2022-asdb-asa-fabric.md)]
 
-Removes a table from the change feed for [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview). For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
+Removes a table from the change feed for [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview) or [Microsoft Fabric mirrored databases (Preview)](/fabric/database/mirrored-database/overview). 
 
 > [!NOTE]  
-> This stored procedure is used internally and is not recommended for direct administrative use. Use Synapse Studio instead. Using this procedure will introduce inconsistency with Synapse Workspace configuration.
+> This system stored procedure is used internally and is not recommended for direct administrative use. Use Synapse Studio or the Fabric portal instead. Using this procedure could introduce inconsistency.
 
 ## Syntax
 
@@ -58,13 +61,22 @@ The last changes published and synchronized to Azure Synapse cannot be guarantee
 
 A user with [CONTROL database permissions](../security/permissions-database-engine.md), **db_owner** database role membership, or **sysadmin** server role membership can execute this procedure.
 
-## See also
+## Related content
 
-- [What is Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
-- [sp_change_feed_disable_db (Transact-SQL)](sp-change-feed-disable-db.md)
-- [sp_change_feed_drop_table_group (Transact-SQL)](sp-change-feed-drop-table-group.md)
+- [sys.sp_help_change_feed (Transact-SQL)](sp-help-change-feed.md)
+- [sys.sp_help_change_feed_table (Transact-SQL)](sp-help-change-feed-table.md)
+- [sys.sp_change_feed_configure_parameters (Transact-SQL)](sp-change-feed-configure-parameters.md)
+- [sys.dm_change_feed_log_scan_sessions (Transact-SQL)](../system-dynamic-management-views/sys-dm-change-feed-log-scan-sessions.md)
+- [sys.dm_change_feed_errors (Transact-SQL)](../system-dynamic-management-views/sys-dm-change-feed-errors.md)
 
-## Next steps
+**For Microsoft Fabric mirrored databases**:
 
+- [Microsoft Fabric mirrored databases (Preview)](/fabric/database/mirrored-database/overview)
+- [Microsoft Fabric mirrored databases monitoring](/fabric/database/mirrored-database/monitor)
+- [Explore data in your Mirrored database using Microsoft Fabric](/fabric/database/mirrored-database/explore)
+
+**For Azure Synapse Link**:
+
+- [What is Azure Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
 - [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md)
-- [Get started with Synapse Link for SQL Server 2022](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022)
+- [Troubleshoot: Azure Synapse Link for SQL initial snapshot issues](/azure/synapse-analytics/synapse-link/troubleshoot/troubleshoot-sql-snapshot-issues)

@@ -4,7 +4,7 @@ description: Th EOMONTH function returns the last day of the month containing a 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/02/2023
+ms.date: 03/21/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -117,7 +117,7 @@ This Month
 
 Next Month
 -----------------------
-2012-01-31
+2022-01-31
 
 (1 row(s) affected)
 

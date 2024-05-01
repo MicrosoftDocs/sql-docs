@@ -10,7 +10,7 @@ ms.topic: "reference"
 keywords:
   - optimizer
   - adadelta
-ms.devlang: Python
+ms.devlang: python
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---
 # *microsoftml.adadelta_optimizer*: Adaptive learing rate method

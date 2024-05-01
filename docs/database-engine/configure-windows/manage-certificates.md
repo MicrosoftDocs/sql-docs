@@ -1,9 +1,9 @@
 ---
-title: Certificate Management (SQL Server Configuration Manager)
+title: Certificate management (SQL Server Configuration Manager)
 description: Learn how to install certificates in various SQL Server configurations. Examples include single instances, failover clusters, and Always On availability groups.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 08/02/2023
+ms.date: 04/18/2024
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "installing certificates"
   - "security [SQL Server], encryption"
 ---
-# Certificate Management (SQL Server Configuration Manager)
+# Certificate management (SQL Server Configuration Manager)
 
 [!INCLUDE [sql-windows-only](../../includes/applies-to-version/sql-windows-only.md)]
 
@@ -29,7 +29,7 @@ SSL/TLS certificates are widely used to secure access to [!INCLUDE [ssnoversion-
 With [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions, certificate management is integrated into the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Configuration Manager, which simplifies the following common tasks:
 
 - View and validate certificates installed in a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance.
-- Identify which certificates may be close to expiring.
+- Identify which certificates might be close to expiring.
 - Deploy certificates across AG machines from the node holding the primary replica.
 - Deploy certificates across FCI machines from the active node.
 
@@ -39,6 +39,7 @@ With [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions, c
 ## <a id="provision-single-server-cert"></a> Install a certificate for a single SQL Server instance
 
 ::: moniker range=">=sql-server-ver15"
+
 1. In [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Configuration Manager, in the console pane, expand **SQL Server Network Configuration**.
 
 1. Right-click **Protocols for** *&lt;instance Name&gt;*, and then select **Properties**.
@@ -51,11 +52,12 @@ With [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions, c
 ::: moniker-end
 
 ::: moniker range="<= sql-server-2017"
+
 1. In [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Configuration Manager, in the console pane, expand **SQL Server Network Configuration**.
 
 1. Right-click **Protocols for** *&lt;instance Name&gt;*, and then select **Properties**.
 
-1. Select a certificate from the  **Certificate** dropdown list, and then select **Apply**.
+1. Select a certificate from the **Certificate** dropdown list, and then select **Apply**.
 
 1. Select **OK**.
 ::: moniker-end
@@ -100,7 +102,7 @@ With [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions, c
 > [!NOTE]  
 > Complete these steps from the node holding the AG primary replica. User must have administrator permissions on all the cluster nodes.
 
-## Next steps
+## Related content
 
 - [Certificate requirements for SQL Server](certificate-requirements.md)
 - [GRANT Certificate Permissions (Transact-SQL)](../../t-sql/statements/grant-certificate-permissions-transact-sql.md)

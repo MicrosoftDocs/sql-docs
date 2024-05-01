@@ -82,7 +82,7 @@ EXEC sp_rda_reauthorize_db
     @with_copy = 1;
 ```
 
-## See also
+## Related content
 
 - [sys.sp_rda_deauthorize_db (Transact-SQL)](sys-sp-rda-deauthorize-db-transact-sql.md)
 - [Stretch Database](../../sql-server/stretch-database/stretch-database.md)

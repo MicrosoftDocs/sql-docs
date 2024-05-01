@@ -59,7 +59,7 @@ The **Test Connection** button in [!INCLUDE [ssRSnoversion](../../../includes/ss
 
 Depending on how your reports are created and published will determine where you edit the connection string:
 
-- **Native mode:** Use the [!INCLUDE [ssRSWebPortal-Non-Markdown](../../../includes/ssrswebportal-non-markdown-md.md)] for shared data sources and reports that are already published to a native mode report server.
+- **Native mode:** Use the [!INCLUDE [ssRSWebPortal](../../../includes/ssrswebportal.md)] for shared data sources and reports that are already published to a native mode report server.
 
 - **SharePoint Mode:** Use SharePoint configuration pages within the document libraries for reports that are already published to a SharePoint server.
 

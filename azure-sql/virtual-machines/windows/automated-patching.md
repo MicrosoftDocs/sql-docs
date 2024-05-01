@@ -4,7 +4,7 @@ description: This article explains the Automated Patching feature for SQL Server
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma, randolphwest
-ms.date: 09/08/2023
+ms.date: 03/28/2024
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: article
@@ -58,7 +58,7 @@ You can use the Azure portal to configure Automated Patching during provisioning
 
 Use the Azure portal to configure Automated Patching when you create a new SQL Server virtual machine in the Resource Manager deployment model.
 
-On the **SQL Server settings** tab, select **Change configuration** under **Automated patching**. The following Azure portal screenshot shows the **SQL Automated Patching** blade.
+On the **SQL Server settings** tab, select **Change configuration** under **Automated patching**. The following Azure portal screenshot shows the **SQL Automated Patching** pane.
 
 :::image type="content" source="./media/automated-patching/azure-sql-arm-patching.png" alt-text="Screenshot of SQL Automated Patching in the Azure portal.":::
 
@@ -110,6 +110,15 @@ To disable Automated Patching, run the following script with the value of **$fal
 ```azurepowershell
 Update-AzSqlVM -ResourceGroupName 'resourcegroupname' -Name 'vmname' -AutoPatchingSettingEnable:$false
 ```
+
+## Understand which updates will be applied with Automated Patching
+To understand which updates will be applied through Automated Patching, review the [update guide](https://msrc.microsoft.com/update-guide) and apply the **Severity** filter to identify Critical and Important updates.
+
+## Migrate from Automated Patching to Azure Update Manager
+
+[Azure Update Manager](/azure/update-center/overview) is a unified service to help you manage and govern updates for all your virtual machines and SQL Server instances at scale. Unlike with Automated Patching, [Azure Update Manager](../azure-update-manager-sql-vm.md) installs Cumulative Updates for SQL Server. It is recommended to only use one automated patching service to manage updates for your SQL Server VM. 
+
+If you are currently using Automated Patching, you can [migrate to Azure Update Manager](../azure-update-manager-sql-vm.md#migrate-from-automated-patching-to-azure-update-manager)
 
 
 ## Next steps

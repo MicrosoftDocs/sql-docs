@@ -3,10 +3,10 @@ title: "SQL Server, Workload Group Stats object"
 description: "Learn about the SQLServer:Workload Group Stats object, which contains performance counters that report about Resource Governor workload group statistics."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/13/2021"
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "Workload Group Stats object"
   - "SQLServer: Workload Group Stats"
@@ -21,13 +21,13 @@ helpviewer_keywords:
 |Counter name|Description|  
 |------------------|-----------------|  
 |**Active parallel threads**|The current count of parallel threads usage.|  
-|**Active requests**|The number of requests that are currently running in this workload group. This should be equivalent to the count of rows from sys.dm_exec_requests filtered by group ID.|  
+|**Active requests**|The number of requests that are currently running in this workload group. This should be equivalent to the count of rows from `sys.dm_exec_requests` filtered by group ID.|  
 |**Blocked requests**|The current number of blocked requests in the workload group. This can be used to determine workload characteristics.|  
 |**CPU delayed %**|System CPU delayed for all requests in the specified instance of the performance object as a percentage of the total time active.| 
 |**CPU delayed % base**|For internal use only.| 
 |**CPU effective %**|System CPU usage by all requests in the specified instance of the performance object as a percentage of the total time active.| 
 |**CPU effective % base**|For internal use only.| 
-|**CPU usage %**|The CPU bandwidth usage by all requests in this workload group measured relative to the computer and normalized to all the CPUs on the system. This value will change as the amount of CPU available to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process changes. It is not normalized to what the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process receives.| 
+|**CPU usage %**|The CPU bandwidth usage by all requests in this workload group measured relative to the computer and normalized to all the CPUs on the system. This value will change as the amount of CPU available to the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] process changes. It is not normalized to what the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] process receives.| 
 |**CPU usage % base**|For internal use only.| 
 |**CPU violated %**|The difference between the CPU reservation and the effective scheduling percentage.|  
 |**Max request CPU time (ms)**|The maximum CPU time, in milliseconds, used by a request currently running in the workload group.|  
@@ -47,9 +47,8 @@ SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%Workload Group Stats%';
 ```  
 
-## See also  
- [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
- [SQL Server, Resource Pool Stats Object](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)   
- [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
-  
-  
+## Related content
+
+- [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)
+- [SQL Server, Resource Pool Stats object](sql-server-resource-pool-stats-object.md)
+- [Resource Governor](../resource-governor/resource-governor.md)

@@ -10,7 +10,6 @@ ms.topic: "reference"
 helpviewer_keywords:
   - "ODBC, API support for table-valued parameters"
   - "table-valued parameters (ODBC), API support"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ODBC Table-Valued Parameter API Summary
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

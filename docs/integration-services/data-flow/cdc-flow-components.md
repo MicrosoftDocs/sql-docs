@@ -12,7 +12,9 @@ ms.topic: conceptual
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
-
+> [!IMPORTANT]
+> CDC Flow Components, including CDC Control Task, CDC Source and CDC Splitter, are deprecated. Details refer to [the announcement](https://www.microsoft.com/sql-server/blog/2024/02/28/sql-server-integration-services-ssis-change-data-capture-attunity-feature-deprecations/).
+  
   The Change Data Capture Components by Attunity for Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] help SSIS developers work with CDC and reduce the complexity of CDC packages.  
   
  The SSIS CDC components are designed to work with the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] CDC feature where the source tables are either the same [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] database or an Oracle database (when using the Oracle CDC Service for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]). Partitioned tables are supported.  
@@ -30,11 +32,11 @@ ms.topic: conceptual
  [CDC Source](../../integration-services/data-flow/cdc-source.md)  
   
  [CDC Splitter](../../integration-services/data-flow/cdc-splitter.md)  
-  
+
 ## Installation  
  This section describes the installation procedures for the CDC Components for Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
- The CDC Components for SSIS are packaged with the MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL ServerÂ®. This download is part of the SQL Server Feature Pack. Download components of the Feature Pack from the [SQL Server 2016 Feature Pack web page](https://www.microsoft.com/download/details.aspx?id=56833).  
+ The CDC Components for SSIS are packaged with the Microsoft Change Data Capture Designer and Service for Oracle by Attunity for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. This download is part of the SQL Server Feature Pack. Download components of the Feature Pack from the [SQL Server 2016 Feature Pack web page](https://www.microsoft.com/download/details.aspx?id=56833).  
   
 ### Version Support
 

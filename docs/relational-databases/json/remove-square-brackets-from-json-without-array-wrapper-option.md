@@ -12,7 +12,8 @@ helpviewer_keywords:
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Remove Square Brackets from JSON - WITHOUT_ARRAY_WRAPPER Option
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-serverless-pool-only](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-serverless-pool-only.md)]
 
 To remove the square brackets that surround the JSON output of the **FOR JSON** clause by default, specify the **WITHOUT_ARRAY_WRAPPER** option. Use this option with a single-row result to generate a single JSON object as output instead of an array with a single element.
 
@@ -32,9 +33,9 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
   
 ```json  
 {
-	"year": 2015,
-	"month": 12,
-	"day": 15
+    "year": 2015,
+    "month": 12,
+    "day": 15
 } 
 ```  
   
@@ -42,9 +43,9 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
   
 ```json  
 [{
-	"year": 2015,
-	"month": 12,
-	"day": 15
+    "year": 2015,
+    "month": 12,
+    "day": 15
 }]
 ```  
 
@@ -64,17 +65,17 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
   
 ```json  
 {
-	"SalesOrderNumber": "SO43662",
-	"OrderDate": "2011-05-31T00:00:00",
-	"Status": 5
+    "SalesOrderNumber": "SO43662",
+    "OrderDate": "2011-05-31T00:00:00",
+    "Status": 5
 }, {
-	"SalesOrderNumber": "SO43661",
-	"OrderDate": "2011-05-31T00:00:00",
-	"Status": 5
+    "SalesOrderNumber": "SO43661",
+    "OrderDate": "2011-05-31T00:00:00",
+    "Status": 5
 }, {
-	"SalesOrderNumber": "SO43660",
-	"OrderDate": "2011-05-31T00:00:00",
-	"Status": 5
+    "SalesOrderNumber": "SO43660",
+    "OrderDate": "2011-05-31T00:00:00",
+    "Status": 5
 } 
 ```  
   
@@ -82,17 +83,17 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
   
 ```json  
 [{
-	"SalesOrderNumber": "SO43662",
-	"OrderDate": "2011-05-31T00:00:00",
-	"Status": 5
+    "SalesOrderNumber": "SO43662",
+    "OrderDate": "2011-05-31T00:00:00",
+    "Status": 5
 }, {
-	"SalesOrderNumber": "SO43661",
-	"OrderDate": "2011-05-31T00:00:00",
-	"Status": 5
+    "SalesOrderNumber": "SO43661",
+    "OrderDate": "2011-05-31T00:00:00",
+    "Status": 5
 }, {
-	"SalesOrderNumber": "SO43660",
-	"OrderDate": "2011-05-31T00:00:00",
-	"Status": 5
+    "SalesOrderNumber": "SO43660",
+    "OrderDate": "2011-05-31T00:00:00",
+    "Status": 5
 }]
 ```  
 

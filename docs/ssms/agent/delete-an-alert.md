@@ -6,7 +6,7 @@ ms.author: maghan
 ms.date: 02/04/2021
 ms.service: sql
 ms.subservice: ssms
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
   - "SQL Server Agent, alerts"
   - "alerts [SQL Server], deleting"

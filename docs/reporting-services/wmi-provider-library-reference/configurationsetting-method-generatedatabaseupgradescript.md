@@ -1,6 +1,6 @@
 ---
-title: "GenerateDatabaseUpgradeScript Method (WMI MSReportServer_ConfigurationSetting)"
-description: "GenerateDatabaseUpgradeScript Method (WMI MSReportServer_ConfigurationSetting)"
+title: "GenerateDatabaseUpgradeScript method (WMI MSReportServer_ConfigurationSetting)"
+description: "GenerateDatabaseUpgradeScript method (WMI MSReportServer_ConfigurationSetting)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -14,7 +14,7 @@ apilocation: "reportingservices.mof"
 apiname: "GenerateDatabaseUpgradeScript (WMI MSReportServer_ConfigurationSetting Class)"
 apitype: MOFDef
 ---
-# ConfigurationSetting Method - GenerateDatabaseUpgradeScript
+# ConfigurationSetting method - GenerateDatabaseUpgradeScript
   Generates a script that can be used to upgrade the report server database to the [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] schema.  
   
 ## Syntax  
@@ -44,8 +44,8 @@ public void GenerateDatabaseUpgradeScript (string DatabaseName,
  *HRESULT*  
  [out] Value indicating whether the call succeeded or failed.  
   
-## Return Value  
- Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A non-zero value indicates that an error has occurred.  
+## Return value  
+ Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A nonzero value indicates that an error occurred.  
   
 ## Remarks  
  The generated script supports [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], and [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)].  
@@ -53,7 +53,7 @@ public void GenerateDatabaseUpgradeScript (string DatabaseName,
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+## Related content  
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

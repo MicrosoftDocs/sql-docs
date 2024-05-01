@@ -3,6 +3,7 @@ title: Connect to and query Azure SQL Database using .NET and Entity Framework C
 description: Learn how to connect to a database in Azure SQL Database and query data using .NET and Entity Framework Core
 author: alexwolfmsft
 ms.author: alexwolf
+ms.reviewer: mathoma
 ms.custom: passwordless-dotnet
 ms.date: 02/10/2023
 ms.service: sql-database
@@ -12,13 +13,14 @@ monikerRange: "= azuresql || = azuresql-db"
 ---
 
 # Connect to and query Azure SQL Database using .NET and Entity Framework Core
+[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using .NET and Entity Framework Core. This quickstart follows the recommended passwordless approach to connect to the database. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
 
 ## Prerequisites
 
 * An [Azure subscription](https://azure.microsoft.com/free/dotnet/).
-* A SQL database configured for authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
+* A SQL database configured for authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
 * [.NET 7.0](https://dotnet.microsoft.com/download) or later.
 * [Visual Studio](https://visualstudio.microsoft.com/vs/) or later with the **ASP.NET and web development** workload.
 * The latest version of the [Azure CLI](/cli/azure/get-started-with-azure-cli).

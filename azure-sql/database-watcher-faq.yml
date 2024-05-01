@@ -1,0 +1,176 @@
+### YamlMime:FAQ
+metadata:
+  title: Database watcher FAQ
+  titleSuffix: Azure SQL Database & SQL Managed Instance
+  description: Frequently asked questions about database watcher for Azure SQL
+  author: dimitri-furman
+  ms.author: dfurman
+  ms.date: 04/10/2024
+  ms.reviewer: wiassaf
+  ms.service: sql-db-mi
+  ms.subservice: monitoring
+  ms.topic: faq
+  ms.custom: subject-monitoring
+  monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+title: Database watcher FAQ (preview)
+summary: |
+  [!INCLUDE [sqldb-sqlmi](./includes/appliesto-sqldb-sqlmi.md)]
+
+  This article provides answers to frequently asked questions about database watcher for Azure SQL. It is intended for readers who have a general understanding of Azure SQL, and are looking for answers to specific, commonly asked questions about database watcher.
+
+  For an overview of database watcher, see [Monitor Azure SQL workloads with database watcher](database-watcher-overview.md).
+
+sections:
+  - name: General
+    questions:
+      - question: |
+          What is database watcher?
+        answer: |
+          Database watcher (preview) is a managed monitoring solution for database services in the Azure SQL family. It collects in-depth monitoring data from Azure SQL resources and ingests it into an [Azure Data Explorer](/azure/data-explorer/data-explorer-overview) database, or into a [Real-Time Analytics](/fabric/real-time-analytics/overview) database in Microsoft Fabric. Estate and resource-level [dashboards](database-watcher-overview.md#dashboards) provide detailed data visualizations in the Azure portal. Customers retain full control over collected data and can query, analyze, export, visualize, and integrate it with downstream systems.
+
+      - question: |
+          What Azure SQL resources can it monitor?
+        answer: |
+          At this time, database watcher can monitor Azure SQL databases, elastic pools, and SQL managed instances. All service tiers, compute tiers, and purchasing models of Azure SQL Database and Azure SQL Managed Instance are supported.
+
+      - question: |
+          Does database watcher support other SQL offerings in Azure or on-premises, or other database services?
+        answer: |
+          Not at this time. For planned improvements to database watcher, see the roadmap section in the database watcher [preview announcement](https://aka.ms/dbwatcher-preview-announcement). For more information about performance monitoring for Arc-enabled SQL Server, see [Monitor SQL Server enabled by Azure Arc (preview)](/sql/sql-server/azure-arc/sql-monitoring).
+
+      - question: |
+          Microsoft provides two other monitoring solutions for Azure SQL: Azure SQL Analytics (preview) and SQL Insights (preview). Which solution should I use?
+        answer: |
+          We recommend using database watcher as a managed monitoring solution that provides low data ingestion latency, estate-level monitoring, comprehensive monitoring data including query-level details, and support for advanced analytics on collected monitoring data. For more information about the older monitoring solutions, see the [preview announcement](https://aka.ms/dbwatcher-preview-announcement).
+
+      - question: |
+          What kind of data visualization solutions can I use with database watcher?
+        answer: |
+          Database watcher provides detailed visualizations using [Azure Workbooks](/azure/azure-monitor/visualize/workbooks-overview) in the Azure portal. In addition, you can create dashboards in Azure Data Explorer or Real-Time Analytics, create visualizations in Power BI, Grafana, or use any other data visualization solution that [supports](/azure/data-explorer/viz-overview) connectivity to Azure Data Explorer or Real-Time Analytics.
+
+      - question: |
+          Does database watcher support alerts?
+        answer: |
+          Not at this time. For planned improvements to database watcher, see the roadmap section in the database watcher [preview announcement](https://aka.ms/dbwatcher-preview-announcement).
+
+      - question: |
+          How much does it cost?
+        answer: |
+          See [Database watcher price](database-watcher-overview.md#database-watcher-price). There is no per-database or per-user cost, and no license cost.
+
+      - question: |
+          Are there any limits?
+        answer: |
+          Yes, at this time there is a limit on the number of watchers per subscription, and on the number of SQL targets per watcher. For more information, see [Limits](database-watcher-overview.md#limits).
+
+      - question: |
+          Can I monitor a large Azure SQL estate?
+        answer: Yes. For more information, see [Monitor large estates](database-watcher-manage.md#monitor-large-estates).
+
+      - question: |
+          Does it support cross-subscription and cross-tenant monitoring?
+        answer: The watcher and the SQL targets it monitors can be in different subscriptions within the same Microsoft Entra ID tenant. The watcher and its data store can be in different subscriptions in the same Microsoft Entra ID tenant, or in different tenants.
+
+  - name: Watcher
+    questions:
+      - question: |
+          Can I create and configure a watcher using Bicep or an ARM template?
+        answer: Yes. See [Create a database watcher](/samples/azure/azure-quickstart-templates/create-watcher/) for an example you can customize to your needs.
+
+      - question: |
+          Can I create and configure a watcher with PowerShell or Azure CLI?
+        answer: Not at this time. You can create and configure watchers in the Azure portal, using [Bicep](/azure/azure-resource-manager/bicep/overview) and ARM templates, or using [REST API](/rest/api/databasewatcher). For planned improvements to database watcher, see the roadmap section in the database watcher [preview announcement](https://aka.ms/dbwatcher-preview-announcement).
+
+      - question: |
+          Does a watcher have an identity I can use to grant it access to my Azure resources?
+        answer: Yes. A system-assigned managed identity is automatically assigned to a watcher when it is created, and is deleted when a watcher is deleted. Grant access to this managed identity to allow a watcher to [collect](database-watcher-manage.md#grant-access-to-sql-targets) and [ingest](database-watcher-manage.md#grant-access-to-data-store) data. Revoke access at any time to stop collection of monitoring data.
+
+      - question: |
+          Can a watcher have a user-assigned managed identity?
+        answer: Not at this time. For planned improvements to database watcher, see the roadmap section in the database watcher [preview announcement](https://aka.ms/dbwatcher-preview-announcement).
+
+      - question: |
+          Are there any built-in RBAC roles or actions specific to database watcher?
+        answer: Not at this time. Operations such as creating, starting, stopping a watcher, or creating/removing targets and the data store require the assignment of **Contributor** or **Owner** Azure RBAC roles on the watcher, resource group, or subscription.
+
+  - name: Data store
+    questions:
+      - question: |
+          Which data services are supported as the data store for the SQL monitoring data?
+        answer: You can use a database on an [Azure Data Explorer cluster](/azure/data-explorer/data-explorer-overview), on a [free Azure Data Explorer cluster](/azure/data-explorer/start-for-free), or in [Real-Time Analytics](/fabric/real-time-analytics/overview) in Microsoft Fabric. To compare between these options, see [What is the difference between Real-Time Analytics and Azure Data Explorer?](/fabric/real-time-analytics/realtime-analytics-compare).
+
+      - question: |
+          I already have an Azure Data Explorer cluster. Can I use it for my database watcher data store?
+        answer: Yes, if [streaming ingestion](database-watcher-manage.md#streaming-ingestion) is enabled on this cluster. Create a new database and grant the managed identity of a watcher [access](database-watcher-manage.md#grant-access-to-data-store) to this database. For smaller cluster SKUs, and depending on the query and ingestion workloads already running, you might need to [scale](database-watcher-manage.md#scale-azure-data-explorer-cluster) the cluster to support the additional load.
+
+      - question: |
+          How can I query and analyze SQL monitoring data?
+        answer: You can use Kusto Query Language (KQL) to query this data. See [Use KQL to analyze monitoring data](database-watcher-analyze.md#use-kql-to-analyze-monitoring-data). KQL [provides](/azure/data-explorer/kusto/query/) many advantages for analyzing telemetry data. However, you do not need to learn KQL to use database watcher. You can connect to the data store using SQL Server Management Studio, Azure Data Studio, or any other SQL client tool, and [use T-SQL](database-watcher-analyze.md#use-t-sql-to-analyze-monitoring-data) to query your SQL monitoring data.
+
+      - question: |
+          Can I export SQL monitoring data from Azure Data Explorer?
+        answer: Yes. For example, you can [export](/azure/data-explorer/kusto/management/data-export) data to Azure storage, a data lake, or a SQL Server or an Azure SQL database.
+
+  - name: Data collection
+    questions:
+      - question: |
+          How does database watcher collect SQL monitoring data?
+        answer: A remote data collection agent running on a Microsoft managed compute hosting platform connects to your Azure SQL resources, periodically executes T-SQL queries to collect monitoring data from SQL system views, and ingests this data into the data store.
+
+      - question: |
+          Will database watcher impact my workload performance?
+        answer: This is unlikely. For details, see [Data collection](database-watcher-data.md#interaction-between-database-watcher-and-application-workloads).
+
+      - question: |
+          How often do the monitoring queries run?
+        answer: It depends on the [dataset](database-watcher-data.md#datasets). For example, frequently changing data such as performance counters might be collected every 10 seconds. Mostly static data such as database properties is collected at longer intervals, for example every five minutes.
+
+      - question: |
+          What is the typical data latency?
+        answer: The typical data latency from collection to ingestion into the data store is in the 0.5-10 second range. Latency might be higher for large datasets such as **Query runtime statistics**. You can see current data ingestion latency using the **Ingestion statistics** link on [dashboards](database-watcher-overview.md#dashboards).
+
+      - question: |
+          Does it monitor secondary replicas?
+        answer: Yes. All types of secondary replicas, including readable high availability replicas, geo-replicas, and Hyperscale named replicas are supported. If a Hyperscale database has more than one high availability replica, only one of these replicas can be monitored at a given point in time.
+
+      - question: |
+          How does it connect to monitoring targets?
+        answer: Database watcher can use [Azure Private Link](/azure/private-link/private-link-overview) to connect to monitoring targets. When configuring a watcher, create managed private endpoints for your Azure SQL resources. The resource owner must approve each private endpoint for database watcher to use it. Public connectivity is supported as well. For more information, see [Network connectivity](database-watcher-overview.md#network-connectivity).
+
+      - question: |
+          How does it authenticate to monitoring targets?
+        answer: Both Microsoft Entra authentication (recommended) and SQL authentication are supported. If you use SQL authentication, [additional configuration](database-watcher-manage.md#additional-configuration-to-use-sql-authentication) to store the login name and password as secrets in a key vault is required.
+
+      - question: |
+          What kind of SQL monitoring data does it collect?
+        answer: Data is collected from more than 70 dynamic management views (DMVs) and catalog views into [datasets](database-watcher-data.md#datasets) to enable detailed database engine and query performance monitoring.
+
+      - question: |
+          Can I choose the datasets to be collected, and the frequency of collection?
+        answer: Not at this time. For planned improvements to database watcher, see the roadmap section in the database watcher [preview announcement](https://aka.ms/dbwatcher-preview-announcement).
+
+      - question: |
+          Can I add a custom dataset?
+        answer: Not at this time. Send us [feedback](database-watcher-overview.md#send-feedback) if you find the existing datasets insufficient.
+
+      - question: |
+          Can database watcher collect extended events?
+        answer: Not at this time. For planned improvements to database watcher, see the roadmap section in the database watcher [preview announcement](https://aka.ms/dbwatcher-preview-announcement).
+
+  - name: Feedback
+    questions:
+      - question: |
+          I have a comment or suggestion. Where do I send my feedback?
+        answer: |
+          See [Send feedback](database-watcher-overview.md#send-feedback). For database watcher technical support, [open a support case](https://azure.microsoft.com/support/create-ticket/).
+
+additionalContent: |
+
+  ## Related content
+  
+  - [Monitor Azure SQL workloads with database watcher](database-watcher-overview.md)
+  - [Quickstart: Create a database watcher to monitor Azure SQL](database-watcher-quickstart.md)
+  - [Create and configure a database watcher](database-watcher-manage.md)
+  - [Database watcher data collection and datasets](database-watcher-data.md)
+  - [Analyze database watcher monitoring data](database-watcher-analyze.md)
+  

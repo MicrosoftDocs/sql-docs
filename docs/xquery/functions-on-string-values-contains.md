@@ -56,7 +56,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
 --The product model description document uses  
 --namespaces. The WHERE clause uses the exit()  
 --method of the xml data type. Inside the exit method,  
---the XQuery contains()function is used to  
+--the XQuery contains() function is used to  
 --determine whether the <Summary> text contains the word  
 --Aerodynamic.   
   

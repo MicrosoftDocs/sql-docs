@@ -1,5 +1,5 @@
 ---
-title: "Use URL Access in Windows Applications"
+title: "Use URL access in Windows applications"
 description: URL access to a report server is optimized for a Web environment, but you can also use URL access to embed Reporting Services reports in a Windows application.
 author: maggiesMSFT
 ms.author: maggies
@@ -15,15 +15,15 @@ helpviewer_keywords:
   - "browser controls [Reporting Services]"
   - "URL access [Reporting Services], Windows applications"
 ---
-# Integrating Reporting Services Using URL Access - Windows Application
+# Integrate Reporting Services by using URL access - Windows application
   Although URL access to a report server is optimized for a Web environment, you can also use URL access to embed [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reports into a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows application. However, URL access that involves Windows Forms still requires that you use Web browser technology. You can use the following integration scenarios with URL access and Windows Forms:  
   
 -   Display a report from a Windows Form application by starting a Web browser programmatically.  
   
 -   Use the <xref:System.Windows.Forms.WebBrowser> control on a Windows Form to display a report.  
   
-## Starting Internet Explorer from a Windows Form  
- You can use the <xref:System.Diagnostics.Process> class to access a process that is running on a computer. The <xref:System.Diagnostics.Process> class is a useful [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] construct for starting, stopping, controlling, and monitoring applications. To view a specific report in your report server database, you can start the **IExplore** process, passing in the URL to the report. The following code example can be used to start [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer and pass a specific report URL when the user clicks a button on a Windows Form.  
+## Start Internet Explorer from a Windows Form  
+ You can use the <xref:System.Diagnostics.Process> class to access a process that is running on a computer. The <xref:System.Diagnostics.Process> class is a useful [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] construct for starting, stopping, controlling, and monitoring applications. To view a specific report in your report server database, you can start the **IExplore** process, passing in the URL to the report. The following code example can be used to start [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer and pass a specific report URL when the user selects a button on a Windows Form.  
   
 ```vb  
 Private Sub viewReportButton_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles viewReportButton.Click  
@@ -74,16 +74,16 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## Embedding a Browser Control on a Windows Form  
- If you do not want to view your report in an external Web browser, you can embed a Web browser seamlessly as part of your Windows Form using the <xref:System.Windows.Forms.WebBrowser> control.  
+## Embed a browser control on a Windows Form  
+ If you don't want to view your report in an external Web browser, you can embed a Web browser seamlessly as part of your Windows Form by using the <xref:System.Windows.Forms.WebBrowser> control.  
   
 ###### To add the WebBrowser control to your Windows Form  
   
-1.  Create a new Windows application in either [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Create a new Windows application in either [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[c-sharp](../../includes/c-sharp-md.md)] or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)].  
   
 2.  Locate the <xref:System.Windows.Forms.WebBrowser> control in the **Toolbox** Dialog Box.  
   
-     If the **Toolbox** is not visible you can access it by clicking the **View** menu item and selecting **Toolbox**.  
+     If the **Toolbox** isn't visible, you can access it by selecting the **View** menu item and selecting **Toolbox**.  
   
 3.  Drag the <xref:System.Windows.Forms.WebBrowser>control onto the design surface of your Windows Form.  
   
@@ -105,11 +105,11 @@ string url = "https://localhost/reportserver?/" +
 webBrowser1.Navigate(url);  
 ```  
   
-## See Also  
+## Related content  
  [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [Integrating Reporting Services Using URL Access](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
- [Integrating Reporting Services Using SOAP](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)   
- [Integrating Reporting Services Using the ReportViewer Controls](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)   
+ [Integrating Reporting Services by using URL access](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
+ [Integrating Reporting Services by using SOAP](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)   
+ [Integrating Reporting Services by using the ReportViewer controls](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)   
  [URL Access &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)  
   
   

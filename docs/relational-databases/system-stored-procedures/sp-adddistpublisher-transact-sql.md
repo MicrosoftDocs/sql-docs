@@ -128,7 +128,7 @@ Required for Azure SQL Database. *@storage_connection_string* is **nvarchar(255)
 
 ## Examples
 
-[!code-sql[HowTo#AddDistPub](../replication/codesnippet/tsql/sp-adddistpublisher-tran_1.sql)]
+:::code language="sql" source="../replication/codesnippet/tsql/sp-adddistpublisher-tran_1.sql":::
 
 ## Permissions
 

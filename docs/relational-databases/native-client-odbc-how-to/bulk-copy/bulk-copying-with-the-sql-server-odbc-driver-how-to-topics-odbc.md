@@ -10,12 +10,11 @@ ms.topic: "reference"
 helpviewer_keywords:
   - "bulk copy [ODBC]"
   - "bulk copy [ODBC], about bulk copy"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Copying with the SQL Server ODBC Driver How-to Topics (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  When used with Microsoft® SQL Server™ 2005, the SQL Server ODBC driver supports the same bulk copy functions supported by the DB-Library API.  
+  When used with [!INCLUDE [ssversion2005-md](../../../includes/ssversion2005-md.md)], the SQL Server ODBC driver supports the same bulk copy functions supported by the DB-Library API.  
   
  For information about a breaking change in bulk copying beginning in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], see [Performing Bulk Copy Operations &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   

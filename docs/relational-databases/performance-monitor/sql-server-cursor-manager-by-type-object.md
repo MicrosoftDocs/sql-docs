@@ -3,10 +3,10 @@ title: "SQL Server, Cursor Manager by Type object"
 description: "Learn about the SQLServer:Cursor Manager by Type object, which provides counters to monitor cursors, grouped by type."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/12/2021"
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "Cursor Manager by Type object"
   - "SQLServer:Cursor Manager by Type"
@@ -36,10 +36,10 @@ helpviewer_keywords:
 |-----------------------------|-----------------|  
 |**_Total**|Information for all cursors.|  
 |**API Cursor**|Only the API cursor information.|  
-|**TSQL Global Cursor**|Only the [!INCLUDE[tsql](../../includes/tsql-md.md)] global cursor information.|  
-|**TSQL Local Cursor**|Only the [!INCLUDE[tsql](../../includes/tsql-md.md)] local cursor information.|  
+|**TSQL Global Cursor**|Only the [!INCLUDE [tsql](../../includes/tsql-md.md)] global cursor information.|  
+|**TSQL Local Cursor**|Only the [!INCLUDE [tsql](../../includes/tsql-md.md)] local cursor information.|  
 
-## Example
+## Examples
 
 You begin to explore the query performance counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
 
@@ -48,7 +48,6 @@ SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%Cursor Manager by Type%';
 ```  
   
-## See also  
- [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
-  
-  
+## Related content
+
+- [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)

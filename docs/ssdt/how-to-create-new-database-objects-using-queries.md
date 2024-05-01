@@ -15,9 +15,6 @@ If you prefer to use scripts to create or edit views, stored procedures, functio
   
 The Transact-SQL Editor is invoked when you use the **View Code** contextual menu to open a database entity in a connected database or a project. It is also automatically opened when you use the **New Query** contextual menu from the SQL Server Object Explorer, or add a new script object to a database project. If you are not connected to a database but want to execute a query against it, you can also use the **New Query Connection** dialog box by selecting **Transact-SQL Editor** menu from the **SQL** menu to connect to a database and launch the Transact-SQL Editor.  
   
-> [!WARNING]  
-> The following procedures use entities created in previous procedures in the [Connected Database Development](../ssdt/connected-database-development.md) section.  
-  
 ### To create a new table using a Transact-SQL query  
   
 1.  Right-click the **Trade** database node and select **New Query**.  

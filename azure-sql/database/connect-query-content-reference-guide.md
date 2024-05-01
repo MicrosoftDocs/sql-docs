@@ -1,12 +1,12 @@
 ---
 title: Connect and query
-titleSuffix: Azure SQL Database & SQL Managed Instance
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Links to Azure SQL Database quickstarts showing how to connect to and query Azure SQL Database, and Azure SQL Managed Instance.
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: wiassaf, mathoma, randolphwest
 ms.date: 09/15/2023
-ms.service: sql-database
+ms.service: sql-db-mi
 ms.subservice: connect
 ms.topic: conceptual
 ms.custom: sqldbrb=1
@@ -17,6 +17,9 @@ monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 [!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 The following document includes links to Azure examples showing how to connect and query Azure SQL Database and Azure SQL Managed Instance. For some related recommendations for Transport Level Security, see [TLS considerations for database connectivity](#tls-considerations-for-database-connectivity).
+
+Watch this video in the [Azure SQL Database essentials series](/shows/azure-sql-database-essentials/) for a brief connect and query overview: 
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=c2edd421-da6b-4598-a142-5980e4f38de9]
 
 ## Quickstarts
 
@@ -50,7 +53,7 @@ Get the connection information you need to connect to the database in Azure SQL 
 
 ## Get ADO.NET connection information (optional - SQL Database only)
 
-1. Navigate to the database blade in the Azure portal and, under **Settings**, select **Connection strings**.
+1. Navigate to the database pane in the Azure portal and, under **Settings**, select **Connection strings**.
 
 1. Review the complete **ADO.NET** connection string.
 

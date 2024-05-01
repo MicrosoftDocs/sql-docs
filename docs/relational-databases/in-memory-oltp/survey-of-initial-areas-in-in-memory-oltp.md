@@ -449,7 +449,6 @@ A natively compiled user defined function (UDF) runs faster than an interpreted 
 For test data and explanation about the performance of native UDFs, see:  
   
   - [Soften the RBAR impact with Native Compiled UDFs in SQL Server 2016](/archive/blogs/sqlcat/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016)  
-  - [Natively Compiled User Defined Functions](https://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/) blog post by Gail Shaw, dated January 2016.  
   
 <a name="documentation-guide-for-memory-optimized-tables-41z"></a>  
   

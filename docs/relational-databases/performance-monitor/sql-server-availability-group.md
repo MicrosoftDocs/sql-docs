@@ -3,10 +3,10 @@ title: "SQL Server, Availability Group object"
 description: "Learn about SQLServer:Availability Group performance object, which contains performance counters about Always On availability groups."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/12/2021"
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "performance counters [SQL Server], AlwaysOn Availability Groups"
@@ -16,7 +16,7 @@ helpviewer_keywords:
 # SQL Server, Availability Group object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  The **SQLServer:Availability Group** performance object contains performance counters that report information about Always On availability groups in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
+  The **SQLServer:Availability Group** performance object contains performance counters that report information about Always On availability groups in [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)]. 
   
 |Counter Name|Description|  
 |------------------|-----------------|  
@@ -32,8 +32,8 @@ WHERE object_name LIKE '%Availability Group%';
 ```  
 
   
-## See also 
+## Related content
 
- - [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
- - [Availability Replica Object](../../relational-databases/performance-monitor/sql-server-availability-replica.md)
- - [Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+- [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)
+- [SQL Server, Availability Replica object](sql-server-availability-replica.md)
+- [What is an Always On availability group?](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)

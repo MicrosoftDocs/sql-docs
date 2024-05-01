@@ -117,7 +117,7 @@ dev_langs:
 
   Unregisters an existing Semantic Language Statistics database from the current instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and deletes any associated metadata.
 
-## See also
+## Related content
 
 - [Full-Text Search and Semantic Search Catalog Views (Transact-SQL)](../system-catalog-views/full-text-search-and-semantic-search-catalog-views-transact-sql.md)
 - [Full-Text Search and Semantic Search Dynamic Management Views and Functions (Transact-SQL)](../system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)

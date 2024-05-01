@@ -153,7 +153,7 @@ Status code: 200
 }
 ```
 
-For more information, see [Backup retention REST API](/rest/api/sql/2020-08-01-preview/backup-short-term-retention-policies).
+For more information, see [Backup retention REST API](/rest/api/sql/backup-short-term-retention-policies).
 
 ---
 

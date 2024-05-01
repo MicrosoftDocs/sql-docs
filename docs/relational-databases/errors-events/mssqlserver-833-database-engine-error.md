@@ -123,7 +123,7 @@ Reporting occurs in intervals that are five minutes or more apart. Reporting occ
 
 The 15 seconds threshold isn't adjustable. However, you can disable stalled or stuck I/O detection by using trace flag 830, although we don't recommend doing this.
 
-You can disable detection for stalled and stuck I/O by using trace flag 833. To enable this flag every time that SQL Server is started, use the -T830 startup parameter. To disable detection for an instance of SQL Server that is currently running, use the following statement:
+You can disable detection for stalled and stuck I/O by using trace flag 830. To enable this flag every time that SQL Server is started, use the -T830 startup parameter. To disable detection for an instance of SQL Server that is currently running, use the following statement:
 ```sql
     dbcc traceon(830, -1)
 ```

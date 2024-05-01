@@ -14,15 +14,17 @@ tags: azure-resource-manager
 
 [!INCLUDE [appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
-This article describes how to change the license model for a SQL Server virtual machine (VM) in Azure by using the [SQL IaaS Agent Extension](sql-server-iaas-agent-extension-automate-management.md).
+This article describes how to change the license model for SQL Server on Azure Virtual Machines (VMs), such as, to enable the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/). 
 
 ## Overview
 
-There are three license models for an Azure VM that's hosting SQL Server: pay-as-you-go, Azure Hybrid Benefit (AHB), and High Availability/Disaster Recovery(HA/DR). You can modify the license model of your SQL Server VM by using the Azure portal, the Azure CLI, or PowerShell.
+There are three license models for an Azure VM that's hosting SQL Server: pay-as-you-go, Azure Hybrid Benefit (AHB), and High Availability/Disaster Recovery (HA/DR). You can modify the license model of your SQL Server VM by using the Azure portal, the Azure CLI, or PowerShell.
 
 - The **pay-as-you-go** model means that the per-second cost of running the Azure VM includes the cost of the SQL Server license.
 - [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) allows you to use your own SQL Server license with a VM that's running SQL Server.
 - The **HA/DR** license type is used for the [free HA/DR replica](business-continuity-high-availability-disaster-recovery-hadr-overview.md#free-dr-replica-in-azure) in Azure.
+
+## Azure Hybrid Benefit
 
 Azure Hybrid Benefit allows the use of SQL Server licenses with Software Assurance ("Qualified License") on Azure virtual machines. With Azure Hybrid Benefit, customers aren't charged for the use of a SQL Server license on a VM. But they must still pay for the cost of the underlying cloud compute (that is, the base rate), storage, and backups. They must also pay for I/O associated with their use of the services (as applicable).
 
@@ -43,7 +45,7 @@ The license type of SQL Server can be configured when the VM is provisioned, or 
 Changing the licensing model of your SQL Server VM has the following requirements:
 
 - An [Azure subscription](https://azure.microsoft.com/free/).
-- A [SQL Server VM](create-sql-vm-portal.md) registered with the [SQL IaaS Agent Extension](sql-server-iaas-agent-extension-automate-management.md).
+- A [SQL Server on Azure VM](create-sql-vm-portal.md) registered with the [SQL IaaS Agent Extension](sql-server-iaas-agent-extension-automate-management.md).
 - [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) is a requirement to utilize the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) license type, but pay-as-you-go customers can use the **HA/DR** license type if the VM is being used as a passive replica in a high availability/disaster recovery configuration.
 
 ## Change license model
@@ -82,7 +84,7 @@ You can use PowerShell to change your license model.
 Specify the following values for **license-type**:
 
 - `AHUB` for the Azure Hybrid Benefit
-- `PAYG` for pay as you go
+- `PAYG` for pay-as-you-go
 - `DR` to activate the free HA/DR replica
 
 ```powershell-interactive
@@ -90,6 +92,31 @@ Update-AzSqlVM -ResourceGroupName <resource_group_name> -Name <VM_name> -License
 ```
 
 ---
+
+## Integration with centrally managed Azure Hybrid Benefit
+
+[Centrally managed Azure Hybrid Benefit (CM-AHB)](/azure/cost-management-billing/scope-level/overview-azure-hybrid-benefit-scope) is a service that helps customers optimize their Azure costs and use other benefits such as:
+
+- Move all pay-as-you-go (full price) SQL PaaS/IaaS workloads to take advantage of your Azure Hybrid Benefits without have to individually configure them to enable the benefit.
+- Ensure that all your SQL workloads are licensed in compliance with the existing license agreements.
+- Separate the license compliance management roles from devops roles using RBAC.
+- Take advantage of free business continuity by ensuring that your passive & disaster recovery (DR) environments are properly identified.
+- Use MSDN licenses in Azure for non-production environments.
+
+CM-AHB uses data provided by the SQL IaaS Agent extension to account for the number of SQL Server licenses used by individual Azure VMs and provides recommendations to the billing admin during the license assignment process. Using the recommendations ensures that you get the maximum discount by using Azure Hybrid Benefit. If your VMs aren't registered with the SQL IaaS Agent extension when CM-AHB is enabled by your billing admin, the service won't receive the full usage data from your Azure subscriptions and therefore the CM-AHB recommendations will be inaccurate.
+
+To get started, review [Transition to centrally managed Azure Hybrid Benefit](/azure/cost-management-billing/scope-level/transition-existing). 
+
+Once CMB-AHB is enabled for a subscription, the **License type** on the **Overview** pane of your [SQL virtual machines](manage-sql-vm-portal.md) resource in the Azure portal displays **Centrally Managed**. 
+
+With CMB-AHB, making license type changes to individual VMs is no longer possible, and you see the following message on the **Configure** pane of your *SQL virtual machines* resource: 
+
+`Your organization manages licenses assigned to Azure at a scope level such as Azure subscription instead of each individual resource. Billing administrators can manage licenses centrally under Cost Manamagent + Billing. `
+
+
+> [!IMPORTANT]
+> If [automatic registration](sql-agent-extension-automatic-registration-all-vms.md) is activated after [Centrally Managed-AHB (CM-AHB)](licensing-model-azure-hybrid-benefit-ahb-change.md) is enabled, you run the risk of unnecessary pay-as-you-go charges for your SQL Server on Azure VM workloads. To mitigate this risk, adjust your license assignments in CM-AHB to account for the additional usage that will be reported by the SQL IaaS Agent extension after auto-registration. We published an [open source tool](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-hybrid-benefit) that provides insights into the utilization of SQL Server licenses, including the utilization by the SQL Servers on Azure Virtual Machines that are not yet registered with the SQL IaaS Agent extension.
+
 
 ## Remarks
 
@@ -116,7 +143,7 @@ Additionally, changing the license model to **Azure Hybrid Benefit** requires [S
 
 To avoid being charged for your SQL Server instance, see [Pricing guidance for SQL Server on Azure VMs](pricing-guidance.md).
 
-To remove a SQL Server instance and associated billing from a Pay-As-You-Go SQL Server VM, or if you're being charged for a SQL instance after uninstalling it:
+To remove a SQL Server instance and associated billing from a pay-as-you-go SQL Server VM, or if you're being charged for a SQL instance after uninstalling it:
 
 1. Back up your data.
 1. If necessary, uninstall SQL Server, including the SQL IaaS Agent extension.
@@ -164,8 +191,8 @@ The SQL IaaS Agent extension is required to change the license. Make sure you [r
 
 For more information, see the following articles:
 
-- [Overview of SQL Server on a Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)
-- [FAQ for SQL Server on a Windows VM](frequently-asked-questions-faq.yml)
-- [Pricing guidance for SQL Server on a Windows VM](pricing-guidance.md)
+- [Overview of SQL Server on Windows VMs](sql-server-on-azure-vm-iaas-what-is-overview.md)
+- [FAQ for SQL Server on Windows VMs](frequently-asked-questions-faq.yml)
+- [Pricing guidance for SQL Server on Windows VMs](pricing-guidance.md)
 - [What's new for SQL Server on Azure VMs](doc-changes-updates-release-notes-whats-new.md)
 - [Overview of SQL IaaS Agent Extension](sql-server-iaas-agent-extension-automate-management.md)

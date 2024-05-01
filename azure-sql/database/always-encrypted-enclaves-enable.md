@@ -3,7 +3,7 @@ title: "Enable Always Encrypted with secure enclaves in Azure SQL Database"
 description: Learn how to enable secure enclaves in Azure SQL Database and elastic pools by selecting Intel SGX-enabled hardware or virtualization-based security (VBS)
 author: Pietervanhove
 ms.author: pivanho
-ms.reviewer: vanto
+ms.reviewer: vanto, mathoma
 ms.date: 09/26/2023
 ms.service: sql-database
 ms.subservice: security
@@ -35,9 +35,6 @@ For detailed instructions on how to configure a new or existing database to use 
 - [Configure Azure Attestation for your Azure SQL database server](always-encrypted-enclaves-configure-attestation.md)
 
 ## [VBS enclaves](#tab/VBSenclaves)
-
-> [!IMPORTANT]
-> The VBS enclaves feature in Azure SQL Database is currently in preview. The [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, in preview, or otherwise not yet released into general availability.
 
 By default, a new database is created without VBS enclaves. To enable a VBS enclave in your database or elastic pool, you need to set the **preferredEnclaveType** [database property](/azure/templates/microsoft.sql/2022-05-01-preview/servers/databases?pivots=deployment-language-bicep#databaseproperties) to **VBS**, which activates the VBS enclave for the database or the elastic pool. You can set **preferredEnclaveType** when you create a new database or elastic pool or by updating an existing database or elastic pool. Any database you add to an elastic pool will inherit the enclave property from it, like the database SLO. Hence, if you add a database without VBS enclaves enabled to an elastic pool with VBS enabled, this new database becomes part of elastic pool and VBS enclaves will be enabled on this database. Adding a database with VBS enclaves enabled to an elastic pool without VBS enclaves is not supported. 
 

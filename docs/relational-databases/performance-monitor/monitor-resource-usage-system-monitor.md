@@ -3,7 +3,7 @@ title: "Monitor Resource Usage (Performance Monitor)"
 description: Use Performance Monitor to measure the performance of SQL Server objects, performance counters, and the behavior of other objects, such as processors and memory.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/12/2021"
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -26,12 +26,12 @@ helpviewer_keywords:
 # Monitor Resource Usage (Performance Monitor)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-windows-only.md)]
 
-  If you are running Microsoft Windows server operating system, use the Performance Monitor graphical tool to measure the performance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can view [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects, performance counters, and the behavior of other objects, such as processors, memory, cache, threads, and processes. Each of these objects has an associated set of counters that measure device usage, queue lengths, delays, and other indicators of throughput and internal congestion.  
+  If you are running Microsoft Windows server operating system, use the [Performance Monitor](monitor-resource-usage-system-monitor.md) graphical tool to measure the performance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. You can view [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] objects, performance counters, and the behavior of other objects, such as processors, memory, cache, threads, and processes. Each of these objects has an associated set of counters that measure device usage, queue lengths, delays, and other indicators of throughput and internal congestion.  
   
-## Benefits of Performance Monitor  
- Performance Monitor can be useful to monitor Windows operating system and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] counters at the same time to determine any correlation between the performance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows. For example, monitoring the Windows disk input/output (I/O) counters and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Buffer Manager counters at the same time can reveal the behavior of the entire system.  
+## Benefits of Performance Monitor
+[Performance Monitor](monitor-resource-usage-system-monitor.md) can be useful to monitor Windows operating system and [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] counters at the same time to determine any correlation between the performance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and Windows. For example, monitoring the Windows disk input/output (I/O) counters and the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Buffer Manager counters at the same time can reveal the behavior of the entire system.  
   
- Performance Monitor allows you to obtain statistics on current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activity and performance. Using Performance Monitor, you can:  
+ Performance Monitor allows you to obtain statistics on current [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] activity and performance. Using Performance Monitor, you can:  
   
 -   View data simultaneously from any number of computers.  
   
@@ -51,8 +51,8 @@ helpviewer_keywords:
   
 -   Save individual chart, alert, log, or report settings, or the entire workspace setup for reuse.  
  
-## Performance Monitor Performance  
- When you monitor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the Microsoft Windows operating system to investigate performance-related issues, concentrate your initial efforts in three main areas:  
+## Performance Monitor performance
+ When you monitor [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and the Microsoft Windows operating system to investigate performance-related issues, concentrate your initial efforts in three main areas:  
   
 -   Disk activity  
   
@@ -62,17 +62,19 @@ helpviewer_keywords:
   
  Monitoring a computer on which Performance Monitor is running can affect computer performance slightly. Therefore, either log the Performance Monitor data to another disk (or computer) so that it reduces the effect on the computer being monitored, or run Performance Monitor from a remote computer. Monitor only the counters in which you are interested. If you monitor too many counters, resource usage overhead is added to the monitoring process and affects the performance of the computer that is being monitored.  
   
-## Performance Monitor Tasks  
+## Performance Monitor tasks
   
 |Task Description|Topic|  
 |----------------------|-----------|  
 |Describes when to use Performance Monitor and discusses performance overhead when you use Performance Monitor.|[Run Performance Monitor](../../relational-databases/performance-monitor/run-system-monitor.md)|  
 |Describes how to monitor disk counters to determine disk activity and the amount of I/O generated by their SQL Server components.|[Monitor Disk Usage](../../relational-databases/performance-monitor/monitor-disk-usage.md)|  
-|Describes how to monitor an instance of Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to determine whether CPU usage rates are within normal ranges.|[Monitor CPU Usage](../../relational-databases/performance-monitor/monitor-cpu-usage.md)|  
-|Describes how to monitor an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to confirm that memory usage is within typical ranges.|[Monitor Memory Usage](../../relational-databases/performance-monitor/monitor-memory-usage.md)|  
+|Describes how to monitor an instance of Microsoft [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to determine whether CPU usage rates are within normal ranges.|[Monitor CPU Usage](../../relational-databases/performance-monitor/monitor-cpu-usage.md)|  
+|Describes how to monitor an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to confirm that memory usage is within typical ranges.|[Monitor Memory Usage](../../relational-databases/performance-monitor/monitor-memory-usage.md)|  
 |Describes how to create an alert that is raised when a threshold value for a Performance Monitor counter has been reached.|[Create a SQL Server Database Alert](../../relational-databases/performance-monitor/create-a-sql-server-database-alert.md)|  
-|Describes how to you create charts, alerts, logs, and reports to monitor an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Create Charts, Alerts, Logs, and Reports](../../relational-databases/performance-monitor/create-charts-alerts-logs-and-reports.md)|  
-|Lists objects and counters that Performance Monitor uses to monitor activity in computers running an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Use SQL Server Objects](../../relational-databases/performance-monitor/use-sql-server-objects.md)|  
-|Lists objects and counters that Performance Monitor uses to monitor In-Memory OLTP activity.|[SQL Server XTP &#40;In-Memory OLTP&#41; Performance Counters](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)|  
+|Describes how to you create charts, alerts, logs, and reports to monitor an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].|[Create Charts, Alerts, Logs, and Reports](../../relational-databases/performance-monitor/create-charts-alerts-logs-and-reports.md)|  
+|Lists objects and counters that Performance Monitor uses to monitor activity in computers running an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].|[Use SQL Server Objects](../../relational-databases/performance-monitor/use-sql-server-objects.md)|  
+|Lists objects and counters that Performance Monitor uses to monitor In-Memory OLTP activity.|[SQL Server XTP (In-Memory OLTP) Performance Counters](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)|  
   
-  
+## Related content
+
+- [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)

@@ -13,7 +13,7 @@ ms.topic: conceptual
 
 # How Windows Authentication for Azure SQL Managed Instance is implemented with Microsoft Entra ID and Kerberos 
 
-[Windows Authentication for Azure SQL Managed Instance principals](winauth-azuread-overview.md) in Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) enables customers to move existing services to the cloud while maintaining a seamless user experience and provides the basis for security infrastructure modernization. To enable Windows Authentication for Microsoft Entra principals, you will turn your Microsoft Entra tenant into an independent Kerberos realm and create an incoming trust in the customer domain.
+[Windows Authentication for Azure SQL Managed Instance principals](winauth-azuread-overview.md) in Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) enables customers to move existing services to the cloud while maintaining a seamless user experience and provides the basis for security infrastructure modernization. To enable Windows Authentication for Microsoft Entra principals, you will turn your Microsoft Entra tenant into an independent Kerberos realm and create an incoming trust in the customer domain.
 
 This configuration allows users in the customer domain to access resources in your Microsoft Entra tenant. It will not allow users in the Microsoft Entra tenant to access resources in the customer domain.
 

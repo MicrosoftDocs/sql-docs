@@ -1,6 +1,6 @@
 ---
-title: "Troubleshoot best practices assessment on Azure Arc-enabled SQL Server."
-description: "Describes how to troubleshoot best practices assessment on Azure Arc-enabled SQL Server."
+title: "Troubleshoot best practices assessment."
+description: "Describes how to troubleshoot best practices assessment on SQL Server enabled by Azure Arc."
 author: nhebbar2011
 ms.author: nhebbar
 ms.reviewer: mikeray
@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-Before you start, ensure that you have met all the necessary [prerequisites](assess.md#prerequisites) for a successful assessment.
+Before you proceed, verify all the necessary [prerequisites](assess.md#prerequisites) are met.
 
 ## Log file locations
 
@@ -78,10 +78,11 @@ The server principal isn't able to access the database under the current securit
 
 #### Resolution
 
-Ensure the SQL Server built-in login NT AUTHORITY\SYSTEM is a member of the SQL Server sysadmin server role for all the SQL Server instances running on the machine. If this isn't allowed, we have implemented the *least privileged account* for running the Azure extension for SQL Server service on your SQL Server machine. Least Privilege account is available for preview. To participate in the preview, please open a support case to set up a preview with a least privileged account for you to test.
+Ensure the SQL Server built-in login NT AUTHORITY\SYSTEM is a member of the SQL Server sysadmin server role for all the SQL Server instances running on the machine.
 
-> [!NOTE]
-> This feature implements the principle of least privilege. It's available as a limited preview. To participate in the preview, contact Microsoft support for assistance configuring the solution.
+If this isn't allowed, you can configure a least privilege account for the Azure extension for SQL Server service on your SQL Server machine. Least privilege account is available for preview.
+
+To configure your server, follow the steps in [Operate SQL Server enabled by Azure Arc with least privilege (preview)](configure-least-privilege.md).
 
 ### Azure Monitor Agent upload failed
 
@@ -118,14 +119,24 @@ In case any of the components are missing, do the following:
 
 ## Change the Log Analytics workspace
 
-To change the Log Analytics workspace that is linked for the best practices assessment, follow the steps below. 
+To change the Log Analytics workspace that is linked for the best practices assessment, follow the steps below.
 
-1. Disable best practices assessment if it's currently enabled.
-1. Make a GET call to the API and get the Azure extension for SQL Server settings
+1. Disable best practices assessment if it's currently enabled via the Azure portal.
+1. Make a GET call to the API and get the Azure extension for SQL Server settings. For more information, review [How to call Azure REST APIs with Postman](
+/rest/api/azure/#how-to-call-azure-rest-apis-with-postman)
 
-   ```rest
-   GET https://edge.management.azure.com/subscriptions/ <subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.HybridCompute/machines/<arc-resource-name>/extensions/WindowsAgent.SqlServer?api-version=2022-03-10
-   ```
+   In order to complete this task, you need to obtain the bearer token in order to perform this action against the resource in Azure portal. From Azure portal:
+
+   1. Navigate to the corresponding **SQL Server - Azure Arc** resource.
+   1. Select Ctrl+Shift+I together, go to **Network** tab. 
+   1. Select **Overview** for the **SQL Server - Azure Arc** resource.
+   1. In the name column, locate and select the entry for **ArcServer name?api-version**.
+   1. On the right window, go to **Request Headers**.
+   1. Copy the complete text for **Authorization: Bearer** to get the bearer authorization token.
+
+    ```rest
+    GET https://edge.management.azure.com/subscriptions/ <subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.HybridCompute/machines/<arc-resource-name>/extensions/WindowsAgent.SqlServer?api-version=2022-03-10
+    ```
 
    The best practices assessment settings before the change.
 
@@ -141,9 +152,9 @@ To change the Log Analytics workspace that is linked for the best practices asse
         "startTime": "00:00",
         "WeeklyInterval": 1
       },
-      "WorkspaceResourceId": "/subscriptions/<subscriptionID>/resourceGroups/<Resource group name>/providers/Microsoft.OperationalInsights/workspaces/shivgupta-bpa-test-la-ws",
-      "WorkspaceLocation": "<Region>",
-      "ResourceNamePrefix": "<Log analytics workspace name>",
+      "WorkspaceResourceId": null,
+      "WorkspaceLocation": null,
+      "ResourceNamePrefix": null,
       "settingsSaveTime": 1673278632
     }
     ```
@@ -184,5 +195,5 @@ For more assistance, create a support ticket with Microsoft and attach the log f
 - [Configure SQL best practices assessment](assess.md)
 - [View SQL Server databases - Azure Arc](view-databases.md)
 - [Manage SQL Server license and billing options](manage-configuration.md)
-- [Azure Arc-enabled SQL Server and Databases activity logs](activity-logs.md)
+- [[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] and Databases activity logs](activity-logs.md)
 - [Data collected by Arc enabled SQL Server](data-collection.md)

@@ -125,7 +125,7 @@ To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on SLES,
    systemctl status mssql-server
    ```
 
-1. If you plan to connect remotely, you might also need to open the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] TCP port (default 1433) on your firewall. If you're using the SuSE firewall, you need to edit the `/etc/sysconfig/SuSEfirewall2` configuration file. Modify the `FW_SERVICES_EXT_TCP` entry to include the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] port number.
+1. If you plan to connect remotely, you might also need to open the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] TCP port (default 1433) on your firewall. If you're using the SUSE firewall, you need to edit the `/etc/sysconfig/SuSEfirewall2` configuration file. Modify the `FW_SERVICES_EXT_TCP` entry to include the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] port number.
 
    ```ini
    FW_SERVICES_EXT_TCP="1433"
@@ -142,9 +142,6 @@ At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is run
    ```bash
    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/mssql-server-2019.repo
    ```
-
-   > [!WARNING]  
-   > SUSE Linux Enterprise Server (SLES) isn't a supported platform for the Community Technology Preview (CTP) 2.1 release of [!INCLUDE [sssql22](../includes/sssql22-md.md)]. You won't be able to install [!INCLUDE [sssql22](../includes/sssql22-md.md)].
 
    > [!TIP]  
    > If you want to install a different version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see the [[!INCLUDE [sssql17-md](../includes/sssql17-md.md)]](quickstart-install-connect-suse.md?view=sql-server-linux-2017&preserve-view=true#install) or [[!INCLUDE [sssql22-md](../includes/sssql22-md.md)]](quickstart-install-connect-suse.md?view=sql-server-linux-ver16&preserve-view=true#install) version of this article.

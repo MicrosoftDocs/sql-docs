@@ -39,7 +39,7 @@ This page provides summary information and links to more detailed SQL Server 201
 - **In-memory OLTP:** 
     - Now supports FOREIGN KEY, UNIQUE and CHECK constraints, and native compiled stored procedures OR, NOT, SELECT DISTINCT, OUTER JOIN, and subqueries in SELECT.
     - Supports tables up to 2TB (up from 256GB). 
-    - Has column store index enhancements for sorting and Always On Availability Group support.
+    - Has columnstore index enhancements for sorting and Always On Availability Group support.
 - New security features:
     - **Always Encrypted:** When enabled, only the application that has the encryption key can access the encrypted sensitive data in the SQL Server 2016 database. The key is never passed to SQL Server.
     - **Dynamic Data Masking:** If specified in the table definition, masked data is hidden from most users, and only users with UNMASK permission can see the complete data.

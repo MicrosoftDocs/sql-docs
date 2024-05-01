@@ -161,17 +161,17 @@ Controls the use of SQL Server Fallback Connections. This one is no longer suppo
 
 ### Authentication - SQL_COPT_SS_AUTHENTICATION
 
-Sets the authentication mode to use when connecting to SQL Server. For more information, see [Using Azure Active Directory](using-azure-active-directory.md).
+Sets the authentication mode to use when connecting to SQL Server. For more information, see [Using Microsoft Entra ID](using-azure-active-directory.md).
 
 | Keyword Value | Attribute Value | Description |
 |-|-|-|
 | |SQL_AU_NONE|(Default) Not set. Combination of other attributes determines authentication mode.|
 |SqlPassword|SQL_AU_PASSWORD|SQL Server authentication with username and password.|
-|ActiveDirectoryIntegrated|SQL_AU_AD_INTEGRATED|Azure Active Directory Integrated authentication.|
-|ActiveDirectoryPassword|SQL_AU_AD_PASSWORD|Azure Active Directory Password authentication.|
-|ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Azure Active Directory Interactive authentication.|
-|ActiveDirectoryMsi|SQL_AU_AD_MSI|Azure Active Directory Managed Identity authentication. For user-assigned identity, UID is set to the object ID of the user identity. |
-|ActiveDirectoryServicePrincipal|SQL_AU_AD_SPA|Azure Active Directory Service Principal authentication. UID is set to the client ID of the service principal. PWD is set to the client secret. |
+|ActiveDirectoryIntegrated|SQL_AU_AD_INTEGRATED|Microsoft Entra integrated authentication.|
+|ActiveDirectoryPassword|SQL_AU_AD_PASSWORD|Microsoft Entra password authentication.|
+|ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Microsoft Entra Interactive authentication.|
+|ActiveDirectoryMsi|SQL_AU_AD_MSI|Microsoft Entra managed identity authentication. For user-assigned identity, UID is set to the object ID of the user identity. |
+|ActiveDirectoryServicePrincipal|SQL_AU_AD_SPA|Microsoft Entra service principal authentication. UID is set to the client ID of the service principal. PWD is set to the client secret. |
 | |SQL_AU_RESET|Unset. Overrides any DSN or connection string setting.|
 
 > [!NOTE]
@@ -275,7 +275,7 @@ Combining all 3 above components together to use in a connection string would be
 
 `RetryExec={1000,2000:3,10+7:SELECT}`
 
-Which would mean: "For errors 1000 and 2000, on a query that starts with SELECT. Retry twice with an intial delay of 10 seconds and adding 7 seconds for each following attempt"
+Which would mean: "For errors 1000 and 2000, on a query that starts with SELECT. Retry twice with an initial delay of 10 seconds and adding 7 seconds for each following attempt"
 
 **Examples**
 
@@ -334,7 +334,7 @@ Available starting with version 18.1, this option can be used with the strict en
 
 ### SQL_COPT_SS_ACCESS_TOKEN
 
-Allows the use of an Azure Active Directory access token for authentication. For more information, see [Using Azure Active Directory](using-azure-active-directory.md).
+Allows the use of a Microsoft Entra access token for authentication. For more information, see [Using Microsoft Entra ID](using-azure-active-directory.md).
 
 | Attribute Value | Description |
 |-|-|

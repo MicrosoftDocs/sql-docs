@@ -12,7 +12,7 @@ keywords:
   - text
   - sentiment
   - nlp
-ms.devlang: Python
+ms.devlang: python
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---
 # *microsoftml.get_sentiment*: Sentiment analysis

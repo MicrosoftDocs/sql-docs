@@ -8,8 +8,6 @@ ms.date: 10/16/2023
 ms.service: virtual-machines-sql
 ms.subservice: deployment
 ms.topic: how-to
-ms.custom:
-  - contperf-fy22q1-portal
 tags: azure-resource-manager
 ---
 # Provision SQL Server on Azure VM (Azure portal)

@@ -1,6 +1,6 @@
 ---
 title: "sp_purge_jobhistory (Transact-SQL)"
-description: "sp_purge_jobhistory removes the history records for a job in the SQL Agent service."
+description: "sp_purge_jobhistory removes the history records for a job in the SQL Server Agent service."
 author: markingmyname
 ms.author: maghan
 ms.date: 08/16/2023

@@ -108,7 +108,7 @@ EXEC msdb.dbo.sp_syspolicy_configure
 GO
 ```
 
-## Next steps
+## Related content
 
 - [Policy-Based Management stored procedures (Transact-SQL)](policy-based-management-stored-procedures-transact-sql.md)
 - [sp_syspolicy_set_config_enabled (Transact-SQL)](sp-syspolicy-set-config-enabled-transact-sql.md)

@@ -62,7 +62,7 @@ To set or update the license type using the Azure CLI:
 
 To set or update the license type using the REST API:
 
-- [Create or update](/rest/api/sql/2022-08-01-preview/databases/create-or-update) with the properties.licenseType parameter
+- [Create or update](/rest/api/sql/databases/create-or-update) with the properties.licenseType parameter
 - [Update](/rest/api/sql/databases/update) with the properties.licenseType parameter
 
 ---
@@ -95,8 +95,8 @@ To set or update the license type using the Azure CLI:
 
 To set or update the license type using the REST API:
 
-- [Create or update](/rest/api/sql/managedinstances/createorupdate) with the properties.licenseType parameter
-- [Update](/rest/api/sql/managedinstances/update) with the properties.licenseType parameter
+- [Create or update](/rest/api/sql/managed-instances/create-or-update) with the properties.licenseType parameter
+- [Update](/rest/api/sql/managed-instances/update) with the properties.licenseType parameter
 
 ---
 ## Frequently asked questions
@@ -120,10 +120,8 @@ SQL Database and SQL Managed Instance customers have the following rights associ
 
 |License footprint|What does Azure Hybrid Benefit for SQL Server get you?|
 |---|---|
-|SQL Server Enterprise Edition core customers with SA|<li>Can pay base rate on Hyperscale, General Purpose, or Business Critical SKU</li><br><li>One core on-premises = Four vCores in Hyperscale SKU<sup>1</sup></li><br><li>One core on-premises = Four vCores in General Purpose SKU</li><br><li>One core on-premises = One vCore in Business Critical SKU</li>|
-|SQL Server Standard Edition core customers with SA|<li>Can pay base rate on Hyperscale, General Purpose, or Business Critical SKU</li><br><li>One core on-premises = One vCore in Hyperscale SKU<sup>1</sup></li><br><li>One core on-premises = One vCore in General Purpose SKU</li><br><li>Four cores on-premises = One vCore in Business Critical SKU</li>|
-
-<sup>1</sup> Simplified pricing for SQL Database Hyperscale coming soon. Review the [Hyperscale pricing blog](https://aka.ms/hsignite2023) for details.
+|SQL Server Enterprise Edition core customers with SA|<li>Can pay base rate on General Purpose or Business Critical SKU</li><li>One core on-premises = Four vCores in General Purpose SKU</li><li>One core on-premises = One vCore in Business Critical SKU</li>|
+|SQL Server Standard Edition core customers with SA|<li>Can pay base rate on General Purpose or Business Critical SKU</li><li>One core on-premises = One vCore in General Purpose SKU</li><li>Four cores on-premises = One vCore in Business Critical SKU</li>|
 
 ## Next steps
 

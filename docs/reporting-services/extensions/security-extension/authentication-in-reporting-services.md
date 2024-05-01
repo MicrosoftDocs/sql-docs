@@ -15,10 +15,10 @@ helpviewer_keywords:
   - "custom authentication [Reporting Services]"
 ---
 # Authentication in Reporting Services
-  Authentication is the process of establishing a user's right to an identity. There are many techniques that you can use to authenticate a user. The most common way is to use passwords. When you implement Forms Authentication, for example, you want an implementation that queries users for credentials (usually by some interface that requests a login name and password) and then validates users against a data store, such as a database table or configuration file. If the credentials can't be validated, the authentication process fails and the user will assume an anonymous identity.  
+  Authentication is the process of establishing a user's right to an identity. There are many techniques that you can use to authenticate a user. The most common way is to use passwords. When you implement Forms Authentication, for example, you want an implementation that queries users for credentials (usually by some interface that requests a sign-in name and password) and then validates users against a data store, such as a database table or configuration file. If the credentials can't be validated, the authentication process fails and the user assumes an anonymous identity.  
   
-## Custom Authentication in Reporting Services  
- In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], the Windows operating system handles the authentication of users either through integrated security or through the explicit reception and validation of user credentials. Custom authentication can be developed in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] to support additional authentication schemes. This is made possible through the security extension interface <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2>. All extensions inherit from the <xref:Microsoft.ReportingServices.Interfaces.IExtension> base interface for any extension deployed and used by the report server. <xref:Microsoft.ReportingServices.Interfaces.IExtension>, as well as <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2>, are members of the <xref:Microsoft.ReportingServices.Interfaces> namespace.  
+## Custom authentication in Reporting Services  
+ In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], the Windows operating system handles the authentication of users either through integrated security or through the explicit reception and validation of user credentials. Custom authentication can be developed in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] to support more authentication schemes. This support is made possible through the security extension interface <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2>. All extensions inherit from the <xref:Microsoft.ReportingServices.Interfaces.IExtension> base interface for any extension deployed and used by the report server. <xref:Microsoft.ReportingServices.Interfaces.IExtension>, and <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2>, are members of the <xref:Microsoft.ReportingServices.Interfaces> namespace.  
   
  The primary way to authenticate against a report server in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] is the <xref:ReportService2010.ReportingService2010.LogonUser%2A> method. This member of the Reporting Services Web service can be used to pass user credentials to a report server for validation. Your underlying security extension implements **IAuthenticationExtension2.LogonUser** which contains your custom authentication code. In the Forms Authentication sample, **LogonUser**, which performs an authentication check against the supplied credentials and a custom user store in a database. An example of an implementation of **LogonUser** looks like this:  
   
@@ -87,14 +87,14 @@ internal static bool VerifyPassword(string suppliedUserName,
 }  
 ```  
   
-## Authentication Flow  
+## Authentication flow  
  The Reporting Services Web service provides custom authentication extensions to enable Forms Authentication by the web portal and the report server.  
   
- The <xref:ReportService2010.ReportingService2010.LogonUser%2A> method of the Reporting Services Web service is used to submit credentials to the report server for authentication. The Web service uses HTTP headers to pass an authentication ticket (known as a "cookie") from the server to the client for validated logon requests.  
+ The <xref:ReportService2010.ReportingService2010.LogonUser%2A> method of the Reporting Services Web service is used to submit credentials to the report server for authentication. The Web service uses HTTP headers to pass an authentication ticket (known as a "cookie") from the server to the client for validated sign-in requests.  
   
  The following illustration depicts the method of authenticating users to the Web service when your application is deployed with a report server configured to use a custom authentication extension.  
-  
- ![Reporting Services security authentication flow](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthenticationflow.gif "Reporting Services security authentication flow")  
+
+:::image type="content" source="../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthenticationflow.gif" alt-text="Screenshot of the Reporting Services security authentication flow.":::
   
  As shown in Figure 2, the authentication process is as follows:  
   
@@ -108,37 +108,38 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 5.  The Web service returns the authentication ticket to the calling application on the HTTP header.  
   
- When the Web service successfully authenticates a user through the security extension, it generates a cookie that is used for subsequent requests. The cookie may not persist within the custom security authority because the report server does not own the security authority. The cookie is returned from the <xref:ReportService2010.ReportingService2010.LogonUser%2A> Web service method and is used in subsequent Web service method calls and in URL access.  
+ When the Web service successfully authenticates a user through the security extension, it generates a cookie that is used for subsequent requests. The cookie might not persist within the custom security authority because the report server doesn't own the security authority. The cookie is returned from the <xref:ReportService2010.ReportingService2010.LogonUser%2A> Web service method and is used in subsequent Web service method calls and in URL access.  
   
 > [!NOTE]  
 >  In order to avoid compromising the cookie during transmission, authentication cookies returned from <xref:ReportService2010.ReportingService2010.LogonUser%2A> should be transmitted securely using Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), encryption.  
   
- If you access the report server through URL access when a custom security extension is installed, Internet Information Services (IIS) and [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] automatically manage the transmission of the authentication ticket. If you are accessing the report server through the SOAP API, your implementation of the proxy class must include additional support for managing the authentication ticket. For more information about using the SOAP API and managing the authentication ticket, see "Using the Web Service with Custom Security."  
+ If you access the report server through URL access when a custom security extension is installed, Internet Information Services (IIS) and [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] automatically manage the transmission of the authentication ticket. If you're accessing the report server through the SOAP API, your implementation of the proxy class must include extra support for managing the authentication ticket. For more information about using the SOAP API and managing the authentication ticket, see "Using the Web Service with Custom Security."  
   
 ## Forms Authentication  
- Forms Authentication is a type of [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] authentication in which an unauthenticated user is directed to an HTML form. Once the user provides credentials, the system issues a cookie containing an authentication ticket. On later requests, the system first checks the cookie to see if the user was already authenticated by the report server.  
+ Forms Authentication is a type of [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] authentication in which an unauthenticated user is directed to an HTML form. Once the user provides credentials, the system issues a cookie containing an authentication ticket. On later requests, the system first checks the cookie to see if the report server authenticated the user.  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] can be extended to support Forms Authentication using the security extensibility interfaces available through the Reporting Services API. If you extend [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] to use Forms Authentication, use Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), for all communications with the report server to prevent malicious users from gaining access to another user's cookie. TLS enables clients and a report server to authenticate each other and to ensure that no other computers can read the contents of communications between the two computers. All data sent from a client through a TLS connection is encrypted so that malicious users cannot intercept passwords or data sent to a report server.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] can be extended to support Forms Authentication using the security extensibility interfaces available through the Reporting Services API. If you extend [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] to use Forms Authentication, use Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), for all communications with the report server to prevent malicious users from gaining access to another user's cookie. TLS enables clients and a report server to authenticate each other and to ensure that no other computers can read the contents of communications between the two computers. All data sent from a client through a TLS connection is encrypted so that malicious users can't intercept passwords or data sent to a report server.  
   
- Forms Authentication is generally implemented to support accounts and authentication for platforms other than Windows. A graphical interface is presented to a user who requests access to a report server, and the supplied credentials are submitted to a security authority for authentication.  
+ Forms Authentication is implemented to support accounts and authentication for platforms other than Windows. A graphical interface is presented to a user who requests access to a report server, and the supplied credentials are submitted to a security authority for authentication.  
   
  Forms Authentication requires that a person is present to enter credentials. For unattended applications that communicate directly with the Reporting Services Web service, Forms Authentication must be combined with a custom authentication scheme.  
   
  Forms Authentication is appropriate for [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] when:  
   
--   You need to store and authenticate users that do not have [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows accounts, and  
+-   You need to store and authenticate users that don't have [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows accounts, and  
   
--   You need to provide your own user interface form as a logon page between different pages on a Web site.  
+-   You need to provide your own user interface form as a sign-in page between different pages on a Web site.  
   
- Consider the following when writing a custom security extension that supports Forms Authentication:  
+ Consider the following points when writing a custom security extension that supports Forms Authentication:  
   
 -   If you use Forms Authentication, anonymous access must be enabled on the report server virtual directory in Internet Information Services (IIS).  
   
 -   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] authentication must be set to Forms. You configure [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] authentication in the Web.config file for the report server.  
   
--   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] can authenticate and authorize users with either Windows Authentication or custom authentication, but not both. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] does not support simultaneous use of multiple security extensions.  
+-   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] can authenticate and authorize users with either Windows Authentication or custom authentication, but not both. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] doesn't support simultaneous use of multiple security extensions.  
   
-## See Also  
- [Implementing a Security Extension](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
+## Related content
+
+- [Implement a security extension](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
   
   

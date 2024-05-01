@@ -1,5 +1,5 @@
 ---
-title: "Scheduling Methods"
+title: "Scheduling methods"
 description: In Reporting Services, these methods create and manage shared schedules for report execution and delivery, and cache refresh plans used by the report server.
 author: maggiesMSFT
 ms.author: maggies
@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "shared schedules [Reporting Services], methods"
   - "methods [Reporting Services], scheduling"
 ---
-# Scheduling Methods
+# Scheduling methods
   You can use these methods to create and manage shared schedules for report execution and delivery, and to cache refresh plans utilized by the report server.  
   
 |Method|Action|  
@@ -30,11 +30,11 @@ helpviewer_keywords:
 |<xref:ReportService2010.ReportingService2010.ListSchedules%2A>|Returns a list of all shared schedules at the report server or the SharePoint site.|  
 |<xref:ReportService2010.ReportingService2010.ListScheduleStates%2A>|Returns a list of supported schedule states.|  
 |<xref:ReportService2010.ReportingService2010.PauseSchedule%2A>|Pauses the execution of a given schedule.|  
-|<xref:ReportService2010.ReportingService2010.ResumeSchedule%2A>|Resumes a shared schedule that has been paused.|  
+|<xref:ReportService2010.ReportingService2010.ResumeSchedule%2A>|Resumes a shared schedule that is paused.|  
 |<xref:ReportService2010.ReportingService2010.SetCacheRefreshPlanProperties%2A>|Sets the properties of a cache refresh plan.|  
 |<xref:ReportService2010.ReportingService2010.SetScheduleProperties%2A>|Sets the value of properties of a shared schedule.|  
   
-## See Also  
+## Related content  
  [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Report Server Web Service Methods](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

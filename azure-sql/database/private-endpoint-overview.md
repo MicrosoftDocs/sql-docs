@@ -1,11 +1,11 @@
 ---
 title: Azure Private Link
-titleSuffix: Azure SQL Database and Azure Synapse Analytics
+titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: Overview of private endpoint feature.
 author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, vanto, mathoma, randolphwest
-ms.date: 10/11/2023
+ms.date: 04/05/2024
 ms.service: sql-database
 ms.subservice: security
 ms.topic: overview
@@ -39,8 +39,11 @@ Once the network admin creates the Private Endpoint (PE), the SQL admin can mana
 
 1. Navigate to the server resource in the [Azure portal](https://portal.azure.com).
 
-1. Select **Networking** in the left pane.
-1. Select the **Private access** tab. The page shows the following:
+1. Navigate to the private endpoint approval page:
+    - In Azure SQL Database, under **Security** in the resource menu, select **Networking**. Select the **Private access** tab.
+    - In Synapse workspace, under **Security** in the resource menu, select **Private endpoint connections**.
+
+1. The page shows the following:
 
    - A list of all Private Endpoint Connections (PECs)
    - Private endpoints (PE) created
@@ -76,7 +79,7 @@ Once the network admin creates the Private Endpoint (PE), the SQL admin can mana
 
 ## Disable public access to your logical server
 
-For this scenario, assume you want to disable all public access to your logical server and allow connections only from your virtual network.
+In Azure SQL Database logical SQL server, assume you want to disable all public access to your logical server and allow connections only from your virtual network.
 
 First, ensure that your private endpoint connections are enabled and configured. Then, to disable public access to your logical server:
 
@@ -96,7 +99,7 @@ For this scenario, assume you've created an Azure Virtual Machine (VM) running a
    - Telnet
    - PsPing
    - Nmap
-   - SQL Server Management Studio (SSMS)
+   - [SQL Server Management Studio (SSMS)](https://aka.ms/ssms)
 
 ### Check connectivity using Telnet
 
@@ -177,14 +180,20 @@ WHERE session_id = @@SPID;
 
 ## Use Redirect connection policy with private endpoints
 
-We recommend that customers use the private link with the redirect connection policy for reduced latency and improved throughput. For connections to use this mode, clients need to:
+We recommend that customers use the private link with the **Redirect connection policy** for reduced latency and improved throughput. For connections to use this mode, clients need to meet the following pre-requisites:
 
-- Allow outbound communication from the VNET hosting the private endpoint to port range 1433 to 65535.
-- Use the latest version of drivers that have redirect support built in. Redirect support is included in ODBC, OLEDB, NET SqlClient Data Provider, Core .NET SqlClient Data Provider, and JDBC (version 9.4 or above) drivers. Connections originating from all other drivers are proxied.
+- Allow **inbound** communication to the VNET hosting the private endpoint to port range 1433 to 65535.
 
-To use a private endpoint with the redirect connection policy, change [connection policy to redirect](connectivity-architecture.md#connection-policy).
+- Allow **outbound** communication from the VNET hosting the client to port range 1433 to 65535.
 
-If it isn't feasible to modify the firewall settings to allow outbound access on the 1433-65535 port range, an alternative solution is to change the connection policy to Proxy.
+- Use the **latest version of drivers that have redirect support built in.** Redirect support is included in ODBC, OLEDB, NET SqlClient Data Provider, Core .NET SqlClient Data Provider, and JDBC (version 9.4 or above) drivers. Connections originating from all other drivers are proxied.
+
+After meeting the pre-requisite, clients need to explcitly [choose **Redirect** connection policy](connectivity-architecture.md#connection-policy).
+
+If it isn't feasible to modify the firewall settings to allow outbound access on the 1433-65535 port range, an alternative solution is to change the connection policy to **Proxy**.
+
+Existing private endpoints using **Default** connection policy shall be proxied i.e. they will use the Proxy connection policy with port 1433. The reason for doing this is is to avoid any disruption to client's traffic from reaching Sql Database due to requisite port ranges for redirection not being open.
+
 
 ## On-premises connectivity over private peering
 
@@ -230,9 +239,9 @@ Consider a scenario with a user running SQL Server Management Studio (SSMS) insi
 
 1. Disable all Azure service traffic to SQL Database via the public endpoint by setting Allow Azure Services to **OFF**. Ensure no IP addresses are allowed in the server and database level firewall rules. For more information, see [Azure SQL Database and Azure Synapse Analytics network access controls](network-access-controls-overview.md).
 1. Only allow traffic to the database in SQL Database using the Private IP address of the VM. For more information, see the articles on [Service Endpoint](vnet-service-endpoint-rule-overview.md) and [virtual network firewall rules](firewall-configure.md).
-1. On the Azure VM, narrow down the scope of outgoing connection by using [Network Security Groups (NSGs)](/azure/virtual-network/manage-network-security-group) and Service Tags as follows
-   - Specify an NSG rule to allow traffic for Service Tag = SQL.WestUs - only allowing connection to SQL Database in West US
-   - Specify an NSG rule (with a **higher priority**) to deny traffic for Service Tag = SQL - denying connections to SQL Database in all regions
+1. On the Azure VM, narrow down the scope of outgoing connection by using [Network Security Groups (NSGs)](/azure/virtual-network/manage-network-security-group) and Service Tags as follows.
+   - Specify an NSG rule to allow traffic for Service Tag = SQL.WestUs - only allowing connection to SQL Database in West US.
+   - Specify an NSG rule (with a **higher priority**) to deny traffic for Service Tag = SQL - denying connections to SQL Database in all regions.
 
 At the end of this setup, the Azure VM can connect only to a database in SQL Database in the West US region. However, the connectivity isn't restricted to a single database in SQL Database. The VM can still connect to any database in the West US region, including the databases that aren't part of the subscription. While we've reduced the scope of data exfiltration in the above scenario to a specific region, we haven't eliminated it altogether.
 

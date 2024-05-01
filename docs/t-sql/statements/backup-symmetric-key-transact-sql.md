@@ -11,7 +11,7 @@ ms.topic: reference
 
 # BACKUP SYMMETRIC KEY (Transact-SQL)
 
-[!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
+[!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
 
 > [!NOTE]
 > [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces support for exporting and importing symmetric keys, either to or from Azure Blob storage or file.

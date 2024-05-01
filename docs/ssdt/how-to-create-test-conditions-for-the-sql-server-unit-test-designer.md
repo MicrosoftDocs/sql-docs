@@ -24,7 +24,7 @@ This procedure explains how to create a test condition to appear in the SQL Serv
   
 4.  In the **Component Name** list, select **System.ComponentModel.Composition** and then click **OK**.  
   
-5.  Add the required assembly references. Right-click the project node and then click **Add Reference**. Click **Browse** and navigate to the C:\Program Files (x86)\\MicrosoftSQL Server\110\DAC\Bin folder. Choose Microsoft.Data.Tools.Schema.Sql.dll and click Add, then click OK.  
+5.  Add the required assembly references. Right-click the project node and then click **Add Reference**. Click **Browse** and navigate to the `C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin` folder. Choose Microsoft.Data.Tools.Schema.Sql.dll and click Add, then click OK.  
   
 6.  On the **Project** menu, click **Unload Project**.  
   

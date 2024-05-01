@@ -20,7 +20,7 @@ Configure a database in SQL Database and client application for failover to a re
 
 > [!div class="checklist"]
 >
-> - Create a [failover group](auto-failover-group-sql-db.md)
+> - Create a [failover group](failover-group-sql-db.md)
 > - Run a Java application to query a database in SQL Database
 > - Test failover
 
@@ -37,7 +37,7 @@ To complete the tutorial, make sure you've installed the following items:
 
 - [Azure PowerShell](/powershell/azure/)
 - A single database in Azure SQL Database. To create one use,
-  - [The Azure Portal](single-database-create-quickstart.md)
+  - [The Azure portal](single-database-create-quickstart.md)
   - [The Azure CLI](az-cli-script-samples-content-guide.md)
   - [PowerShell](powershell-script-content-guide.md)
 
@@ -51,7 +51,7 @@ To complete the tutorial, make sure you've installed the following items:
 
 ## Create a failover group
 
-Using Azure PowerShell, create [failover groups](auto-failover-group-sql-db.md) between an existing server and a new server in another region. Then add the sample database to the failover group.
+Using Azure PowerShell, create [failover groups](failover-group-sql-db.md) between an existing server and a new server in another region. Then add the sample database to the failover group.
 
 # [PowerShell](#tab/azure-powershell)
 
@@ -363,15 +363,16 @@ To test a failover:
 
 ## Next steps
 
-In this tutorial, you configured a database in Azure SQL Database and an application for failover to a remote region and tested a failover plan. You learned how to:
+Review the [high availability and disaster recovery checklist](high-availability-disaster-recovery-checklist.md). 
 
-> [!div class="checklist"]
->
-> - Create a geo-replication failover group
-> - Run a Java application to query a database in SQL Database
-> - Test failover
+Related Azure SQL Database content: 
 
-Advance to the next tutorial on how to add an instance of Azure SQL Managed Instance to a failover group:
+- [Business continuity with](business-continuity-high-availability-disaster-recover-hadr-overview.md)
+- [High availability](high-availability-sla.md)
+- [Failover groups](failover-group-sql-db.md)
+- [Active geo-replication](active-geo-replication-overview.md)
 
-> [!div class="nextstepaction"]
-> [Add an instance of Azure SQL Managed Instance to a failover group](../managed-instance/failover-group-add-instance-tutorial.md)
+
+
+
+

@@ -27,7 +27,7 @@ RowNumber(scope)
   
 #### Parameters  
  *scope*  
- (**String**) The name of a dataset, data region, or group, or null (**Nothing** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), that specifies the context in which to evaluate the number of rows. **Nothing** specifies the outermost context, usually the report dataset.  
+ (**String**) The name of a dataset, data region, or group, or null (**Nothing** in [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)]), that specifies the context in which to evaluate the number of rows. **Nothing** specifies the outermost context, usually the report dataset.  
   
 ## Remarks  
  **RowNumber** returns a running value of the count of rows within the specified scope, just as [RunningValue](../../reporting-services/report-design/report-builder-functions-runningvalue-function.md) returns the running value of an aggregate function. When you specify a scope, you specify when to reset the row count to 1.  

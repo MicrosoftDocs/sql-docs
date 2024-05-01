@@ -38,11 +38,11 @@ Represents a stream of binary data or text.
   
 -   Copy the contents of a **Stream** to another **Stream** with the [CopyTo](./copyto-method-ado.md) method.  
   
--   Control how lines are read from the source file with the [SkipLine](./skipline-method.md)method and the [LineSeparator](./lineseparator-property-ado.md) property.  
+-   Control how lines are read from the source file with the [SkipLine](./skipline-method.md) method and the [LineSeparator](./lineseparator-property-ado.md) property.  
   
--   Determine the end of stream position with the [EOS](./eos-property.md)property and [SetEOS](./seteos-method.md) method.  
+-   Determine the end of stream position with the [EOS](./eos-property.md) property and [SetEOS](./seteos-method.md) method.  
   
--   Save and restore data in files with the [SaveToFile](./savetofile-method.md)and [LoadFromFile](./loadfromfile-method-ado.md) methods.  
+-   Save and restore data in files with the [SaveToFile](./savetofile-method.md) and [LoadFromFile](./loadfromfile-method-ado.md) methods.  
   
 -   Specify the character set used for storing the **Stream** with the [Charset](./charset-property-ado.md) property.  
   

@@ -3,10 +3,10 @@ title: "SQL Server, Database Mirroring object"
 description: "Learn about the SQLServer:Database Mirroring performance object, which contains performance counters to report information about SQL Server database mirroring."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/12/2021"
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "SQLServer:Database Mirroring"
   - "database mirroring [SQL Server], performance counters"
@@ -15,10 +15,10 @@ helpviewer_keywords:
 ---
 # SQL Server, Database Mirroring object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  The **SQLServer:Database Mirroring** performance object contains performance counters that report information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database mirroring. The table below lists the counters that this object contains.  
+  The **SQLServer:Database Mirroring** performance object contains performance counters that report information about [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] database mirroring. The table below lists the counters that this object contains.  
 
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] instead.  
+>  [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE [ssHADR](../../includes/sshadr-md.md)] instead.  
   
 |Name|Description|  
 |----------|-----------------|  
@@ -47,10 +47,10 @@ helpviewer_keywords:
 > [!NOTE]  
 >  On each partner, some of the counters show a zero value depending on what role the partner is currently performing.  
   
-## Remarks  
- The performance counters let you monitor database mirroring performance. For example, you can examine the **Transaction Delay** counter to see if database mirroring is impacting performance on the principal server, you can examine the **Redo Queue** and **Log Send Queue** counters to see how well the mirror database is keeping up with the principal database. You can examine the **Log Bytes Sent/sec** counter to monitor the amount of log sent per second.  
+## Remarks
+
+ The performance counters let you monitor database mirroring performance. For example, you can examine the **Transaction Delay** counter to see if database mirroring is affecting performance on the principal server, you can examine the **Redo Queue** and **Log Send Queue** counters to see how well the mirror database is keeping up with the principal database. You can examine the **Log Bytes Sent/sec** counter to monitor the amount of log sent per second.  
   
-## See also  
- [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
-  
-  
+## Related content
+
+- [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)

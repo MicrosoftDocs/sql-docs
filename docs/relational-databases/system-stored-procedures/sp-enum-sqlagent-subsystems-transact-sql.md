@@ -63,7 +63,7 @@ By default, members of the **sysadmin** fixed server role can execute this store
 
 For details about **SQLAgentOperatorRole**, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).
 
-## See also
+## Related content
 
 - [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)
 - [sp_add_jobstep (Transact-SQL)](sp-add-jobstep-transact-sql.md)

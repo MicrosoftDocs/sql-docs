@@ -37,7 +37,7 @@ GO
 -- Insert encrypted data from the CreditCardApprovalCode column.
 UPDATE Sales.SalesOrderHeader
 SET EncryptedCreditCardApprovalCode
-    = EncryptByKey(Key_GUID('key_DataShare'), CreditCardApprovalCode);
+    = EncryptByKey(Key_GUID('key_ReplDataShare'), CreditCardApprovalCode);
 GO
 
 CLOSE SYMMETRIC KEY [key_ReplDataShare];

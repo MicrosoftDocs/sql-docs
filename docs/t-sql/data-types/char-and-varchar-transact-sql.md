@@ -150,7 +150,7 @@ BusinessEntityID SalesYTD              DisplayFormat CurrentDate             Dis
 288              1827066.7118          1,827,066.71  2011-05-07 14:29:01.193 07/05/11
 ```
 
-### D. Convert uniqueidentifer data
+### D. Convert uniqueidentifier data
 
 The following example converts a **uniqueidentifier** value to a **char** data type.
 

@@ -12,7 +12,8 @@ helpviewer_keywords:
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Format JSON Output Automatically with AUTO Mode (SQL Server)
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-serverless-pool-only](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-serverless-pool-only.md)]
 
 To format the output of the **FOR JSON** clause automatically based on the structure of the **SELECT** statement, specify the **AUTO** option.  
   
@@ -47,29 +48,29 @@ SELECT TOP 5
   
 ```json  
 [{
-	"Id": 1,
-	"FirstName": "Ken",
-	"LastName": "Sánchez",
-	"Info.MiddleName": "J"
+    "Id": 1,
+    "FirstName": "Ken",
+    "LastName": "Sánchez",
+    "Info.MiddleName": "J"
 }, {
-	"Id": 2,
-	"FirstName": "Terri",
-	"LastName": "Duffy",
-	"Info.MiddleName": "Lee"
+    "Id": 2,
+    "FirstName": "Terri",
+    "LastName": "Duffy",
+    "Info.MiddleName": "Lee"
 }, {
-	"Id": 3,
-	"FirstName": "Roberto",
-	"LastName": "Tamburello"
+    "Id": 3,
+    "FirstName": "Roberto",
+    "LastName": "Tamburello"
 }, {
-	"Id": 4,
-	"FirstName": "Rob",
-	"LastName": "Walters"
+    "Id": 4,
+    "FirstName": "Rob",
+    "LastName": "Walters"
 }, {
-	"Id": 5,
-	"FirstName": "Gail",
-	"LastName": "Erickson",
-	"Info.Title": "Ms.",
-	"Info.MiddleName": "A"
+    "Id": 5,
+    "FirstName": "Gail",
+    "LastName": "Erickson",
+    "Info.Title": "Ms.",
+    "Info.MiddleName": "A"
 }]
 ```  
 
@@ -94,20 +95,20 @@ FOR JSON AUTO
   
 ```json  
 [{
-	"SalesOrderNumber": "SO43659",
-	"OrderDate": "2011-05-31T00:00:00",
-	"D": [{
-		"UnitPrice": 24.99,
-		"OrderQty": 1
-	}]
+    "SalesOrderNumber": "SO43659",
+    "OrderDate": "2011-05-31T00:00:00",
+    "D": [{
+        "UnitPrice": 24.99,
+        "OrderQty": 1
+    }]
 }, {
-	"SalesOrderNumber": "SO43659",
-	"D": [{
-		"UnitPrice": 34.40
-	}, {
-		"UnitPrice": 134.24,
-		"OrderQty": 5
-	}]
+    "SalesOrderNumber": "SO43659",
+    "D": [{
+        "UnitPrice": 34.40
+    }, {
+        "UnitPrice": 134.24,
+        "OrderQty": 5
+    }]
 }]
 ```  
 
@@ -132,17 +133,17 @@ FOR JSON PATH
   
 ```json  
 [{
-	"SalesOrderNumber": "SO43659",
-	"OrderDate": "2011-05-31T00:00:00",
-	"D": [{
-		"UnitPrice": 24.99,
-		"OrderQty": 1
-	}]
+    "SalesOrderNumber": "SO43659",
+    "OrderDate": "2011-05-31T00:00:00",
+    "D": [{
+        "UnitPrice": 24.99,
+        "OrderQty": 1
+    }]
 }, {
-	"SalesOrderNumber": "SO4390",
-	"D": [{
-		"UnitPrice": 24.99
-	}]
+    "SalesOrderNumber": "SO4390",
+    "D": [{
+        "UnitPrice": 24.99
+    }]
 }]
 ```  
 

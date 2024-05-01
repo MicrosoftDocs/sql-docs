@@ -4,24 +4,24 @@ description: Create and manage Azure SQL Database elastic pools using the Azure 
 author: arvindshmicrosoft
 ms.author: arvindsh
 ms.reviewer: wiassaf, mathoma
-ms.date: 09/26/2022
+ms.date: 04/04/2024
 ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: conceptual
 ms.custom:
-  - seoapril2019 sqldbrb=1
+  - sqldbrb=1
   - devx-track-azurecli
 ---
 
 # Manage elastic pools in Azure SQL Database
 
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 With an elastic pool, you determine the amount of resources that the elastic pool requires to handle the workload of its databases, and the amount of resources for each pooled database.
 
 ## Azure portal
 
-All pool settings can be found in one place: the **Configure pool** blade. To get here, find an elastic pool in the Azure portal and select **Configure** either from the **Overview** page menu, or from the resource menu under **Settings**.
+All pool settings can be found in one place: the **Configure pool** pane. To get here, find an elastic pool in the Azure portal and select **Configure** either from the **Overview** page menu, or from the resource menu under **Settings**.
 
 From here you can make any combination of the following changes and save them all in one batch:
 
@@ -87,7 +87,7 @@ To create and move databases within existing elastic pools or to return informat
 | Command | Description |
 | --- | --- |
 |[CREATE DATABASE (Azure SQL Database)](/sql/t-sql/statements/create-database-azure-sql-database)|Creates a new database in an existing pool or as a single database. You must be connected to the `master` database to create a new database.|
-| [ALTER DATABASE (Azure SQL Database)](/sql/t-sql/statements/alter-database-azure-sql-database) |Move a database into, out of, or between elastic pools.|
+|[ALTER DATABASE (Azure SQL Database)](/sql/t-sql/statements/alter-database-azure-sql-database) |Move a database into, out of, or between elastic pools.|
 |[DROP DATABASE (Transact-SQL)](/sql/t-sql/statements/drop-database-transact-sql)|Deletes a database.|
 |[sys.elastic_pool_resource_stats (Azure SQL Database)](/sql/relational-databases/system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database)|Returns resource usage statistics for all the elastic pools on a server. For each elastic pool, there is one row for each 15 second reporting window (four rows per minute). This includes CPU, IO, Log, storage consumption and concurrent request/session utilization by all databases in the pool.|
 |[sys.dm_elastic_pool_resource_stats (Azure SQL Database)](/sql/relational-databases/system-dynamic-management-views/sys-dm-elastic-pool-resource-stats-azure-sql-database)|Returns resource usage statistics for the elastic pool containing the current database on an Azure SQL Database [logical server](./logical-servers.md). This includes CPU, Data IO, Log IO, storage consumption and concurrent request/session utilization by the pool. This data is retained for roughly 40 minutes.|
@@ -99,20 +99,20 @@ To create and manage SQL Database elastic pools and pooled databases, use these 
 
 | Command | Description |
 | --- | --- |
-|[Elastic pools - Create or update](/rest/api/sql/elasticpools/createorupdate)|Creates a new elastic pool or updates an existing elastic pool.|
-|[Elastic pools - Delete](/rest/api/sql/elasticpools/delete)|Deletes the elastic pool.|
-|[Elastic pools - Get](/rest/api/sql/elasticpools/get)|Gets an elastic pool.|
-|[Elastic pools - List by server](/rest/api/sql/elasticpools/listbyserver)|Returns a list of elastic pools in a server.|
-|[Elastic pools - Update](/rest/api/sql/2020-11-01-preview/elasticpools/update)|Updates an existing elastic pool.|
-|[Elastic pool activities](/rest/api/sql/elasticpoolactivities)|Returns elastic pool activities.|
-|[Elastic pool database activities](/rest/api/sql/elasticpooldatabaseactivities)|Returns activity on databases inside of an elastic pool.|
-|[Databases - Create or update](/rest/api/sql/2022-08-01-preview/databases/create-or-update)|Creates a new database or updates an existing database.|
+|[Elastic pools - Create or update](/rest/api/sql/elastic-pools/create-or-update)|Creates a new elastic pool or updates an existing elastic pool.|
+|[Elastic pools - Delete](/rest/api/sql/elastic-pools/delete)|Deletes the elastic pool.|
+|[Elastic pools - Get](/rest/api/sql/elastic-pools/get)|Gets an elastic pool.|
+|[Elastic pools - List by server](/rest/api/sql/elastic-pools/list-by-server)|Returns a list of elastic pools in a server.|
+|[Elastic pools - Update](/rest/api/sql/elastic-pools/update)|Updates an existing elastic pool.|
+|[Elastic pool activities](/rest/api/sql/elastic-pool-activities)|Returns elastic pool activities.|
+|[Elastic pool database activities](/rest/api/sql/elastic-pool-database-activities)|Returns activity on databases inside of an elastic pool.|
+|[Databases - Create or update](/rest/api/sql/databases/create-or-update)|Creates a new database or updates an existing database.|
 |[Databases - Get](/rest/api/sql/databases/get)|Gets a database.|
-|[Databases - List by elastic pool](/rest/api/sql/2022-08-01-preview/databases/list-by-elastic-pool)|Returns a list of databases in an elastic pool.|
-|[Databases - List by server](/rest/api/sql/2022-08-01-preview/databases/list-by-server)|Returns a list of databases in a server.|
+|[Databases - List by elastic pool](/rest/api/sql/databases/list-by-elastic-pool)|Returns a list of databases in an elastic pool.|
+|[Databases - List by server](/rest/api/sql/databases/list-by-server)|Returns a list of databases in a server.|
 |[Databases - Update](/rest/api/sql/databases/update)|Updates an existing database.|
 
-## Next steps
+## Related content
 
 - To learn more about design patterns for SaaS applications using elastic pools, see [Design Patterns for Multi-tenant SaaS Applications with Azure SQL Database](saas-tenancy-app-design-patterns.md).
 - For a SaaS tutorial using elastic pools, see [Introduction to the Wingtip SaaS application](saas-dbpertenant-wingtip-app-overview.md).

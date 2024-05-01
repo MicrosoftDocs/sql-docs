@@ -37,13 +37,13 @@ The following section describes how to set up Azure Data Lake Storage Gen2 for t
 
 ### Use OAuth credentials to mount
 
-In order to use OAuth credentials to mount, you need to follow the below steps:
+In order to use OAuth credentials to mount, you need to follow these steps:
 
 1. Go to the [Azure portal](https://portal.azure.com)
-1. Navigate to "Azure Active Directory". You should see this service on the left navigation bar.
-1. In right navigation bar, select "App registrations" and create a new registration
-1. Create a "Web Application and follow the wizard. **Remember the name of the app you create here**. You will need to add this name to your ADLS account as an authorized user. Also note the Application client ID in the overview when you select the App.
-1. Once the web application is created, go to "Certificates&secrets" and create a **New client secret** and select a key duration. **Add** the secret.
+1. Navigate to **Microsoft Entra ID**. You should see this service on the left navigation bar.
+1. Select **App registrations** from the resource menu and create a new registration.
+1. Create a **Web Application** and follow the wizard. _Remember the name of the app you create in this step_. You will need to add this name to your ADLS account as an authorized user. Also note the Application client ID in the overview when you select the App.
+1. Once the web application is created, go to **Certificates&secrets** and choose to create a **New client secret**. Select a key duration. Use **Add** to save the secret.
 1. Go back to the App Registrations page, and click on the "Endpoints" at the top. **Note down the "OAuth token endpoint (v2)** URL
 1. You should now have the following things noted down for OAuth:
 

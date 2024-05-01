@@ -44,7 +44,7 @@ For more info, see [Start the SQL Server Import and Export Wizard](../../integra
 ## Step 2 - View the Welcome page
 The first page of the wizard is the **Welcome** page. 
 
-You probably don't want to see this page again, so go ahead and click **Do not show this starting page again**.
+You probably don't want to see this page again, so select **Do not show this starting page again**.
 
 ![Welcome to the wizard](../../integration-services/import-export-data/media/welcome-to-the-wizard.jpg)
 

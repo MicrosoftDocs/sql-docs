@@ -27,7 +27,7 @@ Sparklyr provides an R interface for Apache Spark. Sparklyr is a popular way for
 
 Install and configure **RStudio Desktop** with the following steps:
 
-1. If you are running on a Windows client, [download and install R 3.6.3](https://cran.rstudio.com/bin/windows/base/old/3.6.3). Also, [download and install RTools 3.5](https://cran.r-project.org/bin/windows/Rtools/history.html). Make sure to configure RTools binary folder on your PATH environment variable.
+1. If you are running on a Windows client, [download and install R 3.6.3](https://cran-archive.r-project.org/bin/windows/base/old/). Also, [download and install RTools 3.5](https://cran.r-project.org/bin/windows/Rtools/history.html). Make sure to configure RTools binary folder on your PATH environment variable.
 
     > [!WARNING]
     > R version 4.x and sparklyr versions other that the one specified below are verified not to work as of SQL Server Big Data Clusters CU13.

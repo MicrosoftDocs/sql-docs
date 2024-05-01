@@ -93,32 +93,33 @@ END CONVERSATION @dialog_handle ;
  The following example ends the dialog specified by `@dialog_handle` with an error if the processing statement reports an error. Notice that this is a simplistic approach to error handling, and may not be appropriate for some applications.  
   
 ```sql  
-DECLARE @dialog_handle UNIQUEIDENTIFIER,  
-        @ErrorSave INT,  
-        @ErrorDesc NVARCHAR(100) ;  
-BEGIN TRANSACTION ;  
-  
-<receive and process message>  
-  
-SET @ErrorSave = @@ERROR ;  
-  
-IF (@ErrorSave <> 0)  
-  BEGIN  
-      ROLLBACK TRANSACTION ;  
-      SET @ErrorDesc = N'An error has occurred.' ;  
-      END CONVERSATION @dialog_handle   
-      WITH ERROR = @ErrorSave DESCRIPTION = @ErrorDesc ;  
-  END  
-ELSE  
-  
-COMMIT TRANSACTION ;  
+DECLARE
+    @dialog_handle UNIQUEIDENTIFIER,
+    @ErrorSave INT,
+    @ErrorDesc NVARCHAR(100);
+
+BEGIN TRANSACTION;
+
+-- Receive and process message
+
+SET @ErrorSave = @@ERROR;
+
+IF (@ErrorSave <> 0)
+    BEGIN
+        ROLLBACK TRANSACTION;
+        SET @ErrorDesc = N'An error has occurred.';
+        END CONVERSATION @dialog_handle
+            WITH ERROR = @ErrorSave DESCRIPTION = @ErrorDesc;
+    END;
+ELSE
+    COMMIT TRANSACTION;
 ```  
   
 ### C. Cleaning up a conversation that cannot complete normally  
  The following example ends the dialog specified by `@dialog_handle`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] immediately removes all messages from the service queue and the transmission queue, without notifying the remote service. Since ending a dialog with cleanup does not notify the remote service, you should only use this in cases where the remote service is not available to receive an **EndDialog** or **Error** message.  
   
 ```sql  
-END CONVERSATION @dialog_handle WITH CLEANUP ;  
+END CONVERSATION @dialog_handle WITH CLEANUP;  
 ```  
   
 ## See Also  

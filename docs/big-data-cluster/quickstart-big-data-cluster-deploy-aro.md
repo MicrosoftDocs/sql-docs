@@ -4,23 +4,23 @@ titleSuffix: SQL Server Big Data Clusters
 description: Learn how to use a deployment script to deploy SQL Server Big Data Clusters on Azure Red Hat OpenShift (ARO).
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 07/16/2021
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: big-data-cluster
-ms.topic: conceptual
-ms.custom: intro-deployment, devx-track-azurecli
+ms.topic: quickstart
+ms.custom: intro-deployment, devx-track-azurecli, linux-related-content
 ---
 
 # Use a python script to deploy a SQL Server Big Data Cluster on Azure Red Hat OpenShift (ARO)
 
-[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE [SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+[!INCLUDE [big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
-In this tutorial, you use a sample python deployment script to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] to [Azure Red Hat OpenShift (ARO)](/azure/virtual-machines/linux/openshift-get-started). This deployment option is supported beginning with SQL Server 2019 CU5.
+In this tutorial, you use a sample python deployment script to deploy [!INCLUDE [big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] to [Azure Red Hat OpenShift (ARO)](/azure/virtual-machines/linux/openshift-get-started). This deployment option is supported beginning with SQL Server 2019 CU5.
 
 > [!TIP]
-> ARO is only one option for hosting Kubernetes for your big data cluster. To learn about other deployment options as well as how to customize deployment options, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md).
+> ARO is only one option for hosting Kubernetes for your big data cluster. To learn about other deployment options as well as how to customize deployment options, see [How to deploy [!INCLUDE [big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md).
 
 
 > [!WARNING]
@@ -64,15 +64,15 @@ When prompted, provide your input for Azure subscription ID and the Azure resour
 - `azure_region`
 - `vm_size` for OpenShift worker nodes. For an optimal experience while you are validating basic scenarios, we recommend at least 8 vCPUs and 64-GB memory across all worker nodes in the cluster. The script uses `Standard_D8s_v3` and three worker nodes as default. A default size configuration for big data clusters also uses about 24 disks for persistent volume claims across all components.
 - network configuration for OpenShift cluster deployment - see the [ARO deployment article](\azure\openshift\tutorial-create-cluster) for more details on each parameter.
-- `cluster_name` - this value is used for both ARO cluster and SQL Server Big Data Cluster created on top of ARO. Note that the name of the SQL Big Data Cluster is going to be a Kubernetes namespace.
-- `username `- this is the username for the accounts provisioned during deployment for the controller admin account, SQL Server master instance account, and gateway. Note that `sa` SQL Server account is disabled automatically for you, as a best practice.
+- `cluster_name` - this value is used for both ARO cluster and SQL Server Big Data Cluster created on top of ARO. The name of the SQL Big Data Cluster is going to be a Kubernetes namespace.
+- `username` - this is the username for the accounts provisioned during deployment for the controller admin account, SQL Server master instance account, and gateway. `sa` SQL Server account is disabled automatically for you, as a best practice.
 - `password` - same value is going to be used for all accounts.
 
 The SQL Server Big Data Cluster is now deployed on ARO. You can now use Azure Data Studio to connect to the cluster. For more information, see [Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md).
 
 ## Clean up
 
-If you are testing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Azure, you should delete the ARO cluster when finished to avoid unexpected charges. Do not remove the cluster if you intend to continue using it.
+If you are testing [!INCLUDE [big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Azure, you should delete the ARO cluster when finished to avoid unexpected charges. Do not remove the cluster if you intend to continue using it.
 
 > [!WARNING]
 > The following steps tears down the ARO cluster which removes the SQL Server big data cluster as well. If you have any databases or HDFS data that you want to keep, back that data up before deleting the cluster.
@@ -83,7 +83,7 @@ Run the following Azure CLI command to remove the big data cluster and the ARO s
 az group delete -n <resource group name>
 ```
 
-## `deploy-sql-big-data-aro.py` 
+## `deploy-SQL-big-data-aro.py`
 
 The script in this section deploys the SQL Server Big Data Cluster to Azure Red Hat OpenShift. Copy the script to your workstation and save it as `deploy-sql-big-data-aro.py` before you begin the deployment.
 
@@ -261,11 +261,7 @@ volumes:
   - secret
 ```
 
-## Next steps
+## Related content
 
-The deployment script configured Azure Kubernetes Service and also deployed a SQL Server 2019 big data cluster. You can also choose to customize future deployments through manual installations. To learn more about how big data clusters are deployed as well as how to customize deployments, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md).
-
-Now that the SQL Server big data cluster is deployed, you can load sample data and explore the tutorials:
-
-> [!div class="nextstepaction"]
-> [Tutorial: Load sample data into a SQL Server 2019 big data cluster](tutorial-load-sample-data.md)
+- [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md)
+- [Tutorial: Load sample data into a SQL Server big data cluster](tutorial-load-sample-data.md)

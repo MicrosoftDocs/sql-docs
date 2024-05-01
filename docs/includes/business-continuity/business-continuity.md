@@ -3,6 +3,7 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.date: 11/23/2022
 ms.service: sql
+ms.custom: linux-related-content
 ms.topic: include
 ---
 This article provides an overview of business continuity solutions for high availability and disaster recovery in [!INCLUDE[ssnoversion-md](../ssnoversion-md.md)], on Windows and Linux.

@@ -63,7 +63,7 @@ The following example downloads policies incrementally by using the default type
 EXEC sp_external_policy_refresh
 ```
 
-## See also
+## Related content
 
 - [Provision access by data owner for Azure SQL Database](/azure/purview/how-to-policies-data-owner-azure-sql-db)
 - [Provision access by data owner for SQL Server on Azure Arc-enabled servers](/azure/purview/how-to-policies-data-owner-arc-sql-server)

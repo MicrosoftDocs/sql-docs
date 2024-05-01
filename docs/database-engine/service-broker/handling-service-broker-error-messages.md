@@ -28,7 +28,7 @@ Use the WITH ERROR clause of the END CONVERSATION statement to report applicatio
 
 ```sql
     END CONVERSATION @ConversationHandle
-        WITH ERROR = 1234 DESCRIPTION = "The account specified in the invoice does not exist, verify the account number."
+        WITH ERROR = 1234 DESCRIPTION = 'The account specified in the invoice does not exist, verify the account number.';
 ```
 
 The END CONVERSATION WITH ERROR statement:

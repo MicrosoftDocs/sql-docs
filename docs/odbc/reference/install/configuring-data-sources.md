@@ -16,7 +16,7 @@ Information about data sources is stored in the system registry. Users modify da
  You can use PowerShell commands to modify data sources. For more information about these PowerShell commands, see [Windows Data Access Components PowerShell Commands](/previous-versions/windows/desktop/jj134064(v=vs.85)).  
   
 > [!NOTE]  
->  This section is specific to Microsoft Windows® platforms. How data sources are configured on other platforms is platform-specific.  
+>  This section is specific to Microsoft Windows platforms. How data sources are configured on other platforms is platform-specific.  
   
  This section contains the following topic:  
   

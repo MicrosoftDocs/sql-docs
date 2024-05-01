@@ -3,8 +3,8 @@ title: Connect to an existing database in SSDT
 description: Connect to an existing database in SSDT using SQL Server Object Explorer.
 author: subhojit-msft
 ms.author: subasak
-ms.reviewer: drskwier, randolphwest
-ms.date: 09/07/2023
+ms.reviewer: drskwier, randolphwest, maghan
+ms.date: 03/14/2024
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
@@ -40,12 +40,12 @@ To Connect to an existing database, refer to the following steps:
 
 1. **Perform Actions**: Right-click on a database or any object to perform various actions like querying data, creating new objects, editing existing ones, and more.
 
-:::image type="content" source="./media/connect-to-existing-database/connect.png" alt-text="A screenshot of the Connect dialog box." border = "true":::
+:::image type="content" source="media/connect-to-existing-database/connect.png" alt-text="Screenshot of the Connect dialog box.":::
 
 ## <a id="AuthTypes"></a> Authentication types
 
 SSDT lets you connect to databases on your local machine, network, and Azure. Considering the variety of scenarios, we have multiple authentication types. They are as follows:
-:::image type="content" source="./media/connect-to-existing-database/authentication-types.png" alt-text="A screenshot of the different Authentication types." border = "true":::
+:::image type="content" source="media/connect-to-existing-database/authentication-types.png" alt-text="Screenshot of the different Authentication types.":::
 
 - **Windows Authentication**: This authentication method uses Windows security to authenticate users to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)].
 
@@ -71,22 +71,23 @@ SSDT lets you connect to databases on your local machine, network, and Azure. Co
 
 For SSDT in Visual Studio 17.8 and later versions, there's an important change to the `Encrypt` property, which is now enabled by default for all connections. [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] must be configured with a TLS certificate, signed by a trusted root certificate authority. In addition, if an initial connection attempt fails with encryption enabled (default), SSDT provides a notification prompt with an option to attempt the connection with `Trust Server Certificate` enabled. Both the `Encrypt` and `Trust Server Certificate` properties are also available for manual editing. The [best practice](../relational-databases/security/securing-sql-server.md) is to support a trusted encrypted connection to the server.
 
-:::image type="content" source="media/connect-to-existing-database/encrypt.png" alt-text="A screenshot of the different encryption types.":::
+:::image type="content" source="media/connect-to-existing-database/encrypt.png" alt-text="Screenshot of the different encryption types.":::
 
 For users connecting to Azure SQL Database, no changes to existing, saved connections are needed; Azure SQL Database supports encrypted connections and is configured with trusted certificates.
 
-For users connecting to on-premises [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instances, or [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] running on a virtual machine, if `Encrypt` is set to `True`, ensure that you have a certificate from a trusted certificate authority (for example, not a self-signed certificate). Alternatively, you may choose to connect without encryption (`Encrypt` set to `False`), or to trust the server certificate (`Encrypt` set to `True` and `Trust Server Certificate` set to `True`).
+For users connecting to on-premises [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instances, or [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] running on a virtual machine, if `Encrypt` is set to `True`, ensure that you have a certificate from a trusted certificate authority (for example, not a self-signed certificate). Alternatively, you might choose to connect without encryption (`Encrypt` set to `False`), or to trust the server certificate (`Encrypt` set to `True` and `Trust Server Certificate` set to `True`).
 
 If [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] isn't configured with a trusted certificate, and you attempt to connect using `Strict` encryption, or with `Encrypt` set to `True` and `Trust Server Certificate` set to `False`, the following error message is displayed:
 
-:::image type="content" source="media/connect-to-existing-database/error-ssl.png" alt-text="Screenshot of error message.":::
+:::image type="content" source="media/connect-to-existing-database/error-ssl.png" alt-text="Screenshot of error message." lightbox="media/connect-to-existing-database/error-ssl.png":::
 
 > Encryption was enabled on this connection, review your SSL and certificate configuration for the target SQL Server, or enable 'Trust server certificate' in the connection dialog.
->
+>  
 > **Additional information**
->
+>  
 > A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.) (Microsoft SQL Server)
 
-## Next steps
+## Next step
 
-- [Project Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md)
+> [!div class="nextstepaction"]
+> [Project Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md)

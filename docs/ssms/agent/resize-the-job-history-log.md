@@ -7,7 +7,8 @@ ms.reviewer: randolphwest
 ms.date: 05/09/2022
 ms.service: sql
 ms.subservice: ssms
-ms.topic: conceptual
+ms.custom: linux-related-content
+ms.topic: how-to
 helpviewer_keywords:
   - "jobs [SQL Server Agent], history"
   - "resizing job history log"

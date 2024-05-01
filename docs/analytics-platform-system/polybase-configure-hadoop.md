@@ -4,14 +4,14 @@ description: Explains how to configure PolyBase in Analytics Platform System (PD
 author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
-ms.date: 10/04/2022
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: data-warehouse
-ms.topic: conceptual
+ms.topic: how-to
 ---
 # Configure PolyBase in Analytics Platform System (PDW) to access external data in Hadoop
 
-The article explains how to use PolyBase on an [!INCLUDE[sspdw-md](../includes/sspdw-md.md)] or APS appliance to query external data in Hadoop.
+The article explains how to use PolyBase on an [!INCLUDE [sspdw-md](../includes/sspdw-md.md)] or APS appliance to query external data in Hadoop.
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ First, configure APS to use your specific Hadoop provider.
    GO
    ```
 
-2. Restart APS Region using Service Status page on [Appliance Configuration Manager](launch-the-configuration-manager.md).
+1. Restart APS Region using Service Status page on [Appliance Configuration Manager](launch-the-configuration-manager.md).
 
 ## <a id="pushdown"></a> Enable pushdown computation
 
@@ -327,9 +327,9 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 In SQL Server Data Tools, external tables are displayed in a separate folder **External Tables**. External data sources and external file formats are in subfolders under **External Resources**.
 
-:::image type="content" source="media/polybase/external-tables-datasource.png" alt-text="A screenshot of PolyBase objects in SQL Server Data Tools (SSDT).":::
+:::image type="content" source="media/polybase/external-tables-datasource.png" alt-text="Screenshot of PolyBase objects in SQL Server Data Tools (SSDT).":::
 
-## Next steps
+## Related content
 
-- For Hadoop security settings see [configure Hadoop security](polybase-configure-hadoop-security.md).<br>
+- For Hadoop security settings see [configure Hadoop security](polybase-configure-hadoop-security.md).
 - For more information about PolyBase, see the [What is PolyBase?](../relational-databases/polybase/polybase-guide.md).

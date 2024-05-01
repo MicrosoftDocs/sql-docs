@@ -16,6 +16,9 @@ ms.custom: intro-installation
 
 [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] is a command-line utility written in Python to bootstrap and manage the data services via REST APIs. 
 
+> [!CAUTION]
+> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+
 ## Find latest version
 
 To find your installed version and see if you need to update, run `azdata --version`.

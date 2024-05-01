@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "articles [SQL Server replication], defining"
@@ -122,11 +122,11 @@ dev_langs:
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This example defines an article based on the `Product` table for a transactional publication, where the article is filtered both horizontally and vertically.  
   
- [!code-sql[HowTo#sp_AddTranArticle](../../../relational-databases/replication/codesnippet/tsql/define-an-article_1.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/define-an-article_1.sql":::
   
  This example defines articles for a merge publication, where the `SalesOrderHeader` article is statically filtered based on **SalesPersonID**, and the `SalesOrderDetail` article is join filtered based on `SalesOrderHeader`.  
   
- [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-an-article_2.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/define-an-article_2.sql":::
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
  You can define articles programmatically by using Replication Management Objects (RMO). The RMO classes that you use to define an article depend on the type of publication for which the article is defined.  

@@ -1,6 +1,6 @@
 ---
-title: "Configure the Web Portal to Pass Custom Authentication Cookies"
-description: "Configure the Web Portal to Pass Custom Authentication Cookies"
+title: "Configure the web portal to pass custom authentication cookies"
+description: "Configure the web portal to pass custom authentication cookies"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 04/18/2017
@@ -12,15 +12,15 @@ helpviewer_keywords:
   - "authentication [Reporting Services]"
   - "extensions [Reporting Services], custom security"
 ---
-# Configure the Web Portal to Pass Custom Authentication Cookies
+# Configure the web portal to pass custom authentication cookies
 
-If you are using a custom authentication extension, you should configure the web portal to transmit custom authentication cookies. Otherwise, the web portal will only transmit cookies through HTTP requests specific to the report server. If you want to transmit additional cookies, you must modify the RSReportServer.Config file.
+If you're using a custom authentication extension, you should configure the web portal to transmit custom authentication cookies. Otherwise, the web portal transmits cookies through HTTP requests specific to the report server. If you want to transmit other cookies, you must modify the RSReportServer.Config file.
 
-## Modifying the RSReportServer.Config File
+## Modify the RSReportServer.Config file
 
-You can enable the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] to transmit additional cookies through to the report server by adding a \<**PassThroughCookies**> element to the web portal configuration settings in the RSReportServer.config file. Transmitting additional cookies is helpful in a single sign-on authentication solution that requires not only the report server authentication cookies, but also cookies from a third-party authentication system.
+You can enable the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] to transmit other cookies through to the report server by adding a `<PassThroughCookies>` element to the web portal configuration settings in the RSReportServer.config file. Transmitting other cookies is helpful in a single sign-on authentication solution that requires not only the report server authentication cookies, but also cookies from a third-party authentication system.
 
-To enable additional cookies to be transmitted through HTTP requests when using the web portal, set the following elements in the RSReportServer.config file:
+To enable other cookies to be transmitted through HTTP requests by using the web portal, set the following elements in the RSReportServer.config file:
   
 ```  
 <UI>  
@@ -35,10 +35,10 @@ To enable additional cookies to be transmitted through HTTP requests when using 
 </UI>  
 ```  
   
-## See Also
+## Related content
 
-[Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md)   
-[RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
-[Security Extensions Overview](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   
-[Configure and Administer a Report Server &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
+[Authentication with the report server](../../reporting-services/security/authentication-with-the-report-server.md)   
+[RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+[Security extensions overview](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   
+[Configure and administer a report server &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
 More questions? [Try the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

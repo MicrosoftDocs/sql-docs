@@ -4,8 +4,8 @@ titleSuffix: Azure SQL Database
 description: Overview of customer managed keys (CMK) support for transparent data encryption (TDE) with Azure Key Vault for Azure SQL Database at a database level granularity.
 author: strehan1993
 ms.author: strehan
-ms.reviewer: vanto
-ms.date: 09/29/2023
+ms.reviewer: vanto, mathoma
+ms.date: 01/12/2024
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
@@ -150,6 +150,9 @@ In case of an inaccessible TDE protector as described in [Transparent data encry
 - Server level cross tenant CMK settings don't affect individual databases configured with database level CMK, and they continue to use their own single tenant or cross tenant configuration.
 - Only a single user-assigned managed identity can be set at the database level.
 
+> [!NOTE]
+> The managed identities on the database must be reassigned if the database is renamed.
+
 ## Migration of existing databases to database level CMK
 
 New databases can be configured with database level CMK during creation and existing databases in servers configured with service-managed keys can be migrated to database level CMK using the operations described in [Identity and key management for TDE with database level customer-managed keys](transparent-data-encryption-byok-database-level-basic-actions.md). To migrate databases that are configured with a server level CMK or geo replication, other steps are needed as described in the following sections.
@@ -178,7 +181,7 @@ New databases can be configured with database level CMK during creation and exis
 
 ## Geo-replication and high availability
 
-In both [active geo-replication](active-geo-replication-overview.md) and [failover groups](auto-failover-group-sql-db.md) scenarios, the primary and secondary databases involved can be linked either to the same key vault (in any region), or to separate key vaults. If separate key vaults are linked to the primary and secondary servers, the customer is responsible for keeping the key material across the key vaults consistent, so that geo-secondary is in sync and can take over using the same key from its linked key vault if the primary becomes inaccessible due to an outage in the region and a failover is triggered. Up to four secondaries can be configured, and chaining (secondaries of secondaries) isn't supported.
+In both [active geo-replication](active-geo-replication-overview.md) and [failover groups](failover-group-sql-db.md) scenarios, the primary and secondary databases involved can be linked either to the same key vault (in any region), or to separate key vaults. If separate key vaults are linked to the primary and secondary servers, the customer is responsible for keeping the key material across the key vaults consistent, so that geo-secondary is in sync and can take over using the same key from its linked key vault if the primary becomes inaccessible due to an outage in the region and a failover is triggered. Up to four secondaries can be configured, and chaining (secondaries of secondaries) isn't supported.
 
 To establish active geo-replication for a database that has been configured with database level CMK, a secondary replica must be created with a valid user-assigned managed identity and a list of current keys being used by the primary database. The list of current keys can be retrieved from the primary database using necessary filters and query parameters, or using PowerShell and the Azure CLI. The steps needed to set up a geo-replica of such a database are:
 

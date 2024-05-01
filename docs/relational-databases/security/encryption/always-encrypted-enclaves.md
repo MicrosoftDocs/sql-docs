@@ -219,6 +219,7 @@ The following limitations are specific to Always Encrypted with secure enclaves:
 - Tooling limitations:
   - The only supported key stores for storing enclave-enabled column master keys are Windows Certificate Store and Azure Key Vault.
   - To trigger an in-place cryptographic operation via `ALTER TABLE`/`ALTER COLUMN`, you need to issue the statement using a query window in SSMS or Azure Data Studio, or you can write your own program that issues the statement. Currently, the `Set-SqlColumnEncryption` cmdlet in the SqlServer PowerShell module and the Always Encrypted wizard in SQL Server Management Studio don't support in-place encryption. Move the data out of the database for cryptographic operations, even if the column encryption keys used for the operations are enclave-enabled.
+- When you restore a VBS enclave-enabled database, it's essential to reconfigure the VBS enclave setting again.
 
 ## Next steps
 

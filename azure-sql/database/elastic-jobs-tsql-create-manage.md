@@ -3,8 +3,8 @@ title: Create and manage elastic jobs by using Transact-SQL (T-SQL)
 description: Learn how to create an elastic job agent and run scripts across many databases with an elastic job agent, using Transact-SQL (T-SQL).
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: srinia
-ms.date: 11/13/2023
+ms.reviewer: srinia, mathoma
+ms.date: 04/03/2024
 ms.service: sql-database
 ms.subservice: elastic-jobs
 ms.topic: how-to
@@ -12,7 +12,7 @@ ms.custom: sqldbrb=1
 dev_langs:
   - "TSQL"
 ---
-# Create and manage elastic jobs by using T-SQL (preview)
+# Create and manage elastic jobs by using T-SQL
 
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
@@ -31,9 +31,6 @@ In this end-to-end tutorial, you learn the steps required to run a query across 
 > * Add job steps to a job
 > * Start execution of a job
 > * Monitor a job
-
-> [!NOTE]
-> Elastic jobs are in preview. Features currently in preview are available under [supplemental terms of use](https://azure.microsoft.com/support/legal/preview-supplemental-terms/), review for legal terms that apply to Azure features that are in preview. Azure SQL Database provides previews to give you a chance to evaluate and [share feedback with the product group](https://feedback.azure.com/d365community/forum/ef2b2b38-2f25-ec11-b6e6-000d3a4f0f84) on features before they become generally available (GA).
 
 ## Create the elastic job agent
 
@@ -315,7 +312,7 @@ EXEC jobs.sp_add_jobstep
 @output_type = 'SqlDatabase',
 @output_server_name = 'server1.database.windows.net',
 @output_database_name = '<resultsdb>',
-@output_table_name = '<resultstable>';
+@output_table_name = '<output_table_name>';
 
 --Create a job to monitor pool performance
 
@@ -361,7 +358,7 @@ SELECT elastic_pool_name , end_time, elastic_pool_dtu_limit, avg_cpu_percent, av
 @output_type = 'SqlDatabase',
 @output_server_name = 'server1.database.windows.net',
 @output_database_name = 'resultsdb',
-@output_table_name = 'resultstable';
+@output_table_name = '<output_table_name>';
 ```
 
 ## Run the job
@@ -538,4 +535,4 @@ The following views are available in the [jobs database](elastic-jobs-overview.m
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Create and manage elastic jobs by using PowerShell (preview)](elastic-jobs-powershell-create.md)
+> [Create and manage elastic jobs by using PowerShell](elastic-jobs-powershell-create.md)

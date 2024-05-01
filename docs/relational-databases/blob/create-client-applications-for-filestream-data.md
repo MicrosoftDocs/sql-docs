@@ -41,12 +41,12 @@ helpviewer_keywords:
 ###  <a name="path"></a> Reading the FILESTREAM File Path  
  Each cell in a FILESTREAM table has a file path that is associated with it. To read the path, use the **PathName** property of a **varbinary(max)** column in a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. The following example shows how to read the file path of a **varbinary(max)** column.  
   
- [!code-sql[FILESTREAM#FS_PathName](../../relational-databases/blob/codesnippet/tsql/create-client-applicatio_1.sql)]  
+ :::code language="sql" source="codesnippet/tsql/create-client-applicatio_1.sql":::
   
 ###  <a name="trx"></a> Reading the Transaction Context  
  To obtain the current transaction context, use the [!INCLUDE[tsql](../../includes/tsql-md.md)] [GET_FILESTREAM_TRANSACTION_CONTEXT()](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md) function. The following example shows how to begin a transaction and read the current transaction context.  
   
- [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../../relational-databases/blob/codesnippet/tsql/create-client-applicatio_2.sql)]  
+ :::code language="sql" source="codesnippet/tsql/create-client-applicatio_2.sql":::
   
 ###  <a name="handle"></a> Obtaining a Win32 File Handle  
  To obtain a Win32 file handle, call the OpenSqlFilestream API. This API is exported from the sqlncli.dll file. The returned handle can be passed to any of the following Win32 APIs: [ReadFile](/windows/win32/api/fileapi/nf-fileapi-readfile), [WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile), [TransmitFile](/windows/win32/api/mswsock/nf-mswsock-transmitfile), [SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer), [SetEndOfFile](/windows/win32/api/fileapi/nf-fileapi-setendoffile), or [FlushFileBuffers](/windows/win32/api/fileapi/nf-fileapi-flushfilebuffers). The following examples show you how to obtain a Win32 File handle and use it to read and write data to a FILESTREAM BLOB.  

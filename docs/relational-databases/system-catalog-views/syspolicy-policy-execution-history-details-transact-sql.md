@@ -3,7 +3,7 @@ title: "syspolicy_policy_execution_history_details (Transact-SQL)"
 description: syspolicy_policy_execution_history_details (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.date: "08/09/2016"
+ms.date: "03/12/2024"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -33,7 +33,7 @@ dev_langs:
 |exception|**nvarchar(max)**|Description of the exception if one occurred.|  
   
 ## Remarks  
- When you are troubleshooting Policy-Based Management, query the syspolicy_policy_execution_history_details view to determine which target and condition expression combinations failed, when they failed, and review related errors.  
+ When you're troubleshooting Policy-Based Management, query the syspolicy_policy_execution_history_details view to determine which target and condition expression combinations failed, when they failed, and review related errors.  
   
  The following query combines the `syspolicy_policy_execution_history_details` view with the `syspolicy_policy_execution_history_details` and `syspolicy_policies` views to display the name of the policy, the name of the condition, and details about failures.  
   
@@ -59,7 +59,7 @@ WHERE PolHistDet.result = 0 ;
 ## Permissions  
  Requires membership in the PolicyAdministratorRole role in the msdb database.  
   
-## See Also  
+## Related content  
  [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Policy-Based Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

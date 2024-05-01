@@ -13,6 +13,8 @@ ms.topic: conceptual
 # SqlPackage Publish parameters, properties, and SQLCMD variables
 The SqlPackage publish operation incrementally updates the schema of a target database to match the structure of a source database. Publishing a deployment package that contains user data for all or a subset of tables update the table data in addition to the schema. Data deployment overwrites the schema and data in existing tables of the target database. Data deployment will not change existing schema or data in the target database for tables not included in the deployment package.  A new database can be created by the publish action when the authenticated user has [create database permissions](../../t-sql/statements/create-database-transact-sql.md#permissions). The required permissions for the publish action on an existing database is *db_owner*.
 
+[!INCLUDE [entra-id](../../includes/entra-id-hard-coded.md)]
+
 ## Command-line syntax
 
 **SqlPackage** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
@@ -35,15 +37,15 @@ SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
 SqlPackage /a:Publish /tsn:"{yourserver}.database.windows.net,1433" /tdn:"AdventureWorksLT" /tu:"sqladmin" \
     /tp:"{your_password}" /sf:"C:\AdventureWorksLT.dacpac" /p:VerifyDeployment=False
 
-# example publish using Azure Active Directory Managed Identity
+# example publish using Microsoft Entra managed identity
 SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
     /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Managed Identity;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 
-# example publish connecting using Azure Active Directory username and password
+# example publish connecting using Microsoft Entra username and password
 SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
     /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Password;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;User ID={yourusername};Password={yourpassword}"
 
-# example publish connecting using Azure Active Directory universal authentication
+# example publish connecting using Microsoft Entra universal authentication
 SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" /UniversalAuthentication:True \
     /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 
@@ -75,7 +77,7 @@ SqlPackage /at:$($AccessToken_Object.Token) /Action:Publish /SourceFile:"C:\Adve
 |---|---|---|---|
 |**/AccessToken:**|**/at:**|{string}| Specifies the token-based authentication access token to use when connect to the target database. |
 |**/Action:**|**/a:**|Publish|Specifies the action to be performed. |
-|**/AzureCloudConfig:**|**/acc:**|{string}|Specifies the custom endpoints for connecting to Azure Active Directory in the format: AzureActiveDirectoryAuthority={value};DatabaseServicePrincipalName={value}" .|
+|**/AzureCloudConfig:**|**/acc:**|{string}|Specifies the custom endpoints for connecting to Microsoft Entra ID in the format: AzureActiveDirectoryAuthority={value};DatabaseServicePrincipalName={value}" .|
 |**/AzureKeyVaultAuthMethod:**|**/akv:**|{Interactive&#124;ClientIdSecret}|Specifies what authentication method is used for accessing Azure KeyVault if a publish operation includes modifications to an encrypted table/column. |
 |**/ClientId:**|**/cid:**|{string}|Specifies the Client ID to be used in authenticating against Azure KeyVault, when necessary |
 |**/DeployReportPath:**|**/drp:**|{string}|Specifies an optional file path to output the deployment report xml file. |
@@ -106,12 +108,12 @@ SqlPackage /at:$($AccessToken_Object.Token) /Action:Publish /SourceFile:"C:\Adve
 |**/TargetHostNameInCertificate:**|**/thnic:**|{string}|Specifies value that is used to validate the target SQL Server TLS/SSL certificate when the communication layer is encrypted by using TLS.|
 |**/TargetPassword:**|**/tp:**|{string}|For SQL Server Auth scenarios, defines the password to use to access the target database. |
 |**/TargetServerName:**|**/tsn:**|{string}|Defines the name of the server hosting the target database. |
-|**/TargetTimeout:**|**/tt:**|{int}|Specifies the timeout for establishing a connection to the target database in seconds. For Azure AD, it is recommended that this value be greater than or equal to 30 seconds.|
+|**/TargetTimeout:**|**/tt:**|{int}|Specifies the timeout for establishing a connection to the target database in seconds. For Microsoft Entra ID, it is recommended that this value be greater than or equal to 30 seconds.|
 |**/TargetTrustServerCertificate:**|**/ttsc:**|{True&#124;False}|Specifies whether to use TLS to encrypt the target database connection and bypass walking the certificate chain to validate trust. Default value is False. |
 |**/TargetUser:**|**/tu:**|{string}|For SQL Server Auth scenarios, defines the SQL Server user to use to access the target database. |
-|**/TenantId:**|**/tid:**|{string}|Represents the Azure AD tenant ID or domain name. This option is required to support guest or imported Azure AD users as well as Microsoft accounts such as outlook.com, hotmail.com, or live.com. If this parameter is omitted, the default tenant ID for Azure AD will be used, assuming that the authenticated user is a native user for this AD. However, in this case any guest or imported users and/or Microsoft accounts hosted in this Azure AD are not supported and the operation will fail. <br/> For more information about Active Directory Universal Authentication, see [Universal Authentication with SQL Database and Azure Synapse Analytics (SSMS support for MFA)](/azure/sql-database/sql-database-ssms-mfa-authentication).|
+|**/TenantId:**|**/tid:**|{string}|Represents the Microsoft Entra tenant ID or domain name. This option is required to support guest or imported Microsoft Entra users as well as Microsoft accounts such as outlook.com, hotmail.com, or live.com. If this parameter is omitted, the default tenant ID for Microsoft Entra ID will be used, assuming that the authenticated user is a native user for this tenant. However, in this case any guest or imported users and/or Microsoft accounts hosted in this Microsoft Entra ID are not supported and the operation will fail. <br/> For more information, see [Universal Authentication with SQL Database and Azure Synapse Analytics (SSMS support for MFA)](/azure/sql-database/sql-database-ssms-mfa-authentication).|
 |**/ThreadMaxStackSize:**|**/tmss:**|{int}|Specifies the maximum size in megabytes for the thread running the SqlPackage action. This option should only be used when encountering stack overflow exceptions that occur when parsing very large Transact-SQL statements.|
-|**/UniversalAuthentication:**|**/ua:**|{True&#124;False}|Specifies if Universal Authentication should be used. When set to True, the interactive authentication protocol is activated supporting MFA. This option can also be used for Azure AD authentication without MFA, using an interactive protocol requiring the user to enter their username and password or integrated authentication (Windows credentials). When /UniversalAuthentication is set to True, no Azure AD authentication can be specified in SourceConnectionString (/scs). When /UniversalAuthentication is set to False, Azure AD authentication must be specified in SourceConnectionString (/scs). <br/> For more information about Active Directory Universal Authentication, see [Universal Authentication with SQL Database and Azure Synapse Analytics (SSMS support for MFA)](/azure/sql-database/sql-database-ssms-mfa-authentication).|
+|**/UniversalAuthentication:**|**/ua:**|{True&#124;False}|Specifies if Universal Authentication should be used. When set to True, the interactive authentication protocol is activated supporting MFA. This option can also be used for Microsoft Entra authentication without MFA, using an interactive protocol requiring the user to enter their username and password or integrated authentication (Windows credentials). When /UniversalAuthentication is set to True, no Microsoft Entra authentication can be specified in SourceConnectionString (/scs). When /UniversalAuthentication is set to False, Microsoft Entra authentication must be specified in SourceConnectionString (/scs). <br/> For more information about Active Directory Universal Authentication, see [Universal Authentication with SQL Database and Azure Synapse Analytics (SSMS support for MFA)](/azure/sql-database/sql-database-ssms-mfa-authentication).|
 |**/Variables:**|**/v:**|{PropertyName}={Value}|Specifies a name value pair for an action-specific variable;{VariableName}={Value}. The DACPAC file contains the list of valid SQLCMD variables. An error results if a value is not provided for every variable. |
 
 ## Properties specific to the Publish action
@@ -214,6 +216,7 @@ SqlPackage /at:$($AccessToken_Object.Token) /Action:Publish /SourceFile:"C:\Adve
 |**/p:**|IsAlwaysEncryptedParameterizationEnabled=(BOOLEAN 'False')|Enables variable parameterization on Always Encrypted columns in pre/post deployment scripts.|
 |**/p:**|LongRunningCommandTimeout=(INT32 '0')|Specifies the long running command timeout in seconds when executing queries against SQL Server. Use 0 to wait indefinitely.|
 |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN 'False')|Specifies that publish should always drop and re-create an assembly if there is a difference instead of issuing an ALTER ASSEMBLY statement.|
+|**/p:**|PerformIndexOperationsOnline=(BOOLEAN 'False')|Specifies whether to perform index operations online during deployment.|
 |**/p:**|PopulateFilesOnFileGroups=(BOOLEAN 'True')|Specifies whether a new file is also created when a new FileGroup is created in the target database.|
 |**/p:**|PreserveIdentityLastValues=(BOOLEAN 'False')|Specifies whether last values for identity columns should be preserved during deployment.|
 |**/p:**|RebuildIndexesOfflineForDataPhase=(BOOLEAN 'False')|Rebuild indexes offline after importing data.|

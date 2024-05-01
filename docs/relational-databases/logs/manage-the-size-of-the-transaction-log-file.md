@@ -18,7 +18,7 @@ helpviewer_keywords:
 
 This article covers how to monitor [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] transaction log size, shrink the transaction log, add to or enlarge a transaction log file, optimize the `tempdb` transaction log growth rate, and control the growth of a transaction log file.
 
-This article applies to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Though very similar, for information on managing the size of transaction log files in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], see [Manage file space for databases in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/file-space-manage?view=azuresql-mi&preserve-view=true). For information about [!INCLUDE[ssazure-sqldb](../../includes/ssazure-sqldb.md)], see [Manage file space for databases in Azure SQL Database](/azure/azure-sql/database/file-space-manage?view=azuresql-db&preserve-view=true).
+This article applies to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Though very similar, for information on managing the size of transaction log files in [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], see [Manage file space for databases in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/file-space-manage?view=azuresql-mi&preserve-view=true). For information about [!INCLUDE[ssazure-sqldb](../../includes/ssazure-sqldb.md)], see [Manage file space for databases in Azure SQL Database](/azure/azure-sql/database/file-space-manage?view=azuresql-db&preserve-view=true).
 
 ## Understand types of storage space for a database
 

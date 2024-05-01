@@ -56,6 +56,8 @@ For the latest release notes and what's new information, see the following:
 
 **Try [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]! [Download [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2022)**.
 
+[!INCLUDE [entra-id](../includes/entra-id.md)]
+
 ## SQL Server editions
 
 [!INCLUDE [sql-server-editions](../includes/paragraph-content/sql-server-editions.md)]
@@ -110,13 +112,14 @@ SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/a
 
 | Feature | Enterprise | Standard | Web | Express<br />with<br />Advanced<br />Services | Express |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| Azure Active Directory integration | Yes | Yes | Yes | Yes | Yes |
-| Microsoft Purview access policies <sup>1</sup> | Yes | Yes | Yes <sup>2</sup> | Yes <sup>2</sup> | Yes <sup>2</sup> |
+| Azure extension for SQL Server | Yes | Yes | No | No | No |
 | Azure Synapse Link <sup>1</sup> | Yes | Yes | Yes | No | No |
 | Link feature for SQL Managed Instance <sup>1</sup> | Yes | Yes | No | No | No |
-| Azure extension for SQL Server | Yes | Yes | No | No | No |
-| Pay-as-you-go billing | Yes | Yes | No | No | No |
 | Failover servers for disaster recovery in Azure | Yes | Yes | No | No | No |
+| Microsoft Entra integration | Yes | Yes | Yes | Yes | Yes |
+| Microsoft Purview access policies <sup>1</sup> | Yes | Yes | Yes <sup>2</sup> | Yes <sup>2</sup> | Yes <sup>2</sup> |
+| Pay-as-you-go billing | Yes | Yes | No | No | No |
+
 
 <sup>1</sup> These features are governed by their respective [Lifecycle Policies](/lifecycle/products/sql-server-2022).
 
@@ -148,7 +151,7 @@ SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/a
 | Hot add memory and CPU | Yes | No | No | No | No |
 | Database recovery advisor | Yes | Yes | Yes | Yes | Yes |
 | Encrypted backup | Yes | Yes | No | No | No |
-| Backup and restore to S3-compliant object storage over REST API | Yes | Yes | Yes | No | No |
+| Backup and restore to S3-compatible object storage over REST API | Yes | Yes | Yes | No | No |
 | Snapshot backup | Yes | Yes | Yes | Yes | Yes |
 | Cluster-less availability group <sup>5,6</sup> | Yes | Yes | No | No | No |
 | Failover servers for disaster recovery | Yes | Yes | No | No | No |
@@ -227,22 +230,23 @@ SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/a
 
 | Feature | Enterprise | Standard | Web | Express<br />with<br />Advanced<br />Services | Express |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| Row-level security | Yes | Yes | Yes | Yes | Yes |
 | Always Encrypted | Yes | Yes | Yes | Yes | Yes |
 | Always Encrypted with secure enclaves | Yes | Yes | Yes | Yes | Yes |
-| Dynamic data masking | Yes | Yes | Yes | Yes | Yes |
-| Server audit | Yes | Yes | Yes | Yes | Yes |
-| Database audit | Yes | Yes | Yes | Yes | Yes |
-| Transparent Database Encryption (TDE) | Yes | Yes | Yes | No | No |
-| Extensible key management (EKM) | Yes | Yes | No | No | No |
-| User-defined roles | Yes | Yes | Yes | Yes | Yes |
 | Contained databases | Yes | Yes | Yes | Yes | Yes |
-| Encryption for backups | Yes | Yes | No | No | No |
+| Database audit | Yes | Yes | Yes | Yes | Yes |
 | Data classification and auditing | Yes | Yes | Yes | Yes | Yes |
+| Dynamic data masking | Yes | Yes | Yes | Yes | Yes |
+| Encryption for backups | Yes | Yes | No | No | No |
+| Extensible key management (EKM) | Yes | Yes | No | No | No |
 | Ledger for SQL Server | Yes | Yes | Yes | Yes | Yes |
-| Azure Active Directory authentication <sup>1</sup> | Yes | Yes | Yes | Yes | Yes |
+| Microsoft Entra authentication <sup>1</sup> | Yes | Yes | Yes | Yes | Yes |
+| Row-level security | Yes | Yes | Yes | Yes | Yes |
+| Server audit | Yes | Yes | Yes | Yes | Yes |
+| Transparent data encryption (TDE) | Yes | Yes | Yes | No | No |
+| User-defined roles | Yes | Yes | Yes | Yes | Yes |
 
-<sup>1</sup> Requires an Azure Arc-enabled SQL Server
+<sup>1</sup> Requires [SQL Server enabled by Azure Arc](azure-arc/overview.md)
+
 
 ## <a id="Replication"></a> Replication
 

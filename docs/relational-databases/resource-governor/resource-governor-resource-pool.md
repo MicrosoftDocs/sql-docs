@@ -30,7 +30,7 @@ These settings are the minimum and maximum guaranteed average CPU bandwidth for 
 
 ### CAP_CPU_PERCENT
 
-The CAP_CPU_PERCENT setting is a hard cap limit on the CPU bandwidth for all requests in the resource pool. Workloads associated with the pool can use CPU capacity above the value of MAX_CPU_PERCENT if it's available, but not above the value of CAP_CPU_PERCENT. Based on the example in the previous section, lets assume that the Marketing department is being charged for their resource usage. They want predictable billing and don't want to pay for more than 30 percent of the CPU. This goal can be accomplished by setting the CAP_CPU_PERCENT to 30 for the Marketing resource pool.
+The CAP_CPU_PERCENT setting is a hard cap limit on the CPU bandwidth for all requests in the resource pool. Workloads associated with the pool can use CPU capacity above the value of MAX_CPU_PERCENT if it's available, but not above the value of CAP_CPU_PERCENT. Based on the example in the previous section, let's assume that the Marketing department is being charged for their resource usage. They want predictable billing and don't want to pay for more than 30 percent of the CPU. This goal can be accomplished by setting the CAP_CPU_PERCENT to 30 for the Marketing resource pool.
 
 ### MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT
 
@@ -40,7 +40,7 @@ In order to govern memory for memory-optimized tables with Resource Governor, yo
 
 ### AFFINITY
 
-This setting lets you affinitize a resource pool to one or more schedulers or NUMA nodes for greater isolation of CPU resources. To use the Sales and Marketing scenario from previous sections, lets assume that the Sales department needs a more isolated environment and wants 100 percent of a CPU core at all times. By using the AFFINITY option the Sales and Marketing workloads can be scheduled on different CPUs. Assuming the CAP_CPU_PERCENT on the Marketing pool is still in place, the Marketing workload continues to use a maximum of 30 percent of one core, while the Sales workload uses 100 percent of the other core. As far as the Sales and Marketing workloads are concerned, they're running on two isolated machines.
+This setting lets you affinitize a resource pool to one or more schedulers or NUMA nodes for greater isolation of CPU resources. To use the Sales and Marketing scenario from previous sections, let's assume that the Sales department needs a more isolated environment and wants 100 percent of a CPU core at all times. By using the AFFINITY option the Sales and Marketing workloads can be scheduled on different CPUs. Assuming the CAP_CPU_PERCENT on the Marketing pool is still in place, the Marketing workload continues to use a maximum of 30 percent of one core, while the Sales workload uses 100 percent of the other core. As far as the Sales and Marketing workloads are concerned, they're running on two isolated machines.
 
 ### MIN_IOPS_PER_VOLUME and MAX_IOPS_PER_VOLUME
 

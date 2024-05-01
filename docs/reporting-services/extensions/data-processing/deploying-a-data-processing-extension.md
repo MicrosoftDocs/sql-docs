@@ -1,5 +1,5 @@
 ---
-title: "Deploying a Data Processing Extension"
+title: "Deploy a data processing extension"
 description: Learn how to make your Reporting Services data processing extension discoverable by the report server and by Report Designer.
 author: maggiesMSFT
 ms.author: maggies
@@ -15,10 +15,10 @@ helpviewer_keywords:
   - "Extension element"
   - "deploying [Reporting Services], extensions"
 ---
-# Deploying a Data Processing Extension
-  Once you have written and compiled your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension into a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] library, you need to make it discoverable by the report server and by Report Designer. This is as easy as copying the extension to the appropriate directories and adding entries to the appropriate [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] configuration files.  
+# Deploy a data processing extension
+  Once you write and compile your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension into a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] library, you need to make it discoverable by the report server and by Report Designer. This process is as easy as copying the extension to the appropriate directories and adding entries to the appropriate [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] configuration files.  
   
-## Configuration-File Extension Element  
+## Configuration file Extension element
  Data processing extensions that you deploy to the report server or Report Designer need to be entered as **Extension** elements in the configuration files. These files are RSReportServer.config for the report server and RSReportDesigner.config for Report Designer.  
   
  The following table describes the attributes for the **Extension** element for data processing extensions.  
@@ -27,20 +27,21 @@ helpviewer_keywords:
 |---------------|-----------------|  
 |**Name**|A unique name for the extension, for example, "SQL" for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data processing extension or "OLEDB" for the OLE DB data processing extension. The maximum length for the **Name** attribute is 255 characters. The name must be unique among all entries within the **Extension** element of a configuration file.|  
 |**Type**|A comma-separated list that includes the fully qualified namespace along with the name of the assembly.|  
-|**Visible**|A value of **false** indicates that the data processing extension should not be visible in user interfaces. If the attribute is not included, the default value is **true**.|  
+|**Visible**|A value of **false** indicates that the data processing extension shouldn't be visible in user interfaces. If the attribute isn't included, the default value is **true**.|  
   
- For more information about the RSReportServer.config or RSReportDesigner.config files, see [Reporting Services Configuration Files](../../../reporting-services/report-server/reporting-services-configuration-files.md).  
+ For more information about the RSReportServer.config or RSReportDesigner.config files, see [Reporting Services configuration files](../../../reporting-services/report-server/reporting-services-configuration-files.md).  
   
-## In This Section  
+## In this section  
   
-|Topic|Description|  
+|Article|Description|  
 |-----------|-----------------|  
-|[How to: Deploy a Data Processing Extension to a Report Server](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-a-report-server.md)|Describes how to deploy your data processing extension to a report server.|  
-|[How to: Deploy a Data Processing Extension to Report Designer](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-report-designer.md)|Describes how to deploy your data processing extension to Report Designer.|  
+|[Deploy a data processing extension to a report server](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-a-report-server.md)|Describes how to deploy your data processing extension to a report server.|  
+|[Deploy a data processing extension to Report Designer](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-report-designer.md)|Describes how to deploy your data processing extension to Report Designer.|  
   
-## See Also  
- [Reporting Services Extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Implementing a Data Processing Extension](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Reporting Services Extension Library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+## Related content
+
+- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
+- [Implement a data processing extension](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
+- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

@@ -11,7 +11,7 @@ metadata:
   ms.reviewer: 
   monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016"
 
-title: Frequently asked questions
+title: Frequently asked questions in PolyBase
 summary: |
    [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
   

@@ -4,7 +4,7 @@ description: "CREATE TABLE creates a new table in Azure Synapse Analytics, Analy
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto, xiaoyul, mariyaali, maghan, kecona
-ms.date: 07/16/2023
+ms.date: 12/13/2023
 ms.service: sql
 ms.topic: reference
 dev_langs:
@@ -654,7 +654,6 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
     | varchar [ ( n ) ] 
     | char [ ( n ) ]  
     | varbinary [ ( n ) ] 
-    | binary [ ( n ) ]  
     | uniqueidentifier  
 ```
 
@@ -667,7 +666,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  The schema for the table. Specifying *schema* is optional. If blank, the default schema is used.  
   
 #### *table_name*
- The name of the new table. To create a local temporary table, precede the table name with `#`.
+ The name of the new table. 
 
 #### *column_name*
  The name of a table column.
@@ -776,9 +775,10 @@ Permissions in [!INCLUDE[fabric](../../includes/fabric.md)] are different from p
 
 ## <a id="LimitationsRestrictions"></a> Limitations and restrictions
 
-- Table names cannot be greater than 128 characters.
-- Table names in [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)] cannot include the characters `/` or `\`.
-- Column names cannot be greater than 128 characters.
+- Table names can't be greater than 128 characters.
+- Table names in [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)] cannot include the characters `/` or `\` or end with a `.`.
+- Column names can't be greater than 128 characters.
+- Tables have a maximum of 1024 columns per table.
 - The default and only collation supported in [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] is Latin1_General_100_BIN2_UTF8.
 
 ## Remarks

@@ -12,7 +12,6 @@ helpviewer_keywords:
 apilocation: "sqlncli11.dll"
 apiname: "bcp_control"
 apitype: "DLLExport"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # bcp_control
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +51,7 @@ RETCODE bcp_control (
  BCPFILECP  
  *iValue* contains the number of the code page for the data file. You can specify the number of the code page, such as 1252 or 850, or one of these values:  
   
- BCPFILE_ACP: data in the file is in the Microsoft Windows® code page of the client.  
+ BCPFILE_ACP: data in the file is in the Microsoft Windows code page of the client.  
   
  BCPFILE_OEMCP: data in the file is in the OEM code page of the client (default).  
   

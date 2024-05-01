@@ -6,7 +6,7 @@ ms.author: maghan
 ms.date: "05/03/2022"
 ms.service: sql
 ms.subservice: ssms
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
   - "proxies [SQL Server Agent], creating"
 monikerRange: ">= sql-server-2016"

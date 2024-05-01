@@ -5,12 +5,12 @@ description: This article provides an Azure PowerShell example script to create 
 author: urosmil
 ms.author: urmilano
 ms.reviewer: mathoma
-ms.date: 03/25/2019
+ms.date: 02/26/2024
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: sample
 ms.custom: devx-track-azurepowershell
-ms.devlang: PowerShell
+ms.devlang: powershell
 ---
 # Use PowerShell to create a managed instance
 
@@ -27,7 +27,8 @@ If you choose to install and use PowerShell locally, this tutorial requires Azur
 
 ## Sample script
 
-[!code-powershell-interactive[main](~/../powershell_scripts/sql-database/managed-instance/create-and-configure-managed-instance.ps1 "Create managed instance")]
+:::code language="powershell" source="~/../azure_powershell_scripts/azure-sql/managed-instance/create-and-configure-managed-instance.ps1":::
+
 
 ## Clean up deployment
 
@@ -54,6 +55,7 @@ This script uses some of the following commands. For more information about used
 | [Get-AzRouteTable](/powershell/module/az.network/Get-AzRouteTable) | Gets route tables. |
 | [Set-AzRouteTable](/powershell/module/az.network/Set-AzRouteTable) | Sets the goal state for a route table. |
 | [New-AzSqlInstance](/powershell/module/az.sql/New-AzSqlInstance) | Creates a managed instance. |
+| [New-AzSqlInstanceDatabase](/powershell/module/az.sql/new-azsqlinstancedatabase) | Creates a database for your managed instance. 
 | [Remove-AzResourceGroup](/powershell/module/az.resources/remove-azresourcegroup) | Deletes a resource group, including all nested resources. |
 
 

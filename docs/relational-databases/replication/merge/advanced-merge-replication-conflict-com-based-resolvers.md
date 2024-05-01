@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: reference
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "COM-based resolvers [SQL Server replication]"

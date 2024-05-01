@@ -1,6 +1,6 @@
 ---
-title: Manage automatic connection for Azure Arc-enabled SQL Servers
-description: In this article, you learn how you can manage the automatic connection of SQL Server instance resources to Azure Arc on Azure Arc-enabled servers.
+title: Manage automatic connection
+description: In this article, you learn how you can manage the automatic connection of SQL Server instance resources to Azure Arc with SQL Server enabled by Azure Arc.
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
@@ -8,14 +8,14 @@ ms.date: 07/28/2023
 ms.topic: conceptual
 ---
 
-# Manage automatic connection for Azure Arc-enabled SQL Servers
+# Manage automatic connection for SQL Server enabled by Azure Arc
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-Azure Arc-enabled SQL Server is a cloud-native solution provided by Microsoft to simplify the management, protection, and governance of SQL Server instances running on Azure Arc-enabled servers. This solution streamlines the experience of connecting SQL Servers to Azure by automatically installing the Azure extension for SQL Server on all Arc-enabled servers that have SQL Server installed. For more information, visit [Azure Arc-enabled SQL Server](overview.md). All the SQL Server instance resources are automatically created in Azure, providing a centralized management platform for all your SQL Servers.
+[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is a cloud-native solution provided by Microsoft to simplify the management, protection, and governance of SQL Server instances running on Azure Arc-enabled servers. This solution streamlines the experience of connecting SQL Server instances to Azure by automatically installing the Azure extension for SQL Server on all Arc-enabled servers that have SQL Server installed. For more information, visit [[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]](overview.md). All the SQL Server instance resources are automatically created in Azure, providing a centralized management platform for all your SQL Server instances.
 
 > [!IMPORTANT]
-> Microsoft only automatically connects Arc servers with SQL Server installed on them when the Arc server resource is in [one of the regions supported by Arc-enabled SQL Server](prerequisites.md#supported-regions).
+> Microsoft only automatically connects Arc servers with SQL Server installed on them when the Arc server resource is in [one of the regions supported by [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]](prerequisites.md#supported-regions).
 
 This article details how the streamlined process of connecting SQL Server to Azure works.
 
@@ -57,7 +57,7 @@ Microsoft automatically installs Azure extension for SQL Server on each Arc-enab
 
 1. Create Arc-enabled SQL Server instance resource in Azure.
 
-To automatically connect Azure Arc-enabled SQL Server, use one of the provided methods that meet your requirements [Automatically connect your SQL Server to Azure Arc](automatically-connect.md).
+To automatically connect [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)], use one of the provided methods that meet your requirements [Automatically connect your SQL Server to Azure Arc](automatically-connect.md).
 
 Once the connecting is complete, you can benefit from the Azure features for SQL Server. For more information, visit [Manage SQL Server license and billing options](manage-configuration.md).
 
@@ -86,9 +86,9 @@ The value 'Configuration needed' indicates that the onboarding process didn't ha
 > [!NOTE]
 > Setting license type to **Paid** or **PAYG** will unlock to valuable management features provided to SA customers. 
 
-## How to opt out of automatic connecting
+## Opt out of automatic connecting
 
-If you want to opt out of the automatic installation of Azure extension for SQL Server, you can add the following tag and value to a subscription or resource group(s) or Arc Server resource(s).
+To opt out of the automatic installation of Azure extension for SQL Server, add the following tag and value to a subscription, resource group(s), or Arc Server resource(s).
 
 | Tag | Value |
 | --- | ----- |
@@ -102,11 +102,11 @@ Microsoft can run extension installations on an Arc-enabled server through the W
 
 Microsoft can call APIs to deploy Azure extension for SQL Server and automatically connect to Arc-enabled SQL Server.
 
-You can also install the extensions using the Azure portal, Azure Resource Manager (ARM) APIs, Azure Policy, ARM templates, the Azure CLI, or the Azure PowerShell module. [Deployment options for Azure Arc-enabled SQL Server](deployment-options.md)
+You can also install the extensions using the Azure portal, Azure Resource Manager (ARM) APIs, Azure Policy, ARM templates, the Azure CLI, or the Azure PowerShell module. [Deployment options for [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]](deployment-options.md)
 
-## Find SQL Servers connected to Arc, but missing Azure extension for SQL Server
+## Find SQL Server instances connected to Arc, but missing Azure extension for SQL Server
 
-Use the following Azure graph query to list the machine and subscription IDs that contain Arc Servers with SQL Server installed but missing Azure extension for SQL Servers.
+Use the following Azure graph query to list the machine and subscription IDs that contain Arc Servers with SQL Server installed but missing the Azure extension for SQL Server.
 
 ```msgraph-interactive
 resources
@@ -129,5 +129,5 @@ resources
 - [Configure SQL best practices assessment](assess.md)
 - [View SQL Server databases - Azure Arc](view-databases.md)
 - [Manage SQL Server license and billing options](manage-configuration.md)
-- [Azure Arc-enabled SQL Server and Databases activity logs](activity-logs.md)
+- [[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] and Databases activity logs](activity-logs.md)
 - [Data collected by Arc enabled SQL Server](data-collection.md)

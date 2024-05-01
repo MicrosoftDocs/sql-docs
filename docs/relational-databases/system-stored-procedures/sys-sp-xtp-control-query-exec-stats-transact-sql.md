@@ -87,7 +87,7 @@ EXEC sys.sp_xtp_control_query_exec_stats @database_id = 5,
 SELECT @c AS 'collection status';
 ```
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [In-Memory OLTP (In-Memory Optimization)](../in-memory-oltp/overview-and-usage-scenarios.md)

@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "merge replication conflict resolution [SQL Server replication], business logic handlers"
@@ -114,7 +114,7 @@ dev_langs:
   
  The following example registers a business logic handler assembly at the Distributor and changes an existing merge article to use this custom business logic.  
   
- [!code-sql[HowTo#sp_RegisterBLH_10](../../relational-databases/replication/codesnippet/tsql/implement-a-business-log_3.sql)]  
+ :::code language="sql" source="codesnippet/tsql/implement-a-business-log_3.sql":::
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
   

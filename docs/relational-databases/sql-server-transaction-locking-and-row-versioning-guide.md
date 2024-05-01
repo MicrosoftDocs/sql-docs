@@ -4,7 +4,7 @@ description: "Transaction locking and row versioning guide"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 10/04/2023
+ms.date: 03/06/2024
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -434,6 +434,8 @@ Update (U) locks can also be taken by queries that do not perform an UPDATE, whe
 - In a repeatable read or serializable transaction, the transaction reads data, acquiring a shared (S) lock on the resource, and then modifies the data, which requires lock conversion to an exclusive (X) lock. If two transactions acquire shared (S) locks on a resource and then attempt to update data concurrently, one transaction attempts the lock conversion to an exclusive (X) lock. The shared-to-exclusive lock conversion must wait because the exclusive lock for one transaction isn't compatible with the shared (S) lock of the other transaction; a lock wait occurs. The second transaction attempts to acquire an exclusive (X) lock for its update. Because both transactions are converting to exclusive (X) locks, and they are each waiting for the other transaction to release its shared (S) lock, a deadlock occurs.
 
 - In the default read committed isolation level, S locks are short duration, released as soon as they are used. The short duration locks are unlikely to lead to deadlocks.
+
+- If the UPDLOCK hint is used in a write, the transaction must have access to the latest version of the row. If the latest version is no longer visible, it is expected to be possible to receive `Msg 3960, Level 16, State 2 Snapshot isolation transaction aborted due to update conflict` when SNAPSHOT isolation is in use. For an example, see [Work with snapshot isolation](#a-work-with-snapshot-isolation).
 
 ### <a id="exclusive"></a> Exclusive locks
 
@@ -1812,6 +1814,9 @@ A long running transaction can cause serious problems for a database, as follows
 - If a server instance is shut down after an active transaction has performed many uncommitted modifications, the recovery phase of the subsequent restart can take much longer than the time specified by the **recovery interval** server configuration option or by the `ALTER DATABASE ... SET TARGET_RECOVERY_TIME` option. These options control the frequency of active and indirect checkpoints, respectively. For more information about the types of checkpoints, see [Database checkpoints (SQL Server)](logs/database-checkpoints-sql-server.md).
 
 - More importantly, although a waiting transaction might generate very little log, it holds up log truncation indefinitely, causing the transaction log to grow and possibly fill up. If the transaction log fills up, the database cannot perform anymore updates. For more information, see [SQL Server transaction log architecture and management guide](sql-server-transaction-log-architecture-and-management-guide.md), [Troubleshoot a full transaction log (SQL Server Error 9002)](logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md), and [The transaction log](logs/the-transaction-log-sql-server.md).
+
+> [!IMPORTANT]  
+> In Azure SQL Database, idle transactions (transactions that haven't written to the transaction log for six hours) are automatically terminated, to free up resources.
 
 #### <a id="discovering-long-running-transactions"></a> Discover long-running transactions
 

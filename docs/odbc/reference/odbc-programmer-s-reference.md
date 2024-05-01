@@ -100,7 +100,7 @@ The *ODBC Programmer's Reference* contains the following sections.
   
  For additional information about ODBC, a number of books are available, including:  
   
--   Geiger, Kyle: *Inside ODBC* (Microsoft Press®, 1995).  
+-   Geiger, Kyle: *Inside ODBC* (Microsoft Press, 1995).  
   
 -   Gryphon, Robert, Charpentier, Luc, Oelschlager, Jon, Shoemaker, Andrew, Cross, Jim, and Lilley, Albert W.: *Using ODBC 2* (Que, 1994).  
   

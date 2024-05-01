@@ -4,7 +4,7 @@ description: "Query hints specify that the indicated hints are used in the scope
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: wiassaf, randolphwest
-ms.date: 08/23/2023
+ms.date: 01/08/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -169,7 +169,7 @@ Specifies that all UNION operations are run by merging, hashing, or concatenatin
 
 Specifies all join operations are performed by LOOP JOIN, MERGE JOIN, or HASH JOIN in the whole query. If you specify more than one join hint, the optimizer selects the least expensive join strategy from the allowed ones.
 
-If you specify a join hint in the same query's FROM clause for a specific table pair, this join hint takes precedence in the joining of the two tables. The query hints, though, must still be honored. The join hint for the pair of tables may only restrict the selection of allowed join methods in the query hint. For more information, see [Join Hints (Transact-SQL)](../queries/hints-transact-sql-join.md).
+If you specify a join hint in the same query's FROM clause for a specific table pair, this join hint takes precedence in the joining of the two tables. The query hints, though, must still be honored. The join hint for the pair of tables might only restrict the selection of allowed join methods in the query hint. For more information, see [Join Hints (Transact-SQL)](../queries/hints-transact-sql-join.md).
 
 #### DISABLE_OPTIMIZED_PLAN_FORCING
 
@@ -207,7 +207,7 @@ Force or disable the pushdown of the computation of qualifying expressions in Ha
 
 #### { FORCE | DISABLE } SCALEOUTEXECUTION
 
-Force or disable scale out execution of PolyBase queries that are using external tables in SQL Server 2019 Big Data Clusters. This hint is only honored by a query using the master instance of a SQL Big Data Cluster. The scale out occurs across the compute pool of the big data cluster.
+Force or disable scale-out execution of PolyBase queries that are using external tables in [SQL Server 2019 Big Data Clusters](../../big-data-cluster/big-data-options.md). This hint is only honored by a query using the master instance of a SQL Big Data Cluster. The scale out occurs across the compute pool of the big data cluster.
 
 #### KEEP PLAN
 
@@ -261,7 +261,7 @@ Specifies the maximum number of recursions allowed for this query. *number* is a
 
 When the specified or default number for MAXRECURSION limit is reached during query execution, the query ends and an error returns.
 
-Because of this error, all effects of the statement are rolled back. If the statement is a SELECT statement, partial results or no results may be returned. Any partial results returned may not include all rows on recursion levels beyond the specified maximum recursion level.
+Because of this error, all effects of the statement are rolled back. If the statement is a SELECT statement, partial results or no results might be returned. Any partial results returned might not include all rows on recursion levels beyond the specified maximum recursion level.
 
 For more information, see [WITH common_table_expression (Transact-SQL)](../queries/with-common-table-expression-transact-sql.md).
 
@@ -269,7 +269,7 @@ For more information, see [WITH common_table_expression (Transact-SQL)](../queri
 
 **Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
-Prevents a spool operator from being added to query plans (except for the plans when spool is required to guarantee valid update semantics). The spool operator may reduce performance in some scenarios. For example, the spool uses `tempdb`, and `tempdb` contention can occur if there are many concurrent queries running with the spool operations.
+Prevents a spool operator from being added to query plans (except for the plans when spool is required to guarantee valid update semantics). The spool operator can reduce performance in some scenarios. For example, the spool uses `tempdb`, and `tempdb` contention can occur if there are many concurrent queries running with the spool operations.
 
 #### OPTIMIZE FOR ( *@variable_name* { UNKNOWN | = <literal_constant> } [ , *...n* ] )
 
@@ -277,7 +277,7 @@ Instructs the Query Optimizer to use a particular value for a local variable whe
 
 - *@variable_name*
 
-  The name of a local variable used in a query, to which a value may be assigned for use with the OPTIMIZE FOR query hint.
+  The name of a local variable used in a query, to which a value can be assigned for use with the OPTIMIZE FOR query hint.
 
 - *UNKNOWN*
 
@@ -322,9 +322,9 @@ RECOMPILE is a useful alternative to creating a stored procedure. RECOMPILE uses
 
 #### ROBUST PLAN
 
-Forces the Query Optimizer to try a plan that works for the maximum potential row size, possibly at the expense of performance. When the query is processed, intermediate tables and operators may have to store and process rows that are wider than any one of the input rows when the query is processed. The rows may be so wide that, sometimes, the particular operator can't process the row. If rows are that wide, the [!INCLUDE [ssDE](../../includes/ssde-md.md)] produces an error during query execution. By using ROBUST PLAN, you instruct the Query Optimizer not to consider any query plans that may run into this problem.
+Forces the Query Optimizer to try a plan that works for the maximum potential row size, possibly at the expense of performance. When the query is processed, intermediate tables and operators might have to store and process rows that are wider than any one of the input rows when the query is processed. The rows might be so wide that, sometimes, the particular operator can't process the row. If rows are that wide, the [!INCLUDE [ssDE](../../includes/ssde-md.md)] produces an error during query execution. By using ROBUST PLAN, you instruct the Query Optimizer not to consider any query plans that might run into this problem.
 
-If such a plan isn't possible, the Query Optimizer returns an error instead of deferring error detection to query execution. Rows may contain variable-length columns; the [!INCLUDE [ssDE](../../includes/ssde-md.md)] allows for rows to be defined that have a maximum potential size beyond the ability of the [!INCLUDE [ssDE](../../includes/ssde-md.md)] to process them. Generally, despite the maximum potential size, an application stores rows that have actual sizes within the limits that the [!INCLUDE [ssDE](../../includes/ssde-md.md)] can process. If the [!INCLUDE [ssDE](../../includes/ssde-md.md)] comes across a row that is too long, an execution error is returned.
+If such a plan isn't possible, the Query Optimizer returns an error instead of deferring error detection to query execution. Rows can contain variable-length columns; the [!INCLUDE [ssDE](../../includes/ssde-md.md)] allows for rows to be defined that have a maximum potential size beyond the ability of the [!INCLUDE [ssDE](../../includes/ssde-md.md)] to process them. Generally, despite the maximum potential size, an application stores rows that have actual sizes within the limits that the [!INCLUDE [ssDE](../../includes/ssde-md.md)] can process. If the [!INCLUDE [ssDE](../../includes/ssde-md.md)] comes across a row that is too long, an execution error is returned.
 
 #### <a id="use_hint"></a> USE HINT ( '*hint_name*' )
 
@@ -362,7 +362,7 @@ The following hint names are supported:
 
 - 'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'
 
-  Disables batch mode memory grant feedback. For more information, see [Batch mode memory grant feedback](../../relational-databases/performance/intelligent-query-processing-feedback.md#batch-mode-memory-grant-feedback).
+  Disables batch mode memory grant feedback. For more information, see [Batch mode memory grant feedback](../../relational-databases/performance/intelligent-query-processing-memory-grant-feedback.md#batch-mode-memory-grant-feedback).
 
   **Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
@@ -399,7 +399,7 @@ The following hint names are supported:
 
 - 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'
 
-  Disables row mode memory grant feedback. For more information, see [Row mode memory grant feedback](../../relational-databases/performance/intelligent-query-processing-feedback.md#row-mode-memory-grant-feedback).
+  Disables row mode memory grant feedback. For more information, see [Row mode memory grant feedback](../../relational-databases/performance/intelligent-query-processing-memory-grant-feedback.md#row-mode-memory-grant-feedback).
 
   **Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
@@ -449,9 +449,9 @@ The following hint names are supported:
   **Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] SP2 CU3 and [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)] CU11).
 
   > [!NOTE]  
-  > If you enable collecting the query_post_execution_showplan extended event, this will add standard profiling infrastructure to every query that is running on the server and therefore may affect overall server performance.  
-  > If you enable the collection of *query_thread_profile* extended event to use lightweight profiling infrastructure instead, this will result in much less performance overhead but will still affect overall server performance.  
-  > If you enable the query_plan_profile extended event, this will only enable the lightweight profiling infrastructure for a query that executed with the QUERY_PLAN_PROFILE and therefore will not affect other workloads on the server. Use this hint to profile a specific query without affecting other parts of the server workload.
+  > If you enable collecting the `query_post_execution_showplan` extended event, this will add standard profiling infrastructure to every query that is running on the server and therefore can affect overall server performance.  
+  > If you enable the collection of `query_thread_profile` extended event to use lightweight profiling infrastructure instead, this will result in much less performance overhead but will still affect overall server performance.  
+  > If you enable the `query_plan_profile` extended event, this will only enable the lightweight profiling infrastructure for a query that executed with the `query_plan_profile` and therefore will not affect other workloads on the server. Use this hint to profile a specific query without affecting other parts of the server workload.
   > To learn more about lightweight profiling, see [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).
 
 The list of all supported USE HINT names can be queried using the dynamic management view [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md).
@@ -460,13 +460,13 @@ The list of all supported USE HINT names can be queried using the dynamic manage
 > Hint names are case-insensitive.
 
 > [!IMPORTANT]  
-> Some USE HINT hints may conflict with trace flags enabled at the global or session level, or database scoped configuration settings. In this case, the query level hint (USE HINT) always takes precedence. If a USE HINT conflicts with another query hint, or a trace flag enabled at the query level (such as by QUERYTRACEON), [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] will generate an error when trying to execute the query.
+> Some USE HINT hints might conflict with trace flags enabled at the global or session level, or database scoped configuration settings. In this case, the query level hint (USE HINT) always takes precedence. If a USE HINT conflicts with another query hint, or a trace flag enabled at the query level (such as by QUERYTRACEON), [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] will generate an error when trying to execute the query.
 
 #### <a id="use-plan"></a> USE PLAN N'*<xml_plan>*'
 
 Forces the Query Optimizer to use an existing query plan for a query that is specified by '*<xml_plan>*'. USE PLAN can't be specified with INSERT, UPDATE, MERGE, or DELETE statements.
 
-The resulting execution plan forced by this feature will be the same or similar to the plan being forced. Because the resulting plan may not be identical to the plan specified by USE PLAN, the performance of the plans may vary. In rare cases, the performance difference may be significant and negative; in that case, the administrator must remove the forced plan.
+The resulting execution plan forced by this feature will be the same or similar to the plan being forced. Because the resulting plan might not be identical to the plan specified by USE PLAN, the performance of the plans can vary. In rare cases, the performance difference can be significant and negative; in that case, the administrator must remove the forced plan.
 
 #### TABLE HINT (*<exposed_object_name>* [ , <table_hint> [ [, ]*...n* ] ] )
 
@@ -480,16 +480,16 @@ Applies the specified table hint to the table or view that corresponds to *expos
 
 When you specify *exposed_object_name* without also specifying a table hint, any indexes you specify in the query as part of a table hint for the object are disregarded. The Query Optimizer then determines index usage. You can use this technique to eliminate the effect of an INDEX table hint when you can't modify the original query. See Example J.
 
-<table_hint> ::= {
+<table_hint>
 
-NOEXPAND [ , INDEX ( *<index_value>* [ ,...n ] ) | INDEX = ( *<index_value>* ) ] | INDEX ( *<index_value>* [ ,...n ] ) | INDEX = ( *<index_value>* ) | FORCESEEK [(*<index_value>*(*<index_column_name>* [,... ] ) ) ] | FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS = *<integer_value>* | TABLOCK | TABLOCKX | UPDLOCK | XLOCK }
+NOEXPAND [ , INDEX ( *<index_value>* [ ,...n ] ) | INDEX = ( *<index_value>* ) ] | INDEX ( *<index_value>* [ ,...n ] ) | INDEX = ( *<index_value>* ) | FORCESEEK [(*<index_value>*(*<index_column_name>* [,... ] ) ) ] | FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS = *<integer_value>* | TABLOCK | TABLOCKX | UPDLOCK | XLOCK
 
 Is the table hint to apply to the table or view that corresponds to *exposed_object_name* as a query hint. For a description of these hints, see [Table Hints (Transact-SQL)](../queries/hints-transact-sql-table.md).
 
 Table hints other than INDEX, FORCESCAN, and FORCESEEK are disallowed as query hints unless the query already has a WITH clause specifying the table hint. For more information, see the [Remarks section](#remarks).
 
 > [!CAUTION]  
-> Specifying FORCESEEK with parameters limits the number of plans that can be considered by the Query Optimizer more than when specifying FORCESEEK without parameters. This may cause a "Plan cannot be generated" error to occur in more cases. In a future release, internal modifications to the Query Optimizer may allow more plans to be considered.
+> Specifying FORCESEEK with parameters limits the number of plans that can be considered by the Query Optimizer more than when specifying FORCESEEK without parameters. This might cause a "Plan cannot be generated" error to occur in more cases.
 
 ## Remarks
 
@@ -801,9 +801,9 @@ EXEC sys.sp_query_store_set_hints @query_id= 39,
     @query_hints = N'OPTION(RECOMPILE, MAXDOP 1, USE HINT(''QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_110''))';
 ```
 
-## Next steps
+## Related content
 
 - [Hints (Transact-SQL)](hints-transact-sql.md)
 - [Query Store hints](../../relational-databases/performance/query-store-hints.md)
 - [Plan guides](../../relational-databases/performance/plan-guides.md)
-- [Trace Flags](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
+- [DBCC TRACEON - Trace Flags (Transact-SQL)](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)

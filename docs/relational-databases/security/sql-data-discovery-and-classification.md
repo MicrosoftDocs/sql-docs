@@ -42,7 +42,7 @@ The classification includes two metadata attributes:
 
    ![Screenshot showing the S S M S Object Explorer with Tasks > Data Discovery and Classification > Classify Data... selected.][0]
 
-3. The classification engine scans your database for columns containing potentially sensitive data and provides a list of **recommended column classifications**:
+3. The classification engine scans your database for columns (based on column names only) containing potentially sensitive data and provides a list of **recommended column classifications**:
 
     * To view the list of recommended column classifications, select the recommendations notification box at the top or the recommendations panel at the bottom of the window:
 
@@ -60,6 +60,9 @@ The classification includes two metadata attributes:
     * To apply the selected recommendations, select the **Save selected recommendations** button.
 
         ![Screenshot of the Accept selected recommendations button.][5]
+
+> [!NOTE]
+> Recommendation engine which does automatic data discovery and provides sensitive column recommendations is disabled when Microsoft Purview Information Protection policy mode is used.
 
 4. To display the classified columns, select appropriate **schema** and corresponding **table** from the drop-down, then select **Load Columns**.
 
@@ -90,15 +93,18 @@ The classification includes two metadata attributes:
 
     ![Screenshot showing the SQL Data Classification Report.][10]
 
-## Classify your database using Microsoft Information Protection Policy
+## Classify your database using Microsoft Purview Information Protection Policy
+> [!NOTE]
+> Microsoft Information Protection ( abbreviated as MIP) has been rebranded as Microsoft Purview Information Protection. Both the terms MIP and Microsoft Purview Information Protection are often used interchangeably in this document but both refer to the same concept.
 
-Microsoft Information Protection (sometimes abbreviated as MIP) labels provide a simple and uniform way for your users to classify sensitive data in SQL Server. MIP sensitivity labels are created and managed in the [Microsoft 365 compliance center](https://compliance.microsoft.com/). To learn how to create and publish MIP sensitive labels in Microsoft 365 compliance center, see the article, [Microsoft Information Protection sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
+Microsoft Purview Information Protection labels provide a simple and uniform way for your users to classify sensitive data in SQL Server. MIP sensitivity labels are created and managed in the [Microsoft 365 compliance center](https://compliance.microsoft.com/) [rebranded as **Microsoft Purview Compliance Portal**]. To learn how to create and publish MIP sensitive labels in Microsoft Purview Compliance Portal, see the article, [Microsoft Information Protection sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
 
-Now you can use SSMS to classify data at the source (SQL Server) using Microsoft Information Protection labels, which are used in Power BI, Office, and other Microsoft products. These sensitivity labels are applied at the column level in a database, same as the SQL Information Protection policy.
+Now you can use SSMS to classify data at the source (SQL Server) using Microsoft Purview Information Protection labels, which are used in Power BI, Office, and other Microsoft products. These sensitivity labels are applied at the column level in a database, same as the SQL Information Protection policy.
 
 Power BI datasets or reports that connect to sensitivity-labeled data in supported data sources can inherit those labels automatically, so that the data remains classified when brought into Power BI and exported to downstream applications. Availability of MIP policy in SSMS enables you to achieve an end-to-end enterprise-wide classification solution.
 
-### Steps to configure MIP
+
+### Steps to configure Microsoft Purview Information Protection policy
 
 1. In SQL Server Management Studio (SSMS), connect to the SQL Server.
 1. In the SSMS Object Explorer, select the database that you would like to classify and select **Tasks** > **Data Discovery and Classification** > **Set Microsoft Information Protection Policy**
@@ -123,11 +129,11 @@ Power BI datasets or reports that connect to sensitivity-labeled data in support
 
    Automatic data discovery and recommendation is disabled while in Microsoft Information Protection Policy mode. It's currently available only in SQL Information Protection Policy mode.
 
-1. To reset the Information Protection Policy to default or SQL Information Protection, go to the SSMS **Object Explorer**, right-click on the database and choose **Tasks** > **Data Discovery and Classification** > **Reset Information Protection Policy to Default**. This will apply the default or SQL Information Protection policy and you can classify the data using SQL sensitivity labels instead of MIP labels. 
+To reset the Information Protection Policy to default or SQL Information Protection, go to the SSMS **Object Explorer**, right-click on the database and choose **Tasks** > **Data Discovery and Classification** > **Reset Information Protection Policy to Default**. This will apply the default or SQL Information Protection policy and you can classify the data using SQL sensitivity labels instead of MIP labels. 
 
    :::image type="content" source="media/sql-data-discovery-and-classification/reset-information-protection-policy-to-default.png" alt-text="Screenshot of resetting Information Protection Policy in S S M S":::
 
-1. To enable Information Protection Policy from a custom JSON file, go to the SSMS **Object Explorer**, right-click on the database and choose **Tasks** > **Data Discovery and Classification** > **Set Information Protection Policy File**.
+To enable Information Protection Policy from a custom JSON file, go to the SSMS **Object Explorer**, right-click on the database and choose **Tasks** > **Data Discovery and Classification** > **Set Information Protection Policy File**.
 
 > [!NOTE]
 > A warning icon indicates that the column was previously classified using a different Information Protection Policy than the currently selected policy mode. For example, if you are currently in the Microsoft Information Protection mode, and one of the columns was previously classified using SQL Information Protection Policy or Information Protection Policy from a custom policy file, you will see a warning icon against that column. You can decide whether you want to change the classification of the column to any of the sensitivity labels available in current policy mode or leave it as it is.
@@ -144,7 +150,7 @@ You can manage the Information Protection Policy using [SSMS 18.4](../../ssms/do
 
    The following menu options allow you to manage the Information Protection Policy:
 
-* **Set Microsoft Information Protection Policy**: sets the Information Protection Policy to Microsoft Information Protection Policy.
+* **Set Microsoft Information Protection Policy**: sets the Information Protection Policy to Microsoft Purview Information Protection Policy.
 
 * **Set Information Protection Policy File**: uses the SQL Information Protection Policy as defined in the selected JSON file. (See the default [Information Protection Policy File](https://github.com/Azure-Samples/sql-data-classification/blob/main/sql_information_protection_default.json))
 

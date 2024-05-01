@@ -61,7 +61,7 @@ helpviewer_keywords:
  [Use an Expression in a Data Flow Component](/previous-versions/sql/sql-server-2016/ms141007(v=sql.130))  
   
 ## Related Content  
- Technical article, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
+- [SSIS Expression Examples](../../integration-services/expressions/use-property-expressions-in-packages.md)
   
 ## See Also  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  

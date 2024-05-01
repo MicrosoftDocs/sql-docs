@@ -1,7 +1,7 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/11/2023
+ms.date: 11/29/2023
 ms.service: sql
 ms.topic: include
 ms.custom:
@@ -12,6 +12,12 @@ ms.custom:
 Use the following steps to install the **mssql-tools18** on Red Hat Enterprise Linux.
 
 1. Download the Microsoft Red Hat repository configuration file.
+
+   - For Red Hat 9, use the following command:
+
+     ```bash
+     curl https://packages.microsoft.com/config/rhel/9/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
+     ```
 
    - For Red Hat 8, use the following command:
 

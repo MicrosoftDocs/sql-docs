@@ -1,10 +1,10 @@
 ---
 title: "Editions and supported features of SQL Server 2017 - Linux"
-description: This article describes features supported by the various editions of SQL Server 2017 on Linux. It helps you choose from available editions and components.
+description: This article describes editions, features, and components supported by the various editions of SQL Server 2017 on Linux.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: vanto
-ms.date: 11/16/2023
+ms.reviewer: amitkh, vanto
+ms.date: 01/08/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -32,20 +32,21 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This article provides details of features supported by the various editions of SQL Server 2017 on Linux. For editions and supported features of SQL Server on Windows, see [Editions and supported features of SQL Server 2017](../sql-server/editions-and-components-of-sql-server-2017.md).
+This article provides details of features supported by the various editions of [!INCLUDE [sssql17](../includes/sssql17-md.md)] on Linux.
 
-Installation requirements vary based on your application needs. The different editions of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)].
+For editions and supported features of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Windows, see [Editions and supported features of SQL Server 2017](../sql-server/editions-and-components-of-sql-server-2017.md). For more information on what's new in [!INCLUDE [sssql17](../includes/sssql17-md.md)] on Windows, see [What's new in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 
-For the latest release notes and what's new information, see the following:
+This article provides details of features supported by the various editions of [!INCLUDE [sssql17](../includes/sssql17-md.md)] on Linux. For more information on what's new in [!INCLUDE [sssql17](../includes/sssql17-md.md)] on Windows, see [What's new in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 
-- [Release notes for SQL Server 2017 on Linux](sql-server-linux-release-notes-2017.md)
-- [What's new for SQL Server 2017 on Linux](sql-server-linux-whats-new.md)
+Installation requirements vary based on your application needs. The different editions of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)].
 
-For a list of SQL Server features not available on Linux, see [Unsupported features and services](#Unsupported).
+For the latest release notes and what's new information, see [Release notes for SQL Server 2017 on Linux](sql-server-linux-release-notes-2017.md).
 
-### Try SQL Server
+For a list of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] features not available on Linux, see [Unsupported features and services](#unsupported-features-and-services).
 
-[Download SQL Server 2017](https://www.microsoft.com/sql-server/sql-server-2017)
+## Try SQL Server
+
+- [Download SQL Server 2017](https://www.microsoft.com/sql-server/sql-server-2017)
 
 ## SQL Server editions
 
@@ -53,36 +54,36 @@ For a list of SQL Server features not available on Linux, see [Unsupported featu
 
 ## Use SQL Server with client/server applications
 
-You can install just the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] client components on a computer that is running client/server applications that connect directly to an instance of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)]. A client components installation is also a good option if you administer an instance of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] on a database server, or if you plan to develop [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] applications.
+You can install just the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] client components on a computer that is running client/server applications that connect directly to an instance of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. A client components installation is also a good option if you administer an instance of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on a database server, or if you plan to develop [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] applications.
 
 ## SQL Server components
 
-SQL Server 2017 on Linux supports the SQL Server database engine. The following table describes the features in the database engine.
+[!INCLUDE [sssql17](../includes/sssql17-md.md)] on Linux supports the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)]. The following table describes the features in the [!INCLUDE [ssDE](../includes/ssde-md.md)].
 
 | Server components | Description |
 | --- | --- |
-| [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] | [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] includes the [!INCLUDE [ssDE](../includes/ssde-md.md)], the core service for storing, processing, and securing data, replication, full-text search, tools for managing relational and XML data, and in database analytics integration. |
+| [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] | [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] includes the [!INCLUDE [ssDE](../includes/ssde-md.md)], the core service for storing, processing, and securing data, replication, Full-Text Search, tools for managing relational and XML data, and in database analytics integration. |
 
-**Developer, Enterprise Core, and  Evaluation editions**  
+**Developer, Enterprise Core, and Evaluation editions**  
 For features supported by Developer, Enterprise Core, and Evaluation editions, see features listed for the SQL Server Enterprise edition in the following tables.
 
 The Developer edition continues to support only one client for [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md).
 
-## <a id="Cross-BoxScaleLimits"></a> Scale limits
+## Scale limits
 
 | Feature | Enterprise | Standard | Web | Express |
 | --- | :---: | :---: | :---: | :---: |
 | Maximum compute capacity used by a single instance - [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] <sup>1</sup> | Operating system maximum | Limited to lesser of 4 sockets or 24 cores | Limited to lesser of 4 sockets or 16 cores | Limited to lesser of 1 socket or 4 cores |
 | Maximum compute capacity used by a single instance - [!INCLUDE [ssASnoversion](../includes/ssasnoversion-md.md)] or [!INCLUDE [ssRSnoversion](../includes/ssrsnoversion-md.md)] | Operating system maximum | Limited to lesser of 4 sockets or 24 cores | Limited to lesser of 4 sockets or 16 cores | Limited to lesser of 1 socket or 4 cores |
-| Maximum memory for buffer pool per instance of [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] | Operating System Maximum | 128 GB | 64 GB | 1410 MB |
-| Maximum capacity for [Buffer pool extension](../database-engine/configure-windows/buffer-pool-extension.md) per instance of [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] | 32 * (max server memory configuration) | 4 * (max server memory configuration) | N/A | N/A |
+| Maximum memory for buffer pool per instance of [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] | Operating system maximum | 128 GB | 64 GB | 1,410 MB |
+| Maximum capacity for [buffer pool extension](../database-engine/configure-windows/buffer-pool-extension.md) per instance of [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] | 32 * (max server memory configuration) | 4 * (max server memory configuration) | N/A | N/A |
 | Maximum memory for Columnstore segment cache per instance of [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] | Unlimited memory | 32 GB | 16 GB | 352 MB |
 | Maximum memory-optimized data size per database in [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] | Unlimited memory | 32 GB | 16 GB | 352 MB |
 | Maximum relational database size | 524 PB | 524 PB | 524 PB | 10 GB |
 
 <sup>1</sup> Enterprise edition with Server + Client Access License (CAL) based licensing (not available for new agreements) is limited to a maximum of 20 cores per SQL Server instance. There are no limits under the Core-based Server Licensing model. For more information, see [Compute capacity limits by edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).
 
-## <a id="RDBMSHA"></a> RDBMS high availability
+## RDBMS high availability
 
 | Feature | Enterprise | Standard | Web | Express |
 | --- | :---: | :---: | :---: | :---: |
@@ -110,7 +111,7 @@ The Developer edition continues to support only one client for [SQL Server Distr
 
 <sup>3</sup> Standard edition supports basic availability groups. A basic availability group supports two replicas, with one database. For more information about basic availability groups, see [Basic Always On availability groups for a single database](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).
 
-## <a id="RDBMSSP"></a> RDBMS scalability and performance
+## RDBMS scalability and performance
 
 | Feature | Enterprise | Standard | Web | Express |
 | --- | :---: | :---: | :---: | :---: |
@@ -132,9 +133,9 @@ The Developer edition continues to support only one client for [SQL Server Distr
 | Interleaved Execution for Multi-Statement Table Valued Functions | Yes | Yes | Yes | Yes |
 | Bulk insert improvements | Yes | Yes | Yes | Yes |
 
-<sup>1</sup> In-Memory OLTP data size and Columnstore segment cache are limited to the amount of memory specified by edition in the Scale Limits section. The max degree of parallelism is limited. The degree of process parallelism (DOP) for an index build is limited to 2 DOP for the Standard edition and 1 DOP for the Web and Express editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
+<sup>1</sup> In-Memory OLTP data size and columnstore segment cache are limited to the amount of memory specified by edition in the [Scale limits](#scale-limits) section. The max degree of parallelism is limited. The degree of process parallelism (DOP) for an index build is limited to 2 DOP for the Standard edition and 1 DOP for the Web and Express editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
 
-## <a id="RDBMSS"></a> RDBMS security
+## RDBMS security
 
 | Feature | Enterprise | Standard | Web | Express |
 | --- | :---: | :---: | :---: | :---: |
@@ -143,16 +144,16 @@ The Developer edition continues to support only one client for [SQL Server Distr
 | Dynamic data masking | Yes | Yes | Yes | Yes |
 | Basic auditing | Yes | Yes | Yes | Yes |
 | Fine-grained auditing | Yes | Yes | Yes | Yes |
-| Transparent database encryption | Yes | No | No | No |
+| Transparent database encryption (TDE) | Yes | No | No | No |
 | User-defined roles | Yes | Yes | Yes | Yes |
 | Contained databases | Yes | Yes | Yes | Yes |
 | Encryption for backups | Yes | Yes | No | No |
 
-## <a id="RDBMSM"></a> RDBMS manageability
+## RDBMS manageability
 
 | Feature | Enterprise | Standard | Web | Express |
 | --- | :---: | :---: | :---: | :---: |
-| Dedicated admin connection | Yes | Yes | Yes | Yes. <sup>1</sup> |
+| Dedicated admin connection | Yes | Yes | Yes | Yes <sup>1</sup> |
 | PowerShell scripting support | Yes | Yes | Yes | Yes |
 | Support for data-tier application component operations - extract, deploy, upgrade, delete | Yes | Yes | Yes | Yes |
 | Policy automation (check on schedule and change) | Yes | Yes | Yes | No |
@@ -167,9 +168,9 @@ The Developer edition continues to support only one client for [SQL Server Distr
 | Parallel consistency check | Yes | No | No | No |
 | SQL Server Utility Control Point | Yes | No | No | No |
 
-<sup>1</sup> With trace flag
+<sup>1</sup> With trace flag.
 
-## <a id="Programmability"></a> Programmability
+## Programmability
 
 | Feature | Enterprise | Standard | Web | Express |
 | --- | :---: | :---: | :---: | :---: |
@@ -179,7 +180,7 @@ The Developer edition continues to support only one client for [SQL Server Distr
 | Native XML support | Yes | Yes | Yes | Yes |
 | XML indexing | Yes | Yes | Yes | Yes |
 | MERGE and UPSERT capabilities | Yes | Yes | Yes | Yes |
-| Date and Time datatypes | Yes | Yes | Yes | Yes |
+| Date and time data types | Yes | Yes | Yes | Yes |
 | Internationalization support | Yes | Yes | Yes | Yes |
 | Full-text and semantic search | Yes | Yes | Yes | Yes |
 | Specification of language in query | Yes | Yes | Yes | Yes |
@@ -187,58 +188,56 @@ The Developer edition continues to support only one client for [SQL Server Distr
 | Transact-SQL endpoints | Yes | Yes | Yes | No |
 | Graph | Yes | Yes | Yes | Yes |
 
-<sup>1</sup> Client only
+<sup>1</sup> Client only.
 
-## <a id="IS"></a> Integration Services
+## Integration Services
 
 For info about the Integration Services (SSIS) features supported by the editions of [!INCLUDE [ssNoVersion_md](../includes/ssnoversion-md.md)], see [Integration Services features supported by the editions of SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
 
-## <a id="SLS"></a> Spatial and location services
+## Spatial and location services
 
-| Feature | Enterprise | Standard | Web | Express |
+| Feature name | Enterprise | Standard | Web | Express |
 | --- | :---: | :---: | :---: | :---: |
 | Spatial indexes | Yes | Yes | Yes | Yes |
-| Planar and geodetic datatypes | Yes | Yes | Yes | Yes |
+| Planar and geodetic data types | Yes | Yes | Yes | Yes |
 | Advanced spatial libraries | Yes | Yes | Yes | Yes |
 | Import/export of industry-standard spatial data formats | Yes | Yes | Yes | Yes |
 
-## <a id="Unsupported"></a> Unsupported features and services
+## Unsupported features and services
 
-The following features and services aren't available for SQL Server 2017 on Linux. The support of these features will be increasingly enabled over time.
+The following features and services aren't available for [!INCLUDE [sssql17](../includes/sssql17-md.md)] on Linux. The support of these features will be increasingly enabled over time.
 
-| Area | Unsupported feature or service |
-| --- | --- |
-| **Database engine** | Merge replication |
-| | Stretch DB |
-| | PolyBase |
-| | Distributed query with 3rd-party connections |
-| | Linked Servers to data sources other than [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] |
-| | System extended stored procedures (XP_CMDSHELL, etc.) |
-| | FileTable, FILESTREAM |
-| | CLR assemblies with the EXTERNAL_ACCESS or UNSAFE permission set |
-| | Buffer Pool Extension |
-| | Backup to URL - page blob <sup>1</sup> |
-| **SQL Server Agent** | Subsystems: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
-| | Alerts |
+| Area | Unsupported feature or service | Comments |
+| --- | --- | --- |
+| **Database engine** | Merge replication | |
+| | Stretch DB | This feature is [deprecated](../sql-server/stretch-database/stretch-database.md) in [!INCLUDE [sssql22](../includes/sssql22-md.md)], and isn't supported. |
+| | PolyBase | Supported on [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] and later versions. |
+| | Distributed query with third-party connections | |
+| | Linked servers to data sources other than [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] | [Install PolyBase on Linux](../relational-databases/polybase/polybase-linux-setup.md) to query other data sources from [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], using Transact-SQL syntax. For scenarios where PolyBase isn't helpful, submit feedback to the [Microsoft Azure forum](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0). |
+| | System extended stored procedures (`xp_cmdshell`, etc.) | This feature is [deprecated](../relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md). If you have specific requirements, submit feedback to the [Microsoft Azure forum](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0). |
+| | FileTable, FILESTREAM | If you have specific requirements, submit feedback to the [Microsoft Azure forum](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0). |
+| | CLR assemblies with the `EXTERNAL_ACCESS` or `UNSAFE` permission set | |
+| | Buffer Pool Extension | |
+| | Backup to URL - page blob | Backup to URL is supported for block blobs, using the [Shared Access Signature](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS). |
+| **SQL Server Agent** | Subsystems: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS | |
+| | Alerts | |
 | | Log Reader Agent |
-| | Managed Backup |
-| **High Availability** | Database mirroring |
-| **Security** | Extensible Key Management |
-| | Active Directory Authentication for Linked Servers |
-| | Active Directory Authentication for Availability Group (AG) Endpoints |
-| **Services** | SQL Server Browser |
-| | SQL Server R services |
-| | StreamInsight |
-| | Analysis Services |
-| | Reporting Services |
-| | Data Quality Services |
-| | Master Data Services |
-
-<sup>1</sup> Backup to URL is supported for block blobs, using the [Shared Access Signature](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS).
+| | Managed Backup | |
+| **High Availability** | Database mirroring | This feature is [deprecated](../database-engine/database-mirroring/database-mirroring-sql-server.md). Use Always On availability groups instead. |
+| **Security** | Extensible Key Management (EKM) | |
+| | Windows integrated authentication for linked servers | |
+| | Windows integrated authentication for availability group (AG) endpoints | Create and use certificate based endpoint authentication for availability groups. For more information, see [Configure SQL Server Always On Availability Group for high availability on Linux](sql-server-linux-availability-group-configure-ha.md). |
+| **Services** | SQL Server Browser | |
+| | SQL Server R services | SQL Server R is supported within [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], but [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] R services as a separate package isn't supported.<br /><br />You can install Machine Learning Services on Linux for [SQL Server 2019](sql-server-linux-setup-machine-learning.md) and [SQL Server 2022](sql-server-linux-setup-machine-learning-sql-2022.md). |
+| | Analysis Services | |
+| | Reporting Services | On [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] and later versions, [configure Power BI Report Server catalog databases for SQL Server on Linux](sql-server-linux-configure-power-bi-report-server-catalog.md). Run [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Reporting Services (SSRS) on Windows, and host the catalog databases for SSRS on [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux deployments. |
+| | Data Quality Services | |
+| | Master Data Services | |
 
 [!INCLUDE [editions-supported-features-windows](../includes/editions-supported-features-windows.md)]
 
 ## Related content
 
+- [What's new in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 - [SQL Server installation guide](../database-engine/install-windows/install-sql-server.md)
-- [Product Specifications for SQL Server](../sql-server/index.yml)
+- [SQL Server technical documentation](../sql-server/index.yml)

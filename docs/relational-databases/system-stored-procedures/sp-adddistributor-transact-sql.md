@@ -72,7 +72,7 @@ The password of the **distributor_admin** login. *@password* is **sysname**, wit
 
 ## Examples
 
-[!code-sql [HowTo#AddDistPub](../replication/codesnippet/tsql/sp-adddistributor-transa_1.sql)]
+:::code language="sql" source="../replication/codesnippet/tsql/sp-adddistributor-transa_1.sql":::
 
 ## Permissions
 

@@ -7,6 +7,7 @@ ms.reviewer: mikeray
 ms.date: "10/30/2019"
 ms.service: sql
 ms.subservice: configuration
+ms.custom: linux-related-content
 ms.topic: conceptual
 helpviewer_keywords:
   - "PMEM"

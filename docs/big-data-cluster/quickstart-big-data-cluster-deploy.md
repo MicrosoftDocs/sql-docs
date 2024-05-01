@@ -5,23 +5,24 @@ description: Learn how to use a deployment script to deploy SQL Server Big Data 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
-ms.date: 04/18/2022
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: big-data-cluster
-ms.topic: conceptual
-ms.custom: intro-deployment
+ms.topic: quickstart
+ms.custom:
+  - intro-deployment
 ---
 
 # Use a python script to deploy a SQL Server big data cluster on Azure Kubernetes Service (AKS)
 
-[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE [SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+[!INCLUDE [big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
-In this tutorial, you use a sample python deployment script to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] to Azure Kubernetes Service (AKS).
+In this tutorial, you use a sample python deployment script to deploy [!INCLUDE [big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] to Azure Kubernetes Service (AKS).
 
 > [!TIP]
-> AKS is only one option for hosting Kubernetes for your big data cluster. To learn about other deployment options as well as how to customize deployment options, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md).
+> AKS is only one option for hosting Kubernetes for your big data cluster. To learn about other deployment options as well as how to customize deployment options, see [How to deploy [!INCLUDE [big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md).
 
 The default big data cluster deployment used here consists of a SQL Master instance, one compute pool instance, two data pool instances, and two storage pool instances. Data is persisted using Kubernetes persistent volumes that use the AKS default storage classes. The default configuration used in this tutorial is suitable for dev/test environments.
 
@@ -80,7 +81,7 @@ Use the following steps to run the deployment script in a Windows PowerShell or 
    | **Username** | Username for the controller user (default: **admin**). |
 
    > [!IMPORTANT]
-   > The default **Standard_D16s_v3** machine size may not be available in every Azure region. If you do select a different machine size, make sure that the total number of disks that can be attached across the nodes in the cluster is greater than or equal to 24. Each persistent volume claim in the cluster requires an attached disk. Currently, big data cluster requires 24 persistent volume claims.
+   > The default **Standard_D16s_v3** machine size might not be available in every Azure region. If you do select a different machine size, make sure that the total number of disks that can be attached across the nodes in the cluster is greater than or equal to 24. Each persistent volume claim in the cluster requires an attached disk. Currently, big data cluster requires 24 persistent volume claims.
    >
    >Run the following command to identify the available VM types.
    >
@@ -112,7 +113,7 @@ After 10 to 20 minutes, you should be notified that the controller pod is runnin
 ```
 
 > [!IMPORTANT]
-> The entire deployment can take a long time due to the time required to download the container images for the components of the big data cluster. However, it should not take several hours. If you are experiencing problems with your deployment, see [Monitoring and troubleshoot [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](cluster-troubleshooting-commands.md).
+> The entire deployment can take a long time due to the time required to download the container images for the components of the big data cluster. However, it should not take several hours. If you are experiencing problems with your deployment, see [Monitoring and troubleshoot [!INCLUDE [big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](cluster-troubleshooting-commands.md).
 
 ## Inspect the cluster
 
@@ -150,7 +151,7 @@ Open a new command window to use **kubectl** during the deployment process.
    ```
 
 > [!TIP]
-> For more details about how to monitor and troubleshoot a deployment, see [Monitoring and troubleshoot [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](cluster-troubleshooting-commands.md).
+> For more details about how to monitor and troubleshoot a deployment, see [Monitoring and troubleshoot [!INCLUDE [big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](cluster-troubleshooting-commands.md).
 
 ## Connect to the cluster
 
@@ -165,7 +166,7 @@ The SQL Server big data cluster is now deployed on AKS. You can now use Azure Da
 
 ## Clean up
 
-If you are testing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Azure, you should delete the AKS cluster when finished to avoid unexpected charges. Do not remove the cluster if you intend to continue using it.
+If you are testing [!INCLUDE [big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Azure, you should delete the AKS cluster when finished to avoid unexpected charges. Do not remove the cluster if you intend to continue using it.
 
 > [!WARNING]
 > The following steps tears down the AKS cluster which removes the SQL Server big data cluster as well. If you have any databases or HDFS data that you want to keep, back that data up before deleting the cluster.
@@ -176,11 +177,7 @@ Run the following Azure CLI command to remove the big data cluster and the AKS s
 az group delete -n <resource group name>
 ```
 
-## Next steps
+## Related content
 
-The deployment script configured Azure Kubernetes Service and also deployed a SQL Server 2019 big data cluster. You can also choose to customize future deployments through manual installations. To learn more about how big data clusters are deployed as well as how to customize deployments, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md).
-
-Now that the SQL Server big data cluster is deployed, you can load sample data and explore the tutorials:
-
-> [!div class="nextstepaction"]
-> [Tutorial: Load sample data into a SQL Server 2019 big data cluster](tutorial-load-sample-data.md)
+- [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md)
+- [Tutorial: Load sample data into a SQL Server big data cluster](tutorial-load-sample-data.md)

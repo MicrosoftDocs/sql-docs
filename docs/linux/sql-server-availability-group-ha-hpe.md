@@ -4,7 +4,7 @@ description: Use HPE Serviceguard as the cluster manager to achieve high availab
 author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: vanto, randolphwest
-ms.date: 05/03/2023
+ms.date: 03/05/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: tutorial
@@ -72,6 +72,9 @@ In this step, install HPE Serviceguard for Linux on all three VMs. The following
 | 1 | HPE Serviceguard cluster nodes | Primary replica |
 | 1 or more | HPE Serviceguard cluster node | Secondary replica |
 | 1 | HPE Serviceguard quorum server | Configuration only replica |
+
+> [!NOTE]  
+> Refer to this video from HPE, which describes [how to install and configure an HPE Serviceguard cluster via the UI](https://support.hpe.com/hpesc/public/videoDisplay?videoId=vtc00040206en_us).
 
 To install Serviceguard, use the `cminstaller` method. Specific instructions are available in the following links:
 
@@ -311,7 +314,7 @@ For Deployments in Azure Cloud, HPE Serviceguard for Linux requires a load balan
    | **Type** | Internal |
    | **SKU** | Basic or Standard |
    | **Virtual network** | VNet used for the VM replicas |
-   | **Subnet** | Subnet in which SQL Servers are hosted |
+   | **Subnet** | Subnet in which SQL Server instances are hosted |
    | **IP Address Assignment** | Static |
    | **Private IP address** | Create a private IP within subnet |
    | **Subscription** | Choose the concerned subscription |

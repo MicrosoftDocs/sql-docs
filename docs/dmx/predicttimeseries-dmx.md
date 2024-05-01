@@ -1,9 +1,9 @@
 ---
 title: "PredictTimeSeries (DMX)"
 description: "PredictTimeSeries (DMX)"
-author: minewiskan
-ms.author: owend
-ms.reviewer: owend
+author: kfollis
+ms.author: kfollis
+ms.reviewer: kfollis
 ms.date: 02/17/2022
 ms.service: sql
 ms.subservice: analysis-services
@@ -32,7 +32,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ```  
   
 ## Arguments  
- *\<table column reference>*, *\<scalar column referenc>*  
+ *\<table column reference>*, *\<scalar column reference>*  
  Specifies the name of the column to predict. The column can contain either scalar or tabular data.  
   
  *n*  

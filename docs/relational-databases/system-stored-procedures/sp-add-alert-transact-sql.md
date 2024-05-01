@@ -4,7 +4,7 @@ description: "sp_add_alert (Transact-SQL)"
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 11/02/2023
+ms.date: 03/20/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -27,27 +27,27 @@ Creates an alert.
 ## Syntax
 
 ```syntaxsql
-sp_add_alert [ @name = ] 'name'
+sp_add_alert [ @name = ] N'name'
      [ , [ @message_id = ] message_id ]
      [ , [ @severity = ] severity ]
      [ , [ @enabled = ] enabled ]
      [ , [ @delay_between_responses = ] delay_between_responses ]
      [ , [ @notification_message = ] N'notification_message' ]
      [ , [ @include_event_description_in = ] include_event_description_in ]
-     [ , [ @database_name = ] 'database' ]
-     [ , [ @event_description_keyword = ] N'event_description_keyword_pattern' ]
-     [ , { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ]
+     [ , [ @database_name = ] N'database_name' ]
+     [ , [ @event_description_keyword = ] N'event_description_keyword' ]
+     [ , { [ @job_id = ] job_id | [ @job_name = ] N'job_name' } ]
      [ , [ @raise_snmp_trap = ] raise_snmp_trap ]
      [ , [ @performance_condition = ] N'performance_condition' ]
-     [ , [ @category_name = ] 'category' ]
-     [ , [ @wmi_namespace = ] 'wmi_namespace' ]
+     [ , [ @category_name = ] N'category_name' ]
+     [ , [ @wmi_namespace = ] N'wmi_namespace' ]
      [ , [ @wmi_query = ] N'wmi_query' ]
 [ ; ]
 ```
 
 ## Arguments
 
-#### [ @name = ] '*name*'
+#### [ @name = ] N'*name*'
 
 The name of the alert. The name appears in the e-mail or pager message sent in response to the alert. It must be unique and can contain the percent (`%`) character. *@name* is **sysname**, with no default.
 
@@ -59,7 +59,7 @@ Only `sysmessages` errors written to the Microsoft Windows application log can c
 
 #### [ @severity = ] *severity*
 
-The severity level (from `1` through `25`) that defines the alert. Any [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] message stored in the `sysmessages` table sent to the [!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows application log with the indicated severity causes the alert to be sent. *@severity* is **int**, with a default of `0`. If *@message_id* is used to define the alert, *@severity* must be `0`.
+The severity level (from `1` through `25`) that defines the alert. *@severity* is **int**, with a default of `0`. Any [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] message stored in the `sysmessages` table sent to the [!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows application log with the indicated severity causes the alert to be sent. If *@message_id* is used to define the alert, *@severity* must be `0`.
 
 #### [ @enabled = ] *enabled*
 
@@ -80,7 +80,7 @@ An optional additional message sent to the operator as part of the e-mail, `net 
 
 #### [ @include_event_description_in = ] *include_event_description_in*
 
-Whether the description of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] error should be included as part of the notification message. *include_event_description_in* is **tinyint**, with a default of `5` (e-mail and `net send`), and can have one or more of these values combined with an **OR** logical operator.
+Whether the description of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] error should be included as part of the notification message. *@include_event_description_in* is **tinyint**, with a default of `5` (e-mail and `net send`), and can have one or more of these values combined with an `OR` logical operator.
 
 > [!IMPORTANT]  
 > The Pager and `net send` options will be removed from [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using these features in new development work, and plan to modify applications that currently use these features.
@@ -92,13 +92,16 @@ Whether the description of the [!INCLUDE [ssNoVersion](../../includes/ssnoversio
 | `2` | Pager |
 | `4` | `net send` |
 
-#### [ @database_name = ] '*database*'
+#### [ @database_name = ] N'*database_name*'
 
-The database in which the error must occur for the alert to fire. If *@database_name* isn't supplied, the alert fires regardless of where the error occurred. *database* is **sysname**. Names that are enclosed in brackets (`[ ]`) aren't allowed. The default value is `NULL`.
+The database in which the error must occur for the alert to fire. If *@database_name* isn't supplied, the alert fires regardless of where the error occurred. *@database_name* is **sysname**, with a default of `NULL`. Names that are enclosed in brackets (`[ ]`) aren't allowed.
 
-#### [ @event_description_keyword = ] N'*event_description_keyword_pattern*'
+#### [ @event_description_keyword = ] N'*event_description_keyword*'
 
-The sequence of characters that the description of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] error must be like. [!INCLUDE [tsql](../../includes/tsql-md.md)] LIKE expression pattern-matching characters can be used. *@event_description_keyword* is **nvarchar(100)**, with a default of `NULL`. This parameter is useful for filtering object names (for example, `%customer_table%`).
+A sequence of characters that must be found in the description of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] error in the error message log. *@event_description_keyword* is **nvarchar(100)**, with a default of `NULL`. This parameter is useful for filtering object names (for example, `customer_table`).
+
+> [!NOTE]  
+> [!INCLUDE [tsql](../../includes/tsql-md.md)] `LIKE` expression pattern-matching characters can't be used.
 
 #### [ @job_id = ] *job_id*
 
@@ -106,7 +109,7 @@ The job identification number of the job to run in response to this alert. *@job
 
 Either *@job_id* or *@job_name* must be specified, but both can't be specified.
 
-#### [ @job_name = ] '*job_name*'
+#### [ @job_name = ] N'*job_name*'
 
 The name of the job to be executed in response to this alert. *@job_name* is **sysname**, with a default of `NULL`.
 
@@ -118,7 +121,7 @@ Not implemented in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] ve
 
 #### [ @performance_condition = ] N'*performance_condition*'
 
-A value expressed in the format '*ItemComparatorValue*'. *@performance_condition* is **nvarchar(512)** with a default of `NULL`, and consists of these elements.
+A value expressed in the format '*ItemComparatorValue*'. *@performance_condition* is **nvarchar(512)**, with a default of `NULL`, and consists of these elements.
 
 | Format element | Description |
 | --- | --- |
@@ -126,11 +129,11 @@ A value expressed in the format '*ItemComparatorValue*'. *@performance_condition
 | *Comparator* | One of these operators: `>`, `<`, or `=`. |
 | *Value* | Numeric value of the counter. |
 
-#### [ @category_name = ] '*category*'
+#### [ @category_name = ] N'*category_name*'
 
 The name of the alert category. *@category_name* is **sysname**, with a default of `NULL`.
 
-#### [ @wmi_namespace = ] '*wmi_namespace*'
+#### [ @wmi_namespace = ] N'*wmi_namespace*'
 
 The WMI namespace to query for events. *@wmi_namespace* is **sysname**, with a default of `NULL`. Only namespaces on the local server are supported.
 
@@ -161,11 +164,9 @@ These are the circumstances under which errors/messages generated by [!INCLUDE [
 
 If an alert isn't functioning properly, check whether:
 
-- The [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent service is running.
-
-- The event appeared in the Windows application log.
-
-- The alert is enabled.
+- The [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent service is running
+- The event appeared in the Windows application log
+- The alert is enabled
 
 - Events generated with `xp_logevent` occur in the `master` database. Therefore, `xp_logevent` doesn't trigger an alert unless the *@database_name* for the alert is `master` or `NULL`.
 

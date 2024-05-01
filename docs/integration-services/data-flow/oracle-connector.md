@@ -3,14 +3,14 @@ title: "Microsoft Connector for Oracle"
 description: "Microsoft Connector for Oracle"
 author: chugugrace
 ms.author: chugu
-ms.date: "08/14/2019"
+ms.date: "01/18/2024"
 ms.service: sql
 ms.subservice: integration-services
-ms.topic: conceptual
+ms.topic: how-to
 ---
 # Microsoft Connector for Oracle
 
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver.md)]
 
 Microsoft Connector for Oracle enables the ability to export data from and load data into Oracle data source in an SSIS package.
 

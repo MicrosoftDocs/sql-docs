@@ -58,7 +58,7 @@ GO
 EXEC dbo.sp_syscollector_enable_collector;
 ```
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Data collection](../data-collection/data-collection.md)

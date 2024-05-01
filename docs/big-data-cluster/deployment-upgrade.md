@@ -8,6 +8,7 @@ ms.reviewer: wiassaf, randolphwest
 ms.date: 03/07/2023
 ms.service: sql
 ms.subservice: big-data-cluster
+ms.custom: linux-related-content
 ms.topic: conceptual
 ---
 # How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]

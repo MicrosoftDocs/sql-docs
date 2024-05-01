@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: This article guides you through creating an Azure SQL logical server using a user-assigned managed identity.
 author: nofield
 ms.author: nofield
-ms.reviewer: vanto
+ms.reviewer: vanto, mathoma
 ms.date: 10/24/2023
 ms.service: sql-database
 ms.subservice: security
@@ -74,7 +74,7 @@ The following steps outline the process of creating a new Azure SQL Database log
 
     :::image type="content" source="media/authentication-azure-ad-user-assigned-managed-identity/create-server-configure-identities.png" alt-text="Screenshot of Azure portal security settings of the create database process.":::
 
-1. On the **Identity** blade, under **User assigned managed identity**, select **Add**. Select the desired **Subscription** and then under **User assigned managed identities** select the desired user assigned managed identity from the selected subscription. Then select the **Select** button. 
+1. On the **Identity** pane, under **User assigned managed identity**, select **Add**. Select the desired **Subscription** and then under **User assigned managed identities** select the desired user assigned managed identity from the selected subscription. Then select the **Select** button. 
 
     :::image type="content" source="media/authentication-azure-ad-user-assigned-managed-identity/user-assigned-managed-identity-configuration.png" alt-text="Azure portal screenshot of adding user assigned managed identity when configuring server identity.":::
 
@@ -195,7 +195,7 @@ Get-AzSqlServer -ResourceGroupName "<ResourceGroupName>" -ServerName "<ServerNam
 
 # [REST API](#tab/rest-api)
 
-The [Servers - Create Or Update](/rest/api/sql/2020-11-01-preview/servers/create-or-update) REST API can be used to create a logical server with a user-assigned managed identity.
+The [Servers - Create Or Update](/rest/api/sql/servers/create-or-update) REST API can be used to create a logical server with a user-assigned managed identity.
 
 The script below will provision a logical server, set the Microsoft Entra admin as `<AzureADAccount>`, and enable [Microsoft Entra-only authentication](authentication-azure-ad-only-authentication.md). The server SQL Administrator login will also be created automatically and the password will be set to a random password. Since SQL Authentication connectivity is disabled with this provisioning, the SQL Administrator login won't be used.
 

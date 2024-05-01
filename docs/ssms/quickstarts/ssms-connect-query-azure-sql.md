@@ -1,20 +1,24 @@
 ---
-title: Connect and query an Azure SQL Database or an Azure SQL Managed Instance using SQL Server Management Studio (SSMS)
-description: Connect to an Azure SQL Database or an Azure SQL Managed Instance in SSMS. Create and query an Azure SQL Database or an Azure SQL Managed Instance in SSMS running basic T-SQL queries.
+title: Connect and query Azure SQL Database or Azure SQL Managed Instance
+description: Connect to and query an Azure SQL Database or Azure SQL Managed Instance using SQL Server Management Studio (SSMS).
 author: erinstellato-ms
 ms.author: erinstellato
-ms.reviewer: mikeray, randolphwest
-ms.date: 06/19/2023
+ms.reviewer: mikeray, randolphwest, maghan
+ms.date: 02/29/2024
 ms.service: sql
 ms.subservice: ssms
 ms.topic: quickstart
-ms.custom: intro-quickstart
+ms.custom:
+  - intro-quickstart
+# CustomerIntent: As a user, I want to connect to and query an Azure SQL Database or Azure SQL Managed Instance using SSMS, so that I can perform database operations.
 ---
 # Quickstart: Connect and query an Azure SQL Database or an Azure SQL Managed Instance using SQL Server Management Studio (SSMS)
 
 [!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)]
 
 Get started using SQL Server Management Studio (SSMS) to connect to your Azure SQL Database and run some Transact-SQL (T-SQL) commands.
+
+[!INCLUDE [entra-id](../../includes/entra-id-hard-coded.md)]
 
 The article demonstrates the following steps:
 
@@ -28,16 +32,16 @@ The article demonstrates the following steps:
 
 ## Prerequisites
 
-- [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md) installed.
-- [Azure SQL Database](https://azure.microsoft.com/free/sql-database/search/?&ef_id=CjwKCAiA17P9BRB2EiwAMvwNyDTqtKIHvBKK_qCTAnj3san_fx4KFjrSR8c58InygXQX5m_G71ZoMhoCzSMQAvD_BwE:G:s&OCID=AID2100131_SEM_CjwKCAiA17P9BRB2EiwAMvwNyDTqtKIHvBKK_qCTAnj3san_fx4KFjrSR8c58InygXQX5m_G71ZoMhoCzSMQAvD_BwE:G:s&gclid=CjwKCAiA17P9BRB2EiwAMvwNyDTqtKIHvBKK_qCTAnj3san_fx4KFjrSR8c58InygXQX5m_G71ZoMhoCzSMQAvD_BwE) or [Azure SQL Managed Instance](https://azure.microsoft.com/services/azure-sql/sql-managed-instance/)
+- [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)
+- [Azure SQL Database](https://azure.microsoft.com/free/sql-database/) or [Azure SQL Managed Instance](https://azure.microsoft.com/services/azure-sql/sql-managed-instance/)
 
 ## Connect to an Azure SQL Database or Azure SQL Managed Instance
 
-[!INCLUDE[ssms-connect-azure-ad](../../includes/ssms-connect-azure-ad.md)]
+[!INCLUDE [ssms-connect-azure-ad](../../includes/ssms-connect-azure-ad.md)]
 
-1. Start SQL Server Management Studio. The first time you run SSMS, the **Connect to Server** window opens. If it doesn't open, you can open it manually by selecting **Object Explorer** > **Connect** > **Database Engine**.
+1. Start SQL Server Management Studio (SSMS). The first time you run SSMS, the **Connect to Server** window opens. If it doesn't open, you can open it manually by selecting **Object Explorer** > **Connect** > **Database Engine**.
 
-   :::image type="content" source="media/ssms-connect-query-azure-sql/connect-object-explorer.png" alt-text="Screenshot of the Connect link in Object Explorer":::
+   :::image type="content" source="media/ssms-connect-query-azure-sql/connect-object-explorer.png" alt-text="Screenshot of the Connect link in Object Explorer.":::
 
 1. The **Connect to Server** dialog box appears. Enter the following information:
 
@@ -46,36 +50,39 @@ The article demonstrates the following steps:
    | **Server type** | Database Engine | Select **Database Engine** (usually the default option). |
    | **Server name** | The fully qualified server name | Enter the name of your *Azure SQL Database* or *Azure SQL Managed Instance* name. |
    | **Authentication** | | |
-   | | Azure Active Directory <sup>1</sup> | |
-   | | - Universal with MFA | See [Using multi-factor Azure Active Directory authentication](/azure/azure-sql/database/authentication-mfa-ssms-overview). |
-   | | - Password<br />- Integrated<br />- Service Principal | See [Azure Active Directory service principal with Azure SQL](/azure/azure-sql/database/authentication-aad-service-principal). |
-   | | - Managed Identity | See [Managed identities in Azure AD for Azure SQL](/azure/azure-sql/database/authentication-azure-ad-user-assigned-managed-identity).<br />Connecting to a SQL instance with SSMS using a managed identity requires an Azure VM. See [Use a Windows VM system-assigned managed identity to access Azure SQL](/azure/active-directory/managed-identities-azure-resources/tutorial-windows-vm-access-sql)  |
-   | | - Default | The default option can be used when connecting using any Azure AD authentication mode that's passwordless and noninteractive. |
+   | | Microsoft Entra ID <sup>1</sup> | |
+   | | - Universal with MFA | See [Using Microsoft Entra multifactor authentication](/azure/azure-sql/database/authentication-mfa-ssms-overview). |
+   | | - Password<br />- Integrated<br />- Service Principal | See [Microsoft Entra service principal with Azure SQL](/azure/azure-sql/database/authentication-aad-service-principal). |
+   | | - Managed Identity | See [Managed identities in Microsoft Entra for Azure SQL](/azure/azure-sql/database/authentication-azure-ad-user-assigned-managed-identity).<br /><br />Connecting to a SQL instance with SSMS using a managed identity requires an Azure VM. See [Use a Windows VM system-assigned managed identity to access Azure SQL](/azure/active-directory/managed-identities-azure-resources/tutorial-windows-vm-access-sql)  |
+   | | - Default | The default option can be used when connecting using any Microsoft Entra authentication mode that's passwordless and noninteractive. |
    | | SQL Server Authentication | Use **SQL Server Authentication** for Azure SQL to connect. |
    | **Login** | Server account user ID | The user ID from the server account used to create the server. |
    | **Password** | Server account password | The password from the server account used to create the server. |
+   | **Encryption** <sup>2</sup> | Encryption method | Select the encryption level for the connection. The default value is *Mandatory*. |
+   | **Trust server certificate** | Trust Server Certificate | Check this option to bypass server certificate validation. The default value is *False* (unchecked), which promotes better security using trusted certificates. |
+   | **Host Name in Certificate** | Host name of the server | The value provided in this option is used to specify a different, but expected, CN or SAN in the server certificate. |
 
    <sup>1</sup> The Windows Authentication method isn't supported for Azure SQL. For more information, see [Azure SQL authentication](/azure/sql-database/sql-database-security-overview#access-management).
 
-   You can also modify additional connection options by selecting **Options**. Examples of connection options are the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values for all the options.
-
-   :::image type="content" source="media/ssms-connect-query-azure-sql/connect-to-azure-sql-object-explorer.png" alt-text="Screenshot of Server name field for Azure SQL":::
-
-1. After you've completed all the fields, select **Connect**.
+   <sup>2</sup> [!INCLUDE [ssms-encryption](../includes/ssms-encryption.md)]
 
    You can also modify additional connection options by selecting **Options**. Examples of connection options are the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values for all the options.
 
-   If you haven't set up your firewall settings, a prompt appears to configure the firewall. Once you sign in, fill in your Azure account login information and continue to set the firewall rule. Then select **OK**. This prompt is a one time action. Once you configure the firewall, the firewall prompt shouldn't appear.
+   :::image type="content" source="media/ssms-connect-query-azure-sql/connect-to-azure-sql-object-explorer-ssms20.png" alt-text="Screenshot of connection dialog for Azure SQL.":::
 
-   :::image type="content" source="media/ssms-connect-query-azure-sql/azure-sql-firewall-sign-in-3.png" alt-text="Screenshot of Azure SQL New Firewall Rule":::
+1. After you complete all the fields, select **Connect**.
+
+   If your firewall isn't set up, a prompt appears to configure the firewall. Once you sign in, fill in your Azure account sign in information and continue to set the firewall rule. Then select **OK**. This prompt is a one time action. Once you configure the firewall, the firewall prompt shouldn't appear.
+
+   :::image type="content" source="media/ssms-connect-query-azure-sql/azure-sql-firewall-sign-in-3.png" alt-text="Screenshot of Azure SQL New Firewall Rule." lightbox="media/ssms-connect-query-azure-sql/azure-sql-firewall-sign-in-3.png":::
 
 1. To verify that your Azure SQL Database or Azure SQL Managed Instance connection succeeded, expand and explore the objects within **Object Explorer** where the server name, the SQL Server version, and the username are displayed. These objects are different depending on the server type.
 
-   :::image type="content" source="media/ssms-connect-query-azure-sql/connect-azure-sql.png" alt-text="Screenshot of connecting to a SQL Azure DB":::
+   :::image type="content" source="media/ssms-connect-query-azure-sql/connect-azure-sql.png" alt-text="Screenshot of connecting to an Azure SQL database.":::
 
 ## Troubleshoot connectivity issues
 
-You can experience connection problems with Azure Synapse Analytics. For more information on troubleshooting connection problems, visit [Troubleshooting connectivity issues](/azure/azure-sql/database/troubleshoot-common-errors-issues).
+You can experience connection problems with Azure SQL Database. For more information on troubleshooting connection problems, visit [Troubleshooting connectivity issues](/azure/azure-sql/database/troubleshoot-common-errors-issues).
 
 You can prevent, troubleshoot, diagnose, and mitigate connection and transient errors that you encounter when interacting with Azure SQL Database or Azure SQL Managed Instance. For more information, visit [Troubleshoot transient connection errors](/azure/azure-sql/database/troubleshoot-common-connectivity-issues).
 
@@ -85,7 +92,7 @@ Now let's create a database named TutorialDB by following the below steps:
 
 1. Right-click your server instance in Object Explorer, and then select **New Query**:
 
-   :::image type="content" source="media/ssms-connect-query-azure-sql/new-query.png" alt-text="Screenshot showing the New Query link":::
+   :::image type="content" source="media/ssms-connect-query-azure-sql/new-query.png" alt-text="Screenshot showing the New Query link.":::
 
 1. Paste the following T-SQL code snippet into the query window:
 
@@ -113,7 +120,7 @@ Now let's create a database named TutorialDB by following the below steps:
 
 In this section, you create a table in the newly created TutorialDB database. Because the query editor is still in the context of the `master` database, switch the connection context to the *TutorialDB* database by doing the following steps:
 
-1. In the database drop-down list, select the database that you want, as shown here:
+1. In the database dropdown list, select the database that you want, as shown here:
 
    :::image type="content" source="media/ssms-connect-query-azure-sql/change-db.png" alt-text="Screenshot showing how to Change database.":::
 
@@ -143,7 +150,7 @@ In this section, you create a table in the newly created TutorialDB database. Be
 
 After the query is complete, the new Customers table is displayed in the list of tables in Object Explorer. If the table isn't displayed, right-click the **TutorialDB** > **Tables** node in Object Explorer, and then select **Refresh**.
 
-:::image type="content" source="media/ssms-connect-query-azure-sql/new-table.png" alt-text="Screenshot showing New table":::
+:::image type="content" source="media/ssms-connect-query-azure-sql/new-table.png" alt-text="Screenshot showing New table.":::
 
 ## Insert rows into the new table
 
@@ -167,7 +174,7 @@ GO
 
 ## Query the table and view the results
 
-The results of a query are visible below the query text window. To query the Customers table and view the rows that were inserted, follow these steps:
+The results of a query are visible beneath the query text window. To query the `Customers` table and view the rows that were inserted, follow these steps:
 
 1. Paste the following T-SQL code snippet into the query window, and then select **Execute**:
 
@@ -176,7 +183,7 @@ The results of a query are visible below the query text window. To query the Cus
    SELECT * FROM dbo.Customers;
    ```
 
-   The results of the query are displayed under the area where the text was entered.
+   The query results are displayed under the area where the text was entered.
 
    :::image type="content" source="media/ssms-connect-query-azure-sql/query-results.png" alt-text="Screenshot showing the Results list.":::
 
@@ -186,28 +193,25 @@ The results of a query are visible below the query text window. To query the Cus
 
    - The first button displays the results in **Text View**, as shown in the image in the next section.
    - The middle button displays the results in **Grid View**, which is the default option.
-     - This is set as default
    - The third button lets you save the results to a file whose extension is .rpt by default.
 
 ## Verify your connection properties by using the query window table
 
 You can find information about the connection properties under the results of your query. After you run the previously mentioned query in the preceding step, review the connection properties at the bottom of the query window.
 
-- You can determine which server and database you're connected to, and the username that you use.
-- You can also view the query duration and the number of rows that are returned by the previously executed query.
+- You can determine which server and database you're connected to, and your username.
+- You can also view the query duration and the number of rows returned by the previously executed query.
 
-  :::image type="content" source="media/ssms-connect-query-azure-sql/connection-properties.png" alt-text="Screenshot of the connection properties":::
+  :::image type="content" source="media/ssms-connect-query-azure-sql/connection-properties.png" alt-text="Screenshot of the connection properties." lightbox="media/ssms-connect-query-azure-sql/connection-properties.png":::
 
 ## Additional tools
 
 You can also use [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) to connect and query [SQL Server](../../azure-data-studio/quickstart-sql-server.md), [Azure SQL Database](../../azure-data-studio/quickstart-sql-database.md), and [Azure Synapse Analytics](../../azure-data-studio/quickstart-sql-dw.md).
 
-## Next steps
-
-The best way to get acquainted with SSMS is through hands-on practice. These articles help you with various features available within SSMS.
+## Related content
 
 - [SQL Server Management Studio (SSMS) Query Editor](../f1-help/database-engine-query-editor-sql-server-management-studio.md)
-- [Scripting](../tutorials/scripting-ssms.md)
-- [Using Templates in SSMS](../template/templates-ssms.md)
-- [SSMS Configuration](../tutorials/ssms-configuration.md)
-- [Additional Tips and Tricks for using SSMS](../tutorials/ssms-tricks.md)
+- [Script objects in SQL Server Management Studio](../tutorials/scripting-ssms.md)
+- [Use templates in SQL Server Management Studio](../template/templates-ssms.md)
+- [SQL Server Management Studio components and configuration](../tutorials/ssms-configuration.md)
+- [Tips and tricks for using SQL Server Management Studio (SSMS)](../tutorials/ssms-tricks.md)

@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, data source connections"
   - "CoCreateInstance method"
   - "OLE DB data sources [SQL Server Native Client]"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Establishing a Connection to a SQL Server Native Client Data Source
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

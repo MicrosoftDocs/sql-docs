@@ -11,7 +11,6 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, transactions"
   - "transactions [ODBC]"
   - "ODBC, transactions"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Performing Transactions in ODBC
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

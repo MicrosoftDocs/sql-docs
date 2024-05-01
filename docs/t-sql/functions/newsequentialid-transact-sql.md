@@ -27,7 +27,7 @@ dev_langs:
  NEWSEQUENTIALID is a wrapper over the Windows [UuidCreateSequential](/windows/win32/api/rpcdce/nf-rpcdce-uuidcreatesequential) function, with some [byte shuffling applied](/archive/blogs/dbrowne/how-to-generate-sequential-guids-for-sql-server-in-net).
   
 > [!WARNING]  
->  The UuidCreateSequential function has hardware dependencies. On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], clusters of sequential values can develop when databases (such as contained databases) are moved to other computers. When using Always On and on [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], clusters of sequential values can develop if the database fails over to a different computer.  
+>  The UuidCreateSequential function has hardware dependencies. On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], clusters of sequential values can develop when databases (such as contained databases) are moved to other computers. When using Always On and on [!INCLUDE[sssds](../../includes/sssds-md.md)], clusters of sequential values can develop if the database fails over to a different computer.  
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

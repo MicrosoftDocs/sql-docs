@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Add a Column Chart to Your Report (Report Builder)"
+title: "Tutorial: Add a column chart to your report (Report Builder)"
 description: Learn how to create a Reporting Services paginated report with a column chart displaying a series as a set of vertical bars grouped by category.
 author: maggiesMSFT
 ms.author: maggies
@@ -9,7 +9,7 @@ ms.subservice: reporting-services
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
-# Tutorial: Add a Column Chart to Your Report (Report Builder)
+# Tutorial: Add a column chart to your report (Report Builder)
 In this tutorial, you create a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report with a column chart displaying a series as a set of vertical bars grouped by category. 
 
 Column charts are useful to:  
@@ -18,24 +18,25 @@ Column charts are useful to:
 -   Compare the relative value of multiple series.  
 -   Display a moving average to show trends.  
   
-The following illustration shows the column chart you will create, with a moving average.  
-  
-![Screenshot showing a report builder column chart.](../reporting-services/media/report-builder-column-chart-tutorial.png)    
+The following illustration shows the column chart you create in this tutorial, with a moving average.  
+
+:::image type="content" source="../reporting-services/media/report-builder-column-chart-tutorial.png" alt-text="Screenshot that shows a report builder column chart.":::
+
 > [!NOTE]  
-> In this tutorial, the steps for the wizard are consolidated into one procedure. For step-by-step instructions about how to browse to a report server, choose a data source, and create a dataset, see the first tutorial in this series: [Tutorial: Creating a Basic Table Report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In this tutorial, the steps for the wizard are consolidated into one procedure. For step-by-step instructions about how to browse to a report server, choose a data source, and create a dataset, see the first tutorial in this series: [Tutorial: Create a basic table report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Estimated time to complete this tutorial: 15 minutes.  
   
 ## Requirements  
-For information about requirements, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
+For information about requirements, see [Prerequisites for tutorials &#40;Report Builder&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Chart"></a>1. Create a Chart Report from the Chart Wizard  
+## <a name="Chart"></a>1. Create a chart report from the Chart Wizard  
 In this section, you go through the Chart Wizard to create an embedded dataset, choose a shared data source, and create a column chart.  
   
 > [!NOTE]  
-> The query in this tutorial contains the data values, so it does not need an external data source. This makes the query quite long. In a business environment, a query would not contain the data. This is for learning purposes only.  
+> The query in this tutorial contains the data values, so it doesn't need an external data source. This makes the query quite long. In a business environment, a query would not contain the data. This is for learning purposes only.  
   
-### To create a chart report  
+### Create a chart report  
   
 1.  [Start Report Builder](../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
   
@@ -45,16 +46,16 @@ In this section, you go through the Chart Wizard to create an embedded dataset, 
   
 2.  In the left pane, verify that **New Report** is selected.  
   
-3.  In the right pane, click **Chart Wizard**.  
+3.  In the right pane, select **Chart Wizard**.  
   
-4.  On the **Choose a dataset page**, click **Create a dataset**, and then click **Next**.  
+4.  On the **Choose a dataset page**, select **Create a dataset**, and then choose **Next**.  
   
-5.  On the **Choose a connection to a data source** page, select an existing data source or browse to the report server and select a data source, and then click **Next**. You may need to enter a user name and password.  
+5.  On the **Choose a connection to a data source** page, select an existing data source. Or browse to the report server, and choose a data source. Then select **Next**. You might need to enter a user name and password.  
   
     > [!NOTE]  
-    > The data source you choose is unimportant, as long as you have adequate permissions. You will not be getting data from the data source. For more information, see [Alternative Ways to Get a Data Connection &#40;Report Builder&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > The data source you choose is unimportant, as long as you have adequate permissions. You don't get data from the data source. For more information, see [Alternative ways to get a data connection &#40;Report Builder&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-6.  On the **Design a query** page, click **Edit as Text**.  
+6.  On the **Design a query** page, select **Edit as Text**.  
   
 7.  Paste the following query into the query pane:  
   
@@ -77,38 +78,38 @@ In this section, you go through the Chart Wizard to create an embedded dataset, 
     UNION SELECT CAST('2015-12-31' AS date) AS SalesDate, CAST(81946. AS money) AS Sales  
     ```  
   
-8.  (Optional) Click the Run button (**!**) to see the data your chart will be based on.  
+8.  (Optional) Select the Run button (**!**) to see the data your chart is based on.  
   
-9. Click **Next**.  
+9. Select **Next**.  
   
-## <a name="ChartType"></a>2. Choose the Chart Type  
+## <a name="ChartType"></a>2. Choose the chart type  
 You can choose from several predefined chart types, and then modify the chart after you complete the wizard.  
   
-### To add a column chart  
+### Add a column chart  
   
-1.  On the **Choose a chart type** page, the column chart is the default chart type. Click **Next**.  
+1.  On the **Choose a chart type** page, the column chart is the default chart type. Select **Next**.  
   
 2.  On the **Arrange chart fields** page, drag the SalesDate field to **Categories**. Categories display on the horizontal axis.  
   
 3.  Drag the Sales field to **Values**. The **Values** box displays Sum(Sales) because the sum of the sales total value is aggregated for each date. Values display on the vertical axis.  
   
-4.  Click **Next**.  
+4.  Select **Next**.  
  
-6.  Click **Finish**.  
+6.  Select **Finish**.  
   
-    The chart is added to the design surface. Note that the new column chart just shows representational data. The legend reads Sales Date A, Sales Date B, etc., just to give an idea of what your report will look like. 
+    The chart is added to the design surface. The new column chart just shows representational data. The legend reads Sales Date A through F, just to give an idea of what your report should like. 
     
-    ![Screenshot of a report builder column in the design view.](../reporting-services/media/report-builder-column-chart-1-design-view.png)
+    :::image type="content" source="../reporting-services/media/report-builder-column-chart-1-design-view.png" alt-text="Screenshot of a Report Builder column in the design view.":::
   
-7.  Click the chart to display the chart handles. Drag the bottom-right corner of the chart to increase the size of the chart. Note that the report design surface increases in size to accommodate the chart size.  
+7.  Select the chart to display the chart handles. Drag the bottom-right corner of the chart to increase the size of the chart. The report design surface increases in size to accommodate the chart size.  
   
-8.  Click **Run** to preview the report.  
+8.  Select **Run** to preview the report.  
 
-    ![Screenshot showing a preview of the report builder column chart.](../reporting-services/media/report-builder-column-chart-1-preview.png)
+    :::image type="content" source="../reporting-services/media/report-builder-column-chart-1-preview.png" alt-text="Screenshot that shows a preview of the Report Builder column chart.":::
 
-Note that the chart does not label every category on the horizontal axis. By default, only labels that fit next to the axis are included. 
+The chart doesn't label every category on the horizontal axis. By default, only labels that fit next to the axis are included. 
   
-## <a name="Horizontal"></a>3. Format a Date on the Horizontal Axis  
+## <a name="Horizontal"></a>3. Format a date on the horizontal axis  
 By default, the horizontal axis displays values in a general format that is automatically scaled to fit the size of the chart.  
   
 1.  Switch to report design view.  
@@ -121,11 +122,11 @@ By default, the horizontal axis displays values in a general format that is auto
   
 6.  Select **OK**.
   
-7.  On the Home tab, click **Run** to preview the report.  
+7.  On the Home tab, select **Run** to preview the report.  
   
-The date displays in the date format that you selected. The chart still does not label every category on the horizontal axis. 
+The date displays in the date format that you selected. The chart still doesn't label every category on the horizontal axis. 
 
-![Screenshot of the report builder column chart displaying the date format.](../reporting-services/media/report-builder-column-chart-2-preview.png)
+:::image type="content" source="../reporting-services/media/report-builder-column-chart-2-preview.png" alt-text="Screenshot of the Report Builder column chart displaying the date format.":::
   
 You can customize the label display by rotating the labels and specifying the interval.  
   
@@ -133,7 +134,7 @@ You can customize the label display by rotating the labels and specifying the in
   
 1.  Switch to report design view.  
   
-2.  Right-click the horizontal axis title, then click **Show Axis Title** to remove the title. Because the horizontal axis displays dates, the title is not needed.  
+2.  Right-click the horizontal axis title, then select **Show Axis Title** to remove the title. Because the horizontal axis displays dates, the title isn't needed.  
   
 3.  Right-click the horizontal axis > **Horizontal Axis Properties**.  
   
@@ -145,15 +146,15 @@ You can customize the label display by rotating the labels and specifying the in
   
     The sample text for the horizontal axis rotates by 90 degrees.  
     
-    ![Screenshot of the report builder column chart with rotated x-axis text in the design view.](../reporting-services/media/report-builder-column-chart-rotate-x-axis.png)
+    :::image type="content" source="../reporting-services/media/report-builder-column-chart-rotate-x-axis.png" alt-text="Screenshot of the Report Builder column chart with rotated x-axis text in the design view.":::
   
-9. Click **Run** to preview the report.  
+9. Select **Run** to preview the report.  
   
 On the chart, the labels are rotated.  
 
-![Screenshot showing a preview of the report builder column chart with rotated x-axis text.](../reporting-services/media/report-builder-column-chart-rotate-x-axis-preview.png)
+:::image type="content" source="../reporting-services/media/report-builder-column-chart-rotate-x-axis-preview.png" alt-text="Screenshot that shows a preview of the Report Builder column chart with rotated x-axis text.":::
   
-## <a name="Legend"></a>5. Move the Legend  
+## <a name="Legend"></a>5. Move the legend  
 The legend is automatically created from category and series data. You can move the legend below the chart area of a column chart.  
   
 1.  Switch to report design view.  
@@ -166,32 +167,32 @@ The legend is automatically created from category and series data. You can move 
   
 4.  Select **OK**.
   
-5.  (Optional) Because there is only one category in this tutorial, the chart doesn't need a legend. To remove it, right-click the legend > **Delete Legend**.  
+5.  (Optional) Because there's only one category in this tutorial, the chart doesn't need a legend. To remove it, right-click the legend > **Delete Legend**.  
   
-6.  Click **Run** to preview the report.  
+6.  Select **Run** to preview the report.  
   
-## <a name="ChartTitle"></a>6. Title the Chart  
+## <a name="ChartTitle"></a>6. Title the chart  
     
 1.  Switch to report design view.  
   
-2.  Select the words **Chart Title** at the top of the chart, then type **Store Sales Order Totals**.  
+2.  Select the words **Chart Title** at the top of the chart, then enter **Store Sales Order Totals**.  
   
-3.  Click **Run** to preview the report.  
+3.  Select **Run** to preview the report.  
   
-## <a name="Vertical"></a>7. Format and Label the Vertical Axis  
+## <a name="Vertical"></a>7. Format and label the vertical axis  
 By default, the vertical axis displays values in a general format that is automatically scaled to fit the size of the chart.   
   
 1.  Switch to report design view.  
   
-2. Click the labels on the vertical axis on the left side of the chart to select them.  
+2. Select the labels on the vertical axis on the left side of the chart to select them.  
   
-3.  On the **Home** tab > **Number** group, click the **Currency** button. The axis labels change to show the currency format.  
+3.  On the **Home** tab > **Number** group, select the **Currency** button. The axis labels change to show the currency format.  
   
-4.  Click the **Decrease Decimal** button two times, to show the number rounded to the nearest dollar.  
+4.  Select the **Decrease Decimal** button two times, to show the number rounded to the nearest dollar.  
   
 5.  Right-click the vertical axis > **Vertical Axis Properties**.  
   
-6.  On the **Number** tab, note that **Currency** is already selected in the **Category** box, and **Decimal places** is already **0** (zero).  
+6.  On the **Number** tab, **Currency** is already selected in the **Category** box, and **Decimal places** is already **0** (zero).  
   
 7.  Check **Show Values in**. **Thousands** is already selected.  
   
@@ -201,13 +202,13 @@ By default, the vertical axis displays values in a general format that is automa
 
 10. Right-click the vertical axis title > **Axis Title Properties**.  
   
-10. Replace the text in the **Title text** field with **Sales Total (in Thousands)**. You can also specify a variety of options related to how the title is formatted.  
+10. Replace the text in the **Title text** field with **Sales Total (in Thousands)**. You can also specify various options related to how the title is formatted.  
   
 11. Select **OK**.
   
-12. Click **Run** to preview the report.  
+12. Select **Run** to preview the report.  
 
-    ![Screenshot showing a preview of the report builder column chart format with the y-axis labeled correctly.](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
+    :::image type="content" source="../reporting-services/media/report-builder-column-chart-format-y-axis.png" alt-text="Screenshot that shows a preview of the Report Builder column chart format with the y-axis labeled correctly.":::
     
 ## 8. Show all the labels on the horizontal (x) axis
 
@@ -215,21 +216,21 @@ You notice that only some of the labels on the x axis are showing. In this secti
 
 1.  Switch to report design view.  
   
-2.  Click the chart, then select the horizontal axis labels.
+2.  Select the chart, then choose the horizontal axis labels.
 
 3. In the Properties pane, set LabelInterval to 1.
 
-    ![Screenshot showing how to set the label interval of the report builder column chart.](../reporting-services/media/report-builder-column-chart-set-label-interval.png)
+    :::image type="content" source="../reporting-services/media/report-builder-column-chart-set-label-interval.png" alt-text="Screenshot that shows how to set the label interval of the Report Builder column chart.":::
 
     The chart looks the same in design view. 
     
-5.  Click **Run** to preview the report.
+5.  Select **Run** to preview the report.
 
-    ![Screenshot showing a preview of the report builder column chart with the label interval set to one.](../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
+    :::image type="content" source="../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png" alt-text="Screenshot that shows a preview of the Report Builder column chart with the label interval set to one.":::
     
     Now the chart displays all its labels.
   
-## <a name="Average"></a>9. Add a Moving Average with a Calculated Series  
+## <a name="Average"></a>9. Add a moving average with a calculated series  
 
 A moving average is an average of the data in your series, calculated over time. The moving average can identify trends.
   
@@ -237,9 +238,9 @@ A moving average is an average of the data in your series, calculated over time.
   
 2.  Double-click the chart to display the **Chart Data** pane.  
   
-3.  Right-click the **[Sum(Sales)]** field in the **Values** area, then click **Add Calculated Series**.  
+3.  Right-click the **[Sum(Sales)]** field in the **Values** area, then select **Add Calculated Series**.  
 
-     ![Screenshot showing how to add calculated series to the report builder column chart.](../reporting-services/media/report-builder-column-chart-add-calculated-series.png)
+    :::image type="content" source="../reporting-services/media/report-builder-column-chart-add-calculated-series.png" alt-text="Screenshot that shows how to add calculated series to the Report Builder column chart.":::
   
 4.  In **Formula**, verify that **Moving average** is selected.  
   
@@ -249,19 +250,19 @@ A moving average is an average of the data in your series, calculated over time.
   
 8.  Select **OK**.
   
-9. Click **Run** to preview the report.  
+9. Select **Run** to preview the report.  
   
-The chart displays a line that shows the moving average for total sales by date, averaged over every four dates. Read more about [adding a moving average to a chart](../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md). 
+The chart displays a line that shows the moving average for total sales by date, averaged over every four dates. For more information, see [Add a moving average to a chart in a paginated report (Report Builder)](../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md).
 
-![Screenshot of a report builder column chart depicting a moving average.](../reporting-services/media/report-builder-column-chart-moving-average.png)
+:::image type="content" source="../reporting-services/media/report-builder-column-chart-moving-average.png" alt-text="Screenshot of a Report Builder column chart depicting a moving average.":::
   
-## <a name="Title"></a>10. Add a Report Title  
+## <a name="Title"></a>10. Add a report title  
   
 1.  Switch to report design view.  
   
-2.  On the design surface, click **Click to add title**.  
+2.  On the design surface, select **Click to add title**.  
   
-3.  Type **Sales Chart**, press ENTER, and then type **January to December 2015**, so it looks like this:  
+3.  Enter **Sales Chart**. Press ENTER, and then enter **January to December 2015**, so it looks like this:  
   
     **Sales Chart**  
   
@@ -271,31 +272,30 @@ The chart displays a line that shows the moving average for total sales by date,
   
 5.  Select **January to December 2015**, and on the **Home** tab > **Font** section >  set font size to **10**.  
   
-6.  (Optional) You may need to make the **Title** text box taller to accommodate the two lines of text. Pull down on the double-headed arrows when you click in the middle of the bottom edge. And you may need to drag the top of the chart so the title doesn't overlap.  
+6.  (Optional) You might need to make the **Title** text box taller to accommodate the two lines of text. Pull down on the double-headed arrows when you select in the middle of the bottom edge. And you might need to drag the top of the chart so the title doesn't overlap.  
   
-    This title appears at the top of the report. When there is no page header defined, items at the top of the report body are the equivalent of a report header.  
+    This title appears at the top of the report. When there's no page header defined, items at the top of the report body are the equivalent of a report header.  
   
-7.  Click **Run** to preview the report.  
+7.  Select **Run** to preview the report.  
   
-## <a name="Save"></a>11. Save the Report  
-  
-### To save the report  
+## <a name="Save"></a>11. Save the report
   
 1.  Switch to report design view.  
   
-2.  From the Report Builder button, click **Save As**.  
+2.  From the Report Builder button, select **Save As**.  
 
     You can save it either to your computer or to the report server.
   
-3.  In **Name**, type **Sales Order Column Chart**.  
+3.  In **Name**, enter **Sales Order Column Chart**.  
   
-4.  Click **Save**.  
+4.  Select **Save**.  
   
-## Next Steps  
-You have successfully completed the Adding a Column Chart to Your Report tutorial. To learn more about charts, see [Charts &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) and [Sparklines and Data Bars &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+## Next steps  
+You successfully completed the Adding a Column Chart to Your Report tutorial. For more information about charts, see [Charts in a paginated report (Report Builder)](../reporting-services/report-design/charts-report-builder-and-ssrs.md) and [Sparklines and data bars in a paginated report (Report Builder)](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## See Also  
--    [Report Builder tutorials](../reporting-services/report-builder-tutorials.md) 
--    [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+## Related content
+
+- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md) 
+- [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

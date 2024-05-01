@@ -62,9 +62,9 @@ CREATE TABLE T1(
      )
 ```
 
-## Aggressive log truncation
+## Accelerated Database Recovery (ADR) and Change Data Capure (CDC)
 
-When you enable change data capture (CDC) on SQL Server, the aggressive log truncation feature of Accelerated Database Recovery (ADR) is disabled. This is because the CDC scan accesses the database transaction log. Active transactions continue to hold the transaction log truncation until the transaction commits and CDC scan catches up, or transaction aborts. This might result in the transaction log filling up more than usual and should be monitored so that the transaction log doesn't fill.
+Currently, enabling both change data capture (CDC) and Accelerated Database Recovery (ADR) is not supported. When you enable change data capture (CDC) on SQL Server, the aggressive log truncation feature of ADR is disabled. This is because the CDC scan accesses the database transaction log. Active transactions continue to hold the transaction log truncation until the transaction commits and CDC scan catches up, or transaction aborts. This can cause various issues including the transaction log filling up more than usual or data operations recorded in the side table being abnormal.
 
 When enabling CDC, we recommend using the Resumable index option. Resumable index doesn't require to keep open a long-running transaction to create or rebuild an index, allowing log truncation during this operation and better log space management. For more information, see [Guidelines for online index operations - Resumable Index considerations](../../relational-databases/indexes/guidelines-for-online-index-operations.md#resumable-index-considerations). 
 

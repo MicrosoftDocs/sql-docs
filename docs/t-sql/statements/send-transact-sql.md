@@ -92,49 +92,52 @@ To send a message, the current user must have RECEIVE permission on the queue of
 The following example starts a dialog and sends an XML message on the dialog. To send the message, the example converts the xml object to **varbinary(max)**.  
   
 ```sql
-DECLARE @dialog_handle UNIQUEIDENTIFIER,  
-        @ExpenseReport XML ;  
-  
-SET @ExpenseReport = < construct message as appropriate for the application > ;  
-  
-BEGIN DIALOG @dialog_handle  
-FROM SERVICE [//Adventure-Works.com/Expenses/ExpenseClient]  
-TO SERVICE '//Adventure-Works.com/Expenses'  
-ON CONTRACT [//Adventure-Works.com/Expenses/ExpenseProcessing] ;  
-  
-SEND ON CONVERSATION @dialog_handle  
-    MESSAGE TYPE [//Adventure-Works.com/Expenses/SubmitExpense]  
-    (@ExpenseReport) ;  
+DECLARE @dialog_handle UNIQUEIDENTIFIER,
+    @ExpenseReport XML;
+
+SET @ExpenseReport = <construct message as appropriate for the application>;
+
+BEGIN DIALOG @dialog_handle
+    FROM SERVICE [//Adventure-Works.com/Expenses/ExpenseClient]
+    TO SERVICE '//Adventure-Works.com/Expenses'
+    ON CONTRACT [//Adventure-Works.com/Expenses/ExpenseProcessing];
+
+SEND ON CONVERSATION @dialog_handle
+    MESSAGE TYPE [//Adventure-Works.com/Expenses/SubmitExpense](@ExpenseReport);
 ```  
   
 The following example starts three dialogs and sends an XML message on each of them.  
   
 ```sql
-DECLARE @dialog_handle1 UNIQUEIDENTIFIER,  
-        @dialog_handle2 UNIQUEIDENTIFIER,  
-        @dialog_handle3 UNIQUEIDENTIFIER,  
-        @OrderMsg XML ;  
-  
-SET @OrderMsg = < construct message as appropriate for the application > ;  
-  
-BEGIN DIALOG @dialog_handle1  
-FROM SERVICE [//InitiatorDB/InitiatorService]  
-TO SERVICE '//TargetDB1/TargetService'  
-ON CONTRACT [//AllDBs/OrderProcessing] ;  
-  
-BEGIN DIALOG @dialog_handle2  
-FROM SERVICE [//InitiatorDB/InitiatorService]  
-TO SERVICE '//TargetDB2/TargetService'  
-ON CONTRACT [//AllDBs/OrderProcessing] ;  
-  
-BEGIN DIALOG @dialog_handle3  
-FROM SERVICE [//InitiatorDB/InitiatorService]  
-TO SERVICE '//TargetDB3/TargetService'  
-ON CONTRACT [//AllDBs/OrderProcessing] ;  
-  
-SEND ON CONVERSATION (@dialog_handle1, @dialog_handle2, @dialog_handle3)  
-    MESSAGE TYPE [//AllDBs/OrderMsg]  
-    (@OrderMsg) ;  
+DECLARE
+    @dialog_handle1 UNIQUEIDENTIFIER,
+    @dialog_handle2 UNIQUEIDENTIFIER,
+    @dialog_handle3 UNIQUEIDENTIFIER,
+    @OrderMsg XML;
+
+SET @OrderMsg = '<construct message as appropriate for the application>';
+
+BEGIN DIALOG @dialog_handle1
+    FROM SERVICE [//InitiatorDB/InitiatorService]
+    TO SERVICE '//TargetDB1/TargetService'
+    ON CONTRACT [//AllDBs/OrderProcessing];
+
+BEGIN DIALOG @dialog_handle2
+    FROM SERVICE [//InitiatorDB/InitiatorService]
+    TO SERVICE '//TargetDB2/TargetService'
+    ON CONTRACT [//AllDBs/OrderProcessing];
+
+BEGIN DIALOG @dialog_handle3
+    FROM SERVICE [//InitiatorDB/InitiatorService]
+    TO SERVICE '//TargetDB3/TargetService'
+    ON CONTRACT [//AllDBs/OrderProcessing];
+
+SEND ON CONVERSATION (
+    @dialog_handle1,
+    @dialog_handle2,
+    @dialog_handle3
+)
+    MESSAGE TYPE [//AllDBs/OrderMsg](@OrderMsg); 
 ```  
   
 ## See Also  

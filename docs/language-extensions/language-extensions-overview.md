@@ -1,22 +1,24 @@
 ---
 title: What is SQL Server Language Extensions?
 description: "Language Extensions is a feature of SQL Server used for executing external code. In SQL Server, Java, C#, Python, and R are supported. Relational data can be used in the external code using the extensibility framework."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.date: 09/28/2021
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 04/29/2024
 ms.service: sql
 ms.subservice: language-extensions
 ms.topic: overview
-ms.custom: intro-overview
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
+ms.custom:
+  - intro-overview
+monikerRange: ">=sql-server-ver15 || >=sql-server-linux-ver15"
 ---
 # What is SQL Server Language Extensions?
-[!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
 
-Language Extensions is a feature of SQL Server used for executing external code. The relational data can be used in the external code using the [extensibility framework](concepts/extensibility-framework.md). In SQL Server 2019, Java, C#, Python, and R runtimes are supported.
+[!INCLUDE [sqlserver2019-and-later](../includes/applies-to-version/sqlserver2019-and-later.md)]
 
-> [!NOTE]
-> For executing Python or R in SQL Server, see the [Machine Learning Services](../machine-learning/sql-server-machine-learning-services.md) documentation. With SQL Server 2019 and later, you can use a custom Python and R runtime with Language Extensions. For more information, see how to install the [Python custom runtime](../machine-learning/install/custom-runtime-python.md) and the [R custom runtime](../machine-learning/install/custom-runtime-r.md).
+Language Extensions is a feature of SQL Server used for executing external code. The relational data can be used in the external code using the [extensibility framework](concepts/extensibility-framework.md). In [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] and later versions, Java, C#, Python, and R runtimes are supported.
+
+> [!NOTE]  
+> For executing Python or R in SQL Server, see the [Machine Learning Services with Python and R](../machine-learning/sql-server-machine-learning-services.md) documentation. With [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] and later versions, you can use a custom Python and R runtime with Language Extensions. For more information, see [Install a Python custom runtime for SQL Server](../machine-learning/install/custom-runtime-python.md) and [Install an R custom runtime for SQL Server](../machine-learning/install/custom-runtime-r.md).
 
 ## What you can do with Language Extensions
 
@@ -26,16 +28,23 @@ External languages are defined with [CREATE EXTERNAL LANGUAGE](../t-sql/statemen
 
 Language Extensions provides multiple advantages:
 
-+ Data security. Bringing external language execution closer to the source of data avoids insecure data movement.
-+ Speed. Databases are optimized for set-based operations. 
-+ Ease of deployment and integration. [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] is the central point of operations for many other data management tasks and applications. By using data in the database, you ensure that the data used by the language extension is consistent and up-to-date.
+- Data security. Bringing external language execution closer to the source of data avoids insecure data movement.
 
-The native [SQL common language runtime (CLR)](../relational-databases/clr-integration/common-language-runtime-integration-overview.md) allows you to implement some of the functionalities of SQL Server with .NET languages. For a discussion of the differences between SQL CLR and SQL language extensions, see [Compare SQL Server Language Extensions to SQL CLR](concepts/compare-extensibility-to-clr.md).
+- Speed. Databases are optimized for set-based operations.
 
-## Next steps
+- Ease of deployment and integration. [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] is the central point of operations for many other data management tasks and applications. By using data in the database, you ensure that the data used by the language extension is consistent and up-to-date.
 
-+ Install the [Java language extension on Windows](install/windows-java.md) or [on Linux](../linux/sql-server-linux-setup-language-extensions-java.md)
-+ Install the [C# language extension on Windows](csharp-overview.md)
-+ Install your [Python custom runtime for SQL Server](../machine-learning/install/custom-runtime-python.md)
-+ Install your [R custom runtime for SQL Server](../machine-learning/install/custom-runtime-r.md)
-+ Install the [Microsoft Extensibility SDK for Java](how-to/extensibility-sdk-java-sql-server.md)
+The native [Common Language Runtime Integration](../relational-databases/clr-integration/common-language-runtime-integration-overview.md) allows you to implement some of the functionalities of SQL Server with .NET languages. For a discussion of the differences between SQL CLR and SQL language extensions, see [Compare SQL Server Language Extensions to SQL CLR](concepts/compare-extensibility-to-clr.md).
+
+For more information about security with the extensibility framework, see [Security architecture for the extensibility framework in SQL Server Machine Learning Services](../machine-learning/concepts/security.md).
+
+## Related content
+
+- [Install SQL Server Java Language Extension on Windows](install/windows-java.md)
+- [Install SQL Server Java Language Extension on Linux](../linux/sql-server-linux-setup-language-extensions-java.md)
+- [What is the C# Language Extension?](csharp-overview.md)
+- [Install SQL Server .NET Language Extension on Windows](install/windows-c-sharp.md)
+- [Install a Python custom runtime for SQL Server](../machine-learning/install/custom-runtime-python.md)
+- [Install an R custom runtime for SQL Server](../machine-learning/install/custom-runtime-r.md)
+- [Microsoft Extensibility SDK for Java for SQL Server](how-to/extensibility-sdk-java-sql-server.md)
+- [Microsoft Extensibility SDK for C# for SQL Server](how-to/extensibility-sdk-c-sharp-sql-server.md)

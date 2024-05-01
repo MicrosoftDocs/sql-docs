@@ -49,7 +49,7 @@ When you open a table in Access, the data is retrieved using a keyset cursor. As
   
 > [!IMPORTANT]  
 > To link access tables with an Azure database, you need SQL Server Native Client(SNAC) version 10.5 or above.   
-> You can obtain the latest version of SNAC from [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272).  
+> You can obtain the latest version of SNAC from [Microsoft SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272).  
   
 ## Unlinking Access tables  
 When you unlink an Access table from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure table, SSMA restores the original Access table and its data.  

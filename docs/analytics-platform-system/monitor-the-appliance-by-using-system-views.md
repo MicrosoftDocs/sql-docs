@@ -1,22 +1,22 @@
 ---
 title: Monitor with system views
-description: This article lists the system views that you can use for monitoring the Analytics Platform system appliance.
+description: This article lists the system views that you can use for monitoring the Analytics Platform System (PDW) appliance.
 author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
-ms.date: 04/17/2018
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: conceptual
 ---
 
 # Monitor the appliance with system views - Analytics Platform System
-This article lists the system views that you can use for monitoring SQL Server PDW.  
+This article lists the system views that you can use for monitoring Analytics Platform System (PDW).  
   
-## To Monitor the Appliance by Using System Views  
+## <a id="to-monitor-the-appliance-by-using-system-views"></a> Monitor the Appliance by Using System Views
 SQL Server PDW includes comprehensive system views that enable you to obtain detailed information about the appliance health, state, and performance. This table provides links to system views that can be used for each monitoring capability.  
   
-![PDW system views alerts](./media/monitor-the-appliance-by-using-system-views/PDW_system_views_alerts.png "PDW_system_views_alerts")  
+:::image type="content" source="./media/monitor-the-appliance-by-using-system-views/PDW_system_views_alerts.png" alt-text="A diagram of Analytics Platform System (PDW) system views alerts.":::
   
 |Information Type|Related System Views|
 |-|-|
@@ -27,7 +27,6 @@ SQL Server PDW includes comprehensive system views that enable you to obtain det
 |Monitor additional information for loads, backups, and restores.|[sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)<br /><br />[sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)<br /><br />[sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)|  
 |OS-level logs and performance information|[sys.dm_pdw_os_performance_counters](../relational-databases/system-dynamic-management-views/sys-dm-pdw-os-performance-counters-transact-sql.md)<br /><br />[sys.dm_pdw_os_event_logs](../relational-databases/system-dynamic-management-views/sys-dm-pdw-os-event-logs-transact-sql.md)<br /><br />[sys.dm_pdw_os_threads](../relational-databases/system-dynamic-management-views/sys-dm-pdw-os-threads-transact-sql.md)|  
   
-## See Also  
-<!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[Appliance Monitoring &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
-  
+## Related content
+
+- [Appliance monitoring for Analytics Platform System](appliance-monitoring.md)

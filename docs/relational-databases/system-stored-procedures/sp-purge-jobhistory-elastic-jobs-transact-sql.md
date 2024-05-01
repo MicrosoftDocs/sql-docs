@@ -17,7 +17,7 @@ monikerRange: "=azuresqldb-current"
 
 Removes the history records for a job in the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true).
 
-This stored procedure shares the name of `sp_purge_jobhistory` with a similar object in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for the SQL Agent service. For information about the SQL Agent version, see [sp_purge_jobhistory (Transact-SQL)](sp-purge-jobhistory-transact-sql.md).
+This stored procedure shares the name of `sp_purge_jobhistory` with a similar object in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent service. For information about the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent version, see [sp_purge_jobhistory (Transact-SQL)](sp-purge-jobhistory-transact-sql.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -35,11 +35,12 @@ This stored procedure shares the name of `sp_purge_jobhistory` with a similar ob
 
 The name of the job for which to delete the history records. *job_name* is nvarchar(128), with a default of `NULL`. Either *job_id* or *job_name* must be specified, but both cannot be specified.
 
-#### @job_id 
+#### @job_id
 
  The job identification number of the job for the records to be deleted. *job_id* is uniqueidentifier, with a default of `NULL`. Either *job_id* or *job_name* must be specified, but both cannot be specified.
 
-#### @oldest_date 
+#### @oldest_date
+
  The oldest record to retain in the history. *oldest_date* is DATETIME2, with a default of `NULL`. When *oldest_date* is specified, `sp_purge_jobhistory` only removes records that are older than the value specified.
 
  All times in elastic jobs are in the UTC time zone.
@@ -89,6 +90,6 @@ EXEC jobs.sp_delete_job @job_name='ResultsPoolsJob';
 
 ## Related content
 
-- [Elastic jobs in Azure SQL Database (preview)](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true)
-- [Create, configure, and manage elastic jobs (preview)](/azure/azure-sql/database/elastic-jobs-tutorial?view=azuresql-db&preserve-view=true)
-- [Create and manage elastic jobs by using T-SQL (preview)](/azure/azure-sql/database/elastic-jobs-tsql-create-manage?view=azuresql-db&preserve-view=true)
+- [Elastic jobs in Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true)
+- [Create, configure, and manage elastic jobs](/azure/azure-sql/database/elastic-jobs-tutorial?view=azuresql-db&preserve-view=true)
+- [Create and manage elastic jobs by using T-SQL](/azure/azure-sql/database/elastic-jobs-tsql-create-manage?view=azuresql-db&preserve-view=true)

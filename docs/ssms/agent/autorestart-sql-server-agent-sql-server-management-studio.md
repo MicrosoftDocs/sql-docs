@@ -6,7 +6,7 @@ ms.author: maghan
 ms.date: 07/28/2021
 ms.service: sql
 ms.subservice: ssms
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
   - "SQL Server Agent, starting"
   - "autostart SQL Server Agent"

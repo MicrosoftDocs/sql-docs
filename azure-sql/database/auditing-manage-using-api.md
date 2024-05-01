@@ -1,8 +1,10 @@
 ---
 title: Manage Azure SQL Database Auditing using APIs
+titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: Use Azure SQL Database auditing to track database events into an audit log.
 author: sravanisaluru
 ms.author: srsaluru
+ms.reviewer: mathoma
 ms.date: 04/26/2023
 ms.service: sql-database
 ms.subservice: security
@@ -25,6 +27,7 @@ This article provides an overview of the different APIs used for managing Auditi
 - [Get Server Auditing Policy (Get-AzSqlServerAudit)](/powershell/module/az.sql/get-azsqlserveraudit)
 - [Remove Database Auditing Policy (Remove-AzSqlDatabaseAudit)](/powershell/module/az.sql/remove-azsqldatabaseaudit)
 - [Remove Server Auditing Policy (Remove-AzSqlServerAudit)](/powershell/module/az.sql/remove-azsqlserveraudit)
+- [Create or Update auditing for Microsoft support operations (Set-AzSqlServerMSSupportAudit)](/powershell/module/az.sql/set-azsqlservermssupportaudit)
 
 For a script example, see [Configure auditing and threat detection using PowerShell](scripts/auditing-threat-detection-powershell-configure.md).
 
@@ -32,22 +35,24 @@ For a script example, see [Configure auditing and threat detection using PowerSh
 
 **REST API**:
 
-- [Create or Update Database Auditing Policy](/rest/api/sql/2017-03-01-preview/database-auditing-settings/create-or-update)
-- [Create or Update Server Auditing Policy](/rest/api/sql/2017-03-01-preview/server-auditing-settings/create-or-update)
-- [Get Database Auditing Policy](/rest/api/sql/2017-03-01-preview/database-auditing-settings/get)
-- [Get Server Auditing Policy](/rest/api/sql/2017-03-01-preview/server-auditing-settings/get)
+- [Create or Update Database Auditing Policy](/rest/api/sql/database-blob-auditing-policies/create-or-update)
+- [Create or Update Server Auditing Policy](/rest/api/sql/server-blob-auditing-policies/create-or-update)
+- [Create or Update Microsoft support operations audit policy](/rest/api/sql/server-devops-audit-settings/create-or-update)
+- [Get Database Auditing Policy](/rest/api/sql/database-blob-auditing-policies/get)
+- [Get Server Auditing Policy](/rest/api/sql/server-blob-auditing-policies/get)
 
 Extended policy with WHERE clause support for additional filtering:
 
-- [Create or Update Database *Extended* Auditing Policy](/rest/api/sql/2017-03-01-preview/database-extended-auditing-settings/create-or-update)
-- [Create or Update Server *Extended* Auditing Policy](/rest/api/sql/server%20auditing%20settings/createorupdate)
-- [Get Database *Extended* Auditing Policy](/rest/api/sql/2017-03-01-preview/database-extended-auditing-settings/get)
-- [Get Server *Extended* Auditing Policy](/rest/api/sql/2017-03-01-preview/server-extended-auditing-settings/get)
+- [Create or Update Database *Extended* Auditing Policy](/rest/api/sql/extended-database-blob-auditing-policies/create-or-update)
+- [Create or Update Server *Extended* Auditing Policy](/rest/api/sql/extended-server-blob-auditing-policies/create-or-update)
+- [Get Database *Extended* Auditing Policy](/rest/api/sql/extended-database-blob-auditing-policies/get)
+- [Get Server *Extended* Auditing Policy](/rest/api/sql/extended-server-blob-auditing-policies/get)
 
 ### Use Azure CLI
 
 - [Manage a server's auditing policy](/cli/azure/sql/server/audit-policy)
 - [Manage a database's auditing policy](/cli/azure/sql/db/audit-policy)
+- [Manage Microsoft support operations audit policy](/cli/azure/sql/server/ms-support/audit-policy)
 
 ### Use Azure Resource Manager templates
 

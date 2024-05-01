@@ -43,10 +43,6 @@ helpviewer_keywords:
   
 ## Related Content  
   
--   [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+- [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
--   [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
-  
--   [Troubleshooting Email Notifications (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-email-notifications-master-data-services.aspx)  
-  
-  
+- [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)

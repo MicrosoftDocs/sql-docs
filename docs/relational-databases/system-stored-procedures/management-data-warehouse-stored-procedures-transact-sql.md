@@ -26,6 +26,6 @@ The data collector stores data and data collector type information in the manage
 - [core.sp_update_data_source (Transact-SQL)](core-sp-update-data-source-transact-sql.md)
 - [core.sp_remove_collector_type (Transact-SQL)](core-sp-remove-collector-type-transact-sql.md)
 
-## See also
+## Related content
 
 - [Data Collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)

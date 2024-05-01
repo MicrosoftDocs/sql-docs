@@ -6,7 +6,7 @@ ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services
-ms.topic: conceptual
+ms.topic: reference
 ---
 # Define a State Variable
 
@@ -75,7 +75,7 @@ ms.topic: conceptual
   
  Do not give the variable a value as part of its definition. The value must be set by the CDC Control task.  
   
- If you plan to use the CDC Control task with **Automatic State Persistence**, the CDC State variable will be read from the database state table you specify and will be updated back to that same table when its value changes. For more information about the State table, see [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)and [CDC Control Task Editor](../control-flow/cdc-control-task.md).  
+ If you plan to use the CDC Control task with **Automatic State Persistence**, the CDC State variable will be read from the database state table you specify and will be updated back to that same table when its value changes. For more information about the State table, see [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md) and [CDC Control Task Editor](../control-flow/cdc-control-task.md).  
   
  If you are not using the CDC Control task with Automatic State Persistence then you must load the variable value from persistent storage where its value was saved the last time the package ran and to write it back to the persistent storage when the processing of the current processing range was completed.  
   

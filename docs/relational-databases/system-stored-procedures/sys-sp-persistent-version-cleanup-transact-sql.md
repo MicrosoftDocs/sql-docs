@@ -112,7 +112,7 @@ GO
 EXEC sys.sp_persistent_version_cleanup;
 ```
 
-## Next steps
+## Related content
 
 - [Accelerated database recovery](../accelerated-database-recovery-concepts.md)
 - [Troubleshoot accelerated database recovery](../accelerated-database-recovery-troubleshoot.md)

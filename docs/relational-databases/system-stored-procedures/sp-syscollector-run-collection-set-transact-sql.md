@@ -76,7 +76,7 @@ EXEC sp_syscollector_run_collection_set
     @collection_set_id = 1;
 ```
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Data collection](../data-collection/data-collection.md)

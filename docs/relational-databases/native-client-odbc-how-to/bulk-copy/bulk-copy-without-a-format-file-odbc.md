@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "bulk copy [ODBC]"
   - "bulk copy [ODBC], data files"
   - "bulk copy [ODBC], about bulk copy"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Copy Without a Format File (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

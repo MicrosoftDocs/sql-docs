@@ -95,7 +95,7 @@ EXEC msdb.dbo.sysmail_configure_sp
     'MaxFileSize', '2097152';
 ```
 
-## See also
+## Related content
 
 - [Database Mail](../database-mail/database-mail.md)
 - [sysmail_help_configure_sp (Transact-SQL)](sysmail-help-configure-sp-transact-sql.md)

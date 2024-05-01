@@ -10,7 +10,6 @@ ms.topic: "reference"
 helpviewer_keywords:
   - "bulk copy using format file [ODBC]"
   - "ODBC, bulk copy operations"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Copy by Using a Format File (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -23,7 +22,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 2.  Set SQL_COPT_SS_BCP and SQL_BCP_ON to enable bulk copy operations.  
   
-3.  Connect to Microsoft® SQL Server™.  
+3.  Connect to [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].  
   
 4.  Call [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) to set the following information:  
   

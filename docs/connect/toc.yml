@@ -1,9 +1,7 @@
 - name: Programming to interact with SQL Server
   href: ../connect/homepage-sql-connection-programming.md
-
 - name: Welcome to SQL Server >
   href: ../sql-server/index.yml
-
 - name: SQL Server drivers
   href: ../connect/sql-connection-libraries.md
 - name: Driver feature support matrix
@@ -12,9 +10,6 @@
   href: ../connect/connect-history.md
 - name: SQL data developer
   href: ../connect/sql-data-developer.md
-
-
-
 - name: ADO.NET
   items:
   - name: Microsoft ADO.NET for SQL Server
@@ -22,13 +17,13 @@
   - name: Getting started
     href: ../connect/ado-net/get-started-sqlclient-driver.md
     items:
-    - name: "Step 1: Configure development environment"
+    - name: 'Step 1: Configure development environment'
       href: ../connect/ado-net/step-1-configure-development-environment-ado-net-development.md
-    - name: "Step 2: Create a SQL database"
+    - name: 'Step 2: Create a SQL database'
       href: ../connect/ado-net/step-2-create-sql-database-ado-net-development.md
-    - name: "Step 3: Proof of concept connecting to SQL"
+    - name: 'Step 3: Proof of concept connecting to SQL'
       href: ../connect/ado-net/step-3-connect-sql-ado-net.md
-    - name: "Step 4: Connect resiliently to SQL"
+    - name: 'Step 4: Connect resiliently to SQL'
       href: ../connect/ado-net/step-4-connect-resiliently-sql-ado-net.md
   - name: Overview
     href: ../connect/ado-net/overview-sqlclient-driver.md
@@ -80,8 +75,8 @@
     - name: Connection Pooling
       href: ../connect/ado-net/connection-pooling.md
       items:
-        - name: SQL Server Connection Pooling (ADO.NET)
-          href: ../connect/ado-net/sql-server-connection-pooling.md
+      - name: SQL Server Connection Pooling (ADO.NET)
+        href: ../connect/ado-net/sql-server-connection-pooling.md
     - name: Commands and Parameters
       href: ../connect/ado-net/commands-parameters.md
       items:
@@ -102,7 +97,7 @@
           href: ../connect/ado-net/perform-catalog-operations.md
     - name: DataAdapters and DataReaders
       href: ../connect/ado-net/dataadapters-datareaders.md
-      items: 
+      items:
       - name: Retrieve data by a DataReader
         href: ../connect/ado-net/retrieve-data-by-datareader.md
       - name: Populate a DataSet from a DataAdapter
@@ -186,7 +181,7 @@
       items:
       - name: Authentication
         href: ../connect/ado-net/sql/authentication-sql-server.md
-      - name: Azure Active Directory authentication
+      - name: Microsoft Entra authentication
         href: ../connect/ado-net/sql/azure-active-directory-authentication.md
       - name: Application security scenarios
         href: ../connect/ado-net/sql/application-security-scenarios-sql-server.md
@@ -299,9 +294,10 @@
           href: ado-net/sql/azure-key-vault-enclave-example.md
       - name: Data Discovery and Classification in SqlClient
         href: ../connect/ado-net/sql/data-classification.md
-
-
-
+- name: Go
+  items:
+  - name: Microsoft Golang driver for SQL Server
+    href: ../connect/golang/microsoft-go-mssqldb-driver.md
 - name: JDBC
   items:
   - name: Microsoft JDBC Driver for SQL Server
@@ -309,11 +305,11 @@
   - name: Getting started
     href: ../connect/jdbc/getting-started-with-the-jdbc-driver.md
     items:
-    - name: "Step 1: Configure development environment"
+    - name: 'Step 1: Configure development environment'
       href: ../connect/jdbc/step-1-configure-development-environment-for-java-development.md
-    - name: "Step 2: Create a SQL database"
+    - name: 'Step 2: Create a SQL database'
       href: ../connect/jdbc/step-2-create-a-sql-database-for-java-development.md
-    - name: "Step 3: Proof of concept connecting to SQL"
+    - name: 'Step 3: Proof of concept connecting to SQL'
       href: ../connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java.md
   - name: Overview
     href: ../connect/jdbc/overview-of-the-jdbc-driver.md
@@ -2817,7 +2813,7 @@
           items:
           - name: Using Kerberos integrated authentication
             href: ../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md
-          - name: Using Azure Active Directory authentication
+          - name: Using Microsoft Entra authentication
             href: ../connect/jdbc/connecting-using-azure-active-directory-authentication.md
           - name: Using NTLM authentication
             href: ../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md
@@ -2934,23 +2930,16 @@
           href: ../connect/jdbc/azure-key-vault-sample-version-6.2.2.md
         - name: Azure Key Vault sample (version 6.0.0)
           href: ../connect/jdbc/azure-key-vault-sample-version-6.0.0.md
-
-
-
 - name: Node.js
   items:
   - name: Node.js Driver for SQL Server
     href: ../connect/node-js/node-js-driver-for-sql-server.md
-  - name: "Step 1:  Configure development environment"
+  - name: 'Step 1:  Configure development environment'
     href: ../connect/node-js/step-1-configure-development-environment-for-node-js-development.md
-  - name: "Step 2: Create a SQL database"
+  - name: 'Step 2: Create a SQL database'
     href: ../connect/node-js/step-2-create-a-sql-database-for-node-js-development.md
-  - name: "Step 3: Proof of concept connecting to SQL"
+  - name: 'Step 3: Proof of concept connecting to SQL'
     href: ../connect/node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md
-
-
-
-# docs/connect/odbc/ , plus big expando for docs/odbc/ .
 - name: ODBC
   items:
   - name: Microsoft ODBC Driver for SQL Server
@@ -3011,14 +3000,8 @@
       href: ../connect/odbc/windows/asynchronous-execution-notification-method-sample.md
     - name: Help topics
       items:
-      - name: Data Source Wizard screen 1
-        href: ../connect/odbc/windows/dsn-wizard-1.md
-      - name: Data Source Wizard screen 2
-        href: ../connect/odbc/windows/dsn-wizard-2.md
-      - name: Data Source Wizard screen 3
-        href: ../connect/odbc/windows/dsn-wizard-3.md
-      - name: Data Source Wizard screen 4
-        href: ../connect/odbc/windows/dsn-wizard-4.md
+      - name: ODBC Data Source Administrator DSN
+        href: ../connect/odbc/windows/odbc-administrator-dsn-creation.md
       - name: SQL Server Login dialog
         href: ../connect/odbc/windows/sql-server-login-dialog.md
   - name: Feature guides
@@ -3033,7 +3016,7 @@
       href: ../connect/odbc/dsn-connection-string-attribute.md
     - name: Using Always Encrypted
       href: ../connect/odbc/using-always-encrypted-with-the-odbc-driver.md
-    - name: Using Azure Active Directory
+    - name: Using Microsoft Entra ID
       href: ../connect/odbc/using-azure-active-directory.md
     - name: Using Transparent Network IP Resolution
       href: ../connect/odbc/using-transparent-network-ip-resolution.md
@@ -3045,7 +3028,6 @@
       href: ../connect/odbc/bug-fixes.md
   - name: C / C++ sample application
     href: ../connect/odbc/cpp-code-example-app-connect-access-sql-db.md
-  # docs/odbc/
   - name: ODBC advanced
     items:
     - name: Microsoft Open Database Connectivity (ODBC)
@@ -3233,19 +3215,19 @@
           - name: Basic ODBC Application Steps
             href: ../odbc/reference/develop-app/basic-odbc-application-steps.md
             items:
-            - name: "Step 1: Connect to the Data Source"
+            - name: 'Step 1: Connect to the Data Source'
               href: ../odbc/reference/develop-app/step-1-connect-to-the-data-source.md
-            - name: "Step 2: Initialize the Application"
+            - name: 'Step 2: Initialize the Application'
               href: ../odbc/reference/develop-app/step-2-initialize-the-application.md
-            - name: "Step 3: Build and Execute an SQL Statement"
+            - name: 'Step 3: Build and Execute an SQL Statement'
               href: ../odbc/reference/develop-app/step-3-build-and-execute-an-sql-statement.md
-            - name: "Step 4a: Fetch the Results"
+            - name: 'Step 4a: Fetch the Results'
               href: ../odbc/reference/develop-app/step-4a-fetch-the-results.md
-            - name: "Step 4b: Fetch the Row Count"
+            - name: 'Step 4b: Fetch the Row Count'
               href: ../odbc/reference/develop-app/step-4b-fetch-the-row-count.md
-            - name: "Step 5: Commit the Transaction"
+            - name: 'Step 5: Commit the Transaction'
               href: ../odbc/reference/develop-app/step-5-commit-the-transaction.md
-            - name: "Step 6: Disconnect from the Data Source"
+            - name: 'Step 6: Disconnect from the Data Source'
               href: ../odbc/reference/develop-app/step-6-disconnect-from-the-data-source.md
           - name: Connecting to a Data Source or Driver
             href: ../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md
@@ -4183,9 +4165,9 @@
         - name: ODBC Appendixes
           href: ../odbc/reference/appendixes/odbc-appendixes.md
           items:
-          - name: "Appendix A: ODBC Error Codes"
+          - name: 'Appendix A: ODBC Error Codes'
             href: ../odbc/reference/appendixes/appendix-a-odbc-error-codes.md
-          - name: "Appendix B: ODBC State Transition Tables"
+          - name: 'Appendix B: ODBC State Transition Tables'
             href: ../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md
             items:
             - name: Environment Transitions
@@ -4196,7 +4178,7 @@
               href: ../odbc/reference/appendixes/statement-transitions.md
             - name: Descriptor Transitions
               href: ../odbc/reference/appendixes/descriptor-transitions.md
-          - name: "Appendix C: SQL Grammar"
+          - name: 'Appendix C: SQL Grammar'
             href: ../odbc/reference/appendixes/appendix-c-sql-grammar.md
             items:
             - name: SQL Minimum Grammar
@@ -4236,7 +4218,7 @@
                 href: ../odbc/reference/appendixes/numeric-literal-syntax.md
             - name: Reserved Keywords
               href: ../odbc/reference/appendixes/reserved-keywords.md
-          - name: "Appendix D: Data Types"
+          - name: 'Appendix D: Data Types'
             href: ../odbc/reference/appendixes/appendix-d-data-types.md
             items:
             - name: Using Data Type Identifiers
@@ -4307,54 +4289,54 @@
             - name: Converting Data from SQL to C Data Types
               href: ../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md
               items:
-              - name: "SQL to C: Binary"
+              - name: 'SQL to C: Binary'
                 href: ../odbc/reference/appendixes/sql-to-c-binary.md
-              - name: "SQL to C: Bit"
+              - name: 'SQL to C: Bit'
                 href: ../odbc/reference/appendixes/sql-to-c-bit.md
-              - name: "SQL to C: Character"
+              - name: 'SQL to C: Character'
                 href: ../odbc/reference/appendixes/sql-to-c-character.md
-              - name: "SQL to C: Date"
+              - name: 'SQL to C: Date'
                 href: ../odbc/reference/appendixes/sql-to-c-date.md
-              - name: "SQL to C: Day-Time Intervals"
+              - name: 'SQL to C: Day-Time Intervals'
                 href: ../odbc/reference/appendixes/sql-to-c-day-time-intervals.md
-              - name: "SQL to C: GUID"
+              - name: 'SQL to C: GUID'
                 href: ../odbc/reference/appendixes/sql-to-c-guid.md
-              - name: "SQL to C: Numeric"
+              - name: 'SQL to C: Numeric'
                 href: ../odbc/reference/appendixes/sql-to-c-numeric.md
-              - name: "SQL to C: Timestamp"
+              - name: 'SQL to C: Timestamp'
                 href: ../odbc/reference/appendixes/sql-to-c-timestamp.md
-              - name: "SQL to C: Time"
+              - name: 'SQL to C: Time'
                 href: ../odbc/reference/appendixes/sql-to-c-time.md
-              - name: "SQL to C: Year-Month Intervals"
+              - name: 'SQL to C: Year-Month Intervals'
                 href: ../odbc/reference/appendixes/sql-to-c-year-month-intervals.md
               - name: SQL to C Data Conversion Examples
                 href: ../odbc/reference/appendixes/sql-to-c-data-conversion-examples.md
             - name: Converting Data from C to SQL Data Types
               href: ../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md
               items:
-              - name: "C to SQL: Binary"
+              - name: 'C to SQL: Binary'
                 href: ../odbc/reference/appendixes/c-to-sql-binary.md
-              - name: "C to SQL: Bit"
+              - name: 'C to SQL: Bit'
                 href: ../odbc/reference/appendixes/c-to-sql-bit.md
-              - name: "C to SQL: Character"
+              - name: 'C to SQL: Character'
                 href: ../odbc/reference/appendixes/c-to-sql-character.md
-              - name: "C to SQL: Date"
+              - name: 'C to SQL: Date'
                 href: ../odbc/reference/appendixes/c-to-sql-date.md
-              - name: "C to SQL: Day-Time Intervals"
+              - name: 'C to SQL: Day-Time Intervals'
                 href: ../odbc/reference/appendixes/c-to-sql-day-time-intervals.md
-              - name: "C to SQL: GUID"
+              - name: 'C to SQL: GUID'
                 href: ../odbc/reference/appendixes/c-to-sql-guid.md
-              - name: "C to SQL: Numeric"
+              - name: 'C to SQL: Numeric'
                 href: ../odbc/reference/appendixes/c-to-sql-numeric.md
-              - name: "C to SQL: Timestamp"
+              - name: 'C to SQL: Timestamp'
                 href: ../odbc/reference/appendixes/c-to-sql-timestamp.md
-              - name: "C to SQL: Time"
+              - name: 'C to SQL: Time'
                 href: ../odbc/reference/appendixes/c-to-sql-time.md
-              - name: "C to SQL: Year-Month Intervals"
+              - name: 'C to SQL: Year-Month Intervals'
                 href: ../odbc/reference/appendixes/c-to-sql-year-month-intervals.md
               - name: C to SQL Data Conversion Examples
                 href: ../odbc/reference/appendixes/c-to-sql-data-conversion-examples.md
-          - name: "Appendix E: Scalar Functions"
+          - name: 'Appendix E: Scalar Functions'
             href: ../odbc/reference/appendixes/appendix-e-scalar-functions.md
             items:
             - name: String Functions
@@ -4369,7 +4351,7 @@
               href: ../odbc/reference/appendixes/explicit-data-type-conversion-function.md
             - name: SQL-92 CAST Function
               href: ../odbc/reference/appendixes/sql-92-cast-function.md
-          - name: "Appendix F: ODBC Cursor Library"
+          - name: 'Appendix F: ODBC Cursor Library'
             href: ../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md
             items:
             - name: Using the ODBC Cursor Library
@@ -4458,7 +4440,7 @@
                   href: ../odbc/reference/appendixes/sqlsetstmtattr-cursor-library.md
             - name: ODBC Cursor Library Error Codes
               href: ../odbc/reference/appendixes/odbc-cursor-library-error-codes.md
-          - name: "Appendix G: Driver Guidelines for Backward Compatibility"
+          - name: 'Appendix G: Driver Guidelines for Backward Compatibility'
             href: ../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md
             items:
             - name: Block Cursors, Scrollable Cursors, and Backward Compatibility
@@ -4797,7 +4779,7 @@
               href: ../odbc/microsoft/create-index-statement.md
             - name: Date Arithmetic
               href: ../odbc/microsoft/date-arithmetic.md
-            - name: "Jet: Date, Time, and Timestamp Literals"
+            - name: 'Jet: Date, Time, and Timestamp Literals'
               href: ../odbc/microsoft/jet-date-time-and-timestamp-literals.md
             - name: DROP INDEX Statement
               href: ../odbc/microsoft/drop-index-statement.md
@@ -4809,87 +4791,44 @@
               href: ../odbc/microsoft/order-by-expression-list.md
             - name: ORDER BY with GROUP BY
               href: ../odbc/microsoft/order-by-with-group-by.md
-            - name: "Jet: Outer Joins"
+            - name: 'Jet: Outer Joins'
               href: ../odbc/microsoft/jet-outer-joins.md
             - name: Scalar Functions
               href: ../odbc/microsoft/scalar-functions.md
             - name: Table Names
               href: ../odbc/microsoft/table-names.md
           - name: Limitations
-            href: ../odbc/microsoft/limitations.md
             items:
-            - name: Aggregate Function Limitations
-              href: ../odbc/microsoft/aggregate-function-limitations.md
-            - name: Column Name Limitations
+            - name: Overview
+              href: ../odbc/microsoft/limitations.md
+            - name: Column name limitations
               href: ../odbc/microsoft/column-name-limitations.md
-            - name: Data Type Limitations
+            - name: Data type limitations
               href: ../odbc/microsoft/data-type-limitations.md
-            - name: Date Arithmetic Limitations
-              href: ../odbc/microsoft/date-arithmetic-limitations.md
-            - name: Identifiers Limitations
+            - name: Identifiers limitations
               href: ../odbc/microsoft/identifiers-limitations.md
-            - name: Index Name Limitations
-              href: ../odbc/microsoft/index-name-limitations.md
-            - name: Parameterized Query Limitations
-              href: ../odbc/microsoft/parameterized-query-limitations.md
-            - name: Reserved Word Limitations
+            - name: Reserved word limitations
               href: ../odbc/microsoft/reserved-word-limitations.md
-            - name: Scalar Function Limitations
-              href: ../odbc/microsoft/scalar-function-limitations.md
-            - name: Set Functions Limitations
-              href: ../odbc/microsoft/set-functions-limitations.md
-            - name: Sorting Limitations
-              href: ../odbc/microsoft/sorting-limitations.md
-            - name: String Limitations
+            - name: String limitations
               href: ../odbc/microsoft/string-limitations.md
-            - name: Table Name Limitations
+            - name: Table name limitations
               href: ../odbc/microsoft/table-name-limitations.md
-            - name: Table References Limitations
-              href: ../odbc/microsoft/table-references-limitations.md
-            - name: Views Limitations
-              href: ../odbc/microsoft/views-limitations.md
-            - name: ALTER TABLE Statement Limitations
+            - name: ALTER TABLE statement limitations
               href: ../odbc/microsoft/alter-table-statement-limitations.md
-            - name: AND Predicate Limitations
-              href: ../odbc/microsoft/and-predicate-limitations.md
-            - name: CALL Statement Limitations
-              href: ../odbc/microsoft/call-statement-limitations.md
-            - name: CONVERT Function Limitations
-              href: ../odbc/microsoft/convert-function-limitations.md
-            - name: CREATE INDEX Statement Limitations
+            - name: CREATE INDEX statement limitations
               href: ../odbc/microsoft/create-index-statement-limitations.md
-            - name: CREATE TABLE Statement Limitations
+            - name: CREATE TABLE statement limitations
               href: ../odbc/microsoft/create-table-statement-limitations.md
-            - name: DELETE Statement Limitations
+            - name: DELETE statement limitations
               href: ../odbc/microsoft/delete-statement-limitations.md
-            - name: DISTINCT Keyword Limitations
-              href: ../odbc/microsoft/distinct-keyword-limitations.md
-            - name: DROP INDEX Statement Limitations
-              href: ../odbc/microsoft/drop-index-statement-limitations.md
-            - name: DROP TABLE Statement Limitations
-              href: ../odbc/microsoft/drop-table-statement-limitations.md
-            - name: FROM Clause Limitations
-              href: ../odbc/microsoft/from-clause-limitations.md
-            - name: HAVING Clause Limitations
-              href: ../odbc/microsoft/having-clause-limitations.md
-            - name: INSERT Statement Limitations
+            - name: INSERT statement limitations
               href: ../odbc/microsoft/insert-statement-limitations.md
-            - name: LIKE Predicate Limitations
+            - name: LIKE predicate limitations
               href: ../odbc/microsoft/like-predicate-limitations.md
-            - name: NOT NULL Limitations
-              href: ../odbc/microsoft/not-null-limitations.md
-            - name: ORDER BY Clause Limitations
-              href: ../odbc/microsoft/order-by-clause-limitations.md
-            - name: SELECT DISTINCT Limitations
-              href: ../odbc/microsoft/select-distinct-limitations.md
-            - name: SELECT Statement Limitations
+            - name: SELECT statement limitations
               href: ../odbc/microsoft/select-statement-limitations.md
-            - name: UPDATE Statement Limitations
+            - name: UPDATE statement limitations
               href: ../odbc/microsoft/update-statement-limitations.md
-            - name: WHERE Clause Limitations
-              href: ../odbc/microsoft/where-clause-limitations.md
-            - name: WHERE CURRENT OF Clause Limitations
-              href: ../odbc/microsoft/where-current-of-clause-limitations.md
           - name: ODBC Errors
             href: ../odbc/microsoft/odbc-errors.md
             items:
@@ -4969,7 +4908,7 @@
               href: ../odbc/microsoft/using-operating-system-authentication.md
             - name: Using SQLConfigDatasource with the ODBC Driver for Oracle
               href: ../odbc/microsoft/using-sqlconfigdatasource-with-the-odbc-driver-for-oracle.md
-            - name: Limitations of Using Keyset-Driven Cursors
+            - name: Limitations of using keyset-driven cursors
               href: ../odbc/microsoft/limitations-of-using-keyset-driven-cursors.md
             - name: Stored Procedures (ODBC Driver for Oracle)
               href: ../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md
@@ -5250,10 +5189,6 @@
         href: ../odbc/odbc-test.md
       - name: ODBCconf.exe
         href: ../odbc/odbcconf-exe.md
-  # docs/connect/  resumed.
-
-
-
 - name: OLE DB
   items:
   - name: Microsoft OLE DB Driver for SQL Server
@@ -5303,7 +5238,7 @@
       href: ../connect/oledb/features/oledb-driver-for-sql-server-support-for-localdb.md
     - name: Table-Valued Parameters (OLE DB Driver for SQL Server)
       href: ../connect/oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md
-    - name: Using Azure Active Directory
+    - name: Using Microsoft Entra ID
       href: ../connect/oledb/features/using-azure-active-directory.md
     - name: Using Data Classification
       href: ../connect/oledb/features/using-data-classification.md
@@ -5662,9 +5597,6 @@
       href: ../connect/oledb/help-topics/sql-server-login-dialog.md
     - name: Universal Data Link (UDL) configuration
       href: ../connect/oledb/help-topics/data-link-pages.md
-
-
-
 - name: PHP
   items:
   - name: Microsoft Drivers for PHP for SQL Server
@@ -5672,13 +5604,13 @@
   - name: Getting started
     href: ../connect/php/getting-started-with-the-php-sql-driver.md
     items:
-    - name: "Step 1: Configure development environment"
+    - name: 'Step 1: Configure development environment'
       href: ../connect/php/step-1-configure-development-environment-for-php-development.md
-    - name: "Step 2: Create a SQL database"
+    - name: 'Step 2: Create a SQL database'
       href: ../connect/php/step-2-create-a-sql-database-for-php-development.md
-    - name: "Step 3: Proof of concept connecting to SQL"
+    - name: 'Step 3: Proof of concept connecting to SQL'
       href: ../connect/php/step-3-proof-of-concept-connecting-to-sql-using-php.md
-    - name: "Step 4: Connect resiliently to SQL"
+    - name: 'Step 4: Connect resiliently to SQL'
       href: ../connect/php/step-4-connect-resiliently-to-sql-with-php.md
   - name: Overview
     href: ../connect/php/overview-of-the-php-sql-driver.md
@@ -5707,17 +5639,17 @@
     - name: Connecting to the Server
       href: ../connect/php/connecting-to-the-server.md
       items:
-      - name: "How to: Connect Using Windows Authentication"
+      - name: 'How to: Connect Using Windows Authentication'
         href: ../connect/php/how-to-connect-using-windows-authentication.md
-      - name: "How to: Connect Using SQL Server Authentication"
+      - name: 'How to: Connect Using SQL Server Authentication'
         href: ../connect/php/how-to-connect-using-sql-server-authentication.md
-      - name: "How to: Connect Using Azure Active Directory Authentication"
+      - name: 'How to: Connect Using Microsoft Entra authentication'
         href: ../connect/php/azure-active-directory.md
-      - name: "How to: Connect on a Specified Port"
+      - name: 'How to: Connect on a Specified Port'
         href: ../connect/php/how-to-connect-on-a-specified-port.md
       - name: Connection Pooling
         href: ../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md
-      - name: "How to: Disable Multiple Active Result Sets (MARS)"
+      - name: 'How to: Disable Multiple Active Result Sets (MARS)'
         href: ../connect/php/how-to-disable-multiple-active-resultsets-mars.md
       - name: Connection Options
         href: ../connect/php/connection-options.md
@@ -5741,18 +5673,18 @@
         items:
         - name: Data Types with Stream Support Using the SQLSRV Driver
           href: ../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md
-        - name: "How to: Retrieve Character Data as a Stream Using the SQLSRV Driver"
+        - name: 'How to: Retrieve Character Data as a Stream Using the SQLSRV Driver'
           href: ../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md
-        - name: "How to: Retrieve Binary Data as a Stream Using the SQLSRV Driver"
+        - name: 'How to: Retrieve Binary Data as a Stream Using the SQLSRV Driver'
           href: ../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md
       - name: Using Directional Parameters
         href: ../connect/php/using-directional-parameters.md
         items:
-        - name: "How to: Specify Parameter Direction Using the SQLSRV Driver"
+        - name: 'How to: Specify Parameter Direction Using the SQLSRV Driver'
           href: ../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md
-        - name: "How to: Retrieve Output Parameters Using the SQLSRV Driver"
+        - name: 'How to: Retrieve Output Parameters Using the SQLSRV Driver'
           href: ../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md
-        - name: "How to: Retrieve Input and Output Parameters Using the SQLSRV Driver"
+        - name: 'How to: Retrieve Input and Output Parameters Using the SQLSRV Driver'
           href: ../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md
       - name: Specifying a Cursor Type and Selecting Rows
         href: ../connect/php/specifying-a-cursor-type-and-selecting-rows.md
@@ -5761,25 +5693,22 @@
           href: ../connect/php/cursor-types-sqlsrv-driver.md
         - name: Cursor Types (PDO_SQLSRV Driver)
           href: ../connect/php/cursor-types-pdo-sqlsrv-driver.md
-      - name: "How to: Retrieve Date and Time Types as Strings Using the SQLSRV Driver"
+      - name: 'How to: Retrieve Date and Time Types as Strings Using the SQLSRV Driver'
         href: ../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md
-
-  # FYI, from merged PR 8858, manually reimplemented here.
-      - name: "How to: Retrieve Date and Time Types as PHP Datetime Objects Using the PDO_SQLSRV Driver"
+      - name: 'How to: Retrieve Date and Time Types as PHP Datetime Objects Using the PDO_SQLSRV Driver'
         href: ../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md
       - name: Formatting Decimal Strings and Money Values (SQLSRV Driver)
         href: ../connect/php/formatting-decimals-sqlsrv-driver.md
       - name: Formatting Decimal Strings and Money Values (PDO_SQLSRV Driver)
         href: ../connect/php/formatting-decimals-pdo-sqlsrv-driver.md
-
     - name: Updating Data
       href: ../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md
       items:
-      - name: "How to: Perform Parameterized Queries"
+      - name: 'How to: Perform Parameterized Queries'
         href: ../connect/php/how-to-perform-parameterized-queries.md
-      - name: "How to: Send Data as a Stream"
+      - name: 'How to: Send Data as a Stream'
         href: ../connect/php/how-to-send-data-as-a-stream.md
-      - name: "How to: Perform Transactions"
+      - name: 'How to: Perform Transactions'
         href: ../connect/php/how-to-perform-transactions.md
     - name: Converting Data Types
       href: ../connect/php/converting-data-types.md
@@ -5788,20 +5717,20 @@
         href: ../connect/php/default-sql-server-data-types.md
       - name: Default PHP Data Types
         href: ../connect/php/default-php-data-types.md
-      - name: "How to: Specify SQL Server Data Types When Using the SQLSRV Driver"
+      - name: 'How to: Specify SQL Server Data Types When Using the SQLSRV Driver'
         href: ../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md
-      - name: "How to: Specify PHP Data Types"
+      - name: 'How to: Specify PHP Data Types'
         href: ../connect/php/how-to-specify-php-data-types.md
-      - name: "How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support"
+      - name: 'How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support'
         href: ../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md
-      - name: "How to: Send and Retrieve ASCII Data in Linux and macOS"
+      - name: 'How to: Send and Retrieve ASCII Data in Linux and macOS'
         href: ../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md
     - name: Handling Errors and Warnings
       href: ../connect/php/handling-errors-and-warnings.md
       items:
-      - name: "How to: Configure Error and Warning Handling Using the SQLSRV Driver"
+      - name: 'How to: Configure Error and Warning Handling Using the SQLSRV Driver'
         href: ../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md
-      - name: "How to: Handle Errors and Warnings Using the SQLSRV Driver"
+      - name: 'How to: Handle Errors and Warnings Using the SQLSRV Driver'
         href: ../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md
     - name: Logging Activity
       href: ../connect/php/logging-activity.md
@@ -5876,74 +5805,74 @@
       - name: PDO Class
         href: ../connect/php/pdo-class.md
         items:
-        - name: "PDO::__construct"
+        - name: PDO::__construct
           href: ../connect/php/pdo-construct.md
-        - name: "PDO::beginTransaction"
+        - name: PDO::beginTransaction
           href: ../connect/php/pdo-begintransaction.md
-        - name: "PDO::commit"
+        - name: PDO::commit
           href: ../connect/php/pdo-commit.md
-        - name: "PDO::errorCode"
+        - name: PDO::errorCode
           href: ../connect/php/pdo-errorcode.md
-        - name: "PDO::errorInfo"
+        - name: PDO::errorInfo
           href: ../connect/php/pdo-errorinfo.md
-        - name: "PDO::exec"
+        - name: PDO::exec
           href: ../connect/php/pdo-exec.md
-        - name: "PDO::getAttribute"
+        - name: PDO::getAttribute
           href: ../connect/php/pdo-getattribute.md
-        - name: "PDO::getAvailableDrivers"
+        - name: PDO::getAvailableDrivers
           href: ../connect/php/pdo-getavailabledrivers.md
-        - name: "PDO::lastInsertId"
+        - name: PDO::lastInsertId
           href: ../connect/php/pdo-lastinsertid.md
-        - name: "PDO::prepare"
+        - name: PDO::prepare
           href: ../connect/php/pdo-prepare.md
-        - name: "PDO::query"
+        - name: PDO::query
           href: ../connect/php/pdo-query.md
-        - name: "PDO::quote"
+        - name: PDO::quote
           href: ../connect/php/pdo-quote.md
-        - name: "PDO::rollback"
+        - name: PDO::rollback
           href: ../connect/php/pdo-rollback.md
-        - name: "PDO::setAttribute"
+        - name: PDO::setAttribute
           href: ../connect/php/pdo-setattribute.md
       - name: PDOStatement Class
         href: ../connect/php/pdostatement-class.md
         items:
-        - name: "PDOStatement::bindColumn"
+        - name: PDOStatement::bindColumn
           href: ../connect/php/pdostatement-bindcolumn.md
-        - name: "PDOStatement::bindParam"
+        - name: PDOStatement::bindParam
           href: ../connect/php/pdostatement-bindparam.md
-        - name: "PDOStatement::bindValue"
+        - name: PDOStatement::bindValue
           href: ../connect/php/pdostatement-bindvalue.md
-        - name: "PDOStatement::closeCursor"
+        - name: PDOStatement::closeCursor
           href: ../connect/php/pdostatement-closecursor.md
-        - name: "PDOStatement::columnCount"
+        - name: PDOStatement::columnCount
           href: ../connect/php/pdostatement-columncount.md
-        - name: "PDOStatement::debugDumpParams"
+        - name: PDOStatement::debugDumpParams
           href: ../connect/php/pdostatement-debugdumpparams.md
-        - name: "PDOStatement::errorCode"
+        - name: PDOStatement::errorCode
           href: ../connect/php/pdostatement-errorcode.md
-        - name: "PDOStatement::errorInfo"
+        - name: PDOStatement::errorInfo
           href: ../connect/php/pdostatement-errorinfo.md
-        - name: "PDOStatement::execute"
+        - name: PDOStatement::execute
           href: ../connect/php/pdostatement-execute.md
-        - name: "PDOStatement::fetch"
+        - name: PDOStatement::fetch
           href: ../connect/php/pdostatement-fetch.md
-        - name: "PDOStatement::fetchAll"
+        - name: PDOStatement::fetchAll
           href: ../connect/php/pdostatement-fetchall.md
-        - name: "PDOStatement::fetchColumn"
+        - name: PDOStatement::fetchColumn
           href: ../connect/php/pdostatement-fetchcolumn.md
-        - name: "PDOStatement::fetchObject"
+        - name: PDOStatement::fetchObject
           href: ../connect/php/pdostatement-fetchobject.md
-        - name: "PDOStatement::getAttribute"
+        - name: PDOStatement::getAttribute
           href: ../connect/php/pdostatement-getattribute.md
-        - name: "PDOStatement::getColumnMeta"
+        - name: PDOStatement::getColumnMeta
           href: ../connect/php/pdostatement-getcolumnmeta.md
-        - name: "PDOStatement::nextRowset"
+        - name: PDOStatement::nextRowset
           href: ../connect/php/pdostatement-nextrowset.md
-        - name: "PDOStatement::rowCount"
+        - name: PDOStatement::rowCount
           href: ../connect/php/pdostatement-rowcount.md
-        - name: "PDOStatement::setAttribute"
+        - name: PDOStatement::setAttribute
           href: ../connect/php/pdostatement-setattribute.md
-        - name: "PDOStatement::setFetchMode"
+        - name: PDOStatement::setFetchMode
           href: ../connect/php/pdostatement-setfetchmode.md
   - name: Security considerations
     href: ../connect/php/security-considerations-for-php-sql-driver.md
@@ -5954,9 +5883,6 @@
       href: ../connect/php/example-application-pdo-sqlsrv-driver.md
     - name: Example application (SQLSRV)
       href: ../connect/php/example-application-sqlsrv-driver.md
-
-
-
 - name: Python
   items:
   - name: Python Driver for SQL Server
@@ -5964,41 +5890,35 @@
   - name: Python SQL Driver - pyodbc
     href: ../connect/python/pyodbc/python-sql-driver-pyodbc.md
     items:
-    - name: "Step 1: Configure development environment"
+    - name: 'Step 1: Configure development environment'
       href: ../connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md
-    - name: "Step 2: Create a SQL database"
+    - name: 'Step 2: Create a SQL database'
       href: ../connect/python/pyodbc/step-2-create-a-sql-database-for-pyodbc-python-development.md
-    - name: "Step 3: Proof of concept connecting to SQL"
+    - name: 'Step 3: Proof of concept connecting to SQL'
       href: ../connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md
   - name: Python SQL Driver - pymssql
     href: ../connect/python/pymssql/python-sql-driver-pymssql.md
     items:
-    - name: "Step 1: Configure development environment"
+    - name: 'Step 1: Configure development environment'
       href: ../connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development.md
-    - name: "Step 2: Create a SQL database"
+    - name: 'Step 2: Create a SQL database'
       href: ../connect/python/pymssql/step-2-create-a-sql-database-for-pymssql-python-development.md
-    - name: "Step 3: Proof of concept connecting to SQL"
+    - name: 'Step 3: Proof of concept connecting to SQL'
       href: ../connect/python/pymssql/step-3-proof-of-concept-connecting-to-sql-using-pymssql.md
-
-
-
 - name: Ruby
   items:
   - name: Ruby Driver for SQL Server
     href: ../connect/ruby/ruby-driver-for-sql-server.md
-  - name: "Step 1: Configure development environment"
+  - name: 'Step 1: Configure development environment'
     href: ../connect/ruby/step-1-configure-development-environment-for-ruby-development.md
-  - name: "Step 2: Create a SQL database"
+  - name: 'Step 2: Create a SQL database'
     href: ../connect/ruby/step-2-create-a-sql-database-for-ruby-development.md
-  - name: "Step 3: Proof of concept connecting to SQL"
+  - name: 'Step 3: Proof of concept connecting to SQL'
     href: ../connect/ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md
-
 - name: Spark
   items:
   - name: Connector for SQL Server
     href: ../connect/spark/connector.md
-
-# docs/ado/
 - name: ADO
   items:
   - name: Microsoft ActiveX Data Objects (ADO)
@@ -6009,7 +5929,7 @@
     href: ../ado/guide/data/ado-fundamentals.md
   - name: ADO Objects and Collections
     href: ../ado/guide/data/ado-objects-and-collections.md
-  - name: "HelloData: A Simple ADO Application"
+  - name: 'HelloData: A Simple ADO Application'
     href: ../ado/guide/data/hellodata-a-simple-ado-application.md
     items:
     - name: Comments on HelloData
@@ -6117,7 +6037,7 @@
       href: ../ado/guide/data/determining-what-is-supported.md
     - name: Deleting Records Using the Delete Method
       href: ../ado/guide/data/deleting-records-using-the-delete-method.md
-    - name: "Alternatives: Using SQL Statements"
+    - name: 'Alternatives: Using SQL Statements'
       href: ../ado/guide/data/alternatives-using-sql-statements.md
   - name: Updating and Persisting Data
     href: ../ado/guide/data/updating-and-persisting-data.md
@@ -6130,7 +6050,7 @@
       - name: Batch Mode
         href: ../ado/guide/data/batch-mode.md
         items:
-        - name: "Sending the Updates: UpdateBatch Method"
+        - name: 'Sending the Updates: UpdateBatch Method'
           href: ../ado/guide/data/sending-the-updates-updatebatch-method.md
         - name: Filtering for Updated Records
           href: ../ado/guide/data/filtering-for-updated-records.md
@@ -6140,7 +6060,7 @@
           href: ../ado/guide/data/detecting-and-resolving-conflicts.md
         - name: Disconnecting and Reconnecting the Recordset
           href: ../ado/guide/data/disconnecting-and-reconnecting-the-recordset.md
-        - name: "Updating JOINed Results: Unique Table"
+        - name: 'Updating JOINed Results: Unique Table'
           href: ../ado/guide/data/updating-joined-results-unique-table.md
       - name: Transaction Processing
         href: ../ado/guide/data/transaction-processing.md
@@ -6213,15 +6133,15 @@
     - name: ADO Event Instantiation by Language
       href: ../ado/guide/data/ado-event-instantiation-by-language.md
       items:
-      - name: "ADO Event Instantiation: Visual Basic"
+      - name: 'ADO Event Instantiation: Visual Basic'
         href: ../ado/guide/data/ado-event-instantiation-visual-basic.md
-      - name: "ADO Event Instantiation: Visual C++"
+      - name: 'ADO Event Instantiation: Visual C++'
         href: ../ado/guide/data/ado-event-instantiation-visual-c.md
-      - name: "ADO Event Instantiation: VBScript"
+      - name: 'ADO Event Instantiation: VBScript'
         href: ../ado/guide/data/ado-event-instantiation-vbscript.md
-      - name: "ADO Event Instantiation: JScript"
+      - name: 'ADO Event Instantiation: JScript'
         href: ../ado/guide/data/ado-event-instantiation-jscript.md
-      - name: "ADO Event Instantiation: ADO and WFC"
+      - name: 'ADO Event Instantiation: ADO and WFC'
         href: ../ado/guide/data/ado-event-instantiation-ado-and-wfc.md
   - name: Understanding Cursors and Locks
     href: ../ado/guide/data/understanding-cursors-and-locks.md
@@ -6317,13 +6237,13 @@
       - name: Internet Publishing Scenario
         href: ../ado/guide/data/internet-publishing-scenario.md
         items:
-        - name: "Step 1: Set Up the Visual Basic Project"
+        - name: 'Step 1: Set Up the Visual Basic Project'
           href: ../ado/guide/data/step-1-set-up-the-visual-basic-project.md
-        - name: "Step 2: Initialize the Main List Box"
+        - name: 'Step 2: Initialize the Main List Box'
           href: ../ado/guide/data/step-2-initialize-the-main-list-box.md
-        - name: "Step 3: Populate the Fields List Box"
+        - name: 'Step 3: Populate the Fields List Box'
           href: ../ado/guide/data/step-3-populate-the-fields-list-box.md
-        - name: "Step 4: Populate the Details Text Box"
+        - name: 'Step 4: Populate the Details Text Box'
           href: ../ado/guide/data/step-4-populate-the-details-text-box.md
       - name: Absolute and Relative URLs
         href: ../ado/guide/data/absolute-and-relative-urls.md
@@ -6380,17 +6300,17 @@
   - name: RDS Tutorial
     href: ../ado/guide/remote-data-service/rds-tutorial.md
     items:
-    - name: "Step 1: Specify a Server Program (RDS Tutorial)"
+    - name: 'Step 1: Specify a Server Program (RDS Tutorial)'
       href: ../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md
-    - name: "Step 2: Invoke the Server Program (RDS Tutorial)"
+    - name: 'Step 2: Invoke the Server Program (RDS Tutorial)'
       href: ../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md
-    - name: "Step 3: Server Obtains a Recordset (RDS Tutorial)"
+    - name: 'Step 3: Server Obtains a Recordset (RDS Tutorial)'
       href: ../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md
-    - name: "Step 4: Server Returns the Recordset (RDS Tutorial)"
+    - name: 'Step 4: Server Returns the Recordset (RDS Tutorial)'
       href: ../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md
-    - name: "Step 5: DataControl is Made Usable (RDS Tutorial)"
+    - name: 'Step 5: DataControl is Made Usable (RDS Tutorial)'
       href: ../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md
-    - name: "Step 6: Changes are Sent to the Server (RDS Tutorial)"
+    - name: 'Step 6: Changes are Sent to the Server (RDS Tutorial)'
       href: ../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md
     - name: RDS Tutorial (VBScript)
       href: ../ado/guide/remote-data-service/rds-tutorial-vbscript.md
@@ -6447,7 +6367,7 @@
       items:
       - name: Configuring RDS on Windows 2000
         href: ../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md
-      - name: "Internet Server Error: Access Denied"
+      - name: 'Internet Server Error: Access Denied'
         href: ../ado/guide/remote-data-service/internet-server-error-access-denied.md
       - name: RDS Returns "Stream Not Read" Error
         href: ../ado/guide/remote-data-service/rds-returns-stream-not-read-error.md
@@ -6457,7 +6377,7 @@
         href: ../ado/guide/remote-data-service/ensuring-sufficient-tempdb-space.md
       - name: Minimizing Log File Space Usage
         href: ../ado/guide/remote-data-service/minimizing-log-file-space-usage.md
-  - name: "Appendix A: Providers"
+  - name: 'Appendix A: Providers'
     href: ../ado/guide/appendixes/appendix-a-providers.md
     items:
     - name: Microsoft Cursor Service for OLE DB
@@ -6484,7 +6404,7 @@
       href: ../ado/guide/appendixes/microsoft-ole-db-simple-provider.md
     - name: Microsoft Data Shaping Service for OLE DB
       href: ../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md
-  - name: "Appendix B: ADO Errors"
+  - name: 'Appendix B: ADO Errors'
     href: ../ado/guide/appendixes/appendix-b-ado-errors.md
     items:
     - name: ADO Error Codes
@@ -6495,7 +6415,7 @@
       href: ../ado/guide/appendixes/internet-explorer-error-codes.md
     - name: Internet Information Services Error Codes
       href: ../ado/guide/appendixes/internet-information-services-error-codes.md
-  - name: "Appendix C: Programming with ADO"
+  - name: 'Appendix C: Programming with ADO'
     href: ../ado/guide/appendixes/appendix-c-programming-with-ado.md
     items:
     - name: ADO Java Class Wrappers
@@ -6524,7 +6444,7 @@
         href: ../ado/guide/appendixes/visual-c-extensions-header.md
       - name: Using Visual C++ Extensions
         href: ../ado/guide/appendixes/using-visual-c-extensions.md
-  - name: "Appendix D: ADO Samples"
+  - name: 'Appendix D: ADO Samples'
     href: ../ado/guide/appendixes/appendix-d-ado-samples.md
   - name: Referencing the ADO Libraries In a Visual C++ Application
     href: ../ado/guide/referencing-the-ado-libraries-in-a-visual-c-application.md
@@ -7794,7 +7714,7 @@
         href: ../ado/reference/adox-api/indexnulls-property-example-vb.md
       - name: Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VB)
         href: ../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md
-      - name: "ADOX Code Example: NumericScale and Precision Properties Example (VB)"
+      - name: 'ADOX Code Example: NumericScale and Precision Properties Example (VB)'
         href: ../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md
       - name: Parameters Collection, Command Property Example (VB)
         href: ../ado/reference/adox-api/parameters-collection-command-property-example-vb.md
@@ -7863,7 +7783,7 @@
         href: ../ado/reference/adox-api/parentcatalog-property-example-vc.md
       - name: PrimaryKey and Unique Properties Example (VC++)
         href: ../ado/reference/adox-api/primarykey-and-unique-properties-example-vc.md
-  - name: "Deprecated: RDS API Reference"
+  - name: 'Deprecated: RDS API Reference'
     href: ../ado/reference/rds-api/rds-api-reference.md
   - name: RDS Objects
     href: ../ado/reference/rds-api/rds-objects.md

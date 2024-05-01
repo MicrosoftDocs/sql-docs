@@ -1,5 +1,5 @@
 ---
-title: "System-Level Tasks"
+title: "System-level tasks"
 description: "Tasks and Permissions - System-Level Tasks"
 author: maggiesMSFT
 ms.author: maggies
@@ -11,13 +11,13 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "system-level tasks [Reporting Services]"
 ---
-# Tasks and Permissions - System-Level Tasks
-  A system-level task is a collection of permissions that relate to operations that apply to the report server site as a whole. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] also includes item-level tasks that apply to specific items. For more information, see [Item-Level Tasks](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md). For more information about tasks and permissions in general, see [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md).  
+# System-level tasks
+  A system-level task is a collection of permissions that relate to operations that apply to the report server site as a whole. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] also includes item-level tasks that apply to specific items. For more information, see [Item-level tasks](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md). For more information about tasks and permissions in general, see [Tasks and permissions](../../reporting-services/security/tasks-and-permissions.md).  
   
 > [!NOTE]  
 >  If you are working with these tasks programmatically, you must use methods that support system-level tasks. For more information, see <xref:ReportService2010.ReportingService2010.ListTasks%2A> and <xref:ReportService2010.ReportingService2010.ListRoles%2A>.  
   
-## Permissions in System-Level Tasks  
+## Permissions in system-level tasks  
  The following table identifies the collection of permissions for each system task. Permissions are listed for informational purposes only, to provide a more exact description of the functionality available through each task.  
   
 |Task|Permissions|  
@@ -32,7 +32,7 @@ helpviewer_keywords:
 |View report server properties|Read System Properties|  
 |View shared schedules|Read Schedules|  
   
-## See Also  
- [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+## Related content
+ [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

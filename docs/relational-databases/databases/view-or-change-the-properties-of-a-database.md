@@ -111,7 +111,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
      To verify the change, select the second `SELECT` statement, and click **Execute**.  
   
-     [!code-sql[DatabaseDDL#AlterDatabase9](../../relational-databases/databases/codesnippet/tsql/view-or-change-the-prope_1.sql)]  
+     :::code language="sql" source="codesnippet/tsql/view-or-change-the-prope_1.sql":::
   
 #### To change the database-scoped properties using ALTER DATABASE SCOPED CONFIGURATION  
   

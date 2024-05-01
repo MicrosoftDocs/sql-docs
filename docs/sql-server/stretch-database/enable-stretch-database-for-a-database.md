@@ -110,9 +110,9 @@ Enabling Stretch Database on a database or a table requires db_owner permissions
 
      - The service account under which the instance of SQL Server is running is a domain account.
 
-     - The domain account belongs to a domain whose Active Directory is federated with Azure Active Directory.
+     - The domain account belongs to a domain whose Active Directory is [federated](/entra/identity/hybrid/connect/whatis-fed) with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)).
 
-     - The remote Azure server is configured to support Azure Active Directory authentication.
+     - The remote Azure server is configured to support Microsoft Entra authentication.
 
      - The service account under which the instance of SQL Server is running must be configured as a `dbmanager` or `sysadmin` account on the remote Azure server.
 

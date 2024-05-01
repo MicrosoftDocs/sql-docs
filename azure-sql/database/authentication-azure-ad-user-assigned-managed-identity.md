@@ -4,11 +4,11 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Learn about system assigned and user assigned managed identities in Microsoft Entra for Azure SQL Database and Azure SQL Managed Instance.
 author: nofield
 ms.author: nofield
-ms.reviewer: vanto, wiassaf
+ms.reviewer: vanto, wiassaf, mathoma
 ms.date: 10/24/2023
 ms.service: sql-db-mi
 ms.subservice: security
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.topic: conceptual
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
@@ -17,7 +17,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) supports two types of managed identities: system-assigned managed identity (SMI) and user-assigned managed identity (UMI). For more information, see [Managed identity types](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types).
+Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) supports two types of managed identities: system-assigned managed identity (SMI) and user-assigned managed identity (UMI). For more information, see [Managed identity types](/entra/identity/managed-identities-azure-resources/overview#managed-identity-types).
 
 An SMI is automatically assigned to Azure SQL Managed Instance when it's created. When you're using Microsoft Entra authentication with Azure SQL Database, you must assign an SMI when Azure service principals are used to create Microsoft Entra users in SQL Database.
 
@@ -46,7 +46,7 @@ There are several benefits of using a UMI as a server identity:
 
 ## <a id="creating-a-user-assigned-managed-identity"></a> Create a user-assigned managed identity
 
-For information on how to create a UMI, see [Manage user-assigned managed identities](/azure/active-directory/managed-identities-azure-resources/how-manage-user-assigned-managed-identities).
+For information on how to create a UMI, see [Manage user-assigned managed identities](/entra/identity/managed-identities-azure-resources/how-manage-user-assigned-managed-identities).
 
 ## Permissions
 
@@ -55,7 +55,7 @@ After the UMI is created, some permissions are needed to allow the UMI to read f
 These permissions should be granted before you provision a logical server or managed instance. After you grant the permissions to the UMI, they're enabled for all servers or instances that are created with the UMI assigned as a server identity.
 
 > [!IMPORTANT]
-> Only a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) or [Privileged Role Administrator](/azure/active-directory/roles/permissions-reference#privileged-role-administrator) can grant these permissions.
+> Only a [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) or [Privileged Role Administrator](/entra/identity/role-based-access-control/permissions-reference#privileged-role-administrator) can grant these permissions.
 
 - [User.Read.All](/graph/permissions-reference#user-permissions): Allows access to Microsoft Entra user information.
 - [GroupMember.Read.All](/graph/permissions-reference#group-permissions): Allows access to Microsoft Entra group information.
@@ -67,58 +67,65 @@ The following sample PowerShell script grants the necessary permissions for a ma
 
 To run the script, you must sign in as a user with a Global Administrator or Privileged Role Administrator role.
 
-The script grants the `User.Read.All`, `GroupMember.Read.All`, and `Application.Read.ALL` permissions to a UMI or an SMI to access [Microsoft Graph](/graph/auth/auth-concepts#microsoft-graph-permissions).
+The script grants the `User.Read.All`, `GroupMember.Read.All`, and `Application.Read.ALL` permissions to a managed identity to access [Microsoft Graph](/graph/auth/auth-concepts#microsoft-graph-permissions).
 
 ```powershell
-# Script to assign permissions to the UMI "umiservertest"
-
-import-module AzureAD
-$tenantId = '<tenantId>' # Your Azure AD tenant ID
-
-Connect-AzureAD -TenantID $tenantId
-# Log in as a user with a "Global Administrator" or "Privileged Role Administrator" role
 # Script to assign permissions to an existing UMI 
-# The following Microsoft Graph permissions are required: 
+# The following required Microsoft Graph permissions will be assigned: 
 #   User.Read.All
 #   GroupMember.Read.All
-#   Application.Read.ALL
+#   Application.Read.All
+
+Import-Module Microsoft.Graph.Authentication
+Import-Module Microsoft.Graph.Applications
+
+$tenantId = "<tenantId>"        # Your tenant ID
+$MSIName = "<managedIdentity>"; # Name of your managed identity
+
+# Log in as a user with the "Global Administrator" or "Privileged Role Administrator" role
+Connect-MgGraph -TenantId $tenantId -Scopes "AppRoleAssignment.ReadWrite.All,Application.Read.All"
 
 # Search for Microsoft Graph
-$AAD_SP = Get-AzureADServicePrincipal -SearchString "Microsoft Graph";
-$AAD_SP
-# Use Microsoft Graph; in this example, this is the first element $AAD_SP[0]
+$MSGraphSP = Get-MgServicePrincipal -Filter "DisplayName eq 'Microsoft Graph'";
+$MSGraphSP
 
-#Output
+# Sample Output
 
-#ObjectId                             AppId                                DisplayName
-#--------                             -----                                -----------
-#47d73278-e43c-4cc2-a606-c500b66883ef 00000003-0000-0000-c000-000000000000 Microsoft Graph
-#44e2d3f6-97c3-4bc7-9ccd-e26746638b6d 0bf30f3b-4a52-48df-9a82-234910c4a086 Microsoft Graph #Change 
+# DisplayName     Id                                   AppId                                SignInAudience      ServicePrincipalType
+# -----------     --                                   -----                                --------------      --------------------
+# Microsoft Graph 47d73278-e43c-4cc2-a606-c500b66883ef 00000003-0000-0000-c000-000000000000 AzureADMultipleOrgs Application
 
-$MSIName = "<managedIdentity>";  # Name of your user-assigned or system-assigned managed identity
-$MSI = Get-AzureADServicePrincipal -SearchString $MSIName 
+$MSI = Get-MgServicePrincipal -Filter "DisplayName eq '$MSIName'" 
 if($MSI.Count -gt 1)
 { 
-Write-Output "More than 1 principal found, please find your principal and copy the right object ID. Now use the syntax $MSI = Get-AzureADServicePrincipal -ObjectId <your_object_id>"
-
-# Choose the right UMI or SMI
-
+Write-Output "More than 1 principal found with that name, please find your principal and copy its object ID. Replace the above line with the syntax $MSI = Get-MgServicePrincipal -ServicePrincipalId <your_object_id>"
 Exit
-} 
+}
 
-# If you have more UMIs with similar names, you have to use the proper $MSI[ ]array number
+# Get required permissions
+$Permissions = @(
+  "User.Read.All"
+  "GroupMember.Read.All"
+  "Application.Read.All"
+)
 
-# Assign the app roles
+# Find app permissions within Microsoft Graph application
+$MSGraphAppRoles = $MSGraphSP.AppRoles | Where-Object {($_.Value -in $Permissions)}
 
-$AAD_AppRole = $AAD_SP.AppRoles | Where-Object {$_.Value -eq "User.Read.All"}
-New-AzureADServiceAppRoleAssignment -ObjectId $MSI.ObjectId  -PrincipalId $MSI.ObjectId  -ResourceId $AAD_SP.ObjectId[0]  -Id $AAD_AppRole.Id 
-$AAD_AppRole = $AAD_SP.AppRoles | Where-Object {$_.Value -eq "GroupMember.Read.All"}
-New-AzureADServiceAppRoleAssignment -ObjectId $MSI.ObjectId  -PrincipalId $MSI.ObjectId  -ResourceId $AAD_SP.ObjectId[0]  -Id $AAD_AppRole.Id
-$AAD_AppRole = $AAD_SP.AppRoles | Where-Object {$_.Value -eq "Application.Read.All"}
-New-AzureADServiceAppRoleAssignment -ObjectId $MSI.ObjectId  -PrincipalId $MSI.ObjectId  -ResourceId $AAD_SP.ObjectId[0]  -Id $AAD_AppRole.Id
+# Assign the managed identity app roles for each permission
+foreach($AppRole in $MSGraphAppRoles)
+{
+    $AppRoleAssignment = @{
+	    principalId = $MSI.Id
+	    resourceId = $MSGraphSP.Id
+	    appRoleId = $AppRole.Id
+    }
+
+    New-MgServicePrincipalAppRoleAssignment `
+    -ServicePrincipalId $AppRoleAssignment.PrincipalId `
+    -BodyParameter $AppRoleAssignment -Verbose
+}
 ```
-
-In the final steps of the script, if you have more UMIs with similar names, you have to use the proper `$MSI[ ]array` number. An example is `$AAD_SP.ObjectId[0]`.
 
 ### Check permissions for user-assigned managed identity
 
@@ -207,14 +214,14 @@ The Azure CLI 2.26.0 (or later) is required to run these commands with a UMI.
   - For example, to retrieve the UMI(s) of a logical server, look for the `principalId` of each:
 
     ```powershell
-    $MI = get-azsqlserver -resourcegroupname "resourcegroupnamehere" -name "sql-logical-server-name-here"
+    $MI = Get-AzSqlServer -ResourceGroupName "resourcegroupnamehere" -Name "sql-logical-server-name-here"
     $MI.Identity.UserAssignedIdentities | ConvertTo-Json 
     ```
 
   - To retrieve the SMI of an Azure SQL Database logical server:
 
     ```powershell
-    $MI = get-azsqlserver -resourcegroupname "resourcegroupnamehere" -name "sql-logical-server-name-here"
+    $MI = Get-AzSqlServer -ResourceGroupName "resourcegroupnamehere" -Name "sql-logical-server-name-here"
     $MI.Identity.principalId
     ```
 
@@ -227,14 +234,14 @@ The Azure CLI 2.26.0 (or later) is required to run these commands with a UMI.
   - For example, to retrieve the UMI(s) of a managed instance, look for the `principalId` of each:
 
     ```powershell
-    $MI = get-azsqlinstance -resourcegroupname "resourcegroupnamehere" -name "sql-mi-name-here"
+    $MI = Get-AzSqlInstance -ResourceGroupName "resourcegroupnamehere" -Name "sql-mi-name-here"
     $MI.Identity.UserAssignedIdentities | ConvertTo-Json 
     ```
 
   - To retrieve the SMI of a managed instance:
 
     ```powershell
-    $MI = get-azsqlinstance -resourcegroupname "resourcegroupnamehere" -name "sql-mi-name-here"
+    $MI = Get-AzSqlInstance -ResourceGroupName "resourcegroupnamehere" -Name "sql-mi-name-here"
     $MI.Identity.principalId
     ```
 

@@ -102,7 +102,7 @@ EXEC sp_kill_filestream_non_transacted_handles @dbname,
 GO
 ```
 
-## See also
+## Related content
 
 - [Manage FileTables](../blob/manage-filetables.md)
 - [FILESTREAM and FileTable Dynamic Management Views (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)

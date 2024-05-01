@@ -3,10 +3,10 @@ title: "SQL Server, Broker Activation object"
 description: "Learn about the SQLServer:Broker Activation performance object, which contains performance counters that report information on stored procedure activation."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/12/2021"
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "SQLServer:Broker Activation"
   - "Broker Activation object"
@@ -35,9 +35,8 @@ SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%Broker Activation%';
 ```  
 
-## See also  
- - [sys.dm_broker_activated_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-broker-activated-tasks-transact-sql.md)   
- - [sys.dm_broker_queue_monitors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-broker-queue-monitors-transact-sql.md)   
- - [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
-  
-  
+## Related content
+
+- [sys.dm_broker_activated_tasks (Transact-SQL)](../system-dynamic-management-views/sys-dm-broker-activated-tasks-transact-sql.md)
+- [sys.dm_broker_queue_monitors (Transact-SQL)](../system-dynamic-management-views/sys-dm-broker-queue-monitors-transact-sql.md)
+- [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)

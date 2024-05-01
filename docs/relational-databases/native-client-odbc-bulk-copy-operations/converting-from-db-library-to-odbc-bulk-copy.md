@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "bulk copy [ODBC], DB-Library bulk copy"
   - "ODBC, bulk copy operations"
   - "DB-Library bulk copy"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Converting from DB-Library to ODBC Bulk Copy
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

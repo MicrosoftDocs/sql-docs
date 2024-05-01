@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, bulk copy"
   - "bulk copy [ODBC], image data"
   - "ODBC, bulk copy operations"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Copying Text and Image Data
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

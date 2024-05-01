@@ -20,7 +20,7 @@ The paginated report chart has two axis types: primary and secondary. The second
   
  In situations where there are more than two series to be compared, consider a different approach for comparing and displaying multiple series in a chart. For more information, see [Multiple Series on a Chart](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
   
- An example of this chart is available as a sample report. For more information about downloading this sample report and others, see [Report Builder and Report Designer sample reports](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ An example of this chart is available as a sample report. For more information about downloading this sample report and others, see [Report Builder and Report Designer sample reports](../../reporting-services/tools/reporting-services-tools.md).
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

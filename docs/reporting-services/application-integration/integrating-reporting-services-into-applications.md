@@ -1,5 +1,5 @@
 ---
-title: "Integrating into Applications"
+title: "Integrating into applications"
 description: Reporting Services is an open and extensible reporting platform designed to provide developers with a comprehensive set of APIs for developing solutions.
 author: maggiesMSFT
 ms.author: maggies
@@ -10,7 +10,7 @@ ms.topic: reference
 ms.custom: updatefrequency5
 monikerRange: "= sql-server-2016"
 ---
-# Integrating Reporting Services into Applications
+# Integrating Reporting Services into applications
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -23,24 +23,24 @@ monikerRange: "= sql-server-2016"
   
 ## Report server web service
 
- The Report Server Web service is the primary interface for developing against [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Whether you are developing code to manage your report catalog or developing code to render reports to a supported format, the Web service exposes all the necessary methods to integrate [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] into your applications. An example of one such application is the web portal, which is included with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]; it uses the Web service to manage the report server database.  
+ The Report Server Web service is the primary interface for developing against [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Whether you're developing code to manage your report catalog or developing code to render reports to a supported format, the Web service exposes all the necessary methods to integrate [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] into your applications. An example of one such application is the web portal, which is included with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]; it uses the Web service to manage the report server database.  
   
 ## Report Viewer controls for Visual Studio
 
- The Report Viewer controls available for [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] are used for integrating report viewing into your applications. There are two controls: one for Windows Forms-based applications and one for Web Forms applications. Each control provides the capability for viewing reports that have been deployed to a report server as well as the ability to render reports that exist in an environment where a report server has not been installed.  
+ The Report Viewer controls available for [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] are used for integrating report viewing into your applications. There are two controls: one for Windows Forms-based applications and one for Web Forms applications. Each control provides the capability for viewing reports that are deployed to a report server. Each control also allows you to render reports that exist in an environment where a report server isn't installed.  
   
 ## URL access  
- URL access is another option for integrating report viewing into your applications if the Report Viewer controls are not an option. In addition, URL access is useful for sending links to reports to users via e-mail.  
+ URL access is another option for integrating report viewing into your applications if the Report Viewer controls aren't an option. In addition, URL access is useful for sending links to reports to users via e-mail.  
   
 ## In this section
 
- [Integrating Reporting Services Using SOAP](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)  
+ [Integrating Reporting Services by using SOAP](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)  
  Describes how to integrate [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report navigation and management into your existing business applications using the Report Server Web service.  
   
- [Integrating Reporting Services Using the Report Viewer Controls](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
+ [Integrating Reporting Services by using the Report Viewer controls](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
  Describes how to integrate report viewing into your existing applications using the Report Viewer controls.  
   
- [Integrating Reporting Services Using URL Access](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)  
+ [Integrating Reporting Services by using URL access](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)  
  Describes how to integrate [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report navigation into your existing business applications using URL access.  
   
 ## Next steps

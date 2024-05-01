@@ -66,7 +66,7 @@ sys.sp_xtp_unbind_db_resource_pool N'Hekaton_DB';
 
 - Requires CONTROL SERVER permission.
 
-## See also
+## Related content
 
 - [Bind a Database with Memory-Optimized Tables to a Resource Pool](../in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)
 - [sys.sp_xtp_bind_db_resource_pool (Transact-SQL)](sys-sp-xtp-bind-db-resource-pool-transact-sql.md)

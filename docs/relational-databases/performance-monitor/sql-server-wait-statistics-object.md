@@ -3,10 +3,10 @@ title: "SQL Server, Wait Statistics object"
 description: "Learn about the SQLServer:Wait Statistics performance object, which contains performance counters that report information about wait status."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/13/2021"
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "Wait Statistics object"
   - "SQLServer:Wait Statistics"
@@ -52,8 +52,8 @@ SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%Wait Statistics%';
 ```  
 
-## See also  
- - [sys.dm_os_wait_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) 
- - [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
- - [Monitoring performance by using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) 
-  
+## Related content
+
+- [sys.dm_os_wait_stats (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)
+- [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)
+- [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)

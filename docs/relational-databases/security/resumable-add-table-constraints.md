@@ -32,7 +32,7 @@ The new extensions for SQL Server 2022, SQL Database, and SQL Managed Instance a
 
 ## Resumable operations
 
-In previous versions of SQL Server, the `ALTER TABLE ADD CONSTRAINT` operation can be executed with the `ONLNE=ON` option. However, the operation may take many hours for a large table to complete, and can consume a great number of resources. There's also the possibility of failures or interruption during such execution. We've introduced resumable capabilities to `ALTER TABLE ADD CONSTRAINT` for users to pause the operation during a maintenance window, or to restart it from where it was interrupted during an execution failure, without restarting the operation from the beginning.
+In previous versions of SQL Server, the `ALTER TABLE ADD CONSTRAINT` operation can be executed with the `ONLINE=ON` option. However, the operation may take many hours for a large table to complete, and can consume a great number of resources. There's also the possibility of failures or interruption during such execution. We've introduced resumable capabilities to `ALTER TABLE ADD CONSTRAINT` for users to pause the operation during a maintenance window, or to restart it from where it was interrupted during an execution failure, without restarting the operation from the beginning.
 
 ## Supported scenarios
 

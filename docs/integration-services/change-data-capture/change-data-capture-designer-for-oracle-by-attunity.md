@@ -12,6 +12,9 @@ f1_keywords:
 ---
 # Change Data Capture Designer for Oracle by Attunity
 
+> [!IMPORTANT]
+> Change Data Capture for Oracle by Attunity is deprecated now. Details refer to [the announcement](https://www.microsoft.com/sql-server/blog/2024/02/28/sql-server-integration-services-ssis-change-data-capture-attunity-feature-deprecations/).
+
   The CDC Designer Console is used to develop and maintain Oracle CDC Instances. The CDC Designer Console is a Microsoft Management Console snap-in that contains the following elements:  
   
 -   New Instance Wizard: This wizard creates a new Oracle CDC Instance. For information on using the New Instance Wizard, see [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md).  
@@ -19,13 +22,9 @@ f1_keywords:
 -   CDC Instance Properties Viewer: This is a docked view showing the status and configuration of the selected CDC instance. For information about the properties viewer, see [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md).  
   
 -   CDC Instance Properties Editor: This dialog box is used to edit any existing Oracle CDC Service instance. For information about editing the CDC instance properties, see [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md).  
-
-> [!NOTE]
-> Microsoft Change Data Capture for Oracle by Attunity supports SQL Server 2019 and below.  
   
  Download Microsoft Change Data Capture Designer for Oracle by Attunity for corresponding SQL Server version from below links:
 
-- [Microsoft SQL Server 2012 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=51606)
 - [Microsoft SQL Server 2016 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=55802)
 - [Microsoft SQL Server 2017 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=56610)
 - [Microsoft SQL Server 2019 Integration Services Feature Pack](https://www.microsoft.com/download/details.aspx?id=100303) 

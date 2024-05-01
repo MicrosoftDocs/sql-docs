@@ -4,7 +4,7 @@ description: Explore how SQL Server can be deployed on Linux containers and lear
 author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: vanto, randolphwest
-ms.date: 07/11/2023
+ms.date: 01/10/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -253,7 +253,7 @@ Packages
 
 There are scenarios where you might not want to use the latest SQL Server container image. To run a specific SQL Server container image, use the following steps:
 
-1. Identify the Docker `tag` for the release you want to use. To view the available tags, see [the mssql-server-linux Docker hub page](https://hub.docker.com/_/microsoft-mssql-server).
+1. Identify the Docker `tag` for the release you want to use. To view the available tags, see the [Microsoft Artifact Registry](https://mcr.microsoft.com/product/mssql/server/tags).
 
 1. Pull the SQL Server container image with the tag. For example, to pull the `2019-CU18-ubuntu-20.04` image, replace `<image_tag>` in the following command with `2019-CU18-ubuntu-20.04`.
 
@@ -329,7 +329,7 @@ docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU18-rhel-8.4
 
 ## <a id="production"></a> Run production container images
 
-The [quickstart](quickstart-install-connect-docker.md) in the previous section runs the free Developer edition of SQL Server from Docker Hub. Most of the information still applies if you want to run production container images, such as Enterprise, Standard, or Web editions. However, there are a few differences that are outlined here.
+The [quickstart](quickstart-install-connect-docker.md) in the previous section runs the free Developer edition of SQL Server from the Microsoft Artifact Registry. Most of the information still applies if you want to run production container images, such as Enterprise, Standard, or Web editions. However, there are a few differences that are outlined here.
 
 - You can only use SQL Server in a production environment if you have a valid license. You can obtain a free SQL Server Express production license [here](https://go.microsoft.com/fwlink/?linkid=857693). SQL Server Standard and Enterprise edition licenses are available through [Microsoft Volume Licensing](https://www.microsoft.com/licensing/default.aspx).
 

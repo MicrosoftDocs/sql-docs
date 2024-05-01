@@ -1,58 +1,54 @@
 ---
-title: Monitoring Azure SQL Managed Instance with Azure Monitor reference
-description: Important reference material needed when you monitor Azure SQL Managed Instance with Azure Monitor
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: mathoma, dfurman
-ms.date: 07/29/2022
+title: Monitoring data reference for Azure SQL Managed Instance
+description: This article contains important reference material you need when you monitor Azure SQL Managed Instance.
+ms.date: 03/13/2024
+ms.custom: horz-monitor
+ms.topic: reference
+author: MashaMSFT
+ms.author: mathoma
+ms.reviewer: wiassaf
 ms.service: sql-managed-instance
-ms.subservice: performance
-ms.topic: conceptual
-ms.custom: subject-monitoring
+ms.subservice: monitoring
 monikerRange: "= azuresql || = azuresql-mi"
 ---
 
-# Monitoring Azure SQL Managed Instance data reference
-[!INCLUDE [sqlmi](../includes/appliesto-sqlmi.md)]
+# Azure SQL Managed Instance monitoring data reference
 
-This article contains reference for monitoring Azure SQL Managed Instance with Azure Monitor. See [Monitoring Azure SQL Managed Instance](monitoring-sql-managed-instance-azure-monitor.md) for details on collecting and analyzing monitoring data for Azure SQL Managed Instance with Azure Monitor SQL Insights (preview).
+[!INCLUDE [horz-monitor-ref-intro](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-intro.md)]
 
-## Metrics
+See [Monitor Azure SQL Managed Instance](monitoring-sql-managed-instance-azure-monitor.md) for details on the data you can collect for SQL Managed Instance and how to use it.
 
-For more on using Azure Monitor SQL Insights (preview) for all products in the [Azure SQL family](../index.yml), see [Monitor your SQL deployments with SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview).
+[!INCLUDE [horz-monitor-ref-metrics-intro](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-metrics-intro.md)]
 
-For data specific to Azure SQL Managed Instance, see [Data for Azure SQL Managed Instance](/azure/azure-monitor/insights/sql-insights-overview#data-for-azure-sql-managed-instance).
+### Supported metrics for Microsoft.Sql/managedInstances
+The following table lists the metrics available for the Microsoft.Sql/managedInstances resource type.
+[!INCLUDE [horz-monitor-ref-metrics-tableheader](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-metrics-tableheader.md)]
+[!INCLUDE [Microsoft.Sql/managedInstances](~/../azure-reference-other-repo/azure-monitor-ref/supported-metrics/includes/microsoft-sql-managedinstances-metrics-include.md)]
 
-For a complete list of metrics, see [Microsoft.Sql/managedInstances](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlmanagedinstances).
+[!INCLUDE [horz-monitor-ref-metrics-dimensions-intro](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-metrics-dimensions-intro.md)]
+[!INCLUDE [horz-monitor-ref-no-metrics-dimensions](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-no-metrics-dimensions.md)]
 
-## Resource logs
+[!INCLUDE [horz-monitor-ref-resource-logs](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-resource-logs.md)]
 
-This section lists the types of resource logs you can collect for Azure SQL Managed Instance. 
+### Supported resource logs for Microsoft.Sql/managedInstances
+[!INCLUDE [Microsoft.Sql/managedInstances](~/../azure-reference-other-repo/azure-monitor-ref/supported-logs/includes/microsoft-sql-managedinstances-logs-include.md)]
 
-For reference, see a list of [all resource logs category types supported in Azure Monitor](/azure/azure-monitor/essentials/resource-logs-schema).
+### Supported resource logs for Microsoft.Sql/managedInstances/databases
+[!INCLUDE [Microsoft.Sql/managedInstances/databases](~/../azure-reference-other-repo/azure-monitor-ref/supported-logs/includes/microsoft-sql-managedinstances-databases-logs-include.md)]
 
-For a reference of resource log types collected for Azure SQL Managed Instance, see [Streaming export of Azure SQL Managed Instance Diagnostic telemetry for export](../database/metrics-diagnostic-telemetry-logging-streaming-export-configure.md#diagnostic-telemetry-for-export)
+[!INCLUDE [horz-monitor-ref-logs-tables](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-logs-tables.md)]
 
-## Azure Monitor Logs tables
-
-This section refers to all of the Azure Monitor Logs tables relevant to Azure SQL Managed Instance and available for query by Log Analytics, which can be queried with KQL.
-
-Tables for all resources types are referenced here, for example, [Azure Monitor tables for Azure SQL Managed Instances](/azure/azure-monitor/reference/tables/tables-resourcetype#sql-managed-instances).
-
-|Resource Type | Notes |
+|Table | Notes |
 |-------|-----|
 | [AzureActivity](/azure/azure-monitor/reference/tables/azureactivity) | Entries from the Azure Activity log that provides insight into any subscription-level or management group level events that have occurred in Azure. |
 | [AzureDiagnostics](/azure/azure-monitor/reference/tables/azurediagnostics) | Azure Diagnostics reveals diagnostic data of specific resources and features for numerous Azure products including Azure SQL databases, elastic pools, and managed instances. For more information, see [Diagnostics metrics](../database/metrics-diagnostic-telemetry-logging-streaming-export-configure.md?tabs=azure-portal#basic-metrics).|
 | [AzureMetrics](/azure/azure-monitor/reference/tables/azuremetrics) | Metric data emitted by Azure services that measure their health and performance. Activity from Azure products including Azure SQL databases, elastic pools, and managed instances.|
 
-## Activity log
+[!INCLUDE [horz-monitor-ref-activity-log](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-activity-log.md)]
 
-The Activity log contains records of management operations performed on your Azure SQL Managed Instance resources. All maintenance operations related to Azure SQL Managed Instance that have been implemented here may appear in the Activity log.
+- [Microsoft.Sql resource provider operations](/azure/role-based-access-control/resource-provider-operations#microsoftsql)
 
-For more information on the schema of Activity Log entries, see [Activity Log schema](/azure/azure-monitor/essentials/activity-log-schema).
+## Related content
 
-## Next steps
-
-- [Monitoring Azure SQL Managed Instance with Azure Monitor](monitoring-sql-managed-instance-azure-monitor.md)
-- [Monitoring Azure SQL Database with Azure Monitor](../database/monitoring-sql-database-azure-monitor.md)
-- [Monitoring Azure resources with Azure Monitor](/azure/azure-monitor/essentials/monitor-azure-resource)
+- See [Monitor SQL Managed Instance](monitoring-sql-managed-instance-azure-monitor.md) for a description of monitoring Azure SQL Managed Instance.
+- See [Monitor Azure resources with Azure Monitor](/azure/azure-monitor/essentials/monitor-azure-resource) for details on monitoring Azure resources.

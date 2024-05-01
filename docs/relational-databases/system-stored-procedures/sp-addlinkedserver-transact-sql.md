@@ -184,7 +184,7 @@ EXEC sp_addlinkedserver
 The following example creates a linked server `S1_instance1` on an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] by using the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider.
 
 > [!IMPORTANT]  
-> SQL Server Native Client OLE DB provider (SQLNCLI) remains deprecated and it's not recommended to use it for new development work. Instead, use the new [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) which will be updated with the most recent server features.
+> SQL Server Native Client OLE DB provider (SQLNCLI) remains deprecated and it isn't recommended to use it for new development work. Instead, use the new [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) which will be updated with the most recent server features.
 
 ```sql
 EXEC sp_addlinkedserver
@@ -359,9 +359,13 @@ Query the data using four-part names:
 SELECT * FROM LinkedServerName.DatabaseName.SchemaName.TableName;
 ```
 
-### <a id="managed-identity-authentication"></a> H. Create SQL Managed Instance linked server with managed identity Microsoft Entra authentication
+<a name='h-create-sql-managed-instance-linked-server-with-managed-identity-azure-ad-authentication'></a>
 
-To create a linked server with managed identity authentication, execute the following T-SQL, replacing `<managed_instance>` with your own SQL managed instance server. The authentication method uses `ActiveDirectoryMSI` in the *@provstr* parameter. Consider optionally using `@locallogin = NULL` to allow all local logins.
+### <a id="managed-identity-authentication"></a> H. Create Azure SQL Managed Instance linked server with managed identity authentication
+
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
+
+To create a linked server with managed identity authentication, execute the following T-SQL, replacing `<managed_instance>` with your own SQL managed instance. The authentication method uses `ActiveDirectoryMSI` in the *@provstr* parameter. Consider optionally using `@locallogin = NULL` to allow all local logins.
 
 ```sql
 EXEC master.dbo.sp_addlinkedserver
@@ -376,15 +380,17 @@ EXEC master.dbo.sp_addlinkedsrvlogin
     @locallogin = N'user1@contoso.com';
 ```
 
-If Azure SQL Managed Instance managed identity (formerly called managed service identity) is added as login to a remote managed instance, then Managed Identity authentication is possible with linked server created as in the previous example. Both system assigned and user assigned managed identities are supported.
+To enable authentication with managed identities, a managed identity assigned to the Azure SQL Managed Instance needs to be added as a login to the remote managed instance. Both system-assigned and user-assigned managed identities are supported.
 
-If primary identity is set, it is used, otherwise system assigned managed identity is used. If managed identity is recreated with the same name, login on the remote instance also needs to be recreated, because new managed identity Application ID and SQL Managed Instance service principal SID no longer match. To verify these two values match, convert SID to application ID with following query.
+If a primary identity is set, it is used, otherwise the system-assigned managed identity is used. If the managed identity is recreated with the same name, the login on the remote instance also needs to be recreated, because the new managed identity Application ID and SQL Managed Instance service principal SID no longer match. To verify these two values match, convert SID to application ID with following query.
 
 ```sql
-SELECT convert(uniqueidentifier, sid) as AzureADApplicationID
+SELECT convert(uniqueidentifier, sid) as MSEntraApplicationID
 FROM sys.server_principals
 WHERE name = '<managed_instance_name>';
 ```
+
+<a name='i-create-sql-managed-instance-linked-server-with-pass-through-azure-ad-authentication'></a>
 
 ### <a id="pass-through-authentication"></a> I. Create SQL Managed Instance linked server with pass-through Microsoft Entra authentication
 
@@ -398,7 +404,7 @@ EXEC master.dbo.sp_addlinkedserver
     @datasrc = N'<mi_name>.<dns_zone>.database.windows.net,1433';
 ```
 
-With pass-through authentication, security context of the local login is carried over to a remote instance. Pass-through authentication requires the Microsoft Entra principal to be added as login on both local and remote Azure SQL Managed Instance. Both managed instances need to be in a [Server Trust Group](/azure/azure-sql/managed-instance/server-trust-group-overview). When the requirements are met, user can sign in to a local instance and query the remote instance via the linked server object.
+With pass-through authentication, the security context of the local login is carried over to the remote instance. Pass-through authentication requires the Microsoft Entra principal to be added as a login on both the local and remote Azure SQL Managed Instance. Both managed instances need to be in a [Server Trust Group](/azure/azure-sql/managed-instance/server-trust-group-overview). When the requirements are met, user can sign in to a local instance and query the remote instance via the linked server object.
 
 ## Related content
 

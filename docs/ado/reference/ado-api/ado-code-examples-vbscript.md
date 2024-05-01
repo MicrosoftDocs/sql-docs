@@ -14,7 +14,7 @@ dev_langs:
   - "VB"
 ---
 # ADO Code Examples VBScript
-Use the following code examples to learn about how to use the ADO methods when writing in Microsoft® Visual Basic® Scripting Edition (VBScript).  
+Use the following code examples to learn about how to use the ADO methods when writing in Microsoft Visual Basic Scripting Edition (VBScript).  
   
 > [!NOTE]
 >  Paste the entire code example, from beginning to end, into your code editor. The example may not run correctly if partial examples are used or if paragraph formatting is lost.  

@@ -30,7 +30,7 @@ A single database can be moved into or out of an [elastic pool](elastic-pool-ove
 
 ## Monitoring and alerting
 
-You use the built-in [performance monitoring](performance-guidance.md) and [alerting tools](alerts-insights-configure-portal.md), combined with the performance ratings. Using these tools, you can quickly assess the impact of scaling up or down based on your current or project performance needs. Additionally, SQL Database can [emit metrics and resource logs](metrics-diagnostic-telemetry-logging-streaming-export-configure.md) for easier monitoring.
+You use the built-in [performance monitoring](performance-guidance.md) and [alerting tools](alerts-create.md), combined with the performance ratings. Using these tools, you can quickly assess the impact of scaling up or down based on your current or project performance needs. Additionally, SQL Database can [emit metrics and resource logs](metrics-diagnostic-telemetry-logging-streaming-export-configure.md) for easier monitoring.
 
 ## Availability capabilities
 
@@ -47,9 +47,6 @@ For more information, see [Resolving Transact-SQL differences during migration t
 ## Security
 
 SQL Database provides a range of [built-in security and compliance](security-overview.md) features to help your application meet various security and compliance requirements.
-
-> [!IMPORTANT]  
-> Azure SQL Database has been certified against a number of compliance standards. For more information, see the [Microsoft Azure Trust Center](https://gallery.technet.microsoft.com/Overview-of-Azure-c1be3942), where you can find the most current list of SQL Database compliance certifications.
 
 ## Related content
 

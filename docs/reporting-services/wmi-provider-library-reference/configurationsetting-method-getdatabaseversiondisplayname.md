@@ -1,6 +1,6 @@
 ---
-title: "GetDatabaseVersionDisplayName Method (WMI)"
-description: "ConfigurationSetting Method - GetDatabaseVersionDisplayName"
+title: "GetDatabaseVersionDisplayName method (WMI)"
+description: "ConfigurationSetting method - GetDatabaseVersionDisplayName"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/14/2017
@@ -11,7 +11,7 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "GetDatabaseVersionDisplayName method"
 ---
-# ConfigurationSetting Method - GetDatabaseVersionDisplayName
+# ConfigurationSetting method - GetDatabaseVersionDisplayName
   Gets the display name for a given report server database version string.  
   
 ## Syntax  
@@ -49,13 +49,13 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
   
  For a *Version* prior to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000 an HRESULT of ACT_E_BAD_VERSION is returned.  
   
-## Return Value  
+## Return value  
  Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A non-zero value indicates that an error has occurred.  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+## Related content  
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

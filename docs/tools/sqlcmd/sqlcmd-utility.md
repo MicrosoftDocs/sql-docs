@@ -4,9 +4,10 @@ description: The sqlcmd utility lets you enter Transact-SQL statements, system p
 author: dlevy-msft
 ms.author: dlevy
 ms.reviewer: randolphwest, maghan
-ms.date: 09/29/2023
+ms.date: 12/12/2023
 ms.service: sql
 ms.subservice: tools-other
+ms.custom: linux-related-content
 ms.topic: conceptual
 helpviewer_keywords:
   - "statements [SQL Server], command prompt"
@@ -39,13 +40,15 @@ The **sqlcmd** utility lets you enter Transact-SQL statements, system procedures
 - In a Windows script file.
 - In an operating system (`cmd.exe`) job step of a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent job.
 
+[!INCLUDE [entra-id](../../includes/entra-id-hard-coded.md)]
+
 ## Find out which version you have installed
 
 There are two versions of **sqlcmd**:
 
-- The ODBC-based **sqlcmd**, available with [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] or the Microsoft Command Line Utilities, and part of the `mssql-tools` package on Linux.
-
 - The `go-mssqldb`-based **sqlcmd**, sometimes styled as **go-sqlcmd**. This version is a standalone tool you can download independently of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)].
+
+- The ODBC-based **sqlcmd**, available with [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] or the Microsoft Command Line Utilities, and part of the `mssql-tools` package on Linux.
 
 To determine the version you have installed, run the following statement at the command line:
 
@@ -73,6 +76,18 @@ sqlcmd -?
 
 ::: zone-end
 
+### [sqlcmd (Go)](#tab/go)
+
+If you're using the new version of **sqlcmd** (Go), the output is similar to the following example:
+
+```output
+Version: 1.3.1
+```
+
+#### Check version
+
+You can use `sqlcmd --version` to determine which version is installed. You should have at least version 1.0.0 installed.
+
 ### [sqlcmd (ODBC)](#tab/odbc)
 
 If you're using **sqlcmd** (ODBC), the output is similar to the following example:
@@ -87,19 +102,9 @@ Copyright (C) 2022 Microsoft Corporation. All rights reserved.
 
 You may have several versions of **sqlcmd** (ODBC) installed on your computer. Be sure you're using the correct version. You should have at least version 15.0.4298.1 installed.
 
-Always Encrypted (`-g`) and Azure AD authentication (`-G`) require at least version 13.1.
+Always Encrypted (`-g`) and Microsoft Entra authentication (`-G`) require at least version 13.1.
 
-### [sqlcmd (Go)](#tab/go)
-
-If you're using the new version of **sqlcmd** (Go), the output is similar to the following example:
-
-```output
-Version: 1.3.1
-```
-
-#### Check version
-
-You can use `sqlcmd --version` to determine which version is installed. You should have at least version 1.0.0 installed.
+[!INCLUDE [entra-id-hard-coded](../../includes/entra-id-hard-coded.md)]
 
 ---
 
@@ -113,13 +118,13 @@ You can use `sqlcmd --version` to determine which version is installed. You shou
 
 ## Download and install sqlcmd
 
-### [sqlcmd (ODBC)](#tab/odbc)
-
-[!INCLUDE [install-odbc](includes/install-odbc.md)]
-
 ### [sqlcmd (Go)](#tab/go)
 
 [!INCLUDE [install-go](includes/install-go.md)]
+
+### [sqlcmd (ODBC)](#tab/odbc)
+
+[!INCLUDE [install-odbc](includes/install-odbc.md)]
 
 ---
 
@@ -142,61 +147,6 @@ To run SQLCMD statements in [SQL Server Management Studio](../../ssms/download-s
 SSMS uses the Microsoft [!INCLUDE [dnprdnshort_md](../../includes/dnprdnshort-md.md)] `SqlClient` for execution in regular and SQLCMD mode in **Query Editor**. When **sqlcmd** is run from the command-line, **sqlcmd** uses the ODBC driver. Because different default options may apply, you might see different behavior when you execute the same query in SSMS in SQLCMD Mode and in the **sqlcmd** utility.
 
 ## Syntax
-
-### [sqlcmd (ODBC)](#tab/odbc)
-
-```output
-sqlcmd
-   -a packet_size
-   -A (dedicated administrator connection)
-   -b (terminate batch job if there is an error)
-   -c batch_terminator
-   -C (trust the server certificate)
-   -d db_name
-   -D
-   -e (echo input)
-   -E (use trusted connection)
-   -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage]
-   -g (enable column encryption)
-   -G (use Azure Active Directory for authentication)
-   -h rows_per_header
-   -H workstation_name
-   -i input_file
-   -I (enable quoted identifiers)
-   -j (Print raw error messages)
-   -k[1 | 2] (remove or replace control characters)
-   -K application_intent
-   -l login_timeout
-   -L[c] (list servers, optional clean output)
-   -m error_level
-   -M multisubnet_failover
-   -N (encrypt connection)
-   -o output_file
-   -p[1] (print statistics, optional colon format)
-   -P password
-   -q "cmdline query"
-   -Q "cmdline query" (and exit)
-   -r[0 | 1] (msgs to stderr)
-   -R (use client regional settings)
-   -s col_separator
-   -S [protocol:]server[instance_name][,port]
-   -t query_timeout
-   -u (unicode output file)
-   -U login_id
-   -v var = "value"
-   -V error_severity_level
-   -w screen_width
-   -W (remove trailing spaces)
-   -x (disable variable substitution)
-   -X[1] (disable commands, startup script, environment variables, optional exit)
-   -y variable_length_type_display_width
-   -Y fixed_length_type_display_width
-   -z new_password
-   -Z new_password (and exit)
-   -? (usage)
-```
-
-Currently, **sqlcmd** doesn't require a space between the command-line option and the value. However, in a future release, a space may be required between the command-line option and the value.
 
 ### [sqlcmd (Go)](#tab/go)
 
@@ -269,11 +219,66 @@ Connections from the **sqlcmd** (Go) utility are limited to TCP connections. Nam
 
 #### Enhancements
 
-- `:Connect` now has an optional `-G` parameter to select one of the authentication methods for Azure SQL Database  - `SqlAuthentication`, `ActiveDirectoryDefault`, `ActiveDirectoryIntegrated`, `ActiveDirectoryServicePrincipal`, `ActiveDirectoryManagedIdentity`, `ActiveDirectoryPassword`. For more information, see [Azure Active Directory authentication](sqlcmd-authentication.md). If `-G` isn't provided, Integrated security or SQL Server Authentication is used, depending on the presence of a `-U` user name parameter.
+- `:Connect` now has an optional `-G` parameter to select one of the authentication methods for Azure SQL Database  - `SqlAuthentication`, `ActiveDirectoryDefault`, `ActiveDirectoryIntegrated`, `ActiveDirectoryServicePrincipal`, `ActiveDirectoryManagedIdentity`, `ActiveDirectoryPassword`. For more information, see [Microsoft Entra authentication](sqlcmd-authentication.md). If `-G` isn't provided, Integrated security or SQL Server authentication is used, depending on the presence of a `-U` user name parameter.
 
 - The new `--driver-logging-level` command line parameter allows you to see traces from the `go-mssqldb` driver. Use `64` to see all traces.
 
 - **sqlcmd** can now print results using a vertical format. Use the new `-F vertical` command line switch to set it. The `SQLCMDFORMAT` scripting variable also controls it.
+
+### [sqlcmd (ODBC)](#tab/odbc)
+
+```output
+sqlcmd
+   -a packet_size
+   -A (dedicated administrator connection)
+   -b (terminate batch job if there is an error)
+   -c batch_terminator
+   -C (trust the server certificate)
+   -d db_name
+   -D
+   -e (echo input)
+   -E (use trusted connection)
+   -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage]
+   -g (enable column encryption)
+   -G (use Azure Active Directory for authentication)
+   -h rows_per_header
+   -H workstation_name
+   -i input_file
+   -I (enable quoted identifiers)
+   -j (Print raw error messages)
+   -k[1 | 2] (remove or replace control characters)
+   -K application_intent
+   -l login_timeout
+   -L[c] (list servers, optional clean output)
+   -m error_level
+   -M multisubnet_failover
+   -N (encrypt connection)
+   -o output_file
+   -p[1] (print statistics, optional colon format)
+   -P password
+   -q "cmdline query"
+   -Q "cmdline query" (and exit)
+   -r[0 | 1] (msgs to stderr)
+   -R (use client regional settings)
+   -s col_separator
+   -S [protocol:]server[instance_name][,port]
+   -t query_timeout
+   -u (unicode output file)
+   -U login_id
+   -v var = "value"
+   -V error_severity_level
+   -w screen_width
+   -W (remove trailing spaces)
+   -x (disable variable substitution)
+   -X[1] (disable commands, startup script, environment variables, optional exit)
+   -y variable_length_type_display_width
+   -Y fixed_length_type_display_width
+   -z new_password
+   -Z new_password (and exit)
+   -? (usage)
+```
+
+Currently, **sqlcmd** doesn't require a space between the command-line option and the value. However, in a future release, a space may be required between the command-line option and the value.
 
 ---
 
@@ -283,7 +288,7 @@ Connections from the **sqlcmd** (Go) utility are limited to TCP connections. Nam
 
 #### -A
 
-Signs in to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] with a dedicated administrator connection (DAC). This kind of connection is used to troubleshoot a server. This connection works only with server computers that support DAC. If DAC isn't available, **sqlcmd** generates an error message, and then exits. For more information about DAC, see [Diagnostic Connection for Database Administrators](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). The `-A` option isn't supported with the `-G` option. When connecting to Azure SQL Database using `-A`, you must be an administrator on the logical SQL server. DAC isn't available for an Azure AD administrator.
+Signs in to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] with a dedicated administrator connection (DAC). This kind of connection is used to troubleshoot a server. This connection works only with server computers that support DAC. If DAC isn't available, **sqlcmd** generates an error message, and then exits. For more information about DAC, see [Diagnostic Connection for Database Administrators](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). The `-A` option isn't supported with the `-G` option. When connecting to Azure SQL Database using `-A`, you must be an administrator on the logical SQL server. DAC isn't available for a Microsoft Entra administrator.
 
 #### -C
 
@@ -308,7 +313,7 @@ Interprets the server name provided to `-S` as a DSN instead of a hostname. For 
 
 #### -l *login_timeout*
 
-Specifies the number of seconds before a **sqlcmd** login to the ODBC driver times out when you try to connect to a server. This option sets the **sqlcmd** scripting variable `SQLCMDLOGINTIMEOUT`. The default time-out for login to **sqlcmd** is 8 seconds. When using the `-G` option to connect to Azure SQL Database or Azure Synapse Analytics and authenticate using Azure AD, a timeout value of at least 30 seconds is recommended. The login time-out must be a number between `0` and `65534`. If the value supplied isn't numeric, or doesn't fall into that range, **sqlcmd** generates an error message. A value of `0` specifies time-out to be infinite.
+Specifies the number of seconds before a **sqlcmd** login to the ODBC driver times out when you try to connect to a server. This option sets the **sqlcmd** scripting variable `SQLCMDLOGINTIMEOUT`. The default time-out for login to **sqlcmd** is 8 seconds. When using the `-G` option to connect to Azure SQL Database or Azure Synapse Analytics and authenticate using Microsoft Entra ID, a timeout value of at least 30 seconds is recommended. The login time-out must be a number between `0` and `65534`. If the value supplied isn't numeric, or doesn't fall into that range, **sqlcmd** generates an error message. A value of `0` specifies time-out to be infinite.
 
 #### -E
 
@@ -322,13 +327,13 @@ Sets the Column Encryption setting to `Enabled`. For more information, see [Alwa
 
 #### -G
 
-This option is used by the client when connecting to Azure SQL Database or Azure Synapse Analytics to specify that the user be authenticated using Azure AD authentication. This option sets the **sqlcmd** scripting variable `SQLCMDUSEAAD = true`. The `-G` option requires at least **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute `sqlcmd -?`. For more information, see [Connecting to SQL Database or Azure Synapse Analytics By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview). The `-A` option isn't supported with the `-G` option.
+This option is used by the client when connecting to Azure SQL Database or Azure Synapse Analytics to specify that the user be authenticated using Microsoft Entra authentication. This option sets the **sqlcmd** scripting variable `SQLCMDUSEAAD = true`. The `-G` option requires at least **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute `sqlcmd -?`. For more information, see [Connecting to SQL Database or Azure Synapse Analytics By Using Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview). The `-A` option isn't supported with the `-G` option.
 
 The `-G` option only applies to Azure SQL Database and Azure Synapse Analytics.
 
-Azure AD interactive authentication isn't currently supported on Linux or macOS. Azure AD integrated authentication requires [Microsoft ODBC Driver 17 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [Configured Kerberos environment](../../connect/odbc/linux-mac/using-integrated-authentication.md).
+Microsoft Entra interactive authentication isn't currently supported on Linux or macOS. Microsoft Entra integrated authentication requires [Microsoft ODBC Driver 17 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [Configured Kerberos environment](../../connect/odbc/linux-mac/using-integrated-authentication.md).
 
-For more information about Azure Active Directory authentication, see [Azure Active Directory authentication in sqlcmd](sqlcmd-authentication.md).
+For more information about Microsoft Entra authentication, see [Microsoft Entra authentication in sqlcmd](sqlcmd-authentication.md).
 
 #### -H *workstation_name*
 
@@ -408,6 +413,8 @@ If the user name and password combination is incorrect, an error message is gene
 If the `-P` option is used with the `-E` option, an error message is generated.
 
 If the `-P` option is followed by more than one argument, an error message is generated and the program exits.
+
+A password containing special characters can generate an error message. You should escape special characters when using `-P`, or use the `SQLCMDPASSWORD` environment variable instead.
 
 #### -S [*protocol*:]*server*[\\*instance_name*][,*port*]
 
@@ -1295,9 +1302,11 @@ To set the XML mode to off, use the following command: `:XML OFF`.
 
 For more info, see [XML Output Format](#OutputXML) in this article.
 
-### Use Azure AD authentication
+<a name='use-azure-ad-authentication'></a>
 
-Examples using Azure AD authentication:
+### Use Microsoft Entra authentication
+
+Examples using Microsoft Entra authentication:
 
 ::: zone pivot="cs1-bash"
 

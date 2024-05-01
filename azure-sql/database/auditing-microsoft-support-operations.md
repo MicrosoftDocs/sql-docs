@@ -1,8 +1,10 @@
 ---
 title: Auditing Microsoft support operations
+titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: How to use Auditing to audit Microsoft support operations.
 author: sravanisaluru
 ms.author: srsaluru
+ms.reviewer: mathoma
 ms.date: 04/26/2023
 ms.service: sql-database
 ms.subservice: security
@@ -13,6 +15,12 @@ ms.topic: conceptual
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
 
 Auditing of Microsoft support operations for your [logical server](logical-servers.md) in Azure SQL Database allows you to audit Microsoft support engineers' operations when they need to access your server during a support request. The use of this capability, along with your auditing, enables more transparency into your workforce and allows for anomaly detection, trend visualization, and data loss prevention.
+
+Auditing of Microsoft support operations includes the following set of action groups, which audit all queries executed against the database, as well as successful and failed logins by Microsoft support engineers:
+
+- BATCH_COMPLETED_GROUP
+- SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP
+- FAILED_DATABASE_AUTHENTICATION_GROUP
 
 ## Enable auditing
 

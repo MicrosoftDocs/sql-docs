@@ -68,7 +68,7 @@ Next, you will add the necessary references to the project.
   
 4.  In the **Component Name** column, locate and select the **System.ComponentModel.Composition** component. Click **OK** after you select the component.  
   
-5.  Add the required assembly references. Right-click the project node and then click **Add Reference**. Click **Browse** and navigate to the C:\Program Files (x86)\\MicrosoftSQL Server\110\DAC\Bin folder. Choose Microsoft.Data.Tools.Schema.Sql.dll and click Add, then click OK.  
+5.  Add the required assembly references. Right-click the project node and then click **Add Reference**. Click **Browse** and navigate to the `C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin` folder. Choose Microsoft.Data.Tools.Schema.Sql.dll and click Add, then click OK.  
   
 6.  On the **Project** menu, click **Unload Project**.  
   

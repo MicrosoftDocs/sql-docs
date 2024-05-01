@@ -1,6 +1,6 @@
 ---
-title: "GetReportServerUrls Method (WMI MSReportServer_Instance)"
-description: "GetReportServerUrls Method (WMI MSReportServer_Instance)"
+title: "GetReportServerUrls method (WMI MSReportServer_Instance)"
+description: "GetReportServerUrls method (WMI MSReportServer_Instance)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/09/2016
@@ -11,7 +11,7 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "GetReportServerUrls method"
 ---
-# MSReportServer_Instance Methods - GetReportServerUrls
+# MSReportServer_Instance methods - GetReportServerUrls
   Returns a list of URLs users can use to access the report server and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].  
   
 ## Syntax  
@@ -39,15 +39,15 @@ public void GetReportServerUrls(out string[] applicationName,
  *HRESULT*  
  A value that indicates success or an error code.  
   
-## Return Values  
+## Return values  
   
 ## Remarks  
- Methods exposed by WMI management objects are called through the InvokeMethod function. For more information, please see "Executing Methods on Management Objects" in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework WMI documentation.  
+ Methods exposed by WMI management objects are called through the *InvokeMethod* function. For more information, please see **Executing Methods on Management Objects** in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework WMI documentation.  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+## Related content  
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

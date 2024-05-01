@@ -8,7 +8,7 @@ ms.date: 05/24/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
-monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 
 # Recover ledger database after tampering
@@ -41,7 +41,7 @@ If the attacker tampered with the database ledger, recomputing the hashes of blo
 1. [Verifying](ledger-verify-database.md) the portion of the ledger after the last transaction recovered by the backup and until the end of the ledger. For this, you have to use the database digests from the forked part of the chain. Although the database digests don't match the original part of the ledger, it can still verify the forked portion of the ledger hasn't been tampered with. If these also indicate tampering, this means that there have been more than one tampering events and the process needs to be applied recursively to recover the different portions of the ledger from backups.
 1. Manually repair the table ledgers by reinserting the information for the verified transactions and recomputing the hashes for these new transactions that occurred after the first tampering event in the database ledger.
 
-## See also
+## Related content
 
 - [Database ledger](ledger-database-ledger.md)
 - [Verify a ledger table to detect tampering](ledger-verify-database.md)

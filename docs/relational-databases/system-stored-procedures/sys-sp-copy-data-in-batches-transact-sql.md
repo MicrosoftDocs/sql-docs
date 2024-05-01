@@ -52,7 +52,7 @@ None.
 
 This operation requires **SELECT** on the source table, **INSERT** in the target table, and **ALTER** on the target table if there are foreign key or check constraints that will be disabled, or an identity column that will be adjusted.
 
-## Next steps
+## Related content
 
 - [Ledger considerations and limitations](../security/ledger/ledger-limits.md)
 - [Ledger overview](../security/ledger/ledger-overview.md)

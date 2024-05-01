@@ -1,30 +1,27 @@
 ---
 title: Restore to a point-in-time
 description: Describes how to configure automated backups and restore to a point in time
-author: dnethi
-ms.author: dinethi
+author: AbdullahMSFT
+ms.author: amamun 
 ms.reviewer: mikeray, randolphwest
 ms.date: 10/25/2023
 ms.topic: conceptual
 ms.custom: ignite-2023
 ---
 
-# Restore to a point-in-time on Azure Arc-enabled SQL Server
+# Restore to a point-in-time 
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-This task creates a new database as a copy of another database. The new database is restored from backup to a point-in-time in the past that is within the retention period.  
+This article demonstrates how to restore a database to a point-in-time as a new database on the same instance of SQL Server enabled by Azure Arc.
 
-You can restore a database to a point-in-time:
-
-- From an existing database
-- To a new database on the same Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance
+The new database is restored from backup to a point-in-time in the past that is within the retention period.  
 
 [!INCLUDE [azure-arc-sql-preview](includes/azure-arc-sql-preview.md)]
 
 ## Prerequisite
 
-Before you can restore a database to a point-in-time with the instructions in this article, you have to enable automatic backups. For instructions, see [Manage automated backups - Azure Arc-enabled SQL Server](backup-local.md).
+Before you can restore a database to a point-in-time with the instructions in this article, you have to enable automatic backups. For instructions, see [Manage automated backups - [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]](backup-local.md).
 
 Automated backups are disabled by default.
 
@@ -60,7 +57,7 @@ az sql db-arc restore --dest-name "new_db" --resouce-group "my-rg" --name "mysou
 
 ## Limitations
 
-- The process described in this article requires the backup be taken by an Azure Arc-enabled SQL Server automated backup. For instructions, see [Manage automated backups - Azure Arc-enabled SQL Server](backup-local.md).
+- The process described in this article requires the backup be taken by an automated backup from an instance of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]. For instructions, see [Manage automated backups - [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]](backup-local.md).
 
 ## Related tasks
 

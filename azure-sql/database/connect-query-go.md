@@ -1,12 +1,12 @@
 ---
 title: Use Go to query
-titleSuffix: Azure SQL Database & SQL Managed Instance
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: "Quickstart: Use Go to create a program that connects to a database in Azure SQL Database or Azure SQL Managed Instance, and runs queries."
 author: dlevy-msft
 ms.author: dlevy
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 09/12/2023
-ms.service: sql-database
+ms.date: 12/01/2023
+ms.service: sql-db-mi
 ms.subservice: connect
 ms.topic: quickstart
 ms.custom:
@@ -19,29 +19,34 @@ monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 
 [!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-In this quickstart, you'll use the Golang programming language to connect to an Azure SQL database, or a database in [!INCLUDE [ssazuremi_md](../../docs/includes/ssazuremi_md.md)], with the [go-mssqldb](https://github.com/microsoft/go-mssqldb) driver. The sample queries and modifies data with explicit Transact-SQL (T-SQL) statements. [Golang](https://go.dev/) is an open-source programming language that makes it easy to build simple, reliable, and efficient software.
+In this quickstart, you'll use the Golang programming language to connect to an Azure SQL database, or a database in [!INCLUDE [ssazuremi-md](../../docs/includes/ssazuremi-md.md)], with the [go-mssqldb](https://github.com/microsoft/go-mssqldb) driver. The sample queries and modifies data with explicit Transact-SQL (T-SQL) statements. [Golang](https://go.dev/) is an open-source programming language that makes it easy to build simple, reliable, and efficient software.
 
 ## Prerequisites
 
 To complete this quickstart, you need:
 
 - An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/).
-- An Azure SQL database or a database in [!INCLUDE [ssazuremi_md](../../docs/includes/ssazuremi_md.md)]. You can use one of these quickstarts to create a database:
+- An Azure SQL database or a database in [!INCLUDE [ssazuremi-md](../../docs/includes/ssazuremi-md.md)]. You can use one of these quickstarts to create a database:
 
-  | | SQL Database | SQL Managed Instance | SQL Server on Azure VM |
-  | :--- | :--- | :--- | :--- |
-  | **Create**| [Portal](single-database-create-quickstart.md) | [Portal](../managed-instance/instance-create-quickstart.md) | [Portal](../virtual-machines/windows/sql-vm-create-portal-quickstart.md) |
-  | **Create** | [CLI](scripts/create-and-configure-database-cli.md) | [CLI](https://medium.com/azure-sqldb-managed-instance/working-with-sql-managed-instance-using-azure-cli-611795fe0b44) |
-  | **Create** | [PowerShell](scripts/create-and-configure-database-powershell.md) | [PowerShell](../managed-instance/scripts/create-configure-managed-instance-powershell.md) | [PowerShell](../virtual-machines/windows/sql-vm-create-powershell-quickstart.md) |
-  | **Configure** | [Server-level IP firewall rule](firewall-create-server-level-portal-quickstart.md) | [Connectivity from a VM](../managed-instance/connect-vm-instance-configure.md) |
-  | **Configure** | | [Connectivity from on-premises](../managed-instance/point-to-site-p2s-configure.md) | [Connect to a SQL Server instance](../virtual-machines/windows/sql-vm-create-portal-quickstart.md) |
-  | **Load data** | [!INCLUDE [sssampledbobject-md](../../docs/includes/sssampledbobject-md.md)] loaded per quickstart | [Restore WideWorldImporters](../managed-instance/restore-sample-database-quickstart.md) | [Restore WideWorldImporters](../managed-instance/restore-sample-database-quickstart.md) |
-  | **Load data** | | Restore or import [!INCLUDE [sssampledbobject-md](../../docs/includes/sssampledbobject-md.md)] from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) | Restore or import [!INCLUDE [sssampledbobject-md](../../docs/includes/sssampledbobject-md.md)] from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) |
+  | SQL Database | SQL Managed Instance | SQL Server on Azure VM |
+  | :--- | :--- | :--- |
+  | **Create** | | |
+  | [Portal](single-database-create-quickstart.md) | [Portal](../managed-instance/instance-create-quickstart.md) | [Portal](../virtual-machines/windows/sql-vm-create-portal-quickstart.md) |
+  | [CLI](scripts/create-and-configure-database-cli.md) | [CLI](https://medium.com/azure-sqldb-managed-instance/working-with-sql-managed-instance-using-azure-cli-611795fe0b44) |
+  | [PowerShell](scripts/create-and-configure-database-powershell.md) | [PowerShell](../managed-instance/scripts/create-configure-managed-instance-powershell.md) | [PowerShell](../virtual-machines/windows/sql-vm-create-powershell-quickstart.md) |
+  | **Configure** | | |
+  | [Server-level IP firewall rule](firewall-create-server-level-portal-quickstart.md) | [Connectivity from a VM](../managed-instance/connect-vm-instance-configure.md) |
+  | | [Connectivity from on-premises](../managed-instance/point-to-site-p2s-configure.md) | [Connect to a SQL Server instance](../virtual-machines/windows/sql-vm-create-portal-quickstart.md) |
+  | **Load data** | | |
+  | `AdventureWorks2022` loaded per quickstart | [Restore WideWorldImporters](../managed-instance/restore-sample-database-quickstart.md) | [Restore WideWorldImporters](../managed-instance/restore-sample-database-quickstart.md) |
+  | | Restore or import `AdventureWorks2022` from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) | Restore or import `AdventureWorks2022` from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) |
 
   > [!IMPORTANT]  
-  > The scripts in this article are written to use the [!INCLUDE [sssampledbobject-md](../../docs/includes/sssampledbobject-md.md)] database. With a SQL managed instance, you must either import the [!INCLUDE [sssampledbobject-md](../../docs/includes/sssampledbobject-md.md)] database into an instance database or modify the scripts in this article to use the Wide World Importers database.
+  > The scripts in this article are written to use the `AdventureWorks2022` database. With a SQL managed instance, you must either import the `AdventureWorks2022` database into an instance database or modify the scripts in this article to use the Wide World Importers database.
 
 - [Go](https://go.dev/doc/install) and related software for your operating system installed.
+
+- The latest version of **[sqlcmd](/sql/tools/sqlcmd/sqlcmd-utility?tabs=go#download-and-install-sqlcmd)** for your operating system installed.
 
 - The [Azure PowerShell Az module](/powershell/azure/install-azure-powershell) for your operating system installed.
 
@@ -73,20 +78,20 @@ Get the connection information you need to connect to the database. You'll need 
    ```sql
    CREATE SCHEMA TestSchema;
    GO
-
+   
    CREATE TABLE TestSchema.Employees (
-     Id       INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
-     Name     NVARCHAR(50),
-     Location NVARCHAR(50)
+       Id INT IDENTITY(1, 1) NOT NULL PRIMARY KEY,
+       Name NVARCHAR(50),
+       Location NVARCHAR(50)
    );
    GO
-
-   INSERT INTO TestSchema.Employees (Name, Location) VALUES
-     (N'Jared',  N'Australia'),
-     (N'Nikita', N'India'),
-     (N'Tom',    N'Germany');
+   
+   INSERT INTO TestSchema.Employees (Name, Location)
+   VALUES (N'Jared', N'Australia'),
+       (N'Nikita', N'India'),
+       (N'Astrid', N'Germany');
    GO
-
+   
    SELECT * FROM TestSchema.Employees;
    GO
    ```
@@ -319,15 +324,15 @@ Get the connection information you need to connect to the database. You'll need 
    Inserted ID: 4 successfully.
    ID: 1, Name: Jared, Location: Australia
    ID: 2, Name: Nikita, Location: India
-   ID: 3, Name: Tom, Location: Germany
+   ID: 3, Name: Astrid, Location: Germany
    ID: 4, Name: Jake, Location: United States
    Read 4 row(s) successfully.
    Updated 1 row(s) successfully.
    Deleted 1 row(s) successfully.
    ```
 
-## Next steps
+## Related content
 
-- [Design your first database in Azure SQL Database](design-first-database-tutorial.md)
+- [Tutorial: Design a relational database in Azure SQL Database using SSMS](design-first-database-tutorial.md)
 - [Golang driver for SQL Server](https://github.com/microsoft/go-mssqldb)
 - [Report issues or ask questions](https://github.com/microsoft/go-mssqldb/issues)

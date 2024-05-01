@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "SQLNCLI, database mirroring"
   - "SQL Server Native Client ODBC driver, database mirroring"
   - "SQL Server Native Client OLE DB provider, database mirroring"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Database Mirroring in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

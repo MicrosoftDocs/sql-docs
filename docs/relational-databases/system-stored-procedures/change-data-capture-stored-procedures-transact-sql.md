@@ -57,6 +57,6 @@ Change data capture makes available in a convenient relational format the histor
     :::column-end:::
 :::row-end:::
 
-## See also
+## Related content
 
 - [Change Data Capture Tables (Transact-SQL)](../system-tables/change-data-capture-tables-transact-sql.md)

@@ -1,8 +1,9 @@
 ---
 title: "Memory optimization for faster temp table and table variables"
 description: Learn about converting temporary tables, table variables, or table-valued parameters to memory-optimized tables and table variables to improve performance.
-author: kevin-farlee
-ms.author: kfarlee
+author: MashaMSFT
+ms.author: mathoma
+ms.reviewer: wiassaf, ryanston
 ms.date: "06/01/2018"
 ms.service: sql
 ms.subservice: in-memory-oltp
@@ -310,85 +311,110 @@ The comparison test lasts about 7 seconds. To run the sample:
   
 When running the script in an Azure SQL Database, make sure to run from a VM in the same region.
 
-  
 ```sql
-PRINT ' ';  
-PRINT '---- Next, memory-optimized, faster. ----';  
+PRINT ' ';
+PRINT '---- Next, memory-optimized, faster. ----';
 
-DROP TYPE IF EXISTS dbo.typeTableC_mem;  
-go  
-CREATE TYPE dbo.typeTableC_mem  -- !!  Memory-optimized.  
-        AS TABLE  
-        (  
-            Column1  INT NOT NULL INDEX ix1,  
-            Column2  CHAR(10)  
-        )  
-        WITH  
-            (MEMORY_OPTIMIZED = ON);  
-go  
-DECLARE @dateString_Begin nvarchar(64) =  
-    Convert(nvarchar(64), GetUtcDate(), 121);  
-PRINT Concat(@dateString_Begin, '  = Begin time, _mem.');  
-go  
-SET NoCount ON;  
-DECLARE @tvTableC dbo.typeTableC_mem;  -- !!  
+DROP TYPE IF EXISTS dbo.typeTableC_mem;
+GO
 
-INSERT INTO @tvTableC (Column1) values (1), (2);  
-INSERT INTO @tvTableC (Column1) values (3), (4);  
-DELETE @tvTableC;  
+CREATE TYPE dbo.typeTableC_mem -- !!  Memory-optimized.  
+AS TABLE (
+    Column1 INT NOT NULL INDEX ix1,
+    Column2 CHAR(10)
+)
+WITH (MEMORY_OPTIMIZED = ON);
+GO
 
-GO 5001  
+DECLARE @dateString_Begin NVARCHAR(64) =
+    CONVERT(NVARCHAR(64), GETUTCDATE(), 121);
 
-DECLARE @dateString_End nvarchar(64) =  
-    Convert(nvarchar(64), GetUtcDate(), 121);  
-PRINT Concat(@dateString_End, '  = End time, _mem.');  
-go  
-DROP TYPE IF EXISTS dbo.typeTableC_mem;  
-go  
+PRINT CONCAT (
+    @dateString_Begin,
+    ' = Begin time, _mem.'
+);
+GO
+
+SET NOCOUNT ON;
+
+DECLARE @tvTableC dbo.typeTableC_mem;-- !!  
+
+INSERT INTO @tvTableC (Column1)
+VALUES (1), (2);
+
+INSERT INTO @tvTableC (Column1)
+VALUES (3), (4);
+
+DELETE @tvTableC;GO 5001
+
+DECLARE @dateString_End NVARCHAR(64) =
+    CONVERT(NVARCHAR(64), GETUTCDATE(), 121);
+
+PRINT CONCAT (
+    @dateString_End,
+    ' = End time, _mem.'
+);
+GO
+
+DROP TYPE IF EXISTS dbo.typeTableC_mem;
+GO
 
 ---- End memory-optimized.  
 -------------------------------------------------  
 ---- Start traditional on-disk.  
+PRINT ' ';
+PRINT '---- Next, tempdb based, slower. ----';
 
-PRINT ' ';  
-PRINT '---- Next, tempdb based, slower. ----';  
+DROP TYPE IF EXISTS dbo.typeTableC_tempdb;
+GO
 
-DROP TYPE IF EXISTS dbo.typeTableC_tempdb;  
-go  
-CREATE TYPE dbo.typeTableC_tempdb  -- !!  Traditional tempdb.  
-    AS TABLE  
-    (  
-        Column1  INT NOT NULL ,  
-        Column2  CHAR(10)  
-    );  
-go  
-DECLARE @dateString_Begin nvarchar(64) =  
-    Convert(nvarchar(64), GetUtcDate(), 121);  
-PRINT Concat(@dateString_Begin, '  = Begin time, _tempdb.');  
-go  
-SET NoCount ON;  
-DECLARE @tvTableC dbo.typeTableC_tempdb;  -- !!  
+CREATE TYPE dbo.typeTableC_tempdb -- !!  Traditional tempdb.  
+AS TABLE (
+    Column1 INT NOT NULL,
+    Column2 CHAR(10)
+);
+GO
 
-INSERT INTO @tvTableC (Column1) values (1), (2);  
-INSERT INTO @tvTableC (Column1) values (3), (4);  
-DELETE @tvTableC;  
+DECLARE @dateString_Begin NVARCHAR(64) =
+    CONVERT(NVARCHAR(64), GETUTCDATE(), 121);
 
-GO 5001  
+PRINT CONCAT (
+    @dateString_Begin,
+    ' = Begin time, _tempdb.'
+);
+GO
 
-DECLARE @dateString_End nvarchar(64) =  
-    Convert(nvarchar(64), GetUtcDate(), 121);  
-PRINT Concat(@dateString_End, '  = End time, _tempdb.');  
-go  
-DROP TYPE IF EXISTS dbo.typeTableC_tempdb;  
-go  
-----  
+SET NOCOUNT ON;
 
-PRINT '---- Tests done. ----';  
+DECLARE @tvTableC dbo.typeTableC_tempdb;-- !!  
 
-go  
+INSERT INTO @tvTableC (Column1)
+VALUES (1), (2);
 
-/*** Actual output, SQL Server 2016:  
+INSERT INTO @tvTableC (Column1)
+VALUES (3), (4);
 
+DELETE @tvTableC;GO 5001
+
+DECLARE @dateString_End NVARCHAR(64) =
+    CONVERT(NVARCHAR(64), GETUTCDATE(), 121);
+
+PRINT CONCAT (
+    @dateString_End,
+    ' = End time, _tempdb.'
+);
+GO
+
+DROP TYPE IF EXISTS dbo.typeTableC_tempdb;
+GO
+
+PRINT '---- Tests done. ----';
+GO
+```
+
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
+
+```output
 ---- Next, memory-optimized, faster. ----  
 2016-04-20 00:26:58.033  = Begin time, _mem.  
 Beginning execution loop  
@@ -401,11 +427,8 @@ Beginning execution loop
 Batch execution completed 5001 times.  
 2016-04-20 00:27:05.440  = End time, _tempdb.  
 ---- Tests done. ----  
-***/
 ```
-  
-  
-  
+
 ## G. Predict active memory consumption  
   
 You can learn to predict the active memory needs of your memory-optimized tables with the following resources:  

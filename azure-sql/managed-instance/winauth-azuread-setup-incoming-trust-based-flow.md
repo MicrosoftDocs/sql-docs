@@ -15,7 +15,7 @@ ms.topic: how-to
 
 This article describes how to implement the incoming trust-based authentication flow to allow Active Directory (AD) joined clients running Windows 10, Windows Server 2012, or higher versions of Windows to authenticate to an Azure SQL Managed Instance using Windows Authentication. 
 
-This article also includes steps to rotate a Kerberos Key for your service account in Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) and Trusted Domain Object, and steps to remove a Trusted Domain Object and all Kerberos settings, if desired.
+This article also includes steps to rotate a Kerberos Key for your service account in Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) and Trusted Domain Object, and steps to remove a Trusted Domain Object and all Kerberos settings, if desired.
 
 Enabling the incoming trust-based authentication flow is one step in [setting up Windows Authentication for Azure SQL Managed Instance using Microsoft Entra ID and Kerberos](winauth-azuread-setup.md). The [modern interactive flow](winauth-azuread-setup-modern-interactive-flow.md) is available for enlightened clients running Windows 10 20H1, Windows Server 2022, or a higher version of Windows.
 

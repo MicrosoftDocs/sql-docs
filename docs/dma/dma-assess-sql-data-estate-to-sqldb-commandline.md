@@ -96,7 +96,7 @@ The XML elements that are passed to DMACMD are defined in the following table:
 |`AzureMigrateProjectName`|Azure Migrate project name to upload assessment results to.|
 |`ResourceGroupName`|Azure Migrate resource group name.|
 |`AzureAuthenticationInteractiveAuthentication`|Set to `true` to pop up the authentication window.|
-|`AzureAuthenticationTenantId`|Microsoft Entra tenant ID. </br></br>Obtain this from the **Overview** blade of Microsoft Entra ID in the [Azure portal](https://portal.azure.com). |
+|`AzureAuthenticationTenantId`|Microsoft Entra tenant ID. </br></br>Obtain this from the **Overview** pane of Microsoft Entra ID in the [Azure portal](https://portal.azure.com). |
 |`EnableAssessmentUploadToAzureMigrate`| Set to `true` to upload and publish assessment results to Azure Migrate hub.|
 
 

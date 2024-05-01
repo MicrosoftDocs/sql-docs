@@ -36,8 +36,10 @@ landingContent:
             url: firewall-create-server-level-portal-quickstart.md
       - linkListType: video
         links:
-          - text: Azure SQL Database overview
-            url: /shows/Azure-SQL-for-Beginners/Azure-SQL-Database-Overview-7-of-61
+          - text: Azure SQL for beginners 
+            url: /shows/Azure-SQL-for-Beginners/
+          - text: Azure SQL Database essentials
+            url: /shows/azure-sql-database-essentials/
       - linkListType: concept
         links:
           - text: What is SQL Database?
@@ -124,8 +126,8 @@ landingContent:
             url: high-availability-sla.md
           - text: Active-geo replication
             url: active-geo-replication-overview.md 
-          - text: Auto-failover groups
-            url: auto-failover-group-sql-db.md 
+          - text: Failover groups
+            url: failover-group-sql-db.md 
           - text: Automated backups
             url: automated-backups-overview.md
           - text: Recover with backup 
@@ -223,3 +225,17 @@ landingContent:
             url: maintenance-window-configure.md
           - text: Maintenance window notifications
             url: advance-notifications.md
+
+  # Card 
+  - title: Monitor
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Monitor Azure SQL Database with metrics and alerts
+            url: monitoring-metrics-alerts.md
+          - text: Monitor Azure SQL workloads with database watcher
+            url: ../database-watcher-overview.md
+          - text: Monitor Azure SQL Database with Azure Monitor
+            url: monitoring-sql-database-azure-monitor.md
+          - text: Monitor Microsoft Azure SQL Database performance using dynamic management views
+            url: monitoring-with-dmvs.md

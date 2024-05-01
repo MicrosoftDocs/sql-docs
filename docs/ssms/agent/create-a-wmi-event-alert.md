@@ -7,7 +7,7 @@ ms.reviewer: randolphwest
 ms.date: 09/20/2022
 ms.service: sql
 ms.subservice: ssms
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
   - "WMI event alerts [SQL Server Management Studio]"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"

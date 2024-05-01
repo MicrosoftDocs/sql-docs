@@ -108,84 +108,86 @@ This section describes what occurs when a **datetimeoffset** data type is conver
 When converting to  **date**, the year, month, and day are copied. The following code shows the results of converting a `datetimeoffset(4)` value to a `date` value.  
   
 ```sql
-DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10 +01:00';  
-DECLARE @date date= @datetimeoffset;  
-  
-SELECT @datetimeoffset AS '@datetimeoffset ', @date AS 'date';  
-  
---Result  
---@datetimeoffset                date  
--------------------------------- ----------  
---2025-12-10 12:32:10.0000 +01:0 2025-12-10  
---  
---(1 row(s) affected)  
-  
+DECLARE @datetimeoffset DATETIMEOFFSET(4) = '12-10-25 12:32:10 +01:00';
+DECLARE @date DATE = @datetimeoffset;
+
+SELECT @datetimeoffset AS '@datetimeoffset ', @date AS 'date';
+```
+
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
+
+```output
+@datetimeoffset                 date  
+------------------------------ ----------  
+2025-12-10 12:32:10.0000 +01:0 2025-12-10  
 ```  
   
 If the conversion is to **time(n)**, the hour, minute, second, and fractional seconds are copied. The time zone value is truncated. When the precision of the **datetimeoffset(n)** value is greater than the precision of the **time(n)** value, the value is rounded up. The following code shows the results of converting a `datetimeoffset(4)` value to a `time(3)` value.
   
 ```sql
-DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10.1237 +01:0';  
-DECLARE @time time(3) = @datetimeoffset;  
-  
-SELECT @datetimeoffset AS '@datetimeoffset ', @time AS 'time';  
-  
---Result  
---@datetimeoffset                time  
--------------------------------- ------------  
--- 2025-12-10 12:32:10.1237 +01:00    12:32:10.124  
-  
---  
---(1 row(s) affected)  
-  
+DECLARE @datetimeoffset DATETIMEOFFSET(4) = '12-10-25 12:32:10.1237 +01:0';
+DECLARE @time TIME(3) = @datetimeoffset;
+
+SELECT @datetimeoffset AS '@datetimeoffset ', @time AS 'time';
+```
+
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
+
+```output
+@datetimeoffset                 time  
+------------------------------- ------------  
+2025-12-10 12:32:10.1237 +01:00 12:32:10.124  
 ```  
   
 When converting to**datetime**, the date and time values are copied, and the time zone is truncated. When the fractional precision of the **datetimeoffset(n)** value is greater than three digits, the value is truncated. The following code shows the results of converting a `datetimeoffset(4)` value to a `datetime` value.
   
 ```sql
-DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10.1237 +01:0';  
-DECLARE @datetime datetime = @datetimeoffset;  
-  
-SELECT @datetimeoffset AS '@datetimeoffset ', @datetime AS 'datetime';  
-  
---Result  
---@datetimeoffset                datetime  
--------------------------------- -----------------------  
---2025-12-10 12:32:10.1237 +01:0 2025-12-10 12:32:10.123  
---  
---(1 row(s) affected)  
+DECLARE @datetimeoffset DATETIMEOFFSET(4) = '12-10-25 12:32:10.1237 +01:0';
+DECLARE @datetime DATETIME = @datetimeoffset;
+
+SELECT @datetimeoffset AS '@datetimeoffset ', @datetime AS 'datetime';
+```
+
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
+
+```output
+@datetimeoffset                datetime  
+------------------------------ -----------------------  
+2025-12-10 12:32:10.1237 +01:0 2025-12-10 12:32:10.123  
 ```  
   
 For conversions to  **smalldatetime**, the date and hours are copied. The minutes are rounded up with respect to the seconds value and seconds are set to 0. The following code shows the results of converting a `datetimeoffset(3)` value to a `smalldatetime` value.  
   
 ```sql
-DECLARE @datetimeoffset datetimeoffset(3) = '1912-10-25 12:24:32 +10:0';  
-DECLARE @smalldatetime smalldatetime = @datetimeoffset;  
-  
-SELECT @datetimeoffset AS '@datetimeoffset', @smalldatetime AS '@smalldatetime';  
-  
---Result  
---@datetimeoffset                @smalldatetime  
--------------------------------- -----------------------  
---1912-10-25 12:24:32.000 +10:00 1912-10-25 12:25:00  
---  
---(1 row(s) affected)  
+DECLARE @datetimeoffset DATETIMEOFFSET(3) = '1912-10-25 12:24:32 +10:0';
+DECLARE @smalldatetime SMALLDATETIME = @datetimeoffset;
+
+SELECT @datetimeoffset AS '@datetimeoffset', @smalldatetime AS '@smalldatetime';
+```
+
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
+
+```output
+@datetimeoffset                @smalldatetime  
+------------------------------ -----------------------  
+1912-10-25 12:24:32.000 +10:00 1912-10-25 12:25:00  
 ```  
   
 If the conversion is to **datetime2(n)**, the date and time are copied to the **datetime2** value, and the time zone is truncated. When the precision of the **datetime2(n)** value is greater than the precision of the **datetimeoffset(n)** value, the fractional seconds are truncated to fit. The following code shows the results of converting a `datetimeoffset(4)` value to a `datetime2(3)` value.
   
 ```sql
-DECLARE @datetimeoffset datetimeoffset(4) = '1912-10-25 12:24:32.1277 +10:0';  
-DECLARE @datetime2 datetime2(3)=@datetimeoffset;  
-  
-SELECT @datetimeoffset AS '@datetimeoffset', @datetime2 AS '@datetime2';  
-  
---Result  
+DECLARE @datetimeoffset DATETIMEOFFSET(4) = '1912-10-25 12:24:32.1277 +10:0';
+DECLARE @datetime2 DATETIME2(3) = @datetimeoffset;
+
+SELECT @datetimeoffset AS '@datetimeoffset', @datetime2 AS '@datetime2';
+```
+
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
+
+```output
 @datetimeoffset                    @datetime2  
 ---------------------------------- ----------------------  
 1912-10-25 12:24:32.1277 +10:00    1912-10-25 12:24:32.12  
-  
---(1 row(s) affected)  
 ```  
   
 ### Converting string literals to datetimeoffset
@@ -208,18 +210,13 @@ Conversions from string literals to date and time types are permitted if all par
 The following example compares the results of casting a string to each **date** and **time** data type.
   
 ```sql
-SELECT   
-     CAST('2007-05-08 12:35:29. 1234567 +12:15' AS time(7)) AS 'time'   
-    ,CAST('2007-05-08 12:35:29. 1234567 +12:15' AS date) AS 'date'   
-    ,CAST('2007-05-08 12:35:29.123' AS smalldatetime) AS   
-        'smalldatetime'   
-    ,CAST('2007-05-08 12:35:29.123' AS datetime) AS 'datetime'   
-    ,CAST('2007-05-08 12:35:29.1234567+12:15' AS datetime2(7)) AS   
-        'datetime2'  
-    ,CAST('2007-05-08 12:35:29.1234567 +12:15' AS datetimeoffset(7)) AS   
-        'datetimeoffset'  
-    ,CAST('2007-05-08 12:35:29.1234567+12:15' AS datetimeoffset(7)) AS  
-        'datetimeoffset IS08601';  
+SELECT CAST('2007-05-08 12:35:29. 1234567 +12:15' AS TIME(7)) AS 'time',
+    CAST('2007-05-08 12:35:29. 1234567 +12:15' AS DATE) AS 'date',
+    CAST('2007-05-08 12:35:29.123' AS SMALLDATETIME) AS 'smalldatetime',
+    CAST('2007-05-08 12:35:29.123' AS DATETIME) AS 'datetime',
+    CAST('2007-05-08 12:35:29.1234567+12:15' AS DATETIME2(7)) AS 'datetime2',
+    CAST('2007-05-08 12:35:29.1234567 +12:15' AS DATETIMEOFFSET(7)) AS 'datetimeoffset',
+    CAST('2007-05-08 12:35:29.1234567+12:15' AS DATETIMEOFFSET(7)) AS 'datetimeoffset IS08601';
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]

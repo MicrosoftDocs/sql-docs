@@ -6,7 +6,7 @@ ms.author: maghan
 ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: performance
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
   - "Database Engine [SQL Server], tutorials"
 ---

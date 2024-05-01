@@ -1,5 +1,5 @@
 ---
-title: "Creating a Custom Report Item Run-Time Component"
+title: "Creating a custom report item run-time component"
 description: Learn how to create a custom report item run-time component and define the properties for that component in the design environment.
 author: maggiesMSFT
 ms.author: maggies
@@ -11,16 +11,16 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "custom report items, creating"
 ---
-# Creating a Custom Report Item Run-Time Component
+# Creating a custom report item run-time component
   The custom report item run-time component is implemented as a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] component using any CLS-compliant language, and is called by the report processor at run time. You define the properties for the run-time component in the design environment by modifying the custom report item's corresponding design-time component.  
   
  For a sample of a fully implemented custom report item, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
-## Definition and Instance Objects  
- Before implementing a custom report item it is important to understand the difference between *definition objects* and *instance objects*. Definition objects provide the RDL representation of the custom report item whereas instance objects are the evaluated versions of the definition objects. There is only one definition object for each item on the report. When accessing properties on a definition object that contain expressions, you will get the unevaluated expression string. Instance objects contain the evaluated versions of the definition objects and can have a one-to-many relationship with an item's definition object. For example, if a report has a <xref:Microsoft.ReportingServices.OnDemandReportRendering.Tablix> data region that contains a <xref:Microsoft.ReportingServices.OnDemandReportRendering.CustomReportItem> in a detail row, there will be only one definition object but there will be an instance object for each row in the data region.  
+## Definition and instance objects  
+ Before implementing a custom report item, it's important to understand the difference between *definition objects* and *instance objects*. Definition objects provide the RDL representation of the custom report item whereas instance objects are the evaluated versions of the definition objects. There's only one definition object for each item on the report. When accessing properties on a definition object that contain expressions, you get the unevaluated expression string. Instance objects contain the evaluated versions of the definition objects and can have a one-to-many relationship with an item's definition object. For example, if a report has a <xref:Microsoft.ReportingServices.OnDemandReportRendering.Tablix> data region that contains a <xref:Microsoft.ReportingServices.OnDemandReportRendering.CustomReportItem> in a detail row, there will be only one definition object but there will be an instance object for each row in the data region.  
   
-## Implementing the ICustomReportItem Interface  
- To create a **CustomReportItem** run-time component you will need to implement the <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem> interface that is defined in the Microsoft.ReportingServices.ProcessingCore.dll:  
+## Implement the ICustomReportItem interface  
+ To create a **CustomReportItem** run-time component, you need to implement the <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem> interface that is defined in the Microsoft.ReportingServices.ProcessingCore.dll:  
   
 ```csharp  
 namespace Microsoft.ReportingServices.OnDemandReportRendering  
@@ -33,9 +33,9 @@ void EvaluateReportItemInstance(CustomReportItem customReportItem);
 }  
 ```  
   
- After you have implemented the <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem> interface, two method stubs will be generated for you: <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem.GenerateReportItemDefinition%2A> and <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem.EvaluateReportItemInstance%2A>. The <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem.GenerateReportItemDefinition%2A> method is called first and is used for setting definition properties and creating the <xref:Microsoft.ReportingServices.OnDemandReportRendering.Image> object that will contain both the definition and instance properties that are used for rendering the item. The <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem.EvaluateReportItemInstance%2A> method is called after the definition objects have been evaluated, and it provides the instance objects that will be used for rendering the item.  
+ After you implement the <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem> interface, two method stubs will be generated for you: <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem.GenerateReportItemDefinition%2A> and <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem.EvaluateReportItemInstance%2A>. The <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem.GenerateReportItemDefinition%2A> method is called first and is used for setting definition properties and creating the <xref:Microsoft.ReportingServices.OnDemandReportRendering.Image> object that contains both the definition and instance properties that are used for rendering the item. The <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem.EvaluateReportItemInstance%2A> method is called after the definition objects are evaluated, and it provides the instance objects that will be used for rendering the item.  
   
- The following is an example implementation of a custom report item that renders the name of the control as an image.  
+ The following example implementation shows a custom report item that renders the name of the control as an image.  
   
 ```csharp  
 namespace Microsoft.Samples.ReportingServices  
@@ -123,10 +123,10 @@ namespace Microsoft.Samples.ReportingServices
 }  
 ```  
   
-## See Also  
- [Custom Report Item Architecture](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
- [Creating a Custom Report Item Design-Time Component](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)   
- [Custom Report Item Class Libraries](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
- [How to: Deploy a Custom Report Item](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+## Related content  
+ [Custom report item architecture](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
+ [Creating a custom report item design-time component](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)   
+ [Custom report item class libraries](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
+ [How to: Deploy a custom report item](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   

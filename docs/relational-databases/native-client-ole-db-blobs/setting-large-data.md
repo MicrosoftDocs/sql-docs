@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "pointer passing [OLE DB]"
   - "SQL Server Native Client OLE DB provider, BLOBs"
   - "large data, OLE objects"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Setting Large Data in SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

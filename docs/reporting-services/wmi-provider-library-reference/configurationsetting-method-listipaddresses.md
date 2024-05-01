@@ -1,6 +1,6 @@
 ---
-title: "ListIPAddresses Method (WMI MSReportServer_ConfigurationSetting)"
-description: "ListIPAddresses Method (WMI MSReportServer_ConfigurationSetting)"
+title: "ListIPAddresses method (WMI MSReportServer_ConfigurationSetting)"
+description: "ListIPAddresses method (WMI MSReportServer_ConfigurationSetting)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -11,7 +11,7 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "ListIPAddresses method"
 ---
-# ConfigurationSetting Method - ListIPAddresses
+# ConfigurationSetting method - ListIPAddresses
   Lists the IP addresses for the report server computer.  
   
 ## Syntax  
@@ -45,17 +45,17 @@ public void ListIPAddresses (out string[] IPAddress,
  [out] Value indicating whether the call succeeded or failed.  
   
 ## Return Value  
- Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful; an error code indicates the call was not successful.  
+ Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. An error code indicates the call wasn't successful.  
   
 ## Remarks  
  *IPVersion* strings are V4, V6.  
   
- If *IsDhcpEnabled* is **True**, the *IPAddress* is dynamic. It should not be used for TLS bindings.  
+ If *IsDhcpEnabled* is **True**, the *IPAddress* is dynamic. It shouldn't be used for TLS bindings.  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

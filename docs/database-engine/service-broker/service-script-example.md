@@ -23,7 +23,7 @@ This Transact-SQL code sample defines a service that archives untyped XML docume
 
 ```sql
     -- The contract script contains definitions that must be
-    -- present for both the intiating service and the target
+    -- present for both the initiating service and the target
     -- service.
 
     USE AdventureWorks2008R2;

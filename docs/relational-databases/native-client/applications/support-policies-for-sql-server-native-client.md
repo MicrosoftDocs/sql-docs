@@ -7,7 +7,6 @@ ms.date: 09/06/2022
 ms.service: sql
 ms.subservice: native-client
 ms.topic: "reference"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Support Policies for SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

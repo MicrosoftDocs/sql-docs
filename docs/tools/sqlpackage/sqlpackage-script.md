@@ -13,6 +13,8 @@ ms.topic: conceptual
 # SqlPackage Script parameters and properties
 The SqlPackage Script action creates a Transact-SQL incremental update script that updates the schema of a target database to match the schema of a source database. 
 
+[!INCLUDE [entra-id](../../includes/entra-id-hard-coded.md)]
+
 ## Command-line syntax
 
 **SqlPackage** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
@@ -27,7 +29,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |---|---|---|---|
 |**/AccessToken:**|**/at**|{string}| Specifies the token based authentication access token to use when connect to the target database. |
 |**/Action:**|**/a:**|Script|Specifies the action to be performed. |
-|**/AzureCloudConfig:**|**/acc:**|{string}|Specifies the custom endpoints for connecting to Azure Active Directory in the format: AzureActiveDirectoryAuthority={value};DatabaseServicePrincipalName={value}" .|
+|**/AzureCloudConfig:**|**/acc:**|{string}|Specifies the custom endpoints for connecting to Microsoft Entra ID in the format: AzureActiveDirectoryAuthority={value};DatabaseServicePrincipalName={value}" .|
 |**/DeployReportPath:**|**/drp:**|{string}|Specifies an optional file path to output the deployment report xml file. |
 |**/DeployScriptPath:**|**/dsp:**|{string}|Specifies an optional file path to output the deployment script. For Azure deployments, if there are Transact-SQL commands to create or modify the master database, a script will be written to the same path but with "Filename_Master.sql" as the output file name. |
 |**/Diagnostics:**|**/d:**|{True&#124;False}|Specifies whether diagnostic logging is output to the console. Defaults to False. |
@@ -57,12 +59,12 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/TargetHostNameInCertificate:**|**/thnic:**|{string}|Specifies value that is used to validate the target SQL Server TLS/SSL certificate when the communication layer is encrypted by using TLS.|
 |**/TargetPassword:**|**/tp:**|{string}|For SQL Server Auth scenarios, defines the password to use to access the target database. |
 |**/TargetServerName:**|**/tsn:**|{string}|Defines the name of the server hosting the target database. |
-|**/TargetTimeout:**|**/tt:**|{int}|Specifies the timeout for establishing a connection to the target database in seconds. For Azure AD, it is recommended that this value be greater than or equal to 30 seconds.|
+|**/TargetTimeout:**|**/tt:**|{int}|Specifies the timeout for establishing a connection to the target database in seconds. For Microsoft Entra ID, it is recommended that this value be greater than or equal to 30 seconds.|
 |**/TargetTrustServerCertificate:**|**/ttsc:**|{True&#124;False}|Specifies whether to use TLS to encrypt the target database connection and bypass walking the certificate chain to validate trust. Default value is False. |
 |**/TargetUser:**|**/tu:**|{string}|For SQL Server Auth scenarios, defines the SQL Server user to use to access the target database. |
-|**/TenantId:**|**/tid:**|{string}|Represents the Azure AD tenant ID or domain name. This option is required to support guest or imported Azure AD users as well as Microsoft accounts such as outlook.com, hotmail.com, or live.com. If this parameter is omitted, the default tenant ID for Azure AD will be used, assuming that the authenticated user is a native user for this AD. However, in this case any guest or imported users and/or Microsoft accounts hosted in this Azure AD are not supported and the operation will fail. <br/> For more information about Active Directory Universal Authentication, see [Universal Authentication with SQL Database and Azure Synapse Analytics (SSMS support for MFA)](/azure/sql-database/sql-database-ssms-mfa-authentication).|
+|**/TenantId:**|**/tid:**|{string}|Represents the Microsoft Entra tenant ID or domain name. This option is required to support Microsoft Entra guest users as well as Microsoft accounts such as outlook.com, hotmail.com, or live.com. If this parameter is omitted, the default tenant ID for Microsoft Entra ID will be used, assuming that the authenticated user is a native user for this tenant. However, in this case any guest users or Microsoft accounts hosted in this Microsoft Entra ID are not supported and the operation will fail.|
 |**/ThreadMaxStackSize:**|**/tmss:**|{int}|Specifies the maximum size in megabytes for the thread running the SqlPackage action. This option should only be used when encountering stack overflow exceptions that occur when parsing very large Transact-SQL statements.|
-|**/UniversalAuthentication:**|**/ua:**|{True&#124;False}|Specifies if Universal Authentication should be used. When set to True, the interactive authentication protocol is activated supporting MFA. This option can also be used for Azure AD authentication without MFA, using an interactive protocol requiring the user to enter their username and password or integrated authentication (Windows credentials). When /UniversalAuthentication is set to True, no Azure AD authentication can be specified in SourceConnectionString (/scs). When /UniversalAuthentication is set to False, Azure AD authentication must be specified in SourceConnectionString (/scs). <br/> For more information about Active Directory Universal Authentication, see [Universal Authentication with SQL Database and Azure Synapse Analytics (SSMS support for MFA)](/azure/sql-database/sql-database-ssms-mfa-authentication).|
+|**/UniversalAuthentication:**|**/ua:**|{True&#124;False}|Specifies if Universal Authentication should be used. When set to True, the interactive authentication protocol is activated supporting MFA. This option can also be used for Microsoft Entra authentication without MFA, using an interactive protocol requiring the user to enter their username and password, or integrated authentication (using federated Windows credentials). When /UniversalAuthentication is set to True, no Microsoft Entra authentication can be specified in SourceConnectionString (/scs). When /UniversalAuthentication is set to False, Microsoft Entra authentication must be specified in SourceConnectionString (/scs). <br/> See [Using Microsoft Entra multifactor authentication](/azure/sql-database/sql-database-ssms-mfa-authentication) for more information.|
 |**/Variables:**|**/v:**|{PropertyName}={Value}|Specifies a name value pair for an action-specific variable;{VariableName}={Value}. The DACPAC file contains the list of valid SQLCMD variables. An error results if a value is not provided for every variable. |
 
 ## Properties specific to the Script action
@@ -156,6 +158,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|IsAlwaysEncryptedParameterizationEnabled=(BOOLEAN 'False')|Enables variable parameterization on Always Encrypted columns in pre/post deployment scripts.|
 |**/p:**|LongRunningCommandTimeout=(INT32 '0')| Specifies the long running command timeout in seconds when executing queries against SQL Server. Use 0 to wait indefinitely.|
 |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|Specifies that publish should always drop and re-create an assembly if there is a difference instead of issuing an ALTER ASSEMBLY statement.|
+|**/p:**|PerformIndexOperationsOnline=(BOOLEAN 'False')|Specifies whether to perform index operations online during deployment.|
 |**/p:**|PopulateFilesOnFileGroups=(BOOLEAN 'True')|Specifies whether a new file is also created when a new FileGroup is created in the target database.|
 |**/p:**|PreserveIdentityLastValues=(BOOLEAN 'False')|Specifies whether last values for identity columns should be preserved during deployment.|
 |**/p:**|RegisterDataTierApplication=(BOOLEAN)|Specifies whether the schema is registered with the database server.|

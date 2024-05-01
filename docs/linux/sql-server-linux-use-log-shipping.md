@@ -3,7 +3,7 @@ title: Configure log shipping for SQL Server on Linux
 description: This tutorial shows a basic example of how to replicate a SQL Server instance on Linux to a secondary instance using log shipping.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/01/2020
+ms.date: 01/10/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -11,307 +11,329 @@ ms.custom:
   - intro-get-started
   - linux-related-content
 ---
-# Get started with Log Shipping on Linux
+# Get started with log shipping on Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-SQL Server Log shipping is a HA configuration where a database from a primary server is replicated onto one or more secondary servers. In a nutshell, a backup of the source database is restored onto the secondary server. Then the primary server creates transaction log backups periodically, and the secondary servers restore them, updating the secondary copy of the database. 
+Log shipping is a [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] high availability (HA) configuration where a database from a primary server is replicated onto one or more secondary servers. Log shipping allows backup files from the source database to restore onto the secondary server. The primary server creates transaction log backups periodically, and the secondary servers restore them, updating the secondary copy of the database.
 
-  ![Diagram showing the log shipping workflow.](https://preview.ibb.co/hr5Ri5/logshipping.png)
+:::image type="content" source="media/sql-server-linux-use-log-shipping/log-shipping.png" alt-text="Diagram showing the log shipping workflow.":::
 
-As described in the this picture, a log shipping session involves the following steps:
+As described in the previous diagram, a log shipping session involves the following steps:
 
 - Backing up the transaction log file on the primary SQL Server instance
 - Copying the transaction log backup file across the network to one or more secondary SQL Server instances
 - Restoring the transaction log backup file on the secondary SQL Server instances
 
 ## Prerequisites
-- [Install SQL Server Agent on Linux](./sql-server-linux-setup-sql-agent.md)
 
-## Setup a network share for Log Shipping using CIFS 
+- [Install SQL Server Agent on Linux](sql-server-linux-setup-sql-agent.md)
 
-> [!NOTE] 
-> This tutorial uses CIFS + Samba to setup the network share. If you want to use NFS, leave a comment and we will add it to the doc.       
+## Set up a network share for log shipping using CIFS
 
-### Configure Primary Server
--   Run the following to install Samba
+> [!NOTE]  
+> This tutorial uses CIFS + Samba to setup the network share.
 
-    ```bash
-    sudo apt-get install samba #For Ubuntu
-    sudo yum -y install samba #For RHEL/CentOS
-    ```
--   Create a directory to store the logs for Log Shipping and give mssql the required permissions
+### Configure primary server
 
-    ```bash
-    mkdir /var/opt/mssql/tlogs
-    chown mssql:mssql /var/opt/mssql/tlogs
-    chmod 0700 /var/opt/mssql/tlogs
-    ```
+1. Install Samba with the following command:
 
--   Edit the /etc/samba/smb.conf file (you need root permissions for that) and add the following section:
+   - For Red Hat Enterprise Linux (RHEL):
 
-    ```bash
-    [tlogs]
-    path=/var/opt/mssql/tlogs
-    available=yes
-    read only=yes
-    browsable=yes
-    public=yes
-    writable=no
-    ```
+     ```bash
+     sudo yum -y install samba
+     ```
 
--   Create a mssql user for Samba
+   - For Ubuntu:
 
-    ```bash
-    sudo smbpasswd -a mssql
-    ```
+     ```bash
+     sudo apt-get install samba
+     ```
 
--   Restart the Samba services
-    ```bash
-    sudo systemctl restart smbd.service nmbd.service
-    ```
- 
-### Configure Secondary Server
+1. Create a directory to store the logs for log shipping, and give the `mssql` user the required permissions:
 
--   Run the following to install the CIFS client
-    ```bash   
-    sudo apt-get install cifs-utils #For Ubuntu
-    sudo yum -y install cifs-utils #For RHEL/CentOS
-    ```
+   ```bash
+   mkdir /var/opt/mssql/tlogs
+   chown mssql:mssql /var/opt/mssql/tlogs
+   chmod 0700 /var/opt/mssql/tlogs
+   ```
 
--   Create a file to store your credentials. Use the password you recently set for your mssql Samba account 
+1. Edit the `/etc/samba/smb.conf` file (you need root permissions), and add the following section:
 
-    ```console
-        vim /var/opt/mssql/.tlogcreds
-        #Paste the following in .tlogcreds
-        username=mssql
-        domain=<domain>
-        password=<password>
-    ```
+   ```ini
+   [tlogs]
+   path=/var/opt/mssql/tlogs
+   available=yes
+   read only=yes
+   browsable=yes
+   public=yes
+   writable=no
+   ```
 
--   Run the following commands to create an empty directory for mounting and set permission and ownership correctly
-    ```bash   
-    mkdir /var/opt/mssql/tlogs
-    sudo chown root:root /var/opt/mssql/tlogs
-    sudo chmod 0550 /var/opt/mssql/tlogs
-    sudo chown root:root /var/opt/mssql/.tlogcreds
-    sudo chmod 0660 /var/opt/mssql/.tlogcreds
-    ```
+1. Create a `mssql` user for Samba:
 
--   Add the line to etc/fstab to persist the share 
+   ```bash
+   sudo smbpasswd -a mssql
+   ```
 
-    ```console
-        //<ip_address_of_primary_server>/tlogs /var/opt/mssql/tlogs cifs credentials=/var/opt/mssql/.tlogcreds,ro,uid=mssql,gid=mssql 0 0
-    ```
+1. Restart the Samba services:
 
--   Mount the shares
-    ```bash   
-    sudo mount -a
-    ```
-       
-## Setup Log Shipping via T-SQL
+   ```bash
+   sudo systemctl restart smbd.service nmbd.service
+   ```
 
-- Run this script from your primary server
+### Configure secondary server
 
-    ```sql
-    BACKUP DATABASE SampleDB
-    TO DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
-    GO
-    ```
+1. Install the CIFS client with the following command:
 
-    ```sql
-    DECLARE @LS_BackupJobId	AS uniqueidentifier 
-    DECLARE @LS_PrimaryId	AS uniqueidentifier 
-    DECLARE @SP_Add_RetCode	As int 
-    EXECUTE @SP_Add_RetCode = master.dbo.sp_add_log_shipping_primary_database 
-             @database = N'SampleDB' 
-            ,@backup_directory = N'/var/opt/mssql/tlogs' 
-            ,@backup_share = N'/var/opt/mssql/tlogs' 
-            ,@backup_job_name = N'LSBackup_SampleDB' 
-            ,@backup_retention_period = 4320
-            ,@backup_compression = 2
-            ,@backup_threshold = 60 
-            ,@threshold_alert_enabled = 1
-            ,@history_retention_period = 5760 
-            ,@backup_job_id = @LS_BackupJobId OUTPUT 
-            ,@primary_id = @LS_PrimaryId OUTPUT 
-            ,@overwrite = 1 
+   - For RHEL:
 
-    IF (@@ERROR = 0 AND @SP_Add_RetCode = 0) 
-    BEGIN 
+     ```bash
+     sudo yum -y install cifs-utils
+     ```
 
-    DECLARE @LS_BackUpScheduleUID	As uniqueidentifier 
-    DECLARE @LS_BackUpScheduleID	AS int 
+   - For Ubuntu:
 
-    EXECUTE msdb.dbo.sp_add_schedule 
-            @schedule_name =N'LSBackupSchedule' 
-            ,@enabled = 1 
-            ,@freq_type = 4 
-            ,@freq_interval = 1 
-            ,@freq_subday_type = 4 
-            ,@freq_subday_interval = 15 
-            ,@freq_recurrence_factor = 0 
-            ,@active_start_date = 20170418 
-            ,@active_end_date = 99991231 
-            ,@active_start_time = 0 
-            ,@active_end_time = 235900 
-            ,@schedule_uid = @LS_BackUpScheduleUID OUTPUT 
-            ,@schedule_id = @LS_BackUpScheduleID OUTPUT 
+     ```bash
+     sudo apt-get install cifs-utils
+     ```
 
-    EXECUTE msdb.dbo.sp_attach_schedule 
-            @job_id = @LS_BackupJobId 
-            ,@schedule_id = @LS_BackUpScheduleID  
+1. Create a file to store your credentials. In this example, we use `/var/opt/mssql/.tlogcreds`. Use the password you recently set for your `mssql` Samba account, and replace `<domain>`:
 
-    EXECUTE msdb.dbo.sp_update_job 
-            @job_id = @LS_BackupJobId 
-            ,@enabled = 1 
-            
-    END 
+   ```ini
+   username=mssql
+   domain=<domain>
+   password=<password>
+   ```
 
-    EXECUTE master.dbo.sp_add_log_shipping_alert_job 
+1. Run the following commands to create an empty directory for mounting and set permission and ownership correctly
 
-    EXECUTE master.dbo.sp_add_log_shipping_primary_secondary 
-            @primary_database = N'SampleDB' 
-            ,@secondary_server = N'<ip_address_of_secondary_server>' 
-            ,@secondary_database = N'SampleDB' 
-            ,@overwrite = 1 
-    ```
+   ```bash
+   mkdir /var/opt/mssql/tlogs
+   sudo chown root:root /var/opt/mssql/tlogs
+   sudo chmod 0550 /var/opt/mssql/tlogs
+   sudo chown root:root /var/opt/mssql/.tlogcreds
+   sudo chmod 0660 /var/opt/mssql/.tlogcreds
+   ```
 
+1. Add the line to etc/fstab to persist the share. Replace `<ip_address_of_primary_server>` with the appropriate value:
 
-- Run this script from your secondary server
+   ```text
+   //<ip_address_of_primary_server>/tlogs /var/opt/mssql/tlogs cifs credentials=/var/opt/mssql/.tlogcreds,ro,uid=mssql,gid=mssql 0 0
+   ```
 
-    ```sql
-    RESTORE DATABASE SampleDB FROM DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
-    WITH NORECOVERY;
-    ```
-    
-    ```sql
-    DECLARE @LS_Secondary__CopyJobId	AS uniqueidentifier 
-    DECLARE @LS_Secondary__RestoreJobId	AS uniqueidentifier 
-    DECLARE @LS_Secondary__SecondaryId	AS uniqueidentifier 
-    DECLARE @LS_Add_RetCode	As int 
+1. Mount the shares:
 
-    EXECUTE @LS_Add_RetCode = master.dbo.sp_add_log_shipping_secondary_primary 
-            @primary_server = N'<ip_address_of_primary_server>' 
-            ,@primary_database = N'SampleDB' 
-            ,@backup_source_directory = N'/var/opt/mssql/tlogs/' 
-            ,@backup_destination_directory = N'/var/opt/mssql/tlogs/' 
-            ,@copy_job_name = N'LSCopy_SampleDB' 
-            ,@restore_job_name = N'LSRestore_SampleDB' 
-            ,@file_retention_period = 4320 
-            ,@overwrite = 1 
-            ,@copy_job_id = @LS_Secondary__CopyJobId OUTPUT 
-            ,@restore_job_id = @LS_Secondary__RestoreJobId OUTPUT 
-            ,@secondary_id = @LS_Secondary__SecondaryId OUTPUT 
+   ```bash
+   sudo mount -a
+   ```
 
-    IF (@@ERROR = 0 AND @LS_Add_RetCode = 0) 
-    BEGIN 
+## Set up log shipping using Transact-SQL
 
-    DECLARE @LS_SecondaryCopyJobScheduleUID	As uniqueidentifier 
-    DECLARE @LS_SecondaryCopyJobScheduleID	AS int 
+1. Back up the database on the primary server:
 
-    EXECUTE msdb.dbo.sp_add_schedule 
-            @schedule_name =N'DefaultCopyJobSchedule' 
-            ,@enabled = 1 
-            ,@freq_type = 4 
-            ,@freq_interval = 1 
-            ,@freq_subday_type = 4 
-            ,@freq_subday_interval = 15 
-            ,@freq_recurrence_factor = 0 
-            ,@active_start_date = 20170418 
-            ,@active_end_date = 99991231 
-            ,@active_start_time = 0 
-            ,@active_end_time = 235900 
-            ,@schedule_uid = @LS_SecondaryCopyJobScheduleUID OUTPUT 
-            ,@schedule_id = @LS_SecondaryCopyJobScheduleID OUTPUT 
+   ```sql
+   BACKUP DATABASE SampleDB TO DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
+   GO
+   ```
 
-    EXECUTE msdb.dbo.sp_attach_schedule 
-            @job_id = @LS_Secondary__CopyJobId 
-            ,@schedule_id = @LS_SecondaryCopyJobScheduleID  
+1. Configure log shipping on the primary server:
 
-    DECLARE @LS_SecondaryRestoreJobScheduleUID	As uniqueidentifier 
-    DECLARE @LS_SecondaryRestoreJobScheduleID	AS int 
+   ```sql
+   DECLARE @LS_BackupJobId AS UNIQUEIDENTIFIER;
+   DECLARE @LS_PrimaryId AS UNIQUEIDENTIFIER;
+   DECLARE @SP_Add_RetCode AS INT;
 
-    EXECUTE msdb.dbo.sp_add_schedule 
-            @schedule_name =N'DefaultRestoreJobSchedule' 
-            ,@enabled = 1 
-            ,@freq_type = 4 
-            ,@freq_interval = 1 
-            ,@freq_subday_type = 4 
-            ,@freq_subday_interval = 15 
-            ,@freq_recurrence_factor = 0 
-            ,@active_start_date = 20170418 
-            ,@active_end_date = 99991231 
-            ,@active_start_time = 0 
-            ,@active_end_time = 235900 
-            ,@schedule_uid = @LS_SecondaryRestoreJobScheduleUID OUTPUT 
-            ,@schedule_id = @LS_SecondaryRestoreJobScheduleID OUTPUT 
+   EXECUTE @SP_Add_RetCode = master.dbo.sp_add_log_shipping_primary_database
+       @database = N'SampleDB',
+       @backup_directory = N'/var/opt/mssql/tlogs',
+       @backup_share = N'/var/opt/mssql/tlogs',
+       @backup_job_name = N'LSBackup_SampleDB',
+       @backup_retention_period = 4320,
+       @backup_compression = 2,
+       @backup_threshold = 60,
+       @threshold_alert_enabled = 1,
+       @history_retention_period = 5760,
+       @backup_job_id = @LS_BackupJobId OUTPUT,
+       @primary_id = @LS_PrimaryId OUTPUT,
+       @overwrite = 1;
 
-    EXECUTE msdb.dbo.sp_attach_schedule 
-            @job_id = @LS_Secondary__RestoreJobId 
-            ,@schedule_id = @LS_SecondaryRestoreJobScheduleID  
-            
-    END 
-    DECLARE @LS_Add_RetCode2	As int 
-    IF (@@ERROR = 0 AND @LS_Add_RetCode = 0) 
-    BEGIN 
+   IF (@@ERROR = 0 AND @SP_Add_RetCode = 0)
+   BEGIN
+       DECLARE @LS_BackUpScheduleUID AS UNIQUEIDENTIFIER;
+       DECLARE @LS_BackUpScheduleID AS INT;
 
-    EXECUTE @LS_Add_RetCode2 = master.dbo.sp_add_log_shipping_secondary_database 
-            @secondary_database = N'SampleDB' 
-            ,@primary_server = N'<ip_address_of_primary_server>' 
-            ,@primary_database = N'SampleDB' 
-            ,@restore_delay = 0 
-            ,@restore_mode = 0 
-            ,@disconnect_users	= 0 
-            ,@restore_threshold = 45   
-            ,@threshold_alert_enabled = 1 
-            ,@history_retention_period	= 5760 
-            ,@overwrite = 1 
+       EXECUTE msdb.dbo.sp_add_schedule
+           @schedule_name = N'LSBackupSchedule',
+           @enabled = 1,
+           @freq_type = 4,
+           @freq_interval = 1,
+           @freq_subday_type = 4,
+           @freq_subday_interval = 15,
+           @freq_recurrence_factor = 0,
+           @active_start_date = 20170418,
+           @active_end_date = 99991231,
+           @active_start_time = 0,
+           @active_end_time = 235900,
+           @schedule_uid = @LS_BackUpScheduleUID OUTPUT,
+           @schedule_id = @LS_BackUpScheduleID OUTPUT;
 
-    END 
+       EXECUTE msdb.dbo.sp_attach_schedule
+           @job_id = @LS_BackupJobId,
+           @schedule_id = @LS_BackUpScheduleID;
 
-    IF (@@error = 0 AND @LS_Add_RetCode = 0) 
-    BEGIN 
+       EXECUTE msdb.dbo.sp_update_job @job_id = @LS_BackupJobId, @enabled = 1;
+   END
 
-    EXECUTE msdb.dbo.sp_update_job 
-            @job_id = @LS_Secondary__CopyJobId 
-            ,@enabled = 1 
+   EXECUTE master.dbo.sp_add_log_shipping_alert_job;
 
-    EXECUTE msdb.dbo.sp_update_job 
-            @job_id = @LS_Secondary__RestoreJobId 
-            ,@enabled = 1 
+   EXECUTE master.dbo.sp_add_log_shipping_primary_secondary
+       @primary_database = N'SampleDB',
+       @secondary_server = N'<ip_address_of_secondary_server>',
+       @secondary_database = N'SampleDB',
+       @overwrite = 1;
+   ```
 
-    END 
-    ```
+1. Restore the database on the secondary server:
 
-## Verify Log Shipping works
+   ```sql
+   RESTORE DATABASE SampleDB
+   FROM DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
+   WITH NORECOVERY;
+   ```
 
-- Verify that Log Shipping works by starting the following job on the primary server
+1. Configure log shipping on the secondary server:
 
-    ```sql
-    USE msdb ;  
-    GO  
+   ```sql
+   DECLARE @LS_Secondary__CopyJobId AS UNIQUEIDENTIFIER;
+   DECLARE @LS_Secondary__RestoreJobId AS UNIQUEIDENTIFIER;
+   DECLARE @LS_Secondary__SecondaryId AS UNIQUEIDENTIFIER;
+   DECLARE @LS_Add_RetCode AS INT;
 
-    EXECUTE dbo.sp_start_job N'LSBackup_SampleDB' ;  
-    GO  
-    ```
+   EXECUTE @LS_Add_RetCode = master.dbo.sp_add_log_shipping_secondary_primary
+       @primary_server = N'<ip_address_of_primary_server>',
+       @primary_database = N'SampleDB',
+       @backup_source_directory = N'/var/opt/mssql/tlogs/',
+       @backup_destination_directory = N'/var/opt/mssql/tlogs/',
+       @copy_job_name = N'LSCopy_SampleDB',
+       @restore_job_name = N'LSRestore_SampleDB',
+       @file_retention_period = 4320,
+       @overwrite = 1,
+       @copy_job_id = @LS_Secondary__CopyJobId OUTPUT,
+       @restore_job_id = @LS_Secondary__RestoreJobId OUTPUT,
+       @secondary_id = @LS_Secondary__SecondaryId OUTPUT
 
-- Verify that Log Shipping works by starting the following job on the secondary server
- 
-    ```sql
-    USE msdb ;  
-    GO  
+   IF (@@ERROR = 0 AND @LS_Add_RetCode = 0)
+   BEGIN
+       DECLARE @LS_SecondaryCopyJobScheduleUID AS UNIQUEIDENTIFIER;
+       DECLARE @LS_SecondaryCopyJobScheduleID AS INT;
 
-    EXECUTE dbo.sp_start_job N'LSCopy_SampleDB' ;  
-    GO  
-    EXECUTE dbo.sp_start_job N'LSRestore_SampleDB' ;  
-    GO  
-    ```
- - Verify that Log Shipping failover works by executing the following command
- 
-    > [!WARNING]
-    > This command will bring the secondary database online and break the Log Shipping configuration. You will need to reconfigure Log    Shipping after running this command.
- 
-    ```sql
-    RESTORE DATABASE SampleDB WITH RECOVERY;
-    ```
+       EXECUTE msdb.dbo.sp_add_schedule
+           @schedule_name = N'DefaultCopyJobSchedule',
+           @enabled = 1,
+           @freq_type = 4,
+           @freq_interval = 1,
+           @freq_subday_type = 4,
+           @freq_subday_interval = 15,
+           @freq_recurrence_factor = 0,
+           @active_start_date = 20170418,
+           @active_end_date = 99991231,
+           @active_start_time = 0,
+           @active_end_time = 235900,
+           @schedule_uid = @LS_SecondaryCopyJobScheduleUID OUTPUT,
+           @schedule_id = @LS_SecondaryCopyJobScheduleID OUTPUT;
+
+       EXECUTE msdb.dbo.sp_attach_schedule
+           @job_id = @LS_Secondary__CopyJobId,
+           @schedule_id = @LS_SecondaryCopyJobScheduleID;
+
+       DECLARE @LS_SecondaryRestoreJobScheduleUID AS UNIQUEIDENTIFIER;
+       DECLARE @LS_SecondaryRestoreJobScheduleID AS INT;
+
+       EXECUTE msdb.dbo.sp_add_schedule
+           @schedule_name = N'DefaultRestoreJobSchedule',
+           @enabled = 1,
+           @freq_type = 4,
+           @freq_interval = 1,
+           @freq_subday_type = 4,
+           @freq_subday_interval = 15,
+           @freq_recurrence_factor = 0,
+           @active_start_date = 20170418,
+           @active_end_date = 99991231,
+           @active_start_time = 0,
+           @active_end_time = 235900,
+           @schedule_uid = @LS_SecondaryRestoreJobScheduleUID OUTPUT,
+           @schedule_id = @LS_SecondaryRestoreJobScheduleID OUTPUT;
+
+       EXECUTE msdb.dbo.sp_attach_schedule
+           @job_id = @LS_Secondary__RestoreJobId,
+           @schedule_id = @LS_SecondaryRestoreJobScheduleID;
+   END
+
+   DECLARE @LS_Add_RetCode2 AS INT;
+
+   IF (@@ERROR = 0 AND @LS_Add_RetCode = 0)
+   BEGIN
+       EXECUTE @LS_Add_RetCode2 = master.dbo.sp_add_log_shipping_secondary_database
+           @secondary_database = N'SampleDB',
+           @primary_server = N'<ip_address_of_primary_server>',
+           @primary_database = N'SampleDB',
+           @restore_delay = 0,
+           @restore_mode = 0,
+           @disconnect_users = 0,
+           @restore_threshold = 45,
+           @threshold_alert_enabled = 1,
+           @history_retention_period = 5760,
+           @overwrite = 1;
+   END
+
+   IF (@@ERROR = 0 AND @LS_Add_RetCode = 0)
+   BEGIN
+       EXECUTE msdb.dbo.sp_update_job
+           @job_id = @LS_Secondary__CopyJobId,
+           @enabled = 1;
+
+       EXECUTE msdb.dbo.sp_update_job
+           @job_id = @LS_Secondary__RestoreJobId,
+           @enabled = 1;
+   END
+   ```
+
+## Verify log shipping works
+
+1. Verify that log shipping works by starting the following job on the primary server:
+
+   ```sql
+   USE msdb;
+   GO
+
+   EXECUTE dbo.sp_start_job N'LSBackup_SampleDB';
+   GO
+   ```
+
+1. Verify that log shipping works by starting the following job on the secondary server:
+
+   ```sql
+   USE msdb;
+   GO
+
+   EXECUTE dbo.sp_start_job N'LSCopy_SampleDB';
+   GO
+
+   EXECUTE dbo.sp_start_job N'LSRestore_SampleDB';
+   GO
+   ```
+
+1. Verify that log shipping failover works by executing the following command:
+
+   > [!WARNING]  
+   > This command will bring the secondary database online and break the log shipping configuration. You need to reconfigure log shipping after running this command.
+
+   ```sql
+   RESTORE DATABASE SampleDB WITH RECOVERY;
+   ```
+
+## Related content
+
+- [About log shipping (SQL Server)](../database-engine/log-shipping/about-log-shipping-sql-server.md)
+- [Configure Log Shipping (SQL Server)](../database-engine/log-shipping/configure-log-shipping-sql-server.md)

@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "properties [OLE DB]"
   - "data source properties [OLE DB]"
   - "OLE DB data source properties [SQL Server Native Client]"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 #  SQL Server Native Client Data Source Properties (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

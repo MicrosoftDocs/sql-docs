@@ -30,7 +30,7 @@ For general information about developing Integration Services packages, see [Des
 ## <a name="Basics"></a>Basics  
 Integration Services is the component of SQL Server for high-performance extraction, transformation, and loading (ETL) of data, and is commonly used to populate and update a data warehouse.  
   
-The PDW Destination Adapter is an Integration Services component that lets you load data into PDW by using Integration Services dtsx packages. In a package workflow for SQL ServerPDW, you can load and merge data from multiple sources and load data to multiple destinations. The loads occur in parallel, both within a package and among multiple packages running concurrently, up to a maximum of 10 loads running in parallel on the same appliance.  
+The PDW Destination Adapter is an Integration Services component that lets you load data into PDW by using Integration Services dtsx packages. In a package workflow for Analytics Platform System (PDW), you can load and merge data from multiple sources and load data to multiple destinations. The loads occur in parallel, both within a package and among multiple packages running concurrently, up to a maximum of 10 loads running in parallel on the same appliance.  
   
 In addition to the tasks described in this topic, you can use other features of Integration Services to filter, transform, analyze, and cleanse your data before loading it into the data warehouse. You can also enhance the workflow of the package by running SQL statements, running child packages, or sending mail.  
   
@@ -141,7 +141,7 @@ If the number of loads in the load queue exceeds the maximum queued loads, the p
 
   
 ## <a name="Locks"></a>Locking behavior  
-When loading data with Integration Services, SQL ServerPDW uses row-level locks to update data in the destination table. This means that each row is locked for read and write while it is being updated. The rows in the destination table are not locked while the data is loaded into the staging table.  
+When loading data with Integration Services, Analytics Platform System (PDW) uses row-level locks to update data in the destination table. This means that each row is locked for read and write while it is being updated. The rows in the destination table are not locked while the data is loaded into the staging table.  
   
 ## <a name="Examples"></a>Examples  
   

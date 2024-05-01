@@ -71,7 +71,7 @@ The type of validation to perform. *@level* is **tinyint**, and can be one of th
 
 Only members of the **sysadmin** fixed server role or the **db_owner** fixed database role can execute `sp_validatemergesubscription`.
 
-## See also
+## Related content
 
 - [Replication stored procedures (Transact-SQL)](replication-stored-procedures-transact-sql.md)
 - [Validate Replicated Data](../replication/validate-data-at-the-subscriber.md)

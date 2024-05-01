@@ -15,13 +15,13 @@ helpviewer_keywords:
   - "report servers [Reporting Services], SOAP"
   - "Web applications [Reporting Services]"
 ---
-# Integrating Reporting Services Using SOAP - Web Application
-  You can access the full functionality of the report server through the Reporting Services SOAP API. Because it's a Web service, the SOAP API can be easily accessed to provide enterprise reporting features to your custom business applications. You access the Report Server Web service from a Web application in much the same way that you access the SOAP API from a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows application. Using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], you can generate a proxy class that exposes the properties and methods of the Report Server Web service and enables you to use a familiar infrastructure and tools to build business applications on [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] technology.  
+# Integrate Reporting Services by using SOAP - Web application
+  You can access the full functionality of the report server through the Reporting Services SOAP API. Because it's a Web service, the SOAP API can be easily accessed to provide enterprise reporting features to your custom business applications. You access the Report Server Web service from a Web application in much the same way that you access the SOAP API from a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows application. By using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], you can generate a proxy class that exposes the properties and methods of the Report Server Web service. You can then use a familiar infrastructure and tools to build business applications on [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] technology.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report management functionality is just as easily accessed from a Web application as from a Windows application. From a Web application, you can add and remove items from the report server database, set item security, modify report server database items, manage scheduling and delivery, and more.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report management functionality is easily accessed from a Web application or from a Windows application. From a Web application, you can add and remove items from the report server database, set item security, modify report server database items, manage scheduling and delivery, and more.  
   
-## Enabling impersonation  
- The first step in configuring your Web application is to enable impersonation from the Web service client. With impersonation, [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications can execute with the identity of the client on whose behalf they are operating. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] relies on [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) to authenticate the user and either pass an authenticated token to the [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] application or, if unable to authenticate the user, pass an unauthenticated token. In either case, the [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] application impersonates whichever token is received if impersonation is enabled. You can enable impersonation on the client, by modifying the Web.config file of the client application as follows:  
+## Enable impersonation  
+ The first step in configuring your Web application is to enable impersonation from the Web service client. With impersonation, [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications can execute with the identity of the client on whose behalf they're operating. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] relies on [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) to authenticate the user and either pass an authenticated token to the [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] application or, if unable to authenticate the user, pass an unauthenticated token. In either case, the [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] application impersonates whichever token is received if impersonation is enabled. You can enable impersonation on the client, by modifying the Web.config file of the client application as follows:  
   
 ```asp.net  
 <!-- Web.config file. -->  
@@ -33,17 +33,17 @@ helpviewer_keywords:
   
  For more information about [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] impersonation, see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK documentation.  
   
-## Managing the Report Server using SOAP API  
+## Manage the Report Server by using SOAP API  
 
 ::: moniker range="=sql-server-2016"
 
- You can also use your Web application to manage a report server and its contents. Report Manager, included with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], is an example of a Web application that is completely built using [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] and the Reporting Services SOAP API. You can add the report management functionality of Report Manager to your custom Web applications. For example, you might want to return a list of available reports in the report server database and display them in a [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] **Listbox** control for your users to choose from. The following code connects to the report server database and returns a list of items in the report server database. The available reports are then added to a Listbox control, which displays the path of each report.  
+ You can also use your Web application to manage a report server and its contents. Report Manager, which is included with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], is an example of a Web application that is built by using [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] and the Reporting Services SOAP API. You can add the report management functionality of Report Manager to your custom Web applications. For example, you might want to return a list of available reports in the report server database and display them in a [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] **Listbox** control for your users to choose from. The following code connects to the report server database and returns a list of items in the report server database. The available reports are then added to a Listbox control, which displays the path of each report.  
 
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017"
 
- You can also use your Web application to manage a report server and its contents. The web portal, included with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], is an example of a Web application that manages a majority of the tasks you would typically perform using Reporting Services. You can add the report management functionality of the web portal to your custom Web applications. For example, you might want to return a list of available reports in the report server database and display them in a [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] **Listbox** control for your users to choose from. The following code connects to the report server database and returns a list of items in the report server database. The available reports are then added to a Listbox control, which displays the path of each report.  
+ You can also use your Web application to manage a report server and its contents. The web portal, included with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], is an example of a Web application that manages most of the tasks you would typically perform using Reporting Services. You can add the report management functionality of the web portal to your custom Web applications. For example, you might want to return a list of available reports in the report server database and display them in a [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] **Listbox** control for your users to choose from. The following code connects to the report server database and returns a list of items in the report server database. The available reports are then added to a Listbox control, which displays the path of each report.  
 
 ::: moniker-end
   
@@ -85,7 +85,7 @@ private void Page_Load(object sender, System.EventArgs e)
 }  
 ```  
   
-## See Also  
+## Related content  
 
  [Building Applications Using the Web Service and the .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   

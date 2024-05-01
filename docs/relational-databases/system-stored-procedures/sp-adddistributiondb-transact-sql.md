@@ -94,8 +94,8 @@ The number of hours to retain history. *@history_retention* is **int**, with a d
 
 The security mode to use when connecting to the Distributor. *@security_mode* is **int**, with a default of `1`.
 
-- `0` specifies [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication
-- `1` specifies Windows Integrated Authentication
+- `0` specifies [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] authentication
+- `1` specifies Windows authentication
 
 #### [ @login = ] N'*login*'
 
@@ -206,7 +206,7 @@ GO
 
 Only members of the **sysadmin** fixed server role can execute `sp_adddistributiondb`.
 
-## See also
+## Related content
 
 - [Configure Publishing and Distribution](../replication/configure-publishing-and-distribution.md)
 - [sp_changedistributiondb (Transact-SQL)](sp-changedistributiondb-transact-sql.md)

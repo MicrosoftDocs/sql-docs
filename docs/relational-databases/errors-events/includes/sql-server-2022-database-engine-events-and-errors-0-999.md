@@ -1,8 +1,7 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
-ms.date: 08/01/2023
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 03/14/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -466,6 +465,8 @@ ms.topic: include
 | 622 | 16 | No | The filegroup "%.\*ls" has no files assigned to it. Tables, indexes, text columns, ntext columns, and image columns cannot be populated on this filegroup until a file is added. |
 | 627 | 16 | No | Cannot use SAVE TRANSACTION within a distributed transaction. |
 | 628 | 16 | No | Cannot issue SAVE TRANSACTION when there is no active transaction. |
+| 647 | 16 | No | Cannot disable %ls because a column of object id %d is collated in %ls. Please remove all references to that collation before disabling this feature. |
+| 648 | 16 | No | Cannot disable %ls because database-default collation is %ls. Please remove all references to that collation before disabling this feature. |
 | 650 | 16 | No | You can only specify the READPAST lock in the READ COMMITTED or REPEATABLE READ isolation levels. |
 | 651 | 16 | No | Cannot use the %ls granularity hint on the table "%.\*ls" because locking at the specified granularity is inhibited. |
 | 652 | 16 | No | The index "%.\*ls" for table "%.\*ls" (RowsetId %I64d) resides on a read-only filegroup ("%.\*ls"), which cannot be modified. |
@@ -517,7 +518,7 @@ ms.topic: include
 | 821 | 20 | Yes | Could not unhash buffer at 0x%p with a buffer page number of %S_PGID and database ID %d with HASHED status set. The buffer was not found. %S_PAGE. Contact Technical Support. |
 | 822 | 21 | Yes | Could not start I/O operation for request %S_BLKIOPTR. Contact Technical Support. |
 | [823](../mssqlserver-823-database-engine-error.md) | 24 | Yes | The operating system returned error %ls to SQL Server during a %S_MSG at offset %#016I64x in file '%ls'. Additional messages in the SQL Server error log and operating system error log may provide more detail. This is a severe system-level error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online. |
-| [824](../mssqlserver-824-database-engine-error.md) | 24 | Yes | SQL Server detected a logical consistency-based I/O error: %ls. It occurred during a %S_MSG of page %S_PGID in database ID %d at offset %#016I64x in file '%ls'. Additional messages in the SQL Server error log or operating system error log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online. |
+| [824](../mssqlserver-824-database-engine-error.md) | 24 | Yes | SQL Server detected a logical consistency-based I/O error: %ls. It occurred during a %S_MSG of page %S_PGID in database ID %d at offset %#016I64x in file '%ls'. Additional messages in the SQL Server error log or operating system error log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see https://go.microsoft.com/fwlink/?linkid=2252374. |
 | [825](../mssqlserver-825-database-engine-error.md) | 10 | Yes | A read of the file '%ls' at offset %#016I64x succeeded after failing %d time(s) with error: %ls. Additional messages in the SQL Server error log and operating system error log may provide more detail. This error condition threatens database integrity and must be corrected. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online. |
 | 826 | 10 | Yes | incorrect pageid (expected %d:%d; actual %d:%d) |
 | 829 | 21 | Yes | Database ID %d, Page %S_PGID is marked RestorePending, which may indicate disk corruption. To recover from this state, perform a restore. |

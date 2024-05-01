@@ -13,15 +13,15 @@ ms.custom: updatefrequency5
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)]  [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-and-later](../../includes/ssrs-appliesto-sharepoint-2013-and-later.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
-The Report Viewer web part has a couple of settings that can be configured. These settings can be enabled and disabled on the SharePoint site settings page by a site administrator. Each site has its own settings. Additionally, these settings will not be reset after reinstalling the Report Viewer web part.
+The Report Viewer web part has a couple of settings that can be configured. These settings can be enabled and disabled on the SharePoint site settings page by a site administrator. Each site has its own settings. Additionally, these settings aren't reset after reinstalling the Report Viewer web part.
 
 ## Accessing the site settings page
 
 The site settings can be accessed by:
 
-1. In your SharePoint site, select the **gear** icon in the upper left and select **Site Settings**.
+1. In your SharePoint site, select the **gear** icon in the upper left and choose **Site Settings**.
 
-    ![Site settings from the gear icon.](media/sharepoint-site-settings.png)
+    :::image type="content" source="media/sharepoint-site-settings.png" alt-text="Screenshot of the gear icon menu, highlighting Site settings.":::
 
 2. Clicking **Report Viewer Web Part Settings** in the **Reporting Services** site settings group.
 

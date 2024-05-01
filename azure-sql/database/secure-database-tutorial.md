@@ -4,14 +4,13 @@ description: This tutorial teaches you the about techniques and features to secu
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, mathoma
-ms.date: 04/27/2022
+ms.date: 01/26/2024
 ms.service: sql-database
 ms.subservice: security
 ms.topic: tutorial
-ms.custom: seoapril2019 sqldbrb=1
 ---
 # Tutorial: Secure a database in Azure SQL Database
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 In this tutorial you learn how to:
 
@@ -60,7 +59,7 @@ Databases in SQL Database are protected by firewalls in Azure. By default, all c
 Set **Allow access to Azure services** to **OFF** for the most secure configuration. Then, create a [reserved IP (classic deployment)](/previous-versions/azure/virtual-network/virtual-networks-reserved-public-ip) for the resource that needs to connect, such as an Azure VM or cloud service, and only allow that IP address access through the firewall. If you're using the [Resource Manager](/azure/virtual-network/ip-services/public-ip-addresses) deployment model, a dedicated public IP address is required for each resource.
 
 > [!NOTE]
-> SQL Database communicates over port 1433. If you're trying to connect from within a corporate network, outbound traffic over port 1433 may not be allowed by your network's firewall. If so, you can't connect to the server unless your administrator opens port 1433.
+> SQL Database communicates over port 1433. If you're trying to connect from within a corporate network, outbound traffic over port 1433 might not be allowed by your network's firewall. If so, you can't connect to the server unless your administrator opens port 1433.
 
 ### Set up server-level firewall rules
 
@@ -70,14 +69,14 @@ To set up a server-level firewall rule:
 
 1. In the Azure portal, select **SQL databases** from the left-hand menu, and select your database on the **SQL databases** page.
 
-    :::image type="content" source="./media/design-first-database-tutorial/server-name.png" alt-text="A screenshot of the Azure portal page for a logical SQL database, highlighting the server name.":::
+    :::image type="content" source="media\secure-database-tutorial\server-name.png" alt-text="Screenshot of the Azure portal page for a logical SQL database, highlighting the server name." lightbox="media\secure-database-tutorial\server-name.png":::
 
     > [!NOTE]
     > Be sure to copy your fully qualified server name (such as *yourserver.database.windows.net*) for use later in the tutorial.
 
 1. Select **Networking** under **Settings**. Choose the **Public Access** tab, and then select **Selected networks** under **Public network access** to display the **Firewall rules** section. 
 
-   :::image type="content" source="./media/design-first-database-tutorial/server-firewall-rule.png" alt-text="A screenshot of the Azure portal Networking page for a logical SQL Server, showing the server-level IP firewall rule.":::
+   :::image type="content" source="media\secure-database-tutorial\server-firewall-rule.png" alt-text="Screenshot of the Azure portal Networking page for a logical SQL Server, showing the server-level IP firewall rule." lightbox="media\secure-database-tutorial\server-firewall-rule.png":::
 
 1. Select **Add client IP** on the toolbar to add your current IP address to a new IP firewall rule. An IP firewall rule can open port 1433 for a single IP address or a range of IP addresses.
 1. Select **OK** to save your firewall settings. 
@@ -109,29 +108,29 @@ To set up a database-level firewall rule:
 
 ## Create a Microsoft Entra admin
 
-Make sure you're using the appropriate Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) managed domain. To select your domain, use the upper-right corner of the Azure portal. This process confirms the same subscription is used for both Microsoft Entra ID and the logical server hosting your database or data warehouse.
+Make sure you're using the appropriate Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) managed domain. To select your domain, use the upper-right corner of the Azure portal. This process confirms the same subscription is used for both Microsoft Entra ID and the logical server hosting your database or data warehouse.
 
-   :::image type="content" source="./media/secure-database-tutorial/8choose-ad.png" alt-text="A screenshot of the Azure portal showing the Directory + subscription filter page, where you would choose the directory.":::
+   :::image type="content" source="media\secure-database-tutorial\choose-directory-subscription.png" alt-text="Screenshot of the Azure portal showing the Directory + subscription filter page, where you would choose the directory.":::
 
 To set the Microsoft Entra administrator:
 
 1. In the Azure portal, on the **SQL server** page, select **Microsoft Entra ID** from the resource menu, then select **Set admin** to open the **Microsoft Entra ID** pane..
 
-    :::image type="content" source="./media/secure-database-tutorial/admin-settings.png" alt-text="Screenshot of the Azure portal Microsoft Entra ID page for a logical server.":::  
+    :::image type="content" source="media\secure-database-tutorial\admin-settings.png" alt-text="Screenshot of the Azure portal Microsoft Entra ID page for a logical server." lightbox="media\secure-database-tutorial\admin-settings.png":::
 
     > [!IMPORTANT]
     > You need to be a "Global Administrator" to perform this task.
 
 1. On the **Microsoft Entra ID** pane, search and select the Microsoft Entra user or group and choose **Select**. All members and groups of your Microsoft Entra organization are listed, and entries grayed out are not supported as Microsoft Entra administrators. See [Microsoft Entra features and limitations](authentication-aad-overview.md#azure-ad-features-and-limitations).
 
-    :::image type="content" source="./media/secure-database-tutorial/admin-select.png" alt-text="Screenshot of the Azure portal page to add a Microsoft Entra admin.":::
+    :::image type="content" source="media\secure-database-tutorial\admin-select.png" alt-text="Screenshot of the Azure portal page to add a Microsoft Entra admin.":::
 
     > [!IMPORTANT]
     > Azure role-based access control (Azure RBAC) only applies to the portal and isn't propagated to SQL Server.
 
 1. At the top of the **Microsoft Entra admin** page, select **Save**.
 
-    The process of changing an administrator may take several minutes. The new administrator will appear in the **Microsoft Entra admin** field.
+    The process of changing an administrator might take several minutes. The new administrator will appear in the **Microsoft Entra admin** field.
 
 > [!NOTE]
 > When setting a Microsoft Entra admin, the new admin name (user or group) cannot exist as a login or user in the *master* database. If present, the setup will fail and roll back changes, indicating that such an admin name already exists. Since the server login or user is not part of Microsoft Entra ID, any effort to connect the user using Microsoft Entra authentication fails.
@@ -227,7 +226,7 @@ To copy a secure connection string:
 
 1. Select a driver tab and copy the complete connection string.
 
-    :::image type="content" source="./media/secure-database-tutorial/connection.png" alt-text="A screenshot of the Azure portal showing the connection strings page. The ADO.NET tab is selected and the ADO.NET (SQL authentication) connection string is displayed.":::
+    :::image type="content" source="media\secure-database-tutorial\connection.png" alt-text="Screenshot of the Azure portal showing the connection strings page. The ADO.NET tab is selected and the ADO.NET (SQL authentication) connection string is displayed.":::
 
 ## Enable security features
 
@@ -250,17 +249,17 @@ To enable Microsoft Defender for SQL:
 
    1. Select **ON** under **Microsoft Defender for SQL** to enable the feature. Choose a storage account for saving vulnerability assessment results. Then select **Save**.
 
-      :::image type="content" source="./media/secure-database-tutorial/threat-settings.png" alt-text="A screenshot of the Azure portal Navigation pane for threat detection settings.":::
+      :::image type="content" source="media\secure-database-tutorial\threat-settings.png" alt-text="Screenshot of the Azure portal Navigation pane for threat detection settings.":::
 
       You can also configure emails to receive security alerts, storage details, and threat detection types.
 
 1. Return to the **SQL databases** page of your database and select **Defender for Cloud** under the **Security** section. Here you'll find various security indicators available for the database.
 
-    :::image type="content" source="./media/secure-database-tutorial/threat-status.png" alt-text="A screenshot of the Azure portal Threat status page showing pie charts for Data Discovery & Classification, Vulnerability Assessment, and Threat Detection.":::
+    :::image type="content" source="media\secure-database-tutorial\threat-status.png" alt-text="Screenshot of the Azure portal Threat status page showing pie charts for Data Discovery & Classification, Vulnerability Assessment, and Threat Detection." lightbox="media\secure-database-tutorial\threat-status.png":::
 
 If anomalous activities are detected, you receive an email with information on the event. This includes the nature of the activity, database, server, event time, possible causes, and recommended actions to investigate and mitigate the potential threat. If such an email is received, select the **Azure SQL Auditing Log** link to launch the Azure portal and show relevant auditing records for the time of the event.
 
-   :::image type="content" source="./media/secure-database-tutorial/threat-email.png" alt-text="A screenshot of a sample email from Azure, indicating a Potential Sql Injection Threat detection. A link in the body of the email to Azure SQL DB Audit Logs is highlighted.":::
+   :::image type="content" source="media\secure-database-tutorial\threat-email.png" alt-text="Screenshot of a sample email from Azure, indicating a Potential Sql Injection Threat detection. A link in the body of the email to Azure SQL DB Audit Logs is highlighted.":::
 
 ### Auditing
 
@@ -292,11 +291,11 @@ To enable auditing:
 
    1. Select **Save**.
 
-      :::image type="content" source="./media/secure-database-tutorial/audit-settings.png" alt-text="A screenshot of the Azure portal Audit settings page. The Save button is highlighted. Audit log destination fields are highlighted.":::
+      :::image type="content" source="media\secure-database-tutorial\audit-settings.png" alt-text="Screenshot of the Azure portal Audit settings page. The Save button is highlighted. Audit log destination fields are highlighted.":::
 
 1. Now you can select **View audit logs** to view database events data.
 
-    :::image type="content" source="./media/secure-database-tutorial/audit-records.png" alt-text="A screenshot of the Azure portal page showing Audit records for a SQL database.":::
+    :::image type="content" source="media\secure-database-tutorial\audit-records.png" alt-text="Screenshot of the Azure portal page showing Audit records for a SQL database." lightbox="media\secure-database-tutorial\audit-records.png":::
 
 > [!IMPORTANT]
 > See [SQL Database auditing](./auditing-overview.md) on how to further customize audit events using PowerShell or REST API.
@@ -313,11 +312,11 @@ To enable data masking:
 
 1. Under **Dynamic data masking** settings, select **Add mask** to add a masking rule. Azure will automatically populate available database schemas, tables, and columns to choose from.
 
-    :::image type="content" source="./media/secure-database-tutorial/mask-settings.png" alt-text="A screenshot of the Azure portal page to Save or Add Dynamic Data Mask fields. Recommended fields to mask display schema, table, and columns of tables. ":::
+    :::image type="content" source="media\secure-database-tutorial\mask-settings.png" alt-text="Screenshot of the Azure portal page to Save or Add Dynamic Data Mask fields. Recommended fields to mask display schema, table, and columns of tables.":::
 
 1. Select **Save**. The selected information is now masked for privacy.
 
-    :::image type="content" source="./media/secure-database-tutorial/mask-query.png" alt-text="A screenshot of SQL Server Management Studio (SSMS) showing a simple INSERT and SELECT statement. The SELECT statement displays masked data in the LastName column.":::
+    :::image type="content" source="media\secure-database-tutorial\mask-query.png" alt-text="Screenshot of SQL Server Management Studio (SSMS) showing a simple INSERT and SELECT statement. The SELECT statement displays masked data in the LastName column.":::
 
 ### Transparent data encryption
 
@@ -331,26 +330,27 @@ To enable or verify encryption:
 
 1. If necessary, set **Data encryption** to **ON**. Select **Save**.
 
-    :::image type="content" source="./media/secure-database-tutorial/encryption-settings.png" alt-text="A screenshot of the Azure portal page to enable Transparent Data Encryption.":::
+    :::image type="content" source="media\secure-database-tutorial\encryption-settings.png" alt-text="Screenshot of the Azure portal page to enable Transparent Data Encryption.":::
 
 > [!NOTE]
 > To view encryption status, connect to the database using [SSMS](connect-query-ssms.md) and query the `encryption_state` column of the [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) view. A state of `3` indicates the database is encrypted.
 
 > [!NOTE]
-> Some items considered customer content, such as table names, object names, and index names, may be transmitted in log files for support and troubleshooting by Microsoft.
+> Some items considered customer content, such as table names, object names, and index names, might be transmitted in log files for support and troubleshooting by Microsoft.
 
-## Next steps
+## Related content
 
-In this tutorial, you've learned to improve the security of your database with just a few simple steps. You learned how to:
+- [Try Azure SQL Database for free (preview)](free-offer.md)
+- [What's new in Azure SQL Database?](doc-changes-updates-release-notes-whats-new.md)
+- [Configure and manage content reference - Azure SQL Database](how-to-content-reference-guide.md)
+- [Plan and manage costs for Azure SQL Database](cost-management.md)
 
-> [!div class="checklist"]
->
-> - Create server-level and database-level firewall rules
-> - Configure a Microsoft Entra administrator
-> - Manage user access with SQL authentication, Microsoft Entra authentication, and secure connection strings
-> - Enable security features, such as Microsoft Defender for SQL, auditing, data masking, and encryption
+> [!TIP]
+> **Ready to start developing an .NET application?** This free Learn module shows you how to [Develop and configure an ASP.NET application that queries an Azure SQL Database](/training/modules/develop-app-that-queries-azure-sql/), including the creation of a simple database.
+
+## Next step
 
 Advance to the next tutorial to learn how to implement geo-distribution.
 
 > [!div class="nextstepaction"]
->[Implement a geo-distributed database](geo-distributed-application-configure-tutorial.md)
+> [Tutorial: Implement a geo-distributed database (Azure SQL Database)](geo-distributed-application-configure-tutorial.md)

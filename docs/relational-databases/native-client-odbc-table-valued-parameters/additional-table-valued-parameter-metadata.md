@@ -10,7 +10,6 @@ ms.topic: "reference"
 helpviewer_keywords:
   - "table-valued parameters (ODBC), catalog functions to retrieve metadata"
   - "table-valued parameters (ODBC), metadata"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Additional Table-Valued Parameter Metadata
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -921,7 +921,7 @@ Each partition can have more than one delta rowgroups. When the columnstore inde
 
 A nonclustered index contains a copy of part or all of the rows and columns in the underlying table. The index is defined as one or more columns of the table, and has an optional condition that filters the rows.
 
-You can create an updatable *nonclustered columnstore index on a rowstore table*. The columnstore index stores a copy of the data so you do need extra storage. However, the data in the columnstore index will compress to a smaller size than the rowstore table requires.  By doing this, you can run analytics on the columnstore index and transactions on the rowstore index at the same time. The column store is updated when data changes in the rowstore table, so both indexes are working against the same data.
+You can create an updatable *nonclustered columnstore index on a rowstore table*. The columnstore index stores a copy of the data so you do need extra storage. However, the data in the columnstore index will compress to a smaller size than the rowstore table requires.  By doing this, you can run analytics on the columnstore index and transactions on the rowstore index at the same time. The columnstore is updated when data changes in the rowstore table, so both indexes are working against the same data.
 
 You can have *one or more nonclustered rowstore indexes on a columnstore index*. By doing this, you can perform efficient table seeks on the underlying columnstore. Other options become available too. For example, you can enforce a primary key constraint by using a UNIQUE constraint on the rowstore table. Since a non-unique value fails to insert into the rowstore table, the [!INCLUDE [ssde-md](../includes/ssde-md.md)] can't insert the value into the columnstore.
 
@@ -943,7 +943,7 @@ For more information, see [Columnstore indexes - Design Guidance](../relational-
 
 All memory-optimized tables must have at least one index, because it is the indexes that connect the rows together. On a memory-optimized table, every index is also memory-optimized. Hash indexes are one of the possible index types in a memory-optimized table. For more information, see [Indexes for Memory-Optimized Tables](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
-**Applies to:** [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi_md](../includes/ssazuremi_md.md)].
+**Applies to:** [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi-md](../includes/ssazuremi-md.md)].
 
 ### Hash index architecture
 
@@ -1043,7 +1043,7 @@ Later when the older versions are no longer needed, a garbage collection (GC) th
 
 Nonclustered indexes are one of the possible index types in a memory-optimized table. For more information, see [Indexes for Memory-Optimized Tables](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
-**Applies to:** [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi_md](../includes/ssazuremi_md.md)].
+**Applies to:** [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi-md](../includes/ssazuremi-md.md)].
 
 ### In-memory nonclustered index architecture
 

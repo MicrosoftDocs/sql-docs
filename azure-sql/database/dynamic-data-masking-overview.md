@@ -1,5 +1,6 @@
 ---
 title: Dynamic data masking
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
 description: Dynamic data masking limits sensitive data exposure by masking it to nonprivileged users for Azure SQL Database, Azure SQL Managed Instance and Azure Synapse Analytics
 author: madhumitatripathy
 ms.author: matripathy
@@ -9,7 +10,7 @@ ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
 ms.custom: sqldbrb=1
-tags: azure-synpase
+tags: azure-synapse
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Dynamic data masking
@@ -24,17 +25,17 @@ For example, a service representative at a call center might identify a caller b
 
 ## Dynamic data masking basics
 
-You set up a dynamic data masking policy in the Azure portal by selecting the **Dynamic Data Masking** blade under **Security** in your SQL Database configuration pane. This feature can't be set using portal for SQL Managed Instance. For more information, see [Dynamic Data Masking](/sql/relational-databases/security/dynamic-data-masking).
+You set up a dynamic data masking policy in the Azure portal by selecting the **Dynamic Data Masking** pane under **Security** in your SQL Database configuration pane. This feature can't be set using portal for SQL Managed Instance. For more information, see [Dynamic Data Masking](/sql/relational-databases/security/dynamic-data-masking).
 
 ### Dynamic data masking policy
 
-- **SQL users excluded from masking:** A set of SQL users, which can include identities from Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)), that get unmasked data in the SQL query results. Users with administrative rights like server admin, Microsoft Entra admin and db_owner role can view the original data without any mask. (Note: It also applies to sysadmin role in SQL Server)
+- **SQL users excluded from masking:** A set of SQL users, which can include identities from Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)), that get unmasked data in the SQL query results. Users with administrative rights like server admin, Microsoft Entra admin and db_owner role can view the original data without any mask. (Note: It also applies to sysadmin role in SQL Server)
 - **Masking rules:** A set of rules that define the designated fields to be masked and the masking function that is used. The designated fields can be defined using a database schema name, table name, and column name.
 - **Masking functions:** A set of methods that control the exposure of data for different scenarios.
 
 | Masking function | Masking logic |
 | --- | --- |
-| **Default** | **Full masking according to the data types of the designated fields**<br /><br />• Use `XXXX` (or fewer) if the size of the field is fewer than 4 characters for string data types (**nchar**, **ntext**, **nvarchar**).<br />• Use a zero value for numeric data types (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br />• Use `1900-01-01` for date/time data types (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br />• For **sql_variant**, the default value of the current type is used.<br />• For XML, the document `<masked />` is used.<br />• Use an empty value for special data types (**timestamp**, **table**, **HierarchyID**, **uniqueidentifier**, **binary**, **image**, **varbinary**, and spatial types). |
+| **Default** | **Full masking according to the data types of the designated fields**<br /><br />* Use `XXXX` (or fewer) if the size of the field is fewer than 4 characters for string data types (**nchar**, **ntext**, **nvarchar**).<br />* Use a zero value for numeric data types (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br />* Use `1900-01-01` for date/time data types (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br />* For **sql_variant**, the default value of the current type is used.<br />* For XML, the document `<masked />` is used.<br />* Use an empty value for special data types (**timestamp**, **table**, **HierarchyID**, **uniqueidentifier**, **binary**, **image**, **varbinary**, and spatial types). |
 | **Credit card** | **Masking method, which exposes the last four digits of the designated fields** and adds a constant string as a prefix in the form of a credit card.<br /><br />`XXXX-XXXX-XXXX-1234` |
 | **Email** | **Masking method, which exposes the first letter and replaces the domain with XXX.com** using a constant string prefix in the form of an email address.<br /><br />`aXX@XXXX.com` |
 | **Random number** | **Masking method, which generates a random number** according to the selected boundaries and actual data types. If the designated boundaries are equal, then the masking function is a constant number.<br /><br />:::image type="content" source="./media/dynamic-data-masking-overview/random-number.png" alt-text="Screenshot that shows the masking method for generating a random number."::: |
@@ -71,13 +72,13 @@ You can use the REST API to programmatically manage data masking policy and rule
 
 ### Data masking policies
 
-- [Create Or Update](/rest/api/sql/2014-04-01/datamaskingpolicies/createorupdate): Creates or updates a database data masking policy.
-- [Get](/rest/api/sql/2014-04-01/datamaskingpolicies/get): Gets a database data masking policy.
+- [Create Or Update](/rest/api/sql/data-masking-policies/create-or-update): Creates or updates a database data masking policy.
+- [Get](/rest/api/sql/data-masking-policies/get): Gets a database data masking policy.
 
 ### Data masking rules
 
-- [Create Or Update](/rest/api/sql/2014-04-01/datamaskingrules/createorupdate): Creates or updates a database data masking rule.
-- [List By Database](/rest/api/sql/2014-04-01/datamaskingrules/listbydatabase): Gets a list of database data masking rules.
+- [Create Or Update](/rest/api/sql/data-masking-rules/create-or-update): Creates or updates a database data masking rule.
+- [List By Database](/rest/api/sql/data-masking-rules/list-by-database): Gets a list of database data masking rules.
 
 ## Permissions
 
@@ -118,7 +119,7 @@ Prevent unauthorized access to sensitive data and gain control by masking it to 
 
    ```sql
    CREATE TABLE Data.Membership (
-       MemberID INT IDENTITY(1, 1) NOT NULL PRIMARY KEY CLUSTERED,
+       MemberID INT IDENTITY(1, 1) NOT NULL,
        FirstName VARCHAR(100) MASKED WITH (FUNCTION = 'partial(1, "xxxxx", 1)') NULL,
        LastName VARCHAR(100) NOT NULL,
        Phone VARCHAR(12) MASKED WITH (FUNCTION = 'default()') NULL,
@@ -150,7 +151,7 @@ Prevent unauthorized access to sensitive data and gain control by masking it to 
 
    ```sql
    CREATE TABLE Service.Feedback (
-       MemberID INT IDENTITY(1, 1) NOT NULL PRIMARY KEY CLUSTERED,
+       MemberID INT IDENTITY(1, 1) NOT NULL,
        Feedback VARCHAR(100) MASKED WITH (FUNCTION = 'default()') NULL,
        Rating INT MASKED WITH (FUNCTION = 'default()'),
        Received_On DATETIME
@@ -282,7 +283,7 @@ Prevent unauthorized access to sensitive data and gain control by masking it to 
    REVOKE UNMASK FROM ServiceHead;
    ```
 
-## See also
+## Related content
 
 - [Dynamic Data Masking](/sql/relational-databases/security/dynamic-data-masking) for SQL Server.
 - Data Exposed episode about [Granular Permissions for Azure SQL Dynamic Data Masking](/Shows/Data-Exposed/Granular-Permissions-for-Azure-SQL-Dynamic-Data-Masking) on Channel 9.

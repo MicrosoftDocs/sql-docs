@@ -1,6 +1,6 @@
 ---
 title: "Add custom locations to a map in a paginated report"
-description: Learn how to add custom locations to a map you have added to a paginated report in Report Builder.
+description: Learn how to add custom locations to a map you added to a paginated report in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/07/2017
@@ -22,37 +22,37 @@ f1_keywords:
 > [!NOTE]  
 >  When you override the layer display properties for the embedded point, the changes that you make are not reversible.  
   
- For more information, see [Vary Polygon, Line, and Point Display by Rules and Analytical Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
+ For more information, see [Vary polygon, line, and point display by rules and analytical data &#40;Report Builder&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## To add a point layer  
+## Add a point layer  
   
-1.  On the report design surface, click the map to select it and display the Map pane.  
+1.  On the report design surface, select the map to display the **Map** pane.  
   
-2.  On the toolbar, click **Add Layer**.  
+1.  On the toolbar, select **Add Layer**.  
   
-3.  From the drop-down list, click **Add Point Layer**. A point layer with no points is added to the map. By default, the point layer is ready for embedded points.  
+1.  From the list, select **Add Point Layer**. A point layer with no points is added to the map. By default, the point layer is ready for embedded points.  
   
-## To add a custom point  
+## Add a custom point  
   
-1.  On the report design surface, click the map to select it and display the Map pane.  
+1.  On the report design surface, select the map to display the **Map** pane.  
   
-2.  In the Map pane, right-click a point layer that has type **Embedded**, and then click **Add Point**. The cursor changes to crosshairs.  
+1.  In the **Map** pane, right-click a point layer that has type **Embedded**, and then select **Add Point**. The cursor changes to crosshairs.  
   
-3.  To add a point, click a location on the map. An embedded point is added to the selected layer at the location where you click.  
+1.  To add a point, select a location on the map. An embedded point is added to the selected layer at the selected location.  
   
-## To customize the display for an embedded point  
+## Customize the display for an embedded point  
   
-1.  Right-click the point, and then click **Point Properties**. The **Map Embedded Point Properties** dialog box opens.  
+1.  Right-click the point, and then select **Point Properties**. The **Map Embedded Point Properties** dialog opens.  
   
-2.  Click **Override point options for this layer**. Multiple property pages appear in the left pane.  
+1.  Select **Override point options for this layer**. Multiple property pages appear in the left pane.  
   
-3.  Click the pages and set the display properties that you want to apply to this point.  
+1.  Select the pages and set the display properties that you want to apply to this point.  
   
-## See Also  
- [Maps &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Vary Polygon, Line, and Point Display by Rules and Analytical Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
+## Related content  
+ [Maps &#40;Report Builder&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Vary polygon, line, and point display by rules and analytical data &#40;Report Builder&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
   

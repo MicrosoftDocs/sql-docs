@@ -113,8 +113,8 @@ FROM sys.indexes AS i
 
 The following examples set the properties of indexes in the AdventureWorks database.
 
-[!code-sql[IndexDDL#AlterIndex4](../../relational-databases/indexes/codesnippet/tsql/set-index-options_1.sql)]
+:::code language="sql" source="codesnippet/tsql/set-index-options_1.sql":::
 
-[!code-sql[IndexDDL#AlterIndex2](../../relational-databases/indexes/codesnippet/tsql/set-index-options_2.sql)]
+:::code language="sql" source="codesnippet/tsql/set-index-options_2.sql":::
 
 For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).

@@ -3,8 +3,8 @@ title: "REST API: Sync between multiple databases"
 description: Use a REST API example script to sync between multiple databases.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: wiassaf, mathoma
-ms.date: 03/12/2019
+ms.reviewer: mathoma, hudequei
+ms.date: 03/26/2024
 ms.service: sql-database
 ms.subservice: sql-data-sync
 ms.topic: sample
@@ -25,9 +25,13 @@ For an overview of SQL Data Sync, see [Sync data across multiple cloud and on-pr
 
 ## Create sync group
 
-Use the [create or update](/rest/api/sql/syncgroups/createorupdate) template to create a sync group.
+Use the [create or update](/rest/api/sql/sync-groups/create-or-update) template to create a sync group.
  
-When creating a sync group, do not pass in the sync schema (table\column) and do not pass in masterSyncMemberName, because at this time sync group does not have table\column information yet.
+When creating a sync group, do not pass in the sync schema (table\column) and do not pass in `masterSyncMemberName`, because at this time sync group does not have table\column information yet.
+
+Sync group names cannot contain special characters, but can contain letters, numbers, underscore (`_`), dash (`-`).
+
+The minimum interval time for group synchronization is five seconds. If the interval time is smaller, five seconds will be used.
 
 Sample request for creating a sync group: 
 
@@ -85,7 +89,7 @@ Status code: 201
 
 ## Create sync member
 
-Use the [create or update](/rest/api/sql/syncmembers/createorupdate) template to create a sync member.
+Use the [create or update](/rest/api/sql/sync-members/create-or-update) template to create a sync member.
 
 Sample request for creating a sync member:
 
@@ -145,7 +149,7 @@ Status code:201
 
 Once your sync group is created successfully, refresh schema using the following templates.
 
-Use the [refresh hub schema](/rest/api/sql/syncgroups/refreshhubschema)  template to refresh the schema for the hub database. 
+Use the [refresh hub schema](/rest/api/sql/sync-groups/refresh-hub-schema)  template to refresh the schema for the hub database. 
 
 Sample request for refreshing a hub database schema: 
 
@@ -159,19 +163,19 @@ Status code: 200
 
 Status code: 202
 
-Use the [list hub schemas](/rest/api/sql/syncgroups/listhubschemas) template to list the hub database schema. 
+Use the [list hub schemas](/rest/api/sql/sync-groups/list-hub-schemas) template to list the hub database schema. 
 
-Use the [refresh member schema](/rest/api/sql/syncmembers/refreshmemberschema) template to refresh the member database schema. 
+Use the [refresh member schema](/rest/api/sql/sync-members/refresh-member-schema) template to refresh the member database schema. 
 
-Use the [list member schema](/rest/api/sql/syncmembers/listmemberschemas) template to list member database schema. 
+Use the [list member schema](/rest/api/sql/sync-members/list-member-schemas) template to list member database schema. 
 
 Only proceed to the next step once your schema refreshes successfully. 
 
 ## Update sync group 
 
-Use the [create or update](/rest/api/sql/syncgroups/createorupdate) template to update your sync group.
+Use the [create or update](/rest/api/sql/sync-groups/create-or-update) template to update your sync group.
 
-Update sync group by specifying the sync schema. Include your schema and masterSyncMemberName, which is the name that holds the schema you want to use. 
+Update sync group by specifying the sync schema. Include your schema and `masterSyncMemberName`, which is the name that holds the schema you want to use. 
 
 Sample request for updating sync group: 
 
@@ -226,7 +230,7 @@ Sample response for updating sync group:
 ```
 ## Update sync member
 
-Use the [create or update](/rest/api/sql/syncmembers/createorupdate) template to update your sync member.
+Use the [create or update](/rest/api/sql/sync-members/create-or-update) template to update your sync member.
 
 Sample request for updating a sync member: 
 
@@ -285,7 +289,7 @@ Status code: 201
 
 ## Trigger sync
 
-Use the [trigger sync](/rest/api/sql/syncgroups/triggersync) template to trigger a sync operation.
+Use the [trigger sync](/rest/api/sql/sync-groups/trigger-sync) template to trigger a sync operation.
 
 Sample request for triggering sync operation: 
 

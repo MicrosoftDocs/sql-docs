@@ -3,10 +3,10 @@ title: Azure Synapse Pathway data type mappings IBM Netezza
 description: data type mappings for IBM Netezza within Azure Synapse Pathway
 author: charlesfeddersen
 ms.author: charlesf
-ms.date: 02/10/2022
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: tools-other
-ms.topic: overview
+ms.topic: conceptual
 ms.custom:
   - template-overview
   - intro-overview
@@ -63,12 +63,14 @@ The following set of links shows the source and target data type mappings for ea
 | xml | *Not supported* |
 | xmltype | *Not supported* |
 
-## See Also
-- [Azure Synapse Pathway data type mapping](data-type-mappings.md)
+## Related content
+
+- [Data type mappings in Azure Synapse Pathway](data-type-mappings.md)
 - [IBM Netezza data type mapping](data-type-mappings-ibm-netezza.md)
 - [Microsoft SQL Server data type mapping](data-type-mappings-microsoft-sql-server.md)
 - [Snowflake data type mapping](data-type-mappings-snowflake.md)
 
-## Next steps
+## Next step
 
-[Download Azure Synapse Pathway](synapse-pathway-download.md)
+> [!div class="nextstepaction"]
+> [Azure Synapse Pathway download](synapse-pathway-download.md)

@@ -101,7 +101,7 @@ profile_id  name                          description
 56          AdventureWorks Administrator  Administrative mail profile.
 ```
 
-## See also
+## Related content
 
 - [Database Mail](../database-mail/database-mail.md)
 - [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)

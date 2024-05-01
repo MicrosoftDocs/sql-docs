@@ -8,11 +8,7 @@ metadata:
   description: Learn how to use machine learning on SQL to run Python and R on relational data, both on-premises and in the cloud. Tutorials, code examples, installation guides, and other documentation show you how to use SQL machine learning.
   ms.service: sql
   ms.subservice: machine-learning
-  ms.topic: landing-page 
-  ms.custom:
-  - event-tier1-build-2022
-  - event-tier1-build-2022
-  - event-tier1-build-2022
+  ms.topic: landing-page
   author: WilliamDAssafMSFT
   ms.author: wiassaf
   ms.date: 05/24/2022

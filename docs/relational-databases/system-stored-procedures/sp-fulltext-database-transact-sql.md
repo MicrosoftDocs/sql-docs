@@ -62,7 +62,7 @@ In [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later versions, ful
 
 Only members of the **sysadmin** fixed server role and **db_owner** fixed database role can execute `sp_fulltext_database`.
 
-## See also
+## Related content
 
 - [DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [FULLTEXTSERVICEPROPERTY (Transact-SQL)](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)

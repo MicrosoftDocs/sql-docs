@@ -1,8 +1,7 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
-ms.date: 07/06/2023
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 03/14/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -103,7 +102,7 @@ ms.topic: include
 | 14106 | 16 | No | Distribution retention periods must be greater than or equal to 0. |
 | 14107 | 10 | No | The @max_distretention value must be larger than the @min_distretention value. |
 | 14108 | 10 | No | Removed %ld history records from %s. |
-| 14109 | 10 | No | The @security_mode parameter value must be 0 (SQL Server Authentication) or 1 (Integrated Authentication). |
+| 14109 | 10 | No | The @security_mode parameter value must be 0 (SQL Server Authentication), 1 (Integrated Authentication), 2 (Microsoft Entra Password Authentication), 3 (Microsoft Entra Integrated Authentication), or 4 (Microsoft Entra Service Principal Authentication). |
 | 14110 | 16 | No | For stored procedure articles, the @property parameter value must be 'description', 'dest_table', 'dest_object', 'creation_script', 'pre_creation_cmd', 'schema_option', or 'destination_owner'. |
 | 14111 | 16 | No | The @pre_creation_cmd parameter value must be 'none' or 'drop'. |
 | 14112 | 16 | No | This procedure can be executed only against table-based articles. |

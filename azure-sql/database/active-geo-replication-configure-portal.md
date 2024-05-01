@@ -8,7 +8,7 @@ ms.date: 06/29/2023
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: tutorial
-ms.custom: sqldbrb=1, devx-track-azurecli, ignite-2023
+ms.custom: sqldbrb=1, devx-track-azurecli, ignite-2023, devx-track-azurepowershell
 ---
 # Tutorial: Configure active geo-replication and failover (Azure SQL Database)
 
@@ -16,7 +16,7 @@ ms.custom: sqldbrb=1, devx-track-azurecli, ignite-2023
 
 This article shows you how to configure [active geo-replication for Azure SQL Database](active-geo-replication-overview.md#active-geo-replication-terminology-and-capabilities) using the [Azure portal](https://portal.azure.com) or Azure CLI and to initiate failover.
 
-For best practices using auto-failover groups, see [Auto-failover groups with Azure SQL Database](auto-failover-group-sql-db.md) and [Auto-failover groups with Azure SQL Managed Instance](../managed-instance/auto-failover-group-sql-mi.md).
+For failover groups, see [Failover groups with Azure SQL Database](failover-group-sql-db.md) and [Failover groups with Azure SQL Managed Instance](../managed-instance/failover-group-sql-mi.md).
 
 ## Prerequisites
 
@@ -185,9 +185,6 @@ The command immediately switches the secondary database into the primary role. T
 
 There's a short period during which both databases are unavailable, on the order of 0 to 25 seconds, while the roles are switched. If the primary database has multiple secondary databases, the command automatically reconfigures the other secondaries to connect to the new primary. The entire operation should take less than a minute to complete under normal circumstances.
 
-> [!NOTE]
-> This command is designed for quick recovery of the database in case of an outage. It triggers failover without data synchronization, or forced failover.  If the primary is online and committing transactions when the command is issued some data loss may occur.
-
 ## Remove secondary database
 
 This operation permanently stops the replication to the secondary database, and changes the role of the secondary to a regular read-write database. If the connectivity to the secondary database is broken, the command succeeds but the secondary doesn't become read-write until after connectivity is restored.
@@ -228,7 +225,7 @@ Remove-AzSqlDatabaseSecondary @parameters
 
 ## Cross-subscription geo-replication
 
-Use Transact-SQL (T-SQL) create a geo-secondary in a subscription different from the subscription of the primary (whether under the same tenant of Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) or not), follow the steps in this section.
+Use Transact-SQL (T-SQL) create a geo-secondary in a subscription different from the subscription of the primary (whether under the same tenant of Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) or not), follow the steps in this section.
 
 1. Add the IP address of the client machine executing the T-SQL commands in this example, to the server firewalls of **both** the primary and secondary servers. You can confirm that IP address by executing the following query while connected to the primary server from the same client machine.
   
@@ -302,6 +299,7 @@ Use Transact-SQL (T-SQL) create a geo-secondary in a subscription different from
 ## Next steps
 
 * To learn more about active geo-replication, see [active geo-replication](active-geo-replication-overview.md).
-* To learn about auto-failover groups, see [Auto-failover groups](auto-failover-group-sql-db.md)
+* To learn about failover groups, see [Failover groups](failover-group-sql-db.md)
 * For a business continuity overview and scenarios, see [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md).
 * Save on licensing costs by designating your secondary DR replica for [standby](standby-replica-how-to-configure.md).
+1

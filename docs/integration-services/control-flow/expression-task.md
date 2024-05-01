@@ -18,7 +18,7 @@ f1_keywords:
   The Expression Task creates and evaluates expressions that set variable values at runtime, using the Expression Builder. When you edit the task, the [Expression Builder](../../integration-services/expressions/expression-builder.md) is launched.  
   
 ## Expression Examples  
- The expression language includes functions and operators. For examples that demonstrate how to use the functions and operators, see the **Expression Examples** sections in the functions and operators topics. Links to the topics are in [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md)and [Operators &#40;SSIS Expression&#41;](../../integration-services/expressions/operators-ssis-expression.md).  
+ The expression language includes functions and operators. For examples that demonstrate how to use the functions and operators, see the **Expression Examples** sections in the functions and operators topics. Links to the topics are in [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md) and [Operators &#40;SSIS Expression&#41;](../../integration-services/expressions/operators-ssis-expression.md).  
   
  For examples of more complex expressions, see [Examples of Advanced Integration Services Expressions](../../integration-services/expressions/examples-of-advanced-integration-services-expressions.md).  
   

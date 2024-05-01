@@ -349,20 +349,14 @@ The following example shows how to use the CHANGETABLE(VERSION ...) function to 
 
 ```sql
 -- Assumption: @last_sync_version has been validated.
-
-UPDATE
-    SalesLT.Product
-SET
-    ListPrice = @new_listprice
-FROM
-    SalesLT.Product AS P
-WHERE
-    ProductID = @product_id AND
-    @last_sync_version >= ISNULL (
-        SELECT CT.SYS_CHANGE_VERSION
-        FROM CHANGETABLE(VERSION SalesLT.Product,
-                        (ProductID), (P.ProductID)) AS CT),
-        0);
+UPDATE SalesLT.Product
+SET ListPrice = @new_listprice
+FROM SalesLT.Product AS P
+WHERE ProductID = @product_id
+    AND @last_sync_version >= ISNULL((
+            SELECT CT.SYS_CHANGE_VERSION
+            FROM CHANGETABLE(VERSION SalesLT.Product, (ProductID), (P.ProductID)) AS CT
+            ), 0);
 ```
 
 The following code can check the updated row count and can identify more information about the conflict.

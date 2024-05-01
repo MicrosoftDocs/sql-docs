@@ -91,7 +91,7 @@ EXEC xp_loginconfig 'login mode';
 GO
 ```
 
-## See also
+## Related content
 
 - [sp_denylogin (Transact-SQL)](sp-denylogin-transact-sql.md)
 - [sp_grantlogin (Transact-SQL)](sp-grantlogin-transact-sql.md)

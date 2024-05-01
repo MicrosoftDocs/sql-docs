@@ -139,8 +139,6 @@ Change data capture has some limitations when working with other SQL Server feat
 
 For known issues and errors associated with change data capture, review [Known issues with CDC](known-issues-and-errors-change-data-capture.md).
 
-
-
 ## See also  
 
 * [Known issues and limitations](/sql/relational-databases/track-changes/known-issues-and-limitations)

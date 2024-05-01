@@ -16,12 +16,9 @@ ms.custom: sqldbrb=1, ignite-2023
 
 Active geo-replication is a feature that lets you create a continuously synchronized readable secondary database for a primary database. The readable secondary database might be in the same Azure region as the primary, or, more commonly, in a different region. This kind of readable secondary database is also known as a geo-secondary or geo-replica. 
 
-Active geo-replication is configured per database, and only supports manual failover. To automatically fail over a group of databases, or if your application requires a stable connection endpoint, consider [Auto-failover groups](auto-failover-group-sql-db.md) instead. [Compare geo-replication with failover groups](business-continuity-high-availability-disaster-recover-hadr-overview.md#compare-geo-replication-with-failover-groups) to learn more. 
+Active geo-replication is configured per database, and only supports manual failover. To fail over a group of databases, or if your application requires a stable connection endpoint, consider [Failover groups](failover-group-sql-db.md) instead.
 
 You can also use [Migrate SQL Database with active geo-replication](/azure/germany/germany-migration-databases#migrate-sql-database-using-active-geo-replication). 
-
-> [!NOTE]
-> Azure SQL Managed Instance doesn't support active geo-replication, see [Auto-failover groups](../managed-instance/auto-failover-group-sql-mi.md) instead. 
 
 ## Overview
 
@@ -39,7 +36,7 @@ You can manage geo-replication and initiate a geo-failover using any of the foll
 - [PowerShell: Single database](scripts/setup-geodr-and-failover-database-powershell.md)
 - [PowerShell: Elastic pool](scripts/setup-geodr-and-failover-elastic-pool-powershell.md)
 - [Transact-SQL: Single database or elastic pool](/sql/t-sql/statements/alter-database-azure-sql-database)
-- [REST API: Single database](/rest/api/sql/replicationlinks)
+- [REST API: Single database](/rest/api/sql/replication-links)
 
 Active geo-replication uses the [Always On availability group](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) technology to asynchronously replicate the transaction log generated on the primary replica to all geo-replicas. While at any given point, a secondary database might be slightly behind the primary database, the data on a secondary is guaranteed to be transactionally consistent. In other words, changes made by uncommitted transactions aren't visible. 
 
@@ -73,20 +70,20 @@ To achieve full business continuity, adding database regional redundancy is only
    > You can use geo-replication to create secondary replicas in the same region as the primary. You can use these secondaries to satisfy read scale-out scenarios in the same region. However, a secondary replica in the same region does not provide additional resilience to catastrophic failures or large scale outages, and therefore is not a suitable failover target for disaster recovery purposes. It also does not guarantee availability zone isolation. Use Business Critical or Premium service tiers [zone redundant configuration](high-availability-sla.md#zone-redundant-availability) or General Purpose service tier [zone redundant configuration](high-availability-sla.md#zone-redundant-availability) to achieve availability zone isolation.
    >
 
-- **Planned geo-failover**
+- **Failover (no data loss)**
 
-  Planned geo-failover switches the roles of primary and geo-secondary databases after completing full data synchronization. A planned failover doesn't result in data loss. The duration of planned geo-failover depends on the size of transaction log on the primary that needs to be synchronized to the geo-secondary. Planned geo-failover is designed for the following scenarios:
+  Failover switches the roles of primary and geo-secondary databases after completing full data synchronization so there's no data loss. Duration of the failover depends on the size of the transaction log on the primary that needs to be synchronized to the geo-secondary. Failover is designed for the following scenarios:
 
-  - Perform DR drills in production when the data loss isn't acceptable; 
-  - Relocate the database to a different region; 
+  - Perform DR drills in production when the data loss isn't acceptable
+  - Relocate the database to a different region
   - Return the database to the primary region after the outage has been mitigated (known as failback).
 
-- **Unplanned geo-failover**
+- **Forced failover (potential data loss)**
 
-  Unplanned, or forced, geo-failover immediately switches the geo-secondary to the primary role without any synchronization with the primary. Any transactions committed on the primary but not yet replicated to the secondary are lost. This operation is designed as a recovery method during outages when the primary isn't accessible, but database availability must be quickly restored. When the original primary is back online, it is automatically reconnected, reseeded using the current primary data, and become a new geo-secondary.
+  Forced failover immediately switches the geo-secondary to the primary role without waiting for synchronization with the primary. Any transactions committed on the primary but not yet replicated to the secondary are lost. This operation is designed as a recovery method during outages when the primary isn't accessible, but database availability must be quickly restored. When the original primary is back online, it's automatically reconnected, reseeded using current data from the primary, and become the new geo-secondary.
 
   > [!IMPORTANT]
-  > After either planned or unplanned geo-failover, the connection endpoint for the new primary changes because the new primary is now located on a different logical server.
+  > After either failover or forced failover, the connection endpoint for the new primary changes because the new primary is now located on a different logical server.
 
 - **Multiple readable geo-secondaries**
 
@@ -101,7 +98,7 @@ To achieve full business continuity, adding database regional redundancy is only
 
 - **User-controlled geo-failover and failback**
 
-  A geo-secondary that has finished initial seeding can be explicitly switched to the primary role (failed over) at any time by the application or the user. During an outage where the primary is inaccessible, only an unplanned geo-failover can be used. That immediately promotes a geo-secondary to be the new primary. When the outage is mitigated, the system automatically makes the recovered primary a geo-secondary, and brings it up-to-date with the new primary. Due to the asynchronous nature of geo-replication, recent transactions might be lost during unplanned geo-failovers if the primary fails before these transactions are replicated to a geo-secondary. When a primary with multiple geo-secondaries fail over, the system automatically reconfigures replication relationships and links the remaining geo-secondaries to the newly promoted primary, without requiring any user intervention. After the outage that caused the geo-failover is mitigated, it might be desirable to return the primary to its original region. To do that, invoke a planned geo-failover.
+  A geo-secondary that has finished initial seeding can be explicitly switched to the primary role (failed over) at any time by the application or the user. During an outage where the primary is inaccessible, only forced failover can be used, which immediately promotes a geo-secondary to be the new primary. When the outage is mitigated, the system automatically makes the recovered primary a geo-secondary, and brings it up-to-date with the new primary. Due to the asynchronous nature of geo-replication, recent transactions might be lost during forced failovers if the primary fails before these transactions are replicated to a geo-secondary. When a primary with multiple geo-secondaries fails over, the system automatically reconfigures replication relationships and links the remaining geo-secondaries to the newly promoted primary, without requiring any user intervention. After the outage that caused the geo-failover is mitigated, it might be desirable to return the primary to its original region. To do that, perform a manual failover.
 
 - **Standby replica** 
 
@@ -112,7 +109,7 @@ To achieve full business continuity, adding database regional redundancy is only
 To ensure that your application can immediately access the new primary after geo-failover, validate that authentication and network access for your secondary server are properly configured. For details, see [SQL Database security after disaster recovery](active-geo-replication-security-configure.md). Also validate that backup retention policy on the secondary database matches that of the primary. This setting isn't a part of the database and isn't replicated from the primary. By default, the geo-secondary is configured with a default PITR retention period of seven days. For details, see [SQL Database automated backups](automated-backups-overview.md).
 
 > [!IMPORTANT]
-> If your database is a member of a failover group, you cannot initiate its failover using the geo-replication failover command. Use the failover command for the group. If you need to failover an individual database, you must remove it from the failover group first. See  [Auto-failover groups](auto-failover-group-sql-db.md) for details.
+> If your database is a member of a failover group, you cannot initiate its failover using the geo-replication failover command. Use the failover command for the group. If you need to failover an individual database, you must remove it from the failover group first. See  [Failover groups](failover-group-sql-db.md) for details.
 
 ## <a name="configuring-secondary-database"></a> Configure geo-secondary
 
@@ -137,7 +134,7 @@ Review [license-free standby replica](standby-replica-how-to-configure.md) to le
 
 ## Cross-subscription geo-replication
 
-Use Transact-SQL (T-SQL) create a geo-secondary in a subscription different from the subscription of the primary (whether under the same tenant of Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) or not). Review [Configure active geo-replication](active-geo-replication-configure-portal.md) to learn more. 
+Use Transact-SQL (T-SQL) create a geo-secondary in a subscription different from the subscription of the primary (whether under the same tenant of Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) or not). Review [Configure active geo-replication](active-geo-replication-configure-portal.md) to learn more. 
 
 ## <a name="keeping-credentials-and-firewall-rules-in-sync"></a> Keep credentials and firewall rules in sync
 
@@ -215,20 +212,20 @@ As discussed previously, active geo-replication can also be managed programmatic
 
 | API | Description |
 | --- | --- |
-| [Create or Update Database (createMode=Restore)](/rest/api/sql/2022-08-01-preview/databases/create-or-update) |Creates, updates, or restores a primary or a secondary database. |
-| [Get Create or Update Database Status](/rest/api/sql/2022-08-01-preview/databases/create-or-update) |Returns the status during a create operation. |
-| [Set Secondary Database as Primary (Planned Failover)](/rest/api/sql/replicationlinks/failover) |Sets which secondary database is primary by failing over from the current primary database. **This option is not supported for SQL Managed Instance.**|
-| [Set Secondary Database as Primary (Unplanned Failover)](/rest/api/sql/replicationlinks/failoverallowdataloss) |Sets which secondary database is primary by failing over from the current primary database. This operation might result in data loss. **This option is not supported for SQL Managed Instance.**|
-| [Get Replication Link](/rest/api/sql/replicationlinks/get) |Gets a specific replication link for a given database in a geo-replication partnership. It retrieves the information visible in the sys.geo_replication_links catalog view. **This option is not supported for SQL Managed Instance.**|
-| [Replication Links - List By Database](/rest/api/sql/replicationlinks/listbydatabase) | Gets all replication links for a given database in a geo-replication partnership. It retrieves the information visible in the sys.geo_replication_links catalog view. |
-| [Delete Replication Link](/rest/api/sql/replicationlinks/delete) | Deletes a database replication link. Can't be done during failover. |
+| [Create or Update Database (createMode=Restore)](/rest/api/sql/databases/create-or-update) |Creates, updates, or restores a primary or a secondary database. |
+| [Get Create or Update Database Status](/rest/api/sql/databases/create-or-update) |Returns the status during a create operation. |
+| [Set Secondary Database as Primary (Planned Failover)](/rest/api/sql/replication-links/failover) |Sets which secondary database is primary by failing over from the current primary database. **This option is not supported for SQL Managed Instance.**|
+| [Set Secondary Database as Primary (Unplanned Failover)](/rest/api/sql/replication-links/failover-allow-data-loss) |Sets which secondary database is primary by failing over from the current primary database. This operation might result in data loss. **This option is not supported for SQL Managed Instance.**|
+| [Get Replication Link](/rest/api/sql/replication-links/get) |Gets a specific replication link for a given database in a geo-replication partnership. It retrieves the information visible in the sys.geo_replication_links catalog view. **This option is not supported for SQL Managed Instance.**|
+| [Replication Links - List By Database](/rest/api/sql/replication-links/list-by-database) | Gets all replication links for a given database in a geo-replication partnership. It retrieves the information visible in the sys.geo_replication_links catalog view. |
+| [Delete Replication Link](/rest/api/sql/replication-links/delete) | Deletes a database replication link. Can't be done during failover. |
 
 ## Next steps
 
 - For sample scripts, see:
   - [Configure and failover a single database using active geo-replication](scripts/setup-geodr-and-failover-database-powershell.md).
   - [Configure and failover a pooled database using active geo-replication](scripts/setup-geodr-and-failover-elastic-pool-powershell.md).
-- SQL Database also supports auto-failover groups. For more information, see using [auto-failover groups](auto-failover-group-sql-db.md).
+- SQL Database also supports failover groups. For more information, see using [failover groups](failover-group-sql-db.md).
 - For a business continuity overview and scenarios, see [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md).
 - Save on licensing costs by designating your secondary DR replica for [standby](standby-replica-how-to-configure.md).
 - To learn about Azure SQL Database Hyperscale Geo-replica see [Hyperscale Geo-replica](service-tier-hyperscale-replicas.md#geo-replica)

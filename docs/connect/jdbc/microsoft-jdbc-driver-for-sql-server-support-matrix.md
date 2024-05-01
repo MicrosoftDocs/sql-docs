@@ -3,7 +3,7 @@ title: Support matrix
 description: This page contains the support matrix and support life-cycle policy for the Microsoft JDBC Driver for SQL Server.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 07/31/2023
+ms.date: 01/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -11,6 +11,9 @@ ms.topic: conceptual
 # Microsoft JDBC Driver for SQL Server support matrix
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
+
+> [!CAUTION]
+> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
 
 This page contains the support matrix and support lifecycle policy for the Microsoft JDBC Driver for SQL Server.
 
@@ -24,6 +27,7 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 
 |Driver Name|Driver Package Version|Applicable JAR(s)|End of Mainstream Support|
 |-|-|-|-|
+|Microsoft JDBC Driver 12.6 for SQL Server|12.6|mssql-jdbc-12.6.0.jre11.jar<br> mssql-jdbc-12.6.0.jre8.jar|January 31, 2029|
 |Microsoft JDBC Driver 12.4 for SQL Server|12.4|mssql-jdbc-12.4.0.jre11.jar<br> mssql-jdbc-12.4.0.jre8.jar|July 31, 2028|
 |Microsoft JDBC Driver 12.2 for SQL Server|12.2|mssql-jdbc-12.2.0.jre11.jar<br> mssql-jdbc-12.2.0.jre8.jar|January 31, 2028|
 |Microsoft JDBC Driver 11.2 for SQL Server|11.2|mssql-jdbc-11.2.0.jre18.jar<br> mssql-jdbc-11.2.0.jre17.jar<br> mssql-jdbc-11.2.0.jre11.jar<br> mssql-jdbc-11.2.0.jre8.jar|August 4, 2027|
@@ -33,12 +37,12 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 |Microsoft JDBC Driver 8.4 for SQL Server|8.4|mssql-jdbc-8.4.1.jre14.jar<br> mssql-jdbc-8.4.1.jre11.jar<br> mssql-jdbc-8.4.1.jre8.jar|July 31, 2025|
 |Microsoft JDBC Driver 8.2 for SQL Server|8.2|mssql-jdbc-8.2.2.jre13.jar<br> mssql-jdbc-8.2.2.jre11.jar<br> mssql-jdbc-8.2.2.jre8.jar|January 31, 2025|
 |Microsoft JDBC Driver 7.4 for SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|July 31, 2024|
-|Microsoft JDBC Driver 7.2 for SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|January 31, 2024|
 
  The following Microsoft JDBC Drivers are no longer supported.
 
 |Driver Name|Driver Package Version|End of Mainstream Support|
 |-|-|-|
+|Microsoft JDBC Driver 7.2 for SQL Server|7.2|January 31, 2024|
 |Microsoft JDBC Driver 7.0 for SQL Server|7.0|July 31, 2023|
 |Microsoft JDBC Driver 6.4 for SQL Server|6.4|February 27, 2023|
 |Microsoft JDBC Driver 6.2 for SQL Server|6.2|June 30, 2022|
@@ -57,6 +61,7 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 
 |Database version&nbsp;&#8594;<br />&#8595; Driver Version|Azure SQL Database|Azure Synapse Analytics|Azure SQL Managed Instance|SQL Server 2022|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2008 R2|SQL Server 2008|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
+|12.6|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
 |12.4|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
 |12.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
 |11.2|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|   |   |   |   |
@@ -83,7 +88,7 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 
  <sup>2</sup> Support for Azure SQL Database was introduced in the 3.0 driver as a hotfix. We recommend that Azure SQL Database customers use the latest driver version available.
 
- <sup>3</sup> Microsoft SQL Server JDBC Driver version 2.0 and Microsoft SQL Server 2005 JDBC Driver version 1.2 can connect to SQL Server 2008 as a down-level client. When down-level conversions are allowed, applications can execute queries and perform updates on the new SQL Server 2008 data types, such as time, date, datetime2, datetimeoffset, and FILESTREAM. For more information about how to use these new data types with the JDBC driver, see  [Working with SQL Server 2008 Date/Time Data Types using JDBC Driver](/archive/blogs/jdbcteam/) and  [Working with SQL Server 2008 FileStream using JDBC Driver](/archive/blogs/jdbcteam/). For more information about the down-level compatibility of these new data types, see  [Using Date and Time Data](/previous-versions/sql/sql-server-2008-r2/ms180878(v=sql.105))and  [FILESTREAM Support](../../relational-databases/native-client/features/filestream-support.md) articles in SQL Server Books Online.
+ <sup>3</sup> Microsoft SQL Server JDBC Driver version 2.0 and Microsoft SQL Server 2005 JDBC Driver version 1.2 can connect to SQL Server 2008 as a down-level client. When down-level conversions are allowed, applications can execute queries and perform updates on the new SQL Server 2008 data types, such as time, date, datetime2, datetimeoffset, and FILESTREAM. For more information about how to use these new data types with the JDBC driver, see  [Working with SQL Server 2008 Date/Time Data Types using JDBC Driver](/archive/blogs/jdbcteam/) and  [Working with SQL Server 2008 FileStream using JDBC Driver](/archive/blogs/jdbcteam/). For more information about the down-level compatibility of these new data types, see  [Using Date and Time Data](/previous-versions/sql/sql-server-2008-r2/ms180878(v=sql.105)) and [FILESTREAM Support](../../relational-databases/native-client/features/filestream-support.md) articles in SQL Server Books Online.
 
  <sup>4</sup> Support for connections between the Microsoft JDBC Driver and Parallel Data Warehouse was first introduced in the Microsoft JDBC Driver 4.0 for SQL Server and Microsoft SQL Server 2008 R2 Parallel Data Warehouse Appliance Update 3.
 
@@ -93,6 +98,7 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 
 |JDBC Driver Version|JRE Versions|JDBC API Version|
 |-|-|-|
+|[12.6](release-notes-for-the-jdbc-driver.md#126)|1.8, 11, 17, 21|4.2, 4.3 (partially)|
 |[12.4](release-notes-for-the-jdbc-driver.md#124)|1.8, 11, 17, 20|4.2, 4.3 (partially)|
 |[12.2](release-notes-for-the-jdbc-driver.md#122)|1.8, 11, 17, 19|4.2, 4.3 (partially)|
 |[11.2](release-notes-for-the-jdbc-driver.md#112)|1.8, 11, 17, 18|4.2, 4.3 (partially)|

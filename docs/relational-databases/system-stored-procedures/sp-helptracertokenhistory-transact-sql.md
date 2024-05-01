@@ -69,7 +69,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
  A value of NULL in the result set means that latency statistics cannot be calculated. This is because the tracer token has not been received at the Distributor or one of the Subscribers.  
   
 ## Example  
- [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-helptracertokenhistor_1.sql)]  
+ :::code language="sql" source="../replication/codesnippet/tsql/sp-helptracertokenhistor_1.sql":::
   
 ## Permissions  
  Only members of the **sysadmin** fixed server role, the **db_owner** fixed database role in the publication database, or **db_owner** fixed database or **replmonitor** roles in the distribution database can execute **sp_helptracertokenhistory**.  

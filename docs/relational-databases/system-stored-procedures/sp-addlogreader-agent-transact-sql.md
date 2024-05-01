@@ -4,7 +4,7 @@ description: Adds a Log Reader agent for a given database.
 author: mashamsft
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 08/30/2023
+ms.date: 01/23/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -23,7 +23,7 @@ dev_langs:
 Adds a Log Reader agent for a given database. This stored procedure is executed at the Publisher on the publication database.
 
 > [!IMPORTANT]  
-> When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *@job_login* and *@job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)](../../database-engine/configure-windows/configure-sql-server-encryption.md).
+> When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *@job_login* and *@job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Configure SQL Server Database Engine for encrypting connections](../../database-engine/configure-windows/configure-sql-server-encryption.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -63,13 +63,15 @@ The name of an existing agent job. *@job_name* is **sysname**, with a default of
 
 #### [ @publisher_security_mode = ] *publisher_security_mode*
 
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
+
 The security mode used by the agent when connecting to the Publisher. *@publisher_security_mode* is **smallint**, with a default of `1`. A value of `0` must be specified for non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Publishers. The following values define the security mode:
 
-- `0` specifies [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.
-- `1` specifies Windows Authentication.
-- `2` specifies Azure Active Directory (Azure AD) Password Authentication starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
-- `3` specifies Azure AD Integrated Authentication starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
-- `4` specifies Azure AD Token Authentication starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
+- `0` specifies [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] authentication.
+- `1` specifies Windows authentication.
+- `2` specifies Microsoft Entra password authentication starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
+- `3` specifies Microsoft Entra integrated authentication starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
+- `4` specifies Microsoft Entra token authentication starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
 
 #### [ @publisher_login = ] N'*publisher_login*'
 
@@ -105,11 +107,11 @@ Only members of the **sysadmin** fixed server role or the **db_owner** fixed dat
 
 ## Examples
 
-[!code-sql [HowTo#sp_AddTranPub](../replication/codesnippet/tsql/sp-addlogreader-agent-tr_1.sql)]
+:::code language="sql" source="../replication/codesnippet/tsql/sp-addlogreader-agent-tr_1.sql":::
 
-## See also
+## Related content
 
-- [Create a Publication](../replication/publish/create-a-publication.md)
+- [Create a publication](../replication/publish/create-a-publication.md)
 - [sp_addpublication (Transact-SQL)](sp-addpublication-transact-sql.md)
 - [sp_changelogreader_agent (Transact-SQL)](sp-changelogreader-agent-transact-sql.md)
 - [Replication stored procedures (Transact-SQL)](replication-stored-procedures-transact-sql.md)

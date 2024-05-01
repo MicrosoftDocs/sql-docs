@@ -6,7 +6,7 @@ ms.author: vanto
 ms.date: 04/03/2020
 ms.service: sql
 ms.subservice: language-extensions
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
   - "TSQL"
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"

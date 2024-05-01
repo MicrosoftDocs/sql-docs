@@ -1,10 +1,10 @@
 ---
-title: Configure an availability group (PowerShell & Az CLI)
+title: Configure a single-subnet availability group (PowerShell & Az CLI)
 description: "Use either PowerShell or the Azure CLI to create the Windows failover cluster, the availability group listener, and the internal load balancer on a SQL Server VM in Azure."
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma
-ms.date: 11/10/2021
+ms.date: 04/29/2024
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
@@ -13,7 +13,8 @@ ms.custom:
   - devx-track-azurepowershell
 tags: azure-resource-manager
 ---
-# Use PowerShell or Az CLI to configure an availability group for SQL Server on Azure VM 
+
+# Use PowerShell or Az CLI to configure a single-subnet availability group for SQL Server on Azure VM 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 [!INCLUDE[tip-for-multi-subnet-ag](../../includes/virtual-machines-ag-listener-multi-subnet.md)]
@@ -22,7 +23,7 @@ This article describes how to use [PowerShell](/powershell/scripting/install/ins
 
 Deployment of the availability group is still done manually through SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL). 
 
-While this article uses PowerShell and the Az CLI to configure the availability group environment, it is also possible to do so from the [Azure portal](availability-group-azure-portal-configure.md), using [Azure Quickstart templates](availability-group-quickstart-template-configure.md), or [Manually](availability-group-manually-configure-tutorial-single-subnet.md) as well. 
+While this article uses PowerShell and the Az CLI to configure the availability group environment, it's also possible to do so from the [Azure portal](availability-group-azure-portal-configure.md), using [Azure Quickstart Templates](availability-group-quickstart-template-configure.md), or [Manually](availability-group-manually-configure-tutorial-single-subnet.md) as well. 
 
 > [!NOTE]
 > It's now possible to lift and shift your availability group solution to SQL Server on Azure VMs using Azure Migrate. See [Migrate availability group](../../migration-guides/virtual-machines/sql-server-availability-group-to-sql-on-azure-vm.md) to learn more. 
@@ -36,7 +37,7 @@ To configure an Always On availability group, you must have the following prereq
 - One or more domain-joined [VMs in Azure running SQL Server 2016 (or later) Enterprise edition](./create-sql-vm-portal.md) in the *same* availability set or *different* availability zones that have been [registered with the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md).  
 - The latest version of [PowerShell](/powershell/scripting/install/installing-powershell) or the [Azure CLI](/cli/azure/install-azure-cli). 
 - Two available (not used by any entity) IP addresses. One is for the internal load balancer. The other is for the availability group listener within the same subnet as the availability group. If you're using an existing load balancer, you only need one available IP address for the availability group listener.
-- Windows Server Core is not a supported operating system for the PowerShell commands referenced in this article as there is a dependency on [RSAT](/windows-server/remote/remote-server-administration-tools), which is not included in Core installations of Windows.
+- Windows Server Core isn't a supported operating system for the PowerShell commands referenced in this article as there's a dependency on [RSAT](/windows-server/remote/remote-server-administration-tools), which isn't included in Core installations of Windows.
 
 ## Permissions
 
@@ -96,6 +97,7 @@ The following code snippet defines the metadata for the cluster:
 #  --operator-acc vmadmin@domain.com --bootstrap-acc vmadmin@domain.com --service-acc sqlservice@domain.com `
 #  --sa-key '4Z4/i1Dn8/bpbseyWX' `
 #  --storage-account 'https://cloudwitness.blob.core.windows.net/'
+#  --cluster-subnet-type 'SingleSubnet'
 
 az sql vm group create -n <cluster name> -l <region ex:eastus> -g <resource group name> `
   --image-offer <SQL2016-WS2016 or SQL2017-WS2016> --image-sku Enterprise --domain-fqdn <FQDN ex: domain.com> `
@@ -103,6 +105,7 @@ az sql vm group create -n <cluster name> -l <region ex:eastus> -g <resource grou
   --service-acc <service account ex: testservice@domain.com> `
   --sa-key '<PublicKey>' `
   --storage-account '<ex:https://cloudwitness.blob.core.windows.net/>'
+  --cluster-subnet-type 'SingleSubnet'
 ```
 
 # [PowerShell](#tab/azure-powershell)
@@ -110,19 +113,21 @@ az sql vm group create -n <cluster name> -l <region ex:eastus> -g <resource grou
 ```powershell-interactive
 # Define the cluster metadata
 # example: $group = New-AzSqlVMGroup -Name Cluster -Location West US ' 
-#  -ResourceGroupName SQLVM-RG -Offer SQL2017-WS2016
+#  -ResourceGroupName SQLVM-RG -Offer sql2019-ws2019
 #  -Sku Enterprise -DomainFqdn domain.com -ClusterOperatorAccount vmadmin@domain.com
 #  -ClusterBootstrapAccount vmadmin@domain.com  -SqlServiceAccount sqlservice@domain.com 
 #  -StorageAccountUrl '<ex:https://cloudwitness.blob.core.windows.net/>' `
 #  -StorageAccountPrimaryKey '4Z4/i1Dn8/bpbseyWX'
+#  -ClusterSubnetType 'SingleSubnet'
 
 $storageAccountPrimaryKey = ConvertTo-SecureString -String "<PublicKey>" -AsPlainText -Force
-$group = New-AzSqlVMGroup -Name <name> -Location <regio> 
+$group = New-AzSqlVMGroup -Name <name> -Location <region> 
   -ResourceGroupName <resource group name> -Offer <SQL201?-WS201?> 
   -Sku Enterprise -DomainFqdn <FQDN> -ClusterOperatorAccount <domain account> 
   -ClusterBootstrapAccount <domain account>  -SqlServiceAccount <service account> 
   -StorageAccountUrl '<ex:StorageAccountUrl>' `
   -StorageAccountPrimaryKey $storageAccountPrimaryKey
+  -ClusterSubnetType 'SingleSubnet'
 ```
 
 ---
@@ -153,42 +158,38 @@ Use this command to add any other SQL Server VMs to the cluster. Modify only the
 
 ```powershell-interactive
 # Add SQL Server VMs to cluster
-# example: $sqlvm1 = Get-AzSqlVM -Name SQLVM1 -ResourceGroupName SQLVM-RG
-# $sqlvm2 = Get-AzSqlVM -Name SQLVM2  -ResourceGroupName SQLVM-RG
+# example: 
 
-# $sqlvmconfig1 = Set-AzSqlVMConfigGroup -SqlVM $sqlvm1 `
-#  -SqlVMGroup $group -ClusterOperatorAccountPassword Str0ngAzur3P@ssword! `
-#  -SqlServiceAccountPassword Str0ngAzur3P@ssword! `
-#  -ClusterBootstrapAccountPassword Str0ngAzur3P@ssword!
+# $sqlvm1 = Update-AzSqlVM -Name SQLVM1 -ResourceGroupName SQLVM-RG
+#  -SqlVirtualMachineGroupResourceId $group.Id `
+#  -WsfcDomainCredentialsClusterBootstrapAccountPassword Str0ngAzur3P@ssword! `
+#  -WsfcDomainCredentialsClusterOperatorAccountPassword Str0ngAzur3P@ssword! `
+#  -WsfcDomainCredentialsSqlServiceAccountPassword Str0ngAzur3P@ssword! 
 
-# $sqlvmconfig2 = Set-AzSqlVMConfigGroup -SqlVM $sqlvm2 `
-#  -SqlVMGroup $group -ClusterOperatorAccountPassword Str0ngAzur3P@ssword! `
-#  -SqlServiceAccountPassword Str0ngAzur3P@ssword! `
-#  - ClusterBootstrapAccountPassword Str0ngAzur3P@ssword!
+# $sqlvm1 = Update-AzSqlVM -Name SQLVM2 -ResourceGroupName SQLVM-RG
+#  -SqlVirtualMachineGroupResourceId $group.Id `
+#  -WsfcDomainCredentialsClusterBootstrapAccountPassword Str0ngAzur3P@ssword! `
+#  -WsfcDomainCredentialsClusterOperatorAccountPassword Str0ngAzur3P@ssword! `
+#  -WsfcDomainCredentialsSqlServiceAccountPassword Str0ngAzur3P@ssword! 
 
-$sqlvm1 = Get-AzSqlVM -Name <VM1 Name> -ResourceGroupName <Resource Group Name>
-$sqlvm2 = Get-AzSqlVM -Name <VM2 Name> -ResourceGroupName <Resource Group Name>
+$sqlvm1 = Update-AzSqlVM -ResourceGroupName <Resource Group Name> -Name <VM1 Name> `
+   -SqlVirtualMachineGroupResourceId $group.Id `
+   -WsfcDomainCredentialsClusterBootstrapAccountPassword <bootstrap account password> `
+   -WsfcDomainCredentialsClusterOperatorAccountPassword <operator account password> `
+   -WsfcDomainCredentialsSqlServiceAccountPassword <service account password>
 
-$sqlvmconfig1 = Set-AzSqlVMConfigGroup -SqlVM $sqlvm1 `
-   -SqlVMGroup $group -ClusterOperatorAccountPassword <operator account password> `
-   -SqlServiceAccountPassword <service account password> `
-   -ClusterBootstrapAccountPassword <bootstrap account password>
-
-Update-AzSqlVM -ResourceId $sqlvm1.ResourceId -SqlVM $sqlvmconfig1
-
-$sqlvmconfig2 = Set-AzSqlVMConfigGroup -SqlVM $sqlvm2 `
-   -SqlVMGroup $group -ClusterOperatorAccountPassword <operator account password> `
-   -SqlServiceAccountPassword <service account password> `
-   -ClusterBootstrapAccountPassword <bootstrap account password>
-
-Update-AzSqlVM -ResourceId $sqlvm2.ResourceId -SqlVM $sqlvmconfig2
+$sqlvm2 = Update-AzSqlVM -ResourceGroupName <Resource Group Name> -Name <VM2 Name> `
+   -SqlVirtualMachineGroupResourceId $group.Id `
+   -WsfcDomainCredentialsClusterBootstrapAccountPassword <bootstrap account password> `
+   -WsfcDomainCredentialsClusterOperatorAccountPassword <operator account password> `
+   -WsfcDomainCredentialsSqlServiceAccountPassword <service account password>
 ```
 
 ---
 
 ## Configure quorum
 
-Although the disk witness is the most resilient quorum option, it requires an Azure shared disk which imposes some limitations to the availability group. As such, the cloud witness is the recommended quorum solution for clusters hosting availability groups for SQL Server on Azure VMs. 
+Although the disk witness is the most resilient quorum option, it requires an Azure shared disk, which imposes some limitations to the availability group. As such, the cloud witness is the recommended quorum solution for clusters hosting availability groups for SQL Server on Azure VMs. 
 
 If you have an even number of votes in the cluster, configure the [quorum solution](hadr-cluster-quorum-configure-how-to.md) that best suits your business needs. For more information, see [Quorum with SQL Server VMs](hadr-windows-server-failover-cluster-overview.md#quorum). 
 
@@ -239,8 +240,9 @@ az network lb create --name sqlILB -g <resource group name> --sku Standard `
 # example: New-AzLoadBalancer -name sqlILB -ResourceGroupName SQLVM-RG  `
 #  -Sku Standard -Location West US
 
-New-AzLoadBalancer -name sqlILB -ResourceGroupName <resource group name> `
-   -Sku Standard -Location <region>
+$intLb = New-AzLoadBalancer -name <load balancer name> -ResourceGroupName <resource group name> `
+   -Sku Standard -Location SouthCentralUS
+
 ```
 
 ---
@@ -286,21 +288,51 @@ az sql vm group ag-listener create -n <listener name> -g <resource group name> `
 # [PowerShell](#tab/azure-powershell)
 
 ```powershell-interactive
+# example
+# $AgReplica1 = New-AzSqlVirtualMachineAgReplicaObject -Commit 'SYNCHRONOUS_COMMIT' `
+#     -Failover 'AUTOMATIC' -ReadableSecondary 'NO' -Role 'PRIMARY' `
+#     -SqlVirtualMachineInstanceId $sqlvm1.id
+# $AgReplica2 = New-AzSqlVirtualMachineAgReplicaObject -Commit 'SYNCHRONOUS_COMMIT' `
+#     -Failover 'AUTOMATIC' -ReadableSecondary 'NO' -Role 'SECONDARY' `
+#     -SqlVirtualMachineInstanceId $sqlvm2.id
 
-# example: New-AzAvailabilityGroupListener -Name AGListener -ResourceGroupName SQLVM-RG `
-#    -AvailabilityGroupName SQLAG  -GroupName Cluster `
-#    -IpAddress 10.0.0.27 -LoadBalancerResourceId sqlilb `
+# $SubnetResource = Get-AzVirtualNetworkSubnetConfig -Name "admin" `
+#     -VirtualNetwork (Get-AzVirtualNetwork -Name "autoHAVNET" `
+#     -ResourceGroupName "SQLVM-RG")
+
+# New-AzAvailabilityGroupListener -ResourceGroupName  SQLVM-RG `
+#    -SqlVMGroupName 'Cluster' `
+#    -Name 'AGListenerName' `
+#    -AvailabilityGroupName 'AGName' `
+#    -IpAddress '192.168.15.201' `
+#    -LoadBalancerResourceId $intLb.id `
+#    -SubnetId $SubnetResource.Id `
 #    -ProbePort 59999 `
-#    -SubnetId /subscriptions/a1a1-1a11a/resourceGroups/SQLVM-RG/providers/Microsoft.Network/virtualNetworks/SQLVMvNet/subnets/default `
-#    -SqlVirtualMachineId sqlvm1 sqlvm2
+#    -AvailabilityGroupConfigurationReplica $AgReplica1, $AgReplica2 `
+#    -SqlVirtualMachineId $sqlvm1.id,$sqlvm2.id
 
 
-New-AzAvailabilityGroupListener -Name <listener name> -ResourceGroupName <resource group name> `
-   -AvailabilityGroupName <availability group name> -GroupName <cluster name> `
-   -IpAddress <ag listener IP address> -LoadBalancerResourceId <lbid> `
-   -ProbePort <Load Balancer probe port, default 59999> `
-   -SubnetId <subnet resource id> `
-   -SqlVirtualMachineId <names of SQL VM's hosting AG replicas>
+$AgReplica1 = New-AzSqlVirtualMachineAgReplicaObject -Commit 'SYNCHRONOUS_COMMIT' `
+   -Failover 'AUTOMATIC' -ReadableSecondary 'NO' -Role 'PRIMARY' `
+   -SqlVirtualMachineInstanceId $sqlvm1.id
+$AgReplica2 = New-AzSqlVirtualMachineAgReplicaObject -Commit 'SYNCHRONOUS_COMMIT' `
+   -Failover 'AUTOMATIC' -ReadableSecondary 'NO' -Role 'SECONDARY' `
+   -SqlVirtualMachineInstanceId $sqlvm2.id
+
+$SubnetResource = Get-AzVirtualNetworkSubnetConfig -Name <Subnet Name> `
+   -VirtualNetwork (Get-AzVirtualNetwork -Name <virtual network name> `
+   -ResourceGroupName <resource group name>)
+
+New-AzAvailabilityGroupListener -ResourceGroupName <resource group name> `
+   -SqlVMGroupName <Cluster Name> `
+   -Name <Listerner Name> `
+   -AvailabilityGroupName <Availability Group Name> `
+   -IpAddress <IP Address> `
+   -LoadBalancerResourceId $intLb.id `
+   -SubnetId $SubnetResource.Id `
+   -ProbePort 59999 `
+   -AvailabilityGroupConfigurationReplica $AgReplica1, $AgReplica2 `
+   -SqlVirtualMachineId $sqlvm1.id,$sqlvm2.id
 ```
 
 ---
@@ -313,7 +345,7 @@ There's an added layer of complexity when you're deploying an availability group
 
 To add a new replica to the availability group:
 
-# [Azure CLI](#tab/azure-cli)
+#### Azure CLI
 
 1. Add the SQL Server VM to the cluster group:
    ```azurecli-interactive
@@ -337,50 +369,13 @@ To add a new replica to the availability group:
    az sql vm group ag-listener update -n <Listener> `
    -g <RG name> --group-name <cluster name> --sqlvms <SQL VMs, along with new SQL VM>
    ```
-
-# [PowerShell](#tab/azure-powershell)
-
-1. Add the SQL Server VM to the cluster group:
-
-   ```powershell-interactive
-   # Add the SQL Server VM to the cluster group
-   # example: $sqlvm3 = Get-AzSqlVM -Name SQLVM3 -ResourceGroupName SQLVM-RG 
-   # $group = Get-AzSqlVMGroup -ResourceGroupName SQLVM-RG -Name Cluster
-   # $sqlvmconfig3 = Set-AzSqlVMConfigGroup -SqlVM $sqlvm3 -SqlVMGroup $group `
-   #  -ClusterOperatorAccountPassword Str0ngAzur3P@ssword! `
-   #  -SqlServiceAccountPassword Str0ngAzur3P@ssword! `
-   #  -ClusterBootstrapAccountPassword Str0ngAzur3P@ssword!
-
-   $sqlvm3 = Get-AzSqlVM -Name <VM1 Name> -ResourceGroupName <Resource Group Name>
-   $group = Get-AzSqlVMGroup  -ResourceGroupName <resource group name> -Name <name>
-   $sqlvmconfig3 = Set-AzSqlVMConfigGroup -SqlVM $sqlvm3 -SqlVMGroup $group `
-   -ClusterOperatorAccountPassword <operator account password> `
-   -SqlServiceAccountPassword <service account password> `
-   -ClusterBootstrapAccountPassword <bootstrap account password>
-
-   Update-AzSqlVM -ResourceId $sqlvm3.ResourceId -SqlVM $sqlvmconfig3
-   ```
-
-1. Use SQL Server Management Studio to add the SQL Server instance as a replica within the availability group.
-1. Add the SQL Server VM metadata to the listener:
-
-   ```powershell-interactive
-   # Update the listener metadata with the new VM
-   # example: Update-AzAvailabilityGroupListener -Name AGListener -ResourceGroupName SQLVM-RG `
-   #   -SqlVMGroupName Cluster -SqlVirtualMachineId SQLVM3
-
-   Update-AzAvailabilityGroupListener -Name <Listener> -ResourceGroupName <Resource Group Name> `
-      -SqlVMGroupName <cluster name> -SqlVirtualMachineId <SQL VMs, along with new SQL VM> 
-
-   ```
-
 ---
 
 ### Remove a replica
 
 To remove a replica from the availability group:
 
-# [Azure CLI](#tab/azure-cli)
+#### Azure CLI
 
 1. Remove the replica from the availability group by using SQL Server Management Studio. 
 1. Remove the SQL Server VM metadata from the listener:
@@ -399,35 +394,6 @@ To remove a replica from the availability group:
 
    az sql vm remove-from-group --name <SQL VM name> --resource-group <RG name> 
    ```
-
-# [PowerShell](#tab/azure-powershell)
-
-1. Remove the replica from the availability group by using SQL Server Management Studio. 
-1. Remove the SQL Server VM metadata from the listener:
-
-   ```powershell-interactive
-   # Update the listener metadata by removing the VM from the SQLVMs list
-   # example: Update-AzAvailabilityGroupListener -Name AGListener -ResourceGroupName SQLVM-RG `
-   #  -SqlVMGroupName Cluster -SqlVirtualMachineId SQLVM3
-
-   Update-AzAvailabilityGroupListener -Name <Listener> -ResourceGroupName <Resource Group Name> `
-      -SqlVMGroupName <cluster name> -SqlVirtualMachineId <SQL VMs that remain>
-
-   ```
-1. Remove the SQL Server VM from the cluster:
-
-   ```powershell-interactive
-   # Remove the SQL VM from the cluster
-   # example: $sqlvm = Get-AzSqlVM -Name SQLVM3 -ResourceGroupName SQLVM-RG
-   #  $sqlvm. SqlVirtualMachineGroup = ""
-   #  Update-AzSqlVM -ResourceId $sqlvm -SqlVM $sqlvm
-
-   $sqlvm = Get-AzSqlVM -Name <VM Name> -ResourceGroupName <Resource Group Name>
-      $sqlvm. SqlVirtualMachineGroup = ""
-    
-    Update-AzSqlVM -ResourceId $sqlvm -SqlVM $sqlvm
-   ```
-
 ---
 
 ## Remove listener
@@ -474,7 +440,7 @@ az sql vm remove-from-group --name <VM1 name>  --resource-group <resource group 
 az sql vm remove-from-group --name <VM2 name>  --resource-group <resource group name>
 ```
 
-If these are the only VMs in the cluster, then the cluster will be destroyed. If there are any other VMs in the cluster apart from the SQL Server VMs that were removed, the other VMs will not be removed and the cluster will not be destroyed. 
+If these are the only VMs in the cluster, then the cluster is destroyed. If there are any other VMs in the cluster apart from the SQL Server VMs that were removed, the other VMs aren't removed and the cluster isn't destroyed. 
 
 Next, remove the cluster metadata from the SQL IaaS Agent extension: 
 
@@ -486,24 +452,25 @@ az sql vm group delete --name <cluster name> Cluster --resource-group <resource 
 ```
 
 
-
 # [PowerShell](#tab/azure-powershell)
 
 First, remove all of the SQL Server VMs from the cluster. This will physically remove the nodes from the cluster, and destroy the cluster: 
 
 ```powershell-interactive
 # Remove the SQL VM from the cluster
-# example: $sqlvm = Get-AzSqlVM -Name SQLVM3 -ResourceGroupName SQLVM-RG
-#  $sqlvm. SqlVirtualMachineGroup = ""
-#  Update-AzSqlVM -ResourceId $sqlvm -SqlVM $sqlvm
+# example: 
+# Update-AzSqlVM -ResourceGroupName SQLVM-RG -Name $sqlvm1 `
+#     -SqlVirtualMachineGroupResourceId '' 
+# Update-AzSqlVM -ResourceGroupName SQLVM-RG -Name $sqlvm2 `
+#     -SqlVirtualMachineGroupResourceId '' 
 
-$sqlvm = Get-AzSqlVM -Name <VM Name> -ResourceGroupName <Resource Group Name>
-   $sqlvm. SqlVirtualMachineGroup = ""
-   
-   Update-AzSqlVM -ResourceId $sqlvm -SqlVM $sqlvm
+Update-AzSqlVM -ResourceGroupName <resource group name> -Name <VM1 Name> `
+   -SqlVirtualMachineGroupResourceId '' 
+Update-AzSqlVM -ResourceGroupName <resource group name> -Name <VM2 Name> `
+   -SqlVirtualMachineGroupResourceId '' 
 ```
 
-If these are the only VMs in the cluster, then the cluster will be destroyed. If there are any other VMs in the cluster apart from the SQL Server VMs that were removed, the other VMs will not be removed and the cluster will not be destroyed. 
+If these are the only VMs in the cluster, then the cluster will be destroyed. If there are any other VMs in the cluster apart from the SQL Server VMs that were removed, the other VMs won't be removed and the cluster won't be destroyed. 
 
 Next, remove the cluster metadata from the SQL IaaS Agent extension: 
 
@@ -511,7 +478,7 @@ Next, remove the cluster metadata from the SQL IaaS Agent extension:
 # Remove the cluster metadata
 # example: Remove-AzSqlVMGroup -ResourceGroupName "SQLVM-RG" -Name "Cluster"
 
-Remove-AzSqlVMGroup -ResourceGroupName "<resource group name>" -Name "<cluster name> "
+Remove-AzSqlVMGroup -ResourceGroupName "<resource group name>" -Name "<cluster name>"
 ```
 
 ---

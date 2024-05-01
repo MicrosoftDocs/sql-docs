@@ -3,7 +3,7 @@ title: "PolyBase errors and possible solutions"
 description: PolyBase reference for errors and suggested solutions.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 03/22/2021
+ms.date: 04/23/2024
 ms.service: sql
 ms.subservice: polybase
 ms.topic: conceptual
@@ -27,8 +27,32 @@ For more on monitoring and troubleshooting PolyBase, see [Monitor and troublesho
 
 For common PolyBase log file locations in Windows and Linux, see [Monitor and troubleshoot PolyBase](polybase-troubleshooting.md#log-file-locations).
 
-
 ## Error messages and possible solutions
+
+### SQL Server 2022 update failed due to invalid column name (case sensitive)
+
+This error can happen when applying SQL Server cumulative updates installation on a server with PolyBase feature installed and using case sensitive collation, the reported error upgrade message is the following:
+
+Example error message: `Error: 912, Severity: 21, State: 2. Script level upgrade for database 'master' failed because upgrade step 'polybase_database_upgrade.sql' encountered error 200, state 7, severity 25. This is a serious error condition which might interfere with regular operation and the database will be taken offline. If the error happened during upgrade of the 'master' database, it will prevent the entire SQL Server instance from starting. Examine the previous errorlog entries for errors, take the appropriate corrective actions and re-start the database so that the script upgrade steps run to completion.`
+
+**Reason:**  
+
+During the upgrade procedure SQL Server script fails successfully finish due to case sensitive values.
+
+**Solution:**
+This problem will be permanently fixed in the upcoming cumulative update.
+
+**Workaround:**
+
+1. Enable Trace Flag 902.
+1. Start SQL Server.
+1. Change the collation of the database 'DWConfiguration' from CS (case sensitive) to CI (case insensitive).
+1. Re-run the upgrade.
+1. Disable the Trace Flag 902.
+1. Restart SQL Server.
+1. Change the collation of the database 'DWConfiguration' back, from CI (case insensitive) to CS (case sensitive).
+ 
+As an alternative to the trace flags, to prevent the issue from happening before a cumulative update, check if the 'DWConfiguration' database is using a case sensitive (CS) collation. Consider changing it to case insensitive (CI) collation, apply the cumulative update, change it back to the original.
 
 ### Error: "100001;Failed to generate query plan"
 
@@ -358,6 +382,23 @@ This can happen if you have copied and pasted text into configuration files from
 **Possible Solution:**  
 Open the files in a different text editor (other than notepad) and look for these characters and eliminate them. Restart the necessary services. 
 
+### Delta table query may fail with errors 2571 and 16513
+
+**Scenario:**  
+You may encounter the following error when querying an external Delta table:
+
+```
+Msg 2571, Level 14, State 3, Line 1
+User '<user>' does not have permission to run DBCC TRACEON.
+Msg 16513, Level 16, State 0, Line 1
+Error reading external metadata.
+```
+
+**Possible Reason:**  
+This can happen because there is a `QUERYTRACEON` query hint that can be added to Delta file metadata query and that requires `sysadmin` server role to execute. 
+
+**Possible Solution:**  
+If this occurs, you can resolve the issue by globally enabling trace flag 14073 and this will prevent the query hint from being added.
 
 ## See also
 

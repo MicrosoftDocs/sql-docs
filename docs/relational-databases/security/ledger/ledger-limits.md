@@ -4,12 +4,12 @@ description: Limitations and considerations for the ledger feature
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mathoma
-ms.date: 11/14/2023
+ms.date: 11/28/2023
 ms.service: sql-database
 ms.subservice: security
 ms.custom: ignite-2023
 ms.topic: conceptual
-monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 
 # Ledger considerations and limitations
@@ -50,6 +50,7 @@ Consider the following when working with ledger.
 - Azure Synapse Link is supported but only for the ledger table, not the history table.
 - Change the digest path manually after a native restore of a database backup to an Azure SQL Managed Instance.
 - Change the digest path manually after a Managed Instance link was created to an Azure SQL Managed Instance.
+- SQL Data Sync isn't supported with ledger tables.
 
 ### Unsupported data types
 
@@ -116,7 +117,7 @@ Any changes that don't impact the underlying data of a ledger table are supporte
 
 However, any operations that might affect the format of existing data, such as changing the data type aren't supported.
 
-## Next steps
+## Related content
 
 - [Ledger overview](ledger-overview.md)
 - [Updatable ledger tables](ledger-updatable-ledger-tables.md)

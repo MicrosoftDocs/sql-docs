@@ -10,12 +10,14 @@ ms.topic: conceptual
 ---
 # The CDC Designer Console Introduction
 
+[!INCLUDE [oracle-cdc-retirement](../includes/attunity-oracle-cdc-retirement.md)]
+
   The section describes the installation procedures for the Change Data Capture Designer for Oracle by Attunity.  
   
 ## Installation  
  The section describes the installation procedures for the Change Data Capture Designer for Oracle by Attunity.  
   
- The MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL ServerÂ® 2016 are part of the SQL Server 2016 Feature Pack. Download components of the Feature Pack from the [SQL Server 2016 Feature Pack web page](https://www.microsoft.com/download/details.aspx?id=56833).  
+ The Microsoft Change Data Capture Designer and Service for Oracle by Attunity for [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] are part of the SQL Server 2016 Feature Pack. Download components of the Feature Pack from the [SQL Server 2016 Feature Pack web page](https://www.microsoft.com/download/details.aspx?id=56833).  
   
 ## Supported Windows Environments  
  The CDC Designer Console can run in the following Windows environments:  

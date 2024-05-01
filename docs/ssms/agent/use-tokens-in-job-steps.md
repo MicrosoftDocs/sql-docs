@@ -6,7 +6,7 @@ ms.author: maghan
 ms.date: 09/25/2023
 ms.service: sql
 ms.subservice: ssms
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
   - "job steps [SQL Server Agent]"
   - "security [SQL Server Agent], enabling alert job step tokens"

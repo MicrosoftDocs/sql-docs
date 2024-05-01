@@ -70,7 +70,7 @@ EXEC msdb.dbo.sysmail_delete_profile_sp
     @profile_name = 'AdventureWorks Administrator';
 ```
 
-## See also
+## Related content
 
 - [Database Mail](../database-mail/database-mail.md)
 - [Database Mail Configuration Objects](../database-mail/database-mail-configuration-objects.md)

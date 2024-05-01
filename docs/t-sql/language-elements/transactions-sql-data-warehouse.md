@@ -6,7 +6,7 @@ ms.author: wiassaf
 ms.date: 05/03/2023
 ms.service: sql
 ms.subservice: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
   - "TSQL"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = fabric"

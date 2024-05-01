@@ -81,7 +81,7 @@ The **[update_time]** column shows the last time the component was polled by the
 > [!CAUTION]  
 > Be sure to investigate the issue when a component has not been polled for 5 minutes or longer; there could be an alert that indicates an issue with the software heartbeats.  
   
-## Next steps
+## Related content
 
-[Appliance Monitoring](appliance-monitoring.md)  
-<!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
+- [Appliance Monitoring](appliance-monitoring.md)  
+- [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md)

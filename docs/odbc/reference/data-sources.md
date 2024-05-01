@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "data sources [ODBC], about data sources"
 ---
 # Data Sources
-A *data source* is simply the source of the data. It can be a file, a particular database on a DBMS, or even a live data feed. The data might be located on the same computer as the program, or on another computer somewhere on a network. For example, a data source might be an Oracle DBMS running on an OS/2® operating system, accessed by Novell® Netware; an IBM DB2 DBMS accessed through a gateway; a collection of Xbase files in a server directory; or a local Microsoft® Access database file.  
+A *data source* is simply the source of the data. It can be a file, a particular database on a DBMS, or even a live data feed. The data might be located on the same computer as the program, or on another computer somewhere on a network. For example, a data source might be an Oracle DBMS running on an OS/2&reg; operating system, accessed by Novell&reg; Netware; an IBM DB2 DBMS accessed through a gateway; a collection of Xbase files in a server directory; or a local Microsoft Access database file.  
   
  The purpose of a data source is to gather all of the technical information needed to access the data - the driver name, network address, network software, and so on - into a single place and hide it from the user. The user should be able to look at a list that includes Payroll, Inventory, and Personnel, choose Payroll from the list, and have the application connect to the payroll data, all without knowing where the payroll data resides or how the application got to it.  
   

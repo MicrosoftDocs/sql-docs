@@ -150,7 +150,7 @@ EXEC sp_cursorprepexec
 EXEC sp_cursorfetch @cursor;
 ```
 
-## See also
+## Related content
 
 - [sp_cursoropen (Transact-SQL)](sp-cursoropen-transact-sql.md)
 - [sp_cursorexecute (Transact-SQL)](sp-cursorexecute-transact-sql.md)

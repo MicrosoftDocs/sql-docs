@@ -1,8 +1,7 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
-ms.date: 11/16/2023
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 03/14/2024
 ms.topic: include
 ---
 > [!NOTE]
@@ -740,10 +739,10 @@ ms.topic: include
 | 35291 | 10 | No | Failed to acquire exclusive access to the extended recovery fork stack (error %d). If the problem persists, you might need to restart the instance of SQL Server. |
 | 35292 | 16 | No | An internal error occurred when performing an operation on extended recovery forks. This is an informational message only. No user action is required. |
 | 35293 | 16 | No | Error in retrieving extended recovery forks from the primary replica. The extended-recovery-fork stack changed while being retrieved by the secondary replica. Retry the operation. |
-| 35294 | 16 | No | Log backup for database "%.\*ls" on a secondary replica failed because a synchronization point could not be established on the primary database. Either locks could not be acquired on the primary database or the database is not operating as part of the availability replica. Check the database status in the SQL Server error log of the server instance that is hosting the current primary replica. If the primary database is participating in the availability group, retry the operation. |
+| 35294 | 16 | No | %ls backup for database "%.\*ls" on a secondary replica failed because a synchronization point could not be established on the primary database. Either locks could not be acquired on the primary database or the database is not operating as part of the availability replica. Check the database status in the SQL Server error log of the server instance that is hosting the current primary replica. If the primary database is participating in the availability group, retry the operation. |
 | 35295 | 16 | No | Log backup for database "%.\*ls" on a secondary replica failed because the last backup LSN (0x%ls) from the primary database is greater than the current local redo LSN (0x%ls). No log records need to be backed up at this time. Retry the log-backup operation later. |
 | 35296 | 16 | No | Log backup for database "%.\*ls" on secondary replica failed because the new backup information could not be committed on primary database. Check the database status in the SQL Server error log of the server instance that is hosting the current primary replica. If the primary database is participating in the availability group, retry the operation. |
-| 35297 | 10 | No | Log backup for database "%.\*ls" on secondary replica created backup files successfully but could not ensure that a backup point has been committed on the primary. This is an informational message only. Preserve this log backup along with the other log backups of this database. |
+| 35297 | 10 | No | %ls backup for database "%.\*ls" on secondary replica created backup files successfully but could not ensure that a backup point has been committed on the primary. This is an informational message only. Preserve this log backup along with the other log backups of this database. |
 | 35298 | 10 | No | The backup on the secondary database "%.\*ls" was terminated, but a terminate backup message could not be sent to the primary replica. This is an informational message only. The primary replica should detect this error and clean up its backup history accordingly. |
 | 35299 | 10 | Yes | Nonqualified transactions are being rolled back in database %.\*ls for an Always On Availability Groups state change. Estimated rollback completion: %d%%. This is an informational message only. No user action is required. |
 | 35301 | 15 | No | The statement failed because a columnstore index cannot be unique. Create the columnstore index without the UNIQUE keyword or create a unique index without the COLUMNSTORE keyword. |
@@ -1231,6 +1230,7 @@ ms.topic: include
 | 37532 | 16 | No | Ledger table '%.\*ls' cannot contain check constraints, filtered indexes and statistics or computed columns that reference columns using a multi-part identifier. |
 | 37533 | 16 | No | Computed column '%.\*ls' cannot be added to ledger table '%.\*ls'. Ledger tables do not support computed columns that use CLR functions or types. |
 | 37534 | 16 | No | Error while trying to read database information from master metadata. Transaction is not active anymore. |
+| 37535 | 16 | No | Principal name with object id '%ls' must begin with original principal name followed by a user-defined suffix to differentiate between the names. (https://aka.ms/AADUserNonUniqueDisplayName) |
 | 37536 | 16 | Yes | Internal error occurred while obtaining version information from IMDS endpoint. Substate: '%ls', status: 0x%08x. |
 | 37537 | 16 | Yes | Internal error occurred while obtaining version information from IMDS endpoint. Error code: '%ls'. Error message: '%ls'. Return code: '0x%08x'. |
 | 37538 | 16 | Yes | Internal error occurred while obtaining version information from IMDS endpoint. Return code: '0x%08x'. |
@@ -1239,6 +1239,9 @@ ms.topic: include
 | 37541 | 16 | No | Provider '%ls' is no longer supported. Please use MSOLEDBSQL provider instead. (https://go.microsoft.com/fwlink/?linkid=2206241&clcid=0x409) |
 | 37542 | 16 | Yes | The operation could not be completed because attempts to connect to Azure Key Vault (AKV) were denied by the configured Network Security Perimeter. Key vault uri: '%ls'. |
 | 37543 | 10 | No | The trust of the certificate imported could not be verified with the Certificate Authority (CA) or verified through the Internet. Most likely the host operating system where SQL Server is hosted is missing the latest root certificate updates, or access to the Internet. In case this certificate is used for authentication when partner server rotates the certificate, the authentication will fail unless the issue has been resolved on the host OS. Please ensure that the host OS has the latest root certificate updates, or access to the Internet to reach out to remote CA. Error code: 0x%lx. |
+| 37545 | 16 | No | '%ls' is not a valid object id for '%ls' or you do not have permission. |
+| 37546 | 16 | No | Can only specify object_id when creating user from external provider. |
+| 37559 | 16 | No | Object_id is not a valid option |
 | 38001 | 16 | No | Cannot find the file id %d in the database '%s'. |
 | 38002 | 16 | No | Only users having %s permission can execute this stored procedure. |
 | 39001 | 16 | No | Only SELECT statement is supported for input data query to 'sp_execute_external_script' stored procedure. |

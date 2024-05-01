@@ -3,6 +3,7 @@ title: "Configure transactional replication between Azure SQL Managed Instance a
 description: "A tutorial that configures replication between a publisher managed instance, a distributor managed instance, and a SQL Server subscriber on an Azure VM, along with necessary networking components such as private DNS zone and VNet peering."
 author: sasapopo
 ms.author: sasapopo
+ms.reviewer: mathoma
 ms.date: 11/16/2022
 ms.service: sql-managed-instance
 ms.subservice: security
@@ -29,7 +30,7 @@ This tutorial is intended for an experienced audience and assumes that the user 
 
 
 > [!NOTE]
-> This article describes the use of [transactional replication](/sql/relational-databases/replication/transactional/transactional-replication) in Azure SQL Managed Instance. It is unrelated to [failover groups](auto-failover-group-sql-mi.md), an Azure SQL Managed Instance feature that allows you to create complete readable replicas of individual instances. There are additional considerations when configuring [transactional replication with failover groups](replication-transactional-overview.md#with-failover-groups).
+> This article describes the use of [transactional replication](/sql/relational-databases/replication/transactional/transactional-replication) in Azure SQL Managed Instance. It is unrelated to [failover groups](failover-group-sql-mi.md), an Azure SQL Managed Instance feature that allows you to create complete readable replicas of individual instances. There are additional considerations when configuring [transactional replication with failover groups](replication-transactional-overview.md#with-failover-groups).
 
 ## Prerequisites
 

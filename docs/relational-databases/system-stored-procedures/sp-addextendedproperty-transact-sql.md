@@ -4,7 +4,7 @@ description: Adds a new extended property to a database object.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 08/30/2023
+ms.date: 12/27/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -146,7 +146,7 @@ Extended properties are replicated only in the initial synchronization between t
 
 ## Schema versus user
 
-We don't recommend specifying `USER` as a level-0 type when you apply an extended property to a database object, because this can cause name resolution ambiguity. For example, assume user `Mary` owns two schemas (`Mary` and `MySchema`), and these schemas both contain a table named `MyTable`. If Mary adds an extended property to table `MyTable` and specifies `@level0type = N'USER', @level0name = Mary`, it's not clear to which table the extended property is applied. To maintain backward compatibility, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] applies the property to the table that is contained in the schema named `Mary`.
+We don't recommend specifying `USER` as a level-0 type when you apply an extended property to a database object, because this can cause name resolution ambiguity. For example, assume user `Mary` owns two schemas (`Mary` and `MySchema`), and these schemas both contain a table named `MyTable`. If Mary adds an extended property to table `MyTable` and specifies `@level0type = 'USER', @level0name = N'Mary'`, it isn't clear to which table the extended property is applied. To maintain backward compatibility, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] applies the property to the table that is contained in the schema named `Mary`.
 
 ## Permissions
 
@@ -179,9 +179,9 @@ GO
 
 EXEC sp_addextendedproperty @name = N'Caption',
     @value = 'Postal code is a required column.',
-    @level0type = N'Schema', @level0name = 'Person',
-    @level1type = N'Table', @level1name = 'Address',
-    @level2type = N'Column', @level2name = 'PostalCode';
+    @level0type = 'SCHEMA', @level0name = N'Person',
+    @level1type = 'TABLE', @level1name = N'Address',
+    @level2type = 'COLUMN', @level2name = N'PostalCode';
 GO
 ```
 
@@ -195,9 +195,9 @@ GO
 
 EXEC sp_addextendedproperty @name = N'Input Mask ',
     @value = '99999 or 99999-9999 or #### ###',
-    @level0type = N'Schema', @level0name = 'Person',
-    @level1type = N'Table', @level1name = 'Address',
-    @level2type = N'Column', @level2name = 'PostalCode';
+    @level0type = 'SCHEMA', @level0name = N'Person',
+    @level1type = 'TABLE', @level1name = N'Address',
+    @level2type = 'COLUMN', @level2name = N'PostalCode';
 GO
 ```
 
@@ -211,7 +211,7 @@ GO
 
 EXEC sys.sp_addextendedproperty @name = N'MS_DescriptionExample',
     @value = N'Primary filegroup for the AdventureWorks2022 sample database.',
-    @level0type = N'FILEGROUP', @level0name = 'PRIMARY';
+    @level0type = 'FILEGROUP', @level0name = N'PRIMARY';
 GO
 ```
 
@@ -225,7 +225,7 @@ GO
 
 EXEC sys.sp_addextendedproperty @name = N'MS_DescriptionExample',
     @value = N'Contains objects related to employees and departments.',
-    @level0type = N'SCHEMA', @level0name = 'HumanResources';
+    @level0type = 'SCHEMA', @level0name = N'HumanResources';
 ```
 
 ### F. Add an extended property to a table
@@ -238,8 +238,8 @@ GO
 
 EXEC sys.sp_addextendedproperty @name = N'MS_DescriptionExample',
     @value = N'Street address information for customers, employees, and vendors.',
-    @level0type = N'SCHEMA', @level0name = 'Person',
-    @level1type = N'TABLE', @level1name = 'Address';
+    @level0type = 'SCHEMA', @level0name = N'Person',
+    @level1type = 'TABLE', @level1name = N'Address';
 GO
 ```
 
@@ -257,7 +257,7 @@ GO
 
 EXEC sys.sp_addextendedproperty @name = N'MS_Description',
     @value = N'Application Role for the Purchasing Department.',
-    @level0type = N'USER', @level0name = 'Buyers';
+    @level0type = 'USER', @level0name = N'Buyers';
 ```
 
 ### H. Add an extended property to a type
@@ -270,8 +270,8 @@ GO
 
 EXEC sys.sp_addextendedproperty @name = N'MS_Description',
     @value = N'Data type (alias) to use for any column that represents an order number. For example a sales order number or purchase order number.',
-    @level0type = N'SCHEMA', @level0name = N'dbo',
-    @level1type = N'TYPE', @level1name = N'OrderNumber';
+    @level0type = 'SCHEMA', @level0name = N'dbo',
+    @level1type = 'TYPE', @level1name = N'OrderNumber';
 ```
 
 ### I. Add an extended property to a user
@@ -287,10 +287,10 @@ GO
 
 EXEC sys.sp_addextendedproperty @name = N'MS_Description',
     @value = N'User for an application.',
-    @level0type = N'USER', @level0name = N'CustomApp';
+    @level0type = 'USER', @level0name = N'CustomApp';
 ```
 
-## See also
+## Related content
 
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
 - [sys.fn_listextendedproperty (Transact-SQL)](../system-functions/sys-fn-listextendedproperty-transact-sql.md)

@@ -11,7 +11,7 @@ keywords:
   - feature
   - selection
   - count
-ms.devlang: Python
+ms.devlang: python
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---
 # *microsoftml.count_select*: Feature selection based on counts

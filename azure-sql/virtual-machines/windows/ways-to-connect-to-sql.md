@@ -121,7 +121,7 @@ The following table lists the requirements to connect to SQL Server on Azure VM.
 
 ## Connect to a SQL Server on Azure VM using Microsoft Entra ID
 
-[Enable authentication](configure-azure-ad-authentication-for-sql-vm.md) with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) for your SQL Server on Azure Virtual Machines via the Azure portal. SQL Server with Microsoft Entra authentication is only supported on [!INCLUDE [sssql22-md](../../../docs/includes/sssql22-md.md)] and later versions.
+[Enable authentication](configure-azure-ad-authentication-for-sql-vm.md) with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) for your SQL Server on Azure Virtual Machines via the Azure portal. SQL Server with Microsoft Entra authentication is only supported on [!INCLUDE [sssql22-md](../../../docs/includes/sssql22-md.md)] and later versions.
 
 ## Next steps
 

@@ -3,7 +3,7 @@ title: "CREATE QUEUE (Transact-SQL)"
 description: CREATE QUEUE (Transact-SQL)
 author: markingmyname
 ms.author: maghan
-ms.date: "10/21/2021"
+ms.date: 04/05/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -27,7 +27,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-Creates a new queue in a database. Queues store messages. When a message arrives for a service, [!INCLUDE[ssSB](../../includes/sssb-md.md)] puts the message on the queue associated with the service.
+Creates a new queue in a database. Queues store messages. When a message arrives for a service, [!INCLUDE [ssSB](../../includes/sssb-md.md)] puts the message on the queue associated with the service.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -58,7 +58,7 @@ CREATE QUEUE <object>
 
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
@@ -69,7 +69,7 @@ Is the name of the database within which to create the new queue. *database_name
 Is the name of the schema to which the new queue belongs. The schema defaults to the default schema for the user that executes the statement. If the CREATE QUEUE statement is executed by a member of the sysadmin fixed server role, or a member of the db_dbowner or db_ddladmin fixed database roles in the database specified by *database_name*, *schema_name* can specify a schema other than the one associated with the login of the current connection. Otherwise, *schema_name* must be the default schema for the user who executes the statement.
 
 #### *queue_name*
-Is the name of the queue to create. This name must meet the guidelines for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifiers.
+Is the name of the queue to create. This name must meet the guidelines for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] identifiers.
 
 #### STATUS (Queue)
 Specifies whether the queue is available (ON) or unavailable (OFF). When the queue is unavailable, no messages can be added to the queue or removed from the queue. You can create the queue in an unavailable state to keep messages from arriving on the queue until the queue is made available with an ALTER QUEUE statement. If this clause is omitted, the default is ON, and the queue is available.
@@ -84,10 +84,10 @@ Specifies the retention setting for the queue. If RETENTION = ON, all messages s
 Specifies information about which stored procedure you have to start to process messages in this queue.
 
 #### STATUS (Activation)
-Specifies whether [!INCLUDE[ssSB](../../includes/sssb-md.md)] starts the stored procedure. When STATUS = ON, the queue starts the stored procedure specified with PROCEDURE_NAME when the number of procedures currently running is less than MAX_QUEUE_READERS and when messages arrive on the queue faster than the stored procedures receive messages. When STATUS = OFF, the queue does not start the stored procedure. If this clause is not specified, the default is ON.
+Specifies whether [!INCLUDE [ssSB](../../includes/sssb-md.md)] starts the stored procedure. When STATUS = ON, the queue starts the stored procedure specified with PROCEDURE_NAME when the number of procedures currently running is less than MAX_QUEUE_READERS and when messages arrive on the queue faster than the stored procedures receive messages. When STATUS = OFF, the queue does not start the stored procedure. If this clause is not specified, the default is ON.
 
 #### PROCEDURE_NAME = \<procedure>
-Specifies the name of the stored procedure to start to process messages in this queue. This value must be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier.
+Specifies the name of the stored procedure to start to process messages in this queue. This value must be a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] identifier.
 
 *database_name*(procedure)
 Is the name of the database that contains the stored procedure.
@@ -102,13 +102,13 @@ Is the name of the stored procedure.
 Specifies the maximum number of instances of the activation stored procedure that the queue starts at the same time. The value of *max_readers* must be a number between **0** and **32767**.
 
 #### EXECUTE AS
-Specifies the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database user account under which the activation stored procedure runs. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be able to check the permissions for this user at the time that the queue starts the stored procedure. For a domain user, the server must be connected to the domain when the procedure is started or activation fails. For a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user, the server can always check permissions.
+Specifies the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] database user account under which the activation stored procedure runs. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] must be able to check the permissions for this user at the time that the queue starts the stored procedure. For a domain user, the server must be connected to the domain when the procedure is started or activation fails. For a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] user, the server can always check permissions.
 
 SELF
 Specifies that the stored procedure executes as the current user. (The database principal executing this CREATE QUEUE statement.)
 
 '*user_name*'
-Is the name of the user who the stored procedure executes as. The *user_name* parameter must be a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user specified as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier. The current user must have IMPERSONATE permission for the *user_name* specified.
+Is the name of the user who the stored procedure executes as. The *user_name* parameter must be a valid [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] user specified as a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] identifier. The current user must have IMPERSONATE permission for the *user_name* specified.
 
 OWNER
 Specifies that the stored procedure executes as the owner of the queue.
@@ -118,22 +118,22 @@ Specifies whether poison message handling is enabled for the queue. The default 
 
 A queue that has poison message handling set to OFF will not be disabled after five consecutive transaction rollbacks. This allows for a custom poison message handing system to be defined by the application.
 
-#### ON *filegroup |* [**DEFAULT**]
-Specifies the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] filegroup on which to create this queue. You can use the *filegroup* parameter to identify a filegroup, or use the DEFAULT identifier to use the default filegroup for the service broker database. In the context of this clause, DEFAULT is not a keyword, and must be delimited as an identifier. When no filegroup is specified, the queue uses the default filegroup for the database.
+#### ON *filegroup |* [DEFAULT]
+Specifies the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] filegroup on which to create this queue. You can use the *filegroup* parameter to identify a filegroup, or use the DEFAULT identifier to use the default filegroup for the service broker database. In the context of this clause, DEFAULT is not a keyword, and must be delimited as an identifier. When no filegroup is specified, the queue uses the default filegroup for the database.
 
 ## Remarks
 
-A queue can be the target of a SELECT statement. However, the contents of a queue can only be modified using statements that operate on [!INCLUDE[ssSB](../../includes/sssb-md.md)] conversations, such as SEND, RECEIVE, and END CONVERSATION. A queue cannot be the target of an INSERT, UPDATE, DELETE, or TRUNCATE statement.
+A queue can be the target of a SELECT statement. However, the contents of a queue can only be modified using statements that operate on [!INCLUDE [ssSB](../../includes/sssb-md.md)] conversations, such as SEND, RECEIVE, and END CONVERSATION. A queue cannot be the target of an INSERT, UPDATE, DELETE, or TRUNCATE statement.
 
 A queue might not be a temporary object. Therefore, queue names starting with **#** are not valid.
 
 Creating a queue in an inactive state lets you get the infrastructure in place for a service before allowing messages to be received on the queue.
 
-[!INCLUDE[ssSB](../../includes/sssb-md.md)] does not stop activation stored procedures when there are no messages on the queue. An activation stored procedure should exit when no messages are available on the queue for a short time.
+[!INCLUDE [ssSB](../../includes/sssb-md.md)] does not stop activation stored procedures when there are no messages on the queue. An activation stored procedure should exit when no messages are available on the queue for a short time.
 
-Permissions for the activation stored procedure are checked when [!INCLUDE[ssSB](../../includes/sssb-md.md)] starts the stored procedure, not when the queue is created. The CREATE QUEUE statement does not verify that the user specified in the EXECUTE AS clause has permission to execute the stored procedure specified in the PROCEDURE NAME clause.
+Permissions for the activation stored procedure are checked when [!INCLUDE [ssSB](../../includes/sssb-md.md)] starts the stored procedure, not when the queue is created. The CREATE QUEUE statement does not verify that the user specified in the EXECUTE AS clause has permission to execute the stored procedure specified in the PROCEDURE NAME clause.
 
-When a queue is unavailable, [!INCLUDE[ssSB](../../includes/sssb-md.md)] holds messages for services that use the queue in the transmission queue for the database. The `sys.transmission_queue` catalog view provides a view of the transmission queue.
+When a queue is unavailable, [!INCLUDE [ssSB](../../includes/sssb-md.md)] holds messages for services that use the queue in the transmission queue for the database. The `sys.transmission_queue` catalog view provides a view of the transmission queue.
 
 A queue is a schema-owned object. Queues appear in the `sys.objects` catalog view.
 
@@ -141,21 +141,21 @@ The following table lists the columns in a queue.
 
 |Column name|Data type|Description|
 |-----------------|---------------|-----------------|
-|status|**tinyint**|Status of the message. The RECEIVE statement returns all messages that have a status of **1**. If message retention is on, the status is then set to 0. If message retention is off, the message is deleted from the queue. Messages in the queue can contain one of the following values:<br /><br /> **0**=Retained received message<br /><br /> **1**=Ready to receive<br /><br /> **2**=Not yet complete<br /><br /> **3**=Retained sent message|
-|priority|**tinyint**|The priority level that is assigned to this message.|
-|queuing_order|**bigint**|Message order number in the queue.|
-|conversation_group_id|**uniqueidentifier**|Identifier for the conversation group that this message belongs to.|
-|conversation_handle|**uniqueidentifier**|Handle for the conversation that this message is part of.|
-|message_sequence_number|**bigint**|Sequence number of the message in the conversation.|
-|service_name|**nvarchar(512)**|Name of the service that the conversation is to.|
-|service_id|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] object identifier of the service that the conversation is to.|
-|service_contract_name|**nvarchar(256)**|Name of the contract that the conversation follows.|
-|service_contract_id|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] object identifier of the contract that the conversation follows.|
-|message_type_name|**nvarchar(256)**|Name of the message type that describes the message.|
-|message_type_id|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] object identifier of the message type that describes the message.|
-|validation|**nchar(2)**|Validation used for the message.<br /><br /> E=Empty<br /><br /> N=None<br /><br /> X=XML|
-|message_body|**varbinary(max)**|Content of the message.|
-|message_enqueue_time|**datetime**|Time when the message was enqueued.|
+| `status` |**tinyint**|Status of the message. The RECEIVE statement returns all messages that have a status of **1**. If message retention is on, the status is then set to 0. If message retention is off, the message is deleted from the queue. Messages in the queue can contain one of the following values:<br /><br /> `0`=Retained received message<br />`1`=Ready to receive<br />`2`=Not yet complete<br />`3`=Retained sent message|
+| `priority` |**tinyint**|The priority level that is assigned to this message.|
+| `queuing_order` |**bigint**|Message order number in the queue.|
+| `conversation_group_id` |**uniqueidentifier**|Identifier for the conversation group that this message belongs to.|
+| `conversation_handle` |**uniqueidentifier**|Handle for the conversation that this message is part of.|
+| `message_sequence_number` |**bigint**|Sequence number of the message in the conversation.|
+| `service_name` |**nvarchar(128)**|Name of the service that the conversation is to.|
+| `service_id` |**int**|[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] object identifier of the service that the conversation is to.|
+| `service_contract_name` |**nvarchar(128)**|Name of the contract that the conversation follows.|
+| `service_contract_id` |**int**|[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] object identifier of the contract that the conversation follows.|
+| `message_type_name` |**nvarchar(128)**|Name of the message type that describes the message.|
+| `message_type_id` |**int**|[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] object identifier of the message type that describes the message.|
+| `validation` |**nchar(2)**|Validation used for the message.<br /> `E`=Empty<br /> `N`=None<br /> `X`=XML|
+| `message_body` |**varbinary(max)**|Content of the message.|
+| `message_enqueue_time` |**datetime**|Time when the message was enqueued.|
 
 ## Permissions
 
@@ -220,10 +220,10 @@ CREATE QUEUE ExpenseQueue
     ON [DEFAULT];
 ```
 
-## Next steps
+## Related content
 
-- [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)
-- [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)
-- [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)
-- [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)
-- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
+- [ALTER QUEUE (Transact-SQL)](../../t-sql/statements/alter-queue-transact-sql.md)
+- [CREATE SERVICE (Transact-SQL)](../../t-sql/statements/create-service-transact-sql.md)
+- [DROP QUEUE (Transact-SQL)](../../t-sql/statements/drop-queue-transact-sql.md)
+- [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)
+- [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)

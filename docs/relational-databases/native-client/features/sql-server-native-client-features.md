@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, about SQL Server Native Client ODBC driver"
   - "SQLNCLI, about SQL Server Native Client"
   - "data access [SQL Server Native Client], features"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Native Client Features
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

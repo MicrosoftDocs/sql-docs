@@ -82,7 +82,7 @@ After the drivers are installed, configure the server instance.
    ```
 
    > [!IMPORTANT]
-   > The performance of the QAT_DEFLATE algorithm in terms of SOFTWARE vs. HARDWARE mode compared to MS_XPRESS varies based on several factors. The workload pressure the host system may be under during backup execution and the available memory and processing power of the Intel® QuickAssist Technology (QAT) hardware device are all factors that could impact the performance of the leveraged compression algorithm.
+   > The performance of the QAT_DEFLATE algorithm in terms of SOFTWARE vs. HARDWARE mode compared to MS_XPRESS varies based on several factors. The workload pressure the host system may be under during backup execution and the available memory and processing power of the Intel&reg; QuickAssist Technology (QAT) hardware device are all factors that could impact the performance of the leveraged compression algorithm.
 
 4. Restart the SQL Server instance. You need to restart the SQL Server instance after you run a command to `SET HARDWARE_OFFLOAD = ...`.
 

@@ -1,24 +1,25 @@
 ---
 title: Microsoft Extensibility SDK for Java
 description: Learn how you can implement a Java program for SQL Server using the Microsoft Extensibility SDK for Java.
-author: rothja
-ms.author: jroth
-ms.date: 11/05/2019
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 04/29/2024
 ms.service: sql
 ms.subservice: language-extensions
 ms.topic: conceptual
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
+monikerRange: ">=sql-server-ver15 || >=sql-server-linux-ver15"
 ---
 
 # Microsoft Extensibility SDK for Java for SQL Server
-[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE [sqlserver2019-and-later](../../includes/applies-to-version/sqlserver2019-and-later.md)]
 
 Learn how you can implement a Java program for SQL Server using the Microsoft Extensibility SDK for Java. The SDK is an interface for the Java language extension that is used to exchange data with SQL Server and to execute Java code from SQL Server.
 
-The SDK is installed as part of SQL Server 2019 Release Candidate 1 on both Windows as Linux:
+The SDK is installed as part of [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions, on both Windows and Linux:
 
-+ Default installation path on Windows: **[instance installation home directory]\MSSQL\Binn\mssql-java-lang-extension.jar**
-+ Default installation path on Linux: **/opt/mssql/lib/mssql-java-lang-extension.jar**
+- Default installation path on Windows: `<instance installation home directory>\MSSQL\Binn\mssql-java-lang-extension.jar`
+- Default installation path on Linux: `/opt/mssql/lib/mssql-java-lang-extension.jar`
 
 The code is open source and can be found on the [SQL Server Language Extensions GitHub repository](https://github.com/microsoft/sql-server-language-extensions).
 
@@ -34,18 +35,18 @@ The SDK consists of three classes.
 
 Two abstract classes that define the interface the Java extension uses to exchange data with SQL Server:
 
-- **AbstractSqlServerExtensionExecutor**
-- **AbstractSqlServerExtensionDataset**
+- `AbstractSqlServerExtensionExecutor`
+- `AbstractSqlServerExtensionDataset`
 
-The third class is a helper class, which contains an implementation of a data set object. It is an optional class you can use, which makes it easier to get started. You can also use your own implementation of such a class instead.
+The third class is a helper class, which contains an implementation of a data set object. It's an optional class you can use, which makes it easier to get started. You can also use your own implementation of such a class instead.
 
-- **PrimitiveDataset**
+- `PrimitiveDataset`
 
-Below you will find descriptions of each class in the SDK. The source code of the SDK classes is available in the [SQL Server Language Extensions GitHub repository](https://github.com/microsoft/sql-server-language-extensions/tree/master/language-extensions/java/sdk).
+In the following section, you find descriptions of each class in the SDK. The source code of the SDK classes is available in the [SQL Server Language Extensions GitHub repository](https://github.com/microsoft/sql-server-language-extensions/tree/master/language-extensions/java/sdk).
 
 ### Class: AbstractSqlServerExtensionExecutor
 
-The abstract class **AbstractSqlServerExtensionExecutor** contains the interface used to execute Java code by the Java language extension for SQL Server.
+The abstract class `AbstractSqlServerExtensionExecutor` contains the interface used to execute Java code by the Java language extension for SQL Server.
 
 Your main Java class needs to inherit from this class. Inheriting from this class means that there are certain methods in the class you need to implement in your own class.
 
@@ -59,9 +60,9 @@ At a minimum, your main class needs to implement the execute(...) method.
 
 #### Method execute
 
-The execute method is the method that is called from SQL Server via the Java language extension, to invoke Java code from SQL Server. It is a key method where you include the main operations you wish to execute from SQL Server.
+The execute method is the method that is called from SQL Server via the Java language extension, to invoke Java code from SQL Server. It's a key method where you include the main operations you wish to execute from SQL Server.
 
-To pass method arguments to Java from SQL Server, use the `@param` parameter in `sp_execute_external_script`. The method **execute** takes its arguments that way.
+To pass method arguments to Java from SQL Server, use the `@param` parameter in `sp_execute_external_script`. The method `execute` takes its arguments that way.
 
 ```java
 public AbstractSqlServerExtensionDataset execute(AbstractSqlServerExtensionDataset input, LinkedHashMap<String, Object> params)  {}
@@ -69,7 +70,7 @@ public AbstractSqlServerExtensionDataset execute(AbstractSqlServerExtensionDatas
 
 #### Method init
 
-The init method is executed after the constructor and before the execute method. Any operations that need to be performed prior to execute(...) can be done in this method.
+The *init* method is executed after the constructor, and before the *execute* method. Any operations that need to be performed before `execute(...)` can be done in this method.
 
 ```java
 public void init(String sessionId, int taskId, int numtask) {}
@@ -77,16 +78,15 @@ public void init(String sessionId, int taskId, int numtask) {}
 
 ### Class: AbstractSqlServerExtensionDataset
 
-The abstract class **AbstractSqlServerExtensionDataset** contains the interface for handling input and output data used by the Java extension.
-
+The abstract class `AbstractSqlServerExtensionDataset` contains the interface for handling input and output data used by the Java extension.
 
 ### Class: PrimitiveDataset
 
-The class **PrimitiveDataset** is an implementation of **AbstractSqlServerExtensionDataset** that stores simple types as primitives arrays.
+The class `PrimitiveDataset` is an implementation of `AbstractSqlServerExtensionDataset` that stores simple types as primitives arrays.
 
-It is provided in the SDK simply as an optional helper class. If you don't use this class, you need to implement your own class that inherits from **AbstractSqlServerExtensionDataset**.  
+`PrimitiveDataset` is provided in the SDK as an optional helper class. If you don't use this class, you need to implement your own class that inherits from `AbstractSqlServerExtensionDataset`.
 
-## Next steps
+## Related content
 
-+ [Tutorial: Search for a string using regular expressions (regex) in Java](../tutorials/search-for-string-using-regular-expressions-in-java.md)
-+ [How to call Java in SQL Server](call-java-from-sql.md)
+- [Tutorial: Search for a string using regular expressions (regex) in Java](../tutorials/search-for-string-using-regular-expressions-in-java.md)
+- [How to call the Java runtime in SQL Server Language Extensions](call-java-from-sql.md)

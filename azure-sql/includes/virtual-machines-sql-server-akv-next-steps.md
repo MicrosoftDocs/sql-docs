@@ -138,4 +138,4 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
 
 For more information on how to use these encryption features, see [Using EKM with SQL Server Encryption Features](/sql/relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server#UsesOfEKM).
 
-Note that the steps in this article assume that you already have SQL Server running on an Azure virtual machine. If not, see [Provision a SQL Server virtual machine in Azure](../virtual-machines/windows/create-sql-vm-portal.md). For other guidance on running SQL Server on Azure VMs, see [SQL Server on Azure Virtual Machines overview](../virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md).
+Note that the steps in this article assume that you already have SQL Server running on an Azure virtual machine. If not, see [Provision a SQL Server virtual machine in Azure](../virtual-machines/windows/create-sql-vm-portal.md). For other guidance on running SQL Server on Azure VMs, see [Overview of SQL Server on Azure Windows Virtual Machines](../virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md).

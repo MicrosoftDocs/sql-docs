@@ -109,13 +109,10 @@ INNER JOIN sys.query_store_replicas AS qsr
 WHERE qsr.replica_name = 'yourSecondaryReplicaName';
 ```
 
-## Next steps
-
-Learn more about related concepts in the following articles:
+## Related content
 
 - [sys.query_store_plan_forcing_locations (Transact-SQL)](../system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md)
 - [sys.query_store_replicas (Transact-SQL)](../system-catalog-views/sys-query-store-replicas.md)
-- [sys.query_store_plan_forcing_locations (Transact-SQL)](../system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md)
 - [sp_query_store_remove_plan (Transact-SQL)](sp-query-store-remove-plan-transact-sql.md)
 - [sp_query_store_remove_query (Transact-SQL)](sp-query-store-remove-query-transact-sql.md)
 - [sp_query_store_unforce_plan (Transact-SQL)](sp-query-store-unforce-plan-transact-sql.md)

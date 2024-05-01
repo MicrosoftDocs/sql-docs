@@ -114,7 +114,7 @@ Reorganizing an index is less resource intensive than rebuilding an index. For t
 - When using [columnstore indexes](columnstore-indexes-overview.md), the delta store may end up with multiple small row groups after inserting, updating, and deleting data over time. Reorganizing a columnstore index forces delta store row groups into compressed row groups in columnstore, and combines smaller compressed row groups into larger row groups. The reorganize operation also physically removes rows that have been marked as deleted in the columnstore. Reorganizing a columnstore index may require additional CPU resources to compress data, which may slow the overall system performance while the operation is running. However, once data is compressed, query performance improves. For syntax examples, see [Examples - Columnstore reorganize](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes).
 
 > [!NOTE]
-> <a name="bckmergetsk"></a> Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)], the tuple-mover is helped by a background merge task that automatically compresses smaller open delta rowgroups that have existed for some time as determined by an internal threshold, or merges compressed rowgroups from where a large number of rows has been deleted. This improves the columnstore index quality over time. For most cases this dismisses the need for issuing `ALTER INDEX ... REORGANIZE` commands.
+> <a name="bckmergetsk"></a> Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE[ssazuremi](../../includes/ssazuremi-md.md)], the tuple-mover is helped by a background merge task that automatically compresses smaller open delta rowgroups that have existed for some time as determined by an internal threshold, or merges compressed rowgroups from where a large number of rows has been deleted. This improves the columnstore index quality over time. For most cases this dismisses the need for issuing `ALTER INDEX ... REORGANIZE` commands.
 
 > [!TIP]
 > If you cancel a reorganize operation, or if it is otherwise interrupted, the progress it made to that point is persisted in the database. To reorganize large indexes, the operation can be started and stopped multiple times until it completes.
@@ -237,18 +237,18 @@ Microsoft recommends that customers consider and adopt the following index maint
 - Establishing a correlation between fragmentation/page density and performance also lets you determine the frequency of index maintenance. Do not assume that maintenance must be performed on a fixed schedule. A better strategy is to monitor fragmentation and page density, and run index maintenance as needed before performance degrades unacceptably.
 - If you have determined that index maintenance is needed and its resource cost is acceptable, perform maintenance during low resource usage times, if any, keeping in mind that resource usage patterns may change over time.
 
-### Index maintenance in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssSDSmifull](../../includes/ssSDSmifull-md.md)]
+### Index maintenance in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuremi](../../includes/ssazuremi-md.md)]
 
-In addition to the above considerations and strategy, in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssSDSmifull](../../includes/ssSDSmifull-md.md)] it is particularly important to consider the costs and benefits of index maintenance. Customers should perform it only when there is a demonstrated need, and taking into account the following points.
+In addition to the above considerations and strategy, in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuremi](../../includes/ssazuremi-md.md)] it is particularly important to consider the costs and benefits of index maintenance. Customers should perform it only when there is a demonstrated need, and taking into account the following points.
 
-- [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssSDSmifull](../../includes/ssSDSmifull-md.md)] implement [resource governance](/azure/azure-sql/database/resource-limits-logical-server#resource-governance) to set bounds on CPU, memory, and I/O consumption according to the provisioned pricing tier. These bounds apply to all user workloads, including index maintenance. If cumulative resource consumption by all workloads approaches resource bounds, the rebuild or reorganize operation may degrade performance of other workloads due to resource contention. For example, bulk data loads may become slower because transaction log I/O is at 100% due to a concurrent index rebuild. In [!INCLUDE[ssSDSmifull](../../includes/ssSDSmifull-md.md)], this impact can be reduced by running index maintenance in a separate Resource Governor workload group with restricted resource allocation, at the expense of extending index maintenance duration.
+- [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuremi](../../includes/ssazuremi-md.md)] implement [resource governance](/azure/azure-sql/database/resource-limits-logical-server#resource-governance) to set bounds on CPU, memory, and I/O consumption according to the provisioned pricing tier. These bounds apply to all user workloads, including index maintenance. If cumulative resource consumption by all workloads approaches resource bounds, the rebuild or reorganize operation may degrade performance of other workloads due to resource contention. For example, bulk data loads may become slower because transaction log I/O is at 100% due to a concurrent index rebuild. In [!INCLUDE[ssazuremi](../../includes/ssazuremi-md.md)], this impact can be reduced by running index maintenance in a separate Resource Governor workload group with restricted resource allocation, at the expense of extending index maintenance duration.
 - For cost savings, customers often provision databases, elastic pools, and managed instances with minimal resource headroom. The pricing tier is chosen to be sufficient for application workloads. To accommodate a significant increase in resource usage due to index maintenance without degrading application performance, customers may have to provision more resources and increase costs, without necessarily improving application performance.
 - In elastic pools, resources are shared across all databases in a pool. Even if a particular database is idle, performing index maintenance on that database may impact application workloads running concurrently in other databases in the same pool. For more information, see [Resource management in dense elastic pools](/azure/azure-sql/database/elastic-pool-resource-management).
-- For most types of storage used in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssSDSmifull](../../includes/ssSDSmifull-md.md)], there is no difference in performance between sequential I/O and random I/O. This reduces the impact of index fragmentation on query performance.
+- For most types of storage used in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuremi](../../includes/ssazuremi-md.md)], there is no difference in performance between sequential I/O and random I/O. This reduces the impact of index fragmentation on query performance.
 - When using either [Read Scale-out](/azure/azure-sql/database/read-scale-out) or [Geo-replication](/azure/azure-sql/database/active-geo-replication-overview) replicas, data latency on replicas often increases while index maintenance is being performed on the primary replica. If a geo-replica is provisioned with insufficient resources to sustain an increase in transaction log generation caused by index maintenance, it may lag far behind the primary, causing the system to reseed it. That makes the replica unavailable until reseeding is complete. Additionally, in Premium and Business Critical service tiers, replicas used for high availability may similarly get far behind the primary during index maintenance. If a failover is required during or soon after index maintenance, it can take longer than expected.
 - If an index rebuild runs on the primary replica, and a long-running query executes on a readable replica at the same time, the query may get automatically terminated to prevent blocking the redo thread on the replica.
 
-There are specific but uncommon scenarios when one-time or periodic index maintenance may be needed in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssSDSmifull](../../includes/ssSDSmifull-md.md)]:
+There are specific but uncommon scenarios when one-time or periodic index maintenance may be needed in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuremi](../../includes/ssazuremi-md.md)]:
 
 - Index maintenance may be required to increase page density and reduce used space in the database, and thus stay within the size limit of the pricing tier. This avoids having to scale up to a higher pricing tier with a higher size limit.
 - If it becomes necessary to shrink files, rebuilding or reorganizing indexes before shrinking files will increase page density. This makes the shrink operation faster, because it will need to move fewer pages. For more information, visit:
@@ -257,7 +257,7 @@ There are specific but uncommon scenarios when one-time or periodic index mainte
 
 
 > [!TIP]
-> If you have determined that index maintenance is necessary for your [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssSDSmifull](../../includes/ssSDSmifull-md.md)] workloads, you should either reorganize indexes, or use online index rebuild. This lets query workloads access tables while indexes are being rebuilt.
+> If you have determined that index maintenance is necessary for your [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuremi](../../includes/ssazuremi-md.md)] workloads, you should either reorganize indexes, or use online index rebuild. This lets query workloads access tables while indexes are being rebuilt.
 >
 > Additionally, making the operation resumable lets you avoid restarting it from the beginning if it gets interrupted by a planned or unplanned database failover. Using resumable index operations is particularly important when indexes are large.
 
@@ -417,13 +417,13 @@ ALTER INDEX ALL ON HumanResources.Employee
 
 The following example rebuilds a single index on the `Employee` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
-[!code-sql[IndexDDL#AlterIndex1](../../relational-databases/indexes/codesnippet/tsql/reorganize-and-rebuild-i_1.sql)]
+:::code language="sql" source="codesnippet/tsql/reorganize-and-rebuild-i_1.sql":::
 
 #### Rebuild all indexes in a table
 
 The following example rebuilds all indexes associated with the table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database using the `ALL` keyword. Three options are specified.
 
-[!code-sql[IndexDDL#AlterIndex2](../../relational-databases/indexes/codesnippet/tsql/reorganize-and-rebuild-i_2.sql)]
+:::code language="sql" source="codesnippet/tsql/reorganize-and-rebuild-i_2.sql":::
 
 For more information, see [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md).
 

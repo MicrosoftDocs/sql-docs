@@ -1138,8 +1138,8 @@ Enables or disables Stretch Database for the database. For more info, see [Stret
     You can use a federated service account for the on-premises SQL Server to communicate with the remote Azure server when the following conditions are all true.
 
     - The service account under which the instance of SQL Server is running is a domain account.
-    - The domain account belongs to a domain whose Active Directory is federated with Azure Active Directory.
-    - The remote Azure server is configured to support Azure Active Directory authentication.
+    - The domain account belongs to a domain whose Active Directory is federated with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)).
+    - The remote Azure server is configured to support Microsoft Entra authentication.
     - The service account under which the instance of SQL Server is running must be configured as a `dbmanager` or `sysadmin` account on the remote Azure server.
 
     If you specify that the federated service account is ON, you can't also specify the CREDENTIAL argument. Provide the CREDENTIAL argument if you specify OFF.
@@ -2218,7 +2218,7 @@ Describes the operation mode of the Query Store. Valid values are READ_ONLY and 
 
 #### CLEANUP_POLICY
 
-Describes the data retention policy of the Query Store. STALE_QUERY_THRESHOLD_DAYS determines the number of days for which the information for a query is kept in the Query Store. STALE_QUERY_THRESHOLD_DAYS is type **bigint**. The default value is 30. For [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic edition, default is **7** days.
+Describes the data retention policy of the Query Store. STALE_QUERY_THRESHOLD_DAYS determines the number of days for which the information for a query is kept in the Query Store. STALE_QUERY_THRESHOLD_DAYS is type **bigint**. The default value is 30. For [!INCLUDE[sssds](../../includes/sssds-md.md)] Basic edition, default is **7** days.
 
 #### DATA_FLUSH_INTERVAL_SECONDS
 
@@ -3193,7 +3193,7 @@ Describes the operation mode of the Query Store. Valid values are READ_ONLY and 
 
 #### CLEANUP_POLICY
 
-Describes the data retention policy of the Query Store. STALE_QUERY_THRESHOLD_DAYS determines the number of days for which the information for a query is kept in the Query Store. STALE_QUERY_THRESHOLD_DAYS is type **bigint**. The default value is 30. For [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic edition, default is **7** days.
+Describes the data retention policy of the Query Store. STALE_QUERY_THRESHOLD_DAYS determines the number of days for which the information for a query is kept in the Query Store. STALE_QUERY_THRESHOLD_DAYS is type **bigint**. The default value is 30. For [!INCLUDE[sssds](../../includes/sssds-md.md)] Basic edition, default is **7** days.
 
 #### DATA_FLUSH_INTERVAL_SECONDS
 
@@ -3212,7 +3212,7 @@ Once enough space has been cleared, the Query Store mode will automatically swit
 > [!IMPORTANT]  
 > - If you think that your workload capture will need more than 10 GB of disk space, you should probably rethink and optimize your workload to reuse query plans (for example using [forced parameterization](../../relational-databases/query-processing-architecture-guide.md#forced-parameterization), or adjust the Query Store configurations.
 > - Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you can set `QUERY_CAPTURE_MODE` to CUSTOM for additional control over the query capture policy.
-> - `MAX_STORAGE_SIZE_MB` setting limit is 10,240 MB on [!INCLUDE[sssdsmifull](../../includes/sssdsmifull-md.md)]. 
+> - `MAX_STORAGE_SIZE_MB` setting limit is 10,240 MB on [!INCLUDE[ssazuremi](../../includes/ssazuremi-md.md)]. 
 
 #### INTERVAL_LENGTH_MINUTES
 

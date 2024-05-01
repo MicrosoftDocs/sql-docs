@@ -13,7 +13,7 @@ ms.custom:
 ---
 # SQL Server Migration Assistant
 
-Microsoft SQL Server Migration Assistant (SSMA) is a tool designed to automate database migration to SQL Server from Microsoft Access, DB2, MySQL, Oracle, and SAP ASE.
+Microsoft SQL Server Migration Assistant (SSMA) is a tool designed to automate database migration to SQL Server, Azure SQL Database, Azure SQL Managed Instance and Azure Synapse Analytics from Microsoft Access, DB2, MySQL, Oracle, and SAP ASE.
 
 ## Migration sources
 
@@ -36,7 +36,7 @@ The following target versions are supported for SSMA.
 - [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on Windows and Linux
 - [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Windows and Linux
 - [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)]
-- [!INCLUDE [ssazuremi_md](../includes/ssazuremi_md.md)]
+- [!INCLUDE [ssazuremi-md](../includes/ssazuremi-md.md)]
 - [!INCLUDE [ssazuresynapse-md](../includes/ssazuresynapse-md.md)] <sup>1</sup>
 
 <sup>1</sup> This target is supported only by SSMA for Oracle.
@@ -71,7 +71,7 @@ The primary purpose of a sample contained within this documentation is to illust
 
 Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, person, place, or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this documentation may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
 
-Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this documentation. Except as expressly provided in any written license agreement from Microsoft, the furnishing of this documentation does not give you any license to these patents, trademarks, copyrights, or other intellectual property.
+Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this documentation. Except as expressly provided in any written license agreement from Microsoft, the furnishing of this documentation doesn't give you any license to these patents, trademarks, copyrights, or other intellectual property.
 
 &copy; 2019 Microsoft Corporation. All rights reserved.
 
@@ -85,8 +85,8 @@ All other trademarks are property of their respective owners.
 
 Content that appears in SQL Server documentation is published only after it has been tested sufficiently. Product documentation - SQL Docs, readme files, known issues documents, and Knowledge Base articles - contains content regarding SQL Server features and functionality that is robust enough to be safe for general use by all customers. This policy applies to all SQL Server documentation, including readme files for releases and services packs; a readme file is considered an extension of Books Online.
 
-In some cases, a particular feature is not something that customers should use directly and, therefore, it is not documented. Unless a feature is also discussed in SQL Server documentation published by Microsoft, content from third-party books or Web sites is not supported by Microsoft customer support, and should not be used in production databases or applications.
+In some cases, a particular feature isn't something that customers should use directly and, therefore, it isn't documented. Unless a feature is also discussed in SQL Server documentation published by Microsoft, content from third-party books or Web sites isn't supported by Microsoft customer support, and shouldn't be used in production databases or applications.
 
-Customers must not use undocumented APIs, including but not limited to: stored procedures, extended stored procedures, functions, views, tables, columns, properties, or metadata. Microsoft customer support does not support databases or applications that use or use undocumented entry points.
+Customers must not use undocumented APIs, including but not limited to: stored procedures, extended stored procedures, functions, views, tables, columns, properties, or metadata. Microsoft customer support doesn't support databases or applications that use or use undocumented entry points.
 
-Server and database upgrades to future versions of SQL Server are not guaranteed for applications and databases that use and use undocumented entry points. Use of SQL Server features and functionality must be limited to those that are included in Microsoft SQL Server documentation. If a feature is not documented in Microsoft SQL Server documentation, it is not a supported part of SQL Server.
+Server and database upgrades to future versions of SQL Server aren't guaranteed for applications and databases that use and use undocumented entry points. Use of SQL Server features and functionality must be limited to those that are included in Microsoft SQL Server documentation. If a feature isn't documented in Microsoft SQL Server documentation, it isn't a supported part of SQL Server.

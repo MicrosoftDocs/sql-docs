@@ -61,6 +61,6 @@ This section describes the extended stored procedures that are related to Stretc
 
   Tests the connection from SQL Server to the remote Azure server and reports problems that may prevent data migration.
 
-## See also
+## Related content
 
 - [Stretch Database](../../sql-server/stretch-database/stretch-database.md)

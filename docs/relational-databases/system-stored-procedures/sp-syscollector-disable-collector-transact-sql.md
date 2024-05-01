@@ -56,7 +56,7 @@ The following example disables the data collector.
 EXEC dbo.sp_syscollector_disable_collector;
 ```
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Data collection](../data-collection/data-collection.md)

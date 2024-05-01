@@ -32,7 +32,7 @@ To support the deployment of these packages, you will add the following ancillar
   
 You will also add a Readme, which is a text file that provides information about the Deployment Tutorial project.  
   
-The paths used in the following procedures assume that the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] samples were installed in the default location, [!INCLUDE[ssSampPathIS](../includes/sssamppathis-md.md)]. If you installed the samples to a different location, you should use that location instead in the procedures.  
+The paths used in the following procedures assume that the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] samples were installed in the default location, `C:\\Program Files\\Microsoft SQL Server\\120\\Samples\\Integration Services\\`. If you installed the samples to a different location, you should use that location instead in the procedures.  
   
 In the next task, you will add configurations to the DataTransfer and LoadXMLData packages. All configurations are stored in XML files, and you will use a system environment variable to specify the location of the files. After you create the configuration files, you will add them to the project.  
   

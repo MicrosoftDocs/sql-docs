@@ -3,7 +3,7 @@ title: CREATE STATISTICS (Transact-SQL)
 description: CREATE STATISTICS (Transact-SQL)
 author: markingmyname
 ms.author: maghan
-ms.reviewer: katsmith, wiassaf
+ms.reviewer: derekw, wiassaf
 ms.date: 07/26/2023
 ms.service: sql
 ms.subservice: t-sql
@@ -173,7 +173,7 @@ Compute statistics by scanning all rows. FULLSCAN and SAMPLE 100 PERCENT have th
 
 When omitted, SQL Server uses sampling to create the statistics, and determines the sample size that is required to create a high quality query plan.
 
-In [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], only single-column FULLSCAN and single-column SAMPLE-based statistics are supported. When no option is included, FULLSCAN statistics are created.
+In [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], only single-column FULLSCAN and single-column SAMPLE-based statistics are supported. When no option is included, SAMPLE statistics are created.
 
 #### SAMPLE number { PERCENT | ROWS }
 Specifies the approximate percentage or number of rows in the table or indexed view for the query optimizer to use when it creates statistics. For PERCENT, *number* can be from 0 through 100 and for ROWS, *number* can be from 0 to the total number of rows. The actual percentage or number of rows the query optimizer samples might not match the percentage or number specified. For example, the query optimizer scans all rows on a data page.
@@ -246,7 +246,7 @@ Uses the actual number of processors or fewer based on the current system worklo
 
 #### AUTO_DROP = { ON | OFF }
 
-**Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], and starting with [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)]
+**Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], and starting with [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)]
 
 Prior to [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], if statistics are manually created by a user or third party tool on a user database, those statistics objects can block or interfere with schema changes the customer may desire.
 

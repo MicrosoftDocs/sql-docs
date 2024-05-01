@@ -3,7 +3,7 @@ title: "SSIS Catalog"
 description: "SSIS Catalog"
 author: chugugrace
 ms.author: chugu
-ms.date: 09/17/2020
+ms.date: 03/29/2024
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual
@@ -11,6 +11,20 @@ f1_keywords:
   - "sql13.ssis.ssms.iscreatecatalog.f1"
   - "sql13.ssis.ssms.iscatalogprop.general.f1"
   - "sql13.ssis.dbupgradewizard.f1"
+  - "sql13.ssis.ssms.browseprincipals.f1"
+  - "sql13.dts.designer.configure.f1"
+  - "sql13.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1"
+  - "sql13.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1"
+  - "sql13.ssis.ssms.isfolderprop.permissions.f1"
+  - "sql13.ssis.ssms.iscreatefolder.f1"
+  - "sql13.ssis.ssms.isfolderprop.general.f1"
+  - "sql13.ssis.ssms.ispackageprop.general.f1"
+  - "sql13.ssis.ssms.packageproperties.f1"
+  - "sql13.ssis.ssms.isprojectprop.general.f1"
+  - "sql13.ssis.ssms.isprojectprop.permissions.f1"
+  - "sql13.ssis.ssms.isprojectprop.versions.f1"
+  - "sql13.ssis.ssms.isprojectvalidate.f1"
+  - "sql13.ssis.ssms.ispackagevalidate.f1"
 ---
 
 # SSIS Catalog
@@ -557,6 +571,9 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   The Always On Availability Groups feature is a high-availability and disaster-recovery solution that provides an enterprise-level alternative to database mirroring. An availability group supports a failover environment for a discrete set of user databases, known as availability databases, that fail over together. For more information,  see [Always On Availability Groups](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
  In order to provide the high-availability for the SSIS catalog (SSISDB) and its contents (projects, packages, execution logs, etc.), you can add the SSISDB database (just the same as any other user database) to an Always On Availability Group. When a failover occurs, one of the secondary nodes automatically becomes the new primary node.  
+
+ > [!NOTE]
+ > Contained availability groups, which were introduced in SQL Server 2022, are not supported yet. 
  
  > [!IMPORTANT]
  > When a failover occurs, packages that were running do not restart or resume. 

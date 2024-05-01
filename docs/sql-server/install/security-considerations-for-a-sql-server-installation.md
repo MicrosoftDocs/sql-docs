@@ -47,7 +47,7 @@ helpviewer_keywords:
 
 - Place computers that host a database in a physically protected location, ideally a locked computer room with monitored flood detection and fire detection or suppression systems. 
 
-- Install databases in the secure zone of the corporate intranet and do not connect your SQL Servers directly to the Internet.  
+- Install databases in the secure zone of the corporate intranet and do not connect your SQL Server instances directly to the Internet.  
 
 - Back up all data regularly and secure the backups in an off-site location.  
   

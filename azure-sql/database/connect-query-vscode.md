@@ -6,7 +6,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: wiassaf, mathoma, randolphwest
 ms.date: 09/27/2023
-ms.service: sql-database
+ms.service: sql-db-mi
 ms.subservice: connect
 ms.topic: quickstart
 ms.custom:
@@ -14,7 +14,7 @@ ms.custom:
 keywords: connect to sql database
 monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 ---
-# Quickstart: Use Visual Studio Code to connect and query
+# Quickstart: Use Visual Studio Code to connect and query Azure SQL Database or Azure SQL Managed Instance
 
 [!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 

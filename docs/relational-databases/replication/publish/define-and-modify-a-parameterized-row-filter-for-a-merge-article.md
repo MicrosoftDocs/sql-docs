@@ -6,7 +6,7 @@ ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: replication
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 helpviewer_keywords:
   - "parameterized filters [SQL Server replication], defining"
@@ -126,7 +126,7 @@ helpviewer_keywords:
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This example defines a group of articles in a merge publication where the articles are filtered with a series of join filters against the `Employee` table that is itself filtered using a parameterized row filter on the **LoginID** column. During synchronization, the value returned by the [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md) function is overridden. For more information, see Overriding the HOST_NAME() Value in the topic [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
- [!code-sql[HowTo#sp_MergeDynamicPub1](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-para_1.sql)]  
+ :::code language="sql" source="../codesnippet/tsql/define-and-modify-a-para_1.sql":::
   
 ## See Also  
  [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   

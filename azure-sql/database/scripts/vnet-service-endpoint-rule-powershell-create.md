@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.custom:
   - sqldbrb=1
   - devx-track-azurepowershell
-ms.devlang: PowerShell
+ms.devlang: powershell
 tags: azure-synapse
 ---
 # PowerShell: Create a Virtual Service endpoint and VNet rule for Azure SQL Database

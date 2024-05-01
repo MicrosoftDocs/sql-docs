@@ -1,5 +1,5 @@
 ---
-title: "Lesson 8: Create a Data Filter"
+title: "Lesson 8: Create a data filter"
 description: Learn to create a data filter for the data table that you defined for the child report. Create a table-based filter or a query filter for the drillthrough report.
 author: maggiesMSFT
 ms.author: maggies
@@ -9,12 +9,12 @@ ms.subservice: reporting-services
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
-# Lesson 8: Create a Data Filter
+# Lesson 8: Create a data filter
 After you add a drillthrough action on the parent report, your next step is to create a data filter for the data table that you defined for the child report.  
   
 You can create a table-based filter **or** a query filter for the drillthrough report. This lesson provides instructions for both options.  
   
-## Table-Based Filter  
+## Table-based filter  
 You need to complete the following tasks to implement a table-based filter.  
   
 -   Add a filter expression to the tablix in the child report.  
@@ -23,41 +23,41 @@ You need to complete the following tasks to implement a table-based filter.
   
 -   Add an event handler that binds the **PurchaseOrderDetail** DataTable to the child report.  
   
-### To add a filter expression to the tablix in the child report  
+### Add a filter expression to the tablix in the child report  
   
 1.  Open the child report.  
   
-2.  Select a column heading in the tablix, right-click the gray cell that appears above the column heading, and then select **Tablix Properties**.  
+2.  Select a column heading in the tablix, right-click the gray cell that appears above the column heading, and then choose **Tablix Properties**.  
   
-3.  Select the **Filters** page, and then select **Add**.  
+3.  Select the **Filters** page, and then choose **Add**.  
   
-4.  In the **Expression** filed, select **ProductID** from the drop-down list. This is the column to which you apply the filter.  
+4.  In the **Expression** filed, select **ProductID** from the drop-down list. This column is where you apply the filter.  
   
 5.  Select the equal (**=**) operator in the **Operator** drop-down list.  
   
-6.  Select the expression button next to the **Value** field, select **Parameters** in the **Category** area, and then double-click **productid** in the **Values** area. The **Set expression for: Value** field should now contain expression similar to **=Parameters!productid.Value**.  
+6.  Select the expression button next to the **Value** field, choose **Parameters** in the **Category** area, and then double-click **productid** in the **Values** area. The **Set expression for: Value** field should now contain expression similar to **=Parameters!productid.Value**.  
   
 7.  Select **OK,** and **OK** again in the **Tablix Properties** dialog box.  
   
 8.  Save the .rdlc file.  
   
-### To create a function that selects unfiltered data from the PurchaseOrdeDetail table  
+### Create a function that selects unfiltered data from the PurchaseOrdeDetail table  
   
 1.  In Solution Explorer, expand Default.aspx, and then double-click Default.aspx.cs.  
   
-2.  Create a new function that accepts a parameter, **productid**, of type Integer and returns a **datatable** object, and does the following.  
+2.  Create a new function that accepts a parameter called **productid** of type Integer. It should return a **datatable** object and do the following:  
   
-    1.  Creates an instance of the dataset, **DataSet2**, which was created in Step 2 of [Lesson 4: Define a Data Connection and Data Table for Child Report](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Create an instance of the dataset, **DataSet2**, which was created in Step 2 of [Lesson 4: Define a data connection and data table for the child report](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
-    2.  Create a connection to the SqlServer database to execute the query defined in **Lesson 4: Define a Data Connection and DataTable for Child Report**.  
+    2.  Create a connection to the SqlServer database to execute the query defined in **Lesson 4: Define a data connection and data table for the child report**.  
   
-    3.  The query will return unfiltered data.  
+    3.  The query returns unfiltered data.  
   
     4.  Fill the DataSet instance with the unfiltered data by executing the query.  
   
     5.  Return the **PurchaseOrderDetail** DataTable.  
   
-        The function will look similar to the one below, (This is just for your reference. You can follow any pattern that you want, to fetch the necessary data for child report).  
+        The function should look similar to the following example, (This example is just for your reference. You can follow any pattern that you want, to fetch the necessary data for child report).  
   
         ```  
         /// <summary>  
@@ -93,7 +93,7 @@ You need to complete the following tasks to implement a table-based filter.
             }  
         ```  
   
-### To add an event handler that binds the PurchaseOrderDetail DataTable to the child report  
+### Add an event handler that binds the PurchaseOrderDetail DataTable to the child report  
   
 1.  Open Default.aspx in designer view.  
   
@@ -103,7 +103,7 @@ You need to complete the following tasks to implement a table-based filter.
   
 4.  Double-click the **Drillthrough** event.  
   
-    This will add an event handler section in the code, which will look similar to the below block.  
+    This action adds an event handler section in the code, which should look similar to the following block.  
   
     ```  
     protected void ReportViewer1_Drillthrough(object sender, Microsoft.Reporting.WebForms.DrillthroughEventArgs e)  
@@ -111,7 +111,7 @@ You need to complete the following tasks to implement a table-based filter.
     }  
     ```  
   
-5.  Complete the event handler. It should include the following functionalty.  
+5.  Complete the event handler. It should include the following functionality.  
   
     1.  Fetch the child report object reference from the *DrillthroughEventArgs* parameter.  
   
@@ -119,7 +119,7 @@ You need to complete the following tasks to implement a table-based filter.
   
     3.  Bind the **PurchaseOrderDetail** DataTable with the report's corresponding data source.  
   
-        The completed event handler code will look similar to the following.  
+        The completed event handler code should look similar to the following example.  
   
         ```  
         protected void ReportViewer1_Drillthrough(object sender, Microsoft.Reporting.WebForms.DrillthroughEventArgs e)  
@@ -144,30 +144,30 @@ You need to complete the following tasks to implement a table-based filter.
   
 6.  Save the file.  
   
-## Query Filter  
+## Query filter  
 You need to complete the following tasks to implement a query filter.  
   
 -   Create a function that selected filtered data from the **PurchaseOrderDetail** table.  
   
 -   Add an event handler that retrieves parameter values and binds the **PurchaseOrdeDetail** DataTable to the child report.  
   
-### To create a function that selects filtered data from the PurchaseOrderDetail table  
+### Create a function that selects filtered data from the PurchaseOrderDetail table  
   
 1.  In Solution Explorer, expand Default.aspx, and then double-click Default.aspx.cs.  
   
 2.  Create a new function that accepts a parameter, **productid**, of type Integer and returns a **datatable** object and does the following.  
   
-    1.  Creates an instance of the dataset, **DataSet2**, which was created in Step 2 of [Lesson 4: Define a Data Connection and Data Table for Child Report](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Creates an instance of the dataset, **DataSet2**, which was created in Step 2 of [Lesson 4: Define a data connection and data table for child report](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
-    2.  Create a connection to the SqlServer database to execute the query defined **Lesson 4: Define a Data Connection and DataTable for Child Report**.  
+    2.  Create a connection to the SqlServer database to execute the query defined in **Lesson 4: Define a data connection and data table for the child report**.  
   
-    3.  The query will include a parameter, **productid**, to make sure the data returned is filtered based on the **ProductID** selected in the parent report.  
+    3.  The query includes a parameter, **productid**, to make sure the data returned is filtered based on the **ProductID** selected in the parent report.  
   
     4.  Fill the DataSet instance with the filtered data by executing the query.  
   
     5.  Return the **PurchaseOrderDetail** DataTable.  
   
-        The function will look similar to the one below, (This is just for your reference. You can follow any pattern that you want, to fetch the necessary data for child report).  
+        The function should look similar to the following example, (This example is just for your reference. You can follow any pattern that you want, to fetch the necessary data for child report).  
   
         ```  
         /// <summary>  
@@ -209,7 +209,7 @@ You need to complete the following tasks to implement a query filter.
             }  
         ```  
   
-### To add an event handler that retrieves parameter values and binds the PurchaseOrdeDetail DataTable to the child report  
+### Add an event handler that retrieves parameter values and binds the PurchaseOrdeDetail DataTable to the child report  
   
 1.  Open Default.aspx in designer view.  
   
@@ -219,7 +219,7 @@ You need to complete the following tasks to implement a query filter.
   
 4.  Double-click the **Drillthrough** event.  
   
-    This will add an event handler section in the code that will look similar to the following.  
+    This action adds an event handler section in the code that should look similar to the following example.  
   
     ```  
     protected void ReportViewer1_Drillthrough(object sender, Microsoft.Reporting.WebForms.DrillthroughEventArgs e)  
@@ -239,7 +239,7 @@ You need to complete the following tasks to implement a query filter.
   
     5.  Bind the **PurchaseOrderDetail** DataTable with the Report's corresponding data source.  
   
-        The completed event handler code will look similar to the following.  
+        The completed event handler code should look similar to the following example.  
   
         ```  
         protected void ReportViewer1_Drillthrough(object sender, Microsoft.Reporting.WebForms.DrillthroughEventArgs e)  
@@ -280,8 +280,9 @@ You need to complete the following tasks to implement a query filter.
   
 6.  Save the file.  
   
-## Next Task  
-You have successfully created a data filter for the data table that you defined for the child report. Next, you will build and run the website application. See [Lesson 9: Build and Run the Application](../reporting-services/lesson-9-build-and-run-the-application.md).  
+## Next step
+
+You successfully created a data filter for the data table that you defined for the child report. Next, you build and run the website application. See [Lesson 9: Build and run the application](../reporting-services/lesson-9-build-and-run-the-application.md).  
   
   
   

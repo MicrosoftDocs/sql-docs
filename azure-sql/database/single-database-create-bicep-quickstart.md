@@ -3,6 +3,7 @@ title: "Bicep: Create a single database in Azure SQL Database"
 description: Create a single database in Azure SQL Database using Bicep.
 author: dimitri-furman
 ms.author: dfurman
+ms.reviewer: mathoma
 ms.date: 05/16/2022
 ms.service: sql-database
 ms.subservice: deployment-configuration
@@ -11,6 +12,8 @@ ms.custom: subject-armqs sqldbrb=1, mode-arm, devx-track-bicep
 ---
 
 # Quickstart: Create a single database in Azure SQL Database using Bicep
+
+[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 Creating a [single database](single-database-overview.md) is the quickest and simplest option for creating a database in Azure SQL Database. This quickstart shows you how to create a single database using Bicep.
 

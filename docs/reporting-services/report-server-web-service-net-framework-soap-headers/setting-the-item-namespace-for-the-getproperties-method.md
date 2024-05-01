@@ -1,5 +1,5 @@
 ---
-title: "Setting the Item Namespace for the GetProperties Method"
+title: "Set the item namespace for the GetProperties method"
 description: "Setting the Item Namespace for the GetProperties Method"
 author: maggiesMSFT
 ms.author: maggies
@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "ItemNamespaceHeader SOAP header"
   - "GetProperties method"
 ---
-# Setting the Item Namespace for the GetProperties Method
+# Set the item namespace for the GetProperties method
   You can use the <xref:ReportService2010.ItemNamespaceHeader> SOAP header in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] to retrieve item properties based on two different item identifiers: the full path of the item or the ID of the item.  
   
  When you make a call to the <xref:ReportService2010.ReportingService2010.GetProperties%2A> method, you normally pass as an argument the full path of the item for which you want to retrieve properties. By using <xref:ReportService2010.ItemNamespaceHeader>, you can set the SOAP header for your method call to enable you to use <xref:ReportService2010.ReportingService2010.GetProperties%2A> by passing the ID of the item as an identifier.  
@@ -111,8 +111,8 @@ class Sample
 }  
 ```  
   
-## See Also  
- [Technical Reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
- [Using Reporting Services SOAP Headers](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
+## Related content 
+ [Technical reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [Use Reporting Services SOAP headers](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
   
   

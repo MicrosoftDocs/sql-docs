@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "data access [SQL Server Native Client], system requirements"
   - "SQL Server Native Client, system requirements"
   - "SQLNCLI, system requirements"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # System Requirements for SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

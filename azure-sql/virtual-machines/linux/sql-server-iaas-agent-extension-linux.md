@@ -9,6 +9,7 @@ ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: conceptual
 tags: azure-resource-manager
+ms.custom: linux-related-content
 ---
 # SQL Server IaaS Agent extension for Linux
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]

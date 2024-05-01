@@ -156,16 +156,15 @@ The **Availability replica** pane displays the following columns:
 -   **Connected**. A remote availability replica that is currently connected to the local replica.  
   
  **Operational State**  
- Indicates the current operational state of the secondary replica. This value is hidden by default. The possible values are:  
+ Indicates the current operational state of the replica. This value is hidden by default. The possible values are:  
   
  **0**. Pending failover    
  **1**. Pending    
  **2**. Online    
  **3**. Offline   
  **4**. Failed    
- **5**. Failed, no quorum  
-  
- **NULL**. Replica is not local  
+ **5**. Failed, no quorum    
+ **NULL/Unknown**. Replica is not local    
   
  **Last Connection Error No.**  
  Number of the last connection error.  This value is hidden by default.  

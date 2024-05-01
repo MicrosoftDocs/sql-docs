@@ -27,7 +27,7 @@ The articles in this section help you upgrade the [!INCLUDE [ssdenoversion-md](.
 
 1. Upgrade the [Database Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades).
 
-   **Applies to:** [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)]
+   **Applies to:** [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]
 
    One of the steps to take after your databases are online in the new version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], may be to upgrade the databases functionality mode to enable new features, by changing the database compatibility level. This can be done manually or through the Query Tuning Assistant.
 

@@ -278,7 +278,7 @@ BETWEEN <window frame bound > AND <window frame bound >
 > If ORDER BY is not specified entire partition is used for a window frame. This applies only to functions that do not require ORDER BY clause. If ROWS/RANGE is not specified but ORDER BY is specified, RANGE UNBOUNDED PRECEDING AND CURRENT ROW is used as default for window frame. This applies only to functions that have can accept optional ROWS/RANGE specification. For example, ranking functions cannot accept ROWS/RANGE, therefore this window frame is not applied even though ORDER BY is present and ROWS/RANGE is not.  
     
 ## Limitations and Restrictions  
- The OVER clause cannot be used with the CHECKSUM aggregate function.  
+ The OVER clause cannot be used with the DISTINCT aggregations.  
   
  RANGE cannot be used with \<unsigned value specification> PRECEDING or \<unsigned value specification> FOLLOWING.  
   

@@ -7,7 +7,7 @@ ms.date: 05/24/2022
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: overview
-ms.custom: intro-whats-new
+ms.custom: intro-whats-new, linux-related-content
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # What's new in SQL Server Machine Learning Services?

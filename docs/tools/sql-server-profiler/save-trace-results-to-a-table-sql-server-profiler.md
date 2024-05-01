@@ -29,7 +29,7 @@ This topic describes how to save trace results to a database table by using [!IN
   
 3.  In the **Connect to server** dialog box, connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database that will contain the trace table.  
   
-4.  In the **Destination Table** dialog box, select a database from the **Database**list.  
+4.  In the **Destination Table** dialog box, select a database from the **Database** list.  
   
 5.  In the **Owner** list, select the owner for the trace.  
   

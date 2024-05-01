@@ -1,8 +1,7 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
-ms.date: 07/06/2023
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 04/11/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -512,7 +511,7 @@ ms.topic: include
 | 821 | 20 | Yes | Could not unhash buffer at 0x%p with a buffer page number of %S_PGID and database ID %d with HASHED status set. The buffer was not found. %S_PAGE. Contact Technical Support. |
 | 822 | 21 | Yes | Could not start I/O operation for request %S_BLKIOPTR. Contact Technical Support. |
 | [823](../mssqlserver-823-database-engine-error.md) | 24 | Yes | The operating system returned error %ls to SQL Server during a %S_MSG at offset %#016I64x in file '%ls'. Additional messages in the SQL Server error log and operating system error log may provide more detail. This is a severe system-level error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online. |
-| [824](../mssqlserver-824-database-engine-error.md) | 24 | Yes | SQL Server detected a logical consistency-based I/O error: %ls. It occurred during a %S_MSG of page %S_PGID in database ID %d at offset %#016I64x in file '%ls'. Additional messages in the SQL Server error log or operating system error log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online. |
+| [824](../mssqlserver-824-database-engine-error.md) | 24 | Yes | SQL Server detected a logical consistency-based I/O error: %ls. It occurred during a %S_MSG of page %S_PGID in database ID %d at offset %#016I64x in file '%ls'. Additional messages in the SQL Server error log or operating system error log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see https://go.microsoft.com/fwlink/?linkid=2252374. |
 | [825](../mssqlserver-825-database-engine-error.md) | 10 | Yes | A read of the file '%ls' at offset %#016I64x succeeded after failing %d time(s) with error: %ls. Additional messages in the SQL Server error log and operating system error log may provide more detail. This error condition threatens database integrity and must be corrected. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online. |
 | 826 | 10 | Yes | incorrect pageid (expected %d:%d; actual %d:%d) |
 | 829 | 21 | Yes | Database ID %d, Page %S_PGID is marked RestorePending, which may indicate disk corruption. To recover from this state, perform a restore. |
@@ -572,6 +571,8 @@ ms.topic: include
 | 893 | 10 | Yes | Failed to release latch. BUF address %p. Database ID %d. File ID %d. Page %S_PGID. |
 | 894 | 10 | No | Buffer Pool: Allocating %I64u bytes for %I64d hashPages. |
 | 895 | 10 | No | Hybrid buffer Pool: proposing %I64d hashPages for %I64u GiB of %S_MSG Persistent Memory. |
+| 896 | 10 | Yes | Failed to disable buffer pool extension. |
+| 897 | 10 | Yes | Buffer pool extension was paused due to error. |
 | [898](../mssqlserver-898-database-engine-error.md) | 10 | No | Buffer Pool scan took %I64d seconds: database ID %d, command '%ls', operation '%ls', scanned buffers %I64d, total iterated buffers %I64d, wait time %I64d ms. See 'https://go.microsoft.com/fwlink/?linkid=2132602' for more information. |
 | 902 | 16 | No | To change the %ls, the database must be in state in which a checkpoint can be executed. |
 | 904 | 16 | No | Database %ld cannot be autostarted during server shutdown or startup. |

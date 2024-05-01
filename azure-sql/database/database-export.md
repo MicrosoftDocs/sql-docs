@@ -4,17 +4,18 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Export a database to a BACPAC file using the Azure portal, PowerShell, Azure Data Studio, or SQL Server Management Studio.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, jeschult
-ms.date: 09/26/2023
+ms.reviewer: mathoma, hudequei
+ms.date: 02/06/2024
 ms.service: sql-db-mi
 ms.subservice: data-movement
 ms.topic: how-to
-ms.custom: sqldbrb=2
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
+ms.custom:
+  - sqldbrb=2
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Export to a BACPAC file - Azure SQL Database and Azure SQL Managed Instance
 
-[!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
+[!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 When you need to export a database for archiving or for moving to another platform, you can export the database schema and data to a [BACPAC](/sql/relational-databases/data-tier-applications/data-tier-applications#bacpac) file. A BACPAC file is a ZIP file with an extension of BACPAC containing the metadata and data from the database. A BACPAC file can be stored in Azure Blob storage or in local storage in an on-premises location and later imported back into [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), or a [SQL Server instance](/sql/database-engine/sql-server-database-engine-overview).
 
@@ -22,17 +23,14 @@ When you need to export a database for archiving or for moving to another platfo
 
 - For an export to be transactionally consistent, you must ensure either that no write activity is occurring during the export, or that you're exporting from a [transactionally consistent copy](database-copy.md) of your database.
 - If you're exporting to blob storage, the maximum size of a BACPAC file is 200 GB. To archive a larger BACPAC file, export to local storage with SqlPackage.
-- Exporting a BACPAC file to Azure premium storage using the methods discussed in this article isn't supported.
-- Storage behind a firewall is currently not supported.
-- Immutable storage is currently not supported.
-- Storage file name or the input value for StorageURI should be fewer than 128 characters long and can't end with '.' and can't contain special characters like a space character or '<, >, *, %, &, :, \, /, ?'.
-- If the export operation exceeds 20 hours, it may be canceled. To increase performance during export, you can:
+
+- The Azure Storage file name can't end with `.` and can't contain special characters like a space character or `<`, `>`, `*`, `%`, `&`, `:`, `\`, `/`, `?`. The file name should be fewer than 128 characters long.
+- If the export operation exceeds 20 hours, it might be canceled. To increase performance during export, you can:
 
   - Temporarily increase your compute size.
   - Cease all read and write activity during the export.
-  - Use a [clustered index](/sql/relational-databases/indexes/clustered-and-nonclustered-indexes-described) with non-null values on all large tables. Without clustered indexes, an export may fail if it takes longer than 6-12 hours. This is because the export service needs to complete a table scan to try to export entire table. A good way to determine if your tables are optimized for export is to run **DBCC SHOW_STATISTICS** and make sure that the *RANGE_HI_KEY* isn't null and its value has good distribution. For details, see [DBCC SHOW_STATISTICS](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql).
-- [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md) doesn't currently support exporting a database to a BACPAC file using the Azure portal or Azure PowerShell. To export a managed instance into a BACPAC file, use SQL Server Management Studio (SSMS) or [SQLPackage](/sql/tools/sqlpackage).
-- For larger databases, BACPAC export/import may take a long time, and may fail for various reasons.
+  - Use a [clustered index](/sql/relational-databases/indexes/clustered-and-nonclustered-indexes-described) with non-null values on all large tables. Without clustered indexes, an export might fail if it takes longer than 6-12 hours. This is because the export service needs to complete a table scan to try to export entire table. A good way to determine if your tables are optimized for export is to run `DBCC SHOW_STATISTICS` and make sure that the *RANGE_HI_KEY* isn't null and its value has good distribution. For details, see [DBCC SHOW_STATISTICS](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql).
+- For larger databases, BACPAC export/import might take a long time, and might fail for various reasons.
 
 > [!NOTE]
 > BACPACs are not intended to be used for backup and restore operations. Azure automatically creates backups for every user database. For details, see [business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md) and [Automated backups in Azure SQL Database](automated-backups-overview.md?view=azuresql-db&preserve-view=true) or [Automated backups in Azure SQL Managed Instance](../managed-instance/automated-backups-overview.md?view=azuresql-mi&preserve-view=true).
@@ -45,19 +43,19 @@ When you need to export a database for archiving or for moving to another platfo
 Exporting a BACPAC of a database from [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md) using the Azure portal isn't currently supported. See [Considerations](#considerations).
 
 > [!NOTE]
-> Machines processing import/export requests submitted through the Azure portal or PowerShell need to store the BACPAC file as well as temporary files generated by the Data-Tier Application Framework (DacFX). The disk space required varies significantly among databases with the same size and can require disk space up to three times the size of the database. Machines running the import/export request only have 450GB local disk space. As a result, some requests may fail with the error `There is not enough space on the disk`. In this case, the workaround is to run SqlPackage on a machine with enough local disk space. We encourage using [SQLPackage](#sqlpackage-utility) to import/export databases larger than 150GB to avoid this issue.
+> Machines processing import/export requests submitted through the Azure portal or PowerShell need to store the BACPAC file as well as temporary files generated by the Data-Tier Application Framework (DacFX). The disk space required varies significantly among databases with the same size and can require disk space up to three times the size of the database. Machines running the import/export request only have 450GB local disk space. As a result, some requests might fail with the error `There is not enough space on the disk`. In this case, the workaround is to run SqlPackage on a machine with enough local disk space. We encourage using [SQLPackage](#sqlpackage-utility) to import/export databases larger than 150GB to avoid this issue.
 
 1. To export a database using the [Azure portal](https://portal.azure.com), open the page for your database and select **Export** on the toolbar.
 
-   ![Screenshot that highlights the Export button.](./media/database-export/database-export1.png)
+   :::image type="content" source="media\database-export\sql-database-export-menu-button.png" alt-text="Screenshot that highlights the Export button." lightbox="media/database-export/sql-database-export-menu-button.png":::
 
-2. Specify the BACPAC filename, select an existing Azure storage account and container for the export, and then provide the appropriate credentials for access to the source database. A SQL **Server admin login** is needed here even if you're the Azure admin, as being an Azure admin doesn't equate to having admin permissions in Azure SQL Database or Azure SQL Managed Instance.
+1. Specify the BACPAC filename, select an existing Azure storage account and container for the export, and then provide the appropriate credentials for access to the source database. A SQL **Server admin login** is needed here even if you're the Azure admin, as being an Azure admin doesn't equate to having admin permissions in Azure SQL Database or Azure SQL Managed Instance.
 
-   :::image type="content" source="./media/database-export/database-export2.png" alt-text="Screenshot shows the Export Database page with username and password specified.":::
+   :::image type="content" source="media\database-export\sql-database-export-database.png" alt-text="Screenshot shows the Export Database page with username and password specified.":::
 
-3. Select **OK**.
+1. Select **OK**.
 
-4. To monitor the progress of the export operation, open the page for the server containing the database being exported. Under **Data management**, select **Import/Export history**.
+1. To monitor the progress of the export operation, open the page for the server containing the database being exported. Under **Data management**, select **Import/Export history**.
 
 ## SQLPackage utility
 
@@ -73,17 +71,17 @@ SqlPackage /a:Export /tf:testExport.BACPAC /scs:"Data Source=apptestserver.datab
 
 ## Azure Data Studio
 
-[Azure Data Studio](/azure-data-studio) is a free, open-source tool and is available for Windows, Mac, and Linux.  The "SQL Server dacpac" extension provides a wizard interface to SqlPackage operations including export and import.  See the extension's [documentation page](/azure-data-studio/extensions/sql-server-dacpac-extension) for more information on installing and using the extension.
+[Azure Data Studio](/azure-data-studio) is a free, open-source tool and is available for Windows, Mac, and Linux. The "SQL Server dacpac" extension provides a wizard interface to SqlPackage operations including export and import. For more information on installing and using the extension, see [SQL Server dacpac extension](/azure-data-studio/extensions/sql-server-dacpac-extension).
 
 ## SQL Server Management Studio (SSMS)
 
-The newest versions of SQL Server Management Studio provide a wizard to export a database in Azure SQL Database or a SQL Managed Instance database to a BACPAC file. See the [Export a Data-tier Application](/sql/relational-databases/data-tier-applications/export-a-data-tier-application).
+[SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) provides a wizard to export a database in Azure SQL Database or a SQL Managed Instance database to a BACPAC file. See the [Export a Data-tier Application](/sql/relational-databases/data-tier-applications/export-a-data-tier-application).
 
 ## PowerShell
 
 Exporting a BACPAC of a database from [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md) using PowerShell isn't supported. See [Considerations](#considerations).
 
-Use the [New-AzSqlDatabaseExport](/powershell/module/az.sql/new-azsqldatabaseexport) cmdlet to submit an export database request to the Azure SQL Database service. Depending on the size of your database, the export operation may take some time to complete.
+Use the [New-AzSqlDatabaseExport](/powershell/module/az.sql/new-azsqldatabaseexport) cmdlet to submit an export database request to the Azure SQL Database service. Depending on the size of your database, the export operation might take some time to complete.
 
 ```powershell
 $exportRequest = New-AzSqlDatabaseExport -ResourceGroupName $ResourceGroupName -ServerName $ServerName `
@@ -108,10 +106,10 @@ $exportStatus
 
 ## Cancel the export request
 
-Use the [Database Operations - Cancel](/rest/api/sql/2022-08-01-preview/database-operations/cancel) API
+Use the [Database Operations - Cancel](/rest/api/sql/database-operations/cancel) API
 or the PowerShell [Stop-AzSqlDatabaseActivity](/powershell/module/az.sql/Stop-AzSqlDatabaseActivity) command to cancel an export request. Here's an example PowerShell command:
 
-```cmd
+```powershell
 Stop-AzSqlDatabaseActivity -ResourceGroupName $ResourceGroupName -ServerName $ServerName -DatabaseName $DatabaseName -OperationId $Operation.OperationId
 ```
 
@@ -120,7 +118,16 @@ Stop-AzSqlDatabaseActivity -ResourceGroupName $ResourceGroupName -ServerName $Se
 > - The [SQL DB Contributor](/azure/role-based-access-control/built-in-roles#sql-db-contributor) role or 
 > - A [custom Azure RBAC role](/azure/role-based-access-control/custom-roles) with `Microsoft.Sql/servers/databases/operations` permission
 
-## Next steps
+## Limitations
+
+- Exporting a BACPAC file to Azure premium storage using the methods discussed in this article isn't supported.
+- Storage behind a firewall is currently not supported.
+- Immutable storage is currently not supported.
+- [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md) doesn't currently support exporting a database to a BACPAC file using the Azure portal or Azure PowerShell. To export a managed instance into a BACPAC file, use SQL Server Management Studio (SSMS) or [SQLPackage](/sql/tools/sqlpackage).
+- Currently, the Import/Export service does not support Microsoft Entra ID authentication when MFA is required.
+- Import\Export services only support SQL authentication and Microsoft Entra ID. Import\Export is not compatible with Microsoft Identity application registration.
+
+## Related content
 
 - To learn about long-term backup retention of a single database and pooled databases as an alternative to exporting a database for archive purposes, see [Long-term backup retention](long-term-retention-overview.md). You can use SQL Agent jobs to schedule [copy-only database backups](/sql/relational-databases/backup-restore/copy-only-backups-sql-server) as an alternative to long-term backup retention.
 - To learn about importing a BACPAC to a SQL Server database, see [Import a BACPAC to a SQL Server database](/sql/relational-databases/data-tier-applications/import-a-BACPAC-file-to-create-a-new-user-database).

@@ -3,7 +3,7 @@ title: Secure with Microsoft Entra logins
 description: Learn about techniques and features to secure Azure SQL Managed Instance, and use Microsoft Entra server principals (logins)
 author: nofield
 ms.author: nofield
-ms.reviewer: vanto
+ms.reviewer: vanto, mathoma
 ms.date: 09/27/2023
 ms.service: sql-managed-instance
 ms.subservice: security
@@ -13,7 +13,7 @@ ms.custom: sqldbrb=1
 # Tutorial: Secure with Microsoft Entra logins - Azure SQL Managed Instance 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-In this article, learn to use server principals (logins) backed by Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) to secure an [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md).
+In this article, learn to use server principals (logins) backed by Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) to secure an [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md).
 
 
 In this tutorial, you learn how to:
@@ -48,9 +48,6 @@ Managed instances can be accessed through a private IP address. Much like an iso
 
 It is also possible to configure a service endpoint on a managed instance, which allows for public connections in the same fashion as for Azure SQL Database.
 For more information, see [Configure public endpoint in Azure SQL Managed Instance](public-endpoint-configure.md).
-
-> [!NOTE]
-> Even with service endpoints enabled, [Azure SQL Database firewall rules](../database/firewall-configure.md) do not apply. Azure SQL Managed Instance has its own [built-in firewall](management-endpoint-verify-built-in-firewall.md) to manage connectivity.
 
 <a name='create-an-azure-ad-server-principal-login-using-ssms'></a>
 
@@ -197,7 +194,7 @@ Once the Microsoft Entra login has been created and granted `sysadmin` privilege
       GO
       ```
 
-Guest users are supported as individual users (without being part of a Microsoft Entra group (although they can be)) and the logins can be created in `master` directly (for example, joe@contoso.con) using the current login syntax.
+Azure SQL's support of Microsoft Entra principals as users and logins extends to [Microsoft Entra External ID](/entra/external-id/user-properties) internal and external guest users. Guest users, both individually and as part of a group, can be used the same as any other Microsoft Entra user in Azure SQL. If you want guest users to be able to create other Microsoft Entra server logins or database users, they must have permissions to read other identities in the Microsoft Entra directory. This permission is configured at the directory-level. For more information, see [guest access permissions in Microsoft Entra ID](/entra/identity/users/users-restrict-guest-permissions).
 
 <a name='create-an-azure-ad-user-from-the-azure-ad-server-principal-login'></a>
 

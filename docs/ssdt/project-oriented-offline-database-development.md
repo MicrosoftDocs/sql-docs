@@ -26,8 +26,6 @@ Using SSDT, you can create an offline database project and implement schema chan
 |Topic|Description|  
 |---------|---------------|  
 |[Import into a Database Project](../ssdt/import-into-a-database-project.md)|Describes importing objects from a live database, .dacpac, or script.|  
-|[Add Database Reference Dialog Box](../ssdt/add-database-reference-dialog-box.md)|Describes various ways to add a database reference.|  
-|[Check for Updates Dialog Box](../ssdt/check-for-updates-dialog-box.md)|Describes how SQL Server Data Tools can check for product updates.|  
 |[Database Project Settings](../ssdt/database-project-settings.md)|Describes various project settings to control aspects of your database and build configurations.|  
 |[How to: Browse Objects in a SQL Server Database Project](../ssdt/how-to-browse-objects-in-a-sql-server-database-project.md)|The SQL Server Object Explorer in Visual Studio now contains a dedicated Projects node, under which all SQL Server database projects in your solution are grouped in an SQL Server Management Studio-like hierarchy.|  
 |[Data Tools Operations Window](../ssdt/data-tools-operations-window.md)|Describes the **Data Tools Operations** window, which shows the progress of some operations and notifies you of any errors.|  

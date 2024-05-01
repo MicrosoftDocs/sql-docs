@@ -5,10 +5,10 @@ description: Use the COPY statement in Azure Synapse Analytics and Warehouse in 
 author: periclesrocha
 ms.author: procha
 ms.reviewer: wiassaf, mikeray
-ms.date: 10/27/2023
+ms.date: 03/22/2024
 ms.service: sql
 ms.subservice: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
   - "COPY_TSQL"
   - "COPY INTO"
@@ -42,12 +42,18 @@ Use COPY for the following capabilities:
 - Specify wildcards and multiple files in the storage location path
 - Automatic schema discovery simplifies the process of defining and mapping source data into target tables
 - The automatic table creation process automatically creates the tables and works alongside with automatic schema discovery
+- Directly load complex data types from Parquet files such as Maps and Lists into string columns, without using other tools to preprocess the data
+
+> [!NOTE]  
+> To load complex data types from Parquet files, automatic table creation must be turned on by using `AUTO_CREATE_TABLE`.
 
 Visit the following documentation for comprehensive examples and quickstarts using the COPY statement:
 
 - [Quickstart: Bulk load data using the COPY statement](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
 - [Quickstart: Examples using the COPY statement and its supported authentication methods](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
 - [Quickstart: Creating the COPY statement using the rich Synapse Studio UI](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
 
 ## Syntax
 
@@ -161,8 +167,8 @@ Multiple file locations can only be specified from the same storage account and 
 
 > [!NOTE]  
 >  
-> - When authenticating using Azure Active Directory (Azure AD) or to a public storage account, CREDENTIAL does not need to be specified.  
-> - If your storage account is associated with a VNet, you must authenticate using MSI (Managed Identity).
+> - When authenticating using Microsoft Entra ID or to a public storage account, CREDENTIAL does not need to be specified.  
+> - If your storage account is associated with a VNet, you must authenticate using a managed identity.
 
 - Authenticating with Shared Access Signatures (SAS)
 
@@ -173,7 +179,7 @@ Multiple file locations can only be specified from the same storage account and 
 - Authenticating with [*Service Principals*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
 
   - *IDENTITY: \<ClientID\>@<OAuth_2.0_Token_EndPoint>*
-  - *SECRET: Azure AD Application Service Principal key*
+  - *SECRET: Microsoft Entra application service principal key*
   -  Minimum RBAC roles required: Storage blob data contributor, Storage blob data contributor, Storage blob data owner, or Storage blob data reader
 
 - Authenticating with Storage account key
@@ -184,12 +190,12 @@ Multiple file locations can only be specified from the same storage account and 
 - Authenticating with [Managed Identity](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNet Service Endpoints)
 
   - *IDENTITY: A constant with a value of 'Managed Identity'*
-  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Azure AD registered SQL Database server
+  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Microsoft Entra registered [logical server in Azure](/azure/azure-sql/database/logical-servers). When using a dedicated SQL pool (formerly SQL DW) that is not associated with a Synapse Workspace this RBAC role is not required, but the managed identity requires Access Control List (ACL) permissions on the target objects to enable read access to the source files
 
-- Authenticating with an Azure AD user
+- Authenticating with a Microsoft Entra user
 
   - *CREDENTIAL isn't required*
-  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Azure AD user
+  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Microsoft Entra user
 
 #### *ERRORFILE = Directory Location*
 
@@ -206,8 +212,8 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
 
 *ERRORFILE_CREDENTIAL* only applies to CSV files. Supported data source and authentication methods are:
 
-- Azure Blob Storage  - SAS/SERVICE PRINCIPAL/KEY/AAD
-- Azure Data Lake Gen2 -   SAS/MSI/SERVICE PRINCIPAL/KEY/AAD
+- Azure Blob Storage  - SAS/SERVICE PRINCIPAL/AAD
+- Azure Data Lake Gen2 -   SAS/MSI/SERVICE PRINCIPAL/AAD
 
 - Authenticating with Shared Access Signatures (SAS)
   - *IDENTITY: A constant with a value of 'Shared Access Signature'*
@@ -216,23 +222,21 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
 
 - Authenticating with [*Service Principals*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
   - *IDENTITY: \<ClientID\>@<OAuth_2.0_Token_EndPoint>*
-  - *SECRET: Azure AD Application Service Principal key*
+  - *SECRET: Microsoft Entra application service principal key*
   - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner
 
 > [!NOTE]  
 > Use the OAuth 2.0 token endpoint **V1**
 
-- Authenticating with Storage account key
-  - *IDENTITY: A constant with a value of 'Storage Account Key'*
-  - *SECRET: Storage account key*
-
 - Authenticating with [Managed Identity](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNet Service Endpoints)
   - *IDENTITY: A constant with a value of 'Managed Identity'*
-  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Azure AD registered SQL Database server
+  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Microsoft Entra registered SQL Database server
 
-- Authenticating with an Azure AD user
+- Authenticating with a Microsoft Entra user
   - *CREDENTIAL isn't required*
-  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Azure AD user
+  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Microsoft Entra user
+
+Using a storage account key with ERRORFILE_CREDENTIAL is not supported. 
 
 > [!NOTE]  
 > If you are using the same storage account for your ERRORFILE and specifying the ERRORFILE path relative to the root of the container, you do not need to specify the ERROR_CREDENTIAL.
@@ -240,6 +244,10 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
 #### *MAXERRORS = max_errors*
 
 *MAXERRORS* specifies the maximum number of reject rows allowed in the load before the COPY operation fails. Each row that can't be imported by the COPY operation is ignored and counted as one error. If max_errors isn't specified, the default is 0.
+
+*MAXERRORS* cannot be used with AUTO_CREATE_TABLE. 
+
+When *FILE_TYPE* is 'PARQUET', exceptions that are caused by data type conversion errors (e.g., Parquet binary to SQL integer) still cause COPY INTO will to fail, ignoring *MAXERRORS*. 
 
 #### *COMPRESSION = { 'DefaultCodec ' | 'Snappy' | 'GZIP' | 'NONE'}*
 
@@ -695,6 +703,8 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
 
 *MAXERRORS* specifies the maximum number of reject rows allowed in the load before the COPY operation fails. Each row that the COPY operation can't import is ignored and counted as one error. If max_errors isn't specified, the default is 0.
 
+In Microsoft Fabric, *MAXERRORS* cannot be used when *FILE_TYPE* is 'PARQUET'. 
+
 #### *COMPRESSION = { 'Snappy' | 'GZIP' | 'NONE'}*
 
 *COMPRESSION* is optional and specifies the data compression method for the external data.
@@ -705,6 +715,8 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
 The COPY command autodetects the compression type based on the file extension when this parameter isn't specified:
 
 - .gz  - **GZIP**
+
+Loading compressed files is currently only supported with *PARSER_VERSION* 1.0. 
 
 #### *FIELDQUOTE = 'field_quote'*
 
@@ -731,11 +743,11 @@ Extended ASCII and multi-byte characters aren't supported with UTF-8 for ROWTERM
 
 #### *ENCODING = 'UTF8' | 'UTF16'*
 
-ENCODING only applies to CSV. Default is UTF8. Specifies the data encoding standard for the files loaded by the COPY command.
+*ENCODING* only applies to CSV. Default is UTF8. Specifies the data encoding standard for the files loaded by the COPY command.
 
 #### PARSER_VERSION = { '1.0' | '2.0' }
 
-PARSER_VERSION only applies to CSV. Default is 2.0. Specifies the file parser used for ingestion when the source file type is CSV. The 2.0 parser offers improved performance for ingestion of CSV files. 
+*PARSER_VERSION* only applies to CSV. Default is 2.0. Specifies the file parser used for ingestion when the source file type is CSV. The 2.0 parser offers improved performance for ingestion of CSV files. 
 
 Parser version 2.0 has the following limitations: 
 
@@ -840,6 +852,7 @@ This example uses a wildcard to load all Parquet files under a folder.
 COPY INTO test_parquet
 FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder1/*.parquet'
 WITH (
+    FILE_TYPE = 'PARQUET',
     CREDENTIAL=(IDENTITY= 'Shared Access Signature', SECRET='<Your_SAS_Token>')
 )
 ```

@@ -1,5 +1,6 @@
 ---
 title: Audit to storage account behind VNet and firewall
+titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: Configure auditing to write database events on a storage account behind virtual network and firewall
 author: sravanisaluru
 ms.author: srsaluru
@@ -82,7 +83,7 @@ The sample scripts in this section require you to update the script before you r
 
 To configure SQL Audit to write events to a storage account behind a VNet or Firewall:
 
-1. Register your server with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). Use either PowerShell or REST API.
+1. Register your server with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). Use either PowerShell or REST API.
 
    **PowerShell**
 
@@ -92,7 +93,7 @@ To configure SQL Audit to write events to a storage account behind a VNet or Fir
    Set-AzSqlServer -ResourceGroupName <your resource group> -ServerName <azure server name> -AssignIdentity
    ```
 
-   [**REST API**](/rest/api/sql/servers/createorupdate):
+   [**REST API**](/rest/api/sql/servers/create-or-update):
 
    Sample request
 
@@ -124,7 +125,7 @@ To configure SQL Audit to write events to a storage account behind a VNet or Fir
    > [!NOTE]
    > Only members with Owner privilege can perform this step. For various Azure built-in roles, refer to [Azure built-in roles](/azure/role-based-access-control/built-in-roles).
 
-1. Configure the [server's blob auditing policy](/rest/api/sql/server%20auditing%20settings/createorupdate), without specifying a *storageAccountAccessKey*:
+1. Configure the [server's blob auditing policy](/rest/api/sql/server-devops-audit-settings/create-or-update), without specifying a *storageAccountAccessKey*:
 
    Sample request
 
@@ -163,5 +164,5 @@ You can configure auditing to write database events on a storage account behind 
 ## Next steps
 
 * [Use PowerShell to create a virtual network service endpoint, and then a virtual network rule for Azure SQL Database.](scripts/vnet-service-endpoint-rule-powershell-create.md)
-* [Virtual Network Rules: Operations with REST APIs](/rest/api/sql/virtualnetworkrules)
+* [Virtual Network Rules: Operations with REST APIs](/rest/api/sql/virtual-network-rules)
 * [Use virtual network service endpoints and rules for servers](vnet-service-endpoint-rule-overview.md)

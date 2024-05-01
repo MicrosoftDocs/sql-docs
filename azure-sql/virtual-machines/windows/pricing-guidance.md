@@ -71,7 +71,7 @@ To create an Azure VM running SQL Server 2022 with one of these pay-as-you-go im
 > [!IMPORTANT]
 > When you create a SQL Server virtual machine in the Azure portal, the **Choose a size** window shows an estimated cost. It is important to note that this estimate is only the compute costs for running the VM along with any OS licensing costs (Windows or third-party Linux operating systems).
 >
-> ![Choose VM size blade](./media/pricing-guidance/sql-vm-choose-size-pricing-estimate.png)
+> ![Choose VM size pane](./media/pricing-guidance/sql-vm-choose-size-pricing-estimate.png)
 >
 >It does not include additional SQL Server licensing costs for Web, Standard, and Enterprise editions. To get the most accurate pricing estimate, select your operating system and SQL Server edition on the pricing page for [Windows](https://azure.microsoft.com/pricing/details/virtual-machines/windows/) or [Linux](https://azure.microsoft.com/pricing/details/virtual-machines/linux/).
 

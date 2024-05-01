@@ -3,19 +3,20 @@ title: "SQL Server, Locks object"
 description: "Learn about the SQLServer:Locks object, which provides information about SQL Server locks on individual resource types."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/13/2021"
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "Locks object"
   - "SQLServer:Locks"
 ---
 # SQL Server, Locks object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  The **SQLServer:Locks** object in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locks on individual resource types. Locks are held on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resources, such as rows read or modified during a transaction, to prevent concurrent use of resources by different transactions. For example, if an exclusive (X) lock is held on a row within a table by a transaction, no other transaction can modify that row until the lock is released. Minimizing locks increases concurrency, which can improve performance. Multiple instances of the **Locks** object can be monitored at the same time, with each instance representing a lock on a resource type.  
+
+  The **SQLServer:Locks** object in Microsoft [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] provides information about [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] locks on individual resource types. Locks are held on [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] resources, such as rows read or modified during a transaction, to prevent concurrent use of resources by different transactions. For example, if an exclusive (X) lock is held on a row within a table by a transaction, no other transaction can modify that row until the lock is released. Minimizing locks increases concurrency, which can improve performance. Multiple instances of the **Locks** object can be monitored at the same time, with each instance representing a lock on a resource type.  
   
- This table describes the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Locks** counters.  
+ This table describes the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] **Locks** counters.  
   
 |SQL Server Locks counters|Description|  
 |-------------------------------|-----------------|  
@@ -28,7 +29,7 @@ helpviewer_keywords:
 |**Lock Waits/sec**|Number of lock requests per second that required the caller to wait.|  
 |**Number of Deadlocks/sec**|Number of lock requests per second that resulted in a deadlock.|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can lock these resources.  
+ [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] can lock these resources.  
   
 |Item|Description|  
 |----------|-----------------|  
@@ -41,7 +42,7 @@ helpviewer_keywords:
 |**Heap/B-tree**|Heap or B-tree. A lock on a heap of data pages, or on the B-tree structure of an index.|  
 |**Key**|A lock on a row in an index.|  
 |**Metadata**|A lock on a piece of catalog information, also called metadata.|  
-|**Object**|A lock on table, stored procedure, view, etc, including all data and indexes. The object can be anything that has an entry in **sys.all_objects**.|  
+|**Object**|A lock on table, stored procedure, view, etc, including all data and indexes. The object can be anything that has an entry in `sys.all_objects`.|  
 |**OIB**|Lock resource for online index build locks, specifically for a online index build LOB tracking table.|
 |**Page**|A lock on an 8-kilobyte (KB) page in a database.|  
 |**RID**|Row ID. A lock on a single row in a heap.|  
@@ -59,7 +60,6 @@ SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%Locks%';
 ```  
 
-## See also  
- [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
-  
-  
+## Related content
+
+- [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)

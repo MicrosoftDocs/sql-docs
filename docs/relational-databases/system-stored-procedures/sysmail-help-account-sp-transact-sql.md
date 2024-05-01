@@ -110,7 +110,7 @@ account_id  name                         description                            
 148         AdventureWorks Administrator Mail account for administrative e-mail. dba@adventure-works.com   AdventureWorks Automated Mailer  NULL            SMTP       smtp.adventure-works.com  25          NULL     0                       0
 ```
 
-## See also
+## Related content
 
 - [Database Mail](../database-mail/database-mail.md)
 - [Create a Database Mail Account](../database-mail/create-a-database-mail-account.md)

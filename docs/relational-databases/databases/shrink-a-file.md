@@ -118,7 +118,7 @@ Shrink operations in progress can block other queries on the database, and can b
   
 3. Copy and paste the following example into the query window and select **Execute**. This example uses [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) to shrink the size of a data file named `DataFile1` in the `UserDB` database to 7 MB.  
   
- [!code-sql[DBCC#DBCC_SHRINKFILE1](../../relational-databases/databases/codesnippet/tsql/shrink-a-file_1.sql)]  
+ :::code language="sql" source="codesnippet/tsql/shrink-a-file_1.sql":::
   
 ## See also  
 

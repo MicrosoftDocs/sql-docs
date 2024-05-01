@@ -21,7 +21,7 @@ This article provides an overview of the private endpoint for Azure SQL Managed 
 
 ### How private endpoints differ from VNet-local endpoints
 
-The default VNet-local endpoint deployed with each Azure SQL Managed Instance behaves as if a computer running the service were physically attached to your virtual network. It allows near-complete traffic control via route tables, network security groups, DNS resolution, firewalls, and similar mechanisms. You can also use this endpoint to involve your instance in scenarios requiring connectivity on ports other than 1433, such as auto-failover groups, distributed transactions, and Managed Instance Link. Although the VNet-local endpoint provides flexibility, it adds complexity when configuring for specific scenarios, especially those involving multiple virtual networks or tenants. 
+The default VNet-local endpoint deployed with each Azure SQL Managed Instance behaves as if a computer running the service were physically attached to your virtual network. It allows near-complete traffic control via route tables, network security groups, DNS resolution, firewalls, and similar mechanisms. You can also use this endpoint to involve your instance in scenarios requiring connectivity on ports other than 1433, such as failover groups, distributed transactions, and Managed Instance Link. Although the VNet-local endpoint provides flexibility, it adds complexity when configuring for specific scenarios, especially those involving multiple virtual networks or tenants. 
 
 By contrast, setting up a private endpoint is like extending a physical network cable from a computer running Azure SQL Managed Instance to another virtual network. This connectivity path is established virtually via the Azure Private Link technology. It only allows connections in one direction: from the private endpoint to Azure SQL Managed Instance; and it only carries traffic on port 1433 (the standard TDS traffic port). In this way, your Azure SQL Managed Instance becomes available to a different virtual network without having to set up network peering or turn on the instance's public endpoint. Even if you move the instance to another subnet, any established private endpoints will continue to point to it.
 
@@ -119,7 +119,7 @@ After you complete these steps, SQL clients connecting to `<instance-name>.<dns-
     2. Under **Security**, choose **Private endpoint connections**.
     3. Locate the private endpoint connection in the table and choose the **Private endpoint name** for your chosen connection.
     
-       ![Screenshot of the Azure portal, private endpoint connections blade the private endpoint name highlighted.](media/private-endpoint/pec-click.png)
+       ![Screenshot of the Azure portal, private endpoint connections pane the private endpoint name highlighted.](media/private-endpoint/pec-click.png)
     
     4. On the ***Overview** page, select the network interface.
     
@@ -151,7 +151,7 @@ After you complete these steps, SQL clients inside the endpoint virtual network 
     2. Under **Security**, choose **Private endpoint connections**.
     3. Locate the private endpoint connection in the table and choose the **Private endpoint name** for your chosen connection.
     
-    ![Screenshot of the Azure portal, connections blade with one private endpoint named highlighted.](media/private-endpoint/pec-click.png)
+    ![Screenshot of the Azure portal, connections pane with one private endpoint named highlighted.](media/private-endpoint/pec-click.png)
     
     4. On the ***Overview** page, select the network interface.
     

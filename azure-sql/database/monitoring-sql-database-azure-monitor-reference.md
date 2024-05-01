@@ -1,59 +1,66 @@
 ---
-title: Monitoring Azure SQL Database with Azure Monitor reference
-description: Important reference material needed when you monitor Azure SQL Database with Azure Monitor
+title: Monitoring data reference for Azure SQL Database
+description: This article contains important reference material you need when you monitor Azure SQL Database.
+ms.date: 03/01/2024
+ms.custom: horz-monitor
+ms.topic: reference
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, dfurman
-ms.date: 07/29/2022
 ms.service: sql-database
-ms.subservice: performance
-ms.topic: conceptual
-ms.custom: subject-monitoring
-monikerRange: "= azuresql || = azuresql-db"
+ms.subservice: monitoring
+ms.reviewer: mathoma
 ---
 
-# Monitoring Azure SQL Database data reference
-[!INCLUDE [sqldb](../includes/appliesto-sqldb.md)]
 
-This article contains reference for monitoring Azure SQL Database with Azure Monitor. See [Monitoring Azure SQL Database](../database/monitoring-sql-database-azure-monitor.md) for details on collecting and analyzing monitoring data for Azure SQL Database with Azure Monitor SQL Insights (preview).
+# Azure SQL Database monitoring data reference
 
-## Metrics
+[!INCLUDE [horz-monitor-ref-intro](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-intro.md)]
 
-For more on using Azure Monitor SQL Insights (preview) for all products in the [Azure SQL family](../index.yml), see [Monitor your SQL deployments with SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview).
+See [Monitor Azure SQL Database](monitoring-sql-database-azure-monitor.md) for details on the data you can collect for SQL Database and how to use it.
 
-For data specific to Azure SQL Database, see [Data for Azure SQL Database](/azure/azure-monitor/insights/sql-insights-overview#data-for-azure-sql-database).
+[!INCLUDE [horz-monitor-ref-metrics-intro](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-metrics-intro.md)]
 
-For a complete list of metrics, see: 
-- [Microsoft.Sql/servers/databases](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserversdatabases)
-- [Microsoft.Sql/servers/elasticPools](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserverselasticpools)
+For a list of commonly used metrics for Azure SQL Database, see [Azure SQL Database metrics](monitoring-metrics-alerts.md#use-metrics-to-monitor-databases-and-elastic-pools).
 
-## Resource logs
+### Supported metrics for Microsoft.Sql/servers/databases
+The following table lists the metrics available for the Microsoft.Sql/servers/databases resource type.
+[!INCLUDE [horz-monitor-ref-metrics-tableheader](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-metrics-tableheader.md)]
+[!INCLUDE [Microsoft.Sql/servers/databases](~/../azure-reference-other-repo/azure-monitor-ref/supported-metrics/includes/microsoft-sql-servers-databases-metrics-include.md)]
 
-This section lists the types of resource logs you can collect for Azure SQL Database. 
+### Supported metrics for Microsoft.Sql/servers/elasticpools
+The following table lists the metrics available for the Microsoft.Sql/servers/elasticpools resource type.
+[!INCLUDE [horz-monitor-ref-metrics-tableheader](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-metrics-tableheader.md)]
+[!INCLUDE [Microsoft.Sql/servers/elasticpools](~/../azure-reference-other-repo/azure-monitor-ref/supported-metrics/includes/microsoft-sql-servers-elasticpools-metrics-include.md)]
 
-For reference, see a list of [all resource logs category types supported in Azure Monitor](/azure/azure-monitor/essentials/resource-logs-schema).
+### Supported metrics for Microsoft.Sql/servers/jobAgents
+The following table lists the metrics available for the Microsoft.Sql/servers/jobAgents resource type.
+[!INCLUDE [horz-monitor-ref-metrics-tableheader](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-metrics-tableheader.md)]
+[!INCLUDE [Microsoft.Sql/servers/jobAgents](~/../azure-reference-other-repo/azure-monitor-ref/supported-metrics/includes/microsoft-sql-servers-jobagents-metrics-include.md)]
 
-For a reference of resource log types collected for Azure SQL Database, see [Streaming export of Azure SQL Database Diagnostic telemetry for export](../database/metrics-diagnostic-telemetry-logging-streaming-export-configure.md#diagnostic-telemetry-for-export)
+[!INCLUDE [horz-monitor-ref-metrics-dimensions-intro](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-metrics-dimensions-intro.md)]
 
-## Azure Monitor Logs tables
+[!INCLUDE [horz-monitor-ref-no-metrics-dimensions](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-no-metrics-dimensions.md)]
 
-This section refers to all of the Azure Monitor Logs tables relevant to Azure SQL Database and available for query by Log Analytics, which can be queried with KQL.
+[!INCLUDE [horz-monitor-ref-resource-logs](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-resource-logs.md)]
 
-Tables for all resources types are referenced here, for example, [Azure Monitor tables for SQL Databases](/azure/azure-monitor/reference/tables/tables-resourcetype#sql-databases).
+### Supported resource logs for Microsoft.Sql/servers/databases
+[!INCLUDE [Microsoft.Sql/servers/databases](~/../azure-reference-other-repo/azure-monitor-ref/supported-logs/includes/microsoft-sql-servers-databases-logs-include.md)]
 
-|Resource Type | Notes |
+[!INCLUDE [horz-monitor-ref-logs-tables](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-logs-tables.md)]
+
+|Table | Notes |
 |-------|-----|
-| [AzureActivity](/azure/azure-monitor/reference/tables/azureactivity) | Entries from the Azure Activity log that provides insight into any subscription-level or management group level events that have occurred in Azure. |
-| [AzureDiagnostics](/azure/azure-monitor/reference/tables/azurediagnostics) | Azure Diagnostics reveals diagnostic data of specific resources and features for numerous Azure products including SQL databases, SQL elastic pools, and SQL managed instances. For more information, see [Diagnostics metrics](../database/metrics-diagnostic-telemetry-logging-streaming-export-configure.md?tabs=azure-portal#basic-metrics).|
-| [AzureMetrics](/azure/azure-monitor/reference/tables/azuremetrics) | Metric data emitted by Azure services that measure their health and performance. Activity from Azure products including SQL databases, SQL elastic pools, and SQL managed instances.|
+| [AzureActivity](/azure/azure-monitor/reference/tables/azureactivity#columns) | Entries from the Azure Activity log that provides insight into any subscription-level or management group level events that have occurred in Azure. |
+| [AzureDiagnostics](/azure/azure-monitor/reference/tables/azurediagnostics#columns) | Azure Diagnostics reveals diagnostic data of specific resources and features for numerous Azure products including SQL databases, SQL elastic pools, and SQL managed instances. For more information, see [Diagnostics metrics](../database/metrics-diagnostic-telemetry-logging-streaming-export-configure.md?tabs=azure-portal#basic-metrics).|
+| [AzureMetrics](/azure/azure-monitor/reference/tables/azuremetrics#columns) | Metric data emitted by Azure services that measure their health and performance. Activity from Azure products including SQL databases, SQL elastic pools, and SQL managed instances.|
 
-## Activity log
+[!INCLUDE [horz-monitor-ref-activity-log](~/../azure-sql/reusable-content/ce-skilling/azure/includes/azure-monitor/horizontals/horz-monitor-ref-activity-log.md)]
 
-The Activity log contains records of management operations performed on your Azure SQL Database resources. All maintenance operations related to Azure SQL Database that have been implemented here may appear in the Activity log.
+- [Microsoft.Sql resource provider operations](/azure/role-based-access-control/resource-provider-operations#microsoftsql)
 
-For more information on the schema of Activity Log entries, see [Activity Log schema](/azure/azure-monitor/essentials/activity-log-schema). 
+## Related content
 
-## Next steps
-
-- See [Monitoring Azure SQL Database with Azure Monitor](../database/monitoring-sql-database-azure-monitor.md) for a description of monitoring Azure SQL Database.
-- See [Monitoring Azure resources with Azure Monitor](/azure/azure-monitor/essentials/monitor-azure-resource) for details on monitoring Azure resources.
+- See [Monitor SQL Database](monitoring-sql-database-azure-monitor.md) for a description of monitoring Azure SQL Database.
+- See [Monitor Azure resources with Azure Monitor](/azure/azure-monitor/essentials/monitor-azure-resource) for details on monitoring Azure resources.
+- [Monitor Azure SQL workloads with database watcher (preview)](../database-watcher-overview.md)
+- Review [the Azure Monitor metrics and alerts](monitoring-metrics-alerts.md) including [Recommended alert rules](monitoring-metrics-alerts.md#recommended-alert-rules).

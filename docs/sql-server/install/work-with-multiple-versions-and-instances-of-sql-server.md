@@ -6,6 +6,7 @@ ms.author: randolphwest
 ms.date: 09/27/2023
 ms.service: sql
 ms.subservice: install
+ms.custom: linux-related-content
 ms.topic: conceptual
 helpviewer_keywords:
   - "concurrent installations [SQL Server]"

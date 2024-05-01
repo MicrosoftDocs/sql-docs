@@ -145,7 +145,7 @@ EXEC sp_fulltext_catalog 'Cat_Desc', 'drop';
 GO
 ```
 
-## See also
+## Related content
 
 - [FULLTEXTCATALOGPROPERTY (Transact-SQL)](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)
 - [sp_fulltext_database (Transact-SQL)](sp-fulltext-database-transact-sql.md)

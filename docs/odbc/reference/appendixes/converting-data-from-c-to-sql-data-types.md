@@ -23,7 +23,7 @@ When an application calls **SQLExecute** or **SQLExecDirect**, the driver retrie
   
  The following table shows the supported conversions from ODBC C data types to ODBC SQL data types. A filled circle indicates the default conversion for an SQL data type (the C data type from which the data will be converted when the value of *ValueType* or the SQL_DESC_CONCISE_TYPE descriptor field is SQL_C_DEFAULT). A hollow circle indicates a supported conversion.  
   
- The format of the converted data is not affected by the Windows® country or region setting.  
+ The format of the converted data is not affected by the Windows country or region setting.  
   
  ![Supported conversions: ODBC C to SQL data types](../../../odbc/reference/appendixes/media/apd1b.gif "apd1b")  
   

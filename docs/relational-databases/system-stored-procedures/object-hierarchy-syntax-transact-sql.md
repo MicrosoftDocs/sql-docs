@@ -17,7 +17,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-The *propertyname* parameter of `sp_OAGetProperty` and `sp_OASetProperty` and the *methodname* parameter of `sp_OAMethod` support an object hierarchy syntax similar to that of [!INCLUDE [msCoName](../../includes/msconame-md.md)] [!INCLUDE [vbprvb](../../includes/vbprvb-md.md)]. When this special syntax is used, these parameters have the following general form.
+The *propertyname* parameter of `sp_OAGetProperty` and `sp_OASetProperty` and the *methodname* parameter of `sp_OAMethod` support an object hierarchy syntax similar to that of [!INCLUDE [msCoName](../../includes/msconame-md.md)] [!INCLUDE [visual-basic](../../includes/visual-basic-md.md)]. When this special syntax is used, these parameters have the following general form.
 
 ## Syntax
 
@@ -29,7 +29,7 @@ TraversedObject.PropertyOrMethod
 
 #### *TraversedObject*
 
-An OLE object in the hierarchy under the *objecttoken* specified in the stored procedure. Use [!INCLUDE [vbprvb](../../includes/vbprvb-md.md)] syntax to specify a series of collections, object properties, and methods that return objects. Each object specifier in the series must be separated by a period (`.`).
+An OLE object in the hierarchy under the *objecttoken* specified in the stored procedure. Use [!INCLUDE [visual-basic](../../includes/visual-basic-md.md)] syntax to specify a series of collections, object properties, and methods that return objects. Each object specifier in the series must be separated by a period (`.`).
 
 An item in the series can be the name of a collection. Use this syntax to specify a collection:
 
@@ -37,7 +37,7 @@ An item in the series can be the name of a collection. Use this syntax to specif
 Collection("item")
 ```
 
-The double quotation marks (`"`) are required. The [!INCLUDE [vbprvb](../../includes/vbprvb-md.md)] exclamation point (`!`) syntax for collections isn't supported.
+The double quotation marks (`"`) are required. The [!INCLUDE [visual-basic](../../includes/visual-basic-md.md)] exclamation point (`!`) syntax for collections isn't supported.
 
 #### *PropertyOrMethod*
 
@@ -61,7 +61,7 @@ If *PropertyOrMethod* is specified, the property or method of the *TraversedObje
 
 If any item in the *TraversedObject* list doesn't return an OLE object, an error is raised.
 
-For more information about [!INCLUDE [vbprvb](../../includes/vbprvb-md.md)] OLE object syntax, see the [!INCLUDE [vbprvb](../../includes/vbprvb-md.md)] documentation.
+For more information about [!INCLUDE [visual-basic](../../includes/visual-basic-md.md)] OLE object syntax, see the [!INCLUDE [visual-basic](../../includes/visual-basic-md.md)] documentation.
 
 For more information about `HRESULT` return codes, see [sp_OACreate (Transact-SQL)](sp-oacreate-transact-sql.md).
 
@@ -87,7 +87,7 @@ EXEC @hr = sp_OAMethod @object,
    @checkoutput OUT
 ```
 
-## See also
+## Related content
 
 - [OLE Automation Sample Script](../stored-procedures/ole-automation-sample-script.md)
 - [OLE Automation stored procedures (Transact-SQL)](ole-automation-stored-procedures-transact-sql.md)

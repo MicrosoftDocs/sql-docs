@@ -11,7 +11,7 @@ ms.topic: sample
 ms.custom:
   - sqldbrb=1
   - devx-track-azurepowershell
-ms.devlang: PowerShell
+ms.devlang: powershell
 ---
 # Use PowerShell to copy a database to a new server
 [!INCLUDE[appliesto-sqldb](../../includes/appliesto-sqldb.md)]

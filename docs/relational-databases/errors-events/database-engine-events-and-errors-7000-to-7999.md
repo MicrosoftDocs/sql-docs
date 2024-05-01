@@ -1,10 +1,9 @@
 ---
 title: "Database Engine events and errors (7000 to 7999)"
 description: "Consult this SQL Server error code list (between 7000 and 7999) to find explanations for error messages for SQL Server database engine events."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
-ms.date: 11/16/2023
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 01/11/2024
 ms.service: sql
 ms.subservice: supportability
 ms.topic: reference

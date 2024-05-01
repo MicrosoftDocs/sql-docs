@@ -25,7 +25,7 @@ ms.topic: conceptual
 > [!INCLUDE [ssSqlProfiler](../../includes/sssqlprofiler-md.md)] for Analysis Services workloads are supported.
 
 > [!NOTE]  
-> When you try to connect to a Azure SQL Database from SQL Server profiler, it incorrectly throws a misleading error message as follows:
+> When you try to connect to an Azure SQL Database from SQL Server profiler, it incorrectly throws a misleading error message as follows:
 >  
 > - In order to run a trace against SQL Server, you must be a member of sysadmin fixed server role or have the ALTER TRACE permission.
 >  

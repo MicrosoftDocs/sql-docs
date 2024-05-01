@@ -247,6 +247,10 @@ For example, if a table contains a **varbinary(max)** column that uses the FILES
 
 We recommend that you use the `PHYSICAL_ONLY` option for frequent use on production systems. Using `PHYSICAL_ONLY` can greatly shorten run-time for `DBCC CHECKDB` on large databases. We also recommend that you periodically run `DBCC CHECKDB` with no options. How frequently you should perform these runs depends on individual businesses and their production environments.
 
+`DBCC CHECKDB` requires at least as much storage space as the size of the specified database. You might need to temporarily scale up your storage capacity when it runs. If `DBCC CHECKDB` consumes all available storage space during execution, you receive the following error message:
+
+> Operation on target ExecProc failed: Execution fail against sql server. Please contact SQL Server team if you need further support. Sql error number: 9001. Error Message: The log for database '' is not available. Check the operating system error log for related error messages. Resolve any errors and restart the database.
+
 ## Check objects in parallel
 
 By default, `DBCC CHECKDB` performs parallel checking of objects. The degree of parallelism is automatically determined by the query processor. The maximum degree of parallelism is configured just like parallel queries. To restrict the maximum number of processors available for DBCC checking, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Parallel checking can be disabled by using Trace Flag 2528. For more information, see [Trace Flags (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).

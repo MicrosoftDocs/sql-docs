@@ -15,7 +15,7 @@ IF NOT EXISTS (SELECT * FROM sys.certificates
 CREATE CERTIFICATE [cert_keySubscriber] 
 	WITH SUBJECT = 'Subscriber Key Protection';
 
--- Create the key_DataShare symmetric key if it doesn't exist.
+-- Create the key_ReplDataShare symmetric key if it doesn't exist.
 IF NOT EXISTS (SELECT * FROM sys.symmetric_keys 
 	WHERE [name] = 'key_ReplDataShare')
 CREATE SYMMETRIC KEY [key_ReplDataShare] WITH

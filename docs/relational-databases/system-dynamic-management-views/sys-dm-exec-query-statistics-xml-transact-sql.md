@@ -59,7 +59,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 >Trace Flag 2446 isn't meant to be enabled continuously in a production environment, but only for time-limited troubleshooting purposes. Using this trace flag will introduce additional and possibly significant CPU and memory overhead as we will create a Showplan XML fragment with runtime parameter information, whether the ``sys.dm_exec_query_statistics_xml`` DMV is called or not.
 
 > [!NOTE]
->Starting with [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], [!INCLUDE[Azure SQL Database](../../includes/ssazure-sqldb.md)], and [!INCLUDE[Azure SQL Managed Instance](../../includes/ssazuremi_md.md)], to accomplish this at the database level see the FORCE_SHOWPLAN_RUNTIME_PARAMETER_COLLECTION option in [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+>Starting with [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], [!INCLUDE[Azure SQL Database](../../includes/ssazure-sqldb.md)], and [!INCLUDE[Azure SQL Managed Instance](../../includes/ssazuremi-md.md)], to accomplish this at the database level see the FORCE_SHOWPLAN_RUNTIME_PARAMETER_COLLECTION option in [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 This system function is available starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1. See KB [3190871](https://support.microsoft.com/help/3190871)
 
@@ -73,7 +73,7 @@ Due to a limitation in the number of nested levels allowed in the **xml** data t
 
 ## Permissions  
 On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission on the server.  
-On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the **Server admin** or an **Azure Active Directory admin** account.
+On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the **Server admin** or a [Microsoft Entra admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account.
 
 ### Permissions for SQL Server 2022 and later
 
@@ -129,4 +129,3 @@ GO
   [Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Database Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
-

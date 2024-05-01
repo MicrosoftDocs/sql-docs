@@ -1,8 +1,7 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
-ms.date: 07/06/2023
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 01/11/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -194,6 +193,61 @@ ms.topic: include
 | 11428 | 16 | No | Column '%.\*ls' cannot be altered online to an XML type that has a schema collection. The operation must be performed offline. |
 | 11429 | 16 | No | The online ALTER COLUMN statement failed for table '%.\*ls' because the table has change tracking enabled or is marked for merge replication. Disable change tracking and merge replication before using online ALTER COLUMN or perform the operation offline. |
 | 11430 | 16 | No | Cannot enable change data capture on column '%.\*ls'. Change data capture is not supported for encrypted columns. |
+| 11501 | 16 | No | The batch could not be analyzed because of compile errors. |
+| 11502 | 16 | No | The type for parameter '%.\*ls' cannot be deduced in this context. |
+| 11503 | 16 | No | The parameter type cannot be deduced because a single expression contains two untyped parameters, '%.\*ls' and '%.\*ls'. |
+| 11504 | 16 | No | The discovered type with user type id %d in database %d is invalid. |
+| 11505 | 16 | No | The discovered type with the XML schema collection id %d in database %d is invalid. |
+| 11506 | 16 | No | The parameter type for '%.\*ls' cannot be uniquely deduced; two possibilities are '%ls' and '%ls'. |
+| 11507 | 16 | No | The parameter type for '%.\*ls' cannot be deduced because no type would make the query valid. |
+| 11508 | 16 | No | The undeclared parameter '%.\*ls' is used more than once in the batch being analyzed. |
+| 11509 | 16 | No | The metadata could not be determined because the statement '%.\*ls' is not compatible with the statement '%.\*ls'. |
+| 11510 | 16 | No | The metadata could not be determined because the statement '%.\*ls' in the main batch is not compatible with the statement '%.\*ls' in procedure '%.\*ls'. |
+| 11511 | 16 | No | The metadata could not be determined because the statement '%.\*ls' in procedure '%.\*ls' is not compatible with the statement '%.\*ls' in the main batch. |
+| 11512 | 16 | No | The metadata could not be determined because the statement '%.\*ls' in procedure '%.\*ls' is not compatible with the statement '%.\*ls' in procedure '%.\*ls'. |
+| 11513 | 16 | No | The metadata could not be determined because statement '%.\*ls' contains dynamic SQL. Consider using the WITH RESULT SETS clause to explicitly describe the result set. |
+| 11514 | 16 | No | The metadata could not be determined because statement '%.\*ls' in procedure '%.\*ls' contains dynamic SQL. Consider using the WITH RESULT SETS clause to explicitly describe the result set. |
+| 11515 | 16 | No | The metadata could not be determined because statement '%.\*ls' invokes a CLR procedure. Consider using the WITH RESULT SETS clause to explicitly describe the result set. |
+| 11516 | 16 | No | The metadata could not be determined because statement '%.\*ls' in procedure '%.\*ls' invokes a CLR procedure. Consider using the WITH RESULT SETS clause to explicitly describe the result set. |
+| 11517 | 16 | No | The metadata could not be determined because statement '%.\*ls' invokes a CLR trigger. |
+| 11518 | 16 | No | The metadata could not be determined because statement '%.\*ls' in procedure '%.\*ls' invokes a CLR trigger. |
+| 11519 | 16 | No | The metadata could not be determined because statement '%.\*ls' invokes an extended stored procedure. |
+| 11520 | 16 | No | The metadata could not be determined because statement '%.\*ls' in procedure '%.\*ls' invokes an extended stored procedure. |
+| 11521 | 16 | No | The metadata could not be determined because statement '%.\*ls' uses an undeclared parameter in a context that affects its metadata. |
+| 11522 | 16 | No | The metadata could not be determined because statement '%.\*ls' in procedure '%.\*ls' uses an undeclared parameter in a context that affects its metadata. |
+| 11523 | 16 | No | The metadata could not be determined because statement '%.\*ls' causes indirect recursion. |
+| 11524 | 16 | No | The metadata could not be determined because statement '%.\*ls' in procedure '%.\*ls' causes indirect recursion. |
+| 11525 | 16 | No | The metadata could not be determined because statement '%.\*ls' uses a temp table. Metadata discovery only supports temp tables when analyzing a single-statement batch. |
+| 11526 | 16 | No | The metadata could not be determined because statement '%.\*ls' in procedure '%.\*ls' uses a temp table. |
+| 11527 | 16 | No | The metadata could not be determined because statement '%.\*ls' does not support metadata discovery. |
+| 11528 | 16 | No | The metadata could not be determined because statement '%.\*ls' in procedure '%.\*ls' does not support metadata discovery. |
+| 11529 | 16 | No | The metadata could not be determined because every code path results in an error; see previous errors for some of these. |
+| 11530 | 16 | No | The metadata could not be determined because there are no code paths that reach the end of the batch. |
+| 11531 | 16 | No | The object id '%d' passed to sys.dm_exec_describe_first_result_set_for_object refers to an object which is not a T-SQL procedure or trigger. |
+| 11532 | 16 | No | The object id '%d' passed to sys.dm_exec_describe_first_result_set_for_object was invalid. |
+| 11533 | 16 | No | Type '%.\*ls' is not a valid object name for result set definition. |
+| 11534 | 16 | No | Type '%.\*ls' is invalid or not a table type. |
+| 11535 | 16 | No | EXECUTE statement failed because its WITH RESULT SETS clause specified %d result set(s), and the statement tried to send more result sets than this. |
+| 11536 | 16 | No | EXECUTE statement failed because its WITH RESULT SETS clause specified %d result set(s), but the statement only sent %d result set(s) at run time. |
+| 11537 | 16 | No | EXECUTE statement failed because its WITH RESULT SETS clause specified %d column(s) for result set number %d, but the statement sent %d column(s) at run time. |
+| 11538 | 16 | No | EXECUTE statement failed because its WITH RESULT SETS clause specified type '%ls' for column #%d in result set #%d, and the corresponding type sent at run time was '%ls'; there is no conversion between the two types. |
+| 11539 | 16 | No | One of the types specified in WITH RESULT SETS clause has been modified after the EXECUTE statement started running. Please rerun the statement. |
+| 11541 | 16 | No | sp_describe_first_result_set cannot be invoked when SET STATISTICS XML or SET STATISTICS PROFILE is on. |
+| 11542 | 16 | No | sp_describe_undeclared_parameters failed to discover parameter metadata for remote procedure call because parameters were passed by name and by name parameter metadata discovery failed. |
+| 11543 | 16 | No | SET STATISTICS XML ON and SET STATISTICS PROFILE ON are not allowed inside any procedure or batch that executes through an EXECUTE statement that has a WITH RESULT SETS clause. |
+| 11544 | 16 | No | Could not deduce type for parameter in position '%d' for remote call to module '%.\*ls'. |
+| 11545 | 16 | No | Remote result set discovery cannot be done inside SELECT INTO. |
+| 11546 | 16 | No | sp_showmemo_xml cannot run when the STATISTICS XML, STATISTICS PROFILE or SHOWPLAN set option is on. Set these options to OFF and re-run sp_showmemo_xml. |
+| 11547 | 16 | No | Only one statement can be used as input parameter to sp_showmemo_xml. Modify the input parameter and re-run the stored procedure. |
+| 11548 | 16 | No | The stored procedure 'sp_showmemo_xml' is not available in this edition of SQL Server. |
+| 11549 | 16 | No | Using stored procedures is not supported. Modify the input parameter and re-run sp_showmemo_xml. |
+| 11550 | 16 | No | The metadata could not be determined because remote metadata discovery failed for statement '%.\*ls'. |
+| 11551 | 16 | No | The metadata could not be determined because remote metadata discovery failed for statement '%.\*ls' in procedure '%.\*ls'. |
+| 11552 | 16 | No | The @browse_information_mode parameter expects a tinyint with values 0, 1 or 2. |
+| 11553 | 16 | No | EXECUTE statement failed because its WITH RESULT SETS clause specified a non-nullable type for column #%d in result set #%d, and the corresponding value sent at run time was null. |
+| 11554 | 16 | No | Cannot assign NULL to non-nullable variable or parameter '%.\*ls'. |
+| 11555 | 15 | No | The parameter '%.\*ls' has been declared as NOT NULL. NOT NULL parameters are only supported with natively compiled modules, except for inline table-valued functions. |
+| 11556 | 16 | No | The stored procedure 'sp_get_database_scoped_credential' is not available in this edition of SQL Server. |
 | 11601 | 15 | No | %ls statements with a '%.\*ls' option are not allowed. |
 | 11602 | 10 | No | %ls statements are not verified. |
 | 11603 | 15 | No | %ls statements are not allowed at the top level. |

@@ -3,8 +3,8 @@ title: "Optimized locking"
 description: "Learn about the optimized locking enhancement to the Database Engine."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest, peskount
-ms.date: 10/09/2023
+ms.reviewer: randolphwest, peskount, praspu
+ms.date: 02/22/2024
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -80,9 +80,9 @@ When multiple transactions are allowed to access the same data concurrently, the
 
 ### Optimized locking and transaction ID (TID) locking
 
-Every row in the Database Engine internally contains a transaction ID (TID) when row versioning is in use. This TID is persisted on disk. Every transaction modifying a row will stamp that row with its TID.
+Every row in the Database Engine internally contains a transaction ID (TID) when row versioning is in use. This TID is persisted on disk. Every transaction modifying a row stamps that row with its TID.
 
-With TID locking, instead of taking the lock on the key of the row, a lock is taken on the TID of the row. The modifying transaction will hold an X lock on its TID. Other transactions will acquire an S lock on the TID to check if the first transaction is still active. With TID locking, page and row locks continue to be taken for updates, but each page and row lock is released as soon as each row is updated. The only lock held until end of transaction is the X lock on the TID resource, replacing page and row (key) locks as demonstrated in the next demo. (Other standard database and object locks are not affected by optimized locking.)
+With TID locking, instead of taking the lock on the key of the row, a lock is taken on the TID of the row. The modifying transaction holds an X lock on its TID. Other transactions acquire an S lock on the TID to check if the first transaction is still active. With TID locking, page and row locks continue to be taken for updates, but each page and row lock is released as soon as each row is updated. The only lock held until end of transaction is the X lock on the TID resource, replacing page and row (key) locks as demonstrated in the next demo. (Other standard database and object locks are not affected by optimized locking.)
 
 Optimized locking helps to reduce lock memory as very few locks are held for large transactions. In addition, optimized locking also avoids lock escalations. This allows other concurrent transactions to access the table.
 
@@ -148,7 +148,7 @@ The behavior of blocking changes with optimized locking in the previous example.
 
 However, with optimized locking, Session 2 will not be blocked as the latest committed version of row 1 contains a=1, which does not satisfy the predicate of Session 2.
 
-If the predicate is satisfied, we wait for any active transaction on the row to finish. If we had to wait for the S TID lock, the row might have changed, and the latest committed version might have changed. In that case, instead of aborting the transaction due to an update conflict, the Database Engine will retry the predicate evaluation on the same row. If the predicate qualifies upon retry, the row will be updated.
+If the predicate is satisfied, we wait for any active transaction on the row to finish. If we had to wait for the S TID lock, the row might have changed, and the latest committed version might have changed. In that case, instead of aborting the transaction due to an update conflict, the Database Engine retries the predicate evaluation on the same row. If the predicate qualifies upon retry, the row will be updated.
 
 Consider the following example when a predicate change is automatically retried:
 
@@ -196,7 +196,7 @@ Without LAQ, transaction T2 will be blocked and wait for the transaction T1 to c
 
 After both transactions commit, table `t1` will contain the following rows:
 
-```
+```output
  a | b
  1 | 3
 ```
@@ -207,7 +207,7 @@ With LAQ, transaction T2 will use the latest committed version of the row b (`b`
 
 After both transactions commit, table `t1` will contain the following rows:
 
-```
+```output
  a | b
  1 | 2
 ```
@@ -221,9 +221,9 @@ To support monitoring and troubleshooting of blocking and deadlocking with optim
 
 - Wait types for optimized locking
     - `XACT` wait types and resource descriptions in [sys.dm_os_wait_stats (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md#lck_m_s_xact):
-        - `LCK_M_S_XACT_READ` - Occurs when a task is waiting for a shared lock on an XACT `wait_resource` type, with an intent to read.
-        - `LCK_M_S_XACT_MODIFY` - Occurs when a task is waiting for a shared lock on an XACT `wait_resource` type, with an intent to modify.
-        - `LCK_M_S_XACT` - Occurs when a task is waiting for a shared lock on an XACT `wait_resource` type, where the intent cannot be inferred. Rare.
+        - `LCK_M_S_XACT_READ` - Occurs when a task is waiting for a shared lock on an `XACT` `wait_resource` type, with an intent to read.
+        - `LCK_M_S_XACT_MODIFY` - Occurs when a task is waiting for a shared lock on an `XACT` `wait_resource` type, with an intent to modify.
+        - `LCK_M_S_XACT` - Occurs when a task is waiting for a shared lock on an `XACT` `wait_resource` type, where the intent cannot be inferred. Rare.
 - Locking resources visibility
     - `XACT` locking resources. For more information, see `resource_description` in [sys.dm_tran_locks (Transact-SQL)](../system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).
 - Wait resource visibility
@@ -241,13 +241,13 @@ To maximize the benefits of optimized locking, it is recommended to enable [read
 ALTER DATABASE databasename SET READ_COMMITTED_SNAPSHOT ON;
 ```
 
-In [!INCLUDE [asdb](../../includes/ssazure-sqldb.md)], RCSI is enabled by default and read committed is the default isolation level. With RCSI enabled and when using read committed isolation level, readers don't block writers and writers don't block readers. Readers read a version of the row from the snapshot taken at the start of the query. With LAQ, writers will qualify rows per the predicate based on the latest committed version of the row without acquiring U locks. With LAQ, a query will wait only if the row qualifies and there is an active write transaction on that row. Qualifying based on the latest committed version and locking only the qualified rows reduces blocking and increases concurrency.
+In [!INCLUDE [asdb](../../includes/ssazure-sqldb.md)], RCSI is enabled by default and read committed is the default isolation level. With RCSI enabled and when using read committed isolation level, readers don't block writers, and writers don't block readers. Readers read a version of the row from the snapshot taken at the start of the query. With LAQ, writers will qualify rows per the predicate based on the latest committed version of the row without acquiring U locks. With LAQ, a query will wait only if the row qualifies and there is an active write transaction on that row. Qualifying based on the latest committed version and locking only the qualified rows reduces blocking and increases concurrency.
 
 In addition to reduced blocking, the lock memory required will be reduced. This is because readers don't take any locks, and writers take only short duration locks, instead of locks that expire at the end of the transaction. When using stricter isolation levels like repeatable read or serializable, the Database Engine is forced to hold row and page locks until the end of the transaction, for both readers and writers, resulting in increased blocking and lock memory.
 
 ### Avoid locking hints
 
-While [table and query hints](../../t-sql/queries/hints-transact-sql.md) are honored, they reduce the benefit of optimized locking. Lock hints like UPDLOCK, READCOMMITTEDLOCK, XLOCK, HOLDLOCK, etc., in your queries reduce the full benefits of optimized locking. Having such lock hints in the queries forces the Database Engine to take row/page locks and hold them until the end of the transaction, to honor the intent of the lock hints. Some applications have logic where lock hints are needed, for example when reading a row with select with UPDLOCK and then updating it later. We recommend using lock hints only where needed.
+While [table and query hints](../../t-sql/queries/hints-transact-sql.md) are honored, they reduce the benefit of optimized locking. Lock hints like `UPDLOCK`, `READCOMMITTEDLOCK`, `XLOCK`, `HOLDLOCK`, etc., in your queries reduce the full benefits of optimized locking. Having such lock hints in the queries forces the Database Engine to take row/page locks and hold them until the end of the transaction, to honor the intent of the lock hints. Some applications have logic where lock hints are needed, for example when reading a row with select with `UPDLOCK` and then updating it later. We recommend using lock hints only where needed.
 
 With optimized locking, there are no restrictions on existing queries and queries do not need to be rewritten. Queries that are not using hints will benefit most from optimized locking.
 
@@ -279,7 +279,7 @@ FROM t3 WITH (REPEATABLEREAD)
 INNER JOIN t4 ON t3.a = t4.a;
 ```
 
-In the previous query example, only table `t3` will use the repeatable read isolation level, and will hold locks until the end of the transaction. Other updates to `t3` can still benefit from optimized locking. The same applies to the HOLDLOCK hint.
+In the previous query example, only table `t3` will use the repeatable read isolation level, and will hold locks until the end of the transaction. Other updates to `t3` can still benefit from optimized locking. The same applies to the `HOLDLOCK` hint.
 
 ## Frequently asked questions (FAQ)
 
@@ -294,7 +294,7 @@ Optimized locking is available in the following service tiers:
 
 Optimized locking is not currently available in:
 
-- [!INCLUDE [Azure SQL Managed Instance](../../includes/ssazuremi_md.md)]
+- [!INCLUDE [Azure SQL Managed Instance](../../includes/ssazuremi-md.md)]
 - [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
 
 ### Is optimized locking on by default in both new and existing databases?
@@ -311,29 +311,7 @@ If ADR is disabled, optimized locking is automatically disabled as well.
 
 ### What if I want to force queries to block despite optimized locking?
 
-For customers using RCSI, to force blocking between two queries when optimized locking is enabled, use the READCOMMITTEDLOCK query hint.
-
-### Can I disable optimized locking?
-
-Currently, customers can create a support request to disable optimized locking.
-
-Use the following steps to create a new support request from the Azure portal for Azure SQL Database.
-
-1. First, verify that [optimized locking is enabled for your database](#is-optimized-locking-enabled).
-1. On the [Azure portal](https://portal.azure.com) menu, select **Help + support**.
-
-   :::image type="content" source="media/optimized-locking/help-plus-support.png" alt-text="A screenshot of the Azure portal identifying the help and support link.":::
-
-1. In **Help + support**, select **Create a support request**.
-
-    :::image type="content" source="media/optimized-locking/new-support-request.png" alt-text="A screenshot of the Azure portal showing how to create a new support request.":::
-
-1. For **Issue type**, select **Technical**.
-1. For **Subscription**, **Service**, and **Resource**, select the desired **SQL Database**.
-1. In **Summary**, type "Disable optimized locking".
-1. For **Problem Type**, choose **Performance and Query Execution**.
-1. For **Problem Subtype**, choose **Blocking and deadlocks**.
-1. In **Additional details**, provide as much information as possible for why you would like to disable optimized locking. We are interested to review the reasons and use cases for disabling optimized locking with you.
+For customers using RCSI, to force blocking between two queries when optimized locking is enabled, use the `READCOMMITTEDLOCK` query hint.
 
 ## Related content
 

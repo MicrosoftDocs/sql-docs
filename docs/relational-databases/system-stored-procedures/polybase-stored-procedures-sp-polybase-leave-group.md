@@ -58,7 +58,7 @@ The example removes the current machine from a PolyBase group.
 EXEC sp_polybase_leave_group;
 ```
 
-## See also
+## Related content
 
 - [Get started with PolyBase](../polybase/polybase-guide.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

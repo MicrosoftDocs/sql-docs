@@ -31,7 +31,6 @@ sp_unsetapprole [ @cookie = ] cookie
 [ ; ]
 ```
 
-
 ## Arguments
 
 #### [ @cookie = ] *cookie*
@@ -83,7 +82,7 @@ SELECT USER_NAME();
 GO
 ```
 
-## See also
+## Related content
 
 - [sp_setapprole (Transact-SQL)](sp-setapprole-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

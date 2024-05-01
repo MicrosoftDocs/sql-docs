@@ -151,7 +151,7 @@ For an example of using trace stored procedures, see [Create a Trace (Transact-S
 
 Requires ALTER TRACE permission.
 
-## See also
+## Related content
 
 - [sp_trace_generateevent (Transact-SQL)](sp-trace-generateevent-transact-sql.md)
 - [sp_trace_setevent (Transact-SQL)](sp-trace-setevent-transact-sql.md)

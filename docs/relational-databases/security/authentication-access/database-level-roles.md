@@ -120,7 +120,7 @@ Some database roles aren't applicable to Azure SQL or Azure Synapse:
 |[sp_helprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)|Metadata|Returns information about the roles in the current database.|  
 |[sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)|Metadata|Returns information about the members of a role in the current database.|  
 |[sys.database_role_members &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)|Metadata|Returns one row for each member of each database role.|  
-|[IS_MEMBER &#40;Transact-SQL&#41;](../../../t-sql/functions/is-member-transact-sql.md)|Metadata|Indicates whether the current user is a member of the specified Microsoft Windows group or Microsoft SQL Server database role.|  
+|[IS_MEMBER &#40;Transact-SQL&#41;](../../../t-sql/functions/is-member-transact-sql.md)|Metadata|Indicates whether the current user is a member of the specified Microsoft Windows group, Microsoft Entra group, or Microsoft SQL Server database role.|
 |[CREATE ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-role-transact-sql.md)|Command|Creates a new database role in the current database.|  
 |[ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md)|Command|Changes the name or membership of a database role.|  
 |[DROP ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-role-transact-sql.md)|Command|Removes a role from the database.|  
@@ -155,9 +155,9 @@ GO
 The following statement returns all members of any database role. 
 
 ```sql  
-SELECT    roles.principal_id                            AS RolePrincipalID
-    ,    roles.name                                    AS RolePrincipalName
-    ,    database_role_members.member_principal_id    AS MemberPrincipalID
+SELECT   roles.principal_id                          AS RolePrincipalID
+    ,    roles.name                                  AS RolePrincipalName
+    ,    database_role_members.member_principal_id   AS MemberPrincipalID
     ,    members.name                                AS MemberPrincipalName
 FROM sys.database_role_members AS database_role_members  
 JOIN sys.database_principals AS roles  

@@ -3,7 +3,7 @@ title: "Plan adoption of in-memory OLTP "
 description: Learn how the adoption of In-Memory OLTP features in SQL Server affects other aspects of your business system.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "01/28/2019"
+ms.date: 12/15/2023
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: conceptual
@@ -12,19 +12,15 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 # Plan your adoption of In-Memory OLTP Features in SQL Server
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
+This article describes the ways in which the adoption of in-memory features in SQL Server affects other aspects of your business system.
 
-This article describes the ways in which the adoption of In-Memory features affects other aspects of your business system.
-
-
+> [!NOTE]
+> - For more information specific to in-memory data in Azure SQL Database, see [Optimize performance by using in-memory technologies in Azure SQL Database](/azure/azure-sql/database/in-memory-oltp-overview?view=azuresql-db&preserve-view=true) and [Blog: [!INCLUDE [inmemory](../../includes/inmemory-md.md)] in Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/).
+> - For more information specific to in-memory data in Azure SQL Managed Instance, see [Optimize performance by using in-memory technologies in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/in-memory-oltp-overview?view=azuresql-mi&preserve-view=true).
 
 ## A. Adoption of In-Memory OLTP features
 
-
-The following subsections discuss factors you must consider when you plan to adopt and implement In-Memory features. A lot of explanatory information is available at:
-
-- [Use In-Memory OLTP to improve your application performance in Azure SQL Database](/azure/azure-sql/in-memory-oltp-configure)
-
-
+The following subsections discuss factors you must consider when you plan to adopt and implement In-Memory features. 
 
 ### A.1 Prerequisites
 
@@ -40,20 +36,24 @@ Does your system have enough active memory to support a new memory-optimized tab
 
 #### Microsoft SQL Server
 
-A memory-optimized table which contains 200 GB of data requires more than 200 GB of active memory be dedicated to its support. Before you implement a memory-optimized table containing a large amount of data, you must forecast the amount of additional active memory you might need to add to your server computer. For estimation guidance, see:
+A memory-optimized table that contains 200 GB of data requires more than 200 GB of active memory be dedicated to its support. Before you implement a memory-optimized table containing a large amount of data, you must forecast the amount of additional active memory you might need to add to your server computer. For estimation guidance, see:
 
 - [Estimate Memory Requirements for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)
+
+Similar guidance is available for Azure SQL Managed Instance:
+
+- [Monitor In-Memory OLTP storage in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/in-memory-oltp-monitor-space?view=azuresql-mi&preserve-view=true)
 
 #### Azure SQL Database
 
 For a database hosted in the Azure SQL Database cloud service, your chosen service tier affects the amount of active memory your database is allowed to consume. You should plan to monitor the memory usage of your database by using an alert. For details, see:
 
 - Review the In-Memory OLTP Storage limits for your [Pricing Tier](/azure/sql-database/sql-database-purchase-models)
-- [Monitor In-Memory OLTP Storage](/azure/azure-sql/in-memory-oltp-monitor-space)
+- [Monitor In-Memory OLTP storage in Azure SQL Database](/azure/azure-sql/database/in-memory-oltp-monitor-space?view=azuresql-db&preserve-view=true)
 
 #### Memory-optimized table variables
 
-A table variable which is declared to be memory-optimzed is sometimes a preferable to a traditional #TempTable that resides in the **tempdb** database. Such table variables can provide significant performance gains without using significant amounts of active memory.
+A table variable which is declared to be memory-optimized is sometimes preferable to a traditional #TempTable that resides in the `tempdb` database. Table variables can provide performance gains without using significant amounts of active memory.
 
 ### A.3 Table must be offline to convert to memory-optimized
 
@@ -91,7 +91,7 @@ The Memory Optimization Advisor tool can generate a script to help implement the
 
 #### .dacpac file
 
-You can update your database in-place by using a .dacpac file, managed by SSDT. In SSDT you can specify changes to the schema that is encoded in the .dacpac file.
+You can update your database in-place by using a .dacpac file, managed by SSDT. In SSDT, you can specify changes to the schema that is encoded in the .dacpac file.
 
 You work with .dacpac files in the context of a Visual Studio project of type *Database*.
 
@@ -109,7 +109,7 @@ For guidance on whether In-Memory OLTP features can improve the performance of y
 
 ## B. Unsupported features
 
-Features which are not supported in certain In-Memory OLTP scenarios are described at:
+Features that are not supported in certain In-Memory OLTP scenarios are described at:
 
 - [Unsupported SQL Server Features for In-Memory OLTP](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)
 
@@ -179,9 +179,7 @@ The [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-s
 
 5. INSERT INTO the memory-optimized tables the data you temporarily stored in the disk-based tables.
 
-6. DROP the disk-based tables which temporarily held the data.
-
-
+6. DROP the disk-based tables that temporarily held the data.
 
 ## D. Performance
 
@@ -250,11 +248,11 @@ Particular elements of Transact-SQL are not supported in natively compiled T-SQL
 
 - [Supported Features for Natively Compiled T-SQL Modules](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)
 
-For considerations when migrating a Transact-SQL modules that uses unsupported features to natively compiled, see:
+For considerations when migrating a Transact-SQL module that uses unsupported features to be natively compiled, see:
 
 - [Migration Issues for Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)
 
-Besides limitations on certain elements of Transact-SQL, there are also limitation on query operators supported in natively compiled T-SQL modules. Because of these limitations, natively compiled stored procedures are not suitable for analytical queries that process large data sets.
+Besides limitations on certain elements of Transact-SQL, there are also limitations on query operators supported in natively compiled T-SQL modules. Because of these limitations, natively compiled stored procedures are not suitable for analytical queries that process large data sets.
 
 #### No parallel processing in a native proc
 
@@ -263,25 +261,21 @@ Parallel processing cannot be a part of any query plan for a native proc. Native
 
 #### Join types
 
-
-Neither a hash join nor a merge join can be a part of any query plan for a native proc. Nested loop joins are used.
-
+Both hash joins and merge joins cannot be a part of any query plan for a native proc. Nested loop joins are used.
 
 #### No hash aggregation
 
 When the query plan for a native proc requires an aggregation phase, only stream aggregation is available. Hash aggregation is not supported in a query plan for a native proc.
 
-- Hash aggregation is better when data from a large number of rows must aggregated.
-
-
+- Hash aggregation is better when data from a large number of rows must be aggregated.
 
 ## F. Application design: Transactions and retry logic
 
-A transaction involving a memory-optimized table can become dependent on another transaction which involves the same table. If the count of dependent transactions reaches exceeds the allowed maximum, all the dependent transactions fail.
+A transaction involving a memory-optimized table can become dependent on another transaction that involves the same table. If the count of dependent transactions reaches the allowed maximum, all the dependent transactions fail.
 
 In SQL Server 2016:
 
-- The allowed maximum is 8 dependent transactions. 8 is also the limit of transactions that any given transaction can be dependent on.
+- The allowed maximum is eight dependent transactions. Eight is also the limit of transactions that any given transaction can be dependent on.
 - The error number is 41839. (In SQL Server 2014 the error number is 41301.)
 
 
@@ -290,8 +284,6 @@ You can make your Transact-SQL scripts more robust against a possible transactio
 - [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)
 - [Transaction dependency limits with memory optimized tables - Error 41839](/archive/blogs/sqlcat/transaction-dependency-limits-with-memory-optimized-tables-error-41839)
 
-
-
-## Related links
+## Related content
 
 - [In-Memory OLTP (In-Memory Optimization)](./overview-and-usage-scenarios.md)

@@ -4,7 +4,7 @@ description: "sp_add_agent_parameter (Transact-SQL)"
 author: mashamsft
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 05/31/2023
+ms.date: 12/28/2023
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -37,7 +37,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 
 #### [ @profile_id = ] *profile_id*
 
-The ID of the profile from the **MSagent_profiles** table in the `msdb` database. *@profile_id* is **int**, with no default.
+The ID of the profile from the `MSagent_profiles` table in the `msdb` database. *@profile_id* is **int**, with no default.
 
 To find out what agent type this *@profile_id* represents, find the *@profile_id* in the [MSagent_profiles (Transact-SQL)](../system-tables/msagent-profiles-transact-sql.md) table, and note the `agent_type` field value. The values are as follows:
 
@@ -75,7 +75,7 @@ The value to be assigned to the parameter. *@parameter_value* is **nvarchar(255)
 
 Only members of the **sysadmin** fixed server role can execute `sp_add_agent_parameter`.
 
-## See also
+## Related content
 
 - [Work with Replication Agent Profiles](../replication/agents/work-with-replication-agent-profiles.md)
 - [Replication Agent Profiles](../replication/agents/replication-agent-profiles.md)

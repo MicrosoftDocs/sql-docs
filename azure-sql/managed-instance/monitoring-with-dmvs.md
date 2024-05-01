@@ -7,7 +7,7 @@ ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
 ms.date: 08/03/2022
 ms.service: sql-managed-instance
-ms.subservice: performance
+ms.subservice: monitoring
 ms.topic: how-to
 ms.custom:
   - azure-sql-split
@@ -668,7 +668,7 @@ Azure Monitor provides a variety of diagnostic data collection groups, metrics, 
 ## Next steps
 
 - [Introduction to Azure SQL Database and Azure SQL Managed Instance](../database/sql-database-paas-overview.md)
-- [Tune applications and databases for performance in Azure SQL Database and Azure SQL Managed Instance](../database/performance-guidance.md)
+- [Tune applications and databases for performance in Azure SQL Managed Instance](performance-guidance.md)
 - [Understand and resolve SQL Server blocking problems](/troubleshoot/sql/performance/understand-resolve-blocking)
 - [Analyze and prevent deadlocks in Azure SQL Managed Instance](/sql/relational-databases/sql-server-deadlocks-guide#deadlock_tools)
 - [sys.server_resource_stats (Azure SQL Managed Instance)](/sql/relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database)

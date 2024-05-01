@@ -23,7 +23,7 @@ To configure WSUS, you need to:
   
 -   Have the Analytics Platform System appliance domain administrator account login information.  
   
--   Have a Analytics Platform System login with permissions to access the **Admin Console** and view appliance state information.  
+-   Have an Analytics Platform System login with permissions to access the **Admin Console** and view appliance state information.  
   
 -   Know the IP address of the upstream WSUS server if you are planning to synchronize updates from an upstream WSUS server instead of synchronizing updates directly from Microsoft Update. Make sure your upstream WSUS server is set to allow anonymous connections and supports SSL.  
   

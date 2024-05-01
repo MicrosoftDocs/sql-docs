@@ -6,10 +6,10 @@ metadata:
   ms.service: sql-database
   ms.subservice: service-overview
   ms.topic: faq
-  author: NilsPohlmann
-  ms.author: nilsp
-  ms.reviewer: wiassaf, mathoma
-  ms.date: 09/26/2023
+  author: WilliamDAssafMSFT
+  ms.author: wiassaf
+  ms.reviewer: amapatil, mathoma
+  ms.date: 02/27/2024
   monikerRange: "=azuresql||=azuresql-db"
 
 title: Azure SQL Database free offer FAQ
@@ -17,22 +17,27 @@ summary: This article answers frequently asked questions on [the Azure SQL Datab
 sections:
   - name: General
     questions: 
+      - question: How long can I use the free offer?
+        answer: |
+         The database is free forever, with monthly limits. There's no time limit.
+
       - question: What if I don't see the new offer and Apply Offer button?
         answer: |
-         There's a limit of one free amount database per subscription. You need to remove an existing free amount database to create another one. If you have recently deleted your free offer database, it takes up to one hour for the free offer banner to reappear.
+         There's a limit of one free database per subscription. You need to remove an existing free database to create another one. If you recently deleted your free offer database, it takes up to one hour for the free offer banner to reappear.
 
-      - question: Help! I'm no longer able to log in to my database.
+      - question: What if I delete my new offer database, can I get another?
+        answer: |
+         If you recently deleted your free offer database, it takes up to one hour for the free offer banner to reappear.
+
+      - question: Help! I'm no longer able to sign in to my database.
         answer: |
          Check the overview page for the database [on the Azure portal](https://portal.azure.com) to see whether you have any remaining free credits for the month. If you choose **Auto-pause the database until next month** option, once the free limits are met, the database in inaccessible until the start of the next calendar month. To continue usage for additional charges, go to the **Compute + Storage** tab and change the option to enable billing for additional usage of the database beyond the free amount.  
 
       - question: My vCore seconds are being used faster than I expected, how can I see what is using the vCore seconds?  
         answer: |
-         - Review the Azure SQL Database serverless [auto-pause troubleshooting article](/azure/azure-sql/database/serverless-tier-overview?tabs=general-purpose#auto-pause-troubleshooting) for tips on saving vCore seconds.
-         - Disconnect querying tools such as [Azure Data Studio](/azure-data-studio/download-azure-data-studio) and [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms), including the object explorer, when you're done using them. Leaving connections open may continue to consume credits.
-
-      - question: Can the serverless auto-pause setting be adjusted to less than 1 hour for the Azure SQL Database free offer?
-        answer: |
-         Not at this time.
+         - Track usage throughout the month with the "Free amount remaining" Azure Metric. For more information, see [Monitor and track service usage](free-offer.md#monitor-and-track-service-usage).
+         - Review the Azure SQL Database serverless [auto-pause troubleshooting article](/azure/azure-sql/database/serverless-tier-overview?tabs=general-purpose#auto-pause-troubleshooting) for tips on saving vCore seconds. 
+         - Disconnect querying tools such as [Azure Data Studio](/azure-data-studio/download-azure-data-studio) and [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms), including the Object Explorer, when you're done using them. Leaving connections open can continue to consume credits by preventing auto-pause.
 
       - question: Can I restore a database to the free offer database?
         answer: |
@@ -40,11 +45,11 @@ sections:
 
       - question: Is the Azure SQL Database free offer a production quality database?  
         answer: |
-         While the free offer database is built on the same General Purpose, production-quality infrastructure, the free amount doesn't come with an SLA and is recommended primarily for development and proof-of-concept scenarios. Since there are no charges, there are no credits for downtime.
+         While the free offer database is built on the same General Purpose, production-quality infrastructure, the free amount doesn't come with an service level agreement (SLA) and is recommended primarily for development and proof-of-concept scenarios. Since there are no charges, there are no credits for downtime.
 
       - question: Can I upgrade to a larger or more powerful database?  
         answer: |
-         Yes. If at any time you want to upgrade to larger database than the free amount allows, select your database in the Azure portal, go to the **Compute and Storage** tab, then switch the **Free Database offer** options to **Continue using database with additional charges**. This option unlocks the ability to scale up to a larger General Purpose database. If you wish to change service tiers, you need to turn off the **Free database offer** before changing to Hyperscale or Business Critical service tiers.
+         Yes. At any time, you can upgrade the service tier or compute tier of the database. Select your database in the Azure portal, go to the **Compute and Storage** tab, then switch the **Free Database offer** options to **Continue using database with additional charges**. This option unlocks the ability to scale up to a larger General Purpose database. If you wish to change service tiers, you need to turn off the **Free database offer** before changing to Hyperscale or Business Critical service tiers. Once you convert your free offer database to a paid service tier, you can't revert to the free offer.
 
       - question: Can I change the backup option to geo-redundant storage?
         answer: |
@@ -53,6 +58,10 @@ sections:
       - question: Can I use my Student subscription with the Azure SQL Database free offer database?
         answer: |
          There are multiple student offers. Currently, the Microsoft Azure for Students Starter offer is incompatible with this Azure SQL Database free offer. Instead, consider the [Azure for College Students offer](https://azure.microsoft.com/pricing/offers/ms-azr-0170p/) or the [Azure Free offer](https://azure.microsoft.com/pricing/offers/ms-azr-0044p/). If desired, the **Continue using database for additional charges** option can deduct from the starting credits.
+
+      - question: Will any unused vCore seconds in a month carry forward to the next month?
+        answer: |
+         No, vCore seconds reset at the start of each calendar month.
 
 additionalContent: |
  ## Next step

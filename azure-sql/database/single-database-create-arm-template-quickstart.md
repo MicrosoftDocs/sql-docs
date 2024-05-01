@@ -3,6 +3,7 @@ title: "Azure Resource Manager: Create a single database"
 description: Create a single database in Azure SQL Database using an Azure Resource Manager template.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: mathoma
 ms.date: 06/24/2020
 ms.service: sql-database
 ms.subservice: deployment-configuration
@@ -11,6 +12,8 @@ ms.custom: subject-armqs sqldbrb=1, mode-arm, devx-track-arm-template
 ---
 
 # Quickstart: Create a single database in Azure SQL Database using an ARM template
+
+[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 Creating a [single database](single-database-overview.md) is the quickest and simplest option for creating a database in Azure SQL Database. This quickstart shows you how to create a single database using an Azure Resource Manager template (ARM template).
 

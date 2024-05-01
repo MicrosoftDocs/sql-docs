@@ -146,7 +146,7 @@ sudo pcs property set cluster-recheck-interval=2min
 
 If you already have an availability group resource managed by a Pacemaker cluster, Pacemaker package 1.1.18-11.el7 introduced a behavior change for the `start-failure-is-fatal` cluster setting when its value is `false`. This change affects the failover workflow. If a primary replica experiences an outage, the cluster is expected to fail over to one of the available secondary replicas. Instead, users notice that the cluster keeps trying to start the failed primary replica. If that primary never comes online (because of a permanent outage), the cluster never fails over to another available secondary replica. Because of this change, a previously recommended configuration to set `start-failure-is-fatal` is no longer valid, and the setting needs to be reverted back to its default value of `true`.
 
-Additionally, the AG resource needs to be updated to include the `failover-timeout` property.
+Additionally, the AG resource needs to be updated to include the `failure-timeout` property.
 
 To update the property value to `true` run:
 
@@ -263,7 +263,7 @@ Manually fail over the availability group with `pcs`. Don't initiate failover wi
 
 The clustering layer is based on SUSE [High Availability Extension (HAE)](https://www.suse.com/products/highavailability) built on top of [Pacemaker](https://clusterlabs.org/).
 
-For more information on cluster configuration, resource agent options, management, best practices, and recommendations, see [SUSE Linux Enterprise High Availability Extension](https://documentation.suse.com/sle-ha/12-SP4/).
+For more information on cluster configuration, resource agent options, management, best practices, and recommendations, see [SUSE Linux Enterprise High Availability Extension](https://documentation.suse.com/sle-ha/12-SP5/).
 
 ### Roadmap
 
@@ -280,7 +280,7 @@ The procedure for creating an availability group for high availability differs b
    > [!IMPORTANT]  
    > Production environments require a fencing agent for high availability. The examples in this article don't use fencing agents. They are for testing and validation only.
    >
-   > A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. Currently, fencing isn't available in some cloud environments. For more information, see [SUSE Linux Enterprise High Availability Extension](https://documentation.suse.com/sle-ha/12-SP4/html/SLE-HA-all/cha-ha-fencing.html).
+   > A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. Currently, fencing isn't available in some cloud environments. For more information, see [SUSE Linux Enterprise High Availability Extension](https://documentation.suse.com/sle-ha/12-SP5/html/SLE-HA-all/cha-ha-fencing.html).
 
 1. [Add the availability group as a resource in the cluster](#configure-an-availability-group)
 
@@ -315,7 +315,7 @@ The first step is to configure the operating system on the cluster nodes. For th
    sudo crm_report -X "-p 3479" [...]
    ```
 
-   For more information, see the [SLES Administration Guide - Miscellaneous section](https://documentation.suse.com/sles/12-SP4/html/SLES-all/part-trouble.html).
+   For more information, see the [SLES Administration Guide - Miscellaneous section](https://documentation.suse.com/sles/12-SP5/html/SLES-all/part-trouble.html).
 
 ### Create a SQL Server login for Pacemaker
 
@@ -329,7 +329,7 @@ On Linux servers, configure the availability group and then configure the cluste
 
 1. Install the High Availability extension
 
-   For reference, see [Installing SUSE Linux Enterprise Server and High Availability Extension](https://documentation.suse.com/sle-ha/12-SP4/html/SLE-HA-install-quick/art-ha-install-quick.html).
+   For reference, see [Installing SUSE Linux Enterprise Server and High Availability Extension](https://documentation.suse.com/sle-ha/12-SP5/html/SLE-HA-all/art-ha-install-quick.html).
 
 1. Install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] resource agent package on both nodes.
 
@@ -339,7 +339,7 @@ On Linux servers, configure the availability group and then configure the cluste
 
 ### Set up the first node
 
-   Refer to [SLES installation instructions](https://documentation.suse.com/sle-ha/12-SP4/).
+   Refer to [SLES installation instructions](https://documentation.suse.com/sle-ha/12-SP5/).
 
 1. Sign in as `root` to the physical or virtual machine you want to use as cluster node.
 1. Start the bootstrap script by executing:
@@ -384,7 +384,7 @@ If you have a cluster running with one or more nodes, add more cluster nodes wit
 If you have configured the existing cluster nodes with the `YaST` cluster module, make sure the following prerequisites are fulfilled before you run `ha-cluster-join`:
 
 - The root user on the existing nodes has SSH keys in place for passwordless login.
-- `Csync2` is configured on the existing nodes. For more information, see [Configuring Csync2 with YaST](https://documentation.suse.com/sle-ha/12-SP4/html/SLE-HA-all/cha-ha-setup.html#pro-ha-installation-setup-csync2-yast).
+- `Csync2` is configured on the existing nodes. For more information, see [Configuring Csync2 with YaST](https://documentation.suse.com/sle-ha/12-SP5/html/SLE-HA-all/cha-ha-setup.html#pro-ha-installation-setup-csync2-yast).
 
 1. Sign in as `root` to the physical or virtual machine supposed to join the cluster.
 1. Start the bootstrap script by executing:
@@ -438,7 +438,7 @@ crm configure property cluster-recheck-interval=2min
 
 If you already have an availability group resource managed by a Pacemaker cluster, Pacemaker package 1.1.18-11.el7 introduced a behavior change for the `start-failure-is-fatal` cluster setting when its value is `false`. This change affects the failover workflow. If a primary replica experiences an outage, the cluster is expected to fail over to one of the available secondary replicas. Instead, users notice that the cluster keeps trying to start the failed primary replica. If that primary never comes online (because of a permanent outage), the cluster never fails over to another available secondary replica. Because of this change, a previously recommended configuration to set `start-failure-is-fatal` is no longer valid, and the setting needs to be reverted back to its default value of `true`.
 
-Additionally, the AG resource needs to be updated to include the `failover-timeout` property.
+Additionally, the AG resource needs to be updated to include the `failure-timeout` property.
 
 To update the property value to `true` run:
 
@@ -468,7 +468,7 @@ Node level fencing ensures that a node doesn't run any resources. This is done b
 
 For more information, see:
 
-- [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/deprecated/en-US/Pacemaker/1.1/html/Clusters_from_Scratch)
+- [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/deprecated/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/index.html)
 - [Fencing and STONITH](https://clusterlabs.org/pacemaker/doc/crm_fencing.html)
 - [SUSE HA documentation: Fencing and STONITH](https://documentation.suse.com/sle-ha/15-SP1/)
 
@@ -483,7 +483,7 @@ sudo crm configure property stonith-enabled=true
 
 ### Configure the cluster resources for SQL Server
 
-Refer to the [SLES Administration Guide](https://documentation.suse.com/sle-ha/12-SP4/).
+Refer to the [SLES Administration Guide](https://documentation.suse.com/sle-ha/12-SP5/).
 
 ### Enable Pacemaker
 
@@ -579,7 +579,7 @@ Manually fail over the availability group with `crm`. Don't initiate failover wi
 
 For more information, see:
 
-- [SUSE Linux Enterprise High Availability Extension 12 SP4](https://documentation.suse.com/sle-ha/12-SP4/)
+- [SUSE Linux Enterprise High Availability Extension 12 SP4](https://documentation.suse.com/sle-ha/12-SP5/)
 - [Pacemaker Quick Reference](https://github.com/ClusterLabs/pacemaker/blob/master/doc/sphinx/Pacemaker_Administration/pcs-crmsh.rst)
 
 ## Related content
@@ -739,7 +739,7 @@ Resource level fencing ensures that no data corruption occurs if there's an outa
 
 Node level fencing ensures that a node doesn't run any resources. This is done by resetting the node, and the Pacemaker implementation is called STONITH. Pacemaker supports a great variety of fencing devices, for example, an uninterruptible power supply or management interface cards for servers.
 
-For more information, see [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/deprecated/en-US/Pacemaker/1.1/html/Clusters_from_Scratch) and [Fencing and Stonith](https://clusterlabs.org/pacemaker/doc/crm_fencing.html).
+For more information, see [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/deprecated/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/index.html) and [Fencing and Stonith](https://clusterlabs.org/pacemaker/doc/crm_fencing.html).
 
 Because the node level fencing configuration depends heavily on your environment, we disable it for this tutorial (it can be configured at a later time). Run the following script on the primary node:
 
@@ -761,7 +761,7 @@ sudo crm configure property cluster-recheck-interval=2min
 
 If you already have an availability group resource managed by a Pacemaker cluster, Pacemaker package 1.1.18-11.el7 introduced a behavior change for the `start-failure-is-fatal` cluster setting when its value is `false`. This change affects the failover workflow. If a primary replica experiences an outage, the cluster is expected to fail over to one of the available secondary replicas. Instead, users notice that the cluster keeps trying to start the failed primary replica. If that primary never comes online (because of a permanent outage), the cluster never fails over to another available secondary replica. Because of this change, a previously recommended configuration to set `start-failure-is-fatal` is no longer valid, and the setting needs to be reverted back to its default value of `true`.
 
-Additionally, the AG resource needs to be updated to include the `failover-timeout` property.
+Additionally, the AG resource needs to be updated to include the `failure-timeout` property.
 
 To update the property value to `true` run:
 

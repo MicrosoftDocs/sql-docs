@@ -52,6 +52,6 @@ EXEC sp_execute @P1, N'tempdb', N'ONLINE';
 EXEC sp_unprepare @P1;
 ```
 
-## See also
+## Related content
 
 - [sp_prepare (Transact SQL)](sp-prepare-transact-sql.md)

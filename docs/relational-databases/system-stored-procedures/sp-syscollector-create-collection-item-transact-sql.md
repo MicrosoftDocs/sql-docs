@@ -119,7 +119,7 @@ EXEC sp_syscollector_create_collection_item @collection_set_id = @collection_set
     @collection_item_id = @collection_item_id OUTPUT;
 ```
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Data collection](../data-collection/data-collection.md)

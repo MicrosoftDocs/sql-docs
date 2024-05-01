@@ -82,6 +82,6 @@ The following stored procedures are for internal use only:
 - sp_syscollector_event_onerror
 - sp_syscollector_event_onstatsupdate
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

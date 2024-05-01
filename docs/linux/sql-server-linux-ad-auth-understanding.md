@@ -24,8 +24,6 @@ This article provides you details on how Active Directory authentication works f
 
 LDAP is an application protocol for working with various directory services, including Active Directory. Directory services store user and account information, and security information such as passwords. That information is encrypted and then shared with other devices on the network.
 
-For more information on how Lightweight Directory Access Protocol over SSL (LDAPS) differs from LDAP, see [LDAP over SSL (LDAPS) Certificate](https://social.technet.microsoft.com/wiki/contents/articles/2980.ldap-over-ssl-ldaps-certificate.aspx#Enabling_LDAPS_for_Client_Authentication).
-
 To find out more about securing LDAP, see [How to enable LDAP signing in Windows Server](/troubleshoot/windows-server/identity/enable-ldap-signing-in-windows-server).
 
 ### Kerberos
@@ -47,8 +45,6 @@ Keytabs are used to either:
 
 - authenticate the service itself to another service on the network, or
 - decrypt the Kerberos service ticket of an inbound directory user to the service.
-
-For more information, see [Active Directory: Using Kerberos Keytabs to integrate non-Windows systems](https://social.technet.microsoft.com/wiki/contents/articles/36470.active-directory-using-kerberos-keytabs-to-integrate-non-windows-systems.aspx).
 
 ## What is a `krb5.conf` file?
 

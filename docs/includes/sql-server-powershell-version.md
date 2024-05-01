@@ -3,8 +3,10 @@ title: SQL Server PowerShell version includes
 description: Explains that the Sqlserver PowerShell module is the current SQL Server PowerShell command set.
 author: markingmyname
 ms.author: maghan
+ms.date: 01/29/2024
+ms.service: sql
+ms.topic: include
 ---
-
 
 > [!NOTE]
 > There are two SQL Server PowerShell modules; [SqlServer](/powershell/module/sqlserver) and [SQLPS](/powershell/module/sqlps).

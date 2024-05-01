@@ -8,6 +8,7 @@ ms.service: virtual-machines-sql
 ms.subservice: service-overview
 ms.topic: overview
 tags: azure-service-management
+ms.custom: linux-related-content
 ---
 # Overview of SQL Server on Linux Azure Virtual Machines
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]

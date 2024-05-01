@@ -66,7 +66,7 @@ int SQLGetPrivateProfileString(
 |ODBC_ERROR_OUT_OF_MEM|Out of memory|The installer could not perform the function because of a lack of memory.|  
   
 ## Comments  
- **SQLGetPrivateProfileString** is provided as a simple way to port drivers and driver setup DLLs from Microsoft® Windows® to Microsoft Windows NT®/Windows 2000. Calls to **GetPrivateProfileString** that retrieve a profile string from the Odbc.ini file should be replaced with calls to **SQLGetPrivateProfileString**. **SQLGetPrivateProfileString** calls functions in the Win32® API to retrieve the requested names of values or data corresponding to a value of the Odbc.ini subkey of the system information.  
+ **SQLGetPrivateProfileString** is provided as a simple way to port drivers and driver setup DLLs from Microsoft Windows to Microsoft Windows NT/Windows 2000. Calls to **GetPrivateProfileString** that retrieve a profile string from the Odbc.ini file should be replaced with calls to **SQLGetPrivateProfileString**. **SQLGetPrivateProfileString** calls functions in the Win32 API to retrieve the requested names of values or data corresponding to a value of the Odbc.ini subkey of the system information.  
   
  The configuration mode (as set by **SQLSetConfigMode**) indicates where the Odbc.ini entry listing DSN values is in the system information. If the DSN is a User DSN (the configuration mode is USERDSN_ONLY), the function reads from the Odbc.ini entry in HKEY_CURRENT_USER. If the DSN is a System DSN (SYSTEMDSN_ONLY), the function reads from the Odbc.ini entry in HKEY_LOCAL_MACHINE. If the configuration mode is BOTHDSN, HKEY_CURRENT_USER is tried, and if it fails, HKEY_LOCAL_MACHINE is used.  
   

@@ -6,13 +6,13 @@ ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "ODBC drivers [ODBC], 32-bit applications"
   - "32-bit applications with 32-bit drivers [ODBC]"
 ---
 # Using 32-Bit Applications with 32-Bit Drivers
-You can run 32-bit applications with 32-bit drivers. The 32-bit applications and the 32-bit drivers use the Win32® API.  
+You can run 32-bit applications with 32-bit drivers. The 32-bit applications and the 32-bit drivers use the Win32 API.  
   
 ## Architecture  
  The following illustration shows how 32-bit applications communicate with 32-bit drivers. The application calls the 32-bit Driver Manager, which in turn calls 32-bit drivers.  

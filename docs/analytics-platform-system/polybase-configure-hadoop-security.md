@@ -4,10 +4,10 @@ description: Provides a reference for various configuration settings that affect
 author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
-ms.date: 10/26/2018
+ms.date: 12/05/2023
 ms.service: sql
 ms.subservice: data-warehouse
-ms.topic: conceptual
+ms.topic: how-to
 ---
 # Configure PolyBase Hadoop security
 
@@ -16,11 +16,9 @@ This article provides a reference for various configuration settings that affect
 > [!NOTE]
 > On APS, changes on XML files are needed on all compute nodes and control node.
 > 
-> Take special care when modifying XML files in APS. Any missing tags or unwanted characters can invalidate the xml file hindering the usablilty of the feature.
+> Take special care when modifying XML files in APS. Any missing tags or unwanted characters can invalidate the xml file hindering the usability of the feature.
 > Hadoop configuration files are located in the following path:  
-> ```  
-> C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf 
-> ``` 
+> `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf` 
 > Any changes to the xml files require a service restart to be effective.
 
 ## <a id="rpcprotection"></a> Hadoop.RPC.Protection setting
@@ -35,7 +33,7 @@ A common way to secure communication in a hadoop cluster is by changing the hado
    </property> 
 ```
 
-## <a id="kerberossettings"></a> Kerberos configuration  
+## <a id="kerberossettings"></a> Kerberos configuration
 
 Note, when PolyBase authenticates to a Kerberos secured cluster, it expects the hadoop.rpc.protection setting is 'Authenticate' by default. This leaves the data communication between Hadoop nodes unencrypted. To use 'Privacy' or 'Integrity' settings for hadoop.rpc.protection, update the core-site.xml file on the PolyBase server. For more information, see the previous section [Connecting to Hadoop Cluster with Hadoop.rpc.protection](#rpcprotection).
 
@@ -47,9 +45,9 @@ To connect to a Kerberos-secured Hadoop cluster using MIT KDC the following chan
    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf  
    ```  
 
-2. Find the Hadoop side configuration value of the configuration keys listed in the table. (On the Hadoop machine, find the files in the Hadoop configuration directory.)  
+1. Find the Hadoop side configuration value of the configuration keys listed in the table. (On the Hadoop machine, find the files in the Hadoop configuration directory.)  
    
-3. Copy the configuration values into the value property in the corresponding files on the SQL Server machine.  
+1. Copy the configuration values into the value property in the corresponding files on the SQL Server machine.  
    
    |**#**|**Configuration file**|**Configuration key**|**Action**|  
    |------------|----------------|---------------------|----------|   
@@ -105,7 +103,7 @@ To connect to a Kerberos-secured Hadoop cluster using MIT KDC the following chan
 </property>
 ```
 
-4. Create a database-scoped credential object to specify the authentication information for each Hadoop user. See [PolyBase T-SQL objects](../relational-databases/polybase/polybase-t-sql-objects.md).
+1. Create a database-scoped credential object to specify the authentication information for each Hadoop user. See [PolyBase T-SQL objects](../relational-databases/polybase/polybase-t-sql-objects.md).
 
 ## <a id="encryptionzone"></a> Hadoop Encryption Zone setup
 If you are using Hadoop encryption zone modify core-site.xml and hdfs-site.xml as following. Provide the ip address where KMS service is running with the corresponding port number. The default port for KMS on CDH is 16000.
@@ -129,3 +127,7 @@ If you are using Hadoop encryption zone modify core-site.xml and hdfs-site.xml a
   <value>kms://http@<ip address>:16000/kms</value>
   </property>
 ```
+
+## Related content
+
+- [Configure PolyBase in Analytics Platform System (PDW) to access external data in Hadoop](polybase-configure-hadoop.md)

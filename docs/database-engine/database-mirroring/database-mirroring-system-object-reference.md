@@ -6,7 +6,7 @@ ms.author: mathoma
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: database-mirroring
-ms.topic: conceptual
+ms.topic: reference
 ---
 # Database mirroring system object reference
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -3,7 +3,7 @@ title: Using basic JDBC data types
 description: The Microsoft JDBC Driver for SQL Server uses basic JDBC data types to convert SQL Server data types to a format understood by Java.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 08/01/2023
+ms.date: 01/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -108,7 +108,7 @@ If you have to pass typed parameters into a stored procedure, you can set the pa
 
 ### BigDecimal
 
-When using BigDecimal parameter values, pass the precision and scale of the value along with the value through `setBigDecimal`. Using `setBigDecimal` this way avoids potential value truncation. If the value is passed in alone, the driver assumes the maximum allowed value (38) for precision for that BigDecimal value.
+When using BigDecimal parameter values, the precision and scale may be passed along with the value through `setBigDecimal`. Using `setBigDecimal` this way avoids potential value truncation. Alternatively, if the connection string option `calcBigDecimalPrecision` is set to `true`, the driver will calculate precision for the BigDecimal input on the user's behalf, at the cost of performance. If the value is passed in alone, without `calcBigDecimalPrecision` set, or the option set to `false`, the driver assumes the maximum allowed value (38) for precision for that BigDecimal value.
 
 For more information about using the JDBC driver with stored procedures and input parameters, see [Using a stored procedure with input parameters](using-a-stored-procedure-with-input-parameters.md).  
 

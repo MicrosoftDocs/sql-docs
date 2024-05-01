@@ -6,6 +6,7 @@ metadata:
   documentationcenter: ''
   author: MashaMSFT
   tags: azure-service-management
+  ms.custom: linux-related-content
   ms.service: virtual-machines-sql
   ms.subservice: service-overview
   ms.topic: faq
@@ -110,6 +111,6 @@ additionalContent: |
   
   **Windows VMs**:
   
-  * [Overview of SQL Server on a Windows VM](../windows/sql-server-on-azure-vm-iaas-what-is-overview.md)
-  * [Provision SQL Server on a Windows VM](../windows/sql-vm-create-portal-quickstart.md)
+  * [Overview of SQL Server on Windows VMs](../windows/sql-server-on-azure-vm-iaas-what-is-overview.md)
+  * [Provision SQL Server on Windows VMs](../windows/sql-vm-create-portal-quickstart.md)
   * [FAQ (Windows)](../windows/frequently-asked-questions-faq.yml)

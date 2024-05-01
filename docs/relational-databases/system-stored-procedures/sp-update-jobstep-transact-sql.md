@@ -1,6 +1,6 @@
 ---
 title: "sp_update_jobstep (Transact-SQL)"
-description: "sp_update_jobstep changes the settings for a step in a job in the SQL Agent service."
+description: "sp_update_jobstep changes the settings for a step in a job in the SQL Server Agent service."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest,wiassaf
@@ -21,7 +21,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 
 [!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
-Changes the setting for a step in a job that is used to perform automated activities in the SQL Agent service.
+Changes the setting for a step in a job that is used to perform automated activities in the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent service.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -150,7 +150,7 @@ The amount of time in minutes between retry attempts. *@retry_interval* is **int
 
 The name of the file in which the output of this step is saved. *@output_file_name* is **nvarchar(200)**, with a default of `NULL`. This parameter is only valid with commands running in [!INCLUDE [tsql](../../includes/tsql-md.md)] or **CmdExec** subsystems.
 
-To set *@output_file_name* back to `NULL`, you must set *@output_file_name* to an empty string (`' '`) or to a string of blank characters, but you can't use the `CHAR(32)` function.
+To set *@output_file_name* back to `NULL`, you must set *@output_file_name* to an empty string, or to a string of blank characters, but you can't use the `CHAR(32)` function.
 
 For example, set this argument to an empty string as follows:
 
@@ -219,7 +219,7 @@ EXEC dbo.sp_update_jobstep
 GO
 ```
 
-## Next steps
+## Related content
 
 - [View or Modify Jobs](../../ssms/agent/view-or-modify-jobs.md)
 - [sp_delete_jobstep (Transact-SQL)](sp-delete-jobstep-transact-sql.md)

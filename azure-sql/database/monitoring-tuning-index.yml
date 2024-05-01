@@ -5,16 +5,17 @@ summary: Azure SQL Database  and Azure SQL Managed Instance provide tools to hel
 
 metadata:
   title: Azure SQL Database  and Azure SQL Managed Instance monitoring and tuning documentation 
+  titleSuffix: Azure SQL Database & Azure SQL Managed Instance
   description: Learn about Azure SQL Database monitoring and performance tuning tools that help you collect metrics and diagnostics and improve database performance.
   ms.service: sql-database 
-  ms.subservice: performance 
+  ms.subservice: monitoring
   ms.custom: sqldbrb=2
   ms.topic: landing-page 
   ms.collection: performance
   author: WilliamDAssafMSFT 
   ms.author: wiassaf 
   ms.reviewer: mathoma
-  ms.date: 11/08/2023 
+  ms.date: 03/06/2024
   monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -39,6 +40,34 @@ landingContent:
             url: /training/paths/monitor-optimize-operational-resources-sql-server/
           - text: Protect, monitor, and tune 
             url: /training/modules/protect-monitor-tuning-migrated-database/
+
+  # Card (optional)
+  - title: Database watcher for Azure SQL
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Monitor Azure SQL workloads with database watcher
+            url: ../database-watcher-overview.md
+          - text: Manage and monitor database watchers
+            url: ../database-watcher-manage.md
+          - text: Database watcher FAQ
+            url: ../database-watcher-faq.yml
+      - linkListType: how-to-guide
+        links:
+          - text: Create a database watcher to monitor Azure SQL
+            url: ../database-watcher-quickstart.md
+
+  # Card (optional)
+  - title: Azure Monitor and Azure SQL Database
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Monitor Azure SQL Database with metrics and alerts
+            url: monitoring-metrics-alerts.md?view=azuresql-db&preserve-view=true
+      - linkListType: concept
+        links:
+          - text: Monitor Azure SQL Database with Azure Monitor
+            url: monitoring-sql-database-azure-monitor.md?view=azuresql-db&preserve-view=true
 
   # Card (optional)
   - title: Azure SQL Database intelligent performance recommendations
@@ -68,7 +97,7 @@ landingContent:
           - text: SQL Managed Instance resource limits
             url: ../managed-instance/resource-limits.md
           - text: Instance pools resource limits
-            url: ../managed-instance/instance-pools-overview.md#resource-limitations
+            url: ../managed-instance/instance-pools-overview.md#resource-limits
 
   # Card (optional)
   - title: Intelligent performance analysis for Azure SQL Database and Azure SQL Managed Instance

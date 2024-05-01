@@ -87,7 +87,7 @@ When `sp_add_agent_profile` is executed, a row is added for the new custom profi
 
 Only members of the **sysadmin** fixed server role can execute `sp_add_agent_profile`.
 
-## See also
+## Related content
 
 - [Work with Replication Agent Profiles](../replication/agents/work-with-replication-agent-profiles.md)
 - [Replication Agent Profiles](../replication/agents/replication-agent-profiles.md)

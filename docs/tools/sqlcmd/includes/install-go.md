@@ -3,6 +3,7 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.date: 08/15/2023
 ms.service: sql
+ms.custom: linux-related-content
 ms.topic: include
 ---
 **sqlcmd** (Go) can be installed cross-platform, on Microsoft Windows, macOS, and Linux.
@@ -79,6 +80,9 @@ ms.topic: include
    ```
 
 #### yum (Fedora/CentOS)
+
+> [!CAUTION]
+> This content references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
 
 1. Import the Microsoft repository key.
 

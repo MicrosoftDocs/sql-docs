@@ -2,8 +2,8 @@
 title: Getting started content reference
 titleSuffix: Azure SQL Managed Instance
 description: "A reference for content that helps you get started with Azure SQL Managed Instance. "
-author: davidtrigano
-ms.author: datrigan
+author: MladjoA
+ms.author: mlandzic
 ms.reviewer: vanto, mathoma
 ms.date: 07/11/2019
 ms.service: sql-managed-instance

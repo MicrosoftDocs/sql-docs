@@ -3,7 +3,7 @@ title: Copy a database
 description: Create a transactionally consistent copy of an existing database in Azure SQL Database on either the same server or a different server.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, jeschult, randolphwest
+ms.reviewer: mathoma, randolphwest, hudequei
 ms.date: 09/28/2023
 ms.service: sql-database
 ms.subservice: data-movement
@@ -23,7 +23,7 @@ Azure SQL Database provides several methods for creating a copy of an existing [
 
 ## Overview
 
-A database copy is a transactionally consistent snapshot of the source database as of a point in time after the copy request is initiated. You can select the same server or a different server for the copy. Also you can choose to keep the backup redundancy and compute size of the source database, or use a different backup storage redundancy and/or compute size within the same service tier. After the copy is complete, it becomes a fully functional, independent database. The logins, users, and permissions in the copied database are managed independently from the source database. The copy is created using the geo-replication technology. Once replica seeding is complete, the geo-replication link is automatically terminated. All the requirements for using geo-replication apply to the database copy operation. See [Active geo-replication overview](active-geo-replication-overview.md) for details.
+A database copy is a transactionally consistent snapshot of the source database as of a point in time after the copy request is initiated. You can select the same server or a different server for the copy. Also you can choose to keep the backup redundancy and compute size of the source database, or use a different backup storage redundancy and/or compute size within the same service tier. There are couple of exceptions where a database in Standard service tier can be copied to either Standard or General Purpose tier and a database in Premium service tier can be copied to either Premium or Business Critical tier. After the copy is complete, it becomes a fully functional, independent database. The logins, users, and permissions in the copied database are managed independently from the source database. The copy is created using the geo-replication technology. Once replica seeding is complete, the geo-replication link is automatically terminated. All the requirements for using geo-replication apply to the database copy operation. See [Active geo-replication overview](active-geo-replication-overview.md) for details.
 
 > [!NOTE]  
 > The [Azure portal](https://portal.azure.com), PowerShell, and the Azure CLI don't support database copy to a different subscription.

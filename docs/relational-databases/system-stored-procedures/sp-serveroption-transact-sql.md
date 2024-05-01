@@ -49,7 +49,7 @@ The option to set for the specified server. *@optname* is **varchar(35)**, with 
 | --- | --- |
 | **collation compatible** | Affects distributed query execution against linked servers. If this option is set to `true`, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] assumes that all characters in the linked server are compatible with the local server, regarding character set and collation sequence (or sort order). This enables [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to send comparisons on character columns to the provider. If this option isn't set, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] always evaluates comparisons on character columns locally.<br /><br />This option should be set only if it is certain that the data source corresponding to the linked server has the same character set and sort order as the local server. |
 | **collation name** | Specifies the name of the collation used by the remote data source if **use remote collation** is `true` and the data source isn't a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] data source. The name must be one of the collations supported by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br />Use this option when accessing an OLE DB data source other than [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], but whose collation matches one of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] collations.<br /><br />The linked server must support a single collation to be used for all columns in that server. Don't set this option if the linked server supports multiple collations within a single data source, or if the linked server's collation can't be determined to match one of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] collations. |
-| **connect timeout** | Specifies the timeout value in seconds for connecting to a linked server.<br /><br />If `0`, the **connect timeout** setting uses the default value that is configured for the `remote login timeout (s)` setting. The default value for `remote login timeout (s)` is `10`.<br /><br />You can view this setting from the `sys.configurations` catalog view with the following query: `SELECT name, value_in_use FROM `sys.configurations` WHERE name like 'remote login timeout (s)';`. |
+| **connect timeout** | Specifies the timeout value in seconds for connecting to a linked server.<br /><br />If `0`, the **connect timeout** setting uses the default value that is configured for the `remote login timeout (s)` setting. The default value for `remote login timeout (s)` is `10`.<br /><br />You can view this setting from the `sys.configurations` catalog view with the following query: `SELECT name, value_in_use FROM sys.configurations WHERE name like 'remote login timeout (s)';`. |
 | **data access** | Enables and disables a linked server for distributed query access. Can be used only for `sys.server` entries added through `sp_addlinkedserver`. |
 | **dist** | Distributor. |
 | **name** | Specifies the name of the linked server object.<br /><br />The name change is reflected in the value returned by the `name` column of the `sys.servers` catalog view, without affecting the remote data source. |
@@ -113,7 +113,7 @@ EXEC sp_serveroption
 GO
 ```
 
-## See also
+## Related content
 
 - [Distributed Queries stored procedures (Transact-SQL)](distributed-queries-stored-procedures-transact-sql.md)
 - [sp_adddistpublisher (Transact-SQL)](sp-adddistpublisher-transact-sql.md)

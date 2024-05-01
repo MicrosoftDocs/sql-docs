@@ -61,7 +61,7 @@ The type of validation to perform. *@level* is **tinyint**, and can be one of th
 
 Only members of the **sysadmin** fixed server role can execute `sp_validatemergepublication`.
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Validate Replicated Data](../replication/validate-data-at-the-subscriber.md)

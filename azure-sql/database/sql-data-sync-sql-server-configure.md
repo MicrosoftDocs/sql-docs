@@ -3,7 +3,7 @@ title: Set up SQL Data Sync
 description: This tutorial shows you how to set up SQL Data Sync for Azure
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, jeschult
+ms.reviewer: mathoma, hudequei
 ms.date: 08/21/2023
 ms.service: sql-database
 ms.subservice: sql-data-sync
@@ -43,15 +43,13 @@ For PowerShell examples on how to configure SQL Data Sync, see [How to sync betw
 
    :::image type="content" source="./media/sql-data-sync-sql-server-configure/create-sync-group.png" alt-text = "A screenshot from the Create Data Sync page of the Azure portal, creating a new Sync Metadata Database to use with Automatic Sync.":::
 
-   Microsoft recommends creating a new, empty database for use as the **Sync Metadata Database**. Data Sync creates tables in this database and runs a frequent workload. This database is shared as the **Sync Metadata Database** for all sync groups in a selected region and subscription. You can't change the database or its name without removing all sync groups and sync agents in the region.
-
-   | Setting                        | Description |
+      | Setting                        | Description |
    | ------------------------------ | ------------------------------------------------- |
    | **Sync Group Name** | Enter a name for the new sync group. This name is distinct from the name of the database itself. |
-   | **Sync Metadata Database** | Choose to create a database (recommended) or to use an existing database to serve as the **Sync Metadata Database**.<br /><br />If you choose to create a new database, select **New database**. Select **Configure database settings**. On the **SQL Database** page, name and configure a new Azure SQL Database and select **OK**.<br /><br />If you choose **Use existing database**, select the database from the **Sync Metadata Database** drop-down list. |
+   | **Sync Metadata Database** | Choose to create a database (recommended) or to use an existing database to serve as the **Sync Metadata Database**.<br /><br />Microsoft recommends creating a new, empty database for use as the **Sync Metadata Database**. Data Sync creates tables in this database and runs a frequent workload. This database is shared as the **Sync Metadata Database** for all sync groups in a selected region and subscription. You can't change the database or its name without removing all sync groups and sync agents in the region.<br /><br/> If you choose to create a new database, select **New database**. Select **Configure database settings**. On the **SQL Database** page, name and configure a new Azure SQL Database and select **OK**.<br /><br />If you choose **Use existing database**, select the database from the **Sync Metadata Database** drop-down list. |
    | **Automatic Sync** | Select **On** or **Off**.<br /><br />If you choose **On**, enter a number and select **Seconds**, **Minutes**, **Hours**, or **Days** in the **Sync Frequency** section.<br />The first sync begins after the selected interval period elapses from the time the configuration is saved.|
    | **Conflict Resolution** | Select **Hub win** or **Member win**.<br /><br />**Hub win** means when conflicts occur, data in the hub database overwrites conflicting data in the member database.<br /><br />**Member win** means when conflicts occur, data in the member database overwrites conflicting data in the hub database. |
-   | **Username** and **Password** | Provide the username and password to the **server admin** SQL authenticated login for the **Hub** database. This is the server admin username and password for the same Azure SQL logical server that you started on. Microsoft Entra (formerly Azure Active Directory) authentication is not supported. |
+   | **Hub Database Username** and **Hub Database Password** | Provide the username and password to the **server admin** SQL authenticated login for the **Hub** database. This is the server admin username and password for the same Azure SQL logical server that you started on. Microsoft Entra (formerly Azure Active Directory) authentication is not currently supported. |
    | **Use private link** | Choose a service managed private endpoint to establish a secure connection between the sync service and the hub database. |
 
 1. Select **OK** and wait for the sync group to be created and deployed.
@@ -84,7 +82,7 @@ After the new sync group is created and deployed, open the sync group and access
    | **Subscription** | Select the associated Azure subscription for billing purposes. |
    | **Azure SQL Server** | Select the existing server. |
    | **Azure SQL Database** | Select the existing database in SQL Database. |
-   | **Sync Directions** | Select **Bi-directional Sync**, **To the Hub**, or **From the Hub**. |
+   | **Sync Directions** | The Sync Direction can be *Hub to Member*, or *Member to Hub*, or both. Select **From the Hub**, **To the Hub**, or **Bi-directional Sync**. For more information, see [How it works](sql-data-sync-data-sql-server-sql-database.md#how-it-works).|
    | **Username** and **Password** | Enter the existing credentials for the server on which the member database is located. Don't enter *new* credentials in this section. |
    | **Use private link** | Choose a service managed private endpoint to establish a secure connection between the sync service and the member database. |
 

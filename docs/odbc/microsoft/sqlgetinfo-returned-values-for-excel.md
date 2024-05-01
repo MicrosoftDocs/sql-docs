@@ -6,7 +6,7 @@ ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "Excel driver [ODBC], SQLGetInfo"
   - "SQLGetInfo function [ODBC], returned values for dBase"

@@ -87,7 +87,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 -   If the schema option on the article includes scripting of declared referential integrity on the primary keys, articles that have base tables with foreign key relationships to base tables of the reinitialized article are marked for reinitialization as well.  
   
 ## Example  
- [!code-sql[HowTo#sp_reinittranpushsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitsubscription-tr_1.sql)]  
+ :::code language="sql" source="../replication/codesnippet/tsql/sp-reinitsubscription-tr_1.sql":::
   
 ## Permissions  
  Only members of the **sysadmin** fixed server role, members of the **db_owner** fixed database role, or the creator of the subscription can execute **sp_reinitsubscription**.  

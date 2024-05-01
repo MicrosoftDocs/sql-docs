@@ -14,7 +14,7 @@ ms.topic: how-to
 
 # Configure Azure SQL Managed Instance for Windows Authentication for Microsoft Entra ID
 
-This article describes how to configure a managed instance to support [Windows Authentication for principals](winauth-azuread-overview.md) in Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). The steps to set up Azure SQL Managed Instance are the same for both the [incoming trust-based authentication flow](winauth-azuread-setup-incoming-trust-based-flow.md) and the [modern interactive authentication flow](winauth-azuread-setup-modern-interactive-flow.md). 
+This article describes how to configure a managed instance to support [Windows Authentication for principals](winauth-azuread-overview.md) in Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). The steps to set up Azure SQL Managed Instance are the same for both the [incoming trust-based authentication flow](winauth-azuread-setup-incoming-trust-based-flow.md) and the [modern interactive authentication flow](winauth-azuread-setup-modern-interactive-flow.md). 
 
 [!INCLUDE [entra-id](../includes/entra-id.md)]
 

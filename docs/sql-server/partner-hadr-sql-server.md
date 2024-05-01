@@ -11,6 +11,9 @@ ms.topic: conceptual
 ---
 # SQL Server high availability and disaster recovery partners
 
+> [!CAUTION]
+> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 To provide high availability and disaster recovery for your [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] services, choose from a wide variety of industry-leading tools.  This article highlights [!INCLUDE[msconame-md](../includes/msconame-md.md)] partner companies with high availability and disaster recovery solutions supporting [!INCLUDE[msconame-md](../includes/msconame-md.md)] [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].

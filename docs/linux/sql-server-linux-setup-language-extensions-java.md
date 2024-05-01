@@ -4,14 +4,14 @@ titleSuffix: SQL Server Language Extensions
 description: Learn how to install SQL Server Java Language Extension on Red Hat, Ubuntu, and SUSE Linux.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 08/03/2023
+ms.date: 01/03/2024
 ms.service: sql
 ms.subservice: language-extensions
 ms.topic: how-to
 ms.custom:
   - intro-installation
   - linux-related-content
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
+monikerRange: ">=sql-server-ver15 || >=sql-server-linux-ver15"
 ---
 # Install SQL Server Java Language Extension on Linux
 
@@ -26,7 +26,7 @@ Although you can [install the Database Engine and Language Extensions concurrent
 - The Linux version must be [supported by SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), but doesn't include the Docker Engine. Supported versions include:
 
   - [Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md) (RHEL)
-  - [SUSE Enterprise Linux Server](quickstart-install-connect-suse.md) (SLES)
+  - [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md) (SLES)
   - [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 - You should have a tool for running Transact-SQL (T-SQL) commands. A query editor is necessary for post-install configuration and validation. We recommend [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-2017&preserve-view=true#linux-installation), a free download that runs on Linux.
@@ -39,7 +39,7 @@ Although you can [install the Database Engine and Language Extensions concurrent
 
 - Language Extensions is also supported on Linux containers. We don't provide prebuilt containers with Language Extensions, but you can create one from the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] containers using [an example template available on GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-- Language Extensions and [Machine Learning Services](../machine-learning/index.yml) are installed by default on [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Big Data Clusters. If you use Big Data Clusters, you don't need to follow the steps in this article. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../big-data-cluster/machine-learning-services.md).
+- Language Extensions and [Machine Learning Services](../machine-learning/index.yml) are installed by default on [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Big Data Clusters. If you use Big Data Clusters, you don't need to follow the steps in this article. For more information, see [Run Python and R scripts with Machine Learning Services on SQL Server 2019 Big Data Clusters](../big-data-cluster/machine-learning-services.md).
 
 ## Package list
 
@@ -60,7 +60,7 @@ To enable the Java Language Extension, build a custom binary by following the in
 https://github.com/microsoft/sql-server-language-extensions/tree/main/language-extensions/java).
 
 > [!NOTE]  
-> On an internet-connected server, package dependencies are downloaded and installed as part of the main package installation. If your server is not connected to the internet, see more details in the [offline setup](#offline-install).
+> On an internet-connected server, package dependencies are downloaded and installed as part of the main package installation. If your server isn't connected to the internet, see more details in the [offline setup](#offline-install).
 
 ::: moniker-end
 
@@ -114,11 +114,11 @@ sudo zypper install mssql-server-extensibility-java
 
 1. Grant permissions on Linux
 
-   You don't need to perform this step if you are using external libraries. The recommended way of working is using external libraries. For help with creating an external library from your `jar` file, see [CREATE EXTERNAL LIBRARY](../t-sql/statements/create-external-library-transact-sql.md)
+   You don't need to perform this step if you use external libraries. The recommended way of working is using external libraries. For help with creating an external library from your `jar` file, see [CREATE EXTERNAL LIBRARY](../t-sql/statements/create-external-library-transact-sql.md)
 
    If you aren't using external libraries, you need to provide [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] with permissions to execute the Java classes in your `jar`.
 
-   To grant read and execute access to a `jar` file, run the following **chmod** command on the `jar` file. We recommend always putting your class files in a `jar` when you work with [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. For help with creating a `jar`, see [How to create a jar file](../language-extensions/how-to/create-a-java-jar-file-from-class-files.md).
+   To grant read and execute access to a `jar` file, run the following **chmod** command on the `jar` file. We recommend always putting your class files in a `jar` when you work with [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. For help with creating a `jar`, see [Create a Java jar file from class files](../language-extensions/how-to/create-a-java-jar-file-from-class-files.md).
 
    ```bash
    chmod ug+rx <MyJarFile.jar>
@@ -209,7 +209,7 @@ You can install and configure the [!INCLUDE [ssde-md](../includes/ssde-md.md)] a
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-   You are prompted to accept the license agreement for the [!INCLUDE [ssde-md](../includes/ssde-md.md)], choose an edition, and set the administrator password.
+   This step prompts you to accept the license agreement for the [!INCLUDE [ssde-md](../includes/ssde-md.md)], choose an edition, and set the administrator password.
 
 1. Restart the service, if prompted to do so.
 
@@ -259,7 +259,7 @@ Implied authentication is currently not available on Linux at this time, which m
 
 ### Resource governance
 
-There is parity between Linux and Windows for [Resource governance](../t-sql/statements/create-external-resource-pool-transact-sql.md) for external resource pools, but the statistics for [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) currently have different units on Linux.
+There's parity between Linux and Windows for [Resource governance](../t-sql/statements/create-external-resource-pool-transact-sql.md) for external resource pools, but the statistics for [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) currently have different units on Linux.
 
 > [!NOTE]  
 > Statistics in the following table are sourced from the specified Control Groups (cgroups) subsystems.
@@ -275,4 +275,4 @@ There is parity between Linux and Windows for [Resource governance](../t-sql/sta
 
 ## Related content
 
-- [Tutorial: Regular expressions with Java](../language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md)
+- [Tutorial: Search for a string using regular expressions (regex) in Java](../language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md)

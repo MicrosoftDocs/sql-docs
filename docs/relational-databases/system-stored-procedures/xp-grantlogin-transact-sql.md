@@ -55,7 +55,7 @@ The security level of the login being granted access. *@logintype* is **varchar(
 
 Requires membership in the **securityadmin** fixed server role. Changing the *@logintype* requires membership in the **sysadmin** fixed server role.
 
-## See also
+## Related content
 
 - [sp_denylogin (Transact-SQL)](sp-denylogin-transact-sql.md)
 - [sp_grantlogin (Transact-SQL)](sp-grantlogin-transact-sql.md)

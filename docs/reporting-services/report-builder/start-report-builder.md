@@ -29,19 +29,19 @@ The first time you start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.m
 
 :::image type="content" source="media/start-report-builder/report-builder-get-report-builder.png" alt-text="Screenshot of the We're opening Report Builder message.":::
 
-You or an administrator can also [install Report Builder on your computer from the Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=219138). See "Install Report Builder with Systems Manager Server" in [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md) for more details.
+You or an administrator can also [install Report Builder on your computer from the Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=219138). For more information, see the **Install Report Builder with Systems Manager Server** section in [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).
 
-[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] isn't installed when you install SQL Server Reporting Services; you need to download and install it separately.
+[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] isn't installed when you install SQL Server Reporting Services. You need to download and install it separately.
 
-When you start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from the web portal or SharePoint site, if an earlier version of [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] opens, contact your administrator, who can update the version on the web portal or SharePoint site.
+When you start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from the web portal or SharePoint site, if an earlier version of [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] opens, contact your administrator. The administrator can update the version on the web portal or SharePoint site.
 
 ## Start Report Builder from the Reporting Services web portal
 
-1. In your Web browser, type the URL for your report server in the address bar. By default, the URL is https://\<*servername*>/reports.
+1. In your web browser, type the URL for your report server in the address bar. By default, the URL is `https://<servername>/reports`.
 
-1. In the top bar of the web portal, select **New** > **Paginated Report**.
+1. In the top bar of the web portal, select **New** and choose **Paginated Report**.
 
-     :::image type="content" source="media/start-report-builder/web-portal-new-paginated-report.png" alt-text="Screenshot showing New Paginated Report menu.":::
+     :::image type="content" source="media/start-report-builder/web-portal-new-paginated-report.png" alt-text="Screenshot of the New Paginated Report menu.":::
 
      The first time, you're prompted to [install Report Builder](../../reporting-services/install-windows/install-report-builder.md).
 
@@ -59,17 +59,18 @@ When you start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from t
 
 1. On the **New Document** menu, select **Report Builder Report**.
 
-     The first time, this launches the SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] Wizard. See [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md) for more details.
+     The first time, this action launches the SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] Wizard. For more information, see [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).
 
      [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] opens, and you can create a paginated report or open a report on the report server.
 
-     **Note** If the **New Document** menu does not list **Report Builder Report**, **Report Builder Model**, or **Report Data Source**, their content types need to be added to the SharePoint library. For more information, see [Add Reporting Services Content Types to a SharePoint Library](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).
+     > [!NOTE]  
+     > If the **New Document** menu does not list **Report Builder Report**, **Report Builder Model**, or **Report Data Source**, their content types need to be added to the SharePoint library. For more information, see [Add Reporting Services content types to a SharePoint library](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).
 
 ::: moniker-end
 
-## Next steps
+## Related content
 
 - [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)
 - [Set default options for Report Builder](../../reporting-services/report-builder/set-default-options-for-report-builder.md)
 
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).

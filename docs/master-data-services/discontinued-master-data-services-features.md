@@ -1,14 +1,15 @@
 ---
-title: Discontinued Master Data Services Features
-description: "Discontinued Master Data Services Features"
+title: Discontinued Features of Master Data Services
+description: "Discontinued Features of Master Data Services"
 author: CordeliaGrey
 ms.author: jiwang6
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: conceptual
+monikerRange: ">=sql-server-ver16"
 ---
-# Discontinued Master Data Services Features
+# Discontinued Features of Master Data Services
 
 [!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
@@ -20,6 +21,6 @@ ms.topic: conceptual
  The Metadata model is no longer available. You can also no longer view metadata in the Explorer functional area.  
   
 ## See Also  
- [Deprecated Master Data Services Features](../master-data-services/deprecated-master-data-services-features.md)  
+ [Deprecated Features of Master Data Services](../master-data-services/deprecated-master-data-services-features.md)  
   
   

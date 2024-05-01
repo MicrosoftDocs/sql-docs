@@ -8,9 +8,7 @@ ms.date: 10/14/2022
 ms.service: virtual-machines-sql
 ms.subservice: deployment
 ms.topic: quickstart
-ms.custom:
-  - mode-ui
-  - ignite-2022
+ms.custom: mode-ui
 tags: azure-resource-manager
 ---
 
@@ -27,7 +25,7 @@ This quickstart steps through creating a SQL Server virtual machine (VM) in the 
 
 
   > [!TIP]
-  > - This quickstart provides a path for quickly provisioning and connecting to a SQL VM. For more information about other SQL VM provisioning choices, see the [Provisioning guide for SQL Server on Windows VM in the Azure portal](create-sql-vm-portal.md).
+  > - This quickstart provides a path for quickly provisioning and connecting to a SQL VM. For more information about other SQL VM provisioning choices, see the [Provisioning guide for SQL Server on Windows VMs in the Azure portal](create-sql-vm-portal.md).
   > - If you have questions about SQL Server virtual machines, see the [Frequently Asked Questions](frequently-asked-questions-faq.yml).
 
 ## <a id="subscription"></a> Get an Azure subscription

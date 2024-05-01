@@ -1,9 +1,9 @@
 ---
 title: "Working with Empty Values"
 description: "Working with Empty Values"
-author: minewiskan
-ms.author: owend
-ms.reviewer: owend
+author: kfollis
+ms.author: kfollis
+ms.reviewer: kfollis
 ms.date: 02/17/2022
 ms.service: sql
 ms.subservice: analysis-services
@@ -43,7 +43,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 -   The [IsEmpty](../mdx/isempty-mdx.md) function returns **TRUE** if and only if the cell identified by the tuple specified in the function is empty. Otherwise, the function returns **FALSE**.  
   
     > [!NOTE]  
-    >  The **IsEmpty** function cannot determine whether a member expression returns a null value. To determine whether a null member is returned from an expression, use the [IS](../mdx/is-mdx.md)operator.  
+    >  The **IsEmpty** function cannot determine whether a member expression returns a null value. To determine whether a null member is returned from an expression, use the [IS](../mdx/is-mdx.md) operator.  
   
 -   When the empty cell value is an operand for any one of the numeric operators (+, -, *, /), the empty cell value is treated as zero if the other operand is a nonempty value. If both operands are empty, the numeric operator returns the empty cell value.  
   

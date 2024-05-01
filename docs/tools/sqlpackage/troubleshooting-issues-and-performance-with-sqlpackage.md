@@ -16,9 +16,9 @@ In some scenarios, SqlPackage operations take longer than expected or fail to co
 
 ## Overall strategy
 
-As general guideline, better performance can be obtained via the [.NET Core version](sqlpackage-download.md#windows-net-6) of SqlPackage.
+As general guideline, better performance can be obtained via the [.NET Core version](sqlpackage-download.md#windows-net-8) of SqlPackage.
 
-1. [Download](sqlpackage-download.md#windows-net-6) the zip for SqlPackage on .NET Core for your operating system (Windows, macOS, or Linux).
+1. [Download](sqlpackage-download.md#windows-net-8) the zip for SqlPackage on .NET Core for your operating system (Windows, macOS, or Linux).
 1. Unzip archive as directed on the download page.
 1. Open a command prompt and change directory (`cd`) to the SqlPackage folder.
 

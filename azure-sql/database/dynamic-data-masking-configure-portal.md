@@ -22,7 +22,7 @@ This article shows you how to implement [dynamic data masking](dynamic-data-mask
 
 1. Launch the Azure portal at [https://portal.azure.com](https://portal.azure.com).
 2. Go to your database resource in the Azure portal. 
-3. Select the **Dynamic Data Masking** blade under the **Security** section. 
+3. Select the **Dynamic Data Masking** pane under the **Security** section. 
 
    ![Screenshot that shows the Security section with Dynamic Data Masking highlighted.](./media/dynamic-data-masking-configure-portal/dynamic-data-masking-in-portal.png)
 
@@ -40,7 +40,7 @@ This article shows you how to implement [dynamic data masking](dynamic-data-mask
     ![Screenshot that shows the sensitive data masking categories under the Select how to mask section.](./media/dynamic-data-masking-configure-portal/7_ddm_mask_field_format.png)
 
 8. Click **Add** in the data masking rule page to update the set of masking rules in the dynamic data masking policy.
-9. Type the SQL authenticated users or authenticated identities from Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) that should be excluded from masking, and have access to the unmasked sensitive data. This should be a semicolon-separated list of users. Users with administrator privileges always have access to the original unmasked data.
+9. Type the SQL authenticated users or authenticated identities from Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) that should be excluded from masking, and have access to the unmasked sensitive data. This should be a semicolon-separated list of users. Users with administrator privileges always have access to the original unmasked data.
 
     ![Navigation pane](./media/dynamic-data-masking-configure-portal/8_ddm_excluded_users.png)
 

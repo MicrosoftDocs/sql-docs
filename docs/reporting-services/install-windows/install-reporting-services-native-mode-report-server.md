@@ -5,6 +5,7 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 12/20/2017
 ms.service: reporting-services
+ms.subservice: report-server
 ms.topic: conceptual
 ms.custom:
   - intro-installation
@@ -32,7 +33,7 @@ Additional features such as [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)
 
 Setup installs the following [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features when you select the default configuration for native mode option:
 
-- Report Server service (which includes the Report Server Web service, background processing application, and the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] for viewing and managing reports as well as permissions.
+- Report Server service (which includes the Report Server Web service, background processing application, and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] for viewing and managing reports as well as permissions.
 
 - The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager
 
@@ -46,7 +47,7 @@ Setup installs the following [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversi
 
 - Report Server Web service URL.
 
-- The [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] URL.
+- The [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] URL.
 
 - Report Server database.
 
@@ -72,7 +73,7 @@ The default configuration option uses default values to configure the core setti
 
 - The user account used to run Setup must be a member of the local Administrators group and have permission to access and create databases on the [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance that hosts the report server databases.
 
-- Setup must be able to use the default values to reserve the URLs that provide access to the report server and the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. These values are port 80, a strong wildcard, and the virtual directory names in the format **ReportServer_\<***instance_name***>** and **Reports_\<***instance_name***>**.
+- Setup must be able to use the default values to reserve the URLs that provide access to the report server and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. These values are port 80, a strong wildcard, and the virtual directory names in the format **ReportServer_\<***instance_name***>** and **Reports_\<***instance_name***>**.
 
 - Setup must be able to use the default values to create the report server databases. These values are **ReportServer** and **ReportServerTempDB**. If you have existing databases from a previous installation, Setup will be blocked because it cannot configure the report server in the default configuration for native mode. You must rename, move, or delete the databases to unblock Setup.
 
@@ -90,13 +91,13 @@ URL reservations are composed of a prefix, host name, port, and virtual director
 |Prefix|The default prefix is HTTP. If you previously installed a Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), certificate, Setup will try to create URL reservations that use the HTTPS prefix.|
 |Host name|The default host name is a strong wildcard (+). It specifies that the report server will accept any HTTP request on the designated port for any host name that resolves to the computer, including `https://<computername>/reportserver`, `https://localhost/reportserver`, or `https://<IPAddress>/reportserver`.|
 |Port|The default port is 80. Note that if you use any port other than port 80, you will have to explicitly add it to the URL when you open a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web application in a browser window.|
-|Virtual directory|By default, virtual directories are created in the format of ReportServer_\<*instance_name*> for the Report Server Web service and Reports_\<*instance_name*> for the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. For the Report Server Web service, the default virtual directory is **reportserver**. For the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], the default virtual directory is **reports**.|
+|Virtual directory|By default, virtual directories are created in the format of ReportServer_\<*instance_name*> for the Report Server Web service and Reports_\<*instance_name*> for the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. For the Report Server Web service, the default virtual directory is **reportserver**. For the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)], the default virtual directory is **reports**.|
 
 An example of the complete URL string might be as follows:
 
 - `https://+:80/reportserver`, provides access to the report server.
 
-- `https://+:80/reports`, provides access to the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)].
+- `https://+:80/reports`, provides access to the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].
 
 ## <a name="bkmk_installwithwizard"></a> Install native mode with the SQL Server installation wizard
 
@@ -158,7 +159,7 @@ Specific to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], the r
 
     - Open [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager and confirm you can connect to the report server.
 
-    - Open your browser **with administrative privileges** and connect to the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], for example `https://localhost/Reports`.
+    - Open your browser **with administrative privileges** and connect to the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)], for example `https://localhost/Reports`.
 
     - Open your browser with administrative privileges and connect to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server page. For example, `https://localhost/ReportServer`
 

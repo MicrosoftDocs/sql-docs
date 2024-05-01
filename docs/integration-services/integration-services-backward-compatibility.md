@@ -3,7 +3,7 @@ title: "Integration Services Backward Compatibility"
 description: "Integration Services Backward Compatibility"
 author: chugugrace
 ms.author: chugu
-ms.date: "06/14/2016"
+ms.date: "02/28/2024"
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual
@@ -26,13 +26,13 @@ helpviewer_keywords:
 
 This section describes deprecated [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] features that are still available in the current release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. These features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Don't use deprecated features in new applications.  
   
- There are no deprecated [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] features in [!INCLUDE[ssSQL22](../includes/sssql22-md.md)].  
+[Change Data Capture (CDC) components by Attunity](data-flow/cdc-flow-components.md) and [Change Data Capture Designer for Oracle by Attunity](change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md) are deprecated. Details refer to [the announcement](https://www.microsoft.com/sql-server/blog/2024/02/28/sql-server-integration-services-ssis-change-data-capture-attunity-feature-deprecations/).
 
 ## Discontinued Integration Services Functionality
 
 This section describes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] features that are no longer available in the current release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
-[Change Data Capture Designer for Oracle by Attunity](change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md) isn't supported in [!INCLUDE[ssSQL22](../includes/sssql22-md.md)].
+[Change Data Capture Designer for Oracle by Attunity](change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md) isn't supported from [!INCLUDE[ssSQL22](../includes/sssql22-md.md)].
 
 ## Breaking Changes to Integration Services Features
 

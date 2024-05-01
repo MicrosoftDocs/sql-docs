@@ -305,7 +305,7 @@ This short example creates three users and an external table with six rows. It t
 ### Prerequisites
 
 1. You must have a dedicated SQL pool. See [Create a dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
-1. The server hosting your dedicated SQL pool must be registered with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) and you must have an Azure storage account with `Storage Blog Data Contributor` permissions. Follow the steps to [Use virtual network service endpoints and rules for servers in Azure SQL Database](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps).
+1. The server hosting your dedicated SQL pool must be registered with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) and you must have an Azure storage account with `Storage Blog Data Contributor` permissions. Follow the steps to [Use virtual network service endpoints and rules for servers in Azure SQL Database](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps).
 1. Create a file system for your Azure Storage account. Use [Azure Storage Explorer](https://azure.microsoft.com/products/storage/storage-explorer/#overview) to view your storage account. Right-click on **containers** and select **Create file system**.
 
 Once you have the prerequisites in place, create three user accounts that demonstrate different access capabilities.

@@ -4,7 +4,7 @@ description: Updates the settings of an existing alert.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 08/28/2023
+ms.date: 03/20/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -103,7 +103,10 @@ The name of the database in which the error must occur for the alert to fire. *@
 
 #### [ @event_description_keyword = ] N'*event_description_keyword*'
 
-A sequence of characters that must be found in the description of the error in the error message log. [!INCLUDE [tsql](../../includes/tsql-md.md)] LIKE expression pattern-matching characters can be used. *@event_description_keyword* is **nvarchar(100)**, with a default of `NULL`. This parameter is useful for filtering object names (for example, `%customer_table%`).
+A sequence of characters that must be found in the description of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] error in the error message log. *@event_description_keyword* is **nvarchar(100)**, with a default of `NULL`. This parameter is useful for filtering object names (for example, `customer_table`).
+
+> [!NOTE]  
+> [!INCLUDE [tsql](../../includes/tsql-md.md)] `LIKE` expression pattern-matching characters can't be used.
 
 #### [ @job_id = ] '*job_id*'
 
@@ -195,7 +198,7 @@ EXEC dbo.sp_update_alert
 GO
 ```
 
-## See also
+## Related content
 
 - [sp_add_alert (Transact-SQL)](sp-add-alert-transact-sql.md)
 - [sp_help_alert (Transact-SQL)](sp-help-alert-transact-sql.md)

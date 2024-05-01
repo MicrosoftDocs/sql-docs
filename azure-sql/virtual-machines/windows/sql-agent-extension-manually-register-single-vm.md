@@ -8,10 +8,7 @@ ms.date: 07/31/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
-ms.custom:
-  - devx-track-azurecli
-  - devx-track-azurepowershell
-  - contperf-fy21q2
+ms.custom: devx-track-azurecli, devx-track-azurepowershell
 tags: azure-resource-manager
 ---
 # Register Windows SQL Server VM with SQL IaaS Agent extension
@@ -220,7 +217,7 @@ az sql vm delete
 
 To learn more, review the following articles:
 
-- [Overview of SQL Server on a Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)
-- [FAQ for SQL Server on a Windows VM](frequently-asked-questions-faq.yml)
-- [Pricing guidance for SQL Server on a Azure VMs](../windows/pricing-guidance.md)
+- [Overview of SQL Server on Windows VMs](sql-server-on-azure-vm-iaas-what-is-overview.md)
+- [FAQ for SQL Server on Windows VMs](frequently-asked-questions-faq.yml)
+- [Pricing guidance for SQL Server on Azure VMs](../windows/pricing-guidance.md)
 - [What's new for SQL Server on Azure VMs](../windows/doc-changes-updates-release-notes-whats-new.md)

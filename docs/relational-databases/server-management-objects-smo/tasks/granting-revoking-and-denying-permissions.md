@@ -213,7 +213,7 @@ foreach ( $spi in $spis)
     $spi.Grantee + " has " + $spi.PermissionType + " permission."  
 }  
 ""  
-#remove perission to create an endpoint  
+#remove permission to create an endpoint  
 $sps.CreateEndpoint = $false  
 $srv.Revoke($sps, $vGrantee)  
   

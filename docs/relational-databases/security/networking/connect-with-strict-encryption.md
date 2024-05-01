@@ -91,3 +91,4 @@ If you see `SSL certificate validation failed`, validate that:
 ## See also
 
 - [TDS 8.0](tds-8.md)
+- [Configure TLS 1.3](connect-with-tls-1-3.md)

@@ -256,7 +256,7 @@ The following options are allowable only when CONTAINMENT has been set to PARTIA
 
   **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later
 
-  See [transform noise words Server Configuration Option](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)for a full description of this option.
+  See [transform noise words Server Configuration Option](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md) for a full description of this option.
 
 #### TWO_DIGIT_YEAR_CUTOFF = { 2049 | <any year between 1753 and 9999> }
 
@@ -1189,10 +1189,10 @@ For more information, see [Create a copy of an Azure SQL database using Transact
 
 ## Permissions
 
-To create a database, the user login must be one of the following principals:
+To create a database, the login must be one of the following principals:
 
 - The server-level principal login
-- The Azure AD administrator for the local Azure SQL Server
+- The Microsoft Entra administrator for the [logical server in Azure](/azure/azure-sql/database/logical-servers)
 - A login that is a member of the `dbmanager` database role
 
 **Additional requirements for using `CREATE DATABASE ... AS COPY OF` syntax:** The login executing the statement on the local server must also be at least the `db_owner` on the source server. If the login is based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication, the login executing the statement on the local server must have a matching login on the source [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server, with an identical name and password.
@@ -1327,7 +1327,7 @@ CREATE DATABASE MyLedgerDB ( EDITION = 'GeneralPurpose' ) WITH LEDGER = ON;
 
 ## Overview
 
-In [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], this statement is used to create a database. When creating a database on a managed instance, you specify the database name and collation.
+In [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], this statement is used to create a database. When creating a database on a managed instance, you specify the database name and collation.
 
 ## Syntax
 
@@ -1382,7 +1382,7 @@ The following are `CREATE DATABASE` limitations:
 To create a database, a login must be one of the following:
 
 - The server-level principal login
-- The Azure AD administrator for the local Azure SQL Server
+- The Microsoft Entra administrator for the for the [logical server in Azure](/azure/azure-sql/database/logical-servers)
 - A login that is a member of the `dbcreator` database role
 
 ## Examples
@@ -1683,7 +1683,7 @@ Takes a shared lock on the DATABASE object.
 
 ## Metadata
 
-After this operation succeeds, an entry for this database will appear in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) and [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)metadata views.
+After this operation succeeds, an entry for this database will appear in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) and [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) metadata views.
 
 ## Examples: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 

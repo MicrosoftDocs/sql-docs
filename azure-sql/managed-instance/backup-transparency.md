@@ -3,6 +3,7 @@ title: Backup transparency for backup history
 description: Learn how to use backup transparency to view the backup history of Azure SQL Managed Instance.
 author: Stralle
 ms.author: strrodic
+ms.reviewer: mathoma
 ms.date: 11/16/2022
 ms.service: sql-managed-instance
 ms.subservice: backup-restore
@@ -57,9 +58,9 @@ Because SQL Managed Instance is a cloud service that stores data in storage, the
 
 When you review your backup history in the `msdb` database, consider the following information:
 
-- Backup history doesn't contain all information about user-initiated backups, like the username of the user who initiated the backup.
 - Fields that aren't relevant to the cloud aren't populated. Examples include the machine name, the physical drive, and the physical name.
 - Backup information is inserted into the `msdb` database when the backup is finished. Ongoing backups aren't supported.
+- The `msdb` database maintains records of automatic backups for up to 60 days, while the history of user-initiated backups, such as copy-only, is preserved indefinitely.
 
 ## Next steps
 

@@ -39,7 +39,7 @@ Unless you are programming in Visual Basic, all event handlers for **Connection*
  For example, it can take a long time to populate a large [Recordset](../../reference/ado-api/recordset-object-ado.md) object. If your application is appropriately written, you can start a `Recordset.Open(...,adAsyncExecute)` operation and continue with other processing. You will eventually be notified when the **Recordset** is populated by an **ExecuteComplete** event.  
   
 ## Single Event Handlers and Multiple Objects  
- The flexibility of a programming language like Microsoft Visual C++® enables you to have one event handler process events from multiple objects. For example, you could have one **Disconnect** event handler process events from several **Connection** objects. If one of the connections ended, the **Disconnect** event handler would be called. You could tell which connection caused the event because the event-handler object parameter would be set to the corresponding **Connection** object.  
+ The flexibility of a programming language like [!INCLUDE [vcprvc-md](../../../includes/vcprvc-md.md)] enables you to have one event handler process events from multiple objects. For example, you could have one **Disconnect** event handler process events from several **Connection** objects. If one of the connections ended, the **Disconnect** event handler would be called. You could tell which connection caused the event because the event-handler object parameter would be set to the corresponding **Connection** object.  
   
 > [!NOTE]
 >  This technique cannot be used in Visual Basic because that language can correlate only one object to an event handler.  

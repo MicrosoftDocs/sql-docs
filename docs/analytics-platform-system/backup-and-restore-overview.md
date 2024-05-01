@@ -103,7 +103,7 @@ When restoring data, the appliance detects the number of Compute nodes on the so
   
 3.  The Control node (MPP Engine) creates a distributed query plan to perform a parallel database restore.  
   
-    -   SQL ServerPDW performs the restore of a user database in parallel. However, multiple database backups and restores are not run concurrently. The MPP Engine puts each restore statement into a queue; it must wait for previously submitted backup and restore requests to finish.  
+    - Analytics Platform System (PDW) performs the restore of a user database in parallel. However, multiple database backups and restores are not run concurrently. The MPP Engine puts each restore statement into a queue; it must wait for previously submitted backup and restore requests to finish.  
   
     -   A restore of the master database only restores data to the Control node; the restore is performed serially.  
   

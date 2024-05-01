@@ -7,6 +7,7 @@ ms.date: "07/08/2016"
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: conceptual
+monikerRange: ">=sql-server-ver16"
 ---
 # What's New in Master Data Services (MDS)
 
@@ -22,23 +23,23 @@ ms.topic: conceptual
   
 -   To download [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**.  
   
--   Have an Azure account?  Then go **[here](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2019?tab=Overview)** to spin up a Virtual Machine with [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] already installed.  
+-   Have an Azure account? Then go **[here](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2019?tab=Overview)** to spin up a Virtual Machine with [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] already installed.  
   
 ##  Improved Performance  
   
- Performance improvements enable you to create larger models, load data more efficiently, and get better overall performance. This includes improvement the performance of the add-in for Microsoft Excel has been improved to decrease data load times and enable the add-in to handle larger entities.  
+ Performance improvements enable you to create larger models, load data more efficiently, and get better overall performance. This performance improvement includes decrease data load times of Microsoft Excel add-in and enable the Microsoft Excel add-in to handle larger entities.  
   
  For more information about the add-in for Microsoft Excel, see [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
   
  The following feature improvements are included.  
   
--   There is data compression on the entity level, which by default is enabled. When data compression is enabled, all the entity related tables and indexes are compressed with SQL Row Level compression. This significantly reduces the disk I/O when reading or updating the master data, especially when the master data has millions of rows and/or has a lot of NULL value columns.  
+-   There is data compression on the entity level, which by default is enabled. When data compression is enabled, all the entity related tables and indexes are compressed with SQL Row Level compression. This improvement significantly reduces the disk I/O when reading or updating the master data, especially when the master data has millions of rows and/or has a lot of NULL value columns.  
   
      Because there is a slight increase in the CPU usage on the SQL Server engine side, if you have CPU bound on the server you can turn off data compression by editing the entity.  
   
-     For more information, see [Create an Entity &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)and [Data Compression](../relational-databases/data-compression/data-compression.md).  
+     For more information, see [Create an Entity &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md) and [Data Compression](../relational-databases/data-compression/data-compression.md).  
   
--   The Dynamic Content Compression IIS feature is enabled, by default. This significantly reduces the size of the xml response and saves the network I/O, though CPU usage is increased. If you have CPU bound on the server, you can turn off data compression by adding the following setting to the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web.config file.  
+-   The Dynamic Content Compression IIS feature is enabled, by default. It significantly reduces the size of the xml response and saves the network I/O, though CPU usage is increased. If you have CPU bound on the server, you can turn off data compression by adding the following setting to the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web.config file.  
   
     ```  
     <configuration>  
@@ -57,7 +58,7 @@ ms.topic: conceptual
   
     -   MDS_MDM_Sample_Log_Maintenace  
   
- By default the MDS_MDM_Sample_Index_Maintenance job runs weekly. You can modify the schedule. You can also manually run the job at any time by using the udpDefragmentation stored procedure. It is recommended that you run the stored procedure each time a large volume of master data is inserted or updated, or after a new version is created from the existing version.  
+ By default the MDS_MDM_Sample_Index_Maintenance job runs weekly. You can modify the schedule. You can also manually run the job at any time by using the udpDefragmentation stored procedure. When you insert or update a large volume of master data, or after you create a new version from the existing version, it is recommended that you run the store procure.
   
  An index with more than 30% fragmentation is rebuilt online. During the rebuild, the performance is affected on the CRUD operation on the same table. If performance degradation is a concern, it is recommended that you run the store procedure during off business hours. For more information about index fragmentation, see [Reorganize and Rebuild Indexes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
@@ -67,9 +68,9 @@ ms.topic: conceptual
   
  The new Super User function permission gives a user or group the same permissions as the Server Admin in the previous release of [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. The Super User permission can be assigned to multiple users and groups. In the previous release, the user who originally installed [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] was the server admin, and it was difficult to transfer this permission to another user or a group. For more information, see [Functional Area Permissions &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
- A user can now explicitly be assigned the Admin permission at the model level. This means that if the user is later assigned permissions in the model subtree, such as the entity level, he will not lose this Admin permission.  
+ A user can now explicitly be assigned the Admin permission at the model level. This means that if the user is assigned permissions in the model subtree, such as the entity level, he still has this Admin permission.
   
- In this release of [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], we're providing more levels of permissions by introducing the following new permissions: Read, Create, Update and Delete. For example, a user that has only the Update permission can now update the master data without creating or deleting the data. When you give a user the Create, Update or Delete permission, the user is automatically assigned the Read permission. You can also combine the Read, Create, Update and Delete permissions.  
+ In this release of [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], we're providing more levels of permissions by introducing the following new permissions: Read, Create, Update, and Delete. For example, a user that has only the Update permission can now update the master data without creating or deleting the data. When you give a user the Create, Update or Delete permission, the user is automatically assigned the Read permission. You can also combine the Read, Create, Update, and Delete permissions.  
   
  When you upgrade to [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], old permissions are converted to new permissions as shown in the following table.  
   
@@ -85,7 +86,7 @@ ms.topic: conceptual
   
 ##  Improved Transaction Log Maintenance  
   
- You can now clean transaction logs at pre-determined intervals or on a schedule, using the System settings and at the model level. For a MDS system with lot of data changes and ETL processes these tables can grow exponentially and lead to performance degradation and storage space issues.  
+ You can now clean transaction logs at predetermined intervals or on a schedule, using the System settings and at the model level. For an MDS system with lot of data changes and ETL processes, these tables can grow exponentially and lead to performance degradation and storage space issues.  
   
  The following types of data can be removed from the logs.  
   
@@ -95,7 +96,7 @@ ms.topic: conceptual
   
 -   Staging batches that ran before a specified number of days.  
   
- You can configure the frequency that data is removed from the transaction logs, using the System settings and at the model level. For more information, see [System Settings &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)and [Create a Model &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md). For more information about transactions, see [Transactions &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md).  
+ You can configure the frequency that data is removed from the transaction logs, using the System settings and at the model level. For more information, see [System Settings &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md) and [Create a Model &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md). For more information about transactions, see [Transactions &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md).  
   
  The SQL Server Agent job, MDS_MDM_Sample_Log_Maintenace, triggers cleanup of the transaction logs and runs every night. You can use SQL Server Agent to modify the schedule for this job.  
   
@@ -103,11 +104,11 @@ ms.topic: conceptual
   
 ## Improved Troubleshooting  
   
- In [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], features have been added to improve debugging and make it easier to troubleshoot issues. For more information, see [Tracing &#40;Master Data Services&#41;](../master-data-services/tracing-master-data-services.md).  
+ In [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], added features could improve debugging and make it easier to troubleshoot issues. For more information, see [Tracing &#40;Master Data Services&#41;](../master-data-services/tracing-master-data-services.md).  
   
 ## Improved Manageability  
   
- Improvements in manageability help to lower maintenance costs and positively impact your return on investment (ROI). These improvements include transaction log maintenance and improvements to security, as well as the following new features.  
+ Improvements in manageability help to lower maintenance costs and positively impact your return on investment (ROI). These improvements include transaction log maintenance and improvements to security, and the following new features.  
   
 -   Using attribute names that are longer than 50 characters.  
   
@@ -134,7 +135,7 @@ ms.topic: conceptual
  
  **Business Rule Management Experience Redesigned**  
   
- The business rule management experience in MDS has been completely redesigned to improve the experience. For more information about this feature, see [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md).  
+ The business rule management experience in MDS has been redesigned to improve the experience. For more information about this feature, see [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md).  
   
  **Business Rule Management Functionality Removed from the MDS Add-in for Excel**  
   
@@ -148,7 +149,7 @@ ms.topic: conceptual
 
  **Many-to-Many Relationships in Derived Hierarchies**  
   
- You can now create a Derived Hierarchy that displays  many-to-many relationships. A many-to-many relationship between two entities may be modeled through the use of a third entity that provides a mapping between them. The mapping entity is an entity that has two or more domain-based attributes referencing other entities.  
+ You can now create a Derived Hierarchy that displays  many-to-many relationships. A many-to-many relationship between two entities may be modeled through by using a third entity that provides a mapping between them. The mapping entity is an entity that has two or more domain-based attributes referencing other entities.  
   
  For example, entity M has a domain-based attribute that references A and a domain-based attribute that references B. You can create a hierarchy from A to B using the mapping entity.  
   
@@ -160,9 +161,9 @@ ms.topic: conceptual
  
  **Derived Hierarchy Management Experience Improved**  
   
- The derived hierarchy management experience in MDS has been improved. For more information about this feature, see [Create a Derived Hierarchy &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md).  
+ The derived hierarchy management experience in MDS has already been improved. For more information about this feature, see [Create a Derived Hierarchy &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md).  
   
- Business Rule management functionality has been removed from the MDS Add-in for Excel because we redesigned the experience.  
+ Business Rule management functionality has already been removed from the MDS Add-in for Excel because we redesigned the experience.  
  
 ## Attribute Improvements   
     
@@ -188,19 +189,19 @@ ms.topic: conceptual
   
  **Member Revision History**  
   
- A member revision history is recorded when a member is changed. You can rollback a revision history, as well as view and annotate revisions. Using the **Log Retention Days** property, you can specify how long historical data is retained. For more information, see [Member Revision History &#40;Master Data Services&#41;](../master-data-services/member-revision-history-master-data-services.md).  
+ A member revision history is recorded when a member is changed. You can roll back a revision history, and view and annotate revisions. Using the **Log Retention Days** property, you can specify how long historical data is retained. For more information, see [Member Revision History &#40;Master Data Services&#41;](../master-data-services/member-revision-history-master-data-services.md).  
   
  **Merge Conflicts**  
   
  If you try to publish data that has been changed by another user, the publish will fail with a conflict error. To resolve this error, you can perform merge conflicts and republish the changes. For more information, see [Merge Conflicts (Master Data Services)](../master-data-services/merge-conflicts-master-data-services.md) and [Merge Conflicts (MDS Add-in for Excel)](../master-data-services/microsoft-excel-add-in/merge-conflicts-mds-add-in-for-excel.md).  
   
- **Change Sets**  
+ **ChangeSets**  
   
- You can use change sets to save pending changes to an entity, and you can view and modify pending changes. If the entity requires approval for changes, you must save the pending changes into a change set and submit for approval by the administrator. For more information, see [Changesets &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md).  
+ You can use changesets to save pending changes to an entity, and you can view and modify pending changes. If the entity requires approval for changes, you must save the pending changes into a changeset and submit for approval by the administrator. For more information, see [Changesets &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md).  
   
- **Change Set Email and Management**  
+ **ChangeSet Email and Management**  
   
- In this release, you can now view and manage all changes by model and version. You can  also receive email notifications each time a change set status changes for an entity that requires approval. For more information, see [Manage Changesets &#40;Master Data Services&#41;](../master-data-services/manage-changesets-master-data-services.md) and [Notifications &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md).  
+ In this release, you can now view and manage all changes by model and version. You can  also receive email notifications each time a changeset status changes for an entity that requires approval. For more information, see [Manage Changesets &#40;Master Data Services&#41;](../master-data-services/manage-changesets-master-data-services.md) and [Notifications &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md).  
   
  **View and Manage Revision History**  
   
@@ -222,5 +223,5 @@ ms.topic: conceptual
 
 ## See Also  
  [Master Data Services and Data Quality Services Features Supported by the Editions of SQL Server 2016](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
- [Deprecated Master Data Services Features](../master-data-services/deprecated-master-data-services-features.md)  
- [Discontinued Master Data Services Features](../master-data-services/discontinued-master-data-services-features.md)
+ [Deprecated Features of Master Data Services](../master-data-services/deprecated-master-data-services-features.md)  
+ [Discontinued Features of Master Data Services](../master-data-services/discontinued-master-data-services-features.md)

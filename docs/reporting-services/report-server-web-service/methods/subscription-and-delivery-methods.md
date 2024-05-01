@@ -1,5 +1,5 @@
 ---
-title: "Subscription and Delivery Methods"
+title: "Subscription and delivery methods"
 description: In Reporting Services, you can use these methods to create and manage subscriptions and delivery of catalog items.
 author: maggiesMSFT
 ms.author: maggies
@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "methods [Reporting Services], subscription and delivery"
   - "subscriptions [Reporting Services], about subscriptions"
 ---
-# Subscription and Delivery Methods
+# Subscription and delivery methods
   You can use these methods to create and manage subscriptions and delivery of catalog items.  
   
 |Method|Action|  
@@ -25,12 +25,12 @@ helpviewer_keywords:
 |<xref:ReportService2010.ReportingService2010.DeleteSubscription%2A>|Deletes a subscription from the report server database.|  
 |<xref:ReportService2010.ReportingService2010.GetSubscriptionProperties%2A>|Returns the properties of a subscription.|  
 |<xref:ReportService2010.ReportingService2010.ListMySubscriptions%2A>|Retrieves a list of subscriptions that have been created by the current user of the report server or SharePoint site for the given catalog item.|  
-|<xref:ReportService2010.ReportingService2010.ListSubscriptions%2A>|Retrieves a list of subscriptions that have been created for a given item.|  
+|<xref:ReportService2010.ReportingService2010.ListSubscriptions%2A>|Retrieves a list of subscriptions for a given item.|  
 |<xref:ReportService2010.ReportingService2010.PrepareQuery%2A>|Returns a data set containing the fields retrieved by the delivery query for a data-driven subscription.|  
 |<xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A>|Sets the values of properties of a data-driven subscription.|  
 |<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A>|Sets the values of properties of a subscription.|  
   
-## See Also  
+## Related content  
  [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Report Server Web Service Methods](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

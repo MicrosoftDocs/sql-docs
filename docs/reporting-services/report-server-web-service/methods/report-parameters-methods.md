@@ -1,5 +1,5 @@
 ---
-title: "Report Parameters Methods"
+title: "Report parameters methods"
 description: These methods get and set parameter properties for an item and validate parameter values, get supported parameter states, and get parameter types.
 author: maggiesMSFT
 ms.author: maggies
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "methods [Reporting Services], report parameters"
   - "parameters [Reporting Services], methods"
 ---
-# Report Parameters Methods
+# Report parameters methods
   You can use these methods to set and retrieve parameters for reports.  
   
 |Method|Action|  
@@ -22,7 +22,7 @@ helpviewer_keywords:
 |<xref:ReportService2010.ReportingService2010.ListParameterTypes%2A>|Returns a list of supported parameter types.|  
 |<xref:ReportService2010.ReportingService2010.SetItemParameters%2A>|Sets parameter properties for a specified item.|  
   
-## See Also  
+## Related content  
  [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Report Server Web Service Methods](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

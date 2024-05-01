@@ -13,7 +13,7 @@ ms.topic: how-to
 # Enable Microsoft Entra authentication for SQL Server on Azure VMs
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
-This article teaches you to enable authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) for your SQL Server on Azure virtual machines (VMs). 
+This article teaches you to enable authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) for your SQL Server on Azure virtual machines (VMs). 
 
 ## Overview
 
@@ -44,7 +44,7 @@ To enable Microsoft Entra authentication on your SQL Server, you need the follow
 
 ## Grant permissions
 
-The managed identity you choose to facilitate authentication between SQL Server and Microsoft Entra ID has to have the following three Microsoft Graph application permissions (app roles): `User.ReadALL`, `GroupMember.Read.All`, and `Application.Read.All`. 
+The managed identity you choose to facilitate authentication between SQL Server and Microsoft Entra ID has to have the following three Microsoft Graph application permissions (app roles): `User.Read.All`, `GroupMember.Read.All`, and `Application.Read.All`. 
 
 Alternatively, adding the managed identity to the **Microsoft Entra Directory Readers role** grants sufficient permissions. Another way to assign the **Directory Readers** role to a managed identity is to assign the **Directory Readers role** to a group in Microsoft Entra ID. The group owners can then add the Virtual Machine managed identity as a member of this group. This minimizes involving Microsoft Entra Global administrators and delegates the responsibility to the group owners. 
 
@@ -88,6 +88,8 @@ To grant your managed identity the **Directory Readers** role, follow these step
 ### Add app role permissions
 
 You can use [Azure PowerShell](/powershell/azure/install-azure-powershell) to grant app roles to a managed identity. To do so, follow these steps: 
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../azure-sql/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 1. Search for Microsoft Graph 
 
@@ -268,8 +270,8 @@ The following output indicates Microsoft Entra authentication has been enabled w
 
 Consider the following limitations: 
 
-- Microsoft Entra authentication is only supported with Windows SQL Server 2022 VMs registered with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) and deployed to the public cloud. 
-- The identity you choose to authenticate to SQL Server has to have either the **Directory Readers** role in Microsoft Entra ID or the following three Microsoft Graph application permissions (app roles): `User.ReadALL`, `GroupMember.Read.All`, and `Application.Read.All`. 
+- Microsoft Entra authentication is only supported with SQL Server 2022 running on Windows VMs registered with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) and deployed to the public cloud. Only supported scenarios of the SQL IaaS Agent extension are supported, such as a default instance, or a single named instance. Failover cluster instances are not supported. 
+- The identity you choose to authenticate to SQL Server has to have either the **Directory Readers** role in Microsoft Entra ID or the following three Microsoft Graph application permissions (app roles): `User.Read.All`, `GroupMember.Read.All`, and `Application.Read.All`. 
 - Once Microsoft Entra authentication is enabled, there's no way to disable it. 
 - Currently, authenticating to SQL Server on Azure VMs through Microsoft Entra authentication using the [FIDO2 method](/azure/active-directory/authentication/howto-authentication-passwordless-faqs) isn't supported. 
 

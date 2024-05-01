@@ -32,7 +32,7 @@ monikerRange: ">=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017|
   
 ## Syntax  
   
-Syntax for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2012), [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [fabric](../../includes/fabric.md)].
+Syntax for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2012), [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [fabric](../../includes/fabric.md)].
 
 ```syntaxsql 
 ALTER ROLE  role_name  

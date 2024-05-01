@@ -1,6 +1,6 @@
 ---
-title: "SendUsingSMTPServer Property (WMI MSReportServer_ConfigurationSetting)"
-description: "SendUsingSMTPServer Property (WMI MSReportServer_ConfigurationSetting)"
+title: "SendUsingSMTPServer property (WMI MSReportServer_ConfigurationSetting)"
+description: "SendUsingSMTPServer property (WMI MSReportServer_ConfigurationSetting)"
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -14,8 +14,8 @@ apilocation: "reportingservices.mof"
 apiname: "SendUsingSMTPServer"
 apitype: MOFDef
 ---
-# ConfigurationSetting Property - SendUsingSMTPServer
-  Specifies whether the **SendUsing** element in the in the e-mail configuration for the report server is set to **true**.  
+# ConfigurationSetting property - SendUsingSMTPServer
+  Specifies whether the *SendUsing* element in the email configuration for the report server is set to **true**.  
   
 ## Syntax  
   
@@ -27,16 +27,16 @@ Public Dim SendUsingSMTPServer As Boolean
 public Boolean SendUsingSMTPServer;  
 ```  
   
-## Property Values  
+## Property values  
  A read-only **Boolean** object.  
   
-## Example Code  
- [MSReportServer_ConfigurationSetting Class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
+## Example code  
+ [MSReportServer_ConfigurationSetting class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## See Also  
- [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+## Related content  
+ [MSReportServer_ConfigurationSetting members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

@@ -1,8 +1,7 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
-ms.date: 08/08/2023
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 01/11/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -63,6 +62,7 @@ ms.topic: include
 | 7306 | 16 | No | Cannot open the table "%ls" from OLE DB provider "%ls" for linked server "%ls". %ls |
 | 7307 | 16 | No | Cannot obtain the data source of a session from OLE DB provider "%ls" for linked server "%ls". This action must be supported by the provider. |
 | [7308](../mssqlserver-7308-database-engine-error.md) | 16 | No | OLE DB provider '%ls' cannot be used for distributed queries because the provider is configured to run in single-threaded apartment mode. |
+| 7310 | 16 | No | Cannot obtain the set of schema rowsets supported by OLE DB provider "%ls" for linked server "%ls". The provider supports the interface, but returns a failure code when it is used. |
 | 7311 | 16 | No | Cannot obtain the schema rowset "%ls" for OLE DB provider "%ls" for linked server "%ls". The provider supports the interface, but returns a failure code when it is used. |
 | 7312 | 16 | No | Invalid use of schema or catalog for OLE DB provider "%ls" for linked server "%ls". A four-part name was supplied, but the provider does not expose the necessary interfaces to use a catalog or schema. |
 | 7313 | 16 | No | An invalid schema or catalog was specified for the provider "%ls" for linked server "%ls". |
@@ -131,7 +131,7 @@ ms.topic: include
 | 7396 | 16 | No | Varchar(max), nvarchar(max), varbinary(max) and large CLR type data types are not supported as return value or output parameter to remote queries. |
 | 7397 | 16 | No | Remote function returned varchar(max), nvarchar(max), varbinary(max) or large CLR type value which is not supported. |
 | 7398 | 16 | No | The OLE DB provider '%ls' for linked server '%ls' reported an error committing the current inserts. |
-| 7399 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" reported an error. %ls |
+| [7399](../mssqlserver-7399-database-engine-error.md) | 16 | No | The OLE DB provider "%ls" for linked server "%ls" reported an error. %ls |
 | 7401 | 16 | Yes | The OLE DB provider "%ls" returned invalid literal prefix/suffix string. |
 | 7403 | 16 | Yes | The OLE DB provider "%ls" has not been registered. |
 | 7404 | 16 | Yes | The server could not load DCOM. |

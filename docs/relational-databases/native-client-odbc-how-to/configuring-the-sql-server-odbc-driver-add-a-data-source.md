@@ -3,13 +3,12 @@ title: "Add a Data Source (ODBC)"
 description: Learn how SQL Server ODBC driver calls stored procedures as remote stored procedures in SQL Server using the remote stored procedure call mechanism.
 author: markingmyname
 ms.author: maghan
-ms.date: "08/01/2016"
+ms.date: "04/15/2024"
 ms.service: sql
 ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords:
   - "data sources [ODBC]"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configuring the SQL Server ODBC Driver - Add a Data Source
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,7 +25,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 3.  Click **SQL Server**, and then click **Finish**.  
   
-4.  Complete the steps in the **Create a New Data Source to SQL Server** Wizard.  
+4.  Complete the steps in the **Create a New Data Source to SQL Server** Wizard. For more information, see [ODBC Data Source Administrator DSN](../../connect/odbc/windows/odbc-administrator-dsn-creation.md).
   
 ### To add a data source programmatically  
   
@@ -36,7 +35,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 1.  Call [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) with a SAVEFILE=file_name parameter in the connect string. If the connect is successful, the ODBC driver creates a file data source with the connection parameters in the location pointed to by the SAVEFILE parameter.  
   
-## See Also  
+## Related content
+
 [Delete a Data Source &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md)    
   
   

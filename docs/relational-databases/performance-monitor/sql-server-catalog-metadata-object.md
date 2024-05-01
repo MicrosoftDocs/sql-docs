@@ -3,10 +3,10 @@ title: "SQL Server, Catalog Metadata object"
 description: "Learn about the SQLServer:Catalog Metadata performance object, which provides counters for catalog metadata for SQL Server."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/12/2021"
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "SQLServer:Catalog Metadata"
 ---
@@ -35,5 +35,6 @@ SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%Catalog Metadata%';
 ```  
 
-## See also  
-[Monitor Resource Usage (System Monitor)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)
+## Related content
+
+- [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)

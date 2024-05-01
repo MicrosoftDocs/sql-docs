@@ -7,7 +7,7 @@ ms.reviewer: mathoma
 ms.date: 07/14/2023
 ms.service: virtual-machines
 ms.topic: how-to
-ms.custom: ignite-fall-2021, devx-track-azurecli
+ms.custom: devx-track-azurecli
 ---
 
 
@@ -89,7 +89,7 @@ You can configure assessment on a schedule using the Azure portal and the Azure 
 
 # [Azure portal](#tab/azure-portal)
 
-If you set a schedule in the configuration blade, an assessment runs automatically at the specified date and time. Choose **Configuration** to modify your assessment schedule. Once you provide a new schedule, the previous schedule is overwritten. 
+If you set a schedule in the configuration pane, an assessment runs automatically at the specified date and time. Choose **Configuration** to modify your assessment schedule. Once you provide a new schedule, the previous schedule is overwritten. 
 
 # [Azure CLI](#tab/azure-cli)
 
@@ -122,7 +122,7 @@ After the SQL best practices assessment feature is enabled for your SQL Server V
 
 # [Azure portal](#tab/azure-portal)
 
-To run an on-demand assessment by using the Azure portal, select **Run assessment** from the SQL best practices assessment blade of the [Azure portal SQL Server VM resource](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.SqlVirtualMachine%2FSqlVirtualMachines) page.
+To run an on-demand assessment by using the Azure portal, select **Run assessment** from the SQL best practices assessment pane of the [Azure portal SQL Server VM resource](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.SqlVirtualMachine%2FSqlVirtualMachines) page.
 
 # [Azure CLI](#tab/azure-cli)
 

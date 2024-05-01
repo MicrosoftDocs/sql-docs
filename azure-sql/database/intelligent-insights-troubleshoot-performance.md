@@ -1,5 +1,6 @@
 ---
 title: Troubleshoot performance issues with Intelligent Insights
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Intelligent Insights helps you troubleshoot Azure SQL Database and Azure SQL Managed Instance performance issues.
 author: AlainDormehlMSFT
 ms.author: aldorme
@@ -11,7 +12,7 @@ ms.topic: troubleshooting
 ms.custom: sqldbrb=2
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
-# Troubleshoot Azure SQL Database and Azure SQL Managed Instance performance issues with Intelligent Insights
+# Troubleshoot performance issues with Intelligent Insights - Azure SQL Database & Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 This page provides information on Azure SQL Database and Azure SQL Managed Instance performance issues detected through the [Intelligent Insights](intelligent-insights-overview.md) resource log. Metrics and resource logs can be streamed to [Azure Monitor logs](/azure/azure-monitor/insights/azure-sql), [Azure Event Hubs](/azure/azure-monitor/essentials/resource-logs#send-to-azure-event-hubs), [Azure Storage](metrics-diagnostic-telemetry-logging-streaming-export-configure.md#stream-into-azure-storage), or a third-party solution for custom DevOps alerting and reporting capabilities.

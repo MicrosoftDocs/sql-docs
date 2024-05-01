@@ -1,22 +1,21 @@
 ---
-title: Protect Azure Arc-enabled SQL Server with Configure Microsoft Defender for Cloud 
-titleSuffix: Azure Arc-enabled SQL Server
-description: Protect Azure Arc-enabled SQL Server with Microsoft Defender for Cloud
+title: Protect SQL Server with Microsoft Defender for Cloud 
+description: Describes how to use Microsoft Defender for Cloud to protect SQL Server enabled by Azure Arc
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
 ms.date: 10/12/2022
 ms.topic: conceptual
 ---
-# Protect Azure Arc-enabled SQL Server with Microsoft Defender for Cloud 
+# Protect SQL Server with Microsoft Defender for Cloud
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-You can configure your instance connected to Azure with Microsoft Defender for Cloud by following these steps.
+You can configure your instance of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] with Microsoft Defender for Cloud by following these steps.
 
 ## Prerequisites
 
-- Your Windows-based SQL Server instance is connected to Azure. Follow the instructions to [onboard your SQL Server instance to Azure Arc-enabled SQL Server](connect.md).
+- Your Windows-based SQL Server instance is connected to Azure. Follow the instructions to [Connect your SQL Server to Azure Arc](connect.md).
 
    > [!NOTE]
    > Microsoft Defender for Cloud is only supported for SQL Server instances on Windows machines. This will not work for SQL Server on Linux machines.
@@ -28,7 +27,7 @@ You can configure your instance connected to Azure with Microsoft Defender for C
 1. Search for **Log Analytics workspaces** resource type and add a new one through the creation pane.
 
    > [!NOTE]
-   > You can use a Log Analytics workspace in any region so if you already have one, you can use it. But we recommend creating it in the same region where your Azure Arc-enabled SQL Server resource is created.
+   > You can use a Log Analytics workspace in any region so if you already have one, you can use it. But we recommend creating it in the same region where your [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] resource is created.
 
 1. Go to **Agents management > Log Analytics agent instructions**  and copy Workspace ID and Primary key for later use.
 
@@ -38,7 +37,7 @@ The next step is needed only if you haven't yet configured MMA on the remote mac
 
 1. Go to **Azure Arc > Servers** and open  the Azure Arc-enabled server resource for the machine where the SQL Server instance is installed. 
 
-1. Open the **Extensions** blade and click **+ Add**. 
+1. Open the **Extensions** pane and click **+ Add**. 
 
 1. Select **Log Analytics Agent - Azure Arc** and click **Next**. 
 

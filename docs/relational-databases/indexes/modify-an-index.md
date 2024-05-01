@@ -53,11 +53,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
   
 The following example drops and re-creates an existing index on the `ProductID` column of the `Production.WorkOrder` table in the AdventureWorks database by using the `DROP_EXISTING` option. The options `FILLFACTOR` and `PAD_INDEX` are also set.  
   
-[!code-sql[IndexDDL#CreateIndex4](../../relational-databases/indexes/codesnippet/tsql/modify-an-index_1.sql)]  
+:::code language="sql" source="codesnippet/tsql/modify-an-index_1.sql":::
   
 The following example uses ALTER INDEX to set several options on the index `AK_SalesOrderHeader_SalesOrderNumber`.  
   
-[!code-sql[IndexDDL#AlterIndex4](../../relational-databases/indexes/codesnippet/tsql/modify-an-index_2.sql)]  
+:::code language="sql" source="codesnippet/tsql/modify-an-index_2.sql":::
   
 #### To modify index columns  
   

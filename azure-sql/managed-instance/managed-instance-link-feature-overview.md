@@ -9,7 +9,7 @@ ms.date: 11/14/2023
 ms.service: sql-managed-instance
 ms.subservice: data-movement
 ms.topic: conceptual
-ms.custom: ignite-fall-2021, ignite-2023
+ms.custom: ignite-2023
 ---
 
 # Overview of the Managed Instance link
@@ -17,8 +17,6 @@ ms.custom: ignite-fall-2021, ignite-2023
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 This article provides an overview of the Managed Instance link feature, which enables near real-time data replication between SQL Server and Azure SQL Managed Instance. The link provides hybrid flexibility and database mobility as it unlocks several scenarios, such as scaling read-only workloads, offloading analytics and reporting to Azure, and migrating to Azure. And, with SQL Server 2022, the link enables online disaster recovery with fail back to SQL Server (currently in preview), as well as configuring the link from SQL Managed Instance to SQL Server 2022 (also in preview). 
-
-If you have product improvement suggestions or comments, or you want to report issues, contact the product group through [Managed Instance link user feedback](https://aka.ms/mi-link-feedback).
 
 ## Overview
 
@@ -43,7 +41,7 @@ Databases that are replicated through the link between SQL Server and Azure SQL 
 - Migrating to Azure
 - Copying data on-premises
 
-:::image type="content" source="./media/managed-instance-link-feature-overview/mi-link-main-scenario.png" alt-text="Diagram that illustrates the main Managed Instance link scenario.":::
+:::image type="content" source="./media/managed-instance-link-feature-overview/mi-link-main-scenario.svg" alt-text="Diagram that illustrates the main Managed Instance link scenario." lightbox="./media/managed-instance-link-feature-overview/mi-link-main-scenario.svg":::
 
 ## <a id="prerequisites"></a>Version supportability
 
@@ -82,7 +80,7 @@ You'll also need the following tools:
 
 The underlying technology behind the link feature for SQL Managed Instance is based on creating a distributed availability group between SQL Server and Azure SQL Managed Instance. The solution supports single-node systems with or without existing availability groups, or multiple node systems with existing availability groups.  
 
-:::image type="content" source="./media/managed-instance-link-feature-overview/mi-link-ag-dag.png" alt-text="Diagram showing how the link feature for SQL Managed Instance works.":::
+:::image type="content" source="./media/managed-instance-link-feature-overview/mi-link-distributed-availability-group.svg" alt-text="Diagram showing how the link feature for SQL Managed Instance works using distributed availability group technology." lightbox="./media/managed-instance-link-feature-overview/mi-link-distributed-availability-group.svg":::
 
 Private connection such as a VPN or Azure ExpressRoute is used between an on-premises network and Azure. If SQL Server is hosted on an Azure VM, the internal Azure backbone can be used between the VM and managed instance – such as, for example, virtual network peering. Trust between the two systems is established using certificate-based authentication, in which SQL Server and SQL Managed Instance exchange public keys of their respective certificates.
 
@@ -146,11 +144,11 @@ With SQL Server 2022, you can establish your link from SQL Managed Instance to S
 After your databases are replicated to your Azure SQL Managed Instance, they're automatically backed up to Azure storage. You can reduce your on-premises management and operation costs while enjoying the reliability of Azure backups for your replicated databases. You can then perform a [point-in-time restore](point-in-time-restore.md) of your replicated database to any SQL Managed Instance deployment in the same region, as with any other [automated backup](automated-backups-overview.md). 
 
 
-## License-free passive replica
+## License-free passive DR replica
 
-For disaster recovery only secondary SQL managed instances that don't have any workloads, you can save on vCore licensing costs by activating the [hybrid failover benefit](business-continuity-high-availability-disaster-recover-hadr-overview.md#license-free-dr-replicas) and designating your secondary SQL managed instance as a passive DR replica. 
+You can save on vCore licensing costs if you activate the [hybrid failover benefit](business-continuity-high-availability-disaster-recover-hadr-overview.md#license-free-dr-replicas) for secondary passive disaster recovery only SQL managed instances that don't have any workloads. 
 
-To get started, review [License-free passive replica](managed-instance-link-disaster-recovery.md#license-free-passive-replica). 
+To get started, review [License-free passive replica](managed-instance-link-disaster-recovery.md#license-free-passive-dr-replica). 
 
 ### Cost benefit
 
@@ -161,6 +159,8 @@ The benefit reflects differently for the pay-as-you-go billing model and the [Az
 For example, as a pay-as-you-go customer, if you have 16 vCores assigned to the secondary instance, a discount for 16 vCores appears on your invoice if you designate your secondary instance for hybrid failover.
 
 In another example, if you have 16 Azure Hybrid Benefit licenses and your secondary SQL managed instance uses 8 vCores, after you designate the secondary instance for hybrid failover, 8 vCores are returned to your license pool for you to use with other Azure SQL deployments.
+
+For precise terms and conditions of the Hybrid failover rights benefit, see the SQL Server licensing terms online in the [“SQL Server – Fail-over Rights”](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS) section.
 
 
 ## Limitations
@@ -193,7 +193,7 @@ Configuration limitations include:
 
 Feature limitations include:
 
-- [Auto-failover groups](auto-failover-group-sql-mi.md) aren't supported with instances that use the link feature. You can't establish a link on a managed instance that's part of an auto-failover group, and conversely, you can't configure an auto-failover group on an instance that has a link established.
+- [Failover groups](failover-group-sql-mi.md) aren't supported with instances that use the link feature. You can't establish a link on a managed instance that's part of a failover group, and conversely, you can't configure a failover group on an instance that has a link established.
 - If you're using Change Data Capture (CDC), log shipping, or a service broker with databases that are replicated on the SQL Server instance, when the database is migrated to a SQL Managed Instance deployment, during a failover to Azure, clients need to connect by using the instance name of the current global primary replica. These settings should be manually reconfigured. 
 - If you're using transactional replication with a database on a SQL Server instance in a migration scenario, during failover to Azure, transactional replication on the SQL Managed Instance deployment will fail and should be manually reconfigured. 
 - If you're using distributed transactions with a database that's replicated from the SQL Server instance and, in a migration scenario, on the cutover to the cloud, Distributed Transaction Coordinator capabilities won't be transferred. It's not possible for the migrated database to get involved in distributed transactions with the SQL Server instance, because the SQL Managed Instance deployment doesn't support distributed transactions with SQL Server at this time. For reference, SQL Managed Instance today supports distributed transactions only between other managed instances. For more information, see [Distributed transactions across cloud databases](../database/elastic-transactions-overview.md#transactions-for-sql-managed-instance).

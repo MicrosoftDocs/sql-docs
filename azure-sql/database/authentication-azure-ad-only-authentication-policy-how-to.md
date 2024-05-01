@@ -19,7 +19,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 This article guides you through creating an Azure Policy that would enforce Microsoft Entra-only authentication when users create an Azure SQL Managed Instance, or a [logical server](logical-servers.md) for Azure SQL Database. To learn more about Microsoft Entra-only authentication during resource creation, see [Create server with Microsoft Entra-only authentication enabled in Azure SQL](authentication-azure-ad-only-authentication-create-server.md).
 
 > [!NOTE]
-> Although Azure Active Directory (Azure AD) has been [renamed to Microsoft Entra ID](/azure/active-directory/fundamentals/new-name), the policy names currently contain the original Azure AD name, so Microsoft Entra-only and Azure AD-only authentication is used interchangeably in this article. 
+> Although Azure Active Directory (Azure AD) has been [renamed to Microsoft Entra ID](/entra/fundamentals/new-name), the policy names currently contain the original Azure AD name, so Microsoft Entra-only and Azure AD-only authentication is used interchangeably in this article. 
 
 In this article, you learn how to:
 

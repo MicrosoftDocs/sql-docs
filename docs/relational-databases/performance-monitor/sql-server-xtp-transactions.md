@@ -3,10 +3,10 @@ title: "SQL Server XTP Transactions object"
 description: Learn about the SQL Server XTP Transactions performance object, which contains counters related to transactions involving In-Memory OLTP in SQL Server.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/13/2021"
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "SQL Server 2016 XTP Transactions"
   - "SQL Server 2017 XTP Transactions"
@@ -15,7 +15,7 @@ helpviewer_keywords:
 # SQL Server XTP Transactions object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  The **SQL Server XTP Transactions** performance object contains counters related to transactions involving In-Memory OLTP in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  The **SQL Server XTP Transactions** performance object contains counters related to transactions involving In-Memory OLTP in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  This table describes the **SQL Server XTP Transactions** counters.  
   
@@ -33,7 +33,7 @@ helpviewer_keywords:
 |**Transactions created/sec**|The number of transactions created in the system (on average), per second.<br /><br /> XTP transactions are counted differently than disk-based transactions (as reflected in Databases:Transactions/sec). For example, Transactions created/sec counts read/only transactions, while Databases:Transactions/sec does not.|  
   
  
-## Example
+## Examples
 
 You begin to explore the query performance counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
 
@@ -42,8 +42,8 @@ SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%XTP Transactions%';
 ``` 
 
-## See also  
-- [In-Memory OLTP and Memory-Optimization](../in-memory-oltp/overview-and-usage-scenarios.md)
-- [Databases Object](sql-server-databases-object.md)
-- [SQL Server XTP &#40;In-Memory OLTP&#41; Performance Counters](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)
-  
+## Related content
+
+- [In-Memory OLTP overview and usage scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
+- [SQL Server, Databases object](sql-server-databases-object.md)
+- [SQL Server XTP (In-memory OLTP) Performance Counters](sql-server-xtp-in-memory-oltp-performance-counters.md)

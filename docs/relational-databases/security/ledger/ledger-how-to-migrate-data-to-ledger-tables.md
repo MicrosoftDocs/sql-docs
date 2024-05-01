@@ -8,7 +8,7 @@ ms.date: 05/23/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
-monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 
 # Migrate data from regular tables to ledger tables
@@ -73,7 +73,7 @@ In the script below, we're copying the data from the regular `Employees` table t
 sp_copy_data_in_batches @source_table_name = N'Employees' , @target_table_name = N'Employees_LedgerTable'
 ```
 
-## Next steps
+## Related content
 
 - [Append-only ledger tables](ledger-append-only-ledger-tables.md)
 - [Updatable ledger tables](ledger-updatable-ledger-tables.md)

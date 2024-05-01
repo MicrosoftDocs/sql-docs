@@ -26,7 +26,7 @@ You can save comparisons either as part of a SQL Server Database project or as a
 > [!WARNING]  
 > If a project is specified as the target for comparison, the maximum supported path length (excluding drive letter, colon and leading backslash) for the project is 256 characters. If your project path exceeds 256 characters, you will still be able to compare its schema with a database or another project. However, you will not be able to update its schema.
 
-The following procedure compares the schema of a database project with a connected database. It uses entities created in previous procedures in the [Connected Database Development](../ssdt/connected-database-development.md) and [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) sections.
+The following procedure compares the schema of a database project with a connected database. It uses entities created in previous procedures in the [Manage Tables, Relationships, and Fix Errors](../ssdt/manage-tables-relationships-and-fix-errors.md) and [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) sections.
 
 ## Compare database definitions
 

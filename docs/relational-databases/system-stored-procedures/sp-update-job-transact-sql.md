@@ -1,6 +1,6 @@
 ---
 title: "sp_update_job (Transact-SQL)"
-description: "sp_update_job (Transact-SQL) update the attributes of an existing job created in the SQL Agent service."
+description: "sp_update_job (Transact-SQL) update the attributes of an existing job created in the SQL Server Agent service."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest, wiassaf
@@ -172,7 +172,7 @@ EXEC dbo.sp_update_job
 GO
 ```
 
-## Next steps
+## Related content
 
 - [sp_add_job (Transact-SQL)](sp-add-job-transact-sql.md)
 - [sp_delete_job (Transact-SQL)](sp-delete-job-transact-sql.md)

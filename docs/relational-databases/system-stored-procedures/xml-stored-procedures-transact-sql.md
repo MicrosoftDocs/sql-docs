@@ -23,6 +23,6 @@ dev_langs:
 - [sp_xml_preparedocument](sp-xml-preparedocument-transact-sql.md)
 - [sp_xml_removedocument](sp-xml-removedocument-transact-sql.md)
 
-## See also
+## Related content
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

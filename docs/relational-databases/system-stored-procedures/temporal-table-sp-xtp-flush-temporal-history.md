@@ -53,6 +53,6 @@ The name of the current or temporal table.
 
 Requires **db_owner** permissions.
 
-## See also
+## Related content
 
 - [Performance Considerations with Memory-Optimized System-Versioned Temporal Tables](../tables/memory-optimized-system-versioned-temporal-tables-performance.md)

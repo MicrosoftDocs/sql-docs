@@ -6,6 +6,7 @@ ms.author: v-davidengel
 ms.date: 03/26/2018
 ms.service: sql
 ms.subservice: connectivity
+ms.custom: linux-related-content
 ms.topic: conceptual
 ---
 # Step 1: Configure environment for PHP development

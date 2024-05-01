@@ -22,12 +22,12 @@ dev_langs:
 
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-Lists all Azure AD principals that were given connect permissions through external policies.
+Lists all database and server principals created from Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) which are given connect permissions through external policies.
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**sid**|**varbinary(85)**|SID (Security-IDentifier) of the principal.|  
-|**aad_object_id**|**nvarchar(72)**|Azure AD Object ID of the principal. Is unique within an Azure tenant.|  
+|**aad_object_id**|**nvarchar(72)**|Microsoft Entra Object ID of the principal. Is unique within an Azure tenant.|  
 |**type**|**nvarchar(4)**|Principal type: Z=External policy.|  
 |**type_desc**|**nvarchar(60)**|Description of the principal type: RBAC_ASSIGNED_USER.|  
 |**authentication_type**|**int**|Authentication type: 5.|  

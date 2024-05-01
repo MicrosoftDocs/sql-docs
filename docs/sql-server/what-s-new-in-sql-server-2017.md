@@ -7,7 +7,7 @@ ms.date: "10/20/2017"
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: whats-new
-ms.custom: intro-whats-new
+ms.custom: intro-whats-new, linux-related-content
 monikerRange: ">= sql-server-2016"
 ---
 # What's new in SQL Server 2017

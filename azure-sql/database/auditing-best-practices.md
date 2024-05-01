@@ -4,6 +4,7 @@ titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: This article goes over best practices when using Auditing in production environments for Azure SQL Database and Azure Synapse Analytics.
 author: sravanisaluru
 ms.author: srsaluru
+ms.reviewer: mathoma
 ms.date: 04/26/2023
 ms.service: sql-database
 ms.subservice: security
@@ -42,7 +43,11 @@ In production, you're likely to refresh your storage keys periodically. When wri
 1. Go back to the auditing configuration page, switch the storage access key from secondary to primary, and then select **OK**. Then select **Save** at the top of the auditing configuration page.
 1. Go back to the storage configuration page and regenerate the secondary access key (in preparation for the next key's refresh cycle).
 
-## See also
+## Storage account encrypted with Azure Key Vault 
+
+When you configure auditing with a storage account as the target, which is encrypted using a key vault behind a firewall, you must set up an **access policy** for the key vault. Navigate to the Azure Key Vault access policy, add a new policy with the necessary key permissions, enable the **unwrap key** option, and select the appropriate principal (such as the storage account) to grant access.
+
+## Related content
 
 - [Auditing overview](auditing-overview.md)
 - Data Exposed episode [What's New in Azure SQL Auditing](/Shows/Data-Exposed/Whats-New-in-Azure-SQL-Auditing)

@@ -1,17 +1,17 @@
 ---
-title: Elastic jobs (preview) overview
+title: Elastic jobs overview
 description: "Learn about how you can use elastic jobs to run Transact-SQL (T-SQL) scripts across a set of one or more databases in Azure SQL Database."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: srinia
-ms.date: 11/13/2023
+ms.reviewer: srinia, mathoma
+ms.date: 04/03/2024
 ms.service: sql-database
 ms.subservice: elastic-jobs
 ms.topic: overview
 ms.custom: sqldbrb=1
 ---
 
-# Elastic jobs in Azure SQL Database (preview)
+# Elastic jobs in Azure SQL Database
 
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
@@ -19,9 +19,6 @@ In this article, we review the capabilities and details of elastic jobs for Azur
 
 - For a tutorial on configuring elastic jobs, see the [elastic jobs tutorial](elastic-jobs-tutorial.md).
 - Learn more about [automation concepts in Azure database platforms](job-automation-overview.md).
-
-> [!NOTE]
-> Elastic jobs are in preview. Features currently in preview are available under [supplemental terms of use](https://azure.microsoft.com/support/legal/preview-supplemental-terms/), review for legal terms that apply to Azure features that are in preview. Azure SQL Database provides previews to give you a chance to evaluate and [share feedback with the product group](https://feedback.azure.com/d365community/forum/ef2b2b38-2f25-ec11-b6e6-000d3a4f0f84) on features before they become generally available (GA).
 
 ## Elastic jobs overview
 
@@ -72,23 +69,21 @@ Consider elastic jobs when you:
 
 An elastic job agent is the Azure resource for creating, running, and managing jobs. The elastic job agent is an Azure resource you create in the portal ([PowerShell](elastic-jobs-powershell-create.md) and REST API are also supported).
 
-Creating an **elastic job agent** requires an existing database in Azure SQL Database. The agent configures this existing Azure SQL Database as the [*job database*](#elastic-job-database). 
+Creating an **elastic job agent** requires an existing database in Azure SQL Database. The agent configures this existing Azure SQL Database as the [*job database*](#elastic-job-database).
 
 You can start, disable, or cancel a job through the Azure portal. The Azure portal also allows you to view job definitions and execution history.
 
 ### Cost of the elastic job agent
 
-The elastic job agent is free for the current preview. Billing cards in the Azure portal during preview will show an estimate (in US dollars) of the cost based on the selected concurrency capacity tier. This is currently for advanced cost estimation purposes only.
-
-The job database is billed at the same rate as any database in Azure SQL Database.
+The job database is billed at the same rate as any database in Azure SQL Database. For the cost of the Elastic job agent, see [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/).
 
 ## Elastic job database
 
 The *job database* is used for defining jobs and tracking the status and history of job executions. Jobs are executed in target databases. The *job database* is also used to store agent metadata, logs, results, job definitions, and also contains many useful stored procedures and other database objects for creating, running, and managing jobs using T-SQL.
 
-For the current preview, an existing database in Azure SQL Database (S1 or higher) is recommended to create an elastic job agent.
+An Azure SQL Database (S1 or higher) is recommended to create an elastic job agent.
 
-The *job database* should be a clean, empty, S1 or higher service objective Azure SQL Database. 
+The *job database* should be a clean, empty, S1 or higher service objective Azure SQL Database.
 
 The recommended service objective of the *job database* is S1 or higher, but the optimal choice depends on the performance needs of your job(s): the number of job steps, the number of job targets, and how frequently jobs are run.
 
@@ -151,13 +146,11 @@ Choose one method for all targets for an elastic job agent. For example, for a s
 The elastic job agent can connect to the server(s)/database(s) specified by the target group via two authentication options:
 
 - Use [Microsoft Entra (formerly Azure Active Directory) authentication](#authentication-via-user-assigned-managed-identity-umi) with a [user-assigned managed identity (UMI)](#authentication-via-user-assigned-managed-identity-umi).
-- Use [Database-scoped credentials](#authentication-via-database-scoped-credentials). (Previously, this was the only method of authentication.)
-
-The [name of Azure Active Directory is changing to Microsoft Entra](/azure/active-directory/fundamentals/new-name), starting in 2023.
+- Use [Database-scoped credentials](#authentication-via-database-scoped-credentials). 
 
 ### Authentication via user-assigned managed identity (UMI)
 
-[Microsoft Entra (formerly Azure Active Directory)](/azure/active-directory/fundamentals/new-name) authentication via user-assigned managed identity (UMI) is the recommended option for connecting elastic jobs to Azure SQL Database. With Microsoft Entra ID support, the job agent will be able to connect to target databases (databases, servers, elastic pools) and output database(s) using the UMI.
+[Microsoft Entra (formerly Azure Active Directory)](/entra/fundamentals/new-name) authentication via user-assigned managed identity (UMI) is the recommended option for connecting elastic jobs to Azure SQL Database. With Microsoft Entra ID support, the job agent will be able to connect to target databases (databases, servers, elastic pools) and output database(s) using the UMI.
 
 :::image type="content" source="media/elastic-jobs-overview/umi-jobuser.svg" alt-text="Diagram of how user-assigned managed identities (UMI) work with elastic jobs.":::
 
@@ -233,9 +226,13 @@ During job agent creation, a schema, tables, and a role called *jobs_reader* are
 
 Starting in October 2023, the elastic job agent has integration with Azure Alerts for job status notifications, simplifying the solution for monitoring the status and history of job execution.
 
-The Azure portal also has new, additional features for supporting elastic jobs and job monitoring. You can create [Azure Monitor Alert rules](/azure/azure-monitor/alerts/alerts-create-new-alert-rule) with the Azure portal, Azure CLI, PowerShell, and REST API. The **Failed Elastic jobs** metric is a good starting point to monitor and receive alerts on elastic job execution. In addition, you can elect to be alerted through a configurable action like SMS or email by the Azure Alert facility. For more information, see [Create alerts for Azure SQL Database in the Azure portal](/azure/azure-sql/database/alerts-insights-configure-portal#overview).
+The Azure portal also has new, additional features for supporting elastic jobs and job monitoring. On the **Overview** page of the Elastic job agent, the most recent job executions are displayed, as in following screenshot.
 
-For a sample, see [Create, configure, and manage elastic jobs (preview)](elastic-jobs-tutorial.md#create-job-agent-alerts-by-using-the-azure-portal).
+:::image type="content" source="media/elastic-jobs-overview/most-recent-job-executions.png" alt-text="Screenshot from the Azure portal Overview page showing recent job executions." lightbox="media/elastic-jobs-overview/most-recent-job-executions.png":::
+
+You can create [Azure Monitor Alert rules](/azure/azure-monitor/alerts/alerts-create-new-alert-rule) with the Azure portal, Azure CLI, PowerShell, and REST API. The **Failed Elastic jobs** metric is a good starting point to monitor and receive alerts on elastic job execution. In addition, you can elect to be alerted through a configurable action like SMS or email by the Azure Alert facility. For more information, see [Create alerts for Azure SQL Database in the Azure portal](/azure/azure-sql/database/alerts-insights-configure-portal#overview).
+
+For a sample, see [Create, configure, and manage elastic jobs](elastic-jobs-tutorial.md#create-job-agent-alerts-by-using-the-azure-portal).
 
 ### Job output
 
@@ -321,12 +318,12 @@ These are the current limitations to the elastic jobs service.  We're actively w
 
 ## Related content
 
-- [Create, configure, and manage elastic jobs (preview)](elastic-jobs-tutorial.md)
+- [Create, configure, and manage elastic jobs](elastic-jobs-tutorial.md)
 - [Automate management tasks in Azure SQL](job-automation-overview.md)
-- [Create and manage elastic jobs by using PowerShell (preview)](elastic-jobs-powershell-create.md)
-- [Create and manage elastic jobs by using T-SQL (preview)](elastic-jobs-tsql-create-manage.md)
+- [Create and manage elastic jobs by using PowerShell](elastic-jobs-powershell-create.md)
+- [Create and manage elastic jobs by using T-SQL](elastic-jobs-tsql-create-manage.md)
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Tutorial: Create, configure, and manage elastic jobs (preview)](elastic-jobs-tutorial.md)
+> [Tutorial: Create, configure, and manage elastic jobs](elastic-jobs-tutorial.md)

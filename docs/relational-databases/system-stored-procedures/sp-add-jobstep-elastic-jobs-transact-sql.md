@@ -3,7 +3,7 @@ title: "jobs.sp_add_jobstep (Azure Elastic Jobs) (Transact-SQL)"
 description: "jobs.sp_add_jobstep adds a step to an existing job in the Azure Elastic Jobs service for Azure SQL Database."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 10/30/2023
+ms.date: 12/04/2023
 ms.service: sql-database
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -15,9 +15,9 @@ monikerRange: "=azuresqldb-current"
 
 [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-Adds a step to an existing job in the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). Use [jobs.sp_update_jobstep](sp-update-jobstep-elastic-jobs-transact-sql.md) to modify existing elastic job steps. 
+Adds a step to an existing job in the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). Use [jobs.sp_update_jobstep](sp-update-jobstep-elastic-jobs-transact-sql.md) to modify existing elastic job steps.
 
-This stored procedure shares the name of `sp_add_jobstep` with a similar object in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for the SQL Agent service. For information about the SQL Agent version, see [sp_add_jobstep (Transact-SQL)](sp-add-jobstep-transact-sql.md).
+This stored procedure shares the name of `sp_add_jobstep` with a similar object in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent service. For information about the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent version, see [sp_add_jobstep (Transact-SQL)](sp-add-jobstep-transact-sql.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -115,7 +115,7 @@ If not `NULL`, the type of destination that the *command*'s first result set is 
 
 If specified, the value must be `SqlDatabase`.
 
-#### @output_credential_name 
+#### @output_credential_name
 
 If not null, the name of the database-scoped credential that is used to connect to the output destination database. Must be specified if *output_type* equals `SqlDatabase`. *output_credential_name* is nvarchar(128), with a default value of `NULL`.
 
@@ -144,6 +144,8 @@ If not `NULL`, the name of the SQL schema that contains the output destination t
 #### @output_table_name
 
 If not `NULL`, the name of the table that the *command*'s first result set will be written to. If the table doesn't already exist, it will be created based on the schema of the returning result set. Must be specified if *output_type* equals `SqlDatabase`. *output_table_name* is nvarchar(128), with a default value of `NULL`.
+
+If specifying an *output_table_name*, the Job Agent UMI or database-scoped credential should be granted needed permissions to CREATE TABLE and INSERT data into the table.
 
 #### @job_version OUTPUT  
 
@@ -215,6 +217,6 @@ EXEC jobs.sp_add_jobstep
 
 ## Related content
 
-- [Elastic jobs in Azure SQL Database (preview)](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true)
-- [Create, configure, and manage elastic jobs (preview)](/azure/azure-sql/database/elastic-jobs-tutorial?view=azuresql-db&preserve-view=true)
-- [Create and manage elastic jobs by using T-SQL (preview)](/azure/azure-sql/database/elastic-jobs-tsql-create-manage?view=azuresql-db&preserve-view=true)
+- [Elastic jobs in Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true)
+- [Create, configure, and manage elastic jobs](/azure/azure-sql/database/elastic-jobs-tutorial?view=azuresql-db&preserve-view=true)
+- [Create and manage elastic jobs by using T-SQL](/azure/azure-sql/database/elastic-jobs-tsql-create-manage?view=azuresql-db&preserve-view=true)

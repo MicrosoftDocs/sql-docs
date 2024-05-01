@@ -37,7 +37,7 @@ On the Compute nodes, the implementation of resource classes uses the Resource G
 To understand system resource utilization for the currently running requests, use the SQL Server PDW dynamic management views. For example, you can use DMVs to understand if a slow-running large hash join could benefit by having more memory.  
   
 <!-- MISSING LINKS
-For examples, see [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md).  
+For examples, see - [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md).  
 -->
   
 ### Adjust Resource Allocations  

@@ -1,8 +1,7 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
-ms.date: 07/06/2023
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 01/11/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -106,10 +105,10 @@ ms.topic: include
 | 1097 | 15 | No | Cannot use If UPDATE within this CREATE TRIGGER statement. |
 | 1098 | 15 | No | The specified event type(s) is/are not valid on the specified target object. |
 | 1099 | 15 | No | The ON clause is not valid for this statement. |
-| [1101](../mssqlserver-1101-database-engine-error.md) | 17 | Yes | Could not allocate a new page for database '%.\*ls' because of insufficient disk space in filegroup '%.\*ls'. Create the necessary space by dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup. |
+| [1101](../mssqlserver-1101-database-engine-error.md) | 17 | Yes | Could not allocate a new page for database '%.\*ls' because the '%.\*ls' filegroup is full due to lack of storage space or database files reaching the maximum allowed size. Note that UNLIMITED files are still limited to 16TB. Create the necessary space by dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup. |
 | 1102 | 22 | Yes | IAM page %S_PGID for object ID %ld is incorrect. The %S_MSG ID on page is %ld; should be %ld. |
 | 1104 | 17 | No | TEMPDB ran out of space during spilling. Create space by dropping objects and/or rewrite the query to consume fewer rows. If the issue still persists, consider upgrading to a higher service level objective. |
-| [1105](../mssqlserver-1105-database-engine-error.md) | 17 | Yes | Could not allocate space for object '%.\*ls'%.\*ls in database '%.\*ls' because the '%.\*ls' filegroup is full. Create disk space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup. |
+| [1105](../mssqlserver-1105-database-engine-error.md) | 17 | Yes | Could not allocate space for object '%.\*ls'%.\*ls in database '%.\*ls' because the '%.\*ls' filegroup is full due to lack of storage space or database files reaching the maximum allowed size. Note that UNLIMITED files are still limited to 16TB. Create the necessary space by dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup. |
 | 1119 | 16 | No | Removing IAM page %S_PGID failed because someone else is using the object that this IAM page belongs to. |
 | 1121 | 17 | No | Space allocator cannot allocate page in database %d. |
 | 1122 | 14 | No | Table error: Page %S_PGID. Test (%ls) failed. Address 0x%x is not aligned. |

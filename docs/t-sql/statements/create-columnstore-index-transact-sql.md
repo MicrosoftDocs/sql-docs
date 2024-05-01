@@ -432,7 +432,7 @@ Columns that use any of the following data types can't be included in a columnst
 
 - Computed columns. Starting with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], a clustered columnstore index can contain a non-persisted computed column. However, in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], clustered columnstore indexes can't contain persisted computed columns, and you can't create nonclustered indexes on computed columns.
 - Page and row compression, and the **vardecimal** storage format. (A columnstore index is already compressed in a different format.)
-- Replication.
+- Replication with clustered columnstore indexes. Nonclustered columnstore indexes are supported. For more information, see [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).
 - Filestream.
 
 You can't use cursors or triggers on a table with a clustered columnstore index. This restriction doesn't apply to nonclustered columnstore indexes. You can use cursors and triggers on a table with a nonclustered columnstore index.

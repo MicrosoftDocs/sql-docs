@@ -12,6 +12,7 @@ ms.custom: sqldbrb=1, build-2023, build-2023-dataai, ignite-2023
 ---
 
 # What is Azure SQL Managed Instance?
+
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 This article provides an overview of Azure SQL Managed Instance, a fully managed platform as a service (PaaS) database engine that handles most database management functions such as upgrading, patching, backups, and monitoring without user involvement.

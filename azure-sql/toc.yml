@@ -382,6 +382,8 @@
       href: database/logical-servers.md
     - name: Serverless
       href: database/serverless-tier-overview.md
+    - name: T-SQL differences from SQL Server
+      href: database/transact-sql-tsql-differences-sql-server.md
     - name: In-memory OLTP in Azure SQL Database
       items:
       - name: In-memory OLTP overview
@@ -630,8 +632,6 @@
   - name: How to
     href: database/how-to-content-reference-guide.md
     items:
-    - name: T-SQL differences
-      href: database/transact-sql-tsql-differences-sql-server.md
     - name: Plan and manage costs 
       href: database/cost-management.md      
     - name: Connect and query

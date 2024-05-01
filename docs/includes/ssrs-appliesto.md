@@ -3,10 +3,9 @@ title: include file
 description: include file
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/26/2018
+ms.date: 05/01/2024
 ms.service:
 ms.topic: include
 ms.custom: include file
 ---
-
-[!INCLUDE [applies-md](applies-md.md)]
+  **Applies to:**

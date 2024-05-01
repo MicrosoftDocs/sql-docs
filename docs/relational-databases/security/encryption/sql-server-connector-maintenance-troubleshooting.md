@@ -4,7 +4,7 @@ description: Learn about maintenance instructions and common troubleshooting ste
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto, maghan
-ms.date: 04/10/2024
+ms.date: 04/30/2024
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -22,72 +22,9 @@ helpviewer_keywords:
 
 ## <a id="AppendixA"></a> A. Maintenance Instructions for [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Connector
 
-### Key Rollover
+### Key Rotation
 
-> [!IMPORTANT]  
-> - The [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Connector requires the key name to only use the characters "a-z", "A-Z", "0-9", and "-", with a 26-character limit. Different key versions under the same key name in Azure Key Vault will not work with [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Connector. To rotate an Azure Key Vault key that's being used by [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)], a new key with a new key name must be created.  
-> -  When rotating versions of the key, do not disable the version originally used to encrypt the database. SQL Server will be unable to recover the database as it may get stuck in a 'recovery pending' state and generate a **Crypto Exception** memory dump until the original version is enabled.
-
-Typically, server asymmetric keys for [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] encryption need to be versioned every 1-2 years. It's important to note that although the Key Vault allows keys to be versioned, customers shouldn't use that feature to implement versioning. The [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Connector can't deal with changes in Key Vault key version. To implement key versioning, create a new key in the Key Vault and then re-encrypt the data encryption key in [!INCLUDE [ssManStudio](../../../includes/ssmanstudio-md.md)].
-
-For TDE, this is how this would be achieved:
-
-- **In PowerShell:** Create a new asymmetric key (with a different name from your current TDE asymmetric key) in the Key Vault.
-
-    ```powershell
-    Add-AzKeyVaultKey -VaultName 'ContosoDevKeyVault' `
-      -Name 'Key2' -Destination 'Software'
-    ```
-
-- **Using [!INCLUDE [ssManStudio](../../../includes/ssmanstudio-md.md)] or sqlcmd.exe:** Use the following statements as shown in Step 3, section 3.
-
-     Import the new asymmetric key.
-
-    ```sql
-    USE master
-    CREATE ASYMMETRIC KEY [MASTER_KEY2]
-    FROM PROVIDER [EKM]
-    WITH PROVIDER_KEY_NAME = 'Key2',
-    CREATION_DISPOSITION = OPEN_EXISTING
-    GO
-    ```
-
-     Create a new login to be associated with the new asymmetric key (as shown under the TDE instructions).
-
-    ```sql
-    USE master
-    CREATE LOGIN TDE_Login2
-    FROM ASYMMETRIC KEY [MASTER_KEY2]
-    GO
-    ```
-
-     Create a new credential to be mapped to the login.
-
-    ```sql
-    CREATE CREDENTIAL Azure_EKM_TDE_cred2
-        WITH IDENTITY = 'ContosoDevKeyVault',
-       SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789='
-    FOR CRYPTOGRAPHIC PROVIDER EKM;
-
-    ALTER LOGIN TDE_Login2
-    ADD CREDENTIAL Azure_EKM_TDE_cred2;
-    GO
-    ```
-
-     Choose the database whose database encryption key you would like to re-encrypt.
-
-    ```sql
-    USE [database]
-    GO
-    ```
-
-     Re-encrypt the database encryption key.
-
-    ```sql
-    ALTER DATABASE ENCRYPTION KEY
-    ENCRYPTION BY SERVER ASYMMETRIC KEY [MASTER_KEY2];
-    GO
-    ```
+Azure Key Vault supports key rotation, which is the process of creating a new key and updating the applications to use the new key. Key rotation is a security best practice that helps protect data in case the key is compromised. The SQL Server Connector supports key rotation. Old keys shouldn't be deleted since it might be required to restore a database using an old key. To rotate a key, follow the steps in [Rotate asymmetric key with a new AKV key or a new AKV key version](setup-steps-for-extensible-key-management-using-the-azure-key-vault.md#rotate-asymmetric-key-with-a-new-akv-key-or-a-new-akv-key-version).
 
 ### Upgrade of [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Connector
 

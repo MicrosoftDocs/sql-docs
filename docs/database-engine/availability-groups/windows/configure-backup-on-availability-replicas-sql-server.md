@@ -27,7 +27,7 @@ helpviewer_keywords:
  You must be connected to the server instance that hosts the primary replica in SSMS. The secondary replica must be healthy, which includes being connected to the current primary replica and in the secondary role.
  
    > [!NOTE]
-   > The secondary replica does not need to be readable to offload backups to it. Backups will still succeed on the secondary replica even if `Readable Secondary` is set to `no`. 
+   > The secondary replica does not need to be readable to offload backups to it. Backups will still succeed on the secondary replica even if `Readable Secondary` is set to `no`, with the exception of [managed backups](../../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md#Prereqs). 
   
   
 ##  <a name="Permissions"></a> Permissions  

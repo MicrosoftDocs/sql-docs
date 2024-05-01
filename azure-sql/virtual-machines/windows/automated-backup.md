@@ -39,6 +39,7 @@ To use Automated Backup, review the following prerequisites:
 
 - Target _user_ databases must use the full recovery model. System databases don't have to use the full recovery model. However, if you require log backups to be taken for `model` or `msdb`, you must use the full recovery model. For more information about the impact of the full recovery model on backups, see [Backup under the full recovery model](/previous-versions/sql/sql-server-2008-r2/ms190217(v=sql.105)). 
 - The SQL Server VM has been registered with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) and the **Automated Backup** feature is enabled. Since Automated Backup relies on the extension, Automated Backup is only supported on target databases from the default instance, or a single named instance. If there's no default instance, and multiple named instances, the SQL IaaS Agent extension fails and Automated Backup won't work. 
+- If you're running automated backups on a secondary Always On availability group replica, the replica must be **Readable** for the backups to succeed. 
 
 ## Settings
 
@@ -49,7 +50,7 @@ The following table describes the options that can be configured for Automated B
 | Setting | Range (Default) | Description |
 | --- | --- | --- |
 | **Automated Backup** | Enable/Disable (Disabled) | Enables or disables Automated Backup for an Azure VM running SQL Server 2016 or later Developer, Standard, or Enterprise. |
-| **Retention Period** | 1-90 days (90 days) | The number of days to retain backups. |
+| **Retention Period** | 1-90 days (90 days) | The number of days the service retains backup metadata in `msdb`. After the retention period expires for a backup, the metadata is deleted from `msdb`, but files aren't deleted from the storage container. You can use a [lifecycle management policy](/azure/storage/blobs/lifecycle-management-policy-configure) for your storage account to balance backup retention with cost management according to your business needs.    |
 | **Storage Account** | Azure storage account | An Azure storage account to use for storing Automated Backup files in blob storage. A container is created at this location to store all backup files. The backup file naming convention includes the date, time, and database GUID. |
 | **Encryption** |Enable/Disable (Disabled) | Enables or disables backup encryption. When backup encryption is enabled, the certificates used to restore the backup are located in the specified storage account in the same `automaticbackup` container using the same naming convention. If the password changes, a new certificate is generated with that password, but the old certificate remains to restore prior backups. |
 | **Password** |Password text | A password for encryption keys. This password is only required if encryption is enabled. In order to restore an encrypted backup, you must have the correct password and related certificate that was used at the time the backup was taken. |
@@ -440,6 +441,7 @@ The following table lists possible errors and solutions when working with Automa
 | **Managed backup fails intermittently/Error:Execution timeout Expired** | This is a known issue fixed in [CU18](https://support.microsoft.com/topic/kb5017593-cumulative-update-18-for-sql-server-2019-5fa00c36-edeb-446c-94e3-c4882b7526bc#bkmk_14913295) for SQL Server 2019 and [KB4040376] for SQL Server 2014-2017.|
 | **Error: The remote server returned an error: (403) Forbidden**  | Repair the [SQL IaaS Agent extension](sql-agent-extension-troubleshoot-known-issues.md#repair-extension). | 
 | **Error 3202: Write on Storage account failed 13 (The data is invalid)** | Remove the immutable blob policy on the storage container and make sure the storage account is using, at minimum, TLS 1.0.  | 
+| **Error 3063: Write to backup block blob device. Device has reached its limit of allowed blocks.** | This can happen if you're running automated backups from a secondary Always On availability group replica that has the `Readable` configuration set to `NO`. For automated backups to work on a secondary replica, the replica must be readable. | 
 
 
 

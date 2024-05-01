@@ -582,7 +582,7 @@ The AG resource you created is a type of resource called a *clone*. The AG resou
    On RHEL 7.7 and Ubuntu 18.04, and later versions, you might encounter a warning with the use of `--master`, or an error like `sqlag_monitor_0 on ag1 'not configured' (6): call=6, status=complete, exitreason='Resource must be configured with notify=true'`. To avoid this situation, use:
 
    ```bash
-   sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> meta failover-timeout=30s master notify=true
+   sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> meta failure-timeout=30s master notify=true
    ```
 
 1. Create the IP address resource for the AG that will be associated with the listener functionality.

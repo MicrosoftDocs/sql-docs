@@ -24,7 +24,7 @@ helpviewer_keywords:
 
 ### Key Rotation
 
-Azure Key Vault supports key rotation, which is the process of creating a new key and updating the applications to use the new key. The old key is then disabled or deleted. Key rotation is a security best practice that helps protect data in case the key is compromised. The SQL Server Connector supports key rotation. To rotate a key, follow the steps in [Rotate asymmetric key with a new AKV key or a new AKV key version](setup-steps-for-extensible-key-management-using-the-azure-key-vault.md#rotate-asymmetric-key-with-a-new-akv-key-or-a-new-akv-key-version).
+Azure Key Vault supports key rotation, which is the process of creating a new key and updating the applications to use the new key. Key rotation is a security best practice that helps protect data in case the key is compromised. The SQL Server Connector supports key rotation. Old keys shouldn't be deleted since it might be required to restore a database using an old key. To rotate a key, follow the steps in [Rotate asymmetric key with a new AKV key or a new AKV key version](setup-steps-for-extensible-key-management-using-the-azure-key-vault.md#rotate-asymmetric-key-with-a-new-akv-key-or-a-new-akv-key-version).
 
 ### Upgrade of [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Connector
 

@@ -19,32 +19,32 @@ When you create a logical server from the [Azure portal](single-database-create-
 
 You can use the following network access controls to selectively allow access to a database via **the public endpoint**:
 
-- **IP based firewall rules**: Use this feature to explicitly allow connections from a specific IP address, for example from on-premises machines or a range of IP addresses by specifying the start and end IP address.
+- **IP based firewall rules**: Use this feature to explicitly allow connections from a specific IP address. For example, from on-premises machines or a range of IP addresses by specifying the start and end IP address.
 
-- **Allow Azure services and resources to access this server**: When enabled, other resources within the Azure boundary, for example an Azure Virtual Machine, can access SQL Database
+- **Allow Azure services and resources to access this server**: When enabled, other resources within the Azure boundary can access SQL Database. For example, an Azure Virtual Machine can access the SQL Database resources.
 
 You can also allow **private access** to the database from [virtual networks](/azure/virtual-network/virtual-networks-overview) via:
 
-- **Virtual network firewall rules**: Use this feature to allow traffic from a specific virtual network within the Azure boundary
+- **Virtual network firewall rules**: Use this feature to allow traffic from a specific virtual network within the Azure boundary.
 
-- **Private Link**: Use this feature to create a private endpoint for [logical server in Azure](logical-servers.md) within a specific virtual network
+- **Private Link**: Use this feature to create a private endpoint for the [logical server in Azure](logical-servers.md) within a specific virtual network.
 
 > [!IMPORTANT]
 > This article does *not* apply to **SQL Managed Instance**. For more information about the networking configuration, see [connecting to Azure SQL Managed Instance](../managed-instance/connect-application-instance.md) .
 
 ## IP firewall rules
 
-Ip based firewall is a feature of the logical server in Azure that prevents all access to your server until you explicitly [add IP addresses](firewall-create-server-level-portal-quickstart.md) of the client machines.
+IP based firewall is a feature of the logical server in Azure that prevents all access to your server until you explicitly [add IP addresses](firewall-create-server-level-portal-quickstart.md) for the client machines.
 
 ## Allow Azure services
 
-By default during creation of a new logical server [from the Azure portal](single-database-create-quickstart.md), **Allow Azure services and resources to access this server** is unchecked and not enabled. This setting appears when connectivity is allowed via public endpoint.
+By default, during creation of a new logical server [from the Azure portal](single-database-create-quickstart.md), **Allow Azure services and resources to access this server** is unchecked and not enabled. This setting appears when connectivity is allowed via public endpoint.
 
 You can also change this setting via the **Networking** setting after the logical server is created as follows: 
   
 ![Screenshot of manage server firewall][2]
 
-When **Allow Azure services and resources to access this server** is enabled, your server allows communications from all resources inside the Azure boundary, **regardless of whether they are part of your subscription**. In many cases, enabling the setting is more permissive than what most customers want. You may want to uncheck this setting and replace it with more restrictive IP firewall rules or use one the options for private access.
+When **Allow Azure services and resources to access this server** is enabled, your server allows communications from all resources inside the Azure boundary, **regardless of whether they are part of your subscription**. In many cases, enabling the setting is more permissive than what most customers want. You might want to uncheck this setting and replace it with more restrictive IP firewall rules or use one the options for private access.
 
 > [!IMPORTANT]
 > Checking *Allow Azure services and resources to access this server* adds an IP based firewall rule with start and end IP address of 0.0.0.0
@@ -101,10 +101,10 @@ start          end
 You can now add these as distinct firewall rules and then disable the setting **Allow Azure services and resources to access this server**.
 
 ## Sql Service Tag
-[Service tags](/azure/virtual-network/service-tags-overview) can be used in security rules and routes from clients to SQL Database. Service tags can be used in  in network security groups, Azure Firewall, and user-defined routes by specifying them in the  source or destination field of a security rule. 
-The **Sql** service tag consists of all the IP addresses that are being used by Azure SQL Database. The tag is further segmented by regions. For example **Sql.WestUS** lists all the IP addresses used by SQL Database in West US.
+[Service tags](/azure/virtual-network/service-tags-overview) can be used in security rules and routes from clients to SQL Database. Service tags can be used in  in network security groups, Azure Firewall, and user-defined routes by specifying them in the source or destination field of a security rule. 
+The **Sql** service tag consists of all IP addresses that are being used by SQL Database. The tag is further segmented by regions. For example **Sql.WestUS** lists all the IP addresses used by SQL Database in West US.
 
-The **Sql** Service tag consists of IP addresses that are required to establish connectivity to SQL Database as documented in [Gateway IP addresses](connectivity-architecture.md#gateway-ip-addresses). Additionally, a service tag will also be associated with any outbound traffic from SQL Database used in features such as:
+The **Sql** service tag consists of IP addresses that are required to establish connectivity to SQL Database as documented in [Gateway IP addresses](connectivity-architecture.md#gateway-ip-addresses). Additionally, a service tag will also be associated with any outbound traffic from SQL Database used in features such as:
 
 - [Auditing](auditing-overview.md)
 - [Vulnerability assessment](/azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview)
@@ -116,11 +116,11 @@ The **Sql** Service tag consists of IP addresses that are required to establish 
 - [Azure SQL transparent data encryption with customer-managed key](transparent-data-encryption-byok-configure.md)
 
 ## SqlManagement Service Tag
-SqlManagement service tag is used for control plane operations against Azure SQL Database
+SqlManagement service tag is used for control plane operations against SQL Database.
 
 
 ## Virtual network firewall rules
-[Virtual network firewall rules](vnet-service-endpoint-rule-overview.md) are easier alternative to establish and to manage access from a specific subnet that contains your VMs.
+[Virtual network firewall rules](vnet-service-endpoint-rule-overview.md) are easier alternatives to establish and manage access from a specific subnet that contains your VMs.
 
 
 ## Private Link

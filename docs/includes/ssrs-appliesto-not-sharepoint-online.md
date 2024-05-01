@@ -6,4 +6,4 @@ ms.date: 01/12/2023
 ms.service: reporting-services
 ms.topic: include
 ---
-❌ SharePoint Online
+❌&nbsp;SharePoint Online

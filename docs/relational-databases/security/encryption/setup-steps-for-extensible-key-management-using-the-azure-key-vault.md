@@ -4,7 +4,7 @@ description: Install and configure the SQL Server Connector for Azure Key Vault.
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto, randolphwest
-ms.date: 04/10/2024
+ms.date: 04/30/2024
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -165,7 +165,7 @@ The recommended method is to use [Azure role-based access control (RBAC)](/azure
 
 #### Create a key
 
-1. On the **Key Vault** pane, select **Keys** and then select the option **Generate/Import**. This opens the **Create a key** pane. Enter a key vault name. Select the **Generate** option, and enter a name for the key.
+1. On the **Key Vault** pane, select **Keys** and then select the option **Generate/Import**. This opens the **Create a key** pane. Enter a key vault name. Select the **Generate** option, and enter a name for the key. The [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Connector requires the key name to only use the characters "a-z", "A-Z", "0-9", and "-", with a 26-character limit.
 
 1. Use key type **RSA** and **RSA key size** as **2048**. EKM currently only supports an RSA key. Set activation and expiration dates as appropriate and set **Enabled** as **Yes**.
 

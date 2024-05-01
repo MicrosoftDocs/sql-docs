@@ -6,4 +6,4 @@ ms.date: 01/12/2023
 ms.service: powerbi
 ms.topic: include
 ---
-✅ Power BI Report Server
+:::image type="icon" source="media/yes-icon.svg" border="false"::: Power BI Report Server

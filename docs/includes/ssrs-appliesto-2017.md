@@ -6,4 +6,4 @@ ms.date: 01/12/2023
 ms.service: reporting-services
 ms.topic: include
 ---
-✅ SQL Server Reporting Services (2017)
+:::image type="icon" source="media/yes-icon.svg" border="false"::: SQL Server Reporting Services (2017)

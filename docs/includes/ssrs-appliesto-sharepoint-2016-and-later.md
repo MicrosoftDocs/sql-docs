@@ -6,4 +6,4 @@ ms.date: 01/12/2023
 ms.service: reporting-services
 ms.topic: include
 ---
-✅ SharePoint 2016 and later
+:::image type="icon" source="media/yes-icon.svg" border="false"::: SharePoint 2016 and later

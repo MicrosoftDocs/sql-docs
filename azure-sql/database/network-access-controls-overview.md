@@ -101,7 +101,7 @@ start          end
 You can now add these as distinct firewall rules and then disable the setting **Allow Azure services and resources to access this server**.
 
 ## Sql Service Tag
-[Service tags](/azure/virtual-network/service-tags-overview) can be used in security rules and routes from clients to SQL Database. Service tags can be used in  in network security groups, Azure Firewall, and user-defined routes by specifying them in the source or destination field of a security rule. 
+[Service tags](/azure/virtual-network/service-tags-overview) can be used in security rules and routes from clients to SQL Database. Service tags can be used in network security groups, Azure Firewall, and user-defined routes by specifying them in the source or destination field of a security rule. 
 The **Sql** service tag consists of all IP addresses that are being used by SQL Database. The tag is further segmented by regions. For example **Sql.WestUS** lists all the IP addresses used by SQL Database in West US.
 
 The **Sql** service tag consists of IP addresses that are required to establish connectivity to SQL Database as documented in [Gateway IP addresses](connectivity-architecture.md#gateway-ip-addresses). Additionally, a service tag will also be associated with any outbound traffic from SQL Database used in features such as:

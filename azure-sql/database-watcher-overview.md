@@ -5,7 +5,7 @@ description: An overview of database watcher for Azure SQL, a managed monitoring
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 04/26/2024
+ms.date: 5/3/2024
 ms.service: sql-db-mi
 ms.subservice: monitoring
 ms.topic: conceptual
@@ -68,9 +68,11 @@ At this time, you can create database watchers in the following Azure regions:
 
 | Azure geography | Azure region |
 |:--|:--|
+| Asia Pacific | Australia East |
 | Asia Pacific | Southeast Asia |
 | Canada | Canada Central |
 | Europe | West Europe |
+| Europe | UK South |
 | United States | East US |
 | United States | West US |
 

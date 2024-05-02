@@ -54,7 +54,7 @@ A masking rule can be defined on a column in a table, in order to obfuscate the 
 
 Users with **SELECT** permission on a table can view the table data. Columns that are defined as masked display the masked data. Grant the **UNMASK** permission to a user to allow them to retrieve unmasked data from the columns for which masking is defined.
 
-Administrative users and roles can always view unmasked data via the **CONTROL** permission, which includes both the **ALTER ANY MASK** and **UNMASK** permission. Administrative users or roles such as sysadmin, serveradmin, or db_owner have CONTROL permissions on the database by design, and can view unmasked data.
+Administrative users and roles can always view unmasked data via the **CONTROL** permission, which includes both the **ALTER ANY MASK** and **UNMASK** permission. Administrative users or roles such as sysadmin or db_owner have CONTROL permissions on the database by design, and can view unmasked data.
 
 You don't need any special permission to create a table with a dynamic data mask, only the standard **CREATE TABLE** and **ALTER** on schema permissions.
 
@@ -85,7 +85,7 @@ WHERE is_masked = 1;
 
 ## Limitations and restrictions
 
-Users with CONTROL SERVER or CONTROL at the database level could view masked data in its original form. This includes admin users or roles such as sysadmin, serveradmin, db_owner etc.
+Users with CONTROL SERVER or CONTROL at the database level could view masked data in its original form. This includes admin users or roles such as sysadmin, db_owner etc.
 
 A masking rule can't be defined for the following column types:
 

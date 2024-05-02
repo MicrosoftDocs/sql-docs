@@ -676,7 +676,7 @@ To access files on either an Azure Data Lake Storage (ADLS) Gen2 and Azure Blob 
 
 #### *CREDENTIAL (IDENTITY = '', SECRET = '')*
 
-*CREDENTIAL* specifies the authentication mechanism to access the external storage account. On [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], the only supported authentication mechanisms are Shared Access Signature (SAS) and Storage Account Key (SAK).
+*CREDENTIAL* specifies the authentication mechanism to access the external storage account. On [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], the only supported authentication mechanisms are Shared Access Signature (SAS) and Storage Account Key (SAK). User's EntraID authentication is default, no credential needs to be specified.
 
 > [!NOTE]
 > When using a public storage account, CREDENTIAL does not need to be specified. By default the executing user's Entra ID is used.

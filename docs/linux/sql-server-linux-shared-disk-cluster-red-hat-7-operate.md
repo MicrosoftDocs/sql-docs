@@ -265,5 +265,5 @@ Check the following items when a node is offline.
 
 ## Related content
 
-- [Cluster from Scratch (from Pacemaker)](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf)
+- [Cluster from Scratch (from Pacemaker)](https://clusterlabs.org/pacemaker/doc/2.1/Clusters_from_Scratch/pdf/Clusters_from_Scratch.pdf)
 - [Configure Red Hat Enterprise Linux shared disk cluster for SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)

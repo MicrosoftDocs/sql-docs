@@ -659,9 +659,9 @@ Multiple file locations can only be specified from the same storage account and 
 
 To access files on either an Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage that is behind a firewall, the following prerequisites are required:
 
-1. A **workspace identity** for the workspace must be provisioned. More information on how to set up a workspace identity can be found here [https://learn.microsoft.com/en-us/fabric/security/workspace-identity](/fabric/security/workspace-identity))
+1. A **workspace identity** for the workspace hosting your warehouse must be provisioned. More information on how to set up a workspace identity can be found here [https://learn.microsoft.com/en-us/fabric/security/workspace-identity](/fabric/security/workspace-identity))
 
-1. Your Fabric workspace must be added as a **trusted resource**. More information on how to add your fabric workspace as a trusted resource can be found here [https://learn.microsoft.com/en-us/fabric/security/security-trusted-workspace-access#resource-instance-rule](/fabric/security/security-trusted-workspace-access)
+1. Your Fabric workspace hosting the warehouse must be added as a **trusted resource**. More information on how to add your fabric workspace as a trusted resource can be found here [https://learn.microsoft.com/en-us/fabric/security/security-trusted-workspace-access#resource-instance-rule](/fabric/security/security-trusted-workspace-access)
 
 1. Your EntraID account must have access to the underlying files through **RBAC** ([https://learn.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access?tabs=portal](/azure/storage/blobs/assign-azure-role-data-access?tabs=portal)) or **ACL's** ([https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-access-control](/azure/storage/blobs/data-lake-storage-access-control)).
 

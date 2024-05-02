@@ -4,7 +4,7 @@ description: Set up an availability group in SQL Server on Kubernetes using DH2i
 author: aravindmahadevan-ms
 ms.author: armaha
 ms.reviewer: amitkh, randolphwest
-ms.date: 04/17/2024
+ms.date: 05/02/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: tutorial
@@ -42,7 +42,7 @@ This tutorial consists of the following steps:
 
 ## Create the `configmap` object
 
-1. In AKS, create the `configmap` object, which has specific **mssql-conf** settings. Create a file called `mssqlconfig.yaml`, with your specific **mssql-conf** settings added to it, using the following example.
+1. In AKS, create the `configmap` object, which has **[mssql-conf](sql-server-linux-configure-mssql-conf.md)** settings based on your requirements. In this example, you create the `configMap`, using a file called `mssqlconfig.yaml` with the following parameters.
 
    ```yaml
    apiVersion: v1
@@ -53,9 +53,6 @@ This tutorial consists of the following steps:
      mssql.conf: |
        [EULA]
        accepteula = Y
-   
-       [network]
-       tcpport = 51433
    
        [sqlagent]
        enabled = true
@@ -85,14 +82,14 @@ kubectl create secret generic dxe --from-literal=DX_PASSKEY="Password123" --from
 
 To install DxOperator, you must download the DxOperator YAML file using the following example, and then apply the YAML file.
 
-1. Deploy the YAML describing how to set up an AG, using the following command. Save the file with a custom name, such as `DxEnterpriseSqlAg.yaml`.
+1. Deploy the YAML describing how to set up an AG, using the following command. Save the file with a custom name, such as `DxOperator.yaml`.
 
    ```bash
-   curl -L https://dxoperator.dh2i.com/dxesqlag/files/v1.yaml -o DxEnterpriseSqlAg.yaml
-   kubectl apply –f DxEnterpriseSqlAg.yaml
+   curl -L https://dxoperator.dh2i.com/dxesqlag/files/v1.yaml -o DxOperator.yaml
+   kubectl apply –f DxOperator.yaml
    ```
 
-   The YAML file looks similar to the following example.
+1. After you install the operator you can deploy SQL Server containers, configure the availability group, define replicas, deploy and configure the DxEnterprise cluster. Here is a sample deployment YAML file called `DxEnterpriseSqlAg.yaml`, which you can change to suit your requirements.
 
    ```yaml
    apiVersion: dh2i.com/v1
@@ -163,7 +160,7 @@ To install DxOperator, you must download the DxOperator YAML file using the foll
              #args: [ "-c", "tail -f /dev/null" ]
    ```
 
-Deploy the `DxEnterpriseSqlAg.yaml` file.
+1. Deploy the `DxEnterpriseSqlAg.yaml` file.
 
    ```bash
    kubectl apply -f DxEnterpriseSqlAg.yaml
@@ -171,7 +168,7 @@ Deploy the `DxEnterpriseSqlAg.yaml` file.
 
 ## Create an availability group listener
 
-Apply the following YAML to add a load balancer, by setting the selector to the name of the YAML file used to deploy an AG in the previous step. In this example, it's `DxEnterpriseSqlAg`.
+Apply the following YAML to add a load balancer, by setting the selector to value of `metadata.name` in the previous step. In this example, it's `contoso-sql`.
 
 ```yaml
 apiVersion: v1
@@ -186,7 +183,7 @@ spec:
     - name: sql
       protocol: TCP
       port: 1433
-      targetPort: 1433
+      targetPort: 51444
     - name: listener
       protocol: TCP
       port: 51433

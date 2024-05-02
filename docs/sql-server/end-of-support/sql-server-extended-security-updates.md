@@ -62,7 +62,7 @@ For details see:
 - [Deploy Arc-enabled VMware vSphere for Azure VMware Solution private cloud](/azure/azure-vmware/deploy-arc-for-azure-vmware-solution)
 - [Enable additional capabilities on Arc-enabled Server machines by linking to vCenter](/azure/azure-arc/vmware-vsphere/enable-virtual-hardware)
 
-On Azure Stack HCI, to receive free ESUs [enable Azure benefits](/azure-stack/hci/manage/azure-benefits?#enable-azure-benefits).
+To receive free ESUs on Azure Stack HCI, [enable Azure benefits](/azure-stack/hci/manage/azure-benefits?#enable-azure-benefits).
 
 ### On-premises or hosted environments
 

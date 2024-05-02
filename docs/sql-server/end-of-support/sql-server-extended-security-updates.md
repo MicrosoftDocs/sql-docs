@@ -58,6 +58,8 @@ If you deploy your SQL Server instances to an Azure service, you can access ESUs
 > [!NOTE]  
 > Azure Stack HCI customers must [enable Azure benefits](/azure-stack/hci/manage/azure-benefits?#enable-azure-benefits) to receive free ESUs.
 
+For information on how to configure ESUs in Azure VMware Solution review, see [ESUs for SQL Server and Windows Server in Azure VMware Solution VMs](/azure/azure-vmware/extended-security-updates-windows-sql-server).
+
 In all other cases, you can purchase Extended Security Updates if you qualify. To qualify for receiving Extended Security Updates (ESU), you must have Software Assurance under one of the following agreements:
 
 - Enterprise Agreement (EA)

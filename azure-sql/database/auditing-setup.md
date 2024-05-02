@@ -31,7 +31,7 @@ Azure SQL Database and Azure Synapse Analytics Audit can store 4000 characters o
 The following section describes the Auditing configuration using the Azure portal.
 
 > [!NOTE]  
-> Enabling auditing on a paused dedicated SQL pool is not possible. To enable auditing, unpause the dedicated SQL pool. For more information, see [Dedicated SQL pool](/azure/synapse-analytics/sql/best-practices-dedicated-sql-pool).
+> You can't enable auditing on a paused dedicated SQL pool. To enable auditing, [resume the dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/pause-and-resume-compute-portal).
 >
 > When Auditing is configured to a Log Analytics workspace or to an Event Hubs destination in the Azure portal or PowerShell cmdlet, a [Diagnostic Setting](/azure/azure-monitor/essentials/diagnostic-settings) is created with `SQLSecurityAuditEvents` category enabled.
 

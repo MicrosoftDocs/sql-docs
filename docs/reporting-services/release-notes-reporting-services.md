@@ -4,7 +4,7 @@ description: Learn details about the changes in SQL Server Reporting Services (S
 author: casualoak
 ms.author: petebro
 ms.reviewer: maggies
-ms.date: 01/10/2024
+ms.date: 05/01/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
@@ -49,6 +49,13 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 
 ::: moniker range="=sql-server-ver16"
 ## SQL Server 2022 Reporting Services
+
+## 16.0.8886.1775, 2024/05/01
+*(Product Version: 16.0.1115.92)*
+
+- Improved support for GB18030-2022 Chinese government standard.
+- Added TLS 1.3 support.
+- Fixed issue with subscription properties in some scenarios.
 
 ## 16.0.8784.14010, 2024/01/23
 *(Product Version: 16.0.1115.61)*

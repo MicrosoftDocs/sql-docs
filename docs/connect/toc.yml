@@ -5627,8 +5627,6 @@
       href: ../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md
     - name: Loading the drivers
       href: ../connect/php/loading-the-php-sql-driver.md
-    - name: Configuring IIS
-      href: ../connect/php/configuring-iis-for-php-sql-driver.md
     - name: Support resources
       href: ../connect/php/support-resources-for-the-php-sql-driver.md
     - name: About code samples

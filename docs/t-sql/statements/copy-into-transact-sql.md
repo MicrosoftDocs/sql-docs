@@ -549,9 +549,11 @@ In [!INCLUDE [fabric](../../includes/fabric.md)], the [COPY (Transact-SQL)](/sql
 
 For more information on using COPY INTO on your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], see [Ingest data into your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] using the COPY statement](/fabric/data-warehouse/ingest-data-copy).
 
-> [!NOTE]  
-> For [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse-md.md)], visit [COPY INTO for [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)]](copy-into-transact-sql.md?view=azure-sqldw-latest&preserve-view=true).
+By default the COPY INTO statement will authenticate as the executing EntraID user.
 
+> [!NOTE]
+> For [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse-md.md)], visit [COPY INTO for [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)]](copy-into-transact-sql.md?view=azure-sqldw-latest&preserve-view=true).  
+> **Limitation:** Onelake paths are currently not supported, only BLOB and ADLS GEN2 storage accounts are supported
 Use COPY for the following capabilities:
 
 - Use lower privileged users to load without needing strict CONTROL permissions on the data warehouse.
@@ -651,6 +653,20 @@ Multiple file locations can only be specified from the same storage account and 
 
 - `https://<account>.blob.core.windows.net/<container\>/<path\>`, `https://<account\>.blob.core.windows.net/<container\>/<path\>`
 
+#### *External locations behind firewall*
+
+
+
+To access files on either an Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage that is behind a firewall, the following prerequisites are required:
+
+1. A **workspace identity** for the workspace must be provisioned. More information on how to set up a workspace identity can be found here [https://learn.microsoft.com/en-us/fabric/security/workspace-identity](/fabric/security/workspace-identity))
+
+1. Your Fabric workspace must be added as a **trusted resource**. More information on how to add your fabric workspace as a trusted resource can be found here [https://learn.microsoft.com/en-us/fabric/security/security-trusted-workspace-access#resource-instance-rule](/fabric/security/security-trusted-workspace-access)
+
+1. Your EntraID account must have access to the underlying files through **RBAC** ([https://learn.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access?tabs=portal](/azure/storage/blobs/assign-azure-role-data-access?tabs=portal)) or **ACL's** ([https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-access-control](/azure/storage/blobs/data-lake-storage-access-control)).
+
+> [!NOTE]
+> Accessing storage accounts behind a firewall is currently in Public Preview.
 #### *FILE_TYPE = { 'CSV' | 'PARQUET' }*
 
 *FILE_TYPE* specifies the format of the external data.
@@ -662,9 +678,8 @@ Multiple file locations can only be specified from the same storage account and 
 
 *CREDENTIAL* specifies the authentication mechanism to access the external storage account. On [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], the only supported authentication mechanisms are Shared Access Signature (SAS) and Storage Account Key (SAK).
 
-> [!NOTE]  
-> When using a public storage account, CREDENTIAL does not need to be specified.
-
+> [!NOTE]
+> When using a public storage account, CREDENTIAL does not need to be specified. By default the executing user's Entra ID is used.
 - Authenticating with Shared Access Signature (SAS)
 
   - *IDENTITY: A constant with a value of 'Shared Access Signature'*
@@ -846,14 +861,13 @@ WITH (
 
 ### D. Load Parquet
 
-This example uses a wildcard to load all Parquet files under a folder.
+This example uses a wildcard to load all Parquet files under a folder using the executing user's EntraID.
 
 ```sql
 COPY INTO test_parquet
 FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder1/*.parquet'
 WITH (
-    FILE_TYPE = 'PARQUET',
-    CREDENTIAL=(IDENTITY= 'Shared Access Signature', SECRET='<Your_SAS_Token>')
+    FILE_TYPE = 'PARQUET'
 )
 ```
 
@@ -884,6 +898,10 @@ Consider splitting large Parquet files, especially when the number of files is s
 ### Are there any limitations on the number or size of files?
 
 There are no limitations on the number or size of files; however, for best performance, we recommend files that are at least 4 MB.
+
+### What Authentication is used when I don't specify a credential?
+
+By default it will use the executing user's EntraID.
 
 ## Next steps
 

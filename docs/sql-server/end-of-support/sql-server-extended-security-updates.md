@@ -55,11 +55,14 @@ Services include:
 - Azure Stack Hub
 - Azure Stack HCI
 
-For information on how to configure ESUs in Azure VMware Solution, review [ESUs for SQL Server and Windows Server in Azure VMware Solution VMs](/azure/azure-vmware/extended-security-updates-windows-sql-server).
-
-For [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances deployed to Nutanix Cloud Clusters, which operate on Azure bare-metal infrastructure, or for Azure Stack, follow the same process as [on-premises or hosted environments not connected to Azure Arc](#on-premises-or-hosted-environments).
-
 ### On-premises or hosted environments
+
+If you deploy your SQL Server instances to an Azure service, you can access ESUs for [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] for up to three years after the end of support, at no additional charge above the cost of running the Azure service. Services include SQL Server on Azure VMs, Azure VMware Solution, Azure Stack Hub, or Azure Stack HCI.
+
+> [!NOTE]  
+> Azure Stack HCI customers must [enable Azure benefits](/azure-stack/hci/manage/azure-benefits?#enable-azure-benefits) to receive free ESUs.
+
+To configure ESUs in Azure VMware Solution, review [ESUs for SQL Server and Windows Server in Azure VMware Solution VMs](/azure/azure-vmware/extended-security-updates-windows-sql-server).
 
 In all other cases, you can purchase Extended Security Updates if you qualify. To qualify for receiving Extended Security Updates (ESU), you must have Software Assurance under one of the following agreements:
 

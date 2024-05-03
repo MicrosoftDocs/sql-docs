@@ -79,7 +79,10 @@ The only supported backup to URL for Azure Blob Storage is to block blobs, using
 
 **URL:** A URL specifies a Uniform Resource Identifier (URI) to a unique backup file. The URL is used to provide the location and name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup file. The URL must point to an actual blob, not just a container. If the blob does not exist, it is created. If an existing blob is specified, BACKUP fails, unless the "WITH FORMAT" option is specified to overwrite the existing backup file in the blob.  
 
- Here is a sample URL value: `http[s]://ACCOUNTNAME.blob.core.windows.net/<CONTAINER>/FILENAME.bak`. HTTPS is not required, but is recommended.  
+ Here is a sample URL value: `https://ACCOUNTNAME.blob.core.windows.net/<CONTAINER>/FILENAME.bak`. 
+
+ >[!Note]
+>> Backup to URL using HTTP is NOT supported.
 
 **Credential:** A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential is an object that is used to store authentication information required to connect to a resource outside of SQL Server. Here, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup and restore processes use credential to authenticate to Azure Blob Storage and its container and blob objects. The Credential stores either the name of the storage account and the storage account **access key** values or container URL and its Shared Access Signature token. Once the credential is created, the syntax of the BACKUP/RESTORE statements determines the type of blob and the credential required.  
 

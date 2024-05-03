@@ -3,7 +3,7 @@ title: Repair a failed SQL Server installation
 description: Follow these steps to repair an installation of SQL Server Standard, Developer, and Enterprise edition.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 04/04/2024
+ms.date: 05/03/2024
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
@@ -51,7 +51,7 @@ Before you continue, for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.m
 1. Select **Maintenance** in the left-hand navigation area, and then select **Repair** to start the repair operation.
 
    > [!TIP]  
-   > If the Installation Center was launched using the start menu, you'll need to provide the location of the installation media at this time.
+   > If the Installation Center was launched using the start menu, you need to provide the location of the installation media at this time.
 
 1. Setup support rule and file routines run to ensure that your system has prerequisites installed and that the computer passes Setup validation rules. Select **OK** or **Install** to continue.
 
@@ -63,13 +63,13 @@ Before you continue, for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.m
 
 1. The Repair Progress page shows the status of the repair operation. The Complete page indicates that the operation is finished.
 
-### Repair a failed installation of SQL Server using the command prompt
+## Repair a failed installation of SQL Server using the command prompt
 
-1. Run the following command at a command prompt:
+Run the following command at a command prompt. Replace `<instancename>` with the name of the instance you want to repair.
 
-   ```cmd
-   Setup.exe /q /ACTION=Repair /INSTANCENAME=instancename
-   ```
+```cmd
+setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
+```
 
 ## Related content
 

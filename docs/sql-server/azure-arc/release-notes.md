@@ -26,9 +26,13 @@ Extension versions are cumulative. Higher extension versions include all of the 
 
 **Extension version**: `1.1.2656.138`
 
+ This version is no longer available. A new version will be available shortly.
+
 ## April 9, 2024
 
 **Extension version**: `1.1.2647.136`
+
+ This version is no longer available. A new version with these features will be available shortly.
 
 ### Move resources
 

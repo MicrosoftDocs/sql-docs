@@ -363,6 +363,50 @@ Because any application submitting [!INCLUDE [tsql](../includes/tsql-md.md)] que
 Implementing an error handler that traps error message 1205 allows an application to handle the deadlock situation and take remedial action (for example, automatically resubmitting the query that was involved in the deadlock). By resubmitting the query automatically, the user does not need to know that a deadlock occurred.
 
 The application should pause briefly before resubmitting its query. This gives the other transaction involved in the deadlock a chance to complete and release its locks that formed part of the deadlock cycle. This minimizes the likelihood of the deadlock reoccurring when the resubmitted query requests its locks.  
+
+TRY…CATCH can be used to handle deadlocks. The 1205 deadlock victim error can be caught by the CATCH block and the transaction can be rolled back until the threads become unlocked. 
+
+```sql
+USE AdventureWorks;
+GO
+-- Declare and set the variable to track the number of retries to try before exiting.
+DECLARE @retry INT;
+SET @retry = 5;
+-- Keep trying to update the table if this task is selected as the deadlock victim.
+WHILE (@retry > 0)
+BEGIN
+    BEGIN TRY
+        BEGIN TRANSACTION;
+    
+        UPDATE my_sales
+        SET sales = sales + 1
+        WHERE itemid = 1;
+        WAITFOR DELAY '00:00:13';
+    
+        UPDATE my_sales
+        SET sales = sales + 1
+        WHERE itemid = 2;
+        SET @retry = 0;
+        COMMIT TRANSACTION;
+    END TRY
+    BEGIN CATCH 
+        -- Check the error number.
+        -- If deadlock victim error, then reduce the retry count for the next update retry. 
+        -- If some other error occurred, then exit
+        -- retry WHILE loop.
+        IF (ERROR_NUMBER() = 1205)
+            SET @retry = @retry - 1;
+        ELSE
+            SET @retry = -1;
+        -- Print error information.
+        EXECUTE usp_MyErrorLog;
+  
+        IF XACT_STATE() <> 0
+            ROLLBACK TRANSACTION;
+    END CATCH;
+END; -- End WHILE loop.
+GO
+```
   
 ## Minimize deadlocks
 

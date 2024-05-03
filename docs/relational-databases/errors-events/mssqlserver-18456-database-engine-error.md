@@ -4,7 +4,7 @@ description: A connection attempt is rejected due to a failure with a bad passwo
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: jopilov, randolphwest
-ms.date: 04/29/2024
+ms.date: 05/03/2024
 ms.service: sql
 ms.subservice: supportability
 ms.topic: "reference"

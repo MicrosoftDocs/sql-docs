@@ -4,7 +4,7 @@ description: sp_attach_db attaches a database to a server.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 03/04/2024
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -46,7 +46,7 @@ The name of the database to be attached to the server. *@dbname* is **sysname**,
 
 The physical name, including path, of a database file. This parameter is **nvarchar(260)**, with a default of `NULL`. You can specify up to 16 file names. The parameter names start at *@filename1* and increment to *@filename16*. The file name list must include at least the primary file (`.mdf`). The primary file contains the system tables that point to other files in the database. The list must also include any files that were moved after the database was detached.
 
-This parameter maps to the `FILENAME` parameter of the `CREATE DATABASE` statement. For more information, see [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md).  
+This parameter maps to the `FILENAME` parameter of the `CREATE DATABASE` statement. For more information, see [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md).
 
 > [!NOTE]  
 > When you attach a [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] database that contains full-text catalog files onto a newer version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], the catalog files are attached from their previous location along with the other database files, the same as in [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)]. For more information, see [Upgrade Full-Text Search](../search/upgrade-full-text-search.md).
@@ -78,7 +78,7 @@ When you attach a replicated database that was copied instead of being detached,
 
 - If you attach the database to a different server instance, regardless of version, you must execute [sp_removedbreplication](sp-removedbreplication-transact-sql.md) to remove replication after the attach operation is complete.
 
-When a database is first attached or restored to a new instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], a copy of the database master key (DMK) - encrypted by the service master key (SMK) - isn't yet stored in the server. You must use the `OPEN MASTER KEY` statement to decrypt the DMK. Once the DMK has been decrypted, you have the option of enabling automatic decryption in the future by using the `ALTER MASTER KEY REGENERATE` statement to provide the server with a copy of the DMK, encrypted with the SMK. When a database is upgraded from an earlier version, the DMK should be regenerated to use the newer AES algorithm. For more information about regenerating the DMK, see [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md). The time required to regenerate the DMK key to upgrade to AES depends upon the number of objects protected by the DMK. Regenerating the DMK key to upgrade to AES is only necessary once, and has no effect on future regenerations as part of a key rotation strategy.
+When a database is first attached or restored to a new instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], a copy of the database master key (DMK) - encrypted by the service master key (SMK) - isn't yet stored in the server. You must use the `OPEN MASTER KEY` statement to decrypt the DMK. Once the DMK has been decrypted, you have the option of enabling automatic decryption in the future by using the `ALTER MASTER KEY REGENERATE` statement to provide the server with a copy of the DMK, encrypted with the SMK. When a database is upgraded from an earlier version, the DMK should be regenerated to use the newer AES algorithm. For more information about regenerating the DMK, see [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md). The time required to regenerate the DMK key to upgrade to AES depends upon the number of objects protected by the DMK. Regenerating the DMK key to upgrade to AES is only necessary once, and has no effect on future regenerations as part of a key rotation strategy.
 
 ## Permissions
 
@@ -98,7 +98,7 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
 
 ## Related content
 
-- [Database Detach and Attach (SQL Server)](../databases/database-detach-and-attach-sql-server.md)
+- [Database detach and attach (SQL Server)](../databases/database-detach-and-attach-sql-server.md)
 - [sp_detach_db (Transact-SQL)](sp-detach-db-transact-sql.md)
 - [sp_helpfile (Transact-SQL)](sp-helpfile-transact-sql.md)
 - [sp_removedbreplication (Transact-SQL)](sp-removedbreplication-transact-sql.md)

@@ -4,7 +4,7 @@ description: Creates a new merge publication.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/23/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -125,7 +125,7 @@ Enables the merge publication to use parameterized row filters. *@dynamic_filter
 
 #### [ @snapshot_in_defaultfolder = ] N'*snapshot_in_defaultfolder*'
 
-Specifies if the snapshot files are stored in the default folder. *@snapshot_in_defaultfolder* is **nvarchar(5)**, with a default of `true`. If `true`, snapshot files can be found in the default folder. If `false`, snapshot files are stored in the alternate location specified by *@alternate_snapshot_folder*. Alternate locations can be on another server, on a network drive, or on a removable media (such as CD-ROM or removable disks). You can also save the snapshot files to a File Transfer Protocol (FTP) site, for retrieval by the Subscriber at a later time. This parameter can be true and still have a location specified by *@alt_snapshot_folder*. This combination specifies that the snapshot files are stored in both the default and alternate locations.
+Specifies if the snapshot files are stored in the default folder. *@snapshot_in_defaultfolder* is **nvarchar(5)**, with a default of `true`. If `true`, snapshot files can be found in the default folder. If `false`, snapshot files are stored in the alternate location specified by *@alternate_snapshot_folder*. Alternate locations can be on another server, on a network drive, or on a removable media (such as removable disks). You can also save the snapshot files to a File Transfer Protocol (FTP) site, for retrieval by the Subscriber at a later time. This parameter can be true and still have a location specified by *@alt_snapshot_folder*. This combination specifies that the snapshot files are stored in both the default and alternate locations.
 
 #### [ @alt_snapshot_folder = ] N'*alt_snapshot_folder*'
 
@@ -334,7 +334,7 @@ If multiple publications exist that publish the same database object, only publi
 
 For [!INCLUDE [ssEW](../../includes/ssew-md.md)] Subscribers, the value of *@alternate_snapshot_folder* is only used when the value of *@snapshot_in_default_folder* is `false`.
 
-With DDL replication enabled (`@replicate_ddl = 1`) for a publication, in order to make non-replicating DDL changes to the publication, [sp_changemergepublication (Transact-SQL)](sp-changemergepublication-transact-sql.md) must first be executed to set *@replicate_ddl* to `0`. After the non-replicating DDL statements have been issued, `sp_changemergepublication` can be run again to turn DDL replication back on.
+With DDL replication enabled (`@replicate_ddl = 1`) for a publication, in order to make non-replicating DDL changes to the publication, [sp_changemergepublication](sp-changemergepublication-transact-sql.md) must first be executed to set *@replicate_ddl* to `0`. After the non-replicating DDL statements have been issued, `sp_changemergepublication` can be run again to turn DDL replication back on.
 
 ## Examples
 

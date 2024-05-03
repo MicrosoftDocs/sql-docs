@@ -4,7 +4,7 @@ description: "Policy-Based Management stored procedures (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -21,7 +21,7 @@ dev_langs:
 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that are used for Policy-Based Management.
 
 > [!IMPORTANT]  
-> Only the Policy-Based Management stored procedures that are documented in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Books Online are supported. Undocumented stored procedures are used by internal Policy-Based Management components and should not be used to administer Policy-Based Management.
+> Only the Policy-Based Management stored procedures that are documented in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Books Online are supported. Undocumented stored procedures are used by internal Policy-Based Management components and shouldn't be used to administer Policy-Based Management.
 
 :::row:::
     :::column:::

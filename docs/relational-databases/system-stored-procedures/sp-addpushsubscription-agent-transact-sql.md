@@ -4,7 +4,7 @@ description: Adds a new scheduled agent job used to synchronize a push subscript
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/02/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -23,7 +23,7 @@ dev_langs:
 Adds a new scheduled agent job used to synchronize a push subscription to a transactional publication. This stored procedure is executed at the Publisher on the publication database.
 
 > [!IMPORTANT]  
-> When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Configure SQL Server Database Engine for encrypting connections](../../database-engine/configure-windows/configure-sql-server-encryption.md).
+> When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *@job_login* and *@job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Configure SQL Server Database Engine for encrypting connections](../../database-engine/configure-windows/configure-sql-server-encryption.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -86,8 +86,6 @@ The name of the subscription database. *@subscriber_db* is **sysname**, with a d
 For a non-SQL Server Subscriber, specify a value of **(default destination)** for *subscriber_db*.
 
 #### [ @subscriber_security_mode = ] *subscriber_security_mode*
-
-[!INCLUDE [entra-id](../../includes/entra-id.md)]
 
 The security mode to use when connecting to a Subscriber when synchronizing. *@subscriber_security_mode* is **smallint**, with a default of `1`. The following values define the security mode:
 

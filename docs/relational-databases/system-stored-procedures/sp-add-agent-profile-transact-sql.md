@@ -4,7 +4,7 @@ description: "sp_add_agent_profile (Transact-SQL)"
 author: mashamsft
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 05/31/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -79,9 +79,9 @@ Indicates whether the profile is the default for *@agent_type*. *@default* is **
 
 `sp_add_agent_profile` is used in snapshot replication, transactional replication, and merge replication.
 
-Custom agent profiles are added with the default agent parameter values. Use [sp_change_agent_parameter (Transact-SQL)](sp-change-agent-parameter-transact-sql.md) to change these default values or [sp_add_agent_parameter (Transact-SQL)](sp-add-agent-parameter-transact-sql.md) to add additional parameters.
+Custom agent profiles are added with the default agent parameter values. Use [sp_change_agent_parameter](sp-change-agent-parameter-transact-sql.md) to change these default values or [sp_add_agent_parameter](sp-add-agent-parameter-transact-sql.md) to add additional parameters.
 
-When `sp_add_agent_profile` is executed, a row is added for the new custom profile in the [MSagent_profiles (Transact-SQL)](../system-tables/msagent-profiles-transact-sql.md) table and the associated default parameters for this profile are added to the [MSagent_parameters (Transact-SQL)](../system-tables/msagent-parameters-transact-sql.md) table.
+When `sp_add_agent_profile` is executed, a row is added for the new custom profile in the [MSagent_profiles](../system-tables/msagent-profiles-transact-sql.md) table and the associated default parameters for this profile are added to the [MSagent_parameters](../system-tables/msagent-parameters-transact-sql.md) table.
 
 ## Permissions
 

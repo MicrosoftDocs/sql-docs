@@ -4,7 +4,7 @@ description: Stores a new user-defined error message in an instance of the SQL S
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 04/08/2024
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -105,7 +105,7 @@ USE master;
 GO
 EXEC sp_addmessage 50001, 16,
     N'Percentage expects a value between 20 and 100.
-    Please reexecute with a more appropriate value.';
+    Re-run with a more appropriate value.';
 GO
 ```
 

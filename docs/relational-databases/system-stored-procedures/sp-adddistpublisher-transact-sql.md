@@ -4,7 +4,7 @@ description: "Configures a Publisher to use a specified distribution database."
 author: mashamsft
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 11/02/2023
+ms.date: 08/22/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -20,7 +20,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-Configures a Publisher to use a specified distribution database. This stored procedure is executed at the Distributor on any database. The stored procedures [sp_adddistributor (Transact-SQL)](sp-adddistributor-transact-sql.md) and [sp_adddistributiondb (Transact-SQL)](sp-adddistributiondb-transact-sql.md) must have been run prior to using this stored procedure.
+Configures a Publisher to use a specified distribution database. This stored procedure is executed at the Distributor on any database. The stored procedures [sp_adddistributor](sp-adddistributor-transact-sql.md) and [sp_adddistributiondb](sp-adddistributiondb-transact-sql.md) must have been run prior to using this stored procedure.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

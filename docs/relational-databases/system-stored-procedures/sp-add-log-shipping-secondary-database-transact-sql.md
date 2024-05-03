@@ -4,7 +4,7 @@ description: "Sets up a secondary database for log shipping."
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 06/02/2023
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -53,7 +53,7 @@ The name of the secondary database. *@secondary_database* is **sysname**, with n
 
 #### [ @primary_server = ] '*primary_server*'
 
-The name of the primary instance of the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] in the log shipping configuration. *@primary_server* is **sysname** and can't be NULL.
+The name of the primary instance of the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] in the log shipping configuration. *@primary_server* is **sysname** and can't be `NULL`.
 
 #### [ @primary_database = ] '*primary_database*'
 
@@ -61,11 +61,11 @@ The name of the database on the primary server. *@primary_database* is **sysname
 
 #### [ @restore_delay = ] '*restore_delay*'
 
-The amount of time, in minutes, that the secondary server waits before restoring a given backup file. *@restore_delay* is **int** and can't be NULL. The default value is 0.
+The amount of time, in minutes, that the secondary server waits before restoring a given backup file. *@restore_delay* is **int** and can't be `NULL`. The default value is 0.
 
 #### [ @restore_all = ] '*restore_all*'
 
-If set to 1, the secondary server restores all available transaction log backups when the restore job runs. Otherwise, it stops after one file is restored. *@restore_all* is **bit** and can't be NULL.
+If set to 1, the secondary server restores all available transaction log backups when the restore job runs. Otherwise, it stops after one file is restored. *@restore_all* is **bit** and can't be `NULL`.
 
 #### [ @restore_mode = ] '*restore_mode*'
 
@@ -74,11 +74,11 @@ The restore mode for the secondary database.
 - `0`: Restore log with `NORECOVERY`
 - `1`: restore log with `STANDBY`
 
-*@restore_mode* is **bit** and can't be NULL.
+*@restore_mode* is **bit** and can't be `NULL`.
 
 #### [ @disconnect_users = ] '*disconnect_users*'
 
-If set to `1`, users are disconnected from the secondary database when a restore operation is performed. The default is `0`. *@disconnect_users* is **bit** and can't be NULL.
+If set to `1`, users are disconnected from the secondary database when a restore operation is performed. The default is `0`. *@disconnect_users* is **bit** and can't be `NULL`.
 
 #### [ @block_size = ] '*block_size*'
 
@@ -90,11 +90,11 @@ The total number of buffers used by the backup or restore operation. *@buffer_co
 
 #### [ @max_transfer_size = ] '*max_transfer_size*'
 
-The size, in bytes, of the maximum input or output request that is issued by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to the backup device. *@max_transfersize* is **int** and can be NULL.
+The size, in bytes, of the maximum input or output request that is issued by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to the backup device. *@max_transfersize* is **int** and can be `NULL`.
 
 #### [ @restore_threshold = ] '*restore_threshold*'
 
-The number of minutes allowed to elapse between restore operations before an alert is generated. *@restore_threshold* is **int** and can't be NULL.
+The number of minutes allowed to elapse between restore operations before an alert is generated. *@restore_threshold* is **int** and can't be `NULL`.
 
 #### [ @threshold_alert = ] '*threshold_alert*'
 
@@ -152,5 +152,5 @@ GO
 
 ## Related content
 
-- [About Log Shipping (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)
+- [About log shipping (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

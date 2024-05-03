@@ -4,7 +4,7 @@ description: "sp_add_alert (Transact-SQL)"
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 03/20/2024
+ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -59,7 +59,7 @@ Only `sysmessages` errors written to the Microsoft Windows application log can c
 
 #### [ @severity = ] *severity*
 
-The severity level (from `1` through `25`) that defines the alert. *@severity* is **int**, with a default of `0`. Any [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] message stored in the `sysmessages` table sent to the [!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows application log with the indicated severity causes the alert to be sent. If *@message_id* is used to define the alert, *@severity* must be `0`.
+The severity level (from `1` through `25`) that defines the alert. *@severity* is **int**, with a default of `0`. Any [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] message stored in the `sysmessages` table sent to the Windows application log with the indicated severity causes the alert to be sent. If *@message_id* is used to define the alert, *@severity* must be `0`.
 
 #### [ @enabled = ] *enabled*
 

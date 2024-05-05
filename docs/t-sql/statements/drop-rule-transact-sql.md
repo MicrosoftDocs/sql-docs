@@ -63,9 +63,8 @@ DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ ,...n ] [ ; ]
  The following example unbinds and then drops the rule named `VendorID_rule`. 
   
 ```sql  
-sp_unbindrule 'Production.ProductVendor.VendorID'  
-DROP RULE VendorID_rule  
-GO  
+EXEC sp_unbindrule 'Production.ProductVendor.VendorID'  
+DROP RULE VendorID_rule
 ```  
   
 ## See Also  

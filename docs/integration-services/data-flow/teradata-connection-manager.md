@@ -30,9 +30,9 @@ Connection manager configuration changes are resolved by Integration Services at
 
 1. Under **Authentication**, do either of the following:
 
-   - To use Windows authentication, select **Use Windows Authentication**.
+   - To use Windows authentication, select **Use Windows Authentication**. This is equivalent to selecting **Use Teradata Authentication** and specifying `KRB5` in **Mechanism**.
    - To use Teradata database authentication, select **Use Teradata Authentication**, and then enter the following credentials for this type of authentication:
-     - In the **Mechanism** box, enter the security checking mechanism you want to use. Valid mechanism values include TD1, TD2, LDAP, KRB5, KRB5C, NTLM, and NTLMC.
+     - In the **Mechanism** box, enter the security checking mechanism you want to use. Valid mechanism values include TD1, TD2, LDAP, KRB5, KRB5C, NTLM, and NTLMC. Currently, only `TD2` is officially tested and supported.
      - In the **Parameter** box, enter the types of parameters that are required for the security checking mechanism you've entered.
      - In the **User name** box, enter the username that you use to connect to the Teradata database.  
      - In the **Password** box, enter the Teradata database password of the user.

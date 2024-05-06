@@ -5,7 +5,7 @@ metadata:
   description: Frequently asked questions about database watcher for Azure SQL
   author: dimitri-furman
   ms.author: dfurman
-  ms.date: 04/10/2024
+  ms.date: 04/30/2024
   ms.reviewer: wiassaf
   ms.service: sql-db-mi
   ms.subservice: monitoring
@@ -91,7 +91,11 @@ sections:
 
       - question: |
           Are there any built-in RBAC roles or actions specific to database watcher?
-        answer: Not at this time. Operations such as creating, starting, stopping a watcher, or creating/removing targets and the data store require the assignment of **Contributor** or **Owner** Azure RBAC roles on the watcher, resource group, or subscription.
+        answer: Not at this time. Viewing the watcher resource requires the assignment of the **Reader** RBAC role. Operations such as creating, starting, stopping a watcher, or creating/removing targets and the data store require the assignment of **Contributor** or **Owner** Azure RBAC roles. Role assignments can be made at the watcher, resource group, subscription, or management group level.
+
+      - question: |
+          What permissions are required to access database watcher dashboards?
+        answer: To access dashboards, users require the [assignment](/azure/role-based-access-control/role-assignments-portal) of the RBAC **Reader** role on the watcher resource or on a higher scope such as resource group, subscription, or management group. They also require the [assignment](database-watcher-manage.md#grant-users-and-groups-access-to-the-data-store) of the **Viewer** RBAC role on the Azure Data Explorer or Real-Time Analytics database. These assignments can be made directly or via Microsoft Entra ID group membership.
 
   - name: Data store
     questions:

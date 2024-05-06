@@ -4,7 +4,7 @@ description: An overview of Azure SQL Database monitoring using Azure Monitor me
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 05/21/2024
+ms.date: 05/06/2024
 ms.service: sql-database
 ms.subservice: monitoring
 ms.topic: conceptual
@@ -83,6 +83,7 @@ Here's the logic used for calculating Availability for every one-minute interval
 - If all connections fail due to user errors, availability is 100%.
 - If there are no connection attempts, availability is 100%.
 - If all connections fail due to system errors, availability is 0%.
+- Currently, availability metric data is not yet supported for the serverless compute tier and will be displayed as 100%.
 
 Availability metric is therefore a composite metric derived from following existing metrics:
 

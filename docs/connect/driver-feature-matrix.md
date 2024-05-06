@@ -14,7 +14,7 @@ ms.topic: conceptual
 If you're planning to use a feature in Microsoft SQL Server, it might not be available in all drivers. Some reasons a feature might not be in a particular driver include:
 
 - The feature doesn't apply to the driver technology.
-- The feature is new and hasn't been implemented across all drivers yet.
+- The feature is new and isn't implemented across all drivers yet.
 - The feature isn't in demand in a particular driver.
 - Other features are being implemented first.
 
@@ -62,7 +62,7 @@ We wish all drivers supported every feature and spend effort to ensure feature p
 | [Microsoft Entra managed identity authentication](/azure/active-directory/managed-identities-azure-resources/overview) | [Yes](odbc/using-azure-active-directory.md) (v17.3+) | [Yes](odbc/using-azure-active-directory.md) (v17.3+) | [Yes](jdbc/connecting-using-azure-active-directory-authentication.md) (v7.2+) | [Yes](oledb/features/using-azure-active-directory.md) (v18.3+) |
 | [Microsoft Entra service principal authentication](/azure/active-directory/develop/app-objects-and-service-principals) | [Yes](odbc/using-azure-active-directory.md) (v17.7+) | [Yes](odbc/using-azure-active-directory.md) (v17.7+) | [Yes](jdbc/connecting-using-azure-active-directory-authentication.md) (v9.2+) | [Yes](oledb/features/using-azure-active-directory.md) (v18.5+) |
 | [Microsoft Entra service principal certificate authentication](/azure/active-directory/develop/app-objects-and-service-principals) | | | [Yes](jdbc/connecting-using-azure-active-directory-authentication.md) (v12.4+) | |
-| [Microsoft Entra default Azure authentication](/azure/developer/intro/passwordless-overview#introducing-defaultazurecredential) | | | [Yes](connecting-using-azure-active-directory-authentication.md) (v12.2+) | |
+| [Microsoft Entra default Azure authentication](/azure/developer/intro/passwordless-overview#introducing-defaultazurecredential) | | | [Yes](jdbc/connecting-using-azure-active-directory-authentication.md) (v12.2+) | |
 | [Windows-Integrated authentication](/windows-server/security/windows-authentication/windows-authentication-overview) | Yes | [Yes](odbc/linux-mac/using-integrated-authentication.md) | [Yes](jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) | Yes |
 | [Bulk Copy](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [Yes](../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) | [Yes](../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) | [Yes](jdbc/using-bulk-copy-with-the-jdbc-driver.md) | [Yes](oledb/features/performing-bulk-copy-operations.md) |
 | [Data Discovery and Classification metadata](../relational-databases/security/sql-data-discovery-and-classification.md) | [Yes](odbc/data-classification.md) (v17.2+) | [Yes](odbc/data-classification.md) (v17.2+) | [Yes](jdbc/data-discovery-classification-sample.md) (v7.0+) | [Yes](oledb/features/using-data-classification.md) (v18.5+) |

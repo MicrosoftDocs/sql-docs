@@ -71,8 +71,8 @@ At this time, you can create database watchers in the following Azure regions:
 | Asia Pacific | Australia East |
 | Asia Pacific | Southeast Asia |
 | Canada | Canada Central |
-| Europe | West Europe |
 | Europe | UK South |
+| Europe | West Europe |
 | United States | East US |
 | United States | West US |
 
@@ -192,7 +192,7 @@ This section summarizes the most notable database watcher changes.
 
 | Time period | Changes |
 |:--|:--|
-| April 2024 | - Enable database watcher in the **Australia East** and **UK South** Azure regions.</br> - Fix a failure adding a managed private endpoint when multiple private endpoints are added quickly for the same watcher.</br> - Fix the **Backup history** dataset for SQL databases to include full backups.</br> - Improve collection query performance to avoid timeouts for **Index metadata**, **Query runtime statistics**, **Query wait statistics**, and **Table metadata** datasets.</br> - Fix a bug where for certain datasets data wasn't collected after a database was restored from a backup.</br> - Fix a bug where the **Index metadata** dataset wasn't collected when indexes have many key or included columns or when the names of these columns are long.</br> - Add the **SOS schedulers** dataset.</br> - Add a button to download the selected query plan from the **Top queries** dashboards.</br> - Add a quickstart [sample](/samples/azure/azure-quickstart-templates/create-watcher/) to create and configure a watcher using Bicep or an ARM template. |
+| April 2024 | - Enable database watcher in the **Australia East** and **UK South** Azure regions.</br> - Fix a failure adding a managed private endpoint when multiple private endpoints are added quickly for the same watcher.</br> - Fix the **Backup history** dataset for SQL databases to include full backups.</br> - Improve collection query performance to avoid timeouts for the **Index metadata**, **Query runtime statistics**, **Query wait statistics**, and **Table metadata** datasets.</br> - Fix a bug where for certain datasets data wasn't collected after a database was restored from a backup.</br> - Fix a bug where the **Index metadata** dataset wasn't collected when indexes have many key or included columns or when the names of these columns are long.</br> - Add the **SOS schedulers** dataset.</br> - Add a button to download the selected query plan from the **Top queries** dashboards.</br> - Add a quickstart [sample](/samples/azure/azure-quickstart-templates/create-watcher/) to create and configure a watcher using Bicep or an ARM template. |
 
 ## Limitations
 

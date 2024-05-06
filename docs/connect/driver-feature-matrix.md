@@ -4,7 +4,7 @@ description: Learn which SQL Server features are supported in the drivers for .N
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
-ms.date: 08/30/2023
+ms.date: 05/06/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -40,6 +40,7 @@ We wish all drivers supported every feature and spend effort to ensure feature p
 | [Microsoft Entra managed identity authentication](/azure/active-directory/managed-identities-azure-resources/overview) | [Yes](ado-net/sql/azure-active-directory-authentication.md) (v2.1+) | [Yes](ado-net/sql/azure-active-directory-authentication.md) (v2.1+) | | |
 | [Microsoft Entra service principal authentication](/azure/active-directory/develop/app-objects-and-service-principals) | [Yes](ado-net/sql/azure-active-directory-authentication.md) (v2.0+) | [Yes](ado-net/sql/azure-active-directory-authentication.md) (v2.0+) | | |
 | [Microsoft Entra service principal certificate authentication](/azure/active-directory/develop/app-objects-and-service-principals) | | | | |
+| [Microsoft Entra default Azure authentication](/azure/developer/intro/passwordless-overview#introducing-defaultazurecredential) | [Yes](ado-net/sql/azure-active-directory-authentication.md) (v3.0+) | [Yes](ado-net/sql/azure-active-directory-authentication.md) (v3.0+) | | |
 | [Windows-Integrated authentication](/windows-server/security/windows-authentication/windows-authentication-overview) | [Yes](ado-net/sql/authentication-sql-server.md) | [Yes](ado-net/sql/authentication-sql-server.md) | [Yes](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) | [Yes](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) |
 | [Bulk Copy](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [Yes](ado-net/sql/bulk-copy-operations-sql-server.md) | [Yes](ado-net/sql/bulk-copy-operations-sql-server.md) | [Yes](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) | [Yes](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) |
 | [Data Sensitivity and Classification metadata](../relational-databases/security/sql-data-discovery-and-classification.md) | [Yes](ado-net/sql/data-classification.md) | [Yes](ado-net/sql/data-classification.md) | | |
@@ -61,6 +62,7 @@ We wish all drivers supported every feature and spend effort to ensure feature p
 | [Microsoft Entra managed identity authentication](/azure/active-directory/managed-identities-azure-resources/overview) | [Yes](odbc/using-azure-active-directory.md) (v17.3+) | [Yes](odbc/using-azure-active-directory.md) (v17.3+) | [Yes](jdbc/connecting-using-azure-active-directory-authentication.md) (v7.2+) | [Yes](oledb/features/using-azure-active-directory.md) (v18.3+) |
 | [Microsoft Entra service principal authentication](/azure/active-directory/develop/app-objects-and-service-principals) | [Yes](odbc/using-azure-active-directory.md) (v17.7+) | [Yes](odbc/using-azure-active-directory.md) (v17.7+) | [Yes](jdbc/connecting-using-azure-active-directory-authentication.md) (v9.2+) | [Yes](oledb/features/using-azure-active-directory.md) (v18.5+) |
 | [Microsoft Entra service principal certificate authentication](/azure/active-directory/develop/app-objects-and-service-principals) | | | [Yes](jdbc/connecting-using-azure-active-directory-authentication.md) (v12.4+) | |
+| [Microsoft Entra default Azure authentication](/azure/developer/intro/passwordless-overview#introducing-defaultazurecredential) | | | [Yes](connecting-using-azure-active-directory-authentication.md) (v12.2+) | |
 | [Windows-Integrated authentication](/windows-server/security/windows-authentication/windows-authentication-overview) | Yes | [Yes](odbc/linux-mac/using-integrated-authentication.md) | [Yes](jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) | Yes |
 | [Bulk Copy](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [Yes](../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) | [Yes](../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) | [Yes](jdbc/using-bulk-copy-with-the-jdbc-driver.md) | [Yes](oledb/features/performing-bulk-copy-operations.md) |
 | [Data Discovery and Classification metadata](../relational-databases/security/sql-data-discovery-and-classification.md) | [Yes](odbc/data-classification.md) (v17.2+) | [Yes](odbc/data-classification.md) (v17.2+) | [Yes](jdbc/data-discovery-classification-sample.md) (v7.0+) | [Yes](oledb/features/using-data-classification.md) (v18.5+) |
@@ -81,7 +83,8 @@ We wish all drivers supported every feature and spend effort to ensure feature p
 | [Microsoft Entra Interactive (MFA) authentication](/azure/sql-database/sql-database-aad-authentication) | | | | Yes<sup>[2](#note2)</sup> | Yes |
 | [Microsoft Entra managed identity authentication](/azure/active-directory/managed-identities-azure-resources/overview) | [Yes](php/azure-active-directory.md) (v5.6+) | [Yes](php/azure-active-directory.md) (v5.6+) | [Yes](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Yes | Yes |
 | [Microsoft Entra service principal authentication](/azure/active-directory/develop/app-objects-and-service-principals) | [Yes](php/azure-active-directory.md) (v5.9+) | [Yes](php/azure-active-directory.md) (v5.9+) | [Yes](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Yes | Yes |
-| [Microsoft Entra service principal Certificate authentication](/azure/active-directory/develop/app-objects-and-service-principals) | | | | | Yes |
+| [Microsoft Entra service principal certificate authentication](/azure/active-directory/develop/app-objects-and-service-principals) | | | | | Yes |
+| [Microsoft Entra default Azure authentication](/azure/developer/intro/passwordless-overview#introducing-defaultazurecredential) | | | | | Yes |
 | [Windows-Integrated authentication](/windows-server/security/windows-authentication/windows-authentication-overview) | [Yes](php/how-to-connect-using-windows-authentication.md) | [Yes](odbc/linux-mac/using-integrated-authentication.md) | | Yes | Yes |
 | [Bulk Copy](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | | | [Yes](https://tediousjs.github.io/tedious/bulk-load.html) | | Yes |
 | [Data Discovery and Classification metadata](../relational-databases/security/sql-data-discovery-and-classification.md) | Yes (v5.8+) | Yes (v5.8+) | | | 

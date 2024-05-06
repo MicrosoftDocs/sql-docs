@@ -52,30 +52,30 @@ Teradata connection manager is displayed as "TERADATA."
 
 :::image type="content" source="media/teradata-connector/teradata-connection-manager-type.png" alt-text="Screenshot of the Teradata connection manager type":::
 
-Existing SSIS packages designed with Attunity Teradata Connector will be automatically upgraded to use Microsoft Connector for Teradata. The icons will be changed as well.
+Existing SSIS packages designed with Attunity Teradata Connector are automatically upgraded to use Microsoft Connector for Teradata. The icons are changed as well.
 
-To execute the SSIS package *targeting SQL Server 2017 and below*, you'll need to install **Microsoft Connector for Teradata by Attunity** with corresponding version from the below link:
+To execute the SSIS package *targeting SQL Server 2017 and below*, you need to install **Microsoft Connector for Teradata by Attunity** with corresponding version from the below link:
 
 - [SQL Server 2017: Microsoft Connector Version 5.0 for Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)
 - [SQL Server 2016: Microsoft Connector Version 4.0 for Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=52950)
 - [SQL Server 2014: Microsoft Connector Version 3.0 for Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=44582)
 - [SQL Server 2012: Microsoft Connector Version 2.0 for Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=29283)
 
-To design the SSIS package in SSDT *targeting SQL Server 2017 and below*, you'll need to have **Microsoft Connector for Teradata** and install **Microsoft Connector for Teradata by Attunity** with the corresponding version.
+To design the SSIS package in SSDT *targeting SQL Server 2017 and below*, you need to have **Microsoft Connector for Teradata** and install **Microsoft Connector for Teradata by Attunity** with the corresponding version.
 
 ## Limitations and known issues
 
-- Teradata Source/Destination Editor, **Default database** property doesn't take effect. As a workaround, type the database name in dropdown box to filter table or view.
+- Teradata Source/Destination Editor: **Default database** property doesn't take effect. As a workaround, type the database name in dropdown box to filter table or view.
 
-- Teradata Source/Destination Editor, Mapping step doesn't work when type `\<database>.<table/view>`. As work-around, type `\<database>.<table/view>`, then select the drop-down button.
+- Teradata Source/Destination Editor: Mapping step doesn't work when type `\<database>.<table/view>`. As work-around, type `\<database>.<table/view>`, then select the drop-down button.
 
-- Teradata Source Editor, view can't be displayed when Data access mode is "Table Name – TPT Export." As work-around, use Advanced Editor of Teradata Source.
+- Teradata Source Editor: view can't be displayed when Data access mode is "Table Name – TPT Export." As work-around, use Advanced Editor of Teradata Source.
 
-- Teradata Destination, attribute "PackMaximum" can't be set to "True." Otherwise, error will occur.
+- Teradata Destination: attribute "PackMaximum" can't be set to "True." Otherwise, error occurs.
 
 - Teradata Source always reads columns in the order as they're defined in the table. ODBC, on the other hand, requires columns be read in a specific order in certain circumstances [Getting Long Data](../../odbc/reference/develop-app/getting-long-data.md) and [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md). When the two orders don't match, read fails with error message "Invalid descriptor index, descriptor record doesn't exist, or descriptor record wasn't properly initialized."
 
-- Installing a new version over an old installation won't remove the old version entry from the installed program list. While this doesn't impact functioning of the new version, user can manually uninstall the old version in the control panel "Programs, and Features" to get rid of the old version entry.
+- Installing a new version over an old installation doesn't remove the old version entry from the installed program list. While this practice doesn't impact functioning of the new version, user can manually uninstall the old version in the control panel "Programs, and Features" to get rid of the old version entry.
 
 ## Uninstallation
 
@@ -83,17 +83,25 @@ You can uninstall wizard to remove **Microsoft connector for Teradata**.
 
 ## Release Notes
 
+### Rev. 282
+
+**Bug fixes**
+
+- Teradata Source can't handle newline character in SQL command (**SQL command - TPT Export** data access mode).
+- Teradata Destination crashes under certain circumstances.
+- Specified authentication **Mechanism** on Teradata Connection Manager Editor isn't persisted and doesn't take effect.
+
 ### Rev. 275
 
 **Bug fixes**
 
-- Teradata Destination will crash under certain circumstances.
-- Teradata Destination will report success despite errors occurred under certain circumstances.
-- Teradata Destination will report a larger number of rows written than reality under certain circumstances.
+- Teradata Destination crashes under certain circumstances.
+- Teradata Destination reports success despite errors occurred under certain circumstances.
+- Teradata Destination reports a larger number of rows written than reality under certain circumstances.
 
 **Improvements**
 
-- When error occurred, Teradata Destination will retain and direct user to TPT error tables for investigation.
+- When error occurred, Teradata Destination retains and directs user to TPT error tables for investigation.
 
 ### Rev. 257
 
@@ -102,7 +110,7 @@ You can uninstall wizard to remove **Microsoft connector for Teradata**.
 - Memory leak in Teradata Destination.
 - Teradata Destination fails with error message "an error occurred when converting string from source codepage" when consuming empty strings.
 - Under certain circumstances, Data Flow Task reports success despite errors occurred in Teradata Destination.
-- Teradata Destination fails when writing `VARCHAR` values with a very large length.
+- Teradata Destination fails when writing `VARCHAR` values with a large length.
 
 **Improvements**
 
@@ -113,8 +121,8 @@ You can uninstall wizard to remove **Microsoft connector for Teradata**.
 
 **Bug fixes**
 
-- When processing tabular data with 24 or more columns, an error will occur with message `[Teradata][ODBC] (10670) Invalid descriptor index, descriptor record does not exist, or descriptor record was not properly initialized.`
-- A newly created Teradata Connection Manager will default to latest version Teradata ODBC driver installed even when it is not supported.
+- When processing tabular data with 24 or more columns, an error occurs with message `[Teradata][ODBC] (10670) Invalid descriptor index, descriptor record doesn't exist, or descriptor record was not properly initialized.`
+- A newly created Teradata Connection Manager defaults to latest version Teradata ODBC driver installed even when it isn't supported.
 
 ### Rev. 233
 

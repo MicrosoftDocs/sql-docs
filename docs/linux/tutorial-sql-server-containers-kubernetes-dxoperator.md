@@ -16,7 +16,7 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This tutorial explains how to configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Always On availability groups (AGs) for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Linux based containers deployed to an Azure Kubernetes Service (AKS) Kubernetes cluster, using DH2i DxOperator.
+This tutorial explains how to configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Always On availability groups (AGs) for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Linux based containers deployed to an Azure Kubernetes Service (AKS) Kubernetes cluster, using DH2i DxOperator. These procedures are also applicable to Azure Red Hat OpenShift clusters; the primary distinction is the deployment of an [Azure Red Hat OpenShift cluster](/azure/openshift/quickstart-portal), followed by substituting `kubectl` commands with `oc` in the following steps.
 
 > [!NOTE]  
 > Microsoft supports data movement, AG, and [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] components. DH2i is responsible for support of the DxEnterprise product, which includes cluster and quorum management. DxOperator is a software extension to Kubernetes that uses custom resource definitions to automate the deployment of DxEnterprise clusters. DxEnterprise then provides all of the instrumentation to create, configure, manage and provide automatic failover for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] AG workloads in Kubernetes.

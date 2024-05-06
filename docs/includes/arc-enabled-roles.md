@@ -16,7 +16,7 @@ When you install Azure extension for SQL Server, the installation:
 
 In addition, Azure extension for SQL Server revokes permissions for these roles when they're no longer needed for specific features.
 
-A Windows scheduled task runs hourly. It grants or revokes privileges in SQL Server when it detects:
+`SqlServerExtensionPermissionProvider` is a Windows scheduled task. It runs hourly. It grants or revokes privileges in SQL Server when it detects:
 
 - A new SQL Server instance is installed on the host
 - A new database is created

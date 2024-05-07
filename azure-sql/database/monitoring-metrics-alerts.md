@@ -69,13 +69,13 @@ The following table describes commonly used metrics in Azure SQL Database.
 | **Failed Connections : System Errors** | `connection_failed` | This metric shows the number of connection attempts to a database that failed because of internal service errors. Most commonly, such errors are transient. This metric can be split by two dimensions, `Error` and `ValidatedDriverNameAndVersion`, to see the number of failed connection attempts due to a specific error, or from a specific client driver. |
 | **Failed Connections : User Errors** | `connection_failed_user_error` | This metric shows the number of connection attempts to a database that failed because of user-correctable errors, such as an incorrect password or connection being blocked by firewall. This metric can be split by two dimensions, `Error` and `ValidatedDriverNameAndVersion`, to see the number of failed connection attempts due to a specific error, or from a specific client driver. |
 | **Deadlocks** | `deadlock` | This metric shows the number of [deadlocks](analyze-prevent-deadlocks.md) in a database.|
-| **Availability** | `service_availability` | Availability is determined based on the database being operational for connections. For each one-minute data point, the possible values are either `100%` or `0%`. For more information, see [Availability metric](#availability-metric). |
+| **Availability** | `availability` | Availability is determined based on the database being operational for connections. For each one-minute data point, the possible values are either `100%` or `0%`. For more information, see [Availability metric](#availability-metric). |
 
 #### Availability metric
 
 The Availability metric tracks availability at individual Azure SQL Database level. This feature is currently in preview.
 
-Service availability is granular to one minute of connection outage. Availability is determined based on the database being operational for connections. A minute is considered as downtime or unavailable if all continuous attempts by users to establish connection to the database within the minute fail due to a service issue. If there is intermittent unavailability, the duration of continuous unavailability must cross the minute boundary to be considered as downtime. Typically, the latency to display availability is less than three minutes.
+Availability is granular to one minute of connection outage. Availability is determined based on the database being operational for connections. A minute is considered as downtime or unavailable if all continuous attempts by users to establish connection to the database within the minute fail due to a service issue. If there is intermittent unavailability, the duration of continuous unavailability must cross the minute boundary to be considered as downtime. Typically, the latency to display availability is less than three minutes.
 
 Here's the logic used for calculating Availability for every one-minute interval:
 

@@ -235,7 +235,7 @@ To create the Express.js OpenAPI application, you'll create several files:
     
     ```
 
-1. Create an **opanapi.js** route file and add the following code for the OpenAPI UI explorer:
+1. Create an **openapi.js** route file and add the following code for the OpenAPI UI explorer:
 
     ```javascript
     import express from 'express';

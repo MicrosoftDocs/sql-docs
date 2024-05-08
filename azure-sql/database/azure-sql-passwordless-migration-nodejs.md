@@ -117,8 +117,8 @@ Create a user in Azure SQL Database. The user should correspond to the Azure acc
         }
     }
     
-    const database = new Database(config);
-    const result = await database.executeQuery(`select * from mytable where id = 10`);
+    const databaseClient = new Database(config);
+    const result = await databaseClient.executeQuery(`select * from mytable where id = 10`);
     ```
 
     The `AZURE_CLIENT_ID` environment variable is created later in this tutorial.

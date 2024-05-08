@@ -131,10 +131,9 @@ Select one of the following options:
 - **Be made using this security context**  
     A connection will be made using the login and password specified in the **Remote login** and **With password** boxes for logins not defined in the list. The remote login must be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication login on the remote server.  
 
-  > [!NOTE]  
-  > If linked server is configured with option "Be made using this security context", then any database account (login) in SQL Server regardless of the account
-   permission can use the linked server and run ad-hoc queries on the destination server. so, the account entered should be granted minimum permissions and not 
-   granted SYSADMIN role to ensure least privilege principle in-place and to reduce attack surface.
+  > [!CAUTION]  
+  > If a linked server is configured with option **Be made using this security context**, *any* user on the instance can access the remote linked server using this context. This may have the unintended potential for abuse or malicious internal access.
+  > The SQL authenticated **Remote login** provided to the linked server should be granted minimum necessary permissions on the remote server, to ensure a principle of least privilege and to reduce attack surface. 
 
 
 ### Edit the Server Options page in linked server properties (optional)

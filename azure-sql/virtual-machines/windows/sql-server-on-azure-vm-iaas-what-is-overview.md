@@ -97,9 +97,10 @@ To see the available SQL Server on Linux virtual machine images, see [Overview o
 
 It's possible to deploy an older image of SQL Server that isn't available in the Azure portal by using PowerShell. To view all available images by using PowerShell, use the following command:
 
-  ```powershell
-  Get-AzVMImageOffer -Location $Location -Publisher 'MicrosoftSQLServer'
-  ```
+```powershell
+$Location = "<location>"
+Get-AzVMImageOffer -Location $Location -Publisher 'MicrosoftSQLServer'
+```
 
 For more information about deploying SQL Server VMs using PowerShell, view [How to provision SQL Server virtual machines with Azure PowerShell](create-sql-vm-powershell.md).
 

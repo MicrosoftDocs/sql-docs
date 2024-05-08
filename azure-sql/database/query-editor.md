@@ -99,7 +99,7 @@ The query execution time, or errors, are shown in the status bar.
 
 ### Microsoft Copilot skills in Azure SQL Database (preview)
 
-[Microosft Copilot](../copilot/copilot-azure-sql-overview.md) is an AI assistant designed to streamline the design, operation, optimization, and health of Azure SQL Database-driven applications. It improves productivity in the Azure portal by offering natural language to SQL conversion and self-help for database administration.
+[Microsoft Copilot](../copilot/copilot-azure-sql-overview.md) is an AI assistant designed to streamline the design, operation, optimization, and health of Azure SQL Database-driven applications. It improves productivity in the Azure portal by offering natural language to SQL conversion and self-help for database administration.
 
 The [Natural language to SQL](../copilot/copilot-azure-sql-overview.md?view=azuresql-db&preserve-view=true#natural-language-to-sql-query) experience within the Azure portal query editor for Azure SQL Database translates natural language queries into SQL, making database interactions more intuitive.
 

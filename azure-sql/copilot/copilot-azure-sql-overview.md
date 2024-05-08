@@ -24,7 +24,7 @@ To learn more about the current preview of Microsoft Copilot skills in Azure SQL
 > [!VIDEO https://learn-video.azurefd.net/vod/player?show=data-exposed&ep=introducing-copilot-in-azure-sql-database-private-preview-data-exposed]
 
 > [!NOTE]
-> Copilot skills in Azure SQL Database is currently in a preview for a limited number of early adopters. To sign up for this program, visit [Request Access to Copilot in Azure SQL Database: Preview](https://aka.ms/sqlcopilot-signup).
+> Copilot skills in Azure SQL Database are currently in preview for a limited number of early adopters. To sign up for this program, visit [Request Access to Copilot in Azure SQL Database: Preview](https://aka.ms/sqlcopilot-signup).
 
 Copilot provides relevant answers to user questions, simplifying database management by leveraging database context, documentation, dynamic management views, Query Store, and other knowledge sources. For example:
 
@@ -43,7 +43,7 @@ Copilot integrates data and formulate applicable responses using public document
 
 ### Natural language to SQL query
 
-This experience within the [Azure portal query editor for Azure SQL Database](../database/query-editor.md) utilizes table and view names, column names, primary key, and foreign key metadata to generate T-SQL code. You can then review and execute the code suggestion.
+This experience within the [Azure portal query editor](../database/query-editor.md) utilizes table and view names, column names, primary key, and foreign key metadata to generate T-SQL code. You can then review and execute the code suggestion.
 
 This integration means that [Microsoft Copilot in Azure](/azure/copilot/overview) can answer questions with prompts like:
 
@@ -131,6 +131,6 @@ For more information on how Microsoft implements responsible AI tools in [Micros
 
 ## Related content
 
-- [Frequently asked questions about Microsoft Copilot in Azure for Azure SQL Database (preview)](copilot-azure-sql-faq.yml)
+- [Frequently asked questions about Microsoft Copilot skills in Azure SQL Database (preview)](copilot-azure-sql-faq.yml)
 - [Natural language to SQL in the Azure portal query editor (preview)](query-editor-natural-language-to-sql-copilot.md)
 - [Intelligent applications with Azure SQL Database](../database/ai-artificial-intelligence-intelligent-applications.md)

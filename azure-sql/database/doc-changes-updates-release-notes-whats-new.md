@@ -5,11 +5,11 @@ description: Learn about the new features and documentation improvements for Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, randolphwest
-ms.date: 04/24/2024
+ms.date: 05/21/2024
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: whats-new
-ms.custom: ignite-2023
+ms.custom: ignite-2023, build-2024
 monikerRange: "= azuresql || = azuresql-db"
 ---
 # What's new in Azure SQL Database?
@@ -37,6 +37,7 @@ The following table lists the features of Azure SQL Database that are currently 
 
 | Feature | Details |
 | --- | --- |
+| [Availability metric](monitoring-metrics-alerts.md#availability-metric)| Availability is now a metric in the Azure Monitor metrics. Driven by a variety of user connection failures, you can [monitor and configure alerts on Azure SQL Database Availability](monitoring-metrics-alerts.md#availability-metric). |
 | [Database watcher for Azure SQL](../database-watcher-overview.md)|Database watcher is a managed monitoring solution for database services in the Azure SQL family. Database watcher collects in-depth workload monitoring data to give you a detailed view of database performance, configuration, and health. Learn more about [database watcher](https://aka.ms/dbwatcher-preview-announcement). |
 | [Copilot skills in Azure SQL Database](../copilot/copilot-azure-sql-overview.md) | Microsoft Copilot skills in Azure SQL Database include two Azure portal experiences: [Natural language to SQL](../copilot/query-editor-natural-language-to-sql-copilot.md) within the [Azure portal query editor](query-editor.md), and [Azure Copilot integration](../copilot/copilot-azure-sql-overview.md#microsoft-copilot-in-azure-enhanced-scenarios). |
 | [Degrees of Parallelism (DOP) feedback](/sql/relational-databases/performance/intelligent-query-processing-degree-parallelism-feedback) | DOP Feedback is currently available as a limited preview. For more information and how to apply for the preview, see [Announcing Degree of Parallelism Feedback Limited Preview](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-degree-of-parallelism-feedback-limited-preview/ba-p/3806924). |
@@ -72,6 +73,12 @@ The following table lists features of Azure SQL Database that have been made gen
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Database documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
+
+### May 2024
+
+| Changes | Details |
+| --- | --- |
+| **Availability metric (preview)**| Availability is now a metric in the Azure Monitor metrics. Driven by a variety of user connection failures, you can [monitor and configure alerts on Azure SQL Database Availability](monitoring-metrics-alerts.md#availability-metric). |
 
 ### April 2024
 

@@ -4,7 +4,7 @@ description: "Use AI options such as OpenAI and vectors to build intelligent app
 author: damauri
 ms.author: damauri
 ms.reviewer: damauri, josephsack, randolphwest, mathoma
-ms.date: 03/13/2024
+ms.date: 05/08/2024
 ms.service: sql-database
 ms.topic: conceptual
 ---
@@ -179,7 +179,7 @@ For an example that shows how LangChain can be used to create a Chatbot on your 
 - [Semantic Kernel & Kernel Memory - SQL Connector](https://github.com/kbeaugrand/SemanticKernel.Connectors.Memory.SqlServer) - Provides a connection to a SQL database for the Semantic Kernel for the memories.
 - [OpenAI Embeddings Sample](https://github.com/marcominerva/OpenAIEmbeddingSample): An example that shows how to use Semantic Kernel and Kernel Memory to work with embeddings in a .NET application using SQL Server as Vector Database.
 
-## Microsoft Copilot skills in Azure SQL Database (preview)
+## Microsoft Copilot skills in Azure SQL Database
 
 [Microsoft Copilot skills in Azure SQL Database (preview)](../copilot/copilot-azure-sql-overview.md) is a set of AI-assisted experiences designed to streamline the design, operation, optimization, and health of Azure SQL Database-driven applications. Copilot can improve productivity by offering natural language to SQL conversion and self-help for database administration.
 

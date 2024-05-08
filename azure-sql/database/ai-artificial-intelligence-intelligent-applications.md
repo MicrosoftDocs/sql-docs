@@ -35,7 +35,7 @@ The following links provide sample code of various Azure SQL Database options to
 | **[Vectors](#vectors)** | Learn how to store and query vectors in Azure SQL Database. |
 | **[Azure AI Search](#azure-ai-search)** | Use Azure SQL Database together with Azure AI Search to train LLM on your data. |
 | **[Intelligent applications](#intelligent-applications)** | Learn how to create an end-to-end solution using a common pattern that can be replicated in any scenario. |
-| **[Copilot for Azure SQL Database](#copilot-for-azure-sql-database-preview)** | Learn about the set of AI-assisted experiences designed to streamline the design, operation, optimization, and health of Azure SQL Database-driven applications. |
+| **[Copilot skills in Azure SQL Database](#microsoft-copilot-skills-in-azure-sql-database)** | Learn about the set of AI-assisted experiences designed to streamline the design, operation, optimization, and health of Azure SQL Database-driven applications. |
 
 ## Key concepts
 
@@ -196,7 +196,7 @@ The preview of Copilot for Azure SQL Database includes two Azure portal experien
 | Portal location | Experiences |
 | :-- |:-- |
 | **Azure portal Query Editor** | [Natural language to SQL](../copilot/copilot-azure-sql-overview.md?view=azuresql-db&preserve-view=true#natural-language-to-sql-query): This experience within the [Azure portal query editor for Azure SQL Database](../database/query-editor.md) translates natural language queries into SQL, making database interactions more intuitive. For a tutorial and examples of natural language to SQL capabilities, see [Natural language to SQL in the Azure portal Query editor (preview)](../copilot/query-editor-natural-language-to-sql-copilot.md). |
-| **Microsoft Copilot for Azure** | [Azure Copilot integration](../copilot/copilot-azure-sql-overview.md?view=azuresql-db&preserve-view=true#microsoft-copilot-for-azure-enhanced-scenarios): This experience adds Azure SQL skills into [Microsoft Copilot for Azure](/azure/copilot/overview), providing customers with self-guided assistance, empowering them to manage their databases and solve issues independently.|
+| **Microsoft Copilot for Azure** | [Azure Copilot integration](../copilot/copilot-azure-sql-overview.md?view=azuresql-db&preserve-view=true#microsoft-copilot-in-azure-enhanced-scenarios): This experience adds Azure SQL skills into [Microsoft Copilot for Azure](/azure/copilot/overview), providing customers with self-guided assistance, empowering them to manage their databases and solve issues independently.|
 
 For more information, see [Frequently asked questions about Microsoft Copilot skills in Azure SQL Database (preview)](../copilot/copilot-azure-sql-faq.yml).
 

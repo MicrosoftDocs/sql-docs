@@ -31,7 +31,7 @@ sections:
           | Azure portal location | Experiences |
           | --- | --- |
           | **Azure portal Query Editor** | [Natural language to SQL](copilot-azure-sql-overview.md#natural-language-to-sql-query): This experience within the [Azure portal query editor for Azure SQL Database](../database/query-editor.md) translates natural language queries into SQL, making database interactions more intuitive.<br/> For a tutorial and examples of Copilot's natural language to SQL capabilities in Azure SQL Database, see [Natural language to SQL in the Azure portal Query editor (preview)](../copilot/query-editor-natural-language-to-sql-copilot.md). |
-          | **Microsoft Copilot in Azure** | [Azure Copilot integration](copilot-azure-sql-overview.md#microsoft-copilot-for-azure-enhanced-scenarios): This experience adds Azure SQL skills into [Microsoft Copilot in Azure](/azure/copilot/overview), providing customers with self-guided assistance, empowering them to manage their databases and solve issues independently.|
+          | **Microsoft Copilot in Azure** | [Azure Copilot integration](copilot-azure-sql-overview.md#microsoft-copilot-in-azure-enhanced-scenarios): This experience adds Azure SQL skills into [Microsoft Copilot in Azure](/azure/copilot/overview), providing customers with self-guided assistance, empowering them to manage their databases and solve issues independently.|
       - question: |
           Are the results from Copilot reliable?
         answer: |

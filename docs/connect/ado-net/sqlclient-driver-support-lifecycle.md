@@ -52,13 +52,14 @@ New stable (GA) releases for `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyV
 
 | Version | Official Release Date | Latest Patch Version | Patch Release Date | Support Level | End of Support |
 |--|--|--|--|--|--|
+| 5.x | February 2, 2024 | 5.1.0 | February 2, 2024 | LTS | February 3, 2027 |
 | 3.x | June 14, 2021 | 3.0.0 | June 14, 2021 | LTS | June 15, 2024 |
-| 2.x | March 3, 2021 | 2.0.0 | March 3, 2021 | LTS | March 4, 2024 |
 
 ### Out of support Azure Key Vault Provider releases
 
 | Version | Official Release Date | Latest Patch Version | Patch Release Date | Support Level | End of Support |
 |--|--|--|--|--|--|
+| 2.x | March 3, 2021 | 2.0.0 | March 3, 2021 | LTS | March 4, 2024 |
 | 1.x | November 19, 2019 | 1.2.0 | December 01, 2020 | LTS | November 21, 2022 |
 
 ## Long Term Support (LTS) releases

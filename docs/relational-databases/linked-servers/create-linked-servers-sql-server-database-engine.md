@@ -3,7 +3,7 @@ title: "Create linked servers"
 description: "Create linked servers (SQL Server Database Engine)"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/31/2023"
+ms.date: "05/08/2024"
 ms.service: sql
 ms.topic: conceptual
 f1_keywords:

@@ -57,7 +57,6 @@ Create a user in Azure SQL Database. The user should correspond to the Azure acc
     const server = process.env.AZURE_SQL_SERVER;
     const database = process.env.AZURE_SQL_DATABASE;
     const port = parseInt(process.env.AZURE_SQL_PORT);
-    const clientId = process.env.AZURE_CLIENT_ID;
 
     // Passwordless configuration
     const config = {

@@ -101,7 +101,7 @@ The following are possible solutions for this issue:
    Use the following commands to test connectivity in both directions from Node1 to Node2 and Node2 to Node1:
 
    ```PowerShell
-   $computer = "remote_node" 	# Replace with Node name as per your environment.
+   $computer = "remote_node" 	 # Replace with node name in your environment.
    $port = "5022"                 # replace with the port from your database_mirroring_endpoints.
    Test-NetConnection -ComputerName $computer -Port $port 
    ```
@@ -122,7 +122,7 @@ The following are possible solutions for this issue:
    1. Then you can test the connection to the remote node. For example:
 
       ```PowerShell
-      $computer = "remote_node" # Replace with Node name as per your environment.
+      $computer = "remote_node" # Replace with node name in your environment.
       $port = "5022"            # Replace with the port from your database_mirroring_endpoints.        
       Test-NetConnection -ComputerName $computer -Port 5022
       ```

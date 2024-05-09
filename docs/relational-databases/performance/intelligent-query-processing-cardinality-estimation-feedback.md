@@ -251,7 +251,10 @@ AND counter_name IN ('Batch Requests/sec', 'SQL Compilations/sec'
 ```
 
 #### Workaround
-If after applying Cumulative Update 12 [KB5033663](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate12#2890724) your system continues to experience the symptoms that have been described previously; the CE Feedback feature can be disabled at the database level. To reclaim the plan cache memory that had been taken up by this issue, a restart of the SQL Server instance is required. This restart action can be taken after the CE Feedback feature is disabled. To disable CE feedback at the database level, use the `CE_FEEDBACK` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#ce_feedback---on--off-). For example, in the user database:
+
+If your system continues to experience the symptoms that have been described previously, after applying Cumulative Update 12 [KB5033663](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate12#2890724), the CE feedback feature can be disabled at the database level.
+
+To reclaim the plan cache memory that had been taken up by this issue, a restart of the SQL Server instance is required. This restart action can be taken after the CE feedback feature is disabled. To disable CE feedback at the database level, use the `CE_FEEDBACK` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#ce_feedback---on--off-). For example, in the user database:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET CE_FEEDBACK = OFF;

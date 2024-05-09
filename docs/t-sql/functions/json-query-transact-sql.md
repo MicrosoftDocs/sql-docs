@@ -1,9 +1,10 @@
 ---
 title: "JSON_QUERY (Transact-SQL)"
-description: "JSON_QUERY (Transact-SQL)"
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-ms.date: 06/03/2020
+description: JSON_QUERY extracts an object or an array from a JSON string.  
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: jovanpop
+ms.date: 05/02/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -16,7 +17,7 @@ helpviewer_keywords:
   - "JSON_QUERY function"
 dev_langs:
   - "TSQL"
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # JSON_QUERY (Transact-SQL)
 
@@ -24,11 +25,11 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-201
 
  Extracts an object or an array from a JSON string.  
   
- To extract a scalar value from a JSON string instead of an object or an array, see [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md). For info about the differences between **JSON_VALUE** and **JSON_QUERY**, see [Compare JSON_VALUE and JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare).  
+ To extract a scalar value from a JSON string instead of an object or an array, see [JSON_VALUE (Transact-SQL)](json-value-transact-sql.md). For info about the differences between **JSON_VALUE** and `JSON_QUERY`, see [Compare JSON_VALUE and JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare).  
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## Syntax  
+## Syntax
   
 ```syntaxsql
 JSON_QUERY ( expression [ , path ] )  
@@ -36,33 +37,33 @@ JSON_QUERY ( expression [ , path ] )
   
 ## Arguments
 
- *expression*  
+#### *expression*  
  An expression. Typically the name of a variable or a column that contains JSON text.  
   
- If **JSON_QUERY** finds JSON that is not valid in *expression* before it finds the value identified by *path*, the function returns an error. If **JSON_QUERY** doesn't find the value identified by *path*, it scans the entire text and returns an error if it finds JSON that is not valid anywhere in *expression*.  
+ If `JSON_QUERY` finds JSON that is not valid in *expression* before it finds the value identified by *path*, the function returns an error. If `JSON_QUERY` doesn't find the value identified by *path*, it scans the entire text and returns an error if it finds JSON that is not valid anywhere in *expression*.  
   
- *path*  
+#### *path*  
  A JSON path that specifies the object or the array to extract.
 
 In [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you can provide a variable as the value of *path*.
 
-The JSON path can specify lax or strict mode for parsing. If you don't specify the parsing mode, lax mode is the default. For more info, see [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
+The JSON path can specify lax or strict mode for parsing. If you don't specify the parsing mode, lax mode is the default. For more info, see [JSON Path Expressions (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md).  
 
-The default value for *path* is '$'. As a result, if you don't provide a value for *path*, **JSON_QUERY** returns the input *expression*.
+The default value for *path* is '$'. As a result, if you don't provide a value for *path*, `JSON_QUERY` returns the input *expression*.
 
-If the format of *path* isn't valid, **JSON_QUERY** returns an error.  
+If the format of *path* isn't valid, `JSON_QUERY` returns an error.  
   
 ## Return value
 
- Returns a JSON fragment of type nvarchar(max). The collation of the returned value is the same as the collation of the input expression.  
+ Returns a JSON fragment of type **nvarchar(max)**. The collation of the returned value is the same as the collation of the input expression.  
   
  If the value is not an object or an array:  
   
-- In lax mode, **JSON_QUERY** returns null.  
+- In lax mode, `JSON_QUERY` returns null.  
   
-- In strict mode, **JSON_QUERY** returns an error.  
+- In strict mode, `JSON_QUERY` returns an error.  
   
-## Remarks  
+## Remarks
 
 ### Lax mode and strict mode
 
@@ -83,7 +84,7 @@ If the format of *path* isn't valid, **JSON_QUERY** returns an error.
 } 
 ```  
   
- The following table compares the behavior of **JSON_QUERY** in lax mode and in strict mode. For more info about the optional path mode specification (lax or strict), see [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
+ The following table compares the behavior of `JSON_QUERY` in lax mode and in strict mode. For more info about the optional path mode specification (lax or strict), see [JSON Path Expressions (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
 |Path|Return value in lax mode|Return value in strict mode|More info|  
 |----------|------------------------------|---------------------------------|---------------|  
@@ -95,13 +96,13 @@ If the format of *path* isn't valid, **JSON_QUERY** returns an error.
 |$.info.type[0]|NULL|Error|Not an array.|  
 |$.info.none|NULL|Error|Property does not exist.|  
 
-### Using JSON_QUERY with FOR JSON
+### <a id="using-json_query-with-for-json"></a> Use JSON_QUERY with FOR JSON
 
-**JSON_QUERY** returns a valid JSON fragment. As a result, **FOR JSON** doesn't escape special characters in the **JSON_QUERY** return value.
+`JSON_QUERY` returns a valid JSON fragment. As a result, **FOR JSON** doesn't escape special characters in the `JSON_QUERY` return value.
 
-If you're returning results with FOR JSON, and you're including data that's already in JSON format (in a column or as the result of an expression), wrap the JSON data with **JSON_QUERY** without the *path* parameter.
+If you're returning results with FOR JSON, and you're including data that's already in JSON format (in a column or as the result of an expression), wrap the JSON data with `JSON_QUERY` without the *path* parameter.
 
-## Examples  
+## Examples
   
 ### Example 1
 
@@ -125,7 +126,7 @@ FROM Warehouse.StockItems
 FOR JSON PATH
 ```  
   
-## See also
+## Related content
 
-- [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
-- [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
+- [JSON Path Expressions (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)
+- [JSON data in SQL Server](../../relational-databases/json/json-data-sql-server.md)

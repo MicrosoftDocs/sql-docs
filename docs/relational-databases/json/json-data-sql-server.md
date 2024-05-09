@@ -1,10 +1,10 @@
 ---
 title: Work with JSON data in SQL Server
 description: Combine NoSQL and relational concepts in the same database with JSON data in SQL Server
-author: jovanpop-msft
-ms.author: jovanpop
-ms.reviewer: jroth, randolphwest
-ms.date: 02/07/2024
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: randolphwest, jovanpop
+ms.date: 05/02/2024
 ms.service: sql
 ms.topic: quickstart
 ms.custom:
@@ -52,6 +52,21 @@ By using [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] built-in 
 ## Key JSON capabilities of SQL Server and SQL Database
 
 The next sections discuss the key capabilities that [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] provides with its built-in JSON support.
+
+### JSON data type
+
+The new **JSON** data type that stores JSON documents in a native binary format that provides the following benefits over storing JSON data in **varchar**/**nvarchar**:
+
+- More efficient reads, as the document is already parsed
+- More efficient writes, as the query can update individual values without accessing the entire document
+- More efficient storage, optimized for compression
+- No change in compatibility with existing code
+
+> [!NOTE]
+> Currently, the **JSON** data type is available in preview on Azure SQL Database and Azure SQL Managed Instance. 
+> In Azure SQL Managed Instance, your instance must be configured with [the SQL Server 2022 update policy](/azure/azure-sql/managed-instance/update-policy?view=azuresql-mi&preserve-view=true).
+
+Using the JSON same functions described in this article remain the most efficient way to query the **JSON** data type. For more information on the native **JSON** data type, see [JSON data type](../../t-sql/data-types/json-data-type.md).
 
 ### Extract values from JSON text and use them in queries
 
@@ -233,6 +248,17 @@ The `FOR JSON` clause formats SQL results as JSON text that can be provided to a
 
 For more information, see [Format query results as JSON with FOR JSON](format-query-results-as-json-with-for-json-sql-server.md) and [FOR Clause (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md).
 
+### JSON data from aggregates
+
+JSON aggregate functions enable construction of JSON objects or arrays based on an aggregate from SQL data.
+
+- [JSON_OBJECTAGG](../../t-sql/functions/json-objectagg-transact-sql.md) constructs a JSON **object** from an aggregation of SQL data or columns.
+- [JSON_ARRAYAGG](../../t-sql/functions/json-arrayagg-transact-sql.md) constructs a JSON **array** from an aggregation of SQL data or columns.
+
+> [!NOTE]
+> Currently, both **JSON** aggregate functions `JSON_OBJECTAGG` and `JSON_ARRAYAGG` are available in preview for Azure SQL Database and Azure SQL Managed Instance. 
+> In Azure SQL Managed Instance, your instance must be configured with [the SQL Server 2022 update policy](/azure/azure-sql/managed-instance/update-policy?view=azuresql-mi&preserve-view=true).
+
 ## Use cases for JSON data in SQL Server
 
 JSON support in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and Azure SQL Database lets you combine relational and NoSQL concepts. You can easily transform relational to semi-structured data and vice-versa. JSON isn't a replacement for existing relational models, however. Here are some specific use cases that benefit from the JSON support in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and in SQL Database.
@@ -286,6 +312,8 @@ You can format information that's stored in files as standard JSON or line-delim
 ### Import JSON data into SQL Server tables
 
 If you must load JSON data from an external service into [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], you can use `OPENJSON` to import the data into [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instead of parsing the data in the application layer.
+
+In supported platforms, use the native **JSON** data type instead of **nvarchar(max)** for improved performance and more efficient storage.
 
 ```sql
 DECLARE @jsonVariable NVARCHAR(MAX);
@@ -395,16 +423,6 @@ Here's what you can do with the scripts that are included in the file:
 - Run query examples. Run some queries that call the stored procedures and views that you created in steps 2 and 4.
 
 - Clean up scripts. Don't run this part if you want to keep the stored procedures and views that you created in steps 2 and 4.
-
-## Learn more about JSON in SQL Server and Azure SQL Database
-
-### Microsoft videos
-
-For a visual introduction to the built-in JSON support in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and Azure SQL Database, see the following video:
-
-<br />
-
-> [!VIDEO https://www.youtube.com/embed/0m6GXF3-5WI]
 
 ## Related content
 

@@ -1,9 +1,10 @@
 ---
 title: "ISJSON (Transact-SQL)"
-description: "ISJSON (Transact-SQL)"
-author: "uc-msft"
-ms.author: "umajay"
-ms.date: 04/26/2022
+description: ISJSON tests whether a string contains valid JSON. 
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: umajay
+ms.date: 05/02/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -15,55 +16,58 @@ helpviewer_keywords:
   - "JSON, validating"
 dev_langs:
   - "TSQL"
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 ||=fabric"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # ISJSON (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
-  Tests whether a string contains valid JSON.  
+Tests whether a string contains valid JSON.  
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## Syntax  
+## Syntax
   
-```syntaxsql  
+```syntaxsql
 ISJSON ( expression [, json_type_constraint] )  
 ```  
   
 ## Arguments
 
- *expression*  
+#### *expression*  
  The string to test.  
   
- *json_type_constraint*
+#### *json_type_constraint*
 
-  Specifies the JSON type to check in the input. Valid values are VALUE, ARRAY, OBJECT or SCALAR. Introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
+  Specifies the JSON type to check in the input. Valid values are `VALUE`, `ARRAY`, `OBJECT`, or `SCALAR`. Introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
 > [!NOTE]
 > The argument *json_type_constraint* is not supported in Azure Synapse Analytics Dedicated pools
 
 ## Return value
 
+ Returns `1` if the string contains valid JSON; otherwise, returns `0`. Returns `NULL` if *expression* is null. 
 
- Returns 1 if the string contains valid JSON; otherwise, returns 0. Returns null if *expression* is null. If the statement omits *json_type_constraint*, the function tests if the input is a valid JSON object or array and returns 1 otherwise, it returns 0. If the *json_type_constraint* is specified then the function checks for the JSON type as follows:
+If the statement omits *json_type_constraint*, the function tests if the input is a valid JSON object or array and returns `1` otherwise, it returns `0`. 
+
+If the *json_type_constraint* is specified then the function checks for the JSON type as follows:
 
 |Value|Description|  
 |-----|-----------|
-|VALUE|Tests for a valid JSON value. This can be a JSON object, array, number, string or one of the three literal values (false, true, null)|
-|ARRAY|Tests for a valid JSON array|
-|OBJECT|Tests for a valid JSON object|
-|SCALAR|Tests for a valid JSON scalar – number or string|
+|`VALUE`|Tests for a valid JSON value. This can be a JSON object, array, number, string or one of the three literal values (false, true, null)|
+|`ARRAY`|Tests for a valid JSON array|
+|`OBJECT`|Tests for a valid JSON object|
+|`SCALAR`|Tests for a valid JSON scalar – number or string|
 
  The **json_type_constraint** value SCALAR can be used to test for IETF RFC 8259 conformant JSON document that contains only a JSON scalar value at top level. A JSON document that doesn't contain a JSON scalar value at top level conforms with IETF RFC 4627.
 
 Does not return errors.  
 
-## Remarks  
+## Remarks
 
- **ISJSON** does not check the uniqueness of keys at the same level.  
+`ISJSON` does not check the uniqueness of keys at the same level.  
   
-## Examples  
+## Examples
   
 ### Example 1
 
@@ -79,7 +83,7 @@ BEGIN
 END
 ```  
   
-### Example 2  
+### Example 2
 
 The following example returns rows in which the column `json_col` contains valid JSON.  
   
@@ -123,6 +127,6 @@ The following example returns 1 since the input is a valid JSON scalar according
 SELECT ISJSON('"test string"', SCALAR)
 ```
 
-## See also  
+## Related content
 
- [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
+- [JSON data in SQL Server](../../relational-databases/json/json-data-sql-server.md)

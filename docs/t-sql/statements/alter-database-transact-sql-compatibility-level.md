@@ -4,7 +4,7 @@ description: Sets Transact-SQL and query processing behaviors to be compatible w
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 01/18/2024
+ms.date: 05/09/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -92,11 +92,22 @@ For pre-existing databases running at lower compatibility levels, as long as the
 > If there are no user objects and dependencies, it is generally safe to upgrade to the default compatibility level. For more information, see [Recommendations - master database](../../relational-databases/databases/master-database.md#recommendations).
 
 Use `ALTER DATABASE` to change the compatibility level of the database. The new compatibility level setting for a database takes effect when a `USE <database>` command is issued, or a new login is processed with that database as the default database context.
+
 To view the current compatibility level of a database, query the `compatibility_level` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.
 
 A [distribution database](../../relational-databases/replication/distribution-database.md) that was created in an earlier version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and is upgraded to [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] RTM or Service Pack 1 has a compatibility level of 90, which isn't supported for other databases. This doesn't have an effect on the functionality of replication. Upgrading to later service packs and versions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] will result in the compatibility level of the distribution database to be increased to match that of the `master` database.
 
 To use database compatibility level 120 or higher for a database overall, but opt-in to the [**cardinality estimation**](../../relational-databases/performance/cardinality-estimation-sql-server.md) model of [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)], which maps to database compatibility level 110, see [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md), and in particular its keyword `LEGACY_CARDINALITY_ESTIMATION = ON`.
+
+### Remarks for Azure SQL
+
+The default compatibility level is SQL Server 2019 (150) for newly created databases in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]. [!INCLUDE [msCoName](../../includes/msconame-md.md)] doesn't automatically update database compatibility level for existing databases. It is up to customers to do at their own discretion. [!INCLUDE [msCoName](../../includes/msconame-md.md)] highly recommends that customers plan to upgrade to the latest compatibility level in order to use the latest query optimization improvements.
+
+For tips about how to assess the performance differences of your most important queries between two different compatibility levels on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], see [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://techcommunity.microsoft.com/t5/azure-sql-blog/improved-query-performance-with-compatibility-level-130-in-azure/ba-p/386100). This article refers to compatibility level 130 and [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], but the same methodology applies for upgrades to 140 or higher levels in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
+
+Not all features that vary by compatibility level are supported on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
+
+### Find current compatibility level
 
 To determine the current compatibility level, query the `compatibility_level` column of [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
@@ -104,19 +115,11 @@ To determine the current compatibility level, query the `compatibility_level` co
 SELECT name, compatibility_level FROM sys.databases;
 ```
 
-### Remarks for Azure SQL
-
-As of **November 2022** the default compatibility level for newly created databases in  [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]. [!INCLUDE [msCoName](../../includes/msconame-md.md)] doesn't update database compatibility level for existing databases. It is up to customers to do at their own discretion. [!INCLUDE [msCoName](../../includes/msconame-md.md)] highly recommends that customers plan to upgrade to the latest compatibility level in order to use the latest query optimization improvements.
-
-For details about how to assess the performance differences of your most important queries between two different compatibility levels on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], see [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://techcommunity.microsoft.com/t5/azure-sql-blog/improved-query-performance-with-compatibility-level-130-in-azure/ba-p/386100). This article refers to compatibility level 130 and [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], but the same methodology applies for upgrades to 140 or higher levels in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
-
 To determine the version of the [!INCLUDE [ssDE](../../includes/ssde-md.md)] that you're connected to, execute the following query.
 
 ```sql
 SELECT SERVERPROPERTY('ProductVersion');
 ```
-
-Not all features that vary by compatibility level are supported on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 ## Compatibility levels and database engine upgrades
 
@@ -140,7 +143,7 @@ For more information, including the recommended workflow for upgrading database 
 
  - **Discontinued** functionality introduced in a given [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] version **is not** protected by compatibility level. This refers to functionality that was removed from the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)]. For example, the `FASTFIRSTROW` hint was discontinued in [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and replaced with the `OPTION (FAST n )` hint. Setting the database compatibility level to 110 won't restore the discontinued hint. For more information on discontinued functionality, see [Discontinued database engine functionality in SQL Server](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md).
 
- - **Breaking changes** introduced in a given [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] version **may not** be protected by compatibility level. This refers to behavior changes between versions of the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE [tsql](../../includes/tsql-md.md)] behavior is usually protected by compatibility level. However, changed or removed system objects are **not** protected by compatibility level.
+ - **Breaking changes** introduced in a given [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] version **might not** be protected by compatibility level. This refers to behavior changes between versions of the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE [tsql](../../includes/tsql-md.md)] behavior is usually protected by compatibility level. However, changed or removed system objects are **not** protected by compatibility level.
 
      An example of a breaking change **protected** by compatibility level is an implicit conversion from **datetime** to **datetime2** data types. Under database compatibility level 130, these show improved accuracy by accounting for the fractional milliseconds, resulting in different converted values. To restore previous conversion behavior, set the database compatibility level to 120 or lower.
 
@@ -182,10 +185,10 @@ The fundamental plan-affecting changes added only to the default compatibility l
 
     | Database Engine (DE) version | Database Compatibility Level | TF 4199 | QO changes from all previous Database Compatibility Levels | QO changes for DE version post-RTM |
     | --- | --- | --- | --- | --- |
-    | 13 ([!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]) | 100 to 120<br /><br /><br />130 | Off<br />On<br /><br />Off<br />On | **Disabled**<br />Enabled<br /><br />**Enabled**<br />Enabled | Disabled<br />Enabled<br /><br />Disabled<br />Enabled |
-    | 14 ([!INCLUDE [ssSQL17](../../includes/sssql17-md.md)]) | 100 to 120<br /><br /><br />130<br /><br /><br />140 | Off<br />On<br /><br />Off<br />On<br /><br />Off<br />On | **Disabled**<br />Enabled<br /><br />**Enabled**<br />Enabled<br /><br />**Enabled**<br />Enabled | Disabled<br />Enabled<br /><br />Disabled<br />Enabled<br /><br />Disabled<br />Enabled |
-    | 15 ([!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)]) and 12 ([!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]) | 100 to 120<br /><br /><br />130 to 140<br /><br /><br />150 | Off<br />On<br /><br />Off<br />On<br /><br />Off<br />On | **Disabled**<br />Enabled<br /><br />**Enabled**<br />Enabled<br /><br />**Enabled**<br />Enabled | Disabled<br />Enabled<br /><br />Disabled<br />Enabled<br /><br />Disabled<br />Enabled |
-    | 16 ([!INCLUDE [sql-server-2022](../../includes/sssql22-md.md)]) and 12 ([!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]) | 100 to 120<br /><br /><br />130 to 150<br /><br /><br />160 | Off<br />On<br /><br />Off<br />On<br /><br />Off<br />On | **Disabled**<br />Enabled<br /><br />**Enabled**<br />Enabled<br /><br />**Enabled**<br />Enabled | Disabled<br />Enabled<br /><br />Disabled<br />Enabled<br /><br />Disabled<br />Enabled |
+    | 13 ([!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]) | 100 to 120<br /><br /><br />130 | Off<br />On<br />Off<br />On | **Disabled**<br />Enabled<br />**Enabled**<br />Enabled | Disabled<br />Enabled<br />Disabled<br />Enabled |
+    | 14 ([!INCLUDE [ssSQL17](../../includes/sssql17-md.md)]) | 100 to 120<br /><br /><br />130<br />140 | Off<br />On<br />Off<br />On<br />Off<br />On | **Disabled**<br />Enabled<br />**Enabled**<br />Enabled<br />**Enabled**<br />Enabled | Disabled<br />Enabled<br />Disabled<br />Enabled<br />Disabled<br />Enabled |
+    | 15 ([!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)]) and 12 ([!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]) | 100 to 120<br /><br /><br />130 to 140<br />150 | Off<br />On<br />Off<br />On<br />Off<br />On | **Disabled**<br />Enabled<br />**Enabled**<br />Enabled<br />**Enabled**<br />Enabled | Disabled<br />Enabled<br />Disabled<br />Enabled<br />Disabled<br />Enabled |
+    | 16 ([!INCLUDE [sql-server-2022](../../includes/sssql22-md.md)]) and 12 ([!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]) | 100 to 120<br /><br /><br />130 to 150<br />160 | Off<br />On<br />Off<br />On<br />Off<br />On | **Disabled**<br />Enabled<br />**Enabled**<br />Enabled<br />**Enabled**<br />Enabled | Disabled<br />Enabled<br />Disabled<br />Enabled<br />Disabled<br />Enabled |
 
     Query Optimizer fixes that address wrong results or access violation errors aren't protected by trace flag 4199. Those fixes aren't considered optional.
 
@@ -311,7 +314,7 @@ This section describes new behaviors introduced with compatibility level 100.
 | Full-text predicates are allowed in the `OUTPUT` clause. | Full-text predicates aren't allowed in the `OUTPUT` clause. | Low |
 | `CREATE FULLTEXT STOPLIST`, `ALTER FULLTEXT STOPLIST`, and `DROP FULLTEXT STOPLIST` aren't supported. The system stoplist is automatically associated with new full-text indexes. | `CREATE FULLTEXT STOPLIST`, `ALTER FULLTEXT STOPLIST`, and `DROP FULLTEXT STOPLIST` are supported. | Low |
 | `MERGE` isn't enforced as a reserved keyword. | MERGE is a fully reserved keyword. The `MERGE` statement is supported under both 100 and 90 compatibility levels. | Low |
-| Using the \<dml_table_source> argument of the INSERT statement raises a syntax error. | You can capture the results of an OUTPUT clause in a nested INSERT, UPDATE, DELETE, or MERGE statement, and insert those results into a target table or view. This is done using the \<dml_table_source> argument of the INSERT statement. | Low |
+| Using the `<dml_table_source>` argument of the INSERT statement raises a syntax error. | You can capture the results of an OUTPUT clause in a nested INSERT, UPDATE, DELETE, or MERGE statement, and insert those results into a target table or view. This is done using the `<dml_table_source>` argument of the INSERT statement. | Low |
 | Unless `NOINDEX` is specified, `DBCC CHECKDB` or `DBCC CHECKTABLE` performs both physical and logical consistency checks on a single table or indexed view and on all its nonclustered and XML indexes. Spatial indexes aren't supported. | Unless `NOINDEX` is specified, `DBCC CHECKDB` or `DBCC CHECKTABLE` performs both physical and logical consistency checks on a single table and on all its nonclustered indexes. However, on XML indexes, spatial indexes, and indexed views, only physical consistency checks are performed by default.<br /><br />If `WITH EXTENDED_LOGICAL_CHECKS` is specified, logical checks are performed on indexed views, XML indexes, and spatial indexes, where present. By default, physical consistency checks are performed before the logical consistency checks. If `NOINDEX` is also specified, only the logical checks are performed. | Low |
 | When an OUTPUT clause is used with a data manipulation language (DML) statement and a run-time error occurs during statement execution, the entire transaction is terminated and rolled back. | When an `OUTPUT` clause is used with a data manipulation language (DML) statement and a run-time error occurs during statement execution, the behavior depends on the `SET XACT_ABORT` setting. If `SET XACT_ABORT` is OFF, a statement abort error generated by the DML statement using the `OUTPUT` clause will terminate the statement, but the execution of the batch continues and the transaction isn't rolled back. If `SET XACT_ABORT` is ON, all run-time errors generated by the DML statement using the OUTPUT clause will terminate the batch, and the transaction is rolled back. | Low |
 | CUBE and ROLLUP aren't enforced as reserved keywords. | `CUBE` and `ROLLUP` are reserved keywords within the GROUP BY clause. | Low |
@@ -334,11 +337,11 @@ The compatibility setting also determines the keywords that are reserved by the 
 
 | Compatibility level setting | Reserved keywords |
 | --- | --- |
-| 130 | To be determined. |
-| 120 | None. |
-| 110 | `WITHIN GROUP`, `TRY_CONVERT`, `SEMANTICKEYPHRASETABLE`, `SEMANTICSIMILARITYDETAILSTABLE`, `SEMANTICSIMILARITYTABLE` |
-| 100 | `CUBE`, `MERGE`, `ROLLUP` |
-| 90 | `EXTERNAL`, `PIVOT`, `UNPIVOT`, `REVERT`, `TABLESAMPLE` |
+| `130` | To be determined. |
+| `120` | None. |
+| `110` | `WITHIN GROUP`, `TRY_CONVERT`, `SEMANTICKEYPHRASETABLE`, `SEMANTICSIMILARITYDETAILSTABLE`, `SEMANTICSIMILARITYTABLE` |
+| `100` | `CUBE`, `MERGE`, `ROLLUP` |
+| `90` | `EXTERNAL`, `PIVOT`, `UNPIVOT`, `REVERT`, `TABLESAMPLE` |
 
 At a given compatibility level, the reserved keywords include all of the keywords introduced at or below that level. Thus, for instance, for applications at level 110, all of the keywords listed in the preceding table are reserved. At the lower compatibility levels, level-100 keywords remain valid object names, but the level-110 language features corresponding to those keywords are unavailable.
 

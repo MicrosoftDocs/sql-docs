@@ -3,7 +3,7 @@ title: "Data types (Transact-SQL)"
 description: "This article provides a summary of the different data types available in SQL Server."
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 04/11/2023
+ms.date: 05/02/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: "reference"
@@ -19,23 +19,24 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw.md)]
 
-In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], each column, local variable, expression, and parameter has a related data type. A data type is an attribute that specifies the type of data that the object can hold: integer data, character data, monetary data, date and time data, binary strings, and so on.
+In [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], each column, local variable, expression, and parameter has a related data type. A data type is an attribute that specifies the type of data that the object can hold: integer data, character data, monetary data, date and time data, binary strings, and so on.
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supplies a set of system data types that define all the types of data that can be used with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can also define your own data types in [!INCLUDE[tsql](../../includes/tsql-md.md)] or the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Alias data types are based on the system-supplied data types. For more information about alias data types, see [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md). User-defined types obtain their characteristics from the methods and operators of a class that you create by using one of the programming languages supported by the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].
+[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] supplies a set of system data types that define all the types of data that can be used with [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. You can also define your own data types in [!INCLUDE [tsql](../../includes/tsql-md.md)] or the [!INCLUDE [msCoName](../../includes/msconame-md.md)] [!INCLUDE [dnprdnshort](../../includes/dnprdnshort-md.md)]. Alias data types are based on the system-supplied data types. For more information about alias data types, see [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md). User-defined types obtain their characteristics from the methods and operators of a class that you create by using one of the programming languages supported by the [!INCLUDE [dnprdnshort](../../includes/dnprdnshort-md.md)].
   
 When two expressions that have different data types, collations, precision, scale, or length are combined by an operator, the characteristics of result are determined by the following:
--   The data type of the result is determined by applying the rules of data type precedence to the data types of the input expressions. For more information, see [Data Type Precedence &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
--   The collation of the result is determined by the rules of collation precedence when the result data type is **char**, **varchar**, **text**, **nchar**, **nvarchar**, or **ntext**. For more information, see [Collation Precedence &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
--   The precision, scale, and length of the result depend on the precision, scale, and length of the input expressions. For more information, see [Precision, Scale, and Length &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
+-   The data type of the result is determined by applying the rules of [data type precedence](data-type-precedence-transact-sql.md) to the data types of the input expressions.
+-   The collation of the result is determined by the rules of collation precedence when the result data type is **char**, **varchar**, **text**, **nchar**, **nvarchar**, or **ntext**. For more information, see [Collation precedence](../../t-sql/statements/collation-precedence-transact-sql.md).  
+-   The precision, scale, and length of the result depend on the precision, scale, and length of the input expressions. For more information, see [Precision, Scale, and Length](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides data type synonyms for ISO compatibility. For more information, see [Data Type Synonyms &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
+[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] provides data type synonyms for ISO compatibility. For more information, see [Data type synonyms](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
   
 > [!NOTE]
 > For more specific information on data types in [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)], see [Table data types in Synapse SQL](/azure/synapse-analytics/sql/develop-tables-data-types).
-> For more specific information on data types in [!INCLUDE [fabric](../../includes/fabric.md)], see [Data type](../statements/create-table-azure-sql-data-warehouse.md#DataTypesFabric).
+> For more specific information on data types in [!INCLUDE [fabric](../../includes/fabric.md)], see [Data type](../statements/create-table-azure-sql-data-warehouse.md?view=fabric&preserve-view=true#DataTypesFabric).
 
 ## Data type categories
-Data types in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are organized into the following categories:
+
+Data types in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] are organized into the following categories:
   
 :::row:::
     :::column:::
@@ -75,7 +76,7 @@ Data types in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are orga
     :::column-end:::
 :::row-end:::
  
-In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], based on their storage characteristics, some data types are designated as belonging to the following groups:
+In [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], based on their storage characteristics, some data types are designated as belonging to the following groups:
 -   Large value data types: **varchar(max)**, and **nvarchar(max)**  
 -   Large object data types: **text**, **ntext**, **image**, **varbinary(max)**, and **xml**  
   
@@ -276,7 +277,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], based on their sto
         [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)
     :::column-end:::
     :::column:::
-        [xml](../../t-sql/xml/xml-transact-sql.md)
+        [table](../../t-sql/data-types/table-transact-sql.md) 
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -289,24 +290,23 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], based on their sto
 :::row-end:::  
 :::row:::
     :::column:::
-        [table](../../t-sql/data-types/table-transact-sql.md) 
+        [xml](../../t-sql/xml/xml-transact-sql.md)
     :::column-end:::
     :::column:::
-         
+        [json](json-data-type.md)
     :::column-end:::
 :::row-end:::
 
-  
-## See also
-[CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
-[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
-[DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
-[EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)  
-[Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-[Functions &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)  
-[LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)  
-[sp_droptype &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)  
-[sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)  
-[sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)
-  
-  
+
+## Related content
+
+- [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)
+- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
+- [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
+- [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)
+- [Expressions (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)
+- [Functions (Transact-SQL)](../../t-sql/functions/functions.md)
+- [LIKE (Transact-SQL)](../../t-sql/language-elements/like-transact-sql.md)
+- [sp_droptype (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)
+- [sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)
+- [sp_rename (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)

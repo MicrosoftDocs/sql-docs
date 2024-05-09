@@ -3,7 +3,7 @@ title: SELECT (Transact-SQL)
 description: SELECT (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.date: "10/24/2017"
+ms.date: 04/17/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -26,28 +26,30 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # SELECT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
-  Retrieves rows from the database and enables the selection of one or many rows or columns from one or many tables in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The full syntax of the SELECT statement is complex, but the main clauses can be summarized as:  
+  Retrieves rows from the database and enables the selection of one or many rows or columns from one or many tables in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. The full syntax of the SELECT statement is complex, but the main clauses can be summarized as:  
   
-[ WITH { [[ XMLNAMESPACES ,]](../../t-sql/xml/with-xmlnamespaces.md) [[ \<common_table_expression> ]](../../t-sql/queries/with-common-table-expression-transact-sql.md) } ]
+[ WITH { [[ XMLNAMESPACES ,]](../../t-sql/xml/with-xmlnamespaces.md) [[ \<common_table_expression> ]](with-common-table-expression-transact-sql.md) } ]
   
- [SELECT *select_list*](../../t-sql/queries/select-clause-transact-sql.md) [ [INTO *new_table*](../../t-sql/queries/select-into-clause-transact-sql.md) ]  
+ [SELECT *select_list*](select-clause-transact-sql.md) [ [INTO *new_table*](select-into-clause-transact-sql.md) ]  
   
- [ [FROM *table_source*](../../t-sql/queries/from-transact-sql.md) ] [ [WHERE *search_condition*](../../t-sql/queries/where-transact-sql.md) ]  
+ [ [FROM *table_source*](from-transact-sql.md) ] [ [WHERE *search_condition*](where-transact-sql.md) ]  
   
- [ [GROUP BY *group_by_expression*](../../t-sql/queries/select-group-by-transact-sql.md) ]  
+ [ [GROUP BY *group_by_expression*](select-group-by-transact-sql.md) ]  
 
- [ [HAVING *search_condition*](../../t-sql/queries/select-having-transact-sql.md) ]  
+ [ [HAVING *search_condition*](select-having-transact-sql.md) ]  
 
- [ [WINDOW *window expression*](../../t-sql/queries/select-window-transact-sql.md)]
- 
- [ [ORDER BY *order_expression* [ ASC | DESC ]](../../t-sql/queries/select-order-by-clause-transact-sql.md)]  
+ [ [WINDOW *window expression*](select-window-transact-sql.md)]
+
+ [ [ORDER BY *order_expression* [ ASC | DESC ]](select-order-by-clause-transact-sql.md)]  
   
  The [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md), [EXCEPT, and INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md) operators can be used between queries to combine or compare their results into one result set.  
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## Syntax  
+## Syntax
   
+### Syntax for SQL Server and Azure SQL Database  
+
 ```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
@@ -72,8 +74,10 @@ SELECT [ ALL | DISTINCT ]
     [ HAVING < search_condition > ]   
 ```  
   
+### Syntax for Azure Synapse Analytics and Parallel Data Warehouse and Microsoft Fabric
+
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse and Microsoft Fabric
   
 [ WITH <common_table_expression> [ ,...n ] ]  
 SELECT <select_criteria>  
@@ -89,12 +93,11 @@ SELECT <select_criteria>
     [ HAVING <search_condition> ]   
     [ ORDER BY <order_by_expression> ]  
     [ OPTION ( <query_option> [ ,...n ] ) ]  
-  
 ```  
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
-## Remarks  
+## Remarks
  Because of the complexity of the SELECT statement, detailed syntax elements and arguments are shown by clause:  
 
 :::row:::
@@ -102,12 +105,12 @@ SELECT <select_criteria>
         [WITH XMLNAMESPACES](../../t-sql/xml/with-xmlnamespaces.md)
     :::column-end:::
     :::column:::
-        [HAVING](../../t-sql/queries/select-having-transact-sql.md)
+        [HAVING](select-having-transact-sql.md)
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-        [WITH common_table_expression](../../t-sql/queries/with-common-table-expression-transact-sql.md)
+        [WITH common_table_expression](with-common-table-expression-transact-sql.md)
     :::column-end:::
     :::column:::
         [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md)
@@ -115,7 +118,7 @@ SELECT <select_criteria>
 :::row-end:::
 :::row:::
     :::column:::
-        [SELECT Clause](../../t-sql/queries/select-clause-transact-sql.md)
+        [SELECT Clause](select-clause-transact-sql.md)
     :::column-end:::
     :::column:::
         [EXCEPT and INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)
@@ -123,31 +126,31 @@ SELECT <select_criteria>
 :::row-end:::
 :::row:::
     :::column:::
-        [INTO Clause](../../t-sql/queries/select-into-clause-transact-sql.md)
+        [INTO Clause](select-into-clause-transact-sql.md)
     :::column-end:::
     :::column:::
-        [ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md)
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        [FROM](../../t-sql/queries/from-transact-sql.md)
-    :::column-end:::
-    :::column:::
-        [FOR Clause](../../t-sql/queries/select-for-clause-transact-sql.md)
+        [ORDER BY](select-order-by-clause-transact-sql.md)
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-        [WHERE](../../t-sql/queries/where-transact-sql.md)
+        [FROM](from-transact-sql.md)
     :::column-end:::
     :::column:::
-        [OPTION Clause](../../t-sql/queries/option-clause-transact-sql.md)
+        [FOR Clause](select-for-clause-transact-sql.md)
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-        [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md)
+        [WHERE](where-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [OPTION Clause](option-clause-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [GROUP BY](select-group-by-transact-sql.md)
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -161,33 +164,33 @@ SELECT <select_criteria>
   
  Some syntax restrictions apply to SELECT statements that involve remote tables.  
   
-## Logical Processing Order of the SELECT statement  
- The following steps show the logical processing order, or binding order, for a SELECT statement. This order determines when the objects defined in one step are made available to the clauses in subsequent steps. For example, if the query processor can bind to (access) the tables or views defined in the FROM clause, these objects and their columns are made available to all subsequent steps. Conversely, because the SELECT clause is step 8, any column aliases or derived columns defined in that clause cannot be referenced by preceding clauses. However, they can be referenced by subsequent clauses such as the ORDER BY clause. The actual physical execution of the statement is determined by the query processor and the order may vary from this list.  
+## Logical processing order of the SELECT statement
+ The following steps show the logical processing order, or binding order, for a SELECT statement. This order determines when the objects defined in one step are made available to the clauses in subsequent steps. For example, if the query processor can bind to (access) the tables or views defined in the FROM clause, these objects and their columns are made available to all subsequent steps. Conversely, because the SELECT clause is step 8, any column aliases or derived columns defined in that clause cannot be referenced by preceding clauses. However, they can be referenced by subsequent clauses such as the ORDER BY clause. The actual physical execution of the statement is determined by the query processor and the order might vary from this list.  
   
-1.  FROM  
-2.  ON  
-3.  JOIN  
-4.  WHERE  
-5.  GROUP BY  
-6.  WITH CUBE or WITH ROLLUP  
-7.  HAVING  
-8.  SELECT  
-9. DISTINCT  
-10. ORDER BY  
-11. TOP  
+1. `FROM`  
+1. `ON`  
+1. `JOIN`  
+1. `WHERE`  
+1. `GROUP BY`
+1. `WITH CUBE` or `WITH ROLLUP`
+1. `HAVING`
+1. `SELECT`
+1. `DISTINCT`  
+1. `ORDER BY`
+1. `TOP`
 
 > [!WARNING]
-> The preceding sequence is usually true. However, there are uncommon cases where the sequence may differ.
+> The preceding sequence is usually true. However, there are uncommon cases where the sequence might differ.
 >
-> For example, suppose you have a clustered index on a view, and the view excludes some table rows, and the view's SELECT column list uses a CONVERT that changes a data type from *varchar* to *integer*. In this situation, the CONVERT may execute before the WHERE clause executes. Uncommon indeed. Often there is a way to modify your view to avoid the different sequence, if it matters in your case. 
+> For example, suppose you have a clustered index on a view, and the view excludes some table rows, and the view's `SELECT` column list uses a `CONVERT` that changes a data type from **varchar** to **integer**. In this situation, the `CONVERT` can execute before the `WHERE` clause executes. Uncommon indeed. Often there is a way to modify your view to avoid the different sequence, if it matters in your case.
 
-## Permissions  
- Selecting data requires **SELECT** permission on the table or view, which could be inherited from a higher scope such as **SELECT** permission on the schema or **CONTROL** permission on the table. Or requires membership in the **db_datareader** or **db_owner** fixed database roles, or the **sysadmin** fixed server role. Creating a new table using **SELECT INTO** also requires both the **CREATE TABLE** permission, and the **ALTER SCHEMA** permission on the schema that owns the new table.  
+## Permissions
+ Selecting data requires **SELECT** permission on the table or view, which could be inherited from a higher scope such as **SELECT** permission on the schema or **CONTROL** permission on the table. Or requires membership in the **db_datareader** or **db_owner** fixed database roles, or the **sysadmin** fixed server role. Creating a new table using `SELECT INTO` also requires both the **CREATE TABLE** permission, and the **ALTER SCHEMA** permission on the schema that owns the new table.  
   
-## Examples:   
-The following examples use the [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.
+## Examples
+The following examples use the [!INCLUDE [ssawPDW](../../includes/ssawpdw-md.md)] database.
   
-### A. Using SELECT to retrieve rows and columns  
+### <a id="a-using-select-to-retrieve-rows-and-columns"></a> A. Use SELECT to retrieve rows and columns
  This section shows three code examples. This first code example returns all rows (no WHERE clause is specified) and all columns (using the `*`) from the `DimEmployee` table.  
   
 ```sql  
@@ -222,7 +225,7 @@ AND MaritalStatus = 'M'
 ORDER BY LastName;  
 ```  
   
-### B. Using SELECT with column headings and calculations  
+### <a id="b-using-select-with-column-headings-and-calculations"></a> B. Use SELECT with column headings and calculations
  The following example returns all rows from the `DimEmployee` table, and calculates the gross pay for each employee based on their `BaseRate` and a 40-hour work week.  
   
 ```sql  
@@ -231,7 +234,7 @@ FROM DimEmployee
 ORDER BY LastName;  
 ```  
   
-### C. Using DISTINCT with SELECT  
+### <a id="c-using-distinct-with-select"></a> C. Use DISTINCT with SELECT
  The following example uses `DISTINCT` to generate a list of all unique titles in the `DimEmployee` table.  
   
 ```sql  
@@ -240,7 +243,7 @@ FROM DimEmployee
 ORDER BY Title;  
 ```  
   
-### D. Using GROUP BY  
+### <a id="d-using-group-by"></a> D. Use GROUP BY
  The following example finds the total amount for all sales on each day.  
   
 ```sql  
@@ -252,7 +255,7 @@ ORDER BY OrderDateKey;
   
  Because of the `GROUP BY` clause, only one row containing the sum of all sales is returned for each day.  
   
-### E. Using GROUP BY with multiple groups  
+### <a id="e-using-group-by-with-multiple-groups"></a> E. Use GROUP BY with multiple groups
  The following example finds the average price and the sum of Internet sales for each day, grouped by order date and the promotion key.  
   
 ```sql  
@@ -263,7 +266,7 @@ GROUP BY OrderDateKey, PromotionKey
 ORDER BY OrderDateKey;   
 ```  
   
-### F. Using GROUP BY and WHERE  
+### <a id="f-using-group-by-and-where"></a> F. Use GROUP BY and WHERE
  The following example puts the results into groups after retrieving only the rows with order dates later than August 1, 2002.  
   
 ```sql  
@@ -274,7 +277,7 @@ GROUP BY OrderDateKey
 ORDER BY OrderDateKey;  
 ```  
   
-### G. Using GROUP BY with an expression  
+### <a id="g-using-group-by-with-an-expression"></a> G. Use GROUP BY with an expression
  The following example groups by an expression. You can group by an expression if the expression does not include aggregate functions.  
   
 ```sql  
@@ -283,7 +286,7 @@ FROM FactInternetSales
 GROUP BY (OrderDateKey * 10);  
 ```  
   
-### H. Using GROUP BY with ORDER BY  
+### <a id="h-using-group-by-with-order-by"></a> H. Use GROUP BY with ORDER BY
  The following example finds the sum of sales per day, and orders by the day.  
   
 ```sql  
@@ -292,8 +295,8 @@ FROM FactInternetSales
 GROUP BY OrderDateKey  
 ORDER BY OrderDateKey;  
 ```  
-  
-### I. Using the HAVING clause  
+
+### <a id="i-using-the-having-clause"></a> I. Use the HAVING clause
  This query uses the `HAVING` clause to restrict results.  
   
 ```sql  
@@ -303,8 +306,9 @@ GROUP BY OrderDateKey
 HAVING OrderDateKey > 20010000  
 ORDER BY OrderDateKey;  
 ```  
-  
-## See Also  
- [SELECT Examples &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)  
- [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)
-  
+
+## Related content
+
+- [SELECT Examples (Transact-SQL)](select-examples-transact-sql.md)
+- [OPTION Clause (Transact-SQL)](option-clause-transact-sql.md)
+- [Hints (Transact-SQL)](hints-transact-sql.md)

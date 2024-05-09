@@ -33,7 +33,7 @@ By default, when developers create objects in a schema, the objects are owned by
 
 ### Built-in schemas for backward compatibility
 
-SQL Server ships with nine pre-defined schemas that have the same names as the built-in database users and roles: *db_accessadmin, db_backupoperator, db_datareader, db_datawriter, db_ddladmin, db_denydatareader, db_denydatawriter, db_owner, db_securityadmin*. These exist for backward compatibility. The recommendation is to not use them for user objects. You can drop the schemas that have the same names as the fixed database roles - unless they're already in use, in which case the drop-command will simply return an error and block the drop of the used schema.
+SQL Server ships with nine predefined schemas that have the same names as the built-in database users and roles: *db_accessadmin, db_backupoperator, db_datareader, db_datawriter, db_ddladmin, db_denydatareader, db_denydatawriter, db_owner, db_securityadmin*. These exist for backward compatibility. The recommendation is to not use them for user objects. You can drop the schemas that have the same names as the fixed database roles - unless they're already in use, in which case the drop-command returns an error and block the drop of the used schema.
 
 ```sql
 IF EXISTS (SELECT * FROM sys.schemas WHERE name = N'db_accessadmin')
@@ -73,9 +73,9 @@ DROP SCHEMA [db_securityadmin]
 GO
 ```
 
-If you drop these schemas from the `model` database, they won't appear in new databases. Schemas that contain objects cannot be dropped.
+If you drop these schemas from the `model` database, they won't appear in new databases. Schemas that contain objects can't be dropped.
 
-The following schemas cannot be dropped:
+The following schemas can't be dropped:
 
 - `dbo`
 - `guest`
@@ -89,7 +89,7 @@ The following schemas cannot be dropped:
 
 The `dbo` schema is the default schema of every database. By default, users created with the CREATE USER Transact-SQL command have `dbo` as their default schema. The `dbo` schema is owned by the `dbo` user account.
 
-Users who are assigned the `dbo` as default schema don't inherit the permissions of the `dbo` user account. No permissions are inherited from a schema by users; schema permissions are inherited by the database objects contained in the schema.  The default schema for a user is solely used for object-reference in case the user omits the schema when querying objects.
+Users who are assigned the `dbo` as default schema don't inherit the permissions of the `dbo` user account. No permissions are inherited from a schema by users; schema permissions are inherited by the database objects contained in the schema. The default schema for a user is solely used for object-reference in case the user omits the schema when querying objects.
 
 > [!NOTE]  
 > When database objects are referenced by using a one-part name, SQL Server first looks in the user's default schema. If the object is not found there, SQL Server looks next in the `dbo` schema. If the object is not in the `dbo` schema, an error is returned.

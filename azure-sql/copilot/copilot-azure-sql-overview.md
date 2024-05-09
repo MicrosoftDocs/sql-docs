@@ -52,7 +52,7 @@ For a tutorial and examples of Copilot's natural language to SQL capabilities in
 
 ## Enable Microsoft Copilot in your Azure tenant
 
-
+For information on enabling Microsoft Copilot, see [Microsoft Copilot for Azure (preview)](/azure/copilot/overview).
 
 ## Microsoft Copilot in Azure enhanced scenarios
 

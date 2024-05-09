@@ -2,10 +2,10 @@
 title: Authorize server and database access using logins and user accounts
 titleSuffix: Azure SQL Database & SQL Managed Instance & Azure Synapse Analytics
 description: Learn about how Azure SQL Database, SQL Managed Instance, and Azure Synapse authenticate users for access using logins and user accounts. Also learn how to grant database roles and explicit permissions to authorize logins and users to perform actions and query data.
-author: AndreasWolter
-ms.author: anwolter
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 05/19/2023
+ms.date: 05/09/2024
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
@@ -19,7 +19,8 @@ keywords:
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Authorize database access to SQL Database, SQL Managed Instance, and Azure Synapse Analytics
-[!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
+
+[!INCLUDE [appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
 
 In this article, you learn about:
 
@@ -29,7 +30,7 @@ In this article, you learn about:
 - How to add user accounts in user databases, either associated with logins or as contained user accounts.
 - Configure user accounts with permissions in user databases by using database roles and explicit permissions.
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > Databases in Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse are referred to collectively in the remainder of this article as databases, and the server is referring to the [logical server](logical-servers.md) that manages databases for Azure SQL Database and Azure Synapse.
 
 [!INCLUDE [entra-id](../includes/entra-id.md)]
@@ -42,10 +43,10 @@ When a user attempts to connect to a database, they provide a user account and a
 - [SQL authentication](/sql/relational-databases/security/choose-an-authentication-mode#connecting-through-sql-server-authentication).
 
   With this authentication method, the user submits a user account name and associated password to establish a connection. This password is stored in the `master` database for user accounts linked to a login or stored in the database containing the user accounts *not* linked to a login.
-  
-  > [!NOTE]
+
+  > [!NOTE]  
   > Azure SQL Database only enforces [password complexity](/sql/relational-databases/security/password-policy#password-complexity) for [password policy](/sql/relational-databases/security/password-policy). For password policy in Azure SQL Managed Instance, see [Azure SQL Managed Instance frequently asked questions (FAQ)](../managed-instance/frequently-asked-questions-faq.yml#password-policy).
-  
+
 - [Microsoft Entra authentication](authentication-aad-overview.md)
 
   With this authentication method, the user submits a user account name and requests that the service use the credential information stored in Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)).
@@ -53,7 +54,7 @@ When a user attempts to connect to a database, they provide a user account and a
 **Logins and users**: A user account in a database can be associated with a login that is stored in the `master` database or can be a user name that is stored in an individual database.
 
 - A **login** is an individual account in the `master` database, to which a user account in one or more databases can be linked. With a login, the credential information for the user account is stored with the login.
-- A **user account** is an individual account in any database that may be, but does not have to be, linked to a login. With a user account that is not linked to a login, the credential information is stored with the user account.
+- A **user account** is an individual account in any database that might be, but does not have to be, linked to a login. With a user account that is not linked to a login, the credential information is stored with the user account.
 
 [**Authorization**](security-overview.md#authorization) to access data and perform various actions are managed using database roles and explicit permissions. Authorization refers to the permissions assigned to a user, and determines what that user is allowed to do. Authorization is controlled by your user account's database [role memberships](/sql/relational-databases/security/authentication-access/database-level-roles) and [object-level permissions](/sql/relational-databases/security/permissions-database-engine). As a best practice, you should grant users the least privileges necessary.
 
@@ -71,8 +72,8 @@ To identify the **Server admin** account for a logical server, open the Azure po
 
 :::image type="content" source="./media/logins-create-manage/sql-admins2.png" alt-text="Screenshot shows the SQL managed instance Properties page where you can obtain the login and Microsoft Entra admin values.":::
 
-> [!IMPORTANT]
-> The name of the **Server admin** account can't be changed after it has been created. To reset the password for the server admin, go to the [Azure portal](https://portal.azure.com), click **SQL Servers**, select the server from the list, and then click **Reset Password**. To reset the password for the SQL Managed Instance, go to the Azure portal, click the instance, and click **Reset password**. You can also use PowerShell or the Azure CLI.
+> [!IMPORTANT]  
+> The name of the **Server admin** account can't be changed after it has been created. To reset the password for the server admin, go to the [Azure portal](https://portal.azure.com), select **SQL Servers**, select the server from the list, and then select **Reset Password**. To reset the password for the SQL Managed Instance, go to the Azure portal, select the instance, and select **Reset password**. You can also use PowerShell or the Azure CLI.
 
 ## Create additional logins and users having administrative permissions
 
@@ -91,7 +92,7 @@ At this point, your server or managed instance is only configured for access usi
   - Add the login to the [sysadmin fixed server role](/sql/relational-databases/security/authentication-access/server-level-roles?view=azuresqldb-mi-current&preserve-view=true) using the [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql?view=azuresqldb-mi-current&preserve-view=true) statement. This login will have full administrative permissions.
   - Alternatively, create a [Microsoft Entra login](authentication-aad-configure.md#provision-azure-ad-admin-sql-managed-instance) using the [CREATE LOGIN](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current&preserve-view=true) syntax.
 
-  > [!NOTE]
+  > [!NOTE]  
   > The `dbmanager` and `loginmanager` roles do **not** pertain to Azure SQL Managed Instance deployments.
 
 - **In SQL Database, create SQL logins with limited administrative permissions**
@@ -101,7 +102,7 @@ At this point, your server or managed instance is only configured for access usi
 
   Members of [special `master` database roles](/sql/relational-databases/security/authentication-access/database-level-roles?view=azuresqldb-current&preserve-view=true#special-roles-for--and-azure-synapse) for Azure SQL Database have authority to create and manage databases or to create and manage logins. In databases created by a user that is a member of the `dbmanager` role, the member is mapped to the `db_owner` fixed database role and can log into and manage that database using the `dbo` user account. These roles have no explicit permissions outside of the `master` database.
 
-  > [!IMPORTANT]
+  > [!IMPORTANT]  
   > You can't create an additional SQL login with full administrative permissions in Azure SQL Database. Only the server admin account or the Microsoft Entra admin account (which can be a Microsoft Entra group) can add or remove other logins to or from server roles. This is specific to Azure SQL Database.
 
 - **In Azure Synapse dedicated SQL pool, create SQL logins with limited administrative permissions**
@@ -132,7 +133,7 @@ You can create accounts for non-administrative users using one of two methods:
 
   With this approach, the user authentication information is stored in each database, and replicated to geo-replicated databases automatically. However, if the same account exists in multiple databases and you are using SQL authentication, you must keep the passwords synchronized manually. Additionally, if a user has an account in different databases with different passwords, remembering those passwords can become a problem.
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > To create contained users mapped to Microsoft Entra identities, you must be logged in using a Microsoft Entra account in the database in Azure SQL Database. In SQL Managed Instance, a SQL login with `sysadmin` permissions can also create a Microsoft Entra login or user.
 
 For examples showing how to create logins and users, see:
@@ -143,7 +144,7 @@ For examples showing how to create logins and users, see:
 - [Create user](/sql/t-sql/statements/create-user-transact-sql#examples)
 - [Creating Microsoft Entra contained users](authentication-aad-configure.md#create-contained-users-mapped-to-azure-ad-identities)
 
-> [!TIP]
+> [!TIP]  
 > For a security tutorial that includes creating users in Azure SQL Database, see [Tutorial: Secure Azure SQL Database](secure-database-tutorial.md).
 
 ## Using fixed and custom database roles
@@ -174,7 +175,7 @@ Efficient access management uses permissions assigned to Active Directory securi
 
 - When using SQL authentication, create contained database users in the database. Place one or more database users into a custom database role with specific permissions appropriate to that group of users.
 
-  > [!NOTE]
+  > [!NOTE]  
   > You can also use groups for non-contained database users.
 
 You should familiarize yourself with the following features that can be used to limit or elevate permissions:
@@ -184,6 +185,7 @@ You should familiarize yourself with the following features that can be used to 
 - [Data Masking](dynamic-data-masking-overview.md) can be used to limit exposure of sensitive data.
 - [Stored procedures](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) can be used to limit the actions that can be taken on the database.
 
-## Next steps
+## Next step
 
-For an overview of all Azure SQL Database and SQL Managed Instance security features, see [Security overview](security-overview.md).
+> [!div class="nextstepaction"]
+> [Security overview](security-overview.md)

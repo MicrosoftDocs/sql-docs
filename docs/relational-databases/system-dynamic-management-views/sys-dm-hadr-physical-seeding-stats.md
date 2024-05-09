@@ -35,7 +35,7 @@ The following table defines the meaning of the various columns:
 |**role_desc**|**nvarchar**|Seeding role description. (available values: Source, Destination, Forwarder, ForwarderDestination)|
 |**internal_state_desc**|**nvarchar**|Description of the local replica state.|
 |**transfer_rate_bytes_per_second**|**bigint**|Current seeding transfer rate in bytes per second.|
-|**transfered_size_bytes**|**bigint**|Total bytes already transferred.|
+|**transferred_size_bytes**|**bigint**|Total bytes already transferred.|
 |**database_size_bytes**|**bigint**|Total size in bytes of the database being seeded.|
 |**start_time_utc**|**datetime**|Start time of the seeding operation in UTC.|
 |**end_time_utc**|**datetime**|End time of the seeding operation in UTC.|

@@ -4,7 +4,7 @@ description: Learn about query processing feedback features, part of the Intelli
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: derekw
-ms.date: 01/19/2024
+ms.date: 05/08/2024
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -150,7 +150,7 @@ This feature was introduced in [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)
 
 | Issue | Date discovered | Status | Date resolved |
 | --- | --- | --- | --- |
-| Slow SQL Server performance after you apply Cumulative Update 8 for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] under certain conditions. You might encounter dramatic Plan Cache memory utilization along with unexpected increases in CPU utilization when CE feedback is enabled. | December 2023 | Has [workaround](#slow-sql-server-performance-after-you-apply-cumulative-update-8-for-sql-server-2022-under-certain-conditions) | |
+| Slow SQL Server performance after you apply Cumulative Update 8 for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] under certain conditions. You might encounter dramatic Plan Cache memory utilization along with unexpected increases in CPU utilization when CE feedback is enabled. | December 2023 | (Updated May 2024) Has [workaround](#workaround) | |
 
 ### Known issues details
 
@@ -160,7 +160,7 @@ Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Cumulative Up
 
 This issue does not affect all workloads, and depends on the number of different plans that have been generated as well as the number of plans that were eligible for the CE feedback feature to engage. During the period of time that CE feedback is analyzing plan operators where significant model misestimations occurred, there is a scenario in which during this analysis phase, a plan that was being referenced can become dereferenced in memory without allowing the plan to subsequently be removed from memory by way of the normal Least Recently Used (LRU) algorithm. The LRU mechanism one way that SQL Server enforces plan eviction policies. SQL Server will also remove plans from memory if the system is under memory pressure. When SQL Server attempts to remove the plans that have been dereferenced improperly, it is unable to remove those plans from the plan cache, which causes the cache to continue to grow. The growing cache might start to cause additional compilations that will ultimately use more CPU and memory. For more information, see [Plan Cache Internals](/previous-versions/tn-archive/cc293624(v=technet.10)).
 
-**Symptom**: The number of plan cache **entries in use** and are marked as **dirty** from either SQL Plans or Object Plans increases over time to 50,000 or more. If you observe plan cache entries that start to approach this level along with unexpected increases in CPU utilization, your system may be encountering this issue. A related fix was provided in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Cumulative Update 9. See [KB5030731](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate9#2499342). The fix attempted to address an issue in which plan cache entries are evicted when the Cardinality Estimation (CE) feedback tries to get the associated profile, which causes a memory corruption. Additional fixes for this issue will be available in an upcoming Cumulative Update.
+**Symptom**: The number of plan cache **entries in use** and are marked as **dirty** from either SQL Plans or Object Plans increases over time to 50,000 or more. If you observe plan cache entries that start to approach this level along with unexpected increases in CPU utilization, your system may be encountering this issue. A fix has been provided with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Cumulative Update 12. See [KB5033663](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate12#2890724).
 
 To monitor the number of plan cache entries that your system is using, the following examples can be used as a point in time view of the number of plan cache entries that exist. As an example, watching the number of plan cache entries that are marked as dirty, periodically over time is one way to monitor for this phenomenon.
 
@@ -250,7 +250,11 @@ AND counter_name IN ('Batch Requests/sec', 'SQL Compilations/sec'
 );
 ```
 
-**Workaround**: The CE Feedback feature can be disabled at the database level until additional fixes become available if your system is experiencing the symptoms that have been described previously. To reclaim the plan cache memory that had been taken up by this issue, a restart of the SQL Server instance is required. This restart action can be taken after the CE Feedback feature is disabled. To disable CE feedback at the database level, use the `CE_FEEDBACK` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#ce_feedback---on--off-). For example, in the user database:
+#### Workaround
+
+If your system continues to experience the symptoms that have been described previously, after applying Cumulative Update 12 [KB5033663](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate12#2890724), the CE feedback feature can be disabled at the database level.
+
+To reclaim the plan cache memory that had been taken up by this issue, a restart of the SQL Server instance is required. This restart action can be taken after the CE feedback feature is disabled. To disable CE feedback at the database level, use the `CE_FEEDBACK` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#ce_feedback---on--off-). For example, in the user database:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET CE_FEEDBACK = OFF;

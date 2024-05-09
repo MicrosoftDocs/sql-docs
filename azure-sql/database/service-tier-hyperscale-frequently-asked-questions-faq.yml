@@ -11,7 +11,7 @@ metadata:
   author: dimitri-furman
   ms.author: dfurman
   ms.reviewer: wiassaf, mathoma
-  ms.date: 03/12/2024
+  ms.date: 05/08/2024
 title: Azure SQL Database Hyperscale FAQ
 summary: |
   [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -105,7 +105,7 @@ sections:
       - question: |
           Can I bring my on-premises or IaaS SQL Server license to Hyperscale?
         answer: |
-          With the new, simplified pricing in effect since December 15, 2023, the price of compute for newly created Hyperscale databases, all serverless Hyperscale databases and all Hyperscale elastic pools has been reduced. With the new, simplified pricing, there is no need to apply Azure Hybrid Benefit (AHB) to obtain equivalent savings. Azure Hybrid Benefit (AHB) can only be applied to older (created prior to December 15, 2023) Hyperscale single databases with provisioned compute. For those older databases, AHB is only applicable until December 2026, after which those databases will also be billed as per the new, simplified pricing.
+          With the new, simplified pricing in effect since December 15, 2023, the price of compute has been reduced for newly created Hyperscale databases, all serverless Hyperscale databases, and all Hyperscale elastic pools. With the new, simplified pricing, there is no need to apply Azure Hybrid Benefit (AHB) to obtain equivalent savings. Azure Hybrid Benefit (AHB) can only be applied to older (created before December 15, 2023) Hyperscale single databases with provisioned compute. For those older databases, AHB is only applicable until December 2026, after which those databases will also be billed as per the new, simplified pricing.
           For more information, see [Hyperscale pricing blog](https://aka.ms/hsignite2023) and [Azure SQL Database Hyperscale – lower, simplified pricing!](https://aka.ms/hsprice2023).
           
       - question: |
@@ -160,7 +160,7 @@ sections:
       - question: |
           What is the size of the transaction log with Hyperscale?
         answer: |
-          In Hyperscale, the transaction log is practically infinite, with a restriction that the active portion of the log cannot exceed 1 TB. The active portion of the log can grow because of long-running transactions, or because of [Change Data Capture](/sql/relational-databases/track-changes/about-change-data-capture-sql-server) processing not keeping up with the rate of data change. Avoid unnecessarily long and large transactions to stay below this limit. Other than this restriction, you don't need to worry about running out of log space on a system that has high log throughput. However, log generation rate might be throttled for continuous aggressively writing workloads. The peak sustained log generation rate is 100 MB/s.
+          In Hyperscale, the transaction log is practically infinite, with a restriction that the active portion of the log cannot exceed 1 TB. The active portion of the log can grow because of long-running transactions, or because of [Change Data Capture](change-data-capture-overview.md?view=azuresql-db&preserve-view=true) processing not keeping up with the rate of data change. Avoid unnecessarily long and large transactions to stay below this limit. Other than this restriction, you don't need to worry about running out of log space on a system that has high log throughput. However, log generation rate might be throttled for continuous aggressively writing workloads. The peak sustained log generation rate is 100 MB/s.
 
       - question: |
           Does my `tempdb` scale as my database grows?
@@ -218,7 +218,7 @@ sections:
         answer: |
           Yes. You can move your existing databases in Azure SQL Database to Hyperscale. For proofs of concept (POCs), we recommend you make a copy of your database and migrate the copy to Hyperscale. 
 
-          The time required to move an existing database to Hyperscale consists of the time to copy data, and the time to replay the changes made in the source database while copying data. The data copy time is proportional to data size. The time to replay changes will be shorter if the move is done during a period of low write activity.
+          The time required to move an existing database to Hyperscale consists of the time to copy data, and the time to replay the changes made in the source database while copying data. The data copy time is proportional to data size. The time to replay changes is shorter if the move is done during a period of low write activity.
 
           Get sample code to migrate existing Azure SQL Databases to Hyperscale in the Azure portal, Azure CLI, PowerShell, and Transact-SQL in [Migrate an existing database to Hyperscale](manage-hyperscale-database.md#migrate-an-existing-database-to-hyperscale).
 
@@ -258,7 +258,7 @@ sections:
         answer: |
           You can have a client application read data from Azure Storage and load data load into a Hyperscale database (just like you can with any other database in Azure SQL Database). Polybase is currently not supported in Azure SQL Database. As an alternative to provide fast load, you can use [Azure Data Factory](/azure/data-factory/index), or use a Spark job in [Azure Databricks](/azure/azure-databricks/) with the [Spark connector for SQL](spark-connector.md). The Spark connector to SQL supports bulk insert.
           
-          It is also possible to bulk read data from Azure Blob store using BULK INSERT or OPENROWSET: [Examples of Bulk Access to Data in Azure Blob Storage](/sql/relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage#accessing-data-in-a-csv-file-referencing-an-azure-blob-storage-location).
+          It is also possible to bulk read data from Azure Blob store using BULK INSERT or OPENROWSET: [Examples of Bulk Access to Data in Azure Blob Storage](/sql/relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage?view=azuresql-db&preserve-view=true#accessing-data-in-a-csv-file-referencing-an-azure-blob-storage-location).
           
           Simple recovery or bulk logging model is not supported in Hyperscale. Full recovery model is required to provide high availability and point-in-time recovery. However, Hyperscale log architecture provides better data ingest rate compared to other Azure SQL Database service tiers.
           
@@ -470,7 +470,7 @@ sections:
       - question: |
           Can I add indexes and views on my secondary compute replicas?
         answer: |
-          No. Hyperscale databases have shared storage, meaning that all compute replicas see the same tables, indexes, and other database objects. If you want additional indexes optimized for reads on secondary, you must add them on the primary. You can still create temporary tables (table names prefixed with # or ##) on each secondary replica to store temporary data. Temporary tables are read-write.
+          No. Hyperscale database compute replicas share storage, meaning that all compute replicas see the same tables, indexes, and other database objects. If you want additional indexes optimized for reads on secondary, you must add them on the primary. You can still create temporary tables (table names prefixed with # or ##) on each secondary replica to store temporary data. Temporary tables are read-write.
 
       - question: |
           How much delay is there between the primary and secondary compute replicas?
@@ -507,6 +507,25 @@ sections:
         answer: |
           By default, named replicas don't have any HA replicas of their own. A failover of a named replica requires creating a new replica first, which typically takes about 1-2 minutes. However, named replicas can also benefit from higher availability and shorter failovers provided by HA replicas. To add HA replicas for a named replica, you can use the parameter `ha-replicas` with [AZ CLI](/cli/azure/sql/db/replica#az_sql_db_replica_create), or the parameter `HighAvailabilityReplicaCount` with [PowerShell](/powershell/module/az.sql/set-azsqldatabase), or the `highAvailabilityReplicaCount` property with [REST API](/rest/api/sql/databases/create-or-update). The number of HA replicas can be set during the creation of a named replica and can be changed – only via AZ CLI, PowerShell, or REST API – anytime after the named replica has been created. Pricing of HA replicas for named replicas is the same of HA replicas for regular Hyperscale databases.
     
+      - question: |
+          If Always Encrypted is enabled on Hyperscale database, will rotating the Column Master Key (CMK) on the primary database also update the key on named replica and high availability secondary replicas?
+
+        answer: |
+          Yes. The [Column Master Key](/sql/t-sql/statements/create-column-master-key-transact-sql?view=azuresqldb-current&preserve-view=true) is stored in the user database and can be validated by executing the query `SELECT * FROM sys.column_master_keys`. Named replicas and high availability secondary replicas read data from the same page servers/storage layer as the primary Hyperscale database. Both types of replicas are synchronized with the primary Hyperscale database via the log service. A key change is considered a transaction and is automatically replicated to the named replica and high availability secondary replica.
+
+      - question: |
+          For a Hyperscale Database, can I determine the name of a named replica associated with a `replica_id` from `sys.dm_database_replica_states`?
+
+        answer: |
+          The `DATABASEPROPERTYEX()` function, when executed within the context of a named replica, can map the `replica_id` to its corresponding named replica. However, it’s currently not feasible to link the `replica_id` to its respective named replica for each record in the `sys.dm_database_replica_states` dynamic management view when queried from the primary replica. The following example query can be run within a named replica’s context to identify the replica name, replica ID, and the synchronization details.
+
+          ```sql
+            SELECT replica_id, DB_NAME() AS 'Database/Replica name', 
+            synchronization_state_desc, log_send_queue_size/1024.0/1024.0 AS log_send_queue_size_gb,
+            last_sent_time, last_received_time, last_commit_time, secondary_lag_seconds
+            FROM sys.dm_database_replica_states
+            WHERE replica_id = DATABASEPROPERTYEX(DB_NAME(),'REPLICAID');
+          ```
 
 additionalContent: |
 

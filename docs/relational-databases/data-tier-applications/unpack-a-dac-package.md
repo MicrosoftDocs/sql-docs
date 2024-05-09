@@ -3,7 +3,7 @@ title: "Unpack a DAC Package"
 description: "Unpack a DAC Package"
 author: dzsquared
 ms.author: drskwier
-ms.date: "12/20/2022"
+ms.date: "5/9/2024"
 ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
@@ -25,6 +25,8 @@ Options for examining the content of a dacpac include:
 - decompressing the file to view the XML contents
 - deploying the .dacpac to a test instance
 - invoking the `Unpack()` method from the Microsoft.SqlServer.DacFx .NET API
+
+Unpacking a DAC package immediately after it has been extracted from a database to view the object definitions is more efficiently accomplished by using [Extract](../../tools/sqlpackage/sqlpackage-extract.md) in SqlPackage with the property `/p:ExtractTarget=File`, directly creating a single `.sql` file containing the object definitions.
 
 ## Import the .dacpac to a SQL project in Visual Studio
 
@@ -77,7 +79,7 @@ Beyond Azure Data Studio and SqlPackage, many other tools can be used to deploy 
 
 - SQL Server Management Studio
 - Visual Studio: SQL Server Data Tools
-- [[PowerShell](deploy-a-data-tier-application.md#use-powershell)
+- [PowerShell](deploy-a-data-tier-application.md#use-powershell)
 
 ## Invoke the `Unpack()` method
 

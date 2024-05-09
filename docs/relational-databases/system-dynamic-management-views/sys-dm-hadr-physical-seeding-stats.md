@@ -19,7 +19,7 @@ dev_langs:
   - "TSQL"
 ---
 # sys.dm_hadr_physical_seeding_stats (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
 On the primary replica, query sys.dm_hadr_physical_seeding_stats DMV to see the physical statistics for each seeding process that is currently running.
 

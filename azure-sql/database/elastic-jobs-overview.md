@@ -271,13 +271,13 @@ Capacity increments indicate the total number of concurrent target databases the
 Most environments require less than 100 concurrent jobs at any time, so JA100 is the default.
 
 | **Elastic job agent tier** | **Maximum concurrent jobs** |
-| ----: | :-- |
+| :---- | :-- |
 | JA100 | 100 |
 | JA200 | 200 |
 | JA400 | 400 |
 | JA800 | 800 |
 
-Exceeding the job agent's concurrency capacity tier with job targets will create queuing delays for some target databases/servers. For example, if you start a job with 110 target in the JA100 tier, 10 jobs will wait to start until others finish.
+Exceeding the job agent's concurrency capacity tier with job targets will create queuing delays for some target databases/servers. For example, if you start a job with 110 targets in the JA100 tier, 10 targets will wait to start until others finish.
 
 The tier or service objective of an elastic job agent can be modified through the Azure portal, [PowerShell](/powershell/module/az.sql/set-azsqlelasticjobagent), or [the Job Agents REST API](/rest/api/sql/job-agents). For an example, see [Scale the job agent](elastic-jobs-tutorial.md#scale-the-job-agent).
 

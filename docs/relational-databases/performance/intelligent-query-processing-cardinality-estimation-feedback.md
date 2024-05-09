@@ -4,7 +4,7 @@ description: Learn about query processing feedback features, part of the Intelli
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: derekw
-ms.date: 01/19/2024
+ms.date: 05/08/2024
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual

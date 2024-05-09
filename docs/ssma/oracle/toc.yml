@@ -96,7 +96,7 @@
     href: appendix-1-oracletosql.md
 - name: Reference 
   items:
-  - name: Common conversion errors
+  - name: Common conversion messages and errors
     href: messages/toc.yml
   - name: User interface reference
     items:

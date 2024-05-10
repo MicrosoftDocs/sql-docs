@@ -81,7 +81,7 @@ The following example constructs a JSON object with three properties from a resu
 ```sql  
 select JSON_OBJECTAGG( c1:c2 )
 from (
-	values('key1', 'c'), ('key2', 'b'), ('key3','a')
+    values('key1', 'c'), ('key2', 'b'), ('key3','a')
 ) as t(c1, c2);
 ```
 
@@ -102,8 +102,9 @@ select top(5) c.object_id, JSON_OBJECTAGG(c.name:c.column_id) as columns
 ```
 
 **Result**
+
 |object_id|column_list|
-|--------|--------------|
+|:--------|:--------------|
 |3|`{"bitpos":12,"cid":6,"colguid":13,"hbcolid":3,"maxinrowlen":8,"nullbit":11,"offset":10,"ordkey":7,"ordlock":14,"rcmodified":4,"rscolid":2,"rsid":1,"status":9,"ti":5}`|
 |5|`{"cmprlevel":9,"fgidfs":7,"fillfact":10,"idmajor":3,"idminor":4,"lockres":17,"maxint":13,"maxleaf":12,"maxnullbit":11,"minint":15,"minleaf":14,"numpart":5,"ownertype":2,"rcrows":8,"rowsetid":1,"rsguid":16,"scope_id":18,"status":6}`|
 |6|`{"cloneid":6,"dbfragid":8,"id":1,"partid":3,"rowsetid":7,"segid":5,"status":9,"subid":2,"version":4}`|

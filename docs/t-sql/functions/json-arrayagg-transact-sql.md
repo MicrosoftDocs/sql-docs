@@ -81,7 +81,7 @@ The following example constructs a JSON array with three elements from a resulse
 ```sql  
 select JSON_ARRAYAGG( c1 )
 from (
-	values('c'), ('b'), ('a')
+    values('c'), ('b'), ('a')
 ) as t(c1);
 ```
 
@@ -98,7 +98,7 @@ The following example constructs a JSON array with three elements ordered by the
 ```sql  
 select JSON_ARRAYAGG( c1 order by c1)
 from (
-	values('c'), ('b'), ('a')
+    values('c'), ('b'), ('a')
 ) as t(c1);
 ```
 
@@ -119,8 +119,9 @@ select top(5) c.object_id, JSON_ARRAYAGG(c.name ORDER BY c.column_id) as column_
 ```
 
 **Result**
+
 |object_id|column_list|
-|--------|--------------|
+|:--------|:--------------|
 |3|`["rsid","rscolid","hbcolid","rcmodified","ti","cid","ordkey","maxinrowlen","status","offset","nullbit","bitpos","colguid","ordlock"]`|
 |5|`["rowsetid","ownertype","idmajor","idminor","numpart","status","fgidfs","rcrows","cmprlevel","fillfact","maxnullbit","maxleaf","maxint","minleaf","minint","rsguid","lockres","scope_id"]`|
 |6|`["id","subid","partid","version","segid","cloneid","rowsetid","dbfragid","status"]`|

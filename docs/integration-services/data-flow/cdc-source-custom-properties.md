@@ -12,6 +12,8 @@ ms.topic: reference
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
+> [!IMPORTANT]
+> CDC Flow Components, including CDC Control Task, CDC Source and CDC Splitter, are deprecated. For details, refer to [the announcement](https://www.microsoft.com/sql-server/blog/2024/02/28/sql-server-integration-services-ssis-change-data-capture-attunity-feature-deprecations/).
 
   The following table describes the custom properties of the CDC source. All properties are read/write.  
   

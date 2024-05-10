@@ -4,7 +4,7 @@ description: This quickstart helps you use Extended Events, a lightweight perfor
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: maghan, randolphwest
-ms.date: 10/22/2023
+ms.date: 05/09/2024
 ms.service: sql
 ms.subservice: xevents
 ms.topic: quickstart
@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-20
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-Extended Events is a lightweight performance monitoring feature that enables users to collect data to monitor and troubleshoot problems. By using Extended Events, you can see details of the database engine internal operations that are relevant for performance monitoring and troubleshooting purposes. To learn more about extended events, see [Extended Events overview](extended-events.md).
+Extended Events is a lightweight performance monitoring feature that enables users to collect data to monitor and troubleshoot problems. By using Extended Events, you can see details of the database engine internal operations that are relevant for performance monitoring and troubleshooting purposes. To learn more about Extended Events, see [Extended Events overview](extended-events.md).
 
 This article aims to help SQL administrators, engineers, and developers who are new to Extended Events, and who want to start using it and see event data in just a few minutes.
 
@@ -30,7 +30,7 @@ Extended Events is also known as *XEvents*, and sometimes just *XE*.
 
 After reading this article, you can:
 
-- See how to create an event session in SQL Server Management Studio (SSMS), with example screenshots
+- See how to create an event session in [!INCLUDE [ssmanstudiofull-md](../../includes/ssmanstudiofull-md.md)] (SSMS), with example screenshots
 - Correlate screenshots to equivalent Transact-SQL statements
 - Understand in detail the terms and concepts behind the SSMS user interface and XEvents T-SQL statements
 - Learn how to test your event session
@@ -42,9 +42,9 @@ After reading this article, you can:
 - Understand the relationships among Extended Events system views
 
 > [!TIP]  
-> For more information about Extended Events in Azure SQL Database, including code samples, see [Extended Events in SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr).
+> For more information about Extended Events in Azure SQL Database, including code samples, see [Extended Events in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/xevent-db-diff-from-svr).
 
-## Initial prerequisites
+## Prerequisites
 
 To get started, you need to:
 
@@ -57,9 +57,9 @@ Details about security and permissions related to Extended Events are available 
 
 SSMS provides a fully functional user interface (UI) for Extended Events. Many scenarios can be accomplished using this UI, without having to use T-SQL or dynamic management views (DMVs).
 
-In this section you can see the UI steps to create an Extended Events session, and to see the data it reports. After going through the steps hands-on or reviewing them in this article, you can read about the concepts involved in the steps for a deeper understanding.
+In the next section you can see the UI steps to create an Extended Events session, and to see the data it reports. After going through the steps hands-on or reviewing them in this article, you can read about the concepts involved in the steps for a deeper understanding.
 
-### Create an event session in SSMS
+## Create an event session in SSMS
 
 When you create an Extended Events session, you tell the system:
 
@@ -75,17 +75,17 @@ The demonstration opens the **New Session** dialog, shows how to use its four pa
 
 The text and supporting screenshots can be slightly different in your version of SSMS, but should still be relevant for the explanation of basic concepts.
 
-1. Connect to a database engine instance. Extended Events are supported starting with SQL Server 2014, in Azure SQL Database, and Azure SQL Managed Instance.
+1. Connect to a database engine instance. Extended Events are supported starting with [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)], in Azure SQL Database, and Azure SQL Managed Instance.
 
 1. In Object Explorer, select **Management > Extended Events**. In Azure SQL Database, event sessions are database-scoped, so the **Extended Events** option is found under each database, not under **Management**. Right-click on the **Sessions** folder and select **New Session**. The **New Session** dialog is preferable to **New Session Wizard**, although the two are similar.
 
-1. In the upper-left, select the **General** page. Then type `YourSession`, or any name you like, into the **Session name** text box. Don't select **OK** yet, because you still need to enter some details on other pages.
+1. Select the **General** page. Then type `YourSession`, or any name you like, into the **Session name** text box. Don't select **OK** yet, because you still need to enter some details on other pages.
 
-   :::image type="content" source="media/xevents-session-newsessions-10-general-ssms-yoursessionnode.png" alt-text="Screenshot of New Session > General > Session name.":::
+   :::image type="content" source="media/xevents-session-newsessions-10-general-ssms-yoursessionnode.png" alt-text="Screenshot of New Session > General > Session name." lightbox="media/xevents-session-newsessions-10-general-ssms-yoursessionnode.png":::
 
-1. In the upper-left, select the **Events** page.
+1. Select the **Events** page.
 
-   :::image type="content" source="../../relational-databases/extended-events/media/xevents-session-newsessions-14-events-ssms-rightclick-not-wizard.png" alt-text="Screenshot of New Session > Events > Select > Event library, Selected events.":::
+   :::image type="content" source="media/xevents-session-newsessions-14-events-ssms-rightclick-not-wizard.png" alt-text="Screenshot of New Session > Events > Select > Event library, Selected events." lightbox="media/xevents-session-newsessions-14-events-ssms-rightclick-not-wizard.png":::
 
 1. In the **Event library** area, in the dropdown list, choose **Event names only**.
 
@@ -93,9 +93,9 @@ The text and supporting screenshots can be slightly different in your version of
    - Scroll and select the event named `sql_statement_completed`.
    - Select the right arrow button `>` to move the event to the **Selected events** box.
 
-1. Staying on the **Events** page, select the **Configure** button in the upper-right. This opens the **Event configuration options** box for the selected events.
+1. Staying on the **Events** page, select the **Configure** button. This opens the **Event configuration options** box for the selected events.
 
-   :::image type="content" source="media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png" alt-text="Screenshot of New Session > Events > Configure > Filter (Predicate) > Field.":::
+   :::image type="content" source="media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png" alt-text="Screenshot of New Session > Events > Configure > Filter (Predicate) > Field." lightbox="media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png":::
 
 1. Select the **Filter (Predicate)** tab. Next, select **Select here to add a clause**. We configure this filter (also known as predicate) to capture all `SELECT` statements that have a `HAVING` clause.
 
@@ -106,22 +106,22 @@ The text and supporting screenshots can be slightly different in your version of
    > [!NOTE]  
    > In the two-part name of the field, *sqlserver* is the package name and *sql_text* is the field name. The event we chose earlier, *sql_statement_completed*, must be in the same package as the field we choose.
 
-1. In the upper-left, select the **Data Storage** page.
+1. Select the **Data Storage** page.
 
 1. In the **Targets** area, select **Select here to add a target**.
 
    - In the **Type** dropdown list, choose `event_file`. This means the event data is stored in a file that we can open and view later. In Azure SQL Database and Azure SQL Managed Instance, event data is stored in Azure Storage blobs.
 
    > [!NOTE]  
-   > Starting with SQL Server 2019, you can use Azure Blob Storage in an `event_file` target in SQL Server.
+   > Starting with [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], you can use Azure Blob Storage in an `event_file` target in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)].
 
-   :::image type="content" source="media/xevents-session-newsessions-30-datastorage-ssms-yoursessionnode.png" alt-text="Screenshot of New Session > Data Storage > Targets > Type > event_file.":::
+   :::image type="content" source="media/xevents-session-newsessions-30-datastorage-ssms-yoursessionnode.png" alt-text="Screenshot of New Session > Data Storage > Targets > Type > event_file." lightbox="media/xevents-session-newsessions-30-datastorage-ssms-yoursessionnode.png":::
 
 1. In the **Properties** area, type in the full path and file name into the **File name on server** text box. You can also use the **Browse** button. The file name extension must be `xel`. In our example, we used `C:\Temp\YourSession_Target.xel`
 
-   :::image type="content" source="media/xevents-session-newsessions-40-advanced-ssms-yoursessionnode.png" alt-text="Screenshot of New Session > Advanced > Maximum dispatch latency > OK.":::
+   :::image type="content" source="media/xevents-session-newsessions-40-advanced-ssms-yoursessionnode.png" alt-text="Screenshot of New Session > Advanced > Maximum dispatch latency > OK." lightbox="media/xevents-session-newsessions-40-advanced-ssms-yoursessionnode.png":::
 
-1. In the upper-left, select the **Advanced** page. Reduce **Maximum dispatch latency** to 3 seconds.
+1. Select the **Advanced** page. Reduce **Maximum dispatch latency** to 3 seconds.
 
 1. Select the **OK** button at the bottom to create this event session.
 
@@ -129,18 +129,18 @@ The text and supporting screenshots can be slightly different in your version of
 
    :::image type="content" source="media/xevents-session-newsessions-50-objectexplorer-ssms-yoursessionnode.png" alt-text="Screenshot of Node for your new *event session* named YourSession, in the Object Explorer, under Management > Extended Events > Sessions.":::
 
-#### Edit an event session in SSMS
+### Edit an event session in SSMS
 
 In the SSMS Object Explorer, you can edit your event session by right-clicking its node, and then selecting **Properties**. The same multi-page dialog is displayed.
 
-### Create an event session using T-SQL
+## Create an event session using T-SQL
 
 In the SSMS Extended Events UI, you can generate a T-SQL script to create your event session as follows:
 
 - Right-click on the event session node, then select **Script Session as > CREATE to > Clipboard**.
 - Paste into any text editor.
 
-Here is the generated `CREATE EVENT SESSION` T-SQL statement for `YourSession`:
+Here's the generated `CREATE EVENT SESSION` T-SQL statement for `YourSession`:
 
 ```sql
 CREATE EVENT SESSION [YourSession]
@@ -171,7 +171,7 @@ CREATE EVENT SESSION [YourSession]
 GO
 ```
 
-#### Conditional DROP of the event session
+### Conditional DROP of the event session
 
 Before the `CREATE EVENT SESSION` statement, you can conditionally execute a `DROP EVENT SESSION` statement, in case a session with the same name already exists. This deletes the existing session. Without this, attempting to create a session with the same name causes an error.
 
@@ -186,7 +186,7 @@ END
 GO
 ```
 
-#### Start and stop the event session using T-SQL
+### Start and stop the event session using T-SQL
 
 When you create an event session, the default is for it to not start running automatically. You can start or stop your event session anytime by using the following `ALTER EVENT SESSION` T-SQL statement.
 
@@ -210,26 +210,19 @@ Test your event session with these steps:
 1. Read the next subsection about [how to SELECT and view the results](#select-the-full-results-xml-37).
 
 ```sql
-SELECT
-        c.name,
-        Count(*)  AS [Count-Per-Column-Repeated-Name]
-    FROM
-             sys.syscolumns  AS c
-        JOIN sys.sysobjects  AS o
-            ON o.id = c.id
-    WHERE
-        o.type = 'V'
-        AND
-        c.name like '%event%'
-    GROUP BY
-        c.name
-    HAVING
-        Count(*) >= 3   --2     -- Try both values during session.
-    ORDER BY
-        c.name;
+SELECT c.name,
+    COUNT(*) AS [Count-Per-Column-Repeated-Name]
+FROM sys.syscolumns AS c
+INNER JOIN sys.sysobjects AS o
+    ON o.id = c.id
+WHERE o.type = 'V'
+    AND c.name LIKE '%event%'
+GROUP BY c.name
+HAVING Count(*) >= 3 --2     -- Try both values during session.
+ORDER BY c.name;
 ```
 
-For completeness, here is the example output from the preceding `SELECT...HAVING`.
+For completeness, here's the example output from the preceding `SELECT...HAVING`.
 
 ```output
 /* Approximate output, 6 rows, all HAVING Count >= 3:
@@ -249,23 +242,20 @@ trace_event_id         3
 In a query window in SSMS, run the following `SELECT` statement to see the event data captured by your session. Each row represents one event occurrence. The `CAST(... AS xml)` changes the data type of the column from **nvarchar** to **xml**. This lets you select the column value, to open it in a new window for easier reading.
 
 > [!NOTE]  
-> The `event_file` target always inserts a numeric part in the `xel` file name. Before you can run the following query, you must copy the actual full name of the `xel` file that includes this numeric part, and paste it into the `SELECT` statement. In the example below, the numeric part is `_0_131085363367310000`.
+> The `event_file` target always inserts a numeric part in the `xel` file name. Before you can run the following query, you must copy the actual full name of the `xel` file that includes this numeric part, and paste it into the `SELECT` statement. In the following example, the numeric part is `_0_131085363367310000`.
 
 ```sql
-SELECT
-        object_name,
-        file_name,
-        file_offset,
-        event_data,
-        'CLICK_NEXT_CELL_TO_BROWSE_XML RESULTS!'
-                AS [CLICK_NEXT_CELL_TO_BROWSE_XML_RESULTS],
-        CAST(event_data AS xml) AS [event_data_XML]
-                -- TODO: In the SSMS results grid, click this XML cell
-    FROM
-        sys.fn_xe_file_target_read_file(
-            'C:\Temp\YourSession_Target_0_131085363367310000.xel',
-            null, null, null
-        );
+SELECT object_name,
+    file_name,
+    file_offset,
+    event_data,
+    'CLICK_NEXT_CELL_TO_BROWSE_XML RESULTS!' AS [CLICK_NEXT_CELL_TO_BROWSE_XML_RESULTS],
+    CAST(event_data AS XML) AS [event_data_XML]
+-- TODO: In the SSMS results grid, click this XML cell
+FROM sys.fn_xe_file_target_read_file(
+    'C:\Temp\YourSession_Target_0_131085363367310000.xel', NULL, NULL, NULL
+);
+
 ```
 
 This query provides two ways to view the full results of any given event row:
@@ -276,7 +266,7 @@ This query provides two ways to view the full results of any given event row:
 
 #### Event data in XML
 
-Next we see part of the results, which are in XML format. The XML here is edited here for brevity. `<data name="row_count">` displays a value of `6`, which matches our six result rows displayed earlier. And we can see the whole `SELECT` statement.
+Next we see part of the results, which are in XML format. The following XML is edited for brevity. `<data name="row_count">` displays a value of `6`, which matches our six result rows displayed earlier. And we can see the whole `SELECT` statement.
 
 ```xml
 <event name="sql_statement_completed" package="sqlserver" timestamp="2016-05-24T04:06:08.997Z">
@@ -299,31 +289,23 @@ Next we see part of the results, which are in XML format. The XML here is edited
     <value>584</value>
   </data>
   <data name="statement">
-    <value>SELECT
-        c.name,
-        Count(*)  AS [Count-Per-Column-Repeated-Name]
-    FROM
-             sys.syscolumns  AS c
-        JOIN sys.sysobjects  AS o
-
+    <value>SELECT c.name,
+            COUNT(*) AS [Count-Per-Column-Repeated-Name]
+        FROM sys.syscolumns AS c
+        INNER JOIN sys.sysobjects AS o
             ON o.id = c.id
-    WHERE
-        o.type = 'V'
-        AND
-        c.name like '%event%'
-    GROUP BY
-        c.name
-    HAVING
-        Count(*) &gt;= 3   --2     -- Try both values during session.
-    ORDER BY
-        c.name</value>
-  </data>
+        WHERE o.type = 'V'
+            AND c.name LIKE '%event%'
+        GROUP BY c.name
+        HAVING Count(*) >= 3 --2     -- Try both values during session.
+    ORDER BY c.name;</value>
+      </data>
 </event>
 ```
 
 ## Display event session data in SSMS
 
-There are several advanced features in the SSMS UI you can use to view the data that is captured by an event session. For more information, see [View event data in SQL Server Management Studio](advanced-viewing-of-target-data-from-extended-events-in-sql-server.md).
+There are several advanced features in the SSMS UI you can use to view the data captured by an event session. For more information, see [View event data in SQL Server Management Studio](advanced-viewing-of-target-data-from-extended-events-in-sql-server.md).
 
 You start with context menu options labeled **View Target Data** and **Watch Live Data**.
 
@@ -333,13 +315,13 @@ In the SSMS Object Explorer, you can right-click the target node that is under y
 
 The display isn't updated as new events occur in a session. But you can select **View Target Data** again.
 
-:::image type="content" source="media/xevents-viewtargetdata-ssms-targetnode-61.png" alt-text="Screenshot of View Target Data, in SSMS, Management > Extended Events > Sessions > YourSession > package0.event_file, right-click.":::
+:::image type="content" source="media/xevents-viewtargetdata-ssms-targetnode-61.png" alt-text="Screenshot of View Target Data, in SSMS, Management > Extended Events > Sessions > YourSession > package0.event_file, right-click." lightbox="media/xevents-viewtargetdata-ssms-targetnode-61.png":::
 
 ### Watch live data
 
 In the SSMS Object Explorer, you can right-click your event session node. In the context menu, select **Watch Live Data**. SSMS displays incoming data as it continues to arrive in real time.
 
-:::image type="content" source="media/xevents-watchlivedata-ssms-yoursessionnode-63.png" alt-text="Screenshot of Watch Live Data, in SSMS, Management > Extended Events > Sessions > YourSession, right-click.":::
+:::image type="content" source="media/xevents-watchlivedata-ssms-yoursessionnode-63.png" alt-text="Screenshot of Watch Live Data, in SSMS, Management > Extended Events > Sessions > YourSession, right-click." lightbox="media/xevents-watchlivedata-ssms-yoursessionnode-63.png":::
 
 ## Terms and concepts in Extended Events
 
@@ -401,20 +383,20 @@ Another option for finding events by name is to use the **New Session > Events >
 
 ### SQL Trace event classes
 
-A description of using extended events with SQL Trace event classes and columns is available at: [View the Extended Events Equivalents to SQL Trace Event Classes](view-the-extended-events-equivalents-to-sql-trace-event-classes.md).
+A description of using Extended Events with SQL Trace event classes and columns is available at: [View the Extended Events Equivalents to SQL Trace Event Classes](view-the-extended-events-equivalents-to-sql-trace-event-classes.md).
 
 ### Event Tracing for Windows (ETW)
 
-Descriptions of using extended events with Event Tracing for Windows (ETW) are available at:
+Descriptions of using Extended Events with Event Tracing for Windows (ETW) are available at:
 
-- [Event Tracing for Windows Target](event-tracing-for-windows-target.md)
+- [Event Tracing for Windows target](event-tracing-for-windows-target.md)
 - [Monitor System Activity Using Extended Events](monitor-system-activity-using-extended-events.md)
 
 ### System event sessions
 
-In SQL Server and Azure SQL Managed Instance, several system event sessions are created by default and configured to start when the database engine is started. Like most event sessions, they consume a small amount of resources and don't materially affect workload performance. Microsoft recommends that these sessions remain enabled and running. The health sessions, particularly the [system_health](use-the-system-health-session.md) session, are often useful for monitoring and troubleshooting.
+In [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and Azure SQL Managed Instance, several system event sessions are created by default and configured to start when the database engine is started. Like most event sessions, they consume a small amount of resources and don't materially affect workload performance. Microsoft recommends that these sessions remain enabled and running. The health sessions, particularly the [system_health](use-the-system-health-session.md) session, are often useful for monitoring and troubleshooting.
 
-You can see these event sessions in the SSMS Object Explorer under **Management > Extended Events > Sessions**. For example, in SQL Server, these system event sessions are:
+You can see these event sessions in the SSMS Object Explorer under **Management > Extended Events > Sessions**. For example, in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], these system event sessions are:
 
 - `AlwaysOn_health`
 - `system_health`
@@ -422,13 +404,13 @@ You can see these event sessions in the SSMS Object Explorer under **Management 
 
 ### PowerShell provider
 
-You can manage Extended Events by using the SQL Server PowerShell provider. For more information, see [Use the PowerShell Provider for Extended Events](use-the-powershell-provider-for-extended-events.md).
+You can manage Extended Events by using the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] PowerShell provider. For more information, see [Use the PowerShell Provider for Extended Events](use-the-powershell-provider-for-extended-events.md).
 
 ### System views
 
 The system views for Extended Events include:
 
-- *Catalog views:* for information about event sessions that have been defined by `CREATE EVENT SESSION`.
+- *Catalog views:* for information about event sessions defined by `CREATE EVENT SESSION`.
 - *Dynamic management views (DMVs):* for information about active (started) event sessions.
 
 [SELECTs and JOINs From System Views for Extended Events in SQL Server](selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) provides information about:

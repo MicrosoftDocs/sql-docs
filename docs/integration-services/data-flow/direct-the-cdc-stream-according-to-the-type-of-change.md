@@ -12,6 +12,8 @@ ms.topic: how-to
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
+> [!IMPORTANT]
+> CDC Flow Components, including CDC Control Task, CDC Source and CDC Splitter, are deprecated. For details, refer to [the announcement](https://www.microsoft.com/sql-server/blog/2024/02/28/sql-server-integration-services-ssis-change-data-capture-attunity-feature-deprecations/).
 
   To add and configure a CDC splitter Transformation, the package must contain at least one Data Flow task and a CDC source.  
   

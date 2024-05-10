@@ -3,7 +3,7 @@ title: "CDC Flow Components"
 description: "CDC Flow Components"
 author: chugugrace
 ms.author: chugu
-ms.date: "03/14/2017"
+ms.date: "05/09/2024"
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual
@@ -13,7 +13,7 @@ ms.topic: conceptual
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 > [!IMPORTANT]
-> CDC Flow Components, including CDC Control Task, CDC Source and CDC Splitter, are deprecated. Details refer to [the announcement](https://www.microsoft.com/sql-server/blog/2024/02/28/sql-server-integration-services-ssis-change-data-capture-attunity-feature-deprecations/).
+> CDC Flow Components, including CDC Control Task, CDC Source and CDC Splitter, are deprecated. For details, refer to [the announcement](https://www.microsoft.com/sql-server/blog/2024/02/28/sql-server-integration-services-ssis-change-data-capture-attunity-feature-deprecations/).
   
   The Change Data Capture Components by Attunity for Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] help SSIS developers work with CDC and reduce the complexity of CDC packages.  
   

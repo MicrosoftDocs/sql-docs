@@ -23,7 +23,7 @@ f1_keywords:
 
   The CDC source reads a range of change data from [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] change tables and delivers the changes downstream to other SSIS components.  
   
- The range of change data read by the CDC source is called the CDC Processing Range and is determine by the CDC Control task that is executed before the current data flow starts. The CDC Processing Range is derived from the value of a package variable that maintains the state of the CDC processing for a group of tables.  
+ The range of change data read by the CDC source is called the CDC Processing Range and is determined by the CDC Control task that is executed before the current data flow starts. The CDC Processing Range is derived from the value of a package variable that maintains the state of the CDC processing for a group of tables.  
   
  The CDC source extracts data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database by using a database table, a view, or an SQL statement.  
   

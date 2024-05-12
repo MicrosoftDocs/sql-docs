@@ -203,7 +203,7 @@ Disable the automatic statistics update option, AUTO_STATISTICS_UPDATE, for *sta
 To re-enable statistics updates, remove the statistics with [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md) and then run CREATE STATISTICS without the NORECOMPUTE option.
 
 > [!WARNING]  
-> Using this option can produce suboptimal query plans. We recommend using this option sparingly, and then only by a qualified system administrator.
+> Disabling automatic updating of statistics may prevent the Query Optimizer from picking optimal execution plans for queries that involve the table. We recommend using this option sparingly, and then only by a qualified database administrator.
 
 For more information about the AUTO_STATISTICS_UPDATE option, see [ALTER DATABASE SET Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md). For more information about disabling and re-enabling statistics updates, see [Statistics](../../relational-databases/statistics/statistics.md).
 

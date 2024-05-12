@@ -371,18 +371,20 @@ To view `IGNORE_DUP_KEY`, use [sys.indexes](../../relational-databases/system-ca
 In backward compatible syntax, `WITH IGNORE_DUP_KEY` is equivalent to `WITH IGNORE_DUP_KEY = ON`.
 
 #### STATISTICS_NORECOMPUTE = { ON | OFF }
-Specifies whether distribution statistics are recomputed. The default is OFF.
+Disable or enable the automatic statistics update option, AUTO_STATISTICS_UPDATE, for the statistics related to the specified index(es). The default is OFF.
 
 ON  
-Out-of-date statistics aren't automatically recomputed.
+Automatic statistics update will be disabled after the index is rebuilt.
 
 OFF  
-Automatic statistics updating are enabled.
+Automatic statistics update will be enabled after the index is rebuilt.
 
 To restore automatic statistics updating, set the `STATISTICS_NORECOMPUTE` to OFF, or execute `UPDATE STATISTICS` without the `NORECOMPUTE` clause.
 
 > [!IMPORTANT]  
-> Disabling automatic recomputation of distribution statistics may prevent the Query Optimizer from picking optimal execution plans for queries that involve the table.
+> Disabling automatic updating of statistics may prevent the Query Optimizer from picking optimal execution plans for queries that involve the table. We recommend using this option sparingly, and then only by a qualified database administrator.
+
+**NOTE:** This setting does not prevent the automatic update with fullscan of the index-related statistics during the rebuild operation.
 
 #### STATISTICS_INCREMENTAL = { ON | OFF }
 

@@ -17242,8 +17242,6 @@ items:
           href: t-sql/language-elements/begin-end-transact-sql.md
         - name: BREAK
           href: t-sql/language-elements/break-transact-sql.md
-        - name: CONTINUE
-          href: t-sql/language-elements/continue-transact-sql.md
         - name: ELSE (IF...ELSE)
           href: t-sql/language-elements/else-if-else-transact-sql.md
         - name: END (BEGIN...END)
@@ -17260,7 +17258,7 @@ items:
           href: t-sql/language-elements/try-catch-transact-sql.md
         - name: WAITFOR
           href: t-sql/language-elements/waitfor-transact-sql.md
-        - name: WHILE
+        - name: WHILE (and CONTINUE)
           href: t-sql/language-elements/while-transact-sql.md
       - name: Cursors
         href: t-sql/language-elements/cursors-transact-sql.md

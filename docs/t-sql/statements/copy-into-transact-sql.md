@@ -2,10 +2,10 @@
 title: COPY INTO (Transact-SQL)
 titleSuffix: Azure Synapse Analytics and Microsoft Fabric
 description: Use the COPY statement in Azure Synapse Analytics and Warehouse in Microsoft Fabric for loading from external storage accounts.
-author: periclesrocha
-ms.author: procha
-ms.reviewer: wiassaf, mikeray
-ms.date: 03/22/2024
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: procha, mikeray, stwynant
+ms.date: 05/13/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -533,9 +533,9 @@ Follow these steps to work around this issue by re-registering the workspace's m
    Set-AzSqlServer -ResourceGroupName your-database-server-resourceGroup -ServerName your-SQL-servername -AssignIdentity
    ```
    
-## Next steps
+## Related content
 
-[Loading overview with [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](/azure/sql-data-warehouse/design-elt-data-loading)
+- [Loading overview with [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](/azure/sql-data-warehouse/design-elt-data-loading)
 
 ::: moniker-end
 
@@ -549,11 +549,11 @@ In [!INCLUDE [fabric](../../includes/fabric.md)], the [COPY (Transact-SQL)](/sql
 
 For more information on using COPY INTO on your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], see [Ingest data into your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] using the COPY statement](/fabric/data-warehouse/ingest-data-copy).
 
-By default the COPY INTO statement will authenticate as the executing EntraID user.
+By default, `COPY INTO` will authenticate as the executing Entra ID user.
 
 > [!NOTE]
 > For [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse-md.md)], visit [COPY INTO for [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)]](copy-into-transact-sql.md?view=azure-sqldw-latest&preserve-view=true).  
-> **Limitation:** Onelake paths are currently not supported, only BLOB and ADLS GEN2 storage accounts are supported
+
 Use COPY for the following capabilities:
 
 - Use lower privileged users to load without needing strict CONTROL permissions on the data warehouse.
@@ -623,7 +623,10 @@ When *column_list* isn't specified, COPY maps columns based on the source and ta
 
 When a column list isn't specified, COPY maps columns based on the source and target order: Input field 1 goes to target column 1, field 2 goes to column 2, etc.
 
-#### *External locations*
+#### *External location*
+
+> [!NOTE]
+> [Fabric OneLake](/fabric/onelake/onelake-overview) paths are currently not supported, only BLOB and ADLS Gen2 storage accounts are supported.
 
 Specifies where the files containing the data is staged. Currently Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage are supported:
 
@@ -651,22 +654,19 @@ Wildcards can be included in the path where
 
 Multiple file locations can only be specified from the same storage account and container via a comma-separated list such as:
 
-- `https://<account>.blob.core.windows.net/<container\>/<path\>`, `https://<account\>.blob.core.windows.net/<container\>/<path\>`
+- `https://<account>.blob.core.windows.net/<container\>/<path\>, https://<account\>.blob.core.windows.net/<container\>/<path\>`
 
-#### *External locations behind firewall*
-
-
+**External locations behind firewall**
 
 To access files on either an Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage that is behind a firewall, the following prerequisites are required:
 
-1. A **workspace identity** for the workspace hosting your warehouse must be provisioned. More information on how to set up a workspace identity can be found here [https://learn.microsoft.com/en-us/fabric/security/workspace-identity](/fabric/security/workspace-identity))
-
-1. Your Fabric workspace hosting the warehouse must be added as a **trusted resource**. More information on how to add your fabric workspace as a trusted resource can be found here [https://learn.microsoft.com/en-us/fabric/security/security-trusted-workspace-access#resource-instance-rule](/fabric/security/security-trusted-workspace-access)
-
-1. Your EntraID account must have access to the underlying files through **RBAC** ([https://learn.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access?tabs=portal](/azure/storage/blobs/assign-azure-role-data-access?tabs=portal)) or **ACL's** ([https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-access-control](/azure/storage/blobs/data-lake-storage-access-control)).
+1. A **workspace identity** for the workspace hosting your warehouse must be provisioned. For more information on how to set up a workspace identity, see [Workspace identity](/fabric/security/workspace-identity).
+1. Your Fabric workspace hosting the warehouse must be added as a **trusted resource**. More information on how to add your fabric workspace as a trusted resource, see [Resource instance rule](/fabric/security/security-trusted-workspace-access).
+1. Your Entra ID account must have access to the underlying files through [Azure role-based access control (RBAC)](/azure/storage/blobs/assign-azure-role-data-access?tabs=portal)) or [data lake ACLs](/azure/storage/blobs/data-lake-storage-access-control)).
 
 > [!NOTE]
-> Accessing storage accounts behind a firewall is currently in Public Preview.
+> Accessing storage accounts behind a firewall is currently in preview.
+
 #### *FILE_TYPE = { 'CSV' | 'PARQUET' }*
 
 *FILE_TYPE* specifies the format of the external data.
@@ -899,11 +899,11 @@ Consider splitting large Parquet files, especially when the number of files is s
 
 There are no limitations on the number or size of files; however, for best performance, we recommend files that are at least 4 MB.
 
-### What Authentication is used when I don't specify a credential?
+### What authentication method is used when I don't specify a credential?
 
-By default it will use the executing user's EntraID.
+By default, `COPY INTRO` will use the executing user's Entra ID.
 
-## Next steps
+## Related content
 
 - [Ingest data into your Warehouse in Microsoft Fabric](/fabric/data-warehouse/ingest-data)
 - [Ingest data into your Warehouse using the COPY statement](/fabric/data-warehouse/ingest-data-copy)

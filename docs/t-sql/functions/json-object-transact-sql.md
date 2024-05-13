@@ -4,7 +4,7 @@ description: JSON_OBJECT constructs JSON object text from zero or more expressio
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: umajay
-ms.date: 05/06/2024
+ms.date: 05/13/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -43,9 +43,12 @@ JSON_OBJECT ( [ <json_key_value> [,...n] ] [ json_null_clause ] )
  *value_expression*
  Is an expression that defines the value of the JSON key.
 
-#### *json_null_clause* can be used to control the behavior of JSON_OBJECT function when value_expression is `NULL`. The option `NULL ON NULL `converts the SQL NULL value into a JSON null value when generating the JSON key value. The option `ABSENT ON NULL` will omit the entire key if the value is `NULL`. The default setting for this option is `NULL ON NULL`.
+#### *json_null_clause* 
+
+Can be used to control the behavior of JSON_OBJECT function when value_expression is `NULL`. The option `NULL ON NULL `converts the SQL `NULL` value into a JSON null value when generating the JSON key value. The option `ABSENT ON NULL` will omit the entire key if the value is `NULL`. The default setting for this option is `NULL ON NULL`.
 
 ## Return value
+
 Returns a valid JSON object string of **nvarchar(max)** type.
 
 For more info about what you see in the output of the `JSON_OBJECT` function, see the following articles:  

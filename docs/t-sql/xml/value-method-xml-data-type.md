@@ -38,7 +38,10 @@ The *XQuery* expression, a string literal, that retrieves data inside the XML in
 
 #### *SQLType*
 
-The preferred SQL type, a string literal, to be returned. The return type of this method matches the *SQLType* parameter. *SQLType* can't be an **xml** data type, a common language runtime (CLR) user-defined type, **image**, **text**, **ntext**, or **sql_variant** data type. *SQLType* can be a user-defined SQL data type.
+The preferred SQL type, a string literal, to be returned. The return type of this method matches the *SQLType* parameter. *SQLType* can be a user-defined SQL data type.
+
+> [!NOTE]  
+> *SQLType* can't be one of the following data types: **xml**, **image**, **text**, **ntext**, **sql_variant**, or a common language runtime (CLR) user-defined type.
 
 The `value()` method uses the [!INCLUDE [tsql](../../includes/tsql-md.md)] `CONVERT` operator implicitly. `value()` tries to convert the result of the XQuery expression, the serialized string representation, from XML Schema Definition (XSD) type to the corresponding SQL type specified by [!INCLUDE [tsql](../../includes/tsql-md.md)] conversion. For more information about type casting rules for `CONVERT`, see [CAST and CONVERT](../functions/cast-and-convert-transact-sql.md).
 
@@ -73,7 +76,7 @@ A value of `1` is returned as a result.
 
 Although there's only one `ProductID` attribute in the XML instance, the static typing rules require you to explicitly specify that the path expression returns a singleton. Therefore, the `[1]` is added to the end of the path expression. For more information about static typing, see [XQuery and Static Typing](../../xquery/xquery-and-static-typing.md).
 
-### B. Use the value() method to retrieve a value from an XML type column
+### B. Use the value() method to retrieve an integer value from an XML type column
 
 The following query is specified against an **xml** type column (`CatalogDescription`) in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. The query retrieves `ProductModelID` attribute values from each XML instance stored in the column.
 
@@ -92,15 +95,48 @@ Note from the previous query:
 
 - Per static typing requirements, `[1]` is added at the end of the path expression in the `value()` method to explicitly indicate that the path expression returns a singleton.
 
-Here's the partial result:
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
 
 ```output
 35
 34
-...
+28
+25
+23
+19
 ```
 
-### C. Use the value() and exist() methods to retrieve values from an XML type column
+### C. Use the value() method to retrieve a string value from an XML type column
+
+The following query is specified against the **xml** type column (`CatalogDescription`) in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. The query retrieves `ProductModelName` attribute values from each XML instance stored in the column.
+
+```sql
+SELECT CatalogDescription.value(
+    'declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";
+       (/PD:ProductDescription/@ProductModelName)[1]', 'varchar(50)') AS Result
+FROM Production.ProductModel
+WHERE CatalogDescription IS NOT NULL
+ORDER BY Result DESC;
+```
+
+Note from the previous query:
+
+- The `namespace` keyword is used to define a namespace prefix.
+
+- Per static typing requirements, `[1]` is added at the end of the path expression in the `value()` method to explicitly indicate that the path expression returns a singleton.
+
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
+
+```output
+Touring-2000
+Touring-1000
+Road-450
+Road-150
+Mountain-500
+Mountain 100
+```
+
+### D. Use the value() and exist() methods to retrieve values from an XML type column
 
 The following example shows using both the `value()` method and the [exist() method](exist-method-xml-data-type.md) of the **xml** data type. The `value()` method is used to retrieve `ProductModelID` attribute values from the XML. The `exist()` method in the `WHERE` clause is used to filter the rows from the table.
 
@@ -134,7 +170,7 @@ Here's the partial result:
 ...
 ```
 
-### D. Use the exist() method instead of the value() method
+### E. Use the exist() method instead of the value() method
 
 For performance reasons, instead of using the `value()` method in a predicate to compare with a relational value, use `exist()` with `sql:column()`. For example:
 

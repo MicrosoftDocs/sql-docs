@@ -5,7 +5,7 @@ description: Enable pushdown computation to improve performance of queries on yo
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: wiassaf, nathansc 
-ms.date: 7/11/2023
+ms.date: 5/13/2024
 ms.service: sql
 ms.subservice: polybase
 ms.topic: conceptual
@@ -37,7 +37,7 @@ This table summarizes pushdown computation support on different external data so
 | Data Source      | Joins  | Projections | Aggregations | Filters   | Statistics |
 |------------------|--------|-------------|--------------|-----------|------------|
 | **Generic ODBC** | Yes    | Yes         | Yes          | Yes       | Yes        |  
-| **Oracle**       | Yes    | Yes         | Yes          | Yes       | Yes        |
+| **Oracle**       | Yes+    | Yes         | Yes          | Yes       | Yes        |
 | **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**   | Yes    | Yes         | Yes          | Yes       | Yes        |
 | **Teradata**     | Yes    | Yes         | Yes          | Yes       | Yes        |  
 | **MongoDB\***  | **No** | Yes         | Yes\*\*\*          | Yes\*\*\*       | Yes        |
@@ -49,6 +49,8 @@ This table summarizes pushdown computation support on different external data so
 \*\* See [Pushdown computation and Hadoop providers](#pushdown-computation-and-hadoop-providers).
 
 \*\*\* Pushdown support for aggregations and filters for the MongoDB ODBC connector for SQL Server 2019 was introduced with SQL Server 2019 CU18.
+
++ Oracle supports pushdown for joins but you may need to create statistics on the join columns to achieve pushdown.
 
 > [!NOTE]
 > Pushdown computation can be blocked by some T-SQL syntax. For more information, review [Syntax that prevents pushdown](polybase-pushdown-computation.md#syntax-that-prevents-pushdown).
@@ -229,7 +231,7 @@ To achieve pushdown of the variable, you need to enable query optimizer hotfixes
 
 This limitation applies to execution of [sp_executesql](../system-stored-procedures/sp-executesql-transact-sql.md). The limitation also applies to utilization of some functions in the filter clause.
 
-Note: The ability to pushdown the variable was first introduced in SQL Server 2019 CU5.
+The ability to pushdown the variable was first introduced in SQL Server 2019 CU5.
 
 ### Collation conflict
 
@@ -293,10 +295,7 @@ WHERE Speed > 65
 OPTION (DISABLE EXTERNALPUSHDOWN);
 ```
 
-## Next steps
+## Related content
 
 - For more information about PolyBase, see [Introducing data virtualization with PolyBase](polybase-guide.md)
-
-## See also
-
 - [How to tell if external pushdown occurred](polybase-how-to-tell-pushdown-computation.md)  

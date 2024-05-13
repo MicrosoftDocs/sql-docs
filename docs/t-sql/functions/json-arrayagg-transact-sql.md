@@ -15,11 +15,11 @@ helpviewer_keywords:
   - "JSON_ARRAYAGG function"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || =azuresqldb-mi-current"
 ---
 # JSON_ARRAYAGG (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [asdb-asdbmi](../../includes/applies-to-version/asdb-asdbmi.md)]
 
  Constructs a JSON array from an aggregation of SQL data or columns.
 
@@ -75,10 +75,10 @@ SELECT JSON_ARRAYAGG(null);
 The following example constructs a JSON array with three elements from a result set.  
   
 ```sql  
-select JSON_ARRAYAGG( c1 )
-from (
-    values('c'), ('b'), ('a')
-) as t(c1);
+SELECT JSON_ARRAYAGG( c1 )
+FROM (
+    VALUES ('c'), ('b'), ('a')
+) AS t(c1);
 ```
 
 **Result**
@@ -92,10 +92,10 @@ from (
 The following example constructs a JSON array with three elements ordered by the value of the column.  
   
 ```sql  
-select JSON_ARRAYAGG( c1 order by c1)
-from (
-    values('c'), ('b'), ('a')
-) as t(c1);
+SELECT JSON_ARRAYAGG( c1 ORDER BY c1)
+FROM (
+    VALUES ('c'), ('b'), ('a')
+) AS t(c1);
 ```
 
 **Result**
@@ -106,12 +106,12 @@ from (
 
 ### Example 4
 
-The following example returns a result with two columns. The first column contains the `object_id` value. The second column contains a JSON array containing the name of the columns. The columns in the JSON array are order based on the `column_id` value.  
-  
+The following example returns a result with two columns. The first column contains the `object_id` value. The second column contains a JSON array containing the names of the columns. The columns in the JSON array are ordered based on the `column_id` value.  
+
 ```sql  
-select top(5) c.object_id, JSON_ARRAYAGG(c.name ORDER BY c.column_id) as column_list
-  from sys.columns as c
- group by c.object_id;
+SELECT TOP(5) c.object_id, JSON_ARRAYAGG(c.name ORDER BY c.column_id) AS column_list
+FROM sys.columns AS c
+GROUP BY c.object_id;
 ```
 
 **Result**

@@ -15,11 +15,11 @@ helpviewer_keywords:
   - "JSON_OBJECTAGG function"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || =azuresqldb-mi-current"
 ---
 # JSON_OBJECTAGG (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [asdb-asdbmi](../../includes/applies-to-version/asdb-asdbmi.md)]
 
  Constructs a JSON object from an aggregation of SQL data or columns.
   
@@ -74,10 +74,10 @@ select JSON_OBJECTAGG ( 'key':null )
 The following example constructs a JSON object with three properties from a result set.  
   
 ```sql  
-select JSON_OBJECTAGG( c1:c2 )
-from (
-    values('key1', 'c'), ('key2', 'b'), ('key3','a')
-) as t(c1, c2);
+SELECT JSON_OBJECTAGG( c1:c2 )
+FROM (
+    VALUES('key1', 'c'), ('key2', 'b'), ('key3','a')
+) AS t(c1, c2);
 ```
 
 **Result**
@@ -89,11 +89,11 @@ from (
 ### Example 3
 
 The following example returns a result with two columns. The first column contains the `object_id` value. The second column contains a JSON object where the key is the column name and value is the `column_id`.  
-  
+
 ```sql  
-select top(5) c.object_id, JSON_OBJECTAGG(c.name:c.column_id) as columns
-  from sys.columns as c
- group by c.object_id;
+SELECT TOP(5) c.object_id, JSON_OBJECTAGG(c.name:c.column_id) AS columns
+  FROM sys.columns AS c
+ GROUP BY c.object_id;
 ```
 
 **Result**

@@ -2,10 +2,10 @@
 title: COPY INTO (Transact-SQL)
 titleSuffix: Azure Synapse Analytics and Microsoft Fabric
 description: Use the COPY statement in Azure Synapse Analytics and Warehouse in Microsoft Fabric for loading from external storage accounts.
-author: periclesrocha
-ms.author: procha
-ms.reviewer: wiassaf, mikeray
-ms.date: 03/22/2024
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: procha, mikeray, stwynant
+ms.date: 05/13/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -533,9 +533,9 @@ Follow these steps to work around this issue by re-registering the workspace's m
    Set-AzSqlServer -ResourceGroupName your-database-server-resourceGroup -ServerName your-SQL-servername -AssignIdentity
    ```
    
-## Next steps
+## Related content
 
-[Loading overview with [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](/azure/sql-data-warehouse/design-elt-data-loading)
+- [Loading overview with [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](/azure/sql-data-warehouse/design-elt-data-loading)
 
 ::: moniker-end
 
@@ -549,8 +549,10 @@ In [!INCLUDE [fabric](../../includes/fabric.md)], the [COPY (Transact-SQL)](/sql
 
 For more information on using COPY INTO on your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], see [Ingest data into your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] using the COPY statement](/fabric/data-warehouse/ingest-data-copy).
 
-> [!NOTE]  
-> For [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse-md.md)], visit [COPY INTO for [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)]](copy-into-transact-sql.md?view=azure-sqldw-latest&preserve-view=true).
+By default, `COPY INTO` will authenticate as the executing Entra ID user.
+
+> [!NOTE]
+> For [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse-md.md)], visit [COPY INTO for [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)]](copy-into-transact-sql.md?view=azure-sqldw-latest&preserve-view=true).  
 
 Use COPY for the following capabilities:
 
@@ -621,7 +623,10 @@ When *column_list* isn't specified, COPY maps columns based on the source and ta
 
 When a column list isn't specified, COPY maps columns based on the source and target order: Input field 1 goes to target column 1, field 2 goes to column 2, etc.
 
-#### *External locations*
+#### *External location*
+
+> [!NOTE]
+> [Fabric OneLake](/fabric/onelake/onelake-overview) paths are currently not supported, only BLOB and ADLS Gen2 storage accounts are supported.
 
 Specifies where the files containing the data is staged. Currently Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage are supported:
 
@@ -649,7 +654,18 @@ Wildcards can be included in the path where
 
 Multiple file locations can only be specified from the same storage account and container via a comma-separated list such as:
 
-- `https://<account>.blob.core.windows.net/<container\>/<path\>`, `https://<account\>.blob.core.windows.net/<container\>/<path\>`
+- `https://<account>.blob.core.windows.net/<container\>/<path\>, https://<account\>.blob.core.windows.net/<container\>/<path\>`
+
+**External locations behind firewall**
+
+To access files on either an Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage that is behind a firewall, the following prerequisites are required:
+
+1. A **workspace identity** for the workspace hosting your warehouse must be provisioned. For more information on how to set up a workspace identity, see [Workspace identity](/fabric/security/workspace-identity).
+1. Your Fabric workspace hosting the warehouse must be added as a **resource instance rule**. More information on how to add your fabric workspace with a resource instance rule, see [Resource instance rule](/fabric/security/security-trusted-workspace-access).
+1. Your Entra ID account must have access to the underlying files through [Azure role-based access control (RBAC)](/azure/storage/blobs/assign-azure-role-data-access?tabs=portal)) or [data lake ACLs](/azure/storage/blobs/data-lake-storage-access-control)).
+
+> [!NOTE]
+> Accessing storage accounts behind a firewall is currently in preview.
 
 #### *FILE_TYPE = { 'CSV' | 'PARQUET' }*
 
@@ -660,11 +676,10 @@ Multiple file locations can only be specified from the same storage account and 
 
 #### *CREDENTIAL (IDENTITY = '', SECRET = '')*
 
-*CREDENTIAL* specifies the authentication mechanism to access the external storage account. On [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], the only supported authentication mechanisms are Shared Access Signature (SAS) and Storage Account Key (SAK).
+*CREDENTIAL* specifies the authentication mechanism to access the external storage account. On [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], the only supported authentication mechanisms are Shared Access Signature (SAS) and Storage Account Key (SAK). User's EntraID authentication is default, no credential needs to be specified.
 
-> [!NOTE]  
-> When using a public storage account, CREDENTIAL does not need to be specified.
-
+> [!NOTE]
+> When using a public storage account, CREDENTIAL does not need to be specified. By default the executing user's Entra ID is used.
 - Authenticating with Shared Access Signature (SAS)
 
   - *IDENTITY: A constant with a value of 'Shared Access Signature'*
@@ -846,14 +861,13 @@ WITH (
 
 ### D. Load Parquet
 
-This example uses a wildcard to load all Parquet files under a folder.
+This example uses a wildcard to load all Parquet files under a folder using the executing user's EntraID.
 
 ```sql
 COPY INTO test_parquet
 FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder1/*.parquet'
 WITH (
-    FILE_TYPE = 'PARQUET',
-    CREDENTIAL=(IDENTITY= 'Shared Access Signature', SECRET='<Your_SAS_Token>')
+    FILE_TYPE = 'PARQUET'
 )
 ```
 
@@ -885,7 +899,11 @@ Consider splitting large Parquet files, especially when the number of files is s
 
 There are no limitations on the number or size of files; however, for best performance, we recommend files that are at least 4 MB.
 
-## Next steps
+### What authentication method is used when I don't specify a credential?
+
+By default, `COPY INTRO` will use the executing user's Entra ID.
+
+## Related content
 
 - [Ingest data into your Warehouse in Microsoft Fabric](/fabric/data-warehouse/ingest-data)
 - [Ingest data into your Warehouse using the COPY statement](/fabric/data-warehouse/ingest-data-copy)

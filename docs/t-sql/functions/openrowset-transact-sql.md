@@ -67,7 +67,7 @@ OPENROWSET
 
    -- bulk_options related to input file format
    [ , CODEPAGE = { 'ACP' | 'OEM' | 'RAW' | 'code_page' } ]
-   [ , FORMAT = 'CSV' ]
+   [ , FORMAT = { 'CSV' | 'PARQUET' | 'DELTA' ]
    [ , FIELDQUOTE = 'quote_characters' ]
    [ , FORMATFILE = 'format_file_path' ]
    [ , FORMATFILE_DATA_SOURCE = 'data_source_name' ]
@@ -279,9 +279,11 @@ Specifies the code page of the data in the data file. `CODEPAGE` is relevant onl
 | RAW | No conversion occurs from one code page to another. This is the fastest option. |
 | *code_page* | Indicates the source code page on which the character data in the data file is encoded; for example, 850.<br /><br />**Important** Versions before [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] don't support code page 65001 (UTF-8 encoding). |
 
-#### FORMAT = 'CSV'
+#### FORMAT = { 'CSV' | 'PARQUET' | 'DELTA' }
 
 Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], this argument specifies a comma separated values file compliant to the [RFC 4180](https://datatracker.ietf.org/doc/html/rfc4180) standard.
+
+Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], both PARQUET and DELTA formats are supported.
 
 ```sql
 SELECT *

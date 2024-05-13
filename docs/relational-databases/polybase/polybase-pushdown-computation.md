@@ -37,7 +37,7 @@ This table summarizes pushdown computation support on different external data so
 | Data Source      | Joins  | Projections | Aggregations | Filters   | Statistics |
 |------------------|--------|-------------|--------------|-----------|------------|
 | **Generic ODBC** | Yes    | Yes         | Yes          | Yes       | Yes        |  
-| **Oracle**       | Yes+    | Yes         | Yes          | Yes       | Yes        |
+| **Oracle**       | Yes\+    | Yes         | Yes          | Yes       | Yes        |
 | **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**   | Yes    | Yes         | Yes          | Yes       | Yes        |
 | **Teradata**     | Yes    | Yes         | Yes          | Yes       | Yes        |  
 | **MongoDB\***  | **No** | Yes         | Yes\*\*\*          | Yes\*\*\*       | Yes        |
@@ -50,7 +50,7 @@ This table summarizes pushdown computation support on different external data so
 
 \*\*\* Pushdown support for aggregations and filters for the MongoDB ODBC connector for SQL Server 2019 was introduced with SQL Server 2019 CU18.
 
-+ Oracle supports pushdown for joins but you might need to create statistics on the join columns to achieve pushdown.
+\+ Oracle supports pushdown for joins but you might need to create statistics on the join columns to achieve pushdown.
 
 > [!NOTE]
 > Pushdown computation can be blocked by some T-SQL syntax. For more information, review [Syntax that prevents pushdown](polybase-pushdown-computation.md#syntax-that-prevents-pushdown).

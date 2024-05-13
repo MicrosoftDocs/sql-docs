@@ -1,9 +1,10 @@
 ---
 title: "PARSENAME (Transact-SQL)"
-description: "PARSENAME (Transact-SQL)"
+description: Returns the specified part of an object name. The parts of an object that can be retrieved are the object name, schema name, database name, and server name.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: "06/02/2020"
+ms.reviewer: randolphwest
+ms.date: 05/10/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -18,99 +19,96 @@ helpviewer_keywords:
   - "part of object names [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # PARSENAME (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Returns the specified part of an object name. The parts of an object that can be retrieved are the object name, schema name, database name, and server name. 
-  
-> [!NOTE]  
->  The PARSENAME function does not indicate whether an object by the specified name exists. PARSENAME just returns the specified part of the specified object name.  
-  
- :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## Syntax  
-  
-```syntaxsql 
+Returns the specified part of an object name. The parts of an object that can be retrieved are the object name, schema name, database name, and server name.
+
+`PARSENAME` doesn't indicate whether an object by the specified name exists. `PARSENAME` just returns the specified part of the specified object name.
+
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+## Syntax
+
+```syntaxsql
 PARSENAME ('object_name' , object_piece )
-```  
-  
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+```
+
+[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
-*'object_name'*
-Is the parameter that holds the name of the object for which to retrieve the specified object part. This parameter is an optionally-qualified object name. If all parts of the object name are qualified, this name can have four parts: the server name, the database name, the schema name, and the object name.  Each part of the 'object_name' string is type *sysname* which is equivalent to nvarchar(128) or 256 bytes. If any part of the string exceeds 256 bytes, PARSENAME will return NULL for that part as it is not a valid sysname.
-  
-*object_piece*  
-Is the object part to return. *object_piece* is of type **int**, and can have these values:  
-    1 = Object name  
-    2 = Schema name  
-    3 = Database name  
-    4 = Server name  
-  
-## Return Type
+#### '*object_name*'
 
- **sysname**
-  
+The parameter that holds the name of the object for which to retrieve the specified object part. This parameter is an optionally qualified object name. If all parts of the object name are qualified, this name can have four parts: the server name, the database name, the schema name, and the object name.
+
+Each part of the '*object_name*' string is **sysname**, which is equivalent to **nvarchar(128)** or 256 bytes. If any part of the string exceeds 256 bytes, `PARSENAME` returns `NULL` for that part, as it's not a valid **sysname**.
+
+#### *object_piece*
+
+The object part to return. *object_piece* is **int**, and can be one of these values:
+
+| Value | Description |
+| --- | --- |
+| 1 | Object name |
+| 2 | Schema name |
+| 3 | Database name |
+| 4 | Server name |
+
+## Return types
+
+**sysname**
+
 ## Remarks
 
- PARSENAME returns NULL if one of the following conditions is true:  
-  
--   Either *object_name* or *object_piece* is NULL.  
-  
--   A syntax error occurs.  
-  
- The requested object part has a length of 0 and is not a valid [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier. A zero-length object name renders the complete qualified name as not valid.  
-  
+`PARSENAME` returns `NULL` if one of the following conditions is true:
+
+- Either *object_name* or *object_piece* is `NULL`.
+
+- A syntax error occurs.
+
+- The requested object part has a length of `0` and isn't a valid [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] identifier. A zero-length object name renders the complete qualified name as not valid.
+
 ## Examples
 
- The following example uses `PARSENAME` to return information about the `Person` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
-  
-```sql  
--- Uses AdventureWorks  
-  
-SELECT PARSENAME('AdventureWorksPDW2012.dbo.DimCustomer', 1) AS 'Object Name';  
-SELECT PARSENAME('AdventureWorksPDW2012.dbo.DimCustomer', 2) AS 'Schema Name';  
-SELECT PARSENAME('AdventureWorksPDW2012.dbo.DimCustomer', 3) AS 'Database Name';  
-SELECT PARSENAME('AdventureWorksPDW2012.dbo.DimCustomer', 4) AS 'Server Name';  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+The following example uses `PARSENAME` to return information about the `Person` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
+
+```sql
+-- Uses AdventureWorks
+
+SELECT PARSENAME('AdventureWorks2022.Person.Person', 1) AS 'Object Name';
+SELECT PARSENAME('AdventureWorks2022.Person.Person', 2) AS 'Schema Name';
+SELECT PARSENAME('AdventureWorks2022.Person.Person', 3) AS 'Database Name';
+SELECT PARSENAME('AdventureWorks2022.Person.Person', 4) AS 'Server Name';
+GO
 ```
+
+[!INCLUDE [ssResult](../../includes/ssresult-md.md)]
+
+```output
 Object Name
 ------------------------------
-DimCustomer
-
-(1 row(s) affected)
+Person
 
 Schema Name
 ------------------------------
-dbo
-
-(1 row(s) affected)
+Person
 
 Database Name
 ------------------------------
-AdventureWorksPDW2012
-
-(1 row(s) affected)
+AdventureWorks2022
 
 Server Name
 ------------------------------
 (null)
-
-(1 row(s) affected)
 ```
-  
-## See Also
 
-- [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
-- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
-- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
-- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
-  
-  
+## Related content
 
+- [QUOTENAME (Transact-SQL)](quotename-transact-sql.md)
+- [ALTER TABLE (Transact-SQL)](../statements/alter-table-transact-sql.md)
+- [CREATE TABLE (Transact-SQL)](../statements/create-table-transact-sql.md)
+- [System Functions by category for Transact-SQL](../../relational-databases/system-functions/system-functions-category-transact-sql.md)

@@ -4,7 +4,7 @@ description: This article describes the new serverless compute tier and compares
 author: oslake
 ms.author: moslake
 ms.reviewer: wiassaf, mathoma
-ms.date: 05/10/2024
+ms.date: 02/12/2024
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -189,7 +189,7 @@ Auto-resuming is triggered if any of the following conditions are true at any ti
 |Data discovery and classification|Adding, modifying, deleting, or viewing sensitivity labels|
 |Auditing|Viewing auditing records.<br>Updating or viewing auditing policy.|
 |Data masking|Adding, modifying, deleting, or viewing data masking rules|
-|Transparent data encryption (TDE)|Viewing state or status of transparent data encryption. Key rotation if using customer managed TDE (BYOK).|
+|Transparent data encryption|Viewing state or status of transparent data encryption|
 |Vulnerability assessment|Ad hoc scans and periodic scans if enabled|
 |Query (performance) data store|Modifying or viewing query store settings|
 |Performance recommendations|Viewing or applying performance recommendations|
@@ -223,7 +223,7 @@ If using [customer managed transparent data encryption](transparent-data-encrypt
 
 #### Key rotation
 
-If using [customer-managed transparent data encryption](transparent-data-encryption-byok-overview.md) (BYOK) and serverless auto-pausing is enabled, then the database is auto-resumed whenever keys are rotated and subsequently auto-paused when auto-pausing conditions are satisfied.
+If using [customer-managed transparent data encryption](transparent-data-encryption-byok-overview.md) (BYOK), and the serverless database is auto-paused, automated key rotation is deferred until the database is auto-resumed.
 
 ## <a id="create-serverless-db"></a> Create a new serverless database
 

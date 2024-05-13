@@ -8,16 +8,6 @@ ms.date: 11/21/2023
 ms.topic: troubleshooting
 ---
 
----
-title: "Troubleshoot connectivity to data processing service and telemetry endpoints"
-description: "Describes how to troubleshoot connectivity to the data processing service (DPS) and telemetry endpoints."
-author: twright-msft
-ms.author: twright
-ms.reviewer: mikeray
-ms.date: 11/21/2023
-ms.topic: troubleshooting
----
-
 # Troubleshoot connectivity to the data processing service and telemetry endpoints
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]

@@ -15957,6 +15957,10 @@ items:
         href: t-sql/data-types/tostring-database-engine.md
       - name: Write
         href: t-sql/data-types/write-database-engine.md
+    - name: JSON
+      items:
+      - name: JSON data type
+        href: t-sql/data-types/json-data-type.md
     - name: Numeric
       href: t-sql/data-types/numeric-types.md
       items:
@@ -16784,18 +16788,22 @@ items:
         items:
         - name: ISJSON
           href: t-sql/functions/isjson-transact-sql.md
-        - name: JSON_OBJECT
-          href: t-sql/functions/json-object-transact-sql.md
         - name: JSON_ARRAY
           href: t-sql/functions/json-array-transact-sql.md
-        - name: JSON_VALUE
-          href: t-sql/functions/json-value-transact-sql.md
-        - name: JSON_QUERY
-          href: t-sql/functions/json-query-transact-sql.md
+        - name: JSON_ARRAYAGG
+          href: t-sql/functions/json-arrayagg-transact-sql.md
         - name: JSON_MODIFY
           href: t-sql/functions/json-modify-transact-sql.md
+        - name: JSON_OBJECT
+          href: t-sql/functions/json-object-transact-sql.md
+        - name: JSON_OBJECTAGG
+          href: t-sql/functions/json-objectagg-transact-sql.md
         - name: JSON_PATH_EXISTS
           href: t-sql/functions/json-path-exists-transact-sql.md
+        - name: JSON_QUERY
+          href: t-sql/functions/json-query-transact-sql.md
+        - name: JSON_VALUE
+          href: t-sql/functions/json-value-transact-sql.md
       - name: Mathematical
         href: t-sql/functions/mathematical-functions-transact-sql.md
         items:

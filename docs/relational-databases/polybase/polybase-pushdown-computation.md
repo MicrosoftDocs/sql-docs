@@ -117,7 +117,7 @@ SELECT * FROM SensorData WHERE Speed > 65;
 
 Use predicate pushdown to improve performance for a query that selects a subset of columns from an external table.
 
-In this query, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] initiates a map-reduce job to pre-process the Hadoop delimited-text file so that only the data for the two columns, customer.name and customer.zip_code, will be copied to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+In this query, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] initiates a map-reduce job to preprocess the Hadoop delimited-text file so that only the data for the two columns, customer.name and customer.zip_code, will be copied to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ```sql
 SELECT customer.name, customer.zip_code
@@ -189,7 +189,7 @@ Date & time functions
 
 ## Syntax that prevents pushdown
 
-The following T-SQL functions or syntax will prevent pushdown computation:
+The following T-SQL functions or syntax prevents pushdown computation:
 
 - `AT TIME ZONE`
 - `CONCAT_WS`
@@ -214,7 +214,7 @@ Pushdown support for the `FORMAT` and `TRIM` syntax was introduced in [!INCLUDE[
 
 ### Filter clause with variable
 
-If you are specifying a variable in a filter clause, by default this will prevent pushdown of the filter clause. For example, if you run the following query, the filter clause will not be pushed down:
+When specifying a variable in a filter clause, by default this prevents pushdown of the filter clause. For example, if you run the following query, the filter clause will not be pushed down:
 
 ```sql
 DECLARE @BusinessEntityID INT

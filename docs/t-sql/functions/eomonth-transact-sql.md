@@ -24,7 +24,7 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 This function returns the last day of the month containing a specified date, with an optional offset.
 
 > [!TIP]  
-> You can use [DATETRUNC](datetrunc-transact-sql.md) to calculate the start of the month.
+> In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, you can use [DATETRUNC](datetrunc-transact-sql.md) to calculate the start of the month.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

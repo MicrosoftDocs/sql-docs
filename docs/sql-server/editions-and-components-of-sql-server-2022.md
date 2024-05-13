@@ -175,21 +175,21 @@ SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/a
 
 | Feature | Enterprise | Standard | Web | Express<br />with<br />Advanced<br />Services | Express |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| Columnstore <sup>1</sup> <sup>2</sup> | Yes | Yes | Yes | Yes | Yes |
+| Columnstore <sup>1, 2</sup> | Yes | Yes | Yes | Yes | Yes |
 | Large object binaries in clustered columnstore indexes | Yes | Yes | Yes | Yes | Yes |
 | Online non-clustered columnstore index rebuild | Yes | No | No | No | No |
-| In-Memory Database: In-Memory OLTP <sup>1</sup> | Yes | Yes | Yes | Yes <sup>3</sup> | Yes |
+| In-Memory Database: In-Memory OLTP <sup>1, 2</sup> | Yes | Yes | Yes | Yes <sup>3</sup> | Yes |
 | In-Memory Database: hybrid buffer pool | Yes | Yes | No | No | No |
 | In-Memory Database: hybrid buffer pool support for direct write | Yes | No | No | No | No |
 | In-Memory Database: Memory-optimized TempDB metadata | Yes | No | No | No | No |
 | In-Memory Database: persistent memory support | Yes | Yes | Yes | Yes | Yes |
 | Stretch Database <sup>4</sup> | Yes | Yes | Yes | Yes | Yes |
 | Multi-instance support | 50 | 50 | 50 | 50 | 50 |
-| Table and index partitioning | Yes | Yes | Yes | Yes | Yes |
-| Data compression | Yes | Yes | Yes | Yes | Yes |
+| Table and index partitioning <sup>2</sup> | Yes | Yes | Yes | Yes | Yes |
+| Data compression <sup>2</sup> | Yes | Yes | Yes | Yes | Yes |
 | Resource governor | Yes | No | No | No | No |
-| Partitioned table parallelism | Yes | Yes | Yes | No | No |
-| Multiple filestream containers | Yes | Yes | Yes | Yes | Yes |
+| Partitioned table parallelism <sup>2</sup> | Yes | Yes | Yes | No | No |
+| Multiple filestream containers <sup>2</sup> | Yes | Yes | Yes | Yes | Yes |
 | NUMA aware and large page memory and buffer array allocation | Yes | No | No | No | No |
 | Buffer pool extension | Yes | Yes | No | No | No |
 | Buffer pool parallel scan | Yes | Yes | No | No | No |

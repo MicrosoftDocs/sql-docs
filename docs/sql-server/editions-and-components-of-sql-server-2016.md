@@ -170,16 +170,16 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 | Feature | Enterprise | Standard | Web | Express<br />with<br />Advanced<br />Services | Express |
 | --- | :---: | :---: | :---: | :---: | :---: |
-| Columnstore <sup>1</sup> | Yes | Yes <sup>2</sup> | Yes <sup>2</sup> | Yes <sup>2</sup> | Yes <sup>2</sup> |
-| In-Memory OLTP <sup>1</sup> | Yes | Yes <sup>2</sup> | Yes <sup>2</sup> | Yes <sup>2, 3</sup> | Yes <sup>2</sup> |
+| Columnstore <sup>1, 2</sup> | Yes | Yes | Yes | Yes | Yes |
+| In-Memory OLTP <sup>1, 2</sup> | Yes | Yes | Yes | Yes <sup>3</sup> | Yes |
 | Stretch Database | Yes | Yes | Yes | Yes | Yes |
 | Persistent Main Memory | Yes | Yes | Yes | Yes | Yes |
 | Multi-instance support | 50 | 50 | 50 | 50 | 50 |
-| Table and index partitioning | Yes | Yes <sup>2</sup> | Yes <sup>2</sup> | Yes <sup>2</sup> | Yes <sup>2</sup> |
-| Data compression | Yes | Yes <sup>2</sup> | Yes <sup>2</sup> | Yes <sup>2</sup> | Yes <sup>2</sup> |
+| Table and index partitioning <sup>2</sup> | Yes | Yes | Yes | Yes | Yes |
+| Data compression <sup>2</sup> | Yes | Yes | Yes | Yes | Yes |
 | Resource Governor | Yes | No | No | No | No |
-| Partitioned Table Parallelism | Yes | Yes <sup>2</sup> | Yes <sup>2</sup> | No | No |
-| Multiple Filestream containers | Yes | Yes <sup>2</sup> | Yes <sup>2</sup> | Yes <sup>2</sup> | Yes <sup>2</sup> |
+| Partitioned Table Parallelism <sup>2</sup> | Yes | Yes | Yes | No | No |
+| Multiple Filestream containers <sup>2</sup> | Yes | Yes | Yes | Yes | Yes |
 | NUMA Aware Large Page Memory and Buffer Array Allocation | Yes | No <sup>4</sup> | No | No | No |
 | Buffer Pool Extension | Yes | Yes | No | No | No |
 | I/O Resource Governance | Yes | No | No | No | No |

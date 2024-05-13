@@ -4,7 +4,7 @@ description: JSON_OBJECTAGG constructs a JSON object from an aggregation of SQL 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: umajay
-ms.date: 05/02/2024
+ms.date: 05/13/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -51,13 +51,8 @@ The key / value pair of the JSON object.
 
 #### *json_null_clause*  
 
-Optional. Omit the entire property of an object if the value is `NULL`, or use JSON null as property value. If omitted, `NULL ON NULL` is default. 
+Optional. Omits the entire property of an object if the value is `NULL`, or use JSON null as property value. If omitted, `NULL ON NULL` is default. 
   
-## Return value
- 
-## Remarks
-
- 
 ## Examples
   
 ### Example 1
@@ -76,7 +71,7 @@ select JSON_OBJECTAGG ( 'key':null )
 
 ### Example 2
 
-The following example constructs a JSON object with three properties from a resulset.  
+The following example constructs a JSON object with three properties from a result set.  
   
 ```sql  
 select JSON_OBJECTAGG( c1:c2 )

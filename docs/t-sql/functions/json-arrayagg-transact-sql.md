@@ -4,7 +4,7 @@ description: JSON_ARRAYAGG constructs a JSON array from an aggregation of SQL da
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: umajay
-ms.date: 05/06/2024
+ms.date: 05/13/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -39,7 +39,7 @@ json_null_clause ::=  NULL ON NULL | ABSENT ON NULL
 
 order_by_clause ::= ORDER BY <column_list>
 ```  
-  
+
 ## Arguments
 
 #### value_expression
@@ -48,15 +48,11 @@ The value expression can be a column or expression in a query or constants/liter
 
 #### *json_null_clause*
 
-Optional. *json_null_clause* can be used to control the behavior of `JSON_ARRAYAGG` function when *value_expression* is `NULL`. The option `NULL ON NULL` converts the SQL `NULL` value into a JSON null value when generating the value of the element in the JSON array. The option `ABSENT ON NULL` will omits the element in the JSON array if the value is `NULL`. If omitted, `ABSENT ON NULL` is default.
+Optional. *json_null_clause* can be used to control the behavior of `JSON_ARRAYAGG` function when *value_expression* is `NULL`. The option `NULL ON NULL` converts the SQL `NULL` value into a JSON null value when generating the value of the element in the JSON array. The option `ABSENT ON NULL` omits the element in the JSON array if the value is `NULL`. If omitted, `ABSENT ON NULL` is default.
   
 #### *order_by_clause*
 
 Optional. The order of elements in the resulting JSON array can be specified to order the input rows to the aggregate.
-  
-## Return value
- 
-## Remarks
 
 ## Examples
   
@@ -76,7 +72,7 @@ SELECT JSON_ARRAYAGG(null);
 
 ### Example 2
 
-The following example constructs a JSON array with three elements from a resulset.  
+The following example constructs a JSON array with three elements from a result set.  
   
 ```sql  
 select JSON_ARRAYAGG( c1 )
@@ -110,7 +106,7 @@ from (
 
 ### Example 4
 
-The following example returns a result with two columns. The first column contains the `object_id` value. The second columns contains a JSON array containing the name of the columns. The columns in the JSON array are order based on the `column_id` value.  
+The following example returns a result with two columns. The first column contains the `object_id` value. The second column contains a JSON array containing the name of the columns. The columns in the JSON array are order based on the `column_id` value.  
   
 ```sql  
 select top(5) c.object_id, JSON_ARRAYAGG(c.name ORDER BY c.column_id) as column_list

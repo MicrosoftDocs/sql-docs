@@ -57,7 +57,7 @@ The portal describes the failover cluster instance. For example:
 - Active nodes
 - Passive nodes
 
-Note that active or passive node information is current as of **Inventory upload** time. A change in active node after this time may not be reflected in this view.
+Active or passive node information is current as of **Inventory upload** time. A change in active node after this time may not be reflected in this view.
 
 The clustered resource is distinct from other resources in the resource group in two ways:
 

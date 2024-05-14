@@ -21,8 +21,8 @@ The following table identifies features available by SQL Server edition:
 | [Automated backups to local storage (preview)](../backup-local.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Point-in-time-restore (preview)](../point-in-time-restore.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Automatic updates](../update.md) | Yes | Yes | Yes | Yes | Yes | Yes |
-| [Failover cluster instances (preview)](../support-for-fci.md)| Yes | Yes | Not applicable | Not applicable | Yes | Not applicable |
-| [Always On availability groups](../manage-availability-group.md)| Yes | Yes | Not applicable | Not applicable | Yes | Not applicable |
+| [Failover cluster instances](../support-for-fci.md)| Yes | Yes | Not applicable | Not applicable | Yes | Not applicable |
+| [Always On availability groups (preview)](../manage-availability-group.md)| Yes | Yes | Not applicable | Not applicable | Yes | Not applicable |
 | [Monitoring (preview)](../sql-monitoring.md)| Yes | Yes | No | No | No | No |
 | [Operate with least privilege (preview)](../configure-least-privilege.md)| Yes | Yes | Yes | Yes | Yes | Yes |
 

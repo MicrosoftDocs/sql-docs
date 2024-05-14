@@ -22,26 +22,25 @@ This article lists:
 
 Extension versions are cumulative. Higher extension versions include all of the updates from previous versions. A release may include internal features. If the version release notes don't describe features, then the updates were internal.
 
-## May 12, 2024
+## May 14, 2024
 
-**Extension version**: `1.1.2656.138`
+**Extension version**: `1.1.2647.136`
 
-## Business continuity
+### Failover cluster instances
 
-- Support for availability groups is now generally available.
-- Update portal display for failover cluster instance information
+Failover cluster instance in portal shows instance name, instance type, network name, active node, and passive nodes.
 
 ## April 16, 2024
 
 **Extension version**: `1.1.2656.138`
 
- This version is no longer available. A new version will be available shortly.
+ This version is no longer available.
 
 ## April 9, 2024
 
 **Extension version**: `1.1.2647.136`
 
- This version is no longer available. A new version with these features will be available shortly.
+ This version is no longer available.
 
 ### Move resources
 

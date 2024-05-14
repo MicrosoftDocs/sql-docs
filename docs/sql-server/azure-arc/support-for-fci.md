@@ -18,11 +18,22 @@ If the [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is configured as a 
 
 [!INCLUDE [latest-features](includes/latest-features.md)]
 
-## View cluster configuration, SQL Server, and database properties
+## Identify cluster resources
 
 In Azure portal, **Azure Arc | SQL Server instances** lists all instances of SQL Server that are enabled by Azure Arc.
 
-### List failover cluster instances
+The clustered resource is distinct from other resources in the resource group in two ways:
+
+- In **Overview** > **Essentials**, the **SQL Server Instance type** property is `Failover cluster instance`
+- The name of the SQL resource is either:
+  - `<NetworkName>`
+  - `<NetworkName>_<InstanceName>`
+
+In addition, the database resources are nested under the clustered resource. For example, `<DatabaseName> (<NetworkName>_<InstanceName>/<DatabaseName>)`.
+
+You can see all the resources like network name, databases and all the nodes in the corresponding resource group.  
+
+## List failover cluster instances
 
 To list failover cluster instances:
 
@@ -39,7 +50,7 @@ The portal presents the instance names as:
 - Default instance `<NetworkName>` 
 - Named instance `<NetworkName>_<InstanceName>`
 
-### View failover cluster instance
+## View failover cluster instance
 
 To view the properties of a failover cluster instance:
 
@@ -48,6 +59,8 @@ To view the properties of a failover cluster instance:
 1. Review the properties under **Essentials**
 
    :::image type="content" source="media/support-for-fci/essentials.png" alt-text="Screenshot of Azure portal for failover cluster instance enabled by Azure Arc." lightbox="media/support-for-fci/essentials-expanded.png":::
+
+### Inventory upload state
 
 The portal describes the failover cluster instance state. For example:
 
@@ -59,18 +72,7 @@ The portal describes the failover cluster instance state. For example:
 
 Information reflects the state at **Inventory upload** time. The view doesn't reflect changes or failovers after that time. The next upload will show the new active node or the updates made. Information upload is scheduled hourly.
 
-The clustered resource is distinct from other resources in the resource group in two ways:
-
-- In **Overview** > **Essentials**, the **SQL Server Instance type** property is `Failover cluster instance`
-- The name of the SQL resource is either:
-  - `<NetworkName>`
-  - `<NetworkName>_<InstanceName>`
-
-In addition, the database resources are nested under the clustered resource. For example, `<DatabaseName> (<NetworkName>_<InstanceName>/<DatabaseName>)`.
-
-You can see all the resources like network name, databases and all the nodes in the corresponding resource group.  
-
-### View databases
+## View databases
 
 To view the databases on a failover cluster instance:
 

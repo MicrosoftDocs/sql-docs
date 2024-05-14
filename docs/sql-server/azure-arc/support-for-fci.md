@@ -12,11 +12,12 @@ ms.topic: conceptual
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-An Always On failover cluster is a high availability technology that uses Windows Server failover clustering to provide local redundancy at an instance level. A failover cluster instance is a logical resource that may run on any one of the clustered server resources.
+Azure portal provides information about SQL Server failover cluster instances when they are enabled by Azure Arc. The Azure SQL extension agent must be installed on all the nodes of the SQL Server failover cluster instance. The agents project the installation into Azure as a SQL Server enabled by Azure Arc resource.
 
-If the [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is configured as a failover cluster instance, additional information about the host Windows failover cluster is also shown in the Azure portal. The Azure SQL extension agent on each of the nodes participating in the Windows cluster recognizes the installed SQL binaries as an installation of SQL Server. The agent projects the installation into Azure as a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] resource.
+For details about failover cluster instances, review [Always On failover cluster instances (SQL Server)](../failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).
 
-[!INCLUDE [latest-features](includes/latest-features.md)]
+> [!IMPORTANT]
+> [!INCLUDE [latest-features](includes/latest-features.md)]
 
 In Azure portal, **Azure Arc | SQL Server instances** lists all instances of SQL Server that are enabled by Azure Arc.
 

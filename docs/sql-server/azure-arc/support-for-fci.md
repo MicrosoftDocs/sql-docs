@@ -68,6 +68,8 @@ The clustered resource is distinct from other resources in the resource group in
 
 In addition, the database resources are nested under the clustered resource. For example, `<DatabaseName> (<NetworkName>_<InstanceName>/<DatabaseName>)`.
 
+You can see all the resources like network name, databases and all the nodes in the corresponding resource group.  
+
 ### View databases
 
 To view the databases on a failover cluster instance:
@@ -76,8 +78,6 @@ To view the databases on a failover cluster instance:
 1. Select **Data management** > **Database**
 
 The portal displays the databases on the SQL Server instance.
-
-Note You can see all the resoursces like Network name, databases and all the nodes in the corresponding resource group.  
 
 ## Limitations
 

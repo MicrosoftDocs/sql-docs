@@ -57,9 +57,11 @@ The portal describes the failover cluster instance. For example:
 - Active nodes
 - Passive nodes
 
+Note that active or passive node information is current as of **Inventory upload** time. A change in active node after this time may not be reflected in this view.
+
 The clustered resource is distinct from other resources in the resource group in two ways:
 
-- In **Overview** > **Essentials**, the **Always On role** property is `Failover cluster instance`
+- In **Overview** > **Essentials**, the **SQL Server Insatnce type** property is `Failover cluster instance`
 - The name of the SQL resource is either:
   - `<NetworkName>`
   - `<NetworkName>_<InstanceName>`

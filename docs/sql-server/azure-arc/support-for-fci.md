@@ -77,6 +77,8 @@ To view the databases on a failover cluster instance:
 
 The portal displays the databases on the SQL Server instance.
 
+Note You can see all the resoursces like Network name, databases and all the nodes in the corresponding resoursce group.  
+
 ## Limitations
 
 - All the Windows and SQL Server instances that are part of the failover clustering should be in same resource group.

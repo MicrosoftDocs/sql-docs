@@ -61,7 +61,7 @@ Note that active or passive node information is current as of **Inventory upload
 
 The clustered resource is distinct from other resources in the resource group in two ways:
 
-- In **Overview** > **Essentials**, the **SQL Server Insatnce type** property is `Failover cluster instance`
+- In **Overview** > **Essentials**, the **SQL Server Instance type** property is `Failover cluster instance`
 - The name of the SQL resource is either:
   - `<NetworkName>`
   - `<NetworkName>_<InstanceName>`

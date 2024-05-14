@@ -18,18 +18,7 @@ If the [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is configured as a 
 
 [!INCLUDE [latest-features](includes/latest-features.md)]
 
-## Identify cluster resources
-
 In Azure portal, **Azure Arc | SQL Server instances** lists all instances of SQL Server that are enabled by Azure Arc.
-
-The clustered resource is distinct from other resources in the resource group in two ways:
-
-- In **Overview** > **Essentials**, the **SQL Server Instance type** property is `Failover cluster instance`
-- The name of the SQL resource is either:
-  - `<NetworkName>`
-  - `<NetworkName>_<InstanceName>`
-
-In addition, the database resources are nested under the clustered resource. For example, `<DatabaseName> (<NetworkName>_<InstanceName>/<DatabaseName>)`.
 
 You can see all the resources like network name, databases and all the nodes in the corresponding resource group.  
 
@@ -44,11 +33,6 @@ To list failover cluster instances:
    :::image type="content" source="media/support-for-fci/filter-portal.png" alt-text="Screenshot of Azure portal for Azure Arc SQL Server add filter control." lightbox="media/support-for-fci/filter-portal-expanded.png":::
 
 The portal returns only the failover cluster instances.
-
-The portal presents the instance names as:
-
-- Default instance `<NetworkName>` 
-- Named instance `<NetworkName>_<InstanceName>`
 
 ## View failover cluster instance
 
@@ -65,6 +49,8 @@ To view the properties of a failover cluster instance:
 The portal describes the failover cluster instance state. For example:
 
 - Instance name
+  - Default instance `<NetworkName>`
+  - Named instance `<NetworkName>_<InstanceName>`
 - Instance type
 - Network name
 - Active nodes

@@ -1654,6 +1654,8 @@
           href: virtual-machines/windows/performance-guidelines-best-practices-collect-baseline.md
       - name: Management
         items:
+        - name: Pricing
+          href: virtual-machines/windows/pricing-guidance.md
         - name: Dedicated host
           href: virtual-machines/windows/dedicated-host.md
         - name: Extend support for SQL Server
@@ -1830,8 +1832,6 @@
       items:
       - name: FAQ
         href: virtual-machines/windows/frequently-asked-questions-faq.yml
-      - name: Pricing
-        href: virtual-machines/windows/pricing-guidance.md
       - name: Archived classic RM docs 
         href: /previous-versions/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-ps-sql-create
       - name: SQL Server Data Tools (SSDT)

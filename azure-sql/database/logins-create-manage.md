@@ -24,9 +24,9 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 In this article, you learn about:
 
-- Options for configuring Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics to enable users to perform administrative tasks and to access the data stored in these databases.
-- The access and authorization configuration after initially creating a new server.
-- How to add logins and user accounts in the `master` database and user accounts and then grant these accounts administrative permissions.
+- Configuration options for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics that enable users to perform administrative tasks and to access data stored in these databases.
+- Access and authorization configuration after a new server is initially created. 
+- How to add logins and user accounts in the `master` database and then grant these accounts administrative permissions.
 - How to add user accounts in user databases, either associated with logins or as contained user accounts.
 - Configure user accounts with permissions in user databases by using database roles and explicit permissions.
 
@@ -40,7 +40,7 @@ In this article, you learn about:
 [**Authentication**](security-overview.md#authentication) is the process of proving the user is who they claim to be. A user connects to a database using a user account.
 When a user attempts to connect to a database, they provide a user account and authentication information. The user is authenticated using one of the following two authentication methods:
 
-- [SQL authentication](/sql/relational-databases/security/choose-an-authentication-mode#connecting-through-sql-server-authentication).
+- [SQL authentication](/sql/relational-databases/security/choose-an-authentication-mode#connecting-through-sql-server-authentication)
 
   With this authentication method, the user submits a user account name and associated password to establish a connection. This password is stored in the `master` database for user accounts linked to a login or stored in the database containing the user accounts *not* linked to a login.
 
@@ -66,7 +66,7 @@ When you first deploy Azure SQL, you can specify a login name and a  password fo
 - This login is granted full administrative permissions on all databases as a [server-level principal](/sql/relational-databases/security/authentication-access/principals-database-engine). The login has all available permissions and can't be limited. In a SQL Managed Instance, this login is added to the [sysadmin fixed server role](/sql/relational-databases/security/authentication-access/server-level-roles) (this role does not exist in Azure SQL Database).
 - When this account signs into a database, they are matched to the special user account `dbo` ([user account](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions#database-users), which exists in each user database. The [dbo](/sql/relational-databases/security/authentication-access/principals-database-engine) user has all database permissions in the database and is member of the `db_owner` fixed database role. Additional fixed database roles are discussed later in this article.
 
-To identify the **Server admin** account for a logical server, open the Azure portal, and navigate to the **Properties** tab of your server or managed instance.
+To identify the **Server admin** account, open the Azure portal, and navigate to the **Properties** tab of your logical server or managed instance: 
 
 :::image type="content" source="./media/logins-create-manage/sql-admins.png" alt-text="Screenshot shows the SQL Server Properties page where you can obtain the Server admin login and Microsoft Entra admin values.":::
 

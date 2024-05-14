@@ -113,9 +113,9 @@ For more information on choosing the best VM size for your workload, see [VM siz
 
 If you are using any workloads that do not run continuously, consider shutting down the virtual machine during the inactive periods. You only pay for what you use.
 
-For example, if you are simply trying out SQL Server on an Azure VM, you would not want to incur charges by accidentally leaving it running for weeks. One solution is to use the [automatic shutdown feature](https://azure.microsoft.com/blog/announcing-auto-shutdown-for-vms-using-azure-resource-manager/).
+For example, if you are simply trying out SQL Server on an Azure VM, you would not want to incur charges by accidentally leaving it running for weeks. One solution is to use the [automatic shutdown feature](/azure/virtual-machines/auto-shutdown-vm) for the underlying virtual machine:
 
-![SQL Server VM autoshutdown](./media/pricing-guidance/sql-vm-auto-shutdown.png)
+![Screenshot of the auto-shutdown pane of the virtual machine in the Azure portal.](./media/pricing-guidance/sql-vm-auto-shutdown.png)
 
 Automatic shutdown is part of a larger set of similar features provided by [Azure DevTest Labs](https://azure.microsoft.com/services/devtest-lab).
 

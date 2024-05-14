@@ -49,14 +49,14 @@ For details, review:
 
 ### Updated performance dashboard
 
-* New built-in role and action available to manage access to the performance dashboard
-  * Review [Monitor [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] (preview)](sql-monitoring.md).
+- New built-in role and action available to manage access to the performance dashboard
+  - Review [Monitor [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] (preview)](sql-monitoring.md).
 
 ## April 16, 2024
 
 **Extension version**: `1.1.2656.138`
 
- This version is no longer available. A new version will be available shortly.
+ This version is no longer available.
 
 ## April 9, 2024
 

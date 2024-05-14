@@ -49,7 +49,7 @@ To view the properties of a failover cluster instance:
 
    :::image type="content" source="media/support-for-fci/essentials.png" alt-text="Screenshot of Azure portal for failover cluster instance enabled by Azure Arc." lightbox="media/support-for-fci/essentials-expanded.png":::
 
-The portal describes the failover cluster instance. For example:
+The portal describes the failover cluster instance state. For example:
 
 - Instance name
 - Instance type
@@ -57,7 +57,7 @@ The portal describes the failover cluster instance. For example:
 - Active nodes
 - Passive nodes
 
-Active or passive node information is current as of **Inventory upload** time. A change in active node after this time may not be reflected in this view.
+Information reflects the state at **Inventory upload** time. The view doesn't reflect changes or failovers after that time. The next upload will show the new active node or the updates made. Information upload is scheduled hourly.
 
 The clustered resource is distinct from other resources in the resource group in two ways:
 

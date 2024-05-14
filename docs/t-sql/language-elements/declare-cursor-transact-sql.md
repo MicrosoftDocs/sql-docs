@@ -151,11 +151,14 @@ Specifies that positioned updates or deletes made through the cursor are guarant
 
 #### OPTIMISTIC
 
-Specifies that positioned updates or deletes made through the cursor don't succeed, if the row was updated since it was read into the cursor. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] doesn't lock rows as they are read into the cursor. It instead uses comparisons of **timestamp** column values, or a checksum value if the table has no **timestamp** column, to determine whether the row was modified after it was read into the cursor. If the row was modified, the attempted positioned update or delete fails. `OPTIMISTIC` can't be specified if `FAST_FORWARD` is also specified.
+Specifies that positioned updates or deletes made through the cursor don't succeed, if the row was updated since it was read into the cursor. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] doesn't lock rows as they are read into the cursor. It instead uses comparisons of **timestamp** column values, or a checksum value if the table has no **timestamp** column, to determine whether the row was modified after it was read into the cursor. If the row was modified, the attempted positioned update or delete fails. `OPTIMISTIC` can't be specified if `FAST_FORWARD` is also specified, and is ignored if `STATIC` is also specified.
 
 #### TYPE_WARNING
 
 Specifies that a warning message is sent to the client when the cursor is implicitly converted from the requested type to another.
+
+> [!NOTE]  
+> No warning is given for the conversion of a `STATIC` cursor from `OPTIMISTIC` to `READ_ONLY`.
 
 #### *select_statement*
 

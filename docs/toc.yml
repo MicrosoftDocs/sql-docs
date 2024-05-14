@@ -8972,12 +8972,12 @@ items:
         href: ssms/troubleshoot/workaround-move-tabs.md
       - name: Troubleshoot
         items:
-        - name: Get full memory dump 
-          href: ssms/troubleshoot/get-full-memory-dump.md
-        - name: Get diagnostic data
-          href: ssms/troubleshoot/ssms-troubleshoot.md
         - name: Install failed or requires restart
           href: ssms/troubleshoot/install-failed-requires-restart.md
+        - name: Get full memory dump 
+          href: ssms/troubleshoot/get-full-memory-dump.md
+        - name: Advanced troubleshooting for SSMS
+          href: ssms/troubleshoot/ssms-troubleshoot.md
       - name: SQL Server Agent
         items:
         - name: Configure

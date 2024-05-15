@@ -1,6 +1,6 @@
 ---
-title: Azure SQL Managed Instance long-term backup retention
-description: Learn how to store and restore automated backups on separate Azure Blob storage containers for an Azure SQL Managed Instance using the Azure portal and PowerShell.
+title: Long-term backup retention
+description: Learn how to store and restore automated backups on separate Azure Blob storage containers for Azure SQL Managed Instance by using the Azure portal, Azure CLI and PowerShell.
 author: Stralle
 ms.author: strrodic
 ms.reviewer: mathoma, wiassaf
@@ -19,7 +19,7 @@ ms.custom:
 > * [Azure SQL Database](../database/long-term-backup-retention-configure.md?view=azuresql-db&preserve-view=true)
 > * [Azure SQL Managed Instance](long-term-backup-retention-configure.md?view=azuresql-mi&preserve-view=true)
 
-In Azure SQL Managed Instance, you can configure a [long-term backup retention](../database/long-term-retention-overview.md) policy (LTR). This allows you to automatically retain database backups in separate Azure Blob storage containers for up to 10 years. You can then recover a database using these backups with the Azure portal and PowerShell.
+In Azure SQL Managed Instance, you can configure a [long-term backup retention](../database/long-term-retention-overview.md) policy (LTR). This allows you to automatically retain database backups in separate Azure Blob storage containers for up to 10 years. You can then recover a database using these backups with the Azure portal, the Azure CLI and PowerShell.
 
 The following sections show you how to use the Azure portal, PowerShell, and Azure CLI to configure the long-term backup retention, view backups in Azure SQL storage, and restore from a backup in Azure SQL storage.
 
@@ -440,10 +440,13 @@ $ltrBackups = Get-AzSqlInstanceDatabaseLongTermRetentionBackup @LTRBackupParam
 $ltrBackup = $ltrBackups[0]
 Remove-AzSqlInstanceDatabaseLongTermRetentionBackup -ResourceId $ltrBackup.ResourceId
 ```
-
 ---
+
+## Limitations
+
+Database backups taken from instances configured with the SQL Server 2022 [update policy](update-policy.md) can be restored to instances configured with either the SQL Server 2022 or Always-up-to-date update policy. Database backups taken from instances configured with the Always-up-to-date update policy can only be restored to instances also configured with the Always-up-to-date update policy. 
 
 ## Next steps
 
-- To learn about service-generated automatic backups, see [automatic backups](automated-backups-overview.md)
-- To learn about long-term backup retention, see [long-term backup retention](../database/long-term-retention-overview.md)
+- To learn about service-generated automatic backups, see [automatic backups](automated-backups-overview.md).
+- To learn about long-term backup retention, see [long-term backup retention](../database/long-term-retention-overview.md).

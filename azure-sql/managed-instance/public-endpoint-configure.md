@@ -30,7 +30,7 @@ Due to the sensitivity of data that in a managed instance, the configuration to 
 - The managed instance admin needs to enable the public endpoint on the managed instance. The managed instance admin can be found on the **Overview** page for your managed instance resource.
 - A network admin needs to allow traffic to the managed instance using a network security group (NSG). For more information, review [network security group permissions](/azure/virtual-network/manage-network-security-group#permissions).
 
-## Enable public endpoint 
+## Enable public endpoint
 
 You can enable the public endpoint for your SQL Managed Instance by using the Azure portal, Azure PowerShell, or the Azure CLI. 
 

@@ -4,7 +4,7 @@ description: "Learn more about the possibilities of Microsoft Copilot in Azure f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: josephsack
-ms.date: 05/14/2024
+ms.date: 05/15/2024
 ms.service: sql-database
 ms.subservice: ai-copilot
 ms.topic: overview
@@ -17,16 +17,12 @@ monikerRange: "=azuresql||=azuresql-db"
 
 Microsoft Copilot in Azure is now integrated with Azure SQL Database, enhancing the management and operation of SQL-dependent applications. It improves productivity in the Azure portal by offering natural language to SQL conversion and self-help for database administration.
 
-To learn more about the current preview of Microsoft Copilot skills in Azure SQL Database, watch the following video:
-
-<br/>
-
-> [!VIDEO https://learn-video.azurefd.net/vod/player?show=data-exposed&ep=introducing-copilot-in-azure-sql-database-private-preview-data-exposed]
-
 Copilot provides relevant answers to user questions, simplifying database management by leveraging database context, documentation, dynamic management views, Query Store, and other knowledge sources. For example:
 
 - Database administrators can independently manage databases and resolve issues, or learn more about the performance and capabilities of your database.
 - Developers can ask questions about their data as they would in text or conversation to generate a T-SQL query. Developers can also learn to write queries faster through detailed explanations of the generated query.
+
+Copilot integrates data and formulate applicable responses using public documentation, dynamic management views, catalog views, and Azure supportability diagnostics.
 
 ## Azure SQL Database experiences
 
@@ -35,8 +31,6 @@ The current preview includes **two distinct experiences**:
 - **Microsoft Copilot in Azure integration**: This experience adds Azure SQL Database skills into Microsoft Copilot in Azure, customers with self-guided assistance, empowering them to manage their databases and solve issues independently.
 
 - **Natural language to SQL**: This experience within the Azure portal query editor translates natural language queries into SQL, making database interactions more intuitive. For a tutorial and examples of Copilot's natural language to SQL capabilities in Azure SQL Database, see [Natural language to SQL in the Azure portal query editor (preview)](query-editor-natural-language-to-sql-copilot.md).
-
-Copilot integrates data and formulate applicable responses using public documentation, dynamic management views, catalog views, and Azure supportability diagnostics.
 
 ### Natural language to SQL query
 

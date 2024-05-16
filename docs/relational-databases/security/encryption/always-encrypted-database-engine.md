@@ -75,7 +75,7 @@ You can perform the above steps using [SQL tools](../../../tools/overview-sql-to
 - [SQL Server PowerShell](configure-always-encrypted-using-powershell.md)
 - [sqlpackage](configure-always-encrypted-using-dacpac.md) - which automate the setup process
 
-To ensure Always Encrypted keys and protected sensitive data are never revealed in plaintext to the database environment, the [!INCLUDE [ssDE](../../../includes/ssde-md.md)] can't be involved in key provisioning and data encryption, or decryption operations. Therefore, Transact-SQL (T-SQL) don't support key provisioning or cryptographic operations. For the same reason, encrypting existing data or re-encrypting it (with a different encryption type or a column encryption key) needs to be performed outside of the database (SQL tools can automate that).
+To ensure Always Encrypted keys and protected sensitive data are never revealed in plaintext to the database environment, the [!INCLUDE [ssDE](../../../includes/ssde-md.md)] can't be involved in key provisioning and data encryption, or decryption operations. Therefore, Transact-SQL (T-SQL) doesn't support key provisioning or cryptographic operations. For the same reason, encrypting existing data or re-encrypting it (with a different encryption type or a column encryption key) needs to be performed outside of the database (SQL tools can automate that).
 
 > [!NOTE]  
 > [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) lifts some of the above restrictions by allowing cryptographic operations on existing data using T-SQL, and eliminates the need to move the data outside of the database.

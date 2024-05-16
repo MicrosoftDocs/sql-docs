@@ -4,7 +4,7 @@ description: "Learn more about the possibilities of Microsoft Copilot in Azure f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: josephsack
-ms.date: 05/07/2024
+ms.date: 05/09/2024
 ms.service: sql-database
 ms.subservice: ai-copilot
 ms.topic: overview
@@ -15,16 +15,13 @@ monikerRange: "=azuresql||=azuresql-db"
 
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-Microsoft Copilot in Azure is an AI assistant designed to streamline the design, operation, optimization, and health of Azure SQL Database-driven applications. It improves productivity in the Azure portal by offering natural language to SQL conversion and self-help for database administration.
+Microsoft Copilot in Azure is now integrated with Azure SQL Database, enhancing the management and operation of SQL-dependent applications. It improves productivity in the Azure portal by offering natural language to SQL conversion and self-help for database administration.
 
 To learn more about the current preview of Microsoft Copilot skills in Azure SQL Database, watch the following video:
 
 <br/>
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?show=data-exposed&ep=introducing-copilot-in-azure-sql-database-private-preview-data-exposed]
-
-> [!NOTE]
-> Copilot skills in Azure SQL Database are currently in preview for a limited number of early adopters. To sign up for this program, visit [Request Access to Copilot in Azure SQL Database: Preview](https://aka.ms/sqlcopilot-signup).
 
 Copilot provides relevant answers to user questions, simplifying database management by leveraging database context, documentation, dynamic management views, Query Store, and other knowledge sources. For example:
 
@@ -52,6 +49,10 @@ This integration means that [Microsoft Copilot in Azure](/azure/copilot/overview
  - Even advanced scenarios such as `Show me a pivot summary table that displays the number of properties sold in each year from 2020 to 2023`
 
 For a tutorial and examples of Copilot's natural language to SQL capabilities in Azure SQL Database, see [Natural language to SQL in the Azure portal query editor (preview)](query-editor-natural-language-to-sql-copilot.md).
+
+## Enable Microsoft Copilot in your Azure tenant
+
+For information on enabling Microsoft Copilot, see [Microsoft Copilot for Azure (preview)](/azure/copilot/overview).
 
 ## Microsoft Copilot in Azure enhanced scenarios
 

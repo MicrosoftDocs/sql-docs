@@ -112,9 +112,16 @@ The following views are commonly used for replica monitoring and troubleshooting
 
 ### Monitor read-only replicas with Extended Events
 
-An extended event session can't be created when connected to a read-only replica. However, in Azure SQL Database, the definitions of database-scoped [Extended Event](xevent-db-diff-from-svr.md) sessions created and altered on the primary replica replicate to read-only replicas, including geo-replicas, and capture events on read-only replicas.
+An extended event session can't be created when connected to a read-only replica. However, in Azure SQL Database and Azure SQL Managed Instance, the definitions of database-scoped [Extended Event](xevent-db-diff-from-svr.md) sessions created and altered on the primary replica replicate to read-only replicas, including geo-replicas, and capture events on read-only replicas.
 
-An extended event session on a read-only replica that is based on a session definition from the primary replica can be started and stopped independently of the session on the primary replica.
+In Azure SQL Database, an extended event session on a read-only replica that is based on a session definition from the primary replica can be started and stopped independently of the session on the primary replica.
+ 
+In Azure SQL Managed Instance, to start a trace on a read-only replica, you must first start the trace on the primary replica before you can start the trace on the read-only replica. If you don't first start the trace on the primary replica, you receive the following error when attempting to start the trace on the read-only replica:
+
+> Msg 3906, Level 16, State 2, Line 1
+> Failed to update database "master" because the database is read-only.
+
+After starting the trace first on the primary replica, then on the read-only replica, you may stop the trace on the primary replica.
 
 To drop an event session on a read-only replica, follow these steps:
 

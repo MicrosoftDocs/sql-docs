@@ -196,9 +196,9 @@ NO_EVENT_LOSS
 No event loss is allowed. This option ensures that all events raised are retained. Using this option forces all tasks that fire events to wait until space is available in an event buffer. Using NO_EVENT_LOSS can cause detectable performance issues while the event session is active. User connections may stall while waiting for events to be flushed from the buffer.
 
 > [!NOTE]
-> For the `event_file` targets in Azure SQL Database, starting from May 2024, `NO_EVENT_LOSS` behaves the same as `ALLOW_SINGLE_EVENT_LOSS`. If you specify `NO_EVENT_LOSS`, an error with message ID 25665, severity 10, and error message `This target does not support the NO_EVENT_LOSS event retention mode. The ALLOW_SINGLE_EVENT_LOSS retention mode is used instead.` is returned.
+> For the event file targets in Azure SQL Database, starting from May 2024, NO_EVENT_LOSS behaves the same as ALLOW_SINGLE_EVENT_LOSS. If you specify NO_EVENT_LOSS, a warning with message ID 25665, severity 10, and message *This target does not support the NO_EVENT_LOSS event retention mode. The ALLOW_SINGLE_EVENT_LOSS retention mode is used instead.* is returned, and the session is created.
 >
-> This change avoids connection timeouts, failover delays, and other issues that can reduce database availability when `NO_EVENT_LOSS` is used.
+> This change avoids connection timeouts, failover delays, and other issues that can reduce database availability when NO_EVENT_LOSS is used with event file targets.
 
 #### MAX_DISPATCH_LATENCY = { *seconds* SECONDS | **INFINITE** }
 Specifies the amount of time that events are buffered in memory before being dispatched to event session targets. By default, this value is set to 30 seconds.

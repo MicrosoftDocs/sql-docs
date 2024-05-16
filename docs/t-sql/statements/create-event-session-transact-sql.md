@@ -3,7 +3,7 @@ title: "CREATE EVENT SESSION (Transact-SQL)"
 description: CREATE EVENT SESSION creates an Extended Events session that identifies the source of the events, the event session targets, and the event session options.
 author: markingmyname
 ms.author: maghan
-ms.date: "01/22/2024"
+ms.date: "05/15/2024"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -194,6 +194,11 @@ Full event buffers containing multiple events can be lost from the session. The 
 
 NO_EVENT_LOSS
 No event loss is allowed. This option ensures that all events raised are retained. Using this option forces all tasks that fire events to wait until space is available in an event buffer. Using NO_EVENT_LOSS can cause detectable performance issues while the event session is active. User connections may stall while waiting for events to be flushed from the buffer.
+
+> [!NOTE]
+> For `event_file` targets in Azure SQL Database, starting from May 2024, `NO_EVENT_LOSS` behaves the same as `ALLOW_SINGLE_EVENT_LOSS`. If you specify `NO_EVENT_LOSS`, an error with message ID 25665, severity 10, and error message `This target does not support the NO_EVENT_LOSS event retention mode. The ALLOW_SINGLE_EVENT_LOSS retention mode is used instead.` is returned.
+>
+> This change avoids connection timeouts, failover delays, and other issues that can reduce database availability when `NO_EVENT_LOSS` is used.
 
 #### MAX_DISPATCH_LATENCY = { *seconds* SECONDS | **INFINITE** }
 Specifies the amount of time that events are buffered in memory before being dispatched to event session targets. By default, this value is set to 30 seconds.

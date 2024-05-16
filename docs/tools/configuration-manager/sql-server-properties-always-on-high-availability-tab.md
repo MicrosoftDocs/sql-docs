@@ -41,7 +41,7 @@ monikerRange: ">=sql-server-2016"
   
     > [!TIP]  
     >  - After disabling Always On Availability Groups, you should remove any local availability replicas from the server instance. If you remove the last replica of a given availability group, you should also remove the group.
-    >  - If the **Always On Availability Groups** tab is missing, or the option to enable is grayed out, either your environment isn't [supported](/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability), or hasn't been properly configured. 
+    >  - If the **Always On Availability Groups** tab is missing, or the option to enable is grayed out, either your environment isn't [supported](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md), or hasn't been properly configured. 
   
 ## UI element list  
   

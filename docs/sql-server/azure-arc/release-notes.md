@@ -4,7 +4,7 @@ description: Latest release notes for SQL Server enabled by Azure Arc
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 04/17/2024
+ms.date: 05/04/2024
 ms.topic: conceptual
 ms.custom: ignite-2023
 ---
@@ -22,25 +22,19 @@ This article lists:
 
 Extension versions are cumulative. Higher extension versions include all of the updates from previous versions. A release may include internal features. If the version release notes don't describe features, then the updates were internal.
 
-## May 14, 2024
+## May 28, 2024
 
-**Extension version**: `1.1.2647.136`
+**Extension version**: `1.1.2692.171`
 
 ### Failover cluster instances
 
 Failover cluster instance in portal shows instance name, instance type, network name, active node, and passive nodes.
 
-## April 16, 2024
+## May 15, 2024
 
-**Extension version**: `1.1.2656.138`
+**Extension version**: `1.1.2689.159`
 
- This version is no longer available.
-
-## April 9, 2024
-
-**Extension version**: `1.1.2647.136`
-
- This version is no longer available.
+This version reintroduces features previously released in version `1.1.2656.138` (April 9, 2024).
 
 ### Move resources
 
@@ -63,7 +57,20 @@ For details, review:
 
 ### Updated performance dashboard
 
-New built-in role and action available to manage access to the performance dashboard. Review [Monitor [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] (preview)](sql-monitoring.md).
+- New built-in role and action available to manage access to the performance dashboard
+  - Review [Monitor [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] (preview)](sql-monitoring.md).
+
+## April 16, 2024
+
+**Extension version**: `1.1.2656.138`
+
+ This version is no longer available.
+
+## April 9, 2024
+
+**Extension version**: `1.1.2647.136`
+
+ This version is no longer available. The features in this version are updated and released in [May 15, 2024](#may-15-2024).
 
 ## March 12, 2024
 

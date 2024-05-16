@@ -137,7 +137,7 @@ GO
 
 ## Disable for a table
 
-Members of the **db_owner** fixed database role can remove a capture instance for individual source tables by using the stored procedure `sys.sp_cdc_disable_table`. To determine whether a source table is currently enabled for change data capture, examine the **is_tracked_by_cdc** column in the `sys.tables` catalog view. If there are no tables enabled for the database after the disabling takes place, the change data capture jobs are also removed.
+Members of the **db_owner** fixed database role can remove a capture instance for individual source tables by using the stored procedure `sys.sp_cdc_disable_table`. To determine whether a source table is currently enabled for change data capture, examine the `is_tracked_by_cdc` column in the `sys.tables` catalog view. If there are no tables enabled for the database after the disabling takes place, the change data capture jobs are also removed.
 
 If a change data capture-enabled table is dropped, change data capture metadata that is associated with the table is automatically removed.
 

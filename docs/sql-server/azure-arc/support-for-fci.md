@@ -19,13 +19,13 @@ For details about failover cluster instances, review [Always On failover cluster
 > [!IMPORTANT]
 > [!INCLUDE [latest-features](includes/latest-features.md)]
 
-In Azure portal, **Azure Arc | SQL Server instances** lists all instances of SQL Server that are enabled by Azure Arc.
-
 You can see all the resources like network name, databases and all the nodes in the corresponding resource group.  
 
 ## List failover cluster instances
 
-To list failover cluster instances:
+In Azure portal, **Azure Arc | SQL Server instances** lists all instances of SQL Server that are enabled by Azure Arc.
+
+To list only the failover cluster instances:
 
 1. Select **Add filter**
 1. Set **Filter** to *SQL Server instance type* equals **Failover Cluster Instance**

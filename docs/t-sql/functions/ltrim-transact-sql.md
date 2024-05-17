@@ -1,10 +1,10 @@
 ---
 title: "LTRIM (Transact-SQL)"
-description: "LTRIM (Transact-SQL)"
+description: LTRIM returns a character string after truncating leading characters.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/08/2023
+ms.date: 05/16/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "blank characters [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 # LTRIM (Transact-SQL)
 
@@ -47,19 +47,19 @@ LTRIM ( character_expression )
 Syntax for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later, [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE [fabric](../../includes/fabric.md)]:
 
 > [!IMPORTANT]
-> You will need your database compatibility level set to 160 to use the optional *characters* argument.
+> You need your database compatibility level set to 160 to use the optional *characters* argument.
 
 ```syntaxsql
 LTRIM ( character_expression , [ characters ] )
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
 #### *character_expression*
 
-An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of character or binary data. *character_expression* can be a constant, variable, or column. *character_expression* must be of a data type, except **text**, **ntext**, and **image**, that is implicitly convertible to **varchar**. Otherwise, use [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) to explicitly convert *character_expression*.
+An [expression](../language-elements/expressions-transact-sql.md) of character or binary data. *character_expression* can be a constant, variable, or column. *character_expression* must be of a data type, except **text**, **ntext**, and **image**, that is implicitly convertible to **varchar**. Otherwise, use [CAST](cast-and-convert-transact-sql.md) to explicitly convert *character_expression*.
 
 #### *characters*
 
@@ -71,7 +71,7 @@ Returns a character expression with a type of string argument where the space ch
 
 ## Remarks
 
-To enable the optional *characters* positional argument, enable database compatibility level `160` on the database(s) that you are connecting to when executing queries.
+To enable the optional *characters* positional argument, enable database compatibility level `160` on the database that you connect to when executing queries.
 
 ## Examples
 
@@ -83,10 +83,10 @@ The following example uses LTRIM to remove leading spaces from a character expre
 SELECT LTRIM('     Five spaces are at the beginning of this string.');
 ```
 
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+[!INCLUDE [ssResult](../../includes/ssresult-md.md)]
 
 ```output
----------------------------------------------------------------  
+---------------------------------------------------------------
   Five spaces are at the beginning of this string.
   ```
 
@@ -95,15 +95,15 @@ SELECT LTRIM('     Five spaces are at the beginning of this string.');
 The following example uses `LTRIM` to remove leading spaces from a character variable.
 
 ```sql
-DECLARE @string_to_trim VARCHAR(60);  
-SET @string_to_trim = '     Five spaces are at the beginning of this string.';  
-SELECT  
+DECLARE @string_to_trim VARCHAR(60);
+SET @string_to_trim = '     Five spaces are at the beginning of this string.';
+SELECT
     @string_to_trim AS 'Original string',
-    LTRIM(@string_to_trim) AS 'Without spaces';  
+    LTRIM(@string_to_trim) AS 'Without spaces';
 GO
 ```
 
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+[!INCLUDE [ssResult](../../includes/ssresult-md.md)]
 
 ```output
 Original string                                            Without spaces
@@ -113,8 +113,8 @@ Original string                                            Without spaces
 
 ### C. Remove specified characters from the beginning of a string
 
-> [!IMPORTANT]
-> You will need your database compatibility level set to 160 to use the optional *characters* argument.
+> [!IMPORTANT]  
+> You need your database compatibility level set to `160` to use the optional *characters* argument.
 
 The following example removes the characters `123` from the beginning of the `123abc.` string.
 
@@ -122,21 +122,19 @@ The following example removes the characters `123` from the beginning of the `12
 SELECT LTRIM('123abc.' , '123.');
 ```
 
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+[!INCLUDE [ssResult](../../includes/ssresult-md.md)]
 
 ```output
 abc.
 ```
 
+## Related content
 
-## See also
-
-- [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)
+- [LEFT (Transact-SQL)](left-transact-sql.md)
 - [TRIM (Transact-SQL)](trim-transact-sql.md)
-- [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)
-- [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)
-- [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)
-- [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)
-- [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)
-- [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
-- [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
+- [RIGHT (Transact-SQL)](right-transact-sql.md)
+- [RTRIM (Transact-SQL)](rtrim-transact-sql.md)
+- [STRING_SPLIT (Transact-SQL)](string-split-transact-sql.md)
+- [SUBSTRING (Transact-SQL)](substring-transact-sql.md)
+- [Data types (Transact-SQL)](../data-types/data-types-transact-sql.md)
+- [String Functions (Transact-SQL)](string-functions-transact-sql.md)

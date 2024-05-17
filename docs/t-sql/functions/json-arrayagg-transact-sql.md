@@ -4,7 +4,7 @@ description: JSON_ARRAYAGG constructs a JSON array from an aggregation of SQL da
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: umajay
-ms.date: 05/13/2024
+ms.date: 05/21/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -15,18 +15,18 @@ helpviewer_keywords:
   - "JSON_ARRAYAGG function"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current"
 ---
 # JSON_ARRAYAGG (Transact-SQL)
 
-[!INCLUDE [asdb-asdbmi](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)]
 
  Constructs a JSON array from an aggregation of SQL data or columns.
 
  To create a JSON object from an aggregate instead, use [JSON_OBJECTAGG](json-objectagg-transact-sql.md).
   
 > [!NOTE]
-> This feature is currently in preview.
+> Currently, both **JSON** aggregate functions `JSON_OBJECTAGG` and `JSON_ARRAYAGG` are available in preview for Azure SQL Database. 
 
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

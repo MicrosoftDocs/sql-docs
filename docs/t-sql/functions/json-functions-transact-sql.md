@@ -4,7 +4,7 @@ description: Use JSON functions to validate or change JSON text, or to extract s
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: jovanpop, randolphwest
-ms.date: 05/06/2024
+ms.date: 05/15/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -31,6 +31,7 @@ Use the functions described in this article support querying, manipulating, and 
 | [JSON_PATH_EXISTS](json-path-exists-transact-sql.md) | Tests whether a specified SQL/JSON path exists in the input JSON string. |
 | [JSON_QUERY](json-query-transact-sql.md) | Extracts an object or an array from a JSON string. |  
 | [JSON_VALUE](json-value-transact-sql.md) | Extracts a scalar value from a JSON string. |
+| [OPENJSON](openjson-transact-sql.md) | Parses JSON text and returns objects and properties from the JSON input as rows and columns. |
 
 For more info about the built-in support for JSON in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], see [JSON data in SQL Server](../../relational-databases/json/json-data-sql-server.md).  
 

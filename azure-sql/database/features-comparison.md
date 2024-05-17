@@ -1,5 +1,5 @@
 ---
-title: Compare the database engine features of SQL Database and SQL Managed Instance
+title: Compare Azure SQL database engine features
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: This article compares the database engine features of Azure SQL Database and Azure SQL Managed Instance
 author: danimir
@@ -119,6 +119,10 @@ The following table lists the major features of SQL Server and provides informat
 | [Transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption-tde) | Yes, see [TDE for Azure SQL](transparent-data-encryption-tde-overview.md) | Yes, see [TDE for Azure SQL](transparent-data-encryption-tde-overview.md) |
 | Windows authentication | No | Yes, see [Windows Authentication for Microsoft Entra principals](../managed-instance/winauth-azuread-overview.md)|
 | [Windows Server Failover Clustering](/sql/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server) | No. Other techniques that provide [high availability](high-availability-sla.md) are included with every database. Disaster recovery is discussed in [Overview of business continuity with Azure SQL Database](business-continuity-high-availability-disaster-recover-hadr-overview.md). | No. Other techniques that provide [high availability](high-availability-sla.md) are included with every database. Disaster recovery is discussed in [Overview of business continuity with Azure SQL Database](business-continuity-high-availability-disaster-recover-hadr-overview.md). |
+
+> [!NOTE]
+> Some Azure SQL Managed Instance feature availability depends on the configured instance [update policy](../managed-instance/update-policy.md). 
+
 
 ## Platform capabilities
 

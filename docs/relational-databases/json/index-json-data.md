@@ -4,7 +4,7 @@ description: "Index JSON data"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: jroth, jovanpop
-ms.date: 05/06/2024
+ms.date: 05/21/2024
 ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,8 +18,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 You can optimize your queries over JSON documents using standard indexes. SQL Server does not have custom JSON indexes.
 
 - Currently, in SQL Server **JSON** is not a built-in data type.
-- Currently, the **JSON** data type is available in Azure SQL Database and Azure SQL Managed Instance. 
-    - In Azure SQL Managed Instance, your instance must be configured with [the SQL Server 2022 update policy](/azure/azure-sql/managed-instance/update-policy?view=azuresql-mi&preserve-view=true).
+- Currently, the [JSON data type](../../t-sql/data-types/json-data-type.md) is available in Azure SQL Database.
 
 Indexes work the same way on JSON data in **varchar**/**nvarchar** or the [native **JSON** data type](../../t-sql/data-types/json-data-type.md).
 

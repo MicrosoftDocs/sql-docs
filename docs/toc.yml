@@ -10413,7 +10413,7 @@ items:
           href: sql-server/azure-arc/backup-local.md
         - name: Point-in-time restore (preview)
           href: sql-server/azure-arc/point-in-time-restore.md
-        - name: View Always On failover cluster instances (preview)
+        - name: View Always On failover cluster
           href: sql-server/azure-arc/support-for-fci.md  
         - name: View Always On availability group (preview)
           href: sql-server/azure-arc/manage-availability-group.md

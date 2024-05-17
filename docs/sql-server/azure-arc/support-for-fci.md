@@ -27,9 +27,9 @@ In Azure portal, **Azure Arc | SQL Server instances** lists all instances of SQL
 
 To list only the failover cluster instances:
 
-1. Select **Add filter**
-1. Set **Filter** to *SQL Server instance type* equals **Failover Cluster Instance**
-1. Select **Apply**
+1. Select **Add filter**.
+1. Set **Filter** to *SQL Server instance type* equals **Failover Cluster Instance**.
+1. Select **Apply**.
 
    :::image type="content" source="media/support-for-fci/filter-portal.png" alt-text="Screenshot of Azure portal for Azure Arc SQL Server add filter control." lightbox="media/support-for-fci/filter-portal-expanded.png":::
 
@@ -39,9 +39,9 @@ The portal returns only the failover cluster instances.
 
 To view the properties of a failover cluster instance:
 
-1. Select a **SQL Server - Azure Arc** resource that is a failover cluster instance type
-1. Select **Overview**
-1. Review the properties under **Essentials**
+1. Select a **SQL Server - Azure Arc** resource that is a failover cluster instance type.
+1. Select **Overview**.
+1. Review the properties under **Essentials**.
 
    :::image type="content" source="media/support-for-fci/essentials.png" alt-text="Screenshot of Azure portal for failover cluster instance enabled by Azure Arc." lightbox="media/support-for-fci/essentials-expanded.png":::
 
@@ -63,8 +63,8 @@ Information reflects the state at **Inventory upload** time. The view doesn't re
 
 To view the databases on a failover cluster instance:
 
-1. Browse to the resource - either `<NetworkName>` or `<NetworkName>_<InstanceName>`
-1. Select **Data management** > **Database**
+1. Browse to the resource - either `<NetworkName>` or `<NetworkName>_<InstanceName>`.
+1. Select **Data management** > **Database**.
 
 The portal displays the databases on the SQL Server instance.
 

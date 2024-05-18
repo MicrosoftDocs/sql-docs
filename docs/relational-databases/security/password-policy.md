@@ -1,6 +1,6 @@
 ---
 title: "Password Policy"
-description: Windows password policy mechanisms apply to a login that uses SQL Server authentication and to a contained database user with a password.
+description: This article goes over the Windows password policy mechanisms applying to a login that uses SQL Server authentication and to a contained database user with a password.
 author: VanMSFT
 ms.author: vanto
 ms.date: 05/17/2024
@@ -59,7 +59,7 @@ Password complexity policies are designed to deter brute force attacks by increa
 
   - Base 10 digits (0 through 9)
 
-  - Non-alphanumeric characters such as: exclamation point (!), dollar sign ($), number sign (#), or percent (%).
+  - Nonalphanumeric characters such as: exclamation point (!), dollar sign ($), number sign (#), or percent (%).
 
 Passwords can be up to 128 characters long. Use passwords that are as long and complex as possible.
 
@@ -99,7 +99,7 @@ Some combinations of policy options aren't supported.
 
   - Same as name of computer or login
 
-  - Any of the following: "password", "admin", "administrator", "sa", "sysadmin"
+  - Any of the following: `password`, `admin`, `administrator`, `sa`, `sysadmin`
 
 The security policy might be set in Windows, or might be received from the domain. To view the password policy on the computer, use the Local Security Policy MMC snap-in (**secpol.msc**).
 

@@ -22,7 +22,7 @@ This quickstart describes how to connect an application to a database in Azure S
 ## Prerequisites
 
 - An [Azure subscription](https://azure.microsoft.com/free/dotnet/).
-- An SQL database configured for authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
+- A SQL database configured for authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
 - [.NET 7.0](https://dotnet.microsoft.com/download) or later.
 - [Visual Studio](https://visualstudio.microsoft.com/vs/) or later with the **ASP.NET and web development** workload.
 - The latest version of the [Azure CLI](/cli/azure/get-started-with-azure-cli).
@@ -270,14 +270,14 @@ When the deployment finishes, Visual Studio launches the browser to display the 
 The following steps are required to connect the App Service instance to Azure SQL Database:
 
 1) Create a managed identity for the App Service. The `Microsoft.Data.SqlClient` library included in your app will automatically discover the managed identity, just like it discovered your local Visual Studio user.
-2) Create an SQL database user and associate it with the App Service managed identity.
+2) Create a SQL database user and associate it with the App Service managed identity.
 3) Assign SQL roles to the database user that allow for read, write, and potentially other permissions.
 
 There are multiple tools available to implement these steps:
 
 ## [Service Connector (Recommended)](#tab/service-connector)
 
-Service Connector is a tool that streamlines authenticated connections between different services in Azure. Service Connector currently supports connecting an App Service to an SQL database via the Azure CLI using the `az webapp connection create sql` command. This single command completes the three steps mentioned above for you.
+Service Connector is a tool that streamlines authenticated connections between different services in Azure. Service Connector currently supports connecting an App Service to a SQL database via the Azure CLI using the `az webapp connection create sql` command. This single command completes the three steps mentioned above for you.
 
 ```azurecli
 az webapp connection create sql
@@ -323,7 +323,7 @@ The Azure portal allows you to work with managed identities and run queries agai
 
     :::image type="content" source="media/passwordless-connections/query-editor-small.png" alt-text="Screenshot showing how to use the Azure Query editor." lightbox="media/passwordless-connections/query-editor.png":::
 
-    This SQL script creates an SQL database user that maps back to the managed identity of your App Service instance. It also assigns the necessary SQL roles to the user to allow your app to read, write, and modify the data and schema of your database. After this step is completed, your services are connected.
+    This SQL script creates a SQL database user that maps back to the managed identity of your App Service instance. It also assigns the necessary SQL roles to the user to allow your app to read, write, and modify the data and schema of your database. After this step is completed, your services are connected.
 
 ---
 

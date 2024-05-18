@@ -31,7 +31,7 @@ dev_langs:
 ## Syntax  
   
 ```sql  
-managed_backup.fn_is_master_switch_on ()  
+SELECT managed_backup.fn_is_master_switch_on()  
 ```  
   
 ##  <a name="Arguments"></a> Arguments  

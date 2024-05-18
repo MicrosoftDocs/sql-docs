@@ -5,17 +5,18 @@ description: Dynamic data masking limits sensitive data exposure by masking it t
 author: madhumitatripathy
 ms.author: matripathy
 ms.reviewer: wiassaf, vanto, mathoma, randolphwest
-ms.date: 04/03/2023
+ms.date: 05/17/2024
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: sqldbrb=1
+ms.custom:
+  - sqldbrb=1
 tags: azure-synapse
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
+monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 ---
 # Dynamic data masking
 
-[!INCLUDE[appliesto-sqldb-sqlmi-asa-dedicated-only](../includes/appliesto-sqldb-sqlmi-asa-dedicated-only.md)]
+[!INCLUDE [appliesto-sqldb-sqlmi-asa-dedicated-only](../includes/appliesto-sqldb-sqlmi-asa-dedicated-only.md)]
 
 Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics support dynamic data masking. Dynamic data masking limits sensitive data exposure by masking it to nonprivileged users.
 
@@ -38,12 +39,12 @@ You set up a dynamic data masking policy in the Azure portal by selecting the **
 | **Default** | **Full masking according to the data types of the designated fields**<br /><br />* Use `XXXX` (or fewer) if the size of the field is fewer than 4 characters for string data types (**nchar**, **ntext**, **nvarchar**).<br />* Use a zero value for numeric data types (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br />* Use `1900-01-01` for date/time data types (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br />* For **sql_variant**, the default value of the current type is used.<br />* For XML, the document `<masked />` is used.<br />* Use an empty value for special data types (**timestamp**, **table**, **HierarchyID**, **uniqueidentifier**, **binary**, **image**, **varbinary**, and spatial types). |
 | **Credit card** | **Masking method, which exposes the last four digits of the designated fields** and adds a constant string as a prefix in the form of a credit card.<br /><br />`XXXX-XXXX-XXXX-1234` |
 | **Email** | **Masking method, which exposes the first letter and replaces the domain with XXX.com** using a constant string prefix in the form of an email address.<br /><br />`aXX@XXXX.com` |
-| **Random number** | **Masking method, which generates a random number** according to the selected boundaries and actual data types. If the designated boundaries are equal, then the masking function is a constant number.<br /><br />:::image type="content" source="./media/dynamic-data-masking-overview/random-number.png" alt-text="Screenshot that shows the masking method for generating a random number."::: |
-| **Custom text** | **Masking method, which exposes the first and last characters** and adds a custom padding string in the middle. If the original string is shorter than the exposed prefix and suffix, only the padding string is used.<br /><br />`prefix[padding]suffix`<br /><br />:::image type="content" source="./media/dynamic-data-masking-overview/custom-text.png" alt-text="Screenshot of the navigation pane."::: |
+| **Random number** | **Masking method, which generates a random number** according to the selected boundaries and actual data types. If the designated boundaries are equal, then the masking function is a constant number.<br /><br /> :::image type="content" source="media/dynamic-data-masking-overview/random-number.png" alt-text="Screenshot that shows the masking method for generating a random number."::: |
+| **Custom text** | **Masking method, which exposes the first and last characters** and adds a custom padding string in the middle. If the original string is shorter than the exposed prefix and suffix, only the padding string is used.<br /><br />`prefix[padding]suffix`<br /> :::image type="content" source="media/dynamic-data-masking-overview/custom-text.png" alt-text="Screenshot of the navigation pane."::: |
 
 ### Recommended fields to mask
 
-The DDM recommendations engine, flags certain fields from your database as potentially sensitive fields, which may be good candidates for masking. In the **Dynamic Data Masking** pane in the portal, you see the recommended columns for your database. Select **Add Mask** for one or more columns, then select the appropriate masking function and select **Save**, to apply mask for these fields.
+The DDM recommendations engine, flags certain fields from your database as potentially sensitive fields, which might be good candidates for masking. In the **Dynamic Data Masking** pane in the portal, you see the recommended columns for your database. Select **Add Mask** for one or more columns, then select the appropriate masking function and select **Save**, to apply mask for these fields.
 
 ## Manage dynamic data masking using T-SQL
 
@@ -173,13 +174,13 @@ Prevent unauthorized access to sensitive data and gain control by masking it to 
    ```sql
    CREATE USER ServiceAttendant WITHOUT LOGIN;
    GO
-   
+
    CREATE USER ServiceLead WITHOUT LOGIN;
    GO
-   
+
    CREATE USER ServiceManager WITHOUT LOGIN;
    GO
-   
+
    CREATE USER ServiceHead WITHOUT LOGIN;
    GO
    ```
@@ -188,11 +189,11 @@ Prevent unauthorized access to sensitive data and gain control by masking it to 
 
    ```sql
    ALTER ROLE db_datareader ADD MEMBER ServiceAttendant;
-   
+
    ALTER ROLE db_datareader ADD MEMBER ServiceLead;
-   
+
    ALTER ROLE db_datareader ADD MEMBER ServiceManager;
-   
+
    ALTER ROLE db_datareader ADD MEMBER ServiceHead;
    ```
 
@@ -201,14 +202,14 @@ Prevent unauthorized access to sensitive data and gain control by masking it to 
    ```sql
    --Grant column level UNMASK permission to ServiceAttendant
    GRANT UNMASK ON Data.Membership(FirstName) TO ServiceAttendant;
-   
+
    -- Grant table level UNMASK permission to ServiceLead
    GRANT UNMASK ON Data.Membership TO ServiceLead;
-   
+
    -- Grant schema level UNMASK permission to ServiceManager
    GRANT UNMASK ON SCHEMA::Data TO ServiceManager;
    GRANT UNMASK ON SCHEMA::Service TO ServiceManager;
-   
+
    --Grant database level UNMASK permission to ServiceHead;
    GRANT UNMASK TO ServiceHead;
    ```
@@ -273,17 +274,17 @@ Prevent unauthorized access to sensitive data and gain control by masking it to 
 
    ```sql
    REVOKE UNMASK ON Data.Membership(FirstName) FROM ServiceAttendant;
-   
+
    REVOKE UNMASK ON Data.Membership FROM ServiceLead;
-   
+
    REVOKE UNMASK ON SCHEMA::Data FROM ServiceManager;
-   
+
    REVOKE UNMASK ON SCHEMA::Service FROM ServiceManager;
-   
+
    REVOKE UNMASK FROM ServiceHead;
    ```
 
 ## Related content
 
-- [Dynamic Data Masking](/sql/relational-databases/security/dynamic-data-masking) for SQL Server.
-- Data Exposed episode about [Granular Permissions for Azure SQL Dynamic Data Masking](/Shows/Data-Exposed/Granular-Permissions-for-Azure-SQL-Dynamic-Data-Masking) on Channel 9.
+- [Dynamic Data Masking](/sql/relational-databases/security/dynamic-data-masking)
+- [Granular Permissions for Azure SQL Dynamic Data Masking](/Shows/Data-Exposed/Granular-Permissions-for-Azure-SQL-Dynamic-Data-Masking)

@@ -7,10 +7,11 @@ metadata:
   ms.reviewer: josephsack
   ms.service: sql-database
   ms.subservice: ai-copilot
+  ms.custom:
+    - build-2024
   ms.topic: faq
   ms.date: 05/09/2024
   monikerRange: "= azuresql || = azuresql-db"
-
 title: "Frequently asked questions about Microsoft Copilot skills in Azure SQL Database (preview)"
 summary: |
   Frequently asked questions about Microsoft Copilot capabilities in Azure SQL, currently in preview. 
@@ -82,4 +83,3 @@ additionalContent: |
 
     - [Microsoft Copilot skills and Azure SQL Database (preview)](copilot-azure-sql-overview.md)
     - [Natural language to SQL in the Azure portal Query editor (preview)](../copilot/query-editor-natural-language-to-sql-copilot.md)
-

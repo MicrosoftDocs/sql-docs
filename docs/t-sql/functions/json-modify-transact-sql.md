@@ -10,6 +10,8 @@ ms.subservice: t-sql
 ms.topic: reference
 dev_langs:
   - "TSQL"
+ms.custom:
+  - build-2024
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # JSON_MODIFY (Transact-SQL)

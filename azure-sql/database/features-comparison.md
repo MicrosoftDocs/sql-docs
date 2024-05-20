@@ -8,6 +8,8 @@ ms.reviewer: wiassaf, bonova, mathoma, danil
 ms.date: 04/30/2024
 ms.service: sql-db-mi
 ms.subservice: service-overview
+ms.custom:
+  - build-2024
 ms.topic: conceptual
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---

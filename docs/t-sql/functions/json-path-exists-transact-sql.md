@@ -10,6 +10,8 @@ ms.subservice: t-sql
 ms.topic: reference
 dev_langs:
   - "TSQL"
+ms.custom:
+  - build-2024
 monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 # JSON_PATH_EXISTS (Transact-SQL)

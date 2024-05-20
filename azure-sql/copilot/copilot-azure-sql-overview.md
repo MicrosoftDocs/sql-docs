@@ -7,6 +7,8 @@ ms.reviewer: josephsack
 ms.date: 05/09/2024
 ms.service: sql-database
 ms.subservice: ai-copilot
+ms.custom:
+  - build-2024
 ms.topic: overview
 monikerRange: "=azuresql||=azuresql-db"
 ---

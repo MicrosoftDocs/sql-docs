@@ -9,7 +9,7 @@ ms.date: 05/21/2024
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: whats-new
-ms.custom: references_regions, ignite-2023
+ms.custom: references_regions, ignite-2023, build-2024
 ---
 # What's new in Azure SQL Managed Instance?
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqlmi.md)]

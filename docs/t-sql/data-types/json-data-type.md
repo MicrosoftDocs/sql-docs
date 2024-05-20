@@ -9,6 +9,7 @@ ms.service: sql
 ms.topic: quickstart
 ms.custom:
   - intro-quickstart
+  - build-2024
 helpviewer_keywords:
   - "JSON data type"
 monikerRange: "=azuresqldb-current"

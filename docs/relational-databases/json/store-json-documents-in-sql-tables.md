@@ -6,6 +6,8 @@ ms.author: wiassaf
 ms.reviewer: jroth, jovanpop
 ms.date: 05/21/2024
 ms.service: sql
+ms.custom:
+  - build-2024
 ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

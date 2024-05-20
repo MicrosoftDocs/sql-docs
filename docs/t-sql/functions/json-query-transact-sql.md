@@ -1,6 +1,6 @@
 ---
 title: "JSON_QUERY (Transact-SQL)"
-description: JSON_QUERY extracts an object or an array from a JSON string.  
+description: JSON_QUERY extracts an object or an array from a JSON string.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: jovanpop
@@ -17,6 +17,8 @@ helpviewer_keywords:
   - "JSON_QUERY function"
 dev_langs:
   - "TSQL"
+ms.custom:
+  - build-2024
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # JSON_QUERY (Transact-SQL)

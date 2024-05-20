@@ -163,8 +163,49 @@ For details, see [General Remarks](create-table-azure-sql-data-warehouse.md#Gene
 An ordered clustered columnstore index can be created on columns of any data types supported in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] except for string columns.  
 
 [SET ROWCOUNT (Transact-SQL)](../statements/set-rowcount-transact-sql.md) has no effect on CTAS. To achieve a similar behavior, use [TOP (Transact-SQL)](../queries/top-transact-sql.md).  
+
+CTAS does not support OPENJSON as part of the SELECT statement. As an alternative, use INSERT INTO ... SELECT. 
+
+```sql
+DECLARE @json NVARCHAR(MAX) = N'
+[
+    {
+        "id": 1,
+        "name": "Alice",
+        "age": 30,
+        "address": {
+            "street": "123 Main St",
+            "city": "Wonderland"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Bob",
+        "age": 25,
+        "address": {
+            "street": "456 Elm St",
+            "city": "Gotham"
+        }
+    }
+]';
+
+INSERT INTO Users (id, name, age, street, city)
+SELECT 
+    id,
+    name,
+    age,
+    JSON_VALUE(address, '$.street') AS street,
+    JSON_VALUE(address, '$.city') AS city
+FROM OPENJSON(@json)
+WITH (
+    id INT,
+    name NVARCHAR(50),
+    age INT,
+    address NVARCHAR(MAX) AS JSON
+);
+```
  
-For details, see [Limitations and Restrictions](create-table-azure-sql-data-warehouse.md#LimitationsRestrictions) in CREATE TABLE.
+For more details on limitations and restrictions, see [Limitations and Restrictions](create-table-azure-sql-data-warehouse.md#LimitationsRestrictions) in CREATE TABLE.
 
 <a name="locking-behavior-bk"></a>
   

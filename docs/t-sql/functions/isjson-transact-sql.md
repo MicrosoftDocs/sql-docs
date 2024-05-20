@@ -1,6 +1,6 @@
 ---
 title: "ISJSON (Transact-SQL)"
-description: ISJSON tests whether a string contains valid JSON. 
+description: ISJSON tests whether a string contains valid JSON.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: umajay
@@ -16,6 +16,8 @@ helpviewer_keywords:
   - "JSON, validating"
 dev_langs:
   - "TSQL"
+ms.custom:
+  - build-2024
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # ISJSON (Transact-SQL)

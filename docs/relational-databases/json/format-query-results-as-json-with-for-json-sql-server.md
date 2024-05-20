@@ -6,6 +6,8 @@ ms.author: wiassaf
 ms.reviewer: jroth, randolphwest, jovanpop
 ms.date: 11/23/2023
 ms.service: sql
+ms.custom:
+  - build-2024
 ms.topic: conceptual
 helpviewer_keywords:
   - "FOR JSON"

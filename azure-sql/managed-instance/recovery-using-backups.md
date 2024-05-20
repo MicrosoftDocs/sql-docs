@@ -11,6 +11,7 @@ ms.subservice: backup-restore
 ms.topic: how-to
 ms.custom:
   - azure-sql-split
+  - build-2024
 monikerRange: "=azuresql||=azuresql-mi"
 ---
 # Restore a database from a backup in Azure SQL Managed Instance

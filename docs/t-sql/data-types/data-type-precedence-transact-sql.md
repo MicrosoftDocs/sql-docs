@@ -15,6 +15,8 @@ helpviewer_keywords:
   - "precedence [SQL Server], data types"
 dev_langs:
   - "TSQL"
+ms.custom:
+  - build-2024
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqledge-current||=azure-sqldw-latest||=fabric"
 ---
 # Data type precedence (Transact-SQL)

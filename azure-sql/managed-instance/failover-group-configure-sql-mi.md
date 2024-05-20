@@ -8,7 +8,7 @@ ms.date: 12/15/2023
 ms.service: sql-managed-instance
 ms.subservice: high-availability
 ms.topic: how-to
-ms.custom: azure-sql-split, devx-track-azurepowershell
+ms.custom: azure-sql-split, devx-track-azurepowershell, build-2024
 ---
 # Configure a failover group for Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]

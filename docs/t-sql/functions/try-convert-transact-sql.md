@@ -54,7 +54,9 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
  **TRY_CONVERT** is a reserved keyword in compatibility level 110 and higher.  
   
  This function is capable of being remoted to servers that have a version of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and above. It will not be remoted to servers that have a version below [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
-  
+
+**TRY_CONVERT** function doesn’t work for expressions with data sizes exceeding 8000 bytes.
+ 
 ## Examples  
   
 ### A. TRY_CONVERT returns null  

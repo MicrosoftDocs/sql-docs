@@ -78,7 +78,7 @@ Specifies whether to delete unused job schedules. *@delete_unused_schedule* is *
 
 ## Result set
 
-None
+None.
 
 ## Permissions
 

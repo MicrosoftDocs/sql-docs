@@ -24,7 +24,7 @@ Copilot provides relevant answers to user questions, simplifying database manage
 - Database administrators can independently manage databases and resolve issues, or learn more about the performance and capabilities of your database.
 - Developers can ask questions about their data as they would in text or conversation to generate a T-SQL query. Developers can also learn to write queries faster through detailed explanations of the generated query.
 
-Copilot integrates data and formulate applicable responses using public documentation, dynamic management views, catalog views, and Azure supportability diagnostics.
+Copilot integrates data and formulates applicable responses using public documentation, dynamic management views, catalog views, and Azure supportability diagnostics.
 
 ## Azure SQL Database experiences
 

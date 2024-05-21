@@ -11,6 +11,7 @@ ms.subservice: backup-restore
 ms.topic: how-to
 ms.custom:
   - azure-sql-split
+  - build-2024
 monikerRange: "=azuresql||=azuresql-mi"
 ---
 # Restore a database from a backup in Azure SQL Managed Instance
@@ -218,6 +219,7 @@ Consider the following limitations when working with backups and Azure SQL Manag
 - Secondary (paired) region can't be changed.
 - Newly created/restored databases might not immediately appear as restorable in other regions due to a lag in populating new data. It can take up to 24 hours for backups of new database to become visible.
 - The maximum number of databases you can restore in parallel is 200 per single subscription. In some cases, it's possible to increase this limit by opening a support ticket. 
+- Database backups taken from instances configured with the SQL Server 2022 [update policy](update-policy.md) can be restored to instances configured with either the SQL Server 2022 or Always-up-to-date update policy. Database backups taken from instances configured with the Always-up-to-date update policy can only be restored to instances also configured with the Always-up-to-date update policy. 
 
 ## Related content
 

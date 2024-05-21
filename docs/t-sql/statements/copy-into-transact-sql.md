@@ -5,7 +5,7 @@ description: Use the COPY statement in Azure Synapse Analytics and Warehouse in 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: procha, mikeray, stwynant
-ms.date: 05/13/2024
+ms.date: 05/21/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -665,7 +665,7 @@ To access files on either an Azure Data Lake Storage (ADLS) Gen2 and Azure Blob 
 1. Your Entra ID account must have access to the underlying files through [Azure role-based access control (RBAC)](/azure/storage/blobs/assign-azure-role-data-access?tabs=portal)) or [data lake ACLs](/azure/storage/blobs/data-lake-storage-access-control)).
 
 > [!NOTE]
-> Accessing storage accounts behind a firewall is currently in preview.
+> Trusted workspace access is currently in preview.
 
 #### *FILE_TYPE = { 'CSV' | 'PARQUET' }*
 

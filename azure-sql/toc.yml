@@ -1464,6 +1464,8 @@
       items:
       - name: Start & stop instance
         href: managed-instance/instance-stop-start-how-to.md
+      - name: Change update policy
+        href: managed-instance/update-policy.md 
       - name: Copy or move a database
         href: managed-instance/database-copy-move-how-to.md
       - name: Manage file space
@@ -1683,16 +1685,14 @@
           href: virtual-machines/windows/change-sql-server-version.md
         - name: Storage configuration
           href: virtual-machines/windows/storage-configuration.md
-        - name: Premium SSD v2 (preview)
-          href: virtual-machines/windows/storage-configuration-premium-ssd-v2.md
+
         - name: Microsoft Entra authentication
           href: virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm.md
         - name: Azure Update Manager
           href: virtual-machines/azure-update-manager-sql-vm.md
         - name: Automated Patching
           href: virtual-machines/windows/automated-patching.md
-        - name: SQL best practices assessment
-          href: virtual-machines/windows/sql-assessment-for-sql-vm.md
+
         - name: Azure Key Vault Integration
           href: virtual-machines/windows/azure-key-vault-integration-configure.md
         - name: Migrate storage to Ultradisk
@@ -1708,6 +1708,14 @@
             href: virtual-machines/windows/sql-agent-extension-manually-register-vms-bulk.md
           - name: Known issues and troubleshooting
             href: virtual-machines/windows/sql-agent-extension-troubleshoot-known-issues.md
+      - name: Optimize performance
+        items: 
+        - name: SQL best practices assessment
+          href: virtual-machines/windows/sql-assessment-for-sql-vm.md
+        - name: Analyze I/O performance
+          href: virtual-machines/windows/storage-performance-analysis.md
+        - name: Premium SSD v2 (preview)
+          href: virtual-machines/windows/storage-configuration-premium-ssd-v2.md
       - name: Migrate
         items:
         - name: VM to a new region

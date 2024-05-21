@@ -247,9 +247,13 @@ For example, if a table contains a **varbinary(max)** column that uses the FILES
 
 We recommend that you use the `PHYSICAL_ONLY` option for frequent use on production systems. Using `PHYSICAL_ONLY` can greatly shorten run-time for `DBCC CHECKDB` on large databases. We also recommend that you periodically run `DBCC CHECKDB` with no options. How frequently you should perform these runs depends on individual businesses and their production environments.
 
-`DBCC CHECKDB` requires at least as much storage space as the size of the specified database. You might need to temporarily scale up your storage capacity when it runs. If `DBCC CHECKDB` consumes all available storage space during execution, you receive the following error message:
+On Azure SQL Managed Instance, the available storage space must accommodate the entire internal database snapshot file created by `DBCC CHECKDB`, regardless of how much of it is actually used by data. This can lead to a situation where executing `DBCC CHECKDB` on a very large but sparse database (the size of the data is much smaller than the database file size) fails due to lack of space on your SQL managed instance. If `DBCC CHECKDB` consumes all available storage space during execution, you receive the following error message:
 
-> Operation on target ExecProc failed: Execution fail against sql server. Please contact SQL Server team if you need further support. Sql error number: 9001. Error Message: The log for database '' is not available. Check the operating system error log for related error messages. Resolve any errors and restart the database.
+```output
+Msg 1133, Level 16, State 3, Line 1
+The managed instance has reached its storage limit. To storage usage for the managed instance cannot exceed (...) MBs.
+You might need to temporarily scale up your SQL managed instance storage capacity before running `DBCC CHECKDB` again.
+```
 
 ## Check objects in parallel
 

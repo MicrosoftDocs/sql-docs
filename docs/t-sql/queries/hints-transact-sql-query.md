@@ -3,8 +3,8 @@ title: "Query Hints (Transact-SQL)"
 description: "Query hints specify that the indicated hints are used in the scope of a query. They affect all operators in the statement."
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: wiassaf, randolphwest
-ms.date: 01/08/2024
+ms.reviewer: wiassaf
+ms.date: 05/08/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -53,6 +53,8 @@ helpviewer_keywords:
   - "QUERY_PLAN_PROFILE query hint"
 dev_langs:
   - "TSQL"
+ms.custom:
+  - build-2024
 ---
 # Hints (Transact-SQL) - Query
 
@@ -103,6 +105,7 @@ Query hints specify that the indicated hints are used in the scope of a query. T
   | USE HINT ( <use_hint_name> [ , ...n ] )
   | USE PLAN N'<xml_plan>'
   | TABLE HINT ( <exposed_object_name> [ , <table_hint> [ [ , ] ...n ] ] )
+  | FOR TIMESTAMP AS OF '<point_in_time>' 
 }
 
 <table_hint> ::=
@@ -386,10 +389,10 @@ The following hint names are supported:
 
   Causes SQL Server to generate a plan that doesn't use row goal modifications with queries that contain these keywords:
 
-  - TOP
-  - OPTION (FAST N)
-  - IN
-  - EXISTS
+  - `TOP`
+  - `OPTION (FAST N)`
+  - `IN`
+  - `EXISTS`
 
   This hint name is equivalent to [trace flag](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138.
 
@@ -439,7 +442,7 @@ The following hint names are supported:
 
   > [!NOTE]  
   > The QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n hint doesn't override default or legacy cardinality estimation setting, if it's forced through database scoped configuration, trace flag or another query hint such as QUERYTRACEON.  
-  > This hint only affects the behavior of the Query Optimizer. It doesn't affect other features of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] that may depend on the [database compatibility level](../statements/alter-database-transact-sql-compatibility-level.md), such as the availability of certain database features.  
+  > This hint only affects the behavior of the Query Optimizer. It doesn't affect other features of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] that might depend on the [database compatibility level](../statements/alter-database-transact-sql-compatibility-level.md), such as the availability of certain database features.  
   > To learn more about this hint, see [Developer's Choice: Hinting Query Execution model](/archive/blogs/sql_server_team/developers-choice-hinting-query-execution-model).
 
 - 'QUERY_PLAN_PROFILE'
@@ -490,6 +493,18 @@ Table hints other than INDEX, FORCESCAN, and FORCESEEK are disallowed as query h
 
 > [!CAUTION]  
 > Specifying FORCESEEK with parameters limits the number of plans that can be considered by the Query Optimizer more than when specifying FORCESEEK without parameters. This might cause a "Plan cannot be generated" error to occur in more cases.
+
+<a id="for-timestamp"></a>
+
+#### FOR TIMESTAMP AS OF '<point_in_time>'
+
+**Applies to**: [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)]
+
+Use the `TIMESTAMP` syntax in the `OPTION` clause to query data as it existed in the past, part of the time travel feature in Synapse Data Warehouse in Microsoft Fabric.
+
+Specify the *point_in_time* in the format `yyyy-MM-ddTHH:mm:ss[.fff]` to return data as it appeared at that time. The time zone is always in UTC. Use the `CONVERT` syntax for the necessary datetime format with [style 126](../functions/cast-and-convert-transact-sql.md?view=fabric&preserve-view=true#date-and-time-styles).
+
+The `TIMESTAMP AS OF` hint can be specified only once using the `OPTION` clause. For more information and limitations, see [Query data as it existed in the past](/fabric/data-warehouse/time-travel).
 
 ## Remarks
 
@@ -801,8 +816,23 @@ EXEC sys.sp_query_store_set_hints @query_id= 39,
     @query_hints = N'OPTION(RECOMPILE, MAXDOP 1, USE HINT(''QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_110''))';
 ```
 
+### O. Query data as of a point in time
+
+**Applies to**: [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)]
+
+Use the `TIMESTAMP` syntax in the `OPTION` clause to query data as it existed in the past, in Synapse Data Warehouse in Microsoft Fabric. The following sample query returns data as it appeared on March 13, 2024 at 7:39:35.28 PM UTC. The time zone is always in UTC.
+
+```sql
+SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales
+FROM FactInternetSales
+GROUP BY OrderDateKey
+ORDER BY OrderDateKey
+OPTION (FOR TIMESTAMP AS OF '2024-03-13T19:39:35.28'); --March 13, 2024 at 7:39:35.28 PM UTC
+```
+
 ## Related content
 
+- [OPTION Clause (Transact-SQL)](option-clause-transact-sql.md)
 - [Hints (Transact-SQL)](hints-transact-sql.md)
 - [Query Store hints](../../relational-databases/performance/query-store-hints.md)
 - [Plan guides](../../relational-databases/performance/plan-guides.md)

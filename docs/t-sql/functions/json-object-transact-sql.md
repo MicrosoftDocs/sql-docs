@@ -1,9 +1,10 @@
 ---
 title: "JSON_OBJECT (Transact-SQL)"
-description: "JSON_OBJECT (Transact-SQL)"
-author: "uc-msft"
-ms.author: "umajay"
-ms.date: 09/05/2023
+description: JSON_OBJECT constructs JSON object text from zero or more expressions.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: umajay
+ms.date: 05/13/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -15,50 +16,51 @@ helpviewer_keywords:
   - "JSON, validating"
 dev_langs:
   - "TSQL"
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-ver16 || >= sql-server-linux-ver16"
+ms.custom:
+  - build-2024
+monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 # JSON_OBJECT (Transact-SQL)
-
-[!INCLUDE [sqlserver2022-asdb](../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 Constructs JSON object text from zero or more expressions.
 
-## Syntax  
+## Syntax
   
-```syntaxsql  
+```syntaxsql
 JSON_OBJECT ( [ <json_key_value> [,...n] ] [ json_null_clause ] )
 
 <json_key_value> ::= json_key_name : value_expression
 
 <json_null_clause> ::=
-	  NULL ON NULL
-	| ABSENT ON NULL
+      NULL ON NULL
+    | ABSENT ON NULL
 ```
   
 ## Arguments
 
- *json_key_name*
+#### *json_key_name*
  Is a character expression that defines the value of the JSON key name.
 
  *value_expression*
  Is an expression that defines the value of the JSON key.
 
-*json_null_clause* can be used to control the behavior of JSON_OBJECT function when value_expression is NULL. The option NULL ON NULL converts the SQL NULL value into a JSON null value when generating the JSON key value. The option ABSENT ON NULL will omit the entire key if the value is NULL. The default setting for this option is NULL ON NULL.
+#### *json_null_clause* 
+
+Can be used to control the behavior of JSON_OBJECT function when value_expression is `NULL`. The option `NULL ON NULL `converts the SQL `NULL` value into a JSON null value when generating the JSON key value. The option `ABSENT ON NULL` will omit the entire key if the value is `NULL`. The default setting for this option is `NULL ON NULL`.
+
+## Return value
+
+Returns a valid JSON object string of **nvarchar(max)** type.
 
 For more info about what you see in the output of the `JSON_OBJECT` function, see the following articles:  
 
--   [How FOR JSON converts SQL Server data types to JSON data types &#40;SQL Server&#41;](../../relational-databases/json/how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server.md)  
+-   [How FOR JSON converts SQL Server data types to JSON data types (SQL Server)](../../relational-databases/json/how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server.md)  
     The `JSON_OBJECT` function uses the rules described in this `FOR JSON` article to convert SQL data types to JSON types in the JSON object output.  
 
--   [How FOR JSON escapes special characters and control characters &#40;SQL Server&#41;](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md)  
+-   [How FOR JSON escapes special characters and control characters (SQL Server)](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md)  
     The `JSON_OBJECT` function escapes special characters and represents control characters in the JSON output as described in this `FOR JSON` article.
 
-## Return value
-Returns a valid JSON object string of nvarchar(max) type.
-
-## Remarks  
-
-  
 ## Examples
 
 ### Example 1
@@ -91,7 +93,7 @@ SELECT JSON_OBJECT('name':'value', 'type':1)
   
 ### Example 3
 
-The following example returns a JSON object with one key since the value for one of the keys is NULL and the ABSENT ON NULL option is specified.  
+The following example returns a JSON object with one key since the value for one of the keys is `NULL` and the `ABSENT ON NULL` option is specified.  
   
 ```sql  
 SELECT JSON_OBJECT('name':'value', 'type':NULL ABSENT ON NULL)
@@ -157,11 +159,11 @@ WHERE s.is_user_process = 1;
 
 **Result**
 
-|session_id|info|  
+|`session_id`|`info`|  
 |--------|---------------|
 |51|`{"security_id":"AQYAAAAAAAVQAAAAY/0dmFnai5oioQHh9eNArBIkYd4=","login":"NT SERVICE\\SQLTELEMETRY$SQL22"`,"status":"sleeping"}|
 |52|`{"security_id":"AQUAAAAAAAUVAAAAoGXPfnhLm1/nfIdwAMgbAA==","login":WORKGROUP\\sqluser","status":"running"}`|
 
-## See also  
+## Related content
 
- [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
+- [JSON data in SQL Server](../../relational-databases/json/json-data-sql-server.md)

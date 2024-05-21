@@ -4,13 +4,15 @@ description: "Validate, query, and change JSON data with built-in functions (SQL
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth, randolphwest
-ms.date: 04/25/2024
+ms.date: 05/02/2024
 ms.service: sql
+ms.custom:
+  - build-2024
 ms.topic: conceptual
 helpviewer_keywords:
   - "JSON, built-in functions"
   - "functions (JSON)"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Validate, query, and change JSON data with built-in functions (SQL Server)
 
@@ -22,6 +24,8 @@ The built-in support for JSON includes the following built-in functions describe
 - [JSON_VALUE](#VALUE) extracts a scalar value from a JSON string.
 - [JSON_QUERY](#QUERY) extracts an object or an array from a JSON string.
 - [JSON_MODIFY](#MODIFY) updates the value of a property in a JSON string and returns the updated JSON string.
+
+For all JSON functions, review [JSON Functions (Transact-SQL)](../../t-sql/functions/json-functions-transact-sql.md).
 
 [!INCLUDE [article-uses-adventureworks](../../includes/article-uses-adventureworks.md)]
 
@@ -69,15 +73,17 @@ This JSON document, which contains nested complex elements, is stored in the fol
 ```sql
 CREATE TABLE Families (
     id INT identity CONSTRAINT PK_JSON_ID PRIMARY KEY,
-    doc NVARCHAR(MAX)
+    [doc] NVARCHAR(MAX)
 );
 ```
+
+JSON functions work the same whether the JSON document is stored in **varchar**/**nvarchar** or the native **JSON** data type.
 
 ## <a id="ISJSON"></a> Validate JSON text by using the ISJSON function
 
 The `ISJSON` function tests whether a string contains valid JSON.
 
-The following example returns rows in which the JSON column contains valid JSON text. Without explicit JSON constraint, you can enter any text in the NVARCHAR column:
+The following example returns rows in which the JSON column contains valid JSON text. Without explicit JSON constraint, you can enter any text in the **nvarchar** column:
 
 ```sql
 SELECT *
@@ -280,3 +286,4 @@ For more information, see [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/jso
 - [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)
 - [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md)
 - [JSON Path Expressions (SQL Server)](json-path-expressions-sql-server.md)
+- [JSON data type](../../t-sql/data-types/json-data-type.md)

@@ -9,7 +9,7 @@ ms.date: 11/14/2023
 ms.service: sql-managed-instance
 ms.subservice: data-movement
 ms.topic: conceptual
-ms.custom: ignite-2023
+ms.custom: ignite-2023, build-2024
 ---
 
 # Overview of the Managed Instance link
@@ -171,7 +171,11 @@ Version supportability limitations include:
 
 - You can't use Windows 10 and 11 clients to host your SQL Server instance, because it's not possible to enable the Always On availability group feature that's required for the link. SQL Server instances must be hosted on Windows Server 2012 or later.
 - SQL Server versions 2008 to 2014 aren't supported by the link feature, as the SQL engine of these releases doesn't have built-in support for distributed availability groups required for the link. Upgrade to a newer version of SQL Server to use the link.
-- Establishing a link from SQL Managed Instance to SQL Server is only supported with SQL Server 2022. 
+- The following link capabilities are only supported between SQL Server 2022 and SQL managed instances with the [SQL Server 2022 update policy](update-policy.md#sql-server-2022-update-policy): 
+    - Establishing a link _from_ SQL Managed Instance _to_ SQL Server. 
+    - Failing over from SQL Managed Instance to SQL Server 2022. 
+- While you can establish a link from SQL Server 2022 to a SQL managed instance configured with the [Always-up-to-date update policy](update-policy.md#always-up-to-date-update-policy), after fail over to SQL Managed Instance, you will no longer be able to replicate data or fail back to SQL Server 2022. 
+
 
 Data replication limitations include:
 

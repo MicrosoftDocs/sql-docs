@@ -4,7 +4,7 @@ description: This tutorial shows how to use Azure PowerShell to create a Windows
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
-ms.date: 12/21/2018
+ms.date: 05/08/2024
 ms.service: virtual-machines-sql
 ms.subservice: deployment
 ms.topic: quickstart
@@ -18,10 +18,10 @@ tags: azure-resource-manager
 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
-This quickstart steps through creating a SQL Server virtual machine (VM) with Azure PowerShell.
+This quickstart steps through creating a Windows SQL Server on Azure Virtual Machine (VM) with Azure PowerShell.
 
 > [!TIP]
-> - This quickstart provides a path for quickly provisioning and connecting to a SQL VM. For more information about other Azure PowerShell options for creating SQL VMs, see the [Provisioning guide for SQL Server VMs with Azure PowerShell](create-sql-vm-powershell.md).
+> - This quickstart provides a path to quickly provision and connect to a SQL Server VM. For more information about other Azure PowerShell options to create SQL Server VMs, see the [Provisioning guide for SQL Server VMs with Azure PowerShell](create-sql-vm-powershell.md).
 > - If you have questions about SQL Server virtual machines, see the [Frequently Asked Questions](frequently-asked-questions-faq.yml).
 
 ## <a id="subscription"></a> Get an Azure subscription
@@ -132,7 +132,7 @@ If you don't have an Azure subscription, create a [free account](https://azure.m
    $VMName = $ResourceGroupName + "VM"
    $VMConfig = New-AzVMConfig -VMName $VMName -VMSize Standard_DS13_V2 |
       Set-AzVMOperatingSystem -Windows -ComputerName $VMName -Credential $Cred -ProvisionVMAgent -EnableAutoUpdate |
-      Set-AzVMSourceImage -PublisherName "MicrosoftSQLServer" -Offer "SQL2017-WS2016" -Skus "SQLDEV" -Version "latest" |
+      Set-AzVMSourceImage -PublisherName "MicrosoftSQLServer" -Offer "SQL2022-WS2022" -Skus "SQLDEV" -Version "latest" |
       Add-AzVMNetworkInterface -Id $Interface.Id
    
    # Create the VM

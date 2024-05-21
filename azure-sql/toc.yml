@@ -1464,6 +1464,8 @@
       items:
       - name: Start & stop instance
         href: managed-instance/instance-stop-start-how-to.md
+      - name: Change update policy
+        href: managed-instance/update-policy.md 
       - name: Copy or move a database
         href: managed-instance/database-copy-move-how-to.md
       - name: Manage file space

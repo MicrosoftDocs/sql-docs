@@ -4,7 +4,7 @@ description: Th EOMONTH function returns the last day of the month containing a 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 03/21/2024
+ms.date: 05/09/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -24,7 +24,7 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 This function returns the last day of the month containing a specified date, with an optional offset.
 
 > [!TIP]  
-> You can use [DATETRUNC](./datetrunc-transact-sql.md) to calculate the start of the month.
+> In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, you can use [DATETRUNC](datetrunc-transact-sql.md) to calculate the start of the month.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -61,8 +61,9 @@ The `EOMONTH` function can remote to instances running [!INCLUDE [ssSQL11](../..
 ### A. EOMONTH with explicit datetime type
 
 ```sql
-DECLARE @date DATETIME = '12/1/2022';
-SELECT EOMONTH ( @date ) AS Result;
+DECLARE @date DATETIME = '12/1/2024';
+
+SELECT EOMONTH(@date) AS Result;
 GO
 ```
 
@@ -71,16 +72,15 @@ GO
 ```output
 Result
 ------------
-2022-12-31
-
-(1 row(s) affected)
+2024-12-31
 ```
 
 ### B. EOMONTH with string parameter and implicit conversion
 
 ```sql
-DECLARE @date VARCHAR(255) = '12/1/2022';
-SELECT EOMONTH ( @date ) AS Result;
+DECLARE @date VARCHAR(255) = '12/1/2024';
+
+SELECT EOMONTH(@date) AS Result;
 GO
 ```
 
@@ -89,20 +89,19 @@ GO
 ```output
 Result
 ------------
-2022-12-31
-
-(1 row(s) affected)
+2024-12-31
 ```
 
 ### C. EOMONTH with and without the month_to_add parameter
 
-The values shown in these result sets reflect an execution date between and including `12/01/2022` and `12/31/2022`.
+The values shown in these result sets reflect an execution date between and including `12/01/2024` and `12/31/2024`.
 
 ```sql
-DECLARE @date DATETIME = GETDATE();
-SELECT EOMONTH ( @date ) AS 'This Month';
-SELECT EOMONTH ( @date, 1 ) AS 'Next Month';
-SELECT EOMONTH ( @date, -1 ) AS 'Last Month';
+DECLARE @date DATETIME = '2024-12-31';
+
+SELECT EOMONTH(@date) AS 'This Month';
+SELECT EOMONTH(@date, 1) AS 'Next Month';
+SELECT EOMONTH(@date, -1) AS 'Last Month';
 GO
 ```
 
@@ -111,19 +110,19 @@ GO
 ```output
 This Month
 -----------------------
-2022-12-31
-
-(1 row(s) affected)
+2024-12-31
 
 Next Month
 -----------------------
-2022-01-31
-
-(1 row(s) affected)
+2025-01-31
 
 Last Month
 -----------------------
-2022-11-30
-
-(1 row(s) affected)
+2024-11-30
 ```
+
+## Related content
+
+- [What are the SQL database functions?](functions.md)
+- [SYSDATETIME (Transact-SQL)](sysdatetime-transact-sql.md)
+- [SYSDATETIMEOFFSET (Transact-SQL)](sysdatetimeoffset-transact-sql.md)

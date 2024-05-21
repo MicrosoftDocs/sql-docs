@@ -3,7 +3,7 @@ title: "Create a basic table report (SSRS tutorial)"
 description: Use the Report Designer tool in Visual Studio / SQL Server Data Tools (SSDT) and then create a SQL Server Reporting Services (SSRS) paginated report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 04/16/2019
+ms.date: 05/21/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
@@ -19,14 +19,15 @@ In this tutorial, you use the *Report Designer* tool in Visual Studio / SQL Serv
 
 As you progress in this tutorial, you're going to learn how to:
   
-- create a report project.
-- set up a data connection.
-- define a query.
-- add a table data region.
-- format the report.
-- group and total fields.
-- preview the report.
-- optionally publish the report.
+> [!div class="checklist"]
+> - Create a report project
+> - Set up a data connection
+> - Define a query
+> - Add a table data region
+> - Format the report
+> - Group and total fields
+> - Preview the report
+> - Publish the report
 
 ## Requirements
 
@@ -34,7 +35,7 @@ Your system must have the following components installed to take this tutorial:
 
 - [!INCLUDE[msconame-md](../includes/msconame-md.md)] SQL Server database engine.  
 - SQL Server 2016 Reporting Services or later (SSRS).
-- The [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.  For more information, see [Adventure Works Sample Databases](https://github.com/Microsoft/sql-server-samples/releases).
+- The [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database. For more information, see [Adventure Works Sample Databases](https://github.com/Microsoft/sql-server-samples/releases).
 - [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) for Visual Studio along with the Reporting Services extension installed to enable access to the *Report Designer*.
   
 You must also have read-only permissions to retrieve data from the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.
@@ -51,4 +52,4 @@ You must also have read-only permissions to retrieve data from the [!INCLUDE [ss
 - [Lesson 6: Add grouping and totals &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)
 [Reporting Services tutorials](reporting-services-tutorials-ssrs.md)
 
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+More questions? [Try asking the Reporting Services forum.](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

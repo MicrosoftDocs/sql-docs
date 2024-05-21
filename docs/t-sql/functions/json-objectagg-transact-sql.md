@@ -15,6 +15,8 @@ helpviewer_keywords:
   - "JSON_OBJECTAGG function"
 dev_langs:
   - "TSQL"
+ms.custom:
+  - build-2024
 monikerRange: "=azuresqldb-current"
 ---
 # JSON_OBJECTAGG (Transact-SQL)

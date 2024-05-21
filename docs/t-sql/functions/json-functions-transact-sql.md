@@ -12,6 +12,8 @@ helpviewer_keywords:
   - "JSON functions"
 dev_langs:
   - "TSQL"
+ms.custom:
+  - build-2024
 monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 # JSON functions (Transact-SQL)

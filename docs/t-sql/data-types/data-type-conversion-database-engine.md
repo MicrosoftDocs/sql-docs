@@ -18,6 +18,8 @@ helpviewer_keywords:
   - "converting data types [SQL Server], about converting data types"
 dev_langs:
   - "TSQL"
+ms.custom:
+  - build-2024
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # Data type conversion (Database Engine)

@@ -6,6 +6,8 @@ ms.author: jovanpop
 ms.reviewer: jroth, randolphwest
 ms.date: 05/02/2024
 ms.service: sql
+ms.custom:
+  - build-2024
 ms.topic: conceptual
 helpviewer_keywords:
   - "JSON, built-in functions"

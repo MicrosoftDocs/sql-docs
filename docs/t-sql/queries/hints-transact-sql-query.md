@@ -53,6 +53,8 @@ helpviewer_keywords:
   - "QUERY_PLAN_PROFILE query hint"
 dev_langs:
   - "TSQL"
+ms.custom:
+  - build-2024
 ---
 # Hints (Transact-SQL) - Query
 

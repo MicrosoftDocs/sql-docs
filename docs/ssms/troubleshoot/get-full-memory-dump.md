@@ -1,28 +1,30 @@
 ---
 title: Get Full Memory Dump to troubleshoot SSMS
-description: "Get Full Memory Dump"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: drskwier
-ms.date: 05/17/2019
+description: "Get full memory dump"
+author: erinstellato-ms
+ms.author: erinstellato
+ms.reviewer: maghan, randolphwest
+ms.date: 05/10/2024
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
 ---
 
-# Get Full Memory Dump
+# Get a full memory dump to troubleshoot SSMS
 
 [!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-In this article, you learn how to capture diagnostic information to troubleshoot a crash or a unresponsive system that you experienced from SQL Server Management Studio (SSMS).
+In this article, you learn how to capture diagnostic information to troubleshoot a crash or an unresponsive system that you experience in SQL Server Management Studio (SSMS).
 
-To capture diagnostic information to troubleshoot, follow the steps below.
+## Get a full memory dump after an unresponsive system or crash
+
+Get a full memory dump of SQL Server Management Studio (SSMS) when it stops responding or crashes.
+
+To capture diagnostic information to troubleshoot a crash or an unresponsive SSMS, use the following steps:
 
 1. Download [ProcDump](/sysinternals/downloads/procdump).
-
-2. Unzip the download into a folder.
-
-3. Open a Command Prompt (such as `cmd.exe`), and run the following command.
+1. Unzip the download into a folder.
+1. Open a Command Prompt (such as `cmd.exe`), and run the following command.
 
     ```console
     <PathToProcDumpFolder>\procdump.exe -e -h -ma -w ssms.exe
@@ -30,33 +32,27 @@ To capture diagnostic information to troubleshoot, follow the steps below.
 
     It should prompt you to accept a license agreement, select **Agree**.
 
-4. Start SQL Server Management Studio (SSMS) if not started already.
-
-5. Reproduce your issue.
-
-6. The text should appear in the cmd prompt about writing the dump file, wait for that to finish.
-
-7. Create a new folder and copy the *.dmp file that is written out to that folder.
-
-8. Copy the following files into the same folder.
+1. Start SQL Server Management Studio (SSMS) if not started already.
+1. Reproduce your issue.
+1. Wait as the text appears in the cmd prompt about writing the dump file, don't proceed until it finishes.
+1. Create a new folder and copy the *.dmp file that is written out to that folder.
+1. Copy the following files into the same folder.
 
     * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscordacwks.dll"
     * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\SOS.dll"
     * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll"
 
-9. Zip up the folder.
+1. Zip up the folder.
 
 ## OutOfMemoryException
 
 You can also get the Full Memory Dump of SSMS when it throws an OutOfMemoryException (can be any managed exception).
 
-To capture diagnostic information to troubleshoot an OutOfMemoryException from SSMS, Follow the steps below.
+To capture diagnostic information to troubleshoot an OutOfMemoryException from SSMS, use the following steps:
 
 1. Download [ProcDump](/sysinternals/downloads/procdump).
-
-2. Unzip the download into a folder.
-
-3. Open Command Prompt and run the following command.
+1. Unzip the download into a folder.
+1. Open Command Prompt and run the following command.
 
     ```cmd
     <PathToProcDumpFolder>\procdump.exe -e 1 -f System.OutOfMemoryException -ma -w ssms.exe
@@ -64,27 +60,22 @@ To capture diagnostic information to troubleshoot an OutOfMemoryException from S
 
     It should prompt you to accept a license agreement, select **Agree**.
 
-4. Start SQL Server Management Studio if not started already.
-
-5. Repro the issue.
-
-6. The text should appear in the cmd prompt about writing the dump file, wait for that to finish.
-
-7. Create a new folder and copy the *.dmp file that is written out to that folder.
-
-8. Copy the following files into the same folder.
+1. Start SQL Server Management Studio if not started already.
+1. Repro the issue.
+1. Wait as the text appears in the cmd prompt about writing the dump file, don't proceed until it finishes.
+1. Create a new folder and copy the *.dmp file that is written out to that folder.
+1. Copy the following files into the same folder.
 
     * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscordacwks.dll"
     * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\SOS.dll"
     * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll"
 
-9. Zip up the folder.
+1. Zip up the folder.
 
 ## Share the information
 
 1. To share the information with the SSMS Team, log the issue at https://aka.ms/sqlfeedback.
-
-2. Then share the memory dump file collected to OneDrive (or equivalent) where the file can be collected.
+1. Then share the memory dump file collected to OneDrive (or equivalent) where the file can be collected.
 
     > [!Important]
     > Memory dump files may contain sensitive information.

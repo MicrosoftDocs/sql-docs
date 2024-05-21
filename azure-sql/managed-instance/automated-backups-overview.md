@@ -9,7 +9,7 @@ ms.date: 07/12/2023
 ms.service: sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: conceptual
-ms.custom: references_regions, azure-sql-split
+ms.custom: references_regions, azure-sql-split, build-2024
 monikerRange: "= azuresql || = azuresql-mi"
 ---
 # Automated backups in Azure SQL Managed Instance

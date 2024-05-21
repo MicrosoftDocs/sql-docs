@@ -8,7 +8,7 @@ ms.reviewer: mathoma, danil
 ms.date: 06/02/2022
 ms.service: sql-managed-instance
 ms.subservice: data-movement
-ms.custom: ignite-2023
+ms.custom: ignite-2023, build-2024
 ms.topic: how-to
 ---
 

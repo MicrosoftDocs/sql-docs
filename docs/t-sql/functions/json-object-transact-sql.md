@@ -16,6 +16,8 @@ helpviewer_keywords:
   - "JSON, validating"
 dev_langs:
   - "TSQL"
+ms.custom:
+  - build-2024
 monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 # JSON_OBJECT (Transact-SQL)

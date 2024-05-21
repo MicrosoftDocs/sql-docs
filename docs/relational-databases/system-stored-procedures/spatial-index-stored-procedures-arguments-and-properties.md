@@ -4,7 +4,7 @@ description: "Arguments and properties of spatial index stored procedures."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 05/14/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -25,10 +25,10 @@ This article describes the arguments and properties for spatial index stored pro
 
 For the syntax of specific spatial index stored procedures, see the following articles:
 
-- [sp_help_spatial_geometry_index](sp-help-spatial-geometry-index-transact-sql.md)
-- [sp_help_spatial_geometry_index_xml](sp-help-spatial-geometry-index-xml-transact-sql.md)
-- [sp_help_spatial_geography_index](sp-help-spatial-geography-index-transact-sql.md)
-- [sp_help_spatial_geography_index_xml](sp-help-spatial-geography-index-xml-transact-sql.md)
+- [sp_help_spatial_geometry_index (Transact-SQL)](sp-help-spatial-geometry-index-transact-sql.md)
+- [sp_help_spatial_geometry_index_xml (Transact-SQL)](sp-help-spatial-geometry-index-xml-transact-sql.md)
+- [sp_help_spatial_geography_index (Transact-SQL)](sp-help-spatial-geography-index-transact-sql.md)
+- [sp_help_spatial_geography_index_xml (Transact-SQL)](sp-help-spatial-geography-index-xml-transact-sql.md)
 
 ## Arguments
 
@@ -38,26 +38,24 @@ The qualified or nonqualified name of the table for which the spatial index has 
 
 Quotation marks are required only if a qualified table is specified. If a fully qualified name, including a database name, is provided, the database name must be the name of the current database. *@tabname* is **nvarchar(776)**, with no default.
 
-#### [ @indexname = ] '*indexname*'
+#### [ @indexname = ] N'*indexname*'
 
-The name of the spatial index specified. *@indexname* is **sysname** with no default.
+The name of the spatial index specified. *@indexname* is **sysname**, with no default.
 
 #### [ @verboseoutput = ] *verboseoutput*
 
-The range of property names and values to be returned.
+The range of property names and values to be returned. *@verboseoutput* is **tinyint**, with no default, and can be one of these values.
 
 - `0` = core properties
 - `>0` = all properties
 
-*@verboseoutput* is **tinyint** with no default.
+#### [ @query_sample = ] *query_sample*
 
-#### [ @query_sample = ] '*query_sample*'
+A representative query sample that can be used to test the usefulness of the index. *@query_sample* is **geography**, with no default. It might be a representative object or a query window.
 
-A representative query sample that can be used to test the usefulness of the index. It may be a representative object or a query window. *query_sample* is **geometry** with no default.
+#### [ @xml_output = ] N'*xml_output*' OUTPUT
 
-#### [ @xml_output = ] '*xml_output*'
-
-An output parameter that returns the result set in an XML fragment. *xml_output* is **xml** with no default.
+Returns the result set in an XML fragment. *@xml_output* is an OUTPUT parameter of type **xml**.
 
 ## Properties
 
@@ -69,19 +67,19 @@ Number of rows in the base table. Value is **bigint**.
 
 #### Bounding_Box_xmin
 
-X-minimum bounding box properties of the spatial index for **geometry** type. This property value is NULL for **geography** type. Value is **float**.
+X-minimum bounding box properties of the spatial index for **geometry** type. This property value is `NULL` for **geography** type. Value is **float**.
 
 #### Bounding_Box_ymin
 
-Y-minimum bounding box properties of the spatial index for **geometry** type. This property value is NULL for **geography** type. Value is **float**.
+Y-minimum bounding box properties of the spatial index for **geometry** type. This property value is `NULL` for **geography** type. Value is **float**.
 
 #### Bounding_Box_xmax
 
-X-maximum bounding box properties of the spatial index for **geometry** type. This property value is NULL for **geography** type. Value is **float**.
+X-maximum bounding box properties of the spatial index for **geometry** type. This property value is `NULL` for **geography** type. Value is **float**.
 
 #### Bounding_Box_ymax
 
-Y-maximum bounding box properties of the spatial index for **geometry** type. This property value is NULL for **geography** type. Value is **float**.
+Y-maximum bounding box properties of the spatial index for **geometry** type. This property value is `NULL` for **geography** type. Value is **float**.
 
 #### Grid_Size_Level_1
 
@@ -141,15 +139,15 @@ Number of index rows / number base table rows. Value is **bigint**.
 
 #### Total_Number_Of_ObjectCells_In_Level0_For_QuerySample
 
-Indicates whether the representative query sample falls outside of the bounding box of the **geometry** index and into the root cell (level 0 cell). This is either 0 (not in level 0 cell) or 1. If it is in the level 0 cell, the investigated index isn't an appropriate index for the query sample. This is a core property. Value is **bigint**.
+Indicates whether the representative query sample falls outside of the bounding box of the **geometry** index and into the root cell (level 0 cell). This is either 0 (not in level 0 cell) or 1. If it's in the level 0 cell, the investigated index isn't an appropriate index for the query sample. This is a core property. Value is **bigint**.
 
 #### Total_Number_Of_ObjectCells_In_Level0_In_Index
 
 Number of cell instances of indexed objects that are tessellated in level 0 (root cell, outside the bounding box for **geometry**). This is a core property. Value is **bigint**.
 
-For **geometry** indexes, this occurs if the bounding box of the index is smaller than the data domain. A high number of objects in level 0 may require secondary filters if the query window falls partially outside the bounding box and decreases the index performance (for example, **Total_Number_Of_ObjectCells_In_Level0_For_QuerySample** is 1). If the query window falls inside the bounding box, a high number of objects in level 0 may actually improve the performance of the index.
+For **geometry** indexes, this occurs if the bounding box of the index is smaller than the data domain. A high number of objects in level 0 might require secondary filters if the query window falls partially outside the bounding box and decreases the index performance (for example, **Total_Number_Of_ObjectCells_In_Level0_For_QuerySample** is 1). If the query window falls inside the bounding box, a high number of objects in level 0 might actually improve the performance of the index.
 
-NULL and empty instances are counted at level 0 but don't affect performance. Level 0 has as many cells as NULL and empty instances at the base table. For **geography** indexes, level 0 has as many cells as NULL and empty instances +1 cell, because the query sample is counted as 1.
+NULL and empty instances are counted at level 0 but don't affect performance. Level 0 has as many cells as `NULL` and empty instances at the base table. For **geography** indexes, level 0 has as many cells as `NULL` and empty instances +1 cell, because the query sample is counted as 1.
 
 #### Total_Number_Of_ObjectCells_In_Level1_In_Index
 
@@ -204,11 +202,11 @@ Number of cells that are intersected by an object at tessellation level 4. (Cell
 Indicates whether the query sample is in the root cell 0 outside the bounding box, but touching it. This is a core property. Value is **bigint**.
 
 > [!NOTE]  
-> This information is only useful in determining whether there are objects that the bounding box may have closely missed.
+> This information is only useful in determining whether there are objects that the bounding box might have closely missed.
 
 #### Total_Number_Of_Border_ObjectCells_In_Level0_In_Index
 
-Number of objects in level 0 that touch the bounding box. (Cell_attribute value is 0.)  Value is **bigint**.
+Number of objects in level 0 that touch the bounding box. (Cell_attribute value is 0.) Value is **bigint**.
 
 #### Total_Number_Of_Border_ObjectCells_In_Level1_In_Index
 
@@ -360,7 +358,7 @@ User must be a member of the **public** role. Requires READ ACCESS permission on
 
 ## Remarks
 
-Properties containing NULL values aren't included in the return set.
+Properties containing `NULL` values aren't included in the return set.
 
 ## Examples
 

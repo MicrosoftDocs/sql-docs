@@ -1,15 +1,18 @@
 ---
 title: "JSON_MODIFY (Transact-SQL)"
-description: "JSON_MODIFY (Transact-SQL)"
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-ms.date: 06/03/2020
+description: JSON_MODIFY updates the value of a property in a JSON string and returns the updated JSON string.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: jovanpop
+ms.date: 05/02/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
 dev_langs:
   - "TSQL"
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
+ms.custom:
+  - build-2024
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # JSON_MODIFY (Transact-SQL)
 
@@ -19,7 +22,7 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-201
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## Syntax  
+## Syntax
   
 ```syntaxsql
 JSON_MODIFY ( expression , path , newValue )  
@@ -27,12 +30,12 @@ JSON_MODIFY ( expression , path , newValue )
   
 ## Arguments
 
- *expression*  
+#### *expression*  
  An expression. Typically the name of a variable or a column that contains JSON text.  
   
- **JSON_MODIFY** returns an error if *expression* doesn't contain valid JSON.  
+ `JSON_MODIFY` returns an error if *expression* doesn't contain valid JSON.  
   
- *path*  
+#### *path*  
  A JSON path expression that specifies the property to update.
 
  *path* has the following syntax:  
@@ -43,25 +46,25 @@ JSON_MODIFY ( expression , path , newValue )
     Optional modifier that specifies that the new value should be appended to the array referenced by *\<json path>*.  
   
 - *lax*  
-    Specifies that the property referenced by *\<json path>* does not have to exist. If the property is not present, JSON_MODIFY tries to insert the new value on the specified path. Insertion may fail if the property can't be inserted on the path. If you don't specify *lax* or *strict*,  *lax* is the default mode.  
+    Specifies that the property referenced by *\<json path>* does not have to exist. If the property is not present, `JSON_MODIFY` tries to insert the new value on the specified path. Insertion can fail if the property can't be inserted on the path. If you don't specify *lax* or *strict*,  *lax* is the default mode.  
   
 - *strict*  
-    Specifies that the property referenced by *\<json path>* must be in the JSON expression. If the property is not present, JSON_MODIFY returns an error.  
+    Specifies that the property referenced by *\<json path>* must be in the JSON expression. If the property is not present, `JSON_MODIFY` returns an error.  
   
 - *\<json path>*  
-    Specifies the path for the property to update. For more info, see [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
+    Specifies the path for the property to update. For more info, see [JSON Path Expressions (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
 In [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you can provide a variable as the value of *path*.
 
-**JSON_MODIFY** returns an error if the format of *path* isn't valid.  
+`JSON_MODIFY` returns an error if the format of *path* isn't valid.  
   
- *newValue*  
+#### *newValue*  
  The new value for the property specified by *path*.  
- The new value must be a [n]varchar or text.
+ The new value must be a **nvarchar**/**varchar**/**text**.
   
- In lax mode, JSON_MODIFY deletes the specified key if the new value is NULL.  
+ In lax mode, `JSON_MODIFY` deletes the specified key if the new value is `NULL`.  
   
-JSON_MODIFY escapes all special characters in the new value if the type of the value is NVARCHAR or VARCHAR. A text value is not escaped if it is properly formatted JSON produced by FOR JSON, JSON_QUERY, or JSON_MODIFY.  
+`JSON_MODIFY` escapes all special characters in the new value if the type of the value is **nvarchar** or **varchar**. A text value is not escaped if it is properly formatted JSON produced by `FOR JSON`, `JSON_QUERY`, or `JSON_MODIFY`.  
   
 ## Return Value
 
@@ -71,18 +74,20 @@ JSON_MODIFY escapes all special characters in the new value if the type of the v
 
  The JSON_MODIFY function lets you  either update the value of an existing property, insert a new key:value pair, or delete a key based on a combination of modes and provided values.  
   
- The following table compares the behavior of **JSON_MODIFY** in lax mode and in strict mode. For more info about the optional path mode specification (lax or strict), see [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
+ The following table compares the behavior of `JSON_MODIFY` in lax mode and in strict mode. For more info about the optional path mode specification (lax or strict), see [JSON Path Expressions (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
 |New value|Path exists|Lax mode|Strict mode|  
 |--------------------|-----------------|--------------|-----------------|  
-|Not NULL|Yes|Update the existing value.|Update the existing value.|  
-|Not NULL|No|Try to create a new key:value pair on the specified path.<br /><br /> This may fail. For example, if you specify the path `$.user.setting.theme`, JSON_MODIFY does not insert the key `theme` if the `$.user` or `$.user.settings` objects do not exist, or if settings is an array or a scalar value.|Error - INVALID_PROPERTY|  
-|NULL|Yes|Delete the existing property.|Set the existing value to null.|  
-|NULL|No|No action. The first argument is returned as the result.|Error - INVALID_PROPERTY|  
+|Not `NULL`|Yes|Update the existing value.|Update the existing value.|  
+|Not `NULL`|No|Try to create a new key:value pair on the specified path.<br /><br /> This might fail. For example, if you specify the path `$.user.setting.theme`, `JSON_MODIFY` does not insert the key `theme` if the `$.user` or `$.user.settings` objects do not exist, or if settings is an array or a scalar value.|Error - INVALID_PROPERTY|  
+|`NULL`|Yes|Delete the existing property.|Set the existing value to null.|  
+|`NULL`|No|No action. The first argument is returned as the result.|Error - INVALID_PROPERTY|  
   
- In lax mode, JSON_MODIFY tries to create a new key:value pair, but in some cases it might fail.  
+ In lax mode, `JSON_MODIFY` tries to create a new key:value pair, but in some cases it might fail.  
   
-## Examples  
+ JSON functions work the same whether the JSON document is stored in **varchar**/**nvarchar** or the native **JSON** data type.
+
+## Examples
   
 ### Example - Basic operations
 
@@ -180,7 +185,7 @@ PRINT @info
 }
 ```  
   
-### Example - Rename a key  
+### Example - Rename a key
  The following example shows how to rename a property in JSON text with the JSON_MODIFY function. First you can take the value of an existing property and insert it as a new key:value pair. Then you can delete the old key by setting the value of the old property to NULL.  
   
  **Query**
@@ -212,11 +217,11 @@ PRINT @product
 }
 ```  
   
- If you don't cast the new value to a numeric type, JSON_MODIFY treats it as text and surrounds it with double quotes.  
+ If you don't cast the new value to a numeric type, `JSON_MODIFY` treats it as text and surrounds it with double quotes.  
   
 ### Example - Increment a value
 
- The following example shows how to increment the value of a property in JSON text with the JSON_MODIFY function. First you can take the value of the existing property and insert it as a new key:value pair. Then you can delete the old key by setting the value of the old property to NULL.  
+ The following example shows how to increment the value of a property in JSON text with the `JSON_MODIFY` function. First you can take the value of the existing property and insert it as a new key:value pair. Then you can delete the old key by setting the value of the old property to NULL.  
   
  **Query**
   
@@ -245,7 +250,7 @@ PRINT @stats
   
 ### Example - Modify a JSON object
 
- JSON_MODIFY treats the *newValue* argument as plain text even if it contains properly formatted JSON text. As a result, the JSON output of the function is surrounded with double quotes and all special characters are escaped, as shown in the following example.  
+ `JSON_MODIFY` treats the *newValue* argument as plain text even if it contains properly formatted JSON text. As a result, the JSON output of the function is surrounded with double quotes and all special characters are escaped, as shown in the following example.  
   
  **Query**  
   
@@ -273,7 +278,7 @@ PRINT @info
 }
 ```  
   
- To avoid automatic escaping, provide *newValue* by using the JSON_QUERY function. JSON_MODIFY knows that the value returned by JSON_QUERY is properly formatted JSON, so it doesn't escape the value.  
+ To avoid automatic escaping, provide *newValue* by using the `JSON_QUERY` function. `JSON_MODIFY` knows that the value returned by `JSON_QUERY` is properly formatted JSON, so it doesn't escape the value.  
   
  **Query**  
   
@@ -311,8 +316,7 @@ SET jsonCol=JSON_MODIFY(jsonCol,'$.info.address.town','London')
 WHERE EmployeeID=17
 ```  
   
-## See Also
+## Related content
 
-- [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
-- [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
-  
+- [JSON Path Expressions (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)
+- [JSON data in SQL Server](../../relational-databases/json/json-data-sql-server.md)

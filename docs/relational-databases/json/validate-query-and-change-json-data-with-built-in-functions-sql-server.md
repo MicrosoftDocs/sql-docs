@@ -77,7 +77,7 @@ CREATE TABLE Families (
 );
 ```
 
-JSON functions work the same whether the JSON document is stored in **varchar**/**nvarchar** or the native **JSON** data type.
+JSON functions work the same whether the JSON document is stored in **varchar**, **nvarchar**, or the native **json** data type.
 
 ## <a id="ISJSON"></a> Validate JSON text by using the ISJSON function
 

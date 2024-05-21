@@ -19,8 +19,8 @@ The SQL Database Engine provides native JSON functions that enable you to parse 
 ## JSON storage format
 
 The first storage design decision is how to store JSON documents in the tables. There are two available options:
-- **LOB storage** - JSON documents can be stored as-is in columns with the data type **JSON** or **NVARCHAR**. This is the best way for quick data load and ingestion because the loading speed matches the loading speed of string columns. This approach might introduce an additional performance penalty on query/analysis time if indexing on JSON values is not performed, because the raw JSON documents must be parsed while the queries are running. 
-- **Relational storage** - JSON documents can be parsed while they are inserted in the table using `OPENJSON`, `JSON_VALUE` or `JSON_QUERY` functions. Fragments from the input JSON documents can be stored in the columns containing JSON sub-elements with data types **JSON** or **NVARCHAR**. This approach increases the load time because JSON parsing is done during load; however, queries match the performance of classic queries on the relational data.
+- **LOB storage** - JSON documents can be stored as-is in columns with the data type **json** or **nvarchar**. This is the best way for quick data load and ingestion because the loading speed matches the loading speed of string columns. This approach might introduce an additional performance penalty on query/analysis time if indexing on JSON values is not performed, because the raw JSON documents must be parsed while the queries are running. 
+- **Relational storage** - JSON documents can be parsed while they are inserted in the table using `OPENJSON`, `JSON_VALUE` or `JSON_QUERY` functions. Fragments from the input JSON documents can be stored in the columns containing JSON sub-elements with data types **json** or **nvarchar**. This approach increases the load time because JSON parsing is done during load; however, queries match the performance of classic queries on the relational data.
 
 - Currently in SQL Server, JSON is not a built-in data type.
 - Currently, the [JSON data type](../../t-sql/data-types/json-data-type.md) is available in Azure SQL Database.
@@ -47,8 +47,8 @@ create table WebSite.Logs (
 
 This structure is equivalent to the collections that you can find in classic document databases. The primary key `_id` is an auto-incrementing value that provides a unique identifier for every document and enables fast lookups. This structure is a good choice for the classic NoSQL scenarios where you want to retrieve a document by ID or update a stored document by ID.
 
-- Use the native **JSON** data type where available to store JSON documents.
-- The **nvarchar(max)** data type lets you store JSON documents that are up to 2 GB in size. If you're sure that your JSON documents aren't greater than 8 KB, however, we recommend that you use **NVARCHAR(4000)** instead of **NVARCHAR(max)** for performance reasons.
+- Use the native **json** data type where available to store JSON documents.
+- The **nvarchar(max)** data type lets you store JSON documents that are up to 2 GB in size. If you're sure that your JSON documents aren't greater than 8 KB, however, we recommend that you use **nvarchar(4000)** instead of **nvarchar(max)** for performance reasons.
 
 The sample table created in the preceding example assumes that valid JSON documents are stored in the `log` column. If you want to be sure that valid JSON is saved in the `log` column, you can add a CHECK constraint on the column. For example:
 
@@ -98,7 +98,7 @@ FROM Website.Logs
 WHERE JSON_VALUE([log], '$.severity') = 'P4'
 ```
 
-One important characteristic of this index is that it is collation-aware. If your original **NVARCHAR** column has a `COLLATION` property (for example, case-sensitivity or Japanese language), the index is organized according to the language rules or the case sensitivity rules associated with the **NVARCHAR** column. This collation awareness might be an important feature if you are developing applications for global markets that need to use custom language rules when processing JSON documents.
+One important characteristic of this index is that it is collation-aware. If your original **nvarchar** column has a `COLLATION` property (for example, case-sensitivity or Japanese language), the index is organized according to the language rules or the case sensitivity rules associated with the **nvarchar** column. This collation awareness might be an important feature if you are developing applications for global markets that need to use custom language rules when processing JSON documents.
 
 ## Large tables & columnstore format
 
@@ -131,7 +131,7 @@ CREATE TABLE WebSite.Logs (
 ) WITH (MEMORY_OPTIMIZED=ON)
 ```
 
-A memory-optimized table is the best option for frequently changing documents. When you are considering memory-optimized tables, also consider performance. Use the **NVARCHAR(4000)** data type instead of **NVARCHAR(max)** for JSON documents in your memory-optimized collections, if possible, because it might drastically improve performance. The **JSON** data type is not supported with memory-optimized tables.
+A memory-optimized table is the best option for frequently changing documents. When you are considering memory-optimized tables, also consider performance. Use the **nvarchar(4000)** data type instead of **nvarchar(max)** for JSON documents in your memory-optimized collections, if possible, because it might drastically improve performance. The **json** data type is not supported with memory-optimized tables.
 
 As with classic tables, you can add indexes on the fields that you are exposing in memory-optimized tables by using computed columns. For example:
 

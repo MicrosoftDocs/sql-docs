@@ -60,7 +60,11 @@ sudo apk add --allow-untrusted mssql-tools18_18.3.1.1-1_$architecture.apk
 ### [Debian](#tab/debian18-install)
 
 ```bash
+#Debian 9-11
 curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+
+# Debian 12
+curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor -o /usr/share/keyrings/microsoft-prod.gpg
 
 #Download appropriate package for the OS version
 #Choose only ONE of the following, corresponding to your OS version

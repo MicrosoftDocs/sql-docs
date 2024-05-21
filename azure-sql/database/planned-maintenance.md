@@ -5,11 +5,11 @@ description: Learn how to prepare for planned maintenance events in Azure SQL Da
 author: aamalvea
 ms.author: aamalvea
 ms.reviewer: wiassaf, mathoma
-ms.date: 03/26/2024
+ms.date: 05/21/2024
 ms.service: sql-db-mi
 ms.subservice: service-overview
 ms.topic: conceptual
-ms.custom: sqldbrb=1
+ms.custom: sqldbrb=1, build-2024
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
@@ -20,7 +20,7 @@ Learn how to prepare for planned maintenance events on your database in Azure SQ
 
 ## What is a planned maintenance event?
 
-To keep Azure SQL Database and Azure SQL Managed Instance services secure, compliant, stable, and performant, updates are being performed through the service components almost continuously. Thanks to the modern and robust service architecture and innovative technologies like [hotpatching](https://aka.ms/azuresqlhotpatching), majority of updates are fully transparent and nonimpactful in terms of service availability. Still, few types of updates cause short service interrupts and require special treatment. 
+To keep Azure SQL Database and Azure SQL Managed Instance services secure, compliant, stable, and performant, updates are being performed through the service components almost continuously. Thanks to the modern and robust service architecture and innovative technologies like [hotpatching](https://aka.ms/azuresqlhotpatching), majority of updates are fully transparent and nonimpactful in terms of availability. Still, few types of updates cause short service interrupts and require special treatment.
 
 During planned maintenance, members of the database quorum go offline one at a time, with the intent that there is one responding primary replica. For Business Critical and Premium databases, at least one secondary replica will also be online to ensure no client downtime.
 
@@ -57,6 +57,8 @@ Any client production application that connects to a cloud database service shou
 ### Service Health Alert
 
 If you want to receive alerts for service issues or planned maintenance activities, you can use Service Health alerts in the Azure portal with appropriate event type and action groups. For more information, see this [Receive alerts on Azure service notifications](/azure/service-health/alerts-activity-log-service-notifications-portal#create-service-health-alert-using-azure-portal).
+
+You can also [monitor and configure alerts the Azure SQL Database Availability metric](monitoring-metrics-alerts.md#availability-metric) in the Azure portal.
 
 ## Resource health
 

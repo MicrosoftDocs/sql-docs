@@ -1,7 +1,7 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 01/11/2024
+ms.date: 05/16/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -537,7 +537,7 @@ ms.topic: include
 | 12460 | 16 | No | The value of (%ld) is not valid for the parameter @disable_optimized_plan_forcing. Please pass either 0 or 1. |
 | 12461 | 10 | No | Query with query id %d was parameterized automatically by FORCED or SIMPLE parameterization, and has a RECOMPILE hint set in Query Store. RECOMPILE is not supported on automatically parameterized statements, hence the RECOMPILE hint was ignored. |
 | 12462 | 18 | No | Malformed feedback data for query ID. |
-| 12463 | 11 | No | Replica groups id should be greater than 0 |
+| 12463 | 11 | No | Role id should be between (including) 1 and 4 |
 | 12464 | 16 | No | Query plan with plan_id (%ld) cannot be forced for replica group id (%ld) |
 | 12465 | 16 | No | The query with query id (%ld) cannot be removed from Query Store since it's referenced by one or more query variants. Remove the associated query variant(s) before removing the parent query. |
 | 12466 | 16 | No | The query plan with plan id (%ld) cannot be removed from Query Store since it's referenced by one or more query variants. Remove the associated query variant(s) before removing the dispatcher plan. |

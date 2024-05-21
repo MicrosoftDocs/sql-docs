@@ -1,7 +1,7 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 01/11/2024
+ms.date: 05/16/2024
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -198,6 +198,8 @@ ms.topic: include
 | 41873 | 16 | No | File in memory-optimized filegroup must have MAXSIZE set to be UNLIMITED. |
 | 41874 | 10 | No | There are %d orphaned internal table(s) eligible for removal. Investigate the error log for the table identifiers. CHECKPOINT the database, create a full database backup, and re-run DBCC CHECKCATALOG with trace flag 9947 enabled to remove these tables. |
 | 41875 | 16 | No | The operation on database '%ls' cannot complete because XTP engine is running in checkpoint-only mode due to insufficient memory. Memory-optimized tables are not accessible in this mode. Consider changing database service level objective to increase available memory. |
+| 41876 | 16 | Yes | CREATE TABLE has failed for '%.\*ls' with error code 0x%x. This may be a transient condition, please retry. |
+| 41899 | 20 | Yes | The operation caused an undefined internal error (HRESULT: %X). |
 | 41901 | 16 | No | One or more of the options (%ls) are not supported for this statement in SQL Database Managed Instance. Review the documentation for supported options. |
 | 41902 | 16 | No | Unsupported device type. SQL Database Managed Instance supports database restore from URI backup device only. |
 | 41903 | 16 | No | FILENAME option is not allowed in SQL Database Managed Instance. |
@@ -274,6 +276,7 @@ ms.topic: include
 | 41976 | 16 | No | Connection with availability group '%.\*ls' on the server with endpoint '%.\*ls' cannot be established as it is not responding. Possible causes could be nonexistence of availability group or distributed availability group on the partner server, incorrectly specified names or configuration parameters. Please check the log file on the partner server for the exact error cause. |
 | 41977 | 16 | No | Connection with availability group '%.\*ls' on the server with endpoint '%.\*ls' is established, but there is no response from the target database. Possible causes could be errors with creating a database on the partner server, incorrectly specified names or configuration parameters. Please check the log file on the partner server for the exact error cause. |
 | 41978 | 16 | No | The parameters (%ls) are not supported for this stored procedure in SQL Database Managed Instance. Review the documentation for supported parameters. |
+| 41986 | 16 | No | Azure SQL Managed Instance link creation failed because either connection to SQL Server failed, or the server did not respond after a prolonged period of time. Verify the network connectivity and firewall rules between SQL Server and Managed Instance are properly configured and retry again. |
 | 42001 | 16 | No | Failed to parse XML configuration. The operating system returned error %ls. |
 | 42002 | 16 | No | Failed to parse XML configuration. The parser returned error %.\*ls |
 | 42003 | 16 | No | Failed to parse XML configuration. A required attribute '%ls' is missing. |

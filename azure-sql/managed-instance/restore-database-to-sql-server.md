@@ -8,7 +8,7 @@ ms.reviewer: mathoma, danil
 ms.date: 06/02/2022
 ms.service: sql-managed-instance
 ms.subservice: data-movement
-ms.custom: ignite-2023
+ms.custom: ignite-2023, build-2024
 ms.topic: how-to
 ---
 
@@ -108,7 +108,7 @@ When you're restoring a database to SQL Server, consider the following:
 
 - You must use the `WITH MOVE` qualifier and provide explicit paths for the data files. 
 - Databases that are encrypted with service-managed TDE keys can't be restored to SQL Server. You can restore an encrypted database to SQL Server only if it was encrypted with a customer-managed key and the destination server has access to the same key that's used to encrypt the database. For more information, see [Set up SQL Server TDE with Azure Key Vault](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault). 
-- In the future, some features might be introduced to Azure SQL Managed Instance that require changes to the database format, making backups incompatible with SQL Server 2022. Access to such features will require explicit opt-in. 
+- This capability is only available to instances with the [**SQL Server 2022** update policy](update-policy.md#sql-server-2022-update-policy). You will not be able to restore your database backup to SQL Server 2022 from an instance with the **Always up to date** update policy. 
 
 ## Next steps
 

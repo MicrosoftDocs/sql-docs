@@ -8,7 +8,7 @@ ms.date: 12/15/2023
 ms.service: sql-managed-instance
 ms.subservice: high-availability
 ms.topic: how-to
-ms.custom: azure-sql-split, devx-track-azurepowershell
+ms.custom: azure-sql-split, devx-track-azurepowershell, build-2024
 ---
 # Configure a failover group for Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -312,6 +312,12 @@ Let's assume instance A is the primary instance, instance B is the existing seco
 > [!IMPORTANT]
 > When the failover group is deleted, the DNS records for the listener endpoints are also deleted. At that point, there's a non-zero probability of somebody else creating a failover group with the same name. Because failover group names must be globally unique, this will prevent you from using the same name again. To minimize this risk, don't use generic failover group names.
 
+## Change update policy
+
+Instances in a failover group must have matching [update policies](update-policy.md). To enable the Always-up-to-date update policy on instances that are part of a failover group, first enable the Always-up-to-date update policy on the secondary instance, wait for the change to take effect, and then update the policy for the primary instance. 
+
+While changing the update policy on the primary instance in the failover group causes the instance to fail over to another local node (similar to [management operations](management-operations-overview.md) on instances that aren't part of a failover group), it does not cause the failover group to failover, keeping the primary instance in the primary role.
+
 ## Enable scenarios dependent on objects from the system databases
 
 <!--
@@ -376,6 +382,8 @@ Be aware of the following limitations:
 - Database rename isn't supported for databases in failover group. You'll need to temporarily delete failover group to be able to rename a database.
 - System databases aren't replicated to the secondary instance in a failover group. Therefore, scenarios that depend on objects from the system databases such as Server Logins and Agent jobs, require objects to be manually created on the secondary instances and also manually kept in sync after any changes made on primary instance. The only exception is Service master Key (SMK) for SQL Managed Instance that is replicated automatically to secondary instance during creation of failover group. Any subsequent changes of SMK on the primary instance however won't be replicated to secondary instance. To learn more, see how to [Enable scenarios dependent on objects from the system databases](#enable-scenarios-dependent-on-objects-from-the-system-databases).
 - Failover groups can't be created between instances if any of them are in an instance pool.
+- SQL managed instances in a failover group must have the same [update policy](update-policy.md), though it's possible to [change the update policy](#change-update-policy) for instances within a failover group. 
+
 
 ## <a id="programmatically-managing-failover-groups"></a> Programmatically manage failover groups
 

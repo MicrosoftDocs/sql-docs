@@ -8,7 +8,7 @@ ms.reviewer: mathoma
 ms.date: 11/14/2023
 ms.service: sql-managed-instance
 ms.subservice: data-movement
-ms.custom: ignite-2023
+ms.custom: ignite-2023, build-2024
 ms.topic: how-to
 ---
 
@@ -21,8 +21,6 @@ This article teaches you to configure a hybrid disaster recovery solution betwee
 
 The Managed Instance link enables [disaster recovery](managed-instance-link-disaster-recovery.md), where, in the event of a disaster, you can manually fail over your workload from your primary to your secondary. 
 
-With SQL Server 2016, and SQL Server 2019, the primary is always SQL Server and failover to the secondary managed instance is one-directional. Reversing roles by failing back to SQL Server and making SQL Managed Instance primary isn't supported. However, it's possible to recover your data to SQL Server using data movement options such as [transactional replication](replication-transactional-overview.md) or [exporting a bacpac](../database/database-export.md). 
-
 With SQL Server 2022, either SQL Server or Azure SQL Managed Instance can be the primary and you can establish the link initially from either SQL Server or SQL Managed Instance. You can fail over between SQL Server and Azure SQL Managed Instance in either direction, as needed.
 
 When failing back to SQL Server 2022, you can choose to fail back: 
@@ -31,6 +29,7 @@ When failing back to SQL Server 2022, you can choose to fail back:
 
 :::image type="content" source="media/managed-instance-link-feature-overview/disaster-recovery-scenario.png" alt-text="Diagram showing the disaster recovery scenario.":::
 
+With SQL Server 2016, and SQL Server 2019, the primary is always SQL Server and failover to the secondary managed instance is one-directional. Reversing roles by failing back to SQL Server and making SQL Managed Instance primary isn't supported. However, it's possible to recover your data to SQL Server using data movement options such as [transactional replication](replication-transactional-overview.md) or [exporting a bacpac](../database/database-export.md). 
 
 > [!IMPORTANT]
 > After successful fail over to SQL Managed Instance, manually repoint your application(s) connection string to the SQL managed instance FQDN to complete the fail over process and continue running in Azure.
@@ -41,8 +40,12 @@ To use the link with Azure SQL Managed Instance for disaster recovery, you need 
 
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
 - [Supported version of SQL Server](managed-instance-link-feature-overview.md#prerequisites)) with the required service update installed.
-- Azure SQL Managed Instance. [Get started](instance-create-quickstart.md) if you don't have it. 
+- Azure SQL Managed Instance. [Get started](instance-create-quickstart.md) if you don't have an instance. 
 - A configured [Managed Instance link](managed-instance-link-configure-how-to-ssms.md) between SQL Server and Azure SQL Managed Instance. 
+- To establish a link, or fail over, from SQL Managed Instance to SQL Server 2022, your managed instance must be configured with the [SQL Server 2022 update policy](update-policy.md#sql-server-2022-update-policy). Data replication and failover from SQL Managed Instance to SQL Server 2022 is not supported by instances configured with the Always-up-to-date update policy. 
+- While you can establish a link from SQL Server 2022 to a SQL managed instance configured with the Always-up-to-date update policy, after fail over to SQL Managed Instance, you will no longer be able to replicate data or fail back to SQL Server 2022. 
+
+
 
 ## Permissions
 
@@ -76,6 +79,7 @@ SQL Server 2022 introduces online failover with fail back, which allows you to s
 The option to fail back online to SQL Server from SQL Managed Instance is currently in preview. 
 
 You can manually fail over between replicas by using [SQL Server Management Studio (SSMS)](managed-instance-link-configure-how-to-ssms.md#fail-over-a-database) or [scripts](managed-instance-link-configure-how-to-scripts.md#stop-workload). 
+
 
 ## Offline fail back (SQL Server 2022)
 
@@ -116,6 +120,18 @@ To activate the **Hybrid failover benefit** for an existing instance, follow the
    :::image type="content" source="media/managed-instance-link-disaster-recovery/update-license-existing-instance.png" alt-text="Screenshot of the compute and storage page for your managed instance in the Azure portal with hybrid failover rights highlighted. ":::
 
 1. Select **Apply** to save your changes. 
+
+## Limitations 
+
+The following capabilities are only supported between SQL Server 2022 and SQL managed instances with the [SQL Server 2022 update policy](update-policy.md#sql-server-2022-update-policy): 
+   - Establishing a link _from_ SQL Managed Instance _to_ SQL Server. 
+   - Failing over from SQL Managed Instance to SQL Server 2022. 
+
+While you can establish a link from SQL Server 2022 to a SQL managed instance configured with the [Always-up-to-date update policy](update-policy.md#always-up-to-date-update-policy), after fail over to SQL Managed Instance, you will no longer be able to replicate data or fail back to SQL Server 2022. 
+
+
+
+
 
 ## Related content
 

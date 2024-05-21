@@ -1,30 +1,32 @@
 ---
 title: Connect to and query Azure SQL Database using .NET and Entity Framework Core
-description: Learn how to connect to a database in Azure SQL Database and query data using .NET and Entity Framework Core
+description: Learn how to connect to a database in Azure SQL Database and query data using .NET and Entity Framework Core.
 author: alexwolfmsft
 ms.author: alexwolf
-ms.reviewer: mathoma
-ms.custom: passwordless-dotnet
-ms.date: 02/10/2023
+ms.reviewer: mathoma, vanto
+ms.date: 05/17/2024
 ms.service: sql-database
 ms.subservice: security
 ms.topic: quickstart
-monikerRange: "= azuresql || = azuresql-db"
+ms.custom:
+  - passwordless-dotnet
+monikerRange: "=azuresql || =azuresql-db"
 ---
 
 # Connect to and query Azure SQL Database using .NET and Entity Framework Core
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using .NET and Entity Framework Core. This quickstart follows the recommended passwordless approach to connect to the database. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
 
 ## Prerequisites
 
-* An [Azure subscription](https://azure.microsoft.com/free/dotnet/).
-* A SQL database configured for authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
-* [.NET 7.0](https://dotnet.microsoft.com/download) or later.
-* [Visual Studio](https://visualstudio.microsoft.com/vs/) or later with the **ASP.NET and web development** workload.
-* The latest version of the [Azure CLI](/cli/azure/get-started-with-azure-cli).
-* The latest version of the Entity Framework Core tools:
+- An [Azure subscription](https://azure.microsoft.com/free/dotnet/).
+- A SQL database configured for authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)). You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
+- [.NET 7.0](https://dotnet.microsoft.com/download) or later.
+- [Visual Studio](https://visualstudio.microsoft.com/vs/) or later with the **ASP.NET and web development** workload.
+- The latest version of the [Azure CLI](/cli/azure/get-started-with-azure-cli).
+- The latest version of the Entity Framework Core tools:
   * Visual Studio users should install the [Package Manager Console tools for Entity Framework Core](/ef/core/cli/powershell).
   * .NET CLI users should install the [.NET CLI tools for Entity Framework Core](/ef/core/cli/dotnet).
 
@@ -44,7 +46,7 @@ The steps in this section create a .NET Minimal Web API by using either the .NET
 
 1. For the **Project Name**, enter *DotNetSQL*. Leave the default values for the rest of the fields and select **Next**.
 
-1. For the **Framework**, select .NET 7.0 and uncheck **Use controllers (uncheck to use minimal APIs)**. This quickstart uses a Minimal API template to streamline endpoint creation and configuration. 
+1. For the **Framework**, select .NET 7.0 and uncheck **Use controllers (uncheck to use minimal APIs)**. This quickstart uses a Minimal API template to streamline endpoint creation and configuration.
 
 1. Choose **Create**. The new project opens inside the Visual Studio environment.
 
@@ -62,7 +64,7 @@ The steps in this section create a .NET Minimal Web API by using either the .NET
 
 ## Add Entity Framework Core to the project
 
-To connect to Azure SQL Database by using .NET and Entity Framework Core you need to add three NuGet packages to your project using one of the following methods:
+To connect to Azure SQL Database by using .NET and Entity Framework Core, you need to add three NuGet packages to your project using one of the following methods:
 
 ## [Visual Studio](#tab/visual-studio)
 
@@ -70,9 +72,9 @@ To connect to Azure SQL Database by using .NET and Entity Framework Core you nee
 
 1. In the resulting window, search for *EntityFrameworkCore*. Locate and install the following packages:
 
-* **Microsoft.EntityFrameworkCore**: Provides essential Entity Framework Core functionality
-* **Microsoft.EntityFrameworkCore.SqlServer**: Provides additional components to connect to the logical server
-* **Microsoft.EntityFrameworkCore.Design**: Provides support for running Entity Framework migrations
+- **Microsoft.EntityFrameworkCore**: Provides essential Entity Framework Core functionality
+- **Microsoft.EntityFrameworkCore.SqlServer**: Provides extra components to connect to the logical server
+- **Microsoft.EntityFrameworkCore.Design**: Provides support for running Entity Framework migrations
 
 Alternatively, you can also run the `Install-Package` cmdlet in the **Package Manager Console** window:
 
@@ -106,7 +108,7 @@ Complete the following steps to connect to Azure SQL Database using Entity Frame
 
     The passwordless connection string includes a configuration value of `Authentication=Active Directory Default`, which enables Entity Framework Core to use `DefaultAzureCredential` to connect to Azure services. When the app runs locally, it authenticates with the user you're signed into Visual Studio with. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you'll configure later.
 
-    > [!NOTE]
+    > [!NOTE]  
     > Passwordless connection strings are safe to commit to source control, since they do not contain any secrets such as usernames, passwords, or access keys.
 
     ```json
@@ -128,7 +130,7 @@ Complete the following steps to connect to Azure SQL Database using Entity Frame
 
     * Retrieves the passwordless database connection string from the `appsettings.Development.json` file for local development, or from the environment variables for hosted production scenarios.
     * Registers the Entity Framework Core `DbContext` class with the .NET dependency injection container.
-    
+
         ```csharp
         var connection = String.Empty;
         if (builder.Environment.IsDevelopment())
@@ -140,7 +142,7 @@ Complete the following steps to connect to Azure SQL Database using Entity Frame
         {
             connection = Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING");
         }
-        
+
         builder.Services.AddDbContext<PersonDbContext>(options =>
             options.UseSqlServer(connection));
         ```
@@ -154,7 +156,7 @@ Complete the following steps to connect to Azure SQL Database using Entity Frame
     })
     .WithName("GetPersons")
     .WithOpenApi();
-    
+
     app.MapPost("/Person", (Person person, PersonDbContext context) =>
     {
         context.Add(person);
@@ -180,18 +182,18 @@ Complete the following steps to connect to Azure SQL Database using Entity Frame
             : base(options)
         {
         }
-    
+
         public DbSet<Person> Person { get; set; }
     }
     ```
 
 ## Run the migrations to create the database
 
-To update the database schema to match your data model using Entity Framework Core you must use a migration. Migrations can create and incrementally update a database schema to keep it in sync with your application's data model. You can learn more about this pattern in the [migrations overview](/ef/core/managing-schemas/migrations).
+To update the database schema to match your data model using Entity Framework Core, you must use a migration. Migrations can create and incrementally update a database schema to keep it in sync with your application's data model. You can learn more about this pattern in the [migrations overview](/ef/core/managing-schemas/migrations).
 
 1. Open a terminal window to the root of your project.
 1. Run the following command to generate an initial migration that can create the database:
-    
+
     ## [Visual Studio](#tab/visual-studio)
 
     ```powershell
@@ -234,7 +236,7 @@ The app is ready to be tested locally. Make sure you're signed in to Visual Stud
 
 1) Modify the sample JSON to include values for the first and last name. Select **Execute** to add a new record to the database. The API returns a successful response.
 
-    :::image type="content" source="media/passwordless-connections/api-testing-small.png" lightbox="media/passwordless-connections/api-testing.png" alt-text="A screenshot showing how to test the API.":::
+    :::image type="content" source="media/passwordless-connections/api-testing-small.png" alt-text="Screenshot showing how to test the API." lightbox="media/passwordless-connections/api-testing.png":::
 
 1) Expand the **GET** method on the Swagger UI page and select **Try it**. Select **Execute**, and the person you just created is returned.
 
@@ -254,7 +256,7 @@ The app is ready to be deployed to Azure. Visual Studio can create an Azure App 
     * **Hosting Plan**: Select **New** to open the hosting plan dialog. Leave the default values and select **OK**.
     * Select **Create** to close the original dialog. Visual Studio creates the App Service resource in Azure.
 
-        :::image type="content" source="media/passwordless-connections/create-app-service-small.png" lightbox="media/passwordless-connections/create-app-service.png" alt-text="A screenshot showing how to deploy with Visual Studio.":::
+        :::image type="content" source="media/passwordless-connections/create-app-service-small.png" alt-text="Screenshot showing how to deploy with Visual Studio." lightbox="media/passwordless-connections/create-app-service.png":::
 
 1. Once the resource is created, make sure it's selected in the list of app services, and then select **Next**.
 1. On the **API Management** step, select the **Skip this step** checkbox at the bottom and then select **Finish**.
@@ -307,7 +309,7 @@ The Azure portal allows you to work with managed identities and run queries agai
 
 1) In the Azure portal, browse to your SQL database and select **Query editor (preview)**.
 
-2) Select **Continue as `<your-username>`** on the right side of the screen to sign into the database using your account.
+2) Select **Continue as `<your-username>` on the right side of the screen to sign into the database using your account.
 
 3) On the query editor view, run the following T-SQL commands:
 
@@ -319,13 +321,13 @@ The Azure portal allows you to work with managed identities and run queries agai
     GO
     ```
 
-    :::image type="content" source="media/passwordless-connections/query-editor-small.png" lightbox="media/passwordless-connections/query-editor.png" alt-text="A screenshot showing how to use the Azure Query editor.":::
+    :::image type="content" source="media/passwordless-connections/query-editor-small.png" alt-text="Screenshot showing how to use the Azure Query editor." lightbox="media/passwordless-connections/query-editor.png":::
 
     This SQL script creates a SQL database user that maps back to the managed identity of your App Service instance. It also assigns the necessary SQL roles to the user to allow your app to read, write, and modify the data and schema of your database. After this step is completed, your services are connected.
 
 ---
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > Although this solution provides a simple approach for getting started, it is not a best practice for enterprise production environments. In those scenarios the app should not perform all operations using a single, elevated identity. You should try to implement the principle of least privilege by configuring multiple identities with specific permissions for specific tasks.
 >
 > You can read more about configuring database roles and security on the following resources:
@@ -342,7 +344,7 @@ The person you created locally should display in the browser. Congratulations! Y
 
 [!INCLUDE [passwordless-resource-cleanup](../includes/passwordless-resource-cleanup.md)]
 
-## Next steps
+## Related content
 
 - [Tutorial: Secure a database in Azure SQL Database](./secure-database-tutorial.md)
 - [Authorize database access to SQL Database](./logins-create-manage.md)

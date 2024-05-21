@@ -5,16 +5,20 @@ description: Learn how to write natural language prompts to generate T-SQL queri
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: josephsack
-ms.date: 05/07/2024
+ms.date: 05/09/2024
 ms.service: sql-database
 ms.subservice: ai-copilot
+ms.custom:
+  - build-2024
 ms.topic: how-to
 monikerRange: "=azuresql||=azuresql-db"
 ---
 # Natural language to SQL in the Azure portal query editor (preview)
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-One of the [Microsoft Copilot skills in Azure SQL Database (preview)](copilot-azure-sql-overview.md), the [Natural language to SQL](copilot-azure-sql-overview.md?view=azuresql-db&preserve-view=true#natural-language-to-sql-query) experience within the [Azure portal query editor](../database/query-editor.md) translates natural language queries into SQL, making database interactions more intuitive. In this article, learn how to write natural language prompts to generate T-SQL queries using Copilot in the Azure portal query editor.
+One of the [Microsoft Copilot skills in Azure SQL Database (preview)](copilot-azure-sql-overview.md), the [Natural language to SQL](copilot-azure-sql-overview.md?view=azuresql-db&preserve-view=true#natural-language-to-sql-query) experience within the [Azure portal query editor](../database/query-editor.md) translates natural language queries into SQL, making database interactions more intuitive.
+
+In this article, learn how to write natural language prompts to generate T-SQL queries using Copilot in the Azure portal query editor.
 
 > [!WARNING]
 > Copilot is a preview set of experiences that are powered by large language models (LLMs). Output produced by Copilot might contain inaccuracies, biases, or other unintended content. As with any generative AI model, humans should review the output produced by Copilot before use.
@@ -34,14 +38,14 @@ This integration means that Copilot can answer questions with prompts like:
 ## Prerequisites
 
 - An existing Azure account and Azure SQL database.
-- Acceptance into the preview. To sign up for this program, visit [Request Access to Copilot in Azure SQL Database: Preview](https://aka.ms/sqlcopilot-signup).
+- [Enable Microsoft Copilot in Azure for your Azure tenant](copilot-azure-sql-overview.md#enable-microsoft-copilot-in-your-azure-tenant).
 
 > [!IMPORTANT]
 > Review these [preview terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/#AzureOpenAI-PoweredPreviews) before using natural language to SQL.
 
 ## Generate a query
 
-As a preview feature, once enrolled, you can find Copilot integrated with the Azure SQL Database query editor.
+You can find Copilot integrated with the Azure SQL Database query editor.
 
 1. In the query editor toolbar, select the **Launch inline copilot** button.
 1. In the **Table selection** dropdown menu, select the table and views for consideration by Copilot.

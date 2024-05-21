@@ -1,9 +1,10 @@
 ---
 title: "JSON_ARRAY (Transact-SQL)"
-description: "JSON_ARRAY (Transact-SQL)"
-author: "uc-msft"
-ms.author: "umajay"
-ms.date: 09/05/2023
+description: JSON_ARRAY constructs JSON array text from zero or more expressions.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: umajay
+ms.date: 05/06/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -15,48 +16,48 @@ helpviewer_keywords:
   - "JSON, validating"
 dev_langs:
   - "TSQL"
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-ver16 || >= sql-server-linux-ver16"
+ms.custom:
+  - build-2024
+monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 # JSON_ARRAY (Transact-SQL)
 
-
-[!INCLUDE [sqlserver2022-asdb](../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 Constructs JSON array text from zero or more expressions.
 
-## Syntax  
+## Syntax
   
-```syntaxsql  
+```syntaxsql
 JSON_ARRAY ( [ <json_array_value> [,...n] ] [ <json_null_clause> ]  )  
 
 <json_array_value> ::= value_expression
 
 <json_null_clause> ::=
-	  NULL ON NULL
-	| ABSENT ON NULL
+      NULL ON NULL
+    | ABSENT ON NULL
 ```
   
 ## Arguments
-*json_array_value*
+
+#### *json_array_value*
  Is an expression that defines the value of the element in the JSON array.
 
-*json_null_clause* can be used to control the behavior of JSON_OBJECT function when value_expression is NULL. The option NULL ON NULL converts the SQL NULL value into a JSON null value when generating the value of the element in the JSON array. The option ABSENT ON NULL will omit the element in the JSON array if the value is NULL. The default setting for this option is ABSENT ON NULL.
+#### *json_null_clause*
+ Can be used to control the behavior of `JSON_OBJECT` function when value_expression is NULL. The option `NULL ON NULL` converts the SQL `NULL` value into a JSON `null` value when generating the value of the element in the JSON array. The option `ABSENT ON NULL` will omit the element in the JSON array if the value is NULL. The default setting for this option is `ABSENT ON NULL`.
+
+## Return value
+Returns a valid JSON array string of **nvarchar(max)** type.
 
 For more info about what you see in the output of the `JSON_ARRAY` function, see the following articles:  
 
--   [How FOR JSON converts SQL Server data types to JSON data types &#40;SQL Server&#41;](../../relational-databases/json/how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server.md)  
+- [How FOR JSON converts SQL Server data types to JSON data types (SQL Server)](../../relational-databases/json/how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server.md)  
     The `JSON_ARRAY` function uses the rules described in this `FOR JSON` article to convert SQL data types to JSON types in the JSON array output.  
 
--   [How FOR JSON escapes special characters and control characters &#40;SQL Server&#41;](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md)  
+- [How FOR JSON escapes special characters and control characters (SQL Server)](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md)  
     The `JSON_ARRAY` function escapes special characters and represents control characters in the JSON output as described in this `FOR JSON` article.
 
-## Return value
-Returns a valid JSON array string of nvarchar(max) type.
-
-## Remarks  
-
-  
-## Examples  
+## Examples
 
 ### Example 1
 
@@ -176,6 +177,6 @@ WHERE s.is_user_process = 1;
 |56|`["WIN19-VM","SQLServerCEIP",".Net SqlClient Data Provider"]`|
   
 
-## See also  
+## Related content
 
- [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
+- [JSON data in SQL Server](../../relational-databases/json/json-data-sql-server.md)

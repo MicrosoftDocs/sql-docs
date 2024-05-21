@@ -30,7 +30,7 @@ monikerRange: "=azuresqldb-current"
  To create a JSON array from an aggregate instead, use [JSON_ARRAYAGG](json-arrayagg-transact-sql.md).
 
 > [!NOTE]
-> Currently, both **JSON** aggregate functions `JSON_OBJECTAGG` and `JSON_ARRAYAGG` are available in preview for Azure SQL Database.
+> Currently, both **json** aggregate functions `JSON_OBJECTAGG` and `JSON_ARRAYAGG` are available in preview for Azure SQL Database.
 
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

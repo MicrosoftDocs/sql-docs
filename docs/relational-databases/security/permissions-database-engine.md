@@ -4,7 +4,7 @@ description: Consult this complete list of SQL Server permissions to find out wh
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 05/09/2024
+ms.date: 05/17/2024
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -16,13 +16,13 @@ helpviewer_keywords:
   - "permissions [SQL Server]"
   - "security [SQL Server], permissions"
   - "naming conventions [SQL Server]"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Permissions (Database Engine)
 
 [!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Every [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] securable has associated permissions that can be granted to a principal. Permissions in the [!INCLUDE [ssDE](../../includes/ssde-md.md)] are managed at the server level assigned to logins and server roles, and at the database level assigned to database users and database roles. The model for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] has the same system for the  database permissions, but the server level permissions aren't available. This article contains the complete list of permissions. For a typical implementation of the permissions, see [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
+Every [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] securable has associated permissions that can be granted to a principal. Permissions in the [!INCLUDE [ssDE](../../includes/ssde-md.md)] are managed at the server level assigned to logins and server roles, and at the database level assigned to database users and database roles. The model for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] has the same system for the database permissions, but the server level permissions aren't available. This article contains the complete list of permissions. For a typical implementation of the permissions, see [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
 
 The total number of permissions for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] is 292. [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] exposes 292 permissions. Most permissions apply to all platforms, but some don't. For example, most [server level permissions](authentication-access/server-level-roles.md) can't be granted on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and a few permissions only make sense on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 New permissions are being introduced gradually with new releases. [!INCLUDE [ssSQLv15_md](../../includes/sssql19-md.md)] exposes 248 permissions.[!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] exposed 238 permissions. [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] exposed 230 permissions. [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] exposed 219 permissions. [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] exposed 214 permissions. [!INCLUDE [sql2008r2](../../includes/sql2008r2-md.md)] exposed 195 permissions. The [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) article specifies which permissions are new in recent versions.

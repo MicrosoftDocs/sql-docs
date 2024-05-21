@@ -1,9 +1,10 @@
 ---
 title: "DROP RULE (Transact-SQL)"
-description: DROP RULE (Transact-SQL)
+description: DROP RULE removes one or more user-defined rules from the current database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "05/11/2017"
+ms.reviewer: randolphwest
+ms.date: 05/16/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -20,58 +21,67 @@ dev_langs:
   - "TSQL"
 ---
 # DROP RULE (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Removes one or more user-defined rules from the current database.  
-  
-> [!IMPORTANT]
->  DROP RULE will be removed in the next version of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Do not use DROP RULE in new development work, and plan to modify applications that currently use them. Instead, use CHECK constraints that you can create by using the CHECK keyword of [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) or [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md). For more information, see [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
-  
- :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## Syntax  
-  
+Removes one or more user-defined rules from the current database.
+
+> [!IMPORTANT]  
+> `DROP RULE` will be removed in a future version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Don't use `DROP RULE` in new development work, and plan to modify applications that currently use them. Instead, use `CHECK` constraints that you can create by using the `CHECK` keyword of [CREATE TABLE](create-table-transact-sql.md) or [ALTER TABLE](alter-table-transact-sql.md). For more information, see [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).
+
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+## Syntax
+
 ```syntaxsql
-DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ ,...n ] [ ; ]  
-```  
-  
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ , ...n ]
+[ ; ]
+```
+
+[!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
- *IF EXISTS*  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level)).  
-  
- Conditionally drops the rule only if it already exists.  
-  
- *schema_name*  
- Is the name of the schema to which the rule belongs.  
-  
- *rule*  
- Is the rule to be removed. Rule names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md). Specifying the rule schema name is optional.  
-  
-## Remarks  
- To drop a rule, first unbind it if the rule is currently bound to a column or to an alias data type. To unbind the rule, use **sp_unbindrule**. If the rule is bound when you try to drop it, an error message is displayed and the DROP RULE statement is canceled.  
-  
- After a rule is dropped, new data entered into the columns previously governed by the rule is entered without the constraints of the rule. Existing data is not affected in any way.  
-  
- The DROP RULE statement does not apply to CHECK constraints. For more information about dropping CHECK constraints, see [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
-  
-## Permissions  
- To execute DROP RULE, at a minimum, a user must have ALTER permission on the schema to which the rule belongs.  
-  
-## Examples  
- The following example unbinds and then drops the rule named `VendorID_rule`. 
-  
-```sql  
-sp_unbindrule 'Production.ProductVendor.VendorID'  
-DROP RULE VendorID_rule  
-GO  
-```  
-  
-## See Also  
- [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
- [sp_bindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
- [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
- [sp_unbindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
- [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)
+
+#### *IF EXISTS*
+
+**Applies to**: [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and later versions
+
+Conditionally drops the rule only if it already exists.
+
+#### *schema_name*
+
+The name of the schema to which the rule belongs.
+
+#### *rule*
+
+The rule to be removed. Rule names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md). Specifying the rule schema name is optional.
+
+## Remarks
+
+To drop a rule, first unbind it if the rule is currently bound to a column or to an alias data type. To unbind the rule, use `sp_unbindrule`. If the rule is bound when you try to drop it, an error message is displayed and the `DROP RULE` statement is canceled.
+
+After a rule is dropped, new data entered into the columns previously governed by the rule is entered without the constraints of the rule. Existing data isn't affected in any way.
+
+The `DROP RULE` statement doesn't apply to `CHECK` constraints. For more information about dropping `CHECK` constraints, see [ALTER TABLE](alter-table-transact-sql.md).
+
+## Permissions
+
+To execute `DROP RULE`, at a minimum, a user must have `ALTER` permission on the schema to which the rule belongs.
+
+## Examples
+
+The following example unbinds and then drops the rule named `VendorID_rule`.
+
+```sql
+EXEC sp_unbindrule 'Production.ProductVendor.VendorID';
+DROP RULE VendorID_rule;
+```
+
+## Related content
+
+- [CREATE RULE (Transact-SQL)](create-rule-transact-sql.md)
+- [sp_bindrule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)
+- [sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)
+- [sp_helptext (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)
+- [sp_unbindrule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)
+- [USE (Transact-SQL)](../language-elements/use-transact-sql.md)

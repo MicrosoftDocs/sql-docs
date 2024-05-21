@@ -5,7 +5,7 @@ author: ebruersan
 ms.author: ebrue
 ms.reviewer: mathoma
 ms.date: 07/14/2023
-ms.service: virtual-machines
+ms.service: virtual-machines-sql
 ms.topic: how-to
 ms.custom: devx-track-azurecli
 ---
@@ -16,10 +16,8 @@ ms.custom: devx-track-azurecli
 
 The SQL best practices assessment feature of the Azure portal identifies possible performance issues and evaluates that your SQL Server on Azure Virtual Machines (VMs) is configured to follow best practices using the [rich ruleset](https://github.com/microsoft/sql-server-samples/blob/master/samples/manage/sql-assessment-api/DefaultRuleset.csv) provided by the [SQL Assessment API](/sql/sql-assessment-api/sql-assessment-api-overview). 
 
-
 To learn more, watch this video on [SQL best practices assessment](/shows/Data-Exposed/optimally-configure-sql-server-on-azure-virtual-machines-with-sql-assessment?WT.mc_id=dataexposed-c9-niner):
 > [!VIDEO https://aka.ms/docs/player?id=13b2bf63-485c-4ec2-ab14-a1217734ad9f]
-
 
 
 ## Overview

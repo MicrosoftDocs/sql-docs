@@ -49,7 +49,7 @@ A REST API request/response pair can be separated into five components:
 
 ## API documentation
 
-A modern REST API calls for modern API documentation. The REST API is built on the OpenAPI specification (also called the swagger specification) and documentation is available on [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0). Beyond documenting the API, SwaggerHub helps generate a client library in the language of choice - JavaScript, TypeScript, C#, Java, Python, Ruby, and more.
+A modern REST API calls for modern API documentation. The REST API is built on the OpenAPI specification (also called the swagger specification) and documentation is available on [Microsoft Learn](/rest/api/power-bi-report/).
 
 ## Test API calls
 
@@ -57,7 +57,7 @@ A tool for testing HTTP request/response messages is [Fiddler](https://www.teler
 
 ## Next steps
 
-Review the available APIs over on [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0).
+Review the available APIs over on [Microsoft Learn](/rest/api/power-bi-report/).
 
 Samples are available on [GitHub](https://github.com/Microsoft/Reporting-Services). The sample includes an HTML5 app built on TypeScript, React, and Webpack along with a PowerShell example.
 

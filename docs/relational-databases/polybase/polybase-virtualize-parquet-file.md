@@ -93,6 +93,18 @@ Verify the new external data source with [sys.external_data_sources](../system-c
 SELECT * FROM sys.external_data_sources;
 ```
 
+Note: some S3-compatible storage systems (such as Amazon Web Services) may utilize virtual_hosted style URLs to implement folder structure in the S3 bucket. If so, you may need to add the following CONNECTION_OPTIONS to allow for creation of external tables pointing to folder locations in the S3 bucket:
+
+```sql
+CONNECTION_OPTIONS = '{"s3":{"url_style":"virtual_hosted"}}'
+```
+Without that CONNECTION_OPTIONS setting, when querying external tables pointing to a folder, you might observe the following error:
+
+```
+Msg 13807, Level 16, State 1, Line 23  
+Content of directory on path '/<folder_name>/' cannot be listed. 
+```
+
 ### SELECT from a parquet file using OPENROWSET
 
 The following example demonstrates using T-SQL to query a parquet file stored in S3-compatible object storage via OPENROWSET query. For more information, see [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md).

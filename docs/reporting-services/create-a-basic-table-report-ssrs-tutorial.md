@@ -12,24 +12,24 @@ helpviewer_keywords:
   - "walkthroughs [Reporting Services]"
   - "tutorials [Reporting Services]"
   - "reports [Reporting Services], creating"
+#customer intent: As a SQL server user, I want to use SQL Server Data Tools (SSDT) to create a data connection so that I can create and publish a basic report.
 ---
 # Create a basic table report (SSRS tutorial)
 
-In this tutorial, you use the *Report Designer* tool in Visual Studio / SQL Server Data Tools (SSDT). You create a SQL Server Reporting Services (SSRS) paginated report. The report contains a query table, created from data in the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.
+The tutorial helps you create a SQL Server Reporting Services (SSRS) paginated report. As you progress through the tutorial, you learn how to use the Report Designer tool in Visual Studio / SQL Server Data Tools (SSDT) to create a query table from data in the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.
 
 As you progress in this tutorial, you're going to learn how to:
   
-> [!div class="checklist"]
-> - Create a report project
-> - Set up a data connection
-> - Define a query
-> - Add a table data region
-> - Format the report
-> - Group and total fields
-> - Preview the report
-> - Publish the report
+- Create a report project
+- Set up a data connection
+- Define a query
+- Add a table data region
+- Format the report
+- Group and total fields
+- Preview the report
+- Publish the report
 
-## Requirements
+## Prerequisites
 
 Your system must have the following components installed to take this tutorial:
 

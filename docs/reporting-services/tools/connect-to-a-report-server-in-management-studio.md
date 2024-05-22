@@ -3,7 +3,7 @@ title: "Connect to a report server in Management Studio"
 description: Learn how to connect to any server in the SQL Server family and graphically browse its contents by using the Object Explorer in SQL Server Management Studio.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/07/2019
+ms.date: 05/20/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
@@ -18,6 +18,8 @@ helpviewer_keywords:
   - "registering report servers"
   - "report servers [Reporting Services], registering"
   - "Connect to Server dialog box, Reporting Services"
+
+#customer intent: As a SQL server user, I want to learn how to connect to and graphically browse my SQL databases so that I can access and use my data.
 ---
 
 # Connect to a report server in Management Studio
@@ -32,64 +34,64 @@ helpviewer_keywords:
 
 - Manage job schedules.
 
- You can connect to a native mode report server or a report server that runs in SharePoint integrated mode. Connection syntax and the types of operations that you can do depend on the server mode of the report server and your permissions. If you can't connect to the report server or have problems doing specific tasks, you probably don't have sufficient permissions. Alternatively, you might specify the name of the report server incorrectly. For more information about permissions and connection syntax, see the table at the end of this article.
+ You can connect to a native mode report server or a report server that runs in SharePoint integrated mode. Connection syntax and the types of operations that you can do depend on the server mode of the report server and your permissions. If you can't connect to the report server or have problems doing specific tasks, you probably don't have sufficient permissions. Alternatively, you might specify the name of the report server incorrectly. For more information about permissions and connection syntax, see [Connection syntax and permissions](#connection-syntax-and-permissions).
 
- You can't use Object Explorer to view or manage report server content. Content management is performed through the web portal if the report server runs in native mode or through a SharePoint site if the report server runs in SharePoint integrated mode.
+ You can't use Object Explorer to view or manage report server content. Content management is performed through the web portal if the report server runs in native mode. Or you can manage your content through a SharePoint site, if the report server runs in SharePoint integrated mode.
 
- Object Explorer allows you to open connections to multiple server instances in the same workspace as along as the servers are registered in the same server group. Before you can connect to a report server instance in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], the server must be registered. If the report server is already registered, you can skip this step. Instructions for registering report servers are provided at the end of this article.
+ Object Explorer allows you to open connections to multiple server instances in the same workspace as long as the servers are registered in the same server group. Before you can connect to a report server instance in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], the server must be registered. If the report server is already registered, you can skip this step. For instructions to register a report server, see [Register a report server](#register-a-report-server).
 
-### Connect to a native mode report server
+## Connect to a native mode report server
 
-1. If Object Explorer isn't already open it, select it from the **View** menu.
+1. If Object Explorer isn't already, open it. Select it from the **View** menu.
 
-2. Select **Connect** to view the list of server types, and then select **Reporting Services**.
+1. Select **Connect** to view the list of server types, and then select **Reporting Services...**.
 
-3. In the **Connect to Server** dialog box, enter the name of the report server instance. Report server instance names are based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance names. By default, the instance name of a local report server instance is just the computer name. If you installed the report server as a named instance, use this syntax to specify the server: `<servername>[\<instancename>]`.
+1. In the **Connect to Server** dialog box, enter the name of the report server instance into the **Server name** field. Report server instance names are based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance names. By default, the instance name of a local report server instance is just the computer name. If you installed the report server as a named instance, use this syntax to specify the server: `<servername>[\<instancename>]`.
 
-4. Select the **Authentication type**. If you use Windows Authentication, you connect by using your credentials. If you select Basic authentication or Forms authentication, enter the account and password.  
+1. Select the **Authentication**. If you use Windows Authentication, you connect by using your credentials. If you select Basic authentication or Forms authentication, enter the account and password.  
   
-5. Select **Connect**. The report server appears in Object Explorer.  
+1. Select **Connect**. The report server appears in Object Explorer.  
 
-6. Right-click the server node to set system properties and server defaults. For more information, see [Set Report Server Properties &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).
+1. Right-click the server node to set system properties and server defaults. For more information, see [Set report server properties &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).
 
-### Connect to a SharePoint integrated mode report server  
+## Connect to a SharePoint integrated mode report server  
 
-1. If Object Explorer isn't already open it, select it from the **View** menu.
+1. If Object Explorer isn't already, open it, Select it from the **View** menu.
 
-2. Select **Connect** to view the list of server types, and then choose **Reporting Services**.
+1. Select **Connect** to view the list of server types, and then choose **Reporting Services...**.
 
-3. In the **Connect to Server** dialog box, enter a URL to a SharePoint site. The following example illustrates the syntax: `https://<web server>/sites/<site>`.
+1. In the **Connect to Server** dialog box, enter a URL to a SharePoint site into the **Server name** field. The following example illustrates the syntax: `https://<web server>/sites/<site>`.
 
-4. Select the **Authentication type**. If you use Windows Authentication, you must connect by using your credentials. If you select Basic authentication or Forms authentication, enter the account and password.
+1. Select the **Authentication type**. If you use Windows Authentication, you must connect by using your credentials. If you select Basic authentication or Forms authentication, enter the account and password.
 
-5. Select **Connect**. The report server appears in Object Explorer.
+1. Select **Connect**. The report server appears in Object Explorer.
 
-6. Right-click the server node to set system properties and server defaults. For more information, see [Set Report Server Properties &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).
+1. Right-click the server node to set system properties and server defaults. For more information, see [Set report server properties &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).
 
-### Register a report server
+## Register a report server
 
-1. If you can't connect to a report server, you either don't have permission to access it, or the server isn't registered. To register the server, select **View** menu > **Registered Servers**.
+1. If you can't connect to a report server, you either don't have permission to access it, or the server isn't registered. To register the server, select **View** in the menu > **Registered Servers**.
 
-2. Select the **Reporting Services** icon.
+1. Select the **Reporting Services** icon.
 
-3. Right-click **Reporting Services**, > **New** > **Server Registration**. The **New Server Registration** dialog box is displayed.
+1. Expand **Reporting Services** and right-click **Local Server Groups**. Select **New Server Registration...**. The **New Server Registration** dialog box appears.
 
-4. For **Server name**, enter a value. You specify the value depending on the server mode:
+1. For **Server name**, enter a value. You specify the value depending on the server mode:
 
     - For a native mode report server, enter the name of the report server instance. Report server instance names are based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance names. By default, the instance name of a local report server instance is just the computer name. If you installed the report server as a named instance, use this syntax to specify the server: `<servername>[\<instancename>]`.
 
-    - For a report server that runs in SharePoint integrated mode, you connect to the SharePoint site with which the report server is connected. Connect to the SharePoint site so that you can view the permission levels. The permissions control access to report server content and operations. You can specify any site in the site collection. The following example illustrates the syntax: `https://mysharepointsite`.
+    - For a report server that runs in SharePoint integrated mode, you connect to the SharePoint site that the report server is connected to. Connect to the SharePoint site so that you can view the permission levels. The permissions control access to report server content and operations. You can specify any site in the site collection. The following example illustrates the syntax: `https://mysharepointsite`.
 
-5. For **Authentication**, select the authentication mode that the report server uses.
+1. For **Authentication**, select the authentication mode that the report server uses.
 
    - If you use default security, choose **Windows Authentication**.
    - If you installed and deployed a custom security extension, choose **Forms Authentication**.
    - If you configured the report server to use Basic authentication, choose **Basic Authentication**.
    - If the report server is configured for SharePoint integrated mode, choose **Windows Authentication**.
 
-6. Select **Test** to verify the connection.
+1. Select **Test** to verify the connection.
 
-7. When prompted, select **OK**, and then **Save**.
+1. When prompted, select **OK**. Then select **Save**.
 
 ## Connection syntax and permissions
 
@@ -99,12 +101,12 @@ helpviewer_keywords:
 
 |Connect to|   Tasks   |   Permissions   |
 |----------|-----------|-----------------|  
-|Native mode report server, connected as the default, or named instance:<br /><br /> `<server name>\<_instance>`<br /><br /> The connection to the report server is made through the Report Server WMI provider.|View and set server properties and defaults.<br /><br /> View and cancel jobs.<br /><br /> Create and manage shared schedules.<br /><br /> Create, modify, or delete role definitions.|Assigned to the System Administrator role.|  
+|Native mode report server, connected as the default, or named instance:<br /><br /> `<server name>\<_instance>`<br /><br /> The connection to the report server is made through the Report Server WMI (Windows Management Instrumentation) provider.|View and set server properties and defaults.<br /><br /> View and cancel jobs.<br /><br /> Create and manage shared schedules.<br /><br /> Create, modify, or delete role definitions.|Assigned to the System Administrator role.|  
 |Native mode report server, connected as the default, or named instance, through the endpoint to the Report Server Web service:<br /><br /> `https://<servername>/reportserver`<br /><br /> Specifying a URL to the report server provides an alternate way to connect to the report server.|View and set server properties and defaults.<br /><br /> View and cancel jobs.<br /><br /> Create and manage shared schedules.<br /><br /> Create, modify, or delete role definitions.|Assigned to the System Administrator role.|  
 |SharePoint integrated mode report server, connected through the SharePoint site:<br /><br /> `https://<webserver>/<SharePointSite>`|View and set server properties and defaults.<br /><br /> View and cancel jobs.<br /><br /> Create and manage shared schedules defined for the site to which you're connected.<br /><br /> View the permission levels defined for the site to which you're connected.|Full Control level of permission on the SharePoint site to which you're connected.|
 |SharePoint integrated mode report server, connected through the name of the report server instance:<br /><br /> `<server name>\<_instance>`|View and set server properties and defaults.<br /><br /> View and cancel jobs.|Full Control level of permission on the SharePoint site that is integrated with the report server.<br /><br /> Notice that when you connect to the report server rather than the SharePoint site, the number of tasks that you can do is reduced. The report server can only return application data that is stored or managed in the report server database. It can't return data stored in the SharePoint configuration and content databases.|
 
 ## Related content
 
- [Configure a report server database connection  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+ [Configure a report server database connection &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
  [Reporting Services in SQL Server Management Studio &#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)

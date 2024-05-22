@@ -4,7 +4,7 @@ description: "Identify I/O performance issues associated with VM and data disk t
 author: ebruersan
 ms.author: ebrue
 ms.reviewer: mathoma
-ms.date: 05/13/2024
+ms.date: 05/22/2024
 ms.service: virtual-machines-sql
 ms.topic: how-to
 ms.custom: devx-track-azurecli
@@ -176,6 +176,12 @@ You can view a [full list of recommendations on GitHub](https://github.com/micro
 :::row-end:::
 
 On the **I/O related best practices** tab, use **Run assessment** to start an assessment of your configuration, which should take a few minutes to complete (unless there's a large number of databases and objects). Alternatively, if you see a timestamp for the latest available results, you can use **Fetch latest results** to review findings from previous assessments.  
+
+## Analyze IO with PowerShell
+
+You can also use the [IO Analysis](https://github.com/microsoft/sql-server-samples/blob/master/samples/manage/sql-vm-io-analysis.ps1) PowerShell script to analyze the IO performance of your SQL Server VM: 
+
+:::code language="powershell" source="~/../sql-server-samples/samples/manage/sql-vm-io-analysis.ps1":::
 
 ## Next steps
 

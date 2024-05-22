@@ -159,7 +159,7 @@ To move SQL instances, you need to plan carefully:
 - The migration of all databases that need to be collocated (ones running on the same instance).
 - The migration of instance-level objects that your application depends on, including logins, credentials, SQL Agent jobs and operators, and server-level triggers.
 
-SQL Managed Instance is a managed service that allows you to delegate some of the regular DBA activities to the platform as they're built in. Therefore, some instance-level data doesn't need to be migrated, such as maintenance jobs for regular backups or Always On configuration, as [high availability](../../database/high-availability-sla.md) is built in.
+SQL Managed Instance is a managed service that allows you to delegate some of the regular DBA activities to the platform as they're built in. Therefore, some instance-level data doesn't need to be migrated, such as maintenance jobs for regular backups or Always On configuration, as [high availability](../../database/high-availability-sla-local-zone-redundancy.md) is built in.
 
 This article covers two of the recommended migration options: 
 
@@ -276,7 +276,7 @@ The test approach for database migration consists of the following activities:
 
 ## Use advanced features 
 
-You can take advantage of the advanced cloud-based features offered by SQL Managed Instance, such as [built-in high availability](../../database/high-availability-sla.md), [threat detection](../../database/azure-defender-for-sql.md), and [monitoring and tuning your workload](../../database/monitor-tune-overview.md). 
+You can take advantage of the advanced cloud-based features offered by SQL Managed Instance, such as [built-in high availability](../../database/high-availability-sla-local-zone-redundancy.md), [threat detection](../../database/azure-defender-for-sql.md), and [monitoring and tuning your workload](../../database/monitor-tune-overview.md). 
 
 [Azure SQL Analytics](../../database/monitor-tune-overview.md) allows you to monitor a large set of managed instances in a centralized manner.
 

@@ -1,20 +1,20 @@
 ---
 title: Disaster recovery drills
-description: Learn guidance and best practices for using Azure SQL Database to perform disaster recovery drills.
-author: AbdullahMSFT
-ms.author: amamun
+description: Learn guidance and best practices for using Azure SQL Managed Instance to perform disaster recovery drills.
+author: Stralle
+ms.author: strrodic
 ms.reviewer: wiassaf, mathoma
-ms.date: 12/18/2018
-ms.service: sql-database
+ms.date: 06/25/2024
+ms.service: sql-managed-instance
 ms.subservice: high-availability
 ms.topic: conceptual
 ---
-# Performing disaster recovery drills - Azure SQL Database
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+# Performing disaster recovery drills - Azure SQL Managed Instance
+[!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](disaster-recovery-drills.md?view=azuresql-db&preserve-view=true)
-> * [Azure SQL Managed Instance](../managed-instance/disaster-recovery-drills.md?view=azuresql-mi&preserve-view=true)
+> * [Azure SQL Database](../database/disaster-recovery-drills.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](disaster-recovery-drills.md?view=azuresql-mi&preserve-view=true)
 
 It is recommended that validation of application readiness for recovery workflow is performed periodically. Verifying the application behavior and implications of data loss and/or the disruption that failover involves is a good engineering practice. It is also a requirement by most industry standards as part of business continuity certification.
 
@@ -24,7 +24,7 @@ Performing a disaster recovery drill consists of:
 * Recovering
 * Validate application integrity post recovery
 
-Depending on how you [designed your application for business continuity](business-continuity-high-availability-disaster-recover-hadr-overview.md), the workflow to execute the drill can vary. This article describes the best practices for conducting a disaster recovery drill in the context of Azure SQL Database.
+Depending on how you [designed your application for business continuity](business-continuity-high-availability-disaster-recover-hadr-overview.md), the workflow to execute the drill can vary. This article describes the best practices for conducting a disaster recovery drill in the context of Azure SQL Managed Instance.
 
 ## Geo-restore
 
@@ -36,8 +36,8 @@ To simulate the outage, you can rename the source database. This name change cau
 
 ### Recovery
 
-* Perform a geo-restore of the database to a different server as described in [disaster recovery guidance](disaster-recovery-guidance.md).
-* Change the application configuration to connect to the recovered database and follow the [Configure a database after recovery](disaster-recovery-guidance.md#configure-your-database-after-recovery) guide to complete the recovery.
+* Perform a geo-restore of the database to a different instance as described in [disaster recovery guidance](disaster-recovery-guidance.md).
+* Change the application configuration to connect to the recovered instance and follow the [Configure a database after recovery](disaster-recovery-guidance.md#configure-your-database-after-recovery) guide to complete the recovery.
 
 ### Validation
 
@@ -45,7 +45,7 @@ Complete the drill by verifying the application integrity post recovery (includi
 
 ## Failover groups
 
-For a database protected by using failover groups, the drill exercise involves planned failover to the secondary server. The planned failover ensures that the primary and the secondary databases in the failover group remain in sync when the roles are switched. Unlike the unplanned failover, this operation does not result in data loss, so the drill can be performed in the production environment.
+For an instance protected by using failover groups, the drill exercise involves planned failover to the secondary instance. The planned failover ensures that the primary and the secondary instances in the failover group remain in sync when the roles are switched. Unlike the unplanned failover, this operation does not result in data loss, so the drill can be performed in a production environment.
 
 ### Outage simulation
 
@@ -54,7 +54,7 @@ To simulate the outage, you can disable the web application or virtual machine c
 ### Recovery
 
 * Make sure the application configuration in the DR region points to the former secondary, which becomes the fully accessible new primary.
-* Initiate a [planned failover](failover-group-configure-sql-db.md#test-planned-failover) of the failover group from the secondary server.
+* Initiate a [planned failover](failover-group-configure-sql-mi.md#test-failover) of the failover group from the secondary instance.
 * Follow the [Configure a database after recovery](disaster-recovery-guidance.md) guide to complete the recovery.
 
 ### Validation
@@ -68,5 +68,6 @@ To learn more, review:
 * [Continuity scenarios](business-continuity-high-availability-disaster-recover-hadr-overview.md).
 * [Automated backups](automated-backups-overview.md)
 * [Restore a database from the service-initiated backups](recovery-using-backups.md).
-* To learn about faster recovery options, see [Active geo-replication](active-geo-replication-overview.md) and [Failover groups](failover-group-sql-db.md).
-* Review [disaster recovery guidance](disaster-recovery-guidance.md) and the [high availability and disaster recovery checklist](high-availability-disaster-recovery-checklist.md). 
+* [Failover groups](failover-group-sql-mi.md).
+* [Disaster recovery guidance](disaster-recovery-guidance.md)  
+* [High availability and disaster recovery checklist](high-availability-disaster-recovery-checklist.md). 

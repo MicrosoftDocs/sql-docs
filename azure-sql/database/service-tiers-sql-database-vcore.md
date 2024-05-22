@@ -133,7 +133,7 @@ In the architectural model for the General Purpose service tier, there are two l
 - A stateless compute layer that is running the `sqlservr.exe` process and contains only transient and cached data (for example – plan cache, buffer pool, columnstore pool). This stateless node is operated by Azure Service Fabric that initializes process, controls health of the node, and performs failover to another place if necessary.
 - A stateful data layer with database files (.mdf/.ldf) that are stored in Azure Blob storage. Azure Blob storage guarantees that there's no data loss of any record that is placed in any database file. Azure Storage has built-in data availability/redundancy that ensures that every record in log file or page in data file is preserved even if the process crashes.
 
-Whenever the database engine or operating system is upgraded, some part of underlying infrastructure fails, or if some critical issue is detected in the `sqlservr.exe` process, Azure Service Fabric moves the stateless process to another stateless compute node. There's a set of spare nodes that is waiting to run new compute service if a failover of the primary node happens in order to minimize failover time. Data in Azure storage layer isn't affected, and data/log files are attached to newly initialized process. This process guarantees 99.99% availability by default and 99.995% availability when [zone redundancy](high-availability-sla.md#zone-redundant-availability) is enabled. There might be some performance impacts to heavy workloads that are in-flight due to transition time and the fact the new node starts with cold cache.
+Whenever the database engine or operating system is upgraded, some part of underlying infrastructure fails, or if some critical issue is detected in the `sqlservr.exe` process, Azure Service Fabric moves the stateless process to another stateless compute node. There's a set of spare nodes that is waiting to run new compute service if a failover of the primary node happens in order to minimize failover time. Data in Azure storage layer isn't affected, and data/log files are attached to newly initialized process. This process guarantees 99.99% availability by default and 99.995% availability when [zone redundancy](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) is enabled. There might be some performance impacts to heavy workloads that are in-flight due to transition time and the fact the new node starts with cold cache.
 
 ### When to choose this service tier
 
@@ -327,7 +327,7 @@ Hyperscale service tier premium-series and premium-series memory optimized hardw
 
 \* Premium-series memory optimized hardware is not currently available.
 
-\*\* Includes support for [zone redundancy](high-availability-sla.md#zone-redundant-availability).
+\*\* Includes support for [zone redundancy](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability).
 
 #### Fsv2-series
 

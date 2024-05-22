@@ -63,7 +63,7 @@ The following table describes the limits of the free SQL Managed Instance:
 
 Additionally, the following limitations apply: 
 
-- The following capabilities aren't supported: [Zone redundancy](high-availability-sla.md#zone-redundant-availability), [failover groups](failover-group-sql-mi.md), [long-term backup retention](../database/long-term-retention-overview.md) 
+- The following capabilities aren't supported: [Zone redundancy](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability), [failover groups](failover-group-sql-mi.md), [long-term backup retention](../database/long-term-retention-overview.md) 
 - Scaling up and down is possible only within 
 - The free offer is currently available in the following region (which are subject to change): Australia East, East US, East US 2, North Europe, Sweden Central, Southeast Asia, South Central US, UK South, West Europe, West US 2, West US 3
 - It's not currently possible to upgrade your free instance to the paid version. Create a new instance and [restore your database](point-in-time-restore.md?#restore-an-existing-database) to it to continue your business without the limits imposed by the free offer.

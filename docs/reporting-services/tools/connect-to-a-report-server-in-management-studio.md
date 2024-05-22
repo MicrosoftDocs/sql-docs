@@ -34,7 +34,7 @@ helpviewer_keywords:
 
 - Manage job schedules.
 
- You can connect to a native mode report server or a report server that runs in SharePoint integrated mode. Connection syntax and the types of operations that you can do depend on the server mode of the report server and your permissions. If you can't connect to the report server, or have problems doing specific tasks, you probably don't have sufficient permissions. Alternatively, the name of the report server might be specified incorrectly. For more information about permissions and connection syntax, see [Connection syntax and permissions](#connection-syntax-and-permissions).
+ You can connect to a native mode report server or a report server that runs in SharePoint integrated mode. Connection syntax and the types of operations that you can do depend on the server mode of the report server and your permissions. If you can't connect to the report server, or have problems doing specific tasks, you probably don't have sufficient permissions. Alternatively, you might have specified the name of the report server incorrectly. For more information about permissions and connection syntax, see [Connection syntax and permissions](#connection-syntax-and-permissions).
 
  You can't use Object Explorer to view or manage report server content. Content management is performed through the web portal, if the report server runs in native mode. Or you can manage your content through a SharePoint site, if the report server runs in SharePoint integrated mode.
 

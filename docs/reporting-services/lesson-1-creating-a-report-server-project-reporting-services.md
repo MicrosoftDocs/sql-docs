@@ -35,7 +35,7 @@ When you create reports with Report Designer, it creates a report server project
     > For Visual Studio (VS), if you don't see **Report Server Project** in the template list, add the Report Designer by installing the SSDT workload. From the **Tools** menu, select **Get Tools and Features...** and select the **SQL Server Data Tools** from the workloads displayed. If you don't see the Report Services objects in the center column, add the Reporting Services extensions. From the **Extensions** menu, select **Manage extensions...**. Search for "Microsoft Reporting Services Projects" in the list of extensions, and select **Install** when you find that extension. For SSDT, see [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md). In Visual Studio 2019, if previous steps didn't work, try installing [Microsoft Reporting Service Projects extension](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio).
 
 
-1. In the **Project name** text box, enter "Tutorial" for the project name. By default, the **Location** text box displays the path to your "Users\<username>\source\repos\" folder. Report Designer creates a folder named Tutorial below this path, and creates the Tutorial project in this folder. If the project doesn't belong to a Visual Studio solution, then Visual Studio also creates a solution file (`.sln`).
+1. In the **Project name** box, enter "Tutorial" for the project name. By default, the **Location** box displays the path to your "Users\<username>\source\repos\" folder. Report Designer creates a folder named Tutorial below this path, and creates the Tutorial project in this folder. If the project doesn't belong to a Visual Studio solution, then Visual Studio also creates a solution file (`.sln`).
 
 1. Select **Create** to create the project. The Tutorial project is displayed in the **Solution Explorer** pane on the right.
   
@@ -49,7 +49,7 @@ When you create reports with Report Designer, it creates a report server project
 
 1. In the **Add New Item** window, select **Report**.
 
-1. Enter "Sales Orders.rdl" into the **Name** text box.
+1. Enter "Sales Orders.rdl" into the **Name** box.
 
 1. Select **Add** to complete the process. Report Designer opens and displays the Sales Orders report file in Design view.
 

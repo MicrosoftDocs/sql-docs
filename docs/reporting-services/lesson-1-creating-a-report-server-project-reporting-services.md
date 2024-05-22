@@ -41,7 +41,7 @@ When you create reports with Report Designer, it creates a report server project
   
 ## Create a report definition file  
   
-1. In the **Solution Explorer** pane, right-click on the **Reports** folder. If you don't see the **Solution Explorer** pane, select **View** menu > **Solution Explorer**.
+1. In the **Solution Explorer** pane, right-click on the **Reports** folder. If you don't see the **Solution Explorer** pane, select **View** > **Solution Explorer**.
 
 1. Select **Add** > **New Item**.
 

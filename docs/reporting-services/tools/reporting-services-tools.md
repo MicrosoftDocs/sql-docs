@@ -62,7 +62,7 @@ helpviewer_keywords:
 
 ### SharePoint integrated mode  
 
- In SharePoint mode, the Reporting Services is a service application in the SharePoint architecture, and it's administered directly through SharePoint.  
+ In SharePoint mode, the Reporting Services is a service application in the SharePoint architecture, and you administer directly through SharePoint.  
   
 |Tool|Description|How to access|  
 |----------|-----------------|-------------------|  

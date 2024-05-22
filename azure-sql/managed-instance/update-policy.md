@@ -5,7 +5,7 @@ description: Use the update policy setting in Azure SQL Managed Instance to cont
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: mathoma
-ms.date: 05/21/2024
+ms.date: 05/22/2024
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: how-to
@@ -17,15 +17,15 @@ monikerRange: "=azuresql||=azuresql-mi"
 # Update policy in Azure SQL Managed Instance
 [!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article describes the update policy for [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md), and how to modify it. The update policy is an instance setting that controls access to the latest SQL Database Engine features in Azure. 
+This article describes the update policy for [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md), and how to modify it. The update policy is an instance setting that controls access to the latest SQL engine features in Azure. 
 
 Azure SQL Managed Instance offers the following two update policies: 
 
-- **SQL Server 2022** update policy: The instance can only use SQL Database Engine features available in SQL Server 2022 as the internal database format is aligned with SQL Server 2022.
-- **Always-up-to-date** update policy: The instance has access to all SQL Database Engine features as soon as they're available. The internal database format is no longer aligned with the latest version of SQL Server, and instead evolves with each newly introduced feature.
+- **SQL Server 2022** update policy: The instance can only use SQL engine features available in SQL Server 2022 as the internal database format is aligned with SQL Server 2022.
+- **Always-up-to-date** update policy: The instance has access to all SQL engine features as soon as they're available in Azure. The internal database format is no longer aligned with the latest version of SQL Server, and instead evolves with each newly introduced feature.
 
 > [!IMPORTANT]
-> Regardless of the configured update policy, all instances will continue receiving updates and features that _don't_ require changes to the SQL Database Engine, such as the following features:  [zone redundancy](high-availability-sla.md#zone-redundant-availability), [instance stop and start](instance-stop-start-how-to.md), and [fast provisioning](management-operations-overview.md?#fast-provisioning). 
+> Regardless of the configured update policy, all instances will continue receiving updates and features that _don't_ require changes to the SQL engine, such as the following features:  [zone redundancy](high-availability-sla.md#zone-redundant-availability), [instance stop and start](instance-stop-start-how-to.md), and [fast provisioning](management-operations-overview.md?#fast-provisioning). 
 
 ## SQL Server 2022 update policy
 
@@ -38,7 +38,7 @@ When using the SQL Server 2022 update policy, consider the following:
 - You receive all the latest updates available for SQL Server 2022. 
 - You can [restore your database](restore-database-to-sql-server.md) to SQL Server 2022 from Azure SQL Managed Instance. 
 - You can configure a [link](managed-instance-link-disaster-recovery.md) for real-time data replication, bidirectional failover, and disaster recovery between SQL Server 2022 and Azure SQL Managed Instance. 
-- You might not have access to some of the latest SQL Database Engine features and benefits available to Azure SQL Managed Instance with the **Always-up-to-date** update policy. 
+- You might not have access to some of the latest SQL engine features and benefits available to Azure SQL Managed Instance with the **Always-up-to-date** update policy. 
 - The **SQL Server 2022** update policy is available until the [end of mainstream support of SQL Server 2022](/lifecycle/products/sql-server-2022), at which point, the update policy for instances using the **SQL Server 2022** update policy are automatically updated to the update policy that corresponds to the latest SQL Server major release available at that time. 
 
 

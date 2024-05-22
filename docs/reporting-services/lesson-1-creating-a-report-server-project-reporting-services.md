@@ -1,15 +1,15 @@
 ---
 title: "Lesson 1: Create a report server project"
-description: "In this lesson, you create a report server project and a report definition (.rdl) file using Report Designer."
+description: "Learn how to use Report Designer to create a report server project and a report definition (.rdl) file."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 12/09/2019
+ms.date: 05/21/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
-# Lesson 1: Create a report server project (Reporting Services)
+# Use Report Designer to create a report server project
 
 In this lesson, you create a *report server project* and a *report definition (.rdl)* file using *Report Designer*.
 
@@ -39,7 +39,7 @@ When you create reports with Report Designer, it creates a report server project
 
 1. Select **Create** to create the project. The Tutorial project is displayed in the **Solution Explorer** pane on the right.
   
-## Create a report definition file (RDL)  
+## Create a report definition file  
   
 1. In the **Solution Explorer** pane, right-click on the **Reports** folder. If you don't see the **Solution Explorer** pane, select **View** menu > **Solution Explorer**.
 

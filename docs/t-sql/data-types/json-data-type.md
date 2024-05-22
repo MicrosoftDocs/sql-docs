@@ -20,7 +20,7 @@ monikerRange: "=azuresqldb-current"
 
 The new native **json** data type that stores JSON documents in a native binary format.
 
-The **json** type provides a high-fidelity storage of JSON documents optimized for easy querying and manipulation, and provides the following benefits over storing JSON data in **varchar**/**nvarchar**:
+The **json** type provides a high-fidelity storage of JSON documents optimized for easy querying and manipulation, and provides the following benefits over storing JSON data in **varchar** or **nvarchar**:
 
 - More efficient reads, as the document is already parsed
 - More efficient writes, as the query can update individual values without accessing the entire document
@@ -76,7 +76,7 @@ The **json** type can't be used as key column in a `CREATE INDEX` statement. How
 
 ## Conversion
 
-Explicit conversion using `CAST` or `CONVERT` from the **json** type can be done to **char**/**nchar**/**varchar**/**nvarchar** types. All implicit conversions aren't allowed, similar to the behavior of **xml**. Similarly, only **char**/**varchar**/**nchar**/**nvarchar** can be explicitly converted to the **json** type.
+Explicit conversion using `CAST` or `CONVERT` from the **json** type can be done to **char**, **nchar**, **varchar**, and **nvarchar** types. All implicit conversions aren't allowed, similar to the behavior of **xml**. Similarly, only **char**, **nchar**, **varchar**, and **nvarchar** can be explicitly converted to the **json** type.
 
 The **json** type can't be used with the **sql_variant** type or assigned to a **sql_variant** variable or column. This restriction similar to **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **xml**, and CLR-based data types.
 
@@ -94,9 +94,9 @@ Using `SELECT ... INTO` with the JSON type will create a table with the JSON typ
 
 ## Limitations
 
-- The behavior of `CAST ( ... AS JSON)` returns a **json** type, but the [sp_describe_first_result_set (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) system stored procedure doesn't correct return the **json** data type. Therefore, many data access clients and driver will see a **varchar** or **nvarchar** data type.
-    - Currently, TDS >= 7.4 (with UTF-8) support will see *varchar(max)* with **Latin_General_100_bin2_utf8**.
-    - Currently, TDS < 7.4 support will see **nvarchar(max)** with database collation.
+- The behavior of `CAST ( ... AS JSON)` returns a **json** type, but the [sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) system stored procedure doesn't correct return the **json** data type. Therefore, many data access clients and driver will see a **varchar** or **nvarchar** data type.
+  - Currently, TDS >= 7.4 (with UTF-8) support will see **varchar(max)** with `Latin_General_100_bin2_utf8`.
+  - Currently, TDS < 7.4 support will see **nvarchar(max)** with database collation.
 
 - Currently, the `OPENJSON()` function doesn't accept the **json** type, currently that is an implicit conversion. Explicitly convert to **nvarchar(max)** first.
 

@@ -8,6 +8,7 @@ ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
 ms.custom: updatefrequency5
+
 ---
 # Lesson 2: Specify connection information (Reporting Services)
 
@@ -27,13 +28,13 @@ For this report, you're going to add the [!INCLUDE [sssampledbobject-md](../incl
 
     :::image type="content" source="media/lesson-2-specifying-connection-information-reporting-services/vs-datasource-connection-properties-dialog-box.png" alt-text="Screenshot of the Data Source Properties dialog box." lightbox="media/lesson-2-specifying-connection-information-reporting-services/vs-datasource-connection-properties-dialog-box.png":::
 
-2. In the **Name** text box, enter "AdventureWorks2022".
+1. In the **Name** text box, enter "AdventureWorks2022".
 
-3. Select the **Embedded connection** radio button.
+1. Select the **Embedded connection** radio button.
 
-4. In the **Type** dropdown selection box, select "Microsoft SQL Server".
+1. In the **Type** dropdown selection box, select "Microsoft SQL Server".
   
-5. In the **Connection string** text box, type the following string:
+1. In the **Connection string** text box, type the following string:
 
     `Data source=localhost; initial catalog=AdventureWorks2022`
 
@@ -46,17 +47,14 @@ For this report, you're going to add the [!INCLUDE [sssampledbobject-md](../incl
     >
     > For more information about connection strings, see the `Related content` section.
 
-6. Select the **Credentials** tab, and under the section **Change the credentials used to connect to the data source**, select the **Use Windows Authentication (integrated security)** radio button.
+1. Select the **Credentials** tab, and under the section **Change the credentials used to connect to the data source**, select the **Use Windows Authentication (integrated security)** radio button.
 
-7. Select **OK** to complete the process.
+1. Select **OK** to complete the process.
 
 Report Designer adds the data source AdventureWorks2022 to the **Report Data** pane.
 
 :::image type="content" source="media/lesson-2-specifying-connection-information-reporting-services/ssrs-adventureworks-datasource2016.png" alt-text="Screenshot of the Report Data pane that highlights the AdventureWorks2016 data source.":::
 
-
-
-## Next step
 
 In this lesson, you successfully defined a connection to the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] sample database. Continue with [Lesson 3: Define a dataset for the table report &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md) to define a dataset for the report.
 

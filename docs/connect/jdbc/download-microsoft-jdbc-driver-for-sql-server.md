@@ -33,10 +33,10 @@ When you download the driver, there are multiple JAR files. The JAR file with `j
 
 This release of Microsoft JDBC Driver for SQL Server is available in the following languages:
 
-Microsoft JDBC Driver 12.6.1 for SQL Server (zip):
+Microsoft JDBC Driver 12.6.2 for SQL Server (zip):
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x40a)
 
-Microsoft JDBC Driver 12.6.1 for SQL Server (tar.gz):
+Microsoft JDBC Driver 12.6.2 for SQL Server (tar.gz):
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x40a)
 
 ### Release notes

@@ -52,7 +52,7 @@ The following table explains the Azure Metrics used to identify problematic thro
 
 ## I/O analysis findings  
 
-Based on its analysis of performance metrics, I/O analysis determines that there's: 
+Based on its analysis of performance metrics for the last 24 hours, I/O analysis determines that there's: 
 - No throttling 
 - VM level I/O throttling  
 - Disk level I/O throttling  
@@ -177,9 +177,9 @@ You can view a [full list of recommendations on GitHub](https://github.com/micro
 
 On the **I/O related best practices** tab, use **Run assessment** to start an assessment of your configuration, which should take a few minutes to complete (unless there's a large number of databases and objects). Alternatively, if you see a timestamp for the latest available results, you can use **Fetch latest results** to review findings from previous assessments.  
 
-## Analyze IO with PowerShell
+## Analyze I/O with PowerShell
 
-You can also use the [IO Analysis](https://github.com/microsoft/sql-server-samples/blob/master/samples/manage/sql-vm-io-analysis.ps1) PowerShell script to analyze the IO performance of your SQL Server VM: 
+You can also use the [I/O Analysis](https://github.com/microsoft/sql-server-samples/blob/master/samples/manage/sql-vm-io-analysis.ps1) PowerShell script to analyze the I/O performance of your SQL Server VM: 
 
 :::code language="powershell" source="~/../sql-server-samples/samples/manage/sql-vm-io-analysis.ps1":::
 

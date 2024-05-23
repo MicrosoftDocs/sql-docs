@@ -148,6 +148,9 @@ WITH ( <result_set_definition> )
 
 ::: moniker-end
 
+> [!IMPORTANT]
+> PREDIC is off by default in Azure Synapse Analytics. If you want to use it, you need to contact support
+
 ### Arguments
 
 **MODEL**

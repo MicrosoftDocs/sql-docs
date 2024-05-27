@@ -5,7 +5,7 @@ description: Understand how the Azure SQL Managed Instance maintenance window ca
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, urosmil, scottkim
-ms.date: 03/08/2024
+ms.date: 05/27/2024
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -71,7 +71,7 @@ Maintenance notifications can be configured to alert you of upcoming planned mai
 
 ### Supported subscription types
 
-Configuring and using maintenance window is available for the following [offer types](https://azure.microsoft.com/support/legal/offer-details/): Pay-as-you-go, Cloud Solution Provider (CSP), Microsoft Enterprise Agreement, or Microsoft Customer Agreement.  
+Configuring and using maintenance window is available for the following [offer types](https://azure.microsoft.com/support/legal/offer-details/): Pay-as-you-go, Cloud Solution Provider (CSP), Microsoft Enterprise Agreement, or Microsoft Customer Agreement. 
 
 Offers restricted to dev/test usage only are not eligible (like pay-as-you-go Dev/Test or Enterprise Dev/Test as examples).
 
@@ -84,55 +84,7 @@ Choosing a maintenance window other than the default is available on all SLOs **
 
 ### Azure SQL Managed Instance region support for maintenance windows
 
-Choosing a maintenance window for Azure SQL Managed Instance other than the default is currently available in the following regions:
-
-- Australia Central 1
-- Australia Central 2
-- Australia East
-- Australia Southeast
-- Brazil South
-- Brazil Southeast
-- Canada Central
-- Canada East
-- Central India
-- Central US
-- China East 2
-- China North 2
-- East US
-- East US 2
-- East Asia
-- France Central
-- France South
-- Germany West Central
-- Germany North  
-- Japan East
-- Japan West
-- Korea Central
-- Korea South
-- North Central US
-- North Europe
-- Norway East
-- Norway West
-- South Africa North
-- South Africa West
-- South Central US
-- South India
-- Southeast Asia
-- Switzerland North
-- Switzerland West
-- UAE Central
-- UAE North
-- UK South
-- UK West
-- US Gov Arizona
-- US Gov Texas
-- US Gov Virginia
-- West Central US
-- West Europe
-- West India
-- West US
-- West US 2
-- West US 3
+Choosing a maintenance window for Azure SQL Managed Instance other than the default is available in all regions.
 
 ## Gateway maintenance
 

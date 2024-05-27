@@ -5,7 +5,7 @@ description: Learn how to set the time when planned maintenance should be perfor
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: scottkim, mathoma, urosmil
-ms.date: 02/20/2024
+ms.date: 05/27/2024
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: how-to
@@ -173,6 +173,11 @@ The following example sets the maintenance window using [az sql mi update](/cli/
    ```
 
 -----
+
+> [!NOTE]
+> For displaying user friendly names in Azure Portal, Azure SQL Managed Instance relies on [maintenance configurations](azure/articles/virtual-machines/maintenance-configurations.md) as a resource. Maintenace definitions for Azure SQL Managed Instance are part of the public maintenance configurations. There might be the situation for newly added Azure regions in which SQL Managed Instance can be used in the region, while public maintenance configurations are still being created. In that case, Azure Portal will not display the user friendly names in the dropdown and instead users will see the system names:
+> - MI_1 which is equivalent for Weekday window: 10:00 PM to 6:00 AM local time, Monday - Thursday
+> - MI_2 which is equivalent for Weekend window: 10:00 PM to 6:00 AM local time, Friday - Sunday
 
 ## Related content
 

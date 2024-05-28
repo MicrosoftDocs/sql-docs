@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: wiassaf, mathoma
-ms.date: 05/21/2024
+ms.date: 05/25/2024
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -87,6 +87,7 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 
 | Changes | Details |
 | --- | --- |
+| **Instance pool in the portal** | It's now possible to create a new instance pool, or a new instance inside an existing instance pool, by using the Azure portal. Review [Configure instance pool](instance-pools-configure.md?view=azure-portal&preserve-view=true#create-instance-pool) to learn more. The instance pool feature remains in preview.  |
 |**Update policy GA** | Use the update policy to control your internal database format alignment and access to the latest SQL Database Engine features. You can choose to either limit the feature set to features that are available in SQL Server 2022, or ensure your instance takes advantage of all the latest features of Azure SQL Managed Instance. This feature is generally available. Review [Update policy](update-policy.md) to learn more.  | 
 
 

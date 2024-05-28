@@ -137,7 +137,7 @@ sections:
 
       - question: The notification says "In Progress", but window hasn't started yet?
         answer: |
-          There's a period of two hours in which notifications are sent. This means that you can receive notification up to 24 hours before the event, before the window opens, and after the window is closed. Even though the notification title is "In Progress", the content of the notification contains the maintenance window start and end time and that is the moment when maintenance will begin and end.  
+          There's a period of two hours in which notifications are sent. This means that you can receive notification up to 26 hours before the event, before the window opens, and after the window is closed. Even though the notification title is "In Progress", the content of the notification contains the maintenance window start and end time and that is the moment when maintenance will begin and end.
 
       - question: Is there a scenario where I don't get notification about planned event?
         answer: |

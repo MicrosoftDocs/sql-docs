@@ -10,7 +10,7 @@ metadata:
   ms.author: wiassaf
   ms.reviewer: scottkim, mathoma, urosmil
   ms.custom: azure-sql-split
-  ms.date: 02/20/2024
+  ms.date: 05/28/2024
   monikerRange: "=azuresql||=azuresql-mi"
 
 title: Maintenance window FAQ for Azure SQL Managed Instance
@@ -48,7 +48,7 @@ sections:
 
       - question: In which service level objectives (SLOs) can I choose a maintenance window? 
         answer: |
-          Choosing maintenance window is supported for all SLOs, but not supported on certain subscription type, see [Maintenance window feature availability in Azure SQL Managed Instance](maintenance-window.md#feature-availability).
+          Choosing a maintenance window is supported for all SLOs, but not supported on certain subscription types. For more information, see [Maintenance window feature availability in Azure SQL Managed Instance](maintenance-window.md#feature-availability).
 
       - question: How long does it take to process a maintenance window schedule change?
         answer: |
@@ -137,8 +137,8 @@ sections:
 
       - question: The notification says "In Progress", but window hasn't started yet?
         answer: |
-          There's a period of 2 hours in which notifications are sent. This means that you can receive notification 26 to 24 hours before the event, 1 hour to 1 minute before the window opens, and 1 minute to 1 hour after the window is closed. Even though the notification title is "In Progress", the content of the notification contains the maintenance window start and end time and that is the moment when maintenance will begin and end.  
-          
+          There's a period of two hours in which notifications are sent. This means that you can receive notification up to 24 hours before the event, before the window opens, and after the window is closed. Even though the notification title is "In Progress", the content of the notification contains the maintenance window start and end time and that is the moment when maintenance will begin and end.  
+
       - question: Is there a scenario where I don't get notification about planned event?
         answer: |
           Yes, in case that you have created a new resource, executed scaling operation, or changed maintenance window, your SQL managed instance can end up on the machine that is already scheduled for upgrade. In this case, you are notified only when deployment window starts and ends. For all future deployments, you will get advance notification about planned events.

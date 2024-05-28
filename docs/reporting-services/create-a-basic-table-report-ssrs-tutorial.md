@@ -18,7 +18,7 @@ helpviewer_keywords:
 
 The tutorial helps you create a SQL Server Reporting Services (SSRS) paginated report. You learn how to use the Report Designer tool in Visual Studio/SQL Server Data Tools (SSDT) to create a query table from data in the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.
 
-You learn how to:
+In this article, you learn how to:
   
 - Create a report project.
 - Set up a data connection.

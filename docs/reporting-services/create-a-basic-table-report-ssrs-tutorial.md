@@ -16,29 +16,29 @@ helpviewer_keywords:
 ---
 # Create a basic table report (SSRS tutorial)
 
-The tutorial helps you create a SQL Server Reporting Services (SSRS) paginated report. As you progress through the tutorial, you learn how to use the Report Designer tool in Visual Studio / SQL Server Data Tools (SSDT) to create a query table from data in the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.
+The tutorial helps you create a SQL Server Reporting Services (SSRS) paginated report. You learn how to use the Report Designer tool in Visual Studio/SQL Server Data Tools (SSDT) to create a query table from data in the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.
 
-As you progress in this tutorial, you're going to learn how to:
+You learn how to:
   
-- Create a report project
-- Set up a data connection
-- Define a query
-- Add a table data region
-- Format the report
-- Group and total fields
-- Preview the report
-- Publish the report
+- Create a report project.
+- Set up a data connection.
+- Define a query.
+- Add a table data region.
+- Format the report.
+- Group and total fields.
+- Preview the report.
+- Publish the report.
 
 ## Prerequisites
 
-Your system must have the following components installed to take this tutorial:
+Install the following components:
 
 - [!INCLUDE[msconame-md](../includes/msconame-md.md)] SQL Server database engine.  
 - SQL Server 2016 Reporting Services or later (SSRS).
 - The [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database. For more information, see [Adventure Works Sample Databases](https://github.com/Microsoft/sql-server-samples/releases).
 - [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) for Visual Studio along with the Reporting Services extension installed to enable access to the *Report Designer*.
   
-You must also have read-only permissions to retrieve data from the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.
+You also need read-only permissions to retrieve data from the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.
 
 **Estimated time to complete the tutorial:** 30 minutes.
 

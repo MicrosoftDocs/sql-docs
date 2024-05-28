@@ -4,15 +4,15 @@ description: "Validate, query, and change JSON data with built-in functions (SQL
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth, randolphwest
-ms.date: 05/02/2024
+ms.date: 05/21/2024
 ms.service: sql
+ms.topic: conceptual
 ms.custom:
   - build-2024
-ms.topic: conceptual
 helpviewer_keywords:
   - "JSON, built-in functions"
   - "functions (JSON)"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Validate, query, and change JSON data with built-in functions (SQL Server)
 
@@ -25,7 +25,7 @@ The built-in support for JSON includes the following built-in functions describe
 - [JSON_QUERY](#QUERY) extracts an object or an array from a JSON string.
 - [JSON_MODIFY](#MODIFY) updates the value of a property in a JSON string and returns the updated JSON string.
 
-For all JSON functions, review [JSON Functions (Transact-SQL)](../../t-sql/functions/json-functions-transact-sql.md).
+For all JSON functions, review [JSON functions](../../t-sql/functions/json-functions-transact-sql.md).
 
 [!INCLUDE [article-uses-adventureworks](../../includes/article-uses-adventureworks.md)]
 
@@ -77,7 +77,7 @@ CREATE TABLE Families (
 );
 ```
 
-JSON functions work the same whether the JSON document is stored in **varchar**/**nvarchar** or the native **JSON** data type.
+JSON functions work the same whether the JSON document is stored in **varchar**, **nvarchar**, or the native **json** data type.
 
 ## <a id="ISJSON"></a> Validate JSON text by using the ISJSON function
 
@@ -91,7 +91,7 @@ FROM Families
 WHERE ISJSON(doc) > 0;
 ```
 
-For more information, see [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md).
+For more information, see [ISJSON](../../t-sql/functions/isjson-transact-sql.md).
 
 ## <a id="VALUE"></a> Extract a value from JSON text by using the JSON_VALUE function
 
@@ -113,7 +113,7 @@ The results of this query are shown in the following table:
 | --- | --- | --- |
 | `DesaiFamily` | `NY` | `Manhattan` |
 
-For more information, see [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md).
+For more information, see [JSON_VALUE](../../t-sql/functions/json-value-transact-sql.md).
 
 ## <a id="QUERY"></a> Extract an object or an array from JSON text by using the JSON_QUERY function
 
@@ -133,7 +133,7 @@ The results of this query are shown in the following table:
 | --- | --- | --- |
 | `{ "state": "NY", "county": "Manhattan", "city": "NY" }` | `[ { "familyName": "Desai", "givenName": "Prashanth" }, { "familyName": "Miller", "givenName": "Helen" } ]` | `{ "familyName": "Desai", "givenName": "Prashanth" }` |
 
-For more information, see [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md).
+For more information, see [JSON_QUERY](../../t-sql/functions/json-query-transact-sql.md).
 
 ## Parse nested JSON collections
 
@@ -274,10 +274,10 @@ The `JSON_MODIFY` function updates the value of a property in a JSON string and 
 The following example updates the value of a JSON property in a variable that contains JSON.
 
 ```sql
-SET @info = JSON_MODIFY(@jsonInfo, "$.info.address[0].town", 'London');
+SET @info = JSON_MODIFY(@jsonInfo, '$.info.address[0].town', 'London');
 ```
 
-For more information, see [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md).
+For more information, see [JSON_MODIFY](../../t-sql/functions/json-modify-transact-sql.md).
 
 ## Related content
 

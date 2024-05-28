@@ -5,7 +5,7 @@ description: Learn how to configure streaming export of metrics and resource log
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 08/04/2023
+ms.date: 05/28/2024
 ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: how-to
@@ -45,7 +45,7 @@ In addition to streaming the export of the Intelligent Insights log, you can als
 | Workload Management: *Available for Azure Synapse only* For more information, see [Azure Synapse Analytics – Workload Management Portal Monitoring](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-workload-management-portal-monitor) | No | No |
 
 > [!NOTE]  
-> Diagnostic settings cannot be configured for the **system databases**, such as `master`, `msdb`, `model`, resource and `tempdb` databases.
+> In Azure SQL Managed Instance, diagnostic settings cannot be configured for **system databases** such as `master`, `msdb`, `model`, resource and `tempdb` databases.
 
 ## Streaming export destinations
 

@@ -10,8 +10,6 @@ ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
 ms.custom:
-  - references_regions
-  - ignite-2023
   - azure-sql-split
 monikerRange: "=azuresql||=azuresql-mi"
 ---

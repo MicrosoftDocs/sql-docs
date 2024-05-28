@@ -13,7 +13,7 @@ ms.custom: sqldbrb=1, devx-track-azurepowershell, devx-track-azurecli
 # Configure public endpoints in Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-Public endpoints for [Azure SQL Managed Instance](./sql-managed-instance-paas-overview.md) enable data access to your managed instance from outside the [virtual network](/azure/virtual-network/virtual-networks-overview). You're able to access your managed instance from multi-tenant Azure services like Power BI, Azure App Service, or an on-premises network. By using the public endpoint on a managed instance, you don't need to use a VPN, which can help avoid VPN throughput issues.
+Public endpoints for [Azure SQL Managed Instance](./sql-managed-instance-paas-overview.md) enable data access to your managed instance from outside the [virtual network](/azure/virtual-network/virtual-networks-overview). You're able to access your managed instance from multitenant Azure services like Power BI, Azure App Service, or an on-premises network. By using the public endpoint on a managed instance, you don't need to use a VPN, which can help avoid VPN throughput issues.
 
 In this article, you learn how to:
 
@@ -47,6 +47,8 @@ To enable the public endpoint for your SQL Managed Instance in the Azure portal,
 
 ### [Azure PowerShell](#tab/azure-powershell)
 
+To enable the public endpoint with PowerShell, set `-PublicDataEndpointEnabled` to _true_ when you update instance properties with [Set-AzSqlInstance](/powershell/module/az.sql/set-azsqlinstance). 
+
 Use the sample PowerShell script to enable the public endpoint for your SQL Managed Instance. Replace the following values: 
 -  **subscription-id** with your subscription ID
 -  **rg-name** with the resource group of your managed instance
@@ -74,6 +76,8 @@ $mi = $mi | Set-AzSqlInstance -PublicDataEndpointEnabled $true -force
 ```
 
 ### [Azure CLI](#tab/azure-cli)
+
+To enable the public endpoint with the Azure CLI,  set `--public-data-endpoint-enabled` to _true_ when you update instance properties with [az sql mi update](/cli/azure/sql/mi#az-sql-mi-update).
 
 Use the sample Azure CLI command to enable the public endpoint for your SQL Managed Instance. Replace the following values: 
 - **subscription** with your subscription ID
@@ -103,6 +107,8 @@ To disable the public endpoint by using the Azure portal, follow these steps:
 
 ### [Azure PowerShell](#tab/azure-powershell)
 
+To disable the public endpoint with PowerShell, set `-PublicDataEndpointEnabled` to _false_ when you update instance properties with [Set-AzSqlInstance](/powershell/module/az.sql/set-azsqlinstance). 
+
 Use Azure PowerShell to disable the public endpoint for your SQL Managed Instance. Remember to also close the inbound security rule for port 3342 in your network security group (NSG) if you've [configured it](#allow-public-endpoint-traffic-in-the-network-security-group).
 
 To disable the public endpoint, use the following command: 
@@ -112,6 +118,8 @@ Set-AzSqlInstance -PublicDataEndpointEnabled $false -force
 ```
 
 ### [Azure CLI](#tab/azure-cli)
+
+To disable the public endpoint with the Azure CLI,  set `--public-data-endpoint-enabled` to _false_ when you update instance properties with [az sql mi update](/cli/azure/sql/mi#az-sql-mi-update).
 
 Use the Azure CLI to disable the public endpoint for your SQL Managed Instance. Replace the following values: 
 - **subscription** with your subscription ID

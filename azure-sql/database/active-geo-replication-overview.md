@@ -134,7 +134,7 @@ Review [license-free standby replica](standby-replica-how-to-configure.md) to le
 
 ## Cross-subscription geo-replication
 
-Use Transact-SQL (T-SQL) create a geo-secondary in a subscription different from the subscription of the primary (whether under the same tenant of Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) or not). Review [Configure active geo-replication](active-geo-replication-configure-portal.md) to learn more. 
+Use Transact-SQL (T-SQL) or the [Databases Create or Update REST API](/rest/api/sql/databases/create-or-update) to create a geo-secondary in a subscription different from the subscription of the primary (whether under the same tenant of Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) or not). Review [Configure active geo-replication](active-geo-replication-configure-portal.md) to learn more. 
 
 ## <a name="keeping-credentials-and-firewall-rules-in-sync"></a> Keep credentials and firewall rules in sync
 

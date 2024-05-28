@@ -45,11 +45,11 @@ sys.sp_change_feed_configure_parameters
 
 #### [ @maxtrans = ] *max_trans*
 
-Data type is **int**. Indicates the maximum number of transactions to process in each scan cycle. Default value if not specified is `10000`. If specified, the value must be a positive integer.
+Data type is **int**. Indicates the maximum number of transactions to process in each scan cycle. Default value if not specified is `10000`. If specified, the value must be a positive integer. This value is dynamically determined and automatically set for Mirroring Azure SQL Database in Fabric.
 
 #### [ @pollinterval = ] *polling_interval*
 
-Data type is **int**. Describes the frequency that the log is scanned for any new changes, in seconds. Default interval if not specified is 5 seconds. The value must be `5` or larger.
+Data type is **int**. Describes the frequency that the log is scanned for any new changes, in seconds. Default interval if not specified is 5 seconds. The value must be `5` or larger. This value is dynamically determined and automatically set for Mirroring Azure SQL Database in Fabric.
 
 ## Returns
 

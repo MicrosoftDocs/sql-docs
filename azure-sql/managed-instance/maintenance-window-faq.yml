@@ -95,7 +95,7 @@ sections:
 
       - question: What types of updates are typically performed during a maintenance window? 
         answer: |
-          The maintenance event can contain updates for all parts of the compute stack, including but not limtied to hardware, firmware, operating system, the SQL database engine. They're typically combined into a single batch to minimize the incidence of maintenance events. For SQL Managed Instance, updates are combined in two batches, one focused on physical infrastructure, and another one focused on SQL engine and logical infrastructure. For Azure SQL Managed Instance, the IP address of the SQL managed instance changes.
+          The maintenance event can contain updates for all parts of the compute stack, including but not limited to hardware, firmware, operating system, the SQL database engine. They're typically combined into a single batch to minimize the incidence of maintenance events. For SQL Managed Instance, updates are combined in two batches, one focused on physical infrastructure, and another one focused on SQL engine and logical infrastructure. For Azure SQL Managed Instance, the IP address of the SQL managed instance changes.
 
       - question: How frequent are the updates?
         answer: |
@@ -107,7 +107,7 @@ sections:
 
       - question: How many reconfigurations can I expect during a maintenance event?
         answer: |
-          If the maintenance update requires a reconfiguration, typically between one and four reconfiguration happens during the window. Exceptionally, there can be more than four reconfigurations.
+          If the maintenance update requires a reconfiguration, typically between one and four reconfigurations happens during the window. Exceptionally, there can be more than four reconfigurations.
 
   - name: Prerequisites and preparation for a maintenance window
     questions:

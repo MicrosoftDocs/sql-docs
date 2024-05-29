@@ -4,7 +4,7 @@ titleSuffix: SQL machine learning
 description: In this four-part tutorial series, you'll develop data to train a predictive model in R with SQL machine learning.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: garye, jroth
+ms.reviewer: monamaki
 ms.date: 05/29/2024
 ms.service: sql
 ms.subservice: machine-learning
@@ -38,7 +38,7 @@ In this article, you'll learn how to:
 
 In [part two](r-predictive-model-prepare-data.md), you'll learn how to load the data from a database into a Python data frame, and prepare the data in R.
 
-In [part three](r-predictive-model-train.md), you'll learn how to train a machine learning model model in R.
+In [part three](r-predictive-model-train.md), you'll learn how to train a machine learning model in R.
 
 In [part four](r-predictive-model-deploy.md), you'll learn how to store the model in a database, and then create stored procedures from the R scripts you developed in parts two and three. The stored procedures will run on the server to make predictions based on new data.
 
@@ -92,10 +92,10 @@ The sample database used in this tutorial has been saved to a `.bak` database ba
 ::: moniker range="=azuresqldb-mi-current"
 1. Download the file [TutorialDB.bak](https://aka.ms/TutorialDB_bak).
 
-1. Follow the directions in [Restore a database to a Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore) in SQL Server Management Studio, using these details:
+1. Follow the directions in [Restore a database to Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore) in SQL Server Management Studio, using these details:
 
    * Import from the `TutorialDB.bak` file you downloaded.
-   * Name the target database `TutorialDB.
+   * Name the target database `TutorialDB`.
 
 1. You can verify that the restored database exists by querying the `dbo.rental_data` table:
 

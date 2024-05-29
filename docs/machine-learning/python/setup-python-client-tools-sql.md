@@ -3,6 +3,7 @@ title: Set up a Python data science client
 description: Set up a Python local environment (Jupyter Notebook or PyCharm) for remote connections to SQL Server Machine Learning Services with Python.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: monamaki
 ms.date: 05/29/2024
 ms.service: sql
 ms.subservice: machine-learning-services

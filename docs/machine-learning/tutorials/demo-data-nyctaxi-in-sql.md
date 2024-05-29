@@ -3,7 +3,8 @@ title: NYC Taxi demo data for tutorials
 description: Create a database containing the New York City taxi sample data. This dataset is used in R and Python tutorials for SQL Server Machine Learning Services.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 11/02/2022
+ms.reviewer: monamaki
+ms.date: 05/29/2024
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: tutorial

@@ -3,6 +3,7 @@ title: Install pretrained models
 description: Add pretrained models for sentiment analysis and image featurization to SQL Server Machine Learning Services (R or Python) or SQL Server R Services.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: monamaki
 ms.date: 05/29/2024
 ms.service: sql
 ms.subservice: machine-learning-services

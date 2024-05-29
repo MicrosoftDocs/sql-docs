@@ -68,18 +68,25 @@ ORDER BY total_execution_count DESC;
 The number of queries with the longest average execution time within last hour:
 
 ```sql
-SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,
-    qt.query_text_id, p.plan_id, GETUTCDATE() AS CurrentUTCTime,
-    rs.last_execution_time
+SELECT TOP 10
+   AVG(rs.avg_duration) AS avg_duration,
+   SUM(rs.count_executions) AS total_execution_count,
+   qt.query_sql_text,
+   q.query_id,
+   qt.query_text_id,
+   p.plan_id,
+   GETUTCDATE() AS CurrentUTCTime,
+   MAX(rs.last_execution_time) AS last_execution_time
 FROM sys.query_store_query_text AS qt
-JOIN sys.query_store_query AS q
-    ON qt.query_text_id = q.query_text_id
-JOIN sys.query_store_plan AS p
-    ON q.query_id = p.query_id
-JOIN sys.query_store_runtime_stats AS rs
-    ON p.plan_id = rs.plan_id
-WHERE rs.last_execution_time > DATEADD(hour, -1, GETUTCDATE())
-ORDER BY rs.avg_duration DESC;
+JOIN sys.query_store_query AS q ON
+   qt.query_text_id = q.query_text_id
+JOIN sys.query_store_plan AS p ON
+   q.query_id = p.query_id
+JOIN sys.query_store_runtime_stats AS rs ON
+   p.plan_id = rs.plan_id
+WHERE rs.last_execution_time > DATEADD(HOUR, -1, GETUTCDATE())
+GROUP BY qt.query_sql_text, q.query_id, qt.query_text_id, p.plan_id
+ORDER BY AVG(rs.avg_duration) DESC;
 ```
 
 #### Biggest average physical I/O reads
@@ -105,7 +112,25 @@ ORDER BY rs.avg_physical_io_reads DESC;
 
 #### Queries with multiple plans
 
-These queries are especially interesting because they're candidates for regressions due to plan choice change. The following query identifies these queries along with all plans:
+These queries are especially interesting because they're candidates for regressions due to plan choice change. 
+
+The following query identifies queries with the highest number of plans:
+
+```sql
+SELECT COUNT(*) AS cnt, q.query_id, object_name(object_id) AS ContainingObject,
+    MAX(p.last_compile_start_time) last_compile_start_time, 
+    MAX(p.last_execution_time) last_execution_time, STRING_AGG( plan_id,',') plan_ids
+FROM sys.query_store_query_text AS qt
+JOIN sys.query_store_query AS q
+    ON qt.query_text_id = q.query_text_id
+JOIN sys.query_store_plan AS p
+    ON p.query_id = q.query_id
+GROUP BY OBJECT_NAME(object_id), q.query_id
+HAVING COUNT(distinct plan_id) > 1
+ORDER BY cnt desc
+```
+
+The following query identifies these queries along with all plans:
 
 ```sql
 WITH Query_MultPlans

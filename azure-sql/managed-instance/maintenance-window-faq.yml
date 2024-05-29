@@ -107,7 +107,7 @@ sections:
 
       - question: How many reconfigurations can I expect during a maintenance event?
         answer: |
-          If the maintenance update requires a reconfiguration, typically between one and four reconfigurations happens during the window. Exceptionally, there can be more than four reconfigurations.
+          If the maintenance update requires a reconfiguration, typically between one and four reconfigurations happen during the window. Exceptionally, there can be more than four reconfigurations.
 
   - name: Prerequisites and preparation for a maintenance window
     questions:

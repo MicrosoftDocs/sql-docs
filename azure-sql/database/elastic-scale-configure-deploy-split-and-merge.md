@@ -1,8 +1,8 @@
 ---
 title: Deploy a split-merge service
 description: Use the split-merge too to move data between sharded databases.
-author: scoriani
-ms.author: scoriani
+author: bgavrilMS
+ms.author: bogavril
 ms.reviewer: wiassaf, mathoma
 ms.date: 12/12/2023
 ms.service: sql-database

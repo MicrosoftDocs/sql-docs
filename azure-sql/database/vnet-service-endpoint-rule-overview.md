@@ -4,7 +4,7 @@ description: Mark a subnet as a virtual network service endpoint. Then add the e
 author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 09/27/2023
+ms.date: 05/24/2024
 ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
@@ -14,11 +14,11 @@ ms.custom:
 ---
 # Use virtual network service endpoints and rules for servers in Azure SQL Database
 
-[!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
+[!INCLUDE [appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
 
 *Virtual network rules* are a firewall security feature that controls whether the server for your databases and elastic pools in [Azure SQL Database](sql-database-paas-overview.md) or for your dedicated SQL pool (formerly SQL DW) databases in [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) accepts communications that are sent from particular subnets in virtual networks. This article explains why virtual network rules are sometimes your best option for securely allowing communication to your database in SQL Database and Azure Synapse Analytics.
 
-> [!NOTE]
+> [!NOTE]  
 > This article applies to both SQL Database and Azure Synapse Analytics. For simplicity, the term *database* refers to both databases in SQL Database and Azure Synapse Analytics. Likewise, any references to *server* refer to the [logical server](logical-servers.md) that hosts SQL Database and Azure Synapse Analytics.
 
 To create a virtual network rule, there must first be a [virtual network service endpoint][vm-virtual-network-service-endpoints-overview-649d] for the rule to reference.
@@ -58,7 +58,7 @@ The roles of Network Admin and Database Admin have more capabilities than are ne
 
 You have the option of using [role-based access control (RBAC)][rbac-what-is-813s] in Azure to create a single custom role that has only the necessary subset of capabilities. The custom role could be used instead of involving either the Network Admin or the Database Admin. The surface area of your security exposure is lower if you add a user to a custom role versus adding the user to the other two major administrator roles.
 
-> [!NOTE]
+> [!NOTE]  
 > In some cases, the database in SQL Database and the virtual network subnet are in different subscriptions. In these cases, you must ensure the following configurations:
 >
 > - Both subscriptions must be in the same Microsoft Entra tenant.
@@ -110,7 +110,7 @@ PolyBase and the COPY statement are commonly used to load data into Azure Synaps
 - If you have a general-purpose v1 or Azure Blob Storage account, you must first upgrade to general-purpose v2 by following the steps in [Upgrade to a general-purpose v2 storage account](/azure/storage/common/storage-account-upgrade).
 - You must have **Allow trusted Microsoft services to access this storage account** turned on under the Azure Storage account **Firewalls and Virtual networks** settings menu. Enabling this configuration will allow PolyBase and the COPY statement to connect to the storage account by using strong authentication where network traffic remains on the Azure backbone. For more information, see [this guide](/azure/storage/common/storage-network-security#exceptions).
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > The PowerShell Azure Resource Manager module is still supported by Azure SQL Database, but all future development is for the `Az.Sql` module. The AzureRM module will continue to receive bug fixes until at least December 2020. The arguments for the commands in the Az module and in the AzureRm modules are substantially identical. For more about their compatibility, see [Introducing the new Azure PowerShell Az module](/powershell/azure/new-azureps-module-az).
 
 #### Steps
@@ -124,7 +124,7 @@ PolyBase and the COPY statement are commonly used to load data into Azure Synaps
    ```
 
    This step isn't required for the dedicated SQL pools within an Azure Synapse Analytics workspace. The system assigned managed identity (SA-MI) of the workspace is a member of the Synapse Administrator role and thus has elevated privileges on the dedicated SQL pools of the workspace.
-  
+
 1. Create a **general-purpose v2 Storage Account** by following the steps in [Create a storage account](/azure/storage/common/storage-account-create).
 
     - If you have a general-purpose v1 or Blob Storage account, you must *first upgrade to v2* by following the steps in [Upgrade to a general-purpose v2 storage account](/azure/storage/common/storage-account-upgrade).
@@ -144,9 +144,9 @@ PolyBase and the COPY statement are commonly used to load data into Azure Synaps
 
     :::image type="content" source="../includes/role-based-access-control/media/add-role-assignment-page.png" alt-text="Screenshot that shows Add role assignment page in Azure portal.":::
 
-   > [!NOTE]
+   > [!NOTE]  
    > Only members with Owner privilege on the storage account can perform this step. For various Azure built-in roles, see [Azure built-in roles](/azure/role-based-access-control/built-in-roles).
-  
+
 1. To enable PolyBase connectivity to the Azure Storage account:
 
    1. Create a database [master key](/sql/t-sql/statements/create-master-key-transact-sql) if you haven't created one earlier.
@@ -191,14 +191,14 @@ You can set the **IgnoreMissingVNetServiceEndpoint** flag by using PowerShell. F
 
 <a name="anchor-how-to-by-using-firewall-portal-59j"></a>
 
-> [!NOTE]
+> [!NOTE]  
 > For similar instructions in Azure Synapse Analytics, see [Azure Synapse Analytics IP firewall rules](/azure/synapse-analytics/security/synapse-workspace-ip-firewall)
 
 ## Use Azure portal to create a virtual network rule
 
 This section illustrates how you can use the [Azure portal][http-azure-portal-link-ref-477t] to create a *virtual network rule* in your database in SQL Database. The rule tells your database to accept communication from a particular subnet that's been tagged as being a *virtual network service endpoint*.
 
-> [!NOTE]
+> [!NOTE]  
 > If you intend to add a service endpoint to the virtual network firewall rules of your server, first ensure that service endpoints are turned on for the subnet.
 >
 > If service endpoints aren't turned on for the subnet, the portal asks you to enable them. Select the **Enable** button on the same pane on which you add the rule.
@@ -223,32 +223,29 @@ You must already have a subnet that's tagged with the particular virtual network
 
 1. In the new **Create/Update** pane, fill in the boxes with the names of your Azure resources.
 
-    > [!TIP]
+    > [!TIP]  
     > You must include the correct address prefix for your subnet. You can find the **Address prefix** value in the portal. Go to **All resources** &gt; **All types** &gt; **Virtual networks**. The filter displays your virtual networks. Select your virtual network, and then select **Subnets**. The **ADDRESS RANGE** column has the address prefix you need.
 
     :::image type="content" source="media/vnet-service-endpoint-rule-overview/portal-firewall-create-update-vnet-rule-20.png" alt-text="Screenshot that shows filling in boxes for the new rule." lightbox="media/vnet-service-endpoint-rule-overview/portal-firewall-create-update-vnet-rule-20.png":::
 
 1. See the resulting virtual network rule on the **Firewall** pane.
 
-
     :::image type="content" source="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-result-rule-30.png" alt-text="Screenshot that shows the new rule on the Firewall pane." lightbox="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-result-rule-30.png":::
 
 1. Set **Allow Azure services and resources to access this server** to **No**.
 
-    > [!IMPORTANT]
+    > [!IMPORTANT]  
     > If you leave **Allow Azure services and resources to access this server** checked, your server accepts communication from any subnet inside the Azure boundary. That is communication that originates from one of the IP addresses that's recognized as those within ranges defined for Azure datacenters. Leaving the control enabled might be excessive access from a security point of view. The Microsoft Azure Virtual Network service endpoint feature in coordination with the virtual network rules feature of SQL Database together can reduce your security surface area.
 
 1. Select the **OK** button near the bottom of the pane.
 
-
-> [!NOTE]
+> [!NOTE]  
 > The following statuses or states apply to the rules:
 >
 > - **Ready**: Indicates that the operation you initiated has succeeded.
 > - **Failed**: Indicates that the operation you initiated has failed.
-> - **Deleted**: Only applies to the Delete operation and indicates that the rule has been deleted and no longer applies.
+> - **Deleted**: Only applies to the `Delete` operation and indicates that the rule has been deleted and no longer applies.
 > - **InProgress**: Indicates that the operation is in progress. The old rule applies while the operation is in this state.
-
 
 ## Use PowerShell to create a virtual network rule
 
@@ -260,7 +257,7 @@ Internally, the PowerShell cmdlets for SQL virtual network actions call REST API
 
 ## <a name="errors-40914-and-40615"></a> Troubleshoot errors 40914 and 40615
 
-Connection error 40914 relates to *virtual network rules*, as specified on the **Firewall** pane in the Azure portal. 
+Connection error 40914 relates to *virtual network rules*, as specified on the **Firewall** pane in the Azure portal.  
 Error 40615 is similar, except it relates to *IP address rules* on the firewall.
 
 ### Error 40914

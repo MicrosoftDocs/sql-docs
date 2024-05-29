@@ -23,6 +23,8 @@ Azure SQL Managed Instance provides a [VNet-local endpoint](connectivity-archite
 - You need higher throughput of data exchange than is possible when you're using a VPN.
 - Company policies prohibit PaaS inside corporate networks.
 
+Note that the public endpoint always uses the [proxy connection type](connection-types-overview.md#connection-types) regardless of the connection type setting.
+
 ## Deploy a managed instance for public endpoint access
 
 Although not mandatory, the common deployment model for a managed instance with public endpoint access is to create the instance in a dedicated isolated virtual network. In this configuration, the virtual network is used only for virtual cluster isolation. It doesn't matter if the managed instance's IP address space overlaps with a corporate network's IP address space.

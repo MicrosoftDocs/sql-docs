@@ -3,7 +3,7 @@ title: "Password Policy"
 description: This article goes over the Windows password policy mechanisms applying to a login that uses SQL Server authentication and to a contained database user with a password.
 author: VanMSFT
 ms.author: vanto
-ms.date: 05/17/2024
+ms.date: 05/24/2024
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual

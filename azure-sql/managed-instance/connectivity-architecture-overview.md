@@ -102,7 +102,7 @@ Applications can connect to SQL Managed Instance via three types of endpoints. T
 
 The VNet-local endpoint is the default means to connect to SQL Managed Instance. The VNet-local endpoint is a domain name in the form of `<mi_name>.<dns_zone>.database.windows.net` that resolves to an IP address from the subnet's address pool; hence **VNet-local**, or an endpoint that is local to the virtual network. The VNet-local endpoint can be used to connect to a SQL Managed Instance in all standard connectivity scenarios.
 
-VNet-local endpoints support the [redirect connection type](connection-types-overview.md).
+VNet-local endpoints support both [proxy and redirect connection types](connection-types-overview.md).
 
 When connecting to the VNet-local endpoint, always use its domain name as the underlying IP address can occasionally change.
 
@@ -112,7 +112,7 @@ The public endpoint is an optional domain name in the form of `<mi_name>.public.
 
 When connecting to the public endpoint, always use its domain name as the underlying IP address can occasionally change.
 
-Public endpoint always operates in [proxy connection type](connection-types-overview.md).
+Public endpoint always uses the [proxy connection type](connection-types-overview.md) regardless of the connection type setting.
 
 Learn how to set up a public endpoint in [Configure public endpoint for Azure SQL Managed Instance](public-endpoint-configure.md).
 
@@ -122,7 +122,7 @@ A private endpoint is an optional fixed IP address in another virtual network th
 
 When connecting to a private endpoint, always use the domain name since connecting to Azure SQL Managed Instance via its IP address isn't supported yet.
 
-Private endpoints always operate in [proxy connection type](connection-types-overview.md).
+Private endpoints always uses the [proxy connection type](connection-types-overview.md) regardless of the connection type setting.
 
 Learn more about private endpoints and how to configure them in [Azure Private Link for Azure SQL Managed Instance](private-endpoint-overview.md).
 

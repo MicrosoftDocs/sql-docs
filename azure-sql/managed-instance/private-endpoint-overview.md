@@ -50,7 +50,7 @@ The benefits of using private endpoints over a VNet-local or public endpoint inc
 - Automatic registration of DNS names is not yet supported. Follow the steps in [Set up domain name resolution for private endpoint](#set-up-domain-name-resolution-for-private-endpoint) instead.
 - Private endpoints to SQL Managed Instance can only be used to connect to port 1433, the standard TDS port for SQL traffic. More complex connectivity scenarios requiring communication on other ports must be established via the instance's VNet-local endpoint.
 - Private endpoints to Azure SQL Managed Instance require a special setup to configure the required DNS resolution, as described in [Set up domain name resolution for private endpoint](#set-up-domain-name-resolution-for-private-endpoint).
-- Private endpoints always operate with the [proxy connection type](connection-types-overview.md#connection-types). 
+- Private endpoints always use the [proxy connection type](connection-types-overview.md#connection-types) regardless of the connection type setting.
 
 ## Create a private endpoint in a virtual network
 

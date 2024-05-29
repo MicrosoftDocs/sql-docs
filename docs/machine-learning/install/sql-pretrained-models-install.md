@@ -3,7 +3,7 @@ title: Install pre-trained models
 description: Add pre-trained models for sentiment analysis and image featurization to SQL Server Machine Learning Services (R or Python) or SQL Server R Services.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 05/24/2022
+ms.date: 05/29/2024
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
@@ -74,7 +74,7 @@ If the models are already installed, skip ahead to the [validation step](#verify
 
 ## Download the installation script
 
-Visit [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) to download the file **Install-MLModels.ps1**.
+Visit [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) to download the file **Install-MLModels.ps1**. On the GitHub page, select **Download raw file**.
 
 ## Execute with elevated privileges
 

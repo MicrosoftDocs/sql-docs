@@ -5,7 +5,7 @@ description: In this four-part tutorial series, you'll develop a model to perfor
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: garye, jroth
-ms.date: 05/26/2020
+ms.date: 05/29/2024
 ms.service: sql
 ms.subservice: machine-learning
 ms.topic: tutorial
@@ -73,7 +73,7 @@ The sample dataset used in this tutorial has been saved to a **.bak** database b
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
-1. Download the file [tpcxbb_1gb.bak](https://rserverdistribution.blob.core.windows.net/production/sqlmldocument/tpcxbb_1gb.bak).
+1. Download the file [tpcxbb_1gb.bak](https://aka.ms/sqlmldocument/tpcxbb_1gb.bak).
 
 1. Follow the directions in [Restore a database from a backup file](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) in Azure Data Studio, using these details:
 
@@ -88,7 +88,7 @@ The sample dataset used in this tutorial has been saved to a **.bak** database b
     ```
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
-1. Download the file [tpcxbb_1gb.bak](https://rserverdistribution.blob.core.windows.net/production/sqlmldocument/tpcxbb_1gb.bak).
+1. Download the file [tpcxbb_1gb.bak](https://aka.ms/sqlmldocument/tpcxbb_1gb.bak).
 
 1. Follow the directions in [Restore a database to a Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore) in SQL Server Management Studio, using these details:
 

@@ -3,7 +3,7 @@ title: Set up a Python data science client
 description: Set up a Python local environment (Jupyter Notebook or PyCharm) for remote connections to SQL Server Machine Learning Services with Python.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 08/11/2022
+ms.date: 05/29/2024
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.custom: linux-related-content
@@ -47,7 +47,7 @@ An installation script adds three Microsoft-specific libraries to the Python cli
 - [microsoftml](../python/ref-py-microsoftml.md) providing machine learning algorithms. 
 - [azureml](/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk) which applies to operationalization tasks associated with a standalone server context and might be of limited use for in-database analytics.
 
-1. Download an installation script.
+1. Download an installation script. On the appropriate following GitHub page, select **Download raw file**.
 
    + [https://aka.ms/mls-py](https://aka.ms/mls-py) installs version 9.2.1 of the Microsoft Python packages. This version corresponds to a default SQL Server instance. 
 

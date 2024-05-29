@@ -1,7 +1,7 @@
 ---
 title: "Python tutorial: Ski rentals"
 titleSuffix: SQL machine learning
-description: In this four-part tutorial series, you'll build a linear regression model in Python to predict ski rentals with SQL machine learning.
+description: In this four-part tutorial series, you build a linear regression model in Python to predict ski rentals with SQL machine learning.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 05/29/2024
@@ -23,7 +23,7 @@ In this four-part tutorial series, you will use Python and linear regression in 
 In this four-part tutorial series, you will use Python and linear regression in [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) to predict the number of ski rentals. The tutorial uses a [Python notebook in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
 ::: moniker-end
 
-Imagine you own a ski rental business and you want to predict the number of rentals that you'll have on a future date. This information will help you get your stock, staff, and facilities ready.
+Imagine that you own a ski rental business and you want to predict the number of rentals that you'll have on a future date. This information helps you get your stock, staff, and facilities ready.
 
 In the first part of this series, you'll get set up with the prerequisites. In parts two and three, you'll develop some Python scripts in a notebook to prepare your data and train a machine learning model. Then, in part three, you'll run those Python scripts inside the database using T-SQL stored procedures.
 

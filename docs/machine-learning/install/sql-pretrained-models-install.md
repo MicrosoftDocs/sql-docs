@@ -1,6 +1,6 @@
 ---
-title: Install pre-trained models
-description: Add pre-trained models for sentiment analysis and image featurization to SQL Server Machine Learning Services (R or Python) or SQL Server R Services.
+title: Install pretrained models
+description: Add pretrained models for sentiment analysis and image featurization to SQL Server Machine Learning Services (R or Python) or SQL Server R Services.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 05/29/2024
@@ -11,17 +11,17 @@ ms.custom:
   - intro-installation
 monikerRange: "=sql-server-2016||=sql-server-2017||=sql-server-ver15||=sql-server-linux-ver15"
 ---
-# Install pre-trained machine learning models on SQL Server
+# Install pretrained machine learning models on SQL Server
 
 [!INCLUDE [SQL Server 2016 2017 2019](../../includes/applies-to-version/sqlserver2016-2019-only.md)]
 
 This article applies to [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)].
 
-This article explains how to use PowerShell to add free pre-trained machine learning models for *sentiment analysis* and *image featurization* to a SQL Server instance having R or Python integration. The pre-trained models are built by Microsoft and ready-to-use, added to an instance as a post-install task. For more information about these models, see the [Resources](#bkmk_resources) section of this article.
+This article explains how to use PowerShell to add free pretrained machine learning models for *sentiment analysis* and *image featurization* to a SQL Server instance having R or Python integration. The pretrained models are built by Microsoft and ready-to-use, added to an instance as a post-install task. For more information about these models, see the [Resources](#bkmk_resources) section of this article.
 
-Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. For more information, see [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install-sql-2022.md).
+Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install your desired R and/or Python custom runtimes and packages. For more information, see [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install-sql-2022.md).
 
-Once installed, the pre-trained models are considered an implementation detail that power specific functions in the MicrosoftML (R) and microsoftml (Python) libraries. You should not (and cannot) view, customize, or retrain the models, nor can you treat them as an independent resource in custom code or paired other functions. 
+Once installed, the pretrained models are considered an implementation detail that power specific functions in the MicrosoftML (R) and microsoftml (Python) libraries. You should not (and cannot) view, customize, or retrain the models, nor can you treat them as an independent resource in custom code or paired other functions. 
 
 To use the pretrained models, call the functions listed in the following table.
 
@@ -32,29 +32,29 @@ To use the pretrained models, call the functions listed in the following table.
 
 ## Prerequisites
 
-Machine learning algorithms are computationally intensive. We recommend 16 GB RAM for low-to-moderate workloads, including completion of the tutorial walkthroughs using all of the sample data.
+Machine learning algorithms are computationally intensive. We recommend 16 GB of RAM for low-to-moderate workloads, including completion of the tutorial walkthroughs using all of the sample data.
 
-You must have administrator rights on the computer and SQL Server to add pre-trained models.
+You must have administrator rights on the computer and SQL Server to add pretrained models.
 
 External scripts must be enabled and SQL Server LaunchPad service must be running. Installation instructions provide the steps for enabling and verifying these capabilities. 
 
 Download and install the latest cumulative update for your version of SQL Server. See the [Latest updates for Microsoft SQL Server](/troubleshoot/sql/releases/download-and-install-latest-updates?bc=%2fsql%2fbreadcrumb%2ftoc.json&toc=%2fsql%2ftoc.json).
 
 ::: moniker range=">=sql-server-2017"
-[MicrosoftML R package](../r/ref-r-microsoftml.md) or [microsoftml Python package](../python/ref-py-microsoftml.md) contain the pre-trained models.
+[MicrosoftML R package](../r/ref-r-microsoftml.md) or [microsoftml Python package](../python/ref-py-microsoftml.md) contain the pretrained models.
 
-[SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) includes both language versions of the machine learning library, so this prerequisite is met with no further action on your part. Because the libraries are present, you can use the PowerShell script described in this article to add the pre-trained models to these libraries.
+[SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) includes both language versions of the machine learning library, so this prerequisite is met with no further action on your part. Because the libraries are present, you can use the PowerShell script described in this article to add the pretrained models to these libraries.
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016"
-[MicrosoftML R package](../r/ref-r-microsoftml.md) contain the pre-trained models.
+[MicrosoftML R package](../r/ref-r-microsoftml.md) contain the pretrained models.
 
-[SQL Server R Services](sql-r-services-windows-install.md), which is R only, does not include [MicrosoftML package](../r/ref-r-microsoftml.md) out of the box. To add MicrosoftML, you must do a [component upgrade](upgrade-r-and-python.md). One advantage of the component upgrade is that you can simultaneously add the pre-trained models, which makes running the PowerShell script unnecessary. However, if you already upgraded but missed adding the pre-trained models the first time around, you can run the PowerShell script as described in this article. It works for both versions of SQL Server. Before you do, confirm that the MicrosoftML library exists at `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`.
+[SQL Server R Services](sql-r-services-windows-install.md), which is R only, does not include [MicrosoftML package](../r/ref-r-microsoftml.md) out of the box. To add MicrosoftML, you must do a [component upgrade](upgrade-r-and-python.md). One advantage of the component upgrade is that you can simultaneously add the pretrained models, which makes running the PowerShell script unnecessary. However, if you already upgraded but missed adding the pretrained models the first time around, you can run the PowerShell script as described in this article. It works for both versions of SQL Server. Before you do, confirm that the MicrosoftML library exists at `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`.
 ::: moniker-end
 
 <a name="file-location"></a>
 
-## Check whether pre-trained models are installed
+## Check whether pretrained models are installed
 
 The install paths for R and Python models are as follows:
 
@@ -62,14 +62,14 @@ The install paths for R and Python models are as follows:
 
 + For Python: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs`
 
-Model file names are listed below:
+Model file names are in the following list:
 
-+ AlexNet\_Updated.model
-+ ImageNet1K\_mean.xml
-+ pretrained.model
-+ ResNet\_101\_Updated.model
-+ ResNet\_18\_Updated.model
-+ ResNet\_50\_Updated.model
++ `AlexNet_Updated.model`
++ `ImageNet1K_mean.xml`
++ `pretrained.model`
++ `ResNet_101_Updated.model`
++ `ResNet_18_Updated.model`
++ `ResNet_50_Updated.model`
 
 If the models are already installed, skip ahead to the [validation step](#verify) to confirm availability.
 
@@ -86,7 +86,7 @@ Visit [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) to download the file **In
    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
    ```
 
-1. Enter a fully-qualified path to the installation script file and include the instance name. Assuming the Downloads folder and a default instance, the command might look like this:
+1. Enter a fully qualified path to the installation script file and include the instance name. Assuming the Downloads folder and a default instance, the command might look like this:
 
    ```powershell
    PS C:\WINDOWS\system32> C:\Users\<user-name>\Downloads\Install-MLModels.ps1 MSSQLSERVER
@@ -194,9 +194,9 @@ First, check for the new files in the [mxlibs folder](#file-location). Next, run
 > [!NOTE]
 > If demo scripts fail, check the file location first. On systems having multiple instances of SQL Server, or for instances that run side-by-side with standalone versions, it's possible for the installation script to mis-read the environment and place the files in the wrong location. Usually, manually copying the files to the correct mxlib folder fixes the problem.
 
-## Examples using pre-trained models
+## Examples using pretrained models
 
-The following link include example code invoking the pretrained models.
+The following link includes example code invoking the pretrained models.
 
 + [Code sample: Sentiment Analysis using Text Featurizer](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 
@@ -204,14 +204,14 @@ The following link include example code invoking the pretrained models.
 
 ## Research and resources
 
-Currently the models that are available are deep neural network (DNN) models for sentiment analysis and image classification. All pre-trained models were trained by using Microsoft's [Computation Network Toolkit](https://cntk.azurewebsites.net/Features/Index.html), or **CNTK**.
+Currently the models that are available are deep neural network (DNN) models for sentiment analysis and image classification. All pretrained models were trained by using Microsoft's [Computation Network Toolkit (CNTK)](https://cntk.azurewebsites.net/Features/Index.html).
 
 The configuration of each network was based on the following reference implementations:
 
-+ ResNet-18
-+ ResNet-50
-+ ResNet-101
-+ AlexNet
++ `ResNet-18`
++ `ResNet-50`
++ `ResNet-101`
++ `AlexNet`
 
 For more information about the algorithms used in these deep learning models, and how they are implemented and trained using CNTK, see these articles:
 

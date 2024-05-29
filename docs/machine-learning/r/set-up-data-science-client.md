@@ -138,7 +138,7 @@ The following steps assume the demo database, [NYCTaxi_Sample](../tutorials/demo
    tip_amount 63.245 31.61087 36  180 100      0     
    ```
 
-4. Get and set the compute context. Once you set a compute context, it remains in effect for the duration of the session. If you aren't sure whether computation is local or remote, run the following command to find out. Results that specify a connection string indicate a remote compute context.
+4. Get and set the compute context. Once you set a compute context, it remains in effect during the session. If you aren't sure whether computation is local or remote, run the following command to find out. Results that specify a connection string indicate a remote compute context.
 
    ```R
    # Return the current compute context.
@@ -221,11 +221,11 @@ This example uses Visual Studio 2017 Community Edition, with the data science wo
 
 2. The left-hand pane contains a list of preinstalled templates. Select **R**, and select **R Project**. In the **Name** box, type `dbtest` and select **OK**. 
 
-   Visual Studio creates a new project folder and a default script file, `Script.R`. 
+   Visual Studio creates a new project folder and a default script file, `Script.R`.
 
-3. Type `.libPaths()` on the first line of the script file, and then press CTRL + ENTER.
+3. Type `.libPaths()` on the first line of the script file, and then press `CTRL + ENTER`.
 
-   The current R library path should be displayed in the **R Interactive** window. 
+   The current R library path should be displayed in the **R Interactive** window.
 
 4. Select the **R Tools** menu and select **Windows** to see a list of other R-specific windows that you can display in your workspace.
  

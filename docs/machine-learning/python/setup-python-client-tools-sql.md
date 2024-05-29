@@ -44,9 +44,9 @@ Local workstations must have the same Python package versions as those on SQL Se
 
 An installation script adds three Microsoft-specific libraries to the Python client. The script installs:
 
-- [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package), used for defining data source objects and the compute context. 
-- [microsoftml](ref-py-microsoftml.md) providing machine learning algorithms. 
-- [azureml](/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk) which applies to operationalization tasks associated with a standalone server context and might be of limited use for in-database analytics.
+- [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) is used to define data source objects and the compute context.
+- [microsoftml](ref-py-microsoftml.md) providing machine learning algorithms.
+- [azureml](/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk) applies to operationalization tasks associated with a standalone server context and might be of limited use for in-database analytics.
 
 1. Download an installation script. On the appropriate following GitHub page, select **Download raw file**.
 
@@ -271,7 +271,7 @@ When you run **Python.exe** from `%ProgramFiles%\Microsoft\PyForMLS` (or whateve
 
 This article uses built-in Jupyter Notebooks to demonstrate function calls to **revoscalepy**. If you are new to this tool, the following screenshot illustrates how the pieces fit together and why it all "just works".
 
-The parent folder `%ProgramFiles%\Microsoft\PyForMLS` contains Anaconda plus the Microsoft packages. Jupyter Notebooks is included in Anaconda, under the Scripts folder, and the Python executables are auto-registered with Jupyter Notebooks. Packages found under site-packages can be imported into a notebook, including the three Microsoft packages used for data science and machine learning.
+The parent folder `%ProgramFiles%\Microsoft\PyForMLS` contains Anaconda plus the Microsoft packages. Jupyter Notebooks is included in Anaconda, under the Scripts folder, and the Python executables are autoregistered with Jupyter Notebooks. Packages found under site-packages can be imported into a notebook, including the three Microsoft packages used for data science and machine learning.
 
   :::image type="content" source="media/setup-python-client-tools-sql/jupyter-notebook-python-registration.png" alt-text="Screenshot from Windows explorer showing the folder of executables and libraries.":::
 

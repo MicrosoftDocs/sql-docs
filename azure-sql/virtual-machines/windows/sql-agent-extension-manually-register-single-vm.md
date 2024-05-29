@@ -95,6 +95,7 @@ Register a SQL Server VM with Azure PowerShell:
 # Get the existing Compute VM
 $vm = Get-AzVM -Name <vm_name> -ResourceGroupName <resource_group_name>
 
+# Register SQL Server VM with the extension
 New-AzSqlVM -Name $vm.Name -ResourceGroupName $vm.ResourceGroupName -Location $vm.Location `
 -LicenseType <license_type>
 ```
@@ -104,7 +105,7 @@ New-AzSqlVM -Name $vm.Name -ResourceGroupName $vm.ResourceGroupName -Location $v
 Register a SQL Server with the Azure CLI:
 
 ```azurecli-interactive
-# Register Enterprise or Standard self-installed VM
+# Register SQL Server VM with the extension
 az sql vm create --name <vm_name> --resource-group <resource_group_name> --location <vm_location> --license-type <license_type>
 ```
 

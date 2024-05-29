@@ -195,9 +195,9 @@ Requires `ALTER` permission on the table or index.
 
 ## <a id="TsqlProcedure"></a> Use Transact-SQL
 
-### SQL Server
+### SQL Server and Azure SQL Database
 
-In [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], run `sp_estimate_data_compression_savings` and then enable compression on the table or index. See the following sections.
+In [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], run `sp_estimate_data_compression_savings` and then enable compression on the table or index. See the following sections.
 
 #### Enable compression on a table
 
@@ -238,46 +238,6 @@ In [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], run `sp_estimate_
        @index_id = 2,
        @partition_number = NULL,
        @data_compression = 'PAGE';
-
-   ALTER INDEX IX_TransactionHistory_ProductID ON Production.TransactionHistory REBUILD PARTITION = ALL WITH (DATA_COMPRESSION = PAGE);
-   GO
-   ```
-
-### On Azure SQL Database
-
-[!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] doesn't support the `sp_estimate_data_compression_savings` stored procedure. The following scripts enable compression without estimating the compression amount.
-
-#### Enable compression on a table
-
-1. In **Object Explorer**, connect to an instance of [!INCLUDE [ssDE](../../includes/ssde-md.md)].
-
-1. On the Standard bar, select **New Query**.
-
-1. Copy and paste the following example into the query window and select **Execute**. The example enables `ROW` compression on all partitions in the specified table.
-
-   ```sql
-   USE AdventureWorks2022;
-   GO
-
-   ALTER TABLE Production.TransactionHistory REBUILD PARTITION = ALL
-   WITH (DATA_COMPRESSION = ROW);
-   GO
-   ```
-
-#### Enable compression on an index
-
-1. In **Object Explorer**, connect to an instance of [!INCLUDE [ssDE](../../includes/ssde-md.md)].
-
-1. On the Standard bar, select **New Query**.
-
-1. Copy and paste the following example into the query window and select **Execute**. The example first queries the `sys.indexes` catalog view to return the name and `index_id` for each index on the `Production.TransactionHistory` table. Finally, the example rebuilds index ID 2 (`IX_TransactionHistory_ProductID`), specifying `PAGE` compression.
-
-   ```sql
-   USE AdventureWorks2022;
-   GO
-   SELECT name, index_id
-   FROM sys.indexes
-   WHERE OBJECT_NAME (object_id) = N'TransactionHistory';
 
    ALTER INDEX IX_TransactionHistory_ProductID ON Production.TransactionHistory REBUILD PARTITION = ALL WITH (DATA_COMPRESSION = PAGE);
    GO

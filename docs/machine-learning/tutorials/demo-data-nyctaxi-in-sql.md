@@ -3,7 +3,8 @@ title: NYC Taxi demo data for tutorials
 description: Create a database containing the New York City taxi sample data. This dataset is used in R and Python tutorials for SQL Server Machine Learning Services.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 11/02/2022
+ms.reviewer: monamaki
+ms.date: 05/29/2024
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: tutorial
@@ -16,14 +17,14 @@ This article explains how to set up a sample database consisting of public data 
 
 To complete this exercise, you should have [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017&preserve-view=true) or another tool that can restore a database backup file and run T-SQL queries.
 
-Tutorials and quickstarts using this data set include the following:
+Tutorials and quickstarts using this data set include the following articles:
 
 + [Learn in-database analytics using R in SQL Server](r-taxi-classification-introduction.md)
 + [Learn in-database analytics using Python in SQL Server](python-taxi-classification-introduction.md)
 
 ## Download files
 
-The sample database is a SQL Server 2016 BAK file hosted by Microsoft. You can restore it on SQL Server 2016 and later. File download begins immediately when you open the link. 
+The sample database is a SQL Server 2016 backup (.bak) file hosted by Microsoft. You can restore it on SQL Server 2016 and later. File download begins immediately when you open the link.
 
 File size is approximately 90 MB.
 
@@ -82,7 +83,7 @@ As a validation step, run a query to confirm the data was uploaded.
 
 1. In Object Explorer, under **Databases**, right-click the **NYCTaxi_Sample** database, and start a new query.
 
-2. Run some simple queries:
+2. Run some basic queries:
 
     ```sql
     SELECT TOP(10) * FROM dbo.nyctaxi_sample;

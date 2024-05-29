@@ -62,7 +62,7 @@ In [part four](python-clustering-model-deploy.md), learn how to create a stored 
 
 - [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md). use a notebook in Azure Data Studio for both Python and SQL. For more information about notebooks, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
 
-- Additional Python packages - The examples in this tutorial series use Python packages that you may or may not have installed.
+- Additional Python packages - The examples in this tutorial series use Python packages that you might or might not have installed.
 
   Open an **Administrative Command Prompt** and change to the installation path for the version of Python you use in Azure Data Studio. For example, `cd %LocalAppData%\Programs\Python\Python37-32`. Then run the following commands to install any of these packages that aren't already installed. Ensure these packages are installed in the correct Python installation location. You can use the option `-t` to specify the destination directory.
 
@@ -85,7 +85,7 @@ In [part four](python-clustering-model-deploy.md), learn how to create a stored 
 
 ## Restore the sample database
 
-The sample dataset used in this tutorial has been saved to a **.bak** database backup file for you to download and use. This dataset is derived from the [tpcx-bb](http://www.tpc.org/tpcx-bb/default5.asp) dataset provided by the [Transaction Processing Performance Council (TPC)](http://www.tpc.org/).
+The sample dataset used in this tutorial has been saved to a **.bak** database backup file for you to download and use. This dataset is derived from the [tpcx-bb](https://www.tpc.org/tpcx-bb/default5.asp) dataset provided by the [Transaction Processing Performance Council (TPC)](https://www.tpc.org).
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!NOTE]  
@@ -97,10 +97,10 @@ The sample dataset used in this tutorial has been saved to a **.bak** database b
 
 1. Follow the directions in [Restore a database from a backup file](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) in Azure Data Studio, using these details:
 
-   - Import from the **tpcxbb_1gb.bak** file you downloaded
-   - Name the target database "tpcxbb_1gb"
+   - Import from the `tpcxbb_1gb.bak` file you downloaded.
+   - Name the target database `tpcxbb_1gb`.
 
-1. You can verify that the dataset exists after you have restored the database by querying the **dbo.customer** table:
+1. You can verify that the dataset exists after you have restored the database by querying the `dbo.customer` table:
 
     ```sql
     USE tpcxbb_1gb;
@@ -113,10 +113,10 @@ The sample dataset used in this tutorial has been saved to a **.bak** database b
 
 1. Follow the directions in [Restore a database to a SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore) in SQL Server Management Studio, using these details:
 
-   - Import from the **tpcxbb_1gb.bak** file you downloaded
-   - Name the target database "tpcxbb_1gb"
+   - Import from the `tpcxbb_1gb.bak` file you downloaded.
+   - Name the target database `tpcxbb_1gb`.
 
-1. You can verify that the dataset exists after you have restored the database by querying the **dbo.customer** table:
+1. You can verify that the dataset exists after you have restored the database by querying the `dbo.customer` table:
 
     ```sql
     USE tpcxbb_1gb;
@@ -127,9 +127,9 @@ The sample dataset used in this tutorial has been saved to a **.bak** database b
 
 ## Clean up resources
 
-If you're not going to continue with this tutorial, delete the tpcxbb_1gb database.
+If you're not going to continue with this tutorial, delete the `tpcxbb_1gb` database.
 
-## Next steps
+## Next step
 
 In part one of this tutorial series, you completed these steps:
 

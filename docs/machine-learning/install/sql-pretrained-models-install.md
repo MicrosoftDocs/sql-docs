@@ -7,14 +7,15 @@ ms.date: 05/29/2024
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-ms.custom: intro-installation
+ms.custom:
+  - intro-installation
 monikerRange: "=sql-server-2016||=sql-server-2017||=sql-server-ver15||=sql-server-linux-ver15"
 ---
 # Install pre-trained machine learning models on SQL Server
 
 [!INCLUDE [SQL Server 2016 2017 2019](../../includes/applies-to-version/sqlserver2016-2019-only.md)]
 
-This article applies to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]. 
+This article applies to [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)].
 
 This article explains how to use PowerShell to add free pre-trained machine learning models for *sentiment analysis* and *image featurization* to a SQL Server instance having R or Python integration. The pre-trained models are built by Microsoft and ready-to-use, added to an instance as a post-install task. For more information about these models, see the [Resources](#bkmk_resources) section of this article.
 
@@ -48,7 +49,7 @@ Download and install the latest cumulative update for your version of SQL Server
 ::: moniker range="=sql-server-2016"
 [MicrosoftML R package](../r/ref-r-microsoftml.md) contain the pre-trained models.
 
-[SQL Server R Services](sql-r-services-windows-install.md), which is R only, does not include [MicrosoftML package](../r/ref-r-microsoftml.md) out of the box. To add MicrosoftML, you must do a [component upgrade](../install/upgrade-r-and-python.md). One advantage of the component upgrade is that you can simultaneously add the pre-trained models, which makes running the PowerShell script unnecessary. However, if you already upgraded but missed adding the pre-trained models the first time around, you can run the PowerShell script as described in this article. It works for both versions of SQL Server. Before you do, confirm that the MicrosoftML library exists at `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`.
+[SQL Server R Services](sql-r-services-windows-install.md), which is R only, does not include [MicrosoftML package](../r/ref-r-microsoftml.md) out of the box. To add MicrosoftML, you must do a [component upgrade](upgrade-r-and-python.md). One advantage of the component upgrade is that you can simultaneously add the pre-trained models, which makes running the PowerShell script unnecessary. However, if you already upgraded but missed adding the pre-trained models the first time around, you can run the PowerShell script as described in this article. It works for both versions of SQL Server. Before you do, confirm that the MicrosoftML library exists at `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`.
 ::: moniker-end
 
 <a name="file-location"></a>
@@ -79,13 +80,13 @@ Visit [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) to download the file **In
 ## Execute with elevated privileges
 
 1. Start PowerShell. On the task bar, right-click the PowerShell program icon and select **Run as administrator**.
-2. The recommended execution policy during installation is "RemoteSigned". For more information on setting the PowerShell execution policy, see [Set-ExecutionPolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy). For example:
+1. The recommended execution policy during installation is "RemoteSigned". For more information on setting the PowerShell execution policy, see [Set-ExecutionPolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy). For example:
 
    ```powershell
    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
    ```
 
-3. Enter a fully-qualified path to the installation script file and include the instance name. Assuming the Downloads folder and a default instance, the command might look like this:
+1. Enter a fully-qualified path to the installation script file and include the instance name. Assuming the Downloads folder and a default instance, the command might look like this:
 
    ```powershell
    PS C:\WINDOWS\system32> C:\Users\<user-name>\Downloads\Install-MLModels.ps1 MSSQLSERVER
@@ -113,9 +114,9 @@ First, check for the new files in the [mxlibs folder](#file-location). Next, run
 
 ### R verification steps
 
-1. Start **RGUI.EXE** at C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64.
+1. Start **RGUI.EXE** at `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`.
 
-2. Paste in the following R script at the command prompt.
+1. Paste in the following R script at the command prompt.
 
     ```R
     # Create the data
@@ -137,7 +138,7 @@ First, check for the new files in the [mxlibs folder](#file-location). Next, run
     sentimentScores
     ```
 
-3. Press Enter to view the sentiment scores. Output should be as follows:
+1. Press **Enter** to view the sentiment scores. Output should be as follows:
 
     ```R
     > sentimentScores
@@ -153,9 +154,9 @@ First, check for the new files in the [mxlibs folder](#file-location). Next, run
 
 ### Python verification steps
 
-1. Start **Python.exe** at C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES.
+1. Start **Python.exe** at `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`.
 
-2. Paste in the following Python script at the command prompt
+1. Paste in the following Python script at the command prompt.
 
     ```python
     import numpy
@@ -179,7 +180,7 @@ First, check for the new files in the [mxlibs folder](#file-location). Next, run
     print(sentiment_scores)
     ```
 
-3. Press Enter to print the scores. Output should be as follows:
+1. Press Enter to print the scores. Output should be as follows:
 
     ```python
     >>> print(sentiment_scores)
@@ -203,7 +204,7 @@ The following link include example code invoking the pretrained models.
 
 ## Research and resources
 
-Currently the models that are available are deep neural network (DNN) models for sentiment analysis and image classification. All pre-trained models were trained by using Microsoft's [Computation Network Toolkit](https://cntk.ai/Features/Index.html), or **CNTK**.
+Currently the models that are available are deep neural network (DNN) models for sentiment analysis and image classification. All pre-trained models were trained by using Microsoft's [Computation Network Toolkit](https://cntk.azurewebsites.net/Features/Index.html), or **CNTK**.
 
 The configuration of each network was based on the following reference implementations:
 
@@ -214,13 +215,13 @@ The configuration of each network was based on the following reference implement
 
 For more information about the algorithms used in these deep learning models, and how they are implemented and trained using CNTK, see these articles:
 
-+ [Microsoft Researchers' Algorithm Sets ImageNet Challenge Milestone](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone/)
++ [Microsoft Researchers' Algorithm Sets ImageNet Challenge Milestone](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone)
 
-+ [Microsoft Computational Network Toolkit offers most efficient distributed deep learning computational performance](https://www.microsoft.com/research/blog/microsoft-computational-network-toolkit-offers-most-efficient-distributed-deep-learning-computational-performance/)
++ [Microsoft Computational Network Toolkit offers most efficient distributed deep learning computational performance](https://www.microsoft.com/research/blog/microsoft-computational-network-toolkit-offers-most-efficient-distributed-deep-learning-computational-performance)
 
-## See also
+## Related content
 
-+ [SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md)
-+ [Upgrade R and Python components in SQL Server instances](../install/upgrade-r-and-python.md)
-+ [MicrosoftML package for R](../r/ref-r-microsoftml.md)
-+ [microsoftml package for Python](../python/ref-py-microsoftml.md)
+- [SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md)
+- [Upgrade R and Python components in SQL Server instances](upgrade-r-and-python.md)
+- [MicrosoftML package for R](../r/ref-r-microsoftml.md)
+- [microsoftml package for Python](../python/ref-py-microsoftml.md)

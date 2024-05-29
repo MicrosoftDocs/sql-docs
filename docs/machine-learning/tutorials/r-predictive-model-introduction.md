@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Develop predictive model in R"
 titleSuffix: SQL machine learning
-description: In this four-part tutorial series, you'll develop data to train a predictive model in R with SQL machine learning.
+description: In this four-part tutorial series, you develop data to train a predictive model in R with SQL machine learning.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: monamaki
@@ -15,16 +15,16 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-curre
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
-In this four-part tutorial series, you will use R and a machine learning model in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md) to predict the number of ski rentals.
+In this four-part tutorial series, you use R and a machine learning model in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md) to predict the number of ski rentals.
 ::: moniker-end
 ::: moniker range="=sql-server-2017"
-In this four-part tutorial series, you will use R and a machine learning model in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) to predict the number of ski rentals.
+In this four-part tutorial series, you use R and a machine learning model in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) to predict the number of ski rentals.
 ::: moniker-end
 ::: moniker range="=sql-server-2016"
-In this four-part tutorial series, you will use R and a machine learning model in [SQL Server R Services](../r/sql-server-r-services.md) to predict the number of ski rentals.
+In this four-part tutorial series, you use R and a machine learning model in [SQL Server R Services](../r/sql-server-r-services.md) to predict the number of ski rentals.
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
-In this four-part tutorial series, you will use R and a machine learning model in [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) to predict the number of ski rentals.
+In this four-part tutorial series, you use R and a machine learning model in [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) to predict the number of ski rentals.
 ::: moniker-end
 
 Imagine you own a ski rental business and you want to predict the number of rentals that you'll have on a future date. This information will help you get your stock, staff, and facilities ready.
@@ -40,7 +40,7 @@ In [part two](r-predictive-model-prepare-data.md), you'll learn how to load the 
 
 In [part three](r-predictive-model-train.md), you'll learn how to train a machine learning model in R.
 
-In [part four](r-predictive-model-deploy.md), you'll learn how to store the model in a database, and then create stored procedures from the R scripts you developed in parts two and three. The stored procedures will run on the server to make predictions based on new data.
+In [part four](r-predictive-model-deploy.md), you'll learn how to store the model in a database, and then create stored procedures from the R scripts you developed in parts two and three. The stored procedures run on the server to make predictions based on new data.
 
 ## Prerequisites
 
@@ -61,7 +61,7 @@ In [part four](r-predictive-model-deploy.md), you'll learn how to store the mode
 
 - **R IDE** - This tutorial uses [RStudio Desktop](https://posit.co/download/rstudio-desktop).
 
-- **RODBC** - This driver is used in the R scripts you'll develop in this tutorial. If it's not already installed, install it using the R command `install.packages("RODBC")`. For more information on RODBC, see [CRAN - Package RODBC](https://cran.r-project.org/web/packages/RODBC/index.html).
+- **RODBC** - This driver is used in the R scripts you develop in this tutorial. If it's not already installed, install it using the R command `install.packages("RODBC")`. For more information on RODBC, see [CRAN - Package RODBC](https://cran.r-project.org/web/packages/RODBC/index.html).
 
 - SQL query tool - This tutorial assumes you're using [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md). For more information, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
 

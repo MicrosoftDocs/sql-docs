@@ -34,11 +34,11 @@ In this tutorial, you:
   
 1. In the list of recently used templates, select **Report Server Project**, and then choose **Next**. You can also search for "Report Server Project".
 
-    :::image type="content" source="../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png" alt-text="Screenshot of the New Project dialog box with Report Server Project template highlighted.":::
+    :::image type="content" source="../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png" alt-text="Screenshot of the New Project dialog with the Report Server Project template highlighted.":::
 
     > [!IMPORTANT]
     > For VS, if you don't see **Report Server Project** in the template list, add the Report Designer by installing the SSDT workload. 
-    > 1. From the **Tools** menu, select **Get Tools and Features...** 
+    > 1. From the **Tools** menu, select **Get Tools and Features...**.
     > 1. Select the **SQL Server Data Tools** from the workloads displayed. 
     >
     > If you don't see the Report Services objects in the center column, add the Reporting Services extensions. 

@@ -51,4 +51,4 @@ Install the following components:
 - [Lesson 6: Add grouping and totals &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)
 [Reporting Services tutorials](reporting-services-tutorials-ssrs.md)
 
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&so.rt=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+More questions? [Try asking the Reporting Services forum.](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&so.rt=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

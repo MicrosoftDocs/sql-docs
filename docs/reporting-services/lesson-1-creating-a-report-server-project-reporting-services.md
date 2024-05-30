@@ -40,8 +40,12 @@ Report parts are deprecated for all releases of SQL Server Reporting Services af
     > [!IMPORTANT]
     > For VS, if you don't see **Report Server Project** in the template list, add the Report Designer by installing the SSDT workload. 
     > 1. From the **Tools** menu, select **Get Tools and Features...** 
-    > 1. Select the **SQL Server Data Tools** from the workloads displayed. If you don't see the Report Services objects in the center column, add the Reporting Services extensions. From the **Extensions** menu, select **Manage extensions...**. Search for "Microsoft Reporting Services Projects" in the list of extensions, and select **Install** when you find that extension. For SSDT, see [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md). In Visual Studio 2019, if previous steps didn't work, try installing [Microsoft Reporting Service Projects extension](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio).
-
+    > 1. Select the **SQL Server Data Tools** from the workloads displayed. 
+    > If you don't see the Report Services objects in the center column, add the Reporting Services extensions. 
+    > 1. From the **Extensions** menu, select **Manage extensions...**. 
+    > 1. Search for "Microsoft Reporting Services Projects" in the list of extensions.
+    > 1. Select **Install** when you find that extension. For SSDT, see [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md). 
+    > In Visual Studio 2019, if previous steps didn't work, try installing [Microsoft Reporting Service Projects extension](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio).
 
 1. In the **Project name** box, enter "Tutorial" for the project name. By default, the **Location** box displays the path to your Users\<username>\source\repos\ folder. Report Designer creates a folder named Tutorial below this path, and creates the Tutorial project in this folder. If the project doesn't belong to a Visual Studio solution, then Visual Studio also creates a solution file (`.sln`).
 

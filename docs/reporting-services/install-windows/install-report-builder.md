@@ -3,7 +3,7 @@ title: "Install Microsoft Report Builder"
 description: Report Builder is stand-alone app, installed on your computer by you or an administrator.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/15/2022
+ms.date: 05/30/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual

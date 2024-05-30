@@ -11,7 +11,7 @@ ms.custom: updatefrequency5
 #customer intent: As a SQL server user, I want to create a sample report project and report so that I can continue with the other lessons in this tutorial.
 ---
 
-# Create a report server project
+# Tutorial: Create a report server project
 
 In this tutorial, you create a *report server project* and a *report definition (.rdl)* file using *Report Designer*. When you create reports with Report Designer, it generates a report server project that contains the report files and other resource files used by the reports.
 

@@ -15,9 +15,9 @@ ms.custom: updatefrequency5
 
 In this tutorial, you create a *report server project* and a *report definition (.rdl)* file using *Report Designer*. When you create reports with Report Designer, it generates a report server project that contains the report files and other resource files used by the reports.
 
-[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT features the Report Designer authoring environment. In this environment, you can open, modify, preview, save, and deploy [!INCLUDE[ssrsnoversion_md](../includes/ssrsnoversion-md.md)] paginated report definitions. You can also use and modifiy shared data sources, shared datasets, and report parts.
+[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT features the Report Designer authoring environment. In this environment, you can open, modify, preview, save, and deploy [!INCLUDE[ssrsnoversion_md](../includes/ssrsnoversion-md.md)] paginated report definitions. You can also use and modify shared data sources, shared datasets, and report parts.
 
-Report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019, and no longer supported starting in SQL Server Reporting Services 2022 and Power BI Report Server.
+Report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019. The report parts are no longer supported starting in SQL Server Reporting Services 2022 and Power BI Report Server.
 
 In this tutorial, you:
 
@@ -48,13 +48,13 @@ In this tutorial, you:
     >
     > In Visual Studio 2019, if previous steps didn't work, try installing [Microsoft Reporting Service Projects extension](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio).
 
-1. In the **Project name** box, enter "Tutorial" for the project name. By default, the **Location** box displays the path to your Users\<username>\source\repos\ folder. Report Designer creates a folder named Tutorial below this path, and creates the Tutorial project in this folder. If the project doesn't belong to a Visual Studio solution, then Visual Studio also creates a solution file (`.sln`).
+1. In the **Project name** box, enter "Tutorial" for the project name. By default, the **Location** box displays the path to the "Users\<username>\source\repos\" folder. Report Designer creates a folder named Tutorial below this path and creates the Tutorial project. If the project doesn't belong to a Visual Studio solution, then Visual Studio creates a solution file (`.sln`).
 
 1. To create the project, select **Create**. The Tutorial project displays in the **Solution Explorer** pane on the right.
   
 ## Create a report definition file (RDL) 
   
-1. In the **Solution Explorer** pane, right-click on the **Reports** folder. If you don't see the **Solution Explorer** pane, select **View** > **Solution Explorer**.
+1. In the **Solution Explorer** pane, right-click the **Reports** folder. If you don't see the **Solution Explorer** pane, select **View** > **Solution Explorer**.
 
 1. Select **Add** > **New Item**.
 

@@ -10,22 +10,20 @@ ms.topic: tutorial
 ms.custom: updatefrequency5
 #customer intent: As a SQL server user, I want to create a sample report project and report so that I can continue with the other lessons in this tutorial.
 ---
+
 # Create a report server project
 
-This lesson helps you create a *report server project* and a *report definition (.rdl)* file using *Report Designer*.
+In this tutorial, you create a *report server project* and a *report definition (.rdl)* file using *Report Designer*. When you create reports with Report Designer, it generates a report server project that contains the report files and other resource files used by the reports.
 
-When you create reports with Report Designer, it generates a report server project that contains the report files and other resource files used by the reports.
+[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT features the Report Designer authoring environment. In this environment, you can open, modify, preview, save, and deploy [!INCLUDE[ssrsnoversion_md](../includes/ssrsnoversion-md.md)] paginated report definitions. You can also use and modifiy shared data sources, shared datasets, and report parts.
+
+Report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019, and no longer supported starting in SQL Server Reporting Services 2022 and Power BI Report Server.
 
 In this tutorial, you:
 
 > [!div class="checklist"]
 > * Create a report server project
 > * Create a report definition file (RDL)
-
-[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT features the Report Designer authoring environment, where you can open, modify, preview, save, and deploy [!INCLUDE[ssrsnoversion_md](../includes/ssrsnoversion-md.md)] paginated report definitions, shared data sources, shared datasets, and report parts.
-
-Report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019, and discontinued starting in SQL Server Reporting Services 2022 and Power BI Report Server.
-
 
 ## Create a report server project
   
@@ -41,10 +39,13 @@ Report parts are deprecated for all releases of SQL Server Reporting Services af
     > For VS, if you don't see **Report Server Project** in the template list, add the Report Designer by installing the SSDT workload. 
     > 1. From the **Tools** menu, select **Get Tools and Features...** 
     > 1. Select the **SQL Server Data Tools** from the workloads displayed. 
+    >
     > If you don't see the Report Services objects in the center column, add the Reporting Services extensions. 
+    >
     > 1. From the **Extensions** menu, select **Manage extensions...**. 
     > 1. Search for "Microsoft Reporting Services Projects" in the list of extensions.
     > 1. Select **Install** when you find that extension. For SSDT, see [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md). 
+    >
     > In Visual Studio 2019, if previous steps didn't work, try installing [Microsoft Reporting Service Projects extension](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio).
 
 1. In the **Project name** box, enter "Tutorial" for the project name. By default, the **Location** box displays the path to your Users\<username>\source\repos\ folder. Report Designer creates a folder named Tutorial below this path, and creates the Tutorial project in this folder. If the project doesn't belong to a Visual Studio solution, then Visual Studio also creates a solution file (`.sln`).

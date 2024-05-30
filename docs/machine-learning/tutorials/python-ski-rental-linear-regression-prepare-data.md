@@ -39,6 +39,11 @@ In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll lear
 
 * Part two of this tutorial assumes you have completed [part one](python-ski-rental-linear-regression.md) and its prerequisites.
 
+## Install Dependencies
+
+! pip install pandas
+! pip install pyodbc
+
 ## Explore and prepare the data
 
 To use the data in Python, you'll load the data from the database into a pandas data frame.
@@ -52,8 +57,7 @@ In the connection string, replace connection details as needed. To use Windows a
 ```python
 import pyodbc
 import pandas
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_squared_error
+
 
 # Connection string to your SQL Server instance
 conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<server>; DATABASE=TutorialDB;UID=<username>;PWD=<password>')

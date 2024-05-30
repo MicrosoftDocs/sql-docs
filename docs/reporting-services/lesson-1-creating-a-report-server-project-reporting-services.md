@@ -15,10 +15,6 @@ ms.custom: updatefrequency5
 
 In this tutorial, you create a *report server project* and a *report definition (.rdl)* file using *Report Designer*. When you create reports with Report Designer, it generates a report server project that contains the report files and other resource files used by the reports.
 
-[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT features the Report Designer authoring environment. In this environment, you can open, modify, preview, save, and deploy [!INCLUDE[ssrsnoversion_md](../includes/ssrsnoversion-md.md)] paginated report definitions. You can also use and modify shared data sources, shared datasets, and report parts.
-
-Report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019. The report parts are no longer supported starting in SQL Server Reporting Services 2022 and Power BI Report Server.
-
 In this tutorial, you:
 
 > [!div class="checklist"]
@@ -26,7 +22,12 @@ In this tutorial, you:
 > * Create a report definition file (RDL)
 
 ## Create a report server project
-  
+
+ > [!NOTE]
+ >[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT features the Report Designer authoring environment. In this environment, you can open, modify, preview, save, and deploy [!INCLUDE[ssrsnoversion_md](../includes/ssrsnoversion-md.md)] paginated report definitions. You can also use and modify shared data sources, shared datasets, and report parts.
+ >
+ > Report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019. The report parts are no longer supported starting in SQL Server Reporting Services 2022 and Power BI Report Server.
+
 1. In Visual Studio (VS), select **New** > **Project** from the **File** menu.   
 
     :::image type="content" source="../reporting-services/media/ssrs-ssdt-file-01-new-project.png" alt-text="Screenshot of Visual Studio showing the project option selected in the New menu in the File menu.":::

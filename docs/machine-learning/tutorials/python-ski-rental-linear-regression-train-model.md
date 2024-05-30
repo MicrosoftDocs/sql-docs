@@ -39,6 +39,9 @@ In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll lear
 
 * Part three of this tutorial assumes you have completed [part one](python-ski-rental-linear-regression.md) and its prerequisites.
 
+! pip install scikit-learn
+
+
 ## Train the model
 
 In order to predict, you have to find a function (model) that best describes the dependency between the variables in our dataset. This called training the model. The training dataset will be a subset of the entire dataset from the pandas data frame `df` that you created in part two of this series.
@@ -46,6 +49,10 @@ In order to predict, you have to find a function (model) that best describes the
 You will train model `lin_model` using a linear regression algorithm.
 
 ```python
+
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+
 # Store the variable we'll be predicting on.
 target = "Rentalcount"
 

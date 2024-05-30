@@ -29,7 +29,7 @@ And you can install it from several places:
 - The [command line](#install-report-builder-from-the-command-line).
 
 > [!NOTE]
-> Are you looking for *Power BI Report Builder* instead? Head to the [Microsoft Power BI Report Builder](https://www.microsoft.com/download/details.aspx?id=58158) page on the Download Center.
+> Are you looking for *Power BI Report Builder* instead? Head to the [Microsoft Power BI Report Builder](https://www.microsoft.com/download/details.aspx?id=105942) page on the Download Center.
 
 ## System requirements
   

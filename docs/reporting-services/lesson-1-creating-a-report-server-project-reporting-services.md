@@ -18,8 +18,8 @@ In this tutorial, you create a *report server project* and a *report definition 
 In this tutorial, you:
 
 > [!div class="checklist"]
-> * Create a report server project
-> * Create a report definition file (RDL)
+> * Start a new report server project
+> * Create a Sales Orders report definition file (RDL)
 
 ## Create a report server project
 

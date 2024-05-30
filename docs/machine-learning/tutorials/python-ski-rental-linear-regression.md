@@ -61,7 +61,7 @@ In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll lear
 
   * pandas
   * pyodbc
-  * sklearn
+  * scikit-learn
 
   To install these packages:
   1. In your Azure Data Studio notebook, select **Manage Packages**.

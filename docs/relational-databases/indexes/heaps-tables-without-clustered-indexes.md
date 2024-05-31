@@ -1,9 +1,9 @@
 ---
-title: "Heaps (Tables without Clustered Indexes)"
-description: Heaps (Tables without Clustered Indexes)
+title: "Heaps (Tables without clustered indexes)"
+description: Heaps (tables without clustered indexes)
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: "11/01/2016"
+ms.date: "05/31/2024"
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
@@ -19,7 +19,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  A heap is a table without a clustered index. One or more nonclustered indexes can be created on tables stored as a heap. Data is stored in the heap without specifying an order. Usually data is initially stored in the order in which the rows are inserted into the table, but the [!INCLUDE[ssDE](../../includes/ssde-md.md)] can move data around in the heap to store the rows efficiently; so the data order cannot be predicted. To guarantee the order of rows returned from a heap, you must use the `ORDER BY` clause. To specify a permanent logical order for storing the rows, create a clustered index on the table, so that the table is not a heap.  
+  A heap is a table without a clustered index. One or more nonclustered indexes can be created on tables stored as a heap. Data is stored in the heap without specifying an order. Usually data is initially stored in the order in which the rows are inserted into the table, but the [!INCLUDE[ssDE](../../includes/ssde-md.md)] can move data around in the heap to store the rows efficiently. In query results, data order cannot be predicted. To guarantee the order of rows returned from a heap, use the `ORDER BY` clause. To specify a permanent logical order for storing the rows, create a clustered index on the table, so that the table is not a heap.  
   
 > [!NOTE]  
 > There are sometimes good reasons to leave a table as a heap instead of creating a clustered index, but using heaps effectively is an advanced skill. Most tables should have a carefully chosen clustered index unless a good reason exists for leaving the table as a heap.  
@@ -47,7 +47,7 @@ If a table is a heap and does not have any nonclustered indexes, then the entire
   
  Do not use a heap when there are no nonclustered indexes and the table is large, unless you intend to return the entire table content without any specified order. In a heap, all rows of the heap must be read to find any row.  
  
- Do not use a heap if the data is frequently updated. If you update a record and the update uses more space in the data pages than they are currently using, the record has to be moved to a data page that has enough free space. This creates a **forwarded record** pointing to the new location of the data, and **forwarding pointer** has to be written in the page that held that data previously, to indicate the new physical location. This introduces fragmentation in the heap. When scanning a heap, these pointers must be followed which limits read-ahead performance, and can incur additional I/O which reduces scan performance. 
+ Do not use a heap if the data is frequently updated. If you update a record and the update uses more space in the data pages than they are currently using, the record has to be moved to a data page that has enough free space. This creates a **forwarded record** pointing to the new location of the data, and **forwarding pointer** has to be written in the page that held that data previously, to indicate the new physical location. This introduces fragmentation in the heap. When [!INCLUDE[ssDE](../../includes/ssde-md.md)] scans a heap, it follows these pointers. This action limits read-ahead performance, and can incur additional I/O which reduces scan performance. 
   
 ## Manage heaps
 

@@ -18,7 +18,7 @@ helpviewer_keywords:
 
 Explore the capabilities of [!INCLUDE[ssRSCurrent_md](../includes/ssrscurrent-md.md)], [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], and Report Builder with sample data in these tutorials.
 
-## [Create a basic table report (SSRS Tutorial)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
+## [Create a basic table report (SSRS Tutorial)](../reporting-services/tutorial-step01-creating-a-report-server-project-reporting-services.md)
 
 Follow the steps in this tutorial to learn how to create your first report. This tutorial shows you how to work with [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to create a data connection (data source). It also shows you how to define a query (dataset) and configure a data region to contain your data.
 

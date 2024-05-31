@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
 # Lesson 2: Modify the report data source properties
-In this [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] tutorial lesson, you use web portal to select a report for delivery to recipients. The data-driven subscription that you define distributes the **Sales Order** report created in the tutorial [Create a basic table report &#40;SSRS tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). In the steps that follow, you modify the data source connection information used by the report to get data. Only reports that use **stored credentials** to access a report data source can be distributed through a data-driven subscription. Stored credentials are necessary for unattended report processing.  
+In this [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] tutorial lesson, you use web portal to select a report for delivery to recipients. The data-driven subscription that you define distributes the **Sales Order** report created in the tutorial [Create a basic table report &#40;SSRS tutorial&#41;](../reporting-services/tutorial-step01-creating-a-report-server-project-reporting-services.md). In the steps that follow, you modify the data source connection information used by the report to get data. Only reports that use **stored credentials** to access a report data source can be distributed through a data-driven subscription. Stored credentials are necessary for unattended report processing.  
   
 You also modify the dataset and report to use a parameter to filter the report on the `[Order]` so the subscription can output different instances of the report for specific orders and rendering formats.  
   
@@ -117,7 +117,7 @@ You also modify the dataset and report to use a parameter to filter the report o
 - [Manage report data sources](../reporting-services/report-data/manage-report-data-sources.md)  
 - [Specify credential and connection information for report data sources](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 - [Create a data-driven subscription &#40;SSRS tutorial&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
-- [Create a basic table report &#40;SSRS tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
+- [Create a basic table report &#40;SSRS tutorial&#41;](../reporting-services/tutorial-step01-creating-a-report-server-project-reporting-services.md)  
   
   
   

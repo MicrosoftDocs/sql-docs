@@ -17,7 +17,7 @@ helpviewer_keywords:
 > [!NOTE]  
 >  To preview a report with existing data sources, you must have permissions to the data source from your report authoring client. For more information, see [Data connections, data sources, and connection strings](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
- After you add a report, you can define data sources, datasets, and design a report layout. To get started, see [Create a basic table report &#40;SSRS tutorial&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) or [Tables &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
+ After you add a report, you can define data sources, datasets, and design a report layout. To get started, see [Create a basic table report &#40;SSRS tutorial&#41;](../../reporting-services/tutorial-step01-creating-a-report-server-project-reporting-services.md) or [Tables &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
   
 ## Add a new report by using the Report Wizard  
   

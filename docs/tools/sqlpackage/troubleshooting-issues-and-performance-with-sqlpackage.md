@@ -115,7 +115,7 @@ Here are the causes and solutions to work around this error:
 
 ### Stack overflow exception
 
-Large T-SQL scripts with many nested statements are often the cause of intermittent or persistent stack overflow exceptions. When this is the case, the error message will include the text `Stack overflow.` a stack trace of:
+Large T-SQL scripts with many nested statements are often the cause of intermittent or persistent stack overflow exceptions. When this is the case, the error message will include the text `Stack overflow` and a stack trace of:
 
 ```output
 Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragmentVisitor.Visit(Microsoft.SqlServer.TransactSql.ScriptDom.BinaryQueryExpression)

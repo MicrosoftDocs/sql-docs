@@ -9,6 +9,7 @@ ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual
 ---
+
 # Connect to a MySQL Data Source (SQL Server Import and Export Wizard)
 
 [!INCLUDE [sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
@@ -37,9 +38,9 @@ After you select **.NET Framework Data Provider for MySQL** on the **Choose a Da
 
 You don't have to enter the connection string in the **ConnectionString** field of the list. After you enter individual values for the MySQL server name (**Server**) and login info, the wizard assembles the connection string from the individual properties and their values.
 
-:::image type="content" source="media/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard/connect-to-mysql-with-the-net-provider-1-of-2.png" alt-text="Connect to MySQL with the .NET provider, 1 of 2.":::
+:::image type="content" source="media/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard/connect-to-mysql-with-the-net-provider-1-of-2.png" alt-text="Screenshot of Connect to MySQL with the .NET provider, 1 of 2.":::
 
-:::image type="content" source="media/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard/connect-to-mysql-with-the-net-provider-2-of-2.png" alt-text="Connect to MySQL with the .NET provider, 2 of 2.":::
+:::image type="content" source="media/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard/connect-to-mysql-with-the-net-provider-2-of-2.png" alt-text="Screenshot of Connect to MySQL with the .NET provider, 2 of 2.":::
 
 ## Connect to MySQL with the MySQL ODBC driver
 
@@ -47,7 +48,7 @@ ODBC drivers aren't listed in the dropdown list of data sources. To connect with
 
 Here's the generic screen that you see immediately after selecting the .NET Framework Data Provider for ODBC.
 
-:::image type="content" source="../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg" alt-text="Connect to SQL with ODBC before.":::
+:::image type="content" source="../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg" alt-text="Screenshot of Connect to SQL with ODBC before.":::
 
 ### Options to specify (MySQL ODBC Driver)
 
@@ -91,7 +92,7 @@ Driver={MySQL ODBC 5.3 Unicode Driver};Server=127.0.0.1;Database=world;UID=root;
 
 Here's the screen that you see after entering the connection string.
 
-:::image type="content" source="media/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard/connect-to-mysql-with-odbc.png" alt-text="Connect to MySQL with ODBC.":::
+:::image type="content" source="media/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard/connect-to-mysql-with-odbc.png" alt-text="Screenshot of Connect to MySQL with ODBC.":::
 
 ## Other data providers and more info
 

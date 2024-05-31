@@ -25,7 +25,7 @@ This article shows you how to connect to a **PostgreSQL** data source from the *
 
 Run Stack Builder to add the PostgreSQL ODBC driver (psqlODBC) to your installation of PostgreSQL.
 
-:::image type="content" source="media/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard/install-postgresql-odbc-with-stack-builder.png" alt-text="Install PostgreSQL ODBC with Stack Builder.":::
+:::image type="content" source="media/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard/install-postgresql-odbc-with-stack-builder.png" alt-text="Screenshot of Install PostgreSQL ODBC with Stack Builder.":::
 
 ### Latest ODBC driver
 
@@ -37,11 +37,11 @@ ODBC drivers aren't listed in the dropdown list of data sources. To connect with
 
 Here's the generic screen that you see immediately after selecting the .NET Framework Data Provider for ODBC.
 
-:::image type="content" source="media/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard/connect-to-sql-with-odbc-before.jpg" alt-text="Connect to PostgreSQL with ODBC before.":::
+:::image type="content" source="media/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard/connect-to-sql-with-odbc-before.jpg" alt-text="Screenshot of Connect to PostgreSQL with ODBC before.":::
 
 ### Options to specify (PostgreSQL ODBC driver)
 
-> [!NOTE]  
+> [!NOTE]   
 > The connection options for this data provider and ODBC driver are the same whether PostgreSQL is your source or your destination. That is, the options you see are the same on both the **Choose a Data Source** and the **Choose a Destination** pages of the wizard.
 
 To connect to PostgreSQL with the PostgreSQL ODBC driver, assemble a connection string that includes the following settings and their values. The format of a complete connection string immediately follows the list of settings.
@@ -84,7 +84,7 @@ Driver={PostgreSQL ODBC Driver(UNICODE)};Server=127.0.0.1;Port=5432;Database=pos
 
 Here's the screen that you see after entering the connection string.
 
-:::image type="content" source="media/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard/connect-to-postgresql-with-odbc.png" alt-text="Connect to PostgreSQL with ODBC.":::
+:::image type="content" source="media/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard/connect-to-postgresql-with-odbc.png" alt-text="Screenshot of Connect to PostgreSQL with ODBC.":::
 
 ## Other data providers and more info
 

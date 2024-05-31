@@ -101,5 +101,5 @@ In this lesson, you created the Tutorial report project and the Sales Orders rep
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Lesson 2: Specify connection information &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md)
+> [Step 2: Specify connection information &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md)
 

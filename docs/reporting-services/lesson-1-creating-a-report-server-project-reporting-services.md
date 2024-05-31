@@ -72,7 +72,7 @@ Install the following components:
     >
     > In Visual Studio 2019, if previous steps didn't work, try installing [Microsoft Reporting Service Projects extension](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio).
 
-1. In the **Project name** box, enter "Tutorial" for the project name. By default, the **Location** box displays the path to the "Users\\<username>\source\repos\" folder. Report Designer creates a folder named Tutorial below this path and creates the Tutorial project. If the project doesn't belong to a Visual Studio solution, then Visual Studio creates a solution file (`.sln`).
+1. In the **Project name** box, enter "Tutorial" for the project name. By default, the **Location** box displays the path to the "Users\&lt;username&gt;\source\repos\" folder. Report Designer creates a folder named Tutorial below this path and creates the Tutorial project. If the project doesn't belong to a Visual Studio solution, then Visual Studio creates a solution file (`.sln`).
 
 1. To create the project, select **Create**. The Tutorial project displays in the **Solution Explorer** pane on the right.
   

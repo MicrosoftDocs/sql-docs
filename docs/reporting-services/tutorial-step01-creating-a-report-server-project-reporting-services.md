@@ -15,24 +15,11 @@ ms.custom: updatefrequency5
 
 This tutorial is a six-step process that demonstrates how to create a SQL Server Reporting Services (SSRS) paginated report. You learn how to use the Report Designer tool in Visual Studio/SQL Server Data Tools (SSDT) to create a query table from data in the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.
 
-The six parts in this tutorial series include:
-
-- [Step 1: Create a report server project &#40;Reporting Services&#41;](lesson-1-creating-a-report-server-project-reporting-services.md)
-- [Step 2: Specify connection information &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)
-- [Step 3: Define a dataset for the table report &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)
-- [Step 4: Add a table to the report &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)
-- [Step 5: Format a report &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)
-- [Step 6: Add grouping and totals &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)
-[Reporting Services tutorials](reporting-services-tutorials-ssrs.md)
-
-**Estimated time to complete the tutorial**: 30 minutes.
-
-In Step 1 of the tutorial, you:
+In this tutorial, you:
 
 > [!div class="checklist"]
 > * Start a new report server project
 > * Create a Sales Orders report definition file (RDL)
-
 
 ## Prerequisites
 
@@ -45,6 +32,8 @@ Install the following components:
 - Read-only permissions to retrieve data from the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.
 
 ## Create a report server project
+
+The first step is to create a report server project by using SSRS. The project you set up within Visual Studio serves as the development environment for your reporting solutions.
 
  > [!NOTE]
  >[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT features the Report Designer authoring environment. In this environment, you can open, modify, preview, save, and deploy [!INCLUDE[ssrsnoversion_md](../includes/ssrsnoversion-md.md)] paginated report definitions. You can also use and modify shared data sources, shared datasets, and report parts.
@@ -68,15 +57,17 @@ Install the following components:
     >
     > 1. From the **Extensions** menu, select **Manage extensions...**. 
     > 1. Search for "Microsoft Reporting Services Projects" in the list of extensions.
-    > 1. Select **Install** when you find that extension. For SSDT, see [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md). 
+    > 1. Select **Install** when you find that extension. 
     >
-    > In Visual Studio 2019, if previous steps didn't work, try installing [Microsoft Reporting Service Projects extension](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio).
+    > In Visual Studio 2019, if previous steps didn't work, try installing Microsoft Reporting Service Projects extension.
 
 1. In the **Project name** box, enter "Tutorial" for the project name. By default, the **Location** box displays the path to the "Users\&lt;username&gt;\source\repos\" folder. Report Designer creates a folder named Tutorial below this path and creates the Tutorial project. If the project doesn't belong to a Visual Studio solution, then Visual Studio creates a solution file (`.sln`).
 
 1. To create the project, select **Create**. The Tutorial project displays in the **Solution Explorer** pane on the right.
   
 ## Create a report definition file (RDL) 
+
+Creating a report definition file (RDL) is a critical step in defining the structure and data of your report. This process involves setting up the report within the project you created.
   
 1. In the **Solution Explorer** pane, right-click the **Reports** folder. If you don't see the **Solution Explorer** pane, select **View** > **Solution Explorer**.
 
@@ -92,7 +83,7 @@ Install the following components:
 
     :::image type="content" source="media/ssrs-ssdt-01-new-report-designer.png" alt-text="Screenshot of Visual Studio showing the Report Designer and the Sales Orders report in Design view." lightbox="media/ssrs-ssdt-01-report-designer-pane.png":::
 
-In this lesson, you created the Tutorial report project and the Sales Orders report. In the remaining lessons, you learn how to:
+In this tutorial, you created the Tutorial report project and the Sales Orders report. In the remaining lessons, you learn how to:
 
 - Configure a data source for the report
 - Create a dataset from the data source

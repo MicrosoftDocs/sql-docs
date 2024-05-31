@@ -33571,6 +33571,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/reporting-services/create-a-basic-table-report-ssrs-tutorial.md",
+      "redirect_url": "/reporting-services/tutorial-step01-creating-a-report-server-project-reporting-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md",
+      "redirect_url": "/reporting-services/tutorial-step01-creating-a-report-server-project-reporting-services",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md",
       "redirect_url": "/previous-versions/sql/2014/reporting-services/lesson-1-creating-a-report-server-project-reporting-services",
       "redirect_document_id": false

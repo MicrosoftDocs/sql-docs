@@ -34,17 +34,17 @@
     - name: Create a Basic Table Report (SSRS Tutorial)
       href: ../reporting-services/create-a-basic-table-report-ssrs-tutorial.md
       items:
-      - name: "Lesson 1: Creating a Report Server Project"
+      - name: "1. Creating a Report Server Project"
         href: ../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md
-      - name: "Lesson 2: Specifying Connection Information"
+      - name: "2. Specifying Connection Information"
         href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
-      - name: "Lesson 3: Defining a Dataset for the Table Report"
+      - name: "3. Defining a Dataset for the Table Report"
         href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
-      - name: "Lesson 4: Adding a Table to the Report"
+      - name: "4. Adding a Table to the Report"
         href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
-      - name: "Lesson 5: Formatting a Report"
+      - name: "5. Formatting a Report"
         href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
-      - name: "Lesson 6: Adding Grouping and Totals"
+      - name: "6. Adding Grouping and Totals"
         href: ../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md
     - name: Create a Data-Driven Subscription (SSRS Tutorial)
       href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md

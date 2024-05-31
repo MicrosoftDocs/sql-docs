@@ -13,13 +13,36 @@ ms.custom: updatefrequency5
 
 # Tutorial: Create a report server project
 
-In this tutorial, you create a *report server project* and a *report definition (.rdl)* file using *Report Designer*. When you create reports with Report Designer, it generates a report server project that contains the report files and other resource files used by the reports.
+This tutorial is a six-step process that helps you create a SQL Server Reporting Services (SSRS) paginated report. You learn how to use the Report Designer tool in Visual Studio/SQL Server Data Tools (SSDT) to create a query table from data in the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.
 
-In this tutorial, you:
+The six parts in this tutorial series include:
+
+- [Step 1: Create a report server project &#40;Reporting Services&#41;](lesson-1-creating-a-report-server-project-reporting-services.md)
+- [Step 2: Specify connection information &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)
+- [Step 3: Define a dataset for the table report &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)
+- [Step 4: Add a table to the report &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)
+- [Step 5: Format a report &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)
+- [Step 6: Add grouping and totals &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)
+[Reporting Services tutorials](reporting-services-tutorials-ssrs.md)
+
+**Estimated time to complete the tutorial**: 30 minutes.
+
+In Step 1 of the tutorial, you:
 
 > [!div class="checklist"]
 > * Start a new report server project
 > * Create a Sales Orders report definition file (RDL)
+
+
+## Prerequisites
+
+Install the following components:
+
+- [!INCLUDE[msconame-md](../includes/msconame-md.md)] SQL Server database engine.  
+- SQL Server 2016 Reporting Services or later (SSRS).
+- The [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database. For more information, see [Adventure Works Sample Databases](https://github.com/Microsoft/sql-server-samples/releases).
+- [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) for Visual Studio and the Reporting Services extension for access to the *Report Designer*.
+- Read-only permissions to retrieve data from the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.
 
 ## Create a report server project
 
@@ -49,7 +72,7 @@ In this tutorial, you:
     >
     > In Visual Studio 2019, if previous steps didn't work, try installing [Microsoft Reporting Service Projects extension](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio).
 
-1. In the **Project name** box, enter "Tutorial" for the project name. By default, the **Location** box displays the path to the "Users\<username>\source\repos\" folder. Report Designer creates a folder named Tutorial below this path and creates the Tutorial project. If the project doesn't belong to a Visual Studio solution, then Visual Studio creates a solution file (`.sln`).
+1. In the **Project name** box, enter "Tutorial" for the project name. By default, the **Location** box displays the path to the "Users\\<username>\source\repos\" folder. Report Designer creates a folder named Tutorial below this path and creates the Tutorial project. If the project doesn't belong to a Visual Studio solution, then Visual Studio creates a solution file (`.sln`).
 
 1. To create the project, select **Create**. The Tutorial project displays in the **Solution Explorer** pane on the right.
   

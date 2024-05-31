@@ -3,7 +3,7 @@ title: "Tutorial: Create a report server project"
 description: "In this article, you learn how to use Report Designer to create a report server project and a report definition (.rdl) file."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/21/2024
+ms.date: 05/31/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: tutorial
@@ -13,7 +13,7 @@ ms.custom: updatefrequency5
 
 # Tutorial: Create a report server project
 
-This tutorial is a six-step process that demonstrates how to create a SQL Server Reporting Services (SSRS) paginated report. You learn how to use the Report Designer tool in Visual Studio/SQL Server Data Tools (SSDT) to create a query table from data in the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.
+This tutorial is part of a six-step process that demonstrates how to create a SQL Server Reporting Services (SSRS) paginated report. You learn how to use the Report Designer tool in Visual Studio/SQL Server Data Tools (SSDT) to create a query table from data in the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.
 
 In this tutorial, you:
 
@@ -23,7 +23,7 @@ In this tutorial, you:
 
 ## Prerequisites
 
-Install the following components:
+Install or configure the following components and permissions:
 
 - [!INCLUDE[msconame-md](../includes/msconame-md.md)] SQL Server database engine.  
 - SQL Server 2016 Reporting Services or later (SSRS).
@@ -33,7 +33,7 @@ Install the following components:
 
 ## Create a report server project
 
-The first step is to create a report server project by using SSRS. The project you set up within Visual Studio serves as the development environment for your reporting solutions.
+First, you create a report server project by using SSRS. The project you set up within Visual Studio serves as the development environment for your reporting solutions.
 
  > [!NOTE]
  >[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT features the Report Designer authoring environment. In this environment, you can open, modify, preview, save, and deploy [!INCLUDE[ssrsnoversion_md](../includes/ssrsnoversion-md.md)] paginated report definitions. You can also use and modify shared data sources, shared datasets, and report parts.
@@ -67,7 +67,7 @@ The first step is to create a report server project by using SSRS. The project y
   
 ## Create a report definition file (RDL) 
 
-Creating a report definition file (RDL) is a critical step in defining the structure and data of your report. This process involves setting up the report within the project you created.
+Next, you create a report definition file (RDL). This process involves setting up the report within the project you created.
   
 1. In the **Solution Explorer** pane, right-click the **Reports** folder. If you don't see the **Solution Explorer** pane, select **View** > **Solution Explorer**.
 

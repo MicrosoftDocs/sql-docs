@@ -43,7 +43,7 @@ The maintenance window is free of charge and can be configured on creation or fo
 
 ### Gain more predictability with maintenance window
 
-By default, Azure SQL maintenance policy blocks most impactful updates during the period **8AM to 5PM local time every day** to avoid any disruptions during typical peak business hours. Local time is determined by the location of [Azure region](https://azure.microsoft.com/global-infrastructure/geographies/) that hosts the resource and might observe daylight saving time in accordance with local time zone definition.
+By default, Azure SQL maintenance policy blocks most impactful updates during the period **5PM to 8AM local time every day** to avoid any disruptions during typical peak business hours. Local time is determined by the location of [Azure region](https://azure.microsoft.com/global-infrastructure/geographies/) that hosts the resource and might observe daylight saving time in accordance with local time zone definition.
 
 During maintenance, databases remain available, but some updates may require a failover. The system default maintenance window (5pm to 8am) limits most activities to this time, but urgent updates may occur outside of it. To ensure all updates occur only during the maintenance window, select a non-default option.
 

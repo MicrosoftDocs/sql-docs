@@ -32,7 +32,6 @@
     - name: Report Designer tutorials overview
       href: ../reporting-services/reporting-services-tutorials-ssrs.md
     - name: Create a Basic Table Report (SSRS Tutorial)
-      href: ../reporting-services/create-a-basic-table-report-ssrs-tutorial.md
       items:
       - name: "1. Create a Report Server Project"
         href: ../reporting-services/tutorial-step01-creating-a-report-server-project-reporting-services.md

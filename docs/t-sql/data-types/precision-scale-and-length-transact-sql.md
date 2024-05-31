@@ -65,7 +65,7 @@ In multiplication and division operations, we need `precision - scale` places to
 
 1. The resulting scale is reduced to `min(scale, 38 - (precision-scale))` if the integral part is less than 32, because it can't be greater than `38 - (precision-scale)`. The result might be rounded in this case.
 1. The scale isn't changed if it's less than 6 and if the integral part is greater than 32. In this case, an overflow error might be raised if it can't fit into **decimal(38, *scale*)**.
-1. The scale is set to 6 if it's greater than 6 and if the integral part is greater than 32. In this case, both the integral part and scale would be reduced and resulting type is **decimal(38, 6)**. The result might be rounded to 6 decimal places, or the overflow error is thrown if the integral part can't fit into 32 digits.
+1. The scale is set to 6 if it's greater than 6 and if the integral part is greater than 32. In this case, both the integral part and scale would be reduced and resulting type is **decimal(38, 6)**. The result might be rounded to 7 decimal places, or the overflow error is thrown if the integral part can't fit into 32 digits.
 
 ## Examples
 

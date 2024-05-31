@@ -35,7 +35,7 @@
       href: ../reporting-services/create-a-basic-table-report-ssrs-tutorial.md
       items:
       - name: "1. Creating a Report Server Project"
-        href: ../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md
+        href: ../reporting-services/tutorial-step-01-creating-a-report-server-project-reporting-services.md
       - name: "2. Specifying Connection Information"
         href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
       - name: "3. Defining a Dataset for the Table Report"

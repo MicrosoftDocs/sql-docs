@@ -12,7 +12,7 @@ ms.topic: conceptual
 
 # Troubleshooting issues and performance with SqlPackage
 
-In some scenarios, SqlPackage operations take longer than expected or fail to complete.  This article describes some frequently suggested tactics to troubleshoot or improve performance of these operations. While reading the specific documentation page for each action to understand the available parameters and properties is recommended, this article serves as a starting point in investigating SqlPackage operations.
+In some scenarios, SqlPackage operations take longer than expected or fail to complete. This article describes some frequently suggested tactics to troubleshoot or improve performance of these operations. While reading the specific documentation page for each action to understand the available parameters and properties is recommended, this article serves as a starting point in investigating SqlPackage operations.
 
 ## Overall strategy
 
@@ -27,7 +27,7 @@ If you're unable to install the SqlPackage [dotnet tool](sqlpackage-download.md#
 It's important to use the latest available version of SqlPackage as performance improvements and bug fixes are released regularly.
 
 ### Substitute SqlPackage for the Import/Export Service
-If you have attempted to use the Import/Export Service to import or export your database, you can use SqlPackage to perform the same operation with more control on optional parameters and properties.
+If you attempted to use the Import/Export Service to import or export your database, you can use SqlPackage to perform the same operation with more control on optional parameters and properties.
 
 For Import, an example command is:
 
@@ -50,23 +50,23 @@ Alternative to username and password, [multifactor authentication](/azure/azure-
 For issues related to timeouts, the following properties can be used to tune the connection between SqlPackage and the SQL instance:
 
 - `/p:CommandTimeout=`: Specifies the command timeout in seconds when a query is executed. Default: 60
-- `/p:DatabaseLockTimeout=`: Specifies the database lock timeout in seconds.  -1 can be used to wait indefinitely, default: 60
-- `/p:LongRunningCommandTimeout=`: Specifies the long running command timeout in seconds.  The default value, 0, is used to wait indefinitely.
+- `/p:DatabaseLockTimeout=`: Specifies the database lock timeout in seconds. -1 can be used to wait indefinitely, default: 60
+- `/p:LongRunningCommandTimeout=`: Specifies the long running command timeout in seconds. The default value, 0, is used to wait indefinitely.
 
 ### Client resource consumption
 
-For the export and extract commands, table data is passed to a temporary directory to buffer before being written to the bacpac/dacpac file. This storage requirement can be large and is relative to the full size of the data to be exported.  Specify an alternative temporary directory with the property `/p:TempDirectoryForTableData=<path>`.
+For the export and extract commands, table data is passed to a temporary directory to buffer before being written to the bacpac/dacpac file. This storage requirement can be large and is relative to the full size of the data to be exported. Specify an alternative temporary directory with the property `/p:TempDirectoryForTableData=<path>`.
 
 The schema model is compiled in memory, so for large database schemas the memory requirement on the client machine running SqlPackage can be significant.
 
 
 ### Low server resource consumption
 
-By default, SqlPackage sets the maximum server parallelism to 8.  If you note low server resource consumption, increasing the value of the `MaxParallelism` parameter can improve performance.
+By default, SqlPackage sets the maximum server parallelism to 8. If you note low server resource consumption, increasing the value of the `MaxParallelism` parameter can improve performance.
 
 ### Access token
 
-Using the `/AccessToken:` or `/at:` parameter enables token-based authentication for SqlPackage, however passing the token to the command can be tricky.  If you're parsing an access token object in PowerShell either explicitly pass the string value or wrap the reference to the token property in $().  For example:
+Using the `/AccessToken:` or `/at:` parameter enables token-based authentication for SqlPackage, however passing the token to the command can be tricky. If you're parsing an access token object in PowerShell, either explicitly pass the string value or wrap the reference to the token property in $(). For example:
 
 ```powershell
 $Account = Connect-AzAccount -ServicePrincipal -Tenant $Tenant -Credential $Credential
@@ -80,7 +80,7 @@ SqlPackage /at:$($AccessToken_Object.Token)
 
 ### Connection
 
-If SqlPackage is failing to connect, the server might not have encryption enabled or the configured certificate might not be issued from a trusted certificate authority (such as a self-signed certificate).  You can change the SqlPackage command to either connect without encryption or to trust the server certificate.  The [best practice](../../relational-databases/security/securing-sql-server.md) is to ensure that a trusted encrypted connection to the server can be established.
+If SqlPackage is failing to connect, the server might not have encryption enabled or the configured certificate might not be issued from a trusted certificate authority (such as a self-signed certificate). You can change the SqlPackage command to either connect without encryption or to trust the server certificate. The [best practice](../../relational-databases/security/securing-sql-server.md) is to ensure that a trusted encrypted connection to the server can be established.
 
 - Connect without encryption: /SourceEncryptConnection=False or /TargetEncryptConnection=False
 - Trust server certificate: /SourceTrustServerCertificate=True or /TargetTrustServerCertificate=True
@@ -102,7 +102,7 @@ When performing an import action, you may receive error 2714 if an object alread
 ```output
 *** Error importing database:Could not import package.
 Error SQL72014: Core Microsoft SqlClient Data Provider: Msg 2714, Level 16, State 5, Line 1 There is already an object named 'DF_Department_ModifiedDate_0FF0B724' in the database.
-Error SQL72045: Script execution error.  The executed script:
+Error SQL72045: Script execution error. The executed script:
 ALTER TABLE [HumanResources].[Department]
     ADD CONSTRAINT [DF_Department_ModifiedDate_] DEFAULT ('') FOR [ModifiedDate];
 ```
@@ -115,12 +115,25 @@ Here are the causes and solutions to work around this error:
 
 ### Stack overflow exception
 
-Intermittent or persistent stack overflow exceptions are often caused by large T-SQL scripts with many nested statements.  A parameter for SqlPackage is available on all commands, `/ThreadMaxStackSize:`, which specifies the maximum stack size for the thread running the SqlPackage process.  The default value is determined by the .NET version running SqlPackage. Setting a large value can impact overall performance of SqlPackage, however increasing this value may resolve the stack overflow exception caused by nested statements.  Refactoring the T-SQL code is recommended to avoid stack overflow exceptions whenever possible, but the `/ThreadMaxStackSize:` parameter can be used as a workaround.  When using the `/ThreadMaxStackSize:` parameter, it is recommended to tune repeated operations to the lowest value that resolves the stack overflow exception if performance impact is noted.  Be aware that the value is in megabytes (MB), example values for testing as a workaround include 10 and 100.
+Large T-SQL scripts with many nested statements are often the cause of intermittent or persistent stack overflow exceptions. When this is the case, the error message will include the text `Stack overflow.` a stack trace of:
+
+```output
+Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragmentVisitor.Visit(Microsoft.SqlServer.TransactSql.ScriptDom.BinaryQueryExpression)
+Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragmentVisitor.ExplicitVisit(Microsoft.SqlServer.TransactSql.ScriptDom.BinaryQueryExpression)
+Microsoft.SqlServer.TransactSql.ScriptDom.BinaryQueryExpression.Accept(Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragmentVisitor)
+Microsoft.SqlServer.TransactSql.ScriptDom.BinaryQueryExpression.AcceptChildren(Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragmentVisitor)
+Microsoft.SqlServer.TransactSql.ScriptDom.BinaryQueryExpression.Accept(Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragmentVisitor)
+Microsoft.SqlServer.TransactSql.ScriptDom.BinaryQueryExpression.AcceptChildren(Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragmentVisitor)
+```
+
+A parameter for SqlPackage is available on all commands, `/ThreadMaxStackSize:`, which specifies the maximum stack size for the thread running the SqlPackage process. The default value is determined by the .NET version running SqlPackage. Setting a large value can impact overall performance of SqlPackage, however increasing this value may resolve the stack overflow exception caused by nested statements. Refactoring the T-SQL code is recommended to avoid stack overflow exceptions whenever possible, but the `/ThreadMaxStackSize:` parameter can be used as a workaround.
+
+When using the `/ThreadMaxStackSize:` parameter, it's recommended to tune repeated operations to the lowest value that resolves the stack overflow exception if performance impact is noted. The value of the parameter is in megabytes (MB), example values for testing as a workaround include 10 and 100.
 
 ## Diagnostics
 Logs are essential to troubleshooting. Capture the diagnostic logs to a file with the `/DiagnosticsFile:<filename>` parameter.
 
-More performance-related trace data can be logged by setting the environment variable `DACFX_PERF_TRACE=true` before running SqlPackage.  To set this environment variable in PowerShell, use the following command:
+More performance-related trace data can be logged by setting the environment variable `DACFX_PERF_TRACE=true` before running SqlPackage. To set this environment variable in PowerShell, use the following command:
 
 ``` powershell
 Set-Item -Path Env:DACFX_PERF_TRACE -Value true
@@ -136,20 +149,21 @@ In scenarios where the OS disk space is limited and runs out during the export, 
 
 During an export process, the table data is compressed in the bacpac file. The use of `/p:CompressionOption` set to `Fast`, `SuperFast`, or `NotCompressed` may improve the export process speed while compressing the output bacpac file less.
 
-To obtain the database schema and data while skipping the schema validation, perform an [Export](sqlpackage-export.md) with the property `/p:VerifyExtraction=False`.  An invalid export may be produced that cannot be imported.
+To obtain the database schema and data while skipping the schema validation, perform an [Export](sqlpackage-export.md) with the property `/p:VerifyExtraction=False`. An invalid export may be produced that can't be imported.
 
 ## Azure SQL Database
 
 The following tips are specific to running import or export against Azure SQL Database from an Azure virtual machine (VM):
 
 - Use Business Critical or Premium tier database for best performance.
-- Use SSD storage on the VM and ensure there's enough room to unzip the bacpac.
+- Use SSD storage on the VM.
+- Ensure there's enough room to unzip the bacpac.
 - Execute SqlPackage from a VM in the same region as the database.
 - Enable accelerated networking in the VM.
 
 For more information on utilizing a PowerShell script to collect more information about an import operation, see [Lesson Learned #211: Monitoring SQLPackage Import Process](https://techcommunity.microsoft.com/t5/azure-database-support-blog/lesson-learned-211-monitoring-sqlpackage-import-process/ba-p/3556382).
 
-## Additional resources
+## More resources
 
 The [Azure Database Support Blog](https://techcommunity.microsoft.com/t5/azure-database-support-blog/bg-p/AzureDBSupport) contains many articles on troubleshooting and performance tuning for Azure SQL Database, including several articles on SqlPackage.
 

@@ -3,7 +3,7 @@ title: "Install Microsoft Report Builder"
 description: Report Builder is stand-alone app, installed on your computer by you or an administrator.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/15/2022
+ms.date: 05/30/2024
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
@@ -29,7 +29,7 @@ And you can install it from several places:
 - The [command line](#install-report-builder-from-the-command-line).
 
 > [!NOTE]
-> Are you looking for *Power BI Report Builder* instead? Head to the [Microsoft Power BI Report Builder](https://www.microsoft.com/download/details.aspx?id=58158) page on the Download Center.
+> Are you looking for *Power BI Report Builder* instead? Head to the [Microsoft Power BI Report Builder](https://www.microsoft.com/download/details.aspx?id=105942) page on the Download Center.
 
 ## System requirements
   
@@ -121,7 +121,13 @@ And you can install it from several places:
 - Select **Report Builder** .  
   
      If you don't see the report server in the list of existing servers, close the **Open Report** dialog box and then select **Connect** at the bottom of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] to connect to the server.  
-  
+
+## Microsoft Report Builder in a virtualized environment
+
+Microsoft Report Builder is fully supported on [Azure Virtual Desktop](/azure/virtual-desktop/overview) (formerly Windows Virtual Desktop) and [Windows 365](/windows-365/overview). 
+
+Running Microsoft Report Builder as a virtualized application (for example, as a Citrix application) isn't supported.
+
 ## Related content
 
 - [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md)

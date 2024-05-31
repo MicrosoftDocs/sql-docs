@@ -38,20 +38,17 @@ ms.custom: mdx
   
 ## Expression Examples  
  The following query shows examples of calculated measures whose definitions are simple expressions:  
-  
- `WITH`  
-  
- `MEMBER MEASURES.CONSTANTVALUE AS 1`  
-  
- `MEMBER MEASURES.SCALARFUNCTION AS [Date].[Calendar Year].CURRENTMEMBER.NAME`  
-  
- `MEMBER MEASURES.OBJECTIDENTIFIER AS [Measures].[Internet Sales Amount]`  
-  
- `SELECT {MEASURES.CONSTANTVALUE,MEASURES.SCALARFUNCTION,MEASURES.OBJECTIDENTIFIER } ON 0,`  
-  
- `[Date].[Calendar Year].MEMBERS ON 1`  
-  
- `FROM [Adventure Works]`  
+
+```
+WITH
+    MEMBER MEASURES.CONSTANTVALUE AS 1
+    MEMBER MEASURES.SCALARFUNCTION AS [Date].[Calendar Year].CURRENTMEMBER.NAME
+    MEMBER MEASURES.OBJECTIDENTIFIER AS [Measures].[Internet Sales Amount]
+SELECT
+    { MEASURES.CONSTANTVALUE, MEASURES.SCALARFUNCTION, MEASURES.OBJECTIDENTIFIER } ON 0,
+    [Date].[Calendar Year].MEMBERS ON 1
+FROM [Adventure Works]
+```
   
  An expression can also be a calculation, such as `[Measures].[Discount Amount] * 1.5`. The following example demonstrates the use of a calculation to define a member in an MDX SELECT statement:  
   

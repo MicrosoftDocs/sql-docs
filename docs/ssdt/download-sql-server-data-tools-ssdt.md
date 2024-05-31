@@ -4,7 +4,7 @@ description: "Learn about SQL Server Data Tools (SSDT). See how to install this 
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.date: 08/07/2023
+ms.date: 05/30/2024
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
@@ -19,18 +19,14 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE [sql-asdb-asa](../includes/applies-to-version/sql-asdb-asa.md)]
 
-**SQL Server Data Tools (SSDT)** is a modern development tool for building SQL Server relational databases, databases in Azure SQL, Analysis Services (AS) data models, Integration Services (IS) packages, and Reporting Services (RS) reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in Visual Studio.
+**SQL Server Data Tools (SSDT)** is a set of development tooling for building SQL Server databases, Azure SQL databases, Analysis Services (AS) data models, Integration Services (IS) packages, and Reporting Services (RS) reports. With SSDT, you can design and deploy SQL objects with the same project concept as other application development tools.  The **SQL projects** capability extends to CI/CD pipelines, enabling you to automate the build and deployment of your database projects with the [SqlPackage CLI](../tools/sqlpackage/sqlpackage.md).
 
-The release notes for SSDT and its components are outlined on the [SSDT Overview](sql-server-data-tools.md#release-notes).
-
-## SSDT for Visual Studio 2022
-
-### Changes in SSDT for Visual Studio 2022
-
-The core SSDT functionality to create database projects has remained integral to Visual Studio.
+The release notes for SSDT and its components are available for [Visual Studio 2017, 2019, and 2022](sql-server-data-tools.md#release-notes).  An overview of the core SSDT functionality is provided in the [SSDT Overview](sql-server-data-tools.md#core-sql-server-data-tools).
 
 > [!NOTE]  
-> There's no SSDT standalone installer for Visual Studio 2022.
+> There's no SSDT standalone installer for Visual Studio. SSDT is installed as a Visual Studio component, both for [online installation](#install-ssdt-with-visual-studio-2022) and [offline installation](#offline-installation). Analysis Services, Integration Services, and Reporting Services projects are available as separate extensions for each version.
+
+## SSDT for Visual Studio 2022
 
 ### Install SSDT with Visual Studio 2022
 
@@ -65,15 +61,6 @@ For Analysis Services, Integration Services, or Reporting Services projects, you
 To understand the license terms and use cases for Visual Studio, refer to [Visual Studio License Directory](https://visualstudio.microsoft.com/license-terms/). For example, if you are using the Community Edition of Visual Studio for SQL Server Data Tools, review the EULA for that specific edition of Visual Studio in the Visual Studio License Directory.
 
 ## SSDT for Visual Studio 2019
-
-### Changes in SSDT for Visual Studio 2019
-
-The core SSDT functionality to create database projects has remained integral to Visual Studio.
-
-With Visual Studio 2019, the required functionality to enable Analysis Services, Integration Services, and Reporting Services projects has moved into the respective Visual Studio (VSIX) extensions only.
-
-> [!NOTE]  
-> There's no SSDT standalone installer for Visual Studio 2019.
 
 ### Install SSDT with Visual Studio 2019
 

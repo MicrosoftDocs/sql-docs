@@ -1,8 +1,8 @@
 ---
 title: Get started with Elastic Database Tools
 description: Basic explanation of the Elastic Database Tools feature of Azure SQL Database, including an easy-to-run sample app.
-author: scoriani
-ms.author: scoriani
+author: bgavrilMS
+ms.author: bogavril
 ms.reviewer: wiassaf, mathoma
 ms.date: 10/18/2021
 ms.service: sql-database

@@ -1,8 +1,8 @@
 ---
 title: Upgrade to the latest elastic database client library
 description: Use NuGet to upgrade elastic database client library.
-author: scoriani
-ms.author: scoriani
+author: bgavrilMS
+ms.author: bogavril
 ms.reviewer: wiassaf, mathoma, maghan
 ms.date: 02/01/2024
 ms.service: sql-database

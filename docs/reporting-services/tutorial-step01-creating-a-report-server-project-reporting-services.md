@@ -83,11 +83,6 @@ Next, you create a report definition file (RDL). This process involves setting u
 
     :::image type="content" source="media/ssrs-ssdt-01-new-report-designer.png" alt-text="Screenshot of Visual Studio showing the Report Designer and the Sales Orders report in Design view." lightbox="media/ssrs-ssdt-01-report-designer-pane.png":::
 
-In this tutorial, you created the Tutorial report project and the Sales Orders report. In the remaining lessons, you learn how to:
-
-- Configure a data source for the report
-- Create a dataset from the data source
-- Design and format the report layout
 
 ## Next step
 

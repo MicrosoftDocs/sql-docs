@@ -5,7 +5,7 @@ description: Use the COPY statement in Azure Synapse Analytics and Warehouse in 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: procha, mikeray, stwynant
-ms.date: 05/21/2024
+ms.date: 05/31/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference

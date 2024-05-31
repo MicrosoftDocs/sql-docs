@@ -13,7 +13,7 @@ ms.custom: updatefrequency5
 
 # Tutorial: Create a report server project
 
-This tutorial is a six-step process that helps you create a SQL Server Reporting Services (SSRS) paginated report. You learn how to use the Report Designer tool in Visual Studio/SQL Server Data Tools (SSDT) to create a query table from data in the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.
+This tutorial is a six-step process that demonstrates how to create a SQL Server Reporting Services (SSRS) paginated report. You learn how to use the Report Designer tool in Visual Studio/SQL Server Data Tools (SSDT) to create a query table from data in the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.
 
 The six parts in this tutorial series include:
 
@@ -98,6 +98,8 @@ In this lesson, you created the Tutorial report project and the Sales Orders rep
 - Create a dataset from the data source
 - Design and format the report layout
 
-## Related content
+## Next step
 
-Continue with [Lesson 2: Specify connection information &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).
+> [!div class="nextstepaction"]
+> [Lesson 2: Specify connection information &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md)
+

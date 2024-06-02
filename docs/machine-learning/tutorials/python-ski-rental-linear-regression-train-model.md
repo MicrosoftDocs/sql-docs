@@ -37,9 +37,7 @@ In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll lear
 
 ## Prerequisites
 
-* Part three of this tutorial assumes you have completed [part one](python-ski-rental-linear-regression.md) and its prerequisites.
-
-! pip install scikit-learn
+* Part three of this tutorial assumes you have completed [part one](python-ski-rental-linear-regression.md) and its prerequisites, including [installing the necessary Python packages](python-ski-rental-linear-regression.md#prerequisites).
 
 
 ## Train the model

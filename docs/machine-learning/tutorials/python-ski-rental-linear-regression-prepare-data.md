@@ -41,8 +41,8 @@ In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll lear
 
 ## Install Dependencies
 
-! pip install pandas
-! pip install pyodbc
+
+This tutorial assumes you have completed its prerequisites, including [installing the necessary Python packages](python-ski-rental-linear-regression.md#prerequisites), `pandas` and `pyodbc`.
 
 ## Explore and prepare the data
 

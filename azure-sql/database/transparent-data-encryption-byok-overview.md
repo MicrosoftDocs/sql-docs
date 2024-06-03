@@ -273,7 +273,7 @@ To avoid issues while establishing or during geo-replication due to incomplete k
 
 - Both initial setup and rotation of the TDE protector must be done on the secondary first, and then on primary.
 
-:::image type="content" source="media/transparent-data-encryption-byok-overview/customer-managed-tde-with-bcdr.png" alt-text="Digram showing failover groups and geo-dr." lightbox="media/transparent-data-encryption-byok-overview/customer-managed-tde-with-bcdr.png":::
+:::image type="content" source="media/transparent-data-encryption-byok-overview/customer-managed-tde-with-bcdr.png" alt-text="Diagram showing failover groups and geo-dr." lightbox="media/transparent-data-encryption-byok-overview/customer-managed-tde-with-bcdr.png":::
 
 To test a failover, follow the steps in [Active geo-replication overview](active-geo-replication-overview.md). Testing failover should be done regularly to validate that SQL Database has maintained access permission to both key vaults.
 

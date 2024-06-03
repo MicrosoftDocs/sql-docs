@@ -607,9 +607,9 @@ sections:
         answer: |
           This is likely because your instance doesn't have the [November 2022 Feature Wave](november-2022-feature-wave-enroll.md) enabled. To work around this, create a new instance in an empty subnet that has the November 2022 feature wave enabled, and then [move or copy](database-copy-move-how-to.md) the data from your existing instance to the new one.
 
-      - question: My instance is part of a failover group and when I tried enabling the Next-gen General Purpose upgrade for my instance, it failed. Why? 
+      - question: My instance is part of a failover group and when I tried to enable the Next-gen General Purpose upgrade for my instance, it failed. Why? 
         answer: |
-          Enabling Next-gen General Purpose for an instance in a failover group is unsupported. You must first drop the failover group before upgrading. After both instances are upgraded, you can recreate the [failover group](failover-group-configure-sql-mi.md#create-the-failover-group). 
+          For instances inside of a failover group, changing the service tier to, or from, the Next-gen General Purpose tier is not supported. You must first delete the failover group before modifying either replica, and then [re-create the failover group](failover-group-configure-sql-mi.md#create-the-failover-group) after the change takes effect. 
 
       - question: Why can't I enable zone redundancy for my Next-gen General Purpose SQL Managed Instance?
         answer: |

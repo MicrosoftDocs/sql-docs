@@ -349,9 +349,9 @@ Instances in a failover group remain separate Azure resources, and no changes ma
 This section is duplicated in /managed-instance/failover-group-sql-mi.md.. Please ensure changes are made to both documents. 
 -->
 
-You can scale up or scale down the primary and secondary instance to a different compute size within the same service tier or to a different service tier. When scaling up within the same service tier, we recommend that you scale up the geo-secondary first, and then scale up the primary. When scaling down within the same service tier, reverse the order: scale down the primary first, and then scale down the secondary. When you scale instance to a different service tier, this recommendation is enforced.
+You can scale the primary and secondary instance up or down to a different compute size within the same service tier or to a different service tier. When scaling up within the same service tier, first scale up the geo-secondary first, and then scale up the primary. When scaling down within the same service tier, reverse the order: scale down the primary first, and then scale down the secondary. Follow the same sequence when you scale an instance to a different service tier. 
 
-The sequence is recommended specifically to avoid the problem where the geo-secondary at a lower SKU gets overloaded and must be reseeded during an upgrade or downgrade process.
+This sequence is recommended to avoid problems from the geo-secondary, at a lower SKU, getting overloaded and having to reseed during an upgrade or downgrade process. 
 
 ## Permissions
 
@@ -382,7 +382,7 @@ Be aware of the following limitations:
 - Database rename isn't supported for databases in failover group. You'll need to temporarily delete failover group to be able to rename a database.
 - System databases aren't replicated to the secondary instance in a failover group. Therefore, scenarios that depend on objects from the system databases such as Server Logins and Agent jobs, require objects to be manually created on the secondary instances and also manually kept in sync after any changes made on primary instance. The only exception is Service master Key (SMK) for SQL Managed Instance that is replicated automatically to secondary instance during creation of failover group. Any subsequent changes of SMK on the primary instance however won't be replicated to secondary instance. To learn more, see how to [Enable scenarios dependent on objects from the system databases](#enable-scenarios-dependent-on-objects-from-the-system-databases).
 - Failover groups can't be created between instances if any of them are in an instance pool.
-- Upgrading instance inside of a failover group from General Purpose to Next-gen General Purpose is unsupported, you must drop the failover group before upgrading of either replica, and then re-establish the failover group after the change takes effect. 
+- For instances inside of a failover group, changing the service tier to, or from, the Next-gen General Purpose tier is not supported. You must first delete the failover group before modifying either replica, and then re-create the failover group after the change takes effect.
 - SQL managed instances in a failover group must have the same [update policy](update-policy.md), though it's possible to [change the update policy](#change-update-policy) for instances within a failover group. 
 
 

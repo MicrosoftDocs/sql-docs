@@ -75,36 +75,37 @@ The following query returns a list of heaps from the current database. The list 
 - A column to identify a heap
 
 
-```tsql
-SELECT t.name AS 'Your TableName'
-	,s.name AS 'Your SchemaName'
-	,p.rows AS 'Number of Rows in Your Table'
-	,SUM(a.total_pages) * 8 AS 'Total Space of Your Table (KB)'
-	,SUM(a.used_pages) * 8 AS 'Used Space of Your Table (KB)'
-	,(SUM(a.total_pages) - SUM(a.used_pages)) * 8 AS 'Unused Space of Your Table (KB)'
-	,CASE 
-		WHEN i.index_id = 0
-			THEN 'Yes'
-		ELSE 'No'
-		END AS 'Is Your Table a Heap?'
+```sql
+SELECT t.name AS 'Your TableName',
+    s.name AS 'Your SchemaName',
+    p.rows AS 'Number of Rows in Your Table',
+    SUM(a.total_pages) * 8 AS 'Total Space of Your Table (KB)',
+    SUM(a.used_pages) * 8 AS 'Used Space of Your Table (KB)',
+    (SUM(a.total_pages) - SUM(a.used_pages)) * 8 AS 'Unused Space of Your Table (KB)',
+    CASE 
+        WHEN i.index_id = 0
+            THEN 'Yes'
+        ELSE 'No'
+        END AS 'Is Your Table a Heap?'
 FROM sys.tables t
-INNER JOIN sys.indexes i ON t.object_id = i.object_id
-INNER JOIN sys.partitions p ON i.object_id = p.object_id
-	AND i.index_id = p.index_id
-INNER JOIN sys.allocation_units a ON p.partition_id = a.container_id
-LEFT OUTER JOIN sys.schemas s ON t.schema_id = s.schema_id
+INNER JOIN sys.indexes i
+    ON t.object_id = i.object_id
+INNER JOIN sys.partitions p
+    ON i.object_id = p.object_id
+        AND i.index_id = p.index_id
+INNER JOIN sys.allocation_units a
+    ON p.partition_id = a.container_id
+LEFT JOIN sys.schemas s
+    ON t.schema_id = s.schema_id
 WHERE i.index_id <= 1 -- 0 for Heap, 1 for Clustered Index
-GROUP BY t.name
-	,s.name
-	,i.index_id
-	,p.rows
+GROUP BY t.name,
+    s.name,
+    i.index_id,
+    p.rows
 ORDER BY Your TableName;
 ```
 
 To see a list of all tables, remove (or comment out) `WHERE i.index_id <= 1 -- 0 for Heap, 1 for Clustered Index`.
-
-
-
 ## Heap structures
 
 A heap is a table without a clustered index. Heaps have one row in [sys.partitions](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md), with `index_id = 0` for each partition used by the heap. By default, a heap has a single partition. When a heap has multiple partitions, each partition has a heap structure that contains the data for that specific partition. For example, if a heap has four partitions, there are four heap structures; one in each partition.

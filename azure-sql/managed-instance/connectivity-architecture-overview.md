@@ -5,7 +5,7 @@ description: Learn about Azure SQL Managed Instance communication and connectivi
 author: zoran-rilak-msft
 ms.author: zoranrilak
 ms.reviewer: mathoma, bonova
-ms.date: 01/20/2024
+ms.date: 06/15/2024
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -191,9 +191,11 @@ The following virtual network features are currently *not supported* with SQL Ma
 ## Related content
 
 - For an overview, see [What is Azure SQL Managed Instance?](sql-managed-instance-paas-overview.md).
-- To learn more, see [Virtual cluster architecture](virtual-cluster-architecture.md)
-- Learn how to [set up a new Azure virtual network](virtual-network-subnet-create-arm-template.md) or an [existing Azure virtual network](vnet-existing-add-subnet.md) where you can deploy SQL Managed Instance.
-- [Calculate the size of the subnet](vnet-subnet-determine-size.md) where you want to deploy SQL Managed Instance.
+- To learn more, see
+    - [Virtual cluster architecture](virtual-cluster-architecture.md)
+    - [Service-aided subnet configuration](subnet-service-aided-configuration-enable.md)
+    - [Set up a new Azure virtual network](virtual-network-subnet-create-arm-template.md) or an [existing Azure virtual network](vnet-existing-add-subnet.md) where you can deploy SQL Managed Instance.
+    - [Calculate the size of the subnet](vnet-subnet-determine-size.md) where you want to deploy SQL Managed Instance.
 - Learn how to create a managed instance:
   - From the [Azure portal](instance-create-quickstart.md).
   - By using [PowerShell](scripts/create-configure-managed-instance-powershell.md).

@@ -3,7 +3,7 @@ title: Introduction to Microsoft.Data.SqlClient namespace
 description: Learn about the Microsoft.Data.SqlClient namespace and how it's the preferred way to connect to SQL for .NET applications.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 02/28/2024
+ms.date: 05/31/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -75,24 +75,29 @@ SqlConnection supports `TokenCredential` authentication by introducing a new `Ac
 Example usage:
 
 ```C#
-    using Microsoft.Data.SqlClient;
-    using Azure.Identity;
+using Microsoft.Data.SqlClient;
+using Azure.Identity;
 
-    const string defaultScopeSuffix = "/.default";
-    string connectionString = GetConnectionString();
-    using SqlConnection connection = new SqlConnection(connectionString);
-    
-    connection.AccessTokenCallback = async (authParams, cancellationToken) =>
-    {
-        var cred = new DefaultAzureCredential();
-        string scope = authParams.Resource.EndsWith(defaultScopeSuffix) ? authParams.Resource : authParams.Resource + defaultScopeSuffix;
-        AccessToken token = await cred.GetTokenAsync(new TokenRequestContext(new[] { scope }), cancellationToken);
-        return new SqlAuthenticationToken(token.Token, token.ExpiresOn);
-    }
-    
-    connection.Open();
-    Console.WriteLine("ServerVersion: {0}", connection.ServerVersion);
-    Console.WriteLine("State: {0}", connection.State);
+const string defaultScopeSuffix = "/.default";
+string connectionString = GetConnectionString();
+DefaultAzureCredential credential = new();
+using SqlConnection connection = new(connectionString);
+
+connection.AccessTokenCallback = async (authParams, cancellationToken) =>
+{
+    string scope = authParams.Resource.EndsWith(defaultScopeSuffix)
+        ? authParams.Resource
+        : $"{authParams.Resource}{defaultScopeSuffix}";
+    AccessToken token = await cred.GetTokenAsync(
+        new TokenRequestContext([scope]),
+        cancellationToken);
+
+    return new SqlAuthenticationToken(token.Token, token.ExpiresOn);
+}
+
+connection.Open();
+Console.WriteLine("ServerVersion: {0}", connection.ServerVersion);
+Console.WriteLine("State: {0}", connection.State);
 ```
 
 ### SqlBatch API

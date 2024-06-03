@@ -14,24 +14,21 @@ ms.topic: how-to
 # Move Azure SQL Managed Instance across subnets
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-Azure SQL Managed Instance must be deployed inside a dedicated subnet within an Azure [virtual network](/azure/virtual-network/virtual-networks-overview). The number of managed instances that can be deployed within the subnet depends on the size of the subnet (subnet range).
+This article teaches you to move Azure SQL Managed Instance from one subnet to another (in the same VNet or a different one), similar to scaling vCores or changing the instance service tier. SQL Managed Instance is available during the move, except during a short downtime caused by a failover at the end of the update - typically lasting up to 10 seconds, even if long-running transactions are interrupted. 
 
-This article teaches you to move your managed instance from one subnet to another (in the same VNet or a different one), similar to scaling vCores or changing the instance service tier. SQL Managed Instance is available during the move, except during a short downtime caused by a failover at the end of the update - typically lasting up to 10 seconds, even if long-running transactions are interrupted. 
-
-Moving the instance to another subnet triggers the following virtual cluster operations:
+ Moving the instance to another subnet triggers the following virtual cluster operations:
 - The virtual cluster will build out or resize the underlying infrastructure in destination subnet.
 - The virtual cluster is removed or defragmented in the source subnet. 
+
+
+## Requirements and limitations 
+
+SQL Managed Instance must be deployed inside a dedicated subnet within an Azure [virtual network](/azure/virtual-network/virtual-networks-overview). The number of managed instances that can be deployed within the subnet depends on the size of the subnet (subnet range). To deploy a managed instance, or move it to another subnet, the destination subnet must have certain [network requirements](connectivity-architecture-overview.md#service-aided-subnet-configuration).
 
 Before moving your instance to another subnet, consider familiarizing yourself with the following concepts: 
 - [Determine required subnet size and range for Azure SQL Managed Instance](vnet-subnet-determine-size.md).
 - Choose between moving the instance to a [new subnet](virtual-network-subnet-create-arm-template.md) or [using an existing subnet](vnet-existing-add-subnet.md).
 - Use [management operations](management-operations-overview.md) to automatically deploy new managed instances, update instance properties, or delete instances. It's possible to [monitor](management-operations-monitor.md) these management operations. 
-
-
-
-## Requirements and limitations 
-
-To deploy a managed instance, or move it to another subnet, the destination subnet must have certain [network requirements](connectivity-architecture-overview.md#service-aided-subnet-configuration).
 
 ### Subnet readiness 
 
@@ -88,6 +85,8 @@ For example, if MI1 is in subnet S1, the secondary instance in the failover grou
 To learn more about configuring the network for failover groups, review [Enable geo-replication between managed instances](failover-group-configure-sql-mi.md#enabling-connectivity-between-the-instances). 
 
 ## Operation steps
+
+Moving an instance from one subnet to another involves a number of steps, and depending on how your SQL Managed Instance is configured, could take anywhere from 30 minutes to 6 hours. 
 
 The following table details the operation steps that occur during the instance move operation: 
 

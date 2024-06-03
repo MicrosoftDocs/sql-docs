@@ -43,15 +43,17 @@ sections:
       - question: |
           Who should use the Hyperscale service tier?
         answer: |
-          The Hyperscale service tier is for all customers who require higher performance and availability, fast backup and restore, and/or fast storage and compute scalability. This includes customers who are moving to the cloud to modernize their applications and customers who are already using other service tiers in Azure SQL Database. With Hyperscale, you get:
+          The Hyperscale service tier is for all customers looking for higher performance and availability, fast backup and restores, fast storage, and compute scalability. This includes customers who are starting out small and growing, those running large mission-critical databases, those who are moving to the cloud to modernize their applications and customers who are already using other service tiers in Azure SQL Database. With Hyperscale, you get:
           
-          - Database size up to 100 TB.
+          - Database size that can grow from 10 GB up to 100 TB.
+          - Compute vCore resources from 2 vCores up to 128 vCores          
           - Fast database backups regardless of database size (backups are based on storage snapshots).
           - Fast database restores regardless of database size (restores are from storage snapshots).
           - Higher log throughput regardless of database size and the number of vCores.
           - Read Scale-out using one or more read-only replicas, used for offloading read-only workloads or as hot standby databases.
           - Rapid scaling up of compute, in constant time, to be more powerful to accommodate the heavy workload and then scale down, in constant time. Scaling operations take single-digit minutes for provisioned compute, and less than a second for serverless compute, regardless of database size.
-          
+          - The option to pay for what you use with serverless compute, where compute is billed based on usage. 
+
       - question: |
           What regions currently support Hyperscale?
         answer: |

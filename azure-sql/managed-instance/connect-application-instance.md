@@ -23,7 +23,7 @@ Today you have multiple choices when deciding how and where you host your applic
 
 You can also enable data access to your managed instance from outside a virtual network – for example, from multi-tenant Azure services like Power BI and Azure App Service, or from an on-premises network not connected to your virtual networks via VPN. To accomplish these and similar scenarios, refer to [Configure public endpoint in Azure SQL Managed Instance](./public-endpoint-configure.md).
 
-:::image type="content" source="media/connect-application-instance/application-deployment-topologies.png" alt-text="High availability." lightbox="media/connect-application-instance/application-deployment-topologies.png":::
+:::image type="content" source="media/connect-application-instance/application-deployment-topologies.png" alt-text="Diagram demonstrating High availability." lightbox="media/connect-application-instance/application-deployment-topologies.png":::
 
 ## Connect from inside the same VNet
 

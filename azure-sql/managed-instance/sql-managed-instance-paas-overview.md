@@ -131,7 +131,7 @@ The following briefly lists SQL Server features that are compatible with Azure S
     :::column-end:::
 :::row-end:::
 
-For a comprehensive list of  SQL Server and Azure SQL Managed Instance features, review [SQL Managed Instance feature comparison](../database/features-comparison.md).   
+For a comprehensive list of SQL Server and Azure SQL Managed Instance features, review [SQL Managed Instance feature comparison](../database/features-comparison.md).   
 For a list of T-SQL differences between SQL Managed Instance and SQL Server, review [SQL Managed Instance T-SQL differences from SQL Server](transact-sql-tsql-differences-sql-server.md).
 
 > [!NOTE]

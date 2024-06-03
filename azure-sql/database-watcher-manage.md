@@ -18,7 +18,7 @@ monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 
 [!INCLUDE [sqldb-sqlmi](./includes/appliesto-sqldb-sqlmi.md)]
 
-This article contains detailed steps to create, configure, and start a database watcher in Azure portal for Azure SQL Database and Azure SQL Managed Instance. 
+This article contains detailed steps to create, configure, and start a database watcher in the Azure portal for Azure SQL Database and Azure SQL Managed Instance. 
 
 Database watcher does not require you to deploy and maintain any monitoring agents or other monitoring infrastructure. You can enable in-depth database monitoring of your Azure SQL resources in minutes.
 

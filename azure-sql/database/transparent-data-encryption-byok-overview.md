@@ -52,7 +52,7 @@ Customer-managed TDE provides the following benefits to the customer:
 
 ## How customer-managed TDE works
 
-:::image type="content" source="media/transparent-data-encryption-byok-overview/customer-managed-tde-with-roles.PNG" alt-text="Setup and functioning of the customer-managed TDE." lightbox="media/transparent-data-encryption-byok-overview/customer-managed-tde-with-roles.PNG":::
+:::image type="content" source="media/transparent-data-encryption-byok-overview/customer-managed-tde-with-roles.PNG" alt-text="Diagram showing setup and functioning of the customer-managed TDE." lightbox="media/transparent-data-encryption-byok-overview/customer-managed-tde-with-roles.PNG":::
 
 In order for the [logical server in Azure](logical-servers.md) to use the TDE protector stored in AKV for encryption of the DEK, the **Key Vault Administrator** needs to give access rights to the server using its unique Microsoft Entra identity. There are two access models to grant the server access to the key vault:
 
@@ -259,7 +259,7 @@ Even in cases when there's no configured geo-redundancy for server, it's highly 
 
 Alternatively, it can be accomplished by generating key using the primary key vault in one region and cloning the key into a key vault in a different Azure region. Use the [Backup-AzKeyVaultKey](/powershell/module/az.keyvault/Backup-AzKeyVaultKey) cmdlet to retrieve the key in encrypted format from the primary key vault and then use the [Restore-AzKeyVaultKey](/powershell/module/az.keyvault/restore-azkeyvaultkey) cmdlet and specify a key vault in the second region to clone the key. Alternatively, use the Azure portal to back up and restore the key. Key backup/restore operation is only allowed between key vaults within the same Azure subscription and [Azure geography](https://azure.microsoft.com/global-infrastructure/geographies/).
 
-:::image type="content" source="media/transparent-data-encryption-byok-overview/customer-managed-tde-with-ha.png" alt-text="Single-Server HA." lightbox="media/transparent-data-encryption-byok-overview/customer-managed-tde-with-ha.png":::
+:::image type="content" source="media/transparent-data-encryption-byok-overview/customer-managed-tde-with-ha.png" alt-text="Diagram showing Single-Server high availability." lightbox="media/transparent-data-encryption-byok-overview/customer-managed-tde-with-ha.png":::
 
 ## Geo-DR and customer-managed TDE
 
@@ -273,7 +273,7 @@ To avoid issues while establishing or during geo-replication due to incomplete k
 
 - Both initial setup and rotation of the TDE protector must be done on the secondary first, and then on primary.
 
-:::image type="content" source="media/transparent-data-encryption-byok-overview/customer-managed-tde-with-bcdr.png" alt-text="Failover groups and geo-dr." lightbox="media/transparent-data-encryption-byok-overview/customer-managed-tde-with-bcdr.png":::
+:::image type="content" source="media/transparent-data-encryption-byok-overview/customer-managed-tde-with-bcdr.png" alt-text="Digram showing failover groups and geo-dr." lightbox="media/transparent-data-encryption-byok-overview/customer-managed-tde-with-bcdr.png":::
 
 To test a failover, follow the steps in [Active geo-replication overview](active-geo-replication-overview.md). Testing failover should be done regularly to validate that SQL Database has maintained access permission to both key vaults.
 

@@ -45,7 +45,7 @@ Active geo-replication uses the [Always On availability group](/sql/database-eng
 
 Geo-replication provides regional redundancy. Regional redundancy enables applications to quickly recover from a permanent loss of an entire Azure region or parts of a region, caused by natural disasters, catastrophic human errors, or malicious acts. Geo-replication RPO can be found in [Overview of Business Continuity](business-continuity-high-availability-disaster-recover-hadr-overview.md).
 
-The following figure shows an example of active geo-replication configured with a primary in the North Central US region and a geo-secondary in the South Central US region.
+The following figure shows an example of active geo-replication configured with a primary in the West US 2 region and a geo-secondary in the East US region.
 
 ![geo-replication relationship](./media/active-geo-replication-overview/geo-replication-relationship.png)
 

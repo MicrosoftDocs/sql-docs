@@ -4,7 +4,7 @@ titleSuffix: SQL machine learning
 description: In part two of this four-part tutorial series, you'll use Python to prepare data to predict ski rentals with SQL machine learning.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 06/15/2022
+ms.date: 06/02/2024
 ms.service: sql
 ms.subservice: machine-learning
 ms.topic: tutorial
@@ -37,7 +37,7 @@ In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll lear
 
 ## Prerequisites
 
-* Part two of this tutorial assumes you have completed [part one](python-ski-rental-linear-regression.md) and its prerequisites.
+* Part two of this tutorial assumes you have completed [part one](python-ski-rental-linear-regression.md) and its prerequisites, including [installing the necessary Python packages](python-ski-rental-linear-regression.md#prerequisites), `pandas` and `pyodbc`.
 
 ## Explore and prepare the data
 
@@ -52,8 +52,7 @@ In the connection string, replace connection details as needed. To use Windows a
 ```python
 import pyodbc
 import pandas
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_squared_error
+
 
 # Connection string to your SQL Server instance
 conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<server>; DATABASE=TutorialDB;UID=<username>;PWD=<password>')

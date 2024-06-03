@@ -27,6 +27,8 @@ In this tutorial, you:
 
 ## Set up a connection  
 
+When creating reports in SQL Server Reporting Services (SSRS), establishing a data source is crucial. Follow these steps to set up a connection.
+
 1. In the **Report Data** pane, select **New** > **Data Source**. If the **Report Data** pane isn't visible, then select **View** > **Report Data**.
 
     :::image type="content" source="media/ssrs-table-tutorial-2-new-data-source.png" alt-text="Screenshot of the Report Data pane with the Data Source option highlighted in the New menu.":::
@@ -54,7 +56,7 @@ In this tutorial, you:
     >
     > For more information about connection strings, see the `Related content` section.
 
-1. Select the **Credentials** tab, and under the section **Change the credentials used to connect to the data source**, select the **Use Windows Authentication (integrated security)** option.
+1. Select the **Credentials** tab, and choose the **Use Windows Authentication (integrated security)** option.
 
 1. Select **OK** to complete the process.
 

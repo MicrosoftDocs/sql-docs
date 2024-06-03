@@ -1,15 +1,17 @@
 ---
-title: "Lesson 3: Define a dataset for the table report"
+title: "Tutorial: Define a dataset for the table report"
 description: In this lesson, learn how to define a dataset for the Table Report in SQL Server Reporting Services (SSRS).
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/01/2019
+ms.date: 06/03/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
 ms.custom: updatefrequency5
+#customer intent: As a SQL server user, I want to use SQL Server Data Tools (SSDT) to define a dataset so that I can generate a table report.
+
 ---
-# Lesson 3: Define a dataset for the table report - SQL Server Reporting Services
+# Tutorial: Define a dataset for the table report - SQL Server Reporting Services
 
 After you define the data source for the paginated report, you need to define a dataset. In [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)], data that you use in reports is contained in a *dataset*. A dataset includes a pointer to a data source and a query to be used by the report, calculated fields, and variables.
 

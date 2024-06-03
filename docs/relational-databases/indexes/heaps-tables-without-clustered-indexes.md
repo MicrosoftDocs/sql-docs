@@ -102,10 +102,9 @@ GROUP BY t.name,
     s.name,
     i.index_id,
     p.rows
-ORDER BY Your TableName;
+ORDER BY 'Your TableName';
 ```
 
-To see a list of all tables, remove (or comment out) `WHERE i.index_id <= 1 -- 0 for Heap, 1 for Clustered Index`.
 ## Heap structures
 
 A heap is a table without a clustered index. Heaps have one row in [sys.partitions](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md), with `index_id = 0` for each partition used by the heap. By default, a heap has a single partition. When a heap has multiple partitions, each partition has a heap structure that contains the data for that specific partition. For example, if a heap has four partitions, there are four heap structures; one in each partition.

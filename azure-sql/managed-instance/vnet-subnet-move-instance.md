@@ -89,7 +89,7 @@ To learn more about configuring the network for failover groups, review [Enable 
 
 ## Operation steps
 
-The following table details the operation steps that occur during the instance move operation: 
+The following table details the operation steps that occur during the instance move operation (please note that entire process might take anywhere from 30 minutes to 6 hours depending on your SQL Managed Instance setup): 
 
 |Step name  |Step description  |
 |----|---------|

@@ -22,9 +22,9 @@ Follow the process below to alter the version of DacFx used by SQL Server Data T
 
 SQL Server Data Tools stores the DacFx files under `Common7\IDE\Extensions\Microsoft\SQLDB\DAC` within the Visual Studio program files. For Visual Studio 2022 Community, the full path is commonly `C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SQLDB\DAC`.
 
-Substitution should be done within the same major version of DacFx. For example, if Visual Studio 17.9 (2022) utilizes DacFx versions 162.2.33.1, only other 162.x versions should be used. To view the current version, select `Microsoft.SqlServer.Dac.dll` file in File Explorer from the SSDT DacFx folder and use the context menu to open the file properties.
+Substitution should be done within the same major version of DacFx. For example, if Visual Studio 17.9 (2022) utilizes DacFx version 162.2.33.1, only other 162.x versions should be used. To view the current version, select `Microsoft.SqlServer.Dac.dll` file in File Explorer from the SSDT DacFx folder and use the context menu to open the file properties.
 
-DacFx is published to [NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.DACFx). Identify the desired version within the Microsoft.SqlServer.DacFx NuGet feed and follow these steps to use it with SSDT:
+DacFx is published to [NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.DacFx). Identify the desired version within the Microsoft.SqlServer.DacFx NuGet feed and follow these steps to use it with SSDT:
 
 1. Download the NuGet package for the DacFx version from the web interface.
 1. Change the *nupkg* file to a *zip* file and extract the archive.
@@ -39,6 +39,7 @@ DacFx is published to [NuGet](https://www.nuget.org/packages/Microsoft.SqlServer
    - Micrososft.SqlServer.Dac.xml
    - Microsoft.SqlServer.TransactSql.ScriptDom.dll
    - Microsoft.SqlServer.Types.dll
+
 SQL Projects will require [Clean or Rebuild](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) after this process to properly incorporate the replaced DacFx version.
 
 ## Related content

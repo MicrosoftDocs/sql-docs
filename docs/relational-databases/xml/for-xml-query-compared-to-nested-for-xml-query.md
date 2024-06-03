@@ -1,10 +1,10 @@
 ---
-title: "FOR XML Query Compared to Nested FOR XML Query"
+title: "FOR XML query compared to nested FOR XML query"
 description: Learn about the benefits of nested FOR XML queries by viewing an example that compares a single-level FOR XML query to a nested FOR XML query.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 05/05/2022
+ms.date: 05/24/2024
 ms.service: sql
 ms.subservice: xml
 ms.topic: conceptual
@@ -12,190 +12,194 @@ helpviewer_keywords:
   - "FOR XML query"
   - "queries [XML in SQL Server], comparing query types"
 ---
-# FOR XML Query Compared to Nested FOR XML Query
+# FOR XML query compared to nested FOR XML query
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-This article compares a single-level FOR XML query to a nested FOR XML query. One of the benefits of using nested FOR XML queries is that you can specify a combination of attribute-centric and element-centric XML for query results. The example demonstrates this.
+This article compares a single-level `FOR XML` query to a nested `FOR XML` query. One of the benefits of using nested `FOR XML` queries is that you can specify a combination of attribute-centric and element-centric XML for query results. The example demonstrates this benefit.
 
-## Example
+[!INCLUDE [article-uses-adventureworks](../../includes/article-uses-adventureworks.md)]
 
-The following `SELECT` query retrieves product category and subcategory information in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. There is no nested FOR XML in the query.
+## Examples
 
-```  
-USE AdventureWorks2022;  
-GO  
-SELECT   ProductCategory.ProductCategoryID,   
-         ProductCategory.Name as CategoryName,  
-         ProductSubCategory.ProductSubCategoryID,   
-         ProductSubCategory.Name  
-FROM     Production.ProductCategory, Production.ProductSubCategory  
-WHERE    ProductCategory.ProductCategoryID = ProductSubCategory.ProductCategoryID  
-ORDER BY ProductCategoryID  
-FOR XML AUTO, TYPE  
-GO  
+The following `SELECT` query retrieves product category and subcategory information in the [!INCLUDE [ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. There's no nested `FOR XML` in the query.
+
+```sql
+USE AdventureWorks2022;
+GO
+
+SELECT ProductCategory.ProductCategoryID,
+    ProductCategory.Name AS CategoryName,
+    ProductSubCategory.ProductSubCategoryID,
+    ProductSubCategory.Name
+FROM Production.ProductCategory,
+    Production.ProductSubCategory
+WHERE ProductCategory.ProductCategoryID = ProductSubCategory.ProductCategoryID
+ORDER BY ProductCategoryID
+FOR XML AUTO, TYPE;
+GO
 ```
 
-This is the partial result:
+Here's the partial result:
 
-```  
-<ProductCategory ProductCategoryID="1" CategoryName="Bike">  
-  <ProductSubCategory ProductSubCategoryID="1" Name="Mountain Bike"/>  
-  <ProductSubCategory ProductSubCategoryID="2" Name="Road Bike"/>  
-  <ProductSubCategory ProductSubCategoryID="3" Name="Touring Bike"/>  
-</ProductCategory>  
-...  
+```xml
+<ProductCategory ProductCategoryID="1" CategoryName="Bike">
+  <ProductSubCategory ProductSubCategoryID="1" Name="Mountain Bike"/>
+  <ProductSubCategory ProductSubCategoryID="2" Name="Road Bike"/>
+  <ProductSubCategory ProductSubCategoryID="3" Name="Touring Bike"/>
+</ProductCategory>
+...
 ```
 
 If you specify the `ELEMENTS` directive in the query, you receive an element-centric result, as shown in the following result fragment:
 
-```  
-<ProductCategory>  
-  <ProductCategoryID>1</ProductCategoryID>  
-  <CategoryName>Bike</CategoryName>  
-  <ProductSubCategory>  
-    <ProductSubCategoryID>1</ProductSubCategoryID>  
-    <Name>Mountain Bike</Name>  
-  </ProductSubCategory>  
-  <ProductSubCategory>  
-     ...  
-  </ProductSubCategory>  
-</ProductCategory>  
+```xml
+<ProductCategory>
+  <ProductCategoryID>1</ProductCategoryID>
+  <CategoryName>Bike</CategoryName>
+  <ProductSubCategory>
+    <ProductSubCategoryID>1</ProductSubCategoryID>
+    <Name>Mountain Bike</Name>
+  </ProductSubCategory>
+  <ProductSubCategory>
+     ...
+  </ProductSubCategory>
+</ProductCategory>
 ```
 
 Next, assume that you want to generate an XML hierarchy that is a combination of attribute-centric and element-centric XML, as shown in the following fragment:
 
-```  
-<ProductCategory ProductCategoryID="1" CategoryName="Bike">  
-  <ProductSubCategory>  
-    <ProductSubCategoryID>1</ProductSubCategoryID>  
-    <SubCategoryName>Mountain Bike</SubCategoryName></ProductSubCategory>  
-  <ProductSubCategory>  
-     ...  
-  <ProductSubCategory>  
-     ...  
-</ProductCategory>  
+```xml
+<ProductCategory ProductCategoryID="1" CategoryName="Bike">
+  <ProductSubCategory>
+    <ProductSubCategoryID>1</ProductSubCategoryID>
+    <SubCategoryName>Mountain Bike</SubCategoryName></ProductSubCategory>
+  <ProductSubCategory>
+     ...
+  <ProductSubCategory>
+     ...
+</ProductCategory>
 ```
 
 In the previous fragment, product category information such as category ID and category name are attributes. However, the subcategory information is element-centric. To construct the `<ProductCategory>` element, you can write a `FOR XML` query as shown in the following:
 
-```  
-SELECT ProductCategoryID, Name as CategoryName  
-FROM Production.ProductCategory ProdCat  
-ORDER BY ProductCategoryID  
-FOR XML AUTO, TYPE  
+```sql
+SELECT ProductCategoryID,
+    Name AS CategoryName
+FROM Production.ProductCategory ProdCat
+ORDER BY ProductCategoryID
+FOR XML AUTO, TYPE;
 ```
 
-This is the result:
+Here's the result:
 
-```  
-< ProdCat ProductCategoryID="1" CategoryName="Bikes" />  
-< ProdCat ProductCategoryID="2" CategoryName="Components" />  
-< ProdCat ProductCategoryID="3" CategoryName="Clothing" />  
-< ProdCat ProductCategoryID="4" CategoryName="Accessories" />  
+```xml
+< ProdCat ProductCategoryID="1" CategoryName="Bikes" />
+< ProdCat ProductCategoryID="2" CategoryName="Components" />
+< ProdCat ProductCategoryID="3" CategoryName="Clothing" />
+< ProdCat ProductCategoryID="4" CategoryName="Accessories" />
 ```
 
-To construct the nested `<ProductSubCategory>` elements in the XML you want, you then add a nested `FOR XML` query, as shown in the following:
+To construct the nested `<ProductSubCategory>` elements in the XML you want, you then add a nested `FOR XML` query, as shown in the following code sample:
 
-```  
-SELECT ProductCategoryID, Name as CategoryName,  
-       (SELECT ProductSubCategoryID, Name SubCategoryName  
-        FROM   Production.ProductSubCategory  
-        WHERE ProductSubCategory.ProductCategoryID =   
-              ProductCategory.ProductCategoryID  
-        FOR XML AUTO, TYPE, ELEMENTS  
-       )  
-FROM Production.ProductCategory  
-ORDER BY ProductCategoryID  
-FOR XML AUTO, TYPE  
+```sql
+SELECT ProductCategoryID,
+    Name AS CategoryName,
+    (
+        SELECT ProductSubCategoryID, Name AS SubCategoryName
+        FROM Production.ProductSubCategory
+        WHERE ProductSubCategory.ProductCategoryID = ProductCategory.ProductCategoryID
+        FOR XML AUTO, TYPE, ELEMENTS
+    )
+FROM Production.ProductCategory
+ORDER BY ProductCategoryID
+FOR XML AUTO, TYPE;
 ```
 
 Note the following in the previous query:
 
 - The inner `FOR XML` query retrieves product subcategory information. The `ELEMENTS` directive is added in the inner `FOR XML` to generate element-centric XML that is added to the XML generated by the outer query. By default, the outer query generates attribute-centric XML.
 
-- In the inner query, the `TYPE` directive is specified so the result is of **xml** type. If `TYPE` is not specified, the result is returned as **nvarchar(max)** type and the XML data is returned as entities.
+- In the inner query, the `TYPE` directive is specified so the result is of **xml** type. If `TYPE` isn't specified, the result is returned as **nvarchar(max)** type and the XML data is returned as entities.
 
 - The outer query also specifies the `TYPE` directive. Therefore, the result of this query is returned to the client as **xml** type.
 
-This is the partial result:
+Here's the partial result:
 
-```  
-<ProductCategory ProductCategoryID="1" CategoryName="Bike">  
-  <ProductSubCategory>  
-    <ProductSubCategoryID>1</ProductSubCategoryID>  
-    <SubCategoryName>Mountain Bike</SubCategoryName></ProductSubCategory>  
-  <ProductSubCategory>  
-     ...  
-  <ProductSubCategory>  
-     ...  
-</ProductCategory>  
+```xml
+<ProductCategory ProductCategoryID="1" CategoryName="Bike">
+  <ProductSubCategory>
+    <ProductSubCategoryID>1</ProductSubCategoryID>
+    <SubCategoryName>Mountain Bike</SubCategoryName></ProductSubCategory>
+  <ProductSubCategory>
+     ...
+  <ProductSubCategory>
+     ...
+</ProductCategory>
 ```
 
-The following query is just an extension of the previous query. It shows the full product hierarchy in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. This includes the following:
+The following query is just an extension of the previous query. It shows the full product hierarchy in the [!INCLUDE [ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. This includes:
 
 - Product categories
-
 - Product subcategories in each category
-
 - Product models in each subcategory
-
 - Products in each model
 
-You might find the following query useful in understanding the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database:
+You might find the following query useful in understanding the [!INCLUDE [ssSampleDBobject](../../includes/sssampledbobject-md.md)] database:
 
-```  
-SELECT ProductCategoryID, Name as CategoryName,  
-       (SELECT ProductSubCategoryID, Name SubCategoryName,  
-               (SELECT ProductModel.ProductModelID,   
-                       ProductModel.Name as ModelName,  
-                       (SELECT ProductID, Name as ProductName, Color  
-                        FROM   Production.Product  
-                        WHERE  Product.ProductModelID =   
-                               ProductModel.ProductModelID  
-                        FOR XML AUTO, TYPE)  
-                FROM   (SELECT distinct ProductModel.ProductModelID,   
-                               ProductModel.Name  
-                        FROM   Production.ProductModel,   
-                               Production.Product  
-                        WHERE  ProductModel.ProductModelID =   
-                               Product.ProductModelID  
-                        AND    Product.ProductSubCategoryID =   
-                               ProductSubCategory.ProductSubCategoryID)   
-                                  ProductModel  
-                FOR XML AUTO, type  
-               )  
-        FROM Production.ProductSubCategory  
-        WHERE ProductSubCategory.ProductCategoryID =   
-              ProductCategory.ProductCategoryID  
-        FOR XML AUTO, TYPE, ELEMENTS  
-       )  
-FROM Production.ProductCategory  
-ORDER BY ProductCategoryID  
-FOR XML AUTO, TYPE  
+```sql
+SELECT ProductCategoryID,
+    Name AS CategoryName,
+    (
+        SELECT ProductSubCategoryID,
+            Name AS SubCategoryName,
+            (
+                SELECT ProductModel.ProductModelID,
+                    ProductModel.Name AS ModelName,
+                    (
+                        SELECT ProductID, Name AS ProductName, Color
+                        FROM Production.Product
+                        WHERE Product.ProductModelID = ProductModel.ProductModelID
+                        FOR XML AUTO, TYPE
+                    )
+                FROM (
+                    SELECT DISTINCT ProductModel.ProductModelID, ProductModel.Name
+                    FROM Production.ProductModel, Production.Product
+                    WHERE ProductModel.ProductModelID = Product.ProductModelID
+                        AND Product.ProductSubCategoryID = ProductSubCategory.ProductSubCategoryID
+                    ) ProductModel
+                FOR XML AUTO, TYPE
+                )
+        FROM Production.ProductSubCategory
+        WHERE ProductSubCategory.ProductCategoryID = ProductCategory.ProductCategoryID
+        FOR XML AUTO, TYPE, ELEMENTS
+    )
+FROM Production.ProductCategory
+ORDER BY ProductCategoryID
+FOR XML AUTO, TYPE;
 ```
 
-This is the partial result:
+Here's the partial result:
 
-```  
-<Production.ProductCategory ProductCategoryID="1" CategoryName="Bikes">  
-  <Production.ProductSubCategory>  
-    <ProductSubCategoryID>1</ProductSubCategoryID>  
-    <SubCategoryName>Mountain Bikes</SubCategoryName>  
-    <ProductModel ProductModelID="19" ModelName="Mountain-100">  
-      <Production.Product ProductID="771"   
-                ProductName="Mountain-100 Silver, 38" Color="Silver" />  
-      <Production.Product ProductID="772"   
-                ProductName="Mountain-100 Silver, 42" Color="Silver" />  
-      <Production.Product ProductID="773"   
-                ProductName="Mountain-100 Silver, 44" Color="Silver" />  
-        ...  
-    </ProductModel>  
-     ...  
+```xml
+<Production.ProductCategory ProductCategoryID="1" CategoryName="Bikes">
+  <Production.ProductSubCategory>
+    <ProductSubCategoryID>1</ProductSubCategoryID>
+    <SubCategoryName>Mountain Bikes</SubCategoryName>
+    <ProductModel ProductModelID="19" ModelName="Mountain-100">
+      <Production.Product ProductID="771"
+                ProductName="Mountain-100 Silver, 38" Color="Silver" />
+      <Production.Product ProductID="772"
+                ProductName="Mountain-100 Silver, 42" Color="Silver" />
+      <Production.Product ProductID="773"
+                ProductName="Mountain-100 Silver, 44" Color="Silver" />
+        ...
+    </ProductModel>
+     ...
 ```
 
-If you remove the `ELEMENTS` directive from the nested `FOR XML` query that generates product subcategories, the whole result is attribute-centric. You can then write this query without nesting. The addition of `ELEMENTS` results in an XML that is partly attribute-centric and partly element-centric. This result cannot be generated by a single-level, FOR XML query.
+If you remove the `ELEMENTS` directive from the nested `FOR XML` query that generates product subcategories, the whole result is attribute-centric. You can then write this query without nesting. The addition of `ELEMENTS` results in an XML that is partly attribute-centric and partly element-centric. This result can't be generated by a single-level, `FOR XML` query.
 
-## See also
+## Related content
 
-- [Use Nested FOR XML Queries](../../relational-databases/xml/use-nested-for-xml-queries.md)
+- [Use Nested FOR XML Queries](use-nested-for-xml-queries.md)

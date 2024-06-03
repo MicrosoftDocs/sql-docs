@@ -4,7 +4,7 @@ description: Adds metadata about the sensitivity classification to one or more d
 author: Madhumitatripathy
 ms.author: matripathy
 ms.reviewer: vanto, randolphwest
-ms.date: 02/12/2024
+ms.date: 05/28/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -95,7 +95,7 @@ Multiple objects can be classified using a single `ADD SENSITIVITY CLASSIFICATIO
 
 The system view [sys.sensitivity_classifications](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md) can be used to retrieve the sensitivity classification information for a database.
 
-`ADD CLASSIFICATION` works if any one of the parameters is supplied. If you supply only `LABEL` or `INFORMATION_TYPE`, without corresponding IDs, the command succeeds. However, you should have a one-to-one mapping between `LABEL_ID` and `LABEL` name.
+`ADD SENSITIVITY CLASSIFICATION` works if any one of the parameters is supplied. If you supply only `LABEL` or `INFORMATION_TYPE`, without corresponding IDs, the command succeeds. However, you should have a one-to-one mapping between `LABEL_ID` and `LABEL` name.
 
 The `RANK` parameter isn't currently used, so just having a rank value against a column without a `LABEL` or `INFORMATION_TYPE` doesn't add any value and should be avoided. If you provide just the `RANK` parameter, the command succeeds, but this is a known issue.
 

@@ -22,14 +22,20 @@ This article lists:
 
 Extension versions are cumulative. Higher extension versions include all of the updates from previous versions. A release may include internal features. If the version release notes don't describe features, then the updates were internal.
 
-## May 28, 2024
+## June  11, 2024
 
-**Extension version**: `1.1.2692.171`
+**Extension version**: `1.1.2710.185`
 
-### Failover cluster instances
+### Business continuity
 
-- Support for availability groups is now generally available.
+- Support for availability groups is now generally available, including manual failover. [Always On availability groups inventory and status](manage-availability-group.md).
 - Failover cluster instance in portal shows instance name, instance type, network name, active node, and passive nodes.
+
+### Migration
+
+Run assessment on demand (preview): The SQL Server migration assessment runs every Sunday around 11:00 PM. Beginning with this release, you can initiate the SQL Server migration assessment whenever you want. This immediate assessment shows readiness evaluations and Azure SQL configuration assessments right away.
+
+[Configure SQL best practices assessment - SQL Server enabled by Azure Arc](assess.md)
 
 ## May 15, 2024
 

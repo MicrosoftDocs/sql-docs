@@ -1,6 +1,6 @@
 ---
-title: Always On availability groups inventory and status
-description: Describes how to view Always On availability groups and their status in Azure portal
+title: Manage Always On availability groups
+description: Describes how to manage Always On availability groups in Azure portal
 author: AbdullahMSFT
 ms.author: amamun 
 ms.reviewer: mikeray, randolphwest
@@ -9,13 +9,16 @@ ms.topic: conceptual
 ms.custom: ignite-2023
 ---
 
-# Always On availability groups inventory and status
+# Manage Always On availability groups
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-An Always On availability group is an enterprise level high availability and disaster recovery solution for SQL Server. This article describes how to view a list of availability groups and their real time health status for a given [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)], in Azure portal.
+An Always On availability group is an enterprise level high availability and disaster recovery solution for SQL Server. This article describes how to manage a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instance, in Azure portal. Specifically you can:
 
-## View list of availability groups and Status
+- [View list of availability groups and status](#view-list-of-availability-groups-and-status)
+- [Failover](#failover)
+
+## View list of availability groups and status
 
 Follow the steps to view the availability groups that are configured for the [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]:
 

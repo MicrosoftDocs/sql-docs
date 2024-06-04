@@ -3,7 +3,7 @@ title: Download
 description: Download the Microsoft JDBC Driver for SQL Server to develop Java applications that connect to SQL Server and Azure SQL Database.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 03/06/2024
+ms.date: 05/23/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -16,13 +16,13 @@ The Microsoft JDBC Driver for SQL Server is a Type 4 JDBC driver that provides d
 
 Version 12.6 is the latest general availability (GA) version. It supports Java 8, 11, 17, and 21. If you need to use an older Java runtime, see the [Java and JDBC specification support matrix](microsoft-jdbc-driver-for-sql-server-support-matrix.md#java-and-jdbc-specification-support) to see if there's a supported driver version you can use. We're continually improving Java connectivity support. As such we highly recommend that you work with the latest version of Microsoft JDBC driver.
 
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.6 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2262747)**  
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.6 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2262683)**
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.6 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2272555)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.6 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2272720)**
 
 ### Version information
 
-- Release number: 12.6.1
-- Released: February 20, 2024
+- Release number: 12.6.2
+- Released: May 23, 2024
 
 When you download the driver, there are multiple JAR files. The JAR file with `jre8` supports Java 8 and the JAR file with `jre11` supports Java 11 and up.
 
@@ -33,11 +33,11 @@ When you download the driver, there are multiple JAR files. The JAR file with `j
 
 This release of Microsoft JDBC Driver for SQL Server is available in the following languages:
 
-Microsoft JDBC Driver 12.6.1 for SQL Server (zip):
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2262747&clcid=0x40a)
+Microsoft JDBC Driver 12.6.2 for SQL Server (zip):
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2272555&clcid=0x40a)
 
-Microsoft JDBC Driver 12.6.1 for SQL Server (tar.gz):
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2262683&clcid=0x40a)
+Microsoft JDBC Driver 12.6.2 for SQL Server (tar.gz):
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2272720&clcid=0x40a)
 
 ### Release notes
 
@@ -55,7 +55,7 @@ The JDBC driver can be added to a Maven project by adding it as a dependency in 
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>12.6.1.jre11</version>
+    <version>12.6.2.jre11</version>
 </dependency>
 ```
 

@@ -33,6 +33,9 @@ These settings apply to all SQL Database and dedicated SQL pool (formerly SQL DW
 
 It's possible to change the public network access via the Azure portal, Azure PowerShell, and the Azure CLI.
 
+> [!NOTE]
+> These settings take effect immediately after they're applied. Your customers might experience connection loss if they don't meet the requirements for each setting.
+
 ### [Portal](#tab/azure-portal)
 
 To enable public network access for the logical server hosting your databases, go to the **Networking** page in the [Azure portal](https://portal.azure.com) for your [logical server in Azure](logical-servers.md), choose the **Public access** tab, and then set the **Public network access** to **Select networks**.
@@ -41,8 +44,6 @@ From this page, you can add a virtual network rule, as well as configure firewal
 
 Choose the **Private access** tab to configure a [private endpoint](private-endpoint-overview.md).
 
-> [!NOTE]
-> These settings take effect immediately after they're applied. Your customers might experience connection loss if they don't meet the requirements for each setting.
 
 ### [PowerShell](#tab/azure-powershell)
 
@@ -65,10 +66,7 @@ Set-AzSqlServer -ServerName sql-server-name -ResourceGroupName sql-server-group 
 
 ### [Azure CLI](#tab/azure-cli)
 
-It's possible to change the public network settings by using the Azure CLI. 
-
-> [!IMPORTANT]
-> All scripts in this section require the [Azure CLI](/cli/azure/install-azure-cli).
+It's possible to change the public network settings by using the [Azure CLI](/cli/azure/install-azure-cli). 
 
 The following CLI script shows how to change the **Public Network Access** setting in a Bash shell:
 

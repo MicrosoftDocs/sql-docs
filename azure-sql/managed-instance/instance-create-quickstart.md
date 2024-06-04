@@ -67,8 +67,9 @@ The following table provides details for the required information on the **Basic
    | **Resource group** | A new or existing resource group.|For valid resource group names, see [Naming rules and restrictions](/azure/architecture/best-practices/resource-naming).|
    | **Managed Instance name** | Any valid name.|For valid names, see [Naming rules and restrictions](/azure/architecture/best-practices/resource-naming).|
    | **Region** |The region in which you want to create the managed instance.|For information about regions, see [Azure regions](https://azure.microsoft.com/regions/).|
+   | **Belongs to an instance pool?** | Select **Yes** if you want this instance to be created inside an [instance pool](instance-pools-configure.md). | 
    | **Authentication method** | Use SQL authentication | For the purpose of this quickstart, use SQL authentication. But you can also choose to use both SQL and [Microsoft Entra](../database/authentication-aad-overview.md) authentication. | 
-   | **Managed instance admin login** | Any valid username. | For valid names, see [Naming rules and restrictions](/azure/architecture/best-practices/resource-naming). Don't use "serveradmin" because that's a reserved server-level role.|
+   | **Managed instance admin login** | Any valid username. | For valid names, see [Naming rules and restrictions](/azure/architecture/best-practices/resource-naming). Don't use `serveradmin` because that's a reserved server-level role.|
    | **Password** | Any valid password.| The password must be at least 16 characters long and meet the [defined complexity requirements](/azure/virtual-machines/windows/faq#what-are-the-password-requirements-when-creating-a-vm-).|
 
 Under **Managed Instance details**, select **Configure Managed Instance** in the **Compute + storage** section to open the **Compute + storage** page. 

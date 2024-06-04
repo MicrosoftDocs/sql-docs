@@ -11,8 +11,9 @@ ms.topic: conceptual
 ms.custom: sqldbrb=1, references_regions
 ---
 # Scale single database resources in Azure SQL Database
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This article describes how to scale the compute and storage resources available for an Azure SQL Database in the provisioned compute tier. Alternatively, the [serverless compute tier](serverless-tier-overview.md) provides compute autoscaling and bills per second for compute used.
+This article describes how to scale the compute and storage resources available for Azure SQL Database in the provisioned compute tier. Alternatively, the [serverless compute tier](serverless-tier-overview.md) provides compute autoscaling and bills per second for compute used.
 
 After initially picking the number of vCores or DTUs, you can scale a single database up or down dynamically based on actual experience using:
 

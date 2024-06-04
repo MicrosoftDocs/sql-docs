@@ -1,6 +1,7 @@
 ---
-title: Server configuration options (SQL Server)
-description: Find out how to manage and optimize SQL Server resources. View available configuration options, possible settings, default values, and restart requirements.
+title: Server configuration options
+titleSuffix: SQL Server, Azure SQL Managed Instance
+description: Find out how to manage and optimize SQL Server and Azure SQL Managed Instance resources. View available configuration options, possible settings, default values, and restart requirements.
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, randolphwest
@@ -27,7 +28,7 @@ helpviewer_keywords:
   - "administering SQL Server, configuration options"
 keywords: server configuration (SQL Server)
 ---
-# Server configuration options (SQL Server)
+# Server configuration options
 
 [!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
@@ -72,6 +73,9 @@ There are two configuration options where the `value` and `value_in_use` might n
 The `is_dynamic` column can be used to determine if the configuration option requires a restart. A value of `1` in the `is_dynamic` column means that, when the `RECONFIGURE` command is run, the new value takes effect immediately. In some cases, the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] might not evaluate the new value immediately, but does so in the normal course of its execution. A value of `0` in the `is_dynamic` column means that the changed configuration value doesn't take effect until the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] is restarted, even though the `RECONFIGURE` command was run.
 
 For a configuration option that isn't dynamic there's no way to tell if the `RECONFIGURE` command has been run to apply the configuration change. Before you restart SQL Server to apply the configuration change, run the `RECONFIGURE` command to ensure all configuration changes will take effect when SQL Server next restarts.
+
+> [!NOTE]
+> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] was the last version available on a 32-bit operating system.
 
 ## Configuration options
 

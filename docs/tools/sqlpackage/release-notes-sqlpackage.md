@@ -33,9 +33,9 @@ dotnet tool install -g microsoft.sqlpackage --version 162.3.563
 ### Features
 |Feature|Details|
 |:---|:---|
+|Microsoft Fabric|Adds preview support for the target platform `SqlDbFabricSchemaProvider`, representing Microsoft Fabric mirrored SQL databases. The [data types supported](../../t-sql/statements/create-external-table-as-select-transact-sql.md#supported-data-types) in this target platform are limited to those supported for mirroring to Microsoft Fabric.|
 |Platform|References [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.1.5) v5.1.5.|
 |ScriptDOM|References [ScriptDOM 161.9109](https://github.com/microsoft/SqlScriptDOM/blob/main/release-notes/161.91/161.9109.0.md).|
-|Microsoft Fabric|Adds preview support for the target platform `SqlDbFabricSchemaProvider`, representing Microsoft Fabric mirrored SQL databases. The [data types supported](../../t-sql/statements/create-external-table-as-select-transact-sql.md#supported-data-types) in this target platform are limited to those supported for mirroring to Microsoft Fabric.|
 
 ### Fixes
 |Feature|Details|
@@ -43,10 +43,16 @@ dotnet tool install -g microsoft.sqlpackage --version 162.3.563
 |Code analysis|Fixes an issue where the build output from code analysis rules was not formed consistent with MSBuild diagnostic format guidelines. [GitHub issue](https://github.com/microsoft/DacFx/issues/415)|
 |Deployment|Fixes an issue where the deployment of an index with the ONLINE property set and a [large object type](../../t-sql/data-types/data-types-transact-sql.md#data-type-categories) (LOB) would fail.|
 |Deployment|Fixes an issue where the deployment of column encryption fails on a temporal table. [GitHub issue](https://github.com/microsoft/DacFx/issues/440)|
-|Deployment|Reverts the changes made to avoid absolute paths of referenced dacpacs being stored in the dacpac after project build due to issues in new behavior. [GitHub issue](https://github.com/microsoft/DacFx/issues/329)
-|Extract| Fixes an issue where columns used in multi-column distribution (MCD) of a table were scripting as allowing `NULL` values.|
-|ScriptDOM|Fixes an issue where selecting unspecified (`*`) columns from the table-valued function `OPEN_JSON` function would fail a build. [GitHub issue](https://github.com/microsoft/DacFx/issues/420)|
+|Deployment|Reverts the changes made to avoid storing absolute paths of referenced dacpacs after project build due to issues with backwards compatibility in new behavior. [GitHub issue](https://github.com/microsoft/DacFx/issues/329)|
+|Extract| Fixes an issue where columns used in a multi-column distribution (MCD) table were incorrectly scripting as allowing `NULL` values.|
+|ScriptDOM|Fixes an issue where selecting unspecified (`*`) columns from the table-valued function `OPEN_JSON` would cause the SQL project fail to build. [GitHub issue](https://github.com/microsoft/DacFx/issues/420)|
 
+### Known Issues
+| Feature | Details | Workaround |
+| :------ | :------ |:------ |
+| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
+| Import | A bacpac file created with SqlPackage export, except when installed by the .msi file, may fail to import with the Azure portal and Azure PowerShell when larger than 4 GB. | Import the bacpac with SqlPackage or create the bacpac file with SqlPackage installed by the .msi file.|
+| ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
 
 ## 162.2.111 SqlPackage
 

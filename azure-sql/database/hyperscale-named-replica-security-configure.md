@@ -18,7 +18,7 @@ This article describes the procedure to grant access to an Azure SQL Database Hy
 
 ## <a id="create-a-login-in-the-master-database-on-the-primary-server"></a> Create a login on the primary server
 
-In the `master` database on the logical server hosting the *primary* database, execute the following to create a new login.
+In the `master` database on the [logical server](logical-servers.md) hosting the *primary* database, execute the following to create a new login.
 
 # [SQL authentication](#tab/SQL-Authentication)
 

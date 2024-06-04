@@ -8,6 +8,7 @@ ms.reviewer: ivujic, mathoma
 ms.date: 04/15/2024
 ms.service: sql-database
 ms.subservice: development
+ms.collection: ce-skilling-ai-copilot
 ms.topic: conceptual
 ms.custom:
   - sqldbrb=1

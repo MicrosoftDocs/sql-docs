@@ -7,7 +7,7 @@ ms.date: 02/01/2023
 ms.topic: troubleshooting-general
 ---
 
-# Troubleshoot Azure extension for SQL Server
+# Troubleshoot Azure extension for SQL Server deployment
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 

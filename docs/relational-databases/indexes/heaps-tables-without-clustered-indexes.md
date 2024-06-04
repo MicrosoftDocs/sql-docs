@@ -26,15 +26,16 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 ## When to use a heap
 
+A heap is ideal for tables that are frequently truncated and reloaded. The database engine optimizes space in a heap by filling the earliest available space.
 
-A heap is ideal for tables that are frequently truncated and reloaded.The database engine optimizes space in a heap by filling the earliest available space.
+Consider the following:
 
 - Locating free space in a heap can be costly, especially if there have been many deletes or updates.
 - Clustered indexes offer steady performance for tables that are not frequently truncated.
 
 For tables that are regularly truncated or recreated, such as temporary or staging tables, using a heap is often more efficient.
 
-The choice between using a heap and a clustered index can significantly affect your database's performance and efficiency. 
+The choice between using a heap and a clustered index can significantly affect your database's performance and efficiency.
 
 When a table is stored as a heap, individual rows are identified by reference to an 8-byte row identifier (RID) consisting of the file number, data page number, and slot on the page (FileID:PageID:SlotID). The row ID is a small and efficient structure. 
 

@@ -7,6 +7,8 @@ ms.reviewer: damauri, josephsack, randolphwest, mathoma
 ms.date: 05/08/2024
 ms.service: sql-database
 ms.topic: conceptual
+ms.collection: ce-skilling-ai-copilot
+monikerRange: "=azuresql||=azuresql-db"
 ---
 
 # Intelligent applications with Azure SQL Database

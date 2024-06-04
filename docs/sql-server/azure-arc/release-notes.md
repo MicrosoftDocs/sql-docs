@@ -28,8 +28,8 @@ Extension versions are cumulative. Higher extension versions include all of the 
 
 ### Business continuity
 
-- Support for availability groups is now generally available, including manual failover. [Always On availability groups inventory and status](manage-availability-group.md).
-- Failover cluster instance in portal shows instance name, instance type, network name, active node, and passive nodes.
+- Support for availability groups is now generally available, including manual failover. For details, review [Always On availability groups inventory and status](manage-availability-group.md).
+- Failover cluster instance in portal shows instance name, instance type, network name, active node, and passive nodes. For details, review [View Always On failover cluster instances in Azure Arc](support-for-fci.md).
 
 ### Migration
 

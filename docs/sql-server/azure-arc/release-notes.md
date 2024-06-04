@@ -28,7 +28,8 @@ Extension versions are cumulative. Higher extension versions include all of the 
 
 ### Failover cluster instances
 
-Failover cluster instance in portal shows instance name, instance type, network name, active node, and passive nodes.
+- Support for availability groups is now generally available.
+- Failover cluster instance in portal shows instance name, instance type, network name, active node, and passive nodes.
 
 ## May 15, 2024
 

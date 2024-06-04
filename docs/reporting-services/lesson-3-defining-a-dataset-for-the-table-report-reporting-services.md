@@ -15,23 +15,31 @@ ms.custom: updatefrequency5
 
 After you define the data source for the paginated report, you need to define a dataset. In [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)], data that you use in reports is contained in a *dataset*. A dataset includes a pointer to a data source and a query to be used by the report, calculated fields, and variables.
 
-Use the Query Designer in Report Designer to define the dataset. For this tutorial, you're going to create a query that retrieves sales order information from the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.
+This tutorial guides you through the process of defining a dataset for a table report using SQL Server Reporting Services (SSRS). By following these steps, you'll learn how to create a query that retrieves sales order information from the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database and set up a dataset for your report.
+
+In this tutorial, you:
+
+> [!div class="checklist"]
+> * Define a dataset for the table report
+> * Create a Transact-SQL query to retrieve sales order information
 
 ## Define a Transact-SQL query for report data  
 
-1. In the **Report Data** pane, select **New** > **Dataset...**. The **Dataset Properties** dialog box opens with the **Query** section displayed.
+To create a meaningful SSRS report, define a dataset by connecting to the [sssampledbobject-md](../includes/sssampledbobject-md.md)] database, creating a Transact-SQL query, and configuring dataset properties for efficient data retrieval and reporting.
 
-    :::image type="content" source="media/lesson-3-defining-a-dataset-for-the-table-report-reporting-services/vs-dataset-properties-dialog.png" alt-text="Screenshot of the Dataset Properties dialog box showing the query section.":::
+1. In the **Report Data** pane, select **New** > **Dataset...**. The **Dataset Properties** dialog opens with the **Query** section displayed.
 
-2. In the **Name** text box, enter "AdventureWorksDataset".
+    :::image type="content" source="media/lesson-3-defining-a-dataset-for-the-table-report-reporting-services/vs-dataset-properties-dialog.png" alt-text="Screenshot of the Dataset Properties dialog showing the query section.":::
 
-3. Then select the **Use a dataset embedded in my report** radio button.
+1. In the **Name** box, enter "AdventureWorksDataset".
 
-4. From the **Data source** dropdown box, select AdventureWorks2022.
+1. Select the **Use a dataset embedded in my report** option.
 
-5. For the **Query type**, select the **Text** radio button.
+1. From the **Data source** list, select **AdventureWorks2022**.
 
-6. Type, or copy and paste, the following Transact-SQL query into the **Query** text box.
+1. For the **Query type**, select the **Text** option.
+
+1. Enter, or copy and paste, the following Transact-SQL query into the **Query** text box.
 
     ```T-SQL
     SELECT
@@ -56,19 +64,23 @@ Use the Query Designer in Report Designer to define the dataset. For this tutori
     HAVING ppc.Name = 'Clothing'
     ```
 
-7. (Optional) Select the **Query Designer** button. The query is displayed in the text-based *Query Designer*. View the results of the query by selecting the :::image type="icon" source="media/ssrs-querydesigner-run.png"::: **run** button on the **Query Designer** toolbar. The dataset displayed contains six fields from four tables in the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database. The query makes use of Transact-SQL functionality such as aliases. For example, the SalesOrderHeader table is called *soh*.
+1. (Optional) Select **Query Designer**. The query appears in the text-based *Query Designer*. View the results of the query by selecting the :::image type="icon" source="media/ssrs-querydesigner-run.png"::: **run** button on the **Query Designer** toolbar. The dataset displayed contains six fields from four tables in the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database. The query makes use of Transact-SQL functionality such as aliases. For example, the SalesOrderHeader table is called *soh*.
 
-8. Select **OK** to exit the **Query Designer**.
+1. Select **OK** to exit the **Query Designer**.
 
-9. Select **OK** to exit the **Dataset Properties** dialog box.
+1. Select **OK** to exit the **Dataset Properties** dialog box.
 
 The **Report Data** pane displays the AdventureWorksDataset dataset and fields.
 
    :::image type="content" source="media/ssrs-adventureworksdataset.png" alt-text="Screenshot of the Datasets folder showing the AdventureWorksDataset and its fields.":::
 
+
+You successfully specified a query that retrieves data for your report. 
+
 ## Next step
 
-You successfully specified a query that retrieves data for your report. Next, you're going to create the report layout. Continue with [Lesson 4: Add a table to the report &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).
+> [!div class="nextstepaction"]
+> [Tutorial: Add a table to the report &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)
 
 ## Related content
 

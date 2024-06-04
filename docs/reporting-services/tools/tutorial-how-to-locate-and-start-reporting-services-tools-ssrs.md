@@ -128,7 +128,7 @@ Download [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.
 
 6. Select **OK**. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] opens with the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] start page. Solution Explorer provides categories for creating reports and data sources. You can use these categories to create new reports and data sources. Tabbed windows appear when you create a report definition. The tabbed windows are Data, Layout, and Preview.
 
-To get started on your first report, see [Create a basic table report &#40;SSRS tutorial&#41;](../../reporting-services/tutorial-step01-creating-a-report-server-project-reporting-services.md). To learn more about query designers you can use within Report Designer, see [Query Design Tools &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md).
+To get started on your first report, see [Create a basic table report &#40;SSRS tutorial&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). To learn more about query designers you can use within Report Designer, see [Query Design Tools &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md).
 
 ## <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]
 

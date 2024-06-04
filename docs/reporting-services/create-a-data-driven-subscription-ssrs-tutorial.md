@@ -45,7 +45,7 @@ The following diagram illustrates the basic workflow of the tutorial:
 ## Requirements  
 Data-driven subscriptions are typically created and maintained by report server administrators. The steps to create data-driven subscriptions require building queries, knowledge of data sources that contain subscriber data, and elevated permissions on a report server.  
   
-The tutorial uses the *Sales order* report created in the tutorial [Create a basic table report &#40;SSRS tutorial&#41;](../reporting-services/tutorial-step01-creating-a-report-server-project-reporting-services.md) and data from the sample database **AdventureWorks2022**.  
+The tutorial uses the *Sales order* report created in the tutorial [Create a basic table report &#40;SSRS tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) and data from the sample database **AdventureWorks2022**.  
   
 Your computer must have the following installed to use this tutorial:  
   
@@ -55,7 +55,7 @@ Your computer must have the following installed to use this tutorial:
   
 -   SQL Server Agent service must be running.  
   
--   A report that includes parameters. This tutorial assumes the sample report, `Sales Orders` you create using the tutorial [Create a basic table report &#40;SSRS tutorial&#41;](../reporting-services/tutorial-step01-creating-a-report-server-project-reporting-services.md).  
+-   A report that includes parameters. This tutorial assumes the sample report, `Sales Orders` you create using the tutorial [Create a basic table report &#40;SSRS tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
 -   The [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] sample database, which provides data to the sample report.  
   
@@ -68,6 +68,6 @@ Your computer must have the following installed to use this tutorial:
 ## Related content
 
 - [Data-driven subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  
-- [Create a basic table report &#40;SSRS tutorial&#41;](../reporting-services/tutorial-step01-creating-a-report-server-project-reporting-services.md)
+- [Create a basic table report &#40;SSRS tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
  
 

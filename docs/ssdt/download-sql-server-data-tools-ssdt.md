@@ -123,6 +123,6 @@ After installation of SSDT, work through these tutorials to learn how to create 
 
 - [Analysis Services tutorials](/analysis-services/analysis-services-tutorials-ssas)
 
-- [Create a Basic Table Report (SSRS Tutorial)](../reporting-services/tutorial-step01-creating-a-report-server-project-reporting-services.md)
+- [Create a Basic Table Report (SSRS Tutorial)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

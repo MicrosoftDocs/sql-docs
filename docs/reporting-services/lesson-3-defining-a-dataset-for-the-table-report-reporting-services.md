@@ -25,7 +25,7 @@ In this tutorial, you:
 
 ## Define a Transact-SQL query for report data  
 
-To create a meaningful SSRS report, define a dataset by connecting to the [sssampledbobject-md](../includes/sssampledbobject-md.md) database, creating a Transact-SQL query, and configuring dataset properties for efficient data retrieval and reporting.
+To create a meaningful SSRS report, define a dataset by connecting to the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)]  database, creating a Transact-SQL query, and configuring dataset properties for efficient data retrieval and reporting.
 
 1. In the **Report Data** pane, select **New** > **Dataset...**. The **Dataset Properties** dialog opens with the **Query** section displayed.
 

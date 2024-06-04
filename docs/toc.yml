@@ -17085,6 +17085,8 @@ items:
           href: t-sql/functions/trim-transact-sql.md
         - name: UNICODE
           href: t-sql/functions/unicode-transact-sql.md
+        - name: UNISTR
+          href: t-sql/functions/unistr-transact-sql.md
         - name: UPPER
           href: t-sql/functions/upper-transact-sql.md
       - name: System
@@ -17420,6 +17422,10 @@ items:
             href: t-sql/language-elements/string-comparison-assignment.md
           - name: "+ (String concatenation)"
             href: t-sql/language-elements/string-concatenation-transact-sql.md
+          - name: "|| (String concatenation)"
+            href: t-sql/language-elements/string-concatenation-pipes-transact-sql.md
+          - name: "||= (Compound assignment)"
+            href: t-sql/language-elements/compound-assignment-pipes-transact-sql.md
           - name: "+= (String concatenation assignment)"
             href: t-sql/language-elements/string-concatenation-equal-transact-sql.md
           - name: "% (Wildcard - character(s) to match)"

@@ -1,6 +1,6 @@
 ---
 title: "Tutorial: Define a dataset for the table report"
-description: In this lesson, learn how to define a dataset for the Table Report in SQL Server Reporting Services (SSRS).
+description: In this lesson, learn how to define a dataset for the Table Report (Reporting Services).
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/03/2024
@@ -15,7 +15,7 @@ ms.custom: updatefrequency5
 
 After you define the data source for the paginated report, you need to define a dataset. In [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)], data that you use in reports is contained in a *dataset*. A dataset includes a pointer to a data source and a query to be used by the report, calculated fields, and variables.
 
-This tutorial guides you through the process of defining a dataset for a table report using SQL Server Reporting Services (SSRS). By following these steps, you'll learn how to create a query that retrieves sales order information from the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database and set up a dataset for your report.
+This tutorial guides you through the process of defining a dataset for a table report using SQL Server Reporting Services (SSRS). By following these steps, you learn how to create a query that retrieves sales order information from the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database and set up a dataset for your report.
 
 In this tutorial, you:
 
@@ -27,7 +27,7 @@ In this tutorial, you:
 
 To create a meaningful SSRS report, define a dataset by connecting to the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)]  database, creating a Transact-SQL query, and configuring dataset properties for efficient data retrieval and reporting.
 
-1. In the **Report Data** pane, select **New** > **Dataset...**. The **Dataset Properties** dialog opens with the **Query** section displayed.
+1. In the **Report Data** pane, select **New** > **Dataset...**. The **Dataset Properties** dialog opens with the **Query** section highlighted.
 
     :::image type="content" source="media/lesson-3-defining-a-dataset-for-the-table-report-reporting-services/vs-dataset-properties-dialog.png" alt-text="Screenshot of the Dataset Properties dialog showing the query section.":::
 
@@ -64,16 +64,13 @@ To create a meaningful SSRS report, define a dataset by connecting to the [!INCL
     HAVING ppc.Name = 'Clothing'
     ```
 
-1. (Optional) Select **Query Designer**. The query appears in the text-based *Query Designer*. View the results of the query by selecting the :::image type="icon" source="media/ssrs-querydesigner-run.png"::: **run** button on the **Query Designer** toolbar. The dataset displayed contains six fields from four tables in the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database. The query makes use of Transact-SQL functionality such as aliases. For example, the SalesOrderHeader table is called *soh*.
+1. (Optional) Select **Query Designer**. The query appears in the text-based *Query Designer*. View the results of the query by selecting the **run** button (:::image type="icon" source="media/ssrs-querydesigner-run.png":::) on the **Query Designer** toolbar. The dataset displayed contains six fields from four tables in the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database. The query makes use of Transact-SQL functionality such as aliases. For example, the SalesOrderHeader table is called `soh`.
 
 1. Select **OK** to exit the **Query Designer**.
 
-1. Select **OK** to exit the **Dataset Properties** dialog box.
-
-The **Report Data** pane displays the AdventureWorksDataset dataset and fields.
+1. Select **OK** to exit the **Dataset Properties** dialog. The **Report Data** pane displays the AdventureWorksDataset dataset and fields.
 
    :::image type="content" source="media/ssrs-adventureworksdataset.png" alt-text="Screenshot of the Datasets folder showing the AdventureWorksDataset and its fields.":::
-
 
 You successfully specified a query that retrieves data for your report. 
 

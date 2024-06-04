@@ -15,6 +15,35 @@ ms.custom: tools|sos
 
 This article lists the features and fixes delivered by the released versions of SqlPackage.
 
+## 162.3.xx SqlPackage
+
+**Release date:** June 6, 2024
+
+```bash
+dotnet tool install -g microsoft.sqlpackage --version 162.3.xx
+```
+
+|Platform|Download|
+|:---|:---|
+
+### Features
+|Feature|Details|
+|:---|:---|
+|Platform|References [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.1.5) v5.1.5.|
+|ScriptDOM|References [ScriptDOM 161.9109](https://github.com/microsoft/SqlScriptDOM/blob/main/release-notes/161.91/161.9109.0.md).|
+|Microsoft Fabric|Adds preview support for the target platform `SqlDbFabricSchemaProvider`, representing Microsoft Fabric mirrored SQL databases. The [data types supported](../../t-sql/statements/create-external-table-as-select-transact-sql#supported-data-types) in this target platform are limited to those supported for mirroring to Microsoft Fabric.|
+
+### Fixes
+|Feature|Details|
+|:---|:---|
+|Code analysis|Fixes an issue where the build output from code analysis rules was not formed consistent with MSBuild diagnostic format guidelines. [GitHub issue](https://github.com/microsoft/DacFx/issues/415)|
+|Deployment|Fixes an issue where the deployment of an index with the ONLINE property set and a [large object type](../../t-sql/data-types/data-types-transact-sql#data-type-categories) (LOB) would fail.|
+|Deployment|Fixes an issue where the deployment of column encryption fails on a temporal table. [GitHub issue](https://github.com/microsoft/DacFx/issues/440)|
+|Deployment|Reverts the changes made to avoid absolute paths of referenced dacpacs being stored in the dacpac after project build due to issues in new behavior. [GitHub issue](https://github.com/microsoft/DacFx/issues/329)
+|Extract| Fixes an issue where columns used in multi-column distribution (MCD) of a table were scripting as allowing `NULL` values.|
+|ScriptDOM|Fixes an issue where selecting unspecified (`*`) columns from the table-valued function `OPEN_JSON` function would fail a build. [GitHub issue](https://github.com/microsoft/DacFx/issues/420)|
+
+
 ## 162.2.111 SqlPackage
 
 **Release date:** February 27, 2024

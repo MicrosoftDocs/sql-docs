@@ -4,7 +4,7 @@ description: "Download and Install SqlPackage for Windows, macOS, or Linux"
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
-ms.date: 2/27/2024
+ms.date: 06/06/2024
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
@@ -15,9 +15,9 @@ ms.custom: tools|sos, intro-installation, linux-related-content
 
 SqlPackage runs on Windows, macOS, and Linux, and is available to install through `dotnet tool` or as a standalone zip download. For details about the latest release, see the [release notes](release-notes-sqlpackage.md).
 
-- **Version number:** 162.2.111
-- **Build number:** 162.2.111.2
-- **Release date:** February 27, 2024
+- **Version number:** 162.3.xx
+- **Build number:** 162.3.xx
+- **Release date:** June 6, 2024
 
 SqlPackage is developed and released for both .NET 8 and .NET Framework. Installing the .NET 8 SqlPackage version is recommended via the [convenient `dotnet tool` method](#installation-cross-platform), which is cross-platform and easy to update, or via the [portable self-contained .zip download](#installation-file-download-alternative). The .NET 8 SqlPackage releases benefit from the continual advances to the performance and scalability of .NET as part of the [focus on for modern applications](/dotnet/core/introduction#net-ecosystem), which contrasts to the maintenance support of .NET Framework for Windows. The .NET Framework version is only available as a [.msi Windows installer](#windows-net-framework).
 

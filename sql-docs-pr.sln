@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{F682DCAC-EC47-4B39-9827-1FB9014C2262}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "relational-databases", "relational-databases", "{7EA504BC-FCE1-4DCD-96BD-25C53C9100D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "replication", "replication", "{519DC0B2-A363-4F62-9FC2-C3EC7A70ABEB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "codesnippet", "codesnippet", "{109F30D9-11A2-4A29-9517-2537429500E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csharp", "csharp", "{BA780CD8-3673-4C09-8474-B363B786276B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "rmohowto", "docs\relational-databases\replication\codesnippet\csharp\rmohowto\rmohowto.csproj", "{5BA83DA9-D853-46A1-825F-6C13F97846FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BA83DA9-D853-46A1-825F-6C13F97846FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BA83DA9-D853-46A1-825F-6C13F97846FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BA83DA9-D853-46A1-825F-6C13F97846FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BA83DA9-D853-46A1-825F-6C13F97846FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7EA504BC-FCE1-4DCD-96BD-25C53C9100D4} = {F682DCAC-EC47-4B39-9827-1FB9014C2262}
+		{519DC0B2-A363-4F62-9FC2-C3EC7A70ABEB} = {7EA504BC-FCE1-4DCD-96BD-25C53C9100D4}
+		{109F30D9-11A2-4A29-9517-2537429500E7} = {519DC0B2-A363-4F62-9FC2-C3EC7A70ABEB}
+		{BA780CD8-3673-4C09-8474-B363B786276B} = {109F30D9-11A2-4A29-9517-2537429500E7}
+		{5BA83DA9-D853-46A1-825F-6C13F97846FA} = {BA780CD8-3673-4C09-8474-B363B786276B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {52F2B2E3-73E4-43FB-A2AC-96C8C1BD1335}
+	EndGlobalSection
+EndGlobal

@@ -27,7 +27,7 @@ In this tutorial, you:
 
 ## Set up a connection  
 
-When creating reports in SQL Server Reporting Services (SSRS), establishing a data source is crucial. Follow these steps to set up a connection.
+When you create reports in SQL Server Reporting Services (SSRS), establishing a data source is crucial. Follow these steps to set up a connection.
 
 1. In the **Report Data** pane, select **New** > **Data Source**. If the **Report Data** pane isn't visible, then select **View** > **Report Data**.
 
@@ -60,7 +60,7 @@ When creating reports in SQL Server Reporting Services (SSRS), establishing a da
 
 1. Select **OK** to complete the process.
 
-Report Designer adds the AdventureWorks2022 data source to the **Report Data** pane.
+Report Designer adds the **AdventureWorks2022** data source to the **Report Data** pane.
 
 :::image type="content" source="media/lesson-2-specifying-connection-information-reporting-services/ssrs-adventureworks-datasource2022.png" alt-text="Screenshot of the Report Data pane that highlights the AdventureWorks2022 data source.":::
 

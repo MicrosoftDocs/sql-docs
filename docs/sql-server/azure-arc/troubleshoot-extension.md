@@ -31,7 +31,7 @@ resources
 
 To identify possible specific problems, review the value in the **Message** property from the query results.
 
-#### Identify unhealthy extension (PowerShell)
+## Identify unhealthy extension (PowerShell)
 
 This example runs in PowerShell. With PowerShell, you can run with dates that aren't hard coded. The example returns resource where the extension status is unhealthy, or the extension last upload time isn't in this month or the previous month.
 

@@ -26,7 +26,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 ## When to use a heap
 
-A heap is best for tables that are truncsated and reloaded. In a heap, deletes cause ghost records and scans that kill performance.
+A heap is best for tables that are truncated and reloaded. In a heap, deletes cause ghost records and scans that kill performance.
 
 When a table is stored as a heap, individual rows are identified by reference to an 8-byte row identifier (RID) consisting of the file number, data page number, and slot on the page (FileID:PageID:SlotID). The row ID is a small and efficient structure. 
 

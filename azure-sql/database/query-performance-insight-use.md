@@ -3,62 +3,64 @@ title: Query Performance Insight
 description: Query performance monitoring identifies the most CPU-consuming and long-running queries for single and pooled databases in Azure SQL Database.
 author: NikaKinska
 ms.author: nnikolic
-ms.reviewer: wiassaf, mathoma
-ms.date: 5/17/2022
+ms.reviewer: wiassaf, mathoma, randolphwest
+ms.date: 06/03/2024
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: how-to
-ms.custom: sqldbrb=1
+ms.custom:
+  - sqldbrb=1
 ---
 # Query Performance Insight for Azure SQL Database
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 Query Performance Insight provides intelligent query analysis for single and pooled databases. It helps identify the top resource consuming and long-running queries in your workload. This helps you find the queries to optimize to improve overall workload performance and efficiently use the resource that you are paying for. Query Performance Insight helps you spend less time troubleshooting database performance by providing:
 
-* Deeper insight into your databases resource (DTU) consumption
-* Details on top database queries by CPU, duration, and execution count (potential tuning candidates for performance improvements)
-* The ability to drill down into details of a query, to view the query text and history of resource utilization
-* Annotations that show performance recommendations from [database advisors](database-advisor-implement-performance-recommendations.md)
+- Deeper insight into your databases resource (DTU) consumption
+- Details on top database queries by CPU, duration, and execution count (potential tuning candidates for performance improvements)
+- The ability to drill down into details of a query, to view the query text and history of resource utilization
+- Annotations that show performance recommendations from [database advisors](database-advisor-implement-performance-recommendations.md)
 
-![Query Performance Insight](./media/query-performance-insight-use/opening-title.png)
+:::image type="content" source="media/query-performance-insight-use/opening-title.png" alt-text="Screenshot of the Query Performance Insight page in the Azure portal." lightbox="media/query-performance-insight-use/opening-title.png":::
 
 ## Prerequisites
 
 Query Performance Insight requires that [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store) is active on your database. It's automatically enabled for all databases in Azure SQL Database by default. If Query Store is not running, the Azure portal will prompt you to enable it.
 
-> [!NOTE]
+> [!NOTE]  
 > If the "Query Store is not properly configured on this database" message appears in the portal, see [Optimizing the Query Store configuration](#optimize-the-query-store-configuration).
 
 ## Permissions
 
 You need the following [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview) permissions to use Query Performance Insight:
 
-* **Reader**, **Owner**, **Contributor**, **SQL DB Contributor**, or **SQL Server Contributor** permissions are required to view the top resource-consuming queries and charts.
-* **Owner**, **Contributor**, **SQL DB Contributor**, or **SQL Server Contributor** permissions are required to view query text.
+- **Reader**, **Owner**, **Contributor**, **SQL DB Contributor**, or **SQL Server Contributor** permissions are required to view the top resource-consuming queries and charts.
+- **Owner**, **Contributor**, **SQL DB Contributor**, or **SQL Server Contributor** permissions are required to view query text.
 
 ## Use Query Performance Insight
 
 Query Performance Insight is easy to use:
 
 1. Open the [Azure portal](https://portal.azure.com/) and find a database that you want to examine.
-2. From the left-side menu, open **Intelligent Performance** > **Query Performance Insight**.
-  
-   ![Query Performance Insight on the menu](./media/query-performance-insight-use/tile.png)
+1. From the left-side menu, open **Intelligent Performance** > **Query Performance Insight**.
 
-3. On the first tab, review the list of top resource-consuming queries.
-4. Select an individual query to view its details.
-5. Open **Intelligent Performance** > **Performance recommendations** and check if any performance recommendations are available. For more information on built-in performance recommendations, see [Azure SQL Database Advisor](database-advisor-implement-performance-recommendations.md).
-6. Use sliders or zoom icons to change the observed interval.
+   :::image type="content" source="media/query-performance-insight-use/tile.png" alt-text="Screenshot of the Query Performance Insight in the Azure portal resource menu.":::
 
-   ![Performance dashboard](./media/query-performance-insight-use/performance.png)
+1. On the first tab, review the list of top resource-consuming queries.
+1. Select an individual query to view its details.
+1. Open **Intelligent Performance** > **Performance recommendations** and check if any performance recommendations are available. For more information on built-in performance recommendations, see [Azure SQL Database Advisor](database-advisor-implement-performance-recommendations.md).
+1. Use sliders or zoom icons to change the observed interval.
 
-> [!NOTE]
+   :::image type="content" source="media/query-performance-insight-use/performance.png" alt-text="Screenshot of the Performance dashboard in the Azure portal." lightbox="media/query-performance-insight-use/performance.png":::
+
+> [!NOTE]  
 > For Azure SQL Database to render the information in Query Performance Insight, Query Store needs to capture a couple hours of data. If the database has no activity or if Query Store was not active during a certain period, the charts will be empty when Query Performance Insight displays that time range. You can enable Query Store at any time if it's not running. For more information, see [Best practices with Query Store](/sql/relational-databases/performance/best-practice-with-the-query-store).
 >
 
 For database performance recommendations, select [Recommendations](database-advisor-implement-performance-recommendations.md) on the Query Performance Insight navigation pane.
 
-![The Recommendations tab](./media/query-performance-insight-use/ia.png)
+:::image type="content" source="media/query-performance-insight-use/ia.png" alt-text="Screenshot of the Recommendations tab in the Azure portal.":::
 
 ## Review top CPU-consuming queries
 
@@ -68,21 +70,21 @@ By default, Query Performance Insight shows the top five CPU-consuming queries w
 
    The top line shows overall DTU percentage for the database. The bars show CPU percentage that the selected queries consumed during the selected interval. For example, if **Past week** is selected, each bar represents a single day.
 
-   ![Top queries](./media/query-performance-insight-use/top-queries.png)
+   :::image type="content" source="media/query-performance-insight-use/top-queries.png" alt-text="Screenshot of the top queries in the Azure portal." lightbox="media/query-performance-insight-use/top-queries.png":::
 
-   > [!IMPORTANT]
+   > [!IMPORTANT]  
    > The DTU line shown is aggregated to a maximum consumption value in one-hour periods. It's meant for a high-level comparison only with query execution statistics. In some cases, DTU utilization might seem too high compared to executed queries, but this might not be the case.
-   >
+   >  
    > For example, if a query maxed out DTU to 100% for a few minutes only, the DTU line in Query Performance Insight will show the entire hour of consumption as 100% (the consequence of the maximum aggregated value).
-   >
+   >  
    > For a finer comparison (up to one minute), consider creating a custom DTU utilization chart:
-   >
+   >  
    > 1. In the Azure portal, select **Azure SQL Database** > **Monitoring**.
    > 2. Select **Metrics**.
    > 3. Select **+Add chart**.
    > 4. Select the DTU percentage on the chart.
    > 5. In addition, select **Last 24 hours** on the upper-left menu and change it to one minute.
-   >
+   >  
    > Use the custom DTU chart with a finer level of details to compare with the query execution chart.
 
    The bottom grid shows aggregated information for the visible queries:
@@ -92,32 +94,32 @@ By default, Query Performance Insight shows the top five CPU-consuming queries w
    * Duration per query, which also depends on the aggregation function.
    * Total number of executions for a specific query.
 
-2. If your data becomes stale, select the **Refresh** button.
+1. If your data becomes stale, select the **Refresh** button.
 
-3. Use sliders and zoom buttons to change the observation interval and investigate consumption spikes:
+1. Use sliders and zoom buttons to change the observation interval and investigate consumption spikes:
 
-   ![Sliders and zoom buttons for changing the interval](./media/query-performance-insight-use/zoom.png)
+   :::image type="content" source="media/query-performance-insight-use/zoom.png" alt-text="Screenshot of using sliders and zoom buttons to change the interval in the Azure portal." lightbox="media/query-performance-insight-use/zoom.png":::
 
-4. Optionally, you can select the **Custom** tab to customize the view for:
+1. Optionally, you can select the **Custom** tab to customize the view for:
 
    * Metric (CPU, duration, execution count).
    * Time interval (last 24 hours, past week, or past month).
    * Number of queries.
    * Aggregation function.
-  
-   ![Custom tab](./media/query-performance-insight-use/custom-tab.png)
-  
-5. Select the **Go >** button to see the customized view.
 
-   > [!IMPORTANT]
+   :::image type="content" source="media/query-performance-insight-use/custom-tab.png" alt-text="Screenshot of the custom tab in the Azure portal." lightbox="media/query-performance-insight-use/custom-tab.png":::
+
+1. Select the **Go >** button to see the customized view.
+
+   > [!IMPORTANT]  
    > Query Performance Insight is limited to displaying the top 5-20 consuming queries, depending on your selection. Your database can run many more queries beyond the top ones shown, and these queries will not be included on the chart.
-   >
+   >  
    > There might exist a database workload type in which lots of smaller queries, beyond the top ones shown, run frequently and use the majority of DTU. These queries don't appear on the performance chart.
-   >
+   >  
    > For example, a query might have consumed a substantial amount of DTU for a while, although its total consumption in the observed period is less than the other top-consuming queries. In such a case, resource utilization of this query would not appear on the chart.
-   >
+   >  
    > If you need to understand top query executions beyond the limitations of Query Performance Insight, consider using [Azure SQL Insights](/azure/azure-monitor/insights/sql-insights-overview) for advanced database performance monitoring and troubleshooting.
-   > 
+   >
 
 ## View individual query details
 
@@ -125,23 +127,23 @@ To view query details:
 
 1. Select any query in the list of top queries.
 
-    ![List of top queries](./media/query-performance-insight-use/details.png)
+    :::image type="content" source="media/query-performance-insight-use/details.png" alt-text="Screenshot that lists the top queries in the Azure portal." lightbox="media/query-performance-insight-use/details.png":::
 
    A detailed view opens. It shows the CPU consumption, duration, and execution count over time.
 
-2. Select the chart features for details.
+1. Select the chart features for details.
 
    * The top chart shows a line with the overall database DTU percentage. The bars are the CPU percentage that the selected query consumed.
    * The second chart shows the total duration of the selected query.
    * The bottom chart shows the total number of executions by the selected query.
 
-   ![Query details](./media/query-performance-insight-use/query-details.png)
+   :::image type="content" source="media/query-performance-insight-use/query-details.png" alt-text="Screenshot of the Query details in the Azure portal." lightbox="media/query-performance-insight-use/query-details.png":::
 
-3. Optionally, use sliders, use zoom buttons, or select **Settings** to customize how query data is displayed, or to pick a different time range.
+1. Optionally, use sliders, use zoom buttons, or select **Settings** to customize how query data is displayed, or to pick a different time range.
 
-   > [!IMPORTANT]
+   > [!IMPORTANT]  
    > Query Performance Insight does not capture any DDL queries. In some cases, it might not capture all ad hoc queries.
-   > 
+   >  
    > In case your database is scope locked with a read-only lock, query details pane will not be able to load.
    >
 
@@ -154,29 +156,29 @@ Long-running queries have the greatest potential for locking resources longer, b
 To identify long-running queries:
 
 1. Open the **Custom** tab in Query Performance Insight for the selected database.
-2. Change the metrics to **duration**.
-3. Select the number of queries and the observation interval.
-4. Select the aggregation function:
+1. Change the metrics to **duration**.
+1. Select the number of queries and the observation interval.
+1. Select the aggregation function:
 
    * **Sum** adds up all query execution time for the whole observation interval.
    * **Max** finds queries in which execution time was maximum for the whole observation interval.
    * **Avg** finds the average execution time of all query executions and shows you the top ones for these averages.
 
-   ![Query duration](./media/query-performance-insight-use/top-duration.png)
+   :::image type="content" source="media/query-performance-insight-use/top-duration.png" alt-text="Screenshot showing the query duration in the Azure portal." lightbox="media/query-performance-insight-use/top-duration.png":::
 
-5. Select the **Go >** button to see the customized view.
+1. Select the **Go >** button to see the customized view.
 
-   > [!IMPORTANT]
+   > [!IMPORTANT]  
    > Adjusting the query view does not update the DTU line. The DTU line always shows the maximum consumption value for the interval.
-   >
+   >  
    > To understand database DTU consumption with more detail (up to one minute), consider creating a custom chart in the Azure portal:
-   >
+   >  
    > 1. Select **Azure SQL Database** > **Monitoring**.
    > 2. Select **Metrics**.
    > 3. Select **+Add chart**.
    > 4. Select the DTU percentage on the chart.
    > 5. In addition, select **Last 24 hours** on the upper-left menu and change it to one minute.
-   >
+   >  
    > We recommend that you use the custom DTU chart to compare with the query performance chart.
    >
 
@@ -191,11 +193,11 @@ For example, many data-driven websites heavily access the database for every use
 To identify frequently executed ("chatty") queries:
 
 1. Open the **Custom** tab in Query Performance Insight for the selected database.
-2. Change the metrics to **execution count**.
-3. Select the number of queries and the observation interval.
-4. Select the **Go >** button to see the customized view.
+1. Change the metrics to **execution count**.
+1. Select the number of queries and the observation interval.
+1. Select the **Go >** button to see the customized view.
 
-   ![Query execution count](./media/query-performance-insight-use/top-execution.png)
+   :::image type="content" source="media/query-performance-insight-use/top-execution.png" alt-text="Screenshot showing the query execution count in the Azure portal." lightbox="media/query-performance-insight-use/top-execution.png":::
 
 ## Understand performance tuning annotations
 
@@ -203,11 +205,11 @@ While exploring your workload in Query Performance Insight, you might notice ico
 
 These icons are annotations. They show performance recommendations from [Azure SQL Database Advisor](database-advisor-implement-performance-recommendations.md). By hovering over an annotation, you can get summarized information on performance recommendations.
 
-   ![Query annotation](./media/query-performance-insight-use/annotation.png)
+   :::image type="content" source="media/query-performance-insight-use/annotation.png" alt-text="Screenshot of query annotation in the Azure portal.":::
 
 If you want to understand more or apply the advisor's recommendation, select the icon to open details of the recommended action. If this is an active recommendation, you can apply it right away from the portal.
 
-   ![Query annotation details](./media/query-performance-insight-use/annotation-details.png)
+   :::image type="content" source="media/query-performance-insight-use/annotation-details.png" alt-text="Screenshot showing query annotation details in the Azure portal.":::
 
 In some cases, due to the zoom level, it's possible that annotations close to each other are collapsed into a single annotation. Query Performance Insight represents this as a group annotation icon. Selecting the group annotation icon opens a new pane that lists the annotations.
 
@@ -217,14 +219,14 @@ Correlating queries and performance-tuning actions might help you to better unde
 
 While using Query Performance Insight, you might see the following Query Store error messages:
 
-* "Query Store is not properly configured on this database. Click here to learn more."
-* "Query Store is not properly configured on this database. Click here to change settings."
+- "Query Store is not properly configured on this database. Select here to learn more."
+- "Query Store is not properly configured on this database. Select here to change settings."
 
 These messages usually appear when Query Store can't collect new data.
 
 The first case happens when Query Store is in the read-only state and parameters are set optimally. You can fix this by increasing the size of the data store, or by clearing Query Store. (If you clear Query Store, all previously collected telemetry will be lost.)
 
-   ![Query Store details](./media/query-performance-insight-use/qds-off.png)
+   :::image type="content" source="media/query-performance-insight-use/qds-off.png" alt-text="Screenshot showing Query Store details in the Azure portal." lightbox="media/query-performance-insight-use/qds-off.png":::
 
 The second case happens when Query Store is not enabled, or parameters are not set optimally. You can change the retention and capture policy, and also enable Query Store, by running the following T-SQL commands provided [the Azure portal query editor](query-editor.md), [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), [Azure Data Studio](/azure-data-studio/download-azure-data-studio), [sqlcmd](/sql/tools/sqlcmd-utility), or the client tool of your choice.
 
@@ -232,14 +234,14 @@ The second case happens when Query Store is not enabled, or parameters are not s
 
 There are two types of retention policies:
 
-* **Size based**: If this policy is set to **AUTO**, it will clean data automatically when near maximum size is reached.
-* **Time based**: By default, this policy is set to 30 days. If Query Store runs out of space, it will delete query information older than 30 days.
+- **Size based**: If this policy is set to **AUTO**, it will clean data automatically when near maximum size is reached.
+- **Time based**: By default, this policy is set to 30 days. If Query Store runs out of space, it will delete query information older than 30 days.
 
 You can set the capture policy to:
 
-* **All**: Query Store captures all queries.
-* **Auto**: Query Store ignores infrequent queries and queries with insignificant compile and execution duration. Thresholds for execution count, compile duration, and runtime duration are internally determined. This is the default option.
-* **None**: Query Store stops capturing new queries, but runtime statistics for already captured queries are still collected.
+- **All**: Query Store captures all queries.
+- **Auto**: Query Store ignores infrequent queries and queries with insignificant compile and execution duration. Thresholds for execution count, compile duration, and runtime duration are internally determined. This is the default option.
+- **None**: Query Store stops capturing new queries, but runtime statistics for already captured queries are still collected.
 
 We recommend setting all policies to **AUTO** and the cleaning policy to 30 days by executing the following commands from [SSMS](/sql/ssms/download-sql-server-management-studio-ssms) or the Azure portal. (Replace `YourDB` with the database name.)
 
@@ -263,13 +265,14 @@ Increase the size of Query Store by connecting to a database through [SSMS](/sql
 
 Applying these settings will eventually make Query Store collect telemetry for new queries. If you need Query Store to be operational right away, you can optionally choose to clear Query Store by running the following query through SSMS or the Azure portal. (Replace `YourDB` with the database name.)
 
-> [!NOTE]
+> [!NOTE]  
 > Running the following query will delete all previously collected monitored telemetry in Query Store.
 
 ```SQL
     ALTER DATABASE [YourDB] SET QUERY_STORE CLEAR;
 ```
 
-## Next steps
+## Next step
 
-Consider using [Azure SQL Analytics](/azure/azure-monitor/insights/azure-sql) for advanced performance monitoring of a large fleet of single and pooled databases, elastic pools, managed instances, and instance databases.
+> [!div class="nextstepaction"]
+> [Azure SQL Analytics](/azure/azure-monitor/insights/azure-sql)

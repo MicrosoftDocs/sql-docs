@@ -10419,6 +10419,8 @@ items:
           href: sql-server/azure-arc/manage-availability-group.md
       - name: Secure
         items:
+        - name: Best practices
+          href: sql-server/azure-arc/secure-best-practices.md
         - name: Configure least privilege
           href: sql-server/azure-arc/configure-least-privilege.md
         - name: Configure advanced data Security

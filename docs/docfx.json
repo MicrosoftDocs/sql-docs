@@ -207,7 +207,8 @@
         "sql-server/azure-arc/**/*.md": "sql"
       },
       "ms.subservice": {
-        "sql-server/azure-arc/**/*.md": "azure-arc-sql-server"
+        "sql-server/azure-arc/**/*.md": "azure-arc-sql-server",
+        "sql-server/azure-arc/**/*.yml": "azure-arc-sql-server"       
       },
       "ms.custom": {
         "ado/*.md": "UpdateFrequency5",

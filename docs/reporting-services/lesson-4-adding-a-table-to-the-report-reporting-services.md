@@ -50,9 +50,9 @@ In this tutorial, you:
 
 1. Add the `LineTotal` field in the same way, creating a fifth column. The column label shows as "Line Total". Report Designer automatically creates a friendly name for the column by splitting "LineTotal" into two words.
 
-The following diagram shows a table data region populated with these fields: `Date`, `Order`, `Product`, `Qty`, and `Line Total`.
+    The following diagram shows a table data region populated with these fields: `Date`, `Order`, `Product`, `Qty`, and `Line Total`.
 
-:::image type="content" source="./media/rs-basictabledetailsdesign.png" alt-text="Diagram of a table data region populated with the fields: Date, Order, Product, Qty, and Line Total.":::
+    :::image type="content" source="./media/rs-basictabledetailsdesign.png" alt-text="Diagram of a table data region populated with the fields: Date, Order, Product, Qty, and Line Total.":::
 
 ## Preview your report
 

@@ -13,23 +13,13 @@ ms.custom: updatefrequency5
 
 # Tutorial: Create a report server project
 
-This tutorial is part of a six-step process that demonstrates how to create a SQL Server Reporting Services (SSRS) paginated report. You learn how to use the Report Designer tool in Visual Studio/SQL Server Data Tools (SSDT) to create a query table from data in the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.
+This tutorial is the first step in a six-step process that demonstrates how to create a SQL Server Reporting Services (SSRS) paginated report.
 
 In this tutorial, you:
 
 > [!div class="checklist"]
 > * Start a new report server project
 > * Create a Sales Orders report definition file (RDL)
-
-## Prerequisites
-
-Install or configure the following components and permissions:
-
-- [!INCLUDE[msconame-md](../includes/msconame-md.md)] SQL Server database engine.  
-- SQL Server 2016 Reporting Services or later (SSRS).
-- The [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database. For more information, see [Adventure Works Sample Databases](https://github.com/Microsoft/sql-server-samples/releases).
-- [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) for Visual Studio and the Reporting Services extension for access to the *Report Designer*.
-- Read-only permissions to retrieve data from the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.
 
 ## Create a report server project
 

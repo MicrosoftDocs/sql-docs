@@ -3,7 +3,7 @@ title: "Tutorial: Define a dataset for the table report"
 description: In this lesson, learn how to define a dataset for the Table Report (Reporting Services).
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/03/2024
+ms.date: 06/06/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: tutorial
@@ -29,7 +29,7 @@ To create a meaningful SSRS report, define a dataset by connecting to the [!INCL
 
 1. In the **Report Data** pane, select **New** > **Dataset...**. The **Dataset Properties** dialog opens with the **Query** section highlighted.
 
-    :::image type="content" source="media/lesson-3-defining-a-dataset-for-the-table-report-reporting-services/vs-dataset-properties-dialog.png" alt-text="Screenshot of the Dataset Properties dialog showing the query section.":::
+    :::image type="content" source="media/lesson-3-defining-a-dataset-for-the-table-report-reporting-services/vs-dataset-properties-dialog.png" alt-text="Screenshot of the Dataset Properties dialog showing the Query section.":::
 
 1. In the **Name** box, enter "AdventureWorksDataset".
 

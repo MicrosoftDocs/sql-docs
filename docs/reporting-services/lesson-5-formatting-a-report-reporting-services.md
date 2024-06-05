@@ -3,7 +3,7 @@ title: "Tutorial: Format a report (Reporting Services)"
 description: Learn how to format the date and currency fields and the column headers after you add a data region and some fields to the Sales Orders report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/04/2024
+ms.date: 06/06/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: tutorial

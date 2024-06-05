@@ -3,7 +3,7 @@ title: "Tutorial: Add a table to the report"
 description: Learn how to create a report layout by dragging and dropping report objects, like a table, from the Toolbox pane to the Design surface.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/04/2024
+ms.date: 06/06/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: tutorial

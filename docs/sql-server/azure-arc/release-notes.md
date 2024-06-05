@@ -4,7 +4,7 @@ description: Latest release notes for SQL Server enabled by Azure Arc
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 05/04/2024
+ms.date: 06/11/2024
 ms.topic: conceptual
 ms.custom: ignite-2023
 ---
@@ -22,14 +22,20 @@ This article lists:
 
 Extension versions are cumulative. Higher extension versions include all of the updates from previous versions. A release may include internal features. If the version release notes don't describe features, then the updates were internal.
 
-## May 28, 2024
+## June  11, 2024
 
-**Extension version**: `1.1.2692.171`
+**Extension version**: `1.1.2710.185`
 
-### Failover cluster instances
+### Business continuity
 
-- Support for availability groups is now generally available.
-- Failover cluster instance in portal shows instance name, instance type, network name, active node, and passive nodes.
+- Support for availability groups is now generally available, including manual failover. For details, review [Always On availability groups inventory and status](manage-availability-group.md).
+- Failover cluster instance in portal shows instance name, instance type, network name, active node, and passive nodes. For details, review [View Always On failover cluster instances in Azure Arc](support-for-fci.md).
+
+### Migration
+
+Run assessment on demand (preview): The SQL Server migration assessment runs every Sunday around 11:00 PM. Beginning with this release, you can initiate the SQL Server migration assessment whenever you want. This immediate assessment shows readiness evaluations and Azure SQL configuration assessments right away.
+
+[Configure SQL best practices assessment - SQL Server enabled by Azure Arc](assess.md)
 
 ## May 15, 2024
 

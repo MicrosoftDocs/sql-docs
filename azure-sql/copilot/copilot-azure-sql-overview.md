@@ -4,7 +4,7 @@ description: "Learn more about the possibilities of Microsoft Copilot in Azure f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: josephsack
-ms.date: 05/15/2024
+ms.date: 06/05/2024
 ms.service: sql-database
 ms.subservice: ai-copilot
 ms.collection: ce-skilling-ai-copilot
@@ -96,9 +96,11 @@ You can provide prompts for the **Microsoft Copilot in Azure** around different 
 | General Anti-Pattern Information    | Provides general information about common SQL anti-patterns.| `What are the most common SQL anti-patterns?` |
 | Get Database Names for Server  | Lists all databases on a specific server.| `List all the databases on this server.`  |
 | High CPU Consuming Query Analysis  | Identifies and analyzes queries with high CPU usage.  | `Why is the CPU usage high on this database?`|
+| High IO troubleshooting  | Checks if the database is experiencing high I/O.  | `Is my database experiencing high I/O?`|
 | Index Listing | Shows all indexes in the database.  | `What are all the indexes?`  |
 | Index Recommendations for Specific Table| Provides index recommendations for one or more tables.| `Should I add an index on this table?` |
 | Latest Backup Information| Provides information about the most recent database backup.  | `When was the most recent backup of my database created?`|
+| Low Storage Space Troubleshooting| Provides suggestions to free up space in the database.  | `Is there a way I can free up space in my database?`|
 | MAXDOP Optimization| Analyzes and suggests optimizations for the MAXDOP setting. | `What's the current MAXDOP and how to optimize?`   |
 | Memory Grant Analysis   | Analyzes memory grant issues and potential causes.   | `Why am I having memory grant issues?`| 
 | Missing Index Suggestions  | Suggests missing indexes to improve query performance.  | `Missing index suggestion for improving query performance?`   |
@@ -120,6 +122,11 @@ You can provide prompts for the **Microsoft Copilot in Azure** around different 
 | Related Documentation  | Provides links to relevant documentation based on the user's query.   | `What does database compatibility level mean?`    |
 | Resource Usage Analysis | Analyzes resource usage and potential bottlenecks.   | `Is the database hitting resource limits? Which limits?`  |
 | Table Listing | Lists all tables in the database.   | `What are the names of all the tables?`| 
+| Troubleshoot error 18456 | Helps with SQL error 18456.   | `Help me with SQL error 18456`| 
+| Troubleshoot error 40615 | Helps with SQL error 40615.   | `Help me with SQL error 40615`| 
+| Troubleshoot Connection Errors | Checks for causes of connection timeouts.   | `Check for causes of connection timeouts in my database`| 
+| Troubleshoot Login Failures | Diagnoses login failure issues.   | `Why can't I login to my database?`| 
+| Troubleshoot Query Timeout | Addresses query timeout issues.   | `Help me with query timeout issues`| 
 | Wait Statistics Analysis| Analyzes wait statistics and potential performance bottlenecks.| `What do the wait statistics look like for my database?`| 
 | Workload Increase and Scaling Analysis  | Assesses workload increases and potential need for scaling.| `Has increased workload or traffic caused performance issues?`|
 

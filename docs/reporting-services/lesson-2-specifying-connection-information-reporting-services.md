@@ -35,13 +35,13 @@ When you create reports in SQL Server Reporting Services (SSRS), establishing a 
 
     The **Data Source Properties** dialog opens with the **General** section selected.
 
-    :::image type="content" source="media/lesson-2-specifying-connection-information-reporting-services/vs-datasource-connection-properties-dialog-box.png" alt-text="Screenshot of the Data Source Properties dialog." lightbox="media/lesson-2-specifying-connection-information-reporting-services/vs-datasource-connection-properties-dialog-box.png":::
+    :::image type="content" source="media/lesson-2-specifying-connection-information-reporting-services/vs-datasource-connection-properties-dialog-box.png" alt-text="Screenshot of the Data Source Properties dialog.":::
 
 1. In the **Name** box, enter "AdventureWorks2022".
 
 1. Select the **Embedded connection** option.
 
-1. In the **Type** list, select "Microsoft SQL Server".
+1. In the **Type** list, select **Microsoft SQL Server**.
   
 1. In the **Connection string** box, enter the following string:
 

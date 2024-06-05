@@ -43,7 +43,7 @@ Install or configure the following components and permissions:
 
 ## Related content
 
-- [Step 1: Create a report server project &#40;Reporting Services&#41;](tutorial-step01-creating-a-report-server-project-reporting-services.md)
+- [Step 1: Create a report server project &#40;Reporting Services&#41;](tutorial-step-01-creating-report-server-project-reporting-services.md)
 - [Step 2: Specify connection information &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)
 - [Step 3: Define a dataset for the table report &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)
 - [Step 4: Add a table to the report &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)

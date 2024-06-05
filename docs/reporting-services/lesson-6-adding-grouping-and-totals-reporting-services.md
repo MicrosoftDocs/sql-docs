@@ -3,7 +3,7 @@ title: "Tutorial: Add grouping and totals (Reporting Services)"
 description: Learn how to add grouping and totals to your Reporting Services report to organize and summarize your data.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 04/18/2019
+ms.date: 06/06/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: tutorial
@@ -23,6 +23,8 @@ In this tutorial, you:
 > * Format grouped data and totals for better readability
 
 ## Group data in a report
+
+You can group data in your SQL Server Reporting Services (SSRS) report. Grouping data helps organize related rows of data into sections, making your report easier to read and interpret.
 
 1. Select the **Design** tab.
 2. If you don't see the **Row Groups** pane, right-click the design surface and select **View** >**Grouping**.
@@ -54,6 +56,8 @@ In this tutorial, you:
 
 ## Add totals to a report
 
+You can add totals to your SSRS report to summarize data. Adding totals helps you quickly understand aggregate values and enhance the report's usability.
+
 1. Switch to the **Design** view.
 2. Right-click the data region cell that contains the `[LineTotal]` expression, and select **Add Total**. Report Designer adds a row with a sum of the dollar amount for each order.
 3. Right-click the cell that contains the field `[Qty]`, and select **Add Total**. Report Designer adds a sum of the quantity for each order to the totals row.
@@ -66,6 +70,8 @@ In this tutorial, you:
 
 ## Add the daily total to the report
 
+Here, you learn how to add a daily total to your report. This step provides a daily summary at the end of each date grouping and helps you quickly identify daily aggregates within your report.
+
 1. Right-click the `[Order]`expression cell, and select **Add Total** > **After**. Report Designer adds a new row containing sums of the `[Qty]` and `[Linetotal]` values for each day, and the string "Total" to the bottom of the `[Order]`expression column.
 2. Enter the word "Daily" before the word "Total" in the same cell, so it reads "Daily Total".
 3. Select that cell and the two adjacent total cells to the right side and the empty cell in between them.
@@ -75,6 +81,8 @@ In this tutorial, you:
     :::image type="content" source="media/rs-basictablesumdaytotaldesign.gif" alt-text="Screenshot of the formatted table with the daily total.":::
 
 ## Add the grand total to the report
+
+You can add a grand total to your report to summarize all the data across the entire report. A grand total provides a comprehensive summary and makes it easier to understand the overall data at a glance.
 
 1. Right-click the `[Date]` expression cell, and select **Add Total** > **After**. Report Designer adds a new row containing sums of the `[Qty]` and `[LineTotal]` values for the entire report, and the string "Total" to the bottom of the `[Date]` expression column.
 2. Enter the string "Grand" before the word "Total" in the same cell, so it reads "Grand Total".
@@ -86,15 +94,18 @@ In this tutorial, you:
 
 ## Preview the report
 
-To preview the format changes, select the **Preview** tab. In the **Preview** toolbar, choose the **Last Page** button, which looks like :::image type="icon" source="media/ssrs-ssdt-viewertoolbar-lastpage.png"::: The results should display as shown in the following image:
+By switching to the **Preview** tab, you can view the report as it appears when published. This step allows you to check for any errors or adjustments needed in the grouping, totals, and formatting before finalizing the report.
+
+1. Select the **Preview** tab. 
+1. In the **Preview** toolbar, choose **Last Page**, which looks like :::image type="icon" source="media/ssrs-ssdt-viewertoolbar-lastpage.png"::: The results should display as shown in the following image:
 
 :::image type="content" source="./media/rs-basictablesumgrandtotalpreview.gif" alt-text="Screenshot of the full preview for the formatted table.":::
 
 ## Publish the report to the *Report Server* (Optional)
 
-An optional step is to publish the completed report to the Report Server so you can view the report in the web portal.
+You can publish your completed report to the Report Server. This process is optional and involves configuring the report properties, setting the target server URL, and deploying the report. This step is crucial for making your report available to a broader audience through the web portal and ensuring the informtion is easily accessible.
 
-1. Select **Project** menu > **Tutorial Properties...**
+1. Select **Project** menu > **Tutorial Properties...**.
 2. In the **TargetServerURL**, enter the name of your report server, for example:
     - `http:/<servername>/reportserver` or
     - `https://localhost/reportserver` works if you're designing the report on the report server.

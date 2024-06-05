@@ -6,7 +6,7 @@ ms.author: maggies
 ms.date: 06/04/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
-ms.topic: conceptual
+ms.topic: tutorial
 ms.custom: updatefrequency5
 #customer intent: As a SQL Server user, I want to format date and currency fields and adjust text styles and column widths in SQL Server Data Tools (SSDT) so that my report is more easily readable.
 
@@ -72,15 +72,18 @@ You can add other formatting to your report by highlighting the header row, and 
 
 1. Select the row containing column header labels and from the **Format** menu, choose **Font** > **Bold**.
 
-1. Preview your report. It should display as shown in the following image:
+1. Preview your report. It should appear as shown in the following image:
 
     :::image type="content" source="media/rs-basictabledetailsformattedpreview.png" alt-text="Screenshot of a table preview with bold column headers.":::
 
 1. From the **File** menu, select **Save All** to save the report.
 
+You have successfully formatted column headers and field expressions. Next, you're going to add grouping and totals to your report.
+
 ## Next step
 
-In this lesson, you successfully formatted column headers and field expressions. Next, you're going to add grouping and totals to your report. Continue with [Lesson 6: Add Grouping and Totals &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md).
+> [!div class="nextstepaction"]
+> [Tutorial: Add Grouping and Totals &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)
 
 ## Related content
 

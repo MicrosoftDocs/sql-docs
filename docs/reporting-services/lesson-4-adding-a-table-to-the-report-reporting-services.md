@@ -6,7 +6,7 @@ ms.author: maggies
 ms.date: 06/04/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
-ms.topic: conceptual
+ms.topic: tutorial
 ms.custom: updatefrequency5
 #customer intent: As a SQL Server user, I want to add a table data region and fields to a report layout using SQL Server Data Tools (SSDT) so that I can effectively design and preview my reports.
 ---
@@ -24,6 +24,8 @@ In this tutorial, you:
 > * Preview your report to validate design and data connections
 
 ## Add a table data region and fields to a report layout
+
+Here, you add a table data region to your report layout and populate it with fields from your dataset to display organized data.
 
 1. Select the **Toolbox** tab in the left pane of the Report Designer. If you don't see the **Toolbox** tab, select **View** menu > **Toolbox**.
 
@@ -56,7 +58,7 @@ In this tutorial, you:
 
 ## Preview your report
 
-Previewing a report enables you to view the rendered report without having to first publish it to a report server. Preview your report frequently while designing it. By doing so, you validate the design and data connections allowing you to correct errors and issues as you go.
+Preview your report frequently while designing it. By doing so, you validate the design and data connections allowing you to correct errors and issues as you go.
 
 1. Select the **Preview** tab. Report Designer runs the report and displays it in the **Preview** view.
 

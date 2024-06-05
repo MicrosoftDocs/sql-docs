@@ -6,7 +6,7 @@ ms.author: maggies
 ms.date: 06/03/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
-ms.topic: conceptual
+ms.topic: tutorial
 ms.custom: updatefrequency5
 #customer intent: As a SQL server user, I want to use SQL Server Data Tools (SSDT) to define a dataset so that I can generate a table report.
 

@@ -46076,6 +46076,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/2014/2014-toc/books-online-for-sql-server-2014.md",
+      "redirect_url": "/sql/2014-toc/index?view=sql-server-2014",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/integration-services/catalog/browse-all-principals-dialog-box.md",
       "redirect_url": "/sql/integration-services/catalog/ssis-catalog",
       "redirect_document_id": false

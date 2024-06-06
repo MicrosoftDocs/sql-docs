@@ -162,7 +162,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 
 <sup>3</sup> Witness only
 
-<sup>4</sup> On Enterprise edition, the number of nodes is 16. On Standard edition there is support for two nodes.
+<sup>4</sup> On Enterprise edition, the maximum number of nodes is 16. On Standard edition there is support for two nodes.
 
 <sup>5</sup> On Enterprise edition, provides support for up to 8 secondary replicas - including 5 synchronous secondary replicas.
 

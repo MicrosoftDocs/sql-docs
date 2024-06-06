@@ -157,7 +157,7 @@ $p = 'my data';
 $statement->bindParam(':myVarcharValue', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCODING_SYSTEM);
 ```
 
-## Prepare example
+## <a id="emulate-prepare"></a> Prepare example
 
 This example shows how to use PDO::prepare with `PDO::ATTR_EMULATE_PREPARES` set to true.
 

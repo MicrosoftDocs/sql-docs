@@ -4274,40 +4274,47 @@ items:
         href: relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md
       - name: Work with Server Events
         href: relational-databases/wmi-provider-server-events/working-with-the-wmi-provider-for-server-events.md
-- name: Internals & Architecture
+- name: Internals & architecture
   href: relational-databases/sql-server-guides.md
   items:
   - name: Ghost record cleanup process
     href: relational-databases/ghost-record-cleanup-process-guide.md
-  - name: Index Architecture & Design
+  - name: Index architecture & design
     href: relational-databases/sql-server-index-design-guide.md
-  - name: Pages & Extents Architecture
-    href: relational-databases/pages-and-extents-architecture-guide.md
+  - name: Pages & extents architecture
     items:
+    - name: Overview
+      href: relational-databases/pages-and-extents-architecture-guide.md
     - name: Reading pages
       href: relational-databases/reading-pages.md
     - name: Writing pages
       href: relational-databases/writing-pages.md
-  - name: Post-migration Validation & Optimization
+  - name: Post-migration validation & optimization
     href: relational-databases/post-migration-validation-and-optimization-guide.md
-  - name: Query Processing Architecture
+  - name: Query processing architecture
     href: relational-databases/query-processing-architecture-guide.md
-  - name: Thread & Task Architecture
+  - name: Thread & task architecture
     href: relational-databases/thread-and-task-architecture-guide.md
-  - name: Transaction Log Architecture & Management Guide
+  - name: Transaction log architecture & management guide
     href: relational-databases/sql-server-transaction-log-architecture-and-management-guide.md
-  - name: Transaction Locking & Row Versioning Guide
+  - name: Transaction locking & row versioning guide
     href: relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
   - name: Optimized locking
     href: relational-databases/performance/optimized-locking.md
   - name: Deadlocks guide
     href: relational-databases/sql-server-deadlocks-guide.md
-  - name: Memory Management Architecture
+  - name: Memory management architecture
     href: relational-databases/memory-management-architecture-guide.md
   - name: Diagnosing latch contention
     href: relational-databases/diagnose-resolve-latch-contention.md
   - name: Diagnosing spinlock contention
     href: relational-databases/diagnose-resolve-spinlock-contention.md
+  - name: Database connection network trace
+    items:
+    - name: Trace a network authentication sequence
+      href: relational-databases/database-engine-connection-open-network-trace.md
+    - name: Trace a network connection close sequence
+      href: relational-databases/database-engine-connection-close-network-trace.md
 - name: Installation
   items:
   - name: Overview

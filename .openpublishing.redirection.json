@@ -33572,32 +33572,32 @@
     },
     {
       "source_path": "docs/reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md",
-      "redirect_url": "/sql/reporting-services/tutorial-step-01-creating-report-server-project-reporting-services",
+      "redirect_url": "/sql/reporting-services/tutorial-step-01-create-report-server-project-reporting-services",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/reporting-services/lesson-2-specifying-connection-information-reporting-services.md",
-      "redirect_url": "/sql/reporting-services/tutorial-step-02-specifying-connection-information-reporting-services",
+      "redirect_url": "/sql/reporting-services/tutorial-step-02-specify-connection-information-reporting-services",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md",
-      "redirect_url": "/sql/reporting-services/tutorial-step-03-defining-a-dataset-for-the-table-report-reporting-services",
+      "redirect_url": "/sql/reporting-services/tutorial-step-03-define-dataset-for-table-report-reporting-services",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md",
-      "redirect_url": "/sql/reporting-services/tutorial-step-04-adding-a-table-to-the-report-reporting-services",
+      "redirect_url": "/sql/reporting-services/tutorial-step-04-add-table-to-the-report-reporting-services",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/reporting-services/lesson-5-formatting-a-report-reporting-services.md",
-      "redirect_url": "/sql/reporting-services/tutorial-step-05-formatting-a-report-reporting-services",
+      "redirect_url": "/sql/reporting-services/tutorial-step-05-format-report-reporting-services",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md",
-      "redirect_url": "/sql/reporting-services/tutorial-step-06-adding-grouping-and-totals-reporting-services",
+      "redirect_url": "/sql/reporting-services/tutorial-step-06-add-grouping-and-totals-reporting-services",
       "redirect_document_id": false
     },
     {

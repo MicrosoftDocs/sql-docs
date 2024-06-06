@@ -26,7 +26,7 @@ In this tutorial, you:
 
 The Date field expression displays date and time information by default. You can format it to display only the date.
 
-1. On the **Design** tab, right-click the cell with the `Date` field expression and then select **Text Box Properties**.
+1. On the **Design** tab, right-click the cell with the `[Date]` field expression and then select **Text Box Properties**.
 
 1. Select **Number**, and then choose **Date** from the **Category** box.
 
@@ -36,13 +36,13 @@ The Date field expression displays date and time information by default. You can
 
 1. Select **OK** to apply the format.
 
-1. Preview the report to see the change to the `Date` field formatting, and then change back to design view.
+1. Preview the report to see the change to the `[Date]` field formatting, and then change back to design view.
 
 ## Format the currency
 
-The `LineTotal` field expression displays a general number. You can format it to display the number as currency.
+The `[LineTotal]` field expression displays a general number. You can format it to display the number as currency.
 
-1. Right-click the cell with the `LineTotal` expression, and select **Text Box Properties**.
+1. Right-click the cell with the `[LineTotal]` expression, and select **Text Box Properties**.
 
 1. Select **Number**, and then choose **Currency** from the **Category** list box.
 
@@ -58,7 +58,7 @@ The `LineTotal` field expression displays a general number. You can format it to
 
 1. Select **OK** to apply the format.
 
-1. Preview the report to see the change to the `LineTotal` expression column and then change back to design view.  
+1. Preview the report to see the change to the `[LineTotal]` expression column and then change back to design view.  
 
 ## Change text style and column widths
 

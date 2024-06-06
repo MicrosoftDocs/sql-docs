@@ -23,6 +23,7 @@ In this tutorial, you:
 
 ## Prerequisites
 
+* Report server and associated report definition file exist in your local environment.
 * Ensure the database is located in the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] and installed on your local computer.  
 
 ## Set up a connection  

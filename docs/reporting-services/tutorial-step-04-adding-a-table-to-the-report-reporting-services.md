@@ -12,7 +12,7 @@ ms.custom: updatefrequency5
 ---
 # Tutorial: Add a table to the report (Reporting Services)
 
-After you define the dataset, you can start designing the paginated report. You create a report layout by dragging and dropping *report objects* from the **Toolbox** pane to the **Design surface**. 
+After you define the dataset, you can start designing the paginated report. You create a report layout by dragging and dropping report objects from the **Toolbox** pane to the **Design surface**. 
 
 Items that contain repeated rows of data from underlying datasets are called *data regions*. After you add a data region, you can add fields to the data region. A basic report has only one data region. You can add extras to display more information such as a chart.
 
@@ -23,17 +23,21 @@ In this tutorial, you:
 > * Populate the table with fields from the dataset
 > * Preview your report to validate design and data connections
 
+## Prerequisites
+
+* You have a defined dataset and Transact-SQL query for your report data.
+
 ## Add a table data region and fields to a report layout
 
 Here, you add a table data region to your report layout and populate it with fields from your dataset to display organized data.
 
 1. Select the **Toolbox** tab in the left pane of the Report Designer. If you don't see the **Toolbox** tab, select **View** menu > **Toolbox**.
 
-1. Choose the **Table** object and drag it to the report design surface. Report Designer draws a table data region with three columns in the center of the design surface. 
+1. Choose the **Table** object and drag it to the report design surface. You can also add a table to the report from the design surface. Right-click the design surface and select **Insert** > **Table**.
 
     :::image type="content" source="media/ssrs-ssdt-addtable.png" alt-text="Screenshot of the Toolbox tab with the Table option selected.":::
 
-    You can also add a table to the report from the design surface. Right-click the design surface and select **Insert** > **Table**.
+    Report Designer draws a table data region with three columns in the center of the design surface.
 
 1. In the **Report Data** pane, expand **AdventureWorksDataset** to display the fields.
 
@@ -70,7 +74,7 @@ Preview your report frequently while designing it. By doing so, you validate the
 
 1. Look at the Date and Line Total values. In the next lesson, you're going to learn how to format them to display more neatly.
 
-1. From the **File** menu, select **Save All** to save the report.
+1. Select **File** > **Save All** to save the report.
 
 You successfully added a table data region to your report, added fields to the data region, and previewed your report.
 

@@ -22,9 +22,13 @@ In this tutorial, you:
 > * Format the currency field to display as currency
 > * Change text style and adjust column widths for better readability
 
+## Prerequisites
+
+* Your report has a data table region and fields defined.
+
 ## Format the date
 
-The Date field expression displays date and time information by default. You can format it to display only the date.
+The `[Date]` field expression displays date and time information by default. You can format it to display only the date.
 
 1. On the **Design** tab, right-click the cell with the `[Date]` field expression and then select **Text Box Properties**.
 
@@ -48,9 +52,9 @@ The `[LineTotal]` field expression displays a general number. You can format it 
 
 1. If your regional setting is English (United States), the defaults in the **Type** list box should be:
 
-    - **Decimal places: 2**
-    - **Negative numbers: ($12345.00)**
-    - **Symbol: $ English (United States)**
+    - Decimal places: 2
+    - Negative numbers: ($12345.00)
+    - Symbol: $ English (United States)
 
 1. Select **Use 1000 separator (,)**. If the sample text displays **$12,345.00**, then your settings are correct.
 
@@ -70,7 +74,7 @@ You can add other formatting to your report by highlighting the header row, and 
 
     :::image type="content" source="media/rs-basictabledetailsdesignarrow.png" alt-text="Screenshot of a table showing the double arrow cursor between two columns.":::
 
-1. Select the row containing column header labels and from the **Format** menu, choose **Font** > **Bold**.
+1. Highlight the row containing column header labels and then select **Format** > **Font** > **Bold**.
 
 1. Preview your report. It should appear as shown in the following image:
 

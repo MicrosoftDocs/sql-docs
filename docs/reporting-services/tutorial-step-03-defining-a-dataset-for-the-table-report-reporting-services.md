@@ -23,6 +23,10 @@ In this tutorial, you:
 > * Define a dataset for the table report
 > * Create a Transact-SQL query to retrieve sales order information
 
+## Prerequisites
+
+* You have a defined data source and configured connection information for your report.
+
 ## Define a Transact-SQL query for report data  
 
 To create a meaningful SSRS report, define a dataset by connecting to the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)]  database, creating a Transact-SQL query, and configuring dataset properties for efficient data retrieval and reporting.
@@ -66,7 +70,7 @@ To create a meaningful SSRS report, define a dataset by connecting to the [!INCL
 
 1. (Optional) Select **Query Designer**. The query appears in the text-based *Query Designer*. View the results of the query by selecting the **run** button (:::image type="icon" source="media/ssrs-querydesigner-run.png":::) on the **Query Designer** toolbar. The dataset displayed contains six fields from four tables in the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database. The query makes use of Transact-SQL functionality such as aliases. For example, the SalesOrderHeader table is called `soh`.
 
-1. Select **OK** to exit the **Query Designer**.
+1. Select **OK** to exit the Query Designer.
 
 1. Select **OK** to exit the **Dataset Properties** dialog. The **Report Data** pane displays the AdventureWorksDataset dataset and fields.
 

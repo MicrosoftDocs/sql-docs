@@ -22,6 +22,10 @@ In this tutorial, you:
 > * Add totals to summarize data at different levels
 > * Format grouped data and totals for better readability
 
+## Prerequisites
+
+* You have a dataset defined for your report.
+
 ## Group data in a report
 
 You can group data in your SQL Server Reporting Services (SSRS) report. Grouping data helps organize related rows of data into sections, making your report easier to read and interpret.

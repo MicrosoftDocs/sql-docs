@@ -104,7 +104,7 @@ You also modify the dataset and report to use a parameter to filter the report o
   
 ## <a name="bkmk_redeploy"></a>Redeploy the report  
   
-1.  Redeploy the report so the subscription configuration in the next lesson can utilize the changes you made in this lesson. For more information on the project properties used in the table tutorial, see section 'To Publish the Report to the Report Server (Optional)' of [Lesson 6: Adding grouping and totals &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+1.  Redeploy the report so the subscription configuration in the next lesson can utilize the changes you made in this lesson. For more information on the project properties used in the table tutorial, see section 'To Publish the Report to the Report Server (Optional)' of [Lesson 6: Adding grouping and totals &#40;Reporting Services&#41;](../reporting-services/tutorial-step-06-adding-grouping-and-totals-reporting-services.md).  
   
 2.  On the toolbar, select **Build** and then choose **Deploy tutorial**.  
   

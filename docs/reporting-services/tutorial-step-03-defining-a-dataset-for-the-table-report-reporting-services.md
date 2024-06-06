@@ -77,7 +77,7 @@ You successfully specified a query that retrieves data for your report.
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Step 4: Add a table to the report &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)
+> [Step 4: Add a table to the report &#40;Reporting Services&#41;](tutorial-step-04-adding-a-table-to-the-report-reporting-services.md)
 
 ## Related content
 

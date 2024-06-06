@@ -77,7 +77,7 @@ You successfully added a table data region to your report, added fields to the d
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Step 5: Format a report &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)
+> [Step 5: Format a report &#40;Reporting Services&#41;](tutorial-step-05-formatting-a-report-reporting-services.md)
   
 ## Related content
 

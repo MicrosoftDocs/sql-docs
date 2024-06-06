@@ -33576,6 +33576,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/reporting-services/lesson-2-specifying-connection-information-reporting-services.md",
+      "redirect_url": "/sql/reporting-services/tutorial-step-02-specifying-connection-information-reporting-services.md",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md",
       "redirect_url": "/previous-versions/sql/2014/reporting-services/lesson-1-creating-a-report-server-project-reporting-services",
       "redirect_document_id": false

@@ -67,4 +67,4 @@ Report Designer adds the **AdventureWorks2022** data source to the **Report Data
 ## Next step 
 
 > [!div class="nextstepaction"]
-> [Step 3: Define a dataset for the table report &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)
+> [Step 3: Define a dataset for the table report &#40;Reporting Services&#41;](tutorial-step-03-defining-a-dataset-for-the-table-report-reporting-services.md)

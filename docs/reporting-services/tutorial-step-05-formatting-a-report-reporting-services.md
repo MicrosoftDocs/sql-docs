@@ -83,7 +83,7 @@ You have successfully formatted column headers and field expressions. Next, you'
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Step 6: Add Grouping and Totals &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)
+> [Step 6: Add Grouping and Totals &#40;Reporting Services&#41;](tutorial-step-06-adding-grouping-and-totals-reporting-services.md)
 
 ## Related content
 

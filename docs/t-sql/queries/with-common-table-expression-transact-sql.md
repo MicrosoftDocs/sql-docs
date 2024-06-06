@@ -161,7 +161,7 @@ The current implementation of CTEs in [!INCLUDE[ssazuresynapse-md](../../include
 
 - Multiple CTE query definitions can be defined in a CTE.
 
-- A CTE must be followed by a single `SELECT` statement. `INSERT`, `UPDATE`, `DELETE`, and `MERGE` statements aren't supported.
+- A CTE can be followed by `SELECT`, `INSERT`, `UPDATE`, `DELETE`, or `MERGE` statements.  
 
 - A common table expression that includes references to itself (a recursive common table expression) isn't supported.
 

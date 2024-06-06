@@ -33,7 +33,7 @@ dotnet tool install -g microsoft.sqlpackage --version 162.3.563
 ### Features
 |Feature|Details|
 |:---|:---|
-|Microsoft Fabric|Adds preview support for the target platform `SqlDbFabricSchemaProvider`, representing Microsoft Fabric mirrored SQL databases. The [data types supported](../../t-sql/statements/create-external-table-as-select-transact-sql.md#supported-data-types) in this target platform are limited to those supported for mirroring to Microsoft Fabric.|
+|Microsoft Fabric|Adds preview support for the target platform `SqlDbFabricDatabaseSchemaProvider`, representing Microsoft Fabric mirrored SQL databases. The [data types supported](../../t-sql/statements/create-external-table-as-select-transact-sql.md#supported-data-types) in this target platform are limited to those supported for mirroring to Microsoft Fabric.|
 |Platform|References [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.1.5) v5.1.5.|
 |ScriptDOM|References [ScriptDOM 161.9109](https://github.com/microsoft/SqlScriptDOM/blob/main/release-notes/161.91/161.9109.0.md).|
 

@@ -43,7 +43,7 @@ The following diagram illustrates the basic workflow of the tutorial:
 
 -   An edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] installed on your local computer that supports data-driven subscriptions. For more information, see [Editions and supported features of SQL Server 2022](../sql-server/editions-and-components-of-sql-server-2022.md).
   
--   The report server must be running in native mode. The user interface described in this tutorial is based on a native mode report server. Subscriptions are supported on SharePoint mode report servers but the user interface will be different than what is described in this tutorial.  
+-   The report server must be running in native mode. The user interface described in this tutorial is based on a native mode report server. Subscriptions are supported on SharePoint mode report servers but the user interface is different than what is described in this tutorial.  
   
 -   SQL Server Agent service must be running.  
   
@@ -55,7 +55,7 @@ The following diagram illustrates the basic workflow of the tutorial:
   
 -   A shared folder for which you have write permissions. The shared folder must be accessible over a network connection.  
   
-**Estimated time to complete the tutorial:** 30 minutes. An additional 30 minutes if you haven't completed the basic report tutorial.  
+**Estimated time to complete the tutorial:** 30 minutes. An extra 30 minutes if you need to complete the basic report tutorial.  
   
 ## Related content
 

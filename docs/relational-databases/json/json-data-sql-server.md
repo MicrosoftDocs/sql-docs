@@ -56,7 +56,7 @@ The next sections discuss the key capabilities that [!INCLUDE [ssnoversion-md](.
 
 ### JSON data type
 
-The new **JSON** data type that stores JSON documents in a native binary format that provides the following benefits over storing JSON data in **varchar**/**nvarchar**:
+The new **json** data type that stores JSON documents in a native binary format that provides the following benefits over storing JSON data in **varchar**/**nvarchar**:
 
 - More efficient reads, as the document is already parsed
 - More efficient writes, as the query can update individual values without accessing the entire document
@@ -66,7 +66,7 @@ The new **JSON** data type that stores JSON documents in a native binary format 
 > [!NOTE]
 > - Currently, the [JSON data type](../../t-sql/data-types/json-data-type.md) is available in Azure SQL Database.
 
-Using the JSON same functions described in this article remain the most efficient way to query the **JSON** data type. For more information on the native **JSON** data type, see [JSON data type](../../t-sql/data-types/json-data-type.md).
+Using the JSON same functions described in this article remain the most efficient way to query the **json** data type. For more information on the native **json** data type, see [JSON data type](../../t-sql/data-types/json-data-type.md).
 
 ### Extract values from JSON text and use them in queries
 
@@ -256,7 +256,7 @@ JSON aggregate functions enable construction of JSON objects or arrays based on 
 - [JSON_ARRAYAGG](../../t-sql/functions/json-arrayagg-transact-sql.md) constructs a JSON **array** from an aggregation of SQL data or columns.
 
 > [!NOTE]
-> Currently, both **JSON** aggregate functions `JSON_OBJECTAGG` and `JSON_ARRAYAGG` are available in preview for Azure SQL Database.
+> Currently, both **json** aggregate functions `JSON_OBJECTAGG` and `JSON_ARRAYAGG` are available in preview for Azure SQL Database.
 
 ## Use cases for JSON data in SQL Server
 
@@ -312,7 +312,7 @@ You can format information that's stored in files as standard JSON or line-delim
 
 If you must load JSON data from an external service into [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], you can use `OPENJSON` to import the data into [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instead of parsing the data in the application layer.
 
-In supported platforms, use the native **JSON** data type instead of **nvarchar(max)** for improved performance and more efficient storage.
+In supported platforms, use the native **json** data type instead of **nvarchar(max)** for improved performance and more efficient storage.
 
 ```sql
 DECLARE @jsonVariable NVARCHAR(MAX);

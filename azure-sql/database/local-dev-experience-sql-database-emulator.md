@@ -1,8 +1,8 @@
 ---
 title: Introducing the Azure SQL Database emulator
 description: Learn about the Azure SQL Database emulator, which provides a local containerized database for development and testing.
-author: scoriani
-ms.author: scoriani
+author: croblesm
+ms.author: roblescarlos
 ms.reviewer: mathoma
 ms.date: 05/24/2022
 ms.service: sql-database

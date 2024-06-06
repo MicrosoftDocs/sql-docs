@@ -61,9 +61,9 @@ In [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and in [!INCLUDE [ssazu
   
 - In strict mode, `JSON_VALUE` returns an error.  
   
- If you have to return scalar values greater than 4000 characters, use **OPENJSON** instead of `JSON_VALUE`. For more info, see [OPENJSON (Transact-SQL)](openjson-transact-sql.md).  
+ If you have to return scalar values greater than 4000 characters, use `OPENJSON` instead of `JSON_VALUE`. For more info, see [OPENJSON (Transact-SQL)](openjson-transact-sql.md).  
   
- JSON functions work the same whether the JSON document is stored in **varchar**/**nvarchar** or the native **JSON** data type.
+ JSON functions work the same whether the JSON document is stored in **varchar**, **nvarchar**, or the native **json** data type.
 
 ## Remarks
 

@@ -4,7 +4,7 @@ description: Learn about the new features for and improvements to SQL Server on 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest, mathoma
-ms.date: 04/29/2024
+ms.date: 05/21/2024
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -26,7 +26,6 @@ For updates made in previous years, see the [What's new archive](doc-changes-upd
 
 [!INCLUDE [entra-id](../../includes/entra-id.md)]
 
-
 ## Preview
 
 The following table lists the features of SQL Server on Azure VMs that are currently in preview.
@@ -36,6 +35,8 @@ The following table lists the features of SQL Server on Azure VMs that are curre
 
 | Feature | Details |
 | --- | --- |
+| [Azure Update Manager](../azure-update-manager-sql-vm.md) | Automatically patch multiple SQL Server VMs at scale with the Azure Update Manager integrated in to the [SQL virtual machines](manage-sql-vm-portal.md) resource in the Azure portal, including Cumulative Updates. |
+| [I/O Analysis](storage-performance-analysis.md) | Use the Azure portal to identify performance issues with your SQL Server workloads that result from exceeding virtual machine and data disk limits. | 
 | [Premium SSD v2 in the Azure portal](storage-configuration-premium-ssd-v2.md) | Deploy your SQL Server on Azure VM with Premium SSD v2 disks in the Azure portal for improved throughput and performance. |  
 
 ## General availability (GA)
@@ -56,6 +57,13 @@ The following table lists features of SQL Server on Azure VMs that have been mad
 ## Documentation changes 
 
 Learn about significant changes to the SQL Server on Azure VMs documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
+
+## May 2024
+
+| Changes | Details |
+| --- | --- |
+| **I/O Analysis preview** | Use the Azure portal to identify I/O performance issues with your SQL Server workloads that result from exceeding virtual machine and data disk limits. This feature is currently in preview. Review [I/O Analysis](storage-performance-analysis.md) to learn more. | 
+
 
 ### April 2024
 

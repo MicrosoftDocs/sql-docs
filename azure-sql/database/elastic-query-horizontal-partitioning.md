@@ -1,8 +1,8 @@
 ---
 title: Reporting across scaled-out cloud databases
 description: how to set up elastic queries over horizontal partitions
-author: scoriani
-ms.author: scoriani
+author: bgavrilMS
+ms.author: bogavril
 ms.reviewer: wiassaf, mathoma
 ms.date: 12/15/2021
 ms.service: sql-database

@@ -1,8 +1,8 @@
 ---
 title: Query across cloud databases with different schema
 description: how to set up cross-database queries over vertical partitions
-author: scoriani
-ms.author: scoriani
+author: bgavrilMS
+ms.author: bogavril
 ms.reviewer: wiassaf, mathoma
 ms.date: 12/15/2021
 ms.service: sql-database

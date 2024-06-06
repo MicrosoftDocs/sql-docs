@@ -1,8 +1,8 @@
 ---
 title: Moving data between scaled-out cloud databases
 description: Explains how to manipulate shards and move data via a self-hosted service using elastic database APIs.
-author: scoriani
-ms.author: scoriani
+author: bgavrilMS
+ms.author: bogavril
 ms.reviewer: wiassaf, mathoma
 ms.date: 03/12/2019
 ms.service: sql-database

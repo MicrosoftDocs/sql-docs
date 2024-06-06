@@ -5,7 +5,7 @@ description: Setup and configuration details for database watcher
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 04/26/2024
+ms.date: 05/28/2024
 ms.service: sql-db-mi
 ms.subservice: monitoring
 ms.topic: how-to
@@ -18,18 +18,18 @@ monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 
 [!INCLUDE [sqldb-sqlmi](./includes/appliesto-sqldb-sqlmi.md)]
 
+This article contains detailed steps to create, configure, and start a database watcher in the Azure portal for Azure SQL Database and Azure SQL Managed Instance. 
+
 Database watcher does not require you to deploy and maintain any monitoring agents or other monitoring infrastructure. You can enable in-depth database monitoring of your Azure SQL resources in minutes.
 
-This article contains detailed steps for creating, configuring, and starting a database watcher in Azure portal.
-
-For a step-by-step example of creating and configuring a database watcher, see [Quickstart: Create a database watcher to monitor Azure SQL](database-watcher-quickstart.md).
+For a step-by-step example to create and configure a database watcher, see [Quickstart: Create a database watcher to monitor Azure SQL](database-watcher-quickstart.md).
 
 To see how you can create and configure a database watcher with [Bicep](/azure/azure-resource-manager/bicep/overview) or an ARM template, see [Create a database watcher](/samples/azure/azure-quickstart-templates/create-watcher/).
 
 To manage database watchers programmatically, see the database watcher [REST API](/rest/api/databasewatcher) documentation.
 
 > [!NOTE]
-> Database watcher is currently in preview. Preview features are released with limited capabilities, but are made available on a *preview* basis so customers can get early access and provide feedback. Preview features are subject to separate [supplemental preview terms](https://go.microsoft.com/fwlink/?linkid=2240967), and aren't subject to SLAs. Support is provided as best effort in certain cases. However, Microsoft Support is eager to get your feedback on the preview functionality, and might provide best effort support in certain cases. Preview features might have limited or restricted functionality, and might be available only in selected geographic areas.
+> Database watcher is currently in preview. 
 
 ## Prerequisites
 
@@ -186,7 +186,7 @@ If a watcher is already running when a private endpoint is approved, it must be 
 
 ### Delete a managed private endpoint
 
-1. If there is a delete [lock](/azure/azure-resource-manager/management/lock-resources) on the resource, resource group, or subscription of the resource for which you are creating a managed private endpoint, remove the lock. You can add the lock again after the private endpoint is deleted successfully.
+1. If there is a delete [lock](/azure/azure-resource-manager/management/lock-resources) on the resource, resource group, or subscription of the resource for which you are deleting a managed private endpoint, remove the lock. You can add the lock again after the private endpoint is deleted successfully.
 1. In the Azure portal page for your database watcher, open the **Managed private endpoints** page.
 1. Select the private endpoints you want to delete.
 1. Select **Delete**.
@@ -210,6 +210,8 @@ To change the current data store, remove the existing data store, then add a new
     - The new data store is used once the watcher is restarted.
 
 ### Delete a watcher
+
+If there is a delete [lock](/azure/azure-resource-manager/management/lock-resources) on the watcher, its resource group, or its subscription, remove the lock. You can add the lock again after the watcher is deleted successfully.
 
 When you delete a watcher, its system-assigned managed identity is also deleted. This removes any access you granted to this identity. If you recreate the watcher later, you need to grant access to the system-assigned managed identity of the new watcher to authenticate to each resource. This includes:
 
@@ -517,7 +519,9 @@ Similarly, creating any new objects such as tables, external tables, materialize
 
 ### Stopped Azure Data Explorer clusters
 
-An Azure Data Explorer cluster can be stopped to save costs. By default, an Azure Data Explorer cluster is [stopped automatically](/azure/data-explorer/auto-stop-clusters) after several days of inactivity. For example, this can happen if you stop the watcher that ingests data into the only database on your cluster, and do not run any queries in this database. 
+An Azure Data Explorer cluster can be stopped, for example to save costs. By default, an Azure Data Explorer cluster created in the Azure portal is [stopped automatically](/azure/data-explorer/auto-stop-clusters) after several days of inactivity. For example, this can happen if you stop the watcher that ingests data into the only database on your cluster, and do not run any queries in this database.
+
+If you use the default option to create a new Azure Data Explorer cluster when creating a new watcher, the automatic stop behavior is disabled to allow uninterrupted data collection.
 
 If the cluster is stopped, database watcher data collection stops as well, and monitoring data does not appear on dashboards. To resume data collection and make data accessible via dashboards, you need to manually resume the cluster. Once the cluster is running, restart the watcher.
 
@@ -531,7 +535,7 @@ If you want to use an existing Azure Data Explorer cluster, make sure to enable 
 
 ## Monitor large estates
 
-To monitor a large Azure SQL estate, you might need to create multiple watchers. 
+To monitor a large Azure SQL estate, you might need to create multiple watchers.
 
 Each watcher requires a database on an Azure Data Explorer cluster or in Real-Time Analytics as the data store. The watchers you create can use a single database as a common data store, or separate databases as separate data stores. The following considerations can help you make an optimal design choice for your monitoring scenarios and requirements.
 

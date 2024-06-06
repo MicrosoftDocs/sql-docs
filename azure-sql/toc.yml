@@ -429,14 +429,14 @@
         href: database/connectivity-settings.md
     - name: Local development
       items: 
-      - name: Local dev experience 
+      - name: Local development experience 
         href: database/local-dev-experience-overview.md
+      - name: Azure SQL Database Dev Container Templates
+        href: database/local-dev-experience-dev-containers.md
+      - name: Set up an Azure SQL Database Dev Container template
+        href: database/local-dev-experience-dev-containers-quickstart.md
       - name: The Azure SQL DB emulator
         href: database/local-dev-experience-sql-database-emulator.md      
-      - name: SQL Database Projects extension >> 
-        href: /azure-data-studio/extensions/sql-database-project-extension
-      - name: The mssql extension >> 
-        href: /sql/tools/visual-studio-code/sql-server-develop-use-vscode
 
     - name: Security
       items:

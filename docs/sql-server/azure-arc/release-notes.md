@@ -26,6 +26,10 @@ Extension versions are cumulative. Higher extension versions include all of the 
 
 **Extension version**: `1.1.2710.185`
 
+### Licensing and billing
+
+Support Extended Security Updates (ESU) subscription for [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] with an option to bill back to year 1 of extended support (for managed accounts only).
+
 ### Business continuity
 
 - Support for availability groups is now generally available, including manual failover. For details, review [Always On availability groups inventory and status](manage-availability-group.md).
@@ -49,9 +53,8 @@ This version reintroduces features previously released in version `1.1.2656.138`
 
 ### Updated licensing and configuration support
 
-- Physical core licensing
-- Unlimited virtualization support
-- ESU support
+- Support licensing SQL Server by physical cores with unlimited virtualization
+- Support ESU subscriptions for [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)]
 - Database inventory feature for all license types
 
 For details, review:

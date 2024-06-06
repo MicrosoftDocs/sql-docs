@@ -33571,6 +33571,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md",
+      "redirect_url": "/sql/reporting-services/tutorial-step-01-creating-report-server-project-reporting-services",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md",
       "redirect_url": "/previous-versions/sql/2014/reporting-services/lesson-1-creating-a-report-server-project-reporting-services",
       "redirect_document_id": false
@@ -46072,7 +46077,7 @@
     },
     {
       "source_path": "docs/2014/2014-toc/books-online-for-sql-server-2014.md",
-      "redirect_url": "/sql/2014-toc/index?view=sql-server-2014",
+      "redirect_url": "/sql/sql-server/previous-versions-sql-server?view=sql-server-ver16",
       "redirect_document_id": false
     },
     {

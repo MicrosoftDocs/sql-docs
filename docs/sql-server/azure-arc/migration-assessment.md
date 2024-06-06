@@ -70,7 +70,7 @@ The Azure SQL extension for SQL Server performs the assessment data collection b
 
    :::image type="content" source="media/migration-assessment/assessment-main.png" alt-text="Screenshot showing how to get to the SQL Server migration assessment report an SQL Server resource.":::
 
-1. The *Last assessment time" indicates when the assessment was started. To trigger an assessment immediately, click the **Run assessment" button.
+1. The *Last assessment time* indicates when the assessment was started. To trigger an assessment immediately, click the **Run assessment** button.
 
 ## Review readiness
 
@@ -121,7 +121,7 @@ SQL Server extension for Azure collects performance data for compute settings wi
 
 ## Run migration assessment
 
- You can trigger a fresh assessment at any time by clicking on the **Run Assessment** button. After the new assessment is complete, it replaces the last successful assessment. Migration assessments will continue to be run on schedule every Sunday at 11PM (23:00) according to the local time on the SQL Server machine.
+ You can trigger a fresh assessment at any time by clicking on the **Run Assessment** button. After the new assessment is complete, it replaces the last successful assessment. Migration assessments will continue to be run on schedule every Sunday at 11:00 PM (23:00) according to the local time on the SQL Server machine.
 
 ## Disable migration assessment
 

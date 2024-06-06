@@ -12179,46 +12179,6 @@ items:
       href: native-interfaces/getsvcinstanceidfromname.md
     - name: GetSQLInstanceRegStringByID
       href: native-interfaces/getsqlinstanceregstringbyid.md
-  - name: SQL PowerShell
-    items:
-    - name: Install SQL PowerShell module
-      href: powershell/download-sql-server-ps-module.md
-    - name: SQL Server PowerShell overview
-      href: powershell/sql-server-powershell.md
-      items:
-      - name: SQL Server PowerShell Provider
-        href: powershell/sql-server-powershell-provider.md
-      - name: Query Expressions & Uniform Resource Names
-        href: powershell/query-expressions-and-uniform-resource-names.md
-    - name: How to access SQL Server Objects
-      href: powershell/navigate-sql-server-powershell-paths.md
-    - name: How to load the SMO Assemblies in Windows PowerShell
-      href: powershell/load-the-smo-assemblies-in-windows-powershell.md
-    - name: How to run PowerShell in SSMS
-      href: powershell/run-windows-powershell-from-sql-server-management-studio.md
-    - name: How to run PowerShell with SQL Server Agent
-      href: powershell/run-windows-powershell-steps-in-sql-server-agent.md
-    - name: How to manage authentication
-      href: powershell/manage-authentication-in-database-engine-powershell.md
-    - name: How to manage tab completion
-      href: powershell/manage-tab-completion-sql-server-powershell.md
-    - name: Work With SQL Server PowerShell Paths
-      href: powershell/work-with-sql-server-powershell-paths.md
-    - name: SQL Server Identifiers in PowerShell
-      href: powershell/sql-server-identifiers-in-powershell.md
-      items:
-      - name: Specify Instances in the SQL Server PowerShell Provider
-        href: powershell/specify-instances-in-the-sql-server-powershell-provider.md
-      - name: Encode & Decode SQL Server Identifiers
-        href: powershell/encode-and-decode-sql-server-identifiers.md
-      - name: Escape SQL Server Identifiers
-        href: powershell/escape-sql-server-identifiers.md
-    - name: Cmdlet reference
-      items:
-      - name: SqlServer cmdlets
-        href: /powershell/module/sqlserver/
-      - name: SQLPS cmdlets
-        href: /powershell/module/sqlps/
   - name: System catalog views
     href: relational-databases/system-catalog-views/catalog-views-transact-sql.md
     items:

@@ -170,6 +170,7 @@ In this example, the named instance is called `MyInstance`. Make sure the [!INCL
 - [Create a valid connection string using the shared memory protocol](../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)
 - [Create a valid connection string using TCP/IP](../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)
 - [Troubleshoot connectivity issues in SQL Server](/troubleshoot/sql/database-engine/connect/resolve-connectivity-errors-overview)
+- [Trace the network authentication process to the Database Engine](../relational-databases/database-engine-connection-open-network-trace.md)
 
 ## Related content
 

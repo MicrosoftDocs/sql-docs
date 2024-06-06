@@ -5,12 +5,14 @@ description: Learn about the new features and documentation improvements for Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, randolphwest
-ms.date: 05/30/2024
+ms.date: 06/03/2024
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: whats-new
-ms.custom: ignite-2023, build-2024
-monikerRange: "= azuresql || = azuresql-db"
+ms.custom:
+  - ignite-2023
+  - build-2024
+monikerRange: "=azuresql || =azuresql-db"
 ---
 # What's new in Azure SQL Database?
 
@@ -59,6 +61,8 @@ The following table lists the features of Azure SQL Database that are currently 
 | [Query editor in the Azure portal](query-editor.md) | The query editor in the portal allows you to run queries against your Azure SQL Database directly from the [Azure portal](https://portal.azure.com). |
 | [SQL Analytics](/azure/azure-monitor/insights/azure-sql) | Azure SQL Analytics is an advanced cloud monitoring solution for monitoring performance of all of your Azure SQL databases at scale and across multiple subscriptions in a single view. Azure SQL Analytics collects and visualizes key performance metrics with built-in intelligence for performance troubleshooting. |
 | [SQL Database emulator](local-dev-experience-sql-database-emulator.md) | The Azure SQL Database emulator provides the ability to locally validate database and query design together with client application code in a simple and frictionless model as part of the application development process. |
+| [UNISTR (Transact-SQL)](/sql/t-sql/functions/unistr-transact-sql) | Azure SQL Database now supports the `UNISTR` T-SQL syntax for Unicode string literals. For more information, see [UNISTR (Transact-SQL)](/sql/t-sql/functions/unistr-transact-sql).|
+| [\|\|](/sql/t-sql/language-elements/string-concatenation-pipes-transact-sql) and [\|\|=](/sql/t-sql/language-elements/compound-assignment-pipes-transact-sql) syntax support | Azure SQL Database now supports [\|\| (String concatenation)](/sql/t-sql/language-elements/string-concatenation-pipes-transact-sql) and [\|\|= (Compound assignment)](/sql/t-sql/language-elements/compound-assignment-pipes-transact-sql) Transact-SQL syntax.|
 
 ## General availability (GA)
 
@@ -79,6 +83,12 @@ The following table lists features of Azure SQL Database that have been made gen
 
 Learn about significant changes to the Azure SQL Database documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
 
+### June 2024
+
+| Changes | Details |
+| --- | --- |
+| **UNISTR (preview)** | Azure SQL Database now supports the `UNISTR`. This syntax is currently in preview. For more information, see [UNISTR (Transact-SQL)](/sql/t-sql/functions/unistr-transact-sql). |
+| **\|\| and \|\|= string concatenation support** | Azure SQL Database now supports \|\| and \|\|= compound assignment T-SQL syntax. This syntax is currently in preview. For more information, see [&#124;&#124; (String concatenation)](/sql/t-sql/language-elements/string-concatenation-pipes-transact-sql) and [&#124;&#124;= (Compound assignment)](/sql/t-sql/language-elements/compound-assignment-pipes-transact-sql). |
 
 ### May 2024
 

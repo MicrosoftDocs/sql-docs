@@ -310,7 +310,7 @@ Hyperscale service tier premium-series and premium-series memory optimized hardw
 - UK West \*
 - US Central \*\*
 - US East \*\*
-- US East 2
+- US East 2 \*\*
 - US North Central
 - US South Central
 - US West Central

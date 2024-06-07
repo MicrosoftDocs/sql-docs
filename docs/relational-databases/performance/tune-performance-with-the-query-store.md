@@ -65,7 +65,7 @@ ORDER BY total_execution_count DESC;
 
 #### Longest average execution time
 
-The number of queries with the longest average execution time within last hour:
+The number of queries with the highest average duration within last hour:
 
 ```sql
 SELECT TOP 10
@@ -89,7 +89,7 @@ GROUP BY qt.query_sql_text, q.query_id, qt.query_text_id, p.plan_id
 ORDER BY AVG(rs.avg_duration) DESC;
 ```
 
-#### Biggest average physical I/O reads
+#### Highest average physical I/O reads
 
 The number of queries that had the biggest average physical I/O reads in last 24 hours, with corresponding average row count and execution count:
 
@@ -112,7 +112,7 @@ ORDER BY rs.avg_physical_io_reads DESC;
 
 #### Queries with multiple plans
 
-These queries are especially interesting because they're candidates for regressions due to plan choice change. 
+Queries with more than one plan are especially interesting, because they can be candidates for a regression in performance due to a change in plan choice.
 
 The following query identifies the queries with the highest number of plans:
 

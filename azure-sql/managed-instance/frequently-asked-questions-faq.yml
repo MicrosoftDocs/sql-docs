@@ -6,13 +6,13 @@ metadata:
   services: sql-database
   ms.service: sql-managed-instance
   ms.subservice: service-overview
-  ms.custom: sqldbrb=1, ignite-2023
+  ms.custom: 
   ms.devlang:
   ms.topic: faq
   author: MashaMSFT
   ms.author: mathoma
   ms.reviewer: urmilano, danil, nnikolic, wiassaf, mathoma
-  ms.date: 03/23/2024
+  ms.date: 05/31/2024
 title: Azure SQL Managed Instance frequently asked questions (FAQ)
 summary: |
   [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -600,3 +600,21 @@ sections:
       - question: I have the feature wave enabled in my subscription but my existing instance can't use the new features. Why?
         answer: |
           The feature wave is available to instances in eligible subnets. If you don't see new features, it's likely that the subnet where your SQL managed instance is deployed isn't eligible.
+
+  - name: Next-gen General Purpose service tier upgrade
+    questions:
+      - question: Why can't I enable the Next-gen General Purpose upgrade for my existing General Purpose instance?
+        answer: |
+          This is likely because your instance doesn't have the [November 2022 Feature Wave](november-2022-feature-wave-enroll.md) enabled. To work around this, create a new instance in an empty subnet that has the November 2022 feature wave enabled, and then [move or copy](database-copy-move-how-to.md) the data from your existing instance to the new one.
+
+      - question: My instance is part of a failover group and when I tried to enable the Next-gen General Purpose upgrade for my instance, it failed. Why? 
+        answer: |
+          For instances inside of a failover group, changing the service tier to, or from, the Next-gen General Purpose tier is not supported. You must first delete the failover group before modifying either replica, and then [re-create the failover group](failover-group-configure-sql-mi.md#create-the-failover-group) after the change takes effect. 
+
+      - question: Why can't I enable zone redundancy for my Next-gen General Purpose SQL Managed Instance?
+        answer: |
+          Zone redundancy is not currently supported for the Next-gen General Purpose service tier. 
+
+      - question: Can I enable the Next-gen General Purpose upgrade for my for Instance Pool?
+        answer: |
+          No, the Next-gen General Purpose service tier upgrade is not currently supported for [Instance Pools](instance-pools-overview.md), or instances inside a pool. 

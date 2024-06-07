@@ -76,6 +76,6 @@ The Azure SQL Database Dev Container Templates are available for the following p
 
 Learn more about the local development experience for Azure SQL Database:
 
-- [Overview - Local development experience for Azure SQL Database](local-dev-experience-overview)
-- [Quickstart: Set up a development environment with an Azure SQL Database Dev Container template](local-dev-experience-dev-container-quickstart)
-- [Quickstart: Create a local development environment for Azure SQL Database](local-dev-experience-quickstart)
+- [Overview - Local development experience for Azure SQL Database](/azure-sql/database/local-dev-experience-overview)
+- [Quickstart: Set up a development environment with an Azure SQL Database Dev Container template](/azure-sql/database/local-dev-experience-dev-containers-quickstart)
+- [Quickstart: Create a local development environment for Azure SQL Database](/azure-sql/database/local-dev-experience-quickstart)

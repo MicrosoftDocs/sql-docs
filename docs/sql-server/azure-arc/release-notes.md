@@ -34,18 +34,14 @@ This version reintroduces features previously released in version `1.1.2656.138`
 
 ### Updated licensing and configuration support
 
-- Physical core licensing
-- Unlimited virtualization support
-- ESU support
+- Support licensing SQL Server by physical cores with unlimited virtualization
+- Support ESU subscriptions for [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)]
 - Database inventory feature for all license types
 
 For details, review:
 
 - [Manage licensing and billing of SQL Server enabled by Azure Arc](manage-license-billing.md).
 - [Configure SQL Server enabled by Azure Arc](manage-configuration.md)
-
-> [!NOTE]
-> The new licensing and billing features may not be available in all regions immediately. They should be available in all regions within 5 business days of the release.
 
 ### Updated performance dashboard
 

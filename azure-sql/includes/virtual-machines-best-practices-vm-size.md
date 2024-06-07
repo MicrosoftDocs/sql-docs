@@ -15,3 +15,6 @@ ms.topic: include
 - Use the [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) and [SKU recommendation](/sql/dma/dma-sku-recommend-sql-db) tools to find the right VM size for your existing SQL Server workload.
 - Use [Azure Data Studio](/azure/dms/tutorial-sql-server-to-virtual-machine-online-ads) to migrate to Azure.
 
+> [!WARNING]
+> Installing SQL Server to systems that exceed 64 cores per NUMA node is not currently supported. This limitation currently applies to the Standard_M176s_3_v3 and Standard_M176s_4_v3 Azure Virtual Machine sizes within the Msv3 and Mdsv3 Medium Memory Series.
+> 

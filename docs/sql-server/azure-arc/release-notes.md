@@ -32,8 +32,8 @@ Support Extended Security Updates (ESU) subscription for [!INCLUDE [sssql11-md](
 
 ### Business continuity
 
-- Support for availability groups is now generally available, including manual failover. For details, review [Always On availability groups inventory and status](manage-availability-group.md).
-- Failover cluster instance in portal shows instance name, instance type, network name, active node, and passive nodes. For details, review [View Always On failover cluster instances in Azure Arc](support-for-fci.md).
+- Inventory and manual failover of availability groups is now generally available. For details, review [Always On availability groups inventory and status](manage-availability-group.md).
+- Inventory of failover cluster instance is now generally available. Failover cluster instance in portal now shows instance name, instance type, network name, active node, and passive nodes. For details, review [View Always On failover cluster instances in Azure Arc](support-for-fci.md).
 
 ### Migration
 

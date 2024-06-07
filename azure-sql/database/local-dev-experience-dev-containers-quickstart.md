@@ -14,7 +14,7 @@ ms.topic: overview
 
 Dev Containers provide a comprehensive solution for enhancing local development for Azure SQL Database. Dev Container templates offer developers a seamless and efficient development environment, enabling them to build applications for Azure SQL Database with ease and confidence. Dev Containers can be utilized in any development environment whether is local or in the cloud, you can promote consistency across teams and workflows.
 
-## Capabilities / Features
+## Capabilities / features
 
 The Dev Container for Azure SQL Database is packed with powerful tools and configurations to streamline your development process. Here are the key features:
 
@@ -105,7 +105,7 @@ Additionally, you need:
 
     - To run any of the predefined tasks, open the command palette (`F1`), type Run Task, and select the desired task (for example, Execute SQL Query, Build SQL Database Project).
 
-## Next steps
+## Related content
 
 Learn more about the local development experience for Azure SQL Database:
 

@@ -72,7 +72,7 @@ The Azure SQL Database Dev Container Templates are available for the following p
 > [!TIP]
 > Each template comes with a pre-configured Azure SQL Database, making it easy to start developing right away!
 
-## Next steps
+## Related content
 
 Learn more about the local development experience for Azure SQL Database:
 

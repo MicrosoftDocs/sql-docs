@@ -51,7 +51,7 @@ Here's the markdown source code for the table:
 
 | Tool/Extension | Description | Compatible with |
 |--|--|--|
-| [**Azure SQL Database Dev Container Templates**](https://github.com/microsoft/azuresql-devcontainers) | Provides preconfigured development environments, eliminating manual setup and ensuring consistency. Supports multiple popular languages. | [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)<br>[GitHub Codespaces](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers) |
+| [**Azure SQL Database Dev Container Templates**](https://aka.ms/azuresql-devcontainers) | Provides preconfigured development environments, eliminating manual setup and ensuring consistency. Supports multiple popular languages. | [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)<br>[GitHub Codespaces](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers) |
 | [**MSSQL Extension**](/sql/tools/visual-studio-code/sql-server-develop-use-vscode) | Enables connection, query execution, and script testing against a database, whether local or in Azure SQL Database. | [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)<br>GitHub Codespaces |
 | [**SQL Database Projects Extension**](/azure-data-studio/extensions/sql-database-project-extension) | Allows capturing existing database schemas, designing new objects using a declarative model, committing schemas to version control, and publishing to databases. | [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sql-database-projects-vscode)<br>[Azure Data Studio](https://github.com/microsoft/azuredatastudio/tree/main/extensions/sql-database-projects#readme)<br>GitHub Codespaces |
 
@@ -66,7 +66,7 @@ Developers can utilize Dev Containers to quickly start coding in environments th
 
 To learn more about the Azure SQL Database Dev Container templates, see [Azure SQL Database Dev Container templates](local-dev-experience-dev-containers).
 
-## Next steps
+## Related content
 
 Learn more about the local development experience for Azure SQL Database:
 

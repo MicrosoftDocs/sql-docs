@@ -16,5 +16,5 @@ ms.topic: include
 - Use [Azure Data Studio](/azure/dms/tutorial-sql-server-to-virtual-machine-online-ads) to migrate to Azure.
 
 > [!WARNING]
-Installing SQL Server to systems that exceed 64 cores per NUMA node is not currently supported, such as the Standard_M176s_3_v3 and Standard_M176s_4_v3 Azure Virtual Machine sizes within the Msv3 and Mdsv3 Medium Memory Series.
+> Installing SQL Server to systems that exceed 64 cores per NUMA node is not currently supported. This limitation currently applies to the Standard_M176s_3_v3 and Standard_M176s_4_v3 Azure Virtual Machine sizes within the Msv3 and Mdsv3 Medium Memory Series.
 > 

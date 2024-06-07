@@ -15,11 +15,9 @@ ms.topic: overview
 
 This article provides an overview of the local development experience tailored for Azure SQL Database.
 
-Designed for both developers, DevOps engineers and Cloud architects, this experience facilitates the design, editing, building/validation, publishing, and execution of database schemas within a containerized environment. It's crafted to function offline, making it perfect for those looking to progress their database projects without the necessity of a live connection to the Azure SQL Database service.
-
 ## Overview
 
-The Azure SQL Database local development experience is a combination of tools and services that empowers application developers and database professionals to design, edit, build/validate, publish, and run database schemas for databases while working offline.
+The Azure SQL Database local development experience is a combination of tools and services that empowers application developers and database professionals to design, build, validate, and publish database schemas for databases while working offline.
 
 The following diagram illustrates the inner and outer loop processes in the development lifecycle, highlighting how developers interact with Azure SQL Database both locally and in the cloud:
 
@@ -41,30 +39,32 @@ Let's understand both the inner and outer loop in detail:
 
 - Changes made in the inner loop are pushed to a shared repository, such as a GitHub repository, where they can be reviewed, tested, and merged.
 
-- From the repository, automated workflows (e.g., through GitHub Actions or GitHub Codespaces) build and deploy the application, including any database changes, to Azure services.
+- From the repository, automated workflows (for example, through GitHub Actions or GitHub Codespaces) build and deploy the application, including any database changes, to Azure services.
 
 - In the outer loop, the application and database are deployed to Azure, where they can be accessed and used in a live environment.
 
 ## Tools and extensions
 
-To streamline the local development experience, several tools and extensions are available. The table below provides a high-level overview of these options, each tailored for different aspects of the development lifecycle.
+To streamline the local development experience, several tools and extensions are available. The following table provides a high-level overview of these options, each tailored for different aspects of the development lifecycle.
 
-Here is the markdown source code for the table:
+Here's the markdown source code for the table:
 
 | Tool/Extension | Description | Compatible with |
 |--|--|--|
-| [**Azure SQL Database Dev Container Templates**](https://github.com/microsoft/azuresql-devcontainers) | Provides pre-configured development environments, eliminating manual setup and ensuring consistency. Supports multiple popular languages. | [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)<br>[GitHub Codespaces](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers) |
+| [**Azure SQL Database Dev Container Templates**](https://github.com/microsoft/azuresql-devcontainers) | Provides preconfigured development environments, eliminating manual setup and ensuring consistency. Supports multiple popular languages. | [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)<br>[GitHub Codespaces](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers) |
 | [**MSSQL Extension**](/sql/tools/visual-studio-code/sql-server-develop-use-vscode) | Enables connection, query execution, and script testing against a database, whether local or in Azure SQL Database. | [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)<br>GitHub Codespaces |
 | [**SQL Database Projects Extension**](/azure-data-studio/extensions/sql-database-project-extension) | Allows capturing existing database schemas, designing new objects using a declarative model, committing schemas to version control, and publishing to databases. | [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sql-database-projects-vscode)<br>[Azure Data Studio](https://github.com/microsoft/azuredatastudio/tree/main/extensions/sql-database-projects#readme)<br>GitHub Codespaces |
 
 ## Azure SQL Database Dev Container Templates
 
-Dev Containers offer a streamlined, pre-configured development environment for Azure SQL Database, eliminating the need for manual setup. These containers enhance productivity by ensuring that all necessary tools and dependencies are available right from the start.
+Dev Containers offer a streamlined, preconfigured development environment for Azure SQL Database, eliminating the need for manual setup. These containers enhance productivity by ensuring that all necessary tools and dependencies are available right from the start.
 
 Developers can utilize Dev Containers to quickly start coding in environments that mimic the Azure SQL Database setup, promoting consistency across local and cloud development. This approach not only accelerates the development process but also reduces errors and ensures a smooth transition from local development to production deployment. 
 
 > [!NOTE]
 > Dev Containers can run both locally in VS Code using the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) and in the cloud using [GitHub Codespaces](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers).
+
+To learn more about the Azure SQL Database Dev Container templates, see [Azure SQL Database Dev Container templates](local-dev-experience-dev-containers).
 
 ## Next steps
 

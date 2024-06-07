@@ -201,7 +201,7 @@ You can scale up or scale down the primary and secondary instance to a different
 
 The sequence is recommended specifically to avoid the problem where the geo-secondary at a lower SKU gets overloaded and must be reseeded during an upgrade or downgrade process.
 
-> [!IIMPORTANT] 
+> [!IMPORTANT] 
 > - For instances inside of a failover group, changing the service tier to, or from, the Next-gen General Purpose tier is not supported. You must first delete the failover group before modifying either replica, and then re-create the failover group after the change takes effect.
 > - There's a [known issue](doc-changes-updates-known-issues.md#temporary-instance-inaccessibility-using-the-failover-group-listener-during-scaling-operation) which can impact accessibility of the instance being scaled using the associated failover group listener. 
 

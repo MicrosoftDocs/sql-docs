@@ -13,15 +13,16 @@ helpviewer_keywords:
   - "data-driven subscriptions"
 ---
 # Data-driven subscriptions
-  A data-driven subscription provides a way to use dynamic subscription data that is retrieved from an external data source at run time. A data-driven subscription can also use static text and default values that you specify when the subscription is defined. You can use data-driven subscriptions to:  
+
+A data-driven subscription provides a way to use dynamic subscription data that is retrieved from an external data source at run time. A data-driven subscription can also use static text and default values that you specify when the subscription is defined. You can use data-driven subscriptions to:  
   
--    Distribute a report to a fluctuating list of subscribers. For example, you can use data-driven subscriptions to distribute a report throughout a large organization where subscribers vary from one month to the next. Or, you can use other criteria that determine group membership from an existing set of users.  
+- Distribute a report to a fluctuating list of subscribers. For example, you can use data-driven subscriptions to distribute a report throughout a large organization where subscribers vary from one month to the next. Or, you can use other criteria that determine group membership from an existing set of users.  
   
--   Filter the report output by using report parameter values that are retrieved at run time.  
+- Filter the report output by using report parameter values that are retrieved at run time.  
   
--   Vary report output formats and delivery options for each report delivery.  
+- Vary report output formats and delivery options for each report delivery.  
   
- A data-driven subscription is composed of multiple parts. The fixed aspects of a data-driven subscription are defined when you create the subscription, and these aspects include:  
+A data-driven subscription is composed of multiple parts. The fixed aspects of a data-driven subscription are defined when you create the subscription, and these aspects include:  
   
 - The report for which the subscription is defined (a subscription is always associated with a single report).  
   
@@ -31,24 +32,25 @@ helpviewer_keywords:
   
 - The query that you use to select subscriber data must be specified when you define the subscription. You can't change the query at run time.  
   
- Dynamic values used in a data-driven subscription are obtained when the subscription is processed. Examples of variable data that you might use in a subscription include the subscriber name, e-mail address, preferred report output format, or any value that is valid for a report parameter. To use dynamic values in a data-driven subscription, you define a mapping between the fields that are returned in the query to specific delivery options and to report parameters. Variable data is retrieved from a subscriber data source each time the subscription is processed.  
+Dynamic values used in a data-driven subscription are obtained when the subscription is processed. Examples of variable data that you might use in a subscription include the subscriber name, e-mail address, preferred report output format, or any value that is valid for a report parameter. To use dynamic values in a data-driven subscription, you define a mapping between the fields that are returned in the query to specific delivery options and to report parameters. Variable data is retrieved from a subscriber data source each time the subscription is processed.  
   
 ## Requirements for data-driven subscriptions
 
- Data-driven subscription functionality isn't available in all editions. There are also limitations on the kinds of data sources that you can use to retrieve subscription data at run time. The following list provides more information about the requirements:  
+Data-driven subscription functionality isn't available in all editions. There are also limitations on the kinds of data sources that you can use to retrieve subscription data at run time. The following list provides more information about the requirements:  
 
 - For more information about the editions of SQL Server that support Data-driven subscription functionality, see [SQL Server Reporting Services features supported by its editions](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).  
 
 - For subscription data, choose a data source that can provide schema information to the report server. Examples of supported data source types include:
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational data, 
-    - Oracle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] databases
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package data
-    - ODBC data sources, and OLE DB data sources. 
+  - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational data,
+  - Oracle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] databases
+  - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package data
+  - Open Database Connectivity (ODBC) data sources, and Object Linking and Embedding Database (OLEDB) data sources.
 
 - For more information about subscriber data source requirements, see [Use an external data source for subscriber data &#40;data-driven subscription&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
 ## Working with data-driven subscriptions  
- The following articles provide more information about data-driven subscriptions.  
+
+The following articles provide more information about data-driven subscriptions.  
   
 |Articles|Description|  
 |------------|-----------------|  
@@ -59,7 +61,6 @@ helpviewer_keywords:
   
 ## Related content
 
- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
- [Preload the cache &#40;web portal&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
-  
+- [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+- [Preload the cache](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
   

@@ -4,7 +4,7 @@ description: Learn how to configure a failover group for Azure SQL Managed Insta
 author: Stralle
 ms.author: strrodic
 ms.reviewer: mathoma
-ms.date: 12/15/2023
+ms.date: 05/31/2024
 ms.service: sql-managed-instance
 ms.subservice: high-availability
 ms.topic: how-to
@@ -130,7 +130,7 @@ Additionally, if you're using other mechanisms for providing connectivity betwee
     | Virtual network deployment model | Select **Resource manager**. |
     | I know my resource ID | Leave this checkbox unchecked. |
     | Subscription | Select the Azure subscription of the virtual network hosting the secondary instance that you want to peer with. |
-    | Virtual network | Select the virtual network hosting the secondary instance that you want to peer with. If the virtual network is listed, but grayed out, it may be because the address space for the virtual network overlaps with the address space for this virtual network. If virtual network address spaces overlap, they can't be peered.|
+    | Virtual network | Select the virtual network hosting the secondary instance that you want to peer with. If the virtual network is listed, but grayed out, it might be because the address space for the virtual network overlaps with the address space for this virtual network. If virtual network address spaces overlap, they can't be peered.|
     | Traffic to remote virtual network | Select **Allow (default)** |
     | Traffic forwarded from remote virtual network | Both **Allowed (default)** and **Block** option will work for this tutorial. For more information, see [Create a peering](/azure/virtual-network/virtual-network-manage-peering#create-a-peering). |
     | Virtual network gateway or Route Server | Select **None**. For more information about the other options available, see [Create a peering](/azure/virtual-network/virtual-network-manage-peering#create-a-peering). |
@@ -302,7 +302,7 @@ Let's assume instance A is the primary instance, instance B is the existing seco
 1. Create instance C with same size as B and in the same DNS zone.
 2. Connect to instance B and manually failover to switch the primary instance to B. Instance A becomes the new secondary instance automatically.
 3. Delete the failover group between instances A and B. At this point, sign in attempts using failover group endpoints start to fail. The secondary databases on A are disconnected from the primaries and become read-write databases.
-4. Create a failover group with the same name between instance B and C. Follow the instructions in the [failover group guide](failover-group-configure-sql-mi.md). This is a size-of-data operation and completes when all databases from instance A are seeded and synchronized. At this point sign in attempts stop failing.
+4. Create a failover group with the same name between instance B and C. Follow the instructions in the [failover group guide](failover-group-configure-sql-mi.md). This is a size-of-data operation and completes when all databases from instance A are seeded and synchronized. At this point, sign in attempts stop failing.
 5. Manually fail over to switch the C instance to primary role. Instance B becomes the new secondary instance automatically.
 6. Delete instance A if not needed to avoid unnecessary charges.
 
@@ -316,7 +316,7 @@ Let's assume instance A is the primary instance, instance B is the existing seco
 
 Instances in a failover group must have matching [update policies](update-policy.md). To enable the Always-up-to-date update policy on instances that are part of a failover group, first enable the Always-up-to-date update policy on the secondary instance, wait for the change to take effect, and then update the policy for the primary instance. 
 
-While changing the update policy on the primary instance in the failover group causes the instance to fail over to another local node (similar to [management operations](management-operations-overview.md) on instances that aren't part of a failover group), it does not cause the failover group to failover, keeping the primary instance in the primary role.
+While changing the update policy on the primary instance in the failover group causes the instance to fail over to another local node (similar to [management operations](management-operations-overview.md) on instances that aren't part of a failover group), it doesn't cause the failover group to failover, keeping the primary instance in the primary role.
 
 ## Enable scenarios dependent on objects from the system databases
 
@@ -349,9 +349,9 @@ Instances in a failover group remain separate Azure resources, and no changes ma
 This section is duplicated in /managed-instance/failover-group-sql-mi.md.. Please ensure changes are made to both documents. 
 -->
 
-You can scale up or scale down the primary and secondary instance to a different compute size within the same service tier or to a different service tier. When scaling up within the same service tier, we recommend that you scale up the geo-secondary first, and then scale up the primary. When scaling down within the same service tier, reverse the order: scale down the primary first, and then scale down the secondary. When you scale instance to a different service tier, this recommendation is enforced.
+You can scale the primary and secondary instance up or down to a different compute size within the same service tier or to a different service tier. When scaling up within the same service tier, first scale up the geo-secondary first, and then scale up the primary. When scaling down within the same service tier, reverse the order: scale down the primary first, and then scale down the secondary. Follow the same sequence when you scale an instance to a different service tier. 
 
-The sequence is recommended specifically to avoid the problem where the geo-secondary at a lower SKU gets overloaded and must be reseeded during an upgrade or downgrade process.
+This sequence is recommended to avoid problems from the geo-secondary, at a lower SKU, getting overloaded and having to reseed during an upgrade or downgrade process. 
 
 ## Permissions
 
@@ -382,6 +382,7 @@ Be aware of the following limitations:
 - Database rename isn't supported for databases in failover group. You'll need to temporarily delete failover group to be able to rename a database.
 - System databases aren't replicated to the secondary instance in a failover group. Therefore, scenarios that depend on objects from the system databases such as Server Logins and Agent jobs, require objects to be manually created on the secondary instances and also manually kept in sync after any changes made on primary instance. The only exception is Service master Key (SMK) for SQL Managed Instance that is replicated automatically to secondary instance during creation of failover group. Any subsequent changes of SMK on the primary instance however won't be replicated to secondary instance. To learn more, see how to [Enable scenarios dependent on objects from the system databases](#enable-scenarios-dependent-on-objects-from-the-system-databases).
 - Failover groups can't be created between instances if any of them are in an instance pool.
+- For instances inside of a failover group, changing the service tier to, or from, the Next-gen General Purpose tier is not supported. You must first delete the failover group before modifying either replica, and then re-create the failover group after the change takes effect.
 - SQL managed instances in a failover group must have the same [update policy](update-policy.md), though it's possible to [change the update policy](#change-update-policy) for instances within a failover group. 
 
 
@@ -416,7 +417,7 @@ Failover groups can also be managed programmatically using Azure PowerShell, Azu
 | [Create or Update Failover Group](/rest/api/sql/instance-failover-groups/create-or-update) | Creates or updates a failover group's configuration |
 | [Delete Failover Group](/rest/api/sql/instance-failover-groups/delete) | Removes a failover group from the instance |
 | [Failover (Planned)](/rest/api/sql/instance-failover-groups/failover) | Triggers failover from the current primary instance to this instance with full data synchronization. |
-| [Force Failover Allow Data Loss](/rest/api/sql/instance-failover-groups/force-failover-allow-data-loss) | Triggers failover from the current primary instance to the secondary instance without synchronizing data. This operation may result in data loss. |
+| [Force Failover Allow Data Loss](/rest/api/sql/instance-failover-groups/force-failover-allow-data-loss) | Triggers failover from the current primary instance to the secondary instance without synchronizing data. This operation can result in data loss. |
 | [Get Failover Group](/rest/api/sql/instance-failover-groups/get) | retrieves a failover group's configuration. |
 | [List Failover Groups - List By Location](/rest/api/sql/instance-failover-groups/list-by-location) | Lists the failover groups in a location. |
 

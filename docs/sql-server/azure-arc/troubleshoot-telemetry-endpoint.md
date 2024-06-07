@@ -81,6 +81,40 @@ For extension version `1.1.24724.69` and earlier, the log file is:
 
 Check for log entries that indicate a problem connecting to the DPS or telemetry endpoints.
 
+## Probe web server endpoints
+
+You can use various tools (`Invoke-WebRequest` or `curl`) to probe teh web server endpoints for DPS and telemetry.
+
+For example:
+
+```PowerShell
+Invoke-WebRequest telemetry.<region>.arcdataservices.com
+```
+
+A possible response status code is:
+
+```output
+Invoke-WebRequest: Response status code does not indicate success: 401 (Unauthorized).
+```
+
+401 is expected because there is no unauthenticated route on the telemetry endpoint. 
+
+For DPS:
+
+```powershell
+Invoke-WebRequest san-af-<region>-prod.azurewebsites.net
+```
+
+A possible response status code is:
+
+```output
+StatusCode        : 200
+
+StatusDescription : OK
+```
+
+This one should return a 200 as there is an unauthenticated route.
+
 ## Endpoint reference
 
 Beginning with [March, 12 2024](release-notes.md#march-12-2024), the Azure Extension for SQL Server uses the following endpoints:

@@ -7,7 +7,6 @@ ms.reviewer: mathoma
 ms.date: 05/22/2024
 ms.service: virtual-machines-sql
 ms.topic: how-to
-ms.custom:
 ---
 # I/O Performance Analysis (Preview) -  SQL Server on Azure VMs 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]

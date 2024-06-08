@@ -64,12 +64,12 @@ Developers can utilize Dev Containers to quickly start coding in environments th
 > [!NOTE]
 > Dev Containers can run both locally in VS Code using the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) and in the cloud using [GitHub Codespaces](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers).
 
-To learn more about the Azure SQL Database Dev Container templates, see [Azure SQL Database Dev Container templates](local-dev-experience-dev-containers).
+To learn more about the Azure SQL Database Dev Container templates, see [Azure SQL Database Dev Container templates](./local-dev-experience-dev-containers.md).
 
 ## Related content
 
 Learn more about the local development experience for Azure SQL Database:
 
-- [Overview - Azure SQL Database Dev Container templates](/azure-sql/database/local-dev-experience-dev-containers)
-- [Quickstart: Set up a development environment with an Azure SQL Database Dev Container template](/azure-sql/database/local-dev-experience-dev-containers-quickstart)
-- [Quickstart: Create a local development environment for Azure SQL Database](/azure-sql/database/local-dev-experience-quickstart)
+- [Overview - Azure SQL Database Dev Container templates](./local-dev-experience-dev-containers.md)
+- [Quickstart: Set up a development environment with an Azure SQL Database Dev Container template](./azure-sql/database/local-dev-experience-dev-containers-quickstart.md)
+- [Quickstart: Create a local development environment for Azure SQL Database](./azure-sql/database/local-dev-experience-quickstart.md)

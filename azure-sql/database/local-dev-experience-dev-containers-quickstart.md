@@ -72,7 +72,7 @@ Additionally, you need:
 
 - An Azure account: If you don't have one, you can create a free account at [Azure Free Account](https://azure.microsoft.com/free/).
 
-# Steps to Set Up the Development Environment
+## Steps to set up the development environment
 
 1. Clone the Dev Container Repository
 

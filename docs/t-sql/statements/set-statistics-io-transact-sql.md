@@ -41,6 +41,7 @@ SET STATISTICS IO { ON | OFF }
 ## Output
 
 The following table lists and describes the output items.  
+
 |Output item|Meaning|  
 |-----------------|-------------|  
 | `Table` |Name of the table.|  

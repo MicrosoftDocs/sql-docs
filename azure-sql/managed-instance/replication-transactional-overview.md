@@ -139,6 +139,14 @@ In this configuration, a database in Azure SQL Database or Azure SQL Managed Ins
 > [!NOTE]  
 > You may encounter error 53 when connecting to an Azure Storage File if the outbound network security group (NSG) port 445 is blocked when the distributor is an Azure SQL Managed Instance database and the subscriber is on-premises. [Update the vNet NSG](/azure/storage/files/storage-troubleshoot-windows-file-connection-problems) to resolve this issue.
 
+## Security 
+
+### Login `replAgentUser`
+
+For purposes of Transactional Replication, Azure SQL Managed Instances with enabled [November 2022 feature wave](november-2022-feature-wave-enroll.md) have precreated login(s) with name `replAgentUser`. These have `sysadmin` priviledges and are used by replication agents that need to connect to Azure SQL Managed Instances participating in Transactional Replication setups.
+
+If Transactional Replication is not used, login `replAgentUser` can be disabled, and later re-enabled in case you want to start using Transactional Replication.
+
 ## Limitations
 
 Transactional replication has some limitations that are specific to Azure SQL Managed Instance. Learn more about these limitations in this section.

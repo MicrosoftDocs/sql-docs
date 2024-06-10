@@ -143,9 +143,9 @@ In this configuration, a database in Azure SQL Database or Azure SQL Managed Ins
 
 ### Login `replAgentUser`
 
-For purposes of Transactional Replication, Azure SQL Managed Instances with enabled [November 2022 feature wave](november-2022-feature-wave-enroll.md) have pre-created login(s) with name `replAgentUser`. These have `sysadmin` priviledges and are used by replication agents that need to connect to Azure SQL Managed Instances participating in Transactional Replication setups.
+For purposes of transactional replication, a SQL Managed Instance with enabled [November 2022 feature wave](november-2022-feature-wave-enroll.md) has a pre-created login(s) with the name `replAgentUser`. This login is a member of the `sysadmin` server role and is used by replication agents that need to connect to a SQL Managed Instance participating in transactional replication setup.
 
-If Transactional Replication is not used, login `replAgentUser` can be disabled. It can be re-enabled later if you decide to start using Transactional Replication
+If transactional replication is not used, the login `replAgentUser` can be disabled. It can be re-enabled later if you decide to start using transactional replication.
 
 ## Limitations
 

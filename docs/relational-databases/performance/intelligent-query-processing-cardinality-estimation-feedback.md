@@ -3,8 +3,8 @@ title: Cardinality estimation feedback
 description: Learn about query processing feedback features, part of the Intelligent Query Processing (IQP) feature set.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: derekw
-ms.date: 05/08/2024
+ms.reviewer: derekw, randolphwest
+ms.date: 06/07/2024
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -22,7 +22,7 @@ Currently in preview for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.
 
 Starting with [!INCLUDE [sql-server-2022](../../includes/sssql22-md.md)], the Cardinality Estimation (CE) feedback is part of the [intelligent query processing family of features](intelligent-query-processing.md) and addresses suboptimal query execution plans for repeating queries when these issues result from incorrect CE model assumptions. This scenario helps with reducing regression risks related to the default CE when upgrading from older versions of the Database Engine.
 
-Because no single set of CE models and assumptions can accommodate the vast array of customer workloads and data distributions, CE feedback provides an adaptable solution based on query runtime characteristics. CE feedback will identify and use a model assumption that better fits a given query and data distribution to improve query execution plan quality. Currently, CE Feedback can identify plan operators where the estimated number of rows and the actual number of rows are very different. Feedback is applied when significant model estimation errors occur, and there is a viable alternate model to try.
+Because no single set of CE models and assumptions can accommodate the vast array of customer workloads and data distributions, CE feedback provides an adaptable solution based on query runtime characteristics. CE feedback identifies and uses a model assumption that better fits a given query and data distribution to improve query execution plan quality. Currently, CE feedback can identify plan operators where the estimated number of rows and the actual number of rows are very different. Feedback is applied when significant model estimation errors occur, and there's a viable alternate model to try.
 
 For other query feedback features, see [Memory grant feedback](intelligent-query-processing-memory-grant-feedback.md) and [Degree of parallelism (DOP) feedback](intelligent-query-processing-degree-parallelism-feedback.md).
 
@@ -38,9 +38,9 @@ Cardinality estimation (CE) feedback learns which CE model assumptions are optim
 
 1. CE feedback **identifies** model-related assumptions and evaluates whether they're accurate for repeating queries.
 
-1. If an assumption looks incorrect, a subsequent execution of the same query is tested with a query plan that adjusts the impactful CE model assumption and **verifies** if it helps.  We identify incorrectness by looking at actual vs. estimated rows from plan operators.  Not all errors can be corrected by model variants available in CE feedback.
+1. If an assumption looks incorrect, a subsequent execution of the same query is tested with a query plan that adjusts the impactful CE model assumption and **verifies** if it helps. We identify incorrectness by looking at actual vs. estimated rows from plan operators. Not all errors can be corrected by model variants available in CE feedback.
 
-1. If it improves plan quality, the old query plan is **replaced** with a query plan that uses the appropriate [USE HINT query hint](../../t-sql/queries/hints-transact-sql-query.md#l-using-use-hint) that adjusts the estimation model, implemented through the [Query Store hint](query-store-hints.md) mechanism.
+1. If it improves plan quality, the old query plan is **replaced** with a query plan that uses the appropriate [USE HINT query hint](../../t-sql/queries/hints-transact-sql-query.md#l-use-use-hint) that adjusts the estimation model, implemented through the [Query Store hint](query-store-hints.md) mechanism.
 
 Only verified feedback is persisted. CE feedback isn't used for that query if the adjusted model assumption results in a performance regression. In this context, a user canceled query is also perceived as a regression.
 
@@ -112,7 +112,7 @@ When the row goal plan is applied, the estimated number of rows in the query pla
 
 While row goal is a beneficial optimization strategy for certain query patterns, if data isn't uniformly distributed, more pages might be scanned than estimated, meaning that row goal becomes inefficient. CE feedback can disable the row goal scan and enable a seek when this inefficiency is detected.
 
-In the execution plan, there is no attribute specific to CE feedback, but there will be an attribute listed for the Query Store hint. Look for the `QueryStoreStatementHintSource` to be `CE feedback`.
+In the execution plan, there's no attribute specific to CE feedback, but there's an attribute listed for the Query Store hint. Look for the `QueryStoreStatementHintSource` to be `CE feedback`.
 
 ## Considerations for cardinality estimation (CE) feedback
 
@@ -132,17 +132,17 @@ Hints set by CE feedback can be tracked using the [sys.query_store_query_hints](
 
 Feedback information can be tracked using the [sys.query_store_plan_feedback](../system-catalog-views/sys-query-store-plan-feedback.md) catalog view.
 
-If a query has a query plan forced through Query Store, CE feedback won't be used for that query.
+If a query has a query plan forced through Query Store, CE feedback isn't used for that query.
 
-If a query uses hard-coded query hints or is using Query Store hints set by the user, CE feedback won't be used for that query. For more information, see [Hints (Transact-SQL) - Query](../../t-sql/queries/hints-transact-sql-query.md) and [Query Store hint](query-store-hints.md).
+If a query uses hard-coded query hints or is using Query Store hints set by the user, CE feedback isn't used for that query. For more information, see [Query hints](../../t-sql/queries/hints-transact-sql-query.md) and [Query Store hint](query-store-hints.md).
 
-Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query Store for secondary replicas is enabled, CE feedback is not replica-aware for secondary replicas in availability groups. CE feedback currently only benefits primary replicas. On failover, feedback applied to primary or secondary replicas is lost. For more information, see [Query Store for secondary replicas](query-store-for-secondary-replicas.md).
+Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query Store for secondary replicas is enabled, CE feedback isn't replica-aware for secondary replicas in availability groups. CE feedback currently only benefits primary replicas. On failover, feedback applied to primary or secondary replicas is lost. For more information, see [Query Store for secondary replicas](query-store-for-secondary-replicas.md).
 
 ## Persistence for cardinality estimation (CE) feedback
 
 **Applies to:** [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)])
 
-Cardinality estimation (CE) feedback can detect scenarios when the row goal optimization should be persisted, and keep this change by persisting it in the query store in the form of a query store hint. The new optimization will be used for future executions of the query. CE feedback will persist other scenarios outside of row goal optimization query patterns, as detailed in [feedback scenarios](#cardinality-estimation-ce-feedback-scenarios). CE feedback currently handles predicate selectivity scenarios that are used by the CE's correlation model, and join predicate scenarios that are handled by the CE's containment model.
+Cardinality estimation (CE) feedback can detect scenarios when the row goal optimization should be persisted, and keep this change by persisting it in the query store in the form of a query store hint. The new optimization is used for future executions of the query. CE feedback persists other scenarios outside of row goal optimization query patterns, as detailed in [feedback scenarios](#cardinality-estimation-ce-feedback-scenarios). CE feedback currently handles predicate selectivity scenarios that are used by the CE's correlation model, and join predicate scenarios that are handled by the CE's containment model.
 
 This feature was introduced in [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)], however this performance enhancement is available for queries that operate in the database compatibility level 160 or higher, or the `QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n` hint of 160 and higher, and when Query Store is enabled for the database and is in a "read write" state.
 
@@ -156,11 +156,11 @@ This feature was introduced in [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)
 
 #### Slow SQL Server performance after you apply Cumulative Update 8 for SQL Server 2022 under certain conditions
 
-Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Cumulative Update 8, SQL Server might exhibit unexpected increases in CPU and memory utilization. Additionally, an increase in RESOURCE_SEMAPHORE_QUERY_COMPILE waits may also be observed. You might also notice steady increases in the number of Plan Cache objects in use that approach the Plan Cache limits and manually clearing the Plan Cache with techniques like `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE`, `DBCC FREESYSTEMCACHE`, or `DBCC FREEPROCCACHE` do not provide assistance. This behavior has only been observed by a small number of customers.
+Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Cumulative Update 8, SQL Server might exhibit unexpected increases in CPU and memory utilization. Additionally, an increase in RESOURCE_SEMAPHORE_QUERY_COMPILE waits might also be observed. You might also notice steady increases in the number of Plan Cache objects in use that approach the Plan Cache limits and manually clearing the Plan Cache with techniques like `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE`, `DBCC FREESYSTEMCACHE`, or `DBCC FREEPROCCACHE` don't provide assistance. This behavior has only been observed by a few customers.
 
-This issue does not affect all workloads, and depends on the number of different plans that have been generated as well as the number of plans that were eligible for the CE feedback feature to engage. During the period of time that CE feedback is analyzing plan operators where significant model misestimations occurred, there is a scenario in which during this analysis phase, a plan that was being referenced can become dereferenced in memory without allowing the plan to subsequently be removed from memory by way of the normal Least Recently Used (LRU) algorithm. The LRU mechanism one way that SQL Server enforces plan eviction policies. SQL Server will also remove plans from memory if the system is under memory pressure. When SQL Server attempts to remove the plans that have been dereferenced improperly, it is unable to remove those plans from the plan cache, which causes the cache to continue to grow. The growing cache might start to cause additional compilations that will ultimately use more CPU and memory. For more information, see [Plan Cache Internals](/previous-versions/tn-archive/cc293624(v=technet.10)).
+This issue doesn't affect all workloads, and depends on the number of different plans that were generated as well as the number of plans that were eligible for the CE feedback feature to engage. While CE feedback is analyzing plan operators for significant model misestimations, there's a scenario where a referenced plan can be dereferenced during this analysis phase. This situation prevents the plan from being removed from memory using the usual Least Recently Used (LRU) algorithm. The LRU mechanism one way that SQL Server enforces plan eviction policies. SQL Server also removes plans from memory if the system is under memory pressure. When SQL Server attempts to remove the plans that were dereferenced improperly, it's unable to remove those plans from the plan cache, which causes the cache to continue to grow. The growing cache might start to cause additional compilations that ultimately use more CPU and memory. For more information, see [Plan Cache Internals](/previous-versions/tn-archive/cc293624(v=technet.10)).
 
-**Symptom**: The number of plan cache **entries in use** and are marked as **dirty** from either SQL Plans or Object Plans increases over time to 50,000 or more. If you observe plan cache entries that start to approach this level along with unexpected increases in CPU utilization, your system may be encountering this issue. A fix has been provided with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Cumulative Update 12. See [KB5033663](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate12#2890724).
+**Symptom**: The number of plan cache **entries in use** and are marked as **dirty** from either SQL Plans or Object Plans increases over time to 50,000 or more. If you observe plan cache entries that start to approach this level along with unexpected increases in CPU utilization, your system might be encountering this issue. A fix is provided with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Cumulative Update 12. See [KB5033663](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate12#2890724).
 
 To monitor the number of plan cache entries that your system is using, the following examples can be used as a point in time view of the number of plan cache entries that exist. As an example, watching the number of plan cache entries that are marked as dirty, periodically over time is one way to monitor for this phenomenon.
 
@@ -173,7 +173,7 @@ SELECT
   END AS PlanType,
   COUNT(*) AS [Number of plans marked to be removed]
 FROM sys.dm_os_memory_cache_entries AS mce
-LEFT OUTER JOIN sys.dm_exec_cached_plans AS ecp 
+LEFT OUTER JOIN sys.dm_exec_cached_plans AS ecp
   ON mce.memory_object_address = ecp.memory_object_address
 WHERE mce.is_dirty = 1
 AND ecp.bucketid is NULL
@@ -185,12 +185,12 @@ GROUP BY
   END;
 ```
 
-Another set of queries that will also provide the same information as the previous example while also allowing you to observe additional performance metrics. Plan Cache hit ratios will decrease, as well as the number of compilations in relation to the number of batch requests/sec. The following queries can be used to monitor your system over time. Keeping an eye on the **Cache Hit Ratio** (unanticipated dips), the **Cache Objects in use** (increases in the count to levels approaching 50,000 without decreasing) and a lower than expected **Batch Requests/sec** ratio as compared to a rise in **Compilations/sec**.
+Another set of queries that also provide the same information as the previous example while also allowing you to observe additional performance metrics. Plan Cache hit ratios decrease, as well as the number of compilations in relation to the number of batch requests/sec. The following queries can be used to monitor your system over time. Keeping an eye on the **Cache Hit Ratio** (unanticipated dips), the **Cache Objects in use** (increases in the count to levels approaching 50,000 without decreasing) and a lower than expected **Batch Requests/sec** ratio as compared to a rise in **Compilations/sec**.
 
 ```sql
 --SQL Plan (Adhoc and Prepared plans)
 SELECT
-    CASE 
+    CASE
         WHEN [counter_name] = 'Cache Hit Ratio' THEN 'Cache Hit Ratio'
         WHEN [counter_name] = 'Cache Object Counts' THEN 'Cache Object Counts'
         WHEN [counter_name] = 'Cache Objects in use' THEN 'Cache Objects in use'
@@ -202,8 +202,8 @@ SELECT
     END AS [Counter Value],
     CASE
         WHEN [counter_name] = 'Cache Hit Ratio' THEN
-            FORMAT(TRY_CONVERT(DECIMAL(5, 2), (cntr_value * 1.0 / NULLIF((SELECT cntr_value 
-        FROM sys.dm_os_performance_counters WHERE 
+            FORMAT(TRY_CONVERT(DECIMAL(5, 2), (cntr_value * 1.0 / NULLIF((SELECT cntr_value
+        FROM sys.dm_os_performance_counters WHERE
         [object_name] LIKE '%:Plan Cache%' AND [counter_name] = 'Cache Hit Ratio Base'
         AND instance_name LIKE 'SQL Plan%'), 0))), '0.00%')
     END AS [SQL Plan Cache Hit Ratio]
@@ -215,7 +215,7 @@ ORDER BY [counter_name];
 
 --Module/Stored procedure based plans
 SELECT
-    CASE 
+    CASE
         WHEN [counter_name] = 'Cache Hit Ratio' THEN 'Cache Hit Ratio'
         WHEN [counter_name] = 'Cache Object Counts' THEN 'Cache Object Counts'
         WHEN [counter_name] = 'Cache Objects in use' THEN 'Cache Objects in use'
@@ -227,8 +227,8 @@ SELECT
     END AS [Counter Value],
     CASE
         WHEN [counter_name] = 'Cache Hit Ratio' THEN
-            FORMAT(TRY_CONVERT(DECIMAL(5, 2), (cntr_value * 1.0 / NULLIF((SELECT cntr_value 
-        FROM sys.dm_os_performance_counters WHERE 
+            FORMAT(TRY_CONVERT(DECIMAL(5, 2), (cntr_value * 1.0 / NULLIF((SELECT cntr_value
+        FROM sys.dm_os_performance_counters WHERE
         [object_name] LIKE '%:Plan Cache%' AND [counter_name] = 'Cache Hit Ratio Base'
         AND instance_name LIKE 'Object Plan%'), 0))), '0.00%')
     END AS [SQL Plan Cache Hit Ratio]
@@ -246,15 +246,15 @@ SELECT
     FORMAT(cntr_value, '#,###') AS [Counter Value]
 FROM sys.dm_os_performance_counters
 WHERE [object_name] LIKE '%:SQL Statistics%'
-AND counter_name IN ('Batch Requests/sec', 'SQL Compilations/sec' 
+AND counter_name IN ('Batch Requests/sec', 'SQL Compilations/sec'
 );
 ```
 
 #### Workaround
 
-If your system continues to experience the symptoms that have been described previously, after applying Cumulative Update 12 [KB5033663](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate12#2890724), the CE feedback feature can be disabled at the database level.
+If your system continues to experience the symptoms that were described previously, after applying Cumulative Update 12 [KB5033663](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate12#2890724), the CE feedback feature can be disabled at the database level.
 
-To reclaim the plan cache memory that had been taken up by this issue, a restart of the SQL Server instance is required. This restart action can be taken after the CE feedback feature is disabled. To disable CE feedback at the database level, use the `CE_FEEDBACK` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#ce_feedback---on--off-). For example, in the user database:
+To reclaim the plan cache memory taken up by this issue, a restart of the SQL Server instance is required. This restart action can be taken after the CE feedback feature is disabled. To disable CE feedback at the database level, use the `CE_FEEDBACK` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#ce_feedback---on--off-). For example, in the user database:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET CE_FEEDBACK = OFF;
@@ -266,7 +266,7 @@ For feedback or questions, email [CEFfeedback@microsoft.com](mailto:CEFfeedback@
 
 ## Related content
 
-- Blog: [Cardinality Estimation Feedback in SQL Server 2022](https://cloudblogs.microsoft.com/sqlserver/2022/12/01/cardinality-estimation-feedback-in-sql-server-2022/)
+- [Cardinality Estimation Feedback in SQL Server 2022](https://www.microsoft.com/en-us/sql-server/blog/2022/12/01/cardinality-estimation-feedback-in-sql-server-2022)
 - [Intelligent query processing in SQL databases](intelligent-query-processing.md)
 - [Intelligent query processing features in detail](intelligent-query-processing-details.md)
 - [Cardinality Estimation (SQL Server)](cardinality-estimation-sql-server.md)

@@ -17539,13 +17539,14 @@ items:
         - name: MATCH
           href: t-sql/queries/match-sql-graph.md
       - name: Hints
-        href: t-sql/queries/hints-transact-sql.md
         items:
-        - name: Join
+        - name: Overview
+          href: t-sql/queries/hints-transact-sql.md
+        - name: Join hints
           href: t-sql/queries/hints-transact-sql-join.md
-        - name: Query
+        - name: Query hints
           href: t-sql/queries/hints-transact-sql-query.md
-        - name: Hints - Table
+        - name: Table hints
           href: t-sql/queries/hints-transact-sql-table.md
       - name: Predicates
         href: t-sql/queries/predicates.md

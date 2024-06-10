@@ -25,8 +25,8 @@ The assessment:
 You can obtain a migration assessment for SQL Servers located anywhere:
 
 - In your data center
-- At edge site locations, such as retail stores
-- Any public cloud or hosting provider
+- At edge site locations - such as retail stores
+- On any public cloud or hosting provider
 
 The assessment is available for any instance of SQL Server enabled by Azure Arc.
 

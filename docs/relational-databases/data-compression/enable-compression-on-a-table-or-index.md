@@ -4,7 +4,7 @@ description: Learn how to enable compression on a table or index in SQL Server b
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 08/21/2023
+ms.date: 06/10/2024
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -28,7 +28,7 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 
 This article describes how to enable [data compression](data-compression.md) on an existing table or index in [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE [tsql](../../includes/tsql-md.md)]. To enable data compression when creating a table or index, see the [Create a compressed index](../../t-sql/statements/create-index-transact-sql.md#l-create-a-compressed-index) and [Creating a table that uses row compression](../../t-sql/statements/create-table-transact-sql.md#n-creating-a-table-that-uses-row-compression) examples.
 
-## Limitations and restrictions
+## Limitations
 
 - System tables can't be enabled for compression.
 
@@ -92,13 +92,16 @@ Requires `ALTER` permission on the table or index.
 
    If you select **Create script**, the following options are available under **Script options**:
 
-   - **Script to file**  
+   - **Script to file**
+
      Generates the script as a `.sql` file. Enter a file name and location in the **File name** box or select **Browse** to open the **Script File Location** dialog box. From **Save As**, select **Unicode text** or **ANSI text**.
 
-   - **Script to Clipboard**  
+   - **Script to Clipboard**
+
      Saves the script to the Clipboard.
 
-   - **Script to New Query Window**  
+   - **Script to New Query Window**
+
      Generates the script to a new Query Editor window. This is the default selection.
 
    - If you select **Schedule**, select **Change schedule**.
@@ -195,9 +198,9 @@ Requires `ALTER` permission on the table or index.
 
 ## <a id="TsqlProcedure"></a> Use Transact-SQL
 
-### SQL Server and Azure SQL Database
+In your database of choice, run [sp_estimate_data_compression_savings (Transact-SQL)](../system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) and then enable compression on the table or index. See the following sections.
 
-In [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], run `sp_estimate_data_compression_savings` and then enable compression on the table or index. See the following sections.
+[!INCLUDE [article-uses-adventureworks](../../includes/article-uses-adventureworks.md)]
 
 #### Enable compression on a table
 
@@ -205,11 +208,11 @@ In [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE [ssaz
 
 1. On the Standard bar, select **New Query**.
 
+1. Make sure you are in the context of your database.
+
 1. Copy and paste the following example into the query window and select **Execute**. The example first executes the stored procedure `sp_estimate_data_compression_savings` to return the estimated size of the object if it were to use the `ROW` compression setting. The example then enables `ROW` compression on all partitions in the specified table.
 
    ```sql
-   USE AdventureWorks2022;
-   GO
    EXEC sp_estimate_data_compression_savings 'Production', 'TransactionHistory', NULL, NULL, 'ROW';
 
    ALTER TABLE Production.TransactionHistory REBUILD PARTITION = ALL
@@ -223,11 +226,11 @@ In [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE [ssaz
 
 1. On the Standard bar, select **New Query**.
 
+1. Make sure you are in the context of your database.
+
 1. Copy and paste the following example into the query window and select **Execute**. The example first queries the `sys.indexes` catalog view to return the name and `index_id` for each index on the `Production.TransactionHistory` table. It then executes the stored procedure `sp_estimate_data_compression_savings` to return the estimated size of the specified index ID if it were to use the `PAGE` compression setting. Finally, the example rebuilds index ID 2 (`IX_TransactionHistory_ProductID`), specifying `PAGE` compression.
 
    ```sql
-   USE AdventureWorks2022;
-   GO
    SELECT name, index_id
    FROM sys.indexes
    WHERE OBJECT_NAME (object_id) = N'TransactionHistory';
@@ -243,13 +246,13 @@ In [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE [ssaz
    GO
    ```
 
-For more information, see [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md) and [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md).
+For more information, see [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) and [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md).
 
-## See also
+## Related content
 
 - [Data compression](data-compression.md)
 - [Row compression implementation](row-compression-implementation.md)
 - [Page compression implementation](page-compression-implementation.md)
-- [sp_estimate_data_compression_savings (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)
+- [sp_estimate_data_compression_savings (Transact-SQL)](../system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)
 - [Create a compressed index](../../t-sql/statements/create-index-transact-sql.md#l-create-a-compressed-index)
 - [Create a table that uses row compression](../../t-sql/statements/create-table-transact-sql.md#n-creating-a-table-that-uses-row-compression)

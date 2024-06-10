@@ -1,6 +1,6 @@
 ---
 title: Assess migration readiness (preview)
-description: Explains how SQL Server enabled by Azure Arc helps assess the SQL Servers migrating to Azure SQL.
+description: Select the optimal Azure SQL target using migration assessment (preview) with SQL Server enabled by Azure Arc.
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mikeray, randolphwest
@@ -8,7 +8,7 @@ ms.date: 02/13/2024
 ms.topic: conceptual
 ---
 
-# Select the optimal Azure SQL target using Migration assessment (preview) - SQL Server enabled by Azure Arc
+# Assess migration readiness (preview) - SQL Server enabled by Azure Arc
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 

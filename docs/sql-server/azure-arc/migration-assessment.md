@@ -92,7 +92,7 @@ Review the readiness for target deployment types and the Azure SQL size recommen
 
 ## Review confidence rating
 
-SQL Migration assessment assigns a confidence rating to SQL Server migration assessment based on the availability of the performance/utilization data points needed to compute the assessment for all the assessed SQL instances and databases. Rating is from one star (lowest) to five stars (highest). The confidence rating is projected to reach its peak (five stars) approximately after 30 days of continuous data collection. It should increase by one star for each week of data collection. The confidence rating helps you estimate the reliability of size recommendations in the assessment. Confidence ratings are as follows:
+The confidence rating is a scale from one star (lowest) to five stars (highest). The confidence rating is projected to reach its peak (five stars) approximately after 30 days of continuous data collection. It should increase by one star for each week of data collection. The confidence rating helps you estimate the reliability of size recommendations in the assessment. The value is based on the availability of the performance/utilization data points needed to compute the assessment for all the assessed SQL instances and databases. Confidence ratings are as follows:
 
 | **Data point availability**	 | **Confidence rating** |
 | ---------------------------- | --------------------- |
@@ -148,7 +148,7 @@ Use **Enable Assessment** button to re-enable the SQL Server migration assessmen
 
 Contact [Microsoft support](/azure/azure-portal/supportability/how-to-create-azure-support-request) if you run into any of the issues below.
 
-- The assessment reports are not appearing on the portal, even after the scheduled time of Sunday 11:00 PM (2300), according to the local time of the SQL Server machine.
+- The assessment reports don't appearing on the portal, even after the scheduled time of Sunday 11:00 PM (2300), according to the local time of the SQL Server machine.
 - Confidence rating doesn't increase after one week of data gathering. The confidence should increase after the first week.
 
 ## Related content

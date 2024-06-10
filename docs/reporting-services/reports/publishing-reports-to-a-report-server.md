@@ -37,13 +37,13 @@ Your report server administrator defines role-based security that determines per
 
 ### Project configurations
 
- Your reporting environment might have multiple report servers and different versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installed. Create multiple configurations and then use a different one depending on the deployment scenario. Project configurations include properties for building reports, such as the folder in which to temporarily store the built reports, and how to handle build issues. The configurations also have properties that you use to specify the location and version of the report server, the folders on the report server.
+Your reporting environment might have multiple report servers and different versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installed. Create multiple configurations and then use a different one depending on the deployment scenario. Project configurations include properties for building reports, such as the folder in which to temporarily store the built reports, and how to handle build issues. The configurations also have properties that you use to specify the location and version of the report server, the folders on the report server.
 
- By default, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] provides three project configurations: **DebugLocal**, **Debug**, and **Release**. The default configuration is DebugLocal. You typically use the DebugLocal configuration to view reports in a local preview window, the Debug configuration to publish reports to a test server, and the Release configuration to publish reports to a production server. The solution configurations drop-down list on the Standard toolbar shows the active configuration. To use a different configuration, select it from the list.
+By default, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] provides three project configurations: **DebugLocal**, **Debug**, and **Release**. The default configuration is DebugLocal. You typically use the DebugLocal configuration to view reports in a local preview window, the Debug configuration to publish reports to a test server, and the Release configuration to publish reports to a production server. The solution configurations drop-down list on the Standard toolbar shows the active configuration. To use a different configuration, select it from the list.
 
 :::image type="content" source="../../reporting-services/reports/media/ssrs-project-properties.png" alt-text="Screenshot of the tutorial Property Pages, highlighting TargetServerURL.":::
 
- For more information, see:
+For more information, see:
 
 - [Project property pages dialog box](../../reporting-services/tools/project-property-pages-dialog-box.md)
 - [Deployment and version support in SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)
@@ -62,9 +62,9 @@ In Solution Explorer, right-click the report and then select **Deploy Solution**
 When you publish a report, you must also deploy the shared data sources that the report uses.
 If you don't want to publish all reports in a project, choose to publish only a single report. Select a configuration that deploys the report (for example, the Release configuration), right-click the report, and then select **Deploy Solution**.
 
- If a report uses a shared data source, you need to also deploy the shared data source or the deployed report doesn't run. Right-click the shared data source and then select **Deploy Solution**.
+If a report uses a shared data source, you need to also deploy the shared data source or the deployed report doesn't run. Right-click the shared data source and then select **Deploy Solution**.
 
- The target server URL of the report server must be specified and you might want to change the default folders to which reports and shared data sources deploy.
+The target server URL of the report server must be specified and you might want to change the default folders to which reports and shared data sources deploy.
 
 ## Related content
 

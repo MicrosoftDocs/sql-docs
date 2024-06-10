@@ -31,10 +31,13 @@ The Dev Container for Azure SQL Database is packed with powerful tools and confi
 
 ### Preconfigured Environment
 
-- **.NET Ready**: The environment includes .NET preinstalled and configured, ready for development.
-- **Azure CLI and azd CLI**: Tools for managing Azure resources and deployments.
-- **Pre-created Database**: A sample SQL Server database, preconfigured and ready for use.
-- **SQL Server 2022**: The latest developer edition of Microsoft SQL Server is included.
+- **.NET / .NET Aspire**: The environment includes your preferred programming language/framework preinstalled and configured, ready for development.
+- **Azure CLI**: Tools for managing Azure resources and deployments.
+- **Azure Developer CLI:** A command-line interface providing a unified scripting experience for managing and developing Azure resources.
+- **Docker CLI**: Allows building and managing Docker containers from within another container.
+- **Azure SQL Database**: The `library` database was created and validated and ready for use. This database gives you full compatibility with Azure SQL Database.
+- **SQLCMD**: A command-line utility you can use to interact with the database, run queries, and more.
+- **SqlPackage**: Command-line utility for deploying database changes, including schema updates and data migrations.
 
 > [!IMPORTANT]
 > While the SQL Server container employs a standard version of SQL Server, all database development within this Dev Container can be validated for Azure SQL Database using the SQL Database Project. The SQL Database project is preconfigured with the target platform set as Azure SQL Database.

@@ -1,12 +1,12 @@
 ---
-title: "What is SQL Server Reporting Services"
-description: "Learn about tools and services for Reporting Services reports on premises."
+title: "What is SQL Server Reporting Services?"
+description: "Learn how to create, deploy, and manage reports using SQL Server Reporting Services (SSRS) to deliver data insights through paginated reports and modern web portals."
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/16/2022
+ms.date: 06/12/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom:
   - intro-overview
   - updatefrequency5
@@ -16,6 +16,7 @@ helpviewer_keywords:
   - "reports [Reporting Services], about reports"
   - "Reporting Services"
   - "SQL Server Reporting Services"
+#customer intent: As a SQL Server user, I want to learn how to create, deploy, and manage reports using SQL Server Reporting Services (SSRS) to deliver data insights through paginated reports and modern web portals.
 ---
 
 # What is SQL Server Reporting Services (SSRS)?

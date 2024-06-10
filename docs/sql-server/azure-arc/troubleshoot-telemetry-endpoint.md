@@ -81,7 +81,7 @@ For extension version `1.1.24724.69` and earlier, the log file is:
 
 Check for log entries that indicate a problem connecting to the DPS or telemetry endpoints.
 
-## Probe connectivity to all regions.
+## Probe connectivity to all regions
 
 You can probe connectivity to all regiouns with the [test-connectivity.ps1](~/../sql-server-samples/samples/features/azure-arc/troubleshooting/test-connectivity.ps1) PowerShell script.
 

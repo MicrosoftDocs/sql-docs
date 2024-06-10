@@ -123,7 +123,7 @@ SQL Server extension for Azure collects performance data for compute settings wi
 
 You can trigger a fresh assessment at any time. Select **Run Assessment**.
 
-After the new assessment is complete, it replaces the last successful assessment. Migration assessment continue to run on schedule every Sunday at 11:00 PM (23:00) according to the local time on the SQL Server machine.
+After the new assessment is complete, it replaces the last successful assessment. Scheduled migration assessments continue on schedule every Sunday at 11:00 PM (23:00) according to the local time on the SQL Server machine.
 
 ## Disable migration assessment
 

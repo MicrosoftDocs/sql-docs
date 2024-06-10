@@ -4,7 +4,7 @@ description: "OPENROWSET includes all connection information that is required to
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest, hudequei, wiassaf, nzagorac
-ms.date: 01/30/2024
+ms.date: 06/06/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "ad hoc connection information"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-mi-current || >=sql-server-2016 || >=sql-server-linux-2017"
 ---
 # OPENROWSET (Transact-SQL)
 
@@ -32,12 +32,12 @@ Includes all connection information that is required to access remote data from 
 
 `OPENROWSET` also supports bulk operations through a built-in `BULK` provider that enables data from a file to be read and returned as a rowset.
 
-Many examples in this article only apply to [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] only. Details and links to similar examples on other platforms:
+Many examples in this article only apply to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] only. Details and links to similar examples on other platforms:
 
- - Azure SQL Database only supports reading from Azure Blob Storage.
- - For examples on [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)], see [Query data sources using OPENROWSET](/azure/azure-sql/managed-instance/data-virtualization-overview#query-data-sources-using-openrowset).
- - For information and examples with serverless SQL pools in Azure Synapse, see [How to use OPENROWSET using serverless SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql/develop-openrowset).
- - Dedicated SQL pools in Azure Synapse do not support the `OPENROWSET` function.
+- Azure SQL Database only supports reading from Azure Blob Storage.
+- For examples on [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], see [Query data sources using OPENROWSET](/azure/azure-sql/managed-instance/data-virtualization-overview#query-data-sources-using-openrowset).
+- For information and examples with serverless SQL pools in Azure Synapse, see [How to use OPENROWSET using serverless SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql/develop-openrowset).
+- Dedicated SQL pools in Azure Synapse don't support the `OPENROWSET` function.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -67,7 +67,7 @@ OPENROWSET
 
    -- bulk_options related to input file format
    [ , CODEPAGE = { 'ACP' | 'OEM' | 'RAW' | 'code_page' } ]
-   [ , FORMAT = 'CSV' ]
+   [ , FORMAT = { 'CSV' | 'PARQUET' | 'DELTA' } ]
    [ , FIELDQUOTE = 'quote_characters' ]
    [ , FORMATFILE = 'format_file_path' ]
    [ , FORMATFILE_DATA_SOURCE = 'data_source_name' ]
@@ -182,7 +182,7 @@ Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the data_f
 
 ### BULK error handling options
 
-#### ERRORFILE ='*file_name*'
+#### ERRORFILE = '*file_name*'
 
 Specifies the file used to collect rows that have formatting errors and can't be converted to an OLE DB rowset. These rows are copied into this error file from the data file "as is."
 
@@ -192,7 +192,7 @@ Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the `error
 
 #### ERRORFILE_DATA_SOURCE_NAME
 
-Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], this argument is a named external data source pointing to the Azure Blob storage location of the error file that will contain errors found during the import. The external data source must be created using the `TYPE = BLOB_STORAGE`. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], this argument is a named external data source pointing to the Azure Blob storage location of the error file that will contain errors found during the import. The external data source must be created using the `TYPE = BLOB_STORAGE`. For more information, see [CREATE EXTERNAL DATA SOURCE](../statements/create-external-data-source-transact-sql.md).
 
 #### MAXERRORS = *maximum_errors*
 
@@ -223,7 +223,7 @@ By default, `ROWS_PER_BATCH` is unknown. Specifying `ROWS_PER_BATCH = 0` is the 
 
 #### ORDER ( { *column* [ ASC | DESC ] } [ ,... *n* ] [ UNIQUE ] )
 
-An optional hint that specifies how the data in the data file is sorted. By default, the bulk operation assumes the data file is unordered. Performance can improve if the query optimizer can exploit the order to generate a more efficient query plan. Examples for when specifying a sort can be beneficial include the following:
+An optional hint that specifies how the data in the data file is sorted. By default, the bulk operation assumes the data file is unordered. Performance can improve if the query optimizer can exploit the order to generate a more efficient query plan. The following list provides examples for when specifying a sort can be beneficial:
 
 - Inserting rows into a table that has a clustered index, where the rowset data is sorted on the clustered index key.
 - Joining the rowset with another table, where the sort and join columns match.
@@ -274,14 +274,16 @@ Specifies the code page of the data in the data file. `CODEPAGE` is relevant onl
 
 | CODEPAGE value | Description |
 | --- | --- |
-| ACP | Converts columns of **char**, **varchar**, or **text** data type from the ANSI/[!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows code page (ISO 1252) to the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] code page. |
-| OEM (default) | Converts columns of **char**, **varchar**, or **text** data type from the system OEM code page to the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] code page. |
-| RAW | No conversion occurs from one code page to another. This is the fastest option. |
-| *code_page* | Indicates the source code page on which the character data in the data file is encoded; for example, 850.<br /><br />**Important** Versions before [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] don't support code page 65001 (UTF-8 encoding). |
+| `ACP` | Converts columns of **char**, **varchar**, or **text** data type from the ANSI/[!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows code page (ISO 1252) to the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] code page. |
+| `OEM` (default) | Converts columns of **char**, **varchar**, or **text** data type from the system OEM code page to the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] code page. |
+| `RAW` | No conversion occurs from one code page to another. This is the fastest option. |
+| `code_page` | Indicates the source code page on which the character data in the data file is encoded; for example, 850.<br /><br />**Important** Versions before [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] don't support code page 65001 (UTF-8 encoding). |
 
-#### FORMAT = 'CSV'
+#### FORMAT = { 'CSV' | 'PARQUET' | 'DELTA' }
 
 Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], this argument specifies a comma separated values file compliant to the [RFC 4180](https://datatracker.ietf.org/doc/html/rfc4180) standard.
+
+Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], both Parquet and Delta formats are supported.
 
 ```sql
 SELECT *
@@ -301,9 +303,9 @@ For information about format files, see [Use a format file to bulk import data (
 
 Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the format_file_path can be in Azure Blob Storage. For examples, see [Examples of bulk access to data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
-#### FIELDQUOTE = 'field_quote'
+#### FIELDQUOTE = '*field_quote*'
 
-Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], this argument specifies a character that is used as the quote character in the CSV file. If not specified, the quote character (`"`) is used as the quote character as defined in the [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
+Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], this argument specifies a character that is used as the quote character in the CSV file. If not specified, the quote character (`"`) is used as the quote character as defined in the [RFC 4180](https://datatracker.ietf.org/doc/html/rfc4180) standard.
 
 ## Remarks
 
@@ -335,7 +337,7 @@ The following [!INCLUDE [tsql](../../includes/tsql-md.md)] enhancements support 
 
 - A `SELECT...FROM OPENROWSET(BULK...)` statement queries the data in a file directly, without importing the data into a table. `SELECT...FROM OPENROWSET(BULK...)` statements can also list bulk-column aliases by using a format file to specify column names, and also data types.
 - Using `OPENROWSET(BULK...)` as a source table in an `INSERT` or `MERGE` statement bulk imports data from a data file into a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] table. For more information, see [Use BULK INSERT or OPENROWSET(BULK...) to import data to SQL Server](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
-- When the `OPENROWSET BULK` option is used with an `INSERT` statement, the `BULK` clause supports table hints. In addition to the regular table hints, such as `TABLOCK`, the `BULK` clause can accept the following specialized table hints: `IGNORE_CONSTRAINTS` (ignores only the `CHECK` and `FOREIGN KEY` constraints), `IGNORE_TRIGGERS`, `KEEPDEFAULTS`, and `KEEPIDENTITY`. For more information, see [Table Hints (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md).
+- When the `OPENROWSET BULK` option is used with an `INSERT` statement, the `BULK` clause supports table hints. In addition to the regular table hints, such as `TABLOCK`, the `BULK` clause can accept the following specialized table hints: `IGNORE_CONSTRAINTS` (ignores only the `CHECK` and `FOREIGN KEY` constraints), `IGNORE_TRIGGERS`, `KEEPDEFAULTS`, and `KEEPIDENTITY`. For more information, see [Table Hints (Transact-SQL)](../queries/hints-transact-sql-table.md).
 
   For information about how to use `INSERT...SELECT * FROM OPENROWSET(BULK...)` statements, see [Bulk Import and Export of Data (SQL Server)](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md). For information about when row-insert operations that are performed by bulk import are logged in the transaction log, see [Prerequisites for minimal logging in bulk import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).
 
@@ -369,7 +371,7 @@ This section provides general examples to demonstrate how to use OPENROWSET.
 
 ### A. Use OPENROWSET with SELECT and the SQL Server Native Client OLE DB Provider
 
-**Applies to:** [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] only.
+**Applies to:** [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] only.
 
 [!INCLUDE [snac-removed-oledb-only](../../includes/snac-removed-oledb-only.md)]
 
@@ -387,7 +389,7 @@ FROM OPENROWSET(
 
 ### B. Use the Microsoft OLE DB Provider for Jet
 
-**Applies to:** [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] only.
+**Applies to:** [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] only.
 
 The following example accesses the `Customers` table in the [!INCLUDE [msCoName](../../includes/msconame-md.md)] Access `Northwind` database through the [!INCLUDE [msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet.
 
@@ -409,7 +411,7 @@ FROM OPENROWSET(
 
 ### C. Use OPENROWSET and another table in an INNER JOIN
 
-**Applies to:** [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] only.
+**Applies to:** [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] only.
 
 The following example selects all data from the `Customers` table from the local instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] `Northwind` database and from the `Orders` table from the Access `Northwind` database stored on the same computer.
 
@@ -434,7 +436,7 @@ INNER JOIN OPENROWSET(
 
 ### D. Use OPENROWSET to BULK INSERT file data into a varbinary(max) column
 
-**Applies to:** [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] only.
+**Applies to:** [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] only.
 
 The following example creates a small table for demonstration purposes, and inserts file data from a file named `Text1.txt` located in the `C:` root directory into a **varbinary(max)** column.
 
@@ -466,7 +468,7 @@ GO
 
 ### E. Use the OPENROWSET BULK provider with a format file to retrieve rows from a text file
 
-**Applies to:** [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] only.
+**Applies to:** [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] only.
 
 The following example uses a format file to retrieve rows from a tab-delimited text file, `values.txt` that contains the following data:
 
@@ -485,7 +487,7 @@ The format file, `values.fmt`, describes the columns in `values.txt`:
 2  SQLCHAR  0  40 "\r\n"  2  Description  SQL_Latin1_General_Cp437_BIN
 ```
 
-This is the query that retrieves that data:
+This query retrieves that data:
 
 ```sql
 SELECT a.* FROM OPENROWSET(
@@ -499,7 +501,7 @@ SELECT a.* FROM OPENROWSET(
 
 ### F. Specify a format file and code page
 
-**Applies to:** [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] only.
+**Applies to:** [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] only.
 
 The following example shows how to use both the format file and code page options at the same time.
 
@@ -530,7 +532,7 @@ SELECT * FROM OPENROWSET(
 
 ### H. Access data from a CSV file without a format file
 
-**Applies to:** [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] only.
+**Applies to:** [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] only.
 
 ```sql
 SELECT * FROM OPENROWSET(
@@ -548,13 +550,13 @@ FROM OPENROWSET('MSDASQL',
 ```
 
 > [!IMPORTANT]  
-> - The ODBC driver should be 64-bit. Open the **Drivers** tab of the [Connect to an ODBC Data Source (SQL Server Import and Export Wizard)](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md) application in Windows to verify this. There's 32-bit `Microsoft Text Driver (*.txt, *.csv)` that will not work with a 64-bit version of `sqlservr.exe`.
+> The ODBC driver should be 64-bit. Open the **Drivers** tab of the [Connect to an ODBC Data Source (SQL Server Import and Export Wizard)](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md) application in Windows to verify this. There's 32-bit `Microsoft Text Driver (*.txt, *.csv)` that will not work with a 64-bit version of `sqlservr.exe`.
 
 ### I. Access data from a file stored on Azure Blob Storage
 
 **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions only.
 
-Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the following example uses an external data source that points to a container in an Azure storage account and a database scoped credential created for a shared access signature.
+In [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions, the following example uses an external data source that points to a container in an Azure storage account and a database scoped credential created for a shared access signature.
 
 ```sql
 SELECT * FROM OPENROWSET(
@@ -568,7 +570,7 @@ For complete `OPENROWSET` examples including configuring the credential and exte
 
 ### <a id="j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage"></a> J. Import into a table from a file stored on Azure Blob Storage
 
-The following example shows how to use the `OPENROWSET` command to load data from a csv file in an Azure Blob storage location on which you have created a SAS key. The Azure Blob storage location is configured as an external data source. This requires a database scoped credential using a shared access signature that is encrypted using a master key in the user database.
+The following example shows how to use the `OPENROWSET` command to load data from a csv file in an Azure Blob storage location on which you created the SAS key. The Azure Blob storage location is configured as an external data source. This requires a database scoped credential using a shared access signature that is encrypted using a master key in the user database.
 
 ```sql
 -- Optional: a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
@@ -639,11 +641,11 @@ SELECT * FROM OPENROWSET(
 > [!IMPORTANT]  
 > Azure SQL Database only supports reading from Azure Blob Storage.
 
-### L. Use OPENROWSET to access several parquet files using S3-compatible object storage
+### L. Use OPENROWSET to access several Parquet files using S3-compatible object storage
 
 **Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions.
 
-The following example uses access several parquet files from different location, all stored on S3-compatible object storage:
+The following example uses access several Parquet files from different location, all stored on S3-compatible object storage:
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL s3_dsc
@@ -670,7 +672,7 @@ SELECT * FROM OPENROWSET(
 ) AS data;
 ```
 
-### M. Use OPENROWSET to access several delta files from Azure Data Lake Gen2
+### M. Use OPENROWSET to access several Delta files from Azure Data Lake Gen2
 
 **Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions.
 

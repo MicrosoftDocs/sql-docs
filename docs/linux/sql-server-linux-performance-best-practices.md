@@ -4,7 +4,7 @@ description: This article provides performance best practices and guidelines for
 author: tejasaks
 ms.author: tejasaks
 ms.reviewer: vanto, randolphwest
-ms.date: 06/29/2023
+ms.date: 04/19/2024
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -100,12 +100,14 @@ For the filesystem configuration on Persistent Memory devices, the block allocat
 
 #### Open file limitation
 
-Your production environment might require more connections than the default open file limit of 1024. We recommend you set a soft limit of 16000, and a hard limit of 32727. For example, in [RHEL](https://access.redhat.com/solutions/61334), edit the `/etc/security/limits.d/99-mssql-server.conf` file to have the following values:
+Your production environment might require more connections than the default open file limit of 1,024. You can set soft and hard limits of 1,048,576. For example, in [RHEL](https://access.redhat.com/solutions/61334), edit the `/etc/security/limits.d/99-mssql-server.conf` file to have the following values:
 
 ```ini
-mssql hard nofile 32727
-mssql soft nofile 16000
+mssql - nofile 1048576
 ```
+
+> [!NOTE]
+> This setting doesn't apply to SQL Server services started by `systemd`. For more information, see [How to set limits for services in RHEL and systemd](https://access.redhat.com/solutions/1257953).
 
 ### Disable last accessed date/time on filesystems for SQL Server data and log files
 

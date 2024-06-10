@@ -71,7 +71,7 @@ First, if the plan contains following constructions:
 - Insert bulk statement
 - Reference to an external table
 - Distributed query or full-text operations
-- Use of global queries
+- Use of [elastic queries](/azure/azure-sql/database/elastic-query-overview)
 - Dynamic or keyset cursors
 - Invalid star join specification
 

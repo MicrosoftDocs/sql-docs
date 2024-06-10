@@ -34,7 +34,7 @@ In order for monitoring data to be collected on a [!INCLUDE [ssazurearc](../../i
 
 * The version of Azure Extension for SQL Server (WindowsAgent.SqlServer) is v1.1.2504.99 or later
 * [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is running on Windows operating system
-   - [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] running on [!INCLUDE [winserver2012-md](../../includes/winserver2012-md.md)] and older versions aren't supported
+   - [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] running on [!INCLUDE [winserver2012-md](../../includes/winserver2012-md.md)] R2 and older versions aren't supported
 * [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is a Standard or Enterprise Edition
 * SQL Server version must be 2016 or later
 * The server has connectivity to `*.<region>.arcdataservices.com` (for more information, see [Network Requirements ](/azure/azure-arc/servers/network-requirements?tabs=azure-cloud))

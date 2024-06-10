@@ -2194,8 +2194,7 @@ To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (
 
 - In serverless SQL pool, database-scoped credentials can specify workspace managed identity, service principal name, or shared access signature (SAS) token. Access via a user identity, also known as _Microsoft Entra passthrough_, is also possible in the databased-scoped credential, as is anonymous access to publicly available storage. For more information, see [Supported storage authorization types](/azure/synapse-analytics/sql/develop-storage-files-storage-access-control?tabs=user-identity#supported-storage-authorization-types).
 
-- In dedicated SQL pool, database scoped credentials can specify shared access signature (SAS) token, custom application identity, workspace managed identity, or storage access key. 
-
+- In dedicated SQL pool, database scoped credentials can specify shared access signature (SAS) token, storage access key, service principal, workspace managed identity, or _Microsoft Entra passthrough_.
 
 #### TYPE = *HADOOP*
 

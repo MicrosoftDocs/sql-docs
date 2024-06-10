@@ -24,9 +24,9 @@ The assessment:
 
 You can obtain a migration assessment for SQL Servers located anywhere:
 
-- In your data center
-- At edge site locations - such as retail stores
-- On any public cloud or hosting provider
+- Your data center
+- Edge site locations, such as retail stores
+- Public cloud or hosting provider
 
 The assessment is available for any instance of SQL Server enabled by Azure Arc.
 
@@ -84,7 +84,7 @@ Review the readiness for target deployment types and the Azure SQL size recommen
 
 - **Ready**: The SQL Server instance or database is ready to be migrated to the specific Azure SQL target deployment option without any migration blockers. Should there be any warnings, address these issues using the provided remediation guidance.
 
-- **Not ready**: The assessment couldn't find a SQL Server on Azure Virtual Machine, Azure SQL Managed Instance, or Azure SQL Database configuration meeting the desired compatibility, configuration, and performance characteristics. Select the hyperlink to review the recommendation to make the SQL Server instance/databases ready for the desired target deployment type.
+- **Not ready**: The assessment couldn't find a configuration to meet the compatibility, configuration, and performance characteristics on Azure Virtual Machine, Azure SQL Managed Instance, or Azure SQL Database. Select the hyperlink to review the recommendation to make the SQL Server instance/databases ready for the desired target deployment type.
 
    :::image type="content" source="media/migration-assessment/not-ready.png" alt-text="Screenshot showing how to get to the mitigation guidance when SQL Server isn't ready to migrate.":::
 

@@ -5,7 +5,7 @@ description: Learn about using SQL Server transactional replication with Azure S
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, randolphwest
-ms.date: 06/09/2023
+ms.date: 06/10/2024
 ms.service: sql-managed-instance
 ms.subservice: data-movement
 ms.topic: conceptual
@@ -143,7 +143,7 @@ In this configuration, a database in Azure SQL Database or Azure SQL Managed Ins
 
 ### Login `replAgentUser`
 
-For purposes of transactional replication, a SQL Managed Instance with enabled [November 2022 feature wave](november-2022-feature-wave-enroll.md) has a pre-created login(s) with the name `replAgentUser`. This login is a member of the `sysadmin` server role and is used by replication agents that need to connect to a SQL Managed Instance participating in transactional replication setup.
+For purposes of transactional replication, a SQL managed instance with enabled [November 2022 feature wave](november-2022-feature-wave-enroll.md) has a pre-created login(s) with the name `replAgentUser`. This login is a member of the `sysadmin` server role and is used by replication agents that need to connect to a SQL managed instance participating in transactional replication setup.
 
 If transactional replication is not used, the login `replAgentUser` can be disabled. It can be re-enabled later if you decide to start using transactional replication.
 
@@ -244,7 +244,7 @@ For more information about configuring transactional replication, see the follow
 - [Create a publication](/sql/relational-databases/replication/publish/create-a-publication).
 - [Create a push subscription](/sql/relational-databases/replication/create-a-push-subscription) by using the server name as the subscriber (for example `N'azuresqldbdns.database.windows.net`), and the database in Azure SQL Database name as the destination database (for example, `Adventureworks`).
 
-## See also
+## Related content
 
 - [Replication with a SQL Managed Instance and a failover group](transact-sql-tsql-differences-sql-server.md#replication)
 - [Replication to SQL Database](../database/replication-to-sql-database.md)

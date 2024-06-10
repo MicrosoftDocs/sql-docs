@@ -148,7 +148,7 @@ Use **Enable Assessment** button to re-enable the SQL Server migration assessmen
 
 Contact [Microsoft support](/azure/azure-portal/supportability/how-to-create-azure-support-request) if you run into any of the issues below.
 
-- The assessment reports don't appearing on the portal, even after the scheduled time of Sunday 11:00 PM (2300), according to the local time of the SQL Server machine.
+- The assessment reports don't appear on the portal even after the scheduled time.
 - Confidence rating doesn't increase after one week of data gathering. The confidence should increase after the first week.
 
 ## Related content

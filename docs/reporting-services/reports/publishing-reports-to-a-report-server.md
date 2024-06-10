@@ -25,13 +25,11 @@ helpviewer_keywords:
 ---
 # Publish reports to a report server
 
-Use the deployment features in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to publish the reports to a report server. Publish individual reports or a report server project, which can include multiple reports and data sources. Publishing a report server project is the easiest way to publish multiple reports. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] uses the term *deploy*, instead of the term *publish*. The two terms are interchangeable.
+After you design and test a report or set of reports, you can use the deployment features in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to publish the reports to a report server. You can publish individual reports or a report server project, which can include multiple reports and data sources. Publishing a report server project is the easiest way to publish multiple reports. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] uses the term *deploy*, instead of the term *publish*. The two terms are interchangeable.
 
-[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] provides project configurations for managing report publication. The configuration specifies the location of the report server and the version of SQL Server Reporting Services (SSRS) installed on the report server. The configuration specifies whether the data sources are published to the report server or are overwritten. For example, the "Debug" configuration can publish to a different server than the "release" configuration. In addition to using the configurations that [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] provides, create more configurations.
+[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] provides project configurations for managing report publication. The configuration specifies the location of the report server and the version of SQL Server Reporting Services (SSRS) installed on the report server. The configuration specifies whether the data sources are published to the report server or are overwritten. For example, the "Debug" configuration can publish to a different server than the "release" configuration. In addition the configurations that [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] provides, you can also create more configurations.
 
 ## Prerequisites
-
-Before you can use the deployment features in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to publish the reports to a report server, you must design and test a report or set of reports.
 
 Your report server administrator defines role-based security that determines permission. Publishing operations are typically granted through the **Publisher role**.
 

@@ -24,7 +24,7 @@ Extension versions are cumulative. Higher extension versions include all of the 
 
 ## June  11, 2024
 
-**Extension version**: `1.1.2710.185`
+**Extension version**: `1.1.2717.190`
 
 ### Licensing and billing
 

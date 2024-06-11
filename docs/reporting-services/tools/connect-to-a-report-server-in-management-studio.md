@@ -37,7 +37,7 @@ helpviewer_keywords:
 ## Prerequisites
 
 - [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]](/sql/ssms/download-sql-server-management-studio-ssms).
-- A configured report server in native mode if you plan to use the web portal or a configured report server in SharePoint integrated mode if you plan to access your content by using a SharePoint site.
+- A configured report server in native or Sharepoint mode. For instructions on how to configure your report server, see [Configure a report server (Reporting Services native mode)](/sql/reporting-services/report-server/configure-a-report-server-reporting-services-native-mode)
 - Sufficient permissions to manage your Report Server. For more information about permissions, see [Connection syntax and permissions](#connection-syntax-and-permissions).
 - The server must be registered before you can connect to a report server instance in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For instructions to register a report server, see [Register a report server](#register-a-report-server).
 

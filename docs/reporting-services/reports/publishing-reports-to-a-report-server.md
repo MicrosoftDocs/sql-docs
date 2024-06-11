@@ -25,9 +25,12 @@ helpviewer_keywords:
 ---
 # Publish reports to a report server
 
-After you design and test a report or set of reports, you can use the deployment features in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to publish the reports to a report server. You can publish individual reports or a report server project, which can include multiple reports and data sources. Publishing a report server project is the easiest way to publish multiple reports. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] uses the term *deploy*, instead of the term *publish*. The two terms are interchangeable.
+After you design and test a report or set of reports, use the deployment features in SQL Server Data Tools (SSDT) to publish the reports to a report server. You can publish individual reports or a report server project, which can include multiple reports and data sources. Publishing a report server project is the easiest way to publish multiple reports. SSDT uses the term *deploy*, instead of the term *publish*. The two terms are interchangeable.
 
-[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] provides project configurations for managing report publication. The configuration specifies the location of the report server and the version of SQL Server Reporting Services (SSRS) installed on the report server. The configuration specifies whether the data sources are published to the report server or are overwritten. For example, the "Debug" configuration can publish to a different server than the "release" configuration. In addition the configurations that [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] provides, you can also create more configurations.
+SSDT provides project configurations for managing report publications. The configuration specify:
+
+- The location of the report server and the version of SQL Server Reporting Services (SSRS) installed on the report server.
+- Whether the data sources are published to the report server or are overwritten. For example, the "Debug" configuration can publish to a different server than the "release" configuration. In addition, you can create more configurations.
 
 ## Prerequisites
 
@@ -35,11 +38,19 @@ Your report server administrator defines role-based security that determines per
 
 ### Project configurations
 
-Your reporting environment might have multiple report servers and different versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installed. Create multiple configurations and then use a different one depending on the deployment scenario. Project configurations include properties for building reports, such as the folder in which to temporarily store the built reports, and how to handle build issues. The configurations also have properties that you use to specify the location and version of the report server, the folders on the report server.
+Your reporting environment might have multiple report servers and different versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installed. You can create multiple configurations and then choose one specific to your deployment scenario. Project configurations include properties for building reports, such as the folder in which to temporarily store the built reports, and how to handle build issues. The configurations also have properties that you use to specify the report server's location, the version of the report server, and the folders on the report server.
 
-By default, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] provides three project configurations: **DebugLocal**, **Debug**, and **Release**. The default configuration is DebugLocal. You typically use the DebugLocal configuration to view reports in a local preview window, the Debug configuration to publish reports to a test server, and the Release configuration to publish reports to a production server. The solution configurations drop-down list on the Standard toolbar shows the active configuration. To use a different configuration, select it from the list.
+By default, SSDT provides three project configurations:
 
-:::image type="content" source="../../reporting-services/reports/media/ssrs-project-properties.png" alt-text="Screenshot of the tutorial Property Pages, highlighting TargetServerURL.":::
+|Project configuration|Description|
+|---|---|
+| **DebugLocal**| View reports in a local preview window.|
+| **Debug**| Publish reports to a test server.|
+|**Release**| Publish reports to a production server.|
+
+**The solution configurations drop-down list** on the Standard toolbar shows the active configuration. To use a different configuration, select it from the list.
+
+:::image type="content" source="../../reporting-services/reports/media/ssrs-project-properties.png" alt-text="Screenshot of the tutorial Property Pages window, highlighting the Configuration drop-down list.":::
 
 For more information, see:
 
@@ -49,20 +60,23 @@ For more information, see:
 
 ## Publish all reports in a project
 
-On the **Build** menu, select **Deploy Solution**. Alternatively, in Solution Explorer, right-click the report project and then select **Deploy Solution**. View the status of the publishing process in the Output window.
+You can view the publishing process in the output window by using one of the following methods:
 
-When you deploy a report server project, the shared data sources in the report project are also deployed. All reports are deployed by using the same project configuration: to the same report server, the same folder on the server, and so on. To publish reports to different servers, either publish them one by one or include only reports you want to in the report server project. A solution can include multiple report server projects. Multiple projects might make it easier to manage the deployment of reports because you can use a different configuration to deploy different projects. Manage the deployment of reports by using multiple projects because a different configuration can deploy different projects.
+- On the **Build** menu, select **Deploy Solution**. OR,
+- in Solution Explorer, right-click the report project and then select **Deploy Solution**.
+
+When you deploy a report server project, the shared data sources in the report project are also deployed. All reports are deployed from the same project configuration: to the same report server, the same folder on the server, and so on. To publish reports to different servers, either publish them one at a time or include only the reports you want to in the report server project. A solution can include multiple report server projects. Multiple projects might make it easier to manage the deployment of reports because you can use a different configuration to deploy different projects.
 
 ## Publish a single report
 
-In Solution Explorer, right-click the report and then select **Deploy Solution**. View the status of the publishing process in the Output window.
+In Solution Explorer, right-click the report and then select **Deploy Solution**. View the status of the publishing process in the output window.
 
 When you publish a report, you must also deploy the shared data sources that the report uses.
-If you don't want to publish all reports in a project, choose to publish only a single report. Select a configuration that deploys the report (for example, the Release configuration), right-click the report, and then select **Deploy Solution**.
 
-If a report uses a shared data source, you need to also deploy the shared data source or the deployed report doesn't run. Right-click the shared data source and then select **Deploy Solution**.
+- If you don't want to publish all reports in a project, you can publish only a single report. Select a configuration that deploys the report (for example, the Release configuration), right-click the report, and then select **Deploy Solution**.
+- If a report uses a shared data source, you need to also deploy the shared data source or the deployed report doesn't run. Right-click the shared data source and then select **Deploy Solution**.
 
-The target server URL of the report server must be specified and you might want to change the default folders to which reports and shared data sources deploy.
+After the target server URL of the report server is specified, you can change the default folders to specific reports, and then shared data sources deploy.
 
 ## Related content
 

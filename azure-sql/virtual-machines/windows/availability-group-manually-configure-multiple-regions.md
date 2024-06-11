@@ -4,7 +4,7 @@ description: "This tutorial explains how to configure an Always On availability 
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma, randolphwest
-ms.date: 04/18/2023
+ms.date: 06/18/2024
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: tutorial

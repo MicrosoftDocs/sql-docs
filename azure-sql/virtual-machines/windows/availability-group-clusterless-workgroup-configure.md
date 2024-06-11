@@ -4,7 +4,7 @@ description: Learn how to configure an Active Directory domain-independent workg
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma
-ms.date: 01/29/2020
+ms.date: 06/18/2024
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to

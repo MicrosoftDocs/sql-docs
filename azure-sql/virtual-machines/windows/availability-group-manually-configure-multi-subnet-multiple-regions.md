@@ -4,7 +4,7 @@ description: "This tutorial explains how to configure a multi-subnet Always On a
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma, randolphwest
-ms.date: 12/29/2022
+ms.date: 06/18/2024
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: tutorial

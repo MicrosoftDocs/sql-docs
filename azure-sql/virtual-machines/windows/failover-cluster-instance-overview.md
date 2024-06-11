@@ -4,7 +4,7 @@ description: "Learn about failover cluster instances (FCIs) with SQL Server on A
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: randolphwest, mathoma
-ms.date: 10/02/2023
+ms.date: 06/18/2024
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: overview
@@ -154,6 +154,9 @@ If you deploy your SQL Server VMs to a single subnet, you can configure a virtua
 The distributed network name is recommended, if possible, as failover is faster, and the overhead and cost of managing the load balancer is eliminated.
 
 Most SQL Server features work transparently with FCIs when using the DNN, but there are certain features that may require special consideration. For more information, see [FCI and DNN interoperability](failover-cluster-instance-dnn-interoperability.md).
+
+> [!NOTE]
+> If you have multiple AGs or FCIs on the same cluster and you use either a DNN or VNN listener, then each AG or FCI needs its own independent connection point.
 
 ## Limitations
 

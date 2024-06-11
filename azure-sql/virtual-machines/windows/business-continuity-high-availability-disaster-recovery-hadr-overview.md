@@ -4,7 +4,7 @@ description: Learn about the high availability, disaster recovery (HADR), and bu
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma, randolphwest
-ms.date: 06/11/2024
+ms.date: 06/18/2024
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: conceptual
@@ -74,7 +74,7 @@ For successful disaster recovery of your databases, you should also install a re
 
 ## Failover cluster instances (HA)
 
-SQL Server on Azure VMs support [**failover cluster instancesN (FCI)**](failover-cluster-instance-overview.md) and this solution provides high-availability at the instance level. For additional protection, you can create redundancy at both the database and instance level by creating availability groups on top of failover cluster instances. The FCI feature requires shared storage, and there are five solutions that work with SQL Server on Azure VMs:
+SQL Server on Azure VMs support [**failover cluster instances (FCI)**](failover-cluster-instance-overview.md) and this solution provides high-availability at the instance level. For additional protection, you can create redundancy at both the database and instance level by creating availability groups on top of failover cluster instances. The FCI feature requires shared storage, and there are five solutions that work with SQL Server on Azure VMs:
 
 - Using [Azure shared disks](failover-cluster-instance-azure-shared-disks-manually-configure.md) for Windows Server 2019. Shared managed disks are an Azure product that allows attaching a managed disk to multiple virtual machines simultaneously. VMs in the cluster can read or write to your attached disk based on the reservation chosen by the clustered application through SCSI Persistent Reservations (SCSI PR). SCSI PR is an industry-standard storage solution that's used by applications running on a storage area network (SAN) on-premises. Enabling SCSI PR on a managed disk allows you to migrate these applications to Azure as is.
 

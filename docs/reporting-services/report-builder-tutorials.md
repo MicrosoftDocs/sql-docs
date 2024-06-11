@@ -21,17 +21,11 @@ Before you begin the tutorials, make sure you have read-only access to a SQL Ser
 
 ## Tutorials 
     
-[Tutorial: Create a basic table report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)  
-
-Learn how to create your first report. This tutorial shows you how to work with Report Builder. You can create a data source connection, define a query, build a layout to contain your data, format your report, and add grouping and totals.  
+[Tutorial: Create a basic table report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md): Learn how to create your first report. This tutorial shows you how to work with Report Builder. You can create a data source connection, define a query, build a layout to contain your data, format your report, and add grouping and totals.  
   
-[Tutorial: Create a matrix report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-matrix-report-report-builder.md)  
-
-Learn how to add and configure a matrix. You use the Table or Matrix Wizard to create the report data source, dataset, and layout, and then enhance the matrix within the **Design** view of Report Builder.  
+[Tutorial: Create a matrix report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-matrix-report-report-builder.md): Learn how to add and configure a matrix. You use the Table or Matrix Wizard to create the report data source, dataset, and layout, and then enhance the matrix within the **Design** view of Report Builder.  
   
-[Tutorial: Create a free form report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)  
-
-Learn how to create a free-form report from scratch. Free-form reports allow for a flexible layout, making it easy to design visually appealing reports in various formats.
+[Tutorial: Create a free form report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md): Learn how to create a free-form report from scratch. Free-form reports allow for a flexible layout, making it easy to design visually appealing reports in various formats.
   
 [Tutorial: Format text &#40;Report Builder&#41;](../reporting-services/tutorial-format-text-report-builder.md)  
 

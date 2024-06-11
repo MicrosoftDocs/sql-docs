@@ -6,7 +6,7 @@ ms.author: maggies
 ms.date: 06/12/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
-ms.topic: concept-article
+ms.topic: overview
 ms.custom:
   - intro-overview
   - updatefrequency5
@@ -23,7 +23,7 @@ helpviewer_keywords:
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-SQL Server Reporting Services (SSRS) provides a set of on-premises tools and services to create, deploy, and manage paginated reports. Download [**SQL Server 2022 Reporting Services**](https://www.microsoft.com/download/details.aspx?id=104502) from the Microsoft Download Center.
+SQL Server Reporting Services (SSRS) provides a set of on-premises tools and services to create, deploy, and manage paginated reports. Download [**SQL Server 2022 Reporting Services**](https://www.microsoft.com/download/details.aspx?id=104502) from the Microsoft Download Center, and then [install Reporting Services](../reporting-services/install-windows/install-reporting-services.md) by following these instructions.
 
 :::image type="content" source="../reporting-services/media/report-server-2022-coho-winery.png" alt-text="Screenshot of a SQL Server 2022 Reporting Services report.":::
 
@@ -47,7 +47,7 @@ Learn more about each feature in the following sections.
 
 :::image type="content" source="../reporting-services/media/ssrs-paginated-reports.png" alt-text="Diagram of paginated reports on a desktop screen and a tablet device.":::
 
-Paginated reports are perfect for fixed-layout documents optimized for printing, such as PDFs and Word files. You can create modern-looking reports with newly updated features, by using Report Builder, or Report Designer in [SQL Server Data Tools (SSDT)](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md). We modernized this core BI workload with:
+Paginated reports are perfect for fixed-layout documents optimized for printing, such as PDFs and Word files. You can create modern-looking reports with newly updated features, by using [Report Builder](../reporting-services/install-windows/install-report-builder.md), or [Report Designer](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) in [SQL Server Data Tools (SSDT)](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md). We modernized this core BI workload with:
 
 * **New styles and color palettes**: Create reports with a fresh, minimalist style by default.
 * **Updated Parameter pane**: Arrange parameters as you like.
@@ -107,8 +107,5 @@ Learn more about [Reporting Services developer documentation](../reporting-servi
 
 ## Related content
 
-- [Install Reporting Services](../reporting-services/install-windows/install-reporting-services.md)
-- [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
-- [Install Report Builder](../reporting-services/install-windows/install-report-builder.md)
-- More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).
+ - More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).
 - Stay up-to-date with new SSRS features by visiting [What's new in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).

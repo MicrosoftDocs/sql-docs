@@ -37,9 +37,7 @@ Support Extended Security Updates (ESU) subscription for [!INCLUDE [sssql11-md](
 
 ### Migration
 
-Run assessment on demand (preview): The SQL Server migration assessment runs every Sunday around 11:00 PM. Beginning with this release, you can initiate the SQL Server migration assessment whenever you want. This immediate assessment shows readiness evaluations and Azure SQL configuration assessments right away.
-
-[Configure SQL best practices assessment - SQL Server enabled by Azure Arc](assess.md)
+Run assessment on demand (preview): The SQL Server migration assessment runs every Sunday around 11:00 PM. Beginning with this release, you can initiate the SQL Server migration assessment whenever you want. This immediate assessment shows readiness evaluations and Azure SQL configuration assessments right away. For details, review [Assess migration readiness](migration-assessment.md).
 
 ## May 15, 2024
 

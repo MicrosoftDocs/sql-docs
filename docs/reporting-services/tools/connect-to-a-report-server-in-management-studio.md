@@ -3,7 +3,7 @@ title: "Connect to a report server in Management Studio"
 description: Learn how to connect to any server in the SQL Server family and graphically browse its contents by using the Object Explorer in SQL Server Management Studio.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/20/2024
+ms.date: 05/22/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: how-to
@@ -37,7 +37,7 @@ helpviewer_keywords:
 ## Prerequisites
 
 - [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]](/sql/ssms/download-sql-server-management-studio-ssms).
-- A configured report server in native or Sharepoint mode. For instructions on how to configure your report server, see [Configure a report server (Reporting Services native mode)](/sql/reporting-services/report-server/configure-a-report-server-reporting-services-native-mode)
+- A configured report server in native or Sharepoint mode. For instructions on how to configure your report server, see [Configure a report server (Reporting Services native mode)](/sql/reporting-services/report-server/configure-a-report-server-reporting-services-native-mode).
 - Sufficient permissions to manage your Report Server. For more information about permissions, see [Connection syntax and permissions](#connection-syntax-and-permissions).
 - The server must be registered before you can connect to a report server instance in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For instructions to register a report server, see [Register a report server](#register-a-report-server).
 

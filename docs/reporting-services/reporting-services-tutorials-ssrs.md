@@ -22,8 +22,7 @@ The Reporting Services tutorials allow you to explore the capabilities of [!INCL
 
 ## Tutorials
 
-[Tutorial: Create a basic table report (SSRS Tutorial)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) 
-
+[Tutorial: Create a basic table report (SSRS Tutorial)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
 Learn how to create your first report. This tutorial guides you through working with [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to create a data connection, define a query, and configure a data region for your data.
 
 [Tutorial: Create a data-driven subscription (SSRS Tutorial)](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md) 

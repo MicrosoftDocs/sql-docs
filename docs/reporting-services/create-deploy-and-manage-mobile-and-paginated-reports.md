@@ -23,7 +23,7 @@ helpviewer_keywords:
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-SQL Server Reporting Services (SSRS) provides a set of on-premises tools and services to create, deploy, and manage paginated reports. Download [**SQL Server 2022 Reporting Services**](https://www.microsoft.com/download/details.aspx?id=104502) from the Microsoft Download Center, and then [install Reporting Services](../reporting-services/install-windows/install-reporting-services.md) by following these instructions.
+SQL Server Reporting Services (SSRS) provides a set of on-premises tools and services to create, deploy, and manage paginated reports. Download [**SQL Server 2022 Reporting Services**](https://www.microsoft.com/download/details.aspx?id=104502) from the Microsoft Download Center, and then [install Reporting Services](../reporting-services/install-windows/install-reporting-services.md).
 
 :::image type="content" source="../reporting-services/media/report-server-2022-coho-winery.png" alt-text="Screenshot of a SQL Server 2022 Reporting Services report.":::
 

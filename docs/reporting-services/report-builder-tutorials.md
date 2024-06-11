@@ -8,7 +8,7 @@ ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: overview
 ms.custom: updatefrequency5
-
+#customer intent: As a user of SQL Server Reporting Services (SSRS), I want to learn how to create, customize, and enhance paginated reports using Report Builder tutorials so that I can effectively present and analyze my data.
 
 ---
 # Report Builder tutorials

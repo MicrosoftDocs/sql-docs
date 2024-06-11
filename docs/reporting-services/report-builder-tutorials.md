@@ -6,7 +6,7 @@ ms.author: maggies
 ms.date: 06/12/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
-ms.topic: conceptual
+ms.topic: overview
 ms.custom: updatefrequency5
 
 
@@ -15,15 +15,9 @@ ms.custom: updatefrequency5
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
 
-Use the following Report Builder tutorials to learn how to create basic [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated reports.  
+The [Report Builder](../reporting-services/report-builder/report-builder-in-sql-server-2016.md) tutorials help you learn how to create basic [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated reports.  
 
-## Prerequisites
-   
-* Read-only access to a SQL Server database and permissions to access a [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] report server.
-* [Prerequisites for tutorials &#40;Report Builder&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md) 
-* [Alternative ways to get a data connection &#40;Report Builder&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)
-
-For help with these prerequisites, contact your report server administrator.  
+Before you begin the tutorials, make sure you have read-only access to a SQL Server database and permissions to access a [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] report server.
 
 ## Tutorials 
     
@@ -69,7 +63,7 @@ Learn how to use expressions to concatenate, calculate, and look up field values
 ## Related content
 
 - [Report design view](../reporting-services/report-builder/report-design-view-report-builder.md)  
-- [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-- [Tutorial: Create a quick chart report offline](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+- [Prerequisites for tutorials &#40;Report Builder&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md) 
+- [Alternative ways to get a data connection &#40;Report Builder&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).

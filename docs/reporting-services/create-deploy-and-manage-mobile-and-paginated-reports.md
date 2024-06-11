@@ -43,10 +43,6 @@ SSRS offers an updated suite of products:
 
 Learn more about each feature in the following sections.
 
-### What's new in Reporting Services
-
-Stay up-to-date with new SSRS features by visiting [What's new in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
-
 ## Paginated reports
 
 :::image type="content" source="../reporting-services/media/ssrs-paginated-reports.png" alt-text="Diagram of paginated reports on a desktop screen and a tablet device.":::
@@ -114,5 +110,5 @@ Learn more about [Reporting Services developer documentation](../reporting-servi
 - [Install Reporting Services](../reporting-services/install-windows/install-reporting-services.md)
 - [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [Install Report Builder](../reporting-services/install-windows/install-report-builder.md)
-
 - More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).
+- Stay up-to-date with new SSRS features by visiting [What's new in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).

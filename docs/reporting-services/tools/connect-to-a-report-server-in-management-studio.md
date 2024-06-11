@@ -6,7 +6,7 @@ ms.author: maggies
 ms.date: 05/20/2024
 ms.service: reporting-services
 ms.subservice: tools
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: updatefrequency5
 f1_keywords:
   - "sql13.swb.connecttors.connectionproperties.f1"
@@ -24,7 +24,7 @@ helpviewer_keywords:
 
 # Connect to a report server in Management Studio
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] provides Object Explorer, which allows you to connect to any server in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] family and graphically browse its contents. For Reporting Services, you can use Object Explorer to do the following tasks:
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] provides Object Explorer, which allows you to connect to any server in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] family and graphically browse its contents. Object Explorer allows you to open connections to multiple server instances in the same workspace as long as the servers are registered in the same server group. For Reporting Services, you can use Object Explorer to do the following tasks:
 
 - Enable report server features.
 
@@ -34,19 +34,20 @@ helpviewer_keywords:
 
 - Manage job schedules.
 
- You can connect to a native mode report server or a report server that runs in SharePoint integrated mode. Connection syntax and the types of operations that you can do depend on the server mode of the report server and your permissions. If you can't connect to the report server, or have problems doing specific tasks, you probably don't have sufficient permissions. Alternatively, you might have specified the name of the report server incorrectly. For more information about permissions and connection syntax, see [Connection syntax and permissions](#connection-syntax-and-permissions).
+## Prerequisites
 
- You can't use Object Explorer to view or manage report server content. Content management is performed through the web portal, if the report server runs in native mode. Or you can manage your content through a SharePoint site, if the report server runs in SharePoint integrated mode.
-
- Object Explorer allows you to open connections to multiple server instances in the same workspace as long as the servers are registered in the same server group. Before you can connect to a report server instance in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], the server must be registered. If the report server is already registered, you can skip this step. For instructions to register a report server, see [Register a report server](#register-a-report-server).
+- [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]](/sql/ssms/download-sql-server-management-studio-ssms).
+- A configured report server in native mode if you plan to use the web portal or a configured report server in SharePoint integrated mode if you plan to access your content by using a SharePoint site.
+- Sufficient permissions to manage your Report Server. For more information about permissions, see [Connection syntax and permissions](#connection-syntax-and-permissions).
+- The server must be registered before you can connect to a report server instance in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For instructions to register a report server, see [Register a report server](#register-a-report-server).
 
 ## Connect to a native mode report server
 
-1. If Object Explorer isn't already, open it. Select it from the **View** menu.
+1. Open Object Explorer by selecting it from the **View** menu, if it isn't already open.
 
 1. Select **Connect** to view the list of server types, and then select **Reporting Services...**.
 
-1. In the **Connect to Server** dialog box, enter the name of the report server instance into the **Server name** field. Report server instance names are based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance names. By default, the instance name of a local report server instance is just the computer name. If you installed the report server as a named instance, use this syntax to specify the server: `<servername>[\<instancename>]`.
+1. In the **Connect to Server** dialog box, enter the name of the report server instance into the **Server name** field. Report server instance names are based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance names. By default, the instance name of a local report server instance is the computer name. If you install the report server as a named instance, use this syntax to specify the server: `<servername>[\<instancename>]`.
 
 1. Select the **Authentication** from the drop-down menu. If you use Windows Authentication, you connect by using your credentials. If you select Basic authentication or Forms authentication, enter the account and password.  
   
@@ -56,7 +57,7 @@ helpviewer_keywords:
 
 ## Connect to a SharePoint integrated mode report server  
 
-1. If Object Explorer isn't already, open it, Select it from the **View** menu.
+1. Open Object Explorer by selecting it from the **View** menu, if it isn't already open.
 
 1. Select **Connect** to view the list of server types, and then choose **Reporting Services...**.
 
@@ -78,16 +79,16 @@ helpviewer_keywords:
 
 1. For **Server name**, enter a value. You specify the value depending on the server mode:
 
-    - For a native mode report server, enter the name of the report server instance. Report server instance names are based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance names. By default, the instance name of a local report server instance is just the computer name. If you installed the report server as a named instance, use this syntax to specify the server: `<servername>[\<instancename>]`.
+    - For a native mode report server, enter the name of the report server instance. Report server instance names are based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance names. By default, the instance name of a local report server instance is the computer name. If you installed the report server as a named instance, use this syntax to specify the server: `<servername>[\<instancename>]`.
 
-    - For a report server that runs in SharePoint integrated mode, you connect to the SharePoint site that the report server is connected to. Connect to the SharePoint site so that you can view the permission levels. The permissions control access to report server content and operations. You can specify any site in the site collection. The following example illustrates the syntax: `https://mysharepointsite`.
+    - For a report server that runs in SharePoint integrated mode, you connect to the SharePoint site that the report server is connected to. Connect to the SharePoint site so that you can view the permission levels. The permissions control access to report server content and operations. You can specify any site in the site collection. The following example shows the syntax: `https://mysharepointsite`.
 
 1. For **Authentication**, select the authentication mode that the report server uses from the drop-down menu.
 
    - If you use default security, choose **Windows Authentication**.
    - If you installed and deployed a custom security extension, choose **Forms Authentication**.
    - If you configured the report server to use Basic authentication, choose **Basic Authentication**.
-   - If the report server is configured for SharePoint integrated mode, choose **Windows Authentication**.
+   - If you configured the report server for SharePoint integrated mode, choose **Windows Authentication**.
 
 1. Select **Test** to verify the connection.
 
@@ -95,9 +96,7 @@ helpviewer_keywords:
 
 ## Connection syntax and permissions
 
- The following table summarizes the connection syntax, steps, and permissions required to perform specific tasks.
-
- When you specify [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] as the **Server Type** in the **Connect to Server** dialog box, you can specify either a report server name or an endpoint to the Web service.
+When you specify [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] as the **Server Type** in the **Connect to Server** dialog box, you can specify either a report server name or an endpoint to the Web service. The following table summarizes the connection syntax, steps, and permissions required to perform specific tasks:
 
 |Connect to|   Tasks   |   Permissions   |
 |----------|-----------|-----------------|  
@@ -108,5 +107,5 @@ helpviewer_keywords:
 
 ## Related content
 
- - [Configure a report server database connection &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
- - [Reporting Services in SQL Server Management Studio &#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)
+- [Configure a report server database connection &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+- [Reporting Services in SQL Server Management Studio &#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)

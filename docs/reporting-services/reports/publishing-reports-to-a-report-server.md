@@ -62,7 +62,7 @@ For more information, see:
 
 You can view the publishing process in the output window by using one of the following methods:
 
-- On the **Build** menu, select **Deploy Solution**. OR,
+- On the SSDT **Build** menu, select **Deploy Solution**. OR,
 - in Solution Explorer, right-click the report project and then select **Deploy Solution**.
 
 When you deploy a report server project, the shared data sources in the report project are also deployed. All reports are deployed from the same project configuration: to the same report server, the same folder on the server, and so on. To publish reports to different servers, either publish them one at a time or include only the reports you want to in the report server project. A solution can include multiple report server projects. Multiple projects might make it easier to manage the deployment of reports because you can use a different configuration to deploy different projects.

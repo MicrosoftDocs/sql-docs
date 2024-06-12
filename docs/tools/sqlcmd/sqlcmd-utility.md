@@ -4,7 +4,7 @@ description: The sqlcmd utility lets you enter Transact-SQL statements, system p
 author: dlevy-msft
 ms.author: dlevy
 ms.reviewer: randolphwest, maghan
-ms.date: 12/12/2023
+ms.date: 06/12/2024
 ms.service: sql
 ms.subservice: tools-other
 ms.custom: linux-related-content
@@ -106,12 +106,12 @@ Always Encrypted (`-g`) and Microsoft Entra authentication (`-G`) require at lea
 
 [!INCLUDE [entra-id-hard-coded](../../includes/entra-id-hard-coded.md)]
 
----
-
 > [!NOTE]  
 > For [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] and previous versions, see [sqlcmd utility](/previous-versions/sql/2014/tools/sqlcmd-utility?view=sql-server-2014&preserve-view=true).
 >  
 > For using **sqlcmd** on Linux, see [Install sqlcmd and bcp on Linux](../../linux/sql-server-linux-setup-tools.md).
+
+---
 
 > [!IMPORTANT]  
 > Installing **sqlcmd** (Go) via a package manager will replace **sqlcmd** (ODBC) with **sqlcmd** (Go) in your environment path. Any current command line sessions will need to be closed and reopened for this take to effect. **sqlcmd** (ODBC) won't be removed and can still be used by specifying the full path to the executable. You can also update your `PATH` variable to indicate which will take precedence. To do so in Windows 11, open **System settings** and go to **About > Advanced system settings**. When **System Properties** opens, select the **Environment Variables** button. In the lower half, under **System variables**, select **Path** and then select **Edit**. If the location **sqlcmd** (Go) is saved to (`C:\Program Files\sqlcmd` is default) is listed before `C:\Program Files\Microsoft SQL Server\<version>\Tools\Binn`, then **sqlcmd** (Go) is used. You can reverse the order to make **sqlcmd** (ODBC) the default again.

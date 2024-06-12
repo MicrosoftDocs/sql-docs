@@ -13831,6 +13831,8 @@ items:
         href: relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md
       - name: sys.fn_get_audit_file
         href: relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md
+      - name: sys.fn_get_audit_file_v2
+        href: relational-databases/system-functions/sys-fn-get-audit-file-v2-transact-sql.md
       - name: sys.fn_my_permissions
         href: relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md
       - name: sys.fn_translate_permissions

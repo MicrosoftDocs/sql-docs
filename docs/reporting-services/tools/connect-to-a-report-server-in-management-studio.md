@@ -3,7 +3,7 @@ title: "Connect to a report server in Management Studio"
 description: Learn how to connect to any server in the SQL Server family and graphically browse its contents by using the Object Explorer in SQL Server Management Studio.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/22/2024
+ms.date: 06/12/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: how-to
@@ -19,12 +19,12 @@ helpviewer_keywords:
   - "report servers [Reporting Services], registering"
   - "Connect to Server dialog box, Reporting Services"
 
-#customer intent: As a SQL server user, I want to learn how to connect to and graphically browse my SQL databases so that I can access and use my data.
+#customer intent: As a SQL server user, I want to learn how to connect and graphically browse my SQL databases so that I can access and use my data.
 ---
 
 # Connect to a report server in Management Studio
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] provides Object Explorer, which allows you to connect to any server in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] family and graphically browse its contents. Object Explorer allows you to open connections to multiple server instances in the same workspace as long as the servers are registered in the same server group. For Reporting Services, you can use Object Explorer to do the following tasks:
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] provides Object Explorer, so you can connect to any server in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] family and graphically browse its contents. Object Explorer allows you to open connections to multiple server instances in the same workspace as long as the servers are registered in the same server group. For Reporting Services, you can use Object Explorer to do the following tasks:
 
 - Enable report server features.
 
@@ -45,11 +45,11 @@ helpviewer_keywords:
 
 1. Open Object Explorer by selecting it from the **View** menu, if it isn't already open.
 
-1. Select **Connect** to view the list of server types, and then select **Reporting Services...**.
+1. Select **Connect** to view the list of server types, and then choose the **Reporting Services...** option.
 
 1. In the **Connect to Server** dialog box, enter the name of the report server instance into the **Server name** field. Report server instance names are based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance names. By default, the instance name of a local report server instance is the computer name. If you install the report server as a named instance, use this syntax to specify the server: `<servername>[\<instancename>]`.
 
-1. Select the **Authentication** from the drop-down menu. If you use Windows Authentication, you connect by using your credentials. If you select Basic authentication or Forms authentication, enter the account and password.  
+1. From the **Authentication** drop-down menu, select the authentication type your server uses. If you use Windows Authentication, you connect by using your credentials. If you select Basic authentication or Forms authentication, enter the account and password.  
   
 1. Select **Connect**. The report server appears in Object Explorer.  
 
@@ -59,11 +59,11 @@ helpviewer_keywords:
 
 1. Open Object Explorer by selecting it from the **View** menu, if it isn't already open.
 
-1. Select **Connect** to view the list of server types, and then choose **Reporting Services...**.
+1. Select **Connect** to view the list of server types, and then choose the **Reporting Services...** option.
 
 1. In the **Connect to Server** dialog box, enter a URL to a SharePoint site into the **Server name** field. The following example illustrates the syntax: `https://<web server>/sites/<site>`.
 
-1. Select the **Authentication type** from the drop-down menu. If you use Windows Authentication, you must connect by using your credentials. If you select Basic authentication or Forms authentication, enter the account and password.
+1. From the **Authentication** drop-down menu, select the authentication type your server uses. If you use Windows Authentication, you must connect by using your credentials. If you select Basic authentication or Forms authentication, enter the account and password.
 
 1. Select **Connect**. The report server appears in Object Explorer.
 
@@ -75,7 +75,7 @@ helpviewer_keywords:
 
 1. Select the **Reporting Services** icon.
 
-1. Expand **Reporting Services** and right-click **Local Server Groups**. Select **New Server Registration...**. The **New Server Registration** dialog box appears.
+1. Expand **Reporting Services** and right-click **Local Server Groups**. Select **New Server Registration...** option. The **New Server Registration** dialog box appears.
 
 1. For **Server name**, enter a value. You specify the value depending on the server mode:
 

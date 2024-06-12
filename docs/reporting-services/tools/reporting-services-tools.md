@@ -1,9 +1,9 @@
 ---
-title: "Tools in SQL Server Reporting Services"
+title: "Tools available in SQL Server Reporting Services"
 description: Learn about the tools for development, configuration, administration, and report viewing that are contained in SQL Server Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/22/2024
+ms.date: 06/12/2024
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
@@ -20,13 +20,13 @@ helpviewer_keywords:
   - "SQL Server Reporting Services, tools"
   - "architecture [Reporting Services]"
 
-#customer intent: As a SQL Server user, I want to learn about the different tools available in SQL Server Reporting Services so that I can fully use them to create my reports.
+#customer intent: As a SQL Server user, I want to learn about the different tools available in SQL Server Reporting Services so that I can effectively use them to create my reports.
 ---
-# Tools in SQL Server Reporting Services
+# Tools available in SQL Server Reporting Services
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contains a set of graphical and scripting tools that support the development and use of rich reports in a managed environment. The tool set includes development tools, configuration and administration tools, and report viewing tools. This article gives a brief overview of each tool in [!INCLUDE[ssRSnoversion](../../includes/ssrs.md)] and how you can access it.  
   
- To find a tool right away, see [Tutorial: How to locate and start Reporting Services tools &#40;SSRS&#41;](../../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
+ To learn how to use a tool right away, see [Tutorial: How to locate and start Reporting Services tools &#40;SSRS&#41;](../../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
   
 ## Tools for report authoring  
 
@@ -79,7 +79,7 @@ helpviewer_keywords:
 |----------|-----------------|-------------------|  
 |Report Server Web service URL|Use this tool to browse content in the report catalog in a generic item navigation page.<br /><br /> For more information, see [Report Server web service](../../reporting-services/report-server-web-service/report-server-web-service.md).|Browser|  
 |Web Portal|**(Native mode only)** Use this tool to administer a single report server instance from a remote location over an HTTP connection. Available actions:<br /><br /> View, search, print, and subscribe to reports.<br /><br /> Organize, create, secure, and maintain the folder hierarchy.<br /><br /> Configure role-based security that determines access to items and operations.<br /><br /> Configure report execution properties, report history, and report parameters.<br /><br /> Create report models that connect to and retrieve data from a Microsoft SQL Server Analysis Services data source or from a SQL Server relational data source.<br /><br /> Set model item security to allow access to specific entities in the model, or map entities to predefined clickthrough reports that you create in advance.<br /><br /> To make schedules and data source connections more manageable, create shared schedules and shared data sources.<br /><br /> Create data-driven subscriptions that roll out reports to a large recipient list.<br /><br /> Create linked reports to reuse and repurpose an existing report in different ways.<br /><br /> Launch Report Builder to create reports that you can save and run on the report server. For more information, see [The web portal of a report server (SSRS native mode)](../../reporting-services/web-portal-ssrs-native-mode.md).| Browser  
-|RS Utility|This tool is a script host that you can use to perform scripted operations. Use this tool to run [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] scripts that copy data between report server databases, publish reports, create items in a report server database, and more. For more information, see [Report server command prompt utilities &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md).|Command prompt|  
+|RS Utility|This tool is a script host that you use to perform scripted operations. Use this tool to run [!INCLUDE[visual-basic](../../includes/visual-basic-md.md)] scripts that copy data between report server databases, publish reports, create items in a report server database, and more. For more information, see [Report server command prompt utilities &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md).|Command prompt|  
   
 ## Related content  
 

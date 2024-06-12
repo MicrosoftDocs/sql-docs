@@ -4,7 +4,7 @@ description: AT TIME ZONE Converts an input date to the corresponding datetimeof
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 03/27/2023
+ms.date: 06/12/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -15,12 +15,11 @@ helpviewer_keywords:
   - "AT TIME ZONE function"
 dev_langs:
   - "TSQL"
-monikerRange: "= azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017 ||=fabric"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =fabric"
 ---
 # AT TIME ZONE (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw.md)]
-
 
 Converts an *inputdate* to the corresponding *datetimeoffset* value in the target time zone. When *inputdate* is provided without offset information, the function applies the offset of the time zone assuming that *inputdate* is in the target time zone. If *inputdate* is provided as a *datetimeoffset* value, then `AT TIME ZONE` clause converts it into the target time zone using the time zone conversion rules.
 
@@ -42,11 +41,11 @@ An expression that can be resolved to a **smalldatetime**, **datetime**, **datet
 
 #### *timezone*
 
-Name of the destination time zone. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relies on time zones that are stored in the Windows Registry. Time zones installed on the computer are stored in the following registry hive: `KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`. A list of installed time zones is also exposed through the [sys.time_zone_info (Transact-SQL)](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) view.
+Name of the destination time zone. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] relies on time zones that are stored in the Windows Registry. Time zones installed on the computer are stored in the following registry hive: `KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`. A list of installed time zones is also exposed through the [sys.time_zone_info](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) view.
 
 For more information about time zones for SQL Server on Linux, see [Configure the time zone for SQL Server 2022 on Linux](../../linux/sql-server-linux-configure-time-zone.md).
 
-## Return type
+## Return types
 
 Returns the data type of **datetimeoffset**.
 
@@ -110,16 +109,15 @@ The **datetimeoffset** value in the target time zone.
     AT TIME ZONE 'Central European Standard Time';
     --Result: 2022-10-30 02:00:00 +02:00
 
-
     --Time after 03:00 is regularly presented with the standard time offset (+01:00)
     SELECT CONVERT(DATETIME2(0), '2022-10-30T03:01:00', 126)
     AT TIME ZONE 'Central European Standard Time';
     --Result: 2022-10-30 03:01:00 +01:00
     ```
 
-Since some information (such as timezone rules) is maintained outside of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and are subject to occasional change, the `AT TIME ZONE` function is classed as nondeterministic.
+Since some information (such as timezone rules) is maintained outside of [!INCLUDE [ssNoVersion_md](../../includes/ssnoversion-md.md)] and are subject to occasional change, the `AT TIME ZONE` function is classed as nondeterministic.
 
-While **datetimeoffset** is not supported in data warehousing in [!INCLUDE [fabric](../../includes/fabric.md)], `AT TIME ZONE` can still be used with **datetime2**, as in the following example.
+While **datetimeoffset** isn't supported in data warehousing in [!INCLUDE [fabric](../../includes/fabric.md)], `AT TIME ZONE` can still be used with **datetime2**, as in the following example.
 
 ## Examples
 
@@ -130,7 +128,7 @@ Use `AT TIME ZONE` to add offset based on time zone rules when you know that the
 ```sql
 USE AdventureWorks2022;
 GO
-  
+
 SELECT SalesOrderID, OrderDate,
     OrderDate AT TIME ZONE 'Pacific Standard Time' AS OrderDate_TimeZonePST
 FROM Sales.SalesOrderHeader;
@@ -138,7 +136,7 @@ FROM Sales.SalesOrderHeader;
 
 ### B. Convert values between different time zones
 
-The following example converts values between different time zones. The **inputdate** values are **datetime** and are not stored with an offset, but are known to be Pacific Standard Time. The first step is to assign the known offset and then convert to the new time zone:
+The following example converts values between different time zones. The `OrderDate` values are **datetime** and aren't stored with an offset, but are known to be Pacific Standard Time. The first step is to assign the known offset and then convert to the new time zone:
 
 ```sql
 USE AdventureWorks2022;
@@ -178,7 +176,7 @@ GO
 
 DECLARE @ASOF DATETIMEOFFSET;
 
-SET @ASOF = DATEADD(month, -1, GETDATE()) AT TIME ZONE 'UTC';
+SET @ASOF = DATEADD(MONTH, -1, GETDATE()) AT TIME ZONE 'UTC';
 
 -- Query state of the table a month ago projecting period
 -- columns as Pacific Standard Time
@@ -193,7 +191,7 @@ FROM Person.Person_Temporal
 FOR SYSTEM_TIME AS OF @ASOF;
 ```
 
-## Next steps
+## Related content
 
-- [Date and Time Types](../../t-sql/data-types/date-and-time-types.md)
-- [Date and Time Data Types and Functions (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)
+- [Date and time types](../data-types/date-and-time-types.md)
+- [Date and time data types and functions (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md)

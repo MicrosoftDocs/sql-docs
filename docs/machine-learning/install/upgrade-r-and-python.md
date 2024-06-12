@@ -256,9 +256,7 @@ You might have added other open-source or third-party packages to your package l
 |*bind*| Upgrades the specified SQL Server instance to the latest version of R Server and ensures the instance automatically gets future upgrades of R Server|
 |*unbind*|Uninstalls the latest version of R Server from the specified SQL Server instance and prevents future R Server upgrades from affecting the instance|
 
-<a name="sqlbindr-error-codes"><a/>
-
-## Binding errors
+## <a id="sqlbindr-error-codes"></a> Binding errors
 
 Machine Learning Server Installer and SqlBindR both return the following error codes and messages.
 

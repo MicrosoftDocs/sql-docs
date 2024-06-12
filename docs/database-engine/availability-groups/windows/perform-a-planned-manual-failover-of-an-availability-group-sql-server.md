@@ -103,7 +103,7 @@ A planned manual failover is supported only when the primary replica and the tar
 ##  <a name="FollowUp"></a> Follow up: After you manually fail over an availability group 
  If you failed over outside the [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] of the availability group, adjust the quorum votes of the Windows Server failover clustering nodes to reflect your new availability group configuration. For more information, see [Windows Server failover clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md). 
 
-<a name = "ReadScaleOutOnly"><a/>
+<a id="ReadScaleOutOnly"></a>
 
 ## Fail over the primary replica on a read-scale availability group
 

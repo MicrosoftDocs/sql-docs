@@ -272,9 +272,12 @@ There's no option to remove the unallocated space from a disk that belongs to a 
 
 Review [Troubleshoot a full transaction log](/sql/relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002) if your log becomes full. 
 
-### Unable to Enable Storage Configuration from the Azure Portal
+### The Storage pane for the SQL virtual machines resource is unavailable in the Azure Portal
 
-When TCP/IP is disabled, the storage configuration will fail to set up. Review SQL Server configuration manager to check TCP/IP Settings.
+Storage configuration for the SQL virtual machines resource in the Azure portal isn't available in the following scenarios: 
+- Virtual machines with self-installed SQL Server instances. Currently, only SQL Server VM images from Azure marketplace are supported.  
+- SQL Server VMs using Premium SSDv2. Currently, only SQL Server VMs with Premium SSD are supported. 
+- When TCP/IP is disabled in SQL Server Configuration Manager. 
 
 ## Related content
 

@@ -104,8 +104,6 @@ You may have several versions of **sqlcmd** (ODBC) installed on your computer. B
 
 Always Encrypted (`-g`) and Microsoft Entra authentication (`-G`) require at least version 13.1.
 
-[!INCLUDE [entra-id-hard-coded](../../includes/entra-id-hard-coded.md)]
-
 > [!NOTE]  
 > For [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] and previous versions, see [sqlcmd utility](/previous-versions/sql/2014/tools/sqlcmd-utility?view=sql-server-2014&preserve-view=true).
 >  

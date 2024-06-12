@@ -3,8 +3,8 @@ title: vCore purchasing model
 description: The vCore purchasing model lets you independently scale compute and storage resources, match on-premises performance, and optimize price for Azure SQL Database
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: sashan, moslake, mathoma, dfurman
-ms.date: 03/18/2024
+ms.reviewer: sashan, moslake, mathoma, dfurman, srinia
+ms.date: 06/11/2024
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual

@@ -11,6 +11,8 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "subscriptions [Reporting Services], file share delivery"
   - "file share delivery [Reporting Services]"
+
+#customer intent: As a SQL Server user, I want learn how to use the file share delivery extension so that I can deliver my report to a folder.
 ---
 # File share delivery in Reporting Services
 
@@ -20,31 +22,17 @@ To distribute a report to a file share, you define either a standard subscriptio
 
 **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode
   
-**In this topic:**  
+## <a name="bkmk_Characteristics"></a> Characteristics of reports delivered to shared folders  
   
-- [Characteristics reports delivered to shared folders](#bkmk_Characteristics)  
+Unlike reports that you host and manage on a report server, reports that are delivered to a shared folder are static files. Interactive features that are defined for the report don't work for reports that are stored as files on the file system. Interaction features are represented as static elements. For example, if you deliver a matrix report, the resulting file shows the top-level view of the report; you can't expand rows and columns to view supporting data.  
   
-- [Target folders](#bkmk_target_folders)  
-  
-- [File formats](#bkmk_file_formats)  
-  
-- [File options](#bkmk_file_options)  
-  
-## <a name="bkmk_Characteristics"></a> Characteristics reports delivered to shared folders  
-  
-- Unlike reports that you host and manage on a report server, reports that are delivered to a shared folder are static files.  
-  
-- Interactive features that are defined for the report **do not work** for reports that are stored as files on the file system. Interaction features are represented as static elements. For example, if you deliver a matrix report, the resulting file shows the top-level view of the report; you can't expand rows and columns to view supporting data.  
-  
-- If the report includes charts, the default presentation is used. If the report links through to another report, the link is rendered as static text.  
-  
-- If you want to retain interactive features in a delivered report, use e-mail delivery instead. The e-mail contains a link to the report on the report server and users can use the interactive features. For more information, see [E-mail delivery in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
+If the report includes charts, the default presentation is used. If the report links through to another report, the link is rendered as static text. If you want to retain interactive features in a delivered report, use e-mail delivery instead. The e-mail contains a link to the report on the report server and users can use the interactive features. For more information, see [E-mail delivery in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 ## <a name="bkmk_target_folders"></a> Target folders  
 
 When defining a subscription that uses file share delivery, you must specify an existing folder as the target folder. The report server doesn't create folders on the file system. The folder that you specify must be accessible over a network connection.  
   
-Verify that users who will **view** the reports in the shared folder have Read permission.  
+Verify that users who you want to view the reports in the shared folder have the **Read** permission.  
   
 When specifying the target folder in a subscription, use Uniform Naming Convention (UNC) format that includes the computer's network name. Don't include trailing backslashes in the folder path. The following example illustrates a UNC path:  
   

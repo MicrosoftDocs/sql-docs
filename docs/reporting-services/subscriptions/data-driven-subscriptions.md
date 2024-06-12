@@ -1,5 +1,5 @@
 ---
-title: "Data-driven subscriptions"
+title: "Data-driven subscriptions in Reporting Services"
 description: Learn about data-driven subscriptions, which provide a way to use dynamic subscription data that you retrieve from an external data source at run time.
 author: maggiesMSFT
 ms.author: maggies
@@ -11,10 +11,12 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "subscriptions [Reporting Services], data-driven"
   - "data-driven subscriptions"
----
-# Data-driven subscriptions
 
-A data-driven subscription provides a way to use dynamic subscription data that is retrieved from an external data source at run time. A data-driven subscription can also use static text and default values that you specify when the subscription is defined. You can use data-driven subscriptions to:  
+#customer intent: As a SQL Server user, I want learn how to use data-driven subscriptions so that I can manage constantly changing data from my data sources.
+---
+# Data-driven subscriptions in Reporting Services
+
+A data-driven subscription provides a way to use dynamic subscription data that's retrieved from an external data source at run time. A data-driven subscription can also use static text and default values that you specify when you define the subscription. You can use data-driven subscriptions to:  
   
 - Distribute a report to a fluctuating list of subscribers. For example, you can use data-driven subscriptions to distribute a report throughout a large organization where subscribers vary from one month to the next. Or, you can use other criteria that determine group membership from an existing set of users.  
   
@@ -48,7 +50,7 @@ Data-driven subscription functionality isn't available in all editions. There ar
 
 - For more information about subscriber data source requirements, see [Use an external data source for subscriber data &#40;data-driven subscription&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
-## Working with data-driven subscriptions  
+## Work with data-driven subscriptions  
 
 The following articles provide more information about data-driven subscriptions.  
   

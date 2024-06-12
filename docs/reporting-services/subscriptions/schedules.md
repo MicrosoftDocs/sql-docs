@@ -1,5 +1,5 @@
 ---
-title: "Schedules"
+title: "Schedules in Reporting Services"
 description: In this overview, learn how you can use shared schedules and report-specific schedules to control the processing and distribution of reports.
 author: maggiesMSFT
 ms.author: maggies
@@ -15,14 +15,16 @@ helpviewer_keywords:
   - "reports [Reporting Services], scheduling"
   - "subscriptions [Reporting Services], scheduling"
   - "automatic report processing"
----
-# Schedules
 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides **shared schedules** and **report-specific schedules** to help you control processing and distribution of reports. The difference between the two types of schedules is how they're defined, stored, and managed. The internal construction of the two types of schedules is the same. All schedules specify a type of recurrence: monthly, weekly, or daily. Within the recurrence type, you set the intervals and range for how often an event is to occur. The type of recurrence pattern and how those patterns are specified is the same whether you create a shared schedule or a report-specific schedule.
+#customer intent: As a SQL Server user, I want learn how to use the file share delivery extension so that I can control the processing and distribution of my reports.
+---
+# Schedules in Reporting Services
+
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides **shared schedules** and **report-specific schedules** to help you control the processing and distribution of reports. The difference between the two types of schedules is how they're defined, stored, and managed. The internal construction of the two types of schedules is the same. All schedules specify a type of recurrence: monthly, weekly, or daily. Within the recurrence type, you set the intervals and range for how often an event is to occur. The type of recurrence pattern and how those patterns are specified is the same whether you create a shared schedule or a report-specific schedule.
   
 - Shared schedules are created as separate items. After they're created, you reference them when defining a subscription or some other scheduled operation.  
   
-- Report-specific schedules are created when you define a subscription or set report execution properties; filling out schedule information is part of defining a subscription or setting properties. To define a report-specific schedule, you open the report or subscription that uses it.  
+- Report-specific schedules are created when you define a subscription or set report execution properties. Filling out schedule information is part of defining a subscription or setting properties. To define a report-specific schedule, you open the report or subscription that uses it.  
   
 A shared schedule contains schedule and recurrence information that any number of published reports and subscriptions that run on a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server can use. If you have many reports and subscriptions that run at the same time, you can create a shared schedule for those jobs. If you want to change the recurrence pattern or the end date, you can make the change in one place.  
   
@@ -30,7 +32,7 @@ Shared schedules are easier to maintain and give you more flexibility in managin
   
 ## <a name="bkmk_whatyoucando"></a> What you can do with schedules  
 
-You can use the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web portal and [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] in Native mode and SharePoint site administration pages in SharePoint mode to create and manage your schedules. You can:  
+You can use the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web portal and [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] in native mode and SharePoint site administration pages in SharePoint mode to create and manage your schedules. You can:  
   
 - Schedule report delivery in a standard or data-driven subscription.  
   
@@ -61,7 +63,7 @@ Both types of schedules yield the same output:
   
   - Shared schedules can be managed from a central location. A central location makes it easier to compare schedule properties and adjust frequency and recurrence patterns if scheduled operations are running too close together or conflicting with other processes on your server.  
   
-  - Allows you to quickly adapt to changes in the computing environment. For example, suppose you have a set of reports that run at 4:00 A.M. after a data warehouse is refreshed. If the data refresh operation is rescheduled or is delayed, you can easily accommodate that change by updating the schedule information in a single shared schedule.  
+  - They allow you to quickly adapt to changes in the computing environment. For example, suppose you have a set of reports that run at 4:00 A.M. after a data warehouse is refreshed. If the data refresh operation is rescheduled or is delayed, you can easily accommodate that change by updating the schedule information in a single shared schedule.  
   
   - If you use only shared schedules, you know precisely when scheduled operations occur. This knowledge makes it easier to anticipate and accommodate server loads before performance issues occur. For example, if you decide to schedule computer backups at a specific hour, you can adjust shared schedules to run at different times.  
   
@@ -71,7 +73,7 @@ Both types of schedules yield the same output:
 
 Before you can schedule data or subscription processing for a report, you must configure the report data source to use stored credentials or the unattended report processing account. If you use stored credentials, you can only store one set of credentials, and they're used by all users who run the report. The credentials can be a Windows user account or a database user account.  
   
-The unattended report processing account is a special-purpose account that is configured on the report server. The report server uses the account to connect to remote computers when a scheduled operation requires the retrieval of an external file or processing. If you configure the account, you can use it to connect to external data sources that provide data to a report.  
+The unattended report processing account is a special-purpose account configured on the report server. The report server uses the account to connect to remote computers when a scheduled operation requires the retrieval of an external file or processing. If you configure the account, you can use it to connect to external data sources that provide data to a report.  
   
 To specify stored credentials or the unattended report processing account, edit the data source properties of the report. If the report uses a shared data source, edit the shared data source instead.  
   
@@ -119,7 +121,7 @@ Reporting Services maintains an event queue for all scheduled operations. It pol
 The Scheduling and Delivery Processor requires that the Report Server service and SQL Server Agent are started. The Schedule and Delivery Processing feature must be enabled through the **ScheduleEventsAndReportDeliveryEnabled** property of the **Surface Area Configuration for Reporting Services** facet in Policy-Based Management. Both SQL Server Agent and the Report Server service must be running in order for scheduled operations to occur.  
   
 > [!NOTE]  
-> You can use the **Surface Area Configuration for Reporting Services** facet to stop scheduled operations on a temporary or permanent basis. Although you can create and deploy custom delivery extensions, by itself the Scheduling and Delivery Processor is not extensible. You cannot change how it manages events and notifications. For more information about turn off features, see the **Scheduled Events and Delivery** section of [Turn Reporting Services features on or off](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md).  
+> You can use the **Surface Area Configuration for Reporting Services** facet to stop scheduled operations on a temporary or permanent basis. Although you can create and deploy custom delivery extensions, by itself the Scheduling and Delivery Processor is not extensible. You cannot change how it manages events and notifications. For more information about turn off features, see the [Scheduled Events and Delivery](/sql/reporting-services/report-server/turn-reporting-services-features-on-or-off?#Sched)).  
   
 ### <a name="bkmk_stoppingagent"></a> Stop the SQL Server agent  
 

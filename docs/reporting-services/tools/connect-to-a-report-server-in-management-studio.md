@@ -43,29 +43,29 @@ helpviewer_keywords:
 
 ## Connect to a native mode report server
 
-1. Open Object Explorer by selecting it from the **View** menu, if it isn't already open.
+1. Open **Object Explorer** by selecting it from the **View** menu, if it isn't already open.
 
 1. Select **Connect** to view the list of server types, and then choose the **Reporting Services...** option.
 
 1. In the **Connect to Server** dialog box, enter the name of the report server instance into the **Server name** field. Report server instance names are based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance names. By default, the instance name of a local report server instance is the computer name. If you install the report server as a named instance, use this syntax to specify the server: `<servername>[\<instancename>]`.
 
-1. From the **Authentication** drop-down menu, select the authentication type your server uses. If you use Windows Authentication, you connect by using your credentials. If you select Basic authentication or Forms authentication, enter the account and password.  
+1. From the **Authentication** drop-down menu, select the authentication type your server uses. If you use **Windows Authentication**, you connect by using your credentials. If you select **Basic Authentication** or **Forms Authentication**, enter the account and password.  
   
-1. Select **Connect**. The report server appears in Object Explorer.  
+1. Select **Connect**. The report server appears in **Object Explorer**.  
 
 1. Right-click the server node to set system properties and server defaults. For more information, see [Set report server properties &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).
 
 ## Connect to a SharePoint integrated mode report server  
 
-1. Open Object Explorer by selecting it from the **View** menu, if it isn't already open.
+1. Open **Object Explorer** by selecting it from the **View** menu, if it isn't already open.
 
 1. Select **Connect** to view the list of server types, and then choose the **Reporting Services...** option.
 
 1. In the **Connect to Server** dialog box, enter a URL to a SharePoint site into the **Server name** field. The following example illustrates the syntax: `https://<web server>/sites/<site>`.
 
-1. From the **Authentication** drop-down menu, select the authentication type your server uses. If you use Windows Authentication, you must connect by using your credentials. If you select Basic authentication or Forms authentication, enter the account and password.
+1. From the **Authentication** drop-down menu, select the authentication type your server uses. If you use **Windows Authentication**, you must connect by using your credentials. If you select **Basic Authentication** or **Forms Authentication**, enter the account and password.
 
-1. Select **Connect**. The report server appears in Object Explorer.
+1. Select **Connect**. The report server appears in **Object Explorer**.
 
 1. Right-click the server node to set system properties and server defaults. For more information, see [Set report server properties &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).
 
@@ -87,7 +87,7 @@ helpviewer_keywords:
 
    - If you use default security, choose **Windows Authentication**.
    - If you installed and deployed a custom security extension, choose **Forms Authentication**.
-   - If you configured the report server to use Basic authentication, choose **Basic Authentication**.
+   - If you configured the report server to use basic authentication, choose **Basic Authentication**.
    - If you configured the report server for SharePoint integrated mode, choose **Windows Authentication**.
 
 1. Select **Test** to verify the connection.

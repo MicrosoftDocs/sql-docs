@@ -4,7 +4,7 @@ description: Provides a quick checklist to review your best practices and guidel
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma, randolphwest
-ms.date: 03/01/2024
+ms.date: 03/11/2024
 ms.service: virtual-machines-sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -96,7 +96,7 @@ The following is a quick checklist of best practices for Azure-specific guidance
 - Use [Azure Advisor](/azure/advisor/advisor-overview) to address [performance](/azure/advisor/advisor-performance-recommendations), [cost](/azure/advisor/advisor-cost-recommendations), [reliability](/azure/advisor/advisor-high-availability-recommendations), [operational excellence](/azure/advisor/advisor-operational-excellence-recommendations), and [security recommendations](/azure/advisor/advisor-security-recommendations).
 - Use [Azure Monitor](/azure/azure-monitor/vm/monitor-virtual-machine) to collect, analyze, and act on telemetry data from your SQL Server environment. This includes identifying infrastructure issues with [VM insights](/azure/azure-monitor/vm/vminsights-overview) and monitoring data with [Log Analytics](/azure/azure-monitor/logs/log-query-overview) for deeper diagnostics.
 - Enable [Autoshutdown](/azure/automation/automation-solution-vm-management) for development and test environments.
-- Implement a high availability and disaster recovery (HADR) solution that meets  your business continuity SLAs, see the [HADR options](business-continuity-high-availability-disaster-recovery-hadr-overview.md#deployment-architectures) options available for SQL Server on Azure VMs.
+- Implement a high availability and disaster recovery (HADR) solution that meets your business continuity SLAs, see the [HADR options](business-continuity-high-availability-disaster-recovery-hadr-overview.md#business-continuity-features) options available for SQL Server on Azure VMs.
 - Use the Azure portal (support + troubleshooting) to evaluate [resource health](/azure/service-health/resource-health-overview) and history; submit new support requests when needed.
 
 ## HADR configuration

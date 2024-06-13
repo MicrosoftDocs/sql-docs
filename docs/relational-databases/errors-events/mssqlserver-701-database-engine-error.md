@@ -112,7 +112,7 @@ The following sections describe more detailed steps for each scenario - external
 - Review the System Event log and look for memory related errors (for example, low virtual memory).
 - Review the Application Event log for application-related memory issues.
 
-  Here is a sample PowerShell script to query the System and Applicaiton Event logs for the keyword "memory". Feel free to use other strings like "resource" for your search:
+  Here is a sample PowerShell script to query the System and Application Event logs for the keyword "memory". Feel free to use other strings like "resource" for your search:
 
   ```PowerShell
   Get-EventLog System -ComputerName "$env:COMPUTERNAME" -Message "*memory*"

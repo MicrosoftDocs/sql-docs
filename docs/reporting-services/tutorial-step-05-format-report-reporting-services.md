@@ -1,14 +1,14 @@
 ---
 title: "Tutorial: Format a report (Reporting Services)"
-description: Learn how to format the date and currency fields and the column headers after you add a data region and some fields to the Sales Orders report.
+description: Learn how to format a report in SQL Server Data Tools. You can format text styles, date fields, currency fields, and the column widths after you add a data region.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/06/2024
+ms.date: 06/13/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: tutorial
 ms.custom: updatefrequency5
-#customer intent: As a SQL Server user, I want to format date and currency fields and adjust text styles and column widths in SQL Server Data Tools (SSDT) so that my report is more easily readable.
+#customer intent: As a SQL Server user, I want to format fields, adjust text styles, and modify column widths in SQL Server Data Tools (SSDT) so that my report is easily readable.
 
 ---
 # Tutorial: Format a report (Reporting Services)
@@ -20,10 +20,13 @@ In this tutorial, you:
 > [!div class="checklist"]
 > * Format the date field to display only the date
 > * Format the currency field to display as currency
-> * Change text style and adjust column widths for better readability
+> * Change text style and adjust column widths
 
 ## Prerequisites
 
+* Completion of [Step 1: Create a report server project](docs\reporting-services\tutorial-step-01-create-report-server-project-reporting-services.md).
+* A defined [data source](docs\reporting-services\tutorial-step-02-specify-connection-information-reporting-services.md) for your report.
+* A [defined dataset and Transact-SQL query](docs\reporting-services\tutorial-step-03-define-dataset-for-table-report-reporting-services.md) for your report data.
 * A [data table region configured and fields defined](docs\reporting-services\tutorial-step-04-add-table-to-report-reporting-services.md) for your report.
 
 ## Format the date
@@ -38,11 +41,9 @@ The `[Date]` field expression displays date and time information by default. You
 
 1. In the **Type** box, select **January 31, 2000**.
 
-    :::image type="content" source="media/rs-basictabledetailsdesigndate.png" alt-text="Screenshot of options used to format the date in this tutorial.":::
-
 1. Select **OK** to apply the format.
 
-1. Preview the report to see the change to the `[Date]` field formatting, and then change back to design view.
+1. Preview the report to see the change to the `[Date]` field formatting, and then change back to the **Design** tab.
 
 ## Format the currency
 
@@ -52,7 +53,7 @@ The `[LineTotal]` field expression displays a general number. You can format it 
 
 1. Select **Number**, and then choose **Currency** from the **Category** list box.
 
-1. If your regional setting is English (United States), the defaults in the **Type** list box should be:
+1. If your regional setting is English (United States), the defaults in the **Type** list box are:
 
     - Decimal places: 2
     - Negative numbers: ($12345.00)
@@ -60,19 +61,17 @@ The `[LineTotal]` field expression displays a general number. You can format it 
 
 1. Select **Use 1000 separator (,)**. If the sample text displays **$12,345.00**, then your settings are correct.
 
-    :::image type="content" source="media/rs-basictabledetailsdesigncurrency.png" alt-text="Screenshot of options used to format the currency in this tutorial.":::
-
 1. Select **OK** to apply the format.
 
-1. Preview the report to see the change to the `[LineTotal]` expression column and then change back to design view.  
+1. Preview the report to see the change to the `[LineTotal]` expression column and then change back to the **Design** tab.  
 
 ## Change text style and column widths
 
-You can add other formatting to your report by highlighting the header row, and adjusting the widths of the data columns.
+You can add other formatting to your report by highlighting the header, and then adjusting the widths of the data columns.
 
 1. Select the table so that column and row handles appear above and next to the table. The gray bars along the top and side of the table are the column and row handles.
 
-1. Point to the line between column handles so that the cursor changes into a double arrow. Drag the columns to the size you want.
+1. Hover over the line between column handles so that the cursor changes into a double arrow. Drag the columns to the size you want.
 
     :::image type="content" source="media/rs-basictabledetailsdesignarrow.png" alt-text="Screenshot of a table showing the double arrow cursor between two columns.":::
 
@@ -80,18 +79,11 @@ You can add other formatting to your report by highlighting the header row, and 
 
 1. Preview your report. It should appear as shown in the following image:
 
-    :::image type="content" source="media/rs-basictabledetailsformattedpreview.png" alt-text="Screenshot of a table preview with bold column headers.":::
+    :::image type="content" source="media/rs-basictabledetailsformattedpreview.png" alt-text="Screenshot of a table preview with bold column headers, currency and date values are updated.":::
 
 1. From the **File** menu, select **Save All** to save the report.
-
-You have successfully formatted column headers and field expressions. Next, you're going to add grouping and totals to your report.
 
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Step 6: Add Grouping and Totals &#40;Reporting Services&#41;](tutorial-step-06-add-grouping-and-totals-reporting-services.md)
-
-## Related content
-
-- [Format Numbers and Dates &#40;Report Builder and SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)
-- [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md)

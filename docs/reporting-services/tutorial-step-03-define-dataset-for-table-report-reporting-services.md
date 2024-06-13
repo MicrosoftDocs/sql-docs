@@ -3,7 +3,7 @@ title: "Tutorial: Define a dataset for the table report"
 description: In this lesson, learn how to define a dataset for the Table Report (Reporting Services).
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/06/2024
+ms.date: 06/13/2024
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: tutorial
@@ -23,7 +23,8 @@ In this tutorial, you:
 
 ## Prerequisites
 
-* A defined [data source] for your report.(docs\reporting-services\tutorial-step-02-specify-connection-information-reporting-services.md).
+* A [report server and an associated report definition file](docs\reporting-services\tutorial-step-01-create-report-server-project-reporting-services.md) on your local computer.
+* A defined [data source](docs\reporting-services\tutorial-step-02-specify-connection-information-reporting-services.md) for your report.
 
 ## Define a Transact-SQL query for report data  
 

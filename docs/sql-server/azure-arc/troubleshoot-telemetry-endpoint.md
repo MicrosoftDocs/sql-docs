@@ -81,6 +81,12 @@ For extension version `1.1.24724.69` and earlier, the log file is:
 
 Check for log entries that indicate a problem connecting to the DPS or telemetry endpoints.
 
+## Probe connectivity to all regions
+
+You can probe connectivity to all regions with the [test-connectivity.ps1](https://github.com/microsoft/sql-server-samples/samples/features/azure-arc/troubleshooting/test-connectivity.ps1) PowerShell script.
+
+:::code language="powershell" source="~/../sql-server-samples/samples/features/azure-arc/troubleshooting/test-connectivity.ps1":::
+
 ## Endpoint reference
 
 Beginning with [March, 12 2024](release-notes.md#march-12-2024), the Azure Extension for SQL Server uses the following endpoints:

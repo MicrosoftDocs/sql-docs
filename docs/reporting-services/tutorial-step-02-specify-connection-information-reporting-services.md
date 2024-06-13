@@ -8,12 +8,12 @@ ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: tutorial
 ms.custom: updatefrequency5
-#customer intent: As a SQL server user, I want to use SQL Server Data Tools (SSDT) to specify connection information so that I can access data in a relational database or from other source.
+#customer intent: As a SQL server user, I want to use SQL Server Data Tools (SSDT) to specify connection information so that I can access data in a relational database or from other sources.
 
 ---
 # Tutorial: Specify connection information (Reporting Services)
   
-In step 2 of this tutorial, you define a *data source* and configure connection information that the report uses to access data from a relational database or other sources.
+In this tutorial, you learn how to connect your reports to data sources, ensuring they can access the necessary data when its needed. 
 
 In this tutorial, you:
 
@@ -23,16 +23,17 @@ In this tutorial, you:
 
 ## Prerequisites
 
-* Report server and associated report definition file exist in your local environment.
-* Ensure the database is located in the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] and installed on your local computer.  
+* A report server and an associated report definition file on your local computer.
+* Ensure the database is in the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] and installed on your local computer.
+* Access to the AdventureWorks2022 sample database.   
 
 ## Set up a connection  
 
-When you create reports in SQL Server Reporting Services (SSRS), establishing a data source is crucial. Follow these steps to set up a connection.
+When you create reports in SQL Server Reporting Services (SSRS), establishing a data source is crucial. Follow these steps to set up a connection between a data source and your reports.
 
-1. In the **Report Data** pane, select **New** > **Data Source**. If the **Report Data** pane isn't visible, then select **View** > **Report Data**.
+1. In the **Report Data** pane of Visual Studio, select **New** > **Data Source**. If the **Report Data** pane isn't visible, then select **View** > **Report Data**.
 
-    :::image type="content" source="media/ssrs-table-tutorial-2-new-data-source.png" alt-text="Screenshot of the Report Data pane with the Data Source option highlighted in the New menu.":::
+    :::image type="content" source="media/ssrs-table-tutorial-2-new-data-source.png" alt-text="Screenshot of the Report Data pane with the Data Source option highlighted.":::
 
     The **Data Source Properties** dialog opens with the **General** section selected.
 
@@ -44,26 +45,23 @@ When you create reports in SQL Server Reporting Services (SSRS), establishing a 
 
 1. In the **Type** list, select **Microsoft SQL Server**.
   
-1. In the **Connection string** box, enter the following string:
+1. In the **Connection string** box, enter:
 
     `Data source=localhost; initial catalog=AdventureWorks2022`
 
     > [!NOTE]
     > This connection string assumes that [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], the report server, and the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database are all installed on the local computer.
     >
-    >Change the connection string and replace "localhost" with the name of your database server/instance if the assumption isn't true. If you're using [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] or a SQL Server named instance, you need to modify your connection string to include instance information. For example:
+    >Change the connection string and replace "localhost" with the name of your database server/instance if the assumption isn't true. If you use [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] or a SQL Server named instance, modify your connection string to include instance information. For example:
     >
     > `Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2022`
-    >
-    > For more information about connection strings, see the `Related content` section.
 
-1. Select the **Credentials** tab, and choose the **Use Windows Authentication (integrated security)** option.
 
-1. Select **OK** to complete the process.
+1. Select **Credentials**. Choose the **Use Windows Authentication (integrated security)** option.
 
-Report Designer adds the **AdventureWorks2022** data source to the **Report Data** pane.
+1. Select **OK**. Report Designer adds the **AdventureWorks2022** data source to the **Report Data** pane.
 
-:::image type="content" source="media/lesson-2-specifying-connection-information-reporting-services/ssrs-adventureworks-datasource2022.png" alt-text="Screenshot of the Report Data pane that highlights the AdventureWorks2022 data source.":::
+   :::image type="content" source="media/lesson-2-specifying-connection-information-reporting-services/ssrs-adventureworks-datasource2022.png" alt-text="Screenshot of the Report Data pane that highlights the AdventureWorks2022 data source.":::
 
 ## Next step 
 

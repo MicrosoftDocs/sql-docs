@@ -1,6 +1,6 @@
 ---
 title: "Tutorial: Add a table to the report"
-description: Learn how to create a report layout by dragging and dropping report objects, like a table, from the Toolbox pane to the Design surface.
+description: Learn how to create a report layout in SQL Server Data Tools (SSDT) by dragging and dropping report objects from the tool pane to the design surface.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/06/2024
@@ -8,13 +8,13 @@ ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: tutorial
 ms.custom: updatefrequency5
-#customer intent: As a SQL Server user, I want to add a table data region and fields to a report layout using SQL Server Data Tools (SSDT) so that I can effectively design and preview my reports.
+#customer intent: As a SQL Server user, I want to use drag and drop in SQL Server Data Tools (SSDT) to quickly create a report layout.
 ---
 # Tutorial: Add a table to the report (Reporting Services)
 
-After you define the dataset, you can start designing the paginated report. You create a report layout by dragging and dropping report objects from the **Toolbox** pane to the **Design surface**. 
+In this tutorial, you can design a paginated report. You create a report layout by dragging and dropping report objects from the **Toolbox** pane to the **Design surface**. 
 
-Items that contain repeated rows of data from underlying datasets are called *data regions*. After you add a data region, you can add fields to the data region. A basic report has only one data region. You can add extras to display more information such as a chart.
+Items that contain repeated rows of data from underlying datasets are called *data regions*. After you add a data region, you can add fields. A basic report has only one data region. You can add extras to display more information such as a chart.
 
 In this tutorial, you:
 
@@ -25,13 +25,13 @@ In this tutorial, you:
 
 ## Prerequisites
 
-* You have a defined dataset and Transact-SQL query for your report data.
+* A [defined dataset and Transact-SQL query](docs\reporting-services\tutorial-step-03-define-dataset-for-table-report-reporting-services.md) for your report data.
 
 ## Add a table data region and fields to a report layout
 
 Here, you add a table data region to your report layout and populate it with fields from your dataset to display organized data.
 
-1. Select the **Toolbox** tab in the left pane of the Report Designer. If you don't see the **Toolbox** tab, select **View** menu > **Toolbox**.
+1. Select the **Toolbox** tab in the left pane of the Report Designer in Visual Studio. If you don't see the **Toolbox** tab, select **View** menu > **Toolbox**.
 
 1. Choose the **Table** object and drag it to the report design surface. You can also add a table to the report from the design surface. Right-click the design surface and select **Insert** > **Table**.
 
@@ -44,13 +44,15 @@ Here, you add a table data region to your report layout and populate it with fie
 1. Drag the `Date` field from the **Report Data** pane to the first column in the table.
 
     > [!IMPORTANT]
-    > When you drop the field into the first column, two things happen. First, the Report Designer displays the field name, known as the *field expression*, in brackets. For example, in this tutorial, `Date` displays in the data cell. Second, it adds a column label to the header row, just above the field expression. By default, the column label is the name of the field. You can select the column label and enter a new value if you want to change it.
+    > When you drop the field into the first column, two things happen. 
+    > * Report Designer displays the field name, known as the *field expression*, in brackets. For example, in this tutorial, `Date` displays in the data cell. 
+    > * Report Designer adds a column label to the header row, just above the field expression. By default, the column label is the name of the field. You can select the column label and enter a new value if you want to change it.
 
 1. Drag the `Order` field from the **Report Data** pane to the second column in the table.
 
 1. Drag the `Product` field from the **Report Data** pane to the third column in the table.
 
-1. Drag the `Qty` field to the right edge of the third column until you get a vertical cursor and the mouse pointer shows a plus sign [+]. When you release the mouse button, you create a fourth column for the `Qty` field expression.
+1. Drag the `Qty` field to the right edge of the third column until you get a vertical cursor and the pointer shows a plus sign [+]. When you drop the field, you create a fourth column for the `Qty` field expression.
 
     :::image type="content" source="media/ssrs-tutorial-addcolumn.png" alt-text="Screenshot of the Product field in the table.":::
 
@@ -62,7 +64,7 @@ Here, you add a table data region to your report layout and populate it with fie
 
 ## Preview your report
 
-Preview your report frequently while designing it. By doing so, you validate the design and data connections allowing you to correct errors and issues as you go.
+While designing, preview your report frequently. By doing so, you validate the design and data connections and you can correct errors and issues as you go.
 
 1. Select the **Preview** tab. Report Designer runs the report and displays it in the **Preview** view.
 
@@ -72,18 +74,9 @@ Preview your report frequently while designing it. By doing so, you validate the
 
     :::image type="content" source="./media/rs-basictabledetailspreview.png" alt-text="Diagram of part of the report in the Preview view.":::
 
-1. Look at the Date and Line Total values. In the next lesson, you're going to learn how to format them to display more neatly.
-
 1. Select **File** > **Save All** to save the report.
-
-You successfully added a table data region to your report, added fields to the data region, and previewed your report.
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Step 5: Format a report &#40;Reporting Services&#41;](tutorial-step-05-format-report-reporting-services.md)
-  
-## Related content
-
-- [Tables &#40;Report Builder and SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)  
-- [Dataset fields collection &#40;Report Builder and SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+> [Step 5: Format a report &#40;Reporting Services&#41;](tutorial-step-05-format-report-reporting-services.md) 

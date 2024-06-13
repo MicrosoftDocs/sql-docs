@@ -13,9 +13,7 @@ ms.custom: updatefrequency5
 ---
 # Tutorial: Define a dataset for the table report - SQL Server Reporting Services
 
-After you define the data source for the paginated report, you need to define a dataset. In [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)], data that you use in reports is contained in a *dataset*. A dataset includes a pointer to a data source and a query to be used by the report, calculated fields, and variables.
-
-This tutorial guides you through the process of defining a dataset for a table report using SQL Server Reporting Services (SSRS). By following these steps, you learn how to create a query that retrieves sales order information from the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database and set up a dataset for your report.
+In this tutorial, you define a dataset for a data source. In [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)], a *dataset* contains data that you use in reports. A dataset includes a pointer to a data source and a query for use by the report, calculated fields, and variables.
 
 In this tutorial, you:
 
@@ -25,15 +23,15 @@ In this tutorial, you:
 
 ## Prerequisites
 
-* You have a defined data source and configured connection information for your report.
+* A defined [data source](docs\reporting-services\tutorial-step-02-specify-connection-information-reporting-services.md).
 
 ## Define a Transact-SQL query for report data  
 
-To create a meaningful SSRS report, define a dataset by connecting to the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)]  database, creating a Transact-SQL query, and configuring dataset properties for efficient data retrieval and reporting.
+Create a Transact-SQL query that retrieves sales order information from the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.
 
-1. In the **Report Data** pane, select **New** > **Dataset...**. The **Dataset Properties** dialog opens with the **Query** section highlighted.
+1. In the **Report Data** pane in Visual Studio, select **New** > **Dataset...**. The **Dataset Properties** dialog opens with the **Query** section highlighted.
 
-    :::image type="content" source="media/lesson-3-defining-a-dataset-for-the-table-report-reporting-services/vs-dataset-properties-dialog.png" alt-text="Screenshot of the Dataset Properties dialog showing the Query section.":::
+    :::image type="content" source="media/lesson-3-defining-a-dataset-for-the-table-report-reporting-services/vs-dataset-properties-dialog.png" alt-text="Screenshot of the Dataset Properties dialog with the query option highlighted.":::
 
 1. In the **Name** box, enter "AdventureWorksDataset".
 
@@ -41,7 +39,7 @@ To create a meaningful SSRS report, define a dataset by connecting to the [!INCL
 
 1. From the **Data source** list, select **AdventureWorks2022**.
 
-1. For the **Query type**, select the **Text** option.
+1. For **Query type**, select the **Text** option.
 
 1. Enter, or copy and paste, the following Transact-SQL query into the **Query** text box.
 
@@ -68,7 +66,7 @@ To create a meaningful SSRS report, define a dataset by connecting to the [!INCL
     HAVING ppc.Name = 'Clothing'
     ```
 
-1. (Optional) Select **Query Designer**. The query appears in the text-based *Query Designer*. View the results of the query by selecting the **run** button (:::image type="icon" source="media/ssrs-querydesigner-run.png":::) on the **Query Designer** toolbar. The dataset displayed contains six fields from four tables in the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database. The query makes use of Transact-SQL functionality such as aliases. For example, the SalesOrderHeader table is called `soh`.
+1. (Optional) Select **Query Designer**. The query appears in the text-based *Query Designer*. Select **run** to view the results of the query (:::image type="icon" source="media/ssrs-querydesigner-run.png":::) on the **Query Designer** toolbar. The dataset displayed contains six fields from four tables in the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database. The query makes use of Transact-SQL functionality such as aliases. For example, the SalesOrderHeader table is called `soh`.
 
 1. Select **OK** to exit the Query Designer.
 
@@ -82,9 +80,3 @@ You successfully specified a query that retrieves data for your report.
 
 > [!div class="nextstepaction"]
 > [Step 4: Add a table to the report &#40;Reporting Services&#41;](tutorial-step-04-add-table-to-report-reporting-services.md)
-
-## Related content
-
-- [Query design tools &#40;SSRS&#41;](../reporting-services/report-data/query-design-tools-ssrs.md)
-- [SQL Server connection type &#40;SSRS&#41;](../reporting-services/report-data/sql-server-connection-type-ssrs.md)
-- [Tutorial: Writing Transact-SQL statements](../t-sql/tutorial-writing-transact-sql-statements.md)

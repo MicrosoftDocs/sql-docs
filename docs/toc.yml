@@ -4275,8 +4275,9 @@ items:
       - name: Work with Server Events
         href: relational-databases/wmi-provider-server-events/working-with-the-wmi-provider-for-server-events.md
 - name: Internals & architecture
-  href: relational-databases/sql-server-guides.md
   items:
+  - name: Overview
+    href: relational-databases/sql-server-guides.md
   - name: Ghost record cleanup process
     href: relational-databases/ghost-record-cleanup-process-guide.md
   - name: Index architecture & design
@@ -4293,6 +4294,8 @@ items:
     href: relational-databases/post-migration-validation-and-optimization-guide.md
   - name: Query processing architecture
     href: relational-databases/query-processing-architecture-guide.md
+  - name: SQL Server I/O fundamentals
+    href: relational-databases/sql-server-storage-guide.md
   - name: Thread & task architecture
     href: relational-databases/thread-and-task-architecture-guide.md
   - name: Transaction log architecture & management guide
